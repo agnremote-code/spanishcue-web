@@ -322,7 +322,7 @@ const TALK = {
       "¿Dónde lees las noticias?",
       "¿Hay un quiosco cerca de tu casa?",
       "¿Te gustan las noticias raras?",
-      "¿Quién te leía cuentos de pequeño?",
+      "¿Lees cuentos antes de dormir?",
     ],
     A2: [
       "¿Qué noticia buena escuchaste esta semana?",

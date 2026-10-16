@@ -9,10 +9,10 @@ const GUARD = "Eres el guardia del museo: hablas despacio y con frases cortas. A
 
 const A1 = {
   arrival: {
-    premise: "Bajas del autobús en un barrio nuevo. Hoy Vale cumple treinta años. Hay una previa en su casa y una fiesta en una terraza, pero no hay un plan fijo. Camina, mira y elige un lugar.",
+    premise: "Es sábado por la noche. Estás en un barrio nuevo. Hoy es el cumpleaños de Vale: tiene treinta años. Hay una fiesta en su casa y otra en una terraza. No hay un plan fijo. Camina, mira y elige un lugar.",
     warmup: [
       "¿Cuándo es tu cumpleaños?",
-      "¿Qué haces los sábados a la noche?",
+      "¿Qué haces los sábados por la noche?",
       "¿Qué te gusta hacer en una fiesta: bailar, comer, hablar?",
     ],
     teacher: "Dos minutos de preguntas simples. Acepta respuestas de una palabra y amplía tú: «¿Bailar? ¡Qué bueno! ¿Con quién?». Anota qué verbos usa en presente.",
@@ -393,7 +393,7 @@ const A1 = {
         rows: [
           { form: "hay + cosa", example: "Hay cinco personas en la playa." },
           { form: "está / están + lugar o estado", example: "La valija está en el puerto. Las personas están contentas." },
-          { form: "Un poco de pasado: fue / era", example: "Fue en 1998. Era verano." },
+          { form: "ser de + material / año", example: "Es de cuero. Es de 1998." },
         ],
       },
       activities: {
@@ -609,26 +609,26 @@ const A1 = {
       text: "Llueve mucho. No hay gente en la plaza ni en la terraza. No hay taxis libres.",
       prompts: [
         "¿Qué lugares están bien con lluvia? ¿Cuáles no?",
-        "¿Adónde van ahora? Propón un lugar.",
-        "Un amigo llega mojado. Dile dónde estás y con quién.",
+        "¿Adónde van ahora? Di un lugar.",
+        "Un amigo llama. ¿Dónde estás? ¿Con quién?",
       ],
       teacher: "Cambia un dato simple: «El bar cierra pronto». Pide una frase nueva con «podemos…».",
     },
     transporte: {
-      text: "No hay metro. El último autobús pasa lleno. Lu necesita volver a su casa.",
+      text: "No hay metro. El último autobús está lleno. Lu necesita volver a casa.",
       prompts: [
         "¿Cómo vuelve Lu: en taxi, a pie o con un amigo?",
-        "¿Cambias tu plan? ¿Qué haces ahora?",
+        "¿Y tú? ¿Qué haces ahora?",
         "¿Quién va con Lu?",
       ],
       teacher: "Haz de Lu: estás cansada. Di «no» a la primera idea («Es caro», «Es lejos»).",
     },
     celular: {
-      text: "Nico no tiene su celular. Fue a los mismos lugares que tú.",
+      text: "Nico no tiene su celular. Hoy está en los mismos lugares que tú.",
       prompts: [
         "¿En qué lugares estás esta noche? Di los nombres.",
         "¿Dónde está el celular: en el bar, en el taxi o en la plaza?",
-        "¿Qué hacen ahora: buscan el celular o siguen la fiesta?",
+        "¿Qué hacen ahora: buscan el celular o bailan?",
       ],
       teacher: "El celular está en el último lugar que dice el alumno. Tiene un mensaje nuevo: «¿Dónde están?».",
     },
@@ -636,15 +636,15 @@ const A1 = {
 
   final: {
     prompts: [
-      "¿Qué lugares visitaste? Di dos o tres.",
+      "¿Qué lugares hay en tu noche? Di dos o tres.",
       "¿Qué lugar te gusta más?",
-      "Con la lluvia, ¿qué cambia?",
+      "¿Te gusta la lluvia? ¿Sí o no?",
       "¿Quién es una persona de esta noche? ¿Cómo es?",
       "¿Qué quieres hacer la próxima vez?",
     ],
     hypothetical: "Mañana es otra noche. ¿Adónde quieres ir?",
     help: {
-      starters: ["Fui a…", "Me gusta…", "Hay…", "Es…", "La próxima vez quiero…"],
+      starters: ["Voy a…", "Me gusta…", "Hay…", "Es…", "La próxima vez quiero…"],
       chunks: ["primero", "después", "también", "pero", "la próxima vez"],
     },
     criteria: [

@@ -12,14 +12,14 @@ export default {
     options: [
       { say: { es: 'Sí, yo tengo el número siete.', en: 'Yes, I have number seven.' }, reply: { es: '¡Un siete! ¡Es un milagro!', en: 'A seven! It’s a miracle!' }, end: { es: 'Norma te da un abrazo. El señor de los guisantes llora.', en: 'Norma hugs you. The man with the peas cries.' }, mood: 'surprised' },
       { say: { es: 'No. Pero el señor tiene dolor.', en: 'No. But the man is in pain.' }, reply: { es: 'Todos tienen dolor. Es un hospital.', en: 'Everybody is in pain. It’s a hospital.' }, end: { es: 'El señor espera. Los guisantes ya no están fríos.', en: 'The man waits. The peas aren’t cold anymore.' }, mood: 'angry' },
-      { say: { es: '¿Y una patada a la máquina?', en: 'What about a kick to the machine?' }, reply: { es: 'Ja, ja. Tiene diez años de patadas.', en: 'Ha, ha. It has ten years of kicks.' }, end: { es: 'Das una patada. Sale un número: el cero.', en: 'You kick it. A number comes out: zero.' }, mood: 'laugh' },
+      { say: { es: '¿Y una patada a la máquina?', en: 'What about a kick to the machine?' }, reply: { es: 'Ja, ja. La máquina es muy vieja.', en: 'Ha, ha. The machine is very old.' }, end: { es: 'Das una patada. Sale un número: el cero.', en: 'You kick it. A number comes out: zero.' }, mood: 'laugh' },
     ],
     talk: [
       { es: '¿Te gusta esperar?', en: 'Do you like waiting?' },
       { es: '¿Tienes paciencia?', en: 'Are you patient?' },
       { es: '¿Hay muchas filas en tu ciudad?', en: 'Are there a lot of queues in your city?' },
-      { es: '¿Cuál es tu número favorito?', en: 'What is your favourite number?' },
-      { es: '¿Siempre respetas las reglas?', en: 'Do you always follow the rules?' },
+      { es: '¿Tu número favorito es el siete?', en: 'Is seven your favourite number?' },
+      { es: '¿Las reglas son buenas o malas?', en: 'Are rules good or bad?' },
     ],
     words: [
       { es: 'la máquina', en: 'the machine' },
@@ -32,7 +32,7 @@ export default {
   },
   espera: {
     title: { es: 'El rey de la sala', en: 'King of the waiting room' },
-    line: { es: 'Estás en la sala de espera. Don Anselmo tiene dolor de garganta. Está aquí hace ocho horas.', en: 'You are in the waiting room. Don Anselmo has a sore throat. He has been here for eight hours.' },
+    line: { es: 'Estás en la sala de espera. Don Anselmo tiene dolor de garganta. Espera mucho: ocho horas.', en: 'You are in the waiting room. Don Anselmo has a sore throat. He waits a long time: eight hours.' },
     dialogue: [
       ['anselmo', { es: 'Hola, chico nuevo. ¿Café? Es gratis. Bueno, es mi café.', en: 'Hi, new guy. Coffee? It’s free. Well, it’s my coffee.' }],
       ['andres', { es: 'Gracias. ¿Usted es doctor?', en: 'Thanks. Are you a doctor?' }],
@@ -45,11 +45,11 @@ export default {
       { say: { es: 'No, gracias. Y usted, ¡a casa!', en: 'No, thanks. And you, go home!' }, reply: { es: '¿A casa? ¡Pero mañana es mi turno!', en: 'Home? But tomorrow it’s my turn!' }, end: { es: 'Anselmo no va a casa. Ahora hay una apuesta sobre ti.', en: 'Anselmo doesn’t go home. Now there’s a bet on you.' }, mood: 'angry' },
     ],
     talk: [
-      { es: '¿Qué haces cuando esperas?', en: 'What do you do when you wait?' },
-      { es: '¿Hablas con personas que no conoces?', en: 'Do you talk to people you don’t know?' },
+      { es: '¿Miras el teléfono cuando esperas?', en: 'Do you look at your phone when you wait?' },
+      { es: '¿Hablas con personas nuevas?', en: 'Do you talk to new people?' },
       { es: '¿Vives solo o con otras personas?', en: 'Do you live alone or with other people?' },
       { es: '¿Te gustan las apuestas?', en: 'Do you like betting?' },
-      { es: '¿Cuál es tu bebida favorita?', en: 'What is your favourite drink?' },
+      { es: '¿Te gusta más el café o el té?', en: 'Do you prefer coffee or tea?' },
     ],
     words: [
       { es: 'la sala de espera', en: 'the waiting room' },
@@ -61,7 +61,7 @@ export default {
   },
   vip: {
     title: { es: 'Una astilla VIP', en: 'A VIP splinter' },
-    line: { es: 'En las sillas buenas está Doña Pilar. Tiene una astilla muy pequeña en el dedo. Al lado, un señor cansado con un suéter gris. Es el director, pero nadie lo sabe.', en: 'In the good chairs sits Doña Pilar. She has a tiny splinter in her finger. Next to her, a tired man in a grey cardigan. He is the director, but nobody knows.' },
+    line: { es: 'Doña Pilar está en las sillas buenas. Tiene una astilla en el dedo. Al lado hay un señor con suéter gris. Está cansado. Es el director. Nadie lo sabe.', en: 'Doña Pilar is in the good chairs. She has a splinter in her finger. Next to her is a man in a grey cardigan. He is tired. He is the director. Nobody knows.' },
     dialogue: [
       ['pilar', { es: '¡Yo soy amiga del director! ¡Quiero un doctor ahora!', en: 'I’m a friend of the director! I want a doctor now!' }],
       ['*Un enfermero', { es: 'Señora, es una astilla.', en: 'Madam, it’s a splinter.' }],
@@ -72,13 +72,13 @@ export default {
     options: [
       { say: { es: 'Sí, señora. Usted es muy importante.', en: 'Yes, madam. You are very important.' }, reply: { es: '¡Por fin! Una persona inteligente.', en: 'At last! An intelligent person.' }, end: { es: 'Pilar te da su tarjeta. Es la tarjeta de un restaurante.', en: 'Pilar gives you her card. It’s a restaurant’s card.' }, mood: 'smile' },
       { say: { es: '¿Usted conoce al señor del suéter?', en: 'Do you know the man in the cardigan?' }, reply: { es: '¿A ese? No. Es un señor normal.', en: 'That one? No. He’s a normal man.' }, end: { es: 'Alonso sonríe y escribe «Pilar» en su cuaderno.', en: 'Alonso smiles and writes “Pilar” in his notebook.' }, mood: 'neutral' },
-      { say: { es: 'Señor, ¿usted qué opina?', en: 'Sir, what do you think?' }, reply: { es: '¿Él? ¡Él no sabe nada!', en: 'Him? He knows nothing!' }, end: { es: 'Alonso dice: «Opino que el hospital necesita sillas». Pilar está roja.', en: 'Alonso says: “I think the hospital needs chairs.” Pilar turns red.' }, mood: 'furious' },
+      { say: { es: 'Señor, ¿usted qué opina?', en: 'Sir, what do you think?' }, reply: { es: '¿Él? ¡Él no sabe nada!', en: 'Him? He knows nothing!' }, end: { es: 'Alonso dice: «El hospital necesita sillas». Pilar está roja.', en: 'Alonso says: “The hospital needs chairs.” Pilar goes red.' }, mood: 'furious' },
     ],
     talk: [
       { es: '¿Conoces a una persona famosa?', en: 'Do you know a famous person?' },
       { es: '¿Te gusta ser importante?', en: 'Do you like being important?' },
-      { es: '¿Pagas más por ser el primero?', en: 'Do you pay more to be first?' },
-      { es: '¿Qué ropa llevas hoy?', en: 'What are you wearing today?' },
+      { es: '¿Te gusta ser el primero?', en: 'Do you like being first?' },
+      { es: '¿Tienes un suéter gris?', en: 'Do you have a grey cardigan?' },
       { es: '¿Eres una persona tranquila?', en: 'Are you a calm person?' },
     ],
     words: [
@@ -95,20 +95,20 @@ export default {
     dialogue: [
       ['gladys', { es: '¡Me muero! ¡Quiero la pulsera roja!', en: 'I’m dying! I want the red bracelet!' }],
       ['wilson', { es: 'Usted tiene hipo, señora. Pulsera verde.', en: 'You have hiccups, madam. Green bracelet.' }],
-      ['gladys', { es: '¡Hip! ¿Verde? ¡Verde es la esperanza, no la muerte!', en: 'Hic! Green? Green is hope, not death!' }],
-      ['wilson', { es: 'Exacto.', en: 'Exactly.' }],
+      ['gladys', { es: '¡Hip! ¿Verde? ¡Pero yo me muero!', en: 'Hic! Green? But I’m dying!' }],
+      ['wilson', { es: 'Verde, señora. Y un vaso de agua.', en: 'Green, madam. And a glass of water.' }],
     ],
-    ask: { es: 'Gladys te mira: «¿Tú me ayudas con mi testamento?»', en: 'Gladys looks at you: “Will you help me with my will?”' },
+    ask: { es: 'Gladys te mira: «¿Me ayudas con mi testamento?»', en: 'Gladys looks at you: “Will you help me with my will?”' },
     options: [
-      { say: { es: 'Tranquila, el hipo no es grave.', en: 'Calm down, hiccups aren’t serious.' }, reply: { es: '¿No? ¿Y por qué tengo miedo? ¡Hip!', en: 'No? Then why am I scared? Hic!' }, end: { es: 'Wilson te da una pulsera verde a ti también.', en: 'Wilson gives you a green bracelet too.' }, mood: 'worried' },
-      { say: { es: 'Sí. ¿Para quién es el gato?', en: 'Yes. Who gets the cat?' }, reply: { es: '¡El gato es para ti! Y la guitarra también.', en: 'The cat is for you! And the guitar too.' }, end: { es: 'Ahora tienes un gato, una guitarra y una servilleta.', en: 'Now you have a cat, a guitar and a napkin.' }, mood: 'smile' },
+      { say: { es: 'Tranquila, el hipo no es grave.', en: 'Calm down, hiccups aren’t serious.' }, reply: { es: '¿No? ¿Y por qué tengo miedo? ¡Hip!', en: 'No? Then why am I scared? Hic!' }, end: { es: 'Wilson te da una pulsera verde también.', en: 'Wilson gives you a green bracelet too.' }, mood: 'worried' },
+      { say: { es: 'Sí. ¿Para quién es el gato?', en: 'Yes. Who gets the cat?' }, reply: { es: '¡El gato es para ti! Y la guitarra también.', en: 'The cat is for you! And the guitar too.' }, end: { es: 'Ahora tienes un gato y una guitarra.', en: 'Now you have a cat and a guitar.' }, mood: 'smile' },
       { say: { es: 'Es su último día. ¿Qué hace usted?', en: 'It’s your last day. What do you do?' }, reply: { es: '¡Bailo, como pastel y llamo a mi ex! ¡Hip!', en: 'I dance, I eat cake and I call my ex! Hic!' }, end: { es: 'Gladys baila en el pasillo. El hipo ya no está.', en: 'Gladys dances in the corridor. The hiccups are gone.' }, mood: 'laugh' },
     ],
     talk: [
       { es: '¿Buscas todo en internet?', en: 'Do you look everything up on the internet?' },
-      { es: '¿Qué color te gusta más?', en: 'Which colour do you like most?' },
+      { es: '¿Te gusta más el rojo o el verde?', en: 'Do you prefer red or green?' },
       { es: '¿Tienes un gato o un perro?', en: 'Do you have a cat or a dog?' },
-      { es: '¿Qué haces en un día libre?', en: 'What do you do on a day off?' },
+      { es: '¿Bailas en tu día libre?', en: 'Do you dance on your day off?' },
       { es: '¿Eres una persona nerviosa?', en: 'Are you a nervous person?' },
     ],
     words: [
@@ -121,7 +121,7 @@ export default {
   },
   guardia: {
     title: { es: 'Treinta horas', en: 'Thirty hours' },
-    line: { es: 'Estás en la guardia. El doctor Íñigo trabaja hace treinta horas. Tiene los ojos rojos.', en: 'You are in the emergency ward. Doctor Íñigo has been working for thirty hours. His eyes are red.' },
+    line: { es: 'Estás en la guardia. El doctor Íñigo está aquí desde ayer. No duerme. Tiene los ojos rojos.', en: 'You are in the emergency ward. Doctor Íñigo has been here since yesterday. He doesn’t sleep. His eyes are red.' },
     dialogue: [
       ['inigo', { es: 'Buenos días… ¿o buenas noches? Señor Michi, abra la boca.', en: 'Good morning… or good night? Mr Michi, open your mouth.' }],
       ['*Un paciente', { es: 'Yo soy Pedro. Michi es su gato.', en: 'I’m Pedro. Michi is your cat.' }],
@@ -132,14 +132,14 @@ export default {
     options: [
       { say: { es: 'Sí, un café grande para usted.', en: 'Yes, a big coffee for you.' }, reply: { es: '¡Te quiero! ¿Y tú cómo te llamas, gato?', en: 'I love you! And what’s your name, cat?' }, end: { es: 'Íñigo trabaja dos horas más. Catalina no está contenta.', en: 'Íñigo works two more hours. Catalina is not happy.' }, mood: 'love' },
       { say: { es: 'No. Usted necesita dormir.', en: 'No. You need to sleep.' }, reply: { es: '¿Dormir? ¿Qué es dormir?', en: 'Sleep? What is sleep?' }, end: { es: 'Íñigo duerme en una silla. Catalina pone una manta.', en: 'Íñigo falls asleep on a chair. Catalina puts a blanket on him.' }, mood: 'sleepy' },
-      { say: { es: '¿Un paciente más, por favor?', en: 'One more patient, please?' }, reply: { es: 'Claro. Hola, señor Michi.', en: 'Sure. Hello, Mr Michi.' }, end: { es: 'Catalina llama por teléfono a la mamá de Íñigo.', en: 'Catalina phones Íñigo’s mum.' }, mood: 'tipsy' },
+      { say: { es: '¿Un paciente más, por favor?', en: 'One more patient, please?' }, reply: { es: 'Claro. Hola, señor Michi.', en: 'Sure. Hello, Mr Michi.' }, end: { es: 'Catalina llama a la mamá de Íñigo.', en: 'Catalina calls Íñigo’s mum.' }, mood: 'tipsy' },
     ],
     talk: [
-      { es: '¿Cuántas horas trabajas?', en: 'How many hours do you work?' },
+      { es: '¿Trabajas mucho o poco?', en: 'Do you work a lot or a little?' },
       { es: '¿Tomas mucho café?', en: 'Do you drink a lot of coffee?' },
       { es: '¿Te gusta tu trabajo?', en: 'Do you like your job?' },
-      { es: '¿Cómo estás cuando tienes sueño?', en: 'What are you like when you are sleepy?' },
-      { es: '¿A qué hora te levantas?', en: 'What time do you get up?' },
+      { es: '¿Tienes sueño ahora?', en: 'Are you sleepy now?' },
+      { es: '¿Te levantas temprano?', en: 'Do you get up early?' },
     ],
     words: [
       { es: 'la guardia', en: 'the emergency ward' },
@@ -151,9 +151,9 @@ export default {
   },
   ambulancias: {
     title: { es: 'Diez mil personas', en: 'Ten thousand people' },
-    line: { es: 'Llega una ambulancia. Yamilé y Manuel traen a Kevin. Kevin tiene sangre en la pierna y el teléfono en la mano.', en: 'An ambulance arrives. Yamilé and Manuel bring Kevin. Kevin has blood on his leg and his phone in his hand.' },
+    line: { es: 'Llega una ambulancia. Yamilé y Manuel traen a Kevin. Tiene sangre en la pierna. Tiene el teléfono en la mano.', en: 'An ambulance arrives. Yamilé and Manuel bring in Kevin. There is blood on his leg. He has his phone in his hand.' },
     dialogue: [
-      ['kevin', { es: '¡Hola, amigos! ¡Estoy en el hospital! ¡Mil personas mirando!', en: 'Hi, friends! I’m in the hospital! A thousand people watching!' }],
+      ['kevin', { es: '¡Hola, amigos! ¡Estoy en el hospital! ¡Mil personas me miran!', en: 'Hi, friends! I’m in the hospital! A thousand people are watching me!' }],
       ['yamile', { es: 'Kevin, tu pierna, por favor.', en: 'Kevin, your leg, please.' }],
       ['kevin', { es: '¡No! ¡Primero, diez mil!', en: 'No! Ten thousand first!' }],
       ['manuel', { es: 'Hay más sangre que personas.', en: 'There’s more blood than people.' }],
@@ -168,7 +168,7 @@ export default {
       { es: '¿Usas mucho el teléfono?', en: 'Do you use your phone a lot?' },
       { es: '¿Tienes muchos seguidores?', en: 'Do you have many followers?' },
       { es: '¿Te gusta hacer fotos?', en: 'Do you like taking photos?' },
-      { es: '¿Cuál es tu red social favorita?', en: 'What is your favourite social network?' },
+      { es: '¿Te gustan las redes sociales?', en: 'Do you like social media?' },
       { es: '¿Tienes bicicleta o moto?', en: 'Do you have a bike or a motorbike?' },
     ],
     words: [
@@ -181,23 +181,23 @@ export default {
   },
   trauma: {
     title: { es: 'El gato de Paola', en: 'Paola’s cat' },
-    line: { es: 'Ezequiel tiene el brazo roto y sangre en la frente. La doctora Catalina pone el yeso.', en: 'Ezequiel has a broken arm and blood on his forehead. Doctor Catalina puts on the cast.' },
+    line: { es: 'Ezequiel tiene el brazo roto. Tiene sangre en la frente. La doctora Catalina pone el yeso.', en: 'Ezequiel has a broken arm. There is blood on his forehead. Doctor Catalina puts on the cast.' },
     dialogue: [
       ['ezequiel', { es: 'El gato está arriba. Yo subo. La escalera, no.', en: 'The cat is up there. I go up. The ladder doesn’t.' }],
       ['catalina', { es: '¿Y el gato?', en: 'And the cat?' }],
       ['ezequiel', { es: 'El gato baja solo. Muy tranquilo.', en: 'The cat comes down by itself. Very calm.' }],
       ['paola', { es: '¡Ezequiel! ¡Mi héroe! Tigre está bien.', en: 'Ezequiel! My hero! Tigre is fine.' }],
     ],
-    ask: { es: 'Ezequiel te mira, rojo: «Paola es muy bonita, ¿no?»', en: 'Ezequiel looks at you, red-faced: “Paola is very pretty, isn’t she?”' },
+    ask: { es: 'Ezequiel está rojo: «Paola es bonita, ¿no?»', en: 'Ezequiel goes red: “Paola is pretty, isn’t she?”' },
     options: [
-      { say: { es: 'Sí. Dile: «Me gustas».', en: 'Yes. Tell her: “I like you.”' }, reply: { es: '¿Yo? Bueno… Paola, me gustas.', en: 'Me? Well… Paola, I like you.' }, end: { es: 'Paola sonríe. El gato sale de la caja y se va.', en: 'Paola smiles. The cat gets out of the box and leaves.' }, mood: 'smitten' },
+      { say: { es: 'Sí. Dile: «Me gustas».', en: 'Yes. Tell her: “I like you.”' }, reply: { es: '¿Yo? Bueno… Paola, me gustas.', en: 'Me? Well… Paola, I like you.' }, end: { es: 'Paola sonríe. El gato sale de la caja.', en: 'Paola smiles. The cat comes out of the box.' }, mood: 'smitten' },
       { say: { es: 'Paola, el gato no tiene problemas.', en: 'Paola, the cat isn’t in any trouble.' }, reply: { es: '¡Shhh! ¡Silencio, por favor!', en: 'Shhh! Quiet, please!' }, end: { es: 'Paola dice: «Lo sé». Ezequiel no entiende nada.', en: 'Paola says: “I know.” Ezequiel doesn’t understand a thing.' }, mood: 'scared' },
       { say: { es: '¿Qué tiempo hace hoy?', en: 'What’s the weather like today?' }, reply: { es: 'Hace sol… y Paola es el sol.', en: 'It’s sunny… and Paola is the sun.' }, end: { es: 'Catalina mira al techo y termina el yeso.', en: 'Catalina rolls her eyes and finishes the cast.' }, mood: 'love' },
     ],
     talk: [
       { es: '¿Tienes vecinos simpáticos?', en: 'Do you have nice neighbours?' },
-      { es: '¿Qué haces por amor?', en: 'What do you do for love?' },
-      { es: '¿Cómo es tu casa?', en: 'What is your home like?' },
+      { es: '¿Subes una escalera por amor?', en: 'Would you climb a ladder for love?' },
+      { es: '¿Tu casa es grande o pequeña?', en: 'Is your home big or small?' },
       { es: '¿Eres romántico o romántica?', en: 'Are you romantic?' },
       { es: '¿Tienes miedo de las alturas?', en: 'Are you afraid of heights?' },
     ],
@@ -228,7 +228,7 @@ export default {
       { es: '¿Dices «te quiero» a tu familia?', en: 'Do you say “I love you” to your family?' },
       { es: '¿Tienes abuelos?', en: 'Do you have grandparents?' },
       { es: '¿Pides perdón mucho?', en: 'Do you say sorry a lot?' },
-      { es: '¿Quién te escucha cuando estás mal?', en: 'Who listens to you when you feel bad?' },
+      { es: '¿Tienes un amigo para los días malos?', en: 'Do you have a friend for bad days?' },
     ],
     words: [
       { es: 'el ruido', en: 'the noise' },
@@ -256,7 +256,7 @@ export default {
     talk: [
       { es: '¿Te gusta pescar?', en: 'Do you like fishing?' },
       { es: '¿Tienes hijos o sobrinos?', en: 'Do you have children or nephews and nieces?' },
-      { es: '¿Qué haces los fines de semana?', en: 'What do you do at weekends?' },
+      { es: '¿Descansas los fines de semana?', en: 'Do you rest at the weekend?' },
       { es: '¿Prefieres el campo o la playa?', en: 'Do you prefer the countryside or the beach?' },
       { es: '¿Tienes una foto ridícula?', en: 'Do you have a ridiculous photo?' },
     ],
@@ -270,7 +270,7 @@ export default {
   },
   cafeteria: {
     title: { es: 'La sopa del día', en: 'Soup of the day' },
-    line: { es: 'Estás en la cafetería. El menú es el mismo hace veinte años. Un cirujano come de pie, con sangre en la ropa.', en: 'You are in the cafeteria. The menu has been the same for twenty years. A surgeon eats standing up, with blood on his clothes.' },
+    line: { es: 'Estás en la cafetería. El menú es muy viejo. Un cirujano come de pie. Tiene sangre en la ropa.', en: 'You are in the cafeteria. The menu is very old. A surgeon eats standing up. He has blood on his clothes.' },
     dialogue: [
       ['ramona', { es: 'Hoy hay sopa. Sopa del día.', en: 'Today there’s soup. Soup of the day.' }],
       ['federico', { es: '¿Qué sopa es?', en: 'What soup is it?' }],
@@ -281,14 +281,14 @@ export default {
     options: [
       { say: { es: 'Una sopa misteriosa, por favor.', en: 'A mystery soup, please.' }, reply: { es: '¡Muy bien! Eres valiente.', en: 'Very good! You’re brave.' }, end: { es: 'La sopa es verde. Es rica. No sabes qué es.', en: 'The soup is green. It’s tasty. You don’t know what it is.' }, mood: 'smile' },
       { say: { es: 'La máquina tiene mi dinero.', en: 'The machine has my money.' }, reply: { es: 'Ah, sí. La máquina es mi banco.', en: 'Oh, yes. The machine is my bank.' }, end: { es: 'Ramona te da un pan gratis. La máquina come otra moneda.', en: 'Ramona gives you free bread. The machine eats another coin.' }, mood: 'laugh' },
-      { say: { es: '¿Cuál es su secreto, Doña Ramona?', en: 'What’s your secret, Doña Ramona?' }, reply: { es: 'Amor, mucha sal… y otra cosa.', en: 'Love, lots of salt… and something else.' }, end: { es: 'Federico dice en voz baja: «La otra cosa es la sopa de ayer».', en: 'Federico whispers: “The something else is yesterday’s soup.”' }, mood: 'surprised' },
+      { say: { es: '¿Cuál es su secreto, Doña Ramona?', en: 'What’s your secret, Doña Ramona?' }, reply: { es: 'Amor, mucha sal… y otra cosa.', en: 'Love, lots of salt… and something else.' }, end: { es: 'Federico dice: «Es la sopa de ayer».', en: 'Federico says: “It’s yesterday’s soup.”' }, mood: 'surprised' },
     ],
     talk: [
-      { es: '¿Qué comes cuando estás triste?', en: 'What do you eat when you’re sad?' },
+      { es: '¿Comes chocolate cuando estás triste?', en: 'Do you eat chocolate when you’re sad?' },
       { es: '¿Comes de pie o sentado?', en: 'Do you eat standing up or sitting down?' },
       { es: '¿Cocinas bien?', en: 'Are you a good cook?' },
-      { es: '¿Hay una persona chismosa en tu trabajo?', en: 'Is there a gossip at your work?' },
-      { es: '¿Cuál es tu comida favorita?', en: 'What is your favourite food?' },
+      { es: '¿Te gusta la sopa?', en: 'Do you like soup?' },
+      { es: 'Di tu comida favorita. ¿Es la pizza?', en: 'Say your favourite food. Is it pizza?' },
     ],
     words: [
       { es: 'la sopa', en: 'the soup' },
@@ -310,12 +310,12 @@ export default {
     ask: { es: 'Gonzalo te mira: «¿Y tú? ¿Cómo pagas?»', en: 'Gonzalo looks at you: “And you? How are you paying?”' },
     options: [
       { say: { es: '¿El aire? Yo no respiro mucho.', en: 'The air? I don’t breathe much.' }, reply: { es: 'Ah, entonces… cuarenta pesos.', en: 'Ah, then… forty pesos.' }, end: { es: 'Jorge tampoco respira mucho. Paga treinta.', en: 'Jorge doesn’t breathe much either. He pays thirty.' }, mood: 'smile' },
-      { say: { es: 'Pago todo. Quiero ir a casa.', en: 'I’ll pay it all. I want to go home.' }, reply: { es: '¡Muy bien! Y diez pesos por pagar.', en: 'Very good! And ten pesos for paying.' }, end: { es: 'Sales sin dinero, pero con un recibo muy bonito.', en: 'You leave with no money, but with a very pretty receipt.' }, mood: 'laugh' },
-      { say: { es: '¿Hay un papel para quejas?', en: 'Is there a complaints form?' }, reply: { es: 'Sí. El papel cuesta cinco pesos.', en: 'Yes. The form costs five pesos.' }, end: { es: 'Jorge escribe una queja de tres páginas: quince pesos.', en: 'Jorge writes a three-page complaint: fifteen pesos.' }, mood: 'neutral' },
+      { say: { es: 'Pago todo. Quiero ir a casa.', en: 'I’ll pay it all. I want to go home.' }, reply: { es: '¡Muy bien! Y diez pesos por pagar.', en: 'Very good! And ten pesos for paying.' }, end: { es: 'No tienes dinero. Pero tienes un recibo bonito.', en: 'You have no money. But you have a pretty receipt.' }, mood: 'laugh' },
+      { say: { es: '¿Hay un papel para quejas?', en: 'Is there a complaints form?' }, reply: { es: 'Sí. El papel cuesta cinco pesos.', en: 'Yes. The form costs five pesos.' }, end: { es: 'Jorge escribe una queja larga: quince pesos.', en: 'Jorge writes a long complaint: fifteen pesos.' }, mood: 'neutral' },
     ],
     talk: [
       { es: '¿Te gusta gastar dinero?', en: 'Do you like spending money?' },
-      { es: '¿Qué cosa es muy cara en tu país?', en: 'What is very expensive in your country?' },
+      { es: '¿La comida es cara en tu país?', en: 'Is food expensive in your country?' },
       { es: '¿Te quejas mucho?', en: 'Do you complain a lot?' },
       { es: '¿Pagas con tarjeta o en efectivo?', en: 'Do you pay by card or in cash?' },
       { es: '¿Ahorras dinero?', en: 'Do you save money?' },
@@ -336,7 +336,7 @@ export default {
       ['luis', { es: 'Andrea, eso no es ciencia.', en: 'Andrea, that’s not science.' }],
       ['andrea', { es: 'Luis es cero negativo. Siempre negativo.', en: 'Luis is O negative. Always negative.' }],
     ],
-    ask: { es: 'Andrea te mira: «¿Cuál es tu grupo de sangre?»', en: 'Andrea looks at you: “What’s your blood type?”' },
+    ask: { es: 'Andrea te mira: «¿Tu sangre es A o B?»', en: 'Andrea looks at you: “Is your blood A or B?”' },
     options: [
       { say: { es: 'No sé. ¿Qué dice mi horóscopo?', en: 'I don’t know. What does my horoscope say?' }, reply: { es: 'Mmm… hoy, nada de pescado.', en: 'Hmm… today, no fish.' }, end: { es: 'En la cafetería solo hay pescado. Hoy no comes.', en: 'The cafeteria only has fish. Today you don’t eat.' }, mood: 'smile' },
       { say: { es: 'Eso es ridículo, Andrea.', en: 'That’s ridiculous, Andrea.' }, reply: { es: 'Eso dice un B negativo, claro.', en: 'That’s what a B negative would say, of course.' }, end: { es: 'Luis te da la mano. Ahora ustedes son un equipo.', en: 'Luis shakes your hand. Now you two are a team.' }, mood: 'angry' },
@@ -344,7 +344,7 @@ export default {
     ],
     talk: [
       { es: '¿Lees tu horóscopo?', en: 'Do you read your horoscope?' },
-      { es: '¿Cuál es tu signo?', en: 'What is your star sign?' },
+      { es: 'Di tu signo. ¿Es Leo?', en: 'Say your star sign. Is it Leo?' },
       { es: '¿Eres una persona con suerte?', en: 'Are you a lucky person?' },
       { es: '¿Juegas a la lotería?', en: 'Do you play the lottery?' },
       { es: '¿Eres positivo o negativo?', en: 'Are you a positive or a negative person?' },
@@ -376,7 +376,7 @@ export default {
       { es: '¿Tienes un regalo especial de una persona?', en: 'Do you have a special gift from someone?' },
       { es: '¿Hablas con tus ex?', en: 'Do you talk to your exes?' },
       { es: '¿Guardas cosas viejas?', en: 'Do you keep old things?' },
-      { es: '¿Qué hay en tus bolsillos hoy?', en: 'What is in your pockets today?' },
+      { es: '¿Hay una llave en tu bolsillo?', en: 'Is there a key in your pocket?' },
       { es: '¿Llevas anillos?', en: 'Do you wear rings?' },
     ],
     words: [
@@ -389,7 +389,7 @@ export default {
   },
   quirofano: {
     title: { es: 'Ópera o reguetón', en: 'Opera or reggaeton' },
-    line: { es: 'Estás arriba, detrás de un vidrio, con Tania. Abajo, dos cirujanos operan y discuten.', en: 'You are upstairs, behind a glass window, with Tania. Below, two surgeons operate and argue.' },
+    line: { es: 'Estás arriba con Tania, detrás de un vidrio. Abajo, dos cirujanos operan y discuten.', en: 'You are upstairs with Tania, behind a glass window. Downstairs, two surgeons operate and argue.' },
     dialogue: [
       ['lorenzo', { es: '¡Ópera, por favor!', en: 'Opera, please!' }],
       ['mercedes', { es: '¡No! ¡Reguetón!', en: 'No! Reggaeton!' }],
@@ -404,11 +404,11 @@ export default {
       { say: { es: 'Diez pesos: gana Mercedes.', en: 'Ten pesos: Mercedes wins.' }, reply: { es: 'Veinte pesos: gana el paciente.', en: 'Twenty pesos: the patient wins.' }, end: { es: 'Gana Mercedes. Tania paga con un caramelo.', en: 'Mercedes wins. Tania pays with a sweet.' }, mood: 'smile' },
     ],
     talk: [
-      { es: '¿Qué música te gusta?', en: 'What music do you like?' },
+      { es: '¿Te gusta más la ópera o el reguetón?', en: 'Do you prefer opera or reggaeton?' },
       { es: '¿Escuchas música cuando trabajas?', en: 'Do you listen to music when you work?' },
       { es: '¿Discutes con tus compañeros?', en: 'Do you argue with your colleagues?' },
       { es: '¿Te gusta bailar?', en: 'Do you like dancing?' },
-      { es: '¿Cuándo son tus vacaciones?', en: 'When is your holiday?' },
+      { es: '¿Tienes vacaciones en verano o en invierno?', en: 'Is your holiday in summer or in winter?' },
     ],
     words: [
       { es: 'la música', en: 'the music' },
@@ -420,7 +420,7 @@ export default {
   },
   descanso: {
     title: { es: 'La manta que habla', en: 'The talking blanket' },
-    line: { es: 'Estás en la sala de descanso. El doctor Rodrigo está en el sofá, debajo de una manta. Su busca suena. Alguien calienta pescado.', en: 'You are in the staff room. Doctor Rodrigo is on the sofa, under a blanket. His pager beeps. Someone is heating up fish.' },
+    line: { es: 'Estás en la sala de descanso. El doctor Rodrigo está en el sofá. Está debajo de una manta. Su teléfono suena. Hay olor a pescado.', en: 'You are in the staff room. Doctor Rodrigo is on the sofa. He is under a blanket. His phone is ringing. It smells of fish.' },
     dialogue: [
       ['rodrigo', { es: 'No estoy. Rodrigo no está.', en: 'I’m not here. Rodrigo isn’t here.' }],
       ['tania', { es: 'Doctor, la manta habla.', en: 'Doctor, the blanket is talking.' }],
@@ -429,13 +429,13 @@ export default {
     ask: { es: 'Tania te mira: «¿Qué hago con él?»', en: 'Tania looks at you: “What do I do with him?”' },
     options: [
       { say: { es: 'Yo digo: «Rodrigo no está».', en: 'I’ll say: “Rodrigo isn’t here.”' }, reply: { es: 'Gracias. Eres mi amigo.', en: 'Thank you. You’re my friend.' }, end: { es: 'Rodrigo duerme dos horas. Tania trabaja por dos.', en: 'Rodrigo sleeps for two hours. Tania does the work of two.' }, mood: 'sleepy' },
-      { say: { es: '¡Rodrigo! ¡Arriba!', en: 'Rodrigo! Up you get!' }, reply: { es: '¡Ay! ¿Quién? ¿Qué? ¿Dónde?', en: 'Ah! Who? What? Where?' }, end: { es: 'Rodrigo va al quirófano con la manta en la cabeza.', en: 'Rodrigo goes to the operating room with the blanket on his head.' }, mood: 'angry' },
-      { say: { es: 'Bueno… yo también me acuesto en el sofá.', en: 'Well… I’ll lie down on the sofa too.' }, reply: { es: '¡Es mi sofá!', en: 'It’s my sofa!' }, end: { es: 'Ahora el sofá tiene dos personas y una manta.', en: 'Now the sofa has two people and one blanket.' }, mood: 'furious' },
+      { say: { es: '¡Rodrigo! ¡Arriba!', en: 'Rodrigo! Up you get!' }, reply: { es: '¡Ay! ¿Quién? ¿Qué? ¿Dónde?', en: 'Ah! Who? What? Where?' }, end: { es: 'Rodrigo va al quirófano. Tiene la manta en la cabeza.', en: 'Rodrigo goes to the operating room. The blanket is on his head.' }, mood: 'angry' },
+      { say: { es: 'Bueno… yo también me acuesto en el sofá.', en: 'Well… I’ll lie down on the sofa too.' }, reply: { es: '¡Es mi sofá!', en: 'It’s my sofa!' }, end: { es: 'Ahora hay dos personas en el sofá.', en: 'Now there are two people on the sofa.' }, mood: 'furious' },
     ],
     talk: [
       { es: '¿Duermes la siesta?', en: 'Do you take naps?' },
-      { es: '¿Dónde duermes mejor?', en: 'Where do you sleep best?' },
-      { es: '¿Qué haces para descansar?', en: 'What do you do to relax?' },
+      { es: '¿Duermes mejor en el sofá o la cama?', en: 'Do you sleep better on the sofa or in bed?' },
+      { es: '¿Miras la tele para descansar?', en: 'Do you watch TV to relax?' },
       { es: '¿Eres perezoso o perezosa?', en: 'Are you lazy?' },
       { es: '¿Te gusta el pescado?', en: 'Do you like fish?' },
     ],
@@ -459,14 +459,14 @@ export default {
     options: [
       { say: { es: 'Sí. Yo me ocupo del wifi.', en: 'Yes. I’ll take care of the wifi.' }, reply: { es: 'Perfecto. La clave es «paciencia».', en: 'Perfect. The password is “patience”.' }, end: { es: 'La habitación cuatrocientos seis está feliz. Las otras, no.', en: 'Room four-oh-six is happy. The others aren’t.' }, mood: 'smile' },
       { say: { es: '¿Cómo está usted tan tranquila?', en: 'How are you so calm?' }, reply: { es: 'Té, aire y mucho silencio.', en: 'Tea, deep breaths and lots of silence.' }, end: { es: 'Suena el timbre número quince. Margarita no cambia la cara.', en: 'Bell number fifteen rings. Margarita’s face doesn’t change.' }, mood: 'neutral' },
-      { say: { es: '¿Y un robot?', en: 'What about a robot?' }, reply: { es: 'El robot está en la cuatrocientos siete.', en: 'The robot is in four-oh-seven.' }, end: { es: 'Roberto abre la puerta: el robot pide un vaso de agua.', en: 'Roberto opens the door: the robot asks for a glass of water.' }, mood: 'laugh' },
+      { say: { es: '¿Y un robot?', en: 'What about a robot?' }, reply: { es: 'El robot está en la cuatrocientos siete.', en: 'The robot is in four-oh-seven.' }, end: { es: 'Roberto abre la puerta. El robot quiere agua.', en: 'Roberto opens the door. The robot wants water.' }, mood: 'laugh' },
     ],
     talk: [
-      { es: '¿Haces muchas cosas a la vez?', en: 'Do you do many things at once?' },
+      { es: '¿Tienes mucho trabajo hoy?', en: 'Do you have a lot of work today?' },
       { es: '¿Eres una persona organizada?', en: 'Are you an organised person?' },
-      { es: '¿Dices «no» fácilmente?', en: 'Do you find it easy to say “no”?' },
+      { es: '¿Dices «no» mucho?', en: 'Do you say “no” a lot?' },
       { es: '¿Escribes listas?', en: 'Do you write lists?' },
-      { es: '¿Cuál es la clave de tu wifi? Es broma: ¿te gusta la tecnología?', en: 'What’s your wifi password? Just kidding: do you like technology?' },
+      { es: '¿Te gusta la tecnología?', en: 'Do you like technology?' },
     ],
     words: [
       { es: 'el timbre', en: 'the call bell' },
@@ -478,7 +478,7 @@ export default {
   },
   internacion: {
     title: { es: 'Un cigarro, solo uno', en: 'One cigarette, just one' },
-    line: { es: 'En el pasillo, Don Mario camina con su suero y una bata abierta atrás. Va a la escalera. Quiere fumar.', en: 'In the corridor, Don Mario walks with his drip and a gown open at the back. He’s going to the stairs. He wants to smoke.' },
+    line: { es: 'Don Mario camina con su suero. Su bata está abierta atrás. Va a la escalera. Quiere fumar.', en: 'Don Mario walks with his drip. His gown is open at the back. He goes to the stairs. He wants to smoke.' },
     dialogue: [
       ['mario', { es: 'Shhh. Un cigarro. Solo uno.', en: 'Shhh. One cigarette. Just one.' }],
       ['lorena', { es: 'Don Mario, otra vez. Y se ve todo, ¿eh?', en: 'Don Mario, again. And everything is showing, you know?' }],
@@ -488,13 +488,13 @@ export default {
     options: [
       { say: { es: 'No. A la habitación, Don Mario.', en: 'No. Back to your room, Don Mario.' }, reply: { es: 'Ay, eres peor que mi esposa.', en: 'Oh, you’re worse than my wife.' }, end: { es: 'Mario vuelve a la cama. El cigarro está debajo de la almohada.', en: 'Mario goes back to bed. The cigarette is under the pillow.' }, mood: 'angry' },
       { say: { es: 'No fumo, pero estoy con usted.', en: 'I don’t smoke, but I’ll keep you company.' }, reply: { es: '¡Eres un amigo! Siéntate aquí.', en: 'You’re a friend! Sit here.' }, end: { es: 'Hablan de su juventud. Lorena trae tres cafés.', en: 'You talk about his youth. Lorena brings three coffees.' }, mood: 'smile' },
-      { say: { es: 'Un cigarro hoy, y mañana cero.', en: 'One cigarette today, and zero tomorrow.' }, reply: { es: 'Trato hecho. Mañana es otro día.', en: 'Deal. Tomorrow is another day.' }, end: { es: 'Al otro día, Mario dice: «Hoy es otro día».', en: 'The next day, Mario says: “Today is another day.”' }, mood: 'laugh' },
+      { say: { es: 'Un cigarro hoy, y mañana cero.', en: 'One cigarette today, and zero tomorrow.' }, reply: { es: '¡Sí! Mañana, cero cigarros.', en: 'Yes! Tomorrow, zero cigarettes.' }, end: { es: 'Al otro día, Mario dice: «Mañana, cero».', en: 'The next day, Mario says: “Tomorrow, zero.”' }, mood: 'laugh' },
     ],
     talk: [
       { es: '¿Tienes un mal hábito?', en: 'Do you have a bad habit?' },
-      { es: '¿Qué cosa es difícil de dejar para ti?', en: 'What is hard for you to give up?' },
+      { es: '¿Es difícil dejar el café?', en: 'Is it hard to give up coffee?' },
       { es: '¿Te gustan las reglas?', en: 'Do you like rules?' },
-      { es: '¿Qué pequeño placer tienes cada día?', en: 'What small pleasure do you have every day?' },
+      { es: '¿Tienes un pequeño placer cada día?', en: 'Do you have a small pleasure every day?' },
       { es: '¿Hay personas que fuman en tu familia?', en: 'Are there smokers in your family?' },
     ],
     words: [
@@ -503,6 +503,7 @@ export default {
       { es: 'la bata', en: 'the hospital gown' },
       { es: 'la escalera', en: 'the stairs' },
       { es: 'otra vez', en: 'again' },
+      { es: 'el suero', en: 'the drip' },
     ],
   },
   habitacion: {
@@ -521,11 +522,11 @@ export default {
       { say: { es: 'Una canción más y después, silencio.', en: 'One more song and then, quiet.' }, reply: { es: 'Bueno… una canción muy larga.', en: 'OK… a very long song.' }, end: { es: 'La canción dura veinte minutos. Juan aprende la letra.', en: 'The song lasts twenty minutes. Juan learns the lyrics.' }, mood: 'smile' },
     ],
     talk: [
-      { es: '¿Cómo celebras tu cumpleaños?', en: 'How do you celebrate your birthday?' },
+      { es: '¿Te gusta celebrar tu cumpleaños?', en: 'Do you like celebrating your birthday?' },
       { es: '¿Cuántos años tienes?', en: 'How old are you?' },
       { es: '¿Tus vecinos hacen ruido?', en: 'Are your neighbours noisy?' },
       { es: '¿Compartes habitación con alguien?', en: 'Do you share a room with someone?' },
-      { es: '¿Cuál es tu pastel favorito?', en: 'What is your favourite cake?' },
+      { es: '¿Pastel de chocolate o de fruta?', en: 'Chocolate cake or fruit cake?' },
     ],
     words: [
       { es: 'el cumpleaños', en: 'the birthday' },
@@ -550,10 +551,10 @@ export default {
       { say: { es: '¿Cómo es su papá?', en: 'What is your dad like?' }, reply: { es: 'Es gruñón, divertido… y mi mejor amigo.', en: 'He’s grumpy, funny… and my best friend.' }, end: { es: 'Paloma habla una hora de su papá. Ríe y llora.', en: 'Paloma talks about her dad for an hour. She laughs and cries.' }, mood: 'love' },
     ],
     talk: [
-      { es: '¿Con quién hablas mucho en tu familia?', en: 'Who do you talk to a lot in your family?' },
+      { es: '¿Hablas mucho con tu familia?', en: 'Do you talk to your family a lot?' },
       { es: '¿Te gusta el fútbol?', en: 'Do you like football?' },
       { es: '¿Hay un equipo que no te gusta nada?', en: 'Is there a team you really don’t like?' },
-      { es: '¿Qué palabras te gusta escuchar?', en: 'What words do you like to hear?' },
+      { es: '¿Te gusta escuchar la radio?', en: 'Do you like listening to the radio?' },
       { es: '¿Llamas mucho a tus padres?', en: 'Do you call your parents a lot?' },
     ],
     words: [
@@ -581,7 +582,7 @@ export default {
     talk: [
       { es: '¿Te da miedo la oscuridad?', en: 'Are you afraid of the dark?' },
       { es: '¿Conoces un trabajo muy raro?', en: 'Do you know a very strange job?' },
-      { es: '¿Qué comes en el almuerzo?', en: 'What do you eat for lunch?' },
+      { es: '¿Comes pollo en el almuerzo?', en: 'Do you eat chicken for lunch?' },
       { es: '¿Te gustan las películas de terror?', en: 'Do you like horror films?' },
       { es: '¿Hablas con las plantas o con los animales?', en: 'Do you talk to plants or animals?' },
     ],
@@ -595,13 +596,13 @@ export default {
   },
   limpieza: {
     title: { es: 'Es martes', en: 'It’s Tuesday' },
-    line: { es: 'En el pasillo de servicio, Doña Lorena limpia sangre del piso. Pasa una camilla. Corre un doctor. Ella está tranquila.', en: 'In the service corridor, Doña Lorena mops blood off the floor. A stretcher goes by. A doctor runs. She is calm.' },
+    line: { es: 'Estás en el pasillo de servicio. Doña Lorena limpia sangre del piso. Pasa una camilla. Corre un doctor. Ella está tranquila.', en: 'You are in the service corridor. Doña Lorena cleans blood off the floor. A stretcher goes by. A doctor runs. She is calm.' },
     dialogue: [
       ['sofia', { es: 'Perdón, ¿dónde está el ascensor?', en: 'Excuse me, where is the lift?' }],
       ['lorena', { es: 'El ascensor tres no viene nunca. Usa el uno.', en: 'Lift three never comes. Use number one.' }],
       ['lorena', { es: 'Y en la sala doce hay un secreto.', en: 'And in room twelve there is a secret.' }],
     ],
-    ask: { es: 'Lorena te mira: «¿Y tú qué quieres, mi amor?»', en: 'Lorena looks at you: “And what do you want, sweetheart?”' },
+    ask: { es: 'Lorena te mira: «¿Qué quieres, mi amor?»', en: 'Lorena looks at you: “What do you want, love?”' },
     options: [
       { say: { es: 'Yo limpio con usted.', en: 'I’ll clean with you.' }, reply: { es: '¡Uy! Una persona me ayuda. Es un milagro.', en: 'Oh! Someone is helping me. It’s a miracle.' }, end: { es: 'Limpian juntos. Lorena te cuenta tres secretos.', en: 'You clean together. Lorena tells you three secrets.' }, mood: 'surprised' },
       { say: { es: '¿Qué hay en la sala doce?', en: 'What is in room twelve?' }, reply: { es: 'Un doctor, una enfermera y una pizza.', en: 'A doctor, a nurse and a pizza.' }, end: { es: 'Sofía abre la puerta. Todos comen pizza. Nadie trabaja.', en: 'Sofía opens the door. Everyone is eating pizza. Nobody is working.' }, mood: 'laugh' },
@@ -611,8 +612,8 @@ export default {
       { es: '¿Limpias tu casa?', en: 'Do you clean your home?' },
       { es: '¿Te gustan los martes?', en: 'Do you like Tuesdays?' },
       { es: '¿Sabes muchos secretos?', en: 'Do you know many secrets?' },
-      { es: '¿Quién trabaja mucho en tu vida y nadie lo ve?', en: 'Who in your life works hard and nobody notices?' },
-      { es: '¿Cuál es el día más difícil de tu semana?', en: 'What is the hardest day of your week?' },
+      { es: '¿Te gusta trabajar de noche?', en: 'Do you like working at night?' },
+      { es: '¿Te gusta más el lunes o el viernes?', en: 'Do you prefer Monday or Friday?' },
     ],
     words: [
       { es: 'limpiar', en: 'to clean' },

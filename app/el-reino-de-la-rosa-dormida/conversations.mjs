@@ -5,13 +5,14 @@
  *
  * Flow steps: greet, lore, reveal, farewell (story beats, one text per band)
  * and q1, follow, q2, q3 (questions, authored separately for each CEFR level).
- * Bands: a0 = A0 with English support; base = A1–A2; full = B1–C2.
+ * Bands: a0 = A0 with English support; a1 = A1 (simple present, «voy a»); base = A2; full = B1–C2.
+ * keywords: 4–6 bilingual { es, en } words per encounter for A0 (a0) and A1 (a1).
  * A question is a string, [text, function] or, at A0, { es, en, options }.
  * Functions (pref, routine, describe, story, plan, compare, opinion, hypo,
  * reflect) only choose which language frames the «Pista» button shows.
  */
 
-export const BANDS = { A0: 'a0', A1: 'base', A2: 'base', B1: 'full', B2: 'full', C1: 'full', C2: 'full' };
+export const BANDS = { A0: 'a0', A1: 'a1', A2: 'base', B1: 'full', B2: 'full', C1: 'full', C2: 'full' };
 export const QUESTION_STEPS = ['q1', 'follow', 'q2', 'q3'];
 export const DEFAULT_FUNCTIONS = { q1: 'pref', follow: 'reflect', q2: 'story', q3: 'opinion', extra: 'opinion' };
 
@@ -21,13 +22,24 @@ export const CONVERSATIONS = {
     flow: ['greet', 'q1', 'follow', 'q2', 'lore', 'q3', 'reveal', 'farewell'],
     words: ['viajar', 'la playa', 'la montaña', 'la maleta', 'el avión', 'la ciudad', 'perderse', 'descubrir'],
     journal: 'Nox te contó que Valdoria duerme desde hace cien años por un hechizo de espinas. Inés, la posadera de la aldea, sabe qué ocurrió.',
+    keywords: {
+      a0: [{ es: 'el cuervo', en: 'the raven' }, { es: 'el camino', en: 'the road' }, { es: 'el castillo', en: 'the castle' }, { es: 'dormir', en: 'to sleep' }, { es: 'la aldea', en: 'the village' }, { es: 'viajar', en: 'to travel' }],
+      a1: [{ es: 'el cuervo', en: 'the raven' }, { es: 'el camino', en: 'the road' }, { es: 'el hechizo', en: 'the spell' }, { es: 'las espinas', en: 'the thorns' }, { es: 'la aldea', en: 'the village' }, { es: 'la posada', en: 'the inn' }],
+    },
     story: {
       a0: {
         greet: { es: '¡Hola! Soy Nox, un cuervo. Vivo en este camino.', en: 'Hi! I am Nox, a raven. I live on this road.' },
         lore: { es: 'Mira el castillo. Todos duermen. Duermen desde hace cien años.', en: 'Look at the castle. Everyone is asleep. They have been asleep for one hundred years.' },
-        reveal: { es: 'Un hechizo duerme al reino. Ve a la aldea. Busca a Inés.', en: 'A spell keeps the kingdom asleep. Go to the village. Look for Inés.' },
+        reveal: { es: 'Hay un hechizo. El reino duerme. Ve a la aldea. Busca a Inés.', en: 'There is a spell. The kingdom is asleep. Go to the village. Look for Inés.' },
         farewell: { es: 'La aldea está cerca, al este. Sigue la luz dorada. ¡Adiós!', en: 'The village is near, to the east. Follow the golden light. Bye!' },
         revisit: { es: '¡Hola otra vez! ¿Hablamos un poco más?', en: 'Hello again! Shall we talk a little more?' },
+      },
+      a1: {
+        greet: '¡Hola! Soy Nox, un cuervo. Vivo en este camino. Miro a todas las personas. Siempre tengo preguntas.',
+        lore: 'Mira el castillo. Valdoria duerme desde hace cien años. Nadie camina por las calles. Las campanas no suenan.',
+        reveal: 'Hay un hechizo de espinas en el reino. Inés vive en la aldea. Tiene una posada. Ella sabe la historia.',
+        farewell: 'Sigue el camino hacia el este, hasta la aldea. La posada tiene luz en la ventana. ¡Buen viaje!',
+        revisit: '¡Hola otra vez! Siéntate un momento. Tengo más preguntas para ti.',
       },
       base: {
         greet: '¡Hola! Soy Nox. Vivo en este camino y miro a todas las personas que pasan. Siempre tengo preguntas.',
@@ -52,15 +64,15 @@ export const CONVERSATIONS = {
         q3: { es: '¿Viajas en avión, en tren o en autobús?', en: 'Do you travel by plane, by train or by bus?', options: ['En avión.', 'En tren.', 'En autobús.'] },
         extra: [
           { es: '¿Te gustan las ciudades grandes?', en: 'Do you like big cities?', options: ['Sí.', 'No.', 'Un poco.'] },
-          { es: '¿Qué llevas en tu mochila?', en: 'What do you carry in your backpack?', options: ['Agua.', 'Un libro.', 'Mi celular.'] },
+          { es: '¿Qué hay en tu mochila?', en: 'What is in your backpack?', options: ['Agua.', 'Un libro.', 'Mi celular.'] },
         ],
       },
       A1: {
-        q1: '¿Te gusta viajar? ¿Prefieres la playa o la montaña? ¿Por qué?',
-        follow: ['¿Con quién viajas normalmente: solo, con tu familia o con amigos?', 'routine'],
+        q1: '¿Te gusta viajar? ¿Playa o montaña?',
+        follow: ['¿Con quién viajas: solo, con familia o con amigos?', 'routine'],
         q2: ['¿Qué ciudad te gusta mucho? ¿Cómo es?', 'describe'],
-        q3: ['¿Qué llevas siempre en tu maleta cuando viajas?', 'routine'],
-        extra: [['¿Prefieres viajar en avión, en tren o en autobús?', 'pref'], ['¿Qué haces primero cuando llegas a una ciudad nueva?', 'routine']],
+        q3: ['¿Qué hay siempre en tu maleta?', 'routine'],
+        extra: [['¿Prefieres el avión, el tren o el autobús?', 'pref'], ['¿Adónde vas a viajar este año?', 'plan']],
       },
       A2: {
         q1: ['Cuéntame sobre un viaje que disfrutaste. ¿Adónde fuiste y qué hiciste?', 'story'],
@@ -105,13 +117,24 @@ export const CONVERSATIONS = {
     flow: ['greet', 'q1', 'q2', 'follow', 'lore', 'q3', 'reveal', 'farewell'],
     words: ['el desayuno', 'la sopa', 'cocinar', 'la familia', 'la fiesta', 'el barrio', 'la tradición', 'la receta'],
     journal: 'Inés recuerda la tormenta de aquella noche. Bruno, el herrero, guarda la llave del castillo y sabe por qué se detuvo el molino.',
+    keywords: {
+      a0: [{ es: 'la posada', en: 'the inn' }, { es: 'tener hambre', en: 'to be hungry' }, { es: 'las espinas', en: 'the thorns' }, { es: 'el herrero', en: 'the blacksmith' }, { es: 'la llave', en: 'the key' }, { es: 'el molino', en: 'the mill' }],
+      a1: [{ es: 'la posada', en: 'the inn' }, { es: 'la sopa', en: 'the soup' }, { es: 'la tormenta', en: 'the storm' }, { es: 'el molino', en: 'the mill' }, { es: 'el herrero', en: 'the blacksmith' }, { es: 'la llave', en: 'the key' }],
+    },
     story: {
       a0: {
         greet: { es: '¡Hola! Soy Inés. Esta es mi posada. ¿Tienes hambre?', en: 'Hi! I am Inés. This is my inn. Are you hungry?' },
-        lore: { es: 'La noche del hechizo, el reino se durmió. Yo no. Vi las espinas.', en: 'On the night of the spell, the kingdom fell asleep. I did not. I saw the thorns.' },
+        lore: { es: 'Hay espinas en el castillo. El reino duerme. Yo no duermo.', en: 'There are thorns on the castle. The kingdom is asleep. I am not asleep.' },
         reveal: { es: 'Bruno es el herrero. Él tiene la llave del castillo. Habla con Bruno.', en: 'Bruno is the blacksmith. He has the castle key. Talk to Bruno.' },
         farewell: { es: 'Bruno está cerca del molino. ¡Hasta luego!', en: 'Bruno is near the mill. See you later!' },
-        revisit: { es: '¡Volviste! ¿Un té y otra charla?', en: 'You came back! Tea and another chat?' },
+        revisit: { es: '¡Hola otra vez! ¿Quieres un té?', en: 'Hello again! Do you want some tea?' },
+      },
+      a1: {
+        greet: '¡Hola! Pasa, pasa. Soy Inés. Esta es mi posada. Aquí siempre hay sopa caliente.',
+        lore: 'Es la noche del hechizo. Hay una tormenta muy fuerte. Llegan las espinas y el reino se duerme. Yo no duermo. Aquí el tiempo no pasa.',
+        reveal: 'El molino de la aldea no funciona. Bruno, el herrero, sabe repararlo. Y él tiene la llave del castillo.',
+        farewell: 'Bruno trabaja al lado del molino, abajo en la aldea. ¡Vuelve pronto!',
+        revisit: '¡Hola otra vez! Siéntate. Tengo más preguntas para ti.',
       },
       base: {
         greet: '¡Hola! Pasa, pasa. Soy Inés y esta es mi posada. Aquí siempre hay sopa caliente y una silla libre.',
@@ -140,11 +163,11 @@ export const CONVERSATIONS = {
         ],
       },
       A1: {
-        q1: ['¿Cómo es un día normal para ti? ¿A qué hora te levantas?', 'routine'],
-        follow: ['¿Y qué desayunas normalmente?', 'routine'],
-        q2: '¿Cuál es tu comida favorita? ¿Quién la prepara?',
-        q3: ['¿Qué te gusta hacer los fines de semana con tu familia o tus amigos?', 'routine'],
-        extra: [['¿Prefieres comer en casa o en un restaurante?', 'pref'], ['¿Hay un plato típico de tu ciudad? ¿Cómo es?', 'describe']],
+        q1: ['¿A qué hora te levantas normalmente?', 'routine'],
+        follow: ['¿Qué desayunas normalmente?', 'routine'],
+        q2: '¿Cuál es tu comida favorita? ¿Quién cocina?',
+        q3: ['¿Qué haces los fines de semana?', 'routine'],
+        extra: [['¿Prefieres comer en casa o en un restaurante?', 'pref'], ['¿Hay un plato típico en tu ciudad?', 'describe']],
       },
       A2: {
         q1: ['¿Qué comida te recuerda a tu infancia? ¿Quién la cocinaba?', 'story'],
@@ -189,6 +212,10 @@ export const CONVERSATIONS = {
     flow: ['greet', 'q1', 'follow', 'q2', 'q3', 'lore', 'reveal', 'farewell'],
     words: ['el trabajo', 'estudiar', 'aprender', 'la herramienta', 'el error', 'la profesión', 'practicar', 'el equipo'],
     journal: 'Bruno te enseñó Ventaria. Úsalo en el molino y recoge la llave que dejó junto a las aspas.',
+    keywords: {
+      a0: [{ es: 'el herrero', en: 'the blacksmith' }, { es: 'el fuego', en: 'the fire' }, { es: 'el metal', en: 'metal' }, { es: 'el molino', en: 'the mill' }, { es: 'el viento', en: 'the wind' }, { es: 'la llave', en: 'the key' }],
+      a1: [{ es: 'el herrero', en: 'the blacksmith' }, { es: 'el banco', en: 'the bench' }, { es: 'el viento', en: 'the wind' }, { es: 'la harina', en: 'flour' }, { es: 'el hechizo', en: 'the spell' }, { es: 'la llave', en: 'the key' }],
+    },
     story: {
       a0: {
         greet: { es: 'Hola. Soy Bruno, el herrero. Trabajo con fuego y metal.', en: 'Hi. I am Bruno, the blacksmith. I work with fire and metal.' },
@@ -196,6 +223,13 @@ export const CONVERSATIONS = {
         reveal: { es: 'Te enseño un hechizo: Ventaria. Es viento. Úsalo en el molino. Después, recoge la llave.', en: 'I will teach you a spell: Ventaria. It is wind. Use it at the mill. Then pick up the key.' },
         farewell: { es: 'Pulsa 2 para Ventaria y R cerca del molino. ¡Suerte!', en: 'Press 2 for Ventaria and R near the mill. Good luck!' },
         revisit: { es: 'Hola otra vez. ¿Hablamos un poco?', en: 'Hello again. Shall we talk a little?' },
+      },
+      a1: {
+        greet: 'Hola. Soy Bruno, el herrero de la aldea. ¿Vienes de parte de Inés? Siéntate en ese banco.',
+        lore: 'El molino no gira. No hay viento. Sin viento no hay harina. Sin harina, Inés no tiene pan.',
+        reveal: 'Me gusta hablar contigo. Ahora necesito un favor. Te voy a enseñar Ventaria, un hechizo de viento. Úsalo en el molino. Después, recoge la llave.',
+        farewell: 'Elige Ventaria con la tecla 2. Pulsa R cerca del molino. La llave abre la puerta del castillo.',
+        revisit: 'Hola otra vez. Tengo las manos ocupadas, pero puedo hablar.',
       },
       base: {
         greet: 'Hola. Soy Bruno, el herrero de la aldea. Inés te mandó, ¿verdad? Siéntate en ese banco, que estoy terminando una herradura.',
@@ -226,9 +260,9 @@ export const CONVERSATIONS = {
       A1: {
         q1: ['¿En qué trabajas o qué estudias? ¿Te gusta?', 'routine'],
         follow: ['¿Trabajas solo o con otras personas?', 'routine'],
-        q2: '¿Qué haces bien con las manos: cocinar, dibujar, arreglar cosas…?',
+        q2: '¿Qué haces bien: cocinar, dibujar, arreglar cosas?',
         q3: ['¿Qué quieres aprender este año?', 'plan'],
-        extra: [['¿Cómo vas a tu trabajo o a clase?', 'routine'], ['¿Qué profesión te gusta mucho? ¿Por qué?', 'pref']],
+        extra: [['¿Cómo vas al trabajo o a clase?', 'routine'], ['¿Qué profesión te gusta? ¿Por qué?', 'pref']],
       },
       A2: {
         q1: ['¿Cuál fue tu primer trabajo? ¿Qué hacías allí?', 'story'],
@@ -273,6 +307,10 @@ export const CONVERSATIONS = {
     flow: ['greet', 'lore', 'q1', 'follow', 'q2', 'q3', 'reveal', 'farewell'],
     words: ['el árbol', 'el parque', 'descansar', 'el campo', 'la ciudad', 'el silencio', 'caminar', 'el ruido'],
     journal: 'Liora te entregó Lumaria. Ilumina el santuario del bosque para que reaparezca el camino hacia el puente.',
+    keywords: {
+      a0: [{ es: 'el hada', en: 'the fairy' }, { es: 'el bosque', en: 'the forest' }, { es: 'el árbol', en: 'the tree' }, { es: 'oscuro', en: 'dark' }, { es: 'la luz', en: 'the light' }, { es: 'el santuario', en: 'the shrine' }],
+      a1: [{ es: 'el hada', en: 'the fairy' }, { es: 'bajito', en: 'quietly' }, { es: 'la luciérnaga', en: 'the firefly' }, { es: 'brillar', en: 'to shine' }, { es: 'oscuro', en: 'dark' }, { es: 'el santuario', en: 'the shrine' }],
+    },
     story: {
       a0: {
         greet: { es: '¡Hola! Soy Liora, el hada del bosque.', en: 'Hi! I am Liora, the forest fairy.' },
@@ -280,6 +318,13 @@ export const CONVERSATIONS = {
         reveal: { es: 'Te doy un hechizo: Lumaria. Es luz. Úsalo en el santuario del bosque.', en: 'I give you a spell: Lumaria. It is light. Use it at the forest shrine.' },
         farewell: { es: 'Pulsa 1 para Lumaria y R en el santuario. Después, ve al puente.', en: 'Press 1 for Lumaria and R at the shrine. Then go to the bridge.' },
         revisit: { es: '¡Hola! El bosque te saluda.', en: 'Hi! The forest says hello.' },
+      },
+      a1: {
+        greet: '¡Hola! Soy Liora, el hada del bosque. Habla bajito, por favor. Los árboles duermen.',
+        lore: 'Con el hechizo, las luciérnagas no brillan. El bosque está oscuro. No hay camino hacia el puente.',
+        reveal: 'Te voy a enseñar Lumaria, un hechizo de luz. En el centro del bosque hay un santuario. Usa Lumaria allí.',
+        farewell: 'Elige Lumaria con la tecla 1. Pulsa R al lado del santuario. Después, ve al puente de Sir Aldren.',
+        revisit: '¡Hola otra vez! Aquí el tiempo va despacio. Podemos hablar.',
       },
       base: {
         greet: '¡Hola! Soy Liora. Cuido este bosque desde hace mucho tiempo. Habla bajito: los árboles están durmiendo.',
@@ -308,11 +353,11 @@ export const CONVERSATIONS = {
         ],
       },
       A1: {
-        q1: '¿Vives en una ciudad grande o en un lugar tranquilo? ¿Te gusta?',
-        follow: ['¿Qué hay cerca de tu casa: un parque, un río, muchas tiendas…?', 'describe'],
-        q2: ['¿Qué haces para descansar después de trabajar o estudiar?', 'routine'],
-        q3: ['¿Cuál es tu estación favorita del año? ¿Por qué?', 'pref'],
-        extra: [['¿Te gustan los animales? ¿Cuál es tu favorito?', 'pref'], ['¿Qué te gusta hacer cuando hace buen tiempo?', 'routine']],
+        q1: '¿Vives en una ciudad grande o en un pueblo?',
+        follow: ['¿Qué hay cerca de tu casa?', 'describe'],
+        q2: ['¿Qué haces para descansar?', 'routine'],
+        q3: ['¿Cuál es tu estación favorita? ¿Por qué?', 'pref'],
+        extra: [['¿Te gustan los animales? ¿Cuál es tu favorito?', 'pref'], ['¿Qué haces cuando hace buen tiempo?', 'routine']],
       },
       A2: {
         q1: ['¿Cuál es el paisaje más bonito que viste? ¿Dónde estabas?', 'story'],
@@ -357,6 +402,10 @@ export const CONVERSATIONS = {
     flow: ['greet', 'q1', 'follow', 'lore', 'q2', 'q3', 'reveal', 'farewell'],
     words: ['el amigo', 'la amiga', 'confiar', 'sincero', 'tímido', 'sociable', 'perdonar', 'conocer'],
     journal: 'Sir Aldren confió en ti y abrió el puente. Celina te espera en los jardines reales, al otro lado.',
+    keywords: {
+      a0: [{ es: 'alto', en: 'stop' }, { es: 'el puente', en: 'the bridge' }, { es: 'la verdad', en: 'the truth' }, { es: 'confiar', en: 'to trust' }, { es: 'abierto', en: 'open' }, { es: 'el jardín', en: 'the garden' }],
+      a1: [{ es: 'el puente', en: 'the bridge' }, { es: 'tener cuidado', en: 'to be careful' }, { es: 'la verdad', en: 'the truth' }, { es: 'confiar', en: 'to trust' }, { es: 'cruzar', en: 'to cross' }, { es: 'la jardinera', en: 'the gardener' }],
+    },
     story: {
       a0: {
         greet: { es: 'Alto. Soy Sir Aldren. Cuido el puente.', en: 'Stop. I am Sir Aldren. I guard the bridge.' },
@@ -364,6 +413,13 @@ export const CONVERSATIONS = {
         reveal: { es: 'Está bien. Confío en ti. El puente está abierto.', en: 'All right. I trust you. The bridge is open.' },
         farewell: { es: 'Cruza el puente. En los jardines está Celina.', en: 'Cross the bridge. Celina is in the gardens.' },
         revisit: { es: 'Hola. El puente sigue abierto para ti.', en: 'Hello. The bridge is still open for you.' },
+      },
+      a1: {
+        greet: 'Alto ahí. Soy Sir Aldren. Cuido este puente. Primero quiero conocerte un poco.',
+        lore: 'No abro el puente a todas las personas. Hay personas que no dicen la verdad. Por eso tengo mucho cuidado.',
+        reveal: 'Hablas con sinceridad. Eso me gusta. Confío en ti. El puente está abierto.',
+        farewell: 'Cruza el puente y entra en los jardines. Allí trabaja Celina, la jardinera. Ella conoce el secreto de las rosas.',
+        revisit: 'Hola otra vez. El puente está abierto para ti.',
       },
       base: {
         greet: 'Alto ahí. Soy Sir Aldren, guardián del puente. No abro el paso a desconocidos. Primero quiero conocerte un poco.',
@@ -392,11 +448,11 @@ export const CONVERSATIONS = {
         ],
       },
       A1: {
-        q1: ['¿Cómo es tu mejor amigo o tu mejor amiga? ¿Dónde se conocieron?', 'describe'],
+        q1: ['¿Cómo es tu mejor amigo o amiga?', 'describe'],
         follow: ['¿Qué hacen juntos normalmente?', 'routine'],
         q2: ['¿Eres una persona tímida o sociable?', 'describe'],
-        q3: '¿Qué te gusta en una persona: que sea divertida, tranquila, honesta…?',
-        extra: [['¿Prefieres un grupo grande de amigos o pocos amigos?', 'pref'], ['¿Con quién hablas cuando tienes un problema?', 'routine']],
+        q3: ['¿Te gustan las personas divertidas o tranquilas?', 'pref'],
+        extra: [['¿Prefieres muchos amigos o pocos amigos?', 'pref'], ['¿Con quién hablas cuando tienes un problema?', 'routine']],
       },
       A2: {
         q1: ['¿Cómo conociste a una persona muy importante en tu vida? ¿Qué pasó ese día?', 'story'],
@@ -441,6 +497,10 @@ export const CONVERSATIONS = {
     flow: ['greet', 'q1', 'follow', 'q2', 'lore', 'q3', 'reveal', 'farewell'],
     words: ['la flor', 'el color', 'la música', 'bonito', 'el regalo', 'la casa', 'disfrutar', 'cambiar'],
     journal: 'Celina te enseñó Floralis. Transforma el muro de espinas, recoge la rosa encantada y entra al castillo.',
+    keywords: {
+      a0: [{ es: 'la flor', en: 'the flower' }, { es: 'el muro', en: 'the wall' }, { es: 'las espinas', en: 'the thorns' }, { es: 'la rosa', en: 'the rose' }, { es: 'dentro', en: 'inside' }, { es: 'recoger', en: 'to pick up' }],
+      a1: [{ es: 'la jardinera', en: 'the gardener' }, { es: 'la rama', en: 'the branch' }, { es: 'mágico', en: 'magic' }, { es: 'el muro', en: 'the wall' }, { es: 'detrás', en: 'behind' }, { es: 'encantado', en: 'enchanted' }],
+    },
     story: {
       a0: {
         greet: { es: '¡Hola! Soy Celina. Me gustan las flores.', en: 'Hi! I am Celina. I like flowers.' },
@@ -448,6 +508,13 @@ export const CONVERSATIONS = {
         reveal: { es: 'Te enseño Floralis. Con Floralis, las espinas son flores.', en: 'I will teach you Floralis. With Floralis, the thorns become flowers.' },
         farewell: { es: 'Pulsa 3 y R en el muro de espinas. Después, recoge la rosa.', en: 'Press 3 and R at the thorn wall. Then pick up the rose.' },
         revisit: { es: '¡Hola! ¿Te gustan mis flores?', en: 'Hi! Do you like my flowers?' },
+      },
+      a1: {
+        greet: '¡Hola! Soy Celina, la jardinera. Cuidado con esas ramas. ¡Aquí las flores tienen carácter!',
+        lore: 'Las rosas del jardín son mágicas. Con el hechizo, ahora son un muro de espinas. Detrás está la rosa encantada.',
+        reveal: 'Ahora vas a aprender Floralis. Con Floralis, las espinas son flores otra vez. Úsalo en el muro y recoge la rosa.',
+        farewell: 'Elige Floralis con la tecla 3. Pulsa R al lado del muro. Después, ve al castillo con la rosa.',
+        revisit: '¡Hola otra vez! Las flores crecen mejor con conversación.',
       },
       base: {
         greet: '¡Hola! Soy Celina, la jardinera. Cuidado con esas ramas: aquí hasta las flores tienen carácter.',
@@ -476,11 +543,11 @@ export const CONVERSATIONS = {
         ],
       },
       A1: {
-        q1: '¿Qué cosas pequeñas te ponen de buen humor?',
-        follow: ['¿Y qué haces normalmente por la mañana para empezar bien el día?', 'routine'],
-        q2: ['¿Cómo es tu casa? ¿Qué lugar de tu casa te gusta más?', 'describe'],
-        q3: '¿Qué música, películas o colores te gustan?',
-        extra: ['¿Te gusta cocinar, pintar o hacer manualidades?', '¿Qué regalo te gusta recibir?'],
+        q1: '¿Qué cosas pequeñas te gustan mucho?',
+        follow: ['¿Qué haces por la mañana?', 'routine'],
+        q2: ['¿Cómo es tu casa? ¿Qué parte te gusta más?', 'describe'],
+        q3: '¿Qué música o películas te gustan?',
+        extra: ['¿Te gusta cocinar o pintar?', '¿Qué regalo te gusta recibir?'],
       },
       A2: {
         q1: ['¿Hay algo que antes no te gustaba y que ahora te gusta? ¿Qué pasó?', 'story'],
@@ -525,13 +592,24 @@ export const CONVERSATIONS = {
     flow: ['greet', 'lore', 'q1', 'q2', 'follow', 'q3', 'reveal', 'farewell'],
     words: ['el libro', 'leer', 'aprender', 'la escuela', 'la pregunta', 'la aplicación', 'investigar', 'la información'],
     journal: 'Baltasar leyó el pergamino de Elara: «Un refugio debe tener una salida». El hechizo fue una protección que se convirtió en encierro. Teobaldo recuerda el resto.',
+    keywords: {
+      a0: [{ es: 'el libro', en: 'the book' }, { es: 'el pergamino', en: 'the scroll' }, { es: 'la princesa', en: 'the princess' }, { es: 'el refugio', en: 'the shelter' }, { es: 'la salida', en: 'the exit' }, { es: 'la historia', en: 'the story' }],
+      a1: [{ es: 'el mago', en: 'the wizard' }, { es: 'la letra', en: 'the handwriting' }, { es: 'el pergamino', en: 'the scroll' }, { es: 'el refugio', en: 'the shelter' }, { es: 'la salida', en: 'the exit' }, { es: 'el castigo', en: 'the punishment' }],
+    },
     story: {
       a0: {
         greet: { es: '¡Hola! Soy Baltasar. Me gustan los libros.', en: 'Hi! I am Baltasar. I like books.' },
         lore: { es: '¡Tienes el pergamino! Es de la princesa Elara.', en: 'You have the scroll! It belongs to Princess Elara.' },
-        reveal: { es: 'El pergamino dice: «Un refugio debe tener una salida». El hechizo era un refugio.', en: 'The scroll says: "A shelter must have an exit." The spell was a shelter.' },
+        reveal: { es: 'El pergamino dice: «Un refugio debe tener una salida». El hechizo es un refugio.', en: 'The scroll says: "A shelter must have an exit." The spell is a shelter.' },
         farewell: { es: 'Busca a Teobaldo en el gran salón. Él recuerda la historia.', en: 'Look for Teobaldo in the great hall. He remembers the story.' },
         revisit: { es: '¡Hola! ¿Leemos un poco?', en: 'Hi! Shall we read a little?' },
+      },
+      a1: {
+        greet: 'Ah, una visita en mi biblioteca. Soy Baltasar, el mago de los libros. Aquí hay muchas preguntas.',
+        lore: 'Tienes el pergamino. Es la letra de la princesa Elara. Primero quiero conocerte. Después, lo leemos juntos.',
+        reveal: 'Escucha: «Un refugio debe tener una salida». El hechizo no es un castigo. Es un refugio contra una tormenta. Pero no tiene salida.',
+        farewell: 'Teobaldo es el cronista del castillo. Está en el gran salón. Enséñale el pergamino.',
+        revisit: 'Hola otra vez. Un buen lector siempre vuelve a la biblioteca.',
       },
       base: {
         greet: 'Ah, una visita en mi biblioteca. Soy Baltasar, el mago de los libros. Aquí hay más preguntas que respuestas, y así me gusta.',
@@ -560,11 +638,11 @@ export const CONVERSATIONS = {
         ],
       },
       A1: {
-        q1: '¿Qué te gusta aprender? ¿Por qué?',
-        follow: ['¿Cómo estudias español: con libros, con videos, con música…?', 'routine'],
-        q2: '¿Qué libro, serie o película te gusta mucho?',
-        q3: ['¿Usas el teléfono para aprender cosas? ¿Qué aplicaciones usas?', 'routine'],
-        extra: [['¿Cuál es tu materia favorita?', 'pref'], ['¿Prefieres estudiar por la mañana o por la noche?', 'pref']],
+        q1: '¿Qué te gusta aprender?',
+        follow: ['¿Cómo estudias español: con libros, videos o música?', 'routine'],
+        q2: '¿Qué libro, serie o película te gusta?',
+        q3: ['¿Usas el teléfono para aprender?', 'routine'],
+        extra: [['¿Cuál es tu materia favorita?', 'pref'], ['¿Estudias por la mañana o por la noche?', 'pref']],
       },
       A2: {
         q1: ['¿Cuál era tu materia favorita en la escuela? ¿Cómo era tu profesor o profesora?', 'describe'],
@@ -609,6 +687,10 @@ export const CONVERSATIONS = {
     flow: ['greet', 'q1', 'follow', 'lore', 'q2', 'q3', 'reveal', 'farewell'],
     words: ['los abuelos', 'el recuerdo', 'la foto', 'la infancia', 'antes', 'ahora', 'la historia', 'cambiar'],
     journal: 'Teobaldo ordenó la historia: primero la tormenta, después el refugio y al final el sueño. Te confió Aurora para protegerte del fuego de Brum en la terraza.',
+    keywords: {
+      a0: [{ es: 'escribir', en: 'to write' }, { es: 'la tormenta', en: 'the storm' }, { es: 'el sueño', en: 'sleep' }, { es: 'el amanecer', en: 'the dawn' }, { es: 'el fuego', en: 'the fire' }, { es: 'el dragón', en: 'the dragon' }],
+      a1: [{ es: 'el cronista', en: 'the chronicler' }, { es: 'el orden', en: 'the order' }, { es: 'sin fin', en: 'endless' }, { es: 'proteger', en: 'to protect' }, { es: 'la escalera', en: 'the stairs' }, { es: 'atacar', en: 'to attack' }],
+    },
     story: {
       a0: {
         greet: { es: 'Buenas tardes. Soy Teobaldo. Escribo la historia del reino.', en: 'Good afternoon. I am Teobaldo. I write the history of the kingdom.' },
@@ -616,6 +698,13 @@ export const CONVERSATIONS = {
         reveal: { es: 'Te doy Aurora. Es la luz del amanecer. Te protege del fuego.', en: 'I give you Aurora. It is the light of dawn. It protects you from fire.' },
         farewell: { es: 'Sube la escalera. Arriba está Brum, el dragón. Usa Aurora: tecla 4 y R.', en: 'Go up the stairs. Brum, the dragon, is up there. Use Aurora: key 4 and R.' },
         revisit: { es: 'Buenas tardes otra vez. ¿Más recuerdos?', en: 'Good afternoon again. More memories?' },
+      },
+      a1: {
+        greet: 'Buenas tardes. Soy Teobaldo, el cronista del castillo. Escribo la historia de Valdoria. ¡Pero aquí no pasa nada!',
+        lore: 'Con el pergamino, entiendo el orden. Primero hay una tormenta. Después, la Tejedora hace un refugio de espinas. Al final, el refugio es un sueño sin fin.',
+        reveal: 'Ahora necesitas Aurora, la luz del amanecer. Te protege del fuego. Arriba vive Brum, el dragón. Él tiene el cristal del amanecer.',
+        farewell: 'Sube la escalera hasta la terraza. Antes de ver a Brum, elige Aurora con la tecla 4 y pulsa R. No lo ataques: escúchalo.',
+        revisit: 'Hola otra vez. Un cronista siempre quiere un buen recuerdo.',
       },
       base: {
         greet: 'Buenas tardes. Soy Teobaldo, cronista del castillo. Escribo todo lo que pasa en Valdoria… aunque en cien años no pasó casi nada.',
@@ -636,7 +725,7 @@ export const CONVERSATIONS = {
       A0: {
         q1: { es: '¿Tienes abuelos?', en: 'Do you have grandparents?', options: ['Sí.', 'No.'] },
         follow: { es: '¿Tu familia es grande o pequeña?', en: 'Is your family big or small?', options: ['Grande.', 'Pequeña.'] },
-        q2: { es: '¿Tienes fotos de tu infancia?', en: 'Do you have photos from your childhood?', options: ['Sí, muchas.', 'Pocas.'] },
+        q2: { es: '¿Tienes fotos de niño o de niña?', en: 'Do you have photos from when you were little?', options: ['Sí, muchas.', 'Pocas.'] },
         q3: { es: '¿Te gusta la historia?', en: 'Do you like history?', options: ['Sí.', 'No mucho.'] },
         extra: [
           { es: '¿Cuántos años tienes?', en: 'How old are you?', options: ['Tengo … años.'] },
@@ -644,9 +733,9 @@ export const CONVERSATIONS = {
         ],
       },
       A1: {
-        q1: ['¿Cómo es tu familia? ¿Es grande o pequeña?', 'describe'],
-        follow: ['¿Ves a tus abuelos o a tus tíos a menudo?', 'routine'],
-        q2: ['¿Tienes una foto favorita? ¿Quién está en la foto?', 'describe'],
+        q1: ['¿Cómo es tu familia? ¿Grande o pequeña?', 'describe'],
+        follow: ['¿Ves mucho a tus abuelos o a tus tíos?', 'routine'],
+        q2: ['¿Tienes una foto favorita? ¿Quién está?', 'describe'],
         q3: ['¿Qué fiestas celebra tu familia?', 'routine'],
         extra: [['¿Qué música escuchan tus padres?', 'describe'], ['¿Te gusta la historia de tu ciudad?', 'pref']],
       },
@@ -693,6 +782,10 @@ export const CONVERSATIONS = {
     flow: ['greet', 'lore', 'q1', 'follow', 'q2', 'q3', 'reveal', 'farewell'],
     words: ['el miedo', 'valiente', 'nervioso', 'la noche', 'el monstruo', 'probar', 'juzgar', 'la sorpresa'],
     journal: 'Brum no es un enemigo: protege a Elara desde hace cien años. Te confió el cristal del amanecer. La Tejedora te espera en la torre.',
+    keywords: {
+      a0: [{ es: 'el dragón', en: 'the dragon' }, { es: 'el miedo', en: 'fear' }, { es: 'malo', en: 'bad' }, { es: 'proteger', en: 'to protect' }, { es: 'el cristal', en: 'the crystal' }, { es: 'la torre', en: 'the tower' }],
+      a1: [{ es: 'quedarse', en: 'to stay' }, { es: 'el monstruo', en: 'the monster' }, { es: 'hacer daño', en: 'to hurt' }, { es: 'el cristal', en: 'the crystal' }, { es: 'la torre', en: 'the tower' }, { es: 'calentar', en: 'to warm up' }],
+    },
     story: {
       a0: {
         greet: { es: '¡GRRR! Soy Brum, el dragón. ¿Tienes miedo?', en: 'GRRR! I am Brum, the dragon. Are you scared?' },
@@ -700,6 +793,13 @@ export const CONVERSATIONS = {
         reveal: { es: 'Elara está en la torre. Te doy el cristal del amanecer.', en: 'Elara is in the tower. I give you the dawn crystal.' },
         farewell: { es: 'Recoge el cristal con F. Después, ve a la torre. La Tejedora te espera.', en: 'Pick up the crystal with F. Then go to the tower. The Weaver is waiting for you.' },
         revisit: { es: 'Hola. Ya no hay fuego.', en: 'Hello. No more fire.' },
+      },
+      a1: {
+        greet: '¡GRRR! ¿Quién está aquí? Ah, tienes Aurora. Muy bien. Soy Brum. Puedes quedarte, pero habla con cuidado.',
+        lore: 'Todos piensan que soy un monstruo. No es verdad. Protejo a la princesa Elara desde hace cien años.',
+        reveal: 'Ahora entiendo: no quieres hacer daño. Te doy el cristal del amanecer. Elara está en la torre. Necesita esta luz.',
+        farewell: 'Recoge el cristal con la tecla F. Después, ve a la torre. Allí está la Tejedora de Espinas.',
+        revisit: 'Hola otra vez. Ahora mi fuego solo calienta la conversación.',
       },
       base: {
         greet: '¡GRRR! ¿Quién sube hasta aquí? … Ah. Usaste Aurora. Bien pensado. Soy Brum. Puedes quedarte, pero habla con cuidado.',
@@ -729,10 +829,10 @@ export const CONVERSATIONS = {
       },
       A1: {
         q1: '¿Qué animales te dan miedo?',
-        follow: '¿Y qué animal te gusta mucho?',
+        follow: '¿Qué animal te gusta mucho?',
         q2: '¿Te gustan las películas de miedo? ¿Por qué?',
         q3: ['¿Qué haces cuando estás nervioso o nerviosa?', 'routine'],
-        extra: ['¿Te gusta probar cosas nuevas o prefieres lo de siempre?', ['¿Qué deporte o actividad te parece peligrosa?', 'opinion']],
+        extra: ['¿Te gusta probar comida nueva?', ['¿Qué deporte te parece peligroso?', 'opinion']],
       },
       A2: {
         q1: ['¿Alguna vez tuviste mucho miedo? ¿Qué pasó?', 'story'],
@@ -777,13 +877,24 @@ export const CONVERSATIONS = {
     flow: ['greet', 'q1', 'follow', 'q2', 'lore', 'q3', 'reveal', 'farewell'],
     words: ['el plan', 'la sorpresa', 'decidir', 'ordenado', 'cambiar', 'el control', 'proteger', 'el error'],
     journal: 'La Tejedora reveló el orden del ritual en el altar de la torre: primero Lumaria, después Floralis y al final Aurora.',
+    keywords: {
+      a0: [{ es: 'el hechizo', en: 'the spell' }, { es: 'proteger', en: 'to protect' }, { es: 'el ritual', en: 'the ritual' }, { es: 'el altar', en: 'the altar' }, { es: 'primero', en: 'first' }, { es: 'después', en: 'then' }],
+      a1: [{ es: 'tejer', en: 'to weave' }, { es: 'el refugio', en: 'the shelter' }, { es: 'tener miedo', en: 'to be afraid' }, { es: 'controlar', en: 'to control' }, { es: 'el ritual', en: 'the ritual' }, { es: 'el altar', en: 'the altar' }],
+    },
     story: {
       a0: {
         greet: { es: 'Hola. Soy la Tejedora de Espinas.', en: 'Hello. I am the Thorn Weaver.' },
-        lore: { es: 'Yo hice el hechizo. Quería proteger a Elara.', en: 'I made the spell. I wanted to protect Elara.' },
+        lore: { es: 'El hechizo es mío. Quiero proteger a Elara.', en: 'The spell is mine. I want to protect Elara.' },
         reveal: { es: 'El ritual: primero Lumaria, después Floralis, al final Aurora.', en: 'The ritual: first Lumaria, then Floralis, last Aurora.' },
         farewell: { es: 'Ve al altar. Usa 1, 3 y 4 con R. En ese orden.', en: 'Go to the altar. Use 1, 3 and 4 with R. In that order.' },
         revisit: { es: 'Hola. El altar te espera.', en: 'Hello. The altar is waiting for you.' },
+      },
+      a1: {
+        greet: 'Estás en la torre. Soy la Tejedora de Espinas. Sí, el hechizo es mío. Primero, habla un poco conmigo.',
+        lore: 'Es la noche de una tormenta terrible. Hago un refugio de espinas para Elara y el reino. Pero tengo miedo de abrirlo. Y el refugio es un sueño de cien años.',
+        reveal: 'Ya no quiero controlar todo. Este es el orden del ritual: primero Lumaria, la luz. Después, Floralis, la vida. Al final, Aurora, el amanecer.',
+        farewell: 'El altar está al fondo de la torre. Necesitas la rosa y el cristal. Usa 1, 3 y 4, siempre con R.',
+        revisit: 'Hola otra vez. Me gusta tu compañía.',
       },
       base: {
         greet: 'Llegaste a la torre. Soy la Tejedora de Espinas. Sí, yo tejí el hechizo. Antes de juzgarme, conversa un poco conmigo.',
@@ -812,11 +923,11 @@ export const CONVERSATIONS = {
         ],
       },
       A1: {
-        q1: '¿Te gusta planear tu semana o prefieres decidir cada día?',
-        follow: ['¿Usas una agenda o una aplicación en el teléfono?', 'routine'],
-        q2: ['¿Eres una persona ordenada? ¿Cómo es tu escritorio o tu habitación?', 'describe'],
+        q1: '¿Te gusta planear tu semana?',
+        follow: ['¿Usas una agenda o el teléfono?', 'routine'],
+        q2: ['¿Eres una persona ordenada? ¿Cómo es tu habitación?', 'describe'],
         q3: '¿Te gustan las sorpresas? ¿Por qué?',
-        extra: [['¿Qué haces cuando un plan cambia de repente?', 'routine'], ['¿Llegas temprano o tarde a tus citas?', 'routine']],
+        extra: [['¿Qué haces cuando un plan cambia?', 'routine'], ['¿Llegas temprano o tarde a tus citas?', 'routine']],
       },
       A2: {
         q1: ['¿Cuándo fue la última vez que un plan cambió de repente? ¿Qué hiciste?', 'story'],
@@ -862,12 +973,22 @@ export const CONVERSATIONS = {
     flow: ['greet', 'lore', 'q1', 'follow', 'q2', 'q3', 'reveal'],
     words: ['el futuro', 'el sueño', 'cambiar', 'la libertad', 'feliz', 'empezar', 'la meta', 'elegir'],
     journal: 'Elara despertó y Valdoria vuelve a vivir. La historia terminó con una conversación sobre el futuro.',
+    keywords: {
+      a0: [{ es: '¿dónde?', en: 'where?' }, { es: 'el día', en: 'the day' }, { es: 'despertar', en: 'to wake up' }, { es: 'gracias', en: 'thank you' }, { es: 'feliz', en: 'happy' }, { es: 'la historia', en: 'the story' }],
+      a1: [{ es: 'la voz', en: 'the voice' }, { es: 'tranquilo', en: 'calm' }, { es: 'el futuro', en: 'the future' }, { es: 'empezar', en: 'to start' }, { es: 'la herrería', en: 'the forge' }, { es: 'sin miedo', en: 'without fear' }],
+    },
     story: {
       a0: {
         greet: { es: 'Mmm… ¿Dónde estoy? ¿Es de día?', en: 'Mmm… Where am I? Is it daytime?' },
         lore: { es: 'Gracias. El reino despierta contigo.', en: 'Thank you. The kingdom is waking up with you.' },
         reveal: { es: 'Valdoria despierta. ¡Gracias por tus palabras! Tu historia continúa.', en: 'Valdoria wakes up. Thank you for your words! Your story continues.' },
         revisit: { es: '¡Hola! El reino está feliz.', en: 'Hi! The kingdom is happy.' },
+      },
+      a1: {
+        greet: 'Mmm… ¿Qué hora es? ¿Dónde estoy? ¿Ya no hay hechizo?',
+        lore: 'Escucho voces en la aldea. El molino gira. El dragón está tranquilo. Gracias. Ahora tenemos un futuro.',
+        reveal: 'Valdoria va a empezar otra vez. Inés va a abrir la posada. Bruno va a trabajar en la herrería. Y yo voy a vivir sin miedo. Gracias por tus palabras. Tu historia continúa.',
+        revisit: '¡Qué alegría verte! El reino está despierto. Tengo muchas preguntas para ti.',
       },
       base: {
         greet: 'Mmm… ¿Qué hora es? Tengo la sensación de haber dormido muchísimo. ¿Tú rompiste el hechizo?',
@@ -897,8 +1018,8 @@ export const CONVERSATIONS = {
         q1: ['¿Qué quieres hacer este año?', 'plan'],
         follow: ['¿Con quién quieres hacerlo?', 'plan'],
         q2: '¿Qué te gusta de tu vida ahora?',
-        q3: ['¿Qué quieres aprender en el futuro?', 'plan'],
-        extra: [['¿Adónde quieres viajar algún día?', 'plan'], '¿Cuál es tu día favorito de la semana? ¿Por qué?'],
+        q3: ['¿Qué vas a aprender en el futuro?', 'plan'],
+        extra: [['¿Adónde quieres viajar algún día?', 'plan'], '¿Cuál es tu día favorito? ¿Por qué?'],
       },
       A2: {
         q1: ['¿Qué cosas cambiaron en tu vida en los últimos años?', 'story'],
@@ -943,14 +1064,19 @@ export const CONVERSATIONS = {
 export const PLACES = {
   molino: {
     name: 'El viejo molino', requires: null, spot: { x: 28, y: 0, z: 12 },
+    keywords: {
+      a0: [{ es: 'el molino', en: 'the mill' }, { es: 'la harina', en: 'flour' }, { es: 'el pan', en: 'bread' }, { es: 'comer', en: 'to eat' }],
+      a1: [{ es: 'el molino', en: 'the mill' }, { es: 'viejo', en: 'old' }, { es: 'la harina', en: 'flour' }, { es: 'el barrio', en: 'the neighborhood' }],
+    },
     story: {
       a0: { es: 'Es el molino. Hace harina para el pan.', en: 'It is the mill. It makes flour for bread.' },
+      a1: 'Es el viejo molino de Valdoria. Aquí la aldea hace harina para el pan.',
       base: 'El viejo molino de Valdoria. Antes, toda la aldea venía aquí con sacos de trigo y se quedaba a conversar.',
       full: 'El molino era el lugar de encuentro de la aldea: mientras se molía el trigo, se molían también los chismes, las noticias y alguna que otra discusión.',
     },
     levels: {
       A0: { es: '¿Comes pan todos los días?', en: 'Do you eat bread every day?', options: ['Sí.', 'No.', 'A veces.'] },
-      A1: ['¿Dónde compras el pan o la comida en tu barrio?', 'routine'],
+      A1: ['¿Dónde compras el pan en tu barrio?', 'routine'],
       A2: ['¿Había un lugar de encuentro en tu barrio cuando eras pequeño o pequeña? ¿Cómo era?', 'describe'],
       B1: ['¿Cuál es hoy el lugar de encuentro de tu barrio o de tu grupo de amigos?', 'describe'],
       B2: '¿Crees que los barrios perdieron sus lugares de encuentro, o simplemente se mudaron a otros sitios, incluso digitales?',
@@ -960,8 +1086,13 @@ export const PLACES = {
   },
   claro: {
     name: 'El claro de las luciérnagas', requires: null, spot: { x: -16, y: 0, z: -4 },
+    keywords: {
+      a0: [{ es: 'el claro', en: 'the clearing' }, { es: 'el bosque', en: 'the forest' }, { es: 'la flor', en: 'the flower' }, { es: 'el pájaro', en: 'the bird' }],
+      a1: [{ es: 'el claro', en: 'the clearing' }, { es: 'se escucha', en: 'you can hear' }, { es: 'el agua', en: 'the water' }, { es: 'tranquilo', en: 'calm' }],
+    },
     story: {
       a0: { es: 'Es el claro del bosque. Hay flores y pájaros.', en: 'It is the forest clearing. There are flowers and birds.' },
+      a1: 'Es un claro en el bosque. Aquí hay mucha luz. Se escucha el agua de un río pequeño.',
       base: 'Un claro escondido entre los árboles. Aquí la luz entra distinta y se escucha el agua de un arroyo.',
       full: 'Un claro donde la luz se filtra entre las ramas. Liora dice que aquí venían los enamorados, los poetas y quienes necesitaban pensar sin interrupciones.',
     },
@@ -977,8 +1108,13 @@ export const PLACES = {
   },
   rio: {
     name: 'La orilla del río', requires: null, spot: { x: 4, y: 0, z: -36 },
+    keywords: {
+      a0: [{ es: 'el río', en: 'the river' }, { es: 'el agua', en: 'the water' }, { es: 'frío', en: 'cold' }, { es: 'nadar', en: 'to swim' }],
+      a1: [{ es: 'separar', en: 'to separate' }, { es: 'claro', en: 'clear' }, { es: 'el lago', en: 'the lake' }, { es: 'el mar', en: 'the sea' }],
+    },
     story: {
       a0: { es: 'Es el río. El agua está fría.', en: 'It is the river. The water is cold.' },
+      a1: 'Es el río. Separa la aldea y los jardines del castillo. El agua es muy clara.',
       base: 'El río separa la aldea de los jardines del castillo. El agua es tan clara que se ven las piedras del fondo.',
       full: 'El río marca la frontera entre la aldea y el castillo. Dicen que nadie lo cruzaba sin pensar dos veces en lo que dejaba atrás.',
     },
@@ -994,8 +1130,13 @@ export const PLACES = {
   },
   fuente: {
     name: 'La fuente de los deseos', requires: 'bridgeOpen', spot: { x: 6, y: 0, z: -53 },
+    keywords: {
+      a0: [{ es: 'la fuente', en: 'the fountain' }, { es: 'el agua', en: 'the water' }, { es: 'cantar', en: 'to sing' }, { es: 'el jardín', en: 'the garden' }],
+      a1: [{ es: 'la fuente', en: 'the fountain' }, { es: 'el domingo', en: 'Sunday' }, { es: 'la familia', en: 'the family' }, { es: 'pasear', en: 'to go for a walk' }],
+    },
     story: {
       a0: { es: 'Es una fuente. El agua canta.', en: 'It is a fountain. The water sings.' },
+      a1: 'Es la fuente de los jardines. Los domingos, las familias pasean por aquí.',
       base: 'La fuente de los jardines reales. Antes, las familias venían aquí los domingos a pasear.',
       full: 'La fuente de los jardines reales. Según Celina, aquí la gente tiraba monedas y pedía deseos tan pequeños que nadie se avergonzaba de pedirlos.',
     },
@@ -1011,8 +1152,13 @@ export const PLACES = {
   },
   biblioteca: {
     name: 'La gran biblioteca', requires: 'castleOpen', spot: { x: -18, y: 0, z: -80 },
+    keywords: {
+      a0: [{ es: 'la biblioteca', en: 'the library' }, { es: 'el libro', en: 'the book' }, { es: 'leer', en: 'to read' }, { es: 'muchos', en: 'many' }],
+      a1: [{ es: 'la biblioteca', en: 'the library' }, { es: 'la magia', en: 'magic' }, { es: 'la cocina', en: 'cooking' }, { es: 'el viaje', en: 'the trip' }],
+    },
     story: {
       a0: { es: 'Es la biblioteca. Hay muchos libros.', en: 'It is the library. There are many books.' },
+      a1: 'Es la gran biblioteca del castillo. Hay libros de magia, de cocina y de viajes.',
       base: 'La gran biblioteca del castillo. Hay libros de magia, de cocina, de viajes y hasta cartas de amor olvidadas.',
       full: 'La gran biblioteca: miles de libros y ni un solo índice confiable. Baltasar dice que es a propósito, para obligar a la gente a perderse.',
     },
@@ -1028,8 +1174,13 @@ export const PLACES = {
   },
   salon: {
     name: 'El gran salón', requires: 'castleOpen', spot: { x: 0, y: 0, z: -76 },
+    keywords: {
+      a0: [{ es: 'el salón', en: 'the hall' }, { es: 'el castillo', en: 'the castle' }, { es: 'la fiesta', en: 'the party' }, { es: 'grande', en: 'big' }],
+      a1: [{ es: 'el salón', en: 'the hall' }, { es: 'la mesa', en: 'the table' }, { es: 'listo', en: 'ready' }, { es: 'el cumpleaños', en: 'the birthday' }],
+    },
     story: {
       a0: { es: 'Es el gran salón del castillo. Aquí hay fiestas.', en: 'It is the great hall of the castle. There are parties here.' },
+      a1: 'Es el gran salón del castillo. Las mesas están listas para una fiesta. ¡La fiesta tiene cien años!',
       base: 'El gran salón del castillo. Las mesas siguen puestas para una fiesta que empezó hace cien años.',
       full: 'El gran salón: las mesas siguen servidas para un banquete interrumpido hace cien años. Nadie se atrevió a levantar los platos.',
     },
@@ -1045,8 +1196,13 @@ export const PLACES = {
   },
   mirador: {
     name: 'El mirador de la torre', requires: 'castleOpen', spot: { x: 16, y: 8, z: -108 },
+    keywords: {
+      a0: [{ es: 'aquí', en: 'here' }, { es: 'ver', en: 'to see' }, { es: 'todo', en: 'all' }, { es: 'alto', en: 'high' }],
+      a1: [{ es: 'arriba', en: 'up' }, { es: 'el reino', en: 'the kingdom' }, { es: 'la ventana', en: 'the window' }, { es: 'ver', en: 'to see' }],
+    },
     story: {
       a0: { es: 'Desde aquí, ves todo el reino.', en: 'From here, you can see the whole kingdom.' },
+      a1: 'Desde aquí arriba, ves todo el reino: el bosque, la aldea y el río.',
       base: 'Desde lo alto se ve todo el reino: el bosque, la aldea, el río y el camino por donde llegaste.',
       full: 'Desde aquí arriba se ve todo el camino recorrido: el bosque, la aldea, el río, los jardines. Visto desde lejos, parece más corto de lo que fue.',
     },

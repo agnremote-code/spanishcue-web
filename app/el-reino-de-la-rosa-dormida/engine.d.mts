@@ -31,6 +31,8 @@ export interface ConversationView {
   text: string; en?: string; options?: string[]; fn?: string; isQuestion: boolean;
   mission: { objective: string; title: string; chapter: number; here: boolean };
   canDeepen: boolean; help: Help | null;
+  /** A0 and A1 only: 4–6 bilingual words for this encounter (empty at other levels). */
+  keywords: { es: string; en: string }[];
 }
 export interface ActiveQuest extends Quest { objective: string; target: string; total: number; complete: boolean }
 export const LEGACY_SAVE_KEY: string;

@@ -771,6 +771,22 @@ test('A0 reads every line twice: Spanish first, its English under it, in every p
   assert.ok(engine.isValidState(engine.startExploring(engine.initialState('A0'))));
 });
 
+test('A1: every place, interaction and street scene shows 4–6 bilingual keywords', () => {
+  const inRange = (list) => Array.isArray(list) && list.length >= 4 && list.length <= 6 && list.every(bilingual.isBilingual);
+  for (const location of levels.contentFor('A1').LOCATIONS) {
+    assert.ok(inRange(location.help.vocab), `${location.id}: place words`);
+    assert.ok(location.help.chunks.every(bilingual.isBilingual), `${location.id}: bilingual expressions`);
+    for (const activity of location.activities) assert.ok(inRange(activity.words), `${activity.id}: A1 words`);
+  }
+  assert.equal(levels.contentFor('B1').LOCATIONS[0].activities[0].words, undefined);
+  for (const encounter of street.ENCOUNTERS) {
+    const state = street.openEncounter(street.emptyStreet(), encounter.id, encounter.event ?? null, 'A1');
+    if (!state.open) continue;
+    assert.ok(inRange(street.streetView(state, 'A1').words), `${encounter.id}: A1 street words`);
+    assert.equal(street.streetView(state, 'B1').words, undefined);
+  }
+});
+
 test('A0 in the street: its own short bilingual scenes, the same endings, nothing else opens', () => {
   assert.ok(street.A0_IDS.length >= 18, `${street.A0_IDS.length} A0 scenes`);
   const empty = street.emptyStreet();

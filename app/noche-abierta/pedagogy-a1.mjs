@@ -1,0 +1,60 @@
+// Noche Abierta · A1. The new words of each interaction, with their English
+// ({ es, en }, shown bilingual under the card like the A0 words), and simpler
+// labels where the shared title or description uses the past tense.
+const t = (es, en) => ({ es, en });
+
+export const A1_WORDS = {
+  "cafe-alla": [t("para llevar", "to go"), t("aquí", "here"), t("la camarera", "the waitress"), t("responder", "to answer"), t("por favor", "please")],
+  "cafe-equivocado": [t("el té", "the tea"), t("pedir", "to order"), t("recibir", "to get"), t("perdona", "excuse me"), t("¿cuánto cuesta?", "how much is it?")],
+  "cafe-grupo": [t("la mesa", "the table"), t("la silla", "the chair"), t("tres", "three"), t("los amigos", "the friends"), t("conversar", "to chat")],
+  "depto-un-minuto": [t("de visita", "visiting"), t("el departamento", "the flat"), t("un vaso de agua", "a glass of water"), t("¿puedo…?", "can I…?"), t("el abrigo", "the coat")],
+  "depto-timbre": [t("la puerta", "the door"), t("el timbre", "the doorbell"), t("tocar", "to ring"), t("la entrada", "the entrance"), t("dentro", "inside")],
+  "resto-cuenta": [t("la cuenta", "the bill"), t("pagar", "to pay"), t("cada uno", "each person"), t("lo mismo", "the same"), t("yo invito", "it’s on me")],
+  "resto-plato": [t("la sopa", "the soup"), t("la carne", "the meat"), t("sin", "without"), t("caliente", "hot"), t("el pan", "the bread")],
+  "resto-al-lado": [t("el ruido", "the noise"), t("otra mesa", "another table"), t("cambiar", "to change"), t("el camarero", "the waiter"), t("la tarjeta", "the card")],
+  pablo: [t("saludar", "to say hello"), t("el nombre", "the name"), t("me llamo…", "my name is…"), t("¿y tú?", "and you?"), t("hasta mañana", "see you tomorrow")],
+  ines: [t("nueva", "new"), t("el barrio", "the neighbourhood"), t("¡bienvenida!", "welcome!"), t("el viaje", "the trip"), t("la cuenta", "the bill")],
+  pareja: [t("invitar", "to invite"), t("salir", "to go out"), t("primero", "first"), t("bailar", "to dance"), t("cenar", "to have dinner")],
+  ramiro: [t("la estación", "the station"), t("a la derecha", "on the right"), t("a la izquierda", "on the left"), t("cerrada", "closed"), t("llegar", "to get to")],
+  marta: [t("el cumpleaños", "the birthday"), t("¡feliz cumpleaños!", "happy birthday!"), t("¡buen viaje!", "have a good trip!"), t("¡que te mejores!", "get well soon!"), t("celebrar", "to celebrate")],
+  kenji: [t("entender", "to understand"), t("repetir", "to repeat"), t("despacio", "slowly"), t("rápido", "fast"), t("el tema", "the topic")],
+  sofia: [t("invitar", "to invite"), t("escuchar", "to listen to"), t("aceptar", "to accept"), t("tal vez", "maybe"), t("otro día", "another day")],
+  fuerte: [t("oír", "to hear"), t("la música", "the music"), t("alta", "loud"), t("tranquila", "quiet"), t("sentarse", "to sit down")],
+  quedarse: [t("tengo sueño", "I’m sleepy"), t("irse", "to leave"), t("quedarse", "to stay"), t("una hora más", "one more hour"), t("la bebida", "the drink")],
+  billetera: [t("la billetera", "the wallet"), t("el efectivo", "cash"), t("la tarjeta", "the card"), t("pagar con tarjeta", "to pay by card"), t("reservar", "to book")],
+  fila: [t("la barra", "the bar counter"), t("la fila", "the queue"), t("esperar", "to wait"), t("el turno", "the turn"), t("la salida", "the exit")],
+  caro: [t("caro", "expensive"), t("barato", "cheap"), t("proponer", "to suggest"), t("otro bar", "another bar"), t("pagar todo", "to pay for everything")],
+  cancelo: [t("no puede venir", "he can’t come"), t("mañana", "tomorrow"), t("la semana que viene", "next week"), t("escribir", "to write"), t("¿nos vemos?", "shall we meet?")],
+  invitacion: [t("saludar", "to say hello"), t("la silla", "the chair"), t("libre", "free"), t("a tu lado", "next to you"), t("siéntate", "sit down")],
+  "auto-aeropuerto": [t("el auto", "the car"), t("no arranca", "it won’t start"), t("el aeropuerto", "the airport"), t("el taxi", "the taxi"), t("la entrada", "the ticket")],
+  "auto-gasolina": [t("la gasolina", "the petrol"), t("la gasolinera", "the petrol station"), t("acercarse", "to come over"), t("¿dónde hay…?", "where is there…?"), t("comprar", "to buy")],
+  foto: [t("la foto", "the photo"), t("antigua", "old"), t("el año", "the year"), t("la guía", "the guide"), t("la salida", "the exit")],
+  telefono: [t("el teléfono", "the phone"), t("antiguo", "old"), t("funcionar", "to work"), t("¿cómo funciona?", "how does it work?"), t("mi teléfono", "my phone")],
+  boleto: [t("el boleto", "the ticket"), t("el tren", "the train"), t("el destino", "the destination"), t("el cuadro", "the painting"), t("la cafetería", "the café")],
+  carta: [t("la carta", "the letter"), t("la letra", "the handwriting"), t("pequeña", "small"), t("una copia", "a copy"), t("leer", "to read")],
+  valija: [t("la maleta", "the suitcase"), t("el material", "the material"), t("el cuero", "leather"), t("la tela", "fabric"), t("grande o pequeña", "big or small")],
+  televisor: [t("el televisor", "the TV set"), t("funciona", "it works"), t("el sonido", "the sound"), t("los años sesenta", "the sixties"), t("antiguo", "old")],
+  bicicleta: [t("la bicicleta", "the bicycle"), t("el cartero", "the postman"), t("¿qué significa…?", "what does … mean?"), t("alquilar", "to rent"), t("el sello", "the stamp")],
+  habitacion: [t("la habitación", "the bedroom"), t("el objeto", "the object"), t("¿para qué sirve?", "what is it for?"), t("la visita", "the tour"), t("empezar", "to start")],
+  caja: [t("la caja de música", "the music box"), t("cerrada", "closed"), t("escuchar", "to listen to"), t("apagar la luz", "to turn off the light"), t("el personal", "the staff")],
+  "taxi-cortado": [t("la calle", "the street"), t("cerrada", "closed"), t("caminar", "to walk"), t("esperar", "to wait"), t("la terraza", "the rooftop")],
+  "taxi-mayor": [t("el conductor", "the driver"), t("seguir", "to go on"), t("volver", "to go back"), t("la parada", "the stop"), t("bajar", "to get out")],
+  "tienda-enchufe": [t("el cargador", "the charger"), t("el enchufe", "the socket"), t("entrar", "to fit"), t("el adaptador", "the adapter"), t("los auriculares", "the headphones")],
+  "tienda-hielo": [t("el hielo", "the ice"), t("frío", "cold"), t("la bolsa térmica", "the cool bag"), t("la caja de cartón", "the cardboard box"), t("la tapa", "the lid")],
+  "tienda-regalo": [t("el regalo", "the gift"), t("buscar", "to look for"), t("la taza", "the mug"), t("el mapa", "the map"), t("elegir", "to choose")],
+  "terraza-cierre": [t("la terraza", "the rooftop"), t("seguir hablando", "to keep talking"), t("un poco más", "a bit longer"), t("irse", "to leave"), t("otro lugar", "another place")],
+  "terraza-foto": [t("hacer una foto", "to take a photo"), t("salir en una foto", "to be in a photo"), t("antes", "before"), t("las escaleras", "the stairs"), t("¿quieren…?", "do you want…?")],
+};
+
+// Shared titles and descriptions in the past tense, said in the present at A1.
+export const A1_LABELS = {
+  ines: { who: "Es nueva en el barrio" },
+  pareja: { who: "Una pareja con planes distintos" },
+  ramiro: { who: "No tiene autobús para volver" },
+  fuerte: { title: "Un hombre que grita" },
+  billetera: { title: "Sin billetera" },
+  fila: { title: "Una fila en la barra" },
+  cancelo: { title: "Nico no viene" },
+  invitacion: { title: "Sergio llega de traje" },
+  habitacion: { title: "Una habitación antigua" },
+};

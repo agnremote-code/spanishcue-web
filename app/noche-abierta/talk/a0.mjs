@@ -117,7 +117,7 @@ export const STREET = {
     A0: [
       t("¿Vives en una casa o en un apartamento?", "Do you live in a house or an apartment?"),
       t("¿Tienes balcón? ¿Qué hay?", "Do you have a balcony? What is on it?"),
-      t("¿Hoy es un buen día o un mal día?", "Is today a good day or a bad day?"),
+      t("¿Hoy es un día bueno o malo?", "Is today a good day or a bad one?"),
       t("¿Quién tiene una llave de tu casa?", "Who has a key to your home?"),
       t("¿Eres una persona con suerte?", "Are you a lucky person?"),
     ],
@@ -219,7 +219,7 @@ export const PLACES = {
   ] },
   "cafe-grupo": { A0: [
     t("¿Sales con amigos los fines de semana?", "Do you go out with friends at the weekend?"),
-    t("¿Tus amigos son de aquí o de otros países?", "Are your friends from here or from other countries?"),
+    t("¿Tus amigos son de aquí?", "Are your friends from here?"),
     t("¿Prefieres hablar con una persona o con muchas?", "Do you prefer talking with one person or with many?"),
     t("¿Dónde ves a tus amigos?", "Where do you meet your friends?"),
   ] },
@@ -429,7 +429,7 @@ export const PLACES = {
   ] },
   "tienda-regalo": { A0: [
     t("¿Es fácil para ti elegir regalos?", "Is it easy for you to choose presents?"),
-    t("¿Qué le gusta a tu mejor amigo o amiga?", "What does your best friend like?"),
+    t("¿Qué le gusta a tu mejor amigo?", "What does your best friend like?"),
     t("¿Prefieres dar o recibir?", "Do you prefer giving or receiving?"),
     t("¿Te gustan las tiendas pequeñas?", "Do you like small shops?"),
   ] },

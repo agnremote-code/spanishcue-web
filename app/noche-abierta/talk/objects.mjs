@@ -62,7 +62,7 @@ const TALK = {
       "¿Cómo eres cuando conoces a una persona nueva?",
       "¿Te importa mucho la ropa de los demás?",
       "¿Hablas fácilmente con desconocidos?",
-      "¿Qué piensas de las personas con tatuajes?",
+      "¿Tienes tatuajes? ¿Te gustan?",
       "¿Eres una persona tímida o abierta?",
       "¿Qué miras primero en una persona?",
     ],

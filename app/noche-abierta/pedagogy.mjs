@@ -1,6 +1,7 @@
 import { bi } from './bilingual.mjs';
 import { A0_ROWS } from './pedagogy-a0.mjs';
 import { A2_ROWS } from './pedagogy-a2.mjs';
+import { A1_LABELS, A1_WORDS } from './pedagogy-a1.mjs';
 import { placeTalk } from './talk/index.mjs';
 
 // Authoritative two-moment curriculum. Three choice difficulty bands and six
@@ -53,7 +54,7 @@ const rows = {
         "Estás en el café. Pides té y recibes café.",
         "¿Qué dices para pedir tu té?",
         [
-          "Perdona, he pedido té.",
+          "Perdona, quiero té, no café.",
           "Gracias, este café está bien.",
           "¿Cuánto cuesta otro café?"
         ]
@@ -131,7 +132,7 @@ const rows = {
     "choices": [
       [
         "Estás de visita en un departamento. Quieres agua.",
-        "¿Qué le preguntas a tu anfitrión?",
+        "¿Qué le preguntas a tu amiga?",
         [
           "¿Puedo tomar un vaso de agua?",
           "¿Quieres venir a mi casa?",
@@ -170,7 +171,7 @@ const rows = {
     "title": "En la puerta",
     "choices": [
       [
-        "Llegas al departamento de una amiga. Hablas por el interfono.",
+        "Estás en la puerta de una amiga. Tocas el timbre.",
         "¿Cómo te presentas?",
         [
           "Hola, soy tu amigo. Estoy en la entrada.",
@@ -571,7 +572,7 @@ const rows = {
         "Sofía te invita a escuchar música. Tú quieres ir.",
         "¿Cómo aceptas?",
         [
-          "Sí, gracias. Me gustaría ir.",
+          "Sí, gracias. Quiero ir.",
           "No, gracias. Hoy no puedo.",
           "Tal vez otro día, hoy no."
         ]
@@ -611,7 +612,7 @@ const rows = {
         "¿Qué le propones?",
         [
           "¿Vamos a una mesa más tranquila?",
-          "¿Nos sentamos junto al altavoz?",
+          "¿Nos sentamos cerca de la música?",
           "¿Pedimos la música más alta?"
         ]
       ],
@@ -635,7 +636,7 @@ const rows = {
       ]
     ],
     "personal": [
-      "¿Cómo es un lugar donde te gusta escuchar música?",
+      "¿Dónde escuchas música?",
       "¿Dónde te gusta salir por la noche y con quién?",
       "¿Qué hace que para ti un bar tenga buen ambiente?",
       "¿Cómo afecta el ruido a tus ganas de quedarte en un lugar? Cuenta alguna experiencia.",
@@ -728,8 +729,8 @@ const rows = {
         "¿Qué respondes?",
         [
           "Sí, estoy esperando mi turno.",
-          "No, ya he pedido.",
-          "No, estoy buscando la salida."
+          "No, ya tengo mi bebida.",
+          "No, busco la salida."
         ]
       ],
       [
@@ -791,7 +792,7 @@ const rows = {
       ]
     ],
     "personal": [
-      "¿Qué haces para divertirte sin gastar mucho dinero?",
+      "¿Qué planes baratos te gustan?",
       "¿En qué te gusta gastar cuando sales con amigos?",
       "¿Qué plan económico te salió especialmente bien? Cuenta cómo fue.",
       "¿Cómo decides cuánto gastar en ocio y qué gastos te parecen realmente valiosos?",
@@ -802,7 +803,7 @@ const rows = {
   "cancelo": {
     "choices": [
       [
-        "Estás en el bar. Un amigo dice que hoy no puede venir. Quieres verlo mañana.",
+        "Estás en el bar. Un amigo no puede venir hoy. Quieres verlo mañana.",
         "¿Qué le escribes?",
         [
           "¿Nos vemos mañana?",
@@ -869,7 +870,7 @@ const rows = {
       ]
     ],
     "personal": [
-      "¿Cómo recibes a un amigo cuando llega a una reunión?",
+      "¿Qué preparas cuando vienen amigos a casa?",
       "¿Cómo eliges la ropa para una fiesta?",
       "¿Alguna vez te vestiste de manera diferente al resto? Cuenta cómo te sentiste.",
       "¿Cuánto influye tu ropa en cómo te sientes cuando conoces gente nueva?",
@@ -1044,8 +1045,8 @@ const rows = {
         "Ves un boleto antiguo en el museo. Quieres saber el destino del tren.",
         "¿Qué preguntas?",
         [
-          "¿Adónde iba este tren?",
-          "¿Quién pintó este cuadro?",
+          "¿Adónde va este tren?",
+          "¿De quién es este cuadro?",
           "¿Dónde está la cafetería?"
         ]
       ],
@@ -1069,7 +1070,7 @@ const rows = {
       ]
     ],
     "personal": [
-      "¿Adónde te gustaría viajar?",
+      "¿Adónde quieres viajar este año?",
       "¿Te gusta viajar en tren, en avión o en autobús? ¿Por qué?",
       "¿Qué viaje recuerdas con más cariño y qué pasó en él?",
       "¿Qué viaje te gustaría hacer y qué necesitarías para organizarlo?",
@@ -1109,7 +1110,7 @@ const rows = {
       ]
     ],
     "personal": [
-      "¿Qué cuentas en los mensajes que escribes a tus amigos?",
+      "¿De qué hablas con tus amigos por mensaje?",
       "¿Te gusta recibir mensajes largos o cortos? ¿Por qué?",
       "¿Guardas alguna carta o mensaje especial? Explica qué significa para ti, sin compartir nada privado.",
       "¿Qué puedes expresar mejor por escrito que en una conversación?",
@@ -1121,7 +1122,7 @@ const rows = {
     "title": "La maleta de viaje",
     "choices": [
       [
-        "Ves una maleta antigua en el museo. Quieres saber de qué material es.",
+        "Ves una maleta antigua en el museo. ¿De qué material es?",
         "¿Qué preguntas?",
         [
           "¿Es de cuero o de tela?",
@@ -1149,7 +1150,7 @@ const rows = {
       ]
     ],
     "personal": [
-      "¿Qué tres cosas importantes para ti llevas en tu maleta?",
+      "¿Qué llevas en tu maleta de viaje?",
       "¿Preparas la maleta con tiempo o el último día?",
       "¿Qué objeto llevas siempre cuando viajas y por qué?",
       "¿Cómo eliges qué llevar en tu equipaje según el viaje que vas a hacer?",
@@ -1201,7 +1202,7 @@ const rows = {
     "title": "La bicicleta del cartero",
     "choices": [
       [
-        "Ves una bicicleta de cartero. No conoces la palabra «cartero».",
+        "Ves una bicicleta roja. Es del cartero. No conoces la palabra «cartero».",
         "¿Qué preguntas?",
         [
           "¿Qué significa cartero?",
@@ -1326,7 +1327,7 @@ const rows = {
     ],
     "choices": [
       [
-        "Estás en un taxi. La calle está cerrada. Puedes caminar a la plaza, ir en taxi a la terraza o esperar.",
+        "Estás en un taxi. La calle está cerrada. ¿Caminas, vas a la terraza o esperas?",
         "¿Qué eliges?",
         [
           "Camino hasta la plaza.",
@@ -1371,11 +1372,11 @@ const rows = {
     ],
     "choices": [
       [
-        "El taxi va hacia la plaza. Puedes seguir, volver a la parada de taxis o bajar junto a la tienda.",
+        "El taxi va a la plaza. ¿Sigues, vuelves a la parada o bajas en la tienda?",
         "¿Qué le dices al conductor?",
         [
-          "Siga hasta la plaza, por favor.",
-          "Volvamos a la parada de taxis.",
+          "Hasta la plaza, por favor.",
+          "Vamos a la parada de taxis.",
           "Bajo junto a la tienda."
         ]
       ],
@@ -1452,7 +1453,7 @@ const rows = {
     "choices": [
       [
         "Compras hielo en la tienda. Quieres llevarlo frío a casa.",
-        "¿Qué recipiente eliges?",
+        "¿Qué eliges?",
         [
           "Una bolsa térmica.",
           "Una bolsa de papel abierta.",
@@ -1491,7 +1492,7 @@ const rows = {
     "title": "Elegir un regalo",
     "choices": [
       [
-        "Estás en una tienda. Buscas un regalo para una amiga que toma té.",
+        "Estás en una tienda. Buscas un regalo. Tu amiga toma mucho té.",
         "¿Qué eliges?",
         [
           "Una taza para el té.",
@@ -1624,15 +1625,16 @@ export function pedagogyFor(activity, level) {
   const options = labels.map((label, i) => ({ id: row.ids?.[i] ?? `option-${i + 1}`, label }));
   // Rotate display positions, retaining stable ids (especially taxi outcomes).
   const offset = [...activity.id].reduce((sum, char) => sum + char.charCodeAt(0), Math.max(index, 0)) % options.length;
+  const a1 = level === 'A1' ? A1_LABELS[activity.id] ?? {} : {};
   return {
-    id: activity.id, title: row.title ?? activity.title,
-    ...(activity.who ? { who: activity.who } : {}),
+    id: activity.id, title: a1.title ?? row.title ?? activity.title,
+    ...(activity.who ? { who: a1.who ?? activity.who } : {}),
     ...(activity.object ? { object: activity.object, year: activity.year } : {}),
     lessonLevel: level, situation, prompt,
     options: [...options.slice(offset), ...options.slice(0, offset)],
     close: a0 ? bi(a0.personal) : row.personal[index],
     talk: placeTalk(activity.id, level, a0 ? bi(a0.personal) : row.personal[index]),
-    ...(a0 ? { words: a0.words.map(bi) } : {}),
+    ...(a0 ? { words: a0.words.map(bi) } : level === 'A1' && A1_WORDS[activity.id] ? { words: A1_WORDS[activity.id].map(bi) } : {}),
     role: 'Escucha la elección del estudiante. Después, escucha su respuesta personal.',
     teacher: a0
       ? ['Lee la situación en voz alta y señala el inglés solo si hace falta. Pide que elija una opción y que la repita.', 'En la pregunta personal, acepta una palabra o una frase mínima. Amplía tú y vuelve a preguntar.']
@@ -1652,6 +1654,20 @@ const support = {
   taxi: ['Elegir trayectos y hablar de tus viajes', ['tomar un desvío', 'confirmar el destino', 'bajar aquí', 'volver al punto de partida']],
   tienda: ['Compras, necesidades y regalos', ['comparar productos', 'comprobar que funciona', 'dentro del presupuesto', 'elegir un regalo']],
   terraza: ['Ocio, encuentros y privacidad', ['compartir una foto', 'pedir permiso', 'seguir conversando', 'hacer planes distintos']],
+};
+// A0 and A1 read a simpler focus and simpler expressions, with their English
+// (A0 shows both lines of the focus; A1, the Spanish).
+const simpleSupport = {
+  cafe: [['En el café: pedir y hablar', 'At the café: ordering and talking'], [['para llevar', 'to go'], ['una mesa libre', 'a free table'], ['otro té, por favor', 'another tea, please'], ['¿cuánto cuesta?', 'how much is it?']]],
+  departamento: [['En casa de Vale: la visita', 'At Vale’s home: the visit'], [['pasa, pasa', 'come in, come in'], ['¿puedo…?', 'can I…?'], ['un vaso de agua', 'a glass of water'], ['estoy bien', 'I’m fine']]],
+  restaurante: [['En el restaurante: comer y pagar', 'At the restaurant: eating and paying'], [['la cuenta, por favor', 'the bill, please'], ['¿tiene carne?', 'does it have meat?'], ['otra mesa', 'another table'], ['cada uno paga lo suyo', 'everyone pays their own']]],
+  plaza: [['En la plaza: conocer personas', 'In the square: meeting people'], [['me llamo…', 'my name is…'], ['soy de…', 'I’m from…'], ['está a la derecha', 'it’s on the right'], ['¡feliz cumpleaños!', 'happy birthday!']]],
+  bar: [['En el bar: planes y gustos', 'At the bar: plans and likes'], [['vamos a…', 'let’s go to…'], ['me voy a casa', 'I’m going home'], ['es muy caro', 'it’s very expensive'], ['no, gracias', 'no, thanks']]],
+  auto: [['El auto roto: ¿cómo voy?', 'The broken-down car: how do I get there?'], [['no arranca', 'it won’t start'], ['necesito un taxi', 'I need a taxi'], ['¿dónde hay…?', 'where is there…?'], ['voy a pie', 'I’m going on foot']]],
+  museo: [['En el museo: mirar objetos', 'At the museum: looking at objects'], [['es antiguo', 'it’s old'], ['¿de qué año es?', 'what year is it from?'], ['¿cómo funciona?', 'how does it work?'], ['¿qué es esto?', 'what is this?']]],
+  taxi: [['En el taxi: elegir el camino', 'In the taxi: choosing the way'], [['hasta la plaza, por favor', 'to the square, please'], ['bajo aquí', 'I’ll get out here'], ['la calle está cerrada', 'the street is closed'], ['espero aquí', 'I’ll wait here']]],
+  tienda: [['En la tienda: comprar', 'At the shop: buying'], [['necesito…', 'I need…'], ['¿tiene…?', 'do you have…?'], ['es para un regalo', 'it’s a gift'], ['una bolsa, por favor', 'a bag, please']]],
+  terraza: [['En la terraza: la fiesta', 'On the rooftop: the party'], [['un poco más', 'a bit longer'], ['¿una foto?', 'a photo?'], ['vamos a bailar', 'let’s dance'], ['me quedo', 'I’m staying']]],
 };
 // New words of each place, with their English, shown at A0, A1 and A2.
 const words = {
@@ -1677,7 +1693,10 @@ const starters = {
   C2: ['Encuentro una tensión entre… y…', 'Al mirar atrás, matizaría…', 'Mi experiencia no siempre coincide con…'],
 };
 export function pedagogySupportFor(location, level) {
-  const [focus, chunks] = support[location.id];
+  const simple = level === 'A0' || level === 'A1' ? simpleSupport[location.id] : null;
+  const [focus, chunks] = simple
+    ? [level === 'A0' ? bi({ es: simple[0][0], en: simple[0][1] }) : simple[0][0], simple[1].map(([es, en]) => bi({ es, en }))]
+    : support[location.id];
   return {
     focus, help: { starters: starters[level], chunks, ...(WORD_LEVELS.has(level) ? { vocab: words[location.id].map(([es, en]) => bi({ es, en })) } : {}) },
     ...(location.hub ? { hubPrompt: level === 'A0'

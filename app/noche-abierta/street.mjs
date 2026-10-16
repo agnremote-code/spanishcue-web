@@ -27,6 +27,7 @@ import CAOS_NORTE from "./street/caos-norte.mjs";
 import CAOS_CENTRO from "./street/caos-centro.mjs";
 import CAOS_SUR from "./street/caos-sur.mjs";
 import { A0_SCENES } from "./street/a0.mjs";
+import { A1_WORDS } from "./street/words-a1.mjs";
 import { bi } from "./bilingual.mjs";
 import { streetTalk } from "./talk/index.mjs";
 
@@ -229,7 +230,7 @@ export function streetView(street, level) {
     id: encounter.id, title: encounter.title, district: encounter.district, districtName: DISTRICTS[encounter.district] ?? "",
     goal: encounter.goal, kind: encounter.kind, step: open.trail.length, said, mood: moodOf(street, encounter.id),
     variant: variant ? street.item : null, fx: a0 ? null : openingFx(street, encounter.id),
-    ...(a0 ? { words: a0.words.map(bi) } : {}),
+    ...(a0 ? { words: a0.words.map(bi) } : level === "A1" && A1_WORDS[encounter.id] ? { words: A1_WORDS[encounter.id].map(bi) } : {}),
   };
   if (open.end) {
     const end = encounter.ends[open.end];

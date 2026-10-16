@@ -115,3 +115,7 @@
 .gm-money button { padding: .5rem .6rem; }
 .gm-money button b { font-size: .98rem; }
 @media (max-width: 720px) { .gm-money { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* A0 (and A1 words): the English under the Spanish */
+.gm-en { display: block; margin-top: .15rem; color: var(--muted); font-size: .86em; font-style: italic; font-weight: 400; letter-spacing: 0; text-transform: none; }
+.gm-words li .gm-en { display: inline; margin-left: .3rem; }

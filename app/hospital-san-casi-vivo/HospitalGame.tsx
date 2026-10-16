@@ -43,7 +43,8 @@ function initialState(): State {
   return { ...(asked ? setLevel(state, asked) : state), floor: 1, scene: null };
 }
 
-// A0 texts carry English under the Spanish; the other levels are Spanish only.
+// A0 texts carry English under the Spanish, and so do the A1 scene words
+// (the A0 rendering path); the other levels are Spanish only.
 function Bi({ t, as: Tag = 'span', className }: { t: Text; as?: 'span' | 'p' | 'b'; className?: string }): ReactNode {
   if (typeof t === 'string') return <Tag className={className}>{t}</Tag>;
   return <Tag className={className}>{t.es}<small className="hs-en" lang="en">{t.en}</small></Tag>;

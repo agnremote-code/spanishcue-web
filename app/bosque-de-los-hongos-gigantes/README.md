@@ -1,8 +1,9 @@
 # El bosque de los hongos gigantes
 
-One 3D world, six levels. The world is built once; each level only supplies language.
+One 3D world, seven levels (A0–C2). The world is built once; each level only supplies language.
+A0 is bilingual: each prompt keeps the Spanish in the usual fields and the English in `en` (shown smaller under the Spanish); A0 has no Comprensión auditiva, so the listening switch is hidden there.
 
-## World (shared by A1–C2)
+## World (shared by A0–C2)
 
 - `engine.mjs`: stages (`STAGES`, 0 → 56 m), the spiral route, the twelve landmark stations
   (`ZONES`, one per conversation category), every walkable cap (`PLATFORMS`), the physics and the

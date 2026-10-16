@@ -12,20 +12,22 @@ import {PERSON_RADIUS} from '../app/escucha-3d/bump.mjs';
 import {LEVELS, CONTENT} from '../app/marketing-de-casinos/levels.mjs';
 import {MONEY, createState, openScene, choose, undo, closeScene, sceneView, progress, setLevel, setMoney, resetLevel, serialise, restore, doneFor} from '../app/marketing-de-casinos/engine.mjs';
 
-// El Gran Meridiano (ID 237): a 3D casino in Las Vegas, A1–C2, whose C1 level
-// keeps the original casino-marketing lesson.
+// El Gran Meridiano (ID 237): a 3D casino in Las Vegas, A0–C2, whose C1 level
+// keeps the original casino-marketing lesson. A0 is fully bilingual ({ es, en }).
 
 const require=createRequire(import.meta.url);
+const plain=t=>typeof t==='string'?t:t.es;
+const isPair=t=>t&&typeof t==='object'&&typeof t.es==='string'&&t.es.trim()!==''&&typeof t.en==='string'&&t.en.trim()!=='';
 
-test('one A1–C2 Modo Play lesson keeps ID 237 and its route',async()=>{
+test('one A0–C2 Modo Play lesson keeps ID 237 and its route',async()=>{
   const result=await build({stdin:{contents:'export {lessons} from "./app/lesson-catalog"; export {lessonAtPath,isFreeLesson} from "./app/access-policy";',resolveDir:process.cwd()},bundle:true,write:false,format:'cjs',platform:'node'});
   const product={exports:{}};
   new Function('require','module','exports',result.outputFiles[0].text)(require,product,product.exports);
   const {lessons,lessonAtPath,isFreeLesson}=product.exports;
   const entry=lessons.filter(item=>item.id===237);
   assert.equal(entry.length,1);
-  assert.deepEqual([entry[0].path,entry[0].displayLevel,entry[0].conversationMode,entry[0].image],['/marketing-de-casinos','A1–C2','play','/marketing-de-casinos/cover.webp']);
-  assert.deepEqual(entry[0].levels,['A1','A2','B1','B2','C1','C2']);
+  assert.deepEqual([entry[0].path,entry[0].displayLevel,entry[0].conversationMode,entry[0].image],['/marketing-de-casinos','A0–C2','play','/marketing-de-casinos/cover.webp']);
+  assert.deepEqual(entry[0].levels,['A0','A1','A2','B1','B2','C1','C2']);
   assert.equal(lessonAtPath('/marketing-de-casinos',lessons)?.id,237);
   assert.equal(isFreeLesson(237),false);
 });
@@ -37,7 +39,7 @@ test('three floors, thirty scenes, and every level writes every scene for every 
   for(const id of ['borracho','jackpot','tramposo','perdedor','despedida','pelea','gritona','habano','yate','senador'])assert.ok(SCENE_IDS.includes(id),id);
   assert.deepEqual(MONEY.map(m=>m.id),['nada','100','500','1000','10000','100000','1000000']);
   for(const f of FLOORS)assert.ok(SCENES.filter(s=>s.floor===f.id).length>=6,`floor ${f.id} has at least six scenes`);
-  assert.deepEqual(LEVELS.map(l=>l.id),['A1','A2','B1','B2','C1','C2','MARKETING']);
+  assert.deepEqual(LEVELS.map(l=>l.id),['A0','A1','A2','B1','B2','C1','C2','MARKETING']);
   assert.equal(LEVELS.find(l=>l.id==='C1').story,'La ficha dorada');
   assert.equal(LEVELS.find(l=>l.id==='MARKETING').label,'Marketing');
   for(const level of LEVELS){
@@ -45,26 +47,62 @@ test('three floors, thirty scenes, and every level writes every scene for every 
     assert.deepEqual(Object.keys(content).sort(),[...SCENE_IDS].sort(),`${level.id} covers all scenes`);
     for(const id of SCENE_IDS){
       const s=content[id];
-      for(const key of ['title','line','end'])assert.ok(s[key]?.trim(),`${level.id}/${id}.${key}`);
+      for(const key of ['title','line','end'])assert.ok(plain(s[key])?.trim(),`${level.id}/${id}.${key}`);
       if(level.track){
         assert.equal(s.options2,undefined,`${level.id}/${id} asks one choice`);
       }else{
-        assert.ok(s.line2?.trim(),`${level.id}/${id}.line2`);
-        for(const m of MONEY)assert.ok(s.money?.[m.id]?.trim(),`${level.id}/${id} opens with ${m.id}`);
-        assert.equal(new Set(MONEY.map(m=>s.money[m.id])).size,MONEY.length,`${level.id}/${id} has seven different openings`);
+        assert.ok(plain(s.line2)?.trim(),`${level.id}/${id}.line2`);
+        // A0 has no money openings: every purse falls back to the plain line.
+        if(level.id==='A0'){
+          assert.equal(s.money,undefined,`A0/${id} has no money openings`);
+        }else{
+          for(const m of MONEY)assert.ok(s.money?.[m.id]?.trim(),`${level.id}/${id} opens with ${m.id}`);
+          assert.equal(new Set(MONEY.map(m=>s.money[m.id])).size,MONEY.length,`${level.id}/${id} has seven different openings`);
+        }
       }
       for(const options of level.track?[s.options]:[s.options,s.options2]){
         assert.equal(options.length,3,`${level.id}/${id} has three options`);
-        for(const o of options)assert.ok(o.say.trim()&&o.reply.trim());
+        for(const o of options)assert.ok(plain(o.say).trim()&&plain(o.reply).trim());
       }
       assert.equal(s.talk.length,5,`${level.id}/${id} has five conversation questions`);
-      for(const q of s.talk)assert.match(q.trim(),/\?$/,`${level.id}/${id} talk is a question`);
-      assert.equal(s.words.length,4);
+      // A0 may also ask «Di un/una …» (say a …).
+      for(const q of s.talk)assert.match(plain(q).trim(),level.id==='A0'?/\?$|^Di /:/\?$/,`${level.id}/${id} talk is a question`);
+      if(['A0','A1'].includes(level.id)){
+        assert.ok(s.words.length>=4&&s.words.length<=6,`${level.id}/${id} has four to six keywords`);
+        for(const w of s.words)assert.ok(isPair(w),`${level.id}/${id} keyword ${plain(w)} is { es, en }`);
+      }else{
+        assert.equal(s.words.length,4);
+      }
     }
   }
   // The levels are written separately, not copied.
-  const firstLines=LEVELS.map(l=>CONTENT[l.id].portero.line);
+  const firstLines=LEVELS.map(l=>plain(CONTENT[l.id].portero.line));
   assert.equal(new Set(firstLines).size,LEVELS.length);
+});
+
+test('A0 covers all thirty scenes and every learner string is { es, en }',()=>{
+  const a0=CONTENT.A0;
+  assert.deepEqual(Object.keys(a0).sort(),[...SCENE_IDS].sort());
+  assert.equal(LEVELS[0].id,'A0');
+  for(const id of SCENE_IDS){
+    const s=a0[id];
+    const strings=[s.title,s.line,s.line2,s.end,...s.talk,...s.words,...[...s.options,...s.options2].flatMap(o=>[o.say,o.reply])];
+    for(const t of strings)assert.ok(isPair(t),`A0/${id}: ${JSON.stringify(t)} is bilingual`);
+    // Very short sentences: at most about eight words each.
+    for(const t of [s.title,...s.talk,...[...s.options,...s.options2].map(o=>o.say)])for(const sentence of t.es.split(/(?<=[.!?…])\s+/))assert.ok(sentence.split(/\s+/).length<=8,`A0/${id}: «${sentence}» is short`);
+  }
+  // The scene opens with its line whatever Valentina carries, and the card shows both languages.
+  const view=sceneView(openScene(setMoney(createState('A0'),'1000000'),'ruleta'));
+  assert.deepEqual(view.beats[0].line,a0.ruleta.line);
+  assert.ok(isPair(view.title)&&isPair(view.words[0]));
+});
+
+test('A1 keywords are { es, en } pairs, four to six per scene',()=>{
+  for(const id of SCENE_IDS){
+    const words=CONTENT.A1[id].words;
+    assert.ok(words.length>=4&&words.length<=6,id);
+    for(const w of words)assert.ok(isPair(w),`A1/${id}: ${JSON.stringify(w)}`);
+  }
 });
 
 test('every white circle and the elevator are free and reachable on foot, with everyone standing where they stand',()=>{
@@ -206,6 +244,19 @@ test('without WebGL the same scenes open from a list',async()=>{
     assert.equal(doc.querySelector('.gm-card').dataset.ended,'true');
     assert.equal(doc.querySelectorAll('.gm-talk li').length,5);
     assert.match(doc.querySelector('.gm-said .gm-chosen').textContent,new RegExp(CONTENT.A1.portero.options[0].say.slice(0,12)));
+    // A1 keywords show the English next to the Spanish.
+    assert.equal(doc.querySelectorAll('.gm-words li .gm-en').length,CONTENT.A1.portero.words.length);
+    // A0: no money and no listening switch on the title screen; the card reads in Spanish with English under it.
+    click(doc.querySelector('.gm-close'));
+    click([...doc.querySelectorAll('.gm-hud button')].find(b=>/Nivel/.test(b.textContent)));
+    click([...doc.querySelectorAll('.gm-levels button')].find(b=>b.querySelector('b')?.textContent==='A0'));
+    assert.equal(doc.querySelector('.gm-money'),null,'A0 asks no money');
+    assert.equal(doc.querySelector('.e3-mode'),null,'A0 has no listening switch');
+    click(doc.querySelector('.gm-enter'));
+    click(doc.querySelectorAll('.gm-list-floor li button')[0]);
+    assert.equal(doc.querySelector('#gm-card-h').textContent,CONTENT.A0.portero.title.es+CONTENT.A0.portero.title.en);
+    assert.equal(doc.querySelector('.gm-line .gm-en').textContent,CONTENT.A0.portero.line.en);
+    assert.equal(doc.querySelectorAll('.gm-options .gm-en').length,3);
   }finally{
     act(()=>root.unmount());dom.window.close();
     globalThis.window=previous.window;globalThis.document=previous.document;
