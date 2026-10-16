@@ -49,6 +49,10 @@ for(const publicPath of report.protectedMediaFiles){
 }
 for(const publicPath of report.publicMediaFiles??[])await access(clientRoot+publicPath);
 for(const assetPath of report.encryptedMediaFiles)await access(clientRoot+assetPath);
+if(report.encryptedClientFiles?.length!==report.protectedFiles.length){
+  throw new Error("Each private client chunk must have one encrypted asset");
+}
+for(const assetPath of report.encryptedClientFiles)await access(clientRoot+assetPath);
 
 const workerUrl = pathToFileURL(workerPath);
 workerUrl.searchParams.set("sites-validation", `${process.pid}-${Date.now()}`);
