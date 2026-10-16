@@ -83,6 +83,8 @@ All three proposals converged on these points. The remaining disagreement over o
 - Estimate (H): 1–2 new worlds/week is sustainable on the kit; 3 new worlds every week isn't, at the depth we've set.
 - Until the owner answers, the board reports the weekly count truthfully against the literal target.
 
+- **OWNER DECISION (2026-10-16, relayed by the facilitator [B33]): ACCEPTED.** "3 shipping units/week" as defined above is the operative target.
+
 ### 3.4 Requests to OWNER / main session (data, no code)
 - R1. The GSC Page-indexing report for all sitemap URLs (indexed / crawled–not indexed / discovered–not indexed, with reasons), the GSC Core Web Vitals report, and per-query impressions for the cluster terms.
 - R2. GA Admin: which property and stream `G-6C7DY2C5LN` reports to, and whether it matches 553569142.
@@ -148,7 +150,11 @@ Scores are 1–5 (5 = best). Complexity and dependency risk are scored inversely
 4. **The preview could cannibalize PRO.** One new authored circle is made free. No PRO content moves, and PRO depth (levels, routes, listenings) stays PRO. Cannibalization is unmeasured (H).
 5. **Review bottleneck.** G4 caps review at ≤3 h per unit, and actual hours are measured weekly.
 6. **The owner may reject the "shipping units" interpretation (§3.3).** If so, the board reports shortfalls truthfully rather than lowering the gate.
-7. **The competitive scan is thin** (about 10 searches/fetches in total, and two vendor pages 404'd). The positioning gap is H.
+7. **Merge = production deploy; owner gate required** (added 2026-10-16 during Phase B at the facilitator's request. This is a factual addendum, not a decision change).
+   - CI + Auto Merge dispatches staging after merge (`.github/workflows/ci-automerge.yml:236`), and staging auto-dispatches `deploy-production.yml` in mode `release` (`deploy-staging.yml:3-5, 221`).
+   - `vars.OWNER_CLOUDFLARE_PRODUCTION_ENABLED=true` and the `production` environment has no protection rules.
+   - So marking any PR ready (non-draft) leads to an automatic production deploy. SEO-001 (PR #217) is held as a draft until the owner decides whether merges may auto-deploy. Agents don't change the gate variable or environment settings (CLAUDE.md, owner-only).
+8. **The competitive scan is thin** (about 10 searches/fetches in total, and two vendor pages 404'd). The positioning gap is H.
 
 ## 8. Rejected alternatives and why
 - **A ≥100 GSC clicks/month target:** no evidential basis (Martin C1). Withdrawn.
@@ -168,4 +174,8 @@ Scores are 1–5 (5 = best). Complexity and dependency risk are scored inversely
 - Martin: **APPROVE** [B22]. Conditional on the N4 text (applied verbatim) and the risk-4 editorial (applied). He withdrew his N3 objection against v2.
 - Final confirmations that crossed with the lock, and agree with v3: Sofia [B25] withdrew her N3 objection against v2 and approves with the G5(a) wording, which is applied. Martin [B26] approves with the N4 and G5(a) wording, both applied. **Unanimous APPROVE on v3's content.**
 - **Recorded dissent:** Martin preferred LES-001 (Feria) ahead of GROW-001 ([B11]). The majority (Alejandro, Sofia) ranked GROW-001 first. His condition is kept as non-votable N1. No other dissent.
+- **Owner decisions recorded after the lock (2026-10-16, relayed by the facilitator [B33]):**
+  - (1) The "3 shipping units/week" definition (§3.3) is ACCEPTED.
+  - (2) Board PRs may go through CI + Auto Merge with the automatic staging → production deploy after their tests and review pass. This resolves §7 risk 7 as a process, but the gate variable and environment settings stay unchanged and owner-only.
+  - (3) **Full creative ownership of future 3D lessons** ([B34]): the board brainstorms, selects, designs, builds, tests, reviews and publishes original lessons on schedule. The owner supplies no topics or ideas and doesn't approve routine deployments. Priorities are pedagogical quality, originality, realistic environments, natural dialogue, listening and SEO. Existing production safeguards stay, and every publication is reported. The pipeline is recorded by the facilitator in ROUTINES.md on claude/board-records-20261016. It doesn't change SEO-001.
 - **LOCKED.** Changes now require a new board decision with new evidence. A relay or a crossed message is not grounds for reopening.

@@ -1,4 +1,4 @@
-# Transcript — Board Session 1, 2026-10-16
+# Transcript — Board Session 1 (deliberation + SEO-001 implementation), 2026-10-16
 
 Exported from the Claude Code session transcripts (SendMessage tool calls that were delivered; calls rejected by the runtime are excluded). Sender, recipient and UTC timestamp come from the transcript. Message bodies are verbatim.
 
@@ -970,5 +970,154 @@ Never touch automation/* refs, PR #209's files, secrets, D1, billing or auth.
 Commit messages end with: Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>. PR bodies end with: 🤖 Generated with [Claude Code](https://claude.com/claude-code)
 
 When the code and tests are pushed, send Sofia ONE review request with the PR link and the diff summary. Fix what she raises. Keep logging messages to team-logs/Alejandro.md. Final output: PR number, CI result, merged SHA, the deploy preconditions you found, and anything unfinished.
+````
+
+## 2026-10-16T14:40:19.630Z — Alejandro → main
+
+````text
+Alejandro to facilitator. Your Phase B instructions conflict: under the current repo config, letting CI + Auto Merge merge SEO-001 IS a production deploy. I'm holding before anything can merge. I haven't opened a PR yet, so nothing has been triggered.
+
+Evidence, all read-only:
+1. .github/workflows/ci-automerge.yml:236. After a successful merge, the "Publish merged main to staging" step runs `gh workflow run deploy-staging.yml -f sha=$MERGE_SHA`.
+2. .github/workflows/deploy-staging.yml:3-5 ("after staging smoke passes, this workflow automatically dispatches the owner-authorized production release for the exact same SHA") and :221. On staging success it runs `gh workflow run deploy-production.yml -f action=deploy -f mode=release -f sha=$SHA -f confirm="deploy $SHA"`.
+3. deploy-production.yml:61 gates on vars.OWNER_CLOUDFLARE_PRODUCTION_ENABLED. `gh variable list` shows it as `true` (set 2026-09-28).
+4. The `production` environment has protection_rules: [] (gh api .../environments/production). There's no required reviewer to stop it.
+5. History confirms the chain fires: today's production runs succeeded for 3dd0ac4, 5cd4408, 39c4ed0 and a7efb5f, all workflow_dispatch.
+6. CI jobs only run when the PR is non-draft (ci-automerge.yml:21, :60), and opening a non-draft PR is enough to start test → merge → staging → production with no further action.
+
+My plan, which stays within your instructions, unless you say otherwise:
+- Finish local checks, commit, and push branch claude/seo-001-hreflang-lang-guard. Pushing a non-main branch triggers nothing (deploy-staging fires only on push to main).
+- Open the PR as a DRAFT, which runs no CI/merge job. Send Sofia the review request against it.
+- Do NOT mark it ready-for-review. Marking it non-draft is the action that leads to a production deploy, so it needs the owner's go-ahead, which you said the main session handles.
+
+Decision needed from you or the owner: either (a) authorize marking the PR ready, knowing it auto-deploys to production for that SHA, or (b) the owner temporarily changes the gate (variable or environment reviewer). That's a repo-settings change, which is owner-only under CLAUDE.md, so I won't touch it. I'll report "merged SHA" only once this is resolved.
+````
+
+## 2026-10-16T14:40:36.605Z — main-facilitator → Alejandro
+
+````text
+Confirmed, and good catch. I verified ci-automerge.yml (the "Publish merged main to staging" step) and deploy-staging.yml (its header and the production dispatch step): merging is a production deploy. Your plan is approved as you stated it. Finish the local checks, push claude/seo-001-hreflang-lang-guard, open the PR as a DRAFT, and send Sofia the review request. Do NOT mark it ready and do NOT touch the gate variable or the environment settings. I'm asking the owner now whether merges may auto-deploy. Final output: the draft PR number, the local check results, Sofia's review outcome and the fixes you applied. Please also add this finding to BOARD-DECISION-001 §7 open risks: "merge = production deploy; owner gate required".
+````
+
+## 2026-10-16T14:42:50.024Z — Alejandro → Sofia
+
+````text
+SEO-001 code review request (BOARD-DECISION-001 v3 §6). You're the reviewer: https://github.com/agnremote-code/spanishcue-web/pull/217. Head is c771c4a and the base is origin/main 3dd0ac41cfbe11413c1ba9c83ec893f4c5adac41. It's a DRAFT on purpose, see below.
+
+Diff (2 files, +27/−9):
+1. app/argento/layout.tsx: removed alternates.languages {es, en: "https://spanishcue.com/argento?lang=en", x-default}, keeping only the canonical "https://spanishcue.com/argento", plus a one-line comment. The reason is that ?lang= 301s (worker/index.ts languageRedirect) and /argento isn't a real pair (app/seo.ts languagePairs is empty).
+2. tests/seo-architecture.test.mjs: added readdirSync to the fs import, an appSources() walker over app/**/*.{ts,tsx,mjs,js}, and a new test "no canonical, hreflang or absolute site URL anywhere under app/ carries ?lang=". It (a) fails on any absolute /spanishcue\.com\/[^"'`\s)]*[?&]lang=/ and (b) for every `alternates:` occurrence, fails if the next 400 chars contain [?&]lang= (this catches relative values). There's also a sanity assert that the walk found >100 files. Relative UI links (VerificationAction /ingresar?lang=…, the lp switcher) aren't affected.
+
+Local checks:
+- seeded fail on the old argento file, pass with the fix;
+- test:seo 31/31;
+- the rest of npm test incl. build + test-worker: 699 pass / 1 fail, where the failure is ffprobe ENOENT, since this machine has no ffmpeg and CI installs it;
+- language tests and scripts pass;
+- lint shows 0 errors and no warnings in the changed files;
+- validate:artifact passes;
+- diff --check is clean.
+
+Please check in particular:
+(i) whether the 400-char window after `alternates:` can false-positive on any current file (it passes on main today) or miss a realistic case;
+(ii) whether dropping hreflang is right for /argento, versus an EN pair, given the A1 bilingual UI;
+(iii) anything in the walker that's fragile (symlinks, generated files).
+
+Why it's a draft: I found that marking it ready makes CI + Auto Merge merge it, and then deploy-staging.yml auto-dispatches deploy-production.yml (mode release). OWNER_CLOUDFLARE_PRODUCTION_ENABLED=true and the production environment has no reviewer. Production deploys are held for the owner in this session, so I've escalated to the facilitator. It stays a draft until that's resolved. Reply with APPROVE or a list of changes.
+````
+
+## 2026-10-16T14:45:22.726Z — Sofia → Alejandro
+
+````text
+REVIEW (Sofia → Alejandro) PR #217 @ c771c4a (base 3dd0ac4): APPROVE. There are no blocking changes, only three optional hardening notes.
+Method: I read the diff (gh pr diff 217) and the surrounding code in the clone. I didn't run the tests; your local run plus CI cover that.
+
+(ii) Dropping hreflang for /argento is correct. It's one URL that serves both UI languages through a toggle/cookie. hreflang needs a distinct URL per language, and app/seo.ts languagePairs is empty on purpose (:37-42: "Add a pair only when both URLs carry the same content in two languages"). An EN pair would need a real separate EN document, which is out of scope. The new comment states this correctly.
+
+(i) The 400-char window:
+ - False positives today: none (it passes on main, as you said). The realistic future false positive is PROSE: a comment explaining the toggle (as at app/layout.tsx:45, app/marketing-landing/metadata.ts:20, written `?lang=` in backticks) placed within 400 chars after an `alternates:` would fail the test. That's loud and trivial to fix, so I accept it. Optional: strip `//…` and `/*…*/` before scanning.
+ - Misses: (a) alternates built in a variable or a spread (`const alternates = {…}`, `alternates,`); grep finds none in app/ today. (b) template literals such as `${SITE_ORIGIN}/x?lang=en`, which the absolute regex doesn't match because there's no literal "spanishcue.com". Optional: widen it to /(?:spanishcue\.com|SITE_ORIGIN\})\/[^"'`\s)]*[?&]lang=/.
+ - The shared generated path is safe by construction, which is why I'm not blocking. VERIFIED: canonicalUrl() → normalizePathname() strips everything after ?/# (app/seo.ts:21-31). So languageAlternates() and every sitemap entry (app/sitemap.ts entry() → canonicalUrl) cannot emit ?lang= even if someone adds a bad pair. Your source scan is the right complement for hand-written literals like the one /argento had.
+ - A related pre-existing gap, for a follow-up and not this PR: the existing pair test (seo-architecture.test.mjs:73-83) asserts pair.es !== pair.en on the RAW strings. A pair {es:'/argento', en:'/argento?lang=en'} would pass it, and because canonicalUrl strips the query it would then emit es = en = the same URL as hreflang. Compare normalizePathname(pair.es) !== normalizePathname(pair.en) instead.
+(iii) The walker is fine. Dirent.isDirectory() is false for symlinks, so there's no loop risk, and `find app -type l` finds no symlinks today. `.d.mts` declaration files aren't matched by the extension regex. I found no generated .ts/.tsx/.mjs/.js under app/. The >100 sanity assert guards against a silent empty walk.
+
+Draft hold: I agree. Marking it ready would chain CI + Auto Merge → deploy-staging → deploy-production with no reviewer on the production environment, and production is held for the owner in this session. That's the facilitator's or owner's call, not mine.
+Disclosure: to read the PR I ran `git fetch origin pull/217/head:pr217` in the scratch clone, which created a local ref. I deleted it right after (`git branch -D pr217`). No source file was changed.
+````
+
+## 2026-10-16T14:46:59.672Z — Alejandro → Sofia
+
+````text
+Thanks, Sofia. All three of your optional notes are applied in b8fbfc7 on PR #217, which is still a draft.
+(1) The absolute regex is now /(?:spanishcue\.com|SITE_ORIGIN\})\/…[?&]lang=/.
+(2) Comments are stripped before the 400-char `alternates` window. I kept the absolute check on the RAW source, though, because a `/*` inside a string (e.g. a glob) could otherwise strip a real URL out of view.
+(3) The pair test compares normalizePathname(es) vs normalizePathname(en). I folded this in rather than deferring it, because it's the same guard.
+Re-verified: the seeded failure on the old argento file still fails, test:seo passes 31/31, eslint is clean on both files, and diff --check is clean. A node sanity check confirms the template literal and the relative alternate are caught, and that prose after `alternates` is ignored. No further action is needed from you unless you object to point (2)'s raw-source choice. The merge stays held for the owner.
+````
+
+## 2026-10-16T15:31:45.304Z — main-facilitator → Alejandro
+
+````text
+Owner decision (2026-10-16, given directly to the main session): SEO-001 may go through merge and the automatic staging→production deploy. Conditions:
+- mark the PR ready ONLY after the local checks pass AND Sofia's review is resolved;
+- let CI + Auto Merge merge it, and never merge manually;
+- verify the merged SHA on main;
+- watch the deploy-staging and deploy-production runs for that SHA;
+- smoke production: curl https://spanishcue.com/argento and show that no ?lang= alternate is present and the canonical is intact.
+If any run fails, diagnose and fix on a new commit or PR; don't bypass anything. Still never touch the gate variable, environment settings, automation/* refs, secrets, D1, billing, auth or PR #209.
+
+Two more owner decisions to record in BOARD-DECISION-001 §3.3 and §9: the owner ACCEPTED the "3 shipping units/week" definition, and authorized merges to auto-deploy for board PRs after tests and review. Final output: PR number, CI result, merged SHA, staging/production run URLs and results, and the production smoke output.
+````
+
+## 2026-10-16T15:42:18.167Z — main-facilitator → Alejandro
+
+````text
+New owner decision (2026-10-16, given directly to the main session): the board has FULL CREATIVE OWNERSHIP of all future 3D lessons. The board itself brainstorms, selects, designs, builds, tests, reviews and publishes original lessons on schedule. The owner will not supply topics, stories, characters, locations or ideas, and does not approve routine deployments. Priorities are pedagogical quality, originality, realistic environments, natural dialogue, listening and SEO. Existing production safeguards stay, and every publication is reported.
+
+I've written it into the records branch claude/board-records-20261016:
+- STATUS.md: the owner-decision row;
+- ROUTINES.md: a "Creative ownership" concept pipeline (inventory → brainstorm, at least 2 concepts each from Sofia and Martin → your scored selection with a majority vote → Martin authors → Sofia builds → G4 review → publish → report);
+- docs/board/concepts/;
+- docs/board/PUBLISHED.md: the publication log, with SEO-001 under "Pending verification".
+
+Please also record it in BOARD-DECISION-001 §9 as an owner decision. It doesn't change SEO-001. Carry on with the merge, deploy and smoke, then put your final report in your final output. Once production is verified I'll move SEO-001 into PUBLISHED.md.
+````
+
+## 2026-10-16T15:43:10.817Z — main-facilitator → Alejandro
+
+````text
+PR #217 is MERGED: merge commit 6c7379bc832f0e35c95dfd2ec42e776840e77ad8 (I watched it from the main session). Please finish SEO-001:
+- verify that SHA on origin/main;
+- follow the Deploy Staging run, then the Deploy Production run, for that SHA (gh run list / gh run watch);
+- smoke production with curl on https://spanishcue.com/argento, showing the head has no ?lang= alternate and the canonical is intact.
+If a run fails, diagnose it and fix it with a new PR; never bypass the release flow. Final output: merged SHA, staging and production run URLs and conclusions, and the smoke output.
+````
+
+## 2026-10-16T15:53:55.230Z — main-facilitator → Alejandro
+
+````text
+The owner just wrote, addressed to you. Verbatim: "alejandro, acordate qeu sutedes tienen AUTONOMÍA TOTAL y necesitan cumplir con la publicacion de las mejores calses, sin mi autorización.. ustedes son los dueños para que este negocio funcione MEJOR QUE PROFEDEELE.COM y que todos!!!"
+
+What it means for the board:
+- It confirms total autonomy to publish the best classes without asking the owner first.
+- It names ProfeDeELE.com as the explicit competitive benchmark to beat.
+
+I'm adding ProfeDeELE.com to STATUS.md as the primary benchmark. Production safeguards, the quality gate and verification before reporting "published" still apply; autonomy doesn't remove them.
+
+For now, finish SEO-001 (the deploy for 6c7379b is in progress; I'm watching it too). When it's done, add to your final output a short, evidence-based plan for how the board will analyze ProfeDeELE.com in a later session:
+- what they offer;
+- which teacher searches they win;
+- where SpanishCue can be clearly better.
+Don't start that research now.
+````
+
+## 2026-10-16T15:55:21.244Z — main-facilitator → Alejandro
+
+````text
+SEO-001 is verified in production (main-session check):
+- Deploy Staging https://github.com/agnremote-code/spanishcue-web/actions/runs/38926800649: success for 6c7379b.
+- Deploy Production https://github.com/agnremote-code/spanishcue-web/actions/runs/38927285596: success for 6c7379b.
+- Smoke: `curl -s https://spanishcue.com/argento` head shows only `<link rel="canonical" href="https://spanishcue.com/argento"/>`, with no alternate links and no ?lang=.
+
+Please run your own curl to confirm independently, then end with your final output, including the short ProfeDeELE.com research plan I asked for. Keep it brief. I'm recording SEO-001 in PUBLISHED.md.
 ````
 
