@@ -82,8 +82,8 @@ function loadPaddle() {
 
 /**
  * `variant="landing"` renders the same Paddle/PayPal flows as two plain plan
- * choices for the paid-traffic landings: the US$2 one-day trial first, the
- * monthly subscription second and PayPal as a quieter secondary option.
+ * choices for acquisition landings: direct monthly subscription first,
+ * PayPal second. Existing paid trials remain supported in the billing system.
  */
 export default function CheckoutButton({ signedIn, returnTo, variant = "default", paddleOnly = false, onPaddleOverlayChange }: { signedIn: boolean; returnTo: string; variant?: "default" | "landing"; onPaddleOverlayChange?: (open: boolean) => void; paddleOnly?: boolean }) {
   const { locale, t } = useI18n();
@@ -277,13 +277,6 @@ export default function CheckoutButton({ signedIn, returnTo, variant = "default"
       </button>
     )}
 
-    {founder.trialCheckoutAvailable && <div className="checkout-trial">
-      <button className="checkout-trial-button" type="button" onClick={() => checkoutPaddle("trial")} disabled={busy || !founder.available}>
-        {locale === "es" ? "Prueba 1 día por US$2" : "Try 1 day for US$2"}
-      </button>
-      <small>{locale === "es" ? "Después, US$15.50/mes. Cancela cuando quieras. Impuestos incluidos." : "Then US$15.50/month. Cancel anytime. Taxes included."}</small>
-    </div>}
-
     <p>{locale === "es"
       ? "Paga primero. Después vinculas la compra a tu cuenta para entrar a PRO."
       : "Pay first, then link the purchase to your account for PRO access."}</p>
@@ -299,12 +292,6 @@ export default function CheckoutButton({ signedIn, returnTo, variant = "default"
       {offer.mode === "sandbox" && <strong className="checkout-availability closed">{es ? "PRUEBA SANDBOX · no es un cobro real" : "SANDBOX TEST · not a real charge"}</strong>}
       {!pending && !offer.available && <strong className="checkout-availability closed">{es ? "Oferta fundadora completa" : "Founder offer fully claimed"}</strong>}
       <div className="checkout-landing-plans">
-        {offer.paddleCheckoutAvailable && offer.trialCheckoutAvailable && <div className="checkout-landing-plan checkout-landing-trial">
-          <button className="checkout-trial-button" type="button" onClick={() => checkoutPaddle("trial")} disabled={busy || !offer.available}>
-            {paddleBusy ? (es ? "Abriendo el pago…" : "Opening checkout…") : (es ? "Prueba 1 día por US$2" : "Try 1 day for US$2")}
-          </button>
-          <span>{es ? "Después, US$15.50/mes. Cancela cuando quieras. Impuestos incluidos." : "Then US$15.50/month. Cancel anytime. Taxes included."}</span>
-        </div>}
         {offer.paddleCheckoutAvailable && <div className="checkout-landing-plan checkout-landing-monthly">
           <button className="checkout-card-button" type="button" onClick={() => checkoutPaddle("monthly")} disabled={busy || !offer.available}>
             {paddleBusy ? (es ? "Abriendo el pago…" : "Opening checkout…") : (es ? "Suscríbete · US$15.50/mes" : "Subscribe · US$15.50/month")}
