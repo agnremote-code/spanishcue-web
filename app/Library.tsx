@@ -927,14 +927,15 @@ export default function Library({
     if (!parts.length) return [];
     const ids = new Set<number>();
     const entries: Array<{ lesson: Lesson; level: string }> = [];
-    for (let index = 0; entries.length < 4 && parts.some((group) => index < group.lessons.length); index++) {
-      for (const group of parts) {
-        const lesson = group.lessons[index];
-        if (lesson && entries.length < 4 && !ids.has(lesson.id)) {
-          ids.add(lesson.id);
-          entries.push({ lesson, level: group.level });
-        }
-      }
+    const candidates = parts.flatMap((group) => group.lessons.map((lesson) => ({ lesson, level: group.level })));
+    // Same rule as the per-level shelves: one card per category first (a free one when there is one), then fill.
+    for (const category of ["Gramática", "Conversación", "Escucha", "Fonética", "Vocabulario"]) {
+      const inCategory = candidates.filter((entry) => entry.lesson.category === category && !ids.has(entry.lesson.id));
+      const pick = inCategory.find((entry) => entry.lesson.free) || inCategory[0];
+      if (pick && entries.length < 4) { ids.add(pick.lesson.id); entries.push(pick); }
+    }
+    for (const entry of candidates) {
+      if (entries.length < 4 && !ids.has(entry.lesson.id)) { ids.add(entry.lesson.id); entries.push(entry); }
     }
     const levels = parts.map((group) => group.level);
     const total = new Set(levels.flatMap((item) => (filterLessons(visibleLessons, { level: item }) as Lesson[]).map((lesson) => lesson.id))).size;
