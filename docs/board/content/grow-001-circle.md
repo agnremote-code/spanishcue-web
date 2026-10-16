@@ -61,36 +61,36 @@ Each exponent is targeted by at least one beat (machine-checked; see the LQG fil
 
 - Situation: En el primer piso, una señora sube despacio con dos bolsas muy pesadas. Se para y te mira: «Buenas noches. ¿Usted también va arriba? Yo vivo en el cuarto, y con este ascensor…»
 - Prompt: **¿Qué le dices para ofrecerle ayuda?**
-- ✅ «¿Le llevo las bolsas? Yo también voy al cuarto.»  
-  Feedback: Bien: con «le llevo» ofreces el favor a una persona que te trata de usted.
-- ❌ «¿Me lleva las bolsas? Yo también voy al cuarto.» · feature: *dirección del favor*  
-  Feedback: Dirección del favor: «¿me lleva…?» le pide a ella que te lleve algo a ti. Para ofrecer, el favor va hacia ella: «¿le llevo…?».
-- ❌ «¿Te llevo las bolsas? Yo también voy al cuarto.» · feature: *registro: tú o usted*  
-  Feedback: Registro: ella te habla de usted («¿Usted también va arriba?»). «Te» es para tú; con usted, «le».
+- ✅ «¿Le llevo las bolsas? Yo también voy al cuarto.»
+  - Feedback: Bien: con «le llevo» ofreces el favor a una persona que te trata de usted.
+- ❌ «¿Me lleva las bolsas? Yo también voy al cuarto.» · feature: *dirección del favor*
+  - Feedback: Dirección del favor: «¿me lleva…?» le pide a ella que te lleve algo a ti. Para ofrecer, el favor va hacia ella: «¿le llevo…?».
+- ❌ «¿Te llevo las bolsas? Yo también voy al cuarto.» · feature: *registro: tú o usted*
+  - Feedback: Registro: ella te habla de usted («¿Usted también va arriba?»). «Te» es para tú; con usted, «le».
 - Then: «¡Ay, qué amable! Pero pesan mucho, ¿eh? Una es de botellas. ¿Seguro?»
 
 #### Beat 2 · `confirmar` · **Contraste lingüístico** (contrast) · exponent: `se-las` · speaker: Doña Marisol
 
 - Situation: Doña Marisol te da las dos bolsas. Una tiene botellas y pesa mucho.
 - Prompt: **Confírmale que vas a llevar las dos bolsas hasta el cuarto piso.**
-- ✅ «Sí, seguro. Se las llevo hasta arriba.»  
-  Feedback: Bien: «se» es para ella y «las» son las bolsas.
-- ❌ «Sí, seguro. Le las llevo hasta arriba.» · feature: *combinación de pronombres*  
-  Feedback: Combinación de pronombres: delante de lo, la, los o las, «le» cambia a «se». No se dice «le las», se dice «se las».
-- ❌ «Sí, seguro. Se la llevo hasta arriba.» · feature: *número del pronombre*  
-  Feedback: Número del pronombre: son dos bolsas, y «las bolsas» se dice «las». «La» es para una sola cosa.
+- ✅ «Sí, seguro. Se las llevo hasta arriba.»
+  - Feedback: Bien: «se» es para ella y «las» son las bolsas.
+- ❌ «Sí, seguro. Le las llevo hasta arriba.» · feature: *combinación de pronombres*
+  - Feedback: Combinación de pronombres: delante de lo, la, los o las, «le» cambia a «se». No se dice «le las», se dice «se las».
+- ❌ «Sí, seguro. Se la llevo hasta arriba.» · feature: *número del pronombre*
+  - Feedback: Número del pronombre: son dos bolsas, y «las bolsas» se dice «las». «La» es para una sola cosa.
 - Then: Suben poco a poco hasta el cuarto piso. Doña Marisol abre su puerta, la del 4.º B, y te da las gracias tres veces.
 
 #### Beat 3 · `prestar` · **Contraste lingüístico** (contrast) · exponent: `me-presta`, `se-lo-devuelvo` · speaker: Doña Marisol
 
 - Situation: Tocas el timbre del 4.º A, la puerta de Inés. Nadie abre. Quieres llamarla, pero tu teléfono tiene un uno por ciento de batería y se apaga. Doña Marisol todavía está en su puerta: «¿Qué pasa? ¿No está su amiga?»
 - Prompt: **Pídele prestado un cargador y prométele que vas a devolverlo pronto.**
-- ✅ «¿Me presta su cargador un momento? Se lo devuelvo enseguida.»  
-  Feedback: Bien: «¿me presta…?» pide el favor, y «se lo devuelvo» promete devolverle a ella el cargador.
-- ❌ «¿Le presto mi cargador un momento? Se lo devuelvo enseguida.» · feature: *dirección del favor*  
-  Feedback: Dirección del favor: «¿le presto…?» ofrece tu cargador a ella. Tú lo necesitas, así que pides: «¿me presta…?».
-- ❌ «¿Me presta su cargador un momento? Me lo devuelvo enseguida.» · feature: *persona que recibe*  
-  Feedback: Persona que recibe: «me lo devuelvo» dice que te lo devuelves a ti. Se lo devuelves a ella: «se lo devuelvo».
+- ✅ «¿Me presta su cargador un momento? Se lo devuelvo enseguida.»
+  - Feedback: Bien: «¿me presta…?» pide el favor, y «se lo devuelvo» promete devolverle a ella el cargador.
+- ❌ «¿Le presto mi cargador un momento? Se lo devuelvo enseguida.» · feature: *dirección del favor*
+  - Feedback: Dirección del favor: «¿le presto…?» ofrece tu cargador a ella. Tú lo necesitas, así que pides: «¿me presta…?».
+- ❌ «¿Me presta su cargador un momento? Me lo devuelvo enseguida.» · feature: *persona que recibe*
+  - Feedback: Persona que recibe: «me lo devuelvo» dice que te lo devuelves a ti. Se lo devuelves a ella: «se lo devuelvo».
 - Then: «Claro, pase. El cargador está en la cocina. Y si quiere, llame desde mi teléfono.»
 
 #### Beat 4 · `joaquin` · **Estímulo de conversación** (stimulus) · exponent: `echar-una-mano` · speaker: Joaquín
