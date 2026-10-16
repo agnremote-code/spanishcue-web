@@ -255,7 +255,7 @@ export function trackMarketingEvent(
   // conversion, which follows marketing consent independently from analytics.
   if (event === "subscription_first_paid") {
     if (!properties.transaction_id) return;
-    sendGoogleAdsPurchase(properties);
+    if (properties.plan === "monthly") sendGoogleAdsPurchase(properties);
     if (!consentFor("analytics")) return;
     // GA4 gets one specific event for the transaction (never the generic
     // name as well), plus the documented revenue alias used by funnel reports.
