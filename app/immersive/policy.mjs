@@ -1,5 +1,9 @@
 // Public geography and experiment routing only. No lesson or premium payloads.
 export const DEMO_LEVELS = ['A1','A2','B1','B2','C1','C2'];
+// Deliberately limited free sample: six accessible venues, one entire encounter per venue.
+// Other venues and each venue's additional conversations stay PRO server-side.
+export const DEMO_FREE_LOCATIONS = ['cafe','departamento','restaurante','plaza','museo','taxi'];
+export const DEMO_FREE_ACTIVITIES_PER_LOCATION = 1;
 export const DEMO_BOUNDS = { minX: -49, maxX: 49, minZ: -41, maxZ: 42 };
 export const DEMO_GATES = [
   {id:'alto', name:'Barrio Alto', x:0, z:-38},

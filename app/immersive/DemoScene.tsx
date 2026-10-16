@@ -6,7 +6,7 @@ import {createHero,animateHero} from '../noche-abierta/hero3d';
 import {CAMERA_PRESETS,SPAWN,TARGETS,colliders,stepPlayer,followCamera,keyAction,inputFrom,canUseKeys,type Target} from '../noche-abierta/world3d.mjs';
 import {DEMO_BOUNDS,DEMO_GATES,nearPremiumGate} from './policy.mjs';
 import {demoArrival} from './travel.mjs';
-export type DemoSceneProps={paused:boolean;travel:{id:string;n:number}|null;es:boolean;onInteract:(id:string)=>void;onGate:(name:string)=>void;onReady:()=>void;onFail:()=>void;
+export type DemoSceneProps={paused:boolean;travel:{id:string;n:number}|null;es:boolean;onInteract:(id:string)=>void;premiumLocations?:readonly string[];onGate:(name:string)=>void;onReady:()=>void;onFail:()=>void;
  /** Guided tour: the avatar walks the waypoints by itself, user input is ignored and the controls stay hidden. */
  autopilot?:{path:{x:number;z:number}[];location:string;n:number}|null;onArrive?:(location:string)=>void;guided?:boolean};
 const turn=(from:number,to:number,k:number)=>{let d=to-from;while(d>Math.PI)d-=2*Math.PI;while(d<-Math.PI)d+=2*Math.PI;return from+d*k;};
@@ -32,6 +32,27 @@ export default function DemoScene(props:DemoSceneProps){
   let city:ReturnType<typeof buildCity>;let hero:ReturnType<typeof createHero>;
   try{city=buildCity({shadows:false,crowd:!coarse});hero=createHero(false);}catch{renderer.dispose();renderer.domElement.remove();live.current.onFail();return;}
   scene.add(city.root,hero.root);
+  // Visible locks are just signposts: the server never delivers paid content.
+  const lockedVenues = new Set(live.current.premiumLocations ?? []);
+  const lockCanvas = document.createElement('canvas');lockCanvas.width=128;lockCanvas.height=128;
+  const lockCtx=lockCanvas.getContext('2d');
+  if(lockCtx){
+   lockCtx.fillStyle='#171926';lockCtx.beginPath();lockCtx.roundRect(8,8,112,112,22);lockCtx.fill();
+   lockCtx.strokeStyle='#f7ca65';lockCtx.lineWidth=10;
+   lockCtx.beginPath();lockCtx.arc(64,54,22,Math.PI,0);lockCtx.stroke();
+   lockCtx.fillStyle='#f7ca65';lockCtx.fillRect(38,53,52,43);
+   lockCtx.fillStyle='#171926';lockCtx.beginPath();lockCtx.arc(64,72,6,0,Math.PI*2);lockCtx.fill();
+  }
+  const lockTexture=new THREE.CanvasTexture(lockCanvas);
+  const lockMaterial=new THREE.SpriteMaterial({map:lockTexture,transparent:true,depthTest:false});
+  for(const target of TARGETS){
+   const marker=city.markers.get(target.id);
+   if(marker)marker.material.color.set(lockedVenues.has(target.location)?'#ffb963':'#d7f582');
+   if(lockedVenues.has(target.location)){
+    const sprite=new THREE.Sprite(lockMaterial);sprite.position.set(target.x,3.3,target.z);
+    sprite.scale.set(2.1,2.1,1);scene.add(sprite);
+   }
+  }
   city.night.windows.forEach(m=>{m.emissiveIntensity=1.4;});city.night.lamps.forEach(m=>{m.emissiveIntensity=1.7;});
   city.night.pools.forEach(m=>{m.opacity=.4;});city.night.lights.forEach(l=>{l.intensity=5;});
   // Visible transit portals advertise the district boundary; they carry no paid activities.
@@ -94,7 +115,13 @@ export default function DemoScene(props:DemoSceneProps){
     player=stepPlayer(player,{...input,yaw},dt,boxes,DEMO_BOUNDS);
     const gate=nearPremiumGate(player,false);
     if(!gate)gateLatch=null;
-    if(gate&&gateLatch!==gate.id){gateLatch=gate.id;reset();p.onGate(gate.name);}
+    if(gate&&gateLatch!==gate.id){
+     gateLatch=gate.id;reset();
+     // Physical recoil into the free district instead of entering VIP streets.
+     player={...player,x:gate.x?gate.x-Math.sign(gate.x)*8:player.x,z:gate.z?gate.z-Math.sign(gate.z)*8:player.z,speed:0};
+     if(!reduced){renderer.domElement.classList.remove('im-repel');void renderer.domElement.offsetWidth;renderer.domElement.classList.add('im-repel');}
+     p.onGate(gate.name);
+    }
    }
    placePerson(hero,player.x,player.z,player.heading,player.y);animateHero(hero,dt,p.paused?0:player.speed,0,'move',reduced);
    const shot=followCamera(player,CAMERA_PRESETS[1],yaw);
@@ -115,15 +142,16 @@ export default function DemoScene(props:DemoSceneProps){
    renderer.domElement.removeEventListener('webglcontextlost',lost);renderer.domElement.removeEventListener('pointerdown',pointerdown);renderer.domElement.removeEventListener('pointermove',pointermove);renderer.domElement.removeEventListener('pointerup',pointerup);renderer.domElement.removeEventListener('pointercancel',pointerup);
    const geometries=new Set<THREE.BufferGeometry>();const materials=new Set<THREE.Material>();const textures=new Set<THREE.Texture>();
    scene.traverse(object=>{if(object instanceof THREE.Mesh){geometries.add(object.geometry);for(const m of Array.isArray(object.material)?object.material:[object.material]){materials.add(m);for(const v of Object.values(m))if(v instanceof THREE.Texture)textures.add(v);}}});
-   geometries.forEach(g=>g.dispose());materials.forEach(m=>m.dispose());textures.forEach(t=>t.dispose());renderer.dispose();renderer.domElement.remove();
+   geometries.forEach(g=>g.dispose());materials.forEach(m=>m.dispose());textures.forEach(t=>t.dispose());lockMaterial.dispose();lockTexture.dispose();renderer.dispose();renderer.domElement.remove();
   };
  },[]);
  return <div ref={world} className="im-world" tabIndex={0} aria-label={props.es?'Camina con WASD o flechas, arrastra para girar, E para hablar':'Move with WASD or arrows, drag to look, E to talk'}>
   <div ref={host} className="im-canvas" />
   {hint&&!props.guided&&<button className="im-controls-help" onClick={()=>{setHint(false);world.current?.focus();}}>{props.es?'Muévete con la palanca o WASD. Arrastra para mirar.':'Move with the stick or WASD. Drag to look around.'}<span>{props.es?'Entendido':'Got it'} ×</span></button>}
+  {near&&props.premiumLocations?.includes(near.location)&&!props.paused&&!props.guided&&<div className="im-near-vip" role="status">🔒 {props.es?'Conversación PRO · Pulsa E para desbloquear':'PRO conversation · Press E to unlock'}</div>}
   <div className="im-touch" hidden={props.paused||props.guided}>
    <div className="im-stick" role="group" aria-label={props.es?'Palanca de movimiento':'Movement joystick'} onPointerDown={e=>{e.currentTarget.setPointerCapture(e.pointerId);world.current?.focus();}} onPointerMove={e=>{if(!e.currentTarget.hasPointerCapture(e.pointerId)||!api.current)return;const r=e.currentTarget.getBoundingClientRect();const dx=(e.clientX-r.left-r.width/2)/40,dy=(e.clientY-r.top-r.height/2)/40;const length=Math.max(1,Math.hypot(dx,dy));api.current.joy.x=dx/length;api.current.joy.y=-dy/length;if(stick.current)stick.current.style.transform=`translate(${dx/length*33}px,${dy/length*33}px)`;}} onPointerUp={()=>api.current?.reset()} onPointerCancel={()=>api.current?.reset()} onLostPointerCapture={()=>api.current?.reset()}><span ref={stick}/></div>
-   <div className="im-touch-buttons"><button className="im-jump" onPointerDown={e=>{e.currentTarget.setPointerCapture(e.pointerId);api.current?.held.add('jump');}} onPointerUp={()=>api.current?.held.delete('jump')} onPointerCancel={()=>api.current?.held.delete('jump')} onLostPointerCapture={()=>api.current?.held.delete('jump')}>{props.es?'Saltar':'Jump'} ↑</button><button className="im-talk" disabled={!near} onClick={()=>api.current?.interact()}>{near?`${props.es?'Hablar':'Talk'} · ${near.location}`:(props.es?'Busca un círculo de luz':'Find a circle of light')} {near?'→':''}</button></div>
+   <div className="im-touch-buttons"><button className="im-jump" onPointerDown={e=>{e.currentTarget.setPointerCapture(e.pointerId);api.current?.held.add('jump');}} onPointerUp={()=>api.current?.held.delete('jump')} onPointerCancel={()=>api.current?.held.delete('jump')} onLostPointerCapture={()=>api.current?.held.delete('jump')}>{props.es?'Saltar':'Jump'} ↑</button><button className="im-talk" disabled={!near} onClick={()=>api.current?.interact()}>{near?`${props.premiumLocations?.includes(near.location)?'🔒 PRO':(props.es?'Hablar':'Talk')} · ${near.location}`:(props.es?'Busca un círculo de luz':'Find a circle of light')} {near?'→':''}</button></div>
   </div>
  </div>;
 }

@@ -44,7 +44,16 @@ test('paid trial grants one day, replay is idempotent, monthly conversion gets o
  assert.equal(sqlite.prepare('SELECT expires_at FROM access_grants').get().expires_at,renewal.paidThrough);
  sqlite.close();
 });
-test('canonical checkout puts monthly before trial and discloses renewal, with local payment brands',async()=>{const ui=await readFile('app/acceso/CheckoutButton.tsx','utf8');assert.match(ui,/checkoutPaddle\("monthly"\)/);assert.match(ui,/checkoutPaddle\("trial"\)/);assert.ok(ui.indexOf('checkoutPaddle("monthly")')<ui.indexOf('checkoutPaddle("trial")'));assert.match(ui,/Después, US\$15.50\/mes/);assert.doesNotMatch(ui,/US\$2\/(?:día|day)/);assert.match(ui,/PaymentBrands/);const config=await readFile('app/api/billing/founder-status/route.ts','utf8');assert.match(config,/trialCheckoutAvailable/)});
+test('new checkout shows direct monthly and PayPal while legacy trial billing remains compatible',async()=>{
+ const ui=await readFile('app/acceso/CheckoutButton.tsx','utf8');
+ assert.match(ui,/checkoutPaddle\("monthly"\)/);
+ assert.doesNotMatch(ui,/onClick=\{\(\) => checkoutPaddle\("trial"\)\}/);
+ assert.doesNotMatch(ui,/Prueba 1 día por US\$2|Try 1 day for US\$2/);
+ assert.match(ui,/onClick=\{checkoutPayPal\}/);
+ assert.match(ui,/PaymentBrands/);
+ const config=await readFile('app/api/billing/founder-status/route.ts','utf8');
+ assert.match(config,/trialCheckoutAvailable/);
+});
 test('Paddle timestamps may contain milliseconds',()=>{const [tx,sub]=pair(true);tx.billing_period={starts_at:'2026-10-02T00:00:00.123Z',ends_at:'2026-10-03T00:00:00.123Z'};assert.ok(p.paddleCompletedPayment(tx,sub,cfg))});
 test('existing USD15 subscriptions require explicit persisted legacy context',()=>{const [tx,sub]=pair(false);for(const x of [tx,sub])x.items[0].price.unit_price.amount='1500';tx.details.totals.total='1500';assert.equal(p.paddleCompletedPayment(tx,sub,cfg),null);assert.equal(p.paddleCompletedPayment(tx,sub,{...cfg,legacyMonthly:true}).amountCents,1500)});
 import { createHmac } from 'node:crypto';

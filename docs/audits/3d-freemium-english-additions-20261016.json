@@ -1,0 +1,118 @@
+{
+  "version": 1,
+  "authorization": "Owner-requested acquisition funnel and 3D freemium demo on 2026-10-16; SpanishCue direct monthly PRO checkout, six free city venues with real VIP conversation gates, and a free city demo instead of a paid US$2 trial. Only explicitly reviewed English literals in these exact paths are allowed.",
+  "additions": [
+    {
+      "path": "app/immersive/CityDemo.tsx",
+      "text": "CENTRE · FREE + PRO"
+    },
+    {
+      "path": "app/immersive/CityDemo.tsx",
+      "text": "Six free venues, four PRO venues and eight VIP districts."
+    },
+    {
+      "path": "app/immersive/CityDemo.tsx",
+      "text": "PRO · Unlock"
+    },
+    {
+      "path": "app/immersive/CityDemo.tsx",
+      "text": "No card · PRO conversations are locked"
+    },
+    {
+      "path": "app/immersive/CityDemo.tsx",
+      "text": "🔒 Unlock more conversations"
+    },
+    {
+      "path": "app/immersive/CityDemo.tsx",
+      "text": "Walk to the glowing circles: some are free and others PRO."
+    },
+    {
+      "path": "app/immersive/CityDemo.tsx",
+      "text": "FREE CONVERSATION"
+    },
+    {
+      "path": "app/immersive/CityDemo.tsx",
+      "text": "Unlock ${encounter.location.premiumCount} PRO conversations"
+    },
+    {
+      "path": "app/immersive/ImmersiveLanding.tsx",
+      "text": "Free conversations"
+    },
+    {
+      "path": "app/immersive/ImmersiveLanding.tsx",
+      "text": "Use the free conversations, then unlock PRO venues and activities."
+    },
+    {
+      "path": "app/immersive/ImmersiveLanding.tsx",
+      "text": "The demo has no time limit: six free venues and conversations without a card or an account. PRO unlocks more conversations, VIP districts and the whole library."
+    },
+    {
+      "path": "app/immersive/PremiumPanel.tsx",
+      "text": "VIP area. Unlock it with PRO."
+    },
+    {
+      "path": "app/immersive/PremiumPanel.tsx",
+      "text": "Unlock PRO for US$15.50/month by card or choose PayPal (US$15/month). No annual commitment; cancel before renewal."
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Walk the city centre: six free venues, four PRO venues, six levels."
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Unlock PRO for your Spanish classes."
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "BUY PRO"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "US$15.50/month by card or US$15/month with PayPal. No annual commitment."
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "The guided preview and free centre conversations across six levels, the lessons marked FREE above and Autoestudio A1 weeks 1–2. No card needed."
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Is there a free demo?"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Yes. Six venues offer free conversations without sign-up or a card. PRO unlocks more conversations and VIP districts."
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Free: the guided preview above, six free centre venues of Noche Abierta across six levels, the lessons marked FREE on this page, and the first two weeks of Autoestudio A1. Everything marked PRO is in the subscription."
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "${n} demo venues · PRO unlocks all conversations, A1–C2"
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Explore the free 3D city — no card"
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Is there a free version?"
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Yes. Explore free 3D city conversations without an account or card. PRO unlocks more stories and VIP districts."
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Subscribe to PRO · US$15.50/month"
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Unlock PRO · US$15.50/month"
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Cancel online anytime"
+    }
+  ]
+}
