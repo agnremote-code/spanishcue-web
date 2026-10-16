@@ -7,6 +7,7 @@ const entries = [
   { name: "assets", directory: true },
   { name: "audio", directory: true },
   { name: "_protected-audio", directory: true },
+  { name: "_protected-client", directory: true },
   { name: "_routed-webp", directory: true },
   { name: "_headers", directory: false },
   { name: "og.png", directory: false },
@@ -14,7 +15,7 @@ const entries = [
 
 test("public chunks skip the Worker while media and pages still run it first", () => {
   const routes = workerFirstRoutes(entries);
-  assert.deepEqual(routes, ["/", "/_protected-audio/*", "/_routed-webp/*", "/audio/*", "/og.png"]);
+  assert.deepEqual(routes, ["/", "/_protected-audio/*", "/_protected-client/*", "/_routed-webp/*", "/audio/*", "/og.png"]);
   assert.ok(!routes.some(route => route.startsWith("/assets") || route.startsWith("!") || route === "/*"));
 });
 

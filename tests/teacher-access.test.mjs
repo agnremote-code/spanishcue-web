@@ -271,6 +271,25 @@ test('paid client assets are absent from static storage and denied without a val
  for(const file of report.publicFiles.filter(x=>x.endsWith('.js'))){const r=await get('/'+file);assert.equal(r.status,200,`public ${file}`);await r.arrayBuffer()}
 });
 
+test('encrypted paid blobs are never served directly, as ciphertext or plaintext',async()=>{
+ const {default:clientRecords}=await import(pathToFileURL('dist/server/private-client-assets.js').href);
+ const {default:media}=await import(pathToFileURL('dist/server/private-media-assets.js').href);
+ const key=Buffer.from(media.key,'base64');
+ for(const record of [Object.values(clientRecords)[0],Object.values(media.assets)[0]]){
+  const encrypted=await readFile('dist/client'+record.assetPath);
+  const decipher=createDecipheriv('aes-256-gcm',key,Buffer.from(record.iv,'base64'));
+  decipher.setAuthTag(encrypted.subarray(-16));
+  const plain=Buffer.concat([decipher.update(encrypted.subarray(0,-16)),decipher.final()]);
+  for(const method of ['GET','HEAD']){
+   const r=await fetch(root+record.assetPath,{method,redirect:'manual'});
+   assert.notEqual(r.status,200,`${method} ${record.assetPath}`);
+   const body=Buffer.from(await r.arrayBuffer());
+   assert.equal(body.includes(plain.subarray(0,64)),false,`${method} ${record.assetPath} leaked plaintext`);
+   assert.equal(body.includes(encrypted.subarray(0,64)),false,`${method} ${record.assetPath} served the blob`);
+  }
+ }
+});
+
 test('only allowlisted free audio collections are public; every other current prefix is private',async()=>{
  const freePrefixes=p.freeAudioPrefixes;
  const report=JSON.parse(await readFile('dist/.openai/client-protection-report.json','utf8'));

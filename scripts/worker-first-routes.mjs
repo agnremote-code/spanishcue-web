@@ -10,7 +10,7 @@ import assert from "node:assert/strict";
 import { readdir } from "node:fs/promises";
 
 const LIMIT = 100; // Cloudflare's maximum number of run_worker_first entries.
-const REQUIRED = ["/audio/*", "/_protected-audio/*", "/_routed-webp/*"];
+const REQUIRED = ["/audio/*", "/_protected-audio/*", "/_protected-client/*", "/_routed-webp/*"];
 
 export function workerFirstRoutes(entries) {
   const routes = new Set(["/"]);

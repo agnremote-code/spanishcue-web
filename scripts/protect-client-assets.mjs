@@ -1,9 +1,9 @@
 /**
  * Keep paid-only browser modules and media out of the public asset namespace.
  *
- * Public lesson roots are explicit. Premium JavaScript is served directly by
- * the Worker after Firebase/D1 authorization. Premium audio is encrypted into
- * opaque static blobs and decrypted by the Worker only after the same check.
+ * Public lesson roots are explicit. Premium JavaScript and audio are encrypted
+ * into opaque static blobs and decrypted by the Worker only after
+ * Firebase/D1 authorization.
  */
 import {
   access,
@@ -168,9 +168,52 @@ if (!protectedFiles.length) {
   throw new Error("Expected private client chunks; refusing an unprotected build.");
 }
 
+const mediaKey = randomBytes(32);
+// Encrypt one private file into an opaque static blob under `directory` and
+// return the record the Worker needs to decrypt and serve it after the
+// access check. Every blob is verified before its source leaves the build.
+async function encryptAsset(plain, publicPath, directory, contentType) {
+  const iv = randomBytes(12);
+  const cipher = createCipheriv("aes-256-gcm", mediaKey, iv);
+  const encryptedBody = Buffer.concat([cipher.update(plain), cipher.final()]);
+  const encrypted = Buffer.concat([encryptedBody, cipher.getAuthTag()]);
+
+  const decipher = createDecipheriv("aes-256-gcm", mediaKey, iv);
+  decipher.setAuthTag(encrypted.subarray(encrypted.length - 16));
+  const verified = Buffer.concat([
+    decipher.update(encrypted.subarray(0, encrypted.length - 16)),
+    decipher.final(),
+  ]);
+  if (!verified.equals(plain)) {
+    throw new Error(`Encrypted asset verification failed for ${publicPath}`);
+  }
+
+  const digest = createHash("sha256").update(encrypted).digest("hex");
+  const assetPath = `/${directory}/${digest}.bin`;
+  await writeFile(resolve("dist/client", assetPath.slice(1)), encrypted);
+  return {
+    assetPath,
+    contentType,
+    etag: `"${createHash("sha256").update(plain).digest("hex")}"`,
+    iv: iv.toString("base64"),
+    size: plain.length,
+  };
+}
+
+// Paid chunk bodies (~10 MB) must not ship inside the Worker bundle: the
+// runtime keeps every uploaded module resident, and with them the isolate
+// starts above Cloudflare's 128 MB memory limit, so each request is served by
+// a freshly started isolate (PERF-001). They are encrypted static blobs, like
+// premium audio, and the Worker keeps only the small decryption records.
+await mkdir(resolve("dist/client/_protected-client"), { recursive: true });
 const clientAssets = {};
 for (const file of protectedFiles) {
-  clientAssets[`/${file}`] = await readFile(resolve("dist/client", file), "utf8");
+  clientAssets[`/${file}`] = await encryptAsset(
+    await readFile(resolve("dist/client", file)),
+    `/${file}`,
+    "_protected-client",
+    "text/javascript; charset=utf-8",
+  );
 }
 await writeFile(
   "dist/server/private-client-assets.js",
@@ -179,7 +222,6 @@ await writeFile(
 
 const audioRoot = resolve("dist/client/audio");
 const protectedAudioRoot = resolve("dist/client/_protected-audio");
-const mediaKey = randomBytes(32);
 const privateMediaAssets = {};
 const protectedMediaFiles = [];
 const publicMediaFiles = [];
@@ -214,35 +256,13 @@ for (const file of await walk(audioRoot)) {
     continue;
   }
 
-  const plain = await readFile(file);
-  const iv = randomBytes(12);
-  const cipher = createCipheriv("aes-256-gcm", mediaKey, iv);
-  const encryptedBody = Buffer.concat([cipher.update(plain), cipher.final()]);
-  const encrypted = Buffer.concat([encryptedBody, cipher.getAuthTag()]);
-
-  // Verify every generated blob before deleting the source from public output.
-  const decipher = createDecipheriv("aes-256-gcm", mediaKey, iv);
-  decipher.setAuthTag(encrypted.subarray(encrypted.length - 16));
-  const verified = Buffer.concat([
-    decipher.update(encrypted.subarray(0, encrypted.length - 16)),
-    decipher.final(),
-  ]);
-  if (!verified.equals(plain)) {
-    throw new Error(`Encrypted media verification failed for ${publicPath}`);
-  }
-
-  const digest = createHash("sha256").update(encrypted).digest("hex");
-  const assetPath = `/_protected-audio/${digest}.bin`;
-  await writeFile(resolve("dist/client", assetPath.slice(1)), encrypted);
-  privateMediaAssets[publicPath] = {
-    assetPath,
-    contentType:
-      contentTypes[extname(relativePath).toLowerCase()] ??
+  privateMediaAssets[publicPath] = await encryptAsset(
+    await readFile(file),
+    publicPath,
+    "_protected-audio",
+    contentTypes[extname(relativePath).toLowerCase()] ??
       "application/octet-stream",
-    etag: `"${createHash("sha256").update(plain).digest("hex")}"`,
-    iv: iv.toString("base64"),
-    size: plain.length,
-  };
+  );
   protectedMediaFiles.push(publicPath);
   await moveOutOfPublicBuild(file, `audio/${relativePath}`);
 }
@@ -385,12 +405,11 @@ export {requestedRange as __testRequestedRange,servePrivateMedia as __testServeP
 
 export default {async fetch(request,env,ctx){
  let path;try{path=decodeURIComponent(new URL(request.url).pathname)}catch{return new Response('Bad request',{status:400})}
- const media=privateMedia.assets[path];
- if(Object.hasOwn(privateAssets,path)||media){
+ const media=Object.hasOwn(privateAssets,path)?privateAssets[path]:privateMedia.assets[path];
+ if(media){
   if(!await hasFullLibraryAccess(request,env))return new Response('Acceso restringido',{status:403,headers:privateHeaders()});
   if(request.method!=='GET'&&request.method!=='HEAD'){const headers=privateHeaders();headers.set('Allow','GET, HEAD');return new Response('Method not allowed',{status:405,headers});}
-  if(media)return servePrivateMedia(request,env,media);
-  return new Response(request.method==='HEAD'?null:privateAssets[path],{headers:{'Content-Type':'text/javascript; charset=utf-8','Cache-Control':'private, no-store','X-Content-Type-Options':'nosniff'}});
+  return servePrivateMedia(request,env,media);
  }
  return app.fetch(request,{...env,ASSETS:routedAssets(env.ASSETS)},ctx);
 }};
@@ -412,6 +431,9 @@ await writeFile(
       protectedFiles,
       protectedMediaFiles,
       encryptedMediaFiles: Object.values(privateMediaAssets).map(
+        (record) => record.assetPath,
+      ),
+      encryptedClientFiles: Object.values(clientAssets).map(
         (record) => record.assetPath,
       ),
       routedWebpFiles: Object.keys(routedWebpAssets),
