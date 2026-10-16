@@ -179,7 +179,9 @@ export default function Students({ lessons, startNew, homeworkEnabled }: { lesso
     {notice && <div className="cx-alert is-ok" role="status"><span>{notice}</span></div>}
     {homework.status === "error" && <div className="cx-alert is-error" role="alert"><span>{homework.message}</span><button type="button" onClick={reloadHomework}>{t("common.retry")}</button></div>}
 
-    <LoadState state={students} onRetry={reload}>{() => list.length === 0 && !form && !unclaimed.length
+    <LoadState state={students} onRetry={reload}>{() => list.length === 0 && !form && homework.status === "loading"
+      ? <p className="cx-loading" role="status"><span className="cx-spinner" aria-hidden="true" />{t("common.loading")}</p>
+      : list.length === 0 && !form && !unclaimed.length
       ? <Empty title={t("students.empty")} copy={t("students.emptyCopy")} action={<button type="button" className="cx-btn is-primary" onClick={() => setForm({ mode: "new", draft: emptyDraft() })}>＋ {t("students.add")}</button>} />
       : <div className="cx-master">
         <div className="cx-stack">
