@@ -2,7 +2,12 @@
 
 - Date: 2026-10-17
 - Decided by: Alejandro (CEO), with Sofia (CPIO) and Martin (CLRQO). Majority vote with one objection round.
-- Status: **DRAFT**. Votes pending.
+- Status: **PENDING: resume.** The session stopped on 2026-10-17 (owner shutdown). Received so far: none. No proposals or votes had arrived from Sofia or Martin.
+- Still missing on resume:
+  1. Sofia's proposal: the build effort for LES-001 Feria A2 (single implementer?) and for a PRO grammar class on the GRAMÁTICA engine, plus her vote.
+  2. Martin's proposal: one PRO grammar class from real curriculum gaps (objective ids without a class, with evidence), Feria authoring readiness, plus his vote.
+  3. The majority vote and one objection round, then LOCK: the order, the GROW-001 build pause (interim: Sofia told to HOLD; Martin's content stays on main), and the first PRO unit with its implementer.
+  4. Update STATUS.md in this same branch, then ONE docs PR. Interim state: PR #222 merged at 585ecc7, so the pipeline was free when the session stopped.
 - Supersedes: the backlog order in BOARD-DECISION-001 v3 §5, only where §3 below says so. All non-votable rules in BOARD-DECISION-001 §3.1 (N1–N4, the LQG, the FREE/PRO ledger) remain in force.
 
 ## 1. Owner decisions recorded (verbatim)
