@@ -11,6 +11,7 @@ _Last updated: 2026-10-16 by the main session (facilitator), at the end of Board
 | 2026-10-16 | "3 lessons/week" = **3 shipping units/week**: a new world, a genuinely authored new level, or a gated repair reported as a repair. |
 | 2026-10-16 | Board PRs may merge and therefore **auto-deploy** (merge → staging → production) once the local checks pass and the independent review is resolved. This applies to scheduled routines too. |
 | 2026-10-16 | **Full creative ownership of all future 3D lessons.** The board brainstorms, selects, designs, builds, tests, reviews and publishes original lessons on schedule. The owner will NOT supply topics, stories, characters, locations or ideas, and does not approve routine deployments. Priorities: pedagogical quality, originality, realistic environments, natural dialogue, listening, SEO. Existing production safeguards stay. Every publication is reported in [PUBLISHED.md](PUBLISHED.md). |
+| 2026-10-16 | The owner reaffirmed **total autonomy** to publish the best classes without his authorization, and set the goal of working **better than ProfeDeELE.com** and every competitor. **ProfeDeELE.com is the primary competitive benchmark.** Its offer, the teacher searches it wins, and where SpanishCue can be clearly better are to be researched with real evidence (not yet done). |
 
 ## Critical facts (verified 2026-10-16)
 - **Merging is a production deploy.** `ci-automerge.yml` dispatches `deploy-staging.yml` after a merge, and staging success dispatches `deploy-production.yml` (gate `OWNER_CLOUDFLARE_PRODUCTION_ENABLED=true`, no environment reviewer). Opening a PR as non-draft starts that chain.
@@ -29,6 +30,7 @@ _Last updated: 2026-10-16 by the main session (facilitator), at the end of Board
 | 6 | PERF-002 CI chunk-size gate | Sofia | open |
 | 7 | Cluster 3 "online tutors" (only if Search Console shows the demand) | Alejandro | blocked on evidence |
 | 8 | Feria AC12 pilot design | Martin | post-launch |
+| — | **COMP-001** ProfeDeELE.com benchmark: their offer, formats, pricing, the teacher queries they win, and the gaps SpanishCue can win with evidence. Feeds concept selection and SEO-002. | Alejandro (lead) + Martin (pedagogy) | next Tuesday SEO slot, or earlier if capacity allows |
 
 ## Owner data requests (open)
 - **R1:** Search Console Page-indexing report, Core Web Vitals report and per-query impressions. The Windsor connector exposes only search analytics and sitemaps.
