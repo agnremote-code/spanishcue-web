@@ -89,3 +89,12 @@ We cannot read production isolate memory. The dashboard's Memory Usage chart and
    - If the smoke regresses, open a revert PR immediately through the normal pipeline (no bypass), and do no further debugging on production.
    - If the smoke passes but TTFB does not improve, KEEP the change (it is neutral and smaller), record the HYPOTHESIS as REJECTED, and move to PERF-001 phase 2 (`app-worker.js` / `ssr/`).
 5. **Paid-path blind spot.** An authorized chunk cannot be smoked without a paid session. Any paid-user breakage signal, such as lesson_reports or error logs mentioning chunk or module load failures, triggers the revert.
+
+## Outcome (2026-10-17)
+
+The fix shipped as PR #221, merged as `e3c42f1`. Staging run 38938666820 and production run 38938998017 both succeeded. The criteria were met:
+- Median server time over 10 samples: spanishcue.com `/favicon.ico` 0.011 s and `/robots.txt` 0.012 s; staging `workers.dev` 0.014 s and 0.012 s. The bar was < 300 ms; before the fix these were 0.92–1.09 s.
+- The smoke set passed ×3.
+- An anonymous protected chunk got 403 `no-store`, and the direct blob request got 404.
+
+Whether production isolates exceeded 128 MB is still not directly observed. But a 308 dropping from about 1 s to 11 ms with only the bundle size changed strongly supports the HYPOTHESIS.
