@@ -18,7 +18,7 @@ const worksheetLines = ['1. Yo ______ (ir) al mercado.', '2. Ella ______ (tener)
 
 /**
  * Paid-traffic landing for Meta/Zeely campaigns: the real product leads, both
- * Paddle plans (1-day US$2 trial and US$15.50/month) sit in the hero and in the
+ * Direct monthly subscription options sit in the hero and in the
  * plans section, PayPal is the secondary option, and nothing pops up. Every
  * image has fixed dimensions and the checkout reserves its final layout, so
  * nothing shifts while the page loads.
@@ -36,7 +36,7 @@ export default async function PaidLanding({ config, slug, pathname }: { config: 
  const checkout = pro
   ? <div className="plp-pro"><strong>{t.proReady}</strong><Link className="plp-button" href="/#library-results">{t.openLibrary} →</Link></div>
   : <CheckoutButton signedIn={signedIn} returnTo="/" variant="landing" />;
- const freeLesson = featureMedia.listening.path!;
+ const freeLesson = '/demo/noche-abierta';
  return <main className="plp" id="landing-main">
   <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(structuredData)}} />
   <a className="skip-link" href="#landing-title">{locale === 'es' ? 'Ir al contenido' : 'Skip to content'}</a>
