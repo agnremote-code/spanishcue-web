@@ -7,7 +7,9 @@
 // Sandbox, Paddle unconfigured, checkout and conversion reporting disabled.
 import assert from "node:assert/strict";
 import { readFile, writeFile } from "node:fs/promises";
+import { dirname, resolve } from "node:path";
 import { pathToFileURL } from "node:url";
+import { assertWorkerFirstRoutes, clientEntries, workerFirstRoutes } from "./worker-first-routes.mjs";
 
 export const STAGING = Object.freeze({
   workerName: "spanishcue-staging",
@@ -28,7 +30,7 @@ const PLACEHOLDER_D1 = "00000000-0000-4000-8000-000000000000";
 // Values that must never be configured on staging as plain vars.
 const FORBIDDEN_VARS = [/^PADDLE_/, /^PAYPAL_LIVE_/, /^RESEND_/, /^FIREBASE_ADMIN_/, /^LEGAL_OPERATOR_JSON$/];
 
-export function stagingConfig(generated, { images = false } = {}) {
+export function stagingConfig(generated, { images = false, workerFirst } = {}) {
   assert.equal(generated.main, "index.js", "unexpected generated Worker entry");
   assert.equal(generated.assets?.binding, "ASSETS", "ASSETS binding missing");
   assert.equal(generated.assets?.run_worker_first, true, "premium media must run the Worker first");
@@ -44,6 +46,10 @@ export function stagingConfig(generated, { images = false } = {}) {
   if (images) config.images = { binding: "IMAGES" };
   config.vars = { ...STAGING.vars };
   config.observability = { enabled: true };
+  if (workerFirst) {
+    assertWorkerFirstRoutes(workerFirst);
+    config.assets.run_worker_first = [...workerFirst];
+  }
   assertStagingOnly(config);
   return config;
 }
@@ -71,7 +77,9 @@ if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) 
   // Production (Sites v176) serves /_vinext/image originals unchanged, which is
   // the no-binding fallback, so parity does not need Cloudflare Images.
   const images = process.env.STAGING_IMAGES_BINDING === "true";
-  const config = stagingConfig(JSON.parse(await readFile(path, "utf8")), { images });
+  const generated = JSON.parse(await readFile(path, "utf8"));
+  const workerFirst = workerFirstRoutes(await clientEntries(resolve(dirname(path), generated.assets.directory)));
+  const config = stagingConfig(generated, { images, workerFirst });
   const { verifyLiveShareRelease } = await import('./autoestudio-release-gate.mjs');
   await verifyLiveShareRelease(config);
   await writeFile(path, `${JSON.stringify(config, null, 2)}\n`);

@@ -67,8 +67,7 @@ export default function GoogleTeachersLanding({pro,signedIn,cafe,spots,level,sho
     <p className="gt-lead">{c.hero.lead}</p>
     <p>{c.hero.p}</p>
     <div ref={heroBuy} id="buy" className="gt-buy gt-buy-hero" onClickCapture={buyClick('hero')}>
-     {!pro?<CheckoutButton signedIn={signedIn} returnTo="/noche-abierta" variant="landing" paddleOnly />:<Link className="im-primary" href="/noche-abierta">{c.hero.openFull}</Link>}
-     <button type="button" className="gt-watch" onClick={()=>{cta('hero')();watchTour();}}>{c.hero.watch}</button>
+     {!pro?<CheckoutButton signedIn={signedIn} returnTo="/noche-abierta" variant="landing" />:<Link className="im-primary" href="/noche-abierta">{c.hero.openFull}</Link>}
     </div>
     <div className="im-reassurance">{c.hero.reassure.map(r=><span key={r}>✓ {r}</span>)}</div>
    </div>

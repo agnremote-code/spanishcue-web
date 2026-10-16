@@ -9,7 +9,9 @@
 //   and turns workers.dev off. Only the cutover runbook uses this.
 import assert from "node:assert/strict";
 import { readFile, writeFile } from "node:fs/promises";
+import { dirname, resolve } from "node:path";
 import { pathToFileURL } from "node:url";
+import { assertWorkerFirstRoutes, clientEntries, workerFirstRoutes } from "./worker-first-routes.mjs";
 import { STAGING } from "./prepare-staging-worker-config.mjs";
 
 export const PRODUCTION = Object.freeze({
@@ -62,7 +64,7 @@ const SECRET_NAMES = [
   "LEGAL_OPERATOR_JSON",
 ];
 
-export function productionConfig(generated, { d1Id, vars = {}, compatibilityDate, attachDomain = false }) {
+export function productionConfig(generated, { d1Id, vars = {}, compatibilityDate, attachDomain = false, workerFirst }) {
   assert.equal(generated.main, "index.js", "unexpected generated Worker entry");
   assert.equal(generated.assets?.binding, "ASSETS", "ASSETS binding missing");
   assert.equal(generated.assets?.run_worker_first, true, "premium media must run the Worker first");
@@ -87,6 +89,10 @@ export function productionConfig(generated, { d1Id, vars = {}, compatibilityDate
   config.vars = { ...vars };
   config.observability = { enabled: true };
   config.preview_urls = false;
+  if (workerFirst) {
+    assertWorkerFirstRoutes(workerFirst);
+    config.assets.run_worker_first = [...workerFirst];
+  }
   if (attachDomain) {
     config.workers_dev = false;
     config.routes = PRODUCTION.domains.map(pattern => ({ pattern, custom_domain: true }));
@@ -101,7 +107,9 @@ export function productionConfig(generated, { d1Id, vars = {}, compatibilityDate
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   const path = process.argv[2] || "dist/server/wrangler.json";
   const vars = process.env.PRODUCTION_VARS_JSON ? JSON.parse(process.env.PRODUCTION_VARS_JSON) : {};
-  const config = productionConfig(JSON.parse(await readFile(path, "utf8")), {
+  const generated = JSON.parse(await readFile(path, "utf8"));
+  const config = productionConfig(generated, {
+    workerFirst: workerFirstRoutes(await clientEntries(resolve(dirname(path), generated.assets.directory))),
     d1Id: process.env.PRODUCTION_D1_ID,
     vars,
     compatibilityDate: process.env.PRODUCTION_COMPATIBILITY_DATE || undefined,
