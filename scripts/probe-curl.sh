@@ -1,12 +1,14 @@
 #!/bin/bash
-# Temporary diagnostic: response times for production and staging pages and assets.
-for origin in https://spanishcue.com https://spanishcue-staging.agnremote.workers.dev; do
-  echo "== $origin"
-  for i in 1 2 3; do curl -s -o /tmp/p.html -w "html %{http_code} %{time_total}s\n" "$origin/lp/google-teachers"; done
-  assets=$(grep -o '/assets/[^"]*\.js' /tmp/p.html | sort -u | head -20)
-  a1=$(echo "$assets" | head -1)
-  for i in 1 2 3; do curl -s -o /dev/null -w "one-asset %{http_code} %{time_total}s\n" "$origin$a1"; done
-  for a in $assets; do curl -s -o /dev/null -w "parallel %{http_code} %{time_total}s $a\n" "$origin$a" & done; wait
-  curl -s -o /dev/null -w "webp %{http_code} %{time_total}s\n" "$origin/lp/demos/grammar.webp"
-  curl -sI "$origin$a1" | grep -i "cf-ray\|server\|cache\|x-spanish" 
+# Temporary diagnostic: which build each request variant receives.
+o=https://spanishcue.com
+for q in "" "?utm_source=chatgpt.com"; do
+ for lang in "" "es-ES,es;q=0.9"; do
+  for ua in "curl/8" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36"; do
+   curl -s -D /tmp/h -o /tmp/p.html -A "$ua" ${lang:+-H "Accept-Language: $lang"} -w "%{http_code} %{time_total}s " "$o/lp/google-teachers$q"
+   echo "q=[$q] lang=[$lang] ua=[${ua:0:10}] analytics=$(grep -o 'analytics-[A-Za-z0-9_-]*\.js' /tmp/p.html | head -1) landing=$(grep -o 'GoogleTeachersLanding-[A-Za-z0-9_-]*\.js' /tmp/p.html | head -1) $(grep -i 'cf-cache-status\|x-spanishcue-cache\|^age' /tmp/h | tr -d '\r' | tr '\n' ' ')"
+  done
+ done
+done
+for a in analytics-DvPNF3Jh.js analytics-Jo8MU0rQ.js GoogleTeachersLanding-B0NpuC5u.js GoogleTeachersLanding-DlTWQOTW.js; do
+ curl -s -D /tmp/h -o /dev/null -w "$a %{http_code} %{time_total}s " "$o/assets/$a"; grep -i 'cf-cache-status\|content-type' /tmp/h | tr -d '\r' | tr '\n' ' '; echo
 done
