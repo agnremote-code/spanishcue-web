@@ -1,4 +1,6 @@
 export const DEMO_LEVELS: readonly string[];
+export const DEMO_FREE_LOCATIONS: readonly string[];
+export const DEMO_FREE_ACTIVITIES_PER_LOCATION: number;
 export const DEMO_BOUNDS: {minX:number;maxX:number;minZ:number;maxZ:number};
 export type DemoGate = {id:string;name:string;x:number;z:number};
 export const DEMO_GATES: DemoGate[];
