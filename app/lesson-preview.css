@@ -21,6 +21,21 @@
   transition: transform 220ms ease;
 }
 
+.lesson-preview video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 180ms ease;
+  pointer-events: none;
+}
+
+.preview-playing .lesson-preview video {
+  opacity: 1;
+}
+
 .lesson-preview::after {
   content: "";
   position: absolute;
