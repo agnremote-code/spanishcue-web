@@ -1,6 +1,6 @@
 # Board STATUS: the single source of truth for the next run
 
-_Last updated: 2026-10-16 by the main session (facilitator), at the end of Board Session 1._
+_Last updated: 2026-10-17 by Sofia, after PERF-001 shipped and was verified in production._
 
 ## Owner decisions in force
 | Date | Decision |
@@ -15,16 +15,17 @@ _Last updated: 2026-10-16 by the main session (facilitator), at the end of Board
 | 2026-10-16 | The owner reaffirmed **total autonomy** to publish the best classes without his authorization, and set the goal of working **better than ProfeDeELE.com** and every competitor. **ProfeDeELE.com is the primary competitive benchmark.** Its offer, the teacher searches it wins, and where SpanishCue can be clearly better are to be researched with real evidence (not yet done). |
 
 ## Critical facts (verified 2026-10-16)
+- **Release rule: only one PR in the merge/deploy pipeline at a time.** Before marking a PR ready, check open ready PRs, running CI/Deploy workflows and that `refs/heads/automation/merge-lock` is absent. A missing check is a review blocker. (Origin: production run 38930549382 for `afe203f` refused safely because #219 held the merge-lock.)
 - **Merging is a production deploy.** `ci-automerge.yml` dispatches `deploy-staging.yml` after a merge, and staging success dispatches `deploy-production.yml` (gate `OWNER_CLOUDFLARE_PRODUCTION_ENABLED=true`, no environment reviewer). Opening a PR as non-draft starts that chain.
 - **Discoverability is the binding constraint.** In 90 days, 30 of 241 sitemap URLs had any impressions, with about 200 impressions and 3 clicks in total. Every 3D world redirects anonymous users and crawlers to `/acceso`.
-- **TTFB is about 1.0–1.2 s on every Worker-served URL**, including cache HITs and `/robots.txt`, while static assets take 33–41 ms. Sofia measured it and the facilitator reproduced it, both from one vantage point. The cause is unverified.
+- **TTFB fixed (PERF-001, 2026-10-17).** Every Worker-served URL used to take about 1 s because the isolate heap (133.7 MiB at startup in workerd) exceeded Cloudflare's 128 MB per-isolate limit, so a new isolate started for every request (mechanism consistent with the outcome; isolate memory not directly observed). With the paid chunk bodies moved out of the bundle, median server time is about 12 ms (see [perf-001-notes.md](perf-001-notes.md)). Heap headroom is about 25 MiB, guarded by the 36 MiB bundle budget in `tests/worker-startup.test.mjs`.
 - **The GA4 property 553569142 returned 0 rows in 30 days.** Analytics fires only after consent (Alejandro, from code), so this needs R2.
 
 ## Backlog (from BOARD-DECISION-001 v3 §5; ranks are binding unless new evidence appears)
 | Rank | Item | Owner → reviewer | State |
 |---|---|---|---|
 | 1 | SEO-001 /argento hreflang fix + `?lang=` regression guard | Alejandro → Sofia | **DONE**: PR #217, `6c7379b`, verified in production 2026-10-16 |
-| 2 | PERF-001 TTFB root cause, time-boxed to 1 day | Sofia → Alejandro | NEXT |
+| 2 | PERF-001 TTFB root cause, time-boxed to 1 day | Sofia → Alejandro | **DONE**: PR #221, `e3c42f1`, verified in production 2026-10-17 (server time ~1.0 s → ~12 ms) |
 | 3 | GROW-001 indexable Noche Abierta teacher page + one new LQG-passed free circle | Martin (content) → Sofia (build); G4 review by Alejandro or a fresh agent | **Content APPROVED** (G4 Alejandro, 2026-10-16, PR #220): A2 `a2.fun.favores`, «El ascensor no funciona». **Next: Sofia builds** after PERF-001 |
 | 4 | LES-001 Feria A2 on the minimal kit (LESSON-DECISION-001 v5) | Martin → Sofia; G4 by Alejandro or a fresh agent | after GROW-001 |
 | 5 | SEO-002 consolidation vs. cluster deepening, decided by R1 | Alejandro | blocked on R1 |
@@ -60,8 +61,11 @@ All five run on `claude-opus-5-5`, follow [ROUTINES.md](ROUTINES.md), and each i
 ## Current work and next action
 - SEO-001: done and verified in production (see PUBLISHED.md).
 - Board records PR #218 merged as `afe203f` (its deploy was in progress when the session closed; the next run should verify it with `gh run list`).
-- **PERF-001 was IN PROGRESS when the interactive session closed (2026-10-16).** Sofia was told to checkpoint to the draft PR on `claude/perf-001-ttfb-20261016`, with notes in `docs/board/perf-001-notes.md`. If it exists, the next run (any slot: Thursday's reliability review is the natural owner) finishes it. Required before marking ready: Alejandro or a fresh agent reviews it, the full checks pass, and the post-deploy smoke covers /, /robots.txt, /sitemap.xml, /spanish-grammar-lessons, /argento, /acceso, a /resources/ page, an anonymous PRO 3D route (must redirect to /acceso) and unauthenticated /api/progress (must refuse). If the branch does not exist, restart PERF-001 from the spec.
-- **Original next action: PERF-001** (Sofia, time-boxed to 1 day): root-cause the ~1 s TTFB, then fix it or document the hosting limit. Then GROW-001. Run COMP-001 (ProfeDeELE.com benchmark) in the next Tuesday SEO slot.
+- **PERF-001: DONE** (2026-10-17). PR #221 merged as `e3c42f1`. Staging 38938666820 and production 38938998017 both succeeded, and smoke plus timing passed (see PUBLISHED.md). Remaining blind spot: authorized paid-chunk delivery could not be smoked without a paid session. Any paid-user report of a lesson failing to load triggers a revert of #221. PERF-001 phase 2 (`app-worker.js` 13.8 MB, `ssr/` 23 MB) is optional headroom work, not urgent.
+- GROW-001 content PR #220 is live (merged as `30bf6f2`).
+- **Next action: GROW-001 build** (Sofia), following the handoff below. Alejandro does the SEO review. Then LES-001. COMP-001 runs in the Tuesday SEO slot.
+- _History:_ PERF-001 was IN PROGRESS when the interactive session closed (2026-10-16). Sofia was told to checkpoint to the draft PR on `claude/perf-001-ttfb-20261016`, with notes in `docs/board/perf-001-notes.md`. If it exists, the next run (any slot: Thursday's reliability review is the natural owner) finishes it. Required before marking ready: Alejandro or a fresh agent reviews it, the full checks pass, and the post-deploy smoke covers /, /robots.txt, /sitemap.xml, /spanish-grammar-lessons, /argento, /acceso, a /resources/ page, an anonymous PRO 3D route (must redirect to /acceso) and unauthenticated /api/progress (must refuse). If the branch does not exist, restart PERF-001 from the spec.
+- _Original next action (done):_ PERF-001, then GROW-001. Run COMP-001 (ProfeDeELE.com benchmark) in the next Tuesday SEO slot.
 - Board records: this PR (`claude/board-records-20261016`).
 - **GROW-001 content: APPROVED** by Alejandro (G4, ~1 h) in PR #220, docs only. Content: `docs/board/content/grow-001-circle.md`, data `grow-001-circle.data.mjs`, LQG review `grow-001-lqg-review.md`. Level A2, objective `a2.fun.favores`, scene «El ascensor no funciona»: 3 linguistic contrasts, 1 conversation stimulus, 5 real-life questions, its own 119-word listening (ES/CO/MX voices), a 30-min route and 10 role cards. **Next: Sofia builds it after PERF-001**, following the handoff in `grow-001-circle.md` §6. That means: move the data under `app/`; add it to the FREE ledger with tests; generate the listening via the pipeline, with a narrow 1-item exemption; build the page poster-first, with SEO wiring per Alejandro (breadcrumb under the A2 hub, a hub link, a canonical on the clean path); and write the build PR's `docs/audits/grow-001-pedagogy-YYYYMMDD.md` with G3/G5 and the G4 conditions (a) only this circle's listening is free, with the PRO sentence verified against `app/access-policy.ts`; (b) option labels are never voiced; (c) the exemption names its exact path. Martin does G5 legibility.
 
