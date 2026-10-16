@@ -56,6 +56,6 @@ test("paid purchase conversion uses verified revenue and production measurement 
   assert.match(billing, /value: event\.amountCents \/ 100/);
   assert.match(deploy, /G-6C7DY2C5LN/);
   assert.match(deploy, /AW-17144698608/);
-  assert.match(deploy, /PnsSCLfHuJQdEPCtne8_/);
+  assert.match(deploy, /DmpfCIzWzp4dEPCtne8_/);
   assert.match(deploy, /ANALYTICS_CONVERSIONS_ENABLED \/\/= "true"/);
 });
