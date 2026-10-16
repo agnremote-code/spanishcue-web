@@ -84,7 +84,7 @@ export const paidCopy = {
    'spanish-teacher-resources': 'Abre una clase interactiva lista, comparte pantalla y da una clase que tus alumnos van a recordar: mundos 3D, mapas, historias y decisiones para hablar, de A1 a C2.',
    'online-spanish-teaching-resources': 'Para profesores que ya dan clases por Preply, italki, Zoom o Meet. Elige un nivel, abre una experiencia 3D y comparte pantalla. Historias, escucha y conversación en el navegador, sin tener que montar otra presentación.',
   },
-  heroPoints: ['Abre, comparte y enseña', 'A1–C2', 'Sin pago anual'], 
+  heroPoints: ['Abre, comparte y enseña', 'A1–C2', 'Sin pago anual'],
   tryFree: '¿Prefieres mirar primero? Abre una clase gratis',
   shots: {
    worlds: 'Ciudad 3D · entra, habla, decide',
