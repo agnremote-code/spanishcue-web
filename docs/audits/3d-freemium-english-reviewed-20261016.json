@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "authorization": "Owner-requested acquisition funnel and 3D freemium demo on 2026-10-16; SpanishCue direct monthly PRO checkout, six free city venues with real VIP conversation gates, and a free city demo instead of a paid US$2 trial. Only explicitly reviewed English literals in these exact paths are allowed. The two deletions are intentional because the user removed the paid trial offer from acquisition surfaces. Existing trial subscriptions are unaffected.",
+  "changes": [
+    {
+      "path": "app/acceso/CheckoutButton.tsx",
+      "kind": "english-changed-or-deleted",
+      "text": "Try 1 day for US$2"
+    },
+    {
+      "path": "app/acceso/CheckoutButton.tsx",
+      "kind": "english-changed-or-deleted",
+      "text": "Then US$15.50/month. Cancel anytime. Taxes included."
+    }
+  ]
+}
