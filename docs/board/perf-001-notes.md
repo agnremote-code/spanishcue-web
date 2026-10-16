@@ -97,4 +97,4 @@ The fix shipped as PR #221, merged as `e3c42f1`. Staging run 38938666820 and pro
 - The smoke set passed ×3.
 - An anonymous protected chunk got 403 `no-store`, and the direct blob request got 404.
 
-Whether production isolates exceeded 128 MB is still not directly observed. But a 308 dropping from about 1 s to 11 ms with only the bundle size changed strongly supports the HYPOTHESIS.
+Reviewer verdict (Alejandro, 2026-10-17): CONFIRMED PASS, mechanism consistent with the outcome, isolate memory not directly observed. The paid-path blind spot remains. Whether production isolates exceeded 128 MB is still not directly observed. But a 308 dropping from about 1 s to 11 ms with only the bundle size changed strongly supports the HYPOTHESIS.
