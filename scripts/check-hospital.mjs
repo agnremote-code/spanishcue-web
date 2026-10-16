@@ -18,6 +18,9 @@ export function checkLevel(level, content) {
   const isText = (v) => typeof v === 'string' && v.trim().length > 0;
   const bi = (v) => a0 ? Boolean(v && isText(v.es) && isText(v.en)) : isText(v);
   const es = (v) => (a0 ? v?.es : v) ?? '';
+  // A0 and A1 keywords are bilingual { es, en }; from A2 up they are plain Spanish.
+  const pair = (v) => Boolean(v && isText(v.es) && isText(v.en));
+  const word = (v) => (a0 || level === 'A1') ? pair(v) : isText(v);
   const ids = Object.keys(content ?? {});
   if (ids.join() !== STORY_IDS.join()) bad('', `scenes must be exactly ${STORY_IDS.join(', ')} in that order (got ${ids.join(', ')})`);
   const titles = new Set(); const questions = new Map();
@@ -56,7 +59,7 @@ export function checkLevel(level, content) {
     if (new Set(talk.map((q) => es(q).toLocaleLowerCase('es'))).size !== talk.length) bad(at, 'talk questions repeat');
     if (talk.filter((q) => MEDICAL.test(es(q))).length > 2) bad(at, 'more than 2 of the 5 talk questions stay in medicine/the hospital; move them to the student\'s life');
     const list = Array.isArray(s.words) ? s.words : [];
-    if (list.length < 4 || list.length > 6 || !list.every(bi)) bad(at, 'words needs 4 to 6 entries');
+    if (list.length < 4 || list.length > 6 || !list.every(word)) bad(at, `words needs 4 to 6 entries${a0 || level === 'A1' ? ', each { es, en }' : ''}`);
   }
   return out;
 }

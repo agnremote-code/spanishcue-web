@@ -96,6 +96,7 @@ export function sceneView(state) {
   const text = CONTENT[state.level]?.[open.id];
   if (!place || !text) return null;
   const [first, second] = open.picks;
+  // A0 has no money openings: every purse falls back to the plain line.
   const beats = [{ line: text.money?.[state.money] || text.line, options: text.options, pick: first }];
   if (first !== undefined && text.options2) beats.push({ line: text.line2, options: text.options2, pick: second });
   const ended = open.picks.length >= choicesIn(state.level, open.id);

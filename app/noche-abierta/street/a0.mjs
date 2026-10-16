@@ -185,7 +185,7 @@ export const A0_SCENES = {
     start: "inicio",
     ends: {
       vestibulo: t("Ves una lámpara enorme y alfombras rojas.", "You see a huge lamp and red carpets."),
-      chisme: t("Sebastián te guiña un ojo y abre la puerta a un cliente.", "Sebastián winks at you and opens the door for a guest."),
+      chisme: t("Sebastián sonríe. Abre la puerta a un cliente.", "Sebastián smiles. He opens the door for a guest."),
       adios: t("Sebastián mira la calle. Serio otra vez.", "Sebastián looks at the street. Serious again."),
     },
     words: [t("el hotel", "the hotel"), t("el portero", "the doorman"), t("elegante", "elegant"), t("entrar", "to go in")],
@@ -206,7 +206,7 @@ export const A0_SCENES = {
     ends: {
       nieto: t("Don Emilio llama a su nieto. Esperas con él.", "Don Emilio calls his grandson. You wait with him."),
       solo: t("Te vas. Don Emilio sigue buscando.", "You leave. Don Emilio keeps searching."),
-      encontrado: t("Don Emilio abre su auto y se va despacio.", "Don Emilio opens his car and drives away slowly."),
+      encontrado: t("Don Emilio abre su auto. Se va despacio.", "Don Emilio opens his car. He drives away slowly."),
       taxi: t("Don Emilio sube al taxi. «¡Adiós!»", "Don Emilio gets into the taxi. “Bye!”"),
     },
     words: [t("el auto", "the car"), t("el color", "the colour"), t("buscar", "to look for"), t("el nieto", "the grandson")],
@@ -234,7 +234,7 @@ export const A0_SCENES = {
     start: "inicio",
     ends: {
       mosto: t("Bebes el mosto. Está muy rico.", "You drink the grape juice. It’s very tasty."),
-      consejo: t("Tienes una tarjeta con el nombre de un vino.", "You have a card with the name of a wine."),
+      consejo: t("Tienes una tarjeta. Tiene el nombre de un vino.", "You have a card. It has the name of a wine on it."),
       paseo: t("Renata vuelve a la vinoteca. Tú sigues paseando.", "Renata goes back into the wine shop. You keep walking."),
     },
     words: [t("el vino", "the wine"), t("sin alcohol", "alcohol-free"), t("probar", "to try"), t("rico", "tasty")],

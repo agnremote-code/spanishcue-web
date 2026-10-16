@@ -1,5 +1,6 @@
 // Hospital San Casi Vivo · seven levels with their own scenes. A0 is
-// bilingual: every text is { es, en }; the other levels are plain Spanish.
+// bilingual: every text is { es, en }; A1 keeps its scene words as { es, en }
+// keywords; the rest is plain Spanish.
 import a0 from './levels/a0.mjs';
 import a1 from './levels/a1.mjs';
 import a2 from './levels/a2.mjs';

@@ -48,9 +48,9 @@ const TALK = {
   "costa-pareja": {
     topics: ["decisiones", "amor"],
     A1: [
-      "¿Vives en la ciudad donde naciste?",
+      "¿Tu familia vive en tu ciudad?",
       "¿Discutes mucho con tu pareja o con tu familia?",
-      "¿Te gustaría vivir en otra ciudad?",
+      "¿Quieres vivir en otra ciudad?",
       "¿Con quién hablas cuando tienes un problema?",
       "¿Te gustan los cambios grandes?",
     ],
@@ -276,7 +276,7 @@ const TALK = {
       "¿Qué plantas tienes en casa?",
       "¿Tienes jardín o balcón?",
       "¿Invitas a gente a tu casa?",
-      "¿Te gustaría vivir en un barco?",
+      "¿Quieres vivir en un barco?",
       "¿De qué cosa estás orgulloso?",
     ],
     A2: [
@@ -321,7 +321,7 @@ const TALK = {
       "¿Saludas a tus vecinos?",
       "¿Das las gracias muchas veces al día?",
       "¿Con quién paseas los domingos?",
-      "¿Tienes amigos que conociste por casualidad?",
+      "¿Tienes amigos en otra ciudad?",
       "¿Qué haces con tus amigos los fines de semana?",
     ],
     A2: [

@@ -19,7 +19,7 @@ const flatten = (value) => {
 
 const A0 = {
   arrival: {
-    premise: t("Es sábado. Es de noche. Hoy es el cumpleaños de Vale. Hay una fiesta. Camina y entra donde quieras.", "It is Saturday. It is night. Today is Vale’s birthday. There is a party. Walk and go in wherever you want."),
+    premise: t("Es sábado. Es de noche. Hoy es el cumpleaños de Vale. Hay una fiesta. Camina. Elige un lugar y entra.", "It is Saturday. It is night. Today is Vale’s birthday. There is a party. Walk around. Choose a place and go in."),
     warmup: [
       t("¿Cómo te llamas?", "What is your name?"),
       t("¿Te gustan las fiestas? ¿Sí o no?", "Do you like parties? Yes or no?"),
@@ -32,7 +32,7 @@ const A0 = {
     lluvia: {
       text: t("Llueve. La plaza y la terraza están vacías. No hay taxis.", "It is raining. The square and the rooftop are empty. There are no taxis."),
       prompts: [
-        t("¿Qué lugar está bien con lluvia: el café, el bar o la plaza?", "Which place is good in the rain: the café, the bar or the square?"),
+        t("Llueve. ¿El café, el bar o la plaza?", "It is raining. The café, the bar or the square?"),
         t("¿Adónde vas ahora? Di un lugar.", "Where are you going now? Say one place."),
         t("¿Tienes paraguas? ¿Sí o no?", "Do you have an umbrella? Yes or no?"),
       ],
@@ -51,7 +51,7 @@ const A0 = {
       text: t("Nico no tiene su celular. ¿Dónde está?", "Nico doesn’t have his phone. Where is it?"),
       prompts: [
         t("¿Dónde estás esta noche? Di un lugar.", "Where are you tonight? Say one place."),
-        t("¿El celular está en el bar, en el taxi o en la plaza?", "Is the phone at the bar, in the taxi or in the square?"),
+        t("¿Está en el bar, el taxi o la plaza?", "Is it at the bar, in the taxi or in the square?"),
         t("¿Buscas el celular? ¿Sí o no?", "Do you look for the phone? Yes or no?"),
       ],
       teacher: "El celular está en el lugar que diga el alumno. Celebra la respuesta: «¡Sí! Está en el bar».",
@@ -60,15 +60,15 @@ const A0 = {
 
   final: {
     prompts: [
-      t("¿Adónde fuiste? Di un lugar.", "Where did you go? Say one place."),
-      t("¿Qué lugar te gusta?", "Which place do you like?"),
+      t("¿Qué lugar es tu favorito? Di uno.", "Which place is your favourite? Say one."),
+      t("¿Qué lugar no te gusta?", "Which place don’t you like?"),
       t("¿Qué hay en ese lugar?", "What is there in that place?"),
       t("¿Quién es una persona de esta noche? Di su nombre.", "Who is a person from tonight? Say their name."),
       t("¿Te gusta la noche? ¿Sí o no?", "Do you like the night? Yes or no?"),
     ],
     hypothetical: t("Mañana, ¿adónde vas?", "Tomorrow, where are you going?"),
     help: {
-      starters: [t("Fui a…", "I went to…"), t("Me gusta…", "I like…"), t("Hay…", "There is…"), t("Es…", "It is…")],
+      starters: [t("Voy a…", "I go to…"), t("Me gusta…", "I like…"), t("Hay…", "There is…"), t("Es…", "It is…")],
       chunks: [t("el café", "the café"), t("la plaza", "the square"), t("el bar", "the bar"), t("la fiesta", "the party"), t("mañana", "tomorrow")],
     },
     criteria: [

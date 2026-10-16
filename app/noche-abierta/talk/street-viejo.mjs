@@ -29,7 +29,7 @@ const TALK = {
   },
   "viejo-borracho": {
     topics: ["errores", "costumbres"],
-    A1: ["¿Aceptas fácilmente que no tienes razón?", "¿Te pierdes en ciudades nuevas?", "¿Te gustan las bodas?", "¿Bailas en las fiestas?", "¿Hablas bien delante de mucha gente?"],
+    A1: ["¿Discutes mucho con tu familia?", "¿Te pierdes en ciudades nuevas?", "¿Te gustan las bodas?", "¿Bailas en las fiestas?", "¿Hablas bien delante de mucha gente?"],
     A2: ["¿Alguna vez estuviste seguro de algo y después descubriste que te equivocabas?", "¿Qué haces cuando te pierdes: preguntas o buscas en el teléfono?", "¿Cómo fue la última boda o fiesta grande a la que fuiste?", "¿Qué es lo más raro que hiciste en una fiesta?", "¿Te pone nervioso hablar en público?"],
     B1: ["Cuando alguien insiste en algo y está equivocado, ¿se lo dices o lo dejas pasar?", "¿Cuál es la anécdota de fiesta que tus amigos siempre cuentan de ti?", "¿Cómo son las bodas en tu país o en tu familia? ¿Qué no puede faltar?", "¿Alguna vez te perdiste volviendo a casa de noche? ¿Cómo encontraste el camino?", "¿Prefieres preparar lo que vas a decir o improvisar?"],
     B2: ["¿Por qué crees que a algunas personas les cuesta tanto reconocer que se equivocaron?", "¿Qué estrategias usas para corregir a alguien sin que se sienta ridículo?", "¿Qué tradiciones de boda te parecen bonitas y cuáles te parecen absurdas o pasadas de moda?", "¿Qué opinas de la gente que se vuelve más sincera o cariñosa después de unas copas?", "¿Alguna vez dijiste algo en público que salió mucho mejor, o mucho peor, de lo que esperabas?"],
@@ -74,7 +74,7 @@ const TALK = {
   },
   "viejo-telefono": {
     topics: ["absurdo", "humor"],
-    A1: ["¿Contestas números desconocidos?", "¿Te gustan los misterios?", "¿Haces bromas a tus amigos?", "¿Llamas o escribes mensajes?", "¿Ganaste un premio alguna vez?"],
+    A1: ["¿Contestas números desconocidos?", "¿Te gustan los misterios?", "¿Haces bromas a tus amigos?", "¿Llamas o escribes mensajes?", "¿Juegas a la lotería?"],
     A2: ["¿Qué llamada extraña recibiste alguna vez?", "¿Cuál fue la mejor broma que te hicieron?", "¿Alguna vez llamaste a un número equivocado? ¿Qué dijiste?", "¿Qué haces cuando te aburres de noche?", "¿Qué premio te gustaría ganar?"],
     B1: ["¿Cuál fue la situación más absurda que viviste por una confusión?", "¿Te dejas llevar por la curiosidad aunque sepas que no es buena idea?", "¿Te gusta improvisar o prefieres saber siempre qué va a pasar?", "¿Qué te da más vergüenza: hablar en la radio o en un video que verá mucha gente?", "¿Con quién irías a una cena para dos si la ganaras mañana?"],
     B2: ["¿Qué fue lo más raro que te pasó en una noche que parecía completamente normal?", "¿Alguna vez seguiste un juego o una broma sin entender nada, solo para ver cómo terminaba?", "¿Prefieres a las personas que se ríen de sí mismas o a las que se toman todo en serio?", "¿Qué broma te pareció graciosa en su momento y ahora te parece de mal gusto?", "¿Contestarías a una pregunta personal en directo, sabiendo que te escucha todo tu barrio?"],

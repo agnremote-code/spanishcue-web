@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { createGame, restoreGame, reduceGame, currentQuest, conversationView, conversationLength, hasTalked, deepPool, CAMPAIGN, LEGACY_SAVE_KEY, PLACE_IDS } from '../app/el-reino-de-la-rosa-dormida/engine.mjs';
 import { LEVELS, NPCS, QUESTS } from '../app/el-reino-de-la-rosa-dormida/content.mjs';
-import { CONVERSATIONS, PLACES, QUESTION_STEPS } from '../app/el-reino-de-la-rosa-dormida/conversations.mjs';
+import { BANDS, CONVERSATIONS, PLACES, QUESTION_STEPS } from '../app/el-reino-de-la-rosa-dormida/conversations.mjs';
 import { START_POINTS, CHAPTERS, stateForStartPoint, applyCampaignStep } from '../app/el-reino-de-la-rosa-dormida/checkpoints.mjs';
 import { PROFILES_KEY, emptyStore, readStore, writeStore, createProfile, saveProfileState, resetProfile, deleteProfile, setActive, activeProfile, exportStore, importProfiles, profileSummary } from '../app/el-reino-de-la-rosa-dormida/profiles.mjs';
 
@@ -292,4 +292,32 @@ test('export and import add students without overwriting anyone', () => {
   assert.deepEqual(again.store.profiles[1].save, merged.store.profiles[1].save);
   assert.equal(importProfiles(store, '{"kind":"otra cosa"}').added, 0);
   assert.equal(importProfiles(store, 'no es json').added, 0);
+});
+
+test('A1 has its own simple band; A2 keeps base; A0 and A1 show 4–6 bilingual keywords everywhere', () => {
+  assert.deepEqual(BANDS, { A0: 'a0', A1: 'a1', A2: 'base', B1: 'full', B2: 'full', C1: 'full', C2: 'full' });
+  const bilingual = list => list.every(word => typeof word.es === 'string' && word.es && typeof word.en === 'string' && word.en);
+  for (const npc of NPCS) {
+    const conv = CONVERSATIONS[npc.id];
+    assert.deepEqual(Object.keys(conv.story.a1).sort(), Object.keys(conv.story.base).sort(), `${npc.id} a1 covers every beat`);
+    for (const band of ['a0', 'a1']) {
+      const list = conv.keywords[band];
+      assert.ok(list.length >= 4 && list.length <= 6 && bilingual(list), `${npc.id} ${band} keywords`);
+    }
+    for (const level of ['A0', 'A1']) {
+      const state = reduceGame(createGame(level), { type: 'open', npc: 'nox' });
+      if (npc.id === 'nox') assert.deepEqual(conversationView(state, 'nox').keywords, conv.keywords[level.toLowerCase()]);
+    }
+    for (const step of QUESTION_STEPS) {
+      const question = conv.levels.A1[step];
+      const text = Array.isArray(question) ? question[0] : question;
+      assert.ok(text.split(/\s+/).length <= 10, `${npc.id} A1 ${step} is short: ${text}`);
+    }
+  }
+  for (const id of PLACE_IDS) {
+    assert.ok(typeof PLACES[id].story.a1 === 'string' && PLACES[id].story.a1, `${id} a1 story`);
+    for (const band of ['a0', 'a1']) assert.ok(PLACES[id].keywords[band].length >= 4 && bilingual(PLACES[id].keywords[band]), `${id} ${band} keywords`);
+  }
+  assert.deepEqual(conversationView(reduceGame(createGame('A2'), { type: 'open', npc: 'nox' }), 'nox').keywords, []);
+  assert.equal(conversationView(createGame('A0'), 'ines').en, 'Hi. First, talk to Nox, the raven on the road.');
 });

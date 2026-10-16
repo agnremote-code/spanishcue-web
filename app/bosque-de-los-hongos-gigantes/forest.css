@@ -31,3 +31,4 @@
 @media(max-width:800px),(pointer:coarse){.bh-micro{width:auto;left:12px;right:136px;top:214px;bottom:auto;padding:11px 13px}.bh-micro-prompt{font-size:15px}.bh-micro-said kbd{display:none}}
 @media(max-height:600px) and (pointer:coarse){.bh-micro{bottom:auto;top:70px;width:min(380px,calc(100vw - 220px))}}
 @keyframes bh-micro-in{from{opacity:0}to{opacity:1}}.bh-micro{animation-name:bh-micro-in}
+.bh-en{display:block;font-family:Arial,Helvetica,sans-serif;font-style:normal;font-size:.62em;line-height:1.4;letter-spacing:0;color:#5f6d5b;margin-top:4px}.bh-intro .bh-en,.bh-level-demand .bh-en{color:#b9c6bb;font-size:.92em}.bh-speech-hint .bh-en,.bh-support .bh-en,.bh-choices .bh-en,.bh-answer-cue .bh-en{font-size:.9em}.bh-support .bh-en{font-style:normal}
