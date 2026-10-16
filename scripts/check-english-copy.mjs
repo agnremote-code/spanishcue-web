@@ -91,6 +91,7 @@ export const APPROVAL_MANIFESTS = [
   'docs/audits/seo-grammar-cluster-english-additions-20261012.json',
   'docs/audits/two-audiences-english-additions-20261015.json',
   'docs/audits/google-teachers-english-additions-20261015.json',
+  'docs/audits/library-level-pairs-english-additions-20261016.json',
 ];
 export function loadApprovedAdditions(root) {
   return APPROVAL_MANIFESTS.flatMap(path => {

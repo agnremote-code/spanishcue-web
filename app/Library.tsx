@@ -921,6 +921,28 @@ export default function Library({
     total: number;
     lessons: Lesson[];
   }>;
+  // The «Todos» page shows three paired sections (A1 y A2, B1 y B2, C1 y C2) so it looks lighter;
+  // the level filters above still open one level at a time.
+  const pairedLessonGroups = [["A0", "A1", "A2"], ["B1", "B2"], ["C1", "C2"]].flatMap((pair) => {
+    const parts = groupedLessons.filter((group) => pair.includes(group.level));
+    if (!parts.length) return [];
+    const ids = new Set<number>();
+    const entries: Array<{ lesson: Lesson; level: string }> = [];
+    const candidates = parts.flatMap((group) => group.lessons.map((lesson) => ({ lesson, level: group.level })));
+    // Same rule as the per-level shelves: one card per category first (a free one when there is one), then fill.
+    for (const category of ["Gramática", "Conversación", "Escucha", "Fonética", "Vocabulario"]) {
+      const inCategory = candidates.filter((entry) => entry.lesson.category === category && !ids.has(entry.lesson.id));
+      const pick = inCategory.find((entry) => entry.lesson.free) || inCategory[0];
+      if (pick && entries.length < 4) { ids.add(pick.lesson.id); entries.push(pick); }
+    }
+    for (const entry of candidates) {
+      if (entries.length < 4 && !ids.has(entry.lesson.id)) { ids.add(entry.lesson.id); entries.push(entry); }
+    }
+    const levels = parts.map((group) => group.level);
+    const total = new Set(levels.flatMap((item) => (filterLessons(visibleLessons, { level: item }) as Lesson[]).map((lesson) => lesson.id))).size;
+    const title = locale === "es" ? `${levels.slice(0, -1).join(", ")}${levels.length > 1 ? " y " : ""}${levels.at(-1)}` : levels.join("–");
+    return [{ key: levels.join("-"), title, parts, total, entries }];
+  });
   const routeCountLabel = (targetCategory: Category) => {
     const destinationSource = familyLessonsForCategory(lessons, {
       category: targetCategory,
@@ -1153,7 +1175,7 @@ export default function Library({
     setSearchOpen(false);
     scrollToResults();
   };
-  const lessonGrid = (items: Lesson[], planned = false, includeCountryCard = false, selectedLevel = level) =>
+  const lessonGrid = (items: Lesson[], planned = false, includeCountryCard = false, levelFor: string | ((lesson: Lesson) => string) = level) =>
     items.length || includeCountryCard ? (
       <div className="lesson-grid">
         {includeCountryCard && (
@@ -1178,6 +1200,7 @@ export default function Library({
           </button>
         )}
         {items.map((l, i) => {
+          const selectedLevel = typeof levelFor === "function" ? levelFor(l) : levelFor;
           const href = lessonHref(l, selectedLevel);
           return <article
             className={`lesson-card accent-${l.level.toLowerCase()} ${l.special ? "special-card" : ""} ${canOpen(l) ? "" : "lesson-locked"}`}
@@ -1885,21 +1908,21 @@ export default function Library({
         )}
         {view === "Biblioteca" && category !== "Conversación" && level === "Todos" && !catalogSearchActive ? (
           <section className="level-catalog-sections" aria-label={locale === "es" ? "Clases por nivel" : "Lessons by level"}>
-            {groupedLessons.map((group) => (
-              <section className="level-catalog-section" key={group.level} aria-labelledby={`level-${group.level}-title`}>
+            {pairedLessonGroups.map((group) => (
+              <section className="level-catalog-section" key={group.key} aria-labelledby={`level-${group.key}-title`}>
                 <header>
                   <div>
                     <span>{locale === "es" ? "NIVEL" : "LEVEL"}</span>
-                    <h3 id={`level-${group.level}-title`}>{group.level} · {levelName(group.level)}</h3>
+                    <h3 id={`level-${group.key}-title`}>{group.title}</h3>
                   </div>
                   <small>{group.total} {group.total === 1 ? t("common.class") : t("common.classes")}</small>
                 </header>
-                {lessonGrid(group.lessons, false, false, group.level)}
-                {group.total > group.lessons.length && (
-                  <button className="view-level-lessons" type="button" onClick={() => chooseLevel(group.level, true)}>
+                {lessonGrid(group.entries.map((entry) => entry.lesson), false, false, (lesson) => group.entries.find((entry) => entry.lesson === lesson)?.level ?? level)}
+                {group.total > group.entries.length && group.parts.map((group) => (
+                  <button key={group.level} className="view-level-lessons" type="button" onClick={() => chooseLevel(group.level, true)}>
                     {locale === "es" ? `Ver todas las clases ${group.level}` : `View all ${group.level} lessons`} <span aria-hidden="true">→</span>
                   </button>
-                )}
+                ))}
               </section>
             ))}
           </section>
