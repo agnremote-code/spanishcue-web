@@ -4,15 +4,15 @@ import {useEffect,useRef,useState,type ComponentType} from 'react';
 import {useI18n} from '../i18n/LocaleProvider';
 import LanguageSwitcher from '../i18n/LanguageSwitcher';
 import {choose,emptyProgress,type Progress} from '../noche-abierta/activities.mjs';
-import type {Location,Activity} from '../noche-abierta/engine.mjs';
-import type {DemoPayload} from './demo-content.mjs';
+import type {Activity} from '../noche-abierta/engine.mjs';
+import type {DemoPayload,DemoLocation} from './demo-content.mjs';
 import type {DemoSceneProps} from './DemoScene';
 import {DEMO_LEVELS,PRO_DISTRICTS} from './policy.mjs';
 import {trackMarketingEvent} from '../marketing/analytics';
 import {CONSENT_EVENT,consentFor} from '../privacy/consent';
 import PremiumPanel from './PremiumPanel';
 
-type Encounter={location:Location;activity:Activity;progress:Progress};
+type Encounter={location:DemoLocation;activity:Activity;progress:Progress};
 export default function CityDemo({initial,signedIn,home='/lp/online-spanish-teaching-resources'}:{initial:DemoPayload;signedIn:boolean;home?:string}){
  const {locale}=useI18n();const es=locale==='es';
  const [payload,setPayload]=useState(initial);
