@@ -938,7 +938,8 @@ export default function Library({
     }
     const levels = parts.map((group) => group.level);
     const total = new Set(levels.flatMap((item) => (filterLessons(visibleLessons, { level: item }) as Lesson[]).map((lesson) => lesson.id))).size;
-    return [{ key: levels.join("-"), title: `${levels.slice(0, -1).join(", ")}${levels.length > 1 ? (locale === "es" ? " y " : " & ") : ""}${levels.at(-1)}`, levels, total, entries }];
+    const title = locale === "es" ? `${levels.slice(0, -1).join(", ")}${levels.length > 1 ? " y " : ""}${levels.at(-1)}` : levels.join("–");
+    return [{ key: levels.join("-"), title, parts, total, entries }];
   });
   const routeCountLabel = (targetCategory: Category) => {
     const destinationSource = familyLessonsForCategory(lessons, {
@@ -1914,9 +1915,9 @@ export default function Library({
                   <small>{group.total} {group.total === 1 ? t("common.class") : t("common.classes")}</small>
                 </header>
                 {lessonGrid(group.entries.map((entry) => entry.lesson), false, false, (lesson) => group.entries.find((entry) => entry.lesson === lesson)?.level ?? level)}
-                {group.total > group.entries.length && group.levels.map((item) => (
-                  <button key={item} className="view-level-lessons" type="button" onClick={() => chooseLevel(item, true)}>
-                    {locale === "es" ? `Ver todas las clases ${item}` : `View all ${item} lessons`} <span aria-hidden="true">→</span>
+                {group.total > group.entries.length && group.parts.map((group) => (
+                  <button key={group.level} className="view-level-lessons" type="button" onClick={() => chooseLevel(group.level, true)}>
+                    {locale === "es" ? `Ver todas las clases ${group.level}` : `View all ${group.level} lessons`} <span aria-hidden="true">→</span>
                   </button>
                 ))}
               </section>

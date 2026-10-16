@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "authorization": "Owner Ale approved all English copy on 2026-10-14T16:55Z («apruebo todo, no preguntes más, apruebo todo», project message cmsg_01Gr5R4j3t2Yet65UcmhcVhADwvzg9kA9GinuWu3D7FSfe) and on 2026-10-16T03:30Z asked for the library to show paired level sections. The English section title only joins the two level codes with an en dash (e.g. «C1–C2»). Only the exact literal listed here is approved.",
+  "additions": [
+    {
+      "path": "app/Library.tsx",
+      "text": "–"
+    }
+  ]
+}
