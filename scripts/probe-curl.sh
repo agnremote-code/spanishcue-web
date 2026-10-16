@@ -1,5 +1,5 @@
 #!/bin/bash
-# Temporary diagnostic: parallel asset fetches, capture 503 bodies and headers.
+# Temporary diagnostic: parallel asset fetches (after PR #216), capture 503 bodies and headers.
 for o in https://spanishcue.com https://spanishcue-staging.agnremote.workers.dev; do
  echo "=== $o"
  curl -s -o /tmp/p.html "$o/lp/google-teachers?r=$RANDOM"
