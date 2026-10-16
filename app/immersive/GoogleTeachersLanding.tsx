@@ -53,12 +53,12 @@ export default function GoogleTeachersLanding({pro,signedIn,cafe,spots,level,sho
   if(item.action==='tour')watchTour();
   else if(item.action==='pro'&&!pro)setGate(item.title);
  }
- /** The official checkout, scoped so only the trial shows: one button, one action. */
- const trial=(placement:string,returnTo='/noche-abierta')=>pro?null:<div className="gt-buy gt-buy-one" onClickCapture={buyClick(placement)}><CheckoutButton signedIn={signedIn} returnTo={returnTo} variant="landing" paddleOnly /></div>;
+ /** Direct monthly checkout for the nav and sticky CTA; historical trials are not promoted. */
+ const buyMonthly=(placement:string,returnTo='/noche-abierta')=>pro?null:<div className="gt-buy gt-buy-one" onClickCapture={buyClick(placement)}><CheckoutButton signedIn={signedIn} returnTo={returnTo} variant="landing" paddleOnly /></div>;
  const both=(placement:string,extra='')=>pro?<Link className="im-primary" href="/noche-abierta">{c.plans.openFull}</Link>:<div className={`gt-buy ${extra}`} onClickCapture={buyClick(placement)}><CheckoutButton signedIn={signedIn} returnTo="/noche-abierta" variant="landing" paddleOnly /></div>;
 
  return <main className="im-landing gt">
-  <header className="im-nav"><Link className="im-wordmark" href="/">SPANISHCUE<span> CHOOSE. OPEN. TEACH.</span></Link><nav className="gt-nav-links"><a href="#tour">{c.nav.watch}</a><a href="#showcase">{c.nav.demos}</a><a href="#pro">{c.nav.pricing}</a></nav><div className="gt-nav-buy">{pro?<Link className="gt-nav-cta" href="/noche-abierta">{c.nav.openCity}</Link>:trial('nav')}</div><LanguageSwitcher /><Link className="gt-nav-account" href={signedIn?'/cuenta':'/ingresar'}>{signedIn?c.nav.account:c.nav.signIn} ↗</Link></header>
+  <header className="im-nav"><Link className="im-wordmark" href="/">SPANISHCUE<span> CHOOSE. OPEN. TEACH.</span></Link><nav className="gt-nav-links"><a href="#tour">{c.nav.watch}</a><a href="#showcase">{c.nav.demos}</a><a href="#pro">{c.nav.pricing}</a></nav><div className="gt-nav-buy">{pro?<Link className="gt-nav-cta" href="/noche-abierta">{c.nav.openCity}</Link>:buyMonthly('nav')}</div><LanguageSwitcher /><Link className="gt-nav-account" href={signedIn?'/cuenta':'/ingresar'}>{signedIn?c.nav.account:c.nav.signIn} ↗</Link></header>
 
   <section className="gt-hero2">
    <div className="gt-hero2-copy">
@@ -120,7 +120,7 @@ export default function GoogleTeachersLanding({pro,signedIn,cafe,spots,level,sho
   </section>
 
   <footer className="im-footer"><span>{c.footer.tag}</span><nav><Link href="/privacy">{c.footer.privacy}</Link><Link href="/terms">{c.footer.terms}</Link><Link href="/contact">{c.footer.contact}</Link></nav></footer>
-  <div className={`gt-sticky${sticky?' show':''}`} aria-hidden={!sticky} inert={!sticky}>{trial('sticky')}<button type="button" onClick={()=>{cta('sticky')();watchTour();}}>{c.sticky}</button></div>
+  <div className={`gt-sticky${sticky?' show':''}`} aria-hidden={!sticky} inert={!sticky}>{buyMonthly('sticky')}<button type="button" onClick={()=>{cta('sticky')();watchTour();}}>{c.sticky}</button></div>
   {gate&&!pro&&<PremiumPanel area={gate} signedIn={signedIn} onClose={()=>setGate(null)}/>}
   {preview&&!pro&&<ProPreview fragment={preview} signedIn={signedIn} onClose={()=>setPreview(null)} onBuyClick={buyClick('pro_preview')} />}
  </main>;
