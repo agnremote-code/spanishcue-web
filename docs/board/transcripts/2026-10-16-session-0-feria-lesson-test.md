@@ -1170,4 +1170,3 @@ Martin, your message crossed with v5. Per your own rule ("the team lead's record
 ````text
 Sofia, your message and Martin's latest both crossed with v5. Martin has now said "the team lead's recorded version wins", and you said you'd accept whichever I record. The recorded version is DECISION.md v5, and it stays unchanged under D7. Circle 6 = a2.gram.estar-gerundio, location solves (D5), and there's +1 ticked imperfecto sentence in the closing. The coupled items are consistent, as you asked. Martin ACKed D6. No reply is needed, and the record is closed.
 ````
-

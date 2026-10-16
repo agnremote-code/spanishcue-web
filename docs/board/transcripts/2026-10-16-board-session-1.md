@@ -1120,4 +1120,3 @@ SEO-001 is verified in production (main-session check):
 
 Please run your own curl to confirm independently, then end with your final output, including the short ProfeDeELE.com research plan I asked for. Keep it brief. I'm recording SEO-001 in PUBLISHED.md.
 ````
-
