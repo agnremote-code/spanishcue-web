@@ -1,6 +1,7 @@
 "use client";
 
-import type { CSSProperties } from "react";
+import { useEffect, useRef, type CSSProperties } from "react";
+import { conversationPreviewVideo } from "./conversation-preview-videos";
 import { useI18n } from "./i18n/LocaleProvider";
 import "./lesson-preview.css";
 
@@ -43,6 +44,33 @@ export default function LessonPreview({
   news?: boolean;
 }) {
   const { t } = useI18n();
+  const video = news ? null : conversationPreviewVideo(lesson.id);
+  const figure = useRef<HTMLElement>(null);
+  const player = useRef<HTMLVideoElement>(null);
+
+  // Play the real recording only while the card is hovered by a mouse.
+  useEffect(() => {
+    const card = figure.current?.closest(".lesson-card") ?? figure.current;
+    const clip = player.current;
+    if (!video || !card || !clip) return;
+    if (!window.matchMedia("(hover: hover) and (prefers-reduced-motion: no-preference)").matches) return;
+    const start = () => {
+      clip.preload = "auto";
+      void clip.play().then(() => card.classList.add("preview-playing")).catch(() => {});
+    };
+    const stop = () => {
+      clip.pause();
+      clip.currentTime = 0;
+      card.classList.remove("preview-playing");
+    };
+    card.addEventListener("mouseenter", start);
+    card.addEventListener("mouseleave", stop);
+    return () => {
+      card.removeEventListener("mouseenter", start);
+      card.removeEventListener("mouseleave", stop);
+    };
+  }, [video]);
+
   const style = {
     "--preview-position": imagePositions[lesson.id] || "center",
   } as CSSProperties;
@@ -53,6 +81,7 @@ export default function LessonPreview({
       role="img"
       aria-label={t("common.previewOf", { title: lesson.title })}
       style={style}
+      ref={figure}
     >
       <img
         src={lesson.image}
@@ -62,6 +91,9 @@ export default function LessonPreview({
         width="1672"
         height="941"
       />
+      {video && (
+        <video ref={player} src={video} muted loop playsInline preload="none" aria-hidden="true" tabIndex={-1} />
+      )}
     </figure>
   );
 }
