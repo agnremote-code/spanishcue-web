@@ -55,5 +55,5 @@ test('overview shelves never repeat conversation families and every shelf opens 
  assert.equal(ids.length,new Set(ids).size);
  for(const g of groups)for(const l of g.lessons.filter(l=>l.familyId))assert.ok(p.conversationLessonHref(l,g.level).endsWith('?level='+g.level));
  const {readFile}=await import('node:fs/promises');const source=await readFile('app/Library.tsx','utf8');
- assert.match(source,/lessonGrid\(group.lessons, false, false, group.level\)/);
+ assert.match(source,/lessonGrid\(group.entries.map\(\(entry\) => entry.lesson\), false, false, \(lesson\) => group.entries.find\(\(entry\) => entry.lesson === lesson\)\?.level/);
 });
