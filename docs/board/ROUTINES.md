@@ -46,6 +46,7 @@ Every scheduled cloud run starts with zero context and follows this file. The ro
 
 ## Delivery and deploy (owner authorization, 2026-10-16)
 - Work on one fresh `claude/<topic>-YYYYMMDD` branch and push checkpoints. Open the PR as a **draft** first.
+- Commit and push your branch after every coherent step (owner rule 2026-10-17: "always save the work in case internet goes down"). Pushing a `claude/*` branch never deploys. If a push fails, keep committing locally and push when back online.
 - **Merging is a production deploy**: CI + Auto Merge → deploy-staging → deploy-production. The owner authorized routines to mark their own PR ready **only after** the required local checks pass (`npm test` and the checks the change needs) **and** the independent review is resolved.
 - After the merge: verify the merged SHA, watch the staging and production runs, and smoke the changed URLs in production. Report "deployed" only with production evidence.
 - Never touch `vars.OWNER_CLOUDFLARE_PRODUCTION_ENABLED`, environment protection, `automation/*` refs, secrets, DNS, billing or ads configuration, or run D1 writes. If a release lock is busy, wait or stop. Never steal it.
