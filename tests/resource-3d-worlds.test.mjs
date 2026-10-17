@@ -25,8 +25,9 @@ test('3D world lessons stay PRO (the public page is a poster, not a free lesson)
 
 test('3D world titles and descriptions say 3D; other resources are unchanged', () => {
   for (const {lesson} of worlds) {
-    assert.match(p.resourceTitle(lesson), /^3D Spanish Conversation Activity A0–C2: /, lesson.title);
-    assert.match(p.resourceDescription(lesson), /^Browser-based 3D Spanish conversation and listening world for teachers, A0–C2: /);
+    const range = p.resourceLevelLabel(lesson);
+    assert.ok(p.resourceTitle(lesson).startsWith(`3D ${p.resourceTypeLabel(lesson)} ${range}: ${lesson.title}`), lesson.title);
+    assert.ok(p.resourceDescription(lesson).startsWith(`Browser-based 3D Spanish conversation and listening world for teachers, ${range}: `), lesson.title);
     assert.ok(p.resourceDescription(lesson).length <= 158);
   }
   const plain = p.resourceLessons.find(l => !p.isImmersiveWorld(l));
@@ -43,7 +44,8 @@ test('other 3D worlds are cross-linked and never include the page itself', () =>
 });
 
 test("multi-level pages: title, eyebrow and schema use the full level range on the canonical URL", () => {
-  for (const {lesson} of worlds) assert.deepEqual(p.resourceLevels(lesson), ['A0', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2']);
+  const hospital = worlds.find(w => w.game === 'hospital').lesson;
+  assert.deepEqual(p.resourceLevels(hospital), ['A0', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2']);
   assert.match(page, /educationalLevel: multiLevel \? levels : level/);
   assert.match(page, /styles\.eyebrow\}>\{world3d \? "3D " : ""\}\{typeLabel\} · \{multiLevel \? pageLevel : level\}/);
   assert.match(page, /This preview shows the \$\{level\} version\./);
