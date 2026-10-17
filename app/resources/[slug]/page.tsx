@@ -73,7 +73,7 @@ export default async function ResourcePage({ params, searchParams }: ResourcePag
   const selectedPreview = family?.previewByLevel[selectedLevel as keyof typeof family.previewByLevel];
   const lessonPath = family ? conversationLessonHref({...lesson,familyId:family.id},selectedLevel)! : localLessonPath(lesson) || "/";
   // `level` is the level whose preview this page shows; `pageLevel` is every
-  // level the lesson covers (e.g. "A0–C2"). Title, eyebrow and schema use the
+  // level the lesson covers (e.g. "A1–C2"). Title, eyebrow and schema use the
   // full range so they agree with the URL and the <title>.
   const level = family ? selectedLevel : resourceLevelLabel(lesson);
   const pageLevel = resourceLevelLabel(lesson);

@@ -138,7 +138,7 @@ export function otherImmersiveWorldLessons(lesson: Lesson): Lesson[] {
   return catalogLessons.filter((item) => item.id !== lesson.id && isImmersiveWorld(item));
 }
 
-/** Every level a lesson covers, e.g. ["A0", …, "C2"]; a single-level lesson gives its level label. */
+/** Every level a lesson covers (its catalog `levels`); a single-level lesson gives its level label. */
 export function resourceLevels(lesson: Lesson): string[] {
   return lesson.levels && lesson.levels.length > 1 ? [...lesson.levels] : [resourceLevelLabel(lesson)];
 }
