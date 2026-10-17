@@ -115,12 +115,46 @@ export function resourceLevelLabel(lesson: Lesson): string {
   return levelLabel(lesson);
 }
 
+/**
+ * Catalog lessons that are immersive 3D worlds with both modes (Conversación
+ * and Comprensión auditiva) in the same world, keyed by lesson id, with the
+ * game key registered in app/escucha-3d/games.mjs. The test
+ * tests/resource-3d-worlds.test.mjs keeps this list in sync with that registry.
+ */
+export const immersiveWorldGameByLessonId: ReadonlyMap<number, string> = new Map([
+  [223, "noche"],
+  [226, "bosque"],
+  [237, "casino"],
+  [238, "reino"],
+  [240, "hospital"],
+]);
+
+export function isImmersiveWorld(lesson: Lesson): boolean {
+  return immersiveWorldGameByLessonId.has(lesson.id);
+}
+
+/** The other 3D worlds' resource lessons, in catalog order. */
+export function otherImmersiveWorldLessons(lesson: Lesson): Lesson[] {
+  return catalogLessons.filter((item) => item.id !== lesson.id && isImmersiveWorld(item));
+}
+
+/** Every level a lesson covers, e.g. ["A0", …, "C2"]; a single-level lesson gives its level label. */
+export function resourceLevels(lesson: Lesson): string[] {
+  return lesson.levels && lesson.levels.length > 1 ? [...lesson.levels] : [resourceLevelLabel(lesson)];
+}
+
 export function resourceTitle(lesson: Lesson): string {
-  return `${resourceTypeLabel(lesson)} ${resourceLevelLabel(lesson)}: ${lesson.title} | SPANISHCUE`;
+  const prefix = isImmersiveWorld(lesson) ? "3D " : "";
+  return `${prefix}${resourceTypeLabel(lesson)} ${resourceLevelLabel(lesson)}: ${lesson.title} | SPANISHCUE`;
 }
 
 export function resourceDescription(lesson: Lesson): string {
   const type = categorySeo[lesson.category].shortLabel;
+  if (isImmersiveWorld(lesson)) {
+    return truncate(
+      `Browser-based 3D Spanish conversation and listening world for teachers, ${resourceLevelLabel(lesson)}: ${lesson.title}. ${lesson.subtitle}`,
+    );
+  }
   return truncate(
     `Ready-to-teach ${resourceLevelLabel(lesson)} Spanish ${type} for teachers: ${lesson.title}. ${lesson.subtitle}`,
   );
