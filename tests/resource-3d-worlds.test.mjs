@@ -26,6 +26,14 @@ test('listening levels come from the registry, so the page never claims listenin
   assert.match(page, /listeningEverywhere \? "" : ` \(listening at \$\{listeningLevels\.join\(" · "\)\}\)`/);
 });
 
+test('the premise, objectives and warm-up the 3D section promises exist for every world', () => {
+  for (const {lesson} of worlds) {
+    assert.ok(lesson.subtitle && lesson.explanation, `${lesson.title} premise`);
+    assert.ok(lesson.goals.length >= 1, `${lesson.title} objectives`);
+    assert.ok(lesson.warmup, `${lesson.title} warm-up`);
+  }
+});
+
 test('3D world lessons stay PRO (the public page is a poster, not a free lesson)', () => {
   for (const {lesson} of worlds) assert.equal(p.isFreeLesson(lesson.id), false, lesson.title);
 });

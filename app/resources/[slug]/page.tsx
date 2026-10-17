@@ -144,7 +144,7 @@ export default async function ResourcePage({ params, searchParams }: ResourcePag
             <p className={styles.eyebrow}>{world3d ? "3D " : ""}{typeLabel} · {multiLevel ? pageLevel : level}</p>
             <h1 className={styles.title}>{lesson.title}</h1>
             <p className={styles.subtitle}>{selectedPreview?.hook || lesson.subtitle}</p>
-            {family && family.availableLevels.length > 1 && <nav className={styles.levelLinks} aria-label={`Preview level (showing ${selectedLevel})`}>{family.availableLevels.map(item=><Link href={`${resourcePathForLesson(lesson)}?level=${item}`} key={item} aria-current={item===selectedLevel?"page":undefined}>{item}</Link>)}</nav>}
+            {family && family.availableLevels.length > 1 && <nav className={styles.levelLinks} aria-label="Preview level">{family.availableLevels.map(item=><Link href={`${resourcePathForLesson(lesson)}?level=${item}`} key={item} aria-current={item===selectedLevel?"page":undefined}>{item}</Link>)}</nav>}
             <div className={styles.meta} aria-label="Lesson details">
               <span className={styles.pill}>{multiLevel ? pageLevel : level}</span>
               {world3d ? <span className={styles.pill}>3D world</span> : null}
@@ -197,7 +197,7 @@ export default async function ResourcePage({ params, searchParams }: ResourcePag
                 <h2>Inside the 3D world</h2>
                 <ul>
                   <li>A 3D world that runs in the browser: no download and no headset. Share your screen online or project it in the classroom.</li>
-                  <li>Two modes in the same world: <strong>Conversación</strong> for speaking and <strong>Comprensión auditiva</strong> for listening{listeningEverywhere ? "" : ` (listening at ${listeningLevels.join(" · ")})`}. Students switch mode without leaving the world.</li>
+                  <li>Two modes in the same world: <strong>Conversación</strong> for speaking and <strong>Comprensión auditiva</strong> for listening{listeningEverywhere ? "" : ` (listening at ${listeningLevels.join(" · ")})`}. You switch between the two modes without leaving the world.</li>
                   <li>Levels: {levels.join(" · ")}. Choose the level that fits your group.</li>
                   <li>A SpanishCue PRO lesson. This page shows the premise, the objectives and a warm-up question; the scenes, dialogues and listenings stay inside the lesson.</li>
                 </ul>
