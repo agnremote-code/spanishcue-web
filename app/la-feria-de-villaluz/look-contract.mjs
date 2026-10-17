@@ -120,7 +120,7 @@ export const ATTRIBUTES = {
       stand: { people3d: 'stand', es: [] },
       dance: { people3d: 'dance', es: ['bailando'], tier: 'A' },
       guitar: { people3d: 'guitar', es: ['tocando la guitarra', 'guitarra'], tier: 'A' },
-      phone: { people3d: 'phone', es: ['hablando por teléfono', 'teléfono', 'celular', 'móvil'], tier: 'B' },
+      phone: { people3d: 'phone', es: ['hablando por teléfono', 'teléfono', 'celular'], tier: 'B' },
       wave: { people3d: 'wave', es: ['saludando'], tier: 'A' },
       point: { people3d: 'point', es: ['señalando'], tier: 'A' },
       read: { people3d: 'read', es: ['leyendo'], tier: 'B' },

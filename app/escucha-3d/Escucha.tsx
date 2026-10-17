@@ -58,6 +58,12 @@ export function useListeningDone(game: GameId, level: string): [string[], (id: s
   return [done, mark, reset];
 }
 
+/** A transcript: who says each line (and its English under it on A0). Shared
+ * by the listenings and by other 3D tasks with audio (La feria de Villaluz). */
+export function Transcript({ lines, speakers, en = false }: { lines: { s: number; text: string; en?: string }[]; speakers: { name: string }[]; en?: boolean }) {
+  return <div className="e3-transcript">{lines.map((line, i) => <p key={i}><b>{speakers[line.s]?.name}</b>{line.text}{en && line.en && <small className="e3-en" lang="en">{line.en}</small>}</p>)}</div>;
+}
+
 /** The two-way switch shown next to the level picker. */
 export function ModeSwitch({ mode, onChange, className }: { mode: Mode; onChange: (mode: Mode) => void; className?: string }) {
   return <div className={`e3-mode${className ? ` ${className}` : ''}`} role="radiogroup" aria-label="Tipo de clase">
@@ -293,7 +299,7 @@ function Exercise({ game, level, item, done, onDone, onClose, onList, onOther, o
       {step === 4 && <div className="e3-step">
         <h3>Lee la transcripción.</h3>
         <p className="e3-tip">Primero en silencio. Después en voz alta, imitando el ritmo de cada voz.</p>
-        <div className="e3-transcript">{item.lines.map((line, i) => <p key={i}><b>{item.speakers[line.s].name}</b>{line.text}{en && line.en && <small className="e3-en" lang="en">{line.en}</small>}</p>)}</div>
+        <Transcript lines={item.lines} speakers={item.speakers} en={en} />
         <dl className="e3-gloss">{item.glossary.map(g => <div key={g.word}><dt>{g.word}</dt><dd>{g.meaning}{en && g.en && <small className="e3-en" lang="en">{g.en}</small>}</dd></div>)}</dl>
         <div className="e3-actions">
           {!done && <button type="button" className="e3-primary" onClick={() => { onDone(); onClose(); }}>Terminar y seguir explorando</button>}

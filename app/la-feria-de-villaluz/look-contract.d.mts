@@ -21,6 +21,7 @@ export type BuscaSet = {
   text: string; described: string[]; target: string; figures: Figure[];
   landmarks?: { id: string; x: number; z: number }[];
   voice?: string;
+  speaker?: string;
 };
 export type PeopleLook = {
   skin: string; age: string; body: string; build: string; height: number; hairStyle: string; hairColor: string;

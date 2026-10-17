@@ -26,7 +26,7 @@ export const doneFor = (state, level = state.level) => state.done[level] ?? [];
 
 export function openScene(state, id) {
   if (!CIRCLE_IDS.includes(id)) return state;
-  return { ...state, scene: { id, pick: null } };
+  return { ...state, scene: { id, beats: {} } };
 }
 export const closeScene = state => ({ ...state, scene: null });
 
@@ -36,13 +36,67 @@ export function markDone(state, id) {
   return list.includes(id) ? state : { ...state, done: { ...state.done, [state.level]: [...list, id] } };
 }
 
-/** Pick one of the three answers of the open scene (it counts as done). */
-export function choose(state, index) {
-  const open = state.scene;
-  if (!open || open.pick !== null || !Number.isInteger(index) || index < 0 || index > 2) return state;
-  return { ...markDone(state, open.id), scene: { ...open, pick: index } };
+// ------------------------------------------------------------------ beats
+// A circle is a sequence of labelled beats (N1):
+// - contrast: one correct option; a wrong pick shows its feedback and the class
+//   tries again; the right pick shows its feedback and `after`;
+// - stimulus with options: the class picks one (no right answer);
+// - stimulus with frames: open answer, the teacher moves on;
+// - busca: every listed Busca set found.
+const beatState = (scene, beat) => scene?.beats?.[beat.id] ?? { tries: [], pick: null, seen: false };
+
+export function beatDone(scene, beat, session) {
+  const b = beatState(scene, beat);
+  if (beat.kind === 'contrast') return b.tries.some(i => beat.options[i]?.correct);
+  if (beat.kind === 'busca') return (beat.sets ?? []).every(id => session?.busca?.[id]?.solved);
+  if (beat.options) return b.pick !== null;
+  return b.seen;
 }
-export const undo = state => (state.scene && state.scene.pick !== null ? { ...state, scene: { ...state.scene, pick: null } } : state);
+
+/** Index of the first beat not done (beats.length when the circle is done). */
+export function currentBeat(scene, circle, session) {
+  const beats = circle?.beats ?? [];
+  const i = beats.findIndex(beat => !beatDone(scene, beat, session));
+  return i < 0 ? beats.length : i;
+}
+
+/** Answer a beat of the open scene: a try on a contrast, a pick on a
+ * stimulus, "seen" on a frame stimulus. Done beats don't change. */
+export function answerBeat(state, beat, index = 0) {
+  const scene = state.scene;
+  if (!scene) return state;
+  const b = beatState(scene, beat);
+  let next = b;
+  if (beat.kind === 'contrast') {
+    if (beatDone(scene, beat) || !beat.options?.[index] || b.tries.includes(index)) return state;
+    next = { ...b, tries: [...b.tries, index] };
+  } else if (beat.kind === 'stimulus' && beat.options) {
+    if (b.pick !== null || !beat.options[index]) return state;
+    next = { ...b, pick: index };
+  } else if (beat.kind === 'stimulus') {
+    next = { ...b, seen: true };
+  } else return state;
+  return { ...state, scene: { ...scene, beats: { ...scene.beats, [beat.id]: next } } };
+}
+
+/** Feedback of the last try on a contrast beat: { text, correct }. */
+export function lastFeedback(scene, beat) {
+  const b = beatState(scene, beat);
+  const i = b.tries.at(-1);
+  if (i === undefined) return null;
+  const option = beat.options[i];
+  return { text: option.feedback, correct: Boolean(option.correct), feature: option.feature ?? null };
+}
+
+/** The pick of the circle's first stimulus with options (it feeds the
+ * closing timeline). */
+export function timelinePick(scene, circle) {
+  const beat = (circle?.beats ?? []).find(b => b.kind === 'stimulus' && b.options);
+  if (!beat) return null;
+  const pick = beatState(scene, beat).pick;
+  return pick === null ? null : pick;
+}
+
 export const setRoute = (state, route) => (route === 'conversacion' || route === 'escucha' ? { ...state, route } : state);
 export const resetLevel = state => ({ ...state, done: { ...state.done, [state.level]: [] }, scene: null });
 
@@ -67,7 +121,7 @@ export function restore(raw) {
 
 // ------------------------------------------------------------------ group session
 export function createSession() {
-  return { ticks: {}, picks: {}, busca: {}, checks: [], finished: false };
+  return { ticks: {}, picks: {}, order: [], busca: {}, checks: [], finished: false };
 }
 export function restoreSession(raw) {
   const base = createSession();
@@ -80,8 +134,9 @@ export function restoreSession(raw) {
     for (const [id, value] of Object.entries(data.picks ?? {})) if (CIRCLE_IDS.includes(id) && Number.isInteger(value) && value >= 0 && value <= 2) picks[id] = value;
     const busca = {};
     for (const [id, value] of Object.entries(data.busca ?? {})) if (value && Array.isArray(value.tries)) busca[id] = { tries: value.tries.filter(x => typeof x === 'string').slice(0, 8), solved: Boolean(value.solved) };
-    const checks = Array.isArray(data.checks) ? data.checks.filter(Number.isInteger).slice(0, 12) : [];
-    return { ticks, picks, busca, checks, finished: Boolean(data.finished) };
+    const order = Array.isArray(data.order) ? [...new Set(data.order.filter(id => picks[id] !== undefined))] : Object.keys(picks);
+    const checks = Array.isArray(data.checks) ? data.checks.filter(x => typeof x === 'string').slice(0, 12) : [];
+    return { ticks, picks, order, busca, checks, finished: Boolean(data.finished) };
   } catch {
     return base;
   }
@@ -98,10 +153,10 @@ export function tick(session, id, value) {
 }
 export function recordPick(session, id, index) {
   if (!CIRCLE_IDS.includes(id) || !Number.isInteger(index) || index < 0 || index > 2) return session;
-  return { ...session, picks: { ...session.picks, [id]: index } };
+  return { ...session, picks: { ...session.picks, [id]: index }, order: session.order.includes(id) ? session.order : [...session.order, id] };
 }
-export function toggleCheck(session, index) {
-  const checks = session.checks.includes(index) ? session.checks.filter(i => i !== index) : [...session.checks, index].sort((a, b) => a - b);
+export function toggleCheck(session, id) {
+  const checks = session.checks.includes(id) ? session.checks.filter(i => i !== id) : [...session.checks, id];
   return { ...session, checks };
 }
 export const finish = session => ({ ...session, finished: true });
@@ -124,24 +179,27 @@ export function tally(session, ids = CIRCLE_IDS) {
 }
 
 // ------------------------------------------------------------------ routes and E1
-export const routeCircles = route => (route ?? []).map(step => step.circle).filter(id => CIRCLE_IDS.includes(id));
+/** The circle steps of a route (warm-up steps carry no circle). A `oneOf`
+ * step is done when any of its circles is. */
+export const routeSteps = route => (route?.steps ?? []).filter(step => step.circle || step.oneOf);
+export const routeCircles = route => routeSteps(route).flatMap(step => (step.oneOf ? step.oneOf : [step.circle])).filter(id => CIRCLE_IDS.includes(id));
+export const stepDone = (step, done) => (step.oneOf ?? [step.circle]).some(id => done.includes(id));
 
 /** E1 (BOARD-DECISION-001): round(100 × route circles done ÷ route circles);
  * 100 only after «Terminar» in the closing. */
 export function routeProgress(route, done, finished) {
   if (finished) return 100;
-  const circles = routeCircles(route);
-  if (!circles.length) return 0;
-  const n = circles.filter(id => done.includes(id)).length;
-  return Math.min(99, Math.round((100 * n) / circles.length));
+  const steps = routeSteps(route);
+  if (!steps.length) return 0;
+  const n = steps.filter(step => stepDone(step, done)).length;
+  return Math.min(99, Math.round((100 * n) / steps.length));
 }
 
-/** The closing narrative: what the group chose at each circle, in route
- * order, from this session only (AC9). */
-export function timeline(session, scenes, route) {
-  const order = [...routeCircles(route), ...CIRCLE_IDS.filter(id => !routeCircles(route).includes(id))];
-  return order.filter(id => Number.isInteger(session.picks[id]) && scenes[id]?.options?.[session.picks[id]])
-    .map(id => ({ id, title: scenes[id].title, said: scenes[id].options[session.picks[id]].say, end: scenes[id].options[session.picks[id]].end }));
+/** The closing narrative: one sentence per circle the group played in this
+ * session, in the order they played it (AC9, sessionStorage only). */
+export function timeline(session, circles) {
+  return (session.order ?? []).filter(id => Number.isInteger(session.picks[id]) && circles[id]?.timeline?.[session.picks[id]])
+    .map(id => ({ id, text: circles[id].timeline[session.picks[id]] }));
 }
 
 // ------------------------------------------------------------------ sound (AC5)
