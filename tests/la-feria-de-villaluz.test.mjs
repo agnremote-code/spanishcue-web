@@ -212,3 +212,11 @@ test('same controls and teacher tools as the other 3D worlds', () => {
   for (const needle of ['keyAction', 'inputFrom', 'stepPlayer', 'followYaw', 'createHero', 'animateHero', 'fv-joy', 'Saltar', 'Nitro']) assert.ok(world.includes(needle), needle);
   for (const needle of ['<ModeSwitch', 'Lista del profesor', 'Mapa sin movimiento', 'Nueva clase / nuevo grupo']) assert.ok(game.includes(needle), needle);
 });
+
+test('the Busca announcements file for the audio generator is in sync with BUSCA (one voice each)', async () => {
+  const { announcementJson, announcementPath } = await import('../scripts/export-feria-announcements.mjs');
+  assert.equal(readFileSync(announcementPath('A2'), 'utf8'), announcementJson('A2'), 'run node scripts/export-feria-announcements.mjs');
+  const voices = JSON.parse(readFileSync('app/escucha-3d/voices.json', 'utf8'));
+  for (const set of A2.BUSCA) assert.ok(voices[set.voice], `${set.id}: voice ${set.voice}`);
+  assert.match(readFileSync('scripts/generate-escucha-3d-audio.py', 'utf8'), /data\.get\('announcements', \[\]\)/);
+});
