@@ -42,11 +42,12 @@ test('other 3D worlds are cross-linked and never include the page itself', () =>
   }
 });
 
-test('multi-level pages: title, eyebrow and schema use the full level range', () => {
+test("multi-level pages: title, eyebrow and schema use the full level range on the canonical URL", () => {
   for (const {lesson} of worlds) assert.deepEqual(p.resourceLevels(lesson), ['A0', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2']);
   assert.match(page, /educationalLevel: multiLevel \? levels : level/);
   assert.match(page, /styles\.eyebrow\}>\{world3d \? "3D " : ""\}\{typeLabel\} · \{multiLevel \? pageLevel : level\}/);
   assert.match(page, /This preview shows the \$\{level\} version\./);
+  assert.match(page, /levels\.length > 1 && !\(family && requestedLevel === selectedLevel\)/, 'an explicit ?level= preview keeps its own level');
 });
 
 test('3D section exposes no paid content and keeps the gated lesson link', () => {

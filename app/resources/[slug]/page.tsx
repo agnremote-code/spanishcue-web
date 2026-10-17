@@ -68,7 +68,8 @@ export default async function ResourcePage({ params, searchParams }: ResourcePag
   if (!lesson) notFound();
 
   const family = conversationFamilyByLessonId.get(lesson.id);
-  const selectedLevel = family ? resolveConversationLevel({...family,defaultLevel:lesson.level}, (await searchParams).level) : lesson.level;
+  const requestedLevel = (await searchParams).level;
+  const selectedLevel = family ? resolveConversationLevel({...family,defaultLevel:lesson.level}, requestedLevel) : lesson.level;
   const selectedPreview = family?.previewByLevel[selectedLevel as keyof typeof family.previewByLevel];
   const lessonPath = family ? conversationLessonHref({...lesson,familyId:family.id},selectedLevel)! : localLessonPath(lesson) || "/";
   // `level` is the level whose preview this page shows; `pageLevel` is every
@@ -77,7 +78,9 @@ export default async function ResourcePage({ params, searchParams }: ResourcePag
   const level = family ? selectedLevel : resourceLevelLabel(lesson);
   const pageLevel = resourceLevelLabel(lesson);
   const levels = family && family.availableLevels.length > 1 ? [...family.availableLevels] : resourceLevels(lesson);
-  const multiLevel = levels.length > 1;
+  // The canonical URL (no ?level=) describes the whole lesson; an explicit
+  // ?level= preview (canonicalised to the same URL) keeps describing that level.
+  const multiLevel = levels.length > 1 && !(family && requestedLevel === selectedLevel);
   const world3d = isImmersiveWorld(lesson);
   const otherWorlds = world3d ? otherImmersiveWorldLessons(lesson) : [];
   // 3D worlds get their own "More 3D Spanish worlds" block, so related cards skip them.
