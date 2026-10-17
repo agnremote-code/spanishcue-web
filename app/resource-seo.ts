@@ -1,5 +1,6 @@
 import { lessons, type Category, type Lesson } from "./lesson-catalog";
 import { catalogLessons, conversationFamilyByLessonId } from "./conversation-families/catalog";
+import { GAMES } from "./escucha-3d/games.mjs";
 
 const categorySeo: Record<Category, { prefix: string; label: string; pluralLabel: string; shortLabel: string }> = {
   "Gramática": {
@@ -131,6 +132,13 @@ export const immersiveWorldGameByLessonId: ReadonlyMap<number, string> = new Map
 
 export function isImmersiveWorld(lesson: Lesson): boolean {
   return immersiveWorldGameByLessonId.has(lesson.id);
+}
+
+/** Levels that have the Comprensión auditiva mode in a 3D world (from the listening registry). */
+export function immersiveWorldListeningLevels(lesson: Lesson): string[] {
+  const game = immersiveWorldGameByLessonId.get(lesson.id);
+  const entry = game ? (GAMES as Record<string, { levels: string[] }>)[game] : undefined;
+  return entry ? [...entry.levels] : [];
 }
 
 /** The other 3D worlds' resource lessons, in catalog order. */

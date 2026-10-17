@@ -7,6 +7,7 @@ import { conversationFamilyByLessonId } from "../../conversation-families/catalo
 import { conversationLessonHref, resolveConversationLevel } from "../../conversation-families/navigation";
 import { breadcrumbSchema } from "../../growth/schema";
 import {
+  immersiveWorldListeningLevels,
   isImmersiveWorld,
   lessonForResourceSlug,
   otherImmersiveWorldLessons,
@@ -83,6 +84,8 @@ export default async function ResourcePage({ params, searchParams }: ResourcePag
   const multiLevel = levels.length > 1 && !(family && requestedLevel === selectedLevel);
   const world3d = isImmersiveWorld(lesson);
   const otherWorlds = world3d ? otherImmersiveWorldLessons(lesson) : [];
+  const listeningLevels = world3d ? immersiveWorldListeningLevels(lesson) : [];
+  const listeningEverywhere = listeningLevels.length > 0 && levels.every((item) => listeningLevels.includes(item));
   // 3D worlds get their own "More 3D Spanish worlds" block, so related cards skip them.
   const related = world3d
     ? relatedResourceLessons(lesson, 12).filter((item) => !isImmersiveWorld(item)).slice(0, 6)
@@ -194,7 +197,7 @@ export default async function ResourcePage({ params, searchParams }: ResourcePag
                 <h2>Inside the 3D world</h2>
                 <ul>
                   <li>A 3D world that runs in the browser: no download and no headset. Share your screen online or project it in the classroom.</li>
-                  <li>Two modes in the same world: <strong>Conversación</strong> for speaking and <strong>Comprensión auditiva</strong> for listening. Students switch mode without leaving the world.</li>
+                  <li>Two modes in the same world: <strong>Conversación</strong> for speaking and <strong>Comprensión auditiva</strong> for listening{listeningEverywhere ? "" : ` (listening at ${listeningLevels.join(" · ")})`}. Students switch mode without leaving the world.</li>
                   <li>Levels: {levels.join(" · ")}. Choose the level that fits your group.</li>
                   <li>A SpanishCue PRO lesson. This page shows the premise, the objectives and a warm-up question; the scenes, dialogues and listenings stay inside the lesson.</li>
                 </ul>

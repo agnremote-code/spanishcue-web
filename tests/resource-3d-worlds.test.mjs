@@ -19,6 +19,13 @@ test('every 3D world in the listening registry has exactly one public resource p
   }
 });
 
+test('listening levels come from the registry, so the page never claims listening at a level without it', () => {
+  for (const {lesson, game} of worlds) assert.deepEqual(p.immersiveWorldListeningLevels(lesson), GAMES[game].levels, game);
+  const noche = worlds.find(w => w.game === 'noche').lesson;
+  assert.ok(!p.immersiveWorldListeningLevels(noche).includes('A0'), 'noche has no A0 listening');
+  assert.match(page, /listeningEverywhere \? "" : ` \(listening at \$\{listeningLevels\.join\(" · "\)\}\)`/);
+});
+
 test('3D world lessons stay PRO (the public page is a poster, not a free lesson)', () => {
   for (const {lesson} of worlds) assert.equal(p.isFreeLesson(lesson.id), false, lesson.title);
 });
