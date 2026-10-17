@@ -1,0 +1,322 @@
+{
+  "game": "feria",
+  "level": "A2",
+  "items": [
+    {
+      "id": "informacion",
+      "title": "Las llaves del pez rojo",
+      "place": "El puesto de información",
+      "context": "Un señor llega muy preocupado al puesto de información de la feria y habla con Rosario.",
+      "speakers": [
+        { "name": "Rosario", "country": "Paraguay", "voice": "es-PY-TaniaNeural" },
+        { "name": "Hernán", "country": "Argentina", "voice": "es-AR-TomasNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Puesto de información, buenas noches. ¿En qué le puedo ayudar?" },
+        { "s": 1, "text": "Buenas noches. Se me perdieron las llaves de mi casa." },
+        { "s": 0, "text": "Ay, no. A ver, ¿dónde estuvo usted esta noche?" },
+        { "s": 1, "text": "Primero fui a la churrería, después estuve un rato en la noria y luego compré una bufanda." },
+        { "s": 0, "text": "¿Y cómo son las llaves?" },
+        { "s": 1, "text": "Son tres, con un llavero rojo en forma de pez. Me lo regaló mi nieta." },
+        { "s": 0, "text": "Espere... Hace diez minutos vino una chica de la tómbola y trajo unas llaves. ¿Son estas?" },
+        { "s": 1, "text": "¡Sí! ¡El pez! Muchísimas gracias, señorita." },
+        { "s": 0, "text": "De nada. Pero la próxima vez, guárdelas en el bolsillo, ¿eh?" }
+      ],
+      "choice": [
+        { "q": "¿Por qué va el señor al puesto de información?", "options": ["Porque busca a su nieta", "Porque no encuentra sus llaves", "Porque quiere comprar una entrada"], "answer": 1 },
+        { "q": "¿Dónde estuvo el señor después de la churrería?", "options": ["En la noria", "En la tómbola", "En el baile"], "answer": 0 },
+        { "q": "¿Quién le regaló el llavero?", "options": ["Su hija", "Una chica de la tómbola", "Su nieta"], "answer": 2 },
+        { "q": "¿Quién llevó las llaves al puesto de información?", "options": ["Rosario", "Una chica de la tómbola", "El señor de la churrería"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Alguna vez perdiste algo importante? ¿Qué pasó?", "model": "Sí, el año pasado. Dejé mi cartera en un taxi, pero el taxista me la devolvió." },
+        { "q": "¿Dónde guardas tus llaves normalmente?", "model": "Siempre las guardo en el mismo bolsillo de la mochila." },
+        { "q": "¿Qué haces primero cuando no encuentras algo?", "model": "Primero pienso dónde estuve. Después llamo a los lugares." }
+      ],
+      "gaps": "Son tres, con un llavero [rojo] en forma de [pez]. Me lo [regaló] mi [nieta].",
+      "glossary": [
+        { "word": "llavero", "meaning": "objeto pequeño que une varias llaves" },
+        { "word": "en forma de", "meaning": "con la figura de algo, por ejemplo de un animal" },
+        { "word": "bolsillo", "meaning": "parte de la ropa donde guardas cosas pequeñas" },
+        { "word": "puesto", "meaning": "lugar pequeño de una feria donde venden algo o ayudan a la gente" }
+      ]
+    },
+    {
+      "id": "churreria",
+      "title": "La olla del abuelo",
+      "place": "La churrería",
+      "context": "Antes de abrir, Yesenia y su papá, don Ernesto, hablan de cómo empezó la churrería.",
+      "speakers": [
+        { "name": "Ernesto", "country": "Cuba", "voice": "es-CU-ManuelNeural" },
+        { "name": "Yesenia", "country": "Cuba", "voice": "es-CU-BelkysNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "¿Sabes cuándo empezó todo esto, Yesenia?" },
+        { "s": 1, "text": "Claro, papá. Me lo contaste mil veces. Con el abuelo, ¿no?" },
+        { "s": 0, "text": "Sí. El abuelo llegó a Villaluz en mil novecientos setenta, sin dinero y sin amigos. Solo tenía una olla y una receta." },
+        { "s": 1, "text": "Y el primer día no vendió nada." },
+        { "s": 0, "text": "Nada. Llovió toda la tarde. Pero al día siguiente salió el sol y la gente hizo una fila larguísima." },
+        { "s": 1, "text": "¿Y por qué tuvo tanto éxito?" },
+        { "s": 0, "text": "Porque le regalaba un churro a cada niño. Y los niños volvían con sus padres." },
+        { "s": 1, "text": "¡Qué inteligente! Bueno, ¿hoy también regalamos churros a los niños?" },
+        { "s": 0, "text": "Por supuesto. Es la tradición. Pero solo uno, ¿eh? Uno por niño." }
+      ],
+      "choice": [
+        { "q": "¿De qué hablan Ernesto y Yesenia?", "options": ["De una receta nueva", "De la historia de la churrería", "De un problema con los clientes"], "answer": 1 },
+        { "q": "¿Qué tenía el abuelo cuando llegó a Villaluz?", "options": ["Una olla y una receta", "Mucho dinero y una casa", "Un puesto en la feria"], "answer": 0 },
+        { "q": "¿Qué pasó el primer día?", "options": ["Vendió todos los churros", "Llegaron muchos niños", "Llovió y no vendió nada"], "answer": 2 },
+        { "q": "¿Por qué tuvo éxito el abuelo?", "options": ["Porque sus churros eran baratos", "Porque regalaba un churro a cada niño", "Porque abría toda la noche"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Conoces un negocio familiar con una historia bonita?", "model": "Sí, la panadería de mi barrio. La abrió el abuelo del dueño hace cincuenta años." },
+        { "q": "¿Qué receta de tu familia te gustaría aprender?", "model": "Me gustaría aprender la sopa de mi abuela. Es la mejor sopa del mundo." },
+        { "q": "¿Qué hace un negocio para tener éxito, en tu opinión?", "model": "Tiene que tratar bien a los clientes y tener buenos precios." }
+      ],
+      "gaps": "El abuelo llegó a Villaluz en mil novecientos setenta, sin [dinero] y sin [amigos]. Solo tenía una [olla] y una [receta].",
+      "glossary": [
+        { "word": "olla", "meaning": "recipiente grande y hondo para cocinar" },
+        { "word": "receta", "meaning": "explicación de cómo se prepara una comida" },
+        { "word": "fila", "meaning": "personas que esperan una detrás de otra" },
+        { "word": "tradición", "meaning": "algo que una familia o un pueblo hace igual desde hace muchos años" }
+      ]
+    },
+    {
+      "id": "tombola",
+      "title": "La bolsa de los premios",
+      "place": "La tómbola",
+      "context": "Iván vuelve a la tómbola después de media hora. Su tía Fabiola le cuenta qué pasó mientras él no estaba.",
+      "speakers": [
+        { "name": "Fabiola", "country": "Venezuela", "voice": "es-VE-PaolaNeural" },
+        { "name": "Iván", "country": "Venezuela", "voice": "es-VE-SebastianNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Iván, ¿dónde estabas? Te esperé media hora." },
+        { "s": 1, "text": "Perdón, tía. Fui a buscar hielo, pero en la tienda había una fila enorme." },
+        { "s": 0, "text": "Bueno. Mientras tanto, un muchacho ganó el oso gigante." },
+        { "s": 1, "text": "¿El oso? ¡Pero si nadie lo gana nunca!" },
+        { "s": 0, "text": "Pues hoy sí. Después tuvo que irse corriendo y le dejó el oso a una amiga." },
+        { "s": 1, "text": "¿Y la amiga dónde está?" },
+        { "s": 0, "text": "Por ahí, en la feria. Le presté nuestra bolsa grande, porque el oso no cabía en ningún lado." },
+        { "s": 1, "text": "¿Nuestra bolsa? ¿La de los premios?" },
+        { "s": 0, "text": "Sí, esa. Me la va a devolver antes de las diez. Tranquilo." },
+        { "s": 1, "text": "Ay, tía, tú confías en todo el mundo." },
+        { "s": 0, "text": "Y casi siempre tengo razón." }
+      ],
+      "choice": [
+        { "q": "¿Qué le cuenta Fabiola a Iván?", "options": ["Cómo se juega a la tómbola", "Por qué cerró la tienda", "Lo que pasó mientras él no estaba"], "answer": 2 },
+        { "q": "¿Por qué llegó tarde Iván?", "options": ["Porque había mucha gente en la tienda", "Porque se perdió en la feria", "Porque estaba en la noria"], "answer": 0 },
+        { "q": "¿Qué le prestó Fabiola a la amiga del muchacho?", "options": ["Un boleto", "Hielo", "Una bolsa grande"], "answer": 2 },
+        { "q": "¿Qué piensa Iván de su tía?", "options": ["Que trabaja demasiado", "Que confía en todo el mundo", "Que tiene mala suerte"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Tú confías en las personas que no conoces? ¿Por qué?", "model": "Depende. En la calle, poco. Pero en mi barrio, sí." },
+        { "q": "¿Qué cosa nunca le prestas a nadie?", "model": "Mi bicicleta. Una vez se la presté a un amigo y me la devolvió rota." },
+        { "q": "¿Alguna vez llegaste tarde por una fila muy larga?", "model": "Sí, al cine. Cuando entré, la película ya había empezado." }
+      ],
+      "gaps": "Le [presté] nuestra [bolsa grande], porque el oso no [cabía] en ningún [lado].",
+      "glossary": [
+        { "word": "premios", "meaning": "cosas que ganas en un juego o un concurso" },
+        { "word": "no cabía", "meaning": "no tenía espacio suficiente para entrar" },
+        { "word": "confías", "meaning": "crees que una persona es buena y honesta" },
+        { "word": "hielo", "meaning": "agua muy fría que está dura, en trozos" }
+      ]
+    },
+    {
+      "id": "noria",
+      "title": "Veinte minutos allá arriba",
+      "place": "La noria",
+      "context": "La noria ya funciona otra vez. Marta y don Abelardo recuerdan algo que pasó el año pasado.",
+      "speakers": [
+        { "name": "Marta", "country": "Guatemala", "voice": "es-GT-MartaNeural" },
+        { "name": "Abelardo", "country": "El Salvador", "voice": "es-SV-RodrigoNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Don Abelardo, ¿ya funciona la luz?" },
+        { "s": 1, "text": "Ya. Era un cable. Nada grave." },
+        { "s": 0, "text": "Menos mal. ¿Se acuerda del año pasado?" },
+        { "s": 1, "text": "¿Cómo no me voy a acordar? La noria se paró veinte minutos, con una pareja en la cabina de arriba." },
+        { "s": 0, "text": "Y la señora estaba furiosa. Bajó y fue directo a reclamar." },
+        { "s": 1, "text": "Sí, pero antes, allá arriba, el novio le pidió matrimonio." },
+        { "s": 0, "text": "¿En serio? ¡No lo sabía!" },
+        { "s": 1, "text": "Él me lo contó después. Dijo que fue el mejor problema técnico de su vida." },
+        { "s": 0, "text": "¿Y ella qué dijo?" },
+        { "s": 1, "text": "Que sí. Y después, que quería la vuelta gratis." }
+      ],
+      "choice": [
+        { "q": "¿Qué recuerdan Marta y don Abelardo?", "options": ["Su primer día de trabajo", "Un día que la noria se paró", "Una fiesta en la plaza"], "answer": 1 },
+        { "q": "¿Qué problema tenía hoy la noria?", "options": ["Una puerta rota", "No había luz en toda la feria", "Un cable"], "answer": 2 },
+        { "q": "¿Qué hizo el novio allá arriba?", "options": ["Le pidió matrimonio a la señora", "Llamó por teléfono a la feria", "Tomó fotos de la feria"], "answer": 0 },
+        { "q": "¿Qué quería la señora al final?", "options": ["Hablar con el encargado", "Su dinero", "Una vuelta gratis"], "answer": 2 }
+      ],
+      "open": [
+        { "q": "¿Te gustaría estar veinte minutos en lo alto de una noria? ¿Por qué?", "model": "No, me dan miedo las alturas. Prefiero estar abajo con un helado." },
+        { "q": "¿Conoces una historia de amor con un momento muy raro?", "model": "Sí, mis tíos se conocieron en un ascensor que se paró." },
+        { "q": "¿Reclamas cuando algo no funciona bien? ¿Cómo?", "model": "Sí, pero con educación. Primero explico el problema y luego pido una solución." }
+      ],
+      "gaps": "La noria se [paró] veinte [minutos], con una [pareja] en la [cabina] de arriba.",
+      "glossary": [
+        { "word": "cabina", "meaning": "espacio pequeño y cerrado donde se sientan las personas en la noria" },
+        { "word": "pareja", "meaning": "dos personas que tienen una relación de amor" },
+        { "word": "pidió matrimonio", "meaning": "preguntó a otra persona si quiere casarse" },
+        { "word": "reclamar", "meaning": "decir que algo está mal y pedir una solución" }
+      ]
+    },
+    {
+      "id": "artesania",
+      "title": "La primera taza",
+      "place": "El puesto de artesanía",
+      "context": "Al final del día, Nayeli y don Wilfredo cuentan el dinero y hablan de cómo aprendió ella su oficio.",
+      "speakers": [
+        { "name": "Wilfredo", "country": "Bolivia", "voice": "es-BO-MarceloNeural" },
+        { "name": "Nayeli", "country": "México", "voice": "es-MX-DaliaNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Nayeli, hoy vendiste más que ayer, ¿no?" },
+        { "s": 1, "text": "Sí, don Wilfredo. Ayer hacía frío y la gente compraba más bufandas que tazas." },
+        { "s": 0, "text": "Ja, ya lo sé. Ayer fue mi mejor día." },
+        { "s": 1, "text": "¿Sabe quién me enseñó a hacer tazas? Mi abuela. Era más paciente que nadie." },
+        { "s": 0, "text": "¿Y tú? ¿Eras tan paciente como ella?" },
+        { "s": 1, "text": "¡No! Mi primera taza me salió horrible. Tenía un agujero." },
+        { "s": 0, "text": "¿Y qué hiciste con ella?" },
+        { "s": 1, "text": "Mi abuela la usó tres años para guardar lápices. Decía que era su taza favorita." },
+        { "s": 0, "text": "Ah, las abuelas. Para ellas, todo lo de los nietos es mejor." }
+      ],
+      "choice": [
+        { "q": "¿De qué hablan principalmente?", "options": ["De los precios de la feria", "Del frío de ayer", "De cómo aprendió Nayeli a hacer tazas"], "answer": 2 },
+        { "q": "¿Qué compraba más la gente ayer?", "options": ["Bufandas", "Tazas", "Lápices"], "answer": 0 },
+        { "q": "¿Cómo le salió a Nayeli su primera taza?", "options": ["Muy bonita", "Con un agujero", "Muy grande"], "answer": 1 },
+        { "q": "¿Para qué usó la abuela la primera taza?", "options": ["Para guardar lápices", "Para tomar café", "Para venderla"], "answer": 0 }
+      ],
+      "open": [
+        { "q": "¿Quién te enseñó algo importante cuando eras pequeño o pequeña?", "model": "Mi abuelo me enseñó a nadar en el río." },
+        { "q": "¿Guardas algún objeto viejo porque tiene una historia?", "model": "Sí, guardo el primer dibujo de mi hijo. Es horrible, pero me encanta." },
+        { "q": "¿Eres una persona paciente? ¿Más o menos que tu familia?", "model": "Soy menos paciente que mi madre, pero más paciente que mi hermano." }
+      ],
+      "gaps": "Mi abuela la [usó] tres [años] para guardar [lápices]. Decía que era su taza [favorita].",
+      "glossary": [
+        { "word": "paciente", "meaning": "persona que puede esperar o repetir algo sin enfadarse" },
+        { "word": "agujero", "meaning": "espacio abierto o roto en una cosa" },
+        { "word": "guardar", "meaning": "poner algo en un lugar para tenerlo después" },
+        { "word": "nietos", "meaning": "los hijos de tus hijos" }
+      ]
+    },
+    {
+      "id": "escenario",
+      "title": "La lluvia del año pasado",
+      "place": "Detrás del escenario",
+      "context": "Faltan cinco minutos para el concierto. La técnica de sonido y el guitarrista esperan a la cantante.",
+      "speakers": [
+        { "name": "Daniela", "country": "Chile", "voice": "es-CL-CatalinaNeural" },
+        { "name": "Facundo", "country": "Uruguay", "voice": "es-UY-MateoNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Facundo, faltan cinco minutos. ¿Dónde está Valentina?" },
+        { "s": 1, "text": "Tranquila. Me escribió hace un rato. Está comiendo churros." },
+        { "s": 0, "text": "¿Churros? ¿Ahora? ¿Te acuerdas del año pasado?" },
+        { "s": 1, "text": "Claro. El autobús de la banda se rompió en la carretera y llegamos una hora tarde." },
+        { "s": 0, "text": "Y la gente esperó todo ese tiempo en la plaza, con lluvia." },
+        { "s": 1, "text": "Sí. Por eso, cuando llegamos, Valentina no fue al camerino. Subió al escenario mojada y empezó a cantar." },
+        { "s": 0, "text": "Fue el mejor concierto de toda la feria." },
+        { "s": 1, "text": "Y este año va a ser mejor... si llega." },
+        { "s": 0, "text": "Mira, ahí viene. Con los churros en la mano." }
+      ],
+      "choice": [
+        { "q": "¿Qué recuerdan Daniela y Facundo?", "options": ["Un concierto del año pasado", "Su primer viaje juntos", "Una pelea con la cantante"], "answer": 0 },
+        { "q": "¿Qué está haciendo Valentina antes del concierto?", "options": ["Está ensayando", "Está comiendo churros", "Está en el autobús"], "answer": 1 },
+        { "q": "¿Por qué llegó tarde la banda el año pasado?", "options": ["Por la lluvia", "Porque Valentina estaba enferma", "Porque se rompió el autobús"], "answer": 2 },
+        { "q": "¿Qué hizo Valentina cuando llegó?", "options": ["Fue al camerino a cambiarse", "Subió al escenario y empezó a cantar", "Habló con el público"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Fuiste alguna vez a un concierto al aire libre? ¿Cómo fue?", "model": "Sí, a uno en la playa. Hacía mucho viento, pero fue precioso." },
+        { "q": "¿Esperarías una hora bajo la lluvia por tu cantante favorito?", "model": "Sí, por mi cantante favorita, sí. Por otro, no." },
+        { "q": "¿Llegaste tarde alguna vez a algo muy importante? ¿Qué pasó?", "model": "Sí, a un examen. El autobús no llegó y fui caminando." }
+      ],
+      "gaps": "El autobús de la [banda] se [rompió] en la [carretera] y llegamos una [hora] tarde.",
+      "glossary": [
+        { "word": "escenario", "meaning": "lugar alto donde cantan o actúan los artistas" },
+        { "word": "camerino", "meaning": "habitación donde los artistas se preparan antes de salir" },
+        { "word": "carretera", "meaning": "camino grande para coches y autobuses entre ciudades" },
+        { "word": "mojada", "meaning": "con agua en el cuerpo o en la ropa" }
+      ]
+    },
+    {
+      "id": "fotos",
+      "title": "La foto de cada año",
+      "place": "El puesto de fotos",
+      "context": "Una familia muy grande llega al puesto de fotos, como todos los años.",
+      "speakers": [
+        { "name": "Lorenzo", "country": "Chile", "voice": "es-CL-LorenzoNeural" },
+        { "name": "Paloma", "country": "Estados Unidos", "voice": "es-US-PalomaNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "¡Familia Ríos! Otra vez aquí. ¿Cuántos años ya?" },
+        { "s": 1, "text": "Treinta, Lorenzo. La primera foto la tomó su papá, ¿se acuerda?" },
+        { "s": 0, "text": "Claro. Yo tenía diez años y le llevaba la cámara." },
+        { "s": 1, "text": "En esa foto éramos cuatro. Hoy somos catorce." },
+        { "s": 0, "text": "¡Catorce! Bueno, pónganse como siempre: los abuelos en el centro, los niños delante." },
+        { "s": 1, "text": "Y el tío Rubén detrás, porque siempre cierra los ojos." },
+        { "s": 0, "text": "Entonces hacemos tres fotos. Una, dos... ¡y tres!" },
+        { "s": 1, "text": "¿Y? ¿Salió bien?" },
+        { "s": 0, "text": "Perfecta. Bueno... el tío Rubén cerró los ojos otra vez." }
+      ],
+      "choice": [
+        { "q": "¿Qué hace la familia Ríos en el puesto de fotos?", "options": ["Busca al tío Rubén", "Se hace la foto de todos los años", "Compra una cámara"], "answer": 1 },
+        { "q": "¿Quién tomó la primera foto?", "options": ["El papá de Lorenzo", "Lorenzo", "El tío Rubén"], "answer": 0 },
+        { "q": "¿Cuántas personas hay en la familia hoy?", "options": ["Cuatro", "Diez", "Catorce"], "answer": 2 },
+        { "q": "¿Por qué ponen al tío Rubén detrás?", "options": ["Porque es muy alto", "Porque llegó tarde", "Porque siempre cierra los ojos"], "answer": 2 }
+      ],
+      "open": [
+        { "q": "¿Tu familia tiene una tradición de todos los años?", "model": "Sí, cada diciembre comemos todos juntos en casa de mi tía." },
+        { "q": "¿Te gusta salir en las fotos? ¿Por qué?", "model": "No mucho. Siempre salgo con los ojos cerrados, como el tío Rubén." },
+        { "q": "¿Cuál es tu foto favorita? ¿Qué hay en ella?", "model": "Una foto de mis abuelos en la playa, de cuando eran jóvenes." }
+      ],
+      "gaps": "Bueno, [pónganse] como siempre: los [abuelos] en el [centro], los [niños] delante.",
+      "glossary": [
+        { "word": "cámara", "meaning": "aparato para hacer fotos" },
+        { "word": "delante", "meaning": "en la parte de adelante, más cerca de la cámara" },
+        { "word": "detrás", "meaning": "en la parte de atrás" },
+        { "word": "cierra los ojos", "meaning": "baja los párpados y no ve" }
+      ]
+    },
+    {
+      "id": "baile",
+      "title": "Seis churros y un oso",
+      "place": "La plaza del baile",
+      "context": "Julián llega tarde al baile de la plaza. Su abuela Celia lo está esperando.",
+      "speakers": [
+        { "name": "Celia", "country": "Puerto Rico", "voice": "es-PR-KarinaNeural" },
+        { "name": "Julián", "country": "Perú", "voice": "es-PE-AlexNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Julián, por fin. ¿Dónde estuviste toda la noche?" },
+        { "s": 1, "text": "Ay, abuela, fue una noche increíble. Primero fui a la churrería con unos amigos." },
+        { "s": 0, "text": "¿Y comiste churros otra vez?" },
+        { "s": 1, "text": "Seis. Después estuvimos en la noria, pero se paró veinte minutos." },
+        { "s": 0, "text": "¡Qué miedo!" },
+        { "s": 1, "text": "No, fue divertido. Desde arriba vimos toda la feria. Luego fuimos a la tómbola y mi amigo Camilo ganó un oso gigante." },
+        { "s": 0, "text": "¿Y dónde está el oso?" },
+        { "s": 1, "text": "Lo tiene una amiga suya. Es una historia larga." },
+        { "s": 0, "text": "Bueno, al final llegaste al baile. Eso es lo importante. ¿Bailamos?" },
+        { "s": 1, "text": "Claro, abuela. Pero despacio, que estoy cansadísimo." }
+      ],
+      "choice": [
+        { "q": "¿Qué le cuenta Julián a su abuela?", "options": ["Por qué no le gusta bailar", "Cómo conoció a Camilo", "Qué hizo durante la noche"], "answer": 2 },
+        { "q": "¿Adónde fue Julián primero?", "options": ["A la noria", "A la churrería", "A la tómbola"], "answer": 1 },
+        { "q": "¿Qué pasó en la noria?", "options": ["Se paró veinte minutos", "Se rompió una cabina", "No había entradas"], "answer": 0 },
+        { "q": "¿Cómo quiere bailar Julián al final?", "options": ["Rápido", "Despacio", "Solo"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Qué hiciste el último fin de semana? Cuéntalo en orden.", "model": "Primero fui al mercado. Después almorcé con mi familia y al final vi una película." },
+        { "q": "¿Bailas con tu familia en las fiestas?", "model": "Sí, en las bodas. Mi abuela baila mejor que todos." },
+        { "q": "¿Cuál fue la noche más divertida de tu último año?", "model": "Fue en el cumpleaños de mi amiga. Cantamos hasta las tres." }
+      ],
+      "gaps": "Seis. Después [estuvimos] en la [noria], pero se [paró] veinte [minutos].",
+      "glossary": [
+        { "word": "por fin", "meaning": "después de esperar mucho" },
+        { "word": "increíble", "meaning": "muy bueno, difícil de creer" },
+        { "word": "gigante", "meaning": "muy, muy grande" },
+        { "word": "despacio", "meaning": "sin prisa, con poca velocidad" }
+      ]
+    }
+  ]
+}
