@@ -1,0 +1,98 @@
+{
+  "version": 1,
+  "authorization": "Board decision under the owner's standing delegation. The owner wrote on 2026-10-16: \"dont ask me anything just execute without breaking the website, thats the only condition, i trust your opinions just talk to each other and solve\" (docs/board/STATUS.md, owner decisions). The owner's 2026-10-17 directive assigns technical SEO to Alejandro (BOARD-DECISION-002 §1.3). SEO-002a (PR #224) adds English copy only to the public /resources/[slug] teacher page: the 3D-world section, the 3D cross-links, the breadcrumb names and a preview-level sentence. Code review: Sofia (APPROVE at 5ea0bcc). QA: Martin. This approves only the exact literals listed; existing English copy stays protected.",
+  "additions": [
+    {
+      "path": "app/resources/[slug]/page.tsx",
+      "text": "/"
+    },
+    {
+      "path": "app/resources/[slug]/page.tsx",
+      "text": "Interactive 3D world"
+    },
+    {
+      "path": "app/resources/[slug]/page.tsx",
+      "text": "SpanishCue"
+    },
+    {
+      "path": "app/resources/[slug]/page.tsx",
+      "text": "Spanish teaching resources"
+    },
+    {
+      "path": "app/resources/[slug]/page.tsx",
+      "text": "3D "
+    },
+    {
+      "path": "app/resources/[slug]/page.tsx",
+      "text": "·"
+    },
+    {
+      "path": "app/resources/[slug]/page.tsx",
+      "text": "3D world"
+    },
+    {
+      "path": "app/resources/[slug]/page.tsx",
+      "text": " This preview shows the ${level} version."
+    },
+    {
+      "path": "app/resources/[slug]/page.tsx",
+      "text": "Inside the 3D world"
+    },
+    {
+      "path": "app/resources/[slug]/page.tsx",
+      "text": "A 3D world that runs in the browser: no download and no headset. Share your screen online or project it in the classroom."
+    },
+    {
+      "path": "app/resources/[slug]/page.tsx",
+      "text": "Two modes in the same world:"
+    },
+    {
+      "path": "app/resources/[slug]/page.tsx",
+      "text": "Conversación"
+    },
+    {
+      "path": "app/resources/[slug]/page.tsx",
+      "text": "for speaking and"
+    },
+    {
+      "path": "app/resources/[slug]/page.tsx",
+      "text": "Comprensión auditiva"
+    },
+    {
+      "path": "app/resources/[slug]/page.tsx",
+      "text": "for listening"
+    },
+    {
+      "path": "app/resources/[slug]/page.tsx",
+      "text": " (listening at ${listeningLevels.join(\" · \")})"
+    },
+    {
+      "path": "app/resources/[slug]/page.tsx",
+      "text": " · "
+    },
+    {
+      "path": "app/resources/[slug]/page.tsx",
+      "text": ". You switch between the two modes without leaving the world."
+    },
+    {
+      "path": "app/resources/[slug]/page.tsx",
+      "text": "Levels:"
+    },
+    {
+      "path": "app/resources/[slug]/page.tsx",
+      "text": ". Choose the level that fits your group."
+    },
+    {
+      "path": "app/resources/[slug]/page.tsx",
+      "text": "A SpanishCue PRO lesson. This page shows the premise, the objectives and a warm-up question; the scenes, dialogues and listenings stay inside the lesson."
+    },
+    {
+      "path": "app/resources/[slug]/page.tsx",
+      "text": "More 3D Spanish worlds"
+    },
+    {
+      "path": "app/resources/[slug]/page.tsx",
+      "text": "3D ·"
+    }
+  ]
+}

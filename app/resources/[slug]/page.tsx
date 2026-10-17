@@ -5,12 +5,17 @@ import { notFound } from "next/navigation";
 import { localLessonPath } from "../../access-policy";
 import { conversationFamilyByLessonId } from "../../conversation-families/catalog";
 import { conversationLessonHref, resolveConversationLevel } from "../../conversation-families/navigation";
+import { breadcrumbSchema } from "../../growth/schema";
 import {
+  immersiveWorldListeningLevels,
+  isImmersiveWorld,
   lessonForResourceSlug,
+  otherImmersiveWorldLessons,
   relatedResourceLessons,
   resourceDescription,
   resourceLessons,
   resourceLevelLabel,
+  resourceLevels,
   resourcePathForLesson,
   resourceSlugForLesson,
   resourceTitle,
@@ -64,13 +69,29 @@ export default async function ResourcePage({ params, searchParams }: ResourcePag
   if (!lesson) notFound();
 
   const family = conversationFamilyByLessonId.get(lesson.id);
-  const selectedLevel = family ? resolveConversationLevel({...family,defaultLevel:lesson.level}, (await searchParams).level) : lesson.level;
+  const requestedLevel = (await searchParams).level;
+  const selectedLevel = family ? resolveConversationLevel({...family,defaultLevel:lesson.level}, requestedLevel) : lesson.level;
   const selectedPreview = family?.previewByLevel[selectedLevel as keyof typeof family.previewByLevel];
   const lessonPath = family ? conversationLessonHref({...lesson,familyId:family.id},selectedLevel)! : localLessonPath(lesson) || "/";
-  const related = relatedResourceLessons(lesson);
+  // `level` is the level whose preview this page shows; `pageLevel` is every
+  // level the lesson covers (e.g. "A1–C2"). Title, eyebrow and schema use the
+  // full range so they agree with the URL and the <title>.
   const level = family ? selectedLevel : resourceLevelLabel(lesson);
+  const pageLevel = resourceLevelLabel(lesson);
+  const levels = family && family.availableLevels.length > 1 ? [...family.availableLevels] : resourceLevels(lesson);
+  // The canonical URL (no ?level=) describes the whole lesson; an explicit
+  // ?level= preview (canonicalised to the same URL) keeps describing that level.
+  const multiLevel = levels.length > 1 && !(family && requestedLevel === selectedLevel);
+  const world3d = isImmersiveWorld(lesson);
+  const otherWorlds = world3d ? otherImmersiveWorldLessons(lesson) : [];
+  const listeningLevels = world3d ? immersiveWorldListeningLevels(lesson) : [];
+  const listeningEverywhere = listeningLevels.length > 0 && levels.every((item) => listeningLevels.includes(item));
+  // 3D worlds get their own "More 3D Spanish worlds" block, so related cards skip them.
+  const related = world3d
+    ? relatedResourceLessons(lesson, 12).filter((item) => !isImmersiveWorld(item)).slice(0, 6)
+    : relatedResourceLessons(lesson);
   const typeLabel = resourceTypeLabel(lesson);
-  const description = selectedPreview?.explanation
+  const description = selectedPreview?.explanation && !world3d
     ? resourceDescription({...lesson, level, displayLevel: level, subtitle: selectedPreview.hook})
     : resourceDescription(lesson);
   const canonical = `https://spanishcue.com${resourcePathForLesson(lesson)}`;
@@ -83,8 +104,8 @@ export default async function ResourcePage({ params, searchParams }: ResourcePag
     url: canonical,
     image: `https://spanishcue.com${selectedPreview?.explanation ? selectedPreview.image || lesson.image : lesson.image}`,
     inLanguage: "es",
-    educationalLevel: level,
-    learningResourceType: typeLabel,
+    educationalLevel: multiLevel ? levels : level,
+    learningResourceType: world3d ? [typeLabel, "Interactive 3D world"] : typeLabel,
     audience: {
       "@type": "EducationalAudience",
       educationalRole: "teacher",
@@ -96,11 +117,21 @@ export default async function ResourcePage({ params, searchParams }: ResourcePag
     },
   };
 
+  const breadcrumbs = breadcrumbSchema([
+    { name: "SpanishCue", href: "/" },
+    { name: "Spanish teaching resources", href: "/resources" },
+    { name: lesson.title, href: resourcePathForLesson(lesson) },
+  ]);
+
   return (
     <main className={styles.page}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
       />
       <div className={styles.shell}>
         <nav className={styles.topbar} aria-label="Resource navigation">
@@ -110,12 +141,13 @@ export default async function ResourcePage({ params, searchParams }: ResourcePag
 
         <section className={styles.hero}>
           <div>
-            <p className={styles.eyebrow}>{typeLabel} · {level}</p>
+            <p className={styles.eyebrow}>{world3d ? "3D " : ""}{typeLabel} · {multiLevel ? pageLevel : level}</p>
             <h1 className={styles.title}>{lesson.title}</h1>
             <p className={styles.subtitle}>{selectedPreview?.hook || lesson.subtitle}</p>
             {family && family.availableLevels.length > 1 && <nav className={styles.levelLinks} aria-label="Preview level">{family.availableLevels.map(item=><Link href={`${resourcePathForLesson(lesson)}?level=${item}`} key={item} aria-current={item===selectedLevel?"page":undefined}>{item}</Link>)}</nav>}
             <div className={styles.meta} aria-label="Lesson details">
-              <span className={styles.pill}>{level}</span>
+              <span className={styles.pill}>{multiLevel ? pageLevel : level}</span>
+              {world3d ? <span className={styles.pill}>3D world</span> : null}
               <span className={styles.pill}>{lesson.category}</span>
               <span className={styles.pill}>{lesson.duration}</span>
               <span className={styles.pill}>Interactive</span>
@@ -143,11 +175,12 @@ export default async function ResourcePage({ params, searchParams }: ResourcePag
         <div className={styles.grid}>
           <div>
             <section className={styles.section}>
-              <h2>Ready-to-teach {level} Spanish lesson</h2>
+              <h2>Ready-to-teach {multiLevel ? pageLevel : level} Spanish lesson</h2>
               <p>
-                This {level} {lesson.category.toLowerCase()} resource is built for Spanish teachers
+                This {multiLevel ? pageLevel : level} {lesson.category.toLowerCase()} resource is built for Spanish teachers
                 who want a coherent lesson they can open in the browser and teach without rebuilding
                 the material from scratch.
+                {multiLevel ? ` This preview shows the ${level} version.` : null}
               </p>
               <p>{selectedPreview?.explanation || lesson.explanation}</p>
             </section>
@@ -158,6 +191,18 @@ export default async function ResourcePage({ params, searchParams }: ResourcePag
                 {(family?.variants[selectedLevel as keyof typeof family.variants]?.communicativeObjectives || lesson.goals).map((goal) => <li key={goal}>{goal}</li>)}
               </ul>
             </section>
+
+            {world3d ? (
+              <section className={styles.section}>
+                <h2>Inside the 3D world</h2>
+                <ul>
+                  <li>A 3D world that runs in the browser: no download and no headset. Share your screen online or project it in the classroom.</li>
+                  <li>Two modes in the same world: <strong>Conversación</strong> for speaking and <strong>Comprensión auditiva</strong> for listening{listeningEverywhere ? "" : ` (listening at ${listeningLevels.join(" · ")})`}. You switch between the two modes without leaving the world.</li>
+                  <li>Levels: {levels.join(" · ")}. Choose the level that fits your group.</li>
+                  <li>A SpanishCue PRO lesson. This page shows the premise, the objectives and a warm-up question; the scenes, dialogues and listenings stay inside the lesson.</li>
+                </ul>
+              </section>
+            ) : null}
 
             <section className={styles.section}>
               <h2>How to use it</h2>
@@ -183,6 +228,22 @@ export default async function ResourcePage({ params, searchParams }: ResourcePag
                     <Link className={styles.resourceCard} href={resourcePathForLesson(item)} key={item.id}>
                       <p className={styles.cardMeta}>
                         {resourceLevelLabel(item)} · {item.category}
+                      </p>
+                      <h3 className={styles.cardTitle}>{item.title}</h3>
+                    </Link>
+                  ))}
+                </div>
+              </section>
+            ) : null}
+
+            {otherWorlds.length ? (
+              <section className={styles.section}>
+                <h2>More 3D Spanish worlds</h2>
+                <div className={styles.relatedGrid}>
+                  {otherWorlds.map((item) => (
+                    <Link className={styles.resourceCard} href={resourcePathForLesson(item)} key={item.id}>
+                      <p className={styles.cardMeta}>
+                        3D · {resourceLevelLabel(item)} · {item.category}
                       </p>
                       <h3 className={styles.cardTitle}>{item.title}</h3>
                     </Link>
