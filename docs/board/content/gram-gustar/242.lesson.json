@@ -1,0 +1,224 @@
+{
+  "242": {
+    "scope": "A1: gustar con me, te, le, nos, os y les; el verbo concuerda con lo que gusta (gusta + singular o infinitivo, gustan + plural); a mí, a ti… para dar énfasis o contrastar; también, tampoco, a mí sí y a mí no para reaccionar. Encantar e interesar siguen el mismo modelo. Ampliación A2 guiada: doler («me duele la cabeza, me duelen los pies»). La primera escucha busca el plan; la segunda, quién está de acuerdo y quién no.",
+    "warmup": [
+      "Di una comida que te gusta mucho y una que no te gusta nada.",
+      "¿Qué te gusta hacer los domingos? Responde con una sola palabra o con una frase."
+    ],
+    "reading": {
+      "title": "Mi nueva compañera de casa",
+      "text": "Hola, soy Bruno. Desde marzo vivo con Carla, mi nueva compañera de casa. Tenemos gustos muy diferentes. A mí me gusta cocinar, pero a ella no: a ella le gusta pedir comida. A Carla le encantan los perros y a mí también. Por eso ahora tenemos un perro, Lápiz. No me gustan las películas de miedo y a Carla tampoco, así que los viernes vemos comedias. Los sábados, a ella le interesan los museos; a mí no, yo prefiero el fútbol. Pero a los dos nos gusta mucho desayunar juntos los domingos.",
+      "questions": [
+        {
+          "kind": "meaning",
+          "prompt": "¿Bruno y Carla tienen gustos parecidos o diferentes? Da un ejemplo.",
+          "model": "Tienen gustos diferentes: a Bruno le gusta cocinar y a Carla no. Pero a los dos les gustan los perros.",
+          "criteria": [
+            "Reconoce que hay diferencias y también algunas coincidencias.",
+            "Da un ejemplo del texto con gustar o encantar."
+          ]
+        },
+        {
+          "kind": "fact",
+          "prompt": "¿Qué cosas les gustan a los dos?",
+          "model": "Les encantan los perros, no les gustan las películas de miedo y les gusta desayunar juntos los domingos.",
+          "criteria": [
+            "Menciona al menos dos coincidencias.",
+            "Se admite «a Bruno y a Carla les gusta…» con la concordancia correcta."
+          ]
+        }
+      ]
+    },
+    "discovery": [
+      {
+        "prompt": "Compara «me gusta cocinar» y «me gustan las películas». ¿Por qué cambia el verbo?",
+        "model": "El verbo concuerda con lo que gusta: cocinar es una actividad (singular) y las películas son plural."
+      },
+      {
+        "prompt": "Bruno dice «No me gustan las películas de miedo y a Carla tampoco». ¿Por qué no dice «también»?",
+        "model": "Porque la primera frase es negativa. Para estar de acuerdo con una frase negativa se usa tampoco."
+      }
+    ],
+    "grammar": [
+      {
+        "title": "Gusta o gustan",
+        "form": "me / te / le / nos / os / les + gusta + singular o infinitivo · gustan + plural",
+        "meaning": "La persona va en el pronombre. El verbo concuerda con lo que gusta, no con la persona.",
+        "examples": [
+          "Me gusta el café.",
+          "¿Te gusta bailar?",
+          "A Carla le gustan los perros.",
+          "Nos gustan las comedias."
+        ],
+        "contrast": "Se dice «me gusta el fútbol», no «yo gusto el fútbol». Y «me gustan los perros», no «me gusta los perros»."
+      },
+      {
+        "title": "A mí, a ti, a ella…",
+        "form": "a mí me / a ti te / a él, a ella, a usted le / a nosotros nos / a ellos, a ellas, a ustedes les",
+        "meaning": "A mí, a ti… no son obligatorios: dan énfasis, contrastan o aclaran quién es «le» o «les».",
+        "examples": [
+          "A mí me gusta cocinar, pero a ella no.",
+          "A Bruno le gusta el fútbol.",
+          "¿A ti te gustan los museos?"
+        ],
+        "contrast": "Con a mí, el pronombre se queda: «a mí me gusta», no «a mí gusta»."
+      },
+      {
+        "title": "También, tampoco, a mí sí, a mí no",
+        "form": "frase afirmativa → a mí también / a mí no · frase negativa → a mí tampoco / a mí sí",
+        "meaning": "Para reaccionar al gusto de otra persona: estar de acuerdo o no.",
+        "examples": [
+          "—Me encanta la playa. —A mí también.",
+          "—Me encanta la playa. —A mí no.",
+          "—No me gusta el frío. —A mí tampoco.",
+          "—No me gusta el frío. —A mí sí."
+        ],
+        "contrast": "Después de una frase negativa, el acuerdo es «a mí tampoco», no «a mí también»."
+      },
+      {
+        "title": "Verbos como gustar (ampliación A2: doler)",
+        "form": "me encanta(n) · me interesa(n) · A2: me duele + singular / me duelen + plural",
+        "meaning": "Encantar es gustar mucho. Interesar funciona igual. En A2, doler sigue el mismo modelo para hablar del cuerpo.",
+        "examples": [
+          "Me encantan los perros.",
+          "A Carla le interesan los museos.",
+          "A2: Me duele la cabeza. Me duelen los pies."
+        ],
+        "contrast": "No se dice «me encanta mucho»: encantar ya significa «gustar mucho». Y con doler: «me duelen los pies», no «me duele los pies»."
+      }
+    ],
+    "practice": [
+      {
+        "kind": "choice",
+        "prompt": "A Marta le ___ el chocolate.",
+        "options": ["gusta", "gustan", "gusto"],
+        "answers": [0],
+        "explanation": "El chocolate es singular: le gusta."
+      },
+      {
+        "kind": "choice",
+        "prompt": "A mis hijos les ___ los videojuegos.",
+        "options": ["gusta", "gustan", "gustamos"],
+        "answers": [1],
+        "explanation": "Los videojuegos son plural: les gustan. El verbo no concuerda con «mis hijos»."
+      },
+      {
+        "kind": "choice",
+        "prompt": "Quieres decir que el fútbol es tu deporte favorito. ¿Qué frase es correcta?",
+        "options": ["Yo gusto el fútbol.", "Me gusta el fútbol.", "Me gustan el fútbol."],
+        "answers": [1],
+        "explanation": "La persona va en el pronombre (me) y el verbo concuerda con el fútbol, que es singular."
+      },
+      {
+        "kind": "choice",
+        "prompt": "Hablas con tu amiga Laura: «Laura, ¿___ gusta bailar?»",
+        "options": ["te", "le", "me"],
+        "answers": [0],
+        "explanation": "Hablas con Laura de tú: te gusta."
+      },
+      {
+        "kind": "choice",
+        "prompt": "—No me gustan los lunes. —A mí ___. (Estás de acuerdo.)",
+        "options": ["también", "tampoco", "sí"],
+        "answers": [1],
+        "explanation": "La primera frase es negativa; para estar de acuerdo se dice tampoco."
+      },
+      {
+        "kind": "choice",
+        "prompt": "—Me gusta cocinar. —A mí ___. (No estás de acuerdo.)",
+        "options": ["también", "no", "tampoco"],
+        "answers": [1],
+        "explanation": "La primera frase es afirmativa; para no estar de acuerdo se dice a mí no."
+      },
+      {
+        "kind": "choice",
+        "prompt": "A nosotros nos ___ los museos de arte.",
+        "options": ["encanta", "encantan", "encantamos"],
+        "answers": [1],
+        "explanation": "Encantar funciona como gustar: los museos son plural, nos encantan."
+      },
+      {
+        "kind": "choice",
+        "prompt": "Ampliación A2. Después de caminar todo el día por la feria, me ___ los pies.",
+        "options": ["duele", "duelen", "dolemos"],
+        "answers": [1],
+        "explanation": "Doler funciona como gustar: los pies son plural, me duelen."
+      },
+      {
+        "kind": "open",
+        "prompt": "Escribe tres frases verdaderas: una cosa que te gusta, una que te encanta y una que no te gusta.",
+        "model": "Me gusta el té. Me encantan los gatos. No me gustan los días de lluvia.",
+        "criteria": [
+          "Usa gusta con singular o infinitivo y gustan con plural.",
+          "Usa el pronombre me en las tres frases.",
+          "Acepta cualquier gusto verdadero."
+        ]
+      },
+      {
+        "kind": "open",
+        "prompt": "Tu compañero dice: «No me gusta madrugar». Reacciona dos veces: primero estás de acuerdo, después no.",
+        "model": "A mí tampoco. / A mí sí: me gusta empezar el día temprano.",
+        "criteria": [
+          "Usa tampoco para el acuerdo con una frase negativa.",
+          "Usa a mí sí para el desacuerdo."
+        ]
+      }
+    ],
+    "listening": {
+      "title": "Un plan para el sábado",
+      "voice": "es-CO-SalomeNeural",
+      "transcript": "Hola, Bruno, soy Lucía. Te llamo por el plan del sábado. A Carla y a mí nos encanta la idea de ir a la feria. A Carla le interesan los puestos de artesanía; a mí no mucho, yo prefiero la noria. Tú dijiste que no te gustan las alturas, ¿verdad? A Carla tampoco. Entonces ustedes miran desde abajo y comen churros. Ah, y no me gusta llegar tarde, así que nos vemos a las seis en la puerta. ¿Te parece bien?",
+      "questions": [
+        {
+          "kind": "meaning",
+          "prompt": "¿Para qué llama Lucía a Bruno?",
+          "model": "Para organizar el plan del sábado en la feria y decir la hora del encuentro.",
+          "criteria": [
+            "Identifica el plan: ir a la feria el sábado.",
+            "Se admite «para quedar» o «para organizar la salida»."
+          ]
+        },
+        {
+          "kind": "fact",
+          "prompt": "¿A quién no le gustan las alturas y qué van a hacer esas personas?",
+          "model": "A Bruno y a Carla no les gustan las alturas. Van a mirar desde abajo y comer churros.",
+          "criteria": [
+            "Nombra a Bruno y a Carla.",
+            "Relaciona tampoco con el acuerdo entre los dos."
+          ]
+        }
+      ]
+    },
+    "speaking": [
+      {
+        "prompt": "Habla de tres cosas que te gustan y una que no te gusta. Tu docente reacciona con también, tampoco, a mí sí o a mí no.",
+        "followUp": "¿Y a tu familia le gustan las mismas cosas?",
+        "support": "Me gusta… / Me gustan… / No me gusta… / A mi familia le…"
+      },
+      {
+        "prompt": "Encuesta en clase: pregunta a dos compañeros si les gustan tres cosas de una lista (los gatos, madrugar, el café).",
+        "followUp": "Cuenta el resultado: ¿a quién le gusta qué?",
+        "support": "¿Te gusta…? / ¿Te gustan…? / A Ana le gusta…, pero a Leo no."
+      },
+      {
+        "prompt": "Ampliación A2. Imagina que llegas a casa después de un día muy largo. Explica qué te duele.",
+        "followUp": "¿Qué haces cuando te duele la cabeza?",
+        "support": "Me duele… / Me duelen… / Cuando me duele la cabeza, …"
+      }
+    ],
+    "writing": {
+      "prompt": "Escribe un mensaje para buscar compañero o compañera de casa. Cuenta qué te gusta, qué te encanta y qué no te gusta. Termina con una pregunta.",
+      "words": [35, 55],
+      "model": "Hola, soy Inés. Busco compañera de casa. Me gusta cocinar y me encantan los gatos: tengo dos. No me gustan las fiestas en casa, pero me gusta mucho salir los viernes. Los domingos me interesa ir a museos. ¿Y a ti qué te gusta?",
+      "checklist": [
+        "Uso gusta con singular o infinitivo y gustan con plural.",
+        "Uso encantar o interesar como gustar.",
+        "Termino con una pregunta con te gusta o te gustan."
+      ]
+    },
+    "closing": {
+      "prompt": "Sin mirar, explica por qué se dice «me gustan los perros» y no «me gusta los perros». Después, reacciona a «No me gusta el frío» con acuerdo.",
+      "model": "El verbo concuerda con los perros, que son plural. Acuerdo con una frase negativa: «A mí tampoco»."
+    }
+  }
+}
