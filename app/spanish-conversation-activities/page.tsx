@@ -163,7 +163,7 @@ export default function ConversationActivitiesHub() {
             title="Open a complete conversation lesson before you decide anything."
             copy="MÉXICO and ESTADOS UNIDOS are full interactive conversation worlds, free and without a card. PRO unlocks the whole library for one monthly Founder price."
             primary={{ href: "/mexico", label: "Open MÉXICO free" }}
-            secondary={{ href: "/pricing", label: "See Free and PRO" }}
+            secondary={{ href: "/lp/spanish-teacher-resources", label: "Explore all PRO lessons" }}
           />
         </div>
       </main>
