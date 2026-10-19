@@ -116,7 +116,7 @@ export default function ConversationActivitiesHub() {
           <Section id="library" title={`Conversation worlds in the SpanishCue library (${catalogSummary.conversation} in total)`} intro="Visual scenarios, choice games, negotiations, dilemmas and night-time cities, each with authored objectives per level. PRO lessons open a public preview page first.">
             <LessonGrid lessons={libraryLessons} />
             <p className={styles.footnote}>
-              Browse all {catalogSummary.total} lessons in the <Link className={styles.textLink} href="/resources">lesson library</Link>, or see <Link className={styles.textLink} href="/pricing">what PRO includes</Link>.
+              Browse all {catalogSummary.total} lessons in the <Link className={styles.textLink} href="/resources">lesson library</Link>, or see <Link className={styles.textLink} href="/lp/spanish-teacher-resources">what PRO includes</Link>.
             </p>
           </Section>
 
