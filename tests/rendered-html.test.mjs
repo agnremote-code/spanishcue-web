@@ -101,7 +101,15 @@ test('robots.txt and sitemap.xml expose the organic architecture and nothing pri
  for(const path of ['/spanish-teacher-resources','/spanish-conversation-activities','/spanish-conversation-activities/a1','/spanish-conversation-activities/c2','/spanish-conversation-questions','/resources','/guides','/autoestudio','/autoestudio/a1','/mexico','/pricing']){
   assert.match(xml,new RegExp(`<loc>https://spanishcue\\.com${path.replace(/\//g,'\\/')}</loc>`),path);
  }
- assert.doesNotMatch(xml,/\?lang=/);assert.doesNotMatch(xml,/spanishcue\.com\/(?:lp|zeely|acceso|ingresar|cuenta|pro)\b/);
+ assert.doesNotMatch(xml,/\?lang=/);
+ const purchasePaths=new Set(['/lp/spanish-teacher-resources','/lp/online-spanish-teaching-resources']);
+ const locations=[...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m=>m[1]);
+ for(const url of locations){
+  const path=new URL(url).pathname;
+  assert.doesNotMatch(path,/^\/(?:zeely|acceso|ingresar|cuenta|pro)(?:\/|$)/);
+  if(path.startsWith('/lp/'))assert.ok(purchasePaths.has(path),path);
+ }
+ for(const path of purchasePaths)assert.ok(locations.includes('https://spanishcue.com'+path),path);
 });
 
 test('private, campaign and tooling surfaces carry noindex in the header and the HTML',async()=>{
