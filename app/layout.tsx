@@ -5,6 +5,7 @@ import "./immersive/immersive.css";
 import ProDiscovery from "./immersive/ProDiscovery";
 import "./special.css";
 import "./spanishcue-brand.css";
+import "./sc-logo-global.css";
 import "./acceso/style.css";
 import "./marketing/marketing.css";
 import "./marketing/free-lesson-gate.css";
@@ -69,8 +70,8 @@ export async function generateMetadata(): Promise<Metadata> {
       images: [socialPreviewUrl],
     },
     icons: {
-      icon: "/favicon.svg",
-      shortcut: "/favicon.svg",
+      icon: "/spanishcue-monogram.svg",
+      shortcut: "/spanishcue-monogram.svg",
     },
     manifest: "/manifest.webmanifest",
     robots: isSearchPrivatePath(pathname)
