@@ -14,6 +14,9 @@
 .na-tools { margin-left: auto; display: flex; gap: 8px; flex: none; }
 .na-tool { min-height: 44px; min-width: 44px; padding: 0 14px; border: 1px solid #333d48; border-radius: 10px; background: transparent; color: var(--na-cream); font-size: 14px; font-weight: 650; }
 .na-tool[aria-pressed="true"], .na-tool[aria-expanded="true"] { background: var(--na-amber); border-color: var(--na-amber); color: #2a1a08; }
+.na-tool-reset { display: inline-flex; align-items: center; justify-content: center; gap: 6px; }
+.na-tool-reset > span:first-child { font-size: 21px; line-height: 1; }
+@media (max-width: 760px) { .na-reset-label { display: none; } }
 
 .na-stage { position: relative; flex: none; min-height: 560px; height: calc(100svh - 56px); overflow: hidden; background: #111a23; }
 .na-scroll { position: absolute; inset: 0; }
@@ -250,7 +253,7 @@
 .na-criteria button[aria-pressed="true"] { background: #3b5a3d88; border-color: #6f9a6a; }
 .na-end { border-top: 1px solid #ffffff14; padding-top: 12px; }
 
-.na-desk { display: grid; grid-template-columns: 1.4fr 1fr 1fr auto; gap: 24px; align-items: start; padding: 20px 24px 26px; background: #0b1016; border-top: 1px solid #222a33; font-size: 14px; }
+.na-desk { position: fixed; z-index: 35; top: 68px; left: 20px; right: 20px; max-height: calc(100svh - 82px); overflow: auto; display: grid; grid-template-columns: 1.4fr 1fr 1fr auto; gap: 24px; align-items: start; padding: 20px 24px 26px; background: #0b1016; border: 1px solid #333d48; border-radius: 16px; box-shadow: 0 24px 80px #000c; font-size: 14px; }
 .na-desk ol { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
 .na-desk ol li { display: grid; gap: 4px; padding: 10px; border-radius: 10px; background: #151c24; color: #b9ad9b; }
 .na-desk ol li b { color: var(--na-cream); }
@@ -308,7 +311,7 @@
   .na-event { padding: 18px; }
   .na-event h2, .na-final h2 { font-size: 24px; }
   .na-row > * { flex: 1 1 auto; }
-  .na-desk { padding: 16px; grid-template-columns: 1fr; }
+  .na-desk { top: auto; bottom: 0; left: 0; right: 0; max-height: calc(100svh - 64px); padding: 16px; grid-template-columns: 1fr; border-radius: 18px 18px 0 0; }
   .na-desk ol { grid-template-columns: 1fr 1fr; }
   .na-card kbd { display: none; }
   .na-options kbd { display: grid; }
