@@ -72,7 +72,7 @@ export function isEnglishDefaultPath(pathname: string): boolean {
 }
 
 /**
- * Account, checkout, admin, API, campaign-only and tooling surfaces: served
+ * Account, checkout, admin, API, most campaign and tooling surfaces: served
  * normally, but excluded from search results with `noindex`.
  */
 export function isSearchPrivatePath(pathname: string): boolean {
