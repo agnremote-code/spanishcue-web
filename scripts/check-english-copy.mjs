@@ -94,6 +94,7 @@ export const APPROVAL_MANIFESTS = [
   'docs/audits/library-level-pairs-english-additions-20261016.json',
   'docs/audits/3d-a0-a1-english-additions-20261016.json',
   'docs/audits/3d-freemium-english-additions-20261016.json',
+  'docs/audits/seo-commercial-intent-english-additions-20261019.json',
 ];
 export function loadApprovedAdditions(root) {
   return APPROVAL_MANIFESTS.flatMap(path => {

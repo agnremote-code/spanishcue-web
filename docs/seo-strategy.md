@@ -24,8 +24,8 @@ Every organic page therefore carries: a free lesson CTA (real, complete lesson, 
 
 Why this wins the category instead of "teaching resources" generically:
 
-- Competitors in the English SERPs are static: TpT-seller blogs (World Language Cafe, Srta Spanish, Señora Q, Mis Clases Locas, La Libre, Secondary Spanish Space), learner-facing sites repurposed for teachers (FluentU, Spanish Academy, Lingoda, Preply/italki blogs, Real Life Language, Verbalicity) and marketplaces (TpT, TES, Teacher's Discovery). They publish listicles and printables; none ships an interactive lesson the reader can open and teach.
-- Almost none of them structures content by CEFR level. Their audience is K-12 and US high school ("Spanish 1/2/3"); SpanishCue's audience is teachers and tutors of teenagers and adults who think in A1–C2.
+- The teacher-resource category is competitive and not exclusively static. Lesson Here (lessonhere.com) markets an interactive ELE library at A1–C1, ELETUTOR (eletutor.com) offers printable and interactive materials, and Linguas (linguas.org/resources/teachers) publishes step-by-step lesson plans. Do not claim that competing sites have no interactive experiences. These are product-positioning examples, not verified keyword ranking positions.
+- Differentiate SpanishCue using actual product evidence: immersive 3D decision-based teaching worlds, reusable browser-based lessons, direct screen sharing, and clearly authored CEFR pathways including C2 where available. Target teachers and online tutors of teenagers and adults rather than attempting to rank for every beginner learner query.
 - Their content mixes learner intent ("how to say…") with teacher intent. SpanishCue pages are only for teachers.
 - The product itself is the proof: a page about B1 conversation can show a real B1 conversation world, free.
 
@@ -338,3 +338,23 @@ Measurement:
 - Every event now carries `audience` = `teacher` | `student` (page first, then the last choice in the tab; teacher by default). Register it as an event-scoped custom dimension in GA4 to segment reports.
 - Teacher checkout and purchase stay the existing contract: `checkout_start` (one per opened checkout) and the server-verified `trial_purchase` / `first_subscription_payment` (the only Google Ads purchase). `teacher_checkout_started` / `teacher_purchase_completed` are those events filtered by `audience = teacher`; no duplicate events were added. A learner purchase event will exist only with a learner checkout.
 - Campaign naming: `utm_campaign` starts with `teacher_` for teacher campaigns and `student_` for future learner campaigns; organic traffic has no UTM. Teacher ads keep pointing at `/lp/*` or `/para-profesores`; learner ads, when they exist, point at `/aprender-espanol`.
+
+## 2026-10-19: commercial-intent landing differentiation
+
+The two indexable purchase routes are not interchangeable campaigns. They now use
+distinct search-result titles and have unique, server-rendered teaching workflows:
+
+- `/lp/spanish-teacher-resources`: broad interactive Spanish lesson resources
+  for teachers; links to the teacher hub, grammar hub and lesson previews.
+- `/lp/online-spanish-teaching-resources`: video-call teaching intent for
+  one-to-one tutors; links to the online teaching guide and student self-study.
+
+The growth-page navigation and conversation/grammar hubs now link explicitly
+to the primary purchase landing. This complements the already merged sitemap
+and noindex changes in PR #228. Avoid mass-producing near-identical landing
+pages: Google's canonical selection, indexing and page-one ranking remain
+discretionary and require Search Console evidence after deployment.
+
+**Verification**: CI regression checks, live response headers and rendered HTML,
+then Search Console URL Inspection and query/page data after recrawling.
+Sitemap priority values are crawl hints, not ranking signals.

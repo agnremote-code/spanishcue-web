@@ -19,7 +19,7 @@ const topLinks: { href: string; label: string }[] = [
   { href: "/resources", label: "Lesson library" },
   { href: "/guides", label: "Guides" },
   { href: "/about", label: "About" },
-  { href: "/pricing", label: "Pricing" },
+  { href: "/lp/spanish-teacher-resources", label: "Get PRO" },
 ];
 
 export function GrowthTopbar({ current }: { current?: string }) {

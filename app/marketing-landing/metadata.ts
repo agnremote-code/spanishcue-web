@@ -21,7 +21,21 @@ export async function generateLandingMetadata(config: LandingConfig, options: La
   // The UI language toggle (`?lang=`) never produces a second canonical URL.
   const canonical = canonicalUrl(pathname);
   const languages = index ? languageAlternates(pathname) : undefined;
-  const title = `${copy.kicker.toLowerCase().replace(/(^|\s)\S/g, (letter) => letter.toUpperCase())} | SPANISHCUE`;
+  // Search-specific commercial titles describe the two distinct buyer intents
+  // instead of reusing a generic campaign kicker in organic search results.
+  const purchaseTitles = {
+    en: {
+      "spanish-teacher-resources": "Interactive Spanish Lessons for Teachers | SPANISHCUE PRO",
+      "online-spanish-teaching-resources": "Online Spanish Teaching Resources for Tutors | SPANISHCUE PRO",
+    },
+    es: {
+      "spanish-teacher-resources": "Clases interactivas para profesores de español | SPANISHCUE PRO",
+      "online-spanish-teaching-resources": "Recursos para enseñar español online | SPANISHCUE PRO",
+    },
+  } as const;
+  const title = pathname.startsWith("/lp/") && isPaidLandingSlug(config.slug)
+    ? purchaseTitles[locale][config.slug]
+    : `${copy.kicker.toLowerCase().replace(/(^|\s)\S/g, (letter) => letter.toUpperCase())} | SPANISHCUE`;
   const description = pathname.startsWith("/lp/") && isPaidLandingSlug(config.slug)
     ? paidCopy[locale].lead[config.slug]
     : copy.lead;
