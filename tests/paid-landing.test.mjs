@@ -4,10 +4,11 @@ import { readFileSync, existsSync, statSync } from 'node:fs';
 
 const read = path => readFileSync(new URL(`../${path}`, import.meta.url), 'utf8');
 
-test('Meta/Zeely landings render the paid template and keep noindex campaign metadata', () => {
+test('purchase landings render the paid template and use indexable metadata while other campaigns stay noindex', () => {
   const page = read('app/lp/[slug]/page.tsx');
   assert.match(page, /isPaidLandingSlug\(slug\)\) return <PaidLanding/);
-  assert.match(page, /index: false/);
+  assert.match(page, /index: isPaidLandingSlug\(slug\)/);
+  assert.match(page, /if \(isPaidLandingSlug\(slug\)\) return <PaidLanding/);
   const copy = read('app/marketing-landing/paid-copy.ts');
   assert.match(copy, /paidLandingSlugs = \['spanish-teacher-resources', 'online-spanish-teaching-resources'\]/);
   assert.match(copy, /titleLead: 'Stop building slides\.'/);

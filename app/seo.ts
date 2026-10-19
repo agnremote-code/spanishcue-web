@@ -72,7 +72,7 @@ export function isEnglishDefaultPath(pathname: string): boolean {
 }
 
 /**
- * Account, checkout, admin, API, campaign-only and tooling surfaces: served
+ * Account, checkout, admin, API, most campaign and tooling surfaces: served
  * normally, but excluded from search results with `noindex`.
  */
 export function isSearchPrivatePath(pathname: string): boolean {
@@ -96,7 +96,7 @@ export function isSearchPrivatePath(pathname: string): boolean {
     path === "/autoestudio/claim" ||
     path.startsWith("/autoestudio/clase/") ||
     path === "/zeely" ||
-    isCampaignPath(path)
+    (isCampaignPath(path) && !isIndexablePurchaseLandingPath(path))
   );
 }
 
@@ -137,7 +137,17 @@ export function redirectsLanguageQuery(pathname: string): boolean {
   return !isSearchPrivatePath(pathname);
 }
 
-/** Ad-only landing variants (`/lp/*`): noindex, but links may be followed. */
+/** Two owner-selected purchase landings are public; other /lp routes stay noindex. */
+export const indexedPurchaseLandingPaths = [
+  "/lp/spanish-teacher-resources",
+  "/lp/online-spanish-teaching-resources",
+] as const;
+
+export function isIndexablePurchaseLandingPath(pathname: string): boolean {
+  return (indexedPurchaseLandingPaths as readonly string[]).includes(normalizePathname(pathname));
+}
+
+/** Campaign variants (`/lp/*`), excluding the two indexable purchase landings. */
 export function isCampaignPath(pathname: string): boolean {
   const path = normalizePathname(pathname);
   return path === "/lp" || path.startsWith("/lp/");
@@ -149,6 +159,7 @@ export function isCampaignPath(pathname: string): boolean {
  * crawlers at the indexable hubs.
  */
 export function robotsHeaderFor(pathname: string): string | null {
+  if (isIndexablePurchaseLandingPath(pathname)) return null;
   if (isCampaignPath(pathname)) return "noindex, follow";
   if (isSearchPrivatePath(pathname)) return "noindex, nofollow";
   return null;

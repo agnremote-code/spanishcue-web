@@ -30,7 +30,15 @@ test('grammar descendants reject unknown or unsupported planning pages with HTTP
 test('the sitemap includes all Phase 2 pages without private or parameter variants',async()=>{
  const response=await fetch(origin+'/sitemap.xml');assert.equal(response.status,200);const xml=await response.text();
  for(const path of paths)assert.ok(xml.includes('<loc>https://spanishcue.com'+path+'</loc>'),path);
- assert.doesNotMatch(xml,/<loc>[^<]*(?:\?|\/lp\/|\/cuenta|\/admin|\/s\/)/);
+ const locations=[...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map(match=>match[1]);
+ const purchasePaths=new Set(['/lp/spanish-teacher-resources','/lp/online-spanish-teaching-resources']);
+ for(const url of locations){
+  const path=new URL(url).pathname;
+  assert.doesNotMatch(url,/\?/);
+  assert.ok(!/^(?:\/cuenta|\/admin|\/s\/)/.test(path),path);
+  if(path.startsWith('/lp/'))assert.ok(purchasePaths.has(path),path);
+ }
+ for(const path of purchasePaths)assert.ok(locations.includes('https://spanishcue.com'+path),path);
 });
 test('proof is clearly attributed to teaching practice rather than product ratings',async()=>{
  const dom=new JSDOM(await (await fetch(origin+'/about')).text());const d=dom.window.document;

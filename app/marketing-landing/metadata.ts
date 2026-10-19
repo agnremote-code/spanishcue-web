@@ -2,13 +2,14 @@ import type { Metadata } from "next";
 import { headers } from "next/headers";
 import { localeFromHeaders } from "../i18n/messages";
 import type { LandingConfig } from "./config";
+import { isPaidLandingSlug, paidCopy } from "./paid-copy";
 import { socialPreviewImage, socialPreviewUrl } from "../social-preview";
 import { canonicalUrl, languageAlternates } from "../seo";
 
 type LandingMetadataOptions = {
   /** Public path of the page being rendered; defaults to `/${config.slug}`. */
   pathname?: string;
-  /** Campaign-only variants (`/lp/*`) are served but never indexed. */
+  /** Only the two approved purchase /lp variants set this true; other campaigns remain noindex. */
   index?: boolean;
 };
 
@@ -21,7 +22,9 @@ export async function generateLandingMetadata(config: LandingConfig, options: La
   const canonical = canonicalUrl(pathname);
   const languages = index ? languageAlternates(pathname) : undefined;
   const title = `${copy.kicker.toLowerCase().replace(/(^|\s)\S/g, (letter) => letter.toUpperCase())} | SPANISHCUE`;
-  const description = copy.lead;
+  const description = pathname.startsWith("/lp/") && isPaidLandingSlug(config.slug)
+    ? paidCopy[locale].lead[config.slug]
+    : copy.lead;
   return {
     title,
     description,

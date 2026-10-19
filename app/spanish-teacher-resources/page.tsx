@@ -71,8 +71,9 @@ export default function SpanishTeacherResourcesPage() {
               conversation activities by level, {conversationQuestions.length} graded questions and {teachingGuides.length} teaching guides. Choose a lesson, open it in the browser, teach.
             </p>
             <div className={styles.heroActions}>
-              <Link className={styles.primaryButton} href="/free-spanish-lesson">Open a free lesson</Link>
-              <Link className={styles.secondaryButton} href="/resources">Browse the lesson library</Link>
+              <Link className={styles.primaryButton} href="/lp/spanish-teacher-resources">Explore SpanishCue PRO and subscribe</Link>
+              <Link className={styles.secondaryButton} href="/free-spanish-lesson">Open a free lesson</Link>
+              <Link className={styles.secondaryButton} href="/lp/online-spanish-teaching-resources">PRO for online Spanish tutors</Link>
             </div>
           </section>
 

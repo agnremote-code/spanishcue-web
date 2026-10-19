@@ -51,10 +51,14 @@ test("private, campaign and tooling paths are noindex while public pages are not
   for (const path of ["/ingresar", "/cuenta", "/acceso", "/pro", "/pro/success", "/admin", "/admin/reportes", "/api/progress", "/auth/action", "/demo/mis-alumnos", "/s/token", "/autoestudio/claim", "/zeely", "/lp", "/lp/spanish-grammar-lessons", "/acceso/"]) {
     assert.equal(mod.isSearchPrivatePath(path), true, path);
   }
-  for (const path of ["/", "/pricing", "/resources", "/resources/x", "/guides/x", "/spanish-conversation-activities", "/spanish-conversation-activities/b1", "/spanish-conversation-questions", "/spanish-teacher-resources", "/autoestudio", "/autoestudio/a1", "/autoestudio/a1/semana-1", "/mexico", "/sistema-verbal", "/privacy"]) {
+  for (const path of ["/", "/pricing", "/resources", "/resources/x", "/guides/x", "/spanish-conversation-activities", "/spanish-conversation-activities/b1", "/spanish-conversation-questions", "/spanish-teacher-resources", "/lp/spanish-teacher-resources", "/lp/online-spanish-teaching-resources", "/autoestudio", "/autoestudio/a1", "/autoestudio/a1/semana-1", "/mexico", "/sistema-verbal", "/privacy"]) {
     assert.equal(mod.isSearchPrivatePath(path), false, path);
   }
   assert.equal(mod.robotsHeaderFor("/lp/spanish-conversation-activities"), "noindex, follow");
+  for (const path of ["/lp/spanish-teacher-resources", "/lp/online-spanish-teaching-resources"]) {
+    assert.equal(mod.isSearchPrivatePath(path), false, path);
+    assert.equal(mod.robotsHeaderFor(path), null, path);
+  }
   assert.equal(mod.robotsHeaderFor("/acceso"), "noindex, nofollow");
   assert.equal(mod.robotsHeaderFor("/api/billing/checkout"), "noindex, nofollow");
   assert.equal(mod.robotsHeaderFor("/spanish-conversation-activities/a1"), null);
@@ -105,6 +109,7 @@ test("the sitemap lists clean, public, deduplicated URLs covering the organic ar
     ...mod.conversationLevels.map((level) => level.path),
     "/resources", "/guides", "/autoestudio", ...mod.autoestudioLevelPaths, "/autoestudio/a1/semana-1",
     "/spanish-grammar-lessons", "/ele-recursos-profesores", "/free-spanish-lesson", "/online-spanish-teaching-resources", "/sistema-verbal",
+    "/lp/spanish-teacher-resources", "/lp/online-spanish-teaching-resources",
   ];
   for (const path of expected) assert.ok(urls.includes(`https://spanishcue.com${path}`), path);
   for (const lesson of mod.lessons.filter((item) => mod.isFreeLesson(item.id))) {
@@ -117,7 +122,7 @@ test("the sitemap lists clean, public, deduplicated URLs covering the organic ar
     assert.ok(entry, guide.slug);
     assert.match(String(entry.lastModified), /^\d{4}-\d{2}-\d{2}$/);
   }
-  assert.ok(!urls.some((url) => /\/(?:lp|zeely|acceso|ingresar|cuenta|pro|admin|api)(?:\/|$)/.test(new URL(url).pathname)));
+  assert.ok(!urls.some((url) => mod.isSearchPrivatePath(new URL(url).pathname)));
 });
 
 test("the conversation cluster has six ordered levels with search-friendly metadata and complete content", () => {
@@ -181,14 +186,14 @@ test("the question bank is large, graded, unique and tagged with known topics", 
   for (const topic of topics) assert.ok(questions.some((question) => question.topic === topic), `${topic} unused`);
 });
 
-test("campaign variants exist for every landing config and only under the noindex /lp prefix", () => {
+test("campaign variants are noindex except the two indexable purchase landings", () => {
   assert.ok(existsSync("app/lp/[slug]/page.tsx"));
   for (const slug of Object.keys(mod.landingConfigs)) {
     assert.equal(mod.isCampaignPath(`/lp/${slug}`), true, slug);
     assert.equal(mod.isSearchPrivatePath(`/${slug}`), false, slug);
   }
   const page = read("app/lp/[slug]/page.tsx");
-  assert.match(page, /index: false/);
+  assert.match(page, /index: isPaidLandingSlug\(slug\)/);
   assert.match(page, /pathname: `\/lp\/\$\{slug\}`/);
 });
 

@@ -18,14 +18,16 @@ export const autoestudioLevelPaths = ["a1", "a2", "b1", "b2", "c1", "c2"].map((l
 
 /**
  * Hand-curated public routes with their crawl priority. Only clean, canonical
- * URLs appear here: no `?lang=` variants, no campaign (/lp) pages, nothing
- * that carries noindex.
+ * URLs appear here: no `?lang=` variants, only the two explicitly indexable
+ * purchase landings under /lp, and nothing that carries noindex.
  */
 const curatedRoutes: { path: string; priority: number; changeFrequency: Frequency }[] = [
   { path: "/", priority: 1, changeFrequency: "weekly" },
   { path: "/para-profesores", priority: 0.9, changeFrequency: "monthly" },
   { path: "/aprender-espanol", priority: 0.8, changeFrequency: "monthly" },
   { path: "/spanish-teacher-resources", priority: 0.9, changeFrequency: "weekly" },
+  { path: "/lp/spanish-teacher-resources", priority: 0.95, changeFrequency: "weekly" },
+  { path: "/lp/online-spanish-teaching-resources", priority: 0.95, changeFrequency: "weekly" },
   { path: CONVERSATION_HUB_PATH, priority: 0.9, changeFrequency: "weekly" },
   ...conversationLevels.map((level) => ({ path: level.path, priority: 0.8, changeFrequency: "monthly" as Frequency })),
   { path: CONVERSATION_QUESTIONS_PATH, priority: 0.8, changeFrequency: "monthly" },
