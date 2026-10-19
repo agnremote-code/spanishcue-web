@@ -7,10 +7,9 @@ import { landingConfigs, type LandingSlug } from "../../marketing-landing/config
 import { generateLandingMetadata } from "../../marketing-landing/metadata";
 
 /**
- * Campaign-only landing variants for Meta, Zeely and Google Ads. They reuse
- * the conversion-first MarketingLanding template under /lp/<slug>, carry
- * `noindex, follow` and a self-referencing canonical (UTM parameters never
- * create new URLs), and leave the clean /<slug> URLs to the indexable hubs.
+ * Two conversion-first purchase landings are indexable with self canonicals;
+ * other campaign-only /lp variants remain noindex, follow. UTM parameters
+ * never create a second indexable URL. The clean /<slug> SEO hubs are retained.
  */
 type CampaignPageProps = { params: Promise<{ slug: string }> };
 
@@ -21,7 +20,7 @@ function isLandingSlug(slug: string): slug is LandingSlug {
 export async function generateMetadata({ params }: CampaignPageProps): Promise<Metadata> {
   const { slug } = await params;
   if (!isLandingSlug(slug)) return {};
-  return generateLandingMetadata(landingConfigs[slug], { pathname: `/lp/${slug}`, index: false });
+  return generateLandingMetadata(landingConfigs[slug], { pathname: `/lp/${slug}`, index: isPaidLandingSlug(slug) });
 }
 
 export default async function CampaignLandingPage({ params }: CampaignPageProps) {
