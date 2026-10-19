@@ -66,15 +66,15 @@ Clusters in priority order. Volume labels are directional (from SERP research on
 /pricing, legal pages, free lesson routes
 ```
 
-Not indexable (`noindex` in metadata + `X-Robots-Tag`, never robots.txt): `/ingresar`, `/cuenta`, `/acceso`, `/pro/*`, `/admin/*`, `/api/*`, `/auth/*`, `/demo/*`, `/s/*`, `/autoestudio/claim`, `/zeely`, `/lp/*`. PRO lesson routes redirect anonymous visitors to `/acceso`, so their public representation is the `/resources/{slug}` page.
+Not indexable (`noindex` in metadata + `X-Robots-Tag`, never robots.txt): `/ingresar`, `/cuenta`, `/acceso`, `/pro/*`, `/admin/*`, `/api/*`, `/auth/*`, `/demo/*`, `/s/*`, `/autoestudio/claim`, `/zeely`, and `/lp/*` except `/lp/spanish-teacher-resources` and `/lp/online-spanish-teaching-resources` (these are publicly indexable paid-conversion pages). PRO lesson routes redirect anonymous visitors to `/acceso`, so their public representation is the `/resources/{slug}` page.
 
 ### Canonical and language rules
 
-1. Exactly one canonical per page: the clean apex URL without query string (`canonicalUrl` in `app/seo.ts`). `?lang=` switches the UI language and stores a cookie; it never creates a second indexable URL. Since 2026-10-14 the Worker also answers a GET/HEAD with `?lang=` on any indexable page with a 301 to the same URL without that parameter (other parameters kept, cookie set), because Search Console listed `?lang=en` copies next to the clean URLs; `/ingresar`, `/acceso`, `/auth/*`, `/lp/*` and the other noindex surfaces keep the parameter (`redirectsLanguageQuery`). `www.spanishcue.com` and plain `http://` are normalized to `https://spanishcue.com` in one hop by the Worker before any route handling (308, covered by `tests/teacher-access.test.mjs`).
+1. Exactly one canonical per page: the clean apex URL without query string (`canonicalUrl` in `app/seo.ts`). `?lang=` switches the UI language and stores a cookie; it never creates a second indexable URL. Since 2026-10-14 the Worker also answers a GET/HEAD with `?lang=` on any indexable page with a 301 to the same URL without that parameter (other parameters kept, cookie set), because Search Console listed `?lang=en` copies next to the clean URLs; `/ingresar`, `/acceso`, `/auth/*`, the non-indexable `/lp/*` variants and other noindex surfaces keep the parameter (`redirectsLanguageQuery`). `www.spanishcue.com` and plain `http://` are normalized to `https://spanishcue.com` in one hop by the Worker before any route handling (308, covered by `tests/teacher-access.test.mjs`).
 2. hreflang only for real pairs declared in `languagePairs`: two distinct URLs carrying the same content in two languages. The list is empty on 2026-10-07; `/ele-recursos-profesores` (campaign landing) is not a translation of `/spanish-teacher-resources` (content hub). Never emit hreflang to a `?lang=` variant.
 3. The default UI language of English organic surfaces is English (`isEnglishDefaultPath`): `/resources*`, `/guides*`, `/spanish-*`, `/online-spanish-teaching-resources`, `/free-spanish-lesson`, `/lp/*` (except the Spanish landing).
 4. robots.txt disallows `/api/` only. Anything excluded from search must stay crawlable so Google can read the noindex.
-5. Sitemap: clean URLs only, no parameters, no noindex pages, `lastModified` only where it is truthful (guides). Generated in `app/sitemap.ts`.
+5. Sitemap: clean URLs only, no parameters, no noindex pages, `lastModified` only where it is truthful (guides). The two indexable `/lp/` purchase URLs have high internal sitemap priority (a crawl hint, not a ranking guarantee). Generated in `app/sitemap.ts`.
 
 ### Campaign landings (Meta, Zeely, Google Ads)
 
