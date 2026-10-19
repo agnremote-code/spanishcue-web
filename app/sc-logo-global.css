@@ -1,0 +1,4 @@
+/* Shared SC identity for all site routes, marketing pages and immersive lessons. */
+.sc-brand-system .sc-monogram{background:center/contain no-repeat url('/spanishcue-monogram.svg')!important;}
+.sc-brand-system .sc-monogram>*{display:none!important;}
+.sc-wordmark>img,.sc-brand-system .sc-brand-mascot{content:url('/spanishcue-monogram.svg');object-fit:contain;}
