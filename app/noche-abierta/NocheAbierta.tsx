@@ -297,11 +297,12 @@ export default function NocheAbierta({ initial }: { initial?: NightState }) {
       </p>}
       {street.item && state.phase !== 'llegada' && !in3d && <p className="na-inv is-header" title={itemById(street.item)?.name}><ItemIcon id={street.item} size={18} /><span>{itemById(street.item)?.short}</span></p>}
       <nav className="na-tools" aria-label="Herramientas de la clase">
+        {state.phase !== 'llegada' && <button type="button" className="na-tool na-tool-reset" onClick={() => setConfirmReset(true)} title="Volver a la presentación inicial de Noche abierta"><span aria-hidden="true">↶</span><span className="na-reset-label">Inicio</span></button>}
         {canUse3d && <button type="button" className="na-tool" onClick={switchView} aria-label={view === 'map' ? 'Ver el barrio en 3D' : 'Ver el mapa en 2D'}>{view === 'map' ? '3D' : '2D'}</button>}
         {state.phase !== 'llegada' && state.phase !== 'cierre' && <button type="button" className="na-tool" aria-expanded={placesOpen} aria-controls="na-places" onClick={() => setPlacesOpen(value => !value)}>Lugares</button>}
         {state.phase !== 'llegada' && level !== 'A0' && <button type="button" className="na-tool" aria-pressed={listening} onClick={() => setMode(listening ? 'conversacion' : 'escucha')} title="Comprensión auditiva">Escucha</button>}
         <button type="button" className="na-tool" aria-pressed={voices} onClick={toggleVoices} title={voices ? 'Los personajes hablan en voz alta. Toca para silenciarlos.' : 'Voces apagadas. Toca para que los personajes hablen.'}>Voces</button>
-        <button type="button" className="na-tool" aria-pressed={teacher} onClick={() => setTeacher(value => !value)}>Profe</button>
+        <button type="button" className="na-tool" aria-pressed={teacher} aria-expanded={teacher} aria-controls="na-profe-panel" onClick={() => setTeacher(value => !value)}>Profe</button>
       </nav>
     </header>
 
@@ -686,7 +687,7 @@ function TeacherDesk({ state, street, onTrigger, onReset, onItem }: { state: Nig
   const canTrigger = !state.event && state.phase !== 'cierre' && state.phase !== 'llegada';
   const now = state.phase === 'encuentro' || state.phase === 'ciudad' ? 'exploracion' : state.phase;
   const level: Level = isLevel(state.level) ? state.level : DEFAULT_LEVEL;
-  return <aside className="na-desk" aria-label="Plan del profe">
+  return <aside id="na-profe-panel" className="na-desk" aria-label="Plan del profe">
     <div className="na-desk-level">
       <p className="na-teacher-title">Nivel activo · {level}</p>
       <p><b>{LEVEL_INFO[level].name}.</b> <Bi text={LEVEL_INFO[level].demand} /></p>
