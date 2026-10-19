@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "authorization": "Owner request of 2026-10-19: improve SpanishCue organic Google indexation and first-page visibility, prioritizing commercial searches for teachers and online tutors. This manifest records only the 18 exact new English copy literals in the two purchase pages. No preexisting English copy was changed or deleted.",
+  "additions": [
+    {
+      "path": "app/marketing-landing/metadata.ts",
+      "text": "Interactive Spanish Lessons for Teachers | SPANISHCUE PRO"
+    },
+    {
+      "path": "app/marketing-landing/metadata.ts",
+      "text": "Online Spanish Teaching Resources for Tutors | SPANISHCUE PRO"
+    },
+    {
+      "path": "app/marketing-landing/PaidLanding.tsx",
+      "text": "Ready-to-teach interactive Spanish lessons for teachers"
+    },
+    {
+      "path": "app/marketing-landing/PaidLanding.tsx",
+      "text": "SpanishCue is a browser-based alternative to disconnected printable worksheets and slide decks. Explore complete classroom sequences that link a clear objective to guided practice and meaningful speaking."
+    },
+    {
+      "path": "app/marketing-landing/PaidLanding.tsx",
+      "text": "Choose by teaching level, from A1 foundations to advanced C2 practice, and by skill: grammar, conversation, listening, pronunciation or vocabulary."
+    },
+    {
+      "path": "app/marketing-landing/PaidLanding.tsx",
+      "text": "Start with a real free lesson. Interactive worlds, audio stories and visual decisions provide a reusable classroom sequence rather than isolated questions."
+    },
+    {
+      "path": "app/marketing-landing/PaidLanding.tsx",
+      "text": "Use the public lesson previews to check the objective before choosing full PRO library access."
+    },
+    {
+      "path": "app/marketing-landing/PaidLanding.tsx",
+      "text": "Browse Spanish teacher resources"
+    },
+    {
+      "path": "app/marketing-landing/PaidLanding.tsx",
+      "text": "Explore grammar activities"
+    },
+    {
+      "path": "app/marketing-landing/PaidLanding.tsx",
+      "text": "Preview the lesson library"
+    },
+    {
+      "path": "app/marketing-landing/PaidLanding.tsx",
+      "text": "Online Spanish teaching resources for tutors on Zoom, Meet and Preply"
+    },
+    {
+      "path": "app/marketing-landing/PaidLanding.tsx",
+      "text": "Instead of juggling slides, PDFs and question lists during a video call, open one SpanishCue lesson in the browser and share your screen. The student sees the same prompts while you guide the conversation."
+    },
+    {
+      "path": "app/marketing-landing/PaidLanding.tsx",
+      "text": "Before a one-to-one lesson: select the learner’s CEFR level and a speaking or grammar objective from the lesson previews."
+    },
+    {
+      "path": "app/marketing-landing/PaidLanding.tsx",
+      "text": "During the video call: screen-share a 3D scenario, audio activity or step-by-step grammar classroom and use the built-in prompts to keep the learner speaking."
+    },
+    {
+      "path": "app/marketing-landing/PaidLanding.tsx",
+      "text": "Between lessons: point learners to Autoestudio, the separate week-by-week Spanish self-study course, with free introductory weeks."
+    },
+    {
+      "path": "app/marketing-landing/PaidLanding.tsx",
+      "text": "Explore online tutoring resources"
+    },
+    {
+      "path": "app/marketing-landing/PaidLanding.tsx",
+      "text": "Read the online teaching guide"
+    },
+    {
+      "path": "app/marketing-landing/PaidLanding.tsx",
+      "text": "See the student self-study course"
+    }
+  ]
+}
