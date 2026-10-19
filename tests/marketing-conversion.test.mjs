@@ -158,7 +158,7 @@ test("search landings, including a dedicated free demo, and crawl controls are i
   }
   const campaign = await source("app/lp/[slug]/page.tsx");
   assert.match(campaign, /MarketingLanding/);
-  assert.match(campaign, /index: false/);
+  assert.match(campaign, /index: isPaidLandingSlug\(slug\)/);
   assert.match(landing, /freeLessonIds\.length/);
   assert.match(landing, /landing-product-float/);
   assert.match(pricing, /FOUNDING TEACHERS/);
