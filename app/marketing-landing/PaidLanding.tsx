@@ -67,7 +67,7 @@ export default async function PaidLanding({ config, slug, pathname }: { config: 
    },
    es: {
     title: 'Recursos para dar clases particulares de español online',
-    intro: 'En vez de alternar entre diapositivas, PDF y listas de preguntas durante una videollamada, abre una clase SpanishCue y comparte pantalla. Tu alumno sigue la misma secuencia mientras guiás la conversación.',
+    intro: 'En vez de alternar entre diapositivas, PDF y listas de preguntas durante una videollamada, abre una clase SpanishCue y comparte pantalla. Tu alumno sigue la misma secuencia mientras guías la conversación.',
     points: [
      'Antes de la clase individual: elige el nivel MCER del alumno y un objetivo de conversación o gramática.',
      'Durante la videollamada: comparte un escenario 3D, una actividad auditiva o una clase gramatical paso a paso, con consignas visibles.',
