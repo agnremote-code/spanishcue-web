@@ -302,7 +302,7 @@ export default function NocheAbierta({ initial }: { initial?: NightState }) {
         {state.phase !== 'llegada' && state.phase !== 'cierre' && <button type="button" className="na-tool" aria-expanded={placesOpen} aria-controls="na-places" onClick={() => setPlacesOpen(value => !value)}>Lugares</button>}
         {state.phase !== 'llegada' && level !== 'A0' && <button type="button" className="na-tool" aria-pressed={listening} onClick={() => setMode(listening ? 'conversacion' : 'escucha')} title="Comprensión auditiva">Escucha</button>}
         <button type="button" className="na-tool" aria-pressed={voices} onClick={toggleVoices} title={voices ? 'Los personajes hablan en voz alta. Toca para silenciarlos.' : 'Voces apagadas. Toca para que los personajes hablen.'}>Voces</button>
-        <button type="button" className="na-tool" aria-pressed={teacher} aria-expanded={teacher} aria-controls="na-teacher-desk" onClick={() => setTeacher(value => !value)}>Profe</button>
+        <button type="button" className="na-tool" aria-pressed={teacher} aria-expanded={teacher} aria-controls="na-profe-panel" onClick={() => setTeacher(value => !value)}>Profe</button>
       </nav>
     </header>
 
@@ -687,7 +687,7 @@ function TeacherDesk({ state, street, onTrigger, onReset, onItem }: { state: Nig
   const canTrigger = !state.event && state.phase !== 'cierre' && state.phase !== 'llegada';
   const now = state.phase === 'encuentro' || state.phase === 'ciudad' ? 'exploracion' : state.phase;
   const level: Level = isLevel(state.level) ? state.level : DEFAULT_LEVEL;
-  return <aside id="na-teacher-desk" className="na-desk" aria-label="Plan del profe">
+  return <aside id="na-profe-panel" className="na-desk" aria-label="Plan del profe">
     <div className="na-desk-level">
       <p className="na-teacher-title">Nivel activo · {level}</p>
       <p><b>{LEVEL_INFO[level].name}.</b> <Bi text={LEVEL_INFO[level].demand} /></p>
