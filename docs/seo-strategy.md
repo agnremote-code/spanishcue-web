@@ -24,8 +24,8 @@ Every organic page therefore carries: a free lesson CTA (real, complete lesson, 
 
 Why this wins the category instead of "teaching resources" generically:
 
-- Competitors in the English SERPs are static: TpT-seller blogs (World Language Cafe, Srta Spanish, Señora Q, Mis Clases Locas, La Libre, Secondary Spanish Space), learner-facing sites repurposed for teachers (FluentU, Spanish Academy, Lingoda, Preply/italki blogs, Real Life Language, Verbalicity) and marketplaces (TpT, TES, Teacher's Discovery). They publish listicles and printables; none ships an interactive lesson the reader can open and teach.
-- Almost none of them structures content by CEFR level. Their audience is K-12 and US high school ("Spanish 1/2/3"); SpanishCue's audience is teachers and tutors of teenagers and adults who think in A1–C2.
+- The teacher-resource category is competitive and not exclusively static. Lesson Here (lessonhere.com) markets an interactive ELE library at A1–C1, ELETUTOR (eletutor.com) offers printable and interactive materials, and Linguas (linguas.org/resources/teachers) publishes step-by-step lesson plans. Do not claim that competing sites have no interactive experiences. These are product-positioning examples, not verified keyword ranking positions.
+- Differentiate SpanishCue using actual product evidence: immersive 3D decision-based teaching worlds, reusable browser-based lessons, direct screen sharing, and clearly authored CEFR pathways including C2 where available. Target teachers and online tutors of teenagers and adults rather than attempting to rank for every beginner learner query.
 - Their content mixes learner intent ("how to say…") with teacher intent. SpanishCue pages are only for teachers.
 - The product itself is the proof: a page about B1 conversation can show a real B1 conversation world, free.
 
