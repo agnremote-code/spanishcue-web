@@ -338,3 +338,23 @@ Measurement:
 - Every event now carries `audience` = `teacher` | `student` (page first, then the last choice in the tab; teacher by default). Register it as an event-scoped custom dimension in GA4 to segment reports.
 - Teacher checkout and purchase stay the existing contract: `checkout_start` (one per opened checkout) and the server-verified `trial_purchase` / `first_subscription_payment` (the only Google Ads purchase). `teacher_checkout_started` / `teacher_purchase_completed` are those events filtered by `audience = teacher`; no duplicate events were added. A learner purchase event will exist only with a learner checkout.
 - Campaign naming: `utm_campaign` starts with `teacher_` for teacher campaigns and `student_` for future learner campaigns; organic traffic has no UTM. Teacher ads keep pointing at `/lp/*` or `/para-profesores`; learner ads, when they exist, point at `/aprender-espanol`.
+
+## 2026-10-19: commercial-intent landing differentiation
+
+The two indexable purchase routes are not interchangeable campaigns. They now use
+distinct search-result titles and have unique, server-rendered teaching workflows:
+
+- `/lp/spanish-teacher-resources`: broad interactive Spanish lesson resources
+  for teachers; links to the teacher hub, grammar hub and lesson previews.
+- `/lp/online-spanish-teaching-resources`: video-call teaching intent for
+  one-to-one tutors; links to the online teaching guide and student self-study.
+
+The growth-page navigation and conversation/grammar hubs now link explicitly
+to the primary purchase landing. This complements the already merged sitemap
+and noindex changes in PR #228. Avoid mass-producing near-identical landing
+pages: Google's canonical selection, indexing and page-one ranking remain
+discretionary and require Search Console evidence after deployment.
+
+**Verification**: CI regression checks, live response headers and rendered HTML,
+then Search Console URL Inspection and query/page data after recrawling.
+Sitemap priority values are crawl hints, not ranking signals.
