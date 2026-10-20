@@ -1,6 +1,8 @@
 # Auditoría de cobertura · Curso de gramática G001–G236 frente a PCIC, MCER y DELE
 
 **Fecha:** 20 de octubre de 2026. **Objeto:** `mapa-curricular-2026-10-20.md`, `spanishcue-curriculo-2026-10-20.json` y `app/grammar-classroom/curriculum.ts` (236 filas; A0 1 · A1 43 · A2 41 · B1 42 · B2 39 · C1 38 · C2 32; 88 `live`, 148 `planned`).
+**Actualización (20 de octubre de 2026, al cerrar el curso):** las 236 unidades y las 4 extensiones tienen clase; el estado de cada propuesta está en la sección 6. Las secciones 1–5 se conservan tal como se escribieron, sobre títulos y anclas.
+
 **Resultado en una línea:** la ruta cubre bien el sistema verbal, el modo y la subordinación; los huecos se concentran en el grupo nominal (posesivos tónicos, apócope, apreciativos, *lo* neutro), en morfología irregular concreta y en algunos nexos y oposiciones de B1–B2. Casi todo cabe dentro de unidades ya planificadas; se proponen 4 unidades de extensión (G237–G240), sin renumerar nada.
 
 ## 1. Método y límites
@@ -229,3 +231,46 @@ Opción (a): ampliar el alcance de una unidad ya prevista. Opción (b): crear un
 | **Total** | **108** | **61** | **30** | **17** |
 
 Para afirmar «cobertura PCIC íntegra» hace falta cotejar estas tablas con los subepígrafes oficiales, que no se pudieron consultar en esta sesión. Con los ajustes de la sección 3 (31 ampliaciones dentro de unidades ya previstas y 4 extensiones, G237–G240), todas las áreas quedarían al menos en «parcial» y las de A1–B2, en «cubierto».
+
+## 6. Estado tras la implementación
+
+Las 236 unidades tienen clase en vivo y las extensiones G237–G240 también (ids 537–540). La comprobación se hizo sobre el texto de cada clase, buscando las formas y oposiciones que pide cada fila de la sección 3, y no solo sobre el título.
+
+**Extensiones (filas 28–31).** Son clases propias, numeradas después de G236 para no renumerar nada, que se estudian justo después de la unidad que amplían. `courseUnits` sigue ese orden de estudio (`extensionAfter` en `curriculum.ts`):
+
+| Fila | Clase | Va después de |
+|---|---|---|
+| 28 | G237 · Ser y estar con adjetivos que cambian de significado (B1) | G121 |
+| 29 | G238 · Verbos de cambio: hacerse, volverse, convertirse en, llegar a ser (B1) | G110 |
+| 30 | G239 · Condiciones con otros nexos (B2) | G135 |
+| 31 | G240 · Diminutivos, aumentativos y valor afectivo (A2) | G069 |
+
+**Ampliaciones dentro de unidades (filas 1–27 y 32–35).**
+
+- Ya estaban en la clase al escribirla: filas 1 (*veo a*), 5, 7, 9–11, 13, 15–27 y 33–35. Por ejemplo, *de ahí que* está en G190 y *sendos* en G213 y G230.
+- Faltaban y se agregaron en la tanda 22. En cada caso se sumó un paso nuevo con explicación, ejemplos, ejercicios y ayuda en inglés, sin tocar el contenido existente:
+  - fila 2, G014: *hace frío / tengo frío / está frío*;
+  - fila 3, G019: *-zco*, *-uir*, *doy*, *sé* y *saber/conocer*;
+  - fila 4, G048: *pidió, durmió, busqué, llegué*;
+  - fila 8, G114: *pero / sino / sino que*;
+  - fila 12, G060: *se* recíproco;
+  - fila 14, G032: *también / tampoco*;
+  - fila 32, G162: género con cambio de significado y plurales de compuestos.
+- Parciales: fila 6 (posesivos tónicos). G009 es una clase anterior al curso y trae *mío* y *tuyo* solo de pasada. Fila 4: el imperfecto de *ser/ir/ver* queda en G049, que es su unidad.
+
+**Sección 4 (secuencia).**
+
+- Resueltos en el contenido:
+  - G122 ya no usa el condicional compuesto en su ancla;
+  - G114 enseña *sino*;
+  - G112 trata la oposición entre relativas especificativas y explicativas;
+  - G126 presenta el imperfecto de subjuntivo de forma receptiva;
+  - G044 usa *mira* y *perdone* como fórmulas;
+  - la conjetura con futuro aparece antes de G161.
+- Sin cambio: el orden de G056/G057 y de G045/G046, que son clases anteriores al curso. Se mantienen tal como estaban.
+
+**Lo que esta auditoría no permite afirmar.**
+
+- No se cotejó con los subepígrafes oficiales del PCIC en línea. Por eso no se afirma «cobertura PCIC íntegra» ni ninguna alineación oficial.
+- Nadie ha escuchado los audios: se comprueban por texto, hash y duración.
+- No hubo prueba con una cuenta real en spanishcue.com. La verificación son los tests del repositorio y el smoke del despliegue.
