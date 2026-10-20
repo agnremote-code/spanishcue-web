@@ -137,3 +137,24 @@ test('a teacher sees one student’s saved classes and opens a class for that st
     assert.equal(window.localStorage.getItem('spanishcue:gramatica:mode'),'teacher');
   }finally{await v.close();}
 });
+
+test('every new course class plays its own recording, built from the transcript it shows',async()=>{
+  const {readFileSync}=await import('node:fs');const {createHash}=await import('node:crypto');
+  const sha=data=>createHash('sha256').update(data).digest('hex');
+  const clips=JSON.parse(readFileSync('app/grammar-classroom/live/audio/clips.json','utf8')).clips;
+  const recorded=JSON.parse(readFileSync('app/grammar-classroom/live/audio/manifest.json','utf8')).clips;
+  const fresh=courseUnits.filter(u=>u.origin==='new'&&u.status==='live');
+  assert.ok(fresh.length>0);
+  for(const unit of fresh){
+    const lesson=getLiveLesson(unit.catalogId);
+    assert.equal(lesson.title,unit.title,`${unit.code}: the class has its course title`);
+    const listen=lesson.stages.find(s=>s.id==='escuchar').steps.flatMap(s=>s.blocks).find(b=>b.kind==='listen');
+    assert.equal(listen.src,`/audio/grammar-live/${unit.catalogId}.mp3`);
+    const clip=clips.find(c=>c.id===unit.catalogId);const audio=recorded.find(c=>c.id===unit.catalogId);
+    assert.equal(clip.text,listen.transcript.replace(/\[\[([^\]|]+)\|[a-z]+\]\]/g,'$1'),`${unit.code}: the recording reads the transcript`);
+    assert.ok(audio,`${unit.code}: recorded`);
+    assert.equal(audio.transcriptSha256,sha(clip.text),`${unit.code}: the audio matches the current transcript`);
+    assert.equal(audio.sha256,sha(readFileSync('public'+listen.src)),`${unit.code}: the asset matches the manifest`);
+    assert.ok(audio.durationSeconds>15&&audio.durationSeconds<120);
+  }
+});

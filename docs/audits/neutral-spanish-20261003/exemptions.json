@@ -6876,6 +6876,24 @@
       "text": "Imperativo afirmativo: tú, vos, usted",
       "category": "regional-pedagogy",
       "reason": "Course map titles that name the Spanish varieties taught (tú, vos, usted, ustedes, vosotros); the word is the topic, not a voseo form addressed to the learner."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "tú · vos",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): variety note, vos/sos shown for recognition next to the tú forms the learner uses."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "**eres** · sos",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): variety note, vos/sos shown for recognition next to the tú forms the learner uses."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "**Sos** es la forma de **vos** (Argentina, Uruguay…). **Sois** es la forma de **vosotros** (España). Hoy solo las reconoces; tú usas **eres** y **son**.",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): variety note, vos/sos shown for recognition next to the tú forms the learner uses."
     }
   ]
 }
