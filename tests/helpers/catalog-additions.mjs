@@ -8,6 +8,13 @@ import {beforeGrammarBytes,beforeGrammarLessons,grammarSharedFiles} from './gram
 // The additions' own behaviour is covered by their tests (tests/noche-abierta.test.mjs).
 const additions = [
   {
+    // 2026-10-20: the grammar course in order (G001–G236). Its data names the A0 first class.
+    id:300,path:'/spanish-grammar-lessons#course',files:/^(?:app\/grammar-classroom\/(?:curriculum\.ts|course\.ts|GrammarCourse\.tsx|course\.module\.css|live\/progress\.ts)$|tests\/grammar-course\.test\.mjs$|docs\/curriculum\/)/,
+    edits:{
+      'tests/level-cleanup.test.mjs':[["'app/conversation-families/types.ts','app/lesson-catalog.ts','app/grammar-classroom/curriculum.ts'].includes(relative);","'app/conversation-families/types.ts','app/lesson-catalog.ts'].includes(relative);"]],
+    },
+  },
+  {
     id:240,path:'/hospital-san-casi-vivo',files:/^(?:app\/hospital-san-casi-vivo\/|app\/escucha-3d\/content\/hospital\/|public\/hospital-san-casi-vivo\/|public\/audio\/escucha-3d\/hospital-|tests\/hospital-san-casi-vivo\.test\.mjs$|scripts\/check-hospital\.mjs$|docs\/audits\/hospital-a0-english-additions-20261015\.json$)/,
     edits:{
       // 2026-10-16: the casino (237) and the forest (226) gained an authored A0 level.
@@ -240,7 +247,7 @@ export function isApprovedAdditionPath(path) {
 
 export function withoutApprovedAdditions(path, bytes) {
   // Undo the latest additive lessons in reverse order before the grammar snapshot.
-  for (const addition of additions.filter(item=>item.id===240||item.id===239||item.id===238||item.id===237||item.id===236)) {
+  for (const addition of additions.filter(item=>item.id===300||item.id===240||item.id===239||item.id===238||item.id===237||item.id===236)) {
     const latestSteps=addition.edits[path]||[];
     if(!latestSteps.length)continue;
     let latest=bytes.toString('utf8');
@@ -251,7 +258,7 @@ export function withoutApprovedAdditions(path, bytes) {
     bytes=Buffer.from(latest);
   }
   bytes=beforeGrammarBytes(path,bytes);
-  const steps = [...additions.filter(item=>item.id!==236&&item.id!==237&&item.id!==238&&item.id!==239&&item.id!==240), ...repairs].flatMap(item => item.edits[path] || []);
+  const steps = [...additions.filter(item=>item.id!==300&&item.id!==236&&item.id!==237&&item.id!==238&&item.id!==239&&item.id!==240), ...repairs].flatMap(item => item.edits[path] || []);
   if (!steps.length) return bytes;
   let text = bytes.toString('utf8');
   for (const step of steps) {

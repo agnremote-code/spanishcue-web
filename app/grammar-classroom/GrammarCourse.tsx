@@ -9,7 +9,9 @@ type Measured = { done: number; total: number; started: boolean };
 type State = 'planned' | 'todo' | 'started' | 'done';
 
 const stateLabel: Record<State, string> = { planned: 'Próximamente', todo: 'Sin empezar', started: 'En curso', done: 'Completada' };
-const courseLevels = ['A0', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
+// The very first class sits with A1, as in the library: no level group with a single class.
+const courseLevels = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
+const levelGroup = (level: string) => (courseLevels.includes(level) ? level : courseLevels[0]);
 const classNumber = (sequence: number) => `Clase ${String(sequence).padStart(3, '0')}`;
 const STUDENT_KEY = 'spanishcue:gramatica:course-student';
 const read = (key: string) => { try { return window.localStorage.getItem(key); } catch { return null; } };
@@ -81,7 +83,7 @@ export default function GrammarCourse({ rows, topics }: { rows: CourseRow[]; top
   const live = rows.filter(row => row.status === 'live');
   const completed = measured ? live.filter(row => stateOf(row) === 'done').length : 0;
   const suggestion = measured ? live.find(row => stateOf(row) === 'started') ?? live.find(row => stateOf(row) !== 'done') : undefined;
-  const visible = useMemo(() => rows.filter(row => (level === 'all' || row.level === level) && (topic === 'all' || row.category === topic) && (!onlyLive || row.status === 'live')), [rows, level, topic, onlyLive]);
+  const visible = useMemo(() => rows.filter(row => (level === 'all' || levelGroup(row.level) === level) && (topic === 'all' || row.category === topic) && (!onlyLive || row.status === 'live')), [rows, level, topic, onlyLive]);
 
   const chooseStudent = (id: string) => { setStudent(id); write(STUDENT_KEY, id); };
   // Opening a class for a student: the class starts in teacher mode with that student selected.
@@ -120,14 +122,14 @@ export default function GrammarCourse({ rows, topics }: { rows: CourseRow[]; top
     <ol className={styles.list}>
       {visible.map((row, index) => {
         const state = stateOf(row);
-        const heading = index === 0 || visible[index - 1].level !== row.level;
+        const heading = index === 0 || levelGroup(visible[index - 1].level) !== levelGroup(row.level);
         const m = measured?.get(row.catalogId);
         const body = <>
           <span className={styles.number}>{classNumber(row.sequence)}<small>{row.code}</small></span>
           <span className={styles.title}>{row.title}<small>{row.categoryLabel}{row.prerequisites.length > 0 && <> · Antes: {row.prerequisites.map(n => String(n).padStart(3, '0')).join(', ')}</>}</small></span>
           <span className={styles.state} data-state={state}>{stateLabel[state]}{state === 'started' && m ? ` · ${m.done}/${m.total}` : ''}</span>
         </>;
-        return <li key={row.code} className={heading ? styles.levelStart : undefined} data-level-heading={heading ? row.level : undefined} data-unit={row.code} data-state={measured ? state : undefined}>
+        return <li key={row.code} className={heading ? styles.levelStart : undefined} data-level-heading={heading ? levelGroup(row.level) : undefined} data-unit={row.code} data-state={measured ? state : undefined}>
           {row.status === 'live' ? <a className={styles.row} href={row.href} onClick={() => open(row)}>{body}</a> : <div className={styles.row} aria-disabled="true">{body}</div>}
         </li>;
       })}
