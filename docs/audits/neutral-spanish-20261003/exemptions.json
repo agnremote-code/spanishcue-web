@@ -9642,6 +9642,120 @@
       "text": "Aspectual: yo me comí (casi todos). «Me los comieron» diría que otros se los comieron.",
       "category": "neutral-context",
       "reason": "Pretérito en primera persona (yo) o patrón de error en una expresión regular, no voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/audio/clips.json",
+      "text": "Hola, soy Mateo Ibarra y este es mi minuto de «Butaca doble». Irene ya les contó que «La última marea» se le hizo eterna. Yo no lo veo así. Es cierto que dura casi tres horas y que la protagonista pasa media película sin decir ni una palabra. Pero no se imaginan lo bien que actúa con la mirada: ni siquiera necesita hablar. La fotografía es de lo más cuidada y el sonido del mar está bien logrado; hasta el viento parece un personaje más. ¿Tiene defectos? Claro que los tiene. El final se alarga tanto que uno empieza a buscar la salida, y la música a veces subraya lo triste que es todo, como si no nos diéramos cuenta solos. Aun así, salí del cine con ganas de llamar a mi abuela, y eso sí que no me pasa seguido. ¡Qué manera tan sencilla de contar algo tan grande! Así que véanla en pantalla grande, si pueden, y después me cuentan si la escena del faro no los dejó sin aire. Irene, te espero la próxima semana con revancha.",
+      "category": "neutral-context",
+      "reason": "Pretérito en primera persona (yo) o imperativo de «dar», no voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g492.ts",
+      "text": "[[Hasta|blue]] yo entendí el final, y eso que no presto atención a nada.",
+      "category": "neutral-context",
+      "reason": "Pretérito en primera persona (yo) o imperativo de «dar», no voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g492.ts",
+      "text": "Hasta mí lo entendí.",
+      "category": "neutral-context",
+      "reason": "Pretérito en primera persona (yo) o imperativo de «dar», no voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g492.ts",
+      "text": "Hasta yo lo entendí.",
+      "category": "neutral-context",
+      "reason": "Pretérito en primera persona (yo) o imperativo de «dar», no voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g492.ts",
+      "text": "¡Pero ___ le escribí dos veces!",
+      "category": "neutral-context",
+      "reason": "Pretérito en primera persona (yo) o imperativo de «dar», no voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g492.ts",
+      "text": "¡Pero si…! exclamativo: protesta y presenta el hecho como evidente: le escribí, y dos veces.",
+      "category": "neutral-context",
+      "reason": "Pretérito en primera persona (yo) o imperativo de «dar», no voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g492.ts",
+      "text": "Ni siquiera no me miró cuando le pedí el autógrafo.",
+      "category": "neutral-context",
+      "reason": "Pretérito en primera persona (yo) o imperativo de «dar», no voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g492.ts",
+      "text": "Incluso no me miró cuando le pedí el autógrafo.",
+      "category": "neutral-context",
+      "reason": "Pretérito en primera persona (yo) o imperativo de «dar», no voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g492.ts",
+      "text": "Ni siquiera me miró cuando le pedí el autógrafo.",
+      "category": "neutral-context",
+      "reason": "Pretérito en primera persona (yo) o imperativo de «dar», no voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g492.ts",
+      "text": "No ni siquiera me miró cuando le pedí el autógrafo.",
+      "category": "neutral-context",
+      "reason": "Pretérito en primera persona (yo) o imperativo de «dar», no voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g492.ts",
+      "text": "«Salí del cine con ganas de llamar a mi abuela».",
+      "category": "neutral-context",
+      "reason": "Pretérito en primera persona (yo) o imperativo de «dar», no voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g492.ts",
+      "text": "Hola, soy Mateo Ibarra y este es mi minuto de «Butaca doble». Irene ya les contó que «La última marea» se le hizo eterna. Yo no lo veo así. Es cierto que dura casi tres horas y que la protagonista pasa media película sin decir [[ni una palabra|blue]]. Pero no se imaginan [[lo bien que actúa|teal]] con la mirada: [[ni siquiera|blue]] necesita hablar. La fotografía es [[de lo más cuidada|violet]] y el sonido del mar está [[bien logrado|violet]]; [[hasta|blue]] el viento parece un personaje más. ¿Tiene defectos? Claro que los tiene. El final se alarga [[tanto que|violet]] uno empieza a buscar la salida, y la música a veces subraya [[lo triste que es|teal]] todo, como si no nos diéramos cuenta solos. Aun así, salí del cine con ganas de llamar a mi abuela, y eso [[sí que|orange]] no me pasa seguido. [[¡Qué manera tan|orange]] sencilla de contar algo tan grande! Así que véanla en pantalla grande, si pueden, y después me cuentan si la escena del faro no los dejó sin aire. Irene, te espero la próxima semana con revancha.",
+      "category": "neutral-context",
+      "reason": "Pretérito en primera persona (yo) o imperativo de «dar», no voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g492.ts",
+      "text": "Contesta a Mateo con un audio de 40 segundos: dale la razón en algo («Hasta yo reconozco que…») y mantén tu postura en otra cosa («Ni siquiera…»), con un lo… que y una exclamativa.",
+      "category": "neutral-context",
+      "reason": "Pretérito en primera persona (yo) o imperativo de «dar», no voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g492.ts",
+      "text": "Pedí una habitación tranquila y me dieron la que daba a la discoteca. Llamé a recepción y ni siquiera se disculparon. No había ni una toalla limpia. ¡Si es que hasta el cartel de la puerta estaba roto! Esperé tanto que al final me fui a otro hotel.",
+      "category": "neutral-context",
+      "reason": "Pretérito en primera persona (yo) o imperativo de «dar», no voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g492.ts",
+      "text": "¿Que si me costó aprender a conducir? ¡Vaya si me costó! Suspendí tres veces. ¡Lo que sufrí con las cuestas! Ahora, eso sí, conduzco tranquila.",
+      "category": "neutral-context",
+      "reason": "Pretérito en primera persona (yo) o imperativo de «dar», no voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g494.ts",
+      "text": "[[Les pedí que|orange]] + subjuntivo",
+      "category": "neutral-context",
+      "reason": "Pretérito en primera persona (yo) o imperativo de «dar», no voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g494.ts",
+      "text": "Los vecinos me preguntaron sobre todo si las ambulancias podrían entrar, y les aseguré que tendrán acceso siempre. A los comerciantes les pedí que nos dieran seis meses antes de juzgar el plan. Como señala la profesora Castell, el transporte público será la clave.",
+      "category": "neutral-context",
+      "reason": "Pretérito en primera persona (yo) o imperativo de «dar», no voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g495.ts",
+      "text": "[[vos|violet]] (Argentina, Uruguay, Paraguay, gran parte de Centroamérica…)",
+      "category": "regional-pedagogy",
+      "reason": "Voseo enseñado a propósito como reconocimiento de concordancia con vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g495.ts",
+      "text": "Vos **tenés** razón. Vos **sos** el responsable.",
+      "category": "regional-pedagogy",
+      "reason": "Voseo enseñado a propósito como reconocimiento de concordancia con vos."
     }
   ]
 }
