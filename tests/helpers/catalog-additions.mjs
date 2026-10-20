@@ -1,5 +1,9 @@
 import assert from 'node:assert/strict';
 import {beforeGrammarBytes,beforeGrammarLessons,grammarSharedFiles} from './grammar-preservation.mjs';
+import {readFileSync} from 'node:fs';
+
+// Course classes (ids above 300, written from 2026-10-20) as listed in the grammar catalog additions.
+const courseLessons=[...readFileSync(new URL('../../app/grammar-classroom/catalog.ts',import.meta.url),'utf8').matchAll(/^  \[(3\d\d), '[^']*', '[^']*', '([^']*)'/gm)].map(([,id,slug])=>({id:Number(id),path:`/gramatica/${slug}`,files:/^$/,edits:{}}));
 
 // New lessons approved after the Batch 1 / Wave 1–3 snapshots were taken.
 // Historical hashes stay authoritative: before comparing, remove exactly the
@@ -7,11 +11,18 @@ import {beforeGrammarBytes,beforeGrammarLessons,grammarSharedFiles} from './gram
 // found exactly once, so drift or a second copy still fails the old hashes.
 // The additions' own behaviour is covered by their tests (tests/noche-abierta.test.mjs).
 const additions = [
+  ...courseLessons,
   {
     // 2026-10-20: the grammar course in order (G001–G236). Its data names the A0 first class.
     id:300,path:'/spanish-grammar-lessons#course',files:/^(?:app\/grammar-classroom\/(?:curriculum\.ts|course\.ts|GrammarCourse\.tsx|course\.module\.css|live\/progress\.ts)$|tests\/grammar-course\.test\.mjs$|docs\/curriculum\/)/,
     edits:{
-      'tests/level-cleanup.test.mjs':[["'app/conversation-families/types.ts','app/lesson-catalog.ts','app/grammar-classroom/curriculum.ts'].includes(relative);","'app/conversation-families/types.ts','app/lesson-catalog.ts'].includes(relative);"]],
+      // The course classes (ids above 300) arrive in batches: these steps undo every batch at once.
+      'app/grammar-classroom/catalog.ts':[text=>text.replace(/^  \[3\d\d, .*\n/gm,'').replace(/(const addedAt: Record<number, string> = \{ 239: '2026-10-14')(?:, 3\d\d: '[\d-]+')+ \};/,'$1 };')],
+      'app/lesson-catalog.ts':[text=>text.replace("// place at the end of the sequence so no other grammar class is renumbered. The course\n// classes written since 2026-10-20 (ids above 300) follow it in their course order.\nconst sequenceLevel = (lesson:LessonSource) => lesson.id === 239 || lesson.id > 300 ? 99 : levelOrder[lesson.level] ?? 99;","// place at the end of the sequence so no other grammar class is renumbered.\nconst sequenceLevel = (lesson:LessonSource) => lesson.id === 239 ? 99 : levelOrder[lesson.level] ?? 99;")],
+      'tests/level-cleanup.test.mjs':[text=>text.replace("'app/conversation-families/types.ts','app/lesson-catalog.ts','app/grammar-classroom/curriculum.ts'].includes(relative);","'app/conversation-families/types.ts','app/lesson-catalog.ts'].includes(relative);"),text=>text.replace(/assert\.equal\(lessons\.length, \d+\);/,'assert.equal(lessons.length, 132);').replace(/assert\.equal\(a1Lessons\.length, \d+\);/,'assert.equal(a1Lessons.length, 43);')],
+      'tests/grammar-classroom.test.mjs':[text=>text.replace(/ assert\.equal\(grammar\.length,\d+\);\n for\(const id of \[230,231,232,233,234,235,239(?:,3\d\d)*\]\)\{/,' assert.equal(grammar.length,58);\n for(const id of [230,231,232,233,234,235,239]){').replace(/ assert\.equal\(new Set\(grammar\.map\(l=>l\.id\)\)\.size,\d+\);/,' assert.equal(new Set(grammar.map(l=>l.id)).size,58);')],
+      'tests/teacher-access.test.mjs':[text=>text.replace(/ assert\.equal\(grammar\.length,\d+\);/,' assert.equal(grammar.length,58);')],
+      'tests/rendered-html.test.mjs':[text=>text.replace(/assert\.match\(html,\/\d+ clases\/\);/,'assert.match(html,/58 clases/);').replace(/assert\.match\(html,\/\d+\(\?:<!-- -->\|\\s\)\+resultados\/\);assert\.match\(html,\/\d+\(\?:<!-- -->\|\\s\)\+clases totales\/\);/,'assert.match(html,/110(?:<!-- -->|\\s)+resultados/);assert.match(html,/125(?:<!-- -->|\\s)+clases totales/);')],
     },
   },
   {

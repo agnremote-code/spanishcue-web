@@ -57,9 +57,14 @@ import { lesson as g233 } from './lessons/g233';
 import { lesson as g234 } from './lessons/g234';
 import { lesson as g235 } from './lessons/g235';
 import { lesson as g239 } from './lessons/g239';
+import { lesson as g303 } from './lessons/g303';
+import { lesson as g305 } from './lessons/g305';
+import { lesson as g307 } from './lessons/g307';
+import { lesson as g311 } from './lessons/g311';
+import { lesson as g312 } from './lessons/g312';
 import type { LiveLesson } from './types';
 
 /** Grammar classes migrated to the live-class system, by catalog id. */
-const liveLessons: Record<number, LiveLesson> = Object.fromEntries([desdeHace, g3, g18, g23, g31, g37, g40, g41, g42, g43, g44, g45, g46, g47, g48, g106, g107, g110, g111, g112, g113, g114, g115, g116, g117, g118, g119, g140, g141, g142, g143, g144, g145, g146, g147, g148, g149, g150, g151, g152, g153, g154, g155, g156, g211, g212, g213, g214, g217, g218, g219, g220, g231, g232, g233, g234, g235, g239].map(lesson => [lesson.id, lesson]));
+const liveLessons: Record<number, LiveLesson> = Object.fromEntries([desdeHace, g3, g18, g23, g31, g37, g40, g41, g42, g43, g44, g45, g46, g47, g48, g106, g107, g110, g111, g112, g113, g114, g115, g116, g117, g118, g119, g140, g141, g142, g143, g144, g145, g146, g147, g148, g149, g150, g151, g152, g153, g154, g155, g156, g211, g212, g213, g214, g217, g218, g219, g220, g231, g232, g233, g234, g235, g239, g303, g305, g307, g311, g312].map(lesson => [lesson.id, lesson]));
 export const liveLessonIds = Object.keys(liveLessons).map(Number);
 export const getLiveLesson = (id: number): LiveLesson | undefined => liveLessons[id];

@@ -1,0 +1,1422 @@
+{
+  "version": 1,
+  "authorization": "Owner request of 2026-10-20 12:18Z (project thread of the grammar course, root message cmsg_01Gr5R4j3t2Yet65UcmhcVhA7uti8pjZgE63fehKQeyYqQ): build the first 30 new classes of the A0–C2 grammar course with the current live-class system, «bilingüismo ES/EN» included. Standing owner approval for English copy: Ale wrote «apruebo todo, no preguntes más, apruebo todo» on 2026-10-14 16:55Z (cmsg_01Gr5R4j3t2Yet65UcmhcVhADwvzg9kA9GinuWu3D7FSfe). This manifest approves only the exact English support literals of the new course classes (app/grammar-classroom/live/lessons/g3xx.ts) listed below; existing English copy stays protected.",
+  "additions": [
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "Pablo is new in a parcel warehouse. He writes the labels and the cards: the parcel, the box, the book, the table. Today Elena, the supervisor, finds three mistakes on his cards. By the end of the class you know if a word is masculine (el, un) or feminine (la, una), even when the ending tricks you."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "the book · a parcel"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "the table · a box"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "The problem is serious; the hand is small."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "In Spanish, a table or a book is also masculine or feminine. It is not about meaning: it is grammar. The article (el, la, un, una) tells you the gender."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "“La caja” (the box): masculine or feminine?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "“Un paquete” (a parcel): masculine or feminine?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "“El problema” ends in -a. Is it feminine?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "Masculine: el, un"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "The phone is on the table."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "A glass is for Elena."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "The colour of the box is blue."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "Feminine: la, una"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "The label is on the box."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "The address is correct."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "The destination city is Quito."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "Do not learn “paquete”: learn “el paquete”. Do not learn “llave”: learn “la llave”. That way you never hesitate."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "the television"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "the engine"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "the university"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "the flower"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "Tricky words: the ending lies"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "The problem is the address."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "The language of the label is Spanish."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "The day is long in the warehouse."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "The photo of the parcel is on the card."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "The delivery rider’s motorbike is in the street."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "Look at the sentences: the problem is “serio”, the hand is “pequeña”. The describing word changes with the gender (-o / -a). Today you only notice it; you practise it in class 006."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "the problem"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "a hand"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "the language"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "“Crema” (cream) ends in -ma. Is it masculine, like “problema”?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "Feminine words that start with a stressed a"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "The water is cold."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "Classroom 12 is new."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "The shipping area is closed."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "The school classrooms are big."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "the water in the bottle"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "the warehouse alarm"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "the school classrooms"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "The map is in the box."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "The photo is of Quito."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "Area B is closed."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "Good morning, Pablo. Are the cards ready for the shipping area?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "Yes, here they are. There are three: a parcel for Quito, a box for Lima and another box for a school."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "Let’s see. Card one: “la problema de la dirección”. No, Pablo: it’s “el problema”."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "“El problema”? But it ends in -a!"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "Yes, but it’s masculine, like “el tema” or “el día”. Card two: “un mapa de Lima y un mano de madera”."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "What’s wrong? “Un mapa” is correct, isn’t it?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "Yes, the map is fine. But it’s “una mano”: “la mano” is feminine."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "Oh, of course: like “la foto” or “la moto”. They end in -o, but they’re feminine."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "Exactly. Card three: “paquete para la aula 12”. It’s “el aula”, Pablo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "“El aula”? So it’s masculine?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "No, it’s feminine: “el aula nueva”. It’s like “el agua fría”: “el” only because of the sound."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "Got it. I’ll correct the three cards now. Thanks, Elena!"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "How many cards does Elena check?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "What is wrong on card two?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "Why is it “el aula”?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "Pablo prepares more labels for the warehouse. Which article does each word take?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "Contents: an alarm system."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "The climate in Lima is humid."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "The catalogue photo is on the table."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "Which is the customer’s language: Spanish or Portuguese?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "Parcel for the University of Cusco."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "Contents: a hand cream."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "The system is new."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "The motorbike is in the street."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "Why does Elena call?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "Where is the big parcel going?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "What is in the parcel?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "What is the problem?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "Where is the water for the office?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "Masculine: -o, -or (almost always)"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "Feminine: -a, -ción, -dad"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "Tricky words: learn them by heart"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "Feminine words with el: still feminine"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "The ending helps almost always, but the article is the boss. Learn every word with “el” or “la”: el problema, la mano, el agua fría."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "Now in a school: a teacher prepares the list for her classroom. Correct her list."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g303.ts",
+      "text": "You now know if a word is masculine or feminine. The natural next step: el, la, los, las and un, una, unos, unas, and when to use each one. With gender clear, choosing the article is easy."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "Lucía works at a small company with two offices: one in the city centre and one by the harbour. Today she is preparing the supplies order: pencils, notebooks, folders, clocks… For the order she needs the plural: more than one thing."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "a red pencil · a blue folder · a clock"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "two red pencils · two blue folders · two clocks"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "From “dos” (2) on, the noun is plural. The numbers themselves do not change: dos lápices, dos carpetas."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "“Dos carpetas azules”: how many folders?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "“A red pencil” → “two…”"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "To make the plural, look at the last letter of the noun. Is it a vowel (a, e, o)? Add -s. Is it a consonant (l, r, n, d, j…)? Add -es."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "Does it end in a vowel? Add -s."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "a chair → two chairs"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "a notebook → three notebooks"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "a table → four tables"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "the map → the maps"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "Does it end in a consonant? Add -es."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "a city → two cities"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "a clock → two clocks"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "a sheet of paper → lots of papers"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "a computer → five computers (in Latin America: computadora)"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "a lamp → two…"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "a marker → three…"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "a city → two…"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "Does it end in z? Change z to c and add -es."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "a pencil → two pencils"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "a light → three lights"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "once → twice (one time → two times)"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "a light → two…"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "the meeting → the…"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "Monday → Mondays"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "Is the noun plural? Then the article and the adjective are plural too."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "the red pencil → the red pencils"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "a blue folder → some blue folders"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "the white lamp → the white lamps"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "a big clock → some big clocks"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "the green folders"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "some big clocks"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "the new maps"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "Which one is correct? (four small notebooks)"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "Which one is correct? (some green lights)"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "Hi, Diego! Are you at the office? I’m preparing the supplies order for the two offices."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "Yes, I’m here. For the harbour office: eight pencils and two clocks for the wall."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "Eight pencils? What colour?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "Red. And some blue folders for the contracts."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "Perfect. And for the meeting room? Some lamps?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "Yes, three white lamps. The lamps we have now are broken."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "Great. The city-centre office needs markers for the whiteboard and notebooks."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "Big notebooks or small ones?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "Small notebooks. And two city maps for the entrance."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "And the lights in the corridor? Are they OK?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "Yes, the lights are fine. The order goes out next Monday."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "Great! Thanks, Lucía."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "What does the harbour office need for the wall?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "Why do they need new lamps?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "What do they NOT need in the order?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "a printer → two printers"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "a big box → two big boxes"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "the city maps"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "Ten red pencils."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "The blue folders are on the table."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "Two white clocks for the meeting room."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "The corridor lights are fine."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "Why is Diego calling?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "How many pencils does the harbour office need now?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "What are the clocks like?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "What does Marta need?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "What about the chairs?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "after a vowel: add -s"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "after a consonant: add -es"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "z changes to c"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "the whole group agrees"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "Look at the last letter: vowel → -s; consonant → -es; z → -ces. Then make the whole group plural: article, noun and adjective. Gender does not change: el mapa → los mapas."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "For the meeting room: three new lamps."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "We need two clocks for the corridor."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "Ten green pencils, please."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "Some white papers."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g305.ts",
+      "text": "Today you made short groups plural: “dos lápices rojos”. In class 006 you look closely at adjectives: how they describe things and how they agree in gender and number, even with two nouns together."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g307.ts",
+      "text": "Irene Salas is an estate agent. Today she and her colleague Pablo are rewriting the listings for two apartments: one on calle Olivo and one on calle Río. To describe a home well, you need to know where the adjective goes."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g307.ts",
+      "text": "It is a big apartment, with a white kitchen."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g307.ts",
+      "text": "It is a great apartment in a good neighbourhood."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g307.ts",
+      "text": "In “una cocina blanca”, the adjective goes…"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g307.ts",
+      "text": "“Un gran apartamento” mainly gives…"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g307.ts",
+      "text": "Noun + adjective: the neutral order"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g307.ts",
+      "text": "It is a small bedroom."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g307.ts",
+      "text": "The listing has a nice photo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g307.ts",
+      "text": "It is a quiet street."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g307.ts",
+      "text": "The owner is a Colombian man."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g307.ts",
+      "text": "They are two big windows."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g307.ts",
+      "text": "A listing for the website: “Living room with a green rug”."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g307.ts",
+      "text": "Irene talks about the owner: “She is a Peruvian lady”."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g307.ts",
+      "text": "“A round table” in Spanish is…"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g307.ts",
+      "text": "Adjective + noun: an opinion, a highlight"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g307.ts",
+      "text": "It is a good price."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g307.ts",
+      "text": "It is a great terrace."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g307.ts",
+      "text": "Today is a bad day to visit homes: it is raining."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g307.ts",
+      "text": "It is a good area to live in."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g307.ts",
+      "text": "It is a good apartment for a family."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g307.ts",
+      "text": "It is a great kitchen!"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g307.ts",
+      "text": "It is a bad time to sell: the building is under renovation."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g307.ts",
+      "text": "With a few adjectives, the position changes the meaning. After the noun, the basic meaning. Before the noun, another meaning. Today you learn four very frequent pairs."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g307.ts",
+      "text": "Don Ramón is 85: he is an elderly friend."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g307.ts",
+      "text": "Ana is 32, but she is an old friend of Irene: friends from school."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g307.ts",
+      "text": "To talk about a person’s age, “viejo” can sound harsh. “Mayor” is kinder: “un señor mayor”. “Un viejo amigo”, on the other hand, is always something nice."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g307.ts",
+      "text": "“Es el único apartamento con terraza” means…"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g307.ts",
+      "text": "“Un apartamento nuevo” is…"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g307.ts",
+      "text": "Irene and Carlos have been friends for twenty years. Carlos is…"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g307.ts",
+      "text": "Which sentence is right?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g307.ts",
+      "text": "Pablo, look at the photos of calle Olivo. It is a great apartment."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g307.ts",
+      "text": "Yes, and it is a big apartment: ninety square metres."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g307.ts",
+      "text": "Exactly. With a bright living room and a white kitchen."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g307.ts",
+      "text": "And the building? Is it new?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g307.ts",
+      "text": "No, it is an old building, from 1950. But the kitchen is new."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g307.ts",
+      "text": "And the owner? Is he a client of the agency?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g307.ts",
+      "text": "It is don Ramón, an old friend of my family."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g307.ts",
+      "text": "And the apartment on calle Río?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g307.ts",
+      "text": "It is a brand-new apartment, small, but it is the only apartment in the building with a terrace."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g307.ts",
+      "text": "So it is a unique apartment. And it is in a good neighbourhood!"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g307.ts",
+      "text": "Perfect. Now, the two listings: the normal adjective, after the noun."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g307.ts",
+      "text": "How many square metres is the calle Olivo apartment?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g307.ts",
+      "text": "Who is don Ramón?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g307.ts",
+      "text": "Why is the calle Río apartment special?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g307.ts",
+      "text": "Living room with a blue sofa."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g307.ts",
+      "text": "It is a great offer!"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g307.ts",
+      "text": "It is a good price for the neighbourhood."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g307.ts",
+      "text": "The owner is a Mexican lady."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g307.ts",
+      "text": "It is the only apartment with a garage."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g307.ts",
+      "text": "It is a bright living room."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g307.ts",
+      "text": "It is the only apartment with a balcony."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g307.ts",
+      "text": "Why is Irene calling?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g307.ts",
+      "text": "What is the living room on calle Olivo like?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g307.ts",
+      "text": "What does Irene say about the price?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g307.ts",
+      "text": "What is special about the calle Río apartment?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g307.ts",
+      "text": "After the noun: the neutral order to describe."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g307.ts",
+      "text": "Before the noun: your opinion, with a short form."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g307.ts",
+      "text": "Same adjective, another meaning before the noun."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g307.ts",
+      "text": "After “es”: always the basic meaning."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g307.ts",
+      "text": "If you describe, the adjective goes after: una cocina blanca. Before the noun only to give an opinion (gran, buen) or with a special meaning: un viejo amigo, el único apartamento."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g307.ts",
+      "text": "The agency is also selling a small hotel on the beach. Write three pieces of its listing."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g307.ts",
+      "text": "You can now describe and rate an apartment. Next you need to point: this apartment, that balcony, that building over there. In class 008 you learn to say which thing you mean, near or far from you, with the same agreement as today."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "Marta Ríos hosts “Gente nueva”, a cultural centre’s podcast. Today she interviews three new members of the conversation group: Elena, Pablo and Ana. The game: each person introduces someone else. For that you need the verb ser."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "She is Elena. She is a doctor."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "She is from Chile. She is Chilean."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "She is very calm."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "“Es médica” tells you…"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "“Es de Chile” tells you…"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "For “she is calm” (her personality), you say…"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "to be: who, what, where from, what like"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "I am Marta Ríos and I am a journalist."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "My sister is a doctor and she is from Chile."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "Pablo and I are Colombian."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "Ana and Elena are very nice."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "Are you from Medellín?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "As you know, the verb shows who: “Somos amigos” = “Nosotros somos amigos”. Use the pronoun to clarify or contrast: “She is Chilean and he is Colombian”."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "We are from Valparaíso."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "Are you Mr Herrera?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "My parents are teachers."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "Pablo and his brother are from Medellín."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "jobs: no “a / an” in Spanish"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "Pablo is a teacher."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "Pablo is a very patient teacher."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "Ana is an engineer. Her brother is a lawyer."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "I am a student. Leo is a journalist."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "“Elena es de Chile” = “Elena es chilena”. With de you use the country or the city; without de, the nationality adjective, which agrees with the person."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "Ana is an engineer."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "Pablo is a very fun teacher."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "Elena is Chilean."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "Ana and her sister are Brazilian."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "You know estoy from the first class. Today, just one contrast: ser says who a person is; estar says how they are today."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "Elena is a doctor. She is calm."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "Today Elena is tired."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "After twelve hours at the hospital: “I am tired”."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "Elena presents her job: “I am a doctor”."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "Pablo talks about Ana: “She is very nice”."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "Which sentence is correct?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "Good afternoon and welcome to Gente nueva. Today there are four of us in the studio."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "The introductions are crossed. Pablo, who is she?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "She is Elena Rojas. She is from Valparaíso: she is Chilean. And she is a doctor."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "How interesting! Elena, your turn: what is Pablo like?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "Pablo is a music teacher and he is Colombian, from Medellín. He is an excellent teacher and he is very funny."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "Thanks, Elena! And now Ana. Ana, you are from Brazil, right?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "Yes, I am Brazilian, from Recife. I am an engineer. And today I am a bit nervous: it is my first interview in Spanish."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "Relax, Ana! We are friends here. What are Elena and Pablo like?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "They are very nice. Elena is calm and Pablo is very chatty."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "Perfect! Three people, three countries and one group."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "Where is Elena from?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "What is Ana’s job?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "Why does Ana say “estoy nerviosa” and not “soy nerviosa”?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "My sister and I are doctors."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "Pablo, are you from Medellín or Bogotá?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "You are the host, right?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "Ana and Pablo are very nice."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "I am a journalist and I am Mexican."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "She is an engineer."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "Ana is Brazilian."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "Elena is an excellent doctor."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "We are from Colombia."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "What is this audio?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "What is Elena’s job?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "Where is Pablo from?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "How is Ana feeling today?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "Who introduces Ana?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "who someone is and their job"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "with an adjective, add un / una"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "where someone is from"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "what someone is like"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "how someone feels today"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "Name, job, origin, nationality and personality: ser. A bare job takes no “a”. Nationality agrees and is lowercase. How you feel today: estar."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "A health conference in Lima. A participant’s name badge says: Dr Carmen Soto · paediatrician · Quito (Ecuador). You introduce her."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "Carmen and her colleague Dr Ruiz, also from Quito: “They are Ecuadorian”."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g311.ts",
+      "text": "You can now say who someone is with ser. Today you saw just one contrast: “Estoy cansada”. In class 012 you study estar in depth: how you feel and where you are. That completes the ser / estar pair."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g312.ts",
+      "text": "Lucía is an engineer. This week she is in Monterrey for work. Her brother Daniel is in Mexico City, at home with their mum. On the call, the two key questions are “Where are you?” and “How are you?”. Both use the verb estar."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g312.ts",
+      "text": "I am in Monterrey, at the hotel."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g312.ts",
+      "text": "I am tired, but happy."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g312.ts",
+      "text": "I am an engineer."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g312.ts",
+      "text": "“Estoy en Monterrey” tells you…"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g312.ts",
+      "text": "“Estoy cansada” tells you…"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g312.ts",
+      "text": "“Soy ingeniera” uses…"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g312.ts",
+      "text": "Estar is irregular but easy: “estoy” is special, and the other forms carry an accent on the a (except estamos)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g312.ts",
+      "text": "“Está” with an accent is the verb: Mum is at home. “Esta” without an accent means “this” (class 008): this house. You can hear it too: es-TÁ / ES-ta."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g312.ts",
+      "text": "Daniel and Mum are at home."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g312.ts",
+      "text": "I am in Monterrey."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g312.ts",
+      "text": "Mum is in the kitchen."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g312.ts",
+      "text": "how you are: feelings, physical state"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g312.ts",
+      "text": "Mum is nervous today."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g312.ts",
+      "text": "Are you busy, Daniel?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g312.ts",
+      "text": "My colleague Ana is sick."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g312.ts",
+      "text": "Mum and I are calm."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g312.ts",
+      "text": "Lucía: “Today I am very tired”."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g312.ts",
+      "text": "Daniel and Mum are happy."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g312.ts",
+      "text": "How are you? — I am fine, thanks."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g312.ts",
+      "text": "where someone or something is"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g312.ts",
+      "text": "I am at the hotel."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g312.ts",
+      "text": "Daniel is at home, with Mum."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g312.ts",
+      "text": "The keys are here."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g312.ts",
+      "text": "The hotel is near the station."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g312.ts",
+      "text": "Monterrey is far from Mexico City."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g312.ts",
+      "text": "Lucía, at the hotel: “I am here”."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g312.ts",
+      "text": "Lucía asks about the keys, which are at Daniel’s place: “Are they there?”"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g312.ts",
+      "text": "In class 011 you learnt ser: who you are, your job, where you are from. With ser you also say what someone is like in general. With estar you say how they are today and where they are."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g312.ts",
+      "text": "Mum is a calm person."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g312.ts",
+      "text": "Mum is calm today."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g312.ts",
+      "text": "Daniel is usually a very calm person."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g312.ts",
+      "text": "Today Mum is not calm."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g312.ts",
+      "text": "Lucía is from Mexico City, but now she is in Monterrey."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g312.ts",
+      "text": "Which sentence is correct?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g312.ts",
+      "text": "Hello? Hi, Lucía! Where are you?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g312.ts",
+      "text": "Hi, Daniel. I am in Monterrey, at the hotel. It is a quiet hotel."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g312.ts",
+      "text": "And how are you?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g312.ts",
+      "text": "I am tired, but happy. And you? Are you at home?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g312.ts",
+      "text": "Yes, I am here, at home, with Mum. Mum is a bit nervous today."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g312.ts",
+      "text": "Nervous? But Mum is a very calm person."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g312.ts",
+      "text": "Yes, but today she is not calm. Her keys are not on the table."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g312.ts",
+      "text": "Relax. The keys are in the kitchen, near the window. Are they there?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g312.ts",
+      "text": "Yes, they are here! Now Mum and I are calm."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g312.ts",
+      "text": "Great! Monterrey is far away, but on Sunday I am home. A kiss for Mum."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g312.ts",
+      "text": "Where is Lucía?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g312.ts",
+      "text": "How is Mum today, and why?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g312.ts",
+      "text": "Where are the keys?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g312.ts",
+      "text": "Mum and I are at home."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g312.ts",
+      "text": "Are you busy now?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g312.ts",
+      "text": "Today I am sick."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g312.ts",
+      "text": "My suitcases are at the hotel."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g312.ts",
+      "text": "Are you all OK?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g312.ts",
+      "text": "The hotel is not far."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g312.ts",
+      "text": "Daniel and I are tired."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g312.ts",
+      "text": "What is this audio?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g312.ts",
+      "text": "What is the hotel like?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g312.ts",
+      "text": "How is Lucía?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g312.ts",
+      "text": "Who is sick today?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g312.ts",
+      "text": "Where is Lucía’s passport?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g312.ts",
+      "text": "how you are now"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g312.ts",
+      "text": "who someone is and what they are like"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g312.ts",
+      "text": "“Es tranquilo”: that is how he always is. “Está tranquilo hoy”: that is how he is right now. And a location always takes estar: “estoy en Monterrey”, never “soy en”."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g312.ts",
+      "text": "Where are you now?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g312.ts",
+      "text": "My parents are in Monterrey."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g312.ts",
+      "text": "Daniel is a very calm person, but today he is nervous."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g312.ts",
+      "text": "Lucía and Ana are tired."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g312.ts",
+      "text": "You can now say where a person or a thing is: “The keys are in the kitchen”. In class 013 you learn “hay” (there is / there are) to say what exists in a place, and when to use hay or estar."
+    }
+  ]
+}

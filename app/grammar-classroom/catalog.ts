@@ -74,9 +74,14 @@ const additions = [
   [234, 'B2', 'pronombres', 'relativos-con-preposicion', 'Relativos con preposición: precisar de quién y de qué hablas', 'Relaciona personas, lugares y propuestas sin perder la preposición necesaria.', 4500, [218,117]],
   [235, 'B2', 'oraciones', 'consecuencias-tan-tanto', 'Tan, tanto y así que: explicar consecuencias', 'Relaciona intensidad, hechos y resultados para justificar una decisión.', 4600, [45,217]],
   [239, 'A1', 'ser-estar', 'clase-inicial', 'Clase inicial: tu primer «hola» en español', 'El abecedario, yo / tú / vos, «soy» y «estoy»: lo justo para tu primera charla con tus abuelos argentinos.', 50, []],
+  [303, 'A1', 'concordancia', 'genero-de-sustantivos', 'Género de sustantivos y terminaciones frecuentes', 'Saber si una palabra es masculina o femenina, también cuando la terminación engaña: el problema, la mano, el agua fría.', 10003, [40]],
+  [305, 'A1', 'concordancia', 'plural-y-concordancia', 'Plural de sustantivos y concordancia básica', 'Pasar de uno a varios: lápiz → lápices, reloj → relojes, y escribir un pedido con grupos como «dos carpetas azules».', 10005, [42,303]],
+  [307, 'A1', 'concordancia', 'posicion-del-adjetivo', 'Posición habitual del adjetivo y sentido básico', 'Describir una casa con el adjetivo en su sitio y entender cuándo «gran», «viejo» o «único» cambian el sentido.', 10007, [41]],
+  [311, 'A1', 'ser-estar', 'ser-identidad-y-origen', 'Ser para identidad, profesión y procedencia', 'Presentarte y presentar a otras personas: nombre, profesión, origen, nacionalidad y carácter con todas las formas de ser.', 10011, [46,239]],
+  [312, 'A1', 'ser-estar', 'estar-estados-y-lugares', 'Estar para estados y lugares', 'Decir cómo estás y dónde estás tú, tu familia y tus cosas con «estar», sin confundirlo con «ser».', 10012, [311]],
 ] as const;
 /** When each addition reached the library (the «Nuevo» badge). */
-const addedAt: Record<number, string> = { 239: '2026-10-14' };
+const addedAt: Record<number, string> = { 239: '2026-10-14', 303: '2026-10-20', 305: '2026-10-20', 307: '2026-10-20', 311: '2026-10-20', 312: '2026-10-20' };
 
 export const newGrammarEntries: LessonSource[] = additions.map(([id,level,grammarTopic,slug,title,subtitle,curriculumOrder,requires]) => {
   grammarMetadata[id] = { title, grammarTopic };

@@ -267,8 +267,9 @@ const lessonSources:LessonSource[] = [
 
 const levelOrder:Record<string,number> = {A1:1,A2:2,B1:3,B2:4,C1:5,C2:6};
 // The first class (239) moved from A0 to the A1 filter on 2026-10-15; it keeps its
-// place at the end of the sequence so no other grammar class is renumbered.
-const sequenceLevel = (lesson:LessonSource) => lesson.id === 239 ? 99 : levelOrder[lesson.level] ?? 99;
+// place at the end of the sequence so no other grammar class is renumbered. The course
+// classes written since 2026-10-20 (ids above 300) follow it in their course order.
+const sequenceLevel = (lesson:LessonSource) => lesson.id === 239 || lesson.id > 300 ? 99 : levelOrder[lesson.level] ?? 99;
 const previewedLessons = lessonSources.map(applyGrammarMetadata).map(withPreview);
 const orderedGrammar = previewedLessons
   .filter((lesson) => lesson.category === "Gramática")

@@ -74,6 +74,7 @@ export const APPROVAL_MANIFESTS = [
   'docs/audits/grammar-live-a0-english-additions-20261015.json',
   'docs/audits/hospital-a0-english-additions-20261015.json',
   'docs/audits/hospital-patients-english-additions-20261015.json',
+  'docs/audits/grammar-course-english-additions-20261020.json',
   'docs/audits/article-immersive-english-additions-20261009.json',
   'docs/audits/instagram-funnel-english-additions-20261009.json',
   'docs/audits/article-studio-english-additions-20261009.json',

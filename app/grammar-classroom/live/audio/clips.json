@@ -7,6 +7,36 @@
       "voice": "es-AR-TomasNeural",
       "rate": "-14%",
       "text": "Hola, mi amor. Soy el abuelo. Estoy en casa, en Buenos Aires. Estoy muy bien. Hoy hay sol. Tu abuela está en el patio, con el mate. ¿Y vos? ¿Cómo estás? ¿Estás en casa o en el gimnasio? Mañana, videollamada a las ocho. Un beso grande. Chau, chau."
+    },
+    {
+      "id": 303,
+      "voice": "es-MX-DaliaNeural",
+      "rate": "-12%",
+      "text": "Hola, Pablo, soy Elena. Un mensaje rápido sobre los paquetes de hoy. El paquete grande es para la universidad, para el aula doce. Ojo: el aula, con «el». Dentro hay un mapa, una foto de la ciudad y una crema para las manos. El problema es la dirección: no está completa. Falta el número de la calle. Y otra cosa: el agua para la oficina está en el área B, al lado de la moto del repartidor. Por favor, corrige las fichas antes de las tres. ¡Gracias, Pablo! Hasta luego."
+    },
+    {
+      "id": 305,
+      "voice": "es-ES-AlvaroNeural",
+      "rate": "-12%",
+      "text": "Hola, Lucía. Soy Diego, de la oficina del puerto. Estoy en la sala con la lista. Hay cambios en el pedido. Para nosotros: diez lápices rojos, no ocho. También cuatro cuadernos grandes y dos relojes blancos para la pared. Las tres lámparas nuevas, sí, por favor: las lámparas viejas están rotas. Para la oficina del centro, Marta necesita cinco carpetas azules y seis marcadores negros. Las sillas grises están bien: no necesitamos sillas. Muchas gracias, Lucía. ¡Hasta el lunes!"
+    },
+    {
+      "id": 307,
+      "voice": "es-MX-DaliaNeural",
+      "rate": "-12%",
+      "text": "Hola, Pablo, soy Irene. Una idea para las fichas de hoy. El apartamento de la calle Olivo es un apartamento grande, con un salón luminoso y una cocina blanca. Es un edificio viejo, pero el apartamento está muy bien. Escribe también que es una gran oportunidad: el precio es muy bueno. El apartamento de la calle Río es pequeño, pero es el único apartamento con terraza del edificio. Ah, y don Ramón, el dueño de la calle Olivo, es un viejo amigo de mi familia: mañana a las diez está en la oficina. ¡Gracias y hasta luego!"
+    },
+    {
+      "id": 311,
+      "voice": "es-MX-DaliaNeural",
+      "rate": "-12%",
+      "text": "Hola, buenas tardes, y bienvenidos a Gente nueva, el pódcast del centro cultural. Soy Marta Ríos. Hoy, en el estudio, tres personas nuevas del grupo de conversación. Elena Rojas es médica y es de Chile, de Valparaíso: una persona muy tranquila. Pablo Herrera, profesor de música, es colombiano, de Medellín. Y Ana Costa es ingeniera; es brasileña, de Recife. Hoy Ana está un poco nerviosa: es su primera entrevista en español. Hoy, presentaciones cruzadas: Elena presenta a Pablo, Pablo presenta a Ana y Ana presenta a Elena. ¿Y tú? ¿Quién eres? ¡Empezamos!"
+    },
+    {
+      "id": 312,
+      "voice": "es-MX-DaliaNeural",
+      "rate": "-12%",
+      "text": "Hola, Daniel. Soy Lucía. ¿Dónde estás? Yo estoy en Monterrey, en el hotel. Es un hotel pequeño y tranquilo, cerca de la estación. Estoy un poco cansada, pero contenta: el trabajo aquí es interesante. Mi compañera Ana está enferma hoy, pobre. ¿Y mamá? ¿Está bien? Ah, una cosa: mi pasaporte está en mi cuarto, en la mesa, cerca de la ventana. ¿Está ahí? El domingo estoy en casa otra vez. Un beso grande, hermano."
     }
   ]
 }
