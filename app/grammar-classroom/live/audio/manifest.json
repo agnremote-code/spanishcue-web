@@ -1,7 +1,7 @@
 {
   "producer": "Microsoft Edge online speech via edge-tts",
   "synthetic": true,
-  "generatedAt": "2026-10-20T21:53:36.266610+00:00",
+  "generatedAt": "2026-10-20T22:20:02.574698+00:00",
   "humanListeningQA": false,
   "clips": [
     {
@@ -2397,6 +2397,118 @@
       "channels": 1,
       "peakPCM": 21107,
       "rmsPCM": 2301.66
+    },
+    {
+      "id": 529,
+      "voice": "es-CO-SalomeNeural",
+      "rate": "+0%",
+      "src": "/audio/grammar-live/529.mp3",
+      "transcriptSha256": "271263a4874e7bc30da45651dbcb3db5d1e2bc4d886d542505c286daf8469106",
+      "sha256": "547e4d2f4fe8d59d54dab50cb34a1740aaf44e632626c292bb99136c42a63f32",
+      "durationSeconds": 82.97,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 19061,
+      "rmsPCM": 3034.66
+    },
+    {
+      "id": 530,
+      "voice": "es-MX-DaliaNeural",
+      "rate": "+0%",
+      "src": "/audio/grammar-live/530.mp3",
+      "transcriptSha256": "1adb4fae6969318a8028a5da8e872e467d543280a7945d42f2337fe8591ca05e",
+      "sha256": "f3a804840b16482dbc31f06d6c4be61b3dd4fbbaa3447c809783eb65a751bf60",
+      "durationSeconds": 81.65,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 23027,
+      "rmsPCM": 3492.71
+    },
+    {
+      "id": 531,
+      "voice": "es-MX-DaliaNeural",
+      "rate": "+0%",
+      "src": "/audio/grammar-live/531.mp3",
+      "transcriptSha256": "fc9e817b0d0b81818eeebb2fba5015885aad7d116fa5b5eddc1cf33c4a2b91bc",
+      "sha256": "71ca9c6f5198c488b3938441ae37a3b6ded473ccee7802330f17ffacd49c36fa",
+      "durationSeconds": 81.79,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 23091,
+      "rmsPCM": 3472.13
+    },
+    {
+      "id": 532,
+      "voice": "es-MX-JorgeNeural",
+      "rate": "+0%",
+      "src": "/audio/grammar-live/532.mp3",
+      "transcriptSha256": "9af911d04c1e8487c26f38b6145bd6bceb9667ef9bf0fd20d9d7d2497f12aeb5",
+      "sha256": "f48abaffba3398de23fe463e5cb996f906c41b04c3868efaf7c8e59957bd8055",
+      "durationSeconds": 74.71,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 25612,
+      "rmsPCM": 3218.85
+    },
+    {
+      "id": 533,
+      "voice": "es-US-PalomaNeural",
+      "rate": "+0%",
+      "src": "/audio/grammar-live/533.mp3",
+      "transcriptSha256": "e0082647c09eb4f07acd26e42cc7258735156a1c6de61e3fd05831e4f729696f",
+      "sha256": "777cbc07863c7acedead829da5ac8b1ed757a4d7edbcaa99e872943e16d9a269",
+      "durationSeconds": 75.7,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 22542,
+      "rmsPCM": 3506.19
+    },
+    {
+      "id": 534,
+      "voice": "es-PE-CamilaNeural",
+      "rate": "+0%",
+      "src": "/audio/grammar-live/534.mp3",
+      "transcriptSha256": "f21c68fc98bce485fe04c34709259e81c783d324a9559ebbe04ad5e3c60f4526",
+      "sha256": "859e3ca67da632ca89cfd385fcda9299138377cd67294abb994cba9f2916fac0",
+      "durationSeconds": 83.21,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 23661,
+      "rmsPCM": 3558.84
+    },
+    {
+      "id": 535,
+      "voice": "es-MX-JorgeNeural",
+      "rate": "+0%",
+      "src": "/audio/grammar-live/535.mp3",
+      "transcriptSha256": "108935f0b9d0b2f6098dfe2793223a6c28e5221ad8b5cc693dba8e5a4a7bf2d0",
+      "sha256": "59c8a8b211108d63366bd75df6ab23c622f354a01c39c407aa6aa4e11ebe73f7",
+      "durationSeconds": 77.06,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 27527,
+      "rmsPCM": 3291.8
+    },
+    {
+      "id": 536,
+      "voice": "es-CL-CatalinaNeural",
+      "rate": "+0%",
+      "src": "/audio/grammar-live/536.mp3",
+      "transcriptSha256": "a808d3806752854087bad4b514efb1989d8a0c16eceda738a84a3104a70b0fc5",
+      "sha256": "bede94c3d8a288e8218fbfecb212d757d1a95df263146a9c9db810da9e67ab9a",
+      "durationSeconds": 79.51,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 21887,
+      "rmsPCM": 3475.28
     }
   ]
 }
