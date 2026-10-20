@@ -50,11 +50,11 @@ test('the premium article gallery and its recording stay outside the public asse
 });
 test('per-student live class sessions are an account API: anonymous visitors get nothing, no cache, no cross-origin writes',async()=>{
   const list=await get('/api/live-class?lessonId=239');assert.equal(list.status,401);
-  assert.equal(list.headers.get('cache-control'),'private, no-store');
-  const one=await get('/api/live-class?lessonId=239&studentId=abc');assert.equal(one.status,401);
+  assert.equal(list.headers.get('cache-control'),'private, no-store');await list.arrayBuffer();
+  const one=await get('/api/live-class?lessonId=239&studentId=abc');assert.equal(one.status,401);await one.arrayBuffer();
   const put=await fetch(origin+'/api/live-class',{method:'PUT',headers:{'content-type':'application/json','origin':'https://evil.example'},body:JSON.stringify({lessonId:239,studentId:'abc',saved:{values:{},results:{}}})});
-  assert.equal(put.status,401);
-  const del=await fetch(origin+'/api/live-class?lessonId=239&studentId=abc',{method:'DELETE'});assert.equal(del.status,401);
+  assert.equal(put.status,401);await put.arrayBuffer();
+  const del=await fetch(origin+'/api/live-class?lessonId=239&studentId=abc',{method:'DELETE'});assert.equal(del.status,401);await del.arrayBuffer();
 });
 test('encrypted live lesson blobs are not served to visitors',async()=>{
   const lessons=(await import(new URL('../dist/server/private-lesson-assets.js',import.meta.url))).default;
