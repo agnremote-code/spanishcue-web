@@ -99,6 +99,8 @@ const publicRoots = new Set([
   // Shared renderers only; paid lesson bodies arrive in authorized page props.
   "app/grammar-classroom/Classroom.tsx",
   "app/grammar-classroom/live/LiveClassroom.tsx",
+  // The course map: public titles, section sizes and links; progress comes from the browser or an account API.
+  "app/grammar-classroom/GrammarCourse.tsx",
   // Loaded on demand by the live visuals; geometry only.
   "app/grammar-classroom/duration/world.ts",
   "app/conversation-worlds/ConversationWorld.tsx",

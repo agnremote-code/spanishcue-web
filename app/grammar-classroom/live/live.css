@@ -39,6 +39,11 @@
 .gl-level-pill{display:inline-block;background:var(--gl-level);color:#fff;border-radius:8px;padding:3px 9px;font-weight:600}
 .gl-hero h1{font-size:clamp(28px,3.6vw,42px);line-height:1.1;margin:0 0 8px}
 .gl-hero-sub{font-size:17px;line-height:1.55;color:var(--gl-muted);margin:0;max-width:64ch}
+.gl-course{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;margin:14px 0 0;font-size:14px}
+.gl-course b{font-weight:900;color:var(--gl-ink,#06152f)}
+.gl-course b small{font-weight:600;color:var(--gl-muted)}
+.gl-course a{font-weight:700;text-decoration:none;color:#0552b6;padding:5px 10px;border:1px solid #d7e4f5;border-radius:999px;background:#fff}
+.gl-course a:hover{border-color:#087eff}
 .gl-now{display:inline-block;color:var(--gl-ink);font-weight:500}
 
 /* Layout: route · class · mascot */

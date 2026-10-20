@@ -1,6 +1,6 @@
 'use client';
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
-import type { Block, LiveLesson, LiveStage } from './types';
+import type { LiveStage } from './types';
 
 /** One checked answer. `first` keeps the first attempt so real mistakes can be reviewed at the end. */
 export type Result = { ok: boolean; first: boolean; prompt: string; right: string; stage: number; step: number };
@@ -185,25 +185,4 @@ export function usePreference<T extends string>(key: string, initial: T): [T, (n
 /** Block ids are `stage:step:block`; results add `:item`. */
 export const blockId = (stage: LiveStage, step: number, block: number) => `${stage.id}:${step}:${block}`;
 
-/** How many checkable things a block holds. Only real, completable activities count. */
-export function targets(block: Block): number {
-  switch (block.kind) {
-    case 'choice': case 'classify': case 'fix': case 'build': case 'rewrite': return block.items.length;
-    case 'chat-fill': return block.lines.filter(line => line.options).length;
-    case 'explore': return Object.keys(block.notes).length;
-    case 'listen': return 1 + block.details.length;
-    case 'talk': return block.cards.length;
-    case 'write': return 1;
-    case 'visual': return block.visual === 'barrio-mission' ? 4 : 0;
-    default: return 0;
-  }
-}
-
-/** Real progress of one section: completed activities out of the ones it has. */
-export function progressOf(stage: LiveStage, results: Record<string, Result>) {
-  const total = stage.steps.reduce((sum, step) => sum + step.blocks.reduce((n, block) => n + targets(block), 0), 0);
-  const done = Object.entries(results).filter(([id, result]) => id.startsWith(`${stage.id}:`) && result.ok).length;
-  return { total, done: Math.min(done, total) };
-}
-
-export const lessonTargets = (lesson: LiveLesson) => lesson.stages.map(stage => stage.steps.reduce((sum, step) => sum + step.blocks.reduce((n, block) => n + targets(block), 0), 0));
+export { lessonTargets, progressOf, targets } from './progress';
