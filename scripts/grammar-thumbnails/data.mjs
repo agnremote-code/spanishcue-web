@@ -112,4 +112,9 @@ export const thumbnails = [
   { id: 340, level: 'A1', family: 'perifrasis', topic: 'Querer, poder, tener que', example: '*Quiero* ir, pero *tengo que* trabajar.', chips: ['quiero + inf.', 'puedo + inf.', 'tengo que + inf.'], mascot: 'mate' },
   { id: 341, level: 'A1', family: 'perifrasis', topic: 'Estar + gerundio', example: 'Ahora *estoy cocinando*; normalmente cocino a las ocho.', chips: ['estoy + -ando', 'está + -iendo'], mascot: 'headphones' },
   { id: 343, level: 'A1', family: 'oraciones', topic: 'Oraciones simples', example: '*¿Quién* llega hoy? Marta *no* llega hoy.', chips: ['¿Qué?', '¿Quién?', 'no + verbo'], mascot: 'teacher' },
+  { id: 344, level: 'A1', family: 'oraciones', topic: 'Describir y preguntar', example: '*Hay* un sofá en el salón. ¿*Dónde está* la cocina?', chips: ['hay…', 'está/están…', '¿dónde está…?'], mascot: 'explorer' },
+  { id: 346, level: 'A2', family: 'tiempos', topic: 'Participios', example: 'Hoy *he abierto* la sala y *he escrito* a Ana.', chips: ['-ado / -ido', 'abierto', 'escrito', 'hecho'], mascot: 'teacher' },
+  { id: 348, level: 'A2', family: 'tiempos', topic: 'Indefinido irregular', example: 'Ayer *fui* a casa de Rosa y *tuve* que esperar.', chips: ['fui', 'hice', 'tuve', 'estuve', 'pude', 'dije'], mascot: 'football' },
+  { id: 350, level: 'A2', family: 'tiempos', topic: 'Indefinido e imperfecto', example: '*Llovía* y *había* mucha gente cuando *hubo* un accidente.', chips: ['escena: era, había', 'hecho: hubo, llegó'], mascot: 'camera' },
+  { id: 351, level: 'A2', family: 'tiempos', topic: 'Perfecto e indefinido', example: 'Hoy *he hablado* con Ana. / Hoy *hablé* con Ana.', chips: ['España: he hablado', 'América: hablé', 'ayer → hablé'], mascot: 'scarf' },
 ];

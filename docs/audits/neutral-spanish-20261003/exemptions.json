@@ -7008,6 +7008,438 @@
       "text": "Shh… el bebé de los vecinos ___.",
       "category": "neutral-context",
       "reason": "Course class (2026-10-20): common international word, glossed in English; regional synonyms are not required at A1."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g346.ts",
+      "text": "INDEFINIDO · ayer escribí (only to recognise: class 047)",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g346.ts",
+      "text": "He escrito / Escribí",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g346.ts",
+      "text": "Ayer [[escribí|violet]] a Ana.",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g346.ts",
+      "text": "Vas a oír también «Hoy escribí»",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g346.ts",
+      "text": "En muchos países de América se dice también «Hoy **escribí** a Ana». En España es más frecuente «Hoy **he escrito**». Las dos formas son correctas; hoy practicas haber + participio.",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g346.ts",
+      "text": "ayer + escribí, abrí, hablé",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g346.ts",
+      "text": "Ayer escribí a Ana.",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g346.ts",
+      "text": "Ya cuentas lo que has hecho **hoy**: «He escrito a Ana». En la clase 047 aprendes a contar lo que pasó **ayer** o la semana pasada con el indefinido: «Ayer **escribí** a Ana». Ya lo has visto en los ejemplos violeta; ahora es el paso natural para hablar de un pasado terminado.",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g348.ts",
+      "text": "Estos seis verbos son muy frecuentes y **no siguen la regla** de hablé, comí. Cambian la raíz: hac- → **hic-**, ten- → **tuv-**, est- → **estuv-**, pod- → **pud-**, dec- → **dij-**. Y yo termina en **-e**, él o ella en **-o**, sin tilde.",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g348.ts",
+      "text": "En los verbos regulares, la fuerza va al final: lleg**ué**, comí, salió. En estos irregulares va en la raíz: **tu**ve, **hi**zo, **pu**do. Por eso no llevan tilde. Fui y fue tampoco: tienen una sola sílaba.",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g348.ts",
+      "text": "Hacer no sigue la regla de comí: cambia la raíz a hic- y yo termina en -e. (Hacer is irregular: hice.)",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g348.ts",
+      "text": "Hacer: yo hice, él o ella hizo. Con regulares también: visité, comí, salí.",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g348.ts",
+      "text": "Anoche yo no ___ la cena: pedí una pizza.",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g350.ts",
+      "text": "[[Llovía|blue]] cuando salí de casa. (It was raining when I left home.)",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g350.ts",
+      "text": "El sábado ___ toda la tarde y no salí de casa.",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g350.ts",
+      "text": "Cuando salí, ___ mucho tráfico en la calle.",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g350.ts",
+      "text": "El tráfico ya estaba allí cuando salí: es la escena. Había.",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g350.ts",
+      "text": "Dormí cuando sonó el teléfono.",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g350.ts",
+      "text": "pedí",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g350.ts",
+      "text": "Dos hechos en orden: pedí perdón y después esperé.",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g350.ts",
+      "text": "(?<!\\\\p{L})(?:hubo|vi|fui|fue|hice|tuve|estuve|pude|dije|salí|corrí|llamé|llegué|esperé|ayudé|frené|paré|me\\\\s+caí|\\\\p{L}{2,}ó)(?!\\\\p{L})",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g350.ts",
+      "text": "Llovía cuando salí. / Ayer llovió todo el día.",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g350.ts",
+      "text": "Ya cuentas una historia con escena y hechos: «Llovía cuando salí», «Hubo un accidente». En la clase 051 miras otro contraste del pasado: «Hoy **he hablado** con Ana» y «Hoy **hablé** con Ana». Las dos formas son correctas: depende de la región. Es el paso natural: ahora que eliges bien entre fondo y hecho, aprendes cómo hablan del pasado reciente en España y en América.",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g351.ts",
+      "text": "comí · comiste · comió · comimos · comieron",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g351.ts",
+      "text": "Hoy [[comí|orange]] con Ana.",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g351.ts",
+      "text": "Ayer [[comí|orange]] con Ana.",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g351.ts",
+      "text": "Con **ayer** y con un tiempo terminado, el indefinido es la norma en todas las variedades: «Ayer comí», no «ayer he comido».",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g351.ts",
+      "text": "Usa el **indefinido**, en todas las variedades: «Ayer comí con Ana».",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g351.ts",
+      "text": "Las dos formas son correctas. Frecuente en España: «Hoy **he comido** con Ana». Frecuente en México y gran parte de América: «Hoy **comí** con Ana».",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g351.ts",
+      "text": "Hoy [[comí|orange]] con Ana. · Hoy [[he comido|blue]] con Ana.",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g351.ts",
+      "text": "Hoy he comí con Ana. · Ayer he comido con Ana.",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g351.ts",
+      "text": "«He comí» mezcla las dos formas. Con «ayer», la norma de todas las variedades es «comí».",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g351.ts",
+      "text": "Un estudiante escribe: «Esta mañana he escribí un correo».",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g351.ts",
+      "text": "He + escribí no existe. O «he escrito» o «escribí».",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g351.ts",
+      "text": "«Hoy comí con Ana» está mal: es español de América.",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g351.ts",
+      "text": "«Hoy comí con Ana» está bien. Es la forma frecuente en México y en gran parte de América.",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g351.ts",
+      "text": "Alguien dice: «Hoy comí tacos». Tú respondes…",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g351.ts",
+      "text": "Para hoy, «comí» es correcto y muy frecuente en América.",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g351.ts",
+      "text": "Bien, pero largo. [[Esta mañana|teal]] [[tuve|orange]] tres clases y a mediodía [[comí|orange]] con Ana.",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g351.ts",
+      "text": "¡Las dos preguntas están bien! [[Corregí|orange]] exámenes y [[escribí|orange]] a mi familia.",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g351.ts",
+      "text": "he escribí",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g351.ts",
+      "text": "Las dos: «Hoy he salido temprano» y «Hoy salí temprano».",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g351.ts",
+      "text": "Solo «Hoy salí temprano».",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g351.ts",
+      "text": "Ayer corregí veinte exámenes.",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g351.ts",
+      "text": "Ayer he corregí veinte exámenes.",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g351.ts",
+      "text": "Con ayer, indefinido en todas las variedades: corregí (con e en yo).",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g351.ts",
+      "text": "Hoy comí con Ana en la cafetería.",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g351.ts",
+      "text": "Ayer salí tarde de la escuela",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g351.ts",
+      "text": "Ayer yo salí tarde de la escuela",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g351.ts",
+      "text": "Tú eres Pablo. Tu alumno es Lucía y responde al audio con su variedad: qué hizo hoy (hoy terminé…, hoy corregí…), una frase sobre ayer y una respuesta sobre el paraguas.",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g351.ts",
+      "text": "A mediodía [[he comido|blue]] / [[comí|orange]] con…",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g351.ts",
+      "text": "[[He escrito|blue]] / [[Escribí|orange]] a mi familia.",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g351.ts",
+      "text": "Hoy hablé con mi jefa y le escribí a mi madre. Hablamos de las vacaciones.",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g351.ts",
+      "text": "En las series mexicanas oigo «hoy [[comí|orange]]».",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g351.ts",
+      "text": "Mi profesor es de Colombia y dice «hoy comí». En una serie española oigo «hoy he comido». Yo prefiero «hoy comí» porque es más fácil para mí.",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g351.ts",
+      "text": "Esta tarde [[corregí|orange]]…",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g351.ts",
+      "text": "Ayer [[escribí|orange]]…",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g351.ts",
+      "text": "Esta tarde corregí los exámenes de A2 y preparé la clase de mañana. Ya terminé casi todo. Ayer escribí a mi familia.",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g351.ts",
+      "text": "Un compañero dice: «\\\"Hoy comí\\\" está mal». ¿Qué le respondes? · A classmate says “Hoy comí” is wrong. What do you answer?",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g351.ts",
+      "text": "Con ayer, todos decimos «[[comí|orange]]».",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g351.ts",
+      "text": "No está mal. «Hoy comí» es frecuente en México y en gran parte de América. En España dicen más «hoy he comido». Pero con ayer, todos decimos «ayer comí».",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g351.ts",
+      "text": "Explica en una frase que «hoy comí» y «hoy he comido» son correctas. (Explain that both are correct.)",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g351.ts",
+      "text": "comí",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g351.ts",
+      "text": "escribí",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g351.ts",
+      "text": "Hola, Carmen: ¿Cómo estás? Mi día fue largo, pero bonito. [[Hoy|teal]] [[tuve|orange]] tres clases y a mediodía [[comí|orange]] con Ana, la coordinadora. Esta tarde [[corregí|orange]] los exámenes y [[preparé|orange]] la excursión del viernes. [[Ayer|teal]] [[salí|orange]] a cenar con mi prima y [[llegué|orange]] tarde a casa. ¿Sabes qué? Aquí en Madrid, mi compañero Pablo dice «hoy he comido» y yo digo «hoy comí». ¡Las dos formas son correctas! Pero con ayer, los dos decimos «comí». ¿Y tú qué hiciste hoy? Un abrazo, Lucía.",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g351.ts",
+      "text": "Añade una frase sobre ayer con el indefinido: «Ayer salí…».",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g351.ts",
+      "text": "Con **ayer** y **anoche**, la norma de todas las variedades es el indefinido: «ayer comí», no «ayer he comido».",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g351.ts",
+      "text": "hablé · comí · fui · tuve…",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g351.ts",
+      "text": "Para **hoy**, las dos formas son correctas: «Hoy **he comido**» es frecuente en España y «Hoy **comí**», en México y gran parte de América. No es un error: es una variedad. Para **ayer**, todos usamos el indefinido. Y nunca mezclamos: ni «he comí» ni «hable» sin tilde.",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g351.ts",
+      "text": "«Hoy salí temprano» es…",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, escribí, salí…) or regional past-tense contrast taught explicitly; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g350.ts",
+      "text": "(?<!\\p{L})(?:hubo|vi|fui|fue|hice|tuve|estuve|pude|dije|salí|corrí|llamé|llegué|esperé|ayudé|frené|paré|me\\s+caí|\\p{L}{2,}ó)(?!\\p{L})",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, salí, corrí) in a writing-check pattern or a variety discussion; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g351.ts",
+      "text": "Un compañero dice: «\"Hoy comí\" está mal». ¿Qué le respondes? · A classmate says “Hoy comí” is wrong. What do you answer?",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): first-person preterite (comí, salí, corrí) in a writing-check pattern or a variety discussion; not vos."
     }
   ]
 }
