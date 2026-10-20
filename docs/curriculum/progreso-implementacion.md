@@ -18,15 +18,16 @@ Checkpoint para retomar sin repetir trabajo. Se actualiza con cada tanda.
 | 7–10 | G052–G106 (40 clases: 27 A2, 13 B1) | #238 | en producción (`8e140da`) |
 | 11–12 | G108–G130 (18 B1, 2 B2) | #239 | fusionado (`c87a8e3`) |
 | 13 | G135, G136, G138–G141, G143–G145, G147 (B2) | #240 | en producción (`84b0b33`) |
-| 14 | G149, G150, G152, G153, G155–G159, G161 (B2) | #241 | fusionado (`25c2170`); se publica con la siguiente integración |
-| 15 | G163–G166 (B2), G168–G173 (C1) | #242 | fusionado (`3bcbcac`); se publica con la siguiente integración |
-| 16 | G174, G176–G184 (C1) | #243 | lista, con audio |
-| 17 | G185, G187–G195 (C1) | — | lista, con audio |
-| 18 | G196–G200, G203, G204 (C1), G206–G208 (C2) | — | lista, con audio |
+| 14 | G149, G150, G152, G153, G155–G159, G161 (B2) | #241 | en producción (`e7fc161`) |
+| 15 | G163–G166 (B2), G168–G173 (C1) | #242 | en producción (`e7fc161`) |
+| 16 | G174, G176–G184 (C1) | #243 | en producción (`e7fc161`) |
+| 17 | G185, G187–G195 (C1) | #244 | en producción (`5700ed7`) |
+| 18 | G196–G200, G203, G204 (C1), G206–G208 (C2) | #245 | lista, con audio |
 | 19 | G209–G218 (C2) | — | lista, con audio |
-| 20 | G219–G228 (C2) | — | lista; audio en el workflow |
+| 20 | G219–G228 (C2) | — | lista, con audio |
+| 21 | G229–G236 (C2) | — | lista; audio en el workflow |
 
-Siguiente unidad pendiente después de la tanda 20: G229 (id 529).
+No quedan unidades planificadas: las 236 unidades del curso tienen clase.
 
 ## Memoria del Worker
 
