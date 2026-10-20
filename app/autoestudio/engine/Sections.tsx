@@ -6,7 +6,8 @@ import { ChoiceQuestion, ExerciseView, GapLine, OpenTask, OrderBuilder, PlayButt
 import type { AnswerEvent } from "../errors/model";
 import { Outcome } from "../errors/Recommendation";
 import { Recorder, SpeakTimer } from "./Recorder";
-import { Rich } from "./Rich";
+import { En, Rich } from "./Rich";
+import { englishLine } from "../english/key";
 import { audioKey } from "../curriculum/audio-key";
 import { playClips, stopAudio } from "./speech";
 import { checkAnswer, countWords } from "./text";
@@ -22,8 +23,8 @@ function ExampleList({ examples, ctx, speak = true }: { examples: Example[]; ctx
             <b>
               <Rich text={example.es} />
             </b>
-            {example.en && ctx.showEnglish && <em className="ae-en">{example.en}</em>}
-            {example.note && <small>{<Rich text={example.note} />}</small>}
+            {ctx.showEnglish && (example.en ?? englishLine(ctx.english, example.es)) && <em className="ae-en">{example.en ?? englishLine(ctx.english, example.es)}</em>}
+            {example.note && <small>{<Rich text={example.note} />}<En text={example.note} ctx={ctx} /></small>}
           </span>
         </li>
       ))}
@@ -31,16 +32,17 @@ function ExampleList({ examples, ctx, speak = true }: { examples: Example[]; ctx
   );
 }
 
-function TableView({ table }: { table: Table }) {
+function TableView({ table, ctx }: { table: Table; ctx: EngineContext }) {
   return (
     <div className="ae-table-wrap">
       <table className="ae-table">
-        {table.caption && <caption>{table.caption}</caption>}
+        {table.caption && <caption>{table.caption}<En text={table.caption} ctx={ctx} /></caption>}
         <thead>
           <tr>
             {table.head.map((cell) => (
               <th key={cell} scope="col">
                 <Rich text={cell} />
+                <En text={cell} ctx={ctx} />
               </th>
             ))}
           </tr>
@@ -92,13 +94,14 @@ export function GoalSection({ module, objectives, ctx, levelColor }: { module: M
         <p>
           <Rich text={module.goal.canDo} />
         </p>
-        {module.goal.canDoEn && ctx.showEnglish && <em lang="en">{module.goal.canDoEn}</em>}
+        {module.goal.canDoEn ? ctx.showEnglish && <em lang="en">{module.goal.canDoEn}</em> : <En text={module.goal.canDo} ctx={ctx} />}
       </div>
       <ol className="ae-steps">
         {module.goal.steps.map((step, index) => (
           <li key={index}>
             <i>{String(index + 1).padStart(2, "0")}</i>
             <Rich text={step} />
+            <En text={step} ctx={ctx} />
           </li>
         ))}
       </ol>
@@ -135,6 +138,7 @@ export function TheorySection({ theory, ctx }: { theory: Theory; ctx: EngineCont
       {theory.intro && (
         <p className="ae-lead">
           <Rich text={theory.intro} />
+          <En text={theory.intro} ctx={ctx} />
         </p>
       )}
       {theory.parts.map((part, index) => (
@@ -142,14 +146,16 @@ export function TheorySection({ theory, ctx }: { theory: Theory; ctx: EngineCont
           <h4>
             <i>{String.fromCharCode(65 + index)}</i>
             <Rich text={part.heading} />
+            <En text={part.heading} ctx={ctx} />
           </h4>
           {part.body.map((paragraph, paragraphIndex) => (
             <p key={paragraphIndex}>
               <Rich text={paragraph} />
+              <En text={paragraph} ctx={ctx} />
             </p>
           ))}
           <Support lines={part.support} ctx={ctx} />
-          {part.table && <TableView table={part.table} />}
+          {part.table && <TableView table={part.table} ctx={ctx} />}
           {part.examples && part.examples.length > 0 && <ExampleList examples={part.examples} ctx={ctx} />}
           {part.mistakes && part.mistakes.length > 0 && (
             <div className="ae-mistakes">
@@ -164,6 +170,7 @@ export function TheorySection({ theory, ctx }: { theory: Theory; ctx: EngineCont
                   </b>
                   <small>
                     <Rich text={mistake.why} />
+                    <En text={mistake.why} ctx={ctx} />
                   </small>
                 </div>
               ))}
@@ -172,6 +179,7 @@ export function TheorySection({ theory, ctx }: { theory: Theory; ctx: EngineCont
           {part.tip && (
             <p className="ae-tip">
               <b>{ctx.t.tip}</b> <Rich text={part.tip} />
+              <En text={part.tip} ctx={ctx} />
             </p>
           )}
         </article>
@@ -187,6 +195,7 @@ export function PracticeSection({ intro, exercises, ctx }: { intro?: string; exe
       {intro && (
         <p className="ae-lead">
           <Rich text={intro} />
+          <En text={intro} ctx={ctx} />
         </p>
       )}
       {exercises.map((exercise) => (
@@ -203,12 +212,13 @@ export function VocabularySection({ vocabulary, ctx }: { vocabulary: Vocabulary;
       {vocabulary.intro && (
         <p className="ae-lead">
           <Rich text={vocabulary.intro} />
+          <En text={vocabulary.intro} ctx={ctx} />
         </p>
       )}
       <div className="ae-vocab-groups">
         {vocabulary.groups.map((group) => (
           <article key={group.title}>
-            <h4>{group.title}</h4>
+            <h4>{group.title}<En text={group.title} ctx={ctx} /></h4>
             <ExampleList examples={group.items} ctx={ctx} />
           </article>
         ))}
@@ -224,18 +234,20 @@ export function VocabularySection({ vocabulary, ctx }: { vocabulary: Vocabulary;
 export function PronunciationSection({ pronunciation, ctx }: { pronunciation: Pronunciation; ctx: EngineContext }) {
   return (
     <div className="ae-pron">
-      <h4 className="ae-focus">{pronunciation.focus}</h4>
+      <h4 className="ae-focus">{pronunciation.focus}<En text={pronunciation.focus} ctx={ctx} /></h4>
       {pronunciation.explanation.map((paragraph, index) => (
         <p key={index}>
           <Rich text={paragraph} />
+          <En text={paragraph} ctx={ctx} />
         </p>
       ))}
       <Support lines={pronunciation.support} ctx={ctx} />
-      {pronunciation.table && <TableView table={pronunciation.table} />}
+      {pronunciation.table && <TableView table={pronunciation.table} ctx={ctx} />}
       {pronunciation.examples && <ExampleList examples={pronunciation.examples} ctx={ctx} />}
       {pronunciation.spelling && (
         <p className="ae-tip">
           <b>Ortografía</b> <Rich text={pronunciation.spelling} />
+          <En text={pronunciation.spelling} ctx={ctx} />
         </p>
       )}
       <h4 className="ae-subhead">1 · {ctx.t.perceive}</h4>
@@ -253,6 +265,7 @@ export function PronunciationSection({ pronunciation, ctx }: { pronunciation: Pr
             {line.tip && (
               <small>
                 <Rich text={line.tip} />
+                <En text={line.tip} ctx={ctx} />
               </small>
             )}
             <Recorder t={ctx.t} />
@@ -299,15 +312,16 @@ export function ListeningSection({ listening, ctx }: { listening: Listening; ctx
   return (
     <div className="ae-listening">
       <div className="ae-scene">
-        <h4>{listening.title}</h4>
+        <h4>{listening.title}<En text={listening.title} ctx={ctx} /></h4>
         <p>
           <Rich text={listening.context} />
+          <En text={listening.context} ctx={ctx} />
         </p>
         <ul className="ae-speakers">
           {listening.speakers.map((speaker) => (
             <li key={speaker.id}>
               {speaker.name}
-              {speaker.role && <small> · {speaker.role}</small>}
+              {speaker.role && <small> · {speaker.role}<En text={speaker.role} ctx={ctx} /></small>}
             </li>
           ))}
         </ul>
@@ -331,9 +345,11 @@ export function ListeningSection({ listening, ctx }: { listening: Listening; ctx
           <section key={index} className="ae-lstage">
             <h4>
               <i>{index + 1}</i> {ctx.t.stage} {index + 1} · {stageLabel(stage.stage)}
+              {ctx.showEnglish && ctx.english && <span lang="en"> · {stage.stage === "gist" ? "Main idea" : stage.stage === "detail" ? "Details" : "Notice"}</span>}
             </h4>
             <p className="ae-lead">
               <Rich text={stage.prompt} />
+              <En text={stage.prompt} ctx={ctx} />
             </p>
             <ExerciseView exercise={stage.exercise} ctx={ctx} />
             {index === unlocked - 1 && index < listening.stages.length - 1 && (
@@ -357,7 +373,7 @@ export function ListeningSection({ listening, ctx }: { listening: Listening; ctx
                     <dt>
                       {names[line.speaker]}
                     </dt>
-                    <dd>{line.text}</dd>
+                    <dd>{line.text}<En text={line.text} ctx={ctx} /></dd>
                   </div>
                 ))}
               </dl>
@@ -379,12 +395,13 @@ export function ReadingSection({ reading, ctx }: { reading: Reading; ctx: Engine
       <article className="ae-text">
         <header>
           <span>{reading.genre}</span>
-          <h4>{reading.title}</h4>
-          {reading.frame && <small>{reading.frame}</small>}
+          <h4>{reading.title}<En text={reading.title} ctx={ctx} /></h4>
+          {reading.frame && <small>{reading.frame}<En text={reading.frame} ctx={ctx} /></small>}
         </header>
         {reading.text.map((paragraph, index) => (
           <p key={index}>
             <Rich text={paragraph} />
+            <En text={paragraph} ctx={ctx} />
           </p>
         ))}
       </article>
@@ -401,6 +418,7 @@ export function ReadingSection({ reading, ctx }: { reading: Reading; ctx: Engine
         <h4>{ctx.t.noticing}</h4>
         <p>
           <Rich text={reading.noticing.prompt} />
+          <En text={reading.noticing.prompt} ctx={ctx} />
         </p>
         <ul>
           {reading.noticing.items.map((item, index) => (
@@ -411,6 +429,7 @@ export function ReadingSection({ reading, ctx }: { reading: Reading; ctx: Engine
               {revealed.includes(index) && (
                 <small>
                   <Rich text={item.note} />
+                  <En text={item.note} ctx={ctx} />
                 </small>
               )}
             </li>
@@ -434,10 +453,12 @@ export function WritingSection({ writing, ctx, draft, onDraft }: { writing: Writ
       <div className="ae-brief">
         <p className="ae-lead">
           <Rich text={writing.task} />
+          <En text={writing.task} ctx={ctx} />
         </p>
         {writing.context && (
           <p className="ae-context">
             <Rich text={writing.context} />
+            <En text={writing.context} ctx={ctx} />
           </p>
         )}
         <h5>{ctx.t.steps}</h5>
@@ -445,6 +466,7 @@ export function WritingSection({ writing, ctx, draft, onDraft }: { writing: Writ
           {writing.steps.map((step, index) => (
             <li key={index}>
               <Rich text={step} />
+              <En text={step} ctx={ctx} />
             </li>
           ))}
         </ol>
@@ -479,6 +501,7 @@ export function WritingSection({ writing, ctx, draft, onDraft }: { writing: Writ
           <li key={line}>
             <label>
               <input type="checkbox" /> <Rich text={line} />
+              <En text={line} ctx={ctx} />
             </label>
           </li>
         ))}
@@ -491,6 +514,7 @@ export function WritingSection({ writing, ctx, draft, onDraft }: { writing: Writ
           {writing.model.map((paragraph, index) => (
             <p key={index}>
               <Rich text={paragraph} />
+              <En text={paragraph} ctx={ctx} />
             </p>
           ))}
         </blockquote>
@@ -507,21 +531,25 @@ export function SpeakingSection({ speaking, ctx }: { speaking: Speaking; ctx: En
       {speaking.intro && (
         <p className="ae-lead">
           <Rich text={speaking.intro} />
+          <En text={speaking.intro} ctx={ctx} />
         </p>
       )}
       {speaking.tasks.map((task, index) => (
         <article key={index} className="ae-speak-task">
           <h4>
             <i>{index + 1}</i> {task.title}
+            <En text={task.title} ctx={ctx} />
           </h4>
           <p>
             <Rich text={task.prompt} />
+            <En text={task.prompt} ctx={ctx} />
           </p>
           {task.prep && (
             <ul className="ae-prep">
               {task.prep.map((line) => (
                 <li key={line}>
                   <Rich text={line} />
+                  <En text={line} ctx={ctx} />
                 </li>
               ))}
             </ul>
@@ -539,6 +567,7 @@ export function SpeakingSection({ speaking, ctx }: { speaking: Speaking; ctx: En
                 <blockquote className="ae-model">
                   <PlayButton text={task.model.replace(/[*_`]/g, "")} ctx={ctx} />
                   <Rich text={task.model} />
+                  <En text={task.model} ctx={ctx} />
                 </blockquote>
               )}
             </>
@@ -549,6 +578,7 @@ export function SpeakingSection({ speaking, ctx }: { speaking: Speaking; ctx: En
                 <li key={line}>
                   <label>
                     <input type="checkbox" /> <Rich text={line} />
+                    <En text={line} ctx={ctx} />
                   </label>
                 </li>
               ))}
@@ -577,6 +607,7 @@ export function UseInClassSection({ use, ctx, title }: { use: UseInClass; ctx: E
     <div className="ae-class">
       <p className="ae-lead">
         <Rich text={use.intro} />
+        <En text={use.intro} ctx={ctx} />
       </p>
       <div className="ae-class-cards">
         {use.cards.map((card, index) => (
@@ -584,6 +615,7 @@ export function UseInClassSection({ use, ctx, title }: { use: UseInClass; ctx: E
             <span>{card.move}</span>
             <p>
               <Rich text={card.task} />
+              <En text={card.task} ctx={ctx} />
             </p>
             {card.phrases && (
               <ul>
@@ -600,6 +632,7 @@ export function UseInClassSection({ use, ctx, title }: { use: UseInClass; ctx: E
       {use.bring && (
         <p className="ae-tip">
           <b>{ctx.t.bring}</b> <Rich text={use.bring} />
+          <En text={use.bring} ctx={ctx} />
         </p>
       )}
       <button type="button" className="ae-secondary" onClick={copyCards}>
@@ -636,7 +669,7 @@ function QuizGap({ item, ctx, onResult, exerciseId }: { item: Extract<QuizItem, 
           <span>
             {ctx.t.answer}: {item.answers.map((list) => list[0]).join(" · ")}
           </span>
-          {item.why && <small><Rich text={item.why} /></small>}
+          {item.why && <small><Rich text={item.why} /><En text={item.why} ctx={ctx} /></small>}
         </div>
       )}
       <Outcome ctx={ctx} event={checked ? event : null} />
@@ -697,7 +730,7 @@ export function QuizSection({ items, ctx, onFinish, previous }: { items: QuizIte
                 <p className="ae-source">
                   <Rich text={item.source} />
                 </p>
-                {item.instruction && <small className="ae-hint">{item.instruction}</small>}
+                {item.instruction && <small className="ae-hint">{item.instruction}<En text={item.instruction} ctx={ctx} /></small>}
                 <TextAnswer accepted={item.answers} why={item.why} ctx={ctx} label={item.source} onResult={record(index)} exerciseId={`quiz:${index}`} kind="transform" />
               </>
             )}

@@ -1,4 +1,5 @@
 import { Fragment } from "react";
+import { englishLine } from "../english/key";
 
 /**
  * Renders the content markup: **bold**, _italic_ and `form`. Everything else is
@@ -17,6 +18,18 @@ export function Rich({ text }: { text: string }) {
         if (part.startsWith("_") && part.endsWith("_") && part.length > 2) return <em key={index}>{part.slice(1, -1)}</em>;
         return <Fragment key={index}>{part}</Fragment>;
       })}
+    </span>
+  );
+}
+
+/** English helper line for A1–B2: shown under the Spanish when the week has a translation. */
+export function En({ text, ctx }: { text?: string; ctx: { showEnglish: boolean; english?: Readonly<Record<string, string>> } }) {
+  const line = text && ctx.showEnglish ? englishLine(ctx.english, text) : undefined;
+  // Spanish kept on purpose (a cited form, a model answer) needs no second line.
+  if (!line || line === text) return null;
+  return (
+    <span className="ae-en-line" lang="en">
+      <Rich text={line} />
     </span>
   );
 }

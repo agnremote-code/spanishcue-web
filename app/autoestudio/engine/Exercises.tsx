@@ -6,7 +6,7 @@ import type { AnswerEvent } from "../errors/model";
 import { Outcome } from "../errors/Recommendation";
 import type { Suggestion } from "../errors/useErrorLog";
 import type { Copy } from "./copy";
-import { Rich } from "./Rich";
+import { En, Rich } from "./Rich";
 import { playClips, type AudioMap } from "./speech";
 import { checkAnswer, countWords, normalizeAnswer, seededShuffle, type Verdict } from "./text";
 
@@ -14,6 +14,8 @@ export type EngineContext = {
   t: Copy;
   audio?: AudioMap;
   showEnglish: boolean;
+  /** Spanish → English lines for this week (A1–B2); missing at C1–C2. */
+  english?: Readonly<Record<string, string>>;
   /** Section being rendered; checked answers are reported against it. */
   section?: SectionKey;
   /** Records a checked answer and decides whether a class card is shown. */
@@ -61,7 +63,7 @@ export function PlayButton({ text, voice, ctx, label, compact = false }: { text:
   );
 }
 
-function Feedback({ verdict, why, answer, t }: { verdict: Verdict | null; why?: string; answer?: string; t: Copy }) {
+function Feedback({ verdict, why, answer, t, ctx }: { verdict: Verdict | null; why?: string; answer?: string; t: Copy; ctx?: EngineContext }) {
   if (!verdict) return null;
   return (
     <div className={`ae-feedback ${verdict}`} role="status">
@@ -74,20 +76,22 @@ function Feedback({ verdict, why, answer, t }: { verdict: Verdict | null; why?: 
       {why && (
         <small>
           <Rich text={why} />
+          {ctx && <En text={why} ctx={ctx} />}
         </small>
       )}
     </div>
   );
 }
 
-function Shell({ exercise, children, footer }: { exercise: Exercise; children: ReactNode; footer?: ReactNode }) {
+function Shell({ exercise, children, footer, ctx }: { exercise: Exercise; children: ReactNode; footer?: ReactNode; ctx?: EngineContext }) {
   return (
     <section className={`ae-exercise type-${exercise.type}`} aria-labelledby={`ex-${exercise.id}`}>
       <header>
-        <span className="ae-mechanic">{mechanicLabel(exercise.type)}</span>
-        {exercise.title && <h4 id={`ex-${exercise.id}`}>{exercise.title}</h4>}
+        <span className="ae-mechanic">{mechanicLabel(exercise.type)}{ctx?.showEnglish && ctx.english && <span lang="en"> · {mechanicLabelEn[exercise.type]}</span>}</span>
+        {exercise.title && <h4 id={`ex-${exercise.id}`}>{exercise.title}{ctx && <En text={exercise.title} ctx={ctx} />}</h4>}
         <p id={exercise.title ? undefined : `ex-${exercise.id}`}>
           <Rich text={exercise.prompt} />
+          {ctx && <En text={exercise.prompt} ctx={ctx} />}
         </p>
       </header>
       <div className="ae-exercise-body">{children}</div>
@@ -95,6 +99,19 @@ function Shell({ exercise, children, footer }: { exercise: Exercise; children: R
     </section>
   );
 }
+
+const mechanicLabelEn: Record<Exercise["type"], string> = {
+  choice: "Choose",
+  context: "Decide in context",
+  listen: "Listen and choose",
+  gap: "Fill in",
+  order: "Put in order",
+  match: "Match",
+  classify: "Sort",
+  transform: "Transform",
+  error: "Fix the mistake",
+  open: "Produce",
+};
 
 export function mechanicLabel(type: Exercise["type"]): string {
   return {
@@ -134,11 +151,13 @@ export function ChoiceQuestion({ item, ctx, id, onAnswer, exerciseId = id, itemI
       {item.context && (
         <div className="ae-context">
           <Rich text={item.context} />
+          <En text={item.context} ctx={ctx} />
         </div>
       )}
       {item.audio && <PlayButton text={item.audio} voice={item.voice} ctx={ctx} />}
       <p className="ae-question">
         <Rich text={item.q} />
+        <En text={item.q} ctx={ctx} />
       </p>
       <div className="ae-options" role="group" aria-label={item.q}>
         {order.map((index, position) => {
@@ -154,7 +173,7 @@ export function ChoiceQuestion({ item, ctx, id, onAnswer, exerciseId = id, itemI
           );
         })}
       </div>
-      {picked !== null && <Feedback verdict={picked === item.answer ? "correct" : "wrong"} why={item.why} answer={item.options[item.answer]} t={ctx.t} />}
+      {picked !== null && <Feedback verdict={picked === item.answer ? "correct" : "wrong"} why={item.why} answer={item.options[item.answer]} t={ctx.t} ctx={ctx} />}
       <Outcome ctx={ctx} event={event} />
       {picked !== null && picked !== item.answer && (
         <button type="button" className="ae-link" onClick={() => setPicked(null)}>
@@ -167,7 +186,7 @@ export function ChoiceQuestion({ item, ctx, id, onAnswer, exerciseId = id, itemI
 
 function ChoiceExercise({ exercise, ctx }: { exercise: Extract<Exercise, { type: "choice" | "context" | "listen" }>; ctx: EngineContext }) {
   return (
-    <Shell exercise={exercise}>
+    <Shell exercise={exercise} ctx={ctx}>
       <ol className="ae-items">
         {exercise.items.map((item, index) => (
           <li key={index}>
@@ -223,6 +242,7 @@ function GapExercise({ exercise, ctx }: { exercise: Extract<Exercise, { type: "g
   return (
     <Shell
       exercise={exercise}
+      ctx={ctx}
       footer={
         <>
           <button type="button" className="ae-primary" onClick={check}>
@@ -259,8 +279,8 @@ function GapExercise({ exercise, ctx }: { exercise: Extract<Exercise, { type: "g
                   setValues((current) => current.map((row, rowIndex) => (rowIndex === itemIndex ? row.map((cell, cellIndex) => (cellIndex === gapIndex ? value : cell)) : row)));
                 }}
               />
-              {item.hint && !checked && <small className="ae-hint">{item.hint}</small>}
-              {ctx.showEnglish && item.en && <small className="ae-en">{item.en}</small>}
+              {item.hint && !checked && <small className="ae-hint">{item.hint}<En text={item.hint} ctx={ctx} /></small>}
+              {ctx.showEnglish && item.en ? <small className="ae-en">{item.en}</small> : <En text={item.q} ctx={ctx} />}
               <Feedback verdict={overall} why={item.why} answer={item.answers.map((list) => list[0]).join(" · ")} t={ctx.t} />
               <Outcome ctx={ctx} event={checked ? events[itemIndex] : null} />
             </li>
@@ -312,8 +332,8 @@ export function OrderBuilder({ item, seed, ctx, onResult, exerciseId = seed, ite
           {ctx.t.reset}
         </button>
       </div>
-      {ctx.showEnglish && item.en && <small className="ae-en">{item.en}</small>}
-      <Feedback verdict={verdict} why={item.why} answer={item.words.join(" ")} t={ctx.t} />
+      {ctx.showEnglish && item.en ? <small className="ae-en">{item.en}</small> : <En text={item.words.join(" ")} ctx={ctx} />}
+      <Feedback verdict={verdict} why={item.why} answer={item.words.join(" ")} t={ctx.t} ctx={ctx} />
       <Outcome ctx={ctx} event={verdict ? event : null} />
     </div>
   );
@@ -321,7 +341,7 @@ export function OrderBuilder({ item, seed, ctx, onResult, exerciseId = seed, ite
 
 function OrderExercise({ exercise, ctx }: { exercise: Extract<Exercise, { type: "order" }>; ctx: EngineContext }) {
   return (
-    <Shell exercise={exercise}>
+    <Shell exercise={exercise} ctx={ctx}>
       <ol className="ae-items">
         {exercise.items.map((item, index) => (
           <li key={index}>
@@ -362,6 +382,7 @@ function MatchExercise({ exercise, ctx }: { exercise: Extract<Exercise, { type: 
   return (
     <Shell
       exercise={exercise}
+      ctx={ctx}
       footer={
         <>
           <button type="button" className="ae-primary" disabled={!allLinked} onClick={check}>
@@ -409,10 +430,10 @@ function MatchExercise({ exercise, ctx }: { exercise: Extract<Exercise, { type: 
               </li>
             ))}
           </ul>
-          {exercise.why && <small><Rich text={exercise.why} /></small>}
+          {exercise.why && <small><Rich text={exercise.why} /><En text={exercise.why} ctx={ctx} /></small>}
         </div>
       )}
-      {checked && correctCount === exercise.pairs.length && <Feedback verdict="correct" why={exercise.why} t={ctx.t} />}
+      {checked && correctCount === exercise.pairs.length && <Feedback verdict="correct" why={exercise.why} t={ctx.t} ctx={ctx} />}
       <Outcome ctx={ctx} event={checked ? event : null} />
     </Shell>
   );
@@ -436,6 +457,7 @@ function ClassifyExercise({ exercise, ctx }: { exercise: Extract<Exercise, { typ
   return (
     <Shell
       exercise={exercise}
+      ctx={ctx}
       footer={
         <>
           <button type="button" className="ae-primary" disabled={Object.keys(placed).length !== exercise.items.length} onClick={check}>
@@ -475,6 +497,7 @@ function ClassifyExercise({ exercise, ctx }: { exercise: Extract<Exercise, { typ
               }}
             >
               <Rich text={category} />
+              <En text={category} ctx={ctx} />
             </button>
             <div>
               {order
@@ -490,7 +513,7 @@ function ClassifyExercise({ exercise, ctx }: { exercise: Extract<Exercise, { typ
       </div>
       {checked && (
         wrong.length === 0 ? (
-          <Feedback verdict="correct" t={ctx.t} />
+          <Feedback verdict="correct" t={ctx.t} ctx={ctx} />
         ) : (
           <div className="ae-feedback wrong">
             <b>{ctx.t.wrong}</b>
@@ -498,7 +521,7 @@ function ClassifyExercise({ exercise, ctx }: { exercise: Extract<Exercise, { typ
               {wrong.map((item) => (
                 <li key={item.index}>
                   <Rich text={item.text} /> → {exercise.categories[item.cat]}
-                  {item.why && <small> · <Rich text={item.why} /></small>}
+                  {item.why && <small> · <Rich text={item.why} /><En text={item.why} ctx={ctx} /></small>}
                 </li>
               ))}
             </ul>
@@ -541,7 +564,7 @@ export function TextAnswer({ accepted, why, ctx, initial = "", label, multiline 
           </button>
         )}
       </div>
-      <Feedback verdict={verdict} why={verdict ? why : undefined} answer={verdict === "accent" || reveal ? accepted[0] : undefined} t={ctx.t} />
+      <Feedback verdict={verdict} why={verdict ? why : undefined} answer={verdict === "accent" || reveal ? accepted[0] : undefined} t={ctx.t} ctx={ctx} />
       <Outcome ctx={ctx} event={verdict ? event : null} />
     </div>
   );
@@ -549,14 +572,14 @@ export function TextAnswer({ accepted, why, ctx, initial = "", label, multiline 
 
 function TransformExercise({ exercise, ctx }: { exercise: Extract<Exercise, { type: "transform" }>; ctx: EngineContext }) {
   return (
-    <Shell exercise={exercise}>
+    <Shell exercise={exercise} ctx={ctx}>
       <ol className="ae-items">
         {exercise.items.map((item: TransformItem, index) => (
           <li key={index}>
             <p className="ae-source">
               <Rich text={item.source} />
             </p>
-            {item.instruction && <small className="ae-hint">{item.instruction}</small>}
+            {item.instruction && <small className="ae-hint">{item.instruction}<En text={item.instruction} ctx={ctx} /></small>}
             <TextAnswer accepted={item.answers} why={item.why} ctx={ctx} label={item.source} exerciseId={exercise.id} itemIndex={index} kind="transform" />
           </li>
         ))}
@@ -567,7 +590,7 @@ function TransformExercise({ exercise, ctx }: { exercise: Extract<Exercise, { ty
 
 function ErrorExercise({ exercise, ctx }: { exercise: Extract<Exercise, { type: "error" }>; ctx: EngineContext }) {
   return (
-    <Shell exercise={exercise}>
+    <Shell exercise={exercise} ctx={ctx}>
       <ol className="ae-items">
         {exercise.items.map((item: ErrorItem, index) => (
           <li key={index}>
@@ -591,6 +614,7 @@ export function OpenTask({ item, ctx }: { item: OpenItem; ctx: EngineContext }) 
     <div className="ae-open">
       <p className="ae-question">
         <Rich text={item.prompt} />
+        <En text={item.prompt} ctx={ctx} />
       </p>
       <textarea aria-label={item.prompt} value={value} rows={3} onChange={(event) => setValue(event.target.value)} />
       <div className="ae-row">
@@ -606,6 +630,7 @@ export function OpenTask({ item, ctx }: { item: OpenItem; ctx: EngineContext }) 
       {showModel && item.model && (
         <blockquote className="ae-model">
           <Rich text={item.model} />
+          <En text={item.model} ctx={ctx} />
         </blockquote>
       )}
       {item.checklist && (
@@ -614,6 +639,7 @@ export function OpenTask({ item, ctx }: { item: OpenItem; ctx: EngineContext }) 
             <li key={line}>
               <label>
                 <input type="checkbox" /> <Rich text={line} />
+                <En text={line} ctx={ctx} />
               </label>
             </li>
           ))}
@@ -625,7 +651,7 @@ export function OpenTask({ item, ctx }: { item: OpenItem; ctx: EngineContext }) 
 
 function OpenExercise({ exercise, ctx }: { exercise: Extract<Exercise, { type: "open" }>; ctx: EngineContext }) {
   return (
-    <Shell exercise={exercise}>
+    <Shell exercise={exercise} ctx={ctx}>
       {exercise.items.map((item, index) => (
         <OpenTask key={index} item={item} ctx={ctx} />
       ))}
