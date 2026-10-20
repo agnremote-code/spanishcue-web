@@ -8406,6 +8406,78 @@
       "text": "Di la persona y el pronombre: «Al señor Herrera le dimos…» o «Les escribí a los compañeros».",
       "category": "neutral-context",
       "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/audio/clips.json",
+      "text": "Hola, Nuria, soy Raúl. Te cuento el plan para el sábado. Primero vamos al Café Aurora, el sitio donde Elena y yo nos conocimos. Después, el parque del río, en el que pasábamos los domingos. El puente viejo también es muy importante para nosotros: es el lugar donde le pedí matrimonio, en 2019, cuando vivíamos en la calle Luna. Mejor empezamos temprano, a las nueve, cuando la luz es suave y no hay mucha gente. Ah, y una cosa más: lo que más le gusta a Elena es reír, así que lo que queremos es un día divertido, sin fotos muy serias. Esta noche te mando la dirección del café. ¡Muchas gracias, Nuria! Un abrazo.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g367.ts",
+      "text": "Perfecto. Entonces, para Nuria: el café, la calle Luna y el puente [[donde|teal]] te pedí matrimonio.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g367.ts",
+      "text": "Lugar + **donde**: nos conocimos **en** el café, vivimos **en** el piso, le pedí matrimonio **en** el puente. Donde = en el que / en la que.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g367.ts",
+      "text": "Escucha una vez para la idea general y otra vez para los detalles. Fíjate en donde, en el que, cuando y lo que. Vas a oír «le pedí matrimonio» (I proposed to her). (Listen once for the gist, once for the details.)",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g367.ts",
+      "text": "«…le pedí matrimonio, en 2019, cuando vivíamos en la calle Luna».",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g367.ts",
+      "text": "Hola, Nuria, soy Raúl. Te cuento el plan para el sábado. Primero vamos al Café Aurora, el sitio [[donde|teal]] Elena y yo nos conocimos. Después, el parque del río, [[en el que|teal]] pasábamos los domingos. El puente viejo también es muy importante para nosotros: es el lugar [[donde|teal]] le pedí matrimonio, en 2019, [[cuando|orange]] vivíamos en la calle Luna. Mejor empezamos temprano, a las nueve, [[cuando|orange]] la luz es suave y no hay mucha gente. Ah, y una cosa más: [[lo que|violet]] más le gusta a Elena es reír, así que [[lo que|violet]] queremos es un día divertido, sin fotos muy serias. Esta noche te mando la dirección del café. ¡Muchas gracias, Nuria! Un abrazo.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g370.ts",
+      "text": "No, ___ me vio. Dejé la caja en el mostrador y salí.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g370.ts",
+      "text": "Perdí [[algo|blue]]: mi…",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g370.ts",
+      "text": "Perdón, perdí algo ayer: mi bufanda azul. Busqué en mi habitación, pero no encontré nada. ¿Alguien encontró una bufanda en el comedor?",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g370.ts",
+      "text": "Creo que perdí…",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g370.ts",
+      "text": "perdí",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g370.ts",
+      "text": "Hola, Inés: Soy Marta Salcedo, de la habitación 12. Creo que perdí mi cargador ayer en el comedor. Es negro y pequeño. Esta mañana busqué en la habitación, pero [[no|teal]] encontré [[nada|orange]]. ¿[[Alguien|blue]] encontró un cargador? ¿O hay [[algo|blue]] en la caja de objetos perdidos? Hoy trabajo en el mercado todo el día. Si tiene tiempo, ¿puede preguntar [[a alguien|blue]] de la cocina? Muchas gracias. Un saludo, Marta.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
     }
   ]
 }

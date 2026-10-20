@@ -19,13 +19,13 @@ test('a teacher can combine a grammar topic with level and text search',()=>{
 test('the six missing teacher-led lessons are individually routable alongside all existing grammar',()=>{
  const grammar=lessons.filter(l=>l.category==='Gramática');
  assert.equal(new Set(lessons.map(l=>l.id)).size,lessons.length,'global lesson identities remain unique alongside country additions');
- assert.equal(grammar.length,98);
- for(const id of [230,231,232,233,234,235,239,303,305,307,311,312,314,318,319,320,323,324,327,328,330,331,332,333,335,336,337,338,339,340,341,343,344,346,348,350,351,352,353,356,358,360,361,362,363,364,365]){
+ assert.equal(grammar.length,108);
+ for(const id of [230,231,232,233,234,235,239,303,305,307,311,312,314,318,319,320,323,324,327,328,330,331,332,333,335,336,337,338,339,340,341,343,344,346,348,350,351,352,353,356,358,360,361,362,363,364,365,366,367,369,370,371,372,373,374,375,376]){
   const l=grammar.find(l=>l.id===id);assert.ok(l,`lesson ${id}`);
   assert.ok(l.path?.startsWith('/gramatica/'));assert.ok(l.grammarTopic);
   assert.equal(l.countryCollection,false,'grammar must never enter the country collection');
  }
- assert.equal(new Set(grammar.map(l=>l.id)).size,98);
+ assert.equal(new Set(grammar.map(l=>l.id)).size,108);
  assert.equal(grammar.find(l=>l.id===40).path,'/la-fabrica-de-los-nombres');
  assert.equal(grammar.find(l=>l.id===23).path,'/condicionales');
  assert.ok(grammar.every(l=>l.grammarTopic),'every existing lesson must use the same taxonomy');

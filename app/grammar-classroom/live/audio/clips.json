@@ -247,6 +247,66 @@
       "voice": "es-MX-DaliaNeural",
       "rate": "-6%",
       "text": "Hola, Mateo, soy Irene. Ya estoy en el hotel, todo bien por aquí. Te mando este audio por tres cosas. Primero, las plantas: riégalas mañana por la mañana, pero no las riegues mucho, que en el salón no hace calor. Segundo, mañana llega un paquete para mí. ¿Lo puedes recoger en la recepción del edificio? Si no puedes, no pasa nada: voy a recogerlo yo el lunes. Y tercero, la llave del buzón. Estoy buscándola en mi bolso y no está. Creo que está en la mesa de la entrada. Mírala, por favor, y escríbeme un mensaje. Y un beso grande para Nube. ¡Mil gracias, de verdad!"
+    },
+    {
+      "id": 366,
+      "voice": "es-CO-SalomeNeural",
+      "rate": "-6%",
+      "text": "Hola, Rocío, soy Elena, la vecina que vive en el segundo A. Perdona, hoy llegué tarde del trabajo. Tengo el paquete que llegó ayer para ti. Es una caja grande que pesa bastante, pero no te preocupes: Raúl te la sube. Mañana trabajo en casa toda la mañana, así que puedes pasar a las diez o a las once. Ah, y un consejo: el repartidor que viene a nuestra calle siempre tiene prisa. Si no estás en casa, deja el paquete con la primera persona que abre la puerta. Y si un día no estoy yo, el señor que vive en el primero, Hugo, también recoge paquetes. Es muy amable. Bueno, hasta mañana. ¡Un beso!"
+    },
+    {
+      "id": 367,
+      "voice": "es-CO-GonzaloNeural",
+      "rate": "-6%",
+      "text": "Hola, Nuria, soy Raúl. Te cuento el plan para el sábado. Primero vamos al Café Aurora, el sitio donde Elena y yo nos conocimos. Después, el parque del río, en el que pasábamos los domingos. El puente viejo también es muy importante para nosotros: es el lugar donde le pedí matrimonio, en 2019, cuando vivíamos en la calle Luna. Mejor empezamos temprano, a las nueve, cuando la luz es suave y no hay mucha gente. Ah, y una cosa más: lo que más le gusta a Elena es reír, así que lo que queremos es un día divertido, sin fotos muy serias. Esta noche te mando la dirección del café. ¡Muchas gracias, Nuria! Un abrazo."
+    },
+    {
+      "id": 369,
+      "voice": "es-MX-DaliaNeural",
+      "rate": "-6%",
+      "text": "Hola a todos, soy Sofía, su guía. Gracias por el paseo de hoy. Les cuento el plan para mañana. Nos vemos a las nueve en la plaza y vamos juntos al mercado de San Juan, el mercado más antiguo de la ciudad. Allí venden la mejor fruta del barrio y el jugo de mango está riquísimo. Después subimos al cerro del Faro. El camino es corto, pero un poco difícil. Desde arriba se ve toda la bahía: es la vista más bonita de Puerto Alba. ¡Qué bonita es al mediodía! Por la tarde, si quieren, comemos en Casa Lola. No es el restaurante más famoso, pero su pescado es el mejor de la costa. Lleven agua y gorra, porque mañana va a hacer muchísimo calor. ¡Hasta mañana!"
+    },
+    {
+      "id": 370,
+      "voice": "es-MX-DaliaNeural",
+      "rate": "-6%",
+      "text": "Buenos días, señora Salcedo, le habla Inés, de la recepción. Le dejo este mensaje porque usted ya salió. Pregunté a alguien de la cocina por la caja de ayer. Lupita, de la cocina, vio a un señor alto con una cámara, pero el señor no habló con nadie: dejó la caja y salió. Seguro que era su compañero Óscar. Otra cosa: esta mañana alguien llamó para usted, una señora de una editorial. No dejó su número, pero va a llamar otra vez a las seis. Y su cargador: en su habitación no encontramos nada. ¿Lo dejó en el comedor? Nadie lo encontró todavía, pero lo buscamos hoy. Si necesita algo, llame a la recepción. ¡Buen día!"
+    },
+    {
+      "id": 371,
+      "voice": "es-ES-AlvaroNeural",
+      "rate": "-6%",
+      "text": "Buenos días, señora Herrera. Soy Ramiro, del restaurante El Patio. Llamo por la cena del sábado. Tengo una buena noticia: un grupo canceló su reserva y ahora queda una mesa libre en la terraza. Es una mesa muy larga y hay mucho espacio. Pero el sábado por la noche va a hacer un poco de frío. En el salón, en cambio, no hay ningún problema. Usted decide. Si prefieren la terraza, necesito saberlo hoy, porque no queda ninguna otra mesa grande. Otra cosa: para los compañeros vegetarianos tenemos algunos platos nuevos, pero hay pocas raciones. Por favor, dígame el número exacto antes del jueves, porque el fin de semana tenemos muchas reservas. Muchas gracias y hasta pronto."
+    },
+    {
+      "id": 372,
+      "voice": "es-CO-GonzaloNeural",
+      "rate": "-6%",
+      "text": "Hola, Marina, buenas tardes. Habla Federico, el del apartamento. Les cuento: el técnico ya arregló el wifi. No era nada grave, solo un cable. Y el aire acondicionado tampoco tenía nada grave: estaba sucio, y el técnico lo limpió. Sobre las toallas y las sábanas: la señora de la limpieza no vino el jueves y nadie me avisó. Eso no pasa nunca, de verdad. Ya les dejé toallas, sábanas, café y agua en la portería. Y por la primera noche no van a pagar nada. Ah, y el portero dice que anoche no vio a nadie porque estaba en el parqueadero. Ni él ni yo sabíamos la hora de su llegada. Cualquier cosa, me escriben. ¡Buen fin de semana!"
+    },
+    {
+      "id": 373,
+      "voice": "es-MX-DaliaNeural",
+      "rate": "-6%",
+      "text": "Hola a todos, soy Elena. Les cuento un cambio para mañana. El camino del río está cerrado, así que no vamos por los túneles: vamos por la carretera vieja. Salimos desde la estación a las nueve, y el punto de encuentro es el mismo: enfrente de la estación, al lado de la fuente. Primero vamos hacia el norte y pasamos por el centro de San Miguel. Ojo: Gabriel nos espera con la camioneta delante de la iglesia, no detrás de la cafetería. Después seguimos hasta el lago y comemos allí, debajo de los árboles. A las cinco volvemos en tren, como siempre. Lleven agua y una chaqueta, porque en el lago hace frío. ¡Hasta mañana!"
+    },
+    {
+      "id": 374,
+      "voice": "es-ES-ElviraNeural",
+      "rate": "-6%",
+      "text": "Hola, Lucía, soy Ana. Primero, muchas gracias por el cambio con Pablo: entonces el sábado trabajas tú y el martes trabaja él. Necesito el horario nuevo para el jueves, porque el viernes lo mando a todo el equipo. Otra cosa: el sábado abrimos a las ocho por el mercado de la plaza; siempre viene mucha gente temprano. Y el regalo para Marta, la hermana de Pablo: ya compré unas tazas muy bonitas por treinta euros. ¿Puedes pasar por mi casa el viernes antes del trabajo? Te las doy y las llevamos a la panadería para envolverlas. Pablo sale para Valencia el viernes a las seis, así que se las damos antes. Un beso y hasta mañana."
+    },
+    {
+      "id": 375,
+      "voice": "es-ES-AlvaroNeural",
+      "rate": "-6%",
+      "text": "Hola, Marta, soy Raúl. Ya estoy en el tren y llego a las siete y cuarto. Me dijiste que Hugo viene a buscarme, ¿verdad? Pues aquí va una descripción para él. Soy alto, eso no cambia, pero ahora llevo el pelo muy corto y llevo barba. Y llevo gafas, unas gafas negras. Hoy llevo una chaqueta verde y una mochila negra muy grande. Ah, y estoy más delgado que en la universidad, ¿eh? Ahora corro todos los días. Eso sí, estoy un poco cansado, porque llevo cuatro horas de viaje. ¿Y Hugo? ¿Cómo es? ¿Qué lleva hoy? Mándame un mensaje, por favor. ¡Nos vemos esta noche!"
+    },
+    {
+      "id": 376,
+      "voice": "es-CO-SalomeNeural",
+      "rate": "-6%",
+      "text": "Hola, Hugo, buenas noches. Te mando este audio porque mañana llego tarde, a las diez, y tú preparas el desayuno. Es fácil, de verdad. La receta es así: primero se mezcla la harina con agua tibia, sal y un poco de queso. Se amasa bien, unos tres minutos, y después se forman bolitas y se aplastan con la mano. Pon la plancha a fuego medio. Las arepas se asan cinco minutos por cada lado y se sirven calientes, con mantequilla. Ah, y abre la terraza a las siete, porque el desayuno se sirve allí. En la cocina no se puede comer, ya sabes. ¡Mil gracias, Hugo! Nos vemos mañana."
     }
   ]
 }
