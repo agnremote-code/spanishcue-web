@@ -7,6 +7,9 @@ import { grammarMetadata } from '../growth/grammar-metadata';
 import { lessonCards } from '../growth/lessons';
 import { collectionPageSchema } from '../growth/schema';
 import TeachingProof from '../growth/TeachingProof';
+import GrammarCourse from '../grammar-classroom/GrammarCourse';
+import { grammarTopics } from '../grammar-classroom/catalog';
+import { courseRows } from '../grammar-classroom/course';
 import { teachingGuideBySlug } from '../teaching-guides';
 import styles from '../growth/growth.module.css';
 import grammar from '../growth/grammar.module.css';
@@ -21,7 +24,10 @@ export default function GrammarHub() {
     <GrowthTopbar current={GRAMMAR_HUB_PATH}/><Breadcrumbs items={[{name:'SPANISHCUE',href:'/'},{name:'Teacher resources',href:'/spanish-teacher-resources'},{name:'Grammar lessons',href:GRAMMAR_HUB_PATH}]}/>
     <GrammarHero kicker='Grammar for teachers · Choose. Open. Teach.' title='Spanish grammar activities for teachers that turn a rule into a real conversation.' intro='Find the structure your learner needs, choose a classroom and teach it through reading, listening, speaking and writing. Start with a free activity or explore the lessons by level.' previewId={48} primaryHref='#levels' primaryLabel='Find your grammar lesson'/>
     <div className={grammar.statRow}><span><strong>{grammarInventory.length} grammar classrooms</strong> in the current catalog</span><span><strong>{free.length} free A1 classrooms</strong></span><span>Teacher-led · Around 60 minutes each</span></div>
-    <nav className={grammar.jump} aria-label='On this page'><a href='#levels'>Choose a level</a><a href='#topics'>Choose a grammar focus</a><a href='#activities'>Use a free activity</a><a href='#inventory'>Full lesson inventory</a><a href='#free'>Try the classroom</a></nav>
+    <nav className={grammar.jump} aria-label='On this page'><a href='#course'>Learn in order</a><a href='#levels'>Choose a level</a><a href='#topics'>Choose a grammar focus</a><a href='#activities'>Use a free activity</a><a href='#inventory'>Full lesson inventory</a><a href='#free'>Try the classroom</a></nav>
+    <Section id='course' title='Learn in order · Aprender en orden' intro='One course from the first hello (A0) to C2. Every class has a number and follows the classes it builds on. Filter by level or topic without losing the order; a teacher can open any class.'>
+      <GrammarCourse rows={courseRows()} topics={grammarTopics}/>
+    </Section>
     <Section id='levels' title='What do you want your learner to do?' intro='The labels below follow the core classroom level. Older reference banks can include extensions; they do not turn a beginner classroom into an advanced course.'>
       <GrammarLevelNav/><div className={styles.cardGrid}>{grammarLevels.map(level=><Link className={styles.levelCard} key={level.code} href={level.path}><em>{level.code} · {grammarLessonsAtLevel(level.code).length} classrooms</em><b>{level.focus}</b><span>{level.outcomes[0]}</span></Link>)}</div>
       <p className={styles.footnote}>Levels are teaching references, not a promise that every learner follows the same grammar sequence. <Link className={styles.textLink} href='/about#cefr'>How we use CEFR and PCIC →</Link></p>

@@ -39,6 +39,20 @@ export async function listLiveClassSessions(db: D1Database, ownerId: string, les
   });
 }
 
+/** Every class this student has a saved session for: the course map measures them, one by one. */
+export async function listStudentLiveClasses(db: D1Database, ownerId: string, studentId: string): Promise<{ lessonId: number; saved: LiveClassSaved; updatedAt: number }[]> {
+  const result = await db
+    .prepare('SELECT lesson_id AS lessonId, saved, updated_at AS updatedAt FROM live_class_sessions WHERE owner_id = ? AND student_id = ? ORDER BY lesson_id LIMIT 1000')
+    .bind(ownerId, studentId)
+    .all<{ lessonId: number; saved: string; updatedAt: number }>();
+  return result.results.flatMap(row => {
+    try {
+      const saved = parseLiveClassSaved(JSON.parse(row.saved));
+      return saved ? [{ lessonId: row.lessonId, saved, updatedAt: row.updatedAt }] : [];
+    } catch { return []; }
+  });
+}
+
 export async function getLiveClassSession(db: D1Database, ownerId: string, studentId: string, lessonId: number): Promise<{ saved: LiveClassSaved; updatedAt: number } | null> {
   const row = await db
     .prepare('SELECT saved, updated_at AS updatedAt FROM live_class_sessions WHERE owner_id = ? AND student_id = ? AND lesson_id = ? LIMIT 1')

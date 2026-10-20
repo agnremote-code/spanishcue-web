@@ -1,7 +1,8 @@
 import { env } from "cloudflare:workers";
 import { getUserSessionFromHeaders } from "../../access-policy";
 import { getLiveLesson } from "../../grammar-classroom/live/registry";
-import { deleteLiveClassSession, getLiveClassSession, listLiveClassSessions, LIVE_CLASS_SAVED_LIMIT, ownsStudent, parseLiveClassSaved, putLiveClassSession } from "../../../db/live-class";
+import { lessonSections, savedProgress } from "../../grammar-classroom/live/progress";
+import { deleteLiveClassSession, getLiveClassSession, listLiveClassSessions, listStudentLiveClasses, LIVE_CLASS_SAVED_LIMIT, ownsStudent, parseLiveClassSaved, putLiveClassSession } from "../../../db/live-class";
 
 export const dynamic = "force-dynamic";
 
@@ -21,11 +22,25 @@ function sameOrigin(request: Request): boolean {
 const lessonIdOf = (value: unknown) => (Number.isInteger(Number(value)) && getLiveLesson(Number(value)) ? Number(value) : null);
 const studentIdOf = (value: unknown) => (typeof value === "string" && /^[A-Za-z0-9-]{1,64}$/.test(value) ? value : null);
 
-/** `?lessonId=N` lists the students with a saved session; `&studentId=S` returns that student's saved class. */
+/** `?lessonId=N` lists the students with a saved session; `&studentId=S` returns that student's saved class.
+ *  `?studentId=S` alone measures that student's saved classes for the course map (completed activities only). */
 export async function GET(request: Request) {
   const owner = teacherId(request);
   if (!owner) return fail("Inicia sesión.", 401);
   const params = new URL(request.url).searchParams;
+  if (params.get("lessonId") === null && params.get("studentId") !== null) {
+    const id = studentIdOf(params.get("studentId"));
+    try {
+      if (!id || !(await ownsStudent(env.DB, owner, id))) return fail("Alumno no encontrado.", 404);
+      const progress = (await listStudentLiveClasses(env.DB, owner, id)).flatMap(({ lessonId, saved, updatedAt }) => {
+        const lesson = getLiveLesson(lessonId);
+        return lesson ? [{ lessonId, ...savedProgress(saved.results, lessonSections(lesson)), updatedAt }] : [];
+      });
+      return Response.json({ progress }, { headers: noStore });
+    } catch {
+      return fail("No pudimos cargar el progreso de este alumno.", 503);
+    }
+  }
   const lessonId = lessonIdOf(params.get("lessonId"));
   if (lessonId === null) return fail("Clase no válida.", 400);
   const studentId = params.get("studentId");

@@ -6864,6 +6864,18 @@
       "text": "El mes pasado me declararon muerta porque el monitor se desconectó. Desperté en la morgue con una etiqueta en el pie y le pedí al encargado que me trajera una manta. La semana siguiente pasó otra vez, aunque esa vez solo me dormí muy profundo. Ahora el señor de la morgue viene todos los días a ver si ya es la definitiva.",
       "category": "neutral-context",
       "reason": "False positive: «bebé» is the noun and «pedí / decidí / escribí / dormí» are first-person preterites in neutral tú-form Spanish; no voseo."
+    },
+    {
+      "path": "app/grammar-classroom/curriculum.ts",
+      "text": "Variantes tú, vos, usted, ustedes y vosotros",
+      "category": "regional-pedagogy",
+      "reason": "Course map titles that name the Spanish varieties taught (tú, vos, usted, ustedes, vosotros); the word is the topic, not a voseo form addressed to the learner."
+    },
+    {
+      "path": "app/grammar-classroom/curriculum.ts",
+      "text": "Imperativo afirmativo: tú, vos, usted",
+      "category": "regional-pedagogy",
+      "reason": "Course map titles that name the Spanish varieties taught (tú, vos, usted, ustedes, vosotros); the word is the topic, not a voseo form addressed to the learner."
     }
   ]
 }
