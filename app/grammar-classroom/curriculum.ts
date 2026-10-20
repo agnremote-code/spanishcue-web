@@ -1,8 +1,10 @@
 /**
- * The grammar course: one pedagogical order, A0 → C2 (G001…G236). Public metadata only:
- * never import a lesson body here. `sequence` is the course position; `catalogId` is the
- * stable technical key (saved progress, URLs, audio) and never changes. Existing classes keep
- * their id and URL; units still to be written reserve the id 300 + sequence.
+ * The grammar course: one pedagogical order, A0 → C2 (G001…G236, plus extension units G237+).
+ * Public metadata only: never import a lesson body here. `sequence` is the class number; `catalogId`
+ * is the stable technical key (saved progress, URLs, audio) and never changes. Existing classes keep
+ * their id and URL; units still to be written reserve the id 300 + sequence. Extension units, added by
+ * the coverage audit of 2026-10-20, take the next numbers so no class is renumbered, and are studied
+ * right after the unit they extend: `courseUnits` lists every unit in study order.
  * Source: the course plan of 2026-10-20 (docs/curriculum/README.md).
  */
 export type CourseLevel = 'A0' | 'A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2';
@@ -21,6 +23,8 @@ export type CourseUnit = {
   canonicalSlug: string;
   status: CourseStatus;
   origin: 'existing' | 'new';
+  /** Extension units only: the code of the unit they are studied after. */
+  extends?: string;
   version: number;
 };
 
@@ -266,13 +270,26 @@ const rows: Row[] = [
   ["G234",534,"C2","oraciones","Análisis crítico de sesgos sintácticos y presuposiciones","/gramatica/analisis-critico-de-sesgos-sintacticos-y",[],"live"],
   ["G235",535,"C2","oraciones","Producción y revisión de ensayo argumentativo C2","/gramatica/produccion-y-revision-de-ensayo-argumentativo",[],"live"],
   ["G236",536,"C2","oraciones","Proyecto C2: mediación, síntesis y defensa de posturas","/gramatica/proyecto-c2-mediacion-sintesis-y-defensa",[],"live"],
+  // Extension units (coverage audit 2026-10-20, docs/curriculum/auditoria-cobertura-pcic-mcer-2026-10-20.md §3).
+  ["G237",537,"B1","ser-estar","Ser y estar con adjetivos que cambian de significado","/gramatica/ser-y-estar-con-adjetivos-que-cambian-de-significado",[],"live"],
+  ["G238",538,"B1","perifrasis","Verbos de cambio: hacerse, volverse, convertirse en, llegar a ser","/gramatica/verbos-de-cambio-hacerse-volverse-convertirse-en",[],"live"],
+  ["G239",539,"B2","condicionales","Condiciones con otros nexos","/gramatica/condiciones-con-otros-nexos",[],"live"],
+  ["G240",540,"A2","cantidad","Diminutivos, aumentativos y valor afectivo","/gramatica/diminutivos-aumentativos-y-valor-afectivo",[],"live"],
 ];
 
-export const courseUnits: CourseUnit[] = rows.map(([code, catalogId, level, category, title, canonicalSlug, extra, status], index) => ({
-  sequence: index + 1, code, catalogId, level, title, category, canonicalSlug, status,
-  prerequisiteCodes: index ? [rows[index - 1][0], ...extra] : [...extra],
-  origin: catalogId === 300 + index + 1 ? 'new' : 'existing', version: COURSE_VERSION,
-}));
+/** Extension unit → the unit it is studied after. */
+const extensionAfter: Record<string, string> = { G237: 'G121', G238: 'G110', G239: 'G135', G240: 'G069' };
+
+const numbered: CourseUnit[] = rows.map(([code, catalogId, level, category, title, canonicalSlug, extra, status], index) => {
+  const after = extensionAfter[code];
+  return {
+    sequence: index + 1, code, catalogId, level, title, category, canonicalSlug, status,
+    prerequisiteCodes: after ? [after, ...extra] : index ? [rows[index - 1][0], ...extra] : [...extra],
+    origin: catalogId === 300 + index + 1 ? 'new' : 'existing', ...(after ? { extends: after } : {}), version: COURSE_VERSION,
+  };
+});
+
+export const courseUnits: CourseUnit[] = numbered.filter(unit => !unit.extends).flatMap(unit => [unit, ...numbered.filter(extension => extension.extends === unit.code)]);
 
 const byCatalogId = new Map(courseUnits.map(unit => [unit.catalogId, unit]));
 export const courseUnitById = (catalogId: number) => byCatalogId.get(catalogId);
@@ -286,9 +303,10 @@ const link = (unit: CourseUnit): CourseLink => ({ sequence: unit.sequence, code:
 export function coursePosition(catalogId: number) {
   const unit = byCatalogId.get(catalogId);
   if (!unit) return undefined;
-  const live = courseUnits.filter(u => u.status === 'live');
-  const before = live.filter(u => u.sequence < unit.sequence).at(-1);
-  const after = live.find(u => u.sequence > unit.sequence);
+  const live = courseUnits.filter(u => u.status === 'live' || u === unit);
+  const at = live.indexOf(unit);
+  const before = live.slice(0, at).filter(u => u.status === 'live').at(-1);
+  const after = live.slice(at + 1).find(u => u.status === 'live');
   return { sequence: unit.sequence, code: unit.code, level: unit.level, total: courseUnits.length, prev: before && link(before), next: after && link(after) };
 }
 export type CoursePosition = NonNullable<ReturnType<typeof coursePosition>>;

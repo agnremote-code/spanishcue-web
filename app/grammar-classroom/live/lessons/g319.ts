@@ -119,6 +119,32 @@ export const lesson: LiveLesson = {
             { prompt: '«Marcos viene ___ trabajo.»', options: ['al', 'del', 'de el'], answer: 1, why: 'De + el = del. Y es el origen, no el destino.', en: '“Marcos is coming from work.”' },
           ] },
         ] },
+        { title: 'Más formas especiales: conozco, doy, sé · More special “yo” forms', mascot: '/brand/mascot/portrait.webp', coach: 'Otros verbos, otro yo. Other verbs, another “yo”.', blocks: [
+          { kind: 'lead', text: 'En la cena hay más verbos con un **yo** especial. Marcos dice: «Yo [[conduzco|blue]]: llevo a Paula». Carla dice: «Yo [[conozco|blue]] un buen restaurante, pero [[sé|blue]] cocinar: la cena es en casa». Como con hago, pongo, salgo, casi siempre cambia **solo yo**.', en: 'At the dinner there are more verbs with a special “yo” form. Marcos says: “I’m driving: I’ll take Paula”. Carla says: “I know a good restaurant, but I know how to cook: dinner is at my place”. As with hago, pongo, salgo, it is almost always only “yo” that changes.' },
+          { kind: 'table', title: 'Yo en -zco, -uyo, doy, sé · present', head: ['Persona', 'conocer (know)', 'conducir (drive)', 'construir (build)', 'dar (give)', 'saber (know)'], rows: [
+            ['yo', '[[conozco|blue]]', '[[conduzco|blue]]', '[[construyo|blue]]', '[[doy|blue]]', '[[sé|blue]]'],
+            ['tú', '[[conoces|teal]]', '[[conduces|teal]]', '**construyes**', '[[das|teal]]', '[[sabes|teal]]'],
+            ['él / ella / usted', '[[conoce|teal]]', '[[conduce|teal]]', '**construye**', '[[da|teal]]', '[[sabe|teal]]'],
+            ['nosotros / nosotras', '[[conocemos|teal]]', '[[conducimos|teal]]', '[[construimos|teal]]', '[[damos|teal]]', '[[sabemos|teal]]'],
+            ['vosotros / vosotras (España)', '[[conocéis|teal]]', '[[conducís|teal]]', '[[construís|teal]]', '[[dais|teal]]', '[[sabéis|teal]]'],
+            ['ellos / ellas / ustedes', '[[conocen|teal]]', '[[conducen|teal]]', '**construyen**', '[[dan|teal]]', '[[saben|teal]]'],
+          ], note: 'Igual que conducir: **traducir** → traduzco (translate). Igual que construir: **incluir** → incluyo, incluye (include). En los verbos en -uir aparece una **y** en yo, tú, él y ellos; nosotros y vosotros no cambian: construimos, incluimos.' },
+          { kind: 'compare', title: 'Saber o conocer · Two verbs for “to know”', columns: [
+            { tone: 'blue', label: 'SABER · un dato, una habilidad', sentence: 'No [[sé|blue]] dónde vive Carla. ¿[[Sabes|teal]] cocinar?', idea: 'Información (dónde, qué, a qué hora) o saber + infinitivo: una habilidad.', en: 'I don’t know where Carla lives. Do you know how to cook? (a fact, a skill)' },
+            { tone: 'blue', label: 'CONOCER · personas, lugares, cosas', sentence: '[[Conozco|blue]] a Marcos. ¿[[Conoces|teal]] este barrio?', idea: 'Algo o alguien que has visto, visitado o tratado. Con personas: conocer **a**.', en: 'I know Marcos. Do you know this neighbourhood? (people, places, things you are familiar with)' },
+          ] },
+          { kind: 'tip', icon: '🔑', title: 'Una pregunta para elegir · One question to choose', text: '¿Es una persona, una ciudad, un restaurante? → **conocer**. ¿Es un dato (dónde, cuándo, qué) o «saber + infinitivo» (sé nadar, sé cocinar)? → **saber**.', en: 'Is it a person, a city, a restaurant? → conocer. Is it a fact (where, when, what) or “saber + infinitive” (I can swim, I know how to cook)? → saber.' },
+          { kind: 'choice', title: 'Comprueba · Check', items: [
+            { prompt: 'Yo ___ a Diego desde la universidad.', options: ['sé', 'conoco', 'conozco'], answer: 2, why: 'Una persona: conocer. Con yo: conozco (-zco).', en: 'I have known Diego since university.' },
+            { prompt: 'Yo ___ el coche: llevo a Paula a la cena.', options: ['conduzco', 'conduco', 'conduces'], answer: 0, why: 'Conducir con yo: conduzco.', en: 'I’m driving the car: I’ll take Paula to the dinner.' },
+            { prompt: 'Ahora te ___ la dirección de Carla.', options: ['do', 'doy', 'da'], answer: 1, why: 'Dar con yo: doy.', en: 'I’ll give you Carla’s address now.' },
+            { prompt: '¿Tú ___ cocinar arroz?', options: ['conoces', 'sabes', 'sé'], answer: 1, why: 'Saber + infinitivo = una habilidad. Con tú: sabes.', en: 'Do you know how to cook rice?' },
+            { prompt: 'Paula no ___ el barrio de Carla: es su primera visita.', options: ['conozco', 'sabe', 'conoce'], answer: 2, why: 'Un lugar: conocer. Paula (ella): conoce.', en: 'Paula doesn’t know Carla’s neighbourhood: it’s her first visit.' },
+            { prompt: 'No ___ a qué hora viene Marcos.', options: ['sé', 'conozco', 'sabo'], answer: 0, why: 'Un dato (a qué hora): saber. Con yo: sé.', en: 'I don’t know what time Marcos is coming.' },
+            { prompt: 'El menú ___ una ensalada y un postre.', options: ['incluie', 'incluye', 'incluyo'], answer: 1, why: 'El menú = él: incluye, con y.', en: 'The menu includes a salad and a dessert.' },
+            { prompt: 'Yo ___ la receta del inglés al español.', options: ['traduzco', 'traduco', 'traduce'], answer: 0, why: 'Traducir con yo: traduzco, como conduzco.', en: 'I translate the recipe from English into Spanish.' },
+          ] },
+        ] },
         { title: 'Errores frecuentes · Common mistakes', mascot: '/brand/mascot/standing-crossed.webp', coach: '¿Yo o él? ¿De o a? I or he? From or to?', blocks: [
           { kind: 'guide', text: { teacher: 'Tú lees la frase con el error y tu alumno dice dónde está el problema: ¿la forma de yo, el -ie- o la dirección? Después aparece la corrección.', self: 'Lee cada frase, busca el error y toca para ver la corrección. (Find the mistake, then tap.)' } },
           { kind: 'mistakes', title: '¿Dónde está el error? · Where is the mistake?', items: [

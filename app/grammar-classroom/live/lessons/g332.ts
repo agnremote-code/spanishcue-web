@@ -126,6 +126,24 @@ export const lesson: LiveLesson = {
             { prompt: '«Me encanta» es…', options: ['más fuerte que «me gusta».', 'menos fuerte que «me gusta».', 'igual que «no me gusta».'], answer: 0, why: 'Encantar = love: más fuerte que gustar.', en: '“Me encanta” is…' },
           ] },
         ] },
+        { title: 'También, tampoco, sí, no · Reacting to tastes', mascot: '/brand/mascot/portrait.webp', coach: '¿Igual o diferente? Same or different?', blocks: [
+          { kind: 'lead', text: 'En la recepción, Carmen y Diego reaccionan a los gustos del otro. Para decir que tienes **el mismo gusto** o **un gusto diferente**, mira primero si la frase es **positiva** (me gusta) o **negativa** (no me gusta).', en: 'At reception, Carmen and Diego react to each other’s tastes. To say that you have the same taste or a different one, first look at whether the sentence is positive (me gusta) or negative (no me gusta).' },
+          { kind: 'table', title: 'Cuatro reacciones · Four reactions', head: ['La otra persona dice…', 'Yo, igual (same)', 'Yo, diferente (different)'], rows: [
+            ['Me gusta el mar. (+)', '[[A mí también|neutral]]. (me too)', '[[A mí no|neutral]]. (not me)'],
+            ['No me gusta el ruido. (−)', '[[A mí tampoco|neutral]]. (me neither)', '[[A mí sí|neutral]]. (I do)'],
+            ['Como pescado. (+)', '[[Yo también|neutral]]. (me too)', '[[Yo no|neutral]]. (I don’t)'],
+            ['No como carne. (−)', '[[Yo tampoco|neutral]]. (me neither)', '[[Yo sí|neutral]]. (I do)'],
+          ], note: '**También** responde a una frase positiva; **tampoco**, a una frase negativa. Con gustar y encantar: **a mí**. Con otros verbos (como, quiero, vivo): **yo**.' },
+          { kind: 'tip', icon: '🔑', title: '¿A mí o yo? · “A mí” or “yo”?', text: 'Si la otra persona dice **me** gusta o **me** encanta, respondes con **a mí**: «A mí también». Si dice un verbo normal con yo (com**o**, quier**o**), respondes con **yo**: «Yo también». ¿Y la otra persona? Pregunta: «¿Y a ti?» (gustar) o «¿Y tú?» (otros verbos).', en: 'If the other person says “me gusta” or “me encanta”, you answer with “a mí”: “A mí también”. If they use a normal verb with “yo” (como, quiero), you answer with “yo”: “Yo también”. To ask back: “¿Y a ti?” (gustar) or “¿Y tú?” (other verbs).' },
+          { kind: 'choice', title: 'Comprueba · Check', items: [
+            { prompt: 'Carmen: «Me encanta el mar». Diego también: «___»', options: ['A mí tampoco.', 'A mí también.', 'Yo también.'], answer: 1, why: 'Frase positiva y el mismo gusto: también. Con encantar: a mí.', en: 'Carmen: “I love the sea.” Diego loves it too: “Me too.”' },
+            { prompt: 'Diego: «No me gusta el ruido». A Carmen no le gusta: «___»', options: ['A mí tampoco.', 'A mí también.', 'A mí sí.'], answer: 0, why: 'Frase negativa y el mismo gusto: tampoco.', en: 'Diego: “I don’t like noise.” Carmen doesn’t like it either: “Me neither.”' },
+            { prompt: 'Carmen: «No me gustan los mariscos». A Diego le encantan: «___»', options: ['A mí no.', 'A mí tampoco.', 'A mí sí.'], answer: 2, why: 'Frase negativa y un gusto diferente: a mí sí.', en: 'Carmen: “I don’t like seafood.” Diego loves it: “I do.”' },
+            { prompt: 'Diego: «Me gusta cenar tarde». Carmen prefiere cenar temprano: «___»', options: ['A mí no.', 'A mí sí.', 'A mí tampoco.'], answer: 0, why: 'Frase positiva y un gusto diferente: a mí no.', en: 'Diego: “I like having dinner late.” Carmen prefers to eat early: “Not me.”' },
+            { prompt: 'Valeria: «No como carne». Carmen tampoco come carne: «___»', options: ['A mí tampoco.', 'Yo tampoco.', 'Yo también.'], answer: 1, why: 'Comer no funciona como gustar: el verbo va con yo. Frase negativa, lo mismo: yo tampoco.', en: 'Valeria: “I don’t eat meat.” Carmen doesn’t either: “Me neither.”' },
+            { prompt: 'Diego: «Quiero ir a Casa Rosa». Carmen también quiere: «___»', options: ['A mí también.', 'Yo tampoco.', 'Yo también.'], answer: 2, why: 'Querer es un verbo normal (quiero): yo. Frase positiva, lo mismo: yo también.', en: 'Diego: “I want to go to Casa Rosa.” Carmen wants to go too: “Me too.”' },
+          ] },
+        ] },
         { title: 'Errores frecuentes · Common mistakes', mascot: '/brand/mascot/standing-crossed.webp', coach: '¿Una cosa o varias? One thing or several?', blocks: [
           { kind: 'guide', text: { teacher: 'Tú lees la frase con el error y tu alumno busca qué mira el verbo: la cosa. Después aparece la corrección.', self: 'Lee cada frase, busca el error y toca para ver la corrección. Pregunta siempre: ¿qué cosa gusta?' } },
           { kind: 'mistakes', title: '¿Dónde está el error? · Where is the mistake?', items: [

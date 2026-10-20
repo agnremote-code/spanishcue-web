@@ -133,6 +133,34 @@ export const lesson: LiveLesson = {
             { prompt: 'Leo tiene ___ frío.', options: ['muy', 'mucho', 'mucha'], answer: 1, why: 'Frío es masculino: mucho frío.', en: 'Leo is very cold.' },
           ] },
         ] },
+        { title: 'Hace frío, tengo frío, está frío · Weather, body or a thing', mascot: '/brand/mascot/walking.webp', coach: '¿El tiempo, tu cuerpo o una cosa? Weather, body or a thing?', blocks: [
+          { kind: 'lead', text: 'En la sala de espera, Leo mira por la ventana: **llueve**. En Bogotá muchas veces **hace frío** por la mañana. Para el tiempo (the weather) no usas tener: usas **hace** + frío, calor, sol, viento, o los verbos **llueve** y **nieva**.', en: 'In the waiting room, Leo looks out of the window: it’s raining. In Bogotá it is often cold in the morning. For the weather you don’t use tener: you use “hace” + cold, heat, sun, wind, or the verbs “llueve” (it rains) and “nieva” (it snows).' },
+          { kind: 'concept', tone: 'neutral', label: 'El tiempo · The weather', question: '¿Qué tiempo hace?', en: 'What’s the weather like?', formula: ['hace + frío · calor · sol · viento', 'llueve (llover) · nieva (nevar)'],
+            meaning: 'Para el tiempo, el verbo no tiene persona: no hay «yo», «tú» ni «Leo». Se dice **hace frío**, **hace calor**, **hace sol**, **hace viento**, y **llueve** (it rains, it’s raining) o **nieva** (it snows). Para decir «very»: **mucho** frío, **mucho** calor, **mucho** viento.',
+            examples: [
+              { es: 'Hoy **hace frío** en Bogotá.', en: 'It’s cold in Bogotá today.' },
+              { es: 'En la costa **hace mucho calor**.', en: 'It’s very hot on the coast.' },
+              { es: '**Llueve** mucho en abril.', en: 'It rains a lot in April.' },
+              { es: '**Hace sol**, pero **hace viento**.', en: 'It’s sunny, but it’s windy.' },
+              { es: 'En la montaña **nieva** en invierno.', en: 'It snows in the mountains in winter.' },
+            ],
+            note: '**Llueve** y **nieva** solo se usan así, sin persona: «Llueve», «Nieva». No digas «Es lluvia»: di «Llueve».' },
+          { kind: 'compare', title: 'Tres frases con «frío» · Three sentences with “frío”', columns: [
+            { tone: 'neutral', label: 'HACER · el tiempo', sentence: 'Hoy **hace frío**.', idea: 'El tiempo: el aire de la calle, de la ciudad.', en: 'It’s cold today. (the weather)' },
+            { tone: 'teal', label: 'TENER · tu cuerpo', sentence: '[[Tengo frío|teal]].', idea: 'Lo que siente una persona.', en: 'I am cold. (my body feels cold)' },
+            { tone: 'orange', label: 'ESTAR + adjetivo · una cosa', sentence: 'El café [[está frío|orange]].', idea: 'La temperatura de una cosa: frío es un adjetivo.', en: 'The coffee is cold. (a thing)' },
+          ] },
+          { kind: 'tip', icon: '💡', title: '«Frío»: ¿nombre o adjetivo? · Noun or adjective?', text: 'En «hace frío» y «tengo frío», frío es un **nombre**: mucho frío. En «el café está frío», frío es un **adjetivo** y cambia: «La sopa está **fría**». Para lo que siente tu cuerpo, di «Tengo frío», no «Estoy frío».', en: 'In “hace frío” and “tengo frío”, frío is a noun: mucho frío. In “el café está frío”, frío is an adjective and it changes: “La sopa está fría” (the soup is cold). For what your body feels, say “Tengo frío”, not “Estoy frío”.' },
+          { kind: 'choice', title: 'Comprueba · Check', items: [
+            { prompt: 'Mira por la ventana: ___. Necesitas un paraguas.', options: ['tiene lluvia', 'llueve', 'está lluvia'], answer: 1, why: 'El tiempo: llover → llueve, sin persona.', en: 'Look out of the window: it’s raining. You need an umbrella.' },
+            { prompt: 'En Bogotá, por la mañana, ___.', options: ['hace frío', 'tiene frío', 'está frío'], answer: 0, why: 'Es el tiempo de la ciudad: hace frío.', en: 'In Bogotá, in the morning, it’s cold.' },
+            { prompt: 'Paula: «___. ¿Cierro la ventana?»', options: ['Hago frío', 'Tengo frío', 'Estoy fría'], answer: 1, why: 'Es lo que siente el cuerpo de Paula: tengo frío.', en: 'Paula: “I’m cold. Shall I close the window?”' },
+            { prompt: 'La sopa de Leo ___.', options: ['tiene fría', 'hace fría', 'está fría'], answer: 2, why: 'Una cosa (la sopa) + adjetivo: está fría.', en: 'Leo’s soup is cold.' },
+            { prompt: 'En la costa siempre hace ___ calor.', options: ['muy', 'mucha', 'mucho'], answer: 2, why: 'Calor es un nombre masculino: mucho calor.', en: 'It’s always very hot on the coast.' },
+            { prompt: 'Hoy ___ y viento: es un buen día para caminar.', options: ['es sol', 'hace sol', 'tiene sol'], answer: 1, why: 'El tiempo: hace sol, hace viento.', en: 'Today it’s sunny and windy: it’s a good day for a walk.' },
+            { prompt: 'En enero ___ en la montaña: todo está blanco.', options: ['nieva', 'hace nieve', 'tiene nieve'], answer: 0, why: 'El tiempo: nevar → nieva, sin persona.', en: 'In January it snows in the mountains: everything is white.' },
+          ] },
+        ] },
         { title: 'Errores frecuentes · Common mistakes', mascot: '/brand/mascot/standing-crossed.webp', coach: '¿Tener, ser o estar? Look closely.', blocks: [
           { kind: 'guide', text: { teacher: 'Tú lees la frase con el error y preguntas: «¿Edad, sensación o estado?». Tu alumno responde y después aparece la corrección.', self: 'Lee cada frase, busca el error y toca para ver la corrección.' } },
           { kind: 'mistakes', title: '¿Dónde está el error? · Where is the mistake?', items: [
