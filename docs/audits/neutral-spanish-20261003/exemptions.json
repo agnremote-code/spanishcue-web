@@ -9474,6 +9474,174 @@
       "text": "«Su hermana tiene una copia, así que se la pedí a ella».",
       "category": "neutral-context",
       "reason": "Pretérito en primera persona (yo), no voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g478.ts",
+      "text": "Le [[prometí volver|blue]] el jueves. · Le [[permití volver|teal]] el jueves.",
+      "category": "neutral-context",
+      "reason": "Pretérito en primera persona (yo) o patrón de error en una expresión regular, no voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g478.ts",
+      "text": "Querer, esperar, preferir, desear y necesitar **no** admiten infinitivo con otro sujeto: «Quiero que vengas», nunca «*Te quiero venir». Con **pedir**, el infinitivo se entiende normalmente referido al sujeto: «Pedí salir antes» = pedí permiso para salir yo. Para pedir a otra persona que haga algo, lo claro es «Te pedí que me ayudaras».",
+      "category": "neutral-context",
+      "reason": "Pretérito en primera persona (yo) o patrón de error en una expresión regular, no voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g478.ts",
+      "text": "«Le permití devolver la llave el lunes». ¿Quién devuelve la llave?",
+      "category": "neutral-context",
+      "reason": "Pretérito en primera persona (yo) o patrón de error en una expresión regular, no voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g478.ts",
+      "text": "cosa: Oí abrirse la puerta · Sentí temblar el suelo",
+      "category": "neutral-context",
+      "reason": "Pretérito en primera persona (yo) o patrón de error en una expresión regular, no voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g478.ts",
+      "text": "Marcos: «No abrí la caja el viernes y lo siento».",
+      "category": "neutral-context",
+      "reason": "Pretérito en primera persona (yo) o patrón de error en una expresión regular, no voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g478.ts",
+      "text": "le permití",
+      "category": "neutral-context",
+      "reason": "Pretérito en primera persona (yo) o patrón de error en una expresión regular, no voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g478.ts",
+      "text": "Estimada Elena: Te escribo para dejar constancia de lo ocurrido con el cuaderno de campo de Amalia Roca. Ante todo, [[siento no haber comprobado|violet]] el contenido de la caja el viernes. El jueves, Clara Vidal me pidió que le dejara fotografiar algunas páginas en el taller, y [[le permití llevárselo|teal]] durante una hora sin anotarlo en el registro. Hacia las cuatro [[la vi entrar|teal]] en el depósito con el cuaderno y, poco después, [[la oí cerrar|teal]] el armario. [[Habiéndola visto|violet]] devolverlo, di por hecho que estaba en su caja; sin embargo, lo había guardado en la del herbario, que es idéntica. [[Reconozco haberme fiado|violet]] demasiado de la rutina. Para evitar que vuelva a pasar, propongo dos medidas: [[obligar a firmar|teal]] el registro a quien saque cualquier documento y no dejar salir nada del depósito sin dos firmas. Por último, quiero agradecer a Nadia Ferrer su ayuda: [[sin haber revisado|violet]] ella las fotos, todavía estaríamos buscando. Un saludo, Marcos Ibáñez",
+      "category": "neutral-context",
+      "reason": "Pretérito en primera persona (yo) o patrón de error en una expresión regular, no voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g478.ts",
+      "text": "(?<!\\p{L})(?:vi|vio|vimos|vieron|oí|oyó|oímos|oyeron|escuché|escuchó|noté|notó|sentí|sintió)\\s+(?:a\\s+\\p{L}+\\s+)?\\p{L}+(?:ar|er|ir|ír)(?:se|lo|la|los|las)?(?!\\p{L})",
+      "category": "neutral-context",
+      "reason": "Pretérito en primera persona (yo) o patrón de error en una expresión regular, no voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g478.ts",
+      "text": "Di qué permitiste o qué propones obligar a hacer: «le permití llevárselo», «obligar a firmar».",
+      "category": "neutral-context",
+      "reason": "Pretérito en primera persona (yo) o patrón de error en una expresión regular, no voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g478.ts",
+      "text": "«Le pedí salir antes». ¿Quién sale antes?",
+      "category": "neutral-context",
+      "reason": "Pretérito en primera persona (yo) o patrón de error en una expresión regular, no voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g478.ts",
+      "text": "Yo: pedí permiso para salir",
+      "category": "neutral-context",
+      "reason": "Pretérito en primera persona (yo) o patrón de error en una expresión regular, no voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g478.ts",
+      "text": "Con «pedir», el infinitivo se entiende normalmente referido al sujeto. Si quiero que salga la otra persona: «Le pedí que saliera antes».",
+      "category": "neutral-context",
+      "reason": "Pretérito en primera persona (yo) o patrón de error en una expresión regular, no voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g481.ts",
+      "text": "«A mis tías ___ escribí una postal desde Segovia».",
+      "category": "neutral-context",
+      "reason": "Pretérito en primera persona (yo) o patrón de error en una expresión regular, no voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g481.ts",
+      "text": "A la vecina la pedí la escalera.",
+      "category": "neutral-context",
+      "reason": "Pretérito en primera persona (yo) o patrón de error en una expresión regular, no voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g481.ts",
+      "text": "A la vecina le pedí la escalera.",
+      "category": "neutral-context",
+      "reason": "Pretérito en primera persona (yo) o patrón de error en una expresión regular, no voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g481.ts",
+      "text": "A la vecina la pedí a ella la escalera.",
+      "category": "neutral-context",
+      "reason": "Pretérito en primera persona (yo) o patrón de error en una expresión regular, no voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g481.ts",
+      "text": "Lo pedido es la escalera; la vecina es indirecto: le pedí.",
+      "category": "neutral-context",
+      "reason": "Pretérito en primera persona (yo) o patrón de error en una expresión regular, no voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g481.ts",
+      "text": "La escribí a mi madre una carta muy larga.",
+      "category": "neutral-context",
+      "reason": "Pretérito en primera persona (yo) o patrón de error en una expresión regular, no voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g481.ts",
+      "text": "Le escribí a mi madre una carta muy larga",
+      "category": "neutral-context",
+      "reason": "Pretérito en primera persona (yo) o patrón de error en una expresión regular, no voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g481.ts",
+      "text": "Le escribí una carta muy larga a mi madre",
+      "category": "neutral-context",
+      "reason": "Pretérito en primera persona (yo) o patrón de error en una expresión regular, no voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g481.ts",
+      "text": "A mi madre le escribí una carta muy larga",
+      "category": "neutral-context",
+      "reason": "Pretérito en primera persona (yo) o patrón de error en una expresión regular, no voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g481.ts",
+      "text": "Yo digo «lo vi», porque aprendí con profesores mexicanos. Pero mi compañera de piso es de Valladolid y dice «le vi», y es igual de correcto. Con mi prima, en cambio, las dos decimos «la vi».",
+      "category": "neutral-context",
+      "reason": "Pretérito en primera persona (yo) o patrón de error en una expresión regular, no voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g481.ts",
+      "text": "(?<![«\\p{L}])(?<!se\\s)las?\\s+(?:dije|dijo|dijimos|dijeron|pedí|pidió|escribí|escribió|conté|contó)\\s+que(?!\\p{L})",
+      "category": "neutral-context",
+      "reason": "Pretérito en primera persona (yo) o patrón de error en una expresión regular, no voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g481.ts",
+      "text": "A los alumnos nuevos les recibí por la mañana.",
+      "category": "neutral-context",
+      "reason": "Pretérito en primera persona (yo) o patrón de error en una expresión regular, no voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g481.ts",
+      "text": "A los alumnos nuevos los recibí por la mañana",
+      "category": "neutral-context",
+      "reason": "Pretérito en primera persona (yo) o patrón de error en una expresión regular, no voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g482.ts",
+      "text": "me comí",
+      "category": "neutral-context",
+      "reason": "Pretérito en primera persona (yo) o patrón de error en una expresión regular, no voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g482.ts",
+      "text": "se comí",
+      "category": "neutral-context",
+      "reason": "Pretérito en primera persona (yo) o patrón de error en una expresión regular, no voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g482.ts",
+      "text": "Aspectual: yo me comí (casi todos). «Me los comieron» diría que otros se los comieron.",
+      "category": "neutral-context",
+      "reason": "Pretérito en primera persona (yo) o patrón de error en una expresión regular, no voseo."
     }
   ]
 }
