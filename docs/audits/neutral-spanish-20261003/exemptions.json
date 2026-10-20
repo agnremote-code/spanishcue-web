@@ -9390,6 +9390,30 @@
       "text": "Un amigo va a viajar solo por primera vez. Dale consejos que le sirvan vaya donde vaya. · Advice for a first solo trip, wherever he goes.",
       "category": "neutral-context",
       "reason": "Imperativo de «dar» con pronombre (da + le), no voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g450.ts",
+      "text": "Esta estructura necesita verbos que describan algo que puede **ocurrir sin que nadie lo haga**: romperse, caerse, perderse, borrarse, acabarse… Con verbos que exigen una persona que actúa, no funciona: «se me escribió mal la dirección» ✗ → **escribí mal** la dirección. «Se me mandó el correo» ✗ → **mandé** el correo / **se me pasó** revisarlo.",
+      "category": "neutral-context",
+      "reason": "Pretérito en primera persona (yo) o patrón de error en una expresión regular, no voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g450.ts",
+      "text": "Ayer escribí mal la dirección del cliente.",
+      "category": "neutral-context",
+      "reason": "Pretérito en primera persona (yo) o patrón de error en una expresión regular, no voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g450.ts",
+      "text": "(?<!\\p{L})se\\s+(?:me|te|le|nos|os|les)\\s+(?:olvidé|olvidamos|caí|caímos|perdí|perdimos|rompí|rompimos)(?!\\p{L})",
+      "category": "neutral-context",
+      "reason": "Pretérito en primera persona (yo) o patrón de error en una expresión regular, no voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g457.ts",
+      "text": "Anoche me dormí delante del portátil sin querer.",
+      "category": "neutral-context",
+      "reason": "Pretérito en primera persona (yo) o patrón de error en una expresión regular, no voseo."
     }
   ]
 }
