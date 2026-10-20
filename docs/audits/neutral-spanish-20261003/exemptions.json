@@ -7005,59 +7005,9 @@
     },
     {
       "path": "app/grammar-classroom/live/lessons/g341.ts",
-      "text": "Shh… el bebé de los vecinos ___."
-    },
-    {
-      "path": "app/grammar-classroom/live/lessons/g346.ts",
-      "text": "INDEFINIDO · ayer escribí (only to recognise: class 047)"
-    },
-    {
-      "path": "app/grammar-classroom/live/lessons/g346.ts",
-      "text": "He escrito / Escribí"
-    },
-    {
-      "path": "app/grammar-classroom/live/lessons/g346.ts",
-      "text": "Ayer [[escribí|violet]] a Ana."
-    },
-    {
-      "path": "app/grammar-classroom/live/lessons/g346.ts",
-      "text": "Vas a oír también «Hoy escribí»"
-    },
-    {
-      "path": "app/grammar-classroom/live/lessons/g346.ts",
-      "text": "En muchos países de América se dice también «Hoy **escribí** a Ana». En España es más frecuente «Hoy **he escrito**». Las dos formas son correctas; hoy practicas haber + participio."
-    },
-    {
-      "path": "app/grammar-classroom/live/lessons/g346.ts",
-      "text": "ayer + escribí, abrí, hablé"
-    },
-    {
-      "path": "app/grammar-classroom/live/lessons/g346.ts",
-      "text": "Ayer escribí a Ana."
-    },
-    {
-      "path": "app/grammar-classroom/live/lessons/g346.ts",
-      "text": "Ya cuentas lo que has hecho **hoy**: «He escrito a Ana». En la clase 047 aprendes a contar lo que pasó **ayer** o la semana pasada con el indefinido: «Ayer **escribí** a Ana». Ya lo has visto en los ejemplos violeta; ahora es el paso natural para hablar de un pasado terminado."
-    },
-    {
-      "path": "app/grammar-classroom/live/lessons/g348.ts",
-      "text": "Estos seis verbos son muy frecuentes y **no siguen la regla** de hablé, comí. Cambian la raíz: hac- → **hic-**, ten- → **tuv-**, est- → **estuv-**, pod- → **pud-**, dec- → **dij-**. Y yo termina en **-e**, él o ella en **-o**, sin tilde."
-    },
-    {
-      "path": "app/grammar-classroom/live/lessons/g348.ts",
-      "text": "En los verbos regulares, la fuerza va al final: lleg**ué**, comí, salió. En estos irregulares va en la raíz: **tu**ve, **hi**zo, **pu**do. Por eso no llevan tilde. Fui y fue tampoco: tienen una sola sílaba."
-    },
-    {
-      "path": "app/grammar-classroom/live/lessons/g348.ts",
-      "text": "Hacer no sigue la regla de comí: cambia la raíz a hic- y yo termina en -e. (Hacer is irregular: hice.)"
-    },
-    {
-      "path": "app/grammar-classroom/live/lessons/g348.ts",
-      "text": "Hacer: yo hice, él o ella hizo. Con regulares también: visité, comí, salí."
-    },
-    {
-      "path": "app/grammar-classroom/live/lessons/g348.ts",
-      "text": "Anoche yo no ___ la cena: pedí una pizza."
+      "text": "Shh… el bebé de los vecinos ___.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): common international word, glossed in English; regional synonyms are not required at A1."
     }
   ]
 }
