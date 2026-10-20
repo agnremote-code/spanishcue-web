@@ -9780,6 +9780,810 @@
       "text": "«Vos» antiguo de respeto: una persona con formas de plural. Hoy, «usted es».",
       "category": "regional-pedagogy",
       "reason": "Nota histórica sobre el «vos» antiguo de respeto y el voseo americano actual."
+    },
+    {
+      "path": "app/grammar-classroom/catalog.ts",
+      "text": "Reconocer y usar tú, vos y usted según la región y la relación, e interpretar qué significa cambiar de trato a mitad de una conversación.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/audio/clips.json",
+      "text": "Marta, ¿cómo andás? Soy Valeria. Te mando este audio porque terminé la escena doce y quiero que la escuches antes del viernes. Mirá, en la versión rioplatense dejé el usted del principio: Ramón es mayor, es su cliente, y Elena lo trata con distancia profesional. En el capítulo tres, cuando ella le pregunta «¿Nos tratamos de vos?», él le contesta: «Dale, pero vos pagás el café». Y con eso ya está: el público siente que se hicieron amigos, sin necesidad de explicar nada. Lo que más me costó fue el capítulo cinco. Ella le dice «Usted me mintió, señor Ortiz», y pensé en poner «vos me mentiste», pero no: si vuelve al usted, la herida se nota más. Es como cerrar una puerta. Ah, otra cosa: en la frase «no te preocupes, yo me encargo», dejé «preocupes»; «preocupés» también se oye acá, pero me sonaba más natural así. Si tenés un rato, escuchala y decime qué te parece. Y no te olvides de que el viernes vos me debés un café. ¡Un beso grande!",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "Reconocer y usar tú, vos y usted según la región y la relación, e interpretar qué significa cambiar de trato a mitad de una conversación.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "VOSEO · vos sabés, tenés, vení, decime",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "VOS · versión rioplatense",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "[[Vos sabés|teal]] que podés contar conmigo.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "El contenido es el mismo; cambian la persona gramatical, la relación y, en el caso de vos, la región.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "Valeria escribe a Marta: «Vos sabés que te ayudo con el guion». ¿Cómo lo interpreta Marta?",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "¿Cómo se conjuga el verbo con «vos» en Argentina, Uruguay o Paraguay?",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "presente: hablás · tenés · podés · venís · decís · sos",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "imperativo: hablá · tené · vení · decí · hacé · andá (ir)",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "pronombres: te, tu / tuyo; a vos, para vos, con vos",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "Con **vos**, el presente de indicativo y el imperativo afirmativo tienen formas propias: acento en la última sílaba y **sin diptongo** (tenés, podés, querés, venís; ser → **sos**). El imperativo es el infinitivo sin -r, con acento final (tené, vení, decí, hacé); para «ir» se usa **andá**. En los demás tiempos las formas coinciden con las de tú: «dijiste», «tendrás». Los pronombres y posesivos son los de tú (**te**, **tu**, tuyo), pero con preposición se dice «a vos», «para vos», «**con vos**» (no «contigo»).",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "[[Vos tenés|teal]] razón: el capítulo tres es el más difícil.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "Si [[querés|teal]], [[andá|teal]] vos primero y yo te alcanzo.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "[[Decime|teal]] la verdad: ¿[[vos|teal]] escribiste esa escena?",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "Esto es para [[vos|teal]]; lo hice pensando en [[tu|teal]] versión.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "Tú, vos y usted en paralelo · Side by side",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "vos (rioplatense)",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "**tenés**",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "**podés**",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "**sos**",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "**vení**",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "**andá**",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "¿Dónde se vosea? · Where is vos used?",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "Vení",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "Imperativo de vos: infinitivo sin -r, con acento final y sin diptongo: vení.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "Vos dijistes que llegabas temprano.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "Vos dijiste que llegabas temprano.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "Vos decistes que llegabas temprano.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "El pretérito de vos coincide con el de tú: dijiste. La forma con -s final se evita en la lengua cuidada.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "[[vos|teal]] (en Uruguay también tú)",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "[[tú|blue]], [[vos|teal]] o [[usted|orange]] de confianza",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "tenés",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "usted → tú / vos: acercamiento (¿Nos tuteamos? · ¿Nos tratamos de vos?)",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "tú / vos → usted: enfado, reproche, ironía o distancia (Mire usted, señor Ortiz…)",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "Pasar de **usted a tú** (o a vos) suele indicar **acercamiento**, y a menudo se negocia: «¿Nos tuteamos?», «Puede tutearme». **Volver al usted** con alguien a quien ya se tutea indica lo contrario: **enfado, reproche, ironía** o distancia buscada, muchas veces con el título y el apellido. Ojo: el cambio solo significa algo **frente al trato habitual** de cada hablante. Para quien usa usted con su familia, el usted no es una señal de enfado.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "Vos tenés que traer vuestro pasaporte.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "Vos tenés que traer tu pasaporte.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "Con vos, el posesivo es tu / tuyo y el pronombre, te. «Vuestro» corresponde a vosotros.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "Vos dijistes que vendrías.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "Vos dijiste que vendrías.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "El pretérito de vos es igual que el de tú. «Dijistes» se oye, pero se evita en la lengua cuidada.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "«Vos sabés» es un error: se dice «tú sabes».",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "«Vos sabés» es la forma culta en Argentina y Uruguay.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "Vos sabéis que os espero.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "Vos sabés que lo espero.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "Vos sabés que te espero.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "Voseo: sabés + te. «Sabéis / os» es de vosotros; «lo» sería de usted.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "Sí, anoche. Y [[vos sabés|teal]] que en mi versión no hay dudas: empiezan de usted y en el capítulo tres pasan al vos.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "En la neutra, Marta, [[usted ya sabe|orange]] lo que pienso: de usted a tú, y nada de vos.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "A mí, por favor, [[tratame de vos|teal]], que si no siento que estoy hablando con el banco.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "En la mía dice «[[¿Nos tratamos de vos?|violet]]» y él contesta: «Dale, pero [[vení|teal]] mañana temprano».",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "En la mía, igual: después de meses de «[[vos tenés|teal]]», un «usted tiene» duele más que un grito.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "**Voseo**: Valeria es de Rosario. «Sabés» lleva el acento al final; es su trato normal de confianza, no un rasgo vulgar.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "**Imperativo de vos** (tratá + me; con pronombre pierde la tilde). Valeria pide que no la traten de usted: para ella, el usted sería frío.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "La misma propuesta en la versión rioplatense: allí el trato de confianza es el **vos**, no el tú.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "**Imperativo de vos** de «venir»: acento final y sin diptongo. En tú sería «ven».",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "**Presente de vos** de «tener»: sin diptongo y con acento final. Representa meses de confianza que el usted rompe.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "Elena pasa al vos.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "«Mandame los guiones el viernes y los invito a un café.»",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "Ramón, en la versión rioplatense: «Bueno, Elena, ¿nos tratamos de vos?».",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "Deja de hablarle de vos y la nombra en tercera persona con el título: distancia buscada.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "vos",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "El tú es la opción de confianza más general para un público latinoamericano amplio; vos es regional y vosotros, de España.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "Andá vos, que yo me quedo con los chicos.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "«Andá»: imperativo de vos para «ir».",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "Decime la verdad, ¿te gustó?",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "«Decime»: decí + me, imperativo de vos.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "Vos tenés que traer su pasaporte.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "Vos tienes que traer vuestro pasaporte.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "Con vos, el posesivo es «tu»; «vuestro» es de vosotros y «su», de usted.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "Vos me prometistes que llamarías.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "Vos me prometisteis que llamarías.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "Vos me prometiste que llamarías.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "Vos me prometés que llamarías.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "El pretérito de vos coincide con el de tú: prometiste, sin -s final.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "Si querés, andá vos primero.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "Correcta: «querés» y «andá» son formas de vos; «andá» es el imperativo de «ir».",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "Queridos socios de Guadalajara: vos esperamos el viernes.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "No te preocupes, vos sabés lo que hacés.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "sentate",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "Dos personas en América: ustedes (siéntense). «Sentaos» es de vosotros; «sentate», de vos singular.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "sabés",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "Versión neutra y ya en confianza: tú sabes. «Sabés» sería voseo regional; «sabéis», vosotros.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "Andá",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "Al final se reconcilian y vuelve el tú: «ve». «Andá» sería voseo y «váyase», usted.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "Vos",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "podés",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "Vos sabés que podés contar conmigo.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "Versión rioplatense: pásalo a vos.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "¿Tenés tiempo mañana? Vení a mi oficina",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "Vos tenés tiempo mañana? Vení a mi oficina",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "Primera escucha: solo la idea general. Segunda escucha: tu alumno anota cada forma de vos que oye y cada cambio de trato que Valeria comenta. Después, las preguntas.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "Escucha una vez para la idea general y otra para los detalles. Anota las formas de vos y los cambios de trato de la serie. (Note the vos forms and the switches she talks about.)",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "¿Qué contesta Ramón cuando Elena le propone tratarse de vos?",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "«Dale, pero vos pagás el café».",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "Porque en Argentina no se usa el vos en los juicios.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "«Si tenés un rato, escuchala y decime qué te parece».",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "Marta, ¿cómo [[andás|teal]]? Soy Valeria. Te mando este audio porque terminé la escena doce y quiero que la escuches antes del viernes. Mirá, en la versión rioplatense dejé el usted del principio: Ramón es mayor, es su cliente, y Elena lo trata con distancia profesional. En el capítulo tres, cuando ella le pregunta «[[¿Nos tratamos de vos?|violet]]», él le contesta: «Dale, pero [[vos pagás|teal]] el café». Y con eso ya está: el público siente que se hicieron amigos, sin necesidad de explicar nada. Lo que más me costó fue el capítulo cinco. Ella le dice «[[Usted me mintió, señor Ortiz|violet]]», y pensé en poner «vos me mentiste», pero no: si vuelve al usted, la herida se nota más. Es como cerrar una puerta. Ah, otra cosa: en la frase «no te preocupes, yo me encargo», dejé «preocupes»; «preocupés» también se oye acá, pero me sonaba más natural así. Si [[tenés|teal]] un rato, [[escuchala|teal]] y [[decime|teal]] qué te parece. Y no te olvides de que el viernes [[vos me debés|teal]] un café. ¡Un beso grande!",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "Valeria usa el voseo de confianza con Marta: **andás**, **mirá**, **tenés**, **escuchala**, **decime**, **vos me debés**. En el subjuntivo dice «quiero que la **escuches**» y «no te **preocupes**», con formas iguales a las de tú, muy frecuentes en el área rioplatense. «Acá» y «dale» son también rasgos de su variedad.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "Tú, vos, usted y los cambios · Address and its shifts",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "[[¿Nos tratamos de vos?|violet]] (zonas voseantes)",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "Claro, tutéame, que con el usted me siento como en una entrevista. Pero si me lo propusiera el director general, le diría: «Si no le importa, de momento prefiero que sigamos de usted». Y en Rosario, seguramente, me preguntarían: «¿Nos tratamos de vos?».",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "[[Me habló de usted|violet]] y entendí que…",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "Eres Marta. Explicas a la productora, que te trata de usted, por qué la versión neutra usa tú y ustedes, y no vos ni vosotros. · Explain the choices for the neutral version.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "Explica el paso a la confianza y cómo se propone en cada versión (tú o vos).",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "El paso al tú / al vos marca…",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "vení",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "Nota de estilo: el trato en «La casa del río». En los dos primeros capítulos, Elena y Ramón [[se tratan de usted|orange]]: es la distancia profesional entre una abogada y su cliente, y debe mantenerse en verbos, pronombres y posesivos («su contrato», nunca «tu contrato»). En el capítulo tres pasan a la confianza, y el cambio se pacta en pantalla: en la versión de España y en la neutra, Elena pregunta «[[¿Nos podemos tutear?|violet]]»; en la rioplatense, «[[¿Nos tratamos de vos?|violet]]», y a partir de ahí Ramón le dice «[[vos tenés|teal]] razón» o «[[vení|teal]] mañana». En el capítulo cinco, Elena [[vuelve al usted|violet]] con el apellido («Usted me engañó, señor Ortiz»). No es respeto, sino reproche: el público debe sentir que se cierra una puerta, así que no lo suavicemos. Para los planos de grupo, recordad que en América el único plural es [[ustedes|orange]]; [[vosotros|blue]] queda solo para la versión de España. Por último, no corrijáis el voseo de la versión rioplatense: allí es la forma culta de confianza, igual que el tú en las otras dos.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "(?<!\\p{L})(?:vos|voseo|vosear)(?!\\p{L})",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "(?<!\\p{L})vos\\s+(?:tienes|puedes|quieres|vienes|eres|sabes)(?!\\p{L})",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "En el voseo rioplatense: «vos **tenés**, **podés**, **querés**, **venís**, **sos**, **sabés**».",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "El pretérito de vos es igual que el de tú: «dijiste», «tuviste», sin -s final.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "vos sabés · tenés · sos · vení · andá · te / tu / con vos",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "Vos sabés que podés contar conmigo. Decime qué te parece.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "usted → tú / vos = acercamiento · tú / vos → usted = distancia",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "Con «preguntame» (vos), el presente es «tenés».",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "¿Cuál es el imperativo de vos de «ir»?",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "andá",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "Con vos, para «ir» se usa «andá»; «ve» es de tú e «id», de vosotros.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "Vos sabés",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "Vosotros elegís el horario de la excursión.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "Para estudiantes fuertes o si queda tiempo. **1.** En **Uruguay** alternan vos y tú, y se oye también la combinación «**tú tenés**»: pronombre de tú con forma verbal de vos. **2.** En **Chile**, el voseo verbal coloquial («tú sabís», «¿qué querís?») convive con el tuteo; el pronombre «vos» puede sonar muy familiar o incluso despectivo, según el contexto. **3.** En zonas de **Colombia** (Boyacá, Cundinamarca) se oye «**sumercé**», un trato cercano y respetuoso a la vez. **4.** Fuera de las zonas voseantes, un «vos» dicho por quien no es de allí puede sonar a imitación: si no es tu variedad, úsalo para entender, no para impostar.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "Una uruguaya dice: «Tú tenés razón». ¿Cómo lo valoras?",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "Es una combinación propia de su variedad: pronombre tú y verbo de vos.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g515.ts",
+      "text": "Ya eliges entre tú, vos y usted según la región y la relación, y sabes leer un cambio de trato. En la clase 216 sigues con la variación entre regiones, ahora en el pasado: por qué en Madrid se dice «Hoy he visto a Ana» y en Ciudad de México «Hoy vi a Ana», y cómo algunas variedades usan los tiempos del pasado para indicar de dónde viene la información. Es el paso natural: de cómo nos dirigimos al otro a cómo contamos lo que sabemos.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 215: el voseo se enseña a propósito (formas de vos, imperativos y audio rioplatense)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g516.ts",
+      "text": "Un hablante de Asturias dice: «Hoy comí con mis padres». ¿Qué dices?",
+      "category": "neutral-context",
+      "reason": "Ejemplos meta de pretérito simple en primera persona («hoy comí») para contrastar variedades."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g516.ts",
+      "text": "Testimonio de un hombre de Caracas: «Hoy salí temprano a buscar el pan».",
+      "category": "neutral-context",
+      "reason": "Ejemplos meta de pretérito simple en primera persona («hoy comí») para contrastar variedades."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g516.ts",
+      "text": "Si enseñaras español a extranjeros, ¿enseñarías «hoy he comido», «hoy comí» o las dos? · Which would you teach?",
+      "category": "neutral-context",
+      "reason": "Ejemplos meta de pretérito simple en primera persona («hoy comí») para contrastar variedades."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g516.ts",
+      "text": "Une la elección al público y separa variedad y error: «he comí» no existe y «ayer he comido» no es la norma general.",
+      "category": "neutral-context",
+      "reason": "Ejemplos meta de pretérito simple en primera persona («hoy comí») para contrastar variedades."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g516.ts",
+      "text": "Depende del público. Si mis alumnos viven en Madrid, les enseñaría a producir «hoy he comido», pero también a reconocer «hoy comí», porque van a oírlo en series y a compañeros. Lo que sí corregiría es mezclar las formas, como «he comí», o usar el compuesto con «ayer», que no es la norma general.",
+      "category": "neutral-context",
+      "reason": "Ejemplos meta de pretérito simple en primera persona («hoy comí») para contrastar variedades."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g516.ts",
+      "text": "Pescador (entrevista grabada en Galicia): Hoy salí a las cuatro.",
+      "category": "neutral-context",
+      "reason": "Ejemplos meta de pretérito simple en primera persona («hoy comí») para contrastar variedades."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g516.ts",
+      "text": "Hoy salí a las cuatro",
+      "category": "neutral-context",
+      "reason": "Ejemplos meta de pretérito simple en primera persona («hoy comí») para contrastar variedades."
     }
   ]
 }
