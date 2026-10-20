@@ -1,7 +1,7 @@
 {
   "producer": "Microsoft Edge online speech via edge-tts",
   "synthetic": true,
-  "generatedAt": "2026-10-20T13:14:16.626946+00:00",
+  "generatedAt": "2026-10-20T13:39:42.998785+00:00",
   "humanListeningQA": false,
   "clips": [
     {
@@ -297,6 +297,76 @@
       "channels": 1,
       "peakPCM": 23681,
       "rmsPCM": 2456.96
+    },
+    {
+      "id": 338,
+      "voice": "es-ES-AlvaroNeural",
+      "rate": "-12%",
+      "src": "/audio/grammar-live/338.mp3",
+      "transcriptSha256": "dc71bc0605958c8c8a22ebebfa681615072f812435c86889350c1dcfa4502afa",
+      "sha256": "b4c8e30ad800309382f8766eb0b5924565d7dff89bab2d9ead51a62af7a6a8f4",
+      "durationSeconds": 40.7,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 21711,
+      "rmsPCM": 2618.76
+    },
+    {
+      "id": 339,
+      "voice": "es-CO-SalomeNeural",
+      "rate": "-12%",
+      "src": "/audio/grammar-live/339.mp3",
+      "transcriptSha256": "4b705a7e5cb9d00f6e9f2f34077abd862536fd058807f47bb9588004a773eab0",
+      "sha256": "ea347a180893b52015a60ba828d9b33390f1a2663fde7ce1d4f69cf1b6b95991",
+      "durationSeconds": 49.73,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 17625,
+      "rmsPCM": 2608.67
+    },
+    {
+      "id": 340,
+      "voice": "es-CO-GonzaloNeural",
+      "rate": "-12%",
+      "src": "/audio/grammar-live/340.mp3",
+      "transcriptSha256": "f578eb53211eb39dbaa63f3548d9702f73fe0cf9427b8580e2e98e3825249e07",
+      "sha256": "b3f63aaeae225045e2d477c469a004af48181d81d78a13695e7b013e0aec4293",
+      "durationSeconds": 43.92,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 23079,
+      "rmsPCM": 2288.02
+    },
+    {
+      "id": 341,
+      "voice": "es-MX-DaliaNeural",
+      "rate": "-12%",
+      "src": "/audio/grammar-live/341.mp3",
+      "transcriptSha256": "5e080a7137435db1eb57467c0ff87eab141f7cc5f4e02a63ba6354a291158e56",
+      "sha256": "6a58c9c70192fc077d6830550675092904857d280cad6bd96295d075620af0a9",
+      "durationSeconds": 48.02,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 24942,
+      "rmsPCM": 3267.39
+    },
+    {
+      "id": 343,
+      "voice": "es-CO-SalomeNeural",
+      "rate": "-12%",
+      "src": "/audio/grammar-live/343.mp3",
+      "transcriptSha256": "598238bc21ce2326202803aa155e5fc8120f39059c84a5e24818c5b3e8f7380b",
+      "sha256": "1370fbc1def512e756c507978f01d40da5dd335bf15891953e5b816c7531f8ff",
+      "durationSeconds": 51.48,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 19818,
+      "rmsPCM": 2565.89
     }
   ]
 }

@@ -127,6 +127,36 @@
       "voice": "es-ES-ElviraNeural",
       "rate": "-12%",
       "text": "Buenos días, señora Ruiz. Soy Nuria, de la recepción del Hotel Mirador. Ustedes quieren una noche más, ¿verdad? Mañana la 31 no está libre, pero hay otra habitación: la 40, en el cuarto piso. La 40 es más grande que la 31: tiene veinticinco metros. Y es tan tranquila como la 31, porque también da al patio. Es un poco más cara: cuesta ochenta y cinco euros la noche. Pero es menos cara que la 12. Ah, y mañana el desayuno es más barato: ocho euros, no diez. ¿Quieren la 40? Pueden llamar a recepción hasta las doce. Muchas gracias y hasta luego."
+    },
+    {
+      "id": 338,
+      "voice": "es-ES-AlvaroNeural",
+      "rate": "-12%",
+      "text": "Hola, Elena, soy Pablo. Hoy es jueves, 22 de octubre, y son las diez de la noche. Una pregunta: tu tren llega mañana a las ocho y cuarto, ¿verdad? Yo salgo del trabajo a las siete y media y voy a la estación en coche. La cena de cumpleaños de mamá es a las nueve y media, en un restaurante del puerto. Ah, y el sábado por la mañana hay mercado en la plaza. Abre a las nueve. Y el domingo tu tren sale a las cinco de la tarde, ¿no? Bueno, hasta mañana. ¡Un beso!"
+    },
+    {
+      "id": 339,
+      "voice": "es-CO-SalomeNeural",
+      "rate": "-12%",
+      "text": "Hola, Lucía. Soy Marta. ¡Qué bien tu mensaje! Sí, mañana estoy en casa toda la mañana. Voy a preparar un desayuno grande: arepas, fruta y café. Mi hermano Felipe también va a venir, a las once. Después del desayuno, ¿vamos a caminar por el parque? Mañana va a hacer sol. Ah, una cosa: a las dos no puedo, porque voy a llevar a mi perro al veterinario. Y por la noche, Felipe y yo vamos a llevar el postre para la cena. ¿Y Daniel? ¿Va a venir al desayuno también? Espero tu mensaje esta noche. Un abrazo. ¡Chao!"
+    },
+    {
+      "id": 340,
+      "voice": "es-CO-GonzaloNeural",
+      "rate": "-12%",
+      "text": "Hola, Laura. Soy Julio, de la agencia. Tengo buenas noticias para el viaje. Hay un hotel pequeño y barato cerca de la playa, y pueden pagar el hotel en Cartagena, no hoy. Para el barco a las islas, tienen que reservar antes del miércoles. ¿Gabriel no quiere ir? No hay problema: tú puedes ir sola el sábado. Ah, una cosa importante: el viernes tienen que estar en el aeropuerto a las cuatro, porque el vuelo sale a las seis. Y en Cartagena hace mucho calor: tienes que llevar agua y protector solar. ¿Quieres reservar el hotel hoy? Espero tu mensaje esta tarde. ¡Chao!"
+    },
+    {
+      "id": 341,
+      "voice": "es-MX-DaliaNeural",
+      "rate": "-12%",
+      "text": "Hola, Pablo. Soy Sofía otra vez. Son las siete y media y ya estoy en el cine. Estoy haciendo fila para las palomitas. Lucas está comprando los boletos y Ana está hablando por teléfono con su mamá. Aquí hay mucha gente. ¡Y está lloviendo mucho! ¿Y tú? ¿Todavía estás cocinando? ¿Irene todavía está durmiendo? Los sábados vamos al cine a las ocho, pero hoy la película empieza a las ocho y cuarto. Después de la película vamos a la cafetería del cine. Si quieres venir después de la cena, ahí estamos. Un beso. ¡Adiós!"
+    },
+    {
+      "id": 343,
+      "voice": "es-CO-SalomeNeural",
+      "rate": "-12%",
+      "text": "Hola, Marta. Soy Elena. Estoy en el aeropuerto. Perdón: la nota tiene una mancha de café. Te explico. Ana compra el pan hoy, no mañana. El miércoles Diego llama al restaurante. Lucía no prepara la sala; ella prepara las bebidas. Tú preparas la sala el jueves. ¿Y Raúl? Raúl no trabaja los jueves, entonces compra las flores el viernes por la mañana. Los clientes llegan el viernes a la una. Son seis personas. Una pregunta: ¿quién abre la puerta? ¿Puedes tú, Marta? Gracias. Hasta el viernes."
     }
   ]
 }

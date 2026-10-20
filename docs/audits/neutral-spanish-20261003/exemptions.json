@@ -7002,6 +7002,12 @@
       "text": "El tomate: una cosa, gusta.",
       "category": "neutral-context",
       "reason": "Course class (2026-10-20): common international word, glossed in English; regional synonyms are not required at A1."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g341.ts",
+      "text": "Shh… el bebé de los vecinos ___.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): common international word, glossed in English; regional synonyms are not required at A1."
     }
   ]
 }

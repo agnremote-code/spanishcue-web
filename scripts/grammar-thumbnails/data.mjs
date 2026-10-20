@@ -107,4 +107,9 @@ export const thumbnails = [
   { id: 335, level: 'A1', family: 'determinantes', topic: 'Cuerpo y ropa', example: '*Me duele la* cabeza. *Me pongo el* abrigo.', chips: ['me duele la…', 'me pongo el…'], mascot: 'headphones' },
   { id: 336, level: 'A1', family: 'concordancia', topic: 'Describir un objeto', example: '*La carpeta azul pequeña*, la que está en el estante.', chips: ['la azul', 'el grande', 'la que está…'], mascot: 'camera' },
   { id: 337, level: 'A1', family: 'cantidad', topic: 'Comparativos', example: 'La 31 es *más* tranquila *que* la 12.', chips: ['más … que', 'menos … que', 'tan … como'], mascot: 'tango' },
+  { id: 338, level: 'A1', family: 'adverbios', topic: 'La hora y la fecha', example: 'El tren sale *a las nueve y media*, *el lunes 3 de mayo*.', chips: ['¿Qué hora es?', 'a las…', 'el 3 de mayo'], mascot: 'van' },
+  { id: 339, level: 'A1', family: 'perifrasis', topic: 'Ir a + infinitivo', example: 'El sábado *vamos a cenar* en casa de Rosa.', chips: ['voy a…', 'vas a…', 'vamos a…'], mascot: 'explorer' },
+  { id: 340, level: 'A1', family: 'perifrasis', topic: 'Querer, poder, tener que', example: '*Quiero* ir, pero *tengo que* trabajar.', chips: ['quiero + inf.', 'puedo + inf.', 'tengo que + inf.'], mascot: 'mate' },
+  { id: 341, level: 'A1', family: 'perifrasis', topic: 'Estar + gerundio', example: 'Ahora *estoy cocinando*; normalmente cocino a las ocho.', chips: ['estoy + -ando', 'está + -iendo'], mascot: 'headphones' },
+  { id: 343, level: 'A1', family: 'oraciones', topic: 'Oraciones simples', example: '*¿Quién* llega hoy? Marta *no* llega hoy.', chips: ['¿Qué?', '¿Quién?', 'no + verbo'], mascot: 'teacher' },
 ];

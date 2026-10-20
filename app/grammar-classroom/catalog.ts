@@ -94,9 +94,14 @@ const additions = [
   [335, 'A1', 'determinantes', 'articulos-cuerpo-y-ropa', 'Artículos con partes del cuerpo y ropa', 'Decir qué te duele y qué te pones con el artículo justo: me duele la cabeza, me pongo el abrigo; y mi abrigo para describir.', 10035, [45,42,331]],
   [336, 'A1', 'concordancia', 'describir-un-objeto', 'Identificar y describir un objeto con varias pistas', 'Encontrar el objeto correcto con varias pistas que concuerdan: la carpeta azul pequeña, la que está en el estante.', 10036, [335,41,307,48]],
   [337, 'A1', 'cantidad', 'comparativos-regulares', 'Comparativos regulares: más, menos, tan ... como', 'Comparar habitaciones de hotel por tamaño, precio y ruido con más … que, menos … que y tan … como, y elegir una.', 10037, [336,41,45]],
+  [338, 'A1', 'adverbios', 'la-hora-el-dia-y-la-fecha', 'La hora, el día y la fecha', 'Preguntar y decir la hora, el día y la fecha para comprar un billete de tren y confirmar la salida y la llegada.', 10038, [337,45,327]],
+  [339, 'A1', 'perifrasis', 'ir-a-infinitivo', 'Ir a + infinitivo: planes próximos', 'Contar y acordar tus planes para el sábado con voy a, vas a, vamos a + infinitivo, y distinguirlos de tus hábitos.', 10039, [338,318,327]],
+  [340, 'A1', 'perifrasis', 'querer-poder-tener-que', 'Querer, poder y tener que + infinitivo', 'Organizar un viaje y negociar límites: decir qué quieres, qué puedes y qué tienes que hacer con un verbo + infinitivo.', 10040, [339,320]],
+  [341, 'A1', 'perifrasis', 'estar-gerundio', 'Estar + gerundio: acción en desarrollo', 'Decir qué estás haciendo ahora mismo con estar + gerundio y distinguirlo de lo que haces normalmente.', 10041, [340,318,140]],
+  [343, 'A1', 'oraciones', 'oraciones-simples-orden', 'Oraciones simples: orden, afirmación y pregunta', 'Decir quién hace qué y cuándo, preguntar con qué, quién o cuándo y negar con «no» antes del verbo, sin perder el sentido.', 10043, [106,111,324]],
 ] as const;
 /** When each addition reached the library (the «Nuevo» badge). */
-const addedAt: Record<number, string> = { 239: '2026-10-14', 303: '2026-10-20', 305: '2026-10-20', 307: '2026-10-20', 311: '2026-10-20', 312: '2026-10-20', 314: '2026-10-20', 318: '2026-10-20', 319: '2026-10-20', 320: '2026-10-20', 323: '2026-10-20', 324: '2026-10-20', 327: '2026-10-20', 328: '2026-10-20', 330: '2026-10-20', 331: '2026-10-20', 332: '2026-10-20', 333: '2026-10-20', 335: '2026-10-20', 336: '2026-10-20', 337: '2026-10-20' };
+const addedAt: Record<number, string> = { 239: '2026-10-14', 303: '2026-10-20', 305: '2026-10-20', 307: '2026-10-20', 311: '2026-10-20', 312: '2026-10-20', 314: '2026-10-20', 318: '2026-10-20', 319: '2026-10-20', 320: '2026-10-20', 323: '2026-10-20', 324: '2026-10-20', 327: '2026-10-20', 328: '2026-10-20', 330: '2026-10-20', 331: '2026-10-20', 332: '2026-10-20', 333: '2026-10-20', 335: '2026-10-20', 336: '2026-10-20', 337: '2026-10-20', 338: '2026-10-20', 339: '2026-10-20', 340: '2026-10-20', 341: '2026-10-20', 343: '2026-10-20' };
 
 export const newGrammarEntries: LessonSource[] = additions.map(([id,level,grammarTopic,slug,title,subtitle,curriculumOrder,requires]) => {
   grammarMetadata[id] = { title, grammarTopic };
