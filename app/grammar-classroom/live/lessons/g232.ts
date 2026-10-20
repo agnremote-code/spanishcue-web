@@ -33,28 +33,28 @@ export const lesson: LiveLesson = {
       id: 'entender', label: 'Entender', icon: '✎', mascot: '/brand/mascot/pointing.webp',
       title: '¿Quién o qué va primero?', coach: 'El mismo hecho, cuatro focos distintos.',
       steps: [
-        { title: 'Tres borradores para un aviso', blocks: [
-          { kind: 'lead', text: 'La biblioteca municipal prepara una reforma. El equipo revisa tres borradores del aviso para los usuarios. Los tres dicen lo mismo, pero cada uno pone en primer plano una información distinta.' },
+        { title: 'Tres borradores para un aviso · Three drafts of a notice', blocks: [
+          { kind: 'lead', text: 'La biblioteca municipal prepara una reforma. El equipo revisa tres borradores del aviso para los usuarios. Los tres dicen lo mismo, pero cada uno pone en primer plano una información distinta.', en: 'The public library is about to be refurbished. The team is reviewing three drafts of the notice for users. All three say the same thing, but each one puts a different piece of information in the foreground.' },
           { kind: 'guide', text: { teacher: 'Lean los tres borradores. Pregunta: «Si eres usuario de la biblioteca, ¿qué necesitas saber? ¿Te importa quién cierra la sala?».', self: 'Lee los tres borradores. Imagina que eres usuario: ¿qué información necesitas? ¿Cuál es el mejor aviso para ti?' } },
           { kind: 'compare', title: 'Un hecho, tres frases', columns: [
-            { tone: 'blue', label: 'ACTIVA', sentence: '[[La empresa contratada cerrará|blue]] la sala de estudio el lunes.', idea: 'Empieza por quien actúa: la empresa.' },
-            { tone: 'teal', label: 'PASIVA CON SER', sentence: 'La sala de estudio [[será cerrada|teal]] el lunes [[por la empresa contratada|teal]].', idea: 'Empieza por la sala y menciona al agente al final. Suena formal.' },
-            { tone: 'orange', label: 'SE', sentence: '[[Se cerrará|orange]] la sala de estudio el lunes.', idea: 'Lo importante es el cierre. No dice quién lo hace.' },
+            { tone: 'blue', label: 'ACTIVA', sentence: '[[La empresa contratada cerrará|blue]] la sala de estudio el lunes.', idea: 'Empieza por quien actúa: la empresa.', en: 'Active: it starts with whoever acts, the company.' },
+            { tone: 'teal', label: 'PASIVA CON SER', sentence: 'La sala de estudio [[será cerrada|teal]] el lunes [[por la empresa contratada|teal]].', idea: 'Empieza por la sala y menciona al agente al final. Suena formal.', en: 'Passive with ser: it starts with the room and names the agent at the end. It sounds formal, like English “will be closed by…”.' },
+            { tone: 'orange', label: 'SE', sentence: '[[Se cerrará|orange]] la sala de estudio el lunes.', idea: 'Lo importante es el cierre. No dice quién lo hace.', en: 'Se: what matters is the closure. It does not say who does it, much like a notice saying “Study room closing on Monday”.' },
           ] },
-          { kind: 'tip', icon: '🎯', title: 'Ninguna es «la mejor» siempre', text: 'La coordinadora elige «Se cerrará la sala» porque a los usuarios les importa **qué** cambia, no **quién** pone la valla. Pero en el informe sobre el contrato, la empresa sí es importante. La forma depende de **qué información sirve al lector**.' },
-          { kind: 'choice', title: 'Comprueba', items: [
-            { prompt: 'Un usuario quiere saber si puede estudiar el lunes. ¿Qué frase le da la información de forma más directa?', options: ['Se cerrará la sala de estudio el lunes.', 'La empresa Obras Norte cerrará la sala el lunes.'], answer: 0, why: 'Para el usuario, lo relevante es el cierre; quién lo hace no le ayuda a actuar.' },
-            { prompt: 'El ayuntamiento informa de qué empresa ganó el concurso. ¿Qué frase sirve mejor?', options: ['Las ventanas serán instaladas por Obras Norte.', 'Se instalarán las ventanas.'], answer: 0, why: 'Aquí el agente es la información importante: la pasiva con «por» lo incluye.' },
+          { kind: 'tip', icon: '🎯', title: 'Ninguna es «la mejor» siempre', text: 'La coordinadora elige «Se cerrará la sala» porque a los usuarios les importa **qué** cambia, no **quién** pone la valla. Pero en el informe sobre el contrato, la empresa sí es importante. La forma depende de **qué información sirve al lector**.', en: 'None is always “the best”. The coordinator chooses «Se cerrará la sala» because users care about what changes, not who puts up the barrier. In the report on the contract, though, the company does matter. The form depends on what information helps the reader.' },
+          { kind: 'choice', title: 'Comprueba · Check', items: [
+            { prompt: 'Un usuario quiere saber si puede estudiar el lunes. ¿Qué frase le da la información de forma más directa?', options: ['Se cerrará la sala de estudio el lunes.', 'La empresa Obras Norte cerrará la sala el lunes.'], answer: 0, why: 'Para el usuario, lo relevante es el cierre; quién lo hace no le ayuda a actuar.', en: 'A user wants to know if they can study on Monday. Which sentence gives them the information most directly?' },
+            { prompt: 'El ayuntamiento informa de qué empresa ganó el concurso. ¿Qué frase sirve mejor?', options: ['Las ventanas serán instaladas por Obras Norte.', 'Se instalarán las ventanas.'], answer: 0, why: 'Aquí el agente es la información importante: la pasiva con «por» lo incluye.', en: 'The council is announcing which company won the tender. Which sentence works best?' },
           ] },
         ] },
-        { title: 'Activa y pasiva con ser', mascot: '/brand/mascot/studying.webp', coach: 'Ser + participio, y el participio concuerda.', blocks: [
-          { kind: 'concept', tone: 'teal', label: 'PASIVA CON SER', question: '¿Quieres empezar por lo que recibe la acción y quizá nombrar al agente?', formula: ['sujeto paciente + ser + participio (+ por + agente)'],
+        { title: 'Activa y pasiva con ser · Active and passive with ser', mascot: '/brand/mascot/studying.webp', coach: 'Ser + participio, y el participio concuerda.', blocks: [
+          { kind: 'concept', tone: 'teal', label: 'PASIVA CON SER', question: '¿Quieres empezar por lo que recibe la acción y quizá nombrar al agente?', en: 'The passive with ser puts what receives the action in the foreground. The participle agrees with that subject in gender and number, and the agent is added with «por» (by) when it is useful. It is typical of formal texts: reports, news, official documents. In conversation Spanish uses it much less than English does.', formula: ['sujeto paciente + ser + participio (+ por + agente)'],
             meaning: 'La pasiva con **ser** pone en primer plano **lo que recibe la acción**. El participio **concuerda** con ese sujeto (género y número). El agente aparece con **por** si es útil. Es frecuente en textos formales: informes, noticias, documentos oficiales.',
             examples: [
-              { es: 'Las instalaciones [[serán revisadas por una empresa externa|teal]].' },
-              { es: 'Las ventanas [[serán instaladas por el equipo que ganó el concurso|teal]].' },
-              { es: 'El nuevo reglamento [[fue aprobado|teal]] ayer.' },
-              { es: 'La biblioteca [[fue inaugurada por la alcaldesa|teal]] en 1998.' },
+              { es: 'Las instalaciones [[serán revisadas por una empresa externa|teal]].', en: 'The facilities will be inspected by an outside company.' },
+              { es: 'Las ventanas [[serán instaladas por el equipo que ganó el concurso|teal]].', en: 'The windows will be fitted by the team that won the tender.' },
+              { es: 'El nuevo reglamento [[fue aprobado|teal]] ayer.', en: 'The new regulations were approved yesterday.' },
+              { es: 'La biblioteca [[fue inaugurada por la alcaldesa|teal]] en 1998.', en: 'The library was opened by the mayor in 1998.' },
             ],
             note: 'Compara con la activa: «[[Una empresa externa revisará|blue]] las instalaciones». La activa es más directa y es la opción normal en la conversación.' },
           { kind: 'table', title: 'La concordancia del participio', head: ['Sujeto', 'Ser', 'Participio'], rows: [
@@ -63,38 +63,38 @@ export const lesson: LiveLesson = {
             ['Las ventanas', 'serán', 'instalad**as**'],
             ['Los horarios', 'serán', 'publicad**os**'],
           ], note: '**Ser** cambia de tiempo (fue, es, será, ha sido) y concuerda en número; el **participio** concuerda en género y número.' },
-          { kind: 'choice', title: 'Comprueba', items: [
-            { prompt: 'Las instalaciones ___ por una empresa externa.', options: ['serán revisadas', 'serán revisado', 'será revisadas'], answer: 0, why: '«Ser» y el participio concuerdan con «las instalaciones».' },
-            { prompt: 'Los resultados del concurso ___ ayer por el ayuntamiento.', options: ['fueron publicados', 'fue publicado', 'fueron publicadas'], answer: 0, why: '«Los resultados»: masculino plural.' },
+          { kind: 'choice', title: 'Comprueba · Check', items: [
+            { prompt: 'Las instalaciones ___ por una empresa externa.', options: ['serán revisadas', 'serán revisado', 'será revisadas'], answer: 0, why: '«Ser» y el participio concuerdan con «las instalaciones».', en: 'The facilities will be inspected by an outside company. Watch agreement with «las instalaciones».' },
+            { prompt: 'Los resultados del concurso ___ ayer por el ayuntamiento.', options: ['fueron publicados', 'fue publicado', 'fueron publicadas'], answer: 0, why: '«Los resultados»: masculino plural.', en: 'The council published the results of the tender yesterday. Watch agreement with «los resultados».' },
           ] },
         ] },
-        { title: 'Pasiva refleja: se + verbo que concuerda', mascot: '/brand/mascot/speaking.webp', coach: 'Con cosas, el verbo mira a la cosa.', blocks: [
-          { kind: 'concept', tone: 'orange', label: 'PASIVA REFLEJA', question: '¿Lo importante es lo que se hace con algo, sin decir quién?', formula: ['se + verbo (3.ª persona) + cosa', 'el verbo concuerda con la cosa'],
+        { title: 'Pasiva refleja: se + verbo que concuerda · Passive se: the verb agrees', mascot: '/brand/mascot/speaking.webp', coach: 'Con cosas, el verbo mira a la cosa.', blocks: [
+          { kind: 'concept', tone: 'orange', label: 'PASIVA REFLEJA', question: '¿Lo importante es lo que se hace con algo, sin decir quién?', en: 'This highlights an action done to something and leaves out the agent. The thing is the grammatical subject: singular thing, singular verb; plural thing, plural verb. It is the most common form in notices, signs and adverts (“Rooms for rent”, “Timetables will be published tomorrow”).', formula: ['se + verbo (3.ª persona) + cosa', 'el verbo concuerda con la cosa'],
             meaning: 'Destaca una acción **sobre algo** y omite al agente. La cosa es el **sujeto**: si es singular, el verbo va en singular; si es plural, en plural. Es la forma más frecuente en avisos, carteles y anuncios.',
             examples: [
-              { es: '[[Se habilita|orange]] una sala provisional.' },
-              { es: '[[Se habilitan|orange]] veinte puestos en el edificio de al lado.' },
-              { es: '[[Se publicarán|orange]] los horarios mañana.' },
-              { es: '[[Se alquilan|orange]] dos salas para reuniones.' },
+              { es: '[[Se habilita|orange]] una sala provisional.', en: 'A temporary room is being set up.' },
+              { es: '[[Se habilitan|orange]] veinte puestos en el edificio de al lado.', en: 'Twenty study places are being set up in the building next door.' },
+              { es: '[[Se publicarán|orange]] los horarios mañana.', en: 'The timetables will be published tomorrow.' },
+              { es: '[[Se alquilan|orange]] dos salas para reuniones.', en: 'Two meeting rooms for rent.' },
             ],
             note: 'En la lengua cuidada, «se publicarán los horarios» y no «se publicará los horarios». Es una forma que se oye, pero no se recomienda en la escritura formal.' },
-          { kind: 'choice', title: 'Comprueba', items: [
-            { prompt: 'Elige el aviso correcto.', options: ['Se alquilan dos salas.', 'Se alquila dos salas.'], answer: 0, why: '«Dos salas» es el sujeto plural: el verbo va en plural.' },
-            { prompt: 'Mañana ___ las fechas definitivas.', options: ['se publicarán', 'se publicará', 'publicarán se'], answer: 0, why: '«Las fechas» es plural: se publicarán.' },
+          { kind: 'choice', title: 'Comprueba · Check', items: [
+            { prompt: 'Elige el aviso correcto.', options: ['Se alquilan dos salas.', 'Se alquila dos salas.'], answer: 0, why: '«Dos salas» es el sujeto plural: el verbo va en plural.', en: 'Choose the correct notice: two rooms for rent.' },
+            { prompt: 'Mañana ___ las fechas definitivas.', options: ['se publicarán', 'se publicará', 'publicarán se'], answer: 0, why: '«Las fechas» es plural: se publicarán.', en: 'The final dates will be published tomorrow. What is the subject?' },
           ] },
         ] },
-        { title: 'Impersonal con se: singular siempre', mascot: '/autoestudio/mascot/noting.webp', coach: 'Con «a» + personas, singular.', blocks: [
-          { kind: 'concept', tone: 'violet', label: 'IMPERSONAL CON SE', question: '¿Hablas de una actividad en general o de personas concretas con «a»?', formula: ['se + verbo en 3.ª persona singular', 'se + verbo singular + a + personas'],
+        { title: 'Impersonal con se: singular siempre · Impersonal se: always singular', mascot: '/autoestudio/mascot/noting.webp', coach: 'Con «a» + personas, singular.', blocks: [
+          { kind: 'concept', tone: 'violet', label: 'IMPERSONAL CON SE', question: '¿Hablas de una actividad en general o de personas concretas con «a»?', en: 'Here there is no grammatical subject. It is used for rules and general activities («se trabaja en silencio»: people work quietly here) and for actions done to specific people, who take «a». Since there is no subject, the verb is always singular, however many people are involved.', formula: ['se + verbo en 3.ª persona singular', 'se + verbo singular + a + personas'],
             meaning: '**No hay sujeto gramatical**. Sirve para normas y actividades generales («se trabaja en silencio») y para acciones sobre **personas concretas**, que llevan **a**. Como no hay sujeto, el verbo va **siempre en singular**.',
             examples: [
-              { es: 'Aquí [[se trabaja|violet]] en silencio.' },
-              { es: '[[Se atenderá a los usuarios|violet]] con cita en la entrada principal.' },
-              { es: '[[Se entrevistó a las candidatas|violet]] el martes.' },
-              { es: 'En esta sala [[se está|violet]] muy bien en invierno.' },
+              { es: 'Aquí [[se trabaja|violet]] en silencio.', en: 'People work in silence here.' },
+              { es: '[[Se atenderá a los usuarios|violet]] con cita en la entrada principal.', en: 'Users with an appointment will be seen at the main entrance.' },
+              { es: '[[Se entrevistó a las candidatas|violet]] el martes.', en: 'The candidates were interviewed on Tuesday.' },
+              { es: 'En esta sala [[se está|violet]] muy bien en invierno.', en: 'This room is a really nice place to be in winter.' },
             ] },
           { kind: 'compare', title: 'Con «a» o sin «a»', columns: [
-            { tone: 'orange', label: 'PASIVA REFLEJA', sentence: '[[Se buscan profesionales|orange]] con experiencia.', idea: 'Profesionales en general, sin «a»: es el sujeto y el verbo concuerda en plural.' },
-            { tone: 'violet', label: 'IMPERSONAL', sentence: '[[Se busca a los profesionales|violet]] inscritos en la lista.', idea: 'Personas concretas, con «a»: no son sujeto. Verbo en singular.' },
+            { tone: 'orange', label: 'PASIVA REFLEJA', sentence: '[[Se buscan profesionales|orange]] con experiencia.', idea: 'Profesionales en general, sin «a»: es el sujeto y el verbo concuerda en plural.', en: 'Passive se: professionals in general, without «a». They are the subject, so the verb is plural (“professionals wanted”).' },
+            { tone: 'violet', label: 'IMPERSONAL', sentence: '[[Se busca a los profesionales|violet]] inscritos en la lista.', idea: 'Personas concretas, con «a»: no son sujeto. Verbo en singular.', en: 'Impersonal se: specific people, with «a». They are not the subject, so the verb is singular (“we are looking for the professionals on the list”).' },
           ] },
           { kind: 'table', title: 'Resumen: ¿singular o plural?', head: ['Construcción', 'Ejemplo', 'Verbo'], rows: [
             ['se + cosa singular', '[[Se abre|orange]] una sala.', 'singular'],
@@ -102,20 +102,20 @@ export const lesson: LiveLesson = {
             ['se + a + personas', '[[Se atiende a|violet]] los usuarios.', '**singular**'],
             ['se + verbo sin objeto', '[[Se trabaja|violet]] en silencio.', 'singular'],
           ] },
-          { kind: 'choice', title: 'Comprueba', items: [
-            { prompt: 'Elige la frase correcta.', options: ['Se entrevistó a las candidatas.', 'Se entrevistaron a las candidatas.'], answer: 0, why: 'Con «a las candidatas» no hay sujeto plural: singular.' },
-            { prompt: '___ a las personas inscritas en recepción.', options: ['Se atenderá', 'Se atenderán', 'Serán atendido'], answer: 0, why: 'Personas concretas con «a»: impersonal en singular.' },
+          { kind: 'choice', title: 'Comprueba · Check', items: [
+            { prompt: 'Elige la frase correcta.', options: ['Se entrevistó a las candidatas.', 'Se entrevistaron a las candidatas.'], answer: 0, why: 'Con «a las candidatas» no hay sujeto plural: singular.', en: 'Choose the correct sentence: the candidates were interviewed.' },
+            { prompt: '___ a las personas inscritas en recepción.', options: ['Se atenderá', 'Se atenderán', 'Serán atendido'], answer: 0, why: 'Personas concretas con «a»: impersonal en singular.', en: 'The registered people will be seen at reception. Notice the «a».' },
           ] },
         ] },
-        { title: 'Cómo elegir', mascot: '/brand/mascot/seated.webp', coach: 'Piensa en el lector.', blocks: [
+        { title: 'Cómo elegir · How to choose', mascot: '/brand/mascot/seated.webp', coach: 'Piensa en el lector.', blocks: [
           { kind: 'decide', title: 'Piensa en tu aviso y responde', steps: [
             { q: '¿Es importante para el lector saber quién actúa?', yes: 'Nómbralo. Con la **activa** («[[La empresa revisará|blue]] las instalaciones») o, en un texto formal, con la **pasiva con ser** («Las instalaciones [[serán revisadas por la empresa|teal]]»).', no: 'next' },
             { q: '¿La acción recae sobre cosas?', yes: '**Pasiva refleja**, con el verbo concordando: «[[Se habilitarán|orange]] veinte puestos».', no: 'Si son personas concretas (con «a») o una actividad general, **impersonal en singular**: «[[Se atenderá a|violet]] los usuarios», «[[Se trabaja|violet]] en silencio».' },
           ] },
-          { kind: 'tip', icon: '⚠', title: 'Sin agente, pero con información', text: 'Omitir al agente no debe ocultar información útil. «Se suspende toda la actividad» es más corto que «Se cierran dos salas; los préstamos continúan», pero es **falso**. Un buen aviso dice qué cambia, qué sigue y dónde ir.' },
-          { kind: 'tip', icon: '📝', title: 'No conviertas todo en pasiva', text: 'La pasiva con **ser** es correcta, pero en un aviso breve puede sonar pesada. Para un cartel suele funcionar mejor **se**. Y si el agente importa, la **activa** es más directa.' },
+          { kind: 'tip', icon: '⚠', title: 'Sin agente, pero con información', text: 'Omitir al agente no debe ocultar información útil. «Se suspende toda la actividad» es más corto que «Se cierran dos salas; los préstamos continúan», pero es **falso**. Un buen aviso dice qué cambia, qué sigue y dónde ir.', en: 'No agent, but still informative. Leaving out the agent must not hide useful information. «Se suspende toda la actividad» (all activity suspended) is shorter than «Se cierran dos salas; los préstamos continúan», but it is false. A good notice says what changes, what carries on and where to go.' },
+          { kind: 'tip', icon: '📝', title: 'No conviertas todo en pasiva', text: 'La pasiva con **ser** es correcta, pero en un aviso breve puede sonar pesada. Para un cartel suele funcionar mejor **se**. Y si el agente importa, la **activa** es más directa.', en: 'Don’t turn everything into a passive. The passive with ser is correct, but in a short notice it can sound heavy. On a sign, se usually works better. And if the agent matters, the active is more direct.' },
         ] },
-        { title: 'Errores frecuentes', mascot: '/brand/mascot/standing-crossed.webp', coach: 'Fíjate en la concordancia.', blocks: [
+        { title: 'Errores frecuentes · Common mistakes', mascot: '/brand/mascot/standing-crossed.webp', coach: 'Fíjate en la concordancia.', blocks: [
           { kind: 'guide', text: { teacher: 'Tu alumno encuentra el error y dice cuál es el sujeto de la frase (o si no lo hay) antes de que muestres la corrección.', self: 'Lee cada frase y pregúntate: ¿cuál es el sujeto? Después toca para ver la corrección.' } },
           { kind: 'mistakes', title: '¿Dónde está el error?', items: [
             { wrong: 'Se alquila dos salas.', right: 'Se alquilan dos salas.', why: '«Dos salas» es el sujeto: el verbo va en plural.' },
@@ -133,21 +133,21 @@ export const lesson: LiveLesson = {
       id: 'explorar', label: 'Explorar', icon: '🔎', mascot: '/brand/mascot/walking.webp',
       title: 'Avisos que ayudan a actuar', coach: 'Toca las expresiones marcadas.',
       steps: [
-        { title: 'Revisar el aviso', blocks: [
+        { title: 'Revisar el aviso · Reviewing the notice', blocks: [
           { kind: 'guide', text: { teacher: 'Lean el diálogo con papeles. Después el alumno toca cada expresión y explica por qué el equipo eligió esa forma.', self: 'Lee el diálogo. Después toca cada expresión marcada para descubrir por qué se usó.' } },
           { kind: 'explore', title: 'La reunión del equipo', setting: 'En la biblioteca municipal, la coordinadora, Irene, revisa con Nicolás y Paula el aviso sobre la reforma.', lines: [
-            { who: 'Nicolás', text: 'He escrito el aviso así: «[[La empresa contratada cerrará|blue]] la sala de estudio el lunes».' },
-            { who: 'Irene', text: 'A los usuarios no les importa quién cierra la sala. Mejor: «[[Se cerrará|orange]] la sala de estudio el lunes».' },
-            { who: 'Paula', text: '¿Y qué hacemos con la gente que viene a estudiar?' },
-            { who: 'Irene', text: 'Hay que decirlo: «[[Se habilitarán veinte puestos|orange]] en el edificio de al lado».' },
-            { who: 'Nicolás', text: '¿Y las personas que tienen cita con el servicio de orientación?' },
-            { who: 'Irene', text: 'Añade: «[[Se atenderá a los usuarios|violet]] con cita en la entrada principal».' },
-            { who: 'Paula', text: '¿No es «se atenderán», en plural? Son muchos usuarios.' },
-            { who: 'Irene', text: 'No, porque lleva «a»: los usuarios no son el sujeto.' },
-            { who: 'Nicolás', text: 'Entendido. Y en el informe para el ayuntamiento, ¿también usamos «se»?' },
-            { who: 'Irene', text: 'No. Ahí la empresa es importante: «Las ventanas [[serán instaladas por el equipo que ganó el concurso|teal]]».' },
-            { who: 'Paula', text: 'Una cosa más: en la sala provisional hay que pedir silencio.' },
-            { who: 'Irene', text: 'Pon un cartel pequeño: «Aquí [[se trabaja|violet]] en silencio».' },
+            { who: 'Nicolás', text: 'He escrito el aviso así: «[[La empresa contratada cerrará|blue]] la sala de estudio el lunes».', en: 'I’ve written the notice like this: “The contracted company will close the study room on Monday.”' },
+            { who: 'Irene', text: 'A los usuarios no les importa quién cierra la sala. Mejor: «[[Se cerrará|orange]] la sala de estudio el lunes».', en: 'Users don’t care who closes the room. Better: “The study room will close on Monday.”' },
+            { who: 'Paula', text: '¿Y qué hacemos con la gente que viene a estudiar?', en: 'And what do we do about the people who come to study?' },
+            { who: 'Irene', text: 'Hay que decirlo: «[[Se habilitarán veinte puestos|orange]] en el edificio de al lado».', en: 'We need to say so: “Twenty study places will be set up in the building next door.”' },
+            { who: 'Nicolás', text: '¿Y las personas que tienen cita con el servicio de orientación?', en: 'And the people who have an appointment with the advice service?' },
+            { who: 'Irene', text: 'Añade: «[[Se atenderá a los usuarios|violet]] con cita en la entrada principal».', en: 'Add: “Users with an appointment will be seen at the main entrance.”' },
+            { who: 'Paula', text: '¿No es «se atenderán», en plural? Son muchos usuarios.', en: 'Isn’t it «se atenderán», in the plural? There are lots of users.' },
+            { who: 'Irene', text: 'No, porque lleva «a»: los usuarios no son el sujeto.', en: 'No, because it has «a»: the users are not the subject.' },
+            { who: 'Nicolás', text: 'Entendido. Y en el informe para el ayuntamiento, ¿también usamos «se»?', en: 'Got it. And in the report for the council, do we use «se» too?' },
+            { who: 'Irene', text: 'No. Ahí la empresa es importante: «Las ventanas [[serán instaladas por el equipo que ganó el concurso|teal]]».', en: 'No. There the company matters: “The windows will be fitted by the team that won the tender.”' },
+            { who: 'Paula', text: 'Una cosa más: en la sala provisional hay que pedir silencio.', en: 'One more thing: in the temporary room we need to ask for silence.' },
+            { who: 'Irene', text: 'Pon un cartel pequeño: «Aquí [[se trabaja|violet]] en silencio».', en: 'Put up a small sign: “Silence, please: this is a study area.”' },
           ], notes: {
             'La empresa contratada cerrará': 'Una **activa**: pone a la empresa en primer plano. Correcta, pero no es lo que el usuario necesita saber.',
             'Se cerrará': '**Pasiva refleja**: lo importante es el cierre. «La sala» es el sujeto singular.',
@@ -156,21 +156,21 @@ export const lesson: LiveLesson = {
             'serán instaladas por el equipo que ganó el concurso': '**Pasiva con ser** y agente: en un informe, quién hace el trabajo es información relevante.',
             'se trabaja': '**Impersonal** sin objeto: una norma general para todos.',
           } },
-          { kind: 'choice', title: '¿Entendiste?', items: [
-            { prompt: '¿Por qué Irene cambia el primer borrador?', options: ['Porque a los usuarios les importa el cierre, no quién lo hace.', 'Porque la frase tenía un error.', 'Porque la empresa no quiere aparecer.'], answer: 0, why: '«A los usuarios no les importa quién cierra la sala».' },
-            { prompt: '¿En qué texto sí quieren nombrar a la empresa?', options: ['En el informe para el ayuntamiento.', 'En el cartel de la sala.', 'En el aviso para usuarios.'], answer: 0, why: '«Ahí la empresa es importante».' },
+          { kind: 'choice', title: '¿Entendiste? · Did you understand?', items: [
+            { prompt: '¿Por qué Irene cambia el primer borrador?', options: ['Porque a los usuarios les importa el cierre, no quién lo hace.', 'Porque la frase tenía un error.', 'Porque la empresa no quiere aparecer.'], answer: 0, why: '«A los usuarios no les importa quién cierra la sala».', en: 'Why does Irene change the first draft?' },
+            { prompt: '¿En qué texto sí quieren nombrar a la empresa?', options: ['En el informe para el ayuntamiento.', 'En el cartel de la sala.', 'En el aviso para usuarios.'], answer: 0, why: '«Ahí la empresa es importante».', en: 'In which text do they want to name the company?' },
           ] },
         ] },
-        { title: 'Un anuncio de trabajo', mascot: '/brand/mascot/speaking.webp', coach: 'Con «a» o sin «a» cambia el verbo.', blocks: [
+        { title: 'Un anuncio de trabajo · A job advert', mascot: '/brand/mascot/speaking.webp', coach: 'Con «a» o sin «a» cambia el verbo.', blocks: [
           { kind: 'explore', title: 'Buscar personal para la reforma', setting: 'Irene llama a Recursos Humanos para pedir personal temporal durante la reforma.', lines: [
-            { who: 'Irene', text: 'Necesitamos ayuda durante la reforma. ¿Pueden publicar un anuncio?' },
-            { who: 'Elías (RR. HH.)', text: 'Claro. ¿Pongo «[[Se buscan auxiliares|orange]] de biblioteca»?' },
-            { who: 'Irene', text: 'Sí. Y que diga «[[Se valorará|orange]] la experiencia con público».' },
-            { who: 'Elías (RR. HH.)', text: 'Perfecto. Por cierto, ¿qué hacemos con las personas que ya se inscribieron el año pasado?' },
-            { who: 'Irene', text: 'Que tengan prioridad. Escribe: «[[Se contactará a las personas inscritas|violet]] antes de abrir el proceso».' },
-            { who: 'Elías (RR. HH.)', text: 'Bien. ¿Y las entrevistas?' },
-            { who: 'Irene', text: '[[Se realizarán|orange]] el jueves. Ah, y añade que el contrato [[será firmado|teal]] antes del lunes.' },
-            { who: 'Elías (RR. HH.)', text: 'Hecho. [[Se publica|orange]] mañana por la mañana.' },
+            { who: 'Irene', text: 'Necesitamos ayuda durante la reforma. ¿Pueden publicar un anuncio?', en: 'We need help during the refurbishment. Can you post an advert?' },
+            { who: 'Elías (RR. HH.)', text: 'Claro. ¿Pongo «[[Se buscan auxiliares|orange]] de biblioteca»?', en: 'Sure. Shall I put “Library assistants wanted”?' },
+            { who: 'Irene', text: 'Sí. Y que diga «[[Se valorará|orange]] la experiencia con público».', en: 'Yes. And have it say “Experience with the public will be valued.”' },
+            { who: 'Elías (RR. HH.)', text: 'Perfecto. Por cierto, ¿qué hacemos con las personas que ya se inscribieron el año pasado?', en: 'Perfect. By the way, what do we do with the people who registered last year?' },
+            { who: 'Irene', text: 'Que tengan prioridad. Escribe: «[[Se contactará a las personas inscritas|violet]] antes de abrir el proceso».', en: 'Give them priority. Write: “The registered candidates will be contacted before the process opens.”' },
+            { who: 'Elías (RR. HH.)', text: 'Bien. ¿Y las entrevistas?', en: 'Fine. And the interviews?' },
+            { who: 'Irene', text: '[[Se realizarán|orange]] el jueves. Ah, y añade que el contrato [[será firmado|teal]] antes del lunes.', en: 'They’ll be held on Thursday. Oh, and add that the contract will be signed before Monday.' },
+            { who: 'Elías (RR. HH.)', text: 'Hecho. [[Se publica|orange]] mañana por la mañana.', en: 'Done. It goes out tomorrow morning.' },
           ], notes: {
             'Se buscan auxiliares': 'Auxiliares en general, sin «a»: es el **sujeto** y el verbo concuerda en plural.',
             'Se valorará': '**Pasiva refleja** con sujeto singular: «la experiencia».',
@@ -181,7 +181,7 @@ export const lesson: LiveLesson = {
           } },
           { kind: 'teacher', text: 'Pregunta: «¿Por qué "se buscan auxiliares" pero "se contactará a las personas inscritas"?». La clave es la «a» y si las personas son concretas o no.' },
         ] },
-        { title: '¿Qué construcción es?', blocks: [
+        { title: '¿Qué construcción es? · Which construction is it?', blocks: [
           { kind: 'classify', title: 'Clasifica las frases de las dos conversaciones', categories: [
             { id: 'ser', label: 'Pasiva con ser', tone: 'teal' },
             { id: 'refleja', label: 'Pasiva refleja (concuerda)', tone: 'orange' },
@@ -202,25 +202,25 @@ export const lesson: LiveLesson = {
       id: 'practicar', label: 'Practicar', icon: '✦', mascot: '/brand/mascot/studying.webp',
       title: 'Practicar', coach: 'Busca el sujeto: él decide el verbo.',
       steps: [
-        { title: 'Elige según el contexto', blocks: [
+        { title: 'Elige según el contexto · Choose from the context', blocks: [
           { kind: 'choice', items: [
-            { context: 'Un cartel en la puerta de un edificio.', prompt: '___ dos apartamentos amueblados.', options: ['Se alquilan', 'Se alquila', 'Son alquilado'], answer: 0, why: '«Dos apartamentos» es el sujeto plural.' },
-            { context: 'Un aviso del hospital sobre los pacientes de la mañana.', prompt: '___ a los pacientes en la planta baja.', options: ['Se atenderá', 'Se atenderán', 'Serán atendido'], answer: 0, why: 'Personas con «a»: impersonal en singular.' },
-            { context: 'Una noticia: interesa saber quién inauguró el museo.', prompt: 'El museo ___ por la ministra de Cultura.', options: ['fue inaugurado', 'se inauguró', 'fue inaugurada'], answer: 0, why: 'Para nombrar al agente con «por», pasiva con ser. «El museo»: masculino.' },
-            { context: 'Una norma en la entrada de un templo.', prompt: 'Aquí no ___ con gorra.', options: ['se entra', 'se entran', 'son entrados'], answer: 0, why: 'Una norma general sin sujeto: impersonal en singular.' },
-            { context: 'Un aviso del ayuntamiento sobre las calles del centro.', prompt: 'El sábado ___ las calles del centro al tráfico.', options: ['se cerrarán', 'se cerrará', 'serán cerrado'], answer: 0, why: '«Las calles» es el sujeto plural.' },
-            { context: 'Una empresa busca a dos personas concretas de su lista.', prompt: '___ a los dos candidatos finalistas para una segunda entrevista.', options: ['Se convoca', 'Se convocan', 'Es convocado'], answer: 0, why: 'Personas concretas con «a»: singular.' },
+            { context: 'Un cartel en la puerta de un edificio.', prompt: '___ dos apartamentos amueblados.', options: ['Se alquilan', 'Se alquila', 'Son alquilado'], answer: 0, why: '«Dos apartamentos» es el sujeto plural.', en: 'A sign on the door of a building: two furnished flats are available to rent.' },
+            { context: 'Un aviso del hospital sobre los pacientes de la mañana.', prompt: '___ a los pacientes en la planta baja.', options: ['Se atenderá', 'Se atenderán', 'Serán atendido'], answer: 0, why: 'Personas con «a»: impersonal en singular.', en: 'A hospital notice about the morning patients. Notice the «a».' },
+            { context: 'Una noticia: interesa saber quién inauguró el museo.', prompt: 'El museo ___ por la ministra de Cultura.', options: ['fue inaugurado', 'se inauguró', 'fue inaugurada'], answer: 0, why: 'Para nombrar al agente con «por», pasiva con ser. «El museo»: masculino.', en: 'A news item: readers want to know who opened the museum.' },
+            { context: 'Una norma en la entrada de un templo.', prompt: 'Aquí no ___ con gorra.', options: ['se entra', 'se entran', 'son entrados'], answer: 0, why: 'Una norma general sin sujeto: impersonal en singular.', en: 'A rule at the entrance to a place of worship: no caps inside.' },
+            { context: 'Un aviso del ayuntamiento sobre las calles del centro.', prompt: 'El sábado ___ las calles del centro al tráfico.', options: ['se cerrarán', 'se cerrará', 'serán cerrado'], answer: 0, why: '«Las calles» es el sujeto plural.', en: 'A council notice about the streets in the centre on Saturday.' },
+            { context: 'Una empresa busca a dos personas concretas de su lista.', prompt: '___ a los dos candidatos finalistas para una segunda entrevista.', options: ['Se convoca', 'Se convocan', 'Es convocado'], answer: 0, why: 'Personas concretas con «a»: singular.', en: 'A company is calling two specific people from its shortlist.' },
           ] },
         ] },
-        { title: 'Compara los significados', blocks: [
+        { title: 'Compara los significados · Compare the meanings', blocks: [
           { kind: 'choice', items: [
-            { prompt: '¿Qué frase dice **quién** revisará las instalaciones?', options: ['Las instalaciones serán revisadas por una empresa externa.', 'Se revisarán las instalaciones.'], answer: 0, why: 'La pasiva con «por» nombra al agente; con «se» no aparece.' },
-            { prompt: '«Se buscan profesionales» / «Se busca a los profesionales inscritos». ¿Qué diferencia hay?', options: ['La primera habla de profesionales en general; la segunda, de personas concretas.', 'No hay diferencia de significado.', 'La primera es incorrecta.'], answer: 0, why: 'Sin «a»: en general (pasiva refleja). Con «a»: personas concretas (impersonal).' },
-            { prompt: '¿Qué aviso es **engañoso** si los préstamos continúan?', options: ['Se suspende toda la actividad.', 'Se cierran dos salas; el préstamo continúa.'], answer: 0, why: 'Omitir información puede hacer un aviso falso: no se suspende todo.' },
-            { prompt: '¿Qué frase es más adecuada para un **cartel** en la puerta?', options: ['Se cierra por obras.', 'El local es cerrado por obras por la empresa propietaria.'], answer: 0, why: 'En un cartel, «se» es breve y suficiente; la pasiva con ser suena pesada.' },
+            { prompt: '¿Qué frase dice **quién** revisará las instalaciones?', options: ['Las instalaciones serán revisadas por una empresa externa.', 'Se revisarán las instalaciones.'], answer: 0, why: 'La pasiva con «por» nombra al agente; con «se» no aparece.', en: 'Which sentence says who will inspect the facilities?' },
+            { prompt: '«Se buscan profesionales» / «Se busca a los profesionales inscritos». ¿Qué diferencia hay?', options: ['La primera habla de profesionales en general; la segunda, de personas concretas.', 'No hay diferencia de significado.', 'La primera es incorrecta.'], answer: 0, why: 'Sin «a»: en general (pasiva refleja). Con «a»: personas concretas (impersonal).', en: 'What is the difference between «Se buscan profesionales» and «Se busca a los profesionales inscritos»?' },
+            { prompt: '¿Qué aviso es **engañoso** si los préstamos continúan?', options: ['Se suspende toda la actividad.', 'Se cierran dos salas; el préstamo continúa.'], answer: 0, why: 'Omitir información puede hacer un aviso falso: no se suspende todo.', en: 'Which notice is misleading if book loans carry on?' },
+            { prompt: '¿Qué frase es más adecuada para un **cartel** en la puerta?', options: ['Se cierra por obras.', 'El local es cerrado por obras por la empresa propietaria.'], answer: 0, why: 'En un cartel, «se» es breve y suficiente; la pasiva con ser suena pesada.', en: 'Which sentence suits a sign on the door better?' },
           ] },
         ] },
-        { title: 'Completa el aviso', blocks: [
+        { title: 'Completa el aviso · Complete the notice', blocks: [
           { kind: 'chat-fill', title: 'Correos del equipo antes de publicar', lines: [
             { who: 'Irene', text: 'Para el cartel de la entrada: «Durante la reforma ___ la sala de estudio».', options: ['se cerrará', 'se cerrarán', 'será cerrado'], answer: 0, why: '«La sala de estudio»: sujeto singular.' },
             { who: 'Nicolás', text: '¿Y las alternativas? «___ veinte puestos en el edificio de al lado».', options: ['Se habilitarán', 'Se habilitará', 'Serán habilitado'], answer: 0, why: '«Veinte puestos»: plural.' },
@@ -229,7 +229,7 @@ export const lesson: LiveLesson = {
             { who: 'Nicolás', text: '¿Y las fechas? «___ las fechas definitivas el jueves».', options: ['Se publicarán', 'Se publicará', 'Es publicado'], answer: 0, why: '«Las fechas»: plural.' },
           ] },
         ] },
-        { title: 'Encuentra el error', blocks: [
+        { title: 'Encuentra el error · Find the mistake', blocks: [
           { kind: 'fix', items: [
             { sentence: 'Se vende bicicletas usadas.', ok: false, options: ['Se venden bicicletas usadas.', 'Se vende a bicicletas usadas.', 'Son vendido bicicletas usadas.'], answer: 0, why: '«Bicicletas» es el sujeto plural.' },
             { sentence: 'Se informó a los vecinos del corte de agua.', ok: true, why: 'Correcta: impersonal con «a» + personas, en singular.' },
@@ -239,12 +239,12 @@ export const lesson: LiveLesson = {
             { sentence: 'Se ofrece clases de yoga los martes.', ok: false, options: ['Se ofrecen clases de yoga los martes.', 'Se ofrece a clases de yoga los martes.', 'Son ofrecido clases de yoga los martes.'], answer: 0, why: '«Clases de yoga»: sujeto plural.' },
           ] },
         ] },
-        { title: 'Construye y transforma', blocks: [
+        { title: 'Construye y transforma · Build and transform', blocks: [
           { kind: 'build', title: 'Ordena las palabras', items: [
-            { tiles: ['Se', 'habilitarán', 'veinte', 'puestos', 'nuevos'], accept: ['Se habilitarán veinte puestos nuevos'] },
-            { tiles: ['Se', 'atenderá', 'a', 'los', 'usuarios', 'con', 'cita'], accept: ['Se atenderá a los usuarios con cita'] },
-            { tiles: ['Las', 'ventanas', 'serán', 'instaladas', 'por', 'la', 'empresa'], accept: ['Las ventanas serán instaladas por la empresa'] },
-            { tiles: ['Aquí', 'se', 'trabaja', 'en', 'silencio'], accept: ['Aquí se trabaja en silencio', 'Se trabaja en silencio aquí'] },
+            { tiles: ['Se', 'habilitarán', 'veinte', 'puestos', 'nuevos'], accept: ['Se habilitarán veinte puestos nuevos'], en: 'Twenty new study places will be set up.' },
+            { tiles: ['Se', 'atenderá', 'a', 'los', 'usuarios', 'con', 'cita'], accept: ['Se atenderá a los usuarios con cita'], en: 'Users with an appointment will be seen.' },
+            { tiles: ['Las', 'ventanas', 'serán', 'instaladas', 'por', 'la', 'empresa'], accept: ['Las ventanas serán instaladas por la empresa'], en: 'The windows will be fitted by the company.' },
+            { tiles: ['Aquí', 'se', 'trabaja', 'en', 'silencio'], accept: ['Aquí se trabaja en silencio', 'Se trabaja en silencio aquí'], en: 'People work in silence here.' },
           ] },
           { kind: 'rewrite', title: 'Cambia el foco', items: [
             { prompt: 'El personal publicará las fechas mañana.', instruction: 'Pon las fechas en primer plano y no nombres al personal. Usa «se».', accept: ['Se publicarán las fechas mañana', 'Mañana se publicarán las fechas', 'Las fechas se publicarán mañana'] },
@@ -253,12 +253,12 @@ export const lesson: LiveLesson = {
             { prompt: 'Abriremos tres salas nuevas en enero.', instruction: 'Escríbelo como aviso con «se».', accept: ['Se abrirán tres salas nuevas en enero', 'En enero se abrirán tres salas nuevas'] },
           ] },
         ] },
-        { title: 'Redacta el cartel', mascot: '/brand/mascot/kneeling.webp', coach: 'Breve, claro y correcto.', blocks: [
+        { title: 'Redacta el cartel · Write the sign', mascot: '/brand/mascot/kneeling.webp', coach: 'Breve, claro y correcto.', blocks: [
           { kind: 'choice', items: [
-            { context: 'Un cartel en la puerta del gimnasio. Lo importante es la información para los socios.', prompt: '¿Qué cartel es mejor?', options: ['Se cambian los horarios de la piscina a partir del lunes.', 'Los horarios de la piscina serán cambiados por la dirección del gimnasio a partir del lunes.', 'Se cambia los horarios de la piscina a partir del lunes.'], answer: 0, why: 'Breve y con concordancia correcta. La segunda es correcta, pero pesada para un cartel; la tercera no concuerda.' },
-            { context: 'Un correo para los padres de un colegio.', prompt: '¿Qué frase es correcta?', options: ['Se recibirá a las familias en el salón de actos.', 'Se recibirán a las familias en el salón de actos.', 'Se recibirá las familias en el salón de actos.'], answer: 0, why: 'Personas con «a»: impersonal en singular.' },
-            { context: 'Un informe interno: quieres que conste quién aprobó el presupuesto.', prompt: '¿Qué frase eliges?', options: ['El presupuesto fue aprobado por la junta directiva.', 'Se aprobó el presupuesto.', 'Se aprobaron el presupuesto.'], answer: 0, why: 'El agente es importante: pasiva con ser + por.' },
-            { context: 'Una norma en la sala de lectura.', prompt: '¿Qué cartel es correcto?', options: ['No se come en la sala.', 'No se comen en la sala.', 'No es comido en la sala.'], answer: 0, why: 'Una norma general sin objeto: impersonal en singular.' },
+            { context: 'Un cartel en la puerta del gimnasio. Lo importante es la información para los socios.', prompt: '¿Qué cartel es mejor?', options: ['Se cambian los horarios de la piscina a partir del lunes.', 'Los horarios de la piscina serán cambiados por la dirección del gimnasio a partir del lunes.', 'Se cambia los horarios de la piscina a partir del lunes.'], answer: 0, why: 'Breve y con concordancia correcta. La segunda es correcta, pero pesada para un cartel; la tercera no concuerda.', en: 'A sign on the gym door: what matters is the information for members.' },
+            { context: 'Un correo para los padres de un colegio.', prompt: '¿Qué frase es correcta?', options: ['Se recibirá a las familias en el salón de actos.', 'Se recibirán a las familias en el salón de actos.', 'Se recibirá las familias en el salón de actos.'], answer: 0, why: 'Personas con «a»: impersonal en singular.', en: 'An email to parents at a school: families will be welcomed in the hall.' },
+            { context: 'Un informe interno: quieres que conste quién aprobó el presupuesto.', prompt: '¿Qué frase eliges?', options: ['El presupuesto fue aprobado por la junta directiva.', 'Se aprobó el presupuesto.', 'Se aprobaron el presupuesto.'], answer: 0, why: 'El agente es importante: pasiva con ser + por.', en: 'An internal report: you want it on record who approved the budget.' },
+            { context: 'Una norma en la sala de lectura.', prompt: '¿Qué cartel es correcto?', options: ['No se come en la sala.', 'No se comen en la sala.', 'No es comido en la sala.'], answer: 0, why: 'Una norma general sin objeto: impersonal en singular.', en: 'A rule in the reading room: no eating.' },
           ] },
         ] },
       ],
@@ -271,13 +271,13 @@ export const lesson: LiveLesson = {
           { kind: 'guide', text: { teacher: 'Primera escucha para la idea general. En la segunda, el alumno anota cada construcción con «se» y decide si el verbo concuerda o va en singular.', self: 'Escucha una vez para la idea general y otra vez para los detalles. Anota las frases con «se» que oigas.' } },
           { kind: 'listen', title: 'Irene revisa el aviso', channel: 'MENSAJE DE VOZ · AL EQUIPO', src: '/audio/grammar-classroom/232.mp3',
             before: 'Antes de publicar el aviso, la coordinadora deja un mensaje al equipo con algunas correcciones. ¿Qué crees que quiere cambiar?',
-            gist: { prompt: '¿Cuál es la idea principal del mensaje?', options: ['El aviso debe explicar con precisión qué cambia y qué continúa.', 'La biblioteca va a cerrar completamente.', 'La empresa no quiere aparecer en ningún texto.'], answer: 0, why: 'Corrige el aviso para que no diga que se suspende todo y explique qué servicios cambian.' },
+            gist: { prompt: '¿Cuál es la idea principal del mensaje?', options: ['El aviso debe explicar con precisión qué cambia y qué continúa.', 'La biblioteca va a cerrar completamente.', 'La empresa no quiere aparecer en ningún texto.'], answer: 0, why: 'Corrige el aviso para que no diga que se suspende todo y explique qué servicios cambian.', en: 'What is the main idea of the message?' },
             details: [
-              { prompt: '¿Qué se reformará primero?', options: ['La planta baja.', 'Las ventanas del piso superior.', 'La entrada principal.'], answer: 0, why: '«Primero se reformará la planta baja».' },
-              { prompt: 'Durante la primera semana, ¿a quién se atenderá en la sala provisional?', options: ['A las personas que necesiten ayuda con los ordenadores.', 'A los estudiantes con cita.', 'A los trabajadores de la empresa.'], answer: 0, why: '«Se atenderá a las personas que necesiten ayuda con los ordenadores en la sala provisional».' },
-              { prompt: '¿Por qué no deben escribir que se suspende toda la actividad?', options: ['Porque los préstamos continuarán.', 'Porque la reforma se cancela.', 'Porque todavía no hay fechas.'], answer: 0, why: '«No escriban que se suspende toda la actividad, porque los préstamos continuarán».' },
-              { prompt: '¿Qué texto debe mencionar a la empresa?', options: ['El informe técnico.', 'El cartel para los usuarios.', 'El aviso en la web.'], answer: 0, why: '«Quiero que el informe técnico mencione a la empresa».' },
-              { prompt: '¿Cuándo se publicarán las fechas definitivas?', options: ['Mañana por la tarde.', 'Hoy por la mañana.', 'La semana que viene.'], answer: 0, why: '«Se publicarán las fechas definitivas mañana por la tarde».' },
+              { prompt: '¿Qué se reformará primero?', options: ['La planta baja.', 'Las ventanas del piso superior.', 'La entrada principal.'], answer: 0, why: '«Primero se reformará la planta baja».', en: 'What will be refurbished first?' },
+              { prompt: 'Durante la primera semana, ¿a quién se atenderá en la sala provisional?', options: ['A las personas que necesiten ayuda con los ordenadores.', 'A los estudiantes con cita.', 'A los trabajadores de la empresa.'], answer: 0, why: '«Se atenderá a las personas que necesiten ayuda con los ordenadores en la sala provisional».', en: 'During the first week, who will be helped in the temporary room?' },
+              { prompt: '¿Por qué no deben escribir que se suspende toda la actividad?', options: ['Porque los préstamos continuarán.', 'Porque la reforma se cancela.', 'Porque todavía no hay fechas.'], answer: 0, why: '«No escriban que se suspende toda la actividad, porque los préstamos continuarán».', en: 'Why shouldn’t they write that all activity is suspended?' },
+              { prompt: '¿Qué texto debe mencionar a la empresa?', options: ['El informe técnico.', 'El cartel para los usuarios.', 'El aviso en la web.'], answer: 0, why: '«Quiero que el informe técnico mencione a la empresa».', en: 'Which text should mention the company?' },
+              { prompt: '¿Cuándo se publicarán las fechas definitivas?', options: ['Mañana por la tarde.', 'Hoy por la mañana.', 'La semana que viene.'], answer: 0, why: '«Se publicarán las fechas definitivas mañana por la tarde».', en: 'When will the final dates be published?' },
             ],
             transcript: 'Buenos días. Antes de publicar el aviso, revisemos dos puntos. Las salas no [[se cerrarán|orange]] todas al mismo tiempo: primero [[se reformará|orange]] la planta baja y después [[se cambiarán|orange]] las ventanas del piso superior. Durante la primera semana [[se atenderá a las personas|violet]] que necesiten ayuda con los ordenadores en la sala provisional. No escriban que se suspende toda la actividad, porque los préstamos continuarán. También quiero que el informe técnico mencione a la empresa: las ventanas [[serán instaladas por el equipo|teal]] que ganó el concurso. En el cartel para los usuarios basta con explicar qué servicios cambian. [[Se publicarán|orange]] las fechas definitivas mañana por la tarde, cuando el equipo de obras confirme el calendario. Hasta entonces, el texto debe indicar que las fechas son provisionales.',
             reply: { teacher: 'El alumno responde a Irene como si fuera Nicolás: propone el texto final del cartel con dos frases con «se» y una con «ser».', self: 'Responde a Irene como si fueras del equipo. Propón el texto del cartel con al menos dos frases con «se».' } },
@@ -321,25 +321,25 @@ export const lesson: LiveLesson = {
     },
     {
       id: 'cerrar', label: 'Cerrar', icon: '✓', mascot: '/brand/mascot/standing.webp',
-      title: 'Lo esencial', coach: '¿Qué te llevas hoy?',
+      title: 'Lo esencial · The essentials', coach: '¿Qué te llevas hoy?',
       steps: [
-        { title: 'Lo esencial', blocks: [
+        { title: 'Lo esencial · The essentials', blocks: [
           { kind: 'recap', items: [
-            { tone: 'teal', label: 'PASIVA CON SER', formula: 'sujeto + ser + participio (+ por + agente)', example: 'Las ventanas serán instaladas por la empresa.', caption: 'Formal. Útil si quieres nombrar al agente.' },
-            { tone: 'orange', label: 'PASIVA REFLEJA', formula: 'se + verbo que concuerda con la cosa', example: 'Se habilitarán veinte puestos.', caption: 'Cosas: singular o plural según el sujeto.' },
-            { tone: 'violet', label: 'IMPERSONAL CON SE', formula: 'se + verbo en singular (+ a + personas)', example: 'Se atenderá a los usuarios con cita.', caption: 'Sin sujeto: siempre singular.' },
+            { tone: 'teal', label: 'PASIVA CON SER', formula: 'sujeto + ser + participio (+ por + agente)', example: 'Las ventanas serán instaladas por la empresa.', caption: 'Formal. Útil si quieres nombrar al agente.', en: 'Formal; useful when you want to name the agent.' },
+            { tone: 'orange', label: 'PASIVA REFLEJA', formula: 'se + verbo que concuerda con la cosa', example: 'Se habilitarán veinte puestos.', caption: 'Cosas: singular o plural según el sujeto.', en: 'Things: singular or plural to match the subject.' },
+            { tone: 'violet', label: 'IMPERSONAL CON SE', formula: 'se + verbo en singular (+ a + personas)', example: 'Se atenderá a los usuarios con cita.', caption: 'Sin sujeto: siempre singular.', en: 'No subject: always singular, even with «a» + many people.' },
           ] },
-          { kind: 'tip', icon: '🔑', title: 'Dos preguntas', text: '¿Importa **quién** lo hace? Nómbralo (activa o pasiva con ser). Si no importa, usa **se**: con cosas, el verbo **concuerda**; con **a + personas**, va en **singular**.' },
+          { kind: 'tip', icon: '🔑', title: 'Dos preguntas', text: '¿Importa **quién** lo hace? Nómbralo (activa o pasiva con ser). Si no importa, usa **se**: con cosas, el verbo **concuerda**; con **a + personas**, va en **singular**.', en: 'Two questions. Does it matter who does it? Then name them (active or passive with ser). If not, use se: with things, the verb agrees; with «a» + people, it is singular.' },
         ] },
-        { title: 'Desafío final', blocks: [
+        { title: 'Desafío final · Final challenge', blocks: [
           { kind: 'choice', title: 'Cuatro frases, sin ayuda', items: [
-            { prompt: '___ dos técnicos para el turno de noche.', options: ['Se necesitan', 'Se necesita', 'Son necesitado'], answer: 0, why: 'Técnicos en general, sin «a»: sujeto plural.' },
-            { prompt: '___ a los dos técnicos del turno de noche.', options: ['Se necesita', 'Se necesitan', 'Es necesitado'], answer: 0, why: 'Personas concretas con «a»: singular.' },
-            { prompt: 'Las obras ___ por una empresa local.', options: ['fueron realizadas', 'fueron realizados', 'fue realizadas'], answer: 0, why: '«Las obras»: femenino plural.' },
-            { prompt: 'En esta oficina no ___ después de las seis.', options: ['se trabaja', 'se trabajan', 'son trabajado'], answer: 0, why: 'Norma general sin sujeto: singular.' },
+            { prompt: '___ dos técnicos para el turno de noche.', options: ['Se necesitan', 'Se necesita', 'Son necesitado'], answer: 0, why: 'Técnicos en general, sin «a»: sujeto plural.', en: 'Two technicians needed for the night shift (any two, no «a»).' },
+            { prompt: '___ a los dos técnicos del turno de noche.', options: ['Se necesita', 'Se necesitan', 'Es necesitado'], answer: 0, why: 'Personas concretas con «a»: singular.', en: 'The two night-shift technicians are needed (specific people, with «a»).' },
+            { prompt: 'Las obras ___ por una empresa local.', options: ['fueron realizadas', 'fueron realizados', 'fue realizadas'], answer: 0, why: '«Las obras»: femenino plural.', en: 'The building work was done by a local firm. Watch agreement with «las obras».' },
+            { prompt: 'En esta oficina no ___ después de las seis.', options: ['se trabaja', 'se trabajan', 'son trabajado'], answer: 0, why: 'Norma general sin sujeto: singular.', en: 'A general rule: in this office nobody works after six.' },
           ] },
         ] },
-        { title: 'Tus errores y repaso', blocks: [
+        { title: 'Tus errores y repaso · Your mistakes and review', blocks: [
           { kind: 'review' },
           { kind: 'restart' },
           { kind: 'teacher', text: 'Pregunta de cierre: ¿por qué decimos «se necesitan dos técnicos» y «se necesita a los dos técnicos del turno»? En la primera, «dos técnicos» es el sujeto y concuerda; en la segunda, «a los dos técnicos» no es sujeto y el verbo va en singular.' },
