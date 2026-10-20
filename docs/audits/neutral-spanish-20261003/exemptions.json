@@ -9414,66 +9414,6 @@
       "text": "Anoche me dormí delante del portátil sin querer.",
       "category": "neutral-context",
       "reason": "Pretérito en primera persona (yo) o patrón de error en una expresión regular, no voseo."
-    },
-    {
-      "path": "app/grammar-classroom/live/lessons/g464.ts",
-      "text": "Tú, usted, vos, ustedes · Who you are talking to",
-      "category": "regional-pedagogy",
-      "reason": "Voseo enseñado a propósito como variante regional (Argentina, Uruguay) en la clase de registro."
-    },
-    {
-      "path": "app/grammar-classroom/live/lessons/g464.ts",
-      "text": "tú: **cierra** · vos: **cerrá**",
-      "category": "regional-pedagogy",
-      "reason": "Voseo enseñado a propósito como variante regional (Argentina, Uruguay) en la clase de registro."
-    },
-    {
-      "path": "app/grammar-classroom/live/lessons/g464.ts",
-      "text": "En América, **ustedes** es el único plural: sirve igual para los hijos que para los clientes. El voseo (**cerrá**, **vení**, **decime**) es la forma de confianza en Argentina, Uruguay, Paraguay y gran parte de Centroamérica; aquí solo necesitas reconocerlo.",
-      "category": "regional-pedagogy",
-      "reason": "Voseo enseñado a propósito como variante regional (Argentina, Uruguay) en la clase de registro."
-    },
-    {
-      "path": "app/grammar-classroom/live/lessons/g464.ts",
-      "text": "El imperativo de vos, normal en Argentina y Uruguay.",
-      "category": "regional-pedagogy",
-      "reason": "Voseo enseñado a propósito como variante regional (Argentina, Uruguay) en la clase de registro."
-    },
-    {
-      "path": "app/grammar-classroom/live/lessons/g464.ts",
-      "text": "Imperativo de vos (pasá + me), con el acento en la última sílaba de «pasá»; con pronombre pierde la tilde.",
-      "category": "regional-pedagogy",
-      "reason": "Voseo enseñado a propósito como variante regional (Argentina, Uruguay) en la clase de registro."
-    },
-    {
-      "path": "app/grammar-classroom/live/lessons/g464.ts",
-      "text": "Cerrá",
-      "category": "regional-pedagogy",
-      "reason": "Voseo enseñado a propósito como variante regional (Argentina, Uruguay) en la clase de registro."
-    },
-    {
-      "path": "app/grammar-classroom/live/lessons/g464.ts",
-      "text": "Imperativo de **vos**: Facundo es argentino y tiene confianza con Lucía. En tú sería «pásame». En voseo el imperativo lleva el acento al final (pasá, cerrá, vení); con pronombre pierde la tilde: pasame.",
-      "category": "regional-pedagogy",
-      "reason": "Voseo enseñado a propósito como variante regional (Argentina, Uruguay) en la clase de registro."
-    },
-    {
-      "path": "app/grammar-classroom/live/lessons/g464.ts",
-      "text": "Antes de pedir, decide **a quién** hablas (tú, usted, vos, ustedes) y **cuánto** pides. Después elige el recurso: preguntar, alejar el verbo o quitar la persona. Y recuerda la gramática: **¿te importaría + infinitivo?** (lo hace el otro), **¿te importaría que + imperfecto de subjuntivo?** (permiso) y **le agradecería que + imperfecto de subjuntivo**.",
-      "category": "regional-pedagogy",
-      "reason": "Voseo enseñado a propósito como variante regional (Argentina, Uruguay) en la clase de registro."
-    },
-    {
-      "path": "app/grammar-classroom/live/lessons/g463.ts",
-      "text": "Su hermana tiene una copia, así que [[se la pedí a ella|violet]] y en veinte minutos estaba aquí.",
-      "category": "neutral-context",
-      "reason": "Pretérito en primera persona (yo), no voseo."
-    },
-    {
-      "path": "app/grammar-classroom/live/lessons/g463.ts",
-      "text": "«Su hermana tiene una copia, así que se la pedí a ella».",
-      "category": "neutral-context",
-      "reason": "Pretérito en primera persona (yo), no voseo."
     }
   ]
 }
