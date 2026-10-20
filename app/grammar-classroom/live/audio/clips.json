@@ -37,6 +37,96 @@
       "voice": "es-MX-DaliaNeural",
       "rate": "-12%",
       "text": "Hola, Daniel. Soy Lucía. ¿Dónde estás? Yo estoy en Monterrey, en el hotel. Es un hotel pequeño y tranquilo, cerca de la estación. Estoy un poco cansada, pero contenta: el trabajo aquí es interesante. Mi compañera Ana está enferma hoy, pobre. ¿Y mamá? ¿Está bien? Ah, una cosa: mi pasaporte está en mi cuarto, en la mesa, cerca de la ventana. ¿Está ahí? El domingo estoy en casa otra vez. Un beso grande, hermano."
+    },
+    {
+      "id": 314,
+      "voice": "es-CO-SalomeNeural",
+      "rate": "-12%",
+      "text": "Bienvenidos a la Clínica San Rafael. En la recepción hay un formulario para cada paciente: nombre, edad y síntomas. ¿Usted tiene más de sesenta y cinco años? Entonces tiene prioridad. Los niños que tienen menos de doce años esperan en la sala azul, con sus padres. ¿Tiene frío? Hay mantas al lado de la puerta. ¿Tiene sed? El agua está cerca de la ventana y es gratis. ¿Tiene hambre? La cafetería está en el primer piso. Y una cosa más: ¿tiene una pregunta? Carmen y Óscar, en la recepción, tienen todas las respuestas. Gracias y feliz día."
+    },
+    {
+      "id": 318,
+      "voice": "es-MX-DaliaNeural",
+      "rate": "-12%",
+      "text": "Hola, Hugo. Hola, Rosa. Soy Paula. Ya es miércoles por la noche y la agenda cambia un poco. Mañana por la mañana estoy en el aeropuerto, con un cliente, y por la tarde voy a la oficina. Hugo, tú tienes la reunión con el banco el jueves, ¿verdad? Rosa, el lunes tú y yo vamos al centro, a las diez. Ah, una cosa más: las llaves nuevas de la sala están en mi escritorio. La reunión del viernes es a las once. ¡Gracias, equipo! Hasta mañana."
+    },
+    {
+      "id": 319,
+      "voice": "es-CO-SalomeNeural",
+      "rate": "-12%",
+      "text": "Hola, chicos. Soy Carla. Un cambio para mañana. Marcos viene directamente del trabajo, a las siete y media, un poco tarde. Entonces, Diego, tú pones la mesa, ¿sí? Paula hace el postre, como siempre. Diego y Paula, ustedes vienen a las siete, ¿no? Yo hago la comida: arroz con pollo y una ensalada. Por la mañana salgo temprano y hago las compras en el mercado. Por la tarde pongo las bebidas en la nevera. Si hay un problema, escriben en el grupo. ¡Hasta mañana!"
+    },
+    {
+      "id": 320,
+      "voice": "es-CO-GonzaloNeural",
+      "rate": "-12%",
+      "text": "Hola, Clara. Soy Diego. Estoy en el puerto. Tengo una idea para mañana. Hay un tour en barco a la Isla de la Plata: cuesta cuarenta dólares por persona. ¿Quieres ir? Yo quiero ir, pero no puedo pagar más de cuarenta. En la isla podemos comer en la playa. Allí la gente pide pescado con arroz, y no es caro. El barco sale a las nueve. ¿Puedes estar aquí a las ocho y media? Ah, Rosa y su novio también quieren venir otra vez. ¿Pueden venir con nosotros? Bueno, espero tu mensaje. Un abrazo."
+    },
+    {
+      "id": 323,
+      "voice": "es-MX-JorgeNeural",
+      "rate": "-12%",
+      "text": "Hola, buenos días. Gracias por llamar al Museo de los Colores, en Puebla. Estas son las preguntas frecuentes. ¿Cuándo abre el museo? De martes a domingo, de diez de la mañana a seis de la tarde. Los lunes está cerrado. ¿Cuánto cuesta la entrada? Ochenta pesos, y para estudiantes, cuarenta. Los domingos, la entrada es gratis. ¿Dónde está el museo? En la calle Reforma, número dieciocho, cerca de la catedral. ¿Qué días hay visitas guiadas? Los sábados y los domingos, a las once. ¿Cuántas personas pueden ir en un grupo? Veinte como máximo. ¿Quién da las visitas? Raúl, nuestro guía. Gracias por su llamada."
+    },
+    {
+      "id": 324,
+      "voice": "es-MX-DaliaNeural",
+      "rate": "-12%",
+      "text": "Hola, Pablo, soy Nuria. Es por la presentación del cliente. El lunes no puedo: tengo cita médica a las diez. El martes tú no trabajas, ¿verdad? Y el miércoles no hay sala libre: la sala grande está ocupada todo el día. Pero el jueves sí. El jueves por la mañana no tengo reuniones. ¿Puedes a las diez? Si no puedes a las diez, a las once también está bien. Yo no quiero esperar hasta el viernes. El viernes no es buena idea: es el día de la presentación. Escríbeme, por favor. ¡Hasta mañana!"
+    },
+    {
+      "id": 327,
+      "voice": "es-ES-ElviraNeural",
+      "rate": "-12%",
+      "text": "Hola, Mateo. Soy Lucía, la coordinadora. Hay un cambio importante. El paquete de la señora Molina no va a la sucursal Norte: va a la sucursal Sur. Hoy la sucursal Norte está cerrada. La señora Molina está en la sucursal Sur hasta las dos. Tú vas con Carla, como antes. Ella tiene la llave de la puerta. Y una cosa más: no puedes entregar el paquete sin el recibo. El recibo está en tu mochila. Gracias, Mateo. Hasta luego."
+    },
+    {
+      "id": 328,
+      "voice": "es-CL-CatalinaNeural",
+      "rate": "-12%",
+      "text": "Hola, Ingrid. Soy Carolina, de la recepción. Mañana tienes tres trayectos. Primero, del hotel al puerto: diez minutos a pie. Después, del puerto al mercado: tomas el autobús en la plaza Sotomayor. Por la tarde, vas al cerro Alegre en el ascensor. El ascensor está cerca del mercado. Para volver, mejor un taxi: del cerro al hotel son quince minutos. La cena es a las ocho. ¡Buen viaje!"
+    },
+    {
+      "id": 330,
+      "voice": "es-MX-DaliaNeural",
+      "rate": "-12%",
+      "text": "Hola, Daniel, soy Lucía. Ya tengo mi horario de la semana. Los martes y los jueves corro en el parque, siempre temprano, antes del trabajo. ¿Quieres venir? Los lunes no puedo: trabajo hasta muy tarde. Los viernes casi nunca entreno, porque estoy muy cansada. Y normalmente nado los sábados por la mañana. Tú no entrenas nunca los domingos, ¿verdad? Es el día de tu familia. Entonces, ¿martes, jueves y sábado? Ah, pero este sábado no puedo: es el cumpleaños de mi mamá. Hablamos mañana en la oficina. ¡Un abrazo!"
+    },
+    {
+      "id": 331,
+      "voice": "es-CO-SalomeNeural",
+      "rate": "-12%",
+      "text": "Hola, Óscar, soy Lucía. Mañana es tu primer día en el turno de las siete, ¿verdad? Aquí tienes unos consejos. Yo me acuesto a las diez, porque me levanto a las cinco. Me ducho, desayuno y salgo de casa a las seis. Tú vives cerca del hospital, entonces puedes salir a las seis y media. Aquí nos ponemos el uniforme en el vestuario del segundo piso. Otra cosa: tu hermano se levanta tarde, ¿no? Entonces él no te despierta. Yo siempre pongo dos alarmas en el celular. Y esta noche, ¿a qué hora te acuestas? Bueno, hasta mañana a las siete menos cuarto, en la sala de enfermería."
+    },
+    {
+      "id": 332,
+      "voice": "es-MX-DaliaNeural",
+      "rate": "-12%",
+      "text": "Buenas tardes, señora Carmen. Soy Valeria, de la recepción del hotel. Tengo buenas noticias: hay mesa en Casa Rosa a las ocho y media. A su esposo le gustan la pasta y la pizza, y allí la pasta es casera. Y a usted le encanta el pescado: hoy viernes tienen pescado del día. Es un lugar tranquilo, sin música en vivo. A Diego no le gusta el ruido, ¿verdad? Y los postres… ¡a mí me encantan! El flan de la casa es delicioso. Si a usted no le gusta la idea, El Puerto tiene mesa a las nueve, con música. Por favor, llámeme a la recepción. ¡Hasta luego!"
+    },
+    {
+      "id": 333,
+      "voice": "es-MX-DaliaNeural",
+      "rate": "-12%",
+      "text": "Hola, equipo, soy Carmen. Un mensaje rápido sobre la cena del viernes. Las invitaciones están en la caja azul, en mi mesa. Pablo, hay una invitación para ti y otra para tu pareja. Rosa, el viernes tú traes el pastel con Diego: vas con él a la pastelería por la mañana. El jueves yo no puedo ir a la tienda, entonces Nuria y Diego compran las luces sin mí. ¡Pero el viernes ceno con ustedes, claro! Nuria, ¿vienes conmigo en el coche? Hay sitio para dos personas más. Y el amigo invisible es un secreto: el nombre del papel es solo para ti. Hasta mañana."
+    },
+    {
+      "id": 335,
+      "voice": "es-ES-ElviraNeural",
+      "rate": "-12%",
+      "text": "Hola, buenas tardes. Soy Clara Molina, paciente de la doctora Ruiz. Llamo para pedir una cita para el lunes. Desde hoy estoy mal: me duele mucho la cabeza y me duele la garganta. También me duelen los ojos con la luz. No tengo fiebre, pero tengo frío todo el tiempo, y en casa me pongo el abrigo y la bufanda. Me lavo las manos muchas veces, porque vivo con un amigo. Mi número es el seis, uno, cuatro, dos, dos, ocho, siete, cinco, tres. Muchas gracias. Hasta el lunes."
+    },
+    {
+      "id": 336,
+      "voice": "es-MX-DaliaNeural",
+      "rate": "-12%",
+      "text": "Hola, Carmen, soy Lorena, del grupo de las diez. Muchas gracias: Pablo tiene mi cuaderno rojo. Ahora busco otras dos cosas. Primero, mi bufanda. Es una bufanda verde y larga. Creo que está en el aula cuatro, en la silla que está al lado de la ventana. La bufanda verde pequeña no es mi bufanda: es de mi compañera Sara. Segundo, busco unas llaves pequeñas con un llavero amarillo. Son las llaves de mi casa. ¡Es importante! Mañana paso por recepción a las nueve y media. ¡Muchas gracias y hasta mañana!"
+    },
+    {
+      "id": 337,
+      "voice": "es-ES-ElviraNeural",
+      "rate": "-12%",
+      "text": "Buenos días, señora Ruiz. Soy Nuria, de la recepción del Hotel Mirador. Ustedes quieren una noche más, ¿verdad? Mañana la 31 no está libre, pero hay otra habitación: la 40, en el cuarto piso. La 40 es más grande que la 31: tiene veinticinco metros. Y es tan tranquila como la 31, porque también da al patio. Es un poco más cara: cuesta ochenta y cinco euros la noche. Pero es menos cara que la 12. Ah, y mañana el desayuno es más barato: ocho euros, no diez. ¿Quieren la 40? Pueden llamar a recepción hasta las doce. Muchas gracias y hasta luego."
     }
   ]
 }

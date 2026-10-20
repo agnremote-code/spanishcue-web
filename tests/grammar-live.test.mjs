@@ -41,7 +41,7 @@ const panel=(stage,step=0)=>`[data-stage-panel="${stage}"] [data-step-panel="${s
 
 test('every grammar class is a live class: seven sections in the fixed order, every activity checkable',()=>{
   for(const id of classroomIds)assert.ok(liveLessonIds.includes(id),`${id}: every grammar class id has a live lesson`);
-  assert.deepEqual(liveLessonIds.filter(id=>!classroomIds.includes(id)),[239,303,305,307,311,312],'live-only classes carry everything in their live lesson');
+  assert.deepEqual(liveLessonIds.filter(id=>!classroomIds.includes(id)),[239,303,305,307,311,312,314,318,319,320,323,324,327,328,330,331,332,333,335,336,337],'live-only classes carry everything in their live lesson');
   for(const id of liveLessonIds){
   const lesson=getLiveLesson(id);
   assert.equal(lesson.id,id);

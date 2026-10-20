@@ -79,9 +79,24 @@ const additions = [
   [307, 'A1', 'concordancia', 'posicion-del-adjetivo', 'Posición habitual del adjetivo y sentido básico', 'Describir una casa con el adjetivo en su sitio y entender cuándo «gran», «viejo» o «único» cambian el sentido.', 10007, [41]],
   [311, 'A1', 'ser-estar', 'ser-identidad-y-origen', 'Ser para identidad, profesión y procedencia', 'Presentarte y presentar a otras personas: nombre, profesión, origen, nacionalidad y carácter con todas las formas de ser.', 10011, [46,239]],
   [312, 'A1', 'ser-estar', 'estar-estados-y-lugares', 'Estar para estados y lugares', 'Decir cómo estás y dónde estás tú, tu familia y tus cosas con «estar», sin confundirlo con «ser».', 10012, [311]],
+  [314, 'A1', 'ser-estar', 'tener-edad-y-sensaciones', 'Tener y tener + edad / sensaciones', 'Decir tu edad, qué sientes (frío, calor, hambre, sed, sueño) y qué tienes con «tener», sin confundirlo con «ser» o «estar».', 10014, [48,311,312]],
+  [318, 'A1', 'tiempos', 'presente-irregular-ser-estar-ir-tener', 'Presente irregular: ser, estar, ir, tener', 'Contar tu semana de trabajo con ser, estar, ir y tener: quién eres, dónde estás, adónde vas y qué reuniones tienes.', 10018, [140,311,312]],
+  [319, 'A1', 'tiempos', 'presente-irregular-hacer-poner-salir-venir', 'Presente irregular: hacer, poner, salir, venir', 'Repartir las tareas de una cena y decir qué haces, qué pones, a qué hora sales y de dónde vienes.', 10019, [318,140]],
+  [320, 'A1', 'tiempos', 'presente-con-cambio-vocalico', 'Presente con cambio vocálico: querer, poder, pedir', 'Decir qué quieres, qué puedes pagar y qué pides en un viaje, con quiero, puedo, pido y queremos, podemos, pedimos.', 10020, [319,140]],
+  [323, 'A1', 'oraciones', 'interrogativos-con-tilde', 'Interrogativos con tilde: qué, quién, cuál, cuánto', 'Hacer preguntas concretas en un museo (horario, precio, dirección, personas) con la palabra interrogativa correcta y con tilde.', 10023, [111]],
+  [324, 'A1', 'oraciones', 'oraciones-negativas', 'Oraciones negativas y posición de no', 'Decir que no puedes, no tienes tiempo o no trabajas, con «no» antes del verbo, y responder «No» o «No, no puedo».', 10024, [323,111,140]],
+  [327, 'A1', 'preposiciones', 'preposiciones-basicas', 'Preposiciones básicas a, de, en, con, sin', 'Decir a dónde vas, de dónde vienes, dónde estás, con quién vas y qué no tienes, en un día de reparto por la ciudad.', 10027, [212,48]],
+  [328, 'A1', 'preposiciones', 'contracciones-al-y-del', 'Contracciones al y del', 'Explicar trayectos por una ciudad con «del … al …» y saber cuándo a y de no se unen con el artículo.', 10028, [327,42]],
+  [330, 'A1', 'adverbios', 'frecuencia-y-habitos', 'Expresiones de frecuencia y hábito', 'Decir con qué frecuencia haces algo (siempre, a veces, nunca, los lunes) y acordar días para entrenar con un compañero.', 10030, [47,140]],
+  [331, 'A1', 'pronombres', 'verbos-reflexivos-cotidianos', 'Verbos reflexivos cotidianos', 'Contar tu rutina antes de un turno temprano con me levanto, te duchas, se viste y nos acostamos, y el pronombre en su sitio.', 10031, [330,46,140]],
+  [332, 'A1', 'pronombres', 'gustar-y-encantar', 'Gustar y encantar + nombre / infinitivo', 'Decir qué te gusta y qué te encanta, y qué le gusta a otra persona, para elegir juntos un restaurante.', 10032, [331,140,46]],
+  [333, 'A1', 'pronombres', 'pronombres-tras-preposicion', 'Pronombres tónicos tras preposición', 'Repartir invitaciones, tareas y regalos con para mí, para ti, con ella, conmigo y contigo, sin decir «para yo».', 10033, [332,327]],
+  [335, 'A1', 'determinantes', 'articulos-cuerpo-y-ropa', 'Artículos con partes del cuerpo y ropa', 'Decir qué te duele y qué te pones con el artículo justo: me duele la cabeza, me pongo el abrigo; y mi abrigo para describir.', 10035, [45,42,331]],
+  [336, 'A1', 'concordancia', 'describir-un-objeto', 'Identificar y describir un objeto con varias pistas', 'Encontrar el objeto correcto con varias pistas que concuerdan: la carpeta azul pequeña, la que está en el estante.', 10036, [335,41,307,48]],
+  [337, 'A1', 'cantidad', 'comparativos-regulares', 'Comparativos regulares: más, menos, tan ... como', 'Comparar habitaciones de hotel por tamaño, precio y ruido con más … que, menos … que y tan … como, y elegir una.', 10037, [336,41,45]],
 ] as const;
 /** When each addition reached the library (the «Nuevo» badge). */
-const addedAt: Record<number, string> = { 239: '2026-10-14', 303: '2026-10-20', 305: '2026-10-20', 307: '2026-10-20', 311: '2026-10-20', 312: '2026-10-20' };
+const addedAt: Record<number, string> = { 239: '2026-10-14', 303: '2026-10-20', 305: '2026-10-20', 307: '2026-10-20', 311: '2026-10-20', 312: '2026-10-20', 314: '2026-10-20', 318: '2026-10-20', 319: '2026-10-20', 320: '2026-10-20', 323: '2026-10-20', 324: '2026-10-20', 327: '2026-10-20', 328: '2026-10-20', 330: '2026-10-20', 331: '2026-10-20', 332: '2026-10-20', 333: '2026-10-20', 335: '2026-10-20', 336: '2026-10-20', 337: '2026-10-20' };
 
 export const newGrammarEntries: LessonSource[] = additions.map(([id,level,grammarTopic,slug,title,subtitle,curriculumOrder,requires]) => {
   grammarMetadata[id] = { title, grammarTopic };
