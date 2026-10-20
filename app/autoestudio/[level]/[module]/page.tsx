@@ -12,6 +12,7 @@ import { shareSessionFromHeaders } from "../../session-display";
 import ModulePlayer from "../../ModulePlayer";
 import audioManifest from "../../audio-manifest.json";
 import { recommendationCatalog } from "../../errors/catalog";
+import { englishFor } from "../../english";
 
 export async function generateMetadata({ params }: { params: Promise<{ level: string; module: string }> }): Promise<Metadata> {
   const { level, module: slug } = await params;
@@ -68,6 +69,7 @@ export default async function Page({ params }: { params: Promise<{ level: string
       nextLocked={nextLocked}
       recommendations={recommendationCatalog(mod.level)}
       fullAccess={fullAccess}
+      english={englishFor(mod.level, mod.week)}
     />
   );
 }

@@ -7,7 +7,7 @@ import { SpanishCueBrand } from "../SpanishCueBrand";
 import { SECTION_ORDER, type LevelMeta, type Module, type ModuleSummary, type SectionKey } from "./curriculum/types";
 import { copyFor, sectionHashes, sectionCoach, sectionIcons, sectionLabels, sectionMascots } from "./engine/copy";
 import type { EngineContext } from "./engine/Exercises";
-import { Rich } from "./engine/Rich";
+import { En, Rich } from "./engine/Rich";
 import StudentUpsell from "./errors/StudentUpsell";
 import {
   GoalSection,
@@ -44,19 +44,24 @@ export type ModulePlayerProps = {
   recommendations?: RecommendationCatalog;
   /** PRO/owner: never shown a class they can already open. */
   fullAccess?: boolean;
+  /** Spanish → English lines for this week (A1–B2 only). */
+  english?: Readonly<Record<string, string>>;
 };
 
 const hashToSection = Object.fromEntries(Object.entries(sectionHashes).map(([key, hash]) => [hash, key as SectionKey]));
 
 const emptyCatalog: RecommendationCatalog = {};
-export default function ModulePlayer({ module, level, objectives, previous, next, related, audio, nextLocked, session, recommendations = emptyCatalog, fullAccess = false }: ModulePlayerProps) {
+export default function ModulePlayer({ module, level, objectives, previous, next, related, audio, nextLocked, session, recommendations = emptyCatalog, fullAccess = false, english }: ModulePlayerProps) {
   const { locale } = useI18n();
   const t = copyFor(locale);
   const labels = sectionLabels[locale === "en" ? "en" : "es"];
   const { state, ready, update, syncStatus, retry } = useStudyProgress(session);
   const [section, setSection] = useState<SectionKey>("goal");
-  const hasEnglish = level.id === "a1" || level.id === "a2" || level.id === "b1";
-  const [showEnglish, setShowEnglish] = useState(level.support === "strong");
+  // A1–B2 weeks are bilingual by default; C1–C2 stay Spanish-only.
+  const hasEnglish = level.id === "a1" || level.id === "a2" || level.id === "b1" || level.id === "b2";
+  const [showEnglish, setShowEnglish] = useState(hasEnglish);
+  // Section names in English under the Spanish, when the interface itself is Spanish.
+  const labelEn = (key: SectionKey) => (hasEnglish && showEnglish && locale !== "en" ? <span className="ae-en-line" lang="en">{sectionLabels.en[key]}</span> : null);
   const progress = state.modules[module.id];
 
   useEffect(() => {
@@ -103,7 +108,7 @@ export default function ModulePlayer({ module, level, objectives, previous, next
   const errorLog = useErrorLog(session, module.id, objectiveIds, recommendations, fullAccess);
   const onOpenSuggestion = useCallback((suggestion: Suggestion) => errorLog.logEvent("opened", suggestion.lesson.id, suggestion.category), [errorLog]);
   const onDismissSuggestion = useCallback((suggestion: Suggestion) => errorLog.dismiss(suggestion.category), [errorLog]);
-  const ctx: EngineContext = useMemo(() => ({ t, audio, showEnglish: hasEnglish && showEnglish, section, report: errorLog.report, onOpenSuggestion, onDismissSuggestion }), [t, audio, showEnglish, hasEnglish, section, errorLog.report, onOpenSuggestion, onDismissSuggestion]);
+  const ctx: EngineContext = useMemo(() => ({ t, audio, showEnglish: hasEnglish && showEnglish, english, section, report: errorLog.report, onOpenSuggestion, onDismissSuggestion }), [t, audio, showEnglish, hasEnglish, english, section, errorLog.report, onOpenSuggestion, onDismissSuggestion]);
   const onQuizFinish = useCallback((score: number, total: number) => update((current) => recordQuiz(current, module.id, score, total)), [module.id, update]);
   const onDraft = useCallback((text: string) => update((current) => saveDraft(current, module.id, text)), [module.id, update]);
 
@@ -138,8 +143,10 @@ export default function ModulePlayer({ module, level, objectives, previous, next
             <span className="ae-level-pill">{level.code}</span> {module.kind === "checkpoint" ? `★ ${t.checkpoint}` : `${t.week} ${module.week}`} · {module.stop.place}, {module.stop.country}
           </p>
           <h1>{module.title}</h1>
+          <En text={module.title} ctx={ctx} />
           <p className="ae-hero-sub">
             <Rich text={module.subtitle} />
+            <En text={module.subtitle} ctx={ctx} />
           </p>
           <div className="ae-meta">
             <span>⏱ {module.minutes} {t.minutes}</span>
@@ -172,7 +179,7 @@ export default function ModulePlayer({ module, level, objectives, previous, next
               <li key={key}>
                 <button type="button" className={`${key === section ? "current" : ""} ${progress?.sections[key] ? "done" : ""}`} aria-current={key === section ? "step" : undefined} onClick={() => go(key)}>
                   <i>{progress?.sections[key] ? "✓" : String(position + 1).padStart(2, "0")}</i>
-                  <span>{labels[key]}</span>
+                  <span>{labels[key]}{labelEn(key)}</span>
                 </button>
               </li>
             ))}
@@ -188,9 +195,10 @@ export default function ModulePlayer({ module, level, objectives, previous, next
                 {String(index + 1).padStart(2, "0")} / 13
               </small>
               <h2>{labels[section]}</h2>
+              {labelEn(section)}
             </div>
             <figure className="ae-coach" aria-hidden="true">
-              <figcaption>{sectionCoach[locale === "en" ? "en" : "es"][section]}</figcaption>
+              <figcaption>{sectionCoach[locale === "en" ? "en" : "es"][section]}{labelEn(section) && <span className="ae-en-line" lang="en">{sectionCoach.en[section]}</span>}</figcaption>
               <img key={section} src={sectionMascots[section]} alt="" width="600" height="1350" />
             </figure>
           </header>
@@ -241,6 +249,7 @@ export default function ModulePlayer({ module, level, objectives, previous, next
                       {module.complete.canNow.map((line) => (
                         <li key={line}>
                           ✓ <Rich text={line} />
+                          <En text={line} ctx={ctx} />
                         </li>
                       ))}
                     </ul>
@@ -251,6 +260,7 @@ export default function ModulePlayer({ module, level, objectives, previous, next
                       {module.complete.review.map((line) => (
                         <li key={line}>
                           ↻ <Rich text={line} />
+                          <En text={line} ctx={ctx} />
                         </li>
                       ))}
                     </ul>
@@ -285,6 +295,7 @@ export default function ModulePlayer({ module, level, objectives, previous, next
                       {related.map((item) => (
                         <li key={item.path}>
                           <Link href={item.path}>↗ {item.label}</Link>
+                          <En text={item.label} ctx={ctx} />
                         </li>
                       ))}
                     </ul>
