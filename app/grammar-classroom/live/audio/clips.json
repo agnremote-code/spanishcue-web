@@ -157,6 +157,36 @@
       "voice": "es-CO-SalomeNeural",
       "rate": "-12%",
       "text": "Hola, Marta. Soy Elena. Estoy en el aeropuerto. Perdón: la nota tiene una mancha de café. Te explico. Ana compra el pan hoy, no mañana. El miércoles Diego llama al restaurante. Lucía no prepara la sala; ella prepara las bebidas. Tú preparas la sala el jueves. ¿Y Raúl? Raúl no trabaja los jueves, entonces compra las flores el viernes por la mañana. Los clientes llegan el viernes a la una. Son seis personas. Una pregunta: ¿quién abre la puerta? ¿Puedes tú, Marta? Gracias. Hasta el viernes."
+    },
+    {
+      "id": 344,
+      "voice": "es-ES-ElviraNeural",
+      "rate": "-12%",
+      "text": "Hola, Daniel, soy Carmen. Ya estoy en el aeropuerto. Perdón, tengo tres cosas importantes. Primero: la comida de Luna no está en la cocina. Está en el armario del pasillo, abajo. Luna come dos veces al día. Segundo: la contraseña del wifi está en un papel amarillo, detrás de la tele. Y tercero: en mi habitación hay una manta grande. Es azul y está encima de la cama, porque por la noche hace frío. Ah, y mi vecina Rosa vive en el segundo piso. Es muy simpática y tiene otra llave. Si tienes preguntas, puedes llamar o escribir. ¡Gracias y un abrazo!"
+    },
+    {
+      "id": 346,
+      "voice": "es-ES-ElviraNeural",
+      "rate": "-6%",
+      "text": "Hola, Elena, soy Nuria, del centro cultural. Son las seis y te cuento cómo va todo para mañana. Lucía ha abierto la sala a las nueve. Raúl ha hecho los carteles y yo he escrito a la prensa. Ana, la fotógrafa, ha vuelto de Valencia esta tarde y ya ha visto la sala. Le gusta mucho. Un pequeño problema: Óscar ha roto un marco, pero no pasa nada, ya hemos comprado otro. Todavía no hemos puesto las fotos grandes; las ponemos mañana a las ocho. ¿Puedes venir a las diez para ver todo? Llámame, por favor. ¡Hasta luego!"
+    },
+    {
+      "id": 348,
+      "voice": "es-MX-DaliaNeural",
+      "rate": "-6%",
+      "text": "Hola, Clara, soy Marta. ¡Muchas gracias por tu visita! Ya estoy mucho mejor. Ayer fui al médico y me dijo que no es nada grave, solo un virus. Oye, el domingo por la noche tuve una sorpresa: tu bufanda roja está aquí, en el sofá. No pude llamarte porque tu teléfono estuvo apagado toda la noche. Te mando la bufanda por correo esta semana. Y otra cosa: ayer hice tu sopa de verduras para mi hermana. Ella dijo que fue la mejor sopa de su vida. ¡Ahora quiere la receta! Hoy trabajo desde casa, pero el viernes ya voy a la oficina. ¿Y tu viaje de regreso? ¿Llegaste bien esta vez? Escríbeme pronto. Un abrazo."
+    },
+    {
+      "id": 350,
+      "voice": "es-MX-JorgeNeural",
+      "rate": "-6%",
+      "text": "Hola, señora Carmen, soy Diego, el chico de la bicicleta. Tengo su número gracias a la agente Prado. Muchas gracias por su ayuda de ayer. Le cuento un poco: yo iba a mi primer día en un trabajo nuevo y tenía mucha prisa. Llovía y no había mucha luz en la calle. Cuando el taxi salió del garaje, frené muy fuerte y me caí. En el hospital, nada grave: solo un golpe en la rodilla. Y mi nuevo jefe fue muy amable: empiezo el lunes. Hoy estoy en casa con la pierna en alto, pero estoy bien. ¿Puedo invitarla a un café la semana que viene? Muchas gracias otra vez. Un saludo."
+    },
+    {
+      "id": 351,
+      "voice": "es-ES-AlvaroNeural",
+      "rate": "-6%",
+      "text": "Hola, Lucía, soy Pablo. Te mando un audio rápido. Después de la clase de las siete he hablado otra vez con Ana y hemos cerrado el plan de la excursión del viernes: vamos al museo y después a comer. Ayer Ana llamó al museo, pero no pudo hacer la reserva. Hoy la he hecho yo por internet, ¡y ya está! También he escrito a los alumnos y ya han contestado doce. Ah, otra cosa: ayer olvidé mi paraguas en la sala de profesores y hoy no lo he encontrado. ¿Puedes mirar mañana por la mañana? Bueno, ¿y tú? ¿Has terminado los exámenes? Mañana me cuentas. ¡Un abrazo!"
     }
   ]
 }
