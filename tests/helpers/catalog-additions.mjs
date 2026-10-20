@@ -3,7 +3,7 @@ import {beforeGrammarBytes,beforeGrammarLessons,grammarSharedFiles} from './gram
 import {readFileSync} from 'node:fs';
 
 // Course classes (ids above 300, written from 2026-10-20) as listed in the grammar catalog additions.
-const courseLessons=[...readFileSync(new URL('../../app/grammar-classroom/catalog.ts',import.meta.url),'utf8').matchAll(/^  \[(3\d\d), '[^']*', '[^']*', '([^']*)'/gm)].map(([,id,slug])=>({id:Number(id),path:`/gramatica/${slug}`,files:/^$/,edits:{}}));
+const courseLessons=[...readFileSync(new URL('../../app/grammar-classroom/catalog.ts',import.meta.url),'utf8').matchAll(/^  \[([3-5]\d\d), '[^']*', '[^']*', '([^']*)'/gm)].map(([,id,slug])=>({id:Number(id),path:`/gramatica/${slug}`,files:/^$/,edits:{}}));
 
 // New lessons approved after the Batch 1 / Wave 1–3 snapshots were taken.
 // Historical hashes stay authoritative: before comparing, remove exactly the

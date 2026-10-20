@@ -7440,6 +7440,1392 @@
       "text": "Un compañero dice: «\"Hoy comí\" está mal». ¿Qué le respondes? · A classmate says “Hoy comí” is wrong. What do you answer?",
       "category": "regional-pedagogy",
       "reason": "Course class (2026-10-20): first-person preterite (comí, salí, corrí) in a writing-check pattern or a variety discussion; not vos."
+    },
+    {
+      "path": "app/grammar-classroom/catalog.ts",
+      "text": "Imperativo afirmativo: tú, vos, usted",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/catalog.ts",
+      "text": "Dar instrucciones y pedir cosas con tú y con usted («ven», «venga»), y entender el imperativo de vos («vení»).",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "Imperativo afirmativo: tú, vos, usted",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "Dar instrucciones y pedir cosas con tú y con usted («ven», «venga»), y entender el imperativo de vos («vení»).",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "VOS · vení, hacé, cortá (Argentina, Uruguay, Paraguay, Centroamérica…)",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "Con vos no hay cambio de vocal: cerrás → **cerrá** (como en el presente de vos).",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "Ven, vení, venga",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "Es sábado por la mañana en el centro cultural del barrio. Rosa Medina da un **taller de cocina**: hoy preparan una sopa de verduras. Rosa habla de **tú** con Pablo, su ayudante, y de **usted** con don Ernesto, un alumno de setenta y dos años. Valeria, una alumna de Córdoba (Argentina), usa **vos**. Para dar instrucciones, todos usan el **imperativo**.",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "VOS · Valeria a Pablo",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "Pablo, [[vení|teal]] aquí, por favor.",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "«Vení» es…",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "la forma de vos: una variedad correcta",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "Es el imperativo de vos, normal en Argentina, Uruguay, Paraguay y otras zonas.",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "Tú y vos: presente − s · Tú and vos: present minus -s",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "VOS · REGULAR",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "¿Y con vos?",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "presente de vos − s",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "cortás → cortá · comés → comé · abrís → abrí",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "Con **vos** es la misma idea: el presente de vos sin la **-s**. El acento va al final y lleva tilde. No hay cambio de vocal, como en el presente de vos (clase 021): cerrás → **cerrá**, probás → **probá**.",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "[[Probá|teal]] el caldo antes de servir.",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "Tú no necesitas producir vos: es para **entender** a personas de esas zonas. Si vives allí, ¡úsalo!",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "Presente vos → VOS",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "comés → **comé**",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "abrís → **abrí**",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "cerrás → **cerrá**",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "probás → **probá**",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "pedís → **pedí**",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "Valeria, con vos: «___ la puerta, por favor».",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "Cerrá",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "Vos: cerrás − s = cerrá. Sin cambio de vocal y con tilde.",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "Ocho verbos muy frecuentes tienen un imperativo de tú **irregular** y corto. Con vos, en cambio, casi todos son regulares: el infinitivo sin la -r y con tilde (vení, poné).",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "VOS",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "hacé",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "andá *",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "poné",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "tené",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "vení",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "* Con vos, para «ir» casi siempre se usa **andá** (de andar). **Sé** (ser) lleva tilde: «se» sin tilde es otra palabra.",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "Valeria, con vos: «Pablo, ___ una foto de la sopa».",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "Vos: sacás − s = sacá. Con tú sería «saca».",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "¿Tú, vos o usted? · Which one?",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "¿Vives en una zona de vos, o la otra persona y tú usan vos?",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "Puedes usar **vos**: «Vení», «Hacé», «Cortá».",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "Otras variedades: vos, ustedes, vosotros · Other varieties",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "VOS (Río de la Plata, Centroamérica…)",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "hablá",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "comé",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "andá",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "Valeria: «Pablo, cerrá la puerta».",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "Con vos no hay cambio de vocal: cerrás → cerrá. (Vos keeps the infinitive vowel.)",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "Leen el diálogo con papeles: tú eres Rosa y Valeria; tu alumno es Pablo y don Ernesto. Después tu alumno toca cada forma marcada y dice si es tú, vos o usted.",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "Lee el diálogo en voz alta. Después toca cada palabra marcada y di: ¿tú, vos o usted? (Tú, vos or usted?)",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "El sábado, en la cocina del centro cultural. Rosa da la clase. Habla de tú con Pablo y de usted con don Ernesto. Valeria, de Córdoba, habla de vos con Pablo. (Saturday, in the kitchen of the cultural centre.)",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "Pablo, [[vení|teal]] un momento. [[Probá|teal]] el caldo. ¿Tiene bastante sal?",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "Venir con usted: vengo → **venga**. Es la instrucción de la frase ancla: ven / vení / venga.",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "Venir con vos: venís − s = **vení**. Valeria es de Córdoba, Argentina: con vos, el acento va al final.",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "Probar con vos: probás − s = **probá**. Con vos no hay cambio de vocal. Con tú: «prueba».",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "Traer con vos: traés − s = **traé**. Con tú: «trae»; con usted: «traiga».",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "¿Tú, vos o usted? · Tú, vos or usted?",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "vos",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "Poné la mesa.",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "Ponés − s = poné: vos, con tilde al final.",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "Lavás − s = lavá: vos.",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "Pregunta extra: tú dices una forma de vos del diálogo («vení», «probá», «traé») y tu alumno dice la misma instrucción con tú («ven», «prueba», «trae»).",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "Valeria a Pablo, con vos. (Valeria to Pablo, with vos.)",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "cerrá",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "Vos: cerrás − s = cerrá. Sin cambio de vocal. «Cerrás» es presente.",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "Valeria: «Tené cuidado, la olla está caliente».",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "Correcta: con vos, tenés − s = tené.",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "Don Ernesto, volvé el sábado a las diez.",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "Usted sale de «yo vuelvo»: vuelva. «Vuelve» es tú; «volvé» es vos.",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "venís",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "Valeria usa vos: venís − s = vení. «Venís» es el presente de vos.",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "Probá",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "Probá esta sopa de tomate",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "Tú, vos, usted",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "Valeria te dice: «Vení a casa el domingo y traé algo de postre». ¿Qué te pide? Responde y pídele tú dos cosas, con tú. · What does Valeria ask? Answer and ask her two things.",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "Valeria usa vos (vení, traé). Tú puedes responder con tú: ven, trae, di, escribe.",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "Aquí tu alumno solo necesita entender el vos. Si vive en una zona de voseo, puede responder con vos.",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "presente de vos − s · acento al final",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "Pablo, lavá las zanahorias y vení aquí.",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "Primero decide **con quién hablas**. Con tú: el presente sin -s (corta, cierra) y ocho formas cortas (ven, pon, haz…). Con usted: empieza en «yo» y cambia la vocal (vengo → venga, corto → corte). Con vos: el presente de vos sin -s (vení, cortá).",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "En Buenos Aires, una amiga te dice: «Poné música». ¿Cómo lo dices con tú?",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "«Poné» es vos. Con tú, poner es irregular: pon.",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "Ya das instrucciones con tú y con usted, y entiendes el vos: «ven», «venga», «vení». Ahora falta decir lo que **no** hay que hacer. En la clase 059 vuelve la vocal contraria de usted (corte, coma): «no **cortes**», «no **comas**». Es el paso natural: ya conoces la forma, ahora la usas para prohibir y avisar.",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g365.ts",
+      "text": "Para reconocer: vos · To recognise: vos",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g365.ts",
+      "text": "Con vos (clase 058) la sílaba fuerte del imperativo es otra: comprá → **compralo** (com-PRA-lo), sin tilde. Con tú: **cómpralo**. Las dos formas son correctas, cada una en su variedad.",
+      "category": "regional-pedagogy",
+      "reason": "Course class (2026-10-20): vos/vosotros forms taught explicitly as a legitimate variety (imperative classes 058/065)."
+    },
+    {
+      "path": "app/grammar-classroom/live/audio/clips.json",
+      "text": "Hola, Valeria, soy Paula. ¡Perdón! Ya salí de la oficina, pero todavía estoy en el coche: hay muchísimo tráfico en la avenida. Hoy trabajé toda la tarde en un informe urgente. Antes vivía a cinco minutos de tu casa, ¿te acuerdas? Llegaba caminando. Ahora vivo en Tlaquepaque y ya no es tan fácil. Oye, ¿ya llegó Elena? Tengo muchas ganas de verla. Ah, y no te preocupes por el postre: ya tengo el pastel, lo compré ayer en la pastelería de la esquina. Creo que llego en media hora. ¡Nos vemos en un ratito! Un beso.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/audio/clips.json",
+      "text": "Hola, Nuria, soy Iván. Mamá me contó lo de ayer: la alarma no sonó y te despertaste tarde. ¡Qué mala suerte! Pero llegaste a tiempo y mañana tienes la segunda entrevista. ¡Felicidades! Mira, en mi primera entrevista me puse tan nervioso que dije mi nombre dos veces. La señora de la entrevista se rio, yo también me reí y entonces me tranquilicé. Al final me dieron el trabajo. Bueno, mi consejo: esta noche acuéstate temprano y no te preocupes por la alarma. Yo te llamo a las seis y media, por si acaso. Y mañana, si te pones nerviosa, respira y habla despacio. ¡Mucha suerte, hermanita! Luego me cuentas.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/audio/clips.json",
+      "text": "Hola, mamá, soy yo. Gracias otra vez por la videollamada de anoche. ¡Qué sorpresa tan bonita! Cuando abrí la puerta y vi a todos mis amigos, me quedé sin palabras. Me puse muy roja, ya sabes que siempre me pasa. Y cuando te vi en la pantalla, me puse un poco triste, porque estás muy lejos. Pero luego me puse muy contenta. Javier me contó que se puso muy nervioso: yo llegué antes de la hora y la tarta todavía no estaba en casa. La fiesta terminó a las tres. El tío Ramiro se quedó dormido en el sofá, como siempre. Y hoy me quedo en casa todo el día, porque estoy muy cansada. Te llamo esta tarde. Un beso muy grande.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g351.ts",
+      "text": "Con **ayer** y con un tiempo terminado, la norma general es el indefinido: «Ayer comí». «Ayer he comido» no se usa en la norma.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g351.ts",
+      "text": "Usa el **indefinido**, la norma general: «Ayer comí con Ana».",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g351.ts",
+      "text": "Las dos formas son correctas. Lo más común en la mayor parte de España: «Hoy **he comido** con Ana». Frecuente en México y gran parte de América: «Hoy **comí** con Ana».",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g351.ts",
+      "text": "«He comí» mezcla las dos formas: no existe. «Ayer he comido» no se usa en la norma: con «ayer», lo normal es «comí».",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g351.ts",
+      "text": "Para hoy, «comí» es correcto y muy frecuente en gran parte de América.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g351.ts",
+      "text": "Con ayer, el indefinido es la norma general: corregí (con e en yo).",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g351.ts",
+      "text": "Con ayer, la norma es «[[comí|orange]]».",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g351.ts",
+      "text": "No está mal. «Hoy comí» es frecuente en México y en gran parte de América. En España dicen más «hoy he comido». Pero con ayer, la norma general es «ayer comí».",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g351.ts",
+      "text": "Con **ayer** y **anoche**, la norma general es el indefinido: «ayer comí». «Ayer he comido» no se usa en la norma.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g351.ts",
+      "text": "Para **hoy**, las dos formas son correctas: «Hoy **he comido**» es lo más común en la mayor parte de España y «Hoy **comí**», en México y gran parte de América. No es un error: es una variedad. Para **ayer**, la norma general es el indefinido. Y nunca mezclamos: ni «he comí» ni «hable» sin tilde.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g352.ts",
+      "text": "comí",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g353.ts",
+      "text": "—¿Todavía tienes tu coche viejo? —No, ___. Lo vendí el año pasado.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g353.ts",
+      "text": "Perdón, yo ___ salí del trabajo. Llego a las ocho y media.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g353.ts",
+      "text": "«Ya salí de la oficina, pero todavía estoy en el coche: hay muchísimo tráfico».",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g353.ts",
+      "text": "«Ya salí de la oficina, pero todavía estoy en el coche».",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g353.ts",
+      "text": "Hola, Valeria, soy Paula. ¡Perdón! [[Ya|teal]] salí de la oficina, pero [[todavía|violet]] estoy en el coche: hay muchísimo tráfico en la avenida. Hoy trabajé toda la tarde en un informe urgente. [[Antes|blue]] vivía a cinco minutos de tu casa, ¿te acuerdas? Llegaba caminando. Ahora vivo en Tlaquepaque y [[ya no|violet]] es tan fácil. Oye, ¿[[ya|teal]] llegó Elena? Tengo muchas ganas de verla. Ah, y no te preocupes por el postre: [[ya|teal]] tengo el pastel, lo compré [[ayer|orange]] en la pastelería de la esquina. Creo que llego en media hora. ¡Nos vemos en un ratito! Un beso.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g353.ts",
+      "text": "Hugo: «Ya aprendí los nombres de mis alumnos».",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g353.ts",
+      "text": "Todavía no aprendí los nombres de mis alumnos",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "decí",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "salí",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "Pablo, haces la ensalada de tomate ahora.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "Pablo, hace la ensalada de tomate ahora.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "Pablo, haga la ensalada de tomate ahora.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "Pablo, haz la ensalada de tomate ahora.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "tomate",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "Valeria: «Pablo, salí un momento y traé más pan».",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "Tú eres Rosa. Don Ernesto pregunta: «¿Qué hago ahora?». Dale tres pasos de la receta. · Give don Ernesto three steps.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "¿Corto también el tomate? (Do I cut the tomato too?)",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g358.ts",
+      "text": "Un señor en la calle pregunta cómo llegar al centro cultural. Dale las indicaciones con usted. · Give a man directions, with usted.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g360.ts",
+      "text": "[[me vestí|blue]]",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g360.ts",
+      "text": "Anoche [[me dormí|blue]] a la una.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g360.ts",
+      "text": "Anoche [[dormí|orange]] cinco horas.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g360.ts",
+      "text": "dormí",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g360.ts",
+      "text": "me dormí",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g360.ts",
+      "text": "Cierre de Entender: tu alumno cuenta su mañana de hoy en tres frases (me desperté, me levanté, me vestí) y un cambio de esta semana (me puse nervioso/a, me aburrí, me enojé). Tú repites cada frase bien y tu alumno la repite.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g360.ts",
+      "text": "Perdón, ¡fue un día loco! La noche anterior no podía dormir y [[me dormí|blue]] a la una. Y la alarma no sonó.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g360.ts",
+      "text": "A las ocho y diez, ¡y la entrevista era a las nueve y media! [[Me levanté|blue]] corriendo, [[me duché|blue]] en cinco minutos y [[me vestí|blue]] sin desayunar.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g360.ts",
+      "text": "Vestirse con yo: **me vestí** (con ella sería se vistió).",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g360.ts",
+      "text": "«No podía dormir y me dormí a la una. Y la alarma no sonó».",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g360.ts",
+      "text": "Me vestí sin desayunar.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g360.ts",
+      "text": "Rutina de la mañana, en pasado: me vestí.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g360.ts",
+      "text": "Al final de Practicar, tu alumno cuenta una mañana real de esta semana en cuatro frases: dos de rutina (me desperté, me vestí), un cambio (me puse nervioso/a, me aburrí) y un plan (voy a acostarme…).",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g360.ts",
+      "text": "«La señora se rio, yo también me reí y entonces me tranquilicé». Respirar es su consejo para mañana.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g360.ts",
+      "text": "Hola, Nuria, soy Iván. Mamá me contó lo de ayer: la alarma no sonó y [[te despertaste|blue]] tarde. ¡Qué mala suerte! Pero llegaste a tiempo y mañana tienes la segunda entrevista. ¡Felicidades! Mira, en mi primera entrevista [[me puse|violet]] tan nervioso que dije mi nombre dos veces. La señora de la entrevista [[se rio|blue]], yo también [[me reí|blue]] y entonces [[me tranquilicé|violet]]. Al final me dieron el trabajo. Bueno, mi consejo: esta noche [[acuéstate|teal]] temprano y [[no te preocupes|blue]] por la alarma. Yo te llamo a las seis y media, por si acaso. Y mañana, si [[te pones|violet]] nerviosa, respira y habla despacio. ¡Mucha suerte, hermanita! Luego me cuentas.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g360.ts",
+      "text": "Se rio, me reí",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g360.ts",
+      "text": "Reírse (to laugh) también va con pronombre: me reí, se rio, nos reímos. Hoy se escribe «rio», sin tilde. Y fíjate en «Yo te llamo»: Iván hace la acción y Nuria la recibe, como «me dieron el trabajo» (they gave me the job).",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g360.ts",
+      "text": "[[Me vestí|blue]] con…",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g360.ts",
+      "text": "Rutina en pasado: el pronombre va antes del verbo. Me desperté, me vestí.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g360.ts",
+      "text": "El día de mi examen final me desperté a las seis. Me levanté, me duché y me vestí con ropa cómoda. No desayuné mucho.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g360.ts",
+      "text": "Tu amigo tiene una entrevista mañana y está muy nervioso. Dale tres consejos. · Your friend has an interview tomorrow and is very nervous. Give him three tips.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g360.ts",
+      "text": "me vestí",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g360.ts",
+      "text": "¡Hola, Iván! Te cuento mi día de ayer. Tenía el examen de inglés a las nueve. La noche anterior no podía dormir y [[me dormí|blue]] a las doce y media. Por la mañana [[me desperté|blue]] a las siete, [[me duché|blue]] y [[me vestí|blue]] rápido. En el autobús [[me puse|violet]] muy nervioso, porque había mucho tráfico. Llegué a las nueve menos cinco y, en el examen, poco a poco [[me tranquilicé|violet]]. ¡Creo que me fue bien! La próxima vez voy a [[acostarme|teal]] más temprano. ¿Y tú? ¿Cómo estás? Un abrazo, Pablo.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g360.ts",
+      "text": "Rutina en pasado: me desperté, me vestí… (a past routine verb with its pronoun)",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g360.ts",
+      "text": "Cuenta tu mañana en pasado: «Me desperté a las siete», «Me vestí rápido».",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g360.ts",
+      "text": "Ayer me desperté tarde y me vestí sin desayunar.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g360.ts",
+      "text": "despertó a Nuria · estaba nerviosa · dormí cinco horas",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g361.ts",
+      "text": "¡Me encantó! Cuando abrí la puerta, ___ sin palabras.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g361.ts",
+      "text": "Hola, mamá, soy yo. Gracias otra vez por la videollamada de anoche. ¡Qué sorpresa tan bonita! Cuando abrí la puerta y vi a todos mis amigos, [[me quedé sin palabras|blue]]. [[Me puse muy roja|orange]], ya sabes que siempre me pasa. Y cuando te vi en la pantalla, [[me puse un poco triste|orange]], porque estás muy lejos. Pero luego [[me puse muy contenta|orange]]. Javier me contó que [[se puso muy nervioso|orange]]: yo llegué antes de la hora y la tarta todavía no estaba en casa. La fiesta terminó a las tres. El tío Ramiro [[se quedó dormido|blue]] en el sofá, como siempre. Y hoy [[me quedo en casa|teal]] todo el día, porque [[estoy|violet]] muy cansada. Te llamo esta tarde. Un beso muy grande.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g363.ts",
+      "text": "Rubén escribe a los compañeros: ___ escribí a todos ayer.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g363.ts",
+      "text": "Truco: si en la frase hay **una cosa** que pasa a la persona (un mensaje, la hora, un regalo), la persona es casi siempre **le / les**. Con preguntar, contestar y escribir también: «le pregunté», «le contesté», «le escribí».",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g363.ts",
+      "text": "A los compañeros de la tarde ___ escribí ayer.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g363.ts",
+      "text": "Sí, ayer [[les|orange]] escribí [[a todos|violet]]. Y [[a Lucía|violet]] [[le|orange]] mandé un mensaje: «¿Estás libre el viernes por la tarde?».",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g363.ts",
+      "text": "Les = a varias personas (los compañeros, todos). Va delante del verbo: les mandaste, les escribí, les pido.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g363.ts",
+      "text": "pedí",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g363.ts",
+      "text": "Les pedí una foto a los compañeros",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g363.ts",
+      "text": "A los compañeros les pedí una foto",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g363.ts",
+      "text": "[[Al señor Herrera|violet]] [[le|orange]] pedí…",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g363.ts",
+      "text": "[[A Lucía|violet]] [[le|orange]] escribí…",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g363.ts",
+      "text": "Sí. A los compañeros les mandé la invitación. Al señor Herrera le pedí las sillas azules. A Lucía le escribí la tarjeta. Y a ti te doy el regalo mañana.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g363.ts",
+      "text": "Querida Lucía: ¿Qué tal en Valparaíso? Aquí todos hablamos de ti. Ayer Marta [[nos|teal]] enseñó tu foto del mar: ¡qué bonita! [[Al señor Herrera|violet]] [[le|orange]] dimos tu nota y [[le|orange]] gustó mucho. Óscar [[me|teal]] preguntó por ti y yo [[le|orange]] dije que estás muy bien. Esta semana [[les|orange]] escribí [[a los compañeros de la tarde|violet]] y [[les|orange]] pedí más fotos de la fiesta. El viernes [[te|teal]] mando un álbum digital con todas. Una pregunta: ¿[[te|teal]] gustó la tarjeta? [[La|blue]] escribimos entre todos. Un abrazo grande, Sara.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g363.ts",
+      "text": "Di la persona y el pronombre: «Al señor Herrera le dimos…» o «Les escribí a los compañeros».",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/audio/clips.json",
+      "text": "Hola, Nuria, soy Raúl. Te cuento el plan para el sábado. Primero vamos al Café Aurora, el sitio donde Elena y yo nos conocimos. Después, el parque del río, en el que pasábamos los domingos. El puente viejo también es muy importante para nosotros: es el lugar donde le pedí matrimonio, en 2019, cuando vivíamos en la calle Luna. Mejor empezamos temprano, a las nueve, cuando la luz es suave y no hay mucha gente. Ah, y una cosa más: lo que más le gusta a Elena es reír, así que lo que queremos es un día divertido, sin fotos muy serias. Esta noche te mando la dirección del café. ¡Muchas gracias, Nuria! Un abrazo.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g367.ts",
+      "text": "Perfecto. Entonces, para Nuria: el café, la calle Luna y el puente [[donde|teal]] te pedí matrimonio.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g367.ts",
+      "text": "Lugar + **donde**: nos conocimos **en** el café, vivimos **en** el piso, le pedí matrimonio **en** el puente. Donde = en el que / en la que.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g367.ts",
+      "text": "Escucha una vez para la idea general y otra vez para los detalles. Fíjate en donde, en el que, cuando y lo que. Vas a oír «le pedí matrimonio» (I proposed to her). (Listen once for the gist, once for the details.)",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g367.ts",
+      "text": "«…le pedí matrimonio, en 2019, cuando vivíamos en la calle Luna».",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g367.ts",
+      "text": "Hola, Nuria, soy Raúl. Te cuento el plan para el sábado. Primero vamos al Café Aurora, el sitio [[donde|teal]] Elena y yo nos conocimos. Después, el parque del río, [[en el que|teal]] pasábamos los domingos. El puente viejo también es muy importante para nosotros: es el lugar [[donde|teal]] le pedí matrimonio, en 2019, [[cuando|orange]] vivíamos en la calle Luna. Mejor empezamos temprano, a las nueve, [[cuando|orange]] la luz es suave y no hay mucha gente. Ah, y una cosa más: [[lo que|violet]] más le gusta a Elena es reír, así que [[lo que|violet]] queremos es un día divertido, sin fotos muy serias. Esta noche te mando la dirección del café. ¡Muchas gracias, Nuria! Un abrazo.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g370.ts",
+      "text": "No, ___ me vio. Dejé la caja en el mostrador y salí.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g370.ts",
+      "text": "Perdí [[algo|blue]]: mi…",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g370.ts",
+      "text": "Perdón, perdí algo ayer: mi bufanda azul. Busqué en mi habitación, pero no encontré nada. ¿Alguien encontró una bufanda en el comedor?",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g370.ts",
+      "text": "Creo que perdí…",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g370.ts",
+      "text": "perdí",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g370.ts",
+      "text": "Hola, Inés: Soy Marta Salcedo, de la habitación 12. Creo que perdí mi cargador ayer en el comedor. Es negro y pequeño. Esta mañana busqué en la habitación, pero [[no|teal]] encontré [[nada|orange]]. ¿[[Alguien|blue]] encontró un cargador? ¿O hay [[algo|blue]] en la caja de objetos perdidos? Hoy trabajo en el mercado todo el día. Si tiene tiempo, ¿puede preguntar [[a alguien|blue]] de la cocina? Muchas gracias. Un saludo, Marta.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/audio/clips.json",
+      "text": "Buenas tardes, señora Ruiz. Le habla Rosa Pineda, del hostal Las Palmas, en Medellín. Recibí su mensaje sobre Julián Mora y con mucho gusto le cuento. Julián trabajó con nosotros cinco años, de 2019 a 2024. Siempre llegaba puntual, y cada sábado organizaba un paseo por el centro con los huéspedes. A los clientes les encantaba. En 2022 estuvo tres meses de encargado, cuando yo estuve enferma, y no tuvimos ni un problema. Ah, y ganó el premio al mejor empleado del año dos veces. Hablé con él hace una semana y me contó lo de la entrevista. Es una persona muy responsable. Si necesita más información, llámeme a este número. Un saludo.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g377.ts",
+      "text": "«Como» (causa) va al principio, antes de la consecuencia: «Como llovía, no salí». Después de la consecuencia, usa «porque».",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g377.ts",
+      "text": "«Porque» normalmente va después de la consecuencia: «No salí porque llovía». Al principio de la frase, lo natural es «Como».",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g377.ts",
+      "text": "El año pasado tuve un día muy complicado: mi primer día en un trabajo nuevo. Primero, perdí el autobús.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g377.ts",
+      "text": "Perdí el autobús porque me desperté tarde. Como había mucho tráfico, el taxi tardó cuarenta minutos.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g377.ts",
+      "text": "Al final, todo salió bien: mi jefa fue muy amable y comí con mis compañeros nuevos.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g382.ts",
+      "text": "Aprendí a cocinar [[mirando|teal]] a…",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g382.ts",
+      "text": "El gerundio dice cómo: aprendí cocinando, voy caminando.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g382.ts",
+      "text": "Aprendí a cocinar mirando a mi abuela. Ahora aprendo español escuchando pódcasts y hablando con amigos.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g384.ts",
+      "text": "[[Viví|orange]] en Toronto [[un año y medio|orange]].",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g384.ts",
+      "text": "En la clase 230 viste: «**Vivo** aquí **desde hace** dos años» (sigue hoy). Hoy la situación **terminó**: «**Viví** allí dos años». Presente + desde hace: sigue. Indefinido + cantidad: terminó.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g384.ts",
+      "text": "Viví en Toronto desde hace un año y medio.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g384.ts",
+      "text": "Viví en Toronto un año y medio.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g384.ts",
+      "text": "«Desde hace» es para algo que sigue hoy (clase 230). Si ya terminó: indefinido + cantidad. (Finished: viví + amount of time.)",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g384.ts",
+      "text": "Cierre de Entender: tu alumno dice tres frases reales sobre su vida: una con «cuánto tiempo» («Viví … años en …»), una con un hábito («De niño, siempre…») y una con «hace» («Empecé a estudiar español hace…»).",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g384.ts",
+      "text": "Sí, [[a menudo|blue]]. Y después [[viví|orange]] [[un año y medio|orange]] en Toronto. Allí [[hablaba|blue]] inglés [[todos los días|blue]].",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g384.ts",
+      "text": "«Viví un año y medio en Toronto». Cinco años trabajó en Medellín.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g384.ts",
+      "text": "Los límites del período: indefinido («viví allí de 2015 a 2018»).",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g384.ts",
+      "text": "Buenas tardes, señora Ruiz. Le habla Rosa Pineda, del hostal Las Palmas, en Medellín. Recibí su mensaje sobre Julián Mora y con mucho gusto le cuento. Julián [[trabajó|orange]] con nosotros [[cinco años|orange]], [[de 2019 a 2024|orange]]. [[Siempre|blue]] [[llegaba|blue]] puntual, y [[cada sábado|blue]] [[organizaba|blue]] un paseo por el centro con los huéspedes. A los clientes les encantaba. En 2022 [[estuvo|orange]] [[tres meses|orange]] de encargado, cuando yo [[estuve|orange]] enferma, y no tuvimos ni un problema. Ah, y [[ganó|violet]] el premio al mejor empleado del año [[dos veces|violet]]. Hablé con él [[hace una semana|teal]] y me contó lo de la entrevista. Es una persona muy responsable. Si necesita más información, llámeme a este número. Un saludo.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g384.ts",
+      "text": "[[Viví|orange]] en … [[tres años|orange]].",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g384.ts",
+      "text": "[[Viví|orange]] allí [[de 2015 a 2019|orange]].",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g384.ts",
+      "text": "Viví en Puebla de 2012 a 2018. Después pasé un año en Monterrey. Ahora vivo en Ciudad de México desde hace siete años.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g384.ts",
+      "text": "Cuenta tú también dónde viviste y cuánto tiempo. Así tu alumno oye otra vez «viví … años».",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g384.ts",
+      "text": "Viví … años en…",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g384.ts",
+      "text": "viví",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g384.ts",
+      "text": "Estimada señora Ruiz: Le escribo por el puesto de recepcionista. [[Trabajé|orange]] en un hostal de Medellín [[de 2019 a 2024|orange]]. Allí [[siempre|blue]] [[empezaba|blue]] a las seis y [[cada sábado|blue]] [[organizaba|blue]] un paseo por el centro con los clientes. Después [[viví|orange]] [[un año y medio|orange]] en Toronto. Trabajaba en una cafetería y [[hablaba|blue]] inglés [[todos los días|blue]]. Conozco bien Cartagena: [[estuve|violet]] aquí [[tres veces|violet]] de vacaciones. Volví a Colombia [[hace dos meses|teal]] y ahora busco trabajo en un hotel. Muchas gracias por su tiempo. Atentamente, Julián Mora.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g384.ts",
+      "text": "Mide un período terminado: «Trabajé allí cinco años», «Viví en … de 2015 a 2019».",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g384.ts",
+      "text": "(?<!\\p{L})(?:viví|trabajé|estuve|estudié|pasé)\\s+(?:\\p{L}+\\s+){0,4}desde\\s+hace(?!\\p{L})",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g384.ts",
+      "text": "«Desde hace» es para algo que sigue hoy. Si ya terminó: **viví allí tres años**.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g384.ts",
+      "text": "estuve / viví / trabajé + tres años · de 2019 a 2024 · durante · toda la tarde",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g384.ts",
+      "text": "Escribe la frase de Marta en pasado. Empieza con «Viví».",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g384.ts",
+      "text": "Viví en Madrid de 2008 a 2012",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g384.ts",
+      "text": "Di cuándo con «hace». Empieza con «Abrí».",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g384.ts",
+      "text": "Abrí el hotel hace diez años",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g385.ts",
+      "text": "Cuando salí, [[llovía|blue]].",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g385.ts",
+      "text": "salí",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g385.ts",
+      "text": "Hola, Noelia: ¡Mil [[gracias por|violet]] lo del lunes! Te cuento qué pasó: [[salí|orange]] de casa a las ocho y cuarto, como siempre, pero [[llovía|blue]] y [[había|blue]] muchísimo tráfico. En la avenida [[hubo|orange]] un accidente y el autobús [[estuvo|orange]] parado veinte minutos. Además, el móvil no [[tenía|blue]] batería, así que no [[pude|orange]] llamar. Antes [[solía venir|blue]] en bici, pero ahora está en el taller. Hoy ya [[he hablado|teal]] con la señora Ibarra, pero todavía no le [[he enviado|teal]] el presupuesto. Su teléfono es el 600 123 456. La llave [[te la dejo|violet]] mañana en recepción. Las muestras de papel están en mi mesa: [[dáselas|violet]] a la clienta, por favor. [[¿Podrías decirle|violet]] a Ramón que llego a las once? Un abrazo, Elisa",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g385.ts",
+      "text": "Un hecho en indefinido: salí, hubo, pude… (an event in the indefinido)",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g385.ts",
+      "text": "(?<!\\p{L})(?:hubo|fui|fue|hice|tuve|estuve|estuvo|pude|dije|salí|tomé|llegué|esperé|llamé|perdí|\\p{L}{2,}ó)(?!\\p{L})",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g385.ts",
+      "text": "Cuenta qué pasó: «Salí a las ocho», «Hubo un accidente».",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g380.ts",
+      "text": "vos",
+      "category": "regional-pedagogy",
+      "reason": "Course class G080 (2026-10-20): conjugation table and variety note teach the voseo form «vos tenés que» explicitly."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g380.ts",
+      "text": "**tenés que**",
+      "category": "regional-pedagogy",
+      "reason": "Course class G080 (2026-10-20): conjugation table and variety note teach the voseo form «vos tenés que» explicitly."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g380.ts",
+      "text": "«Vos» es la forma de Argentina, Uruguay y otras zonas de América; «vosotros» es la forma de España (clase 021). **Hay que** no cambia nunca: no tiene persona. (Hay que never changes.)",
+      "category": "regional-pedagogy",
+      "reason": "Course class G080 (2026-10-20): conjugation table and variety note teach the voseo form «vos tenés que» explicitly."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g396.ts",
+      "text": "Con vos · With vos",
+      "category": "regional-pedagogy",
+      "reason": "Course class G096 (2026-10-20): the 🌎 variety note teaches the voseo affirmative imperative (vení, decí, hacé, andá) explicitly."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g396.ts",
+      "text": "En el Río de la Plata y en buena parte de Centroamérica, el afirmativo de **vos** es el infinitivo sin **-r**, con acento al final: **vení**, **esperá**, **decí**, **hacé**; ir → **andá**. Con pronombres: **decile**, **decímelo**. En negativo, lo más general es la forma de tú: **no vengas**, **no me lo digas** (también se oye «no vengás»). Usted y ustedes no cambian.",
+      "category": "regional-pedagogy",
+      "reason": "Course class G096 (2026-10-20): the 🌎 variety note teaches the voseo affirmative imperative (vení, decí, hacé, andá) explicitly."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g396.ts",
+      "text": "Dale las entradas a Celia.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (salí, abrí, dormí), tú imperative «dale» or the voseo note above, reviewed."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g398.ts",
+      "text": "Cuando salí, cerré con llave.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (salí, abrí, dormí), tú imperative «dale» or the voseo note above, reviewed."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g398.ts",
+      "text": "abrí",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (salí, abrí, dormí), tú imperative «dale» or the voseo note above, reviewed."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g398.ts",
+      "text": "Pasado: cuando + indefinido, abrí.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (salí, abrí, dormí), tú imperative «dale» or the voseo note above, reviewed."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g398.ts",
+      "text": "Normalmente, cuando llego a casa, me cambio de ropa y preparo un té. Hoy, cuando llegue, voy a llamar a mi madre. Ayer, cuando llegué, me dormí en el sofá.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (salí, abrí, dormí), tú imperative «dale» or the voseo note above, reviewed."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g398.ts",
+      "text": "Alguien va a cuidar tu casa (o tu mascota, o tus plantas). Dale tres instrucciones. · Someone is looking after your home: give three instructions.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (salí, abrí, dormí), tú imperative «dale» or the voseo note above, reviewed."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g398.ts",
+      "text": "Cuando llegues, abre las ventanas un rato. En cuanto entres, dale agua al gato. Y si está nervioso, quédate un rato con él hasta que se tranquilice.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (salí, abrí, dormí), tú imperative «dale» or the voseo note above, reviewed."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g402.ts",
+      "text": "«Le des» es subjuntivo: solo para la instrucción negativa («no le des»). Instrucción afirmativa: «dale».",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (salí, abrí, dormí), tú imperative «dale» or the voseo note above, reviewed."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g402.ts",
+      "text": "dale",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (salí, abrí, dormí), tú imperative «dale» or the voseo note above, reviewed."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g402.ts",
+      "text": "Instrucción afirmativa para Raúl: imperativo, «dale».",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (salí, abrí, dormí), tú imperative «dale» or the voseo note above, reviewed."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g398.ts",
+      "text": "Piensa en una persona que espera algo importante: un trabajo, un bebé, un examen. ¿Qué va a hacer cuando eso pase? · Someone waiting for something important: what will they do when it happens?",
+      "category": "neutral-context",
+      "reason": "Course class G098 (2026-10-20): «bebé» is the common noun (baby), not a voseo form."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g398.ts",
+      "text": "[[En cuanto nazca|blue]] el bebé…",
+      "category": "neutral-context",
+      "reason": "Course class G098 (2026-10-20): «bebé» is the common noun (baby), not a voseo form."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g398.ts",
+      "text": "Mi prima espera un bebé. En cuanto nazca, va a dejar de trabajar unos meses. Cuando el bebé tenga un año, quiere volver a la oficina.",
+      "category": "neutral-context",
+      "reason": "Course class G098 (2026-10-20): «bebé» is the common noun (baby), not a voseo form."
     }
   ]
 }

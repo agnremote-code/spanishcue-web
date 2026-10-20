@@ -87,9 +87,58 @@ import { lesson as g346 } from './lessons/g346';
 import { lesson as g348 } from './lessons/g348';
 import { lesson as g350 } from './lessons/g350';
 import { lesson as g351 } from './lessons/g351';
+import { lesson as g352 } from './lessons/g352';
+import { lesson as g353 } from './lessons/g353';
+import { lesson as g356 } from './lessons/g356';
+import { lesson as g358 } from './lessons/g358';
+import { lesson as g360 } from './lessons/g360';
+import { lesson as g361 } from './lessons/g361';
+import { lesson as g362 } from './lessons/g362';
+import { lesson as g363 } from './lessons/g363';
+import { lesson as g364 } from './lessons/g364';
+import { lesson as g365 } from './lessons/g365';
+import { lesson as g366 } from './lessons/g366';
+import { lesson as g367 } from './lessons/g367';
+import { lesson as g369 } from './lessons/g369';
+import { lesson as g370 } from './lessons/g370';
+import { lesson as g371 } from './lessons/g371';
+import { lesson as g372 } from './lessons/g372';
+import { lesson as g373 } from './lessons/g373';
+import { lesson as g374 } from './lessons/g374';
+import { lesson as g375 } from './lessons/g375';
+import { lesson as g376 } from './lessons/g376';
+import { lessonSections } from './progress';
+import { lesson as g377 } from './lessons/g377';
+import { lesson as g379 } from './lessons/g379';
+import { lesson as g380 } from './lessons/g380';
+import { lesson as g382 } from './lessons/g382';
+import { lesson as g383 } from './lessons/g383';
+import { lesson as g384 } from './lessons/g384';
+import { lesson as g385 } from './lessons/g385';
+import { lesson as g389 } from './lessons/g389';
+import { lesson as g390 } from './lessons/g390';
+import { lesson as g391 } from './lessons/g391';
+import { lesson as g392 } from './lessons/g392';
+import { lesson as g393 } from './lessons/g393';
+import { lesson as g394 } from './lessons/g394';
+import { lesson as g395 } from './lessons/g395';
+import { lesson as g396 } from './lessons/g396';
+import { lesson as g398 } from './lessons/g398';
+import { lesson as g399 } from './lessons/g399';
+import { lesson as g401 } from './lessons/g401';
+import { lesson as g402 } from './lessons/g402';
+import { lesson as g406 } from './lessons/g406';
 import type { LiveLesson } from './types';
 
 /** Grammar classes migrated to the live-class system, by catalog id. */
-const liveLessons: Record<number, LiveLesson> = Object.fromEntries([desdeHace, g3, g18, g23, g31, g37, g40, g41, g42, g43, g44, g45, g46, g47, g48, g106, g107, g110, g111, g112, g113, g114, g115, g116, g117, g118, g119, g140, g141, g142, g143, g144, g145, g146, g147, g148, g149, g150, g151, g152, g153, g154, g155, g156, g211, g212, g213, g214, g217, g218, g219, g220, g231, g232, g233, g234, g235, g239, g303, g305, g307, g311, g312, g314, g318, g319, g320, g323, g324, g327, g328, g330, g331, g332, g333, g335, g336, g337, g338, g339, g340, g341, g343, g344, g346, g348, g350, g351].map(lesson => [lesson.id, lesson]));
+const liveLessons: Record<number, LiveLesson> = Object.fromEntries([desdeHace, g3, g18, g23, g31, g37, g40, g41, g42, g43, g44, g45, g46, g47, g48, g106, g107, g110, g111, g112, g113, g114, g115, g116, g117, g118, g119, g140, g141, g142, g143, g144, g145, g146, g147, g148, g149, g150, g151, g152, g153, g154, g155, g156, g211, g212, g213, g214, g217, g218, g219, g220, g231, g232, g233, g234, g235, g239, g303, g305, g307, g311, g312, g314, g318, g319, g320, g323, g324, g327, g328, g330, g331, g332, g333, g335, g336, g337, g338, g339, g340, g341, g343, g344, g346, g348, g350, g351, g352, g353, g356, g358, g360, g361, g362, g363, g364, g365, g366, g367, g369, g370, g371, g372, g373, g374, g375, g376, g377, g379, g380, g382, g383, g384, g385, g389, g390, g391, g392, g393, g394, g395, g396, g398, g399, g401, g402, g406].map(lesson => [lesson.id, lesson]));
 export const liveLessonIds = Object.keys(liveLessons).map(Number);
 export const getLiveLesson = (id: number): LiveLesson | undefined => liveLessons[id];
+/** Metadata only. The Worker build replaces this module with an index and
+ *  encrypted lesson blobs (scripts/live-lessons.mjs), so pages and APIs use
+ *  these two instead of `getLiveLesson`. */
+export const getLiveLessonInfo = (id: number) => {
+  const lesson = liveLessons[id];
+  return lesson ? { id: lesson.id, title: lesson.title, level: lesson.level, sections: lessonSections(lesson) } : undefined;
+};
+export const loadLiveLesson = async (id: number): Promise<LiveLesson | undefined> => liveLessons[id];

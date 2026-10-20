@@ -1,7 +1,7 @@
 import { env } from "cloudflare:workers";
 import { getUserSessionFromHeaders } from "../../access-policy";
-import { getLiveLesson } from "../../grammar-classroom/live/registry";
-import { lessonSections, savedProgress } from "../../grammar-classroom/live/progress";
+import { getLiveLessonInfo } from "../../grammar-classroom/live/registry";
+import { savedProgress } from "../../grammar-classroom/live/progress";
 import { deleteLiveClassSession, getLiveClassSession, listLiveClassSessions, listStudentLiveClasses, LIVE_CLASS_SAVED_LIMIT, ownsStudent, parseLiveClassSaved, putLiveClassSession } from "../../../db/live-class";
 
 export const dynamic = "force-dynamic";
@@ -19,7 +19,7 @@ function sameOrigin(request: Request): boolean {
   return Boolean(origin && origin === new URL(request.url).origin);
 }
 
-const lessonIdOf = (value: unknown) => (Number.isInteger(Number(value)) && getLiveLesson(Number(value)) ? Number(value) : null);
+const lessonIdOf = (value: unknown) => (Number.isInteger(Number(value)) && getLiveLessonInfo(Number(value)) ? Number(value) : null);
 const studentIdOf = (value: unknown) => (typeof value === "string" && /^[A-Za-z0-9-]{1,64}$/.test(value) ? value : null);
 
 /** `?lessonId=N` lists the students with a saved session; `&studentId=S` returns that student's saved class.
@@ -33,8 +33,8 @@ export async function GET(request: Request) {
     try {
       if (!id || !(await ownsStudent(env.DB, owner, id))) return fail("Alumno no encontrado.", 404);
       const progress = (await listStudentLiveClasses(env.DB, owner, id)).flatMap(({ lessonId, saved, updatedAt }) => {
-        const lesson = getLiveLesson(lessonId);
-        return lesson ? [{ lessonId, ...savedProgress(saved.results, lessonSections(lesson)), updatedAt }] : [];
+        const lesson = getLiveLessonInfo(lessonId);
+        return lesson ? [{ lessonId, ...savedProgress(saved.results, lesson.sections), updatedAt }] : [];
       });
       return Response.json({ progress }, { headers: noStore });
     } catch {

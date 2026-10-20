@@ -3,6 +3,7 @@ import { defineConfig } from "vite";
 import hostingConfig from "./.openai/hosting.json";
 import { sites } from "./build/sites-vite-plugin";
 import { createRequire } from "node:module";
+import { liveLessonData, liveLessonIndexModule } from "./scripts/live-lessons.mjs";
 
 const serverRequire = createRequire(import.meta.url);
 
@@ -75,6 +76,18 @@ export default defineConfig(async ({ command }) => {
         : {}),
     },
     plugins: [
+      {
+        // Lesson bodies ship as encrypted blobs (scripts/live-lessons.mjs);
+        // the Worker build keeps only their index.
+        name: "spanishcue-live-lesson-index",
+        apply: "build",
+        enforce: "pre",
+        async load(id: string) {
+          if (!id.replace(/\\/g, "/").endsWith("/app/grammar-classroom/live/registry.ts")) return null;
+          if (this.environment?.name === "client") throw new Error("The live lesson registry is server-only");
+          return liveLessonIndexModule(await liveLessonData());
+        },
+      },
       vinext(),
       sites(),
       cloudflare({

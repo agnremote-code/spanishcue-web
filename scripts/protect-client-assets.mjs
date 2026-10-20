@@ -22,6 +22,7 @@ import {
   randomBytes,
 } from "node:crypto";
 import { build } from "esbuild";
+import { liveLessonData } from "./live-lessons.mjs";
 import { tmpdir } from "node:os";
 import { dirname, extname, relative, resolve } from "node:path";
 
@@ -331,6 +332,43 @@ await writeFile(
   })};\n`,
 );
 
+// Live grammar lessons: the Worker build carries only their index (see
+// scripts/live-lessons.mjs). Their bodies become encrypted blobs that the
+// Worker reads from the asset layer while rendering the page.
+await mkdir(resolve("dist/client/_protected-lessons"), { recursive: true });
+const { bodies: lessonBodies } = await liveLessonData();
+const lessonAssets = {};
+for (const [id, body] of Object.entries(lessonBodies)) {
+  lessonAssets[id] = await encryptAsset(
+    Buffer.from(body),
+    `/live-lesson/${id}`,
+    "_protected-lessons",
+    "application/json",
+  );
+}
+const serverText = async (directory) => {
+  let text = "";
+  for (const entry of await readdir(directory, { withFileTypes: true })) {
+    const path = resolve(directory, entry.name);
+    if (entry.isDirectory()) text += await serverText(path);
+    else if (/\.m?js$/.test(entry.name)) text += await readFile(path, "utf8");
+  }
+  return text;
+};
+const workerText = await serverText(resolve("dist/server"));
+// Classes below 239 also keep their legacy classroom bank, which may share
+// the transcript; live-only classes must not appear anywhere in the bundle.
+for (const [id, body] of Object.entries(lessonBodies)) {
+  if (Number(id) < 239) continue;
+  const listen = JSON.parse(body).stages.flatMap((stage) => stage.steps).flatMap((step) => step.blocks).find((block) => block.kind === "listen");
+  const probe = listen?.transcript.slice(0, 80);
+  if (probe && workerText.includes(probe)) throw new Error(`Lesson ${id} body is still inside the Worker bundle`);
+}
+await writeFile(
+  "dist/server/private-lesson-assets.js",
+  `export default ${JSON.stringify(lessonAssets)};\n`,
+);
+
 const authRuntime = await build({
   entryPoints: ["worker/private-asset-auth.ts"],
   bundle: true,
@@ -352,6 +390,7 @@ export * from './app-worker.js';
 import privateAssets from './private-client-assets.js';
 import privateMedia from './private-media-assets.js';
 import routedWebp from './public-webp-assets.js';
+import privateLessons from './private-lesson-assets.js';
 import {hasFullLibraryAccess} from './private-access-runtime.js';
 
 const privateHeaders=()=>new Headers({'Cache-Control':'private, no-store','X-Content-Type-Options':'nosniff','Referrer-Policy':'strict-origin-when-cross-origin'});
@@ -403,6 +442,15 @@ async function servePrivateMedia(request,env,record){
   return new Response(range?plain.slice(start,end+1):plain,{status:range?206:200,headers});
  }catch{return new Response('Media unavailable',{status:502,headers:privateHeaders()});}
 }
+// Read by the live lesson index inside app-worker.js (scripts/live-lessons.mjs).
+globalThis.__spanishcueLiveLessons={async load(assets,id){
+ const record=Object.hasOwn(privateLessons,id)?privateLessons[id]:undefined;
+ if(!record)return undefined;
+ const response=await assets.fetch(new Request(new URL(record.assetPath,'https://assets.local')));
+ if(!response.ok)throw new Error(\`Live lesson \${id} unavailable (\${response.status})\`);
+ const plain=await crypto.subtle.decrypt({name:'AES-GCM',iv:base64Bytes(record.iv)},await mediaKey(),await response.arrayBuffer());
+ return JSON.parse(new TextDecoder().decode(plain));
+}};
 export {requestedRange as __testRequestedRange,servePrivateMedia as __testServePrivateMedia};
 
 export default {async fetch(request,env,ctx){
@@ -436,6 +484,9 @@ await writeFile(
         (record) => record.assetPath,
       ),
       encryptedClientFiles: Object.values(clientAssets).map(
+        (record) => record.assetPath,
+      ),
+      encryptedLessonFiles: Object.values(lessonAssets).map(
         (record) => record.assetPath,
       ),
       routedWebpFiles: Object.keys(routedWebpAssets),
