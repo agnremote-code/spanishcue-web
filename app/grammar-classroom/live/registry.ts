@@ -87,9 +87,19 @@ import { lesson as g346 } from './lessons/g346';
 import { lesson as g348 } from './lessons/g348';
 import { lesson as g350 } from './lessons/g350';
 import { lesson as g351 } from './lessons/g351';
+import { lesson as g352 } from './lessons/g352';
+import { lesson as g353 } from './lessons/g353';
+import { lesson as g356 } from './lessons/g356';
+import { lesson as g358 } from './lessons/g358';
+import { lesson as g360 } from './lessons/g360';
+import { lesson as g361 } from './lessons/g361';
+import { lesson as g362 } from './lessons/g362';
+import { lesson as g363 } from './lessons/g363';
+import { lesson as g364 } from './lessons/g364';
+import { lesson as g365 } from './lessons/g365';
 import type { LiveLesson } from './types';
 
 /** Grammar classes migrated to the live-class system, by catalog id. */
-const liveLessons: Record<number, LiveLesson> = Object.fromEntries([desdeHace, g3, g18, g23, g31, g37, g40, g41, g42, g43, g44, g45, g46, g47, g48, g106, g107, g110, g111, g112, g113, g114, g115, g116, g117, g118, g119, g140, g141, g142, g143, g144, g145, g146, g147, g148, g149, g150, g151, g152, g153, g154, g155, g156, g211, g212, g213, g214, g217, g218, g219, g220, g231, g232, g233, g234, g235, g239, g303, g305, g307, g311, g312, g314, g318, g319, g320, g323, g324, g327, g328, g330, g331, g332, g333, g335, g336, g337, g338, g339, g340, g341, g343, g344, g346, g348, g350, g351].map(lesson => [lesson.id, lesson]));
+const liveLessons: Record<number, LiveLesson> = Object.fromEntries([desdeHace, g3, g18, g23, g31, g37, g40, g41, g42, g43, g44, g45, g46, g47, g48, g106, g107, g110, g111, g112, g113, g114, g115, g116, g117, g118, g119, g140, g141, g142, g143, g144, g145, g146, g147, g148, g149, g150, g151, g152, g153, g154, g155, g156, g211, g212, g213, g214, g217, g218, g219, g220, g231, g232, g233, g234, g235, g239, g303, g305, g307, g311, g312, g314, g318, g319, g320, g323, g324, g327, g328, g330, g331, g332, g333, g335, g336, g337, g338, g339, g340, g341, g343, g344, g346, g348, g350, g351, g352, g353, g356, g358, g360, g361, g362, g363, g364, g365].map(lesson => [lesson.id, lesson]));
 export const liveLessonIds = Object.keys(liveLessons).map(Number);
 export const getLiveLesson = (id: number): LiveLesson | undefined => liveLessons[id];

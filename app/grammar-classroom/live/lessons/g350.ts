@@ -11,8 +11,11 @@ import type { LiveLesson } from '../types';
  * Later the taxi driver, señor Vega, gives his version. In the voice message
  * Diego (Mexican voice, usted with Carmen) thanks her and tells his side.
  * Content: imperfecto for the scene (era/eran, había, estaba, hacía, llovía,
- * iba, tenía) and indefinido for the events (hubo, salió, frenó, se cayó,
- * llegó, sonó). Anchor: Dormía cuando sonó el teléfono. Contrast: Llovía cuando
+ * iba, tenía) and indefinido for the events (hubo, salió, frenó, paró,
+ * llegó, sonó). Productive demand is limited to regular preterites, the G048
+ * irregulars (fui, hice, tuve, estuve, pude, dije) and hubo; se cayó / me caí /
+ * vio appear only receptively, glossed.
+ * Anchor: Dormía cuando sonó el teléfono. Contrast: Llovía cuando
  * salí / Ayer llovió todo el día (a long but closed period). Mistake: *Ayer era
  * un accidente → Ayer hubo un accidente. «Cuando» does not decide the tense:
  * the learner decides background or next event. Instructions use tú.
@@ -29,7 +32,7 @@ export const lesson: LiveLesson = {
   ],
   optionNotes: {
     'Fueron': 'La hora en una historia es el **fondo**: siempre «eran las ocho», «era la una». No «fueron».',
-    'estuvo · vi': 'La furgoneta ya estaba allí (fondo) y el taxista no podía ver la calle en ese momento: **estaba · veía**.',
+    'estuvo · pude': 'La furgoneta ya estaba allí (fondo) y el taxista no podía ver la calle en ese momento: **estaba · podía**.',
     'Estuvo · tuvo': 'Así estaba el chico cuando llegó el taxista: es una descripción. **Estaba · tenía**.',
   },
   stages: [
@@ -58,14 +61,14 @@ export const lesson: LiveLesson = {
               { es: '[[Llovía|blue]] un poco y [[había|blue]] mucho tráfico.', en: 'It was raining a little and there was a lot of traffic.' },
               { es: 'Un chico [[iba|blue]] en bicicleta por la calle.', en: 'A young man was cycling along the street.' },
             ] },
-          { kind: 'concept', tone: 'orange', label: 'EVENTO · INDEFINIDO', question: '¿Qué pasó? ¿Y después?', en: 'What happened? And then?', formula: ['hubo · salió · frenó · se cayó · llegó', 'los hechos, uno detrás de otro'],
+          { kind: 'concept', tone: 'orange', label: 'EVENTO · INDEFINIDO', question: '¿Qué pasó? ¿Y después?', en: 'What happened? And then?', formula: ['hubo · salió · frenó · paró · llegó', 'los hechos, uno detrás de otro'],
             meaning: 'Con el **indefinido** cuentas los hechos: cosas que pasaron, completas, y que hacen avanzar la historia. Ya conoces las formas (clases 047 y 048).',
             examples: [
               { es: '[[De repente|teal]], un taxi [[salió|orange]] de un garaje.', en: 'Suddenly, a taxi came out of a garage.' },
               { es: 'El chico [[frenó|orange]] y [[se cayó|orange]].', en: 'The young man braked and fell.' },
               { es: 'Carmen [[llamó|orange]] a emergencias.', en: 'Carmen called emergency services.' },
             ],
-            note: '**Se cayó** es el indefinido de caerse (to fall): me caí, se cayó, con **y**.' },
+            note: 'En la historia también lees **se cayó** (he fell, de caerse): solo tienes que entenderlo; hoy no lo necesitas usar.' },
           { kind: 'table', title: 'El mismo verbo, dos pasados · Same verb, two past tenses', head: ['Infinitivo', 'CONTEXTO (imperfecto)', 'EVENTO (indefinido)'], rows: [
             ['haber (there is)', '**había** mucha gente', '**hubo** un accidente'],
             ['ser (to be)', '**era** temprano, **eran** las ocho', '**fue** un susto (it was a scare)'],
@@ -116,11 +119,11 @@ export const lesson: LiveLesson = {
             { wrong: 'Ayer era un accidente en mi calle.', right: 'Ayer hubo un accidente en mi calle.', why: 'Un accidente pasa: haber en indefinido, hubo. «Era» (ser) es para la hora o para describir. (An accident happens: hubo.)' },
             { wrong: 'Dormí cuando sonó el teléfono.', right: 'Dormía cuando sonó el teléfono.', why: 'Dormir es el fondo: la acción estaba en marcha cuando sonó el teléfono. (I was sleeping when the phone rang.)' },
             { wrong: 'Fueron las ocho y media cuando pasó.', right: 'Eran las ocho y media cuando pasó.', why: 'La hora en una historia es siempre el fondo: eran, era. (The time is background: eran.)' },
-            { wrong: 'Yo esperaba el autobús y de repente un chico se caía.', right: 'Yo esperaba el autobús y de repente un chico se cayó.', why: '«De repente» presenta un hecho nuevo, completo: indefinido, se cayó. (Suddenly + a new event: se cayó.)' },
+            { wrong: 'Yo esperaba el autobús y de repente un taxi salía del garaje.', right: 'Yo esperaba el autobús y de repente un taxi salió del garaje.', why: '«De repente» presenta un hecho nuevo, completo: indefinido, salió. (Suddenly + a new event: salió.)' },
           ] },
           { kind: 'choice', title: 'Comprueba · Check', items: [
             { prompt: '___ las nueve cuando llegó la agente.', options: ['Hubo', 'Fueron', 'Eran'], answer: 2, why: 'La hora es el fondo de la escena: eran las nueve.', en: 'It was nine o’clock when the officer arrived.' },
-            { prompt: 'Carmen leía el periódico y de repente ___ un ruido fuerte.', options: ['oyó', 'oía', 'oye'], answer: 0, why: '«De repente» + un hecho nuevo que interrumpe: oyó (oír, indefinido).', en: 'Carmen was reading the newspaper and suddenly she heard a loud noise.' },
+            { prompt: 'Carmen leía el periódico y de repente ___ un ruido fuerte.', options: ['escuchó', 'escuchaba', 'escucha'], answer: 0, why: '«De repente» + un hecho nuevo que interrumpe: escuchó (escuchar, indefinido).', en: 'Carmen was reading the newspaper and suddenly she heard a loud noise.' },
           ] },
           { kind: 'teacher', text: 'Cierre de Entender: tu alumno cuenta un momento real con la frase «Yo… cuando…»: «Yo cocinaba cuando llegó mi hermano». Tú preguntas: «¿Qué parte es la escena? ¿Qué parte es el hecho?».' },
         ] },
@@ -209,7 +212,7 @@ export const lesson: LiveLesson = {
             { id: 'evento', label: 'EVENTO · lo que pasó', tone: 'orange' },
           ], items: [
             { text: 'La calle estaba oscura.', answer: 'contexto', why: 'Describe la calle: estaba.' },
-            { text: 'El taxista pidió perdón.', answer: 'evento', why: 'Una acción completa: pidió.' },
+            { text: 'El taxista llamó a la policía.', answer: 'evento', why: 'Una acción completa: llamó.' },
             { text: 'Hacía frío.', answer: 'contexto', why: 'El tiempo es el fondo: hacía.' },
             { text: 'Carmen escribió su número de teléfono.', answer: 'evento', why: 'Un hecho completo: escribió.' },
             { text: 'Diego tenía prisa.', answer: 'contexto', why: 'Cómo estaba Diego en ese momento: tenía.' },
@@ -218,19 +221,19 @@ export const lesson: LiveLesson = {
         { title: 'Encuentra el error · Find the mistake', blocks: [
           { kind: 'fix', items: [
             { sentence: 'Ayer era un accidente cerca de mi casa.', ok: false, options: ['Ayer hubo un accidente cerca de mi casa.', 'Ayer había un accidente cerca de mi casa.', 'Ayer estuvo un accidente cerca de mi casa.'], answer: 0, why: 'Para contar que un accidente pasó: hubo. «Había» describe una escena que ya estaba allí.' },
-            { sentence: 'Eran las ocho y media cuando Diego se cayó.', ok: true, why: 'Correcta: la hora es el fondo (eran) y la caída es el hecho (se cayó).' },
+            { sentence: 'Eran las ocho y media cuando Diego frenó.', ok: true, why: 'Correcta: la hora es el fondo (eran) y frenar es el hecho (frenó).' },
             { sentence: 'Diego iba por la calle y de repente un taxi salía del garaje.', ok: false, options: ['Diego fue por la calle y de repente un taxi salió del garaje.', 'Diego iba por la calle y de repente un taxi salió del garaje.', 'Diego iba por la calle y de repente un taxi sale del garaje.'], answer: 1, why: '«Iba» es la escena; «de repente» trae un hecho nuevo: salió.' },
             { sentence: 'El martes llovió toda la mañana.', ok: true, why: 'Correcta: «toda la mañana» es un período cerrado, con principio y final.' },
-            { sentence: 'Carmen estuvo en la parada cuando vio el accidente.', ok: false, options: ['Carmen estaba en la parada cuando vio el accidente.', 'Carmen está en la parada cuando vio el accidente.', 'Carmen estaba en la parada cuando veía el accidente.'], answer: 0, why: 'Dónde estaba Carmen es la escena (estaba); ver el accidente es el hecho (vio).' },
+            { sentence: 'Carmen estuvo en la parada cuando pasó el accidente.', ok: false, options: ['Carmen estaba en la parada cuando pasó el accidente.', 'Carmen está en la parada cuando pasó el accidente.', 'Carmen estaba en la parada cuando pasaba el accidente.'], answer: 0, why: 'Dónde estaba Carmen es la escena (estaba); el accidente es el hecho (pasó).' },
           ] },
         ] },
         { title: 'La versión del taxista · The taxi driver’s version', blocks: [
           { kind: 'chat-fill', title: 'La agente habla con el señor Vega · The officer talks to Mr Vega', lines: [
             { who: 'Agente Prado', text: 'Señor Vega, ¿adónde ___ cuando salió del garaje?', options: ['va', 'fue', 'iba'], answer: 2, why: 'Su viaje estaba en marcha cuando salió del garaje: iba.' },
             { who: 'Señor Vega', text: '___ al aeropuerto. Tenía un cliente a las nueve.', options: ['Fui', 'Voy', 'Iba'], answer: 2, why: 'Responde con la misma escena: iba. No llegó al aeropuerto en ese momento.' },
-            { who: 'Agente Prado', text: '¿Y no vio la bicicleta?' },
-            { who: 'Señor Vega', text: 'No. Una furgoneta ___ delante del garaje y no ___ bien la calle.', options: ['está · veo', 'estuvo · vi', 'estaba · veía'], answer: 2, why: 'La furgoneta ya estaba allí y él no podía ver: es la escena. Estaba · veía.' },
-            { who: 'Señor Vega', text: 'Cuando ___ el ruido, paré enseguida.', options: ['oí', 'oía', 'oigo'], answer: 0, why: 'El ruido es un hecho de un momento: oí. Después, paré.' },
+            { who: 'Agente Prado', text: '¿Y no miró la calle antes de salir?' },
+            { who: 'Señor Vega', text: 'No. Una furgoneta ___ delante del garaje y no ___ ver bien la calle.', options: ['está · puedo', 'estuvo · pude', 'estaba · podía'], answer: 2, why: 'La furgoneta ya estaba allí y él no podía ver: es la escena. Estaba · podía.' },
+            { who: 'Señor Vega', text: 'Cuando ___ el ruido, paré enseguida.', options: ['escuché', 'escuchaba', 'escucho'], answer: 0, why: 'El ruido es un hecho de un momento: escuché. Después, paré.' },
             { who: 'Agente Prado', text: '¿Y cómo estaba el chico?' },
             { who: 'Señor Vega', text: '___ en el suelo, pero no ___ nada grave.', options: ['Estaba · tenía', 'Estuvo · tuvo', 'Está · tiene'], answer: 0, why: 'Así estaba el chico cuando el taxista bajó: descripción, estaba · tenía.' },
             { who: 'Señor Vega', text: 'Le ___ perdón y esperé con él.', options: ['pedí', 'pedía', 'pido'], answer: 0, why: 'Dos hechos en orden: pedí perdón y después esperé.' },
@@ -241,12 +244,12 @@ export const lesson: LiveLesson = {
             { tiles: ['cuando', 'Llovía', 'Carmen', 'salió', 'de', 'casa'], accept: ['Llovía cuando Carmen salió de casa', 'Cuando Carmen salió de casa llovía'], en: 'It was raining when Carmen left home.' },
             { tiles: ['hubo', 'Ayer', 'un', 'accidente', 'en', 'la', 'esquina'], accept: ['Ayer hubo un accidente en la esquina', 'Hubo un accidente en la esquina ayer'], en: 'Yesterday there was an accident on the corner.' },
             { tiles: ['las', 'Eran', 'siete', 'cuando', 'sonó', 'el', 'teléfono'], accept: ['Eran las siete cuando sonó el teléfono', 'Cuando sonó el teléfono eran las siete'], en: 'It was seven o’clock when the phone rang.' },
-            { tiles: ['iba', 'Diego', 'al', 'trabajo', 'cuando', 'se', 'cayó'], accept: ['Diego iba al trabajo cuando se cayó'], en: 'Diego was going to work when he fell.' },
+            { tiles: ['iba', 'Diego', 'al', 'trabajo', 'cuando', 'salió', 'el', 'taxi'], accept: ['Diego iba al trabajo cuando salió el taxi', 'Diego iba al trabajo cuando el taxi salió', 'Cuando salió el taxi Diego iba al trabajo', 'Cuando el taxi salió Diego iba al trabajo'], en: 'Diego was going to work when the taxi came out.' },
           ] },
         ] },
         { title: 'Une las frases · Join the sentences', blocks: [
           { kind: 'rewrite', title: 'Escena + hecho con «cuando» · Scene + event with “cuando”', items: [
-            { prompt: 'Carmen espera el autobús. Diego se cae. (→ ayer)', instruction: 'Une las dos frases en pasado con «cuando». Empieza con «Carmen».', accept: ['Carmen esperaba el autobús cuando Diego se cayó', 'Carmen esperaba el autobús cuando se cayó Diego'] },
+            { prompt: 'Carmen espera el autobús. Diego frena. (→ ayer)', instruction: 'Une las dos frases en pasado con «cuando». Empieza con «Carmen».', accept: ['Carmen esperaba el autobús cuando Diego frenó', 'Carmen esperaba el autobús cuando frenó Diego'] },
             { prompt: 'Hace frío. La ambulancia llega. (→ ayer)', instruction: 'Une las dos frases en pasado con «cuando». Empieza con «Hacía».', accept: ['Hacía frío cuando llegó la ambulancia', 'Hacía frío cuando la ambulancia llegó'] },
             { prompt: 'Diego habla por teléfono. La agente llega. (→ ayer)', instruction: 'Une las dos frases en pasado con «cuando». Empieza con «Diego».', accept: ['Diego hablaba por teléfono cuando llegó la agente', 'Diego hablaba por teléfono cuando la agente llegó'] },
           ] },
@@ -259,7 +262,7 @@ export const lesson: LiveLesson = {
       title: 'Un mensaje de voz de Diego', coach: 'Primero escucha sin leer. Listen first, read later.',
       steps: [
         { title: 'Diego da las gracias · Diego says thank you', blocks: [
-          { kind: 'guide', text: { teacher: 'Primera escucha: solo la idea general (¿cómo está Diego?). Segunda escucha: tu alumno levanta la mano con cada verbo de escena (iba, llovía…) y da una palmada con cada hecho (salió, frené…). Después, las preguntas.', self: 'Escucha una vez para la idea general y otra vez para los detalles. Separa los verbos de escena y los verbos de hechos. (Listen once for the gist, once for the details.)' } },
+          { kind: 'guide', text: { teacher: 'Primera escucha: solo la idea general (¿cómo está Diego?). Segunda escucha: tu alumno levanta la mano con cada verbo de escena (iba, llovía…) y da una palmada con cada hecho (salió, frené…). Después, las preguntas.', self: 'Escucha una vez para la idea general y otra vez para los detalles. Separa los verbos de escena y los verbos de hechos. Vas a oír «me caí» (I fell): solo tienes que entenderlo. (Listen once for the gist, once for the details.)' } },
           { kind: 'listen', title: 'Un mensaje de voz de Diego', channel: 'MENSAJE DE VOZ · DE DIEGO PARA CARMEN', src: '/audio/grammar-live/350.mp3',
             before: 'Diego, el chico de la bicicleta, tiene el número de Carmen. Le manda un mensaje de voz. ¿Qué crees que cuenta: cómo está, adónde iba, qué pasó…? (Diego sends Carmen a voice message. What do you think he talks about?)',
             gist: { prompt: '¿Cuál es la idea general? · What is the main idea?', options: ['Diego pide a Carmen hablar con la agente.', 'Diego da las gracias, cuenta su versión y dice que está bien.', 'Diego está enfermo y no puede trabajar más.'], answer: 1, why: '«Muchas gracias por su ayuda», cuenta qué pasó y dice «estoy bien».', en: 'What is the main idea?' },
@@ -281,12 +284,12 @@ export const lesson: LiveLesson = {
         { title: '¿Qué viste? · What did you see?', blocks: [
           { kind: 'guide', text: { teacher: 'Tú eres la agente Prado y haces las preguntas. Tu alumno cuenta un pequeño incidente real o inventado (una caída, un perro suelto, un apagón, una avería). Tú repites su frase con la forma correcta y sigues con la repregunta.', self: 'Piensa en un pequeño incidente real o inventado: una caída, un apagón, una avería. Lee la pregunta, responde en voz alta y, si quieres, escribe tu respuesta. (Think of a small incident and answer aloud.)' } },
           { kind: 'talk', cards: [
-            { q: '¿Viste alguna vez un pequeño accidente o un incidente en la calle? ¿Cuándo fue? · Did you ever see a small accident or incident in the street? When was it?', followUps: ['¿Dónde estabas? (Where were you?)', '¿Qué hacías en ese momento? (What were you doing at that moment?)'], phrases: ['El año pasado [[vi|orange]] un accidente en…', 'Yo [[estaba|blue]] en…', 'Yo [[esperaba|blue]] / [[iba|blue]]…'], hint: 'Primero el hecho general (vi, hubo). Después la escena: dónde estabas, qué hacías.', example: 'El año pasado vi un pequeño accidente en el centro. Yo estaba en una cafetería y esperaba a una amiga.', next: 'Ahora, la escena.', teacher: 'Cuenta tú también un incidente corto: «Una vez vi…». Así tu alumno oye otra vez la escena y los hechos.' },
+            { q: '¿Hubo alguna vez un pequeño accidente o un incidente cerca de ti? ¿Cuándo fue? · Was there ever a small accident or incident near you? When was it?', followUps: ['¿Dónde estabas? (Where were you?)', '¿Qué hacías en ese momento? (What were you doing at that moment?)'], phrases: ['El año pasado [[hubo|orange]] un accidente en…', 'Yo [[estaba|blue]] en…', 'Yo [[esperaba|blue]] / [[iba|blue]]…'], hint: 'Primero el hecho general (hubo, pasó). Después la escena: dónde estabas, qué hacías.', example: 'El año pasado hubo un pequeño accidente en el centro. Yo estaba en una cafetería y esperaba a una amiga.', next: 'Ahora, la escena.', teacher: 'Cuenta tú también un incidente corto: «Una vez hubo…». Así tu alumno oye otra vez la escena y los hechos.' },
             { q: '¿Qué hora era? ¿Qué tiempo hacía? ¿Había mucha gente? · What time was it? What was the weather like? Were there many people?', followUps: ['¿Cómo estaba la calle? (What was the street like?)', '¿Cómo te sentías? (How did you feel?)'], phrases: ['[[Eran|blue]] las… / [[Era|blue]] la una.', '[[Hacía|blue]] sol / frío. [[Llovía|blue]].', '[[Había|blue]] mucha / poca gente.'], hint: 'La escena va en imperfecto: eran, hacía, llovía, había, estaba.', example: 'Eran las seis de la tarde. Hacía mucho calor y había mucha gente en la calle.', next: 'Ahora, los hechos.' },
-            { q: '¿Qué pasó? Cuenta tres hechos en orden. · What happened? Tell three events in order.', followUps: ['¿Y después? (And then?)', '¿Fue muy rápido? (Was it very fast?)'], phrases: ['[[De repente|teal]], un coche / una moto [[salió|orange]]…', 'La persona [[frenó|orange]] / [[se cayó|orange]].', 'Después, [[llegó|orange]]…'], hint: 'Los hechos van en indefinido: uno detrás de otro, con de repente, después, entonces.', example: 'De repente, una moto salió de un garaje. Un señor frenó, pero se cayó. Después llegó la policía.', next: 'Ahora, lo que hiciste tú.' },
+            { q: '¿Qué pasó? Cuenta tres hechos en orden. · What happened? Tell three events in order.', followUps: ['¿Y después? (And then?)', '¿Fue muy rápido? (Was it very fast?)'], phrases: ['[[De repente|teal]], un coche / una moto [[salió|orange]]…', 'La persona [[frenó|orange]] / [[paró|orange]].', 'Después, [[llegó|orange]]…'], hint: 'Los hechos van en indefinido: uno detrás de otro, con de repente, después, entonces.', example: 'De repente, una moto salió de un garaje. Un señor frenó muy fuerte y paró a un metro. Después llegó la policía.', next: 'Ahora, lo que hiciste tú.' },
             { q: '¿Qué hiciste tú? ¿Y las otras personas? · What did you do? And the other people?', followUps: ['¿Llamaste a alguien? (Did you call anyone?)', '¿Alguien te hizo preguntas? (Did anyone ask you questions?)'], phrases: ['Yo [[fui|orange]] a ayudar…', '[[Llamé|orange]] a emergencias / a la policía.', 'Otra persona [[paró|orange]] y…'], hint: 'Tus acciones también son hechos: fui, llamé, ayudé, esperé.', example: 'Yo fui a ayudar al señor y llamé a emergencias. Una chica paró y le ofreció agua.', next: 'Ahora, el final.' },
             { q: '¿Cómo estaban las personas cuando llegó la ayuda? · How were the people when help arrived?', followUps: ['¿Estaba nervioso o tranquilo? (Was he nervous or calm?)', '¿Tenía algo grave? (Was it something serious?)'], phrases: ['[[Cuando|teal]] [[llegó|orange]] la ambulancia, el señor [[estaba|blue]]…', 'No [[tenía|blue]] nada grave.', 'Al final, [[fue|orange]] solo un susto.'], hint: 'Cuando + hecho (llegó), y la escena en ese momento (estaba, tenía).', example: 'Cuando llegó la ambulancia, el señor estaba tranquilo. No tenía nada grave. Al final fue solo un susto.', teacher: 'Pregunta también: «¿Y qué hizo el señor cuando llegó la ambulancia?». Tu alumno ve que con «cuando» también puede venir un hecho.' },
-            { q: 'Ahora tú eres Carmen. La agente Prado pregunta: «¿Qué pasó ayer?». Cuenta la escena y los hechos en seis frases. · Now you are Carmen. Tell the scene and the events.', followUps: ['¿Qué hizo el taxista? (What did the taxi driver do?)', '¿Cómo estaba Diego al final? (How was Diego at the end?)'], phrases: ['[[Eran|blue]]… [[Llovía|blue]]… Yo [[esperaba|blue]]…', '[[De repente|teal]], un taxi [[salió|orange]]…', 'El chico [[frenó|orange]] y [[se cayó|orange]]…'], hint: 'Tres frases de escena y tres de hechos, en orden.', example: 'Eran las ocho y media. Llovía y había mucho tráfico. Yo esperaba el autobús. De repente, un taxi salió de un garaje. Un chico frenó y se cayó. Yo llamé a emergencias.', teacher: 'Tú eres la agente y reaccionas: «¿Y qué tiempo hacía?», «¿Y después?». Después, cambian los papeles.' },
+            { q: 'Ahora tú eres Carmen. La agente Prado pregunta: «¿Qué pasó ayer?». Cuenta la escena y los hechos en seis frases. · Now you are Carmen. Tell the scene and the events.', followUps: ['¿Qué hizo el taxista? (What did the taxi driver do?)', '¿Cómo estaba Diego al final? (How was Diego at the end?)'], phrases: ['[[Eran|blue]]… [[Llovía|blue]]… Yo [[esperaba|blue]]…', '[[De repente|teal]], un taxi [[salió|orange]]…', 'El chico [[frenó|orange]] muy fuerte…'], hint: 'Tres frases de escena y tres de hechos, en orden.', example: 'Eran las ocho y media. Llovía y había mucho tráfico. Yo esperaba el autobús. De repente, un taxi salió de un garaje. Un chico frenó muy fuerte. Yo llamé a emergencias.', teacher: 'Tú eres la agente y reaccionas: «¿Y qué tiempo hacía?», «¿Y después?». Después, cambian los papeles.' },
           ], swap: { teacher: 'Al final, cambian los papeles: tu alumno es la agente y hace las preguntas («¿Dónde estaba usted?», «¿Qué tiempo hacía?», «¿Qué pasó?») y tú cuentas un incidente.', self: 'Ahora tú eres la agente: haz las preguntas en voz alta («¿Dónde estaba usted?», «¿Qué pasó?») y responde como Carmen. (Now you are the officer: ask and answer as Carmen.)' } },
         ] },
       ],
@@ -304,8 +307,8 @@ export const lesson: LiveLesson = {
             'Usa «cuando» o «de repente» una vez. (Use “cuando” or “de repente” once.)',
             'Despídete y deja tu teléfono. (Say goodbye and leave your phone number.)',
           ], starters: ['Estimada agente Prado:', 'Le escribo sobre el accidente de…', 'Eran las…', 'Yo estaba en… / Yo esperaba…', 'De repente, …', 'Cuando…', 'Mi teléfono es el…', 'Atentamente,'],
-            words: ['era', 'eran', 'había', 'hacía', 'llovía', 'estaba', 'iba', 'hubo', 'salió', 'frenó', 'se cayó', 'llegó', 'llamé', 'de repente', 'cuando'],
-            model: 'Estimada agente Prado: Le escribo sobre el accidente de ayer en la calle Colón. [[Eran|blue]] las ocho y media de la mañana. [[Llovía|blue]] un poco y [[había|blue]] mucho tráfico. Yo [[esperaba|blue]] el autobús en la parada y un chico [[iba|blue]] en bicicleta por la calle. [[De repente|teal]], un taxi [[salió|orange]] de un garaje. El chico [[frenó|orange]] y [[se cayó|orange]]. Yo [[fui|orange]] a ayudarlo y [[llamé|orange]] a emergencias. [[Cuando|teal]] [[llegó|orange]] la ambulancia, el chico ya [[estaba|blue]] tranquilo. Mi teléfono es el 555 123 456. Atentamente, Carmen Ortega.',
+            words: ['era', 'eran', 'había', 'hacía', 'llovía', 'estaba', 'iba', 'hubo', 'salió', 'frenó', 'paró', 'llegó', 'llamé', 'de repente', 'cuando'],
+            model: 'Estimada agente Prado: Le escribo sobre el accidente de ayer en la calle Colón. [[Eran|blue]] las ocho y media de la mañana. [[Llovía|blue]] un poco y [[había|blue]] mucho tráfico. Yo [[esperaba|blue]] el autobús en la parada y un chico [[iba|blue]] en bicicleta por la calle. [[De repente|teal]], un taxi [[salió|orange]] de un garaje. El chico [[frenó|orange]] muy fuerte y [[terminó|orange]] en el suelo. Yo [[fui|orange]] a ayudarlo y [[llamé|orange]] a emergencias. [[Cuando|teal]] [[llegó|orange]] la ambulancia, el chico ya [[estaba|blue]] tranquilo. Mi teléfono es el 555 123 456. Atentamente, Carmen Ortega.',
             minWords: 60,
             checks: [
               { label: 'La escena en imperfecto: era, había, estaba… (the scene in the imperfect)', pattern: '(?<!\\p{L})(?:era|eran|había|habia|hacía|hacia|estaba|estaban|llovía|llovia|tenía|tenia|iba|iban|\\p{L}{2,}aban?)(?!\\p{L})', tip: 'Describe la escena: «Eran las ocho», «Llovía», «Yo estaba en la parada».' },
@@ -326,10 +329,10 @@ export const lesson: LiveLesson = {
         { title: 'Lo esencial · The essentials', blocks: [
           { kind: 'recap', items: [
             { tone: 'blue', label: 'CONTEXTO · IMPERFECTO', formula: 'era · había · estaba · hacía · llovía · iba', example: 'Eran las ocho y media y llovía un poco.', caption: 'la escena: hora, tiempo, lugar, qué pasaba', en: 'the scene: time, weather, place, what was going on' },
-            { tone: 'orange', label: 'EVENTO · INDEFINIDO', formula: 'hubo · salió · frenó · se cayó · llegó', example: 'De repente, un taxi salió del garaje y el chico se cayó.', caption: 'los hechos que hacen avanzar la historia', en: 'the events that move the story on' },
+            { tone: 'orange', label: 'EVENTO · INDEFINIDO', formula: 'hubo · salió · frenó · paró · llegó', example: 'De repente, un taxi salió del garaje y el chico frenó.', caption: 'los hechos que hacen avanzar la historia', en: 'the events that move the story on' },
             { tone: 'teal', label: 'PERÍODO CERRADO', formula: 'todo el día · dos horas · de ocho a diez → indefinido', example: 'Llovía cuando salí. / Ayer llovió todo el día.', caption: 'largo, pero con final: indefinido', en: 'long, but with an end: indefinido' },
           ] },
-          { kind: 'tip', icon: '🔑', title: 'La clave · The key', text: 'En una historia hay dos capas. La **escena** (imperfecto): «Eran las ocho, llovía, yo esperaba el autobús». Los **hechos** (indefinido): «De repente, un taxi salió y el chico se cayó». Un accidente pasa: «**hubo** un accidente», nunca «era un accidente». Y «cuando» no decide: decides tú.', en: 'A story has two layers. The scene (imperfect): “Eran las ocho, llovía, yo esperaba el autobús”. The events (indefinido): “De repente, un taxi salió y el chico se cayó”. An accident happens: “hubo un accidente”, never “era un accidente”. And “cuando” does not decide: you do.' },
+          { kind: 'tip', icon: '🔑', title: 'La clave · The key', text: 'En una historia hay dos capas. La **escena** (imperfecto): «Eran las ocho, llovía, yo esperaba el autobús». Los **hechos** (indefinido): «De repente, un taxi salió y el chico frenó». Un accidente pasa: «**hubo** un accidente», nunca «era un accidente». Y «cuando» no decide: decides tú.', en: 'A story has two layers. The scene (imperfect): “Eran las ocho, llovía, yo esperaba el autobús”. The events (indefinido): “De repente, un taxi salió y el chico frenó”. An accident happens: “hubo un accidente”, never “era un accidente”. And “cuando” does not decide: you do.' },
         ] },
         { title: 'Desafío final · Final challenge', mascot: '/brand/mascot/standing-crossed.webp', blocks: [
           { kind: 'choice', title: 'Cinco frases, sin ayuda · Five sentences, no help', items: [

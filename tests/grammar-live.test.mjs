@@ -41,11 +41,12 @@ const panel=(stage,step=0)=>`[data-stage-panel="${stage}"] [data-step-panel="${s
 
 test('every grammar class is a live class: seven sections in the fixed order, every activity checkable',()=>{
   for(const id of classroomIds)assert.ok(liveLessonIds.includes(id),`${id}: every grammar class id has a live lesson`);
-  assert.deepEqual(liveLessonIds.filter(id=>!classroomIds.includes(id)),[239,303,305,307,311,312,314,318,319,320,323,324,327,328,330,331,332,333,335,336,337,338,339,340,341,343,344,346,348,350,351],'live-only classes carry everything in their live lesson');
+  assert.deepEqual(liveLessonIds.filter(id=>!classroomIds.includes(id)),[239,303,305,307,311,312,314,318,319,320,323,324,327,328,330,331,332,333,335,336,337,338,339,340,341,343,344,346,348,350,351,352,353,356,358,360,361,362,363,364,365],'live-only classes carry everything in their live lesson');
   for(const id of liveLessonIds){
   const lesson=getLiveLesson(id);
   assert.equal(lesson.id,id);
-  if(!['A0','A1','A2'].includes(lesson.level))assert.ok(!JSON.stringify(lesson).includes('"en":'),`${id}: English help only in A0–A2`);
+  // English help at every level (owner decision 2026-10-20); every new course class carries it.
+  if(id>300)assert.ok(JSON.stringify(lesson).includes('"en":'),`${id}: course classes carry English help`);
   assert.deepEqual(lesson.stages.map(s=>s.id),['entender','explorar','practicar','escuchar','conversar','escribir','cerrar']);
   assert.deepEqual(lesson.stages.map(s=>s.label),['Entender','Explorar','Practicar','Escuchar','Conversar','Escribir','Cerrar']);
   const tones=new Set(lesson.legend.map(l=>l.tone));

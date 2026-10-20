@@ -187,6 +187,66 @@
       "voice": "es-ES-AlvaroNeural",
       "rate": "-6%",
       "text": "Hola, Lucía, soy Pablo. Te mando un audio rápido. Después de la clase de las siete he hablado otra vez con Ana y hemos cerrado el plan de la excursión del viernes: vamos al museo y después a comer. Ayer Ana llamó al museo, pero no pudo hacer la reserva. Hoy la he hecho yo por internet, ¡y ya está! También he escrito a los alumnos y ya han contestado doce. Ah, otra cosa: ayer olvidé mi paraguas en la sala de profesores y hoy no lo he encontrado. ¿Puedes mirar mañana por la mañana? Bueno, ¿y tú? ¿Has terminado los exámenes? Mañana me cuentas. ¡Un abrazo!"
+    },
+    {
+      "id": 352,
+      "voice": "es-MX-DaliaNeural",
+      "rate": "-6%",
+      "text": "Hola, Irene, soy Mercedes, de la calle Mayor. Te mando un audio para la exposición. Tengo una foto del cine de la plaza, de 1975. Mi hermana y yo solíamos ir todos los domingos por la tarde. La entrada era muy barata y solíamos comprar palomitas en el quiosco de al lado. La película solía empezar a las cinco. Los chicos solían sentarse atrás, y nosotras, adelante. Mi padre no solía venir: prefería escuchar el fútbol en la radio. Un domingo, en mitad de la película, se fue la luz y todo el cine empezó a cantar. ¡Qué noche! El cine cerró en 1990. Ahora mis nietos suelen ver películas en el celular. ¡Qué cambio! Mañana te llevo la foto al centro cultural. Un beso."
+    },
+    {
+      "id": 353,
+      "voice": "es-MX-DaliaNeural",
+      "rate": "-6%",
+      "text": "Hola, Valeria, soy Paula. ¡Perdón! Ya salí de la oficina, pero todavía estoy en el coche: hay muchísimo tráfico en la avenida. Hoy trabajé toda la tarde en un informe urgente. Antes vivía a cinco minutos de tu casa, ¿te acuerdas? Llegaba caminando. Ahora vivo en Tlaquepaque y ya no es tan fácil. Oye, ¿ya llegó Elena? Tengo muchas ganas de verla. Ah, y no te preocupes por el postre: ya tengo el pastel, lo compré ayer en la pastelería de la esquina. Creo que llego en media hora. ¡Nos vemos en un ratito! Un beso."
+    },
+    {
+      "id": 356,
+      "voice": "es-CO-SalomeNeural",
+      "rate": "-6%",
+      "text": "Hola, Elena, soy Rosa. Vi tu llamada perdida, perdona: estaba en el trabajo. Te cuento: mañana no voy a llegar a las nueve, porque voy a llevar a mi mamá al médico. Pero tranquila: llegaré a las once, más o menos, y te llevaré más palas y unos guantes. Mi hijo Mateo va a venir conmigo; le encanta trabajar con la tierra. Ah, y escuché el pronóstico en la radio: mañana por la tarde lloverá un poco. Entonces, ¿por qué no plantamos todo por la mañana? Yo creo que en julio comeremos unos tomates buenísimos. Bueno, te llamaré esta noche, después de la cena. ¡Un abrazo!"
+    },
+    {
+      "id": 358,
+      "voice": "es-MX-DaliaNeural",
+      "rate": "-6%",
+      "text": "Hola, don Ernesto, buenas tardes. Soy Rosa, la profesora del taller de cocina. Usted quiere hacer la sopa en casa con su nieta, ¿verdad? Pues aquí tiene la receta. Primero, lave bien las verduras: dos zanahorias, una cebolla, dos tomates y una papa. Corte todo en trozos pequeños, como hoy en clase. Después, caliente un poco de aceite en una olla y eche la cebolla. A los cinco minutos, ponga el resto de las verduras y un litro de agua. La sopa necesita unos treinta minutos a fuego medio. Al final, pruebe el caldo y, si hace falta, añada un poco de sal. Ah, y el sábado venga un poco antes, a las diez menos cuarto, porque vamos a hacer pan. ¡Hasta el sábado!"
+    },
+    {
+      "id": 360,
+      "voice": "es-MX-JorgeNeural",
+      "rate": "-6%",
+      "text": "Hola, Nuria, soy Iván. Mamá me contó lo de ayer: la alarma no sonó y te despertaste tarde. ¡Qué mala suerte! Pero llegaste a tiempo y mañana tienes la segunda entrevista. ¡Felicidades! Mira, en mi primera entrevista me puse tan nervioso que dije mi nombre dos veces. La señora de la entrevista se rio, yo también me reí y entonces me tranquilicé. Al final me dieron el trabajo. Bueno, mi consejo: esta noche acuéstate temprano y no te preocupes por la alarma. Yo te llamo a las seis y media, por si acaso. Y mañana, si te pones nerviosa, respira y habla despacio. ¡Mucha suerte, hermanita! Luego me cuentas."
+    },
+    {
+      "id": 361,
+      "voice": "es-ES-ElviraNeural",
+      "rate": "-6%",
+      "text": "Hola, mamá, soy yo. Gracias otra vez por la videollamada de anoche. ¡Qué sorpresa tan bonita! Cuando abrí la puerta y vi a todos mis amigos, me quedé sin palabras. Me puse muy roja, ya sabes que siempre me pasa. Y cuando te vi en la pantalla, me puse un poco triste, porque estás muy lejos. Pero luego me puse muy contenta. Javier me contó que se puso muy nervioso: yo llegué antes de la hora y la tarta todavía no estaba en casa. La fiesta terminó a las tres. El tío Ramiro se quedó dormido en el sofá, como siempre. Y hoy me quedo en casa todo el día, porque estoy muy cansada. Te llamo esta tarde. Un beso muy grande."
+    },
+    {
+      "id": 362,
+      "voice": "es-MX-DaliaNeural",
+      "rate": "-6%",
+      "text": "Hola, Paula, soy mamá. Ya vamos en el autobús de regreso a San Miguel. ¡Qué bonito es Guanajuato! Esta tarde Marcos y yo fuimos al museo de arte. A mí me encantaron los cuadros antiguos, y a Marcos le interesó mucho la sala de fotografía. Tu papá no vino con nosotros: le dolían los pies y le molestaba mucho el sol, así que nos esperó en la plaza, a la sombra, con un helado. Ahora está dormido aquí a mi lado. Lo único malo: nos faltó tiempo para el mercado. El lunes te cuento todo con calma. Ah, y te compré unos dulces típicos, porque sé que te encantan. Un beso grande."
+    },
+    {
+      "id": 363,
+      "voice": "es-CL-CatalinaNeural",
+      "rate": "-6%",
+      "text": "Hola, chicos, soy Lucía. Les mando este audio desde el aeropuerto. Todavía estoy emocionada: ¡no sabía nada de la fiesta! Marta, a ti te debo la sorpresa: el martes me escribiste con una excusa y yo te creí. Rubén, el álbum es precioso. Anoche le mandé fotos de todas las páginas a mi mamá, y le encantaron. Al señor Herrera le dejé una nota en su mesa, porque al final no lo vi para despedirme. ¿Le pueden dar las gracias de mi parte? Y Óscar, tus flores vienen conmigo en el avión. Mañana, desde Valparaíso, les mando una foto del mar. Y ustedes me tienen que visitar, ¿eh? Un abrazo enorme a todos."
+    },
+    {
+      "id": 364,
+      "voice": "es-MX-DaliaNeural",
+      "rate": "-6%",
+      "text": "Hola, Lorena, soy Rosa. Estoy en casa con todos los regalos encima de la mesa. ¡Muchas gracias por la fiesta de ayer! La idea fue tuya, ¿verdad? Hugo me lo contó en el ascensor. El álbum de fotos es precioso: anoche se lo enseñé a mi marido y le encantó. Las flores están en la cocina; me las trajo Pilar a casa en su coche, ¡qué amable! Pero hay un problema: no encuentro la tarjeta con las firmas. ¿Me la guardaste tú? Si la tienes, ¿me la das el jueves en el café? Ah, y tu libro de recetas: ya lo sé, te lo devuelvo pronto. Un abrazo muy fuerte para ti y para todos."
+    },
+    {
+      "id": 365,
+      "voice": "es-MX-DaliaNeural",
+      "rate": "-6%",
+      "text": "Hola, Mateo, soy Irene. Ya estoy en el hotel, todo bien por aquí. Te mando este audio por tres cosas. Primero, las plantas: riégalas mañana por la mañana, pero no las riegues mucho, que en el salón no hace calor. Segundo, mañana llega un paquete para mí. ¿Lo puedes recoger en la recepción del edificio? Si no puedes, no pasa nada: voy a recogerlo yo el lunes. Y tercero, la llave del buzón. Estoy buscándola en mi bolso y no está. Creo que está en la mesa de la entrada. Mírala, por favor, y escríbeme un mensaje. Y un beso grande para Nube. ¡Mil gracias, de verdad!"
     }
   ]
 }
