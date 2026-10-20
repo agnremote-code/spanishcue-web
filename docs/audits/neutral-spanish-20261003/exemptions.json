@@ -9756,6 +9756,30 @@
       "text": "Vos **tenés** razón. Vos **sos** el responsable.",
       "category": "regional-pedagogy",
       "reason": "Voseo enseñado a propósito como reconocimiento de concordancia con vos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g506.ts",
+      "text": "Ampliación: -ra con valor de condicional y «vos» antiguo · Extension",
+      "category": "regional-pedagogy",
+      "reason": "Nota histórica sobre el «vos» antiguo de respeto y el voseo americano actual."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g506.ts",
+      "text": "Para estudiantes fuertes o si queda tiempo. **1.** La forma en -ra también puede equivaler a un **condicional**, sobre todo con verbos como «querer», «deber», «poder» o «valer»: «**Quisiera** hablar con usted» (cortesía, plenamente actual), «**Debiera** pensarlo mejor» (= debería), «**Pudiera** ser que…» (= podría, culto), «Más te **valiera** callar» (= más te valdría, literario). **2.** En los textos antiguos, «**vos**» era un tratamiento de respeto para **una sola persona**, con formas de plural: «Vos, señora, sois la heredera». Hoy se diría «Usted, señora, es la heredera». El voseo americano actual («vos sos», «vos tenés») procede históricamente de él, pero hoy es un tratamiento de confianza con formas propias.",
+      "category": "regional-pedagogy",
+      "reason": "Nota histórica sobre el «vos» antiguo de respeto y el voseo americano actual."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g506.ts",
+      "text": "En una carta del siglo XVI: «Vos, señora, sois la legítima heredera». ¿A cuántas personas se dirige?",
+      "category": "regional-pedagogy",
+      "reason": "Nota histórica sobre el «vos» antiguo de respeto y el voseo americano actual."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g506.ts",
+      "text": "«Vos» antiguo de respeto: una persona con formas de plural. Hoy, «usted es».",
+      "category": "regional-pedagogy",
+      "reason": "Nota histórica sobre el «vos» antiguo de respeto y el voseo americano actual."
     }
   ]
 }

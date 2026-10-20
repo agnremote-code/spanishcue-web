@@ -10,12 +10,14 @@ test('teachers can discover each supported grammar planning page and topic throu
 });
 test('methodology starts in English for the teacher audience',()=>assert.equal(mod.isEnglishDefaultPath('/about'),true));
 
-const dataBuild=await build({stdin:{contents:'export * from "./app/growth/grammar.ts"; export * from "./app/growth/grammar-topics.ts"; export * from "./app/growth/teaching-proof.ts"; export {lessons} from "./app/lesson-catalog.ts"; export {teachingGuides} from "./app/teaching-guides.ts";',resolveDir:process.cwd()},bundle:true,write:false,platform:'node',format:'esm',metafile:true});
+const dataBuild=await build({stdin:{contents:'export * from "./app/growth/grammar.ts"; export * from "./app/growth/grammar-topics.ts"; export * from "./app/growth/teaching-proof.ts"; export {lessons} from "./app/lesson-catalog.ts"; export {teachingGuides} from "./app/teaching-guides.ts"; export {courseUnits} from "./app/grammar-classroom/curriculum.ts";',resolveDir:process.cwd()},bundle:true,write:false,platform:'node',format:'esm',metafile:true});
 const data=await import('data:text/javascript;base64,'+Buffer.from(dataBuild.outputFiles[0].text).toString('base64'));
 test('grammar discovery does not promote old reference ranges into advanced classrooms',()=>{
  assert.ok(data.grammarLessonsAtLevel('A1').some(x=>x.id===107));
  assert.ok(!data.grammarLessonsAtLevel('C1').some(x=>x.id===107));
- assert.deepEqual(data.grammarLessonsAtLevel('C2').map(x=>x.id),[156]);
+ // C2 lists the one older reference class plus the live C2 classes of the 236-unit course, nothing else.
+ const courseC2=data.courseUnits.filter(u=>u.level==='C2'&&u.status==='live'&&u.catalogId>=300).map(u=>u.catalogId);
+ assert.deepEqual(data.grammarLessonsAtLevel('C2').map(x=>x.id).sort((a,b)=>a-b),[156,...courseC2].sort((a,b)=>a-b));
  for(const code of ['A1','A2','B1','B2','C1','C2'])for(const card of data.grammarLessonsAtLevel(code)){
   assert.equal(data.lessons.find(x=>x.id===card.id)?.level,code);assert.equal(card.level,code);
   assert.ok(card.free ? card.href===card.lessonPath : card.href.startsWith('/resources/'),card.href);

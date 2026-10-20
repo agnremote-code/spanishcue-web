@@ -21,9 +21,10 @@ Checkpoint para retomar sin repetir trabajo. Se actualiza con cada tanda.
 | 14 | G149, G150, G152, G153, G155–G159, G161 (B2) | #241 | integrada en main (25c2170); se publica con la siguiente integración |
 | 15 | G163–G166 (B2), G168–G173 (C1) | #242 | lista, con audio |
 | 16 | G174, G176–G184 (C1) | — | lista, con audio |
-| 17 | G185, G187–G195 (C1) | — | lista; audio en el workflow |
+| 17 | G185, G187–G195 (C1) | — | lista, con audio |
+| 18 | G196–G200, G203, G204 (C1), G206–G208 (C2) | — | lista; audio en el workflow |
 
-Siguiente unidad pendiente después de la tanda 17: G196 (id 496).
+Siguiente unidad pendiente después de la tanda 18: G209 (id 509).
 
 ## Memoria del Worker
 
