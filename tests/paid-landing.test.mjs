@@ -4,10 +4,11 @@ import { readFileSync, existsSync, statSync } from 'node:fs';
 
 const read = path => readFileSync(new URL(`../${path}`, import.meta.url), 'utf8');
 
-test('Meta/Zeely landings render the paid template and keep noindex campaign metadata', () => {
+test('purchase landings render the paid template and use indexable metadata while other campaigns stay noindex', () => {
   const page = read('app/lp/[slug]/page.tsx');
   assert.match(page, /isPaidLandingSlug\(slug\)\) return <PaidLanding/);
-  assert.match(page, /index: false/);
+  assert.match(page, /index: isPaidLandingSlug\(slug\)/);
+  assert.match(page, /if \(isPaidLandingSlug\(slug\)\) return <PaidLanding/);
   const copy = read('app/marketing-landing/paid-copy.ts');
   assert.match(copy, /paidLandingSlugs = \['spanish-teacher-resources', 'online-spanish-teaching-resources'\]/);
   assert.match(copy, /titleLead: 'Stop building slides\.'/);
@@ -57,4 +58,22 @@ test('landing scroll stability: one shared founder-status request, stable pendin
   assert.match(worker, /pathname\.startsWith\('\/lp\/'\)\|\|administrative/);
   assert.match(read('app/layout.tsx'), /identityChecked=\{requestHeaders\.get\("x-spanishcue-identity-checked"\) === "1"\}/);
   assert.match(read('app/i18n/LocaleProvider.tsx'), /if \(requested === initialLocale\) \{\n\s+persistLocale\(initialLocale\);\n\s+return;/);
+});
+
+test('organic purchase pages target distinct search intents with crawlable content and routes to real resources', () => {
+  const metadata = read('app/marketing-landing/metadata.ts');
+  assert.match(metadata, /Interactive Spanish Lessons for Teachers \| SPANISHCUE PRO/);
+  assert.match(metadata, /Online Spanish Teaching Resources for Tutors \| SPANISHCUE PRO/);
+  assert.match(metadata, /purchaseTitles\[locale\]\[config\.slug\]/);
+  const landing = read('app/marketing-landing/PaidLanding.tsx');
+  assert.match(landing, /Ready-to-teach interactive Spanish lessons for teachers/);
+  assert.match(landing, /Online Spanish teaching resources for tutors on Zoom, Meet and Preply/);
+  assert.match(landing, /organicIntent\.points\.map/);
+  assert.match(landing, /organicIntent\.links\.map/);
+  assert.match(landing, /<Link href=\{link\.href\}>/);
+  const nav = read('app/growth/components.tsx');
+  assert.match(nav, /href: "\/lp\/spanish-teacher-resources", label: "Get PRO"/);
+  for (const hub of ['app/spanish-grammar-lessons/page.tsx', 'app/spanish-conversation-activities/page.tsx']) {
+    assert.match(read(hub), /\/lp\/spanish-teacher-resources/, hub);
+  }
 });

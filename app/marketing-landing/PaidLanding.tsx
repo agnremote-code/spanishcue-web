@@ -31,6 +31,52 @@ export default async function PaidLanding({ config, slug, pathname }: { config: 
  const t = paidCopy[locale];
  const c = campaignCopy[locale];
  const original = config.copy[locale];
+ const organicIntent = {
+  'spanish-teacher-resources': {
+   en: {
+    title: 'Ready-to-teach interactive Spanish lessons for teachers',
+    intro: 'SpanishCue is a browser-based alternative to disconnected printable worksheets and slide decks. Explore complete classroom sequences that link a clear objective to guided practice and meaningful speaking.',
+    points: [
+     'Choose by teaching level, from A1 foundations to advanced C2 practice, and by skill: grammar, conversation, listening, pronunciation or vocabulary.',
+     'Start with a real free lesson. Interactive worlds, audio stories and visual decisions provide a reusable classroom sequence rather than isolated questions.',
+     'Use the public lesson previews to check the objective before choosing full PRO library access.',
+    ],
+    links: [{href:'/spanish-teacher-resources',label:'Browse Spanish teacher resources'},{href:'/spanish-grammar-lessons',label:'Explore grammar activities'},{href:'/resources',label:'Preview the lesson library'}],
+   },
+   es: {
+    title: 'Clases interactivas listas para profesores de español',
+    intro: 'SpanishCue ofrece clases en el navegador en lugar de fichas sueltas y presentaciones desconectadas. Cada experiencia conecta un objetivo claro con práctica guiada y producción oral.',
+    points: [
+     'Elige entre niveles A1 y C2 y entre gramática, conversación, comprensión auditiva, fonética y vocabulario.',
+     'Empieza con una clase real gratuita. Los mundos interactivos, las historias con audio y las decisiones visuales forman parte de secuencias reutilizables.',
+     'Consulta los avances públicos de las clases antes de decidir si necesitas toda la biblioteca PRO.',
+    ],
+    links: [{href:'/spanish-teacher-resources',label:'Ver recursos para profesores'},{href:'/spanish-grammar-lessons',label:'Explorar clases de gramática'},{href:'/resources',label:'Ver la biblioteca de clases'}],
+   },
+  },
+  'online-spanish-teaching-resources': {
+   en: {
+    title: 'Online Spanish teaching resources for tutors on Zoom, Meet and Preply',
+    intro: 'Instead of juggling slides, PDFs and question lists during a video call, open one SpanishCue lesson in the browser and share your screen. The student sees the same prompts while you guide the conversation.',
+    points: [
+     'Before a one-to-one lesson: select the learner’s CEFR level and a speaking or grammar objective from the lesson previews.',
+     'During the video call: screen-share a 3D scenario, audio activity or step-by-step grammar classroom and use the built-in prompts to keep the learner speaking.',
+     'Between lessons: point learners to Autoestudio, the separate week-by-week Spanish self-study course, with free introductory weeks.',
+    ],
+    links: [{href:'/online-spanish-teaching-resources',label:'Explore online tutoring resources'},{href:'/guides/how-to-teach-spanish-online',label:'Read the online teaching guide'},{href:'/autoestudio',label:'See the student self-study course'}],
+   },
+   es: {
+    title: 'Recursos para dar clases particulares de español online',
+    intro: 'En vez de alternar entre diapositivas, PDF y listas de preguntas durante una videollamada, abre una clase SpanishCue y comparte pantalla. Tu alumno sigue la misma secuencia mientras guías la conversación.',
+    points: [
+     'Antes de la clase individual: elige el nivel MCER del alumno y un objetivo de conversación o gramática.',
+     'Durante la videollamada: comparte un escenario 3D, una actividad auditiva o una clase gramatical paso a paso, con consignas visibles.',
+     'Entre clases: comparte Autoestudio, el curso complementario de español por semanas, que tiene semanas iniciales gratuitas.',
+    ],
+    links: [{href:'/online-spanish-teaching-resources',label:'Ver recursos para clases online'},{href:'/guides/how-to-teach-spanish-online',label:'Leer la guía de enseñanza online'},{href:'/autoestudio',label:'Ver el curso de autoestudio'}],
+   },
+  },
+ }[slug][locale];
  const features: FeatureKey[] = ['worlds', 'forest', 'map', 'lessons', 'listening', 'homework'];
  const structuredData = { '@context':'https://schema.org', '@type':'WebPage', name:original.title, description:original.lead, url:canonicalUrl(pathname), isPartOf:{'@type':'WebSite',name:'SPANISHCUE',url:'https://spanishcue.com'}, audience:{'@type':'EducationalAudience',educationalRole:'teacher'} };
  const checkout = pro
@@ -94,6 +140,13 @@ export default async function PaidLanding({ config, slug, pathname }: { config: 
      <div className="plp-tile-copy"><span className={media.path ? 'plp-tag plp-tag-free' : 'plp-tag'}>{media.path ? t.freeTag : t.proTag}</span><h3>{title}</h3><p>{description}</p>{media.path && <LandingLink href={media.path} placement={`landing_feature_${key}_${slug}`}>{t.openLesson} →</LandingLink>}</div>
     </article>;
    })}</div>
+  </section>
+
+  <section className="plp-faq" aria-labelledby="plp-organic-intent-heading">
+   <h2 id="plp-organic-intent-heading">{organicIntent.title}</h2>
+   <p>{organicIntent.intro}</p>
+   <ul>{organicIntent.points.map((point) => <li key={point}>{point}</li>)}</ul>
+   <p>{organicIntent.links.map((link, index) => <span key={link.href}>{index > 0 ? ' · ' : ''}<Link href={link.href}>{link.label}</Link></span>)}</p>
   </section>
 
   <section className="plp-moments" aria-labelledby="plp-moments-title">
