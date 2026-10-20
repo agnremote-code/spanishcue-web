@@ -13,7 +13,7 @@ const require=createRequire(import.meta.url);
 await build({entryPoints:['app/grammar-classroom/GrammarPage.tsx'],bundle:true,platform:'node',format:'cjs',jsx:'automatic',external:['react','react-dom','next/link','next/navigation'],loader:{'.css':'empty'},outfile:'node_modules/.cache/grammar-live-page.cjs',logLevel:'error'});
 await build({entryPoints:['app/grammar-classroom/live/registry.ts','app/grammar-classroom/live/store.tsx','app/grammar-classroom/live/writing.ts'],bundle:true,platform:'node',format:'cjs',jsx:'automatic',external:['react','react-dom','three'],loader:{'.css':'empty'},outdir:'node_modules/.cache/grammar-live',logLevel:'error'});
 const Page=require('../node_modules/.cache/grammar-live-page.cjs').default;
-const {getLiveLesson,liveLessonIds}=require('../node_modules/.cache/grammar-live/registry.js');
+const {getLiveLesson,getLiveLessonInfo,liveLessonIds}=require('../node_modules/.cache/grammar-live/registry.js');
 await build({entryPoints:['app/grammar-classroom/lessons.ts'],bundle:true,platform:'node',format:'cjs',external:['react','react-dom','next/*'],loader:{'.css':'empty'},outfile:'node_modules/.cache/grammar-live-lessons.cjs',logLevel:'error'});
 const {classroomIds}=require('../node_modules/.cache/grammar-live-lessons.cjs');
 const {targets}=require('../node_modules/.cache/grammar-live/store.js');
@@ -26,7 +26,7 @@ function page(hash=''){
 async function mount(dom=page(),id=230){
   Object.assign(globalThis,{window:dom.window,self:dom.window,document:dom.window.document,HTMLElement:dom.window.HTMLElement,IS_REACT_ACT_ENVIRONMENT:true});
   dom.window.HTMLElement.prototype.scrollIntoView=function(){};dom.window.HTMLMediaElement.prototype.pause=function(){};dom.window.HTMLMediaElement.prototype.load=function(){};dom.window.scrollTo=()=>{};
-  const root=createRoot(document.getElementById('root'));await act(async()=>root.render(React.createElement(Page,{id})));
+  const root=createRoot(document.getElementById('root'));const element=await Page({id});await act(async()=>root.render(element));
   const $=s=>document.querySelector(s);const $$=s=>[...document.querySelectorAll(s)];
   return {dom,$,$$,click:async s=>{const el=typeof s==='string'?$(s):s;assert.ok(el,String(s));await act(async()=>el.click());},
     type:async(s,value)=>{const el=$(s);assert.ok(el,s);const proto=el.tagName==='TEXTAREA'?dom.window.HTMLTextAreaElement.prototype:dom.window.HTMLInputElement.prototype;await act(async()=>{Object.getOwnPropertyDescriptor(proto,'value').set.call(el,value);el.dispatchEvent(new dom.window.Event('input',{bubbles:true}));});},
@@ -39,6 +39,20 @@ async function mount(dom=page(),id=230){
 }
 const panel=(stage,step=0)=>`[data-stage-panel="${stage}"] [data-step-panel="${step}"]`;
 
+test('lessons survive the encrypted-blob round trip the Worker build uses (scripts/live-lessons.mjs)',async()=>{
+  const {liveLessonData,liveLessonIndexModule}=await import('../scripts/live-lessons.mjs');
+  const data=await liveLessonData();
+  assert.deepEqual(data.ids,liveLessonIds);
+  for(const id of liveLessonIds){
+    assert.deepEqual(JSON.parse(data.bodies[id]),getLiveLesson(id),`${id}: lesson is plain JSON`);
+    const {id:infoId,...info}=getLiveLessonInfo(id);assert.equal(infoId,id);
+    assert.deepEqual(info,data.info[id],`${id}: index matches the source`);
+  }
+  const index=liveLessonIndexModule(data);
+  assert.ok(Buffer.byteLength(index)<liveLessonIds.length*1024,'the Worker index keeps metadata only');
+  const probe=getLiveLesson(liveLessonIds.at(-1)).stages[0].steps[0].blocks.find(b=>b.kind==='concept'||b.kind==='lead');
+  if(probe)assert.ok(!index.includes(JSON.stringify(probe).slice(0,60)),'no lesson body in the index');
+});
 test('every grammar class is a live class: seven sections in the fixed order, every activity checkable',()=>{
   for(const id of classroomIds)assert.ok(liveLessonIds.includes(id),`${id}: every grammar class id has a live lesson`);
   assert.deepEqual(liveLessonIds.filter(id=>!classroomIds.includes(id)),[239,303,305,307,311,312,314,318,319,320,323,324,327,328,330,331,332,333,335,336,337,338,339,340,341,343,344,346,348,350,351,352,353,356,358,360,361,362,363,364,365,366,367,369,370,371,372,373,374,375,376],'live-only classes carry everything in their live lesson');

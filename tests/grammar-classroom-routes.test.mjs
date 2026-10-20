@@ -56,3 +56,9 @@ test('per-student live class sessions are an account API: anonymous visitors get
   assert.equal(put.status,401);
   const del=await fetch(origin+'/api/live-class?lessonId=239&studentId=abc',{method:'DELETE'});assert.equal(del.status,401);
 });
+test('encrypted live lesson blobs are not served to visitors',async()=>{
+  const lessons=(await import(new URL('../dist/server/private-lesson-assets.js',import.meta.url))).default;
+  for(const id of ['40','239',Object.keys(lessons).at(-1)]){
+    const response=await get(lessons[id].assetPath);assert.notEqual(response.status,200,id);await response.arrayBuffer();
+  }
+});

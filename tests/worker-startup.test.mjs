@@ -54,3 +54,18 @@ test("every paid chunk decrypts to its original JavaScript", async () => {
     assert.equal(`"${createHash("sha256").update(body).digest("hex")}"`, record.etag, path);
   }
 });
+
+test("live grammar lessons ship as encrypted blobs and decrypt in the Worker", async () => {
+  await import(pathToFileURL(resolve(server, "index.js")).href);
+  const lessons = (await import(pathToFileURL(resolve(server, "private-lesson-assets.js")).href)).default;
+  const ids = Object.keys(lessons);
+  assert.ok(ids.length >= 100, "every live lesson has an encrypted record");
+  const assets = { fetch: async (request) => new Response(await readFile(client + new URL(request.url).pathname)) };
+  for (const id of ids) {
+    assert.match(lessons[id].assetPath, /^\/_protected-lessons\/[0-9a-f]{64}\.bin$/, id);
+    const lesson = await globalThis.__spanishcueLiveLessons.load(assets, Number(id));
+    assert.equal(lesson.id, Number(id));
+    assert.equal(lesson.stages.length, 7, id);
+  }
+  assert.equal(await globalThis.__spanishcueLiveLessons.load(assets, 222), undefined);
+});
