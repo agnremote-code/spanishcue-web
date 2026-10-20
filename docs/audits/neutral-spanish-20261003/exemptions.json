@@ -8826,6 +8826,498 @@
       "text": "Mi prima espera un bebé. En cuanto nazca, va a dejar de trabajar unos meses. Cuando el bebé tenga un año, quiere volver a la oficina.",
       "category": "neutral-context",
       "reason": "Course class G098 (2026-10-20): «bebé» is the common noun (baby), not a voseo form."
+    },
+    {
+      "path": "app/grammar-classroom/live/audio/clips.json",
+      "text": "Hola, Sofía, soy Julia. Te mando este audio porque hoy no coincidimos en la academia. Te cuento cómo va mi primera semana. A los alumnos de la tarde ya los conozco a todos: son muy simpáticos y trabajan mucho. El grupo de los lunes parece difícil, pero no lo es; solo es un poco tímido. Los exámenes de prueba los corregí anoche, y las notas se las di hoy a Raúl. A él le pedí también una llave del aula tres, porque la mía no funciona. Ah, y el libro de B1 todavía no lo tengo: ¿me lo puedes pedir tú? De verdad, a mí me encanta trabajar aquí. Bueno, el viernes que viene nos vemos en la reunión. ¡Un abrazo!",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (escribí, perdí, salí, corregí…), reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g409.ts",
+      "text": "Tú haces las preguntas y tu alumno responde con experiencias reales. Si dice «volví llamar» o «repetí a…», tú repites su frase con la forma correcta y sigues con la repregunta.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (escribí, perdí, salí, corregí…), reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g409.ts",
+      "text": "Volví a leer una novela de mi adolescencia. La releí porque quería saber si me gustaba igual. La segunda vez la entendí mucho mejor.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (escribí, perdí, salí, corregí…), reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g409.ts",
+      "text": "(?<!\\p{L})(?:vuelv|volv)\\p{L}*\\s+a\\s+(?:llamó|llamé|vino|pasó|perdió|falló|salió|rompió|escribí|escribió)(?!\\p{L})",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (escribí, perdí, salí, corregí…), reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g409.ts",
+      "text": "Fui a ese restaurante en 2019, comí muy mal y nunca ___ a ir.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (escribí, perdí, salí, corregí…), reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g409.ts",
+      "text": "repetí a leer",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (escribí, perdí, salí, corregí…), reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g409.ts",
+      "text": "Imprimí el informe de nuevo.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (escribí, perdí, salí, corregí…), reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g409.ts",
+      "text": "Con un verbo de movimiento, «a» + infinitivo también puede expresar **finalidad**: «Salí de casa, pero **volví a buscar** el paraguas» = regresé para buscarlo. El contexto decide. Si quieres evitar la duda, di el lugar: «volví **a casa** a buscar el paraguas».",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (escribí, perdí, salí, corregí…), reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g409.ts",
+      "text": "«Salí del apartamento, pero volví a buscar las llaves». ¿Qué es lo más probable?",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (escribí, perdí, salí, corregí…), reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g409.ts",
+      "text": "«Salí» crea un movimiento: aquí «volver a buscar» es regresar para buscar. Sin ese contexto, podría significar «buscar otra vez».",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (escribí, perdí, salí, corregí…), reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g410.ts",
+      "text": "Este año [[aprendí a|blue]] cocinar pescado.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (escribí, perdí, salí, corregí…), reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g410.ts",
+      "text": "Aprendí … reconocer los cerros por sus colores.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (escribí, perdí, salí, corregí…), reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g410.ts",
+      "text": "Este año [[aprendí a|blue]]…",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (escribí, perdí, salí, corregí…), reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g410.ts",
+      "text": "Trato de escuchar un pódcast en español cada mañana. Todavía no me atrevo a llamar por teléfono en español, pero este año aprendí a escribir correos formales.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (escribí, perdí, salí, corregí…), reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g411.ts",
+      "text": "LE / LES… A + PERSONA · Le escribí a Julia (indirect object said twice)",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (escribí, perdí, salí, corregí…), reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g411.ts",
+      "text": "Ya lo viste en la clase 063: con el objeto indirecto, el español dice muchas veces el pronombre **y** la persona. Con la persona **delante** del verbo, le / les es **necesario**: «A Julia **le** escribí ayer». Con la persona **detrás**, el pronombre es opcional, pero **muy frecuente**: «**Le** escribí ayer a Julia». Con gustar, encantar, interesar o doler está **siempre**: «A Raúl **le** encanta su trabajo». Y concuerda: una persona → **le**; varias → **les**.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (escribí, perdí, salí, corregí…), reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g411.ts",
+      "text": "[[A Julia le escribí|blue]] ayer para darle la bienvenida.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (escribí, perdí, salí, corregí…), reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g411.ts",
+      "text": "Sí, siempre: «Las facturas **las** pagué», «A Julia **le** escribí».",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (escribí, perdí, salí, corregí…), reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g411.ts",
+      "text": "A Julia le escribí ayer.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (escribí, perdí, salí, corregí…), reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g411.ts",
+      "text": "A Julia escribí ayer.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (escribí, perdí, salí, corregí…), reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g411.ts",
+      "text": "Le escribí ayer a Julia.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (escribí, perdí, salí, corregí…), reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g411.ts",
+      "text": "Con «a Julia» delante del verbo, «le» es necesario: «A Julia le escribí ayer».",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (escribí, perdí, salí, corregí…), reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g411.ts",
+      "text": "[[Ese contrato todavía no lo tengo|blue]]. [[Le escribí al señor Ortega|orange]] ayer, pero no contesta.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (escribí, perdí, salí, corregí…), reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g411.ts",
+      "text": "«Le escribí al señor Ortega ayer, pero no contesta».",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (escribí, perdí, salí, corregí…), reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g411.ts",
+      "text": "Primera escucha: la idea general. Segunda escucha: tu alumno levanta la mano cada vez que oye un tema delante con su pronombre («los exámenes los corregí») y da una palmada con «lo es». Después, las preguntas.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (escribí, perdí, salí, corregí…), reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g411.ts",
+      "text": "«Los exámenes de prueba los corregí anoche».",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (escribí, perdí, salí, corregí…), reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g411.ts",
+      "text": "Hola, Sofía, soy Julia. Te mando este audio porque hoy no coincidimos en la academia. Te cuento cómo va mi primera semana. [[A los alumnos de la tarde ya los conozco|blue]] a todos: son muy simpáticos y trabajan mucho. El grupo de los lunes parece difícil, pero no [[lo es|teal]]; solo es un poco tímido. [[Los exámenes de prueba los corregí|blue]] anoche, y [[las notas se las di|blue]] hoy a Raúl. [[A él le pedí|violet]] también una llave del aula tres, porque la mía no funciona. Ah, y [[el libro de B1 todavía no lo tengo|blue]]: ¿me lo puedes pedir tú? De verdad, [[a mí me encanta|violet]] trabajar aquí. Bueno, el viernes que viene nos vemos en la reunión. ¡Un abrazo!",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (escribí, perdí, salí, corregí…), reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g411.ts",
+      "text": "[[Le escribí al señor Ortega|orange]], pero…",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (escribí, perdí, salí, corregí…), reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g411.ts",
+      "text": "Las facturas las pagué el jueves. A Julia la conocí el martes: parece seria, pero no lo es. El contrato todavía no lo tengo: le escribí al señor Ortega, pero no contesta. ¿Cansado? Un poco, sí, lo estoy.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (escribí, perdí, salí, corregí…), reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g411.ts",
+      "text": "Las facturas las pagué. A Julia le escribí ayer.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (escribí, perdí, salí, corregí…), reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g412.ts",
+      "text": "la ruta **de la que** te hablé · el bastón **con el que** subí",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (escribí, perdí, salí, corregí…), reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g412.ts",
+      "text": "Este es el bastón ___ subí a la montaña.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (escribí, perdí, salí, corregí…), reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g412.ts",
+      "text": "Pues yo llevo mis botas viejas, [[con las cuales|blue]] subí a Machu Picchu.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (escribí, perdí, salí, corregí…), reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g412.ts",
+      "text": "Este es el bastón. Subí al pico con este bastón.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (escribí, perdí, salí, corregí…), reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g412.ts",
+      "text": "Este es el bastón con el que subí al pico",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (escribí, perdí, salí, corregí…), reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g412.ts",
+      "text": "El sábado fuimos a Valdelagua, el pueblo [[al que|blue]] Nerea quería llevarnos desde hacía meses. [[Quien|teal]] organizó la visita fue ella, y lo hizo muy bien. Don Ramiro, [[que tiene ochenta años|violet]], nos abrió el molino y nos contó su historia. Después comimos en una casa rural [[en la que|blue]] hacen un queso buenísimo. En la bajada, [[los que llevaban bastones|neutral]] llegaron sin problemas; los demás, más despacio. Óscar, [[quien estrenaba botas otra vez|violet]], llegó el último, pero contento. Gracias a Alicia, la amiga [[con la que|blue]] descubrí este club, y a todos los socios. ¡Hasta la próxima ruta!",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (escribí, perdí, salí, corregí…), reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g412.ts",
+      "text": "(?<!\\p{L})con\\s+que\\s+(?:viajé|viajo|fui|hablé|hablo|salgo|salí)(?!\\p{L})",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (escribí, perdí, salí, corregí…), reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g415.ts",
+      "text": "[[Como|blue]]…, decidí…",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (escribí, perdí, salí, corregí…), reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g415.ts",
+      "text": "Como trabajo cerca de casa, decidí ir al trabajo en bicicleta. Y ya que ahora tengo más tiempo libre, me apunté a un curso de cocina.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (escribí, perdí, salí, corregí…), reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g415.ts",
+      "text": "Gracias a mi vecina, encontré trabajo en su empresa. Por culpa de una huelga de trenes, perdí una entrevista.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (escribí, perdí, salí, corregí…), reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g416.ts",
+      "text": "Cierre de Entender: tu alumno cuenta un pequeño problema de su semana con una causa y dos resultados: «Mi jefe estaba enfermo, así que la reunión se canceló. Por eso salí antes». Tú preguntas: «¿Y en un correo formal, cómo lo dices?».",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (escribí, perdí, salí, corregí…), reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g416.ts",
+      "text": "El año pasado mi vuelo a Lima se retrasó cinco horas, así que dormí un poco en el aeropuerto. No había restaurantes abiertos. Por eso cené unas galletas.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (escribí, perdí, salí, corregí…), reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g416.ts",
+      "text": "[[Por eso|orange]] perdí…",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (escribí, perdí, salí, corregí…), reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g416.ts",
+      "text": "Llegué a la boda tarde, de modo que no vi la ceremonia. Además perdí la conexión, así que tuve que pagar otro billete. Por eso ese viaje me costó el doble.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (escribí, perdí, salí, corregí…), reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g416.ts",
+      "text": "Tu compañero te cuenta: «Perdí el último autobús y mi móvil no tenía batería». Reacciona y saca una conclusión. · Your partner tells you about missing the last bus. React and draw a conclusion.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (escribí, perdí, salí, corregí…), reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g416.ts",
+      "text": "Mi vuelo salía a las seis de la mañana, ___ dormí en un hotel del aeropuerto.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (escribí, perdí, salí, corregí…), reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g416.ts",
+      "text": "Causa (vuelo muy temprano) → resultado (dormí en el aeropuerto): así que.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (escribí, perdí, salí, corregí…), reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g416.ts",
+      "text": "Perdí las llaves. ___ esperé a mi compañera de piso en un bar.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (escribí, perdí, salí, corregí…), reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g418.ts",
+      "text": "«[[Perdí|teal]] mi maleta». → Dijo que [[había perdido|teal]] [[su|violet]] maleta.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (escribí, perdí, salí, corregí…), reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g418.ts",
+      "text": "«Perdí mi maleta».",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (escribí, perdí, salí, corregí…), reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g418.ts",
+      "text": "Clara dijo «**Perdí** mi maleta»: indefinido → pluscuamperfecto. Pasó antes de la llamada.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (escribí, perdí, salí, corregí…), reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/audio/clips.json",
+      "text": "Hola a todos, habla Ernesto. Les dejo este audio porque anoche, con tanta gente en el vestíbulo, no pude hablar con cada uno. Cuando empezamos en agosto, les pedí que confiaran en mí y les exigí que llegaran puntuales todos los días. Ya sé que no fue fácil. A Valeria le hice repetir la escena de la carta hasta el cansancio, y a Diego no lo dejé improvisar ni una sola vez. Lo hice para que la obra respirara como un solo cuerpo. Anoche, cuando el público se puso de pie, me emocionó que estuviéramos todos juntos en el escenario, también Camilo y el equipo técnico. Y me encantó que tantos de ustedes trajeran a sus familias. Ahora, dos cosas prácticas. Lucía me pidió que les recuerde que el sábado hay doble función, a las cuatro y a las ocho. Y me sugirió que descansen la voz el viernes; estoy de acuerdo con ella. Gracias de corazón. Nos vemos esta noche.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (perdí, pedí, salí…) or tú imperative «dale», reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g422.ts",
+      "text": "Salí temprano para comprárselas.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (perdí, pedí, salí…) or tú imperative «dale», reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g422.ts",
+      "text": "Dale lo",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (perdí, pedí, salí…) or tú imperative «dale», reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g422.ts",
+      "text": "Dale el ramo a Clara.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (perdí, pedí, salí…) or tú imperative «dale», reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g422.ts",
+      "text": "Organizas una fiesta y un amigo te ayuda. Dale instrucciones sobre el regalo, las llaves y las bebidas. · Give a friend instructions for a party.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (perdí, pedí, salí…) or tú imperative «dale», reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g425.ts",
+      "text": "HECHOS · indefinido: perdí, sonó, estuve esperando una hora (events that move the story on)",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (perdí, pedí, salí…) or tú imperative «dale», reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g425.ts",
+      "text": "Perdí el tren. Tomé otro tren. Llegué a la boda.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (perdí, pedí, salí…) or tú imperative «dale», reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g425.ts",
+      "text": "[[¿A que no sabes qué me pasó?|teal]] [[Resulta que|teal]] [[perdí|orange]] el tren… [[Total, que|teal]] [[llegué|orange]] a la boda de milagro.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (perdí, pedí, salí…) or tú imperative «dale», reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g425.ts",
+      "text": "[[¿A que no sabes qué me pasó?|teal]] [[Perdí|orange]] el tren.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (perdí, pedí, salí…) or tú imperative «dale», reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g425.ts",
+      "text": "Primero salió el tren; después llegué yo. Lo perdí.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (perdí, pedí, salí…) or tú imperative «dale», reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g425.ts",
+      "text": "[[Al final|teal]] [[perdí|orange]] el tren. / [[Al final|teal]] todo [[salió|orange]] bien.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (perdí, pedí, salí…) or tú imperative «dale», reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g425.ts",
+      "text": "Corrí por todo el andén, pero ___ el tren se fue sin mí.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (perdí, pedí, salí…) or tú imperative «dale», reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g425.ts",
+      "text": "—Perdí el tren. —[[¡No me digas!|teal]]",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (perdí, pedí, salí…) or tú imperative «dale», reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g425.ts",
+      "text": "—Y cuando abrí la puerta, era mi vecina de abajo, empapada. —«___»",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (perdí, pedí, salí…) or tú imperative «dale», reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g425.ts",
+      "text": "Por fin perdí el tren.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (perdí, pedí, salí…) or tú imperative «dale», reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g425.ts",
+      "text": "Al final perdí el tren.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (perdí, pedí, salí…) or tú imperative «dale», reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g425.ts",
+      "text": "¡Uf! [[¿A que no sabes qué me pasó?|teal]] [[Perdí|orange]] el tren a Valencia.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (perdí, pedí, salí…) or tú imperative «dale», reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g425.ts",
+      "text": "[[Al principio|teal]] no [[encontrábamos|blue]] el problema, pero [[al rato|teal]] [[vimos|orange]] que mi lavadora perdía agua. La desconecté, limpié todo y salí corriendo.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (perdí, pedí, salí…) or tú imperative «dale», reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g425.ts",
+      "text": "[[Entonces|teal]] [[compré|orange]] un billete para el tren siguiente y le escribí a Irene. Llegué a Valencia a las doce y media, y la ceremonia [[era|blue]] a la una, en un jardín a las afueras.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (perdí, pedí, salí…) or tú imperative «dale», reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g425.ts",
+      "text": "¡Hola, Lucía! [[¿Sabes qué me pasó el viernes?|teal]] Fui a un concierto de jazz con unos amigos. [[Mientras|teal]] [[esperábamos|blue]] en la cola, empezó a llover, pero [[al principio|teal]] no nos importó. [[Al rato|teal]] abrieron las puertas y, cuando fui a enseñar la entrada, ¡no tenía el móvil! Lo [[había dejado|violet]] en el bar donde [[habíamos cenado|violet]]. [[Entonces|teal]] volví corriendo. Cuando llegué, [[estaban cerrando|blue]], pero [[de repente|teal]] el camarero me [[vio|orange]] y me dijo: «¿Buscas esto?». ¡Qué alivio! [[Total, que|teal]] me perdí las dos primeras canciones. [[Menos mal que|teal]] el resto del concierto fue increíble. ¿Y tú, qué tal el fin de semana? Un abrazo, Marcos",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (perdí, pedí, salí…) or tú imperative «dale», reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g425.ts",
+      "text": "—Resulta que perdí el tren. —¡No me digas! ¿Y entonces?",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (perdí, pedí, salí…) or tú imperative «dale», reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g425.ts",
+      "text": "Abrí la puerta y era mi vecina.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (perdí, pedí, salí…) or tú imperative «dale», reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g429.ts",
+      "text": "«Subí el volumen para que la música se ___ desde la última fila».",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (perdí, pedí, salí…) or tú imperative «dale», reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g429.ts",
+      "text": "«Les pedí que confiaran en mí y les exigí que llegaran puntuales».",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (perdí, pedí, salí…) or tú imperative «dale», reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g429.ts",
+      "text": "Hola a todos, habla Ernesto. Les dejo este audio porque anoche, con tanta gente en el vestíbulo, no pude hablar con cada uno. Cuando empezamos en agosto, [[les pedí que|blue]] [[confiaran|orange]] en mí y [[les exigí que|blue]] [[llegaran|orange]] puntuales todos los días. Ya sé que no fue fácil. A Valeria [[le hice repetir|teal]] la escena de la carta hasta el cansancio, y a Diego [[no lo dejé improvisar|teal]] ni una sola vez. Lo hice [[para que|blue]] la obra [[respirara|orange]] como un solo cuerpo. Anoche, cuando el público se puso de pie, [[me emocionó que|blue]] [[estuviéramos|orange]] todos juntos en el escenario, también Camilo y el equipo técnico. Y [[me encantó que|blue]] tantos de ustedes [[trajeran|orange]] a sus familias. Ahora, dos cosas prácticas. Lucía [[me pidió que|blue]] les [[recuerde|violet]] que el sábado hay doble función, a las cuatro y a las ocho. Y [[me sugirió que|blue]] [[descansen|violet]] la voz el viernes; estoy de acuerdo con ella. Gracias de corazón. Nos vemos esta noche.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (perdí, pedí, salí…) or tú imperative «dale», reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g429.ts",
+      "text": "Cuando Ernesto Salas me ofreció el papel de Inés, no imaginaba lo que me esperaba. Desde el primer día nos pidió que llegáramos a las siete y que dejáramos el celular en la entrada. Al principio me molestó que fuera tan estricto, pero pronto entendí por qué. Quería que cada gesto tuviera un sentido, así que me hizo repetir la escena de la carta hasta que la dije casi en un susurro. También me aconsejó que tomara clases de respiración para que mi voz llegara a la última fila sin gritar. Yo solo quería hacerlo bien, y él lo sabía. La noche del estreno, cuando el público se puso de pie, me emocionó que mi hermana estuviera allí, en la tercera fila. Ahora salimos de gira, y Ernesto ya nos ha pedido que descansemos antes de cada función. Esta vez pienso obedecer sin protestar.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (perdí, pedí, salí…) or tú imperative «dale», reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g430.ts",
+      "text": "Indefinido · le pedí",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (perdí, pedí, salí…) or tú imperative «dale», reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g430.ts",
+      "text": "Le pedí que **viniera** a las seis y media.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (perdí, pedí, salí…) or tú imperative «dale», reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g430.ts",
+      "text": "Mis padres querían que estudiara Derecho, pero yo elegí Periodismo. Ahora quiero que mi trabajo sea más tranquilo.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (perdí, pedí, salí…) or tú imperative «dale», reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g430.ts",
+      "text": "Organicé la cena de fin de año de mi empresa. Mi jefa me pidió que buscara un restaurante barato y yo les pedí a todos que confirmaran antes del día diez.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (perdí, pedí, salí…) or tú imperative «dale», reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g430.ts",
+      "text": "(?<!\\p{L})(?:quería|querías|queríamos|pidió|pediste|pedí|pidieron|dijo|dijiste|había\\s+pedido|gustaría|encantaría|gustó|alegró)\\s+(?:\\p{L}+\\s+)?que(?!\\p{L})",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (perdí, pedí, salí…) or tú imperative «dale», reviewed; not voseo."
     }
   ]
 }
