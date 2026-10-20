@@ -1,6 +1,6 @@
 # Board STATUS: the single source of truth for the next run
 
-_Last updated: 2026-10-17 by Alejandro, when BOARD-DECISION-002 was locked. Alejandro owns this file for the 2026-10-17 session._
+_Last updated: 2026-10-20 by the Tuesday SEO routine (scheduled cloud run; single facilitator session plus one fresh QA agent, see "Current work")._
 
 ## Owner decisions in force
 | Date | Decision |
@@ -32,7 +32,7 @@ Parallel streams: **3D = Sofia**, **technical SEO = Alejandro**, **QA/integratio
 |---|---|---|---|
 | 1 | LES-001 «La feria de Villaluz» A2 PRO 3D world (LESSON-DECISION-001 v5 + BOARD-DECISION-001 overlays) | Martin (content) → Sofia (build); G4 by Alejandro or a fresh agent; QA Martin | **Next**: Martin authors circles 2/3/4/5/8 + all listenings; Sofia delivers the Look-attribute contract (unblocks circles 1/6/7) and an effort estimate |
 | 2 | «Gustar y verbos como gustar» A1 PRO grammar class (`a1.gram.gustar`, `a1.gram.tambien-tampoco`, A2 ext. `a2.gram.doler`; house format of `new-lessons.json`) | Martin (content) → Sofia or a fresh agent (wiring); G4 Alejandro | after the Feria content |
-| P | Technical SEO, highest impact first (parallel stream) | Alejandro → Sofia (code review), Martin (QA) | in progress |
+| P | Technical SEO, highest impact first (parallel stream) | Alejandro → Sofia (code review), Martin (QA) | First fix = PR #224 (3D world resource pages, level honesty, breadcrumbs). Sofia APPROVE 2026-10-17; QA re-review and release in the 2026-10-20 routine (see Current work) |
 | P+1 | COMP-001 ProfeDeELE.com benchmark (plan below) | Alejandro + Martin | after the first technical SEO fix |
 | — | GROW-001 build | Sofia | **PAUSED** (content approved in #220, kept in `docs/board/content/`) |
 
@@ -50,6 +50,7 @@ Parallel streams: **3D = Sofia**, **technical SEO = Alejandro**, **QA/integratio
 | — | **COMP-001** ProfeDeELE.com benchmark: their offer, formats, pricing, the teacher queries they win, and the gaps SpanishCue can win with evidence. Feeds concept selection and SEO-002. | Alejandro (lead) + Martin (pedagogy) | next Tuesday SEO slot, or earlier if capacity allows |
 
 ## Owner data requests (open)
+- **R0 (2026-10-20, blocking SEO measurement):** Windsor.ai paused all reads: "reads are paused because you have 6 accounts connected and your Free plan includes 1 account". Every `searchconsole` query returns that placeholder row with 0 values. Fix: disconnect the 5 extra accounts at https://onboard.windsor.ai/app/ (keep `sc-domain:spanishcue.com`) or upgrade. The board may not buy paid plans. The owner was notified by push on 2026-10-20. Until this is fixed there is no fresh Search Console evidence; the last real numbers are from 2026-10-17 (PR #224 body).
 - **R1:** Search Console Page-indexing report, Core Web Vitals report and per-query impressions. The Windsor connector exposes only search analytics and sitemaps.
 - **R2:** GA Admin: which property `G-6C7DY2C5LN` reports to.
 - **R3:** a weekly aggregate-only D1 query (new accounts, first payments, opened/completed per 3D lesson). Agents never query production D1.
@@ -74,6 +75,12 @@ All five run on `claude-opus-5-5`, follow [ROUTINES.md](ROUTINES.md), and each i
 - Session 0 (lesson test) took 55 messages, about 15 of them caused by crossed messages over circle 6. That led to the lock rule.
 
 ## Current work and next action
+- **2026-10-20 (Tuesday SEO routine).** The board was **not convened** as three named agents. The facilitator session did the integration work, and one fresh agent acting as Martin (QA) did the independent re-review. No inter-agent dialogue happened beyond that one review request and report, so nothing new is archived in `transcripts/`. Subscription usage: **UNKNOWN**.
+  - Search Console: **BLOCKED** (R0 above). No rankings or traffic are reported for this run.
+  - Since the last STATUS: Codex merged #227 (Noche Abierta teacher tools), #228 (the two `/lp/` purchase landings made indexable) and #229 (commercial-intent landing copy, competitor wording in `docs/seo-strategy.md`). Production deploy 39249910157 for `9030409` succeeded, and the scheduled smoke monitor stayed green on 2026-10-19.
+  - PR #224 (technical SEO fix 1): merged `origin/main` (`9030409`, clean) and the stale board docs branch of draft #223 (BOARD-DECISION-002 + the ROUTINES save rule), so the decision record and this STATUS reach main in one PR with one writer. #223 is carried by #224. BOARD-DECISION-002 §1.4 "no deploys" was scoped to the 2026-10-17 session only; the 2026-10-16 routine authorization applies here.
+  - Open, not touched: #209 (Codex, Google Ads label, `merge` job red since 2026-10-16; not a board PR), #226 (draft, SC monogram), #225 (draft, COMP-001 evidence pass 1).
+  - **Next action (next Tuesday, or earlier capacity):** once R0 is fixed, pull 28-day page/query data and compare `/resources/*` 3D pages against the 2026-10-17 baseline (0 impressions on 125 `/resources/*` pages). Then COMP-001 pass 2 on PR #225, reconciling it with Codex's 2026-10-19 competitor wording in `docs/seo-strategy.md` (Lesson Here, ELETUTOR, Linguas). The 3D stream (LES-001 Feria) is unchanged: Monday/Wednesday slots.
 - **2026-10-17 (Alejandro):** BOARD-DECISION-002 locked (this PR). Next: Martin authors the LES-001 Feria content; Sofia starts the Feria engine and the Look-attribute contract; Alejandro runs the technical SEO audit and fix on a separate `claude/*` branch. All PRs stay draft this session.
 - SEO-001: done and verified in production (see PUBLISHED.md).
 - Board records PR #218 merged as `afe203f` (its deploy was in progress when the session closed; the next run should verify it with `gh run list`).
