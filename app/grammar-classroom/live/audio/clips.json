@@ -307,6 +307,66 @@
       "voice": "es-CO-SalomeNeural",
       "rate": "-6%",
       "text": "Hola, Hugo, buenas noches. Te mando este audio porque mañana llego tarde, a las diez, y tú preparas el desayuno. Es fácil, de verdad. La receta es así: primero se mezcla la harina con agua tibia, sal y un poco de queso. Se amasa bien, unos tres minutos, y después se forman bolitas y se aplastan con la mano. Pon la plancha a fuego medio. Las arepas se asan cinco minutos por cada lado y se sirven calientes, con mantequilla. Ah, y abre la terraza a las siete, porque el desayuno se sirve allí. En la cocina no se puede comer, ya sabes. ¡Mil gracias, Hugo! Nos vemos mañana."
+    },
+    {
+      "id": 377,
+      "voice": "es-MX-JorgeNeural",
+      "rate": "-6%",
+      "text": "Hola, Inés, soy Mateo. Perdona, voy a llegar tarde a la mudanza. Es que el coche no arranca, o sea, hoy voy en autobús. Los sábados hay menos autobuses, por eso llego más o menos a las doce. Mi plan es este: primero paso por la tienda de la esquina y compro cinta para las cajas, porque tú no tienes, ¿verdad? Luego voy directamente a tu casa nueva, es decir, a la calle Olmo, no a la antigua. Y por último, yo pido la cena: pizza para todos, así que no compres nada, ¿de acuerdo? Ah, otra cosa: ¿el ascensor funciona? Mándame un mensaje. ¡Ánimo, hermanita! Hasta luego."
+    },
+    {
+      "id": 379,
+      "voice": "es-MX-DaliaNeural",
+      "rate": "-6%",
+      "text": "Hola, Paula, soy Daniela, del 4.º A. Oye, quería pedirte un favor. Bueno, tres favores. Mañana me voy a Monterrey por trabajo y regreso el domingo en la noche. El sábado llega un paquete con unos libros. ¿Podrías recibirlo tú? El repartidor viene entre las diez y las doce. Otra cosa: ¿te importaría regar mis plantas el sábado? La llave está con la señora Ochoa; ya hablé con ella. Y, por último, ¿me harías el favor de sacar mi basura el sábado en la noche? El camión pasa el domingo muy temprano. Ya sé que son muchas cosas; por eso me gustaría invitarte a comer el lunes, en la fonda de la esquina. Si no puedes, no pasa nada, de verdad. ¿Podrías contestarme hoy? ¡Mil gracias, Paula!"
+    },
+    {
+      "id": 380,
+      "voice": "es-MX-DaliaNeural",
+      "rate": "-6%",
+      "text": "Buenos días y bienvenidos al Parque Natural Sierra Verde. Soy Rosa, una de las guías del parque. Antes de empezar, unas normas importantes. Primero, hay que pagar la entrada en la taquilla antes de entrar al parque. Los niños menores de doce años no tienen que pagar. También hay que llevar agua, porque en la ruta no hay fuentes. Todos los visitantes deben caminar solo por los caminos marcados con flechas verdes. Y algo muy importante: no deben dar comida a los animales, porque es malo para ellos. Si vienen con perro, tienen que llevarlo con correa. Y una buena noticia: hoy es martes, así que no hay que reservar la visita guiada. Sale cada hora desde el centro de visitantes. Muchas gracias y buena ruta."
+    },
+    {
+      "id": 382,
+      "voice": "es-CO-SalomeNeural",
+      "rate": "-6%",
+      "text": "Hola, Gabriel, soy Marina. Acabo de cerrar la librería y estoy muy cansada, pero muy feliz. Al abrir, a las diez, ya había seis personas en la puerta. Una vecina llegó corriendo porque quería ser la primera clienta. La gente siguió entrando toda la mañana y a las dos ya estaban vendidos todos los libros de cocina. Rubén pasó por la tarde y dice que la pared está muy bien pintada. Mañana es domingo y la tienda está cerrada, así que descanso. El lunes vuelvo a abrir a las diez. Ah, y antes de irme te dejé un regalo en el mostrador: es un libro, con tu nombre en la primera página. ¡Mil gracias por todo!"
+    },
+    {
+      "id": 383,
+      "voice": "es-CO-SalomeNeural",
+      "rate": "-6%",
+      "text": "Hola, Marta, soy Elena, tu vecina del 503. Don Héctor me dio tu número. ¡Bienvenida al edificio! Me preguntaste dónde hay un supermercado cerca: hay uno en la esquina, pero no recuerdo a qué hora cierra. Creo que a las nueve. Otra cosa: el viernes hay una reunión de vecinos en la portería. Todavía no sé a qué hora empieza; mañana te digo. Y una pregunta para ti: ¿sabes si tu apartamento tiene calentador nuevo? El mío no funciona bien y no sé a quién tengo que llamar. Ah, y dime qué día tienes libre: quiero invitarte a un café en mi casa. ¡Un abrazo!"
+    },
+    {
+      "id": 384,
+      "voice": "es-CO-SalomeNeural",
+      "rate": "-6%",
+      "text": "Buenas tardes, señora Ruiz. Le habla Rosa Pineda, del hostal Las Palmas, en Medellín. Recibí su mensaje sobre Julián Mora y con mucho gusto le cuento. Julián trabajó con nosotros cinco años, de 2019 a 2024. Siempre llegaba puntual, y cada sábado organizaba un paseo por el centro con los huéspedes. A los clientes les encantaba. En 2022 estuvo tres meses de encargado, cuando yo estuve enferma, y no tuvimos ni un problema. Ah, y ganó el premio al mejor empleado del año dos veces. Hablé con él hace una semana y me contó lo de la entrevista. Es una persona muy responsable. Si necesita más información, llámeme a este número. Un saludo."
+    },
+    {
+      "id": 385,
+      "voice": "es-ES-ElviraNeural",
+      "rate": "-6%",
+      "text": "Hola, Elisa, soy Noelia. No te preocupes por lo del lunes, de verdad. Te cuento: cuando llegué a la sala, eran las nueve menos cinco y la señora Ibarra ya estaba allí. Estaba un poco nerviosa porque tenía otra reunión a las once. Esperé diez minutos y luego empecé yo la presentación. Al final le gustó mucho el logo, así que todo salió bien. Y hoy he llamado a la imprenta: los carteles están listos para el viernes. Mañana vas al dentista, ¿verdad? Entonces, antes de salir, déjame la llave de la sala en recepción. Y mándame el teléfono de la señora Ibarra, por favor. Ah, y gracias por las galletas: estaban buenísimas. ¡Suerte mañana!"
+    },
+    {
+      "id": 389,
+      "voice": "es-CO-SalomeNeural",
+      "rate": "-3%",
+      "text": "¡Hola, Dani! Soy Paula. Valeria me contó que hoy es tu despedida y, como yo no puedo ir, te mando este audio. Primero, quiero que disfrutes mucho esta noche con tus amigos, que te lo mereces. Ya sé que estás un poco nervioso por el viaje, pero tranquilo: ojalá el vuelo no se retrase y ojalá encuentres pronto un apartamento bonito. Mamá espera que la llames todos los domingos, ya sabes cómo es. Y yo quiero ir a verte en diciembre, así que prepara el sofá. Ah, y una cosa más: espero que no te olvides del español con tanto francés, ¿eh? Bueno, hermanito, te quiero mucho. ¡Que te vaya súper bien en el laboratorio y que tengas un buen viaje. ¡Un abrazo enorme!"
+    },
+    {
+      "id": 390,
+      "voice": "es-CL-CatalinaNeural",
+      "rate": "-3%",
+      "text": "Hola, Rafa, soy Carolina. Ya pensé en tus preguntas, así que te mando un audio con todo. Primero, el departamento: te recomiendo que busques algo cerca de una estación de metro, porque por la tarde el tráfico es terrible. Mi hermano dice que en marzo hay muchos departamentos libres, así que tranquilo. Segundo, el clima: en marzo todavía hace calor de día, pero en la noche refresca bastante. Te aconsejo traer una chaqueta ligera, no el abrigo grande. Tercero, el trabajo: tu nueva jefa es muy puntual, así que te sugiero que llegues un poco antes el primer día. Y te pido una cosa: que me mandes la fecha del vuelo esta semana. ¡Quiero ir a buscarte al aeropuerto! Ah, y mi mamá dice que vengas a almorzar a la casa el primer domingo. No le puedes decir que no. ¡Un abrazo!"
+    },
+    {
+      "id": 391,
+      "voice": "es-CO-SalomeNeural",
+      "rate": "-3%",
+      "text": "Hola a todos, soy Lorena. Les cuento cómo va la salida del sábado a la Ruta de las Cascadas. ¡Ya somos catorce personas! Es verdad que la ruta es un poco larga: son doce kilómetros, con una subida fuerte al principio. Por eso es mejor que salgamos temprano: nos vemos a las siete en la plaza del mercado. Es importante que todos lleven dos litros de agua y algo de comer, porque en el camino no hay ninguna tienda. También es necesario que usen botas de montaña: con zapatillas de ciudad, en las piedras mojadas, es muy fácil resbalar. Está claro que va a hacer frío por la mañana, así que es buena idea llevar una chaqueta. Ah, y una cosa: es una pena que Nuria no pueda venir, porque tiene que trabajar, pero me parece genial que Óscar venga con nosotros por primera vez. Cualquier duda, me escriben. ¡Un abrazo!"
     }
   ]
 }

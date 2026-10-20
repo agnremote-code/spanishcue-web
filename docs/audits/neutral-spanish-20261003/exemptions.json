@@ -8478,6 +8478,264 @@
       "text": "Hola, Inés: Soy Marta Salcedo, de la habitación 12. Creo que perdí mi cargador ayer en el comedor. Es negro y pequeño. Esta mañana busqué en la habitación, pero [[no|teal]] encontré [[nada|orange]]. ¿[[Alguien|blue]] encontró un cargador? ¿O hay [[algo|blue]] en la caja de objetos perdidos? Hoy trabajo en el mercado todo el día. Si tiene tiempo, ¿puede preguntar [[a alguien|blue]] de la cocina? Muchas gracias. Un saludo, Marta.",
       "category": "neutral-context",
       "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/audio/clips.json",
+      "text": "Buenas tardes, señora Ruiz. Le habla Rosa Pineda, del hostal Las Palmas, en Medellín. Recibí su mensaje sobre Julián Mora y con mucho gusto le cuento. Julián trabajó con nosotros cinco años, de 2019 a 2024. Siempre llegaba puntual, y cada sábado organizaba un paseo por el centro con los huéspedes. A los clientes les encantaba. En 2022 estuvo tres meses de encargado, cuando yo estuve enferma, y no tuvimos ni un problema. Ah, y ganó el premio al mejor empleado del año dos veces. Hablé con él hace una semana y me contó lo de la entrevista. Es una persona muy responsable. Si necesita más información, llámeme a este número. Un saludo.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g377.ts",
+      "text": "«Como» (causa) va al principio, antes de la consecuencia: «Como llovía, no salí». Después de la consecuencia, usa «porque».",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g377.ts",
+      "text": "«Porque» normalmente va después de la consecuencia: «No salí porque llovía». Al principio de la frase, lo natural es «Como».",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g377.ts",
+      "text": "El año pasado tuve un día muy complicado: mi primer día en un trabajo nuevo. Primero, perdí el autobús.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g377.ts",
+      "text": "Perdí el autobús porque me desperté tarde. Como había mucho tráfico, el taxi tardó cuarenta minutos.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g377.ts",
+      "text": "Al final, todo salió bien: mi jefa fue muy amable y comí con mis compañeros nuevos.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g382.ts",
+      "text": "Aprendí a cocinar [[mirando|teal]] a…",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g382.ts",
+      "text": "El gerundio dice cómo: aprendí cocinando, voy caminando.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g382.ts",
+      "text": "Aprendí a cocinar mirando a mi abuela. Ahora aprendo español escuchando pódcasts y hablando con amigos.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g384.ts",
+      "text": "[[Viví|orange]] en Toronto [[un año y medio|orange]].",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g384.ts",
+      "text": "En la clase 230 viste: «**Vivo** aquí **desde hace** dos años» (sigue hoy). Hoy la situación **terminó**: «**Viví** allí dos años». Presente + desde hace: sigue. Indefinido + cantidad: terminó.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g384.ts",
+      "text": "Viví en Toronto desde hace un año y medio.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g384.ts",
+      "text": "Viví en Toronto un año y medio.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g384.ts",
+      "text": "«Desde hace» es para algo que sigue hoy (clase 230). Si ya terminó: indefinido + cantidad. (Finished: viví + amount of time.)",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g384.ts",
+      "text": "Cierre de Entender: tu alumno dice tres frases reales sobre su vida: una con «cuánto tiempo» («Viví … años en …»), una con un hábito («De niño, siempre…») y una con «hace» («Empecé a estudiar español hace…»).",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g384.ts",
+      "text": "Sí, [[a menudo|blue]]. Y después [[viví|orange]] [[un año y medio|orange]] en Toronto. Allí [[hablaba|blue]] inglés [[todos los días|blue]].",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g384.ts",
+      "text": "«Viví un año y medio en Toronto». Cinco años trabajó en Medellín.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g384.ts",
+      "text": "Los límites del período: indefinido («viví allí de 2015 a 2018»).",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g384.ts",
+      "text": "Buenas tardes, señora Ruiz. Le habla Rosa Pineda, del hostal Las Palmas, en Medellín. Recibí su mensaje sobre Julián Mora y con mucho gusto le cuento. Julián [[trabajó|orange]] con nosotros [[cinco años|orange]], [[de 2019 a 2024|orange]]. [[Siempre|blue]] [[llegaba|blue]] puntual, y [[cada sábado|blue]] [[organizaba|blue]] un paseo por el centro con los huéspedes. A los clientes les encantaba. En 2022 [[estuvo|orange]] [[tres meses|orange]] de encargado, cuando yo [[estuve|orange]] enferma, y no tuvimos ni un problema. Ah, y [[ganó|violet]] el premio al mejor empleado del año [[dos veces|violet]]. Hablé con él [[hace una semana|teal]] y me contó lo de la entrevista. Es una persona muy responsable. Si necesita más información, llámeme a este número. Un saludo.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g384.ts",
+      "text": "[[Viví|orange]] en … [[tres años|orange]].",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g384.ts",
+      "text": "[[Viví|orange]] allí [[de 2015 a 2019|orange]].",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g384.ts",
+      "text": "Viví en Puebla de 2012 a 2018. Después pasé un año en Monterrey. Ahora vivo en Ciudad de México desde hace siete años.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g384.ts",
+      "text": "Cuenta tú también dónde viviste y cuánto tiempo. Así tu alumno oye otra vez «viví … años».",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g384.ts",
+      "text": "Viví … años en…",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g384.ts",
+      "text": "viví",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g384.ts",
+      "text": "Estimada señora Ruiz: Le escribo por el puesto de recepcionista. [[Trabajé|orange]] en un hostal de Medellín [[de 2019 a 2024|orange]]. Allí [[siempre|blue]] [[empezaba|blue]] a las seis y [[cada sábado|blue]] [[organizaba|blue]] un paseo por el centro con los clientes. Después [[viví|orange]] [[un año y medio|orange]] en Toronto. Trabajaba en una cafetería y [[hablaba|blue]] inglés [[todos los días|blue]]. Conozco bien Cartagena: [[estuve|violet]] aquí [[tres veces|violet]] de vacaciones. Volví a Colombia [[hace dos meses|teal]] y ahora busco trabajo en un hotel. Muchas gracias por su tiempo. Atentamente, Julián Mora.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g384.ts",
+      "text": "Mide un período terminado: «Trabajé allí cinco años», «Viví en … de 2015 a 2019».",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g384.ts",
+      "text": "(?<!\\p{L})(?:viví|trabajé|estuve|estudié|pasé)\\s+(?:\\p{L}+\\s+){0,4}desde\\s+hace(?!\\p{L})",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g384.ts",
+      "text": "«Desde hace» es para algo que sigue hoy. Si ya terminó: **viví allí tres años**.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g384.ts",
+      "text": "estuve / viví / trabajé + tres años · de 2019 a 2024 · durante · toda la tarde",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g384.ts",
+      "text": "Escribe la frase de Marta en pasado. Empieza con «Viví».",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g384.ts",
+      "text": "Viví en Madrid de 2008 a 2012",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g384.ts",
+      "text": "Di cuándo con «hace». Empieza con «Abrí».",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g384.ts",
+      "text": "Abrí el hotel hace diez años",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g385.ts",
+      "text": "Cuando salí, [[llovía|blue]].",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g385.ts",
+      "text": "salí",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g385.ts",
+      "text": "Hola, Noelia: ¡Mil [[gracias por|violet]] lo del lunes! Te cuento qué pasó: [[salí|orange]] de casa a las ocho y cuarto, como siempre, pero [[llovía|blue]] y [[había|blue]] muchísimo tráfico. En la avenida [[hubo|orange]] un accidente y el autobús [[estuvo|orange]] parado veinte minutos. Además, el móvil no [[tenía|blue]] batería, así que no [[pude|orange]] llamar. Antes [[solía venir|blue]] en bici, pero ahora está en el taller. Hoy ya [[he hablado|teal]] con la señora Ibarra, pero todavía no le [[he enviado|teal]] el presupuesto. Su teléfono es el 600 123 456. La llave [[te la dejo|violet]] mañana en recepción. Las muestras de papel están en mi mesa: [[dáselas|violet]] a la clienta, por favor. [[¿Podrías decirle|violet]] a Ramón que llego a las once? Un abrazo, Elisa",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g385.ts",
+      "text": "Un hecho en indefinido: salí, hubo, pude… (an event in the indefinido)",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g385.ts",
+      "text": "(?<!\\p{L})(?:hubo|fui|fue|hice|tuve|estuve|estuvo|pude|dije|salí|tomé|llegué|esperé|llamé|perdí|\\p{L}{2,}ó)(?!\\p{L})",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g385.ts",
+      "text": "Cuenta qué pasó: «Salí a las ocho», «Hubo un accidente».",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (comí, salí, me vestí…) or general vocabulary, reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g380.ts",
+      "text": "vos",
+      "category": "regional-pedagogy",
+      "reason": "Course class G080 (2026-10-20): conjugation table and variety note teach the voseo form «vos tenés que» explicitly."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g380.ts",
+      "text": "**tenés que**",
+      "category": "regional-pedagogy",
+      "reason": "Course class G080 (2026-10-20): conjugation table and variety note teach the voseo form «vos tenés que» explicitly."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g380.ts",
+      "text": "«Vos» es la forma de Argentina, Uruguay y otras zonas de América; «vosotros» es la forma de España (clase 021). **Hay que** no cambia nunca: no tiene persona. (Hay que never changes.)",
+      "category": "regional-pedagogy",
+      "reason": "Course class G080 (2026-10-20): conjugation table and variety note teach the voseo form «vos tenés que» explicitly."
     }
   ]
 }
