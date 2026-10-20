@@ -10692,6 +10692,30 @@
       "text": "Dale, lo firmamos con fechas cerradas.",
       "category": "regional-pedagogy",
       "reason": "Clase 224: «dale» enseñado como marcador regional de acuerdo, y «me sentí» en primera persona."
+    },
+    {
+      "path": "app/grammar-classroom/live/audio/clips.json",
+      "text": "Buenas tardes y bienvenidos a «Palabras con historia». Hoy les cuento un caso de mi taller. Hace unas semanas, un juez jubilado me trajo sus memorias. El texto era espléndido; empero, y perdonen la broma, estaba lleno de «empero». Le propuse una regla sencilla: un arcaísmo por capítulo, como mucho. Protestó, mas acabó aceptando. Fíjense en esta frase suya: «No bien llegué al juzgado, comprendí que el trabajo me desbordaría». Funciona, porque son unas memorias y el tono admite cierta solemnidad. O esta otra: «Mi mentor, a la sazón presidente del tribunal, me dio un consejo». Perfecta: «a la sazón» significa «en aquel momento», no «por lo tanto». Otra cosa es el informe de una consultora que revisé este mes: anunciaba que la empresa cerraría una sede «eventualmente», cuando lo que quería decir era «al final». Mi consejo, por tanto, es usar estos conectores con intención, máxime cuando escriban para un público amplio, habida cuenta de que el lector que tropieza con una palabra rara deja de seguir el argumento. Sea como fuere, no los destierren: siquiera sea de vez en cuando, dan al texto un color que ningún «sin embargo» le da. Hasta el próximo jueves.",
+      "category": "neutral-context",
+      "reason": "Pretérito en primera persona (yo) en el audio y su transcripción, no voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/audio/clips.json",
+      "text": "Buenos días y bienvenidos a «Cuentas claras». Ayer el panel ciudadano debatió mi última columna y, como varios oyentes me han escrito, quiero precisar lo que dije y lo que no dije. No dije que la tarifa por tramos sea la solución. Dije que todo apunta a que reduce el consumo sin castigar a quien gasta poco, que no es lo mismo. También escribí, y lo mantengo, que no es descartable que perjudique a los hogares numerosos si el tramo se calcula por vivienda; de ahí que proponga calcularlo por persona. Por otra parte, muchos me preguntan por las fugas. La asociación vecinal tiene razón en lo esencial: perder casi cuatro de cada diez litros es difícil de justificar. Si bien renovar la red llevará años, nada impide empezar ya, máxime cuando el dinero de los tramos altos podría destinarse precisamente a eso. Sobre el supuesto aplazamiento de las obras: según la prensa local, se habrían retrasado dos veces, algo que la empresa niega. Yo no tengo datos para confirmarlo, así que no lo voy a afirmar. Con todo, hay algo en lo que coinciden todas las fuentes: este verano no nos queda más remedio que ahorrar. Que nadie se llame a engaño: es probable que, sin ese ahorro, en septiembre haya cortes. Hasta la semana que viene.",
+      "category": "neutral-context",
+      "reason": "Pretérito en primera persona (yo) en el audio y su transcripción, no voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "Buenas tardes y bienvenidos a «Palabras con historia». Hoy les cuento un caso de mi taller. Hace unas semanas, un juez jubilado me trajo sus memorias. El texto era espléndido; [[empero|blue]], y perdonen la broma, estaba lleno de «empero». Le propuse una regla sencilla: un arcaísmo por capítulo, como mucho. Protestó, [[mas|blue]] acabó aceptando. Fíjense en esta frase suya: «[[No bien|teal]] llegué al juzgado, comprendí que el trabajo me desbordaría». Funciona, porque son unas memorias y el tono admite cierta solemnidad. O esta otra: «Mi mentor, [[a la sazón|teal]] presidente del tribunal, me dio un consejo». Perfecta: «a la sazón» significa «en aquel momento», no «por lo tanto». Otra cosa es el informe de una consultora que revisé este mes: anunciaba que la empresa cerraría una sede «eventualmente», cuando lo que quería decir era «al final». Mi consejo, por tanto, es usar estos conectores con intención, [[máxime cuando|orange]] escriban para un público amplio, [[habida cuenta de que|orange]] el lector que tropieza con una palabra rara deja de seguir el argumento. [[Sea como fuere|violet]], no los destierren: [[siquiera sea|orange]] de vez en cuando, dan al texto un color que ningún «sin embargo» le da. Hasta el próximo jueves.",
+      "category": "neutral-context",
+      "reason": "Pretérito en primera persona (yo) en el audio y su transcripción, no voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "Buenos días y bienvenidos a «Cuentas claras». Ayer el panel ciudadano debatió mi última columna y, como varios oyentes me han escrito, quiero precisar lo que dije y lo que no dije. [[No dije que|teal]] la tarifa por tramos sea la solución. Dije que [[todo apunta a que|blue]] reduce el consumo sin castigar a quien gasta poco, que no es lo mismo. También escribí, y lo mantengo, que [[no es descartable que|blue]] perjudique a los hogares numerosos si el tramo se calcula por vivienda; [[de ahí que|violet]] proponga calcularlo por persona. Por otra parte, muchos me preguntan por las fugas. La asociación vecinal tiene razón en lo esencial: perder casi cuatro de cada diez litros es difícil de justificar. [[Si bien|violet]] renovar la red llevará años, nada impide empezar ya, [[máxime cuando|violet]] el dinero de los tramos altos podría destinarse precisamente a eso. Sobre el supuesto aplazamiento de las obras: [[según la prensa local|teal]], se [[habrían retrasado|blue]] dos veces, algo que la empresa niega. Yo no tengo datos para confirmarlo, así que no lo voy a afirmar. [[Con todo|violet]], hay algo en lo que coinciden todas las fuentes: este verano no nos queda más remedio que ahorrar. Que nadie se llame a engaño: [[es probable que|blue]], sin ese ahorro, en septiembre haya cortes. Hasta la semana que viene.",
+      "category": "neutral-context",
+      "reason": "Pretérito en primera persona (yo) en el audio y su transcripción, no voseo."
     }
   ]
 }

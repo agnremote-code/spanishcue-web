@@ -52493,6 +52493,2602 @@
     {
       "path": "app/grammar-classroom/live/lessons/g528.ts",
       "text": "Today you saw that the easiest thing to lose when reformulating is the degree of certainty. Class 229 focuses on exactly that: paraphrasing the speaker’s commitment to what they say precisely, without raising or lowering it."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "Elena edits the city newsletter; a research team has just published a study on night-time traffic noise and sleep, and her trainee Marcos has drafted the summary for residents. In class 221 you calibrated your own commitment; in 228 you adapted technical texts. Today you paraphrase someone else’s claim while keeping exactly their degree of certainty, who says it, and how far it reaches."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "An upgrade: a hint becomes proof, and a correlation becomes a cause. Nobody can tell from the paraphrase that the authors were cautious."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "Different wording, same caution, same source: es posible que does the work of podría, and relacionado keeps “associated”, not “caused”."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "A downgrade: a finding based on data is presented as a mere idea, which is unfair to the authors and misleads the reader in the other direction."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "The source has two hedges and speaks of association, not cause. A good paraphrase may change everything else but must leave that intact."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "The upgraded version changes two layers of commitment at once."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "Form is free; the author’s commitment, attribution and scope are not."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "Spanish offers several structures for each degree of certainty, and they are interchangeable within the same rung: possibility (puede que, es posible que, quizá, tal vez, podría + infinitive), probability (es probable que, probablemente, seguramente), strong convergent evidence (todo apunta a que). Paraphrasing means moving sideways along a rung, never up or down. Each structure brings its own mood, so changing the structure often means changing the verb form."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "Three structures on the same rung of possibility; the mood follows each one."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "Seguramente usually means “probably”, not “certainly”: it sits on the probability rung."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "Moving from strong evidence to bare possibility is a downgrade, even though both sound cautious."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "Same rung, colloquial register, indicative after a lo mejor."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "Probablemente takes no que and allows either mood."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "When you report a study, the reporting verb itself states how solid the claim is. Plantea or propone present a hypothesis; sugiere, indica or apunta a que present evidence that points somewhere; muestra or pone de manifiesto present a solid finding; demuestra, establece or confirma present proof. Upgrading (sugiere → demuestra) misleads readers; downgrading (establece → plantea) misrepresents the authors. Attribution matters too: según el estudio keeps your distance; como demuestra el estudio means you, the writer, endorse it. Stance verbs add a reading of the author’s attitude: reconoce for a limitation the authors concede, advierte for a warning, sostiene for an argued position."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "The hint stays a hint; según keeps the source visible."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "A firm result reported with an equally firm verb. Plantean would wrongly turn it into a guess."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "Sugerir que + indicative reports what the data indicate; + subjunctive reports a recommendation. If the source only hints at a link, the subjunctive invents advice."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "Plantea plus podría downgrades a firm finding into a hypothesis."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "Reconocen fits a limitation the authors concede; denuncian invents a complaint."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "Commitment is not only in the hedges. Quantifiers say how far a claim reaches: algunos, la mayoría and casi todos are three different claims. Conditionals make a claim depend on something else: si se confirmaran…, cabría… is not hay que. Concessions carry the limitation the author insisted on: drop aunque la muestra es pequeña and the claim grows. Negation has scope: no todos is not ninguno, and no se observaron diferencias (the study found none) is not no hay diferencias (there are none). Beware of todos… no: it is ambiguous, so write no todos or ninguno."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "Negating todos leaves room for some; ninguno closes it completely."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "The first reports an absence of evidence (subjunctive); the second reports evidence of absence."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "With todos before a negated verb, the reader cannot tell which reading you mean; rewrite it."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "La mayoría is a weaker claim than casi todos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "Report what the study did not find, not what does not exist."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "Reporting someone’s words in the past shifts tenses (creemos → creían; hemos medido → habían medido; haya → hubiera), persons (nuestros datos → los datos del equipo) and deictics (el año que viene → al año siguiente). If the statement still holds, the present is also possible: Ochoa dice que creen… What never shifts is the degree of certainty: creemos does not become saben, nor podría become será. When you turn a clause into a noun phrase, the hedge has to travel with it, usually as an adjective: es posible que estén relacionados → la posible relación; parece que mejoró → la aparente mejora. Drop posible and you have upgraded; write supuesta instead and you add a distance the author did not express."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "Present subjunctive becomes imperfect subjunctive; reconoció fits because he is conceding a limitation."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "The hedge moves into the adjective posible."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "Unpacking the noun: aparente becomes parece que."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "Backshift the subjunctive and keep the hedge."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "Posible carries the hedge; supuesto adds scepticism."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "Quantifier, attribution and hedge all survive."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "The hedge has been replaced by certainty."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "She praises the style first, then announces the real test: checking it against the source line by line."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "His headline is catchy, and that is exactly the problem."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "She names both shifts: certainty instead of two hedges, and causation instead of association."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "He adds a hedge, but from the wrong rung."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "A question headline plus apunta a una posible relación keeps both hedges and still sells the story."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "His second sentence generalises."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "Two scope errors at once: the wrong group and the wrong quantifier."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "He has turned a missing result into a positive claim."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "She explains negation scope: absence of evidence, not evidence of absence; the subjunctive fits the negated perception verb."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "Another flat assertion."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "Without the hedge and the concession, the claim about older residents grows far beyond the data."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "He restores the condition himself and explains its effect in plain words."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "Why does Elena reject “everything points to”?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "Which two scope errors does Elena find?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "How does Marcos handle the speed-limit idea in the end?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "Seguramente stays on the probability rung."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "Quantifier and minimum frequency both survive."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "An open possibility stays open."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "Keep the source and the fact that it is an opinion."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "The concession survives with another connector."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "According to the authors, noise may be linked to more broken sleep: attribution plus a same-rung hedge."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "Ochoa explained they could not rule out other factors: reported speech with the subjunctive shifted back."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "If the results were confirmed, measures against noise could be considered: the condition is kept."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "She retells the study with exactly the source’s caution."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "Which two words from the source does Elena highlight?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "What does she say about hours of sleep?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "How does she present the finding about the over-65s?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "What does she clarify about lowering night-time speed?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "move sideways along a rung, never up or down, and adjust the mood"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "keep the reporting verb’s strength and keep the source visible"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "quantifiers, conditions, concessions and negation scope are part of the claim"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "tenses, persons and deictics shift; certainty does not"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "A faithful paraphrase passes four checks line by line: reporting verb, rung of certainty with its mood, scope, and a visible source. Everything else is yours to change."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "Most of the experts consulted think the drought is unlikely to end this year."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "The prosecutor’s position, not a proven fact."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "Not all passed = some did not pass."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "The mayor said they might open the pool in June."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "The opening hours could be extended, provided the budget allows it."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "Carmen writes the gallery labels for an exhibition about a restored altarpiece. The technical report is full of hedges, and visitors must read exactly the same claims in simpler words."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "For strong students or spare time. Not every poder or deber is about certainty: pueden presentar alegaciones grants permission, so es posible que presenten distorts it. The DPD recommends deber + infinitive for obligation and deber de for probability, while also accepting deber alone for probability. A double hedge (parecen sugerir) stays double: neither collapsed nor multiplied."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "Deontic poder (permission) is not a hedge."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "Deber de expresses probability, not obligation or certainty."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "Keep the double hedge exactly double."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g529.ts",
+      "text": "Today you saw that a faithful paraphrase depends on small words such as si bien or no todos. Class 230 focuses on those pieces: rare connectors and specific values of familiar ones, so that every logical nuance of a source survives in your text."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "Inés, a copy editor, is revising the memoirs of a retired judge who loves rare words. Some of them enrich his text; others make it heavy or say something he doesn’t mean. You already know the C1 connectors; today you study low-frequency, high-register ones: their exact value, their register, and the point at which elegance turns into pedantry."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "Works anywhere, spoken or written."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "Reports, press, essays: formal, yet in everyday written use."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "Same contrast, but with an old-fashioned flavour: chronicle, memoir, fiction."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "What does “mas” add compared with “pero”? Only register: the logical relation is the same."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "Where does the literary “mas” fit? In memoirs with a literary tone, not in everyday or technical texts."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "Empero means “however” and is literary and archaic; like sin embargo, it can open the second sentence or sit between commas inside it. Mas, without an accent, is an unstressed conjunction meaning “but”: it always opens the second clause and is never moved inside it. With an accent, más is the adverb “more”. Antes bien and ahora bien (classes 190 and 156) remain the current formal options; con todo y con eso is an emphatic, colloquial “even so”."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "The court admitted the evidence; however, it gave it no weight: literary, like an old ruling."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "The defence, however, did not give up: empero can sit between commas."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "He tried to explain himself, but no one listened: mas opens the second clause."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "They told him he had no chance; even so, he appealed: emphatic and conversational."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "We waited two hours for him, but he didn’t turn up: the conjunction mas, no accent."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "Which sentence places “empero” correctly? Between commas inside the second sentence."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "I told him the exam was impossible and, even so, he sat it."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "No bien means “as soon as”, like en cuanto or apenas: indicative for past or habitual events, subjunctive for the future. A la sazón means “at that time, then”: it usually appears between commas after a name, giving the position someone held when the events happened; it does not mean “therefore”. Así las cosas (“things being so, with matters as they stood”) sums up a situation and introduces what was decided or follows; it is common in the press."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "No sooner had the session opened than the lawyer asked for a postponement."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "As soon as you have the conclusions, send them to me: future, so subjunctive."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "Carmen Ollero, then dean of the Bar Association, signed the manifesto: her position at that time."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "Two witnesses were missing and the expert was ill. With matters as they stood, the judge adjourned."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "In older texts you will see “no bien hubo llegado” (class 154). Today the simple past is enough: “no bien llegó”."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "No sooner had he signed the contract than he regretted it."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "The report was written by Gabriel Sotillo, then head of the department."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "As soon as the verdict is known, let me know."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "Habida cuenta de (que) means “given (that), considering”; the preposition de is required. Toda vez que is causal in current use (“since, given that”), with the indicative; it does not mean “every time”. Máxime (cuando / si) means “especially, all the more so since”; it never means “at most”. Amén de means “besides, apart from” and is literary, sometimes with a touch of irony. A mayor abundamiento belongs to legal writing: it adds a further argument to one that already suffices."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "Given the seriousness of the facts, the court refused bail: + noun."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "Since the deadline has passed, the claim cannot be accepted: cause, indicative."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "Don’t sign without reading, especially if the contract is in another language."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "Besides her experience, the new judge brings a great ability to listen."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "The claimant did not prove the damage. Furthermore, he filed out of time: a legal formula."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "Given that the building is listed, the façade cannot be altered."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "It’s better to postpone the trip, especially as snow is forecast."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "What does “toda vez que” mean here? Since, given that."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "So pena de + infinitive or noun means “on pain of”: so is the old preposition “under” (also in so pretexto de); it belongs to legal and administrative texts. A fuer de + adjective or noun (“as the … person I am”) is very literary: a fuer de sincero = “to be honest”. Siquiera (sea) + subjunctive is a literary concessive, “even if only”. Por ende means “therefore” and sounds stiff in conversation. En suma (class 189) sums up. Dicho lo cual (“having said that”) closes one point and moves on; sea como fuere (“be that as it may”) sets aside an open question and returns to the main line."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "Tenants must remove their furniture before the 30th or forfeit the deposit."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "To be perfectly honest, I found the second chapter boring: very literary, agrees with the speaker (a fuer de sincera)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "Stay with us, even if only for one night: literary concession with the subjunctive."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "The contract was never signed; therefore, it binds neither party."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "We don’t know whether the witness lied or was mistaken. Be that as it may, his statement is useless. Having said that, let’s move on."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "The fee must be paid before Friday, or you will lose your place."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "I don’t know if she’ll arrive in time. Be that as it may, we’ll start at nine."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "Give me five minutes, if only to say goodbye."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "It looks like an ordinary office, but it’s actually a former courthouse."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "What does “eventualmente” mean here? If need be, possibly."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "Inés, here’s chapter three. I’ve polished it a lot: there are sentences I’m proud of."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "I’ve read it already. The story is excellent; however… do you hear it? That’s how your text sounds: an “empero” every other line."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "It’s just that “sin embargo” seems so dull to me…"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "I’ll leave you one old-style sentence, the one about the 1987 trial: there the tone fits. Everywhere else, “pero” or “sin embargo”."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "All right. And the opening? “No sooner had I taken up my post in Ribalta than the mill case landed on my desk.”"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "Lovely: “no bien” means “as soon as” and it’s elegant in memoirs. I also like “Julia Arce, then clerk of the court”. But on page twelve you use “a la sazón” as if it meant “therefore”."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "Oh, can’t you use it to draw conclusions?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "No: it means “at that time”. To conclude you have “por ende” or, more simply, “por eso”. This sentence, on the other hand, is flawless: “Given that the archive was incomplete, I rebuilt the case from my notes.”"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "And “a mayor abundamiento”? I wrote it in hundreds of rulings."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "In a ruling, perfect; in memoirs for your grandchildren, it sounds like a judge’s robe. Besides, the chapter is solemn enough already."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "You’re taking away all my jewels."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "Only the ones that dazzle without shedding light. Be that as it may, the book is yours. I suggest a rule: one archaism per chapter at most, especially if you want your grandchildren to read it."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "What does Inés criticise in Federico’s style? He uses “empero” constantly."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "What mistake does Federico make on page twelve?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "Why does Inés advise against it in the memoirs? It is a legal formula and sounds pompous there."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "No sooner had I sat down in my office than the phone rang."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "My father, then a notary in Ribalta, never wanted me to study law."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "The witness contradicted himself three times; consequently, the jury stopped believing him."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "I never liked long trials, especially when the defendants were little more than children."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "He retired quietly, but his colleagues threw him an unforgettable farewell."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "Inés is revising a consultancy newsletter that wants to “sound prestigious”. Spot each connector that is wrong or forced."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "No sooner had the session ended than the judge left."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "Besides being expensive, the project is unnecessary."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "With matters as they stood, the court postponed its decision."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "Use them deliberately and sparingly, but don’t ban them."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "What rule did she suggest to the judge?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "Why does “no bien” work in the judge’s sentence?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "What did the consultancy mean by “eventualmente”?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "According to Inés, what happens to a reader who stumbles on a rare word?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "literary contrast; with an accent, más means “more”"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "a la sazón means “then, at that time”, never “therefore”"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "keep the de; toda vez que is causal; máxime means “especially”"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "por ende is fine in writing but stiff in conversation"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "Choose a rare connector for two reasons at once: its exact value and a register the text really needs. If it only “sounds learned”, cut it. And watch the false friends: eventualmente is not “eventually”, actualmente is not “actually”."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "No sooner had the door opened than the reporters poured in."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "The form must be submitted before the 15th, or you will lose your place."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "After years of negotiation, they finally signed the agreement."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "Given the lack of evidence, the judge dismissed the case."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "We’re out of coffee, so I’ll bring a pack tomorrow."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "Noelia is writing a cultural foundation’s annual report. Her notes are correct but too casual for the document: you raise their register with the connector given."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "For strong students or spare time. Sendos is distributive, “one each”; it doesn’t mean “both” or “big” and has no singular. Adjective position changes nuance: placed before the noun it evaluates or describes without singling out (literary); some adjectives change meaning (un pobre hombre = a poor wretch; un hombre pobre = a man without money). In old legal texts, toda vez que can be temporal: “once”."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "What does “sendos votos” mean? One dissenting opinion each."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "Which sentence uses “sendos” correctly?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "What does “un pobre hombre” mean? A poor wretch, not a man without money."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "In this old regulation, toda vez que means “once”."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g530.ts",
+      "text": "You can now choose learned connectors by value and register. Many of them depend on punctuation: some go between commas, others follow a semicolon or a full stop. Class 231 deals with advanced punctuation: semicolons, colons and parenthetical asides. It is the natural next step: the exact connector needs the exact pause."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "A university is preparing a collective book on the network of irrigation channels that supplied the city for three centuries. Lucía, the editor, is revising all eleven chapters; Gabriel wrote the central one. After the commas of classes 197 and 203, this class covers the marks that structure long academic sentences: semicolons, colons, asides inside asides, quotation marks, ellipses and question marks mid-sentence, following the official RAE-ASALE spelling rules."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "With commas everywhere, the main border between the two clauses gets lost among the minor ones."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "A mark that ranks above the comma separates two closely related clauses that already contain commas."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "Also correct: it separates more and presents the two facts as separate statements."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "The word tres announces the list, and the colon opens it."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "Two clauses, the second with its own comma for the missing verb: a semicolon marks the main border."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "The semicolon marks a stronger break than a comma and a weaker one than a full stop. The Ortografía gives it three main jobs: separating independent clauses that are closely linked in meaning; separating the items of a complex list when each item already contains commas, with a comma usually before the final y; and standing before connectors such as sin embargo or por tanto when the clauses are fairly long (if they are very long, a full stop is better). It can also precede pero when both halves are long and contain commas. What follows it is always lowercase."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "Two independent clauses with a clear parallel: the semicolon keeps them together while separating them."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "Each item already has a comma standing in for the verb, so semicolons separate the items; a comma goes before the final y."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "A connector between two fairly long clauses: semicolon before it, comma after it."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "The first half is long and full of commas, so a semicolon before pero makes the main contrast visible."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "Semicolon between the clauses, a comma for the missing verb, lowercase after."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "A fronted subordinate clause takes a comma, not a semicolon."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "Semicolon before the connector, comma after it."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "A colon makes the reader pay attention to what follows. It introduces a list after a word that announces it, or closes a list placed first, before the word that sums it up. Between two clauses with no linking word, it signals cause, consequence, conclusion or explanation. It also introduces direct quotations and ends letter greetings. In running text the next word is lowercase; quotations and the line after a greeting start with a capital. It never separates a verb or a preposition from its complement."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "Cuatro series announces the list; the colon opens it."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "The list comes first; the colon leads to the word that sums it up."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "The second clause gives the cause, with no porque: lowercase after the colon."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "A direct quotation after a colon starts with a capital letter."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "Two related facts side by side, with no claim about which caused which."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "The second clause is presented as the result of the first: the colon means “and so”."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "A colon cannot sit between a verb or preposition and what completes it. Either drop it or add a word that announces the list, such as tres or los siguientes. No colon before reported speech with que either."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "Without an announcing word, the list is what son introduces, so no colon."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "The second clause gives the reason, and the colon shows it without porque."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "Lowercase after a colon in running text; the colon fits because the first part announces the second."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "In class 197 you saw commas, dashes and brackets for asides. When an aside contains another one, you change the mark so the levels stay visible: brackets inside dashes, dashes inside brackets, and square brackets for a detail inside something already in brackets. Square brackets also mark what the writer adds to a quotation and, with an ellipsis inside, the words left out. The main sentence’s comma or full stop comes after the closing mark."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "The dashes open the main aside; the brackets hold a second aside inside it."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "Here the main aside is in brackets, so the inner one goes between dashes."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "A date inside something already in brackets goes in square brackets."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "Square brackets add a clarification by the person quoting; […] shows that words were left out."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "Dashes outside, brackets inside: repeating the same mark hides the levels."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "Your own addition inside a quotation goes in square brackets."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "Spanish uses angle quotes first, then double and single quotes. The full stop, comma, semicolon or colon of the whole sentence goes after the closing quote; a question or exclamation mark that belongs to the quotation stays inside, and the full stop still follows the closing quote. An ellipsis is exactly three dots, never four, and never follows etc.; a comma or semicolon may come after it. Opening ¿ and ¡ go where the question begins. No full stop after ? or !; the next word is lowercase if the sentence goes on, as in a string of short questions separated by commas."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "The full stop of the whole sentence goes after the closing quote."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "The question mark belongs to the quotation and stays inside; the full stop still goes outside."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "An ellipsis can be followed by a comma; the sentence goes on in lowercase."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "A string of short questions separated by commas: lowercase after each one; the sentence ends at the last ?."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "Capital letter at the start of the quotation, full stop after the closing quote."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "Etc. never takes an ellipsis, and an ellipsis never has four dots."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "The question starts mid-sentence, so lowercase, and no full stop after the question mark."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "No mark between a preposition and what follows it."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "The question mark goes inside the quote; the sentence’s full stop goes outside."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "Gabriel, I’ve read your chapter twice. The argument is brilliant; the punctuation, less so."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "I suspected as much. Where do we start?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "That colon splits the verb from what completes it. Either drop it or add a phrase that announces the list."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "And the list of mills? Each one has its date and I end up with commas everywhere."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "Use semicolons between the items there, and a comma before the final y."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "Fine. And the conclusion of the second section? I wrote that nobody cleaned the channels: they silted up within a generation."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "That one is very good: the colon expresses the consequence, and you carried on in lowercase, which is right."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "Thank goodness. And the Albornoz quotation? I copied it as it was, with the full stop inside the quotes."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "The full stop goes outside. And after a colon that introduces a quotation, a capital letter."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "There’s still the long aside at the end. It’s already between dashes and has another clarification inside."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "The inner one goes in brackets. If the outer aside were in brackets, the date would go in square brackets."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "I’ll fix it this afternoon… and without a single “etc.” followed by dots, I promise."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "What does Lucía think of Gabriel’s chapter?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "Why is the colon in the first sentence wrong?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "What does Lucía say about the sentence on the silted channels?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "Gabriel dictated his concluding paragraph into his phone and it came out with no punctuation at all. Choose the correctly punctuated version of each sentence."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "The colon opens the announced list; semicolons separate items that already contain commas."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "A colon introduces the explanation; lowercase follows."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "Semicolon before sin embargo, comma after it."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "Colon, capital letter, full stop outside the closing quote."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "Dashes outside, brackets inside."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "The comma opens an apposition inside the item, which is why the items need semicolons."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "The first part announces what the second spells out."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "The full stop ends the whole sentence, so it always goes outside."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "The notarial archive holds two collections: wills and contracts."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "The convents paid half; the chapter, the rest."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "The map, drawn by a surveyor whose name we don’t know, shows every mill."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "She wants all chapters to follow the same punctuation rules before printing."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "What should they do with a colon straight after son?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "When does a capital letter follow a colon?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "How should a date inside brackets be marked?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "What does Lucía say about the deadline?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "a stronger break than a comma; lowercase after it"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "they announce, explain or conclude; never between a verb and its complement"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "a different mark for each level"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "the sentence’s own mark goes outside the quotes"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "Before punctuating, find the sentence’s main border and choose its mark: a semicolon if it separates two parts of the same rank, a colon if the second part spells out what the first announces. Then move down to the minor borders such as commas and asides. If you cannot justify a mark, it probably doesn’t belong there."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "The guest speakers are Ana Ruiz, Luis Prado and Rosa Gil."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "Three researchers travelled: one to Lima, another to Quito and the third to Bogotá."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "The director asked whether the index was ready."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "We reviewed minutes, maps, contracts and so on."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "The initial budget covered restoring the three mills; however, work stopped in 2019."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "Irene, an ecologist, is preparing the abstract of a paper for a science journal that follows the official punctuation rules. Choose the version she can submit."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "The study has two aims: measuring water quality and comparing the three rivers."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "Samples were taken in three rivers, each in a different month."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "The results are worrying: nitrate levels have doubled."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "For strong students or spare time. In legal and administrative documents, a colon after a capitalised verb such as CERTIFICA is followed by a capital letter. Your own additions inside a quotation go in square brackets. A comma may follow an ellipsis. A string of questions is either one sentence, with commas and lowercase, or several, with capitals and no commas; mixing commas and capitals is wrong."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "After CERTIFICA and a colon, the next word is capitalised."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "Your addition inside a quotation goes in square brackets."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "A comma may follow an ellipsis; four dots or etc. plus an ellipsis are wrong."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "Commas with lowercase, or capitals without commas; never both."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g531.ts",
+      "text": "You can now punctuate a complex academic text and justify every mark according to the official rules. Class 232 stays in the same territory: academic spelling and the cases where the norm accepts more than one option, such as solo and sólo. It is the natural next step: after punctuation, the spellings and accents that also shape the quality of a text."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "Lucía is the copy editor of a history journal, working on the proofs of an article by a Mexican historian. Back in class 23 you learnt that question words take an accent; today you work like a professional proofreader, applying the 2010 Ortografía and telling apart three things: what the norm requires, what it allows (two valid forms) and what a publication’s house style decides."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "Since 2010 guion counts as a monosyllable for spelling purposes, so the accent is now simply wrong and must be corrected."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "Both spellings are correct; a proofreader leaves the author’s choice alone and only checks it is used consistently."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "Decimal point and comma are both valid; the journal standardises on the comma, which is an editorial decision, not a correction of an error."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "Both decimal signs are valid; unifying them is house style."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "An accepted doublet: keep the author’s form, consistently."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "As a rule, monosyllables never take a written accent. The diacritic accent is the exception: it tells apart two words spelt the same, one usually stressed and one usually unstressed. The list is closed, so you do not extend it to other monosyllables: ti, fue, dio, vio, fe and pie never take an accent. The same logic separates aún (todavía, stressed) from aun (incluso, hasta, siquiera, unstressed)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "dé is the subjunctive of dar; de is the preposition."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "sé is “I know” (saber); se is the pronoun."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "mas without an accent means pero; it belongs to formal, literary prose."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "aún = todavía (still/yet); in aun así, aun means incluso (even so)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "ti never takes an accent: there is no unstressed twin."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "Here aun means “even”, so no accent."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "Question and exclamation words keep their accent without question marks too, when they introduce an indirect question or exclamation after verbs such as saber, preguntar, explicar, depender or ignorar. The test: if you can turn the clause into a direct question, it takes the accent. Relatives and conjunctions (que, donde, cuando, como) are unstressed and carry none. Watch the four forms of porque: the conjunction of cause, the question por qué, the noun el porqué (the reason) and por + que (preposition plus relative or conjunction)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "Two indirect questions: ¿Cuándo cerró? ¿Quién lo compró?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "An indirect exclamation (¡Qué poco se ha estudiado!) keeps the accent."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "porque gives the cause; el porqué is a noun meaning “the reason”."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "por + relative que (= por la que), and por + conjunction que after optar por."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "Indirect question: por qué."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "With an article, meaning “the reason”: el porqué."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "Five changes from the 2010 Ortografía. (1) The adverb solo and the demonstratives are written without an accent, even when a sentence could be read two ways; the RAE’s 2023 note added that a writer who sees a real risk of ambiguity may put the accent on the adverb, but the general rule is no accent. (2) Words like guion, truhan, fie, hui or rio count as monosyllables for spelling and take no accent, however you pronounce them. (3) o between figures has no accent: 3 o 4. (4) Prefixes such as ex- are joined to the base: exdirector. (5) Long numbers group thousands with a space: 12 500."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "Ambiguous: “only at night” or “alone at night”? Reordering removes the doubt without any accent."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "rio (he laughed) is an orthographic monosyllable; río (river) has two syllables in hiatus and needs the accent."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "hui, like fui, has no accent."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "guion: no accent, whatever your pronunciation."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "One-word base: prefix joined."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "The rule follows sound, not spelling: historia starts with the vowel sound /i/, so e; hielo starts with a diphthong whose first sound behaves like a consonant, so y. And a question opening with y keeps it: ¿Y Isabel?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "Days, months and offices: lower case."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "Group thousands with a space."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "An accepted variant, used consistently: leave it."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "Both valid; México is the recommended one."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "She separates spelling corrections from style changes before going into detail."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "He explains his old habit: the pre-2010 rule let speakers who pronounced a hiatus write the accent."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "The criterion is now conventional, not based on each speaker’s pronunciation."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "He points to a sentence where he used the accent on solo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "She recognises the ambiguity and the 2023 allowance, but prefers a rewording that makes the accent unnecessary."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "He suspects inconsistency between two prefix decisions."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "She explains that the two spellings follow the same rule applied to different bases."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "He asks about number formats that are habitual in his country."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "She separates a norm (thousands with a space) from a house-style choice (decimal comma)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "He worries that a Spanish editor will impose Spain’s spellings."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "She respects his variety and only asks for consistency."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "He accepts the remaining corrections on capitalisation."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "Why did Mateo write guión with an accent?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "How does Lucía fix the solo sentence?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "Which change is house style, not a correction?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "sí as a reflexive pronoun after a preposition takes the accent."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "Indirect question about quantity, agreeing with ejemplares."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "aún = todavía here."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "Subjunctive of dar needs the diacritic accent."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "After no sé, an indirect question: qué."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "Nobody knows why he signed only with his initials: indirect question plus solo without an accent."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "The former prime minister visited the press in September: prefix separated before a two-word base, month in lower case."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "Even so, the workshop printed 12,500 copies: aun = incluso, thousands with a space."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "He accepts the norm, keeps his valid variants and checks one doubt."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "Why does he accept guion without an accent?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "How did he fix the sentence about the printer?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "What does he say about the decimal sign?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "Why does he think por qué is two words with an accent?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "a closed list of pairs; other monosyllables never take an accent"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "the 2023 note allows the accent on solo only when the writer sees real ambiguity"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "capitals keep their accents too"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "choose one form and keep it throughout"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "For every change ask: is it the norm (always correct it), an accepted variant (respect it, demand consistency) or house style (unify it, but it is not an error)? A good editor applies the norm strictly and never mistakes their own variety for the standard."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "Three diacritic accents: dé, té, él."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "rio without an accent; prefix joined."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "The 2023 note: optional accent only with real ambiguity."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "Accepted variants, used consistently."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "Rocío is preparing the labels for an exhibition on printing at a university museum, and asks you to update three sentences taken from an old catalogue."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "For strong students or spare time. An accent can change the meaning of a whole sentence: no tengo qué comer (I have nothing to eat) vs no tengo que comer (I don’t have to eat). Aun cuando means aunque and has no accent. Academic disciplines are lower case in general use but capitalised as the names of courses, chairs or faculties."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "With qué: nothing to eat; without it: no obligation to eat."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "aun cuando = aunque: no accent."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "Course name and faculty name are capitalised here."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g532.ts",
+      "text": "Today you checked the correctness of words and the consistency of variants across a text. Class 233 moves up to the whole text: how to pick up an idea many paragraphs later without losing the reader."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "A foundation is about to publish an evaluation report on a mobile library. The editor keeps writing the same question in the margin: who is “this”, who is “she”? In class 510 you kept track of referents within one long sentence; today you follow them across paragraphs and chapters: how an anaphoric chain is built, when a pronoun is enough and when you need the noun again, how to sum up what has been said and how to announce what comes next."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "Two paragraphs separate the first mention from “Ella”, and another woman has appeared in between, so the pronoun cannot do the job."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "Name plus role brings the referent back; from here on, “ella” or a tacit subject can take over again."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "Why does “Ella” fail in version 1?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "What allows the text to go on with “ella” after version 2?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "A referent that runs through a long text forms a chain: it is introduced with a full noun phrase and then picked up with lighter forms: a tacit subject or a pronoun, a synonym or a hypernym (a more general word: the bus → the service), and an encapsulating noun that sums up a whole stretch of text. A practical criterion guides the choice: the closer and more salient the referent, the lighter the form; the farther back it is, or the more candidates compete with it, the more explicit the form has to be. A tacit subject works when the topic has not changed; after a new paragraph, another candidate or a change of topic, go back to the noun."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "Full noun, then a tacit subject and an object pronoun: the referent is close and has no rival."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "“El servicio” is a hypernym: more general than “bibliobús”, it fits once the reader knows there is only one service."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "The encapsulating noun sums up the two facts just described and turns them into a new topic."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "Which form fits after three chapters?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "What goes in the gap?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "An encapsulating noun (este fenómeno, esta decisión, dicha propuesta, tal situación) packs a whole clause or paragraph into a noun phrase, so the next sentence can build on it. The noun also classifies what was said: calling it a “problem”, a “measure” or an “objection” is already an interpretation, so choose it with care. “Dicho / dicha” is formal and typical of reports and administrative prose; it goes before the noun without an article (dicha propuesta) and sounds bureaucratic if repeated. “Tal” works as a determiner without an article (tal situación, tales medidas). The neuter pronouns “esto”, “eso” and “ello” pick up an idea, not a noun."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "The noun “objection” sums up the mayors’ view and lets the text follow it across chapters."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "“Dicha” is formal and report-like; it goes straight before the noun, with no article."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "“Tal” works as a determiner here, with no article; the noun turns the closure into a topic."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "Cataphora points forward: the pronoun or demonstrative comes first and its content follows, usually after a colon: “Lo diré claramente: …”, “Conviene recordar lo siguiente: …”, “Las razones son dos: …”. It creates expectation and suits openings and conclusions. Metadiscourse refers to the text itself and guides the reader across long distances: retrospective (como se ha visto, como se ha señalado en el apartado 2, según lo expuesto) or prospective (a continuación, más adelante, como se verá en el capítulo 5). In a long report it replaces the reader’s need to flip back."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "“Lo” points forward to the statement after the colon, which receives all the emphasis."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "One expression sends the reader back, the other forward; both save page-flipping in a long report."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "Which sentence uses “dicho” correctly?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "What does “son dos” do?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "In a text, demonstratives point to positions. “Este” and “ese” pick up what has just been mentioned; “ese” is very common as a neutral anaphoric. “Aquel” points to what lies farther back in the text or in time (en aquel momento, aquel primer año). When two referents are mentioned together, “este” or “este último” points to the nearer one, the last mentioned, and “aquel” to the farther one; “el primero… el segundo” follows the order of mention. These tools only work if the order is fresh: after a paragraph or a reordering, go back to the nouns."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "“Esta” is the nearer referent (the town library), “aquel” the farther one (the bus); here gender and order point the same way, but in a pair of the same gender only the order decides."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "“Esta última” points to the last woman mentioned, the teacher; it works only right after the pair."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "Ordinals follow the order in which the measures are announced."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "The teacher, mentioned last, proposes the reading club."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "Swap the order and the librarian becomes the one who proposes it: reorder a sentence and the references move with it."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "What depends on the foundation?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "Which expression best refers to the programme’s first year, now long past?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "School tradition teaches you to avoid repetition, but in long expository texts elegant variation is risky: if the bus becomes “the vehicle”, “the mobile unit” and “the van”, the reader may think a new object has appeared. Key terms in a report are repeated on purpose. Variation works with a clear hypernym (el servicio) or a synonym introduced explicitly once. Three more situations call for the full noun: after a change of topic or section, a pronoun cannot jump over the new topic; after a long absence, the referent comes back with a reminder (Rocío Andrade, la bibliotecaria); and when two referents share gender and number, use names or roles, “la propuesta de Lidia” instead of “su propuesta”, or reorganise the sentence."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "The synonym is introduced once as an apposition; later, the key term is simply repeated."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "“Su idea” would be ambiguous between two women; “de + name” settles it."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "What is the risk here?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "How do you remove the ambiguity?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "Which version suits a report?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "Chapter three is well documented, but there’s a margin note on page seven: who is “she”?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "The librarian; I introduce her at the start of the section."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "Another woman appears in between and two paragraphs have gone by: bring the referent back with name and role, then the pronoun works again."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "And the end of the section? I wrote “This phenomenon recurs in almost every village.”"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "Summing up is right, but the noun is vague: a precise encapsulating noun tells the reader what kind of thing it was."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "Then, about teachers and families, I wrote: “The latter ask for more books in other languages.”"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "It works because of the order of mention; if you reorder the previous sentence, the referent changes with it."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "What about calling the bus “the mobile unit” so I don’t repeat myself?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "Far from the first mention, a new name suggests a new thing; in a report, repeating the key term is precision, not poverty."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "And I wanted to open chapter four with: “I’ll put it bluntly: the results depend on people, not on the vehicle.”"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "Love it. In the conclusions, three chapters later, “this objection” isn’t enough: name it and point back to chapter 2."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "Why isn’t “ella” enough on page seven?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "What does Inés object to in “Este fenómeno”?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "What does Inés suggest for the conclusions?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "A paragraph from chapter 1 of the report. Follow each expression back to what it refers to."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "What is the tacit subject in (2)?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "Whose cost is “su coste”?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "What does “Esa objeción” sum up?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "What is the problem with “la biblioteca móvil”?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "What does “este dato” refer to?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "What is “el servicio” in (5)?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "An encapsulating noun plus a reminder lets a referent travel across chapters."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "Cataphora: “lo” announces the statement after the colon."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "Retrospective metadiscourse plus an encapsulating noun."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "She praises the new draft and points out specific reference problems."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "Why can’t she tell what “esta medida” means?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "What did she think when she read “la furgoneta”?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "Where should the mayors’ objection be picked up again?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "When does “esta última” work, according to Inés?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "The farther the referent and the more competitors, the more explicit the form; key terms are repeated."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "It sums up and classifies what was said; choose a precise noun."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "They depend on the order of mention, so use them right after the pair."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "It announces what comes next and guides the reader between distant parts."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "For every pronoun, demonstrative or synonym, ask whether someone opening the report at this page could tell what it refers to. If there is distance, a change of topic or a rival of the same gender and number, go back to the full noun. And don’t vary key terms for elegance’s sake: in expository writing, well-placed repetition is precision."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "Which form brings the librarian back?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "What is “lo” here?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "Which proposal is meant?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "Which version is recommended?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "Which expression best recalls an idea from chapter 2?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "For strong students or spare time. Associative anaphora: a definite noun phrase can be presented as known without prior mention if it can be inferred from an earlier referent (a village has a square). “El citado / el mencionado / el referido” belong to administrative and legal prose and sound stiff elsewhere. After a collective noun, careful writing keeps the singular; switching to a plural to refer to its members happens, mostly outside formal prose, but can be disconcerting in a report."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "Why does “la plaza” take the definite article?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "Where is “el citado convenio” most natural?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "Which option best suits a report?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g533.ts",
+      "text": "Today you tracked referents across whole chapters: when a pronoun is enough, when to return to the noun, how to sum up and how to announce. You also saw that an encapsulating noun is never neutral: calling something a “problem” or an “objection” already interprets it. Class 234 looks critically at such choices: syntactic bias and the presuppositions a text slips in without stating them."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "At an adult media-literacy workshop, the coordinator hands out two papers from the same day. The council has voted to close the night tram service. The facts are identical; the headlines are not. Today you learn to read how grammar distributes responsibility: who is made the subject, who disappears, and what gets slipped in without being argued."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "Nobody seems to decide anything: the impersonal se removes the agent, and “readjust” sounds like routine maintenance rather than closure. The purpose clause adds a justification as if it were a fact."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "There is a responsible party, but “leaves… without” casts residents as victims and “thousands” inflates the real figure. It also skips the plenary vote."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "Who, what, when and why, with the precise verb and the official figure. The reader is left to judge for themselves."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "The decision is there; the decision-maker is not."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "Vague quantities cannot be checked, and this one pushes the number up."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "In lesson 483 you chose between active, passive and impersonal forms according to topic and register. Critical reading asks a different question: how much responsibility does each form assign? The active makes the agent the subject; the passive with “por” demotes it; the passive without “por” and passive or impersonal se remove it but still imply someone; event verbs like “producirse” and intransitive verbs like “morir”, “desaparecer” or “subir” remove even the idea that someone acted. The facts stay the same; the share of blame changes."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "Classic example from critical discourse analysis: the first names who fired; the second turns the shooting into something that simply happened."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "“Murió” has no agent at all, as with an illness; “fue abatido” (was shot down) implies someone acted but does not say who."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "With an intransitive “subir”, prices rise like the tide; with the transitive verb, someone raises them."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "“Resultar + participle” reports the outcome without the cause: legitimate when nobody knows what happened, a bias when the cause is known and left out."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "Which version makes it look as if nobody did anything?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "The grammar is complete; the information is not."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "A nominalisation turns an action into a thing: “la subida de precios”, “la supresión del servicio”. The agent, the tense and often the reason all disappear, and, as you saw in lesson 519, the definite article presents the event as an established fact. Nominalisations are normal in headlines and reports; critical reading simply asks who is behind them."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "The closure becomes the subject; who decided it is nowhere to be seen."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "Housing “becomes more expensive” by itself; neither owners, banks nor policy appear."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "The sentence is about the decision-maker, so that is who the reader evaluates."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "The sentence is about those affected: the loss is in focus and the decision-maker drops out, even though the figure is exact."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "What comes first is usually the topic. A headline that starts with those affected and one that starts with the institution can be equally accurate and still steer the reader differently. That is not manipulation in itself; it is a choice worth noticing."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "The sentence is complete; the employer is missing."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "Both can be true; what changes is whose story it is."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "Placed before the noun, an evaluative adjective tends to be read as a known, defining feature (an epithet): “la polémica supresión” takes the controversy for granted and tucks it inside the noun phrase, where it is hardly ever challenged. Placed after the noun, the adjective classifies the noun more openly, so the evaluation is easier to see. In a straight news item, the neutral choice is usually no evaluative adjective at all: give the fact that would justify it (“criticised by the residents’ federation”)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "Who was waiting? The epithet assumes general expectation."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "The same idea with its source and date: now it can be checked."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "The criticism is assumed, not reported."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "“Up to” sets a ceiling, not a typical result."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "Epistemic modality lets a text suggest without asserting: “podría”, “al parecer”, “no se descarta que” put an idea in the reader’s mind while committing nobody to it. Deontic modality works the other way: “hay que”, “es necesario”, “no hay alternativa” present a choice as a necessity, and the impersonal form hides who decided it was necessary and who will pay for it."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "Nobody promises anything: the conditional keeps everyone off the hook."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "A political choice dressed as a fact of nature; alternatives exist, they were simply not chosen."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "Inclusive “we” takes in the audience: the burden is shared out rhetorically, even if only some will actually bear it."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "Exclusive “we” means only the speaker’s group, which keeps the credit for itself."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "The suspicion is planted; nobody has claimed anything."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "An inclusive “we” turns management’s decision into everyone’s duty."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "When the cause is known, leaving it out is a bias."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "Óscar, you start with the lead from “Crónica de Montesur”."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "“The reorganisation of the night service has been approved, a measure which, according to numerous experts, was unavoidable.”"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "Approved by whom? Neither the municipal government nor the council appears. And the minutes make it crystal clear."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "Besides, “reorganisation” sounds like changing timetables. It doesn’t even say the service is being scrapped. And the experts, with no names or numbers, act as a source without being one."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "Well spotted. Now the one from “Montesur Hoy”."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "“The controversial closure of the night tram leaves thousands of residents stranded. How much longer will the municipal government keep turning its back on the neighbourhoods?”"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "This one does have a culprit, but the question takes it for granted that the government is turning its back on the neighbourhoods, which is exactly what would need proving."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "Both quote the councillor for transport, Pilar Serrano: “We all have to make an effort.”"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "All of us? I don’t use the tram at night. The effort falls on the people who work the early-morning shifts."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "And the council’s press release says: “We have guaranteed the daytime service.” That “we” no longer includes the residents."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "One “we” shares out the sacrifice and the other keeps the credit. Lucía, how would you headline it?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "“Council votes to scrap night tram from 1 March: it affects about 1,800 riders and will save 2.4 million a year.”"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "What is missing from the first lead?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "Who really bears the effort?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "What makes her headline neutral?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "Prices “rise” by themselves in the first headline."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "What does the question take for granted?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "Vague quantity posing as a source."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "Whose evaluation is it?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "Council scraps the night tram from 1 March: active, real agent, exact verb."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "Who decided to scrap the night service? The critical reader’s first question."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "The municipal company will not renew forty temporary contracts: neither “restructuring” nor “mass layoffs”."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "She criticises both papers and offers a neutral alternative."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "What does the impersonal se do?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "What is wrong with the second paper?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "Who is really included in “we all”?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "Her definition of critical reading."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "Elena addresses her listeners as “ustedes”, the general plural of address in Latin America; in Spain it signals a formal register, and a more casual host might say “vosotros” (“Fijaos…”). Notice that her criticism takes no side: she points out devices in both papers and on both sides of the debate."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "The active makes the decision-maker visible and accountable; the passive with “por” keeps them, but in the background."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "Agentless forms are fine when the agent is unknown or obvious; they become bias when the agent is known and left out."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "Evaluation enters without argument: through adjective position, unverifiable quantities, modality and loaded vocabulary on either side."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "What is taken for granted, and who is placed inside or outside the “we”."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "For any text, ask who does what, what is taken for granted, and who is inside the “we”. To rewrite neutrally: the real agent, the precise verb, a sourced figure, and never an invented culprit."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "Which one names who did it?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "A nominal presupposition plus “forces us to”."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "Impersonal se with a personal object."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "Do not invent a cause, and do not hint at one."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "Who gets the credit in that “we”?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "Recover the agent without a loaded question."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "Who proposes, how much, and how it will be decided."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "Two devices to fix: the agentless noun and the vague figure."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "For strong students or spare time. 1. Vocabulary frames too: “an avalanche of applications”, “a haemorrhage of jobs”, “a wave of protests” turn human actions into natural disasters, with no agent and a built-in evaluation. 2. In scientific writing, “se observó…” hides nobody: the research team is obvious and the genre leaves it out. The same se that biases a news item is neutral in a lab report, so critical analysis always considers the genre."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "How does the metaphor frame the visitors?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "Genre matters: here the agent is obvious."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "Agents, figure, place and reason, with no disaster metaphor."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g534.ts",
+      "text": "Today you read closely how a text distributes responsibility and slips in evaluation without argument. Class 235 takes you to the other side: you write and revise your own argumentative essay, where every evaluation must be argued, every concession well built and every claim attributed."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "An essay for a collective volume on whether the city should cap visitor numbers in its old town. The editor’s verdict: the draft informs but doesn’t yet think. No new structures today: you write and revise a full C2 essay, combining everything from the C2 writing block."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "True, but it commits to nothing: there is no position anyone could argue with."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "It takes a side, sets its scope and its condition, and already signals the objection the essay must answer."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "A C2 thesis is arguable: it states what you defend, how far, and on what condition."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "The facts are there; what’s missing is a position that organises them and tests itself against objections."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "At C2 the thesis is neither lukewarm nor absolute: it names a position, limits its scope and states its condition, often in a “not X nor Y, but Z” shape. The conclusion mirrors it but does not copy it, and it doesn’t summarise paragraph by paragraph either: it says what the thesis looks like after surviving the strongest objection. It may close with a proposal or a single, well-placed question."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "Position plus condition: siempre que takes the subjunctive."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "A “third way” thesis built as an antithesis: it rejects two extremes at once."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "A synthesising conclusion: it reframes the debate instead of listing the arguments again."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "Which thesis is nuanced? Position, scope and condition."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "A synthesis shows what the thesis looks like once the objection has been answered."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "Fairness persuades. State the objection as its best advocate would (no straw man), grant what is true in it, limit its reach, refute it with data or reasoning, and draw the consequence. Never attack the people who hold it (ad hominem). Es cierto que and si bien take the indicative because you accept the fact; de ahí que normally takes the subjunctive; de modo que expresses consequence with the indicative and purpose with the subjunctive."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "The anchor sequence: grant, limit, conclude. Subjunctive sea after de ahí que."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "Si bien + indicative: a formal concession of a fact accepted as true."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "De modo que + indicative: a consequence."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "De modo que + subjunctive: a purpose (so that…)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "It caricatures the objection and attacks its holders; readers stop trusting the writer."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "It grants the objection its real weight and answers it on its own ground."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "Tourist licences have tripled; hence the council is considering a cap."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "Which answer to the objection is fair? Grant the risk, then answer it."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "Paraphrase by default and keep the source’s level of commitment (class 229): if a report shows two figures moving together, you can’t write that one caused the other. Quote only when the exact wording matters, keep it short, build it into your sentence and comment on it; a quotation never concludes for you. Your reporting verb shows your stance: demuestra means you endorse it, sostiene stays neutral, cuestiona que and niega que take the subjunctive. Full stop after the closing quotation mark; omitted words go in […]."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "A faithful paraphrase: the report shows a coincidence, so the paraphrase claims no cause."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "An integrated quotation: the full stop goes after the closing quotation mark."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "Dudar de que + subjunctive; inside the quotation, […] marks the words left out (“ante todo”)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "Which paraphrase keeps the report’s level of certainty?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "The sentence’s full stop goes after the closing quotation mark."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "Rhetorical devices persuade when they are rare and earned: one rhetorical question in a strategic spot, an antithesis that frames the thesis, a three-part enumeration, a single metaphor that isn’t stretched. Stacked, they read as grandstanding. Proverbs and set phrases weaken an essay’s authority. Keep one register: cultivated but not pompous (no en base a, no a nivel de for “regarding”, no affected archaisms), one consistent authorial voice, and modality sized to the evidence (class 221: no cabe duda de que + indicative, no es descartable que + subjunctive)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "A three-part enumeration that climbs to the heaviest loss."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "One rhetorical question, kept for the end, with a single metaphor."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "Measured modality: a possibility you don’t want to overstate, with the subjunctive."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "Which sentence keeps an essay’s register?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "One rhetorical question has force; four in a row replace argument with emphasis."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "Why check thesis and structure first, punctuation last?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "You’ve got ideas to spare; what I can’t find is your thesis. That sentence is true, but it commits you to nothing."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "I was afraid of sounding too blunt. What if I say capping visits is justified as long as it goes with a housing policy?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "Now that’s a thesis: it says what you defend and on what condition. Second point: the shopkeepers. You dismiss their objection in two lines, with a touch of irony."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "Because their argument is weak: all they think about is the till."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "That’s attacking people, not the argument. Put it in its strongest form and then answer it."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "…it also needs customers in November, which is why protecting residents means protecting shops. And I round it off with the proverb."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "The consequence works; the proverb doesn’t. In an essay a set phrase costs you authority. Also: you write that the report proves tourist flats have driven residents out."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "And doesn’t it? Flats tripled while the register of residents fell by 18%."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "That’s two things happening at the same time; you’re supplying the cause. The report itself says the data point to a link. And why leave the Carvajal quotation on its own in the last paragraph?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "As a flourish. It sounds nice."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "A quotation doesn’t conclude for you. Move it to the housing paragraph and comment on it. And your conclusion just summarises the paragraphs; it should say what you learnt by answering the shopkeepers."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "Not repeat but synthesise. “That being so, the question isn’t how many visitors fit, but who the city is for.”"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "Why doesn’t the first thesis work for Álvaro?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "What does Álvaro object to in the shopkeepers paragraph?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "What’s wrong with the sentence about the report?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "Another contributor argues the opposite position. His essay has good data, but each paragraph fails in a different way."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "Paragraph 1 opens with clichés and states no thesis."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "Paragraph 2 draws a conclusion the source can’t support."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "Paragraph 3 builds a straw man and attacks people."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "Paragraph 4 stacks rhetorical questions instead of arguing."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "Paragraph 5 repeats instead of synthesising."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "Which revision states the risk at the right strength?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "Which paraphrase keeps both halves of the original?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "Which revision treats the objection fairly?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "Which conclusion synthesises instead of repeating?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "It is true that the cap cuts income; nevertheless, it protects residents."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "The data point to a link, not to a cause."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "Hence the cap must go hand in hand with a housing policy."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "He accepts the essay and gives four small final comments."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "What does he say about the new thesis?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "Why is the shopkeepers paragraph better now?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "What mistake is left in the quotation?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "What does he advise about the rhetorical questions?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "an arguable thesis at the start; at the end, the same thesis after it has survived the objection"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "state the objection at its strongest, grant, limit, refute and conclude"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "never raise or lower the source’s commitment; quote only when the wording matters, then comment"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "devices persuade when they are rare; one voice and one register throughout"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "A C2 essay doesn’t persuade by beating its opponents but by hearing them better than they hear themselves: it states the objection at its best, grants what is true in it and shows why the thesis still stands. That is why the conclusion doesn’t repeat: it tells how the thesis changed on the way."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "The library will also open on Sundays; hence the council needs to hire more staff."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "A study says the results suggest a moderate improvement. Which paraphrase is faithful?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "Which thesis is nuanced?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "Which sentence answers an objection fairly?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "Which ending synthesises instead of repeating?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "A secondary-school teacher writes for the same volume on whether city museums should be free. His draft is lukewarm, unfair to the objection and overstates its source. Revise three sentences."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "For strong students or spare time. Admitamos que (“let us grant that”) concedes something for the sake of argument and then shows the conclusion holds anyway. Por mucho que + subjunctive (the usual mood) is an emphatic concession: however much… Quien esto escribe (“the present writer”) is a cultivated, slightly distanced self-reference typical of essays and opinion pieces; academic texts prefer the plural of modesty or impersonal forms."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "What does the writer do with “admitamos que”?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "However much the flow is regulated, without affordable housing the neighbourhood will keep emptying."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "Where does “quien esto escribe” fit best?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g535.ts",
+      "text": "You can now write and revise a full C2 essay: nuanced thesis, fair to the objection, faithful to its sources and restrained in its rhetoric. The natural next step is the course’s final project: in class 236 you synthesise several sources that disagree, mediate between them and defend your position to people who don’t share it."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "A mid-sized city in a drought has set up a citizens’ panel of thirty residents chosen by lot, with no technical background, who must recommend measures to the council. Three sources take different positions: the water company’s report, an economist’s column and a residents’ association statement. The facilitator must relay them without tipping the scales. Today you do that job in four moves: understand the sources, mediate them for a specific audience, synthesise them without changing what each one claims, and then defend your own position in the debate."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "It turns a probability into a certainty and drops the condition: the panel will vote out of fear, on something the report never said."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "Same content, same degree of certainty, same condition: the panel can weigh the real risk."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "The sentence is grammatical but unfaithful: it upgrades the claim and deletes the condition."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "The CEFR Companion Volume, used here only as a reference, describes mediation as making a text or a conversation accessible to someone else: relaying specific information, explaining data, summarising a text, and facilitating communication when people disagree. Mediating is not translating word for word: you select what the audience needs, reorganise it, explain technical terms with everyday equivalents and keep the figures, conditions and certainty of the original. Your opinion stays out of it, or is clearly labelled as yours."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "The figure is translated into an everyday equivalent (less than a third) and given context, without being rounded into something more dramatic."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "Organising by axes (diagnosis, remedy) instead of source by source is what turns a list into a synthesis."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "Formal address, a concrete picture and the same figure; the “desastre” option adds an accusation the source never makes."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "In a synthesis, every claim keeps its owner and its strength. Probability stays probability, a presumption stays a presumption, a demand stays a demand, and a conditional rumour stays a rumour, while a documented figure is reported as a fact. Choose the reporting verb by the stance the source really takes: sostiene and considera for positions, advierte for warnings, reconoce or admite when a source concedes something against its own interest, exige for demands. The verb carries its own mood: no descartar que, negar que and exigir que take the subjunctive."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "A position presented with a strong but not absolute commitment: todo apunta a que is kept, not turned into demuestra."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "A demand stays a demand: rewriting it as sugiere tímidamente would weaken the source."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "An unconfirmed report keeps its rumour conditional and its source, and the denial is recorded too."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "Same degree of commitment (a possibility) and the same mood: no descartar que takes the subjunctive."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "Faithful, but the reader is left to do all the comparing alone."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "Organised by agreements and disagreements, with every position still attributed to its source."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "Your own voice slips into the source’s mouth, and its claim gets inflated."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "Matizar means qualifying a claim, not refuting it: you accept part of it and show where the data limit it. The impersonal se afirma que avoids pointing at a person, which protects everyone’s face in a public debate; the data then do the work of the objection. Keep your qualification clearly separate from the synthesis, as your own reading."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "The claim is not called false; a figure shows where it needs qualifying."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "Como bien demuestra and fatal belong to the writer, not to the source: that is an editorial in disguise."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "In the debate you use what you learned in classes 221, 222 and 224. Concede first (entiendo su preocupación, tiene razón en que…), then object with a connector (dicho eso, con todo, si bien), then make a proposal with a mitigated form (no estaría de más…, quizá convendría…, ¿y si…?), and calibrate your own certainty (todo indica que, no es descartable que). If you have to correct someone, take the blame for the misunderstanding yourself (quizá no me he explicado bien) rather than accusing them of not understanding."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "Concession, then the objection: the other person’s concern is acknowledged before it is answered."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "A conditional proposal followed by a question to the group: firm content, open form. Note the correlation: estaría + imperfect subjunctive."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "Con todo introduces an objection after conceding the previous point: “even so”."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "It is a figure the company itself published, so it is reported as a fact; the rumour conditional would weaken it for no reason."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "Reserves stand at 31 % of capacity, the lowest level in fifteen years. If household consumption does not fall by at least 15 % before August, night-time cuts will probably be needed in September. Losses in the network are estimated at 38 %; reducing them will take several years of investment."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "Everything suggests that a tiered tariff, cheap for basic use and expensive above a certain volume, cuts consumption without penalising light users. Even so, it may well hurt large families if the tier is set per household rather than per person. Blanket restrictions, by contrast, share out the sacrifice blindly."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "People say households waste water, but the company’s own report admits that almost four in ten litres are lost before reaching the tap. We demand that leaks be repaired before tariffs go up. According to the local press, the company has reportedly postponed its pipe renewal plan twice."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "Which source frames its idea as a demand?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "Which piece of information is unconfirmed?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "Good evening. Before we debate, let me sum up the sources. In short, all three agree on the diagnosis and disagree on the remedy."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "The report doesn’t say there will be cuts: it says there probably will be if we don’t save 15 %. In other words, it is a warning, not a verdict."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "Right, but the association says the company hid the fact that it loses 38 % of its water."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "Let me correct you there, Martín: that figure comes from the report itself. What the association passes on is that, according to the local press, the company has reportedly postponed the works twice. That has not been confirmed."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "What worries me is the tariff. There are six of us at home: if the tier is per household, we pay the high rate even though we don’t waste anything."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "If I may add a technical point: the tier can be calculated per person. And repairing the leaks is essential, although it won’t solve this summer: renewing pipes takes years."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "Even so, I don’t think it’s fair for residents to pay for poor management."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "I understand your concern. That said, the economist herself allows that her tariff might hurt some families: it depends on whether the tier is set per household or per person."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "Then it wouldn’t hurt to combine both: a per-person tariff now and a public repair schedule, all the more so since the company has already postponed the works twice."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "That isn’t accurate: the plan was rescheduled, not postponed. But the schedule idea seems reasonable to me."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "Noted. For the minutes: the postponement is reported by the press and denied by the company. Even so, the proposal is on record: in other words, a per-person tariff and repairs with dates."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "Put like that, it seems a lot more reasonable to me."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "Which mistake of Martín’s does Lucía correct?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "Why is Camila worried about the tariff?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "Which proposal goes into the minutes?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "No descartar que presents a possibility, so it takes the subjunctive."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "De ahí que introduces a consequence and takes the subjunctive."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "Rumour conditional, source and denial: nobody asserts what has not been confirmed."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "A future seen from a past reporting verb takes the conditional; llevará would also work, since it is still true."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "Máxime cuando adds a reason that makes the point even stronger."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "People say households waste water, but the data allow us to qualify that."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "The economist does not rule out that the tariff might hurt large families."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "I understand your concern; that said, it wouldn’t hurt to start saving now."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "Why does Elena speak on the radio?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "What does she say her column claimed?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "What does she propose for large households?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "What could the money from the top tiers pay for?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "How does she handle the report about the postponement?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "Mediation selects, reorganises and explains for a specific audience, while figures and conditions stay intact."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "Each claim keeps its owner, its condition and its strength; a rumour stays a rumour, a documented figure stays a fact."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "Concede, object, propose: you defend your position without making the other person lose face."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "Fine-grained connectors state the exact logical relation; one or two per paragraph is enough."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "Before handing in a synthesis, ask whose idea each one is, how strongly it is claimed and who you are writing for. Your opinion may appear, but separately and under your own name. Mediating is summarising without changing anyone’s level of commitment."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "Exigir que takes the subjunctive."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "Same degree of commitment: a possibility."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "The rumour conditional keeps the information at arm’s length."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "Con todo: even so."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "Concession, objection and a softened proposal."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "An invented coastal town is debating limits on holiday rentals. Three sources, three different levels of commitment: report them for the town council without inflating or deflating any of them."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "The panel approves its recommendation and the facilitator has to relay it twice: in a written report for the city council (impersonal, formal connectors) and on a poster for residents (short sentences, a closer tone, figures with everyday equivalents). The register changes completely; the degree of certainty does not."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "Formal causal connector and an institutional voice for a written report to the council."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "Plain language that keeps the same probability and the condition."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "Friendly and faithful: neither alarmist nor bureaucratic."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "A formal connector and a concrete recommendation, no colloquial judgement."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "You began this course with your first “hola”. Along the way came the present tense, ser and estar, the past tenses, the subjunctive, reported speech, register and politeness. Today you read three conflicting sources, relayed them to a specific audience without betraying them and defended your own position with tact. Grammar does not end here: it keeps sharpening every time you read, listen and speak."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "You have completed the A0–C2 grammar course."
     }
   ]
 }

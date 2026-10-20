@@ -258,14 +258,14 @@ const rows: Row[] = [
   ["G226",526,"C2","discurso","Discursos jurídicos y administrativos: sintaxis densa","/gramatica/discursos-juridicos-y-administrativos-sintaxis-densa",[],"live"],
   ["G227",527,"C2","discurso","Discursos periodísticos: atribución y precisión","/gramatica/discursos-periodisticos-atribucion-y-precision",[],"live"],
   ["G228",528,"C2","discurso","Reformulación entre registro técnico y cotidiano","/gramatica/reformulacion-entre-registro-tecnico-y-cotidiano",[],"live"],
-  ["G229",529,"C2","oraciones","Paráfrasis avanzada preservando compromiso epistémico","/gramatica/parafrasis-avanzada-preservando-compromiso-epistemico",[],"planned"],
-  ["G230",530,"C2","oraciones","Conectores raros y valores específicos","/gramatica/conectores-raros-y-valores-especificos",[],"planned"],
-  ["G231",531,"C2","oraciones","Puntuación avanzada: punto y coma, dos puntos e incisos","/gramatica/puntuacion-avanzada-punto-y-coma-dos",[],"planned"],
-  ["G232",532,"C2","oraciones","Ortografía académica y variación admisible","/gramatica/ortografia-academica-y-variacion-admisible",[],"planned"],
-  ["G233",533,"C2","oraciones","Sintaxis textual: cohesión anafórica de largo alcance","/gramatica/sintaxis-textual-cohesion-anaforica-de-largo",[],"planned"],
-  ["G234",534,"C2","oraciones","Análisis crítico de sesgos sintácticos y presuposiciones","/gramatica/analisis-critico-de-sesgos-sintacticos-y",[],"planned"],
-  ["G235",535,"C2","oraciones","Producción y revisión de ensayo argumentativo C2","/gramatica/produccion-y-revision-de-ensayo-argumentativo",[],"planned"],
-  ["G236",536,"C2","oraciones","Proyecto C2: mediación, síntesis y defensa de posturas","/gramatica/proyecto-c2-mediacion-sintesis-y-defensa",[],"planned"],
+  ["G229",529,"C2","oraciones","Paráfrasis avanzada preservando compromiso epistémico","/gramatica/parafrasis-avanzada-preservando-compromiso-epistemico",[],"live"],
+  ["G230",530,"C2","oraciones","Conectores raros y valores específicos","/gramatica/conectores-raros-y-valores-especificos",[],"live"],
+  ["G231",531,"C2","oraciones","Puntuación avanzada: punto y coma, dos puntos e incisos","/gramatica/puntuacion-avanzada-punto-y-coma-dos",[],"live"],
+  ["G232",532,"C2","oraciones","Ortografía académica y variación admisible","/gramatica/ortografia-academica-y-variacion-admisible",[],"live"],
+  ["G233",533,"C2","oraciones","Sintaxis textual: cohesión anafórica de largo alcance","/gramatica/sintaxis-textual-cohesion-anaforica-de-largo",[],"live"],
+  ["G234",534,"C2","oraciones","Análisis crítico de sesgos sintácticos y presuposiciones","/gramatica/analisis-critico-de-sesgos-sintacticos-y",[],"live"],
+  ["G235",535,"C2","oraciones","Producción y revisión de ensayo argumentativo C2","/gramatica/produccion-y-revision-de-ensayo-argumentativo",[],"live"],
+  ["G236",536,"C2","oraciones","Proyecto C2: mediación, síntesis y defensa de posturas","/gramatica/proyecto-c2-mediacion-sintesis-y-defensa",[],"live"],
 ];
 
 export const courseUnits: CourseUnit[] = rows.map(([code, catalogId, level, category, title, canonicalSlug, extra, status], index) => ({
