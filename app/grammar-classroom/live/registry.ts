@@ -128,10 +128,20 @@ import { lesson as g399 } from './lessons/g399';
 import { lesson as g401 } from './lessons/g401';
 import { lesson as g402 } from './lessons/g402';
 import { lesson as g406 } from './lessons/g406';
+import { lesson as g408 } from './lessons/g408';
+import { lesson as g409 } from './lessons/g409';
+import { lesson as g410 } from './lessons/g410';
+import { lesson as g411 } from './lessons/g411';
+import { lesson as g412 } from './lessons/g412';
+import { lesson as g413 } from './lessons/g413';
+import { lesson as g415 } from './lessons/g415';
+import { lesson as g416 } from './lessons/g416';
+import { lesson as g417 } from './lessons/g417';
+import { lesson as g418 } from './lessons/g418';
 import type { LiveLesson } from './types';
 
 /** Grammar classes migrated to the live-class system, by catalog id. */
-const liveLessons: Record<number, LiveLesson> = Object.fromEntries([desdeHace, g3, g18, g23, g31, g37, g40, g41, g42, g43, g44, g45, g46, g47, g48, g106, g107, g110, g111, g112, g113, g114, g115, g116, g117, g118, g119, g140, g141, g142, g143, g144, g145, g146, g147, g148, g149, g150, g151, g152, g153, g154, g155, g156, g211, g212, g213, g214, g217, g218, g219, g220, g231, g232, g233, g234, g235, g239, g303, g305, g307, g311, g312, g314, g318, g319, g320, g323, g324, g327, g328, g330, g331, g332, g333, g335, g336, g337, g338, g339, g340, g341, g343, g344, g346, g348, g350, g351, g352, g353, g356, g358, g360, g361, g362, g363, g364, g365, g366, g367, g369, g370, g371, g372, g373, g374, g375, g376, g377, g379, g380, g382, g383, g384, g385, g389, g390, g391, g392, g393, g394, g395, g396, g398, g399, g401, g402, g406].map(lesson => [lesson.id, lesson]));
+const liveLessons: Record<number, LiveLesson> = Object.fromEntries([desdeHace, g3, g18, g23, g31, g37, g40, g41, g42, g43, g44, g45, g46, g47, g48, g106, g107, g110, g111, g112, g113, g114, g115, g116, g117, g118, g119, g140, g141, g142, g143, g144, g145, g146, g147, g148, g149, g150, g151, g152, g153, g154, g155, g156, g211, g212, g213, g214, g217, g218, g219, g220, g231, g232, g233, g234, g235, g239, g303, g305, g307, g311, g312, g314, g318, g319, g320, g323, g324, g327, g328, g330, g331, g332, g333, g335, g336, g337, g338, g339, g340, g341, g343, g344, g346, g348, g350, g351, g352, g353, g356, g358, g360, g361, g362, g363, g364, g365, g366, g367, g369, g370, g371, g372, g373, g374, g375, g376, g377, g379, g380, g382, g383, g384, g385, g389, g390, g391, g392, g393, g394, g395, g396, g398, g399, g401, g402, g406, g408, g409, g410, g411, g412, g413, g415, g416, g417, g418].map(lesson => [lesson.id, lesson]));
 export const liveLessonIds = Object.keys(liveLessons).map(Number);
 export const getLiveLesson = (id: number): LiveLesson | undefined => liveLessons[id];
 /** Metadata only. The Worker build replaces this module with an index and
