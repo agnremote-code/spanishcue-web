@@ -97,6 +97,36 @@
       "voice": "es-CO-SalomeNeural",
       "rate": "-12%",
       "text": "Hola, Óscar, soy Lucía. Mañana es tu primer día en el turno de las siete, ¿verdad? Aquí tienes unos consejos. Yo me acuesto a las diez, porque me levanto a las cinco. Me ducho, desayuno y salgo de casa a las seis. Tú vives cerca del hospital, entonces puedes salir a las seis y media. Aquí nos ponemos el uniforme en el vestuario del segundo piso. Otra cosa: tu hermano se levanta tarde, ¿no? Entonces él no te despierta. Yo siempre pongo dos alarmas en el celular. Y esta noche, ¿a qué hora te acuestas? Bueno, hasta mañana a las siete menos cuarto, en la sala de enfermería."
+    },
+    {
+      "id": 332,
+      "voice": "es-MX-DaliaNeural",
+      "rate": "-12%",
+      "text": "Buenas tardes, señora Carmen. Soy Valeria, de la recepción del hotel. Tengo buenas noticias: hay mesa en Casa Rosa a las ocho y media. A su esposo le gustan la pasta y la pizza, y allí la pasta es casera. Y a usted le encanta el pescado: hoy viernes tienen pescado del día. Es un lugar tranquilo, sin música en vivo. A Diego no le gusta el ruido, ¿verdad? Y los postres… ¡a mí me encantan! El flan de la casa es delicioso. Si a usted no le gusta la idea, El Puerto tiene mesa a las nueve, con música. Por favor, llámeme a la recepción. ¡Hasta luego!"
+    },
+    {
+      "id": 333,
+      "voice": "es-MX-DaliaNeural",
+      "rate": "-12%",
+      "text": "Hola, equipo, soy Carmen. Un mensaje rápido sobre la cena del viernes. Las invitaciones están en la caja azul, en mi mesa. Pablo, hay una invitación para ti y otra para tu pareja. Rosa, el viernes tú traes el pastel con Diego: vas con él a la pastelería por la mañana. El jueves yo no puedo ir a la tienda, entonces Nuria y Diego compran las luces sin mí. ¡Pero el viernes ceno con ustedes, claro! Nuria, ¿vienes conmigo en el coche? Hay sitio para dos personas más. Y el amigo invisible es un secreto: el nombre del papel es solo para ti. Hasta mañana."
+    },
+    {
+      "id": 335,
+      "voice": "es-ES-ElviraNeural",
+      "rate": "-12%",
+      "text": "Hola, buenas tardes. Soy Clara Molina, paciente de la doctora Ruiz. Llamo para pedir una cita para el lunes. Desde hoy estoy mal: me duele mucho la cabeza y me duele la garganta. También me duelen los ojos con la luz. No tengo fiebre, pero tengo frío todo el tiempo, y en casa me pongo el abrigo y la bufanda. Me lavo las manos muchas veces, porque vivo con un amigo. Mi número es el seis, uno, cuatro, dos, dos, ocho, siete, cinco, tres. Muchas gracias. Hasta el lunes."
+    },
+    {
+      "id": 336,
+      "voice": "es-MX-DaliaNeural",
+      "rate": "-12%",
+      "text": "Hola, Carmen, soy Lorena, del grupo de las diez. Muchas gracias: Pablo tiene mi cuaderno rojo. Ahora busco otras dos cosas. Primero, mi bufanda. Es una bufanda verde y larga. Creo que está en el aula cuatro, en la silla que está al lado de la ventana. La bufanda verde pequeña no es mi bufanda: es de mi compañera Sara. Segundo, busco unas llaves pequeñas con un llavero amarillo. Son las llaves de mi casa. ¡Es importante! Mañana paso por recepción a las nueve y media. ¡Muchas gracias y hasta mañana!"
+    },
+    {
+      "id": 337,
+      "voice": "es-ES-ElviraNeural",
+      "rate": "-12%",
+      "text": "Buenos días, señora Ruiz. Soy Nuria, de la recepción del Hotel Mirador. Ustedes quieren una noche más, ¿verdad? Mañana la 31 no está libre, pero hay otra habitación: la 40, en el cuarto piso. La 40 es más grande que la 31: tiene veinticinco metros. Y es tan tranquila como la 31, porque también da al patio. Es un poco más cara: cuesta ochenta y cinco euros la noche. Pero es menos cara que la 12. Ah, y mañana el desayuno es más barato: ocho euros, no diez. ¿Quieren la 40? Pueden llamar a recepción hasta las doce. Muchas gracias y hasta luego."
     }
   ]
 }

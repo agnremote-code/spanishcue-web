@@ -6990,6 +6990,18 @@
       "text": "Ya sabes decir qué quieres, qué puedes y qué pides, y viste que vosotros y vos no cambian la raíz. En la clase 021 ves cuándo se usa tú, vos, usted, ustedes o vosotros, y cómo cambia el verbo con cada uno.",
       "category": "regional-pedagogy",
       "reason": "Course class (2026-10-20): variety note, vos/vosotros forms shown for recognition next to the tú forms the learner uses."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g332.ts",
+      "text": "Sí, pero no me ___ mucho el tomate.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): common international word, glossed in English; regional synonyms are not required at A1."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g332.ts",
+      "text": "El tomate: una cosa, gusta.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): common international word, glossed in English; regional synonyms are not required at A1."
     }
   ]
 }

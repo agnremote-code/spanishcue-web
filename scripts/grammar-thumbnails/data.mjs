@@ -102,4 +102,9 @@ export const thumbnails = [
   { id: 328, level: 'A1', family: 'preposiciones', topic: 'Al y del', example: '*Del* hotel *al* puerto.', chips: ['a + el = al', 'de + el = del'], mascot: 'explorer' },
   { id: 330, level: 'A1', family: 'adverbios', topic: 'Frecuencia y hábitos', example: '*Siempre* corro y *nunca* nado.', chips: ['siempre', 'a veces', 'nunca'], mascot: 'football' },
   { id: 331, level: 'A1', family: 'pronombres', topic: 'Verbos reflexivos', example: '*Me levanto* a las seis y *me ducho*.', chips: ['me · te · se', 'nos · os · se'], mascot: 'teacher' },
+  { id: 332, level: 'A1', family: 'pronombres', topic: 'Gustar y encantar', example: '*Me gusta* el pescado y *me encantan* los tacos.', chips: ['me gusta + uno', 'me gustan + varios'], mascot: 'empanadas' },
+  { id: 333, level: 'A1', family: 'pronombres', topic: 'Para mí, con ella, conmigo', example: 'Este regalo es *para ti*. ¿Vienes *conmigo*?', chips: ['para mí', 'para ti', 'conmigo', 'contigo'], mascot: 'scarf' },
+  { id: 335, level: 'A1', family: 'determinantes', topic: 'Cuerpo y ropa', example: '*Me duele la* cabeza. *Me pongo el* abrigo.', chips: ['me duele la…', 'me pongo el…'], mascot: 'headphones' },
+  { id: 336, level: 'A1', family: 'concordancia', topic: 'Describir un objeto', example: '*La carpeta azul pequeña*, la que está en el estante.', chips: ['la azul', 'el grande', 'la que está…'], mascot: 'camera' },
+  { id: 337, level: 'A1', family: 'cantidad', topic: 'Comparativos', example: 'La 31 es *más* tranquila *que* la 12.', chips: ['más … que', 'menos … que', 'tan … como'], mascot: 'tango' },
 ];
