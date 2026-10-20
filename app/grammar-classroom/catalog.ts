@@ -79,9 +79,14 @@ const additions = [
   [307, 'A1', 'concordancia', 'posicion-del-adjetivo', 'Posición habitual del adjetivo y sentido básico', 'Describir una casa con el adjetivo en su sitio y entender cuándo «gran», «viejo» o «único» cambian el sentido.', 10007, [41]],
   [311, 'A1', 'ser-estar', 'ser-identidad-y-origen', 'Ser para identidad, profesión y procedencia', 'Presentarte y presentar a otras personas: nombre, profesión, origen, nacionalidad y carácter con todas las formas de ser.', 10011, [46,239]],
   [312, 'A1', 'ser-estar', 'estar-estados-y-lugares', 'Estar para estados y lugares', 'Decir cómo estás y dónde estás tú, tu familia y tus cosas con «estar», sin confundirlo con «ser».', 10012, [311]],
+  [314, 'A1', 'ser-estar', 'tener-edad-y-sensaciones', 'Tener y tener + edad / sensaciones', 'Decir tu edad, qué sientes (frío, calor, hambre, sed, sueño) y qué tienes con «tener», sin confundirlo con «ser» o «estar».', 10014, [48,311,312]],
+  [318, 'A1', 'tiempos', 'presente-irregular-ser-estar-ir-tener', 'Presente irregular: ser, estar, ir, tener', 'Contar tu semana de trabajo con ser, estar, ir y tener: quién eres, dónde estás, adónde vas y qué reuniones tienes.', 10018, [140,311,312]],
+  [319, 'A1', 'tiempos', 'presente-irregular-hacer-poner-salir-venir', 'Presente irregular: hacer, poner, salir, venir', 'Repartir las tareas de una cena y decir qué haces, qué pones, a qué hora sales y de dónde vienes.', 10019, [318,140]],
+  [320, 'A1', 'tiempos', 'presente-con-cambio-vocalico', 'Presente con cambio vocálico: querer, poder, pedir', 'Decir qué quieres, qué puedes pagar y qué pides en un viaje, con quiero, puedo, pido y queremos, podemos, pedimos.', 10020, [319,140]],
+  [323, 'A1', 'oraciones', 'interrogativos-con-tilde', 'Interrogativos con tilde: qué, quién, cuál, cuánto', 'Hacer preguntas concretas en un museo (horario, precio, dirección, personas) con la palabra interrogativa correcta y con tilde.', 10023, [111]],
 ] as const;
 /** When each addition reached the library (the «Nuevo» badge). */
-const addedAt: Record<number, string> = { 239: '2026-10-14', 303: '2026-10-20', 305: '2026-10-20', 307: '2026-10-20', 311: '2026-10-20', 312: '2026-10-20' };
+const addedAt: Record<number, string> = { 239: '2026-10-14', 303: '2026-10-20', 305: '2026-10-20', 307: '2026-10-20', 311: '2026-10-20', 312: '2026-10-20', 314: '2026-10-20', 318: '2026-10-20', 319: '2026-10-20', 320: '2026-10-20', 323: '2026-10-20' };
 
 export const newGrammarEntries: LessonSource[] = additions.map(([id,level,grammarTopic,slug,title,subtitle,curriculumOrder,requires]) => {
   grammarMetadata[id] = { title, grammarTopic };

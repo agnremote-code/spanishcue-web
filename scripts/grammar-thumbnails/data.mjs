@@ -92,4 +92,9 @@ export const thumbnails = [
   { id: 307, level: 'A1', family: 'concordancia', topic: 'Posición del adjetivo', example: 'Una *casa vieja* y un *gran* amigo.', chips: ['casa blanca', 'gran casa', 'casa grande'], mascot: 'explorer' },
   { id: 311, level: 'A1', family: 'ser-estar', topic: 'Ser: quién eres', example: '*Soy* Pablo, *soy* médico y *soy* de Lima.', chips: ['nombre', 'profesión', 'origen'], mascot: 'conversation' },
   { id: 312, level: 'A1', family: 'ser-estar', topic: 'Estar: cómo y dónde', example: '*Estoy* cansado y *estoy* en casa.', chips: ['¿cómo estás?', '¿dónde está?'], mascot: 'van' },
+  { id: 314, level: 'A1', family: 'ser-estar', topic: 'Tener: edad y sensaciones', example: '*Tengo* treinta años y *tengo* frío.', chips: ['tener años', 'tener hambre', 'tener sueño'], mascot: 'mate' },
+  { id: 318, level: 'A1', family: 'tiempos', topic: 'Ser, estar, ir y tener', example: '*Voy* al trabajo y *tengo* una reunión.', chips: ['soy · estoy', 'voy · tengo'], mascot: 'van' },
+  { id: 319, level: 'A1', family: 'tiempos', topic: 'Hacer, poner, salir y venir', example: '*Hago* la cena y *pongo* la mesa.', chips: ['hago', 'pongo', 'salgo', 'vengo'], mascot: 'empanadas' },
+  { id: 320, level: 'A1', family: 'tiempos', topic: 'Querer, poder y pedir', example: '*Quiero* un café, pero no *puedo*.', chips: ['e → ie', 'o → ue', 'e → i'], mascot: 'explorer' },
+  { id: 323, level: 'A1', family: 'oraciones', topic: 'Preguntas con tilde', example: '¿*Cuántas* personas vienen?', chips: ['¿qué?', '¿quién?', '¿cuál?', '¿cuánto?'], mascot: 'teacher' },
 ];

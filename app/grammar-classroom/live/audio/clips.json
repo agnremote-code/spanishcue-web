@@ -37,6 +37,36 @@
       "voice": "es-MX-DaliaNeural",
       "rate": "-12%",
       "text": "Hola, Daniel. Soy Lucía. ¿Dónde estás? Yo estoy en Monterrey, en el hotel. Es un hotel pequeño y tranquilo, cerca de la estación. Estoy un poco cansada, pero contenta: el trabajo aquí es interesante. Mi compañera Ana está enferma hoy, pobre. ¿Y mamá? ¿Está bien? Ah, una cosa: mi pasaporte está en mi cuarto, en la mesa, cerca de la ventana. ¿Está ahí? El domingo estoy en casa otra vez. Un beso grande, hermano."
+    },
+    {
+      "id": 314,
+      "voice": "es-CO-SalomeNeural",
+      "rate": "-12%",
+      "text": "Bienvenidos a la Clínica San Rafael. En la recepción hay un formulario para cada paciente: nombre, edad y síntomas. ¿Usted tiene más de sesenta y cinco años? Entonces tiene prioridad. Los niños que tienen menos de doce años esperan en la sala azul, con sus padres. ¿Tiene frío? Hay mantas al lado de la puerta. ¿Tiene sed? El agua está cerca de la ventana y es gratis. ¿Tiene hambre? La cafetería está en el primer piso. Y una cosa más: ¿tiene una pregunta? Carmen y Óscar, en la recepción, tienen todas las respuestas. Gracias y feliz día."
+    },
+    {
+      "id": 318,
+      "voice": "es-MX-DaliaNeural",
+      "rate": "-12%",
+      "text": "Hola, Hugo. Hola, Rosa. Soy Paula. Ya es miércoles por la noche y la agenda cambia un poco. Mañana por la mañana estoy en el aeropuerto, con un cliente, y por la tarde voy a la oficina. Hugo, tú tienes la reunión con el banco el jueves, ¿verdad? Rosa, el lunes tú y yo vamos al centro, a las diez. Ah, una cosa más: las llaves nuevas de la sala están en mi escritorio. La reunión del viernes es a las once. ¡Gracias, equipo! Hasta mañana."
+    },
+    {
+      "id": 319,
+      "voice": "es-CO-SalomeNeural",
+      "rate": "-12%",
+      "text": "Hola, chicos. Soy Carla. Un cambio para mañana. Marcos viene directamente del trabajo, a las siete y media, un poco tarde. Entonces, Diego, tú pones la mesa, ¿sí? Paula hace el postre, como siempre. Diego y Paula, ustedes vienen a las siete, ¿no? Yo hago la comida: arroz con pollo y una ensalada. Por la mañana salgo temprano y hago las compras en el mercado. Por la tarde pongo las bebidas en la nevera. Si hay un problema, escriben en el grupo. ¡Hasta mañana!"
+    },
+    {
+      "id": 320,
+      "voice": "es-CO-GonzaloNeural",
+      "rate": "-12%",
+      "text": "Hola, Clara. Soy Diego. Estoy en el puerto. Tengo una idea para mañana. Hay un tour en barco a la Isla de la Plata: cuesta cuarenta dólares por persona. ¿Quieres ir? Yo quiero ir, pero no puedo pagar más de cuarenta. En la isla podemos comer en la playa. Allí la gente pide pescado con arroz, y no es caro. El barco sale a las nueve. ¿Puedes estar aquí a las ocho y media? Ah, Rosa y su novio también quieren venir otra vez. ¿Pueden venir con nosotros? Bueno, espero tu mensaje. Un abrazo."
+    },
+    {
+      "id": 323,
+      "voice": "es-MX-JorgeNeural",
+      "rate": "-12%",
+      "text": "Hola, buenos días. Gracias por llamar al Museo de los Colores, en Puebla. Estas son las preguntas frecuentes. ¿Cuándo abre el museo? De martes a domingo, de diez de la mañana a seis de la tarde. Los lunes está cerrado. ¿Cuánto cuesta la entrada? Ochenta pesos, y para estudiantes, cuarenta. Los domingos, la entrada es gratis. ¿Dónde está el museo? En la calle Reforma, número dieciocho, cerca de la catedral. ¿Qué días hay visitas guiadas? Los sábados y los domingos, a las once. ¿Cuántas personas pueden ir en un grupo? Veinte como máximo. ¿Quién da las visitas? Raúl, nuestro guía. Gracias por su llamada."
     }
   ]
 }
