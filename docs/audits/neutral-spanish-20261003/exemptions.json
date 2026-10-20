@@ -9318,6 +9318,78 @@
       "text": "(?<!\\p{L})(?:quería|querías|queríamos|pidió|pediste|pedí|pidieron|dijo|dijiste|había\\s+pedido|gustaría|encantaría|gustó|alegró)\\s+(?:\\p{L}+\\s+)?que(?!\\p{L})",
       "category": "neutral-context",
       "reason": "Course class (2026-10-20): standard first-person preterite (perdí, pedí, salí…) or tú imperative «dale», reviewed; not voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g435.ts",
+      "text": "Perdí el vuelo de las siete: me dejé la cédula en casa. [[Si no fuera|blue]] tan despistado, [[no lo habría perdido|orange]].",
+      "category": "neutral-context",
+      "reason": "Pretérito en primera persona (yo), no voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g435.ts",
+      "text": "Cuando decidí…, nadie lo entendió.",
+      "category": "neutral-context",
+      "reason": "Pretérito en primera persona (yo), no voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g440.ts",
+      "text": "Abrí la sala **para preparar** el salón.",
+      "category": "neutral-context",
+      "reason": "Pretérito en primera persona (yo), no voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g440.ts",
+      "text": "Abrí la sala **para que** tú **prepararas** el salón.",
+      "category": "neutral-context",
+      "reason": "Pretérito en primera persona (yo), no voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g440.ts",
+      "text": "Ya tengo el regalo. Salí a comprarlo a la hora de la comida, sin que Amparo me ___ nada.",
+      "category": "neutral-context",
+      "reason": "Pretérito en primera persona (yo), no voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g440.ts",
+      "text": "Sin que + subjuntivo; «salí» es pasado → imperfecto: preguntara.",
+      "category": "neutral-context",
+      "reason": "Pretérito en primera persona (yo), no voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g440.ts",
+      "text": "Sí. Les escribí hace dos semanas con el fin de que ___ un saludo corto, y ya respondieron todos.",
+      "category": "neutral-context",
+      "reason": "Pretérito en primera persona (yo), no voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g440.ts",
+      "text": "«Les escribí» (pasado) y la acción ya está hecha: imperfecto de subjuntivo.",
+      "category": "neutral-context",
+      "reason": "Pretérito en primera persona (yo), no voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g440.ts",
+      "text": "Le pedí a su hermana que lo distrajera [[para que no viera|orange]]…",
+      "category": "neutral-context",
+      "reason": "Pretérito en primera persona (yo), no voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g440.ts",
+      "text": "Para los cuarenta de mi pareja organicé una cena con sus amigos de la universidad sin que se enterara. Le pedí a su hermana que lo llevara al cine para que no viera cómo preparábamos la casa.",
+      "category": "neutral-context",
+      "reason": "Pretérito en primera persona (yo), no voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g441.ts",
+      "text": "Lo resolví [[de la manera que pude|blue]]…",
+      "category": "neutral-context",
+      "reason": "Pretérito en primera persona (yo), no voseo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g445.ts",
+      "text": "Un amigo va a viajar solo por primera vez. Dale consejos que le sirvan vaya donde vaya. · Advice for a first solo trip, wherever he goes.",
+      "category": "neutral-context",
+      "reason": "Imperativo de «dar» con pronombre (da + le), no voseo."
     }
   ]
 }
