@@ -36,26 +36,26 @@ export const lesson: LiveLesson = {
       id: 'entender', label: 'Entender', icon: '✎', mascot: '/brand/mascot/pointing.webp',
       title: 'El pasado del pasado', coach: 'Dos momentos en el pasado: ¿cuál fue primero?',
       steps: [
-        { title: 'Dos momentos en el pasado', blocks: [
-          { kind: 'lead', text: 'El viernes, Elena llegó al centro cultural para dar un taller. Pero **dos semanas antes** había pasado algo importante: había reservado una sala. El pluscuamperfecto sirve para **volver atrás** desde un momento que ya es pasado.' },
+        { title: 'Dos momentos en el pasado · Two moments in the past', blocks: [
+          { kind: 'lead', text: 'El viernes, Elena llegó al centro cultural para dar un taller. Pero **dos semanas antes** había pasado algo importante: había reservado una sala. El pluscuamperfecto sirve para **volver atrás** desde un momento que ya es pasado.', en: 'On Friday Elena arrived at the cultural centre to run a workshop. But two weeks earlier something important had happened: she had booked a room. The pluperfect (“had + past participle”) lets you step further back from a moment that is already in the past.' },
           { kind: 'guide', text: { teacher: 'Lean las dos frases y dibujen una línea del tiempo en la pizarra o en un papel. Pregunta: «¿Qué pasó primero en cada frase?».', self: 'Lee las dos frases y dibuja una línea del tiempo en un papel. ¿Qué pasó primero en cada una?' } },
           { kind: 'compare', title: 'Cuando llegamos al cine…', columns: [
-            { tone: 'blue', label: 'INDEFINIDO', sentence: 'Cuando [[llegamos|blue]], la película **empezó**.', idea: 'Dos hechos seguidos: primero llegamos y después empezó la película. La vimos completa.' },
-            { tone: 'orange', label: 'PLUSCUAMPERFECTO', sentence: 'Cuando [[llegamos|blue]], la película [[ya había empezado|orange]].', idea: 'La película empezó **antes** de la llegada. Nos perdimos el principio.' },
+            { tone: 'blue', label: 'INDEFINIDO', sentence: 'Cuando [[llegamos|blue]], la película **empezó**.', idea: 'Dos hechos seguidos: primero llegamos y después empezó la película. La vimos completa.', en: 'Two events in a row: first we arrived, then the film started. We saw all of it.' },
+            { tone: 'orange', label: 'PLUSCUAMPERFECTO', sentence: 'Cuando [[llegamos|blue]], la película [[ya había empezado|orange]].', idea: 'La película empezó **antes** de la llegada. Nos perdimos el principio.', en: 'The film started before we arrived. We missed the beginning.' },
           ] },
-          { kind: 'tip', icon: '⏮', title: 'Busca el segundo pasado', text: 'El pluscuamperfecto casi siempre necesita **otro momento pasado** como referencia: «cuando llegamos», «el viernes», «a las diez». Lo que pasó **antes** de ese momento va en pluscuamperfecto.' },
+          { kind: 'tip', icon: '⏮', title: 'Busca el segundo pasado', text: 'El pluscuamperfecto casi siempre necesita **otro momento pasado** como referencia: «cuando llegamos», «el viernes», «a las diez». Lo que pasó **antes** de ese momento va en pluscuamperfecto.', en: 'The pluperfect almost always needs another past moment as a reference point: “when we arrived”, “on Friday”, “at ten”. Whatever happened before that moment goes in the pluperfect.' },
           { kind: 'choice', title: 'Comprueba', items: [
-            { prompt: '«Cuando llegué, Ana ya había salido.» ¿Qué pasó primero?', options: ['Ana salió.', 'Yo llegué.'], answer: 0, why: '«Había salido» marca la acción anterior: Ana salió antes de mi llegada.' },
-            { prompt: '«Cuando llegué, Ana salió.» ¿Nos vimos?', options: ['Sí, probablemente un momento.', 'No, Ana ya no estaba.'], answer: 0, why: 'Con el indefinido, los hechos van en orden: llegué y después Ana salió.' },
+            { prompt: '«Cuando llegué, Ana ya había salido.» ¿Qué pasó primero?', options: ['Ana salió.', 'Yo llegué.'], answer: 0, why: '«Había salido» marca la acción anterior: Ana salió antes de mi llegada.', en: '“Cuando llegué, Ana ya había salido.” What happened first?' },
+            { prompt: '«Cuando llegué, Ana salió.» ¿Nos vimos?', options: ['Sí, probablemente un momento.', 'No, Ana ya no estaba.'], answer: 0, why: 'Con el indefinido, los hechos van en orden: llegué y después Ana salió.', en: '“Cuando llegué, Ana salió.” Did we see each other?' },
           ] },
         ] },
-        { title: 'Cómo se forma', mascot: '/brand/mascot/studying.webp', coach: 'Haber en imperfecto + participio.', blocks: [
-          { kind: 'concept', tone: 'orange', label: 'PLUSCUAMPERFECTO', question: '¿Qué había pasado antes?', formula: ['había / habías / había / habíamos / habíais / habían + participio'],
+        { title: 'Cómo se forma · How to form it', mascot: '/brand/mascot/studying.webp', coach: 'Haber en imperfecto + participio.', blocks: [
+          { kind: 'concept', tone: 'orange', label: 'PLUSCUAMPERFECTO', question: '¿Qué había pasado antes?', en: 'Imperfect of “haber” + past participle, just like English “had done”: it shows an action completed before another past moment', formula: ['había / habías / había / habíamos / habíais / habían + participio'],
             meaning: 'Se forma con el verbo **haber en imperfecto** y el **participio** del verbo principal. El participio no cambia nunca.',
             examples: [
-              { es: 'Elena [[había reservado|orange]] una sala dos semanas antes.' },
-              { es: 'Nosotros no [[habíamos comido|orange]] nada en todo el día.' },
-              { es: 'Los participantes todavía no [[habían llegado|orange]].' },
+              { es: 'Elena [[había reservado|orange]] una sala dos semanas antes.', en: 'Elena had booked a room two weeks before.' },
+              { es: 'Nosotros no [[habíamos comido|orange]] nada en todo el día.', en: 'We hadn’t eaten anything all day.' },
+              { es: 'Los participantes todavía no [[habían llegado|orange]].', en: 'The participants still hadn’t arrived.' },
             ] },
           { kind: 'table', title: 'Formas regulares', head: ['', 'hablar', 'comer', 'vivir'], rows: [
             ['yo', '**había** habl**ado**', '**había** com**ido**', '**había** viv**ido**'],
@@ -75,56 +75,56 @@ export const lesson: LiveLesson = {
             ['abrir', '**abierto**', 'Alguien había **abierto** la ventana.'],
             ['romper', '**roto**', 'El perro había **roto** un vaso.'],
           ] },
-          { kind: 'tip', icon: '🔒', title: 'Un bloque que no se separa', text: 'Entre **había** y el participio no va nada: «**Ya** había salido», «**No** lo había visto», nunca «había ya salido». Y el participio no cambia: «Ellas habían **llegado**», no «llegadas».' },
+          { kind: 'tip', icon: '🔒', title: 'Un bloque que no se separa', text: 'Entre **había** y el participio no va nada: «**Ya** había salido», «**No** lo había visto», nunca «había ya salido». Y el participio no cambia: «Ellas habían **llegado**», no «llegadas».', en: 'Nothing goes between “había” and the participle: put “ya” or “no” before “había”, never in the middle. And the participle never changes for gender or number.' },
           { kind: 'choice', title: 'Comprueba', items: [
-            { prompt: 'Nosotros no ___ mesa y el restaurante estaba lleno.', options: ['habíamos reservado', 'hemos reservar', 'habíamos reservada'], answer: 0, why: '«Habíamos» + participio invariable «reservado».' },
-            { prompt: 'Cuando entré, alguien ya ___ la ventana.', options: ['había abrido', 'había abierto', 'abría'], answer: 1, why: '«Abrir» tiene participio irregular: «abierto».' },
+            { prompt: 'Nosotros no ___ mesa y el restaurante estaba lleno.', options: ['habíamos reservado', 'hemos reservar', 'habíamos reservada'], answer: 0, why: '«Habíamos» + participio invariable «reservado».', en: 'We ___ (book) a table and the restaurant was full.' },
+            { prompt: 'Cuando entré, alguien ya ___ la ventana.', options: ['había abrido', 'había abierto', 'abría'], answer: 1, why: '«Abrir» tiene participio irregular: «abierto».', en: 'When I came in, someone ___ (open) the window already.' },
           ] },
         ] },
-        { title: 'Antes de otro momento', mascot: '/brand/mascot/speaking.webp', coach: '¿Ya había pasado o todavía no?', blocks: [
-          { kind: 'concept', tone: 'orange', label: 'ANTERIORIDAD', question: '¿Qué había pasado cuando…?', formula: ['cuando + indefinido, (ya / todavía no) + pluscuamperfecto'],
+        { title: 'Antes de otro momento · Before another moment', mascot: '/brand/mascot/speaking.webp', coach: '¿Ya había pasado o todavía no?', blocks: [
+          { kind: 'concept', tone: 'orange', label: 'ANTERIORIDAD', question: '¿Qué había pasado cuando…?', en: 'Use it for what had (or had not yet) happened by a past reference point. “Ya” (already), “todavía no” (not yet) and “nunca” (never) often go with it', formula: ['cuando + indefinido, (ya / todavía no) + pluscuamperfecto'],
             meaning: 'Presenta una acción **terminada antes** de otro momento del pasado. Con **ya** confirmamos que había pasado; con **todavía no**, que no había pasado aún.',
             examples: [
-              { es: 'Cuando [[llegaron|blue]] los participantes, Elena [[ya|teal]] [[había colocado|orange]] las sillas.' },
-              { es: 'Cuando [[sonó|blue]] el despertador, [[ya|teal]] me [[había levantado|orange]].' },
-              { es: '[[A las diez|blue]], el profesor [[todavía no|teal]] [[había llegado|orange]].' },
-              { es: '[[Antes de 2020|blue]], [[nunca|teal]] [[había viajado|orange]] sola.' },
+              { es: 'Cuando [[llegaron|blue]] los participantes, Elena [[ya|teal]] [[había colocado|orange]] las sillas.', en: 'When the participants arrived, Elena had already set out the chairs.' },
+              { es: 'Cuando [[sonó|blue]] el despertador, [[ya|teal]] me [[había levantado|orange]].', en: 'When the alarm went off, I had already got up.' },
+              { es: '[[A las diez|blue]], el profesor [[todavía no|teal]] [[había llegado|orange]].', en: 'At ten, the teacher still hadn’t arrived.' },
+              { es: '[[Antes de 2020|blue]], [[nunca|teal]] [[había viajado|orange]] sola.', en: 'Before 2020, I had never travelled alone.' },
             ],
             note: 'Con **nunca** + pluscuamperfecto contamos una experiencia nueva: «Nunca había visto la nieve **hasta ese invierno**».' },
           { kind: 'choice', title: 'Comprueba', items: [
-            { prompt: 'Cuando llegamos, la película ya ___.', options: ['había empezado', 'empezará', 'ha empezado'], answer: 0, why: 'La película empezó antes de nuestra llegada.' },
-            { prompt: 'A las nueve, Pablo todavía no ___ de casa.', options: ['salió', 'había salido', 'saldría'], answer: 1, why: '«Todavía no» + pluscuamperfecto: a esa hora no había ocurrido la salida.' },
+            { prompt: 'Cuando llegamos, la película ya ___.', options: ['había empezado', 'empezará', 'ha empezado'], answer: 0, why: 'La película empezó antes de nuestra llegada.', en: 'When we arrived, the film ___ (start) already.' },
+            { prompt: 'A las nueve, Pablo todavía no ___ de casa.', options: ['salió', 'había salido', 'saldría'], answer: 1, why: '«Todavía no» + pluscuamperfecto: a esa hora no había ocurrido la salida.', en: 'At nine, Pablo still ___ (leave) home.' },
           ] },
         ] },
-        { title: 'Explicar la causa', mascot: '/autoestudio/mascot/noting.webp', coach: '¿Por qué pasó? Por algo anterior.', blocks: [
-          { kind: 'concept', tone: 'orange', label: 'CAUSA ANTERIOR', question: '¿Por qué estaba así?', formula: ['situación pasada + porque + pluscuamperfecto'],
+        { title: 'Explicar la causa · Explaining the cause', mascot: '/autoestudio/mascot/noting.webp', coach: '¿Por qué pasó? Por algo anterior.', blocks: [
+          { kind: 'concept', tone: 'orange', label: 'CAUSA ANTERIOR', question: '¿Por qué estaba así?', en: 'To explain why a past situation was the way it was, give the earlier cause with “porque” + pluperfect', formula: ['situación pasada + porque + pluscuamperfecto'],
             meaning: 'Explica una situación del pasado con una **causa que ocurrió antes**. Es muy útil para justificar, disculparse o aclarar un problema.',
             examples: [
-              { es: '[[Estaba|blue]] muy cansado porque no [[había dormido|orange]] bien.' },
-              { es: 'La sala [[estaba|blue]] libre porque otro grupo [[había cancelado|orange]].' },
-              { es: 'No [[aprobó|blue]] el examen porque no [[había estudiado|orange]].' },
-              { es: '[[Llegamos|blue]] tarde porque [[habíamos perdido|orange]] el autobús.' },
+              { es: '[[Estaba|blue]] muy cansado porque no [[había dormido|orange]] bien.', en: 'I was very tired because I hadn’t slept well.' },
+              { es: 'La sala [[estaba|blue]] libre porque otro grupo [[había cancelado|orange]].', en: 'The room was free because another group had cancelled.' },
+              { es: 'No [[aprobó|blue]] el examen porque no [[había estudiado|orange]].', en: 'He didn’t pass the exam because he hadn’t studied.' },
+              { es: '[[Llegamos|blue]] tarde porque [[habíamos perdido|orange]] el autobús.', en: 'We arrived late because we had missed the bus.' },
             ] },
           { kind: 'choice', title: 'Comprueba', items: [
-            { prompt: 'Estaba enfermo porque no ___ en toda la semana.', options: ['había descansado', 'descansará', 'descanse'], answer: 0, why: 'La falta de descanso ocurrió antes del estado pasado.' },
-            { prompt: 'Lucía no pudo entrar porque ___ las llaves en la oficina.', options: ['había dejado', 'dejaría', 'ha dejado'], answer: 0, why: 'Dejó las llaves antes de intentar entrar: causa anterior.' },
+            { prompt: 'Estaba enfermo porque no ___ en toda la semana.', options: ['había descansado', 'descansará', 'descanse'], answer: 0, why: 'La falta de descanso ocurrió antes del estado pasado.', en: 'He was ill because he ___ (rest) all week.' },
+            { prompt: 'Lucía no pudo entrar porque ___ las llaves en la oficina.', options: ['había dejado', 'dejaría', 'ha dejado'], answer: 0, why: 'Dejó las llaves antes de intentar entrar: causa anterior.', en: 'Lucía couldn’t get in because she ___ (leave) her keys at the office.' },
           ] },
         ] },
-        { title: 'Contar un descubrimiento', mascot: '/brand/mascot/kneeling.webp', coach: 'Me di cuenta después, pero había pasado antes.', blocks: [
-          { kind: 'concept', tone: 'orange', label: 'DESCUBRIMIENTO', question: '¿Qué descubriste?', formula: ['vi / me di cuenta de / supe / me enteré de que + pluscuamperfecto'],
+        { title: 'Contar un descubrimiento · Telling a discovery', mascot: '/brand/mascot/kneeling.webp', coach: 'Me di cuenta después, pero había pasado antes.', blocks: [
+          { kind: 'concept', tone: 'orange', label: 'DESCUBRIMIENTO', question: '¿Qué descubriste?', en: 'After verbs of discovering (saw, realised, found out), the thing that had already happened goes in the pluperfect: you found out later, but it happened earlier', formula: ['vi / me di cuenta de / supe / me enteré de que + pluscuamperfecto'],
             meaning: 'Primero pasa algo; **después** alguien lo descubre. El descubrimiento va en indefinido y el hecho descubierto, que es anterior, va en pluscuamperfecto.',
             examples: [
-              { es: 'Elena [[descubrió|blue]] que el centro [[había cambiado|orange]] el sistema.' },
-              { es: '[[Me di cuenta de|blue]] que [[había olvidado|orange]] el teléfono en casa.' },
-              { es: '[[Supimos|blue]] que Marta [[había ganado|orange]] el premio.' },
+              { es: 'Elena [[descubrió|blue]] que el centro [[había cambiado|orange]] el sistema.', en: 'Elena discovered that the centre had changed the system.' },
+              { es: '[[Me di cuenta de|blue]] que [[había olvidado|orange]] el teléfono en casa.', en: 'I realised I had left my phone at home.' },
+              { es: '[[Supimos|blue]] que Marta [[había ganado|orange]] el premio.', en: 'We found out that Marta had won the prize.' },
             ] },
-          { kind: 'tip', icon: '🔍', title: 'Lo mismo con «dijo que»', text: 'Para contar lo que alguien dijo sobre algo anterior: «La recepcionista **explicó** que otro grupo **había cancelado**».' },
+          { kind: 'tip', icon: '🔍', title: 'Lo mismo con «dijo que»', text: 'Para contar lo que alguien dijo sobre algo anterior: «La recepcionista **explicó** que otro grupo **había cancelado**».', en: 'The same happens with reported speech: to report what someone said about something earlier, “explicó que…” + pluperfect.' },
           { kind: 'choice', title: 'Comprueba', items: [
-            { prompt: 'Miré el correo y vi que la reunión ___.', options: ['se había cancelado', 'se cancelaría', 'se cancela'], answer: 0, why: 'La cancelación ocurrió antes de que yo abriera el correo.' },
-            { prompt: 'Cuando volví del viaje, supe que mis vecinos ___.', options: ['se habían mudado', 'se mudarán', 'se mudan'], answer: 0, why: 'La mudanza fue antes de mi descubrimiento.' },
+            { prompt: 'Miré el correo y vi que la reunión ___.', options: ['se había cancelado', 'se cancelaría', 'se cancela'], answer: 0, why: 'La cancelación ocurrió antes de que yo abriera el correo.', en: 'I checked my email and saw that the meeting ___ (be cancelled).' },
+            { prompt: 'Cuando volví del viaje, supe que mis vecinos ___.', options: ['se habían mudado', 'se mudarán', 'se mudan'], answer: 0, why: 'La mudanza fue antes de mi descubrimiento.', en: 'When I got back from my trip, I found out that my neighbours ___ (move).' },
           ] },
         ] },
-        { title: 'Cómo elegir', mascot: '/brand/mascot/seated.webp', coach: 'Indefinido o pluscuamperfecto: el orden decide.', blocks: [
+        { title: 'Cómo elegir · How to choose', mascot: '/brand/mascot/seated.webp', coach: 'Indefinido o pluscuamperfecto: el orden decide.', blocks: [
           { kind: 'decide', title: 'Piensa en dos hechos pasados y responde', steps: [
             { q: '¿Cuentas los hechos en el mismo orden en que pasaron?', yes: 'Usa el **indefinido** para los dos: «[[Llegué|blue]] y después **cené**».', no: 'next' },
             { q: '¿Uno de los hechos ocurrió antes del otro y quieres volver atrás?', yes: 'Usa el **pluscuamperfecto** para el hecho anterior: «Cuando [[llegué|blue]], ya [[habían cenado|orange]]».', no: 'Si solo describes la situación de ese momento, usa el **imperfecto**: «Cuando llegué, **cenaban**».' },
@@ -135,7 +135,7 @@ export const lesson: LiveLesson = {
             ['Cuando llegué, [[ya habían cenado|orange]].', 'La cena terminó antes de mi llegada.'],
           ], note: 'Si el orden ya está claro con «antes» o «después», en la conversación también se oye el indefinido: «Llegué después de que **cenaron**». El pluscuamperfecto hace el orden más claro.' },
         ] },
-        { title: 'Errores frecuentes', mascot: '/brand/mascot/standing-crossed.webp', coach: 'Estos errores son muy comunes.', blocks: [
+        { title: 'Errores frecuentes · Common mistakes', mascot: '/brand/mascot/standing-crossed.webp', coach: 'Estos errores son muy comunes.', blocks: [
           { kind: 'guide', text: { teacher: 'Tu alumno busca el error y dibuja la línea del tiempo de la frase antes de que muestres la corrección.', self: 'Lee cada frase, busca el error y piensa qué pasó primero. Después toca para ver la corrección.' } },
           { kind: 'mistakes', title: '¿Dónde está el error?', items: [
             { wrong: 'Cuando llegué, Ana ya salió.', right: 'Cuando llegué, Ana ya había salido.', why: 'Con «ya», la salida es anterior a la llegada: pluscuamperfecto.' },
@@ -153,20 +153,20 @@ export const lesson: LiveLesson = {
       id: 'explorar', label: 'Explorar', icon: '🔎', mascot: '/brand/mascot/walking.webp',
       title: 'El pluscuamperfecto en situaciones reales', coach: 'Toca las formas marcadas.',
       steps: [
-        { title: 'La reserva que no aparecía', blocks: [
+        { title: 'La reserva que no aparecía · The booking that wasn’t there', blocks: [
           { kind: 'guide', text: { teacher: 'Lean el diálogo con papeles. Después, el alumno toca cada forma marcada y explica qué pasó antes y qué pasó después.', self: 'Lee el diálogo. Después toca cada forma marcada para descubrir por qué se usó.' } },
           { kind: 'explore', title: 'En la recepción del centro cultural', setting: 'Es viernes por la mañana. Elena llega al centro cultural para dar un taller, pero su nombre no está en el programa.', lines: [
-            { who: 'Elena', text: 'Buenos días. Vengo a dar el taller de las diez, en la sala tres.' },
-            { who: 'Recepcionista', text: 'Lo siento, no veo su nombre en el programa de hoy.' },
-            { who: 'Elena', text: '¿Cómo puede ser? [[Había reservado|orange]] la sala dos semanas antes.' },
-            { who: 'Recepcionista', text: '¿Recibió algún correo de confirmación?' },
-            { who: 'Elena', text: 'Déjeme ver… Ah, ya veo el problema: cuando [[envié|blue]] mi solicitud, el centro [[había cambiado|orange]] el sistema de reservas esa misma mañana.' },
-            { who: 'Recepcionista', text: 'Entiendo. Su mensaje [[había quedado|orange]] sin confirmar.' },
-            { who: 'Elena', text: 'Y el lunes [[ya|teal]] [[había enviado|orange]] la lista de participantes…' },
-            { who: 'Recepcionista', text: 'Un momento… ¡Tenemos suerte! Otro grupo [[había cancelado|orange]] su taller a primera hora. La sala cinco está libre.' },
-            { who: 'Elena', text: '¡Qué alivio! Voy a prepararla.' },
-            { who: 'Recepcionista', text: 'Y la lista de participantes está aquí: un compañero la [[había guardado|orange]].' },
-            { who: 'Elena', text: 'Perfecto. Quiero tener todo listo antes de las diez.' },
+            { who: 'Elena', text: 'Buenos días. Vengo a dar el taller de las diez, en la sala tres.', en: 'Good morning. I’m here to run the ten o’clock workshop, in room three.' },
+            { who: 'Recepcionista', text: 'Lo siento, no veo su nombre en el programa de hoy.', en: 'I’m sorry, I can’t see your name on today’s programme.' },
+            { who: 'Elena', text: '¿Cómo puede ser? [[Había reservado|orange]] la sala dos semanas antes.', en: 'How can that be? I had booked the room two weeks before.' },
+            { who: 'Recepcionista', text: '¿Recibió algún correo de confirmación?', en: 'Did you get a confirmation email?' },
+            { who: 'Elena', text: 'Déjeme ver… Ah, ya veo el problema: cuando [[envié|blue]] mi solicitud, el centro [[había cambiado|orange]] el sistema de reservas esa misma mañana.', en: 'Let me see… Ah, I see the problem: when I sent my request, the centre had changed the booking system that same morning.' },
+            { who: 'Recepcionista', text: 'Entiendo. Su mensaje [[había quedado|orange]] sin confirmar.', en: 'I see. Your message had been left unconfirmed.' },
+            { who: 'Elena', text: 'Y el lunes [[ya|teal]] [[había enviado|orange]] la lista de participantes…', en: 'And on Monday I had already sent the list of participants…' },
+            { who: 'Recepcionista', text: 'Un momento… ¡Tenemos suerte! Otro grupo [[había cancelado|orange]] su taller a primera hora. La sala cinco está libre.', en: 'One moment… We’re in luck! Another group had cancelled their workshop first thing. Room five is free.' },
+            { who: 'Elena', text: '¡Qué alivio! Voy a prepararla.', en: 'What a relief! I’ll go and set it up.' },
+            { who: 'Recepcionista', text: 'Y la lista de participantes está aquí: un compañero la [[había guardado|orange]].', en: 'And the list of participants is here: a colleague had saved it.' },
+            { who: 'Elena', text: 'Perfecto. Quiero tener todo listo antes de las diez.', en: 'Perfect. I want to have everything ready before ten.' },
           ], notes: {
             'Había reservado': 'La reserva se hizo **dos semanas antes** del viernes: es anterior al momento de la historia.',
             envié: 'El **momento de referencia**: el día en que Elena envió su solicitud.',
@@ -178,22 +178,22 @@ export const lesson: LiveLesson = {
             'había guardado': 'El compañero guardó la lista **antes**; ahora la pueden recuperar.',
           } },
           { kind: 'choice', title: '¿Entendiste?', items: [
-            { prompt: '¿Por qué no aparecía la reserva de Elena?', options: ['El centro había cambiado el sistema y su mensaje había quedado sin confirmar.', 'Elena no había reservado ninguna sala.', 'Otro grupo había ocupado su sala.'], answer: 0, why: '«El centro había cambiado el sistema de reservas… Su mensaje había quedado sin confirmar».' },
-            { prompt: '¿Por qué estaba libre la sala cinco?', options: ['Porque otro grupo había cancelado su taller.', 'Porque Elena la había reservado.', 'Porque nadie la usaba los viernes.'], answer: 0, why: '«Otro grupo había cancelado su taller a primera hora».' },
+            { prompt: '¿Por qué no aparecía la reserva de Elena?', options: ['El centro había cambiado el sistema y su mensaje había quedado sin confirmar.', 'Elena no había reservado ninguna sala.', 'Otro grupo había ocupado su sala.'], answer: 0, why: '«El centro había cambiado el sistema de reservas… Su mensaje había quedado sin confirmar».', en: 'Why didn’t Elena’s booking show up?' },
+            { prompt: '¿Por qué estaba libre la sala cinco?', options: ['Porque otro grupo había cancelado su taller.', 'Porque Elena la había reservado.', 'Porque nadie la usaba los viernes.'], answer: 0, why: '«Otro grupo había cancelado su taller a primera hora».', en: 'Why was room five free?' },
           ] },
         ] },
-        { title: 'Una sorpresa', blocks: [
+        { title: 'Una sorpresa · A surprise', blocks: [
           { kind: 'explore', title: '¿Qué pasó en tu cumpleaños?', setting: 'El lunes, Lucas le cuenta a su compañera Inés lo que pasó el sábado, el día de su cumpleaños.', lines: [
-            { who: 'Inés', text: '¿Qué tal tu cumpleaños?' },
-            { who: 'Lucas', text: 'Increíble. Mis amigos me [[habían preparado|orange]] una fiesta sorpresa.' },
-            { who: 'Inés', text: '¿Y no sospechabas nada?' },
-            { who: 'Lucas', text: 'Nada. [[Nunca|teal]] me [[habían hecho|orange]] una fiesta así.' },
-            { who: 'Inés', text: '¿Cómo fue?' },
-            { who: 'Lucas', text: 'Cuando [[entré|blue]] en casa, [[ya|teal]] [[habían llegado|orange]] todos.' },
-            { who: 'Inés', text: 'Pero ¿cómo entraron?' },
-            { who: 'Lucas', text: 'Mi hermana les [[había dado|orange]] una copia de la llave el viernes.' },
-            { who: 'Inés', text: '¡Qué buena idea!' },
-            { who: 'Lucas', text: 'Sí. Lo único: yo estaba cansadísimo porque [[había trabajado|orange]] doce horas.' },
+            { who: 'Inés', text: '¿Qué tal tu cumpleaños?', en: 'How was your birthday?' },
+            { who: 'Lucas', text: 'Increíble. Mis amigos me [[habían preparado|orange]] una fiesta sorpresa.', en: 'Amazing. My friends had organised a surprise party for me.' },
+            { who: 'Inés', text: '¿Y no sospechabas nada?', en: 'And you didn’t suspect anything?' },
+            { who: 'Lucas', text: 'Nada. [[Nunca|teal]] me [[habían hecho|orange]] una fiesta así.', en: 'Nothing. Nobody had ever thrown me a party like that.' },
+            { who: 'Inés', text: '¿Cómo fue?', en: 'What happened?' },
+            { who: 'Lucas', text: 'Cuando [[entré|blue]] en casa, [[ya|teal]] [[habían llegado|orange]] todos.', en: 'When I walked into the house, everyone had already arrived.' },
+            { who: 'Inés', text: 'Pero ¿cómo entraron?', en: 'But how did they get in?' },
+            { who: 'Lucas', text: 'Mi hermana les [[había dado|orange]] una copia de la llave el viernes.', en: 'My sister had given them a copy of the key on Friday.' },
+            { who: 'Inés', text: '¡Qué buena idea!', en: 'What a good idea!' },
+            { who: 'Lucas', text: 'Sí. Lo único: yo estaba cansadísimo porque [[había trabajado|orange]] doce horas.', en: 'Yes. The only thing: I was exhausted because I had worked twelve hours.' },
           ], notes: {
             'habían preparado': 'Prepararon la fiesta **antes** de que Lucas llegara a casa.',
             Nunca: '**Nunca** + pluscuamperfecto: hasta ese sábado, era una experiencia nueva.',
@@ -206,7 +206,7 @@ export const lesson: LiveLesson = {
           } },
           { kind: 'teacher', text: 'Pregunta: «¿Qué más habían preparado los amigos?». El alumno inventa dos cosas con «habían…».' },
         ] },
-        { title: 'Antes, causa o descubrimiento', blocks: [
+        { title: 'Antes, causa o descubrimiento · Before, cause or discovery', blocks: [
           { kind: 'classify', title: '¿Qué hace el pluscuamperfecto en cada frase?', categories: [
             { id: 'antes', label: 'Antes de otro momento', tone: 'blue' },
             { id: 'causa', label: 'Explica una causa', tone: 'orange' },
@@ -226,25 +226,25 @@ export const lesson: LiveLesson = {
       id: 'practicar', label: 'Practicar', icon: '✦', mascot: '/brand/mascot/studying.webp',
       title: 'Practicar', coach: 'Antes de responder, pregúntate qué pasó primero.',
       steps: [
-        { title: 'Elige según el contexto', blocks: [
+        { title: 'Elige según el contexto · Choose by context', blocks: [
           { kind: 'choice', items: [
-            { context: 'El tren salió a las 8:00. Llegaste a la estación a las 8:05.', prompt: 'Cuando llegué a la estación, el tren ya ___.', options: ['salió', 'había salido', 'salía'], answer: 1, why: 'El tren salió antes de tu llegada: pluscuamperfecto.' },
-            { context: 'No comiste nada en todo el día.', prompt: 'A las seis tenía mucha hambre porque no ___ nada.', options: ['había comido', 'comería', 'he comido'], answer: 0, why: 'La causa es anterior al hambre de las seis.' },
-            { context: 'Buscaste tu pastel en el refrigerador.', prompt: 'Miré en el refrigerador y vi que alguien ___ mi pastel.', options: ['se comería', 'se había comido', 'se come'], answer: 1, why: 'Alguien se lo comió antes de tu descubrimiento.' },
-            { context: 'Primera vez en avión, a los treinta años.', prompt: 'Hasta los treinta años, nunca ___ en avión.', options: ['había viajado', 'viajaba', 'viajaré'], answer: 0, why: '«Nunca» + pluscuamperfecto: una experiencia que no había ocurrido hasta ese momento.' },
-            { context: 'La profesora entró a las 9:00. Los alumnos llegaron a las 9:10.', prompt: 'Cuando llegaron los alumnos, la profesora ya ___ la clase.', options: ['empezó', 'empezaba', 'había empezado'], answer: 2, why: 'La clase empezó antes de la llegada de los alumnos.' },
-            { context: 'Escribiste el informe el lunes. Tu jefe te lo pidió el martes.', prompt: 'Cuando mi jefe me pidió el informe, ya lo ___.', options: ['había escribido', 'había escrito', 'escribiría'], answer: 1, why: 'Participio irregular de «escribir»: «escrito».' },
+            { context: 'El tren salió a las 8:00. Llegaste a la estación a las 8:05.', prompt: 'Cuando llegué a la estación, el tren ya ___.', options: ['salió', 'había salido', 'salía'], answer: 1, why: 'El tren salió antes de tu llegada: pluscuamperfecto.', en: 'The train left at 8:00. You got to the station at 8:05. When I got to the station, the train ___ already.' },
+            { context: 'No comiste nada en todo el día.', prompt: 'A las seis tenía mucha hambre porque no ___ nada.', options: ['había comido', 'comería', 'he comido'], answer: 0, why: 'La causa es anterior al hambre de las seis.', en: 'You didn’t eat anything all day. At six I was very hungry because I ___ anything.' },
+            { context: 'Buscaste tu pastel en el refrigerador.', prompt: 'Miré en el refrigerador y vi que alguien ___ mi pastel.', options: ['se comería', 'se había comido', 'se come'], answer: 1, why: 'Alguien se lo comió antes de tu descubrimiento.', en: 'You looked for your cake in the fridge. I looked in the fridge and saw that someone ___ my cake.' },
+            { context: 'Primera vez en avión, a los treinta años.', prompt: 'Hasta los treinta años, nunca ___ en avión.', options: ['había viajado', 'viajaba', 'viajaré'], answer: 0, why: '«Nunca» + pluscuamperfecto: una experiencia que no había ocurrido hasta ese momento.', en: 'First time on a plane, at thirty. Until I was thirty, I never ___ (travel) by plane.' },
+            { context: 'La profesora entró a las 9:00. Los alumnos llegaron a las 9:10.', prompt: 'Cuando llegaron los alumnos, la profesora ya ___ la clase.', options: ['empezó', 'empezaba', 'había empezado'], answer: 2, why: 'La clase empezó antes de la llegada de los alumnos.', en: 'The teacher came in at 9:00. The students arrived at 9:10.' },
+            { context: 'Escribiste el informe el lunes. Tu jefe te lo pidió el martes.', prompt: 'Cuando mi jefe me pidió el informe, ya lo ___.', options: ['había escribido', 'había escrito', 'escribiría'], answer: 1, why: 'Participio irregular de «escribir»: «escrito».', en: 'You wrote the report on Monday. Your boss asked for it on Tuesday.' },
           ] },
         ] },
-        { title: 'Compara los significados', blocks: [
+        { title: 'Compara los significados · Compare the meanings', blocks: [
           { kind: 'choice', items: [
-            { prompt: '¿En qué frase **no vimos** a Marta en la fiesta?', options: ['Cuando llegamos, Marta se fue.', 'Cuando llegamos, Marta ya se había ido.'], answer: 1, why: '«Ya se había ido»: se fue antes de nuestra llegada.' },
-            { prompt: '«Cuando llegué a casa, mi madre había cocinado.» ¿Qué encontré?', options: ['La comida ya hecha.', 'A mi madre cocinando.', 'La cocina vacía.'], answer: 0, why: 'El pluscuamperfecto indica que la acción ya estaba terminada.' },
-            { prompt: '¿Qué frase dice que **la llamada fue antes** de la reunión?', options: ['Antes de la reunión, Juan había llamado al cliente.', 'Después de la reunión, Juan llamó al cliente.'], answer: 0, why: 'El pluscuamperfecto y «antes de» sitúan la llamada antes de la reunión.' },
-            { prompt: '«Nunca había probado el mole hasta mi viaje a Puebla.» ¿Qué significa?', options: ['Lo probé por primera vez en ese viaje.', 'No lo probé en ese viaje.', 'Lo comía siempre antes del viaje.'], answer: 0, why: '«Nunca había… hasta…»: la experiencia empieza en ese momento.' },
+            { prompt: '¿En qué frase **no vimos** a Marta en la fiesta?', options: ['Cuando llegamos, Marta se fue.', 'Cuando llegamos, Marta ya se había ido.'], answer: 1, why: '«Ya se había ido»: se fue antes de nuestra llegada.', en: 'In which sentence did we NOT see Marta at the party?' },
+            { prompt: '«Cuando llegué a casa, mi madre había cocinado.» ¿Qué encontré?', options: ['La comida ya hecha.', 'A mi madre cocinando.', 'La cocina vacía.'], answer: 0, why: 'El pluscuamperfecto indica que la acción ya estaba terminada.', en: '“Cuando llegué a casa, mi madre había cocinado.” What did I find?' },
+            { prompt: '¿Qué frase dice que **la llamada fue antes** de la reunión?', options: ['Antes de la reunión, Juan había llamado al cliente.', 'Después de la reunión, Juan llamó al cliente.'], answer: 0, why: 'El pluscuamperfecto y «antes de» sitúan la llamada antes de la reunión.', en: 'Which sentence says the call came before the meeting?' },
+            { prompt: '«Nunca había probado el mole hasta mi viaje a Puebla.» ¿Qué significa?', options: ['Lo probé por primera vez en ese viaje.', 'No lo probé en ese viaje.', 'Lo comía siempre antes del viaje.'], answer: 0, why: '«Nunca había… hasta…»: la experiencia empieza en ese momento.', en: '“Nunca había probado el mole hasta mi viaje a Puebla.” What does it mean?' },
           ] },
         ] },
-        { title: 'Completa la conversación', blocks: [
+        { title: 'Completa la conversación · Complete the conversation', blocks: [
           { kind: 'chat-fill', title: 'Un mal día en el aeropuerto', lines: [
             { who: 'Sara', text: '¿Por qué no viniste a la boda de Laura?' },
             { who: 'Daniel', text: 'Me quedé sin avión. Cuando llegué al aeropuerto, ya ___ la puerta de embarque.', options: ['cerraron', 'habían cerrado', 'cerraban'], answer: 1, why: 'Cerraron la puerta antes de que Daniel llegara.' },
@@ -256,7 +256,7 @@ export const lesson: LiveLesson = {
             { who: 'Daniel', text: 'Me llamó por la noche. Estaba triste porque yo le ___ que iría.', options: ['había prometido', 'prometería', 'prometo'], answer: 0, why: 'La promesa es anterior a la tristeza de esa noche.' },
           ] },
         ] },
-        { title: 'Encuentra el error', blocks: [
+        { title: 'Encuentra el error · Find the mistake', blocks: [
           { kind: 'fix', items: [
             { sentence: 'Cuando llegó la policía, el ladrón ya escapó.', ok: false, options: ['Cuando llegó la policía, el ladrón ya había escapado.', 'Cuando llegó la policía, el ladrón ya escapaba.', 'Cuando llegó la policía, el ladrón ya ha escapado.'], answer: 0, why: 'Con «ya», la huida es anterior a la llegada: pluscuamperfecto.' },
             { sentence: 'No pude entrar porque había olvidado las llaves.', ok: true, why: 'Correcta: la causa es anterior al hecho pasado.' },
@@ -266,15 +266,15 @@ export const lesson: LiveLesson = {
             { sentence: 'Estábamos tristes porque nuestro equipo había perdido.', ok: true, why: 'Correcta: la derrota explica la tristeza y ocurrió antes.' },
           ] },
         ] },
-        { title: 'Construye frases', blocks: [
+        { title: 'Construye frases · Build sentences', blocks: [
           { kind: 'build', title: 'Ordena las palabras', items: [
-            { tiles: ['Cuando', 'llegué', 'Ana', 'ya', 'había', 'salido'], accept: ['Cuando llegué Ana ya había salido', 'Ana ya había salido cuando llegué'] },
-            { tiles: ['Estaba', 'cansado', 'porque', 'no', 'había', 'dormido'], accept: ['Estaba cansado porque no había dormido'] },
-            { tiles: ['Nunca', 'había', 'visto', 'el', 'mar'], accept: ['Nunca había visto el mar'] },
-            { tiles: ['Vi', 'que', 'habían', 'cambiado', 'la', 'reserva'], accept: ['Vi que habían cambiado la reserva'] },
+            { tiles: ['Cuando', 'llegué', 'Ana', 'ya', 'había', 'salido'], accept: ['Cuando llegué Ana ya había salido', 'Ana ya había salido cuando llegué'], en: 'When I arrived, Ana had already left.' },
+            { tiles: ['Estaba', 'cansado', 'porque', 'no', 'había', 'dormido'], accept: ['Estaba cansado porque no había dormido'], en: 'I was tired because I hadn’t slept.' },
+            { tiles: ['Nunca', 'había', 'visto', 'el', 'mar'], accept: ['Nunca había visto el mar'], en: 'I had never seen the sea.' },
+            { tiles: ['Vi', 'que', 'habían', 'cambiado', 'la', 'reserva'], accept: ['Vi que habían cambiado la reserva'], en: 'I saw that they had changed the booking.' },
           ] },
         ] },
-        { title: 'Une las frases', blocks: [
+        { title: 'Une las frases · Join the sentences', blocks: [
           { kind: 'rewrite', title: 'Escribe una sola frase con el pluscuamperfecto', items: [
             { prompt: 'Ana salió. Después llegué yo.', instruction: 'Empieza con «Cuando llegué…» y usa «ya».', accept: ['Cuando llegué, Ana ya había salido', 'Cuando llegué, ya había salido Ana'] },
             { prompt: 'Estaba cansado. La noche anterior no descansé.', instruction: 'Une con «porque».', accept: ['Estaba cansado porque la noche anterior no había descansado', 'Estaba cansado porque no había descansado la noche anterior'] },
@@ -289,17 +289,17 @@ export const lesson: LiveLesson = {
       id: 'escuchar', label: 'Escuchar', icon: '🎧', mascot: '/brand/mascot/seated.webp',
       title: 'La versión de recepción', coach: 'Primero escucha sin leer.',
       steps: [
-        { title: 'La versión de recepción', blocks: [
+        { title: 'La versión de recepción · The reception’s version', blocks: [
           { kind: 'guide', text: { teacher: 'Primera escucha para la idea general. En la segunda, el alumno anota cada «había / habíamos + participio» y dice qué pasó antes de qué.', self: 'Escucha una vez para la idea general y otra vez para los detalles. Puedes bajar la velocidad y leer la transcripción al final.' } },
           { kind: 'listen', title: 'La recepcionista del centro cultural', channel: 'NOTA DE VOZ · PARA ELENA', src: '/audio/grammar-classroom/147.mp3',
             before: 'La recepcionista le deja una nota de voz a Elena después del taller. ¿Qué crees que le va a explicar?',
-            gist: { prompt: '¿Para qué llama la recepcionista?', options: ['Para explicar qué pasó con la reserva y cómo lo solucionaron.', 'Para cancelar el próximo taller de Elena.', 'Para pedirle a Elena una nueva lista.'], answer: 0, why: '«Quería explicarte la situación del viernes» y cuenta cómo recuperaron la lista y la sala.' },
+            gist: { prompt: '¿Para qué llama la recepcionista?', options: ['Para explicar qué pasó con la reserva y cómo lo solucionaron.', 'Para cancelar el próximo taller de Elena.', 'Para pedirle a Elena una nueva lista.'], answer: 0, why: '«Quería explicarte la situación del viernes» y cuenta cómo recuperaron la lista y la sala.', en: 'Why is the receptionist calling?' },
             details: [
-              { prompt: '¿Qué no habían hecho en el centro cuando llegó Elena?', options: ['Revisar todos los mensajes anteriores.', 'Cambiar el sistema.', 'Preparar la sala.'], answer: 0, why: '«Ya habíamos cambiado el sistema, pero no habíamos revisado todos los mensajes anteriores».' },
-              { prompt: '¿Cómo recuperaron la lista de participantes?', options: ['Un compañero la había guardado.', 'Elena la envió otra vez.', 'Estaba en el programa.'], answer: 0, why: '«Un compañero había guardado tu lista de participantes y pudimos recuperarla».' },
-              { prompt: '¿Por qué quedó libre una sala?', options: ['Un grupo había cancelado su taller a primera hora.', 'El centro abrió una sala nueva.', 'Elena la había reservado.'], answer: 0, why: '«Un grupo había cancelado su taller a primera hora. Esa sala quedó libre».' },
-              { prompt: '¿A quién habían avisado antes de la actividad?', options: ['Al equipo de limpieza.', 'A los participantes.', 'Al otro grupo.'], answer: 0, why: '«Antes de que empezara la actividad, ya habíamos avisado al equipo de limpieza».' },
-              { prompt: '¿Qué van a hacer en el futuro?', options: ['Enviar una confirmación clara después de cada reserva.', 'Volver al sistema antiguo.', 'Cerrar las reservas por correo.'], answer: 0, why: '«Para la próxima vez, enviaremos una confirmación clara después de cada reserva».' },
+              { prompt: '¿Qué no habían hecho en el centro cuando llegó Elena?', options: ['Revisar todos los mensajes anteriores.', 'Cambiar el sistema.', 'Preparar la sala.'], answer: 0, why: '«Ya habíamos cambiado el sistema, pero no habíamos revisado todos los mensajes anteriores».', en: 'What had the centre not done when Elena arrived?' },
+              { prompt: '¿Cómo recuperaron la lista de participantes?', options: ['Un compañero la había guardado.', 'Elena la envió otra vez.', 'Estaba en el programa.'], answer: 0, why: '«Un compañero había guardado tu lista de participantes y pudimos recuperarla».', en: 'How did they get the list of participants back?' },
+              { prompt: '¿Por qué quedó libre una sala?', options: ['Un grupo había cancelado su taller a primera hora.', 'El centro abrió una sala nueva.', 'Elena la había reservado.'], answer: 0, why: '«Un grupo había cancelado su taller a primera hora. Esa sala quedó libre».', en: 'Why was a room free?' },
+              { prompt: '¿A quién habían avisado antes de la actividad?', options: ['Al equipo de limpieza.', 'A los participantes.', 'Al otro grupo.'], answer: 0, why: '«Antes de que empezara la actividad, ya habíamos avisado al equipo de limpieza».', en: 'Who had they told before the activity?' },
+              { prompt: '¿Qué van a hacer en el futuro?', options: ['Enviar una confirmación clara después de cada reserva.', 'Volver al sistema antiguo.', 'Cerrar las reservas por correo.'], answer: 0, why: '«Para la próxima vez, enviaremos una confirmación clara después de cada reserva».', en: 'What are they going to do in future?' },
             ],
             transcript: 'Hola, Elena. Quería explicarte la situación del viernes. [[Cuando llegaste|blue]], [[ya|teal]] [[habíamos cambiado|orange]] el sistema, pero no [[habíamos revisado|orange]] todos los mensajes anteriores. Por eso tu reserva no aparecía. Un compañero [[había guardado|orange]] tu lista de participantes y pudimos recuperarla. Además, un grupo [[había cancelado|orange]] su taller a primera hora. Esa sala quedó libre y la preparamos para ti. [[Antes de que empezara la actividad|blue]], [[ya|teal]] [[habíamos avisado|orange]] al equipo de limpieza. Para la próxima vez, enviaremos una confirmación clara después de cada reserva. Gracias por mantener la calma y ayudarnos a ordenar la información.',
             reply: { teacher: 'El alumno responde a la recepcionista en voz alta, como si fuera Elena: agradece y cuenta qué había preparado ella antes de que llegaran los participantes.', self: 'Responde a la recepcionista como si fueras Elena: da las gracias y cuenta qué habías preparado antes de que llegaran los participantes.' } },
@@ -310,7 +310,7 @@ export const lesson: LiveLesson = {
       id: 'conversar', label: 'Conversar', icon: '💬', mascot: '/brand/mascot/speaking.webp',
       title: 'Lo que había pasado antes', coach: 'Vuelve atrás en tu historia.',
       steps: [
-        { title: 'Lo que había pasado antes', blocks: [
+        { title: 'Lo que había pasado antes · What had happened before', blocks: [
           { kind: 'guide', text: { teacher: 'No hace falta usar todas las preguntas. Sigue lo que el alumno quiere contar y repregunta: «¿Y antes de eso, qué había pasado?». Comparte también tus historias.', self: 'Responde cada pregunta en voz alta, como en una conversación. Si quieres, escribe tu respuesta antes de decirla.' } },
           { kind: 'talk', cards: [
             { q: '¿Llegaste alguna vez a un lugar y encontraste algo muy diferente de lo que esperabas?', followUps: ['¿Qué había cambiado?', '¿Quién lo había cambiado?', '¿Cómo reaccionaste?'], phrases: ['Cuando llegué, [[ya|teal]] [[habían…|orange]]', 'Alguien [[había…|orange]]', 'No lo podía creer.'], hint: 'Primero di el momento de tu llegada (indefinido) y después lo que había pasado antes (pluscuamperfecto).', example: 'Cuando volví a mi barrio después de cinco años, habían cerrado la panadería de la esquina y habían abierto un gimnasio. Me puse un poco triste.', next: 'Ahora piensa en un problema que tuviste.' },
@@ -327,7 +327,7 @@ export const lesson: LiveLesson = {
       id: 'escribir', label: 'Escribir', icon: '✍', mascot: '/autoestudio/mascot/writing.webp',
       title: 'Un informe breve', coach: 'Cuenta el problema y sus causas anteriores.',
       steps: [
-        { title: 'Un informe breve', blocks: [
+        { title: 'Un informe breve · A short report', blocks: [
           { kind: 'guide', text: { teacher: 'Puede escribir en clase o como tarea. Usen la revisión automática y después revisen juntos la línea del tiempo del texto.', self: 'Escribe tu informe y toca «Revisar mi texto». Después comprueba: ¿el lector entiende qué pasó primero?' } },
           { kind: 'write', title: 'Un problema resuelto', situation: 'Tuviste un problema en el trabajo, en un viaje o en una actividad (una reserva, una entrega, una reunión) y al final se resolvió. Escribe un informe breve para tu equipo.', task: [
             'Marca el **momento** del problema: «El viernes, cuando llegué…».',
@@ -345,15 +345,15 @@ export const lesson: LiveLesson = {
       id: 'cerrar', label: 'Cerrar', icon: '✓', mascot: '/brand/mascot/standing.webp',
       title: 'Lo esencial', coach: '¿Qué te llevas hoy?',
       steps: [
-        { title: 'Lo esencial', blocks: [
+        { title: 'Lo esencial · The essentials', blocks: [
           { kind: 'recap', items: [
-            { tone: 'orange', label: 'FORMA', formula: 'había / habías / había / habíamos / habíais / habían + participio', example: 'Elena había reservado la sala.', caption: 'El participio no cambia y no se separa de «había».' },
-            { tone: 'blue', label: 'ANTES DE OTRO MOMENTO', formula: 'cuando + indefinido, ya + pluscuamperfecto', example: 'Cuando llegamos, la película ya había empezado.', caption: 'Lo que pasó antes de un momento pasado.' },
-            { tone: 'teal', label: 'CAUSA Y DESCUBRIMIENTO', formula: 'porque / supe que + pluscuamperfecto', example: 'Estaba cansado porque no había dormido.', caption: 'Explica o revela un hecho anterior.' },
+            { tone: 'orange', label: 'FORMA', formula: 'había / habías / había / habíamos / habíais / habían + participio', example: 'Elena había reservado la sala.', caption: 'El participio no cambia y no se separa de «había».', en: 'Form: imperfect of “haber” + participle. The participle never changes and is never separated from “había”.' },
+            { tone: 'blue', label: 'ANTES DE OTRO MOMENTO', formula: 'cuando + indefinido, ya + pluscuamperfecto', example: 'Cuando llegamos, la película ya había empezado.', caption: 'Lo que pasó antes de un momento pasado.', en: 'What happened before a past moment.' },
+            { tone: 'teal', label: 'CAUSA Y DESCUBRIMIENTO', formula: 'porque / supe que + pluscuamperfecto', example: 'Estaba cansado porque no había dormido.', caption: 'Explica o revela un hecho anterior.', en: 'It explains or reveals an earlier fact.' },
           ] },
-          { kind: 'tip', icon: '🔑', title: 'Una pregunta para elegir', text: 'Busca el **momento de referencia** en el pasado. ¿Lo que cuentas pasó **antes** de ese momento? Usa el pluscuamperfecto.' },
+          { kind: 'tip', icon: '🔑', title: 'Una pregunta para elegir', text: 'Busca el **momento de referencia** en el pasado. ¿Lo que cuentas pasó **antes** de ese momento? Usa el pluscuamperfecto.', en: 'Find the reference point in the past. Did what you are telling happen before that moment? Then use the pluperfect.' },
         ] },
-        { title: 'Desafío final', blocks: [
+        { title: 'Desafío final · Final challenge', blocks: [
           { kind: 'choice', title: 'Cuatro frases, sin ayuda', items: [
             { prompt: 'Cuando entré en la cocina, alguien ya ___ los platos.', options: ['lavó', 'había lavado', 'lavaría'], answer: 1, why: 'Lavaron los platos antes de que yo entrara.' },
             { prompt: 'Estaba nerviosa porque nunca ___ en público.', options: ['había hablado', 'hablará', 'hable'], answer: 0, why: '«Nunca» + pluscuamperfecto explica la causa anterior.' },
@@ -361,7 +361,7 @@ export const lesson: LiveLesson = {
             { prompt: 'Ellos ya ___ la noticia cuando los llamé.', options: ['habían oídos', 'habían oído', 'han oído'], answer: 1, why: 'Participio invariable: «oído». Es anterior a mi llamada.' },
           ] },
         ] },
-        { title: 'Tus errores y repaso', blocks: [
+        { title: 'Tus errores y repaso · Your mistakes and review', blocks: [
           { kind: 'review' },
           { kind: 'restart' },
           { kind: 'teacher', text: 'Pregunta de cierre: «Cuando llegué, cenaron», «cenaban» y «habían cenado»: ¿qué cambia? Después, dos hechos seguidos; en medio de la cena; la cena ya había terminado.' },
