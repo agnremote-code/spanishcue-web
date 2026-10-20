@@ -18,7 +18,7 @@ Checkpoint para retomar sin repetir trabajo. Se actualiza con cada tanda.
 | 7–10 | G052–G106 (40 clases: 27 A2, 13 B1) | #238 | en producción (`8e140da`) |
 | 11 | G108–G118 (10 B1) | (mismo PR que 12) | lista, con audio |
 | 12 | G119–G130 (8 B1, 2 B2) | (mismo PR) | lista, con audio |
-| 13 | G135, G136, G138–G141, G143–G145, G147 (B2) | — | en redacción |
+| 13 | G135, G136, G138–G141, G143–G145, G147 (B2) | — | lista; audio en el workflow |
 
 Siguiente unidad pendiente después de la tanda 13: G149 (id 449).
 

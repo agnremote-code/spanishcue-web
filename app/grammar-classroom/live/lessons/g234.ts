@@ -112,7 +112,7 @@ export const lesson: LiveLesson = {
             { q: '¿Hablas de una persona?', yes: 'Elige: **preposición + quien / quienes** o **preposición + el / la / los / las que**: «la persona [[en quien|teal]] confío» / «la persona [[en la que|blue]] confío».', no: 'Usa **preposición + el / la / los / las que**, con el artículo que concuerda: «el informe [[del que|blue]] depende la autorización».' },
           ] },
           { kind: 'tip', icon: '🔍', title: 'Un truco para encontrar la preposición', text: 'Vuelve a la frase original: «La autorización depende **del** informe». La preposición que aparece ahí («de») es la que necesitas: «el informe **del que** depende».' },
-          { kind: 'tip', icon: '📚', title: 'Lo que viene después', text: 'Existe también **cuyo / cuya** («el edificio **cuyo** propietario es Sergio»), que expresa posesión. Es más formal y lo trabajarás en C1.' },
+          { kind: 'tip', icon: '📚', title: 'Lo que viene después', text: 'Existe también **cuyo / cuya** («el edificio **cuyo** propietario es Sergio»), que expresa posesión. Es más formal y lo trabajarás en B2.' },
         ] },
         { title: 'Errores frecuentes', mascot: '/brand/mascot/standing-crossed.webp', coach: 'El error más común: perder la preposición.', blocks: [
           { kind: 'guide', text: { teacher: 'Tu alumno reconstruye la frase original («hablamos con…») antes de corregir.', self: 'Para cada frase, reconstruye la frase original con el verbo y su preposición. Después toca para ver la corrección.' } },
