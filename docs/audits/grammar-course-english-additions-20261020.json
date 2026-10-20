@@ -66593,6 +66593,10 @@
     {
       "path": "app/grammar-classroom/live/lessons/g540.ts",
       "text": "You can now change the tone of words: “un momentito”, “un poquito”, “un exitazo”. In class 070 you learn words to talk about things and people without naming them, very useful in a café: “Anything else?”, “No, nothing else, thanks”, “Is there anyone in the queue?”. It is the natural next step: after talking about amount and size with diminutives and augmentatives, you talk about existence: something or nothing, someone or no one."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g536.ts",
+      "text": "You have completed the grammar course, from the very first class to the last C2 class."
     }
   ]
 }
