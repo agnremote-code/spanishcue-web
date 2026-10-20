@@ -178,9 +178,9 @@ function Classroom({ lesson, scenes, course, mode, setMode, studentId, setStuden
         <p className="gl-hero-sub">{lesson.subtitle}{lesson.now && <> <span className="gl-now">En esta clase, hoy es {lesson.now}.</span></>}</p>
         {course && <nav className="gl-course" aria-label="Curso de gramática" data-course-position={course.code}>
           <b>{courseNumber(course.sequence)} <small>de {course.total} · {course.code}</small></b>
-          {course.prev && <a href={course.prev.href} data-course-prev={course.prev.code} title={course.prev.title}>← {courseNumber(course.prev.sequence)}</a>}
-          {course.next && <a href={course.next.href} data-course-next={course.next.code} title={course.next.title}>{courseNumber(course.next.sequence)} →</a>}
-          <a href="/spanish-grammar-lessons#course">Ver el curso en orden</a>
+          {course.prev && <Link href={course.prev.href} data-course-prev={course.prev.code} title={course.prev.title}>← {courseNumber(course.prev.sequence)}</Link>}
+          {course.next && <Link href={course.next.href} data-course-next={course.next.code} title={course.next.title}>{courseNumber(course.next.sequence)} →</Link>}
+          <Link href="/spanish-grammar-lessons#course">Ver el curso en orden</Link>
         </nav>}
       </section>
 
@@ -219,7 +219,7 @@ function Classroom({ lesson, scenes, course, mode, setMode, studentId, setStuden
 
           <footer className="gl-stage-foot">
             <button type="button" className="gl-ghost" data-prev disabled={isFirst} onClick={back} aria-label="Anterior">←<span className="gl-long"> Anterior</span></button>
-            {isLast ? (course?.next ? <a className="gl-primary" href={course.next.href} data-course-continue>Siguiente: {courseNumber(course.next.sequence)} →</a> : <Link className="gl-primary" href="/">Volver a la biblioteca</Link>) : <button type="button" className="gl-primary" data-next onClick={forward}><span className="gl-long">{nextLabel}</span><span className="gl-short">Siguiente</span> →</button>}
+            {isLast ? (course?.next ? <Link className="gl-primary" href={course.next.href} data-course-continue>Siguiente: {courseNumber(course.next.sequence)} →</Link> : <Link className="gl-primary" href="/">Volver a la biblioteca</Link>) : <button type="button" className="gl-primary" data-next onClick={forward}><span className="gl-long">{nextLabel}</span><span className="gl-short">Siguiente</span> →</button>}
           </footer>
         </main>
 
