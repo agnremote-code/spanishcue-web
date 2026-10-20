@@ -10584,6 +10584,114 @@
       "text": "Hoy salí a las cuatro",
       "category": "neutral-context",
       "reason": "Ejemplos meta de pretérito simple en primera persona («hoy comí») para contrastar variedades."
+    },
+    {
+      "path": "app/grammar-classroom/live/audio/clips.json",
+      "text": "Pilar, buenos días, te habla Valeria. Mira, estuve pensando en la reunión de ayer y te quiero proponer algo antes de volver a hablar con Ignacio. Bueno, primero lo bueno: las ilustradoras aceptan el calendario partido; eso sí, con una condición: que el tercer título no se mueva de mayo ni un día. O sea, que lo que acordamos se puede cumplir. Ahora, lo delicado. Cuando Ignacio dijo «ya, ya», yo me sentí un poco atacada; no sé, a lo mejor fue solo el tono. De todas formas, no quiero llegar a la próxima reunión a la defensiva. A ver qué te parece esto: tú abres con el calendario, yo explico lo de las ilustradoras y, si él me interrumpe, le digo con calma: «Déjame terminar y luego te escucho». Y por supuesto le reconocemos lo de la feria, que en eso tiene razón, ¿no? Así es más fácil que acepte lo demás. En fin, llámame cuando puedas, que aquí todavía es temprano y tengo la mañana libre. Listo, eso era todo. Un abrazo.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 224: «dale» enseñado como marcador regional de acuerdo, y «me sentí» en primera persona."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g524.ts",
+      "text": "ACEPTAR Y CONDICIONAR · de acuerdo, vale, dale, claro, por supuesto, eso sí (agreeing, with or without conditions)",
+      "category": "regional-pedagogy",
+      "reason": "Clase 224: «dale» enseñado como marcador regional de acuerdo, y «me sentí» en primera persona."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g524.ts",
+      "text": "DE ACUERDO · VALE · DALE · CLARO · POR SUPUESTO · YA · ESO SÍ",
+      "category": "regional-pedagogy",
+      "reason": "Clase 224: «dale» enseñado como marcador regional de acuerdo, y «me sentí» en primera persona."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g524.ts",
+      "text": "**De acuerdo** es la forma **general** y neutra; sirve también por escrito. **Vale** es característico de **España**; **dale** es muy frecuente en el **Río de la Plata** y en otras zonas de América. **Claro** acepta y presenta la idea como evidente; **por supuesto**, con más énfasis. **Ya** suele significar «te escucho, lo entiendo», **no** «estoy de acuerdo»: «**Ya, pero** el plazo sigue siendo corto» recibe y objeta. Repetido y con entonación descendente, «**ya, ya**» suele leerse como **incredulidad irónica**. **Eso sí**, tras un acuerdo, marca la **condición** que no se negocia (clases 156 y 190).",
+      "category": "regional-pedagogy",
+      "reason": "Clase 224: «dale» enseñado como marcador regional de acuerdo, y «me sentí» en primera persona."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g524.ts",
+      "text": "—¿Te mando el contrato esta tarde? —[[Vale|blue]], perfecto. · —[[Dale|blue]], genial.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 224: «dale» enseñado como marcador regional de acuerdo, y «me sentí» en primera persona."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g524.ts",
+      "text": "**dale**",
+      "category": "regional-pedagogy",
+      "reason": "Clase 224: «dale» enseñado como marcador regional de acuerdo, y «me sentí» en primera persona."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g524.ts",
+      "text": "Correo a una distribuidora que no conoces: «Dale, le envío el contrato».",
+      "category": "regional-pedagogy",
+      "reason": "Clase 224: «dale» enseñado como marcador regional de acuerdo, y «me sentí» en primera persona."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g524.ts",
+      "text": "«Dale» es coloquial y regional: en un correo formal, «de acuerdo».",
+      "category": "regional-pedagogy",
+      "reason": "Clase 224: «dale» enseñado como marcador regional de acuerdo, y «me sentí» en primera persona."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g524.ts",
+      "text": "[[Dale|blue]], entonces lo anunciamos así en el catálogo.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 224: «dale» enseñado como marcador regional de acuerdo, y «me sentí» en primera persona."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g524.ts",
+      "text": "**Dale**: acuerdo coloquial muy frecuente en el Río de la Plata y en otras zonas de América. Joaquín habla en su variedad.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 224: «dale» enseñado como marcador regional de acuerdo, y «me sentí» en primera persona."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g524.ts",
+      "text": "Dale",
+      "category": "regional-pedagogy",
+      "reason": "Clase 224: «dale» enseñado como marcador regional de acuerdo, y «me sentí» en primera persona."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g524.ts",
+      "text": "«Dale» = de acuerdo, coloquial, muy frecuente en el Río de la Plata.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 224: «dale» enseñado como marcador regional de acuerdo, y «me sentí» en primera persona."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g524.ts",
+      "text": "«Me sentí un poco atacada, no sé, a lo mejor fue solo el tono».",
+      "category": "regional-pedagogy",
+      "reason": "Clase 224: «dale» enseñado como marcador regional de acuerdo, y «me sentí» en primera persona."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g524.ts",
+      "text": "Pilar, buenos días, te habla Valeria. [[Mira|orange]], estuve pensando en la reunión de ayer y te quiero proponer algo antes de volver a hablar con Ignacio. [[Bueno|teal]], primero lo bueno: las ilustradoras aceptan el calendario partido; [[eso sí|blue]], con una condición: que el tercer título no se mueva de mayo ni un día. [[O sea|teal]], que lo que acordamos se puede cumplir. Ahora, lo delicado. Cuando Ignacio dijo «ya, ya», yo me sentí un poco atacada; [[no sé|orange]], a lo mejor fue solo el tono. [[De todas formas|teal]], no quiero llegar a la próxima reunión a la defensiva. [[A ver|orange]] qué te parece esto: tú abres con el calendario, yo explico lo de las ilustradoras y, si él me interrumpe, le digo con calma: «[[Déjame terminar|violet]] y luego te escucho». Y [[por supuesto|blue]] le reconocemos lo de la feria, que en eso tiene razón, [[¿no?|violet]] Así es más fácil que acepte lo demás. [[En fin|teal]], llámame cuando puedas, que aquí todavía es temprano y tengo la mañana libre. [[Listo|blue]], eso era todo. Un abrazo.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 224: «dale» enseñado como marcador regional de acuerdo, y «me sentí» en primera persona."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g524.ts",
+      "text": "A Montevideo: [[Dale|blue]], …",
+      "category": "regional-pedagogy",
+      "reason": "Clase 224: «dale» enseñado como marcador regional de acuerdo, y «me sentí» en primera persona."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g524.ts",
+      "text": "A mi colega de Madrid le diría: «Vale, te lo mando hoy». Al distribuidor de Montevideo le oigo «dale» todo el rato, y entre colegas también lo uso. A la ilustradora de Bogotá: «Listo, quedamos así». Y al cliente de México, de usted: «De acuerdo, le envío el contrato esta tarde».",
+      "category": "regional-pedagogy",
+      "reason": "Clase 224: «dale» enseñado como marcador regional de acuerdo, y «me sentí» en primera persona."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g524.ts",
+      "text": "de acuerdo (general) · vale (España) · dale, listo, sale (regionales) · claro · por supuesto · eso sí + condición",
+      "category": "regional-pedagogy",
+      "reason": "Clase 224: «dale» enseñado como marcador regional de acuerdo, y «me sentí» en primera persona."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g524.ts",
+      "text": "Dale, lo firmamos con fechas cerradas.",
+      "category": "regional-pedagogy",
+      "reason": "Clase 224: «dale» enseñado como marcador regional de acuerdo, y «me sentí» en primera persona."
     }
   ]
 }
