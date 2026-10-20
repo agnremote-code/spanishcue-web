@@ -8736,6 +8736,96 @@
       "text": "«Vos» es la forma de Argentina, Uruguay y otras zonas de América; «vosotros» es la forma de España (clase 021). **Hay que** no cambia nunca: no tiene persona. (Hay que never changes.)",
       "category": "regional-pedagogy",
       "reason": "Course class G080 (2026-10-20): conjugation table and variety note teach the voseo form «vos tenés que» explicitly."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g396.ts",
+      "text": "Con vos · With vos",
+      "category": "regional-pedagogy",
+      "reason": "Course class G096 (2026-10-20): the 🌎 variety note teaches the voseo affirmative imperative (vení, decí, hacé, andá) explicitly."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g396.ts",
+      "text": "En el Río de la Plata y en buena parte de Centroamérica, el afirmativo de **vos** es el infinitivo sin **-r**, con acento al final: **vení**, **esperá**, **decí**, **hacé**; ir → **andá**. Con pronombres: **decile**, **decímelo**. En negativo, lo más general es la forma de tú: **no vengas**, **no me lo digas** (también se oye «no vengás»). Usted y ustedes no cambian.",
+      "category": "regional-pedagogy",
+      "reason": "Course class G096 (2026-10-20): the 🌎 variety note teaches the voseo affirmative imperative (vení, decí, hacé, andá) explicitly."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g396.ts",
+      "text": "Dale las entradas a Celia.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (salí, abrí, dormí), tú imperative «dale» or the voseo note above, reviewed."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g398.ts",
+      "text": "Cuando salí, cerré con llave.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (salí, abrí, dormí), tú imperative «dale» or the voseo note above, reviewed."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g398.ts",
+      "text": "abrí",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (salí, abrí, dormí), tú imperative «dale» or the voseo note above, reviewed."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g398.ts",
+      "text": "Pasado: cuando + indefinido, abrí.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (salí, abrí, dormí), tú imperative «dale» or the voseo note above, reviewed."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g398.ts",
+      "text": "Normalmente, cuando llego a casa, me cambio de ropa y preparo un té. Hoy, cuando llegue, voy a llamar a mi madre. Ayer, cuando llegué, me dormí en el sofá.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (salí, abrí, dormí), tú imperative «dale» or the voseo note above, reviewed."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g398.ts",
+      "text": "Alguien va a cuidar tu casa (o tu mascota, o tus plantas). Dale tres instrucciones. · Someone is looking after your home: give three instructions.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (salí, abrí, dormí), tú imperative «dale» or the voseo note above, reviewed."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g398.ts",
+      "text": "Cuando llegues, abre las ventanas un rato. En cuanto entres, dale agua al gato. Y si está nervioso, quédate un rato con él hasta que se tranquilice.",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (salí, abrí, dormí), tú imperative «dale» or the voseo note above, reviewed."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g402.ts",
+      "text": "«Le des» es subjuntivo: solo para la instrucción negativa («no le des»). Instrucción afirmativa: «dale».",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (salí, abrí, dormí), tú imperative «dale» or the voseo note above, reviewed."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g402.ts",
+      "text": "dale",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (salí, abrí, dormí), tú imperative «dale» or the voseo note above, reviewed."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g402.ts",
+      "text": "Instrucción afirmativa para Raúl: imperativo, «dale».",
+      "category": "neutral-context",
+      "reason": "Course class (2026-10-20): standard first-person preterite (salí, abrí, dormí), tú imperative «dale» or the voseo note above, reviewed."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g398.ts",
+      "text": "Piensa en una persona que espera algo importante: un trabajo, un bebé, un examen. ¿Qué va a hacer cuando eso pase? · Someone waiting for something important: what will they do when it happens?",
+      "category": "neutral-context",
+      "reason": "Course class G098 (2026-10-20): «bebé» is the common noun (baby), not a voseo form."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g398.ts",
+      "text": "[[En cuanto nazca|blue]] el bebé…",
+      "category": "neutral-context",
+      "reason": "Course class G098 (2026-10-20): «bebé» is the common noun (baby), not a voseo form."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g398.ts",
+      "text": "Mi prima espera un bebé. En cuanto nazca, va a dejar de trabajar unos meses. Cuando el bebé tenga un año, quiere volver a la oficina.",
+      "category": "neutral-context",
+      "reason": "Course class G098 (2026-10-20): «bebé» is the common noun (baby), not a voseo form."
     }
   ]
 }

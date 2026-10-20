@@ -15,15 +15,22 @@ Checkpoint para retomar sin repetir trabajo. Se actualiza con cada tanda.
 |---|---|---|---|
 | 0 | Orden G001–G236, 58 clases existentes | #232 | en producción |
 | 1–6 | 30 primeras clases nuevas (G003–G051) | #233–#237 | en producción (`fc2561d`) |
-| 7 | G052, G053, G056, G058, G060–G065 | — | en preparación |
+| 7 | G052, G053, G056, G058, G060–G065 | (mismo PR que 8 y 9) | lista, con audio |
+| 8 | G066, G067, G069–G076 | (mismo PR) | lista, con audio |
+| 9 | G077, G079, G080, G082–G085, G089–G091 | (mismo PR) | lista; audio en el workflow |
+| 10 | G092–G096, G098, G099, G101, G102, G106 | — | escritas y validadas; falta integrar |
 
-Siguiente unidad pendiente después de la tanda 7: G066 (id 366).
+Siguiente unidad pendiente después de la tanda 10: G108 (id 408).
+
+## Memoria del Worker
+
+Las clases en vivo ya no viajan como módulos del Worker: el build deja solo un índice (id, título, nivel, secciones) y cada clase va cifrada en `_protected-lessons/` (`scripts/live-lessons.mjs`, `scripts/protect-client-assets.mjs`). Con 108 clases el Worker bajó de 36,4 a 31,6 MiB (presupuesto 36 MiB, PERF-001); cada clase nueva suma unos cientos de bytes. Las páginas usan `loadLiveLesson` y `getLiveLessonInfo`, no `getLiveLesson`.
 
 ## Pendientes transversales
 
 - Ayuda en inglés en las clases existentes de B1 a C2 (todavía solo en español).
-- Correcciones de G038 (variantes horarias), G050 (formas verbales no enseñadas) y G051 (afirmaciones regionales): en curso en la tanda 7.
-- Auditoría de cobertura PCIC/MCER/DELE: `docs/curriculum/auditoria-cobertura-pcic-mcer-2026-10-20.md` (en curso).
+- Correcciones de G038 (variantes horarias), G050 (formas verbales no enseñadas) y G051 (afirmaciones regionales): hechas en la tanda 7.
+- Auditoría de cobertura PCIC/MCER/DELE: `docs/curriculum/auditoria-cobertura-pcic-mcer-2026-10-20.md`. Propone las ampliaciones G237–G240 (ids 537–540), pendientes de decidir su lugar en el orden.
 
 ## Límites de verificación
 
