@@ -16,7 +16,14 @@ Entry format:
 ```
 
 ## Pending verification
-_(none)_
+
+## 2026-10-20 — SEO fix 1: 3D world teacher pages, honest level range, breadcrumbs on /resources (SEO/page)
+- URL(s): every `/resources/{slug}` page (BreadcrumbList, level range); the 5 3D world pages such as https://spanishcue.com/resources/spanish-conversation-activity-a0-c2-hospital-san-casi-vivo ("3D" title and description, "Inside the 3D world", "More 3D Spanish worlds").
+- PR / merged SHA / deploy: PR #224 → `c06c01c325f5188fc2ca6d643eb1bfcc99e41d16`. CI + Auto Merge 39358483836 success; staging run 39359479235 success; production run 39359743902 success (2026-10-20 02:38 UTC).
+- Production smoke evidence: the workflow's own "Production smoke" step passed (`"passed": true`, origin https://spanishcue.com; status checks including the billing/auth refusals, report-launcher and forged-owner checks). Rollback was skipped.
+- **Why it is still pending:** the changed-URL content smoke (title starts "3D Spanish Conversation Activity A0–C2", `educationalLevel` array, BreadcrumbList, "Inside the 3D world", `/hospital-san-casi-vivo` anonymous → 302 `/acceso`) was **not run**. The 2026-10-20 routine's sandbox proxy refuses connections to spanishcue.com (`connect_rejected`; WebFetch: `ENOTFOUND`). The next run with network access to the site must run it and move this entry to Published.
+- Built by / reviewed by: Alejandro stream (2026-10-17 author) / Sofia (code, APPROVE at 5ea0bcc), Martin role as a fresh agent (QA: RELEASE-READY at 990d1366).
+- Known limitations: no Search Console evidence of effect yet (Windsor reads blocked, STATUS R0). The 3D search-demand hypothesis is untested.
 
 ## Published
 
