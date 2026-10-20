@@ -15,12 +15,12 @@ Checkpoint para retomar sin repetir trabajo. Se actualiza con cada tanda.
 |---|---|---|---|
 | 0 | Orden G001–G236, 58 clases existentes | #232 | en producción |
 | 1–6 | 30 primeras clases nuevas (G003–G051) | #233–#237 | en producción (`fc2561d`) |
-| 7 | G052, G053, G056, G058, G060–G065 | (mismo PR que 8 y 9) | lista, con audio |
-| 8 | G066, G067, G069–G076 | (mismo PR) | lista, con audio |
-| 9 | G077, G079, G080, G082–G085, G089–G091 | (mismo PR) | lista; audio en el workflow |
-| 10 | G092–G096, G098, G099, G101, G102, G106 | — | escritas y validadas; falta integrar |
+| 7–10 | G052–G106 (40 clases: 27 A2, 13 B1) | #238 | en producción (`8e140da`) |
+| 11 | G108–G118 (10 B1) | (mismo PR que 12) | lista, con audio |
+| 12 | G119–G130 (8 B1, 2 B2) | (mismo PR) | lista, con audio |
+| 13 | G135, G136, G138–G141, G143–G145, G147 (B2) | — | en redacción |
 
-Siguiente unidad pendiente después de la tanda 10: G108 (id 408).
+Siguiente unidad pendiente después de la tanda 13: G149 (id 449).
 
 ## Memoria del Worker
 
