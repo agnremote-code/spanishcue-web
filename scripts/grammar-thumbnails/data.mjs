@@ -97,4 +97,9 @@ export const thumbnails = [
   { id: 319, level: 'A1', family: 'tiempos', topic: 'Hacer, poner, salir y venir', example: '*Hago* la cena y *pongo* la mesa.', chips: ['hago', 'pongo', 'salgo', 'vengo'], mascot: 'empanadas' },
   { id: 320, level: 'A1', family: 'tiempos', topic: 'Querer, poder y pedir', example: '*Quiero* un café, pero no *puedo*.', chips: ['e → ie', 'o → ue', 'e → i'], mascot: 'explorer' },
   { id: 323, level: 'A1', family: 'oraciones', topic: 'Preguntas con tilde', example: '¿*Cuántas* personas vienen?', chips: ['¿qué?', '¿quién?', '¿cuál?', '¿cuánto?'], mascot: 'teacher' },
+  { id: 324, level: 'A1', family: 'oraciones', topic: 'Oraciones negativas', example: '*No* puedo el lunes. *No* tengo tiempo.', chips: ['no + verbo', 'No, no puedo.'], mascot: 'conversation' },
+  { id: 327, level: 'A1', family: 'preposiciones', topic: 'Preposiciones básicas', example: 'Voy *a* Córdoba *con* Carla y *sin* prisa.', chips: ['a', 'de', 'en', 'con', 'sin'], mascot: 'van' },
+  { id: 328, level: 'A1', family: 'preposiciones', topic: 'Al y del', example: '*Del* hotel *al* puerto.', chips: ['a + el = al', 'de + el = del'], mascot: 'explorer' },
+  { id: 330, level: 'A1', family: 'adverbios', topic: 'Frecuencia y hábitos', example: '*Siempre* corro y *nunca* nado.', chips: ['siempre', 'a veces', 'nunca'], mascot: 'football' },
+  { id: 331, level: 'A1', family: 'pronombres', topic: 'Verbos reflexivos', example: '*Me levanto* a las seis y *me ducho*.', chips: ['me · te · se', 'nos · os · se'], mascot: 'teacher' },
 ];

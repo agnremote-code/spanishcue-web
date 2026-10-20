@@ -84,9 +84,14 @@ const additions = [
   [319, 'A1', 'tiempos', 'presente-irregular-hacer-poner-salir-venir', 'Presente irregular: hacer, poner, salir, venir', 'Repartir las tareas de una cena y decir qué haces, qué pones, a qué hora sales y de dónde vienes.', 10019, [318,140]],
   [320, 'A1', 'tiempos', 'presente-con-cambio-vocalico', 'Presente con cambio vocálico: querer, poder, pedir', 'Decir qué quieres, qué puedes pagar y qué pides en un viaje, con quiero, puedo, pido y queremos, podemos, pedimos.', 10020, [319,140]],
   [323, 'A1', 'oraciones', 'interrogativos-con-tilde', 'Interrogativos con tilde: qué, quién, cuál, cuánto', 'Hacer preguntas concretas en un museo (horario, precio, dirección, personas) con la palabra interrogativa correcta y con tilde.', 10023, [111]],
+  [324, 'A1', 'oraciones', 'oraciones-negativas', 'Oraciones negativas y posición de no', 'Decir que no puedes, no tienes tiempo o no trabajas, con «no» antes del verbo, y responder «No» o «No, no puedo».', 10024, [323,111,140]],
+  [327, 'A1', 'preposiciones', 'preposiciones-basicas', 'Preposiciones básicas a, de, en, con, sin', 'Decir a dónde vas, de dónde vienes, dónde estás, con quién vas y qué no tienes, en un día de reparto por la ciudad.', 10027, [212,48]],
+  [328, 'A1', 'preposiciones', 'contracciones-al-y-del', 'Contracciones al y del', 'Explicar trayectos por una ciudad con «del … al …» y saber cuándo a y de no se unen con el artículo.', 10028, [327,42]],
+  [330, 'A1', 'adverbios', 'frecuencia-y-habitos', 'Expresiones de frecuencia y hábito', 'Decir con qué frecuencia haces algo (siempre, a veces, nunca, los lunes) y acordar días para entrenar con un compañero.', 10030, [47,140]],
+  [331, 'A1', 'pronombres', 'verbos-reflexivos-cotidianos', 'Verbos reflexivos cotidianos', 'Contar tu rutina antes de un turno temprano con me levanto, te duchas, se viste y nos acostamos, y el pronombre en su sitio.', 10031, [330,46,140]],
 ] as const;
 /** When each addition reached the library (the «Nuevo» badge). */
-const addedAt: Record<number, string> = { 239: '2026-10-14', 303: '2026-10-20', 305: '2026-10-20', 307: '2026-10-20', 311: '2026-10-20', 312: '2026-10-20', 314: '2026-10-20', 318: '2026-10-20', 319: '2026-10-20', 320: '2026-10-20', 323: '2026-10-20' };
+const addedAt: Record<number, string> = { 239: '2026-10-14', 303: '2026-10-20', 305: '2026-10-20', 307: '2026-10-20', 311: '2026-10-20', 312: '2026-10-20', 314: '2026-10-20', 318: '2026-10-20', 319: '2026-10-20', 320: '2026-10-20', 323: '2026-10-20', 324: '2026-10-20', 327: '2026-10-20', 328: '2026-10-20', 330: '2026-10-20', 331: '2026-10-20' };
 
 export const newGrammarEntries: LessonSource[] = additions.map(([id,level,grammarTopic,slug,title,subtitle,curriculumOrder,requires]) => {
   grammarMetadata[id] = { title, grammarTopic };

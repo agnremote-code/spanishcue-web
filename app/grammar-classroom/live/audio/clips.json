@@ -67,6 +67,36 @@
       "voice": "es-MX-JorgeNeural",
       "rate": "-12%",
       "text": "Hola, buenos días. Gracias por llamar al Museo de los Colores, en Puebla. Estas son las preguntas frecuentes. ¿Cuándo abre el museo? De martes a domingo, de diez de la mañana a seis de la tarde. Los lunes está cerrado. ¿Cuánto cuesta la entrada? Ochenta pesos, y para estudiantes, cuarenta. Los domingos, la entrada es gratis. ¿Dónde está el museo? En la calle Reforma, número dieciocho, cerca de la catedral. ¿Qué días hay visitas guiadas? Los sábados y los domingos, a las once. ¿Cuántas personas pueden ir en un grupo? Veinte como máximo. ¿Quién da las visitas? Raúl, nuestro guía. Gracias por su llamada."
+    },
+    {
+      "id": 324,
+      "voice": "es-MX-DaliaNeural",
+      "rate": "-12%",
+      "text": "Hola, Pablo, soy Nuria. Es por la presentación del cliente. El lunes no puedo: tengo cita médica a las diez. El martes tú no trabajas, ¿verdad? Y el miércoles no hay sala libre: la sala grande está ocupada todo el día. Pero el jueves sí. El jueves por la mañana no tengo reuniones. ¿Puedes a las diez? Si no puedes a las diez, a las once también está bien. Yo no quiero esperar hasta el viernes. El viernes no es buena idea: es el día de la presentación. Escríbeme, por favor. ¡Hasta mañana!"
+    },
+    {
+      "id": 327,
+      "voice": "es-ES-ElviraNeural",
+      "rate": "-12%",
+      "text": "Hola, Mateo. Soy Lucía, la coordinadora. Hay un cambio importante. El paquete de la señora Molina no va a la sucursal Norte: va a la sucursal Sur. Hoy la sucursal Norte está cerrada. La señora Molina está en la sucursal Sur hasta las dos. Tú vas con Carla, como antes. Ella tiene la llave de la puerta. Y una cosa más: no puedes entregar el paquete sin el recibo. El recibo está en tu mochila. Gracias, Mateo. Hasta luego."
+    },
+    {
+      "id": 328,
+      "voice": "es-CL-CatalinaNeural",
+      "rate": "-12%",
+      "text": "Hola, Ingrid. Soy Carolina, de la recepción. Mañana tienes tres trayectos. Primero, del hotel al puerto: diez minutos a pie. Después, del puerto al mercado: tomas el autobús en la plaza Sotomayor. Por la tarde, vas al cerro Alegre en el ascensor. El ascensor está cerca del mercado. Para volver, mejor un taxi: del cerro al hotel son quince minutos. La cena es a las ocho. ¡Buen viaje!"
+    },
+    {
+      "id": 330,
+      "voice": "es-MX-DaliaNeural",
+      "rate": "-12%",
+      "text": "Hola, Daniel, soy Lucía. Ya tengo mi horario de la semana. Los martes y los jueves corro en el parque, siempre temprano, antes del trabajo. ¿Quieres venir? Los lunes no puedo: trabajo hasta muy tarde. Los viernes casi nunca entreno, porque estoy muy cansada. Y normalmente nado los sábados por la mañana. Tú no entrenas nunca los domingos, ¿verdad? Es el día de tu familia. Entonces, ¿martes, jueves y sábado? Ah, pero este sábado no puedo: es el cumpleaños de mi mamá. Hablamos mañana en la oficina. ¡Un abrazo!"
+    },
+    {
+      "id": 331,
+      "voice": "es-CO-SalomeNeural",
+      "rate": "-12%",
+      "text": "Hola, Óscar, soy Lucía. Mañana es tu primer día en el turno de las siete, ¿verdad? Aquí tienes unos consejos. Yo me acuesto a las diez, porque me levanto a las cinco. Me ducho, desayuno y salgo de casa a las seis. Tú vives cerca del hospital, entonces puedes salir a las seis y media. Aquí nos ponemos el uniforme en el vestuario del segundo piso. Otra cosa: tu hermano se levanta tarde, ¿no? Entonces él no te despierta. Yo siempre pongo dos alarmas en el celular. Y esta noche, ¿a qué hora te acuestas? Bueno, hasta mañana a las siete menos cuarto, en la sala de enfermería."
     }
   ]
 }
