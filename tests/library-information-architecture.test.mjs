@@ -67,7 +67,7 @@ test("featured lessons are compact, curated and responsive", async () => {
 
   assert.match(sections, /CLASES DESTACADAS/);
   assert.match(sections, /Prueba una clase antes de elegir\./);
-  assert.match(sections, /selectFreeProductSamples\(lessons\)\.slice\(0, 4\)/);
+  assert.match(sections, /selectHomeFeatured\(lessons\)/);
   assert.match(styles, /@media \(max-width: 700px\)/);
   assert.match(styles, /overflow-x:\s*auto/);
   assert.match(styles, /@media \(prefers-reduced-motion: reduce\)/);

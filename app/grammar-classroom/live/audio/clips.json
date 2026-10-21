@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "note": "Recordings for live-only grammar classes (no legacy classroom context). Built by .github/workflows/grammar-live-audio.yml with scripts/generate-grammar-live-audio.py into public/audio/grammar-live/<id>.mp3 (premium prefix).",
+  "note": "Recordings for live-only grammar classes (no legacy classroom context). Built by .github/workflows/grammar-live-audio.yml with scripts/generate-grammar-live-audio.py into public/audio/grammar-live/<id>.mp3 (premium prefix); free classes (239) go to public/audio/grammar-free/<id>.mp3.",
   "clips": [
     {
       "id": 239,

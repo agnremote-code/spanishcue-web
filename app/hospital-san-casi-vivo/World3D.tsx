@@ -40,6 +40,9 @@ export type WorldProps = {
   onCry: (volume: number) => void;
   onPose: (pose: Pose) => void;
   onFail: () => void;
+  /** Free demo: the ground-floor rectangle the mascot cannot leave; touching its edge calls onFence. */
+  fence?: { minX: number; maxX: number; minZ: number; maxZ: number };
+  onFence?: () => void;
 };
 
 type Api = { joy: { x: number; y: number }; held: Set<string>; clear: () => void; interact: () => void; jump: () => void; nitro: { on: boolean } };
@@ -321,6 +324,15 @@ export default function World3D(props: WorldProps) {
         const jumping = input.jump || clock < jumpUntil;
         const next = stepPlayer({ ...player, speed: player.speed / factor }, { x: ix, y: iy, yaw, sprint: input.sprint, nitro, walk: false, jump: jumping, jumpSpeed: 7.6 }, dt * factor, solids, floorById(floor).bounds);
         player = { ...player, x: next.x, z: next.z, heading: next.heading, speed: next.speed * factor, y: next.y, vy: next.vy, jumpHeld: next.jumpHeld };
+        // Free demo: one step past the fence pushes the mascot back and asks for PRO.
+        if (p.fence && floor === 1) {
+          const f = p.fence;
+          const x = Math.min(f.maxX, Math.max(f.minX, player.x)), z = Math.min(f.maxZ, Math.max(f.minZ, player.z));
+          if (x !== player.x || z !== player.z) {
+            player = { ...player, x: x + Math.sign(x - player.x) * 0.8, z: z + Math.sign(z - player.z) * 0.8, speed: 0 };
+            p.onFence?.();
+          }
+        }
         // People are solid, and nobody likes being run into: whoever you crash
         // into (or who crashes into you) turns, glares and yells at you.
         if (player.y < 1.2) {

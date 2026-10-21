@@ -47,3 +47,25 @@ export function selectFreeProductSamples<T extends FreeSampleLesson>(lessons: re
     return [{ key, lesson }];
   });
 }
+
+/**
+ * Home «Clases destacadas» (Ale, 2026-10-21): Noche abierta and the hospital
+ * open as free demos (the centre / the reception, the rest PRO), then one
+ * whole free grammar class and one free listening class. Entries without a
+ * demo route must be free by access metadata, or they drop out.
+ */
+export type HomeFeaturedKey = "conversation" | "grammar" | "listening";
+export type HomeFeaturedArea = "centre" | "reception" | null;
+const HOME_FEATURED: { key: HomeFeaturedKey; id: number; demo?: string; area: HomeFeaturedArea }[] = [
+  { key: "conversation", id: 223, demo: "/demo/noche-abierta", area: "centre" },
+  { key: "conversation", id: 240, demo: "/demo/hospital-san-casi-vivo", area: "reception" },
+  { key: "grammar", id: 239, area: null },
+  { key: "listening", id: 28, area: null },
+];
+export function selectHomeFeatured<T extends FreeSampleLesson>(lessons: readonly T[]) {
+  return HOME_FEATURED.flatMap(({ key, id, demo, area }) => {
+    const lesson = lessons.find((candidate) => candidate.id === id);
+    if (!lesson || (!demo && !(lesson.free && lesson.href))) return [];
+    return [{ key, area, lesson: demo ? { ...lesson, href: demo } : lesson }];
+  });
+}

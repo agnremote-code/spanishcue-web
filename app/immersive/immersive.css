@@ -27,3 +27,4 @@
 @media(max-width:640px){.im-near-vip{bottom:218px;font-size:10px;white-space:normal}.im-progress{max-width:70vw;padding:8px 12px}.im-progress-cta{font-size:10px;padding:8px}}
 @media(prefers-reduced-motion:reduce){.im-canvas canvas.im-repel{animation:none}}
 .im-loading-skip{margin-top:14px;padding:11px 18px;min-height:44px;border:1px solid #d7f582;border-radius:7px;background:transparent;color:#d7f582;font-size:13px;cursor:pointer}
+.im-pass .im-pass-price{display:inline-block;margin:0 0 6px;padding:10px 16px;border-radius:999px;background:#ffd84d;color:#1c1e2a!important;font-weight:800;font-size:16px!important;letter-spacing:.3px}

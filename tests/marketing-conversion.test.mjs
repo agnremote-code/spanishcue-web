@@ -80,8 +80,8 @@ test("marketing surfaces stay reusable and the free lesson close is global", asy
     assert.match(sections, new RegExp(`export function ${component}`));
   assert.match(library, /SpanishCueHero/);
   assert.match(brand, /PROBAR UNA CLASE GRATIS/);
-  assert.match(brand, /href="#free-lessons"/);
-  assert.match(brand, /scrollIntoView/);
+  assert.match(brand, /FREE_DEMO_PATH = "\/demo\/noche-abierta"/);
+  assert.match(brand, /href=\{FREE_DEMO_PATH\}/);
   assert.doesNotMatch(brand, /hero_secondary/);
   assert.match(sections, /id="free-lessons"/);
   assert.match(layout, /MarketingAttribution/);

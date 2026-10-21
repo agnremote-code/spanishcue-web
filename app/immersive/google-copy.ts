@@ -21,7 +21,7 @@ export function gtCopy(es:boolean){
   tiers:{
    aria:t('Qué es gratis y qué es PRO','What is free and what is PRO'),
    a:[t('VISTA GUIADA GRATIS','FREE GUIDED PREVIEW'),t('La clase de 30 segundos de arriba. No hay que tocar nada.','The 30-second lesson above. No input needed.')],
-   b:[t('EXPLORACIÓN GRATIS','FREE EXPLORATION'),t('Recorre el centro: seis lugares gratuitos, cuatro PRO, seis niveles.','Walk the city centre: six free venues, four PRO venues, six levels.'),t('Explorar gratis ↗','Explore free ↗')],
+   b:[t('EXPLORACIÓN GRATIS','FREE EXPLORATION'),t('Recorre el centro: los diez lugares son gratis, en seis niveles.','Walk the city centre: all ten venues are free, across six levels.'),t('Explorar gratis ↗','Explore free ↗')],
    c:['SPANISHCUE PRO',t('Todos los mundos, todas las clases de gramática, escucha, tareas y el panel del profe.','Every world, every grammar class, listening, homework and the teacher panel.'),t('Ver qué incluye ↓','See what is included ↓')],
   },
   showcase:{
@@ -63,7 +63,7 @@ export function gtCopy(es:boolean){
     [t('¿Incluye tarea?','Is homework included?'),t('Sí. Autoestudio tiene unidades semanales A1–C2 con lectura, escritura, escucha y habla, más un panel donde sigues a cada alumno.','Yes. Autoestudio has weekly units for A1–C2 with reading, writing, listening and speaking, plus a panel where you follow each student.')],
     [t('¿Puedo cancelar?','Can I cancel?'),t('Sí, cuando quieras desde tu cuenta, antes de la próxima renovación. Sin llamadas ni formularios.','Yes, at any time from your account, before the next renewal. No calls, no forms.')],
     [t('¿Hay una demo gratis?','Is there a free demo?'),t('Sí. Hay seis lugares con conversaciones gratuitas, sin cuenta ni tarjeta. La suscripción desbloquea más conversaciones y barrios VIP.','Yes. Six venues offer free conversations without sign-up or a card. PRO unlocks more conversations and VIP districts.')],
-    [t('¿Qué es gratis y qué requiere PRO?','What is free, and what requires PRO?'),t('Gratis: la vista guiada de arriba, seis lugares del centro de Noche Abierta en seis niveles, las clases marcadas FREE en esta página y las dos primeras semanas de Autoestudio A1. Todo lo marcado PRO está en la suscripción.','Free: the guided preview above, six free centre venues of Noche Abierta across six levels, the lessons marked FREE on this page, and the first two weeks of Autoestudio A1. Everything marked PRO is in the subscription.')],
+    [t('¿Qué es gratis y qué requiere PRO?','What is free, and what requires PRO?'),t('Gratis: la vista guiada de arriba, los diez lugares del centro de Noche Abierta en seis niveles, la recepción del Hospital San Casi Vivo, las clases marcadas FREE en esta página y las dos primeras semanas de Autoestudio A1. Todo lo marcado PRO está en la suscripción.','Free: the guided preview above, all ten centre venues of Noche Abierta across six levels, the reception of Hospital San Casi Vivo, the lessons marked FREE on this page, and the first two weeks of Autoestudio A1. Everything marked PRO is in the subscription.')],
    ] as [string,string][],
   },
   voices:{aria:t('Lo que dicen los profes','What teachers say'),eyebrow:t('PROFES QUE YA LO PROBARON','FROM TEACHERS WHO TRIED IT'),note:t('Comentarios reales de profes que usan SpanishCue, traducidos del inglés. Los retratos son ilustrativos.','Real comments from teachers using SpanishCue. Portraits are illustrative.')},

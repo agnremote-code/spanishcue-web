@@ -16,14 +16,14 @@ test('owner data and premium bodies stay closed to anonymous visitors',async()=>
   const response=await get(path);assert.equal(response.status,403,path);
   assert.doesNotMatch(await response.text(),/totalUsers|activePro/,path);
  }
- for(const path of ['/autoestudio/a1/semana-3','/autoestudio/a1/semana-3.rsc','/gramatica/clase-inicial','/gramatica/clase-inicial.rsc','/noche-abierta','/hospital-san-casi-vivo','/marketing-de-casinos']){
+ for(const path of ['/autoestudio/a1/semana-3','/autoestudio/a1/semana-3.rsc','/gramatica/genero-de-sustantivos','/gramatica/genero-de-sustantivos.rsc','/noche-abierta','/hospital-san-casi-vivo','/marketing-de-casinos']){
   const response=await get(path);await response.arrayBuffer();
   assert.equal(response.status,302,path);assert.match(response.headers.get('location'),/\/acceso\?returnTo=/,path);
  }
 });
 
 test('public SEO pages and free samples still render for anonymous visitors',async()=>{
- for(const path of ['/','/spanish-grammar-lessons','/resources','/para-profesores','/aprender-espanol','/demo/noche-abierta','/autoestudio','/autoestudio/a1/semana-1','/la-fabrica-de-los-nombres','/sitemap.xml','/robots.txt']){
+ for(const path of ['/','/spanish-grammar-lessons','/resources','/para-profesores','/aprender-espanol','/demo/noche-abierta','/demo/hospital-san-casi-vivo','/gramatica/clase-inicial','/autoestudio','/autoestudio/a1/semana-1','/la-fabrica-de-los-nombres','/sitemap.xml','/robots.txt']){
   const response=await get(path);await response.arrayBuffer();assert.equal(response.status,200,path);
  }
 });

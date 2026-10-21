@@ -5,7 +5,7 @@ import { useI18n } from "../i18n/LocaleProvider";
 import { cantonShapes } from "../suiza-en-relieve/map-data";
 import { subscriptionCtaFor, type MarketingAudience, type MarketingCta } from "./cta-state";
 import { markFreeLessonCompleted, trackMarketingEvent, type MarketingEvent } from "./analytics";
-import { selectFreeProductSamples, type FreeSampleLesson } from "./free-sample-selector";
+import { selectHomeFeatured, type FreeSampleLesson } from "./free-sample-selector";
 
 type MarketingLesson = FreeSampleLesson & {
   title: string;
@@ -33,9 +33,10 @@ const copy = {
     cueItems: ["Elegir por nivel", "Abrir la clase", "Enseñar y conversar"],
     previewKicker: "CLASES DESTACADAS",
     previewTitle: "Prueba una clase antes de elegir.",
-    previewCopy: "Cuatro ejemplos gratuitos para conocer la experiencia.",
+    previewCopy: "Dos mundos 3D para probar gratis, una clase de gramática entera y una escucha.",
     previewOpen: "Ver clase gratis",
     previewFree: "CLASE GRATUITA",
+    previewFreeArea: { centre: "GRATIS: EL CENTRO", reception: "GRATIS: LA RECEPCIÓN" },
     previewLabels: {
       grammar: "Gramática",
       conversation: "Conversación",
@@ -133,9 +134,10 @@ const copy = {
     cueItems: ["Choose by level", "Open the lesson", "Teach and talk"],
     previewKicker: "FEATURED LESSONS",
     previewTitle: "Try a lesson before you choose.",
-    previewCopy: "Four free examples to explore the experience.",
+    previewCopy: "Two 3D worlds to try free, one whole grammar lesson and one listening lesson.",
     previewOpen: "View free lesson",
     previewFree: "FREE LESSON",
+    previewFreeArea: { centre: "FREE: THE CENTRE", reception: "FREE: THE RECEPTION" },
     previewLabels: {
       grammar: "Grammar",
       conversation: "Conversation",
@@ -286,11 +288,11 @@ export function ProblemSolution({ primary, primaryLabel }: { primary: MarketingC
 
 export function ProductPreview({ lessons }: { lessons: MarketingLesson[] }) {
   const c = useCopy();
-  const previews = useMemo(() => selectFreeProductSamples(lessons).slice(0, 4), [lessons]);
+  const previews = useMemo(() => selectHomeFeatured(lessons), [lessons]);
   return <section className="mk-section mk-product" id="free-lessons" aria-labelledby="mk-product-title">
     <div className="mk-product-head"><div><span>{c.previewKicker}</span><h2 id="mk-product-title">{c.previewTitle}</h2></div><p>{c.previewCopy}</p></div>
     <div className="mk-preview-rail">
-      {previews.map(({ lesson, key }) => <a key={`${key}-${lesson.id}`} href={lesson.href} data-free-sample-id={lesson.id} onClick={() => { trackMarketingEvent("lesson_preview_open", { lesson_id: lesson.id, lesson_title: lesson.title, category: key, access: "free", placement: "product_preview" }); }}>
+      {previews.map(({ lesson, key, area }) => <a key={`${key}-${lesson.id}`} href={lesson.href} data-free-sample-id={lesson.id} onClick={() => { trackMarketingEvent("lesson_preview_open", { lesson_id: lesson.id, lesson_title: lesson.title, category: key, access: "free", placement: "product_preview" }); }}>
         <img src={lesson.image} alt="" width="640" height="400" loading="lazy" />
         {lesson.id === 29 && <div className="mk-swiss-preview" aria-hidden="true">
           <i>MAPA 3D · 26 CANTONES</i>
@@ -301,7 +303,7 @@ export function ProductPreview({ lessons }: { lessons: MarketingLesson[] }) {
             </g>)}
           </svg>
         </div>}
-        <span><small>{c.previewFree} · {lesson.displayLevel || lesson.level} · {c.previewLabels[key]}</small><b>{lesson.title}</b><em>{c.previewOpen} →</em></span>
+        <span><small>{area ? c.previewFreeArea[area] : c.previewFree} · {lesson.displayLevel || lesson.level} · {c.previewLabels[key]}</small><b>{lesson.title}</b><em>{c.previewOpen} →</em></span>
       </a>)}
     </div>
   </section>;
