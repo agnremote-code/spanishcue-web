@@ -375,3 +375,41 @@ export function disposeGroup(root: THREE.Object3D) {
   textures.forEach(t => t.dispose());
   root.removeFromParent();
 }
+
+// ---------------------------------------------------------------- people never inside things
+
+const inside = (solids: Box[], x: number, z: number, margin: number) =>
+  solids.find(b => (b.top == null || b.top > 0.6) && x > b.x0 - margin && x < b.x1 + margin && z > b.z0 - margin && z < b.z1 + margin);
+
+/**
+ * Nobody stands inside an object (owner rule, 2026-10-21): a standing person
+ * caught in a solid steps out to the nearest free side, and a walker whose
+ * path crosses one stays home. Seated people sit on their chair or bench.
+ */
+export function keepPeopleClear(scene: RegionScene) {
+  for (const t of scene.talkers) {
+    if (t.seated) continue;
+    for (let tries = 0; tries < 4; tries++) {
+      const b = inside(scene.solids, t.x, t.z, 0.3);
+      if (!b) break;
+      const exits = [
+        { x: b.x0 - 0.45, z: t.z, d: t.x - b.x0 }, { x: b.x1 + 0.45, z: t.z, d: b.x1 - t.x },
+        { x: t.x, z: b.z0 - 0.45, d: t.z - b.z0 }, { x: t.x, z: b.z1 + 0.45, d: b.z1 - t.z },
+      ].sort((p, q) => p.d - q.d);
+      const out = exits.find(e => !inside(scene.solids, e.x, e.z, 0.3)) ?? exits[0];
+      t.x = out.x; t.z = out.z;
+      t.person.root.position.set(t.x, t.person.root.position.y, t.z);
+    }
+  }
+  scene.walkers = scene.walkers.filter(w => {
+    const blocked = w.path.some((p, i) => {
+      const q = w.path[(i + 1) % w.path.length];
+      const steps = Math.ceil(Math.hypot(q.x - p.x, q.z - p.z) / 0.5);
+      for (let k = 0; k <= steps; k++) if (inside(scene.solids, p.x + ((q.x - p.x) * k) / steps, p.z + ((q.z - p.z) * k) / steps, 0.25)) return true;
+      return false;
+    });
+    if (blocked) w.person.root.removeFromParent();
+    return !blocked;
+  });
+  return scene;
+}

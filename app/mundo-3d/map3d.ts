@@ -168,6 +168,17 @@ function floatingRock(radius: number, depth: number, top: string, rock: string, 
   return g;
 }
 
+/** A soft island shape for regions without a real outline in the data. */
+function blob(seed: number) {
+  const rand = random(seed);
+  const k = [rand(), rand(), rand()].map(v => v * Math.PI * 2);
+  return Array.from({ length: 48 }, (_, i) => {
+    const a = (i / 48) * Math.PI * 2;
+    const r = 7.2 + Math.sin(a * 2 + k[0]) * 1.1 + Math.sin(a * 3 + k[1]) * 0.7 + Math.sin(a * 5 + k[2]) * 0.35;
+    return [Math.cos(a) * r, Math.sin(a) * r * 0.8];
+  });
+}
+
 /** The region's real outline, embossed on its island. */
 function silhouette(rings: number[][][], color: string) {
   const shapes = rings.map(ring => new THREE.Shape(ring.map(([x, z]) => new THREE.Vector2(x, -z))));
@@ -251,6 +262,21 @@ function landmark(region: RegionInfo, g: THREE.Group) {
       peak(9, -3, 3.4, 7); peak(8.5, 3.5, 2.8, 5.5); peak(11, 1, 2.6, 6);
       pine(4.5, -6); pine(5, 6); pine(3.5, 7.5); pine(6, -8);
       break;
+    default:
+      // Countries built from data say which marks their islands carry.
+      for (const mk of region.marks ?? []) {
+        const size = mk.size ?? 1, color = mk.color ?? '#d9cdb8';
+        if (mk.kind === 'palm') palm(mk.dist, mk.side, 4.5 * size);
+        else if (mk.kind === 'pine') pine(mk.dist, mk.side);
+        else if (mk.kind === 'peak') peak(mk.dist, mk.side, 3 * size, 6 * size, mk.snow ?? true);
+        else if (mk.kind === 'tower') tower(mk.dist, mk.side, 1.8 * size, 8 * size, color);
+        else {
+          const p = at(mk.dist, mk.side);
+          if (mk.kind === 'pyramid') { for (let k = 0; k < 4; k++) g.add(box((5 - k * 1.1) * size, 0.9 * size, (5 - k * 1.1) * size, solid(color, 0.95), p.x, (0.45 + k * 0.9) * size, p.z)); solids.push({ x: p.x, z: p.z, r: 2.6 * size }); }
+          else if (mk.kind === 'dome') { g.add(box(3.4 * size, 2.4 * size, 3.4 * size, solid('#f1ece2', 0.8), p.x, 1.2 * size, p.z)); const d = new THREE.Mesh(new THREE.SphereGeometry(1.5 * size, 16, 10, 0, Math.PI * 2, 0, Math.PI / 2), solid(color, 0.35, 0.5)); d.position.set(p.x, 2.4 * size, p.z); g.add(d); solids.push({ x: p.x, z: p.z, r: 2 * size }); }
+          else { g.add(box(2.6 * size, 2 * size, 2.2 * size, solid(color, 0.8), p.x, size, p.z)); const r = new THREE.Mesh(new THREE.ConeGeometry(2 * size, 1.2 * size, 4), solid('#8a4b32', 0.9)); r.position.set(p.x, 2.6 * size, p.z); r.rotation.y = Math.PI / 4; g.add(r); solids.push({ x: p.x, z: p.z, r: 1.6 * size }); }
+        }
+      }
   }
   return solids;
 }
@@ -395,7 +421,7 @@ export function buildMap(country: CountryInfo, rings: Record<string, number[][][
     const isl = floatingRock(ISLAND_RADIUS, 9 + (i % 3) * 2, '#7da86a', '#6e5d4c', 10 + i);
     isl.position.set(region.at.x, 0, region.at.z);
     group.add(isl);
-    const relief = silhouette(rings[region.shape] ?? [], region.color);
+    const relief = silhouette(rings[region.shape] ?? [blob(10 + i * 7)], region.color);
     relief.position.x = region.at.x; relief.position.z = region.at.z;
     group.add(relief);
     const marks = new THREE.Group();
