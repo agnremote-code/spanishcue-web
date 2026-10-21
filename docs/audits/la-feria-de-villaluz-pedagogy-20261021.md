@@ -32,9 +32,9 @@ ENGLISH COPY: UNCHANGED (10882 strings in 126 files; base 43e4b3eb1dc76031481d24
 - **Review file:** [`docs/audits/la-feria-de-villaluz-g4-review-20261021.md`](la-feria-de-villaluz-g4-review-20261021.md).
   - Round 1: full review of the whole A2 level (8 circles, 7 Busca sets, 8 listenings, closing, routes, catalog row).
   - Round 2: delta review of the R1–R6 edits (`2ad2d828`) and the D6 rework of 5 Busca sets (`24c65fda`).
-- **Current verdict:** `G4 VERDICT: APPROVE WITH REQUIRED EDITS`.
+- **Current verdict:** `G4 VERDICT: APPROVE` (final, after «R7 resolved»; earlier rounds: APPROVE WITH REQUIRED EDITS).
   - R1–R6 are verified as applied.
-  - The only open required item is **R7**: regenerate the 5 reworked Busca announcement clips so the audio matches the new texts. It's a release condition, not an authoring edit.
+  - R7 (audio regenerated to match the reworked Busca texts) is verified by recomputing the hashes. No required item is open.
 - **Machine checks at `24c65fda`:**
   - `node scripts/check-feria.mjs`: 763/763 checks passed.
   - `node --test tests/la-feria-de-villaluz.test.mjs tests/feria-look-contract.test.mjs`: 30/30 pass.
@@ -102,6 +102,6 @@ Every interactive beat in the level is labelled. Tally from `a2.mjs` at `24c65fd
 - **G5(b): one real-device check per new world is outstanding.** Under G5(c), «unverified» blocks the featured flag. The catalog row has `featured:false`, which is consistent with that.
 - **T5 fps on a real mid-range Android (the QA-named device) is not measured.** Low-mode draw calls were *counted* under SwiftShader (feria-look-contract.md §7: tablet 67–98, phone 43–74, ≤120 target). A draw-call count is not an fps figure.
 - **The Look contract's legibility ratings come only from a SwiftShader (software WebGL) render** in headless Chromium (feria-look-contract.md §5). Martin's D6 visual sign-off on the QA device at DPR 1.25 and ~8–10 m is still required, and colours or brightness on a real panel may differ.
-- **Audio state:** _[to be filled by the facilitator]_. Auditor's note from commit timestamps only: the 5 Busca clips reworked in `24c65fda` (emilio, abuelo, bruno, nico, amparo) post-date the last audio generation `67a7769b`, so they need regenerating (G4 R7). No clip was listened to.
+- **Audio state: TTS hashes verified current; no clip listened to.** All 15 feria A2 clips (8 listenings + 7 Busca announcements) were checked on HEAD `3c2a8f21`. Each content hash was recomputed as `scripts/generate-escucha-3d-audio.py` computes it (`sha256([1, '-7%', speakers, lines])[:20]`), and all 15 match `app/escucha-3d/audio-manifest.json`. Every MP3 is present. The 5 reworked announcements were regenerated in `4233b697` (Actions run 39542467174), and the R4 escenario listening was covered by the earlier run. Voices are Edge neural TTS voices (`es-*`, one per character, named in `CAST`). No accent is claimed beyond each voice's locale. **Nobody has listened to the clips.** Pronunciation, pacing and voice fit are unverified (see G4 review, «R7 resolved»).
 - **AC12 / AM-8 pilot** (post-launch, not a ship blocker): not run.
 - **No browser or visual QA of the content cards was done by the auditor.** G5(a) is Sofia's per-PR smoke run and is not evidenced here.

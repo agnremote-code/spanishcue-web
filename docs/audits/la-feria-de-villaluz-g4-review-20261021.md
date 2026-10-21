@@ -232,3 +232,42 @@ RECOMMENDED (non-blocking):
 R1–R6 are applied as specified (R1 and R2 as reworked under D6, and R2 is correct and unique). The 5 reworked sets are natural, correct at A2, legible under D6 and on-exponent, and AC10 holds. The only blocker is R7: the 5 reworked Busca clips must be regenerated so the audio matches the new texts. It needs no authoring work and no further G4 round. Whoever runs the release can verify it by regenerating and committing the clips, with the checks still green.
 
 G4 VERDICT: APPROVE WITH REQUIRED EDITS
+
+---
+
+## R7 resolved (2026-10-21)
+
+I verified this myself rather than relying on the run report. On HEAD `3c2a8f21`, the content files are unchanged since `24c65fda` (`git diff --stat 24c65fda HEAD` is empty for `app/escucha-3d/content/feria/` and `levels/a2.mjs`), and there are no uncommitted changes to the content, the manifest or the audio.
+
+**Method.** I recomputed every feria A2 clip key the way `scripts/generate-escucha-3d-audio.py` does (lines 90–97): `sha256(json.dumps([VERSION=1, RATE['A2']='-7%', speakers, lines], sort_keys=True, ensure_ascii=False))[:20]`. Busca items were built as `{'id': 'busca-<id>', 'speakers': [{voice}], 'lines': [{s: 0, text}]}`. I compared each result with `app/escucha-3d/audio-manifest.json` → `clips["feria/a2-<id>"].hash` and checked that the MP3 exists.
+
+**Result: 15/15 match, and every MP3 is present.**
+
+| Clip | Recomputed hash = manifest |
+|---|---|
+| informacion | e17e2782926c60e85040 |
+| churreria | 570c46161f9fd47dc7b3 |
+| tombola | ada8ea6397e31249425c |
+| noria | 9b5d7038b6b95f4613d0 |
+| artesania | 92afb0ae4c8e7663c5f4 |
+| escenario (R4) | d97e3698aaa75e70f353 |
+| fotos | f628c3b337dad8638803 |
+| baile | 69d4f04f2886e9d1f301 |
+| busca-informacion-emilio | f6858dc9077b57b405c2 |
+| busca-informacion-abuelo | 1324aef2c3bc276cd4a9 |
+| busca-escenario-valentina | 418d61756f81b558ab95 |
+| busca-escenario-bruno | 329943aee0dbcc6897e6 |
+| busca-fotos-ines | cbb7a6bbac310f5856c5 |
+| busca-fotos-nico | c713b263753aa36cc9b1 |
+| busca-transferencia-amparo | 02609663d5c326f94a35 |
+
+Commit `4233b697` (github-actions[bot], 04:10:12Z) changed exactly the 5 reworked Busca MP3s plus the manifest. This shows the TTS input of every clip matches the current transcripts. It doesn't show how the clips sound: nobody listened to them.
+
+**Non-blocking follow-ups, left as they are by instruction:**
+- R2-a: the «señor de la maleta» in `fotos-ines` looks like Martina's abuelo.
+- R2-b: «está saludando con la mano».
+- Round-1 recommended items 10–12: craft-to-country typecasting, Celia/Julián voices from different countries, the fotos listening ending.
+
+Final verdict: R1–R7 are resolved, and no required item is open.
+
+G4 VERDICT: APPROVE
