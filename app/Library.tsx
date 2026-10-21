@@ -1661,7 +1661,8 @@ export default function Library({
             <Link href="/">{t("nav.backToFullAccess")} →</Link>
           </div>
         )}
-        <SpanishCueHero />
+        {/* PRO accounts already have everything: no free-lesson hero, just the news carousel and the material. */}
+        {!fullAccess && <SpanishCueHero />}
         <NewLessonsBanner lessons={lessons} />
         <section className="library-heading" id="library-results">
           <div>
@@ -1930,7 +1931,7 @@ export default function Library({
           view === "Plan" ? plannedLessons : visibleLessons,
           view === "Plan",
         )}
-        {view === "Biblioteca" && category === "Todas" && level === "Todos" && !catalogSearchActive && (
+        {view === "Biblioteca" && !fullAccess && category === "Todas" && level === "Todos" && !catalogSearchActive && (
           <ProductPreview lessons={lessons} />
         )}
         {view === "Biblioteca" && !fullAccess && (
@@ -1941,7 +1942,7 @@ export default function Library({
             secondaryLabel={secondaryCtaLabel}
           />
         )}
-        {view === "Biblioteca" && (
+        {view === "Biblioteca" && !fullAccess && (
           <>
             <HowItWorks />
             <NewsCarousel lessons={lessons} onOpen={openLesson} hrefFor={lessonHref} onNavigate={prepareLessonNavigation} />
