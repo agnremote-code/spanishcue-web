@@ -1,0 +1,518 @@
+{
+ "game": "irlanda",
+ "level": "A0",
+ "items": [
+  {
+   "id": "dublin",
+   "title": "Fruta en Moore Street",
+   "place": "Un mercado de Dublín",
+   "context": "Camila, de Perú, compra fruta en el puesto de Bridget.",
+   "contextEn": "Camila, from Peru, buys fruit at Bridget’s stall.",
+   "speakers": [
+    {
+     "name": "Bridget",
+     "country": "España",
+     "voice": "es-ES-ElviraNeural"
+    },
+    {
+     "name": "Camila",
+     "country": "Perú",
+     "voice": "es-PE-CamilaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "¡Fresas, fresas! ¡Muy dulces!",
+     "en": "Strawberries, strawberries! Very sweet!"
+    },
+    {
+     "s": 1,
+     "text": "Hola. ¿Cuánto cuestan las fresas?",
+     "en": "Hello. How much are the strawberries?"
+    },
+    {
+     "s": 0,
+     "text": "Una caja, tres euros. Dos cajas, cinco euros.",
+     "en": "One box, three euros. Two boxes, five euros."
+    },
+    {
+     "s": 1,
+     "text": "Dos cajas, por favor. Y dos plátanos.",
+     "en": "Two boxes, please. And two bananas."
+    },
+    {
+     "s": 0,
+     "text": "Los plátanos son un regalo.",
+     "en": "The bananas are a gift."
+    },
+    {
+     "s": 1,
+     "text": "¡Muchas gracias!",
+     "en": "Thank you very much!"
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué vende Bridget?",
+     "qEn": "What does Bridget sell?",
+     "options": [
+      "Fruta",
+      "Pan",
+      "Pescado"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cuántas cajas compra Camila?",
+     "qEn": "How many boxes does Camila buy?",
+     "options": [
+      "Una",
+      "Dos",
+      "Tres"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cuánto paga Camila?",
+     "qEn": "How much does Camila pay?",
+     "options": [
+      "Tres euros",
+      "Seis euros",
+      "Cinco euros"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué es un regalo?",
+     "qEn": "What is a gift?",
+     "options": [
+      "Los plátanos",
+      "Las fresas",
+      "La caja"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué fruta te gusta?",
+     "qEn": "What fruit do you like?",
+     "model": "Me gustan las fresas."
+    },
+    {
+     "q": "¿Vas al mercado?",
+     "qEn": "Do you go to the market?",
+     "model": "Sí, voy los sábados."
+    },
+    {
+     "q": "¿Te gustan los regalos?",
+     "qEn": "Do you like gifts?",
+     "model": "Sí, me encantan."
+    }
+   ],
+   "gaps": "Una [caja], tres [euros]. Dos [cajas], [cinco] euros.",
+   "glossary": [
+    {
+     "word": "fresas",
+     "meaning": "fruta roja y pequeña",
+     "en": "strawberries"
+    },
+    {
+     "word": "caja",
+     "meaning": "cosa para guardar o llevar",
+     "en": "box"
+    },
+    {
+     "word": "regalo",
+     "meaning": "algo que te dan gratis",
+     "en": "gift"
+    }
+   ]
+  },
+  {
+   "id": "galway",
+   "title": "Un jersey de Aran",
+   "place": "Una tienda en las islas de Aran",
+   "context": "Marcelo, de Bolivia, compra un jersey en la tienda de Máire.",
+   "contextEn": "Marcelo, from Bolivia, buys a sweater in Máire’s shop.",
+   "speakers": [
+    {
+     "name": "Máire",
+     "country": "Argentina",
+     "voice": "es-AR-ElenaNeural"
+    },
+    {
+     "name": "Marcelo",
+     "country": "Bolivia",
+     "voice": "es-BO-MarceloNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Hola. ¿Tienes frío?",
+     "en": "Hello. Are you cold?"
+    },
+    {
+     "s": 1,
+     "text": "Sí, mucho. Hay mucho viento.",
+     "en": "Yes, very. It is very windy."
+    },
+    {
+     "s": 0,
+     "text": "Este jersey es de lana. Es muy caliente.",
+     "en": "This sweater is made of wool. It is very warm."
+    },
+    {
+     "s": 1,
+     "text": "¿Lo hace usted?",
+     "en": "Do you make it?"
+    },
+    {
+     "s": 0,
+     "text": "Sí, a mano. Tres semanas.",
+     "en": "Yes, by hand. Three weeks."
+    },
+    {
+     "s": 1,
+     "text": "¡Qué bonito! Me lo llevo.",
+     "en": "How lovely! I will take it."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué tiempo hace?",
+     "qEn": "What is the weather like?",
+     "options": [
+      "Calor",
+      "Mucho viento",
+      "Sol"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿De qué es el jersey?",
+     "qEn": "What is the sweater made of?",
+     "options": [
+      "De algodón",
+      "De plástico",
+      "De lana"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuánto tiempo tarda Máire?",
+     "qEn": "How long does Máire take?",
+     "options": [
+      "Tres semanas",
+      "Tres días",
+      "Un mes"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué hace Marcelo al final?",
+     "qEn": "What does Marcelo do at the end?",
+     "options": [
+      "Se va",
+      "Compra el jersey",
+      "Pide otro color"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Tienes frío ahora?",
+     "qEn": "Are you cold now?",
+     "model": "No, tengo calor."
+    },
+    {
+     "q": "¿Tienes un jersey favorito?",
+     "qEn": "Do you have a favourite sweater?",
+     "model": "Sí, uno azul."
+    },
+    {
+     "q": "¿Haces algo a mano?",
+     "qEn": "Do you make anything by hand?",
+     "model": "Sí, cocino pan."
+    }
+   ],
+   "gaps": "Este [jersey] es de [lana]. Es [muy] [caliente].",
+   "glossary": [
+    {
+     "word": "lana",
+     "meaning": "pelo de oveja para hacer ropa",
+     "en": "wool"
+    },
+    {
+     "word": "viento",
+     "meaning": "aire que se mueve",
+     "en": "wind"
+    },
+    {
+     "word": "a mano",
+     "meaning": "sin máquina",
+     "en": "by hand"
+    }
+   ]
+  },
+  {
+   "id": "kerry",
+   "title": "Helado con lluvia",
+   "place": "Una heladería en Dingle",
+   "context": "Federico, de Nicaragua, pide un helado a Orla.",
+   "contextEn": "Federico, from Nicaragua, orders an ice cream from Orla.",
+   "speakers": [
+    {
+     "name": "Orla",
+     "country": "Colombia",
+     "voice": "es-CO-SalomeNeural"
+    },
+    {
+     "name": "Federico",
+     "country": "Nicaragua",
+     "voice": "es-NI-FedericoNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Hola. ¿Qué sabor quieres?",
+     "en": "Hello. What flavour do you want?"
+    },
+    {
+     "s": 1,
+     "text": "Pero llueve. ¿Helado con lluvia?",
+     "en": "But it is raining. Ice cream in the rain?"
+    },
+    {
+     "s": 0,
+     "text": "Aquí sí. Siempre llueve.",
+     "en": "Here, yes. It always rains."
+    },
+    {
+     "s": 1,
+     "text": "Bueno. ¿Qué sabores hay?",
+     "en": "OK. What flavours are there?"
+    },
+    {
+     "s": 0,
+     "text": "Miel, pan negro y sal del mar.",
+     "en": "Honey, brown bread and sea salt."
+    },
+    {
+     "s": 1,
+     "text": "Sal del mar, por favor.",
+     "en": "Sea salt, please."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué tiempo hace?",
+     "qEn": "What is the weather like?",
+     "options": [
+      "Llueve",
+      "Hace sol",
+      "Nieva"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué vende Orla?",
+     "qEn": "What does Orla sell?",
+     "options": [
+      "Café",
+      "Helado",
+      "Pan"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué sabor no hay?",
+     "qEn": "Which flavour is there not?",
+     "options": [
+      "Miel",
+      "Pan negro",
+      "Chocolate"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué pide Federico?",
+     "qEn": "What does Federico order?",
+     "options": [
+      "Miel",
+      "Pan negro",
+      "Sal del mar"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Comes helado en invierno?",
+     "qEn": "Do you eat ice cream in winter?",
+     "model": "Sí, siempre."
+    },
+    {
+     "q": "¿Qué sabor te gusta?",
+     "qEn": "What flavour do you like?",
+     "model": "Me gusta la vainilla."
+    },
+    {
+     "q": "¿Llueve mucho donde vives?",
+     "qEn": "Does it rain a lot where you live?",
+     "model": "No, llueve poco."
+    }
+   ],
+   "gaps": "[Miel], [pan] negro y [sal] del [mar].",
+   "glossary": [
+    {
+     "word": "sabor",
+     "meaning": "gusto de una comida",
+     "en": "flavour"
+    },
+    {
+     "word": "miel",
+     "meaning": "comida dulce de las abejas",
+     "en": "honey"
+    },
+    {
+     "word": "llueve",
+     "meaning": "cae agua del cielo",
+     "en": "it rains"
+    }
+   ]
+  },
+  {
+   "id": "cork",
+   "title": "El beso de la piedra",
+   "place": "El castillo de Blarney",
+   "context": "Lorena, de El Salvador, sube a la torre con Dermot.",
+   "contextEn": "Lorena, from El Salvador, climbs the tower with Dermot.",
+   "speakers": [
+    {
+     "name": "Dermot",
+     "country": "México",
+     "voice": "es-MX-JorgeNeural"
+    },
+    {
+     "name": "Lorena",
+     "country": "El Salvador",
+     "voice": "es-SV-LorenaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Esta es la piedra famosa.",
+     "en": "This is the famous stone."
+    },
+    {
+     "s": 1,
+     "text": "¿Y qué hago?",
+     "en": "And what do I do?"
+    },
+    {
+     "s": 0,
+     "text": "Te acuestas de espaldas y la besas.",
+     "en": "You lie on your back and kiss it."
+    },
+    {
+     "s": 1,
+     "text": "¡Está muy alta! Tengo miedo.",
+     "en": "It is very high! I am scared."
+    },
+    {
+     "s": 0,
+     "text": "Yo te sostengo. Uno, dos, tres.",
+     "en": "I hold you. One, two, three."
+    },
+    {
+     "s": 1,
+     "text": "¡Lo hice! ¡Ahora hablo mucho!",
+     "en": "I did it! Now I talk a lot!"
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Dónde están?",
+     "qEn": "Where are they?",
+     "options": [
+      "En una playa",
+      "En un castillo",
+      "En un mercado"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué hace Lorena con la piedra?",
+     "qEn": "What does Lorena do with the stone?",
+     "options": [
+      "La toca",
+      "La pinta",
+      "La besa"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cómo se siente Lorena al principio?",
+     "qEn": "How does Lorena feel at first?",
+     "options": [
+      "Tiene miedo",
+      "Está aburrida",
+      "Tiene hambre"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué dice Lorena al final?",
+     "qEn": "What does Lorena say at the end?",
+     "options": [
+      "Tengo frío",
+      "Ahora hablo mucho",
+      "Quiero bajar"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Tienes miedo de las alturas?",
+     "qEn": "Are you afraid of heights?",
+     "model": "Sí, un poco."
+    },
+    {
+     "q": "¿Hablas mucho?",
+     "qEn": "Do you talk a lot?",
+     "model": "Sí, hablo mucho."
+    },
+    {
+     "q": "¿Te gustan los castillos?",
+     "qEn": "Do you like castles?",
+     "model": "Sí, me encantan."
+    }
+   ],
+   "gaps": "[Yo] te [sostengo]. Uno, [dos], [tres].",
+   "glossary": [
+    {
+     "word": "piedra",
+     "meaning": "cosa dura de la montaña",
+     "en": "stone"
+    },
+    {
+     "word": "besas",
+     "meaning": "tocas con los labios",
+     "en": "you kiss"
+    },
+    {
+     "word": "miedo",
+     "meaning": "lo que sientes en peligro",
+     "en": "fear"
+    }
+   ]
+  }
+ ]
+}

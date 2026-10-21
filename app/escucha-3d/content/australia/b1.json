@@ -1,0 +1,498 @@
+{
+ "game": "australia",
+ "level": "B1",
+ "items": [
+  {
+   "id": "nueva-gales",
+   "title": "Después del fuego",
+   "place": "Un mirador en las Montañas Azules",
+   "context": "Ramona, periodista dominicana, entrevista a Daniel, guarda forestal, sobre los grandes incendios.",
+   "speakers": [
+    {
+     "name": "Ramona",
+     "country": "República Dominicana",
+     "voice": "es-DO-RamonaNeural"
+    },
+    {
+     "name": "Daniel",
+     "country": "Uruguay",
+     "voice": "es-UY-MateoNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Daniel, hace unos años estas montañas ardieron durante semanas. ¿Cómo se ve el bosque hoy?"
+    },
+    {
+     "s": 1,
+     "text": "Mire esos troncos negros: por fuera parecen muertos, pero tienen hojas verdes nuevas. El eucalipto está preparado para el fuego."
+    },
+    {
+     "s": 0,
+     "text": "Entonces, ¿el fuego no es tan malo?"
+    },
+    {
+     "s": 1,
+     "text": "Un poco de fuego es natural. El problema es que ahora los incendios son más grandes, más calientes y más frecuentes, por el calor y la sequía."
+    },
+    {
+     "s": 0,
+     "text": "¿Y qué pueden hacer ustedes?"
+    },
+    {
+     "s": 1,
+     "text": "En invierno hacemos pequeños fuegos controlados, como hacían los pueblos aborígenes durante miles de años. Así el bosque tiene menos material para quemar en verano."
+    },
+    {
+     "s": 0,
+     "text": "Algunos vecinos dicen que el humo les molesta."
+    },
+    {
+     "s": 1,
+     "text": "Es verdad. Pero prefiero un poco de humo en junio a un infierno en enero."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cómo están los troncos de los árboles?",
+     "options": [
+      "Negros, pero con hojas nuevas",
+      "Totalmente muertos",
+      "Cortados"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "Según Daniel, ¿por qué los incendios son peores ahora?",
+     "options": [
+      "Por los turistas",
+      "Por el calor y la sequía",
+      "Por los guardas"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cuándo hacen los fuegos controlados?",
+     "options": [
+      "En verano",
+      "En primavera",
+      "En invierno"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿De quién aprendieron esa técnica?",
+     "options": [
+      "De los pueblos aborígenes",
+      "De los bomberos de Europa",
+      "De los científicos"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Hay incendios forestales en tu país? ¿Cuándo?",
+     "model": "Sí, sobre todo en verano, cuando no llueve durante meses."
+    },
+    {
+     "q": "¿Crees que se puede aprender de las técnicas tradicionales?",
+     "model": "Sí, muchas veces los pueblos originarios conocen mejor la tierra."
+    },
+    {
+     "q": "¿Aceptarías una molestia pequeña para evitar un problema grande?",
+     "model": "Sí, aunque me cuesta si la molestia es todos los días."
+    }
+   ],
+   "gaps": "En invierno hacemos [pequeños] fuegos [controlados], como hacían los pueblos aborígenes durante [miles] de [años]. Así el bosque tiene menos material para quemar en verano.",
+   "glossary": [
+    {
+     "word": "ardieron",
+     "meaning": "se quemaron con fuego"
+    },
+    {
+     "word": "troncos",
+     "meaning": "la parte gruesa del árbol"
+    },
+    {
+     "word": "sequía",
+     "meaning": "mucho tiempo sin lluvia"
+    },
+    {
+     "word": "humo",
+     "meaning": "lo gris que sale del fuego"
+    }
+   ]
+  },
+  {
+   "id": "victoria",
+   "title": "El estadio lleno",
+   "place": "El MCG en Melbourne",
+   "context": "Sebastián, de Venezuela, conversa con Sam, jugadora de fútbol australiano, después de un partido.",
+   "speakers": [
+    {
+     "name": "Sebastián",
+     "country": "Venezuela",
+     "voice": "es-VE-SebastianNeural"
+    },
+    {
+     "name": "Sam",
+     "country": "Argentina",
+     "voice": "es-AR-ElenaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Sam, ¡qué partido! Nunca había visto tanta gente en un partido de mujeres."
+    },
+    {
+     "s": 1,
+     "text": "Hace diez años jugábamos en campos vacíos, con veinte familiares mirando. Hoy vinieron cuarenta mil personas."
+    },
+    {
+     "s": 0,
+     "text": "¿Y qué cambió?"
+    },
+    {
+     "s": 1,
+     "text": "En 2017 se creó la liga profesional. Al principio muchos decían que nadie iba a venir. El primer partido se llenó y tuvieron que cerrar las puertas."
+    },
+    {
+     "s": 0,
+     "text": "¿Ya pueden vivir del deporte?"
+    },
+    {
+     "s": 1,
+     "text": "Algunas sí, pero la mayoría todavía trabaja por la mañana. Yo soy enfermera tres días por semana. Los hombres ganan diez veces más."
+    },
+    {
+     "s": 0,
+     "text": "¿Es justo?"
+    },
+    {
+     "s": 1,
+     "text": "Ellos venden más entradas y más publicidad, eso es verdad. Pero si nadie invierte en nosotras, nunca vamos a vender más. Es el huevo y la gallina."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuántas personas vieron el partido?",
+     "options": [
+      "Veinte",
+      "Cuatro mil",
+      "Cuarenta mil"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué pasó en el primer partido de la liga?",
+     "options": [
+      "Se llenó el estadio",
+      "No vino nadie",
+      "Se canceló"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué hace Sam además de jugar?",
+     "options": [
+      "Es profesora",
+      "Es enfermera",
+      "Es periodista"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué significa «el huevo y la gallina» aquí?",
+     "options": [
+      "Que la comida es importante",
+      "Que los hombres juegan mejor",
+      "Que sin inversión no hay público, y sin público no hay inversión"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Ves deportes de mujeres? ¿Cuáles?",
+     "model": "Sí, veo el fútbol femenino y a veces el vóley."
+    },
+    {
+     "q": "¿Crees que deportistas hombres y mujeres deberían ganar lo mismo?",
+     "model": "Creo que deberían tener las mismas oportunidades, y el sueldo debería crecer con eso."
+    },
+    {
+     "q": "¿Conoces a alguien que tiene dos trabajos para hacer lo que le gusta?",
+     "model": "Sí, una amiga es actriz y trabaja de camarera por las noches."
+    }
+   ],
+   "gaps": "Ellos venden más [entradas] y más [publicidad], eso es [verdad]. Pero si nadie [invierte] en nosotras, nunca vamos a vender más.",
+   "glossary": [
+    {
+     "word": "campos",
+     "meaning": "lugares grandes con césped para jugar"
+    },
+    {
+     "word": "liga",
+     "meaning": "grupo de equipos que juegan entre sí"
+    },
+    {
+     "word": "publicidad",
+     "meaning": "anuncios para vender productos"
+    },
+    {
+     "word": "invierte",
+     "meaning": "pone dinero esperando ganar más"
+    }
+   ]
+  },
+  {
+   "id": "queensland",
+   "title": "Una selva con dueños",
+   "place": "La selva de Daintree",
+   "context": "Lorena, guía salvadoreña que trabaja en Cairns, habla con Jarrah, guía kuku yalanji, durante un paseo.",
+   "speakers": [
+    {
+     "name": "Lorena",
+     "country": "El Salvador",
+     "voice": "es-SV-LorenaNeural"
+    },
+    {
+     "name": "Jarrah",
+     "country": "Honduras",
+     "voice": "es-HN-CarlosNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Jarrah, mis turistas siempre preguntan lo mismo: ¿es verdad que esta selva es más antigua que el Amazonas?"
+    },
+    {
+     "s": 1,
+     "text": "Sí, tiene unos ciento ochenta millones de años. Pero para mi pueblo lo importante no es la edad, sino que aquí cada planta tiene un uso: comida, medicina, herramientas."
+    },
+    {
+     "s": 0,
+     "text": "Hace poco el gobierno devolvió la selva a los kuku yalanji, ¿no?"
+    },
+    {
+     "s": 1,
+     "text": "En 2021. Ahora la administramos nosotros junto con el gobierno. Fue un día muy emocionante para mi abuela."
+    },
+    {
+     "s": 0,
+     "text": "¿Y cambió algo para los turistas?"
+    },
+    {
+     "s": 1,
+     "text": "Queremos que vengan, pero de otra manera: con guías locales, en grupos pequeños, escuchando. Algunos lugares van a cerrarse porque son sagrados."
+    },
+    {
+     "s": 0,
+     "text": "A algunas agencias no les va a gustar."
+    },
+    {
+     "s": 1,
+     "text": "Lo sé. Pero un turista que entiende la selva vuelve, y además se lo cuenta a sus amigos."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuántos años tiene la selva?",
+     "options": [
+      "Unos ciento ochenta millones",
+      "Unos diez mil",
+      "Unos mil"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué es lo importante para el pueblo de Jarrah?",
+     "options": [
+      "La edad de la selva",
+      "El uso de cada planta",
+      "El dinero del turismo"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué pasó en 2021?",
+     "options": [
+      "Hubo un incendio",
+      "Llegaron más turistas",
+      "El gobierno devolvió la selva a los kuku yalanji"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cómo quieren que vengan los turistas?",
+     "options": [
+      "En grupos grandes",
+      "En grupos pequeños con guías locales",
+      "Sin guía"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Conoces una planta que se usa como medicina?",
+     "model": "Sí, mi abuela usa una hierba para el dolor de estómago."
+    },
+    {
+     "q": "¿Prefieres viajar con guía o solo?",
+     "model": "Prefiero ir con un guía local, porque aprendes historias que no están en los libros."
+    },
+    {
+     "q": "¿Estás de acuerdo con cerrar lugares sagrados al turismo?",
+     "model": "Sí, si la comunidad lo pide, hay que respetarlo."
+    }
+   ],
+   "gaps": "Queremos que vengan, pero de otra [manera]: con [guías] [locales], en grupos [pequeños], escuchando.",
+   "glossary": [
+    {
+     "word": "antigua",
+     "meaning": "que tiene muchos años"
+    },
+    {
+     "word": "herramientas",
+     "meaning": "objetos para trabajar"
+    },
+    {
+     "word": "administramos",
+     "meaning": "organizamos y decidimos"
+    },
+    {
+     "word": "agencias",
+     "meaning": "empresas que venden viajes"
+    }
+   ]
+  },
+  {
+   "id": "outback",
+   "title": "La clase en la pantalla",
+   "place": "La Escuela del Aire de Alice Springs",
+   "context": "Megan, maestra, habla por videollamada con Valentina, una madre uruguaya que enseña a su hija en una estación ganadera.",
+   "speakers": [
+    {
+     "name": "Megan",
+     "country": "Guinea Ecuatorial",
+     "voice": "es-GQ-TeresaNeural"
+    },
+    {
+     "name": "Valentina",
+     "country": "Uruguay",
+     "voice": "es-UY-ValentinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Valentina, gracias por conectarse. Quería hablar de Lily. En clase está muy callada últimamente."
+    },
+    {
+     "s": 1,
+     "text": "Lo sé. Desde que se fue el capataz, yo trabajo con las vacas todo el día y no puedo sentarme con ella."
+    },
+    {
+     "s": 0,
+     "text": "Es mucho para una persona: madre, maestra y ganadera a la vez."
+    },
+    {
+     "s": 1,
+     "text": "Mi marido quiere mandarla a un internado en Adelaida el año que viene. Allí tendría profesores y amigas."
+    },
+    {
+     "s": 0,
+     "text": "¿Y Lily qué dice?"
+    },
+    {
+     "s": 1,
+     "text": "Llora cada vez que hablamos del tema. Tiene ocho años; Adelaida está a dos mil kilómetros."
+    },
+    {
+     "s": 0,
+     "text": "Hay otra opción: algunas familias contratan a una institutriz, una estudiante joven que vive con ustedes un año y ayuda con las clases."
+    },
+    {
+     "s": 1,
+     "text": "No lo había pensado. Si podemos pagarla, sería perfecto."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cómo está Lily en clase?",
+     "options": [
+      "Muy callada",
+      "Muy contenta",
+      "Muy nerviosa"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Por qué Valentina no puede ayudar a Lily?",
+     "options": [
+      "Porque está enferma",
+      "Porque trabaja todo el día con las vacas",
+      "Porque viaja mucho"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Dónde está el internado?",
+     "options": [
+      "En Darwin",
+      "En Sídney",
+      "En Adelaida"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué propone Megan?",
+     "options": [
+      "Cambiar de escuela",
+      "Contratar a una institutriz",
+      "Mudarse a la ciudad"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Te gustaría estudiar en casa en vez de en una escuela?",
+     "model": "No, extrañaría a mis compañeros y los recreos."
+    },
+    {
+     "q": "¿Qué piensas de los internados para niños pequeños?",
+     "model": "Creo que a los ocho años es muy pronto para vivir lejos de la familia."
+    },
+    {
+     "q": "¿Tuviste que hacer varios trabajos a la vez?",
+     "model": "Sí, cuando estudiaba trabajaba en una tienda los fines de semana."
+    }
+   ],
+   "gaps": "Mi [marido] quiere mandarla a un [internado] en [Adelaida] el año que [viene]. Allí tendría profesores y amigas.",
+   "glossary": [
+    {
+     "word": "callada",
+     "meaning": "que no habla mucho"
+    },
+    {
+     "word": "capataz",
+     "meaning": "persona que dirige el trabajo en el campo"
+    },
+    {
+     "word": "internado",
+     "meaning": "escuela donde los alumnos viven y duermen"
+    },
+    {
+     "word": "institutriz",
+     "meaning": "maestra que vive en la casa de la familia"
+    }
+   ]
+  }
+ ]
+}

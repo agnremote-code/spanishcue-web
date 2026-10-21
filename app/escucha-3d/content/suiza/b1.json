@@ -1,0 +1,498 @@
+{
+ "game": "suiza",
+ "level": "B1",
+ "items": [
+  {
+   "id": "zurich",
+   "title": "Votar cuatro veces al año",
+   "place": "Un local de votación en Zúrich",
+   "context": "Víctor, periodista de Puerto Rico, pregunta a Peter, funcionario, por la democracia directa suiza.",
+   "speakers": [
+    {
+     "name": "Víctor",
+     "country": "Puerto Rico",
+     "voice": "es-PR-VictorNeural"
+    },
+    {
+     "name": "Peter",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Peter, me dicen que en Suiza se vota cuatro veces al año. ¿No es demasiado?"
+    },
+    {
+     "s": 1,
+     "text": "Para nosotros es normal. No elegimos solo a políticos: votamos leyes concretas. Este domingo, por ejemplo, se decide si la ciudad construye un nuevo carril para bicicletas."
+    },
+    {
+     "s": 0,
+     "text": "¿Y quién propone esas votaciones?"
+    },
+    {
+     "s": 1,
+     "text": "Cualquier ciudadano. Si reúne cien mil firmas en dieciocho meses, todo el país vota su propuesta. También por votación se decidió el voto de las mujeres, aunque llegó tardísimo: en 1971."
+    },
+    {
+     "s": 0,
+     "text": "¿En 1971? Eso es muy reciente."
+    },
+    {
+     "s": 1,
+     "text": "Sí, y en un cantón, Appenzell, no llegó hasta 1990. Es el lado malo del sistema: si la mayoría no quiere cambiar, nada cambia."
+    },
+    {
+     "s": 0,
+     "text": "¿La gente participa mucho?"
+    },
+    {
+     "s": 1,
+     "text": "Menos de la mitad, normalmente. Casi todos votan por correo desde casa. Yo estoy aquí para los que prefieren venir en persona y para contar los votos."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué se decide este domingo?",
+     "options": [
+      "Un carril para bicicletas",
+      "Un nuevo alcalde",
+      "Un impuesto"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cuántas firmas necesita un ciudadano?",
+     "options": [
+      "Diez mil",
+      "Cien mil",
+      "Un millón"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿En qué año se aprobó el voto de las mujeres en todo el país?",
+     "options": [
+      "En 1990",
+      "En 1945",
+      "En 1971"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cómo votan casi todos?",
+     "options": [
+      "Por correo",
+      "En la plaza",
+      "Por teléfono"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Te gustaría votar leyes concretas además de elegir políticos?",
+     "model": "Sí, aunque creo que algunos temas son demasiado técnicos."
+    },
+    {
+     "q": "¿Qué ley propondrías si pudieras reunir firmas?",
+     "model": "Propondría más transporte público gratis para estudiantes."
+    },
+    {
+     "q": "¿Votas siempre que puedes?",
+     "model": "Casi siempre, aunque a veces no conozco bien a los candidatos."
+    }
+   ],
+   "gaps": "Menos de la mitad, normalmente. Casi todos votan por [correo] desde [casa]. Yo estoy aquí para los que [prefieren] venir en persona y para [contar] los votos.",
+   "glossary": [
+    {
+     "word": "firmas",
+     "meaning": "nombres escritos a mano para apoyar algo"
+    },
+    {
+     "word": "propuesta",
+     "meaning": "idea que se presenta para decidir"
+    },
+    {
+     "word": "mayoría",
+     "meaning": "la mayor parte de las personas"
+    },
+    {
+     "word": "carril",
+     "meaning": "parte de la calle para un tipo de vehículo"
+    }
+   ]
+  },
+  {
+   "id": "ginebra",
+   "title": "El reloj del abuelo",
+   "place": "Un taller de relojería en Ginebra",
+   "context": "Camila, de Perú, lleva a Thierry el reloj antiguo de su abuelo.",
+   "speakers": [
+    {
+     "name": "Camila",
+     "country": "Perú",
+     "voice": "es-PE-CamilaNeural"
+    },
+    {
+     "name": "Thierry",
+     "country": "Uruguay",
+     "voice": "es-UY-MateoNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Thierry, le traigo el reloj de mi abuelo. Lleva diez años parado y en mi país nadie lo quiere arreglar."
+    },
+    {
+     "s": 1,
+     "text": "Déjeme ver… Es un reloj mecánico de los años cincuenta. Tiene más de ciento veinte piezas, algunas más pequeñas que un grano de arroz."
+    },
+    {
+     "s": 0,
+     "text": "¿Se puede arreglar?"
+    },
+    {
+     "s": 1,
+     "text": "Sí, pero voy a necesitar unas tres semanas. Hay que desmontarlo entero, limpiar cada pieza y probablemente fabricar un muelle nuevo a mano."
+    },
+    {
+     "s": 0,
+     "text": "¿A mano? ¿No es más fácil comprar un reloj digital?"
+    },
+    {
+     "s": 1,
+     "text": "Más fácil, sí. Pero un teléfono se tira a los cinco años. Este reloj, bien cuidado, puede funcionar otro siglo. En el Jura, cerca de aquí, hay familias que hacen relojes desde hace tres generaciones."
+    },
+    {
+     "s": 0,
+     "text": "¿Y los jóvenes quieren aprender el oficio?"
+    },
+    {
+     "s": 1,
+     "text": "Menos que antes. Tengo un aprendiz de diecinueve años; tardará cuatro años en formarse. Es paciencia pura."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuánto tiempo lleva parado el reloj?",
+     "options": [
+      "Un año",
+      "Diez años",
+      "Cincuenta años"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cuánto tiempo necesita Thierry para arreglarlo?",
+     "options": [
+      "Tres días",
+      "Un año",
+      "Unas tres semanas"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué piensa Thierry de los teléfonos?",
+     "options": [
+      "Que se tiran pronto",
+      "Que son mejores",
+      "Que son caros"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cuántos años tardará el aprendiz en formarse?",
+     "options": [
+      "Dos",
+      "Cuatro",
+      "Diez"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Tienes algún objeto de tu familia con mucho valor sentimental?",
+     "model": "Sí, tengo el anillo de mi abuela y lo uso siempre."
+    },
+    {
+     "q": "¿Prefieres arreglar las cosas o comprar nuevas?",
+     "model": "Prefiero arreglarlas, aunque a veces cuesta casi lo mismo."
+    },
+    {
+     "q": "¿Qué oficio tradicional te gustaría aprender?",
+     "model": "Me gustaría aprender carpintería para hacer mis propios muebles."
+    }
+   ],
+   "gaps": "Sí, pero voy a necesitar unas tres semanas. Hay que [desmontarlo] entero, [limpiar] cada [pieza] y probablemente fabricar un [muelle] nuevo a mano.",
+   "glossary": [
+    {
+     "word": "mecánico",
+     "meaning": "que funciona con piezas y sin pilas"
+    },
+    {
+     "word": "desmontarlo",
+     "meaning": "separar todas sus piezas"
+    },
+    {
+     "word": "aprendiz",
+     "meaning": "persona que aprende un oficio"
+    },
+    {
+     "word": "oficio",
+     "meaning": "trabajo manual que se aprende con práctica"
+    }
+   ]
+  },
+  {
+   "id": "tesino",
+   "title": "Saltar o no saltar",
+   "place": "El río Verzasca",
+   "context": "Federico, de Nicaragua, mira a unos chicos que saltan al río. Sara es guía del valle.",
+   "speakers": [
+    {
+     "name": "Federico",
+     "country": "Nicaragua",
+     "voice": "es-NI-FedericoNeural"
+    },
+    {
+     "name": "Sara",
+     "country": "Colombia",
+     "voice": "es-CO-SalomeNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Sara, este es el puente de las películas, ¿no? Donde saltó James Bond."
+    },
+    {
+     "s": 1,
+     "text": "Ese es otro: la presa, a pocos kilómetros. Doscientos veinte metros con cuerda elástica. Esto es el Ponte dei Salti, un puente de piedra muy antiguo."
+    },
+    {
+     "s": 0,
+     "text": "Hay unos chicos saltando desde aquí al río. ¿Es seguro?"
+    },
+    {
+     "s": 1,
+     "text": "No. El agua es transparente y parece tranquila, pero está a doce grados y la corriente cambia en segundos. Cada verano hay accidentes, casi siempre de turistas."
+    },
+    {
+     "s": 0,
+     "text": "Entonces, ¿por qué no lo prohíben?"
+    },
+    {
+     "s": 1,
+     "text": "Hay carteles en ocho idiomas, pero aquí se cree mucho en la responsabilidad personal. El gobierno informa; la decisión es de cada uno."
+    },
+    {
+     "s": 0,
+     "text": "Yo prefiero mirar desde arriba y sacar una foto."
+    },
+    {
+     "s": 1,
+     "text": "Buena decisión. Y si quiere nadar, hay zonas tranquilas un poco más abajo, donde el río se abre."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Desde dónde saltó James Bond?",
+     "options": [
+      "Desde el Ponte dei Salti",
+      "Desde un castillo",
+      "Desde la presa"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿A qué temperatura está el agua?",
+     "options": [
+      "A doce grados",
+      "A veinte grados",
+      "A dos grados"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Quiénes tienen más accidentes?",
+     "options": [
+      "Los niños",
+      "Los turistas",
+      "Los guías"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué hace el gobierno, según Sara?",
+     "options": [
+      "Prohíbe saltar",
+      "Pone multas",
+      "Informa y deja decidir"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Hiciste alguna vez algo arriesgado en un viaje?",
+     "model": "Sí, salté en paracaídas en Brasil y fue increíble."
+    },
+    {
+     "q": "¿Crees que el gobierno debería prohibir actividades peligrosas?",
+     "model": "Depende: si solo es peligroso para uno mismo, prefiero informar."
+    },
+    {
+     "q": "¿Qué lugar de una película te gustaría visitar?",
+     "model": "Me gustaría ver los paisajes de Nueva Zelanda de El señor de los anillos."
+    }
+   ],
+   "gaps": "No. El agua es [transparente] y parece tranquila, pero está a [doce] [grados] y la [corriente] cambia en segundos. Cada verano hay accidentes, casi siempre de turistas.",
+   "glossary": [
+    {
+     "word": "presa",
+     "meaning": "muro que cierra un río"
+    },
+    {
+     "word": "cuerda elástica",
+     "meaning": "cuerda que se estira"
+    },
+    {
+     "word": "transparente",
+     "meaning": "que deja ver lo que hay detrás"
+    },
+    {
+     "word": "carteles",
+     "meaning": "letreros con información"
+    }
+   ]
+  },
+  {
+   "id": "alpes",
+   "title": "Un glaciar que se va",
+   "place": "Un mirador sobre el glaciar Aletsch",
+   "context": "Paloma, de Estados Unidos, habla con Martina, glacióloga, sobre el futuro del glaciar.",
+   "speakers": [
+    {
+     "name": "Paloma",
+     "country": "Estados Unidos",
+     "voice": "es-US-PalomaNeural"
+    },
+    {
+     "name": "Martina",
+     "country": "Guatemala",
+     "voice": "es-GT-MartaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Martina, desde aquí el glaciar parece enorme. ¿Es verdad que está desapareciendo?"
+    },
+    {
+     "s": 1,
+     "text": "Sí. El Aletsch mide unos veinte kilómetros, pero cada año pierde unos cincuenta metros de longitud. Desde 1850 ha perdido más de tres kilómetros."
+    },
+    {
+     "s": 0,
+     "text": "¿Y cómo lo miden?"
+    },
+    {
+     "s": 1,
+     "text": "Con fotos de satélite, drones y estacas que clavamos en el hielo. Si en septiembre la estaca sobresale dos metros más, ese es el hielo que se derritió."
+    },
+    {
+     "s": 0,
+     "text": "Algunos pueblos lo cubren con mantas blancas, ¿no?"
+    },
+    {
+     "s": 1,
+     "text": "Sí, en algunos glaciares pequeños, para frenar el deshielo en verano. Funciona un poco, pero es carísimo y solo sirve en zonas muy pequeñas."
+    },
+    {
+     "s": 0,
+     "text": "¿Qué pasará si desaparece?"
+    },
+    {
+     "s": 1,
+     "text": "Los ríos tendrán menos agua en verano, y eso afecta a la agricultura y a la electricidad. Por eso, para mí, el glaciar no es solo un paisaje bonito: es una reserva de agua."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuánto mide el glaciar Aletsch?",
+     "options": [
+      "Unos veinte kilómetros",
+      "Unos dos kilómetros",
+      "Unos cien kilómetros"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cuánto pierde cada año?",
+     "options": [
+      "Un metro",
+      "Un kilómetro",
+      "Unos cincuenta metros"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Para qué usan mantas blancas?",
+     "options": [
+      "Para dormir en el hielo",
+      "Para frenar el deshielo",
+      "Para marcar el camino"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué es el glaciar para Martina?",
+     "options": [
+      "Un lugar turístico",
+      "Un peligro",
+      "Una reserva de agua"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Notas cambios en el clima de tu ciudad?",
+     "model": "Sí, los veranos son más largos y más calurosos que antes."
+    },
+    {
+     "q": "¿Qué paisaje de tu país te preocupa perder?",
+     "model": "Me preocupan los bosques del sur, por los incendios."
+    },
+    {
+     "q": "¿Pagarías más por proteger un lugar natural?",
+     "model": "Sí, si sé exactamente en qué se usa el dinero."
+    }
+   ],
+   "gaps": "Los [ríos] tendrán menos [agua] en verano, y eso afecta a la [agricultura] y a la [electricidad]. Por eso, para mí, el glaciar no es solo un paisaje bonito: es una reserva de agua.",
+   "glossary": [
+    {
+     "word": "estacas",
+     "meaning": "palos que se clavan en el suelo"
+    },
+    {
+     "word": "sobresale",
+     "meaning": "queda fuera"
+    },
+    {
+     "word": "deshielo",
+     "meaning": "cuando el hielo se vuelve agua"
+    },
+    {
+     "word": "reserva",
+     "meaning": "lugar donde se guarda algo"
+    }
+   ]
+  }
+ ]
+}

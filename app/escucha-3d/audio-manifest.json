@@ -81,6 +81,86 @@
    "seconds": 56.46,
    "src": "/audio/escucha-3d/argentina-b1-mendoza.mp3"
   },
+  "australia/a0-nueva-gales": {
+   "hash": "f220b9021c6ec241434a",
+   "seconds": 31.68,
+   "src": "/audio/escucha-3d/australia-a0-nueva-gales.mp3"
+  },
+  "australia/a0-outback": {
+   "hash": "d06cf9653b2aa812e2da",
+   "seconds": 34.63,
+   "src": "/audio/escucha-3d/australia-a0-outback.mp3"
+  },
+  "australia/a0-queensland": {
+   "hash": "b4d1d7b8a41dcb8d6bd2",
+   "seconds": 30.34,
+   "src": "/audio/escucha-3d/australia-a0-queensland.mp3"
+  },
+  "australia/a0-victoria": {
+   "hash": "1d02b5c3ec7a3eeeb263",
+   "seconds": 25.13,
+   "src": "/audio/escucha-3d/australia-a0-victoria.mp3"
+  },
+  "australia/a1-nueva-gales": {
+   "hash": "1cfad78a5bb9dfa5dd0f",
+   "seconds": 41.14,
+   "src": "/audio/escucha-3d/australia-a1-nueva-gales.mp3"
+  },
+  "australia/a1-outback": {
+   "hash": "ec1fc3f0bf4c55bcd98c",
+   "seconds": 40.92,
+   "src": "/audio/escucha-3d/australia-a1-outback.mp3"
+  },
+  "australia/a1-queensland": {
+   "hash": "9cad5399b7d862405283",
+   "seconds": 40.95,
+   "src": "/audio/escucha-3d/australia-a1-queensland.mp3"
+  },
+  "australia/a1-victoria": {
+   "hash": "77018a1eea356634ff82",
+   "seconds": 39.48,
+   "src": "/audio/escucha-3d/australia-a1-victoria.mp3"
+  },
+  "australia/a2-nueva-gales": {
+   "hash": "1aac593440dcd2e23fdc",
+   "seconds": 55.88,
+   "src": "/audio/escucha-3d/australia-a2-nueva-gales.mp3"
+  },
+  "australia/a2-outback": {
+   "hash": "c37ae8d1a4f3a24af2e6",
+   "seconds": 53.53,
+   "src": "/audio/escucha-3d/australia-a2-outback.mp3"
+  },
+  "australia/a2-queensland": {
+   "hash": "54db3e805950e9406106",
+   "seconds": 55.26,
+   "src": "/audio/escucha-3d/australia-a2-queensland.mp3"
+  },
+  "australia/a2-victoria": {
+   "hash": "0abb960328fc09e51298",
+   "seconds": 56.17,
+   "src": "/audio/escucha-3d/australia-a2-victoria.mp3"
+  },
+  "australia/b1-nueva-gales": {
+   "hash": "4bbbc64129d5194f26c8",
+   "seconds": 56.03,
+   "src": "/audio/escucha-3d/australia-b1-nueva-gales.mp3"
+  },
+  "australia/b1-outback": {
+   "hash": "ab435df01434fd6a9438",
+   "seconds": 54.87,
+   "src": "/audio/escucha-3d/australia-b1-outback.mp3"
+  },
+  "australia/b1-queensland": {
+   "hash": "3c13e8d4c6b034b67e28",
+   "seconds": 57.08,
+   "src": "/audio/escucha-3d/australia-b1-queensland.mp3"
+  },
+  "australia/b1-victoria": {
+   "hash": "5173befa8642ecea4640",
+   "seconds": 58.95,
+   "src": "/audio/escucha-3d/australia-b1-victoria.mp3"
+  },
   "bosque/a1-cambia": {
    "hash": "a584a4cf0452c7383fc3",
    "seconds": 37.03,
@@ -1451,6 +1531,86 @@
    "seconds": 92.24,
    "src": "/audio/escucha-3d/hospital-c2-vip.mp3"
   },
+  "irlanda/a0-cork": {
+   "hash": "849144c571458df47918",
+   "seconds": 27.34,
+   "src": "/audio/escucha-3d/irlanda-a0-cork.mp3"
+  },
+  "irlanda/a0-dublin": {
+   "hash": "6499168177a236cd4747",
+   "seconds": 31.66,
+   "src": "/audio/escucha-3d/irlanda-a0-dublin.mp3"
+  },
+  "irlanda/a0-galway": {
+   "hash": "23483967a08a2bc6cb0d",
+   "seconds": 29.83,
+   "src": "/audio/escucha-3d/irlanda-a0-galway.mp3"
+  },
+  "irlanda/a0-kerry": {
+   "hash": "7ac19bc48a56e99af479",
+   "seconds": 27.53,
+   "src": "/audio/escucha-3d/irlanda-a0-kerry.mp3"
+  },
+  "irlanda/a1-cork": {
+   "hash": "113ca1f6ba43a49a8178",
+   "seconds": 48.08,
+   "src": "/audio/escucha-3d/irlanda-a1-cork.mp3"
+  },
+  "irlanda/a1-dublin": {
+   "hash": "692a92ff267f6c5af42a",
+   "seconds": 38.55,
+   "src": "/audio/escucha-3d/irlanda-a1-dublin.mp3"
+  },
+  "irlanda/a1-galway": {
+   "hash": "a021c7e65987b1654f5d",
+   "seconds": 48.2,
+   "src": "/audio/escucha-3d/irlanda-a1-galway.mp3"
+  },
+  "irlanda/a1-kerry": {
+   "hash": "48ffeee5ba76bcd8ce41",
+   "seconds": 42.89,
+   "src": "/audio/escucha-3d/irlanda-a1-kerry.mp3"
+  },
+  "irlanda/a2-cork": {
+   "hash": "c35e98017b998c9bd90d",
+   "seconds": 54.08,
+   "src": "/audio/escucha-3d/irlanda-a2-cork.mp3"
+  },
+  "irlanda/a2-dublin": {
+   "hash": "6e04f69b9670b72ea06a",
+   "seconds": 43.55,
+   "src": "/audio/escucha-3d/irlanda-a2-dublin.mp3"
+  },
+  "irlanda/a2-galway": {
+   "hash": "7ff519bd22bf0b03e915",
+   "seconds": 52.28,
+   "src": "/audio/escucha-3d/irlanda-a2-galway.mp3"
+  },
+  "irlanda/a2-kerry": {
+   "hash": "dca41062da9121d6d035",
+   "seconds": 47.36,
+   "src": "/audio/escucha-3d/irlanda-a2-kerry.mp3"
+  },
+  "irlanda/b1-cork": {
+   "hash": "c125073d2470eb33138c",
+   "seconds": 51.51,
+   "src": "/audio/escucha-3d/irlanda-b1-cork.mp3"
+  },
+  "irlanda/b1-dublin": {
+   "hash": "a4db3211e4032b53f41d",
+   "seconds": 58.45,
+   "src": "/audio/escucha-3d/irlanda-b1-dublin.mp3"
+  },
+  "irlanda/b1-galway": {
+   "hash": "90ed74016e9685213ce0",
+   "seconds": 58.47,
+   "src": "/audio/escucha-3d/irlanda-b1-galway.mp3"
+  },
+  "irlanda/b1-kerry": {
+   "hash": "6698c640d6566f01ab01",
+   "seconds": 60.63,
+   "src": "/audio/escucha-3d/irlanda-b1-kerry.mp3"
+  },
   "mexico/a0-cdmx": {
    "hash": "dfd0916e7003c1c16c4b",
    "seconds": 27.88,
@@ -2130,6 +2290,86 @@
    "hash": "e11daf625121af7f0551",
    "seconds": 51.32,
    "src": "/audio/escucha-3d/suecia-b1-malmo.mp3"
+  },
+  "suiza/a0-alpes": {
+   "hash": "e0480bbece4f1aa7fdb0",
+   "seconds": 30.58,
+   "src": "/audio/escucha-3d/suiza-a0-alpes.mp3"
+  },
+  "suiza/a0-ginebra": {
+   "hash": "fae26cefc2b6061c1975",
+   "seconds": 33.89,
+   "src": "/audio/escucha-3d/suiza-a0-ginebra.mp3"
+  },
+  "suiza/a0-tesino": {
+   "hash": "3514a42f0055d692446c",
+   "seconds": 26.69,
+   "src": "/audio/escucha-3d/suiza-a0-tesino.mp3"
+  },
+  "suiza/a0-zurich": {
+   "hash": "71f5921dd2db159162de",
+   "seconds": 32.33,
+   "src": "/audio/escucha-3d/suiza-a0-zurich.mp3"
+  },
+  "suiza/a1-alpes": {
+   "hash": "892646d153e1ef6aa92d",
+   "seconds": 43.56,
+   "src": "/audio/escucha-3d/suiza-a1-alpes.mp3"
+  },
+  "suiza/a1-ginebra": {
+   "hash": "bdfc1f38d0842259d3d8",
+   "seconds": 48.0,
+   "src": "/audio/escucha-3d/suiza-a1-ginebra.mp3"
+  },
+  "suiza/a1-tesino": {
+   "hash": "97f0e4a227b39a47f803",
+   "seconds": 46.44,
+   "src": "/audio/escucha-3d/suiza-a1-tesino.mp3"
+  },
+  "suiza/a1-zurich": {
+   "hash": "18edbd8aa6890121fc52",
+   "seconds": 45.89,
+   "src": "/audio/escucha-3d/suiza-a1-zurich.mp3"
+  },
+  "suiza/a2-alpes": {
+   "hash": "ae49e2b9d8b2ee3d5901",
+   "seconds": 55.31,
+   "src": "/audio/escucha-3d/suiza-a2-alpes.mp3"
+  },
+  "suiza/a2-ginebra": {
+   "hash": "3482290dbba45375adf7",
+   "seconds": 52.31,
+   "src": "/audio/escucha-3d/suiza-a2-ginebra.mp3"
+  },
+  "suiza/a2-tesino": {
+   "hash": "72bf7ecbe061b71dd092",
+   "seconds": 46.5,
+   "src": "/audio/escucha-3d/suiza-a2-tesino.mp3"
+  },
+  "suiza/a2-zurich": {
+   "hash": "ba6e6670d99966b81c28",
+   "seconds": 50.75,
+   "src": "/audio/escucha-3d/suiza-a2-zurich.mp3"
+  },
+  "suiza/b1-alpes": {
+   "hash": "1b81753168f44a89aa8a",
+   "seconds": 60.97,
+   "src": "/audio/escucha-3d/suiza-b1-alpes.mp3"
+  },
+  "suiza/b1-ginebra": {
+   "hash": "a7091128959343958fc8",
+   "seconds": 63.25,
+   "src": "/audio/escucha-3d/suiza-b1-ginebra.mp3"
+  },
+  "suiza/b1-tesino": {
+   "hash": "8f3dbf1f0eb3a5587318",
+   "seconds": 64.09,
+   "src": "/audio/escucha-3d/suiza-b1-tesino.mp3"
+  },
+  "suiza/b1-zurich": {
+   "hash": "e95fd2c747e583904042",
+   "seconds": 72.2,
+   "src": "/audio/escucha-3d/suiza-b1-zurich.mp3"
   },
   "uk/a0-escocia": {
    "hash": "207b278ea2dac6bc3391",

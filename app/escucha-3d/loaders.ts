@@ -2,7 +2,9 @@
 import type { ListeningFile } from './types';
 
 type Loader = () => Promise<{ default: unknown }>;
-export const LOADERS: Record<string, Record<string, Loader>> = {
+// The server build (import.meta.env.SSR) gets no listenings: they only load in the browser,
+// and leaving them out keeps the Worker bundle inside its memory budget.
+export const LOADERS: Record<string, Record<string, Loader>> = (import.meta as unknown as { env?: { SSR?: boolean } }).env?.SSR ? {} : {
   noche: {
     A1: () => import('./content/noche/a1.json'),
     A2: () => import('./content/noche/a2.json'),
@@ -74,6 +76,24 @@ export const LOADERS: Record<string, Record<string, Loader>> = {
     A1: () => import('./content/uk/a1.json'),
     A2: () => import('./content/uk/a2.json'),
     B1: () => import('./content/uk/b1.json'),
+  },
+  irlanda: {
+    A0: () => import('./content/irlanda/a0.json'),
+    A1: () => import('./content/irlanda/a1.json'),
+    A2: () => import('./content/irlanda/a2.json'),
+    B1: () => import('./content/irlanda/b1.json'),
+  },
+  australia: {
+    A0: () => import('./content/australia/a0.json'),
+    A1: () => import('./content/australia/a1.json'),
+    A2: () => import('./content/australia/a2.json'),
+    B1: () => import('./content/australia/b1.json'),
+  },
+  suiza: {
+    A0: () => import('./content/suiza/a0.json'),
+    A1: () => import('./content/suiza/a1.json'),
+    A2: () => import('./content/suiza/a2.json'),
+    B1: () => import('./content/suiza/b1.json'),
   },
   mexico: {
     A0: () => import('./content/mexico/a0.json'),

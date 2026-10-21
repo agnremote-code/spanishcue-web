@@ -26,19 +26,19 @@ test('all former A0 lessons are A1 without A0 metadata', () => {
   }
   for (const lesson of lessons) {
     assert.ok(publicLevels.includes(lesson.level), `lesson ${lesson.id} has level ${lesson.level}`);
-    assert.equal(Boolean(lesson.levels?.includes('A0')), [32,36,210,223,226,227,228,229,236,237,238,240].includes(lesson.id), `lesson ${lesson.id}: A0 only when authored`);
+    assert.equal(Boolean(lesson.levels?.includes('A0')), [29,30,32,33,36,210,223,226,227,228,229,236,237,238,240].includes(lesson.id), `lesson ${lesson.id}: A0 only when authored`);
   }
 });
 
 test('A0 appears in filters only for the explicitly authored lessons', () => {
   assert.deepEqual(availableLevels(lessons), publicLevels);
   assert.deepEqual(groupLessonsByLevel(lessons).map(({ level }) => level), publicLevels);
-  assert.equal(lessons.filter(l=>l.levels?.includes('A0')).length,12);
+  assert.equal(lessons.filter(l=>l.levels?.includes('A0')).length,15);
 });
 
 test('A1 has the merged total and pedagogical route order', () => {
   const a1Lessons = lessons.filter((lesson) => lesson.level === 'A1' || lesson.levels?.includes('A1'));
-  assert.equal(a1Lessons.length, 71);
+  assert.equal(a1Lessons.length, 74);
   assert.ok(a1Lessons.some(lesson => lesson.id === 32), 'Reino Unido offers an A1 route');
   const idsFor = (category) => lessons.filter((lesson) => lesson.category === category)
     .sort((a, b) => a.routeSequence - b.routeSequence).map((lesson) => lesson.id);

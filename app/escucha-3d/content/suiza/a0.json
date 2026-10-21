@@ -1,0 +1,518 @@
+{
+ "game": "suiza",
+ "level": "A0",
+ "items": [
+  {
+   "id": "zurich",
+   "title": "El tren de las ocho",
+   "place": "La estación central de Zúrich",
+   "context": "Andrea, de Ecuador, sube al tren. Reto es revisor.",
+   "contextEn": "Andrea, from Ecuador, gets on the train. Reto is a ticket inspector.",
+   "speakers": [
+    {
+     "name": "Reto",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    },
+    {
+     "name": "Andrea",
+     "country": "Ecuador",
+     "voice": "es-EC-AndreaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Buenos días. ¿Su billete, por favor?",
+     "en": "Good morning. Your ticket, please?"
+    },
+    {
+     "s": 1,
+     "text": "Aquí está. ¿Este tren va a Lucerna?",
+     "en": "Here it is. Does this train go to Lucerne?"
+    },
+    {
+     "s": 0,
+     "text": "Sí. Sale a las ocho en punto.",
+     "en": "Yes. It leaves at eight o’clock sharp."
+    },
+    {
+     "s": 1,
+     "text": "¿A qué hora llega?",
+     "en": "What time does it arrive?"
+    },
+    {
+     "s": 0,
+     "text": "A las nueve menos diez. Es muy puntual.",
+     "en": "At ten to nine. It is very punctual."
+    },
+    {
+     "s": 1,
+     "text": "¡Perfecto! Gracias.",
+     "en": "Perfect! Thank you."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Quién es Reto?",
+     "qEn": "Who is Reto?",
+     "options": [
+      "Un revisor",
+      "Un cocinero",
+      "Un médico"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Adónde va el tren?",
+     "qEn": "Where does the train go?",
+     "options": [
+      "A Ginebra",
+      "A Lucerna",
+      "A Berna"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿A qué hora sale?",
+     "qEn": "What time does it leave?",
+     "options": [
+      "A las nueve",
+      "A las siete",
+      "A las ocho"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cómo es el tren?",
+     "qEn": "What is the train like?",
+     "options": [
+      "Puntual",
+      "Lento",
+      "Viejo"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Viajas en tren?",
+     "qEn": "Do you travel by train?",
+     "model": "Sí, a veces."
+    },
+    {
+     "q": "¿Eres puntual?",
+     "qEn": "Are you punctual?",
+     "model": "Sí, casi siempre."
+    },
+    {
+     "q": "¿A qué hora sales de casa?",
+     "qEn": "What time do you leave home?",
+     "model": "A las ocho."
+    }
+   ],
+   "gaps": "[Sí]. [Sale] a las [ocho] en [punto].",
+   "glossary": [
+    {
+     "word": "billete",
+     "meaning": "papel para viajar",
+     "en": "ticket"
+    },
+    {
+     "word": "puntual",
+     "meaning": "que llega a la hora",
+     "en": "punctual"
+    },
+    {
+     "word": "sale",
+     "meaning": "se va",
+     "en": "leaves"
+    }
+   ]
+  },
+  {
+   "id": "ginebra",
+   "title": "Un trozo de queso",
+   "place": "La quesería de Gruyères",
+   "context": "Paola, de Venezuela, prueba un queso. Marcel es quesero.",
+   "contextEn": "Paola, from Venezuela, tries a cheese. Marcel is a cheesemaker.",
+   "speakers": [
+    {
+     "name": "Marcel",
+     "country": "Panamá",
+     "voice": "es-PA-RobertoNeural"
+    },
+    {
+     "name": "Paola",
+     "country": "Venezuela",
+     "voice": "es-VE-PaolaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Hola. ¿Quieres probar el queso?",
+     "en": "Hello. Do you want to try the cheese?"
+    },
+    {
+     "s": 1,
+     "text": "Sí, gracias. ¡Mmm, qué rico!",
+     "en": "Yes, thanks. Mmm, how tasty!"
+    },
+    {
+     "s": 0,
+     "text": "Es queso de Gruyères. Tiene un año.",
+     "en": "It is Gruyères cheese. It is one year old."
+    },
+    {
+     "s": 1,
+     "text": "¿Un año? ¿Cuánto cuesta?",
+     "en": "One year? How much is it?"
+    },
+    {
+     "s": 0,
+     "text": "Cuesta veinte francos.",
+     "en": "It costs twenty francs."
+    },
+    {
+     "s": 1,
+     "text": "Quiero un trozo pequeño, por favor.",
+     "en": "I want a small piece, please."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué prueba Paola?",
+     "qEn": "What does Paola try?",
+     "options": [
+      "Un chocolate",
+      "Un queso",
+      "Un vino"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cuántos años tiene el queso?",
+     "qEn": "How old is the cheese?",
+     "options": [
+      "Dos años",
+      "Un mes",
+      "Un año"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuánto cuesta?",
+     "qEn": "How much does it cost?",
+     "options": [
+      "Veinte francos",
+      "Diez francos",
+      "Cinco francos"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué quiere Paola?",
+     "qEn": "What does Paola want?",
+     "options": [
+      "Un trozo grande",
+      "Un trozo pequeño",
+      "Dos kilos"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Te gusta el queso?",
+     "qEn": "Do you like cheese?",
+     "model": "Sí, mucho."
+    },
+    {
+     "q": "¿Qué queso comes?",
+     "qEn": "Which cheese do you eat?",
+     "model": "Queso fresco."
+    },
+    {
+     "q": "¿Compras en el mercado?",
+     "qEn": "Do you shop at the market?",
+     "model": "Sí, los sábados."
+    }
+   ],
+   "gaps": "[Quiero] un [trozo] [pequeño], por [favor].",
+   "glossary": [
+    {
+     "word": "queso",
+     "meaning": "comida hecha con leche",
+     "en": "cheese"
+    },
+    {
+     "word": "trozo",
+     "meaning": "parte pequeña",
+     "en": "piece"
+    },
+    {
+     "word": "rico",
+     "meaning": "que sabe bien",
+     "en": "tasty"
+    }
+   ]
+  },
+  {
+   "id": "tesino",
+   "title": "Un helado en el lago",
+   "place": "Un café en Lugano",
+   "context": "Carlos, de Honduras, pide un helado. Giulia es camarera.",
+   "contextEn": "Carlos, from Honduras, orders an ice cream. Giulia is a waitress.",
+   "speakers": [
+    {
+     "name": "Giulia",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    },
+    {
+     "name": "Carlos",
+     "country": "Honduras",
+     "voice": "es-HN-CarlosNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Buenas tardes. ¿Qué quieres?",
+     "en": "Good afternoon. What would you like?"
+    },
+    {
+     "s": 1,
+     "text": "Un helado de limón, por favor.",
+     "en": "A lemon ice cream, please."
+    },
+    {
+     "s": 0,
+     "text": "¿Aquí o para llevar?",
+     "en": "Here or to take away?"
+    },
+    {
+     "s": 1,
+     "text": "Aquí, en la mesa del lago.",
+     "en": "Here, at the table by the lake."
+    },
+    {
+     "s": 0,
+     "text": "Muy bien. Hoy hace mucho calor.",
+     "en": "Very good. It is very hot today."
+    },
+    {
+     "s": 1,
+     "text": "Sí. ¡Y el lago es muy bonito!",
+     "en": "Yes. And the lake is very pretty!"
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué pide Carlos?",
+     "qEn": "What does Carlos order?",
+     "options": [
+      "Un café",
+      "Un té",
+      "Un helado"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿De qué sabor es?",
+     "qEn": "What flavour is it?",
+     "options": [
+      "De limón",
+      "De chocolate",
+      "De fresa"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Dónde come Carlos?",
+     "qEn": "Where does Carlos eat?",
+     "options": [
+      "En casa",
+      "En la mesa del lago",
+      "En el tren"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué tiempo hace?",
+     "qEn": "What is the weather like?",
+     "options": [
+      "Hace frío",
+      "Llueve",
+      "Hace calor"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Te gusta el helado?",
+     "qEn": "Do you like ice cream?",
+     "model": "Sí, de chocolate."
+    },
+    {
+     "q": "¿Hace calor en tu ciudad?",
+     "qEn": "Is it hot in your city?",
+     "model": "Sí, en verano."
+    },
+    {
+     "q": "¿Hay un lago cerca?",
+     "qEn": "Is there a lake nearby?",
+     "model": "No, hay un río."
+    }
+   ],
+   "gaps": "[Un] [helado] de [limón], por [favor].",
+   "glossary": [
+    {
+     "word": "helado",
+     "meaning": "postre frío",
+     "en": "ice cream"
+    },
+    {
+     "word": "lago",
+     "meaning": "agua grande entre montañas",
+     "en": "lake"
+    },
+    {
+     "word": "calor",
+     "meaning": "temperatura alta",
+     "en": "heat"
+    }
+   ]
+  },
+  {
+   "id": "alpes",
+   "title": "Un perro muy grande",
+   "place": "El paso del Gran San Bernardo",
+   "context": "Mario, de Paraguay, conoce a Barry. Chantal cuida a los perros.",
+   "contextEn": "Mario, from Paraguay, meets Barry. Chantal looks after the dogs.",
+   "speakers": [
+    {
+     "name": "Chantal",
+     "country": "España",
+     "voice": "es-ES-ElviraNeural"
+    },
+    {
+     "name": "Mario",
+     "country": "Paraguay",
+     "voice": "es-PY-MarioNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Hola. Este es Barry. Es un perro de San Bernardo.",
+     "en": "Hello. This is Barry. He is a St Bernard dog."
+    },
+    {
+     "s": 1,
+     "text": "¡Qué grande! ¿Cuánto pesa?",
+     "en": "He is so big! How much does he weigh?"
+    },
+    {
+     "s": 0,
+     "text": "Pesa setenta kilos.",
+     "en": "He weighs seventy kilos."
+    },
+    {
+     "s": 1,
+     "text": "¿Puedo tocarlo?",
+     "en": "Can I touch him?"
+    },
+    {
+     "s": 0,
+     "text": "Sí, es muy tranquilo. Le gusta la nieve.",
+     "en": "Yes, he is very calm. He likes the snow."
+    },
+    {
+     "s": 1,
+     "text": "¡Hola, Barry! ¡Eres muy bonito!",
+     "en": "Hello, Barry! You are very handsome!"
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué es Barry?",
+     "qEn": "What is Barry?",
+     "options": [
+      "Un perro",
+      "Un gato",
+      "Un caballo"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cuánto pesa?",
+     "qEn": "How much does he weigh?",
+     "options": [
+      "Siete kilos",
+      "Diecisiete kilos",
+      "Setenta kilos"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cómo es Barry?",
+     "qEn": "What is Barry like?",
+     "options": [
+      "Nervioso",
+      "Tranquilo",
+      "Pequeño"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué le gusta a Barry?",
+     "qEn": "What does Barry like?",
+     "options": [
+      "El agua",
+      "El sol",
+      "La nieve"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Tienes perro?",
+     "qEn": "Do you have a dog?",
+     "model": "Sí, uno pequeño."
+    },
+    {
+     "q": "¿Te gusta la nieve?",
+     "qEn": "Do you like snow?",
+     "model": "No, prefiero el sol."
+    },
+    {
+     "q": "¿Qué animal te gusta?",
+     "qEn": "Which animal do you like?",
+     "model": "Los gatos."
+    }
+   ],
+   "gaps": "[Sí], es muy [tranquilo]. Le [gusta] la [nieve].",
+   "glossary": [
+    {
+     "word": "perro",
+     "meaning": "animal de casa que ladra",
+     "en": "dog"
+    },
+    {
+     "word": "pesa",
+     "meaning": "tiene un peso de",
+     "en": "weighs"
+    },
+    {
+     "word": "nieve",
+     "meaning": "agua blanca y fría del invierno",
+     "en": "snow"
+    }
+   ]
+  }
+ ]
+}

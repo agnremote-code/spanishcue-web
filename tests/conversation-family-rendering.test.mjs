@@ -20,7 +20,7 @@ test('every shared engine renders accessible level controls and complete selecte
   ['app/choose-conversation/page.tsx',{variant:'starter'},'lets-talk','A1'],
   ['app/preguntas-prohibidas-a2/page.tsx',{initialLevel:'B1'},'preguntas-prohibidas','B1'],
   ['app/reino-unido-en-relieve/Atlas.tsx',{},'reino-unido-en-relieve','B1'],
-  ['app/australia-en-movimiento/page.tsx',{},'australia-en-movimiento','A2'],
+  ['app/australia-en-movimiento/Atlas.tsx',{},'australia-en-movimiento','A2'],
   ['app/estados-unidos-a2-b1/Atlas.tsx',{},'estados-unidos-a2-b1','A2'],
  ]){
   const Component=await component(path);const html=renderToString(React.createElement(Component,props));
@@ -33,7 +33,7 @@ test('every shared engine renders accessible level controls and complete selecte
 
 test('each Australian place control selects and highlights its own question at both levels',async()=>{
  const {readFile}=await import('node:fs/promises');
- const source=await readFile('app/australia-en-movimiento/page.tsx','utf8');
+ const source=await readFile('app/australia-en-movimiento/Atlas.tsx','utf8');
  const r=await build({stdin:{contents:source+'\nexport {CountryExperience,regions};',resolveDir:process.cwd()+'/app/australia-en-movimiento',loader:'tsx'},jsx:'automatic',bundle:true,write:false,format:'cjs',platform:'node',external:['react','next/*'],loader:{'.css':'empty'}});
  let state=[],slot=0;
  const mockedReact={...React,useState:initial=>{const i=slot++;return [i in state?state[i]:typeof initial==='function'?initial():initial,value=>{state[i]=typeof value==='function'?value(state[i]):value}];}};
