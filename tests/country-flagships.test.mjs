@@ -48,7 +48,7 @@ test("México and United States are the two free conversation flagships", () => 
       title: "ESTADOS UNIDOS",
       path: "/estados-unidos-a2-b1",
       level: "A2",
-      levels: ["A2", "B1"],
+      levels: ["A0", "A1", "A2", "B1"],
     },
   );
 });
@@ -104,7 +104,7 @@ test("both maps expose keyboard, mobile and reduced-motion contracts", async () 
   const [mexicoPage, mexicoCss, usaPage, usaCss] = await Promise.all([
     readFile("app/mexico/page.tsx", "utf8"),
     readFile("app/mexico/style.css", "utf8"),
-    readFile("app/estados-unidos-a2-b1/page.tsx", "utf8"),
+    readFile("app/estados-unidos-a2-b1/Atlas.tsx", "utf8"),
     readFile("app/estados-unidos-a2-b1/style.css", "utf8"),
   ]);
   for (const source of [mexicoPage, usaPage]) {

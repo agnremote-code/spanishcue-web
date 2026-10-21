@@ -213,6 +213,12 @@ const OLD_137_SUBTITLE = 'Un banco reutilizable de elecciones que se convierten 
 const NEW_137_SUBTITLE = 'Un banco reutilizable de elecciones que se convierten en razones, dilemas con dos condiciones que se suman, comparaciones, rankings y una vida ideal que hay que defender';
 const OLD_137_EXPLANATION = 'Banco de 48 elecciones filtrables, con seis rondas de dificultad creciente: decisión instantánea, justificación, doble cambio, descarte, ranking y conversación libre sobre una vida ideal.';
 const NEW_137_EXPLANATION = 'Banco de 48 elecciones filtrables, con seis rondas de dificultad creciente: decisión instantánea, justificación, dilema con dos condiciones acumuladas, descarte, ranking y conversación libre sobre una vida ideal.';
+const OLD_36_LINE = "  {id:36,level:\"A2\",levels:[\"A2\",\"B1\"],displayLevel:\"A2–B1\",category:\"Conversación\",countrySequence:2,searchAliases:[\"USA\",\"United States\",\"US\",\"EEUU\",\"Estados Unidos\"],title:\"ESTADOS UNIDOS\",subtitle:\"50 estados. 50 formas de vivir.\",duration:\"90+ min\",tag:\"50 estados · 300 preguntas A2/B1\",special:true,path:\"/estados-unidos-a2-b1\",goals:[\"Responder preguntas A2 desde la experiencia propia\",\"Comparar estados y formas de vivir sin necesitar conocimientos previos\",\"Extender una respuesta con una pregunta B1 opcional\"],warmup:\"Elige un estado del mapa y explica qué tipo de vida imaginas allí.\",explanation:\"Un atlas interactivo basado en fronteras estatales reales. Los 50 estados —con Alaska y Hawái en recuadros— abren preguntas A2, comparaciones personales, modos de decisión y un cierre para diseñar tus Estados Unidos.\",practice:[],speaking:[],homework:\"Diseña tus Estados Unidos: un estado para vivir, trabajar, viajar, comer y retirarte.\"},";
+const NEW_36_LINE = "  {id:36,level:\"A2\",levels:[\"A0\",\"A1\",\"A2\",\"B1\"],displayLevel:\"A0–B1\",category:\"Conversación\",countrySequence:2,searchAliases:[\"USA\",\"United States\",\"US\",\"EEUU\",\"Estados Unidos\"],title:\"ESTADOS UNIDOS\",subtitle:\"Un viaje en 3D por seis estados.\",duration:\"90+ min\",tag:\"3D · 6 estados · 30 lugares · A0–B1\",special:true,path:\"/estados-unidos-a2-b1\",goals:[\"Conversar con personajes en treinta lugares reales de Estados Unidos\",\"Decidir, reaccionar a sorpresas y responder preguntas de tu nivel, de A0 a B1\",\"Comprender una escucha por estado y comparar formas de vivir\"],warmup:\"Elige un estado del mapa y explica qué tipo de vida imaginas allí.\",explanation:\"Un mundo 3D con Florida, Nueva York, California, Texas, Hawái y Colorado. En cada estado caminas por cinco lugares y hablas con su gente: una situación, una decisión, una sorpresa y preguntas con ayuda, en A0, A1, A2 o B1. El atlas de los 50 estados sigue disponible.\",practice:[],speaking:[],homework:\"Diseña tus Estados Unidos: un estado para vivir, trabajar, viajar, comer y retirarte.\"},";
+const OLD_36_GOALS = ["Responder preguntas A2 desde la experiencia propia","Comparar estados y formas de vivir sin necesitar conocimientos previos","Extender una respuesta con una pregunta B1 opcional"];
+const NEW_36_GOALS = ["Conversar con personajes en treinta lugares reales de Estados Unidos","Decidir, reaccionar a sorpresas y responder preguntas de tu nivel, de A0 a B1","Comprender una escucha por estado y comparar formas de vivir"];
+const OLD_36_EXPLANATION = "Un atlas interactivo basado en fronteras estatales reales. Los 50 estados —con Alaska y Hawái en recuadros— abren preguntas A2, comparaciones personales, modos de decisión y un cierre para diseñar tus Estados Unidos.";
+const NEW_36_EXPLANATION = "Un mundo 3D con Florida, Nueva York, California, Texas, Hawái y Colorado. En cada estado caminas por cinco lugares y hablas con su gente: una situación, una decisión, una sorpresa y preguntas con ayuda, en A0, A1, A2 o B1. El atlas de los 50 estados sigue disponible.";
 // 2026-10-15: every grammar class got its own teacher-style thumbnail (scripts/grammar-thumbnails)
 // and the first class (239) moved from the A0 filter to A1. Display-only: before comparing
 // against the historical ledger, the previous shared preview is restored.
@@ -228,6 +234,29 @@ const repairs = [
     edits: {
       'app/lesson-catalog.ts': [[`subtitle:"${NEW_137_SUBTITLE}"`, `subtitle:"${OLD_137_SUBTITLE}"`], [`explanation:"${NEW_137_EXPLANATION}"`, `explanation:"${OLD_137_EXPLANATION}"`]],
       'package.json': [['"test:conversation": "node --test tests/uno-o-el-otro-dilemmas.test.mjs ', '"test:conversation": "node --test ']],
+    },
+  },
+  {
+    // 2026-10-21: the free United States flagship became a 3D world (six states, thirty places,
+    // A0–B1; behaviour covered by tests/estados-unidos-3d.test.mjs). The 50-state atlas stays
+    // inside it (?vista=atlas) and the route, ID and FREE access are unchanged.
+    id: 36,
+    path: '/estados-unidos-a2-b1',
+    // Undone first: it is the latest change to the files it shares.
+    latest: true,
+    files: /^(?:app\/estados-unidos-a2-b1\/|app\/mundo-3d\/|tests\/estados-unidos-3d\.test\.mjs$)/,
+    restore: {
+      levels: [['A0', 'A1', 'A2', 'B1'], ['A2', 'B1']],
+      displayLevel: ['A0–B1', 'A2–B1'],
+      subtitle: ['Un viaje en 3D por seis estados.', '50 estados. 50 formas de vivir.'],
+      tag: ['3D · 6 estados · 30 lugares · A0–B1', '50 estados · 300 preguntas A2/B1'],
+      goals: [NEW_36_GOALS, OLD_36_GOALS],
+      explanation: [NEW_36_EXPLANATION, OLD_36_EXPLANATION],
+    },
+    edits: {
+      'app/lesson-catalog.ts': [[NEW_36_LINE, OLD_36_LINE]],
+      'package.json': [[' tests/country-atlas-ui.test.mjs tests/estados-unidos-3d.test.mjs"', ' tests/country-atlas-ui.test.mjs"']],
+      'tests/level-cleanup.test.mjs': [["[36,223,226,227,228,229,236,237,238,240].includes(lesson.id)", "[223,226,227,228,229,236,237,238,240].includes(lesson.id)"], ["assert.equal(lessons.filter(l=>l.levels?.includes('A0')).length,10);", "assert.equal(lessons.filter(l=>l.levels?.includes('A0')).length,9);"], ["assert.equal(a1Lessons.length, 70);", "assert.equal(a1Lessons.length, 69);"], ["const authored=relative.startsWith('app/estados-unidos-a2-b1/')||relative.startsWith('app/mundo-3d/')||relative.startsWith('app/the-sound-map/')||", "const authored=relative.startsWith('app/the-sound-map/')||"]],
     },
   },
 ];
@@ -269,6 +298,14 @@ export function isApprovedAdditionPath(path) {
 }
 
 export function withoutApprovedAdditions(path, bytes) {
+  for (const repair of repairs.filter(item => item.latest && item.edits[path])) {
+    let text = bytes.toString('utf8');
+    for (const [after, before] of repair.edits[path]) {
+      assert.equal(text.split(after).length - 1, 1, `one ${repair.id} repair edit in ${path}`);
+      text = text.replace(after, before);
+    }
+    bytes = Buffer.from(text);
+  }
   // Undo the latest additive lessons in reverse order before the grammar snapshot.
   for (const addition of additions.filter(item=>item.id===300||item.id===241||item.id===240||item.id===239||item.id===238||item.id===237||item.id===236)) {
     const latestSteps=addition.edits[path]||[];
@@ -281,7 +318,7 @@ export function withoutApprovedAdditions(path, bytes) {
     bytes=Buffer.from(latest);
   }
   bytes=beforeGrammarBytes(path,bytes);
-  const steps = [...additions.filter(item=>item.id!==300&&item.id!==236&&item.id!==237&&item.id!==238&&item.id!==239&&item.id!==240&&item.id!==241), ...repairs].flatMap(item => item.edits[path] || []);
+  const steps = [...additions.filter(item=>item.id!==300&&item.id!==236&&item.id!==237&&item.id!==238&&item.id!==239&&item.id!==240&&item.id!==241), ...repairs.filter(item => !item.latest)].flatMap(item => item.edits[path] || []);
   if (!steps.length) return bytes;
   let text = bytes.toString('utf8');
   for (const step of steps) {
@@ -318,7 +355,7 @@ export function withoutApprovedLessons(lessons) {
     if (!repair) return lesson;
     const restored = {...lesson};
     for (const [field, [now, before]] of Object.entries(repair.restore)) {
-      assert.equal(lesson[field], now, `approved ${field} for lesson ${lesson.id}`);
+      assert.deepEqual(lesson[field], now, `approved ${field} for lesson ${lesson.id}`);
       restored[field] = before;
     }
     return restored;

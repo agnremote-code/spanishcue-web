@@ -10716,6 +10716,174 @@
       "text": "Buenos días y bienvenidos a «Cuentas claras». Ayer el panel ciudadano debatió mi última columna y, como varios oyentes me han escrito, quiero precisar lo que dije y lo que no dije. [[No dije que|teal]] la tarifa por tramos sea la solución. Dije que [[todo apunta a que|blue]] reduce el consumo sin castigar a quien gasta poco, que no es lo mismo. También escribí, y lo mantengo, que [[no es descartable que|blue]] perjudique a los hogares numerosos si el tramo se calcula por vivienda; [[de ahí que|violet]] proponga calcularlo por persona. Por otra parte, muchos me preguntan por las fugas. La asociación vecinal tiene razón en lo esencial: perder casi cuatro de cada diez litros es difícil de justificar. [[Si bien|violet]] renovar la red llevará años, nada impide empezar ya, [[máxime cuando|violet]] el dinero de los tramos altos podría destinarse precisamente a eso. Sobre el supuesto aplazamiento de las obras: [[según la prensa local|teal]], se [[habrían retrasado|blue]] dos veces, algo que la empresa niega. Yo no tengo datos para confirmarlo, así que no lo voy a afirmar. [[Con todo|violet]], hay algo en lo que coinciden todas las fuentes: este verano no nos queda más remedio que ahorrar. Que nadie se llame a engaño: [[es probable que|blue]], sin ese ahorro, en septiembre haya cortes. Hasta la semana que viene.",
       "category": "neutral-context",
       "reason": "Pretérito en primera persona (yo) en el audio y su transcripción, no voseo."
+    },
+    {
+      "path": "app/estados-unidos-a2-b1/mundo/contenido/california.mjs",
+      "text": "Mis padres son de Guadalajara, pero yo nací aquí, en Los Ángeles. Aprendí a patinar a los cuarenta años, ¡imagínate! Nunca es tarde. ¿Qué quieres aprender tú?",
+      "reason": "First-person preterite in a story, reflection, or explicit past-tense example; not a voseo command.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/estados-unidos-a2-b1/mundo/contenido/california.mjs",
+      "text": "Normalmente… porque… La última vez que pedí ayuda…",
+      "reason": "First-person preterite in a story, reflection, or explicit past-tense example; not a voseo command.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/estados-unidos-a2-b1/mundo/contenido/california.mjs",
+      "text": "Una vez tuve… y me puse tan nervioso que… Aprendí que…",
+      "reason": "First-person preterite in a story, reflection, or explicit past-tense example; not a voseo command.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/estados-unidos-a2-b1/mundo/contenido/colorado.mjs",
+      "text": "Cuando abrí, este pueblo estaba medio vacío. Mis clientes eran mineros jubilados y algún estudiante. Ahora vienen millonarios de Texas a comprar casas que usan dos semanas al año. Ayer un cliente me dijo que la cafetería «le daba vida al pueblo». Ojalá eso pagara el alquiler. ¿Tú qué harías?",
+      "reason": "First-person preterite in a story, reflection, or explicit past-tense example; not a voseo command.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/estados-unidos-a2-b1/mundo/contenido/colorado.mjs",
+      "text": "Mi mejor barista dormía en su coche a quince grados bajo cero. Lo descubrí por casualidad. Al mismo tiempo, en mi calle hay seis casas vacías once meses al año. A los dueños de esas casas los entiendo: es su propiedad y el alquiler turístico paga sus deudas. Pero algo no funciona. ¿Dónde pondrías tú el límite?",
+      "reason": "First-person preterite in a story, reflection, or explicit past-tense example; not a voseo command.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/estados-unidos-a2-b1/mundo/contenido/colorado.mjs",
+      "text": "Hace tres años perdí a un amigo en una avalancha, justo en esa zona. Él también decía: «No pasa nada, sé lo que hago». Por eso no cedo nunca. Pero este cliente paga dos mil dólares por semana y mi jefa no está contenta. ¿Tú cederías?",
+      "reason": "First-person preterite in a story, reflection, or explicit past-tense example; not a voseo command.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/estados-unidos-a2-b1/mundo/contenido/colorado.mjs",
+      "text": "Sí, aprendí en… / No, pero me gustaría aprender.",
+      "reason": "First-person preterite in a story, reflection, or explicit past-tense example; not a voseo command.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/estados-unidos-a2-b1/mundo/contenido/florida.mjs",
+      "text": "No me lo puedo creer. En diez años de viajes nunca perdí nada. Y ahora, el último día… Tú alguna vez tuviste un problema así de viaje, ¿no? Cuéntame que no soy la única.",
+      "reason": "First-person preterite in a story, reflection, or explicit past-tense example; not a voseo command.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/estados-unidos-a2-b1/mundo/contenido/florida.mjs",
+      "text": "Una vez, cuando estaba en…, perdí / se canceló… Al final…",
+      "reason": "First-person preterite in a story, reflection, or explicit past-tense example; not a voseo command.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/estados-unidos-a2-b1/mundo/contenido/florida.mjs",
+      "text": "Una vecina mayor se acerca y le dice: «Gracias a tus murales vendí mi casa por el triple. Pero ahora mis nietos no pueden vivir cerca de mí». Nadie sabe qué contestar.",
+      "reason": "First-person preterite in a story, reflection, or explicit past-tense example; not a voseo command.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/estados-unidos-a2-b1/mundo/contenido/florida.mjs",
+      "text": "Hace unos años tuve que elegir entre… Al final elegí… y hoy pienso que…",
+      "reason": "First-person preterite in a story, reflection, or explicit past-tense example; not a voseo command.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/estados-unidos-a2-b1/mundo/contenido/hawai.mjs",
+      "text": "Sí, aprendí a los… años. / No, aprendí de adulto.",
+      "reason": "First-person preterite in a story, reflection, or explicit past-tense example; not a voseo command.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/estados-unidos-a2-b1/mundo/contenido/hawai.mjs",
+      "text": "La última vez que competí aquí me caí de una ola enorme y me rompí dos vértebras. Estuve tres meses sin poder caminar bien. Al principio estaba furioso; después empecé a enseñar y descubrí que me gustaba más. ¿Alguna vez algo malo te llevó a algo bueno?",
+      "reason": "First-person preterite in a story, reflection, or explicit past-tense example; not a voseo command.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/estados-unidos-a2-b1/mundo/contenido/hawai.mjs",
+      "text": "Aprendí a… / Me enseñaron que…",
+      "reason": "First-person preterite in a story, reflection, or explicit past-tense example; not a voseo command.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/estados-unidos-a2-b1/mundo/contenido/hawai.mjs",
+      "text": "Sí, subí… / No, nunca subí…",
+      "reason": "First-person preterite in a story, reflection, or explicit past-tense example; not a voseo command.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/estados-unidos-a2-b1/mundo/contenido/hawai.mjs",
+      "text": "Vi que… y decidí… / No hice nada porque…",
+      "reason": "First-person preterite in a story, reflection, or explicit past-tense example; not a voseo command.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/estados-unidos-a2-b1/mundo/contenido/nueva-york.mjs",
+      "text": "Una vez perdí… porque estaba… Al final lo encontré en… / Nunca lo encontré.",
+      "reason": "First-person preterite in a story, reflection, or explicit past-tense example; not a voseo command.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/estados-unidos-a2-b1/mundo/contenido/texas.mjs",
+      "text": "Un turista pide salsa de tomate para el brisket. Todo el restaurante se queda en silencio. Lorena respira hondo.",
+      "reason": "First-person preterite in a story, reflection, or explicit past-tense example; not a voseo command.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/estados-unidos-a2-b1/mundo/contenido/texas.mjs",
+      "text": "la salsa de tomate",
+      "reason": "First-person preterite in a story, reflection, or explicit past-tense example; not a voseo command.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/estados-unidos-a2-b1/mundo/contenido/texas.mjs",
+      "text": "Los tres dicen que no. Uno se pone rojo como un tomate.",
+      "reason": "First-person preterite in a story, reflection, or explicit past-tense example; not a voseo command.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/estados-unidos-a2-b1/mundo/contenido/texas.mjs",
+      "text": "Una vez, en…, alguien dijo que… Yo me sentí… y después…",
+      "reason": "First-person preterite in a story, reflection, or explicit past-tense example; not a voseo command.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/estados-unidos-a2-b1/mundo/contenido/texas.mjs",
+      "text": "Sí, siempre leo… / Una vez escribí una opinión porque…",
+      "reason": "First-person preterite in a story, reflection, or explicit past-tense example; not a voseo command.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/estados-unidos-a2-b1/mundo/contenido/texas.mjs",
+      "text": "Hace diez años toqué en una boda y nadie me escuchaba: todos miraban el móvil. Esa noche casi dejé la música. Al día siguiente escribí mi mejor canción. ¿Tú alguna vez estuviste a punto de abandonar algo y al final seguiste?",
+      "reason": "First-person preterite in a story, reflection, or explicit past-tense example; not a voseo command.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/estados-unidos-a2-b1/mundo/contenido/texas.mjs",
+      "text": "Sí, un día estaba… y escuché… Me sentí…",
+      "reason": "First-person preterite in a story, reflection, or explicit past-tense example; not a voseo command.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/estados-unidos-a2-b1/mundo/contenido/texas.mjs",
+      "text": "Con el dinero de la subasta pensaba pagar parte de la universidad. Ese era el plan. Pero anoche dormí en el pabellón, al lado de ella. ¿Tú alguna vez cambiaste de planes porque te encariñaste con algo o con alguien?",
+      "reason": "First-person preterite in a story, reflection, or explicit past-tense example; not a voseo command.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/estados-unidos-a2-b1/mundo/contenido/texas.mjs",
+      "text": "Los dos tienen parte de razón, y eso es lo que más me cuesta. Aprendí muchísimo con Daisy. Pero también aprendí a no ponerle nombre a la próxima. ¿Eso es madurar o es endurecerse?",
+      "reason": "First-person preterite in a story, reflection, or explicit past-tense example; not a voseo command.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/estados-unidos-a2-b1/mundo/contenido/texas.mjs",
+      "text": "Sí, cuando llegué a… la gente… y yo me sentí…",
+      "reason": "First-person preterite in a story, reflection, or explicit past-tense example; not a voseo command.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/mundo-3d/frames.ts",
+      "text": "Respondí con una frase completa.",
+      "reason": "First-person preterite in a story, reflection, or explicit past-tense example; not a voseo command.",
+      "category": "neutral-context"
     }
   ]
 }

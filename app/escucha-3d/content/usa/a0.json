@@ -1,0 +1,734 @@
+{
+ "game": "usa",
+ "level": "A0",
+ "items": [
+  {
+   "id": "florida",
+   "title": "En la playa de Miami",
+   "place": "La playa",
+   "context": "Una socorrista habla con Diego en la playa.",
+   "contextEn": "A lifeguard talks with Diego on the beach.",
+   "speakers": [
+    {
+     "name": "Marisol",
+     "country": "Cuba",
+     "voice": "es-CU-BelkysNeural"
+    },
+    {
+     "name": "Diego",
+     "country": "México",
+     "voice": "es-MX-JorgeNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "¡Hola! ¿Nadas hoy?",
+     "en": "Hi! Are you swimming today?"
+    },
+    {
+     "s": 1,
+     "text": "Sí. ¿El agua está fría?",
+     "en": "Yes. Is the water cold?"
+    },
+    {
+     "s": 0,
+     "text": "No, está caliente. Pero hay una bandera amarilla. Hay olas grandes.",
+     "en": "No, it is warm. But there is a yellow flag. There are big waves."
+    },
+    {
+     "s": 1,
+     "text": "Entonces nado cerca, con mi hermana.",
+     "en": "Then I swim close, with my sister."
+    },
+    {
+     "s": 0,
+     "text": "Muy bien. Y usa protector solar.",
+     "en": "Very good. And use sunscreen."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Dónde están?",
+     "qEn": "Where are they?",
+     "options": [
+      "En la playa",
+      "En un hotel",
+      "En un café"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cómo está el agua?",
+     "qEn": "How is the water?",
+     "options": [
+      "Fría",
+      "Caliente",
+      "Sucia"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿De qué color es la bandera?",
+     "qEn": "What color is the flag?",
+     "options": [
+      "Roja",
+      "Verde",
+      "Amarilla"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Con quién nada Diego?",
+     "qEn": "Who does Diego swim with?",
+     "options": [
+      "Con su hermana",
+      "Con su padre",
+      "Solo"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Nadas en el mar?",
+     "qEn": "Do you swim in the sea?",
+     "model": "Sí, nado en el mar en verano."
+    },
+    {
+     "q": "¿Te gusta el agua fría o caliente?",
+     "qEn": "Do you like cold or warm water?",
+     "model": "Me gusta el agua caliente."
+    },
+    {
+     "q": "¿Con quién vas a la playa?",
+     "qEn": "Who do you go to the beach with?",
+     "model": "Voy a la playa con mi familia."
+    }
+   ],
+   "gaps": "No, está [caliente]. Pero hay una [bandera] amarilla. Hay [olas] [grandes].",
+   "glossary": [
+    {
+     "word": "olas",
+     "meaning": "agua del mar que sube y baja",
+     "en": "waves"
+    },
+    {
+     "word": "bandera",
+     "meaning": "tela de color con un mensaje",
+     "en": "flag"
+    },
+    {
+     "word": "protector solar",
+     "meaning": "crema para el sol",
+     "en": "sunscreen"
+    }
+   ]
+  },
+  {
+   "id": "nueva-york",
+   "title": "¿Qué metro tomo?",
+   "place": "El metro",
+   "context": "Carlos busca el metro correcto y pregunta a Ana.",
+   "contextEn": "Carlos looks for the right subway and asks Ana.",
+   "speakers": [
+    {
+     "name": "Carlos",
+     "country": "Puerto Rico",
+     "voice": "es-PR-VictorNeural"
+    },
+    {
+     "name": "Ana",
+     "country": "República Dominicana",
+     "voice": "es-DO-RamonaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Perdón, ¿este metro va al parque?",
+     "en": "Excuse me, does this subway go to the park?"
+    },
+    {
+     "s": 1,
+     "text": "No, este va al sur. Tu metro es el verde.",
+     "en": "No, this one goes south. Your subway is the green one."
+    },
+    {
+     "s": 0,
+     "text": "¿El verde? ¿Dónde está?",
+     "en": "The green one? Where is it?"
+    },
+    {
+     "s": 1,
+     "text": "Allí, a la derecha. Es rápido. Diez minutos.",
+     "en": "Over there, on the right. It is fast. Ten minutes."
+    },
+    {
+     "s": 0,
+     "text": "¡Muchas gracias!",
+     "en": "Thank you very much!"
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Adónde va Carlos?",
+     "qEn": "Where is Carlos going?",
+     "options": [
+      "Al hospital",
+      "Al parque",
+      "A la playa"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué metro necesita?",
+     "qEn": "Which subway does he need?",
+     "options": [
+      "El rojo",
+      "El azul",
+      "El verde"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Dónde está su metro?",
+     "qEn": "Where is his subway?",
+     "options": [
+      "A la derecha",
+      "A la izquierda",
+      "Arriba"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cuántos minutos tarda?",
+     "qEn": "How many minutes does it take?",
+     "options": [
+      "Dos",
+      "Diez",
+      "Veinte"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Tomas el metro?",
+     "qEn": "Do you take the subway?",
+     "model": "Sí, tomo el metro todos los días."
+    },
+    {
+     "q": "¿Hay un parque cerca de tu casa?",
+     "qEn": "Is there a park near your house?",
+     "model": "Sí, hay un parque muy bonito."
+    },
+    {
+     "q": "¿Preguntas cuando no sabes el camino?",
+     "qEn": "Do you ask when you don’t know the way?",
+     "model": "Sí, pregunto a la gente."
+    }
+   ],
+   "gaps": "No, [este] va al [sur]. Tu [metro] es el [verde].",
+   "glossary": [
+    {
+     "word": "metro",
+     "meaning": "tren que va debajo de la ciudad",
+     "en": "subway"
+    },
+    {
+     "word": "derecha",
+     "meaning": "el lado contrario a la izquierda",
+     "en": "right"
+    },
+    {
+     "word": "rápido",
+     "meaning": "que tarda poco",
+     "en": "fast"
+    }
+   ]
+  },
+  {
+   "id": "california",
+   "title": "Dos tacos, por favor",
+   "place": "El camión de tacos",
+   "context": "Emily compra tacos en un camión de comida.",
+   "contextEn": "Emily buys tacos at a food truck.",
+   "speakers": [
+    {
+     "name": "Rigo",
+     "country": "México",
+     "voice": "es-MX-JorgeNeural"
+    },
+    {
+     "name": "Emily",
+     "country": "Estados Unidos",
+     "voice": "es-US-PalomaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Hola. Quiero dos tacos, por favor.",
+     "en": "Hi. I want two tacos, please."
+    },
+    {
+     "s": 0,
+     "text": "¿De pollo o de carne?",
+     "en": "Chicken or beef?"
+    },
+    {
+     "s": 1,
+     "text": "Uno de pollo y uno de carne. ¿Son picantes?",
+     "en": "One chicken and one beef. Are they spicy?"
+    },
+    {
+     "s": 0,
+     "text": "Un poco. ¿Quieres agua?",
+     "en": "A little. Do you want water?"
+    },
+    {
+     "s": 1,
+     "text": "Sí, una botella de agua. ¿Cuánto es?",
+     "en": "Yes, a bottle of water. How much is it?"
+    },
+    {
+     "s": 0,
+     "text": "Son ocho dólares.",
+     "en": "It is eight dollars."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué quiere Emily?",
+     "qEn": "What does Emily want?",
+     "options": [
+      "Una pizza",
+      "Un café",
+      "Dos tacos"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Los tacos son picantes?",
+     "qEn": "Are the tacos spicy?",
+     "options": [
+      "Un poco",
+      "Mucho",
+      "Nada"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué bebe Emily?",
+     "qEn": "What does Emily drink?",
+     "options": [
+      "Jugo",
+      "Agua",
+      "Café"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cuánto paga?",
+     "qEn": "How much does she pay?",
+     "options": [
+      "Dos dólares",
+      "Diez dólares",
+      "Ocho dólares"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Te gusta la comida picante?",
+     "qEn": "Do you like spicy food?",
+     "model": "Sí, me gusta un poco picante."
+    },
+    {
+     "q": "¿Comes tacos?",
+     "qEn": "Do you eat tacos?",
+     "model": "Sí, como tacos los viernes."
+    },
+    {
+     "q": "¿Qué comes en la calle?",
+     "qEn": "What do you eat on the street?",
+     "model": "Como pizza o helado."
+    }
+   ],
+   "gaps": "Uno de [pollo] y [uno] de [carne]. ¿Son [picantes]?",
+   "glossary": [
+    {
+     "word": "picantes",
+     "meaning": "con mucho sabor fuerte, como el chile",
+     "en": "spicy"
+    },
+    {
+     "word": "botella",
+     "meaning": "recipiente para el agua",
+     "en": "bottle"
+    },
+    {
+     "word": "dólares",
+     "meaning": "el dinero de Estados Unidos",
+     "en": "dollars"
+    }
+   ]
+  },
+  {
+   "id": "texas",
+   "title": "Una canción para mamá",
+   "place": "El bar con música",
+   "context": "Lupe saluda al público antes de cantar.",
+   "contextEn": "Lupe greets the audience before she sings.",
+   "speakers": [
+    {
+     "name": "Lupe",
+     "country": "Guatemala",
+     "voice": "es-GT-MartaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "¡Hola, Austin! Me llamo Lupe. Soy de Guatemala y vivo en Texas.",
+     "en": "Hello, Austin! My name is Lupe. I am from Guatemala and I live in Texas."
+    },
+    {
+     "s": 0,
+     "text": "Hoy canto tres canciones: una en inglés y dos en español.",
+     "en": "Today I sing three songs: one in English and two in Spanish."
+    },
+    {
+     "s": 0,
+     "text": "La última canción es para mi madre. ¿Bailan conmigo?",
+     "en": "The last song is for my mother. Will you dance with me?"
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Quién habla?",
+     "qEn": "Who is speaking?",
+     "options": [
+      "Una cantante",
+      "Una profesora",
+      "Una camarera"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿De dónde es Lupe?",
+     "qEn": "Where is Lupe from?",
+     "options": [
+      "De México",
+      "De Guatemala",
+      "De Texas"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cuántas canciones canta en español?",
+     "qEn": "How many songs does she sing in Spanish?",
+     "options": [
+      "Tres",
+      "Una",
+      "Dos"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Para quién es la última canción?",
+     "qEn": "Who is the last song for?",
+     "options": [
+      "Para su madre",
+      "Para su hermano",
+      "Para Austin"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Cantas?",
+     "qEn": "Do you sing?",
+     "model": "Sí, canto en la ducha."
+    },
+    {
+     "q": "¿Qué música te gusta?",
+     "qEn": "What music do you like?",
+     "model": "Me gusta la música latina."
+    },
+    {
+     "q": "¿Bailas en las fiestas?",
+     "qEn": "Do you dance at parties?",
+     "model": "Sí, bailo mucho."
+    }
+   ],
+   "gaps": "Hoy canto [tres] [canciones]: una en [inglés] y dos en [español].",
+   "glossary": [
+    {
+     "word": "canciones",
+     "meaning": "música con palabras",
+     "en": "songs"
+    },
+    {
+     "word": "última",
+     "meaning": "la que está al final",
+     "en": "last"
+    },
+    {
+     "word": "bailan",
+     "meaning": "se mueven con la música",
+     "en": "dance"
+    }
+   ]
+  },
+  {
+   "id": "hawai",
+   "title": "Una piña muy dulce",
+   "place": "El mercado",
+   "context": "Andrés compra fruta en el mercado de Honolulu.",
+   "contextEn": "Andrés buys fruit at the Honolulu market.",
+   "speakers": [
+    {
+     "name": "Valentina",
+     "country": "Colombia",
+     "voice": "es-CO-SalomeNeural"
+    },
+    {
+     "name": "Andrés",
+     "country": "Venezuela",
+     "voice": "es-VE-SebastianNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "¡Buenos días! Hay mango, piña y papaya.",
+     "en": "Good morning! There is mango, pineapple and papaya."
+    },
+    {
+     "s": 1,
+     "text": "¿La piña es dulce?",
+     "en": "Is the pineapple sweet?"
+    },
+    {
+     "s": 0,
+     "text": "Sí, muy dulce. Es de una granja de la isla.",
+     "en": "Yes, very sweet. It is from a farm on the island."
+    },
+    {
+     "s": 1,
+     "text": "Entonces, una piña y dos mangos.",
+     "en": "Then, one pineapple and two mangoes."
+    },
+    {
+     "s": 0,
+     "text": "Son seis dólares. ¡Y un collar de flores de regalo!",
+     "en": "That is six dollars. And a flower necklace as a gift!"
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Dónde están?",
+     "qEn": "Where are they?",
+     "options": [
+      "En un hotel",
+      "En un mercado",
+      "En la playa"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cómo es la piña?",
+     "qEn": "What is the pineapple like?",
+     "options": [
+      "Ácida",
+      "Pequeña",
+      "Muy dulce"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué compra Andrés?",
+     "qEn": "What does Andrés buy?",
+     "options": [
+      "Una piña y dos mangos",
+      "Dos piñas",
+      "Tres papayas"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué recibe de regalo?",
+     "qEn": "What does he get as a gift?",
+     "options": [
+      "Un mango",
+      "Un collar de flores",
+      "Una bolsa"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué fruta te gusta?",
+     "qEn": "What fruit do you like?",
+     "model": "Me gusta el mango."
+    },
+    {
+     "q": "¿Vas al mercado?",
+     "qEn": "Do you go to the market?",
+     "model": "Sí, voy los sábados."
+    },
+    {
+     "q": "¿Te gustan las flores?",
+     "qEn": "Do you like flowers?",
+     "model": "Sí, me gustan las flores rojas."
+    }
+   ],
+   "gaps": "Sí, [muy] [dulce]. Es de una [granja] de la [isla].",
+   "glossary": [
+    {
+     "word": "piña",
+     "meaning": "fruta tropical grande y amarilla por dentro",
+     "en": "pineapple"
+    },
+    {
+     "word": "granja",
+     "meaning": "lugar en el campo con plantas y animales",
+     "en": "farm"
+    },
+    {
+     "word": "collar",
+     "meaning": "adorno para el cuello",
+     "en": "necklace"
+    }
+   ]
+  },
+  {
+   "id": "colorado",
+   "title": "¡Qué frío!",
+   "place": "El pueblo de montaña",
+   "context": "Martín y Camila caminan por un pueblo con nieve.",
+   "contextEn": "Martín and Camila walk through a snowy town.",
+   "speakers": [
+    {
+     "name": "Martín",
+     "country": "Argentina",
+     "voice": "es-AR-TomasNeural"
+    },
+    {
+     "name": "Camila",
+     "country": "Perú",
+     "voice": "es-PE-CamilaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "¡Qué frío! Hay mucha nieve.",
+     "en": "It is so cold! There is a lot of snow."
+    },
+    {
+     "s": 1,
+     "text": "Sí, hoy hace menos diez grados. ¿Tienes guantes?",
+     "en": "Yes, today it is minus ten degrees. Do you have gloves?"
+    },
+    {
+     "s": 0,
+     "text": "No. Tengo un gorro, pero no tengo guantes.",
+     "en": "No. I have a hat, but I don’t have gloves."
+    },
+    {
+     "s": 1,
+     "text": "En la tienda de Hank hay guantes. Es allí, al lado del café.",
+     "en": "There are gloves at Hank’s shop. It is over there, next to the café."
+    },
+    {
+     "s": 0,
+     "text": "¡Perfecto! Primero guantes y después chocolate caliente.",
+     "en": "Perfect! First gloves and then hot chocolate."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué tiempo hace?",
+     "qEn": "What is the weather like?",
+     "options": [
+      "Calor",
+      "Lluvia",
+      "Mucho frío"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué no tiene Martín?",
+     "qEn": "What doesn’t Martín have?",
+     "options": [
+      "Guantes",
+      "Un gorro",
+      "Un abrigo"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Dónde está la tienda?",
+     "qEn": "Where is the shop?",
+     "options": [
+      "Al lado del lago",
+      "Al lado del café",
+      "En el hotel"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué toma Martín después?",
+     "qEn": "What does Martín have afterwards?",
+     "options": [
+      "Té",
+      "Agua",
+      "Chocolate caliente"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Te gusta la nieve?",
+     "qEn": "Do you like snow?",
+     "model": "Sí, me gusta mucho."
+    },
+    {
+     "q": "¿Qué ropa usas en invierno?",
+     "qEn": "What clothes do you wear in winter?",
+     "model": "Uso un abrigo y un gorro."
+    },
+    {
+     "q": "¿Tomas chocolate caliente?",
+     "qEn": "Do you drink hot chocolate?",
+     "model": "Sí, en invierno."
+    }
+   ],
+   "gaps": "No. [Tengo] un [gorro], pero no [tengo] [guantes].",
+   "glossary": [
+    {
+     "word": "nieve",
+     "meaning": "agua blanca y fría que cae del cielo",
+     "en": "snow"
+    },
+    {
+     "word": "guantes",
+     "meaning": "ropa para las manos",
+     "en": "gloves"
+    },
+    {
+     "word": "gorro",
+     "meaning": "ropa para la cabeza",
+     "en": "hat, beanie"
+    }
+   ]
+  }
+ ]
+}

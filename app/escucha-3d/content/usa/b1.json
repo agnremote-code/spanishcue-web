@@ -1,0 +1,631 @@
+{
+ "game": "usa",
+ "level": "B1",
+ "items": [
+  {
+   "id": "florida",
+   "title": "Cuando el mar entra en casa",
+   "place": "La radio de Miami Beach",
+   "context": "En un programa de radio, Andrés habla de las inundaciones en su barrio.",
+   "speakers": [
+    {
+     "name": "Yesenia",
+     "country": "República Dominicana",
+     "voice": "es-DO-RamonaNeural"
+    },
+    {
+     "name": "Andrés",
+     "country": "Colombia",
+     "voice": "es-CO-GonzaloNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Buenas tardes, Miami. Hoy hablamos de las inundaciones en Miami Beach. Andrés, usted vive allí desde hace veinte años, ¿verdad?"
+    },
+    {
+     "s": 1,
+     "text": "Así es. Cuando llegué, el agua solo subía en las tormentas. Ahora, con la marea alta, mi calle se inunda aunque haga sol. El ayuntamiento instaló bombas y levantó algunas calles, pero yo creo que es como poner una curita en una herida grande."
+    },
+    {
+     "s": 0,
+     "text": "Algunos oyentes dicen que lo mejor sería mudarse lejos de la costa."
+    },
+    {
+     "s": 1,
+     "text": "Puede ser, pero ¿quién compraría mi casa? Además, mi familia, mis amigos, mi iglesia... todo está aquí. No me iría a menos que no hubiera otra opción. Lo que pido es que se piense en los barrios pobres, no solo en los hoteles de lujo."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿De qué trata el programa?",
+     "options": [
+      "De las inundaciones",
+      "De los hoteles",
+      "Del turismo"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cuándo se inunda ahora la calle de Andrés?",
+     "options": [
+      "Solo en las tormentas",
+      "Con la marea alta",
+      "Nunca"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué opina de las bombas y las calles levantadas?",
+     "options": [
+      "Que son perfectas",
+      "Que son demasiado caras",
+      "Que no son suficientes"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué pide Andrés?",
+     "options": [
+      "Que se piense en los barrios pobres",
+      "Que construyan más hoteles",
+      "Que le compren la casa"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Te mudarías si tu barrio se inundara a menudo?",
+     "model": "Creo que sí, aunque me costaría mucho dejar a mis vecinos."
+    },
+    {
+     "q": "¿Qué debería hacer una ciudad ante el cambio climático?",
+     "model": "Debería proteger primero a los barrios con menos recursos."
+    },
+    {
+     "q": "¿Qué te ata a tu ciudad?",
+     "model": "Mi familia y mis amigos de toda la vida."
+    }
+   ],
+   "gaps": "El ayuntamiento instaló [bombas] y levantó algunas [calles], pero yo creo que es como poner una [curita] en una [herida] grande.",
+   "glossary": [
+    {
+     "word": "marea alta",
+     "meaning": "cuando el mar sube más de lo normal"
+    },
+    {
+     "word": "curita",
+     "meaning": "tira pequeña para cubrir un corte"
+    },
+    {
+     "word": "oyentes",
+     "meaning": "personas que escuchan la radio"
+    }
+   ]
+  },
+  {
+   "id": "nueva-york",
+   "title": "El trabajo de sus sueños",
+   "place": "La cafetería de barrio",
+   "context": "Valeria duda si aceptar un trabajo en Nueva York y lo habla con Joaquín.",
+   "speakers": [
+    {
+     "name": "Valeria",
+     "country": "Venezuela",
+     "voice": "es-VE-PaolaNeural"
+    },
+    {
+     "name": "Joaquín",
+     "country": "Chile",
+     "voice": "es-CL-LorenzoNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Joaquín, me ofrecieron un trabajo en Nueva York. Es el trabajo de mis sueños, pero tengo miedo."
+    },
+    {
+     "s": 1,
+     "text": "¿Miedo de qué? Si yo fuera tú, ya estaría haciendo las maletas."
+    },
+    {
+     "s": 0,
+     "text": "Es que todos me dicen que la ciudad es carísima, que la gente vive con prisa y que es difícil hacer amigos. Mi prima dice que en dos años no conoció a nadie de verdad."
+    },
+    {
+     "s": 1,
+     "text": "Puede ser, pero tú eres muy sociable. Además, no tiene que ser para siempre. Podrías probar un año y, si no te gusta, volver."
+    },
+    {
+     "s": 0,
+     "text": "Tienes razón. Lo que más me preocupa es dejar a mi abuela. Ella me crio."
+    },
+    {
+     "s": 1,
+     "text": "Pues pregúntale a ella. Seguro que te dice que vayas."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué le ofrecieron a Valeria?",
+     "options": [
+      "Un viaje gratis",
+      "Un trabajo en Nueva York",
+      "Un apartamento"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué haría Joaquín en su lugar?",
+     "options": [
+      "Lo pensaría un año",
+      "Se quedaría",
+      "Aceptaría enseguida"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué dice la prima de Valeria?",
+     "options": [
+      "Que es difícil hacer amigos",
+      "Que la ciudad es barata",
+      "Que la gente es tranquila"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué es lo que más le preocupa a Valeria?",
+     "options": [
+      "El dinero",
+      "Dejar a su abuela",
+      "El idioma"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Aceptarías el trabajo de tus sueños en otro país?",
+     "model": "Sí, aunque me costaría dejar a mi familia."
+    },
+    {
+     "q": "¿Es fácil hacer amigos en una ciudad grande?",
+     "model": "Creo que es más difícil, porque la gente tiene menos tiempo."
+    },
+    {
+     "q": "¿A quién le pides consejo para decisiones importantes?",
+     "model": "A mi hermana mayor, porque siempre me dice la verdad."
+    }
+   ],
+   "gaps": "Podrías [probar] un [año] y, si no te [gusta], [volver].",
+   "glossary": [
+    {
+     "word": "haciendo las maletas",
+     "meaning": "preparando la ropa para un viaje"
+    },
+    {
+     "word": "sociable",
+     "meaning": "que hace amigos con facilidad"
+    },
+    {
+     "word": "me crio",
+     "meaning": "me cuidó y me educó de niña"
+    }
+   ]
+  },
+  {
+   "id": "california",
+   "title": "La casa amarilla",
+   "place": "El barrio del Valle",
+   "context": "Una vecina cuenta su conversación con Don Ernesto, que recibió una oferta por su casa.",
+   "speakers": [
+    {
+     "name": "Inés",
+     "country": "México",
+     "voice": "es-MX-DaliaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Ayer fui a ver a Don Ernesto, el vecino de la casa amarilla. Me contó que una empresa le ofreció casi un millón de dólares por su casa. Quieren tirarla y construir apartamentos de lujo."
+    },
+    {
+     "s": 0,
+     "text": "Él me dijo que con ese dinero podría ayudar a sus nietos con la universidad, pero que esa casa la construyó su padre con sus propias manos. Le pregunté qué pensaba hacer y me respondió que todavía no lo sabía."
+    },
+    {
+     "s": 0,
+     "text": "Yo entiendo las dos partes: el barrio necesita viviendas, pero si todos venden, los que vivimos aquí desde siempre ya no podremos pagar el alquiler. Creo que voy a proponer una reunión de vecinos."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué le ofrecieron a Don Ernesto?",
+     "options": [
+      "Un apartamento nuevo",
+      "Un trabajo",
+      "Casi un millón de dólares"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué quiere hacer la empresa?",
+     "options": [
+      "Construir apartamentos de lujo",
+      "Pintar la casa",
+      "Abrir una tienda"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Quién construyó la casa?",
+     "options": [
+      "Ernesto",
+      "El padre de Ernesto",
+      "Una empresa"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué va a proponer Inés?",
+     "options": [
+      "Comprar la casa",
+      "Mudarse a otro barrio",
+      "Una reunión de vecinos"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Venderías la casa de tu familia por mucho dinero?",
+     "model": "Depende: si mis padres estuvieran de acuerdo, quizás sí."
+    },
+    {
+     "q": "¿Cómo ha cambiado tu barrio en los últimos años?",
+     "model": "Han abierto muchos cafés caros y los alquileres han subido."
+    },
+    {
+     "q": "¿Qué objeto de tu familia nunca venderías?",
+     "model": "El reloj de mi abuelo, porque tiene mucha historia."
+    }
+   ],
+   "gaps": "Quieren [tirarla] y [construir] [apartamentos] de [lujo].",
+   "glossary": [
+    {
+     "word": "tirarla",
+     "meaning": "destruirla, echarla abajo"
+    },
+    {
+     "word": "nietos",
+     "meaning": "hijos de tus hijos"
+    },
+    {
+     "word": "alquiler",
+     "meaning": "dinero que pagas cada mes por vivir en una casa"
+    }
+   ]
+  },
+  {
+   "id": "texas",
+   "title": "Cinco mil empleos",
+   "place": "La calle comercial",
+   "context": "Amanda trae una noticia y Diego no está tan contento como ella.",
+   "speakers": [
+    {
+     "name": "Diego",
+     "country": "Estados Unidos",
+     "voice": "es-US-AlonsoNeural"
+    },
+    {
+     "name": "Amanda",
+     "country": "Puerto Rico",
+     "voice": "es-PR-KarinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Diego, la empresa confirmó que se muda a Austin. ¡Cinco mil empleos! Voy a mandar mi currículum mañana."
+    },
+    {
+     "s": 0,
+     "text": "Me alegro por ti, de verdad. Pero cuando vinieron las otras empresas, los alquileres se duplicaron. Mi vecina, que es maestra, tuvo que irse a vivir a una hora de aquí."
+    },
+    {
+     "s": 1,
+     "text": "Ya, pero sin empresas no hay trabajo. ¿Prefieres que la ciudad se quede igual para siempre?"
+    },
+    {
+     "s": 0,
+     "text": "No digo eso. Digo que las empresas deberían ayudar a construir viviendas que la gente normal pueda pagar. Si traen trabajos, que traigan también soluciones."
+    },
+    {
+     "s": 1,
+     "text": "Eso me parece justo. Oye, ¿y si lo propones en la reunión del ayuntamiento?"
+    },
+    {
+     "s": 0,
+     "text": "Solo si vienes conmigo."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué noticia trae Amanda?",
+     "options": [
+      "Una empresa se muda a Austin",
+      "Diego perdió su trabajo",
+      "Subió la gasolina"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué le pasó a la vecina de Diego?",
+     "options": [
+      "Encontró trabajo",
+      "Tuvo que mudarse lejos",
+      "Compró una casa"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué propone Diego?",
+     "options": [
+      "Que no vengan empresas",
+      "Que bajen los sueldos",
+      "Que las empresas ayuden a construir viviendas"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Con qué condición hablaría Diego en la reunión?",
+     "options": [
+      "Que Amanda vaya con él",
+      "Que le paguen",
+      "Que sea en inglés"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Las grandes empresas mejoran o empeoran una ciudad?",
+     "model": "Traen trabajo, pero también suben los precios."
+    },
+    {
+     "q": "¿Hablarías en una reunión pública?",
+     "model": "Sí, si el tema me importara mucho."
+    },
+    {
+     "q": "¿Qué harías si tu alquiler se duplicara?",
+     "model": "Buscaría compañeros de piso o me mudaría."
+    }
+   ],
+   "gaps": "Digo que las empresas [deberían] ayudar a construir [viviendas] que la gente [normal] pueda [pagar].",
+   "glossary": [
+    {
+     "word": "currículum",
+     "meaning": "documento con tus estudios y trabajos"
+    },
+    {
+     "word": "se duplicaron",
+     "meaning": "se hicieron dos veces más grandes"
+    },
+    {
+     "word": "viviendas",
+     "meaning": "casas o apartamentos para vivir"
+    }
+   ]
+  },
+  {
+   "id": "hawai",
+   "title": "Los efectos del turismo",
+   "place": "El restaurante junto al océano",
+   "context": "Un periodista entrevista a Lucía, dueña de un restaurante en Honolulu, sobre el turismo en la isla.",
+   "speakers": [
+    {
+     "name": "Camilo",
+     "country": "Colombia",
+     "voice": "es-CO-GonzaloNeural"
+    },
+    {
+     "name": "Lucía",
+     "country": "Uruguay",
+     "voice": "es-UY-ValentinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Lucía, usted tiene un restaurante en Honolulu desde hace quince años. ¿Cómo ha cambiado el turismo la isla?"
+    },
+    {
+     "s": 1,
+     "text": "Mucho. Por un lado, el turismo da trabajo a mi familia y a miles de personas. Mi hija trabaja en un hotel y está contenta. Por otro lado, los precios de las casas se dispararon. Mi hermano se fue a Las Vegas porque aquí no podía pagar el alquiler."
+    },
+    {
+     "s": 0,
+     "text": "Hace poco una cadena hotelera quiso comprar su restaurante."
+    },
+    {
+     "s": 1,
+     "text": "Sí, y me ofrecieron mucho dinero. Lo pensé durante semanas. Al final dije que no, pero no juzgo a quien acepta. Lo que me gustaría es que los turistas vinieran con más respeto: que coman en restaurantes locales, que no toquen las tortugas y que entiendan que esto no es un parque temático, es nuestra casa."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuál es el tema de la entrevista?",
+     "options": [
+      "La comida hawaiana",
+      "Los efectos del turismo",
+      "El surf"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Por qué se fue el hermano de Lucía?",
+     "options": [
+      "Encontró trabajo en un casino",
+      "Quería conocer el desierto",
+      "No podía pagar el alquiler"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué respondió Lucía a la cadena hotelera?",
+     "options": [
+      "Que no",
+      "Que sí",
+      "Que lo pensaría un año más"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué les pide a los turistas?",
+     "options": [
+      "Más dinero",
+      "Más respeto",
+      "Que no vengan"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué efectos positivos y negativos tiene el turismo en tu país?",
+     "model": "Trae dinero, pero en algunos barrios ya no vive nadie del lugar."
+    },
+    {
+     "q": "¿Cómo se puede viajar con más respeto?",
+     "model": "Comiendo en lugares locales y aprendiendo un poco del idioma."
+    },
+    {
+     "q": "¿Venderías tu negocio a una gran empresa?",
+     "model": "Depende del precio, pero me costaría mucho."
+    }
+   ],
+   "gaps": "Por un lado, el turismo da [trabajo] a mi [familia] y a [miles] de [personas].",
+   "glossary": [
+    {
+     "word": "se dispararon",
+     "meaning": "subieron muy rápido"
+    },
+    {
+     "word": "juzgo",
+     "meaning": "critico o digo si algo está bien o mal"
+    },
+    {
+     "word": "parque temático",
+     "meaning": "parque de diversiones decorado sobre un tema"
+    }
+   ]
+  },
+  {
+   "id": "colorado",
+   "title": "La mina del río",
+   "place": "El pueblo de montaña",
+   "context": "En la reunión del pueblo, Javier y Teresa discuten sobre reabrir la vieja mina.",
+   "speakers": [
+    {
+     "name": "Javier",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    },
+    {
+     "name": "Teresa",
+     "country": "Guinea Ecuatorial",
+     "voice": "es-GQ-TeresaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Bueno, ya escucharon a la empresa. Dicen que la mina traería doscientos empleos y que no habría ningún riesgo para el río. Yo trabajé treinta años en minas y les aseguro que el riesgo cero no existe."
+    },
+    {
+     "s": 1,
+     "text": "Perdón, pero mi hijo se fue a Denver porque aquí no hay nada. Si la mina abre, podría volver. ¿Usted qué le propone a él?"
+    },
+    {
+     "s": 0,
+     "text": "Entiendo, Teresa, de verdad. No estoy en contra del trabajo. Estoy en contra de decidir con prisa. Pido que un laboratorio independiente analice el agua antes y después, y que los resultados sean públicos."
+    },
+    {
+     "s": 1,
+     "text": "Eso me parece razonable. Pero que no tarden dos años, porque los jóvenes no pueden esperar tanto."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué dijo la empresa?",
+     "options": [
+      "Que cerraría el pueblo",
+      "Que compraría el río",
+      "Que habría empleos y ningún riesgo"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué opina Javier sobre el riesgo cero?",
+     "options": [
+      "Que no existe",
+      "Que es posible",
+      "Que no importa"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Por qué se fue el hijo de Teresa?",
+     "options": [
+      "Porque estudia medicina",
+      "Porque no había trabajo",
+      "Porque se casó"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué pide Javier?",
+     "options": [
+      "Cerrar la reunión",
+      "Más dinero para el pueblo",
+      "Un análisis independiente del agua"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Aceptarías una mina cerca de tu casa a cambio de trabajo?",
+     "model": "Solo si hubiera controles serios del agua."
+    },
+    {
+     "q": "¿Qué es más importante para ti: el trabajo o el medio ambiente?",
+     "model": "Los dos, pero sin agua limpia no hay futuro."
+    },
+    {
+     "q": "¿Los jóvenes de tu ciudad se quedan o se van?",
+     "model": "Muchos se van a la capital a estudiar y no vuelven."
+    }
+   ],
+   "gaps": "Pido que un [laboratorio] independiente analice el [agua] antes y después, y que los [resultados] sean [públicos].",
+   "glossary": [
+    {
+     "word": "aseguro",
+     "meaning": "digo con total seguridad"
+    },
+    {
+     "word": "independiente",
+     "meaning": "que no depende de nadie"
+    },
+    {
+     "word": "razonable",
+     "meaning": "que tiene sentido"
+    }
+   ]
+  }
+ ]
+}
