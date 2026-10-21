@@ -8,6 +8,7 @@
 //   node scripts/qa-feria-browser.mjs            # --look and --smoke
 //   node scripts/qa-feria-browser.mjs --look     # Look contract renders only
 //   node scripts/qa-feria-browser.mjs --smoke    # G5(a) smoke only
+//   node scripts/qa-feria-browser.mjs --preview  # 8 s 640×360 H.264 hover clip (needs ffmpeg)
 //   node scripts/qa-feria-browser.mjs --cover    # 1200×750 cover candidates + cover.webp (FERIA_COVER=<circle|intro>)
 //
 // Env: FERIA_QA_OUTPUT (evidence folder), FERIA_QA_LOOK_CIRCLES (Busca
@@ -31,8 +32,8 @@ import { CONTENT } from '../app/la-feria-de-villaluz/levels.mjs';
 
 const repo = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const argv = new Set(process.argv.slice(2));
-const all = !argv.has('--look') && !argv.has('--smoke') && !argv.has('--cover') && !argv.has('--calls');
-const RUN = { look: all || argv.has('--look'), smoke: all || argv.has('--smoke'), cover: argv.has('--cover'), calls: argv.has('--calls') };
+const all = !argv.has('--look') && !argv.has('--smoke') && !argv.has('--cover') && !argv.has('--calls') && !argv.has('--preview');
+const RUN = { look: all || argv.has('--look'), smoke: all || argv.has('--smoke'), cover: argv.has('--cover'), calls: argv.has('--calls'), preview: argv.has('--preview') };
 const out = resolve(process.env.FERIA_QA_OUTPUT || resolve(repo, '.qa/feria-browser'));
 await mkdir(resolve(out, 'look'), { recursive: true });
 await mkdir(resolve(out, 'smoke'), { recursive: true });
@@ -289,6 +290,32 @@ if (RUN.cover) {
   await writeFile(resolve(out, 'cover.webp'), simpleWebp(Buffer.from(webp, 'base64')));
   console.log(`cover: ${resolve(out, 'cover.webp')} (${pick})`);
   await context.close();
+}
+
+// ------------------------------------------------------------------ hover clip (--preview)
+// The catalog card's hover recording, like the other conversation cards
+// (640×360, 24 fps, 8 s, H.264, no audio): the fair's opening fly-over,
+// captured frame by frame (the world advances 1/20 s per rendered frame, so
+// a slow software renderer still gives an even clip).
+if (RUN.preview) {
+  const { spawnSync } = await import('node:child_process');
+  const framesDir = resolve(out, 'preview-frames');
+  await mkdir(framesDir, { recursive: true });
+  const context = await browser.newContext({ viewport: { width: 640, height: 360 }, deviceScaleFactor: 1 });
+  const page = await context.newPage();
+  await page.goto(`${origin}/?harness=look`);
+  await page.locator('.fv-canvas canvas').waitFor({ timeout: 60000 });
+  await page.evaluate(() => window.__qa.intro(true));
+  await frames(page, 20);
+  for (let i = 0; i < 192; i++) {
+    await frames(page, 1);
+    await page.screenshot({ path: resolve(framesDir, `f${String(i).padStart(4, '0')}.png`) });
+  }
+  await context.close();
+  const clip = resolve(out, 'preview.mp4');
+  const r = spawnSync('ffmpeg', ['-y', '-loglevel', 'error', '-framerate', '24', '-i', resolve(framesDir, 'f%04d.png'), '-c:v', 'libx264', '-profile:v', 'high', '-pix_fmt', 'yuv420p', '-crf', '36', '-preset', 'slow', '-an', '-movflags', '+faststart', clip], { stdio: 'inherit' });
+  assert.equal(r.status, 0, 'ffmpeg encoded the clip');
+  console.log(`preview: ${clip}`);
 }
 
 // ------------------------------------------------------------------ T5 draw calls (--calls)
