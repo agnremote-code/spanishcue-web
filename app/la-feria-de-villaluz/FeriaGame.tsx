@@ -17,8 +17,8 @@ import type { Beat, Circle, ContrastOption, Route, StimulusOption } from './leve
 import type { BuscaSet } from './look-contract.d.mts';
 import {
   LESSON_ID, SESSION_KEY, STORAGE_KEY, TICKS, TICK_LABEL, ambienceGain, answerBeat, beatDone, buscaNames, buscaState, buscaTry, closeScene, createSession, createState,
-  currentBeat, doneFor, finish, foundLabel, lastFeedback, markDone, openScene, recordPick, resetGroup, resetLevel, restore, restoreSession, routeCircles, routeProgress,
-  serialise, serialiseSession, setRoute, stepDone, tally, tick, timeline, timelinePick, toggleCheck, type SceneState, type Session, type State,
+  currentBeat, doneFor, finish, foundLabel, lastFeedback, openScene, resetGroup, resetLevel, restore, restoreSession, routeCircles, routeProgress, settleScene,
+  serialise, serialiseSession, setRoute, stepDone, tally, tick, timeline, toggleCheck, type SceneState, type Session, type State,
 } from './engine.mjs';
 import { ListeningBadge, ListeningCard, ModeSwitch, Transcript, useListeningDone, useListeningMode } from '../escucha-3d/Escucha';
 import { setShoutMuted } from '../escucha-3d/shout';
@@ -224,8 +224,13 @@ export default function FeriaGame() {
   const cur = state.scene && authored ? currentBeat(state.scene, circle, session) : 0;
   const finished = Boolean(circle && authored && cur >= circle.beats.length);
   const buscaSet = buscaId ? sets.find(s => s.id === buscaId) ?? null : null;
-  const buscaCircle = buscaSet ? (buscaSet.kind === 'transfer' ? 'baile' : CIRCLES[buscaSet.circle - 1]?.id ?? null) : null;
-  const placed = useMemo(() => (buscaSet && buscaCircle ? { circle: buscaCircle, placed: placeSet(buscaSet, buscaCircle) } : null), [buscaSet, buscaCircle]);
+  // Stable while the same set is open, so World3D builds its candidates once.
+  const level0 = state.level;
+  const placed = useMemo(() => {
+    const set = buscaId ? (contentFor(level0).BUSCA as BuscaSet[]).find(s => s.id === buscaId) : undefined;
+    const at = set ? (set.kind === 'transfer' ? 'baile' : CIRCLES[set.circle - 1]?.id) : undefined;
+    return set && at ? { circle: at, placed: placeSet(set, at) } : null;
+  }, [buscaId, level0]);
   const use3d = has3d && !flat;
   const heardHere = mode === 'escucha' ? heard : done;
   const route = routes.find(r => r.mode === state.route) ?? routes[0];
@@ -233,11 +238,9 @@ export default function FeriaGame() {
   const percent = routeProgress(route, routeDone, session.finished);
   const isClosing = sceneId === 'baile';
 
-  // A circle is done when its last beat is (E1 counts it).
-  useEffect(() => { if (finished && sceneId) setState(s => markDone(s, sceneId)); }, [finished, sceneId]);
-  // The pick of the circle's first stimulus feeds the closing timeline.
-  const pickNow = state.scene && circle ? timelinePick(state.scene, circle) : null;
-  useEffect(() => { if (sceneId && pickNow !== null) setSession(s => recordPick(s, sceneId, pickNow)); }, [sceneId, pickNow]);
+  // A circle is done when its last beat is (E1 counts it), and the pick of its
+  // first stimulus feeds the closing timeline: settleScene() applies both in
+  // the event that changed the scene or the session (see apply below).
 
   // Sound: ducked under cards, silent under any clip (AC5).
   useEffect(() => { ambience.current = createAmbience(); return () => { ambience.current?.dispose(); ambience.current = null; }; }, []);
@@ -256,19 +259,24 @@ export default function FeriaGame() {
   }, [percent, ready, entered]);
 
   const enter = () => { setEntered(true); ambience.current?.start(); };
-  const open = useCallback((id: string) => {
+  const apply = (nextState: State, nextSession: Session) => {
+    const r = settleScene(nextState, nextSession, circles);
+    setState(r.state);
+    if (r.session !== session) setSession(r.session);
+  };
+  const open = (id: string) => {
     setList(false); setMap(false); setBuscaId(null);
     if (mode === 'escucha') { setListenAt(id); return; }
     setTalkAt(0);
-    setState(s => openScene(s, id));
-  }, [mode]);
+    apply(openScene(state, id), session);
+  };
   const close = useCallback(() => { setBuscaId(null); setState(s => closeScene(s)); }, []);
   const switchMode = (next: typeof mode) => { setMode(next); setState(s => setRoute(s, next)); setListenAt(undefined); setBuscaId(null); if (state.scene) close(); };
-  const answer = (beat: Beat, index: number) => setState(s => answerBeat(s, beat, index));
+  const answer = (beat: Beat, index: number) => apply(answerBeat(state, beat, index), session);
   const tryFigure = (figureId: string) => {
     if (!buscaSet) return { correct: false, feedback: null };
     const r = buscaTry(session, buscaSet, figureId, buscaNames(buscaSet));
-    setSession(r.session);
+    apply(state, r.session);
     return r;
   };
   const newGroup = () => {
@@ -300,7 +308,7 @@ export default function FeriaGame() {
 
   const busy = Boolean(state.scene) || listenAt !== undefined || Boolean(buscaId);
   const nearCircle = near ? circleById(near) : null;
-  const story = useMemo(() => timeline(session, circles), [session, circles]);
+  const story = timeline(session, circles);
   const conversation = routes.find(r => r.mode === 'conversacion');
   const group = tally(session, routeCircles(conversation).length ? routeCircles(conversation) : CIRCLE_IDS);
   const transferSet = sets.find(s => s.kind === 'transfer') ?? null;

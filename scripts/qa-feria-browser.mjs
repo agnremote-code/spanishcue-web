@@ -10,7 +10,8 @@
 //   node scripts/qa-feria-browser.mjs --smoke    # G5(a) smoke only
 //   node scripts/qa-feria-browser.mjs --cover    # 1200×750 cover candidates + cover.webp (FERIA_COVER=<circle|intro>)
 //
-// Env: FERIA_QA_OUTPUT (evidence folder), PLAYWRIGHT_MODULE (path to the
+// Env: FERIA_QA_OUTPUT (evidence folder), FERIA_QA_LOOK_CIRCLES (Busca
+// circles to render, default informacion), FERIA_QA_LOOK_ONLY (shot ids), PLAYWRIGHT_MODULE (path to the
 // playwright module when it is not resolvable), CHROMIUM_EXECUTABLE_PATH,
 // CHROMIUM_ARGS (JSON array; default forces SwiftShader WebGL).
 //
@@ -166,7 +167,10 @@ const LOOK_SHOTS = [
   { id: 'holds', tier: 'A/B', figures: row('holds', ['suitcase', 'umbrella', 'flowers', 'map']) },
   { id: 'extras-1', tier: 'A/B', figures: row('extras', [{ extras: ['backpack'] }, { extras: ['glasses'] }, { extras: ['bag'] }, { extras: [] }]) },
   { id: 'extras-2', tier: 'B', figures: row('extras', [{ extras: ['beard'] }, { extras: [] }, { extras: ['scarf'] }, { extras: ['beard'] }], { body: 'm' }) },
-];
+  // Colour-only distractor pairs used in the authored sets (Martin, 2026-10-21).
+  { id: 'pairs-1', tier: 'A', figures: row('pair', [{ topColor: 'rojo' }, { topColor: 'verde' }, { top: 'coat', topColor: 'azul' }, { top: 'coat', topColor: 'marron' }]) },
+  { id: 'pairs-2', tier: 'A', figures: row('pair', [{ topColor: 'blanco' }, { topColor: 'negro' }, { bottom: 'skirt', bottomColor: 'azul', topColor: 'blanco' }, { bottom: 'skirt', bottomColor: 'verde', topColor: 'blanco' }]) },
+].filter(shot => !process.env.FERIA_QA_LOOK_ONLY || process.env.FERIA_QA_LOOK_ONLY.split(',').includes(shot.id));
 const LOOK_VIEWS = [
   // A tablet shared to the class screen: coarse pointer → World3D low path.
   { id: 'tablet', width: 1180, height: 820 },
@@ -210,6 +214,24 @@ if (RUN.look) {
 }
 
 // ------------------------------------------------------------------ cover (1200×750, like the hospital cover)
+/** Chromium writes VP8X + ICCP; keep only the lossy VP8 bitstream, as the
+ * other covers are (RIFF/WEBP/VP8, no metadata). */
+function simpleWebp(file) {
+  assert.equal(file.toString('ascii', 0, 4), 'RIFF');
+  assert.equal(file.toString('ascii', 8, 12), 'WEBP');
+  for (let at = 12; at + 8 <= file.length;) {
+    const type = file.toString('ascii', at, at + 4), size = file.readUInt32LE(at + 4);
+    if (type === 'VP8 ') {
+      const chunk = file.subarray(at, at + 8 + size + (size % 2));
+      const head = Buffer.alloc(12);
+      head.write('RIFF', 0, 'ascii'); head.writeUInt32LE(4 + chunk.length, 4); head.write('WEBP', 8, 'ascii');
+      return Buffer.concat([head, chunk]);
+    }
+    at += 8 + size + (size % 2);
+  }
+  throw new Error('no lossy VP8 chunk in the WebP from Chromium');
+}
+
 if (RUN.cover) {
   // Desktop (high) path, as a teacher sees it on a laptop; candidates are
   // saved side by side and the chosen one is encoded to WebP by Chromium.
@@ -230,9 +252,9 @@ if (RUN.cover) {
     const img = new Image(); img.src = `data:image/png;base64,${b64}`; await img.decode();
     const c = document.createElement('canvas'); c.width = img.width; c.height = img.height;
     c.getContext('2d').drawImage(img, 0, 0);
-    return c.toDataURL('image/webp', Number(new URLSearchParams(location.search).get('q') ?? 0.8)).split(',')[1];
+    return c.toDataURL('image/webp', 0.9).split(',')[1];
   }, png.toString('base64'));
-  await writeFile(resolve(out, 'cover.webp'), Buffer.from(webp, 'base64'));
+  await writeFile(resolve(out, 'cover.webp'), simpleWebp(Buffer.from(webp, 'base64')));
   console.log(`cover: ${resolve(out, 'cover.webp')} (${pick})`);
   await context.close();
 }

@@ -97,6 +97,20 @@ export function timelinePick(scene, circle) {
   return pick === null ? null : pick;
 }
 
+/** After any change to the open scene or the group session: a circle whose
+ * last beat is done counts as done (E1), and the pick of its first stimulus
+ * feeds the closing timeline. Pure, so the UI applies it in the event that
+ * caused the change instead of in an effect. */
+export function settleScene(state, session, circles) {
+  const id = state.scene?.id;
+  const circle = id ? circles?.[id] : undefined;
+  if (!id || !circle || circle.status) return { state, session };
+  const next = currentBeat(state.scene, circle, session) >= (circle.beats?.length ?? 0) ? markDone(state, id) : state;
+  const pick = timelinePick(state.scene, circle);
+  const known = pick !== null && session.picks[id] === pick && session.order.includes(id);
+  return { state: next, session: pick === null || known ? session : recordPick(session, id, pick) };
+}
+
 export const setRoute = (state, route) => (route === 'conversacion' || route === 'escucha' ? { ...state, route } : state);
 export const resetLevel = state => ({ ...state, done: { ...state.done, [state.level]: [] }, scene: null });
 

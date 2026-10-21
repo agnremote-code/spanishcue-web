@@ -240,3 +240,33 @@ test('the Busca announcements file for the audio generator is in sync with BUSCA
   for (const set of A2.BUSCA) assert.ok(voices[set.voice], `${set.id}: voice ${set.voice}`);
   assert.match(readFileSync('scripts/generate-escucha-3d-audio.py', 'utf8'), /data\.get\('announcements', \[\]\)/);
 });
+
+test('the catalog cover exists and matches the other 3D covers (1200×750 lossy WebP)', () => {
+  const row = readFileSync('app/lesson-catalog.ts', 'utf8').split('\n').find(line => line.startsWith('  {id:241,'));
+  assert.ok(row, 'catalog row 241');
+  const image = row.match(/image:"([^"]+)"/)?.[1];
+  assert.equal(image, '/la-feria-de-villaluz/cover.webp');
+  const file = readFileSync(`public${image}`);
+  assert.equal(file.toString('ascii', 0, 4), 'RIFF');
+  assert.equal(file.toString('ascii', 8, 16), 'WEBPVP8 ', 'plain lossy VP8, no metadata chunks');
+  // VP8 key frame header: 14-bit width and height after the 3-byte start code.
+  assert.deepEqual([file.readUInt16LE(26) & 0x3fff, file.readUInt16LE(28) & 0x3fff], [1200, 750]);
+  assert.ok(file.length < 120_000, `${file.length} bytes`);
+});
+
+test('settleScene: a circle counts as done on its last beat and its first pick feeds the story (no effects)', () => {
+  assert.doesNotMatch(game, /useEffect\(\(\) => \{ if \(finished/, 'no setState in an effect for E1');
+  assert.match(game, /settleScene\(nextState, nextSession, circles\)/);
+  const [id, circle] = Object.entries(A2.CIRCLES).find(([, c]) => !c.status && c.beats.every(b => b.kind !== 'busca'));
+  let state = E.openScene(E.createState(), id), session = E.createSession();
+  for (const beat of circle.beats) {
+    const index = beat.kind === 'contrast' ? beat.options.findIndex(o => o.correct) : 0;
+    ({ state, session } = E.settleScene(E.answerBeat(state, beat, index), session, A2.CIRCLES));
+  }
+  assert.ok(E.doneFor(state).includes(id), `${id} done after its last beat`);
+  const pick = E.timelinePick(state.scene, circle);
+  if (pick !== null) assert.equal(session.picks[id], pick);
+  const again = E.settleScene(state, session, A2.CIRCLES);
+  assert.equal(again.session, session, 'settling twice changes nothing');
+  assert.deepEqual(E.settleScene(E.createState(), session, A2.CIRCLES).state, E.createState());
+});

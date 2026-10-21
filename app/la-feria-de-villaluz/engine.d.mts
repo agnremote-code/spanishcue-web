@@ -23,6 +23,7 @@ export function currentBeat(scene: SceneState | null, circle: Circle | undefined
 export function answerBeat(state: State, beat: Beat, index?: number): State;
 export function lastFeedback(scene: SceneState | null, beat: Beat): { text: string; correct: boolean; feature: string | null } | null;
 export function timelinePick(scene: SceneState | null, circle: Circle | undefined): number | null;
+export function settleScene(state: State, session: Session, circles: Record<string, Circle>): { state: State; session: Session };
 export function setRoute(state: State, route: string): State;
 export function resetLevel(state: State): State;
 export function serialise(state: State): string;
