@@ -1451,6 +1451,86 @@
    "seconds": 92.24,
    "src": "/audio/escucha-3d/hospital-c2-vip.mp3"
   },
+  "irlanda/a0-cork": {
+   "hash": "849144c571458df47918",
+   "seconds": 27.34,
+   "src": "/audio/escucha-3d/irlanda-a0-cork.mp3"
+  },
+  "irlanda/a0-dublin": {
+   "hash": "6499168177a236cd4747",
+   "seconds": 31.66,
+   "src": "/audio/escucha-3d/irlanda-a0-dublin.mp3"
+  },
+  "irlanda/a0-galway": {
+   "hash": "23483967a08a2bc6cb0d",
+   "seconds": 29.83,
+   "src": "/audio/escucha-3d/irlanda-a0-galway.mp3"
+  },
+  "irlanda/a0-kerry": {
+   "hash": "7ac19bc48a56e99af479",
+   "seconds": 27.53,
+   "src": "/audio/escucha-3d/irlanda-a0-kerry.mp3"
+  },
+  "irlanda/a1-cork": {
+   "hash": "113ca1f6ba43a49a8178",
+   "seconds": 48.08,
+   "src": "/audio/escucha-3d/irlanda-a1-cork.mp3"
+  },
+  "irlanda/a1-dublin": {
+   "hash": "692a92ff267f6c5af42a",
+   "seconds": 38.55,
+   "src": "/audio/escucha-3d/irlanda-a1-dublin.mp3"
+  },
+  "irlanda/a1-galway": {
+   "hash": "a021c7e65987b1654f5d",
+   "seconds": 48.2,
+   "src": "/audio/escucha-3d/irlanda-a1-galway.mp3"
+  },
+  "irlanda/a1-kerry": {
+   "hash": "48ffeee5ba76bcd8ce41",
+   "seconds": 42.89,
+   "src": "/audio/escucha-3d/irlanda-a1-kerry.mp3"
+  },
+  "irlanda/a2-cork": {
+   "hash": "c35e98017b998c9bd90d",
+   "seconds": 54.08,
+   "src": "/audio/escucha-3d/irlanda-a2-cork.mp3"
+  },
+  "irlanda/a2-dublin": {
+   "hash": "6e04f69b9670b72ea06a",
+   "seconds": 43.55,
+   "src": "/audio/escucha-3d/irlanda-a2-dublin.mp3"
+  },
+  "irlanda/a2-galway": {
+   "hash": "7ff519bd22bf0b03e915",
+   "seconds": 52.28,
+   "src": "/audio/escucha-3d/irlanda-a2-galway.mp3"
+  },
+  "irlanda/a2-kerry": {
+   "hash": "dca41062da9121d6d035",
+   "seconds": 47.36,
+   "src": "/audio/escucha-3d/irlanda-a2-kerry.mp3"
+  },
+  "irlanda/b1-cork": {
+   "hash": "c125073d2470eb33138c",
+   "seconds": 51.51,
+   "src": "/audio/escucha-3d/irlanda-b1-cork.mp3"
+  },
+  "irlanda/b1-dublin": {
+   "hash": "a4db3211e4032b53f41d",
+   "seconds": 58.45,
+   "src": "/audio/escucha-3d/irlanda-b1-dublin.mp3"
+  },
+  "irlanda/b1-galway": {
+   "hash": "90ed74016e9685213ce0",
+   "seconds": 58.47,
+   "src": "/audio/escucha-3d/irlanda-b1-galway.mp3"
+  },
+  "irlanda/b1-kerry": {
+   "hash": "6698c640d6566f01ab01",
+   "seconds": 60.63,
+   "src": "/audio/escucha-3d/irlanda-b1-kerry.mp3"
+  },
   "mexico/a0-cdmx": {
    "hash": "dfd0916e7003c1c16c4b",
    "seconds": 27.88,
