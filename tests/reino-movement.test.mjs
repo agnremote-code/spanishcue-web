@@ -85,6 +85,9 @@ test('people push the player aside, never into a wall, and only on their own flo
   assert.ok(Math.hypot(hit.player.x,hit.player.z+1)>=.6);
   const wall={minX:-3,maxX:3,minZ:-2.2,maxZ:-1.75,minY:0,maxY:6};
   const pinned=shovePeople(start(0,-1.3),people,[wall],()=>0);
-  assert.equal(pinned.player.z,-1.3,'the push that would end inside the wall is refused');
+  // Straight out would be the wall: Gael slides round the person instead,
+  // clear of the wall and of their body (never left inside either).
+  assert.ok(pinned.player.z-.35>=wall.maxZ-1e-9,'never pushed into the wall');
+  assert.ok(Math.hypot(pinned.player.x,pinned.player.z+1)>=.62-1e-9,'never left inside the person');
   assert.equal(shovePeople(start(0,-1.3,8),people,[],()=>8).hit,null);
 });

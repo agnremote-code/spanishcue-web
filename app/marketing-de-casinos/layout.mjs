@@ -160,7 +160,7 @@ export const SCENES = [
       { x: 6, z: -27.6, heading: 0.3, pose: 'scream', look: { skin: '#e8c0a0', age: 'young', body: 'm', hairStyle: 'cap', hairColor: '#5a3a24', top: 'hoodie', topColor: '#2f2f35', bottom: 'jeans', bottomColor: '#1f2840', seed: 163 } },
       { x: 8, z: -27.7, heading: 0, pose: 'stand', look: { skin: '#c48f69', age: 'adult', body: 'm', hairStyle: 'short', hairColor: '#1a1210', top: 'suit', topColor: '#1a1a1d', bottom: 'pants', bottomColor: '#141416', seed: 164 } }] },
   { id: 'caja', floor: 1, place: 'La caja', name: 'Dolores', role: 'Cajera', spot: { x: -30.6, z: -40 }, npc: { x: -34.4, z: -40, heading: Math.PI / 2 }, pose: 'stand', look: { skin: '#e6c2a0', age: 'old', body: 'f', build: 'average', hairStyle: 'bob', hairColor: '#5a5a5a', top: 'shirt', topColor: '#e8e2d4', bottom: 'skirt', bottomColor: '#2a2a30', extras: ['glasses'], seed: 107 } },
-  { id: 'bar', floor: 1, place: 'Bar central', name: 'Leo', role: 'Bartender', spot: { x: -6, z: -37.2 }, npc: { x: -6, z: -40.4, heading: 0 }, pose: 'stand', look: { skin: '#a8724e', age: 'adult', body: 'm', build: 'athletic', hairStyle: 'short', hairColor: '#0e0b0a', top: 'shirt', topColor: '#121214', bottom: 'pants', bottomColor: '#121214', extras: ['beard'], seed: 108 },
+  { id: 'bar', floor: 1, place: 'Bar central', name: 'Leo', role: 'Bartender', spot: { x: -6, z: -37.2 }, npc: { x: -6, z: -38.3, heading: 0 }, pose: 'stand', look: { skin: '#a8724e', age: 'adult', body: 'm', build: 'athletic', hairStyle: 'short', hairColor: '#0e0b0a', top: 'shirt', topColor: '#121214', bottom: 'pants', bottomColor: '#121214', extras: ['beard'], seed: 108 },
     extras: [{ x: 4, z: -44.4, heading: Math.PI, pose: 'sit', piano: true, look: { skin: '#5e3c28', age: 'old', body: 'm', hairStyle: 'short', hairColor: '#d8d8d8', top: 'suit', topColor: '#f1ede2', bottom: 'pants', bottomColor: '#121214', extras: ['glasses'], seed: 181 } },
       { x: -10.4, z: -38.4, heading: 2.6, pose: 'sit', smoke: true, look: { skin: '#f0d0b4', age: 'adult', body: 'f', hairStyle: 'bob', hairColor: '#111111', top: 'dress', topColor: '#121214', extras: ['earrings'], seed: 182 } }] },
 
@@ -260,7 +260,7 @@ export const CROWD = {
     { x: -30, z: -6.5, heading: Math.PI, pose: 'sit', smoke: true },
     { x: -4, z: -20.4, heading: Math.PI, pose: 'sit' },
     { x: 12, z: 14, heading: 2.6, pose: 'walk', walk: { axis: 'z', from: -20, to: 14, speed: 1.1 } },
-    { x: -12, z: -28, heading: 0, pose: 'walk', walk: { axis: 'x', from: -28, to: 14, speed: 1.2 } },
+    { x: -12, z: -28.9, heading: 0, pose: 'walk', walk: { axis: 'x', from: -28, to: 14, speed: 1.2 } },
     { x: -26, z: 14, heading: 0, pose: 'phone' },
   ],
   2: [

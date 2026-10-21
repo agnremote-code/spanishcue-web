@@ -132,3 +132,12 @@ test('a terrace edge cannot lift a ground-level player eight meters',()=>{
  assert.equal(p.y,0);assert.ok(p.z>-102);
  world.dispose();
 });
+
+// Ale (2026-10-21): nobody ends up inside an object. Every resident stands
+// clear of walls and props at their height (Elara sleeps in her bed), and
+// the start points never drop Gael inside anything.
+test('no resident and no start point is inside a wall or a prop', () => {
+ const inside=(x,z,y,r)=>activeColliders(world.colliders,flags,y).filter(b=>!(b.maxY-(b.minY??0)<=1.8&&y>=b.maxY-.05)&&x>b.minX-r&&x<b.maxX+r&&z>b.minZ-r&&z<b.maxZ+r);
+ for(const [id,p] of Object.entries(world.npcPositions)) if(id!=='elara') assert.deepEqual(inside(p.x,p.z,p.y,.25),[],id);
+ for(const point of START_POINTS){const {x,z}=point.position;assert.deepEqual(inside(x,z,world.floorAt(x,z),.35),[],point.id);}
+});

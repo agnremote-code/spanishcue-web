@@ -212,7 +212,7 @@ export const FURNITURE = {
     { type: 'posts', x: 24, z: -32, w: 12, d: 0.2, solid: false },
     // Core.
     { type: 'bench', x: -6.2, z: -24, w: 0.6, d: 3 }, { type: 'plant', x: 6.5, z: -16, w: 1, d: 1 },
-    { type: 'wetfloor', x: -12, z: -10.2, w: 0.6, d: 0.4 }, { type: 'wetfloor', x: 18, z: 13.4, w: 0.6, d: 0.4 },
+    { type: 'wetfloor', x: -12, z: -8.9, w: 0.6, d: 0.4 }, { type: 'wetfloor', x: 18, z: 13.4, w: 0.6, d: 0.4 },
     { type: 'bin', x: -13, z: 31, w: 0.5, d: 0.5 }, { type: 'bin', x: 39, z: -9, w: 0.5, d: 0.5 }, { type: 'bin', x: 23, z: 13, w: 0.5, d: 0.5 },
     // Street.
     { type: 'bench', x: -14, z: 36, w: 3, d: 0.6 }, { type: 'bench', x: 14, z: 36, w: 3, d: 0.6 },
@@ -246,7 +246,7 @@ export const FURNITURE = {
     ...beds([-37.6], -2, 1), ...beds([-37.6], 4, 1),
     // Delivery room.
     { type: 'delivery', x: -30, z: 22, w: 1.3, d: 2.2, rot: 1 }, { type: 'warmer', x: -24, z: 15, w: 1, d: 0.8 }, { type: 'monitor', x: -31.8, z: 19.8, w: 0.5, d: 0.5 },
-    { type: 'wetfloor', x: -16, z: 22, w: 0.6, d: 0.4 },
+    { type: 'wetfloor', x: -16, z: 23.2, w: 0.6, d: 0.4 },
     { type: 'nursedesk', x: -4, z: 4, w: 7, d: 2.4 }, { type: 'medcart', x: -9, z: 14, w: 0.9, d: 0.6 }, { type: 'medcart', x: 1.6, z: 16, w: 0.9, d: 0.6 },
     { type: 'callpanel', x: -4, z: -1.2, w: 3, d: 0.2, solid: false },
     ...beds([10, 20, 30], 2, 0, 'icubed'), ...beds([10, 20, 30], 22, 2, 'icubed'),
@@ -303,7 +303,7 @@ const PLACES = {
       { x: 14, z: 20.6, heading: Math.PI, pose: 'lie', lying: true, look: GOWN('#d7a982', 'adult', 'm', 'short', '#2a1a12') }] },
   descanso: { spot: { x: 26, z: -34.6 }, npc: { x: 29, z: -38.4, heading: 0, lying: true }, pose: 'sleep', mood: 'sleepy', look: SCRUBS('#c48f69', 'm', 'curly', '#2a1a12', '#3a5a8a', ['beard']),
     extras: [{ x: 15, z: -38.2, heading: 0, pose: 'cook', look: SCRUBS('#f0d6c0', 'm', 'short', '#e0c070', '#3f8f98') }] },
-  enfermeria: { spot: { x: -4, z: 7.6 }, npc: { x: -4, z: 2.6, heading: 0 }, pose: 'phone', look: SCRUBS('#8d5a3c', 'f', 'bun', '#120d0b', '#1f4f8f', ['glasses']),
+  enfermeria: { spot: { x: -4, z: 7.6 }, npc: { x: -4, z: 2.4, heading: 0 }, pose: 'phone', look: SCRUBS('#8d5a3c', 'f', 'bun', '#120d0b', '#1f4f8f', ['glasses']),
     extras: [{ x: -1.4, z: 2.2, heading: 0.4, pose: 'read', look: SCRUBS('#c99468', 'm', 'short', '#120d0b', '#1f4f8f') }] },
   internacion: { spot: { x: 12.4, z: -11 }, npc: { x: 10.4, z: -12.6, heading: 1.4 }, pose: 'smoke-free', smoke: true, injury: ['gown', 'iv'], look: GOWN('#d8a57e', 'old', 'm', 'short', '#cfcfcf', ['mustache']),
     extras: [{ x: 15.6, z: -9.4, heading: -2, pose: 'sweep', mop: true, look: L('#b9825c', 'adult', 'f', 'bun', '#2a1a12', 'uniform', '#7aa0b8', 'pants', '#3a4a5a', [], { seed: 172 }) }] },
@@ -333,20 +333,20 @@ export const SPOT_RADIUS = 1.25;
 const N = (skin, body, hair, hairColor, color) => SCRUBS(skin, body, hair, hairColor, color);
 export const WALKERS = {
   0: [
-    { look: L('#c48f69', 'adult', 'm', 'short', '#1a1210', 'uniform', '#5a6a5a', 'pants', '#3a3a3a', [], { seed: 901 }), path: [[-34, -11], [30, -11], [30, -5], [-34, -5]], speed: 1.1, carry: 'cart' },
-    { look: L('#e2b896', 'adult', 'm', 'bald', '#888', 'uniform', '#5a6a5a', 'pants', '#3a3a3a', [], { seed: 902 }), path: [[-2, -10], [-2, -20], [-24, -20], [-24, -30], [-24, -20], [-2, -20]], speed: 0.9, carry: 'stretcher', sheet: true },
+    { look: L('#c48f69', 'adult', 'm', 'short', '#1a1210', 'uniform', '#5a6a5a', 'pants', '#3a3a3a', [], { seed: 901 }), path: [[-34, -11], [30, -11], [30, -6], [-34, -6]], speed: 1.1, carry: 'cart' },
+    { look: L('#e2b896', 'adult', 'm', 'bald', '#888', 'uniform', '#5a6a5a', 'pants', '#3a3a3a', [], { seed: 902 }), path: [[-2, -10], [-2, -12.6], [-24, -12.6], [-24, -30], [-24, -12.6], [-2, -12.6]], speed: 0.9, carry: 'stretcher', sheet: true },
   ],
   1: [
     { look: N('#8d5a3c', 'f', 'ponytail', '#120d0b', '#2f6fb0'), path: [[0, -11], [34, -11], [34, -4], [34, -11], [-30, -11]], speed: 2.6, run: true },
     { look: N('#e8c0a0', 'm', 'short', '#3a2a20', '#3f8f98'), path: [[2, 6], [20, 6], [20, -2], [2, -2]], speed: 1.3, pause: 2, carry: 'cart' },
     { look: L('#c99468', 'adult', 'm', 'buzz', '#120d0b', 'uniform', '#c8401e', 'pants', '#2a2a30', [], { seed: 913 }), path: [[46, 20], [36, 20], [32, 16], [32, 8], [32, 2], [32, 8], [32, 16], [36, 20]], speed: 2.2, carry: 'stretcher', patient: { injury: ['blood', 'head'], mood: 'pain' } },
-    { look: COAT('#f0d6c0', 'adult', 'm', 'short', '#6a4a2a', ['glasses']), path: [[-6, -10], [-30, -10], [-30, 0], [-30, -10]], speed: 1.4, pause: 3 },
-    { look: L('#e6c2a0', 'old', 'f', 'curly', '#d8d0e0', 'sweater', '#3a6aa8', 'pants', '#2a2a30', ['glasses'], { seed: 915 }), path: [[-6, 26], [-6, 14], [6, 14], [6, 26]], speed: 0.6, pause: 4, carry: 'wheelchair' },
-    { look: L('#b9825c', 'adult', 'f', 'bun', '#2a1a12', 'uniform', '#7aa0b8', 'pants', '#3a4a5a', [], { seed: 916 }), path: [[-38, 30], [-14, 30], [-14, 14], [-38, 14]], speed: 0.5, pause: 3, carry: 'mop' },
-    { look: L('#c48f69', 'adult', 'm', 'cap', '#1a1210', 'hoodie', '#3a3a44', 'jeans', '#24304a', [], { seed: 917 }), path: [[-4, 40], [0, 34], [0, 26], [-8, 26], [-4, 40]], speed: 1.2, pause: 2 },
+    { look: COAT('#f0d6c0', 'adult', 'm', 'short', '#6a4a2a', ['glasses']), path: [[-6, -10], [-29.4, -10], [-29.4, 0], [-29.4, -10]], speed: 1.4, pause: 3 },
+    { look: L('#e6c2a0', 'old', 'f', 'curly', '#d8d0e0', 'sweater', '#3a6aa8', 'pants', '#2a2a30', ['glasses'], { seed: 915 }), path: [[-6, 26], [-6, 14], [5.2, 14], [5.2, 26]], speed: 0.6, pause: 4, carry: 'wheelchair' },
+    { look: L('#b9825c', 'adult', 'f', 'bun', '#2a1a12', 'uniform', '#7aa0b8', 'pants', '#3a4a5a', [], { seed: 916 }), path: [[-37.5, 28.3], [-14, 28.3], [-14, 14], [-37.5, 14]], speed: 0.5, pause: 3, carry: 'mop' },
+    { look: L('#c48f69', 'adult', 'm', 'cap', '#1a1210', 'hoodie', '#3a3a44', 'jeans', '#24304a', [], { seed: 917 }), path: [[-4, 40], [0, 34], [0, 26], [-3, 26], [-3, 34]], speed: 1.2, pause: 2 },
     { look: N('#a8724e', 'm', 'short', '#120d0b', '#6a3a8a'), path: [[-12, -24], [-30, -24], [-30, -32], [-12, -32]], speed: 1, pause: 4, carry: 'tray' },
     { look: L('#f0d0b4', 'adult', 'f', 'long', '#6a3a1a', 'coat', '#3a2a4a', 'pants', '#1a1a20', [], { seed: 919 }), path: [[10, -30], [38, -30], [38, -18], [10, -18]], speed: 0.9, pause: 5 },
-    { look: L('#8d5a3c', 'young', 'm', 'curly', '#120d0b', 'tshirt', '#d43a3a', 'jeans', '#24304a', [], { seed: 920 }), path: [[-36, 30], [-36, 14]], speed: 1.6, pause: 1, injury: ['arm'] },
+    { look: L('#8d5a3c', 'young', 'm', 'curly', '#120d0b', 'tshirt', '#d43a3a', 'jeans', '#24304a', [], { seed: 920 }), path: [[-38.2, 30], [-38.2, 18.2]], speed: 1.6, pause: 1, injury: ['arm'] },
     // Chaos: a patient escaping in a gown, two nurses after him, a stretcher at full speed.
     { look: GOWN('#e2b896', 'adult', 'm', 'short', '#3a2a20'), path: [[-34, -10.6], [34, -10.6]], speed: 4.2, run: true, scream: true, injury: ['blood', 'iv'], delay: 0 },
     { look: N('#c99468', 'f', 'bun', '#2a1a12', '#2f6fb0'), path: [[-34, -10.6], [34, -10.6]], speed: 4.2, run: true, scream: true, delay: 1.4 },
@@ -355,14 +355,14 @@ export const WALKERS = {
     { look: L('#f0d0b4', 'young', 'f', 'long', '#3a2416', 'dress', '#e8e0d0', null, null, [], { seed: 924 }), path: [[-38, 13.6], [-14, 13.6]], speed: 3.6, run: true, scream: true, injury: ['blood'] },
   ],
   2: [
-    { look: N('#e2b896', 'f', 'bob', '#1a1210', '#2e7d6e'), path: [[-4, -11], [34, -11], [34, -3], [-4, -3]], speed: 1.4, pause: 2 },
+    { look: N('#e2b896', 'f', 'bob', '#1a1210', '#2e7d6e'), path: [[-3.4, -11], [34, -11], [34, -3], [-3.4, -3]], speed: 1.4, pause: 2 },
     { look: COAT('#c48f69', 'adult', 'm', 'short', '#1a1210'), path: [[-36, -11], [-6, -11]], speed: 1.2, pause: 3 },
     { look: N('#8d5a3c', 'm', 'buzz', '#120d0b', '#3f8f98'), path: [[-6, 6], [-6, 30], [-2, 30], [-2, 6]], speed: 0.9, pause: 3, carry: 'iv' },
     { look: SCRUBS('#f0d6c0', 'm', 'short', '#2a1a12', '#2e7d6e'), path: [[24, 10], [36, 10], [36, 28], [24, 28]], speed: 1, pause: 2, surgeon: true },
-    { look: N('#c48f69', 'm', 'short', '#1a1210', '#2e7d6e'), path: [[-4, -11.4], [36, -11.4], [36, -4], [-4, -4]], speed: 3.2, run: true, pause: 2, carry: 'stretcher', patient: { injury: ['blood', 'tube'], mood: 'pain' } },
+    { look: N('#c48f69', 'm', 'short', '#1a1210', '#2e7d6e'), path: [[-3.2, -11.4], [36, -11.4], [36, -4], [-3.2, -4]], speed: 3.2, run: true, pause: 2, carry: 'stretcher', patient: { injury: ['blood', 'tube'], mood: 'pain' } },
   ],
   3: [
-    { look: N('#c99468', 'f', 'ponytail', '#2a1a12', '#1f4f8f'), path: [[-36, -11], [36, -11], [36, -10], [-36, -10]], speed: 1.5, pause: 2, carry: 'cart' },
+    { look: N('#c99468', 'f', 'ponytail', '#2a1a12', '#1f4f8f'), path: [[-36, -11], [36, -11], [36, -10.3], [-36, -10.3]], speed: 1.5, pause: 2, carry: 'cart' },
     { look: GOWN('#e8c0a0', 'old', 'f', 'curly', '#cccccc'), path: [[-30, -11], [-14, -11]], speed: 0.35, pause: 4, carry: 'iv' },
     { look: N('#a8724e', 'm', 'short', '#120d0b', '#1f4f8f'), path: [[8, 12], [36, 12], [36, 14], [8, 14]], speed: 1, pause: 3 },
     { look: L('#dcae88', 'adult', 'm', 'short', '#3a2a20', 'jacket', '#4a5a3a', 'jeans', '#24304a', [], { seed: 934 }), path: [[-6, -11], [-17, -11], [-17, -18], [-17, -11]], speed: 1, pause: 6, carry: 'flowers' },
@@ -394,7 +394,7 @@ export const CROWD = {
     { x: 16, z: -25.6, heading: Math.PI, pose: 'sleep', seat: true }, { x: 32, z: -25.6, heading: Math.PI, pose: 'sit' },
     { x: 18, z: 36.6, heading: 0, pose: 'smoke-free', smoke: true, injury: ['gown', 'iv'] },
     { x: -14, z: 36.6, heading: 0, pose: 'phone', seat: true },
-    { x: -10.6, z: -11.2, heading: 0.4, pose: 'fallen', mood: 'pain', injury: ['leg'] },
+    { x: -10.6, z: -12.9, heading: Math.PI / 2, pose: 'fallen', mood: 'pain', injury: ['leg'] },
     { x: 20.6, z: 9.6, heading: Math.PI, pose: 'injured', mood: 'pain', injury: ['blood', 'head'] },
     { x: 26.4, z: 18, heading: -1.6, pose: 'scream', mood: 'terror', injury: ['arm'] },
     { x: 44, z: 24.6, heading: 0.4, pose: 'smoke-free', smoke: true, look: 'paramedic' },
@@ -408,7 +408,7 @@ export const CROWD = {
     { x: 29.4, z: 18.8, heading: 1.5, pose: 'stand', look: 'surgeon' }, { x: 32.6, z: 17.4, heading: -1.5, pose: 'stand', look: 'surgeon' },
     { x: 11.6, z: 16.6, heading: 0.6, pose: 'sit', seat: true, look: 'surgeon' },
     { x: 18, z: -24.6, heading: Math.PI, pose: 'phone', seat: true, look: 'scrubs' }, { x: 16.6, z: -26, heading: Math.PI / 2, pose: 'read', seat: true, look: 'coat' },
-    { x: 8.8, z: 2.4, heading: Math.PI, pose: 'window', look: 'scrubs' },
+    { x: 8.8, z: 1.7, heading: Math.PI, pose: 'window', look: 'scrubs' },
   ],
   3: [
     { x: -37.6, z: -34, heading: Math.PI / 2, pose: 'lie', lying: true, injury: ['gown'] }, { x: 10.4, z: -34, heading: Math.PI / 2, pose: 'lie', lying: true, injury: ['gown', 'iv'] },
