@@ -491,6 +491,41 @@
    "seconds": 64.03,
    "src": "/audio/escucha-3d/feria-a2-baile.mp3"
   },
+  "feria/a2-busca-escenario-bruno": {
+   "hash": "d4ca8fd6567e5a58e085",
+   "seconds": 18.34,
+   "src": "/audio/escucha-3d/feria-a2-busca-escenario-bruno.mp3"
+  },
+  "feria/a2-busca-escenario-valentina": {
+   "hash": "c2307aa0c6cf3c1c3977",
+   "seconds": 23.57,
+   "src": "/audio/escucha-3d/feria-a2-busca-escenario-valentina.mp3"
+  },
+  "feria/a2-busca-fotos-ines": {
+   "hash": "cbb7a6bbac310f5856c5",
+   "seconds": 17.28,
+   "src": "/audio/escucha-3d/feria-a2-busca-fotos-ines.mp3"
+  },
+  "feria/a2-busca-fotos-nico": {
+   "hash": "5414d25d07e7db827095",
+   "seconds": 17.79,
+   "src": "/audio/escucha-3d/feria-a2-busca-fotos-nico.mp3"
+  },
+  "feria/a2-busca-informacion-abuelo": {
+   "hash": "435f41f8058a2e08705c",
+   "seconds": 22.78,
+   "src": "/audio/escucha-3d/feria-a2-busca-informacion-abuelo.mp3"
+  },
+  "feria/a2-busca-informacion-emilio": {
+   "hash": "e4fcb8b24ebbb152d954",
+   "seconds": 23.04,
+   "src": "/audio/escucha-3d/feria-a2-busca-informacion-emilio.mp3"
+  },
+  "feria/a2-busca-transferencia-amparo": {
+   "hash": "904de0f0f83e80a6b42e",
+   "seconds": 17.14,
+   "src": "/audio/escucha-3d/feria-a2-busca-transferencia-amparo.mp3"
+  },
   "feria/a2-churreria": {
    "hash": "570c46161f9fd47dc7b3",
    "seconds": 64.66,
