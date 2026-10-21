@@ -44,7 +44,7 @@ export default {
               { say: { es: 'Un caramelo de jengibre.', en: 'A ginger candy.' }, then: { es: 'Es picante y raro, pero en diez minutos te sientes mejor.', en: 'It’s spicy and strange, but in ten minutes you feel better.' } },
             ],
           },
-          twist: { es: 'Entra una mujer con un bebé y pregunta por una pala para nieve. Hank le dice que el pronóstico anuncia un metro de nieve esta noche. ¿Qué le preguntas a Hank?', en: 'A woman with a baby comes in and asks for a snow shovel. Hank tells her the forecast says three feet of snow tonight. What do you ask Hank?' },
+          twist: { es: 'Entra una mujer con su hijo pequeño en brazos y pregunta por una pala para nieve. Hank le dice que el pronóstico anuncia un metro de nieve esta noche. ¿Qué le preguntas a Hank?', en: 'A woman with a baby comes in and asks for a snow shovel. Hank tells her the forecast says three feet of snow tonight. What do you ask Hank?' },
           questions: [
             { q: { es: '¿Conoces la historia de tus bisabuelos?', en: 'Do you know the story of your great-grandparents?' }, help: { es: 'Sí, mi bisabuelo era… / No, no sé mucho.', en: 'Yes, my great-grandfather was… / No, I don’t know much.' }, follow: [{ es: '¿De dónde eran?', en: 'Where were they from?' }, { es: '¿Quién te lo contó?', en: 'Who told you?' }] },
             { q: { es: '¿Estuviste alguna vez en un lugar muy alto?', en: 'Have you ever been somewhere very high up?' }, help: { es: 'Sí, estuve en… / No, nunca.', en: 'Yes, I was in… / No, never.' }, follow: [{ es: '¿Te sentiste bien?', en: 'Did you feel OK?' }, { es: '¿Qué hiciste allí?', en: 'What did you do there?' }] },

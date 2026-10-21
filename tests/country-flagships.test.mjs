@@ -104,7 +104,7 @@ test("both maps expose keyboard, mobile and reduced-motion contracts", async () 
   const [mexicoPage, mexicoCss, usaPage, usaCss] = await Promise.all([
     readFile("app/mexico/page.tsx", "utf8"),
     readFile("app/mexico/style.css", "utf8"),
-    readFile("app/estados-unidos-a2-b1/page.tsx", "utf8"),
+    readFile("app/estados-unidos-a2-b1/Atlas.tsx", "utf8"),
     readFile("app/estados-unidos-a2-b1/style.css", "utf8"),
   ]);
   for (const source of [mexicoPage, usaPage]) {

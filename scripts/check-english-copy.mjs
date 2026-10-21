@@ -8,8 +8,10 @@ export const BASE_SHA = '43e4b3eb1dc76031481d2406a62b9210f0dd97e2';
 // its new path; changes, missing copies and duplicate old copies still fail.
 export function relocateEnglishSources(files) {
   const relocated=new Map(files);
-  for(const folder of ['condicionales','la-estacion-de-los-dos-destinos','past-b1']) {
-    const from=`app/${folder}/page.tsx`,to=`app/${folder}/LegacyLesson.tsx`;
+  const moves=[...['condicionales','la-estacion-de-los-dos-destinos','past-b1'].map(folder=>[`app/${folder}/page.tsx`,`app/${folder}/LegacyLesson.tsx`]),
+    // The old Estados Unidos atlas lives on as the no-3D fallback of the 3D world.
+    ['app/estados-unidos-a2-b1/page.tsx','app/estados-unidos-a2-b1/Atlas.tsx']];
+  for(const [from,to] of moves) {
     if(!relocated.has(from))continue;
     if(relocated.has(to))throw new Error(`Duplicate English relocation: ${to}`);
     relocated.set(to,relocated.get(from));relocated.delete(from);
@@ -98,6 +100,7 @@ export const APPROVAL_MANIFESTS = [
   'docs/audits/3d-freemium-english-additions-20261016.json',
   'docs/audits/seo-commercial-intent-english-additions-20261019.json',
   'docs/audits/autoestudio-bilingual-english-additions-20261020.json',
+  'docs/audits/estados-unidos-3d-english-additions-20261021.json',
 ];
 export function loadApprovedAdditions(root) {
   return APPROVAL_MANIFESTS.flatMap(path => {
