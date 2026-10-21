@@ -5,7 +5,8 @@
 export const PERSON_RADIUS = 0.62; // the mascot (0.35) plus a body (0.27)
 
 // Pushes the player out of anyone they overlap. `free(x, z)` says whether a
-// spot is clear of walls and furniture, so nobody pushes you into a wall.
+// spot is clear of walls and furniture, so nobody pushes you into a wall:
+// when straight out is a wall, you slide round them to a free side.
 // Returns the corrected position and the index of the first person touched.
 export function pushOut(x, z, people, free = () => true, radius = PERSON_RADIUS) {
   let hit = -1;
@@ -18,7 +19,15 @@ export function pushOut(x, z, people, free = () => true, radius = PERSON_RADIUS)
     const r = p.radius ?? radius;
     const nx = d > 1e-4 ? dx / d : 1, nz = d > 1e-4 ? dz / d : 0;
     const ox = p.x + nx * r, oz = p.z + nz * r;
-    if (free(ox, oz)) { x = ox; z = oz; }
+    if (free(ox, oz)) { x = ox; z = oz; continue; }
+    // Against a wall: slide round the person to the nearest free side
+    // instead of staying inside their body.
+    const from = Math.atan2(nx, nz);
+    for (let k = 1; k <= 12; k++) {
+      const a = from + Math.ceil(k / 2) * (Math.PI / 6) * (k % 2 ? 1 : -1);
+      const sx = p.x + Math.sin(a) * r, sz = p.z + Math.cos(a) * r;
+      if (free(sx, sz)) { x = sx; z = sz; break; }
+    }
   }
   return { x, z, hit };
 }

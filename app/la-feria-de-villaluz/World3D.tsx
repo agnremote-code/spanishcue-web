@@ -15,7 +15,9 @@ import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
 import { useEffect, useRef, useState, type PointerEvent as ReactPointerEvent } from 'react';
 import { canUseKeys, followYaw, inputFrom, keyAction, stepPlayer, angleBetween } from '../noche-abierta/world3d.mjs';
 import { animateHero, createHero } from '../noche-abierta/hero3d';
-import { BOUNDS, SOLIDS, SPAWN, buscaCamera, buscaHeading, circleById, circleStep, framing, spotAt } from './layout.mjs';
+import { BOUNDS, SOLIDS, SPAWN, buscaCamera, buscaHeading, circleById, circleStep, framing, isClearGround, spotAt } from './layout.mjs';
+import { createBumpClock, pushOut } from '../escucha-3d/bump.mjs';
+import { insultFor, shout } from '../escucha-3d/shout';
 import { buildFair, type Fair, type Placed } from './feria3d';
 
 export type Pose = { x: number; z: number; heading: number };
@@ -39,7 +41,7 @@ const POSE_KEY = 'spanishcue:la-feria-de-villaluz:pose:v1';
 function savedPose(): Pose {
   try {
     const data = JSON.parse(window.localStorage.getItem(POSE_KEY) ?? '');
-    if (Number.isFinite(data?.x) && Number.isFinite(data?.z) && Number.isFinite(data?.heading) && Math.abs(data.x) < BOUNDS.maxX && Math.abs(data.z) < BOUNDS.maxZ && !spotAt(data.x, data.z)) return data;
+    if (Number.isFinite(data?.x) && Number.isFinite(data?.z) && Number.isFinite(data?.heading) && Math.abs(data.x) < BOUNDS.maxX && Math.abs(data.z) < BOUNDS.maxZ && !spotAt(data.x, data.z) && isClearGround(data.x, data.z)) return data;
   } catch { /* first visit or private mode */ }
   return { x: SPAWN.x, z: SPAWN.z, heading: SPAWN.heading };
 }
@@ -136,6 +138,7 @@ export default function World3D(props: WorldProps) {
     let jumpUntil = -1;
     let drag: { id: number; x: number; y: number } | null = null;
     let lastDrag = -10, clock = 0, previous = 0, frame = 0, disposed = false, poseAt = 0, savedAt = 0;
+    const mayYell = createBumpClock();
     let inside: string | null = null, still = 0, consumed: string | null = null, nearKey = '';
     let openCircle: string | null = null;
     let doneKey = '';
@@ -260,6 +263,17 @@ export default function World3D(props: WorldProps) {
         const jumping = input.jump || clock < jumpUntil;
         const next = stepPlayer({ ...player, speed: player.speed / factor }, { x: ix, y: iy, yaw, sprint: input.sprint, nitro, walk: false, jump: jumping, jumpSpeed: 7.6 }, dt * factor, SOLIDS, BOUNDS);
         player = { ...player, x: next.x, z: next.z, heading: next.heading, speed: next.speed * factor, y: next.y, vy: next.vy, jumpHeld: next.jumpHeld };
+        // People are solid, as in every 3D world: the mascot bumps into them
+        // (never walks through them), and whoever it crashes into yells.
+        if (player.y < 1.2) {
+          const bodies = fair.bodies().filter(b => Math.abs(b.x - player.x) < 2 && Math.abs(b.z - player.z) < 2);
+          const free = (x: number, z: number) => x > BOUNDS.minX + 0.4 && x < BOUNDS.maxX - 0.4 && z > BOUNDS.minZ + 0.4 && z < BOUNDS.maxZ - 0.4
+            && !SOLIDS.some(b => (b.top == null || player.y < b.top) && x > b.x0 - 0.35 && x < b.x1 + 0.35 && z > b.z0 - 0.35 && z < b.z1 + 0.35);
+          const out = pushOut(player.x, player.z, bodies, free);
+          player.x = out.x; player.z = out.z;
+          const who = out.hit >= 0 ? bodies[out.hit] : null;
+          if (who && player.speed > 1.2 && mayYell(who.key, clock)) { shout(insultFor(who.body, who.seed), 1); player.speed *= 0.3; }
+        }
         const wantFov = baseFov + (nitro && player.speed > 10 ? 10 : 0);
         if (Math.abs(wantFov - camera.fov) > 0.05) { camera.fov += (wantFov - camera.fov) * Math.min(1, dt * 6); camera.updateProjectionMatrix(); }
         if (clock - lastDrag > 1.2) yaw = followYaw(yaw, player.heading, player.speed, dt);

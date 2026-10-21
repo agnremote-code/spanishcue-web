@@ -18,7 +18,7 @@ const towards = (from, to) => Math.atan2(to.x - from.x, to.z - from.z);
 // who talks at the circle; `stall` is the solid booth behind them; `look` is
 // the direction the Busca camera faces (towards the open plaza).
 export const CIRCLES = [
-  { id: 'informacion', n: 1, name: 'Información', place: 'La caseta de información', spot: { x: -9, z: 24 }, npc: { x: -11.4, z: 25.6 }, stall: { x: -13, z: 27, w: 4, d: 3, color: '#2f6fb0' }, busca: true },
+  { id: 'informacion', n: 1, name: 'Información', place: 'La caseta de información', spot: { x: -9, z: 24 }, npc: { x: -11.4, z: 25.1 }, stall: { x: -13, z: 27, w: 4, d: 3, color: '#2f6fb0' }, busca: true },
   { id: 'churreria', n: 2, name: 'La churrería', place: 'El puesto de churros', spot: { x: -24, z: 10 }, npc: { x: -27, z: 10 }, stall: { x: -29, z: 10, w: 3, d: 4.5, color: '#d9832a' } },
   { id: 'tombola', n: 3, name: 'La tómbola', place: 'La tómbola de los premios', spot: { x: -24, z: -8 }, npc: { x: -27, z: -8 }, stall: { x: -29, z: -8, w: 3, d: 5, color: '#c0392b' } },
   { id: 'noria', n: 4, name: 'La noria', place: 'La taquilla de la noria', spot: { x: -10, z: -24 }, npc: { x: -10, z: -27 }, stall: { x: -10, z: -29.5, w: 3.4, d: 2.4, color: '#7a3ab0' } },
@@ -54,8 +54,13 @@ export function solids() {
     const s = c.stall;
     boxes.push({ x0: s.x - s.w / 2, x1: s.x + s.w / 2, z0: s.z - s.d / 2, z1: s.z + s.d / 2, top: c.id === 'escenario' ? STAGE.h : undefined });
   }
-  boxes.push({ x0: WHEEL.x - 3, x1: WHEEL.x + 3, z0: WHEEL.z - 1.5, z1: WHEEL.z + 1.5 });
+  // The wheel's splayed legs reach about 3.8 m each side of its axle.
+  boxes.push({ x0: WHEEL.x - 3.9, x1: WHEEL.x + 3.9, z0: WHEEL.z - 1.5, z1: WHEEL.z + 1.5 });
   boxes.push({ x0: FOUNTAIN.x - FOUNTAIN.r, x1: FOUNTAIN.x + FOUNTAIN.r, z0: FOUNTAIN.z - FOUNTAIN.r, z1: FOUNTAIN.z + FOUNTAIN.r, top: 0.6 });
+  // The fountain's column stands above its rim.
+  boxes.push({ x0: FOUNTAIN.x - 0.3, x1: FOUNTAIN.x + 0.3, z0: FOUNTAIN.z - 0.3, z1: FOUNTAIN.z + 0.3, top: 1.9 });
+  // The poles of the bulbs are thin, but solid: nobody walks through them.
+  for (const p of POLES) boxes.push({ x0: p.x - 0.12, x1: p.x + 0.12, z0: p.z - 0.12, z1: p.z + 0.12, pole: true });
   return boxes;
 }
 export const SOLIDS = solids();
@@ -64,6 +69,12 @@ export function isFree(x, z, radius = 0.35, boxes = SOLIDS) {
   const b = BOUNDS;
   if (x < b.minX + radius || x > b.maxX - radius || z < b.minZ + radius || z > b.maxZ - radius) return false;
   return !boxes.some(s => s.top == null && x > s.x0 - radius && x < s.x1 + radius && z > s.z0 - radius && z < s.z1 + radius);
+}
+
+/** Free ground for a person standing on the floor: not even inside
+ * something low you could jump onto (the fountain, the stage). */
+export function isClearGround(x, z, radius = 0.35, boxes = SOLIDS) {
+  return isFree(x, z, radius, boxes) && !boxes.some(s => x > s.x0 - radius && x < s.x1 + radius && z > s.z0 - radius && z < s.z1 + radius);
 }
 
 /** The circle under (x, z), or null. */
@@ -88,7 +99,7 @@ export function arrival(id) {
     for (let i = 0; i < 12; i++) {
       const a = towards(c.spot, { x: 0, z: 10 }) + (i % 2 ? 1 : -1) * Math.ceil(i / 2) * (Math.PI / 6);
       const x = c.spot.x + Math.sin(a) * back, z = c.spot.z + Math.cos(a) * back;
-      if (isFree(x, z) && !spotAt(x, z)) return { x, z, heading: towards({ x, z }, c.spot) };
+      if (isClearGround(x, z) && !spotAt(x, z)) return { x, z, heading: towards({ x, z }, c.spot) };
     }
   }
   return { ...SPAWN };
@@ -166,7 +177,7 @@ export function crowd(count = 24) {
   let guard = 0;
   while (out.length < count && guard++ < 4000) {
     const x = (r() * 2 - 1) * 34, z = (r() * 2 - 1) * 34;
-    if (!isFree(x, z, 1.2)) continue;
+    if (!isClearGround(x, z, 1.2)) continue;
     if (CIRCLES.some(c => Math.hypot(x - c.spot.x, z - c.spot.z) < 4 || Math.hypot(x - c.npc.x, z - c.npc.z) < 2)) continue;
     if (CLUSTERS.some(c => Math.hypot(x - c.x, z - c.z) < 6.5)) continue;
     if (Math.hypot(x - SPAWN.x, z - SPAWN.z) < 4) continue;

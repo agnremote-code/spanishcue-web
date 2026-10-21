@@ -1,5 +1,5 @@
 export type Circle = { id: string; n: number; name: string; place: string; spot: { x: number; z: number }; npc: { x: number; z: number }; stall: { x: number; z: number; w: number; d: number; color: string } | null; busca?: boolean };
-export type Box = { x0: number; x1: number; z0: number; z1: number; top?: number };
+export type Box = { x0: number; x1: number; z0: number; z1: number; top?: number; pole?: boolean };
 export const BOUNDS: { minX: number; maxX: number; minZ: number; maxZ: number };
 export const SPAWN: { x: number; z: number; heading: number };
 export const SPOT_RADIUS: number;
@@ -15,6 +15,7 @@ export const FOUNTAIN: { x: number; z: number; r: number };
 export function solids(): Box[];
 export const SOLIDS: Box[];
 export function isFree(x: number, z: number, radius?: number, boxes?: Box[]): boolean;
+export function isClearGround(x: number, z: number, radius?: number, boxes?: Box[]): boolean;
 export function spotAt(x: number, z: number): string | null;
 export function framing(id: string): { x: number; z: number; heading: number } | null;
 export function arrival(id: string): { x: number; z: number; heading: number };

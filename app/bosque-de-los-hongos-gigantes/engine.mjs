@@ -174,13 +174,21 @@ for(const zone of zones){
  OBSTACLES.push({id:`${zone.id}-sign`,x:sign.x,z:sign.z,r:.8,y0:zone.y-.2,y1:zone.y+2.2},{id:`${zone.id}-lamp`,x:lamp.x,z:lamp.z,r:.25,y0:zone.y-.2,y1:zone.y+2},{id:`${zone.id}-prop`,x:prop.x,z:prop.z,r:zone.id==='suposiciones'?1.1:.75,y0:zone.y-.2,y1:zone.y+(h??2.4),...(h?{top:round(zone.y+h),on:`zone-${zone.id}`}:{})});
 }
 export const PLAYER_RADIUS=.35;
+// The mascot's height and how deep a cap is below its top (the stem starts there).
+export const BODY_HEIGHT=1.7, CAP_DEPTH=.6;
 /** Push a position out of any solid it overlaps at its height. */
 export function resolveObstacles(p,obstacles=OBSTACLES){
- for(const o of obstacles){
-  if(p.y+1.7<o.y0||p.y>o.y1||(o.top!=null&&p.y>=o.top-.05))continue;
-  const dx=p.x-o.x,dz=p.z-o.z,d=Math.hypot(dx,dz),min=o.r+PLAYER_RADIUS;
-  if(d>=min)continue;
-  if(d>1e-6){p.x=o.x+dx/d*min;p.z=o.z+dz/d*min;}else p.x=o.x+min;
+ // A few passes: pushed out of one stem straight into its neighbour, the next pass frees you from that one too.
+ for(let pass=0;pass<4;pass++){
+  let moved=false;
+  for(const o of obstacles){
+   if(p.y+1.7<o.y0||p.y>o.y1||(o.top!=null&&p.y>=o.top-.05))continue;
+   const dx=p.x-o.x,dz=p.z-o.z,d=Math.hypot(dx,dz),min=o.r+PLAYER_RADIUS;
+   if(d>=min)continue;
+   if(d>1e-6){p.x=o.x+dx/d*min;p.z=o.z+dz/d*min;}else p.x=o.x+min;
+   moved=true;
+  }
+  if(!moved)break;
  }
  return p;
 }
@@ -196,6 +204,8 @@ export function stepPlayer(player,input,delta,platforms=PLATFORMS,obstacles=OBST
  if(input.jump&&(p.grounded||p.coyote>0)){p.vy=JUMP_SPEED;p.grounded=false;p.coyote=0;p.platform=null;}
  else if(input.jump&&(p.airJumps??1)>0){p.vy=DOUBLE_JUMP_SPEED;p.airJumps=0;p.doubleJumps=(p.doubleJumps||0)+1;p.platform=null;}
  const before=p.y;p.vy-=GRAVITY*dt;p.y+=p.vy*dt;p.grounded=false;
+ // Caps are solid from below too: jumping under one, the head bumps it instead of passing through.
+ if(p.vy>0)for(const s of platforms){const under=s.y-CAP_DEPTH;if(before+BODY_HEIGHT<=under+.001&&p.y+BODY_HEIGHT>under&&Math.hypot(p.x-s.x,p.z-s.z)<s.r-.1){p.y=under-BODY_HEIGHT;p.vy=0;}}
  // Props with a `top` are surfaces too; standing on one still counts as the cap it sits on.
  const tops=obstacles.filter(o=>o.top!=null).map(o=>({id:o.on??o.id,x:o.x,z:o.z,y:o.top,r:o.r-.14,prop:true}));
  const surfaces=[...platforms,...tops].filter(s=>Math.hypot(p.x-s.x,p.z-s.z)<=s.r+.24&&before>=s.y-.08&&p.y<=s.y&&p.vy<=0).sort((a,b)=>b.y-a.y);
@@ -205,6 +215,8 @@ export function stepPlayer(player,input,delta,platforms=PLATFORMS,obstacles=OBST
   if(floor.id!=='ground'&&!floor.bounce&&!floor.prop)p.checkpoint={x:floor.x,y:floor.y,z:floor.z};
   if(floor.bounce){p.vy=15;p.grounded=false;p.coyote=0;}}
  if(!p.grounded)p.platform=null;
+ // Dropping off a cap's edge, the body never sinks into the stem or ball below it.
+ resolveObstacles(p,obstacles);
  // Falling to the forest floor once the climb has begun returns you to the last cap, not among the stems.
  const fellToFloor=p.grounded&&p.platform==='ground'&&p.checkpoint.y>2.5;
  // The 3D world stages its own fall (input.stagedFalls) and calls respawnAt itself; physics alone recovers instantly.

@@ -77,6 +77,7 @@ export function insideBuilding(x: number, z: number, margin?: number): boolean;
 export function isWalkable(x: number, z: number, boxes?: Box[], bounds?: Bounds): boolean;
 export function angleBetween(from: number, to: number): number;
 export function inputDirection(input: Partial<Input>, yaw: number): { heading: number; amount: number } | null;
+export function escapeSolids(x: number, z: number, boxes: Box[], bounds?: Bounds, radius?: number): { x: number; z: number };
 export function stepPlayer(player: Player, input: Partial<Input>, dt: number, boxes?: Box[], bounds?: Bounds): Step;
 export function followYaw(yaw: number, heading: number, speed: number, dt: number): number;
 export function nearestTarget<T extends { x: number; z: number; radius?: number }>(player: { x: number; z: number }, targets?: T[]): T | null;

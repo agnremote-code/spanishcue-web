@@ -236,7 +236,7 @@ export const CITY_PROPS = [
   { id: "tacho-centro", kind: "bin", x0: -62.9, x1: -62.4, z0: -57, z1: -56.5, h: 0.9 },
   { id: "tacho-alto", kind: "bin", x0: 22.2, x1: 22.7, z0: -56.9, z1: -56.4, h: 0.9 },
   { id: "tacho-clinica", kind: "bin", x0: 98.2, x1: 98.7, z0: -57.9, z1: -57.4, h: 0.9 },
-  { id: "tacho-costa", kind: "bin", x0: 92.2, x1: 92.7, z0: -7.9, z1: -7.4, h: 0.9 },
+  { id: "tacho-costa", kind: "bin", x0: 91.4, x1: 91.9, z0: -7.9, z1: -7.4, h: 0.9 },
   { id: "tacho-estacion", kind: "bin", x0: -73.6, x1: -73.1, z0: 56.2, z1: 56.7, h: 0.9 },
   { id: "tacho-sur", kind: "bin", x0: 30.2, x1: 30.7, z0: 58.2, z1: 58.7, h: 0.9 },
   { id: "tacho-galpones", kind: "bin", x0: 100.2, x1: 100.7, z0: 60.2, z1: 60.7, h: 0.9 },
@@ -326,7 +326,7 @@ export const PLACEMENTS = {
   "costa-llorando": { x: 94.6, z: -20, face: -Math.PI / 2, seat: true, circle: { x: 92.6, z: -20 } },
   "costa-pareja": { x: 90.6, z: 22, face: -Math.PI / 2, circle: { x: 88.6, z: 21 } },
   "costa-dormida": { x: 117, z: -16, face: -Math.PI / 2, seat: true, circle: { x: 114.8, z: -16 } },
-  "costa-toto": { x: 121.4, z: 31.2, face: -Math.PI / 2, circle: { x: 119, z: 31.6 } },
+  "costa-toto": { x: 121.4, z: 31.6, face: -Math.PI / 2, circle: { x: 119, z: 31.6 } },
   "costa-poemas": { x: 102, z: -28.2, face: 0, circle: { x: 99.8, z: -29 } },
   "costa-pescador": { x: 95.2, z: -38, face: Math.PI / 2, circle: { x: 93.2, z: -38 } },
   "costa-barco": { x: 98.6, z: 17, y: 0.9, face: -Math.PI / 2, boat: { x0: 96.4, x1: 102.6, z0: 13.5, z1: 20.5 }, circle: { x: 94.6, z: 17 } },
@@ -552,7 +552,7 @@ export const BALCONY_PEOPLE = [
 // Animals of the night.
 export const ANIMALS = [
   { id: "gato-callejon", species: "cat", x: -93, z: -116, face: 1, color: "#2a2a2a" },
-  { id: "gato-mercado", species: "cat", x: -82.6, z: -21, face: 0.4, color: "#d8d2c4" },
+  { id: "gato-mercado", species: "cat", x: -82.6, z: -19.4, face: 0.4, color: "#d8d2c4" },
   { id: "gato-galpones", species: "cat", x: 111, z: 99.6, y: 2.6, face: -1, color: "#c8833a" },
   { id: "gato-estacion", species: "cat", x: -73.2, z: 81, face: 2, color: "#6b5a4a" },
   { id: "perro-paseo", species: "dog", route: "ruta-costanera", color: "#e2d7c2", size: "medium" },
