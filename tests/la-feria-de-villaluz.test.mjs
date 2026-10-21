@@ -305,6 +305,8 @@ function framingProblems(circle, aspect, points) {
     const body = rect(p.x, p.z, 0.28, 0, 1.8), label = rect(p.x, p.z, 0.3, 0, 1.8 + 0.85);
     if (!label || label.x0 < -1 || label.x1 > 1 || label.y0 < -1 || label.y1 > 1) problems.push(`candidate ${i + 1} not fully in frame`);
     for (const b of blockers) if (b.r && body && b.r.z < body.z && overlaps(b.r, body)) problems.push(`candidate ${i + 1} hidden by ${b.id}`);
+    // A near pole behind a candidate (within 6 m, e.g. the dance-floor pole) still cuts through them on screen.
+    for (const b of blockers) if (b.id.startsWith('pole') && b.r && body && b.r.z >= body.z && b.r.z - body.z < 6 && overlaps(b.r, body)) problems.push(`candidate ${i + 1} crossed by ${b.id} behind`);
   });
   for (const b of L.SOLIDS) if (b.top == null && cam.position.x > b.x0 - 1.2 && cam.position.x < b.x1 + 1.2 && cam.position.z > b.z0 - 1.2 && cam.position.z < b.z1 + 1.2) problems.push('camera inside a stall awning');
   return problems;
