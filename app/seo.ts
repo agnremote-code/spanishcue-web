@@ -83,6 +83,8 @@ export function isSearchPrivatePath(pathname: string): boolean {
     path === "/acceso" ||
     path === "/pro" ||
     path.startsWith("/pro/") ||
+    path === "/private-lessons" ||
+    path.startsWith("/private-lessons/") ||
     path === "/admin" ||
     path.startsWith("/admin/") ||
     path === "/api" ||
