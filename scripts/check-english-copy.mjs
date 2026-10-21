@@ -14,7 +14,8 @@ export function relocateEnglishSources(files) {
     ['app/mexico/page.tsx','app/mexico/Atlas.tsx'],
     ['app/reino-unido-en-relieve/page.tsx','app/reino-unido-en-relieve/Atlas.tsx'],
     ['app/irlanda-en-relieve/page.tsx','app/irlanda-en-relieve/Atlas.tsx'],
-    ['app/australia-en-movimiento/page.tsx','app/australia-en-movimiento/Atlas.tsx']];
+    ['app/australia-en-movimiento/page.tsx','app/australia-en-movimiento/Atlas.tsx'],
+    ['app/suiza-en-relieve/page.tsx','app/suiza-en-relieve/Atlas.tsx']];
   for(const [from,to] of moves) {
     if(!relocated.has(from))continue;
     if(relocated.has(to))throw new Error(`Duplicate English relocation: ${to}`);

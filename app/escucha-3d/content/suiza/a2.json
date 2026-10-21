@@ -1,0 +1,498 @@
+{
+ "game": "suiza",
+ "level": "A2",
+ "items": [
+  {
+   "id": "zurich",
+   "title": "Nadar a la hora de comer",
+   "place": "El río Limmat en Zúrich",
+   "context": "Lorenzo, de Chile, habla con Nina, socorrista, sobre la costumbre de nadar en el río.",
+   "speakers": [
+    {
+     "name": "Lorenzo",
+     "country": "Chile",
+     "voice": "es-CL-LorenzoNeural"
+    },
+    {
+     "name": "Nina",
+     "country": "Argentina",
+     "voice": "es-AR-ElenaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Nina, ¿de verdad la gente nada en el río en pleno centro de la ciudad?"
+    },
+    {
+     "s": 1,
+     "text": "Sí, en verano muchos oficinistas vienen a la hora de comer. Se ponen el traje de baño, nadan un rato y vuelven a la oficina."
+    },
+    {
+     "s": 0,
+     "text": "¿Y el agua está limpia?"
+    },
+    {
+     "s": 1,
+     "text": "Muy limpia. Hace treinta años no se podía nadar aquí, pero la ciudad invirtió mucho dinero en limpiar el río."
+    },
+    {
+     "s": 0,
+     "text": "¿Y dónde dejan la ropa?"
+    },
+    {
+     "s": 1,
+     "text": "Muchos la meten en una bolsa impermeable, la llevan nadando y salen en otro puente. El río los lleva."
+    },
+    {
+     "s": 0,
+     "text": "¿Es peligroso?"
+    },
+    {
+     "s": 1,
+     "text": "Si sabes nadar, no. Pero la corriente es fuerte, así que siempre hay que salir antes del último puente."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Quiénes vienen al río a la hora de comer?",
+     "options": [
+      "Muchos oficinistas",
+      "Solo turistas",
+      "Los niños de la escuela"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cómo está el agua hoy?",
+     "options": [
+      "Muy sucia",
+      "Muy limpia",
+      "Muy caliente"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué hacen con la ropa?",
+     "options": [
+      "La dejan en casa",
+      "La dejan en el puente",
+      "La llevan en una bolsa impermeable"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué hay que hacer siempre?",
+     "options": [
+      "Salir antes del último puente",
+      "Nadar con amigos",
+      "Llevar zapatos"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Nadaste alguna vez en un río?",
+     "model": "Sí, de niño, en el río de mi pueblo."
+    },
+    {
+     "q": "¿Qué haces a la hora de comer en el trabajo?",
+     "model": "Normalmente como rápido y salgo a caminar un poco."
+    },
+    {
+     "q": "¿Tu ciudad invirtió en algo importante para la gente?",
+     "model": "Sí, hicieron un parque muy grande cerca del centro."
+    }
+   ],
+   "gaps": "Si sabes nadar, no. Pero la [corriente] es [fuerte], así que siempre hay que [salir] antes del [último] puente.",
+   "glossary": [
+    {
+     "word": "oficinistas",
+     "meaning": "personas que trabajan en una oficina"
+    },
+    {
+     "word": "impermeable",
+     "meaning": "que no deja pasar el agua"
+    },
+    {
+     "word": "corriente",
+     "meaning": "movimiento del agua del río"
+    },
+    {
+     "word": "puente",
+     "meaning": "camino sobre un río"
+    }
+   ]
+  },
+  {
+   "id": "ginebra",
+   "title": "Los chistes no se traducen",
+   "place": "La sede de la ONU en Ginebra",
+   "context": "Andrés, de Guatemala, pregunta a Amélie cómo es su trabajo de intérprete.",
+   "speakers": [
+    {
+     "name": "Andrés",
+     "country": "Guatemala",
+     "voice": "es-GT-AndresNeural"
+    },
+    {
+     "name": "Amélie",
+     "country": "México",
+     "voice": "es-MX-DaliaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Amélie, ¿qué hace exactamente una intérprete en la ONU?"
+    },
+    {
+     "s": 1,
+     "text": "Escucho a un delegado por los auriculares y repito lo que dice en otro idioma, casi al mismo tiempo. Yo trabajo del francés y del inglés al español."
+    },
+    {
+     "s": 0,
+     "text": "¿Al mismo tiempo? ¡Qué difícil!"
+    },
+    {
+     "s": 1,
+     "text": "Por eso trabajamos en parejas, y cada media hora cambiamos. El cerebro se cansa muchísimo."
+    },
+    {
+     "s": 0,
+     "text": "¿Qué es lo más complicado?"
+    },
+    {
+     "s": 1,
+     "text": "Los chistes. Si un delegado hace una broma, a veces no tiene sentido en español. Entonces explico rápido que es un chiste y la sala se ríe con educación."
+    },
+    {
+     "s": 0,
+     "text": "¿Y si se equivoca?"
+    },
+    {
+     "s": 1,
+     "text": "Me corrijo y sigo. No hay tiempo para tener miedo."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué idiomas traduce Amélie al español?",
+     "options": [
+      "Alemán e italiano",
+      "Francés e inglés",
+      "Árabe y ruso"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cada cuánto cambian de intérprete?",
+     "options": [
+      "Cada hora",
+      "Cada día",
+      "Cada media hora"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué es lo más complicado para ella?",
+     "options": [
+      "Los chistes",
+      "Los números",
+      "Los nombres"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué hace si se equivoca?",
+     "options": [
+      "Para la reunión",
+      "Se corrige y sigue",
+      "Pide perdón a la sala"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Hablas más de un idioma?",
+     "model": "Sí, hablo español y un poco de inglés."
+    },
+    {
+     "q": "¿Te gustaría trabajar de intérprete?",
+     "model": "No, creo que me pondría muy nervioso."
+    },
+    {
+     "q": "¿Entiendes los chistes en otros idiomas?",
+     "model": "A veces no, porque dependen de la cultura."
+    }
+   ],
+   "gaps": "Por eso trabajamos en [parejas], y cada [media] [hora] cambiamos. El [cerebro] se cansa muchísimo.",
+   "glossary": [
+    {
+     "word": "delegado",
+     "meaning": "persona que representa a un país"
+    },
+    {
+     "word": "auriculares",
+     "meaning": "aparato para escuchar en las orejas"
+    },
+    {
+     "word": "parejas",
+     "meaning": "grupos de dos"
+    },
+    {
+     "word": "broma",
+     "meaning": "algo que se dice para hacer reír"
+    }
+   ]
+  },
+  {
+   "id": "tesino",
+   "title": "Un restaurante sin menú",
+   "place": "Un grotto en el bosque del Tesino",
+   "context": "Teresa, de Guinea Ecuatorial, busca el menú en el grotto de Lucia.",
+   "speakers": [
+    {
+     "name": "Teresa",
+     "country": "Guinea Ecuatorial",
+     "voice": "es-GQ-TeresaNeural"
+    },
+    {
+     "name": "Lucia",
+     "country": "Perú",
+     "voice": "es-PE-CamilaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Lucia, busco el menú y no lo encuentro."
+    },
+    {
+     "s": 1,
+     "text": "Es que en un grotto no hay menú. Cocino lo que hay ese día. Hoy tenemos polenta con guiso de carne y queso de la montaña."
+    },
+    {
+     "s": 0,
+     "text": "¿Y por qué las mesas son de piedra?"
+    },
+    {
+     "s": 1,
+     "text": "Los grotti eran antes cuevas donde la gente guardaba el vino y el queso, porque allí siempre hace fresco. Después empezaron a comer aquí en verano."
+    },
+    {
+     "s": 0,
+     "text": "Por eso estamos en medio del bosque."
+    },
+    {
+     "s": 1,
+     "text": "Exacto. Aquí no hay wifi, y el vino se sirve en una taza de cerámica, no en un vaso."
+    },
+    {
+     "s": 0,
+     "text": "¿En una taza? ¡Qué curioso!"
+    },
+    {
+     "s": 1,
+     "text": "Es la tradición del Tesino. Pruébelo y me dice."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué hay en el grotto en lugar de menú?",
+     "options": [
+      "Una pizarra",
+      "Una lista en internet",
+      "La comida del día"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿De qué son las mesas?",
+     "options": [
+      "De piedra",
+      "De madera",
+      "De metal"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Para qué servían antes los grotti?",
+     "options": [
+      "Para dormir",
+      "Para guardar vino y queso",
+      "Para rezar"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿En qué se sirve el vino?",
+     "options": [
+      "En un vaso",
+      "En una botella pequeña",
+      "En una taza de cerámica"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Te gusta comer sin saber el menú?",
+     "model": "Sí, me gusta la sorpresa si la cocinera es buena."
+    },
+    {
+     "q": "¿Conoces un restaurante muy tradicional?",
+     "model": "Sí, hay uno en mi barrio donde cocinan como hace cincuenta años."
+    },
+    {
+     "q": "¿Podrías pasar un día sin wifi?",
+     "model": "Sí, pero solo si estoy en un lugar bonito."
+    }
+   ],
+   "gaps": "Exacto. Aquí no hay [wifi], y el [vino] se sirve en una [taza] de cerámica, no en un [vaso].",
+   "glossary": [
+    {
+     "word": "guiso",
+     "meaning": "comida cocinada despacio con salsa"
+    },
+    {
+     "word": "cuevas",
+     "meaning": "espacios dentro de la roca"
+    },
+    {
+     "word": "fresco",
+     "meaning": "un poco frío, agradable"
+    },
+    {
+     "word": "taza",
+     "meaning": "recipiente con asa para beber"
+    }
+   ]
+  },
+  {
+   "id": "alpes",
+   "title": "Tres minutos de ducha",
+   "place": "Un refugio de montaña en los Alpes",
+   "context": "Margarita, de Panamá, llega al refugio de Hans para pasar la noche.",
+   "speakers": [
+    {
+     "name": "Margarita",
+     "country": "Panamá",
+     "voice": "es-PA-MargaritaNeural"
+    },
+    {
+     "name": "Hans",
+     "country": "Cuba",
+     "voice": "es-CU-ManuelNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Buenas tardes. Tengo una reserva para esta noche. Me llamo Margarita."
+    },
+    {
+     "s": 1,
+     "text": "Bienvenida. Usted duerme en el dormitorio grande, con otras doce personas. La cena es a las seis y media."
+    },
+    {
+     "s": 0,
+     "text": "¿Tan temprano?"
+    },
+    {
+     "s": 1,
+     "text": "Sí, porque mañana todos se levantan a las tres para subir a la cumbre antes de que el sol caliente la nieve."
+    },
+    {
+     "s": 0,
+     "text": "¿Puedo ducharme?"
+    },
+    {
+     "s": 1,
+     "text": "Hay agua, pero poca: la traemos del glaciar. La ducha cuesta cinco francos y dura tres minutos."
+    },
+    {
+     "s": 0,
+     "text": "¿Tres minutos? Bueno, me ducho rápido."
+    },
+    {
+     "s": 1,
+     "text": "Y una cosa más: las botas se quedan en la entrada. Dentro, todos usan zapatillas."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Con cuántas personas duerme Margarita?",
+     "options": [
+      "Con doce",
+      "Con dos",
+      "Con veinte"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿A qué hora se levantan mañana?",
+     "options": [
+      "A las seis",
+      "A las ocho",
+      "A las tres"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿De dónde viene el agua?",
+     "options": [
+      "Del río",
+      "Del glaciar",
+      "Del pueblo"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Dónde se quedan las botas?",
+     "options": [
+      "En el dormitorio",
+      "En la cocina",
+      "En la entrada"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Compartiste alguna vez una habitación con muchas personas?",
+     "model": "Sí, en un albergue, y casi no pude descansar."
+    },
+    {
+     "q": "¿Te levantarías a las tres para ver un amanecer?",
+     "model": "Sí, si el lugar vale la pena."
+    },
+    {
+     "q": "¿Cuánto tiempo te duchas normalmente?",
+     "model": "Unos diez minutos, a veces más."
+    }
+   ],
+   "gaps": "Y una cosa más: las [botas] se [quedan] en la [entrada]. Dentro, todos usan [zapatillas].",
+   "glossary": [
+    {
+     "word": "reserva",
+     "meaning": "lugar guardado para ti"
+    },
+    {
+     "word": "cumbre",
+     "meaning": "la parte más alta de la montaña"
+    },
+    {
+     "word": "glaciar",
+     "meaning": "río de hielo"
+    },
+    {
+     "word": "botas",
+     "meaning": "zapatos altos para la montaña"
+    }
+   ]
+  }
+ ]
+}

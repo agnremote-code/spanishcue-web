@@ -1,0 +1,482 @@
+{
+ "game": "suiza",
+ "level": "A1",
+ "items": [
+  {
+   "id": "zurich",
+   "title": "La bolsa azul",
+   "place": "Un edificio de Zúrich",
+   "context": "Luis, de Ecuador, es el vecino nuevo. Ursula, la conserje, le explica las reglas de la basura.",
+   "speakers": [
+    {
+     "name": "Luis",
+     "country": "Ecuador",
+     "voice": "es-EC-LuisNeural"
+    },
+    {
+     "name": "Ursula",
+     "country": "España",
+     "voice": "es-ES-XimenaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Buenos días, señora. Soy Luis, el vecino nuevo del tercer piso."
+    },
+    {
+     "s": 1,
+     "text": "Bienvenido. Una pregunta: ¿esa bolsa de basura es suya?"
+    },
+    {
+     "s": 0,
+     "text": "Sí. ¿Hay algún problema?"
+    },
+    {
+     "s": 1,
+     "text": "Aquí la basura va en una bolsa oficial, la azul. Se compra en el supermercado."
+    },
+    {
+     "s": 0,
+     "text": "¿Y las botellas?"
+    },
+    {
+     "s": 1,
+     "text": "Las botellas van al contenedor de la esquina, pero nunca los domingos. Hacen mucho ruido."
+    },
+    {
+     "s": 0,
+     "text": "Entendido. Gracias por la explicación."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Quién es Luis?",
+     "options": [
+      "El vecino nuevo",
+      "El conserje",
+      "Un turista"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿De qué color es la bolsa oficial?",
+     "options": [
+      "Negra",
+      "Azul",
+      "Verde"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Dónde se compra la bolsa?",
+     "options": [
+      "En el ayuntamiento",
+      "En la estación",
+      "En el supermercado"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuándo no se pueden tirar botellas?",
+     "options": [
+      "Los domingos",
+      "Los lunes",
+      "Por la mañana"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Reciclas en tu casa?",
+     "model": "Sí, separo el papel y el plástico."
+    },
+    {
+     "q": "¿Hay reglas raras en tu edificio?",
+     "model": "Sí, no se puede lavar ropa de noche."
+    },
+    {
+     "q": "¿Conoces a tus vecinos?",
+     "model": "Conozco a dos o tres, no a todos."
+    }
+   ],
+   "gaps": "Aquí la basura va en una [bolsa] [oficial], la [azul]. Se compra en el [supermercado].",
+   "glossary": [
+    {
+     "word": "vecino",
+     "meaning": "persona que vive cerca"
+    },
+    {
+     "word": "basura",
+     "meaning": "cosas que ya no sirven"
+    },
+    {
+     "word": "contenedor",
+     "meaning": "caja grande para la basura"
+    },
+    {
+     "word": "ruido",
+     "meaning": "sonido fuerte y molesto"
+    }
+   ]
+  },
+  {
+   "id": "ginebra",
+   "title": "Un barco de vapor",
+   "place": "El muelle de Ginebra",
+   "context": "Valentina, de Uruguay, pregunta a Jean-Luc, el capitán, por el barco a Montreux.",
+   "speakers": [
+    {
+     "name": "Valentina",
+     "country": "Uruguay",
+     "voice": "es-UY-ValentinaNeural"
+    },
+    {
+     "name": "Jean-Luc",
+     "country": "Guinea Ecuatorial",
+     "voice": "es-GQ-JavierNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Buenas tardes. ¿Este barco va a Montreux?"
+    },
+    {
+     "s": 1,
+     "text": "Sí, pero es un viaje largo: tres horas y media. Es un barco antiguo, de vapor."
+    },
+    {
+     "s": 0,
+     "text": "¿De vapor? ¿Como los barcos de las películas?"
+    },
+    {
+     "s": 1,
+     "text": "Exacto. Tiene más de cien años. Puede ver las máquinas en el centro del barco."
+    },
+    {
+     "s": 0,
+     "text": "¡Qué interesante! ¿Hay restaurante a bordo?"
+    },
+    {
+     "s": 1,
+     "text": "Sí, arriba. Le recomiendo la perca del lago con arroz."
+    },
+    {
+     "s": 0,
+     "text": "Perfecto. Voy a comer mirando los Alpes."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuánto dura el viaje?",
+     "options": [
+      "Una hora",
+      "Tres horas y media",
+      "Media hora"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué tipo de barco es?",
+     "options": [
+      "Un barco moderno",
+      "Un barco de pesca",
+      "Un barco de vapor"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuántos años tiene el barco?",
+     "options": [
+      "Más de cien",
+      "Diez",
+      "Cincuenta"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué le recomienda el capitán?",
+     "options": [
+      "Un queso",
+      "La perca del lago",
+      "Una pizza"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Te gustan los barcos?",
+     "model": "Sí, pero a veces me mareo."
+    },
+    {
+     "q": "¿Prefieres un viaje rápido o un viaje lento?",
+     "model": "Prefiero un viaje lento para mirar el paisaje."
+    },
+    {
+     "q": "¿Comes pescado?",
+     "model": "Sí, sobre todo en la playa."
+    }
+   ],
+   "gaps": "Exacto. Tiene más de [cien] [años]. Puede ver las [máquinas] en el [centro] del barco.",
+   "glossary": [
+    {
+     "word": "vapor",
+     "meaning": "agua caliente que sale como humo"
+    },
+    {
+     "word": "antiguo",
+     "meaning": "muy viejo"
+    },
+    {
+     "word": "a bordo",
+     "meaning": "dentro del barco"
+    },
+    {
+     "word": "perca",
+     "meaning": "un pescado de agua dulce"
+    }
+   ]
+  },
+  {
+   "id": "tesino",
+   "title": "El salame del abuelo",
+   "place": "El mercado de Bellinzona",
+   "context": "Karina, de Puerto Rico, prueba un salame en el puesto de Franco.",
+   "speakers": [
+    {
+     "name": "Franco",
+     "country": "Nicaragua",
+     "voice": "es-NI-FedericoNeural"
+    },
+    {
+     "name": "Karina",
+     "country": "Puerto Rico",
+     "voice": "es-PR-KarinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "¡Buenos días! Pruebe este salame. Es del valle, hecho en casa."
+    },
+    {
+     "s": 1,
+     "text": "Mmm, está muy bueno. ¿Es de cerdo?"
+    },
+    {
+     "s": 0,
+     "text": "Sí, de cerdo, con un poco de vino tinto. Mi abuelo ya lo hacía así."
+    },
+    {
+     "s": 1,
+     "text": "¿Cuánto cuesta?"
+    },
+    {
+     "s": 0,
+     "text": "Doce francos este pequeño. El grande, veinte."
+    },
+    {
+     "s": 1,
+     "text": "El pequeño, por favor. ¿Me puede decir dónde están los castillos?"
+    },
+    {
+     "s": 0,
+     "text": "Arriba, en la colina. Suba por la escalera detrás de la iglesia."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué vende Franco?",
+     "options": [
+      "Pan",
+      "Fruta",
+      "Salame"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué tiene el salame además de cerdo?",
+     "options": [
+      "Vino tinto",
+      "Queso",
+      "Chocolate"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cuánto cuesta el pequeño?",
+     "options": [
+      "Veinte francos",
+      "Doce francos",
+      "Dos francos"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Dónde están los castillos?",
+     "options": [
+      "Al lado del río",
+      "En la estación",
+      "Arriba, en la colina"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Hay una comida típica en tu familia?",
+     "model": "Sí, mi abuela hace unas empanadas muy ricas."
+    },
+    {
+     "q": "¿Compras en mercados?",
+     "model": "Sí, los sábados compro fruta y verdura."
+    },
+    {
+     "q": "¿Te gustan los castillos?",
+     "model": "Sí, me gusta imaginar la vida de antes."
+    }
+   ],
+   "gaps": "Sí, de [cerdo], con un poco de [vino] [tinto]. Mi [abuelo] ya lo hacía así.",
+   "glossary": [
+    {
+     "word": "valle",
+     "meaning": "tierra baja entre montañas"
+    },
+    {
+     "word": "cerdo",
+     "meaning": "animal rosado de granja"
+    },
+    {
+     "word": "colina",
+     "meaning": "montaña pequeña"
+    },
+    {
+     "word": "escalera",
+     "meaning": "escalones para subir"
+    }
+   ]
+  },
+  {
+   "id": "alpes",
+   "title": "Un pueblo sin autos",
+   "place": "La entrada de Zermatt",
+   "context": "Alex, de Perú, llega a Zermatt. Urs maneja un taxi eléctrico.",
+   "speakers": [
+    {
+     "name": "Alex",
+     "country": "Perú",
+     "voice": "es-PE-AlexNeural"
+    },
+    {
+     "name": "Urs",
+     "country": "Colombia",
+     "voice": "es-CO-GonzaloNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Perdón, ¿puedo entrar con el auto al pueblo?"
+    },
+    {
+     "s": 1,
+     "text": "No, en Zermatt no hay autos normales. Tiene que dejarlo en Täsch y venir en tren."
+    },
+    {
+     "s": 0,
+     "text": "¿Y cómo llevo las maletas al hotel?"
+    },
+    {
+     "s": 1,
+     "text": "Con mi taxi. Es pequeño y eléctrico. No hace ruido y no contamina."
+    },
+    {
+     "s": 0,
+     "text": "¿Por qué no hay autos aquí?"
+    },
+    {
+     "s": 1,
+     "text": "Para tener aire limpio y ver el Cervino tranquilos. Mire, allá está, con nieve."
+    },
+    {
+     "s": 0,
+     "text": "¡Qué montaña tan bonita! Vamos al hotel, por favor."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Puede Alex entrar al pueblo con su auto?",
+     "options": [
+      "No",
+      "Sí",
+      "Solo de noche"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cómo llega Alex a Zermatt?",
+     "options": [
+      "En avión",
+      "En bicicleta",
+      "En tren"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cómo es el taxi de Urs?",
+     "options": [
+      "Grande y rojo",
+      "Pequeño y eléctrico",
+      "Viejo y lento"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Por qué no hay autos?",
+     "options": [
+      "Porque las calles son pequeñas",
+      "Porque es caro",
+      "Para tener aire limpio"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Te gustaría vivir en un pueblo sin autos?",
+     "model": "Sí, pero sería difícil hacer las compras."
+    },
+    {
+     "q": "¿Cómo vas al trabajo?",
+     "model": "Voy en autobús, tardo media hora."
+    },
+    {
+     "q": "¿Hay contaminación en tu ciudad?",
+     "model": "Sí, sobre todo en el centro."
+    }
+   ],
+   "gaps": "Con mi taxi. Es [pequeño] y [eléctrico]. No hace [ruido] y no [contamina].",
+   "glossary": [
+    {
+     "word": "maletas",
+     "meaning": "bolsas grandes para viajar"
+    },
+    {
+     "word": "eléctrico",
+     "meaning": "que funciona con electricidad"
+    },
+    {
+     "word": "contamina",
+     "meaning": "ensucia el aire"
+    },
+    {
+     "word": "limpio",
+     "meaning": "sin suciedad"
+    }
+   ]
+  }
+ ]
+}

@@ -13,6 +13,7 @@ const COUNTRIES=[
   {dir:'reino-unido-en-relieve',id:32,game:'uk',regions:['inglaterra','escocia','gales','irlanda-norte']},
   {dir:'irlanda-en-relieve',id:33,game:'irlanda',regions:['dublin','galway','kerry','cork']},
   {dir:'australia-en-movimiento',id:30,game:'australia',regions:['nueva-gales','victoria','queensland','outback']},
+  {dir:'suiza-en-relieve',id:29,game:'suiza',regions:['zurich','ginebra','tesino','alpes']},
 ];
 const LEVELS=['A0','A1','A2','B1'];
 const bi=(v,where)=>{assert.ok(v&&typeof v.es==='string'&&v.es.trim()&&typeof v.en==='string'&&v.en.trim(),`${where}: needs es and en`);};
