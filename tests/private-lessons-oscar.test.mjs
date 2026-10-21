@@ -4,6 +4,7 @@ import { readFileSync } from 'node:fs';
 
 const page = readFileSync(new URL('../app/private-lessons/oscar/page.tsx', import.meta.url), 'utf8');
 const seo = readFileSync(new URL('../app/seo.ts', import.meta.url), 'utf8');
+const layout = readFileSync(new URL('../app/layout.tsx', import.meta.url), 'utf8');
 
 test('private lesson offer has the agreed 4 × 30 USD package', () => {
   assert.match(page, /4 private lessons/);
@@ -32,4 +33,10 @@ test('SEO controls apply noindex to private lesson pages', () => {
   assert.match(page, /index: false/);
   assert.match(page, /follow: false/);
   assert.match(seo, /path\.startsWith\("\/private-lessons\/"\)/);
+});
+
+test('invite token does not travel to third-party analytics', () => {
+  assert.match(layout, /const privateLessonInvite = pathname\.startsWith\("\/private-lessons\/"\)/);
+  assert.match(layout, /!privateLessonInvite && <GoogleAnalytics \/>/);
+  assert.match(layout, /!privateLessonInvite && <MarketingAttribution/);
 });
