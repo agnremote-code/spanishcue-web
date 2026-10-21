@@ -65,8 +65,10 @@ export const REINO_UNIDO: CountryInfo = {
   ],
 };
 
-// Content and scenes download only when the student enters the nation.
-export const loadContent = (id: string): Promise<RegionContent> => ({
+// Content and scenes download only when the student enters the nation. They load only in
+// the browser: the server build (import.meta.env.SSR) drops these chunks, which keeps the
+// Worker bundle inside its memory budget (tests/worker-startup.test.mjs).
+export const loadContent = (id: string): Promise<RegionContent> => (import.meta as unknown as { env: { SSR: boolean } }).env.SSR ? Promise.reject(new Error('browser only')) : ({
   inglaterra: () => import('./contenido/inglaterra.mjs'),
   escocia: () => import('./contenido/escocia.mjs'),
   gales: () => import('./contenido/gales.mjs'),
