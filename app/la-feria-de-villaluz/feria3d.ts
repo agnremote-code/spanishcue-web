@@ -22,7 +22,10 @@ export type Fair = {
   people: () => number;
   /** Low mode: only the host of the open circle is a live (animated) person. */
   focus: (circleId: string | null) => void;
+  /** Everyone standing in the fair: the mascot bumps into them, never through. */
+  bodies: () => Body[];
 };
+export type Body = { key: string; x: number; z: number; body?: string; seed: number };
 
 const std = (color: string, roughness = 0.8, metalness = 0) => new THREE.MeshStandardMaterial({ color, roughness, metalness });
 const glow = (color: string, intensity = 1.6) => new THREE.MeshStandardMaterial({ color, emissive: color, emissiveIntensity: intensity, roughness: 0.4 });
@@ -267,20 +270,21 @@ export function buildFair(scene: THREE.Scene, opts: { low: boolean; shadows: boo
   }
 
   // The crowd: fewer people in low mode (§3), baked there (no idle motion).
-  const crowdPeople: { person: Person; x: number; z: number }[] = [];
+  const crowdPeople: { person: Person; x: number; z: number; body?: string; seed: number }[] = [];
   for (const p of crowd(low ? 10 : 24)) {
-    const person = makePerson(randomLook(p.seed), p.pose, false);
+    const look = randomLook(p.seed);
+    const person = makePerson(look, p.pose, false);
     person.root.position.set(p.x, 0, p.z);
     person.root.rotation.y = p.heading;
     if (low) animatePerson(person, 0, 0, false);
     root.add(person.root);
-    crowdPeople.push({ person, x: p.x, z: p.z });
+    crowdPeople.push({ person, x: p.x, z: p.z, body: look.body, seed: p.seed });
   }
 
   // Busca candidates.
   const busca = new THREE.Group();
   root.add(busca);
-  let candidates: { id: string; person: Person; label: THREE.Sprite; x: number; z: number }[] = [];
+  let candidates: { id: string; person: Person; label: THREE.Sprite; x: number; z: number; body?: string }[] = [];
   const found = new THREE.Mesh(new THREE.RingGeometry(0.55, 0.72, 40), new THREE.MeshBasicMaterial({ color: '#7dffb0', transparent: true, opacity: 0.95, depthWrite: false, toneMapped: false }));
   found.rotation.x = -Math.PI / 2;
   found.visible = false;
@@ -311,7 +315,7 @@ export function buildFair(scene: THREE.Scene, opts: { low: boolean; shadows: boo
       const label = numberSprite(p.n);
       label.position.set(p.x, (look.height ?? 1.7) + 0.55, p.z);
       busca.add(label);
-      candidates.push({ id: p.figure.id, person, label, x: p.x, z: p.z });
+      candidates.push({ id: p.figure.id, person, label, x: p.x, z: p.z, body: (look as unknown as Look).body });
     }
     if (low) {
       // One baked cluster (same look and pose, no idle motion): ~3 draw calls
@@ -395,5 +399,10 @@ export function buildFair(scene: THREE.Scene, opts: { low: boolean; shadows: boo
   }
   animate(0, 0, 0, 0);
 
-  return { spots, npcs, showBusca, reveal, animate, focus, people: () => npcs.length + crowdPeople.length + candidates.length };
+  const bodies = (): Body[] => [
+    ...npcs.map((n, i) => ({ key: `host-${n.id}`, x: n.x, z: n.z, body: HOSTS[n.id]?.body, seed: i * 7 + 3 })),
+    ...crowdPeople.map((c, i) => ({ key: `crowd-${i}`, x: c.x, z: c.z, body: c.body, seed: c.seed })),
+    ...candidates.map((c, i) => ({ key: `busca-${c.id}`, x: c.x, z: c.z, body: c.body, seed: i * 11 + 5 })),
+  ];
+  return { spots, npcs, showBusca, reveal, animate, focus, bodies, people: () => npcs.length + crowdPeople.length + candidates.length };
 }

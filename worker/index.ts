@@ -337,6 +337,9 @@ const app = {
       if(administrative) return noStoreRedirect(new URL('/cuenta',url),verifiedLocale);
       return noStoreRedirect(new URL(`/acceso?returnTo=${encodeURIComponent(pagePath+pageSearch(url))}`,url),verifiedLocale);
     }
+    // PRO visitors skip the free demos: answer before any page render.
+    const fullGame=fullAccess&&!rscPayload?({'/demo/noche-abierta':'/noche-abierta','/demo/hospital-san-casi-vivo':'/hospital-san-casi-vivo'} as Record<string,string>)[pathname]:undefined;
+    if(fullGame)return noStoreRedirect(new URL(fullGame,url),verifiedLocale,307);
     const accountId=accountIdFromHeaders(verifiedHeaders);
     if (accountId&&lesson&&!rscPayload&&request.method==='GET'&&!writeFreezeActive(env.SPANISHCUE_WRITE_FREEZE)) {
       ctx.waitUntil(saveLessonProgress(env.DB,accountId,lesson.id).catch(()=>undefined));

@@ -10,7 +10,7 @@ export type Player=Position&{vy:number;grounded:boolean;platform:string|null;che
 export type Session={version:number;level:Level;seed:number;seen:string[];discussed:string[];visited:CategoryId[];active:string|null;complete:boolean;finalIds:string[];finalDone:string[];personalized:boolean;micro:string[];summit?:boolean};
 export const LEVELS:Level[];export const CATEGORIES:Omit<Zone,'x'|'y'|'z'>[];export const ZONES:Zone[];export const PLATFORMS:Platform[];export const SPAWN:Position;export const STAGES:Stage[];
 export function stageAt(y:number):number;
-export const STEM_WIDTH:Record<string,number>;export const PROP_TOPS:Record<string,number>;export const OBSTACLES:Obstacle[];export const MICRO_SPOTS:MicroSpot[];export const PLAYER_RADIUS:number;
+export const STEM_WIDTH:Record<string,number>;export const PROP_TOPS:Record<string,number>;export const OBSTACLES:Obstacle[];export const MICRO_SPOTS:MicroSpot[];export const PLAYER_RADIUS:number;export const BODY_HEIGHT:number;export const CAP_DEPTH:number;
 export function stemRadiusOf(p:Platform):number;
 export function corridorClear(x:number,z:number,radius:number,y0:number,y1:number,margin?:number):boolean;
 export function resolveObstacles<T extends {x:number;y:number;z:number}>(p:T,obstacles?:Obstacle[]):T;

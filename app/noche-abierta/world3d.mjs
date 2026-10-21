@@ -280,6 +280,30 @@ function blocked(x, z, boxes, radius, bounds) {
   return boxes.some((b) => x > b.x0 - radius && x < b.x1 + radius && z > b.z0 - radius && z < b.z1 + radius);
 }
 
+// Where a body of `radius` overlapping a solid steps out: the nearest clear
+// spot, first just outside the faces of the boxes it is in, then on rings
+// around it. Returns the same point when it is already clear.
+export function escapeSolids(x, z, boxes, bounds = WORLD_BOUNDS, radius = PLAYER_RADIUS) {
+  if (!blocked(x, z, boxes, radius, bounds)) return { x, z };
+  const pad = radius + 0.002;
+  const candidates = [];
+  for (const b of boxes) {
+    if (!(x > b.x0 - radius && x < b.x1 + radius && z > b.z0 - radius && z < b.z1 + radius)) continue;
+    candidates.push({ x: b.x0 - pad, z }, { x: b.x1 + pad, z }, { x, z: b.z0 - pad }, { x, z: b.z1 + pad });
+  }
+  candidates.sort((a, c) => Math.hypot(a.x - x, a.z - z) - Math.hypot(c.x - x, c.z - z));
+  const face = candidates.find(c => !blocked(c.x, c.z, boxes, radius, bounds));
+  if (face) return face;
+  for (let r = 0.25; r <= 12; r += 0.25) {
+    for (let i = 0; i < 24; i++) {
+      const a = (i / 24) * Math.PI * 2;
+      const c = { x: x + Math.sin(a) * r, z: z + Math.cos(a) * r };
+      if (!blocked(c.x, c.z, boxes, radius, bounds)) return c;
+    }
+  }
+  return { x, z };
+}
+
 export function isWalkable(x, z, boxes = SOLIDS, bounds = WORLD_BOUNDS) {
   return !blocked(x, z, boxes, PLAYER_RADIUS, bounds);
 }
@@ -332,17 +356,10 @@ export function stepPlayer(player, input, dt, boxes = SOLIDS, bounds = WORLD_BOU
   vy -= 18 * step;
   if (y <= support) { y = support; vy = 0; }
   const activeBoxes = boxes.filter(b => b.top == null || y < b.top - 0.001);
-  // A moving car can enter the avatar's footprint. Resolve that overlap
-  // toward the nearest clear side instead of rejecting every escape step.
-  for (const b of activeBoxes) {
-    if (!b.vehicle || !contains(b, x, z)) continue;
-    const candidates = [
-      { x: b.x0 - PLAYER_RADIUS - 0.002, z }, { x: b.x1 + PLAYER_RADIUS + 0.002, z },
-      { x, z: b.z0 - PLAYER_RADIUS - 0.002 }, { x, z: b.z1 + PLAYER_RADIUS + 0.002 },
-    ].sort((a,c) => Math.hypot(a.x-x,a.z-z)-Math.hypot(c.x-x,c.z-z));
-    const clear = candidates.find(c => !blocked(c.x,c.z,activeBoxes,PLAYER_RADIUS,bounds));
-    if (clear) { x = clear.x; z = clear.z; }
-  }
+  // Nobody stays inside a solid: a moving car that runs into the avatar, a
+  // teleport or a saved spot that lands in furniture, a wall that appears.
+  // The avatar steps out to the nearest clear ground before moving.
+  ({ x, z } = escapeSolids(x, z, activeBoxes, bounds));
   if (!blocked(x + dx, z, activeBoxes, PLAYER_RADIUS, bounds)) x += dx;
   if (!blocked(x, z + dz, activeBoxes, PLAYER_RADIUS, bounds)) z += dz;
   const floor = boxes.reduce((h,b) => b.top != null && contains(b,x,z) && oldY >= (b.top ?? 1.6) - 0.001 ? Math.max(h,b.top ?? 1.6) : h, 0);
