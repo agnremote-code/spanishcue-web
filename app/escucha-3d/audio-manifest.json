@@ -2291,6 +2291,86 @@
    "seconds": 51.32,
    "src": "/audio/escucha-3d/suecia-b1-malmo.mp3"
   },
+  "suiza/a0-alpes": {
+   "hash": "e0480bbece4f1aa7fdb0",
+   "seconds": 30.58,
+   "src": "/audio/escucha-3d/suiza-a0-alpes.mp3"
+  },
+  "suiza/a0-ginebra": {
+   "hash": "fae26cefc2b6061c1975",
+   "seconds": 33.89,
+   "src": "/audio/escucha-3d/suiza-a0-ginebra.mp3"
+  },
+  "suiza/a0-tesino": {
+   "hash": "3514a42f0055d692446c",
+   "seconds": 26.69,
+   "src": "/audio/escucha-3d/suiza-a0-tesino.mp3"
+  },
+  "suiza/a0-zurich": {
+   "hash": "71f5921dd2db159162de",
+   "seconds": 32.33,
+   "src": "/audio/escucha-3d/suiza-a0-zurich.mp3"
+  },
+  "suiza/a1-alpes": {
+   "hash": "892646d153e1ef6aa92d",
+   "seconds": 43.56,
+   "src": "/audio/escucha-3d/suiza-a1-alpes.mp3"
+  },
+  "suiza/a1-ginebra": {
+   "hash": "bdfc1f38d0842259d3d8",
+   "seconds": 48.0,
+   "src": "/audio/escucha-3d/suiza-a1-ginebra.mp3"
+  },
+  "suiza/a1-tesino": {
+   "hash": "97f0e4a227b39a47f803",
+   "seconds": 46.44,
+   "src": "/audio/escucha-3d/suiza-a1-tesino.mp3"
+  },
+  "suiza/a1-zurich": {
+   "hash": "18edbd8aa6890121fc52",
+   "seconds": 45.89,
+   "src": "/audio/escucha-3d/suiza-a1-zurich.mp3"
+  },
+  "suiza/a2-alpes": {
+   "hash": "ae49e2b9d8b2ee3d5901",
+   "seconds": 55.31,
+   "src": "/audio/escucha-3d/suiza-a2-alpes.mp3"
+  },
+  "suiza/a2-ginebra": {
+   "hash": "3482290dbba45375adf7",
+   "seconds": 52.31,
+   "src": "/audio/escucha-3d/suiza-a2-ginebra.mp3"
+  },
+  "suiza/a2-tesino": {
+   "hash": "72bf7ecbe061b71dd092",
+   "seconds": 46.5,
+   "src": "/audio/escucha-3d/suiza-a2-tesino.mp3"
+  },
+  "suiza/a2-zurich": {
+   "hash": "ba6e6670d99966b81c28",
+   "seconds": 50.75,
+   "src": "/audio/escucha-3d/suiza-a2-zurich.mp3"
+  },
+  "suiza/b1-alpes": {
+   "hash": "1b81753168f44a89aa8a",
+   "seconds": 60.97,
+   "src": "/audio/escucha-3d/suiza-b1-alpes.mp3"
+  },
+  "suiza/b1-ginebra": {
+   "hash": "a7091128959343958fc8",
+   "seconds": 63.25,
+   "src": "/audio/escucha-3d/suiza-b1-ginebra.mp3"
+  },
+  "suiza/b1-tesino": {
+   "hash": "8f3dbf1f0eb3a5587318",
+   "seconds": 64.09,
+   "src": "/audio/escucha-3d/suiza-b1-tesino.mp3"
+  },
+  "suiza/b1-zurich": {
+   "hash": "e95fd2c747e583904042",
+   "seconds": 72.2,
+   "src": "/audio/escucha-3d/suiza-b1-zurich.mp3"
+  },
   "uk/a0-escocia": {
    "hash": "207b278ea2dac6bc3391",
    "seconds": 31.13,
