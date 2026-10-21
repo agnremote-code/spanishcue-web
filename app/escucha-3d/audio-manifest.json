@@ -1291,6 +1291,86 @@
    "seconds": 92.24,
    "src": "/audio/escucha-3d/hospital-c2-vip.mp3"
   },
+  "mexico/a0-cdmx": {
+   "hash": "dfd0916e7003c1c16c4b",
+   "seconds": 27.88,
+   "src": "/audio/escucha-3d-libre/mexico-a0-cdmx.mp3"
+  },
+  "mexico/a0-jalisco": {
+   "hash": "509287eea869bf137356",
+   "seconds": 28.84,
+   "src": "/audio/escucha-3d-libre/mexico-a0-jalisco.mp3"
+  },
+  "mexico/a0-oaxaca": {
+   "hash": "0dd4b939799e1365bf81",
+   "seconds": 28.74,
+   "src": "/audio/escucha-3d-libre/mexico-a0-oaxaca.mp3"
+  },
+  "mexico/a0-quintana-roo": {
+   "hash": "53c79f7f0fd1e910b0f8",
+   "seconds": 32.4,
+   "src": "/audio/escucha-3d-libre/mexico-a0-quintana-roo.mp3"
+  },
+  "mexico/a1-cdmx": {
+   "hash": "5ebcdf687e99c243ddeb",
+   "seconds": 31.34,
+   "src": "/audio/escucha-3d-libre/mexico-a1-cdmx.mp3"
+  },
+  "mexico/a1-jalisco": {
+   "hash": "4e37963596a84e0bd5f9",
+   "seconds": 41.59,
+   "src": "/audio/escucha-3d-libre/mexico-a1-jalisco.mp3"
+  },
+  "mexico/a1-oaxaca": {
+   "hash": "4f580c43479c8f8d42ec",
+   "seconds": 38.95,
+   "src": "/audio/escucha-3d-libre/mexico-a1-oaxaca.mp3"
+  },
+  "mexico/a1-quintana-roo": {
+   "hash": "c247aa75fd8556b2f550",
+   "seconds": 40.61,
+   "src": "/audio/escucha-3d-libre/mexico-a1-quintana-roo.mp3"
+  },
+  "mexico/a2-cdmx": {
+   "hash": "d458c6b52093c97bb6fe",
+   "seconds": 41.66,
+   "src": "/audio/escucha-3d-libre/mexico-a2-cdmx.mp3"
+  },
+  "mexico/a2-jalisco": {
+   "hash": "39f199f9f736458751bf",
+   "seconds": 44.58,
+   "src": "/audio/escucha-3d-libre/mexico-a2-jalisco.mp3"
+  },
+  "mexico/a2-oaxaca": {
+   "hash": "21f7832fc0a1ea485fef",
+   "seconds": 50.99,
+   "src": "/audio/escucha-3d-libre/mexico-a2-oaxaca.mp3"
+  },
+  "mexico/a2-quintana-roo": {
+   "hash": "b32007015451927761f7",
+   "seconds": 43.92,
+   "src": "/audio/escucha-3d-libre/mexico-a2-quintana-roo.mp3"
+  },
+  "mexico/b1-cdmx": {
+   "hash": "cb26d10a6c2806c88524",
+   "seconds": 54.83,
+   "src": "/audio/escucha-3d-libre/mexico-b1-cdmx.mp3"
+  },
+  "mexico/b1-jalisco": {
+   "hash": "20e044c5e943d9f57030",
+   "seconds": 50.16,
+   "src": "/audio/escucha-3d-libre/mexico-b1-jalisco.mp3"
+  },
+  "mexico/b1-oaxaca": {
+   "hash": "05e6b94945b008f7dc61",
+   "seconds": 53.25,
+   "src": "/audio/escucha-3d-libre/mexico-b1-oaxaca.mp3"
+  },
+  "mexico/b1-quintana-roo": {
+   "hash": "056a841b5ad2cba0f32f",
+   "seconds": 54.45,
+   "src": "/audio/escucha-3d-libre/mexico-b1-quintana-roo.mp3"
+  },
   "noche/a1-bar": {
    "hash": "c79e0049d2b83b224de5",
    "seconds": 36.59,
