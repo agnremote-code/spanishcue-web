@@ -19,7 +19,8 @@ function sameOrigin(request: Request): boolean {
   return Boolean(origin && origin === new URL(request.url).origin);
 }
 
-/** 3D conversation worlds that save «Con profesor» progress here too (36: Estados Unidos 3D, 210: México 3D). */
+/** 3D conversation worlds that save «Con profesor» progress here too: the eleven country worlds (36 Estados Unidos, 210 México,
+ *  24 Indonesia, 25 Israel, 29 Suiza, 30 Australia, 32 Reino Unido, 33 Irlanda, 227 Suecia, 228 Argentina, 229 España). */
 const WORLD_LESSON_IDS = new Set([36, 24, 25, 29, 30, 32, 33, 210, 227, 228, 229]);
 const lessonIdOf = (value: unknown) => (Number.isInteger(Number(value)) && (getLiveLessonInfo(Number(value)) || WORLD_LESSON_IDS.has(Number(value))) ? Number(value) : null);
 const studentIdOf = (value: unknown) => (typeof value === "string" && /^[A-Za-z0-9-]{1,64}$/.test(value) ? value : null);
