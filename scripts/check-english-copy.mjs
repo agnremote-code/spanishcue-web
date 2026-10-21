@@ -104,6 +104,7 @@ export const APPROVAL_MANIFESTS = [
   'docs/audits/autoestudio-bilingual-english-additions-20261020.json',
   'docs/audits/estados-unidos-3d-english-additions-20261021.json',
   'docs/audits/home-free-classes-english-20261021.json',
+  'docs/audits/paises-3d-english-additions-20261021.json',
 ];
 export function loadApprovedAdditions(root) {
   return APPROVAL_MANIFESTS.flatMap(path => {
