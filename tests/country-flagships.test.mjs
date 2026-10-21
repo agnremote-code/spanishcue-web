@@ -48,7 +48,7 @@ test("México and United States are the two free conversation flagships", () => 
       title: "ESTADOS UNIDOS",
       path: "/estados-unidos-a2-b1",
       level: "A2",
-      levels: ["A2", "B1"],
+      levels: ["A0", "A1", "A2", "B1"],
     },
   );
 });

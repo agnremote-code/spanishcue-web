@@ -16321,6 +16321,18 @@
     {
       "path": "app/estados-unidos-a2-b1/mundo/contenido/texas.mjs",
       "text": "Share the food out equally, the newborn first."
+    },
+    {
+      "path": "app/resources/[slug]/page.tsx",
+      "text": "A free SpanishCue lesson"
+    },
+    {
+      "path": "app/resources/[slug]/page.tsx",
+      "text": "A SpanishCue PRO lesson"
+    },
+    {
+      "path": "app/resources/[slug]/page.tsx",
+      "text": ". This page shows the premise, the objectives and a warm-up question; the scenes, dialogues and listenings stay inside the lesson."
     }
   ]
 }

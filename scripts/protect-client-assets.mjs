@@ -122,6 +122,16 @@ const publicRoots = new Set([
   "app/cuenta/modules/History.tsx",
   "app/cuenta/modules/Favorites.tsx",
   "app/LogoutButton.tsx",
+  // Estados Unidos 3D is the FREE country flagship (ID 36): its world, scenes,
+  // conversations, US listenings and the 50-state atlas load on demand, so
+  // the static walk from its page does not reach them.
+  "app/mundo-3d/World3D.tsx",
+  "app/estados-unidos-a2-b1/Atlas.tsx",
+  ...["florida", "nueva-york", "california", "texas", "hawai", "colorado"].flatMap((state) => [
+    `app/estados-unidos-a2-b1/mundo/contenido/${state}.mjs`,
+    `app/estados-unidos-a2-b1/mundo/escenas/${state}3d.ts`,
+  ]),
+  ...["a0", "a1", "a2", "b1"].map((level) => `app/escucha-3d/content/usa/${level}.json`),
   "app/i18n/LanguageSwitcher.tsx",
   "virtual:vinext-app-browser-entry",
   ...Object.keys(manifest).filter((key) => /(^|\/)node_modules\//.test(key)),
@@ -143,7 +153,12 @@ function visit(key) {
   for (const css of item.css ?? []) publicFiles.add(css);
   for (const dependency of item.imports ?? []) visit(dependency);
 }
-for (const key of publicRoots) visit(key);
+for (const key of publicRoots) {
+  if (key.startsWith("app/estados-unidos-a2-b1/") || key.startsWith("app/mundo-3d/") || key.startsWith("app/escucha-3d/content/usa/")) {
+    if (!manifest[key]) throw new Error(`Free United States chunk missing from the build manifest: ${key}`);
+  }
+  visit(key);
+}
 
 // Test the actual multi-entry build graph, not only an isolated tree-shaken
 // demo bundle: mixed geometry/content modules can become shared public chunks.

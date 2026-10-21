@@ -40,6 +40,9 @@ export const GAMES = {
     spots: ['florida', 'nueva-york', 'california', 'texas', 'hawai', 'colorado'],
     ownListening: true,
     bilingualA0: true,
+    // A FREE lesson (ID 36): its clips live in /audio/escucha-3d-libre, a
+    // public prefix (app/access-policy.ts freeAudioPrefixes), not encrypted.
+    freeAudio: true,
   },
   // La feria de Villaluz (A2): every circle has its own listening, and each
   // character keeps one voice (app/la-feria-de-villaluz/levels/a2.mjs CAST).
@@ -57,7 +60,9 @@ export const WORDS = { A0: [20, 50], A1: [40, 80], A2: [70, 120], B1: [100, 160]
 // Slower voices for the first levels.
 export const RATE = { A0: '-22%', A1: '-14%', A2: '-7%', B1: '-3%', B2: '+0%', C1: '+0%', C2: '+4%' };
 
-export const audioSrc = (game, level, id) => `/audio/escucha-3d/${game}-${level.toLowerCase()}-${id}.mp3`;
+/** Audio folder of a game: FREE lessons use the public `escucha-3d-libre` prefix. */
+export const audioDir = game => (GAMES[game]?.freeAudio ? 'escucha-3d-libre' : 'escucha-3d');
+export const audioSrc = (game, level, id) => `/audio/${audioDir(game)}/${game}-${level.toLowerCase()}-${id}.mp3`;
 
 /** The listening for a circle: its own one, else the first unfinished one
  * (never in a strict game, where every circle owns its listening). */
