@@ -32,6 +32,15 @@ export const GAMES = {
     ownListening: true,
     bilingualA0: true,
   },
+  // Estados Unidos 3D: every state has its own listening at each level; any
+  // circle of that state opens it (app/estados-unidos-a2-b1/mundo).
+  usa: {
+    title: 'Estados Unidos',
+    levels: ['A0', 'A1', 'A2', 'B1'],
+    spots: ['florida', 'nueva-york', 'california', 'texas', 'hawai', 'colorado'],
+    ownListening: true,
+    bilingualA0: true,
+  },
 };
 
 // Transcript length in words for each level.
