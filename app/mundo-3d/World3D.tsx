@@ -539,7 +539,7 @@ export default function World3D(props: WorldProps) {
         region.bubbles.update(clock);
         region.exitVeil.rotation.y = 0;
         (region.exitVeil.material as THREE.MeshBasicMaterial).opacity = 0.2 + Math.sin(clock * 2.4) * 0.1;
-        for (const [, ring] of region.rings) ring.gem.rotation.y += dt * 1.6, ring.gem.position.y = 2.5 + Math.sin(clock * 2) * 0.12;
+        for (const [, ring] of region.rings) { ring.gem.rotation.y += dt * 1.6; ring.gem.position.y = 2.5 + Math.sin(clock * 2) * 0.12; }
         for (const tk of region.scene.talkers) {
           const talking = Boolean(p.spotOpen && tk.spot === p.spotOpen);
           const dx = player.x - tk.x, dz = player.z - tk.z, d = Math.hypot(dx, dz), facing = Math.atan2(dx, dz);

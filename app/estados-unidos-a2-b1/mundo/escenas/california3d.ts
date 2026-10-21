@@ -6,7 +6,7 @@
 import * as THREE from 'three';
 import {
   addPalm, box, cylinder, extra, glow, ground, groundTexture, labelTexture, lightPool, makeCar, makeWalker, muralTexture,
-  panel, placeVehicle, random, sign, solid, spotWith, streetLamp, tileTexture, umbrella, water, windowsTexture,
+  panel, placeVehicle, random, sign, solid, spotWith, streetLamp, tileTexture, umbrella, water,
   type Box, type SceneBuilder, type SpotPlace, type Talker, type Walker,
 } from '../../../mundo-3d/kit3d';
 
@@ -78,7 +78,7 @@ const build: SceneBuilder = ({ low, shadows }) => {
   // ---------------------------------------------------------- the boulevard, the overpass, the taco truck
   const overpass = new THREE.Group();
   overpass.add(box(10, 1.2, 14, solid('#b7b0a3', 0.9), 0, 7.4, 0));
-  for (const s of [-4, 4]) overpass.add(box(1.4, 7, 1.4, solid('#a9a295', 0.9), s, 3.5, -6)), overpass.add(box(1.4, 7, 1.4, solid('#a9a295', 0.9), s, 3.5, 6));
+  for (const s of [-4, 4]) overpass.add(box(1.4, 7, 1.4, solid('#a9a295', 0.9), s, 3.5, -6), box(1.4, 7, 1.4, solid('#a9a295', 0.9), s, 3.5, 6));
   overpass.rotation.y = Math.PI / 2; overpass.position.set(20, 0, 0); group.add(overpass);
   for (const [x, z] of [[14, -4], [14, 4], [26, -4], [26, 4]]) solidBox(x - 0.7, z - 0.7, x + 0.7, z + 0.7);
   // Green freeway signs: the four parts of this walk.

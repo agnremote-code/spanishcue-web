@@ -4,7 +4,7 @@
 // straight to one. Each island carries the real outline of its region in
 // relief and a small landmark, and a gate that opens its zone.
 import * as THREE from 'three';
-import { box, canvas, cylinder, glow, random, solid, addPalm, addTree } from './kit3d';
+import { box, canvas, cylinder, glow, random, solid, addPalm } from './kit3d';
 import type { Box } from './kit3d';
 import type { CountryInfo, RegionInfo } from './types';
 

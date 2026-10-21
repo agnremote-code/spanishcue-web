@@ -165,7 +165,11 @@
   .mw-hud { padding: 8px 10px; }
   .mw-hud-right { gap: .25rem; max-width: 62vw; }
   .mw-hud-right > button, .mw-level-pick select, .mw-progress { padding: .36rem .55rem; font-size: .76rem; }
-  .mw-hud .mw-mode { display: none; }
+  .mw-hud .mw-mode { order: 9; }
+  .mw-hud .mw-mode button { padding: .3rem .45rem; display: flex; align-items: center; gap: .3rem; text-align: left; }
+  .mw-hud .mw-mode b { font-size: .7rem; }
+  /* The listening badge (portaled to body) sits under the taller HUD. */
+  body:has(.mw-hud) .e3-badge.e3-badge { top: 156px; }
 }
 @media (max-width: 720px) {
   .mw-levels { grid-template-columns: repeat(2, minmax(0, 1fr)); }

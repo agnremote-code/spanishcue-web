@@ -54,7 +54,7 @@ export default function CountryGame({ country, rings, loadContent, loadScene, li
   const [landed, setLanded] = useState(false);
   const [contents, setContents] = useState<Record<string, RegionContent>>({});
   const [spotOpen, setSpotOpen] = useState<string | null>(null);
-  const [pendingSpot, setPendingSpot] = useState<string | null>(null);
+  const [, setPendingSpot] = useState<string | null>(null);
   const [near, setNear] = useState<Near>(null);
   const [act, setAct] = useState(0);
   const [pose, setPose] = useState<Pose | null>(null);
@@ -103,7 +103,7 @@ export default function CountryGame({ country, rings, loadContent, loadScene, li
   }, [progress, ready, remote, key]);
   // «Con profesor» with a student: that student's progress lives in the teacher's account.
   useEffect(() => {
-    if (!ready || !remote || !studentId) { loadedFor.current = null; if (ready && !remote) setSync('local'); return; }
+    if (!ready || !remote || !studentId) { loadedFor.current = null; return; }
     if (loadedFor.current === studentId) return;
     let alive = true;
     setSync('loading');
@@ -245,7 +245,7 @@ export default function CountryGame({ country, rings, loadContent, loadScene, li
           </div>
           <ModeSwitch mode={mode} onChange={switchMode} />
         </div>
-        {teaching === 'profesor' && <div className="mw-studentbar"><StudentBar lessonId={country.lessonId} level={level} studentId={studentId} onSelect={selectStudent} onReset={() => setProgress(p => resetLevel(p))} sync={sync} /></div>}
+        {teaching === 'profesor' && <div className="mw-studentbar"><StudentBar lessonId={country.lessonId} level={level} studentId={studentId} onSelect={selectStudent} onReset={() => setProgress(p => resetLevel(p))} sync={remote ? sync : 'local'} /></div>}
         <p className="mw-help">Flechas o WASD para caminar · Espacio para saltar · Shift para correr · N para el nitro · E para entrar y hablar. En el móvil: joystick y botones. La intro dura unos 14 segundos y se puede omitir.</p>
         {extra}
       </div>
