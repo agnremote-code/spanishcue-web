@@ -9,7 +9,8 @@ import { availableLevels, groupLessonsByLevel } from '../app/library-filters.mjs
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const publicLevels = ['A0', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
-const movedLessonIds = [16, 19, 24, 26, 27, 38, 201];
+// Indonesia (24) left this list in 2026-10-21: its 3D world has a genuinely authored A0.
+const movedLessonIds = [16, 19, 26, 27, 38, 201];
 const lessons = JSON.parse(execFileSync(process.execPath, [
   '--import', 'tsx', '--input-type=module', '--eval',
   "import { lessons } from './app/lesson-catalog.ts'; console.log(JSON.stringify(lessons));",
@@ -26,19 +27,19 @@ test('all former A0 lessons are A1 without A0 metadata', () => {
   }
   for (const lesson of lessons) {
     assert.ok(publicLevels.includes(lesson.level), `lesson ${lesson.id} has level ${lesson.level}`);
-    assert.equal(Boolean(lesson.levels?.includes('A0')), [29,30,32,33,36,210,223,226,227,228,229,236,237,238,240].includes(lesson.id), `lesson ${lesson.id}: A0 only when authored`);
+    assert.equal(Boolean(lesson.levels?.includes('A0')), [24,25,29,30,32,33,36,210,223,226,227,228,229,236,237,238,240].includes(lesson.id), `lesson ${lesson.id}: A0 only when authored`);
   }
 });
 
 test('A0 appears in filters only for the explicitly authored lessons', () => {
   assert.deepEqual(availableLevels(lessons), publicLevels);
   assert.deepEqual(groupLessonsByLevel(lessons).map(({ level }) => level), publicLevels);
-  assert.equal(lessons.filter(l=>l.levels?.includes('A0')).length,15);
+  assert.equal(lessons.filter(l=>l.levels?.includes('A0')).length,17);
 });
 
 test('A1 has the merged total and pedagogical route order', () => {
   const a1Lessons = lessons.filter((lesson) => lesson.level === 'A1' || lesson.levels?.includes('A1'));
-  assert.equal(a1Lessons.length, 74);
+  assert.equal(a1Lessons.length, 75);
   assert.ok(a1Lessons.some(lesson => lesson.id === 32), 'Reino Unido offers an A1 route');
   const idsFor = (category) => lessons.filter((lesson) => lesson.category === category)
     .sort((a, b) => a.routeSequence - b.routeSequence).map((lesson) => lesson.id);

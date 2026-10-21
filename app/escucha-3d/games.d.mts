@@ -1,4 +1,4 @@
-export const GAMES: Record<'noche' | 'casino' | 'bosque' | 'reino' | 'hospital' | 'usa' | 'mexico' | 'argentina' | 'espana' | 'suecia' | 'uk' | 'irlanda' | 'australia' | 'suiza' | 'feria', { title: string; levels: string[]; spots: string[]; ownListening?: boolean; bilingualA0?: boolean; freeAudio?: boolean }>;
+export const GAMES: Record<'noche' | 'casino' | 'bosque' | 'reino' | 'hospital' | 'usa' | 'mexico' | 'argentina' | 'espana' | 'suecia' | 'uk' | 'irlanda' | 'australia' | 'suiza' | 'israel' | 'indonesia' | 'feria', { title: string; levels: string[]; spots: string[]; ownListening?: boolean; bilingualA0?: boolean; freeAudio?: boolean }>;
 export const WORDS: Record<string, [number, number]>;
 export const RATE: Record<string, string>;
 export function audioSrc(game: string, level: string, id: string): string;

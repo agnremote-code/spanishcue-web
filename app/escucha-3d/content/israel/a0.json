@@ -1,0 +1,518 @@
+{
+ "game": "israel",
+ "level": "A0",
+ "items": [
+  {
+   "id": "tel-aviv",
+   "title": "Un jugo en la playa",
+   "place": "La playa de Gordon",
+   "context": "Lucía, de México, pide un jugo. Yoni trabaja en un quiosco.",
+   "contextEn": "Lucía, from Mexico, orders a juice. Yoni works at a kiosk.",
+   "speakers": [
+    {
+     "name": "Yoni",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    },
+    {
+     "name": "Lucía",
+     "country": "México",
+     "voice": "es-MX-DaliaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "¡Hola! ¿Qué quieres?",
+     "en": "Hello! What would you like?"
+    },
+    {
+     "s": 1,
+     "text": "Un jugo de naranja, por favor.",
+     "en": "An orange juice, please."
+    },
+    {
+     "s": 0,
+     "text": "¿Grande o pequeño?",
+     "en": "Big or small?"
+    },
+    {
+     "s": 1,
+     "text": "Grande. Hace mucho calor.",
+     "en": "Big. It is very hot."
+    },
+    {
+     "s": 0,
+     "text": "Sí. Son veinte shekels.",
+     "en": "Yes. That is twenty shekels."
+    },
+    {
+     "s": 1,
+     "text": "Aquí tienes. ¡Gracias!",
+     "en": "Here you are. Thank you!"
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué pide Lucía?",
+     "qEn": "What does Lucía order?",
+     "options": [
+      "Un jugo",
+      "Un café",
+      "Un helado"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿De qué es el jugo?",
+     "qEn": "What is the juice made of?",
+     "options": [
+      "De limón",
+      "De naranja",
+      "De manzana"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿De qué tamaño?",
+     "qEn": "What size?",
+     "options": [
+      "Pequeño",
+      "Mediano",
+      "Grande"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué tiempo hace?",
+     "qEn": "What is the weather like?",
+     "options": [
+      "Hace calor",
+      "Hace frío",
+      "Llueve"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Te gustan los jugos?",
+     "qEn": "Do you like juices?",
+     "model": "Sí, de naranja."
+    },
+    {
+     "q": "¿Vas a la playa?",
+     "qEn": "Do you go to the beach?",
+     "model": "Sí, en verano."
+    },
+    {
+     "q": "¿Hace calor en tu ciudad?",
+     "qEn": "Is it hot in your city?",
+     "model": "Sí, mucho."
+    }
+   ],
+   "gaps": "[Grande]. [Hace] [mucho] [calor].",
+   "glossary": [
+    {
+     "word": "jugo",
+     "meaning": "bebida de fruta",
+     "en": "juice"
+    },
+    {
+     "word": "grande",
+     "meaning": "no pequeño",
+     "en": "big"
+    },
+    {
+     "word": "calor",
+     "meaning": "mucha temperatura",
+     "en": "heat"
+    }
+   ]
+  },
+  {
+   "id": "jerusalen",
+   "title": "Pan con sésamo",
+   "place": "La Ciudad Vieja de Jerusalén",
+   "context": "Mateo, de Uruguay, compra pan. Elías vende pan en la calle.",
+   "contextEn": "Mateo, from Uruguay, buys bread. Elías sells bread on the street.",
+   "speakers": [
+    {
+     "name": "Elías",
+     "country": "Colombia",
+     "voice": "es-CO-GonzaloNeural"
+    },
+    {
+     "name": "Mateo",
+     "country": "Uruguay",
+     "voice": "es-UY-MateoNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "¡Pan caliente! ¡Pan con sésamo!",
+     "en": "Hot bread! Bread with sesame!"
+    },
+    {
+     "s": 1,
+     "text": "Hola. ¿Cuánto cuesta un pan?",
+     "en": "Hello. How much is one bread?"
+    },
+    {
+     "s": 0,
+     "text": "Cinco shekels. Es muy rico.",
+     "en": "Five shekels. It is very tasty."
+    },
+    {
+     "s": 1,
+     "text": "Quiero dos, por favor.",
+     "en": "I want two, please."
+    },
+    {
+     "s": 0,
+     "text": "¿Con sal o sin sal?",
+     "en": "With salt or without salt?"
+    },
+    {
+     "s": 1,
+     "text": "Con sal. ¡Gracias!",
+     "en": "With salt. Thank you!"
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué vende Elías?",
+     "qEn": "What does Elías sell?",
+     "options": [
+      "Fruta",
+      "Pan",
+      "Agua"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cuánto cuesta un pan?",
+     "qEn": "How much is one bread?",
+     "options": [
+      "Diez shekels",
+      "Dos shekels",
+      "Cinco shekels"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuántos quiere Mateo?",
+     "qEn": "How many does Mateo want?",
+     "options": [
+      "Dos",
+      "Uno",
+      "Tres"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cómo lo quiere?",
+     "qEn": "How does he want it?",
+     "options": [
+      "Sin sal",
+      "Con sal",
+      "Con azúcar"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Comes pan?",
+     "qEn": "Do you eat bread?",
+     "model": "Sí, todos los días."
+    },
+    {
+     "q": "¿Te gusta el sésamo?",
+     "qEn": "Do you like sesame?",
+     "model": "Sí, mucho."
+    },
+    {
+     "q": "¿Compras en la calle?",
+     "qEn": "Do you buy on the street?",
+     "model": "A veces."
+    }
+   ],
+   "gaps": "[Cinco] [shekels]. [Es] muy [rico].",
+   "glossary": [
+    {
+     "word": "pan",
+     "meaning": "comida de harina",
+     "en": "bread"
+    },
+    {
+     "word": "caliente",
+     "meaning": "con temperatura alta",
+     "en": "hot"
+    },
+    {
+     "word": "sal",
+     "meaning": "polvo blanco para la comida",
+     "en": "salt"
+    }
+   ]
+  },
+  {
+   "id": "norte",
+   "title": "Un plato de hummus",
+   "place": "Un restaurante en Akko",
+   "context": "Camila, de Perú, come hummus. Ahmad es cocinero.",
+   "contextEn": "Camila, from Peru, eats hummus. Ahmad is a cook.",
+   "speakers": [
+    {
+     "name": "Ahmad",
+     "country": "Puerto Rico",
+     "voice": "es-PR-VictorNeural"
+    },
+    {
+     "name": "Camila",
+     "country": "Perú",
+     "voice": "es-PE-CamilaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Aquí tienes. Hummus con pan.",
+     "en": "Here you are. Hummus with bread."
+    },
+    {
+     "s": 1,
+     "text": "¡Qué bien huele! ¿Qué tiene?",
+     "en": "It smells so good! What is in it?"
+    },
+    {
+     "s": 0,
+     "text": "Garbanzos, limón y aceite.",
+     "en": "Chickpeas, lemon and oil."
+    },
+    {
+     "s": 1,
+     "text": "¿Con cuchara o con pan?",
+     "en": "With a spoon or with bread?"
+    },
+    {
+     "s": 0,
+     "text": "Con pan. Así, mira.",
+     "en": "With bread. Like this, look."
+    },
+    {
+     "s": 1,
+     "text": "¡Mmm! Está buenísimo.",
+     "en": "Mmm! It is delicious."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué come Camila?",
+     "qEn": "What does Camila eat?",
+     "options": [
+      "Pizza",
+      "Sopa",
+      "Hummus"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué tiene el hummus?",
+     "qEn": "What is in the hummus?",
+     "options": [
+      "Garbanzos",
+      "Arroz",
+      "Carne"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cómo se come?",
+     "qEn": "How do you eat it?",
+     "options": [
+      "Con cuchara",
+      "Con pan",
+      "Con tenedor"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cómo está el hummus?",
+     "qEn": "How is the hummus?",
+     "options": [
+      "Frío",
+      "Malo",
+      "Buenísimo"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Te gustan los garbanzos?",
+     "qEn": "Do you like chickpeas?",
+     "model": "Sí, mucho."
+    },
+    {
+     "q": "¿Comes con la mano?",
+     "qEn": "Do you eat with your hands?",
+     "model": "A veces."
+    },
+    {
+     "q": "¿Cocinas?",
+     "qEn": "Do you cook?",
+     "model": "Sí, los domingos."
+    }
+   ],
+   "gaps": "[Garbanzos], [limón] [y] [aceite].",
+   "glossary": [
+    {
+     "word": "garbanzos",
+     "meaning": "legumbre redonda",
+     "en": "chickpeas"
+    },
+    {
+     "word": "limón",
+     "meaning": "fruta amarilla y ácida",
+     "en": "lemon"
+    },
+    {
+     "word": "aceite",
+     "meaning": "líquido para cocinar",
+     "en": "oil"
+    }
+   ]
+  },
+  {
+   "id": "sur",
+   "title": "Flotar en el agua",
+   "place": "El mar Muerto",
+   "context": "Andrés, de Guatemala, entra en el agua. Olga es socorrista.",
+   "contextEn": "Andrés, from Guatemala, goes into the water. Olga is a lifeguard.",
+   "speakers": [
+    {
+     "name": "Olga",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    },
+    {
+     "name": "Andrés",
+     "country": "Guatemala",
+     "voice": "es-GT-AndresNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "¡Hola! No mojes los ojos, por favor.",
+     "en": "Hello! Don’t get your eyes wet, please."
+    },
+    {
+     "s": 1,
+     "text": "¿Por qué?",
+     "en": "Why?"
+    },
+    {
+     "s": 0,
+     "text": "El agua tiene mucha sal. Pica.",
+     "en": "The water has a lot of salt. It stings."
+    },
+    {
+     "s": 1,
+     "text": "¡Oh! ¡Floto! ¡No me hundo!",
+     "en": "Oh! I am floating! I don’t sink!"
+    },
+    {
+     "s": 0,
+     "text": "Sí. Aquí todos flotan.",
+     "en": "Yes. Here everyone floats."
+    },
+    {
+     "s": 1,
+     "text": "¡Es increíble!",
+     "en": "It is incredible!"
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Quién es Olga?",
+     "qEn": "Who is Olga?",
+     "options": [
+      "Una socorrista",
+      "Una cocinera",
+      "Una guía"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué tiene el agua?",
+     "qEn": "What does the water have?",
+     "options": [
+      "Mucho azúcar",
+      "Mucha sal",
+      "Mucho hielo"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué no debe mojar Andrés?",
+     "qEn": "What must Andrés not get wet?",
+     "options": [
+      "Las manos",
+      "Los pies",
+      "Los ojos"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué hace Andrés en el agua?",
+     "qEn": "What does Andrés do in the water?",
+     "options": [
+      "Nada rápido",
+      "Se hunde",
+      "Flota"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Sabes nadar?",
+     "qEn": "Can you swim?",
+     "model": "Sí, un poco."
+    },
+    {
+     "q": "¿Te gusta el mar?",
+     "qEn": "Do you like the sea?",
+     "model": "Sí, mucho."
+    },
+    {
+     "q": "¿Hay sal en tu mesa?",
+     "qEn": "Is there salt on your table?",
+     "model": "Sí, siempre."
+    }
+   ],
+   "gaps": "[Sí]. [Aquí] [todos] [flotan].",
+   "glossary": [
+    {
+     "word": "flotan",
+     "meaning": "se quedan arriba del agua",
+     "en": "they float"
+    },
+    {
+     "word": "sal",
+     "meaning": "polvo blanco del mar",
+     "en": "salt"
+    },
+    {
+     "word": "ojos",
+     "meaning": "partes de la cara para ver",
+     "en": "eyes"
+    }
+   ]
+  }
+ ]
+}

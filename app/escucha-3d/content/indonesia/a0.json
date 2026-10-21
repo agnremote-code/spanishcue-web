@@ -1,0 +1,518 @@
+{
+ "game": "indonesia",
+ "level": "A0",
+ "items": [
+  {
+   "id": "bali",
+   "title": "Una flor para ti",
+   "place": "Una calle de Bali",
+   "context": "Valentina, de Uruguay, ve una cesta pequeña en el suelo. Ketut hace ofrendas.",
+   "contextEn": "Valentina, from Uruguay, sees a small basket on the ground. Ketut makes offerings.",
+   "speakers": [
+    {
+     "name": "Ketut",
+     "country": "Costa Rica",
+     "voice": "es-CR-MariaNeural"
+    },
+    {
+     "name": "Valentina",
+     "country": "Uruguay",
+     "voice": "es-UY-ValentinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "¡Cuidado! No pises la ofrenda.",
+     "en": "Careful! Don’t step on the offering."
+    },
+    {
+     "s": 1,
+     "text": "¡Perdón! ¿Qué es?",
+     "en": "Sorry! What is it?"
+    },
+    {
+     "s": 0,
+     "text": "Es una cesta con flores y arroz.",
+     "en": "It is a basket with flowers and rice."
+    },
+    {
+     "s": 1,
+     "text": "¿Para quién es?",
+     "en": "Who is it for?"
+    },
+    {
+     "s": 0,
+     "text": "Para los dioses. Hago tres cada día.",
+     "en": "For the gods. I make three every day."
+    },
+    {
+     "s": 1,
+     "text": "¡Qué bonita!",
+     "en": "How pretty!"
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué hay en el suelo?",
+     "qEn": "What is on the ground?",
+     "options": [
+      "Una ofrenda",
+      "Una mochila",
+      "Un gato"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué tiene la cesta?",
+     "qEn": "What does the basket have?",
+     "options": [
+      "Fruta y pan",
+      "Flores y arroz",
+      "Agua"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Para quién es?",
+     "qEn": "Who is it for?",
+     "options": [
+      "Para los turistas",
+      "Para los niños",
+      "Para los dioses"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuántas hace Ketut cada día?",
+     "qEn": "How many does Ketut make each day?",
+     "options": [
+      "Tres",
+      "Diez",
+      "Una"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Te gustan las flores?",
+     "qEn": "Do you like flowers?",
+     "model": "Sí, mucho."
+    },
+    {
+     "q": "¿Comes arroz?",
+     "qEn": "Do you eat rice?",
+     "model": "Sí, todos los días."
+    },
+    {
+     "q": "¿Qué haces cada día?",
+     "qEn": "What do you do every day?",
+     "model": "Tomo café."
+    }
+   ],
+   "gaps": "[Es] una [cesta] con [flores] y [arroz].",
+   "glossary": [
+    {
+     "word": "cesta",
+     "meaning": "caja pequeña de hojas",
+     "en": "basket"
+    },
+    {
+     "word": "flores",
+     "meaning": "partes bonitas de las plantas",
+     "en": "flowers"
+    },
+    {
+     "word": "dioses",
+     "meaning": "seres de la religión",
+     "en": "gods"
+    }
+   ]
+  },
+  {
+   "id": "java",
+   "title": "Un batik azul",
+   "place": "Un taller de batik en Yogyakarta",
+   "context": "Jorge, de México, compra un batik. Sri es artesana.",
+   "contextEn": "Jorge, from Mexico, buys a batik. Sri is an artisan.",
+   "speakers": [
+    {
+     "name": "Sri",
+     "country": "Nicaragua",
+     "voice": "es-NI-YolandaNeural"
+    },
+    {
+     "name": "Jorge",
+     "country": "México",
+     "voice": "es-MX-JorgeNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Hola. Esta tela es batik. Es de Java.",
+     "en": "Hello. This fabric is batik. It is from Java."
+    },
+    {
+     "s": 1,
+     "text": "¿Es hecha a mano?",
+     "en": "Is it handmade?"
+    },
+    {
+     "s": 0,
+     "text": "Sí. Tardo un mes.",
+     "en": "Yes. It takes me a month."
+    },
+    {
+     "s": 1,
+     "text": "Me gusta la azul. ¿Cuánto cuesta?",
+     "en": "I like the blue one. How much is it?"
+    },
+    {
+     "s": 0,
+     "text": "Cuesta cincuenta dólares.",
+     "en": "It costs fifty dollars."
+    },
+    {
+     "s": 1,
+     "text": "Muy bien. ¡La compro!",
+     "en": "Very good. I will buy it!"
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿De dónde es el batik?",
+     "qEn": "Where is batik from?",
+     "options": [
+      "De Bali",
+      "De Java",
+      "De Sumatra"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cuánto tarda Sri?",
+     "qEn": "How long does Sri take?",
+     "options": [
+      "Un día",
+      "Un año",
+      "Un mes"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué color le gusta a Jorge?",
+     "qEn": "Which colour does Jorge like?",
+     "options": [
+      "El azul",
+      "El rojo",
+      "El verde"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cuánto cuesta?",
+     "qEn": "How much is it?",
+     "options": [
+      "Diez dólares",
+      "Cincuenta dólares",
+      "Cien dólares"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Tienes ropa hecha a mano?",
+     "qEn": "Do you have handmade clothes?",
+     "model": "Sí, una bufanda."
+    },
+    {
+     "q": "¿Te gusta el azul?",
+     "qEn": "Do you like blue?",
+     "model": "Sí, mucho."
+    },
+    {
+     "q": "¿Compras recuerdos?",
+     "qEn": "Do you buy souvenirs?",
+     "model": "A veces."
+    }
+   ],
+   "gaps": "Me [gusta] la [azul]. ¿[Cuánto] [cuesta]?",
+   "glossary": [
+    {
+     "word": "tela",
+     "meaning": "material para hacer ropa",
+     "en": "fabric"
+    },
+    {
+     "word": "mano",
+     "meaning": "parte del cuerpo con cinco dedos",
+     "en": "hand"
+    },
+    {
+     "word": "tardo",
+     "meaning": "necesito tiempo",
+     "en": "it takes me"
+    }
+   ]
+  },
+  {
+   "id": "sumatra",
+   "title": "Un orangután arriba",
+   "place": "La selva de Bukit Lawang",
+   "context": "Karla, de Honduras, camina por la selva. Rahmat es guardabosques.",
+   "contextEn": "Karla, from Honduras, walks through the jungle. Rahmat is a forest ranger.",
+   "speakers": [
+    {
+     "name": "Rahmat",
+     "country": "Perú",
+     "voice": "es-PE-AlexNeural"
+    },
+    {
+     "name": "Karla",
+     "country": "Honduras",
+     "voice": "es-HN-KarlaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Silencio, por favor. Mira arriba.",
+     "en": "Quiet, please. Look up."
+    },
+    {
+     "s": 1,
+     "text": "¡Un orangután! ¡Es enorme!",
+     "en": "An orangutan! It is huge!"
+    },
+    {
+     "s": 0,
+     "text": "Se llama Mina. Tiene una cría.",
+     "en": "Her name is Mina. She has a baby."
+    },
+    {
+     "s": 1,
+     "text": "¿Qué come?",
+     "en": "What does she eat?"
+    },
+    {
+     "s": 0,
+     "text": "Come fruta. No le des comida.",
+     "en": "She eats fruit. Don’t give her food."
+    },
+    {
+     "s": 1,
+     "text": "Vale, solo miro.",
+     "en": "OK, I am only looking."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué ve Karla?",
+     "qEn": "What does Karla see?",
+     "options": [
+      "Un tigre",
+      "Un pájaro",
+      "Un orangután"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cómo se llama?",
+     "qEn": "What is her name?",
+     "options": [
+      "Mina",
+      "Rina",
+      "Sinta"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué come?",
+     "qEn": "What does she eat?",
+     "options": [
+      "Carne",
+      "Fruta",
+      "Pescado"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué hace Karla?",
+     "qEn": "What does Karla do?",
+     "options": [
+      "Le da comida",
+      "Corre",
+      "Solo mira"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Te gustan los monos?",
+     "qEn": "Do you like monkeys?",
+     "model": "Sí, mucho."
+    },
+    {
+     "q": "¿Comes fruta?",
+     "qEn": "Do you eat fruit?",
+     "model": "Sí, plátano."
+    },
+    {
+     "q": "¿Hay selva en tu país?",
+     "qEn": "Is there jungle in your country?",
+     "model": "Sí, en el sur."
+    }
+   ],
+   "gaps": "[Se] [llama] [Mina]. Tiene una [cría].",
+   "glossary": [
+    {
+     "word": "enorme",
+     "meaning": "muy grande",
+     "en": "huge"
+    },
+    {
+     "word": "cría",
+     "meaning": "hijo pequeño de un animal",
+     "en": "baby animal"
+    },
+    {
+     "word": "fruta",
+     "meaning": "comida dulce de los árboles",
+     "en": "fruit"
+    }
+   ]
+  },
+  {
+   "id": "komodo",
+   "title": "Un dragón muy grande",
+   "place": "La isla de Komodo",
+   "context": "Sebastián, de Venezuela, ve un dragón. Yosef es guardaparques.",
+   "contextEn": "Sebastián, from Venezuela, sees a dragon. Yosef is a park ranger.",
+   "speakers": [
+    {
+     "name": "Yosef",
+     "country": "Ecuador",
+     "voice": "es-EC-LuisNeural"
+    },
+    {
+     "name": "Sebastián",
+     "country": "Venezuela",
+     "voice": "es-VE-SebastianNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "¡Para! Hay un dragón allí.",
+     "en": "Stop! There is a dragon over there."
+    },
+    {
+     "s": 1,
+     "text": "¿Dónde? ¡Ah, sí! ¡Qué grande!",
+     "en": "Where? Ah, yes! How big!"
+    },
+    {
+     "s": 0,
+     "text": "Mide tres metros. Es peligroso.",
+     "en": "It is three metres long. It is dangerous."
+    },
+    {
+     "s": 1,
+     "text": "¿Corre rápido?",
+     "en": "Does it run fast?"
+    },
+    {
+     "s": 0,
+     "text": "Sí, muy rápido. Camina detrás de mí.",
+     "en": "Yes, very fast. Walk behind me."
+    },
+    {
+     "s": 1,
+     "text": "Sí, sí. ¡Detrás de ti!",
+     "en": "Yes, yes. Behind you!"
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué animal hay?",
+     "qEn": "What animal is there?",
+     "options": [
+      "Un dragón",
+      "Un perro",
+      "Un caballo"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cuánto mide?",
+     "qEn": "How long is it?",
+     "options": [
+      "Un metro",
+      "Diez metros",
+      "Tres metros"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cómo corre?",
+     "qEn": "How does it run?",
+     "options": [
+      "Despacio",
+      "Muy rápido",
+      "No corre"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Dónde camina Sebastián?",
+     "qEn": "Where does Sebastián walk?",
+     "options": [
+      "Delante",
+      "Solo",
+      "Detrás de Yosef"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Te dan miedo los animales grandes?",
+     "qEn": "Are you scared of big animals?",
+     "model": "Sí, un poco."
+    },
+    {
+     "q": "¿Corres rápido?",
+     "qEn": "Do you run fast?",
+     "model": "No, despacio."
+    },
+    {
+     "q": "¿Te gustan las islas?",
+     "qEn": "Do you like islands?",
+     "model": "Sí, mucho."
+    }
+   ],
+   "gaps": "[Mide] [tres] [metros]. Es [peligroso].",
+   "glossary": [
+    {
+     "word": "dragón",
+     "meaning": "lagarto muy grande",
+     "en": "dragon"
+    },
+    {
+     "word": "peligroso",
+     "meaning": "que puede hacer daño",
+     "en": "dangerous"
+    },
+    {
+     "word": "detrás",
+     "meaning": "en la parte de atrás",
+     "en": "behind"
+    }
+   ]
+  }
+ ]
+}

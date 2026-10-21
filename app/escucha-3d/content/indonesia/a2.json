@@ -1,0 +1,482 @@
+{
+ "game": "indonesia",
+ "level": "A2",
+ "items": [
+  {
+   "id": "bali",
+   "title": "Un día sin luces",
+   "place": "Un pueblo de Bali",
+   "context": "Mario, de Paraguay, llega a Bali el día antes de Nyepi. Nyoman le explica las reglas.",
+   "speakers": [
+    {
+     "name": "Nyoman",
+     "country": "El Salvador",
+     "voice": "es-SV-RodrigoNeural"
+    },
+    {
+     "name": "Mario",
+     "country": "Paraguay",
+     "voice": "es-PY-MarioNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Mañana es Nyepi, el día del silencio. Durante veinticuatro horas nadie sale a la calle."
+    },
+    {
+     "s": 1,
+     "text": "¿Nadie? ¿Y los turistas?"
+    },
+    {
+     "s": 0,
+     "text": "Tampoco. El aeropuerto cierra, no hay coches, no hay música. De noche no se puede encender la luz."
+    },
+    {
+     "s": 1,
+     "text": "¿Y qué hace la gente todo el día?"
+    },
+    {
+     "s": 0,
+     "text": "Descansa, piensa, reza. Muchos no comen. Los niños juegan en silencio dentro de casa."
+    },
+    {
+     "s": 1,
+     "text": "¿Y esta noche?"
+    },
+    {
+     "s": 0,
+     "text": "Esta noche es al revés: hacemos desfiles con monstruos gigantes de papel, mucho ruido, y después los quemamos."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuánto dura Nyepi?",
+     "options": [
+      "Veinticuatro horas",
+      "Una semana",
+      "Una hora"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué cierra?",
+     "options": [
+      "El hospital",
+      "El aeropuerto",
+      "La playa solamente"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué no se puede hacer de noche?",
+     "options": [
+      "Dormir",
+      "Comer",
+      "Encender la luz"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué hacen la noche anterior?",
+     "options": [
+      "Desfiles con monstruos de papel",
+      "Duermen temprano",
+      "Rezan en silencio"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Podrías pasar un día entero sin teléfono?",
+     "model": "Sería difícil, pero me gustaría probar."
+    },
+    {
+     "q": "¿Hay un día especial de descanso en tu país?",
+     "model": "El domingo, pero muchas tiendas abren igual."
+    },
+    {
+     "q": "¿Qué harías en un día de silencio?",
+     "model": "Leería un libro y dormiría la siesta."
+    }
+   ],
+   "gaps": "Tampoco. El [aeropuerto] [cierra], no hay [coches], no hay [música]. De noche no se puede encender la luz.",
+   "glossary": [
+    {
+     "word": "silencio",
+     "meaning": "cuando no hay ruido"
+    },
+    {
+     "word": "encender",
+     "meaning": "poner una luz o una máquina"
+    },
+    {
+     "word": "desfiles",
+     "meaning": "grupos que caminan por la calle en una fiesta"
+    },
+    {
+     "word": "quemamos",
+     "meaning": "destruimos con fuego"
+    }
+   ]
+  },
+  {
+   "id": "java",
+   "title": "Una ciudad que se hunde",
+   "place": "Una moto en Yakarta",
+   "context": "Paola, de Venezuela, va en el mototaxi de Rina por el norte de Yakarta.",
+   "speakers": [
+    {
+     "name": "Rina",
+     "country": "Perú",
+     "voice": "es-PE-CamilaNeural"
+    },
+    {
+     "name": "Paola",
+     "country": "Venezuela",
+     "voice": "es-VE-PaolaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Mira esa pared alta junto al mar. Es para que el agua no entre en la ciudad."
+    },
+    {
+     "s": 1,
+     "text": "¿Por qué? ¿Sube el mar?"
+    },
+    {
+     "s": 0,
+     "text": "Sube el mar y, además, la ciudad se hunde. Aquí, en el norte, el suelo baja diez centímetros cada año."
+    },
+    {
+     "s": 1,
+     "text": "¡Diez centímetros! ¿Y por qué?"
+    },
+    {
+     "s": 0,
+     "text": "Porque mucha gente saca agua de pozos, de debajo de la tierra. No hay agua de red para todos."
+    },
+    {
+     "s": 1,
+     "text": "¿Y tu casa?"
+    },
+    {
+     "s": 0,
+     "text": "Mi familia levantó el suelo de la casa dos veces. Por eso el gobierno construye una capital nueva en Borneo."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Para qué es la pared?",
+     "options": [
+      "Para los coches",
+      "Para que el agua no entre",
+      "Para pintar"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cuánto baja el suelo cada año?",
+     "options": [
+      "Un metro",
+      "Un centímetro",
+      "Diez centímetros"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿De dónde saca agua la gente?",
+     "options": [
+      "De pozos",
+      "Del río",
+      "De la lluvia"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Dónde construyen la capital nueva?",
+     "options": [
+      "En Bali",
+      "En Borneo",
+      "En Java"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Tu ciudad tiene problemas con el agua?",
+     "model": "Sí, en verano a veces no hay agua."
+    },
+    {
+     "q": "¿Te mudarías a una ciudad nueva?",
+     "model": "Sí, si tuviera un buen trabajo allí."
+    },
+    {
+     "q": "¿Qué pasará con las ciudades junto al mar?",
+     "model": "Creo que algunas tendrán que construir muros."
+    }
+   ],
+   "gaps": "Porque mucha gente saca [agua] de [pozos], de debajo de la [tierra]. No hay agua de [red] para todos.",
+   "glossary": [
+    {
+     "word": "se hunde",
+     "meaning": "baja poco a poco"
+    },
+    {
+     "word": "pozos",
+     "meaning": "agujeros profundos para sacar agua"
+    },
+    {
+     "word": "levantó",
+     "meaning": "puso más arriba"
+    },
+    {
+     "word": "capital",
+     "meaning": "ciudad principal de un país"
+    }
+   ]
+  },
+  {
+   "id": "sumatra",
+   "title": "El café de las mujeres",
+   "place": "Un cafetal en las tierras altas de Gayo",
+   "context": "Mateo, de Uruguay, visita la cooperativa de Fitri en Aceh.",
+   "speakers": [
+    {
+     "name": "Fitri",
+     "country": "Ecuador",
+     "voice": "es-EC-AndreaNeural"
+    },
+    {
+     "name": "Mateo",
+     "country": "Uruguay",
+     "voice": "es-UY-MateoNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Somos doscientas mujeres en la cooperativa. Cada una tiene una finca pequeña."
+    },
+    {
+     "s": 1,
+     "text": "¿Y por qué se juntaron?"
+    },
+    {
+     "s": 0,
+     "text": "Antes vendíamos a un intermediario que pagaba muy poco. Juntas podemos vender directamente a tostadores de otros países."
+    },
+    {
+     "s": 1,
+     "text": "¿Y ganan más?"
+    },
+    {
+     "s": 0,
+     "text": "Casi el doble. Y el comprador sabe de qué finca viene cada saco. En la bolsa, en Nueva York, pusieron mi foto."
+    },
+    {
+     "s": 1,
+     "text": "¿Tu foto? ¡Qué divertido!"
+    },
+    {
+     "s": 0,
+     "text": "Un poco raro, sí. Pero mi hija la mira y dice: «Mamá es famosa»."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuántas mujeres hay en la cooperativa?",
+     "options": [
+      "Veinte",
+      "Dos mil",
+      "Doscientas"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿A quién vendían antes?",
+     "options": [
+      "A un intermediario",
+      "A un hotel",
+      "Al gobierno"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cuánto más ganan ahora?",
+     "options": [
+      "Lo mismo",
+      "Casi el doble",
+      "Diez veces más"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué hay en la bolsa de Nueva York?",
+     "options": [
+      "Un mapa",
+      "Un dragón",
+      "La foto de Fitri"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Sabes de dónde viene tu café?",
+     "model": "No, nunca lo miré."
+    },
+    {
+     "q": "¿Es mejor trabajar solo o en grupo?",
+     "model": "En grupo, porque nos ayudamos."
+    },
+    {
+     "q": "¿Te gustaría ver tu foto en un producto?",
+     "model": "Me daría vergüenza, pero también me gustaría."
+    }
+   ],
+   "gaps": "Antes vendíamos a un [intermediario] que pagaba muy [poco]. Juntas podemos [vender] directamente a [tostadores] de otros países.",
+   "glossary": [
+    {
+     "word": "cooperativa",
+     "meaning": "grupo de personas que trabajan y deciden juntas"
+    },
+    {
+     "word": "finca",
+     "meaning": "tierra para cultivar"
+    },
+    {
+     "word": "intermediario",
+     "meaning": "persona que compra y vende entre otros"
+    },
+    {
+     "word": "saco",
+     "meaning": "bolsa grande"
+    }
+   ]
+  },
+  {
+   "id": "komodo",
+   "title": "Un pueblo en las nubes",
+   "place": "El camino a Wae Rebo",
+   "context": "Rocío, de Ecuador, llega cansada a Wae Rebo. Blasius la recibe.",
+   "speakers": [
+    {
+     "name": "Blasius",
+     "country": "Guinea Ecuatorial",
+     "voice": "es-GQ-JavierNeural"
+    },
+    {
+     "name": "Rocío",
+     "country": "Ecuador",
+     "voice": "es-EC-AndreaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Bienvenida. Antes de entrar, hacemos una pequeña ceremonia en la casa principal."
+    },
+    {
+     "s": 1,
+     "text": "¿Una ceremonia? ¿Para qué?"
+    },
+    {
+     "s": 0,
+     "text": "Para presentar a los visitantes a los antepasados. Después ya eres parte de la familia y puedes sacar fotos."
+    },
+    {
+     "s": 1,
+     "text": "¡Qué casas tan altas! Parecen sombreros."
+    },
+    {
+     "s": 0,
+     "text": "Tienen cinco pisos. Abajo viven seis u ocho familias juntas. Arriba guardamos semillas y comida."
+    },
+    {
+     "s": 1,
+     "text": "¿Y dónde duermo yo?"
+    },
+    {
+     "s": 0,
+     "text": "Con todos, en el suelo, en una de las casas. Te daremos una manta, porque de noche hace frío."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué hacen antes de entrar?",
+     "options": [
+      "Una ceremonia",
+      "Una comida",
+      "Una foto"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué puede hacer después Rocío?",
+     "options": [
+      "Irse",
+      "Cocinar",
+      "Sacar fotos"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuántos pisos tienen las casas?",
+     "options": [
+      "Dos",
+      "Cinco",
+      "Tres"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué le van a dar?",
+     "options": [
+      "Una cama",
+      "Un libro",
+      "Una manta"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Dormirías en el suelo con muchas personas?",
+     "model": "Sí, una noche sí, como aventura."
+    },
+    {
+     "q": "¿Hay ceremonias para recibir a la gente en tu cultura?",
+     "model": "Sí, se ofrece algo de comer o de beber."
+    },
+    {
+     "q": "¿Qué guardas en tu casa?",
+     "model": "Guardo fotos viejas de mi familia."
+    }
+   ],
+   "gaps": "Tienen [cinco] [pisos]. Abajo viven seis u ocho [familias] juntas. Arriba guardamos [semillas] y comida.",
+   "glossary": [
+    {
+     "word": "ceremonia",
+     "meaning": "acto especial con reglas"
+    },
+    {
+     "word": "antepasados",
+     "meaning": "familia de hace mucho tiempo"
+    },
+    {
+     "word": "semillas",
+     "meaning": "partes pequeñas para plantar"
+    },
+    {
+     "word": "manta",
+     "meaning": "tela gruesa para tener calor"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,482 @@
+{
+ "game": "indonesia",
+ "level": "A1",
+ "items": [
+  {
+   "id": "bali",
+   "title": "Primera clase de surf",
+   "place": "La playa de Kuta",
+   "context": "Alonso, de Estados Unidos, toma su primera clase con Wayan, profesor de surf.",
+   "speakers": [
+    {
+     "name": "Wayan",
+     "country": "República Dominicana",
+     "voice": "es-DO-EmilioNeural"
+    },
+    {
+     "name": "Alonso",
+     "country": "Estados Unidos",
+     "voice": "es-US-AlonsoNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Primero practicamos en la arena. Te acuestas en la tabla y remas con los brazos."
+    },
+    {
+     "s": 1,
+     "text": "¿Y cuándo me pongo de pie?"
+    },
+    {
+     "s": 0,
+     "text": "Cuando sientes la ola. Entonces subes rápido, con las piernas abiertas."
+    },
+    {
+     "s": 1,
+     "text": "Parece fácil en la arena."
+    },
+    {
+     "s": 0,
+     "text": "En la arena, sí. En el agua, todos se caen la primera vez. Yo también."
+    },
+    {
+     "s": 1,
+     "text": "¿Cuántos años tenías?"
+    },
+    {
+     "s": 0,
+     "text": "Siete. Mi padre era pescador y me hizo una tabla de madera."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Dónde practican primero?",
+     "options": [
+      "En la arena",
+      "En el agua",
+      "En la piscina"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cuándo se pone de pie?",
+     "options": [
+      "Al principio",
+      "Cuando siente la ola",
+      "Nunca"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué pasa la primera vez en el agua?",
+     "options": [
+      "Todos ganan",
+      "Nadie entra",
+      "Todos se caen"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué era el padre de Wayan?",
+     "options": [
+      "Pescador",
+      "Profesor",
+      "Cocinero"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Practicas algún deporte en el agua?",
+     "model": "Sí, nado los fines de semana."
+    },
+    {
+     "q": "¿Qué aprendiste de niño?",
+     "model": "A andar en bicicleta, con mi padre."
+    },
+    {
+     "q": "¿Te da miedo caerte?",
+     "model": "Un poco, pero me levanto."
+    }
+   ],
+   "gaps": "Cuando [sientes] la [ola]. Entonces [subes] rápido, con las [piernas] abiertas.",
+   "glossary": [
+    {
+     "word": "tabla",
+     "meaning": "pieza larga para surfear"
+    },
+    {
+     "word": "remas",
+     "meaning": "mueves los brazos en el agua"
+    },
+    {
+     "word": "ola",
+     "meaning": "agua del mar que se levanta"
+    },
+    {
+     "word": "arena",
+     "meaning": "tierra de la playa"
+    }
+   ]
+  },
+  {
+   "id": "java",
+   "title": "Café a medianoche",
+   "place": "Un puesto de comida en Yogyakarta",
+   "context": "Margarita, de Panamá, cena tarde en el puesto de Joko.",
+   "speakers": [
+    {
+     "name": "Joko",
+     "country": "Nicaragua",
+     "voice": "es-NI-FedericoNeural"
+    },
+    {
+     "name": "Margarita",
+     "country": "Panamá",
+     "voice": "es-PA-MargaritaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Siéntate en la alfombra. Aquí no hay sillas."
+    },
+    {
+     "s": 1,
+     "text": "¿Qué me recomienda?"
+    },
+    {
+     "s": 0,
+     "text": "Un paquete de arroz con pescado, unos pinchos y mi café con brasa."
+    },
+    {
+     "s": 1,
+     "text": "¿Café con brasa? ¿Qué es eso?"
+    },
+    {
+     "s": 0,
+     "text": "Pongo un carbón caliente dentro del vaso. Hace un ruido, fsss, y el café queda suave."
+    },
+    {
+     "s": 1,
+     "text": "¡Qué curioso! ¿Hasta qué hora abre?"
+    },
+    {
+     "s": 0,
+     "text": "Hasta las tres de la mañana. Los estudiantes vienen muy tarde."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Dónde se sienta Margarita?",
+     "options": [
+      "En una silla",
+      "En el coche",
+      "En la alfombra"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué pone Joko en el café?",
+     "options": [
+      "Un carbón caliente",
+      "Leche",
+      "Hielo"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cómo queda el café?",
+     "options": [
+      "Amargo",
+      "Suave",
+      "Frío"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Hasta qué hora abre?",
+     "options": [
+      "Hasta medianoche",
+      "Hasta las seis",
+      "Hasta las tres"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Cenas tarde?",
+     "model": "A veces, los viernes."
+    },
+    {
+     "q": "¿Te gusta comer en la calle?",
+     "model": "Sí, la comida de la calle es barata y rica."
+    },
+    {
+     "q": "¿Cómo tomas el café?",
+     "model": "Con leche y sin azúcar."
+    }
+   ],
+   "gaps": "Pongo un [carbón] [caliente] dentro del [vaso]. Hace un [ruido], fsss, y el café queda suave.",
+   "glossary": [
+    {
+     "word": "alfombra",
+     "meaning": "tela grande para el suelo"
+    },
+    {
+     "word": "pinchos",
+     "meaning": "trozos de comida en un palo"
+    },
+    {
+     "word": "brasa",
+     "meaning": "carbón muy caliente"
+    },
+    {
+     "word": "suave",
+     "meaning": "no fuerte"
+    }
+   ]
+  },
+  {
+   "id": "sumatra",
+   "title": "Veinte platos en la mesa",
+   "place": "Un restaurante de Padang",
+   "context": "Lorenzo, de Chile, se sienta. Mardiah pone muchos platos en la mesa.",
+   "speakers": [
+    {
+     "name": "Mardiah",
+     "country": "Guatemala",
+     "voice": "es-GT-MartaNeural"
+    },
+    {
+     "name": "Lorenzo",
+     "country": "Chile",
+     "voice": "es-CL-LorenzoNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Aquí tienes. Pollo, pescado, huevos, verduras y rendang."
+    },
+    {
+     "s": 1,
+     "text": "¡Son muchos platos! No puedo comer todo."
+    },
+    {
+     "s": 0,
+     "text": "No, no. Comes lo que quieres y pagas solo lo que comes."
+    },
+    {
+     "s": 1,
+     "text": "¿Y lo que no como?"
+    },
+    {
+     "s": 0,
+     "text": "Vuelve a la ventana para el próximo cliente."
+    },
+    {
+     "s": 1,
+     "text": "¿Cuál es el más famoso?"
+    },
+    {
+     "s": 0,
+     "text": "El rendang: carne con coco y especias. Lo cocino ocho horas."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué pone Mardiah en la mesa?",
+     "options": [
+      "Un plato",
+      "Dos platos",
+      "Muchos platos"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué paga Lorenzo?",
+     "options": [
+      "Solo lo que come",
+      "Todo",
+      "Nada"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Adónde vuelve lo que no come?",
+     "options": [
+      "A la cocina",
+      "A la ventana",
+      "A la basura"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cuántas horas cocina el rendang?",
+     "options": [
+      "Una",
+      "Dos",
+      "Ocho"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Te gusta probar muchos platos?",
+     "model": "Sí, me gusta compartir."
+    },
+    {
+     "q": "¿Qué plato tarda mucho en tu país?",
+     "model": "El asado tarda varias horas."
+    },
+    {
+     "q": "¿Comes picante?",
+     "model": "Un poco, no mucho."
+    }
+   ],
+   "gaps": "El [rendang]: [carne] con [coco] y [especias]. Lo cocino ocho horas.",
+   "glossary": [
+    {
+     "word": "pagas",
+     "meaning": "das dinero"
+    },
+    {
+     "word": "cliente",
+     "meaning": "persona que compra"
+    },
+    {
+     "word": "famoso",
+     "meaning": "que todos conocen"
+    },
+    {
+     "word": "especias",
+     "meaning": "polvos para dar sabor"
+    }
+   ]
+  },
+  {
+   "id": "komodo",
+   "title": "Bajo el agua",
+   "place": "Un barco de buceo en Labuan Bajo",
+   "context": "Salomé, de Colombia, va a bucear con Maria, instructora.",
+   "speakers": [
+    {
+     "name": "Maria",
+     "country": "Cuba",
+     "voice": "es-CU-BelkysNeural"
+    },
+    {
+     "name": "Salomé",
+     "country": "Colombia",
+     "voice": "es-CO-SalomeNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Antes de saltar, repasamos las señales. Este dedo arriba significa subir."
+    },
+    {
+     "s": 1,
+     "text": "¿Y si no tengo aire?"
+    },
+    {
+     "s": 0,
+     "text": "Te tocas el cuello así, y yo te doy aire de mi tanque."
+    },
+    {
+     "s": 1,
+     "text": "¿Qué vamos a ver hoy?"
+    },
+    {
+     "s": 0,
+     "text": "Mantarrayas. Son enormes, de cinco metros, pero no son peligrosas."
+    },
+    {
+     "s": 1,
+     "text": "¡Qué nervios!"
+    },
+    {
+     "s": 0,
+     "text": "Respira despacio. Debajo del agua todo es tranquilo."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué significa el dedo arriba?",
+     "options": [
+      "Subir",
+      "Bajar",
+      "Parar"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué hace si no tiene aire?",
+     "options": [
+      "Grita",
+      "Se toca el cuello",
+      "Nada rápido"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué van a ver?",
+     "options": [
+      "Tiburones",
+      "Dragones",
+      "Mantarrayas"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cómo debe respirar Salomé?",
+     "options": [
+      "Rápido",
+      "Despacio",
+      "Con la boca abierta"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Te gustaría bucear?",
+     "model": "Sí, pero me da un poco de miedo."
+    },
+    {
+     "q": "¿Qué animal del mar te gusta?",
+     "model": "Me gustan las tortugas."
+    },
+    {
+     "q": "¿Qué haces cuando estás nervioso?",
+     "model": "Respiro despacio y cuento hasta diez."
+    }
+   ],
+   "gaps": "Te tocas el [cuello] [así], y yo te doy [aire] de mi [tanque].",
+   "glossary": [
+    {
+     "word": "señales",
+     "meaning": "gestos que dicen algo"
+    },
+    {
+     "word": "aire",
+     "meaning": "lo que respiramos"
+    },
+    {
+     "word": "tanque",
+     "meaning": "botella con aire para bucear"
+    },
+    {
+     "word": "nervios",
+     "meaning": "sensación de miedo y emoción"
+    }
+   ]
+  }
+ ]
+}
