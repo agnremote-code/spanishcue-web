@@ -172,6 +172,24 @@ export function buscaTry(session, set, figureId, names = {}) {
 }
 export const buscaState = (session, setId) => session.busca[setId] ?? { tries: [], solved: false };
 
+/** Spanish names for the ids a feedback sentence may mention (rel:…:<id>).
+ * An id that is already a Spanish phrase («la abuela sentada») stays as it
+ * is; any other figure is called by the number shown above it in 3D and
+ * under it in 2D, so a raw id never reaches the class. */
+export function buscaNames(set) {
+  const names = {};
+  const phrase = id => /\s/.test(id);
+  (set?.figures ?? []).forEach((f, i) => { names[f.id] = phrase(f.id) ? f.id : `la persona número ${i + 1}`; });
+  for (const l of set?.landmarks ?? []) if (!names[l.id]) names[l.id] = phrase(l.id) ? l.id : 'el punto de referencia';
+  return names;
+}
+
+/** «¡Encontrado!» / «¡Encontrada!»: agrees with the person the class found. */
+export function foundLabel(set) {
+  const target = (set?.figures ?? []).find(f => f.id === set.target);
+  return target?.body === 'm' ? 'Encontrado' : 'Encontrada';
+}
+
 /** The group's tally for the recap (AM-7): circles ticked «logrado». */
 export function tally(session, ids = CIRCLE_IDS) {
   const ticked = ids.filter(id => session.ticks[id]);

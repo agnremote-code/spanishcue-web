@@ -26,6 +26,18 @@ const additions = [
     },
   },
   {
+    // 2026-10-21: La feria de Villaluz (LES-001), an A2 PRO 3D world, wired like the hospital.
+    id:241,path:'/la-feria-de-villaluz',files:/^(?:app\/la-feria-de-villaluz\/|app\/escucha-3d\/content\/feria\/|public\/la-feria-de-villaluz\/|public\/audio\/escucha-3d\/feria-|tests\/la-feria-de-villaluz\.test\.mjs$|tests\/feria-look-contract\.test\.mjs$|scripts\/check-feria\.mjs$|scripts\/export-feria-announcements\.mjs$|scripts\/qa-feria-browser\.mjs$)/,
+    edits:{
+      'app/lesson-catalog.ts':[text=>{
+        const lines=text.split('\n');
+        const at=lines.flatMap((line,i)=>line.startsWith('  {id:241,')&&line.includes('path:"/la-feria-de-villaluz"')?[i]:[]);
+        assert.equal(at.length,1,'one feria catalog entry');lines.splice(at[0],1);return lines.join('\n');
+      },[',237,238,240,241],',',237,238,240],']],
+      'scripts/test-worker.mjs':[[" await run(['--test','tests/la-feria-de-villaluz.test.mjs','tests/feria-look-contract.test.mjs']);\n",'']],
+    },
+  },
+  {
     id:240,path:'/hospital-san-casi-vivo',files:/^(?:app\/hospital-san-casi-vivo\/|app\/escucha-3d\/content\/hospital\/|public\/hospital-san-casi-vivo\/|public\/audio\/escucha-3d\/hospital-|tests\/hospital-san-casi-vivo\.test\.mjs$|scripts\/check-hospital\.mjs$|docs\/audits\/hospital-a0-english-additions-20261015\.json$)/,
     edits:{
       // 2026-10-16: the casino (237) and the forest (226) gained an authored A0 level.
@@ -258,7 +270,7 @@ export function isApprovedAdditionPath(path) {
 
 export function withoutApprovedAdditions(path, bytes) {
   // Undo the latest additive lessons in reverse order before the grammar snapshot.
-  for (const addition of additions.filter(item=>item.id===300||item.id===240||item.id===239||item.id===238||item.id===237||item.id===236)) {
+  for (const addition of additions.filter(item=>item.id===300||item.id===241||item.id===240||item.id===239||item.id===238||item.id===237||item.id===236)) {
     const latestSteps=addition.edits[path]||[];
     if(!latestSteps.length)continue;
     let latest=bytes.toString('utf8');
@@ -269,7 +281,7 @@ export function withoutApprovedAdditions(path, bytes) {
     bytes=Buffer.from(latest);
   }
   bytes=beforeGrammarBytes(path,bytes);
-  const steps = [...additions.filter(item=>item.id!==300&&item.id!==236&&item.id!==237&&item.id!==238&&item.id!==239&&item.id!==240), ...repairs].flatMap(item => item.edits[path] || []);
+  const steps = [...additions.filter(item=>item.id!==300&&item.id!==236&&item.id!==237&&item.id!==238&&item.id!==239&&item.id!==240&&item.id!==241), ...repairs].flatMap(item => item.edits[path] || []);
   if (!steps.length) return bytes;
   let text = bytes.toString('utf8');
   for (const step of steps) {

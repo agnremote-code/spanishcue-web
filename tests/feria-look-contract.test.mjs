@@ -78,3 +78,32 @@ test('location relations follow the fixed view (x to screen-right, z away)', () 
   assert.ok(C.RELATIONS['detras-de'].test({ x: 0, z: 2 }, { x: 0, z: 0 }));
   assert.ok(!C.RELATIONS['derecha-de'].test({ x: -2, z: 0 }, { x: 0, z: 0 }));
 });
+
+test('AC3 feedback agrees with «la persona», also for a male target (regression)', () => {
+  const man = { body: 'm', age: 'adult', top: 'shirt', topColor: 'verde', bottom: 'pants', bottomColor: 'negro', hair: 'short', hairColor: 'rubio', pose: 'sit' };
+  const set = {
+    id: 'hombre', circle: 6, kind: 'find', target: 't',
+    text: 'Buscamos a un hombre rubio y alto. Está sentado y lleva una camisa verde.',
+    described: ['hairColor:rubio', 'height:tall', 'pose:sit'],
+    figures: [
+      { ...man, id: 't', height: 'tall' },
+      { ...man, id: 'a', hairColor: 'moreno', height: 'tall', pose: 'stand' },
+      { ...man, id: 'b', height: 'short' },
+      { ...man, id: 'c', hairColor: 'pelirrojo', height: 'short' },
+    ],
+  };
+  const expected = { a: 'está sentada', b: 'es alta', c: 'es alta' };
+  for (const [id, words] of Object.entries(expected)) {
+    const text = C.feedbackFor(set, id);
+    assert.equal(text, `No, no es esa persona. La persona del aviso ${words}.`, id);
+  }
+  // Every adjective a feedback sentence can carry, for a man: never masculine after «La persona».
+  for (const feature of ['hairColor:rubio', 'hairColor:pelirrojo', 'hairColor:canoso', 'hair:bald', 'height:tall', 'height:short', 'pose:sit']) {
+    const said = C.predicate(feature, set.figures[0], {}, { subject: 'persona' });
+    assert.doesNotMatch(said, /\b(rubio|pelirrojo|canoso|moreno|castaño|calvo|alto|bajo|sentado)\b/, `${feature}: ${said}`);
+  }
+  // Nouns still name the figure: «es un niño», not «es una niña».
+  assert.equal(C.predicate('age:child', { ...man, id: 'n', age: 'child' }, {}, { subject: 'persona' }), 'es un niño');
+  // The 2D aria-label keeps agreeing with the figure itself.
+  assert.equal(C.predicate('hairColor:rubio', set.figures[0]), 'es rubio');
+});

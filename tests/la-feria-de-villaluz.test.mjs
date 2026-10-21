@@ -181,6 +181,26 @@ test('Busca: a wrong pick names a feature, the target shows only after it is fou
   assert.match(game, /reveal=\{buscaSet && buscaState\(session, buscaSet\.id\)\.solved \? buscaSet\.target : null\}/);
 });
 
+test('Busca feedback never shows a raw id, and «¡Encontrado/a!» agrees with the target', () => {
+  assert.match(game, /buscaTry\(session, buscaSet, figureId, buscaNames\(buscaSet\)\)/, 'the UI passes the names map');
+  assert.doesNotMatch(game, /'¡Encontrada!'|'✓ Encontrada'/, 'no fixed feminine label');
+  for (const set of A2.BUSCA) {
+    const names = E.buscaNames(set);
+    const ids = new Set([...set.figures.map(f => f.id), ...(set.landmarks ?? []).map(l => l.id)]);
+    for (const f of set.figures.filter(f => f.id !== set.target)) {
+      const text = E.buscaTry(E.createSession(), set, f.id, names).feedback;
+      for (const id of ids) if (!/\s/.test(id)) assert.ok(!text.includes(id), `${set.id}: feedback for ${f.id} shows the id '${id}': ${text}`);
+      assert.doesNotMatch(text, /La persona del aviso es (rubio|pelirrojo|canoso|moreno|castaño|calvo|alto|bajo)\b|está sentado\b/, `${set.id}: ${text}`);
+    }
+    const target = set.figures.find(f => f.id === set.target);
+    assert.equal(E.foundLabel(set), target.body === 'm' ? 'Encontrado' : 'Encontrada');
+  }
+  // A Spanish-phrase id (Martin's fotos references) is kept as written; any other id becomes the shown number.
+  const set = { figures: [{ id: 'x1' }, { id: 'la abuela sentada' }], landmarks: [{ id: 'fuente', x: 0, z: 0 }] };
+  assert.deepEqual(E.buscaNames(set), { x1: 'la persona número 1', 'la abuela sentada': 'la abuela sentada', fuente: 'el punto de referencia' });
+  assert.equal(E.foundLabel({ target: 't', figures: [{ id: 't', body: 'm' }] }), 'Encontrado');
+});
+
 test('AC11/T3: without 3D the list and the map reach every circle, listening, Busca set and the closing', () => {
   assert.match(game, /const showList = list \|\| \(ready && entered && !use3d && !busy\);/);
   assert.match(game, /\{CIRCLES\.map\(c => <li key=\{c\.id\}><button type="button"[^>]*onClick=\{\(\) => open\(c\.id\)\}/);

@@ -387,10 +387,14 @@ export function validateBuscaSet(set) {
 // ------------------------------------------------------------------ feedback (AC3)
 const art = gender => (gender === 'f' ? 'una' : 'un');
 
-/** The described feature as a full Spanish predicate about the target. */
-export function predicate(feature, figure, names = {}) {
+/** The described feature as a full Spanish predicate about the target.
+ * Adjectives (rubio, calvo, alto, sentado) agree with the figure by default
+ * (the 2D figure's aria-label); with `{ subject: 'persona' }` they agree with
+ * «la persona», the subject of the AC3 feedback sentence, whatever the
+ * figure's body («La persona del aviso es rubia», also for a man). */
+export function predicate(feature, figure, names = {}, { subject = 'figure' } = {}) {
   const { key, value, other } = parseFeature(feature);
-  const fem = figure?.body === 'f';
+  const fem = subject === 'persona' || figure?.body === 'f';
   const colour = (c, gender) => COLOURS[c]?.es[gender === 'f' ? 1 : 0] ?? c;
   switch (key) {
     case 'top': { const v = ATTRIBUTES.top.values[value]; return `lleva ${art(v.gender)} ${v.es[0]}`; }
@@ -399,7 +403,8 @@ export function predicate(feature, figure, names = {}) {
     case 'bottomColor': return figure.top === 'dress' ? `lleva un vestido ${colour(value, 'm')}` : figure.bottom === 'skirt' ? `lleva una falda ${colour(value, 'f')}` : `lleva un pantalón ${colour(value, 'm')}`;
     case 'hair': return value === 'bald' ? `es ${fem ? 'calva' : 'calvo'}` : value === 'cap' ? 'lleva gorra' : value === 'bun' ? 'lleva moño' : value === 'ponytail' ? 'lleva coleta' : value === 'braids' ? 'lleva trenzas' : `tiene el ${ATTRIBUTES.hair.values[value].es[0]}`;
     case 'hairColor': return `es ${HAIR_COLOURS[value].es[fem ? 1 : 0]}`;
-    case 'age': return value === 'child' ? `es ${fem ? 'una niña' : 'un niño'}` : value === 'old' ? `es ${fem ? 'una señora mayor' : 'un señor mayor'}` : value === 'young' ? 'es joven' : `es ${fem ? 'una mujer' : 'un hombre'}`;
+    // Nouns name the figure itself, so they follow its body, never «persona».
+    case 'age': { const f = figure?.body === 'f'; return value === 'child' ? `es ${f ? 'una niña' : 'un niño'}` : value === 'old' ? `es ${f ? 'una señora mayor' : 'un señor mayor'}` : value === 'young' ? 'es joven' : `es ${f ? 'una mujer' : 'un hombre'}`; }
     case 'body': return value === 'f' ? 'es mujer' : 'es hombre';
     case 'height': return `es ${value === 'tall' ? (fem ? 'alta' : 'alto') : (fem ? 'baja' : 'bajo')}`;
     case 'pose': return value === 'sit' ? `está ${fem ? 'sentada' : 'sentado'}` : value === 'carry' ? 'está llevando una caja' : value === 'arms' ? 'tiene los brazos cruzados' : `está ${ATTRIBUTES.pose.values[value].es[0]}`;
@@ -421,5 +426,5 @@ export function feedbackFor(set, pickId, names = {}) {
   const wrong = (set.described ?? []).filter(feature => distinguishes(target, pick, feature, set));
   const feature = wrong.find(f => !isColour(parseFeature(f).key)) ?? wrong[0] ?? (set.described ?? []).find(f => !matches(pick, f, set));
   if (!feature) return 'No, no es esa persona. Escuchen otra vez el aviso.';
-  return `No, no es esa persona. La persona del aviso ${predicate(feature, target, names)}.`;
+  return `No, no es esa persona. La persona del aviso ${predicate(feature, target, names, { subject: 'persona' })}.`;
 }

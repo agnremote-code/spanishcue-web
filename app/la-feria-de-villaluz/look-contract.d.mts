@@ -43,5 +43,5 @@ export function matches(figure: Figure, feature: string, set?: BuscaSet): boolea
 export function distinguishes(target: Figure, distractor: Figure, feature: string, set?: BuscaSet): boolean;
 export function wordsOf(feature: string): string[];
 export function validateBuscaSet(set: BuscaSet): string[];
-export function predicate(feature: string, figure: Figure, names?: Record<string, string>): string;
+export function predicate(feature: string, figure: Figure, names?: Record<string, string>, options?: { subject?: 'figure' | 'persona' }): string;
 export function feedbackFor(set: BuscaSet, pickId: string, names?: Record<string, string>): string | null;

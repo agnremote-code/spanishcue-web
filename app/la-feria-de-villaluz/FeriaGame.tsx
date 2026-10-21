@@ -16,8 +16,8 @@ import { LEVELS, contentFor, speakerName } from './levels.mjs';
 import type { Beat, Circle, ContrastOption, Route, StimulusOption } from './levels.d.mts';
 import type { BuscaSet } from './look-contract.d.mts';
 import {
-  LESSON_ID, SESSION_KEY, STORAGE_KEY, TICKS, TICK_LABEL, ambienceGain, answerBeat, beatDone, buscaState, buscaTry, closeScene, createSession, createState,
-  currentBeat, doneFor, finish, lastFeedback, markDone, openScene, recordPick, resetGroup, resetLevel, restore, restoreSession, routeCircles, routeProgress,
+  LESSON_ID, SESSION_KEY, STORAGE_KEY, TICKS, TICK_LABEL, ambienceGain, answerBeat, beatDone, buscaNames, buscaState, buscaTry, closeScene, createSession, createState,
+  currentBeat, doneFor, finish, foundLabel, lastFeedback, markDone, openScene, recordPick, resetGroup, resetLevel, restore, restoreSession, routeCircles, routeProgress,
   serialise, serialiseSession, setRoute, stepDone, tally, tick, timeline, timelinePick, toggleCheck, type SceneState, type Session, type State,
 } from './engine.mjs';
 import { ListeningBadge, ListeningCard, ModeSwitch, Transcript, useListeningDone, useListeningMode } from '../escucha-3d/Escucha';
@@ -104,7 +104,7 @@ function BuscaPanel({ set, session, flat, onTry, onClose, onAudio }: {
         <div className="fv-figures">{set.figures.map((f, i) => <figure key={f.id} className={solved && f.id === set.target ? 'is-found' : undefined}><FigureSvg figure={f} size={132} /><figcaption>{i + 1}</figcaption></figure>)}</div>
         <BuscaPlan figures={set.figures} />
       </div>}
-      <p className="fv-busca-ask">{solved ? '¡Encontrada!' : '¿Quién es? Den indicaciones desde el punto de vista de la mascota y elijan un número.'}</p>
+      <p className="fv-busca-ask">{solved ? `¡${foundLabel(set)}!` : '¿Quién es? Den indicaciones desde el punto de vista de la mascota y elijan un número.'}</p>
       <div className="fv-busca-picks" role="group" aria-label="Elegir persona">
         {set.figures.map((f, i) => <button key={f.id} type="button" disabled={solved}
           className={state.tries.includes(f.id) ? (f.id === set.target ? 'is-right' : 'is-wrong') : undefined}
@@ -267,7 +267,7 @@ export default function FeriaGame() {
   const answer = (beat: Beat, index: number) => setState(s => answerBeat(s, beat, index));
   const tryFigure = (figureId: string) => {
     if (!buscaSet) return { correct: false, feedback: null };
-    const r = buscaTry(session, buscaSet, figureId);
+    const r = buscaTry(session, buscaSet, figureId, buscaNames(buscaSet));
     setSession(r.session);
     return r;
   };
@@ -423,7 +423,7 @@ export default function FeriaGame() {
           {transferSet && <div className="fv-closing-step">
             <h4>Un último aviso</h4>
             <p>Una persona nueva que nadie ha buscado todavía.</p>
-            <button type="button" className={buscaState(session, transferSet.id).solved ? 'fv-secondary is-done' : 'fv-primary'} onClick={() => setBuscaId(transferSet.id)}>{buscaState(session, transferSet.id).solved ? '✓ Encontrada' : 'Escuchar el aviso'}</button>
+            <button type="button" className={buscaState(session, transferSet.id).solved ? 'fv-secondary is-done' : 'fv-primary'} onClick={() => setBuscaId(transferSet.id)}>{buscaState(session, transferSet.id).solved ? `✓ ${foundLabel(transferSet)}` : 'Escuchar el aviso'}</button>
           </div>}
           <div className="fv-closing-step">
             <h4>La historia del grupo</h4>

@@ -36,6 +36,8 @@ export function recordPick(session: Session, id: string, index: number): Session
 export function toggleCheck(session: Session, id: string): Session;
 export function finish(session: Session): Session;
 export function buscaTry(session: Session, set: BuscaSet, figureId: string, names?: Record<string, string>): { session: Session; correct: boolean; feedback: string | null };
+export function buscaNames(set: BuscaSet): Record<string, string>;
+export function foundLabel(set: BuscaSet): 'Encontrado' | 'Encontrada';
 export function buscaState(session: Session, setId: string): { tries: string[]; solved: boolean };
 export function tally(session: Session, ids?: string[]): { logrado: number; ticked: number; total: number };
 export function routeSteps(route: Route | undefined): RouteStep[];

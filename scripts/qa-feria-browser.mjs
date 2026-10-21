@@ -281,6 +281,33 @@ async function audit(page, label) {
   return passed;
 }
 
+/** Every HUD control (and the listening badge, the minimap, the touch
+ * buttons) is inside the viewport and on top of whatever overlaps it. */
+async function hudAudit(page, label) {
+  const covered = await page.evaluate(() => {
+    const list = [...document.querySelectorAll('.fv-hud button, .e3-badge button, .fv-mapbox, .fv-touch-actions button, .fv-prompt button')].filter(e => e.getClientRects().length);
+    return list.flatMap(e => {
+      const r = e.getBoundingClientRect();
+      // Centre and two inner points (round buttons have empty corners).
+      const points = [[r.left + r.width / 2, r.top + r.height / 2], [r.left + r.width * 0.3, r.top + r.height * 0.3], [r.right - r.width * 0.3, r.bottom - r.height * 0.3]];
+      const bad = points.map(([x, y]) => document.elementFromPoint(x, y)).filter(hit => !hit || !(hit === e || e.contains(hit)));
+      const out = r.left < -1 || r.top < -1 || r.right > innerWidth + 1 || r.bottom > innerHeight + 1;
+      return bad.length || out ? [{ el: (e.innerText || e.getAttribute('aria-label') || e.className).trim().slice(0, 40), by: bad[0] ? (bad[0].className || bad[0].tagName) : null, out }] : [];
+    });
+  });
+  smoke(`HUD ${label}: no control covered`, !covered.length, { covered });
+}
+
+/** Click like a person: a covered control is a failure (recorded), then the
+ * run continues with a forced click so later checks still happen. */
+async function tap(locator, label) {
+  try { await locator.click({ timeout: 5000 }); } catch (error) {
+    const lines = String(error.message).split('\n');
+    smoke(`${label} is clickable`, false, { error: (lines.find(l => /intercepts/.test(l)) ?? lines[0]).replace(/\x1b\[[0-9;]*m/g, '').trim() });
+    await locator.click({ force: true });
+  }
+}
+
 async function newGamePage(viewport, options = {}) {
   const context = await browser.newContext({ viewport, deviceScaleFactor: 1.25, reducedMotion: options.reduced ? 'reduce' : 'no-preference', ...(viewport.width < 760 ? { hasTouch: true, isMobile: true } : {}) });
   if (options.noWebGL) await context.addInitScript(() => {
@@ -348,13 +375,13 @@ if (RUN.smoke) {
     const px = await pixelStats(page, canvasShot);
     smoke(`${label} non-blank canvas`, px.colours > 200 && px.sd > 8, px);
     void shot;
+    await hudAudit(page, `${label} conversacion`);
     for (const mode of ['conversacion', 'escucha']) {
-      if (mode === 'escucha') await page.locator('.fv-hud').getByRole('radio', { name: /Comprensión|Escucha/ }).first().click().catch(async () => {
-        await page.locator('.fv-hud').getByRole('button', { name: /Comprensión|Escucha/ }).first().click();
-      });
+      if (mode === 'escucha') await tap(page.locator('.fv-hud').getByRole('radio', { name: /Comprensión auditiva/ }), `${label} HUD «Comprensión auditiva»`);
+      if (mode === 'escucha') { await frames(page, 3); await hudAudit(page, `${label} escucha`); await page.screenshot({ path: resolve(out, 'smoke', `${label}-escucha-hud.png`) }); }
       const reached = [];
       for (const c of CIRCLES) {
-        await page.getByRole('button', { name: 'Lista del profesor' }).click();
+        await tap(page.getByRole('button', { name: 'Lista del profesor' }), `${label} ${mode} HUD «Lista del profesor»`);
         await page.locator('.fv-all').getByRole('button', { name: new RegExp(`^${c.n}\\. `) }).click();
         const sel = mode === 'escucha' ? '.e3-card' : `.fv-card[data-scene="${c.id}"], .fv-panel[role="status"]`;
         await page.locator(sel).first().waitFor();
@@ -395,7 +422,7 @@ if (RUN.smoke) {
     await page.getByRole('button', { name: 'Entrar en la feria' }).click();
     if (!flat) { await page.locator('.fv-canvas canvas').waitFor({ timeout: 60000 }); await frames(page, 10); }
     for (const c of CIRCLES) {
-      if (!(await page.locator('.fv-list').count())) await page.getByRole('button', { name: 'Lista del profesor' }).click();
+      if (!(await page.locator('.fv-list').count())) await tap(page.getByRole('button', { name: 'Lista del profesor' }), `390 ${tag} HUD «Lista del profesor»`);
       await page.locator('.fv-all').getByRole('button', { name: new RegExp(`^${c.n}\\. `) }).click();
       if (!(await page.locator(`.fv-card[data-scene="${c.id}"]`).count())) {
         smoke(`390 ${tag} card ${c.id}`, false, { status: 'not authored yet (circle shows «todavía no tiene su escena»)' });
