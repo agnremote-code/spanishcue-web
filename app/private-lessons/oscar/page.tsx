@@ -19,20 +19,20 @@ type InviteEnvironment = {
   PRIVATE_LESSONS_OSCAR_PAYPAL_URL?: string;
 };
 
-async function matchesInvite(candidate: string | string[] | undefined, expected: string | undefined): Promise<boolean> {
-  if (typeof candidate !== "string" || candidate.length < 24 || candidate.length > 256 ||
-      !expected || expected.length < 24 || expected.length > 256) return false;
+// SHA-256 of a randomly generated one-time private invite token. The token itself is not in GitHub.
+const PRIVATE_INVITE_SHA256 = "08c87e0901ad1c0519a2010afb16a07346b40861e05cb2197abdd7e86ddec1f6";
+// Public PayPal payment links are not credentials. The merchant-owned hosted checkout remains authoritative.
+const PRIVATE_PAYPAL_PAYMENT_URL = "https://www.paypal.com/ncp/payment/WL9D4V7W3H6F2";
 
-  // Equal work for matching or non-matching tokens of any valid length.
+async function matchesInvite(candidate: string | string[] | undefined, expected: string | undefined): Promise<boolean> {
+  if (typeof candidate !== "string" || candidate.length < 24 || candidate.length > 256) return false;
   const encoder = new TextEncoder();
-  const [actualHash, expectedHash] = await Promise.all([
-    crypto.subtle.digest("SHA-256", encoder.encode(candidate)),
-    crypto.subtle.digest("SHA-256", encoder.encode(expected)),
-  ]);
-  const a = new Uint8Array(actualHash);
-  const b = new Uint8Array(expectedHash);
+  const actual = new Uint8Array(await crypto.subtle.digest("SHA-256", encoder.encode(candidate)));
+  const known = expected && expected.length >= 24 && expected.length <= 256
+    ? new Uint8Array(await crypto.subtle.digest("SHA-256", encoder.encode(expected)))
+    : Uint8Array.from(PRIVATE_INVITE_SHA256.match(/.{2}/g)!, (byte) => parseInt(byte, 16));
   let difference = 0;
-  for (let index = 0; index < a.length; index++) difference |= a[index] ^ b[index];
+  for (let index = 0; index < actual.length; index++) difference |= actual[index] ^ known[index];
   return difference === 0;
 }
 
@@ -58,7 +58,7 @@ export default async function OscarPrivateLessons({
   const { invite } = await searchParams;
   if (!(await matchesInvite(invite, configuration.PRIVATE_LESSONS_OSCAR_INVITE_TOKEN))) notFound();
 
-  const paymentUrl = validPayPalPaymentLink(configuration.PRIVATE_LESSONS_OSCAR_PAYPAL_URL);
+  const paymentUrl = validPayPalPaymentLink(configuration.PRIVATE_LESSONS_OSCAR_PAYPAL_URL || PRIVATE_PAYPAL_PAYMENT_URL);
 
   return (
     <main className="spc-private-lessons">
@@ -118,7 +118,7 @@ export default async function OscarPrivateLessons({
             It includes activities and progress tracking between lessons.
           </p>
           <p className="spc-private-note">
-            Payment does not automatically activate an account or unlock the full SpanishCue PRO library.
+            Payment does not automatically provide account access or unlock the full SpanishCue PRO library.
           </p>
         </section>
         <footer className="spc-private-footer">
