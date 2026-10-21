@@ -88,7 +88,7 @@ export const USA: CountryInfo = {
 // Content and scenes download only when the student enters the state. They load only in
 // the browser: the server build (import.meta.env.SSR) drops these chunks, which keeps the
 // Worker bundle inside its memory budget (tests/worker-startup.test.mjs).
-export const loadContent = (id: string): Promise<RegionContent> => (import.meta as unknown as { env: { SSR: boolean } }).env.SSR ? Promise.reject(new Error('browser only')) : ({
+export const loadContent = (id: string): Promise<RegionContent> => (import.meta as unknown as { env?: { SSR?: boolean } }).env?.SSR ? Promise.reject(new Error('browser only')) : ({
   florida: () => import('./contenido/florida.mjs'),
   'nueva-york': () => import('./contenido/nueva-york.mjs'),
   california: () => import('./contenido/california.mjs'),

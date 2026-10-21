@@ -4,7 +4,7 @@ import type { ListeningFile } from './types';
 type Loader = () => Promise<{ default: unknown }>;
 // The server build (import.meta.env.SSR) gets no listenings: they only load in the browser,
 // and leaving them out keeps the Worker bundle inside its memory budget.
-export const LOADERS: Record<string, Record<string, Loader>> = (import.meta as unknown as { env: { SSR: boolean } }).env.SSR ? {} : {
+export const LOADERS: Record<string, Record<string, Loader>> = (import.meta as unknown as { env?: { SSR?: boolean } }).env?.SSR ? {} : {
   noche: {
     A1: () => import('./content/noche/a1.json'),
     A2: () => import('./content/noche/a2.json'),
