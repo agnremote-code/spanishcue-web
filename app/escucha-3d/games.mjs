@@ -41,6 +41,14 @@ export const GAMES = {
     ownListening: true,
     bilingualA0: true,
   },
+  // La feria de Villaluz (A2): every circle has its own listening, and each
+  // character keeps one voice (app/la-feria-de-villaluz/levels/a2.mjs CAST).
+  feria: {
+    title: 'La feria de Villaluz',
+    levels: ['A2'],
+    spots: ['informacion', 'churreria', 'tombola', 'noria', 'artesania', 'escenario', 'fotos', 'baile'],
+    ownListening: true,
+  },
 };
 
 // Transcript length in words for each level.

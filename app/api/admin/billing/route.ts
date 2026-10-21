@@ -1,10 +1,15 @@
 import { env } from "cloudflare:workers";
+import { ownerFromHeaders } from "../../../access-policy";
 import { billingConfig } from "../../../billing-config";
 import { getFounderOfferStatus } from "../../../../db/billing";
 
 export const dynamic = "force-dynamic";
 
-export async function GET() {
+export async function GET(request: Request) {
+  // The Worker gates /api/admin/*; the route checks again so a routing gap cannot expose it.
+  if (!ownerFromHeaders(request.headers)) {
+    return Response.json({ error: "Acceso exclusivo del propietario." }, { status: 403, headers: { "cache-control": "private, no-store" } });
+  }
   try {
     const [users, subscriptions, founder] = await Promise.all([
       env.DB.prepare(`SELECT COUNT(*) AS total, SUM(CASE WHEN status = 'active' THEN 1 ELSE 0 END) AS active FROM users`).first<{ total: number; active: number }>(),

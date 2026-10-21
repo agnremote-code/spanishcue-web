@@ -1,0 +1,47 @@
+export type ColourName = 'rojo' | 'azul' | 'verde' | 'amarillo' | 'naranja' | 'morado' | 'rosa' | 'blanco' | 'negro' | 'gris' | 'marron';
+export type HairColourName = 'rubio' | 'castano' | 'moreno' | 'pelirrojo' | 'canoso';
+export type Figure = {
+  id: string;
+  body: 'f' | 'm';
+  age: 'child' | 'young' | 'adult' | 'old';
+  top: 'tshirt' | 'dress' | 'coat' | 'apron' | 'hoodie' | 'shirt' | 'sweater' | 'jacket';
+  topColor: ColourName;
+  bottom?: 'skirt' | 'pants' | 'jeans' | 'shorts';
+  bottomColor?: ColourName;
+  hair: 'short' | 'long' | 'ponytail' | 'bun' | 'curly' | 'afro' | 'braids' | 'bald' | 'cap';
+  hairColor: HairColourName;
+  height?: 'tall' | 'mid' | 'short';
+  pose?: 'stand' | 'dance' | 'guitar' | 'phone' | 'wave' | 'point' | 'read' | 'carry' | 'sit' | 'arms';
+  holds?: 'none' | 'umbrella' | 'flowers' | 'suitcase' | 'map';
+  extras?: ('glasses' | 'beard' | 'backpack' | 'bag' | 'scarf')[];
+  slot?: { x: number; z: number };
+};
+export type BuscaSet = {
+  id: string; circle: number; kind: 'find' | 'transfer';
+  text: string; described: string[]; target: string; figures: Figure[];
+  landmarks?: { id: string; x: number; z: number }[];
+  voice?: string;
+  speaker?: string;
+};
+export type PeopleLook = {
+  skin: string; age: string; body: string; build: string; height: number; hairStyle: string; hairColor: string;
+  top: string; topColor: string; bottom: string; bottomColor: string; extras: string[]; seed: number;
+};
+export const COLOURS: Record<ColourName, { hex: string; es: [string, string] }>;
+export const HAIR_COLOURS: Record<HairColourName, { hex: string; es: [string, string]; tier: 'A' | 'B' }>;
+export const CONFUSABLE_COLOURS: [string, string][];
+export const CONFUSABLE_HAIR: [string, string][];
+export const ATTRIBUTES: Record<string, { tier: 'A' | 'B'; values: Record<string, { people3d?: string; es: string[]; gender?: 'f' | 'm'; tier?: 'A' | 'B'; m?: number; f?: number }>; confusable?: [string, string][] }>;
+export const RELATIONS: Record<string, { es: string[]; test: (a: { x: number; z: number }, b: { x: number; z: number }) => boolean }>;
+export const NOT_AVAILABLE: string[];
+export const PRESENCE_ONLY: string[];
+export const HEIGHT_GAP: number;
+export const AC4_RADIUS: number;
+export function lookOf(figure: Figure): { look: PeopleLook; pose: string };
+export function parseFeature(feature: string): { key: string; value: string; other?: string };
+export function matches(figure: Figure, feature: string, set?: BuscaSet): boolean;
+export function distinguishes(target: Figure, distractor: Figure, feature: string, set?: BuscaSet): boolean;
+export function wordsOf(feature: string): string[];
+export function validateBuscaSet(set: BuscaSet): string[];
+export function predicate(feature: string, figure: Figure, names?: Record<string, string>, options?: { subject?: 'figure' | 'persona' }): string;
+export function feedbackFor(set: BuscaSet, pickId: string, names?: Record<string, string>): string | null;
