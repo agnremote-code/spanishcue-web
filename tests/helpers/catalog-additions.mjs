@@ -256,7 +256,6 @@ const repairs = [
     edits: {
       'app/lesson-catalog.ts': [[NEW_36_LINE, OLD_36_LINE]],
       'package.json': [[' tests/country-atlas-ui.test.mjs tests/estados-unidos-3d.test.mjs"', ' tests/country-atlas-ui.test.mjs"']],
-      'app/access-policy.ts': [["'grammar-free','escucha-3d-libre'])", "'grammar-free'])"]],
       'tests/level-cleanup.test.mjs': [["[36,223,226,227,228,229,236,237,238,240].includes(lesson.id)", "[223,226,227,228,229,236,237,238,240].includes(lesson.id)"], ["assert.equal(lessons.filter(l=>l.levels?.includes('A0')).length,10);", "assert.equal(lessons.filter(l=>l.levels?.includes('A0')).length,9);"], ["assert.equal(a1Lessons.length, 70);", "assert.equal(a1Lessons.length, 69);"], ["const authored=relative.startsWith('app/estados-unidos-a2-b1/')||relative.startsWith('app/mundo-3d/')||relative.startsWith('app/the-sound-map/')||", "const authored=relative.startsWith('app/the-sound-map/')||"]],
     },
   },
