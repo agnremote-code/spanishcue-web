@@ -17,6 +17,40 @@ Entry format:
 
 ## Pending verification
 
+## 2026-10-21 — LES-001 «La feria de Villaluz», A2 (new world)
+- URL(s):
+  - https://spanishcue.com/la-feria-de-villaluz (PRO; anonymous users → /acceso);
+  - https://spanishcue.com/resources/spanish-conversation-activity-a2-la-feria-de-villaluz (teacher page).
+- Level(s) / objectives: A2 only. The 8 circles and their objectives:
+
+  | Circle | Objective |
+  |---|---|
+  | informacion | `a2.gram.relativo-que` |
+  | churreria | `a2.gram.condicional-cortesia` |
+  | tombola | `a2.fun.favores` |
+  | noria | `a2.fun.reclamar` |
+  | artesania | `a2.fun.comparar-elegir` |
+  | escenario | `a2.gram.estar-gerundio` |
+  | fotos | `a2.gram.imperativo-pronombres` |
+  | baile | `a2.fun.anecdota` (closing) |
+
+  Both modes are in the same world: Conversación (8 scenes, with «Busca y describe» at 1, 6 and 7 plus a transfer set) and Comprensión auditiva (8 own listenings, TTS).
+- PR / merged SHA / production deploy run: PR #251. The merged SHA and the staging and production runs are recorded by the follow-up records.
+- Production smoke evidence: **not yet**. This entry moves to Published only after the anonymous 302, the teacher page 200 and the audio 403 are verified on spanishcue.com.
+- Concept file / LQG review file:
+  - design: LESSON-DECISION-001 v5;
+  - LQG: [docs/audits/la-feria-de-villaluz-pedagogy-20261021.md](../audits/la-feria-de-villaluz-pedagogy-20261021.md);
+  - G4: [docs/audits/la-feria-de-villaluz-g4-review-20261021.md](../audits/la-feria-de-villaluz-g4-review-20261021.md).
+- Built by / reviewed by:
+  - built by: Martin (content) and Sofia (build, 2026-10-17 and 2026-10-21);
+  - reviewed by: Alejandro (G4: APPROVE after R1–R7) and a fresh QA agent (RELEASE-READY at d7299793).
+- Known limitations:
+  - The Look contract was rated from a SwiftShader render, not a real device (G5(b) is outstanding, so it is not featured).
+  - fps on a real Android has not been measured.
+  - Nobody has listened to the TTS clips.
+  - Busca candidates are small on 390 px portrait.
+  - The AC12 pilot is post-launch.
+
 ## 2026-10-20 — SEO fix 1: 3D world teacher pages, honest level range, breadcrumbs on /resources (SEO/page)
 - URL(s): every `/resources/{slug}` page (BreadcrumbList, level range); the 5 3D world pages such as https://spanishcue.com/resources/spanish-conversation-activity-a0-c2-hospital-san-casi-vivo ("3D" title and description, "Inside the 3D world", "More 3D Spanish worlds").
 - PR / merged SHA / deploy: PR #224 → `c06c01c325f5188fc2ca6d643eb1bfcc99e41d16`. CI + Auto Merge 39358483836 success; staging run 39359479235 success; production run 39359743902 success (2026-10-20 02:38 UTC).
