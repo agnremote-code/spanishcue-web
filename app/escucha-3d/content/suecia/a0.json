@@ -1,0 +1,518 @@
+{
+ "game": "suecia",
+ "level": "A0",
+ "items": [
+  {
+   "id": "estocolmo",
+   "title": "Fika en Estocolmo",
+   "place": "Un café de Estocolmo",
+   "context": "Lucas, de Argentina, descubre la fika en el café de Astrid.",
+   "contextEn": "Lucas, from Argentina, discovers fika at Astrid’s café.",
+   "speakers": [
+    {
+     "name": "Astrid",
+     "country": "España",
+     "voice": "es-ES-XimenaNeural"
+    },
+    {
+     "name": "Lucas",
+     "country": "Argentina",
+     "voice": "es-AR-TomasNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "¡Hola! ¿Quieres hacer fika?",
+     "en": "Hi! Do you want to have fika?"
+    },
+    {
+     "s": 1,
+     "text": "¿Qué es la fika?",
+     "en": "What is fika?"
+    },
+    {
+     "s": 0,
+     "text": "Es café con algo dulce. A las tres de la tarde.",
+     "en": "It is coffee with something sweet. At three in the afternoon."
+    },
+    {
+     "s": 1,
+     "text": "Un café y un bollo de canela, por favor.",
+     "en": "A coffee and a cinnamon bun, please."
+    },
+    {
+     "s": 0,
+     "text": "Son cincuenta coronas. El segundo café es gratis.",
+     "en": "That is fifty kronor. The second coffee is free."
+    },
+    {
+     "s": 1,
+     "text": "¡Qué bien! Gracias.",
+     "en": "Great! Thank you."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué es la fika?",
+     "qEn": "What is fika?",
+     "options": [
+      "Café con algo dulce",
+      "Una comida grande",
+      "Un té frío"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿A qué hora es la fika?",
+     "qEn": "What time is fika?",
+     "options": [
+      "A las doce",
+      "A las tres",
+      "A las ocho"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué pide Lucas?",
+     "qEn": "What does Lucas order?",
+     "options": [
+      "Un té",
+      "Un chocolate",
+      "Un café y un bollo de canela"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuánto cuesta?",
+     "qEn": "How much is it?",
+     "options": [
+      "Cincuenta coronas",
+      "Quince coronas",
+      "Cien coronas"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Tomas café por la tarde?",
+     "qEn": "Do you drink coffee in the afternoon?",
+     "model": "Sí, tomo un café a las cinco."
+    },
+    {
+     "q": "¿Te gusta la canela?",
+     "qEn": "Do you like cinnamon?",
+     "model": "Sí, me gusta mucho."
+    },
+    {
+     "q": "¿Qué comes con el café?",
+     "qEn": "What do you eat with coffee?",
+     "model": "Como galletas o pan."
+    }
+   ],
+   "gaps": "Es [café] con algo [dulce]. A las [tres] de la [tarde].",
+   "glossary": [
+    {
+     "word": "fika",
+     "meaning": "pausa con café y algo dulce",
+     "en": "Swedish coffee break"
+    },
+    {
+     "word": "bollo de canela",
+     "meaning": "pan dulce con canela",
+     "en": "cinnamon bun"
+    },
+    {
+     "word": "coronas",
+     "meaning": "el dinero de Suecia",
+     "en": "kronor"
+    }
+   ]
+  },
+  {
+   "id": "gotemburgo",
+   "title": "En el tranvía",
+   "place": "Un tranvía de Gotemburgo",
+   "context": "Daniela, de Colombia, pregunta a Ahmed, el conductor del tranvía.",
+   "contextEn": "Daniela, from Colombia, asks Ahmed, the tram driver, for help.",
+   "speakers": [
+    {
+     "name": "Daniela",
+     "country": "Colombia",
+     "voice": "es-CO-SalomeNeural"
+    },
+    {
+     "name": "Ahmed",
+     "country": "Perú",
+     "voice": "es-PE-AlexNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Hola. ¿Este tranvía va al parque de atracciones?",
+     "en": "Hi. Does this tram go to the amusement park?"
+    },
+    {
+     "s": 1,
+     "text": "Sí. Son cuatro paradas. Bajas en la plaza.",
+     "en": "Yes. It is four stops. You get off at the square."
+    },
+    {
+     "s": 0,
+     "text": "¿Cómo pago el billete?",
+     "en": "How do I pay for the ticket?"
+    },
+    {
+     "s": 1,
+     "text": "Con el móvil o con una tarjeta.",
+     "en": "With your phone or with a card."
+    },
+    {
+     "s": 0,
+     "text": "¿Cuánto cuesta?",
+     "en": "How much is it?"
+    },
+    {
+     "s": 1,
+     "text": "Treinta y cinco coronas. ¡Que te diviertas!",
+     "en": "Thirty-five kronor. Have fun!"
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Adónde va Daniela?",
+     "qEn": "Where is Daniela going?",
+     "options": [
+      "Al puerto",
+      "Al parque de atracciones",
+      "Al centro"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cuántas paradas son?",
+     "qEn": "How many stops is it?",
+     "options": [
+      "Dos",
+      "Seis",
+      "Cuatro"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cómo paga el billete?",
+     "qEn": "How does she pay for the ticket?",
+     "options": [
+      "Con el móvil o con tarjeta",
+      "Con dinero",
+      "No paga"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cuánto cuesta el billete?",
+     "qEn": "How much is the ticket?",
+     "options": [
+      "Veinte coronas",
+      "Treinta y cinco coronas",
+      "Cincuenta coronas"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Hay tranvía en tu ciudad?",
+     "qEn": "Is there a tram in your city?",
+     "model": "No, pero hay autobuses."
+    },
+    {
+     "q": "¿Cómo pagas el autobús?",
+     "qEn": "How do you pay for the bus?",
+     "model": "Pago con una tarjeta."
+    },
+    {
+     "q": "¿Te gustan los parques de atracciones?",
+     "qEn": "Do you like amusement parks?",
+     "model": "Sí, me gustan mucho."
+    }
+   ],
+   "gaps": "Sí. Son [cuatro] [paradas]. [Bajas] en la [plaza].",
+   "glossary": [
+    {
+     "word": "tranvía",
+     "meaning": "tren pequeño que va por la calle",
+     "en": "tram"
+    },
+    {
+     "word": "paradas",
+     "meaning": "lugares donde para el tranvía",
+     "en": "stops"
+    },
+    {
+     "word": "billete",
+     "meaning": "papel o código para viajar",
+     "en": "ticket"
+    }
+   ]
+  },
+  {
+   "id": "laponia",
+   "title": "Los renos de Inga",
+   "place": "Un bosque con nieve en Laponia",
+   "context": "Pedro, de México, conoce los renos de Inga en el norte de Suecia.",
+   "contextEn": "Pedro, from Mexico, meets Inga’s reindeer in the north of Sweden.",
+   "speakers": [
+    {
+     "name": "Inga",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    },
+    {
+     "name": "Pedro",
+     "country": "México",
+     "voice": "es-MX-JorgeNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "¡Hola! Estos son mis renos.",
+     "en": "Hello! These are my reindeer."
+    },
+    {
+     "s": 1,
+     "text": "¡Qué bonitos! ¿Cuántos tienes?",
+     "en": "How beautiful! How many do you have?"
+    },
+    {
+     "s": 0,
+     "text": "Tengo quinientos renos.",
+     "en": "I have five hundred reindeer."
+    },
+    {
+     "s": 1,
+     "text": "¿Puedo darle comida a uno?",
+     "en": "Can I feed one?"
+    },
+    {
+     "s": 0,
+     "text": "Sí, a este pequeño. Se llama Sol.",
+     "en": "Yes, this little one. Her name is Sol."
+    },
+    {
+     "s": 1,
+     "text": "¡Hola, Sol! Tiene mucha hambre.",
+     "en": "Hello, Sol! She is very hungry."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué animales tiene Inga?",
+     "qEn": "What animals does Inga have?",
+     "options": [
+      "Perros",
+      "Caballos",
+      "Renos"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuántos renos tiene?",
+     "qEn": "How many reindeer does she have?",
+     "options": [
+      "Quinientos",
+      "Cincuenta",
+      "Cinco mil"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cómo se llama el reno pequeño?",
+     "qEn": "What is the little reindeer called?",
+     "options": [
+      "Luna",
+      "Sol",
+      "Nieve"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cómo está el reno?",
+     "qEn": "How is the reindeer?",
+     "options": [
+      "Cansado",
+      "Enfermo",
+      "Con mucha hambre"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Te gustan los animales?",
+     "qEn": "Do you like animals?",
+     "model": "Sí, me gustan mucho los perros."
+    },
+    {
+     "q": "¿Has visto un reno?",
+     "qEn": "Have you seen a reindeer?",
+     "model": "No, nunca he visto un reno."
+    },
+    {
+     "q": "¿Te gusta la nieve?",
+     "qEn": "Do you like snow?",
+     "model": "Sí, me gusta mucho."
+    }
+   ],
+   "gaps": "Sí, a [este] [pequeño]. Se [llama] [Sol].",
+   "glossary": [
+    {
+     "word": "renos",
+     "meaning": "animales del norte con cuernos grandes",
+     "en": "reindeer"
+    },
+    {
+     "word": "quinientos",
+     "meaning": "el número 500",
+     "en": "five hundred"
+    },
+    {
+     "word": "hambre",
+     "meaning": "ganas de comer",
+     "en": "hunger"
+    }
+   ]
+  },
+  {
+   "id": "malmo",
+   "title": "Una bici en Malmö",
+   "place": "Una tienda de bicis en Malmö",
+   "context": "Marcelo, de Bolivia, alquila una bici en la tienda de Linnea.",
+   "contextEn": "Marcelo, from Bolivia, rents a bike at Linnea’s shop.",
+   "speakers": [
+    {
+     "name": "Marcelo",
+     "country": "Bolivia",
+     "voice": "es-BO-MarceloNeural"
+    },
+    {
+     "name": "Linnea",
+     "country": "Uruguay",
+     "voice": "es-UY-ValentinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Hola. Quiero alquilar una bici.",
+     "en": "Hi. I want to rent a bike."
+    },
+    {
+     "s": 1,
+     "text": "¡Hola! ¿Para un día o una semana?",
+     "en": "Hi! For a day or a week?"
+    },
+    {
+     "s": 0,
+     "text": "Para un día, por favor.",
+     "en": "For a day, please."
+    },
+    {
+     "s": 1,
+     "text": "Son cien coronas. ¿Quieres un casco?",
+     "en": "That is a hundred kronor. Do you want a helmet?"
+    },
+    {
+     "s": 0,
+     "text": "Sí, gracias. ¿Dónde está el puente?",
+     "en": "Yes, thank you. Where is the bridge?"
+    },
+    {
+     "s": 1,
+     "text": "Al oeste, cerca del mar. ¡Buen viaje!",
+     "en": "To the west, near the sea. Have a good trip!"
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué quiere Marcelo?",
+     "qEn": "What does Marcelo want?",
+     "options": [
+      "Alquilar una bici",
+      "Comprar una bici",
+      "Un mapa"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Para cuánto tiempo?",
+     "qEn": "For how long?",
+     "options": [
+      "Una semana",
+      "Un día",
+      "Una hora"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cuánto cuesta?",
+     "qEn": "How much is it?",
+     "options": [
+      "Cincuenta coronas",
+      "Doscientas coronas",
+      "Cien coronas"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Dónde está el puente?",
+     "qEn": "Where is the bridge?",
+     "options": [
+      "Al oeste",
+      "Al norte",
+      "En el centro"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Tienes bicicleta?",
+     "qEn": "Do you have a bike?",
+     "model": "Sí, tengo una bici azul."
+    },
+    {
+     "q": "¿Usas casco?",
+     "qEn": "Do you wear a helmet?",
+     "model": "Sí, siempre uso casco."
+    },
+    {
+     "q": "¿Hay un puente en tu ciudad?",
+     "qEn": "Is there a bridge in your city?",
+     "model": "Sí, hay un puente muy grande."
+    }
+   ],
+   "gaps": "Son [cien] [coronas]. ¿Quieres [un] [casco]?",
+   "glossary": [
+    {
+     "word": "alquilar",
+     "meaning": "pagar para usar algo un tiempo",
+     "en": "to rent"
+    },
+    {
+     "word": "casco",
+     "meaning": "protección para la cabeza",
+     "en": "helmet"
+    },
+    {
+     "word": "puente",
+     "meaning": "camino sobre el agua",
+     "en": "bridge"
+    }
+   ]
+  }
+ ]
+}
