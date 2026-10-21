@@ -142,3 +142,93 @@ This was one agent review session: about 45–55 minutes wall-clock, covering re
 R1–R6 are small text edits plus one audio regeneration (R4). Once they're applied and `node scripts/check-feria.mjs`, the two test files and `npm run test:language` pass again, the level can ship without another G4 round. Martin or Sofia can confirm the edits against this list.
 
 G4 VERDICT: APPROVE WITH REQUIRED EDITS
+
+---
+
+## Round 2 (delta), 2026-10-21
+
+- **Reviewer:** Alejandro (same independent reviewer; author still Martin)
+- **Delta reviewed:**
+  - `2ad2d828` «apply G4 required edits R1-R6 and recommended fixes» (a2.mjs, a2.json, a2.busca.json).
+  - `24c65fda` «rework 5 Busca sets on legible D6 features», compared as a raw diff against the facilitator's pre-change copy `a2.before-d6.mjs`.
+  - The D6 rules in `docs/board/evidence/feria-look-contract.md` §5–§7, which allow only *legible* values to distinguish.
+  - HEAD `24c65fda`.
+
+### Machine checks (re-run by the reviewer at `24c65fda`)
+
+```
+$ node scripts/check-feria.mjs
+authored circles: informacion, churreria, tombola, noria, artesania, escenario, fotos, baile
+763/763 checks passed
+
+$ node --test tests/la-feria-de-villaluz.test.mjs tests/feria-look-contract.test.mjs
+# tests 30
+# pass 30
+# fail 0
+
+$ npm run test:language
+# tests 43  # pass 43  # fail 0
+Neutral Spanish guard: 0 unresolved findings across 1540 source files.
+ENGLISH COPY: UNCHANGED (10882 strings in 126 files; base 43e4b3eb1dc76031481d2406a62b9210f0dd97e2)
+```
+
+The test count rose from 22 to 30 because of the D6 contract tests and the Busca framing tests.
+
+### R1–R6: verification
+
+| Item | Status | Evidence |
+|---|---|---|
+| R1 (Emilio set: the cap inference) | **Resolved, superseded by D6.** R1 was applied exactly as specified in `2ad2d828`. The D6 rework then rebuilt the set: no figure wears a cap, and every distractor is ruled out by a legible value. Gabriel: `bottomColor` azul vs rojo. Andrés: top azul, hair moreno. Simón: hair moreno. Felipe: hair moreno, plus child vs non-child age. The cap problem no longer exists. | a2.mjs:805–817 |
+| R2 (the «el que» contrast must be unique) | **Resolved, correct and unique as reworked.** The context says «dos niños rubios con camiseta verde». In the current set, the only blond boys in green are Gabriel (pantalón azul) and Emilio (pantalón rojo), since Simón and Felipe are now dark-haired. So «Es el que lleva el pantalón rojo» picks out Emilio alone. The two wrong options are still wrong for their named reasons («la que»: article agreement; «llevan»: verb agreement). The mother's dialogue (a2.mjs:79), the three «aviso» options (90–94) and the announcement all say «un pantalón rojo», so the circle is internally consistent. «Un pantalón» is the neutral singular. | a2.mjs:79, 90–94, 121–128, 807 |
+| R3 (indicative model sentence) | **Applied verbatim.** «No, gracias. La feria es el lugar donde descanso, no donde trabajo.» | a2.mjs:138 |
+| R4 (escenario listening timeline) | **Applied verbatim** in the text: quince minutos (context + line 1), the new last line, and Q2 «Según Facundo…». See R7 for the audio. | a2.json:207, 213, 221, 225 |
+| R5 (45-minute route honesty) | **Applied verbatim.** The 45-minute guidance is in the teacher notes of informacion, escenario and fotos and in the baile closing note. The route data still sums to 42 (Conversación) and 45 (Comprensión). | a2.mjs:157, 600, 694, 792 |
+| R6 (circle 7 flip vs AM-6) | **Applied verbatim.** The flip now has a student pick someone in secret and say where they are; the teacher drives to find them; then «¡Ven, ponte aquí!». | a2.mjs:653 |
+
+Recommended items applied in `2ad2d828`:
+- 1, «tomar fotos» throughout;
+- 2, «sin perder la calma» / «sin ponerse nerviosa»;
+- 3, Valentina's announcement now says «y está tocando la guitarra… la vi desde aquí»;
+- 4, location removed from the circle 6 notes;
+- 5, `sin-que` feedback;
+- 6, the fotos context now says «Están cerca, entre la gente»;
+- 7 and 8, closing note completed, and students are told to read the notes once and hide them;
+- 9, «GROW-001» removed.
+
+13 (Celia vs the transfer cluster) is resolved by the rework: Amparo now waves near the dance floor instead of dancing. 10, 11 and 12 were left as they were, which is acceptable.
+
+### The 5 reworked Busca sets
+
+All 5 were judged on naturalness, A2 level, correctness against the figures, exponent coverage, and D6 legibility. For each set I checked by hand that every distractor is ruled out by a *legible* value and that the wrong-pick feedback names a feature the class can see.
+
+1. **informacion-emilio** (a2.mjs:805). Announcement: «Es un niño rubio que lleva una camiseta verde y un pantalón rojo.» It's natural and announcer-like, and keeps the target exponent «un niño que lleva…». Distractors and features: covered under R1. Wrong-pick feedback, for example for Gabriel: «La persona del aviso lleva un pantalón rojo». **Pass.** One observation, not blocking: apart from Felipe's age, the set is now solved by colour (top, trousers, hair). D6 forced this, and AC2 still holds (age is a non-colour, legible distinguisher).
+2. **informacion-abuelo** (a2.mjs:819). «Su abuelo es un señor mayor, de pelo canoso, que lleva un abrigo gris y una maleta, porque llegó hoy de viaje.» Natural. Distractors: Ramón has no maleta (maleta is legible), Ignacio has an abrigo azul, Eusebio has pelo moreno. **Pass.**
+3. **escenario-bruno** (a2.mjs:843). «Bruno es el chico pelirrojo que está llevando una caja con cables. Lleva una camiseta verde.» Natural, and «está llevando» keeps estar + gerundio. Distractors: Mauro is moreno, Lucas is pointing (señalando), Darío has a camiseta blanca, Elías is reading (leyendo). This is the strongest exponent alignment of the five: two distractors are ruled out by *what they are doing*. It's consistent with the beat context («Bruno, el ayudante que trae los cables», a2.mjs:558). **Pass.**
+4. **fotos-nico** (a2.mjs:869). «…es el niño rubio que está a la derecha de la abuela, la señora mayor que está leyendo. Lleva una camiseta roja. Tráelo, por favor, y siéntalo delante…» Natural, and the imperative + pronoun exposure («tráelo», «siéntalo») is kept for circle 7. Distractors: Leo is ruled out by location (to the left of the grandmother), Mateo by his camiseta verde, Joel by pelo moreno. Location stays necessary, which is the circle's spatial point. «Leyendo» adds incidental exposure to an irregular gerund. **Pass.**
+5. **transferencia-amparo** (a2.mjs:884). «…una señora mayor de pelo canoso que está saludando cerca de la pista de baile. Lleva una camiseta blanca y una falda verde.» Distractors: Teresa wears a pantalón, Pilar has pelo moreno, Dolores is pointing, Gloria has a falda azul. **AC10 still holds.** All five people are new and none is reused from circles 1/6. The mix (que + estar + gerundio + garment and colour) is new. «Saludando» is not a target pose in any circle 1/6 set; it appears only once, as a circle 6 distractor (Abril). **Pass.**
+
+The announcement texts in `a2.busca.json` match BUSCA exactly; test «the Busca announcements file … is in sync» passes.
+
+### New findings
+
+**R7 (REQUIRED, release condition, not an authoring edit). The Busca audio is out of date for the 5 reworked announcements.**
+The last «Generate Escucha 3D audio» commit is `67a7769b` (02:35:43). The rework `24c65fda` is from 04:09:17, so these files still speak the old texts:
+- `public/audio/escucha-3d/feria-a2-busca-informacion-emilio.mp3`
+- `…-informacion-abuelo.mp3`
+- `…-escenario-bruno.mp3`
+- `…-fotos-nico.mp3`
+- `…-transferencia-amparo.mp3`
+
+For example, the abuelo clip would still say «calvo… abrigo marrón», but no figure in the set now matches that. In a listening find task, stale audio sends the class to the wrong person, which is a content defect at the moment of use. Regenerate them through the canonical pipeline and commit before ship (LANGUAGE_POLICY: audio, scripts and transcripts stay synchronized).
+
+I verified this from commit timestamps only; I didn't listen to the files. On the same evidence, the R4 escenario listening and the R1/R3 text edits (`2ad2d828`, 02:34:30) came before the 02:35:43 generation, so they are probably covered. Whoever fills in the audio state should confirm that the generation run picked them up.
+
+RECOMMENDED (non-blocking):
+- **R2-a.** Two circles now share a lookalike. «El señor de la maleta» in `fotos-ines` (a2.mjs:863: abrigo gris, canoso, maleta) looks almost the same as Martina's abuelo in circle 1 (abrigo gris, canoso, maleta; adult vs old is illegible under D6). It's harmless, and could even be enjoyed as a callback, but a class may ask «¿es el abuelo de Martina?». Optionally give the circle 7 reference man a different coat colour (e.g. `topColor: 'negro'` with `bottomColor: 'gris'`), then re-run the checker. The id is a noun phrase, so the text doesn't change.
+- **R2-b.** «Una señora mayor… que está saludando» with no object is fine. «Que está saludando con la mano» would make the pose easier to picture at A2. The checker still finds «saludando». Optional, and it would need the clip regenerated anyway (R7).
+
+### Round 2 verdict
+
+R1–R6 are applied as specified (R1 and R2 as reworked under D6, and R2 is correct and unique). The 5 reworked sets are natural, correct at A2, legible under D6 and on-exponent, and AC10 holds. The only blocker is R7: the 5 reworked Busca clips must be regenerated so the audio matches the new texts. It needs no authoring work and no further G4 round. Whoever runs the release can verify it by regenerating and committing the clips, with the checks still green.
+
+G4 VERDICT: APPROVE WITH REQUIRED EDITS
