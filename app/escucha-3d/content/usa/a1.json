@@ -1,1 +1,626 @@
-{"game":"usa","level":"A1","items":[]}
+{
+ "game": "usa",
+ "level": "A1",
+ "items": [
+  {
+   "id": "florida",
+   "title": "¿Dónde está mi pasaporte?",
+   "place": "La recepción del hotel",
+   "context": "Luis no encuentra su pasaporte y habla con la recepcionista.",
+   "speakers": [
+    {
+     "name": "Marisol",
+     "country": "Cuba",
+     "voice": "es-CU-BelkysNeural"
+    },
+    {
+     "name": "Luis",
+     "country": "Ecuador",
+     "voice": "es-EC-LuisNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Buenas tardes. Tengo un problema: no encuentro mi pasaporte."
+    },
+    {
+     "s": 0,
+     "text": "Tranquilo. ¿Adónde fuiste esta mañana?"
+    },
+    {
+     "s": 1,
+     "text": "Primero a la playa, después a un café en Ocean Drive."
+    },
+    {
+     "s": 0,
+     "text": "Bueno, llamo al café ahora mismo. ¿Sí? ¿Tienen un pasaporte azul? ¡Perfecto!"
+    },
+    {
+     "s": 1,
+     "text": "¿Lo tienen? ¡Qué alivio!"
+    },
+    {
+     "s": 0,
+     "text": "Sí, está en la caja. Cierran a las seis, así que tienes una hora."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué problema tiene Luis?",
+     "options": [
+      "No encuentra su pasaporte",
+      "No tiene habitación",
+      "Está enfermo"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Adónde fue primero?",
+     "options": [
+      "Al café",
+      "A la playa",
+      "Al aeropuerto"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Dónde está el pasaporte?",
+     "options": [
+      "En la playa",
+      "En el hotel",
+      "En el café"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuánto tiempo tiene Luis?",
+     "options": [
+      "Una hora",
+      "Seis horas",
+      "Diez minutos"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Perdiste algo importante alguna vez?",
+     "model": "Sí, una vez dejé mi teléfono en un taxi."
+    },
+    {
+     "q": "¿Qué haces cuando tienes un problema en un viaje?",
+     "model": "Pregunto en el hotel o llamo a mi familia."
+    },
+    {
+     "q": "¿Qué llevas siempre cuando viajas?",
+     "model": "Siempre llevo el pasaporte y el teléfono."
+    }
+   ],
+   "gaps": "Sí, [está] en la [caja]. Cierran a las [seis], así que tienes [una hora].",
+   "glossary": [
+    {
+     "word": "pasaporte",
+     "meaning": "documento para viajar a otro país"
+    },
+    {
+     "word": "alivio",
+     "meaning": "sensación buena cuando termina un problema"
+    },
+    {
+     "word": "caja",
+     "meaning": "lugar donde se paga en una tienda"
+    }
+   ]
+  },
+  {
+   "id": "nueva-york",
+   "title": "Mensaje desde el metro",
+   "place": "El metro",
+   "context": "Nora deja un mensaje de voz a su amigo Pablo.",
+   "speakers": [
+    {
+     "name": "Nora",
+     "country": "México",
+     "voice": "es-MX-DaliaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Hola, Pablo, soy Nora. Te llamo desde el metro, perdón por el ruido."
+    },
+    {
+     "s": 0,
+     "text": "Mañana tengo una entrevista en una agencia de diseño, en Brooklyn, a las nueve. Estoy muy nerviosa."
+    },
+    {
+     "s": 0,
+     "text": "¿Me ayudas a practicar esta noche? Yo llevo la cena: pizza de la esquina. Llámame, ¿sí? ¡Un beso!"
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Dónde está Nora?",
+     "options": [
+      "En casa",
+      "En el metro",
+      "En la oficina"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué tiene mañana?",
+     "options": [
+      "Un examen",
+      "Una fiesta",
+      "Una entrevista"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿A qué hora?",
+     "options": [
+      "A las nueve",
+      "A las once",
+      "A las siete"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué lleva Nora para la cena?",
+     "options": [
+      "Sushi",
+      "Pizza",
+      "Tacos"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Cómo te preparas para una entrevista?",
+     "model": "Practico las preguntas con un amigo."
+    },
+    {
+     "q": "¿Te pones nervioso fácilmente?",
+     "model": "Sí, un poco, sobre todo antes de un examen."
+    },
+    {
+     "q": "¿Dejas mensajes de voz o escribes?",
+     "model": "Escribo, porque es más rápido."
+    }
+   ],
+   "gaps": "Mañana tengo una [entrevista] en una agencia de [diseño], en Brooklyn, a las [nueve]. Estoy muy [nerviosa].",
+   "glossary": [
+    {
+     "word": "entrevista",
+     "meaning": "reunión para conseguir un trabajo"
+    },
+    {
+     "word": "ruido",
+     "meaning": "sonido fuerte y molesto"
+    },
+    {
+     "word": "esquina",
+     "meaning": "lugar donde se juntan dos calles"
+    }
+   ]
+  },
+  {
+   "id": "california",
+   "title": "Primera vez con patines",
+   "place": "El paseo de Venice",
+   "context": "Lupita enseña a patinar a Víctor en Venice Beach.",
+   "speakers": [
+    {
+     "name": "Lupita",
+     "country": "México",
+     "voice": "es-MX-DaliaNeural"
+    },
+    {
+     "name": "Víctor",
+     "country": "Puerto Rico",
+     "voice": "es-PR-VictorNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "¿Primera vez con patines? No pasa nada. Primero, mira al frente, no a los pies."
+    },
+    {
+     "s": 1,
+     "text": "Ay, es difícil. Me caigo."
+    },
+    {
+     "s": 0,
+     "text": "Dobla un poco las rodillas. Así. Ahora, despacio... ¡muy bien!"
+    },
+    {
+     "s": 1,
+     "text": "¡Estoy patinando! ¿Cuánto tiempo necesito para patinar como tú?"
+    },
+    {
+     "s": 0,
+     "text": "Yo patino todos los días desde hace un año. Tú puedes en un mes."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué aprende Víctor?",
+     "options": [
+      "A nadar",
+      "A surfear",
+      "A patinar"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Adónde tiene que mirar?",
+     "options": [
+      "Al frente",
+      "A los pies",
+      "Al cielo"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué tiene que doblar?",
+     "options": [
+      "Los brazos",
+      "Las rodillas",
+      "La espalda"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Desde cuándo patina Lupita?",
+     "options": [
+      "Desde niña",
+      "Desde hace un mes",
+      "Desde hace un año"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué deporte quieres aprender?",
+     "model": "Quiero aprender a nadar mejor."
+    },
+    {
+     "q": "¿Tienes paciencia cuando algo es difícil?",
+     "model": "A veces sí, pero a veces me enojo."
+    },
+    {
+     "q": "¿Quién te enseñó a andar en bicicleta?",
+     "model": "Mi padre me enseñó cuando tenía seis años."
+    }
+   ],
+   "gaps": "[Dobla] un poco las [rodillas]. Así. Ahora, [despacio]... ¡muy [bien]!",
+   "glossary": [
+    {
+     "word": "patines",
+     "meaning": "zapatos con ruedas"
+    },
+    {
+     "word": "rodillas",
+     "meaning": "parte del cuerpo en el medio de la pierna"
+    },
+    {
+     "word": "despacio",
+     "meaning": "sin prisa, lento"
+    }
+   ]
+  },
+  {
+   "id": "texas",
+   "title": "Bienvenidos a la feria",
+   "place": "La feria del condado",
+   "context": "Por los altavoces de la feria, Daniela anuncia las actividades del día.",
+   "speakers": [
+    {
+     "name": "Daniela",
+     "country": "El Salvador",
+     "voice": "es-SV-LorenaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "¡Bienvenidos a la feria del condado! Hoy a las tres hay concurso de cabras en el pabellón de animales."
+    },
+    {
+     "s": 0,
+     "text": "A las cinco empieza el rodeo. La noria abre todo el día y cuesta cinco dólares."
+    },
+    {
+     "s": 0,
+     "text": "Hace mucho calor: hay agua gratis al lado de la entrada. ¡Y no olviden probar el maíz frito!"
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué es el audio?",
+     "options": [
+      "Un anuncio",
+      "Una conversación",
+      "Una canción"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿A qué hora es el concurso de cabras?",
+     "options": [
+      "A las cinco",
+      "A las tres",
+      "A las ocho"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cuánto cuesta la noria?",
+     "options": [
+      "Tres dólares",
+      "Es gratis",
+      "Cinco dólares"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué es gratis?",
+     "options": [
+      "El agua",
+      "El maíz frito",
+      "La noria"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Te gustan las ferias?",
+     "model": "Sí, me gustan mucho las ferias de mi pueblo."
+    },
+    {
+     "q": "¿Subes a la noria o te da miedo?",
+     "model": "Subo, pero me da un poco de miedo."
+    },
+    {
+     "q": "¿Qué comida de feria te gusta?",
+     "model": "Me gustan las papas fritas y el algodón de azúcar."
+    }
+   ],
+   "gaps": "A las [cinco] empieza el [rodeo]. La [noria] abre todo el día y cuesta cinco [dólares].",
+   "glossary": [
+    {
+     "word": "feria",
+     "meaning": "fiesta con juegos, comida y animales"
+    },
+    {
+     "word": "concurso",
+     "meaning": "competencia con premio"
+    },
+    {
+     "word": "noria",
+     "meaning": "rueda grande con asientos para ver desde arriba"
+    }
+   ]
+  },
+  {
+   "id": "hawai",
+   "title": "La tortuga que duerme",
+   "place": "La playa de surf",
+   "context": "Un voluntario le pide a Valentina que no se acerque a una tortuga.",
+   "speakers": [
+    {
+     "name": "Matías",
+     "country": "Chile",
+     "voice": "es-CL-LorenzoNeural"
+    },
+    {
+     "name": "Valentina",
+     "country": "Uruguay",
+     "voice": "es-UY-ValentinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Perdón, ¿puedes dar un paso atrás? Hay una tortuga descansando."
+    },
+    {
+     "s": 1,
+     "text": "¡Ay, no la veo! ¡Ah, allí! Es enorme. ¿Puedo tocarla?"
+    },
+    {
+     "s": 0,
+     "text": "No, está prohibido. Necesita dormir al sol. Es una tortuga verde y tiene unos cuarenta años."
+    },
+    {
+     "s": 1,
+     "text": "¿Cuarenta? ¡Es mayor que yo! ¿Y vuelve al mar?"
+    },
+    {
+     "s": 0,
+     "text": "Sí, por la tarde, cuando baja el sol."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué hay en la arena?",
+     "options": [
+      "Un perro",
+      "Una tortuga",
+      "Un pez"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Puede tocarla Valentina?",
+     "options": [
+      "Sí, un poco",
+      "Sí, con cuidado",
+      "No, está prohibido"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuántos años tiene la tortuga?",
+     "options": [
+      "Unos cuarenta",
+      "Unos cuatro",
+      "Unos catorce"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cuándo vuelve al mar?",
+     "options": [
+      "Por la mañana",
+      "Por la tarde",
+      "Por la noche"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Viste alguna vez una tortuga de mar?",
+     "model": "Sí, una vez en un acuario."
+    },
+    {
+     "q": "¿Respetas siempre las reglas en la playa?",
+     "model": "Casi siempre, sobre todo las banderas."
+    },
+    {
+     "q": "¿Qué animal te gustaría ver de cerca?",
+     "model": "Me gustaría ver una ballena."
+    }
+   ],
+   "gaps": "No, está [prohibido]. Necesita [dormir] al [sol]. Es una tortuga [verde] y tiene unos cuarenta años.",
+   "glossary": [
+    {
+     "word": "tortuga",
+     "meaning": "animal lento con una casa dura en la espalda"
+    },
+    {
+     "word": "prohibido",
+     "meaning": "que no se permite"
+    },
+    {
+     "word": "descansando",
+     "meaning": "quieta para recuperar energía"
+    }
+   ]
+  },
+  {
+   "id": "colorado",
+   "title": "Miedo en la telesilla",
+   "place": "La estación de esquí",
+   "context": "Sofía sube por primera vez a una telesilla con su instructor.",
+   "speakers": [
+    {
+     "name": "Marco",
+     "country": "Argentina",
+     "voice": "es-AR-TomasNeural"
+    },
+    {
+     "name": "Sofía",
+     "country": "Bolivia",
+     "voice": "es-BO-SofiaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Uy, la telesilla está muy alta. Tengo un poco de miedo."
+    },
+    {
+     "s": 0,
+     "text": "Tranquila, es segura. Mira las montañas: ¡qué bonitas!"
+    },
+    {
+     "s": 1,
+     "text": "Es verdad. ¿Y la pista para principiantes?"
+    },
+    {
+     "s": 0,
+     "text": "Es la verde, a la izquierda. Primero bajamos despacio y después tomamos un chocolate en la cabaña."
+    },
+    {
+     "s": 1,
+     "text": "¡Trato hecho!"
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Dónde están?",
+     "options": [
+      "En el coche",
+      "En la cabaña",
+      "En la telesilla"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cómo se siente Sofía?",
+     "options": [
+      "Tiene un poco de miedo",
+      "Está aburrida",
+      "Está enferma"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cuál es la pista para principiantes?",
+     "options": [
+      "La negra",
+      "La verde",
+      "La azul"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué hacen después de bajar?",
+     "options": [
+      "Van al hotel",
+      "Comen pizza",
+      "Toman un chocolate"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Te dan miedo las alturas?",
+     "model": "Sí, un poco, pero me gustan las vistas."
+    },
+    {
+     "q": "¿Esquiaste alguna vez?",
+     "model": "No, nunca, pero quiero probar."
+    },
+    {
+     "q": "¿Qué haces para olvidar el miedo?",
+     "model": "Respiro despacio y miro el paisaje."
+    }
+   ],
+   "gaps": "Es la [verde], a la [izquierda]. Primero bajamos [despacio] y después tomamos un [chocolate] en la cabaña.",
+   "glossary": [
+    {
+     "word": "telesilla",
+     "meaning": "silla que sube por la montaña colgada de un cable"
+    },
+    {
+     "word": "principiantes",
+     "meaning": "personas que empiezan a aprender"
+    },
+    {
+     "word": "cabaña",
+     "meaning": "casa pequeña de madera"
+    }
+   ]
+  }
+ ]
+}
