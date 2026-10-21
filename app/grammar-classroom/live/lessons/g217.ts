@@ -99,6 +99,34 @@ export const lesson: LiveLesson = {
             { q: '¿La segunda idea es una frase completa que corrige o equilibra la primera?', yes: 'Usa **sin embargo**: «La sala es cómoda. [[Sin embargo|teal]], solo abre por la mañana».', no: 'Si es una reserva corta, usa **aunque**: «Es cómoda, [[aunque pequeña|orange]]».' },
           ] },
         ] },
+        { title: 'Pero, sino, sino que · Contrast or correction?', mascot: '/autoestudio/mascot/noting.webp', coach: '¿Añades un contraste o corriges un error?', blocks: [
+          { kind: 'lead', text: 'Martín cree que la reunión es el lunes. Julia lo corrige: «No es el lunes, **sino** el martes». Y añade: «La biblioteca no es grande, **pero** es muy tranquila». En inglés las dos frases usan «but»; en español no.', en: 'Martín thinks the meeting is on Monday. Julia corrects him: “It isn’t on Monday, it’s on Tuesday.” Then she adds: “The library isn’t big, but it’s very quiet.” English uses “but” in both sentences; Spanish doesn’t.' },
+          { kind: 'concept', tone: 'neutral', label: 'PERO · SINO · SINO QUE', question: '¿La segunda parte añade un contraste o sustituye lo que niegas?', en: 'Pero adds a contrast; sino replaces what you have just denied', formula: ['no + A, sino + B (B sustituye a A)', 'no + verbo, sino que + verbo conjugado', 'no solo A, sino también B'],
+            meaning: '**Pero** opone dos ideas que son verdad a la vez: «No es grande, pero es tranquila». **Sino** aparece después de una negación y **corrige**: lo que niegas es falso y lo sustituyes por otra cosa del mismo tipo: «No es el lunes, sino el martes». Si la corrección lleva un **verbo conjugado**, se usa **sino que**: «No la cancelamos, sino que la cambiamos de día». Con **no solo… sino también** sumas una segunda idea, más fuerte.',
+            examples: [
+              { es: 'La sala no es cara, **pero** está lejos.', en: 'The room isn’t expensive, but it is far away. (both are true)' },
+              { es: 'La reunión no es el lunes, **sino** el martes.', en: 'The meeting isn’t on Monday, it’s on Tuesday. (Tuesday replaces Monday)' },
+              { es: 'No buscamos una sala grande, **sino** un sitio tranquilo.', en: 'We aren’t looking for a big room, but rather a quiet place.' },
+              { es: 'No cancelamos la reunión, **sino que** la cambiamos de día.', en: 'We aren’t cancelling the meeting; we’re moving it to another day. (a new verb: sino que)' },
+              { es: 'La biblioteca **no solo** es barata, **sino también** cómoda.', en: 'The library is not only cheap but also comfortable.' },
+              { es: 'Julia **no solo** propone un lugar, **sino que también** organiza el café.', en: 'Julia not only suggests a place but also organises the coffee. (a new verb: sino que)' },
+            ],
+            note: '«Sino» necesita una negación antes («no», «nunca»…). Si la primera parte es afirmativa, no hay «sino»: «Es pequeña, pero cómoda».' },
+          { kind: 'compare', title: 'Misma negación, dos sentidos · Same negative, two meanings', columns: [
+            { tone: 'neutral', label: 'PERO · contraste', sentence: 'No es la sala más moderna, **pero** tiene buena luz.', idea: 'Aceptas lo negado y añades una ventaja.', en: 'You accept the first point and add a point in favour: both ideas stand.' },
+            { tone: 'neutral', label: 'SINO · corrección', sentence: 'No es una sala, **sino** una biblioteca.', idea: 'La primera idea es falsa: la sustituyes.', en: 'The first idea is wrong and you replace it with the right one, like “not X but (rather) Y”.' },
+          ] },
+          { kind: 'tip', icon: '✎', title: '«Sino» o «si no»', text: '**Sino** (una palabra) corrige: «No es el lunes, sino el martes». **Si no** (dos palabras) es condición, «if not»: «**Si no** hay proyector, usamos la pantalla del portátil».', en: '“Sino” (one word) corrects: “not Monday but Tuesday”. “Si no” (two words) is a condition, “if not”: “If there’s no projector, we’ll use the laptop screen.” They sound almost the same, so check the meaning.' },
+          { kind: 'choice', title: 'Comprueba', items: [
+            { prompt: 'La reunión no es el lunes, ___ el martes.', options: ['pero', 'sino', 'sino que'], answer: 1, why: 'Corriges un día por otro, sin verbo nuevo: sino.', en: 'The meeting isn’t on Monday, it’s on Tuesday.' },
+            { prompt: 'No cancelamos la reunión, ___ la cambiamos de día.', options: ['sino que', 'sino', 'pero'], answer: 0, why: 'La corrección lleva un verbo conjugado (cambiamos): sino que.', en: 'We aren’t cancelling the meeting; we’re moving it to another day.' },
+            { prompt: 'La biblioteca no es grande, ___ es muy tranquila.', options: ['sino', 'sino que', 'pero'], answer: 2, why: 'No corriges el tamaño: las dos cosas son verdad (no es grande y es tranquila). Es un contraste: pero.', en: 'The library isn’t big, but it’s very quiet.' },
+            { prompt: 'La sala no solo está cerca de la estación, ___ también tiene proyector.', options: ['sino', 'pero', 'sino que'], answer: 2, why: 'Después viene un verbo conjugado (tiene): no solo…, sino que también.', en: 'The room is not only near the station; it also has a projector.' },
+            { prompt: 'La biblioteca no solo es barata, ___ también cómoda.', options: ['sino', 'pero', 'sino que'], answer: 0, why: 'Después viene solo un adjetivo, sin verbo: no solo…, sino también.', en: 'The library is not only cheap but also comfortable.' },
+            { prompt: '___ hay proyector, usamos la pantalla del portátil.', options: ['Sino', 'Si no', 'Sino que'], answer: 1, why: 'Es una condición (if not): si no, en dos palabras.', en: 'If there’s no projector, we’ll use the laptop screen.' },
+            { prompt: '«No es un problema de dinero, sino de tiempo» significa…', options: ['El problema es el dinero y también el tiempo.', 'El problema no es el dinero: es el tiempo.', 'No hay ningún problema.'], answer: 1, why: '«Sino» sustituye lo negado: el problema real es el tiempo.', en: '“It isn’t a money problem, it’s a time problem” means…' },
+          ] },
+        ] },
         { title: 'Errores frecuentes · Common mistakes', mascot: '/brand/mascot/standing-crossed.webp', coach: 'Estos errores son muy comunes.', blocks: [
           { kind: 'guide', text: { teacher: 'Tu alumno busca el error antes de que muestres la corrección y explica la regla con sus palabras.', self: 'Lee cada frase, busca el error y después toca para ver la corrección.' } },
           { kind: 'mistakes', title: '¿Dónde está el error? · Where is the mistake?', items: [

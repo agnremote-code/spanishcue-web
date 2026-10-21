@@ -105,6 +105,30 @@ export const lesson: LiveLesson = {
             { prompt: 'El viernes Clara le ___ a Óscar: «Me voy a Oaxaca».', options: ['dijo', 'dice', 'dije'], answer: 0, why: '«El viernes» + Clara (ella): dijo.', en: 'On Friday Clara said to Óscar: “I am off to Oaxaca”.' },
           ] },
         ] },
+        { title: 'Pidió, durmió · busqué, llegué · Two more changes', mascot: '/autoestudio/mascot/noting.webp', coach: 'Él y ellos cambian; yo cambia la letra.', blocks: [
+          { kind: 'lead', text: 'Clara sigue contando: «El sábado Marta [[durmió|blue]] casi todo el día. Yo [[busqué|blue]] una farmacia y ella solo [[pidió|blue]] una sopa». Hay dos cambios más: unos verbos en **-ir** cambian la vocal con **él** y **ellos**, y unos verbos en **-car, -gar, -zar** cambian una letra con **yo**.', en: 'Clara goes on: “On Saturday Marta slept almost all day. I looked for a pharmacy and she only asked for a soup”. There are two more changes: some -ir verbs change their vowel with “él” and “ellos”, and some verbs in -car, -gar, -zar change one letter with “yo”.' },
+          { kind: 'table', title: 'Verbos en -ir: e → i, o → u (solo él / ellos)', head: ['Infinitivo', 'tú', 'él · ella · usted', 'nosotros', 'ellos · ustedes'], rows: [
+            ['pedir (to ask for, order)', 'pediste', '[[pidió|blue]]', 'pedimos', '[[pidieron|blue]]'],
+            ['sentir (to feel)', 'sentiste', '[[sintió|blue]]', 'sentimos', '[[sintieron|blue]]'],
+            ['dormir (to sleep)', 'dormiste', '[[durmió|blue]]', 'dormimos', '[[durmieron|blue]]'],
+          ], note: 'Igual que pedir: **repetir** (repitió), **servir** (sirvió), **preferir** (prefirió). Igual que dormir: **morir** (murió). Con yo, tú, nosotros y vosotros no hay cambio de vocal (tú pediste, nosotros dormimos). Las terminaciones son regulares. Los verbos en **-ar** y **-er** no cambian: pensó, volvió, entendió.' },
+          { kind: 'table', title: 'Yo: -qué, -gué, -cé (solo cambia la letra)', head: ['Infinitivo', 'yo', 'él · ella', '¿Por qué?'], rows: [
+            ['buscar (to look for)', '[[busqué|blue]]', 'buscó', 'c → **qu** delante de e: suena /k/'],
+            ['llegar (to arrive)', '[[llegué|blue]]', 'llegó', 'g → **gu** delante de e: suena /g/'],
+            ['empezar (to start)', '[[empecé|blue]]', 'empezó', 'z → **c** delante de e'],
+          ], note: 'Igual: pagar → **pagué**, tocar → **toqué**, almorzar → **almorcé**. El sonido no cambia: solo la letra. Con él, ella y las otras personas, el verbo es regular: buscó, llegaste, empezamos.' },
+          { kind: 'tip', icon: '🔑', title: 'Dos cambios, dos personas · Two changes, two persons', text: '**Vocal** (e → i, o → u): solo verbos en -ir y solo con él, ella, usted, ellos, ustedes: pidió, durmieron. **Letra** (qu, gu, c): solo con yo: busqué, llegué, empecé.', en: 'Vowel change (e → i, o → u): only -ir verbs, and only with él, ella, usted, ellos, ustedes: pidió, durmieron. Spelling change (qu, gu, c): only with “yo”: busqué, llegué, empecé.' },
+          { kind: 'choice', title: 'Comprueba · Check', items: [
+            { prompt: 'El sábado Marta ___ casi todo el día.', options: ['durmió', 'dormió', 'duermió'], answer: 0, why: 'Dormir con ella: o → u, durmió.', en: 'On Saturday Marta slept almost all day.' },
+            { prompt: 'El sábado, en el mercado, Clara ___ una sopa para Marta.', options: ['pedió', 'pidió', 'pide'], answer: 1, why: 'Pedir con ella: e → i, pidió. Y es el sábado: pasado.', en: 'On Saturday, at the market, Clara ordered a soup for Marta.' },
+            { prompt: 'El domingo Clara y Marta ___ hasta las diez.', options: ['dormieron', 'dormimos', 'durmieron'], answer: 2, why: 'Ellas: o → u, durmieron.', en: 'On Sunday Clara and Marta slept until ten.' },
+            { prompt: 'Yo ___ un taxi en la terminal, pero no encontré ninguno.', options: ['buscé', 'busqué', 'buscó'], answer: 1, why: 'Buscar con yo: c → qu, busqué.', en: 'I looked for a taxi at the bus station, but I didn’t find one.' },
+            { prompt: 'El viernes ___ a Oaxaca a las once de la noche.', options: ['llegué', 'llegé', 'llegó'], answer: 0, why: 'Yo: g → gu para mantener el sonido, llegué.', en: 'On Friday I arrived in Oaxaca at eleven at night.' },
+            { prompt: 'El lunes yo ___ a trabajar a las nueve.', options: ['empezé', 'empezó', 'empecé'], answer: 2, why: 'Empezar con yo: z → c delante de e, empecé.', en: 'On Monday I started work at nine.' },
+            { prompt: 'Anoche Marta ___ frío y un poco de fiebre.', options: ['sentió', 'sintió', 'siente'], answer: 1, why: 'Sentir con ella: e → i, sintió.', en: 'Last night Marta felt cold and had a bit of a fever.' },
+            { prompt: 'Clara ___ a casa el domingo por la noche.', options: ['vuelvió', 'vulvió', 'volvió'], answer: 2, why: 'Volver es un verbo en -er: no cambia la vocal en indefinido. Volvió.', en: 'Clara went back home on Sunday night.' },
+          ] },
+        ] },
         { title: 'Errores frecuentes · Common mistakes', mascot: '/brand/mascot/standing-crossed.webp', coach: 'Raíz nueva, -e / -o, sin tilde.', blocks: [
           { kind: 'guide', text: { teacher: 'Tú lees la frase con el error y tu alumno explica qué falla: la raíz, la terminación o la tilde. Después aparece la corrección.', self: 'Lee cada frase y busca qué falla: la raíz, la terminación o la tilde. Toca para ver la corrección. (Stem, ending or accent?)' } },
           { kind: 'mistakes', title: '¿Dónde está el error? · Where is the mistake?', items: [

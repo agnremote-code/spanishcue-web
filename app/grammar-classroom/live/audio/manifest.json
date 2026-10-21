@@ -1,7 +1,7 @@
 {
   "producer": "Microsoft Edge online speech via edge-tts",
   "synthetic": true,
-  "generatedAt": "2026-10-20T22:20:02.574698+00:00",
+  "generatedAt": "2026-10-20T22:47:34.710714+00:00",
   "humanListeningQA": false,
   "clips": [
     {
@@ -2509,6 +2509,62 @@
       "channels": 1,
       "peakPCM": 21887,
       "rmsPCM": 3475.28
+    },
+    {
+      "id": 537,
+      "voice": "es-ES-ElviraNeural",
+      "rate": "-3%",
+      "src": "/audio/grammar-live/537.mp3",
+      "transcriptSha256": "632b6c06b940358a38ee7fbfb23e0d76eab73f92792fc0c44dab9fc31a85e523",
+      "sha256": "64b63178a2a29c989c4d70002483299f7c9a77293f89af73d5ef195b2f3793c6",
+      "durationSeconds": 57.02,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 21628,
+      "rmsPCM": 2366.2
+    },
+    {
+      "id": 538,
+      "voice": "es-CO-SalomeNeural",
+      "rate": "-3%",
+      "src": "/audio/grammar-live/538.mp3",
+      "transcriptSha256": "a4ba0b1451704866bbd156b594517095770f1b4f8d812b5c3b561017c5855342",
+      "sha256": "504951304d1d50e5b996878d4aa2d85f1bb2f3d8f1ef23953c1e7651c92357a7",
+      "durationSeconds": 62.23,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 19941,
+      "rmsPCM": 2817.0
+    },
+    {
+      "id": 539,
+      "voice": "es-MX-JorgeNeural",
+      "rate": "+0%",
+      "src": "/audio/grammar-live/539.mp3",
+      "transcriptSha256": "d334fec53c88cdfe1f9c135769de7003a52df70249ad0a870449871431e8083d",
+      "sha256": "0ef6b024993690e376ed293c06cb1046ef4ab8b40def401bf23747ae21114700",
+      "durationSeconds": 66.58,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 25185,
+      "rmsPCM": 3246.63
+    },
+    {
+      "id": 540,
+      "voice": "es-CO-SalomeNeural",
+      "rate": "-6%",
+      "src": "/audio/grammar-live/540.mp3",
+      "transcriptSha256": "9e890bfba3cbe9facf5973f43ddccf514197e555b3f5d0686986535aa67fb7c9",
+      "sha256": "fd06a6c19d7aa6f769acd30c92791ff5c6d568b1c007ece62c9a836ec4c5f138",
+      "durationSeconds": 51.14,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 17662,
+      "rmsPCM": 2690.55
     }
   ]
 }

@@ -105,6 +105,37 @@ export const lesson: LiveLesson = {
           ] },
           { kind: 'tip', icon: '⚖', title: 'Precisión no es longitud · Precise is not the same as long', text: 'No añadas palabras por formalidad. Añádelas **solo donde el lector no puede recuperar la relación** con seguridad. Un texto preciso puede seguir siendo breve.', en: 'Don’t add words just to sound formal. Add them only where the reader cannot safely recover the relationship. A precise text can still be short.' },
         ] },
+        { title: 'Género y plural: cuando la forma cambia el sentido', mascot: '/autoestudio/mascot/noting.webp', coach: 'Un artículo distinto puede ser otra palabra.', blocks: [
+          { kind: 'lead', text: 'En la reunión de edición, Sofía corrige dos frases del boletín: «La orden del día» y «Dejaron dos paragua en la entrada». En el grupo nominal, el **artículo** y el **plural** también transmiten información: a veces el género distingue dos palabras distintas.', en: 'In the editing meeting, Sofía corrects two lines of the newsletter. Inside the noun phrase, the article and the plural ending carry meaning too: with some nouns, masculine and feminine are in fact two different words, and some compounds and loanwords have plurals that learners often get wrong.' },
+          { kind: 'table', title: 'Mismo nombre, otro género, otro significado', head: ['Masculino', 'Femenino'], rows: [
+            ['**el capital**: dinero, patrimonio («un capital inicial»)', '**la capital**: ciudad principal («la capital del país»)'],
+            ['**el orden**: colocación, secuencia («por orden alfabético», «el orden del día»)', '**la orden**: mandato («dar una orden»); también una orden religiosa'],
+            ['**el cometa**: astro con cola', '**la cometa**: juguete que vuela con el viento (su nombre varía mucho según el país)'],
+            ['**el frente**: parte delantera («al frente del grupo»); frente frío (del tiempo)', '**la frente**: parte de la cara, sobre los ojos'],
+            ['**el cura**: sacerdote', '**la cura**: curación, tratamiento («una cura de reposo»)'],
+            ['**el editorial**: artículo de opinión del medio', '**la editorial**: empresa que publica libros'],
+          ], note: 'No son errores de concordancia: son dos palabras. Elige el artículo por el significado, no por la terminación.' },
+          { kind: 'concept', tone: 'neutral', label: 'PLURAL DE COMPUESTOS Y PRÉSTAMOS', question: '¿Cómo se forma el plural?', en: 'Compounds of verb + plural noun (paraguas, lavaplatos) already end in an unstressed -s, so they do not change in the plural: only the article shows the number. For loanwords ending in a consonant, the RAE and ASALE accept both “clubes” and “clubs”. For the CV, the recommended Spanish form is “currículo”, plural “currículos”.',
+            formula: ['verbo + nombre en -s → invariable: el paraguas / los paraguas', 'préstamo en consonante → club: clubes o clubs (las dos admitidas)'],
+            meaning: 'Los compuestos de verbo + nombre terminados en **-s** átona no cambian en plural: el número lo marca el artículo. En **club**, la RAE y la ASALE admiten **clubes** y **clubs**. Para el documento académico o laboral, la forma recomendada es **currículo**, con plural **currículos**.',
+            examples: [
+              { es: 'Alguien dejó **dos paraguas** en la sala de reuniones.', en: 'Someone left two umbrellas in the meeting room: “paraguas” is both singular and plural.' },
+              { es: 'La cocina del local necesita **dos lavaplatos** nuevos.', en: 'The kitchen needs two new dishwashers: the compound does not add another -s.' },
+              { es: 'Entrevistamos a **los clubes** (o **los clubs**) deportivos del barrio.', en: 'We interviewed the local sports clubs: both plurals are accepted.' },
+              { es: 'Recibimos veinte **currículos** para el puesto de diseño.', en: 'We received twenty CVs for the design position: “currículo / currículos” is the recommended form.' },
+            ],
+            note: 'También son invariables **el / los cumpleaños**, **el / los sacacorchos**. Cuando dudes, el Diccionario panhispánico de dudas indica la forma recomendada.' },
+          { kind: 'choice', title: 'Comprueba', items: [
+            { prompt: 'Para abrir el nuevo local, la asociación necesita ___ inicial de los socios.', options: ['una capital', 'un capital'], answer: 1, why: 'Se habla de dinero: el capital, masculino.', en: 'To open the new premises, the association needs start-up capital from its members. Money or a city?' },
+            { prompt: 'La presidenta dio ___ clara: nada se publica sin revisión.', options: ['la orden', 'el orden'], answer: 0, why: 'Es un mandato: la orden, femenino.', en: 'The president gave a clear order: nothing is published without review.' },
+            { prompt: 'Antes de la reunión, Sofía envía ___ del día.', options: ['la orden', 'el orden'], answer: 1, why: '«El orden del día» es la secuencia de temas (agenda): masculino.', en: 'Before the meeting, Sofía sends out the agenda.' },
+            { prompt: 'Laura se dio un golpe en ___ con la puerta del archivo.', options: ['la frente', 'el frente'], answer: 0, why: 'Es la parte de la cara: la frente, femenino.', en: 'Laura banged her forehead on the archive door.' },
+            { prompt: 'En la página de opinión, Sofía firma ___ de este mes.', options: ['la editorial', 'el editorial'], answer: 1, why: 'El artículo de opinión del medio es el editorial; la editorial es la empresa que publica.', en: 'On the opinion page, Sofía signs this month’s editorial.' },
+            { prompt: '«Alguien dejó dos ___ en la entrada.»', options: ['paraguas', 'paragua', 'paraguases'], answer: 0, why: 'Compuesto de verbo + nombre en -s: invariable, los paraguas.', en: 'Someone left two umbrellas at the entrance. Which plural is correct?' },
+            { prompt: 'Además de «los clubes», ¿qué otro plural está admitido?', options: ['los club', 'los clubses', 'los clubs'], answer: 2, why: 'La RAE y la ASALE admiten las dos formas: clubes y clubs.', en: 'Besides “los clubes”, which other plural is accepted?' },
+            { prompt: 'Recibimos veinte ___ para el puesto de diseño.', options: ['currículo', 'currículos', 'currículoses'], answer: 1, why: 'Forma recomendada: currículo; plural regular: currículos.', en: 'We received twenty CVs for the design job.' },
+          ] },
+        ] },
         { title: 'Errores frecuentes', mascot: '/brand/mascot/standing-crossed.webp', coach: 'Estos errores cambian el mensaje.', blocks: [
           { kind: 'guide', text: { teacher: 'Tu alumno explica qué entendería un lector con la versión errónea antes de que muestres la corrección.', self: 'Lee cada frase y pregúntate qué entendería otra persona. Después toca para ver la corrección.' } },
           { kind: 'mistakes', title: '¿Dónde está el problema?', items: [

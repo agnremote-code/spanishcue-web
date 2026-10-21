@@ -22,12 +22,14 @@ Checkpoint para retomar sin repetir trabajo. Se actualiza con cada tanda.
 | 15 | G163–G166 (B2), G168–G173 (C1) | #242 | en producción (`e7fc161`) |
 | 16 | G174, G176–G184 (C1) | #243 | en producción (`e7fc161`) |
 | 17 | G185, G187–G195 (C1) | #244 | en producción (`5700ed7`) |
-| 18 | G196–G200, G203, G204 (C1), G206–G208 (C2) | #245 | lista, con audio |
-| 19 | G209–G218 (C2) | — | lista, con audio |
+| 18 | G196–G200, G203, G204 (C1), G206–G208 (C2) | #245 | en producción (`dcf6bc9`) |
+| 19 | G209–G218 (C2) | #246 | lista, con audio |
 | 20 | G219–G228 (C2) | — | lista, con audio |
-| 21 | G229–G236 (C2) | — | lista; audio en el workflow |
+| 21 | G229–G236 (C2) | — | lista, con audio |
+| Inglés | Ayuda en inglés en las 30 clases B1–C2 anteriores al curso | — | lista |
+| 22 | Extensiones G237–G240 y temas de la auditoría que faltaban en 7 clases | — | lista; audio en el workflow |
 
-No quedan unidades planificadas: las 236 unidades del curso tienen clase.
+No quedan unidades planificadas: las 236 unidades del curso tienen clase, y las 4 extensiones de la auditoría (G237–G240, ids 537–540) también. Las extensiones llevan los números siguientes a G236, así que nada se renumera, y se estudian justo después de la unidad que amplían: G240 tras G069, G238 tras G110, G237 tras G121 y G239 tras G135 (`extensionAfter` en `curriculum.ts`; `courseUnits` va en orden de estudio). La clase anterior de cada una enlaza a la extensión y conserva su enlace a la siguiente unidad.
 
 ## Memoria del Worker
 
@@ -35,9 +37,9 @@ Las clases en vivo ya no viajan como módulos del Worker: el build deja solo un 
 
 ## Pendientes transversales
 
-- Ayuda en inglés en las clases existentes de B1 a C2 (todavía solo en español).
+- Ayuda en inglés en las clases existentes de B1 a C2: hecha (rama `claude/gramatica-en-vivo-ingles-b1-c2`).
 - Correcciones de G038 (variantes horarias), G050 (formas verbales no enseñadas) y G051 (afirmaciones regionales): hechas en la tanda 7.
-- Auditoría de cobertura PCIC/MCER/DELE: `docs/curriculum/auditoria-cobertura-pcic-mcer-2026-10-20.md`. Propone las ampliaciones G237–G240 (ids 537–540), pendientes de decidir su lugar en el orden.
+- Auditoría de cobertura PCIC/MCER/DELE: `docs/curriculum/auditoria-cobertura-pcic-mcer-2026-10-20.md`. Sus ampliaciones G237–G240 ya son clases (tanda 22). Siete temas que la auditoría mandaba sumar a clases ya hechas faltaban y se agregaron como paso nuevo, sin tocar lo existente: G014, G019, G048, G060, G032, G114 (id 217) y G162 (id 116).
 
 ## Límites de verificación
 
