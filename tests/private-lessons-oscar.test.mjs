@@ -21,11 +21,14 @@ test('private offer requires invite and trusted PayPal checkout', () => {
   assert.match(page, /paypal\.me/);
   assert.match(page, /rel="noopener noreferrer"/);
   assert.match(page, /Payment link being prepared/);
+  assert.match(page, /WL9D4V7W3H6F2/);
+  assert.match(page, /PRIVATE_INVITE_SHA256/);
+  assert.match(page, /PRIVATE_PAYPAL_PAYMENT_URL/);
 });
 
 test('private offer does not falsely grant homework or PRO entitlement', () => {
   assert.match(page, /after payment is confirmed/i);
-  assert.match(page, /does not automatically activate an account/i);
+  assert.match(page, /does not automatically provide account access/i);
   assert.doesNotMatch(page, /fetch\(/);
 });
 
