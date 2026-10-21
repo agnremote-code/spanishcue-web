@@ -32,12 +32,12 @@ test('A1 uses the same twelve areas and 48 places, with its own eight simple que
 });
 
 test('old A2 links fall back to B1 while the selector offers a distinct A1, without an A2 option', async () => {
-  const page = await readFile('app/reino-unido-en-relieve/page.tsx', 'utf8');
+  const page = await readFile('app/reino-unido-en-relieve/Atlas.tsx', 'utf8');
   const catalog = await readFile('app/lesson-catalog.ts', 'utf8');
   const seed = catalog.split('\n').find(line => line.includes('{id:32,'));
   assert.match(page, /levels=\{\["A1","B1"\]\} defaultLevel="B1"/);
   assert.match(page, /placesForUKArea\(active,level\)/);
-  assert.match(seed, /level:"B1",levels:\["A1","B1"\]/);
+  assert.match(seed, /level:"B1",levels:\["A0","A1","A2","B1"\]/);
   assert.equal(resolveConversationLevel({availableLevels:['A1','B1'],defaultLevel:'B1'}, 'A2'), 'B1');
 });
 

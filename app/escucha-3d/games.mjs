@@ -81,6 +81,15 @@ export const GAMES = {
     ownListening: true,
     bilingualA0: true,
   },
+  // Reino Unido 3D (A0–B1): one listening per nation and level; walking into the circle
+  // of that nation opens it (app/reino-unido-en-relieve/mundo). PRO lesson (ID 32).
+  uk: {
+    title: 'Reino Unido',
+    levels: ['A0', 'A1', 'A2', 'B1'],
+    spots: ['inglaterra', 'escocia', 'gales', 'irlanda-norte'],
+    ownListening: true,
+    bilingualA0: true,
+  },
   // La feria de Villaluz (A2): every circle has its own listening, and each
   // character keeps one voice (app/la-feria-de-villaluz/levels/a2.mjs CAST).
   feria: {

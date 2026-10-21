@@ -10,6 +10,7 @@ const COUNTRIES=[
   {dir:'argentina',id:228,game:'argentina',regions:['buenos-aires','cordoba','mendoza','bariloche']},
   {dir:'espana',id:229,game:'espana',regions:['madrid','cataluna','andalucia','valencia']},
   {dir:'suecia',id:227,game:'suecia',regions:['estocolmo','gotemburgo','laponia','malmo']},
+  {dir:'reino-unido-en-relieve',id:32,game:'uk',regions:['inglaterra','escocia','gales','irlanda-norte']},
 ];
 const LEVELS=['A0','A1','A2','B1'];
 const bi=(v,where)=>{assert.ok(v&&typeof v.es==='string'&&v.es.trim()&&typeof v.en==='string'&&v.en.trim(),`${where}: needs es and en`);};

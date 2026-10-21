@@ -225,6 +225,12 @@ const OLD_210_GOALS = ["Comparar formas de vivir usando experiencias personales"
 const NEW_210_GOALS = ["Conversar con personajes en veinte lugares reales de México","Decidir, reaccionar a sorpresas y responder preguntas de tu nivel, de A0 a B1","Comprender una escucha por estado y comparar formas de vivir"];
 const OLD_210_EXPLANATION = "Un mapa vectorial interactivo de las 31 entidades federativas y Ciudad de México. Cada territorio abre contexto breve, vocabulario, cinco preguntas B1 y repreguntas opcionales que no exigen conocimientos previos.";
 const NEW_210_EXPLANATION = "Un mundo 3D con Ciudad de México, Jalisco, Oaxaca y Quintana Roo. En cada estado caminas por cinco lugares y hablas con su gente: una situación, una decisión, una sorpresa y preguntas con ayuda, en A0, A1, A2 o B1. El mapa de las 32 entidades sigue disponible.";
+const OLD_32_HEAD = "{id:32,level:\"B1\",levels:[\"A1\",\"B1\"],displayLevel:\"A1 · B1\",category:\"Conversación\",title:\"Reino Unido en Relieve\",subtitle:\"12 territorios y 48 lugares reales con recorridos de conversación A1 y B1\",duration:\"90+ min\",tag:\"12 territorios · 48 lugares\",";
+const NEW_32_HEAD = "{id:32,level:\"B1\",levels:[\"A0\",\"A1\",\"A2\",\"B1\"],displayLevel:\"A0–B1\",category:\"Conversación\",title:\"Reino Unido en Relieve\",subtitle:\"Un viaje en 3D por las cuatro naciones.\",duration:\"90+ min\",tag:\"3D · 4 naciones · 20 lugares · A0–B1\",";
+const OLD_32_GOALS = ["Ubicar las cuatro naciones y las nueve regiones oficiales de Inglaterra", "Elegir lugares, preguntar dónde están y expresar gustos en A1", "Comparar lugares y justificar decisiones en B1"];
+const NEW_32_GOALS = ["Conversar con personajes en veinte lugares reales del Reino Unido", "Decidir, reaccionar a sorpresas y responder preguntas de tu nivel, de A0 a B1", "Comprender una escucha por nación y comparar formas de vivir"];
+const OLD_32_EXPLANATION = "Una expedición conversacional por las doce áreas ITL1 del Reino Unido: cada territorio abre cuatro lugares reales y preguntas diferentes según el nivel, con vocabulario y apoyos bilingües.";
+const NEW_32_EXPLANATION = "Un mundo 3D con Inglaterra, Escocia, Gales e Irlanda del Norte. En cada nación caminas por cinco lugares y hablas con su gente: una situación, una decisión, una sorpresa y preguntas con ayuda, en A0, A1, A2 o B1. El mapa en relieve de las doce áreas sigue disponible.";
 // 2026-10-15: every grammar class got its own teacher-style thumbnail (scripts/grammar-thumbnails)
 // and the first class (239) moved from the A0 filter to A1. Display-only: before comparing
 // against the historical ledger, the previous shared preview is restored.
@@ -240,6 +246,31 @@ const repairs = [
     edits: {
       'app/lesson-catalog.ts': [[`subtitle:"${NEW_137_SUBTITLE}"`, `subtitle:"${OLD_137_SUBTITLE}"`], [`explanation:"${NEW_137_EXPLANATION}"`, `explanation:"${OLD_137_EXPLANATION}"`]],
       'package.json': [['"test:conversation": "node --test tests/uno-o-el-otro-dilemmas.test.mjs ', '"test:conversation": "node --test ']],
+    },
+  },
+  {
+    // 2026-10-21: Reino Unido (ID 32) became a 3D world like Estados Unidos (four nations,
+    // twenty places, A0–B1; behaviour covered by tests/paises-3d.test.mjs). The relief map
+    // of the twelve areas (A1 and B1) stays inside it (?vista=atlas, app/reino-unido-en-relieve/Atlas.tsx);
+    // route, ID and PRO access are unchanged.
+    id: 32,
+    path: '/reino-unido-en-relieve',
+    // Undone first: it is the latest change to the files it shares (before ID 210).
+    latest: true,
+    files: /^(?:app\/reino-unido-en-relieve\/|app\/escucha-3d\/content\/uk\/|tests\/paises-3d\.test\.mjs$)/,
+    restore: {
+      levels: [['A0', 'A1', 'A2', 'B1'], ['A1', 'B1']],
+      displayLevel: ['A0–B1', 'A1 · B1'],
+      subtitle: ['Un viaje en 3D por las cuatro naciones.', '12 territorios y 48 lugares reales con recorridos de conversación A1 y B1'],
+      tag: ['3D · 4 naciones · 20 lugares · A0–B1', '12 territorios · 48 lugares'],
+      goals: [NEW_32_GOALS, OLD_32_GOALS],
+      explanation: [NEW_32_EXPLANATION, OLD_32_EXPLANATION],
+    },
+    edits: {
+      'app/lesson-catalog.ts': [[NEW_32_HEAD, OLD_32_HEAD], [`goals:${JSON.stringify(NEW_32_GOALS)}`, `goals:${JSON.stringify(OLD_32_GOALS)}`], [`explanation:"${NEW_32_EXPLANATION}"`, `explanation:"${OLD_32_EXPLANATION}"`]],
+      'tests/level-cleanup.test.mjs': [["[32,36,210,223,", "[36,210,223,"], ["includes('A0')).length,12);", "includes('A0')).length,11);"]],
+      'tests/conversation-family-rendering.test.mjs': [["['app/reino-unido-en-relieve/Atlas.tsx',{},", "['app/reino-unido-en-relieve/page.tsx',{},"]],
+      'tests/uk-relief-levels.test.mjs': [["readFile('app/reino-unido-en-relieve/Atlas.tsx', 'utf8')", "readFile('app/reino-unido-en-relieve/page.tsx', 'utf8')"], ['assert.match(seed, /level:"B1",levels:\\["A0","A1","A2","B1"\\]/);', 'assert.match(seed, /level:"B1",levels:\\["A1","B1"\\]/);']],
     },
   },
   {

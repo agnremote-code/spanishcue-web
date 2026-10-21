@@ -1,0 +1,498 @@
+{
+ "game": "uk",
+ "level": "B1",
+ "items": [
+  {
+   "id": "inglaterra",
+   "title": "Cámaras inteligentes en el metro",
+   "place": "Una estación del metro de Londres",
+   "context": "Sebastián, periodista de Venezuela, entrevista a Grace, trabajadora del metro desde hace quince años.",
+   "speakers": [
+    {
+     "name": "Sebastián",
+     "country": "Venezuela",
+     "voice": "es-VE-SebastianNeural"
+    },
+    {
+     "name": "Grace",
+     "country": "República Dominicana",
+     "voice": "es-DO-RamonaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Grace, el metro va a instalar cámaras con inteligencia artificial. ¿Qué opina?"
+    },
+    {
+     "s": 1,
+     "text": "Tengo sentimientos mezclados. He visto a gente caer a las vías, y si una cámara puede evitarlo, la quiero."
+    },
+    {
+     "s": 0,
+     "text": "¿Pero?"
+    },
+    {
+     "s": 1,
+     "text": "Pero las cámaras también buscan a gente «sospechosa». ¿Quién decide qué es sospechoso? Mi primo lleva capucha porque tiene frío, no porque vaya a robar."
+    },
+    {
+     "s": 0,
+     "text": "La empresa dice que el sistema es objetivo."
+    },
+    {
+     "s": 1,
+     "text": "Un sistema aprende de los datos que le dan. Si los datos tienen prejuicios, la máquina también los tendrá."
+    },
+    {
+     "s": 0,
+     "text": "¿Qué propone usted?"
+    },
+    {
+     "s": 1,
+     "text": "Empezar solo con las cámaras que detectan caídas, y que un comité independiente revise el resto antes de usarlo."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué va a instalar el metro?",
+     "options": [
+      "Cámaras con inteligencia artificial",
+      "Puertas nuevas",
+      "Máquinas de billetes"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Por qué le preocupa a Grace la palabra «sospechoso»?",
+     "options": [
+      "Porque es muy larga",
+      "Porque no está claro quién lo decide",
+      "Porque es en inglés"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "Según Grace, ¿de dónde aprende un sistema?",
+     "options": [
+      "De los pasajeros",
+      "De la policía",
+      "De los datos que le dan"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué propone Grace?",
+     "options": [
+      "Empezar solo con las cámaras de caídas",
+      "No instalar nada",
+      "Instalar todo enseguida"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Te sientes más seguro con cámaras en la calle?",
+     "model": "Depende, me siento más seguro de noche, pero no me gusta que me graben siempre."
+    },
+    {
+     "q": "¿Una máquina puede juzgar mejor que una persona?",
+     "model": "Creo que no, porque aprende de nuestros propios errores."
+    },
+    {
+     "q": "¿Cuánta privacidad darías a cambio de seguridad?",
+     "model": "Un poco, pero solo si hay control independiente de los datos."
+    }
+   ],
+   "gaps": "Un sistema [aprende] de los datos que le dan. Si los datos tienen [prejuicios], la [máquina] también los [tendrá].",
+   "glossary": [
+    {
+     "word": "vías",
+     "meaning": "raíles por donde va el tren"
+    },
+    {
+     "word": "sospechoso",
+     "meaning": "que parece culpable"
+    },
+    {
+     "word": "prejuicios",
+     "meaning": "opiniones negativas sin conocer"
+    },
+    {
+     "word": "capucha",
+     "meaning": "parte de la ropa que cubre la cabeza"
+    }
+   ]
+  },
+  {
+   "id": "escocia",
+   "title": "Lobos en las Tierras Altas",
+   "place": "Un refugio de montaña en las Tierras Altas",
+   "context": "Isla, guarda de montaña, discute con Carlos, un granjero de origen hondureño que cría ovejas en el valle.",
+   "speakers": [
+    {
+     "name": "Isla",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    },
+    {
+     "name": "Carlos",
+     "country": "Honduras",
+     "voice": "es-HN-CarlosNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Carlos, sé que estás en contra de traer lobos. Pero hay demasiados ciervos y el bosque no puede crecer."
+    },
+    {
+     "s": 1,
+     "text": "Lo entiendo, Isla. Pero yo tengo ochocientas ovejas. Si un lobo mata diez, ¿quién me paga?"
+    },
+    {
+     "s": 0,
+     "text": "El gobierno promete pagar cada oveja perdida."
+    },
+    {
+     "s": 1,
+     "text": "Promete. Mi vecino esperó un año para cobrar unas ayudas. No vivo de promesas."
+    },
+    {
+     "s": 0,
+     "text": "¿Y si hacemos primero una prueba en una isla vallada, durante cinco años?"
+    },
+    {
+     "s": 1,
+     "text": "Eso me parece más razonable. Si los científicos demuestran que funciona, lo hablamos."
+    },
+    {
+     "s": 0,
+     "text": "Me alegra oírte decir eso."
+    },
+    {
+     "s": 1,
+     "text": "Yo también quiero un bosque vivo, Isla. Solo pido que no lo paguemos siempre los mismos."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Por qué quiere Isla traer lobos?",
+     "options": [
+      "Para los turistas",
+      "Porque son bonitos",
+      "Porque hay demasiados ciervos"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuántas ovejas tiene Carlos?",
+     "options": [
+      "Ochocientas",
+      "Ochenta",
+      "Ocho mil"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué le pasó a su vecino?",
+     "options": [
+      "Perdió todas sus ovejas",
+      "Esperó un año para cobrar unas ayudas",
+      "Vendió su granja"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué le parece razonable a Carlos?",
+     "options": [
+      "No hacer nada",
+      "Traer lobos enseguida",
+      "Hacer una prueba en una isla vallada"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Traerías de vuelta un animal que desapareció de tu país?",
+     "model": "Sí, el oso, pero con un buen plan para los pueblos cercanos."
+    },
+    {
+     "q": "¿Es justo que unos pocos paguen por el bien de todos?",
+     "model": "Solo si se les compensa de verdad y rápido."
+    },
+    {
+     "q": "¿Confías en las promesas del gobierno?",
+     "model": "No mucho, prefiero ver los resultados antes."
+    }
+   ],
+   "gaps": "Lo entiendo, Isla. Pero yo tengo [ochocientas] [ovejas]. Si un [lobo] mata diez, ¿quién me [paga]?",
+   "glossary": [
+    {
+     "word": "ciervos",
+     "meaning": "animales grandes con cuernos"
+    },
+    {
+     "word": "vallada",
+     "meaning": "rodeada de una valla"
+    },
+    {
+     "word": "razonable",
+     "meaning": "que tiene sentido"
+    },
+    {
+     "word": "ayudas",
+     "meaning": "dinero que da el gobierno"
+    }
+   ]
+  },
+  {
+   "id": "gales",
+   "title": "Un millón de hablantes",
+   "place": "Un estudio de televisión en Cardiff",
+   "context": "Siân, maestra galesa, debate con Federico, un empresario de origen nicaragüense que vive en Cardiff.",
+   "speakers": [
+    {
+     "name": "Federico",
+     "country": "Nicaragua",
+     "voice": "es-NI-FedericoNeural"
+    },
+    {
+     "name": "Siân",
+     "country": "España",
+     "voice": "es-ES-ElviraNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Con todo respeto, el inglés abre puertas en todo el mundo. El galés, no tanto."
+    },
+    {
+     "s": 1,
+     "text": "Tiene parte de razón. Pero un idioma no es solo una herramienta: es una forma de ver el mundo, de hacer chistes, de cantar."
+    },
+    {
+     "s": 0,
+     "text": "Nadie dice que el galés tenga que morir. Pero obligar a todas las escuelas a enseñar en galés me parece excesivo."
+    },
+    {
+     "s": 1,
+     "text": "Los estudios dicen que los niños bilingües aprenden mejor otros idiomas. No pierden el inglés: ganan el galés."
+    },
+    {
+     "s": 0,
+     "text": "Eso lo sé muy bien, la verdad."
+    },
+    {
+     "s": 1,
+     "text": "¿Por qué lo dice?"
+    },
+    {
+     "s": 0,
+     "text": "Porque mis hijos van a una escuela en galés. Y hablan tres idiomas: español, inglés y galés."
+    },
+    {
+     "s": 1,
+     "text": "Entonces quizás no estamos tan lejos como parecía al principio."
+    }
+   ],
+   "choice": [
+    {
+     "q": "Según Federico, ¿qué idioma abre puertas en todo el mundo?",
+     "options": [
+      "El inglés",
+      "El galés",
+      "El español"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué le parece excesivo a Federico?",
+     "options": [
+      "Hablar galés en casa",
+      "Obligar a todas las escuelas a enseñar en galés",
+      "Cantar en galés"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué dicen los estudios sobre los niños bilingües?",
+     "options": [
+      "Que se confunden",
+      "Que pierden el inglés",
+      "Que aprenden mejor otros idiomas"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuántos idiomas hablan los hijos de Federico?",
+     "options": [
+      "Dos",
+      "Tres",
+      "Uno"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Un idioma es solo una herramienta?",
+     "model": "No, también es una manera de pensar y de sentir."
+    },
+    {
+     "q": "¿Se debe obligar a aprender un idioma para salvarlo?",
+     "model": "Creo que es mejor animar que obligar, pero a veces hace falta una ley."
+    },
+    {
+     "q": "¿Qué idiomas te gustaría que hablaran tus hijos?",
+     "model": "Me gustaría que hablaran español, inglés y algún idioma de Asia."
+    }
+   ],
+   "gaps": "Los estudios dicen que los niños [bilingües] aprenden mejor otros [idiomas]. No [pierden] el inglés: [ganan] el galés.",
+   "glossary": [
+    {
+     "word": "herramienta",
+     "meaning": "objeto que sirve para hacer algo"
+    },
+    {
+     "word": "excesivo",
+     "meaning": "demasiado"
+    },
+    {
+     "word": "bilingües",
+     "meaning": "que hablan dos idiomas"
+    },
+    {
+     "word": "chistes",
+     "meaning": "historias cortas para reír"
+    }
+   ]
+  },
+  {
+   "id": "irlanda-norte",
+   "title": "Una serie sobre los Problemas",
+   "place": "Una reunión de vecinos en Belfast",
+   "context": "Seamus, portavoz del barrio, habla con Margarita, productora panameña de una plataforma de series.",
+   "speakers": [
+    {
+     "name": "Margarita",
+     "country": "Panamá",
+     "voice": "es-PA-MargaritaNeural"
+    },
+    {
+     "name": "Seamus",
+     "country": "México",
+     "voice": "es-MX-JorgeNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Seamus, queremos rodar la serie en estas calles. Pagaremos bien a los vecinos y vendrán turistas."
+    },
+    {
+     "s": 1,
+     "text": "Lo sé. Pero aquí hay familias que perdieron a alguien. Su dolor no es un espectáculo."
+    },
+    {
+     "s": 0,
+     "text": "La serie puede hacer que el mundo entienda lo que pasó. Muchos jóvenes de otros países no saben nada."
+    },
+    {
+     "s": 1,
+     "text": "Eso es verdad. Pero si lo convierten todo en explosiones y héroes, la gente se quedará con una versión falsa."
+    },
+    {
+     "s": 0,
+     "text": "¿Qué necesitaría para apoyar el proyecto?"
+    },
+    {
+     "s": 1,
+     "text": "Que contraten guionistas de Belfast, de los dos lados. Gente que lo vivió."
+    },
+    {
+     "s": 0,
+     "text": "Es una condición difícil, pero justa. Lo voy a proponer."
+    },
+    {
+     "s": 1,
+     "text": "Y una cosa más: que las familias de las víctimas puedan leer el guion antes de rodar."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué ofrece la productora?",
+     "options": [
+      "Casas nuevas",
+      "Pagar a los vecinos y traer turistas",
+      "Un museo"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué le preocupa a Seamus?",
+     "options": [
+      "Que la serie dé una versión falsa",
+      "Que no paguen",
+      "Que haya mucho ruido"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué pide Seamus primero?",
+     "options": [
+      "Más dinero",
+      "Rodar en otra ciudad",
+      "Guionistas de Belfast de los dos lados"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué quiere Seamus para las familias?",
+     "options": [
+      "Que puedan leer el guion antes",
+      "Que actúen en la serie",
+      "Que se vayan del barrio"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Se puede hacer entretenimiento con una tragedia real?",
+     "model": "Sí, pero con mucho respeto y escuchando a las víctimas."
+    },
+    {
+     "q": "¿Qué serie sobre la historia de tu país te parece injusta?",
+     "model": "Una serie sobre narcos que solo muestra violencia y no a la gente normal."
+    },
+    {
+     "q": "¿Quién debería contar la historia de un conflicto?",
+     "model": "Los que lo vivieron, con ayuda de historiadores."
+    }
+   ],
+   "gaps": "Eso es verdad. Pero si lo convierten todo en [explosiones] y [héroes], la gente se quedará con una [versión] [falsa].",
+   "glossary": [
+    {
+     "word": "rodar",
+     "meaning": "grabar una película o serie"
+    },
+    {
+     "word": "guionistas",
+     "meaning": "personas que escriben series o películas"
+    },
+    {
+     "word": "víctimas",
+     "meaning": "personas que sufren un daño grave"
+    },
+    {
+     "word": "espectáculo",
+     "meaning": "algo que se hace para que otros lo miren"
+    }
+   ]
+  }
+ ]
+}
