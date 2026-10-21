@@ -31,7 +31,7 @@ export const CIRCLE_IDS = CIRCLES.map(c => c.id);
 export const circleById = id => CIRCLES.find(c => c.id === id) ?? null;
 
 // Where each Busca camera looks: from the circle into the open plaza.
-const LOOK_AT = { informacion: { x: -11.5, z: 14 }, escenario: { x: 26, z: -6 }, fotos: { x: 16, z: 8 }, baile: { x: 0.5, z: 2 } };
+const LOOK_AT = { informacion: { x: -11.5, z: 14 }, escenario: { x: 26, z: -6 }, fotos: { x: 20, z: 8 }, baile: { x: 0.5, z: 2 } };
 export function buscaHeading(circle) {
   const c = typeof circle === 'string' ? circleById(circle) : circle;
   return towards(c.spot, LOOK_AT[c.id] ?? c.npc);
