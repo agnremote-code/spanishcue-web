@@ -22,6 +22,15 @@ const localBindingConfig = (runWorkerFirst: boolean | string[]) => ({
     binding: "ASSETS",
     run_worker_first: runWorkerFirst,
   },
+  // Per-IP limit for anonymous checkout/lead/speech POSTs (worker/rate-limit.ts).
+  // Keys carry the deployment label, so staging and production never share counters.
+  ratelimits: [
+    {
+      name: "ABUSE_LIMITER",
+      namespace_id: "7301",
+      simple: { limit: 10, period: 60 as const },
+    },
+  ],
   d1_databases: d1
     ? [
         {

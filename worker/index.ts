@@ -32,6 +32,7 @@ import handler from "vinext/server/app-router-entry";
 import { withDeploymentHeaders } from "./deployment-headers";
 import { writeFreezeActive, writeFreezeResponse } from "./write-freeze";
 import { pagePathname, pageSearch } from "./page-path";
+import { rateLimitKey, rateLimited, rateLimitResponse, type RateLimitBinding } from "./rate-limit";
 
 interface Env {
   ASSETS: Fetcher;
@@ -41,6 +42,7 @@ interface Env {
   SPANISHCUE_DEPLOYMENT?: string;
   SPANISHCUE_WRITE_FREEZE?: string;
   AUTOESTUDIO_SHARE_SECRET?: string;
+  ABUSE_LIMITER?: RateLimitBinding;
   IMAGES: {
     input(stream: ReadableStream): {
       transform(options: Record<string, unknown>): {
@@ -235,6 +237,14 @@ const app = {
       }
     }
 
+    // The router treats `//` as `/`, but the access checks below compare raw
+    // prefixes (`/api//admin/billing` slipped past `/api/admin/`). Every path
+    // check must see the one canonical form, so repeated slashes redirect first.
+    if (url.pathname.includes("//")) {
+      url.pathname = url.pathname.replace(/\/{2,}/g, "/");
+      canonicalRedirect = true;
+    }
+
     if (url.pathname.length > 1 && url.pathname.endsWith("/")) {
       url.pathname = url.pathname.replace(/\/+$/, "");
       canonicalRedirect = true;
@@ -263,6 +273,11 @@ const app = {
       const clean = new URL(url);
       clean.searchParams.delete('lang');
       return languageRedirect(clean, requestedLocale);
+    }
+    if (await rateLimited(env.ABUSE_LIMITER, rateLimitKey(request, pathname, env.SPANISHCUE_DEPLOYMENT))) {
+      const limited = rateLimitResponse();
+      setSecurityHeaders(limited.headers, url, localeFromHeaders(request.headers));
+      return limited;
     }
     const lesson=lessonAtPath(pathname,lessons);
     const premiumBoard=isPremiumBoardPath(pathname);
