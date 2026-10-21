@@ -63,6 +63,15 @@ export const GAMES = {
     ownListening: true,
     bilingualA0: true,
   },
+  // España 3D: every region has its own listening at each level; any circle
+  // of that region opens it (app/espana/mundo). PRO lesson (ID 229).
+  espana: {
+    title: 'España',
+    levels: ['A0', 'A1', 'A2', 'B1'],
+    spots: ['madrid', 'cataluna', 'andalucia', 'valencia'],
+    ownListening: true,
+    bilingualA0: true,
+  },
   // La feria de Villaluz (A2): every circle has its own listening, and each
   // character keeps one voice (app/la-feria-de-villaluz/levels/a2.mjs CAST).
   feria: {

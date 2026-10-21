@@ -1,0 +1,503 @@
+{
+ "game": "espana",
+ "level": "B1",
+ "items": [
+  {
+   "id": "madrid",
+   "title": "Discos en el Rastro",
+   "place": "El Rastro de Madrid",
+   "context": "Mario, de Paraguay, charla con Doña Carmen, que vende discos en el Rastro desde hace décadas.",
+   "speakers": [
+    {
+     "name": "Mario",
+     "country": "Paraguay",
+     "voice": "es-PY-MarioNeural"
+    },
+    {
+     "name": "Doña Carmen",
+     "country": "España",
+     "voice": "es-ES-XimenaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Doña Carmen, ¿cuántos años lleva vendiendo discos en el Rastro?"
+    },
+    {
+     "s": 1,
+     "text": "Cuarenta y dos. Empecé con mi marido, cuando aquí se vendía de todo: muebles, ropa, animales, hasta puertas viejas."
+    },
+    {
+     "s": 0,
+     "text": "¿Y ha cambiado mucho?"
+    },
+    {
+     "s": 1,
+     "text": "Muchísimo. Ahora la mitad de la gente viene a hacer fotos y no compra nada. Y los jóvenes venden la ropa usada por internet, con aplicaciones del móvil."
+    },
+    {
+     "s": 0,
+     "text": "Pero los discos de vinilo están de moda otra vez, ¿no?"
+    },
+    {
+     "s": 1,
+     "text": "Sí, y eso me salva. Vienen chicos de veinte años buscando discos que yo escuchaba a su edad. Algunos saben más de música que yo. Lo que no entienden es por qué no acepto pagos con el móvil."
+    },
+    {
+     "s": 0,
+     "text": "¿Y por qué no los acepta?"
+    },
+    {
+     "s": 1,
+     "text": "Porque me gusta tocar el dinero, hijo. Aunque mi nieta dice que, si no cambio, el año que viene vendo la mitad."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuántos años lleva vendiendo Doña Carmen?",
+     "options": [
+      "Cuarenta y dos",
+      "Veinte",
+      "Doce"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué hace ahora mucha gente en el Rastro?",
+     "options": [
+      "Vende muebles",
+      "Hace fotos y no compra",
+      "Compra animales"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué está de moda otra vez?",
+     "options": [
+      "La ropa usada",
+      "Las puertas viejas",
+      "Los discos de vinilo"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué no acepta Doña Carmen?",
+     "options": [
+      "Pagos con el móvil",
+      "Billetes grandes",
+      "Monedas"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Compras cosas de segunda mano?",
+     "model": "Sí, compro libros y muebles usados porque son más baratos y tienen historia."
+    },
+    {
+     "q": "¿Pagas más con efectivo o con el móvil?",
+     "model": "Casi siempre pago con el móvil, pero llevo algo de efectivo por si acaso."
+    },
+    {
+     "q": "¿Hay algo antiguo que vuelve a estar de moda en tu país?",
+     "model": "Sí, las cámaras de fotos con carrete vuelven a estar de moda entre los jóvenes."
+    }
+   ],
+   "gaps": "Sí, y eso me [salva]. Vienen chicos de [veinte años] buscando [discos] que yo escuchaba a su [edad].",
+   "glossary": [
+    {
+     "word": "vinilo",
+     "meaning": "disco de música antiguo, negro y grande"
+    },
+    {
+     "word": "de moda",
+     "meaning": "que a mucha gente le gusta ahora"
+    },
+    {
+     "word": "usada",
+     "meaning": "que ya tuvo otro dueño"
+    },
+    {
+     "word": "me salva",
+     "meaning": "me ayuda a no perderlo todo"
+    }
+   ]
+  },
+  {
+   "id": "cataluna",
+   "title": "Turistas en el barrio",
+   "place": "Una calle cerca de la Sagrada Família",
+   "context": "Paola, de Venezuela, pregunta a Jordi, guía turístico, por las protestas contra el turismo en Barcelona.",
+   "speakers": [
+    {
+     "name": "Paola",
+     "country": "Venezuela",
+     "voice": "es-VE-PaolaNeural"
+    },
+    {
+     "name": "Jordi",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Jordi, en la Barceloneta hay carteles contra los turistas. ¿Qué está pasando?"
+    },
+    {
+     "s": 1,
+     "text": "Muchos vecinos están cansados. Los pisos turísticos han subido tanto los alquileres que la gente del barrio ya no puede vivir aquí. Mi hermana se ha tenido que ir a cuarenta minutos."
+    },
+    {
+     "s": 0,
+     "text": "Pero tú eres guía. Tú vives del turismo."
+    },
+    {
+     "s": 1,
+     "text": "Exacto, y por eso es complicado. Yo no quiero que los turistas se vayan. Quiero que vengan menos al mismo sitio y a la misma hora."
+    },
+    {
+     "s": 0,
+     "text": "¿Y qué propones?"
+    },
+    {
+     "s": 1,
+     "text": "Que el ayuntamiento limite los pisos turísticos y que los grupos grandes tengan horarios. Y que los turistas visiten otros barrios, no solo cinco calles."
+    },
+    {
+     "s": 0,
+     "text": "Me parece justo. Yo soy de Caracas y en mi ciudad pasa algo parecido con los precios."
+    },
+    {
+     "s": 1,
+     "text": "Por eso hay que hablarlo sin gritar. El turismo puede ser bueno, si deja algo al barrio."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Por qué están cansados muchos vecinos?",
+     "options": [
+      "Por el ruido de las fiestas",
+      "Por los alquileres altos",
+      "Por la suciedad"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Dónde vive ahora la hermana de Jordi?",
+     "options": [
+      "En el centro",
+      "En Caracas",
+      "A cuarenta minutos"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué quiere Jordi?",
+     "options": [
+      "Que los turistas se repartan mejor",
+      "Que no vengan turistas",
+      "Que cierren los museos"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué propone para los grupos grandes?",
+     "options": [
+      "Que paguen más",
+      "Que tengan horarios",
+      "Que no entren"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿El turismo es un problema en tu ciudad?",
+     "model": "En verano sí, porque el centro se llena y los precios suben mucho."
+    },
+    {
+     "q": "¿Dónde te quedas cuando viajas?",
+     "model": "Normalmente en hoteles pequeños o en casa de amigos."
+    },
+    {
+     "q": "¿Cómo se puede ser un turista responsable?",
+     "model": "Respetando a los vecinos, visitando otros barrios y comprando en tiendas locales."
+    }
+   ],
+   "gaps": "Yo no quiero que los turistas se [vayan]. Quiero que [vengan menos] al [mismo sitio] y a la misma [hora].",
+   "glossary": [
+    {
+     "word": "alquileres",
+     "meaning": "el dinero que se paga cada mes por vivir en un piso"
+    },
+    {
+     "word": "pisos turísticos",
+     "meaning": "casas que se alquilan a turistas por pocos días"
+    },
+    {
+     "word": "ayuntamiento",
+     "meaning": "el gobierno de una ciudad"
+    },
+    {
+     "word": "limite",
+     "meaning": "ponga un máximo"
+    }
+   ]
+  },
+  {
+   "id": "andalucia",
+   "title": "Canciones para reírse",
+   "place": "Un local de ensayo en Cádiz",
+   "context": "Alex, de Perú, entrevista a Reyes, que canta en una chirigota del carnaval de Cádiz.",
+   "speakers": [
+    {
+     "name": "Alex",
+     "country": "Perú",
+     "voice": "es-PE-AlexNeural"
+    },
+    {
+     "name": "Reyes",
+     "country": "España",
+     "voice": "es-ES-ElviraNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Reyes, ¿cómo es eso de escribir canciones para el carnaval?"
+    },
+    {
+     "s": 1,
+     "text": "Es un trabajo de todo el año. Somos doce en la chirigota. Escribimos letras graciosas sobre lo que pasa en la ciudad, en España y en el mundo. Y las cantamos disfrazados."
+    },
+    {
+     "s": 0,
+     "text": "¿Sobre política también?"
+    },
+    {
+     "s": 1,
+     "text": "Sobre todo de política. Los políticos tienen miedo del carnaval de Cádiz. Este año hacemos una canción sobre un concejal que prometió una playa nueva y solo trajo una piscina hinchable."
+    },
+    {
+     "s": 0,
+     "text": "¿Y no os metéis en problemas?"
+    },
+    {
+     "s": 1,
+     "text": "A veces alguien se enfada, pero aquí la tradición es reírse de todos, incluidos nosotros mismos. Si no te ríes de ti, no puedes reírte de los demás."
+    },
+    {
+     "s": 0,
+     "text": "¿Cuándo es el concurso?"
+    },
+    {
+     "s": 1,
+     "text": "En febrero, en el Teatro Falla. Si pasamos a la final, cantamos hasta las cinco de la mañana."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuántas personas hay en la chirigota?",
+     "options": [
+      "Diez",
+      "Veinte",
+      "Doce"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿De qué tratan muchas canciones?",
+     "options": [
+      "De política",
+      "De amor",
+      "De fútbol"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué trajo el concejal?",
+     "options": [
+      "Una playa nueva",
+      "Una piscina hinchable",
+      "Un teatro"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Dónde es el concurso?",
+     "options": [
+      "En la playa",
+      "En la plaza",
+      "En el Teatro Falla"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿En tu país se hacen bromas sobre los políticos?",
+     "model": "Sí, hay programas de humor que se ríen de todos los políticos."
+    },
+    {
+     "q": "¿Sabes reírte de ti mismo?",
+     "model": "Creo que sí, aunque a veces me cuesta cuando estoy cansado."
+    },
+    {
+     "q": "¿Te disfrazas en carnaval?",
+     "model": "Sí, el año pasado me disfracé de pirata con mis amigos."
+    }
+   ],
+   "gaps": "A veces alguien se [enfada], pero aquí la [tradición] es [reírse] de [todos], incluidos nosotros mismos.",
+   "glossary": [
+    {
+     "word": "chirigota",
+     "meaning": "grupo que canta canciones graciosas en el carnaval de Cádiz"
+    },
+    {
+     "word": "disfrazados",
+     "meaning": "con ropa especial para parecer otra persona"
+    },
+    {
+     "word": "concejal",
+     "meaning": "político del gobierno de una ciudad"
+    },
+    {
+     "word": "hinchable",
+     "meaning": "que se llena de aire"
+    }
+   ]
+  },
+  {
+   "id": "valencia",
+   "title": "Huelga en agosto",
+   "place": "La recepción de un hotel en Benidorm",
+   "context": "Andrea, de Ecuador, y Víctor, de Puerto Rico, hablan con Toni sobre la huelga del hotel.",
+   "speakers": [
+    {
+     "name": "Andrea",
+     "country": "Ecuador",
+     "voice": "es-EC-AndreaNeural"
+    },
+    {
+     "name": "Toni",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    },
+    {
+     "name": "Víctor",
+     "country": "Puerto Rico",
+     "voice": "es-PR-VictorNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Toni, ¿es verdad que los trabajadores del hotel vais a hacer huelga?"
+    },
+    {
+     "s": 1,
+     "text": "Lo estamos votando. Muchos compañeros no pueden pagar un piso en Benidorm. Yo comparto uno con tres personas, a cuarenta minutos en autobús."
+    },
+    {
+     "s": 2,
+     "text": "Pero una huelga en agosto es lo peor para el hotel. Está lleno."
+    },
+    {
+     "s": 1,
+     "text": "Justamente por eso. Si la hacemos en noviembre, a nadie le importa. En agosto, la empresa tiene que escucharnos."
+    },
+    {
+     "s": 0,
+     "text": "¿Y no tienes miedo de perder el trabajo?"
+    },
+    {
+     "s": 1,
+     "text": "Un poco, claro. Pero la ley nos protege. Lo que más me preocupa son los clientes: no tienen la culpa de nada."
+    },
+    {
+     "s": 2,
+     "text": "¿Y qué piden exactamente los trabajadores?"
+    },
+    {
+     "s": 1,
+     "text": "Un sueldo más alto y que el ayuntamiento construya pisos para trabajadores. No queremos que el turismo se vaya; queremos poder vivir donde trabajamos."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Por qué quieren hacer huelga?",
+     "options": [
+      "No pueden pagar un piso",
+      "Trabajan demasiadas horas",
+      "No tienen vacaciones"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Con cuántas personas comparte piso Toni?",
+     "options": [
+      "Con dos",
+      "Con tres",
+      "Con cuatro"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Por qué quieren hacerla en agosto?",
+     "options": [
+      "Hace menos calor",
+      "Hay menos clientes",
+      "La empresa tiene que escucharlos"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué le preocupa más a Toni?",
+     "options": [
+      "Los clientes",
+      "Su jefe",
+      "El autobús"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Has hecho huelga alguna vez?",
+     "model": "No, pero apoyé una huelga de profesores en mi ciudad."
+    },
+    {
+     "q": "¿Vives cerca de tu trabajo o de tu escuela?",
+     "model": "No, tardo una hora en metro cada día, y es muy cansado."
+    },
+    {
+     "q": "¿Está bien hacer huelga en el peor momento para la empresa?",
+     "model": "Creo que sí, porque si no, nadie escucha a los trabajadores."
+    }
+   ],
+   "gaps": "No queremos que el [turismo] se [vaya]; queremos poder [vivir] donde [trabajamos].",
+   "glossary": [
+    {
+     "word": "huelga",
+     "meaning": "cuando los trabajadores dejan de trabajar para protestar"
+    },
+    {
+     "word": "compañeros",
+     "meaning": "personas que trabajan contigo"
+    },
+    {
+     "word": "sueldo",
+     "meaning": "el dinero que ganas por tu trabajo"
+    },
+    {
+     "word": "culpa",
+     "meaning": "responsabilidad de algo malo"
+    }
+   ]
+  }
+ ]
+}

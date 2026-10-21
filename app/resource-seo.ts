@@ -129,6 +129,7 @@ export const immersiveWorldGameByLessonId: ReadonlyMap<number, string> = new Map
   [36, "usa"],
   [210, "mexico"],
   [228, "argentina"],
+  [229, "espana"],
   [223, "noche"],
   [226, "bosque"],
   [237, "casino"],

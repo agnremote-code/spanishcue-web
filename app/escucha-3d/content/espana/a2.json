@@ -1,0 +1,503 @@
+{
+ "game": "espana",
+ "level": "A2",
+ "items": [
+  {
+   "id": "madrid",
+   "title": "El bar de siempre",
+   "place": "Un bar de tapas en La Latina",
+   "context": "Rodrigo, de El Salvador, es cliente del bar donde trabaja Manolo.",
+   "speakers": [
+    {
+     "name": "Rodrigo",
+     "country": "El Salvador",
+     "voice": "es-SV-RodrigoNeural"
+    },
+    {
+     "name": "Manolo",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Manolo, ¿qué te pasa? Hoy estás muy serio."
+    },
+    {
+     "s": 1,
+     "text": "El dueño quiere vender el bar. Dice que está cansado y que un grupo de inversores le ofrece mucho dinero."
+    },
+    {
+     "s": 0,
+     "text": "¿Y qué van a hacer los inversores con el bar?"
+    },
+    {
+     "s": 1,
+     "text": "Quieren abrir una cafetería moderna, de esas con ordenadores y café para llevar. Sin tapas, sin barra y sin vecinos."
+    },
+    {
+     "s": 0,
+     "text": "Pero este bar tiene más de cincuenta años. Aquí vienen todos los del barrio."
+    },
+    {
+     "s": 1,
+     "text": "Lo sé. Llevo veinte años detrás de esta barra. Por eso los clientes han empezado a recoger firmas."
+    },
+    {
+     "s": 0,
+     "text": "¿Cuántas tenéis?"
+    },
+    {
+     "s": 1,
+     "text": "Casi dos mil. El viernes se las llevamos al dueño."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Por qué está serio Manolo?",
+     "options": [
+      "El dueño quiere vender el bar",
+      "Está enfermo",
+      "Ha perdido dinero"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué quieren abrir los inversores?",
+     "options": [
+      "Un restaurante caro",
+      "Una cafetería moderna",
+      "Una tienda de ropa"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cuántos años lleva Manolo en el bar?",
+     "options": [
+      "Diez",
+      "Cincuenta",
+      "Veinte"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuántas firmas tienen?",
+     "options": [
+      "Casi dos mil",
+      "Doscientas",
+      "Veinte mil"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Hay un bar o un café especial en tu barrio?",
+     "model": "Sí, hay un café pequeño donde todos se conocen."
+    },
+    {
+     "q": "¿Has firmado alguna vez para defender algo?",
+     "model": "Sí, firmé para salvar un parque de mi ciudad."
+    },
+    {
+     "q": "¿Prefieres los bares tradicionales o las cafeterías modernas?",
+     "model": "Prefiero los tradicionales porque tienen más ambiente."
+    }
+   ],
+   "gaps": "Lo sé. [Llevo] [veinte años] detrás de esta [barra]. Por eso los clientes han empezado a recoger [firmas].",
+   "glossary": [
+    {
+     "word": "inversores",
+     "meaning": "personas que ponen dinero en un negocio"
+    },
+    {
+     "word": "barra",
+     "meaning": "la mesa larga del bar donde se sirven las bebidas"
+    },
+    {
+     "word": "firmas",
+     "meaning": "nombres escritos a mano para apoyar algo"
+    },
+    {
+     "word": "serio",
+     "meaning": "sin sonreír, preocupado"
+    }
+   ]
+  },
+  {
+   "id": "cataluna",
+   "title": "Bandera roja",
+   "place": "La playa de la Barceloneta",
+   "context": "Yolanda, de Nicaragua, habla con Marc, el socorrista de la playa.",
+   "speakers": [
+    {
+     "name": "Yolanda",
+     "country": "Nicaragua",
+     "voice": "es-NI-YolandaNeural"
+    },
+    {
+     "name": "Marc",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Perdona, ¿la bandera roja significa que no se puede nadar?"
+    },
+    {
+     "s": 1,
+     "text": "Exacto. Hoy hay mucho viento y las olas son peligrosas. Esta mañana hemos sacado a dos turistas del agua."
+    },
+    {
+     "s": 0,
+     "text": "¡Qué miedo! ¿Estaban bien?"
+    },
+    {
+     "s": 1,
+     "text": "Sí, solo un poco asustados. Uno no sabía nadar bien y se metió en el agua justo después de comer."
+    },
+    {
+     "s": 0,
+     "text": "¿Y mañana se podrá nadar?"
+    },
+    {
+     "s": 1,
+     "text": "Creo que sí. El viento va a parar por la noche. Si ves la bandera verde, puedes entrar sin problema."
+    },
+    {
+     "s": 0,
+     "text": "Entonces hoy me quedo en la arena con un libro."
+    },
+    {
+     "s": 1,
+     "text": "Buena idea. Y ponte crema, que el sol aquí quema mucho."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué significa la bandera roja?",
+     "options": [
+      "Que hay medusas",
+      "Que no se puede nadar",
+      "Que la playa está cerrada"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Por qué son peligrosas las olas?",
+     "options": [
+      "Por la lluvia",
+      "Por los barcos",
+      "Por el viento"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿A cuántos turistas han sacado del agua?",
+     "options": [
+      "A dos",
+      "A uno",
+      "A tres"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué va a hacer Yolanda hoy?",
+     "options": [
+      "Nadar",
+      "Leer en la arena",
+      "Volver al hotel"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Sabes nadar bien?",
+     "model": "Sí, nado desde pequeño."
+    },
+    {
+     "q": "¿Prefieres la playa o la piscina?",
+     "model": "Prefiero la playa porque me encanta el mar."
+    },
+    {
+     "q": "¿Has tenido algún susto en vacaciones?",
+     "model": "Sí, una vez me quedé sin pasaporte en el aeropuerto."
+    }
+   ],
+   "gaps": "Creo que sí. El [viento] va a [parar] por la [noche]. Si ves la [bandera verde], puedes entrar sin problema.",
+   "glossary": [
+    {
+     "word": "bandera",
+     "meaning": "tela de colores en un palo que da información"
+    },
+    {
+     "word": "olas",
+     "meaning": "el agua del mar cuando se mueve y sube"
+    },
+    {
+     "word": "asustados",
+     "meaning": "con miedo"
+    },
+    {
+     "word": "arena",
+     "meaning": "lo que hay en el suelo de la playa"
+    }
+   ]
+  },
+  {
+   "id": "andalucia",
+   "title": "Aceitunas de Jaén",
+   "place": "Un olivar de Jaén",
+   "context": "Sofía, de Bolivia, visita el olivar de Don Rafael en Jaén.",
+   "speakers": [
+    {
+     "name": "Sofía",
+     "country": "Bolivia",
+     "voice": "es-BO-SofiaNeural"
+    },
+    {
+     "name": "Don Rafael",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Don Rafael, ¿cuántos olivos tiene usted?"
+    },
+    {
+     "s": 1,
+     "text": "Unos dos mil. Algunos los plantó mi bisabuelo hace más de cien años."
+    },
+    {
+     "s": 0,
+     "text": "¿Y cuándo recogen las aceitunas?"
+    },
+    {
+     "s": 1,
+     "text": "En noviembre y diciembre. Antes lo hacíamos con las manos y unos palos largos. Ahora usamos una máquina que mueve el árbol."
+    },
+    {
+     "s": 0,
+     "text": "¿Hacen el aceite aquí también?"
+    },
+    {
+     "s": 1,
+     "text": "No, lo llevamos a la cooperativa del pueblo. Allí se hace el aceite el mismo día, para que sea más fresco."
+    },
+    {
+     "s": 0,
+     "text": "¿Y este año es un buen año?"
+    },
+    {
+     "s": 1,
+     "text": "Regular. Ha llovido poco y hay menos aceitunas. Pero las que hay son muy buenas."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuántos olivos tiene Don Rafael?",
+     "options": [
+      "Doscientos",
+      "Veinte mil",
+      "Unos dos mil"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuándo recogen las aceitunas?",
+     "options": [
+      "En noviembre y diciembre",
+      "En verano",
+      "En marzo"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Dónde se hace el aceite?",
+     "options": [
+      "En su casa",
+      "En la cooperativa del pueblo",
+      "En una fábrica de Sevilla"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Por qué hay menos aceitunas este año?",
+     "options": [
+      "Por el frío",
+      "Por una plaga",
+      "Porque ha llovido poco"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Usas aceite de oliva en tu cocina?",
+     "model": "Sí, lo uso para casi todo."
+    },
+    {
+     "q": "¿Qué trabajo hacían tus abuelos?",
+     "model": "Mis abuelos eran agricultores y tenían vacas."
+    },
+    {
+     "q": "¿Cómo afecta la lluvia a tu región?",
+     "model": "Cuando llueve poco, el agua es más cara y hay menos fruta."
+    }
+   ],
+   "gaps": "No, lo llevamos a la [cooperativa] del [pueblo]. Allí se hace el aceite [el mismo día], para que sea más [fresco].",
+   "glossary": [
+    {
+     "word": "olivos",
+     "meaning": "árboles que dan aceitunas"
+    },
+    {
+     "word": "bisabuelo",
+     "meaning": "el padre de tu abuelo o de tu abuela"
+    },
+    {
+     "word": "cooperativa",
+     "meaning": "empresa de muchos agricultores juntos"
+    },
+    {
+     "word": "palos",
+     "meaning": "trozos largos de madera"
+    }
+   ]
+  },
+  {
+   "id": "valencia",
+   "title": "La figura de la abuela",
+   "place": "Un taller de fallas en Valencia",
+   "context": "Belkys, de Cuba, y Juan, de Costa Rica, visitan el taller de Vicent antes de las Fallas.",
+   "speakers": [
+    {
+     "name": "Belkys",
+     "country": "Cuba",
+     "voice": "es-CU-BelkysNeural"
+    },
+    {
+     "name": "Vicent",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    },
+    {
+     "name": "Juan",
+     "country": "Costa Rica",
+     "voice": "es-CR-JuanNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Vicent, ¿esta figura es la que vas a presentar al concurso?"
+    },
+    {
+     "s": 1,
+     "text": "Sí. Es una abuela que baila con su nieto. Tiene la cara de mi madre."
+    },
+    {
+     "s": 2,
+     "text": "¿Y tu madre lo sabe?"
+    },
+    {
+     "s": 1,
+     "text": "Todavía no. Quiero darle una sorpresa el día de la votación."
+    },
+    {
+     "s": 0,
+     "text": "¿Y qué pasa si no gana?"
+    },
+    {
+     "s": 1,
+     "text": "Entonces se quema el diecinueve de marzo con todas las demás. Así son las Fallas. Solo una figura se salva cada año y va al museo."
+    },
+    {
+     "s": 2,
+     "text": "Pues yo voy a votar por la abuela. Y voy a traer a mis primos."
+    },
+    {
+     "s": 1,
+     "text": "Muchas gracias. Con vuestros votos, quizá este año tengo suerte."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué hace la abuela de la figura?",
+     "options": [
+      "Baila con su nieto",
+      "Cocina una paella",
+      "Lee un libro"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿De quién es la cara de la figura?",
+     "options": [
+      "De su abuela",
+      "De su madre",
+      "De su hermana"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué pasa si la figura no gana?",
+     "options": [
+      "Va al museo",
+      "Vicent la vende",
+      "Se quema"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuántas figuras se salvan cada año?",
+     "options": [
+      "Una",
+      "Dos",
+      "Diez"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Has participado en un concurso?",
+     "model": "Sí, participé en un concurso de dibujo en el colegio."
+    },
+    {
+     "q": "¿Qué fiesta tradicional te gusta más?",
+     "model": "Me gusta el carnaval por la música y los disfraces."
+    },
+    {
+     "q": "¿Qué sorpresa te gustaría dar a alguien?",
+     "model": "Me gustaría regalarle un viaje a mi madre."
+    }
+   ],
+   "gaps": "Entonces se [quema] el [diecinueve de marzo] con todas las [demás]. Así son las [Fallas].",
+   "glossary": [
+    {
+     "word": "concurso",
+     "meaning": "competición con un premio"
+    },
+    {
+     "word": "nieto",
+     "meaning": "el hijo de tu hijo o de tu hija"
+    },
+    {
+     "word": "votación",
+     "meaning": "momento en que la gente elige algo"
+    },
+    {
+     "word": "se salva",
+     "meaning": "no se pierde, no se destruye"
+    }
+   ]
+  }
+ ]
+}
