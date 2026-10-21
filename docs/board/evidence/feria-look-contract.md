@@ -3,6 +3,7 @@
 - Owner: Sofia (LESSON-DECISION-001 v5 §4, AM-4). Date: 2026-10-17.
 - Code: `app/la-feria-de-villaluz/look-contract.mjs` (+ `.d.mts`). Tests: `tests/feria-look-contract.test.mjs`.
 - Status: **PROVISIONAL until Martin's D6 visual check** (QA device, DPR ≈ 1.2, ~8–10 m, low mode). Any item that fails is removed from the data file; the checker then rejects every set that used it.
+- **2026-10-21:** a SwiftShader render pass rated every value (§5). Values that were not clearly legible no longer count as a distinguishing difference. This is **not** the real-device check of G5(b), which is still open.
 
 ## 1. What the renderer really shows (people3d, read from `app/noche-abierta/people3d.ts`)
 
@@ -71,3 +72,73 @@ A Busca figure is plain data. `lookOf(figure)` turns it into a fixed people3d `L
 - **G2 (guideline):** ≥ 1 contrast beat per scene. It's reported by the checker, not a blocker.
 - **Risk 4 update:** Martin authors, and **G4 review is by Alejandro or a fresh agent**, never the author. G5 legibility (the D6 Look check) stays with Martin.
 - **LQG file:** `docs/audits/la-feria-de-villaluz-pedagogy-YYYYMMDD.md` (G3 `test:language`, G4, G6 level honesty, beat labelling).
+
+## 5. 2026-10-21 SwiftShader render update (D6 substitute; NOT the G5(b) real-device check)
+
+**What was rendered.** `scripts/qa-feria-browser.mjs --look` (Sofia):
+- the real World3D low-power path: coarse pointer, DPR 1.25, no AA, no shadow maps, no bloom;
+- the real Busca camera and the real default slots, about 8–9 m from the figures;
+- two views: tablet 1180×820 and phone 390×844;
+- one attribute changed per shot, everything else neutral.
+
+It ran under SwiftShader (software WebGL) in headless Chromium. Colours, aliasing and brightness on a real phone panel can differ, so **G5(b) (one real-device check per new world) is still required**. A value can only be promoted by a new render or device check.
+
+**Verdict and evidence:** `feria-look-2026-10-21/LOOK-VERDICT.md`, plus representative crops in the same folder.
+
+**Data and checker** (`look-contract.mjs`, `D6.ratings`, `legibility()`):
+
+| Rating | Values |
+|---|---|
+| legible | age child · top vestido, delantal · bottom falda, pantalón · top colours rojo, naranja, amarillo, rosa, azul, verde, blanco, negro, gris · bottom colours rojo, azul, verde, amarillo, rosa, blanco, gris · hair corto · hair colours rubio, moreno, pelirrojo, canoso · poses guitarra, saludando, señalando, llevando una caja, leyendo · maleta · location relations |
+| marginal | top camiseta, abrigo · pantalones cortos, jeans · top colours morado, marrón · bottom colours naranja, morado, negro · afro, calvo, gorra · castaño · alto/bajo (slot depth ±0.5 m cancels a 0.14 m gap) · bailando, sentado, teléfono, brazos cruzados · paraguas, flores, mapa · mochila, bolso, barba |
+| illegible | age joven/adulto/mayor · body f/m · sudadera, camisa, suéter, chaqueta · bottom colour marrón · pelo largo, coleta, moño, rizado, trenzas · gafas, bufanda |
+
+**Rules:**
+- A marginal or illegible value may still be **named** in an announcement when the target has it, but it never counts as the difference that rules a distractor out.
+- AC2's **Tier A** may only come from a legible value.
+- An age difference counts only between a child and a non-child.
+- A dress colour is rated as a top colour.
+
+**New confusable pairs:**
+- vestido/abrigo;
+- camiseta vs every long-sleeved top;
+- sudadera/camisa;
+- pantalón/pantalones cortos;
+- pelo corto vs largo, coleta, moño, trenzas, calvo, gorra and afro (from the front they all read as short hair).
+
+**Tests:** `tests/feria-look-contract.test.mjs`. Every contract value has a rating; no non-legible value distinguishes; the new pairs are confusable; a named-only value still passes; a marginal pose can't supply Tier A.
+
+**Authored sets that fail the new rules** (Martin revises them):
+
+| Set | Why |
+|---|---|
+| informacion-emilio | gabriel differs only in `bottom:shorts` (marginal), and the only other distinguishing feature is a colour (AC2) |
+| informacion-abuelo | ramon differs only in `hair:bald` (marginal); ignacio only in `topColor:marron` (marginal) |
+| escenario-bruno | mauro differs only in `hair:cap` (marginal; the cap colour is random) |
+| fotos-nico | joel differs only in `hair:cap` (marginal) |
+| transferencia-amparo | pilar differs only in `hair:short` (reads like her hair from the front); dolores only in `pose:dance` (marginal) |
+
+escenario-valentina and fotos-ines still pass.
+
+## 6. Busca framing fix (2026-10-21)
+
+The render check showed three framing faults:
+- candidates hidden by the mascot (slot 2) and by the escenario host (slot 1);
+- the informacion camera inside the stall awning (a blue wedge across the frame);
+- slot 4 half out of frame on a 390 px portrait phone.
+
+**Fixes:**
+- `layout.buscaCamera()` is used by World3D and by the tests. It stays behind the mascot and looks along his heading, so screen-left is still his left (risk 3). It is raised to 4 m, which puts the mascot's head below the candidates' feet, and its FOV widens until every candidate and its number fits the screen at any aspect.
+- The informacion view now faces south into the plaza, so the camera is clear of the stall.
+- The escenario host and the baile host moved out of the view.
+- The active circle's gem hides during Busca.
+- One scene-wide directional fill light comes from the camera while a Busca card is open. It lights everyone equally, so it adds no target highlight (AC4).
+
+**Test:** `tests/la-feria-de-villaluz.test.mjs`, «Busca framing». It projects the camera in screen space and checks the mascot, every host, the crowd, the stalls and the poles against every candidate:
+- every Busca place and every authored set;
+- tablet, laptop and 390 px portrait;
+- 4 and 5 slots.
+
+**Trade-off:** on a 390 px portrait phone the FOV reaches 81–94°, so candidates are small, about 70–90 CSS px tall. They are complete but less legible than on a tablet or a shared screen.
+
+**Evidence:** `feria-look-2026-10-21/after-*.png`.
