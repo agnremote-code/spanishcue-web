@@ -87,6 +87,7 @@ export default async function RootLayout({
   const requestHeaders = await headers();
   const locale = localeFromHeaders(requestHeaders);
   const pathname = safePathname(requestHeaders.get("x-spanishcue-pathname"));
+  const privateLessonInvite = pathname.startsWith("/private-lessons/");
   const currentLesson = lessonAtPath(pathname, lessons);
   const freeLesson = Boolean(currentLesson && isFreeLesson(currentLesson.id));
   const fullAccess = fullAccessFromHeaders(requestHeaders);
@@ -98,13 +99,13 @@ export default async function RootLayout({
       <body>
         <LocaleProvider initialLocale={locale}>
           <AuthSessionSync serverSignedIn={signedIn} identityChecked={requestHeaders.get("x-spanishcue-identity-checked") === "1"} />
-          <GoogleAnalytics />
-          <MarketingAttribution
+          {!privateLessonInvite && <GoogleAnalytics />}
+          {!privateLessonInvite && <MarketingAttribution
             pathname={pathname}
             freeLesson={freeLesson}
             lessonId={currentLesson?.id}
             lessonTitle={currentLesson?.title}
-          />
+          />}
           {children}
           {!fullAccess && (freeLesson || pathname === "/" || pathname === "/sistema-verbal" || pathname === "/choose-conversation") && <ProDiscovery signedIn={signedIn} />}
           <LessonReportRoutes lessons={lessons.map(l=>({id:l.id,title:l.title,level:l.level,levels:conversationFamilyByLessonId.get(l.id)?.availableLevels||l.levels,path:l.path||`/clase/${l.id}`}))} signedIn={signedIn} />

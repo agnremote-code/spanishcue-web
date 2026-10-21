@@ -18,7 +18,8 @@ test('66 finite assets resolve exactly, decode completely and contain audible si
   for(let i=0;i<pcm.length;i+=2){const x=pcm.readInt16LE(i);peak=Math.max(peak,Math.abs(x));square+=x*x;}
   assert.ok(peak>100 && Math.sqrt(square/(pcm.length/2))>20,c.id);
   const probe=JSON.parse(execFileSync('ffprobe',['-v','error','-show_entries','format=duration:stream=codec_name,sample_rate,channels','-of','json',path]));
-  assert.equal(probe.streams[0].codec_name,'mp3');assert.equal(Number(probe.streams[0].sample_rate),24000);assert.ok(Math.abs(Number(probe.format.duration)-c.durationSeconds)<.001);
+  assert.equal(probe.streams[0].codec_name,'mp3');assert.equal(Number(probe.streams[0].sample_rate),24000);// MP3 durations are quantized to 1152-sample frames (48 ms at 24 kHz); ffprobe may report one frame of padding.
+  assert.ok(Math.abs(Number(probe.format.duration)-c.durationSeconds)<=(1152/24000),`${c.id}: actual ${probe.format.duration}s vs manifest ${c.durationSeconds}s`);
  }
 });
 test('exact authored scripts match generation input and returned service word metadata; not a human pronunciation certificate',()=>{
