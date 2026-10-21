@@ -1,0 +1,482 @@
+{
+ "game": "argentina",
+ "level": "A2",
+ "items": [
+  {
+   "id": "buenos-aires",
+   "title": "Perdido en Retiro",
+   "place": "La estación de Retiro",
+   "context": "Javier, de Honduras, pregunta en la boletería cómo ir a Tigre.",
+   "speakers": [
+    {
+     "name": "Javier",
+     "country": "Honduras",
+     "voice": "es-HN-CarlosNeural"
+    },
+    {
+     "name": "Graciela",
+     "country": "Argentina",
+     "voice": "es-AR-ElenaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Disculpe, señora de la boletería, quiero ir a Tigre, pero no encuentro el tren. Ayer me dijeron que salía de aquí."
+    },
+    {
+     "s": 1,
+     "text": "Sí, sale de aquí, pero hoy hay obras en las vías. Tiene que tomar el tren de la línea Mitre hasta Victoria y después un colectivo."
+    },
+    {
+     "s": 0,
+     "text": "Uf, ¿y cuánto tiempo tarda todo?"
+    },
+    {
+     "s": 1,
+     "text": "Más o menos una hora y veinte. Normalmente es una hora."
+    },
+    {
+     "s": 0,
+     "text": "Bueno, no importa. ¿Dónde compro el boleto?"
+    },
+    {
+     "s": 1,
+     "text": "Necesita una tarjeta SUBE. La puede cargar aquí mismo. Le recomiendo cargar bastante, porque el colectivo también la usa."
+    },
+    {
+     "s": 0,
+     "text": "Muchas gracias. Es usted muy amable."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Adónde quiere ir Javier?",
+     "options": [
+      "A Tigre",
+      "A Victoria",
+      "A La Boca"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Por qué hoy es diferente?",
+     "options": [
+      "Hay una huelga",
+      "Hay obras en las vías",
+      "Llueve mucho"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cuánto tarda hoy el viaje?",
+     "options": [
+      "Una hora",
+      "Media hora",
+      "Una hora y veinte"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué necesita para viajar?",
+     "options": [
+      "Dinero en efectivo",
+      "Una tarjeta SUBE",
+      "Un pasaporte"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Te perdiste alguna vez en una ciudad nueva?",
+     "model": "Sí, una vez en Madrid tomé el metro equivocado."
+    },
+    {
+     "q": "¿Cómo es el transporte en tu ciudad?",
+     "model": "Hay autobuses y metro, pero siempre están llenos."
+    },
+    {
+     "q": "¿Prefieres el tren o el autobús?",
+     "model": "Prefiero el tren porque es más rápido."
+    }
+   ],
+   "gaps": "Sí, sale de aquí, pero hoy hay [obras] en las [vías]. Tiene que tomar el tren de la línea Mitre hasta [Victoria] y después un [colectivo].",
+   "glossary": [
+    {
+     "word": "boletería",
+     "meaning": "lugar donde se venden los boletos"
+    },
+    {
+     "word": "colectivo",
+     "meaning": "autobús en Argentina"
+    },
+    {
+     "word": "obras",
+     "meaning": "trabajos de construcción o reparación"
+    },
+    {
+     "word": "cargar",
+     "meaning": "poner dinero en una tarjeta"
+    }
+   ]
+  },
+  {
+   "id": "cordoba",
+   "title": "El perro que se escapó",
+   "place": "El Parque Sarmiento",
+   "context": "Julieta, paseadora de perros, le pide ayuda a Raquel, una turista de Puerto Rico.",
+   "speakers": [
+    {
+     "name": "Julieta",
+     "country": "Argentina",
+     "voice": "es-AR-ElenaNeural"
+    },
+    {
+     "name": "Raquel",
+     "country": "Puerto Rico",
+     "voice": "es-PR-KarinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "¡Perdón! ¿Viste pasar un perro grande, marrón, con un collar rojo?"
+    },
+    {
+     "s": 1,
+     "text": "Sí, hace dos minutos. Corría hacia el lago. ¿Es tuyo?"
+    },
+    {
+     "s": 0,
+     "text": "No, es de un cliente. Yo paseo ocho perros todas las mañanas, y este siempre se escapa cuando ve patos."
+    },
+    {
+     "s": 1,
+     "text": "Te ayudo. Yo me quedo con los otros perros y tú lo buscas."
+    },
+    {
+     "s": 0,
+     "text": "¿De verdad? ¡Muchas gracias! Se llama Rocco. Si vuelve, le das una galleta de esta bolsa."
+    },
+    {
+     "s": 1,
+     "text": "Perfecto. ¡Ve rápido!"
+    },
+    {
+     "s": 0,
+     "text": "Lo veo. Está en el agua, otra vez, persiguiendo a los patos."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿De qué color es el collar del perro?",
+     "options": [
+      "Azul",
+      "Rojo",
+      "Negro"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cuántos perros pasea Julieta?",
+     "options": [
+      "Ocho",
+      "Seis",
+      "Diez"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Por qué se escapa el perro?",
+     "options": [
+      "Tiene hambre",
+      "Ve a otro perro",
+      "Ve patos"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Dónde está el perro al final?",
+     "options": [
+      "En el agua",
+      "En la calle",
+      "Con su dueño"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Tienes mascota?",
+     "model": "Sí, tengo un gato que se llama Luna."
+    },
+    {
+     "q": "¿Ayudaste alguna vez a un desconocido?",
+     "model": "Sí, una vez ayudé a una señora con sus bolsas."
+    },
+    {
+     "q": "¿Qué haces en un parque?",
+     "model": "Camino, leo o tomo sol."
+    }
+   ],
+   "gaps": "Sí, hace [dos minutos]. Corría hacia el [lago]. ¿Es [tuyo]? No, es de un [cliente].",
+   "glossary": [
+    {
+     "word": "collar",
+     "meaning": "cinta que lleva el perro en el cuello"
+    },
+    {
+     "word": "se escapa",
+     "meaning": "se va corriendo sin permiso"
+    },
+    {
+     "word": "patos",
+     "meaning": "aves que nadan en el agua"
+    },
+    {
+     "word": "paseo",
+     "meaning": "saco a caminar"
+    }
+   ]
+  },
+  {
+   "id": "mendoza",
+   "title": "El tiempo en la montaña",
+   "place": "El refugio del Aconcagua",
+   "context": "Nahuel, andinista, habla con Emilio, un escalador dominicano.",
+   "speakers": [
+    {
+     "name": "Emilio",
+     "country": "República Dominicana",
+     "voice": "es-DO-EmilioNeural"
+    },
+    {
+     "name": "Nahuel",
+     "country": "Bolivia",
+     "voice": "es-BO-MarceloNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Nahuel, mañana quiero subir hasta el campamento dos. ¿Qué te parece?"
+    },
+    {
+     "s": 1,
+     "text": "Hoy subiste mucho y estás cansado. Además, el pronóstico dice viento fuerte para mañana a la tarde."
+    },
+    {
+     "s": 0,
+     "text": "Pero vine desde muy lejos y solo tengo diez días."
+    },
+    {
+     "s": 1,
+     "text": "Lo entiendo. Pero la montaña no conoce tu calendario. Si subes muy rápido, te duele la cabeza y te mareas."
+    },
+    {
+     "s": 0,
+     "text": "¿Y entonces qué hago mañana?"
+    },
+    {
+     "s": 1,
+     "text": "Descansas, tomas mucha agua y comes bien. Pasado mañana salimos temprano, a las cinco, con el viento más tranquilo."
+    },
+    {
+     "s": 0,
+     "text": "Está bien. Tienes razón."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Hasta dónde quiere subir Emilio?",
+     "options": [
+      "Hasta la cumbre",
+      "Hasta el campamento dos",
+      "Hasta el refugio"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué dice el pronóstico?",
+     "options": [
+      "Nieve",
+      "Lluvia",
+      "Viento fuerte"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuántos días tiene Emilio?",
+     "options": [
+      "Diez",
+      "Cinco",
+      "Quince"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿A qué hora salen pasado mañana?",
+     "options": [
+      "A las ocho",
+      "A las cinco",
+      "A las tres"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Subiste alguna montaña alta?",
+     "model": "Sí, escalé un volcán en Ecuador. / No, nunca."
+    },
+    {
+     "q": "¿Escuchas los consejos de otros?",
+     "model": "Sí, sobre todo de la gente con experiencia."
+    },
+    {
+     "q": "¿Qué haces cuando estás muy cansado?",
+     "model": "Duermo mucho y no hago planes."
+    }
+   ],
+   "gaps": "Descansas, tomas [mucha agua] y comes bien. Pasado mañana salimos [temprano], a las [cinco], con el viento [más tranquilo].",
+   "glossary": [
+    {
+     "word": "pronóstico",
+     "meaning": "lo que se espera del tiempo"
+    },
+    {
+     "word": "campamento",
+     "meaning": "lugar con tiendas para dormir en la montaña"
+    },
+    {
+     "word": "te mareas",
+     "meaning": "sientes que todo se mueve"
+    },
+    {
+     "word": "pasado mañana",
+     "meaning": "dentro de dos días"
+    }
+   ]
+  },
+  {
+   "id": "bariloche",
+   "title": "La leyenda del lago",
+   "place": "El puerto del lago Nahuel Huapi",
+   "context": "Don Aníbal, capitán de barco, le cuenta una leyenda a Irene, de El Salvador.",
+   "speakers": [
+    {
+     "name": "Irene",
+     "country": "El Salvador",
+     "voice": "es-SV-LorenaNeural"
+    },
+    {
+     "name": "Don Aníbal",
+     "country": "Argentina",
+     "voice": "es-AR-TomasNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Capitán, ¿es verdad que en este lago vive un monstruo?"
+    },
+    {
+     "s": 1,
+     "text": "Eso dicen. Lo llaman Nahuelito. Hay gente que lo vio, y hay fotos, pero todas están borrosas."
+    },
+    {
+     "s": 0,
+     "text": "¿Y usted lo vio alguna vez?"
+    },
+    {
+     "s": 1,
+     "text": "Una tarde de invierno vi una sombra enorme al lado del barco. Era más larga que el barco. Después desapareció."
+    },
+    {
+     "s": 0,
+     "text": "¡Qué miedo! ¿Y qué hizo?"
+    },
+    {
+     "s": 1,
+     "text": "Nada. Continué manejando, muy despacio. Cuando se lo conté a mi mujer, se rio durante tres días."
+    },
+    {
+     "s": 0,
+     "text": "Yo voy a mirar el agua todo el viaje."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cómo se llama el monstruo?",
+     "options": [
+      "Nahuelito",
+      "Catedral",
+      "Huapi"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cómo son las fotos?",
+     "options": [
+      "Muy claras",
+      "Antiguas",
+      "Borrosas"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuándo vio el capitán la sombra?",
+     "options": [
+      "Una mañana de verano",
+      "Una tarde de invierno",
+      "Una noche de otoño"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué hizo su mujer?",
+     "options": [
+      "Se asustó",
+      "Llamó a la policía",
+      "Se rio"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Crees en monstruos o fantasmas?",
+     "model": "No, pero me gustan las historias de miedo."
+    },
+    {
+     "q": "¿Qué leyenda conoces de tu país?",
+     "model": "En mi país hay una leyenda sobre una mujer que llora en el río."
+    },
+    {
+     "q": "¿Viajaste alguna vez en barco?",
+     "model": "Sí, una vez crucé un lago en barco."
+    }
+   ],
+   "gaps": "Una tarde de invierno vi una [sombra enorme] al lado del [barco]. Era [más larga] que el barco. Después [desapareció].",
+   "glossary": [
+    {
+     "word": "monstruo",
+     "meaning": "animal enorme y fantástico"
+    },
+    {
+     "word": "borrosas",
+     "meaning": "que no se ven bien, sin detalles"
+    },
+    {
+     "word": "sombra",
+     "meaning": "forma oscura de algo"
+    },
+    {
+     "word": "desapareció",
+     "meaning": "ya no se pudo ver"
+    }
+   ]
+  }
+ ]
+}

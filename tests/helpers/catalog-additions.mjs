@@ -219,6 +219,12 @@ const OLD_36_GOALS = ["Responder preguntas A2 desde la experiencia propia","Comp
 const NEW_36_GOALS = ["Conversar con personajes en treinta lugares reales de Estados Unidos","Decidir, reaccionar a sorpresas y responder preguntas de tu nivel, de A0 a B1","Comprender una escucha por estado y comparar formas de vivir"];
 const OLD_36_EXPLANATION = "Un atlas interactivo basado en fronteras estatales reales. Los 50 estados —con Alaska y Hawái en recuadros— abren preguntas A2, comparaciones personales, modos de decisión y un cierre para diseñar tus Estados Unidos.";
 const NEW_36_EXPLANATION = "Un mundo 3D con Florida, Nueva York, California, Texas, Hawái y Colorado. En cada estado caminas por cinco lugares y hablas con su gente: una situación, una decisión, una sorpresa y preguntas con ayuda, en A0, A1, A2 o B1. El atlas de los 50 estados sigue disponible.";
+const OLD_210_HEAD = '{id:210,level:"B1",category:"Conversación",countrySequence:1,searchAliases:["Mexico","México","mexicano","mexicana"],title:"MÉXICO",subtitle:"32 estados y entidades para descubrir México mientras hablas de tu propia vida",duration:"90+ min",tag:"32 territorios · conversación B1",';
+const NEW_210_HEAD = '{id:210,level:"B1",levels:["A0","A1","A2","B1"],displayLevel:"A0–B1",category:"Conversación",countrySequence:1,searchAliases:["Mexico","México","mexicano","mexicana"],title:"MÉXICO",subtitle:"Un viaje en 3D por cuatro estados.",duration:"90+ min",tag:"3D · 4 estados · 20 lugares · A0–B1",';
+const OLD_210_GOALS = ["Comparar formas de vivir usando experiencias personales","Explicar preferencias sobre vivienda, trabajo, movilidad y tiempo libre","Diseñar un México ideal con decisiones justificadas"];
+const NEW_210_GOALS = ["Conversar con personajes en veinte lugares reales de México","Decidir, reaccionar a sorpresas y responder preguntas de tu nivel, de A0 a B1","Comprender una escucha por estado y comparar formas de vivir"];
+const OLD_210_EXPLANATION = "Un mapa vectorial interactivo de las 31 entidades federativas y Ciudad de México. Cada territorio abre contexto breve, vocabulario, cinco preguntas B1 y repreguntas opcionales que no exigen conocimientos previos.";
+const NEW_210_EXPLANATION = "Un mundo 3D con Ciudad de México, Jalisco, Oaxaca y Quintana Roo. En cada estado caminas por cinco lugares y hablas con su gente: una situación, una decisión, una sorpresa y preguntas con ayuda, en A0, A1, A2 o B1. El mapa de las 32 entidades sigue disponible.";
 // 2026-10-15: every grammar class got its own teacher-style thumbnail (scripts/grammar-thumbnails)
 // and the first class (239) moved from the A0 filter to A1. Display-only: before comparing
 // against the historical ledger, the previous shared preview is restored.
@@ -234,6 +240,29 @@ const repairs = [
     edits: {
       'app/lesson-catalog.ts': [[`subtitle:"${NEW_137_SUBTITLE}"`, `subtitle:"${OLD_137_SUBTITLE}"`], [`explanation:"${NEW_137_EXPLANATION}"`, `explanation:"${OLD_137_EXPLANATION}"`]],
       'package.json': [['"test:conversation": "node --test tests/uno-o-el-otro-dilemmas.test.mjs ', '"test:conversation": "node --test ']],
+    },
+  },
+  {
+    // 2026-10-21: México (ID 210) became a 3D world like Estados Unidos (four states, twenty
+    // places, A0–B1; behaviour covered by tests/paises-3d.test.mjs). The 32-entity map stays
+    // inside it (?vista=atlas) and the route, ID and FREE access are unchanged.
+    id: 210,
+    path: '/mexico',
+    // Undone first: it is the latest change to the files it shares (before ID 36).
+    latest: true,
+    files: /^(?:app\/mexico\/|app\/mundo-3d\/|tests\/paises-3d\.test\.mjs$)/,
+    restore: {
+      levels: [['A0', 'A1', 'A2', 'B1'], undefined],
+      displayLevel: ['A0–B1', undefined],
+      subtitle: ['Un viaje en 3D por cuatro estados.', '32 estados y entidades para descubrir México mientras hablas de tu propia vida'],
+      tag: ['3D · 4 estados · 20 lugares · A0–B1', '32 territorios · conversación B1'],
+      goals: [NEW_210_GOALS, OLD_210_GOALS],
+      explanation: [NEW_210_EXPLANATION, OLD_210_EXPLANATION],
+    },
+    edits: {
+      'app/lesson-catalog.ts': [[NEW_210_HEAD, OLD_210_HEAD], [`goals:${JSON.stringify(NEW_210_GOALS)}`, `goals:${JSON.stringify(OLD_210_GOALS)}`], [`explanation:"${NEW_210_EXPLANATION}"`, `explanation:"${OLD_210_EXPLANATION}"`]],
+      'package.json': [[' tests/estados-unidos-3d.test.mjs tests/paises-3d.test.mjs"', ' tests/estados-unidos-3d.test.mjs"']],
+      'tests/level-cleanup.test.mjs': [["[36,210,223,", "[36,223,"], ["includes('A0')).length,11);", "includes('A0')).length,10);"], ["assert.equal(a1Lessons.length, 71);", "assert.equal(a1Lessons.length, 70);"], ["const authored=relative.includes('/mundo/')||", "const authored="]],
     },
   },
   {
@@ -356,7 +385,7 @@ export function withoutApprovedLessons(lessons) {
     const restored = {...lesson};
     for (const [field, [now, before]] of Object.entries(repair.restore)) {
       assert.deepEqual(lesson[field], now, `approved ${field} for lesson ${lesson.id}`);
-      restored[field] = before;
+      if (before === undefined) delete restored[field]; else restored[field] = before;
     }
     return restored;
   });

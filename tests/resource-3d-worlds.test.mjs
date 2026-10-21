@@ -34,8 +34,8 @@ test('the premise, objectives and warm-up the 3D section promises exist for ever
   }
 });
 
-test('3D world lessons stay PRO (the public page is a poster, not a free lesson), except the free United States flagship', () => {
-  for (const {lesson} of worlds) assert.equal(p.isFreeLesson(lesson.id), lesson.id === 36, lesson.title);
+test('3D world lessons stay PRO (the public page is a poster, not a free lesson), except the free United States and México flagships', () => {
+  for (const {lesson} of worlds) assert.equal(p.isFreeLesson(lesson.id), lesson.id === 36 || lesson.id === 210, lesson.title);
   assert.match(page, /isFreeLesson\(lesson\.id\) \? "A free SpanishCue lesson" : "A SpanishCue PRO lesson"/);
 });
 

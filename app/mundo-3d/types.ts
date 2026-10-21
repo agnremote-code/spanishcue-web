@@ -54,6 +54,9 @@ export type RegionInfo = {
   at: { x: number; z: number };
   color: string;
   sound: SoundKind;
+  /** Small landmarks on the map island (countries after the US); `dist` is
+   *  metres behind the gate, `side` metres to its side. */
+  marks?: { kind: 'palm' | 'pine' | 'peak' | 'tower' | 'pyramid' | 'dome' | 'house'; dist: number; side: number; size?: number; color?: string; snow?: boolean }[];
   /** Spot ids in walking order, with their names for menus and the no-3D list. */
   spots: { id: string; name: Bi }[];
 };

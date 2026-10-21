@@ -1,0 +1,471 @@
+{
+ "game": "argentina",
+ "level": "A1",
+ "items": [
+  {
+   "id": "buenos-aires",
+   "title": "Clase de tango",
+   "place": "Una milonga de San Telmo",
+   "context": "Sofía, de Venezuela, toma su primera clase de tango con Malena.",
+   "speakers": [
+    {
+     "name": "Malena",
+     "country": "Argentina",
+     "voice": "es-AR-ElenaNeural"
+    },
+    {
+     "name": "Sofía",
+     "country": "Venezuela",
+     "voice": "es-VE-PaolaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Bienvenida. ¿Es tu primera clase de tango?"
+    },
+    {
+     "s": 1,
+     "text": "Sí, y estoy un poco nerviosa. No sé bailar bien."
+    },
+    {
+     "s": 0,
+     "text": "Tranquila. Primero caminamos. El tango es caminar con música. Tú escuchas y caminas."
+    },
+    {
+     "s": 1,
+     "text": "¿Y cuándo bailamos con otra persona?"
+    },
+    {
+     "s": 0,
+     "text": "En la segunda parte de la clase. La clase dura una hora y media."
+    },
+    {
+     "s": 1,
+     "text": "¿Necesito zapatos especiales?"
+    },
+    {
+     "s": 0,
+     "text": "Hoy no. Con zapatos cómodos está bien."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cómo está Sofía?",
+     "options": [
+      "Cansada",
+      "Nerviosa",
+      "Contenta"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué hacen primero?",
+     "options": [
+      "Caminan",
+      "Escuchan música",
+      "Bailan en pareja"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cuánto dura la clase?",
+     "options": [
+      "Una hora",
+      "Dos horas",
+      "Una hora y media"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué zapatos necesita hoy?",
+     "options": [
+      "Zapatos de tango",
+      "Zapatos cómodos",
+      "Zapatillas nuevas"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Sabes bailar?",
+     "model": "Sí, sé bailar salsa. / No, no sé bailar."
+    },
+    {
+     "q": "¿Qué música te gusta?",
+     "model": "Me gusta la música latina y el rock."
+    },
+    {
+     "q": "¿Te pones nervioso en una clase nueva?",
+     "model": "Sí, un poco, pero después estoy bien."
+    }
+   ],
+   "gaps": "Tranquila. Primero [caminamos]. El tango es [caminar] con [música]. Tú [escuchas] y caminas.",
+   "glossary": [
+    {
+     "word": "nerviosa",
+     "meaning": "con un poco de miedo antes de algo"
+    },
+    {
+     "word": "caminar",
+     "meaning": "ir a pie, paso a paso"
+    },
+    {
+     "word": "cómodos",
+     "meaning": "que no molestan, agradables de usar"
+    }
+   ]
+  },
+  {
+   "id": "cordoba",
+   "title": "Asado de domingo",
+   "place": "La parrilla de Don Héctor",
+   "context": "Martín, de Ecuador, pide comida en una parrilla de Córdoba.",
+   "speakers": [
+    {
+     "name": "Don Héctor",
+     "country": "Argentina",
+     "voice": "es-AR-TomasNeural"
+    },
+    {
+     "name": "Martín",
+     "country": "Ecuador",
+     "voice": "es-EC-LuisNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Buenas. Hoy tenemos asado, chorizo y pollo."
+    },
+    {
+     "s": 1,
+     "text": "No conozco el asado argentino. ¿Qué me recomienda?"
+    },
+    {
+     "s": 0,
+     "text": "Para empezar, un choripán. Es un chorizo en un pan. Es muy rico."
+    },
+    {
+     "s": 1,
+     "text": "Muy bien. ¿Y para tomar?"
+    },
+    {
+     "s": 0,
+     "text": "Agua, gaseosa o un vino de Mendoza."
+    },
+    {
+     "s": 1,
+     "text": "Una gaseosa, por favor. Hoy manejo."
+    },
+    {
+     "s": 0,
+     "text": "Perfecto. La ensalada es gratis los domingos."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué conoce Martín?",
+     "options": [
+      "El asado",
+      "Nada de la comida argentina",
+      "El choripán"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué es un choripán?",
+     "options": [
+      "Un chorizo en un pan",
+      "Un pollo con papas",
+      "Una ensalada"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué toma Martín?",
+     "options": [
+      "Vino",
+      "Agua",
+      "Una gaseosa"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Por qué no toma vino?",
+     "options": [
+      "No le gusta",
+      "Maneja hoy",
+      "Es caro"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Comes carne?",
+     "model": "Sí, como carne. / No, soy vegetariano."
+    },
+    {
+     "q": "¿Qué comes los domingos?",
+     "model": "Los domingos como pasta con mi familia."
+    },
+    {
+     "q": "¿Qué tomas con la comida?",
+     "model": "Tomo agua o jugo."
+    }
+   ],
+   "gaps": "Para empezar, un [choripán]. Es un [chorizo] en un [pan]. Es [muy rico].",
+   "glossary": [
+    {
+     "word": "asado",
+     "meaning": "carne cocinada en la parrilla"
+    },
+    {
+     "word": "gaseosa",
+     "meaning": "bebida dulce con burbujas"
+    },
+    {
+     "word": "manejo",
+     "meaning": "conduzco un auto"
+    }
+   ]
+  },
+  {
+   "id": "mendoza",
+   "title": "Visita a la bodega",
+   "place": "Una bodega de Mendoza",
+   "context": "Carmen, de Chile, visita una bodega con la enóloga Valentina.",
+   "speakers": [
+    {
+     "name": "Valentina",
+     "country": "Paraguay",
+     "voice": "es-PY-TaniaNeural"
+    },
+    {
+     "name": "Carmen",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    },
+    {
+     "name": "Andrés",
+     "country": "Guatemala",
+     "voice": "es-GT-AndresNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Bienvenidos a la bodega. Aquí hacemos vino desde 1920."
+    },
+    {
+     "s": 1,
+     "text": "¿Qué uva usan más?"
+    },
+    {
+     "s": 0,
+     "text": "El malbec. Es la uva más famosa de Argentina."
+    },
+    {
+     "s": 2,
+     "text": "¿Podemos probar el vino?"
+    },
+    {
+     "s": 0,
+     "text": "Sí, al final de la visita. Primero vamos a ver las barricas. Están en el sótano, donde hace frío."
+    },
+    {
+     "s": 1,
+     "text": "¿La visita es larga?"
+    },
+    {
+     "s": 0,
+     "text": "No, cuarenta minutos. Después hay pan, queso y aceitunas."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Desde cuándo hacen vino?",
+     "options": [
+      "Desde 1920",
+      "Desde 1980",
+      "Desde 2000"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cuál es la uva más famosa?",
+     "options": [
+      "El merlot",
+      "La cabernet",
+      "El malbec"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuándo prueban el vino?",
+     "options": [
+      "Al principio",
+      "Al final",
+      "Nunca"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cuánto dura la visita?",
+     "options": [
+      "Una hora",
+      "Veinte minutos",
+      "Cuarenta minutos"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Tomas vino?",
+     "model": "Sí, a veces. / No, no tomo alcohol."
+    },
+    {
+     "q": "¿Qué produce tu región?",
+     "model": "Mi región produce café y frutas."
+    },
+    {
+     "q": "¿Te gustan las visitas guiadas?",
+     "model": "Sí, me gustan porque aprendo mucho."
+    }
+   ],
+   "gaps": "Sí, al final de la [visita]. Primero vamos a ver las [barricas]. Están [en el sótano], donde hace [frío].",
+   "glossary": [
+    {
+     "word": "bodega",
+     "meaning": "lugar donde se hace el vino"
+    },
+    {
+     "word": "barricas",
+     "meaning": "grandes recipientes de madera para el vino"
+    },
+    {
+     "word": "aceitunas",
+     "meaning": "fruto pequeño verde o negro del olivo"
+    }
+   ]
+  },
+  {
+   "id": "bariloche",
+   "title": "Chocolate para regalar",
+   "place": "Una chocolatería de Bariloche",
+   "context": "Raúl, de Cuba, busca un regalo en la chocolatería de Greta.",
+   "speakers": [
+    {
+     "name": "Raúl",
+     "country": "Cuba",
+     "voice": "es-CU-ManuelNeural"
+    },
+    {
+     "name": "Greta",
+     "country": "Argentina",
+     "voice": "es-AR-ElenaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Hola. Busco un regalo para mi madre."
+    },
+    {
+     "s": 1,
+     "text": "¿Le gusta el chocolate negro o con leche?"
+    },
+    {
+     "s": 0,
+     "text": "Con leche. El negro es muy amargo para ella."
+    },
+    {
+     "s": 1,
+     "text": "Entonces le recomiendo esta caja de bombones. Tiene doce."
+    },
+    {
+     "s": 0,
+     "text": "¿Cuánto cuesta?"
+    },
+    {
+     "s": 1,
+     "text": "Veinte mil pesos. Y el chocolate en rama es un poco más barato. Pero es más frágil."
+    },
+    {
+     "s": 0,
+     "text": "Prefiero los bombones. Son más bonitos para regalar."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Para quién es el regalo?",
+     "options": [
+      "Para su hermana",
+      "Para su madre",
+      "Para su amigo"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué chocolate le gusta a ella?",
+     "options": [
+      "Con leche",
+      "Negro",
+      "Blanco"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cuántos bombones tiene la caja?",
+     "options": [
+      "Seis",
+      "Diez",
+      "Doce"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué compra Raúl al final?",
+     "options": [
+      "Los bombones",
+      "El chocolate en rama",
+      "Nada"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué regalas a tu familia?",
+     "model": "Regalo libros o comida rica."
+    },
+    {
+     "q": "¿Te gusta el chocolate amargo?",
+     "model": "No, prefiero el chocolate con leche."
+    },
+    {
+     "q": "¿Qué compras cuando viajas?",
+     "model": "Compro dulces típicos para mis amigos."
+    }
+   ],
+   "gaps": "Veinte mil pesos. Y el [chocolate en rama] es un [poco] más [barato]. Pero es más [frágil].",
+   "glossary": [
+    {
+     "word": "amargo",
+     "meaning": "con un sabor fuerte, no dulce"
+    },
+    {
+     "word": "bombones",
+     "meaning": "chocolates pequeños, a veces con relleno"
+    },
+    {
+     "word": "regalar",
+     "meaning": "dar algo a otra persona"
+    }
+   ]
+  }
+ ]
+}

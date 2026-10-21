@@ -1,0 +1,499 @@
+{
+ "game": "argentina",
+ "level": "B1",
+ "items": [
+  {
+   "id": "buenos-aires",
+   "title": "La feria de los domingos",
+   "place": "La feria de San Telmo",
+   "context": "Don Ernesto, anticuario, habla con Marina, una coleccionista de Costa Rica.",
+   "speakers": [
+    {
+     "name": "Marina",
+     "country": "Costa Rica",
+     "voice": "es-CR-MariaNeural"
+    },
+    {
+     "name": "Don Ernesto",
+     "country": "Argentina",
+     "voice": "es-AR-TomasNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Buenos días. Usted es anticuario, ¿verdad? Este reloj de bolsillo es precioso. ¿De qué año es?"
+    },
+    {
+     "s": 1,
+     "text": "De 1910, más o menos. Era de un ferroviario inglés que trabajaba en la estación de Retiro. Me lo vendió su nieta hace veinte años."
+    },
+    {
+     "s": 0,
+     "text": "¿Y por qué lo vende ahora, después de tanto tiempo?"
+    },
+    {
+     "s": 1,
+     "text": "Porque me estoy jubilando. Llevo cuarenta años en esta feria, todos los domingos, con lluvia o con sol. Mis hijos no quieren seguir con el puesto."
+    },
+    {
+     "s": 0,
+     "text": "Qué pena. Estas ferias son una parte de la historia de la ciudad."
+    },
+    {
+     "s": 1,
+     "text": "Eso digo yo. Antes venían coleccionistas serios; ahora la mayoría saca fotos y se va. Pero bueno, los tiempos cambian. Si le interesa el reloj, se lo dejo a buen precio, con una condición."
+    },
+    {
+     "s": 0,
+     "text": "¿Cuál?"
+    },
+    {
+     "s": 1,
+     "text": "Que lo use. Un reloj guardado en un cajón se muere."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿De quién era el reloj?",
+     "options": [
+      "De un ferroviario inglés",
+      "De un soldado",
+      "De la nieta de Ernesto"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Por qué vende Ernesto el reloj?",
+     "options": [
+      "Necesita dinero",
+      "Se está jubilando",
+      "No le gusta"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "Según Ernesto, ¿qué hace hoy la mayoría de la gente en la feria?",
+     "options": [
+      "Compra mucho",
+      "Vende objetos",
+      "Saca fotos y se va"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuál es la condición de Ernesto?",
+     "options": [
+      "Que Marina lo use",
+      "Que lo guarde",
+      "Que no lo venda"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Tienes algún objeto antiguo de tu familia?",
+     "model": "Sí, tengo el anillo de mi abuela, que es de 1950."
+    },
+    {
+     "q": "¿Qué piensas de los turistas que solo sacan fotos?",
+     "model": "Creo que deberían comprar algo para ayudar a la gente local."
+    },
+    {
+     "q": "¿Hay alguna tradición de tu ciudad que se está perdiendo?",
+     "model": "Sí, los mercados de barrio están desapareciendo por los supermercados."
+    }
+   ],
+   "gaps": "Porque me estoy [jubilando]. Llevo [cuarenta años] en esta feria, todos los domingos, con [lluvia] o [con sol].",
+   "glossary": [
+    {
+     "word": "anticuario",
+     "meaning": "persona que vende objetos antiguos"
+    },
+    {
+     "word": "ferroviario",
+     "meaning": "persona que trabaja en los trenes"
+    },
+    {
+     "word": "jubilando",
+     "meaning": "dejando de trabajar por la edad"
+    },
+    {
+     "word": "cajón",
+     "meaning": "parte de un mueble que se abre para guardar cosas"
+    }
+   ]
+  },
+  {
+   "id": "cordoba",
+   "title": "Elegir carrera",
+   "place": "La Universidad Nacional de Córdoba",
+   "context": "Agustina, estudiante de medicina, conversa con Gabriel, un estudiante de Panamá.",
+   "speakers": [
+    {
+     "name": "Gabriel",
+     "country": "Panamá",
+     "voice": "es-PA-RobertoNeural"
+    },
+    {
+     "name": "Agustina",
+     "country": "Argentina",
+     "voice": "es-AR-ElenaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Agustina, ¿es cierto que aquí la universidad pública es gratis?"
+    },
+    {
+     "s": 1,
+     "text": "Sí, desde hace muchos años. Por eso viene gente de todo el país y de muchos países de América Latina. Es una de las universidades más antiguas del continente."
+    },
+    {
+     "s": 0,
+     "text": "En Panamá estudiar medicina cuesta muchísimo. ¿Y tú por qué elegiste medicina?"
+    },
+    {
+     "s": 1,
+     "text": "Mi abuela era enfermera en un pueblo de las sierras. Yo la acompañaba de chica y me encantaba. Aunque, para ser sincera, el primer año casi abandono."
+    },
+    {
+     "s": 0,
+     "text": "¿En serio? ¿Qué pasó?"
+    },
+    {
+     "s": 1,
+     "text": "Teníamos tres mil estudiantes en primer año y aulas para mil. Estudiaba de noche y trabajaba de día en una farmacia. Lloré muchas veces. Pero mi abuela me decía: «Los que llegan no son los más inteligentes, sino los que no se van»."
+    },
+    {
+     "s": 0,
+     "text": "Qué frase tan buena."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cómo es la universidad pública en Argentina?",
+     "options": [
+      "Muy cara",
+      "Gratis",
+      "Solo para argentinos"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué hacía la abuela de Agustina?",
+     "options": [
+      "Era médica",
+      "Era profesora",
+      "Era enfermera"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué problema había en primer año?",
+     "options": [
+      "Había demasiados estudiantes",
+      "No había profesores",
+      "Era muy caro"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Dónde trabajaba Agustina de día?",
+     "options": [
+      "En un hospital",
+      "En una farmacia",
+      "En un café"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Por qué elegiste tu profesión o tus estudios?",
+     "model": "Estudié ingeniería porque me gustaban las matemáticas."
+    },
+    {
+     "q": "¿La universidad debería ser gratis para todos?",
+     "model": "Creo que sí, porque la educación es un derecho."
+    },
+    {
+     "q": "¿Pensaste alguna vez en abandonar algo importante?",
+     "model": "Sí, casi dejé mis clases de piano, pero al final continué."
+    }
+   ],
+   "gaps": "Teníamos [tres mil] estudiantes en primer año y aulas [para mil]. Estudiaba [de noche] y trabajaba de día en una [farmacia].",
+   "glossary": [
+    {
+     "word": "pública",
+     "meaning": "del Estado, para todos"
+    },
+    {
+     "word": "enfermera",
+     "meaning": "persona que cuida a los enfermos con el médico"
+    },
+    {
+     "word": "abandono",
+     "meaning": "dejo algo sin terminar"
+    },
+    {
+     "word": "aulas",
+     "meaning": "salas donde se dan las clases"
+    }
+   ]
+  },
+  {
+   "id": "mendoza",
+   "title": "La cosecha y la helada",
+   "place": "Un viñedo en la vendimia",
+   "context": "Don Ricardo, encargado del viñedo, le explica un problema a Alicia, una periodista de Guinea Ecuatorial.",
+   "speakers": [
+    {
+     "name": "Alicia",
+     "country": "Guinea Ecuatorial",
+     "voice": "es-GQ-TeresaNeural"
+    },
+    {
+     "name": "Don Ricardo",
+     "country": "Uruguay",
+     "voice": "es-UY-MateoNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Don Ricardo, ¿cómo viene la cosecha este año?"
+    },
+    {
+     "s": 1,
+     "text": "Mal. En octubre hubo una helada tardía y perdimos casi la mitad de las uvas. Las plantas estaban floreciendo y el frío las quemó en una sola noche."
+    },
+    {
+     "s": 0,
+     "text": "¿No se puede hacer nada para evitarlo?"
+    },
+    {
+     "s": 1,
+     "text": "Algunas bodegas grandes tienen ventiladores enormes o encienden pequeños fuegos entre las plantas. Pero eso cuesta mucho dinero. Nosotros somos una bodega familiar."
+    },
+    {
+     "s": 0,
+     "text": "¿Y cómo afecta eso a los trabajadores de la cosecha?"
+    },
+    {
+     "s": 1,
+     "text": "Ese es el problema. Si hay menos uva, contratamos menos gente. Muchos cosechadores vienen del norte y dependen de este trabajo para todo el año. Este año vamos a contratar a veinte en lugar de cuarenta."
+    },
+    {
+     "s": 0,
+     "text": "Es muy duro."
+    },
+    {
+     "s": 1,
+     "text": "Lo es. Pero el vino de un año difícil, a veces, es el mejor."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué pasó en octubre?",
+     "options": [
+      "Hubo una helada",
+      "Llovió mucho",
+      "Hizo mucho calor"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cuántas uvas perdieron?",
+     "options": [
+      "Todas",
+      "Una cuarta parte",
+      "Casi la mitad"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué usan algunas bodegas grandes?",
+     "options": [
+      "Plásticos",
+      "Ventiladores y fuegos",
+      "Agua caliente"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cuántos trabajadores contratan este año?",
+     "options": [
+      "Cuarenta",
+      "Veinte",
+      "Diez"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Cómo afecta el clima a tu región?",
+     "model": "En mi región las lluvias fuertes destruyen las cosechas."
+    },
+    {
+     "q": "¿Conoces trabajos que dependen de una temporada?",
+     "model": "Sí, en mi país mucha gente trabaja solo en verano con el turismo."
+    },
+    {
+     "q": "¿Crees que algo bueno puede salir de un año difícil?",
+     "model": "Sí, a veces aprendemos más en los momentos difíciles."
+    }
+   ],
+   "gaps": "Si hay [menos uva], contratamos [menos gente]. Muchos cosechadores vienen del [norte] y dependen de este trabajo para [todo el año].",
+   "glossary": [
+    {
+     "word": "helada",
+     "meaning": "frío muy fuerte que congela las plantas"
+    },
+    {
+     "word": "cosecha",
+     "meaning": "momento de recoger la fruta"
+    },
+    {
+     "word": "contratamos",
+     "meaning": "damos trabajo a alguien"
+    },
+    {
+     "word": "cosechadores",
+     "meaning": "personas que recogen la fruta"
+    }
+   ]
+  },
+  {
+   "id": "bariloche",
+   "title": "Crecer o no crecer",
+   "place": "Una cervecería artesanal de Bariloche",
+   "context": "Bruno, cervecero, le cuenta su dilema a Carlos, un amigo de Nicaragua.",
+   "speakers": [
+    {
+     "name": "Carlos",
+     "country": "Nicaragua",
+     "voice": "es-NI-FedericoNeural"
+    },
+    {
+     "name": "Bruno",
+     "country": "Argentina",
+     "voice": "es-AR-TomasNeural"
+    },
+    {
+     "name": "Mariana",
+     "country": "España",
+     "voice": "es-ES-ElviraNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Bruno, me contaron que una empresa grande quiere comprar tu cerveza."
+    },
+    {
+     "s": 1,
+     "text": "No comprarla, distribuirla. Quieren venderla en supermercados de todo el país. Tendría que producir diez veces más."
+    },
+    {
+     "s": 2,
+     "text": "¿Y eso no es bueno? Es el sueño de cualquier cervecero."
+    },
+    {
+     "s": 1,
+     "text": "Sí y no. Para producir tanto necesito una fábrica, máquinas y, probablemente, cambiar un poco la receta. Hoy hago todo a mano, con agua de la montaña. Si crezco tanto, ya no voy a estar en el bar con la gente."
+    },
+    {
+     "s": 0,
+     "text": "¿Y si aceptas solo con una de tus cervezas?"
+    },
+    {
+     "s": 1,
+     "text": "Lo pensé. La más popular para los supermercados, y las otras solo aquí. Así el bar sigue siendo especial."
+    },
+    {
+     "s": 2,
+     "text": "Me parece una idea inteligente. Creces, pero no pierdes tu identidad."
+    },
+    {
+     "s": 1,
+     "text": "Espero. Mañana me reúno con ellos."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué quiere hacer la empresa?",
+     "options": [
+      "Distribuir la cerveza",
+      "Comprar el bar",
+      "Cerrar la cervecería"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cuánto más tendría que producir Bruno?",
+     "options": [
+      "El doble",
+      "Cinco veces más",
+      "Diez veces más"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué le preocupa a Bruno?",
+     "options": [
+      "Ganar poco dinero",
+      "No estar con la gente del bar",
+      "Viajar mucho"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cuál es la idea final?",
+     "options": [
+      "Rechazar todo",
+      "Vender el bar",
+      "Aceptar solo con una cerveza"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Preferirías un negocio pequeño o uno muy grande?",
+     "model": "Preferiría uno pequeño, porque podría conocer a mis clientes."
+    },
+    {
+     "q": "¿Qué producto artesanal compras?",
+     "model": "Compro pan artesanal en una panadería de mi barrio."
+    },
+    {
+     "q": "¿Se puede crecer sin perder la identidad?",
+     "model": "Creo que sí, si las decisiones importantes siguen en las mismas manos."
+    }
+   ],
+   "gaps": "Hoy hago todo [a mano], con agua de la [montaña]. Si crezco tanto, ya no voy a estar [en el bar] con la [gente].",
+   "glossary": [
+    {
+     "word": "distribuirla",
+     "meaning": "llevarla a muchas tiendas para vender"
+    },
+    {
+     "word": "receta",
+     "meaning": "la forma de preparar algo"
+    },
+    {
+     "word": "a mano",
+     "meaning": "sin máquinas, de forma artesanal"
+    },
+    {
+     "word": "identidad",
+     "meaning": "lo que hace a alguien único"
+    }
+   ]
+  }
+ ]
+}

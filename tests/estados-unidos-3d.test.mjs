@@ -56,5 +56,5 @@ test("Ale's examples are in the world",async()=>{
 });
 
 test('the teacher mode saves per student through the live-class API',()=>{
-  assert.match(readFileSync('app/api/live-class/route.ts','utf8'),/WORLD_LESSON_IDS = new Set\(\[36\]\)/);
+  assert.match(readFileSync('app/api/live-class/route.ts','utf8'),/WORLD_LESSON_IDS = new Set\(\[36\b/);
 });

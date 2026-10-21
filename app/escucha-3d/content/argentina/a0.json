@@ -1,0 +1,498 @@
+{
+ "game": "argentina",
+ "level": "A0",
+ "items": [
+  {
+   "id": "buenos-aires",
+   "title": "Un café en Buenos Aires",
+   "place": "Un café antiguo",
+   "context": "Ana, de Perú, pide un café en un café muy viejo de Buenos Aires.",
+   "contextEn": "Ana, from Peru, orders a coffee in a very old café in Buenos Aires.",
+   "speakers": [
+    {
+     "name": "Don Alberto",
+     "country": "Argentina",
+     "voice": "es-AR-TomasNeural"
+    },
+    {
+     "name": "Ana",
+     "country": "Perú",
+     "voice": "es-PE-CamilaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Buenas tardes. ¿Qué quieres tomar?",
+     "en": "Good afternoon. What would you like to drink?"
+    },
+    {
+     "s": 1,
+     "text": "Un café con leche, por favor.",
+     "en": "A white coffee, please."
+    },
+    {
+     "s": 0,
+     "text": "¿Quieres medialunas? Son dulces.",
+     "en": "Do you want croissants? They are sweet."
+    },
+    {
+     "s": 1,
+     "text": "Sí, dos medialunas. ¿Cuánto es?",
+     "en": "Yes, two croissants. How much is it?"
+    },
+    {
+     "s": 0,
+     "text": "Son tres mil pesos.",
+     "en": "That is three thousand pesos."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué toma Ana?",
+     "qEn": "What does Ana drink?",
+     "options": [
+      "Un café con leche",
+      "Un té",
+      "Un jugo"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cómo son las medialunas?",
+     "qEn": "What are the croissants like?",
+     "options": [
+      "Saladas",
+      "Dulces",
+      "Grandes"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cuántas medialunas pide Ana?",
+     "qEn": "How many croissants does Ana order?",
+     "options": [
+      "Una",
+      "Tres",
+      "Dos"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuánto cuesta todo?",
+     "qEn": "How much is everything?",
+     "options": [
+      "Tres mil pesos",
+      "Dos mil pesos",
+      "Mil pesos"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Tomas café?",
+     "qEn": "Do you drink coffee?",
+     "model": "Sí, tomo café con leche."
+    },
+    {
+     "q": "¿Te gustan las cosas dulces?",
+     "qEn": "Do you like sweet things?",
+     "model": "Sí, me gustan mucho."
+    },
+    {
+     "q": "¿Qué comes en la tarde?",
+     "qEn": "What do you eat in the afternoon?",
+     "model": "Como fruta o pan."
+    }
+   ],
+   "gaps": "Sí, [dos medialunas]. ¿[Cuánto] es? Son [tres mil] [pesos].",
+   "glossary": [
+    {
+     "word": "medialunas",
+     "meaning": "pan dulce con forma de luna",
+     "en": "croissants"
+    },
+    {
+     "word": "café con leche",
+     "meaning": "café con leche caliente",
+     "en": "white coffee"
+    },
+    {
+     "word": "pesos",
+     "meaning": "el dinero de Argentina",
+     "en": "pesos"
+    }
+   ]
+  },
+  {
+   "id": "cordoba",
+   "title": "El ómnibus a las sierras",
+   "place": "La terminal de ómnibus",
+   "context": "Pablo, de Colombia, compra un pasaje en la terminal de Córdoba.",
+   "contextEn": "Pablo, from Colombia, buys a ticket at the Córdoba bus station.",
+   "speakers": [
+    {
+     "name": "Pablo",
+     "country": "Colombia",
+     "voice": "es-CO-GonzaloNeural"
+    },
+    {
+     "name": "Norma",
+     "country": "Uruguay",
+     "voice": "es-UY-ValentinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Hola. Un pasaje a las sierras, por favor.",
+     "en": "Hi. A ticket to the hills, please."
+    },
+    {
+     "s": 1,
+     "text": "Hay un ómnibus a las diez y otro a las doce. Es muy cómodo.",
+     "en": "There is a bus at ten and another at twelve. It is very comfortable."
+    },
+    {
+     "s": 0,
+     "text": "A las diez, por favor. ¿Es largo el viaje?",
+     "en": "At ten, please. Is the trip long?"
+    },
+    {
+     "s": 1,
+     "text": "No, es corto. Una hora y media.",
+     "en": "No, it is short. An hour and a half."
+    },
+    {
+     "s": 0,
+     "text": "Perfecto. Y un alfajor, por favor.",
+     "en": "Perfect. And an alfajor, please."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Adónde va Pablo?",
+     "qEn": "Where is Pablo going?",
+     "options": [
+      "A la playa",
+      "A las sierras",
+      "A la ciudad"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿A qué hora sale su ómnibus?",
+     "qEn": "What time does his bus leave?",
+     "options": [
+      "A las doce",
+      "A las once",
+      "A las diez"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cómo es el viaje?",
+     "qEn": "What is the trip like?",
+     "options": [
+      "Corto",
+      "Muy largo",
+      "Caro"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué compra también Pablo?",
+     "qEn": "What else does Pablo buy?",
+     "options": [
+      "Un café",
+      "Un alfajor",
+      "Un mapa"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Viajas en ómnibus?",
+     "qEn": "Do you travel by bus?",
+     "model": "Sí, viajo en ómnibus a veces."
+    },
+    {
+     "q": "¿Te gustan las montañas?",
+     "qEn": "Do you like mountains?",
+     "model": "Sí, me gustan mucho."
+    },
+    {
+     "q": "¿Qué comes en un viaje?",
+     "qEn": "What do you eat on a trip?",
+     "model": "Como galletas o fruta."
+    }
+   ],
+   "gaps": "Hay un [ómnibus] a las [diez] y otro a las [doce]. Es muy [cómodo].",
+   "glossary": [
+    {
+     "word": "pasaje",
+     "meaning": "el papel para viajar",
+     "en": "ticket"
+    },
+    {
+     "word": "ómnibus",
+     "meaning": "un autobús grande",
+     "en": "bus"
+    },
+    {
+     "word": "alfajor",
+     "meaning": "un dulce típico de Argentina",
+     "en": "alfajor (a typical sweet)"
+    }
+   ]
+  },
+  {
+   "id": "mendoza",
+   "title": "Uvas en el mercado",
+   "place": "El mercado central",
+   "context": "Lucía, de España, compra fruta a Pilar en Mendoza.",
+   "contextEn": "Lucía, from Spain, buys fruit from Pilar in Mendoza.",
+   "speakers": [
+    {
+     "name": "Pilar",
+     "country": "Argentina",
+     "voice": "es-AR-ElenaNeural"
+    },
+    {
+     "name": "Lucía",
+     "country": "España",
+     "voice": "es-ES-XimenaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "¡Hola! ¿Qué buscas hoy?",
+     "en": "Hi! What are you looking for today?"
+    },
+    {
+     "s": 1,
+     "text": "Uvas. ¿Son de Mendoza?",
+     "en": "Grapes. Are they from Mendoza?"
+    },
+    {
+     "s": 0,
+     "text": "Sí, son de aquí. Son muy dulces. Prueba una.",
+     "en": "Yes, they are from here. They are very sweet. Try one."
+    },
+    {
+     "s": 1,
+     "text": "¡Qué ricas! Un kilo, por favor.",
+     "en": "How tasty! A kilo, please."
+    },
+    {
+     "s": 0,
+     "text": "Toma. Y una manzana de regalo.",
+     "en": "Here you are. And an apple as a gift."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué busca Lucía?",
+     "qEn": "What is Lucía looking for?",
+     "options": [
+      "Manzanas",
+      "Peras",
+      "Uvas"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿De dónde son las uvas?",
+     "qEn": "Where are the grapes from?",
+     "options": [
+      "De Mendoza",
+      "De Chile",
+      "De Córdoba"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cuántas uvas compra Lucía?",
+     "qEn": "How many grapes does Lucía buy?",
+     "options": [
+      "Medio kilo",
+      "Un kilo",
+      "Dos kilos"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué le regala Pilar?",
+     "qEn": "What does Pilar give her?",
+     "options": [
+      "Una uva",
+      "Una naranja",
+      "Una manzana"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Te gusta la fruta?",
+     "qEn": "Do you like fruit?",
+     "model": "Sí, me gusta mucho la fruta."
+    },
+    {
+     "q": "¿Cuál es tu fruta favorita?",
+     "qEn": "What is your favourite fruit?",
+     "model": "Mi fruta favorita es la uva."
+    },
+    {
+     "q": "¿Dónde compras la fruta?",
+     "qEn": "Where do you buy fruit?",
+     "model": "Compro la fruta en el mercado."
+    }
+   ],
+   "gaps": "Sí, son [de aquí]. Son [muy dulces]. [Prueba] una. ¡Qué [ricas]!",
+   "glossary": [
+    {
+     "word": "uvas",
+     "meaning": "una fruta pequeña, verde o morada",
+     "en": "grapes"
+    },
+    {
+     "word": "dulces",
+     "meaning": "con sabor a azúcar",
+     "en": "sweet"
+    },
+    {
+     "word": "de regalo",
+     "meaning": "gratis, sin pagar",
+     "en": "as a gift"
+    }
+   ]
+  },
+  {
+   "id": "bariloche",
+   "title": "Frío en la montaña",
+   "place": "El cerro Catedral",
+   "context": "Diego, de México, habla con Lola, la profesora de esquí, en Bariloche.",
+   "contextEn": "Diego, from Mexico, talks with Lola, the ski teacher, in Bariloche.",
+   "speakers": [
+    {
+     "name": "Lola",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    },
+    {
+     "name": "Diego",
+     "country": "México",
+     "voice": "es-MX-JorgeNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "¡Hola! ¿Es tu primera clase de esquí?",
+     "en": "Hi! Is it your first ski class?"
+    },
+    {
+     "s": 1,
+     "text": "Sí. ¡Y hace mucho frío!",
+     "en": "Yes. And it is very cold!"
+    },
+    {
+     "s": 0,
+     "text": "Sí, hay mucha nieve hoy. ¿Tienes guantes?",
+     "en": "Yes, there is a lot of snow today. Do you have gloves?"
+    },
+    {
+     "s": 1,
+     "text": "No, no tengo guantes.",
+     "en": "No, I do not have gloves."
+    },
+    {
+     "s": 0,
+     "text": "Toma, estos son para ti. Vamos despacio.",
+     "en": "Here, these are for you. We go slowly."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué clase tiene Diego?",
+     "qEn": "What class does Diego have?",
+     "options": [
+      "Esquí",
+      "Natación",
+      "Baile"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cómo está el día?",
+     "qEn": "What is the day like?",
+     "options": [
+      "Hace calor",
+      "Hace mucho frío",
+      "Llueve"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué no tiene Diego?",
+     "qEn": "What does Diego not have?",
+     "options": [
+      "Gorro",
+      "Campera",
+      "Guantes"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cómo van a esquiar?",
+     "qEn": "How are they going to ski?",
+     "options": [
+      "Despacio",
+      "Rápido",
+      "Solos"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Te gusta la nieve?",
+     "qEn": "Do you like snow?",
+     "model": "Sí, me gusta mucho la nieve."
+    },
+    {
+     "q": "¿Qué ropa usas con frío?",
+     "qEn": "What clothes do you wear in the cold?",
+     "model": "Uso campera, gorro y guantes."
+    },
+    {
+     "q": "¿Sabes esquiar?",
+     "qEn": "Can you ski?",
+     "model": "No, no sé esquiar."
+    }
+   ],
+   "gaps": "Sí, hay [mucha nieve] hoy. ¿Tienes [guantes]? No, [no tengo] [guantes].",
+   "glossary": [
+    {
+     "word": "nieve",
+     "meaning": "agua blanca y fría que cae del cielo",
+     "en": "snow"
+    },
+    {
+     "word": "guantes",
+     "meaning": "ropa para las manos",
+     "en": "gloves"
+    },
+    {
+     "word": "despacio",
+     "meaning": "no rápido",
+     "en": "slowly"
+    }
+   ]
+  }
+ ]
+}

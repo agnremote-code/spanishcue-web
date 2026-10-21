@@ -20,7 +20,7 @@ import { animatePerson, setMood } from '../noche-abierta/people3d';
 import { createBumpClock, pushOut } from '../escucha-3d/bump.mjs';
 import { insultFor, shout } from '../escucha-3d/shout';
 import { HUB, ISLAND_RADIUS, MAP_SPAWN, OCEAN_Y, PLANE_PARK, buildMap, cloudTexture, islandAt, onGround } from './map3d';
-import { canvas, createBubbles, disposeGroup, spotRing, stepWalker, type Box, type RegionScene, type SceneBuilder, type Talker, type Walker } from './kit3d';
+import { canvas, createBubbles, disposeGroup, keepPeopleClear, spotRing, stepWalker, type Box, type RegionScene, type SceneBuilder, type Talker, type Walker } from './kit3d';
 import type { CountryInfo } from './types';
 
 export type View = 'intro' | 'map' | `region:${string}`;
@@ -228,7 +228,7 @@ export default function World3D(props: WorldProps) {
       spent = null; inside = null;
     }
     function buildRegion(id: string, builder: SceneBuilder) {
-      const built = builder({ low, shadows: !low });
+      const built = keepPeopleClear(builder({ low, shadows: !low }));
       const rings = new Map<string, ReturnType<typeof spotRing>>();
       for (const s of built.spots) rings.set(s.id, spotRing(built.group, s.x, s.z));
       // Doors glow blue on the ground, so they read as a way somewhere else.

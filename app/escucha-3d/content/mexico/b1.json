@@ -1,0 +1,494 @@
+{
+ "game": "mexico",
+ "level": "B1",
+ "items": [
+  {
+   "id": "cdmx",
+   "title": "El idioma que vuelve",
+   "place": "Un museo",
+   "context": "En el Museo de Antropología, una guía y dos visitantes hablan sobre las lenguas indígenas de México.",
+   "speakers": [
+    {
+     "name": "Lucía",
+     "country": "México",
+     "voice": "es-MX-DaliaNeural"
+    },
+    {
+     "name": "Federico",
+     "country": "Nicaragua",
+     "voice": "es-NI-FedericoNeural"
+    },
+    {
+     "name": "Margarita",
+     "country": "Panamá",
+     "voice": "es-PA-MargaritaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "En México se hablan sesenta y ocho lenguas indígenas. El náhuatl es la más hablada: casi dos millones de personas."
+    },
+    {
+     "s": 1,
+     "text": "No tenía ni idea. Pensaba que eran lenguas del pasado, como el latín."
+    },
+    {
+     "s": 0,
+     "text": "Es un error muy común. Mi abuela hablaba náhuatl, pero no quiso enseñárselo a mi madre porque en la escuela se burlaban de ella."
+    },
+    {
+     "s": 2,
+     "text": "En Panamá pasa algo parecido con algunas lenguas. Los jóvenes las entienden, pero les da vergüenza hablarlas."
+    },
+    {
+     "s": 0,
+     "text": "Por suerte, eso está cambiando. Ahora hay raperos que cantan en náhuatl y escuelas bilingües. Yo misma empecé a estudiarlo a los treinta años."
+    },
+    {
+     "s": 1,
+     "text": "¿Y le resulta difícil?"
+    },
+    {
+     "s": 0,
+     "text": "Muchísimo. Pero cada palabra que aprendo es como recuperar una foto de mi familia."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuántas lenguas indígenas se hablan en México?",
+     "options": [
+      "Sesenta y ocho",
+      "Doce",
+      "Más de cien"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Por qué la abuela de Lucía no enseñó náhuatl a su hija?",
+     "options": [
+      "Porque no lo hablaba bien",
+      "Porque se burlaban de ella en la escuela",
+      "Porque vivía lejos"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué pasa con los jóvenes en Panamá, según Margarita?",
+     "options": [
+      "No entienden las lenguas",
+      "Las estudian en la universidad",
+      "Les da vergüenza hablarlas"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿A qué compara Lucía cada palabra que aprende?",
+     "options": [
+      "A un viaje",
+      "A una canción",
+      "A recuperar una foto de su familia"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué lenguas se hablaban en tu familia antes?",
+     "model": "Mis bisabuelos hablaban italiano, pero mis padres ya no lo hablan."
+    },
+    {
+     "q": "¿Crees que las lenguas minoritarias deben enseñarse en la escuela?",
+     "model": "Creo que sí, porque si no se enseñan, desaparecen en pocas generaciones."
+    },
+    {
+     "q": "¿Alguna vez te dio vergüenza hablar un idioma?",
+     "model": "Sí, al principio me daba vergüenza hablar español por mi acento."
+    }
+   ],
+   "gaps": "Ahora hay [raperos] que cantan en náhuatl y escuelas [bilingües]. Yo misma empecé a [estudiarlo] a los treinta [años].",
+   "glossary": [
+    {
+     "word": "se burlaban",
+     "meaning": "se reían de alguien para hacerle daño"
+    },
+    {
+     "word": "bilingües",
+     "meaning": "en dos idiomas"
+    },
+    {
+     "word": "recuperar",
+     "meaning": "volver a tener algo perdido"
+    },
+    {
+     "word": "parecido",
+     "meaning": "casi igual"
+    }
+   ]
+  },
+  {
+   "id": "jalisco",
+   "title": "Chapala se seca",
+   "place": "El malecón de Chapala",
+   "context": "Un periodista entrevista a un pescador y a una jubilada estadounidense sobre el agua del lago.",
+   "speakers": [
+    {
+     "name": "Periodista",
+     "country": "Costa Rica",
+     "voice": "es-CR-JuanNeural"
+    },
+    {
+     "name": "Don Aurelio",
+     "country": "México",
+     "voice": "es-MX-JorgeNeural"
+    },
+    {
+     "name": "Paloma",
+     "country": "Estados Unidos",
+     "voice": "es-US-PalomaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Don Aurelio, usted pesca aquí desde hace cincuenta años. ¿Qué ha cambiado?"
+    },
+    {
+     "s": 1,
+     "text": "Todo. Cuando yo era joven, el agua llegaba hasta esta calle. Hoy hay que caminar casi un kilómetro para meter la lancha."
+    },
+    {
+     "s": 0,
+     "text": "¿A qué se debe?"
+    },
+    {
+     "s": 1,
+     "text": "A que Guadalajara crece y necesita agua, y a que llueve menos que antes. El lago da de beber a millones de personas, pero nadie lo cuida."
+    },
+    {
+     "s": 2,
+     "text": "Yo vine a vivir aquí hace doce años por el clima y la tranquilidad. Me siento un poco culpable, porque los extranjeros también usamos mucha agua."
+    },
+    {
+     "s": 1,
+     "text": "No es culpa de nadie en particular, señora. Pero si no cambiamos algo pronto, mis nietos no van a conocer el lago."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Desde cuándo pesca Don Aurelio en el lago?",
+     "options": [
+      "Desde hace diez años",
+      "Desde hace cincuenta años",
+      "Desde el año pasado"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué distancia hay que caminar hoy para meter la lancha?",
+     "options": [
+      "Casi un kilómetro",
+      "Diez metros",
+      "Cinco kilómetros"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Por qué vino Paloma a vivir a Chapala?",
+     "options": [
+      "Por trabajo",
+      "Por su familia",
+      "Por el clima y la tranquilidad"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué teme Don Aurelio?",
+     "options": [
+      "Que sus nietos no conozcan el lago",
+      "Perder su casa",
+      "Que lleguen más turistas"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué lugar natural de tu país está cambiando?",
+     "model": "Los glaciares de mi país son cada año más pequeños por el calor."
+    },
+    {
+     "q": "¿Te sentiste culpable alguna vez por tu forma de consumir?",
+     "model": "Sí, cuando vi cuánta ropa compraba y casi no usaba."
+    },
+    {
+     "q": "¿Qué harías para proteger un lago como Chapala?",
+     "model": "Arreglaría las tuberías de la ciudad para no perder agua y controlaría a las empresas."
+    }
+   ],
+   "gaps": "A que Guadalajara crece y necesita [agua], y a que [llueve] menos que antes. El lago da de [beber] a millones de [personas]",
+   "glossary": [
+    {
+     "word": "lancha",
+     "meaning": "barco pequeño"
+    },
+    {
+     "word": "se debe",
+     "meaning": "tiene como causa"
+    },
+    {
+     "word": "culpable",
+     "meaning": "responsable de algo malo"
+    },
+    {
+     "word": "tranquilidad",
+     "meaning": "calma, sin ruido ni problemas"
+    }
+   ]
+  },
+  {
+   "id": "oaxaca",
+   "title": "La Guelaguetza de verdad",
+   "place": "Una calle de Oaxaca",
+   "context": "Dos amigos discuten si vale la pena pagar la entrada de la Guelaguetza o ir a la versión popular.",
+   "speakers": [
+    {
+     "name": "Rodrigo",
+     "country": "El Salvador",
+     "voice": "es-SV-RodrigoNeural"
+    },
+    {
+     "name": "Marisol",
+     "country": "México",
+     "voice": "es-MX-DaliaNeural"
+    },
+    {
+     "name": "Juan",
+     "country": "Costa Rica",
+     "voice": "es-CR-JuanNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 2,
+     "text": "Las entradas para el auditorio cuestan casi dos mil pesos. Es una locura."
+    },
+    {
+     "s": 1,
+     "text": "Es que los turistas las compran meses antes. Muchas familias de aquí ya no pueden ir a su propia fiesta."
+    },
+    {
+     "s": 0,
+     "text": "Pero el dinero sirve para pagar a los bailarines, ¿no?"
+    },
+    {
+     "s": 1,
+     "text": "En parte sí. Por eso yo bailo en el auditorio. Pero mañana también bailo gratis en la Guelaguetza popular, en el barrio de mi abuela."
+    },
+    {
+     "s": 2,
+     "text": "¿Y no es lo mismo?"
+    },
+    {
+     "s": 1,
+     "text": "Los bailes son iguales. Lo que cambia es el ambiente. Allá la gente comparte comida, los niños se meten a bailar y nadie mira el reloj. Eso es la Guelaguetza: compartir."
+    },
+    {
+     "s": 0,
+     "text": "Entonces voy a la de tu barrio. Y llevo pan de yema para compartir."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuánto cuestan las entradas para el auditorio?",
+     "options": [
+      "Doscientos pesos",
+      "Casi dos mil pesos",
+      "Son gratis"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Por qué muchas familias locales no pueden ir?",
+     "options": [
+      "Porque trabajan ese día",
+      "Porque los turistas compran las entradas antes",
+      "Porque no les interesa"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Dónde baila Marisol mañana?",
+     "options": [
+      "En el auditorio",
+      "En un hotel",
+      "En el barrio de su abuela"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué significa la Guelaguetza, según Marisol?",
+     "options": [
+      "Compartir",
+      "Bailar",
+      "Celebrar la cosecha"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué fiesta de tu país se ha vuelto demasiado turística?",
+     "model": "El carnaval de mi ciudad se ha vuelto muy caro y ya no se parece al de antes."
+    },
+    {
+     "q": "¿Pagarías mucho dinero por un espectáculo tradicional?",
+     "model": "Depende. Si el dinero llega a los artistas, sí lo pagaría."
+    },
+    {
+     "q": "¿Qué llevarías para compartir en una fiesta de barrio?",
+     "model": "Llevaría empanadas, porque a todo el mundo le gustan."
+    }
+   ],
+   "gaps": "Los bailes son [iguales]. Lo que cambia es el [ambiente]. Allá la gente comparte [comida], los niños se meten a [bailar]",
+   "glossary": [
+    {
+     "word": "locura",
+     "meaning": "algo absurdo o exagerado"
+    },
+    {
+     "word": "ambiente",
+     "meaning": "cómo se siente un lugar, la energía de la gente"
+    },
+    {
+     "word": "compartir",
+     "meaning": "dar parte de lo que tienes a otros"
+    },
+    {
+     "word": "auditorio",
+     "meaning": "lugar grande para espectáculos"
+    }
+   ]
+  },
+  {
+   "id": "quintana-roo",
+   "title": "El tren de la selva",
+   "place": "Una asamblea en un pueblo maya",
+   "context": "En una asamblea, varios vecinos discuten sobre el nuevo tren turístico que atraviesa la selva.",
+   "speakers": [
+    {
+     "name": "Don Ramiro",
+     "country": "México",
+     "voice": "es-MX-JorgeNeural"
+    },
+    {
+     "name": "Karina",
+     "country": "Puerto Rico",
+     "voice": "es-PR-KarinaNeural"
+    },
+    {
+     "name": "Luis",
+     "country": "Ecuador",
+     "voice": "es-EC-LuisNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Nadie aquí está en contra del progreso. Pero las columnas del tren atraviesan cuevas que están conectadas con nuestros cenotes. Si el agua se contamina, ¿quién nos va a dar de beber?"
+    },
+    {
+     "s": 2,
+     "text": "Con todo respeto, Don Ramiro, mi hijo trabaja en el tren. Por primera vez no tuvo que irse a Cancún para encontrar empleo."
+    },
+    {
+     "s": 1,
+     "text": "Yo soy bióloga y llevo tres años estudiando estas cuevas. No digo que haya que parar el tren, sino que necesitamos controles independientes del agua."
+    },
+    {
+     "s": 0,
+     "text": "¿Y quién pagaría esos controles?"
+    },
+    {
+     "s": 1,
+     "text": "La empresa del tren. Debería estar en el contrato desde el principio."
+    },
+    {
+     "s": 2,
+     "text": "Si es así, yo votaría a favor. Lo que no quiero es elegir entre el trabajo de mi hijo y el agua de mis nietos."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué preocupa a Don Ramiro?",
+     "options": [
+      "Que el agua de los cenotes se contamine",
+      "El ruido del tren",
+      "Los turistas"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué cambió para el hijo de Luis?",
+     "options": [
+      "Se fue a Cancún",
+      "No tuvo que irse para encontrar empleo",
+      "Perdió su trabajo"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué propone Karina?",
+     "options": [
+      "Parar el tren",
+      "Cambiar la ruta",
+      "Controles independientes del agua"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Quién debería pagar los controles, según Karina?",
+     "options": [
+      "El gobierno local",
+      "La empresa del tren",
+      "Los turistas"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Cómo se equilibra el trabajo con la protección de la naturaleza?",
+     "model": "Creo que hay que exigir a las empresas que paguen por el daño que causan."
+    },
+    {
+     "q": "¿Votarías a favor del tren si fueras vecino?",
+     "model": "Votaría a favor solo si hubiera controles reales del agua."
+    },
+    {
+     "q": "¿Hay alguna obra polémica en tu ciudad?",
+     "model": "Sí, un estadio nuevo que destruyó un parque muy querido."
+    }
+   ],
+   "gaps": "No digo que haya que [parar] el [tren], sino que necesitamos [controles] independientes del [agua].",
+   "glossary": [
+    {
+     "word": "atraviesan",
+     "meaning": "pasan de un lado a otro"
+    },
+    {
+     "word": "se contamina",
+     "meaning": "se pone sucio y peligroso"
+    },
+    {
+     "word": "empleo",
+     "meaning": "trabajo"
+    },
+    {
+     "word": "independientes",
+     "meaning": "que no dependen de nadie"
+    }
+   ]
+  }
+ ]
+}
