@@ -2131,6 +2131,86 @@
    "seconds": 51.32,
    "src": "/audio/escucha-3d/suecia-b1-malmo.mp3"
   },
+  "uk/a0-escocia": {
+   "hash": "207b278ea2dac6bc3391",
+   "seconds": 31.13,
+   "src": "/audio/escucha-3d/uk-a0-escocia.mp3"
+  },
+  "uk/a0-gales": {
+   "hash": "d8498d5c85aa88e73aff",
+   "seconds": 29.04,
+   "src": "/audio/escucha-3d/uk-a0-gales.mp3"
+  },
+  "uk/a0-inglaterra": {
+   "hash": "0c9d94380e280cdbf36c",
+   "seconds": 28.63,
+   "src": "/audio/escucha-3d/uk-a0-inglaterra.mp3"
+  },
+  "uk/a0-irlanda-norte": {
+   "hash": "ef7b3b8d574402124ef0",
+   "seconds": 33.05,
+   "src": "/audio/escucha-3d/uk-a0-irlanda-norte.mp3"
+  },
+  "uk/a1-escocia": {
+   "hash": "549ed31eb8fc35f490f9",
+   "seconds": 40.66,
+   "src": "/audio/escucha-3d/uk-a1-escocia.mp3"
+  },
+  "uk/a1-gales": {
+   "hash": "25c582473b939fb50614",
+   "seconds": 44.98,
+   "src": "/audio/escucha-3d/uk-a1-gales.mp3"
+  },
+  "uk/a1-inglaterra": {
+   "hash": "447a937e2d5eb1557fea",
+   "seconds": 44.67,
+   "src": "/audio/escucha-3d/uk-a1-inglaterra.mp3"
+  },
+  "uk/a1-irlanda-norte": {
+   "hash": "8f41b3d77a0f2e560d5f",
+   "seconds": 45.05,
+   "src": "/audio/escucha-3d/uk-a1-irlanda-norte.mp3"
+  },
+  "uk/a2-escocia": {
+   "hash": "b4656ddb4af9e584677d",
+   "seconds": 51.63,
+   "src": "/audio/escucha-3d/uk-a2-escocia.mp3"
+  },
+  "uk/a2-gales": {
+   "hash": "067ea33b5d4e0cd81c28",
+   "seconds": 52.58,
+   "src": "/audio/escucha-3d/uk-a2-gales.mp3"
+  },
+  "uk/a2-inglaterra": {
+   "hash": "6e2097543cebae3cda31",
+   "seconds": 47.67,
+   "src": "/audio/escucha-3d/uk-a2-inglaterra.mp3"
+  },
+  "uk/a2-irlanda-norte": {
+   "hash": "d0d7ef4e5f19444ecf01",
+   "seconds": 46.11,
+   "src": "/audio/escucha-3d/uk-a2-irlanda-norte.mp3"
+  },
+  "uk/b1-escocia": {
+   "hash": "c0fb478b0a60cc9a3ba2",
+   "seconds": 50.84,
+   "src": "/audio/escucha-3d/uk-b1-escocia.mp3"
+  },
+  "uk/b1-gales": {
+   "hash": "6692b7b21da72b4b702c",
+   "seconds": 52.4,
+   "src": "/audio/escucha-3d/uk-b1-gales.mp3"
+  },
+  "uk/b1-inglaterra": {
+   "hash": "5585202b081ced262557",
+   "seconds": 55.74,
+   "src": "/audio/escucha-3d/uk-b1-inglaterra.mp3"
+  },
+  "uk/b1-irlanda-norte": {
+   "hash": "a5795e6267b06aa8d9a7",
+   "seconds": 54.68,
+   "src": "/audio/escucha-3d/uk-b1-irlanda-norte.mp3"
+  },
   "usa/a0-california": {
    "hash": "a783dc69b2a1a472ed32",
    "seconds": 30.05,
