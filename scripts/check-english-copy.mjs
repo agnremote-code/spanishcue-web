@@ -10,7 +10,8 @@ export function relocateEnglishSources(files) {
   const relocated=new Map(files);
   const moves=[...['condicionales','la-estacion-de-los-dos-destinos','past-b1'].map(folder=>[`app/${folder}/page.tsx`,`app/${folder}/LegacyLesson.tsx`]),
     // The old Estados Unidos atlas lives on as the no-3D fallback of the 3D world.
-    ['app/estados-unidos-a2-b1/page.tsx','app/estados-unidos-a2-b1/Atlas.tsx']];
+    ['app/estados-unidos-a2-b1/page.tsx','app/estados-unidos-a2-b1/Atlas.tsx'],
+    ['app/mexico/page.tsx','app/mexico/Atlas.tsx']];
   for(const [from,to] of moves) {
     if(!relocated.has(from))continue;
     if(relocated.has(to))throw new Error(`Duplicate English relocation: ${to}`);

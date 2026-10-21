@@ -136,6 +136,13 @@ const publicRoots = new Set([
     `app/estados-unidos-a2-b1/mundo/escenas/${state}3d.ts`,
   ]),
   ...["a0", "a1", "a2", "b1"].map((level) => `app/escucha-3d/content/usa/${level}.json`),
+  // México 3D is FREE too (ID 210): same pattern, its four states are built from
+  // the shared zone template (app/mundo-3d/plantilla.ts).
+  "app/mexico/Atlas.tsx",
+  "app/mexico/mundo/zonas.ts",
+  "app/mundo-3d/plantilla.ts",
+  ...["cdmx", "jalisco", "oaxaca", "quintana-roo"].map((state) => `app/mexico/mundo/contenido/${state}.mjs`),
+  ...["a0", "a1", "a2", "b1"].map((level) => `app/escucha-3d/content/mexico/${level}.json`),
   "app/i18n/LanguageSwitcher.tsx",
   "virtual:vinext-app-browser-entry",
   ...Object.keys(manifest).filter((key) => /(^|\/)node_modules\//.test(key)),

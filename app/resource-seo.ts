@@ -76,6 +76,7 @@ const lessonBySlug = new Map(
 lessonBySlug.set("spanish-conversation-activity-a2-b1-reino-unido-en-relieve", lessons.find(lesson => lesson.id === 32)!);
 // Same for the United States flagship, now a 3D world with more levels.
 lessonBySlug.set("spanish-conversation-activity-a2-b1-estados-unidos", lessons.find(lesson => lesson.id === 36)!);
+lessonBySlug.set("spanish-conversation-activity-b1-mexico", lessons.find(lesson => lesson.id === 210)!);
 
 function cleanText(value: string): string {
   return value.replace(/\s+/g, " ").trim();
@@ -126,6 +127,7 @@ export function resourceLevelLabel(lesson: Lesson): string {
  */
 export const immersiveWorldGameByLessonId: ReadonlyMap<number, string> = new Map([
   [36, "usa"],
+  [210, "mexico"],
   [223, "noche"],
   [226, "bosque"],
   [237, "casino"],

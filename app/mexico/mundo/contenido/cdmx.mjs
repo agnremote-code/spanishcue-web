@@ -52,7 +52,7 @@ export default {
         },
         A2: {
           scene: { es: 'Doña Rosa trabaja en este mercado desde hace cuarenta años. Hoy está preocupada: abrieron un supermercado enorme a dos calles y el sábado vinieron pocos clientes.', en: 'Doña Rosa has worked at this market for forty years. Today she is worried: a huge supermarket opened two streets away and few customers came on Saturday.' },
-          opener: { es: 'Mi mamá vendía aquí y mi abuela también. Antes había filas en mi puesto. Ayer vendí la mitad. ¿Tú dónde compras?', en: 'My mum sold here and my grandmother too. There used to be queues at my stall. Yesterday I sold half as much. Where do you shop?' },
+          opener: { es: 'Mi mamá vendía aquí y mi abuela también. Antes había filas en mi puesto. Ayer las ventas bajaron a la mitad. ¿Tú dónde compras?', en: 'My mum sold here and my grandmother too. There used to be queues at my stall. Yesterday I sold half as much. Where do you shop?' },
           decide: {
             ask: { es: 'Rosa quiere atraer clientes nuevos. ¿Qué le recomiendas?', en: 'Rosa wants to attract new customers. What do you recommend?' },
             options: [
@@ -241,7 +241,7 @@ export default {
           questions: [
             { q: { es: '¿Alguna vez dejaste algo seguro para probar algo nuevo?', en: 'Have you ever left something safe to try something new?' }, help: { es: 'Sí, una vez dejé… / No, nunca me atreví…', en: 'Yes, once I left… / No, I never dared…' }, follow: [{ es: '¿Cómo salió?', en: 'How did it turn out?' }, { es: '¿Qué dijo tu familia?', en: 'What did your family say?' }] },
             { q: { es: '¿Cómo era tu barrio hace diez años?', en: 'What was your neighbourhood like ten years ago?' }, help: { es: 'Hace diez años había… y ahora…', en: 'Ten years ago there was… and now…' }, follow: [{ es: '¿Subieron los precios?', en: 'Did prices go up?' }, { es: '¿Llegó gente nueva?', en: 'Did new people arrive?' }] },
-            { q: { es: '¿Qué extrañabas cuando vivías lejos de casa?', en: 'What did you miss when you lived away from home?' }, help: { es: 'Extrañaba… / Nunca viví lejos, pero…', en: 'I missed… / I never lived away, but…' }, follow: [{ es: '¿La comida?', en: 'The food?' }, { es: '¿A quién?', en: 'Who?' }] },
+            { q: { es: '¿Qué extrañabas cuando vivías lejos de casa?', en: 'What did you miss when you lived away from home?' }, help: { es: 'Extrañaba… / Nunca estuve lejos, pero…', en: 'I missed… / I never lived away, but…' }, follow: [{ es: '¿La comida?', en: 'The food?' }, { es: '¿A quién?', en: 'Who?' }] },
             { q: { es: '¿Aceptarías un socio para salvar tu negocio?', en: 'Would you accept a partner to save your business?' }, help: { es: 'Sí, si… / No, porque perdería…', en: 'Yes, if… / No, because I would lose…' }, follow: [{ es: '¿Con un amigo o con un desconocido?', en: 'With a friend or a stranger?' }, { es: '¿Qué condiciones pondrías?', en: 'What conditions would you set?' }] },
           ],
           words: [{ es: 'el local', en: 'business premises' }, { es: 'por las nubes', en: 'sky-high' }, { es: 'aguantar', en: 'to hold on' }, { es: 'extrañar', en: 'to miss' }, { es: 'invertir', en: 'to invest' }],
@@ -316,7 +316,7 @@ export default {
         },
         A2: {
           scene: { es: 'Después de la visita, Lucía te cuenta que estudió historia porque su abuela hablaba náhuatl, la lengua de los aztecas. Ella nunca lo aprendió de niña y ahora lo estudia en clases nocturnas.', en: 'After the tour, Lucía tells you she studied history because her grandmother spoke Nahuatl, the language of the Aztecs. She never learned it as a child and now studies it in evening classes.' },
-          opener: { es: 'Mi abuela no quería que habláramos náhuatl. Decía que en la escuela se burlaban de ella. Cuando murió, entendí lo que perdimos. ¿Tu familia hablaba otra lengua?', en: 'My grandmother didn’t want us to speak Nahuatl. She said they made fun of her at school. When she died, I understood what we had lost. Did your family speak another language?' },
+          opener: { es: 'Mi abuela no quería que habláramos náhuatl. Decía que en la escuela se burlaban de ella. Cuando murió, me di cuenta de lo que perdimos. ¿Tu familia hablaba otra lengua?', en: 'My grandmother didn’t want us to speak Nahuatl. She said they made fun of her at school. When she died, I understood what we had lost. Did your family speak another language?' },
           decide: {
             ask: { es: 'Lucía quiere hacer algo para que no se pierda la lengua. ¿Qué le propones?', en: 'Lucía wants to do something so the language isn’t lost. What do you suggest?' },
             options: [
@@ -328,7 +328,7 @@ export default {
           twist: { es: 'Un señor mayor que limpia la sala se acerca y saluda a Lucía en náhuatl. Ella entiende solo la mitad, pero se emociona.', en: 'An older man who cleans the room comes over and greets Lucía in Nahuatl. She understands only half, but she is moved.' },
           questions: [
             { q: { es: '¿Tus abuelos hablaban otra lengua o un dialecto? ¿Lo aprendiste?', en: 'Did your grandparents speak another language or a dialect? Did you learn it?' }, help: { es: 'Mis abuelos hablaban… / Yo solo sé algunas palabras…', en: 'My grandparents spoke… / I only know a few words…' }, follow: [{ es: '¿Por qué no se transmitió?', en: 'Why wasn’t it passed on?' }, { es: '¿Te gustaría aprenderlo?', en: 'Would you like to learn it?' }] },
-            { q: { es: '¿Qué palabras de otras lenguas usas en tu idioma?', en: 'What words from other languages do you use in your language?' }, help: { es: 'Usamos… que viene de…', en: 'We use… which comes from…' }, follow: [{ es: '¿Sabías que «tomate» y «chocolate» vienen del náhuatl?', en: 'Did you know “tomato” and “chocolate” come from Nahuatl?' }, { es: '¿Qué otra conoces?', en: 'What other one do you know?' }] },
+            { q: { es: '¿Qué palabras de otras lenguas usas en tu idioma?', en: 'What words from other languages do you use in your language?' }, help: { es: 'Usamos… que viene de…', en: 'We use… which comes from…' }, follow: [{ es: '¿Sabías que «aguacate» y «chocolate» vienen del náhuatl?', en: 'Did you know “tomato” and “chocolate” come from Nahuatl?' }, { es: '¿Qué otra conoces?', en: 'What other one do you know?' }] },
             { q: { es: '¿Qué asignatura te gustaba más en la escuela? ¿Por qué?', en: 'What subject did you like most at school? Why?' }, help: { es: 'Me gustaba… porque el profesor… / porque era…', en: 'I liked… because the teacher… / because it was…' }, follow: [{ es: '¿Y la que menos?', en: 'And the least?' }, { es: '¿Influyó en tu trabajo?', en: 'Did it influence your job?' }] },
             { q: { es: '¿Alguna vez te avergonzaste de algo de tu origen y después te sentiste orgulloso?', en: 'Were you ever ashamed of something about your background and later proud of it?' }, help: { es: 'De niño me daba vergüenza… pero ahora…', en: 'As a child I was embarrassed about… but now…' }, follow: [{ es: '¿Qué cambió?', en: 'What changed?' }, { es: '¿Lo hablas con tu familia?', en: 'Do you talk about it with your family?' }] },
           ],

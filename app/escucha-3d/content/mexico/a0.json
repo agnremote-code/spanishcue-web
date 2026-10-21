@@ -1,0 +1,503 @@
+{
+ "game": "mexico",
+ "level": "A0",
+ "items": [
+  {
+   "id": "cdmx",
+   "title": "Tacos en la calle",
+   "place": "Un puesto de tacos",
+   "context": "Lucas, de Chile, pide tacos a Don Jorge en la Ciudad de México.",
+   "contextEn": "Lucas, from Chile, orders tacos from Don Jorge in Mexico City.",
+   "speakers": [
+    {
+     "name": "Don Jorge",
+     "country": "México",
+     "voice": "es-MX-JorgeNeural"
+    },
+    {
+     "name": "Lucas",
+     "country": "Chile",
+     "voice": "es-CL-LorenzoNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "¡Buenas tardes! ¿Cuántos tacos quieres?",
+     "en": "Good afternoon! How many tacos do you want?"
+    },
+    {
+     "s": 1,
+     "text": "Tres tacos, por favor. ¿Pican?",
+     "en": "Three tacos, please. Are they spicy?"
+    },
+    {
+     "s": 0,
+     "text": "La salsa verde pica mucho. La roja pica poco.",
+     "en": "The green sauce is very spicy. The red one is a little spicy."
+    },
+    {
+     "s": 1,
+     "text": "Entonces, salsa roja. Y un agua de limón.",
+     "en": "Then, red sauce. And a lime water."
+    },
+    {
+     "s": 0,
+     "text": "Son sesenta pesos.",
+     "en": "That is sixty pesos."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuántos tacos pide Lucas?",
+     "qEn": "How many tacos does Lucas order?",
+     "options": [
+      "Tres",
+      "Dos",
+      "Cinco"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué salsa pica mucho?",
+     "qEn": "Which sauce is very spicy?",
+     "options": [
+      "La roja",
+      "La verde",
+      "La blanca"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué bebe Lucas?",
+     "qEn": "What does Lucas drink?",
+     "options": [
+      "Café",
+      "Refresco",
+      "Agua de limón"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuánto cuesta todo?",
+     "qEn": "How much is everything?",
+     "options": [
+      "Sesenta pesos",
+      "Cien pesos",
+      "Treinta pesos"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Te gustan los tacos?",
+     "qEn": "Do you like tacos?",
+     "model": "Sí, me gustan mucho los tacos."
+    },
+    {
+     "q": "¿Comes comida picante?",
+     "qEn": "Do you eat spicy food?",
+     "model": "Sí, pero un poco."
+    },
+    {
+     "q": "¿Qué bebes con la comida?",
+     "qEn": "What do you drink with food?",
+     "model": "Bebo agua con la comida."
+    }
+   ],
+   "gaps": "La salsa [verde] pica [mucho]. La [roja] pica [poco].",
+   "glossary": [
+    {
+     "word": "salsa",
+     "meaning": "líquido de sabor para la comida",
+     "en": "sauce"
+    },
+    {
+     "word": "pica",
+     "meaning": "tiene chile, quema en la boca",
+     "en": "it is spicy"
+    },
+    {
+     "word": "pesos",
+     "meaning": "el dinero de México",
+     "en": "pesos"
+    }
+   ]
+  },
+  {
+   "id": "jalisco",
+   "title": "Una canción para mamá",
+   "place": "La plaza de los mariachis",
+   "context": "Valeria, de Colombia, habla con un mariachi en Guadalajara.",
+   "contextEn": "Valeria, from Colombia, talks to a mariachi in Guadalajara.",
+   "speakers": [
+    {
+     "name": "Valeria",
+     "country": "Colombia",
+     "voice": "es-CO-SalomeNeural"
+    },
+    {
+     "name": "Ramón",
+     "country": "México",
+     "voice": "es-MX-JorgeNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Hola. ¿Cuánto cuesta una canción?",
+     "en": "Hi. How much is a song?"
+    },
+    {
+     "s": 1,
+     "text": "Cien pesos. ¿Para quién es?",
+     "en": "A hundred pesos. Who is it for?"
+    },
+    {
+     "s": 0,
+     "text": "Para mi mamá. Hoy es su cumpleaños.",
+     "en": "For my mum. Today is her birthday."
+    },
+    {
+     "s": 1,
+     "text": "¡Qué bonito! Entonces, «Las mañanitas».",
+     "en": "How lovely! Then, “Las mañanitas”."
+    },
+    {
+     "s": 0,
+     "text": "Sí, por favor. Ella está en la mesa azul.",
+     "en": "Yes, please. She is at the blue table."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuánto cuesta una canción?",
+     "qEn": "How much is a song?",
+     "options": [
+      "Cincuenta pesos",
+      "Cien pesos",
+      "Doscientos pesos"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Para quién es la canción?",
+     "qEn": "Who is the song for?",
+     "options": [
+      "Para su papá",
+      "Para su amiga",
+      "Para su mamá"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué día es hoy para la mamá?",
+     "qEn": "What day is it today for the mum?",
+     "options": [
+      "Su cumpleaños",
+      "Su boda",
+      "Su viaje"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Dónde está la mamá?",
+     "qEn": "Where is the mum?",
+     "options": [
+      "En el hotel",
+      "En la mesa azul",
+      "En el coche"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Cuándo es tu cumpleaños?",
+     "qEn": "When is your birthday?",
+     "model": "Mi cumpleaños es en mayo."
+    },
+    {
+     "q": "¿Te gusta la música mexicana?",
+     "qEn": "Do you like Mexican music?",
+     "model": "Sí, me gusta mucho."
+    },
+    {
+     "q": "¿Cantas en los cumpleaños?",
+     "qEn": "Do you sing at birthdays?",
+     "model": "Sí, canto con mi familia."
+    }
+   ],
+   "gaps": "Para mi [mamá]. Hoy es su [cumpleaños]. ¡Qué [bonito]! Entonces, «Las [mañanitas]».",
+   "glossary": [
+    {
+     "word": "canción",
+     "meaning": "música con palabras",
+     "en": "song"
+    },
+    {
+     "word": "cumpleaños",
+     "meaning": "el día que naciste",
+     "en": "birthday"
+    },
+    {
+     "word": "mesa",
+     "meaning": "mueble para comer",
+     "en": "table"
+    }
+   ]
+  },
+  {
+   "id": "oaxaca",
+   "title": "El chocolate de Oaxaca",
+   "place": "Un mercado",
+   "context": "Pablo, de España, compra chocolate a Doña Dalia en un mercado de Oaxaca.",
+   "contextEn": "Pablo, from Spain, buys chocolate from Doña Dalia at a market in Oaxaca.",
+   "speakers": [
+    {
+     "name": "Doña Dalia",
+     "country": "México",
+     "voice": "es-MX-DaliaNeural"
+    },
+    {
+     "name": "Pablo",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Buenos días. Prueba este chocolate. Es de Oaxaca.",
+     "en": "Good morning. Try this chocolate. It is from Oaxaca."
+    },
+    {
+     "s": 1,
+     "text": "Mmm, es muy rico. Tiene canela, ¿no?",
+     "en": "Mmm, it is very tasty. It has cinnamon, right?"
+    },
+    {
+     "s": 0,
+     "text": "Sí, canela y almendras. Es para beber, con leche o con agua.",
+     "en": "Yes, cinnamon and almonds. It is for drinking, with milk or with water."
+    },
+    {
+     "s": 1,
+     "text": "Quiero dos paquetes, uno para mi hermana.",
+     "en": "I want two packets, one for my sister."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿De dónde es el chocolate?",
+     "qEn": "Where is the chocolate from?",
+     "options": [
+      "De Cancún",
+      "De Puebla",
+      "De Oaxaca"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué tiene el chocolate?",
+     "qEn": "What does the chocolate have?",
+     "options": [
+      "Canela",
+      "Chile",
+      "Limón"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cómo se toma?",
+     "qEn": "How do you have it?",
+     "options": [
+      "Con pan",
+      "Con leche o agua",
+      "Con sal"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cuántos paquetes compra Pablo?",
+     "qEn": "How many packets does Pablo buy?",
+     "options": [
+      "Uno",
+      "Tres",
+      "Dos"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Te gusta el chocolate caliente?",
+     "qEn": "Do you like hot chocolate?",
+     "model": "Sí, me gusta en invierno."
+    },
+    {
+     "q": "¿Compras regalos para tu familia?",
+     "qEn": "Do you buy gifts for your family?",
+     "model": "Sí, compro regalos para mi hermana."
+    },
+    {
+     "q": "¿Bebes leche?",
+     "qEn": "Do you drink milk?",
+     "model": "No, no bebo leche."
+    }
+   ],
+   "gaps": "Sí, [canela] y [almendras]. Es para [beber], con leche o con [agua].",
+   "glossary": [
+    {
+     "word": "canela",
+     "meaning": "especia dulce de color marrón",
+     "en": "cinnamon"
+    },
+    {
+     "word": "paquetes",
+     "meaning": "cajas o bolsas pequeñas",
+     "en": "packets"
+    },
+    {
+     "word": "almendras",
+     "meaning": "frutos secos de color claro",
+     "en": "almonds"
+    }
+   ]
+  },
+  {
+   "id": "quintana-roo",
+   "title": "En el cenote",
+   "place": "El cenote",
+   "context": "Ana, de Argentina, y Mateo, de Uruguay, llegan a un cenote cerca de Tulum.",
+   "contextEn": "Ana, from Argentina, and Mateo, from Uruguay, arrive at a cenote near Tulum.",
+   "speakers": [
+    {
+     "name": "Ana",
+     "country": "Argentina",
+     "voice": "es-AR-ElenaNeural"
+    },
+    {
+     "name": "Mateo",
+     "country": "Uruguay",
+     "voice": "es-UY-MateoNeural"
+    },
+    {
+     "name": "La guía",
+     "country": "Perú",
+     "voice": "es-PE-CamilaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 2,
+     "text": "Hola, bienvenidos. El agua está muy fría.",
+     "en": "Hi, welcome. The water is very cold."
+    },
+    {
+     "s": 0,
+     "text": "¿Es profundo?",
+     "en": "Is it deep?"
+    },
+    {
+     "s": 2,
+     "text": "Sí, muy profundo. Usen el chaleco, por favor.",
+     "en": "Yes, very deep. Use the life jacket, please."
+    },
+    {
+     "s": 1,
+     "text": "Yo salto primero. ¡Uno, dos, tres!",
+     "en": "I jump first. One, two, three!"
+    },
+    {
+     "s": 0,
+     "text": "¡Mateo! ¿Está fría?",
+     "en": "Mateo! Is it cold?"
+    },
+    {
+     "s": 1,
+     "text": "¡Sí! ¡Muy fría, pero es preciosa!",
+     "en": "Yes! Very cold, but it is beautiful!"
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cómo está el agua?",
+     "qEn": "How is the water?",
+     "options": [
+      "Caliente",
+      "Muy fría",
+      "Sucia"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué deben usar?",
+     "qEn": "What must they use?",
+     "options": [
+      "El chaleco",
+      "Zapatos",
+      "Un sombrero"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Quién salta primero?",
+     "qEn": "Who jumps first?",
+     "options": [
+      "Ana",
+      "La guía",
+      "Mateo"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿El cenote es profundo?",
+     "qEn": "Is the cenote deep?",
+     "options": [
+      "No, es pequeño",
+      "Un poco",
+      "Sí, muy profundo"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Sabes nadar?",
+     "qEn": "Can you swim?",
+     "model": "Sí, sé nadar un poco."
+    },
+    {
+     "q": "¿Te gusta el agua fría?",
+     "qEn": "Do you like cold water?",
+     "model": "No, prefiero el agua caliente."
+    },
+    {
+     "q": "¿Saltas al agua?",
+     "qEn": "Do you jump into the water?",
+     "model": "Sí, salto en la piscina."
+    }
+   ],
+   "gaps": "Sí, muy [profundo]. Usen el [chaleco], por [favor]. Yo [salto] primero.",
+   "glossary": [
+    {
+     "word": "profundo",
+     "meaning": "con mucha distancia hasta el fondo",
+     "en": "deep"
+    },
+    {
+     "word": "chaleco",
+     "meaning": "ropa para flotar en el agua",
+     "en": "life jacket"
+    },
+    {
+     "word": "salto",
+     "meaning": "subo y caigo con los pies",
+     "en": "I jump"
+    }
+   ]
+  }
+ ]
+}

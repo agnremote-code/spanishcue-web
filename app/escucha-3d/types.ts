@@ -13,4 +13,4 @@ export type Listening = {
   glossary: { word: string; meaning: string; en?: string }[];
 };
 export type ListeningFile = { game: string; level: string; items: Listening[] };
-export type GameId = 'noche' | 'casino' | 'bosque' | 'reino' | 'hospital' | 'usa' | 'feria';
+export type GameId = 'noche' | 'casino' | 'bosque' | 'reino' | 'hospital' | 'usa' | 'mexico' | 'feria';

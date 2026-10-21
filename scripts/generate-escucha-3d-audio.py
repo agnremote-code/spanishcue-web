@@ -11,7 +11,7 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 CONTENT = ROOT / 'app/escucha-3d/content'
 OUT = ROOT / 'public/audio/escucha-3d'
 # FREE lessons (games.mjs `freeAudio`) keep their clips in a public prefix.
-FREE_GAMES = {'usa'}
+FREE_GAMES = {'usa', 'mexico'}
 FREE_OUT = ROOT / 'public/audio/escucha-3d-libre'
 
 

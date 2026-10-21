@@ -1,0 +1,493 @@
+{
+ "game": "mexico",
+ "level": "A2",
+ "items": [
+  {
+   "id": "cdmx",
+   "title": "La trajinera perdida",
+   "place": "Los canales de Xochimilco",
+   "context": "Un grupo de amigos alquila una trajinera en Xochimilco y algo sale mal.",
+   "speakers": [
+    {
+     "name": "Rodrigo",
+     "country": "El Salvador",
+     "voice": "es-SV-RodrigoNeural"
+    },
+    {
+     "name": "Paloma",
+     "country": "Estados Unidos",
+     "voice": "es-US-PalomaNeural"
+    },
+    {
+     "name": "Don Chuy",
+     "country": "México",
+     "voice": "es-MX-JorgeNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Don Chuy, ¿cuánto tiempo falta para volver al embarcadero?"
+    },
+    {
+     "s": 2,
+     "text": "Unos cuarenta minutos, si no hay mucho tráfico de trajineras."
+    },
+    {
+     "s": 1,
+     "text": "¿Tráfico? ¿En el agua?"
+    },
+    {
+     "s": 2,
+     "text": "Uy, los domingos es peor que la avenida. Hace dos semanas nos quedamos parados una hora entera."
+    },
+    {
+     "s": 0,
+     "text": "Pues yo dejé mi mochila en el muelle. Pensé que alguien la iba a cuidar."
+    },
+    {
+     "s": 2,
+     "text": "No se preocupe. Mi sobrino trabaja allí. Ahorita le llamo por teléfono."
+    },
+    {
+     "s": 1,
+     "text": "Mientras tanto, ¿podemos comprar elotes a la señora de esa canoa?"
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuánto tiempo falta para volver?",
+     "options": [
+      "Diez minutos",
+      "Unos cuarenta minutos",
+      "Dos horas"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué pasó hace dos semanas?",
+     "options": [
+      "Se quedaron parados una hora",
+      "Llovió mucho",
+      "Una trajinera se hundió"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué problema tiene Rodrigo?",
+     "options": [
+      "Perdió su teléfono",
+      "Tiene hambre",
+      "Dejó su mochila en el muelle"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué quiere comprar Paloma?",
+     "options": [
+      "Flores",
+      "Elotes",
+      "Refrescos"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Perdiste alguna vez algo importante en un viaje?",
+     "model": "Sí, una vez dejé mi chaqueta en un tren y nunca la recuperé."
+    },
+    {
+     "q": "¿Hay mucho tráfico en tu ciudad?",
+     "model": "Sí, sobre todo por la mañana, cuando todos van a trabajar."
+    },
+    {
+     "q": "¿Qué comida compras en la calle?",
+     "model": "Normalmente compro fruta o un café para llevar."
+    }
+   ],
+   "gaps": "Uy, los [domingos] es peor que la [avenida]. Hace dos semanas nos quedamos [parados] una [hora] entera.",
+   "glossary": [
+    {
+     "word": "embarcadero",
+     "meaning": "lugar donde suben y bajan los barcos"
+    },
+    {
+     "word": "muelle",
+     "meaning": "lugar del puerto para subir a un barco"
+    },
+    {
+     "word": "elotes",
+     "meaning": "mazorcas de maíz que se comen"
+    },
+    {
+     "word": "ahorita",
+     "meaning": "en México, «ahora mismo» o «pronto»"
+    }
+   ]
+  },
+  {
+   "id": "jalisco",
+   "title": "Una visita a Tequila",
+   "place": "La destilería",
+   "context": "Ximena explica a dos visitantes cómo se hace el tequila.",
+   "speakers": [
+    {
+     "name": "Ximena",
+     "country": "México",
+     "voice": "es-MX-DaliaNeural"
+    },
+    {
+     "name": "Elvira",
+     "country": "España",
+     "voice": "es-ES-ElviraNeural"
+    },
+    {
+     "name": "Andrés",
+     "country": "Guatemala",
+     "voice": "es-GT-AndresNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Este es el corazón del agave. Lo llamamos «piña» porque se parece a esa fruta."
+    },
+    {
+     "s": 1,
+     "text": "¡Es enorme! ¿Cuánto pesa?"
+    },
+    {
+     "s": 0,
+     "text": "Entre cuarenta y ochenta kilos. Los jimadores los cortan a mano, con una herramienta que se llama coa."
+    },
+    {
+     "s": 2,
+     "text": "Mi abuelo en Guatemala cortaba caña de azúcar así. Volvía a casa con las manos destrozadas."
+    },
+    {
+     "s": 0,
+     "text": "Es un trabajo muy duro. Después cocinamos las piñas tres días en estos hornos de piedra y sacamos el jugo."
+    },
+    {
+     "s": 1,
+     "text": "¿Y cuándo probamos el tequila?"
+    },
+    {
+     "s": 0,
+     "text": "Al final. Primero hay que ganárselo."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Por qué llaman «piña» al corazón del agave?",
+     "options": [
+      "Porque se parece a esa fruta",
+      "Porque es dulce",
+      "Porque es amarillo"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cuánto pesa una piña?",
+     "options": [
+      "Entre cuarenta y ochenta kilos",
+      "Unos diez kilos",
+      "Más de doscientos kilos"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué hacía el abuelo de Andrés?",
+     "options": [
+      "Hacía tequila",
+      "Era cocinero",
+      "Cortaba caña de azúcar"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuántos días cocinan las piñas?",
+     "options": [
+      "Un día",
+      "Una semana",
+      "Tres días"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué trabajo duro hacían tus abuelos?",
+     "model": "Mi abuela trabajaba en una fábrica de ropa y se levantaba a las cinco."
+    },
+    {
+     "q": "¿Visitaste alguna vez una fábrica?",
+     "model": "Sí, visité una fábrica de chocolate cuando era niño."
+    },
+    {
+     "q": "¿Qué bebida típica conoces de otro país?",
+     "model": "Conozco el vino de Argentina y el café de Colombia."
+    }
+   ],
+   "gaps": "Entre cuarenta y ochenta [kilos]. Los jimadores los cortan a [mano], con una [herramienta] que se llama [coa].",
+   "glossary": [
+    {
+     "word": "jimadores",
+     "meaning": "personas que cortan el agave"
+    },
+    {
+     "word": "herramienta",
+     "meaning": "objeto que sirve para trabajar"
+    },
+    {
+     "word": "destrozadas",
+     "meaning": "muy dañadas"
+    },
+    {
+     "word": "hornos",
+     "meaning": "lugares cerrados y muy calientes para cocinar"
+    }
+   ]
+  },
+  {
+   "id": "oaxaca",
+   "title": "El mole de la abuela",
+   "place": "Una cocina familiar",
+   "context": "Doña Chelo enseña a su nieta y a una estudiante cubana a preparar mole negro.",
+   "speakers": [
+    {
+     "name": "Doña Chelo",
+     "country": "México",
+     "voice": "es-MX-DaliaNeural"
+    },
+    {
+     "name": "Belkys",
+     "country": "Cuba",
+     "voice": "es-CU-BelkysNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Primero tostamos los chiles, pero con cuidado: si se queman, el mole sabe amargo."
+    },
+    {
+     "s": 1,
+     "text": "¿Cuántos ingredientes lleva?"
+    },
+    {
+     "s": 0,
+     "text": "Más de treinta. Mi mamá decía que cada uno tiene su momento. Chiles, chocolate, plátano, pan, especias…"
+    },
+    {
+     "s": 1,
+     "text": "¿Y usted lo prepara todas las semanas?"
+    },
+    {
+     "s": 0,
+     "text": "No, mija. Antes sí, cuando tenía el comedor. Ahora solo en bodas, bautizos y en el Día de Muertos. Tarda dos días."
+    },
+    {
+     "s": 1,
+     "text": "En Cuba mi abuela hacía un plato que también tardaba mucho, pero era con frijoles negros."
+    },
+    {
+     "s": 0,
+     "text": "Ya ves. Las abuelas en todo el mundo cocinan con paciencia."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué pasa si los chiles se queman?",
+     "options": [
+      "El mole sabe amargo",
+      "El mole pica más",
+      "El mole se pone dulce"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cuántos ingredientes lleva el mole?",
+     "options": [
+      "Diez",
+      "Más de treinta",
+      "Cinco"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cuándo prepara mole Doña Chelo ahora?",
+     "options": [
+      "Todos los domingos",
+      "Todas las semanas",
+      "En fiestas especiales"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Con qué cocinaba la abuela de Belkys?",
+     "options": [
+      "Con chocolate",
+      "Con frijoles negros",
+      "Con arroz y pollo"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué plato tarda mucho en tu familia?",
+     "model": "En mi familia, el asado tarda casi toda la tarde."
+    },
+    {
+     "q": "¿Qué cocinaban tus abuelos en las fiestas?",
+     "model": "Mis abuelos cocinaban pasta con salsa de carne."
+    },
+    {
+     "q": "¿Tienes paciencia en la cocina?",
+     "model": "No mucha. Prefiero recetas rápidas."
+    }
+   ],
+   "gaps": "No, mija. Antes sí, cuando tenía el [comedor]. Ahora solo en [bodas], [bautizos] y en el Día de [Muertos].",
+   "glossary": [
+    {
+     "word": "tostamos",
+     "meaning": "ponemos al fuego hasta que cambia de color"
+    },
+    {
+     "word": "amargo",
+     "meaning": "sabor fuerte, contrario de dulce"
+    },
+    {
+     "word": "mija",
+     "meaning": "forma cariñosa de decir «mi hija»"
+    },
+    {
+     "word": "especias",
+     "meaning": "plantas secas que dan sabor"
+    }
+   ]
+  },
+  {
+   "id": "quintana-roo",
+   "title": "La tortuga de la noche",
+   "place": "La playa",
+   "context": "Kevin, el socorrista, habla con dos turistas que encontraron un nido de tortuga.",
+   "speakers": [
+    {
+     "name": "Kevin",
+     "country": "México",
+     "voice": "es-MX-JorgeNeural"
+    },
+    {
+     "name": "Marcelo",
+     "country": "Bolivia",
+     "voice": "es-BO-MarceloNeural"
+    },
+    {
+     "name": "Catalina",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Kevin, anoche vimos una tortuga enorme. Salió del mar, hizo un hoyo en la arena y se fue."
+    },
+    {
+     "s": 0,
+     "text": "¿De verdad? ¿Dónde fue exactamente?"
+    },
+    {
+     "s": 2,
+     "text": "Cerca de aquellas palmeras. Le sacamos fotos, pero sin flash, como dice el cartel."
+    },
+    {
+     "s": 0,
+     "text": "Muy bien hecho. Seguro dejó más de cien huevos. Hay que marcar el lugar para que nadie lo pise."
+    },
+    {
+     "s": 1,
+     "text": "¿Y cuándo nacen las tortuguitas?"
+    },
+    {
+     "s": 0,
+     "text": "En unos cincuenta días. Salen de noche y caminan hacia la luz de la luna en el mar. Por eso los hoteles deben apagar las luces de la playa."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué vieron anoche Marcelo y Catalina?",
+     "options": [
+      "Una tortuga enorme",
+      "Un tiburón",
+      "Unos delfines"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cómo sacaron las fotos?",
+     "options": [
+      "Con flash",
+      "Sin flash",
+      "Con una cámara de video"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cuántos huevos dejó la tortuga, más o menos?",
+     "options": [
+      "Unos diez",
+      "Más de cien",
+      "Unos mil"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Por qué deben apagar las luces los hoteles?",
+     "options": [
+      "Para ahorrar dinero",
+      "Porque molestan a los turistas",
+      "Porque las tortuguitas caminan hacia la luz"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Viste alguna vez un animal especial en la naturaleza?",
+     "model": "Sí, vi una ballena desde un barco en Chile."
+    },
+    {
+     "q": "¿Respetas los carteles en los parques?",
+     "model": "Sí, normalmente leo los carteles y sigo las reglas."
+    },
+    {
+     "q": "¿Te gusta la playa de noche?",
+     "model": "Sí, me encanta caminar por la arena con la luna."
+    }
+   ],
+   "gaps": "Muy bien hecho. Seguro dejó más de cien [huevos]. Hay que [marcar] el [lugar] para que nadie lo [pise].",
+   "glossary": [
+    {
+     "word": "hoyo",
+     "meaning": "agujero en la tierra o la arena"
+    },
+    {
+     "word": "cartel",
+     "meaning": "papel o tabla con información"
+    },
+    {
+     "word": "pise",
+     "meaning": "ponga el pie encima"
+    },
+    {
+     "word": "tortuguitas",
+     "meaning": "tortugas muy pequeñas"
+    }
+   ]
+  }
+ ]
+}

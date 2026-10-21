@@ -87,7 +87,9 @@ export function checkFile(game, level, data, path) {
   if (countries.size < 6) bad('', `only ${countries.size} countries; use at least 6`);
   if (genders.size < 2) bad('', 'use female and male voices');
   if (dialogues < 4) bad('', `only ${dialogues} dialogues; at least 4 items need 2+ speakers`);
-  if (answerUse.some(n => n < 6)) bad('', `correct answers are badly spread over A/B/C: ${answerUse.join('/')}`);
+  // At least 6 per letter; a small file (four regions × 4 questions) needs a third each.
+  const minUse = Math.min(6, Math.floor(answerUse.reduce((a, b) => a + b, 0) / 3));
+  if (answerUse.some(n => n < minUse)) bad('', `correct answers are badly spread over A/B/C: ${answerUse.join('/')}`);
   return out;
 }
 

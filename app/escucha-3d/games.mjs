@@ -44,6 +44,16 @@ export const GAMES = {
     // public prefix (app/access-policy.ts freeAudioPrefixes), not encrypted.
     freeAudio: true,
   },
+  // México 3D: every state has its own listening at each level; any circle of
+  // that state opens it (app/mexico/mundo). FREE lesson (ID 210): public audio.
+  mexico: {
+    title: 'México',
+    levels: ['A0', 'A1', 'A2', 'B1'],
+    spots: ['cdmx', 'jalisco', 'oaxaca', 'quintana-roo'],
+    ownListening: true,
+    bilingualA0: true,
+    freeAudio: true,
+  },
   // La feria de Villaluz (A2): every circle has its own listening, and each
   // character keeps one voice (app/la-feria-de-villaluz/levels/a2.mjs CAST).
   feria: {

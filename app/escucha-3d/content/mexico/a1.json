@@ -1,0 +1,468 @@
+{
+ "game": "mexico",
+ "level": "A1",
+ "items": [
+  {
+   "id": "cdmx",
+   "title": "El metro a Coyoacán",
+   "place": "El metro",
+   "context": "Camila, de Perú, pregunta a un vendedor cómo llegar a la casa de Frida Kahlo.",
+   "speakers": [
+    {
+     "name": "Camila",
+     "country": "Perú",
+     "voice": "es-PE-CamilaNeural"
+    },
+    {
+     "name": "Jorge",
+     "country": "México",
+     "voice": "es-MX-JorgeNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Disculpe, ¿cómo llego a la casa de Frida Kahlo?"
+    },
+    {
+     "s": 1,
+     "text": "Toma la línea azul hasta la estación Coyoacán. Son ocho estaciones."
+    },
+    {
+     "s": 0,
+     "text": "¿Y desde la estación está lejos?"
+    },
+    {
+     "s": 1,
+     "text": "Unos veinte minutos a pie, o puedes tomar un taxi. Pero compra la entrada por internet, porque los domingos hay mucha fila."
+    },
+    {
+     "s": 0,
+     "text": "Hoy es domingo… ¡Gracias por el consejo!"
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Adónde quiere ir Camila?",
+     "options": [
+      "A un mercado",
+      "A la casa de Frida Kahlo",
+      "Al aeropuerto"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué línea debe tomar?",
+     "options": [
+      "La azul",
+      "La verde",
+      "La rosa"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cuántas estaciones son?",
+     "options": [
+      "Cuatro",
+      "Doce",
+      "Ocho"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Por qué debe comprar la entrada por internet?",
+     "options": [
+      "Porque es más barata",
+      "Porque los domingos hay mucha fila",
+      "Porque la casa cierra temprano"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Usas el metro en tu ciudad?",
+     "model": "Sí, uso el metro todos los días para ir al trabajo."
+    },
+    {
+     "q": "¿Compras entradas por internet?",
+     "model": "Sí, normalmente compro las entradas por internet."
+    },
+    {
+     "q": "¿Qué museo te gustaría visitar?",
+     "model": "Me gustaría visitar el museo de Frida Kahlo."
+    }
+   ],
+   "gaps": "Unos veinte [minutos] a pie, o puedes tomar un [taxi]. Pero compra la [entrada] por [internet]",
+   "glossary": [
+    {
+     "word": "línea",
+     "meaning": "cada ruta del metro, con su color"
+    },
+    {
+     "word": "a pie",
+     "meaning": "caminando"
+    },
+    {
+     "word": "fila",
+     "meaning": "personas que esperan una detrás de otra"
+    },
+    {
+     "word": "consejo",
+     "meaning": "una idea que te da otra persona para ayudarte"
+    }
+   ]
+  },
+  {
+   "id": "jalisco",
+   "title": "La torta ahogada",
+   "place": "Un puesto de tortas",
+   "context": "Kevin, de Estados Unidos, prueba una torta ahogada en Guadalajara con su amiga Karla, de Honduras.",
+   "speakers": [
+    {
+     "name": "Kevin",
+     "country": "Estados Unidos",
+     "voice": "es-US-AlonsoNeural"
+    },
+    {
+     "name": "Karla",
+     "country": "Honduras",
+     "voice": "es-HN-KarlaNeural"
+    },
+    {
+     "name": "Beto",
+     "country": "México",
+     "voice": "es-MX-JorgeNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 2,
+     "text": "Dos tortas ahogadas. ¿Las quieren con salsa picante?"
+    },
+    {
+     "s": 0,
+     "text": "Yo, sin picante, por favor. Es mi primera vez."
+    },
+    {
+     "s": 1,
+     "text": "Yo sí, con mucho picante. Me encanta."
+    },
+    {
+     "s": 2,
+     "text": "Muy bien. Cuidado, que están muy calientes. Y aquí tienen limón y cebolla."
+    },
+    {
+     "s": 0,
+     "text": "¡Uf! Es deliciosa, pero me mancho toda la camisa."
+    },
+    {
+     "s": 1,
+     "text": "Por eso aquí todos piden una bolsa de plástico para comer."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Es la primera vez que Kevin come una torta ahogada?",
+     "options": [
+      "Sí",
+      "No, la come cada semana",
+      "No, la cocina en casa"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cómo quiere Karla su torta?",
+     "options": [
+      "Sin salsa",
+      "Con poco picante",
+      "Con mucho picante"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué les da Beto además de las tortas?",
+     "options": [
+      "Pan y queso",
+      "Limón y cebolla",
+      "Agua y café"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué problema tiene Kevin?",
+     "options": [
+      "Se mancha la camisa",
+      "No tiene dinero",
+      "La torta está fría"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Te gusta la comida picante?",
+     "model": "Me gusta un poco, pero no mucho."
+    },
+    {
+     "q": "¿Cuál fue tu primera comida en otro país?",
+     "model": "Mi primera comida fue una pizza en Italia."
+    },
+    {
+     "q": "¿Te manchas la ropa cuando comes?",
+     "model": "Sí, a veces me mancho con salsa o con café."
+    }
+   ],
+   "gaps": "Muy bien. [Cuidado], que están muy [calientes]. Y aquí tienen [limón] y [cebolla].",
+   "glossary": [
+    {
+     "word": "picante",
+     "meaning": "con chile, que quema un poco en la boca"
+    },
+    {
+     "word": "mancho",
+     "meaning": "pongo sucia la ropa sin querer"
+    },
+    {
+     "word": "cebolla",
+     "meaning": "verdura blanca o morada que hace llorar"
+    },
+    {
+     "word": "calientes",
+     "meaning": "con temperatura alta"
+    }
+   ]
+  },
+  {
+   "id": "oaxaca",
+   "title": "El taller de alebrijes",
+   "place": "Un taller de artesanía",
+   "context": "Gonzalo, de Colombia, visita un taller de alebrijes con su guía, Lorena, de El Salvador.",
+   "speakers": [
+    {
+     "name": "Lorena",
+     "country": "El Salvador",
+     "voice": "es-SV-LorenaNeural"
+    },
+    {
+     "name": "Gonzalo",
+     "country": "Colombia",
+     "voice": "es-CO-GonzaloNeural"
+    },
+    {
+     "name": "Jacobo",
+     "country": "México",
+     "voice": "es-MX-JorgeNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Este es el taller de Jacobo. Aquí hacen alebrijes desde hace cuarenta años."
+    },
+    {
+     "s": 2,
+     "text": "Bienvenidos. Primero cortamos la madera, después la secamos y al final la pintamos."
+    },
+    {
+     "s": 1,
+     "text": "¿Cuánto tiempo necesita para hacer uno grande?"
+    },
+    {
+     "s": 2,
+     "text": "Un mes, más o menos. La pintura es lo más lento."
+    },
+    {
+     "s": 1,
+     "text": "Es muy bonito. ¿Puedo comprar uno pequeño para mi hijo?"
+    },
+    {
+     "s": 2,
+     "text": "Claro. Este gato con alas cuesta trescientos pesos."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Desde cuándo hacen alebrijes en el taller?",
+     "options": [
+      "Desde hace cuarenta años",
+      "Desde hace un mes",
+      "Desde el año pasado"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué hacen al final?",
+     "options": [
+      "Cortan la madera",
+      "Secan la madera",
+      "Pintan"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuánto tiempo necesita un alebrije grande?",
+     "options": [
+      "Una semana",
+      "Un mes, más o menos",
+      "Un año"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué compra Gonzalo?",
+     "options": [
+      "Un perro grande",
+      "Un gato con alas",
+      "Un dragón"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Te gusta el arte hecho a mano?",
+     "model": "Sí, me gusta porque cada pieza es diferente."
+    },
+    {
+     "q": "¿Qué regalo compras para un niño?",
+     "model": "Normalmente compro un libro o un juguete."
+    },
+    {
+     "q": "¿Qué haces primero en la mañana?",
+     "model": "Primero me ducho, después desayuno."
+    }
+   ],
+   "gaps": "[Primero] cortamos la [madera], después la [secamos] y al final la [pintamos].",
+   "glossary": [
+    {
+     "word": "taller",
+     "meaning": "lugar donde se hacen cosas a mano"
+    },
+    {
+     "word": "madera",
+     "meaning": "material que viene de los árboles"
+    },
+    {
+     "word": "alas",
+     "meaning": "partes del cuerpo para volar"
+    },
+    {
+     "word": "pintura",
+     "meaning": "color que se pone con pincel"
+    }
+   ]
+  },
+  {
+   "id": "quintana-roo",
+   "title": "El hotel equivocado",
+   "place": "La recepción del hotel",
+   "context": "Tania, de Paraguay, llega a un hotel en Playa del Carmen, pero hay un problema con su reserva.",
+   "speakers": [
+    {
+     "name": "Andrea",
+     "country": "México",
+     "voice": "es-MX-DaliaNeural"
+    },
+    {
+     "name": "Tania",
+     "country": "Paraguay",
+     "voice": "es-PY-TaniaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Buenas noches. ¿Tiene una reserva?"
+    },
+    {
+     "s": 1,
+     "text": "Sí, a nombre de Tania Benítez. Tres noches, habitación doble."
+    },
+    {
+     "s": 0,
+     "text": "Mmm… no la encuentro. ¿Me puede mostrar el correo?"
+    },
+    {
+     "s": 1,
+     "text": "Aquí está."
+    },
+    {
+     "s": 0,
+     "text": "Ah, ya entiendo. Su reserva es en el Hotel Caribe Sur, no aquí. Está a cinco minutos. Le llamo un taxi."
+    },
+    {
+     "s": 1,
+     "text": "¡Qué vergüenza! Muchas gracias."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuántas noches reservó Tania?",
+     "options": [
+      "Una",
+      "Tres",
+      "Cinco"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué le pide Andrea?",
+     "options": [
+      "El pasaporte",
+      "Dinero",
+      "El correo de la reserva"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuál es el problema?",
+     "options": [
+      "La reserva es en otro hotel",
+      "No hay habitaciones",
+      "La reserva es para mañana"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cómo va Tania al otro hotel?",
+     "options": [
+      "A pie",
+      "En autobús",
+      "En taxi"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Tuviste un problema en un hotel?",
+     "model": "Sí, una vez mi habitación no estaba lista."
+    },
+    {
+     "q": "¿Prefieres una habitación doble o individual?",
+     "model": "Prefiero una habitación individual."
+    },
+    {
+     "q": "¿Qué haces cuando sientes vergüenza?",
+     "model": "Me pongo rojo y me río."
+    }
+   ],
+   "gaps": "Ah, ya [entiendo]. Su [reserva] es en el Hotel Caribe Sur, no aquí. Está a cinco [minutos]. Le llamo un [taxi].",
+   "glossary": [
+    {
+     "word": "reserva",
+     "meaning": "habitación pedida antes de llegar"
+    },
+    {
+     "word": "doble",
+     "meaning": "para dos personas"
+    },
+    {
+     "word": "vergüenza",
+     "meaning": "sentimiento cuando haces algo mal delante de otros"
+    }
+   ]
+  }
+ ]
+}
