@@ -22,8 +22,15 @@
 // - timeline: one first-person past sentence per stimulus option (the pick
 //   stored in sessionStorage, AM-7/D2) for the closing narrative at «baile».
 // - teacher: the teacher note shown in the teacher list.
-// - Circles 1/6/7 (Busca y describe) are NOT authored yet: they wait for
-//   Sofia's rendered Look-attribute contract (AM-4, §7 risk 2).
+// - Circles 1/6/7 (Busca y describe) add a beat of kind "busca" that names
+//   sets in BUSCA. Every set is built only from the Look contract
+//   (look-contract.mjs, AM-4) and passes validateBuscaSet (AC2/AC4). Every
+//   feature of the target that the announcement says is listed in
+//   `described`, so the checker verifies it against the figure. Sets that
+//   use a location (rel:…) give every figure a slot, ordered left to right,
+//   so the 2D grid shows them in the same order as the 3D view; the
+//   reference person's id is the Spanish noun phrase the AC3 feedback reads
+//   out («está a la izquierda del señor de la maleta»).
 //
 // Language: neutral international Spanish. tú by default; older stall
 // keepers speak usted to customers, and the class answers in their register.
@@ -45,21 +52,110 @@ export const CAST = {
   marta: { name: 'Marta', full: 'Marta Quiñónez', role: 'Vende las entradas de la noria', gender: 'f', voice: 'es-GT-MartaNeural', country: 'Guatemala' },
   nayeli: { name: 'Nayeli', full: 'Nayeli Cruz', role: 'Artesana de tazas de barro', gender: 'f', voice: 'es-MX-DaliaNeural', country: 'México' },
   wilfredo: { name: 'Wilfredo', full: 'Don Wilfredo Choque', role: 'Vende bufandas de lana', gender: 'm', voice: 'es-BO-MarceloNeural', country: 'Bolivia' },
-  facundo: { name: 'Facundo', full: 'Facundo Silva', role: 'Guitarrista de la banda', gender: 'm', voice: 'es-UY-MateoNeural', country: 'Uruguay', listening: true },
-  daniela: { name: 'Daniela', full: 'Daniela Fuentes', role: 'Técnica de sonido', gender: 'f', voice: 'es-CL-CatalinaNeural', country: 'Chile', listening: true },
+  facundo: { name: 'Facundo', full: 'Facundo Silva', role: 'Guitarrista de la banda', gender: 'm', voice: 'es-UY-MateoNeural', country: 'Uruguay' },
+  daniela: { name: 'Daniela', full: 'Daniela Fuentes', role: 'Técnica de sonido', gender: 'f', voice: 'es-CL-CatalinaNeural', country: 'Chile' },
+  valentina: { name: 'Valentina', full: 'Valentina Sosa', role: 'Cantante de la banda', gender: 'f', voice: 'es-UY-ValentinaNeural', country: 'Uruguay' },
   lorenzo: { name: 'Lorenzo', full: 'Lorenzo Araya', role: 'Fotógrafo de la feria', gender: 'm', voice: 'es-CL-LorenzoNeural', country: 'Chile' },
-  paloma: { name: 'Paloma', full: 'Paloma Ríos', role: 'Viene con toda su familia', gender: 'f', voice: 'es-US-PalomaNeural', country: 'Estados Unidos', listening: true },
+  paloma: { name: 'Paloma', full: 'Paloma Ríos', role: 'Viene con toda su familia', gender: 'f', voice: 'es-US-PalomaNeural', country: 'Estados Unidos' },
   celia: { name: 'Celia', full: 'Doña Celia Paredes', role: 'Abuela que baila en la plaza', gender: 'f', voice: 'es-PR-KarinaNeural', country: 'Puerto Rico' },
   julian: { name: 'Julián', full: 'Julián Paredes', role: 'Nieto de Celia', gender: 'm', voice: 'es-PE-AlexNeural', country: 'Perú' },
 };
 
-// Reserved for circle 6 (the singer), authored with the Look contract.
-export const RESERVED_VOICES = { valentina: 'es-UY-ValentinaNeural' };
-
-const BLOCKED = 'BLOCKED: waits for the rendered Look-attribute contract (Sofia, LESSON-DECISION-001 AM-4, §7 risk 2).';
-
 export const CIRCLES = {
-  informacion: { status: BLOCKED, objective: 'a2.gram.relativo-que', related: ['a1.voc.descripcion-personas', 'a1.voc.ropa-colores'] },
+  informacion: {
+    title: 'Un niño perdido',
+    place: 'El puesto de información de Rosario',
+    objective: 'a2.gram.relativo-que',
+    related: ['a1.voc.descripcion-personas', 'a1.voc.ropa-colores'],
+    exponents: [
+      { id: 'que-lleva', form: 'un niño que lleva… / un señor que tiene…', use: 'identificar a una persona por lo que lleva o tiene' },
+      { id: 'donde', form: 'el lugar donde…', use: 'describir un lugar con «donde»' },
+      { id: 'el-que', form: 'el que / la que + verbo', use: 'señalar a una persona sin repetir el nombre (el artículo concuerda con la persona)' },
+    ],
+    line: 'El puesto de información está cerca de la entrada de la feria. Rosario tiene un micrófono, una lista de avisos y una botella de té frío. De repente llega una señora corriendo: no encuentra a su hijo.',
+    dialogue: [
+      ['*Una señora muy nerviosa', '¡Por favor, ayúdeme! No encuentro a mi hijo. Estaba aquí hace un minuto.'],
+      ['rosario', 'Tranquila, señora. Aquí siempre encontramos a todos los niños. ¿Cómo se llama?'],
+      ['*Una señora muy nerviosa', 'Emilio. Tiene seis años. Es rubio, lleva una camiseta verde... y pantalones cortos.'],
+      ['rosario', '¿Y dónde lo vio por última vez?'],
+      ['*Una señora muy nerviosa', 'Cerca de la noria. Él quería subir y yo le dije que no.'],
+      ['rosario', 'Entonces vamos a hacer un aviso por los altavoces. Y tú me ayudas, que tienes buena vista.'],
+    ],
+    beats: [
+      {
+        id: 'aviso', kind: 'contrast', label: 'Contraste lingüístico', exponent: ['que-lleva'], who: 'rosario',
+        context: 'Rosario enciende el micrófono, pero antes te da un papel: «Escríbeme la frase principal del aviso. Corta y clara, ¿sí?»',
+        prompt: 'Elige la frase para describir a Emilio en el aviso.',
+        options: [
+          { id: 'quien', label: 'Buscamos a un niño quien lleva una camiseta verde y pantalones cortos.', correct: false, feature: 'pronombre relativo',
+            feedback: 'Pronombre relativo: para identificar a una persona, justo después del nombre y sin comas, se usa «que»: «un niño que lleva…». «Quien» aparece sobre todo después de una preposición: «el niño con quien vino».' },
+          { id: 'que', label: 'Buscamos a un niño que lleva una camiseta verde y pantalones cortos.', correct: true,
+            feedback: 'Bien: «que» une a la persona con lo que la identifica: «un niño que lleva…». Así todo el mundo sabe a qué niño buscamos.' },
+          { id: 'sin-que', label: 'Buscamos a un niño lleva una camiseta verde y pantalones cortos.', correct: false, feature: 'falta el relativo',
+            feedback: 'Falta el relativo: sin «que» hay dos frases pegadas («buscamos a un niño» y «lleva una camiseta»). Se unen con «que»: «un niño que lleva…».' },
+        ],
+        after: '«Perfecto. Corta y clara.»',
+      },
+      {
+        id: 'donde', kind: 'contrast', label: 'Contraste lingüístico', exponent: ['donde'], who: 'rosario',
+        context: 'Falta la última frase del aviso: adónde tienen que llevar a Emilio. Rosario espera con el bolígrafo en la mano.',
+        prompt: 'Completa el final del aviso: hay que llevar al niño al puesto, y allí lo espera su mamá.',
+        options: [
+          { id: 'tilde', label: 'Si lo ven, tráiganlo al puesto de información, dónde lo espera su mamá.', correct: false, feature: 'tilde de «donde»',
+            feedback: 'Tilde de «donde»: «dónde», con tilde, es para preguntar («¿dónde está?»). Para describir un lugar se escribe sin tilde: «el puesto donde lo espera su mamá».' },
+          { id: 'quien', label: 'Si lo ven, tráiganlo al puesto de información, quien lo espera su mamá.', correct: false, feature: 'relativo de lugar',
+            feedback: 'Relativo de lugar: el puesto es un lugar, no una persona. Para hablar de lo que pasa en un lugar se usa «donde»: «el puesto de información, donde lo espera su mamá».' },
+          { id: 'donde', label: 'Si lo ven, tráiganlo al puesto de información, donde lo espera su mamá.', correct: true,
+            feedback: 'Bien: «donde» describe el lugar: «el puesto de información, donde lo espera su mamá».' },
+        ],
+        after: 'Rosario lee el aviso por los altavoces. Justo después llega una niña, Martina, llorando: no encuentra a su abuelo. Esta noche hay dos avisos.',
+      },
+      {
+        id: 'buscar', kind: 'busca', label: 'Estímulo de conversación', who: 'rosario', sets: ['informacion-emilio', 'informacion-abuelo'],
+        context: 'Desde el puesto de información se ve toda la plaza. Escuchen cada aviso y encuentren a la persona entre la gente.',
+        prompt: 'Den indicaciones desde la mascota («a la izquierda», «más adelante») y elijan un número. Después, «al revés»: una persona describe a alguien en secreto con «es una persona que…».',
+        teacher: 'Primera escucha sin texto. Que la clase diga primero lo que oyó («es un niño que lleva…») y solo después elija un número. Si fallan, la aplicación dice qué rasgo no coincide: léanlo en voz alta. En «al revés», exige al menos dos rasgos con «que».',
+      },
+      {
+        id: 'el-que', kind: 'contrast', label: 'Contraste lingüístico', exponent: ['el-que'], who: 'rosario',
+        context: 'La mamá de Emilio corre a la plaza, pero hay dos niños con camiseta verde. Te pregunta desde lejos: «¿Cuál es? ¿Cuál es mi hijo?»',
+        prompt: 'Explícale cuál es Emilio sin repetir «el niño».',
+        options: [
+          { id: 'la-que', label: 'Es la que lleva pantalones cortos, señora.', correct: false, feature: 'concordancia del artículo',
+            feedback: 'Concordancia del artículo: hablas de Emilio, un niño, así que «el que». «La que» es para una mujer o una niña.' },
+          { id: 'llevan', label: 'Es el que llevan pantalones cortos, señora.', correct: false, feature: 'concordancia del verbo',
+            feedback: 'Concordancia del verbo: el que lleva la ropa es una persona, Emilio, así que «lleva», no «llevan».' },
+          { id: 'el-que', label: 'Es el que lleva pantalones cortos, señora.', correct: true,
+            feedback: 'Bien: «el que» evita repetir «el niño», y el artículo concuerda con Emilio.' },
+        ],
+        after: 'La señora abraza a Emilio. Emilio solo pregunta una cosa: «¿Ahora sí puedo subir a la noria?»',
+      },
+      {
+        id: 'rosario', kind: 'stimulus', label: 'Estímulo de conversación', who: 'rosario',
+        ask: 'Rosario apaga el micrófono y te mira: «Oye, tienes muy buena vista. ¿Quieres ayudarme en el puesto el año que viene? Necesito a alguien que hable claro y que vea bien.»',
+        options: [
+          { say: 'Sí, me encantaría. Me gusta ayudar a la gente que se pierde.', reply: '¡Tienes trabajo! Bueno, sin sueldo, pero con té frío gratis.', end: 'Rosario escribe tu nombre en su libreta, debajo de «ayudantes con buena vista».', mood: 'laugh' },
+          { say: 'No, gracias. Prefiero una feria donde no tengo que trabajar.', reply: 'Te entiendo. La feria es para divertirse.', end: 'Rosario te regala un mapa de la feria con sus puestos favoritos marcados con una estrella.', mood: 'smile' },
+          { say: 'Depende. ¿Hay churros para los ayudantes que encuentran niños?', reply: '¡Ja! Para los que encuentran niños, churros. Para los que encuentran abuelos, chocolate.', end: 'Martina y Emilio se ríen. El abuelo de Martina, no: él también quiere chocolate.', mood: 'surprised' },
+        ],
+        teacher: 'No hay respuesta correcta. Pide que cada persona dé su razón con una frase con «que» o «donde»: «la gente que…», «una feria donde…».',
+      },
+    ],
+    timeline: [
+      'En el puesto de información ayudé a encontrar a un niño perdido y Rosario me ofreció un trabajo.',
+      'En el puesto de información ayudé a encontrar a un niño perdido y Rosario me regaló un mapa de la feria.',
+      'En el puesto de información encontré a un niño y a un abuelo, y Rosario me prometió churros.',
+    ],
+    talk: [
+      '¿Te perdiste alguna vez cuando eras pequeño o pequeña? ¿Dónde?',
+      'Describe a una persona de la clase con «que»: «Es una persona que lleva…». ¿Quién es?',
+      '¿Qué haces cuando ves a un niño solo en un lugar con mucha gente?',
+      '¿Cómo es el lugar donde te gusta pasar los fines de semana?',
+      '¿Dónde escuchas avisos por altavoz en tu ciudad? ¿Qué dicen?',
+    ],
+    words: ['el puesto de información', 'el aviso', 'perderse', 'el altavoz', 'una persona que lleva…', 'el lugar donde…'],
+    teacher: 'Para la segunda mitad de A2 (oraciones de relativo, semana 18). Antes de proyectar, repasa la ropa y los colores con dos personas de la clase: «¿Qué lleva Ana?». En «Busca y describe», la mascota es el punto de vista: su izquierda es la izquierda de la pantalla. Después del círculo, en la pizarra: un niño que lleva…, el que / la que…, el lugar donde…. Haz la ronda «al revés» por lo menos una vez.',
+  },
 
   churreria: {
     title: 'Churros para todo el grupo',
@@ -410,8 +506,193 @@ export const CIRCLES = {
     teacher: 'Lleva dos objetos reales a clase (o dos fotos) y pide comparaciones antes de empezar. Después del círculo, en la pizarra: más/menos + adjetivo + que, tan + adjetivo + como, bueno → mejor, malo → peor. Recuerda que el adjetivo concuerda: «la bufanda es más cara». Extensión (3 min): en parejas, eligen un regalo para alguien de la clase entre dos opciones y lo justifican.',
   },
 
-  escenario: { status: BLOCKED, objective: 'a2.gram.estar-gerundio', related: ['a2.gram.relativo-que'] },
-  fotos: { status: BLOCKED, objective: 'a2.gram.imperativo-pronombres', related: ['a1.gram.preposiciones-lugar'] },
+  escenario: {
+    title: 'La cantante no aparece',
+    place: 'El escenario de la plaza',
+    objective: 'a2.gram.estar-gerundio',
+    related: ['a2.gram.relativo-que'],
+    exponents: [
+      { id: 'esta-gerundio', form: 'está + gerundio (-ando / -iendo)', use: 'decir lo que hace una persona en este momento' },
+      { id: 'gerundio-irregular', form: 'durmiendo, leyendo, diciendo, trayendo', use: 'formar los gerundios irregulares más frecuentes' },
+      { id: 'la-que-esta', form: 'la que / el que está + gerundio', use: 'identificar a una persona por lo que está haciendo (repaso de «que»)' },
+    ],
+    line: 'Faltan diez minutos para el concierto. En el escenario ya están los micrófonos, la batería y las luces, pero no está Valentina, la cantante. Daniela, la técnica de sonido, la llama por teléfono una y otra vez. Nada.',
+    dialogue: [
+      ['daniela', 'Facundo, ¿dónde está Valentina? No contesta el teléfono.'],
+      ['facundo', 'Me escribió hace un rato. Está comiendo churros.'],
+      ['daniela', '¿Comiendo churros? Acabo de pasar por la churrería y no está.'],
+      ['facundo', 'Entonces está en la plaza. Siempre hace lo mismo: antes de un concierto, toca con la gente del público.'],
+      ['daniela', 'Hoy no hay tiempo para eso. Oye, tú, sube un momento: desde el escenario se ve toda la plaza.'],
+    ],
+    beats: [
+      {
+        id: 'que-hace', kind: 'contrast', label: 'Contraste lingüístico', exponent: ['esta-gerundio'], who: 'daniela',
+        context: 'Daniela mira la plaza con unos binoculares y te los pasa: «Yo no la veo. ¿Qué está haciendo la gente de la primera fila?»',
+        prompt: 'Cuéntale a Daniela qué hace la gente en este momento.',
+        options: [
+          { id: 'son', label: 'Muchas personas son bailando y unos niños son cantando.', correct: false, feature: 'ser o estar',
+            feedback: 'Ser o estar: una acción que pasa ahora se dice con «estar» + gerundio: «están bailando». «Ser» no va con gerundio.' },
+          { id: 'estan', label: 'Muchas personas están bailando y unos niños están cantando.', correct: true,
+            feedback: 'Bien: «estar + gerundio» dice lo que pasa ahora mismo: están bailando, están cantando.' },
+          { id: 'infinitivo', label: 'Muchas personas están bailar y unos niños están cantar.', correct: false, feature: 'forma del gerundio',
+            feedback: 'Forma del gerundio: después de «estar» va el gerundio, no el infinitivo: bailar → bailando, cantar → cantando.' },
+        ],
+        after: '«Bailando, cantando... y Valentina sin aparecer.»',
+      },
+      {
+        id: 'baterista', kind: 'contrast', label: 'Contraste lingüístico', exponent: ['gerundio-irregular'], who: 'daniela',
+        context: 'Tampoco está el baterista. Facundo abre la puerta de la camioneta de la banda y lo ve con los pies en el asiento, sin moverse.',
+        prompt: 'Daniela te pregunta: «¿Y el baterista? ¿Qué está haciendo?». Contéstale.',
+        options: [
+          { id: 'durmiendo', label: 'Tranquila, está en la camioneta. Está durmiendo.', correct: true,
+            feedback: 'Bien: dormir → durmiendo. Igual que pedir → pidiendo y decir → diciendo.' },
+          { id: 'dormiendo', label: 'Tranquila, está en la camioneta. Está dormiendo.', correct: false, feature: 'gerundio irregular',
+            feedback: 'Gerundio irregular: «dormir» cambia la o por u en el gerundio: «durmiendo», no «dormiendo».' },
+          { id: 'duerme', label: 'Tranquila, está en la camioneta. Está duerme.', correct: false, feature: 'estar + gerundio',
+            feedback: 'Estar + gerundio: después de «está» no va otro verbo conjugado. Se dice «está durmiendo» o, sin «estar», «duerme».' },
+        ],
+        after: '«¿Durmiendo? ¡A diez minutos del concierto! Facundo, despiértalo, por favor.»',
+      },
+      {
+        id: 'buscar', kind: 'busca', label: 'Estímulo de conversación', who: 'daniela', sets: ['escenario-valentina', 'escenario-bruno'],
+        context: 'Daniela toma un micrófono y habla por los altavoces de la plaza. Primero busca a Valentina. Después, a Bruno, el ayudante que trae los cables.',
+        prompt: 'Escuchen el aviso, miren lo que está haciendo cada persona y den indicaciones desde la mascota. Después, «al revés»: una persona describe a alguien por lo que está haciendo.',
+        teacher: 'Aquí todo pasa ahora: lo que la persona está haciendo y el lugar donde está ayudan a encontrarla. Antes de elegir un número, pide una frase completa: «Es la que está tocando la guitarra». En «al revés», el estudiante usa por lo menos un «está + gerundio».',
+      },
+      {
+        id: 'cual-es', kind: 'contrast', label: 'Contraste lingüístico', exponent: ['la-que-esta'], who: 'daniela',
+        context: 'Daniela ya no tiene los binoculares y ve dos chicas con guitarra: «¿Cuál es Valentina? Dímelo rápido.»',
+        prompt: 'Explícale cuál es Valentina.',
+        options: [
+          { id: 'el-que', label: 'Valentina es el que está tocando la guitarra y lleva un vestido amarillo.', correct: false, feature: 'concordancia del artículo',
+            feedback: 'Concordancia del artículo: Valentina es una mujer, así que «la que está tocando», no «el que».' },
+          { id: 'sin-que', label: 'Valentina es la está tocando la guitarra y lleva un vestido amarillo.', correct: false, feature: 'falta el relativo',
+            feedback: 'Falta el relativo: «la está tocando» parece decir que alguien toca «la» guitarra. Para señalar a la persona: «la que está tocando».' },
+          { id: 'la-que', label: 'Valentina es la que está tocando la guitarra y lleva un vestido amarillo.', correct: true,
+            feedback: 'Bien: «la que está + gerundio» señala a la persona por lo que está haciendo ahora.' },
+        ],
+        after: '«¡Ahí está! Con la guitarra de un chico del público. Como siempre.»',
+      },
+      {
+        id: 'valentina', kind: 'stimulus', label: 'Estímulo de conversación', who: 'valentina',
+        ask: 'Valentina llega corriendo, todavía con la guitarra del chico en la mano: «¡Perdón, perdón! ¿Qué está pasando? ¿Por qué me está mirando todo el mundo?»',
+        options: [
+          { say: '¡Te estamos buscando desde hace diez minutos! El concierto está empezando.', reply: '¿Ya? ¡Ay, no! Bueno, tranquilos: canto mejor cuando llego corriendo.', end: 'Valentina le devuelve la guitarra al chico y sube al escenario de un salto. La plaza aplaude.', mood: 'surprised' },
+          { say: 'No pasa nada. La gente está esperando, pero está feliz.', reply: 'Qué bonito. Entonces la primera canción es para la gente que está esperando.', end: 'La primera canción es lenta. Hasta Daniela deja los cables un momento y escucha.', mood: 'love' },
+          { say: '¿Me firmas un autógrafo? Mi hermana te está escuchando ahora mismo por teléfono.', reply: '¡Claro! Y que tu hermana escuche la primera canción. ¡Hola desde Villaluz!', end: 'Valentina canta dos frases al teléfono. Tu hermana grita tan fuerte que la oye todo el escenario.', mood: 'laugh' },
+        ],
+        teacher: 'No hay respuesta correcta. Después, pregunta qué está haciendo cada persona de la escena en ese momento: «Daniela está…», «la gente está…».',
+      },
+    ],
+    timeline: [
+      'En el escenario encontré a la cantante y le dije que el concierto estaba empezando.',
+      'En el escenario encontré a la cantante y escuché la primera canción con Daniela.',
+      'En el escenario encontré a la cantante y mi hermana habló con ella por teléfono.',
+    ],
+    talk: [
+      '¿Qué crees que está haciendo tu familia en este momento?',
+      'Mira la clase: ¿qué está haciendo cada persona ahora mismo?',
+      '¿Fuiste alguna vez a un concierto en una plaza o en la calle? ¿Cómo fue?',
+      '¿Llegas siempre a tiempo o siempre tarde? ¿Por qué?',
+      '¿Qué música te gusta escuchar en una fiesta?',
+    ],
+    words: ['el escenario', 'la cantante', 'la técnica de sonido', 'el baterista', 'está tocando', 'está durmiendo'],
+    teacher: 'Todo el círculo está en presente: lo que la persona está haciendo («la cantante es la que está tocando la guitarra») y el lugar donde está ahora sirven para encontrarla. Antes del círculo, haz mímica (bailar, leer, dormir) y que la clase diga «estás…». Después, en la pizarra: -ar → -ando, -er / -ir → -iendo, y los irregulares durmiendo, leyendo, diciendo, trayendo. Repaso de «que»: la que está…, el que está….',
+  },
+
+  fotos: {
+    title: 'Todos en la foto',
+    place: 'El rincón de las fotos de Lorenzo',
+    objective: 'a2.gram.imperativo-pronombres',
+    related: ['a1.gram.preposiciones-lugar'],
+    exponents: [
+      { id: 'ponte', form: 'ponte / siéntate / acércate', use: 'colocar a una persona con el imperativo de tú y el pronombre pegado' },
+      { id: 'cierrelo', form: 'ciérrelo / póngase / acérquese', use: 'pedir algo con el imperativo de usted y el pronombre pegado' },
+      { id: 'del-al', form: 'a la izquierda del…, detrás del…, al lado de…', use: 'situar a una persona (repaso de las preposiciones de lugar y de «del»)' },
+    ],
+    line: 'Lorenzo hace fotos en la feria desde hace veinte años. Tiene una cámara antigua, un fondo pintado con la noria y mucha paciencia. Esta noche la familia Ríos quiere su foto de todos los años, y Lorenzo te pide ayuda para colocar a todo el mundo.',
+    dialogue: [
+      ['lorenzo', '¡Familia Ríos, bienvenidos! Como siempre: los abuelos en el centro y los niños delante.'],
+      ['paloma', 'Lorenzo, este año somos más. Llegaron los primos de Houston.'],
+      ['lorenzo', 'Más gente, más alegría. Pero yo solo tengo dos manos.'],
+      ['paloma', 'Pero hoy tiene ayudante, ¿no?'],
+      ['lorenzo', 'Sí, señora. Tú, ven aquí, a mi lado. Desde aquí se ve todo. Tú me ayudas a colocarlos.'],
+    ],
+    beats: [
+      {
+        id: 'ponte', kind: 'contrast', label: 'Contraste lingüístico', exponent: ['ponte'], who: 'lorenzo',
+        context: 'Lorenzo mira por la cámara: «El primo Joaquín es muy alto y tapa a la abuela. Dile dónde tiene que ponerse. Háblale de tú, que es joven.»',
+        prompt: 'Dile a Joaquín que se ponga detrás de la abuela.',
+        options: [
+          { id: 'te-pon', label: 'Joaquín, te pon detrás de la abuela, por favor.', correct: false, feature: 'lugar del pronombre',
+            feedback: 'Lugar del pronombre: con el imperativo afirmativo, el pronombre va detrás y pegado: «ponte», no «te pon».' },
+          { id: 'ponte', label: 'Joaquín, ponte detrás de la abuela, por favor.', correct: true,
+            feedback: 'Bien: imperativo de tú (pon) + te, en una sola palabra: «ponte». Igual: siéntate, acércate.' },
+          { id: 'pone-te', label: 'Joaquín, pónete detrás de la abuela, por favor.', correct: false, feature: 'forma del imperativo',
+            feedback: 'Forma del imperativo: el imperativo de tú de «poner» es irregular y corto: «pon». Con el pronombre: «ponte».' },
+        ],
+        after: 'Joaquín se pone detrás de la abuela. Ahora se ve la cara de todo el mundo... menos la del tío Rubén.',
+      },
+      {
+        id: 'paraguas', kind: 'contrast', label: 'Contraste lingüístico', exponent: ['cierrelo'], who: 'lorenzo',
+        context: 'El abuelo Ríos tiene un paraguas abierto «por si llueve» y tapa a media familia. Lorenzo te dice en voz baja: «Pídeselo tú, que a mí no me hace caso.» Al abuelo todos le hablan de usted.',
+        prompt: 'Pídele al abuelo, de usted, que cierre el paraguas.',
+        options: [
+          { id: 'lo-cierre', label: 'Señor, lo cierre, por favor. Ya no llueve.', correct: false, feature: 'lugar del pronombre',
+            feedback: 'Lugar del pronombre: en el imperativo afirmativo, el pronombre va detrás y pegado al verbo: «ciérrelo».' },
+          { id: 'cierrela', label: 'Señor, ciérrela, por favor. Ya no llueve.', correct: false, feature: 'género del pronombre',
+            feedback: 'Género del pronombre: «el paraguas» es masculino, así que «lo»: «ciérrelo».' },
+          { id: 'cierrelo', label: 'Señor, ciérrelo, por favor. Ya no llueve.', correct: true,
+            feedback: 'Bien: imperativo de usted (cierre) + lo, en una palabra y con tilde: «ciérrelo».' },
+        ],
+        after: 'El abuelo cierra el paraguas muy despacio: «Si llueve, la culpa es suya, ¿eh?»',
+      },
+      {
+        id: 'buscar', kind: 'busca', label: 'Estímulo de conversación', who: 'lorenzo', sets: ['fotos-ines', 'fotos-nico'],
+        context: 'Lorenzo cuenta a la familia: faltan dos personas. Están entre la gente que mira la foto, y Lorenzo te dice dónde están.',
+        prompt: 'Escuchen dónde está cada persona («a la izquierda del…», «a la derecha de…»), miren desde la mascota y elijan un número. Después, «al revés»: una persona coloca a alguien de la plaza con «ponte…».',
+        teacher: 'El lugar se dice desde la mascota: su izquierda es la izquierda de la pantalla. Pide que repitan la orden de Lorenzo con el pronombre («llámala», «tráelo») antes de elegir.',
+      },
+      {
+        id: 'del', kind: 'contrast', label: 'Contraste lingüístico', exponent: ['del-al', 'ponte'], who: 'lorenzo',
+        context: 'Inés llega, pero no sabe dónde ponerse. Lorenzo te dice: «Junto al abuelo, a su izquierda. Díselo tú.»',
+        prompt: 'Dile a Inés dónde tiene que ponerse.',
+        options: [
+          { id: 'de-el', label: 'Inés, ponte a la izquierda de el abuelo.', correct: false, feature: 'contracción «del»',
+            feedback: 'Contracción: «de» + «el» se dice y se escribe «del»: «a la izquierda del abuelo».' },
+          { id: 'del', label: 'Inés, ponte a la izquierda del abuelo.', correct: true,
+            feedback: 'Bien: «a la izquierda de» + «el abuelo» = «a la izquierda del abuelo». Y «ponte», con el pronombre pegado.' },
+          { id: 'en-la', label: 'Inés, ponte en la izquierda del abuelo.', correct: false, feature: 'preposición',
+            feedback: 'Preposición: para situar a una persona se dice «a la izquierda de», con «a», no «en la izquierda».' },
+        ],
+        after: '«¡Perfecto! Ahora sí: uno, dos, tres... ¡sonrían!»',
+      },
+      {
+        id: 'lorenzo', kind: 'stimulus', label: 'Estímulo de conversación', who: 'lorenzo',
+        ask: 'Lorenzo baja la cámara: «Ya está la foto. Y ahora tú: ¿te hago una foto a ti? Gratis, por ayudarme.»',
+        options: [
+          { say: 'Sí, ¡hazme una con la familia Ríos, por favor!', reply: '¡Buena idea! Ponte ahí, entre la abuela y el tío Rubén.', end: 'En la foto todos sonríen. El tío Rubén, como siempre, tiene los ojos cerrados.', mood: 'laugh' },
+          { say: 'Sí, pero hazla con la noria detrás, por favor.', reply: 'Muy bien. Muévete un poco a la derecha... ¡ahí! Ahora no te muevas.', end: 'La foto queda preciosa: tú delante y la noria, con todas sus luces, detrás.', mood: 'smile' },
+          { say: 'No, gracias, no me gustan las fotos. Pero dame tu tarjeta, por favor.', reply: 'Aquí tienes. Vuelve el año que viene: ya eres de la familia Ríos.', end: 'Guardas la tarjeta. Paloma te invita a la foto del año que viene.', mood: 'love' },
+        ],
+        teacher: 'No hay respuesta correcta. Después, en parejas: una persona es fotógrafa y coloca a tres compañeros con imperativos («ponte…», «acércate…», «siéntate…»).',
+      },
+    ],
+    timeline: [
+      'En el rincón de las fotos ayudé a Lorenzo y me hice una foto con la familia Ríos.',
+      'En el rincón de las fotos ayudé a Lorenzo y me hice una foto con la noria detrás.',
+      'En el rincón de las fotos ayudé a Lorenzo y él me dio su tarjeta.',
+    ],
+    talk: [
+      '¿Te gusta hacer fotos o salir en las fotos? ¿Por qué?',
+      '¿Tu familia se hace fotos en las fiestas? ¿Quién se pone en el centro?',
+      'Coloca a tres compañeros para una foto: «Ponte…», «Siéntate…», «Acércate…».',
+      '¿Cuál es la foto más divertida de tu teléfono? ¿Qué hay en ella?',
+      '¿Qué le dices a una persona que no quiere salir en una foto?',
+    ],
+    words: ['el fotógrafo', 'la cámara', 'ponte / póngase', 'a la izquierda del…', 'detrás de', 'colocar'],
+    teacher: 'Antes del círculo, coloca a tres estudiantes como para una foto dando tú las órdenes; después, ellos colocan al resto. En la pizarra: pon + te = ponte, siéntate, acércate; con usted: póngase, ciérrelo. El pronombre va pegado al imperativo afirmativo, y la tilde guarda el acento del verbo (cierre → ciérrelo). Repaso: a la izquierda del…, detrás de…, al lado de…. En «Busca y describe», el lugar se dice desde la mascota.',
+  },
 
   baile: {
     title: 'El baile de la plaza',
@@ -511,6 +792,108 @@ export const CIRCLES = {
     teacher: 'Es el cierre de las dos rutas. Orden fijo (AC9): reacción a la anécdota de doña Celia → invitación y juego de roles → la historia de la noche desde las notas de esta sesión, con la lista de control → una pregunta de transferencia personal. La lista de control se marca a mano (el docente o el grupo); la aplicación no evalúa el habla ni la graba. Si no hay tiempo, deja la charla final para la próxima clase.',
   },
 };
+
+// «Busca y describe» (circles 1, 6 and 7) and the transfer check at «baile»
+// (AC10: unseen, not reused from circles 1/6). Shape and rules:
+// look-contract.mjs (validateBuscaSet). `circle` is the circle number.
+// Every set uses Tier-A features to solve it; Tier-B words are not used.
+const ROSARIO = { speaker: 'Rosario', voice: 'es-PY-TaniaNeural' };
+const DANIELA = { speaker: 'Daniela', voice: 'es-CL-CatalinaNeural' };
+const LORENZO = { speaker: 'Lorenzo', voice: 'es-CL-LorenzoNeural' };
+
+export const BUSCA = [
+  {
+    id: 'informacion-emilio', circle: 1, kind: 'find', ...ROSARIO,
+    text: 'Atención, por favor. Buscamos a Emilio, un niño de seis años que se perdió cerca de la noria. Es un niño rubio, de pelo corto, que lleva una camiseta verde y pantalones cortos. Si lo ven, tráiganlo, por favor, al puesto de información, donde lo espera su mamá. Gracias.',
+    described: ['age:child', 'body:m', 'bottom:shorts', 'hair:short', 'hairColor:rubio', 'topColor:verde'],
+    target: 'emilio',
+    figures: [
+      { id: 'gabriel', body: 'm', age: 'child', top: 'tshirt', topColor: 'verde', bottom: 'pants', bottomColor: 'azul', hair: 'short', hairColor: 'rubio' },
+      { id: 'andres', body: 'm', age: 'child', top: 'tshirt', topColor: 'azul', bottom: 'shorts', bottomColor: 'azul', hair: 'short', hairColor: 'moreno' },
+      { id: 'emilio', body: 'm', age: 'child', top: 'tshirt', topColor: 'verde', bottom: 'shorts', bottomColor: 'azul', hair: 'short', hairColor: 'rubio' },
+      { id: 'simon', body: 'm', age: 'child', top: 'tshirt', topColor: 'verde', bottom: 'shorts', bottomColor: 'azul', hair: 'cap', hairColor: 'rubio' },
+      { id: 'felipe', body: 'm', age: 'child', top: 'tshirt', topColor: 'rojo', bottom: 'shorts', bottomColor: 'azul', hair: 'short', hairColor: 'rubio' },
+    ],
+  },
+  {
+    id: 'informacion-abuelo', circle: 1, kind: 'find', ...ROSARIO,
+    text: 'Atención, por favor. Martina, una niña de ocho años, está aquí en el puesto de información y busca a su abuelo. Su abuelo es un señor mayor, calvo, que lleva un abrigo marrón y una maleta, porque llegó hoy de viaje. Señor, por favor, venga al puesto de información, donde lo espera su nieta.',
+    described: ['age:old', 'body:m', 'hair:bald', 'top:coat', 'topColor:marron', 'holds:suitcase'],
+    target: 'abuelo',
+    figures: [
+      { id: 'abuelo', body: 'm', age: 'old', top: 'coat', topColor: 'marron', bottom: 'pants', bottomColor: 'gris', hair: 'bald', hairColor: 'canoso', holds: 'suitcase' },
+      { id: 'ramon', body: 'm', age: 'old', top: 'coat', topColor: 'marron', bottom: 'pants', bottomColor: 'gris', hair: 'short', hairColor: 'canoso', holds: 'suitcase' },
+      { id: 'ignacio', body: 'm', age: 'old', top: 'coat', topColor: 'azul', bottom: 'pants', bottomColor: 'gris', hair: 'bald', hairColor: 'canoso', holds: 'suitcase' },
+      { id: 'eusebio', body: 'm', age: 'old', top: 'coat', topColor: 'marron', bottom: 'pants', bottomColor: 'gris', hair: 'bald', hairColor: 'canoso' },
+    ],
+  },
+  {
+    id: 'escenario-valentina', circle: 6, kind: 'find', ...DANIELA,
+    text: 'Probando, probando... Atención, por favor: estamos buscando a Valentina, la cantante. Es una chica de pelo largo que lleva un vestido amarillo, y seguro que está tocando la guitarra con alguien del público. Valentina, si me escuchas, ven al escenario. ¡El concierto empieza en cinco minutos!',
+    described: ['age:young', 'body:f', 'pose:guitar', 'hair:long', 'top:dress', 'topColor:amarillo'],
+    target: 'valentina',
+    figures: [
+      { id: 'camila', body: 'f', age: 'young', top: 'tshirt', topColor: 'amarillo', bottom: 'pants', bottomColor: 'azul', hair: 'short', hairColor: 'moreno', pose: 'guitar' },
+      { id: 'valentina', body: 'f', age: 'young', top: 'dress', topColor: 'amarillo', hair: 'long', hairColor: 'pelirrojo', pose: 'guitar' },
+      { id: 'renata', body: 'f', age: 'young', top: 'dress', topColor: 'amarillo', hair: 'long', hairColor: 'moreno', pose: 'dance' },
+      { id: 'abril', body: 'f', age: 'young', top: 'dress', topColor: 'verde', hair: 'long', hairColor: 'rubio', pose: 'wave' },
+    ],
+  },
+  {
+    id: 'escenario-bruno', circle: 6, kind: 'find', ...DANIELA,
+    text: 'Bruno, te necesito en el escenario. Y para el público: Bruno es el chico que está llevando una caja con cables. Lleva gorra y una camiseta negra. Si lo ven, díganle que venga rápido, por favor. ¡Gracias!',
+    described: ['age:young', 'body:m', 'pose:carry', 'hair:cap', 'top:tshirt', 'topColor:negro'],
+    target: 'bruno',
+    figures: [
+      { id: 'mauro', body: 'm', age: 'young', top: 'tshirt', topColor: 'negro', bottom: 'pants', bottomColor: 'gris', hair: 'short', hairColor: 'moreno', pose: 'carry' },
+      { id: 'lucas', body: 'm', age: 'young', top: 'tshirt', topColor: 'negro', bottom: 'pants', bottomColor: 'gris', hair: 'cap', hairColor: 'moreno', pose: 'point' },
+      { id: 'dario', body: 'm', age: 'young', top: 'tshirt', topColor: 'blanco', bottom: 'pants', bottomColor: 'gris', hair: 'cap', hairColor: 'moreno', pose: 'carry' },
+      { id: 'bruno', body: 'm', age: 'young', top: 'tshirt', topColor: 'negro', bottom: 'pants', bottomColor: 'gris', hair: 'cap', hairColor: 'moreno', pose: 'carry' },
+      { id: 'elias', body: 'm', age: 'young', top: 'tshirt', topColor: 'negro', bottom: 'pants', bottomColor: 'gris', hair: 'cap', hairColor: 'moreno', pose: 'sit' },
+    ],
+  },
+  {
+    id: 'fotos-ines', circle: 7, kind: 'find', ...LORENZO,
+    text: '¡Un momento! Falta Inés, la prima. A ver... ¡ahí está! Es la chica que está a la izquierda del señor de la maleta, la de pelo largo y falda. Llámala, por favor, y dile que venga, que ya hacemos la foto.',
+    described: ['rel:izquierda-de:el señor de la maleta', 'hair:long', 'bottom:skirt', 'age:young', 'body:f'],
+    target: 'ines',
+    figures: [
+      { id: 'sara', body: 'f', age: 'young', top: 'tshirt', topColor: 'amarillo', bottom: 'pants', bottomColor: 'negro', hair: 'short', hairColor: 'moreno', slot: { x: -3, z: 0.3 } },
+      { id: 'ines', body: 'f', age: 'young', top: 'tshirt', topColor: 'amarillo', bottom: 'skirt', bottomColor: 'azul', hair: 'long', hairColor: 'moreno', slot: { x: -1.5, z: 0.2 } },
+      { id: 'el señor de la maleta', body: 'm', age: 'adult', top: 'coat', topColor: 'gris', bottom: 'pants', bottomColor: 'negro', hair: 'short', hairColor: 'canoso', holds: 'suitcase', slot: { x: 0, z: 0.4 } },
+      { id: 'carla', body: 'f', age: 'young', top: 'tshirt', topColor: 'amarillo', bottom: 'skirt', bottomColor: 'azul', hair: 'long', hairColor: 'rubio', slot: { x: 1.5, z: 0.2 } },
+      { id: 'olivia', body: 'f', age: 'young', top: 'tshirt', topColor: 'verde', bottom: 'skirt', bottomColor: 'azul', hair: 'long', hairColor: 'moreno', slot: { x: 3, z: 0.3 } },
+    ],
+  },
+  {
+    id: 'fotos-nico', circle: 7, kind: 'find', ...LORENZO,
+    text: 'Y ahora, ¿dónde está Nico? Ah, sí, ya lo veo: es el niño que está a la derecha de la abuela, la señora que está sentada. Lleva gorra y una camiseta roja. Tráelo, por favor, y siéntalo delante, con los otros niños.',
+    described: ['rel:derecha-de:la abuela sentada', 'hair:cap', 'topColor:rojo', 'age:child', 'body:m'],
+    target: 'nico',
+    figures: [
+      { id: 'leo', body: 'm', age: 'child', top: 'tshirt', topColor: 'rojo', bottom: 'shorts', bottomColor: 'azul', hair: 'cap', hairColor: 'moreno', slot: { x: -3, z: 0.3 } },
+      { id: 'la abuela sentada', body: 'f', age: 'old', top: 'dress', topColor: 'morado', hair: 'short', hairColor: 'canoso', pose: 'sit', slot: { x: -1.3, z: 0.5 } },
+      { id: 'nico', body: 'm', age: 'child', top: 'tshirt', topColor: 'rojo', bottom: 'shorts', bottomColor: 'azul', hair: 'cap', hairColor: 'moreno', slot: { x: 0.3, z: 0.2 } },
+      { id: 'mateo', body: 'm', age: 'child', top: 'tshirt', topColor: 'verde', bottom: 'shorts', bottomColor: 'azul', hair: 'cap', hairColor: 'moreno', slot: { x: 1.8, z: 0.3 } },
+      { id: 'joel', body: 'm', age: 'child', top: 'tshirt', topColor: 'rojo', bottom: 'shorts', bottomColor: 'azul', hair: 'short', hairColor: 'moreno', slot: { x: 3.3, z: 0.2 } },
+    ],
+  },
+  {
+    // Transfer check (AC10): new people, new place, a new mix of «que» and
+    // «estar + gerundio». Shown at the closing, at «baile».
+    id: 'transferencia-amparo', circle: 8, kind: 'transfer', ...ROSARIO,
+    text: 'Atención, por favor. Buscamos a doña Amparo, una señora mayor que está bailando en la plaza. Tiene el pelo corto y canoso, y lleva una falda verde. Doña Amparo, su hijo la está esperando en el puesto de información.',
+    described: ['age:old', 'body:f', 'pose:dance', 'hair:short', 'hairColor:canoso', 'bottom:skirt', 'bottomColor:verde'],
+    target: 'amparo',
+    figures: [
+      { id: 'teresa', body: 'f', age: 'old', top: 'tshirt', topColor: 'blanco', bottom: 'pants', bottomColor: 'verde', hair: 'short', hairColor: 'canoso', pose: 'dance' },
+      { id: 'pilar', body: 'f', age: 'old', top: 'tshirt', topColor: 'blanco', bottom: 'skirt', bottomColor: 'verde', hair: 'long', hairColor: 'canoso', pose: 'dance' },
+      { id: 'dolores', body: 'f', age: 'old', top: 'tshirt', topColor: 'blanco', bottom: 'skirt', bottomColor: 'verde', hair: 'short', hairColor: 'canoso', pose: 'sit' },
+      { id: 'amparo', body: 'f', age: 'old', top: 'tshirt', topColor: 'blanco', bottom: 'skirt', bottomColor: 'verde', hair: 'short', hairColor: 'canoso', pose: 'dance' },
+      { id: 'gloria', body: 'f', age: 'old', top: 'tshirt', topColor: 'morado', bottom: 'skirt', bottomColor: 'azul', hair: 'short', hairColor: 'canoso', pose: 'dance' },
+    ],
+  },
+];
 
 // The closing production at «baile» (AC9): after the beats above.
 export const CLOSING = {

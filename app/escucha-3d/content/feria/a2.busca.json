@@ -1,5 +1,48 @@
 {
   "game": "feria",
   "level": "A2",
-  "announcements": []
+  "announcements": [
+    {
+      "id": "informacion-emilio",
+      "speaker": "Rosario",
+      "voice": "es-PY-TaniaNeural",
+      "text": "Atención, por favor. Buscamos a Emilio, un niño de seis años que se perdió cerca de la noria. Es un niño rubio, de pelo corto, que lleva una camiseta verde y pantalones cortos. Si lo ven, tráiganlo, por favor, al puesto de información, donde lo espera su mamá. Gracias."
+    },
+    {
+      "id": "informacion-abuelo",
+      "speaker": "Rosario",
+      "voice": "es-PY-TaniaNeural",
+      "text": "Atención, por favor. Martina, una niña de ocho años, está aquí en el puesto de información y busca a su abuelo. Su abuelo es un señor mayor, calvo, que lleva un abrigo marrón y una maleta, porque llegó hoy de viaje. Señor, por favor, venga al puesto de información, donde lo espera su nieta."
+    },
+    {
+      "id": "escenario-valentina",
+      "speaker": "Daniela",
+      "voice": "es-CL-CatalinaNeural",
+      "text": "Probando, probando... Atención, por favor: estamos buscando a Valentina, la cantante. Es una chica de pelo largo que lleva un vestido amarillo, y seguro que está tocando la guitarra con alguien del público. Valentina, si me escuchas, ven al escenario. ¡El concierto empieza en cinco minutos!"
+    },
+    {
+      "id": "escenario-bruno",
+      "speaker": "Daniela",
+      "voice": "es-CL-CatalinaNeural",
+      "text": "Bruno, te necesito en el escenario. Y para el público: Bruno es el chico que está llevando una caja con cables. Lleva gorra y una camiseta negra. Si lo ven, díganle que venga rápido, por favor. ¡Gracias!"
+    },
+    {
+      "id": "fotos-ines",
+      "speaker": "Lorenzo",
+      "voice": "es-CL-LorenzoNeural",
+      "text": "¡Un momento! Falta Inés, la prima. A ver... ¡ahí está! Es la chica que está a la izquierda del señor de la maleta, la de pelo largo y falda. Llámala, por favor, y dile que venga, que ya hacemos la foto."
+    },
+    {
+      "id": "fotos-nico",
+      "speaker": "Lorenzo",
+      "voice": "es-CL-LorenzoNeural",
+      "text": "Y ahora, ¿dónde está Nico? Ah, sí, ya lo veo: es el niño que está a la derecha de la abuela, la señora que está sentada. Lleva gorra y una camiseta roja. Tráelo, por favor, y siéntalo delante, con los otros niños."
+    },
+    {
+      "id": "transferencia-amparo",
+      "speaker": "Rosario",
+      "voice": "es-PY-TaniaNeural",
+      "text": "Atención, por favor. Buscamos a doña Amparo, una señora mayor que está bailando en la plaza. Tiene el pelo corto y canoso, y lleva una falda verde. Doña Amparo, su hijo la está esperando en el puesto de información."
+    }
+  ]
 }
