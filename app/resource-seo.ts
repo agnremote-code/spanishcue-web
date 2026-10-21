@@ -77,6 +77,10 @@ lessonBySlug.set("spanish-conversation-activity-a2-b1-reino-unido-en-relieve", l
 // Same for the United States flagship, now a 3D world with more levels.
 lessonBySlug.set("spanish-conversation-activity-a2-b1-estados-unidos", lessons.find(lesson => lesson.id === 36)!);
 lessonBySlug.set("spanish-conversation-activity-b1-mexico", lessons.find(lesson => lesson.id === 210)!);
+// Irlanda, Australia and Suiza also became 3D worlds with more levels.
+lessonBySlug.set("spanish-conversation-activity-b1-irlanda-en-relieve", lessons.find(lesson => lesson.id === 33)!);
+lessonBySlug.set("spanish-conversation-activity-a2-b1-australia-en-movimiento", lessons.find(lesson => lesson.id === 30)!);
+lessonBySlug.set("spanish-conversation-activity-b1-suiza-en-relieve", lessons.find(lesson => lesson.id === 29)!);
 
 function cleanText(value: string): string {
   return value.replace(/\s+/g, " ").trim();
