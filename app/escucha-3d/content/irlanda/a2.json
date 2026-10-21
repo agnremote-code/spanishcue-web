@@ -1,0 +1,498 @@
+{
+ "game": "irlanda",
+ "level": "A2",
+ "items": [
+  {
+   "id": "dublin",
+   "title": "Un libro de mil doscientos años",
+   "place": "La biblioteca del Trinity College",
+   "context": "Mario, de Paraguay, visita la biblioteca con Brendan, el bibliotecario, y le hace muchas preguntas.",
+   "speakers": [
+    {
+     "name": "Mario",
+     "country": "Paraguay",
+     "voice": "es-PY-MarioNeural"
+    },
+    {
+     "name": "Brendan",
+     "country": "Chile",
+     "voice": "es-CL-LorenzoNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Brendan, ¿cuántos libros hay en esta sala?"
+    },
+    {
+     "s": 1,
+     "text": "Unos doscientos mil, los más antiguos de la universidad. Pero la gente viene sobre todo por uno: el Libro de Kells."
+    },
+    {
+     "s": 0,
+     "text": "¿Qué tiene de especial?"
+    },
+    {
+     "s": 1,
+     "text": "Lo pintaron unos monjes hace casi mil doscientos años. Usaban plumas de pájaro y colores de plantas y piedras."
+    },
+    {
+     "s": 0,
+     "text": "¿Y se puede tocar?"
+    },
+    {
+     "s": 1,
+     "text": "No, está detrás de un cristal. Cada mes pasamos una página, para que la luz no lo dañe."
+    },
+    {
+     "s": 0,
+     "text": "Entonces, si vuelvo el mes que viene, ¿veo otra página?"
+    },
+    {
+     "s": 1,
+     "text": "Exacto. Hay personas que vienen cada mes desde hace años."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuántos libros hay en la sala?",
+     "options": [
+      "Unos doscientos mil",
+      "Unos mil",
+      "Unos dos millones"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Quién pintó el Libro de Kells?",
+     "options": [
+      "Un rey",
+      "Unos monjes",
+      "Unos estudiantes"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué usaban para pintar?",
+     "options": [
+      "Lápices y papel",
+      "Máquinas",
+      "Plumas de pájaro y colores naturales"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Por qué pasan una página cada mes?",
+     "options": [
+      "Para vender más entradas",
+      "Para que la luz no lo dañe",
+      "Porque los turistas lo piden"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Cuál es el libro más antiguo que tienes?",
+     "model": "Tengo un diccionario de mi abuelo, de mil novecientos sesenta."
+    },
+    {
+     "q": "¿Vas a bibliotecas?",
+     "model": "Antes iba mucho para estudiar, ahora leo en el móvil."
+    },
+    {
+     "q": "¿Volverías a un lugar cada mes para ver algo nuevo?",
+     "model": "Sí, si es tan especial como este libro."
+    }
+   ],
+   "gaps": "Lo [pintaron] unos [monjes] hace casi mil doscientos años. Usaban [plumas] de pájaro y colores de plantas y [piedras].",
+   "glossary": [
+    {
+     "word": "monjes",
+     "meaning": "hombres religiosos que viven juntos"
+    },
+    {
+     "word": "plumas",
+     "meaning": "lo que cubre a los pájaros"
+    },
+    {
+     "word": "cristal",
+     "meaning": "material transparente"
+    },
+    {
+     "word": "dañe",
+     "meaning": "que haga mal"
+    }
+   ]
+  },
+  {
+   "id": "galway",
+   "title": "Segundo lugar en la feria",
+   "place": "La feria de ponis de Clifden",
+   "context": "Karla, de Honduras, ayuda a Padraig con su yegua en la feria de ponis.",
+   "speakers": [
+    {
+     "name": "Karla",
+     "country": "Honduras",
+     "voice": "es-HN-KarlaNeural"
+    },
+    {
+     "name": "Padraig",
+     "country": "Argentina",
+     "voice": "es-AR-TomasNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "¡Padraig, segundo lugar en la feria! ¡Felicidades!"
+    },
+    {
+     "s": 1,
+     "text": "Gracias. Hace diez años que no ganaba nada. Mi yegua Ciara caminó muy bien."
+    },
+    {
+     "s": 0,
+     "text": "Estaba muy nerviosa antes de entrar. ¿Qué le dijo al oído?"
+    },
+    {
+     "s": 1,
+     "text": "Lo mismo que me decía mi padre a mí: despacio, que nadie corre detrás de ti."
+    },
+    {
+     "s": 0,
+     "text": "Aquel señor de sombrero quiere hablar con usted. Dice que es de Estados Unidos."
+    },
+    {
+     "s": 1,
+     "text": "Ya lo sé. Quiere comprar a Ciara. Ofrece el triple de lo normal."
+    },
+    {
+     "s": 0,
+     "text": "¿Y va a venderla?"
+    },
+    {
+     "s": 1,
+     "text": "Necesito arreglar el techo de la casa… pero esta noche no decido nada. Primero, una cerveza para celebrar."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué lugar consigue Ciara?",
+     "options": [
+      "El primero",
+      "El tercero",
+      "El segundo"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuántos años hace que Padraig no ganaba?",
+     "options": [
+      "Diez",
+      "Dos",
+      "Veinte"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Quién le decía «despacio» a Padraig?",
+     "options": [
+      "Su madre",
+      "Su padre",
+      "Su hijo"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué decide Padraig esta noche?",
+     "options": [
+      "Vender a Ciara",
+      "Comprar otro poni",
+      "No decidir nada"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Ganaste algún premio de niño?",
+     "model": "Sí, gané una medalla de natación en la escuela."
+    },
+    {
+     "q": "¿Qué consejo de tus padres recuerdas?",
+     "model": "Mi madre siempre decía que hay que dormir antes de decidir."
+    },
+    {
+     "q": "¿Venderías algo muy querido por dinero?",
+     "model": "Depende, si lo necesitara mucho, quizás sí."
+    }
+   ],
+   "gaps": "Lo mismo que me [decía] mi [padre] a mí: [despacio], que nadie [corre] detrás de ti.",
+   "glossary": [
+    {
+     "word": "yegua",
+     "meaning": "caballo hembra"
+    },
+    {
+     "word": "feria",
+     "meaning": "lugar con concursos y animales"
+    },
+    {
+     "word": "techo",
+     "meaning": "parte de arriba de una casa"
+    },
+    {
+     "word": "triple",
+     "meaning": "tres veces más"
+    }
+   ]
+  },
+  {
+   "id": "kerry",
+   "title": "Sin barco a Skellig",
+   "place": "El puerto de Portmagee",
+   "context": "Margarita, de Panamá, quería ir a la isla de Skellig Michael, pero Fionnuala, la capitana, cancela el viaje.",
+   "speakers": [
+    {
+     "name": "Fionnuala",
+     "country": "Guinea Ecuatorial",
+     "voice": "es-GQ-TeresaNeural"
+    },
+    {
+     "name": "Margarita",
+     "country": "Panamá",
+     "voice": "es-PA-MargaritaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Lo siento mucho, hoy no salimos. Las olas tienen más de tres metros."
+    },
+    {
+     "s": 1,
+     "text": "Pero reservé hace seis meses. Mañana me vuelvo a Panamá."
+    },
+    {
+     "s": 0,
+     "text": "Lo entiendo. El año pasado tuve que cancelar treinta días. Nadie decide aquí, decide el mar."
+    },
+    {
+     "s": 1,
+     "text": "¿Y no hay ninguna posibilidad?"
+    },
+    {
+     "s": 0,
+     "text": "Le devuelvo el dinero, claro. Y si quiere, la llevo en coche a un mirador desde donde se ve la isla."
+    },
+    {
+     "s": 1,
+     "text": "Bueno, mejor eso que nada."
+    },
+    {
+     "s": 0,
+     "text": "Y en el bar de mi hermano hay un vídeo de la isla con dron. No es lo mismo, pero casi."
+    },
+    {
+     "s": 1,
+     "text": "Entonces le prometo una cosa: vuelvo el año que viene."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Por qué no sale el barco?",
+     "options": [
+      "Porque las olas son muy grandes",
+      "Porque no hay gasolina",
+      "Porque no hay turistas"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cuándo reservó Margarita?",
+     "options": [
+      "Ayer",
+      "Hace seis meses",
+      "Hace un año"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cuántos días canceló Fionnuala el año pasado?",
+     "options": [
+      "Tres",
+      "Seis",
+      "Treinta"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué promete Margarita?",
+     "options": [
+      "Escribir una queja",
+      "Volver el año que viene",
+      "Ir en dron"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Se canceló alguna vez un viaje tuyo?",
+     "model": "Sí, una vez por la nieve se canceló mi vuelo."
+    },
+    {
+     "q": "¿Qué haces cuando un plan sale mal?",
+     "model": "Intento buscar otro plan y no enojarme."
+    },
+    {
+     "q": "¿Volverías a un lugar si no pudiste verlo?",
+     "model": "Sí, así tengo una razón para volver."
+    }
+   ],
+   "gaps": "Lo entiendo. El año pasado tuve que [cancelar] [treinta] días. Nadie [decide] aquí, decide el [mar].",
+   "glossary": [
+    {
+     "word": "olas",
+     "meaning": "agua del mar que sube y baja"
+    },
+    {
+     "word": "reservé",
+     "meaning": "guardé un lugar con tiempo"
+    },
+    {
+     "word": "mirador",
+     "meaning": "lugar alto para mirar"
+    },
+    {
+     "word": "dron",
+     "meaning": "pequeño aparato que vuela y graba"
+    }
+   ]
+  },
+  {
+   "id": "cork",
+   "title": "Cena sin luz",
+   "place": "Un restaurante del puerto de Kinsale",
+   "context": "Belkys, de Cuba, cena en el restaurante de Gráinne cuando se va la luz en todo el pueblo.",
+   "speakers": [
+    {
+     "name": "Belkys",
+     "country": "Cuba",
+     "voice": "es-CU-BelkysNeural"
+    },
+    {
+     "name": "Gráinne",
+     "country": "México",
+     "voice": "es-MX-DaliaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "¡Uy! Se fue la luz. ¿Pasa mucho aquí?"
+    },
+    {
+     "s": 1,
+     "text": "De vez en cuando, con el viento. La cocina es eléctrica, pero tengo una barbacoa vieja en el patio."
+    },
+    {
+     "s": 0,
+     "text": "En Cuba se va la luz muchas veces. Ya estoy acostumbrada. ¿La ayudo?"
+    },
+    {
+     "s": 1,
+     "text": "Sí, por favor. Ponga una vela en cada mesa. Yo enciendo el fuego."
+    },
+    {
+     "s": 0,
+     "text": "¿Y el pescado? ¿No se estropea?"
+    },
+    {
+     "s": 1,
+     "text": "Por eso lo cocino todo esta noche. Pescado a la brasa para todos, mismo precio."
+    },
+    {
+     "s": 0,
+     "text": "Mire a la gente: están todos contentos. Parece una fiesta."
+    },
+    {
+     "s": 1,
+     "text": "La última vez mandé a todos a casa. Esta vez no."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Por qué se va la luz?",
+     "options": [
+      "Por la lluvia",
+      "Por el viento",
+      "Por un accidente"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué pone Belkys en las mesas?",
+     "options": [
+      "Flores",
+      "Platos",
+      "Velas"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cómo cocina Gráinne el pescado?",
+     "options": [
+      "A la brasa",
+      "Frito",
+      "Hervido"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué hizo Gráinne la última vez?",
+     "options": [
+      "Cerró el restaurante y mandó a todos a casa",
+      "Cocinó en la calle",
+      "Pidió una pizza"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Viviste un apagón alguna vez?",
+     "model": "Sí, en mi barrio se fue la luz toda una noche."
+    },
+    {
+     "q": "¿Ayudas cuando hay un problema en un lugar público?",
+     "model": "Sí, normalmente ofrezco ayuda si puedo."
+    },
+    {
+     "q": "¿Te gusta cenar con velas?",
+     "model": "Sí, me parece muy romántico."
+    }
+   ],
+   "gaps": "Sí, por favor. [Ponga] una [vela] en cada [mesa]. Yo enciendo el [fuego].",
+   "glossary": [
+    {
+     "word": "vela",
+     "meaning": "cosa que da luz con fuego"
+    },
+    {
+     "word": "estropea",
+     "meaning": "se pone malo"
+    },
+    {
+     "word": "a la brasa",
+     "meaning": "cocinado sobre el fuego"
+    },
+    {
+     "word": "acostumbrada",
+     "meaning": "que ya lo conoce y no le molesta"
+    }
+   ]
+  }
+ ]
+}

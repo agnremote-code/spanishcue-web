@@ -1,8 +1,8 @@
 import type {ReactNode} from "react";
 
 export const metadata={
-  title:"Irlanda en Relieve · Conversación B1 | SPANISHCUE",
-  description:"Una expedición conversacional B1 por los 26 condados de la República de Irlanda: mapa real 3D, 104 lugares, 260 detonadores y recursos bilingües.",
+  title:"Irlanda en Relieve · Conversación en 3D | SPANISHCUE",
+  description:"Un viaje en 3D por Dublín, Galway, Kerry y Cork: veinte lugares, conversaciones y escuchas desde el primer día hasta B1, más el mapa de los 26 condados.",
 };
 
 export default function IrlandaEnRelieveLayout({children}:{children:ReactNode}){return children;}

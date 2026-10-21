@@ -1,0 +1,466 @@
+{
+ "game": "irlanda",
+ "level": "A1",
+ "items": [
+  {
+   "id": "dublin",
+   "title": "El tren de la costa",
+   "place": "El tren DART, de Dublín a Howth",
+   "context": "Rodrigo, de El Salvador, viaja en el tren de la costa y habla con Sorcha.",
+   "speakers": [
+    {
+     "name": "Rodrigo",
+     "country": "El Salvador",
+     "voice": "es-SV-RodrigoNeural"
+    },
+    {
+     "name": "Sorcha",
+     "country": "España",
+     "voice": "es-ES-XimenaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Perdone, ¿este tren va a Howth?"
+    },
+    {
+     "s": 1,
+     "text": "Sí, es la última parada. Son treinta minutos."
+    },
+    {
+     "s": 0,
+     "text": "¿Qué hay en Howth?"
+    },
+    {
+     "s": 1,
+     "text": "Un puerto pequeño, focas y el mejor pescado con patatas de Dublín. Yo trabajo allí, en una pescadería."
+    },
+    {
+     "s": 0,
+     "text": "¿Focas? ¿De verdad?"
+    },
+    {
+     "s": 1,
+     "text": "Sí, esperan a los pescadores para comer. Siéntese a la derecha: el mar se ve mejor."
+    },
+    {
+     "s": 0,
+     "text": "¡Muchas gracias!"
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Adónde va el tren?",
+     "options": [
+      "A Howth",
+      "A Galway",
+      "Al aeropuerto"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cuánto tarda el viaje?",
+     "options": [
+      "Una hora",
+      "Treinta minutos",
+      "Diez minutos"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Dónde trabaja Sorcha?",
+     "options": [
+      "En el tren",
+      "En un hotel",
+      "En una pescadería"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Por qué hay que sentarse a la derecha?",
+     "options": [
+      "Porque hay sol",
+      "Porque el mar se ve mejor",
+      "Porque hay menos gente"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Viajas en tren?",
+     "model": "Sí, viajo en tren al trabajo todos los días."
+    },
+    {
+     "q": "¿Viste focas alguna vez?",
+     "model": "No, nunca, pero me gustaría verlas."
+    },
+    {
+     "q": "¿Qué pescado te gusta?",
+     "model": "Me gusta el salmón con limón."
+    }
+   ],
+   "gaps": "Un puerto [pequeño], [focas] y el mejor [pescado] con [patatas] de Dublín. Yo trabajo allí, en una pescadería.",
+   "glossary": [
+    {
+     "word": "parada",
+     "meaning": "lugar donde para el tren"
+    },
+    {
+     "word": "focas",
+     "meaning": "animales del mar que comen pescado"
+    },
+    {
+     "word": "pescadería",
+     "meaning": "tienda donde se vende pescado"
+    }
+   ]
+  },
+  {
+   "id": "galway",
+   "title": "Niebla en los acantilados",
+   "place": "Los acantilados de Moher",
+   "context": "Paola, de Venezuela, llega a los acantilados con Declan, el guía.",
+   "speakers": [
+    {
+     "name": "Paola",
+     "country": "Venezuela",
+     "voice": "es-VE-PaolaNeural"
+    },
+    {
+     "name": "Declan",
+     "country": "Costa Rica",
+     "voice": "es-CR-JuanNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Declan, no veo nada. ¡Todo está blanco!"
+    },
+    {
+     "s": 1,
+     "text": "Es la niebla. Aquí cambia el tiempo cada diez minutos."
+    },
+    {
+     "s": 0,
+     "text": "¿Y los acantilados? Vine desde Caracas para verlos."
+    },
+    {
+     "s": 1,
+     "text": "Tranquila. Esperamos un poco en la cafetería y tomamos un té."
+    },
+    {
+     "s": 0,
+     "text": "Bueno, un té con leche, por favor."
+    },
+    {
+     "s": 1,
+     "text": "¡Mira! Ya se va la niebla. Doscientos metros de roca y el mar abajo."
+    },
+    {
+     "s": 0,
+     "text": "¡Qué maravilla! Valió la pena esperar."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Por qué Paola no ve nada?",
+     "options": [
+      "Porque es de noche",
+      "Por la niebla",
+      "Por la lluvia"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cada cuánto cambia el tiempo?",
+     "options": [
+      "Cada hora",
+      "Cada día",
+      "Cada diez minutos"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué toman en la cafetería?",
+     "options": [
+      "Té",
+      "Café",
+      "Chocolate"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cuántos metros tienen los acantilados?",
+     "options": [
+      "Cien",
+      "Quinientos",
+      "Doscientos"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Te gusta la niebla?",
+     "model": "No mucho, prefiero los días de sol."
+    },
+    {
+     "q": "¿Qué tomas cuando hace frío?",
+     "model": "Tomo té con leche o una sopa."
+    },
+    {
+     "q": "¿Esperaste mucho por algo bonito?",
+     "model": "Sí, esperé dos horas para ver el amanecer."
+    }
+   ],
+   "gaps": "Es la [niebla]. Aquí [cambia] el [tiempo] cada diez [minutos].",
+   "glossary": [
+    {
+     "word": "niebla",
+     "meaning": "nube muy baja que no deja ver"
+    },
+    {
+     "word": "acantilados",
+     "meaning": "rocas muy altas al lado del mar"
+    },
+    {
+     "word": "roca",
+     "meaning": "piedra muy grande"
+    }
+   ]
+  },
+  {
+   "id": "kerry",
+   "title": "La primera ola",
+   "place": "La playa de Inch",
+   "context": "Juan, de Costa Rica, toma su primera clase de surf con Róisín.",
+   "speakers": [
+    {
+     "name": "Róisín",
+     "country": "Panamá",
+     "voice": "es-PA-MargaritaNeural"
+    },
+    {
+     "name": "Juan",
+     "country": "Paraguay",
+     "voice": "es-PY-MarioNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Bienvenido. ¿Es tu primera clase de surf?"
+    },
+    {
+     "s": 1,
+     "text": "Sí. En mi país el agua es caliente. ¿Aquí qué temperatura tiene?"
+    },
+    {
+     "s": 0,
+     "text": "Once grados. Por eso usamos este traje negro."
+    },
+    {
+     "s": 1,
+     "text": "¡Once grados! Bueno, ¿qué hago primero?"
+    },
+    {
+     "s": 0,
+     "text": "Primero practicamos en la arena: acostado, manos abajo, y de pie rápido."
+    },
+    {
+     "s": 1,
+     "text": "¿Así?"
+    },
+    {
+     "s": 0,
+     "text": "¡Perfecto! Ahora al agua. Y no tengas miedo de caerte: todos nos caemos."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué temperatura tiene el agua?",
+     "options": [
+      "Once grados",
+      "Veinte grados",
+      "Cinco grados"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Para qué es el traje negro?",
+     "options": [
+      "Para la foto",
+      "Para el sol",
+      "Para el frío"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Dónde practican primero?",
+     "options": [
+      "En el agua",
+      "En la arena",
+      "En la escuela"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué dice Róisín al final?",
+     "options": [
+      "Que todos se caen",
+      "Que Juan es muy bueno",
+      "Que la clase terminó"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Sabes nadar bien?",
+     "model": "Sí, nado bien, mi padre me enseñó en el río."
+    },
+    {
+     "q": "¿Te gusta el agua fría?",
+     "model": "No, prefiero el agua caliente del Caribe."
+    },
+    {
+     "q": "¿Qué deporte nuevo te gustaría probar?",
+     "model": "Me gustaría probar el surf o la escalada."
+    }
+   ],
+   "gaps": "Primero practicamos en la [arena]: [acostado], manos [abajo], y de [pie] rápido.",
+   "glossary": [
+    {
+     "word": "traje",
+     "meaning": "ropa especial para el agua"
+    },
+    {
+     "word": "arena",
+     "meaning": "lo que hay en la playa"
+    },
+    {
+     "word": "caerte",
+     "meaning": "ir al suelo sin querer"
+    }
+   ]
+  },
+  {
+   "id": "cork",
+   "title": "Un apellido en el museo",
+   "place": "El museo de la emigración de Cobh",
+   "context": "Andrea, de Ecuador, busca su apellido irlandés con Ciarán, el guía.",
+   "speakers": [
+    {
+     "name": "Andrea",
+     "country": "Ecuador",
+     "voice": "es-EC-AndreaNeural"
+    },
+    {
+     "name": "Ciarán",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Hola. Mi apellido es Brown. Mi bisabuelo era irlandés."
+    },
+    {
+     "s": 1,
+     "text": "Muchos irlandeses salieron de este puerto. ¿Sabe el año?"
+    },
+    {
+     "s": 0,
+     "text": "Creo que mil ochocientos ochenta. Llegó a Ecuador muy joven."
+    },
+    {
+     "s": 1,
+     "text": "Vamos a buscar en el ordenador. Brown… aquí hay doce personas en ese año."
+    },
+    {
+     "s": 0,
+     "text": "¡Doce! ¿Cómo sé cuál es?"
+    },
+    {
+     "s": 1,
+     "text": "Mire: Patrick Brown, diecinueve años, destino Guayaquil. Solo uno fue a Ecuador."
+    },
+    {
+     "s": 0,
+     "text": "¡Es él! Voy a llamar a mi madre ahora mismo."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Quién era irlandés?",
+     "options": [
+      "El padre de Andrea",
+      "El bisabuelo de Andrea",
+      "Ciarán"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Dónde buscan?",
+     "options": [
+      "En un libro",
+      "En una iglesia",
+      "En el ordenador"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuántas personas Brown hay ese año?",
+     "options": [
+      "Doce",
+      "Dos",
+      "Veinte"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué va a hacer Andrea?",
+     "options": [
+      "Volver mañana",
+      "Llamar a su madre",
+      "Comprar un libro"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Sabes de dónde viene tu apellido?",
+     "model": "Sí, viene de España, de un pueblo del norte."
+    },
+    {
+     "q": "¿Conoces la historia de tus bisabuelos?",
+     "model": "Un poco, mi abuela me contó algunas cosas."
+    },
+    {
+     "q": "¿Te gustan los museos de historia?",
+     "model": "Sí, sobre todo los de historias de personas."
+    }
+   ],
+   "gaps": "Mire: Patrick Brown, [diecinueve] [años], [destino] [Guayaquil]. Solo uno fue a Ecuador.",
+   "glossary": [
+    {
+     "word": "apellido",
+     "meaning": "nombre de la familia"
+    },
+    {
+     "word": "bisabuelo",
+     "meaning": "el padre de tu abuelo o abuela"
+    },
+    {
+     "word": "puerto",
+     "meaning": "lugar donde llegan y salen los barcos"
+    }
+   ]
+  }
+ ]
+}

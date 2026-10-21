@@ -1,0 +1,498 @@
+{
+ "game": "irlanda",
+ "level": "B1",
+ "items": [
+  {
+   "id": "dublin",
+   "title": "¿Hablar irlandés en Dublín?",
+   "place": "Un programa de radio en Dublín",
+   "context": "Alonso, periodista mexicano que vive en Dublín, entrevista a Aoife, violinista, sobre la lengua irlandesa.",
+   "speakers": [
+    {
+     "name": "Alonso",
+     "country": "Estados Unidos",
+     "voice": "es-US-AlonsoNeural"
+    },
+    {
+     "name": "Aoife",
+     "country": "Uruguay",
+     "voice": "es-UY-ValentinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Aoife, el irlandés es lengua oficial, pero casi nadie lo habla en la calle. ¿Por qué?"
+    },
+    {
+     "s": 1,
+     "text": "Durante siglos se castigaba a los niños que lo hablaban en la escuela. Las familias dejaron de usarlo para que sus hijos tuvieran trabajo."
+    },
+    {
+     "s": 0,
+     "text": "Hoy todos lo estudian en la escuela durante doce años."
+    },
+    {
+     "s": 1,
+     "text": "Sí, y muchos salen sin poder mantener una conversación. Se enseña como una obligación, no como algo vivo."
+    },
+    {
+     "s": 0,
+     "text": "¿Y qué ha cambiado?"
+    },
+    {
+     "s": 1,
+     "text": "Ahora hay escuelas donde todo se enseña en irlandés, y están llenas. También hay música, series y hasta raperos que escriben en irlandés."
+    },
+    {
+     "s": 0,
+     "text": "Algunos dicen que es dinero perdido."
+    },
+    {
+     "s": 1,
+     "text": "Una lengua no es solo para comprar pan. Es una manera de ver el mundo. Si desaparece, perdemos todos, no solo los irlandeses."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Por qué las familias dejaron de usar el irlandés?",
+     "options": [
+      "Porque era difícil",
+      "Para que sus hijos tuvieran trabajo",
+      "Porque no les gustaba"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cuántos años estudian irlandés en la escuela?",
+     "options": [
+      "Doce",
+      "Tres",
+      "Ninguno"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "Según Aoife, ¿cuál es el problema de la enseñanza?",
+     "options": [
+      "Los profesores no saben",
+      "No hay libros",
+      "Se enseña como una obligación"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué piensa Aoife si desaparece una lengua?",
+     "options": [
+      "Que no importa",
+      "Que perdemos todos",
+      "Que es normal"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Hay lenguas en peligro en tu país?",
+     "model": "Sí, hay lenguas indígenas que hablan cada vez menos personas."
+    },
+    {
+     "q": "¿Una lengua es una manera de ver el mundo?",
+     "model": "Creo que sí, porque hay palabras que no se pueden traducir."
+    },
+    {
+     "q": "¿Aprendiste algo en la escuela como una obligación?",
+     "model": "Sí, el francés, y casi no lo recuerdo."
+    }
+   ],
+   "gaps": "Una lengua no es solo para comprar pan. Es una [manera] de ver el [mundo]. Si [desaparece], [perdemos] todos, no solo los irlandeses.",
+   "glossary": [
+    {
+     "word": "castigaba",
+     "meaning": "daba una pena a alguien por algo"
+    },
+    {
+     "word": "obligación",
+     "meaning": "algo que tienes que hacer"
+    },
+    {
+     "word": "raperos",
+     "meaning": "músicos que hacen rap"
+    },
+    {
+     "word": "siglos",
+     "meaning": "periodos de cien años"
+    }
+   ]
+  },
+  {
+   "id": "galway",
+   "title": "El dibujo de la familia",
+   "place": "Una cooperativa de tejedoras en las islas de Aran",
+   "context": "Salomé, abogada colombiana, ayuda a Máire a entender una carta de una marca de moda de París.",
+   "speakers": [
+    {
+     "name": "Salomé",
+     "country": "Colombia",
+     "voice": "es-CO-SalomeNeural"
+    },
+    {
+     "name": "Máire",
+     "country": "España",
+     "voice": "es-ES-ElviraNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Máire, la carta es clara: quieren usar el dibujo de su familia en una colección de lujo y le ofrecen mucho dinero."
+    },
+    {
+     "s": 1,
+     "text": "Mi bisabuela inventó ese dibujo. Nadie nos pidió permiso nunca, hay copias en todo el mundo."
+    },
+    {
+     "s": 0,
+     "text": "Por eso me extraña. ¿Por qué pedirlo ahora? Investigué un poco: el año pasado ya vendieron jerséis con un dibujo muy parecido."
+    },
+    {
+     "s": 1,
+     "text": "¿Entonces la carta no es una pregunta?"
+    },
+    {
+     "s": 0,
+     "text": "Creo que es una manera de evitar un juicio. Si usted firma, acepta que todo fue legal."
+    },
+    {
+     "s": 1,
+     "text": "Mi hija dice que acepte. Con ese dinero arreglamos la casa y la escuela de tejido."
+    },
+    {
+     "s": 0,
+     "text": "Puede aceptar, pero con condiciones: el nombre de la isla en cada etiqueta y una parte hecha a mano aquí."
+    },
+    {
+     "s": 1,
+     "text": "Eso me gusta más. Que se lleven el dibujo, pero también nuestro trabajo."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué quiere la marca de París?",
+     "options": [
+      "Usar el dibujo de la familia de Máire",
+      "Comprar la tienda",
+      "Contratar a Máire"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué descubrió Salomé?",
+     "options": [
+      "Que la marca no existe",
+      "Que la marca ya vendió jerséis parecidos",
+      "Que el dibujo es de otra isla"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "Según Salomé, ¿qué pasa si Máire firma?",
+     "options": [
+      "Pierde la casa",
+      "Tiene que viajar a París",
+      "Acepta que todo fue legal"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué condición propone Salomé?",
+     "options": [
+      "Más dinero",
+      "Una parte hecha a mano en la isla",
+      "Un viaje a Francia"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Quién debería ser dueño de un dibujo tradicional?",
+     "model": "Creo que la comunidad que lo creó, no una empresa."
+    },
+    {
+     "q": "¿Firmarías algo que no entiendes del todo?",
+     "model": "No, siempre pido ayuda antes de firmar."
+    },
+    {
+     "q": "¿Qué condición pondrías tú a la marca?",
+     "model": "Pediría que una parte del dinero fuera para la isla."
+    }
+   ],
+   "gaps": "Creo que es una [manera] de [evitar] un [juicio]. Si usted [firma], acepta que todo fue legal.",
+   "glossary": [
+    {
+     "word": "juicio",
+     "meaning": "proceso ante un juez"
+    },
+    {
+     "word": "etiqueta",
+     "meaning": "papel pequeño en la ropa con información"
+    },
+    {
+     "word": "de lujo",
+     "meaning": "muy caro y exclusivo"
+    },
+    {
+     "word": "condiciones",
+     "meaning": "cosas que pides para aceptar"
+    }
+   ]
+  },
+  {
+   "id": "kerry",
+   "title": "Turistas o vecinos",
+   "place": "Una heladería del puerto de Dingle",
+   "context": "Emilio, de República Dominicana, trabaja en la heladería de Orla y duerme en una furgoneta. Habla con ella del piso de arriba.",
+   "speakers": [
+    {
+     "name": "Emilio",
+     "country": "República Dominicana",
+     "voice": "es-DO-EmilioNeural"
+    },
+    {
+     "name": "Orla",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Orla, perdona que te lo pregunte otra vez. ¿Pensaste en lo del piso de arriba?"
+    },
+    {
+     "s": 1,
+     "text": "Sí, Emilio, no he pensado en otra cosa. Si lo alquilo a turistas en julio y agosto, pago la hipoteca de todo el año."
+    },
+    {
+     "s": 0,
+     "text": "Lo sé. Pero en la furgoneta hace mucho frío y en Dingle no hay nada para alquilar todo el año."
+    },
+    {
+     "s": 1,
+     "text": "Ese es el problema del pueblo: hay más camas para turistas que para vecinos. Y yo también soy parte del problema."
+    },
+    {
+     "s": 0,
+     "text": "Si me voy a Tralee, tendría dos horas de viaje cada día."
+    },
+    {
+     "s": 1,
+     "text": "Y yo me quedaría sin mi mejor empleado. Te propongo algo: te lo alquilo barato, pero tengo que subir el precio de los helados."
+    },
+    {
+     "s": 0,
+     "text": "¿Y los clientes no se van a quejar?"
+    },
+    {
+     "s": 1,
+     "text": "Voy a poner un cartel explicando por qué. Prefiero clientes que entiendan a un pueblo sin gente joven."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Dónde duerme Emilio?",
+     "options": [
+      "En casa de un amigo",
+      "En una furgoneta",
+      "En un hotel"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué paga Orla con el alquiler de verano?",
+     "options": [
+      "La hipoteca de todo el año",
+      "El sueldo de Emilio",
+      "Un coche nuevo"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué problema tiene el pueblo?",
+     "options": [
+      "No hay turistas",
+      "No hay trabajo",
+      "Hay más camas para turistas que para vecinos"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué va a hacer Orla con los clientes?",
+     "options": [
+      "Bajar los precios",
+      "Cerrar en invierno",
+      "Poner un cartel explicando por qué"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿El turismo hace la vida más cara donde vives?",
+     "model": "Sí, en el centro los alquileres subieron muchísimo."
+    },
+    {
+     "q": "¿Pagarías más por un producto si sabes por qué?",
+     "model": "Creo que sí, si la razón me parece justa."
+    },
+    {
+     "q": "¿Es fácil para los jóvenes encontrar vivienda en tu país?",
+     "model": "No, muchos viven con sus padres hasta los treinta años."
+    }
+   ],
+   "gaps": "Ese es el [problema] del pueblo: hay más [camas] para [turistas] que para [vecinos]. Y yo también soy parte del problema.",
+   "glossary": [
+    {
+     "word": "hipoteca",
+     "meaning": "préstamo para comprar una casa"
+    },
+    {
+     "word": "furgoneta",
+     "meaning": "coche grande para llevar cosas"
+    },
+    {
+     "word": "empleado",
+     "meaning": "persona que trabaja para otra"
+    },
+    {
+     "word": "cartel",
+     "meaning": "papel grande con información"
+    }
+   ]
+  },
+  {
+   "id": "cork",
+   "title": "El patrocinador del festival",
+   "place": "Un bar del festival de jazz de Cork",
+   "context": "Tania, periodista paraguaya, habla con Fintan, saxofonista y profesor, después de su concierto.",
+   "speakers": [
+    {
+     "name": "Tania",
+     "country": "Paraguay",
+     "voice": "es-PY-TaniaNeural"
+    },
+    {
+     "name": "Fintan",
+     "country": "Bolivia",
+     "voice": "es-BO-MarceloNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Fintan, este año el festival tiene un patrocinador nuevo: una casa de apuestas. ¿Qué opina?"
+    },
+    {
+     "s": 1,
+     "text": "Es complicado. Sin ese dinero, el festival sería la mitad de grande y los músicos de los bares pequeños perderían su oportunidad."
+    },
+    {
+     "s": 0,
+     "text": "Pero usted es profesor. Trabaja con jóvenes."
+    },
+    {
+     "s": 1,
+     "text": "Por eso me cuesta tanto. Un antiguo alumno mío perdió su piso a los diecinueve años por apostar con el móvil."
+    },
+    {
+     "s": 0,
+     "text": "¿Pensó en no tocar?"
+    },
+    {
+     "s": 1,
+     "text": "Lo pensé. Pero él mismo me escribió: «Toque, profe. Si el festival desaparece, perdemos otra cosa buena»."
+    },
+    {
+     "s": 0,
+     "text": "¿Entonces?"
+    },
+    {
+     "s": 1,
+     "text": "Voy a tocar, y voy a donar lo que me paguen a un centro que ayuda a personas con adicción al juego."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Quién es el patrocinador nuevo?",
+     "options": [
+      "Una casa de apuestas",
+      "Un banco",
+      "Una marca de cerveza"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué pasaría sin ese dinero?",
+     "options": [
+      "El festival sería la mitad de grande",
+      "El festival sería gratis",
+      "No habría cambios"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué le pasó al antiguo alumno?",
+     "options": [
+      "Ganó mucho dinero",
+      "Se fue del país",
+      "Perdió su piso por apostar"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué va a hacer Fintan con su pago?",
+     "options": [
+      "Comprar un saxofón",
+      "Donarlo a un centro de ayuda",
+      "Devolverlo"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Aceptarías dinero de una empresa que no te gusta para algo bueno?",
+     "model": "Depende, si el beneficio es grande quizás sí."
+    },
+    {
+     "q": "¿Debería prohibirse la publicidad de apuestas?",
+     "model": "Creo que sí, al menos en eventos para jóvenes."
+    },
+    {
+     "q": "¿Qué harías en el lugar de Fintan?",
+     "model": "Haría lo mismo, tocar y explicar mi posición."
+    }
+   ],
+   "gaps": "Voy a [tocar], y voy a [donar] lo que me paguen a un [centro] que ayuda a personas con [adicción] al juego.",
+   "glossary": [
+    {
+     "word": "patrocinador",
+     "meaning": "empresa que da dinero a cambio de publicidad"
+    },
+    {
+     "word": "apuestas",
+     "meaning": "juego de dinero sobre un resultado"
+    },
+    {
+     "word": "donar",
+     "meaning": "dar algo sin pedir nada"
+    },
+    {
+     "word": "adicción",
+     "meaning": "necesidad muy fuerte de algo que hace daño"
+    }
+   ]
+  }
+ ]
+}

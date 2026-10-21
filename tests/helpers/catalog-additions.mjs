@@ -231,6 +231,8 @@ const OLD_32_GOALS = ["Ubicar las cuatro naciones y las nueve regiones oficiales
 const NEW_32_GOALS = ["Conversar con personajes en veinte lugares reales del Reino Unido", "Decidir, reaccionar a sorpresas y responder preguntas de tu nivel, de A0 a B1", "Comprender una escucha por nación y comparar formas de vivir"];
 const OLD_32_EXPLANATION = "Una expedición conversacional por las doce áreas ITL1 del Reino Unido: cada territorio abre cuatro lugares reales y preguntas diferentes según el nivel, con vocabulario y apoyos bilingües.";
 const NEW_32_EXPLANATION = "Un mundo 3D con Inglaterra, Escocia, Gales e Irlanda del Norte. En cada nación caminas por cinco lugares y hablas con su gente: una situación, una decisión, una sorpresa y preguntas con ayuda, en A0, A1, A2 o B1. El mapa en relieve de las doce áreas sigue disponible.";
+const OLD_33_ROW = "{id:33,level:\"B1\",category:\"Conversación\",title:\"Irlanda en Relieve\",subtitle:\"26 condados, 104 lugares reales y 260 detonadores para descubrir la República de Irlanda condado por condado\",duration:\"90+ min\",tag:\"260 preguntas\",special:true,path:\"/irlanda-en-relieve\",goals:[\"Sostener respuestas B1 con razones, ejemplos y comparaciones\",\"Distinguir los 26 condados de la República y sus cuatro provincias históricas\",\"Hablar de costa, lengua irlandesa, vivienda, turismo, patrimonio, movilidad y vida rural\"],warmup:\"Elige un condado en el mapa real y anticipa qué decisión local podría aparecer allí.\",explanation:\"Una expedición conversacional por los 26 condados tradicionales de la República de Irlanda: cada territorio abre cuatro lugares concretos, una pregunta propia y seis preguntas centrales para desarrollar respuestas B1.\",practice:[],speaking:[],homework:\"\"}";
+const NEW_33_ROW = "{id:33,level:\"B1\",levels:[\"A0\",\"A1\",\"A2\",\"B1\"],displayLevel:\"A0–B1\",category:\"Conversación\",title:\"Irlanda en Relieve\",subtitle:\"Un viaje en 3D por Dublín, Galway, Kerry y Cork.\",duration:\"90+ min\",tag:\"3D · 4 regiones · 20 lugares · A0–B1\",special:true,path:\"/irlanda-en-relieve\",goals:[\"Conversar con personajes en veinte lugares reales de Irlanda\",\"Decidir, reaccionar a sorpresas y responder preguntas de tu nivel, de A0 a B1\",\"Comprender una escucha por región y comparar formas de vivir\"],warmup:\"Elige una región en el mapa y di qué lugar quieres visitar.\",explanation:\"Un mundo 3D con Dublín, Galway y Connemara, Kerry y Cork. En cada región caminas por cinco lugares y hablas con su gente: una situación, una decisión, una sorpresa y preguntas con ayuda, en A0, A1, A2 o B1. El mapa en relieve de los 26 condados sigue disponible.\",practice:[],speaking:[],homework:\"\"}";
 // 2026-10-15: every grammar class got its own teacher-style thumbnail (scripts/grammar-thumbnails)
 // and the first class (239) moved from the A0 filter to A1. Display-only: before comparing
 // against the historical ledger, the previous shared preview is restored.
@@ -246,6 +248,30 @@ const repairs = [
     edits: {
       'app/lesson-catalog.ts': [[`subtitle:"${NEW_137_SUBTITLE}"`, `subtitle:"${OLD_137_SUBTITLE}"`], [`explanation:"${NEW_137_EXPLANATION}"`, `explanation:"${OLD_137_EXPLANATION}"`]],
       'package.json': [['"test:conversation": "node --test tests/uno-o-el-otro-dilemmas.test.mjs ', '"test:conversation": "node --test ']],
+    },
+  },
+  {
+    // 2026-10-21: Irlanda (ID 33) became a 3D world like Estados Unidos (four regions, twenty
+    // places, A0–B1; behaviour covered by tests/paises-3d.test.mjs). The relief map of the
+    // 26 counties (B1) stays inside it (?vista=atlas, app/irlanda-en-relieve/Atlas.tsx);
+    // route, ID and PRO access are unchanged.
+    id: 33,
+    path: '/irlanda-en-relieve',
+    // Undone first: it is the latest change to the files it shares (before ID 32).
+    latest: true,
+    files: /^(?:app\/irlanda-en-relieve\/|app\/escucha-3d\/content\/irlanda\/|tests\/paises-3d\.test\.mjs$)/,
+    restore: {
+      levels: [['A0', 'A1', 'A2', 'B1'], undefined],
+      displayLevel: ['A0–B1', undefined],
+      subtitle: ['Un viaje en 3D por Dublín, Galway, Kerry y Cork.', '26 condados, 104 lugares reales y 260 detonadores para descubrir la República de Irlanda condado por condado'],
+      tag: ['3D · 4 regiones · 20 lugares · A0–B1', '260 preguntas'],
+      goals: [["Conversar con personajes en veinte lugares reales de Irlanda", "Decidir, reaccionar a sorpresas y responder preguntas de tu nivel, de A0 a B1", "Comprender una escucha por región y comparar formas de vivir"], ["Sostener respuestas B1 con razones, ejemplos y comparaciones", "Distinguir los 26 condados de la República y sus cuatro provincias históricas", "Hablar de costa, lengua irlandesa, vivienda, turismo, patrimonio, movilidad y vida rural"]],
+      warmup: ['Elige una región en el mapa y di qué lugar quieres visitar.', 'Elige un condado en el mapa real y anticipa qué decisión local podría aparecer allí.'],
+      explanation: ['Un mundo 3D con Dublín, Galway y Connemara, Kerry y Cork. En cada región caminas por cinco lugares y hablas con su gente: una situación, una decisión, una sorpresa y preguntas con ayuda, en A0, A1, A2 o B1. El mapa en relieve de los 26 condados sigue disponible.', 'Una expedición conversacional por los 26 condados tradicionales de la República de Irlanda: cada territorio abre cuatro lugares concretos, una pregunta propia y seis preguntas centrales para desarrollar respuestas B1.'],
+    },
+    edits: {
+      'app/lesson-catalog.ts': [[NEW_33_ROW, OLD_33_ROW]],
+      'tests/level-cleanup.test.mjs': [["[32,33,36,210,", "[32,36,210,"], ["includes('A0')).length,13);", "includes('A0')).length,12);"], ["assert.equal(a1Lessons.length, 72);", "assert.equal(a1Lessons.length, 71);"]],
     },
   },
   {

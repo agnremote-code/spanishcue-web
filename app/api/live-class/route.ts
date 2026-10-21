@@ -20,7 +20,7 @@ function sameOrigin(request: Request): boolean {
 }
 
 /** 3D conversation worlds that save «Con profesor» progress here too (36: Estados Unidos 3D, 210: México 3D). */
-const WORLD_LESSON_IDS = new Set([36, 32, 210, 227, 228, 229]);
+const WORLD_LESSON_IDS = new Set([36, 32, 33, 210, 227, 228, 229]);
 const lessonIdOf = (value: unknown) => (Number.isInteger(Number(value)) && (getLiveLessonInfo(Number(value)) || WORLD_LESSON_IDS.has(Number(value))) ? Number(value) : null);
 const studentIdOf = (value: unknown) => (typeof value === "string" && /^[A-Za-z0-9-]{1,64}$/.test(value) ? value : null);
 
