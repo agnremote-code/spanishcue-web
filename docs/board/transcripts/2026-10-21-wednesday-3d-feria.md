@@ -844,3 +844,68 @@ You may run read-only commands and tests (e.g. `node --test tests/la-feria-de-vi
 
 Report findings each as BLOCKER / SHOULD-FIX / NOTE with file:line, a concrete failure scenario, and a suggested fix. End with exactly one line: `QA: RELEASE-READY at d7299793` or `QA: NOT READY at d7299793`.
 ````
+
+## 2026-10-21T04:47:39.292Z — QA (fresh agent) → Facilitator (report)
+
+````text
+**QA review of PR #251 (`claude/escucha-3d-feria-a2-20261021` at d7299793, merge-base 28d852a): no blockers and no should-fixes, four notes below.**
+
+I stayed read-only: no git writes and no edits. The only things written were `dist/` (from `npm run build`) and scratch files. The working tree is clean.
+
+**What I checked and ran**
+- `npm run build`: exit 0. "Protected 126 private client modules and 899 premium media files", and the Sites artifact validated.
+- `node --test tests/la-feria-de-villaluz.test.mjs tests/feria-look-contract.test.mjs tests/escucha-3d.test.mjs`: 35/35 pass.
+- `node scripts/check-feria.mjs`: 763/763 checks pass, all 8 circles authored.
+- `tests/worker-startup.test.mjs`: the 36 MiB budget subtest passes; Worker modules total 32.04 MiB. The other 2 subtests fail in a plain `node --test` run with `ERR_UNSUPPORTED_ESM_URL_SCHEME 'cloudflare:'`. That is an environment limit here, not a code failure, and the full `npm test` had already passed.
+- I started the built Worker with `wrangler dev --local` and made anonymous requests against it (results in section 1).
+
+**1. Access / PRO leak: clean**
+- `app/access-policy.ts` is unchanged. The FREE samples and `freeAudioPrefixes` (hotel, latam, phonetics, grammar-free) are not loosened.
+- **Page gating (anonymous):**
+  - `/la-feria-de-villaluz` → 302 to `/acceso?returnTo=%2Fla-feria-de-villaluz`.
+  - `/la-feria-de-villaluz.rsc` → same 302.
+  - Forged `x-chespanish-access-level: full` and `x-chespanish-owner: 1` headers → still 302. This matches `/hospital-san-casi-vivo`.
+- **Audio:**
+  - `/audio/escucha-3d/feria-a2-baile.mp3` and `feria-a2-busca-fotos-ines.mp3` → 403, including with the forged header.
+  - All 15 feria clips are in `dist/server/private-media-assets.js` (encrypted), and none are in plain form under `dist/client/audio`.
+- **Chunks:**
+  - No public client JS contains feria strings ("Villaluz", "Rosario", "camiseta verde", "informacion-emilio").
+  - FeriaGame, `levels/a2.mjs`, Escucha and World3D are not reachable from any public root in `scripts/protect-client-assets.mjs`.
+  - Feria listenings load through the dynamic `LOADERS.feria.A2` import, so they are their own private chunk.
+  - `a2.busca.json` is not imported by app code at all; only the audio generator and the export script read it.
+- **Cover and preview:** `cover.webp` and `conversation-previews/241.mp4` are public (200). This is identical to the hospital's `cover.webp` and `240.mp4`; they are marketing media.
+- **`/resources/spanish-conversation-activity-a2-la-feria-de-villaluz`:** returns 200 with catalog metadata only. It says "the scenes, dialogues and listenings stay inside the lesson", and contains no announcements, character names, Busca text or teacher notes.
+
+**2. Shared-code regressions: none**
+- `games.mjs`, `games.d.mts`, `types.ts` and `loaders.ts` only add the `feria` entry.
+- `Escucha.tsx` pulls the transcript into an exported `Transcript` component with identical markup. The only difference is `speakers[line.s]?.name`, which is slightly more tolerant than before.
+- `generate-escucha-3d-audio.py`: the `items` path is unchanged, and the digest inputs (`VERSION`, `RATE`, speakers, lines) are unchanged. The `audio-manifest.json` diff is additions only, so no existing clip's hash changes. The `announcements` branch applies only to files without `items`. There is a test keeping `a2.busca.json` in sync with BUSCA (`tests/la-feria-de-villaluz.test.mjs:236`).
+- `lesson-catalog.ts` adds one row and appends 241 to the end of the Conversación route. `conversation-preview-videos.ts` and `resource-seo.ts` each add 241. `scripts/test-worker.mjs` adds one test line.
+- Each test change is a legitimate +1 lesson, not a weakening:
+  - `level-cleanup` count 314 → 315.
+  - `rendered-html` counts 292/307 → 293/308.
+  - `noche-abierta` adds the three feria three.js importers to the existing allowlist, with the same pattern as the hospital.
+  - `catalog-additions` gets an undo entry shaped like the hospital's, plus 241 in both id filters.
+
+**3. Runtime risks in the new world: none blocking**
+- three.js is only imported by World3D, `feria3d` and `bake3d`. World3D is loaded with `dynamic(..., {ssr:false})`.
+- No `window` or `document` at module scope in SSR-reached code. Browser APIs are used only inside effects or functions.
+- WebGL fallback to the 2D map is covered on all three paths: renderer construction failure, `buildFair` failure, and `webglcontextlost` (calls `preventDefault` then `onFail`).
+- The cleanup removes every listener, the ResizeObserver and the animation frame, and disposes the composer and renderer.
+- Storage matches D2:
+  - `localStorage` holds level, circles done and route (`spanishcue:la-feria-de-villaluz:v1`) plus position (`...:pose:v1`).
+  - `sessionStorage` holds ticks, picks, Busca tries, checks and finished.
+  - Every read and write is in try/catch, and `restore` / `restoreSession` validate their input.
+- The only network call is the existing `PUT /api/progress` (lessonId 241). No `speechSynthesis` (also enforced by a test). The ambience uses Web Audio, starts on a user click and is closed on unmount.
+
+**4. Worker bundle: within budget**
+32.04 MiB against the 36 MiB guard. New server-side SSR chunks add about 300 KB in total: FeriaGame 155 KB, World3D 42 KB, Escucha 32 KB, look-contract 27 KB, a2 25 KB. No media goes into the server bundle.
+
+**Notes (none block the release)**
+- **NOTE**, `app/la-feria-de-villaluz/World3D.tsx` unmount cleanup (`scene.traverse` → `material.dispose`): textures are not disposed. That includes the `CanvasTexture` from `numberSprite` (`feria3d.ts:84`) for any Busca candidates still on screen when the world unmounts. The effect is a few small GPU textures held until the canvas is garbage-collected, and only if someone repeatedly switches between 3D and map. Suggested fix: also dispose `mat.map` in the traverse.
+- **NOTE**, `app/la-feria-de-villaluz/feria3d.ts:294`: removing Busca candidates disposes their materials. If `noche-abierta/people3d` shares cached materials across people, three.js just re-uploads them on the next render. That costs a possible one-frame hitch, with no crash.
+- **NOTE**, commit history: the branch carries many `wip(feria): checkpoint` commits. Cosmetic only; consider squash-merging if the repository allows it.
+- **NOTE**, `FeriaGame.tsx` title screen: the level radio buttons have no `onClick`. This is harmless while A2 is the only level, but needs wiring when a second level is added.
+
+QA: RELEASE-READY at d7299793
+````
