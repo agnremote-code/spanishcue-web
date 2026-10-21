@@ -1,0 +1,498 @@
+{
+ "game": "suecia",
+ "level": "B1",
+ "items": [
+  {
+   "id": "estocolmo",
+   "title": "La cena del Nobel",
+   "place": "El Ayuntamiento de Estocolmo",
+   "context": "Emilio, periodista de la República Dominicana, entrevista a Karin, organizadora de la cena del Nobel.",
+   "speakers": [
+    {
+     "name": "Emilio",
+     "country": "República Dominicana",
+     "voice": "es-DO-EmilioNeural"
+    },
+    {
+     "name": "Karin",
+     "country": "España",
+     "voice": "es-ES-XimenaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Karin, algunos activistas dicen que gastar tanto dinero en la cena del Nobel no tiene sentido. ¿Qué les responde?"
+    },
+    {
+     "s": 1,
+     "text": "Entiendo la crítica. Muchos científicos jóvenes no tienen dinero para investigar, y eso es un problema real."
+    },
+    {
+     "s": 0,
+     "text": "Entonces, ¿por qué no reducir la cena?"
+    },
+    {
+     "s": 1,
+     "text": "Porque esta cena es la única noche del año en que todo el mundo mira a la ciencia y a la literatura como si fueran estrellas de cine. Sin la fiesta, pocos hablarían de una química o de un poeta."
+    },
+    {
+     "s": 0,
+     "text": "¿Y no hay una solución intermedia?"
+    },
+    {
+     "s": 1,
+     "text": "Yo he propuesto algo: invitar cada año a cien investigadores jóvenes. Así la cena también sería para el futuro, no solo para los premiados."
+    },
+    {
+     "s": 0,
+     "text": "¿Y qué le ha dicho la Fundación?"
+    },
+    {
+     "s": 1,
+     "text": "Que lo van a estudiar. En Suecia todo se estudia mucho antes de cambiar."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué critican los activistas?",
+     "options": [
+      "El gasto de la cena",
+      "El menú",
+      "Los premios"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué problema reconoce Karin?",
+     "options": [
+      "Que la cena es aburrida",
+      "Que los científicos jóvenes no tienen dinero",
+      "Que hay pocos periodistas"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué ha propuesto Karin?",
+     "options": [
+      "Cancelar la cena",
+      "Reducir el menú",
+      "Invitar a cien investigadores jóvenes"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué ha respondido la Fundación?",
+     "options": [
+      "Que lo van a estudiar",
+      "Que no",
+      "Que sí, inmediatamente"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Los premios importantes ayudan a la ciencia y a la cultura?",
+     "model": "Creo que sí, porque hacen que la gente hable de temas que normalmente ignora."
+    },
+    {
+     "q": "¿Está bien gastar mucho dinero en una celebración?",
+     "model": "Depende de quién paga y de para qué sirve la celebración."
+    },
+    {
+     "q": "¿Qué persona de tu país merecería un premio importante?",
+     "model": "Una profesora de mi ciudad que ayuda a niños sin recursos."
+    }
+   ],
+   "gaps": "Yo he propuesto algo: invitar cada año a [cien] [investigadores] jóvenes. Así la cena también sería para el [futuro], no solo para los [premiados].",
+   "glossary": [
+    {
+     "word": "investigar",
+     "meaning": "estudiar algo para descubrir cosas nuevas"
+    },
+    {
+     "word": "intermedia",
+     "meaning": "entre dos extremos"
+    },
+    {
+     "word": "premiados",
+     "meaning": "personas que reciben un premio"
+    },
+    {
+     "word": "crítica",
+     "meaning": "opinión negativa sobre algo"
+    }
+   ]
+  },
+  {
+   "id": "gotemburgo",
+   "title": "Robots en la fábrica",
+   "place": "La fábrica de coches de Gotemburgo",
+   "context": "Jonas, que trabaja en la línea de montaje, habla con su hermana Sara, ingeniera de la misma fábrica.",
+   "speakers": [
+    {
+     "name": "Jonas",
+     "country": "Venezuela",
+     "voice": "es-VE-SebastianNeural"
+    },
+    {
+     "name": "Sara",
+     "country": "Colombia",
+     "voice": "es-CO-SalomeNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Sara, dicen en la fábrica que en diez años habrá la mitad de trabajadores. ¿Es verdad?"
+    },
+    {
+     "s": 1,
+     "text": "Es lo que planea la empresa. Yo estoy en el equipo que diseña la nueva línea de montaje."
+    },
+    {
+     "s": 0,
+     "text": "O sea, que estás diseñando mi despido."
+    },
+    {
+     "s": 1,
+     "text": "No es tan simple, Jonas. Si no lo hacemos nosotros, otra empresa lo hará y perderemos todos los puestos, no solo la mitad."
+    },
+    {
+     "s": 0,
+     "text": "Eso no me consuela mucho. Llevo veinte años en esa línea."
+    },
+    {
+     "s": 1,
+     "text": "Lo sé. Por eso he propuesto algo: que la empresa forme a los trabajadores para reparar y programar los robots. Tú conoces las máquinas mejor que nadie."
+    },
+    {
+     "s": 0,
+     "text": "¿Y la empresa ha aceptado?"
+    },
+    {
+     "s": 1,
+     "text": "Todavía no. Pero los sindicatos me apoyan. La semana que viene hay una reunión importante."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuántos trabajadores habrá en diez años?",
+     "options": [
+      "El doble",
+      "La mitad",
+      "Los mismos"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué hace Sara en la empresa?",
+     "options": [
+      "Trabaja en la línea",
+      "Es jefa de personal",
+      "Diseña la nueva línea de montaje"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuántos años lleva Jonas en la línea?",
+     "options": [
+      "Veinte",
+      "Diez",
+      "Cinco"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué ha propuesto Sara?",
+     "options": [
+      "Cerrar la fábrica",
+      "Formar a los trabajadores",
+      "Comprar más robots"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Los robots van a quitar muchos trabajos?",
+     "model": "Creo que algunos sí, pero también aparecerán trabajos nuevos."
+    },
+    {
+     "q": "¿Quién debería pagar la formación de los trabajadores?",
+     "model": "La empresa, porque es la que gana con los robots."
+    },
+    {
+     "q": "¿Hablarías de trabajo con tu familia si fuera un tema delicado?",
+     "model": "Sí, pero con mucho cuidado y sin contar secretos."
+    }
+   ],
+   "gaps": "Lo sé. Por eso he propuesto algo: que la empresa [forme] a los [trabajadores] para [reparar] y [programar] los robots.",
+   "glossary": [
+    {
+     "word": "línea de montaje",
+     "meaning": "lugar donde se construyen los coches paso a paso"
+    },
+    {
+     "word": "despido",
+     "meaning": "cuando una empresa te quita el trabajo"
+    },
+    {
+     "word": "consuela",
+     "meaning": "hace sentir mejor"
+    },
+    {
+     "word": "sindicatos",
+     "meaning": "organizaciones que defienden a los trabajadores"
+    }
+   ]
+  },
+  {
+   "id": "laponia",
+   "title": "La ciudad que se muda",
+   "place": "El centro nuevo de Kiruna",
+   "context": "Per, minero en Kiruna, intenta convencer a su madre de que visite el centro nuevo de la ciudad.",
+   "speakers": [
+    {
+     "name": "Per",
+     "country": "Perú",
+     "voice": "es-PE-AlexNeural"
+    },
+    {
+     "name": "Madre de Per",
+     "country": "Bolivia",
+     "voice": "es-BO-SofiaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Mamá, ¿por qué no quieres venir al centro nuevo? Hay un café muy bonito."
+    },
+    {
+     "s": 1,
+     "text": "Porque allí no ha pasado nada, hijo. En el centro viejo me enamoré de tu padre, y allí estaba el bar donde bailábamos."
+    },
+    {
+     "s": 0,
+     "text": "Lo entiendo, pero la mina estaba rompiendo el suelo. No se podía vivir allí."
+    },
+    {
+     "s": 1,
+     "text": "Ya lo sé. La mina nos da de comer y al mismo tiempo se come la ciudad. Es una cosa muy rara."
+    },
+    {
+     "s": 0,
+     "text": "El ayuntamiento quiere reconstruir un edificio del pasado. Solo hay dinero para uno. ¿Cuál elegirías?"
+    },
+    {
+     "s": 1,
+     "text": "El bar de los mineros, sin duda. Con las mismas mesas y la misma música. Allí tu abuelo jugaba a las cartas todos los sábados."
+    },
+    {
+     "s": 0,
+     "text": "Pues voy a votar por el bar. Y el día que abra, te invito a bailar."
+    },
+    {
+     "s": 1,
+     "text": "Trato hecho. Pero solo si ponen música de mi época."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Por qué no quiere ir la madre al centro nuevo?",
+     "options": [
+      "Está lejos",
+      "Es caro",
+      "Allí no ha pasado nada"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Por qué se ha movido la ciudad?",
+     "options": [
+      "La mina rompía el suelo",
+      "Había muchas inundaciones",
+      "Hacía demasiado frío"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué edificio elegiría la madre?",
+     "options": [
+      "La estación",
+      "El bar de los mineros",
+      "La iglesia"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué promete Per?",
+     "options": [
+      "Comprarle una casa",
+      "Llevarla al cine",
+      "Invitarla a bailar"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué lugar de tu infancia ha desaparecido?",
+     "model": "El cine de mi barrio; ahora es un supermercado."
+    },
+    {
+     "q": "¿Es mejor reconstruir el pasado o construir algo nuevo?",
+     "model": "Depende; a veces el pasado nos da identidad, pero también hay que pensar en los jóvenes."
+    },
+    {
+     "q": "¿Qué hace que un lugar sea tuyo?",
+     "model": "Los recuerdos y las personas con las que he vivido allí."
+    }
+   ],
+   "gaps": "El bar de los mineros, sin duda. Con las [mismas mesas] y la misma [música]. Allí tu abuelo jugaba a las [cartas] todos los [sábados].",
+   "glossary": [
+    {
+     "word": "reconstruir",
+     "meaning": "volver a construir algo que ya no existe"
+    },
+    {
+     "word": "mineros",
+     "meaning": "personas que trabajan en una mina"
+    },
+    {
+     "word": "suelo",
+     "meaning": "la tierra donde se camina y se construye"
+    },
+    {
+     "word": "trato hecho",
+     "meaning": "de acuerdo, aceptado"
+    }
+   ]
+  },
+  {
+   "id": "malmo",
+   "title": "El chico del tren",
+   "place": "El último tren de Copenhague a Malmö",
+   "context": "Paloma, de Estados Unidos, ayuda a Mikael, el revisor, con un chico que viaja sin pasaporte.",
+   "speakers": [
+    {
+     "name": "Paloma",
+     "country": "Estados Unidos",
+     "voice": "es-US-PalomaNeural"
+    },
+    {
+     "name": "Mikael",
+     "country": "Uruguay",
+     "voice": "es-UY-MateoNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Perdone, ¿qué pasa? ¿Por qué hay un chico llorando en el baño?"
+    },
+    {
+     "s": 1,
+     "text": "No tiene billete ni pasaporte. Dice que huye de la guerra y que su hermano lo espera en Malmö."
+    },
+    {
+     "s": 0,
+     "text": "¿Y qué va a hacer usted?"
+    },
+    {
+     "s": 1,
+     "text": "Las normas dicen que tengo que avisar a la policía. Pero no quiero que lo devuelvan sin escucharlo."
+    },
+    {
+     "s": 0,
+     "text": "Yo trabajo en una organización de ayuda a refugiados. Si quiere, llamo ahora a una compañera."
+    },
+    {
+     "s": 1,
+     "text": "Eso sería perfecto. Así puede pedir asilo de forma legal y no tiene que esconderse."
+    },
+    {
+     "s": 0,
+     "text": "Le estoy escribiendo. Dice que en veinte minutos nos espera en la estación."
+    },
+    {
+     "s": 1,
+     "text": "Gracias. Faltan diez minutos para llegar. Voy a darle agua y algo de comer; está temblando de frío."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué no tiene el chico?",
+     "options": [
+      "Billete ni pasaporte",
+      "Dinero ni comida",
+      "Familia"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Quién lo espera en Malmö?",
+     "options": [
+      "Su madre",
+      "Su hermano",
+      "Un amigo"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Dónde trabaja Paloma?",
+     "options": [
+      "En el tren",
+      "En la policía",
+      "En una organización de ayuda"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué va a hacer Mikael?",
+     "options": [
+      "Darle agua y comida",
+      "Llamar a su jefe",
+      "Bajarlo del tren"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Alguna vez has tenido que elegir entre una norma y tu conciencia?",
+     "model": "Sí, una vez dejé entrar a una persona sin entrada porque estaba enferma."
+    },
+    {
+     "q": "¿Cómo se trata a los refugiados en tu país?",
+     "model": "Creo que depende mucho del gobierno y de la ciudad."
+    },
+    {
+     "q": "¿Qué harías en el lugar de Mikael?",
+     "model": "Avisaría a la policía, pero también buscaría ayuda legal para el chico."
+    }
+   ],
+   "gaps": "Así puede [pedir] [asilo] de forma [legal] y no tiene que [esconderse].",
+   "glossary": [
+    {
+     "word": "huye",
+     "meaning": "se escapa de un peligro"
+    },
+    {
+     "word": "asilo",
+     "meaning": "protección que da un país a una persona en peligro"
+    },
+    {
+     "word": "esconderse",
+     "meaning": "ponerse donde nadie te ve"
+    },
+    {
+     "word": "temblando",
+     "meaning": "moviéndose por el frío o el miedo"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,479 @@
+{
+ "game": "espana",
+ "level": "A1",
+ "items": [
+  {
+   "id": "madrid",
+   "title": "Una tarde en el Prado",
+   "place": "El Museo del Prado",
+   "context": "Javier, de Guatemala, pregunta a Elena, vigilante de sala, en el Museo del Prado.",
+   "speakers": [
+    {
+     "name": "Javier",
+     "country": "Guatemala",
+     "voice": "es-GT-AndresNeural"
+    },
+    {
+     "name": "Elena",
+     "country": "España",
+     "voice": "es-ES-XimenaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Perdone, ¿dónde están los cuadros de Velázquez?"
+    },
+    {
+     "s": 1,
+     "text": "En la primera planta. Suba por la escalera y gire a la derecha."
+    },
+    {
+     "s": 0,
+     "text": "¿Puedo hacer fotos?"
+    },
+    {
+     "s": 1,
+     "text": "No, lo siento. En el museo no se pueden hacer fotos."
+    },
+    {
+     "s": 0,
+     "text": "¿Y a qué hora cierra el museo?"
+    },
+    {
+     "s": 1,
+     "text": "Hoy cierra a las ocho. Pero desde las seis la entrada es gratis."
+    },
+    {
+     "s": 0,
+     "text": "¡Qué bien! Entonces vuelvo a las seis con mi hermana."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué busca Javier?",
+     "options": [
+      "Los cuadros de Velázquez",
+      "La cafetería",
+      "La salida"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Dónde están los cuadros?",
+     "options": [
+      "En la planta baja",
+      "En la primera planta",
+      "En el jardín"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué no se puede hacer?",
+     "options": [
+      "Hablar",
+      "Comer",
+      "Hacer fotos"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuándo es gratis la entrada?",
+     "options": [
+      "Desde las seis",
+      "Desde las ocho",
+      "Por la mañana"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Vas a museos?",
+     "model": "Sí, voy a museos de arte una vez al mes."
+    },
+    {
+     "q": "¿Qué pintor te gusta?",
+     "model": "Me gusta mucho Frida Kahlo."
+    },
+    {
+     "q": "¿Haces fotos cuando viajas?",
+     "model": "Sí, hago muchas fotos con el móvil."
+    }
+   ],
+   "gaps": "Hoy cierra [a las ocho]. Pero desde [las seis] la [entrada] es [gratis].",
+   "glossary": [
+    {
+     "word": "cuadros",
+     "meaning": "pinturas de un artista"
+    },
+    {
+     "word": "planta",
+     "meaning": "piso de un edificio"
+    },
+    {
+     "word": "gratis",
+     "meaning": "sin pagar"
+    }
+   ]
+  },
+  {
+   "id": "cataluna",
+   "title": "Un castell en la plaza",
+   "place": "Una plaza de Barcelona",
+   "context": "Daniel, de Venezuela, habla con Núria, una castellera, antes de un castell.",
+   "speakers": [
+    {
+     "name": "Daniel",
+     "country": "Venezuela",
+     "voice": "es-VE-SebastianNeural"
+    },
+    {
+     "name": "Núria",
+     "country": "España",
+     "voice": "es-ES-ElviraNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "¿Qué hace toda esa gente en la plaza?"
+    },
+    {
+     "s": 1,
+     "text": "Es un castell, una torre humana. Hoy hacemos una de ocho pisos."
+    },
+    {
+     "s": 0,
+     "text": "¿Y tú dónde vas?"
+    },
+    {
+     "s": 1,
+     "text": "Yo estoy abajo, en la base. Arriba suben los niños porque pesan poco."
+    },
+    {
+     "s": 0,
+     "text": "¿No es peligroso para los niños?"
+    },
+    {
+     "s": 1,
+     "text": "Llevan casco y practicamos tres días por semana. Es muy seguro."
+    },
+    {
+     "s": 0,
+     "text": "Increíble. ¿Puedo ayudar?"
+    },
+    {
+     "s": 1,
+     "text": "Sí, ven a la base. Necesitamos gente fuerte."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué es un castell?",
+     "options": [
+      "Un castillo",
+      "Una torre humana",
+      "Un baile"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cuántos pisos tiene hoy?",
+     "options": [
+      "Seis",
+      "Diez",
+      "Ocho"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Quién sube arriba?",
+     "options": [
+      "Los niños",
+      "Los hombres",
+      "Núria"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cuántos días practican por semana?",
+     "options": [
+      "Dos",
+      "Tres",
+      "Cinco"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Haces deporte en equipo?",
+     "model": "Sí, juego al fútbol con mis amigos."
+    },
+    {
+     "q": "¿Te dan miedo las alturas?",
+     "model": "Sí, un poco. No subo a sitios muy altos."
+    },
+    {
+     "q": "¿Hay fiestas en la calle en tu ciudad?",
+     "model": "Sí, en verano hay muchas fiestas en la calle."
+    }
+   ],
+   "gaps": "Llevan [casco] y practicamos [tres días] por [semana]. Es muy [seguro].",
+   "glossary": [
+    {
+     "word": "torre humana",
+     "meaning": "personas encima de otras personas"
+    },
+    {
+     "word": "pesan",
+     "meaning": "tienen pocos o muchos kilos"
+    },
+    {
+     "word": "casco",
+     "meaning": "protección para la cabeza"
+    }
+   ]
+  },
+  {
+   "id": "andalucia",
+   "title": "El jardinero de la Alhambra",
+   "place": "Los jardines de la Alhambra",
+   "context": "Karla, de Honduras, conoce a Antonio, jardinero de la Alhambra, en Granada.",
+   "speakers": [
+    {
+     "name": "Karla",
+     "country": "Honduras",
+     "voice": "es-HN-KarlaNeural"
+    },
+    {
+     "name": "Antonio",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Buenos días. ¿Usted trabaja aquí?"
+    },
+    {
+     "s": 1,
+     "text": "Sí, soy jardinero. Trabajo en la Alhambra desde hace treinta años."
+    },
+    {
+     "s": 0,
+     "text": "¡Treinta años! ¿Qué flores son esas?"
+    },
+    {
+     "s": 1,
+     "text": "Son rosas. Y aquellos árboles son naranjos. En primavera huelen muy bien."
+    },
+    {
+     "s": 0,
+     "text": "¿Hay mucha agua en los jardines?"
+    },
+    {
+     "s": 1,
+     "text": "Sí, el agua viene de la montaña, de Sierra Nevada. Por eso hay tantas fuentes."
+    },
+    {
+     "s": 0,
+     "text": "Es precioso. Gracias, Antonio."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Desde cuándo trabaja Antonio aquí?",
+     "options": [
+      "Desde hace tres años",
+      "Desde hace diez años",
+      "Desde hace treinta años"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué flores hay?",
+     "options": [
+      "Rosas",
+      "Tulipanes",
+      "Margaritas"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cuándo huelen bien los naranjos?",
+     "options": [
+      "En invierno",
+      "En primavera",
+      "En verano"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿De dónde viene el agua?",
+     "options": [
+      "Del mar",
+      "Del río",
+      "De Sierra Nevada"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Te gustan las flores?",
+     "model": "Sí, me gustan mucho las rosas."
+    },
+    {
+     "q": "¿Hay un jardín o un parque cerca de tu casa?",
+     "model": "Sí, hay un parque pequeño con muchos árboles."
+    },
+    {
+     "q": "¿Cuántos años llevas en tu trabajo?",
+     "model": "Llevo cinco años en una oficina."
+    }
+   ],
+   "gaps": "Sí, el agua viene de la [montaña], de [Sierra Nevada]. Por eso hay [tantas] [fuentes].",
+   "glossary": [
+    {
+     "word": "jardinero",
+     "meaning": "persona que cuida las plantas de un jardín"
+    },
+    {
+     "word": "naranjos",
+     "meaning": "árboles que dan naranjas"
+    },
+    {
+     "word": "fuentes",
+     "meaning": "lugares con agua que sale y cae"
+    }
+   ]
+  },
+  {
+   "id": "valencia",
+   "title": "Llegada al hotel",
+   "place": "La recepción de un hotel en Benidorm",
+   "context": "Ramona, de la República Dominicana, y su amiga Margarita, de Panamá, llegan al hotel de Toni.",
+   "speakers": [
+    {
+     "name": "Toni",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    },
+    {
+     "name": "Ramona",
+     "country": "República Dominicana",
+     "voice": "es-DO-RamonaNeural"
+    },
+    {
+     "name": "Margarita",
+     "country": "Panamá",
+     "voice": "es-PA-MargaritaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Buenas noches. ¿En qué puedo ayudarles?"
+    },
+    {
+     "s": 1,
+     "text": "Hola. Tenemos una reserva a nombre de Ramona Díaz."
+    },
+    {
+     "s": 0,
+     "text": "Sí, aquí está. Una habitación doble, tres noches, con vistas al mar."
+    },
+    {
+     "s": 2,
+     "text": "¿A qué hora es el desayuno?"
+    },
+    {
+     "s": 0,
+     "text": "De siete a diez y media, en la primera planta."
+    },
+    {
+     "s": 1,
+     "text": "¿La piscina está abierta ahora?"
+    },
+    {
+     "s": 0,
+     "text": "No, cierra a las nueve. Abre mañana a las ocho."
+    },
+    {
+     "s": 2,
+     "text": "Vale, gracias. ¡Buenas noches!"
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿A nombre de quién es la reserva?",
+     "options": [
+      "Ramona Díaz",
+      "Margarita Díaz",
+      "Toni"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cuántas noches se quedan?",
+     "options": [
+      "Dos",
+      "Tres",
+      "Cuatro"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Dónde es el desayuno?",
+     "options": [
+      "En la playa",
+      "En la habitación",
+      "En la primera planta"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿A qué hora abre la piscina?",
+     "options": [
+      "A las ocho",
+      "A las nueve",
+      "A las diez"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Prefieres hotel o apartamento?",
+     "model": "Prefiero un hotel porque no tengo que cocinar."
+    },
+    {
+     "q": "¿Desayunas en el hotel cuando viajas?",
+     "model": "Sí, siempre desayuno mucho en el hotel."
+    },
+    {
+     "q": "¿Te gusta nadar en la piscina?",
+     "model": "Sí, pero prefiero el mar."
+    }
+   ],
+   "gaps": "Sí, aquí está. Una [habitación doble], [tres noches], con [vistas] al [mar].",
+   "glossary": [
+    {
+     "word": "reserva",
+     "meaning": "habitación o mesa pedida antes"
+    },
+    {
+     "word": "habitación doble",
+     "meaning": "habitación para dos personas"
+    },
+    {
+     "word": "vistas",
+     "meaning": "lo que se ve desde un lugar"
+    }
+   ]
+  }
+ ]
+}

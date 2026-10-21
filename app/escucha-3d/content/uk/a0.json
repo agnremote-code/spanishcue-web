@@ -1,0 +1,518 @@
+{
+ "game": "uk",
+ "level": "A0",
+ "items": [
+  {
+   "id": "inglaterra",
+   "title": "En el pub",
+   "place": "Un pub de Londres",
+   "context": "Sofía, de Bolivia, pide comida en el pub de Oliver.",
+   "contextEn": "Sofía, from Bolivia, orders food at Oliver’s pub.",
+   "speakers": [
+    {
+     "name": "Oliver",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    },
+    {
+     "name": "Sofía",
+     "country": "Bolivia",
+     "voice": "es-BO-SofiaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "¡Hola! Aquí pides en la barra.",
+     "en": "Hi! Here you order at the bar."
+    },
+    {
+     "s": 1,
+     "text": "Muy bien. Fish and chips, por favor.",
+     "en": "Oh, OK. Fish and chips, please."
+    },
+    {
+     "s": 0,
+     "text": "¿Y para beber?",
+     "en": "And to drink?"
+    },
+    {
+     "s": 1,
+     "text": "Un zumo de manzana.",
+     "en": "An apple juice."
+    },
+    {
+     "s": 0,
+     "text": "Son doce libras. Tu mesa es la siete.",
+     "en": "That is twelve pounds. Your table is number seven."
+    },
+    {
+     "s": 1,
+     "text": "Gracias. ¡Qué perro tan bonito!",
+     "en": "Thank you. What a lovely dog!"
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Dónde se pide en el pub?",
+     "qEn": "Where do you order in the pub?",
+     "options": [
+      "En la barra",
+      "En la mesa",
+      "En la puerta"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué bebe Sofía?",
+     "qEn": "What does Sofía drink?",
+     "options": [
+      "Un té",
+      "Un zumo de manzana",
+      "Agua"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cuánto paga?",
+     "qEn": "How much does she pay?",
+     "options": [
+      "Diez libras",
+      "Veinte libras",
+      "Doce libras"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuál es su mesa?",
+     "qEn": "Which is her table?",
+     "options": [
+      "La siete",
+      "La dos",
+      "La once"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Te gusta el pescado?",
+     "qEn": "Do you like fish?",
+     "model": "Sí, me gusta mucho."
+    },
+    {
+     "q": "¿Qué bebes con la comida?",
+     "qEn": "What do you drink with food?",
+     "model": "Bebo agua."
+    },
+    {
+     "q": "¿Te gustan los perros?",
+     "qEn": "Do you like dogs?",
+     "model": "Sí, tengo un perro."
+    }
+   ],
+   "gaps": "Son [doce] [libras]. Tu [mesa] es la [siete].",
+   "glossary": [
+    {
+     "word": "barra",
+     "meaning": "lugar donde se pide en un bar",
+     "en": "bar counter"
+    },
+    {
+     "word": "libras",
+     "meaning": "el dinero del Reino Unido",
+     "en": "pounds"
+    },
+    {
+     "word": "zumo",
+     "meaning": "bebida de fruta",
+     "en": "juice"
+    }
+   ]
+  },
+  {
+   "id": "escocia",
+   "title": "El cañón de la una",
+   "place": "El castillo de Edimburgo",
+   "context": "Mateo, de Uruguay, visita el castillo con Fiona, la guía.",
+   "contextEn": "Mateo, from Uruguay, visits the castle with Fiona, the guide.",
+   "speakers": [
+    {
+     "name": "Fiona",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    },
+    {
+     "name": "Mateo",
+     "country": "Uruguay",
+     "voice": "es-UY-MateoNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Bienvenido al castillo. ¡Hace frío hoy!",
+     "en": "Welcome to the castle. It is cold today!"
+    },
+    {
+     "s": 1,
+     "text": "Sí, mucho viento. ¿Qué hora es?",
+     "en": "Yes, very windy. What time is it?"
+    },
+    {
+     "s": 0,
+     "text": "Es casi la una. A la una hay un cañón.",
+     "en": "It is almost one. At one there is a cannon."
+    },
+    {
+     "s": 1,
+     "text": "¿Un cañón? ¿Por qué?",
+     "en": "A cannon? Why?"
+    },
+    {
+     "s": 0,
+     "text": "Es una tradición. ¡Tápate las orejas!",
+     "en": "It is a tradition. Cover your ears!"
+    },
+    {
+     "s": 1,
+     "text": "¡Pum! ¡Qué fuerte!",
+     "en": "Boom! How loud!"
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué tiempo hace?",
+     "qEn": "What is the weather like?",
+     "options": [
+      "Calor",
+      "Frío y viento",
+      "Lluvia"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿A qué hora hay un cañón?",
+     "qEn": "What time is the cannon?",
+     "options": [
+      "A las dos",
+      "A las doce",
+      "A la una"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué es el cañón?",
+     "qEn": "What is the cannon?",
+     "options": [
+      "Una tradición",
+      "Un error",
+      "Una fiesta"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué dice Fiona?",
+     "qEn": "What does Fiona say?",
+     "options": [
+      "Abre la puerta",
+      "Tápate las orejas",
+      "Corre"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Te gustan los castillos?",
+     "qEn": "Do you like castles?",
+     "model": "Sí, me gustan mucho."
+    },
+    {
+     "q": "¿Hace frío en tu ciudad?",
+     "qEn": "Is it cold in your city?",
+     "model": "No, hace calor."
+    },
+    {
+     "q": "¿Qué hora es ahora?",
+     "qEn": "What time is it now?",
+     "model": "Son las cinco."
+    }
+   ],
+   "gaps": "Es [casi] la [una]. A la [una] hay un [cañón].",
+   "glossary": [
+    {
+     "word": "cañón",
+     "meaning": "arma grande y antigua",
+     "en": "cannon"
+    },
+    {
+     "word": "orejas",
+     "meaning": "parte de la cabeza para oír",
+     "en": "ears"
+    },
+    {
+     "word": "viento",
+     "meaning": "aire que se mueve",
+     "en": "wind"
+    }
+   ]
+  },
+  {
+   "id": "gales",
+   "title": "Una palabra en galés",
+   "place": "Una escuela de Gales",
+   "context": "Andrés, de Guatemala, aprende galés con Siân, la maestra.",
+   "contextEn": "Andrés, from Guatemala, learns some Welsh with Siân, the teacher.",
+   "speakers": [
+    {
+     "name": "Siân",
+     "country": "España",
+     "voice": "es-ES-ElviraNeural"
+    },
+    {
+     "name": "Andrés",
+     "country": "Guatemala",
+     "voice": "es-GT-AndresNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Hola. Aquí los niños hablan galés.",
+     "en": "Hello. Here the children speak Welsh."
+    },
+    {
+     "s": 1,
+     "text": "¿Cómo se dice «gracias» en galés?",
+     "en": "How do you say “thank you” in Welsh?"
+    },
+    {
+     "s": 0,
+     "text": "Se dice «diolch».",
+     "en": "You say “diolch”."
+    },
+    {
+     "s": 1,
+     "text": "¿Y «buenos días»?",
+     "en": "And “good morning”?"
+    },
+    {
+     "s": 0,
+     "text": "«Bore da». Los niños lo dicen cada mañana.",
+     "en": "“Bore da”. The children say it every morning."
+    },
+    {
+     "s": 1,
+     "text": "Bore da, niños. ¡Diolch!",
+     "en": "Bore da, children. Diolch!"
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué idioma hablan los niños?",
+     "qEn": "What language do the children speak?",
+     "options": [
+      "Inglés",
+      "Español",
+      "Galés"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cómo se dice «gracias»?",
+     "qEn": "How do you say “thank you”?",
+     "options": [
+      "Diolch",
+      "Bore da",
+      "Croeso"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué significa «bore da»?",
+     "qEn": "What does “bore da” mean?",
+     "options": [
+      "Adiós",
+      "Buenos días",
+      "Por favor"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cuándo lo dicen los niños?",
+     "qEn": "When do the children say it?",
+     "options": [
+      "Por la noche",
+      "Los domingos",
+      "Cada mañana"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Cuántos idiomas hablas?",
+     "qEn": "How many languages do you speak?",
+     "model": "Hablo dos idiomas."
+    },
+    {
+     "q": "¿Cómo se dice «gracias» en tu idioma?",
+     "qEn": "How do you say “thank you” in your language?",
+     "model": "Se dice «thank you»."
+    },
+    {
+     "q": "¿Qué dices por la mañana?",
+     "qEn": "What do you say in the morning?",
+     "model": "Digo «buenos días»."
+    }
+   ],
+   "gaps": "[Hola]. [Aquí] los [niños] hablan [galés].",
+   "glossary": [
+    {
+     "word": "galés",
+     "meaning": "el idioma de Gales",
+     "en": "Welsh"
+    },
+    {
+     "word": "se dice",
+     "meaning": "forma de nombrar algo en un idioma",
+     "en": "you say"
+    },
+    {
+     "word": "mañana",
+     "meaning": "la primera parte del día",
+     "en": "morning"
+    }
+   ]
+  },
+  {
+   "id": "irlanda-norte",
+   "title": "El desayuno del Ulster",
+   "place": "El mercado de St George, en Belfast",
+   "context": "Karla, de Honduras, desayuna en el puesto de Róisín.",
+   "contextEn": "Karla, from Honduras, has breakfast at Róisín’s stall.",
+   "speakers": [
+    {
+     "name": "Róisín",
+     "country": "Puerto Rico",
+     "voice": "es-PR-KarinaNeural"
+    },
+    {
+     "name": "Karla",
+     "country": "Honduras",
+     "voice": "es-HN-KarlaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "¡Buenos días! ¿Quieres el desayuno del Ulster?",
+     "en": "Good morning! Do you want the Ulster fry?"
+    },
+    {
+     "s": 1,
+     "text": "¿Qué tiene?",
+     "en": "What does it have?"
+    },
+    {
+     "s": 0,
+     "text": "Huevos, salchichas y dos tipos de pan.",
+     "en": "Eggs, sausages and two kinds of bread."
+    },
+    {
+     "s": 1,
+     "text": "¡Es mucho! Solo el pan de patata, por favor.",
+     "en": "That is a lot! Just the potato bread, please."
+    },
+    {
+     "s": 0,
+     "text": "Es mi favorito. Es de mi abuela.",
+     "en": "It is my favourite. It is my grandmother’s."
+    },
+    {
+     "s": 1,
+     "text": "Mmm, ¡está muy rico!",
+     "en": "Mmm, it is delicious!"
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué tiene el desayuno?",
+     "qEn": "What does the breakfast have?",
+     "options": [
+      "Huevos, salchichas y pan",
+      "Fruta y café",
+      "Arroz y pescado"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué pide Karla?",
+     "qEn": "What does Karla order?",
+     "options": [
+      "Los huevos",
+      "El pan de patata",
+      "Un té"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿De quién es la receta?",
+     "qEn": "Whose recipe is it?",
+     "options": [
+      "De su madre",
+      "De un amigo",
+      "De su abuela"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cómo está el pan?",
+     "qEn": "How is the bread?",
+     "options": [
+      "Muy rico",
+      "Frío",
+      "Duro"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué desayunas?",
+     "qEn": "What do you have for breakfast?",
+     "model": "Desayuno café con pan."
+    },
+    {
+     "q": "¿Te gustan los huevos?",
+     "qEn": "Do you like eggs?",
+     "model": "Sí, me gustan mucho."
+    },
+    {
+     "q": "¿Cocina bien tu abuela?",
+     "qEn": "Does your grandmother cook well?",
+     "model": "Sí, cocina muy bien."
+    }
+   ],
+   "gaps": "[Huevos], [salchichas] y dos [tipos] de [pan].",
+   "glossary": [
+    {
+     "word": "desayuno",
+     "meaning": "la primera comida del día",
+     "en": "breakfast"
+    },
+    {
+     "word": "salchichas",
+     "meaning": "carne en forma de tubo",
+     "en": "sausages"
+    },
+    {
+     "word": "patata",
+     "meaning": "verdura que crece bajo la tierra",
+     "en": "potato"
+    }
+   ]
+  }
+ ]
+}

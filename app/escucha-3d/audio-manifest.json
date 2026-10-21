@@ -561,6 +561,86 @@
    "seconds": 89.93,
    "src": "/audio/escucha-3d/casino-c2-vip.mp3"
   },
+  "espana/a0-andalucia": {
+   "hash": "393dfae0170406416f2c",
+   "seconds": 29.86,
+   "src": "/audio/escucha-3d/espana-a0-andalucia.mp3"
+  },
+  "espana/a0-cataluna": {
+   "hash": "9346cbb8f9fe88a55576",
+   "seconds": 32.33,
+   "src": "/audio/escucha-3d/espana-a0-cataluna.mp3"
+  },
+  "espana/a0-madrid": {
+   "hash": "b4994cb4ab4d373e527a",
+   "seconds": 27.72,
+   "src": "/audio/escucha-3d/espana-a0-madrid.mp3"
+  },
+  "espana/a0-valencia": {
+   "hash": "c66bdf336f5715b176ce",
+   "seconds": 31.44,
+   "src": "/audio/escucha-3d/espana-a0-valencia.mp3"
+  },
+  "espana/a1-andalucia": {
+   "hash": "1935c96e02cd56237166",
+   "seconds": 46.37,
+   "src": "/audio/escucha-3d/espana-a1-andalucia.mp3"
+  },
+  "espana/a1-cataluna": {
+   "hash": "566429ba1918a46c70d3",
+   "seconds": 43.3,
+   "src": "/audio/escucha-3d/espana-a1-cataluna.mp3"
+  },
+  "espana/a1-madrid": {
+   "hash": "26426fd15e5e184e0e80",
+   "seconds": 37.28,
+   "src": "/audio/escucha-3d/espana-a1-madrid.mp3"
+  },
+  "espana/a1-valencia": {
+   "hash": "3a8558d2bd95ed622d37",
+   "seconds": 45.78,
+   "src": "/audio/escucha-3d/espana-a1-valencia.mp3"
+  },
+  "espana/a2-andalucia": {
+   "hash": "072d4c18634c5d29af8f",
+   "seconds": 47.55,
+   "src": "/audio/escucha-3d/espana-a2-andalucia.mp3"
+  },
+  "espana/a2-cataluna": {
+   "hash": "de4142141ab625e45a22",
+   "seconds": 51.83,
+   "src": "/audio/escucha-3d/espana-a2-cataluna.mp3"
+  },
+  "espana/a2-madrid": {
+   "hash": "b995d20771fd6985a8f1",
+   "seconds": 50.55,
+   "src": "/audio/escucha-3d/espana-a2-madrid.mp3"
+  },
+  "espana/a2-valencia": {
+   "hash": "beda6d33087f6a5c10a3",
+   "seconds": 48.95,
+   "src": "/audio/escucha-3d/espana-a2-valencia.mp3"
+  },
+  "espana/b1-andalucia": {
+   "hash": "458ace6bec6d24a4423a",
+   "seconds": 61.28,
+   "src": "/audio/escucha-3d/espana-b1-andalucia.mp3"
+  },
+  "espana/b1-cataluna": {
+   "hash": "b346ddcdf8977cef88ec",
+   "seconds": 66.23,
+   "src": "/audio/escucha-3d/espana-b1-cataluna.mp3"
+  },
+  "espana/b1-madrid": {
+   "hash": "48bbfb882675fb17a0f3",
+   "seconds": 58.95,
+   "src": "/audio/escucha-3d/espana-b1-madrid.mp3"
+  },
+  "espana/b1-valencia": {
+   "hash": "fc0fe41a50ba783b875e",
+   "seconds": 60.49,
+   "src": "/audio/escucha-3d/espana-b1-valencia.mp3"
+  },
   "feria/a2-artesania": {
    "hash": "92afb0ae4c8e7663c5f4",
    "seconds": 53.5,
@@ -1970,6 +2050,166 @@
    "hash": "4f318839e51889ca4613",
    "seconds": 111.68,
    "src": "/audio/escucha-3d/reino-c2-teobaldo.mp3"
+  },
+  "suecia/a0-estocolmo": {
+   "hash": "3ec360cc8d164d5de061",
+   "seconds": 31.66,
+   "src": "/audio/escucha-3d/suecia-a0-estocolmo.mp3"
+  },
+  "suecia/a0-gotemburgo": {
+   "hash": "a5d46e7c397efbe121b2",
+   "seconds": 32.02,
+   "src": "/audio/escucha-3d/suecia-a0-gotemburgo.mp3"
+  },
+  "suecia/a0-laponia": {
+   "hash": "ae23dd2910c16712e2f1",
+   "seconds": 29.52,
+   "src": "/audio/escucha-3d/suecia-a0-laponia.mp3"
+  },
+  "suecia/a0-malmo": {
+   "hash": "47bda88856f8d438c22e",
+   "seconds": 31.1,
+   "src": "/audio/escucha-3d/suecia-a0-malmo.mp3"
+  },
+  "suecia/a1-estocolmo": {
+   "hash": "b6878210e40d37b36292",
+   "seconds": 41.45,
+   "src": "/audio/escucha-3d/suecia-a1-estocolmo.mp3"
+  },
+  "suecia/a1-gotemburgo": {
+   "hash": "963eecbeb0d06e2803fe",
+   "seconds": 44.38,
+   "src": "/audio/escucha-3d/suecia-a1-gotemburgo.mp3"
+  },
+  "suecia/a1-laponia": {
+   "hash": "51e95278b0e25e603979",
+   "seconds": 42.05,
+   "src": "/audio/escucha-3d/suecia-a1-laponia.mp3"
+  },
+  "suecia/a1-malmo": {
+   "hash": "781b2b943526d9875f9e",
+   "seconds": 32.98,
+   "src": "/audio/escucha-3d/suecia-a1-malmo.mp3"
+  },
+  "suecia/a2-estocolmo": {
+   "hash": "9461c2f44608ad5e41ea",
+   "seconds": 56.34,
+   "src": "/audio/escucha-3d/suecia-a2-estocolmo.mp3"
+  },
+  "suecia/a2-gotemburgo": {
+   "hash": "261f0edf408034b0b991",
+   "seconds": 52.53,
+   "src": "/audio/escucha-3d/suecia-a2-gotemburgo.mp3"
+  },
+  "suecia/a2-laponia": {
+   "hash": "a0efcbad234aead1826f",
+   "seconds": 50.46,
+   "src": "/audio/escucha-3d/suecia-a2-laponia.mp3"
+  },
+  "suecia/a2-malmo": {
+   "hash": "510957f03850132b61bb",
+   "seconds": 48.86,
+   "src": "/audio/escucha-3d/suecia-a2-malmo.mp3"
+  },
+  "suecia/b1-estocolmo": {
+   "hash": "d332479bfbf50a4a2664",
+   "seconds": 60.25,
+   "src": "/audio/escucha-3d/suecia-b1-estocolmo.mp3"
+  },
+  "suecia/b1-gotemburgo": {
+   "hash": "a32ec8669eaab4006d46",
+   "seconds": 56.89,
+   "src": "/audio/escucha-3d/suecia-b1-gotemburgo.mp3"
+  },
+  "suecia/b1-laponia": {
+   "hash": "308afd3ea9a211ef46dd",
+   "seconds": 62.75,
+   "src": "/audio/escucha-3d/suecia-b1-laponia.mp3"
+  },
+  "suecia/b1-malmo": {
+   "hash": "e11daf625121af7f0551",
+   "seconds": 51.32,
+   "src": "/audio/escucha-3d/suecia-b1-malmo.mp3"
+  },
+  "uk/a0-escocia": {
+   "hash": "207b278ea2dac6bc3391",
+   "seconds": 31.13,
+   "src": "/audio/escucha-3d/uk-a0-escocia.mp3"
+  },
+  "uk/a0-gales": {
+   "hash": "d8498d5c85aa88e73aff",
+   "seconds": 29.04,
+   "src": "/audio/escucha-3d/uk-a0-gales.mp3"
+  },
+  "uk/a0-inglaterra": {
+   "hash": "0c9d94380e280cdbf36c",
+   "seconds": 28.63,
+   "src": "/audio/escucha-3d/uk-a0-inglaterra.mp3"
+  },
+  "uk/a0-irlanda-norte": {
+   "hash": "ef7b3b8d574402124ef0",
+   "seconds": 33.05,
+   "src": "/audio/escucha-3d/uk-a0-irlanda-norte.mp3"
+  },
+  "uk/a1-escocia": {
+   "hash": "549ed31eb8fc35f490f9",
+   "seconds": 40.66,
+   "src": "/audio/escucha-3d/uk-a1-escocia.mp3"
+  },
+  "uk/a1-gales": {
+   "hash": "25c582473b939fb50614",
+   "seconds": 44.98,
+   "src": "/audio/escucha-3d/uk-a1-gales.mp3"
+  },
+  "uk/a1-inglaterra": {
+   "hash": "447a937e2d5eb1557fea",
+   "seconds": 44.67,
+   "src": "/audio/escucha-3d/uk-a1-inglaterra.mp3"
+  },
+  "uk/a1-irlanda-norte": {
+   "hash": "8f41b3d77a0f2e560d5f",
+   "seconds": 45.05,
+   "src": "/audio/escucha-3d/uk-a1-irlanda-norte.mp3"
+  },
+  "uk/a2-escocia": {
+   "hash": "b4656ddb4af9e584677d",
+   "seconds": 51.63,
+   "src": "/audio/escucha-3d/uk-a2-escocia.mp3"
+  },
+  "uk/a2-gales": {
+   "hash": "067ea33b5d4e0cd81c28",
+   "seconds": 52.58,
+   "src": "/audio/escucha-3d/uk-a2-gales.mp3"
+  },
+  "uk/a2-inglaterra": {
+   "hash": "6e2097543cebae3cda31",
+   "seconds": 47.67,
+   "src": "/audio/escucha-3d/uk-a2-inglaterra.mp3"
+  },
+  "uk/a2-irlanda-norte": {
+   "hash": "d0d7ef4e5f19444ecf01",
+   "seconds": 46.11,
+   "src": "/audio/escucha-3d/uk-a2-irlanda-norte.mp3"
+  },
+  "uk/b1-escocia": {
+   "hash": "c0fb478b0a60cc9a3ba2",
+   "seconds": 50.84,
+   "src": "/audio/escucha-3d/uk-b1-escocia.mp3"
+  },
+  "uk/b1-gales": {
+   "hash": "6692b7b21da72b4b702c",
+   "seconds": 52.4,
+   "src": "/audio/escucha-3d/uk-b1-gales.mp3"
+  },
+  "uk/b1-inglaterra": {
+   "hash": "5585202b081ced262557",
+   "seconds": 55.74,
+   "src": "/audio/escucha-3d/uk-b1-inglaterra.mp3"
+  },
+  "uk/b1-irlanda-norte": {
+   "hash": "a5795e6267b06aa8d9a7",
+   "seconds": 54.68,
+   "src": "/audio/escucha-3d/uk-b1-irlanda-norte.mp3"
   },
   "usa/a0-california": {
    "hash": "a783dc69b2a1a472ed32",

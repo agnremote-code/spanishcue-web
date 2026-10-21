@@ -1,0 +1,466 @@
+{
+ "game": "uk",
+ "level": "A1",
+ "items": [
+  {
+   "id": "inglaterra",
+   "title": "Hora punta en el metro",
+   "place": "Una estación del metro de Londres",
+   "context": "Valentina, de Uruguay, se pierde en el metro y pregunta a Grace.",
+   "speakers": [
+    {
+     "name": "Valentina",
+     "country": "Uruguay",
+     "voice": "es-UY-ValentinaNeural"
+    },
+    {
+     "name": "Grace",
+     "country": "República Dominicana",
+     "voice": "es-DO-RamonaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Perdone, quiero ir al Museo Británico. ¿Qué línea tomo?"
+    },
+    {
+     "s": 1,
+     "text": "La línea roja, dirección este. Son tres paradas."
+    },
+    {
+     "s": 0,
+     "text": "Hay mucha gente. ¿Siempre es así?"
+    },
+    {
+     "s": 1,
+     "text": "De ocho a nueve es la hora punta. Cinco millones de personas usan el metro cada día."
+    },
+    {
+     "s": 0,
+     "text": "¿Y el museo es caro?"
+    },
+    {
+     "s": 1,
+     "text": "No, es gratis. Pero en la escalera ponte a la derecha, por favor."
+    },
+    {
+     "s": 0,
+     "text": "¡Perdón! Gracias por todo."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Adónde quiere ir Valentina?",
+     "options": [
+      "Al Big Ben",
+      "Al Museo Británico",
+      "Al estadio"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cuántas paradas son?",
+     "options": [
+      "Cinco",
+      "Una",
+      "Tres"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuánto cuesta el museo?",
+     "options": [
+      "Es gratis",
+      "Diez libras",
+      "Cinco libras"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Dónde hay que ponerse en la escalera?",
+     "options": [
+      "A la izquierda",
+      "En el medio",
+      "A la derecha"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Hay metro en tu ciudad?",
+     "model": "Sí, hay metro, pero yo voy en autobús."
+    },
+    {
+     "q": "¿A qué hora es la hora punta donde vives?",
+     "model": "Es a las ocho de la mañana y a las seis de la tarde."
+    },
+    {
+     "q": "¿Te gustan los museos gratis?",
+     "model": "Sí, me encantan, voy los domingos."
+    }
+   ],
+   "gaps": "De [ocho] a nueve es la hora [punta]. Cinco [millones] de personas usan el [metro] cada día.",
+   "glossary": [
+    {
+     "word": "línea",
+     "meaning": "camino de un tren o metro"
+    },
+    {
+     "word": "parada",
+     "meaning": "lugar donde para el tren"
+    },
+    {
+     "word": "hora punta",
+     "meaning": "hora con mucha gente en el transporte"
+    }
+   ]
+  },
+  {
+   "id": "escocia",
+   "title": "Los niños y Nessie",
+   "place": "Un barco en el lago Ness",
+   "context": "Gonzalo, de Colombia, viaja en el barco de Hamish con sus dos hijos.",
+   "speakers": [
+    {
+     "name": "Gonzalo",
+     "country": "Colombia",
+     "voice": "es-CO-GonzaloNeural"
+    },
+    {
+     "name": "Hamish",
+     "country": "Chile",
+     "voice": "es-CL-LorenzoNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Buenos días. Mis hijos quieren ver a Nessie. ¿Es posible?"
+    },
+    {
+     "s": 1,
+     "text": "Yo tengo cincuenta años y nunca la he visto. Pero cada mañana la busco."
+    },
+    {
+     "s": 0,
+     "text": "¿Es muy profundo el lago?"
+    },
+    {
+     "s": 1,
+     "text": "Sí, tiene doscientos metros de profundidad. Hay mucha agua oscura."
+    },
+    {
+     "s": 0,
+     "text": "¿Y qué animales hay de verdad?"
+    },
+    {
+     "s": 1,
+     "text": "Peces, nutrias y a veces un águila. Mi abuelo contaba historias de Nessie a los turistas."
+    },
+    {
+     "s": 0,
+     "text": "Entonces hoy usted nos cuenta una historia, por favor."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué quieren ver los hijos?",
+     "options": [
+      "A Nessie",
+      "Un castillo",
+      "Una montaña"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cuántos años tiene Hamish?",
+     "options": [
+      "Treinta",
+      "Cincuenta",
+      "Setenta"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cuánta profundidad tiene el lago?",
+     "options": [
+      "Veinte metros",
+      "Mil metros",
+      "Doscientos metros"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Quién contaba historias de Nessie?",
+     "options": [
+      "Su abuelo",
+      "Su hija",
+      "Un científico"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Crees en los monstruos de las leyendas?",
+     "model": "No mucho, pero me gustan las historias."
+    },
+    {
+     "q": "¿Qué historias te contaba tu familia?",
+     "model": "Mi abuela me contaba historias de fantasmas."
+    },
+    {
+     "q": "¿Has ido en barco por un lago?",
+     "model": "Sí, una vez en un lago de mi país."
+    }
+   ],
+   "gaps": "Sí, tiene [doscientos] [metros] de [profundidad]. Hay mucha agua [oscura].",
+   "glossary": [
+    {
+     "word": "profundidad",
+     "meaning": "lo que mide algo hacia abajo"
+    },
+    {
+     "word": "nutrias",
+     "meaning": "animales pequeños que nadan"
+    },
+    {
+     "word": "águila",
+     "meaning": "pájaro grande que caza"
+    }
+   ]
+  },
+  {
+   "id": "gales",
+   "title": "Rugby en el barro",
+   "place": "Un campo de rugby en un pueblo de Gales",
+   "context": "Lorena, de El Salvador, mira el entrenamiento de los niños con Rhys.",
+   "speakers": [
+    {
+     "name": "Lorena",
+     "country": "El Salvador",
+     "voice": "es-SV-LorenaNeural"
+    },
+    {
+     "name": "Rhys",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Llueve mucho y los niños están llenos de barro. ¿No tienen frío?"
+    },
+    {
+     "s": 1,
+     "text": "¡No! Les encanta. Yo empecé a jugar aquí a los seis años."
+    },
+    {
+     "s": 0,
+     "text": "¿El rugby es muy popular en Gales?"
+    },
+    {
+     "s": 1,
+     "text": "Es casi una religión. Cada pueblo tiene su equipo y los domingos todos vienen a mirar."
+    },
+    {
+     "s": 0,
+     "text": "¿Y es importante ganar?"
+    },
+    {
+     "s": 1,
+     "text": "Aquí no. Lo importante es el respeto. Después del partido, los dos equipos toman té juntos."
+    },
+    {
+     "s": 0,
+     "text": "¡Qué bonito! Me gusta esa idea."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué tiempo hace?",
+     "options": [
+      "Hace sol",
+      "Llueve mucho",
+      "Nieva"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿A qué edad empezó Rhys a jugar?",
+     "options": [
+      "A los diez años",
+      "A los quince años",
+      "A los seis años"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué es lo importante para Rhys?",
+     "options": [
+      "El respeto",
+      "Ganar",
+      "El dinero"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué hacen después del partido?",
+     "options": [
+      "Cantan",
+      "Toman té juntos",
+      "Se van a casa"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Hacías deporte de niño?",
+     "model": "Sí, jugaba al fútbol con mis amigos."
+    },
+    {
+     "q": "¿Qué deporte es muy popular en tu país?",
+     "model": "El fútbol, todos lo ven los fines de semana."
+    },
+    {
+     "q": "¿Te importa ganar cuando juegas?",
+     "model": "Un poco, pero lo más importante es divertirme."
+    }
+   ],
+   "gaps": "Es casi una [religión]. Cada [pueblo] tiene su [equipo] y los domingos todos vienen a [mirar].",
+   "glossary": [
+    {
+     "word": "barro",
+     "meaning": "tierra mojada"
+    },
+    {
+     "word": "equipo",
+     "meaning": "grupo de jugadores"
+    },
+    {
+     "word": "respeto",
+     "meaning": "tratar bien a los demás"
+    }
+   ]
+  },
+  {
+   "id": "irlanda-norte",
+   "title": "El muro de la paz",
+   "place": "Una calle de Belfast",
+   "context": "Juan, de Costa Rica, hace un tour en el taxi negro de Seamus.",
+   "speakers": [
+    {
+     "name": "Juan",
+     "country": "Costa Rica",
+     "voice": "es-CR-JuanNeural"
+    },
+    {
+     "name": "Seamus",
+     "country": "México",
+     "voice": "es-MX-JorgeNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "¿Qué es esa pared tan alta?"
+    },
+    {
+     "s": 1,
+     "text": "Es un muro de la paz. Separa dos barrios. Por la noche las puertas todavía se cierran."
+    },
+    {
+     "s": 0,
+     "text": "¿Todavía? ¿Por qué?"
+    },
+    {
+     "s": 1,
+     "text": "Durante treinta años hubo mucha violencia aquí. Hoy hay paz, pero la gente mayor tiene miedo."
+    },
+    {
+     "s": 0,
+     "text": "Hay muchos mensajes escritos en el muro."
+    },
+    {
+     "s": 1,
+     "text": "Sí, los turistas escriben mensajes de paz en muchos idiomas. Puedes escribir uno."
+    },
+    {
+     "s": 0,
+     "text": "Voy a escribir «paz» en español."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué separa el muro?",
+     "options": [
+      "Dos países",
+      "Dos parques",
+      "Dos barrios"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuántos años hubo violencia?",
+     "options": [
+      "Treinta años",
+      "Diez años",
+      "Cien años"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Quién tiene miedo hoy?",
+     "options": [
+      "Los niños",
+      "La gente mayor",
+      "Los turistas"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué escriben los turistas?",
+     "options": [
+      "Sus nombres",
+      "Mensajes de paz",
+      "Números"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Hay algún muro famoso en tu país?",
+     "model": "No, pero hay una frontera con un río."
+    },
+    {
+     "q": "¿Qué escribirías en el muro?",
+     "model": "Escribiría «amistad» en mi idioma."
+    },
+    {
+     "q": "¿Hay barrios muy diferentes en tu ciudad?",
+     "model": "Sí, hay barrios ricos y barrios pobres."
+    }
+   ],
+   "gaps": "Es un muro de la [paz]. [Separa] dos [barrios]. Por la noche las [puertas] todavía se cierran.",
+   "glossary": [
+    {
+     "word": "muro",
+     "meaning": "pared grande y fuerte"
+    },
+    {
+     "word": "barrios",
+     "meaning": "partes de una ciudad"
+    },
+    {
+     "word": "violencia",
+     "meaning": "uso de la fuerza para hacer daño"
+    }
+   ]
+  }
+ ]
+}

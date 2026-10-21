@@ -1,0 +1,523 @@
+{
+ "game": "espana",
+ "level": "A0",
+ "items": [
+  {
+   "id": "madrid",
+   "title": "Churros en Madrid",
+   "place": "Una chocolatería de Madrid",
+   "context": "Valeria, de México, y Kevin, de Estados Unidos, desayunan en la chocolatería de Paco.",
+   "contextEn": "Valeria, from Mexico, and Kevin, from the United States, have breakfast at Paco’s churro café.",
+   "speakers": [
+    {
+     "name": "Paco",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    },
+    {
+     "name": "Valeria",
+     "country": "México",
+     "voice": "es-MX-DaliaNeural"
+    },
+    {
+     "name": "Kevin",
+     "country": "Estados Unidos",
+     "voice": "es-US-AlonsoNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "¡Buenos días! ¿Qué queréis?",
+     "en": "Good morning! What would you like?"
+    },
+    {
+     "s": 1,
+     "text": "Dos chocolates y churros, por favor.",
+     "en": "Two hot chocolates and churros, please."
+    },
+    {
+     "s": 2,
+     "text": "Y un café con leche para mí.",
+     "en": "And a white coffee for me."
+    },
+    {
+     "s": 0,
+     "text": "Vale. Seis churros, dos chocolates y un café.",
+     "en": "OK. Six churros, two hot chocolates and a coffee."
+    },
+    {
+     "s": 1,
+     "text": "¿Cuánto es?",
+     "en": "How much is it?"
+    },
+    {
+     "s": 0,
+     "text": "Son nueve euros.",
+     "en": "That is nine euros."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué pide Valeria?",
+     "qEn": "What does Valeria order?",
+     "options": [
+      "Dos chocolates y churros",
+      "Un té",
+      "Un zumo"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué toma Kevin?",
+     "qEn": "What does Kevin drink?",
+     "options": [
+      "Un chocolate",
+      "Un café con leche",
+      "Agua"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cuántos churros hay?",
+     "qEn": "How many churros are there?",
+     "options": [
+      "Cuatro",
+      "Ocho",
+      "Seis"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuánto cuesta todo?",
+     "qEn": "How much is everything?",
+     "options": [
+      "Nueve euros",
+      "Seis euros",
+      "Doce euros"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué desayunas?",
+     "qEn": "What do you have for breakfast?",
+     "model": "Desayuno café y pan."
+    },
+    {
+     "q": "¿Te gusta el chocolate caliente?",
+     "qEn": "Do you like hot chocolate?",
+     "model": "Sí, me gusta mucho."
+    },
+    {
+     "q": "¿Comes cosas dulces?",
+     "qEn": "Do you eat sweet things?",
+     "model": "Sí, a veces como galletas."
+    }
+   ],
+   "gaps": "Vale. [Seis] [churros], [dos chocolates] y [un café].",
+   "glossary": [
+    {
+     "word": "churros",
+     "meaning": "masa frita, larga y dulce",
+     "en": "fried dough sticks"
+    },
+    {
+     "word": "chocolates",
+     "meaning": "bebidas calientes de cacao",
+     "en": "hot chocolates"
+    },
+    {
+     "word": "vale",
+     "meaning": "sí, de acuerdo (en España)",
+     "en": "OK"
+    }
+   ]
+  },
+  {
+   "id": "cataluna",
+   "title": "Fruta en La Boqueria",
+   "place": "El mercado de La Boqueria",
+   "context": "Mateo, de Uruguay, compra fruta a Montse en un mercado de Barcelona.",
+   "contextEn": "Mateo, from Uruguay, buys fruit from Montse at a market in Barcelona.",
+   "speakers": [
+    {
+     "name": "Montse",
+     "country": "España",
+     "voice": "es-ES-XimenaNeural"
+    },
+    {
+     "name": "Mateo",
+     "country": "Uruguay",
+     "voice": "es-UY-MateoNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "¡Hola! ¿Qué quieres?",
+     "en": "Hi! What would you like?"
+    },
+    {
+     "s": 1,
+     "text": "Hola. ¿Tienes fresas?",
+     "en": "Hi. Do you have strawberries?"
+    },
+    {
+     "s": 0,
+     "text": "Sí, son de Girona. Son muy buenas.",
+     "en": "Yes, they are from Girona. They are very good."
+    },
+    {
+     "s": 1,
+     "text": "Medio kilo, por favor. ¿Y un zumo de naranja?",
+     "en": "Half a kilo, please. And an orange juice?"
+    },
+    {
+     "s": 0,
+     "text": "Claro. El zumo cuesta tres euros.",
+     "en": "Sure. The juice costs three euros."
+    },
+    {
+     "s": 1,
+     "text": "Perfecto. Gracias.",
+     "en": "Perfect. Thank you."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué busca Mateo?",
+     "qEn": "What is Mateo looking for?",
+     "options": [
+      "Plátanos",
+      "Fresas",
+      "Uvas"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿De dónde son las fresas?",
+     "qEn": "Where are the strawberries from?",
+     "options": [
+      "De Valencia",
+      "De Barcelona",
+      "De Girona"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuántas fresas compra?",
+     "qEn": "How many strawberries does he buy?",
+     "options": [
+      "Medio kilo",
+      "Un kilo",
+      "Dos kilos"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cuánto cuesta el zumo?",
+     "qEn": "How much is the juice?",
+     "options": [
+      "Dos euros",
+      "Tres euros",
+      "Cinco euros"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Te gusta la fruta?",
+     "qEn": "Do you like fruit?",
+     "model": "Sí, me gusta mucho."
+    },
+    {
+     "q": "¿Cuál es tu fruta favorita?",
+     "qEn": "What is your favourite fruit?",
+     "model": "Mi fruta favorita es la fresa."
+    },
+    {
+     "q": "¿Tomas zumo por la mañana?",
+     "qEn": "Do you drink juice in the morning?",
+     "model": "Sí, tomo zumo de naranja."
+    }
+   ],
+   "gaps": "[Medio kilo], por [favor]. ¿Y un [zumo] de [naranja]?",
+   "glossary": [
+    {
+     "word": "fresas",
+     "meaning": "fruta pequeña, roja y dulce",
+     "en": "strawberries"
+    },
+    {
+     "word": "zumo",
+     "meaning": "bebida de fruta (en España)",
+     "en": "juice"
+    },
+    {
+     "word": "medio kilo",
+     "meaning": "quinientos gramos",
+     "en": "half a kilo"
+    }
+   ]
+  },
+  {
+   "id": "andalucia",
+   "title": "Un paseo por Sevilla",
+   "place": "Un coche de caballos en Sevilla",
+   "context": "Camila, de Perú, habla con Curro, el cochero, en una plaza de Sevilla.",
+   "contextEn": "Camila, from Peru, talks with Curro, the carriage driver, in a square in Seville.",
+   "speakers": [
+    {
+     "name": "Curro",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    },
+    {
+     "name": "Camila",
+     "country": "Perú",
+     "voice": "es-PE-CamilaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "¡Hola! ¿Un paseo por Sevilla?",
+     "en": "Hello! A ride around Seville?"
+    },
+    {
+     "s": 1,
+     "text": "Sí. ¿Cuánto cuesta?",
+     "en": "Yes. How much is it?"
+    },
+    {
+     "s": 0,
+     "text": "Cincuenta euros. Son cuarenta minutos.",
+     "en": "Fifty euros. It is forty minutes."
+    },
+    {
+     "s": 1,
+     "text": "¿Cómo se llama el caballo?",
+     "en": "What is the horse called?"
+    },
+    {
+     "s": 0,
+     "text": "Se llama Lucero. Es muy tranquilo.",
+     "en": "He is called Lucero. He is very calm."
+    },
+    {
+     "s": 1,
+     "text": "¡Qué bonito! Vamos.",
+     "en": "How lovely! Let’s go."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Dónde están?",
+     "qEn": "Where are they?",
+     "options": [
+      "En Madrid",
+      "En Granada",
+      "En Sevilla"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuánto cuesta el paseo?",
+     "qEn": "How much is the ride?",
+     "options": [
+      "Cincuenta euros",
+      "Cuarenta euros",
+      "Veinte euros"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cuánto dura el paseo?",
+     "qEn": "How long is the ride?",
+     "options": [
+      "Una hora",
+      "Cuarenta minutos",
+      "Diez minutos"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cómo es el caballo?",
+     "qEn": "What is the horse like?",
+     "options": [
+      "Rápido",
+      "Nervioso",
+      "Tranquilo"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Te gustan los caballos?",
+     "qEn": "Do you like horses?",
+     "model": "Sí, me gustan mucho."
+    },
+    {
+     "q": "¿Paseas por tu ciudad?",
+     "qEn": "Do you walk around your city?",
+     "model": "Sí, paseo los domingos."
+    },
+    {
+     "q": "¿Tienes un animal?",
+     "qEn": "Do you have a pet?",
+     "model": "Sí, tengo un perro."
+    }
+   ],
+   "gaps": "[Cincuenta] [euros]. Son [cuarenta] [minutos].",
+   "glossary": [
+    {
+     "word": "paseo",
+     "meaning": "un viaje corto y tranquilo para disfrutar",
+     "en": "ride, stroll"
+    },
+    {
+     "word": "caballo",
+     "meaning": "un animal grande; la gente sube encima",
+     "en": "horse"
+    },
+    {
+     "word": "tranquilo",
+     "meaning": "calmado, sin nervios",
+     "en": "calm"
+    }
+   ]
+  },
+  {
+   "id": "valencia",
+   "title": "Paella en la Albufera",
+   "place": "Un restaurante junto al lago",
+   "context": "Andrés, de Colombia, come en el restaurante de Amparo, cerca de Valencia.",
+   "contextEn": "Andrés, from Colombia, eats at Amparo’s restaurant near Valencia.",
+   "speakers": [
+    {
+     "name": "Amparo",
+     "country": "España",
+     "voice": "es-ES-ElviraNeural"
+    },
+    {
+     "name": "Andrés",
+     "country": "Colombia",
+     "voice": "es-CO-GonzaloNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "¡Hola! ¿Mesa para uno?",
+     "en": "Hello! A table for one?"
+    },
+    {
+     "s": 1,
+     "text": "Sí, por favor. ¿Hay paella?",
+     "en": "Yes, please. Is there paella?"
+    },
+    {
+     "s": 0,
+     "text": "Sí, paella valenciana, con pollo y verduras.",
+     "en": "Yes, Valencian paella, with chicken and vegetables."
+    },
+    {
+     "s": 1,
+     "text": "¡Qué bien! Una paella y agua, por favor.",
+     "en": "Great! A paella and water, please."
+    },
+    {
+     "s": 0,
+     "text": "La paella tarda veinte minutos.",
+     "en": "The paella takes twenty minutes."
+    },
+    {
+     "s": 1,
+     "text": "No pasa nada. Tengo tiempo.",
+     "en": "No problem. I have time."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Para cuántas personas es la mesa?",
+     "qEn": "How many people is the table for?",
+     "options": [
+      "Una",
+      "Dos",
+      "Tres"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué tiene la paella?",
+     "qEn": "What is in the paella?",
+     "options": [
+      "Pescado y arroz",
+      "Pollo y verduras",
+      "Carne y queso"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué bebe Andrés?",
+     "qEn": "What does Andrés drink?",
+     "options": [
+      "Vino",
+      "Zumo",
+      "Agua"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuánto tarda la paella?",
+     "qEn": "How long does the paella take?",
+     "options": [
+      "Veinte minutos",
+      "Una hora",
+      "Cinco minutos"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Te gusta el arroz?",
+     "qEn": "Do you like rice?",
+     "model": "Sí, me gusta mucho."
+    },
+    {
+     "q": "¿Comes en restaurantes?",
+     "qEn": "Do you eat in restaurants?",
+     "model": "Sí, los sábados."
+    },
+    {
+     "q": "¿Cocinas en casa?",
+     "qEn": "Do you cook at home?",
+     "model": "Sí, cocino todos los días."
+    }
+   ],
+   "gaps": "Sí, [paella] [valenciana], con [pollo] y [verduras].",
+   "glossary": [
+    {
+     "word": "paella",
+     "meaning": "arroz típico de Valencia, hecho en una sartén grande",
+     "en": "paella"
+    },
+    {
+     "word": "verduras",
+     "meaning": "plantas para comer, como la zanahoria",
+     "en": "vegetables"
+    },
+    {
+     "word": "tarda",
+     "meaning": "necesita tiempo",
+     "en": "takes (time)"
+    }
+   ]
+  }
+ ]
+}

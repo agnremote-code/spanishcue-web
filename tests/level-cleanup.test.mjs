@@ -26,14 +26,14 @@ test('all former A0 lessons are A1 without A0 metadata', () => {
   }
   for (const lesson of lessons) {
     assert.ok(publicLevels.includes(lesson.level), `lesson ${lesson.id} has level ${lesson.level}`);
-    assert.equal(Boolean(lesson.levels?.includes('A0')), [36,210,223,226,227,228,229,236,237,238,240].includes(lesson.id), `lesson ${lesson.id}: A0 only when authored`);
+    assert.equal(Boolean(lesson.levels?.includes('A0')), [32,36,210,223,226,227,228,229,236,237,238,240].includes(lesson.id), `lesson ${lesson.id}: A0 only when authored`);
   }
 });
 
 test('A0 appears in filters only for the explicitly authored lessons', () => {
   assert.deepEqual(availableLevels(lessons), publicLevels);
   assert.deepEqual(groupLessonsByLevel(lessons).map(({ level }) => level), publicLevels);
-  assert.equal(lessons.filter(l=>l.levels?.includes('A0')).length,11);
+  assert.equal(lessons.filter(l=>l.levels?.includes('A0')).length,12);
 });
 
 test('A1 has the merged total and pedagogical route order', () => {

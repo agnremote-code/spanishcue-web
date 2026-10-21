@@ -1,0 +1,494 @@
+{
+ "game": "uk",
+ "level": "A2",
+ "items": [
+  {
+   "id": "inglaterra",
+   "title": "El pub que puede cerrar",
+   "place": "Un pub de Londres",
+   "context": "Camila, periodista de Perú, entrevista a Oliver, el dueño de un pub muy antiguo.",
+   "speakers": [
+    {
+     "name": "Camila",
+     "country": "Perú",
+     "voice": "es-PE-CamilaNeural"
+    },
+    {
+     "name": "Oliver",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Oliver, ¿es verdad que una empresa quiere comprar su pub?"
+    },
+    {
+     "s": 1,
+     "text": "Sí. Quieren convertirlo en pisos de lujo. Me han ofrecido mucho dinero."
+    },
+    {
+     "s": 0,
+     "text": "¿Y qué va a hacer?"
+    },
+    {
+     "s": 1,
+     "text": "No lo sé. Mi abuelo y mi padre trabajaron aquí toda su vida. Este año han cerrado tres pubs en mi calle."
+    },
+    {
+     "s": 0,
+     "text": "¿Por qué cierran tantos?"
+    },
+    {
+     "s": 1,
+     "text": "Los jóvenes se quedan en casa o van a cafeterías modernas. Pero para muchos vecinos mayores, este es el único lugar donde hablan con alguien."
+    },
+    {
+     "s": 0,
+     "text": "¿Hay otra solución?"
+    },
+    {
+     "s": 1,
+     "text": "Los vecinos me han propuesto comprar el pub entre todos. Mañana tenemos una reunión."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué quiere hacer la empresa?",
+     "options": [
+      "Convertir el pub en pisos de lujo",
+      "Abrir un restaurante",
+      "Hacer un hotel"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cuántos pubs han cerrado en su calle?",
+     "options": [
+      "Uno",
+      "Tres",
+      "Diez"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Por qué es importante el pub para los mayores?",
+     "options": [
+      "Porque es barato",
+      "Porque tiene música",
+      "Porque allí hablan con alguien"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué han propuesto los vecinos?",
+     "options": [
+      "Comprar el pub entre todos",
+      "Cerrar el pub",
+      "Hacer una fiesta"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Ha cerrado un lugar importante para ti?",
+     "model": "Sí, cerró el cine de mi barrio y ahora hay un supermercado."
+    },
+    {
+     "q": "¿Dónde hablas con tus vecinos?",
+     "model": "Hablo con ellos en el ascensor o en la panadería."
+    },
+    {
+     "q": "¿Pondrías dinero para salvar un lugar de tu barrio?",
+     "model": "Sí, si fuera un lugar donde va mucha gente mayor."
+    }
+   ],
+   "gaps": "Los vecinos me han propuesto [comprar] el pub entre [todos]. [Mañana] tenemos una [reunión].",
+   "glossary": [
+    {
+     "word": "pisos de lujo",
+     "meaning": "viviendas muy caras"
+    },
+    {
+     "word": "cafeterías",
+     "meaning": "lugares para tomar café"
+    },
+    {
+     "word": "reunión",
+     "meaning": "encuentro de varias personas para hablar"
+    },
+    {
+     "word": "vecinos",
+     "meaning": "personas que viven cerca"
+    }
+   ]
+  },
+  {
+   "id": "escocia",
+   "title": "Un kilt hecho por una extranjera",
+   "place": "Una tienda de kilts en un pueblo de Escocia",
+   "context": "Leila, una aprendiz siria, habla con Morag, su maestra, después de un problema con un cliente.",
+   "speakers": [
+    {
+     "name": "Leila",
+     "country": "Guinea Ecuatorial",
+     "voice": "es-GQ-TeresaNeural"
+    },
+    {
+     "name": "Morag",
+     "country": "España",
+     "voice": "es-ES-ElviraNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Morag, he oído lo que ha dicho ese cliente. No quiere un kilt hecho por una extranjera."
+    },
+    {
+     "s": 1,
+     "text": "Lo siento mucho, Leila. Me he quedado sin palabras."
+    },
+    {
+     "s": 0,
+     "text": "No pasa nada. En Siria mi abuela era costurera y también tenía clientes difíciles."
+    },
+    {
+     "s": 1,
+     "text": "Tú tienes las mejores manos que he visto en cuarenta años. Y lo sabes."
+    },
+    {
+     "s": 0,
+     "text": "Gracias. Tengo una idea: quiero crear un tartán nuevo con los colores de Siria y de Escocia."
+    },
+    {
+     "s": 1,
+     "text": "A algunos no les va a gustar. Dirán que es una falta de respeto a la tradición."
+    },
+    {
+     "s": 0,
+     "text": "¿Y a ti qué te parece?"
+    },
+    {
+     "s": 1,
+     "text": "Que las tradiciones también cambian. Hazlo, y lo ponemos en el escaparate."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué no quiere el cliente?",
+     "options": [
+      "Un kilt caro",
+      "Un kilt hecho por una extranjera",
+      "Un kilt rojo"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué era la abuela de Leila?",
+     "options": [
+      "Médica",
+      "Profesora",
+      "Costurera"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué quiere crear Leila?",
+     "options": [
+      "Un tartán con colores de Siria y Escocia",
+      "Una tienda nueva",
+      "Un vestido"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué decide Morag?",
+     "options": [
+      "Cerrar la tienda",
+      "Hablar con el cliente",
+      "Poner el tartán en el escaparate"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Alguien te ha enseñado un oficio?",
+     "model": "Sí, mi tío me enseñó a arreglar bicicletas."
+    },
+    {
+     "q": "¿Has visto a alguien tratar mal a un extranjero?",
+     "model": "Sí, una vez en el autobús, y no supe qué hacer."
+    },
+    {
+     "q": "¿Se puede cambiar una tradición sin romperla?",
+     "model": "Creo que sí, si se respeta su historia."
+    }
+   ],
+   "gaps": "Gracias. Tengo una [idea]: quiero crear un [tartán] nuevo con los [colores] de Siria y de [Escocia].",
+   "glossary": [
+    {
+     "word": "extranjera",
+     "meaning": "mujer de otro país"
+    },
+    {
+     "word": "costurera",
+     "meaning": "mujer que hace ropa"
+    },
+    {
+     "word": "escaparate",
+     "meaning": "ventana de una tienda donde se ve lo que vende"
+    },
+    {
+     "word": "tartán",
+     "meaning": "tela escocesa de cuadros"
+    }
+   ]
+  },
+  {
+   "id": "gales",
+   "title": "La final y la cabeza",
+   "place": "Un estadio de rugby de Cardiff",
+   "context": "Ramona, médica de la República Dominicana, habla con Rhys antes de la final.",
+   "speakers": [
+    {
+     "name": "Ramona",
+     "country": "República Dominicana",
+     "voice": "es-DO-RamonaNeural"
+    },
+    {
+     "name": "Rhys",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Rhys, hace dos semanas tuviste un golpe muy fuerte en la cabeza. ¿Cómo te encuentras?"
+    },
+    {
+     "s": 1,
+     "text": "Bien, de verdad. A veces me duele la cabeza y olvido cosas pequeñas, pero nada más."
+    },
+    {
+     "s": 0,
+     "text": "Eso no es poco. Mi consejo es descansar dos meses."
+    },
+    {
+     "s": 1,
+     "text": "Pero la final es dentro de tres semanas. Llevo toda la vida soñando con ella."
+    },
+    {
+     "s": 0,
+     "text": "Lo entiendo. Pero si recibes otro golpe, el daño puede ser para siempre."
+    },
+    {
+     "s": 1,
+     "text": "Mi padre jugó en este equipo y nunca ganó una final. ¿Y si juego solo diez minutos?"
+    },
+    {
+     "s": 0,
+     "text": "Lo vamos a hablar con tu familia. Tu salud es lo primero."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Dónde recibió Rhys el golpe?",
+     "options": [
+      "En la pierna",
+      "En la mano",
+      "En la cabeza"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué le aconseja la médica?",
+     "options": [
+      "Descansar dos meses",
+      "Jugar la final",
+      "Ir al hospital hoy"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cuándo es la final?",
+     "options": [
+      "Mañana",
+      "Dentro de tres semanas",
+      "Dentro de dos meses"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué propone Rhys?",
+     "options": [
+      "No jugar más",
+      "Cambiar de equipo",
+      "Jugar solo diez minutos"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Has hecho algo arriesgado por un sueño?",
+     "model": "Sí, dejé mi trabajo para viajar un año."
+    },
+    {
+     "q": "¿Haces caso a los médicos?",
+     "model": "Casi siempre, aunque a veces no descanso lo suficiente."
+    },
+    {
+     "q": "¿Dejarías jugar al rugby a tus hijos?",
+     "model": "Sí, pero con mucha protección y buenos entrenadores."
+    }
+   ],
+   "gaps": "Lo entiendo. Pero si [recibes] otro [golpe], el [daño] puede ser para [siempre].",
+   "glossary": [
+    {
+     "word": "golpe",
+     "meaning": "choque fuerte contra algo"
+    },
+    {
+     "word": "final",
+     "meaning": "el último partido de un campeonato"
+    },
+    {
+     "word": "daño",
+     "meaning": "mal que sufre algo o alguien"
+    },
+    {
+     "word": "salud",
+     "meaning": "estado del cuerpo"
+    }
+   ]
+  },
+  {
+   "id": "irlanda-norte",
+   "title": "El Titanic II",
+   "place": "El museo del Titanic, en Belfast",
+   "context": "Marcelo, de Bolivia, visita el museo y habla con Niamh, la guía.",
+   "speakers": [
+    {
+     "name": "Marcelo",
+     "country": "Bolivia",
+     "voice": "es-BO-MarceloNeural"
+    },
+    {
+     "name": "Niamh",
+     "country": "Colombia",
+     "voice": "es-CO-SalomeNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Niamh, he leído que una empresa quiere construir un Titanic nuevo."
+    },
+    {
+     "s": 1,
+     "text": "Sí, el Titanic II. Quieren hacer cruceros de lujo por la misma ruta."
+    },
+    {
+     "s": 0,
+     "text": "¿Y a usted qué le parece?"
+    },
+    {
+     "s": 1,
+     "text": "Por un lado es fascinante. Por otro, murieron mil quinientas personas. No sé si es respetuoso."
+    },
+    {
+     "s": 0,
+     "text": "Mi abuelo trabajaba en barcos. Él decía que el mar no perdona."
+    },
+    {
+     "s": 1,
+     "text": "El mío también. Mi bisabuelo trabajó en el astillero cuando tenía catorce años."
+    },
+    {
+     "s": 0,
+     "text": "¿Haría usted ese viaje?"
+    },
+    {
+     "s": 1,
+     "text": "Solo si me dejan contar la historia de los trabajadores a bordo."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué quiere construir la empresa?",
+     "options": [
+      "Un museo",
+      "Un Titanic nuevo",
+      "Un puerto"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cuántas personas murieron en el Titanic?",
+     "options": [
+      "Mil quinientas",
+      "Quinientas",
+      "Diez mil"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Dónde trabajó el bisabuelo de Niamh?",
+     "options": [
+      "En un hotel",
+      "En una tienda",
+      "En el astillero"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuándo haría Niamh el viaje?",
+     "options": [
+      "Nunca",
+      "Si le dejan contar la historia de los trabajadores",
+      "Si es gratis"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Harías un crucero en el Titanic II?",
+     "model": "No, me daría un poco de miedo."
+    },
+    {
+     "q": "¿Has visitado un lugar donde pasó algo trágico?",
+     "model": "Sí, visité un museo sobre una guerra y terminé muy triste."
+    },
+    {
+     "q": "¿Alguien de tu familia trabajó en algo famoso?",
+     "model": "Mi tía trabajó en un hotel muy conocido de mi ciudad."
+    }
+   ],
+   "gaps": "Por un lado es [fascinante]. Por otro, [murieron] mil [quinientas] personas. No sé si es [respetuoso].",
+   "glossary": [
+    {
+     "word": "crucero",
+     "meaning": "viaje turístico en un barco grande"
+    },
+    {
+     "word": "astillero",
+     "meaning": "lugar donde se construyen barcos"
+    },
+    {
+     "word": "bisabuelo",
+     "meaning": "el padre del abuelo"
+    },
+    {
+     "word": "ruta",
+     "meaning": "camino de un viaje"
+    }
+   ]
+  }
+ ]
+}

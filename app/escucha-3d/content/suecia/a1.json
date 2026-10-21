@@ -1,0 +1,466 @@
+{
+ "game": "suecia",
+ "level": "A1",
+ "items": [
+  {
+   "id": "estocolmo",
+   "title": "Midsommar en el ferry",
+   "place": "El ferry al archipiélago",
+   "context": "Paola, de Venezuela, habla con Johan, el capitán del ferry, el día de Midsommar.",
+   "speakers": [
+    {
+     "name": "Paola",
+     "country": "Venezuela",
+     "voice": "es-VE-PaolaNeural"
+    },
+    {
+     "name": "Johan",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Perdone, ¿por qué hay tanta gente con flores?"
+    },
+    {
+     "s": 1,
+     "text": "Hoy es Midsommar, la fiesta del verano. Todos van a las islas."
+    },
+    {
+     "s": 0,
+     "text": "¿Y qué hacen en la fiesta?"
+    },
+    {
+     "s": 1,
+     "text": "Bailamos alrededor de un palo con flores y comemos arenque con patatas."
+    },
+    {
+     "s": 0,
+     "text": "¿A qué hora termina?"
+    },
+    {
+     "s": 1,
+     "text": "Muy tarde. En junio aquí casi no hay noche. A las once todavía hay luz."
+    },
+    {
+     "s": 0,
+     "text": "¡Increíble! Entonces me quedo hasta tarde."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué fiesta es hoy?",
+     "options": [
+      "Midsommar",
+      "Navidad",
+      "El día nacional"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Adónde va la gente?",
+     "options": [
+      "A la montaña",
+      "A las islas",
+      "Al centro"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué comen en la fiesta?",
+     "options": [
+      "Pescado frito",
+      "Carne con arroz",
+      "Arenque con patatas"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cómo son las noches en junio?",
+     "options": [
+      "Casi no hay noche",
+      "Muy largas",
+      "Muy frías"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Cuál es la fiesta más importante de tu país?",
+     "model": "Es la Navidad, la celebro con mi familia."
+    },
+    {
+     "q": "¿Te gusta bailar en las fiestas?",
+     "model": "Sí, me gusta bailar con mis amigos."
+    },
+    {
+     "q": "¿A qué hora es de noche en verano en tu ciudad?",
+     "model": "Es de noche a las nueve, más o menos."
+    }
+   ],
+   "gaps": "Muy tarde. En [junio] aquí casi no hay [noche]. A las [once] todavía hay [luz].",
+   "glossary": [
+    {
+     "word": "arenque",
+     "meaning": "pescado pequeño muy típico de Suecia"
+    },
+    {
+     "word": "palo",
+     "meaning": "trozo largo de madera"
+    },
+    {
+     "word": "islas",
+     "meaning": "tierras con agua alrededor"
+    }
+   ]
+  },
+  {
+   "id": "gotemburgo",
+   "title": "Bollos gigantes",
+   "place": "La panadería de Haga",
+   "context": "Luis, de Ecuador, compra un bollo gigante en la panadería de Maja.",
+   "speakers": [
+    {
+     "name": "Luis",
+     "country": "Ecuador",
+     "voice": "es-EC-LuisNeural"
+    },
+    {
+     "name": "Maja",
+     "country": "España",
+     "voice": "es-ES-ElviraNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Buenos días. ¡Qué bollos tan grandes!"
+    },
+    {
+     "s": 1,
+     "text": "Son los bollos de canela de Haga. Cada uno pesa medio kilo."
+    },
+    {
+     "s": 0,
+     "text": "¿Medio kilo? ¿A qué hora empiezas a trabajar?"
+    },
+    {
+     "s": 1,
+     "text": "A las cuatro de la mañana. Abro la tienda a las siete."
+    },
+    {
+     "s": 0,
+     "text": "Es muy temprano. Quiero uno, pero no puedo comerlo todo."
+    },
+    {
+     "s": 1,
+     "text": "No pasa nada. Te doy una bolsa para llevar el resto."
+    },
+    {
+     "s": 0,
+     "text": "Perfecto. Y un café con leche, por favor."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuánto pesa cada bollo?",
+     "options": [
+      "Un kilo",
+      "Medio kilo",
+      "Cien gramos"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿A qué hora empieza Maja a trabajar?",
+     "options": [
+      "A las siete",
+      "A las seis",
+      "A las cuatro"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué problema tiene Luis?",
+     "options": [
+      "No puede comer todo el bollo",
+      "No tiene dinero",
+      "No le gusta la canela"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué le da Maja?",
+     "options": [
+      "Un café gratis",
+      "Una bolsa",
+      "Otro bollo"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿A qué hora te levantas?",
+     "model": "Me levanto a las siete de la mañana."
+    },
+    {
+     "q": "¿Qué desayunas normalmente?",
+     "model": "Desayuno café con pan y fruta."
+    },
+    {
+     "q": "¿Hay una panadería buena en tu barrio?",
+     "model": "Sí, hay una panadería al lado de mi casa."
+    }
+   ],
+   "gaps": "A las [cuatro] de la [mañana]. Abro la [tienda] a las [siete].",
+   "glossary": [
+    {
+     "word": "canela",
+     "meaning": "especia dulce de color marrón"
+    },
+    {
+     "word": "pesa",
+     "meaning": "tiene un peso de"
+    },
+    {
+     "word": "temprano",
+     "meaning": "al principio del día"
+    }
+   ]
+  },
+  {
+   "id": "laponia",
+   "title": "Esperando la aurora",
+   "place": "Un lago helado en Laponia",
+   "context": "Marta, de Guatemala, espera la aurora boreal con Erik, el guía.",
+   "speakers": [
+    {
+     "name": "Marta",
+     "country": "Guatemala",
+     "voice": "es-GT-MartaNeural"
+    },
+    {
+     "name": "Erik",
+     "country": "Costa Rica",
+     "voice": "es-CR-JuanNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Erik, llevamos dos horas aquí y no veo nada."
+    },
+    {
+     "s": 1,
+     "text": "Paciencia. Hay muchas nubes, pero el viento las está moviendo."
+    },
+    {
+     "s": 0,
+     "text": "Tengo mucho frío en los pies."
+    },
+    {
+     "s": 1,
+     "text": "Toma, aquí tienes un chocolate caliente. Y camina un poco."
+    },
+    {
+     "s": 0,
+     "text": "¿Cuántos grados hace?"
+    },
+    {
+     "s": 1,
+     "text": "Veinticinco bajo cero. ¡Mira! Allí, encima de los árboles. Está saliendo."
+    },
+    {
+     "s": 0,
+     "text": "¡Es verde! ¡Es precioso!"
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuánto tiempo llevan esperando?",
+     "options": [
+      "Diez minutos",
+      "Una hora",
+      "Dos horas"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Dónde tiene frío Marta?",
+     "options": [
+      "En los pies",
+      "En las manos",
+      "En la cara"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué le da Erik?",
+     "options": [
+      "Un té",
+      "Un chocolate caliente",
+      "Unos guantes"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿De qué color es la aurora?",
+     "options": [
+      "Rosa",
+      "Azul",
+      "Verde"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Eres una persona paciente?",
+     "model": "Sí, normalmente sé esperar."
+    },
+    {
+     "q": "¿Qué haces cuando tienes mucho frío?",
+     "model": "Me pongo más ropa y tomo algo caliente."
+    },
+    {
+     "q": "¿Has visto algo bonito en el cielo?",
+     "model": "Sí, he visto muchas estrellas en el campo."
+    }
+   ],
+   "gaps": "Veinticinco [bajo cero]. ¡Mira! Allí, [encima] de los [árboles]. Está [saliendo].",
+   "glossary": [
+    {
+     "word": "nubes",
+     "meaning": "cosas blancas o grises en el cielo"
+    },
+    {
+     "word": "bajo cero",
+     "meaning": "menos de cero grados"
+    },
+    {
+     "word": "paciencia",
+     "meaning": "calma para esperar"
+    }
+   ]
+  },
+  {
+   "id": "malmo",
+   "title": "La tienda sin vendedor",
+   "place": "Una granja de Escania",
+   "context": "Lorena, de El Salvador, compra en la tienda de la granja de Gustav.",
+   "speakers": [
+    {
+     "name": "Lorena",
+     "country": "El Salvador",
+     "voice": "es-SV-LorenaNeural"
+    },
+    {
+     "name": "Gustav",
+     "country": "Paraguay",
+     "voice": "es-PY-MarioNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Hola. ¿No hay nadie en la tienda?"
+    },
+    {
+     "s": 1,
+     "text": "No, aquí no hay vendedor. Coges lo que quieres y dejas el dinero en la caja."
+    },
+    {
+     "s": 0,
+     "text": "¿Y la gente paga siempre?"
+    },
+    {
+     "s": 1,
+     "text": "Casi siempre. En diez años solo me han robado dos veces."
+    },
+    {
+     "s": 0,
+     "text": "¡Qué bien! Quiero seis huevos y un bote de miel."
+    },
+    {
+     "s": 1,
+     "text": "Son ochenta coronas. La miel es de mis abejas."
+    },
+    {
+     "s": 0,
+     "text": "Aquí está el dinero. Gracias."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Quién vende en la tienda?",
+     "options": [
+      "Nadie",
+      "Gustav",
+      "Su hija"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cuántas veces le han robado?",
+     "options": [
+      "Nunca",
+      "Dos veces",
+      "Diez veces"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué compra Lorena?",
+     "options": [
+      "Leche y pan",
+      "Fruta",
+      "Huevos y miel"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuánto paga?",
+     "options": [
+      "Ochenta coronas",
+      "Sesenta coronas",
+      "Cien coronas"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Funcionaría una tienda así en tu país?",
+     "model": "Creo que en el campo sí, pero en la ciudad no."
+    },
+    {
+     "q": "¿Compras comida en granjas?",
+     "model": "No, compro todo en el supermercado."
+    },
+    {
+     "q": "¿Te gusta la miel?",
+     "model": "Sí, la tomo con yogur por la mañana."
+    }
+   ],
+   "gaps": "No, aquí no hay [vendedor]. Coges lo que [quieres] y dejas el [dinero] en la [caja].",
+   "glossary": [
+    {
+     "word": "vendedor",
+     "meaning": "persona que vende"
+    },
+    {
+     "word": "robado",
+     "meaning": "quitado algo sin pagar"
+    },
+    {
+     "word": "abejas",
+     "meaning": "insectos que hacen miel"
+    }
+   ]
+  }
+ ]
+}

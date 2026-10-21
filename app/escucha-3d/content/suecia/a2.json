@@ -1,0 +1,482 @@
+{
+ "game": "suecia",
+ "level": "A2",
+ "items": [
+  {
+   "id": "estocolmo",
+   "title": "Las monedas de la señora Berg",
+   "place": "El café de la fika",
+   "context": "Astrid, la camarera, le explica una norma nueva a la señora Berg, una clienta de noventa años.",
+   "speakers": [
+    {
+     "name": "Astrid",
+     "country": "México",
+     "voice": "es-MX-DaliaNeural"
+    },
+    {
+     "name": "Señora Berg",
+     "country": "España",
+     "voice": "es-ES-ElviraNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Buenas tardes, señora Berg. ¿Lo de siempre? ¿Un café y un bollo?"
+    },
+    {
+     "s": 1,
+     "text": "Sí, hija. Aquí tienes las monedas, como cada día."
+    },
+    {
+     "s": 0,
+     "text": "Ay, señora Berg… Desde el lunes ya no podemos aceptar monedas. Es una norma nueva del café."
+    },
+    {
+     "s": 1,
+     "text": "¿Cómo? Yo no tengo tarjeta. Y tampoco tengo móvil. Llevo treinta años viniendo aquí."
+    },
+    {
+     "s": 0,
+     "text": "Lo sé. Podemos hacer una cosa: mañana vengo antes y le enseño a usar una tarjeta, paso a paso."
+    },
+    {
+     "s": 1,
+     "text": "Tengo noventa años, Astrid. No sé si puedo aprender eso."
+    },
+    {
+     "s": 0,
+     "text": "Claro que puede. Mi abuela aprendió a los ochenta y cinco. Y hoy el café es un regalo."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué toma siempre la señora Berg?",
+     "options": [
+      "Un café y un bollo",
+      "Un té y una galleta",
+      "Un chocolate"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué ya no acepta el café?",
+     "options": [
+      "Tarjetas",
+      "Monedas",
+      "Billetes grandes"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cuántos años tiene la señora Berg?",
+     "options": [
+      "Ochenta",
+      "Ochenta y cinco",
+      "Noventa"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué propone Astrid?",
+     "options": [
+      "Enseñarle a usar una tarjeta",
+      "Darle café gratis siempre",
+      "Cambiar de café"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Todavía pagas con dinero en efectivo?",
+     "model": "Sí, a veces, sobre todo en los mercados."
+    },
+    {
+     "q": "¿Las personas mayores de tu familia usan el móvil?",
+     "model": "Mi abuela usa el móvil solo para llamar."
+    },
+    {
+     "q": "¿Has enseñado algo a una persona mayor?",
+     "model": "Sí, le enseñé a mi abuelo a hacer videollamadas."
+    }
+   ],
+   "gaps": "Lo sé. Podemos hacer una cosa: [mañana] vengo [antes] y le enseño a usar una [tarjeta], [paso a paso].",
+   "glossary": [
+    {
+     "word": "monedas",
+     "meaning": "dinero de metal"
+    },
+    {
+     "word": "norma",
+     "meaning": "regla que hay que seguir"
+    },
+    {
+     "word": "paso a paso",
+     "meaning": "despacio, una cosa después de otra"
+    },
+    {
+     "word": "regalo",
+     "meaning": "algo que das sin pedir dinero"
+    }
+   ]
+  },
+  {
+   "id": "gotemburgo",
+   "title": "El parque y el bosque",
+   "place": "El parque de atracciones Liseberg",
+   "context": "Karina, una vecina de Puerto Rico, pregunta a Oskar por la nueva montaña rusa.",
+   "speakers": [
+    {
+     "name": "Karina",
+     "country": "Puerto Rico",
+     "voice": "es-PR-KarinaNeural"
+    },
+    {
+     "name": "Oskar",
+     "country": "Argentina",
+     "voice": "es-AR-TomasNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Oskar, ¿es verdad que el parque quiere cortar parte del bosque?"
+    },
+    {
+     "s": 1,
+     "text": "Sí. Quieren construir una montaña rusa nueva, la más alta de Escandinavia."
+    },
+    {
+     "s": 0,
+     "text": "¿Y tú qué piensas? Tú trabajas en el parque desde los dieciséis años."
+    },
+    {
+     "s": 1,
+     "text": "Es complicado. La montaña rusa traerá trabajo para mucha gente del barrio. Pero en ese bosque paseaba con mi abuelo cuando era pequeño."
+    },
+    {
+     "s": 0,
+     "text": "Mañana hay una reunión de vecinos. ¿Vas a hablar?"
+    },
+    {
+     "s": 1,
+     "text": "Mi jefe quiere que hable a favor del parque. Yo prefiero proponer otra idea: construirla en el aparcamiento."
+    },
+    {
+     "s": 0,
+     "text": "Eso me parece inteligente. Así no cortan ningún árbol."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué quiere construir el parque?",
+     "options": [
+      "Un hotel",
+      "Una montaña rusa",
+      "Un aparcamiento"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Desde cuándo trabaja Oskar en el parque?",
+     "options": [
+      "Desde los veinte años",
+      "Desde el año pasado",
+      "Desde los dieciséis años"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Con quién paseaba Oskar por el bosque?",
+     "options": [
+      "Con su abuelo",
+      "Con su padre",
+      "Con su perro"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Dónde quiere Oskar construir la montaña rusa?",
+     "options": [
+      "En el bosque",
+      "En el aparcamiento",
+      "En el centro"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Hay un bosque o un parque importante para ti?",
+     "model": "Sí, el parque donde jugaba de pequeño."
+    },
+    {
+     "q": "¿Qué es más importante, el trabajo o la naturaleza?",
+     "model": "Creo que los dos; hay que buscar un equilibrio."
+    },
+    {
+     "q": "¿Has ido a una reunión de vecinos?",
+     "model": "Sí, una vez, para hablar del ruido de un bar."
+    }
+   ],
+   "gaps": "Es complicado. La [montaña rusa] traerá [trabajo] para mucha [gente] del [barrio].",
+   "glossary": [
+    {
+     "word": "montaña rusa",
+     "meaning": "atracción muy rápida con subidas y bajadas"
+    },
+    {
+     "word": "reunión de vecinos",
+     "meaning": "cuando la gente del barrio se junta para hablar"
+    },
+    {
+     "word": "aparcamiento",
+     "meaning": "lugar para dejar los coches"
+    },
+    {
+     "word": "a favor",
+     "meaning": "apoyando algo"
+    }
+   ]
+  },
+  {
+   "id": "laponia",
+   "title": "Volver al norte",
+   "place": "La casa de Inga en Laponia",
+   "context": "Federico, un amigo de Nicaragua, visita a Inga, que ha vuelto a cuidar los renos de su familia.",
+   "speakers": [
+    {
+     "name": "Federico",
+     "country": "Nicaragua",
+     "voice": "es-NI-FedericoNeural"
+    },
+    {
+     "name": "Inga",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Inga, todavía no entiendo por qué dejaste Estocolmo. Tenías un buen trabajo."
+    },
+    {
+     "s": 1,
+     "text": "Mi padre está enfermo y alguien tiene que cuidar los renos. Mi hermano solo no puede."
+    },
+    {
+     "s": 0,
+     "text": "Pero aquí hace un frío terrible y casi no hay cobertura."
+    },
+    {
+     "s": 1,
+     "text": "Es verdad. Pero cuando estoy con los renos me siento yo misma. En la ciudad la gente me preguntaba si vivía en un iglú."
+    },
+    {
+     "s": 0,
+     "text": "Vale, lo entiendo. Oye, mi empresa busca a alguien para trabajar a distancia. ¿Te interesa?"
+    },
+    {
+     "s": 1,
+     "text": "Quizás. Por las tardes tengo tiempo, cuando los renos están tranquilos."
+    },
+    {
+     "s": 0,
+     "text": "Perfecto. Te mando la información esta noche, si tienes cobertura."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Dónde vivía Inga antes?",
+     "options": [
+      "En Kiruna",
+      "En Malmö",
+      "En Estocolmo"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Por qué ha vuelto al norte?",
+     "options": [
+      "Su padre está enfermo",
+      "No le gustaba su trabajo",
+      "Quería ver auroras"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué le preguntaba la gente en la ciudad?",
+     "options": [
+      "Si tenía renos",
+      "Si vivía en un iglú",
+      "Si hablaba sueco"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué le ofrece Federico?",
+     "options": [
+      "Un viaje",
+      "Dinero",
+      "Un trabajo a distancia"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Dejarías tu trabajo para cuidar a tu familia?",
+     "model": "Sí, si fuera necesario, sin dudar."
+    },
+    {
+     "q": "¿La gente tiene ideas equivocadas sobre tu país?",
+     "model": "Sí, piensan que en mi país siempre hace calor."
+    },
+    {
+     "q": "¿Te gustaría trabajar a distancia?",
+     "model": "Sí, porque podría vivir en el campo."
+    }
+   ],
+   "gaps": "Pero cuando estoy con los [renos] me siento [yo misma]. En la [ciudad] la gente me preguntaba si vivía en un [iglú].",
+   "glossary": [
+    {
+     "word": "cobertura",
+     "meaning": "señal para usar el móvil"
+    },
+    {
+     "word": "iglú",
+     "meaning": "casa hecha de hielo"
+    },
+    {
+     "word": "a distancia",
+     "meaning": "desde otro lugar, con el ordenador"
+    },
+    {
+     "word": "enfermo",
+     "meaning": "que no está bien de salud"
+    }
+   ]
+  },
+  {
+   "id": "malmo",
+   "title": "Controles en el puente",
+   "place": "El tren del puente de Öresund",
+   "context": "Hanna, que vive en Malmö y trabaja en Copenhague, habla con Mikael, el revisor.",
+   "speakers": [
+    {
+     "name": "Hanna",
+     "country": "Honduras",
+     "voice": "es-HN-KarlaNeural"
+    },
+    {
+     "name": "Mikael",
+     "country": "Uruguay",
+     "voice": "es-UY-MateoNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Mikael, otra vez cuarenta minutos de retraso. Hoy llego tarde a recoger a mi hija."
+    },
+    {
+     "s": 1,
+     "text": "Lo siento, Hanna. Los controles de pasaportes en la frontera hacen todo más lento."
+    },
+    {
+     "s": 0,
+     "text": "Antes tardaba media hora en llegar a Copenhague. Ahora tardo más de una hora."
+    },
+    {
+     "s": 1,
+     "text": "Mucha gente está igual. Algunos pasajeros piensan dejar su trabajo en Dinamarca."
+    },
+    {
+     "s": 0,
+     "text": "Yo también lo pienso. Pero en Copenhague me pagan mucho mejor."
+    },
+    {
+     "s": 1,
+     "text": "¿Y no puedes trabajar desde casa algunos días?"
+    },
+    {
+     "s": 0,
+     "text": "Buena idea. Mañana se lo pregunto a mi jefa. Dos días en casa ya cambiarían mucho."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuánto retraso hay hoy?",
+     "options": [
+      "Cuarenta minutos",
+      "Diez minutos",
+      "Dos horas"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Por qué es más lento el viaje?",
+     "options": [
+      "Por la nieve",
+      "Por los controles de pasaportes",
+      "Por unas obras"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Por qué no deja Hanna su trabajo?",
+     "options": [
+      "Le gusta su jefa",
+      "Está muy cerca",
+      "Le pagan mucho mejor"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué idea le da Mikael?",
+     "options": [
+      "Trabajar desde casa algunos días",
+      "Mudarse a Copenhague",
+      "Ir en coche"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Cuánto tardas en llegar a tu trabajo?",
+     "model": "Tardo unos treinta minutos en autobús."
+    },
+    {
+     "q": "¿Trabajarías en un país y vivirías en otro?",
+     "model": "Sí, si los dos países estuvieran cerca."
+    },
+    {
+     "q": "¿Has tenido problemas en una frontera?",
+     "model": "Sí, una vez esperé tres horas en un control."
+    }
+   ],
+   "gaps": "Antes tardaba [media hora] en llegar a [Copenhague]. Ahora tardo [más de] una [hora].",
+   "glossary": [
+    {
+     "word": "retraso",
+     "meaning": "cuando algo llega tarde"
+    },
+    {
+     "word": "frontera",
+     "meaning": "línea entre dos países"
+    },
+    {
+     "word": "recoger",
+     "meaning": "ir a buscar a alguien"
+    },
+    {
+     "word": "controles",
+     "meaning": "revisiones de la policía"
+    }
+   ]
+  }
+ ]
+}
