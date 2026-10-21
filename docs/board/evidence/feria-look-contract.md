@@ -142,3 +142,45 @@ The render check showed three framing faults:
 **Trade-off:** on a 390 px portrait phone the FOV reaches 81–94°, so candidates are small, about 70–90 CSS px tall. They are complete but less legible than on a tablet or a shared screen.
 
 **Evidence:** `feria-look-2026-10-21/after-*.png`.
+
+## 7. T5 draw calls, low mode (measured 2026-10-21, SwiftShader)
+
+**How it was measured:**
+- Command: `node scripts/qa-feria-browser.mjs --calls`.
+- Real WebGL draw calls are counted on the context and averaged over 10 frames, after 15 frames to settle.
+- Setup: coarse pointer, DPR 1.25, tablet 1180×820 and phone 390×844.
+- Places: every place a class stops at, meaning the free view at the spawn, the 8 circle cameras and the 4 Busca places (4 candidates).
+- Hospital San Casi Vivo was measured in the same harness for reference.
+- This is a count, not an fps figure: T5's fps target on the QA Android is still a manual check.
+
+| World and view | Before (min · median · max) | After (min · median · max) |
+|---|---|---|
+| feria tablet | 101 · 288 · 618 | **67 · 88 · 98** |
+| feria phone | 43 · 168 · 402 | **43 · 66 · 74** |
+| hospital tablet (reference, unchanged) | 96 · 326 · 1420 | — |
+| hospital phone (reference, unchanged) | 14 · 200 · 804 | — |
+
+**Per place, after (tablet / phone):**
+- spawn 76 / 70;
+- circles 1–8: 98/64, 96/66, 91/56, 95/61, 89/58, 88/64, 88/43, 96/74;
+- Busca: informacion 79/74, escenario 67/67, fotos 80/74, baile 74/74.
+
+The "before" numbers already include the §6 framing change. With the old camera, Busca views measured 548–618 on tablet (§5 run).
+
+**What changed (low path only; high mode is untouched):**
+- `bake3d.ts` merges static meshes per material class. Plain materials become vertex colours, glowing parts become one unlit mesh, and textured blob shadows merge per texture.
+- Baked: houses, stalls, the stage, the wheel frame, poles, the fountain and the circle discs.
+- The wheel's spokes and rims are baked in the wheel's own frame, so it still turns.
+- The 12 cabins are 2 instanced meshes that stay level.
+- The §3 crowd of 10 is one baked group (no idle motion).
+- The 8 hosts are a baked group. Only the host of the open circle is a live person (turns to the mascot and talks).
+- Busca candidates are baked per set; the number labels stay sprites.
+
+**Where the remaining ~70–98 calls go:**
+- the animated mascot: about 43 meshes;
+- the live host of the open circle: about 30;
+- the visible circle rings and gems: 2 each;
+- string bulbs: 1 instanced;
+- about 10 baked material groups, the horizon, and the Busca labels.
+
+The mascot is now the largest single cost.
