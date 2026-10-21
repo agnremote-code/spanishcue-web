@@ -99,6 +99,15 @@ export const GAMES = {
     ownListening: true,
     bilingualA0: true,
   },
+  // Australia 3D (A0–B1): one listening per region and level; walking into the circle
+  // of that region opens it (app/australia-en-movimiento/mundo). PRO lesson (ID 30).
+  australia: {
+    title: 'Australia',
+    levels: ['A0', 'A1', 'A2', 'B1'],
+    spots: ['nueva-gales', 'victoria', 'queensland', 'outback'],
+    ownListening: true,
+    bilingualA0: true,
+  },
   // La feria de Villaluz (A2): every circle has its own listening, and each
   // character keeps one voice (app/la-feria-de-villaluz/levels/a2.mjs CAST).
   feria: {

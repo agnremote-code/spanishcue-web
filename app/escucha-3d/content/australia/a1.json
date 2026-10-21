@@ -1,0 +1,466 @@
+{
+ "game": "australia",
+ "level": "A1",
+ "items": [
+  {
+   "id": "nueva-gales",
+   "title": "El ferry a Manly",
+   "place": "El muelle circular de Sídney",
+   "context": "Gonzalo, de Colombia, pregunta a Ahmed, marinero del ferry, cómo ir a Manly.",
+   "speakers": [
+    {
+     "name": "Gonzalo",
+     "country": "Colombia",
+     "voice": "es-CO-GonzaloNeural"
+    },
+    {
+     "name": "Ahmed",
+     "country": "México",
+     "voice": "es-MX-JorgeNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Perdón, ¿este ferry va a Manly?"
+    },
+    {
+     "s": 1,
+     "text": "Sí, sale en cinco minutos del muelle tres. El viaje dura treinta minutos."
+    },
+    {
+     "s": 0,
+     "text": "¿Dónde compro el billete?"
+    },
+    {
+     "s": 1,
+     "text": "No necesita billete. Paga con su tarjeta del banco en la máquina amarilla."
+    },
+    {
+     "s": 0,
+     "text": "Perfecto. ¿Dónde me siento para ver la Ópera?"
+    },
+    {
+     "s": 1,
+     "text": "Afuera, a la izquierda. Y lleve una chaqueta: en el mar hace viento."
+    },
+    {
+     "s": 0,
+     "text": "¡Gracias! Voy a sacar muchas fotos."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuándo sale el ferry?",
+     "options": [
+      "En cinco minutos",
+      "En una hora",
+      "Mañana"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cuánto dura el viaje?",
+     "options": [
+      "Diez minutos",
+      "Una hora",
+      "Treinta minutos"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cómo paga Gonzalo?",
+     "options": [
+      "Con su tarjeta del banco",
+      "Con dinero",
+      "Con un billete de papel"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué le recomienda Ahmed?",
+     "options": [
+      "Llevar comida",
+      "Llevar una chaqueta",
+      "Sentarse adentro"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Viajas en barco a veces?",
+     "model": "Sí, a veces tomo un barco para ir a una isla."
+    },
+    {
+     "q": "¿Cómo pagas el transporte en tu ciudad?",
+     "model": "Pago con una tarjeta especial o con el móvil."
+    },
+    {
+     "q": "¿Sacas muchas fotos cuando viajas?",
+     "model": "Sí, saco cientos de fotos."
+    }
+   ],
+   "gaps": "Afuera, a la [izquierda]. Y lleve una [chaqueta]: en el [mar] hace [viento].",
+   "glossary": [
+    {
+     "word": "muelle",
+     "meaning": "lugar donde paran los barcos"
+    },
+    {
+     "word": "billete",
+     "meaning": "papel para viajar"
+    },
+    {
+     "word": "chaqueta",
+     "meaning": "ropa para el frío"
+    }
+   ]
+  },
+  {
+   "id": "victoria",
+   "title": "Sin flash",
+   "place": "El desfile de los pingüinos",
+   "context": "Belkys, de Cuba, espera a los pingüinos con Tom, el guardabosques.",
+   "speakers": [
+    {
+     "name": "Belkys",
+     "country": "Cuba",
+     "voice": "es-CU-BelkysNeural"
+    },
+    {
+     "name": "Tom",
+     "country": "Argentina",
+     "voice": "es-AR-TomasNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "¿A qué hora salen los pingüinos?"
+    },
+    {
+     "s": 1,
+     "text": "Cuando se va el sol, más o menos a las ocho y media."
+    },
+    {
+     "s": 0,
+     "text": "¿Son grandes?"
+    },
+    {
+     "s": 1,
+     "text": "No, son los pingüinos más pequeños del mundo. Miden unos treinta centímetros."
+    },
+    {
+     "s": 0,
+     "text": "¡Qué pequeños! ¿Puedo sacar fotos?"
+    },
+    {
+     "s": 1,
+     "text": "No, aquí no se permiten las cámaras. La luz les hace daño en los ojos."
+    },
+    {
+     "s": 0,
+     "text": "Bueno, entonces los miro en silencio. ¡Mira, ahí vienen!"
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuándo salen los pingüinos?",
+     "options": [
+      "Por la mañana",
+      "Al mediodía",
+      "Cuando se va el sol"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuánto miden?",
+     "options": [
+      "Treinta centímetros",
+      "Un metro",
+      "Diez centímetros"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Por qué no se permiten las cámaras?",
+     "options": [
+      "Porque son caras",
+      "Porque la luz les hace daño",
+      "Porque hay mucha gente"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué hace Belkys al final?",
+     "options": [
+      "Se va",
+      "Saca fotos",
+      "Mira en silencio"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Viste pingüinos alguna vez?",
+     "model": "Sí, en un zoológico, cuando era niña."
+    },
+    {
+     "q": "¿Te gusta sacar fotos de animales?",
+     "model": "Sí, sobre todo de pájaros."
+    },
+    {
+     "q": "¿Qué animal pequeño te gusta?",
+     "model": "Me gustan los colibríes."
+    }
+   ],
+   "gaps": "No, son los [pingüinos] más [pequeños] del [mundo]. [Miden] unos treinta centímetros.",
+   "glossary": [
+    {
+     "word": "pingüinos",
+     "meaning": "pájaros del mar que no vuelan"
+    },
+    {
+     "word": "miden",
+     "meaning": "tienen un tamaño de"
+    },
+    {
+     "word": "daño",
+     "meaning": "algo malo para el cuerpo"
+    }
+   ]
+  },
+  {
+   "id": "queensland",
+   "title": "Primera vez en el arrecife",
+   "place": "Un barco en la Gran Barrera de Coral",
+   "context": "Margarita, de Panamá, va a nadar con Olivia, la bióloga.",
+   "speakers": [
+    {
+     "name": "Olivia",
+     "country": "España",
+     "voice": "es-ES-XimenaNeural"
+    },
+    {
+     "name": "Margarita",
+     "country": "Panamá",
+     "voice": "es-PA-MargaritaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Ponte las gafas y el tubo. ¿Sabes nadar bien?"
+    },
+    {
+     "s": 1,
+     "text": "Sí, en Panamá nado mucho. Pero nunca vi un arrecife tan grande."
+    },
+    {
+     "s": 0,
+     "text": "Es el más grande del mundo. Se ve desde el espacio."
+    },
+    {
+     "s": 1,
+     "text": "¿Puedo tocar el coral?"
+    },
+    {
+     "s": 0,
+     "text": "No, por favor. El coral está vivo y es muy delicado."
+    },
+    {
+     "s": 1,
+     "text": "Entendido. ¿Y si veo un tiburón?"
+    },
+    {
+     "s": 0,
+     "text": "Tranquila, aquí los tiburones son pequeños y tienen miedo de la gente."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué se pone Margarita?",
+     "options": [
+      "Las gafas y el tubo",
+      "Un sombrero",
+      "Zapatos"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Desde dónde se ve el arrecife?",
+     "options": [
+      "Desde la playa",
+      "Desde el espacio",
+      "Desde el avión"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Por qué no se puede tocar el coral?",
+     "options": [
+      "Porque quema",
+      "Porque es caro",
+      "Porque está vivo y es delicado"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cómo son los tiburones de allí?",
+     "options": [
+      "Enormes",
+      "Pequeños y con miedo",
+      "Muy peligrosos"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Sabes nadar bien?",
+     "model": "Sí, nado bien, mi padre me enseñó de niña en el mar."
+    },
+    {
+     "q": "¿Te dan miedo los tiburones?",
+     "model": "Sí, un poco, aunque sé que casi nunca atacan."
+    },
+    {
+     "q": "¿Qué te gustaría ver bajo el agua?",
+     "model": "Me gustaría ver tortugas y peces de colores."
+    }
+   ],
+   "gaps": "No, por [favor]. El [coral] está [vivo] y es muy [delicado].",
+   "glossary": [
+    {
+     "word": "arrecife",
+     "meaning": "rocas de coral en el mar"
+    },
+    {
+     "word": "tubo",
+     "meaning": "cosa para respirar en el agua"
+    },
+    {
+     "word": "tiburón",
+     "meaning": "pez grande con muchos dientes"
+    }
+   ]
+  },
+  {
+   "id": "outback",
+   "title": "La caminata de Uluru",
+   "place": "El centro cultural de Uluru",
+   "context": "Andrés, de Guatemala, pregunta a Leroy por la roca.",
+   "speakers": [
+    {
+     "name": "Andrés",
+     "country": "Guatemala",
+     "voice": "es-GT-AndresNeural"
+    },
+    {
+     "name": "Leroy",
+     "country": "Perú",
+     "voice": "es-PE-AlexNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Hola, Leroy. ¿Se puede subir a la roca?"
+    },
+    {
+     "s": 1,
+     "text": "No, desde 2019 está prohibido. Para mi pueblo es un lugar sagrado."
+    },
+    {
+     "s": 0,
+     "text": "Entiendo. ¿Y qué puedo hacer?"
+    },
+    {
+     "s": 1,
+     "text": "Puede caminar alrededor. Son diez kilómetros y tarda unas tres horas."
+    },
+    {
+     "s": 0,
+     "text": "¿Hace mucho calor?"
+    },
+    {
+     "s": 1,
+     "text": "Sí, salga muy temprano y lleve dos litros de agua."
+    },
+    {
+     "s": 0,
+     "text": "Perfecto. Mañana salgo a las seis."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Se puede subir a la roca?",
+     "options": [
+      "Sí, siempre",
+      "No, está prohibido",
+      "Solo los domingos"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cuántos kilómetros tiene la caminata?",
+     "options": [
+      "Diez",
+      "Dos",
+      "Veinte"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cuánta agua tiene que llevar Andrés?",
+     "options": [
+      "Medio litro",
+      "Cinco litros",
+      "Dos litros"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿A qué hora sale Andrés mañana?",
+     "options": [
+      "A las diez",
+      "A las seis",
+      "A las tres"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Caminas mucho los fines de semana?",
+     "model": "Sí, camino por el parque con mi perro."
+    },
+    {
+     "q": "¿Te gusta levantarte temprano?",
+     "model": "No mucho, prefiero dormir un poco más."
+    },
+    {
+     "q": "¿Hay un lugar sagrado en tu país?",
+     "model": "Sí, hay un lago muy importante para los mayas."
+    }
+   ],
+   "gaps": "Sí, [salga] muy [temprano] y [lleve] dos [litros] de agua.",
+   "glossary": [
+    {
+     "word": "sagrado",
+     "meaning": "muy especial para una religión o cultura"
+    },
+    {
+     "word": "alrededor",
+     "meaning": "por todos los lados"
+    },
+    {
+     "word": "prohibido",
+     "meaning": "que no se puede hacer"
+    }
+   ]
+  }
+ ]
+}

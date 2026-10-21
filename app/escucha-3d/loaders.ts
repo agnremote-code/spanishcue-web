@@ -81,6 +81,12 @@ export const LOADERS: Record<string, Record<string, Loader>> = {
     A2: () => import('./content/irlanda/a2.json'),
     B1: () => import('./content/irlanda/b1.json'),
   },
+  australia: {
+    A0: () => import('./content/australia/a0.json'),
+    A1: () => import('./content/australia/a1.json'),
+    A2: () => import('./content/australia/a2.json'),
+    B1: () => import('./content/australia/b1.json'),
+  },
   mexico: {
     A0: () => import('./content/mexico/a0.json'),
     A1: () => import('./content/mexico/a1.json'),

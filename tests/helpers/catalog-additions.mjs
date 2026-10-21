@@ -233,6 +233,8 @@ const OLD_32_EXPLANATION = "Una expedición conversacional por las doce áreas I
 const NEW_32_EXPLANATION = "Un mundo 3D con Inglaterra, Escocia, Gales e Irlanda del Norte. En cada nación caminas por cinco lugares y hablas con su gente: una situación, una decisión, una sorpresa y preguntas con ayuda, en A0, A1, A2 o B1. El mapa en relieve de las doce áreas sigue disponible.";
 const OLD_33_ROW = "{id:33,level:\"B1\",category:\"Conversación\",title:\"Irlanda en Relieve\",subtitle:\"26 condados, 104 lugares reales y 260 detonadores para descubrir la República de Irlanda condado por condado\",duration:\"90+ min\",tag:\"260 preguntas\",special:true,path:\"/irlanda-en-relieve\",goals:[\"Sostener respuestas B1 con razones, ejemplos y comparaciones\",\"Distinguir los 26 condados de la República y sus cuatro provincias históricas\",\"Hablar de costa, lengua irlandesa, vivienda, turismo, patrimonio, movilidad y vida rural\"],warmup:\"Elige un condado en el mapa real y anticipa qué decisión local podría aparecer allí.\",explanation:\"Una expedición conversacional por los 26 condados tradicionales de la República de Irlanda: cada territorio abre cuatro lugares concretos, una pregunta propia y seis preguntas centrales para desarrollar respuestas B1.\",practice:[],speaking:[],homework:\"\"}";
 const NEW_33_ROW = "{id:33,level:\"B1\",levels:[\"A0\",\"A1\",\"A2\",\"B1\"],displayLevel:\"A0–B1\",category:\"Conversación\",title:\"Irlanda en Relieve\",subtitle:\"Un viaje en 3D por Dublín, Galway, Kerry y Cork.\",duration:\"90+ min\",tag:\"3D · 4 regiones · 20 lugares · A0–B1\",special:true,path:\"/irlanda-en-relieve\",goals:[\"Conversar con personajes en veinte lugares reales de Irlanda\",\"Decidir, reaccionar a sorpresas y responder preguntas de tu nivel, de A0 a B1\",\"Comprender una escucha por región y comparar formas de vivir\"],warmup:\"Elige una región en el mapa y di qué lugar quieres visitar.\",explanation:\"Un mundo 3D con Dublín, Galway y Connemara, Kerry y Cork. En cada región caminas por cinco lugares y hablas con su gente: una situación, una decisión, una sorpresa y preguntas con ayuda, en A0, A1, A2 o B1. El mapa en relieve de los 26 condados sigue disponible.\",practice:[],speaking:[],homework:\"\"}";
+const OLD_30_ROW = "{id:30,level:\"A2\",levels:[\"A2\",\"B1\"],displayLevel:\"A2–B1\",category:\"Conversación\",title:\"Australia en Movimiento\",subtitle:\"8 territorios, 48 preguntas nuevas y un atlas 3D investigado con fuentes australianas\",duration:\"90+ min\",tag:\"48 preguntas\",special:true,path:\"/australia-en-movimiento\",goals:[\"Responder preguntas A2 con una idea, una razón y un detalle\",\"Entrar de forma gradual en preguntas B1 simples\",\"Explorar lugares, decisiones y contrastes reales de los ocho territorios australianos\"],warmup:\"Elige un territorio sobre el relieve o deja que Australia elija por ti.\",explanation:\"Una expedición conversacional A2–B1 con mapa 3D por capas, rutas reales, wordbanks bilingües y una animación propia para cada pregunta.\",practice:[],speaking:[],homework:\"\"}";
+const NEW_30_ROW = "{id:30,level:\"A2\",levels:[\"A0\",\"A1\",\"A2\",\"B1\"],displayLevel:\"A0–B1\",category:\"Conversación\",title:\"Australia en Movimiento\",subtitle:\"Un viaje en 3D por Sídney, Melbourne, Queensland y el Outback.\",duration:\"90+ min\",tag:\"3D · 4 regiones · 20 lugares · A0–B1\",special:true,path:\"/australia-en-movimiento\",goals:[\"Conversar con personajes en veinte lugares reales de Australia\",\"Decidir, reaccionar a sorpresas y responder preguntas de tu nivel, de A0 a B1\",\"Comprender una escucha por región y comparar formas de vivir\"],warmup:\"Elige una región en el mapa y di qué lugar quieres visitar.\",explanation:\"Un mundo 3D con Nueva Gales del Sur, Victoria, Queensland y el Outback. En cada región caminas por cinco lugares y hablas con su gente: una situación, una decisión, una sorpresa y preguntas con ayuda, en A0, A1, A2 o B1. El atlas de los ocho territorios sigue disponible.\",practice:[],speaking:[],homework:\"\"}";
 // 2026-10-15: every grammar class got its own teacher-style thumbnail (scripts/grammar-thumbnails)
 // and the first class (239) moved from the A0 filter to A1. Display-only: before comparing
 // against the historical ledger, the previous shared preview is restored.
@@ -248,6 +250,31 @@ const repairs = [
     edits: {
       'app/lesson-catalog.ts': [[`subtitle:"${NEW_137_SUBTITLE}"`, `subtitle:"${OLD_137_SUBTITLE}"`], [`explanation:"${NEW_137_EXPLANATION}"`, `explanation:"${OLD_137_EXPLANATION}"`]],
       'package.json': [['"test:conversation": "node --test tests/uno-o-el-otro-dilemmas.test.mjs ', '"test:conversation": "node --test ']],
+    },
+  },
+  {
+    // 2026-10-21: Australia (ID 30) became a 3D world like Estados Unidos (four regions, twenty
+    // places, A0–B1; behaviour covered by tests/paises-3d.test.mjs). The atlas of the eight
+    // territories (A2–B1) stays inside it (?vista=atlas, app/australia-en-movimiento/Atlas.tsx);
+    // route, ID and PRO access are unchanged.
+    id: 30,
+    path: '/australia-en-movimiento',
+    // Undone first: it is the latest change to the files it shares (before ID 33).
+    latest: true,
+    files: /^(?:app\/australia-en-movimiento\/|app\/escucha-3d\/content\/australia\/|tests\/paises-3d\.test\.mjs$)/,
+    restore: {
+      levels: [['A0', 'A1', 'A2', 'B1'], ['A2', 'B1']],
+      displayLevel: ['A0–B1', 'A2–B1'],
+      subtitle: ['Un viaje en 3D por Sídney, Melbourne, Queensland y el Outback.', '8 territorios, 48 preguntas nuevas y un atlas 3D investigado con fuentes australianas'],
+      tag: ['3D · 4 regiones · 20 lugares · A0–B1', '48 preguntas'],
+      goals: [["Conversar con personajes en veinte lugares reales de Australia", "Decidir, reaccionar a sorpresas y responder preguntas de tu nivel, de A0 a B1", "Comprender una escucha por región y comparar formas de vivir"], ["Responder preguntas A2 con una idea, una razón y un detalle", "Entrar de forma gradual en preguntas B1 simples", "Explorar lugares, decisiones y contrastes reales de los ocho territorios australianos"]],
+      warmup: ['Elige una región en el mapa y di qué lugar quieres visitar.', 'Elige un territorio sobre el relieve o deja que Australia elija por ti.'],
+      explanation: ['Un mundo 3D con Nueva Gales del Sur, Victoria, Queensland y el Outback. En cada región caminas por cinco lugares y hablas con su gente: una situación, una decisión, una sorpresa y preguntas con ayuda, en A0, A1, A2 o B1. El atlas de los ocho territorios sigue disponible.', 'Una expedición conversacional A2–B1 con mapa 3D por capas, rutas reales, wordbanks bilingües y una animación propia para cada pregunta.'],
+    },
+    edits: {
+      'app/lesson-catalog.ts': [[NEW_30_ROW, OLD_30_ROW]],
+      'tests/level-cleanup.test.mjs': [["[30,32,33,36,210,", "[32,33,36,210,"], ["includes('A0')).length,14);", "includes('A0')).length,13);"], ["assert.equal(a1Lessons.length, 73);", "assert.equal(a1Lessons.length, 72);"]],
+      'tests/conversation-family-rendering.test.mjs': [["['app/australia-en-movimiento/Atlas.tsx',{},", "['app/australia-en-movimiento/page.tsx',{},"], ["readFile('app/australia-en-movimiento/Atlas.tsx','utf8')", "readFile('app/australia-en-movimiento/page.tsx','utf8')"]],
     },
   },
   {

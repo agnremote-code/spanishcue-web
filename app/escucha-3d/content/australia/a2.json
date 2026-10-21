@@ -1,0 +1,498 @@
+{
+ "game": "australia",
+ "level": "A2",
+ "items": [
+  {
+   "id": "nueva-gales",
+   "title": "La subasta de las cinco",
+   "place": "El mercado de pescado de Sídney",
+   "context": "Juan, cocinero de Costa Rica, va por primera vez a la subasta con Mei.",
+   "speakers": [
+    {
+     "name": "Juan",
+     "country": "Costa Rica",
+     "voice": "es-CR-JuanNeural"
+    },
+    {
+     "name": "Mei",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Mei, son las cinco de la mañana y aquí hay más gente que en un concierto."
+    },
+    {
+     "s": 1,
+     "text": "Es la subasta. Cada día vendemos más de cincuenta toneladas de pescado. Los restaurantes compran aquí antes del amanecer."
+    },
+    {
+     "s": 0,
+     "text": "¿Y cómo funciona? No veo a nadie gritando precios."
+    },
+    {
+     "s": 1,
+     "text": "Antes gritábamos, pero ahora es con una pantalla. El precio empieza alto y baja cada segundo. El primero que aprieta el botón se lo lleva."
+    },
+    {
+     "s": 0,
+     "text": "¿Entonces si esperas, pagas menos?"
+    },
+    {
+     "s": 1,
+     "text": "Sí, pero si esperas demasiado, otro se lleva el pescado. Hay que ser rápido y valiente."
+    },
+    {
+     "s": 0,
+     "text": "Quiero ese atún. ¿Aprieto ya?"
+    },
+    {
+     "s": 1,
+     "text": "Todavía no… ahora. ¡Es tuyo!"
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿A qué hora están en el mercado?",
+     "options": [
+      "A las cinco de la mañana",
+      "A mediodía",
+      "A las ocho de la noche"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Quién compra en la subasta?",
+     "options": [
+      "Los turistas",
+      "Los restaurantes",
+      "Los niños"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cómo cambia el precio en la pantalla?",
+     "options": [
+      "Sube cada minuto",
+      "No cambia",
+      "Empieza alto y baja"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué quiere comprar Juan?",
+     "options": [
+      "Un atún",
+      "Unos camarones",
+      "Un salmón"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Te levantas temprano para trabajar?",
+     "model": "Sí, a veces me levanto a las cinco y media."
+    },
+    {
+     "q": "¿Compraste algo en una subasta?",
+     "model": "No, nunca, pero vi una por internet."
+    },
+    {
+     "q": "¿Eres rápido para decidir?",
+     "model": "No mucho, normalmente pienso bastante antes de comprar."
+    }
+   ],
+   "gaps": "Sí, pero si [esperas] [demasiado], otro se lleva el [pescado]. Hay que ser [rápido] y valiente.",
+   "glossary": [
+    {
+     "word": "subasta",
+     "meaning": "venta donde gana quien paga el mejor precio"
+    },
+    {
+     "word": "toneladas",
+     "meaning": "miles de kilos"
+    },
+    {
+     "word": "amanecer",
+     "meaning": "cuando sale el sol"
+    },
+    {
+     "word": "aprieta",
+     "meaning": "empuja con el dedo"
+    }
+   ]
+  },
+  {
+   "id": "victoria",
+   "title": "Una mochila en el tranvía",
+   "place": "Un tranvía en Melbourne",
+   "context": "Paloma, estudiante de Estados Unidos, habla con Priya, la conductora, al final del recorrido.",
+   "speakers": [
+    {
+     "name": "Paloma",
+     "country": "Estados Unidos",
+     "voice": "es-US-PalomaNeural"
+    },
+    {
+     "name": "Priya",
+     "country": "República Dominicana",
+     "voice": "es-DO-RamonaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Perdone, creo que dejé mi mochila en este tranvía hace una hora."
+    },
+    {
+     "s": 1,
+     "text": "¿Cómo es? Hoy encontramos tres mochilas."
+    },
+    {
+     "s": 0,
+     "text": "Es azul, con una bandera de Puerto Rico. Dentro tengo el ordenador y el pasaporte."
+    },
+    {
+     "s": 1,
+     "text": "Mmm, esta es azul, pero tiene un dibujo de un koala."
+    },
+    {
+     "s": 0,
+     "text": "No, no es la mía. ¡Qué nervios! Mañana tengo un examen."
+    },
+    {
+     "s": 1,
+     "text": "Tranquila. Voy a llamar a la oficina de objetos perdidos. A veces otro pasajero la lleva allí."
+    },
+    {
+     "s": 0,
+     "text": "¿Y dónde está la oficina?"
+    },
+    {
+     "s": 1,
+     "text": "En la estación central. Me dicen que hay una mochila azul con bandera. Puede ir ahora, cierran a las seis."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué perdió Paloma?",
+     "options": [
+      "Su teléfono",
+      "Su mochila",
+      "Su billete"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué hay dentro?",
+     "options": [
+      "Ropa y comida",
+      "Libros y dinero",
+      "El ordenador y el pasaporte"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué dibujo tiene la mochila de Priya?",
+     "options": [
+      "Un koala",
+      "Una bandera",
+      "Un canguro"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Hasta qué hora abre la oficina?",
+     "options": [
+      "Hasta las ocho",
+      "Hasta las seis",
+      "Hasta las cinco"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Perdiste algo importante alguna vez?",
+     "model": "Sí, mi cartera en un autobús, pero alguien la devolvió."
+    },
+    {
+     "q": "¿Qué llevas siempre en tu mochila o bolso?",
+     "model": "Llevo las llaves, el móvil y una botella de agua."
+    },
+    {
+     "q": "¿Te pones nervioso antes de un examen?",
+     "model": "Sí, mucho, no puedo comer nada."
+    }
+   ],
+   "gaps": "Tranquila. Voy a [llamar] a la [oficina] de [objetos] [perdidos]. A veces otro pasajero la lleva allí.",
+   "glossary": [
+    {
+     "word": "mochila",
+     "meaning": "bolsa que se lleva en la espalda"
+    },
+    {
+     "word": "pasajero",
+     "meaning": "persona que viaja en un transporte"
+    },
+    {
+     "word": "objetos perdidos",
+     "meaning": "cosas que alguien olvidó"
+    },
+    {
+     "word": "nervios",
+     "meaning": "miedo y preocupación"
+    }
+   ]
+  },
+  {
+   "id": "queensland",
+   "title": "Mangos para todos",
+   "place": "Una granja de mangos en Queensland",
+   "context": "Luis, de Ecuador, trabaja una temporada en la granja de Rosa, que llegó de Chile hace veinte años.",
+   "speakers": [
+    {
+     "name": "Luis",
+     "country": "Ecuador",
+     "voice": "es-EC-LuisNeural"
+    },
+    {
+     "name": "Rosa",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Rosa, hoy recogimos dos mil mangos y todavía quedan muchísimos."
+    },
+    {
+     "s": 1,
+     "text": "Es diciembre, Luis. En Australia los mangos son la fruta de Navidad. Todo el país los quiere ahora."
+    },
+    {
+     "s": 0,
+     "text": "¿Mangos en Navidad? En Ecuador comemos pavo o cerdo."
+    },
+    {
+     "s": 1,
+     "text": "Aquí es verano. La gente come mariscos, ensaladas y mangos en la playa."
+    },
+    {
+     "s": 0,
+     "text": "Oye, ¿y por qué tiramos los mangos con manchas? Son buenos."
+    },
+    {
+     "s": 1,
+     "text": "Los supermercados solo compran los perfectos. Pero tengo una idea: los llevamos al banco de alimentos del pueblo."
+    },
+    {
+     "s": 0,
+     "text": "Me parece genial. Y con los más maduros podemos hacer mermelada."
+    },
+    {
+     "s": 1,
+     "text": "Así me gusta. No se pierde nada."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuántos mangos recogieron hoy?",
+     "options": [
+      "Doscientos",
+      "Veinte mil",
+      "Dos mil"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué estación es en diciembre en Australia?",
+     "options": [
+      "Verano",
+      "Invierno",
+      "Otoño"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué compran los supermercados?",
+     "options": [
+      "Todos los mangos",
+      "Solo los perfectos",
+      "Solo los maduros"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué quiere hacer Luis con los más maduros?",
+     "options": [
+      "Venderlos",
+      "Tirarlos",
+      "Hacer mermelada"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué comes en Navidad?",
+     "model": "Comemos pavo, ensalada y mucho pan dulce."
+    },
+    {
+     "q": "¿Trabajaste en el campo alguna vez?",
+     "model": "Sí, un verano ayudé a mi tío con las naranjas."
+    },
+    {
+     "q": "¿Compras fruta con manchas?",
+     "model": "Sí, si es más barata y sabe bien."
+    }
+   ],
+   "gaps": "Me parece [genial]. Y con los más [maduros] podemos hacer [mermelada]. [Así] me gusta.",
+   "glossary": [
+    {
+     "word": "recogimos",
+     "meaning": "tomamos la fruta del árbol"
+    },
+    {
+     "word": "manchas",
+     "meaning": "marcas de otro color"
+    },
+    {
+     "word": "maduros",
+     "meaning": "listos para comer"
+    },
+    {
+     "word": "banco de alimentos",
+     "meaning": "lugar que da comida a quien la necesita"
+    }
+   ]
+  },
+  {
+   "id": "outback",
+   "title": "Una consulta por radio",
+   "place": "La base de los médicos voladores",
+   "context": "Hannah, médica del aire, habla por radio con Tania, una madre paraguaya que vive en una estación ganadera.",
+   "speakers": [
+    {
+     "name": "Hannah",
+     "country": "España",
+     "voice": "es-ES-ElviraNeural"
+    },
+    {
+     "name": "Tania",
+     "country": "Paraguay",
+     "voice": "es-PY-TaniaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Buenos días, Tania. Aquí Hannah, de los médicos voladores. ¿Cómo está el niño?"
+    },
+    {
+     "s": 1,
+     "text": "Tiene fiebre desde anoche, treinta y nueve grados, y no quiere comer."
+    },
+    {
+     "s": 0,
+     "text": "¿Le duele la garganta o los oídos?"
+    },
+    {
+     "s": 1,
+     "text": "Dice que le duele el oído derecho. Llora mucho."
+    },
+    {
+     "s": 0,
+     "text": "Bien. Abra el botiquín azul, el número doce. Hay un jarabe para la fiebre. Dele cinco mililitros."
+    },
+    {
+     "s": 1,
+     "text": "Ya está. ¿Necesita venir el avión?"
+    },
+    {
+     "s": 0,
+     "text": "Por ahora no. Si mañana sigue con fiebre, vamos a buscarlo. Llámeme esta noche a las ocho."
+    },
+    {
+     "s": 1,
+     "text": "Muchas gracias, Hannah. Sin ustedes no sé qué haríamos aquí."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué tiene el niño?",
+     "options": [
+      "Fiebre",
+      "Una pierna rota",
+      "Hambre"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué le duele?",
+     "options": [
+      "La cabeza",
+      "El oído",
+      "El estómago"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué número tiene el botiquín?",
+     "options": [
+      "El cinco",
+      "El ocho",
+      "El doce"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuándo tiene que llamar Tania otra vez?",
+     "options": [
+      "Mañana temprano",
+      "Esta noche a las ocho",
+      "En una semana"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué haces cuando tienes fiebre?",
+     "model": "Tomo mucha agua y me quedo en la cama."
+    },
+    {
+     "q": "¿Tienes un botiquín en casa?",
+     "model": "Sí, en el baño, con tiritas y medicinas."
+    },
+    {
+     "q": "¿Hablaste con un médico por teléfono alguna vez?",
+     "model": "Sí, cuando estaba de viaje y me dolía el estómago."
+    }
+   ],
+   "gaps": "Bien. Abra el [botiquín] [azul], el [número] [doce]. Hay un jarabe para la fiebre.",
+   "glossary": [
+    {
+     "word": "fiebre",
+     "meaning": "temperatura alta del cuerpo"
+    },
+    {
+     "word": "botiquín",
+     "meaning": "caja con medicinas"
+    },
+    {
+     "word": "jarabe",
+     "meaning": "medicina líquida"
+    },
+    {
+     "word": "oído",
+     "meaning": "parte de la cabeza para escuchar"
+    }
+   ]
+  }
+ ]
+}

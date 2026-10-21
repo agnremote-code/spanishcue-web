@@ -1,0 +1,518 @@
+{
+ "game": "australia",
+ "level": "A0",
+ "items": [
+  {
+   "id": "nueva-gales",
+   "title": "Entre las banderas",
+   "place": "La playa de Bondi",
+   "context": "Sofía, de Bolivia, quiere nadar. Jack es socorrista.",
+   "contextEn": "Sofía, from Bolivia, wants to swim. Jack is a lifeguard.",
+   "speakers": [
+    {
+     "name": "Jack",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    },
+    {
+     "name": "Sofía",
+     "country": "Bolivia",
+     "voice": "es-BO-SofiaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "¡Hola! ¿Vas a nadar?",
+     "en": "Hello! Are you going to swim?"
+    },
+    {
+     "s": 1,
+     "text": "Sí. ¿Aquí está bien?",
+     "en": "Yes. Is it OK here?"
+    },
+    {
+     "s": 0,
+     "text": "No. Aquí no. Nada entre las dos banderas.",
+     "en": "No. Not here. Swim between the two flags."
+    },
+    {
+     "s": 1,
+     "text": "¿Las banderas rojas y amarillas?",
+     "en": "The red and yellow flags?"
+    },
+    {
+     "s": 0,
+     "text": "Sí. Allí el mar es tranquilo.",
+     "en": "Yes. The sea is calm there."
+    },
+    {
+     "s": 1,
+     "text": "Gracias. ¡Y uso crema de sol!",
+     "en": "Thank you. And I use sun cream!"
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Quién es Jack?",
+     "qEn": "Who is Jack?",
+     "options": [
+      "Un socorrista",
+      "Un cocinero",
+      "Un taxista"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Dónde tiene que nadar Sofía?",
+     "qEn": "Where does Sofía have to swim?",
+     "options": [
+      "En la piscina",
+      "Entre las banderas",
+      "Lejos de la playa"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿De qué colores son las banderas?",
+     "qEn": "What colours are the flags?",
+     "options": [
+      "Azul y blanca",
+      "Verde y negra",
+      "Roja y amarilla"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cómo es el mar allí?",
+     "qEn": "What is the sea like there?",
+     "options": [
+      "Tranquilo",
+      "Frío",
+      "Sucio"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Nadas en el mar?",
+     "qEn": "Do you swim in the sea?",
+     "model": "Sí, en verano."
+    },
+    {
+     "q": "¿Usas crema de sol?",
+     "qEn": "Do you use sun cream?",
+     "model": "Sí, siempre."
+    },
+    {
+     "q": "¿Te gusta la playa?",
+     "qEn": "Do you like the beach?",
+     "model": "Sí, me encanta."
+    }
+   ],
+   "gaps": "¿Las [banderas] [rojas] y [amarillas]? [Sí].",
+   "glossary": [
+    {
+     "word": "banderas",
+     "meaning": "telas de colores en un palo",
+     "en": "flags"
+    },
+    {
+     "word": "nadar",
+     "meaning": "moverse en el agua",
+     "en": "to swim"
+    },
+    {
+     "word": "tranquilo",
+     "meaning": "sin olas grandes",
+     "en": "calm"
+    }
+   ]
+  },
+  {
+   "id": "victoria",
+   "title": "Un café con leche",
+   "place": "Un café en Melbourne",
+   "context": "Rodrigo, de El Salvador, pide un café a Luca.",
+   "contextEn": "Rodrigo, from El Salvador, orders a coffee from Luca.",
+   "speakers": [
+    {
+     "name": "Luca",
+     "country": "Uruguay",
+     "voice": "es-UY-MateoNeural"
+    },
+    {
+     "name": "Rodrigo",
+     "country": "El Salvador",
+     "voice": "es-SV-RodrigoNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Buenos días. ¿Qué quieres tomar?",
+     "en": "Good morning. What would you like to drink?"
+    },
+    {
+     "s": 1,
+     "text": "Un café con leche, por favor.",
+     "en": "A coffee with milk, please."
+    },
+    {
+     "s": 0,
+     "text": "¿Grande o pequeño?",
+     "en": "Large or small?"
+    },
+    {
+     "s": 1,
+     "text": "Pequeño. ¿Cuánto es?",
+     "en": "Small. How much is it?"
+    },
+    {
+     "s": 0,
+     "text": "Cinco dólares.",
+     "en": "Five dollars."
+    },
+    {
+     "s": 1,
+     "text": "Aquí tienes. ¡Qué bonito dibujo!",
+     "en": "Here you are. What a lovely drawing!"
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué pide Rodrigo?",
+     "qEn": "What does Rodrigo order?",
+     "options": [
+      "Un té",
+      "Un café con leche",
+      "Un zumo"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿De qué tamaño es el café?",
+     "qEn": "What size is the coffee?",
+     "options": [
+      "Grande",
+      "Mediano",
+      "Pequeño"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuánto cuesta?",
+     "qEn": "How much does it cost?",
+     "options": [
+      "Cinco dólares",
+      "Tres dólares",
+      "Diez dólares"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué le gusta a Rodrigo?",
+     "qEn": "What does Rodrigo like?",
+     "options": [
+      "La música",
+      "El dibujo",
+      "La mesa"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Tomas café?",
+     "qEn": "Do you drink coffee?",
+     "model": "Sí, todas las mañanas."
+    },
+    {
+     "q": "¿Grande o pequeño?",
+     "qEn": "Large or small?",
+     "model": "Grande, por favor."
+    },
+    {
+     "q": "¿Con leche o solo?",
+     "qEn": "With milk or black?",
+     "model": "Con leche."
+    }
+   ],
+   "gaps": "[Un] [café] con [leche], por [favor].",
+   "glossary": [
+    {
+     "word": "pequeño",
+     "meaning": "no es grande",
+     "en": "small"
+    },
+    {
+     "word": "dibujo",
+     "meaning": "una imagen hecha a mano",
+     "en": "drawing"
+    },
+    {
+     "word": "leche",
+     "meaning": "bebida blanca de la vaca",
+     "en": "milk"
+    }
+   ]
+  },
+  {
+   "id": "queensland",
+   "title": "Un koala dormido",
+   "place": "Un santuario de koalas",
+   "context": "Karla, de Honduras, visita los koalas con Emma.",
+   "contextEn": "Karla, from Honduras, visits the koalas with Emma.",
+   "speakers": [
+    {
+     "name": "Emma",
+     "country": "Colombia",
+     "voice": "es-CO-SalomeNeural"
+    },
+    {
+     "name": "Karla",
+     "country": "Honduras",
+     "voice": "es-HN-KarlaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Mira, este koala se llama Galleta.",
+     "en": "Look, this koala is called Biscuit."
+    },
+    {
+     "s": 1,
+     "text": "¡Qué bonito! ¿Está dormido?",
+     "en": "How cute! Is he asleep?"
+    },
+    {
+     "s": 0,
+     "text": "Sí. Duerme veinte horas al día.",
+     "en": "Yes. He sleeps twenty hours a day."
+    },
+    {
+     "s": 1,
+     "text": "¡Veinte horas! ¿Y qué come?",
+     "en": "Twenty hours! And what does he eat?"
+    },
+    {
+     "s": 0,
+     "text": "Solo hojas de eucalipto.",
+     "en": "Only eucalyptus leaves."
+    },
+    {
+     "s": 1,
+     "text": "Yo también quiero dormir veinte horas.",
+     "en": "I want to sleep twenty hours too."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cómo se llama el koala?",
+     "qEn": "What is the koala called?",
+     "options": [
+      "Luna",
+      "Max",
+      "Galleta"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuántas horas duerme?",
+     "qEn": "How many hours does he sleep?",
+     "options": [
+      "Veinte",
+      "Diez",
+      "Cinco"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué come el koala?",
+     "qEn": "What does the koala eat?",
+     "options": [
+      "Fruta",
+      "Hojas",
+      "Pescado"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué quiere Karla?",
+     "qEn": "What does Karla want?",
+     "options": [
+      "Comer",
+      "Correr",
+      "Dormir"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Te gustan los koalas?",
+     "qEn": "Do you like koalas?",
+     "model": "Sí, mucho."
+    },
+    {
+     "q": "¿Cuántas horas duermes?",
+     "qEn": "How many hours do you sleep?",
+     "model": "Duermo ocho horas."
+    },
+    {
+     "q": "¿Tienes un animal?",
+     "qEn": "Do you have a pet?",
+     "model": "Sí, un gato."
+    }
+   ],
+   "gaps": "Sí. [Duerme] [veinte] [horas] al [día].",
+   "glossary": [
+    {
+     "word": "dormido",
+     "meaning": "que duerme",
+     "en": "asleep"
+    },
+    {
+     "word": "hojas",
+     "meaning": "partes verdes de un árbol",
+     "en": "leaves"
+    },
+    {
+     "word": "come",
+     "meaning": "toma comida",
+     "en": "eats"
+    }
+   ]
+  },
+  {
+   "id": "outback",
+   "title": "Sopa en la playa",
+   "place": "El mercado nocturno de Darwin",
+   "context": "Emilio, de la República Dominicana, compra sopa a Thanh.",
+   "contextEn": "Emilio, from the Dominican Republic, buys soup from Thanh.",
+   "speakers": [
+    {
+     "name": "Thanh",
+     "country": "Puerto Rico",
+     "voice": "es-PR-KarinaNeural"
+    },
+    {
+     "name": "Emilio",
+     "country": "República Dominicana",
+     "voice": "es-DO-EmilioNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "¡Sopa caliente! ¡Sopa de fideos!",
+     "en": "Hot soup! Noodle soup!"
+    },
+    {
+     "s": 1,
+     "text": "Hola. Una sopa, por favor.",
+     "en": "Hello. One soup, please."
+    },
+    {
+     "s": 0,
+     "text": "¿Con pollo o con carne?",
+     "en": "With chicken or with beef?"
+    },
+    {
+     "s": 1,
+     "text": "Con pollo. ¿Es picante?",
+     "en": "With chicken. Is it spicy?"
+    },
+    {
+     "s": 0,
+     "text": "Un poco. Son diez dólares.",
+     "en": "A little. It is ten dollars."
+    },
+    {
+     "s": 1,
+     "text": "Gracias. ¡Mmm, qué rica!",
+     "en": "Thank you. Mmm, delicious!"
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué vende Thanh?",
+     "qEn": "What does Thanh sell?",
+     "options": [
+      "Sopa",
+      "Pan",
+      "Fruta"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué pide Emilio?",
+     "qEn": "What does Emilio order?",
+     "options": [
+      "Carne",
+      "Pollo",
+      "Pescado"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Es picante la sopa?",
+     "qEn": "Is the soup spicy?",
+     "options": [
+      "Mucho",
+      "Nada",
+      "Un poco"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuánto cuesta?",
+     "qEn": "How much does it cost?",
+     "options": [
+      "Cinco dólares",
+      "Diez dólares",
+      "Veinte dólares"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Te gusta la sopa?",
+     "qEn": "Do you like soup?",
+     "model": "Sí, en invierno."
+    },
+    {
+     "q": "¿Comes picante?",
+     "qEn": "Do you eat spicy food?",
+     "model": "No, no me gusta."
+    },
+    {
+     "q": "¿Pollo o carne?",
+     "qEn": "Chicken or beef?",
+     "model": "Pollo, por favor."
+    }
+   ],
+   "gaps": "¡[Sopa] [caliente]! ¡Sopa de [fideos]! [Hola].",
+   "glossary": [
+    {
+     "word": "fideos",
+     "meaning": "pasta larga y fina",
+     "en": "noodles"
+    },
+    {
+     "word": "pollo",
+     "meaning": "carne de un ave",
+     "en": "chicken"
+    },
+    {
+     "word": "picante",
+     "meaning": "que quema en la boca",
+     "en": "spicy"
+    }
+   ]
+  }
+ ]
+}
