@@ -341,7 +341,7 @@ export const lesson: LiveLesson = {
       steps: [
         { title: 'La abuela te deja un mensaje · Grandma leaves you a message', blocks: [
           { kind: 'guide', text: { teacher: 'Primera escucha: solo la idea general (¿quién habla?). Segunda escucha: tu alumno levanta la mano cada vez que oye «estoy», «está» o «estás». Después, las preguntas.', self: 'Escucha una vez para la idea general y otra vez para los detalles. Cuenta cuántas veces oyes «estoy», «está» o «estás». (Listen once for the gist, once for the details.)' } },
-          { kind: 'listen', title: 'Un mensaje de voz del abuelo', channel: 'MENSAJE DE VOZ · DEL ABUELO, DESDE ARGENTINA', src: '/audio/grammar-live/239.mp3',
+          { kind: 'listen', title: 'Un mensaje de voz del abuelo', channel: 'MENSAJE DE VOZ · DEL ABUELO, DESDE ARGENTINA', src: '/audio/grammar-free/239.mp3',
             before: 'Tu abuelo te manda un mensaje de voz desde Argentina. ¿Qué crees que dice? (Your grandpa sends you a voice message from Argentina. What do you think he says?)',
             gist: { prompt: '¿Quién habla? · Who is speaking?', options: ['La abuela.', 'El abuelo.', 'Alex.'], answer: 1, why: '«Hola, mi amor. Soy el abuelo».', en: 'Who is speaking?' },
             details: [

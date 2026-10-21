@@ -13,30 +13,21 @@ test('demo server selector rejects every non-centre district, including query tr
   assert.equal(typeof data.demoContent, 'function');
   for (const district of ['alto', 'viejo', '*', '../', 'centro/../alto', '', null]) assert.equal(data.demoContent('A1', district), null);
 });
-test('server trims demo to six free venues and never sends locked activity payloads', () => {
+test('server opens the whole centre free and sends no other district', () => {
   assert.equal(typeof data.demoContent, 'function');
-  assert.equal(policy.DEMO_FREE_LOCATIONS.length, 6);
+  assert.equal(policy.DEMO_FREE_LOCATIONS.length, 10);
   for (const level of ['A1','A2','B1','B2','C1','C2']) {
     const payload=data.demoContent(level,'centro');
     const source=contentFor(level).LOCATIONS;
     assert.equal(payload.level,level);
     assert.equal(payload.locations.length,10);
     assert.deepEqual(Object.keys(payload).sort(),['level','locations','zone']);
-    const free=payload.locations.filter(l=>!l.locked),premium=payload.locations.filter(l=>l.locked);
-    assert.equal(free.length,6);assert.equal(premium.length,4);
     for (const location of payload.locations) {
       const original=source.find(l=>l.id===location.id);
       assert.ok(original,location.id);
-      const expected=location.locked?0:1;
-      assert.equal(location.activities.length,expected,location.id);
-      assert.equal(location.premiumCount,original.activities.length-expected,location.id);
-      if (location.locked) {
-        assert.deepEqual(location.help,{starters:[],chunks:[]});
-        assert.equal(location.focus,'');
-        assert.equal(location.grammar,undefined);
-        const dumped=JSON.stringify(location);
-        for(const activity of original.activities)assert.equal(dumped.includes(JSON.stringify(activity)),false);
-      } else assert.deepEqual(location.activities[0],original.activities[0]);
+      assert.equal(location.locked,false,location.id);
+      assert.equal(location.premiumCount,0,location.id);
+      assert.deepEqual(location.activities,original.activities,location.id);
     }
   }
   assert.equal(data.demoContent('PRO','centro').level,'A1');

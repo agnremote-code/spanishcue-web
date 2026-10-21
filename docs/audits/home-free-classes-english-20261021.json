@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "authorization": "Approved by Ale in this thread on 2026-10-21 06:58Z («apruebo», cmsg_01Gr5R4j3t2Yet65UcmhcVhA7nahk23hfNzooJRKS8rDgm, thread «Clases gratis nuevas en la portada»): new home free classes (Noche abierta centre demo, Hospital San Casi Vivo reception demo, Clase inicial, Latinoamérica al Oído), the whole Noche centre free and a «Buy PRO» gate. The changed/deleted lines replace the six-free-venues and four-examples copy, which is no longer true.",
+  "additions": [
+    {
+      "path": "app/marketing/MarketingSections.tsx",
+      "text": "Two 3D worlds to try free, one whole grammar lesson and one listening lesson."
+    },
+    {
+      "path": "app/marketing/MarketingSections.tsx",
+      "text": "FREE: THE CENTRE"
+    },
+    {
+      "path": "app/marketing/MarketingSections.tsx",
+      "text": "FREE: THE RECEPTION"
+    },
+    {
+      "path": "app/immersive/CityDemo.tsx",
+      "text": "All ten venues in the centre are free. The eight districts are PRO."
+    },
+    {
+      "path": "app/immersive/CityDemo.tsx",
+      "text": "No card · The districts are PRO"
+    },
+    {
+      "path": "app/immersive/CityDemo.tsx",
+      "text": "Walk to the glowing circles in the centre: they are all free. The districts are PRO."
+    },
+    {
+      "path": "app/immersive/ImmersiveLanding.tsx",
+      "text": "The demo has no time limit: the whole centre free, without a card or an account. PRO unlocks the eight districts and the whole library."
+    },
+    {
+      "path": "app/immersive/PremiumPanel.tsx",
+      "text": "Buy PRO to keep going."
+    },
+    {
+      "path": "app/immersive/PremiumPanel.tsx",
+      "text": "PRO · US$15.50 a month"
+    },
+    {
+      "path": "app/immersive/PremiumPanel.tsx",
+      "text": "Unlock all eight Noche abierta districts, the whole hospital and the full library of ready-to-teach Spanish lessons."
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Walk the city centre: all ten venues are free, across six levels."
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Free: the guided preview above, all ten centre venues of Noche Abierta across six levels, the reception of Hospital San Casi Vivo, the lessons marked FREE on this page, and the first two weeks of Autoestudio A1. Everything marked PRO is in the subscription."
+    }
+  ],
+  "changes": [
+    {
+      "path": "app/marketing/MarketingSections.tsx",
+      "kind": "english-changed-or-deleted",
+      "text": "Four free examples to explore the experience."
+    }
+  ]
+}

@@ -46,10 +46,11 @@ test('Instagram experiment is opt-in and preserves campaign attribution on both 
  const previous=await get('/lp/spanish-teacher-resources');assert.equal(previous.status,200);await previous.arrayBuffer();
 });
 
-test('each category has exactly two fixed, matching free lessons',()=>{
- for(const [category,ids] of Object.entries(p.samplesByCategory)){assert.equal(new Set(ids).size,2);for(const id of ids)assert.equal(p.lessons.find(l=>l.id===id)?.category,category)}
+test('each category has its fixed, matching free lessons (two; Gramática three with the Clase inicial)',()=>{
+ for(const [category,ids] of Object.entries(p.samplesByCategory)){assert.equal(new Set(ids).size,category==='Gramática'?3:2);for(const id of ids)assert.equal(p.lessons.find(l=>l.id===id)?.category,category)}
  assert.deepEqual(new Set(p.freeLessonIds),new Set(Object.values(p.samplesByCategory).flat()));
- assert.equal(p.freeLessonIds.length,Object.keys(p.samplesByCategory).length*2);
+ assert.equal(p.freeLessonIds.length,Object.keys(p.samplesByCategory).length*2+1);
+ assert.equal(p.isFreeLesson(239),true);
  assert.equal(new Set(p.lessons.map(l=>l.id)).size,p.lessons.length);
 });
 
@@ -327,4 +328,13 @@ test('only allowlisted free audio collections are public; every other current pr
  const head=await fetch(root+'/audio/edificio-voces/1b-andres.mp3',{method:'HEAD',redirect:'manual'});
  assert.equal(head.status,403);
  assert.match(head.headers.get('cache-control')||'',/private, no-store/);
+});
+
+test('home featured lessons: Noche abierta and hospital demos, the whole first class and a free listening',()=>{
+ const catalog=p.lessons.map(lesson=>({...lesson,free:p.isFreeLesson(lesson.id),href:p.localLessonPath(lesson)||''}));
+ const featured=p.selectHomeFeatured(catalog);
+ assert.deepEqual(featured.map(({lesson})=>lesson.id),[223,240,239,28]);
+ assert.deepEqual(featured.map(({lesson})=>lesson.href),['/demo/noche-abierta','/demo/hospital-san-casi-vivo','/gramatica/clase-inicial','/latinoamerica-al-oido']);
+ assert.equal(p.isFreeLesson(223),false);assert.equal(p.isFreeLesson(240),false);
+ for(const {lesson} of featured)assert.ok(lesson.image,lesson.title);
 });

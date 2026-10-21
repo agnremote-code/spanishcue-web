@@ -13,6 +13,10 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 CLIPS = ROOT / 'app/grammar-classroom/live/audio/clips.json'
 MANIFEST = ROOT / 'app/grammar-classroom/live/audio/manifest.json'
 OUT = ROOT / 'public/audio/grammar-live'
+# Free classes keep their audio in the public grammar-free prefix (access-policy freeAudioPrefixes).
+FREE = {239}
+FREE_OUT = ROOT / 'public/audio/grammar-free'
+folder = lambda id: 'grammar-free' if id in FREE else 'grammar-live'
 edge_tts.communicate._SSL_CTX = ssl.create_default_context()
 rows = json.loads(CLIPS.read_text())['clips']
 old = {c['id']: c for c in json.loads(MANIFEST.read_text())['clips']} if MANIFEST.exists() else {}
@@ -21,7 +25,7 @@ clips = []
 
 async def generate(row):
     id, text, voice, rate = row['id'], row['text'], row['voice'], row.get('rate', '+0%')
-    path = OUT / f'{id}.mp3'
+    path = (FREE_OUT if id in FREE else OUT) / f'{id}.mp3'
     digest = hashlib.sha256(text.encode()).hexdigest()
     previous = old.get(id, {})
     valid = path.exists() and previous.get('transcriptSha256') == digest and previous.get('voice') == voice and previous.get('rate') == rate and previous.get('sha256') == hashlib.sha256(path.read_bytes()).hexdigest()
@@ -48,7 +52,7 @@ async def generate(row):
     duration = float(probe['format']['duration'])
     if peak < 100 or rms < 20 or duration < 8:
         raise ValueError(f'Invalid signal {id}')
-    clips.append(dict(id=id, voice=voice, rate=rate, src=f'/audio/grammar-live/{id}.mp3', transcriptSha256=digest, sha256=hashlib.sha256(path.read_bytes()).hexdigest(), durationSeconds=round(duration, 2), codec=probe['streams'][0]['codec_name'], sampleRate=int(probe['streams'][0]['sample_rate']), channels=probe['streams'][0]['channels'], peakPCM=peak, rmsPCM=round(rms, 2)))
+    clips.append(dict(id=id, voice=voice, rate=rate, src=f'/audio/{folder(id)}/{id}.mp3', transcriptSha256=digest, sha256=hashlib.sha256(path.read_bytes()).hexdigest(), durationSeconds=round(duration, 2), codec=probe['streams'][0]['codec_name'], sampleRate=int(probe['streams'][0]['sample_rate']), channels=probe['streams'][0]['channels'], peakPCM=peak, rmsPCM=round(rms, 2)))
     print(f'{id}: {duration:.1f}s {voice} {rate}', flush=True)
 
 async def main():

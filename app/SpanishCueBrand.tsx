@@ -1,11 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import type { MouseEvent } from "react";
 import { useI18n } from "./i18n/LocaleProvider";
 import type { MessageKey } from "./i18n/messages";
 import { trackMarketingEvent } from "./marketing/analytics";
 import { CookieSettingsButton } from "./privacy/CookieConsent";
+
+/** Where «Probar una clase gratis» goes; a PRO visitor is sent on to the full game. */
+const FREE_DEMO_PATH = "/demo/noche-abierta";
 
 const countries: ReadonlyArray<readonly [string, MessageKey]> = [
   ["🇦🇷", "country.argentina"],
@@ -64,19 +66,14 @@ export function SpanishCueWordmark({ compact = false }: { compact?: boolean }) {
 export function SpanishCueHero({ kicker, kickerInHeading = false }: { kicker?: string; kickerInHeading?: boolean } = {}) {
   const { locale, t } = useI18n();
   const kickerText = kicker ?? t("hero.kicker");
-  const openSamples = (event: MouseEvent<HTMLAnchorElement>) => {
-    event.preventDefault();
+  // The free lesson is Noche abierta: the centre is free, the districts are PRO.
+  const openSamples = () => {
     trackMarketingEvent("cta_click", {
       placement: "hero_primary",
       cta_type: "view_lesson",
-      destination: "#free-lessons",
+      destination: FREE_DEMO_PATH,
     });
     trackMarketingEvent("teacher_demo_started", { placement: "hero_primary" });
-    const target = document.getElementById("free-lessons");
-    if (!target) return;
-    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    target.scrollIntoView({ behavior: reducedMotion ? "auto" : "smooth", block: "start" });
-    window.history.replaceState(null, "", "#free-lessons");
   };
   return (
     <section className="sc-hero" id="main-content" tabIndex={-1} aria-labelledby="sc-hero-title">
@@ -106,7 +103,7 @@ export function SpanishCueHero({ kicker, kickerInHeading = false }: { kicker?: s
         <p className="sc-hero-lead">{t("hero.lead")}</p>
         <div className="sc-hero-actions">
           <div className="sc-hero-cta-anchor">
-            <a href="#free-lessons" className="sc-hero-primary" onClick={openSamples}>
+            <a href={FREE_DEMO_PATH} className="sc-hero-primary" onClick={openSamples}>
               {locale === "es" ? "PROBAR UNA CLASE GRATIS" : "TRY A FREE LESSON"}
             </a>
             <div className="sc-mascot-cue" aria-hidden="true">

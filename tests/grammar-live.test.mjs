@@ -259,7 +259,7 @@ test('the A0 first class: bilingual by default, the grandparents story, the real
   const lesson=getLiveLesson(239);
   assert.equal(lesson.level,'A0');
   const all=JSON.stringify(lesson);
-  for(const text of ['abuela','abuelo','vos','Soy Alex','Estoy en Sídney','/audio/grammar-live/239.mp3','/noche-abierta?level=A0'])assert.ok(all.includes(text),text);
+  for(const text of ['abuela','abuelo','vos','Soy Alex','Estoy en Sídney','/audio/grammar-free/239.mp3','/noche-abierta?level=A0'])assert.ok(all.includes(text),text);
   const listen=lesson.stages[3].steps[0].blocks.find(b=>b.kind==='listen');
   assert.ok(listen.gist&&listen.details.length>=4&&listen.transcript&&listen.reply.teacher&&listen.reply.self,'listen twice, choose, answer, transcript');
   // The grandmother's recording is built from the exact transcript the class shows (see live/audio).

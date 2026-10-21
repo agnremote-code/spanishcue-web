@@ -63,6 +63,10 @@ const publicRoots = new Set([
   "app/immersive/DemoScene.tsx",
   "app/immersive/ProDiscovery.tsx",
   "app/immersive/PremiumPanel.tsx",
+  // Free hospital demo: geometry, the reception card and the PRO panel; the
+  // reception scene text arrives as page props, the World3D chunk is dynamic.
+  "app/hospital-san-casi-vivo/HospitalDemo.tsx",
+  "app/hospital-san-casi-vivo/World3D.tsx",
   // Google Search landing: the client chunk carries only the guided-tour
   // script and checkout UI; the free demo scene and catalog titles arrive
   // as authorized page props from the server.
@@ -166,6 +170,14 @@ const paidStreetTitles = [];
 for (const part of ["norte", "centro", "sur"]) {
   const {default: encounters} = await import(`../app/noche-abierta/street/caos-${part}.mjs`);
   paidStreetTitles.push(...encounters.map(encounter => encounter.title));
+}
+// Hospital demo: only the reception scene is free; no other scene may ship publicly.
+const {CONTENT: hospitalLevels} = await import("../app/hospital-san-casi-vivo/levels.mjs");
+for (const scenes of Object.values(hospitalLevels)) {
+  for (const [id, scene] of Object.entries(scenes)) {
+    if (id === "recepcion") continue;
+    paidStreetTitles.push(typeof scene.line === "string" ? scene.line : scene.line.es);
+  }
 }
 for (const file of publicFiles) {
   if (!file.endsWith(".js")) continue;

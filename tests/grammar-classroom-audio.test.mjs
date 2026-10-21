@@ -1,6 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync,readdirSync} from 'node:fs';
+// The free live-only Clase inicial (239) keeps its recording here too; the live manifest owns it.
+const LIVE_FREE=new Set(['239.mp3']);
 import {createHash} from 'node:crypto';
 import {execFileSync} from 'node:child_process';
 const read=p=>JSON.parse(readFileSync(p,'utf8'));
@@ -11,7 +13,7 @@ const normalize=s=>s.replace(/&amp;/g,'&').replace(/&quot;/g,'"').normalize('NFC
 test('57 native neural recordings match the exact current transcript and reported speech boundaries',()=>{
   assert.equal(manifest.clips.length,57);assert.equal(new Set(manifest.clips.map(c=>c.sha256)).size,57);
   for(const prefix of ['grammar-free','grammar-classroom']){
-    assert.deepEqual(readdirSync(`public/audio/${prefix}`).sort(),manifest.clips.filter(c=>c.src.startsWith(`/audio/${prefix}/`)).map(c=>`${c.id}.mp3`).sort(),'no orphan or superseded recording remains');
+    assert.deepEqual(readdirSync(`public/audio/${prefix}`).filter(f=>!LIVE_FREE.has(f)).sort(),manifest.clips.filter(c=>c.src.startsWith(`/audio/${prefix}/`)).map(c=>`${c.id}.mp3`).sort(),'no orphan or superseded recording remains');
   }
   for(const clip of manifest.clips){
     const input=contexts[clip.id].listening;
@@ -25,7 +27,7 @@ test('57 native neural recordings match the exact current transcript and reporte
   }
 });
 test('recordings decode with an audible signal and only the two existing samples use the free prefix',()=>{
-  assert.deepEqual(readdirSync('public/audio/grammar-free').sort(),['40.mp3','41.mp3']);
+  assert.deepEqual(readdirSync('public/audio/grammar-free').filter(f=>!LIVE_FREE.has(f)).sort(),['40.mp3','41.mp3']);
   for(const clip of manifest.clips){
     assert.equal(clip.src.startsWith('/audio/grammar-free/'),[40,41].includes(clip.id));
     const path='public'+clip.src;

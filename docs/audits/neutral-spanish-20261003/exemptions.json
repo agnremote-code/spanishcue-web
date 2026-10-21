@@ -6632,6 +6632,12 @@
       "reason": "Owner-given class tagline, quoted verbatim from Ale's request of 2026-10-15 16:10Z (Hospital San Casi Vivo thread): «Entrás por una consulta. Salís con una historia.» Deliberate rioplatense voice for the title; the class content itself uses tú."
     },
     {
+      "path": "app/hospital-san-casi-vivo/HospitalDemo.tsx",
+      "text": "Entrás por una consulta. Salís con una historia.",
+      "category": "regional-pedagogy",
+      "reason": "Owner-given class tagline, quoted verbatim from Ale's request of 2026-10-15 16:10Z (Hospital San Casi Vivo thread): «Entrás por una consulta. Salís con una historia.» Deliberate rioplatense voice for the title; the class content itself uses tú. Same tagline on the free reception demo title (2026-10-21)."
+    },
+    {
       "path": "app/lesson-catalog.ts",
       "text": "Entrás por una consulta. Salís con una historia: un hospital público 3D con humor negro, veintiún escenas para conversar y una escucha en cada una.",
       "category": "regional-pedagogy",

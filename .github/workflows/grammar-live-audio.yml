@@ -34,7 +34,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
-          git add -A public/audio/grammar-live app/grammar-classroom/live/audio/manifest.json
+          git add -A public/audio/grammar-live public/audio/grammar-free/239.mp3 app/grammar-classroom/live/audio/manifest.json
           if git diff --cached --quiet; then echo "No audio changes"; exit 0; fi
           git commit -m "Generate grammar live audio"
           git pull --rebase origin ${GITHUB_REF_NAME}
