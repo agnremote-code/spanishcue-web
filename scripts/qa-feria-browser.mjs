@@ -8,7 +8,7 @@
 //   node scripts/qa-feria-browser.mjs            # --look and --smoke
 //   node scripts/qa-feria-browser.mjs --look     # Look contract renders only
 //   node scripts/qa-feria-browser.mjs --smoke    # G5(a) smoke only
-//   node scripts/qa-feria-browser.mjs --cover    # 1200×750 cover render (PNG)
+//   node scripts/qa-feria-browser.mjs --cover    # 1200×750 cover candidates + cover.webp (FERIA_COVER=<circle|intro>)
 //
 // Env: FERIA_QA_OUTPUT (evidence folder), PLAYWRIGHT_MODULE (path to the
 // playwright module when it is not resolvable), CHROMIUM_EXECUTABLE_PATH,
@@ -49,11 +49,13 @@ window.__qa = { stats: null, failed: false };
 function LookHarness() {
   const [busca, setBusca] = useState(null);
   const [intro, setIntro] = useState(false);
+  const [circle, setCircle] = useState(null);
   useEffect(() => {
+    window.__qa.circle = id => setCircle(id);
     window.__qa.show = (circle, figures) => setBusca(figures ? { circle, placed: placeSet({ figures }, circle) } : null);
     window.__qa.intro = on => setIntro(on);
   }, []);
-  return <main className="fv"><World3D circleId={null} busca={busca} reveal={null} done={[]} paused={false} intro={intro}
+  return <main className="fv"><World3D circleId={circle} busca={busca} reveal={null} done={[]} paused={false} intro={intro}
     onSpot={() => {}} onNear={() => {}} onPose={() => {}} onFail={() => { window.__qa.failed = true; }} onStats={s => { window.__qa.stats = s; }} /></main>;
 }
 const q = new URLSearchParams(location.search);
@@ -209,14 +211,29 @@ if (RUN.look) {
 
 // ------------------------------------------------------------------ cover (1200×750, like the hospital cover)
 if (RUN.cover) {
+  // Desktop (high) path, as a teacher sees it on a laptop; candidates are
+  // saved side by side and the chosen one is encoded to WebP by Chromium.
   const context = await browser.newContext({ viewport: { width: 1200, height: 750 }, deviceScaleFactor: 1 });
   const page = await context.newPage();
   await page.goto(`${origin}/?harness=look`);
   await page.locator('.fv-canvas canvas').waitFor({ timeout: 60000 });
-  await page.evaluate(() => window.__qa.intro(true));
-  await frames(page, 30);
-  await page.screenshot({ path: resolve(out, 'cover.png') });
-  console.log(`cover: ${resolve(out, 'cover.png')}`);
+  for (const shot of ['intro', ...CIRCLES.map(c => c.id)]) {
+    await page.evaluate(id => { window.__qa.intro(id === 'intro'); window.__qa.circle(id === 'intro' ? null : id); }, shot);
+    await frames(page, 45);
+    await page.screenshot({ path: resolve(out, `cover-${shot}.png`) });
+  }
+  const pick = process.env.FERIA_COVER ?? 'noria';
+  await page.evaluate(id => { window.__qa.intro(id === 'intro'); window.__qa.circle(id === 'intro' ? null : id); }, pick);
+  await frames(page, 45);
+  const png = await page.screenshot();
+  const webp = await page.evaluate(async b64 => {
+    const img = new Image(); img.src = `data:image/png;base64,${b64}`; await img.decode();
+    const c = document.createElement('canvas'); c.width = img.width; c.height = img.height;
+    c.getContext('2d').drawImage(img, 0, 0);
+    return c.toDataURL('image/webp', Number(new URLSearchParams(location.search).get('q') ?? 0.8)).split(',')[1];
+  }, png.toString('base64'));
+  await writeFile(resolve(out, 'cover.webp'), Buffer.from(webp, 'base64'));
+  console.log(`cover: ${resolve(out, 'cover.webp')} (${pick})`);
   await context.close();
 }
 
