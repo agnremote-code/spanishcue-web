@@ -45,6 +45,9 @@ export const LOADERS: Record<string, Record<string, Loader>> = {
     C1: () => import('./content/hospital/c1.json'),
     C2: () => import('./content/hospital/c2.json'),
   },
+  feria: {
+    A2: () => import('./content/feria/a2.json'),
+  },
 };
 
 export async function loadListenings(game: string, level: string): Promise<ListeningFile | null> {

@@ -481,6 +481,81 @@
    "seconds": 89.93,
    "src": "/audio/escucha-3d/casino-c2-vip.mp3"
   },
+  "feria/a2-artesania": {
+   "hash": "92afb0ae4c8e7663c5f4",
+   "seconds": 53.5,
+   "src": "/audio/escucha-3d/feria-a2-artesania.mp3"
+  },
+  "feria/a2-baile": {
+   "hash": "69d4f04f2886e9d1f301",
+   "seconds": 64.03,
+   "src": "/audio/escucha-3d/feria-a2-baile.mp3"
+  },
+  "feria/a2-busca-escenario-bruno": {
+   "hash": "329943aee0dbcc6897e6",
+   "seconds": 18.44,
+   "src": "/audio/escucha-3d/feria-a2-busca-escenario-bruno.mp3"
+  },
+  "feria/a2-busca-escenario-valentina": {
+   "hash": "418d61756f81b558ab95",
+   "seconds": 24.2,
+   "src": "/audio/escucha-3d/feria-a2-busca-escenario-valentina.mp3"
+  },
+  "feria/a2-busca-fotos-ines": {
+   "hash": "cbb7a6bbac310f5856c5",
+   "seconds": 17.28,
+   "src": "/audio/escucha-3d/feria-a2-busca-fotos-ines.mp3"
+  },
+  "feria/a2-busca-fotos-nico": {
+   "hash": "c713b263753aa36cc9b1",
+   "seconds": 17.96,
+   "src": "/audio/escucha-3d/feria-a2-busca-fotos-nico.mp3"
+  },
+  "feria/a2-busca-informacion-abuelo": {
+   "hash": "1324aef2c3bc276cd4a9",
+   "seconds": 23.38,
+   "src": "/audio/escucha-3d/feria-a2-busca-informacion-abuelo.mp3"
+  },
+  "feria/a2-busca-informacion-emilio": {
+   "hash": "f6858dc9077b57b405c2",
+   "seconds": 21.44,
+   "src": "/audio/escucha-3d/feria-a2-busca-informacion-emilio.mp3"
+  },
+  "feria/a2-busca-transferencia-amparo": {
+   "hash": "02609663d5c326f94a35",
+   "seconds": 17.98,
+   "src": "/audio/escucha-3d/feria-a2-busca-transferencia-amparo.mp3"
+  },
+  "feria/a2-churreria": {
+   "hash": "570c46161f9fd47dc7b3",
+   "seconds": 64.66,
+   "src": "/audio/escucha-3d/feria-a2-churreria.mp3"
+  },
+  "feria/a2-escenario": {
+   "hash": "d97e3698aaa75e70f353",
+   "seconds": 53.09,
+   "src": "/audio/escucha-3d/feria-a2-escenario.mp3"
+  },
+  "feria/a2-fotos": {
+   "hash": "f628c3b337dad8638803",
+   "seconds": 50.62,
+   "src": "/audio/escucha-3d/feria-a2-fotos.mp3"
+  },
+  "feria/a2-informacion": {
+   "hash": "e17e2782926c60e85040",
+   "seconds": 53.6,
+   "src": "/audio/escucha-3d/feria-a2-informacion.mp3"
+  },
+  "feria/a2-noria": {
+   "hash": "9b5d7038b6b95f4613d0",
+   "seconds": 50.4,
+   "src": "/audio/escucha-3d/feria-a2-noria.mp3"
+  },
+  "feria/a2-tombola": {
+   "hash": "ada8ea6397e31249425c",
+   "seconds": 65.18,
+   "src": "/audio/escucha-3d/feria-a2-tombola.mp3"
+  },
   "hospital/a0-ambulancias": {
    "hash": "616c94415ba38480705a",
    "seconds": 37.25,
