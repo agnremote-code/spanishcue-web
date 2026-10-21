@@ -87,7 +87,12 @@ async def main():
     for path in sorted(CONTENT.glob('*/*.json')):
         data = json.loads(path.read_text())
         game, level = data['game'], data['level']
-        for item in data['items']:
+        # <level>.busca.json: one-voice announcements (La feria de Villaluz,
+        # "Busca y describe"), built like a one-line listening.
+        items = data['items'] if 'items' in data else [
+            {'id': f"busca-{a['id']}", 'speakers': [{'voice': a['voice']}], 'lines': [{'s': 0, 'text': a['text']}]}
+            for a in data.get('announcements', [])]
+        for item in items:
             key = f"{game}/{level.lower()}-{item['id']}"
             digest = hashlib.sha256(json.dumps([VERSION, RATE[level], item['speakers'], item['lines']], sort_keys=True, ensure_ascii=False).encode()).hexdigest()[:20]
             dest = OUT / f"{game}-{level.lower()}-{item['id']}.mp3"
