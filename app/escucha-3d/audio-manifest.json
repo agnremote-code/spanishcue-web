@@ -81,6 +81,86 @@
    "seconds": 56.46,
    "src": "/audio/escucha-3d/argentina-b1-mendoza.mp3"
   },
+  "australia/a0-nueva-gales": {
+   "hash": "f220b9021c6ec241434a",
+   "seconds": 31.68,
+   "src": "/audio/escucha-3d/australia-a0-nueva-gales.mp3"
+  },
+  "australia/a0-outback": {
+   "hash": "d06cf9653b2aa812e2da",
+   "seconds": 34.63,
+   "src": "/audio/escucha-3d/australia-a0-outback.mp3"
+  },
+  "australia/a0-queensland": {
+   "hash": "b4d1d7b8a41dcb8d6bd2",
+   "seconds": 30.34,
+   "src": "/audio/escucha-3d/australia-a0-queensland.mp3"
+  },
+  "australia/a0-victoria": {
+   "hash": "1d02b5c3ec7a3eeeb263",
+   "seconds": 25.13,
+   "src": "/audio/escucha-3d/australia-a0-victoria.mp3"
+  },
+  "australia/a1-nueva-gales": {
+   "hash": "1cfad78a5bb9dfa5dd0f",
+   "seconds": 41.14,
+   "src": "/audio/escucha-3d/australia-a1-nueva-gales.mp3"
+  },
+  "australia/a1-outback": {
+   "hash": "ec1fc3f0bf4c55bcd98c",
+   "seconds": 40.92,
+   "src": "/audio/escucha-3d/australia-a1-outback.mp3"
+  },
+  "australia/a1-queensland": {
+   "hash": "9cad5399b7d862405283",
+   "seconds": 40.95,
+   "src": "/audio/escucha-3d/australia-a1-queensland.mp3"
+  },
+  "australia/a1-victoria": {
+   "hash": "77018a1eea356634ff82",
+   "seconds": 39.48,
+   "src": "/audio/escucha-3d/australia-a1-victoria.mp3"
+  },
+  "australia/a2-nueva-gales": {
+   "hash": "1aac593440dcd2e23fdc",
+   "seconds": 55.88,
+   "src": "/audio/escucha-3d/australia-a2-nueva-gales.mp3"
+  },
+  "australia/a2-outback": {
+   "hash": "c37ae8d1a4f3a24af2e6",
+   "seconds": 53.53,
+   "src": "/audio/escucha-3d/australia-a2-outback.mp3"
+  },
+  "australia/a2-queensland": {
+   "hash": "54db3e805950e9406106",
+   "seconds": 55.26,
+   "src": "/audio/escucha-3d/australia-a2-queensland.mp3"
+  },
+  "australia/a2-victoria": {
+   "hash": "0abb960328fc09e51298",
+   "seconds": 56.17,
+   "src": "/audio/escucha-3d/australia-a2-victoria.mp3"
+  },
+  "australia/b1-nueva-gales": {
+   "hash": "4bbbc64129d5194f26c8",
+   "seconds": 56.03,
+   "src": "/audio/escucha-3d/australia-b1-nueva-gales.mp3"
+  },
+  "australia/b1-outback": {
+   "hash": "ab435df01434fd6a9438",
+   "seconds": 54.87,
+   "src": "/audio/escucha-3d/australia-b1-outback.mp3"
+  },
+  "australia/b1-queensland": {
+   "hash": "3c13e8d4c6b034b67e28",
+   "seconds": 57.08,
+   "src": "/audio/escucha-3d/australia-b1-queensland.mp3"
+  },
+  "australia/b1-victoria": {
+   "hash": "5173befa8642ecea4640",
+   "seconds": 58.95,
+   "src": "/audio/escucha-3d/australia-b1-victoria.mp3"
+  },
   "bosque/a1-cambia": {
    "hash": "a584a4cf0452c7383fc3",
    "seconds": 37.03,
