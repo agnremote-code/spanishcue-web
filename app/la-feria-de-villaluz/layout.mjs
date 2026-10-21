@@ -23,15 +23,15 @@ export const CIRCLES = [
   { id: 'tombola', n: 3, name: 'La tómbola', place: 'La tómbola de los premios', spot: { x: -24, z: -8 }, npc: { x: -27, z: -8 }, stall: { x: -29, z: -8, w: 3, d: 5, color: '#c0392b' } },
   { id: 'noria', n: 4, name: 'La noria', place: 'La taquilla de la noria', spot: { x: -10, z: -24 }, npc: { x: -10, z: -27 }, stall: { x: -10, z: -29.5, w: 3.4, d: 2.4, color: '#7a3ab0' } },
   { id: 'artesania', n: 5, name: 'Artesanía', place: 'El puesto de artesanía', spot: { x: 12, z: -24 }, npc: { x: 12, z: -27 }, stall: { x: 12, z: -29, w: 5, d: 3, color: '#2f8a4a' } },
-  { id: 'escenario', n: 6, name: 'El escenario', place: 'El escenario de la plaza', spot: { x: 22, z: -6 }, npc: { x: 24.5, z: -7.5 }, stall: { x: 31, z: -6, w: 6, d: 9, color: '#e0b030' }, busca: true },
+  { id: 'escenario', n: 6, name: 'El escenario', place: 'El escenario de la plaza', spot: { x: 22, z: -6 }, npc: { x: 21, z: -8.6 }, stall: { x: 31, z: -6, w: 6, d: 9, color: '#e0b030' }, busca: true },
   { id: 'fotos', n: 7, name: 'Las fotos', place: 'El rincón de las fotos', spot: { x: 22, z: 14 }, npc: { x: 25, z: 15.5 }, stall: { x: 29, z: 16, w: 3, d: 3, color: '#e47aa8' }, busca: true },
-  { id: 'baile', n: 8, name: 'El baile', place: 'El baile de la plaza', spot: { x: 0, z: 9 }, npc: { x: 2.2, z: 7.5 }, stall: null, busca: true },
+  { id: 'baile', n: 8, name: 'El baile', place: 'El baile de la plaza', spot: { x: 0, z: 9 }, npc: { x: -2.6, z: 10.5 }, stall: null, busca: true },
 ];
 export const CIRCLE_IDS = CIRCLES.map(c => c.id);
 export const circleById = id => CIRCLES.find(c => c.id === id) ?? null;
 
 // Where each Busca camera looks: from the circle into the open plaza.
-const LOOK_AT = { informacion: { x: -4, z: 16 }, escenario: { x: 26, z: -6 }, fotos: { x: 16, z: 8 }, baile: { x: 0, z: 2 } };
+const LOOK_AT = { informacion: { x: -9, z: 14 }, escenario: { x: 26, z: -6 }, fotos: { x: 16, z: 8 }, baile: { x: 0, z: 2 } };
 export function buscaHeading(circle) {
   const c = typeof circle === 'string' ? circleById(circle) : circle;
   return towards(c.spot, LOOK_AT[c.id] ?? c.npc);
@@ -42,6 +42,9 @@ export const WHEEL = { x: -10, z: -34, radius: 9, cabins: 12 };
 export const STAGE = { x: 31, z: -6, w: 6, d: 9, h: 1.1 };
 export const DANCE_FLOOR = { x: 0, z: 1, r: 6.5 };
 export const FOUNTAIN = { x: 0, z: 20, r: 1.8 };
+// Poles of the strings of bulbs: a ring of ten and a tall one in the middle
+// of the dance floor.
+export const POLES = [...Array.from({ length: 10 }, (_, i) => { const a = (i / 10) * Math.PI * 2 + 0.3; return { x: Math.sin(a) * 17, z: Math.cos(a) * 17, h: 5.2 }; }), { x: DANCE_FLOOR.x, z: DANCE_FLOOR.z, h: 7.2 }];
 
 /** Boxes the hero can't walk through: { x0, x1, z0, z1, top? }. */
 export function solids() {
@@ -108,6 +111,37 @@ export function slotToWorld(circle, slot) {
   const rx = -Math.cos(h), rz = Math.sin(h);
   const cx = c.spot.x + fx * CLUSTER_AHEAD, cz = c.spot.z + fz * CLUSTER_AHEAD;
   return { x: cx + rx * slot.x + fx * slot.z, z: cz + rz * slot.x + fz * slot.z, heading: h + Math.PI };
+}
+
+// The Busca camera (risk 3; D6 framing fix, 2026-10-21). It stays behind the
+// mascot and looks along the mascot's heading, so screen-left is the mascot's
+// left. It is raised so the mascot's head sits below the candidates' feet (the
+// mascot no longer hides a slot), and its field of view widens until every
+// candidate, number label included, fits the screen at any aspect (390 px
+// portrait included).
+export const BUSCA_CAMERA = { back: 3.4, height: 4.0, lookY: 0.9, halfWidth: 0.45, margin: 0.05 };
+
+/** Camera position, look target and vertical FOV (degrees) for a Busca
+ * cluster. `points` are the candidates' world positions (default: the widest
+ * default layout). */
+export function buscaCamera(circle, aspect = 16 / 9, points = null) {
+  const c = typeof circle === 'string' ? circleById(circle) : circle;
+  const h = buscaHeading(c);
+  const fx = Math.sin(h), fz = Math.cos(h);
+  const rx = -Math.cos(h), rz = Math.sin(h);
+  const { back, height, lookY, halfWidth, margin } = BUSCA_CAMERA;
+  const position = { x: c.spot.x - fx * back, y: height, z: c.spot.z - fz * back };
+  const target = { x: c.spot.x + fx * CLUSTER_AHEAD, y: lookY, z: c.spot.z + fz * CLUSTER_AHEAD };
+  const list = points ?? DEFAULT_SLOTS[1].map(slot => slotToWorld(c, slot));
+  let half = 0;
+  for (const p of list) {
+    const dx = p.x - position.x, dz = p.z - position.z;
+    const depth = dx * fx + dz * fz, side = Math.abs(dx * rx + dz * rz);
+    half = Math.max(half, Math.atan2(side + halfWidth, depth));
+  }
+  const base = aspect < 0.8 ? 70 : 58;
+  const fit = (2 * Math.atan(Math.tan(half + margin) / aspect) * 180) / Math.PI;
+  return { position, target, fov: Math.max(base, fit), heading: h };
 }
 
 /** The figures of a set placed in the world (authored slots or defaults). */

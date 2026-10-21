@@ -27,11 +27,12 @@ import { dirname, resolve, extname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { build } from 'esbuild';
 import { CIRCLES } from '../app/la-feria-de-villaluz/layout.mjs';
+import { CONTENT } from '../app/la-feria-de-villaluz/levels.mjs';
 
 const repo = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const argv = new Set(process.argv.slice(2));
-const all = !argv.has('--look') && !argv.has('--smoke') && !argv.has('--cover');
-const RUN = { look: all || argv.has('--look'), smoke: all || argv.has('--smoke'), cover: argv.has('--cover') };
+const all = !argv.has('--look') && !argv.has('--smoke') && !argv.has('--cover') && !argv.has('--calls');
+const RUN = { look: all || argv.has('--look'), smoke: all || argv.has('--smoke'), cover: argv.has('--cover'), calls: argv.has('--calls') };
 const out = resolve(process.env.FERIA_QA_OUTPUT || resolve(repo, '.qa/feria-browser'));
 await mkdir(resolve(out, 'look'), { recursive: true });
 await mkdir(resolve(out, 'smoke'), { recursive: true });
@@ -45,8 +46,27 @@ await build({
 import { createRoot } from 'react-dom/client';
 import FeriaGame from './app/la-feria-de-villaluz/FeriaGame';
 import World3D from './app/la-feria-de-villaluz/World3D';
+import HospitalWorld from './app/hospital-san-casi-vivo/World3D';
+import './app/hospital-san-casi-vivo/hospital.css';
 import { placeSet } from './app/la-feria-de-villaluz/layout.mjs';
-window.__qa = { stats: null, failed: false };
+window.__qa = { stats: null, failed: false, gl: 0, frames: 0 };
+// T5: real WebGL draw calls, counted on the context the same way for every
+// world (three.js defines render() per instance, so it can't be wrapped).
+for (const Ctx of [window.WebGLRenderingContext, window.WebGL2RenderingContext].filter(Boolean)) {
+  for (const name of ['drawArrays', 'drawElements', 'drawArraysInstanced', 'drawElementsInstanced', 'drawRangeElements']) {
+    const original = Ctx.prototype[name];
+    if (original) Ctx.prototype[name] = function (...args) { window.__qa.gl++; return original.apply(this, args); };
+  }
+}
+const tick = () => { window.__qa.frames++; requestAnimationFrame(tick); };
+requestAnimationFrame(tick);
+function HospitalHarness() {
+  const [view, setView] = useState({ floor: 1, sceneId: null });
+  useEffect(() => { window.__qa.hospital = (floor, sceneId) => setView({ floor, sceneId }); }, []);
+  const none = () => {};
+  return <main className="hs"><HospitalWorld floor={view.floor} via="lift" sceneId={view.sceneId} mood={null} done={[]} paused={false} intro={false}
+    onSpot={none} onLift={none} onNear={none} onPerson={none} personId={null} onCry={none} onPose={none} onFail={() => { window.__qa.failed = true; }} /></main>;
+}
 function LookHarness() {
   const [busca, setBusca] = useState(null);
   const [intro, setIntro] = useState(false);
@@ -60,7 +80,7 @@ function LookHarness() {
     onSpot={() => {}} onNear={() => {}} onPose={() => {}} onFail={() => { window.__qa.failed = true; }} onStats={s => { window.__qa.stats = s; }} /></main>;
 }
 const q = new URLSearchParams(location.search);
-createRoot(document.getElementById('root')).render(q.get('harness') === 'look' ? <LookHarness /> : <FeriaGame />);`,
+createRoot(document.getElementById('root')).render(q.get('harness') === 'look' ? <LookHarness /> : q.get('harness') === 'hospital' ? <HospitalHarness /> : <FeriaGame />);`,
     resolveDir: repo, loader: 'tsx',
   },
   bundle: true, format: 'esm', splitting: true, outdir: resolve(out, 'assets'), entryNames: 'lesson', chunkNames: 'chunk-[hash]', jsx: 'automatic',
@@ -208,6 +228,18 @@ if (RUN.look) {
         console.log(JSON.stringify({ look: `${view.id}/${circle}/${shot.id}`, calls: stats?.calls, dpr: stats?.dpr, colours: pixels.colours }));
       }
     }
+    // Every authored Busca set where the class meets it (FERIA_QA_SETS=1):
+    // the framing proof (no candidate hidden, all in frame).
+    if (process.env.FERIA_QA_SETS === '1') for (const set of CONTENT.A2.BUSCA) {
+      const circle = set.kind === 'transfer' ? 'baile' : CIRCLES[set.circle - 1].id;
+      await page.evaluate(([c, f]) => window.__qa.show(c, f), [circle, set.figures]);
+      await frames(page, 40);
+      const name = `${view.id}-set-${set.id}.png`;
+      await page.screenshot({ path: resolve(out, 'look', name) });
+      const stats = await page.evaluate(() => window.__qa.stats);
+      report.look.push({ view: view.id, circle, shot: `set:${set.id}`, file: name, stats });
+      console.log(JSON.stringify({ look: `${view.id}/${circle}/set:${set.id}`, calls: stats?.calls, dpr: stats?.dpr }));
+    }
     assert.equal(await page.evaluate(() => window.__qa.failed), false, `${view.id}: World3D reported onFail`);
     await context.close();
   }
@@ -257,6 +289,54 @@ if (RUN.cover) {
   await writeFile(resolve(out, 'cover.webp'), simpleWebp(Buffer.from(webp, 'base64')));
   console.log(`cover: ${resolve(out, 'cover.webp')} (${pick})`);
   await context.close();
+}
+
+// ------------------------------------------------------------------ T5 draw calls (--calls)
+// Low-power path (coarse pointer, DPR 1.25), the scene's draw calls per frame
+// for every place a class stops at: feria circles (scene camera), its Busca
+// places, the free view at the spawn; hospital scenes for reference.
+if (RUN.calls) {
+  const { SCENES } = await import('../app/hospital-san-casi-vivo/layout.mjs');
+  const table = [];
+  for (const view of LOOK_VIEWS) {
+    const context = await browser.newContext({ viewport: { width: view.width, height: view.height }, deviceScaleFactor: 1.25, hasTouch: true, isMobile: true });
+    const page = await context.newPage();
+    page.on('pageerror', e => report.errors.push(`calls/${view.id}: ${e.message}`));
+    // Settle, then average the GL draw calls over 10 frames (one render per frame in low mode).
+    const read = async () => {
+      await frames(page, 15);
+      const a = await page.evaluate(() => ({ gl: window.__qa.gl, frames: window.__qa.frames }));
+      await frames(page, 10);
+      const b = await page.evaluate(() => ({ gl: window.__qa.gl, frames: window.__qa.frames }));
+      return { calls: Math.round((b.gl - a.gl) / (b.frames - a.frames)) };
+    };
+    await page.goto(`${origin}/?harness=look`);
+    await page.locator('.fv-canvas canvas').waitFor({ timeout: 60000 });
+    const push = row => { table.push(row); console.log(JSON.stringify(row)); };
+    push({ world: 'feria', view: view.id, place: 'spawn (free view)', ...(await read()) });
+    for (const c of CIRCLES) {
+      await page.evaluate(id => window.__qa.circle(id), c.id);
+      push({ world: 'feria', view: view.id, place: `circle ${c.n} ${c.id}`, ...(await read()) });
+    }
+    await page.evaluate(() => window.__qa.circle(null));
+    for (const c of CIRCLES.filter(c => c.busca)) {
+      await page.evaluate(([id, f]) => window.__qa.show(id, f), [c.id, LOOK_SHOTS.find(s => s.id === 'pairs-1')?.figures ?? LOOK_SHOTS[0].figures]);
+      push({ world: 'feria', view: view.id, place: `busca ${c.id}`, ...(await read()) });
+    }
+    await page.goto(`${origin}/?harness=hospital`);
+    await page.locator('canvas').first().waitFor({ timeout: 60000 });
+    push({ world: 'hospital', view: view.id, place: 'spawn (free view)', ...(await read()) });
+    for (const scene of SCENES) {
+      await page.evaluate(([floor, id]) => window.__qa.hospital(floor, id), [scene.floor, scene.id]);
+      push({ world: 'hospital', view: view.id, place: `scene ${scene.id} (floor ${scene.floor})`, ...(await read()) });
+    }
+    await context.close();
+  }
+  report.calls = table;
+  for (const world of ['feria', 'hospital']) for (const view of LOOK_VIEWS) {
+    const rows = table.filter(r => r.world === world && r.view === view.id).map(r => r.calls);
+    console.log(`${world} ${view.id}: draw calls min ${Math.min(...rows)} · median ${rows.sort((a, b) => a - b)[rows.length >> 1]} · max ${Math.max(...rows)} (${rows.length} places)`);
+  }
 }
 
 // ------------------------------------------------------------------ G5(a) smoke

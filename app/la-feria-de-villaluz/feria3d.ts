@@ -5,8 +5,9 @@
 // position come from layout.mjs; people come from noche-abierta/people3d.
 import * as THREE from 'three';
 import { addBlobShadow, animatePerson, createPerson, randomLook, setPose, type Look, type Person } from '../noche-abierta/people3d';
-import { BOUNDS, CIRCLES, DANCE_FLOOR, FOUNTAIN, STAGE, WHEEL, crowd } from './layout.mjs';
+import { BOUNDS, CIRCLES, DANCE_FLOOR, FOUNTAIN, POLES, STAGE, WHEEL, crowd } from './layout.mjs';
 import { lookOf, type Figure } from './look-contract.mjs';
+import { bake } from './bake3d';
 
 export type Spot = { id: string; group: THREE.Group; material: THREE.MeshBasicMaterial; gem: THREE.Mesh };
 export type Npc = { id: string; person: Person; x: number; z: number; heading: number; main: boolean };
@@ -19,6 +20,8 @@ export type Fair = {
   animate: (t: number, dt: number, px: number, pz: number) => void;
   /** Draw-call budget check in the dev overlay. */
   people: () => number;
+  /** Low mode: only the host of the open circle is a live (animated) person. */
+  focus: (circleId: string | null) => void;
 };
 
 const std = (color: string, roughness = 0.8, metalness = 0) => new THREE.MeshStandardMaterial({ color, roughness, metalness });
@@ -51,13 +54,13 @@ function makePerson(look: Look, pose: string, shadows: boolean) {
   return person;
 }
 
-function buildSpot(id: string, x: number, z: number): Spot {
+function buildSpot(id: string, x: number, z: number, discMaterial: THREE.Material): Spot {
   const group = new THREE.Group();
   group.position.set(x, 0.03, z);
   const material = new THREE.MeshBasicMaterial({ color: '#ffffff', transparent: true, opacity: 0.9, depthWrite: false, toneMapped: false });
   const ring = new THREE.Mesh(new THREE.RingGeometry(0.98, 1.18, 48), material);
   ring.rotation.x = -Math.PI / 2;
-  const disc = new THREE.Mesh(new THREE.CircleGeometry(0.98, 48), new THREE.MeshBasicMaterial({ color: '#ffffff', transparent: true, opacity: 0.12, depthWrite: false, toneMapped: false }));
+  const disc = new THREE.Mesh(new THREE.CircleGeometry(0.98, 48), discMaterial);
   disc.rotation.x = -Math.PI / 2;
   const gem = new THREE.Mesh(new THREE.OctahedronGeometry(0.11), material);
   gem.position.y = 2.3;
@@ -187,7 +190,18 @@ export function buildFair(scene: THREE.Scene, opts: { low: boolean; shadows: boo
   }
   const cabins: THREE.Group[] = [];
   const cabinColors = ['#c0392b', '#2f6fb0', '#e0b030', '#2f8a4a', '#7a3ab0', '#e47aa8'];
-  for (let i = 0; i < WHEEL.cabins; i++) {
+  // Low mode: the twelve cabins are two instanced meshes (body, roof) that
+  // stay level as the wheel turns (2 draw calls instead of 24).
+  let cabinParts: { mesh: THREE.InstancedMesh; y: number }[] = [];
+  if (low) {
+    cabinParts = [
+      { mesh: new THREE.InstancedMesh(new THREE.BoxGeometry(1.1, 0.9, 1), std('#ffffff', 0.6), WHEEL.cabins), y: -0.75 },
+      { mesh: new THREE.InstancedMesh(new THREE.BoxGeometry(1.25, 0.08, 1.15), std('#f4efe6', 0.6), WHEEL.cabins), y: -0.25 },
+    ];
+    for (let i = 0; i < WHEEL.cabins; i++) cabinParts[0].mesh.setColorAt(i, new THREE.Color(cabinColors[i % cabinColors.length]));
+    for (const part of cabinParts) { part.mesh.frustumCulled = false; spin.add(part.mesh); }
+  }
+  for (let i = 0; i < (low ? 0 : WHEEL.cabins); i++) {
     const a = (i / WHEEL.cabins) * Math.PI * 2;
     const cabin = new THREE.Group();
     cabin.position.set(Math.sin(a) * WHEEL.radius, Math.cos(a) * WHEEL.radius, 0);
@@ -199,8 +213,7 @@ export function buildFair(scene: THREE.Scene, opts: { low: boolean; shadows: boo
   add(wheel, new THREE.CylinderGeometry(0.45, 0.45, 2, 12), steel, 0, 0, 0).rotation.x = Math.PI / 2;
 
   // Strings of bulbs between poles: one InstancedMesh for all the bulbs.
-  const poles: [number, number][] = [];
-  for (let i = 0; i < 10; i++) { const a = (i / 10) * Math.PI * 2 + 0.3; poles.push([Math.sin(a) * 17, Math.cos(a) * 17]); }
+  const poles: [number, number][] = POLES.slice(0, 10).map(p => [p.x, p.z]);
   const poleMat = std('#2a2a30', 0.6, 0.4);
   for (const [x, z] of poles) add(root, new THREE.CylinderGeometry(0.07, 0.09, 5.2, 8), poleMat, x, 2.6, z);
   const spans: [number, number, number, number][] = [];
@@ -237,25 +250,29 @@ export function buildFair(scene: THREE.Scene, opts: { low: boolean; shadows: boo
   }
 
   // White circles.
-  const spots = CIRCLES.map(c => { const s = buildSpot(c.id, c.spot.x, c.spot.z); root.add(s.group); return s; });
+  const discMaterial = new THREE.MeshBasicMaterial({ color: '#ffffff', transparent: true, opacity: 0.12, depthWrite: false, toneMapped: false });
+  const spots = CIRCLES.map(c => { const s = buildSpot(c.id, c.spot.x, c.spot.z, discMaterial); root.add(s.group); return s; });
 
   // Hosts at their stalls.
   const npcs: Npc[] = [];
+  const hostBlobs: THREE.Object3D[] = [];
   for (const c of CIRCLES) {
     const heading = Math.atan2(c.spot.x - c.npc.x, c.spot.z - c.npc.z);
     const person = makePerson(HOSTS[c.id], c.id === 'escenario' ? 'stand' : 'stand', shadows);
     person.root.position.set(c.npc.x, 0, c.npc.z);
     person.root.rotation.y = heading;
     root.add(person.root);
+    hostBlobs.push(person.root.children[person.root.children.length - 1]);
     npcs.push({ id: c.id, person, x: c.npc.x, z: c.npc.z, heading, main: true });
   }
 
-  // The crowd: fewer people in low mode.
+  // The crowd: fewer people in low mode (§3), baked there (no idle motion).
   const crowdPeople: { person: Person; x: number; z: number }[] = [];
   for (const p of crowd(low ? 10 : 24)) {
     const person = makePerson(randomLook(p.seed), p.pose, false);
     person.root.position.set(p.x, 0, p.z);
     person.root.rotation.y = p.heading;
+    if (low) animatePerson(person, 0, 0, false);
     root.add(person.root);
     crowdPeople.push({ person, x: p.x, z: p.z });
   }
@@ -269,7 +286,9 @@ export function buildFair(scene: THREE.Scene, opts: { low: boolean; shadows: boo
   found.visible = false;
   root.add(found);
 
+  let candidateBake: THREE.Group | null = null;
   function clearBusca() {
+    if (candidateBake) { busca.remove(candidateBake); candidateBake.traverse(o => { const m = o as THREE.Mesh; if (m.isMesh) m.geometry.dispose(); }); candidateBake = null; }
     for (const c of candidates) {
       busca.remove(c.person.root, c.label);
       c.person.root.traverse(o => { const m = o as THREE.Mesh; if (m.isMesh) { const mat = m.material as THREE.Material | THREE.Material[]; if (Array.isArray(mat)) mat.forEach(x => x.dispose()); else mat.dispose(); } });
@@ -294,6 +313,13 @@ export function buildFair(scene: THREE.Scene, opts: { low: boolean; shadows: boo
       busca.add(label);
       candidates.push({ id: p.figure.id, person, label, x: p.x, z: p.z });
     }
+    if (low) {
+      // One baked cluster (same look and pose, no idle motion): ~3 draw calls
+      // instead of ~30 per candidate. Labels stay sprites.
+      for (const c of candidates) animatePerson(c.person, 0, 0, false);
+      candidateBake = bake(candidates.map(c => c.person.root), { people: true });
+      busca.add(candidateBake);
+    }
   }
 
   function reveal(id: string | null) {
@@ -302,15 +328,72 @@ export function buildFair(scene: THREE.Scene, opts: { low: boolean; shadows: boo
     if (c) found.position.set(c.x, 0.04, c.z);
   }
 
+  // ------------------------------------------------------------ low-power bake (T5)
+  // Everything that never moves becomes a few merged meshes; the crowd too;
+  // the hosts are baked as a group and only the host of the open circle is a
+  // live person (it turns to the mascot and talks).
+  let focused: string | null = null;
+  let hostBake: THREE.Group | null = null;
+  const hostBakes = new Map<string, THREE.Group>();
+  function hostsExcept(id: string | null) {
+    const key = id ?? '';
+    let group = hostBakes.get(key);
+    if (!group) {
+      const others = npcs.filter(n => n.id !== id);
+      for (const n of others) n.person.root.visible = true;
+      group = bake(others.map(n => n.person.root), { people: true, hide: false, skip: m => hostBlobs.includes(m) });
+      for (const n of npcs) n.person.root.visible = n.id === id;
+      hostBakes.set(key, group);
+    }
+    return group;
+  }
+  function focus(id: string | null) {
+    if (!low || id === focused && hostBake) return;
+    focused = id;
+    if (hostBake) root.remove(hostBake);
+    hostBake = hostsExcept(id);
+    root.add(hostBake);
+    for (const n of npcs) n.person.root.visible = n.id === id;
+  }
+  if (low) {
+    // Static scenery: houses, stalls, stage, wheel frame, poles, fountain, discs.
+    const live = new Set<THREE.Object3D>([spin, busca, found, ...npcs.map(n => n.person.root), ...crowdPeople.map(c => c.person.root)]);
+    const ringsAndGems = new Set<THREE.Object3D>(spots.flatMap(s => s.group.children.filter(o => (o as THREE.Mesh).material === s.material)));
+    const isLive = (o: THREE.Object3D) => { for (let p: THREE.Object3D | null = o; p; p = p.parent) if (live.has(p)) return true; return false; };
+    root.add(bake([root], { skip: m => ringsAndGems.has(m) || isLive(m) }));
+    // The turning part of the wheel (rims and spokes) in the wheel's own frame.
+    spin.add(bake([spin], { relativeTo: spin }));
+    // The crowd and every host's blob shadow: one baked group.
+    root.add(bake([...crowdPeople.map(c => c.person.root), ...hostBlobs], { people: true }));
+    for (const c of crowdPeople) root.remove(c.person.root);
+    for (const n of npcs) { const blob = hostBlobs[npcs.indexOf(n)]; n.person.root.remove(blob); }
+    focus(null);
+  }
+
+  const cabinMatrix = new THREE.Matrix4(), cabinTurn = new THREE.Matrix4(), cabinOffset = new THREE.Matrix4();
   function animate(t: number, dt: number, px: number, pz: number) {
     spin.rotation.z = t * 0.05;
     for (const cabin of cabins) cabin.rotation.z = -spin.rotation.z;
+    if (cabinParts.length) {
+      cabinTurn.makeRotationZ(-spin.rotation.z);
+      for (let i = 0; i < WHEEL.cabins; i++) {
+        const a = (i / WHEEL.cabins) * Math.PI * 2;
+        for (const part of cabinParts) {
+          cabinMatrix.makeTranslation(Math.sin(a) * WHEEL.radius, Math.cos(a) * WHEEL.radius, 0).multiply(cabinTurn).multiply(cabinOffset.makeTranslation(0, part.y, 0));
+          part.mesh.setMatrixAt(i, cabinMatrix);
+        }
+      }
+      for (const part of cabinParts) part.mesh.instanceMatrix.needsUpdate = true;
+    }
     for (const s of spots) { s.gem.position.y = 2.3 + Math.sin(t * 2 + s.group.position.x) * 0.12; s.gem.rotation.y += dt * 1.5; }
-    for (const n of npcs) animatePerson(n.person, dt, 0, false);
-    for (const c of crowdPeople) if (Math.abs(c.x - px) < 28 && Math.abs(c.z - pz) < 28) animatePerson(c.person, dt, 0, false);
-    for (const c of candidates) animatePerson(c.person, dt, 0, false);
+    for (const n of npcs) if (!low || n.id === focused) animatePerson(n.person, dt, 0, false);
+    if (!low) {
+      for (const c of crowdPeople) if (Math.abs(c.x - px) < 28 && Math.abs(c.z - pz) < 28) animatePerson(c.person, dt, 0, false);
+      for (const c of candidates) animatePerson(c.person, dt, 0, false);
+    }
     if (found.visible) found.rotation.z += dt;
   }
+  animate(0, 0, 0, 0);
 
-  return { spots, npcs, showBusca, reveal, animate, people: () => npcs.length + crowdPeople.length + candidates.length };
+  return { spots, npcs, showBusca, reveal, animate, focus, people: () => npcs.length + crowdPeople.length + candidates.length };
 }

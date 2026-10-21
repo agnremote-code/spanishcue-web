@@ -270,3 +270,78 @@ test('settleScene: a circle counts as done on its last beat and its first pick f
   assert.equal(again.session, session, 'settling twice changes nothing');
   assert.deepEqual(E.settleScene(E.createState(), session, A2.CIRCLES).state, E.createState());
 });
+
+// ------------------------------------------------------------------ Busca framing (D6 fix, 2026-10-21)
+// Projects the real Busca camera (layout.buscaCamera, as World3D uses it) and
+// checks, in screen space, that no candidate is hidden by the mascot, a circle
+// host, the ambient crowd, a stall or a pole in front of it, that every
+// candidate with its number label is fully in frame, and that the camera is
+// clear of the stalls (the informacion awning wedge).
+function busca2d(circle, aspect, points) {
+  const cam = L.buscaCamera(circle, aspect, points);
+  const sub = (a, b) => ({ x: a.x - b.x, y: a.y - b.y, z: a.z - b.z }), dot = (a, b) => a.x * b.x + a.y * b.y + a.z * b.z;
+  const norm = a => { const l = Math.hypot(a.x, a.y, a.z); return { x: a.x / l, y: a.y / l, z: a.z / l }; };
+  const f = norm(sub(cam.target, cam.position)), r = norm({ x: -f.z, y: 0, z: f.x }), u = { x: r.y * f.z - r.z * f.y, y: r.z * f.x - r.x * f.z, z: r.x * f.y - r.y * f.x };
+  const tv = Math.tan((cam.fov * Math.PI) / 360), th = tv * aspect;
+  const rect = (x, z, w, y0, y1, d = w) => {
+    const pts = [];
+    for (const ox of [-w, w]) for (const oz of [-d, d]) for (const y of [y0, y1]) { const v = sub({ x: x + ox, y, z: z + oz }, cam.position); const depth = dot(v, f); pts.push({ x: dot(v, r) / (depth * th), y: dot(v, u) / (depth * tv), z: depth }); }
+    if (pts.some(p => p.z <= 0.2)) return null;
+    return { x0: Math.min(...pts.map(p => p.x)), x1: Math.max(...pts.map(p => p.x)), y0: Math.min(...pts.map(p => p.y)), y1: Math.max(...pts.map(p => p.y)), z: Math.min(...pts.map(p => p.z)) };
+  };
+  return { cam, rect };
+}
+const overlaps = (a, b) => Math.min(a.x1, b.x1) > Math.max(a.x0, b.x0) && Math.min(a.y1, b.y1) > Math.max(a.y0, b.y0);
+function framingProblems(circle, aspect, points) {
+  const c = L.circleById(circle);
+  const { cam, rect } = busca2d(circle, aspect, points);
+  const problems = [];
+  const blockers = [{ id: 'mascot', r: rect(c.spot.x, c.spot.z, 0.35, 0, 1.9) }];
+  for (const o of L.CIRCLES) blockers.push({ id: `host ${o.id}`, r: rect(o.npc.x, o.npc.z, 0.28, 0, 1.85) });
+  L.crowd(24).forEach((p, i) => blockers.push({ id: `crowd ${i}`, r: rect(p.x, p.z, 0.28, 0, 1.85) }));
+  for (const b of L.SOLIDS) blockers.push({ id: `stall ${b.x0},${b.z0}`, r: rect((b.x0 + b.x1) / 2, (b.z0 + b.z1) / 2, (b.x1 - b.x0) / 2 + 0.3, 0, b.top ?? 3.3, (b.z1 - b.z0) / 2 + 0.3) });
+  for (const p of L.POLES) blockers.push({ id: `pole ${p.x.toFixed(1)},${p.z.toFixed(1)}`, r: rect(p.x, p.z, 0.1, 0, p.h) });
+  points.forEach((p, i) => {
+    const body = rect(p.x, p.z, 0.28, 0, 1.8), label = rect(p.x, p.z, 0.3, 0, 1.8 + 0.85);
+    if (!label || label.x0 < -1 || label.x1 > 1 || label.y0 < -1 || label.y1 > 1) problems.push(`candidate ${i + 1} not fully in frame`);
+    for (const b of blockers) if (b.r && body && b.r.z < body.z && overlaps(b.r, body)) problems.push(`candidate ${i + 1} hidden by ${b.id}`);
+  });
+  for (const b of L.SOLIDS) if (b.top == null && cam.position.x > b.x0 - 1.2 && cam.position.x < b.x1 + 1.2 && cam.position.z > b.z0 - 1.2 && cam.position.z < b.z1 + 1.2) problems.push('camera inside a stall awning');
+  return problems;
+}
+
+test('Busca framing: no candidate hidden or out of frame, at every Busca place, on tablet, laptop and 390 px portrait', () => {
+  const aspects = { tablet: 1180 / 820, laptop: 16 / 9, phone: 390 / 844 };
+  for (const id of ['informacion', 'escenario', 'fotos', 'baile']) for (const [name, aspect] of Object.entries(aspects)) for (const n of [4, 5]) {
+    const points = L.defaultSlots(n).map(slot => L.slotToWorld(id, slot));
+    assert.deepEqual(framingProblems(id, aspect, points), [], `${id} ${name} ${n} slots`);
+  }
+  for (const set of A2.BUSCA) {
+    const circle = set.kind === 'transfer' ? 'baile' : L.CIRCLES[set.circle - 1].id;
+    const points = L.placeSet(set, circle);
+    for (const [name, aspect] of Object.entries(aspects)) assert.deepEqual(framingProblems(circle, aspect, points), [], `${set.id} ${name}`);
+  }
+  // Same view as before: behind the mascot, along his heading (screen-left = his left).
+  for (const id of ['informacion', 'escenario', 'fotos', 'baile']) {
+    const c = L.circleById(id), cam = L.buscaCamera(id, 1.5), h = L.buscaHeading(id);
+    assert.ok(Math.abs(Math.atan2(cam.target.x - cam.position.x, cam.target.z - cam.position.z) - h) < 1e-9 || Math.abs(Math.abs(Math.atan2(cam.target.x - cam.position.x, cam.target.z - cam.position.z) - h) - 2 * Math.PI) < 1e-9, `${id} looks along the mascot's heading`);
+    assert.ok((c.spot.x - cam.position.x) * Math.sin(h) + (c.spot.z - cam.position.z) * Math.cos(h) > 0, `${id} camera behind the mascot`);
+  }
+  assert.match(world, /buscaCamera\(busca\.circle, camera\.aspect, busca\.placed\)/, 'World3D uses the tested camera');
+  assert.match(world, /new THREE\.DirectionalLight\('#fff1dc', 0\)/, 'one scene-wide fill, never a light on the target (AC4)');
+});
+
+test('T5 low path: static scenery, crowd, hosts and Busca candidates are baked; cabins instanced; one live host', () => {
+  const fair = readFileSync('app/la-feria-de-villaluz/feria3d.ts', 'utf8');
+  const baker = readFileSync('app/la-feria-de-villaluz/bake3d.ts', 'utf8');
+  assert.match(fair, /import \{ bake \} from '\.\/bake3d';/);
+  assert.match(fair, /for \(const p of crowd\(low \? 10 : 24\)\)/, '§3: ~10 people in low mode');
+  assert.match(fair, /root\.add\(bake\(\[root\], \{ skip: m => ringsAndGems\.has\(m\) \|\| isLive\(m\) \}\)\);/, 'static scenery baked');
+  assert.match(fair, /spin\.add\(bake\(\[spin\], \{ relativeTo: spin \}\)\);/, 'the turning wheel frame baked in its own frame');
+  assert.match(fair, /new THREE\.InstancedMesh\(new THREE\.BoxGeometry\(1\.1, 0\.9, 1\)/, 'cabins instanced');
+  assert.match(fair, /candidateBake = bake\(candidates\.map\(c => c\.person\.root\), \{ people: true \}\);/, 'Busca candidates baked in low mode');
+  assert.match(world, /fair\.focus\(circleId && !busca \? circleId : null\);/, 'only the open circle\'s host is live');
+  // A baked person keeps its colours (vertex colour = material colour) and no part is lit apart (AC4).
+  assert.match(baker, /color: m\.color\.clone\(\)/);
+  assert.doesNotMatch(fair, /PointLight[^\n]*low|if \(low\)[^\n]*PointLight/, 'no extra point lights in low mode');
+});

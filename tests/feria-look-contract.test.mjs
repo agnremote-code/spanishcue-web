@@ -6,16 +6,18 @@ import * as C from '../app/la-feria-de-villaluz/look-contract.mjs';
 const people3d = readFileSync('app/noche-abierta/people3d.ts', 'utf8');
 const union = name => new Set([...people3d.match(new RegExp(`export type ${name} =([^;]+);`))[1].matchAll(/'([^']+)'/g)].map(m => m[1]));
 
-const base = { body: 'f', age: 'child', top: 'tshirt', topColor: 'amarillo', bottom: 'shorts', bottomColor: 'azul', hair: 'curly', hairColor: 'castano' };
+// Every distinguishing feature here passed the 2026-10-21 D6 render
+// (vestido, amarillo, rubio); «mochila» is only named (presence, marginal).
+const base = { body: 'f', age: 'child', top: 'dress', topColor: 'amarillo', bottom: 'shorts', bottomColor: 'azul', hair: 'short', hairColor: 'rubio' };
 const good = () => ({
   id: 'demo', circle: 1, kind: 'find', target: 't',
-  text: 'Atención, por favor: buscamos a una niña de pelo rizado. Lleva una camiseta amarilla y una mochila.',
-  described: ['age:child', 'hair:curly', 'topColor:amarillo', 'extras:backpack'],
+  text: 'Atención, por favor: buscamos a una niña rubia. Lleva un vestido amarillo y una mochila.',
+  described: ['age:child', 'hairColor:rubio', 'top:dress', 'topColor:amarillo', 'extras:backpack'],
   figures: [
     { ...base, id: 't', extras: ['backpack'] },
     { ...base, id: 'a', topColor: 'verde', extras: ['backpack'] },
-    { ...base, id: 'b', bottom: 'skirt', bottomColor: 'rojo', hair: 'long', hairColor: 'rubio', extras: ['backpack'] },
-    { ...base, id: 'c' },
+    { ...base, id: 'b', top: 'tshirt', extras: ['backpack'] },
+    { ...base, id: 'c', hairColor: 'moreno' },
   ],
 });
 
@@ -53,12 +55,12 @@ test('a well-built set passes and every wrong pick names a mismatched feature (A
 test('the checker rejects sets that break AC2, AC4 or AM-4', () => {
   const fail = (edit, pattern) => { const s = good(); edit(s); assert.ok(C.validateBuscaSet(s).some(e => pattern.test(e)), `${pattern}: ${C.validateBuscaSet(s).join(' | ')}`); };
   fail(s => { s.described.push('topColor:azul'); }, /does not match/);
-  fail(s => { s.described = ['age:child', 'extras:backpack', 'hair:curly']; }, /matches every described feature/);
-  fail(s => { s.figures[1].hair = 'long'; s.figures[1].extras = []; s.figures[3].hair = 'long'; s.figures[2].hair = 'long'; s.described = ['hair:curly', 'topColor:amarillo']; }, /alone rules out every distractor/);
+  fail(s => { s.described = ['age:child', 'extras:backpack', 'top:dress']; }, /matches every described feature/);
+  fail(s => { s.figures[1].top = 'tshirt'; s.figures[3].top = 'tshirt'; s.described = ['top:dress', 'topColor:amarillo']; }, /alone rules out every distractor/);
   fail(s => { s.figures = s.figures.slice(0, 3); }, /3–4 distractors/);
   fail(s => { s.text += ' Lleva zapatos rojos.'; }, /zapatos/);
   fail(s => { s.text = s.text.replace('mochila', 'mochila roja'); }, /at random/);
-  fail(s => { s.text = s.text.replace('camiseta amarilla', 'camiseta'); }, /never says 'topColor:amarillo'/);
+  fail(s => { s.text = s.text.replace('vestido amarillo', 'vestido'); }, /never says 'topColor:amarillo'/);
   fail(s => { s.figures[2].age = 'adult'; s.described = s.described.filter(f => f !== 'age:child'); }, /another age band/);
   fail(s => { s.figures[3].body = 'm'; }, /another body type/);
   fail(s => { s.figures[0].pose = 'dance'; }, /unique \(AC4\)/);
@@ -92,7 +94,9 @@ test('AC3 feedback agrees with «la persona», also for a male target (regressio
       { ...man, id: 'c', hairColor: 'pelirrojo', height: 'short' },
     ],
   };
-  const expected = { a: 'está sentada', b: 'es alta', c: 'es alta' };
+  // a and c differ in rubio (legible); b only in height, which no longer
+  // distinguishes (D6), so the feedback names the unmatched feature anyway.
+  const expected = { a: 'es rubia', b: 'es alta', c: 'es rubia' };
   for (const [id, words] of Object.entries(expected)) {
     const text = C.feedbackFor(set, id);
     assert.equal(text, `No, no es esa persona. La persona del aviso ${words}.`, id);
@@ -106,4 +110,51 @@ test('AC3 feedback agrees with «la persona», also for a male target (regressio
   assert.equal(C.predicate('age:child', { ...man, id: 'n', age: 'child' }, {}, { subject: 'persona' }), 'es un niño');
   // The 2D aria-label keeps agreeing with the figure itself.
   assert.equal(C.predicate('hairColor:rubio', set.figures[0]), 'es rubio');
+});
+
+test('D6 (2026-10-21 render): every contract value has a rating, and only legible values distinguish', () => {
+  for (const [key, attr] of Object.entries(C.ATTRIBUTES)) for (const value of Object.keys(attr.values)) assert.ok(C.D6.ratings[key]?.[value], `${key}:${value} rated`);
+  for (const key of ['topColor', 'bottomColor']) for (const value of Object.keys(C.COLOURS)) assert.ok(C.D6.ratings[key][value], `${key}:${value} rated`);
+  for (const value of Object.keys(C.HAIR_COLOURS)) assert.ok(C.D6.ratings.hairColor[value], `hairColor:${value} rated`);
+  assert.match(C.D6.method, /not the G5\(b\) real-device check/);
+  const person = { id: 'p', body: 'f', age: 'adult', top: 'tshirt', topColor: 'azul', bottom: 'pants', bottomColor: 'gris', hair: 'short', hairColor: 'moreno' };
+  // A value rated marginal/illegible never rules out a distractor that lacks it.
+  const swap = { age: ['young', 'child'], body: ['f', 'm'], hair: ['long', 'bald'], hairColor: ['castano', 'rubio'], height: ['tall', 'short'], pose: ['sit', 'guitar'], holds: ['umbrella', 'suitcase'], top: ['coat', 'apron'], bottom: ['shorts', 'skirt'], bottomColor: ['marron', 'rojo'] };
+  for (const [key, [weak, other]] of Object.entries(swap)) {
+    assert.notEqual(C.D6.ratings[key][weak], 'legible', `${key}:${weak} is not legible`);
+    const target = { ...person, [key]: weak }, distractor = { ...person, id: 'd', [key]: other };
+    assert.equal(C.distinguishes(target, distractor, `${key}:${weak}`), false, `${key}:${weak} vs ${other}`);
+  }
+  for (const extra of ['backpack', 'glasses', 'scarf', 'beard', 'bag']) assert.equal(C.distinguishes({ ...person, extras: [extra] }, { ...person, id: 'd' }, `extras:${extra}`), false, extra);
+  for (const colour of ['marron', 'morado', 'negro', 'naranja']) assert.equal(C.distinguishes({ ...person, bottomColor: colour }, { ...person, id: 'd', bottomColor: 'blanco' }, `bottomColor:${colour}`), false, `bottom ${colour}`);
+  // Legible values still work; a dress colour is rated as a top colour.
+  assert.ok(C.distinguishes({ ...person, topColor: 'rojo' }, { ...person, id: 'd', topColor: 'verde' }, 'topColor:rojo'));
+  assert.ok(C.distinguishes({ ...person, top: 'dress', topColor: 'negro' }, { ...person, id: 'd', top: 'dress', topColor: 'blanco' }, 'bottomColor:negro'));
+  assert.ok(C.distinguishes({ ...person, age: 'child' }, { ...person, id: 'd' }, 'age:child'));
+  assert.equal(C.distinguishes({ ...person, age: 'young' }, { ...person, id: 'd', age: 'old' }, 'age:young'), false, 'young vs old');
+  assert.equal(C.distinguishes({ ...person, age: 'adult' }, { ...person, id: 'd', age: 'child' }, 'age:adult'), false, 'adult is not legible as a value');
+  // New confusable pairs.
+  assert.equal(C.distinguishes({ ...person, top: 'dress' }, { ...person, id: 'd', top: 'coat' }, 'top:dress'), false, 'vestido/abrigo');
+  assert.ok(C.distinguishes({ ...person, top: 'dress' }, { ...person, id: 'd', top: 'tshirt' }, 'top:dress'));
+  assert.equal(C.distinguishes({ ...person, hair: 'short' }, { ...person, id: 'd', hair: 'long' }, 'hair:short'), false, 'long hair reads as short from the front');
+  assert.equal(C.distinguishes({ ...person, bottom: 'pants' }, { ...person, id: 'd', bottom: 'shorts' }, 'bottom:pants'), false);
+  for (const sleeve of ['hoodie', 'shirt', 'sweater', 'jacket']) assert.ok(C.ATTRIBUTES.top.confusable.some(([a, b]) => (a === 'tshirt' && b === sleeve) || (b === 'tshirt' && a === sleeve)), `tshirt/${sleeve}`);
+});
+
+test('D6: a non-legible value may be named but never supplies AC2 Tier A', () => {
+  // Named only: «pelo largo» matches the target and the set still passes.
+  const named = good();
+  for (const f of named.figures) f.hair = 'long';
+  named.described.push('hair:long');
+  named.text = named.text.replace('niña rubia', 'niña rubia de pelo largo');
+  assert.deepEqual(C.validateBuscaSet(named), []);
+  // The only non-colour difference is a marginal pose (sentada, Tier A on paper): rejected.
+  const sitting = good();
+  for (const f of sitting.figures) { f.top = 'dress'; f.hairColor = 'rubio'; f.pose = 'sit'; }
+  sitting.figures[2].pose = 'stand'; sitting.figures[3].pose = 'stand';
+  sitting.figures[1].pose = 'sit';
+  sitting.described = ['age:child', 'pose:sit', 'topColor:amarillo'];
+  sitting.text = 'Buscamos a una niña sentada con un vestido amarillo.';
+  const errors = C.validateBuscaSet(sitting);
+  assert.ok(errors.some(e => /matches every described feature|every distinguishing feature is a colour/.test(e)), errors.join(' | '));
 });

@@ -15,7 +15,7 @@ import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
 import { useEffect, useRef, useState, type PointerEvent as ReactPointerEvent } from 'react';
 import { canUseKeys, followYaw, inputFrom, keyAction, stepPlayer, angleBetween } from '../noche-abierta/world3d.mjs';
 import { animateHero, createHero } from '../noche-abierta/hero3d';
-import { BOUNDS, CLUSTER_AHEAD, SOLIDS, SPAWN, buscaHeading, circleById, circleStep, framing, spotAt } from './layout.mjs';
+import { BOUNDS, SOLIDS, SPAWN, buscaCamera, buscaHeading, circleById, circleStep, framing, spotAt } from './layout.mjs';
 import { buildFair, type Fair, type Placed } from './feria3d';
 
 export type Pose = { x: number; z: number; heading: number };
@@ -106,6 +106,12 @@ export default function World3D(props: WorldProps) {
     sun.shadow.bias = -0.0004;
     sun.shadow.normalBias = 0.03;
     scene.add(sun, sun.target);
+    // A soft fill from the camera while a Busca card is open: one directional
+    // light for the whole scene, so every candidate gets the same light and
+    // the target never stands out (AC4). It always exists (intensity 0 when
+    // unused), so turning it on recompiles no shader.
+    const fill = new THREE.DirectionalLight('#fff1dc', 0);
+    scene.add(fill, fill.target);
     // The last light of the day on the horizon.
     const horizon = new THREE.Mesh(new THREE.CylinderGeometry(170, 170, 60, 32, 1, true), new THREE.MeshBasicMaterial({ color: '#d0805a', side: THREE.BackSide, transparent: true, opacity: 0.35, fog: false }));
     horizon.position.y = 5;
@@ -217,14 +223,16 @@ export default function World3D(props: WorldProps) {
       const p = live.current;
 
       // Circles that are done turn grey and lose their gem.
-      const dk = p.done.join();
+      // The gem of the Busca circle hides while its card is open: it would
+      // float among the candidates in the raised Busca view.
+      const dk = `${p.done.join()}|${p.busca?.circle ?? ''}`;
       if (dk !== doneKey) {
         doneKey = dk;
         for (const spot of fair.spots) {
           const isDone = p.done.includes(spot.id);
           spot.material.color.set(isDone ? '#8fa0a8' : '#ffffff');
           spot.material.opacity = isDone ? 0.45 : 0.95;
-          spot.gem.visible = !isDone;
+          spot.gem.visible = !isDone && spot.id !== p.busca?.circle;
         }
       }
 
@@ -280,6 +288,8 @@ export default function World3D(props: WorldProps) {
         if (talking) { npc.heading += angleBetween(npc.heading, facing) * Math.min(1, dt * 4); npc.person.root.rotation.y = npc.heading; }
         npc.person.look = Math.hypot(dx, dz) < 5 || talking ? Math.max(-1.1, Math.min(1.1, angleBetween(npc.heading, facing))) : null;
       }
+      // Low mode: only the host of the open circle is live (T5 bake).
+      fair.focus(circleId && !busca ? circleId : null);
       fair.animate(reduced ? 0 : clock, dt, player.x, player.z);
       animateHero(hero, dt, player.speed > 0.2 ? player.speed : 0, turn, circleId && !busca ? 'talk' : 'move', reduced);
 
@@ -290,13 +300,19 @@ export default function World3D(props: WorldProps) {
         camera.lookAt(-4, 6, -18);
       } else if (busca) {
         // Behind the mascot, facing the cluster: screen-left = his left.
-        const h = player.heading;
-        desired.set(player.x - Math.sin(h) * 3.4, 2.5, player.z - Math.cos(h) * 3.4);
+        // Raised above the mascot and wide enough for every candidate
+        // (layout.mjs buscaCamera, D6 framing fix).
+        const view = buscaCamera(busca.circle, camera.aspect, busca.placed);
+        desired.set(view.position.x, view.position.y, view.position.z);
         if (camera.position.distanceTo(desired) > 12) camera.position.copy(desired);
         camera.position.lerp(desired, 1 - Math.exp(-dt * 5));
-        temp.set(player.x + Math.sin(h) * CLUSTER_AHEAD, 1.15, player.z + Math.cos(h) * CLUSTER_AHEAD);
+        temp.set(view.target.x, view.target.y, view.target.z);
+        if (look.distanceTo(temp) > 12) look.copy(temp);
         look.lerp(temp, 1 - Math.exp(-dt * 6));
         camera.lookAt(look);
+        if (Math.abs(camera.fov - view.fov) > 0.05) { camera.fov = view.fov; camera.updateProjectionMatrix(); }
+        fill.position.copy(camera.position);
+        fill.target.position.set(view.target.x, view.target.y, view.target.z);
       } else if (circleId) {
         const c = circleById(circleId)!;
         const mid = temp.set((player.x + c.npc.x) / 2, 1.35, (player.z + c.npc.z) / 2);
@@ -316,6 +332,8 @@ export default function World3D(props: WorldProps) {
         look.set(player.x, (player.y || 0) + 1.3, player.z);
         camera.lookAt(look);
       }
+      fill.intensity += ((busca ? 1.1 : 0) - fill.intensity) * Math.min(1, dt * 6);
+      if (!busca && !moving && Math.abs(camera.fov - baseFov) > 0.05) { camera.fov = baseFov; camera.updateProjectionMatrix(); }
       renderer.info.reset();
       if (composer) composer.render(); else renderer.render(scene, camera);
       frames++;

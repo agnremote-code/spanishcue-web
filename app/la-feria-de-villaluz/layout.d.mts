@@ -23,3 +23,6 @@ export function slotToWorld(circle: string | Circle, slot: { x: number; z: numbe
 export function placeSet<F extends { slot?: { x: number; z: number } }>(set: { figures: F[] }, circleId: string): { figure: F; n: number; x: number; z: number; heading: number }[];
 export function crowd(count?: number): { x: number; z: number; heading: number; seed: number; pose: string }[];
 export function circleStep(circle: { inside: string | null; still: number; spent: string | null }, here: string | null, opened: string | null, speed: number, dt: number): { inside: string | null; still: number; spent: string | null; open: string | null };
+export const POLES: { x: number; z: number; h: number }[];
+export const BUSCA_CAMERA: { back: number; height: number; lookY: number; halfWidth: number; margin: number };
+export function buscaCamera(circle: string | Circle, aspect?: number, points?: { x: number; z: number }[] | null): { position: { x: number; y: number; z: number }; target: { x: number; y: number; z: number }; fov: number; heading: number };

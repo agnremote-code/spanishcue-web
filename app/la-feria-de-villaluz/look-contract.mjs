@@ -78,8 +78,11 @@ export const ATTRIBUTES = {
       sweater: { people3d: 'sweater', es: ['suéter'], gender: 'm', tier: 'B' },
       jacket: { people3d: 'jacket', es: ['chaqueta'], gender: 'f', tier: 'B' },
     },
-    // Same long-sleeved silhouette at 10 m.
-    confusable: [['shirt', 'sweater'], ['shirt', 'jacket'], ['sweater', 'jacket'], ['hoodie', 'sweater'], ['hoodie', 'jacket']],
+    // Same long-sleeved silhouette at 10 m. D6 render (2026-10-21): a
+    // camiseta reads as long sleeves too (forearm skin vs sleeve), and the
+    // knee-length abrigo reads as a vestido.
+    confusable: [['shirt', 'sweater'], ['shirt', 'jacket'], ['sweater', 'jacket'], ['hoodie', 'sweater'], ['hoodie', 'jacket'], ['hoodie', 'shirt'],
+      ['tshirt', 'hoodie'], ['tshirt', 'shirt'], ['tshirt', 'sweater'], ['tshirt', 'jacket'], ['dress', 'coat']],
   },
   bottom: {
     tier: 'A',
@@ -89,7 +92,7 @@ export const ATTRIBUTES = {
       jeans: { people3d: 'jeans', es: ['jeans'], gender: 'm', tier: 'B' },
       shorts: { people3d: 'shorts', es: ['pantalones cortos', 'pantalón corto', 'short'], gender: 'm', tier: 'A' },
     },
-    confusable: [['pants', 'jeans']],
+    confusable: [['pants', 'jeans'], ['pants', 'shorts']],
   },
   hair: {
     tier: 'A',
@@ -104,7 +107,10 @@ export const ATTRIBUTES = {
       bald: { people3d: 'bald', es: ['calvo', 'calva'], tier: 'A' },
       cap: { people3d: 'cap', es: ['gorra'], tier: 'A' },
     },
-    confusable: [['short', 'curly'], ['curly', 'afro'], ['long', 'braids'], ['ponytail', 'bun']],
+    // D6 render: from the front long hair, ponytail, bun, curls and braids
+    // all read as short hair; a dark cap or a bald dark head too.
+    confusable: [['short', 'curly'], ['curly', 'afro'], ['long', 'braids'], ['ponytail', 'bun'],
+      ['short', 'long'], ['short', 'ponytail'], ['short', 'bun'], ['short', 'braids'], ['short', 'bald'], ['short', 'cap'], ['short', 'afro']],
   },
   height: {
     tier: 'B',
@@ -154,6 +160,45 @@ export const ATTRIBUTES = {
 };
 
 export const HEIGHT_GAP = 0.15;
+
+// ------------------------------------------------------------------ D6 render check
+// LESSON-DECISION-001 D6: an item that fails the visual check is removed
+// before Busca authoring. Ratings from the 2026-10-21 SwiftShader render of
+// World3D's low path (DPR 1.25, no AA, no shadows, real Busca camera, ~8–9 m;
+// docs/board/evidence/feria-look-contract.md). That is NOT the real-device
+// check of G5(b); a value may be promoted only by a new render/device check.
+// - legible: may distinguish a distractor, and a Tier-A one satisfies AC2;
+// - marginal / illegible: may still be NAMED in an announcement when the
+//   target has it, but never counts as the difference that rules anyone out.
+export const D6 = {
+  checked: '2026-10-21',
+  method: 'SwiftShader render (not the G5(b) real-device check)',
+  ratings: {
+    age: { child: 'legible', young: 'illegible', adult: 'illegible', old: 'illegible' },
+    body: { f: 'illegible', m: 'illegible' },
+    top: { tshirt: 'marginal', dress: 'legible', coat: 'marginal', apron: 'legible', hoodie: 'illegible', shirt: 'illegible', sweater: 'illegible', jacket: 'illegible' },
+    bottom: { skirt: 'legible', pants: 'legible', shorts: 'marginal', jeans: 'marginal' },
+    topColor: { rojo: 'legible', naranja: 'legible', amarillo: 'legible', rosa: 'legible', azul: 'legible', verde: 'legible', blanco: 'legible', negro: 'legible', gris: 'legible', morado: 'marginal', marron: 'marginal' },
+    // Legs are thin: dark trousers read as skin or black.
+    bottomColor: { rojo: 'legible', azul: 'legible', verde: 'legible', amarillo: 'legible', rosa: 'legible', blanco: 'legible', gris: 'legible', naranja: 'marginal', morado: 'marginal', negro: 'marginal', marron: 'illegible' },
+    hair: { short: 'legible', long: 'illegible', afro: 'marginal', bald: 'marginal', cap: 'marginal', ponytail: 'illegible', bun: 'illegible', curly: 'illegible', braids: 'illegible' },
+    hairColor: { rubio: 'legible', moreno: 'legible', pelirrojo: 'legible', canoso: 'legible', castano: 'marginal' },
+    // Slot depth (±0.5 m) cancels a 0.14 m height gap at ~8 m.
+    height: { tall: 'marginal', mid: 'marginal', short: 'marginal' },
+    pose: { stand: 'legible', guitar: 'legible', wave: 'legible', point: 'legible', carry: 'legible', read: 'legible', dance: 'marginal', sit: 'marginal', phone: 'marginal', arms: 'marginal' },
+    holds: { none: 'legible', suitcase: 'legible', umbrella: 'marginal', flowers: 'marginal', map: 'marginal' },
+    extras: { backpack: 'marginal', bag: 'marginal', beard: 'marginal', glasses: 'illegible', scarf: 'illegible' },
+  },
+};
+
+/** D6 rating of what the figure shows for a described feature. A dress's
+ * colour is the colour of the whole dress, so it is rated as a top colour. */
+export function legibility(feature, figure) {
+  const { key, value } = parseFeature(feature);
+  if (key === 'rel') return 'legible';
+  if (key === 'bottomColor' && figure?.top === 'dress') return D6.ratings.topColor[value] ?? 'illegible';
+  return D6.ratings[key]?.[value] ?? 'illegible';
+}
 
 // Words a Busca description must never use: people3d can't render them as
 // described (random or absent), or the policy excludes them.
@@ -246,7 +291,9 @@ function valueOf(figure, key) {
   }
 }
 
-function tierOf(key, value) {
+function tierOf(key, value, figure) {
+  // AC2's Tier A may only come from a value that passed the D6 render.
+  if (legibility(`${key}:${value}`, figure) !== 'legible') return 'B';
   if (key === 'topColor' || key === 'bottomColor') return 'A';
   if (key === 'hairColor') return HAIR_COLOURS[value]?.tier ?? 'B';
   if (key === 'rel') return 'A';
@@ -279,6 +326,9 @@ export function matches(figure, feature, set) {
 export function distinguishes(target, distractor, feature, set) {
   const { key, value } = parseFeature(feature);
   if (matches(distractor, feature, set)) return false;
+  // D6: only a value that read clearly in the render can rule anyone out.
+  if (legibility(feature, target) !== 'legible') return false;
+  if (key === 'age') return (value === 'child') !== (distractor.age === 'child');
   const other = valueOf(distractor, key);
   if (key === 'topColor' || key === 'bottomColor') return !pairIn(CONFUSABLE_COLOURS, value, other) && !(other === 'jeans' && value === 'azul');
   if (key === 'hairColor') return !pairIn(CONFUSABLE_HAIR, value, other);
@@ -358,7 +408,7 @@ export function validateBuscaSet(set) {
   // At least one distinguishing feature is not a colour, and one is Tier A.
   const used = new Set(ruledOutBy.flat());
   if (![...used].some(f => !isColour(parseFeature(f).key))) errors.push(`${at}: every distinguishing feature is a colour (AC2)`);
-  if (![...used].some(f => tierOf(parseFeature(f).key, parseFeature(f).value) === 'A')) errors.push(`${at}: no Tier-A feature distinguishes anyone (AC2)`);
+  if (![...used].some(f => tierOf(parseFeature(f).key, parseFeature(f).value, target) === 'A')) errors.push(`${at}: no Tier-A feature distinguishes anyone (AC2)`);
   // Age band shared unless described.
   if (!described.some(f => parseFeature(f).key === 'age')) for (const d of distractors) if (d.age !== target.age) errors.push(`${at}: distractor ${d.id} has another age band and age is not described`);
   // Same body type unless described: "niña"/"señor" would otherwise solve it
