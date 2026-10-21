@@ -19,7 +19,7 @@
       },
       {
         "before": "/** Two fixed samples per category; filters never change access permissions. */\nexport const samplesByCategory: Record<string, number[]> = { 'Gramática':[40,41],",
-        "after": "/** Fixed free samples per category (Gramática adds the whole Clase inicial A0, 239); filters never change access permissions. */\nexport const samplesByCategory: Record<string, number[]> = { 'Gramática':[40,41,239],"
+        "after": "/** Fixed free samples per category (Gramática adds the whole Clase inicial, 239); filters never change access permissions. */\nexport const samplesByCategory: Record<string, number[]> = { 'Gramática':[40,41,239],"
       },
       {
         "before": "export const isFreeLesson = (id:number) => freeLessonIds.includes(id);\n/** Audio collections attached to the existing FREE listening and phonetics samples. */\nexport const freeAudioPrefixes = new Set(['hotel','latam','phonetics']);\nexport type RoutableLesson = {id:number;path?:string;special?:boolean};\nexport function normalizeLocalPath(pathname:string) {\n",

@@ -1,4 +1,4 @@
-/** Fixed free samples per category (Gramática adds the whole Clase inicial A0, 239); filters never change access permissions. */
+/** Fixed free samples per category (Gramática adds the whole Clase inicial, 239); filters never change access permissions. */
 export const samplesByCategory: Record<string, number[]> = { 'Gramática':[40,41,239], 'Conversación':[210,36], 'Escucha':[105,28], 'Fonética':[201,202], 'Vocabulario':[16,204] };
 export const freeLessonIds = [...new Set(Object.values(samplesByCategory).flat())];
 export const isFreeLesson = (id:number) => freeLessonIds.includes(id);
