@@ -2051,6 +2051,86 @@
    "seconds": 111.68,
    "src": "/audio/escucha-3d/reino-c2-teobaldo.mp3"
   },
+  "suecia/a0-estocolmo": {
+   "hash": "3ec360cc8d164d5de061",
+   "seconds": 31.66,
+   "src": "/audio/escucha-3d/suecia-a0-estocolmo.mp3"
+  },
+  "suecia/a0-gotemburgo": {
+   "hash": "a5d46e7c397efbe121b2",
+   "seconds": 32.02,
+   "src": "/audio/escucha-3d/suecia-a0-gotemburgo.mp3"
+  },
+  "suecia/a0-laponia": {
+   "hash": "ae23dd2910c16712e2f1",
+   "seconds": 29.52,
+   "src": "/audio/escucha-3d/suecia-a0-laponia.mp3"
+  },
+  "suecia/a0-malmo": {
+   "hash": "47bda88856f8d438c22e",
+   "seconds": 31.1,
+   "src": "/audio/escucha-3d/suecia-a0-malmo.mp3"
+  },
+  "suecia/a1-estocolmo": {
+   "hash": "b6878210e40d37b36292",
+   "seconds": 41.45,
+   "src": "/audio/escucha-3d/suecia-a1-estocolmo.mp3"
+  },
+  "suecia/a1-gotemburgo": {
+   "hash": "963eecbeb0d06e2803fe",
+   "seconds": 44.38,
+   "src": "/audio/escucha-3d/suecia-a1-gotemburgo.mp3"
+  },
+  "suecia/a1-laponia": {
+   "hash": "51e95278b0e25e603979",
+   "seconds": 42.05,
+   "src": "/audio/escucha-3d/suecia-a1-laponia.mp3"
+  },
+  "suecia/a1-malmo": {
+   "hash": "781b2b943526d9875f9e",
+   "seconds": 32.98,
+   "src": "/audio/escucha-3d/suecia-a1-malmo.mp3"
+  },
+  "suecia/a2-estocolmo": {
+   "hash": "9461c2f44608ad5e41ea",
+   "seconds": 56.34,
+   "src": "/audio/escucha-3d/suecia-a2-estocolmo.mp3"
+  },
+  "suecia/a2-gotemburgo": {
+   "hash": "261f0edf408034b0b991",
+   "seconds": 52.53,
+   "src": "/audio/escucha-3d/suecia-a2-gotemburgo.mp3"
+  },
+  "suecia/a2-laponia": {
+   "hash": "a0efcbad234aead1826f",
+   "seconds": 50.46,
+   "src": "/audio/escucha-3d/suecia-a2-laponia.mp3"
+  },
+  "suecia/a2-malmo": {
+   "hash": "510957f03850132b61bb",
+   "seconds": 48.86,
+   "src": "/audio/escucha-3d/suecia-a2-malmo.mp3"
+  },
+  "suecia/b1-estocolmo": {
+   "hash": "d332479bfbf50a4a2664",
+   "seconds": 60.25,
+   "src": "/audio/escucha-3d/suecia-b1-estocolmo.mp3"
+  },
+  "suecia/b1-gotemburgo": {
+   "hash": "a32ec8669eaab4006d46",
+   "seconds": 56.89,
+   "src": "/audio/escucha-3d/suecia-b1-gotemburgo.mp3"
+  },
+  "suecia/b1-laponia": {
+   "hash": "308afd3ea9a211ef46dd",
+   "seconds": 62.75,
+   "src": "/audio/escucha-3d/suecia-b1-laponia.mp3"
+  },
+  "suecia/b1-malmo": {
+   "hash": "e11daf625121af7f0551",
+   "seconds": 51.32,
+   "src": "/audio/escucha-3d/suecia-b1-malmo.mp3"
+  },
   "usa/a0-california": {
    "hash": "a783dc69b2a1a472ed32",
    "seconds": 30.05,
