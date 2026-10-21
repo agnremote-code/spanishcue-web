@@ -126,7 +126,7 @@ const build: SceneBuilder = ({ low, shadows }) => {
     for (let k = 0; k < 12; k++) { const log = cylinder(0.14, 0.14, 1.2, solid('#6b4a2e', 0.9), 16.4 + (k % 4) * 0.3, 0.15 + Math.floor(k / 4) * 0.27, 10.5, 7); log.rotation.x = Math.PI / 2; group.add(log); }
     solidBox(16, 9.8, 17.8, 11.2, 0.9);
   }
-  spotWith(group, spots, talkers, 'barbacoa', 7.6, 12.4, Math.PI / 2 + 0.6, 8303, { body: 'f', age: 'adult', build: 'athletic', top: 'apron', topColor: '#2b1a12', bottom: 'jeans', hairStyle: 'braids', hairColor: '#2a1a12', extras: ['cap'] }, 'cook', 'laugh', shadows, 2.0);
+  spotWith(group, spots, talkers, 'barbacoa', 7.6, 12.4, Math.PI / 2 + 0.6, 8303, { body: 'f', age: 'adult', build: 'athletic', top: 'apron', topColor: '#2b1a12', bottom: 'jeans', hairStyle: 'braids', hairColor: '#2a1a12', extras: ['hat'] }, 'cook', 'laugh', shadows, 2.0);
   const smokePuffs: THREE.Mesh[] = [];
   const puffMat = new THREE.MeshBasicMaterial({ color: '#d8d4cc', transparent: true, opacity: 0.35, depthWrite: false });
   for (let i = 0; i < (low ? 4 : 8); i++) { const puff = new THREE.Mesh(new THREE.SphereGeometry(0.4, 8, 6), puffMat); puff.position.set(10.4, 4 + i * 0.6, 10.5); group.add(puff); smokePuffs.push(puff); }
@@ -151,7 +151,7 @@ const build: SceneBuilder = ({ low, shadows }) => {
     const starMesh = new THREE.Mesh(new THREE.ShapeGeometry(star), starMat); starMesh.position.set(B.x, 3.2, B.z - 8.65); group.add(starMesh); neon.push(starMat);
     // Amplifiers and a microphone stand on the stage, a band member behind.
     for (const s of [-3.4, 3.4]) group.add(box(0.9, 1.1, 0.6, solid('#1a1a1a', 0.6), B.x + s, 1.15, B.z - 7.4));
-    extra(group, talkers, B.x + 1.8, B.z - 6.6, 0, 8320, { body: 'm', top: 'tshirt', topColor: '#1a1a1a', extras: ['cap'] }, 'guitar', 'neutral', shadows).person.root.position.y = 0.6;
+    extra(group, talkers, B.x + 1.8, B.z - 6.6, 0, 8320, { body: 'm', top: 'tshirt', topColor: '#1a1a1a', extras: ['hat'] }, 'guitar', 'neutral', shadows).person.root.position.y = 0.6;
     // String lights across the garden.
     const bulbMat = glow('#ffe1a0', 1.6) as THREE.MeshStandardMaterial; neon.push(bulbMat);
     for (let r = 0; r < 4; r++) for (let k = 0; k < 14; k++) {
@@ -235,7 +235,7 @@ const build: SceneBuilder = ({ low, shadows }) => {
   };
   const goatHeads = [goat(21.3, -25.4, Math.PI * 0.9, '#f4f1ea', true), goat(23.6, -16, -0.4, '#c9a27a'), goat(25, -17.4, 2.2, '#3a3028')];
   // Tyler in his 4-H shirt outside the barn, with Daisy and her blue ribbon.
-  spotWith(group, spots, talkers, 'feria', 20, -27.4, 0.15, 8305, { body: 'm', age: 'teen', top: 'shirt', topColor: '#2f8f4e', bottom: 'jeans', hairStyle: 'buzz', hairColor: '#c9a46a', extras: ['cap'] }, 'arms', 'worried', shadows, 2.0);
+  spotWith(group, spots, talkers, 'feria', 20, -27.4, 0.15, 8305, { body: 'm', age: 'teen', top: 'shirt', topColor: '#2f8f4e', bottom: 'jeans', hairStyle: 'buzz', hairColor: '#c9a46a', extras: ['hat'] }, 'arms', 'worried', shadows, 2.0);
   // Fried-food stands and fairgoers.
   for (const [i, [x, z, label, c]] of ([[12, -36, 'CORNY DOGS', '#e94f37'], [18, -36, 'FUNNEL CAKE', '#3b5ba5'], [24, -36, 'LEMONADE', '#f6c85f']] as const).entries()) {
     group.add(box(4.4, 2.4, 2.4, solid('#ffffff', 0.7), x, 1.2, z)); group.add(box(4.6, 0.12, 2.8, solid(c, 0.6), x, 2.9, z + 0.3, false));
@@ -321,8 +321,8 @@ const build: SceneBuilder = ({ low, shadows }) => {
     solidBox(X - 19, Z - 17, X + 17, Z - 16); solidBox(X - 19, Z + 16, X + 17, Z + 17); solidBox(X - 19, Z - 17, X - 18, Z + 17); solidBox(X + 16, Z - 17, X + 17, Z + 17);
     solidBox(X + 1.6, Z - 5.9, X + 3.6, Z - 1.3, 1.5);
     // Earl on the porch of his shop, and a trucker buying ice.
-    spotWith(group, spots, talkers, 'gasolinera', X - 5.2, Z + 1.6, -Math.PI / 2 - 0.2, 8306, { body: 'm', age: 'elderly', build: 'heavy', top: 'shirt', topColor: '#6b8fb5', bottom: 'jeans', hairStyle: 'short', hairColor: '#d8d4cc', extras: ['cap', 'mustache', 'glasses'] }, 'arms', 'smile', shadows, 2.0);
-    extra(group, talkers, X - 6.6, Z - 3.4, Math.PI * 0.8, 8307, { body: 'f', build: 'athletic', top: 'tshirt', topColor: '#4a4a4a', extras: ['cap'] }, 'carry', 'neutral', shadows);
+    spotWith(group, spots, talkers, 'gasolinera', X - 5.2, Z + 1.6, -Math.PI / 2 - 0.2, 8306, { body: 'm', age: 'elderly', build: 'heavy', top: 'shirt', topColor: '#6b8fb5', bottom: 'jeans', hairStyle: 'short', hairColor: '#d8d4cc', extras: ['hat', 'mustache', 'glasses'] }, 'arms', 'smile', shadows, 2.0);
+    extra(group, talkers, X - 6.6, Z - 3.4, Math.PI * 0.8, 8307, { body: 'f', build: 'athletic', top: 'tshirt', topColor: '#4a4a4a', extras: ['hat'] }, 'carry', 'neutral', shadows);
     lightPool(group, X + 1, Z, 5, '#fff3d6', 0.12);
   }
   const doors = [
