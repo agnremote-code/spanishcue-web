@@ -1736,6 +1736,126 @@
    "seconds": 111.68,
    "src": "/audio/escucha-3d/reino-c2-teobaldo.mp3"
   },
+  "usa/a0-california": {
+   "hash": "a783dc69b2a1a472ed32",
+   "seconds": 30.05,
+   "src": "/audio/escucha-3d/usa-a0-california.mp3"
+  },
+  "usa/a0-colorado": {
+   "hash": "c2c6e0ea607ab606c1ca",
+   "seconds": 31.7,
+   "src": "/audio/escucha-3d/usa-a0-colorado.mp3"
+  },
+  "usa/a0-florida": {
+   "hash": "a4a40c51fda190ebd14c",
+   "seconds": 29.13,
+   "src": "/audio/escucha-3d/usa-a0-florida.mp3"
+  },
+  "usa/a0-hawai": {
+   "hash": "40801833693de27728d6",
+   "seconds": 28.1,
+   "src": "/audio/escucha-3d/usa-a0-hawai.mp3"
+  },
+  "usa/a0-nueva-york": {
+   "hash": "56039f6b11a109715c4a",
+   "seconds": 29.9,
+   "src": "/audio/escucha-3d/usa-a0-nueva-york.mp3"
+  },
+  "usa/a0-texas": {
+   "hash": "3d8eac97308abd192fe3",
+   "seconds": 20.24,
+   "src": "/audio/escucha-3d/usa-a0-texas.mp3"
+  },
+  "usa/a1-california": {
+   "hash": "cfb92ea62bd98063379d",
+   "seconds": 38.3,
+   "src": "/audio/escucha-3d/usa-a1-california.mp3"
+  },
+  "usa/a1-colorado": {
+   "hash": "1c770db3f26182900cf1",
+   "seconds": 30.12,
+   "src": "/audio/escucha-3d/usa-a1-colorado.mp3"
+  },
+  "usa/a1-florida": {
+   "hash": "270d7269b3a7e3bf4a45",
+   "seconds": 39.94,
+   "src": "/audio/escucha-3d/usa-a1-florida.mp3"
+  },
+  "usa/a1-hawai": {
+   "hash": "32692cfe47fc9754a61e",
+   "seconds": 36.74,
+   "src": "/audio/escucha-3d/usa-a1-hawai.mp3"
+  },
+  "usa/a1-nueva-york": {
+   "hash": "2d5e8c37602220c0d1ea",
+   "seconds": 28.83,
+   "src": "/audio/escucha-3d/usa-a1-nueva-york.mp3"
+  },
+  "usa/a1-texas": {
+   "hash": "45f7d2724c670fd90a3d",
+   "seconds": 23.24,
+   "src": "/audio/escucha-3d/usa-a1-texas.mp3"
+  },
+  "usa/a2-california": {
+   "hash": "49fb9b5f41514cf39804",
+   "seconds": 41.55,
+   "src": "/audio/escucha-3d/usa-a2-california.mp3"
+  },
+  "usa/a2-colorado": {
+   "hash": "be01630855db302594b2",
+   "seconds": 41.18,
+   "src": "/audio/escucha-3d/usa-a2-colorado.mp3"
+  },
+  "usa/a2-florida": {
+   "hash": "ac090a604625420d1498",
+   "seconds": 40.97,
+   "src": "/audio/escucha-3d/usa-a2-florida.mp3"
+  },
+  "usa/a2-hawai": {
+   "hash": "1519421e21de557f22ac",
+   "seconds": 35.39,
+   "src": "/audio/escucha-3d/usa-a2-hawai.mp3"
+  },
+  "usa/a2-nueva-york": {
+   "hash": "0fc78af5d05d8d1197f9",
+   "seconds": 37.1,
+   "src": "/audio/escucha-3d/usa-a2-nueva-york.mp3"
+  },
+  "usa/a2-texas": {
+   "hash": "2024b63ad451ac276855",
+   "seconds": 42.17,
+   "src": "/audio/escucha-3d/usa-a2-texas.mp3"
+  },
+  "usa/b1-california": {
+   "hash": "6445ddcb95d0dc32b3a3",
+   "seconds": 40.28,
+   "src": "/audio/escucha-3d/usa-b1-california.mp3"
+  },
+  "usa/b1-colorado": {
+   "hash": "8231f89a22a68f994299",
+   "seconds": 47.39,
+   "src": "/audio/escucha-3d/usa-b1-colorado.mp3"
+  },
+  "usa/b1-florida": {
+   "hash": "bfb1410bdaa1ad378a16",
+   "seconds": 52.14,
+   "src": "/audio/escucha-3d/usa-b1-florida.mp3"
+  },
+  "usa/b1-hawai": {
+   "hash": "2a48ccb72e520ac9b109",
+   "seconds": 51.68,
+   "src": "/audio/escucha-3d/usa-b1-hawai.mp3"
+  },
+  "usa/b1-nueva-york": {
+   "hash": "34f6e4ced4fd6f937035",
+   "seconds": 51.55,
+   "src": "/audio/escucha-3d/usa-b1-nueva-york.mp3"
+  },
+  "usa/b1-texas": {
+   "hash": "623e72a20541efc4063f",
+   "seconds": 57.17,
+   "src": "/audio/escucha-3d/usa-b1-texas.mp3"
+  },
   "voces/ar-f": {
    "hash": "b879b6de8791e5357092",
    "seconds": 4.49,
