@@ -45,12 +45,6 @@ export const LOADERS: Record<string, Record<string, Loader>> = {
     C1: () => import('./content/hospital/c1.json'),
     C2: () => import('./content/hospital/c2.json'),
   },
-  usa: {
-    A0: () => import('./content/usa/a0.json'),
-    A1: () => import('./content/usa/a1.json'),
-    A2: () => import('./content/usa/a2.json'),
-    B1: () => import('./content/usa/b1.json'),
-  },
   feria: {
     A2: () => import('./content/feria/a2.json'),
   },

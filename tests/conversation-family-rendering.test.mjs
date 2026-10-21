@@ -21,7 +21,7 @@ test('every shared engine renders accessible level controls and complete selecte
   ['app/preguntas-prohibidas-a2/page.tsx',{initialLevel:'B1'},'preguntas-prohibidas','B1'],
   ['app/reino-unido-en-relieve/page.tsx',{},'reino-unido-en-relieve','B1'],
   ['app/australia-en-movimiento/page.tsx',{},'australia-en-movimiento','A2'],
-  ['app/estados-unidos-a2-b1/Atlas.tsx',{},'estados-unidos-a2-b1','A2'],
+  ['app/estados-unidos-a2-b1/page.tsx',{},'estados-unidos-a2-b1','A2'],
  ]){
   const Component=await component(path);const html=renderToString(React.createElement(Component,props));
   assert.ok(html.includes(`data-conversation-family="${id}"`),path);

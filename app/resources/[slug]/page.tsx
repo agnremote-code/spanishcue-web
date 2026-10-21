@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { isFreeLesson, localLessonPath } from "../../access-policy";
+import { localLessonPath } from "../../access-policy";
 import { conversationFamilyByLessonId } from "../../conversation-families/catalog";
 import { conversationLessonHref, resolveConversationLevel } from "../../conversation-families/navigation";
 import { breadcrumbSchema } from "../../growth/schema";
@@ -199,7 +199,7 @@ export default async function ResourcePage({ params, searchParams }: ResourcePag
                   <li>A 3D world that runs in the browser: no download and no headset. Share your screen online or project it in the classroom.</li>
                   <li>Two modes in the same world: <strong>Conversación</strong> for speaking and <strong>Comprensión auditiva</strong> for listening{listeningEverywhere ? "" : ` (listening at ${listeningLevels.join(" · ")})`}. You switch between the two modes without leaving the world.</li>
                   <li>Levels: {levels.join(" · ")}. Choose the level that fits your group.</li>
-                  <li>{isFreeLesson(lesson.id) ? "A free SpanishCue lesson" : "A SpanishCue PRO lesson"}. This page shows the premise, the objectives and a warm-up question; the scenes, dialogues and listenings stay inside the lesson.</li>
+                  <li>A SpanishCue PRO lesson. This page shows the premise, the objectives and a warm-up question; the scenes, dialogues and listenings stay inside the lesson.</li>
                 </ul>
               </section>
             ) : null}

@@ -19,9 +19,7 @@ function sameOrigin(request: Request): boolean {
   return Boolean(origin && origin === new URL(request.url).origin);
 }
 
-/** 3D conversation worlds that save «Con profesor» progress here too (36: Estados Unidos 3D). */
-const WORLD_LESSON_IDS = new Set([36]);
-const lessonIdOf = (value: unknown) => (Number.isInteger(Number(value)) && (getLiveLessonInfo(Number(value)) || WORLD_LESSON_IDS.has(Number(value))) ? Number(value) : null);
+const lessonIdOf = (value: unknown) => (Number.isInteger(Number(value)) && getLiveLessonInfo(Number(value)) ? Number(value) : null);
 const studentIdOf = (value: unknown) => (typeof value === "string" && /^[A-Za-z0-9-]{1,64}$/.test(value) ? value : null);
 
 /** `?lessonId=N` lists the students with a saved session; `&studentId=S` returns that student's saved class.

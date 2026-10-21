@@ -29,7 +29,7 @@ test('tú case and stem-changing commands are grammatical',()=>{
 
 test('attached plural pronouns preserve tú stems and written accents',()=>{
  const expected={
-  'app/estados-unidos-a2-b1/Atlas.tsx':'Tócalas',
+  'app/estados-unidos-a2-b1/page.tsx':'Tócalas',
   'app/future-city/data.ts':'defiéndelas',
   'app/modo-play-uno-o-el-otro/choices.ts':'Justifícalo',
   'app/noche-abierta/levels/b2.mjs':'respóndelas',

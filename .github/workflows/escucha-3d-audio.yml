@@ -37,7 +37,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
-          for p in public/audio/escucha-3d public/audio/escucha-3d-libre app/escucha-3d/audio-manifest.json app/escucha-3d/audio-log.txt; do [ -e "$p" ] && git add -A "$p"; done; true
+          for p in public/audio/escucha-3d app/escucha-3d/audio-manifest.json app/escucha-3d/audio-log.txt; do [ -e "$p" ] && git add -A "$p"; done; true
           if git diff --cached --quiet; then echo "No audio changes"; exit 0; fi
           git commit -m "Generate Escucha 3D audio"
           git pull --rebase origin ${GITHUB_REF_NAME}
