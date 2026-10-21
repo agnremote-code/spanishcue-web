@@ -6,13 +6,13 @@
       "id": "informacion-emilio",
       "speaker": "Rosario",
       "voice": "es-PY-TaniaNeural",
-      "text": "Atención, por favor. Buscamos a Emilio, un niño de seis años que se perdió cerca de la noria. Es un niño rubio, de pelo corto, que lleva una camiseta verde y pantalones cortos. Si lo ven, tráiganlo, por favor, al puesto de información, donde lo espera su mamá. Gracias."
+      "text": "Atención, por favor. Buscamos a Emilio, un niño de seis años que se perdió cerca de la noria. Es un niño rubio que lleva una camiseta verde y un pantalón rojo. Si lo ven, tráiganlo, por favor, al puesto de información, donde lo espera su mamá. Gracias."
     },
     {
       "id": "informacion-abuelo",
       "speaker": "Rosario",
       "voice": "es-PY-TaniaNeural",
-      "text": "Atención, por favor. Martina, una niña de ocho años, está aquí en el puesto de información y busca a su abuelo. Su abuelo es un señor mayor, calvo, que lleva un abrigo marrón y una maleta, porque llegó hoy de viaje. Señor, por favor, venga al puesto de información, donde lo espera su nieta."
+      "text": "Atención, por favor. Martina, una niña de ocho años, está aquí en el puesto de información y busca a su abuelo. Su abuelo es un señor mayor, de pelo canoso, que lleva un abrigo gris y una maleta, porque llegó hoy de viaje. Señor, por favor, venga al puesto de información, donde lo espera su nieta."
     },
     {
       "id": "escenario-valentina",
@@ -24,7 +24,7 @@
       "id": "escenario-bruno",
       "speaker": "Daniela",
       "voice": "es-CL-CatalinaNeural",
-      "text": "Bruno, te necesito en el escenario. Y para el público: Bruno es el chico que está llevando una caja con cables. Lleva gorra y una camiseta negra. Si lo ven, díganle que venga rápido, por favor. ¡Gracias!"
+      "text": "Bruno, te necesito en el escenario. Y para el público: Bruno es el chico pelirrojo que está llevando una caja con cables. Lleva una camiseta verde. Si lo ven, díganle que venga rápido, por favor. ¡Gracias!"
     },
     {
       "id": "fotos-ines",
@@ -36,13 +36,13 @@
       "id": "fotos-nico",
       "speaker": "Lorenzo",
       "voice": "es-CL-LorenzoNeural",
-      "text": "Y ahora, ¿dónde está Nico? Ah, sí, ya lo veo: es el niño que está a la derecha de la abuela, la señora mayor que está sentada. Lleva gorra y una camiseta roja. Tráelo, por favor, y siéntalo delante, con los otros niños."
+      "text": "Y ahora, ¿dónde está Nico? Ah, sí, ya lo veo: es el niño rubio que está a la derecha de la abuela, la señora mayor que está leyendo. Lleva una camiseta roja. Tráelo, por favor, y siéntalo delante, con los otros niños."
     },
     {
       "id": "transferencia-amparo",
       "speaker": "Rosario",
       "voice": "es-PY-TaniaNeural",
-      "text": "Atención, por favor. Buscamos a doña Amparo, una señora mayor que está bailando en la plaza. Tiene el pelo corto y canoso, y lleva una falda verde. Doña Amparo, su hijo la está esperando en el puesto de información."
+      "text": "Atención, por favor. Buscamos a doña Amparo, una señora mayor de pelo canoso que está saludando cerca de la pista de baile. Lleva una camiseta blanca y una falda verde. Doña Amparo, su hijo la está esperando en el puesto de información."
     }
   ]
 }
