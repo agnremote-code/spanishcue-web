@@ -129,7 +129,10 @@ The render check showed three framing faults:
 
 **Fixes:**
 - `layout.buscaCamera()` is used by World3D and by the tests. It stays behind the mascot and looks along his heading, so screen-left is still his left (risk 3). It is raised to 4 m, which puts the mascot's head below the candidates' feet, and its FOV widens until every candidate and its number fits the screen at any aspect.
-- The informacion view now faces south into the plaza, so the camera is clear of the stall.
+- The informacion view now faces south-west into the plaza, so the camera is clear of the stall.
+- The fotos view turned a little.
+- The baile view (transfer set) faces east, beside the dance floor. Facing the floor, its central pole always stood right behind one candidate.
+- The framing test also rejects a pole within 6 m behind a candidate.
 - The escenario host and the baile host moved out of the view.
 - The active circle's gem hides during Busca.
 - One scene-wide directional fill light comes from the camera while a Busca card is open. It lights everyone equally, so it adds no target highlight (AC4).
