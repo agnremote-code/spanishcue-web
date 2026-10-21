@@ -118,7 +118,7 @@ export const CIRCLES = {
       },
       {
         id: 'el-que', kind: 'contrast', label: 'Contraste lingüístico', exponent: ['el-que'], who: 'rosario',
-        context: 'La mamá de Emilio corre a la plaza, pero hay dos niños con camiseta verde. Te pregunta desde lejos: «¿Cuál es? ¿Cuál es mi hijo?»',
+        context: 'La mamá de Emilio corre a la plaza, pero ve dos niños rubios con camiseta verde. Te pregunta desde lejos: «¿Cuál es? ¿Cuál es mi hijo?»',
         prompt: 'Explícale cuál es Emilio sin repetir «el niño».',
         options: [
           { id: 'la-que', label: 'Es la que lleva pantalones cortos, señora.', correct: false, feature: 'concordancia del artículo',
@@ -135,7 +135,7 @@ export const CIRCLES = {
         ask: 'Rosario apaga el micrófono y te mira: «Oye, tienes muy buena vista. ¿Quieres ayudarme en el puesto el año que viene? Necesito a alguien que hable claro y que vea bien.»',
         options: [
           { say: 'Sí, me encantaría. Me gusta ayudar a la gente que se pierde.', reply: '¡Tienes trabajo! Bueno, sin sueldo, pero con té frío gratis.', end: 'Rosario escribe tu nombre en su libreta, debajo de «ayudantes con buena vista».', mood: 'laugh' },
-          { say: 'No, gracias. Prefiero una feria donde no tengo que trabajar.', reply: 'Te entiendo. La feria es para divertirse.', end: 'Rosario te regala un mapa de la feria con sus puestos favoritos marcados con una estrella.', mood: 'smile' },
+          { say: 'No, gracias. La feria es el lugar donde descanso, no donde trabajo.', reply: 'Te entiendo. La feria es para divertirse.', end: 'Rosario te regala un mapa de la feria con sus puestos favoritos marcados con una estrella.', mood: 'smile' },
           { say: 'Depende. ¿Hay churros para los ayudantes que encuentran niños?', reply: '¡Ja! Para los que encuentran niños, churros. Para los que encuentran abuelos, chocolate.', end: 'Martina y Emilio se ríen. El abuelo de Martina, no: él también quiere chocolate.', mood: 'surprised' },
         ],
         teacher: 'No hay respuesta correcta. Pide que cada persona dé su razón con una frase con «que» o «donde»: «la gente que…», «una feria donde…».',
@@ -154,7 +154,7 @@ export const CIRCLES = {
       '¿Dónde escuchas avisos por altavoz en tu ciudad? ¿Qué dicen?',
     ],
     words: ['el puesto de información', 'el aviso', 'perderse', 'el altavoz', 'una persona que lleva…', 'el lugar donde…'],
-    teacher: 'Para la segunda mitad de A2 (oraciones de relativo, semana 18). Antes de proyectar, repasa la ropa y los colores con dos personas de la clase: «¿Qué lleva Ana?». En «Busca y describe», la mascota es el punto de vista: su izquierda es la izquierda de la pantalla. Después del círculo, en la pizarra: un niño que lleva…, el que / la que…, el lugar donde…. Haz la ronda «al revés» por lo menos una vez.',
+    teacher: 'Para la segunda mitad de A2 (oraciones de relativo, semana 18). Antes de proyectar, repasa la ropa y los colores con dos personas de la clase: «¿Qué lleva Ana?». En «Busca y describe», la mascota es el punto de vista: su izquierda es la izquierda de la pantalla. Después del círculo, en la pizarra: un niño que lleva…, el que / la que…, el lugar donde…. Haz la ronda «al revés» por lo menos una vez. En la ruta de 45 minutos: solo el primer aviso, una ronda «al revés» y una o dos preguntas de charla. El segundo aviso y el resto de preguntas son extensión.',
   },
 
   churreria: {
@@ -329,7 +329,7 @@ export const CIRCLES = {
       '¿Hay ferias o fiestas con juegos de premios en tu ciudad? ¿Cómo son?',
     ],
     words: ['la tómbola', 'el boleto', 'el premio', 'el oso de peluche', 'guardar', 'prestar'],
-    teacher: 'Mismo objetivo que el círculo gratuito de Noche Abierta (GROW-001, «El ascensor no funciona»), con otra situación y otras formas: aquí el foco es guardar, prestar y el lugar de los pronombres con «poder + infinitivo». En la pizarra: te lo guardo, se la devuelvo, te lo puedo llevar = puedo llevártelo. Glosario: en muchos países la tómbola también se llama «rifa».',
+    teacher: 'Mismo objetivo que el círculo gratuito de Noche Abierta («El ascensor no funciona»), con otra situación y otras formas: aquí el foco es guardar, prestar y el lugar de los pronombres con «poder + infinitivo». En la pizarra: te lo guardo, se la devuelvo, te lo puedo llevar = puedo llevártelo. Glosario: en muchos países la tómbola también se llama «rifa».',
   },
 
   noria: {
@@ -386,7 +386,7 @@ export const CIRCLES = {
           { id: 'hablo', label: 'Entonces hablo con el encargado, por favor.', correct: false, feature: 'petición o afirmación',
             feedback: 'Petición o afirmación: «hablo con el encargado» informa de lo que haces, no lo pide. Para pedir con cortesía: «quería hablar con el encargado, por favor».' },
           { id: 'queria', label: 'Entonces quería hablar con el encargado, por favor.', correct: true,
-            feedback: 'Bien: «quería hablar con…» pide con suavidad, sin enfadarte. Y «hablar con» lleva siempre «con».' },
+            feedback: 'Bien: «quería hablar con…» pide con suavidad, sin perder la calma. Y «hablar con» lleva siempre «con».' },
           { id: 'al', label: 'Entonces quería hablar al encargado, por favor.', correct: false, feature: 'preposición de «hablar»',
             feedback: 'Preposición: se habla «con» una persona. Se dice «hablar con el encargado», no «hablar al encargado».' },
         ],
@@ -557,7 +557,7 @@ export const CIRCLES = {
         id: 'buscar', kind: 'busca', label: 'Estímulo de conversación', who: 'daniela', sets: ['escenario-valentina', 'escenario-bruno'],
         context: 'Daniela toma un micrófono y habla por los altavoces de la plaza. Primero busca a Valentina. Después, a Bruno, el ayudante que trae los cables.',
         prompt: 'Escuchen el aviso, miren lo que está haciendo cada persona y den indicaciones desde la mascota. Después, «al revés»: una persona describe a alguien por lo que está haciendo.',
-        teacher: 'Aquí todo pasa ahora: lo que la persona está haciendo y el lugar donde está ayudan a encontrarla. Antes de elegir un número, pide una frase completa: «Es la que está tocando la guitarra». En «al revés», el estudiante usa por lo menos un «está + gerundio».',
+        teacher: 'Aquí todo pasa ahora: lo que la persona está haciendo ayuda a encontrarla. Antes de elegir un número, pide una frase completa: «Es la que está tocando la guitarra». En «al revés», el estudiante usa por lo menos un «está + gerundio».',
       },
       {
         id: 'cual-es', kind: 'contrast', label: 'Contraste lingüístico', exponent: ['la-que-esta'], who: 'daniela',
@@ -567,7 +567,7 @@ export const CIRCLES = {
           { id: 'el-que', label: 'Valentina es el que está tocando la guitarra y lleva un vestido amarillo.', correct: false, feature: 'concordancia del artículo',
             feedback: 'Concordancia del artículo: Valentina es una mujer, así que «la que está tocando», no «el que».' },
           { id: 'sin-que', label: 'Valentina es la está tocando la guitarra y lleva un vestido amarillo.', correct: false, feature: 'falta el relativo',
-            feedback: 'Falta el relativo: «la está tocando» parece decir que alguien toca «la» guitarra. Para señalar a la persona: «la que está tocando».' },
+            feedback: 'Falta el relativo: sin «que», «la» parece un pronombre de objeto («la está tocando» = está tocándola). Para señalar a la persona: «la que está tocando».' },
           { id: 'la-que', label: 'Valentina es la que está tocando la guitarra y lleva un vestido amarillo.', correct: true,
             feedback: 'Bien: «la que está + gerundio» señala a la persona por lo que está haciendo ahora.' },
         ],
@@ -597,7 +597,7 @@ export const CIRCLES = {
       '¿Qué música te gusta escuchar en una fiesta?',
     ],
     words: ['el escenario', 'la cantante', 'la técnica de sonido', 'el baterista', 'está tocando', 'está durmiendo'],
-    teacher: 'Todo el círculo está en presente: lo que la persona está haciendo («la cantante es la que está tocando la guitarra») y el lugar donde está ahora sirven para encontrarla. Antes del círculo, haz mímica (bailar, leer, dormir) y que la clase diga «estás…». Después, en la pizarra: -ar → -ando, -er / -ir → -iendo, y los irregulares durmiendo, leyendo, diciendo, trayendo. Repaso de «que»: la que está…, el que está….',
+    teacher: 'Todo el círculo está en presente: lo que la persona está haciendo ahora («la cantante es la que está tocando la guitarra») sirve para encontrarla. Antes del círculo, haz mímica (bailar, leer, dormir) y que la clase diga «estás…». Después, en la pizarra: -ar → -ando, -er / -ir → -iendo, y los irregulares durmiendo, leyendo, diciendo, trayendo. Repaso de «que»: la que está…, el que está…. En la ruta de 45 minutos: solo el primer aviso, una ronda «al revés» y una o dos preguntas de charla. El segundo aviso y el resto de preguntas son extensión.',
   },
 
   fotos: {
@@ -610,7 +610,7 @@ export const CIRCLES = {
       { id: 'cierrelo', form: 'ciérrelo / póngase / acérquese', use: 'pedir algo con el imperativo de usted y el pronombre pegado' },
       { id: 'del-al', form: 'a la izquierda del…, detrás del…, al lado de…', use: 'situar a una persona (repaso de las preposiciones de lugar y de «del»)' },
     ],
-    line: 'Lorenzo hace fotos en la feria desde hace veinte años. Tiene una cámara antigua, un fondo pintado con la noria y mucha paciencia. Esta noche la familia Ríos quiere su foto de todos los años, y Lorenzo te pide ayuda para colocar a todo el mundo.',
+    line: 'Lorenzo toma fotos en la feria desde hace veinte años. Tiene una cámara antigua, un fondo pintado con la noria y mucha paciencia. Esta noche la familia Ríos quiere su foto de todos los años, y Lorenzo te pide ayuda para colocar a todo el mundo.',
     dialogue: [
       ['lorenzo', '¡Familia Ríos, bienvenidos! Como siempre: los abuelos en el centro y los niños delante.'],
       ['paloma', 'Lorenzo, este año somos más. Llegaron los primos de Houston.'],
@@ -649,8 +649,8 @@ export const CIRCLES = {
       },
       {
         id: 'buscar', kind: 'busca', label: 'Estímulo de conversación', who: 'lorenzo', sets: ['fotos-ines', 'fotos-nico'],
-        context: 'Lorenzo cuenta a la familia: faltan dos personas. Están entre la gente que mira la foto, y Lorenzo te dice dónde están.',
-        prompt: 'Escuchen dónde está cada persona («a la izquierda del…», «a la derecha de…»), miren desde la mascota y elijan un número. Después, «al revés»: una persona coloca a alguien de la plaza con «ponte…».',
+        context: 'Lorenzo cuenta a la familia: faltan dos personas. Están cerca, entre la gente, y Lorenzo te dice dónde están.',
+        prompt: 'Escuchen dónde está cada persona («a la izquierda del…», «a la derecha de…»), miren desde la mascota y elijan un número. Después, «al revés»: una persona elige en secreto a alguien de la plaza y dice dónde está («está a la derecha del…, detrás de…»); el docente lo busca. Cuando lo encuentra, la persona lo llama a la foto: «¡Ven, ponte aquí!».',
         teacher: 'El lugar se dice desde la mascota: su izquierda es la izquierda de la pantalla. Pide que repitan la orden de Lorenzo con el pronombre («llámala», «tráelo») antes de elegir.',
       },
       {
@@ -669,29 +669,29 @@ export const CIRCLES = {
       },
       {
         id: 'lorenzo', kind: 'stimulus', label: 'Estímulo de conversación', who: 'lorenzo',
-        ask: 'Lorenzo baja la cámara: «Ya está la foto. Y ahora tú: ¿te hago una foto a ti? Gratis, por ayudarme.»',
+        ask: 'Lorenzo baja la cámara: «Ya está la foto. Y ahora tú: ¿te tomo una foto a ti? Gratis, por ayudarme.»',
         options: [
-          { say: 'Sí, ¡hazme una con la familia Ríos, por favor!', reply: '¡Buena idea! Ponte ahí, entre la abuela y el tío Rubén.', end: 'En la foto todos sonríen. El tío Rubén, como siempre, tiene los ojos cerrados.', mood: 'laugh' },
-          { say: 'Sí, pero hazla con la noria detrás, por favor.', reply: 'Muy bien. Muévete un poco a la derecha... ¡ahí! Ahora no te muevas.', end: 'La foto queda preciosa: tú delante y la noria, con todas sus luces, detrás.', mood: 'smile' },
+          { say: 'Sí, ¡tómame una con la familia Ríos, por favor!', reply: '¡Buena idea! Ponte ahí, entre la abuela y el tío Rubén.', end: 'En la foto todos sonríen. El tío Rubén, como siempre, tiene los ojos cerrados.', mood: 'laugh' },
+          { say: 'Sí, pero tómala con la noria detrás, por favor.', reply: 'Muy bien. Muévete un poco a la derecha... ¡ahí! Ahora no te muevas.', end: 'La foto queda preciosa: tú delante y la noria, con todas sus luces, detrás.', mood: 'smile' },
           { say: 'No, gracias, no me gustan las fotos. Pero dame tu tarjeta, por favor.', reply: 'Aquí tienes. Vuelve el año que viene: ya eres de la familia Ríos.', end: 'Guardas la tarjeta. Paloma te invita a la foto del año que viene.', mood: 'love' },
         ],
         teacher: 'No hay respuesta correcta. Después, en parejas: una persona es fotógrafa y coloca a tres compañeros con imperativos («ponte…», «acércate…», «siéntate…»).',
       },
     ],
     timeline: [
-      'En el rincón de las fotos ayudé a Lorenzo y me hice una foto con la familia Ríos.',
-      'En el rincón de las fotos ayudé a Lorenzo y me hice una foto con la noria detrás.',
+      'En el rincón de las fotos ayudé a Lorenzo y me tomé una foto con la familia Ríos.',
+      'En el rincón de las fotos ayudé a Lorenzo y me tomé una foto con la noria detrás.',
       'En el rincón de las fotos ayudé a Lorenzo y él me dio su tarjeta.',
     ],
     talk: [
-      '¿Te gusta hacer fotos o salir en las fotos? ¿Por qué?',
-      '¿Tu familia se hace fotos en las fiestas? ¿Quién se pone en el centro?',
+      '¿Te gusta tomar fotos o salir en las fotos? ¿Por qué?',
+      '¿Tu familia se toma fotos en las fiestas? ¿Quién se pone en el centro?',
       'Coloca a tres compañeros para una foto: «Ponte…», «Siéntate…», «Acércate…».',
       '¿Cuál es la foto más divertida de tu teléfono? ¿Qué hay en ella?',
       '¿Qué le dices a una persona que no quiere salir en una foto?',
     ],
     words: ['el fotógrafo', 'la cámara', 'ponte / póngase', 'a la izquierda del…', 'detrás de', 'colocar'],
-    teacher: 'Antes del círculo, coloca a tres estudiantes como para una foto dando tú las órdenes; después, ellos colocan al resto. En la pizarra: pon + te = ponte, siéntate, acércate; con usted: póngase, ciérrelo. El pronombre va pegado al imperativo afirmativo, y la tilde guarda el acento del verbo (cierre → ciérrelo). Repaso: a la izquierda del…, detrás de…, al lado de…. En «Busca y describe», el lugar se dice desde la mascota.',
+    teacher: 'Antes del círculo, coloca a tres estudiantes como para una foto dando tú las órdenes; después, ellos colocan al resto. En la pizarra: pon + te = ponte, siéntate, acércate; con usted: póngase, ciérrelo. El pronombre va pegado al imperativo afirmativo, y la tilde guarda el acento del verbo (cierre → ciérrelo). Repaso: a la izquierda del…, detrás de…, al lado de…. En «Busca y describe», el lugar se dice desde la mascota. En la ruta de 45 minutos: solo el primer aviso, una ronda «al revés» y una o dos preguntas de charla. El segundo aviso y el resto de preguntas son extensión.',
   },
 
   baile: {
@@ -789,7 +789,7 @@ export const CIRCLES = {
       '¿Cuál fue la mejor noche de tu último año? ¿Qué pasó?',
     ],
     words: ['el baile', 'la plaza', 'invitar', 'pisar', 'primero / después / luego / al final', 'había / hacía'],
-    teacher: 'Es el cierre de las dos rutas. Orden fijo (AC9): reacción a la anécdota de doña Celia → invitación y juego de roles → la historia de la noche desde las notas de esta sesión, con la lista de control → una pregunta de transferencia personal. La lista de control se marca a mano (el docente o el grupo); la aplicación no evalúa el habla ni la graba. Si no hay tiempo, deja la charla final para la próxima clase.',
+    teacher: 'Es el cierre de las dos rutas. Orden fijo (AC9): reacción a la anécdota de doña Celia → invitación y juego de roles → el fondo y el orden de la historia (dos contrastes) → «Un último aviso» (la comprobación con una persona nueva) → la historia de la noche desde las notas de esta sesión, con la lista de control → una pregunta de transferencia personal. En el último aviso, cuenta el primer intento sin ayuda: es la comprobación de la sesión. Lean las notas de la sesión una vez y escóndanlas (o tápenlas): la historia se cuenta sin leer, con las palabras de orden. La lista de control se marca a mano (el docente o el grupo); la aplicación no evalúa el habla ni la graba. Si no hay tiempo, deja la charla final para la próxima clase. En la ruta de 45 minutos: reacción e invitación rápidas (2 min), juego de roles 2 min, el último aviso 1 min, la historia del grupo 4 min y la pregunta final 1 min.',
   },
 };
 
@@ -811,7 +811,7 @@ export const BUSCA = [
       { id: 'gabriel', body: 'm', age: 'child', top: 'tshirt', topColor: 'verde', bottom: 'pants', bottomColor: 'azul', hair: 'short', hairColor: 'rubio' },
       { id: 'andres', body: 'm', age: 'child', top: 'tshirt', topColor: 'azul', bottom: 'shorts', bottomColor: 'azul', hair: 'short', hairColor: 'moreno' },
       { id: 'emilio', body: 'm', age: 'child', top: 'tshirt', topColor: 'verde', bottom: 'shorts', bottomColor: 'azul', hair: 'short', hairColor: 'rubio' },
-      { id: 'simon', body: 'm', age: 'child', top: 'tshirt', topColor: 'verde', bottom: 'shorts', bottomColor: 'azul', hair: 'cap', hairColor: 'rubio' },
+      { id: 'simon', body: 'm', age: 'child', top: 'tshirt', topColor: 'verde', bottom: 'shorts', bottomColor: 'azul', hair: 'short', hairColor: 'moreno' },
       { id: 'felipe', body: 'm', age: 'child', top: 'tshirt', topColor: 'rojo', bottom: 'shorts', bottomColor: 'azul', hair: 'short', hairColor: 'rubio' },
     ],
   },
@@ -829,7 +829,7 @@ export const BUSCA = [
   },
   {
     id: 'escenario-valentina', circle: 6, kind: 'find', ...DANIELA,
-    text: 'Probando, probando... Atención, por favor: estamos buscando a Valentina, la cantante. Es una chica de pelo largo que lleva un vestido amarillo, y seguro que está tocando la guitarra con alguien del público. Valentina, si me escuchas, ven al escenario. ¡El concierto empieza en cinco minutos!',
+    text: 'Probando, probando... Atención, por favor: estamos buscando a Valentina, la cantante. Es una chica de pelo largo que lleva un vestido amarillo, y está tocando la guitarra con alguien del público: la vi desde aquí. Valentina, si me escuchas, ven al escenario. ¡El concierto empieza en cinco minutos!',
     described: ['age:young', 'body:f', 'pose:guitar', 'hair:long', 'top:dress', 'topColor:amarillo'],
     target: 'valentina',
     figures: [
@@ -867,7 +867,7 @@ export const BUSCA = [
   },
   {
     id: 'fotos-nico', circle: 7, kind: 'find', ...LORENZO,
-    text: 'Y ahora, ¿dónde está Nico? Ah, sí, ya lo veo: es el niño que está a la derecha de la abuela, la señora que está sentada. Lleva gorra y una camiseta roja. Tráelo, por favor, y siéntalo delante, con los otros niños.',
+    text: 'Y ahora, ¿dónde está Nico? Ah, sí, ya lo veo: es el niño que está a la derecha de la abuela, la señora mayor que está sentada. Lleva gorra y una camiseta roja. Tráelo, por favor, y siéntalo delante, con los otros niños.',
     described: ['rel:derecha-de:la abuela sentada', 'hair:cap', 'topColor:rojo', 'age:child', 'body:m'],
     target: 'nico',
     figures: [

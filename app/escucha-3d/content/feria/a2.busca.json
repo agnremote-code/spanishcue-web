@@ -18,7 +18,7 @@
       "id": "escenario-valentina",
       "speaker": "Daniela",
       "voice": "es-CL-CatalinaNeural",
-      "text": "Probando, probando... Atención, por favor: estamos buscando a Valentina, la cantante. Es una chica de pelo largo que lleva un vestido amarillo, y seguro que está tocando la guitarra con alguien del público. Valentina, si me escuchas, ven al escenario. ¡El concierto empieza en cinco minutos!"
+      "text": "Probando, probando... Atención, por favor: estamos buscando a Valentina, la cantante. Es una chica de pelo largo que lleva un vestido amarillo, y está tocando la guitarra con alguien del público: la vi desde aquí. Valentina, si me escuchas, ven al escenario. ¡El concierto empieza en cinco minutos!"
     },
     {
       "id": "escenario-bruno",
@@ -36,7 +36,7 @@
       "id": "fotos-nico",
       "speaker": "Lorenzo",
       "voice": "es-CL-LorenzoNeural",
-      "text": "Y ahora, ¿dónde está Nico? Ah, sí, ya lo veo: es el niño que está a la derecha de la abuela, la señora que está sentada. Lleva gorra y una camiseta roja. Tráelo, por favor, y siéntalo delante, con los otros niños."
+      "text": "Y ahora, ¿dónde está Nico? Ah, sí, ya lo veo: es el niño que está a la derecha de la abuela, la señora mayor que está sentada. Lleva gorra y una camiseta roja. Tráelo, por favor, y siéntalo delante, con los otros niños."
     },
     {
       "id": "transferencia-amparo",

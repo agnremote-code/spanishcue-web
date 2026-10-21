@@ -194,7 +194,7 @@
       ],
       "gaps": "Mi abuela la [usó] tres [años] para guardar [lápices]. Decía que era su taza [favorita].",
       "glossary": [
-        { "word": "paciente", "meaning": "persona que puede esperar o repetir algo sin enfadarse" },
+        { "word": "paciente", "meaning": "persona que puede esperar o repetir algo sin ponerse nerviosa" },
         { "word": "agujero", "meaning": "espacio abierto o roto en una cosa" },
         { "word": "guardar", "meaning": "poner algo en un lugar para tenerlo después" },
         { "word": "nietos", "meaning": "los hijos de tus hijos" }
@@ -204,13 +204,13 @@
       "id": "escenario",
       "title": "La lluvia del año pasado",
       "place": "Detrás del escenario",
-      "context": "Faltan cinco minutos para el concierto. La técnica de sonido y el guitarrista esperan a la cantante.",
+      "context": "Faltan quince minutos para el concierto. La técnica de sonido y el guitarrista esperan a la cantante.",
       "speakers": [
         { "name": "Daniela", "country": "Chile", "voice": "es-CL-CatalinaNeural" },
         { "name": "Facundo", "country": "Uruguay", "voice": "es-UY-MateoNeural" }
       ],
       "lines": [
-        { "s": 0, "text": "Facundo, faltan cinco minutos. ¿Dónde está Valentina?" },
+        { "s": 0, "text": "Facundo, faltan quince minutos. ¿Dónde está Valentina?" },
         { "s": 1, "text": "Tranquila. Me escribió hace un rato. Está comiendo churros." },
         { "s": 0, "text": "¿Churros? ¿Ahora? ¿Te acuerdas del año pasado?" },
         { "s": 1, "text": "Claro. El autobús de la banda se rompió en la carretera y llegamos una hora tarde." },
@@ -218,11 +218,11 @@
         { "s": 1, "text": "Sí. Por eso, cuando llegamos, Valentina no fue al camerino. Subió al escenario mojada y empezó a cantar." },
         { "s": 0, "text": "Fue el mejor concierto de toda la feria." },
         { "s": 1, "text": "Y este año va a ser mejor... si llega." },
-        { "s": 0, "text": "Mira, ahí viene. Con los churros en la mano." }
+        { "s": 0, "text": "Voy a buscarla a la churrería. Tú prepara las guitarras." }
       ],
       "choice": [
         { "q": "¿Qué recuerdan Daniela y Facundo?", "options": ["Un concierto del año pasado", "Su primer viaje juntos", "Una pelea con la cantante"], "answer": 0 },
-        { "q": "¿Qué está haciendo Valentina antes del concierto?", "options": ["Está ensayando", "Está comiendo churros", "Está en el autobús"], "answer": 1 },
+        { "q": "Según Facundo, ¿qué está haciendo Valentina?", "options": ["Está ensayando", "Está comiendo churros", "Está en el autobús"], "answer": 1 },
         { "q": "¿Por qué llegó tarde la banda el año pasado?", "options": ["Por la lluvia", "Porque Valentina estaba enferma", "Porque se rompió el autobús"], "answer": 2 },
         { "q": "¿Qué hizo Valentina cuando llegó?", "options": ["Fue al camerino a cambiarse", "Subió al escenario y empezó a cantar", "Habló con el público"], "answer": 1 }
       ],
@@ -272,7 +272,7 @@
       ],
       "gaps": "Bueno, [pónganse] como siempre: los [abuelos] en el [centro], los [niños] delante.",
       "glossary": [
-        { "word": "cámara", "meaning": "aparato para hacer fotos" },
+        { "word": "cámara", "meaning": "aparato para tomar fotos" },
         { "word": "delante", "meaning": "en la parte de adelante, más cerca de la cámara" },
         { "word": "detrás", "meaning": "en la parte de atrás" },
         { "word": "cierra los ojos", "meaning": "no tiene los ojos abiertos" }
