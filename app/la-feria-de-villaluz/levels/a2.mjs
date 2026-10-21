@@ -76,7 +76,7 @@ export const CIRCLES = {
       ['*Un señor con prisa', 'Dame una docena de churros. Rápido, que empieza el concierto.'],
       ['ernesto', '¿Rápido? Los churros buenos no tienen reloj, señor. Cinco minutos.'],
       ['*Un señor con prisa', 'Cinco minutos es mucho.'],
-      ['ernesto', 'Entonces son seis. Uno más por hablar.'],
+      ['ernesto', 'Entonces son seis minutos. Uno más por hablar.'],
       ['yesenia', 'Papá, no lo asustes. Señor, le llevo los churros a la mesa. Siéntese tranquilo.'],
     ],
     beats: [
@@ -97,7 +97,7 @@ export const CIRCLES = {
       {
         id: 'cambiar', kind: 'contrast', label: 'Contraste lingüístico', exponent: ['podrias'], who: 'yesenia',
         context: 'Yesenia ya está poniendo azúcar en los dos chocolates. Lucía no toma azúcar.',
-        prompt: 'Pídele con amabilidad que deje uno sin azúcar.',
+        prompt: 'Pídele con amabilidad un cambio: un chocolate sin azúcar.',
         options: [
           { id: 'puedo', label: 'Perdona, ¿puedo dejar uno sin azúcar? Es para mi amiga.', correct: false, feature: 'quién hace la acción',
             feedback: 'Quién hace la acción: «¿puedo…?» pide permiso para hacerlo tú. Quieres que lo haga ella: «¿podrías…?».' },
@@ -163,7 +163,7 @@ export const CIRCLES = {
     dialogue: [
       ['fabiola', '¡Número cuarenta y siete! ¡El oso gigante es para el cuarenta y siete!'],
       ['camilo', '¡Soy yo! ¡Gané! Yo nunca gano nada.'],
-      ['fabiola', 'Felicidades. Aquí lo tienes. Cuidado, que pesa más que mi sobrino.'],
+      ['fabiola', 'Felicidades. Aquí lo tiene. Cuidado, que pesa más que mi sobrino.'],
       ['camilo', 'Ay, no... Mi mamá me escribió. Tengo que ir a ayudarla con su puesto de empanadas. Ahora mismo.'],
     ],
     beats: [
@@ -184,7 +184,7 @@ export const CIRCLES = {
       {
         id: 'prestar', kind: 'contrast', label: 'Contraste lingüístico', exponent: ['me-presta'], who: 'fabiola',
         context: 'El oso no cabe en ningún lado. Detrás del puesto, Fabiola tiene una bolsa enorme. Te mira y se ríe: «¿Y cómo se lo va a llevar, joven?»',
-        prompt: 'Fabiola te habla de usted. Pídele prestada la bolsa grande y prométele devolvérsela antes de las diez.',
+        prompt: 'Fabiola te habla de usted. Pídele prestada la bolsa grande y promete devolver la bolsa antes de las diez.',
         options: [
           { id: 'se-la', label: '¿Me presta esa bolsa grande? Se la devuelvo antes de las diez.', correct: true,
             feedback: 'Bien: «¿me presta…?» pide el favor con usted, y en «se la devuelvo», «se» es Fabiola y «la» es la bolsa.' },
@@ -197,8 +197,8 @@ export const CIRCLES = {
       },
       {
         id: 'mensaje', kind: 'contrast', label: 'Contraste lingüístico', exponent: ['te-lo-puedo'], who: 'camilo',
-        context: 'Te llega un mensaje de Camilo: «Perdón, voy a llegar tarde. ¿Me puedes llevar el oso al baile?»',
-        prompt: 'Contéstale que sí, que se lo puedes llevar.',
+        context: 'Te llega un mensaje de Camilo: «Perdón, mi mamá me necesita una hora más. ¿Me puedes llevar el oso a la plaza del baile?»',
+        prompt: 'Contéstale que sí: llevas el oso al baile.',
         options: [
           { id: 'puedo-te-lo', label: 'Sí, puedo te lo llevar. Tranquilo.', correct: false, feature: 'lugar de los pronombres',
             feedback: 'Lugar de los pronombres: van antes del verbo conjugado («te lo puedo llevar») o pegados al infinitivo («puedo llevártelo»), nunca en medio.' },
@@ -251,7 +251,7 @@ export const CIRCLES = {
       ['abelardo', '¡Bajen con cuidado! La noria se para diez minutos. Hay que revisar una luz.'],
       ['*Una señora con dos niños', '¿Diez minutos? Llevamos media hora en la fila.'],
       ['abelardo', 'Lo siento, señora. Primero la seguridad. Después, las vueltas.'],
-      ['marta', 'Tranquilos, todo el mundo. Cuando vuelva a funcionar, la vuelta es más bonita: ya se ve toda la feria con luces.'],
+      ['marta', 'Tranquilos, todo el mundo. Después, la vuelta es más bonita: ya se ve toda la feria con luces.'],
     ],
     beats: [
       {
@@ -261,8 +261,8 @@ export const CIRCLES = {
         options: [
           { id: 'cobre', label: 'Perdone, creo que hay un error. Compré dos entradas y me cobré tres.', correct: false, feature: 'persona del verbo',
             feedback: 'Persona del verbo: «me cobré» dice que lo hiciste tú. Te cobró ella: «me cobró».' },
-          { id: 'compro', label: 'Perdone, creo que hay un error. Compro dos entradas y me cobra tres.', correct: false, feature: 'tiempo del verbo',
-            feedback: 'Tiempo del verbo: la compra ya pasó y está terminada. Para hechos terminados, usa el indefinido: «compré», «cobró».' },
+          { id: 'compraba', label: 'Perdone, creo que hay un error. Compraba dos entradas y me cobraba tres.', correct: false, feature: 'tiempo del verbo',
+            feedback: 'Tiempo del verbo: «compraba» y «cobraba» describen una costumbre o una situación. La compra fue una acción terminada: usa el indefinido, «compré», «cobró».' },
           { id: 'cobro', label: 'Perdone, creo que hay un error. Compré dos entradas y me cobró tres.', correct: true,
             feedback: 'Bien: «perdone, creo que hay un error» abre con cortesía, y el indefinido cuenta los hechos: compré, cobró.' },
         ],
@@ -271,7 +271,7 @@ export const CIRCLES = {
       {
         id: 'devolver', kind: 'contrast', label: 'Contraste lingüístico', exponent: ['me-podria'], who: 'marta',
         context: 'Marta mira la pantalla de la máquina y espera.',
-        prompt: 'Pídele con cortesía que te devuelva el dinero de una entrada.',
+        prompt: 'Pide con cortesía el dinero de una entrada.',
         options: [
           { id: 'te-podria', label: '¿Te podría devolver el dinero de una entrada, por favor?', correct: false, feature: 'dirección de la acción',
             feedback: 'Dirección de la acción: «¿te podría devolver…?» ofrece devolverle tú el dinero a ella. El dinero vuelve a ti: «¿me podría devolver…?».' },
@@ -287,9 +287,9 @@ export const CIRCLES = {
         context: 'Marta se encoge de hombros. Detrás de ti, la fila empieza a protestar.',
         prompt: 'Pide hablar con el encargado, con cortesía.',
         options: [
-          { id: 'hablo', label: 'Hablo con el encargado.', correct: false, feature: 'petición o afirmación',
+          { id: 'hablo', label: 'Entonces hablo con el encargado, por favor.', correct: false, feature: 'petición o afirmación',
             feedback: 'Petición o afirmación: «hablo con el encargado» informa de lo que haces, no lo pide. Para pedir con cortesía: «quería hablar con el encargado, por favor».' },
-          { id: 'quería', label: 'Entonces quería hablar con el encargado, por favor.', correct: true,
+          { id: 'queria', label: 'Entonces quería hablar con el encargado, por favor.', correct: true,
             feedback: 'Bien: «quería hablar con…» pide con suavidad, sin enfadarte. Y «hablar con» lleva siempre «con».' },
           { id: 'al', label: 'Entonces quería hablar al encargado, por favor.', correct: false, feature: 'preposición de «hablar»',
             feedback: 'Preposición: se habla «con» una persona. Se dice «hablar con el encargado», no «hablar al encargado».' },
@@ -358,7 +358,7 @@ export const CIRCLES = {
       {
         id: 'bufanda', kind: 'contrast', label: 'Contraste lingüístico', exponent: ['mas-que'], who: 'wilfredo',
         context: 'Don Wilfredo te pone una bufanda roja en las manos. Es preciosa, pero cuesta el doble que una taza.',
-        prompt: 'Di que la bufanda cuesta más que la taza.',
+        prompt: 'Compara el precio de la bufanda con el de la taza.',
         options: [
           { id: 'de', label: 'La bufanda es más cara de la taza.', correct: false, feature: 'más… que',
             feedback: 'Más… que: cuando comparas dos cosas, la pareja es «más… que». Se dice «más cara que la taza».' },
@@ -372,7 +372,7 @@ export const CIRCLES = {
       {
         id: 'regalo', kind: 'contrast', label: 'Contraste lingüístico', exponent: ['mejor-que'], who: 'nayeli',
         context: 'Nayeli te pregunta: «¿Y tu hermana dónde vive? Para un regalo, ¿qué es mejor: la taza o la bufanda?» Tu hermana vive en una ciudad muy fría.',
-        prompt: 'Contesta: para tu hermana, la bufanda es mejor.',
+        prompt: 'Contesta a Nayeli y compara la bufanda con la taza, para tu hermana.',
         options: [
           { id: 'mas-buena', label: 'Para mi hermana, la bufanda es más buena que la taza: vive en una ciudad muy fría.', correct: false, feature: 'comparativo irregular',
             feedback: 'Comparativo irregular: para la calidad o la utilidad de una cosa, «bueno» compara con «mejor». Se dice «es mejor que la taza».' },
@@ -385,7 +385,7 @@ export const CIRCLES = {
       },
       {
         id: 'decidir', kind: 'stimulus', label: 'Estímulo de conversación', who: 'wilfredo',
-        ask: 'Nayeli y don Wilfredo te miran a la vez: «Bueno, ¿qué se lleva al final?»',
+        ask: 'Nayeli y don Wilfredo te miran a la vez: «Bueno, ¿qué te llevas al final?»',
         options: [
           { say: 'Me llevo la bufanda. Es más cara, pero va a durar más.', reply: '¡Eso! Las cosas buenas duran más que las modas.', end: 'Nayeli te regala una taza muy pequeña «para tu hermana, de mi parte».', mood: 'love' },
           { say: 'Me llevo la taza azul. Es más barata y a mi hermana le encanta el café.', reply: 'Muy buena elección. Y tiene un color tan bonito como el río.', end: 'Don Wilfredo dice que tu hermana va a tener frío, pero con un café muy rico.', mood: 'smile' },
@@ -400,7 +400,7 @@ export const CIRCLES = {
       'En el puesto de artesanía compré una taza y una bufanda, con descuento.',
     ],
     talk: [
-      '¿Qué fue el último regalo que compraste? ¿Para quién?',
+      '¿Cuál fue el último regalo que compraste? ¿Para quién?',
       '¿Prefieres regalar cosas útiles o cosas bonitas? ¿Por qué?',
       '¿Compras en mercados o ferias de artesanía? ¿Qué compras?',
       '¿Qué es mejor para ti: una cosa hecha a mano o una cosa de tienda?',
@@ -429,7 +429,7 @@ export const CIRCLES = {
     dialogue: [
       ['celia', '¿Ves esa esquina de la plaza? Ahí conocí a mi marido, hace cuarenta y dos años.'],
       ['julian', 'Abuela, esa historia ya la sé.'],
-      ['celia', 'Tú sí, pero tu amigo no. Esa noche llovía y casi no había gente. Él no sabía bailar.'],
+      ['celia', 'Tú sí, pero aquí hay alguien que no la sabe. Esa noche llovía y casi no había gente. Él no sabía bailar.'],
       ['julian', 'Y te pisó tres veces.'],
       ['celia', 'Cuatro. Pero al final de la noche me acompañó a casa, con su chaqueta en mi cabeza por la lluvia.'],
       ['julian', 'Y al día siguiente volvió con flores.'],
@@ -440,15 +440,15 @@ export const CIRCLES = {
         id: 'reaccion', kind: 'stimulus', label: 'Estímulo de conversación', exponent: ['reaccionar'], who: 'celia',
         ask: 'Doña Celia termina su historia y te mira. Espera tu reacción.',
         options: [
-          { say: '¿En serio? ¿Con churros? ¡Qué romántico!', reply: 'Romántico y práctico. Las flores no se comen.', end: 'Julián se ríe por primera vez en toda la noche.', mood: 'laugh' },
+          { say: '¿En serio? ¿Con churros? ¡Qué romántico!', reply: 'Romántico y práctico. Las flores no se comen.', end: 'Julián se ríe a carcajadas.', mood: 'laugh' },
           { say: '¡No me digas! ¿Y él aprendió a bailar después?', reply: 'Nunca. Cuarenta años pisándome. Y yo, feliz.', end: 'Doña Celia mira la esquina de la plaza un momento, en silencio.', mood: 'love' },
           { say: '¿Y qué pasó después? ¿Cuándo se casaron?', reply: 'Un año después, en esta misma plaza. Con baile, claro.', end: 'Doña Celia saca una foto vieja del bolso. En la foto, los dos bailan bajo la lluvia.', mood: 'smile' },
         ],
-        teacher: 'No hay respuesta correcta. Después, pregunta qué otras reacciones conocen («¡Qué bonito!», «¡Qué fuerte!») y anótalas.',
+        teacher: 'No hay respuesta correcta. Después, pregunta qué otras reacciones conocen («¡Qué bonito!», «¡Qué increíble!») y anótalas.',
       },
       {
         id: 'invitar', kind: 'contrast', label: 'Contraste lingüístico', exponent: ['quieres-inf'], who: 'celia',
-        context: 'Doña Celia señala a Julián: «Mi nieto nunca baila. Invítalo tú, a ver si te dice que sí.»',
+        context: 'Doña Celia señala a Julián: «Mi nieto solo baila conmigo. Invítalo tú, a ver si te dice que sí.»',
         prompt: 'Invita a Julián a bailar.',
         options: [
           { id: 'bailando', label: '¿Quieres bailando, Julián? La música está buenísima.', correct: false, feature: 'infinitivo después de «querer»',
@@ -488,7 +488,7 @@ export const CIRCLES = {
       {
         id: 'secuencia', kind: 'contrast', label: 'Contraste lingüístico', exponent: ['secuencia-indefinido'], who: 'julian',
         context: 'Julián espera el resto de la historia.',
-        prompt: 'Cuenta en orden las dos primeras cosas que hiciste.',
+        prompt: 'Elige la frase correcta para contar dos cosas en orden. Después, cuenta tus dos primeras paradas de verdad.',
         options: [
           { id: 'fue', label: 'Primero fue a la churrería y después estuvo en la noria.', correct: false, feature: 'persona del verbo',
             feedback: 'Persona del verbo: «fue» y «estuvo» hablan de otra persona. Tú cuentas tu noche: «fui», «estuve».' },
@@ -515,7 +515,7 @@ export const CIRCLES = {
 // The closing production at «baile» (AC9): after the beats above.
 export const CLOSING = {
   narrative: {
-    prompt: 'Cuéntale a Julián tu noche en la feria, en orden, desde que llegaste. Mira las notas de esta sesión: cada círculo que visitaron tiene una frase.',
+    prompt: 'Cuéntale a Julián tu noche en la feria, en orden, desde que llegaste. Mira las notas de esta sesión: cada círculo que visitaste tiene una frase.',
     frames: ['Cuando llegué, había… / hacía…', 'Primero fui a…', 'Después…', 'Luego…', 'Al final…'],
     // The timeline is built only from this group's picks in this session
     // (sessionStorage, AM-7/D2): CIRCLES[id].timeline[pick] for each circle
