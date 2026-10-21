@@ -33,6 +33,7 @@ import { withDeploymentHeaders } from "./deployment-headers";
 import { writeFreezeActive, writeFreezeResponse } from "./write-freeze";
 import { pagePathname, pageSearch } from "./page-path";
 import { rateLimitKey, rateLimited, rateLimitResponse, type RateLimitBinding } from "./rate-limit";
+import { watermarkDay, watermarkToken, withWatermark, type Rewriter } from "../app/license-watermark";
 
 interface Env {
   ASSETS: Fetcher;
@@ -393,6 +394,13 @@ const app = {
         'Set-Cookie',
         `${LOCALE_COOKIE}=${requestedLocale}; Max-Age=31536000; Path=/; SameSite=Lax`,
       );
+    }
+    // PRO documents carry an invisible per-account, per-day licence mark (app/license-watermark.ts).
+    const premiumDocument = (lesson && !isFreeLesson(lesson.id)) || premiumAutoestudio;
+    if (premiumDocument && accountId && fullAccess && request.method === 'GET' && !rscPayload && env.AUTOESTUDIO_SHARE_SECRET) {
+      const token = await watermarkToken(env.AUTOESTUDIO_SHARE_SECRET, accountId, watermarkDay(new Date())).catch(() => '');
+      const rewriter = (globalThis as unknown as { HTMLRewriter?: new () => Rewriter }).HTMLRewriter;
+      return withWatermark(safeResponse, token, rewriter ? () => new rewriter() : undefined);
     }
     return safeResponse;
   },

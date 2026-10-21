@@ -69,6 +69,7 @@ export function filterReviewedChanges(findings, reviewed) {
  */
 export const APPROVAL_MANIFESTS = [
   'docs/audits/duration-english-additions-20261009.json',
+  'docs/audits/content-protection-english-additions-20261021.json',
   'docs/audits/resource-3d-worlds-english-additions-20261017.json',
   'docs/audits/grammar-live-english-additions-20261013.json',
   'docs/audits/grammar-live-english-all-20261013.json',

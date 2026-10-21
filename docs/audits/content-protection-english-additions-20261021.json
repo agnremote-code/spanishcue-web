@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "authorization": "Owner request of 2026-10-21 06:13Z in the project thread \"Seguridad y protección del contenido\" (root cmsg_01Gr5R4j3t2Yet65UcmhcVhA5LQ2mxW6JtGsEz5TYEbump, message cmsg_01Gr5R4j3t2Yet65UcmhcVhAKhavuA3MjJeMmbf5KVQrEs: «si armá todo incluso términos de licencia todo»). Standing owner approval for English copy: Ale wrote «apruebo todo, no preguntes más, apruebo todo» on 2026-10-14 16:55Z (cmsg_01Gr5R4j3t2Yet65UcmhcVhADwvzg9kA9GinuWu3D7FSfe). Approves only these exact literals of the Terms and Privacy content-protection sections.",
+  "additions": [
+    {
+      "path": "app/legal/LegalDocument.tsx",
+      "text": "Content protection"
+    },
+    {
+      "path": "app/legal/LegalDocument.tsx",
+      "text": "You may not access SPANISHCUE with bots, scrapers or other automated tools, except search engines indexing public pages, or use its lessons, text, audio, images or code to train or fine-tune artificial intelligence models or to build a competing product."
+    },
+    {
+      "path": "app/legal/LegalDocument.tsx",
+      "text": "PRO pages carry an invisible technical identifier that shows which account an unauthorised copy came from. You must not remove or alter it. Use by academies, schools or other institutions requires a written institutional licence."
+    },
+    {
+      "path": "app/legal/LegalDocument.tsx",
+      "text": "When a PRO account opens a lesson, the page includes a technical identifier derived from the account and the date. It does not contain your email or name and is used only to trace unauthorised copies, on the basis of our legitimate interest in protecting the content."
+    }
+  ]
+}
