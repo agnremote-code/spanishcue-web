@@ -7,6 +7,7 @@ import {readFileSync,existsSync} from 'node:fs';
 // listening per region and level, and the previous class one click away (?vista=atlas).
 const COUNTRIES=[
   {dir:'mexico',id:210,game:'mexico',regions:['cdmx','jalisco','oaxaca','quintana-roo']},
+  {dir:'argentina',id:228,game:'argentina',regions:['buenos-aires','cordoba','mendoza','bariloche']},
 ];
 const LEVELS=['A0','A1','A2','B1'];
 const bi=(v,where)=>{assert.ok(v&&typeof v.es==='string'&&v.es.trim()&&typeof v.en==='string'&&v.en.trim(),`${where}: needs es and en`);};

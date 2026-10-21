@@ -54,6 +54,15 @@ export const GAMES = {
     bilingualA0: true,
     freeAudio: true,
   },
+  // Argentina 3D: every region has its own listening at each level; any circle
+  // of that region opens it (app/argentina/mundo). PRO lesson (ID 228).
+  argentina: {
+    title: 'Argentina',
+    levels: ['A0', 'A1', 'A2', 'B1'],
+    spots: ['buenos-aires', 'cordoba', 'mendoza', 'bariloche'],
+    ownListening: true,
+    bilingualA0: true,
+  },
   // La feria de Villaluz (A2): every circle has its own listening, and each
   // character keeps one voice (app/la-feria-de-villaluz/levels/a2.mjs CAST).
   feria: {

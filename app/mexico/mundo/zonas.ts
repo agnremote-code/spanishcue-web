@@ -35,8 +35,8 @@ export const ZONAS: Record<string, SceneBuilder> = {
     spots: [
       { id: 'comedor', kind: 'restaurant', sign: 'COMEDOR DOÑA CHELO', color: '#7a2e2e', who: { body: 'f', age: 'old', top: 'apron', topColor: '#c74b7a', hairStyle: 'braids', hairColor: '#3a2e28', skin: '#9c6640' } },
       { id: 'alebrijes', kind: 'shop', sign: 'TALLER DE ALEBRIJES', color: '#8a4f9e', who: { body: 'm', age: 'adult', top: 'tshirt', topColor: '#f2c14e', hairStyle: 'short', extras: ['beard'], skin: '#a8714a' } },
-      { id: 'iglesia', kind: 'church', sign: 'SANTO DOMINGO', color: '#c9a227', who: { body: 'f', age: 'young', top: 'shirt', topColor: '#ffffff', bottom: 'jeans', hairStyle: 'ponytail', extras: ['backpack'], skin: '#c08a62' } },
-      { id: 'mezcal', kind: 'cafe', sign: 'MEZCALERÍA EL MAGUEY', color: '#3f6f4f', who: { body: 'm', age: 'adult', top: 'shirt', topColor: '#6b3f2a', hairStyle: 'long', hairColor: '#1d1410', skin: '#9c6640' } },
+      { id: 'iglesia', kind: 'church', sign: 'SANTO DOMINGO', color: '#c9a227', who: { body: 'm', age: 'old', top: 'coat', topColor: '#5a4632', bottom: 'pants', bottomColor: '#5a4632', hairStyle: 'bald', extras: ['glasses'], skin: '#d0a07a' } },
+      { id: 'mezcal', kind: 'cafe', sign: 'MEZCALERÍA EL MAGUEY', color: '#3f6f4f', who: { body: 'f', age: 'young', top: 'shirt', topColor: '#6b3f2a', bottom: 'jeans', hairStyle: 'long', hairColor: '#1d1410', extras: ['earrings'], skin: '#9c6640' } },
       { id: 'guelaguetza', kind: 'stage', sign: 'GUELAGUETZA', color: '#e8743b', who: { body: 'f', age: 'adult', top: 'dress', topColor: '#e8743b', hairStyle: 'braids', skin: '#a8714a' }, pose: 'dance' },
     ],
   }),
