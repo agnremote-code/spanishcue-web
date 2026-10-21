@@ -1,0 +1,486 @@
+{
+ "game": "indonesia",
+ "level": "B1",
+ "items": [
+  {
+   "id": "bali",
+   "title": "Demasiados turistas",
+   "place": "Las terrazas de arroz de Bali",
+   "context": "Juan, de Costa Rica, entrevista a Made, agricultor y jefe de su subak, para un documental.",
+   "speakers": [
+    {
+     "name": "Juan",
+     "country": "Costa Rica",
+     "voice": "es-CR-JuanNeural"
+    },
+    {
+     "name": "Made",
+     "country": "Bolivia",
+     "voice": "es-BO-MarceloNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Made, ¿qué es exactamente un subak?"
+    },
+    {
+     "s": 1,
+     "text": "Es la forma en que organizamos el agua desde hace mil años. El agua baja de la montaña y pasa de campo en campo. Nos reunimos cada mes para decidir quién la usa y cuándo, y llevamos ofrendas al templo del agua."
+    },
+    {
+     "s": 0,
+     "text": "La UNESCO lo declaró Patrimonio de la Humanidad. ¿Eso los ayudó?"
+    },
+    {
+     "s": 1,
+     "text": "Atrajo más turistas, y con ellos más hoteles, más piscinas y más pozos. Ahora hay meses en que el agua no llega a los campos de abajo."
+    },
+    {
+     "s": 0,
+     "text": "Pero el turismo también da trabajo."
+    },
+    {
+     "s": 1,
+     "text": "Claro, mi hijo trabaja en un hotel y gana más que yo. Ese es el problema: los jóvenes ya no quieren ser agricultores. Si nadie trabaja el campo, la UNESCO protegerá un paisaje vacío."
+    },
+    {
+     "s": 0,
+     "text": "¿Qué pediría usted?"
+    },
+    {
+     "s": 1,
+     "text": "Que una parte de lo que pagan los turistas por ver las terrazas llegue a quienes las cuidamos."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Desde cuándo existe el subak?",
+     "options": [
+      "Desde hace mil años",
+      "Desde 2012",
+      "Desde hace cien años"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué atrajo la declaración de la UNESCO?",
+     "options": [
+      "Más lluvia",
+      "Más turistas",
+      "Más agricultores"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Dónde trabaja el hijo de Made?",
+     "options": [
+      "En el campo",
+      "En el templo",
+      "En un hotel"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué pide Made?",
+     "options": [
+      "Que parte del dinero de los turistas llegue a los agricultores",
+      "Prohibir los hoteles",
+      "Más pozos"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿El turismo ayuda o perjudica a los lugares tradicionales?",
+     "model": "Ayuda con dinero, pero cambia la vida de la gente."
+    },
+    {
+     "q": "¿Por qué los jóvenes dejan el campo?",
+     "model": "Porque se gana poco y el trabajo es muy duro."
+    },
+    {
+     "q": "¿Quién debería pagar para proteger un paisaje?",
+     "model": "Los turistas y el gobierno, juntos."
+    }
+   ],
+   "gaps": "Atrajo más [turistas], y con ellos más [hoteles], más [piscinas] y más [pozos]. Ahora hay meses en que el agua no llega a los campos de abajo.",
+   "glossary": [
+    {
+     "word": "ofrendas",
+     "meaning": "regalos para los dioses"
+    },
+    {
+     "word": "atrajo",
+     "meaning": "hizo venir"
+    },
+    {
+     "word": "paisaje",
+     "meaning": "lo que se ve de un lugar"
+    },
+    {
+     "word": "cuidamos",
+     "meaning": "protegemos y mantenemos"
+    }
+   ]
+  },
+  {
+   "id": "java",
+   "title": "Un templo sin cabezas",
+   "place": "Borobudur",
+   "context": "Andrea, de Ecuador, escucha a Ayu, guía de Borobudur, durante una visita.",
+   "speakers": [
+    {
+     "name": "Ayu",
+     "country": "Argentina",
+     "voice": "es-AR-ElenaNeural"
+    },
+    {
+     "name": "Andrea",
+     "country": "Ecuador",
+     "voice": "es-EC-AndreaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Observen esta estatua de Buda. ¿Notan algo raro?"
+    },
+    {
+     "s": 1,
+     "text": "No tiene cabeza. ¿Se cayó?"
+    },
+    {
+     "s": 0,
+     "text": "No. Durante el dominio holandés muchas cabezas se cortaron y se llevaron a Europa. Algunas están en museos de Ámsterdam; otras terminaron en casas de coleccionistas."
+    },
+    {
+     "s": 1,
+     "text": "¿Y Indonesia no las pide?"
+    },
+    {
+     "s": 0,
+     "text": "Sí. Hace poco los Países Bajos devolvieron cientos de objetos de la época colonial. Es un paso importante, pero todavía faltan muchas piezas."
+    },
+    {
+     "s": 1,
+     "text": "Los museos dicen que allí están mejor cuidadas."
+    },
+    {
+     "s": 0,
+     "text": "Es posible. Pero un Buda sin su templo es solo una piedra bonita. Y un templo con estatuas sin cabeza cuenta otra historia: la de quién tenía el poder."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué le falta a la estatua?",
+     "options": [
+      "La mano",
+      "La cabeza",
+      "El pie"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Adónde se llevaron muchas cabezas?",
+     "options": [
+      "A Japón",
+      "A Yakarta",
+      "A Europa"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué hicieron hace poco los Países Bajos?",
+     "options": [
+      "Devolvieron cientos de objetos",
+      "Compraron el templo",
+      "Cerraron sus museos"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué cuenta un templo con estatuas sin cabeza, según Ayu?",
+     "options": [
+      "La vida de Buda",
+      "Quién tenía el poder",
+      "Un error de los constructores"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Los museos deberían devolver las piezas a su país de origen?",
+     "model": "Creo que sí, aunque depende de cómo llegaron allí."
+    },
+    {
+     "q": "¿Hay objetos de otros países en los museos de tu país?",
+     "model": "Sí, en el museo nacional hay piezas de Egipto."
+    },
+    {
+     "q": "¿A quién pertenece una obra de arte?",
+     "model": "Al pueblo que la creó, en mi opinión."
+    }
+   ],
+   "gaps": "Sí. Hace poco los [Países] [Bajos] [devolvieron] cientos de [objetos] de la época colonial. Es un paso importante, pero todavía faltan muchas piezas.",
+   "glossary": [
+    {
+     "word": "dominio",
+     "meaning": "control de un país sobre otro"
+    },
+    {
+     "word": "coleccionistas",
+     "meaning": "personas que juntan objetos"
+    },
+    {
+     "word": "devolvieron",
+     "meaning": "dieron otra vez a su dueño"
+    },
+    {
+     "word": "piezas",
+     "meaning": "objetos de arte"
+    }
+   ]
+  },
+  {
+   "id": "sumatra",
+   "title": "La casa es de la madre",
+   "place": "Una cocina de Padang",
+   "context": "Ramona, de República Dominicana, conversa con Mardiah mientras cocinan rendang.",
+   "speakers": [
+    {
+     "name": "Mardiah",
+     "country": "Guatemala",
+     "voice": "es-GT-MartaNeural"
+    },
+    {
+     "name": "Ramona",
+     "country": "República Dominicana",
+     "voice": "es-DO-RamonaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "En mi pueblo, el minangkabau, las casas y las tierras pasan de madre a hija. Los hijos varones no heredan la casa."
+    },
+    {
+     "s": 1,
+     "text": "¿Y los hombres no se quejan?"
+    },
+    {
+     "s": 0,
+     "text": "Tradicionalmente, los jóvenes se van a otras ciudades a buscar fortuna. Por eso hay restaurantes de Padang en toda Indonesia: los abrieron ellos."
+    },
+    {
+     "s": 1,
+     "text": "Pero ustedes son musulmanes, y el islam tiene otras reglas de herencia, ¿no?"
+    },
+    {
+     "s": 0,
+     "text": "Así es, y durante siglos las dos tradiciones convivieron con acuerdos: la casa sigue la costumbre, y el dinero, la ley islámica. No siempre es fácil."
+    },
+    {
+     "s": 1,
+     "text": "¿Usted cree que la costumbre protege a las mujeres?"
+    },
+    {
+     "s": 0,
+     "text": "Mi hija estudia derecho y dice que sí: una mujer con casa propia nunca se queda en la calle. Yo solo sé que mi madre mantuvo esta casa sola."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Quién hereda la casa en la tradición minangkabau?",
+     "options": [
+      "Los hijos varones",
+      "El hermano mayor",
+      "Las hijas"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué hacían tradicionalmente los jóvenes?",
+     "options": [
+      "Se iban a otras ciudades",
+      "Se quedaban en casa",
+      "Estudiaban religión"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué sigue la ley islámica en el acuerdo?",
+     "options": [
+      "La casa",
+      "El dinero",
+      "La tierra"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué estudia la hija de Mardiah?",
+     "options": [
+      "Medicina",
+      "Cocina",
+      "Derecho"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Quién hereda la casa en tu familia?",
+     "model": "En mi familia se reparte entre todos los hermanos."
+    },
+    {
+     "q": "¿Las tradiciones pueden proteger a las mujeres?",
+     "model": "Algunas sí, pero otras las limitan mucho."
+    },
+    {
+     "q": "¿Es posible mezclar costumbre y religión?",
+     "model": "Creo que sí, muchas familias lo hacen sin pensarlo."
+    }
+   ],
+   "gaps": "Así es, y durante siglos las dos [tradiciones] [convivieron] con [acuerdos]: la casa sigue la [costumbre], y el dinero, la ley islámica. No siempre es fácil.",
+   "glossary": [
+    {
+     "word": "heredan",
+     "meaning": "reciben de los padres cuando mueren"
+    },
+    {
+     "word": "fortuna",
+     "meaning": "suerte o dinero"
+    },
+    {
+     "word": "convivieron",
+     "meaning": "existieron juntas"
+    },
+    {
+     "word": "mantuvo",
+     "meaning": "cuidó y pagó"
+    }
+   ]
+  },
+  {
+   "id": "komodo",
+   "title": "Corales que se quedan blancos",
+   "place": "Un arrecife en el parque de Komodo",
+   "context": "Alex, de Perú, bucea con Maria, que trabaja en un proyecto para salvar corales.",
+   "speakers": [
+    {
+     "name": "Maria",
+     "country": "Cuba",
+     "voice": "es-CU-BelkysNeural"
+    },
+    {
+     "name": "Alex",
+     "country": "Perú",
+     "voice": "es-PE-AlexNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "¿Ves esa parte blanca del arrecife? Hace un año estaba llena de colores."
+    },
+    {
+     "s": 1,
+     "text": "¿Qué pasó? ¿Alguien la rompió?"
+    },
+    {
+     "s": 0,
+     "text": "No. El agua se calentó durante semanas. Cuando hace demasiado calor, el coral expulsa las algas que le dan comida y color. Se queda blanco, y si el calor sigue, muere."
+    },
+    {
+     "s": 1,
+     "text": "¿Y qué hacen ustedes?"
+    },
+    {
+     "s": 0,
+     "text": "Cultivamos trozos de coral que aguantan más calor y los plantamos en estructuras de metal. Pero a veces me siento como una jardinera en un incendio."
+    },
+    {
+     "s": 1,
+     "text": "¿Por qué?"
+    },
+    {
+     "s": 0,
+     "text": "Porque plantamos cien y mueren cincuenta. El verdadero problema son las emisiones del mundo entero, incluidos los aviones que traen a mis alumnos."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cómo estaba esa parte hace un año?",
+     "options": [
+      "Llena de colores",
+      "Blanca",
+      "Rota"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Por qué se queda blanco el coral?",
+     "options": [
+      "Por la basura",
+      "Por los barcos",
+      "Por el calor del agua"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Dónde plantan los trozos de coral?",
+     "options": [
+      "En la playa",
+      "En estructuras de metal",
+      "En el barco"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cuál es el verdadero problema, según Maria?",
+     "options": [
+      "Los peces",
+      "Los turistas en la playa",
+      "Las emisiones del mundo entero"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Tiene sentido hacer algo pequeño contra un problema global?",
+     "model": "Sí, porque si todos hacemos algo, cambia."
+    },
+    {
+     "q": "¿Viajarías menos en avión por el clima?",
+     "model": "Quizá, pero es difícil si tu familia vive lejos."
+    },
+    {
+     "q": "¿Viste algún cambio en la naturaleza de tu país?",
+     "model": "Sí, ahora llueve menos y hace más calor."
+    }
+   ],
+   "gaps": "Cultivamos trozos de [coral] que [aguantan] más [calor] y los [plantamos] en estructuras de metal. Pero a veces me siento como una jardinera en un incendio.",
+   "glossary": [
+    {
+     "word": "arrecife",
+     "meaning": "grupo de corales en el mar"
+    },
+    {
+     "word": "expulsa",
+     "meaning": "saca fuera"
+    },
+    {
+     "word": "aguantan",
+     "meaning": "resisten"
+    },
+    {
+     "word": "emisiones",
+     "meaning": "gases que salen de coches, fábricas y aviones"
+    }
+   ]
+  }
+ ]
+}

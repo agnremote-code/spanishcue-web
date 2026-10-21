@@ -1,0 +1,482 @@
+{
+ "game": "israel",
+ "level": "A2",
+ "items": [
+  {
+   "id": "tel-aviv",
+   "title": "Un trabajo en una startup",
+   "place": "Una oficina de Tel Aviv",
+   "context": "Emilio, de República Dominicana, tiene una entrevista con Dana, programadora y jefa de equipo.",
+   "speakers": [
+    {
+     "name": "Dana",
+     "country": "Costa Rica",
+     "voice": "es-CR-MariaNeural"
+    },
+    {
+     "name": "Emilio",
+     "country": "República Dominicana",
+     "voice": "es-DO-EmilioNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Bienvenido. Como ves, la oficina es pequeña: somos doce personas y un perro."
+    },
+    {
+     "s": 1,
+     "text": "¿Un perro? ¿En la oficina?"
+    },
+    {
+     "s": 0,
+     "text": "Sí, se llama Bug. Muchas empresas aquí dejan traer perros. Dicen que bajan el estrés."
+    },
+    {
+     "s": 1,
+     "text": "¿Y cómo es el horario?"
+    },
+    {
+     "s": 0,
+     "text": "Bastante libre. Pero trabajamos mucho: si el producto falla, nadie se va a casa."
+    },
+    {
+     "s": 1,
+     "text": "En mi país las empresas son más formales. Aquí nadie lleva corbata."
+    },
+    {
+     "s": 0,
+     "text": "Nadie. Y a todos nos llamamos por el nombre, incluso al director. Aquí se discute todo, sin miedo."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuántas personas trabajan en la oficina?",
+     "options": [
+      "Doce",
+      "Veinte",
+      "Cien"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Por qué hay perros en las oficinas?",
+     "options": [
+      "Para vigilar",
+      "Para bajar el estrés",
+      "Para jugar con los niños"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cuándo no se va nadie a casa?",
+     "options": [
+      "Los viernes",
+      "En vacaciones",
+      "Si el producto falla"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cómo llaman al director?",
+     "options": [
+      "Por el nombre",
+      "Señor director",
+      "Por el apellido"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Te gustaría trabajar con un perro en la oficina?",
+     "model": "Sí, pero algunos compañeros tienen alergia."
+    },
+    {
+     "q": "¿Prefieres un trabajo formal o informal?",
+     "model": "Prefiero algo informal, pero con reglas claras."
+    },
+    {
+     "q": "¿Discutes con tu jefe?",
+     "model": "A veces, pero con respeto."
+    }
+   ],
+   "gaps": "Sí, se llama Bug. Muchas [empresas] aquí dejan [traer] [perros]. Dicen que bajan el [estrés].",
+   "glossary": [
+    {
+     "word": "estrés",
+     "meaning": "nervios y presión"
+    },
+    {
+     "word": "horario",
+     "meaning": "horas de trabajo"
+    },
+    {
+     "word": "falla",
+     "meaning": "no funciona bien"
+    },
+    {
+     "word": "corbata",
+     "meaning": "tela larga que se lleva en el cuello con traje"
+    }
+   ]
+  },
+  {
+   "id": "jerusalen",
+   "title": "Todo cierra el viernes",
+   "place": "El mercado Mahane Yehuda",
+   "context": "Belkys, de Cuba, compra en el mercado el viernes a mediodía. Shira vende especias.",
+   "speakers": [
+    {
+     "name": "Shira",
+     "country": "España",
+     "voice": "es-ES-ElviraNeural"
+    },
+    {
+     "name": "Belkys",
+     "country": "Cuba",
+     "voice": "es-CU-BelkysNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Rápido, rápido, que en dos horas cerramos. ¿Qué te pongo?"
+    },
+    {
+     "s": 1,
+     "text": "¿Por qué hay tanta gente? ¡No se puede caminar!"
+    },
+    {
+     "s": 0,
+     "text": "Es viernes. Esta noche empieza el shabat y mañana todo está cerrado: tiendas, autobuses, restaurantes. Todos compran para la cena."
+    },
+    {
+     "s": 1,
+     "text": "¿Los autobuses también? ¿Y cómo se mueve la gente?"
+    },
+    {
+     "s": 0,
+     "text": "Caminando, o en taxi. Muchos se quedan en casa con la familia. A mí me encanta: es el único día sin teléfono."
+    },
+    {
+     "s": 1,
+     "text": "Entonces quiero canela y comino para cocinar hoy."
+    },
+    {
+     "s": 0,
+     "text": "Aquí tienes. Y te regalo un poco de zaatar. ¡Shabat shalom!"
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuándo cierra el mercado?",
+     "options": [
+      "Mañana",
+      "En dos horas",
+      "A medianoche"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué empieza esta noche?",
+     "options": [
+      "Una boda",
+      "Un concierto",
+      "El shabat"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué no funciona el sábado?",
+     "options": [
+      "Los autobuses",
+      "Los taxis",
+      "Las casas"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué le regala Shira?",
+     "options": [
+      "Canela",
+      "Zaatar",
+      "Comino"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Tienes un día sin teléfono?",
+     "model": "No, pero me gustaría."
+    },
+    {
+     "q": "¿Qué día es especial para tu familia?",
+     "model": "El domingo, comemos todos juntos."
+    },
+    {
+     "q": "¿Qué especias usas en tu cocina?",
+     "model": "Uso mucho comino y pimentón."
+    }
+   ],
+   "gaps": "Caminando, o en [taxi]. Muchos se [quedan] en [casa] con la [familia]. A mí me encanta: es el único día sin teléfono.",
+   "glossary": [
+    {
+     "word": "shabat",
+     "meaning": "día de descanso judío"
+    },
+    {
+     "word": "canela",
+     "meaning": "especia dulce de color marrón"
+    },
+    {
+     "word": "comino",
+     "meaning": "especia de sabor fuerte"
+    },
+    {
+     "word": "regalo",
+     "meaning": "doy algo sin cobrar"
+    }
+   ]
+  },
+  {
+   "id": "norte",
+   "title": "Pescar en un lago antiguo",
+   "place": "El lago de Galilea",
+   "context": "Lorena, de El Salvador, sale en barca con Moshe, pescador del lago.",
+   "speakers": [
+    {
+     "name": "Moshe",
+     "country": "Bolivia",
+     "voice": "es-BO-MarceloNeural"
+    },
+    {
+     "name": "Lorena",
+     "country": "El Salvador",
+     "voice": "es-SV-LorenaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Mi padre pescaba aquí, y mi abuelo también. Ahora casi no hay peces."
+    },
+    {
+     "s": 1,
+     "text": "¿Por qué? El lago parece muy limpio."
+    },
+    {
+     "s": 0,
+     "text": "Está limpio, pero se pescó demasiado. Durante dos años el gobierno prohibió pescar para que los peces volvieran."
+    },
+    {
+     "s": 1,
+     "text": "¿Y usted de qué vivía esos años?"
+    },
+    {
+     "s": 0,
+     "text": "Llevaba turistas en la barca. Les contaba historias del lago. Muchos vienen por la Biblia, porque aquí pasaron muchas historias de Jesús."
+    },
+    {
+     "s": 1,
+     "text": "¿Y cuál es el pescado típico?"
+    },
+    {
+     "s": 0,
+     "text": "El pez de San Pedro. Se come frito, con limón. Esta noche le invito a probarlo."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Quién pescaba antes en el lago?",
+     "options": [
+      "Su hermano",
+      "Su hijo",
+      "Su padre y su abuelo"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Por qué hay pocos peces?",
+     "options": [
+      "Porque se pescó demasiado",
+      "Por el agua sucia",
+      "Por el calor"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué hizo el gobierno?",
+     "options": [
+      "Cerró el lago",
+      "Prohibió pescar dos años",
+      "Compró barcos"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cómo se come el pez de San Pedro?",
+     "options": [
+      "Crudo",
+      "Con arroz",
+      "Frito, con limón"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Hay un trabajo que pasa de padres a hijos en tu familia?",
+     "model": "Sí, en mi familia todos son maestros."
+    },
+    {
+     "q": "¿Está bien prohibir la pesca para proteger los peces?",
+     "model": "Sí, aunque es difícil para los pescadores."
+    },
+    {
+     "q": "¿Te gusta el pescado frito?",
+     "model": "Sí, con limón y ensalada."
+    }
+   ],
+   "gaps": "Llevaba [turistas] en la [barca]. Les contaba [historias] del [lago]. Muchos vienen por la Biblia, porque aquí pasaron muchas historias de Jesús.",
+   "glossary": [
+    {
+     "word": "pescar",
+     "meaning": "sacar peces del agua"
+    },
+    {
+     "word": "barca",
+     "meaning": "barco pequeño"
+    },
+    {
+     "word": "prohibió",
+     "meaning": "no permitió"
+    },
+    {
+     "word": "frito",
+     "meaning": "cocinado en aceite caliente"
+    }
+   ]
+  },
+  {
+   "id": "sur",
+   "title": "Una noche sin luz",
+   "place": "El cráter Ramón",
+   "context": "Juan, de Costa Rica, mira las estrellas con Noam, astrónomo aficionado.",
+   "speakers": [
+    {
+     "name": "Noam",
+     "country": "México",
+     "voice": "es-MX-JorgeNeural"
+    },
+    {
+     "name": "Juan",
+     "country": "Costa Rica",
+     "voice": "es-CR-JuanNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Apague la linterna, por favor. Aquí intentamos que no haya ninguna luz artificial."
+    },
+    {
+     "s": 1,
+     "text": "¡Guau! Nunca había visto tantas estrellas. ¿Eso blanco es una nube?"
+    },
+    {
+     "s": 0,
+     "text": "No, es la Vía Láctea, nuestra galaxia. En las ciudades ya casi nadie puede verla, por la contaminación lumínica."
+    },
+    {
+     "s": 1,
+     "text": "¿Y por qué aquí se ve tan bien?"
+    },
+    {
+     "s": 0,
+     "text": "Porque es desierto: el aire es seco, casi nunca hay nubes y el pueblo más cercano usa luces especiales, bajas y amarillas."
+    },
+    {
+     "s": 1,
+     "text": "¿Este cráter lo hizo un meteorito?"
+    },
+    {
+     "s": 0,
+     "text": "No, aunque todos lo piensan. Lo hizo el agua, durante millones de años. Es un valle de erosión."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué tiene que apagar Juan?",
+     "options": [
+      "La linterna",
+      "El teléfono",
+      "El fuego"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué es lo blanco del cielo?",
+     "options": [
+      "Una nube",
+      "Humo",
+      "La Vía Láctea"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cómo son las luces del pueblo?",
+     "options": [
+      "Blancas y altas",
+      "Bajas y amarillas",
+      "Azules"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué hizo el cráter?",
+     "options": [
+      "Un meteorito",
+      "Un volcán",
+      "El agua"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Ves estrellas desde tu casa?",
+     "model": "Muy pocas, porque vivo en el centro."
+    },
+    {
+     "q": "¿Te gustaría dormir en el desierto?",
+     "model": "Sí, para ver el cielo, pero con una buena manta."
+    },
+    {
+     "q": "¿Te interesa el espacio?",
+     "model": "Sí, me encantan los documentales sobre planetas."
+    }
+   ],
+   "gaps": "Porque es [desierto]: el [aire] es [seco], casi nunca hay [nubes] y el pueblo más cercano usa luces especiales, bajas y amarillas.",
+   "glossary": [
+    {
+     "word": "estrella",
+     "meaning": "luz pequeña del cielo de noche"
+    },
+    {
+     "word": "galaxia",
+     "meaning": "grupo enorme de estrellas"
+    },
+    {
+     "word": "contaminación lumínica",
+     "meaning": "demasiada luz artificial de noche"
+    },
+    {
+     "word": "seco",
+     "meaning": "sin agua"
+    }
+   ]
+  }
+ ]
+}

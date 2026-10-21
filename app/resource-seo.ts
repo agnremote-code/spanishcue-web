@@ -81,6 +81,9 @@ lessonBySlug.set("spanish-conversation-activity-b1-mexico", lessons.find(lesson 
 lessonBySlug.set("spanish-conversation-activity-b1-irlanda-en-relieve", lessons.find(lesson => lesson.id === 33)!);
 lessonBySlug.set("spanish-conversation-activity-a2-b1-australia-en-movimiento", lessons.find(lesson => lesson.id === 30)!);
 lessonBySlug.set("spanish-conversation-activity-b1-suiza-en-relieve", lessons.find(lesson => lesson.id === 29)!);
+// Israel and Indonesia too.
+lessonBySlug.set("spanish-conversation-activity-b1-israel-en-capas", lessons.find(lesson => lesson.id === 25)!);
+lessonBySlug.set("spanish-conversation-activity-a1-indonesia-fantastica", lessons.find(lesson => lesson.id === 24)!);
 
 function cleanText(value: string): string {
   return value.replace(/\s+/g, " ").trim();
@@ -139,6 +142,8 @@ export const immersiveWorldGameByLessonId: ReadonlyMap<number, string> = new Map
   [33, "irlanda"],
   [30, "australia"],
   [29, "suiza"],
+  [25, "israel"],
+  [24, "indonesia"],
   [223, "noche"],
   [226, "bosque"],
   [237, "casino"],

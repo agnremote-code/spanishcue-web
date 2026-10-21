@@ -1531,6 +1531,86 @@
    "seconds": 92.24,
    "src": "/audio/escucha-3d/hospital-c2-vip.mp3"
   },
+  "indonesia/a0-bali": {
+   "hash": "e7374cc0769681a9cf8d",
+   "seconds": 26.64,
+   "src": "/audio/escucha-3d/indonesia-a0-bali.mp3"
+  },
+  "indonesia/a0-java": {
+   "hash": "82206231189a4f6e06a3",
+   "seconds": 31.3,
+   "src": "/audio/escucha-3d/indonesia-a0-java.mp3"
+  },
+  "indonesia/a0-komodo": {
+   "hash": "5ffcde0480c81f29fcfb",
+   "seconds": 32.11,
+   "src": "/audio/escucha-3d/indonesia-a0-komodo.mp3"
+  },
+  "indonesia/a0-sumatra": {
+   "hash": "68a9e82180b0a8978592",
+   "seconds": 30.17,
+   "src": "/audio/escucha-3d/indonesia-a0-sumatra.mp3"
+  },
+  "indonesia/a1-bali": {
+   "hash": "c54250acb8e80cb7a2b3",
+   "seconds": 44.5,
+   "src": "/audio/escucha-3d/indonesia-a1-bali.mp3"
+  },
+  "indonesia/a1-java": {
+   "hash": "d9524f09af7ee4da3b89",
+   "seconds": 40.28,
+   "src": "/audio/escucha-3d/indonesia-a1-java.mp3"
+  },
+  "indonesia/a1-komodo": {
+   "hash": "d3d0bbdcaac3d21b747c",
+   "seconds": 35.55,
+   "src": "/audio/escucha-3d/indonesia-a1-komodo.mp3"
+  },
+  "indonesia/a1-sumatra": {
+   "hash": "050e30aee343247b1f62",
+   "seconds": 36.1,
+   "src": "/audio/escucha-3d/indonesia-a1-sumatra.mp3"
+  },
+  "indonesia/a2-bali": {
+   "hash": "988800c1b45defc859c6",
+   "seconds": 42.95,
+   "src": "/audio/escucha-3d/indonesia-a2-bali.mp3"
+  },
+  "indonesia/a2-java": {
+   "hash": "75025dbe04b9d67e07e5",
+   "seconds": 42.71,
+   "src": "/audio/escucha-3d/indonesia-a2-java.mp3"
+  },
+  "indonesia/a2-komodo": {
+   "hash": "51f12d428b2a7e74a7a6",
+   "seconds": 47.32,
+   "src": "/audio/escucha-3d/indonesia-a2-komodo.mp3"
+  },
+  "indonesia/a2-sumatra": {
+   "hash": "04dc708d63289866e123",
+   "seconds": 41.75,
+   "src": "/audio/escucha-3d/indonesia-a2-sumatra.mp3"
+  },
+  "indonesia/b1-bali": {
+   "hash": "afbca74b80e72974390c",
+   "seconds": 61.28,
+   "src": "/audio/escucha-3d/indonesia-b1-bali.mp3"
+  },
+  "indonesia/b1-java": {
+   "hash": "62671a2a812029659208",
+   "seconds": 53.15,
+   "src": "/audio/escucha-3d/indonesia-b1-java.mp3"
+  },
+  "indonesia/b1-komodo": {
+   "hash": "eb9437642f8ceda39485",
+   "seconds": 48.62,
+   "src": "/audio/escucha-3d/indonesia-b1-komodo.mp3"
+  },
+  "indonesia/b1-sumatra": {
+   "hash": "988246fcb8aeca741eba",
+   "seconds": 53.32,
+   "src": "/audio/escucha-3d/indonesia-b1-sumatra.mp3"
+  },
   "irlanda/a0-cork": {
    "hash": "849144c571458df47918",
    "seconds": 27.34,
@@ -1610,6 +1690,86 @@
    "hash": "6698c640d6566f01ab01",
    "seconds": 60.63,
    "src": "/audio/escucha-3d/irlanda-b1-kerry.mp3"
+  },
+  "israel/a0-jerusalen": {
+   "hash": "d6f12f0d006ec050aea9",
+   "seconds": 26.4,
+   "src": "/audio/escucha-3d/israel-a0-jerusalen.mp3"
+  },
+  "israel/a0-norte": {
+   "hash": "b7eedba3295c4c6da631",
+   "seconds": 29.06,
+   "src": "/audio/escucha-3d/israel-a0-norte.mp3"
+  },
+  "israel/a0-sur": {
+   "hash": "8de88d3871c4b38d580e",
+   "seconds": 27.34,
+   "src": "/audio/escucha-3d/israel-a0-sur.mp3"
+  },
+  "israel/a0-tel-aviv": {
+   "hash": "0bc503e85b2109db3486",
+   "seconds": 28.42,
+   "src": "/audio/escucha-3d/israel-a0-tel-aviv.mp3"
+  },
+  "israel/a1-jerusalen": {
+   "hash": "8ddad8025a2a658e4c47",
+   "seconds": 43.01,
+   "src": "/audio/escucha-3d/israel-a1-jerusalen.mp3"
+  },
+  "israel/a1-norte": {
+   "hash": "9cb83ecc93ba6b4334e5",
+   "seconds": 46.16,
+   "src": "/audio/escucha-3d/israel-a1-norte.mp3"
+  },
+  "israel/a1-sur": {
+   "hash": "98c09ad2d2c290116f3d",
+   "seconds": 38.86,
+   "src": "/audio/escucha-3d/israel-a1-sur.mp3"
+  },
+  "israel/a1-tel-aviv": {
+   "hash": "acbef20bd98ee1045c1a",
+   "seconds": 40.22,
+   "src": "/audio/escucha-3d/israel-a1-tel-aviv.mp3"
+  },
+  "israel/a2-jerusalen": {
+   "hash": "dc5044eae301742b7848",
+   "seconds": 50.22,
+   "src": "/audio/escucha-3d/israel-a2-jerusalen.mp3"
+  },
+  "israel/a2-norte": {
+   "hash": "f47f1d52a87dac46505f",
+   "seconds": 45.42,
+   "src": "/audio/escucha-3d/israel-a2-norte.mp3"
+  },
+  "israel/a2-sur": {
+   "hash": "227a23c77730e34acb57",
+   "seconds": 52.34,
+   "src": "/audio/escucha-3d/israel-a2-sur.mp3"
+  },
+  "israel/a2-tel-aviv": {
+   "hash": "8781fec947546989fac1",
+   "seconds": 51.47,
+   "src": "/audio/escucha-3d/israel-a2-tel-aviv.mp3"
+  },
+  "israel/b1-jerusalen": {
+   "hash": "736d8f2550049fffeb2b",
+   "seconds": 56.34,
+   "src": "/audio/escucha-3d/israel-b1-jerusalen.mp3"
+  },
+  "israel/b1-norte": {
+   "hash": "6da23013d0c9429a1711",
+   "seconds": 64.31,
+   "src": "/audio/escucha-3d/israel-b1-norte.mp3"
+  },
+  "israel/b1-sur": {
+   "hash": "d684b73720186aac7b4c",
+   "seconds": 60.11,
+   "src": "/audio/escucha-3d/israel-b1-sur.mp3"
+  },
+  "israel/b1-tel-aviv": {
+   "hash": "3c1d2590045460ad5c65",
+   "seconds": 67.88,
+   "src": "/audio/escucha-3d/israel-b1-tel-aviv.mp3"
   },
   "mexico/a0-cdmx": {
    "hash": "dfd0916e7003c1c16c4b",

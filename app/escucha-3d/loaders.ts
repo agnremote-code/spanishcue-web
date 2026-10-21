@@ -95,6 +95,18 @@ export const LOADERS: Record<string, Record<string, Loader>> = (import.meta as u
     A2: () => import('./content/suiza/a2.json'),
     B1: () => import('./content/suiza/b1.json'),
   },
+  israel: {
+    A0: () => import('./content/israel/a0.json'),
+    A1: () => import('./content/israel/a1.json'),
+    A2: () => import('./content/israel/a2.json'),
+    B1: () => import('./content/israel/b1.json'),
+  },
+  indonesia: {
+    A0: () => import('./content/indonesia/a0.json'),
+    A1: () => import('./content/indonesia/a1.json'),
+    A2: () => import('./content/indonesia/a2.json'),
+    B1: () => import('./content/indonesia/b1.json'),
+  },
   mexico: {
     A0: () => import('./content/mexico/a0.json'),
     A1: () => import('./content/mexico/a1.json'),

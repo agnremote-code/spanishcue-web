@@ -1,0 +1,486 @@
+{
+ "game": "israel",
+ "level": "B1",
+ "items": [
+  {
+   "id": "tel-aviv",
+   "title": "Edificios blancos, ideas alemanas",
+   "place": "La Ciudad Blanca de Tel Aviv",
+   "context": "Ximena, de España, entrevista a Miriam, arquitecta, para un podcast de viajes.",
+   "speakers": [
+    {
+     "name": "Ximena",
+     "country": "España",
+     "voice": "es-ES-XimenaNeural"
+    },
+    {
+     "name": "Miriam",
+     "country": "Paraguay",
+     "voice": "es-PY-TaniaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Miriam, Tel Aviv tiene más de cuatro mil edificios de estilo Bauhaus. ¿Cómo llegaron aquí?"
+    },
+    {
+     "s": 1,
+     "text": "Con los arquitectos judíos que huían de Alemania en los años treinta. Habían estudiado en la escuela Bauhaus y trajeron sus ideas: líneas simples, balcones largos, nada de decoración."
+    },
+    {
+     "s": 0,
+     "text": "Pero adaptaron el estilo al clima, ¿verdad?"
+    },
+    {
+     "s": 1,
+     "text": "Sí, y eso es lo más interesante. Las ventanas son pequeñas para que no entre tanto sol, y los edificios están levantados sobre columnas para que el viento del mar pase por debajo."
+    },
+    {
+     "s": 0,
+     "text": "Hoy muchos están en mal estado. ¿Por qué no se restauran?"
+    },
+    {
+     "s": 1,
+     "text": "Porque restaurar es carísimo y los dueños prefieren construir torres nuevas. La ciudad permite añadir pisos arriba si restauran el edificio original. Es un acuerdo que funciona, aunque algunos dicen que estropea el estilo."
+    },
+    {
+     "s": 0,
+     "text": "Y para usted, ¿vale la pena conservarlos?"
+    },
+    {
+     "s": 1,
+     "text": "Sin duda. Cuentan la historia de gente que llegó sin nada y construyó una ciudad entera."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuántos edificios Bauhaus hay en Tel Aviv?",
+     "options": [
+      "Más de cuatro mil",
+      "Unos cuatrocientos",
+      "Cuarenta"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Por qué las ventanas son pequeñas?",
+     "options": [
+      "Por el ruido",
+      "Para que no entre tanto sol",
+      "Porque eran baratas"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Para qué están levantados sobre columnas?",
+     "options": [
+      "Para aparcar coches",
+      "Por los terremotos",
+      "Para que pase el viento del mar"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué permite la ciudad si se restaura el edificio?",
+     "options": [
+      "No pagar impuestos",
+      "Pintarlo de colores",
+      "Añadir pisos arriba"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Hay edificios de un estilo especial en tu ciudad?",
+     "model": "Sí, en el centro hay muchos edificios coloniales."
+    },
+    {
+     "q": "¿Qué es más importante: conservar edificios viejos o construir vivienda nueva?",
+     "model": "Creo que hay que hacer las dos cosas, pero con un plan."
+    },
+    {
+     "q": "¿Cómo influye el clima en las casas de tu país?",
+     "model": "En mi país las casas tienen techos altos para estar frescas."
+    }
+   ],
+   "gaps": "Porque restaurar es [carísimo] y los [dueños] prefieren [construir] torres [nuevas]. La ciudad permite añadir pisos arriba si restauran el edificio original. Es un acuerdo que funciona, aunque algunos dicen que estropea el estilo.",
+   "glossary": [
+    {
+     "word": "huían",
+     "meaning": "escapaban de un peligro"
+    },
+    {
+     "word": "balcones",
+     "meaning": "espacios abiertos en la fachada de una casa"
+    },
+    {
+     "word": "restaurar",
+     "meaning": "arreglar algo viejo como era antes"
+    },
+    {
+     "word": "estropea",
+     "meaning": "hace que algo quede peor"
+    }
+   ]
+  },
+  {
+   "id": "jerusalen",
+   "title": "Rollos en una cueva",
+   "place": "El Santuario del Libro",
+   "context": "Marcelo, de Bolivia, visita el museo con Daniel, investigador de manuscritos antiguos.",
+   "speakers": [
+    {
+     "name": "Daniel",
+     "country": "Venezuela",
+     "voice": "es-VE-SebastianNeural"
+    },
+    {
+     "name": "Marcelo",
+     "country": "Bolivia",
+     "voice": "es-BO-MarceloNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "En 1947 un pastor beduino buscaba una cabra perdida cerca del mar Muerto. Tiró una piedra dentro de una cueva y escuchó algo que se rompía."
+    },
+    {
+     "s": 1,
+     "text": "¿Y qué había dentro?"
+    },
+    {
+     "s": 0,
+     "text": "Vasijas de barro con rollos de pergamino. Eran textos de hace más de dos mil años, entre ellos los manuscritos más antiguos de la Biblia hebrea que se conocen."
+    },
+    {
+     "s": 1,
+     "text": "¿Y cómo se conservaron tanto tiempo?"
+    },
+    {
+     "s": 0,
+     "text": "Por el clima del desierto: muy seco, sin humedad. Lo curioso es que al principio el pastor vendió algunos rollos a un comerciante de Belén casi por nada."
+    },
+    {
+     "s": 1,
+     "text": "¿Y el edificio por qué tiene esta forma blanca, como una tapa?"
+    },
+    {
+     "s": 0,
+     "text": "Representa la tapa de las vasijas donde se encontraron. Y el agua que la rodea la protege del fuego. Hoy, además, todos los rollos están digitalizados: cualquiera puede verlos desde su casa."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué buscaba el pastor?",
+     "options": [
+      "Una cabra perdida",
+      "Agua",
+      "Un tesoro"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué había dentro de las vasijas?",
+     "options": [
+      "Monedas",
+      "Rollos de pergamino",
+      "Joyas"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Por qué se conservaron los rollos?",
+     "options": [
+      "Por el frío",
+      "Por la sal",
+      "Por el clima seco del desierto"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué representa la forma del edificio?",
+     "options": [
+      "Una montaña",
+      "La tapa de las vasijas",
+      "Una cueva"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Es bueno que los documentos antiguos se puedan ver por internet?",
+     "model": "Sí, así todo el mundo puede estudiarlos."
+    },
+    {
+     "q": "¿Qué objeto antiguo te gustaría encontrar?",
+     "model": "Me gustaría encontrar una carta de hace muchos siglos."
+    },
+    {
+     "q": "¿Quién debería ser dueño de un descubrimiento así?",
+     "model": "Creo que debería ser del país, no de una persona."
+    }
+   ],
+   "gaps": "Vasijas de [barro] con [rollos] de [pergamino]. Eran [textos] de hace más de dos mil años, entre ellos los manuscritos más antiguos de la Biblia hebrea que se conocen.",
+   "glossary": [
+    {
+     "word": "pastor",
+     "meaning": "persona que cuida animales en el campo"
+    },
+    {
+     "word": "vasija",
+     "meaning": "recipiente para guardar cosas"
+    },
+    {
+     "word": "pergamino",
+     "meaning": "piel de animal preparada para escribir"
+    },
+    {
+     "word": "digitalizados",
+     "meaning": "pasados a formato de computadora"
+    }
+   ]
+  },
+  {
+   "id": "norte",
+   "title": "Una aldea en la montaña",
+   "place": "Una aldea drusa del Carmelo",
+   "context": "Paloma, de Estados Unidos, conversa con Wafa en su restaurante familiar.",
+   "speakers": [
+    {
+     "name": "Wafa",
+     "country": "México",
+     "voice": "es-MX-DaliaNeural"
+    },
+    {
+     "name": "Paloma",
+     "country": "Estados Unidos",
+     "voice": "es-US-PalomaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Los drusos somos una comunidad pequeña, unas ciento cincuenta mil personas en Israel. Hablamos árabe, pero nuestra religión es distinta: tiene raíces en el islam, aunque se separó hace mil años."
+    },
+    {
+     "s": 1,
+     "text": "He leído que no se puede entrar en la religión drusa. ¿Es así?"
+    },
+    {
+     "s": 0,
+     "text": "Es así. No se puede convertir nadie, ni entrar ni salir. Por eso la comunidad es tan unida. Además, solo algunos conocen los textos sagrados: los llamamos los sabios."
+    },
+    {
+     "s": 1,
+     "text": "Y a diferencia de otros árabes, los jóvenes drusos hacen el servicio militar, ¿no?"
+    },
+    {
+     "s": 0,
+     "text": "Sí, desde los años cincuenta. Muchos se sienten muy israelíes. Pero en los últimos años algunos jóvenes se preguntan si el Estado los trata como iguales, sobre todo cuando se habla de vivienda y tierras."
+    },
+    {
+     "s": 1,
+     "text": "Es una identidad complicada."
+    },
+    {
+     "s": 0,
+     "text": "Como todas, ¿no? Pruebe este pan con zaatar mientras lo piensa."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuántos drusos viven en Israel?",
+     "options": [
+      "Unos ciento cincuenta mil",
+      "Un millón",
+      "Diez mil"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué idioma hablan los drusos?",
+     "options": [
+      "Hebreo",
+      "Turco",
+      "Árabe"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Se puede entrar en la religión drusa?",
+     "options": [
+      "Sí, con un curso",
+      "No, nadie puede convertirse",
+      "Solo por matrimonio"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué preguntan algunos jóvenes?",
+     "options": [
+      "Si deben estudiar fuera",
+      "Si deben dejar la aldea",
+      "Si el Estado los trata como iguales"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Tu identidad tiene varias partes?",
+     "model": "Sí, me siento de mi ciudad, de mi país y un poco latinoamericana."
+    },
+    {
+     "q": "¿Hay comunidades pequeñas en tu país con tradiciones propias?",
+     "model": "Sí, en el norte hay pueblos con su propio idioma."
+    },
+    {
+     "q": "¿Qué hace que una persona se sienta parte de un país?",
+     "model": "Creo que el idioma, la familia y que la traten con justicia."
+    }
+   ],
+   "gaps": "Es así. No se puede [convertir] [nadie], ni [entrar] ni [salir]. Por eso la comunidad es tan unida. Además, solo algunos conocen los textos sagrados: los llamamos los sabios.",
+   "glossary": [
+    {
+     "word": "raíces",
+     "meaning": "orígenes de algo"
+    },
+    {
+     "word": "convertir",
+     "meaning": "cambiar de religión"
+    },
+    {
+     "word": "sabio",
+     "meaning": "persona que sabe mucho"
+    },
+    {
+     "word": "vivienda",
+     "meaning": "casa o lugar para vivir"
+    }
+   ]
+  },
+  {
+   "id": "sur",
+   "title": "Pueblos que no están en el mapa",
+   "place": "Una tienda beduina en el Néguev",
+   "context": "Tania, de Paraguay, visita a Salma, que organiza encuentros entre turistas y familias beduinas.",
+   "speakers": [
+    {
+     "name": "Salma",
+     "country": "Guinea Ecuatorial",
+     "voice": "es-GQ-TeresaNeural"
+    },
+    {
+     "name": "Tania",
+     "country": "Paraguay",
+     "voice": "es-PY-TaniaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Bienvenida. Antes de hablar, el café. Es la costumbre: el primer vaso es para el invitado, y se sirve poco, nunca lleno."
+    },
+    {
+     "s": 1,
+     "text": "Gracias. Salma, ¿su familia siempre vivió aquí?"
+    },
+    {
+     "s": 0,
+     "text": "Mis abuelos eran nómadas: se movían con las cabras según la lluvia. Hoy casi nadie vive así. Mi pueblo existe desde hace setenta años, pero el Estado no lo reconoce."
+    },
+    {
+     "s": 1,
+     "text": "¿Qué significa que no lo reconoce?"
+    },
+    {
+     "s": 0,
+     "text": "Que no aparece en los mapas oficiales. No tenemos red de agua ni electricidad pública; usamos paneles solares. Y si construimos una casa, pueden ordenar demolerla porque no hay permiso."
+    },
+    {
+     "s": 1,
+     "text": "¿Y por qué no les dan los permisos?"
+    },
+    {
+     "s": 0,
+     "text": "El gobierno quiere que nos mudemos a ciudades planificadas. Algunos aceptan; otros dicen que es su tierra. Yo quiero que mis hijas estudien y que, a la vez, sepan preparar este café."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Para quién es el primer vaso de café?",
+     "options": [
+      "Para el invitado",
+      "Para el abuelo",
+      "Para la anfitriona"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cómo vivían sus abuelos?",
+     "options": [
+      "En la ciudad",
+      "Eran nómadas",
+      "En un kibutz"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cómo tienen electricidad?",
+     "options": [
+      "De la red pública",
+      "Con un motor",
+      "Con paneles solares"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué quiere el gobierno?",
+     "options": [
+      "Que se muden a ciudades planificadas",
+      "Que vivan como nómadas",
+      "Que se vayan del país"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué costumbre de hospitalidad hay en tu país?",
+     "model": "En mi país siempre ofrecemos mate a la visita."
+    },
+    {
+     "q": "¿Es posible mantener una forma de vida tradicional hoy?",
+     "model": "Es difícil, pero se pueden mantener algunas partes."
+    },
+    {
+     "q": "¿Qué parte de tu cultura quieres transmitir a tus hijos?",
+     "model": "Quiero que sepan cocinar los platos de mi abuela."
+    }
+   ],
+   "gaps": "Que no aparece en los [mapas] [oficiales]. No tenemos [red] de [agua] ni electricidad pública; usamos paneles solares. Y si construimos una casa, pueden ordenar demolerla porque no hay permiso.",
+   "glossary": [
+    {
+     "word": "nómada",
+     "meaning": "persona que no vive en un solo lugar"
+    },
+    {
+     "word": "reconoce",
+     "meaning": "acepta algo como oficial"
+    },
+    {
+     "word": "demoler",
+     "meaning": "destruir un edificio"
+    },
+    {
+     "word": "planificadas",
+     "meaning": "hechas con un plan"
+    }
+   ]
+  }
+ ]
+}

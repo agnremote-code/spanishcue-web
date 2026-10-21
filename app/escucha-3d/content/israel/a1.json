@@ -1,0 +1,478 @@
+{
+ "game": "israel",
+ "level": "A1",
+ "items": [
+  {
+   "id": "tel-aviv",
+   "title": "Paletas en la arena",
+   "place": "La playa de Gordon",
+   "context": "Carlos, de Honduras, ve a Yoni jugar con dos paletas y una pelota pequeña.",
+   "speakers": [
+    {
+     "name": "Carlos",
+     "country": "Honduras",
+     "voice": "es-HN-CarlosNeural"
+    },
+    {
+     "name": "Yoni",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Hola. ¿Qué es ese juego? Hace mucho ruido."
+    },
+    {
+     "s": 1,
+     "text": "Se llama matkot. Es el juego de la playa en Israel. Juegan dos personas con paletas de madera."
+    },
+    {
+     "s": 0,
+     "text": "¿Y quién gana?"
+    },
+    {
+     "s": 1,
+     "text": "Nadie gana. La idea es no dejar caer la pelota. Es un juego de equipo."
+    },
+    {
+     "s": 0,
+     "text": "¡Qué simpático! ¿Puedo probar?"
+    },
+    {
+     "s": 1,
+     "text": "Claro. Toma esta paleta. Pero cuidado con la gente que pasa."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cómo se llama el juego?",
+     "options": [
+      "Matkot",
+      "Fútbol",
+      "Vóley"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿De qué son las paletas?",
+     "options": [
+      "De plástico",
+      "De madera",
+      "De metal"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Quién gana?",
+     "options": [
+      "El más fuerte",
+      "El más rápido",
+      "Nadie"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué no deben dejar caer?",
+     "options": [
+      "La pelota",
+      "La paleta",
+      "La toalla"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué juegos hay en la playa de tu país?",
+     "model": "Jugamos al fútbol y al vóley."
+    },
+    {
+     "q": "¿Prefieres ganar o jugar en equipo?",
+     "model": "Prefiero jugar en equipo con amigos."
+    },
+    {
+     "q": "¿Qué llevas a la playa?",
+     "model": "Llevo agua, una toalla y un libro."
+    }
+   ],
+   "gaps": "Nadie gana. La idea es no [dejar] [caer] la [pelota]. Es un juego de [equipo].",
+   "glossary": [
+    {
+     "word": "paleta",
+     "meaning": "tabla pequeña para golpear la pelota"
+    },
+    {
+     "word": "ruido",
+     "meaning": "sonido fuerte"
+    },
+    {
+     "word": "gana",
+     "meaning": "es el mejor en un juego"
+    },
+    {
+     "word": "equipo",
+     "meaning": "grupo que juega junto"
+    }
+   ]
+  },
+  {
+   "id": "jerusalen",
+   "title": "Las cuatro partes",
+   "place": "La Ciudad Vieja de Jerusalén",
+   "context": "Sofía, de Bolivia, hace una visita con Elías, guía de la Ciudad Vieja.",
+   "speakers": [
+    {
+     "name": "Elías",
+     "country": "Colombia",
+     "voice": "es-CO-GonzaloNeural"
+    },
+    {
+     "name": "Sofía",
+     "country": "Bolivia",
+     "voice": "es-BO-SofiaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "La Ciudad Vieja es pequeña, menos de un kilómetro cuadrado, pero tiene cuatro barrios."
+    },
+    {
+     "s": 1,
+     "text": "¿Cuatro? ¿Cuáles son?"
+    },
+    {
+     "s": 0,
+     "text": "El barrio judío, el musulmán, el cristiano y el armenio. Cada uno tiene sus calles, sus tiendas y sus olores."
+    },
+    {
+     "s": 1,
+     "text": "Y la muralla, ¿es muy vieja?"
+    },
+    {
+     "s": 0,
+     "text": "Tiene casi quinientos años. Hay ocho puertas. Ahora entramos por la puerta de Jaffa."
+    },
+    {
+     "s": 1,
+     "text": "¡Hay muchísima gente!"
+    },
+    {
+     "s": 0,
+     "text": "Sí, viene gente de todo el mundo. Quédese cerca de mí."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuántos barrios tiene la Ciudad Vieja?",
+     "options": [
+      "Dos",
+      "Cuatro",
+      "Seis"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cuántos años tiene la muralla?",
+     "options": [
+      "Cien",
+      "Mil",
+      "Casi quinientos"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuántas puertas hay?",
+     "options": [
+      "Ocho",
+      "Tres",
+      "Diez"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Por qué puerta entran?",
+     "options": [
+      "La de Damasco",
+      "La de Jaffa",
+      "La de los Leones"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Tu ciudad tiene un barrio antiguo?",
+     "model": "Sí, el centro histórico es muy bonito."
+    },
+    {
+     "q": "¿Te gustan las visitas guiadas?",
+     "model": "Sí, porque aprendo muchas cosas."
+    },
+    {
+     "q": "¿Hay barrios muy diferentes en tu ciudad?",
+     "model": "Sí, cada barrio tiene su estilo."
+    }
+   ],
+   "gaps": "Tiene casi [quinientos] [años]. Hay [ocho] [puertas]. Ahora entramos por la puerta de Jaffa.",
+   "glossary": [
+    {
+     "word": "barrio",
+     "meaning": "parte de una ciudad"
+    },
+    {
+     "word": "muralla",
+     "meaning": "pared alta alrededor de una ciudad"
+    },
+    {
+     "word": "puerta",
+     "meaning": "lugar por donde se entra"
+    },
+    {
+     "word": "olor",
+     "meaning": "lo que se siente con la nariz"
+    }
+   ]
+  },
+  {
+   "id": "norte",
+   "title": "Comer todos juntos",
+   "place": "El comedor de un kibutz",
+   "context": "Ramona, de República Dominicana, almuerza en un kibutz. Ruti vive allí desde niña.",
+   "speakers": [
+    {
+     "name": "Ruti",
+     "country": "Argentina",
+     "voice": "es-AR-ElenaNeural"
+    },
+    {
+     "name": "Ramona",
+     "country": "República Dominicana",
+     "voice": "es-DO-RamonaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Este es el comedor. Aquí comemos todos juntos, unas trescientas personas."
+    },
+    {
+     "s": 1,
+     "text": "¿Todos los días?"
+    },
+    {
+     "s": 0,
+     "text": "Antes sí, tres veces al día. Ahora solo el almuerzo. La cena es en casa."
+    },
+    {
+     "s": 1,
+     "text": "¿Y quién cocina para tanta gente?"
+    },
+    {
+     "s": 0,
+     "text": "Hay un equipo de cocina. Yo trabajo aquí los martes. También trabajo en las vacas."
+    },
+    {
+     "s": 1,
+     "text": "¿Y los niños dónde comen?"
+    },
+    {
+     "s": 0,
+     "text": "Con sus padres, aquí. Después juegan fuera, en el césped."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuántas personas comen en el comedor?",
+     "options": [
+      "Unas trescientas",
+      "Unas treinta",
+      "Unas tres mil"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué comida hacen juntos ahora?",
+     "options": [
+      "El desayuno",
+      "La cena",
+      "El almuerzo"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué día trabaja Ruti en la cocina?",
+     "options": [
+      "El lunes",
+      "El martes",
+      "El viernes"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Dónde juegan los niños después?",
+     "options": [
+      "En la escuela",
+      "En la playa",
+      "En el césped"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Comes con muchas personas a veces?",
+     "model": "Sí, en las fiestas de la familia."
+    },
+    {
+     "q": "¿Te gustaría vivir en una comunidad?",
+     "model": "No sé, me gusta tener mi espacio."
+    },
+    {
+     "q": "¿Trabajarías con animales?",
+     "model": "Sí, me encantan las vacas."
+    }
+   ],
+   "gaps": "Hay un [equipo] de [cocina]. Yo [trabajo] aquí los [martes]. También trabajo en las vacas.",
+   "glossary": [
+    {
+     "word": "comedor",
+     "meaning": "sala grande para comer"
+    },
+    {
+     "word": "almuerzo",
+     "meaning": "la comida del mediodía"
+    },
+    {
+     "word": "equipo",
+     "meaning": "grupo de personas que trabajan juntas"
+    },
+    {
+     "word": "césped",
+     "meaning": "hierba corta y verde"
+    }
+   ]
+  },
+  {
+   "id": "sur",
+   "title": "Subir de noche",
+   "place": "El camino de Masada",
+   "context": "Rodrigo, de El Salvador, sube a Masada. Itai es guía.",
+   "speakers": [
+    {
+     "name": "Itai",
+     "country": "Paraguay",
+     "voice": "es-PY-MarioNeural"
+    },
+    {
+     "name": "Rodrigo",
+     "country": "El Salvador",
+     "voice": "es-SV-RodrigoNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Son las cuatro y media. Si subimos ahora, llegamos arriba antes del amanecer."
+    },
+    {
+     "s": 1,
+     "text": "¿Cuánto tiempo se tarda?"
+    },
+    {
+     "s": 0,
+     "text": "Una hora, más o menos. Hay setecientos escalones. Lleve agua y una linterna."
+    },
+    {
+     "s": 1,
+     "text": "¿No hay un teleférico?"
+    },
+    {
+     "s": 0,
+     "text": "Sí, pero abre a las ocho. Y el sol sale a las seis."
+    },
+    {
+     "s": 1,
+     "text": "Entonces caminamos. ¡Vamos!"
+    },
+    {
+     "s": 0,
+     "text": "Desde arriba se ve el mar Muerto y el desierto. Vale la pena."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿A qué hora empiezan a subir?",
+     "options": [
+      "A las cuatro y media",
+      "A las seis",
+      "A las ocho"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cuántos escalones hay?",
+     "options": [
+      "Cien",
+      "Mil",
+      "Setecientos"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿A qué hora abre el teleférico?",
+     "options": [
+      "A las seis",
+      "A las ocho",
+      "A las cinco"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué se ve desde arriba?",
+     "options": [
+      "La ciudad",
+      "Un bosque",
+      "El mar Muerto y el desierto"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Te levantas temprano para ver el amanecer?",
+     "model": "Solo en vacaciones."
+    },
+    {
+     "q": "¿Prefieres caminar o subir en teleférico?",
+     "model": "Prefiero caminar, es más divertido."
+    },
+    {
+     "q": "¿Qué llevas en una excursión?",
+     "model": "Llevo agua, fruta y una gorra."
+    }
+   ],
+   "gaps": "Una [hora], más o menos. Hay [setecientos] [escalones]. Lleve agua y una [linterna].",
+   "glossary": [
+    {
+     "word": "amanecer",
+     "meaning": "cuando sale el sol"
+    },
+    {
+     "word": "escalones",
+     "meaning": "partes de una escalera"
+    },
+    {
+     "word": "linterna",
+     "meaning": "luz pequeña que se lleva en la mano"
+    },
+    {
+     "word": "teleférico",
+     "meaning": "cabina que sube colgada de un cable"
+    }
+   ]
+  }
+ ]
+}
