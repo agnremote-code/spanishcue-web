@@ -30,7 +30,7 @@ Parallel streams: **3D = Sofia**, **technical SEO = Alejandro**, **QA/integratio
 
 | Rank | Item | Owner → reviewer | State |
 |---|---|---|---|
-| 1 | LES-001 «La feria de Villaluz» A2 PRO 3D world (LESSON-DECISION-001 v5 + BOARD-DECISION-001 overlays) | Martin (content) → Sofia (build); G4 by Alejandro or a fresh agent; QA Martin | **Shipped through PR #251 (2026-10-21)**, pending production verification (see Current work). Open follow-ups: G5(b) real-device check (featured flag stays off until then), T5 fps on a real Android, the cover still shows the baile host in its old spot |
+| 1 | LES-001 «La feria de Villaluz» A2 PRO 3D world (LESSON-DECISION-001 v5 + BOARD-DECISION-001 overlays) | Martin (content) → Sofia (build); G4 by Alejandro or a fresh agent; QA Martin | **Deployed 2026-10-21**: PR #251 → `6383b3b6`, production run 39549567404 (workflow smoke passed). The changed-URL smoke is still owed (see Current work). Open follow-ups: G5(b) real-device check (featured flag stays off until then), T5 fps on a real Android, the cover still shows the baile host in its old spot |
 | 2 | «Gustar y verbos como gustar» A1 PRO grammar class (`a1.gram.gustar`, `a1.gram.tambien-tampoco`, A2 ext. `a2.gram.doler`; house format of `new-lessons.json`) | Martin (content) → Sofia or a fresh agent (wiring); G4 Alejandro | after the Feria content |
 | P | Technical SEO, highest impact first (parallel stream) | Alejandro → Sofia (code review), Martin (QA) | First fix = PR #224, **merged `c06c01c` and deployed 2026-10-20** (production run 39359743902, workflow smoke passed). The changed-URL content smoke is still owed (PUBLISHED.md, Pending verification) |
 | P+1 | COMP-001 ProfeDeELE.com benchmark (plan below) | Alejandro + Martin | after the first technical SEO fix |
@@ -107,7 +107,12 @@ All five run on `claude-opus-5-5`, follow [ROUTINES.md](ROUTINES.md), and each i
     - fps on a real Android;
     - nobody has listened to the TTS clips;
     - the AC12 pilot (post-launch).
-  - **Release:** see the PR and the follow-up records for the merged SHA and the staging and production runs. This sandbox cannot reach spanishcue.com (proxy 403), so the changed-URL smoke depends on the deploy workflow's own smoke plus WebFetch, whichever reaches the site.
+  - **Release:**
+    - PR #251 merged as `6383b3b6de1d09398523619bedca77602da7fd06`.
+    - Runs: CI + Auto Merge 39547852346, staging 39549313371 and production 39549567404, all successful.
+    - The production workflow's own smoke passed (`"passed": true`, origin https://spanishcue.com) and the rollback was skipped.
+    - Before marking ready, the run waited for #252 (another agent's security PR) to finish deploying (production run 39547506213), then merged main `06753def` and re-ran the full checks (`npm test` exit 0, 1,236 pass).
+    - **Changed-URL smoke not yet run:** this sandbox, WebFetch and the staging host are all blocked by the egress proxy. So LES-001 stays under "Pending verification" in PUBLISHED.md.
   - **QA notes left for a follow-up:**
     - dispose textures in World3D cleanup;
     - wire the level radios when a second level ships;

@@ -35,8 +35,11 @@ Entry format:
   | baile | `a2.fun.anecdota` (closing) |
 
   Both modes are in the same world: Conversación (8 scenes, with «Busca y describe» at 1, 6 and 7 plus a transfer set) and Comprensión auditiva (8 own listenings, TTS).
-- PR / merged SHA / production deploy run: PR #251. The merged SHA and the staging and production runs are recorded by the follow-up records.
-- Production smoke evidence: **not yet**. This entry moves to Published only after the anonymous 302, the teacher page 200 and the audio 403 are verified on spanishcue.com.
+- PR / merged SHA / production deploy run: PR #251 → `6383b3b6de1d09398523619bedca77602da7fd06`. CI + Auto Merge 39547852346 success; staging 39549313371 success; production 39549567404 success (2026-10-21 05:29 UTC).
+- Production smoke evidence:
+  - The workflow's own "Production smoke" step passed (`"passed": true`, origin https://spanishcue.com). Rollback was skipped.
+  - That generic smoke does not cover the Feria URLs. **The changed-URL smoke is still owed**: `/la-feria-de-villaluz` anonymous → 302 `/acceso`; the teacher page → 200 with a "3D" title; `/audio/escucha-3d/feria-a2-baile.mp3` → 403.
+  - The 2026-10-21 routine could not reach spanishcue.com or staging (egress proxy). This entry moves to Published once a run with access verifies them.
 - Concept file / LQG review file:
   - design: LESSON-DECISION-001 v5;
   - LQG: [docs/audits/la-feria-de-villaluz-pedagogy-20261021.md](../audits/la-feria-de-villaluz-pedagogy-20261021.md);
