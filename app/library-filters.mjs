@@ -41,6 +41,12 @@ export function familyLessonsForCategory(
     );
   }
   if (category !== 'Conversación') return lessons;
+  // The library shows two routes: Gramática and Conversación. Conversación holds
+  // every other class (Escucha, Fonética and Vocabulario included), split by how
+  // the class is built: a registered 3D world goes to Mundos 3D, the rest to Clásicas.
+  if (conversationMode === 'worlds3d' || conversationMode === 'classic') {
+    return lessons.filter(lesson => lesson.category !== 'Gramática' && Boolean(lesson.world3d) === (conversationMode === 'worlds3d'));
+  }
   if (conversationMode === 'all') {
     return lessons.filter(lesson => lesson.category === 'Conversación');
   }

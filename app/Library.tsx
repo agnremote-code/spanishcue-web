@@ -82,6 +82,7 @@ export type CatalogItem = {
   conversationMode?: "worlds" | "play" | "boards";
   collection?: string;
   countryCollection?: boolean;
+  world3d?: boolean;
   verbalSystem?: boolean;
   verbalMood?: string;
   temporalPlane?: string;
@@ -787,7 +788,7 @@ export default function Library({
   );
   const [level, setLevel] = useState("Todos");
   const [category, setCategory] = useState<"Todas" | Category>("Todas");
-  const [conversationMode, setConversationMode] = useState<"all" | "worlds" | "play" | "boards" | "countries">("all");
+  const [conversationMode, setConversationMode] = useState<"all" | "worlds" | "play" | "boards" | "countries" | "worlds3d" | "classic">("all");
   const [grammarTopic, setGrammarTopic] = useState("all");
   const [query, setQuery] = useState("");
   const [catalogSearchActive, setCatalogSearchActive] = useState(false);
@@ -818,9 +819,11 @@ export default function Library({
     selectedLevel?.focus();
   }, [level]);
   const conversationFamilyLabel = (
-    mode: "all" | "worlds" | "play" | "boards" | "countries",
+    mode: "all" | "worlds" | "play" | "boards" | "countries" | "worlds3d" | "classic",
   ) => {
     if (mode === "all") return locale === "es" ? "TODAS" : "ALL";
+    if (mode === "worlds3d") return locale === "es" ? "MUNDOS 3D" : "3D WORLDS";
+    if (mode === "classic") return locale === "es" ? "CLÁSICAS" : "CLASSICS";
     if (mode === "worlds") return locale === "es" ? "UNIVERSOS" : "WORLDS";
     if (mode === "play") return locale === "es" ? "MODO PLAY" : "PLAY MODE";
     if (mode === "boards") return locale === "es" ? "TABLEROS" : "BOARDS";
@@ -880,9 +883,12 @@ export default function Library({
   const familyLessonSource = useMemo(() => {
     return familyLessonsForCategory(lessons, { category, conversationMode, grammarTopic });
   }, [category, conversationMode, grammarTopic, lessons]);
+  // Conversación also holds Escucha, Fonética and Vocabulario: its sources are already narrowed.
+  const filterCategory = category === "Conversación" ? "Todas" : category;
+  const conversationChooser = view === "Biblioteca" && category === "Conversación" && conversationMode === "all";
   const categoryLevels = useMemo(
-    () => availableLevels(familyLessonSource, category),
-    [category, familyLessonSource],
+    () => availableLevels(familyLessonSource, filterCategory),
+    [filterCategory, familyLessonSource],
   );
   const levelCountSource = familyLessonSource;
   const catalogQuery = catalogSearchActive ? query : "";
@@ -905,12 +911,12 @@ export default function Library({
   const filtered = useMemo(
     () => {
       const source = view === "Biblioteca" ? familyLessonSource : lessons;
-      const items=filterLessons(source, { level, category, query: catalogQuery }) as Lesson[];
+      const items=filterLessons(source, { level, category: view === "Biblioteca" ? filterCategory : category, query: catalogQuery }) as Lesson[];
       if (view !== "Biblioteca") return items;
       if (category === "Todas") return items.filter((lesson) => !lesson.countryCollection);
       return items;
     },
-    [level, category, catalogQuery, familyLessonSource, lessons, view],
+    [level, category, filterCategory, catalogQuery, familyLessonSource, lessons, view],
   );
   const visibleLessons =
     view === "Favoritas"
@@ -944,6 +950,10 @@ export default function Library({
     return [{ key: levels.join("-"), title, parts, total, entries }];
   });
   const routeCountLabel = (targetCategory: Category) => {
+    if (targetCategory === "Conversación") {
+      const count = lessons.filter((lesson) => lesson.category !== "Gramática").length;
+      return `${count} ${count === 1 ? t("common.class") : t("common.classes")}`;
+    }
     const destinationSource = familyLessonsForCategory(lessons, {
       category: targetCategory,
       conversationMode: "all",
@@ -983,7 +993,7 @@ export default function Library({
     setCatalogSearchActive(false);
     setLevel("Todos");
     setCategory(nextCategory);
-    if (nextCategory !== "Conversación") setConversationMode("all");
+    setConversationMode("all");
     setGrammarTopic("all");
     if (sidebarOpen) closeSidebar();
     scrollToResults();
@@ -1467,7 +1477,7 @@ export default function Library({
                                 {
                                   filterLessons(levelCountSource, {
                                     level: item,
-                                    category,
+                                    category: filterCategory,
                                     query: catalogQuery,
                                   }).length
                                 }
@@ -1682,8 +1692,10 @@ export default function Library({
                     ? t("library.countries")
                     : category === "Gramática" && grammarTopic !== "all"
                       ? grammarTopics.find(topic => topic.id === grammarTopic)?.label
-                    : category === "Conversación"
+                    : category === "Conversación" && conversationMode !== "all"
                       ? `${categoryLabel(category)} · ${conversationFamilyLabel(conversationMode)}`
+                    : category === "Conversación"
+                      ? categoryLabel(category)
                     : category !== "Todas"
                       ? categoryLabel(category)
                     : level === "Todos"
@@ -1703,6 +1715,7 @@ export default function Library({
         {view === "Biblioteca" && (
           <section
             className="route-divider"
+            data-routes="2"
             aria-label={t("library.chooseRoutes")}
           >
             <button
@@ -1735,78 +1748,49 @@ export default function Library({
               </div>
               <i>{routeCountLabel("Conversación")}</i>
             </button>
-            <button
-              className={`route-card listening-route ${category === "Escucha" ? "active" : ""}`}
-              onClick={() => chooseCategory("Escucha")}
-              aria-pressed={category === "Escucha"}
-            >
-              <span className="route-mascot">
-                <img src="/brand/mascot/seated.webp" alt="" loading="lazy" decoding="async" />
-              </span>
-              <div>
-                <small>{t("common.route", { number: "03" })}</small>
-                <b>{t("category.listening")}</b>
-                <em>{t("library.listeningCopy")}</em>
-              </div>
-              <i>{routeCountLabel("Escucha")}</i>
-            </button>
-            <button
-              className={`route-card phonetics-route ${category === "Fonética" ? "active" : ""}`}
-              onClick={() => chooseCategory("Fonética")}
-              aria-pressed={category === "Fonética"}
-            >
-              <span className="route-mascot">
-                <img src="/brand/mascot/speaking.webp" alt="" loading="lazy" decoding="async" />
-              </span>
-              <div>
-                <small>{t("common.route", { number: "04" })}</small>
-                <b>{t("category.pronunciation")}</b>
-                <em>{t("library.pronunciationCopy")}</em>
-              </div>
-              <i>{routeCountLabel("Fonética")}</i>
-            </button>
-            <button
-              className={`route-card vocabulary-route ${category === "Vocabulario" ? "active" : ""}`}
-              onClick={() => chooseCategory("Vocabulario")}
-              aria-pressed={category === "Vocabulario"}
-            >
-              <span className="route-mascot">
-                <img src="/brand/mascot/studying.webp" alt="" loading="lazy" decoding="async" />
-              </span>
-              <div>
-                <small>{t("common.route", { number: "05" })}</small>
-                <b>{t("category.vocabulary")}</b>
-                <em>{t("library.vocabularyCopy")}</em>
-              </div>
-              <i>{routeCountLabel("Vocabulario")}</i>
-            </button>
           </section>
         )}
         {view === "Biblioteca" && <AutoestudioLibraryEntry />}
-        {view === "Biblioteca" && category === "Conversación" && (
-          <section className="conversation-family-filter" aria-label={locale === "es" ? "Familias de conversación" : "Conversation families"}>
-            <div>
-              <small>{locale === "es" ? "FAMILIAS DE CONVERSACIÓN" : "CONVERSATION FAMILIES"}</small>
-              <strong>{conversationFamilyLabel(conversationMode)}</strong>
-            </div>
-            <nav aria-label={locale === "es" ? "Familias de conversación" : "Conversation families"}>
-              {([
-                "all",
-                "worlds",
-                "play",
-                "boards",
-                "countries",
-              ] as const).map((value) => {
-                const destination = familyLessonsForCategory(lessons, {
-                  category: "Conversación",
-                  conversationMode: value,
-                });
-                const count = filterLessons(destination, {
-                  category: "Conversación",
-                }).length;
-                return <button key={value} className={`${conversationMode===value?"active":""} ${value==="countries"?"countries-tab":""}`} aria-pressed={conversationMode===value} onClick={()=>{if(value==="countries"){openCountries();return}trackMarketingEvent("filter_used",{filter:"conversation_mode",value});setConversationMode(value);setLevel("Todos");setCatalogSearchActive(false);scrollToResults()}}><span>{value==="play"?"▶":value==="boards"?"▦":value==="worlds"?"◈":value==="countries"?"★":"●"}</span><b>{conversationFamilyLabel(value)}</b><small>{count}</small></button>;
-              })}
-            </nav>
+        {view === "Biblioteca" && category === "Conversación" && conversationMode !== "countries" && (
+          <section className={`conversation-routes${conversationChooser ? "" : " compact"}`} aria-label={locale === "es" ? "Formatos de conversación" : "Conversation formats"}>
+            {(["worlds3d", "classic"] as const).map((value) => {
+              const items = familyLessonsForCategory(lessons, { category: "Conversación", conversationMode: value }) as Lesson[];
+              const featured = value === "worlds3d" ? [223, 240, 237] : [];
+              const covers = [...featured.map((id) => items.find((lesson: Lesson) => lesson.id === id)), ...items]
+                .filter((lesson, index, all): lesson is Lesson => Boolean(lesson?.image?.startsWith("/")) && all.indexOf(lesson) === index)
+                .slice(0, 3);
+              const active = conversationMode === value;
+              return (
+                <button
+                  key={value}
+                  type="button"
+                  className={`conversation-route-card route-${value}${active ? " active" : ""}`}
+                  aria-pressed={active}
+                  onClick={() => {
+                    trackMarketingEvent("filter_used", { filter: "conversation_mode", value });
+                    setConversationMode(value);
+                    setLevel("Todos");
+                    setCatalogSearchActive(false);
+                    scrollToResults();
+                  }}
+                >
+                  <span className="conversation-route-art" aria-hidden="true">
+                    {covers.map((lesson) => <img key={lesson.id} src={lesson.image} alt="" loading="lazy" decoding="async" />)}
+                    <img className="conversation-route-mascot" src={value === "worlds3d" ? "/brand/mascot/speaking.webp" : "/brand/mascot/seated.webp"} alt="" loading="lazy" decoding="async" />
+                  </span>
+                  <span className="conversation-route-copy">
+                    <small>{items.length} {items.length === 1 ? t("common.class") : t("common.classes")}</small>
+                    <b>{value === "worlds3d" ? (locale === "es" ? "Mundos 3D" : "3D worlds") : (locale === "es" ? "Clásicas" : "Classics")}</b>
+                    <em>
+                      {value === "worlds3d"
+                        ? (locale === "es" ? "Mundos inmersivos para recorrer: conversación y comprensión auditiva en el mismo lugar." : "Immersive worlds to explore: conversation and listening in the same place.")
+                        : (locale === "es" ? "Conversación, escucha, fonética y vocabulario con actividades guiadas en pantalla." : "Conversation, listening, pronunciation and vocabulary with guided on-screen activities.")}
+                    </em>
+                    <i>{active ? "✓" : "→"}</i>
+                  </span>
+                </button>
+              );
+            })}
           </section>
         )}
         {view === "Biblioteca" && category === "Gramática" && (
@@ -1825,7 +1809,7 @@ export default function Library({
             <Link href="/sistema-verbal">Consultar el mapa de modos y tiempos →</Link>
           </section>
         )}
-        {view === "Biblioteca" && (
+        {view === "Biblioteca" && !conversationChooser && (
           <section
             className="category-levels"
             aria-label={
@@ -1846,7 +1830,7 @@ export default function Library({
               >
                 {t("common.all")}{" "}
                 <small>
-                  {filterLessons(levelCountSource, { category, query: catalogQuery }).length}
+                  {filterLessons(levelCountSource, { category: filterCategory, query: catalogQuery }).length}
                 </small>
               </button>
               {categoryLevels.map((item) => (
@@ -1859,7 +1843,7 @@ export default function Library({
                   {item}{" "}
                   <small>
                     {
-                      filterLessons(levelCountSource, { level: item, category, query: catalogQuery })
+                      filterLessons(levelCountSource, { level: item, category: filterCategory, query: catalogQuery })
                         .length
                     }
                   </small>
@@ -1868,7 +1852,7 @@ export default function Library({
             </nav>
           </section>
         )}
-        {view === "Biblioteca" && (
+        {view === "Biblioteca" && !conversationChooser && (
           <div className="catalog-status" role="status" aria-live="polite">
             <span>
               {filtered.length}{" "}
@@ -1927,7 +1911,7 @@ export default function Library({
               </section>
             ))}
           </section>
-        ) : lessonGrid(
+        ) : conversationChooser ? null : lessonGrid(
           view === "Plan" ? plannedLessons : visibleLessons,
           view === "Plan",
         )}

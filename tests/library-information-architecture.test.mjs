@@ -43,7 +43,7 @@ test("library shell follows category, family, level, lessons and removes duplica
   const library = await readFile(new URL("../app/Library.tsx", import.meta.url), "utf8");
 
   const category = library.indexOf('className="route-divider"');
-  const family = library.indexOf('className="conversation-family-filter"');
+  const family = library.indexOf('className={`conversation-routes');
   const level = library.indexOf('className="category-levels"');
   const lessons = library.indexOf('className="level-catalog-sections"');
 
