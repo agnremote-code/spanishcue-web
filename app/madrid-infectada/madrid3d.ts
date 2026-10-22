@@ -29,7 +29,7 @@ export type Zone3D = RegionScene & {
 };
 
 // ------------------------------------------------------------------ light
-const MOODS: Record<string, Light> = {
+export const MOODS: Record<string, Light> = {
   dawn: { sky: ['#2e3a50', '#d99a72'], fog: ['#8a7e72', 30, 160], sun: { color: '#ffc39a', intensity: 2.0, at: [-30, 22, 40] }, hemi: ['#b4c2d6', '#6a5a48', 1.25], exposure: 1.12 },
   smoke: { sky: ['#47463f', '#a39276'], fog: ['#837c6c', 22, 125], sun: { color: '#ffd29a', intensity: 1.7, at: [30, 34, 20] }, hemi: ['#bdb8a4', '#5a5246', 1.3], exposure: 1.12 },
   amber: { sky: ['#2f2c38', '#c98a52'], fog: ['#7e6654', 26, 140], sun: { color: '#ffb070', intensity: 1.9, at: [-35, 24, 25] }, hemi: ['#c4b4a2', '#5a4a3e', 1.25], exposure: 1.1 },
@@ -41,10 +41,10 @@ const MOODS: Record<string, Light> = {
 
 // ------------------------------------------------------------------ textures
 const cache = new Map<string, THREE.Texture>();
-const once = (key: string, make: () => THREE.Texture) => { let t = cache.get(key); if (!t) { t = make(); cache.set(key, t); } return t; };
+export const once = (key: string, make: () => THREE.Texture) => { let t = cache.get(key); if (!t) { t = make(); cache.set(key, t); } return t; };
 
 /** A Madrid facade tile: two windows wide, two floors high, with balconies; some broken, boarded or burnt. */
-function facadeTexture(color: string, style: string, seed: number, ruin: number) {
+export function facadeTexture(color: string, style: string, seed: number, ruin: number) {
   return canvas(256, 256, ctx => {
     const rand = random(seed);
     ctx.fillStyle = color; ctx.fillRect(0, 0, 256, 256);
@@ -109,9 +109,9 @@ function facadeTexture(color: string, style: string, seed: number, ruin: number)
   }, true);
 }
 
-const SPRAY = ['¿HAY ALGUIEN?', 'AGUA EN EL 3.º B', 'NO ESTÁIS SOLOS', 'MADRID RESISTE', 'VUELVE, MAMÁ', 'REFUGIO → PLAZA MAYOR', 'AQUÍ NO HAY COMIDA', 'TODOS SANOS · 4', 'NI UN PASO ATRÁS'];
+export const SPRAY = ['¿HAY ALGUIEN?', 'NO MIRES ATRÁS', 'AGUA EN EL 3.º B', 'ELLOS OYEN', 'MADRID RESISTE', 'NO SON TU FAMILIA', 'VUELVE, MAMÁ', 'APAGA LA LUZ', 'REFUGIO → PLAZA MAYOR', 'SIGUEN AQUÍ', 'AQUÍ NO HAY COMIDA', 'NO ABRAS', 'TODOS SANOS · 4', 'DE NOCHE NO', 'NI UN PASO ATRÁS', 'MUERTOS DENTRO'];
 /** The ground floor: metal shutters, a shop sign and spray paint. */
-function shopTexture(seed: number, mural: boolean) {
+export function shopTexture(seed: number, mural: boolean) {
   return canvas(512, 128, ctx => {
     const rand = random(seed);
     ctx.fillStyle = '#4a4c4e'; ctx.fillRect(0, 0, 512, 128);
@@ -129,10 +129,19 @@ function shopTexture(seed: number, mural: boolean) {
     }
     ctx.font = '700 22px "Arial Black", Arial, sans-serif'; ctx.fillStyle = ['#d23a2a', '#1a1a1a', '#e8e0d0'][seed % 3];
     ctx.save(); ctx.translate(40 + rand() * 300, 90); ctx.rotate(-0.06); ctx.fillText(SPRAY[seed % SPRAY.length], 0, 0); ctx.restore();
+    // Red handprints dragged down the shutters, and a painted cross on a door.
+    if (seed % 3 === 0) for (let k = 0; k < 3; k++) {
+      const hx = 30 + rand() * 450, hy = 40 + rand() * 40;
+      ctx.fillStyle = 'rgba(120,10,10,0.85)';
+      ctx.beginPath(); ctx.ellipse(hx, hy, 9, 11, 0, 0, 6.3); ctx.fill();
+      for (let f = 0; f < 5; f++) { ctx.fillRect(hx - 10 + f * 5, hy - 22 + Math.abs(f - 2) * 3, 3.4, 12); }
+      ctx.fillStyle = 'rgba(110,8,8,0.5)'; ctx.fillRect(hx - 6, hy + 8, 3, 18 + rand() * 30); ctx.fillRect(hx + 2, hy + 8, 2, 10 + rand() * 24);
+    }
+    if (seed % 4 === 1) { ctx.strokeStyle = 'rgba(150,20,20,0.9)'; ctx.lineWidth = 7; const cx = 60 + rand() * 380; ctx.beginPath(); ctx.moveTo(cx - 26, 44); ctx.lineTo(cx + 26, 112); ctx.moveTo(cx + 26, 44); ctx.lineTo(cx - 26, 112); ctx.stroke(); }
   });
 }
 
-function metroLogo() {
+export function metroLogo() {
   return once('metro-logo', () => canvas(256, 256, ctx => {
     ctx.clearRect(0, 0, 256, 256);
     ctx.save(); ctx.translate(128, 128); ctx.rotate(Math.PI / 4);
@@ -142,7 +151,7 @@ function metroLogo() {
     ctx.fillText('METRO', 128, 130);
   }));
 }
-function plate(text: string, bg: string, fg: string, w = 512, h = 128, font = 800) {
+export function plate(text: string, bg: string, fg: string, w = 512, h = 128, font = 800) {
   return canvas(w, h, ctx => {
     ctx.fillStyle = bg; ctx.fillRect(0, 0, w, h);
     ctx.strokeStyle = fg; ctx.lineWidth = 6; ctx.strokeRect(8, 8, w - 16, h - 16);
@@ -151,10 +160,10 @@ function plate(text: string, bg: string, fg: string, w = 512, h = 128, font = 80
     ctx.fillText(text, w / 2, h / 2 + 3, w - 30);
   });
 }
-const signMat = (tex: THREE.Texture, glowing = 0) => new THREE.MeshStandardMaterial({ map: tex, transparent: true, roughness: 0.6, ...(glowing ? { emissive: '#ffffff', emissiveMap: tex, emissiveIntensity: glowing } : {}) });
+export const signMat = (tex: THREE.Texture, glowing = 0) => new THREE.MeshStandardMaterial({ map: tex, transparent: true, roughness: 0.6, ...(glowing ? { emissive: '#ffffff', emissiveMap: tex, emissiveIntensity: glowing } : {}) });
 
 /** A clock face stopped at 6:17, the minute the city went quiet. */
-function clockFace() {
+export function clockFace() {
   return once('reloj', () => canvas(128, 128, ctx => {
     ctx.fillStyle = '#f4efe2'; ctx.beginPath(); ctx.arc(64, 64, 62, 0, 6.3); ctx.fill(); ctx.strokeStyle = '#1a1a1a'; ctx.lineWidth = 4; ctx.stroke();
     for (let i = 0; i < 12; i++) { const a = i / 12 * 6.283; ctx.fillStyle = '#1a1a1a'; ctx.fillRect(64 + Math.sin(a) * 52 - 2, 64 - Math.cos(a) * 52 - 2, 4, 4); }
@@ -163,7 +172,7 @@ function clockFace() {
   }));
 }
 
-function smokeTexture() {
+export function smokeTexture() {
   return once('smoke', () => canvas(64, 64, ctx => {
     const g = ctx.createRadialGradient(32, 32, 2, 32, 32, 31);
     g.addColorStop(0, 'rgba(255,255,255,0.8)'); g.addColorStop(1, 'rgba(255,255,255,0)');
@@ -172,7 +181,7 @@ function smokeTexture() {
 }
 
 // ------------------------------------------------------------------ pieces
-function building(group: THREE.Group, b: { x0: number; x1: number; z0: number; z1: number; h: number; color: string; ruin?: number; style?: string; seed?: number }, centre: { x: number; z: number }, low: boolean) {
+export function building(group: THREE.Group, b: { x0: number; x1: number; z0: number; z1: number; h: number; color: string; ruin?: number; style?: string; seed?: number }, centre: { x: number; z: number }, low: boolean) {
   const w = b.x1 - b.x0, d = b.z1 - b.z0, h = b.h, ruin = b.ruin ?? 0.3, seed = b.seed ?? 1, style = b.style ?? 'classic';
   const tex = facadeTexture(b.color, style, seed, ruin);
   const tile = style === 'modern' ? 7 : 6.4;
@@ -203,7 +212,7 @@ function building(group: THREE.Group, b: { x0: number; x1: number; z0: number; z
   return ruin > 0.7 ? new THREE.Vector3((b.x0 + b.x1) / 2, h + 1, (b.z0 + b.z1) / 2) : null;
 }
 
-type Life = {
+export type Life = {
   lamps: THREE.MeshStandardMaterial[];
   ambers: THREE.MeshStandardMaterial[];
   fires: { mat: THREE.MeshStandardMaterial; at: THREE.Vector3; seed: number }[];
@@ -300,7 +309,7 @@ function barricade(group: THREE.Group, p: { x: number; z: number; w?: number; r?
   group.add(g);
 }
 
-function propMesh(group: THREE.Group, p: Record<string, unknown> & { kind: string; x: number; z: number; r?: number; w?: number; d?: number; look?: string; name?: string }, life: Life, seed: number, zone: string, low: boolean) {
+export function propMesh(group: THREE.Group, p: Record<string, unknown> & { kind: string; x: number; z: number; r?: number; w?: number; d?: number; look?: string; name?: string }, life: Life, seed: number, zone: string, low: boolean) {
   const rand = random(seed);
   const at = (o: THREE.Object3D) => { o.position.set(p.x, o.position.y, p.z); o.rotation.y = p.r ?? 0; group.add(o); return o; };
   switch (p.kind) {
@@ -553,7 +562,7 @@ export function boat() {
 }
 
 // ------------------------------------------------------------------ landmarks
-function landmark(group: THREE.Group, l: Record<string, unknown> & { kind: string }, life: Life, low: boolean) {
+export function landmark(group: THREE.Group, l: Record<string, unknown> & { kind: string }, life: Life, low: boolean) {
   const stone = solid('#e8e0cc', 0.85), slate = solid('#2e3238', 0.6, 0.3), gold = solid('#c9a24a', 0.35, 0.8);
   const L = l as Record<string, number> & { kind: string };
   switch (l.kind) {
@@ -725,18 +734,19 @@ function landmark(group: THREE.Group, l: Record<string, unknown> & { kind: strin
 }
 
 // ------------------------------------------------------------------ people
-const ZOMBIE_SKIN = ['#9aa08a', '#8f9a86', '#a8a894', '#7e8a7a'];
-function zombieLook(seed: number) {
+const ZOMBIE_SKIN = ['#8e9a82', '#9aa08a', '#7a8670', '#a3a594', '#8b8f9a', '#9a9078'];
+export function zombieLook(seed: number) {
   const rand = random(seed);
   return {
     skin: ZOMBIE_SKIN[seed % ZOMBIE_SKIN.length], body: rand() < 0.5 ? 'f' : 'm', age: ['young', 'adult', 'old'][seed % 3], build: 'slim',
     top: ['shirt', 'suit', 'hoodie', 'tshirt', 'coat', 'scrubs'][seed % 6], topColor: ['#4a4a44', '#5a4a3a', '#3a4048', '#6a6a5a'][seed % 4],
-    bottom: 'pants', bottomColor: '#2e2e2a', hairStyle: ['short', 'long', 'bald', 'curly'][seed % 4], hairColor: '#3a3a34', extras: ['bruise'],
+    bottom: 'pants', bottomColor: '#2e2e2a', hairStyle: ['short', 'long', 'bald', 'curly'][seed % 4], hairColor: '#3a3a34',
+    extras: ['bruise', ...[['blood-shirt', 'blood-hands'], ['blood-head'], ['blood-arm', 'blood-leg'], ['blood-shirt', 'blood-head', 'bloody-palm'], ['bandage', 'blood-leg']][seed % 5]],
   };
 }
 
 // ------------------------------------------------------------------ the zone
-export function buildZone(id: string, { low, shadows }: { low: boolean; shadows: boolean }): Zone3D {
+export function buildZone(id: string, { low, shadows, labels }: { low: boolean; shadows: boolean; labels?: { gate?: string; back?: string } }): Zone3D {
   const z = layoutOf(id) as ReturnType<typeof layoutOf> & Record<string, never>;
   if (!z) throw new Error(`Unknown zone ${id}`);
   const group = new THREE.Group();
@@ -795,8 +805,8 @@ export function buildZone(id: string, { low, shadows }: { low: boolean; shadows:
     g.rotation.y = Math.atan2(centre.x - at.x, centre.z - at.z);
     group.add(g);
   };
-  if (z.gate && nextId) portal(z.gate as never, `${names[nextId]} →`, '#1f6a4a');
-  if (z.back && prevId) portal(z.back as never, `← ${names[prevId]}`, '#3a4458');
+  if (z.gate && nextId) portal(z.gate as never, labels?.gate ?? `${names[nextId]} →`, '#1f6a4a');
+  if (z.back && prevId) portal(z.back as never, labels?.back ?? `← ${names[prevId]}`, '#3a4458');
 
   // People of the circles (from the cast) and the survivors.
   const talkers: Talker[] = [];

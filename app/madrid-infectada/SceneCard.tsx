@@ -31,9 +31,11 @@ export function Bi({ t, as: Tag = 'span', className }: { t: Text; as?: 'span' | 
 }
 const plain = (t: Text) => (typeof t === 'string' ? t : t.es);
 
-export function speakerOf(who: string) {
+export type Person = { name: string; role: string; gender: 'f' | 'm' };
+export function speakerOf(who: string, people?: Record<string, Person>) {
   if (who === 'yo') return { name: 'Tú', gender: null as 'f' | 'm' | null, me: true };
   if (who.startsWith('*')) return { name: who.slice(1), gender: null, me: false };
+  if (people?.[who]) return { name: people[who].name, gender: people[who].gender, me: false };
   const member = CAST[who];
   return { name: member?.name ?? who, gender: (member?.gender ?? null) as 'f' | 'm' | null, me: false };
 }
@@ -51,10 +53,14 @@ type Props = {
   nextName: string | null;
   /** Madrid Río, the boat: the mission can close from here. */
   onFinale: (() => void) | null;
+  /** A survivor met in the street (not a circle of the story): who talks, and the band of the text. */
+  person?: Person | null;
+  people?: Record<string, Person>;
+  band?: string;
 };
 
-export function SceneCard({ id, zoneName, scene, level, teaching, done, onDone, onClose, onNext, nextName, onFinale }: Props) {
-  const main = CAST[spotById(id)?.cast[0] ?? ''];
+export function SceneCard({ id, zoneName, scene, level, teaching, done, onDone, onClose, onNext, nextName, onFinale, person, people, band }: Props) {
+  const main = person ? { name: person.name, full: person.name, role: person.role } : CAST[spotById(id)?.cast[0] ?? ''];
   const [reading, setReading] = useState<number | null>(null);
   const [pick, setPick] = useState<number | null>(null);
   const [talk, setTalk] = useState(false);
@@ -67,7 +73,7 @@ export function SceneCard({ id, zoneName, scene, level, teaching, done, onDone, 
 
   const play = () => {
     if (reading !== null) { stopScene(); setReading(null); return; }
-    const lines = scene.dialogue.map(([who, text]) => ({ text: plain(text), gender: speakerOf(who).gender }));
+    const lines = scene.dialogue.map(([who, text]) => ({ text: plain(text), gender: speakerOf(who, people).gender }));
     if (!speakScene(lines, i => setReading(i < 0 ? null : i), level === 'A0' || level === 'A1' ? 0.82 : 0.95)) setReading(null);
   };
   const onKey = (event: ReactKeyboardEvent<HTMLElement>) => {
@@ -84,7 +90,7 @@ export function SceneCard({ id, zoneName, scene, level, teaching, done, onDone, 
   return <>
     <section className="mi-card" role="dialog" aria-modal="false" aria-labelledby="mi-card-h" onKeyDown={onKey} onKeyUp={e => e.stopPropagation()} data-scene={id} data-level={level}>
       <header className="mi-card-head">
-        <p><span>{zoneName}</span><em>{main ? `${main.full} · ${main.role}` : ''}</em></p>
+        <p><span>{zoneName}{band && <small className="mi-band"> · Sobreviviente · {band}</small>}</span><em>{main ? `${main.full} · ${main.role}` : ''}</em></p>
         <button type="button" className="mi-x" onClick={onClose} aria-label="Cerrar y seguir explorando">×</button>
       </header>
       <div className="mi-card-body" ref={body} tabIndex={-1}>
@@ -97,7 +103,7 @@ export function SceneCard({ id, zoneName, scene, level, teaching, done, onDone, 
         </div>
         <ol className="mi-dialogue">
           {scene.dialogue.map(([who, text], i) => {
-            const s = speakerOf(who);
+            const s = speakerOf(who, people);
             return <li key={i} className={`${s.me ? 'is-me' : ''}${reading === i ? ' is-reading' : ''}`}><b>{s.name}</b><Bi t={text} /></li>;
           })}
         </ol>
@@ -119,7 +125,7 @@ export function SceneCard({ id, zoneName, scene, level, teaching, done, onDone, 
           <ul>{scene.words.map(w => <li key={plain(w)}><Bi t={w} /></li>)}</ul>
         </details>
         {(done || finished) && <div className="mi-after" role="status">
-          <p><b>Escena completada.</b> {nextName ? <>Te queda <b>{nextName}</b>.</> : 'Has hecho todas las escenas de este nivel.'}</p>
+          <p><b>Escena completada.</b> {nextName ? <>Te queda <b>{nextName}</b>.</> : person ? 'Hay más sobrevivientes por la ciudad: busca los 💬.' : 'Has hecho todas las escenas de este nivel.'}</p>
           <div className="mi-row">
             {onFinale && <button type="button" className="mi-primary" onClick={onFinale}>Subir a la barca →</button>}
             {onNext && <button type="button" className={onFinale ? 'mi-secondary' : 'mi-primary'} onClick={onNext}>Siguiente escena →</button>}
