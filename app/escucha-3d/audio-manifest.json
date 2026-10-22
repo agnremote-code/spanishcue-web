@@ -1771,6 +1771,356 @@
    "seconds": 67.88,
    "src": "/audio/escucha-3d/israel-b1-tel-aviv.mp3"
   },
+  "madrid/a0-atocha": {
+   "hash": "4dceea8238fc65dfd89b",
+   "seconds": 22.17,
+   "src": "/audio/escucha-3d/madrid-a0-atocha.mp3"
+  },
+  "madrid/a0-granvia": {
+   "hash": "27463caa9756241407ab",
+   "seconds": 31.39,
+   "src": "/audio/escucha-3d/madrid-a0-granvia.mp3"
+  },
+  "madrid/a0-hospital": {
+   "hash": "7197e39f0582eb29dd6e",
+   "seconds": 27.16,
+   "src": "/audio/escucha-3d/madrid-a0-hospital.mp3"
+  },
+  "madrid/a0-malasana": {
+   "hash": "2ad778dbe1b79b75e8bf",
+   "seconds": 23.39,
+   "src": "/audio/escucha-3d/madrid-a0-malasana.mp3"
+  },
+  "madrid/a0-metro": {
+   "hash": "1709ed572952283562a9",
+   "seconds": 27.26,
+   "src": "/audio/escucha-3d/madrid-a0-metro.mp3"
+  },
+  "madrid/a0-palacio": {
+   "hash": "095450f908d351e1cfcc",
+   "seconds": 21.57,
+   "src": "/audio/escucha-3d/madrid-a0-palacio.mp3"
+  },
+  "madrid/a0-plaza": {
+   "hash": "9bdfbfa41925824e50b3",
+   "seconds": 27.69,
+   "src": "/audio/escucha-3d/madrid-a0-plaza.mp3"
+  },
+  "madrid/a0-retiro": {
+   "hash": "3801d248ff18a486d6a1",
+   "seconds": 24.12,
+   "src": "/audio/escucha-3d/madrid-a0-retiro.mp3"
+  },
+  "madrid/a0-rio": {
+   "hash": "1d4b916685fe2d5cd327",
+   "seconds": 22.72,
+   "src": "/audio/escucha-3d/madrid-a0-rio.mp3"
+  },
+  "madrid/a0-sol": {
+   "hash": "417a7e7568c35185914d",
+   "seconds": 35.66,
+   "src": "/audio/escucha-3d/madrid-a0-sol.mp3"
+  },
+  "madrid/a1-atocha": {
+   "hash": "269ead5c066d8787155a",
+   "seconds": 38.02,
+   "src": "/audio/escucha-3d/madrid-a1-atocha.mp3"
+  },
+  "madrid/a1-granvia": {
+   "hash": "9d1756f8d6ee8580de9b",
+   "seconds": 38.52,
+   "src": "/audio/escucha-3d/madrid-a1-granvia.mp3"
+  },
+  "madrid/a1-hospital": {
+   "hash": "0727b1f53d1d4f8d7ea8",
+   "seconds": 38.66,
+   "src": "/audio/escucha-3d/madrid-a1-hospital.mp3"
+  },
+  "madrid/a1-malasana": {
+   "hash": "ba26899288a1bad6bb8a",
+   "seconds": 38.14,
+   "src": "/audio/escucha-3d/madrid-a1-malasana.mp3"
+  },
+  "madrid/a1-metro": {
+   "hash": "f2f21db70ba5fe20bf85",
+   "seconds": 42.05,
+   "src": "/audio/escucha-3d/madrid-a1-metro.mp3"
+  },
+  "madrid/a1-palacio": {
+   "hash": "16168eb63e606c8ceac4",
+   "seconds": 32.52,
+   "src": "/audio/escucha-3d/madrid-a1-palacio.mp3"
+  },
+  "madrid/a1-plaza": {
+   "hash": "bd96f8205afe92634465",
+   "seconds": 37.44,
+   "src": "/audio/escucha-3d/madrid-a1-plaza.mp3"
+  },
+  "madrid/a1-retiro": {
+   "hash": "e3f2a433eb2d9c7a3e24",
+   "seconds": 33.26,
+   "src": "/audio/escucha-3d/madrid-a1-retiro.mp3"
+  },
+  "madrid/a1-rio": {
+   "hash": "c7446806d59f643932a9",
+   "seconds": 32.95,
+   "src": "/audio/escucha-3d/madrid-a1-rio.mp3"
+  },
+  "madrid/a1-sol": {
+   "hash": "0eb1dd92271c7545f963",
+   "seconds": 42.41,
+   "src": "/audio/escucha-3d/madrid-a1-sol.mp3"
+  },
+  "madrid/a2-atocha": {
+   "hash": "d268ed73de7057e2d428",
+   "seconds": 42.21,
+   "src": "/audio/escucha-3d/madrid-a2-atocha.mp3"
+  },
+  "madrid/a2-granvia": {
+   "hash": "d67ba5f680147709321b",
+   "seconds": 47.83,
+   "src": "/audio/escucha-3d/madrid-a2-granvia.mp3"
+  },
+  "madrid/a2-hospital": {
+   "hash": "668f3df9f494f389561b",
+   "seconds": 49.2,
+   "src": "/audio/escucha-3d/madrid-a2-hospital.mp3"
+  },
+  "madrid/a2-malasana": {
+   "hash": "edaea0b67e521eea56b3",
+   "seconds": 41.93,
+   "src": "/audio/escucha-3d/madrid-a2-malasana.mp3"
+  },
+  "madrid/a2-metro": {
+   "hash": "35c54cd755679d1b4af2",
+   "seconds": 50.09,
+   "src": "/audio/escucha-3d/madrid-a2-metro.mp3"
+  },
+  "madrid/a2-palacio": {
+   "hash": "f50788b004da6e267204",
+   "seconds": 41.42,
+   "src": "/audio/escucha-3d/madrid-a2-palacio.mp3"
+  },
+  "madrid/a2-plaza": {
+   "hash": "492fdc2369060865582c",
+   "seconds": 44.35,
+   "src": "/audio/escucha-3d/madrid-a2-plaza.mp3"
+  },
+  "madrid/a2-retiro": {
+   "hash": "b7f41287ed63c942a18f",
+   "seconds": 45.02,
+   "src": "/audio/escucha-3d/madrid-a2-retiro.mp3"
+  },
+  "madrid/a2-rio": {
+   "hash": "2f85f348f27fcf53af9d",
+   "seconds": 44.47,
+   "src": "/audio/escucha-3d/madrid-a2-rio.mp3"
+  },
+  "madrid/a2-sol": {
+   "hash": "8736856e0255a5360091",
+   "seconds": 45.62,
+   "src": "/audio/escucha-3d/madrid-a2-sol.mp3"
+  },
+  "madrid/b1-atocha": {
+   "hash": "80c501e1cfd2783bf8a9",
+   "seconds": 50.97,
+   "src": "/audio/escucha-3d/madrid-b1-atocha.mp3"
+  },
+  "madrid/b1-granvia": {
+   "hash": "358cb6b43a75362330a3",
+   "seconds": 49.94,
+   "src": "/audio/escucha-3d/madrid-b1-granvia.mp3"
+  },
+  "madrid/b1-hospital": {
+   "hash": "11cf9c39d65ed2de28bc",
+   "seconds": 49.65,
+   "src": "/audio/escucha-3d/madrid-b1-hospital.mp3"
+  },
+  "madrid/b1-malasana": {
+   "hash": "7cc10537ecfb86f89f8f",
+   "seconds": 59.76,
+   "src": "/audio/escucha-3d/madrid-b1-malasana.mp3"
+  },
+  "madrid/b1-metro": {
+   "hash": "3cc7e0f2225e630610d6",
+   "seconds": 55.14,
+   "src": "/audio/escucha-3d/madrid-b1-metro.mp3"
+  },
+  "madrid/b1-palacio": {
+   "hash": "132718fa2dbedef855e1",
+   "seconds": 46.27,
+   "src": "/audio/escucha-3d/madrid-b1-palacio.mp3"
+  },
+  "madrid/b1-plaza": {
+   "hash": "8959e0752ccbe14cfb02",
+   "seconds": 44.9,
+   "src": "/audio/escucha-3d/madrid-b1-plaza.mp3"
+  },
+  "madrid/b1-retiro": {
+   "hash": "db4610fad5f092889491",
+   "seconds": 53.4,
+   "src": "/audio/escucha-3d/madrid-b1-retiro.mp3"
+  },
+  "madrid/b1-rio": {
+   "hash": "36bdbbc5106f7e5a774e",
+   "seconds": 49.2,
+   "src": "/audio/escucha-3d/madrid-b1-rio.mp3"
+  },
+  "madrid/b1-sol": {
+   "hash": "6d45ee482f20f09295c1",
+   "seconds": 50.83,
+   "src": "/audio/escucha-3d/madrid-b1-sol.mp3"
+  },
+  "madrid/b2-atocha": {
+   "hash": "68adcdfe6285a3664321",
+   "seconds": 67.58,
+   "src": "/audio/escucha-3d/madrid-b2-atocha.mp3"
+  },
+  "madrid/b2-granvia": {
+   "hash": "aea7c7cea2256cb9074c",
+   "seconds": 64.25,
+   "src": "/audio/escucha-3d/madrid-b2-granvia.mp3"
+  },
+  "madrid/b2-hospital": {
+   "hash": "b5e0c4dae53830623b4c",
+   "seconds": 61.2,
+   "src": "/audio/escucha-3d/madrid-b2-hospital.mp3"
+  },
+  "madrid/b2-malasana": {
+   "hash": "c31c1ec2f82a7689655b",
+   "seconds": 74.51,
+   "src": "/audio/escucha-3d/madrid-b2-malasana.mp3"
+  },
+  "madrid/b2-metro": {
+   "hash": "d69d1b2735094d2c12bb",
+   "seconds": 62.04,
+   "src": "/audio/escucha-3d/madrid-b2-metro.mp3"
+  },
+  "madrid/b2-palacio": {
+   "hash": "a494f2bea9dc9b7e9ccf",
+   "seconds": 52.94,
+   "src": "/audio/escucha-3d/madrid-b2-palacio.mp3"
+  },
+  "madrid/b2-plaza": {
+   "hash": "cc09709f87664e586749",
+   "seconds": 62.18,
+   "src": "/audio/escucha-3d/madrid-b2-plaza.mp3"
+  },
+  "madrid/b2-retiro": {
+   "hash": "3ecb80218e63353a0550",
+   "seconds": 61.69,
+   "src": "/audio/escucha-3d/madrid-b2-retiro.mp3"
+  },
+  "madrid/b2-rio": {
+   "hash": "767a1484834a5b7868f3",
+   "seconds": 55.53,
+   "src": "/audio/escucha-3d/madrid-b2-rio.mp3"
+  },
+  "madrid/b2-sol": {
+   "hash": "e8448a1ff93927ae81b2",
+   "seconds": 55.1,
+   "src": "/audio/escucha-3d/madrid-b2-sol.mp3"
+  },
+  "madrid/c1-atocha": {
+   "hash": "20f9f71482fe1daa0631",
+   "seconds": 71.85,
+   "src": "/audio/escucha-3d/madrid-c1-atocha.mp3"
+  },
+  "madrid/c1-granvia": {
+   "hash": "bdaf20788a0c45a8371b",
+   "seconds": 72.62,
+   "src": "/audio/escucha-3d/madrid-c1-granvia.mp3"
+  },
+  "madrid/c1-hospital": {
+   "hash": "7756e23bfdf360eb4ba5",
+   "seconds": 76.0,
+   "src": "/audio/escucha-3d/madrid-c1-hospital.mp3"
+  },
+  "madrid/c1-malasana": {
+   "hash": "31aae2fa638185bbe031",
+   "seconds": 70.99,
+   "src": "/audio/escucha-3d/madrid-c1-malasana.mp3"
+  },
+  "madrid/c1-metro": {
+   "hash": "9bac402316841f16ca35",
+   "seconds": 73.2,
+   "src": "/audio/escucha-3d/madrid-c1-metro.mp3"
+  },
+  "madrid/c1-palacio": {
+   "hash": "ca424219f6d271b5ef44",
+   "seconds": 67.77,
+   "src": "/audio/escucha-3d/madrid-c1-palacio.mp3"
+  },
+  "madrid/c1-plaza": {
+   "hash": "49a146546843d2cc5af0",
+   "seconds": 72.48,
+   "src": "/audio/escucha-3d/madrid-c1-plaza.mp3"
+  },
+  "madrid/c1-retiro": {
+   "hash": "c919f3f776ebfeb7fc14",
+   "seconds": 78.83,
+   "src": "/audio/escucha-3d/madrid-c1-retiro.mp3"
+  },
+  "madrid/c1-rio": {
+   "hash": "6089eb633a4ccf8a3915",
+   "seconds": 67.97,
+   "src": "/audio/escucha-3d/madrid-c1-rio.mp3"
+  },
+  "madrid/c1-sol": {
+   "hash": "5240536d8b991cf59d89",
+   "seconds": 70.63,
+   "src": "/audio/escucha-3d/madrid-c1-sol.mp3"
+  },
+  "madrid/c2-atocha": {
+   "hash": "e3e10d7575a28db6bafa",
+   "seconds": 78.38,
+   "src": "/audio/escucha-3d/madrid-c2-atocha.mp3"
+  },
+  "madrid/c2-granvia": {
+   "hash": "5083b3fe28d83e03a796",
+   "seconds": 85.74,
+   "src": "/audio/escucha-3d/madrid-c2-granvia.mp3"
+  },
+  "madrid/c2-hospital": {
+   "hash": "39a6169511e48084246b",
+   "seconds": 86.56,
+   "src": "/audio/escucha-3d/madrid-c2-hospital.mp3"
+  },
+  "madrid/c2-malasana": {
+   "hash": "a3b31a5b74798c31f272",
+   "seconds": 78.07,
+   "src": "/audio/escucha-3d/madrid-c2-malasana.mp3"
+  },
+  "madrid/c2-metro": {
+   "hash": "7c2dac330006bba6561a",
+   "seconds": 87.02,
+   "src": "/audio/escucha-3d/madrid-c2-metro.mp3"
+  },
+  "madrid/c2-palacio": {
+   "hash": "bf67eb4b0d7b3e290311",
+   "seconds": 82.5,
+   "src": "/audio/escucha-3d/madrid-c2-palacio.mp3"
+  },
+  "madrid/c2-plaza": {
+   "hash": "dd1b5160d05994fbc697",
+   "seconds": 76.17,
+   "src": "/audio/escucha-3d/madrid-c2-plaza.mp3"
+  },
+  "madrid/c2-retiro": {
+   "hash": "cb3df5feff5ef9c1b2b4",
+   "seconds": 82.26,
+   "src": "/audio/escucha-3d/madrid-c2-retiro.mp3"
+  },
+  "madrid/c2-rio": {
+   "hash": "cf887c8143099270e72f",
+   "seconds": 78.47,
+   "src": "/audio/escucha-3d/madrid-c2-rio.mp3"
+  },
+  "madrid/c2-sol": {
+   "hash": "d3fffabc44d145f132da",
+   "seconds": 75.62,
+   "src": "/audio/escucha-3d/madrid-c2-sol.mp3"
+  },
   "mexico/a0-cdmx": {
    "hash": "dfd0916e7003c1c16c4b",
    "seconds": 27.88,
