@@ -127,4 +127,3 @@ Report: APPROVE or REQUEST CHANGES, with each concrete issue (file:line, why, fi
 - The guard test hardcodes `premiumBoard`, `premiumAudio`, `autoestudio` and `lesson` as false. If a future identity-reading API route is covered only by one of those predicates, the test would fail even though the route is fine. That is acceptable for now; a comment saying so would help.
 - This PR also gives the Hospital A0–C2 content smoke that `PUBLISHED.md` lists as pending ("changed-URL smoke … not run") an automated check. Once production smoke passes, that entry can move to Published.
 ````
-
