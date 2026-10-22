@@ -135,6 +135,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git merge --no-commit --no-ff origin/main
+          echo "CANDIDATE_TREE=$(git write-tree)" >> "$GITHUB_ENV"
 
       - name: Install audio verification dependency
         run: sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends ffmpeg
@@ -178,10 +179,44 @@ jobs:
         id: postmerge
         continue-on-error: true
         run: |
-          npm ci --no-audit --no-fund
-          npm test
-          npm run lint
-          npm run validate:artifact
+          set -o pipefail
+          MERGED_TREE="$(git rev-parse 'HEAD^{tree}')"
+          if [ "$MERGED_TREE" = "$CANDIDATE_TREE" ]; then
+            echo "Merged tree ${MERGED_TREE} is identical to the reverified candidate."
+          else
+            echo "::warning title=Post-merge tree differs::Merged tree ${MERGED_TREE} differs from reverified candidate ${CANDIDATE_TREE}."
+          fi
+
+          health() {
+            npm ci --no-audit --no-fund &&
+            npm test &&
+            npm run lint &&
+            npm run validate:artifact
+          }
+          report_failure() {
+            local attempt="$1" log="$2" detail
+            detail="$(grep -E '^not ok|Error|ERR!|exited [1-9]|timed out' "$log" | tail -n 15 | tr '\n' ' ' | cut -c1-900)"
+            echo "::error title=Post-merge health failed (attempt ${attempt})::${detail:-see the step log}"
+            {
+              echo "### Post-merge health failed (attempt ${attempt})"
+              echo '```'
+              tail -n 80 "$log"
+              echo '```'
+            } >> "$GITHUB_STEP_SUMMARY"
+          }
+
+          # The merged tree already passed "Reverify against current main"
+          # minutes ago, so one failure here is more likely a flaky runner
+          # than a broken merge. Retry once before asking for a rollback.
+          for attempt in 1 2; do
+            if health 2>&1 | tee "/tmp/postmerge-${attempt}.log"; then
+              echo "Post-merge health passed on attempt ${attempt}."
+              exit 0
+            fi
+            report_failure "$attempt" "/tmp/postmerge-${attempt}.log"
+          done
+          echo "::error title=Post-merge health failed twice::This step shows green only because continue-on-error lets the rollback step run."
+          exit 1
 
       - name: Automatically roll back a broken merge
         if: steps.postmerge.outcome == 'failure'
@@ -203,13 +238,30 @@ jobs:
           npm run validate:artifact
 
           git push origin "$ROLLBACK_BRANCH"
-          PR_JSON="$(gh api \
+          if ! PR_JSON="$(gh api \
             --method POST \
             "repos/${GITHUB_REPOSITORY}/pulls" \
             -f title="[auto-rollback] Revert failed merge ${MERGE_SHA:0:12}" \
             -f head="$ROLLBACK_BRANCH" \
             -f base="main" \
-            -f body="Automatic rollback after the merged commit failed the post-merge health gate. The reverted tree passed the full regression suite, lint, and artifact validation before this rollback PR was created.")"
+            -f body="Automatic rollback after the merged commit failed the post-merge health gate. The reverted tree passed the full regression suite, lint, and artifact validation before this rollback PR was created." 2>/tmp/rollback-pr.err)"; then
+            cat /tmp/rollback-pr.err >&2
+            RUN_URL="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
+            SETTINGS_URL="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/settings/actions"
+            echo "::error title=Auto-rollback blocked::Could not open the rollback PR ($(tr '\n' ' ' </tmp/rollback-pr.err | cut -c1-300)). Main still has ${MERGE_SHA:0:12}; staging/production were not touched. Enable 'Allow GitHub Actions to create and approve pull requests' at ${SETTINGS_URL}, or open a PR from ${ROLLBACK_BRANCH}."
+            gh issue create \
+              --title "Auto-rollback blocked for ${MERGE_SHA:0:12}" \
+              --body "Post-merge health failed twice for ${MERGE_SHA} and the automatic rollback could not open its PR.
+
+          Error: $(cat /tmp/rollback-pr.err)
+
+          The reverted tree is ready on branch ${ROLLBACK_BRANCH} and passed the full suite. Staging and production were not deployed by this run.
+
+          Fix: ${SETTINGS_URL} → Workflow permissions → enable \"Allow GitHub Actions to create and approve pull requests\", or open a PR from ${ROLLBACK_BRANCH} manually.
+
+          CI run: ${RUN_URL}" || true
+            exit 1
+          fi
           ROLLBACK_PR="$(echo "$PR_JSON" | jq -r '.number')"
 
           CURRENT_MAIN="$(gh api "repos/${GITHUB_REPOSITORY}/git/ref/heads/main" --jq '.object.sha')"
