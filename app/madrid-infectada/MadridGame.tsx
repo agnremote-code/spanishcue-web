@@ -38,7 +38,7 @@ const RADIO: { es: string; en: string }[] = [
   { es: '…aquí Radio Kilómetro Cero, emitiendo desde algún lugar de Madrid…', en: '…this is Radio Kilometre Zero, broadcasting from somewhere in Madrid…' },
   { es: 'El Gobierno pide calma. Las salidas de la ciudad están cerradas…', en: 'The government asks for calm. The roads out of the city are closed…' },
   { es: 'No respiréis la nube verde. Repito: no respiréis…', en: 'Don’t breathe the green cloud. I repeat: don’t breathe…' },
-  { es: 'Si alguien me oye… el laboratorio del Retiro… ¿me oís?…', en: 'If anyone can hear me… the lab in the Retiro… can you hear me?…' },
+  { es: 'Si alguien me oye… el laboratorio del Retiro… ¿me escucha alguien?…', en: 'If anyone can hear me… the lab in the Retiro… can you hear me?…' },
 ];
 // Static on the radio during the walk.
 const RADIO_WALK = [
