@@ -1,0 +1,66 @@
+{
+ "version": 1,
+ "authorization": "Owner request of 2026-10-22 06:27Z in the project thread «Biblioteca: Gramática y Conversación» (message cmsg_01Gr5R4j3t2Yet65UcmhcVhAQaDz3ASK9YbtySoKYVUsTa): the library keeps only two routes, Gramática and Conversación; Escucha, Fonética and Vocabulario leave the main menu and Conversación opens two cards, Mundos 3D and Clásicas. Owner approval of the English copy: Ale wrote «apruebo» in that thread on 2026-10-22 06:37Z (message cmsg_01Gr5R4j3t2Yet65UcmhcVhAAAbp6kqDfMqxzNm3PL6f5g), answering the request that listed these seven English literals. The changed/deleted lines are the labels of the removed route cards (03–05) and of the old conversation-family chips, which no longer exist.",
+ "additions": [
+  {
+   "path": "app/Library.tsx",
+   "text": "3D WORLDS"
+  },
+  {
+   "path": "app/Library.tsx",
+   "text": "CLASSICS"
+  },
+  {
+   "path": "app/Library.tsx",
+   "text": "Conversation formats"
+  },
+  {
+   "path": "app/Library.tsx",
+   "text": "3D worlds"
+  },
+  {
+   "path": "app/Library.tsx",
+   "text": "Classics"
+  },
+  {
+   "path": "app/Library.tsx",
+   "text": "Immersive worlds to explore: conversation and listening in the same place."
+  },
+  {
+   "path": "app/Library.tsx",
+   "text": "Conversation, listening, pronunciation and vocabulary with guided on-screen activities."
+  }
+ ],
+ "changes": [
+  {
+   "path": "app/Library.tsx",
+   "kind": "english-changed-or-deleted",
+   "text": "03"
+  },
+  {
+   "path": "app/Library.tsx",
+   "kind": "english-changed-or-deleted",
+   "text": "04"
+  },
+  {
+   "path": "app/Library.tsx",
+   "kind": "english-changed-or-deleted",
+   "text": "05"
+  },
+  {
+   "path": "app/Library.tsx",
+   "kind": "english-changed-or-deleted",
+   "text": "Conversation families"
+  },
+  {
+   "path": "app/Library.tsx",
+   "kind": "english-changed-or-deleted",
+   "text": "CONVERSATION FAMILIES"
+  },
+  {
+   "path": "app/Library.tsx",
+   "kind": "english-changed-or-deleted",
+   "text": "Conversation families"
+  }
+ ]
+}

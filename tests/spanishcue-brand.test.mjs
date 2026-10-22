@@ -59,13 +59,12 @@ test("visible library features use distinct official mascot poses", async () => 
     "/brand/mascot/walking.webp",
     "/brand/mascot/seated.webp",
     "/brand/mascot/speaking.webp",
-    "/brand/mascot/studying.webp",
   ]) {
     assert.match(library, new RegExp(asset.replaceAll("/", "\\/")));
   }
   const visibleRoutes = library.slice(library.indexOf('className="route-divider"'), library.indexOf("<AutoestudioLibraryEntry"));
   const poses = [brand.match(/sc-mascot-cue[^]*?src="([^"]+)"/)?.[1], banner.match(/new-lessons-intro[^]*?src="([^"]+)"/)?.[1], ...[...visibleRoutes.matchAll(/src="(\/(?:brand|autoestudio)\/mascot\/[^"]+)"/g)].map(match => match[1]), entry.match(/ae-library-entry-art[^]*?src="([^"]+)"/)?.[1]];
-  assert.equal(poses.length, 8);
+  assert.equal(poses.length, 5);
   assert.equal(new Set(poses).size, poses.length, "hero, banner and library paths should not repeat one cutout");
   assert.doesNotMatch(library, /route-symbol route-mouth|route-symbol route-vocabulary/);
 });
