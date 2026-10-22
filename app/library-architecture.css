@@ -425,7 +425,7 @@
 .conversation-route-card {
   position: relative;
   display: grid;
-  grid-template-rows: 190px auto;
+  grid-template-rows: 250px auto;
   overflow: hidden;
   padding: 0;
   border: 1px solid #d3deec;
@@ -457,55 +457,19 @@
 
 .conversation-route-art {
   position: relative;
-  display: grid;
-  grid-template-columns: 1.4fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 3px;
-  overflow: hidden;
-  background: linear-gradient(135deg, #061a3d, #075de7);
-}
-
-.route-classic .conversation-route-art {
-  background: linear-gradient(135deg, #eaf5ff, #dce7f4);
-}
-
-.conversation-route-art img {
-  width: 100%;
-  height: 100%;
+  display: block;
   min-height: 0;
-  object-fit: cover;
+  overflow: hidden;
+  background: #dce8f2;
 }
 
-.conversation-route-art img:first-child {
-  grid-row: 1 / 3;
+.conversation-route-art .lesson-preview {
+  height: 100%;
+  border-bottom: 0;
 }
 
-.conversation-route-art::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, transparent 45%, rgba(3, 17, 45, .5));
-  pointer-events: none;
-}
-
-.route-classic .conversation-route-art::after {
-  background: linear-gradient(180deg, transparent 55%, rgba(3, 17, 45, .28));
-}
-
-.conversation-route-art img.conversation-route-mascot {
-  position: absolute;
-  z-index: 1;
-  right: 10px;
-  bottom: -6px;
-  width: auto;
-  height: 150px;
-  object-fit: contain;
-  filter: drop-shadow(0 10px 14px rgba(3, 17, 45, .35));
-  transition: transform .2s;
-}
-
-.conversation-route-card:hover .conversation-route-mascot {
-  transform: translateY(-3px);
+.conversation-route-card:hover .lesson-preview img {
+  transform: scale(1.025);
 }
 
 .conversation-route-copy {
@@ -555,11 +519,7 @@
 }
 
 .conversation-routes.compact .conversation-route-card {
-  grid-template-rows: 96px auto;
-}
-
-.conversation-routes.compact .conversation-route-art img.conversation-route-mascot {
-  height: 88px;
+  grid-template-rows: 120px auto;
 }
 
 .conversation-routes.compact .conversation-route-copy {
@@ -617,11 +577,7 @@
   }
 
   .conversation-route-card {
-    grid-template-rows: 150px auto;
-  }
-
-  .conversation-route-art img.conversation-route-mascot {
-    height: 122px;
+    grid-template-rows: 190px auto;
   }
 
   .conversation-route-copy b {
@@ -634,11 +590,7 @@
   }
 
   .conversation-routes.compact .conversation-route-card {
-    grid-template-rows: 70px auto;
-  }
-
-  .conversation-routes.compact .conversation-route-art img.conversation-route-mascot {
-    height: 64px;
+    grid-template-rows: 80px auto;
   }
 
   .conversation-routes.compact .conversation-route-copy {
@@ -655,8 +607,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .conversation-route-card,
-  .conversation-route-mascot {
+  .conversation-route-card {
     transition: none;
   }
 }

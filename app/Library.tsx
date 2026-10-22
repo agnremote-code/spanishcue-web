@@ -1158,7 +1158,9 @@ export default function Library({
     };
   }, [activeLesson]);
   useEffect(() => {
-    const onScroll = () => setHeaderCompact(window.scrollY > 96);
+    // Hysteresis: the compact header is a few pixels shorter, so one threshold
+    // made it toggle back and forth (a blink) when scrolling near it.
+    const onScroll = () => setHeaderCompact((compact) => (compact ? window.scrollY > 48 : window.scrollY > 120));
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -1755,10 +1757,8 @@ export default function Library({
           <section className={`conversation-routes${conversationChooser ? "" : " compact"}`} aria-label={locale === "es" ? "Formatos de conversación" : "Conversation formats"}>
             {(["worlds3d", "classic"] as const).map((value) => {
               const items = familyLessonsForCategory(lessons, { category: "Conversación", conversationMode: value }) as Lesson[];
-              const featured = value === "worlds3d" ? [223, 240, 237] : [];
-              const covers = [...featured.map((id) => items.find((lesson: Lesson) => lesson.id === id)), ...items]
-                .filter((lesson, index, all): lesson is Lesson => Boolean(lesson?.image?.startsWith("/")) && all.indexOf(lesson) === index)
-                .slice(0, 3);
+              // One cover per card (Noche abierta, Ciudad en juego); its recording plays on hover.
+              const cover = items.find((lesson) => lesson.id === (value === "worlds3d" ? 223 : 139)) || items[0];
               const active = conversationMode === value;
               return (
                 <button
@@ -1775,8 +1775,7 @@ export default function Library({
                   }}
                 >
                   <span className="conversation-route-art" aria-hidden="true">
-                    {covers.map((lesson) => <img key={lesson.id} src={lesson.image} alt="" loading="lazy" decoding="async" />)}
-                    <img className="conversation-route-mascot" src={value === "worlds3d" ? "/brand/mascot/speaking.webp" : "/brand/mascot/seated.webp"} alt="" loading="lazy" decoding="async" />
+                    {cover && <LessonPreview lesson={cover} />}
                   </span>
                   <span className="conversation-route-copy">
                     <small>{items.length} {items.length === 1 ? t("common.class") : t("common.classes")}</small>
