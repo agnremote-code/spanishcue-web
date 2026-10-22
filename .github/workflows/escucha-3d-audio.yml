@@ -2,7 +2,7 @@ name: Escucha 3D audio
 
 on:
   push:
-    branches: ["claude/escucha-3d-*", "claude/hospital-*", "claude/choques-*"]
+    branches: ["claude/escucha-3d-*", "claude/hospital-*", "claude/choques-*", "claude/madrid-*"]
     paths: ["app/escucha-3d/content/*/*.json", "app/escucha-3d/voces.json", "scripts/generate-escucha-3d-audio.py", ".github/workflows/escucha-3d-audio.yml"]
   workflow_dispatch:
 

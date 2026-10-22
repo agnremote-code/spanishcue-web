@@ -1,0 +1,1164 @@
+{
+  "game": "madrid",
+  "level": "C1",
+  "items": [
+    {
+      "id": "sol",
+      "title": "El taxista de las madrugadas",
+      "place": "Puerta del Sol · la radio",
+      "context": "Lola entrevista en antena a Salomé sobre la noche del traslado. La conversación deriva hacia lo que significa la radio para la gente sola.",
+      "speakers": [
+        {
+          "name": "Lola",
+          "country": "España",
+          "voice": "es-ES-ElviraNeural"
+        },
+        {
+          "name": "Salomé",
+          "country": "Colombia",
+          "voice": "es-CO-SalomeNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Salomé, los oyentes no dejan de preguntar por el taxista misterioso. ¿Llegaste a saber cómo se llama?"
+        },
+        {
+          "s": 1,
+          "text": "Se llama Anselmo, tiene setenta y un años y lleva desde la jubilación escuchándote todas las noches. Me confesó que tu programa de madrugada era lo único que le hacía compañía desde que enviudó."
+        },
+        {
+          "s": 0,
+          "text": "Uf. Cuando la cadena me dijo que iban a cancelarlo por falta de audiencia, pensé que nadie lo echaría de menos. Ya ves lo equivocada que estaba."
+        },
+        {
+          "s": 1,
+          "text": "Es que las audiencias no miden eso. Miden cuántos, no a quién. Anselmo me dijo una frase que se me ha quedado grabada: «Lola no sabe que me ha salvado unas cuantas noches; ahora me tocaba a mí devolverle el favor salvando a otro»."
+        },
+        {
+          "s": 0,
+          "text": "Me vas a dejar sin voz en pleno directo. ¿Y el vecino?"
+        },
+        {
+          "s": 1,
+          "text": "Evoluciona favorablemente, según la doctora Ochoa. Lo que más me ha marcado, sin embargo, no fue el trayecto ni la nube, sino ver cómo una cadena de favores invisibles, de gente que ni se conoce, puede sostener una ciudad entera cuando todo lo demás falla."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Por qué escuchaba Anselmo el programa de Lola?",
+          "options": [
+            "Porque le hacía compañía desde que enviudó",
+            "Porque trabajaba de noche",
+            "Porque era amigo de Lola"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué critica Salomé de las audiencias?",
+          "options": [
+            "Que son demasiado altas",
+            "Que miden cuántos escuchan, pero no a quién le importa",
+            "Que son falsas"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué quiere decir Anselmo con «ahora me tocaba a mí»?",
+          "options": [
+            "Que era su turno en el taxi",
+            "Que quería salir en la radio",
+            "Que deseaba devolver la ayuda que había recibido"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué es lo que más ha marcado a Salomé?",
+          "options": [
+            "La cadena de favores entre desconocidos",
+            "El viaje en taxi",
+            "La conversación con la doctora"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "Salomé dice que las audiencias miden «cuántos, no a quién». ¿Crees que nuestra sociedad valora demasiado los números frente al impacto real? Argumenta.",
+          "model": "Sí: se valora un programa, un libro o una persona por sus cifras, cuando a veces lo más valioso llega a pocos pero les cambia la vida."
+        },
+        {
+          "q": "¿Has formado parte de alguna «cadena de favores» entre desconocidos? Describe cómo funcionó.",
+          "model": "Una vez alguien me pagó el café en una estación y yo hice lo mismo con la persona siguiente; me hizo pensar en lo contagiosa que es la amabilidad."
+        },
+        {
+          "q": "¿Qué papel pueden tener los medios de comunicación frente a la soledad de las personas mayores?",
+          "model": "Pueden ser una compañía real, sobre todo la radio, porque crea una sensación de conversación cercana que la televisión no siempre consigue."
+        }
+      ],
+      "gaps": "Miden [cuántos], no a [quién]. Anselmo me dijo una [frase] que se me ha quedado [grabada]",
+      "glossary": [
+        {
+          "word": "enviudó",
+          "meaning": "de enviudar: perder a su pareja por muerte"
+        },
+        {
+          "word": "se me ha quedado grabada",
+          "meaning": "no la puedo olvidar"
+        },
+        {
+          "word": "evoluciona favorablemente",
+          "meaning": "mejora poco a poco"
+        },
+        {
+          "word": "cadena de favores",
+          "meaning": "serie de ayudas que unos pasan a otros"
+        }
+      ]
+    },
+    {
+      "id": "granvia",
+      "title": "El periodista y el repartidor",
+      "place": "Gran Vía · mensaje de voz",
+      "context": "Alex ha contactado con Marcos, el periodista mexicano. Después de reunirse con él, le cuenta a su hermana cómo fue la conversación.",
+      "speakers": [
+        {
+          "name": "Alex",
+          "country": "Perú",
+          "voice": "es-PE-AlexNeural"
+        },
+        {
+          "name": "Camila",
+          "country": "Perú",
+          "voice": "es-PE-CamilaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Camila, acabo de despedirme de Marcos, el periodista. Hemos quedado en un portal de la calle Alcalá, cada uno a dos metros del otro, como en una película de espías."
+        },
+        {
+          "s": 1,
+          "text": "¿Y qué te ha parecido? ¿Es de fiar o es de los que solo buscan la exclusiva a cualquier precio?"
+        },
+        {
+          "s": 0,
+          "text": "Creo que sí. Lo primero que hizo fue preguntarme si estaba dispuesto a que publicara mi nombre. Le dije que no, y me contestó que lo entendía perfectamente, que mis notas eran valiosas igualmente."
+        },
+        {
+          "s": 1,
+          "text": "¿Te ha dicho para qué las va a usar?"
+        },
+        {
+          "s": 0,
+          "text": "Las ha cruzado con sus propios vídeos de los camiones. Coinciden al minuto. Según él, eso demuestra que hubo un operativo para tomar muestras en la calle mientras a la población se le decía que no pasaba nada."
+        },
+        {
+          "s": 1,
+          "text": "Alex, estás metiéndote en algo muy gordo. No me gusta nada."
+        },
+        {
+          "s": 0,
+          "text": "A mí tampoco. Pero piensa en el señor que se cayó en la acera. Si nadie cuenta lo que pasó, es como si no hubiera existido. Y eso no me lo perdonaría."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cómo se reunieron Alex y Marcos?",
+          "options": [
+            "En un portal, manteniendo la distancia",
+            "En un bar de Malasaña",
+            "Por videollamada"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué hizo Marcos en primer lugar?",
+          "options": [
+            "Pagarle por las notas",
+            "Preguntarle si quería que publicara su nombre",
+            "Grabar la conversación"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué demuestra, según Marcos, la coincidencia entre notas y vídeos?",
+          "options": [
+            "Que Alex se equivocó de hora",
+            "Que los camiones eran de la basura",
+            "Que hubo un operativo oculto mientras se tranquilizaba a la población"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Por qué sigue adelante Alex pese al miedo?",
+          "options": [
+            "Para que lo ocurrido al señor de la acera no se olvide",
+            "Por dinero",
+            "Para salir en la tele"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Es ético que un periodista proteja la identidad de sus fuentes aunque eso dificulte comprobar la información? Argumenta tu postura.",
+          "model": "Creo que sí, porque sin esa protección muchas personas no se atreverían a denunciar abusos, aunque el periodista debe contrastar los datos por otras vías."
+        },
+        {
+          "q": "Alex dice que, si nadie cuenta lo que pasó, «es como si no hubiera existido». ¿Qué relación hay entre memoria y justicia?",
+          "model": "Sin memoria no puede haber justicia, porque lo que se olvida no se juzga, y las víctimas desaparecen dos veces."
+        },
+        {
+          "q": "¿Te implicarías en una investigación peligrosa para defender a alguien que no conoces? ¿Dónde pondrías el límite?",
+          "model": "Me implicaría hasta cierto punto, aportando información, pero no pondría en riesgo a mi familia; ahí estaría mi límite."
+        }
+      ],
+      "gaps": "Las ha [cruzado] con sus propios [vídeos] de los camiones. [Coinciden] al [minuto].",
+      "glossary": [
+        {
+          "word": "de fiar",
+          "meaning": "que merece confianza"
+        },
+        {
+          "word": "dispuesto",
+          "meaning": "preparado y con voluntad de hacer algo"
+        },
+        {
+          "word": "operativo",
+          "meaning": "acción organizada, a menudo policial o militar"
+        },
+        {
+          "word": "muy gordo",
+          "meaning": "muy grave, de mucha importancia"
+        }
+      ]
+    },
+    {
+      "id": "plaza",
+      "title": "Tres funciones y un dragón",
+      "place": "Plaza Mayor · el refugio",
+      "context": "Después de la primera función de teatro en el refugio, Andrea y Ramón hacen balance mientras recogen las sábanas que han servido de decorado.",
+      "speakers": [
+        {
+          "name": "Andrea",
+          "country": "Ecuador",
+          "voice": "es-EC-AndreaNeural"
+        },
+        {
+          "name": "Ramón",
+          "country": "España",
+          "voice": "es-ES-AlvaroNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Ramón, ¿ha visto la cara de los padres? Algunos lloraban más que los niños. Y Lucas… no sabía que un crío de siete años pudiera rugir así."
+        },
+        {
+          "s": 1,
+          "text": "Ese chaval tiene madera. Lo que no sabe nadie es que, antes de salir, me agarró de la mano y me dijo que tenía el estómago lleno de mariposas. Le contesté que a mí, después de cuarenta años en los escenarios, todavía me pasaba."
+        },
+        {
+          "s": 0,
+          "text": "¿De verdad? ¿Usted también se ponía nervioso?"
+        },
+        {
+          "s": 1,
+          "text": "Siempre. El día que un actor deja de tener miedo antes de salir, empieza a actuar mal. El miedo te obliga a estar presente. Es lo mismo que les pasa a los médicos de ahí al lado, o a ti cuando repartes el agua."
+        },
+        {
+          "s": 0,
+          "text": "Hablando de eso: Montse quiere que hagamos una función para los que están en cuarentena, fuera del recinto. Su hermano está entre ellos."
+        },
+        {
+          "s": 1,
+          "text": "Pues la haremos a gritos, desde detrás de la valla, si hace falta. En la posguerra, mi padre hacía teatro en los patios de las corralas con dos sillas y una manta. El teatro nunca ha necesitado mucho; solo alguien que mire y alguien que se atreva."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué llamó la atención de Andrea durante la función?",
+          "options": [
+            "La emoción de los padres y la fuerza de Lucas",
+            "Que nadie fue a verla",
+            "Que los niños se aburrieron"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué le confesó Lucas a Ramón?",
+          "options": [
+            "Que no quería actuar",
+            "Que estaba muy nervioso",
+            "Que quería ser médico"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué opina Ramón del miedo antes de actuar?",
+          "options": [
+            "Que es un error de principiante",
+            "Que hay que eliminarlo con ejercicios",
+            "Que es necesario porque obliga a estar presente"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué hacía el padre de Ramón en la posguerra?",
+          "options": [
+            "Teatro en los patios de las corralas",
+            "Trabajaba en el metro",
+            "Era médico"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "Ramón afirma que «el día que un actor deja de tener miedo, empieza a actuar mal». ¿Puede aplicarse esa idea a otras profesiones? Argumenta.",
+          "model": "Sí, en medicina o en la docencia el exceso de confianza puede llevar a errores; un poco de miedo mantiene la atención y la humildad."
+        },
+        {
+          "q": "¿Crees que la cultura es un lujo o una necesidad básica en situaciones de crisis? Defiende tu postura.",
+          "model": "Creo que es una necesidad, porque ayuda a dar sentido a lo que pasa y a mantener la dignidad, aunque no sustituya al agua ni a la comida."
+        },
+        {
+          "q": "Describe un momento en el que tuviste «el estómago lleno de mariposas». ¿Cómo lo superaste?",
+          "model": "Antes de presentar mi trabajo de fin de máster estaba aterrada; respiré hondo, miré a una amiga del público y empecé a hablar."
+        }
+      ],
+      "gaps": "En la posguerra, mi padre hacía [teatro] en los patios de las [corralas] con dos [sillas] y una [manta].",
+      "glossary": [
+        {
+          "word": "tiene madera",
+          "meaning": "tiene talento natural para algo"
+        },
+        {
+          "word": "mariposas",
+          "meaning": "aquí, nervios en el estómago"
+        },
+        {
+          "word": "la valla",
+          "meaning": "cerca que separa dos espacios"
+        },
+        {
+          "word": "las corralas",
+          "meaning": "casas antiguas de Madrid con un patio interior común"
+        }
+      ]
+    },
+    {
+      "id": "metro",
+      "title": "La respuesta del jefe",
+      "place": "Metro · el andén",
+      "context": "Ximena recibe un segundo correo de su jefe. Manuel y ella lo comentan mientras reparten las últimas galletas.",
+      "speakers": [
+        {
+          "name": "Manuel",
+          "country": "Cuba",
+          "voice": "es-CU-ManuelNeural"
+        },
+        {
+          "name": "Ximena",
+          "country": "España",
+          "voice": "es-ES-XimenaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Escucha esto. Mi jefe me ha vuelto a escribir. Dice que «comprende mi estado emocional dadas las circunstancias», pero que me ofrece un ascenso si reconsidero mi decisión."
+        },
+        {
+          "s": 0,
+          "text": "¿Un ascenso? ¡Vaya! Seis años sin que te suban el sueldo y ahora, en mitad del apocalipsis, se acuerdan de ti."
+        },
+        {
+          "s": 1,
+          "text": "Eso es lo que más me indigna. No me valoran por lo que hago, sino por el miedo a quedarse sin alguien que lo haga. Es como si me dijeran que solo existo cuando me voy."
+        },
+        {
+          "s": 0,
+          "text": "En Cuba tenemos un dicho: «Nadie sabe lo que tiene hasta que lo pierde». Pero tu jefe parece haber descubierto una versión empresarial: nadie te paga lo que vales hasta que amenazas con irte."
+        },
+        {
+          "s": 1,
+          "text": "Lo peor es que una parte de mí está tentada. Un ascenso significa estabilidad, un piso con más luz, dejar de contar cada euro."
+        },
+        {
+          "s": 0,
+          "text": "Nadie te va a juzgar si aceptas. Solo pregúntate una cosa: ¿quieres ese ascenso o quieres que alguien, por fin, te diga que lo mereces? Porque son cosas muy distintas."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué le ofrece el jefe a Ximena?",
+          "options": [
+            "Un ascenso si reconsidera su decisión",
+            "Una indemnización",
+            "Unas vacaciones pagadas"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué indigna más a Ximena?",
+          "options": [
+            "Que el jefe escriba mal",
+            "Que solo la valoren cuando amenaza con irse",
+            "Que el ascenso sea pequeño"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cómo adapta Manuel el dicho cubano?",
+          "options": [
+            "Diciendo que el dinero no da la felicidad",
+            "Diciendo que hay que volver a Cuba",
+            "Diciendo que nadie te paga lo que vales hasta que amenazas con irte"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué distinción le propone Manuel a Ximena?",
+          "options": [
+            "Entre querer el ascenso y querer reconocimiento",
+            "Entre Madrid y La Habana",
+            "Entre trabajar y descansar"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Por qué crees que muchas empresas solo reconocen el valor de un empleado cuando este quiere marcharse? Analiza las causas.",
+          "model": "Porque la rutina hace invisible el trabajo bien hecho; solo cuando falta, la empresa calcula lo que cuesta sustituirlo."
+        },
+        {
+          "q": "Manuel distingue entre desear algo y desear el reconocimiento que simboliza. ¿Te has encontrado en esa situación? Explícalo.",
+          "model": "Sí, durante años quise un título de máster, y al final me di cuenta de que lo que buscaba era la aprobación de mis padres."
+        },
+        {
+          "q": "¿Aceptarías una contraoferta de tu empresa después de haber anunciado que te ibas? ¿Por qué?",
+          "model": "Probablemente no, porque la confianza ya estaría dañada y sentiría que me retienen por necesidad, no por aprecio."
+        }
+      ],
+      "gaps": "No me [valoran] por lo que hago, sino por el [miedo] a quedarse sin alguien que lo [haga]. Es como si me dijeran que solo [existo] cuando me voy.",
+      "glossary": [
+        {
+          "word": "ascenso",
+          "meaning": "subida de categoría en el trabajo"
+        },
+        {
+          "word": "reconsidero",
+          "meaning": "de reconsiderar: volver a pensar"
+        },
+        {
+          "word": "me indigna",
+          "meaning": "me produce mucho enfado"
+        },
+        {
+          "word": "tentada",
+          "meaning": "con deseo de hacer algo"
+        }
+      ]
+    },
+    {
+      "id": "retiro",
+      "title": "El informe que nadie leyó",
+      "place": "Retiro · el laboratorio",
+      "context": "La radio capta una grabación de Elena y Javier en la que leen en voz alta el informe que enviaron a sus jefes meses antes de la fuga.",
+      "speakers": [
+        {
+          "name": "Elena",
+          "country": "España",
+          "voice": "es-ES-ElviraNeural"
+        },
+        {
+          "name": "Javier",
+          "country": "Guinea Ecuatorial",
+          "voice": "es-GQ-JavierNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Javier, léelo tú. Quiero oír cómo suena ahora, sabiendo lo que sabemos."
+        },
+        {
+          "s": 1,
+          "text": "«Informe técnico, quince de marzo. Se detecta fatiga del material en la válvula de presión del tanque tres. Se recomienda su sustitución inmediata. Riesgo estimado de fuga en caso de no actuar: moderado a alto». Firmado por usted y por mí."
+        },
+        {
+          "s": 0,
+          "text": "¿Y la respuesta?"
+        },
+        {
+          "s": 1,
+          "text": "«Se toma nota. Dada la actual situación presupuestaria, la sustitución se pospone al próximo ejercicio». Dos líneas. Ni siquiera tiene firma, solo un sello del departamento."
+        },
+        {
+          "s": 0,
+          "text": "Fíjate en el lenguaje: «se toma nota», «se pospone». Nadie toma la decisión, la decisión se toma sola. Así es como se fabrican las catástrofes: con frases en las que no hay sujeto."
+        },
+        {
+          "s": 1,
+          "text": "¿Va a usar este documento cuando todo termine? Sabe que, si lo enseña, sus jefes dirán que usted también firmó el ensayo y que conocía los riesgos."
+        },
+        {
+          "s": 0,
+          "text": "Lo voy a usar, y no para quitarme culpa, que la tengo. Lo voy a usar para que nunca más una válvula de trescientos euros dependa de una frase sin nombre."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué recomendaba el informe técnico?",
+          "options": [
+            "Sustituir de inmediato la válvula",
+            "Cerrar el laboratorio",
+            "Contratar más personal"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cómo respondió el departamento?",
+          "options": [
+            "Con una llamada urgente",
+            "Posponiendo el cambio por falta de presupuesto",
+            "Aprobando la sustitución"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué critica Elena del lenguaje de la respuesta?",
+          "options": [
+            "Que es demasiado largo",
+            "Que tiene faltas de ortografía",
+            "Que usa frases sin sujeto para que nadie sea responsable"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Para qué quiere usar Elena el documento?",
+          "options": [
+            "Para evitar que algo así se repita",
+            "Para culpar solo a Javier",
+            "Para venderlo a la prensa"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "Elena afirma que «las catástrofes se fabrican con frases en las que no hay sujeto». Analiza cómo el lenguaje impersonal diluye la responsabilidad en las instituciones.",
+          "model": "Las construcciones impersonales o pasivas permiten describir decisiones sin señalar a quien las toma, de modo que cuando algo falla nadie aparece como responsable."
+        },
+        {
+          "q": "¿Qué mecanismos deberían existir para que las advertencias técnicas no se ignoren por motivos económicos? Propón algunos.",
+          "model": "Propondría que los informes de riesgo alto obliguen a una respuesta firmada y que, si se rechazan, se comuniquen a un organismo independiente."
+        },
+        {
+          "q": "¿Es posible asumir la propia culpa y, a la vez, denunciar la de los demás sin parecer que te justificas? ¿Cómo?",
+          "model": "Sí, siempre que reconozcas primero tu parte con claridad y aportes pruebas objetivas sobre la de los otros, sin usarlas como excusa."
+        }
+      ],
+      "gaps": "Así es como se [fabrican] las [catástrofes]: con [frases] en las que no hay [sujeto].",
+      "glossary": [
+        {
+          "word": "fatiga del material",
+          "meaning": "desgaste de una pieza por el uso"
+        },
+        {
+          "word": "la sustitución",
+          "meaning": "cambio de una cosa por otra"
+        },
+        {
+          "word": "se pospone",
+          "meaning": "se deja para más tarde"
+        },
+        {
+          "word": "ejercicio",
+          "meaning": "aquí, año económico de una institución"
+        }
+      ]
+    },
+    {
+      "id": "malasana",
+      "title": "Una visita en la barra",
+      "place": "Malasaña · la radio",
+      "context": "Emilio llama a Lola en voz baja desde el baño del bar de Nacho: el hombre del traje ha vuelto a por las cajas.",
+      "speakers": [
+        {
+          "name": "Lola",
+          "country": "España",
+          "voice": "es-ES-ElviraNeural"
+        },
+        {
+          "name": "Emilio",
+          "country": "República Dominicana",
+          "voice": "es-DO-EmilioNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Lola, hablo bajito porque estoy en el baño. El tipo del traje ha vuelto. Está en la barra con Nacho, tomándose el vermú como si fuera un cliente más."
+        },
+        {
+          "s": 0,
+          "text": "Emilio, no hagas ninguna tontería, por lo que más quieras. ¿Ha preguntado ya por las cajas?"
+        },
+        {
+          "s": 1,
+          "text": "Sí, con una educación exquisita. Le ha dicho a Nacho que viene a «recoger un material que dejó en depósito» y que le compensará generosamente las molestias. Ha puesto un sobre encima de la barra."
+        },
+        {
+          "s": 0,
+          "text": "¿Y Nacho qué ha hecho?"
+        },
+        {
+          "s": 1,
+          "text": "Lo que hablamos: le ha dicho que el almacén se inundó con la última tormenta y que tiene que buscar la llave. Lo está entreteniendo. Mientras tanto, yo he grabado la conversación con el móvil."
+        },
+        {
+          "s": 0,
+          "text": "Eres un insensato, pero un insensato valioso. Mándame esa grabación ahora mismo y sal por la puerta de atrás. Si ese hombre vuelve a por las cajas en plena epidemia, es que hay mucho dinero en juego, y la gente que se juega mucho dinero no suele aceptar un «no» con un vermú."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Desde dónde llama Emilio?",
+          "options": [
+            "Desde el baño del bar",
+            "Desde la plaza",
+            "Desde su casa"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cómo justifica el hombre su visita?",
+          "options": [
+            "Dice que es inspector sanitario",
+            "Dice que viene a recoger un material que dejó en depósito",
+            "Dice que quiere comprar el bar"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué excusa le da Nacho?",
+          "options": [
+            "Que las cajas se han vendido",
+            "Que la policía se las llevó",
+            "Que el almacén se inundó y tiene que buscar la llave"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué deduce Lola del regreso del hombre?",
+          "options": [
+            "Que hay mucho dinero en juego",
+            "Que es inofensivo",
+            "Que quiere ayudar al barrio"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "Lola llama a Emilio «insensato, pero valioso». ¿Dónde está la frontera entre la valentía y la imprudencia? Argumenta con ejemplos.",
+          "model": "La valentía asume un riesgo calculado por un fin que lo justifica; la imprudencia ignora las consecuencias o arriesga más de lo necesario."
+        },
+        {
+          "q": "¿Es legítimo grabar una conversación sin el consentimiento del otro si sirve para destapar un delito? Razona tu respuesta.",
+          "model": "Creo que puede estar justificado cuando hay un interés público claro, aunque legalmente depende del país y del uso que se haga de la grabación."
+        },
+        {
+          "q": "¿Qué te sugiere la «educación exquisita» del hombre del traje? ¿Por qué la cortesía puede resultar inquietante?",
+          "model": "Sugiere que está acostumbrado a conseguir lo que quiere sin levantar la voz; esa calma puede ser una forma de poder y de amenaza."
+        }
+      ],
+      "gaps": "Le ha dicho a Nacho que viene a «recoger un [material] que dejó en [depósito]» y que le [compensará] generosamente las [molestias].",
+      "glossary": [
+        {
+          "word": "exquisita",
+          "meaning": "extremadamente refinada"
+        },
+        {
+          "word": "en depósito",
+          "meaning": "guardado temporalmente por otra persona"
+        },
+        {
+          "word": "lo está entreteniendo",
+          "meaning": "le hace perder el tiempo para ganar tiempo"
+        },
+        {
+          "word": "insensato",
+          "meaning": "que actúa sin prudencia"
+        }
+      ]
+    },
+    {
+      "id": "atocha",
+      "title": "El dibujo de Martina",
+      "place": "Atocha · el andén",
+      "context": "Ya en Valencia, Álvaro llama a Valentina para contarle cómo ha sido el encuentro con su hermana en la estación.",
+      "speakers": [
+        {
+          "name": "Valentina",
+          "country": "Uruguay",
+          "voice": "es-UY-ValentinaNeural"
+        },
+        {
+          "name": "Álvaro",
+          "country": "España",
+          "voice": "es-ES-AlvaroNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Valentina, misión cumplida. Su hermana estaba en el andén antes de que paráramos, con una pancarta hecha con una caja de cartón: «Bruno y Martina, la tía os espera»."
+        },
+        {
+          "s": 0,
+          "text": "Esa es Lucía. Exagerada hasta en el fin del mundo. ¿Cómo han reaccionado los niños?"
+        },
+        {
+          "s": 1,
+          "text": "Bruno ha salido corriendo. Martina, en cambio, se ha quedado quieta, me ha mirado y me ha preguntado si podía irse ya o si todavía tenía que cuidar a su hermano. Le he dicho que su turno había terminado y entonces sí, se ha echado a llorar."
+        },
+        {
+          "s": 0,
+          "text": "Dios mío. Le he pedido a una niña de seis años que fuera adulta durante un viaje entero."
+        },
+        {
+          "s": 1,
+          "text": "No se fustigue. Le ha pedido lo que la situación exigía, y ella ha estado a la altura. Ahora le toca volver a ser una niña, y eso su hermana lo va a hacer muy bien. Ah, y el dibujo: una mujer en cada ventana del tren. Me ha explicado que son usted, la tía y la abuela, y que el maquinista soy yo."
+        },
+        {
+          "s": 0,
+          "text": "Guárdelo hasta que pueda dárselo en persona, Álvaro. Quiero que me lo cuente usted, delante de ella."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué llevaba la hermana de Valentina?",
+          "options": [
+            "Una pancarta de cartón para los niños",
+            "Un ramo de flores",
+            "Unos billetes de vuelta"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cómo reaccionó Martina al llegar?",
+          "options": [
+            "Salió corriendo",
+            "Preguntó si su turno de cuidar a su hermano había terminado",
+            "Se quedó dormida"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué le dice Álvaro a Valentina para tranquilizarla?",
+          "options": [
+            "Que Martina no se ha dado cuenta de nada",
+            "Que vuelva rápido",
+            "Que su hija ha estado a la altura y ahora volverá a ser niña"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Quiénes aparecen en el dibujo, según Martina?",
+          "options": [
+            "Su madre, su tía, su abuela y el maquinista",
+            "Sus amigos del colegio",
+            "Todos los pasajeros"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "Valentina se reprocha haber pedido a su hija que se comportara como una adulta. ¿Es inevitable que los niños asuman responsabilidades adultas en una crisis? Reflexiona.",
+          "model": "En una crisis puede ser inevitable, pero los adultos deben reconocer ese esfuerzo y devolverles después el derecho a ser niños."
+        },
+        {
+          "q": "¿Qué te parece la manera en que Álvaro gestiona emocionalmente a la madre? ¿Qué recursos utiliza?",
+          "model": "Me parece muy empática: valida el sentimiento de culpa sin alimentarlo, y le devuelve una imagen positiva de su hija."
+        },
+        {
+          "q": "¿Recuerdas un reencuentro que te emocionara especialmente? ¿Qué lo hizo inolvidable?",
+          "model": "El reencuentro con mi hermano tras dos años en Australia; lo inolvidable fue que los dos nos quedamos callados un minuto entero antes de abrazarnos."
+        }
+      ],
+      "gaps": "Le he dicho que su [turno] había [terminado] y entonces sí, se ha [echado] a [llorar].",
+      "glossary": [
+        {
+          "word": "pancarta",
+          "meaning": "cartel grande con un mensaje"
+        },
+        {
+          "word": "no se fustigue",
+          "meaning": "no se castigue a sí misma"
+        },
+        {
+          "word": "ha estado a la altura",
+          "meaning": "ha respondido bien a lo que se esperaba de ella"
+        },
+        {
+          "word": "exagerada",
+          "meaning": "que hace o dice más de lo normal"
+        }
+      ]
+    },
+    {
+      "id": "palacio",
+      "title": "El informe de un soldado raso",
+      "place": "Palacio Real · frecuencia militar",
+      "context": "Mario lee por radio a la sargento el testimonio que ha escrito para la capitana Reyes, antes de entregarlo.",
+      "speakers": [
+        {
+          "name": "Sargento",
+          "country": "España",
+          "voice": "es-ES-XimenaNeural"
+        },
+        {
+          "name": "Mario",
+          "country": "Paraguay",
+          "voice": "es-PY-MarioNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Sargento, ¿puedo leerle lo que he escrito? No quiero que suene a novela, pero tampoco a informe de cuartel."
+        },
+        {
+          "s": 0,
+          "text": "Adelante, te escucho. Y léelo despacio, como si lo estuviera oyendo alguien que no te conoce de nada."
+        },
+        {
+          "s": 1,
+          "text": "«Yo, Mario Benítez, soldado de la tercera compañía, declaro que el día doce, a las siete y diez de la mañana, la capitana Reyes reunió a la compañía en el patio y rompió delante de todos la orden de disparar a civiles. Dijo que asumía personalmente la responsabilidad. Nadie disparó. Esa misma mañana atendimos a una abuela y a su nieto en la puerta norte»."
+        },
+        {
+          "s": 0,
+          "text": "Está muy bien. Preciso y sin adjetivos. Los adjetivos se discuten; los hechos, no tanto."
+        },
+        {
+          "s": 1,
+          "text": "¿No debería añadir que me pareció lo correcto?"
+        },
+        {
+          "s": 0,
+          "text": "Eso guárdatelo para cuando te pregunten. Un testimonio vale más cuanto menos opina. Si escribes que fue heroico, alguien dirá que eras su amigo. Si escribes la hora y lo que pasó, tendrán que explicar por qué una capitana tuvo que romper una orden para que no muriera nadie."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué quiere evitar Mario al escribir?",
+          "options": [
+            "Que suene a novela o a informe de cuartel",
+            "Escribir demasiado corto",
+            "Usar su nombre"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿A qué hora rompió la capitana la orden?",
+          "options": [
+            "A las doce de la noche",
+            "A las siete y diez de la mañana",
+            "A mediodía"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Por qué le gusta el texto a la sargento?",
+          "options": [
+            "Porque está lleno de emoción",
+            "Porque es muy largo",
+            "Porque es preciso y sin adjetivos"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Según la sargento, ¿cuándo vale más un testimonio?",
+          "options": [
+            "Cuanto menos opina y más hechos aporta",
+            "Cuando lo firma un oficial",
+            "Cuando es muy emotivo"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "La sargento afirma que «los adjetivos se discuten; los hechos, no tanto». ¿Estás de acuerdo? Analiza la diferencia entre informar y opinar.",
+          "model": "En parte: los hechos también pueden seleccionarse de forma interesada, pero es cierto que los adjetivos revelan una postura que el lector puede rechazar con más facilidad."
+        },
+        {
+          "q": "¿Qué valor tienen los testimonios de personas sin poder, como un soldado raso, frente a los relatos oficiales? Pon ejemplos históricos.",
+          "model": "Tienen un valor enorme, porque aportan una mirada desde abajo; muchos crímenes de guerra se conocieron gracias a testimonios de soldados o civiles."
+        },
+        {
+          "q": "Si tuvieras que escribir un testimonio sobre algo injusto que presenciaste, ¿qué incluirías y qué dejarías fuera?",
+          "model": "Incluiría fechas, lugares y palabras exactas, y dejaría fuera mis interpretaciones, para que nadie pudiera desacreditarlo por subjetivo."
+        }
+      ],
+      "gaps": "Está muy [bien]. Preciso y sin [adjetivos]. Los adjetivos se [discuten]; los [hechos], no tanto.",
+      "glossary": [
+        {
+          "word": "soldado",
+          "meaning": "miembro del ejército sin rango de oficial"
+        },
+        {
+          "word": "declaro",
+          "meaning": "de declarar: afirmar oficialmente"
+        },
+        {
+          "word": "asumía",
+          "meaning": "de asumir: aceptar como propia una responsabilidad"
+        },
+        {
+          "word": "preciso",
+          "meaning": "exacto, sin errores"
+        }
+      ]
+    },
+    {
+      "id": "hospital",
+      "title": "Las cuarenta y ocho horas",
+      "place": "Hospital de campaña · mensaje de voz",
+      "context": "Han pasado dos días desde que Yuleisy recibió la primera dosis experimental. Llama a Sebastián desde la tienda de la doctora Ochoa.",
+      "speakers": [
+        {
+          "name": "Yuleisy",
+          "country": "Venezuela",
+          "voice": "es-VE-PaolaNeural"
+        },
+        {
+          "name": "Sebastián",
+          "country": "Venezuela",
+          "voice": "es-VE-SebastianNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Sebastián, cuarenta y ocho horas y sigo viva, que conste. Un poco de fiebre el primer día y el brazo como si me hubiera mordido un caballo, pero nada más."
+        },
+        {
+          "s": 1,
+          "text": "Menos mal. Llevo dos días sin dormir pensando en ti. ¿Y los análisis? ¿Funciona?"
+        },
+        {
+          "s": 0,
+          "text": "La doctora Ochoa dice que mi sangre está produciendo anticuerpos. Ha dado un grito tan fuerte que se ha asomado medio hospital a la tienda. Luego me ha abrazado y se ha puesto a llorar, ella, que no llora ni cortando cebolla."
+        },
+        {
+          "s": 1,
+          "text": "Hermana, eso es enorme. ¿Se lo puedo contar ya a mamá?"
+        },
+        {
+          "s": 0,
+          "text": "Todavía no. Hay que esperar a ver qué pasa con los otros diez voluntarios. Si solo funciona conmigo, no sirve de nada. La ciencia no se hace con una persona, se hace con muchas."
+        },
+        {
+          "s": 1,
+          "text": "Vale, pero déjame decirte una cosa: estoy orgulloso de ti. Y mamá también lo estaría, aunque te reñiría primero durante media hora."
+        },
+        {
+          "s": 0,
+          "text": "Lo sé. Por eso se lo contaré cuando tenga la vacuna en la mano y no solo en el brazo."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué efectos ha tenido la dosis en Yuleisy?",
+          "options": [
+            "Un poco de fiebre y dolor en el brazo",
+            "Ninguno",
+            "Una reacción muy grave"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué indican los análisis?",
+          "options": [
+            "Que tiene el virus",
+            "Que su sangre produce anticuerpos",
+            "Que la dosis está caducada"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Por qué no quiere Yuleisy contárselo todavía a su madre?",
+          "options": [
+            "Porque su madre está enferma",
+            "Porque no tiene cobertura",
+            "Porque hay que comprobar si funciona en los demás voluntarios"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cuál es la reacción de la doctora Ochoa?",
+          "options": [
+            "Grita, la abraza y llora",
+            "Se mantiene fría y distante",
+            "Se enfada con Yuleisy"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "Yuleisy afirma que «la ciencia no se hace con una persona, se hace con muchas». ¿Por qué es peligroso sacar conclusiones de un único caso? Pon ejemplos.",
+          "model": "Porque un caso aislado puede deberse al azar o a características individuales; muchos remedios milagrosos se basan en testimonios únicos que luego no se confirman."
+        },
+        {
+          "q": "¿Crees que es éticamente aceptable que el personal sanitario se ofrezca como voluntario para ensayos de riesgo? ¿Qué garantías deberían existir?",
+          "model": "Puede ser aceptable si es realmente voluntario, sin presiones, con información completa y con un seguimiento médico independiente."
+        },
+        {
+          "q": "Sebastián dice que su madre estaría orgullosa, «aunque le reñiría primero». ¿Qué revela esa frase sobre el amor familiar?",
+          "model": "Revela que el orgullo y el miedo conviven: los padres admiran el valor de sus hijos, pero les asusta el riesgo que corren."
+        }
+      ],
+      "gaps": "Hay que esperar a ver qué pasa con los otros diez [voluntarios]. Si solo [funciona] conmigo, no sirve de [nada]. La ciencia no se hace con una [persona]",
+      "glossary": [
+        {
+          "word": "que conste",
+          "meaning": "quiero dejarlo claro"
+        },
+        {
+          "word": "anticuerpos",
+          "meaning": "defensas que produce el cuerpo contra un virus"
+        },
+        {
+          "word": "se ha asomado",
+          "meaning": "de asomarse: mostrarse para mirar"
+        },
+        {
+          "word": "reñiría",
+          "meaning": "de reñir: regañar"
+        }
+      ]
+    },
+    {
+      "id": "rio",
+      "title": "El silencio de doña Remedios",
+      "place": "Madrid Río · la radio",
+      "context": "Lola, ya en casa de doña Remedios, recibe una última llamada de Jaime antes de que la barca llegue a su destino.",
+      "speakers": [
+        {
+          "name": "Lola",
+          "country": "España",
+          "voice": "es-ES-ElviraNeural"
+        },
+        {
+          "name": "Jaime",
+          "country": "España",
+          "voice": "es-ES-AlvaroNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Lola, estamos a una hora de Aranjuez. Desde allí, una ambulancia militar llevará la fórmula a un laboratorio de verdad. Ha salido bien. Por ahora, todo ha salido bien."
+        },
+        {
+          "s": 0,
+          "text": "Cuánto me alegro. Aquí doña Remedios me está enseñando fotos de cuando el Manzanares tenía lavanderas. Dice que su madre lavaba la ropa de medio barrio en este mismo río."
+        },
+        {
+          "s": 1,
+          "text": "Entonces el río ya ha visto de todo: lavanderas, guerras, obras y ahora una barca con la última esperanza de la ciudad."
+        },
+        {
+          "s": 0,
+          "text": "Eso mismo ha dicho ella, con otras palabras. Ha dicho que los ríos no tienen memoria, pero que las orillas sí, y que por eso ella no se va: alguien tiene que acordarse de cómo era todo antes de que llegara la nube."
+        },
+        {
+          "s": 1,
+          "text": "Pues dile que cuando esto termine vuelvo a por ella y la llevo a Toledo en la barca, a ver a su nieta. Que no hace falta que se vaya, pero sí que se dé un paseo."
+        },
+        {
+          "s": 0,
+          "text": "Se lo digo. Ahora se ha quedado mirando el agua, muy callada. Creo que es la primera vez en diez días que la veo sonreír."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Adónde va a llegar la barca?",
+          "options": [
+            "A Aranjuez",
+            "A Toledo",
+            "A Valencia"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué le enseña doña Remedios a Lola?",
+          "options": [
+            "Su diario personal",
+            "Fotos de cuando había lavanderas en el río",
+            "La carta para su nieta"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué dice doña Remedios sobre los ríos y las orillas?",
+          "options": [
+            "Que los ríos son peligrosos",
+            "Que el agua lo limpia todo",
+            "Que los ríos no tienen memoria, pero las orillas sí"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué le promete Jaime a doña Remedios?",
+          "options": [
+            "Llevarla en barca a Toledo a ver a su nieta",
+            "Mudarse con ella",
+            "Traerle la vacuna"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "Doña Remedios dice que «los ríos no tienen memoria, pero las orillas sí». Interpreta esta metáfora y relaciónala con el papel de las personas mayores en una sociedad.",
+          "model": "Creo que quiere decir que el tiempo pasa sin detenerse, pero las personas que permanecen guardan el recuerdo; los mayores son esas orillas que conservan la memoria colectiva."
+        },
+        {
+          "q": "¿Qué lugares de tu ciudad han cambiado completamente de uso a lo largo del tiempo? ¿Qué se ha ganado y qué se ha perdido?",
+          "model": "El antiguo matadero de mi ciudad es hoy un centro cultural; se ha ganado un espacio para todos, pero se ha perdido la memoria de los oficios que había allí."
+        },
+        {
+          "q": "¿Cómo crees que debería cerrarse una historia como esta, después de tantas pérdidas? ¿Qué te gustaría que quedara?",
+          "model": "Me gustaría que quedara la idea de que la ayuda entre desconocidos salvó la ciudad, más que cualquier héroe individual."
+        }
+      ],
+      "gaps": "Ha dicho que los ríos no tienen [memoria], pero que las [orillas] sí, y que por eso ella no se [va]: alguien tiene que [acordarse]",
+      "glossary": [
+        {
+          "word": "lavanderas",
+          "meaning": "mujeres que lavaban ropa a mano para otros"
+        },
+        {
+          "word": "las orillas",
+          "meaning": "bordes de tierra junto al agua"
+        },
+        {
+          "word": "sonreír",
+          "meaning": "poner cara de alegría"
+        }
+      ]
+    }
+  ]
+}

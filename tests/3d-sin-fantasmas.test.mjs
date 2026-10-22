@@ -15,6 +15,7 @@ const hospital = await import('../app/hospital-san-casi-vivo/layout.mjs');
 const casino = await import('../app/marketing-de-casinos/layout.mjs');
 const feria = await import('../app/la-feria-de-villaluz/layout.mjs');
 const feriaLevels = await import('../app/la-feria-de-villaluz/levels.mjs');
+const madrid = await import('../app/madrid-infectada/layout.mjs');
 const bosque = await import('../app/bosque-de-los-hongos-gigantes/engine.mjs');
 const { pushOut } = await import('../app/escucha-3d/bump.mjs');
 
@@ -115,7 +116,24 @@ function feriaWorld() {
   };
 }
 
-const WORLDS = [nocheStreet(), ...nocheRooms(), ...hospitalFloors(), ...casinoFloors(), feriaWorld()];
+// Madrid infectada: one world per zone. The mascot starts at the spawn, a few
+// steps past it, or (coming back from the next zone) just inside the gate.
+function madridZones() {
+  return madrid.ZONE_ORDER.map(id => {
+    const z = madrid.layoutOf(id);
+    const solids = madrid.solidsFor(id);
+    const fwd = { x: z.spawn.x + Math.sin(z.spawn.heading) * 4.5, z: z.spawn.z + Math.cos(z.spawn.heading) * 4.5 };
+    const clearFwd = z.back && !solids.some(b => overlaps(fwd.x, fwd.z, 0.6, b));
+    const gateIn = z.gate && { x: z.gate.x + (z.spawn.x - z.gate.x) * 0.12, z: z.gate.z + (z.spawn.z - z.gate.z) * 0.12 };
+    return {
+      id: `madrid:${id}`, solids, bounds: z.bounds, staticWalkers: true,
+      walkers: (z.zombies ?? []).map(w => ({ id: `zombie-${w.seed}`, points: sample(w.path, false) })), people: madrid.peopleOf(id),
+      spots: [{ id: 'spawn', ...z.spawn }, ...(clearFwd ? [{ id: 'adelante', ...fwd }] : []), ...(gateIn ? [{ id: 'vuelta', ...gateIn }] : []), ...z.spots.map(s => ({ id: s.id, x: s.x, z: s.z }))],
+    };
+  });
+}
+
+const WORLDS = [nocheStreet(), ...nocheRooms(), ...hospitalFloors(), ...casinoFloors(), feriaWorld(), ...madridZones()];
 
 // ------------------------------------------------------------------ checks
 test('every world in the list has solids, people or walkers to check', () => {

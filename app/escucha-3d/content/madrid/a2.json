@@ -1,0 +1,1136 @@
+{
+  "game": "madrid",
+  "level": "A2",
+  "items": [
+    {
+      "id": "sol",
+      "title": "La enfermera de la calle Arenal",
+      "place": "Puerta del Sol · la radio",
+      "context": "Salomé, una enfermera colombiana, llama al programa de Lola para contar qué ha visto esta noche desde su balcón.",
+      "speakers": [
+        {
+          "name": "Lola",
+          "country": "España",
+          "voice": "es-ES-ElviraNeural"
+        },
+        {
+          "name": "Salomé",
+          "country": "Colombia",
+          "voice": "es-CO-SalomeNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Radio Kilómetro Cero, buenos días. Tenemos otra vez a Salomé en la línea. ¿Qué tal la noche?"
+        },
+        {
+          "s": 1,
+          "text": "Larga, Lola. A las tres de la mañana oí un helicóptero muy cerca de mi balcón. Iba hacia el Retiro."
+        },
+        {
+          "s": 0,
+          "text": "¿Un helicóptero? ¿Militar?"
+        },
+        {
+          "s": 1,
+          "text": "Creo que sí. Era verde y no tenía luces. Además, mi vecino del cuarto empezó a toser y le llevé un termómetro."
+        },
+        {
+          "s": 0,
+          "text": "¿Y cómo está?"
+        },
+        {
+          "s": 1,
+          "text": "Tiene treinta y ocho de fiebre. Le he dicho que beba mucha agua y que no salga de casa. Mañana voy a volver a verle."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿A qué hora oyó Salomé el helicóptero?",
+          "options": [
+            "A las tres de la mañana",
+            "A las seis",
+            "A medianoche"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cómo era el helicóptero?",
+          "options": [
+            "Blanco y con muchas luces",
+            "Verde y sin luces",
+            "Rojo y muy pequeño"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué le pasa al vecino del cuarto?",
+          "options": [
+            "Se ha caído",
+            "Se ha ido de Madrid",
+            "Tiene fiebre y tos"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué le ha recomendado Salomé al vecino?",
+          "options": [
+            "Beber agua y no salir de casa",
+            "Ir al hospital",
+            "Tomar ajo"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Has ayudado alguna vez a un vecino que estaba enfermo? ¿Qué hiciste?",
+          "model": "Sí, el año pasado mi vecina tuvo gripe y le llevé sopa y medicinas."
+        },
+        {
+          "q": "¿Qué ruidos oyes por la noche en tu casa?",
+          "model": "Oigo los coches de la calle y a veces el perro del vecino."
+        },
+        {
+          "q": "¿Qué haces tú cuando tienes fiebre?",
+          "model": "Me quedo en la cama, bebo mucha agua y tomo un paracetamol."
+        }
+      ],
+      "gaps": "Tiene treinta y ocho de [fiebre]. Le he dicho que [beba] mucha [agua] y que no [salga] de casa.",
+      "glossary": [
+        {
+          "word": "en la línea",
+          "meaning": "al teléfono, en la llamada"
+        },
+        {
+          "word": "balcón",
+          "meaning": "parte de la casa que sale a la calle"
+        },
+        {
+          "word": "toser",
+          "meaning": "echar aire con ruido por la garganta"
+        },
+        {
+          "word": "termómetro",
+          "meaning": "aparato para medir la fiebre"
+        }
+      ]
+    },
+    {
+      "id": "granvia",
+      "title": "La pizza de doña Pura",
+      "place": "Gran Vía · mensaje de voz",
+      "context": "Alex, repartidor peruano, cuenta a su hermana Camila lo que le pasó ayer en la Gran Vía.",
+      "speakers": [
+        {
+          "name": "Alex",
+          "country": "Perú",
+          "voice": "es-PE-AlexNeural"
+        },
+        {
+          "name": "Camila",
+          "country": "Perú",
+          "voice": "es-PE-CamilaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Camila, ayer pasó algo increíble. Llevaba una pizza a una señora de la calle Montera, doña Pura."
+        },
+        {
+          "s": 1,
+          "text": "¿Y qué pasó?"
+        },
+        {
+          "s": 0,
+          "text": "Cuando llegué a la Gran Vía, vi la nube verde delante de un cine. Venía hacia mí. Dejé la bici y entré corriendo en una farmacia."
+        },
+        {
+          "s": 1,
+          "text": "¡Alex! ¿Y la pizza?"
+        },
+        {
+          "s": 0,
+          "text": "La pizza, bien, ja, ja. Esperé diez minutos y la nube se fue hacia Callao. Después llevé la pizza. Doña Pura me dio una propina de veinte euros."
+        },
+        {
+          "s": 1,
+          "text": "Pues ahora te quedas en casa. Ya está."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Dónde vive doña Pura?",
+          "options": [
+            "En la calle Montera",
+            "En la Gran Vía",
+            "En Callao"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Dónde entró Alex?",
+          "options": [
+            "En un cine",
+            "En una farmacia",
+            "En un bar"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cuánto tiempo esperó Alex?",
+          "options": [
+            "Una hora",
+            "Dos minutos",
+            "Diez minutos"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué le dio doña Pura?",
+          "options": [
+            "Una pizza",
+            "Una propina de veinte euros",
+            "Una bici nueva"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Has tenido que correr alguna vez para escapar de algo, como la lluvia o un perro? Cuéntalo.",
+          "model": "Sí, una vez empezó a llover mucho y entré corriendo en una tienda de ropa."
+        },
+        {
+          "q": "¿Dejas propina en los restaurantes o a los repartidores? ¿Cuánto?",
+          "model": "Sí, normalmente dejo un diez por ciento en los restaurantes."
+        },
+        {
+          "q": "¿Qué trabajo hiciste cuando eras joven?",
+          "model": "Trabajé un verano en una heladería de la playa."
+        }
+      ],
+      "gaps": "Esperé diez [minutos] y la [nube] se fue hacia [Callao]. Después llevé la [pizza].",
+      "glossary": [
+        {
+          "word": "increíble",
+          "meaning": "muy sorprendente, difícil de creer"
+        },
+        {
+          "word": "propina",
+          "meaning": "dinero extra que das por un buen servicio"
+        },
+        {
+          "word": "corriendo",
+          "meaning": "muy rápido, a la carrera"
+        }
+      ]
+    },
+    {
+      "id": "plaza",
+      "title": "Una noche en la tienda doce",
+      "place": "Plaza Mayor · el refugio",
+      "context": "En el refugio, la voluntaria Andrea habla con Ramón, un vecino mayor, sobre su primera semana en la plaza.",
+      "speakers": [
+        {
+          "name": "Andrea",
+          "country": "Ecuador",
+          "voice": "es-EC-AndreaNeural"
+        },
+        {
+          "name": "Ramón",
+          "country": "España",
+          "voice": "es-ES-AlvaroNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Ramón, ayer no vino a la cola de la cena. ¿Estaba enfermo?"
+        },
+        {
+          "s": 1,
+          "text": "No, hija. Estaba en la tienda doce, con un niño que lloraba mucho. Sus padres estaban en la cola del agua."
+        },
+        {
+          "s": 0,
+          "text": "¿Y qué hizo?"
+        },
+        {
+          "s": 1,
+          "text": "Le conté historias de cuando era joven. Yo trabajé treinta años en el teatro, aquí al lado. Al final se durmió."
+        },
+        {
+          "s": 0,
+          "text": "¡Qué bonito! Necesitamos gente como usted. ¿Le gustaría contar cuentos a los niños por la tarde?"
+        },
+        {
+          "s": 1,
+          "text": "Me encantaría. Pero con una condición: una manta más para mi tienda."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Por qué no fue Ramón a la cena?",
+          "options": [
+            "Porque estaba con un niño que lloraba",
+            "Porque estaba enfermo",
+            "Porque no tenía hambre"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Dónde estaban los padres del niño?",
+          "options": [
+            "En el hospital",
+            "En casa",
+            "En la cola del agua"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Dónde trabajó Ramón?",
+          "options": [
+            "En un hospital",
+            "En un teatro",
+            "En un colegio"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué pide Ramón a cambio?",
+          "options": [
+            "Más comida",
+            "Una manta más",
+            "Dinero"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué historias te contaban de pequeño? ¿Quién te las contaba?",
+          "model": "Mi abuelo me contaba historias de su pueblo antes de dormir."
+        },
+        {
+          "q": "¿Te gustaría hacer un trabajo voluntario con niños o con mayores? ¿Por qué?",
+          "model": "Con mayores, porque me gusta escuchar sus historias."
+        },
+        {
+          "q": "¿Has trabajado alguna vez en algo relacionado con el arte?",
+          "model": "No, pero de joven hice teatro en el instituto."
+        }
+      ],
+      "gaps": "Le conté [historias] de cuando era [joven]. Yo trabajé treinta [años] en el [teatro], aquí al lado.",
+      "glossary": [
+        {
+          "word": "la cola",
+          "meaning": "fila de personas que esperan"
+        },
+        {
+          "word": "lloraba",
+          "meaning": "de llorar: echar lágrimas"
+        },
+        {
+          "word": "cuentos",
+          "meaning": "historias cortas, a veces para niños"
+        },
+        {
+          "word": "condición",
+          "meaning": "algo que pides para decir que sí"
+        }
+      ]
+    },
+    {
+      "id": "metro",
+      "title": "Cielito lindo bajo tierra",
+      "place": "Metro · el andén",
+      "context": "Manuel, guitarrista cubano, y Ximena, una chica madrileña, llevan dos días en el metro. Hablan de sus vidas antes del brote.",
+      "speakers": [
+        {
+          "name": "Manuel",
+          "country": "Cuba",
+          "voice": "es-CU-ManuelNeural"
+        },
+        {
+          "name": "Ximena",
+          "country": "España",
+          "voice": "es-ES-XimenaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Manuel, ¿por qué viniste a Madrid?"
+        },
+        {
+          "s": 0,
+          "text": "Vine hace diez años para estudiar música. No tenía dinero y empecé a tocar en el metro. Al principio lo odiaba."
+        },
+        {
+          "s": 1,
+          "text": "¿Y ahora?"
+        },
+        {
+          "s": 0,
+          "text": "Ahora me encanta. Conozco a mucha gente. Una señora me traía churros todos los domingos. ¿Y tú? ¿Qué hacías antes?"
+        },
+        {
+          "s": 1,
+          "text": "Trabajaba en una oficina, diez horas al día, delante de un ordenador. Siempre estaba cansada."
+        },
+        {
+          "s": 0,
+          "text": "Pues cuando todo esto termine, te enseño a tocar la guitarra. Tres acordes y ya puedes cantar «Cielito lindo»."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Por qué vino Manuel a Madrid?",
+          "options": [
+            "Para estudiar música",
+            "Para trabajar en una oficina",
+            "Para visitar a su familia"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué le traía una señora los domingos?",
+          "options": [
+            "Café",
+            "Flores",
+            "Churros"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cómo se sentía Ximena en su trabajo?",
+          "options": [
+            "Muy contenta",
+            "Siempre cansada",
+            "Aburrida pero bien pagada"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué le propone Manuel a Ximena?",
+          "options": [
+            "Enseñarle a tocar la guitarra",
+            "Trabajar con él",
+            "Ir a Cuba"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Hay algo que al principio odiabas y ahora te gusta? Cuéntalo.",
+          "model": "Al principio odiaba correr, pero ahora corro tres días a la semana."
+        },
+        {
+          "q": "¿Cómo era tu rutina de trabajo o de estudio el año pasado?",
+          "model": "Me levantaba a las siete, trabajaba hasta las cinco y luego iba al gimnasio."
+        },
+        {
+          "q": "¿Qué te gustaría aprender cuando tengas más tiempo libre?",
+          "model": "Me gustaría aprender a pintar con acuarelas."
+        }
+      ],
+      "gaps": "Trabajaba en una [oficina], diez [horas] al día, delante de un [ordenador]. Siempre estaba [cansada].",
+      "glossary": [
+        {
+          "word": "odiaba",
+          "meaning": "de odiar: no gustar nada"
+        },
+        {
+          "word": "churros",
+          "meaning": "masa frita y dulce típica de España"
+        },
+        {
+          "word": "acordes",
+          "meaning": "grupos de notas que se tocan juntas en la guitarra"
+        }
+      ]
+    },
+    {
+      "id": "retiro",
+      "title": "La segunda grabación",
+      "place": "Retiro · el laboratorio",
+      "context": "La radio de bolsillo capta otra grabación del laboratorio, de hace diez días. Elena y Javier discuten qué hacer.",
+      "speakers": [
+        {
+          "name": "Elena",
+          "country": "España",
+          "voice": "es-ES-ElviraNeural"
+        },
+        {
+          "name": "Javier",
+          "country": "Guinea Ecuatorial",
+          "voice": "es-GQ-JavierNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Doctora, los jefes han llamado otra vez. Dicen que no abramos las puertas y que no hablemos con la prensa."
+        },
+        {
+          "s": 0,
+          "text": "¿Y la gente del parque? Esta mañana había corredores y familias con niños."
+        },
+        {
+          "s": 1,
+          "text": "Ya lo sé. Mi hija vino ayer a patinar aquí, al lado del estanque."
+        },
+        {
+          "s": 0,
+          "text": "Javier, tenemos que hacer algo. Si no avisamos, mañana va a haber cientos de enfermos."
+        },
+        {
+          "s": 1,
+          "text": "Si avisamos, perdemos el trabajo. Y quizá algo peor."
+        },
+        {
+          "s": 0,
+          "text": "Entonces voy a escribir la fórmula de la vacuna en un cuaderno. Alguien tiene que sacarla de aquí."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué dicen los jefes?",
+          "options": [
+            "Que llamen a la prensa",
+            "Que no abran las puertas ni hablen con la prensa",
+            "Que cierren el parque"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Quién vino ayer al parque?",
+          "options": [
+            "La hija de Javier",
+            "La madre de Elena",
+            "Un periodista"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué teme Javier si avisan?",
+          "options": [
+            "Ponerse enfermo",
+            "Perder a su hija",
+            "Perder el trabajo o algo peor"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué decide hacer Elena?",
+          "options": [
+            "Escribir la fórmula en un cuaderno",
+            "Irse de Madrid",
+            "Llamar a la policía"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Alguna vez no estuviste de acuerdo con tu jefe? ¿Qué pasó?",
+          "model": "Sí, mi jefe quería trabajar el domingo y yo le expliqué que no podía."
+        },
+        {
+          "q": "¿Qué harías tú en el lugar de Javier: avisar o callar? ¿Por qué?",
+          "model": "Avisaría, porque la salud de la gente es más importante que el trabajo."
+        },
+        {
+          "q": "¿Qué haces los fines de semana en los parques de tu ciudad?",
+          "model": "Paseo con mi perro y a veces hago un picnic con amigos."
+        }
+      ],
+      "gaps": "Si no [avisamos], mañana va a haber [cientos] de [enfermos]. Si avisamos, perdemos el [trabajo].",
+      "glossary": [
+        {
+          "word": "la prensa",
+          "meaning": "los periodistas y los periódicos"
+        },
+        {
+          "word": "patinar",
+          "meaning": "deslizarse con patines"
+        },
+        {
+          "word": "avisamos",
+          "meaning": "de avisar: decir a alguien que hay un peligro"
+        },
+        {
+          "word": "el estanque",
+          "meaning": "lago pequeño de un parque"
+        }
+      ]
+    },
+    {
+      "id": "malasana",
+      "title": "La noche que no paró la música",
+      "place": "Malasaña · la radio",
+      "context": "Lola habla otra vez con Emilio, el DJ dominicano, sobre lo que pasó anoche en la plaza del Dos de Mayo.",
+      "speakers": [
+        {
+          "name": "Lola",
+          "country": "España",
+          "voice": "es-ES-ElviraNeural"
+        },
+        {
+          "name": "Emilio",
+          "country": "República Dominicana",
+          "voice": "es-DO-EmilioNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Emilio, los vecinos me han dicho que anoche hubo un problema en la plaza."
+        },
+        {
+          "s": 1,
+          "text": "Sí. A las once, la nube verde bajó por la calle Velarde. Todo el mundo empezó a gritar."
+        },
+        {
+          "s": 0,
+          "text": "¿Y qué hiciste?"
+        },
+        {
+          "s": 1,
+          "text": "Apagué la música y abrimos el bar de Nacho. Metimos a cuarenta personas dentro y cerramos las ventanas."
+        },
+        {
+          "s": 0,
+          "text": "¿Estuvisteis mucho tiempo dentro?"
+        },
+        {
+          "s": 1,
+          "text": "Dos horas. Pero, mira, al final pusimos una bachata y bailamos dentro del bar. Fue la mejor fiesta del año."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿A qué hora llegó la nube?",
+          "options": [
+            "A las once",
+            "A las dos",
+            "A las ocho"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué hizo Emilio primero?",
+          "options": [
+            "Llamó a la radio",
+            "Apagó la música",
+            "Salió corriendo"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cuántas personas entraron en el bar?",
+          "options": [
+            "Cuatro",
+            "Cuatrocientas",
+            "Cuarenta"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cómo terminó la noche?",
+          "options": [
+            "Con una fiesta dentro del bar",
+            "En el hospital",
+            "Con la policía"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Cuál fue la mejor fiesta de tu vida? ¿Dónde fue y qué pasó?",
+          "model": "Fue la boda de mi prima: bailamos hasta las cinco de la mañana."
+        },
+        {
+          "q": "¿Qué harías si hay una emergencia en un lugar con mucha gente?",
+          "model": "Intentaría estar tranquilo y buscaría la salida más cercana."
+        },
+        {
+          "q": "¿Qué tipo de música bailas o escuchas en las fiestas?",
+          "model": "Escucho reguetón y pop, pero bailo mal."
+        }
+      ],
+      "gaps": "Apagué la [música] y abrimos el [bar] de Nacho. Metimos a cuarenta [personas] dentro y cerramos las [ventanas].",
+      "glossary": [
+        {
+          "word": "gritar",
+          "meaning": "hablar muy alto por miedo o enfado"
+        },
+        {
+          "word": "apagué",
+          "meaning": "de apagar: parar una máquina o una luz"
+        },
+        {
+          "word": "metimos",
+          "meaning": "de meter: poner dentro"
+        }
+      ]
+    },
+    {
+      "id": "atocha",
+      "title": "Dos maletas y un peluche",
+      "place": "Atocha · el andén",
+      "context": "Valentina, madre uruguaya, ha hablado con la jefa de estación. Ahora vuelve con Álvaro, el maquinista.",
+      "speakers": [
+        {
+          "name": "Valentina",
+          "country": "Uruguay",
+          "voice": "es-UY-ValentinaNeural"
+        },
+        {
+          "name": "Álvaro",
+          "country": "España",
+          "voice": "es-ES-AlvaroNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "¿Ha hablado con Mercedes? ¿Qué le ha dicho?"
+        },
+        {
+          "s": 0,
+          "text": "Que mis hijos pueden subir, porque son pequeños. Pero yo no. Primero van los niños y los mayores."
+        },
+        {
+          "s": 1,
+          "text": "Lo siento mucho. ¿Tienen familia en Valencia?"
+        },
+        {
+          "s": 0,
+          "text": "Sí, mi hermana vive allí. Va a esperarlos en la estación. Les he preparado dos maletas y el peluche de la pequeña."
+        },
+        {
+          "s": 1,
+          "text": "Yo los voy a llevar en la cabina conmigo, si quiere. Así no van solos."
+        },
+        {
+          "s": 0,
+          "text": "Gracias, Álvaro. Es la primera vez que me separo de ellos."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué le ha dicho Mercedes a Valentina?",
+          "options": [
+            "Que todos pueden subir",
+            "Que sus hijos pueden subir, pero ella no",
+            "Que nadie puede subir"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Quién vive en Valencia?",
+          "options": [
+            "La hermana de Valentina",
+            "El padre de los niños",
+            "Álvaro"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué ha preparado Valentina?",
+          "options": [
+            "Comida para el viaje",
+            "Los billetes",
+            "Dos maletas y un peluche"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué le ofrece Álvaro?",
+          "options": [
+            "Su billete",
+            "Llevar a los niños en la cabina con él",
+            "Dinero"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Te has separado alguna vez de alguien que quieres durante mucho tiempo? ¿Cómo fue?",
+          "model": "Sí, cuando me fui a estudiar a otra ciudad estuve un año sin ver a mis padres."
+        },
+        {
+          "q": "¿Qué objeto de tu infancia guardas todavía?",
+          "model": "Guardo un oso de peluche que me regaló mi abuela."
+        },
+        {
+          "q": "Si solo pudieras llevar una maleta, ¿qué cosas pondrías dentro?",
+          "model": "Pondría ropa, mis documentos, fotos y el cargador del móvil."
+        }
+      ],
+      "gaps": "Les he preparado dos [maletas] y el [peluche] de la [pequeña]. Yo los voy a [llevar] en la cabina conmigo, si quiere.",
+      "glossary": [
+        {
+          "word": "el peluche",
+          "meaning": "muñeco blando, como un oso de juguete"
+        },
+        {
+          "word": "la cabina",
+          "meaning": "lugar del tren donde va el maquinista"
+        },
+        {
+          "word": "me separo",
+          "meaning": "de separarse: estar lejos de alguien"
+        }
+      ]
+    },
+    {
+      "id": "palacio",
+      "title": "La puerta norte",
+      "place": "Palacio Real · frecuencia militar",
+      "context": "En la frecuencia militar, Mario, soldado paraguayo, informa a su sargento. Algo ha cambiado en las órdenes.",
+      "speakers": [
+        {
+          "name": "Sargento",
+          "country": "España",
+          "voice": "es-ES-XimenaNeural"
+        },
+        {
+          "name": "Mario",
+          "country": "Paraguay",
+          "voice": "es-PY-MarioNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Mario, ¿has recibido la nueva orden del cuartel?"
+        },
+        {
+          "s": 1,
+          "text": "Sí, sargento. Dice que no podemos dejar pasar a nadie y que tenemos que usar las armas si alguien cruza."
+        },
+        {
+          "s": 0,
+          "text": "¿Y qué piensas?"
+        },
+        {
+          "s": 1,
+          "text": "Sinceramente, no me gusta. Esta mañana vino una abuela con su nieto. Solo querían agua. Yo vine a España para ayudar, no para disparar."
+        },
+        {
+          "s": 0,
+          "text": "La capitana Reyes piensa lo mismo. No vamos a cumplir esa orden. Lleva agua a la abuela y una manta al niño."
+        },
+        {
+          "s": 1,
+          "text": "Gracias, sargento. Ahora mismo."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué dice la nueva orden?",
+          "options": [
+            "Que no pueden dejar pasar a nadie y deben usar las armas",
+            "Que pueden irse a casa",
+            "Que tienen que ir al hospital"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Quién vino por la mañana?",
+          "options": [
+            "Un periodista",
+            "Una abuela con su nieto",
+            "Un médico"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Por qué vino Mario a España, según él?",
+          "options": [
+            "Para estudiar",
+            "Para disparar",
+            "Para ayudar"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué decide la capitana Reyes?",
+          "options": [
+            "Cumplir la orden",
+            "No cumplir la orden",
+            "Cerrar el palacio"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Hay alguna norma en tu trabajo o en tu ciudad que no te gusta? ¿Por qué?",
+          "model": "No me gusta que las tiendas cierren los domingos, porque es mi día libre."
+        },
+        {
+          "q": "¿Por qué elegiste tu trabajo o tus estudios?",
+          "model": "Soy profesor porque me gusta explicar cosas."
+        },
+        {
+          "q": "¿Qué harías tú en el lugar de Mario?",
+          "model": "Haría lo mismo: ayudaría a la abuela y al niño."
+        }
+      ],
+      "gaps": "Esta mañana vino una [abuela] con su [nieto]. Solo querían [agua]. Yo vine a [España] para ayudar, no para disparar.",
+      "glossary": [
+        {
+          "word": "el cuartel",
+          "meaning": "edificio donde viven y trabajan los soldados"
+        },
+        {
+          "word": "cruza",
+          "meaning": "de cruzar: pasar al otro lado"
+        },
+        {
+          "word": "nieto",
+          "meaning": "el hijo de tu hijo o de tu hija"
+        },
+        {
+          "word": "disparar",
+          "meaning": "usar un arma de fuego"
+        }
+      ]
+    },
+    {
+      "id": "hospital",
+      "title": "Catorce horas y un café",
+      "place": "Hospital de campaña · mensaje de voz",
+      "context": "Yuleisy, enfermera venezolana, y su hermano Sebastián hablan por mensajes de voz después de un día muy difícil.",
+      "speakers": [
+        {
+          "name": "Yuleisy",
+          "country": "Venezuela",
+          "voice": "es-VE-PaolaNeural"
+        },
+        {
+          "name": "Sebastián",
+          "country": "Venezuela",
+          "voice": "es-VE-SebastianNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Hermana, ayer no contestaste. Mamá no durmió en toda la noche."
+        },
+        {
+          "s": 0,
+          "text": "Perdón, Sebastián. Ayer llegaron más de doscientos pacientes. No tuve tiempo ni de mirar el teléfono."
+        },
+        {
+          "s": 1,
+          "text": "¿Y cómo estás tú? Dime la verdad, no la versión para mamá."
+        },
+        {
+          "s": 0,
+          "text": "Cansada. Muy cansada. Pero hoy ha llegado una buena noticia: alguien ha traído la fórmula de una vacuna."
+        },
+        {
+          "s": 1,
+          "text": "¿De verdad? ¡Eso es increíble!"
+        },
+        {
+          "s": 0,
+          "text": "Sí. Por primera vez en diez días, tengo esperanza. Dile a mamá que esta noche la llamo, sin falta."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué le pasó a la madre?",
+          "options": [
+            "No durmió en toda la noche",
+            "Se puso enferma",
+            "Viajó a Madrid"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cuántos pacientes llegaron ayer?",
+          "options": [
+            "Veinte",
+            "Más de doscientos",
+            "Dos mil"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué quiere saber Sebastián?",
+          "options": [
+            "El nombre del hospital",
+            "Cuándo vuelve Yuleisy",
+            "La verdad sobre cómo está ella"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cuál es la buena noticia?",
+          "options": [
+            "Que alguien ha traído la fórmula de una vacuna",
+            "Que Yuleisy vuelve a Caracas",
+            "Que el hospital cierra"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Le cuentas siempre la verdad a tu familia cuando tienes un problema? ¿Por qué?",
+          "model": "No siempre. A veces no le cuento todo a mi madre para no preocuparla."
+        },
+        {
+          "q": "¿Cuál fue el día más difícil de tu trabajo o de tus estudios?",
+          "model": "El día de mi primer examen oral: estaba muy nervioso y me olvidé de todo."
+        },
+        {
+          "q": "¿Qué noticia te dio esperanza este año?",
+          "model": "Me dio esperanza saber que mi amiga estaba embarazada."
+        }
+      ],
+      "gaps": "Por primera vez en diez [días], tengo [esperanza]. Dile a [mamá] que esta noche la llamo, sin [falta].",
+      "glossary": [
+        {
+          "word": "contestaste",
+          "meaning": "de contestar: responder"
+        },
+        {
+          "word": "la versión",
+          "meaning": "la manera de contar algo"
+        },
+        {
+          "word": "esperanza",
+          "meaning": "creer que algo bueno va a pasar"
+        },
+        {
+          "word": "sin falta",
+          "meaning": "seguro, de verdad"
+        }
+      ]
+    },
+    {
+      "id": "rio",
+      "title": "El último programa",
+      "place": "Madrid Río · la radio",
+      "context": "Amanece. Lola hace su último programa antes de que salga la barca. Habla con Jaime, el barquero.",
+      "speakers": [
+        {
+          "name": "Lola",
+          "country": "España",
+          "voice": "es-ES-ElviraNeural"
+        },
+        {
+          "name": "Jaime",
+          "country": "España",
+          "voice": "es-ES-AlvaroNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Jaime, te escucho mal. ¿Dónde estás?"
+        },
+        {
+          "s": 1,
+          "text": "En el embarcadero, Lola. Hay mucho viento, pero la barca está preparada. Ya ha llegado la persona de la fórmula."
+        },
+        {
+          "s": 0,
+          "text": "¿Y la familia?"
+        },
+        {
+          "s": 1,
+          "text": "También. La niña está dormida en los brazos de su madre. El chico con fiebre no viene: lo hemos llevado al hospital."
+        },
+        {
+          "s": 0,
+          "text": "Madrid, ya lo habéis oído. Hoy sale la esperanza por el río. Gracias por escucharme estos diez días."
+        },
+        {
+          "s": 1,
+          "text": "Gracias a ti, Lola. Sin tu radio, nadie sabía nada."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Dónde está Jaime?",
+          "options": [
+            "En el hospital",
+            "En el embarcadero",
+            "En la radio"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué tiempo hace?",
+          "options": [
+            "Hace mucho viento",
+            "Llueve mucho",
+            "Hace mucho calor"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Dónde está el chico con fiebre?",
+          "options": [
+            "En la barca",
+            "En su casa",
+            "En el hospital"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cuántos días ha hecho Lola su programa?",
+          "options": [
+            "Diez",
+            "Dos",
+            "Treinta"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Cómo te despides de un lugar o de un trabajo que te gusta?",
+          "model": "Normalmente hago una pequeña fiesta y doy las gracias a todos."
+        },
+        {
+          "q": "¿Qué medio de comunicación usas más para informarte? ¿Por qué?",
+          "model": "Uso la radio en el coche, porque puedo escuchar mientras conduzco."
+        },
+        {
+          "q": "¿Has vivido un momento en el que todo cambió de repente? Cuéntalo.",
+          "model": "Sí, cuando me quedé sin trabajo tuve que cambiar de ciudad en un mes."
+        }
+      ],
+      "gaps": "La niña está [dormida] en los [brazos] de su [madre]. El chico con [fiebre] no viene: lo hemos llevado al hospital.",
+      "glossary": [
+        {
+          "word": "el embarcadero",
+          "meaning": "lugar del río donde suben las personas a la barca"
+        },
+        {
+          "word": "preparada",
+          "meaning": "lista"
+        },
+        {
+          "word": "los brazos",
+          "meaning": "partes del cuerpo entre el hombro y la mano"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2714 @@
+{
+  "version": 1,
+  "authorization": "Owner request of 2026-10-22 06:16Z (project thread «Madrid infectada», root message cmsg_01Gr5R4j3t2Yet65UcmhcVhANJDy42vAMYzKmSc7Hfosis): a new A0–C2 3D class whose A0 level is fully bilingual (conversation and listening) and whose A1 level glosses its key words in English, with English lines under the intro radio broadcast. This manifest approves only the exact English support literals listed below (the English half of each { es, en } pair in app/madrid-infectada/levels/a0.mjs and a1.mjs, the contextEn / en / qEn fields of app/escucha-3d/content/madrid/a0.json and the four radio lines of app/madrid-infectada/MadridGame.tsx); existing English copy stays protected. Owner approval: Ale wrote «apruebo todo no preguntes más, apruebo todo» on 2026-10-14 16:55Z (project message cmsg_01Gr5R4j3t2Yet65UcmhcVhADwvzg9kA9GinuWu3D7FSfe), a standing approval for English copy in A0 work, and approved the English copy of the 3D country classes in cmsg_01Gr5R4j3t2Yet65UcmhcVhASr6wzCDDk4vHAEyB6VfveQ.",
+  "additions": [
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "On the pocket radio, Lola talks to a listener. Her name is Salomé and she is a nurse."
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "Good morning. This is Radio Kilómetro Cero. Who is calling?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "Hi, Lola. I am Salomé. I am a nurse. I am from Colombia."
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "Where are you, Salomé?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "I am at home. I have water and bread. I am fine."
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "Very good. Thank you, Salomé!"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "Where is Salomé from?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "What is Salomé’s job?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "Where is Salomé?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "What does Salomé have at home?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "Where are you from?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "What do you have at home to eat?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "Do you listen to the radio?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "nurse"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "at home"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "bread"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "Alex is a delivery rider. He is on the Gran Vía and calls his sister Camila."
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "Hi, Camila. I am on the Gran Vía."
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "Are you OK, Alex?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "Yes. But there is a red bus on the ground. And there is a green cloud."
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "Come back home, please!"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "OK. I am going on my bike. Ten minutes."
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "Where is Alex?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "What colour is the bus?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "How does Alex go home?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "How many minutes does Alex need?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "Do you have a bike?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "Do you have brothers or sisters?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "How do you go to work?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "cloud"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "ground"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "bike"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "In the shelter, Andrea helps with the water. She talks to an old man, Ramón."
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "Hello, sir. What is your name?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "My name is Ramón. I am seventy years old."
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "Here is a bottle of water, Ramón."
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "Thank you! Are you from here?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "No, I am from Ecuador. I live in Madrid."
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "How old is Ramón?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "What does Andrea give Ramón?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "Where is Andrea from?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "Where does Andrea live?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "What is your name and how old are you?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "Where do you live?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "Do you drink a lot of water?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "bottle"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "seventy"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "I live"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "In the metro, a musician from Cuba plays the guitar. A girl, Ximena, talks to him."
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "Hi. I am Manuel. I play the guitar here, in the metro."
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "How nice! Do you play every day?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "Yes. Music is good for fear."
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "That is true. Now I am calmer."
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "What does Manuel play?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "Where does Manuel play?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "When does Manuel play?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "How is Ximena now?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "Do you play an instrument?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "What music do you like?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "What do you do when you are afraid?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "I play"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "calm"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "fear"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "The radio finds an audio from the lab. Doctor Elena talks to Javier, her assistant."
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "Javier, tank three is broken."
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "What do we do, doctor?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "Close the door. Call the boss."
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "The boss says: silence."
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "No. People have to know."
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "Which tank is broken?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "Who does Javier call?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "What does the boss say?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "What does Elena want?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "Do you have a boss? What is he or she like?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "Do you like secrets?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "What do you do if something is broken?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "broken"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "the boss"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "silence"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "Lola talks to Emilio, a DJ from the Dominican Republic who lives in Malasaña."
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "Emilio, what is happening in Malasaña?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "There is music in the square. There are coloured lights."
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "And the people?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "People dance. They are happy. Tonight, merengue."
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "What is in the square?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "What do people do?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "How are the people?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "What music is there tonight?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "Do you like dancing?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "What do you do at night?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "Is there a nice square in your city?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "lights"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "dances"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "happy"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "In Atocha, a mother from Uruguay talks to Álvaro, a train driver."
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "Excuse me, what time does the train leave?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "It leaves at eleven forty. It goes to Valencia."
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "I have two children. Is there room?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "I do not know. There are six hundred seats."
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "What time does the train leave?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "Where does the train go?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "How many children does Valentina have?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "How many seats are there?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "What time do you leave home?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "Do you have children?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "Do you like travelling by train?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "train"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "room, space"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "seats"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "The radio finds a military frequency. A sergeant talks to Mario, a soldier from Paraguay."
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "Mario, can you hear me?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "Yes, sergeant. I am at the palace gate."
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "Are there people?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "Yes, there is a family. They are cold."
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "Give them blankets."
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "Where is Mario?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "Who is at the gate?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "What does the family feel?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "What does the sergeant say?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "Are you cold now?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "Is there a palace in your city?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "What do you like more: the cold or the heat?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "sergeant"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "cold"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "blankets"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "Yuleisy is a nurse. She sends a voice message to her brother Sebastián, in Caracas."
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "Hi, Sebastián. I am at the hospital. I work a lot."
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "Do you eat well, sister?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "Yes, yes. A coffee and a sandwich."
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "That is not eating well. A kiss. Mum loves you."
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "Where is Yuleisy?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "What does Yuleisy eat?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "Who is Sebastián?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "What does Sebastián think?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "What do you eat at midday?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "Do you work a lot?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "Do you send voice messages?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "hospital"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "sister"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "a kiss"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "Lola talks to Jaime, the boatman. The boat leaves the river at dawn."
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "Jaime, are you at the river?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "Yes, Lola. The boat is ready."
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "What time does it leave?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "At seven. When the sun comes up."
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "Have a good trip, Jaime."
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "Where is Jaime?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "How is the boat?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "What time does the boat leave?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "What does Lola say at the end?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "What time do you get up?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "Is there a river in your city?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "Do you like going by boat?"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "boat"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "ready"
+    },
+    {
+      "path": "app/escucha-3d/content/madrid/a0.json",
+      "text": "sun"
+    },
+    {
+      "path": "app/madrid-infectada/MadridGame.tsx",
+      "text": "…this is Radio Kilometre Zero, broadcasting from somewhere in Madrid…"
+    },
+    {
+      "path": "app/madrid-infectada/MadridGame.tsx",
+      "text": "The government asks for calm. The roads out of the city are closed…"
+    },
+    {
+      "path": "app/madrid-infectada/MadridGame.tsx",
+      "text": "Don’t breathe the green cloud. I repeat: don’t breathe…"
+    },
+    {
+      "path": "app/madrid-infectada/MadridGame.tsx",
+      "text": "If anyone can hear me… the lab in the Retiro… can you hear me?…"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "The radio in Sol"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Puerta del Sol. It is six in the morning. There is a table, a microphone and a woman. Her name is Lola."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Hi! I am Lola. I talk on the radio."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Hi, Lola. I have a vaccine."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "A vaccine? Great! Madrid is in danger. There is a virus."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Where is the virus from?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "From the Retiro, I think. It is a big park. Take this radio. It is small."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Thank you. Bye, Lola."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "What is the Retiro?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "A park."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "A radio."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "A woman."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Lola says: “It is a big park.”"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Do you listen to the radio?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "What time do you get up?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the radio"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the morning"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the table"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the park"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "small"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "big"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "The lottery man"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Next to the bear, there is a kiosk. An old man is inside. His name is Paco."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Lottery! Christmas lottery!"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Good morning. Are you alone?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Yes. My wife is not here. I am alone at home. I am better here."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Are you afraid?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "A little. Look, a number for you: six. It is for luck."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Thank you, Paco."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "What number does Paco give?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Six."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Ten."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Two."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Paco says: “a number for you: six.”"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "What is your favourite number?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Who do you live with?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the man"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the number"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "alone"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "luck"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "fear"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "The red bus"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Gran Vía. There is a broken bus in the street. A driver is sitting. His name is Julián."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Hello. It is my bus. I am a driver."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Are you OK?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Yes, I am fine. The passengers are fine too. There are eleven."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Very good!"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "But there are army trucks in the street. They go to the Retiro. It is strange."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Yes, it is very strange."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "How many passengers are there?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Eleven."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Four."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Julián says: “There are eleven.”"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Do you go to work by bus?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "What is your job?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the bus"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the driver"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the street"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the passenger"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "strange"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Vera and her phone"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "On top of a car, there is a girl with a phone. Her name is Vera. She talks to a lot of people online."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Hi, guys! Today I am on the Gran Vía. Look!"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Hi. Who are you talking to?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "With my followers. I have two million. Do you have a vaccine?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Yes. It is good."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "I take garlic and lemon. It is better!"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "No, Vera. Garlic is not a medicine."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "How many followers does Vera have?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Two thousand."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Two million."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Twelve."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Vera says: “I have two million.”"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Do you use your phone a lot?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Which social networks do you use?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the mobile phone"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the car"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the follower"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "garlic"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the lemon"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the medicine"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "The square gate"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Plaza Mayor. It is a shelter. There is a table at the gate. A police officer is at the table. Her name is Montse."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Stop! What is your name?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Hello. I have the vaccine. Look, the green shield."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "OK. Come in. Inside there are three hundred people. There are many children."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "And you? Do you have family?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Yes, a brother. He is outside, in a tent. The rules are for everyone."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Where is Montse’s brother?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Inside, with the children."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Outside, in a tent."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "At home."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Montse says: “He is outside, in a tent.”"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Do you have brothers or sisters?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "How many people are there in your family?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the square"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the door, the gate"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the brother"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the child"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "inside"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "outside"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "A school in a tent"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "In a blue tent there is a board and twelve children. The teacher’s name is Carmen. She has glasses."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Good morning. This is my class."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Hi, kids! Is there class every day?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Yes. From ten to one. We read, we write and we count."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Do they like school?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Yes, they like it a lot. Here they are not afraid."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "What time does the class start?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "At ten."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "At one."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "At twelve."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Carmen says: “From ten to one.”"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Do you like studying languages?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "What is your favourite teacher’s name?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the school"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the teacher"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the board"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "to read"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "to write"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "glasses"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "A couple in the metro"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Chamberí metro station. On the platform there is a blanket and a torch. There is a girl and a boy: Sara and Toni."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Hi. We have been here for five days."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Not really. Sara is angry with me."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Yes. Toni writes to his ex-girlfriend. I do not like it!"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "I want to go out to the street. Sara wants to stay here."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Talk, please. You are a couple."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Why is Sara angry?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Because Toni writes to his ex-girlfriend."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Because she is cold."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Because there is no light."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Sara says: “Toni writes to his ex-girlfriend. I do not like it!”"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Do you have a partner or are you single?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "What do you do when you are angry?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the metro"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the platform"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the blanket"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the torch"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "angry"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the couple, the partner"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Don Emilio"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "At the end of the platform, there is an old man in a blue uniform. His name is Emilio. He is very kind."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Hello, young one. I am Emilio. I know the metro well: it is my home."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "I want to go to the Retiro. Is there a way?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Yes. There is an old tunnel. It is safe."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Where is it?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Look, here you have a map. First, to the right. Then, straight on."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Thank you very much, Don Emilio."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "What is the tunnel like?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "New and dangerous."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Old and safe."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Small and closed."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Emilio says: “There is an old tunnel. It is safe.”"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "How old are you?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Is there a metro in your city?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the tunnel"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the map"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "old"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "safe"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "to the right"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "straight on"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "The secret lab"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Retiro Park. In the Crystal Palace there is a lab. There are green tanks. A doctor waits at the door."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Hello. I am Elena. I am a doctor."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Is the virus from here?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Yes. It is an accident. A tank is broken."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "And the vaccine?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "The vaccine is mine. Take this notebook. It is the formula. It is very important."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "OK. I am going to the hospital with the notebook."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "What is in the notebook?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "A photo."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "The formula of the vaccine."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "A metro map."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Elena says: “Take this notebook. It is the formula.”"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Do you go to the doctor often?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "What is important to you?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the lab"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the doctor"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the tank"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "broken"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the notebook"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the formula"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "A journalist from Mexico"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Next to the lake in the Retiro, a man has a camera. His name is Marcos. He is from Mexico."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Hello. I am a journalist. I am from Mexico."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "What are you doing in Madrid?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "I am making a report about the virus. I have videos of the army trucks."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Do you like Madrid?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Yes, a lot. But now the city is empty and sad."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Where is Marcos from?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "From Spain."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "From Argentina."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "From Mexico."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Marcos says: “I am from Mexico.”"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Where are you from?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Do you like taking photos or videos?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the journalist"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the camera"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the lake"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "empty"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "sad"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "An open bar"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Malasaña, at night. There are coloured lights and music. A bar is open. The waiter’s name is Nacho."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Hi! Welcome. Do you want a vermouth? It is free."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "No, thanks. A water, please."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Here you are. Look, there are some boxes in the bar. They are not mine."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "What is in the boxes?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Green bottles. There is a name: Salvatierra."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "What does the mascot want to drink?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "A vermouth."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "A coffee."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "A water."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "It says: “A water, please.”"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "What do you drink in the morning?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Do you like going out at night?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the bar"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the waiter"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "music"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "free"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the box"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "at night"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Food for everyone"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "On the other side of the square there is a restaurant. A cook gives food to the neighbours. His name is Arturo. He is from Argentina."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Hi! Are you hungry? There are lentils."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Yes, thanks. How much is it?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Nothing. It is free for everyone."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Very kind! Do you have family?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Yes, a daughter. She is in Valencia. I have no news from her."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Where is Arturo’s daughter?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "In Madrid."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "In Valencia."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "In Argentina."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Arturo says: “She is in Valencia.”"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "What is your favourite food?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Do you cook at home every day?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the cook"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "lentils"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "to be hungry"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the daughter"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the neighbour"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "One train"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Atocha station. There are many people with suitcases. There is a train. Only one. A woman in uniform speaks."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Hello. I am Mercedes. I am the head of the station."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Where does the train go?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "To Valencia. It leaves tonight. There are six hundred seats."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "And how many people are here?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Two thousand! It is a very big problem."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "To Valencia."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "To Toledo."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "To Seville."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Mercedes says: “To Valencia. It leaves tonight.”"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Do you like travelling by train?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Which city do you want to visit?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the station"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the train"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the suitcase"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the seat"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "to leave"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "tonight"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "A very expensive vaccine"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "In a room in Atocha, a man in a suit sells green bottles. His name is Íñigo. There are many rich people."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Hello. One dose costs five thousand euros."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "It is very expensive!"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "That is the price. People want to live."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Does it work?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Sometimes yes, sometimes no."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "That is not right."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "How much does one dose cost?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Fifty euros."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Five hundred euros."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Five thousand euros."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Íñigo says: “One dose costs five thousand euros.”"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "What things are expensive in your city?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Do you buy a lot online?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "expensive"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the price"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the suit"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "to sell"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the dose"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "sometimes"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "A man in the palace"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Royal Palace. There are many soldiers. In a big room, a man eats biscuits. His name is Gonzalo. He works for the Government."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Hello. Who are you?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "I have a question. Does the Government know the truth?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Yes. We know everything. But it is a secret."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Why is it a secret?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Because people are afraid. It is difficult."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "What does Gonzalo eat?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Biscuits."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Bread."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Fruit."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "A man eats biscuits in a big room."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Do you always tell the truth?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "What do you eat when you are nervous?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the palace"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the soldier"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the biscuit"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the truth"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the secret"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "The captain"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "In the palace courtyard there is a helicopter. A woman with a helmet looks at a map. She is Captain Inés."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Stop! Ah, you have the shield. You are fine."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "I need to go to the hospital."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Take this paper. With it you can pass."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Thank you, captain. Are you in the army?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Yes. I like helping people. It is my job."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "What is in the courtyard?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "A train."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "A helicopter."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "A boat."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "In the palace courtyard there is a helicopter."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Do you like helping people?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "What do you do in your job?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the captain"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the helmet"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the courtyard"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "to help"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "to need"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "A tired doctor"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Field hospital. There are white tents and many beds. A doctor drinks a coffee. Her name is Pilar. She is very tired."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Hello. I am tired. I do not sleep."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "I have the formula of the vaccine."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Really? Great! It is good news."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Can you make the vaccine here?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "No. I do not have a lab. I make a copy. You take the notebook out of Madrid."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "How is Pilar?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Very tired."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Very happy."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Ill."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Pilar says: “I am tired. I do not sleep.”"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "How many hours do you sleep?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Do you drink coffee or tea?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the hospital"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the bed"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "tired"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "to sleep"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the copy"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the news"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Red, yellow, green"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "At the hospital door, a nurse puts on coloured wristbands. Her name is Yuleisy. She is from Venezuela."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Hi. Red: you go in now. Green: you wait."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "And yellow?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Yellow: you wait a little."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Do you have family in Madrid?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "No. My mum is in Caracas. I talk to her every night."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "What does the colour red mean?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "You wait a lot."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "You go in now."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "You go home."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Yuleisy says: “Red: you go in now.”"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "What is your favourite colour?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Do you talk to your family every day?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the nurse"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the wristband"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "red"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "yellow"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "green"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "to wait"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "The grandmother of the flowers"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Madrid Río. It is seven in the morning. A very old lady waters some flowers at the door of her house."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Good morning. I am Remedios. I am eighty-nine years old."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Hello, madam. Do you live here alone?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Yes. This is my house. I do not want to go anywhere else."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "My granddaughter lives in Toledo. Please, take this letter."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Yes, of course. I take the letter."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Where does Remedios’s granddaughter live?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "In Toledo."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Remedios says: “My granddaughter lives in Toledo.”"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Do you have grandparents? What are their names?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Do you like flowers or plants?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the lady"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the flower"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "to water"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the granddaughter"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the letter"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the house"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "The last boat"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "On the river there is an orange boat. A man with a beard is waiting. His name is Jaime. The boat leaves in ten minutes."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Hi! Do you have the formula? Get in the boat."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Yes, here it is. Who else is coming?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "A family with a little girl. The boat is small."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Where are we going?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Out of Madrid. Let’s go! It is already daytime."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "What colour is the boat?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Blue."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Orange."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "White."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "On the river there is an orange boat."
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "Do you like the water: the river or the sea?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "What do you do at weekends?"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the river"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the boat"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the beard"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "to get on"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "the family"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a0.mjs",
+      "text": "by day"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the clock"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "headphones"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the street"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "closed"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the way"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "to come from"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the ticket"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the moustache"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "empty"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "luck"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "to keep"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the backpack"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the driver"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the pavement"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "to cough"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the truck"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "brave"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the light"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the live stream"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the follower"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the lie"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "to protect"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "dangerous"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "blond"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the shelter"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the rule"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the list"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the cap"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the tent"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "hope"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the board"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the notebook"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the scarf"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the mattress"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "to study"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the future"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the platform"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the blanket"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the battery"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the wall"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "to miss"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "to stay"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the tunnel"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the corridor"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "to draw"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the map"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "old, ancient"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "useful"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the lab coat"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the liquid"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "to break"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the accident"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "silence"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the boss"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the journalist"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "to film"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the report"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the terrace"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "to publish"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "to tell"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the waiter"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the storeroom"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the jar, the vial"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "to laugh"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the suit"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "to pay"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the apron"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the queue"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the neighbourhood"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "worried"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "news"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "I love it"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the screen"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "cancelled"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the suitcase"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "to decide"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "old people"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "to get on"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the card"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the company"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the price"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "elegant"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "fair"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "to cost"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the secret"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the Government"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the lamp"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "panic"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the decision"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the option"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the helmet"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the order"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "to obey"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "to shoot"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "calm"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the courtyard"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the noise"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the medicine"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "to bring"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the microwave"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the copy"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "cold"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the nurse"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the patient"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "serious"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "to clean"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the entrance"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "far"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the bridge"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the coat"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "danger"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the favour"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the granddaughter"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "pretty"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the engine"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "switched on"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "to warn, to tell"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the space"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the trip"
+    },
+    {
+      "path": "app/madrid-infectada/levels/a1.mjs",
+      "text": "the tourist"
+    }
+  ]
+}

@@ -1,0 +1,1216 @@
+{
+  "game": "madrid",
+  "level": "A0",
+  "items": [
+    {
+      "id": "sol",
+      "title": "Lola y una enfermera",
+      "place": "Puerta del Sol · la radio",
+      "context": "En la radio de bolsillo, Lola habla con una oyente. Se llama Salomé y es enfermera.",
+      "contextEn": "On the pocket radio, Lola talks to a listener. Her name is Salomé and she is a nurse.",
+      "speakers": [
+        {
+          "name": "Lola",
+          "country": "España",
+          "voice": "es-ES-ElviraNeural"
+        },
+        {
+          "name": "Salomé",
+          "country": "Colombia",
+          "voice": "es-CO-SalomeNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Buenos días. Esto es Radio Kilómetro Cero. ¿Quién llama?",
+          "en": "Good morning. This is Radio Kilómetro Cero. Who is calling?"
+        },
+        {
+          "s": 1,
+          "text": "Hola, Lola. Soy Salomé. Soy enfermera. Soy de Colombia.",
+          "en": "Hi, Lola. I am Salomé. I am a nurse. I am from Colombia."
+        },
+        {
+          "s": 0,
+          "text": "¿Dónde estás, Salomé?",
+          "en": "Where are you, Salomé?"
+        },
+        {
+          "s": 1,
+          "text": "Estoy en casa. Tengo agua y pan. Estoy bien.",
+          "en": "I am at home. I have water and bread. I am fine."
+        },
+        {
+          "s": 0,
+          "text": "Muy bien. ¡Gracias, Salomé!",
+          "en": "Very good. Thank you, Salomé!"
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿De dónde es Salomé?",
+          "options": [
+            "De Colombia",
+            "De España",
+            "De México"
+          ],
+          "answer": 0,
+          "qEn": "Where is Salomé from?"
+        },
+        {
+          "q": "¿Cuál es el trabajo de Salomé?",
+          "options": [
+            "Profesora",
+            "Enfermera",
+            "Policía"
+          ],
+          "answer": 1,
+          "qEn": "What is Salomé’s job?"
+        },
+        {
+          "q": "¿Dónde está Salomé?",
+          "options": [
+            "En el hospital",
+            "En la calle",
+            "En casa"
+          ],
+          "answer": 2,
+          "qEn": "Where is Salomé?"
+        },
+        {
+          "q": "¿Qué tiene Salomé en casa?",
+          "options": [
+            "Agua y pan",
+            "Leche y café",
+            "Fruta y queso"
+          ],
+          "answer": 0,
+          "qEn": "What does Salomé have at home?"
+        }
+      ],
+      "open": [
+        {
+          "q": "¿De dónde eres?",
+          "model": "Soy de Brasil.",
+          "qEn": "Where are you from?"
+        },
+        {
+          "q": "¿Qué tienes en casa para comer?",
+          "model": "Tengo pan, arroz y huevos.",
+          "qEn": "What do you have at home to eat?"
+        },
+        {
+          "q": "¿Escuchas la radio?",
+          "model": "Sí, en el coche.",
+          "qEn": "Do you listen to the radio?"
+        }
+      ],
+      "gaps": "Estoy en [casa]. Tengo [agua] y [pan]. Estoy [bien].",
+      "glossary": [
+        {
+          "word": "enfermera",
+          "meaning": "persona que cuida a los enfermos",
+          "en": "nurse"
+        },
+        {
+          "word": "en casa",
+          "meaning": "en el lugar donde vives",
+          "en": "at home"
+        },
+        {
+          "word": "pan",
+          "meaning": "comida de harina que se hace en el horno",
+          "en": "bread"
+        }
+      ]
+    },
+    {
+      "id": "granvia",
+      "title": "Un mensaje desde la Gran Vía",
+      "place": "Gran Vía · mensaje de voz",
+      "context": "Alex es repartidor. Está en la Gran Vía y llama a su hermana Camila.",
+      "contextEn": "Alex is a delivery rider. He is on the Gran Vía and calls his sister Camila.",
+      "speakers": [
+        {
+          "name": "Alex",
+          "country": "Perú",
+          "voice": "es-PE-AlexNeural"
+        },
+        {
+          "name": "Camila",
+          "country": "Perú",
+          "voice": "es-PE-CamilaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Hola, Camila. Estoy en la Gran Vía.",
+          "en": "Hi, Camila. I am on the Gran Vía."
+        },
+        {
+          "s": 1,
+          "text": "¿Estás bien, Alex?",
+          "en": "Are you OK, Alex?"
+        },
+        {
+          "s": 0,
+          "text": "Sí. Pero hay un autobús rojo en el suelo. Y hay una nube verde.",
+          "en": "Yes. But there is a red bus on the ground. And there is a green cloud."
+        },
+        {
+          "s": 1,
+          "text": "¡Vuelve a casa, por favor!",
+          "en": "Come back home, please!"
+        },
+        {
+          "s": 0,
+          "text": "Vale. Voy en mi bici. Diez minutos.",
+          "en": "OK. I am going on my bike. Ten minutes."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Dónde está Alex?",
+          "options": [
+            "En casa",
+            "En la Gran Vía",
+            "En el metro"
+          ],
+          "answer": 1,
+          "qEn": "Where is Alex?"
+        },
+        {
+          "q": "¿De qué color es el autobús?",
+          "options": [
+            "Azul",
+            "Verde",
+            "Rojo"
+          ],
+          "answer": 2,
+          "qEn": "What colour is the bus?"
+        },
+        {
+          "q": "¿Cómo va Alex a casa?",
+          "options": [
+            "En bici",
+            "En coche",
+            "En tren"
+          ],
+          "answer": 0,
+          "qEn": "How does Alex go home?"
+        },
+        {
+          "q": "¿Cuántos minutos necesita Alex?",
+          "options": [
+            "Cinco",
+            "Veinte",
+            "Diez"
+          ],
+          "answer": 2,
+          "qEn": "How many minutes does Alex need?"
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Tienes bici?",
+          "model": "Sí, tengo una bici azul.",
+          "qEn": "Do you have a bike?"
+        },
+        {
+          "q": "¿Tienes hermanos?",
+          "model": "Sí, tengo una hermana.",
+          "qEn": "Do you have brothers or sisters?"
+        },
+        {
+          "q": "¿Cómo vas al trabajo?",
+          "model": "Voy en metro.",
+          "qEn": "How do you go to work?"
+        }
+      ],
+      "gaps": "Pero hay un [autobús] rojo en el [suelo]. Y hay una [nube] [verde].",
+      "glossary": [
+        {
+          "word": "nube",
+          "meaning": "cosa blanca o gris que está en el cielo",
+          "en": "cloud"
+        },
+        {
+          "word": "el suelo",
+          "meaning": "la parte de abajo, donde caminas",
+          "en": "ground"
+        },
+        {
+          "word": "bici",
+          "meaning": "bicicleta",
+          "en": "bike"
+        }
+      ]
+    },
+    {
+      "id": "plaza",
+      "title": "La cola del agua",
+      "place": "Plaza Mayor · el refugio",
+      "context": "En el refugio, Andrea ayuda con el agua. Habla con un señor mayor, Ramón.",
+      "contextEn": "In the shelter, Andrea helps with the water. She talks to an old man, Ramón.",
+      "speakers": [
+        {
+          "name": "Andrea",
+          "country": "Ecuador",
+          "voice": "es-EC-AndreaNeural"
+        },
+        {
+          "name": "Ramón",
+          "country": "España",
+          "voice": "es-ES-AlvaroNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Hola, señor. ¿Cómo se llama?",
+          "en": "Hello, sir. What is your name?"
+        },
+        {
+          "s": 1,
+          "text": "Me llamo Ramón. Tengo setenta años.",
+          "en": "My name is Ramón. I am seventy years old."
+        },
+        {
+          "s": 0,
+          "text": "Aquí tiene una botella de agua, Ramón.",
+          "en": "Here is a bottle of water, Ramón."
+        },
+        {
+          "s": 1,
+          "text": "¡Gracias! ¿Usted es de aquí?",
+          "en": "Thank you! Are you from here?"
+        },
+        {
+          "s": 0,
+          "text": "No, soy de Ecuador. Vivo en Madrid.",
+          "en": "No, I am from Ecuador. I live in Madrid."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cuántos años tiene Ramón?",
+          "options": [
+            "Setenta",
+            "Diecisiete",
+            "Siete"
+          ],
+          "answer": 0,
+          "qEn": "How old is Ramón?"
+        },
+        {
+          "q": "¿Qué le da Andrea a Ramón?",
+          "options": [
+            "Pan",
+            "Una botella de agua",
+            "Una manta"
+          ],
+          "answer": 1,
+          "qEn": "What does Andrea give Ramón?"
+        },
+        {
+          "q": "¿De dónde es Andrea?",
+          "options": [
+            "De Madrid",
+            "De Perú",
+            "De Ecuador"
+          ],
+          "answer": 2,
+          "qEn": "Where is Andrea from?"
+        },
+        {
+          "q": "¿Dónde vive Andrea?",
+          "options": [
+            "En Madrid",
+            "En Quito",
+            "En Toledo"
+          ],
+          "answer": 0,
+          "qEn": "Where does Andrea live?"
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Cómo te llamas y cuántos años tienes?",
+          "model": "Me llamo Ana y tengo treinta años.",
+          "qEn": "What is your name and how old are you?"
+        },
+        {
+          "q": "¿Dónde vives?",
+          "model": "Vivo en una ciudad pequeña.",
+          "qEn": "Where do you live?"
+        },
+        {
+          "q": "¿Bebes mucha agua?",
+          "model": "Sí, bebo dos litros al día.",
+          "qEn": "Do you drink a lot of water?"
+        }
+      ],
+      "gaps": "Aquí tiene una [botella] de [agua], Ramón. ¡[Gracias]! ¿Usted es de [aquí]?",
+      "glossary": [
+        {
+          "word": "botella",
+          "meaning": "objeto para el agua o el vino",
+          "en": "bottle"
+        },
+        {
+          "word": "setenta",
+          "meaning": "el número 70",
+          "en": "seventy"
+        },
+        {
+          "word": "vivo",
+          "meaning": "de vivir: estar en un lugar, tener casa allí",
+          "en": "I live"
+        }
+      ]
+    },
+    {
+      "id": "metro",
+      "title": "Música en el metro",
+      "place": "Metro · el andén",
+      "context": "En el metro, un músico de Cuba toca la guitarra. Una chica, Ximena, habla con él.",
+      "contextEn": "In the metro, a musician from Cuba plays the guitar. A girl, Ximena, talks to him.",
+      "speakers": [
+        {
+          "name": "Manuel",
+          "country": "Cuba",
+          "voice": "es-CU-ManuelNeural"
+        },
+        {
+          "name": "Ximena",
+          "country": "España",
+          "voice": "es-ES-XimenaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Hola. Soy Manuel. Toco la guitarra aquí, en el metro.",
+          "en": "Hi. I am Manuel. I play the guitar here, in the metro."
+        },
+        {
+          "s": 1,
+          "text": "¡Qué bonito! ¿Tocas todos los días?",
+          "en": "How nice! Do you play every day?"
+        },
+        {
+          "s": 0,
+          "text": "Sí. La música es buena para el miedo.",
+          "en": "Yes. Music is good for fear."
+        },
+        {
+          "s": 1,
+          "text": "Es verdad. Ahora estoy más tranquila.",
+          "en": "That is true. Now I am calmer."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué toca Manuel?",
+          "options": [
+            "El piano",
+            "La guitarra",
+            "La radio"
+          ],
+          "answer": 1,
+          "qEn": "What does Manuel play?"
+        },
+        {
+          "q": "¿Dónde toca Manuel?",
+          "options": [
+            "En el metro",
+            "En un bar",
+            "En la plaza"
+          ],
+          "answer": 0,
+          "qEn": "Where does Manuel play?"
+        },
+        {
+          "q": "¿Cuándo toca Manuel?",
+          "options": [
+            "Los domingos",
+            "Por la noche",
+            "Todos los días"
+          ],
+          "answer": 2,
+          "qEn": "When does Manuel play?"
+        },
+        {
+          "q": "¿Cómo está Ximena ahora?",
+          "options": [
+            "Más tranquila",
+            "Muy triste",
+            "Enferma"
+          ],
+          "answer": 0,
+          "qEn": "How is Ximena now?"
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Tocas un instrumento?",
+          "model": "No, pero canto un poco.",
+          "qEn": "Do you play an instrument?"
+        },
+        {
+          "q": "¿Qué música te gusta?",
+          "model": "Me gusta la salsa.",
+          "qEn": "What music do you like?"
+        },
+        {
+          "q": "¿Qué haces cuando tienes miedo?",
+          "model": "Llamo a mi madre.",
+          "qEn": "What do you do when you are afraid?"
+        }
+      ],
+      "gaps": "Hola. Soy [Manuel]. [Toco] la [guitarra] aquí, en el [metro].",
+      "glossary": [
+        {
+          "word": "toco",
+          "meaning": "de tocar: hacer música con un instrumento",
+          "en": "I play"
+        },
+        {
+          "word": "tranquila",
+          "meaning": "sin nervios, sin miedo",
+          "en": "calm"
+        },
+        {
+          "word": "el miedo",
+          "meaning": "lo que sientes cuando hay peligro",
+          "en": "fear"
+        }
+      ]
+    },
+    {
+      "id": "retiro",
+      "title": "Un audio del laboratorio",
+      "place": "Retiro · el laboratorio",
+      "context": "La radio encuentra un audio del laboratorio. Habla la doctora Elena con Javier, su ayudante.",
+      "contextEn": "The radio finds an audio from the lab. Doctor Elena talks to Javier, her assistant.",
+      "speakers": [
+        {
+          "name": "Elena",
+          "country": "España",
+          "voice": "es-ES-ElviraNeural"
+        },
+        {
+          "name": "Javier",
+          "country": "Guinea Ecuatorial",
+          "voice": "es-GQ-JavierNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Javier, el tanque tres está roto.",
+          "en": "Javier, tank three is broken."
+        },
+        {
+          "s": 1,
+          "text": "¿Qué hacemos, doctora?",
+          "en": "What do we do, doctor?"
+        },
+        {
+          "s": 0,
+          "text": "Cierra la puerta. Llama al jefe.",
+          "en": "Close the door. Call the boss."
+        },
+        {
+          "s": 1,
+          "text": "El jefe dice: silencio.",
+          "en": "The boss says: silence."
+        },
+        {
+          "s": 0,
+          "text": "No. La gente tiene que saber.",
+          "en": "No. People have to know."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué tanque está roto?",
+          "options": [
+            "El uno",
+            "El tres",
+            "El dos"
+          ],
+          "answer": 1,
+          "qEn": "Which tank is broken?"
+        },
+        {
+          "q": "¿A quién llama Javier?",
+          "options": [
+            "Al jefe",
+            "A la policía",
+            "A su madre"
+          ],
+          "answer": 0,
+          "qEn": "Who does Javier call?"
+        },
+        {
+          "q": "¿Qué dice el jefe?",
+          "options": [
+            "Ayuda",
+            "Adiós",
+            "Silencio"
+          ],
+          "answer": 2,
+          "qEn": "What does the boss say?"
+        },
+        {
+          "q": "¿Qué quiere Elena?",
+          "options": [
+            "Que la gente sepa",
+            "Dormir",
+            "Cerrar el parque"
+          ],
+          "answer": 0,
+          "qEn": "What does Elena want?"
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Tienes un jefe o una jefa? ¿Cómo es?",
+          "model": "Sí, mi jefa es simpática.",
+          "qEn": "Do you have a boss? What is he or she like?"
+        },
+        {
+          "q": "¿Te gustan los secretos?",
+          "model": "No, no me gustan.",
+          "qEn": "Do you like secrets?"
+        },
+        {
+          "q": "¿Qué haces si algo está roto?",
+          "model": "Llamo a mi hermano.",
+          "qEn": "What do you do if something is broken?"
+        }
+      ],
+      "gaps": "¿Qué hacemos, doctora? [Cierra] la [puerta]. Llama al [jefe]. El jefe dice: [silencio].",
+      "glossary": [
+        {
+          "word": "roto",
+          "meaning": "que no funciona, en partes",
+          "en": "broken"
+        },
+        {
+          "word": "el jefe",
+          "meaning": "la persona que manda en el trabajo",
+          "en": "the boss"
+        },
+        {
+          "word": "silencio",
+          "meaning": "cuando no se habla",
+          "en": "silence"
+        }
+      ]
+    },
+    {
+      "id": "malasana",
+      "title": "Un DJ en la radio",
+      "place": "Malasaña · la radio",
+      "context": "Lola habla con Emilio, un DJ de la República Dominicana que vive en Malasaña.",
+      "contextEn": "Lola talks to Emilio, a DJ from the Dominican Republic who lives in Malasaña.",
+      "speakers": [
+        {
+          "name": "Lola",
+          "country": "España",
+          "voice": "es-ES-ElviraNeural"
+        },
+        {
+          "name": "Emilio",
+          "country": "República Dominicana",
+          "voice": "es-DO-EmilioNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Emilio, ¿qué pasa en Malasaña?",
+          "en": "Emilio, what is happening in Malasaña?"
+        },
+        {
+          "s": 1,
+          "text": "Hay música en la plaza. Hay luces de colores.",
+          "en": "There is music in the square. There are coloured lights."
+        },
+        {
+          "s": 0,
+          "text": "¿Y la gente?",
+          "en": "And the people?"
+        },
+        {
+          "s": 1,
+          "text": "La gente baila. Está contenta. Esta noche, merengue.",
+          "en": "People dance. They are happy. Tonight, merengue."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué hay en la plaza?",
+          "options": [
+            "Coches",
+            "Música y luces",
+            "Soldados"
+          ],
+          "answer": 1,
+          "qEn": "What is in the square?"
+        },
+        {
+          "q": "¿Qué hace la gente?",
+          "options": [
+            "Duerme",
+            "Come",
+            "Baila"
+          ],
+          "answer": 2,
+          "qEn": "What do people do?"
+        },
+        {
+          "q": "¿Cómo está la gente?",
+          "options": [
+            "Contenta",
+            "Triste",
+            "Cansada"
+          ],
+          "answer": 0,
+          "qEn": "How are the people?"
+        },
+        {
+          "q": "¿Qué música hay esta noche?",
+          "options": [
+            "Rock",
+            "Merengue",
+            "Jazz"
+          ],
+          "answer": 1,
+          "qEn": "What music is there tonight?"
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Te gusta bailar?",
+          "model": "Sí, me gusta bailar salsa.",
+          "qEn": "Do you like dancing?"
+        },
+        {
+          "q": "¿Qué haces por la noche?",
+          "model": "Veo una película.",
+          "qEn": "What do you do at night?"
+        },
+        {
+          "q": "¿Hay una plaza bonita en tu ciudad?",
+          "model": "Sí, hay una plaza con árboles.",
+          "qEn": "Is there a nice square in your city?"
+        }
+      ],
+      "gaps": "Hay [música] en la [plaza]. Hay [luces] de [colores].",
+      "glossary": [
+        {
+          "word": "luces",
+          "meaning": "cosas que dan luz, como bombillas",
+          "en": "lights"
+        },
+        {
+          "word": "baila",
+          "meaning": "de bailar: moverse con la música",
+          "en": "dances"
+        },
+        {
+          "word": "contenta",
+          "meaning": "feliz",
+          "en": "happy"
+        }
+      ]
+    },
+    {
+      "id": "atocha",
+      "title": "El tren de esta noche",
+      "place": "Atocha · el andén",
+      "context": "En Atocha, una madre de Uruguay habla con Álvaro, un maquinista.",
+      "contextEn": "In Atocha, a mother from Uruguay talks to Álvaro, a train driver.",
+      "speakers": [
+        {
+          "name": "Valentina",
+          "country": "Uruguay",
+          "voice": "es-UY-ValentinaNeural"
+        },
+        {
+          "name": "Álvaro",
+          "country": "España",
+          "voice": "es-ES-AlvaroNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Perdone, ¿a qué hora sale el tren?",
+          "en": "Excuse me, what time does the train leave?"
+        },
+        {
+          "s": 1,
+          "text": "Sale a las once y cuarenta. Va a Valencia.",
+          "en": "It leaves at eleven forty. It goes to Valencia."
+        },
+        {
+          "s": 0,
+          "text": "Tengo dos hijos. ¿Hay sitio?",
+          "en": "I have two children. Is there room?"
+        },
+        {
+          "s": 1,
+          "text": "No sé. Hay seiscientas plazas.",
+          "en": "I do not know. There are six hundred seats."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿A qué hora sale el tren?",
+          "options": [
+            "A las once y cuarenta",
+            "A las diez",
+            "A las doce"
+          ],
+          "answer": 0,
+          "qEn": "What time does the train leave?"
+        },
+        {
+          "q": "¿A dónde va el tren?",
+          "options": [
+            "A Sevilla",
+            "A Toledo",
+            "A Valencia"
+          ],
+          "answer": 2,
+          "qEn": "Where does the train go?"
+        },
+        {
+          "q": "¿Cuántos hijos tiene Valentina?",
+          "options": [
+            "Uno",
+            "Dos",
+            "Tres"
+          ],
+          "answer": 1,
+          "qEn": "How many children does Valentina have?"
+        },
+        {
+          "q": "¿Cuántas plazas hay?",
+          "options": [
+            "Sesenta",
+            "Seiscientas",
+            "Seis mil"
+          ],
+          "answer": 1,
+          "qEn": "How many seats are there?"
+        }
+      ],
+      "open": [
+        {
+          "q": "¿A qué hora sales de casa?",
+          "model": "Salgo a las ocho.",
+          "qEn": "What time do you leave home?"
+        },
+        {
+          "q": "¿Tienes hijos?",
+          "model": "No, no tengo hijos.",
+          "qEn": "Do you have children?"
+        },
+        {
+          "q": "¿Te gusta viajar en tren?",
+          "model": "Sí, mucho.",
+          "qEn": "Do you like travelling by train?"
+        }
+      ],
+      "gaps": "Sale a las [once] y [cuarenta]. Va a [Valencia]. Tengo [dos] hijos.",
+      "glossary": [
+        {
+          "word": "el tren",
+          "meaning": "transporte que va por las vías",
+          "en": "train"
+        },
+        {
+          "word": "sitio",
+          "meaning": "espacio, lugar libre",
+          "en": "room, space"
+        },
+        {
+          "word": "plazas",
+          "meaning": "los asientos de un tren",
+          "en": "seats"
+        }
+      ]
+    },
+    {
+      "id": "palacio",
+      "title": "Radio militar",
+      "place": "Palacio Real · frecuencia militar",
+      "context": "La radio encuentra una frecuencia militar. Habla una sargento con Mario, un soldado de Paraguay.",
+      "contextEn": "The radio finds a military frequency. A sergeant talks to Mario, a soldier from Paraguay.",
+      "speakers": [
+        {
+          "name": "Sargento",
+          "country": "España",
+          "voice": "es-ES-XimenaNeural"
+        },
+        {
+          "name": "Mario",
+          "country": "Paraguay",
+          "voice": "es-PY-MarioNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Mario, ¿me escuchas?",
+          "en": "Mario, can you hear me?"
+        },
+        {
+          "s": 1,
+          "text": "Sí, sargento. Estoy en la puerta del palacio.",
+          "en": "Yes, sergeant. I am at the palace gate."
+        },
+        {
+          "s": 0,
+          "text": "¿Hay gente?",
+          "en": "Are there people?"
+        },
+        {
+          "s": 1,
+          "text": "Sí, hay una familia. Tienen frío.",
+          "en": "Yes, there is a family. They are cold."
+        },
+        {
+          "s": 0,
+          "text": "Dales mantas.",
+          "en": "Give them blankets."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Dónde está Mario?",
+          "options": [
+            "En el hospital",
+            "En la puerta del palacio",
+            "En el río"
+          ],
+          "answer": 1,
+          "qEn": "Where is Mario?"
+        },
+        {
+          "q": "¿Quién está en la puerta?",
+          "options": [
+            "Una familia",
+            "Un perro",
+            "Un médico"
+          ],
+          "answer": 0,
+          "qEn": "Who is at the gate?"
+        },
+        {
+          "q": "¿Qué tiene la familia?",
+          "options": [
+            "Hambre",
+            "Sueño",
+            "Frío"
+          ],
+          "answer": 2,
+          "qEn": "What does the family feel?"
+        },
+        {
+          "q": "¿Qué dice la sargento?",
+          "options": [
+            "Dales mantas",
+            "Cierra la puerta",
+            "Vuelve a casa"
+          ],
+          "answer": 0,
+          "qEn": "What does the sergeant say?"
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Tienes frío ahora?",
+          "model": "No, tengo calor.",
+          "qEn": "Are you cold now?"
+        },
+        {
+          "q": "¿Hay un palacio en tu ciudad?",
+          "model": "Sí, hay un palacio antiguo.",
+          "qEn": "Is there a palace in your city?"
+        },
+        {
+          "q": "¿Qué te gusta más: el frío o el calor?",
+          "model": "Me gusta más el calor.",
+          "qEn": "What do you like more: the cold or the heat?"
+        }
+      ],
+      "gaps": "[Sí], [sargento]. Estoy en la [puerta] del [palacio].",
+      "glossary": [
+        {
+          "word": "sargento",
+          "meaning": "una militar que manda a un grupo pequeño",
+          "en": "sergeant"
+        },
+        {
+          "word": "frío",
+          "meaning": "cuando la temperatura es baja",
+          "en": "cold"
+        },
+        {
+          "word": "mantas",
+          "meaning": "telas grandes para no tener frío",
+          "en": "blankets"
+        }
+      ]
+    },
+    {
+      "id": "hospital",
+      "title": "Yuleisy y su hermano",
+      "place": "Hospital de campaña · mensaje de voz",
+      "context": "Yuleisy es enfermera. Manda un mensaje de voz a su hermano Sebastián, en Caracas.",
+      "contextEn": "Yuleisy is a nurse. She sends a voice message to her brother Sebastián, in Caracas.",
+      "speakers": [
+        {
+          "name": "Yuleisy",
+          "country": "Venezuela",
+          "voice": "es-VE-PaolaNeural"
+        },
+        {
+          "name": "Sebastián",
+          "country": "Venezuela",
+          "voice": "es-VE-SebastianNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Hola, Sebastián. Estoy en el hospital. Trabajo mucho.",
+          "en": "Hi, Sebastián. I am at the hospital. I work a lot."
+        },
+        {
+          "s": 1,
+          "text": "¿Comes bien, hermana?",
+          "en": "Do you eat well, sister?"
+        },
+        {
+          "s": 0,
+          "text": "Sí, sí. Un café y un sándwich.",
+          "en": "Yes, yes. A coffee and a sandwich."
+        },
+        {
+          "s": 1,
+          "text": "Eso no es comer bien. Un beso. Mamá te quiere.",
+          "en": "That is not eating well. A kiss. Mum loves you."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Dónde está Yuleisy?",
+          "options": [
+            "En casa",
+            "En el hospital",
+            "En Caracas"
+          ],
+          "answer": 1,
+          "qEn": "Where is Yuleisy?"
+        },
+        {
+          "q": "¿Qué come Yuleisy?",
+          "options": [
+            "Un café y un sándwich",
+            "Arroz con pollo",
+            "Una sopa"
+          ],
+          "answer": 0,
+          "qEn": "What does Yuleisy eat?"
+        },
+        {
+          "q": "¿Quién es Sebastián?",
+          "options": [
+            "Su padre",
+            "Su amigo",
+            "Su hermano"
+          ],
+          "answer": 2,
+          "qEn": "Who is Sebastián?"
+        },
+        {
+          "q": "¿Qué piensa Sebastián?",
+          "options": [
+            "Que ella no come bien",
+            "Que ella trabaja poco",
+            "Que ella está en casa"
+          ],
+          "answer": 0,
+          "qEn": "What does Sebastián think?"
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué comes al mediodía?",
+          "model": "Como ensalada y pescado.",
+          "qEn": "What do you eat at midday?"
+        },
+        {
+          "q": "¿Trabajas mucho?",
+          "model": "Sí, trabajo ocho horas.",
+          "qEn": "Do you work a lot?"
+        },
+        {
+          "q": "¿Mandas mensajes de voz?",
+          "model": "Sí, a mi madre.",
+          "qEn": "Do you send voice messages?"
+        }
+      ],
+      "gaps": "Hola, [Sebastián]. Estoy en el [hospital]. [Trabajo] [mucho].",
+      "glossary": [
+        {
+          "word": "el hospital",
+          "meaning": "lugar donde están los médicos y los enfermos",
+          "en": "hospital"
+        },
+        {
+          "word": "hermana",
+          "meaning": "hija de tus mismos padres",
+          "en": "sister"
+        },
+        {
+          "word": "un beso",
+          "meaning": "un saludo con cariño",
+          "en": "a kiss"
+        }
+      ]
+    },
+    {
+      "id": "rio",
+      "title": "La barca del amanecer",
+      "place": "Madrid Río · la radio",
+      "context": "Lola habla con Jaime, el barquero. La barca sale del río al amanecer.",
+      "contextEn": "Lola talks to Jaime, the boatman. The boat leaves the river at dawn.",
+      "speakers": [
+        {
+          "name": "Lola",
+          "country": "España",
+          "voice": "es-ES-ElviraNeural"
+        },
+        {
+          "name": "Jaime",
+          "country": "España",
+          "voice": "es-ES-AlvaroNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Jaime, ¿estás en el río?",
+          "en": "Jaime, are you at the river?"
+        },
+        {
+          "s": 1,
+          "text": "Sí, Lola. La barca está lista.",
+          "en": "Yes, Lola. The boat is ready."
+        },
+        {
+          "s": 0,
+          "text": "¿A qué hora sale?",
+          "en": "What time does it leave?"
+        },
+        {
+          "s": 1,
+          "text": "A las siete. Cuando sale el sol.",
+          "en": "At seven. When the sun comes up."
+        },
+        {
+          "s": 0,
+          "text": "Buen viaje, Jaime.",
+          "en": "Have a good trip, Jaime."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Dónde está Jaime?",
+          "options": [
+            "En el río",
+            "En la plaza",
+            "En el metro"
+          ],
+          "answer": 0,
+          "qEn": "Where is Jaime?"
+        },
+        {
+          "q": "¿Cómo está la barca?",
+          "options": [
+            "Rota",
+            "Lista",
+            "Vacía"
+          ],
+          "answer": 1,
+          "qEn": "How is the boat?"
+        },
+        {
+          "q": "¿A qué hora sale la barca?",
+          "options": [
+            "A las nueve",
+            "A las cinco",
+            "A las siete"
+          ],
+          "answer": 2,
+          "qEn": "What time does the boat leave?"
+        },
+        {
+          "q": "¿Qué dice Lola al final?",
+          "options": [
+            "Buenas noches",
+            "Buen viaje",
+            "Hasta mañana"
+          ],
+          "answer": 1,
+          "qEn": "What does Lola say at the end?"
+        }
+      ],
+      "open": [
+        {
+          "q": "¿A qué hora te levantas?",
+          "model": "Me levanto a las siete.",
+          "qEn": "What time do you get up?"
+        },
+        {
+          "q": "¿Hay un río en tu ciudad?",
+          "model": "Sí, hay un río grande.",
+          "qEn": "Is there a river in your city?"
+        },
+        {
+          "q": "¿Te gusta ir en barca?",
+          "model": "Sí, en verano.",
+          "qEn": "Do you like going by boat?"
+        }
+      ],
+      "gaps": "La barca está [lista]. ¿A qué hora [sale]? A las [siete]. Cuando sale el [sol].",
+      "glossary": [
+        {
+          "word": "la barca",
+          "meaning": "barco pequeño",
+          "en": "boat"
+        },
+        {
+          "word": "lista",
+          "meaning": "preparada",
+          "en": "ready"
+        },
+        {
+          "word": "el sol",
+          "meaning": "la estrella que nos da luz de día",
+          "en": "sun"
+        }
+      ]
+    }
+  ]
+}
