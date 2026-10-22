@@ -16,6 +16,8 @@ const casino = await import('../app/marketing-de-casinos/layout.mjs');
 const feria = await import('../app/la-feria-de-villaluz/layout.mjs');
 const feriaLevels = await import('../app/la-feria-de-villaluz/levels.mjs');
 const madrid = await import('../app/madrid-infectada/layout.mjs');
+const madridCity = await import('../app/madrid-infectada/city.mjs');
+const madridHorde = await import('../app/madrid-infectada/horde.mjs');
 const bosque = await import('../app/bosque-de-los-hongos-gigantes/engine.mjs');
 const { pushOut } = await import('../app/escucha-3d/bump.mjs');
 
@@ -133,7 +135,26 @@ function madridZones() {
   });
 }
 
-const WORLDS = [nocheStreet(), ...nocheRooms(), ...hospitalFloors(), ...casinoFloors(), feriaWorld(), ...madridZones()];
+// Madrid infectada, the whole city in one piece: the people of the twenty
+// circles, the thirty survivors and the zombies found crouched over a body;
+// the mascot at every circle, in front of every survivor, at the arrival of
+// every district, at the Metro stairs and where the Metro lets it out.
+function madridCityWorld() {
+  const C = madridCity;
+  return {
+    id: 'madrid:ciudad', solids: C.allSolids(), bounds: C.CITY_BOUNDS, staticWalkers: true, walkers: [],
+    people: [...C.cityPeople(), ...C.feederSpots().map((f, i) => ({ id: `zombie-agachado-${i}`, x: f.x, z: f.z }))],
+    spots: [
+      ...C.citySpots().map(s => ({ id: s.id, x: s.x, z: s.z })),
+      ...C.ENCOUNTERS.map(e => ({ id: `calle/${e.id}`, ...C.encounterSpot(e) })),
+      ...madrid.ZONE_ORDER.filter(z => z !== 'metro').map(z => ({ id: `llegada-${z}`, ...C.arrivalOf(z) })),
+      ...C.metroEntrances().map(m => ({ id: `metro-${m.name}`, x: m.x, z: m.z })),
+      ...Object.entries(C.METRO_EXITS).map(([id, e]) => ({ id: `salida-${id}`, ...e })),
+    ],
+  };
+}
+
+const WORLDS = [nocheStreet(), ...nocheRooms(), ...hospitalFloors(), ...casinoFloors(), feriaWorld(), ...madridZones(), madridCityWorld()];
 
 // ------------------------------------------------------------------ checks
 test('every world in the list has solids, people or walkers to check', () => {
@@ -252,4 +273,37 @@ test('bosque: jumping under a cap, the head bumps it instead of passing through'
   let top = p.y;
   for (let i = 0; i < 30; i++) { p = bosque.stepPlayer(p, { jump: i === 0 }, 1 / 60, [cap], []); top = Math.max(top, p.y); }
   assert.ok(top + bosque.BODY_HEIGHT <= cap.y - bosque.CAP_DEPTH + 1e-6, `head at ${top + bosque.BODY_HEIGHT}, cap underside at ${cap.y - bosque.CAP_DEPTH}`);
+});
+
+// Madrid infectada: the horde wanders, chases, grabs, is knocked down and gets
+// up for minutes while the mascot crosses the city, and no zombie ever stands
+// inside a wall, a car, a bench or a person.
+test('Madrid infectada: the walking dead never end up inside anything', () => {
+  const C = madridCity, H = madridHorde;
+  const solids = C.allSolids(), index = H.solidIndex(solids), people = C.cityPeople();
+  const keepAway = [...C.citySpots().map(s => ({ x: s.x, z: s.z, r: 2.2 })), ...C.ENCOUNTERS.map(e => ({ ...C.encounterSpot(e), r: 2.2 })), ...C.metroEntrances().map(m => ({ x: m.x, z: m.z, r: 2 }))];
+  const ground = C.zombieGround().filter(p => !H.blockedAt(p.x, p.z, index.near(p.x, p.z, 1), 0.6));
+  const horde = H.createHorde(30, C.feederSpots(), 7);
+  const world = { index, bounds: C.CITY_BOUNDS, ground, people, keepAway };
+  const route = [[0, -20], [0, 40], [-50, 75], [-100, 40], [-140, -40], [-55, -45], [20, -105], [100, -90], [100, -20], [165, 20], [110, 76], [-15, 128]];
+  const player = { x: 0, z: -20 };
+  const seen = {}, bad = [];
+  let leg = 0;
+  for (let f = 0; f < 20 * 60 * 2; f++) {
+    const dt = 0.05, [tx, tz] = route[leg % route.length], dx = tx - player.x, dz = tz - player.z, d = Math.hypot(dx, dz);
+    if (d < 1) leg++; else { player.x += (dx / d) * 4 * dt; player.z += (dz / d) * 4 * dt; }
+    for (const e of H.stepHorde(horde, world, player, { x: dx / (d || 1), z: dz / (d || 1) }, dt, f % 1200 < 200)) {
+      seen[e.type] = (seen[e.type] ?? 0) + 1;
+      if (e.type === 'grab' && f % 3 === 0) H.knockDown(horde.list[e.id]);
+    }
+    for (const z of horde.list) {
+      if (z.state === 'off') continue;
+      const box = solids.find(b => overlaps(z.x, z.z, H.ZOMBIE_RADIUS - 0.05, b));
+      if (box && bad.length < 10) bad.push(`frame ${f}: zombie ${z.id} (${z.state}) at (${z.x.toFixed(1)}, ${z.z.toFixed(1)}) inside ${name(box)}`);
+      const p = people.find(q => Math.hypot(q.x - z.x, q.z - z.z) < 0.6);
+      if (p && bad.length < 10) bad.push(`frame ${f}: zombie ${z.id} inside ${p.id}`);
+    }
+  }
+  assert.deepEqual(bad, []);
+  for (const type of ['groan', 'scream', 'grab']) assert.ok(seen[type] > 0, `the horde never did «${type}»: ${JSON.stringify(seen)}`);
 });

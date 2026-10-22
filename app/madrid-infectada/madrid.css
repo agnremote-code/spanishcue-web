@@ -237,5 +237,5 @@
 .mi-survivors button small { color: var(--muted); font-size: .74rem; }
 .mi-survivors button.is-done { border-color: var(--green); }
 .mi-band { color: var(--muted); font-weight: 600; letter-spacing: .04em; }
-@media (max-width: 760px) { .mi-map { right: 10px; bottom: auto; top: 118px; padding: 3px; } .mi-map:not(.is-big) canvas { width: 118px !important; height: auto !important; } }
-@media (pointer: coarse) { .mi-map:not(.is-big) { top: 118px; bottom: auto; } }
+@media (max-width: 760px) { .mi-map { right: 10px; bottom: auto; top: 222px; padding: 3px; } .mi-map:not(.is-big) canvas { width: 118px !important; height: auto !important; } }
+@media (pointer: coarse) { .mi-map:not(.is-big) { top: 222px; bottom: auto; } }

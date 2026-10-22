@@ -343,8 +343,8 @@ export default function World3D(props: WorldProps) {
     let qaCam: { p: THREE.Vector3; l: THREE.Vector3 } | null = null;
     if (params.has('qa3d')) {
       (window as unknown as { __mi3d?: unknown }).__mi3d = {
-        place: (x: number, z: number, heading = 0) => { player = { ...player, x, z, heading, speed: 0, y: 0, vy: 0 }; yaw = heading; },
-        where: () => ({ x: player.x, z: player.z, y: player.y, scene: place.id, zone: district, place: placeName, near, vax: vax?.stage ?? null, clouds: place.clouds.map(c => c.state), zombies: horde.list.filter(z => z.state !== 'off').map(z => ({ s: z.state, d: Math.round(Math.hypot(z.x - player.x, z.z - player.z)) })) }),
+        place: (x: number, z: number, heading = 0) => setPlayer(x, z, heading),
+        where: () => ({ x: player.x, z: player.z, y: player.y, cam: camera.position.toArray().map(v => Math.round(v * 10) / 10), scene: place.id, zone: district, place: placeName, near, vax: vax?.stage ?? null, clouds: place.clouds.map(c => c.state), zombies: horde.list.filter(z => z.state !== 'off').map(z => ({ s: z.state, d: Math.round(Math.hypot(z.x - player.x, z.z - player.z)) })) }),
         shoot: () => shoot(),
         metro: (on: boolean) => { if (on) enterMetro(); else leaveMetro(METRO_EXITS.west); },
         camera: (x: number, y: number, z: number, lx: number, ly: number, lz: number) => { qaCam = { p: new THREE.Vector3(x, y, z), l: new THREE.Vector3(lx, ly, lz) }; },
