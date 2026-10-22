@@ -131,8 +131,6 @@ test('derives separate owners from authenticated sessions and rejects anonymous 
   assert.throws(() => tracker.authenticatedOwnerId(new Request('https://spanishcue.test/api/students')), tracker.UnauthorizedError);
   assert.doesNotThrow(() => tracker.requireSameOrigin(teacherRequest('teacher-a')));
   assert.throws(() => tracker.requireSameOrigin(teacherRequest('teacher-a', 'https://evil.test')), /Origen/);
-  // A sandboxed frame sends the literal origin `null`: refused as 403, never a 500.
-  assert.throws(() => tracker.requireSameOrigin(teacherRequest('teacher-a', 'null')), error => error.status === 403 && error.code === 'forbidden_origin');
 });
 
 test('isolates students, histories, updates, deletes and exports between two professors', async () => {

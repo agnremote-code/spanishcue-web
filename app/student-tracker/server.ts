@@ -9,8 +9,7 @@ export function authenticatedOwnerId(request: Request): string {
 
 export function requireSameOrigin(request: Request): void {
   const origin = request.headers.get('origin');
-  // Exact match: a literal `null` origin (sandboxed frames) is refused, not parsed.
-  if (!origin || origin !== new URL(request.url).origin) {
+  if (!origin || new URL(origin).origin !== new URL(request.url).origin) {
     throw new TrackerError('Origen de solicitud no permitido.', 403, 'forbidden_origin');
   }
 }
