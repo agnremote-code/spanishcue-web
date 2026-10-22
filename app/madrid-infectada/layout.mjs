@@ -17,6 +17,7 @@ export const PROP_SIZE = {
   semaforo: [0.35, 0.35, null], tent: [null, null, null], bed: [2.0, 0.95, 0.62], table: [1.8, 0.9, 0.8], generator: [1.7, 1.0, 1.1],
   train: [null, 3.0, null], metro: [3.2, 5.0, null], heli: [11, 3.2, null], jeep: [4.2, 2.0, 1.7], boat: [5.5, 2.0, 0.8], bench: [1.8, 0.6, 0.48],
   counter: [null, 0.8, 1.05], pillar: [0.8, 0.8, null], container: [6, 2.5, 2.6], stove: [1.2, 0.8, 0.95], screen: [0.25, 2.2, null],
+  sheet: [1.9, 0.8, 0.32], doll: [0.6, 0.6, 0.5], pram: [1.1, 0.7, 1.0], suitcase: [0.9, 0.55, 0.6],
 };
 
 const box = (x0, z0, x1, z1, extra = {}) => ({ x0: Math.min(x0, x1), x1: Math.max(x0, x1), z0: Math.min(z0, z1), z1: Math.max(z0, z1), ...extra });

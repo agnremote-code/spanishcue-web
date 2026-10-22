@@ -2,11 +2,12 @@
 // the buildings, far sirens that rise and fall, radio static, the hum of the
 // Metro tunnel, birds in the Retiro, the river, a generator, fire crackle and
 // the short effects of the class (the scan, the injection, the beam, a cloud
-// bursting, a helicopter, a car alarm, a distant groan). Each zone has its
+// bursting, a helicopter, a car alarm, the groans and screams of the dead,
+// a whisper). Each zone has its
 // own mix; the bed ducks while a card or a listening is open. It only starts
 // after a click, so autoplay rules hold.
 export type Sound = 'plaza' | 'avenue' | 'camp' | 'tunnel' | 'park' | 'barrio' | 'station' | 'military' | 'hospital' | 'river';
-export type Sfx = 'detect' | 'inject' | 'immune' | 'beam' | 'burst' | 'hit' | 'heli' | 'alarm' | 'groan' | 'radio' | 'sparks' | 'pigeons' | 'drop' | 'boat' | 'reward';
+export type Sfx = 'detect' | 'inject' | 'immune' | 'beam' | 'burst' | 'hit' | 'heli' | 'alarm' | 'groan' | 'radio' | 'sparks' | 'pigeons' | 'drop' | 'boat' | 'reward' | 'scream' | 'grab' | 'down' | 'whisper';
 
 type Mix = { wind: number; sirens: number; hum: number; birds: number; water: number; crowd: number; fire: number; static: number };
 const m = (part: Partial<Mix>): Mix => ({ wind: 0, sirens: 0, hum: 0, birds: 0, water: 0, crowd: 0, fire: 0, static: 0, ...part });
@@ -29,7 +30,8 @@ export type Ambience = {
   setKind: (kind: Sound | null) => void;
   duck: (level: number) => void;
   setMuted: (muted: boolean) => void;
-  play: (sfx: Sfx) => void;
+  /** `gain` 0–1: how close it is (the dead groan louder near you). */
+  play: (sfx: Sfx, gain?: number) => void;
   dispose: () => void;
 };
 
@@ -82,6 +84,35 @@ export function createAmbience(): Ambience {
     g.gain.setValueAtTime(0.0001, t0); g.gain.exponentialRampToValueAtTime(0.025, t0 + 1.2); g.gain.exponentialRampToValueAtTime(0.0001, t0 + 5.4);
     o.connect(f).connect(p).connect(g).connect(ducker); o.start(t0); o.stop(t0 + 5.5);
   }
+  // A dead throat: a low buzzing voice through a mouth-like filter, sliding down, with a wet breath.
+  function growl(gain: number, base: number, dur: number, pan = Math.random() * 1.6 - 0.8) {
+    if (!ctx) return;
+    const c = ctx, t0 = c.currentTime, o = c.createOscillator(), vib = c.createOscillator(), vibGain = c.createGain();
+    const mouth = c.createBiquadFilter(), g = c.createGain(), p = c.createStereoPanner();
+    o.type = 'sawtooth'; o.frequency.setValueAtTime(base, t0); o.frequency.exponentialRampToValueAtTime(base * 0.62, t0 + dur);
+    vib.frequency.value = 5 + Math.random() * 4; vibGain.gain.value = base * 0.08; vib.connect(vibGain).connect(o.frequency);
+    mouth.type = 'bandpass'; mouth.Q.value = 2.6; mouth.frequency.setValueAtTime(520 + Math.random() * 200, t0); mouth.frequency.linearRampToValueAtTime(320, t0 + dur);
+    p.pan.value = pan;
+    g.gain.setValueAtTime(0.0001, t0); g.gain.exponentialRampToValueAtTime(0.09 * gain, t0 + 0.18); g.gain.exponentialRampToValueAtTime(0.05 * gain, t0 + dur * 0.6); g.gain.exponentialRampToValueAtTime(0.0001, t0 + dur);
+    o.connect(mouth).connect(g).connect(p).connect(master); o.start(t0); vib.start(t0); o.stop(t0 + dur + 0.05); vib.stop(t0 + dur + 0.05);
+    hiss(dur * 0.8, 0.025 * gain, 900, 'bandpass', 0.05);
+  }
+  // A human scream, far or near: a voice that rises and breaks, and air.
+  function scream(gain: number) {
+    if (!ctx) return;
+    const c = ctx, t0 = c.currentTime, dur = 1.1 + Math.random() * 0.6, o = c.createOscillator(), vib = c.createOscillator(), vibGain = c.createGain();
+    const f = c.createBiquadFilter(), g = c.createGain(), p = c.createStereoPanner();
+    const base = 480 + Math.random() * 260;
+    o.type = 'sawtooth'; o.frequency.setValueAtTime(base, t0); o.frequency.linearRampToValueAtTime(base * 1.5, t0 + 0.25); o.frequency.linearRampToValueAtTime(base * 1.1, t0 + dur);
+    vib.frequency.value = 7; vibGain.gain.value = base * 0.05; vib.connect(vibGain).connect(o.frequency);
+    f.type = 'bandpass'; f.frequency.value = 1500; f.Q.value = 1.4; p.pan.value = Math.random() * 1.6 - 0.8;
+    g.gain.setValueAtTime(0.0001, t0); g.gain.exponentialRampToValueAtTime(0.06 * gain, t0 + 0.08); g.gain.exponentialRampToValueAtTime(0.0001, t0 + dur);
+    o.connect(f).connect(g).connect(p).connect(master); o.start(t0); vib.start(t0); o.stop(t0 + dur + 0.05); vib.stop(t0 + dur + 0.05);
+    hiss(dur, 0.03 * gain, 2400, 'bandpass', 0, 600);
+  }
+  function whisper(gain: number) {
+    for (let i = 0; i < 7; i++) hiss(0.12 + Math.random() * 0.1, 0.02 * gain, 3800 + Math.random() * 1500, 'bandpass', i * 0.16);
+  }
   function bird() { const f = 2400 + Math.random() * 1600; for (let i = 0; i < 3; i++) tone(f + i * 120, 0.08, 0.02, 'sine', 500, i * 0.11); }
   function tick() {
     if (!ctx || !mix || muted) return;
@@ -126,7 +157,7 @@ export function createAmbience(): Ambience {
     setKind(kind) { mix = kind ? MIXES[kind] : null; apply(); },
     duck(level) { if (ctx && ducker) ducker.gain.setTargetAtTime(level, ctx.currentTime, 0.3); },
     setMuted(value) { muted = value; if (ctx && master) master.gain.setTargetAtTime(value ? 0 : 0.9, ctx.currentTime, 0.1); apply(); },
-    play(sfx) {
+    play(sfx, gain = 1) {
       if (!ctx || muted) return;
       switch (sfx) {
         case 'detect': tone(1320, 0.09, 0.06, 'square'); tone(1320, 0.09, 0.06, 'square', 0, 0.16); tone(990, 0.16, 0.05, 'square', 0, 0.32); break;
@@ -137,7 +168,11 @@ export function createAmbience(): Ambience {
         case 'hit': tone(880, 0.25, 0.05, 'triangle', 300); hiss(0.25, 0.04, 3000); break;
         case 'heli': for (let i = 0; i < 40; i++) hiss(0.07, 0.05 * Math.sin(Math.PI * i / 40) + 0.005, 160, 'lowpass', i * 0.11); break;
         case 'alarm': for (let i = 0; i < 8; i++) tone(i % 2 ? 960 : 720, 0.3, 0.035, 'square', 0, i * 0.32); break;
-        case 'groan': tone(110 + Math.random() * 30, 1.4, 0.05, 'sawtooth', -50); break;
+        case 'groan': growl(Math.max(0.15, gain), 95 + Math.random() * 40, 1.2 + Math.random() * 0.9); break;
+        case 'scream': scream(Math.max(0.12, gain)); break;
+        case 'grab': growl(1.3, 140, 0.7, 0); tone(70, 0.25, 0.12, 'sine', -30); hiss(0.2, 0.08, 500, 'lowpass'); break;
+        case 'down': tone(60, 0.35, 0.12, 'sine', -25); hiss(0.35, 0.07, 300, 'lowpass'); growl(0.5, 80, 0.6, 0); break;
+        case 'whisper': whisper(gain); break;
         case 'radio': hiss(1.2, 0.05, 2400); tone(440, 0.12, 0.02, 'square', 0, 0.6); break;
         case 'sparks': for (let i = 0; i < 6; i++) hiss(0.05, 0.06, 6000, 'highpass', i * 0.07); break;
         case 'pigeons': for (let i = 0; i < 10; i++) hiss(0.06, 0.03, 1200, 'bandpass', i * 0.06); break;

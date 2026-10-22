@@ -1,0 +1,2686 @@
+{
+  "version": 1,
+  "authorization": "Owner request of 2026-10-22 16:34Z and 16:35Z (project thread «Madrid infectada», root message cmsg_01Gr5R4j3t2Yet65UcmhcVhANJDy42vAMYzKmSc7Hfosis): Ale asked for a much bigger Madrid with «muchísimas conversaciones». This adds thirty street survivors with a scene per band; the A0 band is fully bilingual and the A1–A2 band glosses its key words in English, as in the circles of the same class. This manifest approves only the exact English support literals listed below (the English half of each { es, en } pair in app/madrid-infectada/calle/a0.mjs and of the words in app/madrid-infectada/calle/a.mjs); existing English copy stays protected. Owner approval: Ale wrote «apruebo todo no preguntes más, apruebo todo» on 2026-10-14 16:55Z (project message cmsg_01Gr5R4j3t2Yet65UcmhcVhADwvzg9kA9GinuWu3D7FSfe), a standing approval for English copy in A0 work, and «apruebo (siempre de ahora en más apruebo)» on 2026-10-22 06:37Z (cmsg_01Gr5R4j3t2Yet65UcmhcVhAAAbp6kqDfMqxzNm3PL6f5g).",
+  "additions": [
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the (white) coat"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the counter"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "fever"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the gloves"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "empty"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "for (time)"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the order"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "delivery"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "to scratch"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the doorknob"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "to cancel"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the rating"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the balcony"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "to have been (for years)"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the wedding"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "to get sick"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "dangerous"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "not… either"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the tour group"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "to get lost"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the fountain"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the battery"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the guide"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "strange"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the sunset"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "dusk"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "in a line"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "slowly"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the convent"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the habit"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the fence"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "to cough"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the order (command)"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "to shoot"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the army"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "healthy"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the bell"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the tower"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "dust"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the pigeon"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the rope"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "dawn"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "to play the guitar"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "by chance"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "still"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "slow"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "nervous"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the instrument"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the taxi meter"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "to pick up"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the passenger"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the seat belt"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "to turn off"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "to breathe"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "to take notes"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the stage"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the vein"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "to forget"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the reflection"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "to recognise"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the tattoo"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the shutter"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "free (of charge)"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the neck"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "useful"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "by mistake"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the doorman"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "to write down"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "to bang"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the bunch of keys"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the doormat"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the newspaper"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the firefighter"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the hose"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "to attract"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "meanwhile"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "to go with"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the bait"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "to knit"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "to knit / weave"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "tied up"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "to bite"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the scarf"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "to interrupt"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "to shuffle"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "to get tired"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "suddenly"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "to turn"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the railings"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "to warn"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the chestnut tree"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the branch"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "to look after"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "to whisper"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the wind"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "to feel like"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the painting"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the room (in a museum)"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "to devour"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the giant"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "to be scary"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "to invent"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the portrait"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the easel"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the pavement"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "by sight"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "to dry"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "to come closer"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the lorry / truck"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the cab"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "to keep watch"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "to steal"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the knife"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "to share"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the nappy"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "formula milk"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "crying"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "to blink"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "to dare"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "wrapped"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the ticket inspector"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the vest"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "to stamp / validate"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the tracks"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the tunnel mouth"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the outbreak"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the skates"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the knee pads"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "to stop dead"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the bum bag"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "to carry messages"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "to be careful"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the butcher’s shop"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the apron"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "to go off / spoil"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "to smell"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "lentils"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "to be disgusting"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the twin"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the binoculars"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the scar"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the eyebrow"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the clue"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "to mistake / confuse"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the fishing rod"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the bank"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "murky"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the carp"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "to put back"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "to pull"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the soprano"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the dressing room"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the throat"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "honey"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "to hold out"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the laptop"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the van"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "to connect"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "at the same time"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "to point at"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "to show"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the hair salon"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the scissors"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "long hair"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the ponytail"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "to grab"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the hairstyle"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the doorway"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the cash machine"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the coin"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "to be in a hurry"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "to be of use"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "maybe"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "athletics"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the forearm"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "the shop window"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "to fall"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "stained"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a.mjs",
+      "text": "to ask for help"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Marta’s pharmacy"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Calle de la Montera. There is a pharmacy with a green light. A woman in a white coat is at the door."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Hello. I am Marta. I am a pharmacist."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Hello, Marta. Is the pharmacy open?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Yes. I have water, pills and bandages. Do you need anything?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "A bandage, please."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Here you are. And one thing: a man comes every night at three. He is dead. But he wants to pay."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "What time does the man come?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "At three."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "At six."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "At ten."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Marta says: “he comes every night at three.”"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Is there a pharmacy near your home?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "What do you have at home for a headache?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the pharmacy"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the pills"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the bandage"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "open"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the night"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "The last order"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Calle del Arenal. A boy on a bike has a yellow backpack. In the backpack there is a cold pizza."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Hi! I am Iván. I am a delivery rider."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Are you working today? Madrid is empty!"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Yes. The phone has orders. Look: a pizza for number four, third floor."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "And who is on the third floor?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "I don’t know. The note says: “Knock hard. We are inside. We are hungry.” I don’t want to go."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Do you order food to your home?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "What is your favourite food?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the bike"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the order"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the floor"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "to be hungry"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "cold"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Don Eusebio’s balcony"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Calle de Bailén. A very old man is on a first-floor balcony. He has a blanket and a coffee."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Good afternoon! I am Don Eusebio. I am eighty-eight years old."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Hello! Are you OK? Are you alone?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "I am fine. My wife, Pilar, is on the stairs. She sings every night."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Is Pilar alive?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "No. Pilar is dead. But she sings. I do not open the door."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "How old is Don Eusebio?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Eighty-eight."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Sixty."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Ninety-nine."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "He says: “I am eighty-eight years old.”"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "How old are your grandparents?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Does your home have a balcony?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the balcony"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the blanket"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the stairs"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "old"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "to sing"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Hanna, without a group"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Plaza de España. A blond girl has a map, a suitcase and a phone. The phone has three percent battery."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Hello… My name is Hanna. I am from Germany. I speak a little Spanish."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Hello, Hanna. Where is your group?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "I don’t know. The guide has a red flag. Now there is a red flag over there… but the guide does not speak. He only screams."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Don’t go. Come with me to the metro."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Thank you. Madrid is very pretty. But not today."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Where are you from?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "What city do you want to visit?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the map"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the suitcase"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the battery"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the group"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "to scream"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Sister Inés at the temple"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Temple of Debod. It is an Egyptian temple in Madrid. A nun prays next to the water."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Good afternoon, child. I am Sister Inés."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Hello, Sister Inés. What are you doing here?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "I pray. And I watch. Every afternoon, at eight, they come here."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "The dead? And what do they do?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Nothing. They look at the sun. They don’t move. When the sun is gone, they scream."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "What time do the dead come?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "At eight."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "At twelve."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "At two."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Sister Inés says: “at eight, they come here.”"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Do you like to watch the sun in the evening?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Is there a quiet place in your city?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the temple"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "to pray"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the sun"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the afternoon"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "to move"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Rubén’s checkpoint"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Calle de Bailén. There is a fence and a young soldier. He has a helmet and a torch."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Stop! Who are you?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Calm down. I have the vaccine. I am not sick."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Sorry. I am Rubén. I am a corporal. I am afraid. My colleagues are not here."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Where are they?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Over there, in the Palace. They wear the uniform… but they have white eyes."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Do you like uniforms?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "When are you afraid?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the soldier"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the helmet"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the torch"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the eyes"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "stop!"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "The bells of the Almudena"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Plaza de la Armería. On one side is the Royal Palace. On the other side is the cathedral. A priest is at the door."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Hello. I am Father Tomás. This is my church, the Almudena."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "It is very big. Are there people inside?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Yes, twelve living people. But there is a problem: the bells."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "What is wrong with the bells?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "They ring at twelve at night. Nobody is up there. And the dead come to the square."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "How many living people are in the church?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Twelve."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Two."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Twenty."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "The priest says: “twelve living people.”"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Is there a church in your neighbourhood?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "What noises do you hear at night?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the church"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the bell"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the priest"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "alive"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "up / upstairs"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Nacho’s guitar"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Plaza de Oriente. There are statues of kings. A boy plays the guitar. Three dead people are in front of him. They don’t move."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Shhh… Hi. I am Nacho. I play the guitar."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "There are three dead people in front of you!"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Yes. With music they are calm. They listen."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "And without music?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Without music, they eat. That is why I play. I play all day. My fingers hurt."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Do you play an instrument?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "What music do you like?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the guitar"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "to play (an instrument)"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "music"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the statue"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the fingers"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Fermín’s taxi"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Gran Vía. There is a white taxi with a red line. The meter is on. A man is in the front seat."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Hi. I am Fermín. I am a taxi driver."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Why is the meter on?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Because of the passenger. He is in the back. He has his seat belt on."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "But… he does not speak. And his face is grey."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Yes. It is nine days. It is three thousand euros. He does not pay."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Where is the passenger?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "In the back of the taxi."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "In the street."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "In the metro."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Fermín says: “He is in the back. He has his seat belt on.”"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Do you take taxis in your city?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Do you have a car or a motorbike?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the taxi"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the passenger"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the seat belt"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the face"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "to pay"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Lucía’s notebook"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Calle de Fuencarral. A girl is sitting in a doorway. She has a notebook and a pen."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Hi. I am Lucía. I study medicine."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "What are you writing?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "I write what the virus is like. First: fever. Then: black veins."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "And then?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Then they don’t remember their name. At the end, they don’t remember their face. Look: my hand. I have a black vein."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "What do you study or what did you study?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Do you write in a notebook?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the notebook"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "fever"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the vein"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the name"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "to remember"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Dani’s names"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Malasaña. A tattoo studio has its door open. A boy with a beard has a machine in his hand."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Hi! I am Dani. I am a tattoo artist. Do you want a tattoo?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "A tattoo? Today?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Yes. I write people’s names on their arm. If you die, they know your name."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "It is sad. But it is a good idea."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Look at the street. That dead man has a tattoo: “MUM.” That dead man is someone."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "What does Dani write on the arm?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "The person’s name."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "A number."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "A flower."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Dani says: “I write people’s names on their arm.”"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Do you have a tattoo?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "What word is important to you?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the tattoo"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the arm"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the beard"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "sad"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the idea"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Don Ramón, the doorman"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Calle de Alcalá. There is an old building. A man in a blue suit is at the door. He has a lot of keys."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Good morning. I am Don Ramón, the doorman."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Good morning. Are there neighbours in the building?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Yes. On the first floor, a family. On the second, a teacher. On the fourth… Mrs Luisa."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "And is Mrs Luisa OK?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "No. She knocks on the door all night. Bang, bang, bang. I have the key. I do not open it."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Do you know your neighbours?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "What floor do you live on?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the doorman"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the building"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the key"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the neighbour"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Carmen and the red truck"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Plaza de Cibeles. There is smoke. A fire truck is in the square. A strong woman has a yellow helmet."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Hi! I am Carmen. I am a firefighter."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Hi, Carmen. Is there a fire?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "There is fire all over Madrid. But I have a plan. The siren makes a lot of noise."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "And the dead come with the noise…"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Exactly. I put the siren in the park. They go to the park. And people run to the hospital."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "What makes a lot of noise?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "The siren."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "The helmet."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "The smoke."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Carmen says: “The siren makes a lot of noise.”"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "What job is difficult?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Are you a strong person?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the fire"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the smoke"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the siren"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the noise"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "strong"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Doña Amparo and her husband"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Puerta de Alcalá. An old lady is on a bench. She is knitting. Next to her there is a man tied to the bench."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Good afternoon. I am Amparo. This is Paco, my husband."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Madam… Paco is dead."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "I know. But he is my husband. Fifty years together."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "And why is he tied up?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Because he bites. But he likes the sun. And I talk to him. It is cold today, Paco."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Do you know an old couple?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Do you like to knit or to cook?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the bench"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the husband"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "together"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "tied"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "to bite"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Álex runs"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Calle de Alfonso XII. A boy in sports clothes is breathing very fast. He has a watch on his wrist."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Hi… phew… I am Álex. I run every day."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "You are running today? There are dead people in the street!"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "That is why I run. I check the streets and warn people."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Are the dead slow?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Almost all of them. But there are new ones. The new ones run. They run a lot."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "What do the new dead do?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "They run."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "They sleep."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "They sing."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Álex says: “The new ones run.”"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Do you do sport every week?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Are you a fast or a slow person?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "to run"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the watch"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "fast"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "slow"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "to warn"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Julián and the trees"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "The Retiro. It is a very big park. A gardener with a straw hat is among the trees."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Hello. I am Julián. I am the Retiro gardener."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Hello, Julián. The trees look strange."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Yes. The leaves are grey. And the green cloud comes out of the Crystal Palace."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "And are you OK?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Yes. But at night the trees talk. They say my name. “Julián, Julián.”"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Do you like parks?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Do you have plants at home?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the tree"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the leaf"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the gardener"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "grey"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "strange"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Elena, Prado guide"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Paseo del Prado. In front of the museum there is a woman with a closed umbrella. She is a guide."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Hello. I am Elena. I am a guide at the Prado Museum."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Hello, Elena. Is the museum closed?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Yes. But I sleep inside. There are paintings by Goya. They are black, ugly paintings."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "And are you scared inside?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "A little. In one painting, a giant eats a person. Now the street is like the painting."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Where does Elena sleep?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Inside the museum."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "In a hotel."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "In the park."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Elena says: “I sleep inside.”"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Do you like museums?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "What is your favourite painting?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the museum"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the painting"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the umbrella"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "ugly"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "closed"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Ernesto’s portraits"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Paseo del Prado. A man with an easel is painting. In the picture there is a grey face with white eyes."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Hi. My name is Ernesto. I paint."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Do you paint the dead?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Yes. They are people. They have names. This is Rosa. She sells flowers in Atocha."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "It is a very pretty painting. And very sad."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Thank you. I paint fast. Rosa does not wait long."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Do you like drawing or painting?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Do you have photos of your family?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "to paint"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the portrait"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the flower"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "pretty"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "to wait"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Manolo’s lorry"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Calle de Felipe IV. There is a big lorry. A man is on top, on the roof, with an iron bar."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Who are you? I am Manolo. This is my lorry."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Hi, Manolo. What is in the lorry?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Food. Bread, milk, fruit. A lot of food."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "And is it for you?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "No. It is for the people in the hospital. Take an apple. They don’t eat fruit."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Who is the food for?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "For the people in the hospital."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "For Manolo."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "For the dead."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Manolo says: “It is for the people in the hospital.”"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "What do you eat in the morning?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Do you like fruit?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the lorry"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "bread"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "milk"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the apple"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the roof"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Rocío and little Leo"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Near Atocha. A young woman has a baby in her arms. The baby is sleeping. She speaks very quietly."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Shhh. Hi. I am Rocío. This is Leo. He is three months old."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Hi. He is very small."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Yes. I need milk for him. And a safe place."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "There are people in the hospital. And there is milk."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Thank you. But please, don’t speak loudly. If Leo cries, they come."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Do you have children or nephews and nieces?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "How many hours do you sleep?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the child / the boy"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "to cry"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "safe"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "quiet / low"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the month"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Sergio, the ticket inspector"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Ronda de Atocha. A man with a cap and a train uniform is in the street. He has a ticket machine."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Hello. Ticket, please."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Ticket? There are no trains."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "I know. I am Sergio. I am a ticket inspector. I ask for tickets. It is my job."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "And where is your train?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "In the tunnel. It is the seven o’clock train to Valencia. The lights are on. And the people are inside. Still."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Where does the train go?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "To Valencia."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "To Seville."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "To Paris."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Sergio says: “the seven o’clock train to Valencia.”"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Do you travel by train?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Do you like your job?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the train"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the ticket"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the cap"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the tunnel"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "still"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Vega on skates"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Ronda de Atocha. A girl goes past very fast on skates. She stops in front of you. She has a paper in her hand."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Hi! I am Vega. I carry messages."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Messages? Is there no phone?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "There is no internet. I carry papers from one street to another. I am very fast."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "What does that paper say?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "It says: “Don’t go to Lavapiés. Don’t look them in the eyes.” It is for you too."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Can you skate or ride a bike?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "How do you get to work or class?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the skates"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the message"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the paper"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "to look"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "too"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Andrés’s meat"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Near the river. A big man in an apron is next to a butcher’s shop. It smells very bad."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Hi. I am Andrés. I am a butcher."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Ugh! What is that smell?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "It is old meat. The dead like it a lot. I put it in the street, far from the people."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "What a good idea! And do you eat meat?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Not any more. Now I only eat vegetables. It is strange, right?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "What does Andrés eat now?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Only vegetables."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "A lot of meat."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Fish."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Andrés says: “Now I only eat vegetables.”"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Do you eat meat or are you vegetarian?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "What smell do you like?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "meat"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "vegetables"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the smell"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "to smell bad"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "far"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Hugo is looking for Leo"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Calle de Toledo. A boy looks at the faces of the dead through binoculars. He has a photo of two identical boys."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Hi. I am Hugo. I am looking for my brother. His name is Leo. We are twins."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Does he look exactly like you?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Yes. The same. The same face, the same hair."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "And where is he?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "I don’t know. But look over there, among the dead. There is a boy with my face… and with white eyes."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Do you have brothers or sisters?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Who in your family do you look like?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the brother"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the twins"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the same"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the hair"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "to look for"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Benito is fishing"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "The Manzanares river. A man is sitting on a chair. He is fishing. Next to him there is a bucket of water."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Hi. I am Benito. I fish here every day."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Are there fish in the river?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Yes. Look at the bucket. I have two fish."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "They have green eyes!"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Yes. They all have green eyes now. And look at the river: something is pulling the rod. Something big."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "What colour are the fish’s eyes?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Green."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Blue."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Black."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "The mascot says: “They have green eyes!”"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Is there a river in your city?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Do you like fish?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the river"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the fish (alive)"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the bucket"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "to fish"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "green"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Sofía’s voice"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Calle del Arenal, near the Teatro Real. A woman in a long dress is at a window. She sings very loudly."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Aaaah! … Oh, hi. I am Sofía. I am an opera singer."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "You sing very loudly!"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Yes. With my voice, the dead cover their ears. And they go away."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Great! Do you sing all day?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "No. My throat hurts. Tonight I have no voice. And the door is old."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Do you like singing?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "What song do you like?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the voice"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the throat"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the window"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "loud"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Pablo’s cameras"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Carrera de San Jerónimo. A boy with glasses is in a car with three computers. The screens show the street."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Hi. I am Pablo. I work in IT. I watch the Madrid cameras."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Do the cameras work?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Yes. Look at this one. It is three thirty-three. All the dead stop."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "They stop? And what do they do?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "They look at the camera. All of them. At the same time. They look at me."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "What time do the dead stop?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "At three thirty-three."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "At a quarter past five."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Pablo says: “It is three thirty-three. All the dead stop.”"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Do you use the computer a lot?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "How many hours do you look at your phone?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the computer"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the screen"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the camera"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the glasses"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "at the same time"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Yolanda’s hair salon"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "A street near Sol. There is a hair salon with a broken mirror. A woman has some scissors."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Hi, handsome. I am Yolanda. I am a hairdresser. Sit down."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "A haircut? Now?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Yes. Short hair, very short. The dead grab you by the hair."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "OK. Short, please."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Very good. Don’t look in the mirror. Sometimes there is someone behind you."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Do you have long or short hair?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "How often do you go to the hairdresser?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the scissors"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the mirror"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "short"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "behind"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Ginés, the invisible man"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "A doorway near Sol. A man with a long beard is sitting on some cardboard. He has a small dog."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Hi. I am Ginés. I live here. This is Chispa, my dog."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Hi, Ginés. Aren’t you afraid in the street?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "No. The dead do not look at me. They walk past me."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Why?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "I don’t know. To people, I am invisible. To the dead, too. It is the same."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "What is the dog’s name?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Chispa."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Ginés."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Leo."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Ginés says: “This is Chispa, my dog.”"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Do you have a pet at home?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Do you help other people?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the dog"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the doorway"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "cardboard"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the street"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "invisible"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Irene has a secret"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "A street near Gran Vía. A tall girl in athletics clothes is sitting on the ground. She has a bandage on her arm."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Hi. I am Irene. I am an athlete. I run the four hundred metres."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Hi, Irene. What do you have on your arm?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Nothing. It is… a dog. Yes, a dog."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Irene, I have the vaccine. I can help you."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Really? I am very hot. And very hungry. Please, quickly."
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "Do you have a small secret?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "What sport do you like to watch?"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the secret"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the athlete"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "the floor / ground"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "to be hot"
+    },
+    {
+      "path": "app/madrid-infectada/calle/a0.mjs",
+      "text": "really"
+    }
+  ]
+}

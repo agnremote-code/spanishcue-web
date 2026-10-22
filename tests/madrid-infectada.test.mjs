@@ -6,6 +6,9 @@ import * as E from '../app/madrid-infectada/engine.mjs';
 import { ZONES, SPOTS, LEVEL_IDS, CAST } from '../app/madrid-infectada/story.mjs';
 import { GAMES } from '../app/escucha-3d/games.mjs';
 import { checkAll } from '../scripts/check-madrid.mjs';
+import * as C from '../app/madrid-infectada/city.mjs';
+import { solidIndex } from '../app/madrid-infectada/horde.mjs';
+import { BANDS, LOADERS } from '../app/madrid-infectada/street.mjs';
 import { PLAYER_RADIUS } from '../app/noche-abierta/world3d.mjs';
 
 const game = readFileSync('app/madrid-infectada/MadridGame.tsx', 'utf8');
@@ -48,6 +51,59 @@ test('in every zone both circles and the way on are reachable on foot from the s
     for (const s of z.spots) assert.ok(near(s), `${id}/${s.id} unreachable`);
     if (z.gate) assert.ok(near(z.gate), `${id}: gate unreachable`);
   }
+});
+
+test('one big Madrid, not a square: bigger than Noche abierta, with its squares, streets and monuments', () => {
+  const b = C.CITY_BOUNDS;
+  assert.ok(b.maxX - b.minX >= 300 && b.maxZ - b.minZ >= 300, `the city is ${b.maxX - b.minX}×${b.maxZ - b.minZ} m`);
+  const places = C.PLACES.map(p => p.name), streets = new Set(C.STREETS.map(s => s.name)), monuments = new Set(C.MONUMENTS.map(m => m.id ?? m.kind));
+  for (const name of ['Plaza de la Armería', 'Plaza de Cibeles', 'Puerta de Alcalá', 'Plaza de España', 'Templo de Debod', 'Plaza de Oriente']) assert.ok(places.includes(name), name);
+  for (const name of ['Gran Vía', 'Calle de Alcalá', 'Paseo del Prado', 'Calle Mayor', 'Calle de Bailén', 'Calle del Arenal']) assert.ok(streets.has(name), name);
+  for (const id of ['cibeles', 'alcala', 'debod', 'oriente', 'almudena', 'teatro', 'comunicaciones', 'prado']) assert.ok(monuments.has(id), id);
+  // The nine districts above ground are pieces of the same city (the Metro runs underneath).
+  for (const z of L.ZONE_ORDER.filter(z => z !== 'metro')) assert.ok(C.PLACEMENT[z], z);
+  assert.equal(C.whereIs(...Object.values(C.arrivalOf('palacio')).slice(0, 2)).zone, 'palacio');
+});
+
+test('on foot from Sol the mascot reaches every circle, every survivor, every district and the Metro', () => {
+  const step = 1, R = PLAYER_RADIUS, b = C.CITY_BOUNDS, index = solidIndex(C.allSolids());
+  const free = (x, z) => x > b.minX + 1 && x < b.maxX - 1 && z > b.minZ + 1 && z < b.maxZ - 1 && !index.near(x, z, R + 0.5).some(s => s.top == null && x > s.x0 - R && x < s.x1 + R && z > s.z0 - R && z < s.z1 + R);
+  const start = C.arrivalOf('sol'), key = (i, j) => i * 10000 + j;
+  const first = [Math.round(start.x / step), Math.round(start.z / step)];
+  const seen = new Set([key(...first)]), queue = [first];
+  for (let q = 0; q < queue.length; q++) {
+    const [i, j] = queue[q];
+    for (const [di, dj] of [[1, 0], [-1, 0], [0, 1], [0, -1]]) {
+      const ni = i + di, nj = j + dj, k = key(ni, nj);
+      if (seen.has(k) || !free(ni * step, nj * step)) continue;
+      seen.add(k); queue.push([ni, nj]);
+    }
+  }
+  const near = (p) => { for (let i = Math.round(p.x) - 2; i <= Math.round(p.x) + 2; i++) for (let j = Math.round(p.z) - 2; j <= Math.round(p.z) + 2; j++) if (seen.has(key(i, j)) && Math.hypot(i - p.x, j - p.z) < 1.8) return true; return false; };
+  for (const s of C.citySpots()) assert.ok(near(s), `circle ${s.id} unreachable`);
+  for (const e of C.ENCOUNTERS) assert.ok(near(C.encounterSpot(e)), `survivor ${e.id} unreachable`);
+  for (const z of L.ZONE_ORDER.filter(z => z !== 'metro')) assert.ok(near(C.arrivalOf(z)), `district ${z} unreachable`);
+  for (const m of C.metroEntrances()) assert.ok(near(m), `Metro ${m.name} unreachable`);
+  for (const [id, e] of Object.entries(C.METRO_EXITS)) assert.ok(near(e), `Metro exit ${id} unreachable`);
+  assert.ok(seen.size > 20000, `only ${seen.size} m² to walk`);
+});
+
+test('thirty survivors in the street, each with a scene in every band, counted apart from the circles', async () => {
+  assert.equal(C.ENCOUNTERS.length, 30);
+  assert.deepEqual(C.ENCOUNTER_IDS, C.ENCOUNTERS.map(e => e.id));
+  for (const e of C.ENCOUNTERS) assert.ok(C.SURVIVORS[e.id]?.name && C.SURVIVORS[e.id]?.role, e.id);
+  assert.deepEqual(new Set(Object.values(BANDS)), new Set(['a0', 'a', 'b', 'c']));
+  for (const band of Object.keys(LOADERS)) {
+    const content = (await LOADERS[band]()).default;
+    assert.deepEqual(Object.keys(content).sort(), [...C.ENCOUNTER_IDS].sort(), band);
+  }
+  let s = E.createState('B2');
+  s = E.markDone(s, 'calle', 'cura');
+  assert.equal(E.markDone(s, 'calle', 'cura'), s);
+  assert.equal(E.markDone(s, 'calle', 'nadie'), s, 'unknown survivors are ignored');
+  assert.deepEqual(E.streetDone(s), ['calle/cura']);
+  assert.deepEqual(E.circlesDone(s), []);
+  assert.deepEqual(E.fromSaved(E.toSaved(s)).done, s.done);
 });
 
 test('progress: circles per level, revisits keep the mark, reset clears one level only, account rows round-trip', () => {

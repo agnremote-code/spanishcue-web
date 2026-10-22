@@ -3,14 +3,18 @@
 // whether the arrival was already seen and whether the mission was closed.
 // «Por mi cuenta» keeps it in the browser; «Con profesor» saves it per
 // student in the teacher's account through /api/live-class (same row shape
-// as the other 3D worlds: values, results, pos).
+// as the other 3D worlds: values, results, pos). The survivors met in the
+// street are kept with the same list, as calle/<survivor>.
 import { LEVEL_IDS, SPOTS, ZONES } from './story.mjs';
+import { ENCOUNTER_IDS } from './city.mjs';
 
 export const STORAGE_KEY = 'spanishcue:madrid-infectada:v1';
 export const DEFAULT_LEVEL = 'A2';
 export const ZONE_IDS = ZONES.map((z) => z.id);
 export const spotKey = (zone, spot) => `${zone}/${spot}`;
-export const ALL_KEYS = SPOTS.map((s) => spotKey(s.zone, s.id));
+export const CIRCLE_KEYS = SPOTS.map((s) => spotKey(s.zone, s.id));
+export const STREET_KEYS = ENCOUNTER_IDS.map((id) => `calle/${id}`);
+export const ALL_KEYS = [...CIRCLE_KEYS, ...STREET_KEYS];
 
 export function normaliseLevel(value) {
   const level = String(value ?? '').toUpperCase();
@@ -52,6 +56,10 @@ export const arrive = (state) => (state.arrived ? state : { ...state, arrived: t
 
 export const doneFor = (state, level = state.level) => state.done[level] ?? [];
 export const isDone = (state, zone, spot, level = state.level) => doneFor(state, level).includes(spotKey(zone, spot));
+
+/** The circles of the story and the survivors of the street, counted apart. */
+export const circlesDone = (state, level = state.level) => doneFor(state, level).filter((k) => CIRCLE_KEYS.includes(k));
+export const streetDone = (state, level = state.level) => doneFor(state, level).filter((k) => STREET_KEYS.includes(k));
 
 export function markDone(state, zone, spot) {
   const key = spotKey(zone, spot);

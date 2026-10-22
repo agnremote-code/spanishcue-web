@@ -220,3 +220,22 @@
   .mi-terminal-wrap { align-items: end; padding: 8px; }
   .mi-term-foot { flex-wrap: wrap; }
 }
+
+/* ------------------------------------------------ the city: plan, survivors */
+.mi-map { position: absolute; right: 16px; bottom: 118px; z-index: 3; padding: 4px; background: rgba(12,13,14,.78); border: 1px solid var(--line); border-radius: 4px; box-shadow: 0 8px 24px rgba(0,0,0,.45); line-height: 0; cursor: zoom-in; }
+.mi-map canvas { display: block; opacity: .92; }
+.mi-map.is-big { right: 50%; bottom: 50%; transform: translate(50%, 50%); z-index: 6; cursor: zoom-out; line-height: 1.2; max-width: calc(100vw - 32px); overflow: auto; }
+.mi-map.is-big canvas { max-width: calc(100vw - 48px); height: auto !important; }
+.mi-map-key { display: flex; flex-wrap: wrap; gap: .3rem .8rem; align-items: center; padding: .45rem .3rem .15rem; color: #dcdad2; font-size: .76rem; }
+.mi-map-key i { display: inline-block; width: 9px; height: 9px; margin-right: .3rem; border-radius: 50%; }
+.mi-map-key .k-spot { border: 2px solid #fff; } .mi-map-key .k-surv { background: #7dffa8; } .mi-map-key .k-metro { background: #d6241f; border-radius: 1px; transform: rotate(45deg); } .mi-map-key .k-you { background: #ffd23a; }
+.mi-map-under { position: absolute; left: 8px; right: 8px; bottom: 8px; padding: .3rem .4rem; background: rgba(12,13,14,.85); color: #dcdad2; font-size: .7rem; line-height: 1.2; border-radius: 3px; }
+.mi-route-sub { display: flex; gap: .6rem; align-items: baseline; margin: 1rem 0 .5rem; font-size: 1rem; }
+.mi-route-sub small { color: var(--muted); font-weight: 600; }
+.mi-survivors { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: .4rem; }
+.mi-survivors button { width: 100%; display: grid; text-align: left; padding: .45rem .6rem; background: var(--slate-2); border: 1px solid var(--line); border-radius: 3px; font-size: .86rem; }
+.mi-survivors button small { color: var(--muted); font-size: .74rem; }
+.mi-survivors button.is-done { border-color: var(--green); }
+.mi-band { color: var(--muted); font-weight: 600; letter-spacing: .04em; }
+@media (max-width: 760px) { .mi-map { right: 10px; bottom: auto; top: 222px; padding: 3px; } .mi-map:not(.is-big) canvas { width: 118px !important; height: auto !important; } }
+@media (pointer: coarse) { .mi-map:not(.is-big) { top: 222px; bottom: auto; } }
