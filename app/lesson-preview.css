@@ -29,6 +29,12 @@
   object-fit: cover;
   object-position: var(--preview-position);
   pointer-events: none;
+  opacity: 0;
+  transition: opacity 180ms ease;
+}
+
+.lesson-preview video.is-playing {
+  opacity: 1;
 }
 
 .lesson-preview::after {

@@ -33,13 +33,17 @@ const imagePositions: Record<number, string> = {
   133: "center 50%",
   134: "center 47%",
   135: "center 49%",
+  139: "center 50%",
   203: "center 46%",
+  223: "60% 16%",
 };
 
 // Muted clips may start without a click in every browser; set it on the element itself.
+// The clip stays transparent until its first frame plays, so the cover never blinks.
 function startClip(clip: HTMLVideoElement | null) {
   if (!clip) return;
   clip.muted = true;
+  clip.addEventListener("playing", () => clip.classList.add("is-playing"), { once: true });
   void clip.play().catch(() => {});
 }
 
@@ -58,15 +62,28 @@ export default function LessonPreview({
   // The real recording is only mounted while a mouse is over the card, so the
   // library keeps no video elements around and the cover stays as its poster.
   useEffect(() => {
-    const card = figure.current?.closest(".lesson-card") ?? figure.current;
+    const card = figure.current?.closest(".lesson-card, .conversation-route-card") ?? figure.current;
     if (!video || !card) return;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    const enter = () => setHovered(true);
-    const leave = () => setHovered(false);
-    card.addEventListener("mouseenter", enter);
+    // Cards sliding under a still mouse while the page scrolls must not mount
+    // clips (that flashed while scrolling): only a real pointer movement that
+    // rests on the card for a moment starts the recording.
+    let timer = 0;
+    const move = (event: Event) => {
+      const { movementX, movementY } = event as MouseEvent;
+      if (!movementX && !movementY) return;
+      window.clearTimeout(timer);
+      timer = window.setTimeout(() => setHovered(true), 180);
+    };
+    const leave = () => {
+      window.clearTimeout(timer);
+      setHovered(false);
+    };
+    card.addEventListener("mousemove", move);
     card.addEventListener("mouseleave", leave);
     return () => {
-      card.removeEventListener("mouseenter", enter);
+      window.clearTimeout(timer);
+      card.removeEventListener("mousemove", move);
       card.removeEventListener("mouseleave", leave);
     };
   }, [video]);

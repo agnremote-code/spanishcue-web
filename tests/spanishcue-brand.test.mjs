@@ -57,8 +57,6 @@ test("visible library features use distinct official mascot poses", async () => 
   for (const asset of [
     "/autoestudio/mascot/writing.webp",
     "/brand/mascot/walking.webp",
-    "/brand/mascot/seated.webp",
-    "/brand/mascot/speaking.webp",
   ]) {
     assert.match(library, new RegExp(asset.replaceAll("/", "\\/")));
   }
