@@ -1,6 +1,6 @@
 # Board STATUS: the single source of truth for the next run
 
-_Last updated: 2026-10-21 by the Wednesday 3D routine (scheduled cloud run; facilitator plus Martin, Sofia and Alejandro as agents and one fresh QA agent, see "Current work")._
+_Last updated: 2026-10-22 by the Thursday reliability routine (scheduled cloud run; facilitator plus Sofia (audit) and Alejandro (review) as agents, see "Current work")._
 
 ## Owner decisions in force
 | Date | Decision |
@@ -75,6 +75,33 @@ All five run on `claude-opus-5-5`, follow [ROUTINES.md](ROUTINES.md), and each i
 - Session 0 (lesson test) took 55 messages, about 15 of them caused by crossed messages over circle 6. That led to the lock rule.
 
 ## Current work and next action
+- **2026-10-22 (Thursday reliability routine): PR #266** (branch `claude/thursday-review-20261022`, base main `4d2c680`). Subscription usage: **UNKNOWN**.
+  - **The board was convened as agents, proportionately.** Sofia did a read-only API, auth and D1 audit. Alejandro did the independent code review (**APPROVE**, no blockers). The facilitator did the CI/deploy review, the fixes, the tests and the records. Messages are verbatim in [transcripts/2026-10-22-thursday-reliability.md](transcripts/2026-10-22-thursday-reliability.md).
+  - **CI and deploy health (VERIFIED, `gh run list` plus the runs API):**
+    - Production runs `4d2c680` = main HEAD: staging 39679819224, production 39680280013 and the smoke monitor 39680314691 all succeeded.
+    - The red pairs (staging fails on "Promote", production fails on "Enforce a single production deployer" or "Require SHA…") happened when merges overlapped: e9bbd8d (21:17Z 2026-10-21), 43734a3, 0a959eb, ac77679, 0af0038, 25c2170, afe203f and 41b1b04. These are the workflow's own **safe refusals**, and a later SHA deployed each time. Job logs return 403 to this sandbox, so the exact refusal message per run was not read.
+    - Open issue: only #40 (2026-09-24, product). There is no open "Production smoke failing" incident.
+  - **Fixed (each with a regression test that fails on main):**
+    1. **Medium:** `/api/phonetics/speech-attempt` was missing from the Worker's `identityAware`, so the identity headers were stripped and never rebuilt, and every PRO user got 401. The new guard `tests/worker-identity-routes.test.mjs` covers every identity-reading API route.
+    2. **Low:** the student tracker turned `Origin: null` into a 500. It is now a 403.
+    3. **Owed smoke automated:** `scripts/production-smoke.mjs` now checks the Feria and Hospital PRO worlds (anonymous → `/acceso`, Feria audio → 403, and both `/resources/…` pages → 200 with the 3D title, «Inside the 3D world» and the BreadcrumbList). The monitor reruns on merge (path filter) and every 6 h.
+  - **Audit findings NOT fixed (left for a decision or the owning runbook):**
+    - **Medium, VERIFIED in code, no cross-user leak:** teacher data is keyed by the Firebase UID (`session.userId`) instead of the internal account id. This affects the student tracker, roster, live-class, autoestudio share and `/api/lesson-reports`, and contradicts `docs/BACKEND_MIGRATION.md`. Re-keying is a D1 data migration (`MIGRATION_RELEASE.md`, auth one-writer), not a routine fix.
+    - **Low:** `/api/roster` POST lets D1 errors surface as a bare 500.
+    - **Low (HYPOTHESIS):** `/para-profesores` and `/aprender-espanol` always render signed-out. This may be intentional: they are edge-cached SEO pages.
+    - **Low:** FREE accounts can write progress rows for PRO lesson ids (data hygiene only).
+  - **Clean (Sofia's audit):**
+    - the header trust boundary;
+    - owner/admin gating in both the Worker and the route;
+    - exact-Origin checks on writes, and signature-verified webhooks;
+    - `no-store` on every non-cached response;
+    - no SQL built from user input, and every query scoped by owner;
+    - premium media and chunks decrypted only after server-side access checks.
+  - **Checks:** see the PR #266 comment. Production evidence: see the post-merge note below, if present.
+  - **Next action:**
+    - Once the post-merge Production Smoke Monitor run on the merged SHA passes, move the #224 Hospital and #251 Feria entries in PUBLISHED.md from "Pending verification" to Published, citing that run. The next run should do this if this one could not.
+    - Board decision needed: whether to schedule the UID → account-id re-keying (above) as a migration item.
+    - Friday 3D slot: as planned below («Gustar» A1 PRO grammar, or the Feria G5(b) check).
 - **2026-10-21 (Wednesday 3D routine): LES-001 Feria A2 built, gated and sent to release in PR #251** (branch `claude/escucha-3d-feria-a2-20261021`). Subscription usage: **UNKNOWN**.
   - **The board was convened as agents.** Martin authored the content, Sofia did the render check, build fixes and wiring, Alejandro did the G4 review, and a fresh agent did QA. The facilitator did integration, commits and records. Every message went between the facilitator and one executive, and the executives did not message each other. All messages are archived verbatim in [transcripts/2026-10-21-wednesday-3d-feria.md](transcripts/2026-10-21-wednesday-3d-feria.md).
   - **Found at start:**
