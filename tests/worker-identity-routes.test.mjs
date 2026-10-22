@@ -10,6 +10,8 @@ const worker = readFileSync('worker/index.ts', 'utf8');
 const expression = name => worker.match(new RegExp(`const ${name}\\s*=\\s*([^;]+);`))[1];
 const administrative = new Function('pathname', `return ${expression('administrative')};`);
 const identityAware = new Function('pathname', 'administrative', 'premiumAudio', 'premiumBoard', 'autoestudio', 'shareApi', 'lesson', `return ${expression('identityAware')};`);
+// API routes are never lessons, boards, premium audio or autoestudio pages, so
+// those predicates stay false; a route covered only by one of them needs this updated.
 const isIdentityAware = pathname => identityAware(pathname, administrative(pathname), false, false, false, pathname.startsWith('/api/autoestudio/'), undefined);
 
 const headerIdentity = /\b(?:signedIn|fullAccess|owner|accountId|email|role|getUserSession)FromHeaders\(/;
