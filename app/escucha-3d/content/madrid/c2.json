@@ -1,0 +1,1200 @@
+{
+  "game": "madrid",
+  "level": "C2",
+  "items": [
+    {
+      "id": "sol",
+      "title": "Anselmo, oyente número uno",
+      "place": "Puerta del Sol · la radio",
+      "context": "Lola invita a Salomé a una tertulia improvisada en antena. Hablan de Anselmo, del oficio de la radio y de lo que una crisis revela sobre la soledad urbana.",
+      "speakers": [
+        {
+          "name": "Lola",
+          "country": "España",
+          "voice": "es-ES-ElviraNeural"
+        },
+        {
+          "name": "Salomé",
+          "country": "Colombia",
+          "voice": "es-CO-SalomeNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Salomé, desde que contaste la historia de Anselmo, la centralita no ha dejado de sonar. Llaman viudos, insomnes, gente que trabaja de noche. Todos dicen lo mismo: «Yo también estaba ahí y nadie lo sabía»."
+        },
+        {
+          "s": 1,
+          "text": "No me extraña. Las ciudades grandes están llenas de personas que solo existen para una voz que no las conoce. Anselmo me lo dijo con una lucidez que me desarmó: «Lola me hablaba a mí, aunque hablara para todos»."
+        },
+        {
+          "s": 0,
+          "text": "Esa es la paradoja de este oficio. Hablas a un micrófono, en un cuarto vacío, convencida de que nadie te escucha, y resulta que al otro lado alguien está organizando su noche alrededor de tu voz. Da un poco de vértigo, la verdad."
+        },
+        {
+          "s": 1,
+          "text": "Y una responsabilidad enorme. Fíjate: tu programa iban a cancelarlo por no ser rentable. Si lo hubieran hecho, Anselmo no habría estado despierto aquella noche, no habría oído tu llamamiento y mi vecino, probablemente, no lo contaría."
+        },
+        {
+          "s": 0,
+          "text": "Me estás diciendo que la rentabilidad es una mala brújula para medir lo que importa."
+        },
+        {
+          "s": 1,
+          "text": "Te estoy diciendo que hay cosas que solo se valoran cuando faltan, como el agua o el silencio. Y que una ciudad debería cuidarlas antes de que llegue la nube, no después."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué tienen en común muchas de las personas que llaman?",
+          "options": [
+            "Se sentían acompañadas por el programa sin que nadie lo supiera",
+            "Todas son taxistas",
+            "Todas quieren salir en la radio"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué paradoja describe Lola sobre su oficio?",
+          "options": [
+            "Que gana poco dinero",
+            "Que habla sola convencida de que nadie la escucha y alguien organiza su noche en torno a ella",
+            "Que nunca sabe qué hora es"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué cadena de consecuencias plantea Salomé?",
+          "options": [
+            "Que la radio provocó la epidemia",
+            "Que Anselmo dejó de escuchar la radio",
+            "Que, sin el programa, el vecino quizá no habría sobrevivido"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué metáfora resume la postura de Salomé?",
+          "options": [
+            "La rentabilidad como mala brújula para lo importante",
+            "La radio como un faro",
+            "La ciudad como un barco"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "Salomé sostiene que «hay cosas que solo se valoran cuando faltan». Analiza esta idea aplicándola a algún servicio público o bien común y discute si es posible anticiparse a su pérdida.",
+          "model": "Pasa con la sanidad pública o con los medios locales: se critican hasta que desaparecen. Anticiparse exige medir su valor social y no solo su coste, algo que la política suele hacer mal."
+        },
+        {
+          "q": "¿Debería la rentabilidad ser el criterio principal para decidir qué contenidos culturales o informativos sobreviven? Desarrolla una argumentación matizada.",
+          "model": "No debería ser el único criterio, porque hay contenidos con una audiencia pequeña pero un impacto profundo; sin embargo, sin financiación estable, tampoco pueden sostenerse, así que hacen falta modelos mixtos."
+        },
+        {
+          "q": "Anselmo afirma que «Lola le hablaba a él, aunque hablara para todos». ¿Qué tiene la voz, frente a la imagen o el texto, para generar esa sensación de intimidad?",
+          "model": "La voz transmite matices de emoción y cercanía, y al no ver a la persona la imaginamos a nuestro lado, como en una conversación privada."
+        }
+      ],
+      "gaps": "Hablas a un [micrófono], en un cuarto [vacío], convencida de que nadie te [escucha], y resulta que al otro lado alguien está organizando su noche alrededor de tu [voz].",
+      "glossary": [
+        {
+          "word": "la centralita",
+          "meaning": "sistema que recibe las llamadas"
+        },
+        {
+          "word": "lucidez",
+          "meaning": "claridad mental para entender algo"
+        },
+        {
+          "word": "me desarmó",
+          "meaning": "me dejó sin defensas, muy emocionada"
+        },
+        {
+          "word": "vértigo",
+          "meaning": "sensación de mareo ante algo grande"
+        },
+        {
+          "word": "la brújula",
+          "meaning": "instrumento que indica la dirección"
+        }
+      ]
+    },
+    {
+      "id": "granvia",
+      "title": "Fuente anónima",
+      "place": "Gran Vía · mensaje de voz",
+      "context": "El reportaje de Marcos ya está escrito, pero no publicado. Alex le cuenta a Camila la conversación que han tenido sobre si publicarlo con su testimonio.",
+      "speakers": [
+        {
+          "name": "Alex",
+          "country": "Perú",
+          "voice": "es-PE-AlexNeural"
+        },
+        {
+          "name": "Camila",
+          "country": "Perú",
+          "voice": "es-PE-CamilaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Camila, Marcos me ha leído el borrador del reportaje. En él aparezco como «un repartidor que pidió no ser identificado». Tres palabras y, de repente, me he sentido parte de algo mucho más grande que yo."
+        },
+        {
+          "s": 1,
+          "text": "¿Y qué dice el reportaje? ¿Se entiende lo que pasó?"
+        },
+        {
+          "s": 0,
+          "text": "Se entiende demasiado bien. Cruza mis notas con sus vídeos y con unos documentos que le ha pasado alguien del laboratorio. La conclusión es clara: mientras en la tele se repetía que la situación estaba bajo control, había equipos tomando muestras en plena calle y nadie avisaba a los que respiraban ese aire."
+        },
+        {
+          "s": 1,
+          "text": "¿Y cuándo lo va a publicar?"
+        },
+        {
+          "s": 0,
+          "text": "Ese es el problema. Me ha preguntado qué haría yo en su lugar. Si lo publica ahora, podría desatarse el pánico en los controles. Si espera, quizá se diluya entre otras noticias. Le he contestado que no soy periodista, que soy repartidor."
+        },
+        {
+          "s": 1,
+          "text": "¿Y qué te ha respondido?"
+        },
+        {
+          "s": 0,
+          "text": "Que precisamente por eso me lo preguntaba. Que los periodistas acaban pensando como periodistas, y que le interesaba saber qué piensa alguien que reparte pizzas a las personas que van a leer la noticia. Le he dicho la verdad: que publicaría cuando la gente tuviera adónde ir, no antes."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cómo aparece Alex en el reportaje?",
+          "options": [
+            "Como un repartidor que pidió no ser identificado",
+            "Con su nombre completo",
+            "Como el autor principal"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué conclusión extrae el reportaje?",
+          "options": [
+            "Que la nube era inofensiva",
+            "Que se tomaban muestras en la calle mientras se decía que todo estaba bajo control",
+            "Que los repartidores propagaron el virus"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Por qué le interesa a Marcos la opinión de Alex?",
+          "options": [
+            "Porque Alex tiene estudios de periodismo",
+            "Porque quiere pagarle",
+            "Porque ofrece la mirada de alguien cercano a los lectores"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué le recomienda Alex a Marcos?",
+          "options": [
+            "Publicar cuando la gente tenga adónde ir",
+            "Publicar inmediatamente",
+            "No publicar nunca"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "Marcos afirma que «los periodistas acaban pensando como periodistas». ¿Qué riesgos tiene la endogamia profesional en el periodismo, la política o la ciencia? Argumenta con ejemplos.",
+          "model": "El riesgo es perder de vista a quienes reciben tu trabajo: se escribe para colegas o se legisla para expertos, y la ciudadanía deja de reconocerse en lo que se le cuenta."
+        },
+        {
+          "q": "Alex propone publicar «cuando la gente tenga adónde ir». ¿Te parece un criterio periodístico válido o una forma de paternalismo? Desarrolla tu postura.",
+          "model": "Me parece un criterio prudente, aunque peligroso si se generaliza, porque cualquiera podría justificar el silencio esperando un momento ideal que nunca llega."
+        },
+        {
+          "q": "Alex se siente «parte de algo más grande» por tres palabras en un borrador. ¿Qué nos impulsa a implicarnos en causas colectivas? Reflexiona a partir de tu experiencia.",
+          "model": "Creo que nos impulsa la sensación de que nuestra acción tiene sentido más allá de nosotros; cuando participé en una recogida de alimentos tuve una sensación parecida."
+        }
+      ],
+      "gaps": "Si lo publica ahora, podría [desatarse] el [pánico] en los [controles]. Si espera, quizá se [diluya] entre otras noticias.",
+      "glossary": [
+        {
+          "word": "el borrador",
+          "meaning": "primera versión de un texto"
+        },
+        {
+          "word": "identificado",
+          "meaning": "reconocido por su nombre"
+        },
+        {
+          "word": "desatarse",
+          "meaning": "empezar de forma violenta"
+        },
+        {
+          "word": "se diluya",
+          "meaning": "pierda fuerza al mezclarse con otras cosas"
+        }
+      ]
+    },
+    {
+      "id": "plaza",
+      "title": "Teatro tras la valla",
+      "place": "Plaza Mayor · el refugio",
+      "context": "Andrea y Ramón comentan la función que han hecho para las personas en cuarentena, al otro lado de la valla del refugio. Montse ha estado presente.",
+      "speakers": [
+        {
+          "name": "Andrea",
+          "country": "Ecuador",
+          "voice": "es-EC-AndreaNeural"
+        },
+        {
+          "name": "Ramón",
+          "country": "España",
+          "voice": "es-ES-AlvaroNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Ramón, no sé cómo describirlo. Los niños actuando a gritos desde dentro, los de la cuarentena sentados en el suelo al otro lado de la valla, y Montse, la policía, de pie en medio, sin saber si cuidar la puerta o mirar a su hermano."
+        },
+        {
+          "s": 1,
+          "text": "Lo he visto. En el último acto, cuando Lucas, el dragón, ha dicho eso de que los valientes son los que siguen aunque tengan miedo, el hermano de Montse ha empezado a aplaudir solo. Y luego ella. Y luego todos, a los dos lados de la valla."
+        },
+        {
+          "s": 0,
+          "text": "Ha sido la primera vez que la he visto quitarse la gorra desde que llegamos."
+        },
+        {
+          "s": 1,
+          "text": "Es que el teatro tiene esa trampa maravillosa: durante una hora suspende las normas sin romperlas. Nadie cruzó la valla y, sin embargo, por un rato no hubo dentro y fuera. Hubo público, que es otra forma de decir comunidad."
+        },
+        {
+          "s": 0,
+          "text": "¿Sabe lo que me ha dicho Montse al terminar? Que llevaba cinco noches sin dormir pensando que había sido cruel con su hermano, y que hoy, por primera vez, ha sentido que él lo entendía."
+        },
+        {
+          "s": 1,
+          "text": "Las normas protegen los cuerpos, hija. Pero alguien tiene que ocuparse de lo que queda dañado entre medias. A veces eso lo hace un médico, a veces un cura y, si hay suerte, un crío de siete años disfrazado de dragón."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Dónde estaba el público de la cuarentena?",
+          "options": [
+            "Al otro lado de la valla, sentado en el suelo",
+            "Dentro del refugio",
+            "En el hospital"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué desencadenó el aplauso general?",
+          "options": [
+            "La llegada de la vacuna",
+            "Una frase del dragón sobre la valentía",
+            "Un discurso de Montse"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué quiere decir Ramón con que el teatro «suspende las normas sin romperlas»?",
+          "options": [
+            "Que el teatro es ilegal",
+            "Que los actores no respetan las reglas",
+            "Que crea un espacio común sin que nadie cruce la valla"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué le confiesa Montse a Andrea?",
+          "options": [
+            "Que hoy ha sentido que su hermano la entendía",
+            "Que va a dejar su trabajo",
+            "Que quiere actuar"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "Ramón dice que el teatro «suspende las normas sin romperlas». ¿Qué otros rituales o expresiones culturales cumplen esa función en una sociedad? Analízalos.",
+          "model": "Las fiestas populares, los funerales o incluso un partido de fútbol crean un paréntesis en el que se relajan las jerarquías sin abolirlas, y eso refuerza el sentido de pertenencia."
+        },
+        {
+          "q": "«Las normas protegen los cuerpos, pero alguien tiene que ocuparse de lo que queda dañado entre medias». ¿Quién debería ocuparse de ese daño en una crisis sanitaria? Argumenta.",
+          "model": "Creo que debería ser una responsabilidad compartida entre los servicios de salud mental, las redes comunitarias y la cultura, porque el daño emocional no se resuelve solo con protocolos."
+        },
+        {
+          "q": "¿Has vivido algún momento en el que el arte o la cultura te ayudara a reconciliarte con alguien o con algo? Cuéntalo con detalle.",
+          "model": "Sí, después de una discusión fuerte con mi padre fuimos juntos a un concierto y, sin hablarlo, salimos reconciliados."
+        }
+      ],
+      "gaps": "Es que el teatro tiene esa [trampa] maravillosa: durante una [hora] [suspende] las normas sin [romperlas].",
+      "glossary": [
+        {
+          "word": "acto",
+          "meaning": "parte de una obra de teatro"
+        },
+        {
+          "word": "suspende",
+          "meaning": "de suspender: detener temporalmente"
+        },
+        {
+          "word": "comunidad",
+          "meaning": "conjunto de personas unidas por algo común"
+        },
+        {
+          "word": "entre medias",
+          "meaning": "en el espacio intermedio"
+        },
+        {
+          "word": "disfrazado",
+          "meaning": "vestido como otra persona o personaje"
+        }
+      ]
+    },
+    {
+      "id": "metro",
+      "title": "Lo que vale una persona",
+      "place": "Metro · el andén",
+      "context": "Ximena ha tomado una decisión sobre la oferta de su jefe. Se la cuenta a Manuel mientras él afina la guitarra en el andén vacío.",
+      "speakers": [
+        {
+          "name": "Manuel",
+          "country": "Cuba",
+          "voice": "es-CU-ManuelNeural"
+        },
+        {
+          "name": "Ximena",
+          "country": "España",
+          "voice": "es-ES-XimenaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Ya le he contestado. Le he dado las gracias por el ascenso y le he dicho que no. Que no me voy por dinero, sino porque he descubierto que llevaba seis años confundiendo estabilidad con quietud."
+        },
+        {
+          "s": 0,
+          "text": "Uf. Esa frase la quiero para una canción. «Confundía estabilidad con quietud». Suena a bolero triste."
+        },
+        {
+          "s": 1,
+          "text": "Pues es un bolero bastante común. La mitad de la gente que conozco vive así: en un trabajo que no odia lo suficiente como para dejarlo ni le gusta lo suficiente como para quedarse con ganas."
+        },
+        {
+          "s": 0,
+          "text": "En La Habana teníamos otro problema: no había estabilidad que confundir. Cuando llegué aquí, me parecía un lujo que la gente se quejara de la rutina. Con el tiempo me di cuenta de que una vida sin sobresaltos también puede ser una forma de no vivir."
+        },
+        {
+          "s": 1,
+          "text": "Mi jefe me ha contestado con un correo de una línea: «Respetamos tu decisión». Seis años resumidos en tres palabras. Lo curioso es que no me ha dolido. Me ha confirmado que tenía razón."
+        },
+        {
+          "s": 0,
+          "text": "Ahí tienes la diferencia entre un precio y un valor. Te pusieron precio cuando ibas a irte. El valor te lo has puesto tú al decir que no."
+        },
+        {
+          "s": 1,
+          "text": "Pues ahora, profesor, enséñame el cuarto acorde. Tengo una abuela esperando un «Cielito lindo» y no pienso decepcionarla."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Por qué rechaza Ximena el ascenso?",
+          "options": [
+            "Porque se ha dado cuenta de que confundía estabilidad con quietud",
+            "Porque le ofrecían poco dinero",
+            "Porque se va a vivir a Cuba"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cómo describe Ximena la situación de mucha gente que conoce?",
+          "options": [
+            "Feliz con su trabajo",
+            "En un trabajo que no odia ni le gusta lo suficiente",
+            "Sin trabajo"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué aprendió Manuel al llegar a España?",
+          "options": [
+            "Que la rutina es siempre buena",
+            "Que en Cuba se vivía mejor",
+            "Que una vida sin sobresaltos puede ser una forma de no vivir"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué distinción establece Manuel al final?",
+          "options": [
+            "Entre precio y valor",
+            "Entre música y trabajo",
+            "Entre Madrid y La Habana"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "Ximena distingue entre «estabilidad» y «quietud». ¿Es la búsqueda de seguridad laboral un freno para la realización personal? Argumenta teniendo en cuenta los distintos contextos económicos.",
+          "model": "Depende del contexto: en una situación de precariedad, la estabilidad es una condición para cualquier proyecto vital; el problema aparece cuando se convierte en un fin y nos impide elegir."
+        },
+        {
+          "q": "Manuel afirma que le «pusieron precio» cuando iba a irse, pero que «el valor se lo ha puesto ella». Analiza la diferencia entre precio y valor en el ámbito laboral y personal.",
+          "model": "El precio lo fija otro según su necesidad, mientras que el valor nace de cómo nos vemos a nosotros mismos; confundirlos lleva a aceptar condiciones que no nos representan."
+        },
+        {
+          "q": "Manuel dice que al llegar le parecía un lujo quejarse de la rutina. ¿Cómo influye el origen de cada persona en lo que considera un problema? Reflexiona con ejemplos.",
+          "model": "Mucho: lo que en un país se ve como aburrimiento, en otro sería una aspiración. Por eso conviene relativizar nuestras quejas sin invalidar el malestar de nadie."
+        }
+      ],
+      "gaps": "Ahí tienes la [diferencia] entre un [precio] y un [valor]. Te pusieron precio cuando ibas a [irte].",
+      "glossary": [
+        {
+          "word": "quietud",
+          "meaning": "falta de movimiento"
+        },
+        {
+          "word": "bolero",
+          "meaning": "canción romántica latinoamericana"
+        },
+        {
+          "word": "sobresaltos",
+          "meaning": "sustos o cambios inesperados"
+        },
+        {
+          "word": "decepcionarla",
+          "meaning": "no cumplir lo que esperaba de mí"
+        }
+      ]
+    },
+    {
+      "id": "retiro",
+      "title": "Declaración ante quien haga falta",
+      "place": "Retiro · el laboratorio",
+      "context": "La radio capta la última grabación del laboratorio: Elena ensaya en voz alta la declaración que piensa hacer cuando todo termine. Javier la escucha.",
+      "speakers": [
+        {
+          "name": "Elena",
+          "country": "España",
+          "voice": "es-ES-ElviraNeural"
+        },
+        {
+          "name": "Javier",
+          "country": "Guinea Ecuatorial",
+          "voice": "es-GQ-JavierNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "«Me llamo Elena Castro y soy la responsable científica del Proyecto Kilómetro Cero. No vengo a pedir que se me exima de culpa, porque la tengo. Vengo a explicar cómo una cadena de decisiones aparentemente razonables desembocó en una catástrofe»."
+        },
+        {
+          "s": 1,
+          "text": "Empieza fuerte. ¿No le preocupa que lo usen contra usted?"
+        },
+        {
+          "s": 0,
+          "text": "Lo van a usar contra mí de todos modos, Javier. La única pregunta es si lo hago yo, con todos los datos, o si dejo que lo cuenten otros con los datos que les convengan. Sigo: «La válvula que falló costaba trescientos euros. Su sustitución se pospuso tres veces por motivos presupuestarios. Ninguna de esas tres decisiones lleva firma»."
+        },
+        {
+          "s": 1,
+          "text": "Esa frase les va a doler."
+        },
+        {
+          "s": 0,
+          "text": "Debería dolerme a mí primero. «Cuando se produjo la fuga, me dieron la instrucción de guardar silencio y la acaté durante setenta y dos horas. No fue un error técnico, fue una elección. Y fue mía»"
+        },
+        {
+          "s": 1,
+          "text": "Doctora, ¿y si termina con lo de la vacuna? Que se sepa que también hizo algo para reparar el daño."
+        },
+        {
+          "s": 0,
+          "text": "No. Si termino con la vacuna, parecerá que quiero compensar una cosa con otra. La vacuna no me absuelve, Javier. Solo demuestra que sabía hacer lo correcto y que, durante tres días, no lo hice."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué no pide Elena en su declaración?",
+          "options": [
+            "Que se le exima de culpa",
+            "Que se publique",
+            "Que se cierre el laboratorio"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Por qué quiere Elena contarlo ella misma?",
+          "options": [
+            "Para conseguir un ascenso",
+            "Para que no lo cuenten otros con los datos que les convengan",
+            "Porque se lo ha pedido Javier"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué subraya Elena sobre las tres decisiones presupuestarias?",
+          "options": [
+            "Que eran ilegales",
+            "Que las tomó ella",
+            "Que ninguna lleva firma"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Por qué rechaza terminar hablando de la vacuna?",
+          "options": [
+            "Porque parecería que intenta compensar una culpa con un mérito",
+            "Porque la vacuna no funciona",
+            "Porque es un secreto"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "Elena afirma que «la vacuna no la absuelve». ¿Pueden los méritos posteriores compensar una falta grave? Discute esta cuestión desde un punto de vista ético y jurídico.",
+          "model": "Éticamente, un mérito no borra una falta, aunque puede mostrar arrepentimiento sincero; jurídicamente, se valora como atenuante, pero no anula la responsabilidad."
+        },
+        {
+          "q": "Elena prefiere contar su versión «con todos los datos» antes de que otros lo hagan. ¿Qué estrategias de comunicación de crisis te parecen honestas y cuáles manipuladoras? Argumenta.",
+          "model": "Me parece honesto reconocer la responsabilidad propia con datos verificables; es manipulador anticiparse solo para controlar el relato y ocultar lo que perjudica."
+        },
+        {
+          "q": "«Una cadena de decisiones aparentemente razonables desembocó en una catástrofe». Analiza cómo se producen los desastres institucionales sin que nadie tome una decisión claramente mala.",
+          "model": "Se producen por acumulación de pequeños aplazamientos, cada uno justificable por sí mismo, y por una cultura en la que nadie se siente dueño del riesgo completo."
+        }
+      ],
+      "gaps": "Vengo a explicar cómo una [cadena] de [decisiones] aparentemente [razonables] desembocó en una [catástrofe]",
+      "glossary": [
+        {
+          "word": "se me exima",
+          "meaning": "de eximir: liberar de una obligación o culpa"
+        },
+        {
+          "word": "desembocó",
+          "meaning": "de desembocar: terminar en"
+        },
+        {
+          "word": "la acaté",
+          "meaning": "de acatar: obedecer"
+        },
+        {
+          "word": "me absuelve",
+          "meaning": "de absolver: declarar libre de culpa"
+        }
+      ]
+    },
+    {
+      "id": "malasana",
+      "title": "El sobre sobre la barra",
+      "place": "Malasaña · la radio",
+      "context": "Lola emite en directo, por primera vez, la historia de las cajas de Salvatierra. Emilio, ya a salvo, la acompaña en antena.",
+      "speakers": [
+        {
+          "name": "Lola",
+          "country": "España",
+          "voice": "es-ES-ElviraNeural"
+        },
+        {
+          "name": "Emilio",
+          "country": "República Dominicana",
+          "voice": "es-DO-EmilioNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Buenas noches, Madrid. Lo que vais a oír ahora lo he pensado mucho antes de emitirlo. Conmigo está Emilio, vecino de Malasaña, que ha arriesgado bastante más que yo para que podamos contarlo."
+        },
+        {
+          "s": 1,
+          "text": "Buenas noches. Antes de nada: Nacho está bien. El hombre del traje se fue sin las cajas, pero dejó el sobre con el dinero encima de la barra. Nacho no lo ha tocado. Dice que ese dinero huele a algo que no se quita con lejía."
+        },
+        {
+          "s": 0,
+          "text": "Para quien se haya incorporado ahora: alguien guardó en un bar de este barrio seis cajas de dosis experimentales dos semanas antes del brote. Junto a ellas, una factura y una tarjeta con una frase escrita a mano: «Atocha, sala VIP, cuando empiece»."
+        },
+        {
+          "s": 1,
+          "text": "Y en la grabación que hice desde el baño se le oye decir, con mucha calma, que la demanda «iba a dispararse» y que había que estar preparado."
+        },
+        {
+          "s": 0,
+          "text": "No voy a decir nombres en antena hasta que lo confirme un juez. Pero sí voy a decir una cosa: quien se prepara para vender la cura antes de que llegue la enfermedad no está anticipándose a una crisis. La está esperando."
+        },
+        {
+          "s": 1,
+          "text": "En mi tierra decimos que el que madruga, Dios lo ayuda. Este señor madrugó demasiado."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué hizo Nacho con el sobre de dinero?",
+          "options": [
+            "No lo ha tocado",
+            "Lo ha repartido entre los vecinos",
+            "Se lo ha devuelto al hombre"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué dice el hombre en la grabación de Emilio?",
+          "options": [
+            "Que las dosis estaban caducadas",
+            "Que la demanda iba a dispararse y había que estar preparado",
+            "Que trabajaba para el Gobierno"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Por qué Lola no dice nombres en antena?",
+          "options": [
+            "Porque no los sabe",
+            "Porque tiene miedo",
+            "Porque espera a que lo confirme un juez"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué ironía contiene el refrán final de Emilio?",
+          "options": [
+            "Que anticiparse demasiado revela que el hombre sabía o esperaba la crisis",
+            "Que Emilio se levanta temprano",
+            "Que Dios ayudó al hombre"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "Lola distingue entre «anticiparse a una crisis» y «esperarla». ¿Dónde está la frontera entre la previsión empresarial legítima y la especulación inmoral? Argumenta con ejemplos.",
+          "model": "La previsión legítima busca reducir daños o abastecer a tiempo; la especulación inmoral se prepara para beneficiarse del daño, e incluso puede tener interés en que ocurra."
+        },
+        {
+          "q": "¿Hasta qué punto debe un medio esperar a la confirmación judicial antes de señalar a alguien? Valora los riesgos de hablar demasiado pronto y de callar demasiado tiempo.",
+          "model": "Hablar pronto puede destruir la reputación de un inocente; callar demasiado puede permitir que el culpable destruya pruebas. Por eso la clave es informar de los hechos verificados sin acusar."
+        },
+        {
+          "q": "Nacho dice que ese dinero «huele a algo que no se quita con lejía». ¿Hay ganancias que, aun siendo legales, consideras moralmente inaceptables? Explica por qué.",
+          "model": "Sí, por ejemplo los beneficios de quien compra viviendas en masa para subir los alquileres; puede ser legal, pero se basa en empeorar la vida de otros."
+        }
+      ],
+      "gaps": "quien se prepara para vender la [cura] antes de que llegue la [enfermedad] no está [anticipándose] a una crisis. La está [esperando].",
+      "glossary": [
+        {
+          "word": "se haya incorporado",
+          "meaning": "haya empezado a escuchar ahora"
+        },
+        {
+          "word": "lejía",
+          "meaning": "producto químico para limpiar y desinfectar"
+        },
+        {
+          "word": "dispararse",
+          "meaning": "subir de golpe"
+        },
+        {
+          "word": "madrugó",
+          "meaning": "de madrugar: levantarse muy temprano"
+        }
+      ]
+    },
+    {
+      "id": "atocha",
+      "title": "Un tren con tres ventanas",
+      "place": "Atocha · el andén",
+      "context": "Semanas después, Valentina llega por fin a Valencia. Antes de ver a sus hijos, se encuentra con Álvaro en el andén y hablan del dibujo de Martina.",
+      "speakers": [
+        {
+          "name": "Valentina",
+          "country": "Uruguay",
+          "voice": "es-UY-ValentinaNeural"
+        },
+        {
+          "name": "Álvaro",
+          "country": "España",
+          "voice": "es-ES-AlvaroNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Valentina, aquí tiene el dibujo. Lo he llevado en la cartera tres semanas; tiene una esquina doblada, perdóneme."
+        },
+        {
+          "s": 0,
+          "text": "Está perfecto. Tres ventanas y una mujer en cada una. Martina me contó por teléfono quiénes eran, pero quería oírselo a usted."
+        },
+        {
+          "s": 1,
+          "text": "Me dijo que eran usted, la tía y la abuela. Y que el maquinista era yo. Luego añadió algo que no le conté por teléfono, porque me pareció que tenía que decírselo en persona."
+        },
+        {
+          "s": 0,
+          "text": "¿Qué dijo? Dígamelo tal cual, con sus palabras, por favor."
+        },
+        {
+          "s": 1,
+          "text": "Que había dibujado tres ventanas porque una sola no bastaba. Que cuando una mamá no puede ir, tiene que haber otras ventanas por donde mirar. Tiene seis años, Valentina, y me dejó sin palabras."
+        },
+        {
+          "s": 0,
+          "text": "Durante estas semanas me he sentido la peor madre del mundo por meterlos en un tren sin mí. Y resulta que mi hija lo ha entendido mejor que yo: no se trataba de abandonarlos, sino de multiplicar las manos que los sostenían."
+        },
+        {
+          "s": 1,
+          "text": "Pues vaya a verlos, que llevan desde las siete de la mañana preguntando por el tren. Están en la cafetería, con la tía y con una pancarta nueva todavía más exagerada que la primera. Esta vez pone: «Mamá, te hemos guardado la ventana del medio»."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Dónde ha guardado Álvaro el dibujo?",
+          "options": [
+            "En su cartera, durante tres semanas",
+            "En la cabina del tren",
+            "En casa de la tía"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Por qué Álvaro no le contó todo por teléfono?",
+          "options": [
+            "Porque no se acordaba",
+            "Porque le pareció que debía decírselo en persona",
+            "Porque Martina se lo prohibió"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué explicación dio Martina sobre las tres ventanas?",
+          "options": [
+            "Que el tren tenía tres vagones",
+            "Que eran sus colores favoritos",
+            "Que, cuando una madre no puede ir, hace falta que haya otras personas"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cómo reinterpreta Valentina su decisión?",
+          "options": [
+            "Como una forma de multiplicar las manos que sostenían a sus hijos",
+            "Como un error imperdonable",
+            "Como una orden de la jefa de estación"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "Valentina pasa de sentirse «la peor madre del mundo» a ver su decisión como una forma de «multiplicar las manos». ¿Qué papel tiene la red familiar y comunitaria en la crianza? Argumenta.",
+          "model": "Es fundamental: el ideal de la madre que lo hace todo sola genera culpa y aislamiento, mientras que la crianza compartida protege a los niños y a los adultos."
+        },
+        {
+          "q": "Los niños a veces expresan con sencillez ideas que a los adultos nos cuesta formular. ¿Por qué crees que ocurre? Pon algún ejemplo que conozcas.",
+          "model": "Porque no tienen tantos filtros ni miedo al juicio ajeno; mi sobrino una vez dijo que la abuela no se había muerto, sino que se había ido a vivir a nuestros recuerdos."
+        },
+        {
+          "q": "Álvaro decide reservar una información para decirla en persona. ¿Qué tipo de noticias crees que no deberían darse nunca por teléfono o por mensaje? Justifica tu respuesta.",
+          "model": "Las noticias que cambian la vida de alguien, como una enfermedad o una ruptura, porque la presencia física permite acompañar la reacción y no dejar a la persona sola."
+        }
+      ],
+      "gaps": "no se trataba de [abandonarlos], sino de [multiplicar] las [manos] que los [sostenían].",
+      "glossary": [
+        {
+          "word": "doblada",
+          "meaning": "de doblar: con una parte sobre otra"
+        },
+        {
+          "word": "bastaba",
+          "meaning": "de bastar: ser suficiente"
+        },
+        {
+          "word": "sin palabras",
+          "meaning": "tan emocionado que no puedes hablar"
+        },
+        {
+          "word": "sostenían",
+          "meaning": "de sostener: sujetar para que no caiga"
+        }
+      ]
+    },
+    {
+      "id": "palacio",
+      "title": "Lo que dice el comunicado",
+      "place": "Palacio Real · frecuencia militar",
+      "context": "El Ministerio acaba de publicar un comunicado sobre los días del cordón. Mario y la sargento lo comentan por radio, comparándolo con lo que vivieron.",
+      "speakers": [
+        {
+          "name": "Sargento",
+          "country": "España",
+          "voice": "es-ES-XimenaNeural"
+        },
+        {
+          "name": "Mario",
+          "country": "Paraguay",
+          "voice": "es-PY-MarioNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Sargento, ¿ha leído el comunicado? «Durante el periodo de contención se registraron discrepancias puntuales en la interpretación de los protocolos de actuación, que fueron resueltas satisfactoriamente por los mandos sobre el terreno»."
+        },
+        {
+          "s": 0,
+          "text": "Lo he leído tres veces. Es una obra maestra. Ni una mentira y ni una verdad. «Discrepancias puntuales en la interpretación de los protocolos». Así es como se llama ahora a una orden de disparar contra civiles."
+        },
+        {
+          "s": 1,
+          "text": "¿Y lo de «resueltas satisfactoriamente por los mandos»? Eso es la capitana, ¿no? Lo están contando como si hubiera sido un éxito del Ministerio."
+        },
+        {
+          "s": 0,
+          "text": "Exacto. Se apropian de su desobediencia para presentarla como un acierto del sistema. Y a la vez, han abierto un expediente contra ella por «incumplimiento de instrucciones». La misma decisión es un éxito en el comunicado y una falta en el expediente."
+        },
+        {
+          "s": 1,
+          "text": "Entonces mi testimonio sirve para algo."
+        },
+        {
+          "s": 0,
+          "text": "Sirve para mucho. Tú escribiste la hora, el patio, las palabras exactas. Frente a un comunicado sin sujeto, un soldado con nombre y apellidos. Es muy difícil sostener a la vez que fue un acierto y una falta cuando alguien ha contado lo que pasó con esa precisión."
+        },
+        {
+          "s": 1,
+          "text": "En Paraguay mi abuelo decía que la verdad es como el agua: se le pueden poner muros, pero siempre encuentra una rendija."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué destaca la sargento del comunicado?",
+          "options": [
+            "Que no contiene ni una mentira ni una verdad",
+            "Que está lleno de errores",
+            "Que reconoce la culpa del Ministerio"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cómo se presenta la actuación de la capitana en el comunicado?",
+          "options": [
+            "Como un delito",
+            "Como un éxito de los mandos y del sistema",
+            "No se menciona"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué contradicción señala la sargento?",
+          "options": [
+            "Que el comunicado tiene fechas equivocadas",
+            "Que la capitana mintió",
+            "Que la misma decisión es un éxito en el comunicado y una falta en el expediente"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué valor tiene el testimonio de Mario frente al comunicado?",
+          "options": [
+            "Aporta hechos precisos con nombre y apellidos",
+            "Es más largo",
+            "Lo firma un general"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "La sargento describe el comunicado como algo con «ni una mentira y ni una verdad». Analiza cómo el lenguaje burocrático puede desinformar sin mentir. Aporta ejemplos reales o verosímiles.",
+          "model": "Mediante eufemismos, voz pasiva y abstracciones se puede describir un hecho grave de forma técnicamente correcta pero vacía, como cuando se habla de «daños colaterales» para referirse a víctimas civiles."
+        },
+        {
+          "q": "Las instituciones a veces se apropian de los aciertos individuales y castigan a la vez a quien los protagoniza. ¿Por qué crees que sucede? Reflexiona sobre la lógica institucional.",
+          "model": "Porque la institución necesita mostrar que el sistema funciona y, al mismo tiempo, mantener la disciplina; reconocer la desobediencia como virtud cuestionaría su autoridad."
+        },
+        {
+          "q": "El abuelo de Mario decía que la verdad «siempre encuentra una rendija». ¿Compartes ese optimismo o crees que muchas verdades nunca salen a la luz? Argumenta.",
+          "model": "Lo comparto solo en parte: muchas verdades acaban saliendo, pero a menudo demasiado tarde para reparar el daño, y otras se pierden porque nadie las documentó."
+        }
+      ],
+      "gaps": "Se [apropian] de su [desobediencia] para presentarla como un [acierto] del [sistema].",
+      "glossary": [
+        {
+          "word": "discrepancias",
+          "meaning": "diferencias o desacuerdos"
+        },
+        {
+          "word": "sobre el terreno",
+          "meaning": "en el lugar de los hechos"
+        },
+        {
+          "word": "se apropian",
+          "meaning": "de apropiarse: hacer suyo algo ajeno"
+        },
+        {
+          "word": "el expediente",
+          "meaning": "procedimiento administrativo contra alguien"
+        },
+        {
+          "word": "rendija",
+          "meaning": "abertura muy estrecha"
+        }
+      ]
+    },
+    {
+      "id": "hospital",
+      "title": "Once de once",
+      "place": "Hospital de campaña · mensaje de voz",
+      "context": "Los resultados de los once voluntarios han llegado. Yuleisy llama a Sebastián y, por fin, a su madre está a punto de contárselo todo.",
+      "speakers": [
+        {
+          "name": "Yuleisy",
+          "country": "Venezuela",
+          "voice": "es-VE-PaolaNeural"
+        },
+        {
+          "name": "Sebastián",
+          "country": "Venezuela",
+          "voice": "es-VE-SebastianNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Sebastián, once de once. Los once voluntarios hemos desarrollado anticuerpos. La doctora Ochoa ha leído el resultado en voz alta y se ha hecho un silencio tan raro en el hospital que se oía el generador como si fuera una orquesta."
+        },
+        {
+          "s": 1,
+          "text": "Yuleisy… No sé ni qué decir. ¿Eso significa que ya está? ¿Que hay vacuna?"
+        },
+        {
+          "s": 0,
+          "text": "Significa que hay esperanza con datos, que no es lo mismo que esperanza a secas. Todavía faltan muchas pruebas, un laboratorio de verdad, producción, distribución. Pero ya no estamos rezando: estamos trabajando sobre algo que funciona."
+        },
+        {
+          "s": 1,
+          "text": "¿Y ahora sí se lo vas a contar a mamá?"
+        },
+        {
+          "s": 0,
+          "text": "Ahora sí. Voy a contarle todo, incluso lo que le he ocultado estos días: que no comía, que me equivoqué con un paciente, que me ofrecí para la prueba sin decírselo. Ya no tiene sentido protegerla de algo que ha salido bien."
+        },
+        {
+          "s": 1,
+          "text": "Te va a reñir durante una hora, como mínimo, y luego va a llorar."
+        },
+        {
+          "s": 0,
+          "text": "Que me riña. Llevo tres semanas deseando que alguien me riña por algo que no sea una urgencia. Además, en el fondo, las madres riñen así, con rabia, cuando el miedo se les convierte en alivio. Pásamela, anda, que hoy me lo he ganado."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cuál ha sido el resultado de los voluntarios?",
+          "options": [
+            "Los once han desarrollado anticuerpos",
+            "Solo funcionó en Yuleisy",
+            "Ninguno respondió"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué diferencia establece Yuleisy entre dos tipos de esperanza?",
+          "options": [
+            "Entre la esperanza religiosa y la política",
+            "Entre la esperanza con datos y la esperanza a secas",
+            "Entre la suya y la de su madre"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué va a contarle Yuleisy a su madre?",
+          "options": [
+            "Solo la buena noticia",
+            "Que vuelve a Caracas",
+            "Todo, incluido lo que le había ocultado"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Según Yuleisy, ¿por qué riñen así las madres?",
+          "options": [
+            "Porque el miedo se les convierte en alivio",
+            "Porque están enfadadas de verdad",
+            "Porque no entienden la ciencia"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "Yuleisy distingue entre «esperanza con datos» y «esperanza a secas». ¿Qué papel debería tener la comunicación científica para gestionar las expectativas de la población en una crisis? Argumenta.",
+          "model": "Debería transmitir avances reales sin exagerarlos ni minimizarlos, explicando qué se sabe y qué falta por saber, para que la esperanza no se convierta en decepción."
+        },
+        {
+          "q": "Yuleisy decide contarlo todo «ahora que ha salido bien». ¿Es coherente ocultar los riesgos a quienes queremos y revelarlos solo cuando ya han pasado? Reflexiona.",
+          "model": "Es comprensible, pero discutible: protege al otro de la angustia, aunque también le niega la posibilidad de acompañarnos en el momento difícil."
+        },
+        {
+          "q": "«Las madres riñen así cuando el miedo se les convierte en alivio». Analiza cómo se expresan emociones contradictorias en las relaciones familiares de tu cultura.",
+          "model": "En mi cultura es frecuente mostrar el cariño a través de la queja o el reproche; detrás de un «¿por qué no me llamaste?» suele haber un enorme alivio."
+        }
+      ],
+      "gaps": "Significa que hay [esperanza] con [datos], que no es lo mismo que esperanza a [secas]. Todavía faltan muchas [pruebas]",
+      "glossary": [
+        {
+          "word": "anticuerpos",
+          "meaning": "defensas del cuerpo contra un agente infeccioso"
+        },
+        {
+          "word": "a secas",
+          "meaning": "sin nada más"
+        },
+        {
+          "word": "distribución",
+          "meaning": "reparto de un producto"
+        },
+        {
+          "word": "alivio",
+          "meaning": "sensación de tranquilidad cuando desaparece una preocupación"
+        }
+      ]
+    },
+    {
+      "id": "rio",
+      "title": "Las orillas recuerdan",
+      "place": "Madrid Río · la radio",
+      "context": "Meses después, Lola emite su primer programa desde un estudio de verdad. Su primer invitado es Jaime, que acaba de llevar a doña Remedios en barca hasta Toledo.",
+      "speakers": [
+        {
+          "name": "Lola",
+          "country": "España",
+          "voice": "es-ES-ElviraNeural"
+        },
+        {
+          "name": "Jaime",
+          "country": "España",
+          "voice": "es-ES-AlvaroNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Buenas noches, Madrid. Hoy, por primera vez, os hablo desde un estudio con calefacción y una silla que no cojea. Y quería empezar con la persona que se llevó la fórmula río abajo. Jaime, bienvenido."
+        },
+        {
+          "s": 1,
+          "text": "Gracias, Lola. Aunque te confieso que echo de menos tu portal de Sol, con los cables por el suelo y los termos de café. Este estudio es demasiado limpio para contar lo que pasó."
+        },
+        {
+          "s": 0,
+          "text": "Cuéntanos lo de esta mañana."
+        },
+        {
+          "s": 1,
+          "text": "He cumplido la promesa. He llevado a doña Remedios en la barca hasta Toledo para que viera a su nieta Lucía. Se ha pasado el viaje entero sentada en la proa, con sus gafas enormes, nombrando cada puente y cada fábrica que había en las orillas hace setenta años. Parecía que leía un libro que solo ella podía ver."
+        },
+        {
+          "s": 0,
+          "text": "¿Y el reencuentro?"
+        },
+        {
+          "s": 1,
+          "text": "Lucía la esperaba en el embarcadero con una maceta de geranios. Doña Remedios la ha mirado y le ha dicho: «Te dije que en primavera volvíamos». Y luego, como si nada, le ha preguntado si había comido."
+        },
+        {
+          "s": 0,
+          "text": "Pues con eso cerramos este primer programa. Por los que se quedaron, por los que se fueron y por los que, como doña Remedios, se acuerdan de todo para que los demás podamos olvidar un poco. Buenas noches, Madrid."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Desde dónde emite Lola ahora?",
+          "options": [
+            "Desde un estudio de verdad",
+            "Desde su portal de Sol",
+            "Desde la barca"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué echa de menos Jaime?",
+          "options": [
+            "El ruido del motor",
+            "El portal de Sol, con sus cables y termos",
+            "La nube"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué hacía doña Remedios durante el viaje?",
+          "options": [
+            "Dormía",
+            "Hablaba por teléfono",
+            "Nombraba los puentes y fábricas de hace setenta años"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué le dice doña Remedios a su nieta?",
+          "options": [
+            "«Te dije que en primavera volvíamos»",
+            "«Ya no me voy de aquí»",
+            "«He traído la vacuna»"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "Lola cierra el programa «por los que se acuerdan de todo para que los demás podamos olvidar un poco». ¿Qué equilibrio necesita una sociedad entre recordar y olvidar después de una tragedia? Argumenta.",
+          "model": "Necesita recordar lo suficiente para aprender y hacer justicia, pero también olvidar lo suficiente para no quedar atrapada en el dolor; las personas que custodian la memoria permiten ese equilibrio."
+        },
+        {
+          "q": "Jaime dice que el estudio nuevo es «demasiado limpio para contar lo que pasó». ¿Influye el lugar desde el que contamos una historia en cómo la contamos? Reflexiona con ejemplos.",
+          "model": "Sí, el espacio condiciona el tono: no se cuenta igual una guerra desde un despacho que desde una trinchera; la precariedad del portal transmitía una urgencia que el estudio borra."
+        },
+        {
+          "q": "Si tuvieras que resumir en una frase lo que esta historia dice sobre las personas y las crisis, ¿cuál sería? Justifica tu elección con escenas concretas.",
+          "model": "Diría que en las crisis la humanidad se sostiene en gestos pequeños: un taxista que escucha la radio, una niña que dibuja tres ventanas, una abuela que pregunta si has comido."
+        }
+      ],
+      "gaps": "Se ha pasado el viaje entero sentada en la [proa], con sus gafas [enormes], nombrando cada [puente] y cada [fábrica]",
+      "glossary": [
+        {
+          "word": "cojea",
+          "meaning": "de cojear: moverse de forma desigual, como una silla con una pata más corta"
+        },
+        {
+          "word": "río abajo",
+          "meaning": "en la dirección de la corriente del río"
+        },
+        {
+          "word": "la proa",
+          "meaning": "parte delantera de una embarcación"
+        },
+        {
+          "word": "maceta",
+          "meaning": "recipiente con tierra para plantas"
+        },
+        {
+          "word": "como si nada",
+          "meaning": "con naturalidad, sin dar importancia"
+        }
+      ]
+    }
+  ]
+}

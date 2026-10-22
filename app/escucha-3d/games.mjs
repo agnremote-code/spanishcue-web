@@ -143,6 +143,17 @@ export const GAMES = {
     spots: ['informacion', 'churreria', 'tombola', 'noria', 'artesania', 'escenario', 'fotos', 'baile'],
     ownListening: true,
   },
+  // Madrid infectada (A0–C2): every zone has its own listening at each level;
+  // both circles of a zone open it. They are what the pocket radio catches:
+  // Lola's broadcasts, callers and voice messages of a Madrid where people
+  // from many Spanish-speaking countries live.
+  madrid: {
+    title: 'Madrid infectada',
+    levels: ['A0', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
+    spots: ['sol', 'granvia', 'plaza', 'metro', 'retiro', 'malasana', 'atocha', 'palacio', 'hospital', 'rio'],
+    ownListening: true,
+    bilingualA0: true,
+  },
 };
 
 // Transcript length in words for each level.

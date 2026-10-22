@@ -116,6 +116,15 @@ export const LOADERS: Record<string, Record<string, Loader>> = (import.meta as u
   feria: {
     A2: () => import('./content/feria/a2.json'),
   },
+  madrid: {
+    A0: () => import('./content/madrid/a0.json'),
+    A1: () => import('./content/madrid/a1.json'),
+    A2: () => import('./content/madrid/a2.json'),
+    B1: () => import('./content/madrid/b1.json'),
+    B2: () => import('./content/madrid/b2.json'),
+    C1: () => import('./content/madrid/c1.json'),
+    C2: () => import('./content/madrid/c2.json'),
+  },
 };
 
 export async function loadListenings(game: string, level: string): Promise<ListeningFile | null> {

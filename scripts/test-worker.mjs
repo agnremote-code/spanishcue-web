@@ -18,6 +18,7 @@ try{
  await run(['--test','tests/casino-marketing-b1.test.mjs']);
  await run(['--test','tests/hospital-san-casi-vivo.test.mjs']);
  await run(['--test','tests/la-feria-de-villaluz.test.mjs','tests/feria-look-contract.test.mjs']);
+ await run(['--test','tests/madrid-infectada.test.mjs']);
  await run(['--test','tests/grammar-classroom.test.mjs','tests/grammar-classroom-ui.test.mjs','tests/observatory-ui.test.mjs','tests/noun-studio-ui.test.mjs', 'tests/adjective-studio-ui.test.mjs', 'tests/article-studio-ui.test.mjs','tests/article-world.test.mjs','tests/duration-studio.test.mjs','tests/duration-world.test.mjs','tests/grammar-classroom-content.test.mjs','tests/grammar-classroom-audio.test.mjs']);
  await run(['--test','tests/phonetics-capture.test.mjs','tests/phonetics-audio-signal.test.mjs','tests/phonetics-speech-analysis.test.mjs','tests/phonetics-speech-provider.test.mjs','tests/phonetics-speech-route.test.mjs']);
  await run(['--test','tests/entonacion.test.mjs','tests/entonacion-ui.test.mjs','tests/hablar-sin-cortar.test.mjs','tests/hablar-sin-cortar-ui.test.mjs','tests/hablar-sin-cortar-assets.test.mjs']);

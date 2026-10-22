@@ -1,0 +1,1096 @@
+{
+  "game": "madrid",
+  "level": "A1",
+  "items": [
+    {
+      "id": "sol",
+      "title": "Una llamada a Radio Kilómetro Cero",
+      "place": "Puerta del Sol · la radio",
+      "context": "Lola presenta su programa de radio. Llama Salomé, una enfermera colombiana que vive cerca de Sol.",
+      "speakers": [
+        {
+          "name": "Lola",
+          "country": "España",
+          "voice": "es-ES-ElviraNeural"
+        },
+        {
+          "name": "Salomé",
+          "country": "Colombia",
+          "voice": "es-CO-SalomeNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Buenos días, Madrid. Son las seis y media. Tenemos una llamada. ¿Quién eres?"
+        },
+        {
+          "s": 1,
+          "text": "Hola, Lola. Me llamo Salomé. Soy enfermera y vivo en la calle Arenal."
+        },
+        {
+          "s": 0,
+          "text": "¿Cómo está tu calle hoy?"
+        },
+        {
+          "s": 1,
+          "text": "Está muy tranquila. No hay coches. Mis vecinos están en casa con las ventanas cerradas."
+        },
+        {
+          "s": 0,
+          "text": "¿Necesitas algo?"
+        },
+        {
+          "s": 1,
+          "text": "Sí, necesito agua. Esta tarde voy a ir a la fuente de la plaza."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué hora es?",
+          "options": [
+            "Las seis y media",
+            "Las ocho",
+            "Las doce"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Dónde vive Salomé?",
+          "options": [
+            "En la Gran Vía",
+            "En la calle Arenal",
+            "En el Retiro"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cómo están los vecinos de Salomé?",
+          "options": [
+            "En la calle",
+            "En el trabajo",
+            "En casa con las ventanas cerradas"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué va a hacer Salomé esta tarde?",
+          "options": [
+            "Ir a la fuente",
+            "Ir al hospital",
+            "Llamar a su madre"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Cómo es tu calle?",
+          "model": "Mi calle es pequeña y tiene muchos árboles."
+        },
+        {
+          "q": "¿Qué vas a hacer esta tarde?",
+          "model": "Voy a estudiar español y después voy a cocinar."
+        },
+        {
+          "q": "¿Hablas con tus vecinos?",
+          "model": "Sí, hablo con mi vecina del segundo piso."
+        }
+      ],
+      "gaps": "Está muy [tranquila]. No hay [coches]. Mis [vecinos] están en [casa] con las ventanas cerradas.",
+      "glossary": [
+        {
+          "word": "tranquila",
+          "meaning": "sin ruido, sin problemas"
+        },
+        {
+          "word": "vecinos",
+          "meaning": "personas que viven cerca de ti"
+        },
+        {
+          "word": "la fuente",
+          "meaning": "lugar en la calle donde sale agua"
+        }
+      ]
+    },
+    {
+      "id": "granvia",
+      "title": "Alex en bici por la Gran Vía",
+      "place": "Gran Vía · mensaje de voz",
+      "context": "Alex trabaja como repartidor en bici. Manda un mensaje de voz a su hermana Camila desde la Gran Vía.",
+      "speakers": [
+        {
+          "name": "Alex",
+          "country": "Perú",
+          "voice": "es-PE-AlexNeural"
+        },
+        {
+          "name": "Camila",
+          "country": "Perú",
+          "voice": "es-PE-CamilaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Camila, estoy en la Gran Vía. Hoy no hay tiendas abiertas. Hay un autobús rojo tumbado en el suelo."
+        },
+        {
+          "s": 1,
+          "text": "¿Y la nube verde? ¿Está cerca?"
+        },
+        {
+          "s": 0,
+          "text": "Sí, está al final de la calle, al lado de un cine. Es muy grande."
+        },
+        {
+          "s": 1,
+          "text": "Alex, no vas a trabajar más hoy. Vuelve a casa ahora."
+        },
+        {
+          "s": 0,
+          "text": "Vale, vale. Llevo una pizza para una señora mayor y vuelvo."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cómo están las tiendas?",
+          "options": [
+            "Cerradas",
+            "Abiertas",
+            "Llenas de gente"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Dónde está la nube?",
+          "options": [
+            "En el metro",
+            "Al final de la calle, al lado de un cine",
+            "En casa de Camila"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué quiere Camila?",
+          "options": [
+            "Una pizza",
+            "Una foto de la nube",
+            "Que Alex vuelva a casa"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Para quién es la pizza?",
+          "options": [
+            "Para Camila",
+            "Para una señora mayor",
+            "Para Alex"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué tiendas hay en tu calle?",
+          "model": "Hay una panadería, una farmacia y un bar."
+        },
+        {
+          "q": "¿Pides comida a domicilio? ¿Qué pides?",
+          "model": "Sí, a veces pido sushi los viernes."
+        },
+        {
+          "q": "¿Qué haces por un vecino mayor?",
+          "model": "Le compro el pan cuando está enfermo."
+        }
+      ],
+      "gaps": "Sí, está al [final] de la [calle], al lado de un [cine]. Es muy [grande].",
+      "glossary": [
+        {
+          "word": "tumbado",
+          "meaning": "en el suelo, de lado"
+        },
+        {
+          "word": "cine",
+          "meaning": "lugar donde ves películas"
+        },
+        {
+          "word": "vuelve",
+          "meaning": "de volver: ir otra vez al lugar de antes"
+        }
+      ]
+    },
+    {
+      "id": "plaza",
+      "title": "Andrea reparte el agua",
+      "place": "Plaza Mayor · el refugio",
+      "context": "Andrea es voluntaria en el refugio de la Plaza Mayor. Habla con Ramón, un vecino de setenta años.",
+      "speakers": [
+        {
+          "name": "Andrea",
+          "country": "Ecuador",
+          "voice": "es-EC-AndreaNeural"
+        },
+        {
+          "name": "Ramón",
+          "country": "España",
+          "voice": "es-ES-AlvaroNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Buenos días, Ramón. ¿Ha dormido bien?"
+        },
+        {
+          "s": 1,
+          "text": "Más o menos. La tienda es pequeña y hace frío por la noche."
+        },
+        {
+          "s": 0,
+          "text": "Esta noche le voy a dar otra manta. Aquí tiene su agua: dos botellas por persona."
+        },
+        {
+          "s": 1,
+          "text": "Muchas gracias. Usted trabaja mucho. ¿Cuántas horas está aquí?"
+        },
+        {
+          "s": 0,
+          "text": "Desde las siete de la mañana. Pero me gusta ayudar. En Quito también era voluntaria."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cómo ha dormido Ramón?",
+          "options": [
+            "Muy bien",
+            "Más o menos",
+            "No ha dormido"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cuántas botellas hay por persona?",
+          "options": [
+            "Dos",
+            "Una",
+            "Cuatro"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué le va a dar Andrea esta noche?",
+          "options": [
+            "Comida",
+            "Una cama",
+            "Otra manta"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Dónde era voluntaria Andrea antes?",
+          "options": [
+            "En Madrid",
+            "En Quito",
+            "En Lima"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Duermes bien normalmente? ¿Cuántas horas?",
+          "model": "Duermo bien, unas siete horas."
+        },
+        {
+          "q": "¿Te gusta ayudar a otras personas? ¿Cómo?",
+          "model": "Sí, ayudo a mi abuela con la compra."
+        },
+        {
+          "q": "¿Has sido voluntario alguna vez?",
+          "model": "Sí, en un comedor social de mi ciudad."
+        }
+      ],
+      "gaps": "Aquí tiene su [agua]: [dos] [botellas] por [persona].",
+      "glossary": [
+        {
+          "word": "manta",
+          "meaning": "tela grande y caliente para la cama"
+        },
+        {
+          "word": "voluntaria",
+          "meaning": "persona que ayuda sin dinero"
+        },
+        {
+          "word": "más o menos",
+          "meaning": "regular, ni bien ni mal"
+        }
+      ]
+    },
+    {
+      "id": "metro",
+      "title": "El guitarrista del andén",
+      "place": "Metro · el andén",
+      "context": "En una estación de metro, Manuel, un músico cubano, toca la guitarra. Ximena está allí con miedo.",
+      "speakers": [
+        {
+          "name": "Manuel",
+          "country": "Cuba",
+          "voice": "es-CU-ManuelNeural"
+        },
+        {
+          "name": "Ximena",
+          "country": "España",
+          "voice": "es-ES-XimenaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "¿Estás bien? Tienes cara de miedo."
+        },
+        {
+          "s": 1,
+          "text": "Un poco. Estoy aquí abajo desde ayer. Mi casa está cerca de la nube."
+        },
+        {
+          "s": 0,
+          "text": "Yo soy Manuel, de La Habana. Toco la guitarra en el metro desde hace diez años."
+        },
+        {
+          "s": 1,
+          "text": "¿Y ahora también tocas?"
+        },
+        {
+          "s": 0,
+          "text": "Claro. Cuando la gente tiene miedo, la música ayuda. ¿Qué canción te gusta?"
+        },
+        {
+          "s": 1,
+          "text": "Una canción de mi abuela: «Cielito lindo»."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Desde cuándo está Ximena en el metro?",
+          "options": [
+            "Desde ayer",
+            "Desde hace un mes",
+            "Desde hoy"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿De dónde es Manuel?",
+          "options": [
+            "De Madrid",
+            "De México",
+            "De La Habana"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Desde cuándo toca Manuel en el metro?",
+          "options": [
+            "Desde ayer",
+            "Desde hace diez años",
+            "Desde hace dos años"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿De quién es la canción que le gusta a Ximena?",
+          "options": [
+            "De su abuela",
+            "De Manuel",
+            "De su madre"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué canción te recuerda a tu familia?",
+          "model": "Una canción que cantaba mi madre en la cocina."
+        },
+        {
+          "q": "¿Qué haces cuando tienes miedo?",
+          "model": "Respiro despacio y llamo a una amiga."
+        },
+        {
+          "q": "¿Hay músicos en el metro de tu ciudad?",
+          "model": "Sí, hay un señor que toca el violín."
+        }
+      ],
+      "gaps": "Yo soy Manuel, de La [Habana]. Toco la [guitarra] en el [metro] desde hace diez [años].",
+      "glossary": [
+        {
+          "word": "tienes cara de miedo",
+          "meaning": "parece que tienes miedo"
+        },
+        {
+          "word": "aquí abajo",
+          "meaning": "debajo de la calle, en el metro"
+        },
+        {
+          "word": "canción",
+          "meaning": "música con palabras"
+        }
+      ]
+    },
+    {
+      "id": "retiro",
+      "title": "El audio del tanque tres",
+      "place": "Retiro · el laboratorio",
+      "context": "La radio encuentra una grabación antigua del laboratorio del Retiro. Hablan la doctora Elena y su ayudante Javier.",
+      "speakers": [
+        {
+          "name": "Elena",
+          "country": "España",
+          "voice": "es-ES-ElviraNeural"
+        },
+        {
+          "name": "Javier",
+          "country": "Guinea Ecuatorial",
+          "voice": "es-GQ-JavierNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Javier, rápido. El tanque tres tiene un problema. Hay líquido verde en el suelo."
+        },
+        {
+          "s": 1,
+          "text": "Doctora, ¿llamo a los jefes?"
+        },
+        {
+          "s": 0,
+          "text": "Sí. Y cierra todas las puertas del palacio."
+        },
+        {
+          "s": 1,
+          "text": "Ya he llamado. Los jefes dicen que no podemos hablar con nadie."
+        },
+        {
+          "s": 0,
+          "text": "Esto no está bien. La gente del parque tiene que saberlo."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué hay en el suelo?",
+          "options": [
+            "Agua",
+            "Líquido verde",
+            "Papeles"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué tiene que cerrar Javier?",
+          "options": [
+            "Todas las puertas",
+            "Las ventanas",
+            "El tanque"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué dicen los jefes?",
+          "options": [
+            "Que llamen a la policía",
+            "Que salgan del parque",
+            "Que no pueden hablar con nadie"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué piensa Elena?",
+          "options": [
+            "Que todo está bien",
+            "Que la gente tiene que saberlo",
+            "Que no hay problema"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué haces cuando tienes un problema en el trabajo?",
+          "model": "Hablo con mi jefa y buscamos una solución."
+        },
+        {
+          "q": "¿Es fácil para ti guardar un secreto?",
+          "model": "No, para mí es difícil."
+        },
+        {
+          "q": "¿Te gusta trabajar en equipo?",
+          "model": "Sí, me gusta más que trabajar solo."
+        }
+      ],
+      "gaps": "Ya he [llamado]. Los [jefes] dicen que no [podemos] hablar con [nadie].",
+      "glossary": [
+        {
+          "word": "líquido",
+          "meaning": "como el agua: no es sólido"
+        },
+        {
+          "word": "los jefes",
+          "meaning": "personas que mandan en el trabajo"
+        },
+        {
+          "word": "saberlo",
+          "meaning": "conocer esa información"
+        }
+      ]
+    },
+    {
+      "id": "malasana",
+      "title": "Merengue en el Dos de Mayo",
+      "place": "Malasaña · la radio",
+      "context": "Lola entrevista por radio a Emilio, un DJ dominicano que pone música en una plaza de Malasaña.",
+      "speakers": [
+        {
+          "name": "Lola",
+          "country": "España",
+          "voice": "es-ES-ElviraNeural"
+        },
+        {
+          "name": "Emilio",
+          "country": "República Dominicana",
+          "voice": "es-DO-EmilioNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Emilio, se oye música detrás de ti. ¿Dónde estás?"
+        },
+        {
+          "s": 1,
+          "text": "En la plaza del Dos de Mayo. Tenemos un generador y muchas luces de colores."
+        },
+        {
+          "s": 0,
+          "text": "¿No es peligroso?"
+        },
+        {
+          "s": 1,
+          "text": "Un poco, pero la gente necesita bailar. Hay unas cincuenta personas."
+        },
+        {
+          "s": 0,
+          "text": "¿Qué música pones?"
+        },
+        {
+          "s": 1,
+          "text": "Merengue, bachata y un poco de pop español. ¡Ven a bailar, Lola!"
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Dónde está Emilio?",
+          "options": [
+            "En la plaza del Dos de Mayo",
+            "En la Gran Vía",
+            "En su casa"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cuántas personas hay en la plaza?",
+          "options": [
+            "Cinco",
+            "Quinientas",
+            "Unas cincuenta"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Por qué hay música, según Emilio?",
+          "options": [
+            "Porque es una fiesta de cumpleaños",
+            "Porque la gente necesita bailar",
+            "Porque lo dice la radio"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué música no pone Emilio?",
+          "options": [
+            "Merengue",
+            "Bachata",
+            "Rock"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué música pones cuando estás triste?",
+          "model": "Pongo música tranquila, como el jazz."
+        },
+        {
+          "q": "¿Dónde bailas normalmente?",
+          "model": "Bailo en las fiestas de mis amigos."
+        },
+        {
+          "q": "¿Qué hay en las plazas de tu barrio?",
+          "model": "Hay bancos, una fuente y un parque infantil."
+        }
+      ],
+      "gaps": "Tenemos un [generador] y muchas [luces] de [colores]. ¿No es [peligroso]?",
+      "glossary": [
+        {
+          "word": "se oye",
+          "meaning": "se escucha"
+        },
+        {
+          "word": "generador",
+          "meaning": "máquina que produce electricidad"
+        },
+        {
+          "word": "peligroso",
+          "meaning": "que puede hacer daño"
+        }
+      ]
+    },
+    {
+      "id": "atocha",
+      "title": "Una madre en el andén",
+      "place": "Atocha · el andén",
+      "context": "Valentina, una madre uruguaya, pregunta a Álvaro, el maquinista, por el último tren.",
+      "speakers": [
+        {
+          "name": "Valentina",
+          "country": "Uruguay",
+          "voice": "es-UY-ValentinaNeural"
+        },
+        {
+          "name": "Álvaro",
+          "country": "España",
+          "voice": "es-ES-AlvaroNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Perdone, ¿usted conduce el tren de esta noche?"
+        },
+        {
+          "s": 1,
+          "text": "Sí, soy el maquinista. Salimos a las once y cuarenta hacia Valencia."
+        },
+        {
+          "s": 0,
+          "text": "Tengo dos hijos pequeños, de cuatro y seis años. ¿Podemos subir?"
+        },
+        {
+          "s": 1,
+          "text": "No lo decido yo. Lo decide la jefa de estación. Tiene que hablar con Mercedes."
+        },
+        {
+          "s": 0,
+          "text": "¿Dónde está?"
+        },
+        {
+          "s": 1,
+          "text": "Al lado del panel grande. Lleva un uniforme morado."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Quién es Álvaro?",
+          "options": [
+            "El maquinista",
+            "El jefe de estación",
+            "Un pasajero"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cuántos años tienen los hijos de Valentina?",
+          "options": [
+            "Dos y tres",
+            "Cuatro y seis",
+            "Diez y doce"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Quién decide quién sube al tren?",
+          "options": [
+            "Álvaro",
+            "Valentina",
+            "Mercedes, la jefa de estación"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cómo es el uniforme de Mercedes?",
+          "options": [
+            "Azul",
+            "Morado",
+            "Verde"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Cuál es el viaje más largo que has hecho?",
+          "model": "Fui de Madrid a Lisboa en autobús: ocho horas."
+        },
+        {
+          "q": "¿Qué llevas siempre en tu maleta?",
+          "model": "Llevo un libro y un cargador del móvil."
+        },
+        {
+          "q": "¿Quién decide las cosas importantes en tu casa?",
+          "model": "Las decidimos juntos, mi pareja y yo."
+        }
+      ],
+      "gaps": "No lo [decido] yo. Lo decide la [jefa] de [estación]. Tiene que hablar con [Mercedes].",
+      "glossary": [
+        {
+          "word": "el maquinista",
+          "meaning": "la persona que conduce el tren"
+        },
+        {
+          "word": "pequeños",
+          "meaning": "niños de poca edad"
+        },
+        {
+          "word": "el panel",
+          "meaning": "pantalla grande con los horarios"
+        }
+      ]
+    },
+    {
+      "id": "palacio",
+      "title": "Una orden por la radio",
+      "place": "Palacio Real · frecuencia militar",
+      "context": "La radio encuentra la frecuencia de los soldados. Una sargento habla con Mario, un soldado paraguayo.",
+      "speakers": [
+        {
+          "name": "Sargento",
+          "country": "España",
+          "voice": "es-ES-XimenaNeural"
+        },
+        {
+          "name": "Mario",
+          "country": "Paraguay",
+          "voice": "es-PY-MarioNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Mario, aquí la sargento. ¿Qué ves en la puerta norte?"
+        },
+        {
+          "s": 1,
+          "text": "Hay una familia con un niño pequeño. Quieren entrar en el palacio. Tienen mucho frío."
+        },
+        {
+          "s": 0,
+          "text": "¿Tienen fiebre?"
+        },
+        {
+          "s": 1,
+          "text": "No, están bien. Solo están cansados y tienen hambre."
+        },
+        {
+          "s": 0,
+          "text": "Vale. Dales mantas y comida. Mañana van a ir al hospital de campaña."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Dónde está Mario?",
+          "options": [
+            "En la puerta norte",
+            "En el hospital",
+            "En el patio"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué quiere la familia?",
+          "options": [
+            "Ir a Valencia",
+            "Hablar con la capitana",
+            "Entrar en el palacio"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cómo están?",
+          "options": [
+            "Con fiebre",
+            "Cansados y con hambre",
+            "Muy contentos"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Adónde van a ir mañana?",
+          "options": [
+            "Al hospital de campaña",
+            "Al metro",
+            "A su casa"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué comes cuando tienes mucha hambre?",
+          "model": "Como un bocadillo de tortilla."
+        },
+        {
+          "q": "¿Qué haces cuando estás muy cansado?",
+          "model": "Me tumbo en el sofá y veo una serie."
+        },
+        {
+          "q": "¿Conoces algún palacio famoso? ¿Cómo es?",
+          "model": "Conozco el Palacio Real: es enorme y blanco."
+        }
+      ],
+      "gaps": "No, están [bien]. Solo están [cansados] y tienen [hambre]. [Vale].",
+      "glossary": [
+        {
+          "word": "la sargento",
+          "meaning": "militar que manda a un grupo pequeño"
+        },
+        {
+          "word": "fiebre",
+          "meaning": "temperatura alta del cuerpo"
+        },
+        {
+          "word": "dales",
+          "meaning": "dar a ellos"
+        }
+      ]
+    },
+    {
+      "id": "hospital",
+      "title": "Un mensaje para Caracas",
+      "place": "Hospital de campaña · mensaje de voz",
+      "context": "Yuleisy, enfermera venezolana, habla por mensaje de voz con su hermano Sebastián, que vive en Caracas.",
+      "speakers": [
+        {
+          "name": "Yuleisy",
+          "country": "Venezuela",
+          "voice": "es-VE-PaolaNeural"
+        },
+        {
+          "name": "Sebastián",
+          "country": "Venezuela",
+          "voice": "es-VE-SebastianNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Hola, hermano. Hoy he trabajado catorce horas. Hay muchos pacientes."
+        },
+        {
+          "s": 1,
+          "text": "Yuleisy, mamá está preocupada. ¿Has comido hoy?"
+        },
+        {
+          "s": 0,
+          "text": "Sí, he tomado un café y un sándwich de queso."
+        },
+        {
+          "s": 1,
+          "text": "Eso es muy poco. Mamá dice que tienes que comer arroz y frijoles."
+        },
+        {
+          "s": 0,
+          "text": "Ja, ja. Aquí no hay frijoles. Dile a mamá que estoy bien y que la quiero."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cuántas horas ha trabajado Yuleisy?",
+          "options": [
+            "Ocho",
+            "Catorce",
+            "Cuatro"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Quién está preocupada?",
+          "options": [
+            "Su madre",
+            "Su jefa",
+            "Su amiga"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué ha comido Yuleisy?",
+          "options": [
+            "Arroz y frijoles",
+            "Nada",
+            "Un café y un sándwich de queso"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué no hay en el hospital?",
+          "options": [
+            "Café",
+            "Frijoles",
+            "Pacientes"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Cuántas horas trabajas o estudias al día?",
+          "model": "Trabajo unas ocho horas y estudio una hora más."
+        },
+        {
+          "q": "¿Qué comida típica de tu casa echas de menos?",
+          "model": "Echo de menos la sopa de mi madre."
+        },
+        {
+          "q": "¿Quién se preocupa por ti en tu familia?",
+          "model": "Mi padre: me llama todos los días."
+        }
+      ],
+      "gaps": "Sí, he tomado un [café] y un [sándwich] de [queso]. Eso es muy [poco].",
+      "glossary": [
+        {
+          "word": "pacientes",
+          "meaning": "personas enfermas en un hospital"
+        },
+        {
+          "word": "preocupada",
+          "meaning": "nerviosa porque piensa en un problema"
+        },
+        {
+          "word": "frijoles",
+          "meaning": "legumbres, como las alubias"
+        }
+      ]
+    },
+    {
+      "id": "rio",
+      "title": "Jaime prepara la barca",
+      "place": "Madrid Río · la radio",
+      "context": "Lola habla por radio con Jaime, el barquero. Va a salir de Madrid por el río con la fórmula de la vacuna.",
+      "speakers": [
+        {
+          "name": "Lola",
+          "country": "España",
+          "voice": "es-ES-ElviraNeural"
+        },
+        {
+          "name": "Jaime",
+          "country": "España",
+          "voice": "es-ES-AlvaroNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Jaime, ¿cómo está el río esta mañana?"
+        },
+        {
+          "s": 1,
+          "text": "Muy tranquilo, Lola. Hay un poco de niebla, pero la barca está lista."
+        },
+        {
+          "s": 0,
+          "text": "¿Cuántas personas van contigo?"
+        },
+        {
+          "s": 1,
+          "text": "Tres: la persona de la fórmula y una familia con una niña."
+        },
+        {
+          "s": 0,
+          "text": "¿Y a qué hora sale la barca?"
+        },
+        {
+          "s": 1,
+          "text": "A las siete, cuando sale el sol. La nube duerme un poco por la mañana."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cómo está el río?",
+          "options": [
+            "Muy tranquilo",
+            "Con mucho viento",
+            "Peligroso"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué hay en el río?",
+          "options": [
+            "Barcos grandes",
+            "Un poco de niebla",
+            "Mucha gente"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cuántas personas van con Jaime?",
+          "options": [
+            "Dos",
+            "Cinco",
+            "Tres"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Por qué salen a las siete, según Jaime?",
+          "options": [
+            "Porque la nube duerme un poco por la mañana",
+            "Porque Lola lo dice",
+            "Porque hace calor"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Cómo es tu mañana ideal?",
+          "model": "Me levanto tarde, desayuno en una terraza y paseo."
+        },
+        {
+          "q": "¿Has hecho un viaje en barco? ¿Adónde?",
+          "model": "Sí, de Barcelona a Mallorca."
+        },
+        {
+          "q": "¿Te gusta la niebla o prefieres el sol?",
+          "model": "Prefiero el sol, la niebla me pone triste."
+        }
+      ],
+      "gaps": "Muy [tranquilo], Lola. Hay un poco de [niebla], pero la [barca] está [lista].",
+      "glossary": [
+        {
+          "word": "niebla",
+          "meaning": "nube baja que no deja ver bien"
+        },
+        {
+          "word": "la barca",
+          "meaning": "barco pequeño"
+        },
+        {
+          "word": "la fórmula",
+          "meaning": "la receta científica de la vacuna"
+        }
+      ]
+    }
+  ]
+}

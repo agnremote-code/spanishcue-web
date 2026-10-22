@@ -1,0 +1,1164 @@
+{
+  "game": "madrid",
+  "level": "B2",
+  "items": [
+    {
+      "id": "sol",
+      "title": "Un taxi para la calle Arenal",
+      "place": "Puerta del Sol · la radio",
+      "context": "Un oyente respondió al llamamiento de Lola y llevó al vecino de Salomé al hospital. Salomé vuelve a llamar para contar cómo fue.",
+      "speakers": [
+        {
+          "name": "Lola",
+          "country": "España",
+          "voice": "es-ES-ElviraNeural"
+        },
+        {
+          "name": "Salomé",
+          "country": "Colombia",
+          "voice": "es-CO-SalomeNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Salomé, nos tenías a todos con el corazón en un puño. ¿Llegó alguien con un coche?"
+        },
+        {
+          "s": 1,
+          "text": "Sí, y no te lo vas a creer: un taxista jubilado que te escucha desde hace quince años, desde tus programas de madrugada. Dijo que no se iba a perder la ocasión de conocerte, aunque fuera de lejos."
+        },
+        {
+          "s": 0,
+          "text": "Me vas a hacer llorar en directo. ¿Y el vecino?"
+        },
+        {
+          "s": 1,
+          "text": "Lo llevamos entre los dos hasta el taxi, envuelto en una manta. En el Paseo del Prado nos cruzamos con la nube, pero el taxista conocía unas calles por detrás de las Cortes y la esquivamos."
+        },
+        {
+          "s": 0,
+          "text": "¿Cómo está ahora?"
+        },
+        {
+          "s": 1,
+          "text": "Con oxígeno y estable. La doctora Ochoa dice que, si hubiera esperado un par de horas más, no lo habría contado. Lo que más me impresionó fue que media calle salió a los balcones a aplaudir cuando nos fuimos."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Quién respondió al llamamiento de Lola?",
+          "options": [
+            "Un taxista jubilado que la escuchaba desde hacía años",
+            "Un médico del hospital",
+            "Un soldado del palacio"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cómo evitaron la nube?",
+          "options": [
+            "Esperando en un portal",
+            "Tomando calles secundarias que conocía el taxista",
+            "Usando la vacuna"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Según la doctora Ochoa, ¿qué habría pasado con un par de horas más?",
+          "options": [
+            "El vecino se habría curado solo",
+            "Habría llegado la vacuna",
+            "El vecino probablemente habría muerto"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué impresionó más a Salomé?",
+          "options": [
+            "El aplauso de los vecinos desde los balcones",
+            "La velocidad del taxi",
+            "El hospital de campaña"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Crees que las crisis sacan lo mejor o lo peor de las personas? Argumenta con algún ejemplo que conozcas.",
+          "model": "Creo que las dos cosas: hay gente que ayuda sin pedir nada y gente que se aprovecha, como los que suben los precios."
+        },
+        {
+          "q": "¿Qué papel pueden tener los medios locales, como una radio de barrio, en la vida de una comunidad?",
+          "model": "Pueden unir a los vecinos, porque informan de lo que pasa cerca y dan voz a personas que no salen en los grandes medios."
+        },
+        {
+          "q": "¿Te has sentido alguna vez agradecido hacia un desconocido? ¿Qué hizo por ti?",
+          "model": "Sí, una señora me devolvió la cartera que había perdido en el metro, con todo el dinero dentro."
+        }
+      ],
+      "gaps": "Lo llevamos entre los [dos] hasta el [taxi], envuelto en una [manta]. En el Paseo del Prado nos cruzamos con la [nube], pero el taxista conocía unas calles por detrás de las Cortes",
+      "glossary": [
+        {
+          "word": "con el corazón en un puño",
+          "meaning": "muy preocupados, con mucha tensión"
+        },
+        {
+          "word": "esquivamos",
+          "meaning": "de esquivar: evitar algo apartándose"
+        },
+        {
+          "word": "no lo habría contado",
+          "meaning": "habría muerto"
+        },
+        {
+          "word": "envuelto",
+          "meaning": "cubierto por completo con algo"
+        }
+      ]
+    },
+    {
+      "id": "granvia",
+      "title": "Las notas del repartidor",
+      "place": "Gran Vía · mensaje de voz",
+      "context": "Alex ha hecho caso a su hermana y ha apuntado todo lo que vio. Ahora le lee a Camila sus notas, que podrían interesar a un periodista.",
+      "speakers": [
+        {
+          "name": "Alex",
+          "country": "Perú",
+          "voice": "es-PE-AlexNeural"
+        },
+        {
+          "name": "Camila",
+          "country": "Perú",
+          "voice": "es-PE-CamilaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Camila, te leo lo que he apuntado, a ver qué te parece. Miércoles, cuatro y cuarto de la tarde: furgoneta negra sin matrícula delante del cine Capitol. Dos personas con trajes de protección toman muestras."
+        },
+        {
+          "s": 1,
+          "text": "Muy bien, muy completo. Sigue."
+        },
+        {
+          "s": 0,
+          "text": "Cuatro y veinticinco: la furgoneta se va por la calle Alcalá hacia el Retiro. Cuatro y media: un hombre de unos sesenta años cae al suelo tosiendo. Nadie de la furgoneta lo atiende."
+        },
+        {
+          "s": 1,
+          "text": "Alex, esto es grave. Si esos hombres sabían que el aire era peligroso y no avisaron a la gente, alguien tiene que explicarlo."
+        },
+        {
+          "s": 0,
+          "text": "Por eso te llamo. En la radio han hablado de un periodista mexicano que está investigando en el Retiro. ¿Crees que debería contactarle?"
+        },
+        {
+          "s": 1,
+          "text": "Sí, pero con cuidado. Mándale solo una copia y quédate con el original. Y no le des tu dirección, por si acaso."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Dónde paró la furgoneta?",
+          "options": [
+            "Delante del cine Capitol",
+            "En la calle Alcalá",
+            "En el Retiro"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué pasó a las cuatro y media?",
+          "options": [
+            "La furgoneta volvió",
+            "Un hombre de unos sesenta años cayó al suelo tosiendo",
+            "Alex se fue a casa"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué piensa Camila sobre los hombres de la furgoneta?",
+          "options": [
+            "Que eran médicos que ayudaban",
+            "Que no hicieron nada malo",
+            "Que tienen que explicar por qué no avisaron"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué le recomienda Camila a Alex?",
+          "options": [
+            "Mandar solo una copia y quedarse con el original",
+            "Ir a la policía",
+            "Publicarlo en las redes"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Crees que los ciudadanos deberían documentar lo que ven en situaciones de emergencia? ¿Qué riesgos tiene?",
+          "model": "Sí, porque puede servir como prueba, aunque también existe el riesgo de difundir información sin contrastar."
+        },
+        {
+          "q": "¿Confiarías tus pruebas a un periodista o preferirías ir a la policía? Justifica tu respuesta.",
+          "model": "Preferiría un periodista conocido, porque si la autoridad está implicada, la policía podría no investigar."
+        },
+        {
+          "q": "¿Qué precauciones tomas cuando compartes información personal con desconocidos?",
+          "model": "Nunca doy mi dirección ni mi número de cuenta, y compruebo quién es la persona antes de enviarle nada."
+        }
+      ],
+      "gaps": "Cuatro y [media]: un hombre de unos [sesenta] años cae al [suelo] [tosiendo].",
+      "glossary": [
+        {
+          "word": "apuntado",
+          "meaning": "de apuntar: escribir para no olvidar"
+        },
+        {
+          "word": "trajes de protección",
+          "meaning": "ropa especial que protege de sustancias peligrosas"
+        },
+        {
+          "word": "lo atiende",
+          "meaning": "de atender: ocuparse de alguien"
+        },
+        {
+          "word": "por si acaso",
+          "meaning": "para prevenir un posible problema"
+        }
+      ]
+    },
+    {
+      "id": "plaza",
+      "title": "El dragón que tenía miedo",
+      "place": "Plaza Mayor · el refugio",
+      "context": "Andrea, la voluntaria, cuenta a Ramón que los padres del refugio quieren organizar algo a partir de sus cuentos.",
+      "speakers": [
+        {
+          "name": "Andrea",
+          "country": "Ecuador",
+          "voice": "es-EC-AndreaNeural"
+        },
+        {
+          "name": "Ramón",
+          "country": "España",
+          "voice": "es-ES-AlvaroNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Ramón, tengo una propuesta. Varios padres me han pedido que los cuentos de la tarde se conviertan en una pequeña obra de teatro, con los niños como actores."
+        },
+        {
+          "s": 1,
+          "text": "¿Una obra? Hija, yo llevo veinte años jubilado. Ya no me acuerdo ni de cómo se dirige a un actor."
+        },
+        {
+          "s": 0,
+          "text": "Eso no se olvida. Además, los niños necesitan algo que les ocupe la cabeza. Lucas, el de la tienda doce, ya ha dicho que quiere ser el dragón."
+        },
+        {
+          "s": 1,
+          "text": "Lucas… El primer día no decía ni una palabra. Si quiere ser el dragón, no puedo decir que no."
+        },
+        {
+          "s": 0,
+          "text": "Hay otro problema: Montse, la policía de la puerta, dice que no se pueden juntar más de veinte personas por la nube."
+        },
+        {
+          "s": 1,
+          "text": "Pues hacemos tres funciones con públicos distintos. En el teatro siempre había que adaptarse: si no había decorado, usábamos sábanas; si faltaba un actor, otro hacía dos papeles. Lo importante es que la función continúe."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué proponen los padres?",
+          "options": [
+            "Convertir los cuentos en una obra con los niños como actores",
+            "Que Ramón se vaya del refugio",
+            "Hacer una fiesta de cumpleaños"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Por qué duda Ramón al principio?",
+          "options": [
+            "Porque no le gustan los niños",
+            "Porque cree que ha olvidado cómo dirigir",
+            "Porque está enfermo"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué problema plantea Montse?",
+          "options": [
+            "Que no hay sábanas",
+            "Que no hay niños suficientes",
+            "Que no se pueden juntar más de veinte personas"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué solución propone Ramón?",
+          "options": [
+            "Cancelar la obra",
+            "Hacer tres funciones con públicos distintos",
+            "Hacerla en la calle"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué papel crees que tienen el arte y el juego para superar momentos traumáticos, sobre todo en los niños?",
+          "model": "Creo que son fundamentales, porque permiten expresar el miedo de una manera indirecta y recuperar la sensación de normalidad."
+        },
+        {
+          "q": "Ramón dice que «lo importante es que la función continúe». ¿Aplicas esa idea en tu vida? Pon un ejemplo.",
+          "model": "Sí, cuando me rompí la pierna continué trabajando desde casa, porque no quería dejar a mi equipo sin ayuda."
+        },
+        {
+          "q": "¿Has participado alguna vez en una obra de teatro o en un espectáculo? ¿Cómo fue la experiencia?",
+          "model": "Sí, en el colegio hice de árbol en una obra de Navidad; no tenía texto, pero me encantó estar en el escenario."
+        }
+      ],
+      "gaps": "si no había [decorado], usábamos [sábanas]; si faltaba un [actor], otro hacía dos [papeles].",
+      "glossary": [
+        {
+          "word": "propuesta",
+          "meaning": "idea que se ofrece para hacer algo"
+        },
+        {
+          "word": "funciones",
+          "meaning": "representaciones de una obra"
+        },
+        {
+          "word": "decorado",
+          "meaning": "lo que se pone en el escenario para crear un lugar"
+        },
+        {
+          "word": "papeles",
+          "meaning": "aquí, los personajes que representa un actor"
+        }
+      ]
+    },
+    {
+      "id": "metro",
+      "title": "Cuatro acordes y una dimisión",
+      "place": "Metro · el andén",
+      "context": "Ximena ha recuperado la cobertura en el andén y ha mandado un correo a su jefe. Manuel quiere saber qué le ha escrito.",
+      "speakers": [
+        {
+          "name": "Manuel",
+          "country": "Cuba",
+          "voice": "es-CU-ManuelNeural"
+        },
+        {
+          "name": "Ximena",
+          "country": "España",
+          "voice": "es-ES-XimenaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Llevas diez minutos mirando el móvil sin parpadear. ¿Ha pasado algo?"
+        },
+        {
+          "s": 1,
+          "text": "Ha vuelto la cobertura durante un rato y le he mandado un correo a mi jefe. Le he dicho que, cuando esto termine, no voy a volver a la oficina."
+        },
+        {
+          "s": 0,
+          "text": "¡Así, sin anestesia! ¿Y te ha contestado?"
+        },
+        {
+          "s": 1,
+          "text": "Sí, en dos minutos. Me ha dicho que me lo piense bien, que con la crisis que viene será muy difícil encontrar trabajo. Y en parte tiene razón."
+        },
+        {
+          "s": 0,
+          "text": "Claro que tiene razón. Pero también la tenía mi madre cuando me dijo que la música no daba de comer. Y aquí estoy, diez años después, comiendo poco pero contento."
+        },
+        {
+          "s": 1,
+          "text": "No sé si eso me tranquiliza o me preocupa más. De todas formas, ya está enviado. Lo que me sorprende es que no me arrepiento ni un poquito. Es como si me hubiera quitado una mochila de piedras."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué ha hecho Ximena con el móvil?",
+          "options": [
+            "Ha mandado un correo a su jefe para dejar el trabajo",
+            "Ha llamado a su madre",
+            "Ha escuchado música"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué le ha contestado el jefe?",
+          "options": [
+            "Que está despedida",
+            "Que lo piense bien porque será difícil encontrar trabajo",
+            "Que la echa de menos"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué le dijo la madre de Manuel hace años?",
+          "options": [
+            "Que se fuera a España",
+            "Que estudiara medicina",
+            "Que la música no daba de comer"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cómo se siente Ximena después de enviar el correo?",
+          "options": [
+            "Liberada, sin arrepentimiento",
+            "Muy arrepentida",
+            "Enfadada con Manuel"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Es responsable dejar un trabajo estable sin tener otro, o hay situaciones en las que está justificado? Argumenta.",
+          "model": "Depende de la situación: si el trabajo te está afectando a la salud, creo que está justificado, aunque conviene tener algo de dinero ahorrado."
+        },
+        {
+          "q": "¿Qué consejo «sensato» de tu familia no seguiste? ¿Te arrepientes?",
+          "model": "Mis padres querían que estudiara Derecho, pero estudié Bellas Artes. No me arrepiento, aunque ha sido más difícil encontrar trabajo."
+        },
+        {
+          "q": "¿Qué sería para ti «una mochila de piedras» en la vida diaria? Explica la metáfora con un ejemplo.",
+          "model": "Para mí sería una relación que ya no funciona: pesa todos los días, aunque no te des cuenta hasta que la dejas."
+        }
+      ],
+      "gaps": "Le he dicho que, cuando esto [termine], no voy a [volver] a la [oficina]. ¡Así, sin [anestesia]!",
+      "glossary": [
+        {
+          "word": "sin parpadear",
+          "meaning": "sin cerrar los ojos, muy concentrado"
+        },
+        {
+          "word": "sin anestesia",
+          "meaning": "de manera directa, sin suavizar"
+        },
+        {
+          "word": "no daba de comer",
+          "meaning": "no permitía ganar dinero para vivir"
+        },
+        {
+          "word": "me arrepiento",
+          "meaning": "de arrepentirse: sentir haber hecho algo"
+        }
+      ]
+    },
+    {
+      "id": "retiro",
+      "title": "La memoria escondida",
+      "place": "Retiro · el laboratorio",
+      "context": "Una última grabación del laboratorio: Javier habla solo, con prisa, la noche en que escondió la copia de los datos.",
+      "speakers": [
+        {
+          "name": "Javier",
+          "country": "Guinea Ecuatorial",
+          "voice": "es-GQ-JavierNeural"
+        },
+        {
+          "name": "Elena",
+          "country": "España",
+          "voice": "es-ES-ElviraNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Grabación para quien la encuentre. Son las dos de la madrugada. He copiado todos los datos de los ensayos en una memoria y la he escondido donde nadie la buscará."
+        },
+        {
+          "s": 0,
+          "text": "Si me pasa algo, quiero que se sepa que la doctora Castro no provocó la fuga. Fue un fallo de una válvula que debía haberse cambiado hace meses. Lo pedimos por escrito tres veces y nos dijeron que no había presupuesto."
+        },
+        {
+          "s": 1,
+          "text": "Javier, ¿con quién hablas? Tienes que irte ya, de verdad. Los de seguridad están revisando las cámaras del pasillo."
+        },
+        {
+          "s": 0,
+          "text": "Me voy, doctora. Pero alguien tiene que saber que esto se pudo evitar. Una válvula cuesta trescientos euros. Ahora, calcule usted cuánto cuesta una ciudad."
+        },
+        {
+          "s": 1,
+          "text": "Lo sé. Y si salimos de esta, lo diremos juntos, delante de quien haga falta, aunque nos cueste el trabajo. Ahora vete a casa con tu hija."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué ha hecho Javier con los datos?",
+          "options": [
+            "Los ha copiado en una memoria y la ha escondido",
+            "Los ha borrado",
+            "Los ha enviado a un periódico"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Por qué se produjo la fuga, según Javier?",
+          "options": [
+            "Por un sabotaje",
+            "Por un error de la doctora",
+            "Por una válvula que no se había cambiado"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué respuesta recibieron al pedir el cambio?",
+          "options": [
+            "Que lo harían al día siguiente",
+            "Que no había presupuesto",
+            "Que no era necesario"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué quiere destacar Javier al comparar precios?",
+          "options": [
+            "Que el laboratorio era muy caro",
+            "Que ahorrar trescientos euros ha tenido un coste enorme",
+            "Que las válvulas son caras"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Crees que los recortes de presupuesto pueden poner en peligro la seguridad de las personas? Pon un ejemplo real o posible.",
+          "model": "Sí, por ejemplo cuando se reduce el mantenimiento de puentes o trenes para ahorrar dinero y luego hay accidentes."
+        },
+        {
+          "q": "¿Qué harías si en tu trabajo pidieras varias veces que se arreglara algo peligroso y nadie te hiciera caso?",
+          "model": "Lo documentaría todo por escrito y, si seguía sin solución, lo comunicaría a una autoridad externa."
+        },
+        {
+          "q": "¿Qué te parece la frase «calcule usted cuánto cuesta una ciudad»? ¿Qué quiere transmitir Javier?",
+          "model": "Quiere mostrar que un ahorro pequeño puede provocar unas consecuencias enormes, imposibles de medir en dinero."
+        }
+      ],
+      "gaps": "Lo pedimos por [escrito] tres [veces] y nos dijeron que no había [presupuesto]. Javier, ¿con [quién] hablas?",
+      "glossary": [
+        {
+          "word": "provocó",
+          "meaning": "de provocar: causar"
+        },
+        {
+          "word": "la fuga",
+          "meaning": "salida no controlada de un gas o un líquido"
+        },
+        {
+          "word": "presupuesto",
+          "meaning": "dinero disponible para algo"
+        },
+        {
+          "word": "revisando",
+          "meaning": "de revisar: mirar con atención"
+        }
+      ]
+    },
+    {
+      "id": "malasana",
+      "title": "Seis cajas y una tarjeta",
+      "place": "Malasaña · la radio",
+      "context": "Emilio vuelve a llamar a Lola fuera de antena. Junto a las cajas de Salvatierra ha aparecido algo que lo cambia todo.",
+      "speakers": [
+        {
+          "name": "Lola",
+          "country": "España",
+          "voice": "es-ES-ElviraNeural"
+        },
+        {
+          "name": "Emilio",
+          "country": "República Dominicana",
+          "voice": "es-DO-EmilioNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Lola, he hecho las fotos que me pediste. Pero al mover la última caja apareció un sobre pegado por debajo."
+        },
+        {
+          "s": 0,
+          "text": "¿Un sobre? ¿Qué había dentro?"
+        },
+        {
+          "s": 1,
+          "text": "Una factura y una tarjeta de visita. La factura es de Salvatierra Biotech al laboratorio del Retiro, con fecha de hace tres semanas. Concepto: «dosis preventivas, lote experimental»."
+        },
+        {
+          "s": 0,
+          "text": "Tres semanas… El brote fue hace diez días. Es decir, que alguien encargó dosis preventivas antes de que hubiera nada que prevenir."
+        },
+        {
+          "s": 1,
+          "text": "Exacto. Y la tarjeta es del propio Íñigo Salvatierra. Por detrás alguien escribió a mano: «Atocha, sala VIP, cuando empiece»."
+        },
+        {
+          "s": 0,
+          "text": "«Cuando empiece»… Emilio, guarda el sobre en un sitio seguro y no se lo enseñes a nadie. Esto ya no es una casualidad: parece un plan."
+        },
+        {
+          "s": 1,
+          "text": "¿Y qué hago con Nacho? Él no sabe nada de esto y el hombre del traje le conoce la cara."
+        },
+        {
+          "s": 0,
+          "text": "Dile solo que no baje al almacén y que, si vuelve el hombre, le sirva un vermú y te avise."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Dónde estaba el sobre?",
+          "options": [
+            "Pegado por debajo de la última caja",
+            "En la barra del bar",
+            "Dentro de un frasco"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué decía el concepto de la factura?",
+          "options": [
+            "«Material de limpieza»",
+            "«Dosis preventivas, lote experimental»",
+            "«Vermú y hielo»"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué concluye Lola por las fechas?",
+          "options": [
+            "Que la factura es falsa",
+            "Que el brote empezó hace tres semanas",
+            "Que alguien encargó dosis antes del brote"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué estaba escrito en la tarjeta?",
+          "options": [
+            "«Atocha, sala VIP, cuando empiece»",
+            "El teléfono de Nacho",
+            "«Gracias por todo»"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Crees que hay empresas que se aprovechan de las crisis? Da algún ejemplo que conozcas o que te parezca verosímil.",
+          "model": "Sí, durante algunas crisis ha habido empresas que han subido mucho el precio de productos básicos como las mascarillas."
+        },
+        {
+          "q": "Si encontraras una prueba importante de un delito, ¿qué harías con ella? Razona tu respuesta.",
+          "model": "Haría copias y se la entregaría a un abogado o a un periodista de confianza, para que no pudiera desaparecer."
+        },
+        {
+          "q": "¿Dónde está la frontera entre una coincidencia y una sospecha fundada? Explica cómo lo decides tú.",
+          "model": "Para mí, una coincidencia se convierte en sospecha cuando se repite o cuando alguien se beneficia claramente de ella."
+        }
+      ],
+      "gaps": "La factura es de Salvatierra Biotech al laboratorio del Retiro, con [fecha] de hace tres [semanas]. [Concepto]: «dosis preventivas, lote [experimental]».",
+      "glossary": [
+        {
+          "word": "casualidad",
+          "meaning": "algo que pasa sin que nadie lo planee"
+        },
+        {
+          "word": "la factura",
+          "meaning": "documento con lo que se ha vendido y su precio"
+        },
+        {
+          "word": "lote",
+          "meaning": "conjunto de productos fabricados juntos"
+        },
+        {
+          "word": "encargó",
+          "meaning": "de encargar: pedir que te hagan o envíen algo"
+        }
+      ]
+    },
+    {
+      "id": "atocha",
+      "title": "Antes de que suene el silbato",
+      "place": "Atocha · el andén",
+      "context": "Álvaro, el maquinista, llama por radio a Valentina desde la cabina, poco antes de llegar a Valencia.",
+      "speakers": [
+        {
+          "name": "Valentina",
+          "country": "Uruguay",
+          "voice": "es-UY-ValentinaNeural"
+        },
+        {
+          "name": "Álvaro",
+          "country": "España",
+          "voice": "es-ES-AlvaroNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Valentina, ¿me oye? Le hablo desde la cabina. Estamos a veinte minutos de Valencia."
+        },
+        {
+          "s": 0,
+          "text": "Sí, le oigo. ¿Cómo están? ¿Han dormido algo?"
+        },
+        {
+          "s": 1,
+          "text": "Bruno ha dormido casi todo el viaje, con la cabeza en mis rodillas. Martina no ha querido cerrar los ojos. Me ha hecho mil preguntas sobre cómo funciona el tren."
+        },
+        {
+          "s": 0,
+          "text": "Esa es mi hija. Quiere controlarlo todo, igual que yo. ¿Ha preguntado por mí?"
+        },
+        {
+          "s": 1,
+          "text": "Una sola vez. Me ha preguntado si usted iba a estar triste esta noche. Le he dicho que sí, pero que las madres tristes también son fuertes."
+        },
+        {
+          "s": 0,
+          "text": "Gracias, Álvaro. No sé si es verdad, pero esta noche me lo voy a creer. Cuando vea a mi hermana, dígale que le debo la vida."
+        },
+        {
+          "s": 1,
+          "text": "Se lo diré. Y otra cosa: Martina me ha dado un dibujo para usted. Es un tren con tres ventanas y una mujer saludando en cada una. Se lo guardo hasta que nos veamos."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿A cuánto están de Valencia?",
+          "options": [
+            "A veinte minutos",
+            "A dos horas",
+            "Ya han llegado"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué ha hecho Martina durante el viaje?",
+          "options": [
+            "Ha dormido todo el tiempo",
+            "Ha llorado sin parar",
+            "Ha preguntado cómo funciona el tren"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué ha preguntado Martina sobre su madre?",
+          "options": [
+            "Si iba a llegar pronto",
+            "Si iba a estar triste esta noche",
+            "Si estaba enferma"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué le ha contestado Álvaro?",
+          "options": [
+            "Que las madres tristes también son fuertes",
+            "Que su madre estaba feliz",
+            "Que no lo sabía"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Crees que hay que decir siempre la verdad a los niños sobre las emociones de los adultos? ¿Por qué?",
+          "model": "Creo que sí, adaptándola a su edad, porque así aprenden que estar triste es normal y que se puede superar."
+        },
+        {
+          "q": "¿Te pareces a tu padre o a tu madre en algún rasgo del carácter? ¿En cuál?",
+          "model": "Me parezco a mi madre en que soy muy organizada y necesito tenerlo todo bajo control."
+        },
+        {
+          "q": "¿Recuerdas algún viaje de tu infancia en el que te sintieras muy responsable o muy pequeño? Cuéntalo.",
+          "model": "Sí, a los diez años viajé solo en avión para visitar a mis abuelos y me sentía mayor y asustado a la vez."
+        }
+      ],
+      "gaps": "Bruno ha dormido casi todo el [viaje], con la [cabeza] en mis [rodillas]. Martina no ha querido cerrar los [ojos].",
+      "glossary": [
+        {
+          "word": "la cabina",
+          "meaning": "lugar del tren donde va el maquinista"
+        },
+        {
+          "word": "rodillas",
+          "meaning": "articulaciones en medio de las piernas"
+        },
+        {
+          "word": "controlarlo todo",
+          "meaning": "querer dirigir o saber todo lo que pasa"
+        },
+        {
+          "word": "le debo la vida",
+          "meaning": "le estoy muy agradecida"
+        }
+      ]
+    },
+    {
+      "id": "palacio",
+      "title": "El testigo de la capitana",
+      "place": "Palacio Real · frecuencia militar",
+      "context": "Mario y la sargento comentan por radio la conversación que la capitana Reyes acaba de tener con la persona de la fórmula.",
+      "speakers": [
+        {
+          "name": "Sargento",
+          "country": "España",
+          "voice": "es-ES-XimenaNeural"
+        },
+        {
+          "name": "Mario",
+          "country": "Paraguay",
+          "voice": "es-PY-MarioNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Sargento, he visto salir a la persona de la vacuna hacia el hospital. ¿La capitana se lo ha contado todo?"
+        },
+        {
+          "s": 0,
+          "text": "Todo. Lo de la orden, lo de que la rompió delante de la compañía y lo que cree que le va a pasar. Le ha pedido que lo recuerde por si mañana alguien cuenta otra versión."
+        },
+        {
+          "s": 1,
+          "text": "¿Cree que el Ministerio va a mentir?"
+        },
+        {
+          "s": 0,
+          "text": "No sé si mentir, pero a veces basta con omitir. Si dicen que «hubo discrepancias en la cadena de mando», suena a un problema técnico. Si dicen que se ordenó disparar contra civiles, suena a lo que fue."
+        },
+        {
+          "s": 1,
+          "text": "En mi pueblo decimos que el papel lo aguanta todo. Por eso yo voy a escribir lo que vi, con mi nombre, y se lo voy a dar a la capitana."
+        },
+        {
+          "s": 0,
+          "text": "Hazlo. Y añade la hora exacta. Los detalles son lo que hace que una versión sea difícil de cambiar."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Adónde ha ido la persona de la vacuna?",
+          "options": [
+            "Al hospital",
+            "A Atocha",
+            "A la radio"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Por qué la capitana le ha contado su historia?",
+          "options": [
+            "Para pedirle ayuda",
+            "Para que la recuerde si alguien cuenta otra versión",
+            "Para que se una al ejército"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué critica la sargento con el ejemplo de las «discrepancias»?",
+          "options": [
+            "Que el Ministerio habla demasiado",
+            "Que los soldados no obedecen",
+            "Que el lenguaje puede ocultar la gravedad de los hechos"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué va a hacer Mario?",
+          "options": [
+            "Escribir lo que vio con su nombre y dárselo a la capitana",
+            "Hablar con la prensa",
+            "Pedir el traslado"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Crees que el lenguaje oficial a veces esconde la gravedad de los hechos? Pon un ejemplo de eufemismo que conozcas.",
+          "model": "Sí, por ejemplo cuando una empresa habla de «ajuste de plantilla» en lugar de decir que va a despedir a cientos de personas."
+        },
+        {
+          "q": "¿Qué significa para ti la expresión «el papel lo aguanta todo»? ¿Estás de acuerdo?",
+          "model": "Significa que se puede escribir cualquier cosa, sea verdad o no. Estoy de acuerdo, por eso hay que comprobar las fuentes."
+        },
+        {
+          "q": "¿Firmarías con tu nombre un testimonio contra tus superiores? ¿Qué te daría miedo?",
+          "model": "Creo que sí, si fuera algo grave, aunque me daría miedo perder el trabajo o sufrir represalias."
+        }
+      ],
+      "gaps": "No sé si [mentir], pero a veces basta con [omitir]. Si dicen que «hubo [discrepancias] en la cadena de [mando]»",
+      "glossary": [
+        {
+          "word": "la compañía",
+          "meaning": "aquí, grupo de soldados"
+        },
+        {
+          "word": "omitir",
+          "meaning": "no decir algo"
+        },
+        {
+          "word": "discrepancias",
+          "meaning": "diferencias de opinión"
+        },
+        {
+          "word": "la cadena de mando",
+          "meaning": "orden de quién manda a quién en el ejército"
+        }
+      ]
+    },
+    {
+      "id": "hospital",
+      "title": "La primera dosis",
+      "place": "Hospital de campaña · mensaje de voz",
+      "context": "Yuleisy manda un mensaje largo a Sebastián. La doctora Ochoa le ha pedido algo muy especial.",
+      "speakers": [
+        {
+          "name": "Yuleisy",
+          "country": "Venezuela",
+          "voice": "es-VE-PaolaNeural"
+        },
+        {
+          "name": "Sebastián",
+          "country": "Venezuela",
+          "voice": "es-VE-SebastianNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Sebastián, siéntate, que esto es largo. Hoy la doctora Ochoa me ha llamado a su tienda y me ha preguntado si quería ser voluntaria para probar la primera dosis que fabriquen aquí."
+        },
+        {
+          "s": 1,
+          "text": "¿Probarla tú? ¿Y si sale mal?"
+        },
+        {
+          "s": 0,
+          "text": "Eso mismo le pregunté yo. Me dijo que la fórmula es buena, pero que el laboratorio es un desastre y que no pueden estar seguros de la pureza. Por eso necesitan a alguien sano, que esté aquí cada día y que sepa describir los síntomas."
+        },
+        {
+          "s": 1,
+          "text": "Hermana, no lo hagas por quedar bien. Ya haces bastante por todos."
+        },
+        {
+          "s": 0,
+          "text": "No es por quedar bien. Llevo diez días viendo gente que llega tarde. Si esto funciona, el próximo que venga no necesitará una pulsera."
+        },
+        {
+          "s": 1,
+          "text": "Entonces no se lo digas a mamá hasta que haya pasado. Y llámame cada noche, aunque sea para decirme que estás aburrida."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué le ha propuesto la doctora Ochoa a Yuleisy?",
+          "options": [
+            "Probar la primera dosis fabricada en el hospital",
+            "Dirigir el triaje",
+            "Volver a Caracas"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Por qué no están seguros de la dosis?",
+          "options": [
+            "Porque la fórmula es mala",
+            "Porque el laboratorio es muy precario",
+            "Porque no tienen pacientes"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Por qué necesitan a alguien como Yuleisy?",
+          "options": [
+            "Porque es la única enfermera",
+            "Porque no tiene familia",
+            "Porque está sana, está allí cada día y sabe describir síntomas"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué le pide Sebastián?",
+          "options": [
+            "Que no se lo diga a su madre hasta después",
+            "Que vuelva a casa",
+            "Que no acepte"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Te ofrecerías voluntario para probar un tratamiento experimental si pudiera salvar a muchas personas? ¿Por qué?",
+          "model": "No estoy seguro. Me gustaría ayudar, pero me daría miedo por mis hijos, que dependen de mí."
+        },
+        {
+          "q": "¿Qué diferencia hay entre hacer algo «por quedar bien» y hacerlo por convicción? Pon un ejemplo.",
+          "model": "Por quedar bien lo haces para que te vean, por convicción lo harías aunque nadie se enterara, como donar sangre de forma anónima."
+        },
+        {
+          "q": "¿Hay cosas que prefieres contar a tu familia solo cuando ya han pasado? ¿Por qué?",
+          "model": "Sí, por ejemplo una operación pequeña: prefiero contarlo cuando ya estoy bien, para que nadie se preocupe sin necesidad."
+        }
+      ],
+      "gaps": "Por eso necesitan a alguien [sano], que esté aquí cada [día] y que sepa describir los [síntomas]. Hermana, no lo hagas por quedar [bien].",
+      "glossary": [
+        {
+          "word": "la pureza",
+          "meaning": "cualidad de lo que no tiene mezcla"
+        },
+        {
+          "word": "los síntomas",
+          "meaning": "señales de una enfermedad"
+        },
+        {
+          "word": "quedar bien",
+          "meaning": "dar buena imagen"
+        },
+        {
+          "word": "desastre",
+          "meaning": "algo que está muy mal"
+        }
+      ]
+    },
+    {
+      "id": "rio",
+      "title": "La sopa de doña Remedios",
+      "place": "Madrid Río · la radio",
+      "context": "La barca ya ha salido de Madrid. Jaime llama a Lola, que está desayunando en casa de doña Remedios.",
+      "speakers": [
+        {
+          "name": "Lola",
+          "country": "España",
+          "voice": "es-ES-ElviraNeural"
+        },
+        {
+          "name": "Jaime",
+          "country": "España",
+          "voice": "es-ES-AlvaroNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Lola, buenos días otra vez. Acabamos de pasar Getafe. Aquí el aire está limpio, sin rastro de la nube, y huele a campo."
+        },
+        {
+          "s": 0,
+          "text": "Te oigo con ruido de motor y pájaros. Qué envidia. Yo estoy en el portal de doña Remedios, con un tazón de sopa que resucitaría a un muerto."
+        },
+        {
+          "s": 1,
+          "text": "¿Te ha convencido para quedarte con ella?"
+        },
+        {
+          "s": 0,
+          "text": "No ha hecho falta. Me ha dicho que en la guerra también hubo una mujer que contaba las noticias por la radio y que gracias a ella su madre supo dónde estaba su padre. Y luego se ha quedado mirando el río sin decir nada."
+        },
+        {
+          "s": 1,
+          "text": "Pues dile que su carta va bien guardada, en el bolsillo de dentro del chaleco, al lado del cuaderno de la fórmula."
+        },
+        {
+          "s": 0,
+          "text": "Se lo digo ahora mismo. Y tú cuida mucho a esos pasajeros, Jaime. Madrid entera os está escuchando."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Dónde está la barca?",
+          "options": [
+            "Acaban de pasar Getafe",
+            "Todavía en Madrid",
+            "Ya en Toledo"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué está tomando Lola?",
+          "options": [
+            "Un café",
+            "Un tazón de sopa",
+            "Un bocadillo"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué le contó doña Remedios a Lola?",
+          "options": [
+            "Que tenía miedo de la nube",
+            "Que su nieta vivía en Valencia",
+            "Que en la guerra una locutora ayudó a su madre a saber dónde estaba su padre"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Dónde lleva Jaime la carta?",
+          "options": [
+            "En el bolsillo de dentro del chaleco",
+            "En la mochila",
+            "En la cabina"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué historias de guerra, emigración o crisis has oído contar a las personas mayores de tu familia?",
+          "model": "Mi abuela contaba que en su pueblo no había radio y que las noticias llegaban con el cartero, a veces con semanas de retraso."
+        },
+        {
+          "q": "¿Por qué crees que doña Remedios se queda en silencio mirando el río? ¿Qué podría estar pensando?",
+          "model": "Quizá recuerda a sus padres o piensa que la historia se repite, y eso le produce una mezcla de tristeza y orgullo."
+        },
+        {
+          "q": "¿Qué comida tiene para ti un efecto casi «mágico» cuando estás mal? ¿Por qué?",
+          "model": "Las lentejas de mi padre, porque me recuerdan a los inviernos de cuando era niño y me hacen sentir en casa."
+        }
+      ],
+      "gaps": "Pues dile que su [carta] va bien guardada, en el [bolsillo] de dentro del [chaleco], al lado del [cuaderno] de la fórmula.",
+      "glossary": [
+        {
+          "word": "sin rastro",
+          "meaning": "sin ninguna señal"
+        },
+        {
+          "word": "tazón",
+          "meaning": "taza grande y sin asa"
+        },
+        {
+          "word": "resucitaría a un muerto",
+          "meaning": "es tan buena que daría vida a cualquiera"
+        },
+        {
+          "word": "el chaleco",
+          "meaning": "prenda sin mangas"
+        }
+      ]
+    }
+  ]
+}

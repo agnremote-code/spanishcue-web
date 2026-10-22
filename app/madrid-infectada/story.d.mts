@@ -1,0 +1,14 @@
+export type Zone = { id: string; name: string; sign: string; hook: string; sound: string; mood: string };
+export type CastMember = { name: string; full: string; role: string; gender: 'f' | 'm'; voice: string; pitch: string; country: string; look: Record<string, unknown> };
+export type Spot = { id: string; zone: string; cast: string[] };
+export const ZONES: Zone[];
+export const ZONE_IDS: string[];
+export function zoneById(id: string): Zone | null;
+export const CAST: Record<string, CastMember>;
+export const SPOTS: Spot[];
+export const SPOT_IDS: string[];
+export function spotById(id: string): Spot | null;
+export function spotsOf(zone: string): Spot[];
+export const LEVEL_IDS: string[];
+export const SCENE_WORDS: Record<string, [number, number]>;
+export const TALK_MIN_WORDS: Record<string, number>;

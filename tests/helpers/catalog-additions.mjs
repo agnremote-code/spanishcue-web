@@ -13,6 +13,20 @@ const courseLessons=[...readFileSync(new URL('../../app/grammar-classroom/catalo
 const additions = [
   ...courseLessons,
   {
+    // 2026-10-22: Madrid infectada (A0–C2), a PRO 3D world in ten zones, wired like the feria.
+    id:242,path:'/madrid-infectada',files:/^(?:app\/madrid-infectada\/|app\/escucha-3d\/content\/madrid\/|public\/madrid-infectada\/|public\/audio\/escucha-3d\/madrid-|tests\/madrid-infectada\.test\.mjs$|scripts\/check-madrid\.mjs$|docs\/audits\/madrid-infectada-english-additions-20261022\.json$)/,
+    edits:{
+      'app/lesson-catalog.ts':[text=>{
+        const lines=text.split('\n');
+        const at=lines.flatMap((line,i)=>line.startsWith('  {id:242,')&&line.includes('path:"/madrid-infectada"')?[i]:[]);
+        assert.equal(at.length,1,'one madrid catalog entry');lines.splice(at[0],1);return lines.join('\n');
+      },[',237,238,240,241,242],',',237,238,240,241],']],
+      'scripts/test-worker.mjs':[[" await run(['--test','tests/madrid-infectada.test.mjs']);\n",'']],
+      'tests/level-cleanup.test.mjs':[['assert.equal(lessons.length, 316);','assert.equal(lessons.length, 315);'],['238,240,242].includes(lesson.id)','238,240].includes(lesson.id)'],["l.levels?.includes('A0')).length,18);","l.levels?.includes('A0')).length,17);"],['assert.equal(a1Lessons.length, 76);','assert.equal(a1Lessons.length, 75);'],["relative.startsWith('app/madrid-infectada/')||",'']],
+      'tests/rendered-html.test.mjs':[['assert.match(html,/294(?:<!-- -->|\\s)+resultados/);assert.match(html,/309(?:<!-- -->|\\s)+clases totales/);','assert.match(html,/293(?:<!-- -->|\\s)+resultados/);assert.match(html,/308(?:<!-- -->|\\s)+clases totales/);']],
+    },
+  },
+  {
     // 2026-10-20: the grammar course in order (G001–G236). Its data names the A0 first class.
     id:300,path:'/spanish-grammar-lessons#course',files:/^(?:app\/grammar-classroom\/(?:curriculum\.ts|course\.ts|GrammarCourse\.tsx|course\.module\.css|live\/progress\.ts)$|tests\/grammar-course\.test\.mjs$|docs\/curriculum\/)/,
     edits:{
@@ -496,7 +510,7 @@ export function withoutApprovedAdditions(path, bytes) {
     bytes = Buffer.from(text);
   }
   // Undo the latest additive lessons in reverse order before the grammar snapshot.
-  for (const addition of additions.filter(item=>item.id===300||item.id===241||item.id===240||item.id===239||item.id===238||item.id===237||item.id===236)) {
+  for (const addition of additions.filter(item=>item.id===300||item.id===242||item.id===241||item.id===240||item.id===239||item.id===238||item.id===237||item.id===236)) {
     const latestSteps=addition.edits[path]||[];
     if(!latestSteps.length)continue;
     let latest=bytes.toString('utf8');
@@ -507,7 +521,7 @@ export function withoutApprovedAdditions(path, bytes) {
     bytes=Buffer.from(latest);
   }
   bytes=beforeGrammarBytes(path,bytes);
-  const steps = [...additions.filter(item=>item.id!==300&&item.id!==236&&item.id!==237&&item.id!==238&&item.id!==239&&item.id!==240&&item.id!==241), ...repairs.filter(item => !item.latest)].flatMap(item => item.edits[path] || []);
+  const steps = [...additions.filter(item=>item.id!==300&&item.id!==236&&item.id!==237&&item.id!==238&&item.id!==239&&item.id!==240&&item.id!==241&&item.id!==242), ...repairs.filter(item => !item.latest)].flatMap(item => item.edits[path] || []);
   if (!steps.length) return bytes;
   let text = bytes.toString('utf8');
   for (const step of steps) {
