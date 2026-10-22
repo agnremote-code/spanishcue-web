@@ -2,12 +2,16 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { runSmoke } from '../scripts/production-smoke.mjs';
 
+const resourcePages = {
+  '/resources/spanish-conversation-activity-a0-c2-hospital-san-casi-vivo': '3D Spanish Conversation Activity A0–C2: Hospital San Casi Vivo',
+  '/resources/spanish-conversation-activity-a2-la-feria-de-villaluz': '3D Spanish Conversation Activity A2: La feria de Villaluz',
+};
 function fixture(overrides = {}) {
   return async (url, options) => {
     const path = new URL(url).pathname;
     if (overrides[path]) return overrides[path]();
     if (path === '/cuenta') return new Response(null, { status: 307, headers: { location: '/ingresar?next=/cuenta' } });
-    if (path === '/tablero-de-eso-si-hablo' || path === '/noche-abierta') return new Response(null, { status: 302, headers: { location: '/acceso' } });
+    if (path === '/tablero-de-eso-si-hablo' || path === '/noche-abierta' || path === '/hospital-san-casi-vivo' || path === '/la-feria-de-villaluz') return new Response(null, { status: 302, headers: { location: '/acceso' } });
     if (path.startsWith('/audio/')) return new Response('Forbidden', { status: 403 });
     if (path === '/api/students') return Response.json({ error: 'unauthorized' }, { status: 401, headers: { 'cache-control': 'private, no-store' } });
     if (path === '/api/auth/verification-email') return Response.json({ code: 'INVALID_SESSION' }, { status: 401 });
@@ -20,6 +24,7 @@ function fixture(overrides = {}) {
       if (options.headers?.origin !== 'https://spanishcue.com') return Response.json({ error: 'origin' }, { status: 403 });
       return Response.json({ error: 'invalid' }, { status: 400 });
     }
+    if (resourcePages[path]) return new Response(`<html><title>${resourcePages[path]} | SPANISHCUE</title><h2>Inside the 3D world</h2><script type="application/ld+json">{"@type":"BreadcrumbList"}</script></html>`);
     if (path.startsWith('/does-not-exist')) return new Response('404', { status: 404 });
     if (path === '/la-fabrica-de-los-nombres') return new Response('<html>La Fábrica de los Nombres</html>');
     if (path === '/para-profesores' || path === '/aprender-espanol') return new Response(`<html><link rel="canonical" href="https://spanishcue.com${path}"/><nav class="audience-switch"></nav></html>`);
@@ -97,4 +102,16 @@ test('production may not have the audience landings yet, but staging must', asyn
   await assert.rejects(runSmoke('https://spanishcue-staging.agnremote.workers.dev', notYet), /para-profesores: expected 200, got 404/);
   const broken = fixture({ '/para-profesores': () => new Response('error', { status: 500 }) });
   await assert.rejects(runSmoke('https://spanishcue.com', broken), /para-profesores: expected 200,404, got 500/);
+});
+
+test('released PRO 3D worlds stay private while their teacher pages stay public', async () => {
+  const results = await runSmoke('https://spanishcue.com', fixture());
+  for (const path of ['/la-feria-de-villaluz', '/audio/escucha-3d/feria-a2-baile.mp3', ...Object.keys(resourcePages)]) assert.ok(results.some(r => r.path === path), path);
+  for (const [path, response, message] of [
+    ['/la-feria-de-villaluz', () => new Response('<html>world</html>'), /la-feria-de-villaluz: expected/],
+    ['/hospital-san-casi-vivo', () => new Response(null, { status: 302, headers: { location: '/ingresar' } }), /wrong protection target/],
+    ['/audio/escucha-3d/feria-a2-baile.mp3', () => new Response('mp3'), /feria-a2-baile\.mp3: expected 403, got 200/],
+    ['/resources/spanish-conversation-activity-a2-la-feria-de-villaluz', () => new Response('<html><title>Spanish Conversation Activity A2: La feria de Villaluz | SPANISHCUE</title><h2>Inside the 3D world</h2>"BreadcrumbList"</html>'), /must carry its 3D title/],
+    ['/resources/spanish-conversation-activity-a0-c2-hospital-san-casi-vivo', () => new Response('404', { status: 404 }), /expected 200, got 404/],
+  ]) await assert.rejects(runSmoke('https://spanishcue.com', fixture({ [path]: response })), message, path);
 });

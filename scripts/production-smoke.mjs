@@ -28,6 +28,19 @@ export async function runSmoke(origin, fetcher = fetch) {
     await protectedRedirect(`/noche-abierta?level=${level}`, "/acceso");
   }
   await check("/audio/habitacion-508/release-smoke.mp3", 403);
+  // Released PRO 3D worlds: the world and its listening audio stay private,
+  // while its indexable teacher page stays public and names the 3D world.
+  for (const [world, audio, resource, title] of [
+    ["/hospital-san-casi-vivo", null, "/resources/spanish-conversation-activity-a0-c2-hospital-san-casi-vivo", "3D Spanish Conversation Activity A0–C2: Hospital San Casi Vivo"],
+    ["/la-feria-de-villaluz", "/audio/escucha-3d/feria-a2-baile.mp3", "/resources/spanish-conversation-activity-a2-la-feria-de-villaluz", "3D Spanish Conversation Activity A2: La feria de Villaluz"],
+  ]) {
+    await protectedRedirect(world, "/acceso");
+    if (audio) await check(audio, 403);
+    const html = await (await check(resource, 200)).text();
+    assert.ok(html.includes(`<title>${title}`), `${resource} must carry its 3D title`);
+    assert.ok(html.includes("Inside the 3D world"), `${resource} must describe the 3D world`);
+    assert.ok(html.includes('"BreadcrumbList"'), `${resource} must carry its breadcrumb`);
+  }
   const students = await check("/api/students", 401);
   assert.match(students.headers.get("cache-control") || "", /no-store/i);
   const headers = { origin, "content-type": "application/json" };
