@@ -22,6 +22,8 @@ const additions = [
         assert.equal(at.length,1,'one madrid catalog entry');lines.splice(at[0],1);return lines.join('\n');
       },[',237,238,240,241,242],',',237,238,240,241],']],
       'scripts/test-worker.mjs':[[" await run(['--test','tests/madrid-infectada.test.mjs']);\n",'']],
+      'tests/level-cleanup.test.mjs':[['assert.equal(lessons.length, 316);','assert.equal(lessons.length, 315);'],['238,240,242].includes(lesson.id)','238,240].includes(lesson.id)'],["l.levels?.includes('A0')).length,18);","l.levels?.includes('A0')).length,17);"],['assert.equal(a1Lessons.length, 76);','assert.equal(a1Lessons.length, 75);'],["relative.startsWith('app/madrid-infectada/')||",'']],
+      'tests/rendered-html.test.mjs':[['assert.match(html,/294(?:<!-- -->|\\s)+resultados/);assert.match(html,/309(?:<!-- -->|\\s)+clases totales/);','assert.match(html,/293(?:<!-- -->|\\s)+resultados/);assert.match(html,/308(?:<!-- -->|\\s)+clases totales/);']],
     },
   },
   {
