@@ -22,7 +22,7 @@ Before applying 0016:
 
 1. Confirm the exact merged candidate and that the official release state is idle and the merge lock is absent. Do not modify, steal or expire either lock.
 2. Resolve the overlapping production workflow work through the owner or wait for its merge, following AGENTS.md. Use the single authorized migration/release mechanism; do not improvise a second deployer.
-3. Inspect the actual staging and production D1 bindings and table inventory read-only. Export through the existing owner export mechanism. Keep private exports private and restore them into a disposable database, verifying integrity and existing account entitlements before any forward operation.
+3. Inspect the actual staging and production D1 bindings and table inventory read-only. Export through the existing owner export mechanism. Keep private exports private. Before 0016 exists in production, rehearse the export against the base revision schema (daee8bf28728c1a10c2afa069ab54606f050fb95), then apply 0016 twice to that disposable restored database. Verify integrity and existing account entitlements before the live forward operation. Do not weaken the latest-schema importer to silently ignore missing tables.
 4. Apply only the reviewed CREATE-only SQL to staging, verify all columns and indexes and a representative consented test submission there, then apply the same approved operation to production under the official coordination rules. Do not submit fabricated production leads.
 5. Verify a normal visit offers the form, cross-origin POSTs fail, ordinary users cannot list requests, and the owner can read a real authorized submission. Run the official production smoke against the exact released SHA.
 
