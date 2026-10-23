@@ -249,13 +249,13 @@ export function trackMarketingEvent(
     try { window.sessionStorage.setItem("spanishcue.founder-modal.converted", "1"); } catch {}
   }
 
-  // `subscription_first_paid` is the entry point for the customer's first
-  // server-verified paid transaction (the US$2 trial or the first US$15.50
-  // month). It is the only event allowed to reach the Google Ads purchase
-  // conversion, which follows marketing consent independently from analytics.
+  // The first server-verified charge can be a US$2 trial or a US$15.50
+  // monthly subscription. Only monthly charges trigger the primary Google
+  // Ads Paid Subscription conversion; trials remain separate GA4 events.
+  // Marketing consent controls Ads independently of analytics consent.
   if (event === "subscription_first_paid") {
     if (!properties.transaction_id) return;
-    sendGoogleAdsPurchase(properties);
+    if (properties.plan === "monthly") sendGoogleAdsPurchase(properties);
     if (!consentFor("analytics")) return;
     // GA4 gets one specific event for the transaction (never the generic
     // name as well), plus the documented revenue alias used by funnel reports.
