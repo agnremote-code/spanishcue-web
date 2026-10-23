@@ -1,0 +1,306 @@
+{
+  "version": 1,
+  "authorization": "PENDING",
+  "additions": [
+    {
+      "path": "app/academias/WhatsAppFloat.tsx",
+      "text": "Hi, I would like information about SpanishCue for my school."
+    },
+    {
+      "path": "app/academias/WhatsAppFloat.tsx",
+      "text": "Message us on WhatsApp"
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "A city at night for speaking and listening. The centre is free."
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "A darkly funny hospital, from A0 to C2. The reception is free."
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "A fantasy adventure with quests and spells to talk about."
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "A city overrun by zombies: decide, negotiate and survive in Spanish."
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "3D WORLDS"
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "Your students don’t just watch the lesson."
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "They step into it."
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "Each world has a Conversation mode and a Listening mode, with separately written levels. The teacher guides from the shared screen."
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "Free to try"
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "GRAMMAR FROM A0 TO C2"
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "grammar lessons,"
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "one per level."
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "First understand, then practise, listen, speak and write. Every lesson has a mode for teaching with a teacher and another for students to work on their own."
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "Open the free first lesson"
+    },
+    {
+      "path": "app/bauti/copy.ts",
+      "text": "Open the chat with Bauti"
+    },
+    {
+      "path": "app/bauti/copy.ts",
+      "text": "Close the chat"
+    },
+    {
+      "path": "app/bauti/copy.ts",
+      "text": "Chat with Bauti"
+    },
+    {
+      "path": "app/bauti/copy.ts",
+      "text": "SpanishCue assistant for schools"
+    },
+    {
+      "path": "app/bauti/copy.ts",
+      "text": "Ask Bauti"
+    },
+    {
+      "path": "app/bauti/copy.ts",
+      "text": "Questions from schools"
+    },
+    {
+      "path": "app/bauti/copy.ts",
+      "text": "Hi! I’m Bauti. What would you like to know about SpanishCue for your school?"
+    },
+    {
+      "path": "app/bauti/copy.ts",
+      "text": "← Other questions"
+    },
+    {
+      "path": "app/bauti/copy.ts",
+      "text": "WhatsApp"
+    },
+    {
+      "path": "app/bauti/copy.ts",
+      "text": "Hi, I would like information about SpanishCue for my school."
+    },
+    {
+      "path": "app/bauti/copy.ts",
+      "text": "Automatic answers. For your specific case, message us on WhatsApp."
+    },
+    {
+      "path": "app/bauti/copy.ts",
+      "text": "Request a demo"
+    },
+    {
+      "path": "app/bauti/copy.ts",
+      "text": "what"
+    },
+    {
+      "path": "app/bauti/copy.ts",
+      "text": "What is SpanishCue?"
+    },
+    {
+      "path": "app/bauti/copy.ts",
+      "text": "A library of Spanish lessons ready to open on screen: grammar by level, conversation and 3D worlds where students walk around, choose what to say and talk."
+    },
+    {
+      "path": "app/bauti/copy.ts",
+      "text": "team"
+    },
+    {
+      "path": "app/bauti/copy.ts",
+      "text": "How does my team use it?"
+    },
+    {
+      "path": "app/bauti/copy.ts",
+      "text": "Each teacher signs in with their own account. From the school dashboard you invite your teachers by email and see who is on your team."
+    },
+    {
+      "path": "app/bauti/copy.ts",
+      "text": "Open the school dashboard"
+    },
+    {
+      "path": "app/bauti/copy.ts",
+      "text": "levels"
+    },
+    {
+      "path": "app/bauti/copy.ts",
+      "text": "Which levels does it cover?"
+    },
+    {
+      "path": "app/bauti/copy.ts",
+      "text": "Grammar from A0 to C2, one lesson per level, and conversation with its own levels in each 3D world. A0 includes English support."
+    },
+    {
+      "path": "app/bauti/copy.ts",
+      "text": "price"
+    },
+    {
+      "path": "app/bauti/copy.ts",
+      "text": "How much does it cost for a school?"
+    },
+    {
+      "path": "app/bauti/copy.ts",
+      "text": "There is no public institutional price: licences are agreed according to the size of your team. Message us and we will work it out together."
+    },
+    {
+      "path": "app/bauti/copy.ts",
+      "text": "try"
+    },
+    {
+      "path": "app/bauti/copy.ts",
+      "text": "Can I try it first?"
+    },
+    {
+      "path": "app/bauti/copy.ts",
+      "text": "Yes. Noche abierta, the Hospital San Casi Vivo reception and the Clase inicial are free. You can also request a demo for your team."
+    },
+    {
+      "path": "app/bauti/copy.ts",
+      "text": "Try Noche abierta"
+    },
+    {
+      "path": "app/bauti/copy.ts",
+      "text": "Open the chat with Bauti"
+    },
+    {
+      "path": "app/bauti/copy.ts",
+      "text": "Close the chat"
+    },
+    {
+      "path": "app/bauti/copy.ts",
+      "text": "Chat with Bauti"
+    },
+    {
+      "path": "app/bauti/copy.ts",
+      "text": "SpanishCue assistant for teachers"
+    },
+    {
+      "path": "app/bauti/copy.ts",
+      "text": "Ask Bauti"
+    },
+    {
+      "path": "app/bauti/copy.ts",
+      "text": "Questions? I can help"
+    },
+    {
+      "path": "app/bauti/copy.ts",
+      "text": "Hi! I’m Bauti. How can I help you with SpanishCue?"
+    },
+    {
+      "path": "app/bauti/copy.ts",
+      "text": "← Other questions"
+    },
+    {
+      "path": "app/bauti/copy.ts",
+      "text": "WhatsApp"
+    },
+    {
+      "path": "app/bauti/copy.ts",
+      "text": "Hi, I have a question about SpanishCue."
+    },
+    {
+      "path": "app/bauti/copy.ts",
+      "text": "Automatic answers. For your specific case, message us on WhatsApp."
+    },
+    {
+      "path": "app/bauti/copy.ts",
+      "text": "See PRO"
+    },
+    {
+      "path": "app/bauti/copy.ts",
+      "text": "what"
+    },
+    {
+      "path": "app/bauti/copy.ts",
+      "text": "What is SpanishCue?"
+    },
+    {
+      "path": "app/bauti/copy.ts",
+      "text": "Spanish lessons ready to teach: open the lesson, share your screen and teach. Grammar from A0 to C2, conversation and 3D worlds that get your students talking."
+    },
+    {
+      "path": "app/bauti/copy.ts",
+      "text": "free"
+    },
+    {
+      "path": "app/bauti/copy.ts",
+      "text": "What can I try for free?"
+    },
+    {
+      "path": "app/bauti/copy.ts",
+      "text": "The centre of Noche abierta, the entrance and reception of Hospital San Casi Vivo, the Clase inicial and Latinoamérica al Oído are free."
+    },
+    {
+      "path": "app/bauti/copy.ts",
+      "text": "Try Noche abierta"
+    },
+    {
+      "path": "app/bauti/copy.ts",
+      "text": "price"
+    },
+    {
+      "path": "app/bauti/copy.ts",
+      "text": "How much is PRO?"
+    },
+    {
+      "path": "app/bauti/copy.ts",
+      "text": "US$15.50 a month, final price including taxes. It unlocks the whole library and you can cancel any time before the next renewal."
+    },
+    {
+      "path": "app/bauti/copy.ts",
+      "text": "See PRO"
+    },
+    {
+      "path": "app/bauti/copy.ts",
+      "text": "online"
+    },
+    {
+      "path": "app/bauti/copy.ts",
+      "text": "How do I use it in online lessons?"
+    },
+    {
+      "path": "app/bauti/copy.ts",
+      "text": "Open the lesson in your browser and share your screen in Zoom or Meet. Turn on “share sound” so your student hears the audio. Teacher mode saves each student’s progress."
+    },
+    {
+      "path": "app/bauti/copy.ts",
+      "text": "school"
+    },
+    {
+      "path": "app/bauti/copy.ts",
+      "text": "I work at a language school"
+    },
+    {
+      "path": "app/bauti/copy.ts",
+      "text": "SpanishCue also offers team licences: each teacher with their own account and a dashboard for the school."
+    },
+    {
+      "path": "app/bauti/copy.ts",
+      "text": "See SpanishCue for schools"
+    }
+  ]
+}

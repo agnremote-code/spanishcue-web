@@ -30,6 +30,8 @@ import { FreeLessonConversionBar } from "./marketing/MarketingSections";
 import FreeLessonRegistrationGate from "./marketing/FreeLessonRegistrationGate";
 import { audienceFromAccess, primaryCtaFor } from "./marketing/cta-state";
 import CookieConsent from "./privacy/CookieConsent";
+import AskBauti from "./bauti/AskBauti";
+import "./bauti/bauti.css";
 import { canonicalUrl, homeMetaCopy, isSearchPrivatePath, languageAlternates } from "./seo";
 import { socialPreviewImage, socialPreviewUrl } from "./social-preview";
 
@@ -93,6 +95,8 @@ export default async function RootLayout({
   const signedIn = signedInFromHeaders(requestHeaders);
   const audience = audienceFromAccess(signedIn, fullAccess);
   const freeLessonCta = primaryCtaFor(audience, pathname);
+  // Bauti stays out of lessons, 3D worlds and private tools, where the corner belongs to the class.
+  const bautiRoute = !currentLesson && !/^\/(demo|admin|autoestudio|clase|gramatica|ingresar|pro\/claim)(\/|$)/.test(pathname);
   return (
     <html lang={locale}>
       <body>
@@ -108,6 +112,7 @@ export default async function RootLayout({
           {children}
           {!fullAccess && (freeLesson || pathname === "/" || pathname === "/sistema-verbal" || pathname === "/choose-conversation") && <ProDiscovery signedIn={signedIn} />}
           <LessonReportRoutes lessons={lessons.map(l=>({id:l.id,title:l.title,level:l.level,levels:conversationFamilyByLessonId.get(l.id)?.availableLevels||l.levels,path:l.path||`/clase/${l.id}`}))} signedIn={signedIn} />
+          {!fullAccess && bautiRoute && <AskBauti audience={pathname.startsWith("/academias") ? "academy" : "teacher"} fullAccess={fullAccess} identityChecked={requestHeaders.get("x-spanishcue-identity-checked") === "1"} />}
           <CookieConsent />
           {freeLesson && currentLesson && !signedIn && (
             <FreeLessonRegistrationGate lessonId={currentLesson.id} lessonTitle={currentLesson.title} />
