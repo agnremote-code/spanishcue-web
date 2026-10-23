@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "authorization": "Owner (Ale) 2026-10-23 16:00Z in the «Academias: landing y panel» thread (cmsg_01Gr5R4j3t2Yet65UcmhcVhA8G2JQZ7jHG12XTaQC7kDmN, «excelente») in reply to the exact English literals listed in cmsg_01Gr5R4j3t2Yet65UcmhcVhASbdzMfkTJEhHA8heChKAzY. Exact additions only.",
+  "additions": [
+    {
+      "path": "app/academias/page.tsx",
+      "text": "Is there a dashboard to manage my school?"
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "Yes. Register your school in the dashboard, invite your teachers by email and see who is on your team. Licences for full access are agreed with SpanishCue after the demo."
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "School dashboard"
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "The library, lessons and the"
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "school dashboard"
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "are available today: register your school and invite your teachers. Licences for full access are discussed during the demo."
+    }
+  ]
+}
