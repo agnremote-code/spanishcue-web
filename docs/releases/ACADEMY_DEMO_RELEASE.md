@@ -31,3 +31,15 @@ Before applying 0016:
 Current identity is Firebase, resolved to stable internal `users`/`auth_identities` through `db/accounts.ts`. Access is already separated from billing through `access_grants`; provider subscriptions and verified payment records remain independent. Worker identity headers are stripped and rebuilt from verified sessions. The current owner administration is global, so it must not become the academy administrator role.
 
 No institutional membership, invitation, seat allocation or academy usage dashboard exists today. The next bounded MVP should add institutions, institution memberships (`administrator`/`teacher`), hashed expiring invitations, and institution-specific access allocations. Authorize every administrative query against the authenticated user’s membership and institution ID, never a client-supplied owner field. Resolve individual and institutional library access additively, preserving personal subscriptions. Seat enforcement and revocation must be atomic. Do not create a public institutional tariff or connect academy roles to the global owner flag. Show usage only once genuine institutional events exist.
+
+## Phase 2: institutions MVP (source only; 0017 not applied)
+
+`drizzle/0017_institutions.sql` is CREATE-only: `institutions`, `institution_members` (one institution per account, roles `admin`/`teacher`) and `institution_invitations` (only a SHA-256 of the token is stored; 14-day links bound to the invited email; a new invite to the same email revokes the previous one).
+
+- `/academias/panel`: any signed-in teacher can register an academy and becomes its administrator. Administrators edit name/city/web, invite by link (copy or open in their mail client; no email is sent by the server yet), revoke invitations, change roles and remove members. Teachers see their academy and the library only.
+- `/academias/unirse?token=…`: accepts an invitation with the invited account.
+- `/admin/academias` (owner only): lists academies and sets `seat_limit` after a real agreement. No public price, plan or checkout exists.
+- Access: `syncSeats` gives the first `seat_limit` members (by join date) an `access_grants` row with `source='institution'` and `source_reference=<institution id>`; everyone else's institutional grant is revoked. The account resolver is unchanged, and personal billing/manual grants are never touched.
+- Every admin query uses the institution of the authenticated user's own membership; no client-supplied institution id is trusted. `/api/academy`, `/academias/panel` and `/academias/unirse` are identity-aware in the Worker.
+- Before 0017 exists the panel and invitation pages return 404 and `/api/academy` returns 503, so nothing half-working is public.
+- Not built yet: server-sent invitation emails, institution usage reporting (no real institutional events exist), per-teacher seat choice.
