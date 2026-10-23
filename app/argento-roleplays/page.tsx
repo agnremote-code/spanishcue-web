@@ -20,7 +20,7 @@ export default function ArgentoRoleplays(){
   const go=(direction:number)=>{if(current===null)return;openScenario((current+direction+scenarios.length)%scenarios.length)};
 
   return <main className="arp-shell">
-    <nav className="arp-nav"><Link href="/" className="arp-brand"><img src="/brand/mascot/portrait.webp" alt=""/><span><b>SPANISHCUE</b><small>A1 · CONVERSACIÓN</small></span></Link><div><span>15 ESCENAS</span><span>210 INTERVENCIONES</span><span>100% BILINGÜE</span></div><Link href="/">← BIBLIOTECA</Link></nav>
+    <nav className="arp-nav"><Link href="/" className="arp-brand"><img src="/brand/spanishcue-logo.png" alt=""/><span><b>SPANISHCUE</b><small>A1 · CONVERSACIÓN</small></span></Link><div><span>15 ESCENAS</span><span>210 INTERVENCIONES</span><span>100% BILINGÜE</span></div><Link href="/">← BIBLIOTECA</Link></nav>
 
     {scenario===null?<>
       <header className="arp-hero"><div className="arp-hero-copy"><span className="arp-kicker">🇦🇷 A1 · ROLEPLAYS REALES · REAL ROLEPLAYS</span><h1>ARGENTO<br/><em>ROLEPLAYS</em></h1><PairText pair={["Español argentino real desde cero. Lee, toma chunks, improvisa y habla.","Real Argentine Spanish from zero. Read, borrow chunks, improvise and speak."]}/><div className="arp-steps"><article><b>01 · MIRA</b><span>Read the full scene</span></article><article><b>02 · TOMA</b><span>Borrow useful chunks</span></article><article><b>03 · HABLA</b><span>Create your answer</span></article></div></div><div className="arp-hero-art" aria-hidden="true"><div className="arp-orbit one">CHE</div><div className="arp-orbit two">DALE</div><div className="arp-orbit three">JOYA</div><img className="arp-hero-truck" src="/chespanish-guide-truck.webp" alt=""/></div></header>

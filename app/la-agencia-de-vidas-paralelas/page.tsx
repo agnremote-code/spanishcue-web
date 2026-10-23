@@ -144,7 +144,7 @@ export default function AgenciaDeVidasParalelas(){
 
   return <main className="parallel-app">
     <nav className="parallel-nav">
-      <Link href="/" className="parallel-brand"><img src="/brand/mascot/portrait.webp" alt=""/><span><b>SPANISHCUE</b><small>C1 · CONVERSACIÓN</small></span></Link>
+      <Link href="/" className="parallel-brand"><img src="/brand/spanishcue-logo.png" alt=""/><span><b>SPANISHCUE</b><small>C1 · CONVERSACIÓN</small></span></Link>
       <div className="agency-status"><i/> AGENCIA ABIERTA · SESIÓN 45 MIN</div>
       <Link href="/">BIBLIOTECA</Link>
     </nav>

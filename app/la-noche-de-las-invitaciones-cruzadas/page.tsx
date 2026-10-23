@@ -53,7 +53,7 @@ export default function InvitacionesCruzadas(){
   const chooseTable=(index:number)=>setTable(old=>old.includes(index)?old.filter(item=>item!==index):old.length<2?[...old,index]:old);
 
   return <main className="gala-app" style={{"--guest":active.color} as CSSProperties}>
-    <header className="gala-top"><Link href="/"><img src="/brand/mascot/portrait.webp" alt=""/><span><b>SPANISHCUE</b><small>A1 · CONVERSACIÓN</small></span></Link><div><b>{stages[stage][0]}</b><span>{stages[stage][1]}</span></div><Link href="/">BIBLIOTECA</Link></header>
+    <header className="gala-top"><Link href="/"><img src="/brand/spanishcue-logo.png" alt=""/><span><b>SPANISHCUE</b><small>A1 · CONVERSACIÓN</small></span></Link><div><b>{stages[stage][0]}</b><span>{stages[stage][1]}</span></div><Link href="/">BIBLIOTECA</Link></header>
     <nav className="gala-progress" aria-label="Etapas de la clase">{stages.map(([name,time],index)=><button key={name} className={index===stage?"active":index<stage?"done":""} onClick={()=>go(index)}><i>{index<stage?"✓":index+1}</i><span>{name}<small>{time}</small></span></button>)}</nav>
 
     {stage===0&&<section className="gala-hero">
