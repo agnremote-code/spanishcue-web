@@ -255,7 +255,7 @@ export default function CondicionalesPage() {
           </div>
           <div className="co-cover-copy">
             <div className="co-kicker">
-              <span>A1 → C1</span> CLASE MAESTRA · 100% BILINGÜE
+              <span>B2</span> CLASE MAESTRA · 100% BILINGÜE
             </div>
             <p className="co-overline">MUNDOS POSIBLES · POSSIBLE WORLDS</p>
             <h1>

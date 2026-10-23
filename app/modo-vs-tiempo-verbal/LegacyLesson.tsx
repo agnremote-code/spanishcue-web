@@ -8,7 +8,7 @@ export default function ModoVsTiempoPage() {
     <main className="vmt-page">
       <nav><Link href="/">← Biblioteca</Link><span>SPANISHCUE · GRAMÁTICA</span></nav>
       <header>
-        <small>MINI CLASE BASE · A1–C1</small>
+        <small>MINI CLASE BASE · A1</small>
         <h1>Modo <em>vs.</em><br />tiempo verbal</h1>
         <p>Una distinción breve para entender mejor presente, pasado, subjuntivo, imperativo y condicional.</p>
       </header>
