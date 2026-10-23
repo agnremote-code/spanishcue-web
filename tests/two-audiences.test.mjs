@@ -73,17 +73,20 @@ test("the home page keeps its hero and only gains the selector", () => {
   assert.match(brand, /PROBAR UNA CLASE GRATIS/);
 });
 
-test("the selector is two plain, accessible links to the two landings", () => {
+test("the main selector offers academy and teacher links while student routes remain available", () => {
   const source = read("app/audience/AudienceSwitch.tsx");
   assert.match(source, /<nav /);
   assert.match(source, /aria-current=/);
-  assert.match(source, /Enseñar español/);
-  assert.match(source, /Aprender español/);
-  assert.match(source, /Teach Spanish/);
-  assert.match(source, /Learn Spanish/);
+  assert.match(source, /Soy academia/);
+  assert.match(source, /Soy profesor/);
+  assert.match(source, /For schools/);
+  assert.match(source, /For teachers/);
   assert.doesNotMatch(source, /<dialog|showModal|role="dialog"/, "never a blocking chooser");
   assert.equal(mod.TEACHER_HOME_PATH, "/");
   assert.equal(mod.STUDENT_LANDING_PATH, "/aprender-espanol");
+  assert.equal(mod.ACADEMY_LANDING_PATH, "/academias");
+  assert.equal(mod.audienceForPath("/academias?lang=en"), "academy");
+  assert.ok(mod.sitemap().some(entry => entry.url === 'https://spanishcue.com/academias'));
   assert.equal(mod.audienceForPath("/aprender-espanol"), "student");
   assert.equal(mod.audienceForPath("/para-profesores"), "teacher");
   assert.equal(mod.audienceForPath("/"), "teacher");
@@ -115,7 +118,7 @@ test("analytics adds audience events without a second purchase or checkout event
 
 test("public client roots cover every component the new pages render", () => {
   const protect = read("scripts/protect-client-assets.mjs");
-  for (const root of ["app/audience/AudienceSwitch.tsx", "app/audience/AudienceTopbar.tsx", "app/audience/TrackedLink.tsx", "app/SpanishCueBrand.tsx"]) {
+  for (const root of ["app/audience/AudienceSwitch.tsx", "app/audience/AudienceTopbar.tsx", "app/audience/TrackedLink.tsx", "app/SpanishCueBrand.tsx", "app/academias/DemoForm.tsx"]) {
     assert.ok(protect.includes(`"${root}"`), root);
   }
   const smoke = read("scripts/production-smoke.mjs");

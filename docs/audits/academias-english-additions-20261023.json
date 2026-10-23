@@ -1,0 +1,406 @@
+{
+  "version": 1,
+  "authorization": "Owner-provided SpanishCue institutional specification (2026-10-23), sections 2, 3, 6 and 8: new academy/teacher navigation, academy acquisition landing and demo form, preserving the existing bilingual experience. Exact new English literals only; no existing copy deletions or edits are exempted.",
+  "additions": [
+    {
+      "path": "app/academias/DemoForm.tsx",
+      "text": "We could not save your request. Please try again."
+    },
+    {
+      "path": "app/academias/DemoForm.tsx",
+      "text": "Check your connection and try again."
+    },
+    {
+      "path": "app/academias/DemoForm.tsx",
+      "text": "Your request is saved."
+    },
+    {
+      "path": "app/academias/DemoForm.tsx",
+      "text": "We will review your school’s needs and contact you by email to arrange the demo."
+    },
+    {
+      "path": "app/academias/DemoForm.tsx",
+      "text": "Explore the 3D world while you wait"
+    },
+    {
+      "path": "app/academias/DemoForm.tsx",
+      "text": "Your name"
+    },
+    {
+      "path": "app/academias/DemoForm.tsx",
+      "text": "Full name"
+    },
+    {
+      "path": "app/academias/DemoForm.tsx",
+      "text": "School or institution"
+    },
+    {
+      "path": "app/academias/DemoForm.tsx",
+      "text": "Your school’s name"
+    },
+    {
+      "path": "app/academias/DemoForm.tsx",
+      "text": "Work email"
+    },
+    {
+      "path": "app/academias/DemoForm.tsx",
+      "text": "Teachers on your team"
+    },
+    {
+      "path": "app/academias/DemoForm.tsx",
+      "text": "Select a team size"
+    },
+    {
+      "path": "app/academias/DemoForm.tsx",
+      "text": "What does your school need? (optional)"
+    },
+    {
+      "path": "app/academias/DemoForm.tsx",
+      "text": "Tell us briefly how your team works."
+    },
+    {
+      "path": "app/academias/DemoForm.tsx",
+      "text": "I agree to be contacted by SpanishCue about this request. I have read the "
+    },
+    {
+      "path": "app/academias/DemoForm.tsx",
+      "text": "privacy policy"
+    },
+    {
+      "path": "app/academias/DemoForm.tsx",
+      "text": "Saving…"
+    },
+    {
+      "path": "app/academias/DemoForm.tsx",
+      "text": "Request a demo"
+    },
+    {
+      "path": "app/academias/DemoForm.tsx",
+      "text": "No commitment. This does not start a subscription."
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "SpanishCue for Spanish Language Schools | Interactive Lessons & 3D Worlds"
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "A ready-to-teach Spanish lesson library for your teaching team: grammar, conversation and 3D worlds. Request a demo for your school."
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "A common foundation for your team"
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "Every teacher finds materials in the same library, organised by level and topic."
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "More time for teaching"
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "Explanations, practice and conversation ready to open on screen. Less material to build from scratch."
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "Lessons that invite participation"
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "3D worlds, situations and questions that bring Spanish into the classroom."
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "Your teaching approach, with better resources"
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "Your team decides what to use and how it fits your school’s programme."
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "We get to know your school"
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "Tell us about your teachers, the levels you teach and how your classes work."
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "We try a real lesson"
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "Explore the 3D worlds and materials that best fit your team."
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "We agree on the next step"
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "Discuss access and licensing for your school, without starting subscriptions automatically."
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "Can we try it before deciding?"
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "Yes. Explore the free 3D demo and request a demonstration focused on your school’s needs."
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "Does it replace our Spanish curriculum?"
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "Use the library alongside your programme. Your teachers choose which materials to include and when."
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "Does each teacher have their own account?"
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "Yes. Current accounts are individual. Discuss team access and conditions during the demo; passwords are not shared."
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "Is there already a school administration dashboard?"
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "Not yet. Institution management, invitations and licence assignment from a dashboard are pending implementation. Request a demo to discuss the access options available today."
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "How much does it cost for a school?"
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "There is no public institutional price. Ask about options for your team. Independent teacher plans and subscriptions remain available."
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "Skip to content"
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "Request demo"
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "FOR LANGUAGE SCHOOLS & TEACHING TEAMS"
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "Your team teaches."
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "SpanishCue sets the scene."
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "Ready-to-teach Spanish lessons, 3D worlds and interactive activities in one library. Give your team more resources and more time to teach."
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "Request a demo"
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "See the product"
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "For Spanish schools, language institutes and independent teachers."
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "A REAL LESSON"
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "Video of SpanishCue’s Noche abierta 3D world"
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "CONVERSATION + LISTENING"
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "Open the free Noche abierta demo"
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "Product recording. Open the demo to explore the city."
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "Available resources"
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "lessons in the library"
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "interactive worlds"
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "By level"
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "grammar and conversation"
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "One shared library. Every teacher’s own approach."
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "FOR COORDINATORS. FOR TEACHERS."
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "Better resources."
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "More possibilities for your team."
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "OPEN. EXPLORE. TEACH."
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "The materials are already here."
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "Explore resources from the current product before requesting your school demo."
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "View of the Noche abierta world"
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "3D WORLD · FREE DEMO"
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "A city for speaking and listening in Spanish."
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "La Fábrica de los Nombres lesson cover"
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "GRAMMAR · FREE LESSON"
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "Grammar in action"
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "Explanations and practice in a visual lesson."
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "Explore the full library"
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "WE START WITH YOUR TEAM"
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "From the first look to your next lesson."
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "Team access, with clear expectations."
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "The library, lessons and individual accounts are available today. The institutional dashboard for inviting teachers and assigning licences is pending implementation. Discuss current access options during the demo."
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "LET’S TALK ABOUT YOUR SCHOOL"
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "Your team’s next"
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "experience"
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "starts here."
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "Tell us what your school needs. We will show you the lessons and 3D worlds that could fit your programme."
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "A demo with purpose."
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "Real product. Your team’s needs. Clear next steps."
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "BEFORE YOU START"
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "Questions from schools."
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "Teaching independently?"
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "Discover SpanishCue for teachers"
+    },
+    {
+      "path": "app/audience/AudienceSwitch.tsx",
+      "text": "For schools"
+    },
+    {
+      "path": "app/audience/AudienceSwitch.tsx",
+      "text": "For teachers"
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "Arrange a demo for your school."
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "Send us your name, your school’s name and the approximate number of teachers. We will discuss the resources your team needs."
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "Ask about a demo"
+    },
+    {
+      "path": "app/academias/page.tsx",
+      "text": "No commitment. This does not start a subscription."
+    }
+  ]
+}

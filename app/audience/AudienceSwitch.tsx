@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import "./audience-switch.css";
 import { useI18n } from "../i18n/LocaleProvider";
 import { rememberAudience, trackMarketingEvent } from "../marketing/analytics";
-import { STUDENT_LANDING_PATH, TEACHER_HOME_PATH, type Audience } from "./audiences";
+import { ACADEMY_LANDING_PATH, TEACHER_HOME_PATH, type Audience } from "./audiences";
 
 /**
  * Teach / Learn selector for the main header. Two plain links (no modal, no
@@ -14,10 +14,10 @@ import { STUDENT_LANDING_PATH, TEACHER_HOME_PATH, type Audience } from "./audien
 export default function AudienceSwitch({ active, className = "" }: { active: Audience; className?: string }) {
   const { locale } = useI18n();
   const es = locale === "es";
-  useEffect(() => rememberAudience(active), [active]);
+  useEffect(() => { if (active !== "academy") rememberAudience(active); }, [active]);
   const options: { audience: Audience; href: string; label: string }[] = [
-    { audience: "teacher", href: TEACHER_HOME_PATH, label: es ? "Enseñar español" : "Teach Spanish" },
-    { audience: "student", href: STUDENT_LANDING_PATH, label: es ? "Aprender español" : "Learn Spanish" },
+    { audience: "academy", href: ACADEMY_LANDING_PATH, label: es ? "Soy academia" : "For schools" },
+    { audience: "teacher", href: TEACHER_HOME_PATH, label: es ? "Soy profesor" : "For teachers" },
   ];
   return (
     <nav className={`audience-switch ${className}`.trim()} aria-label={es ? "Elige tu experiencia" : "Choose your experience"}>
@@ -30,11 +30,11 @@ export default function AudienceSwitch({ active, className = "" }: { active: Aud
             className={current ? "active" : undefined}
             aria-current={current ? "true" : undefined}
             onClick={() => {
-              rememberAudience(option.audience);
-              trackMarketingEvent(option.audience === "teacher" ? "audience_selected_teacher" : "audience_selected_student", { placement: "header" });
+              if (option.audience !== "academy") rememberAudience(option.audience);
+              trackMarketingEvent(option.audience === "teacher" ? "audience_selected_teacher" : "cta_click", { placement: option.audience === "academy" ? "header_academy" : "header" });
             }}
           >
-            <span className={`audience-switch-dot ${option.audience}`} aria-hidden="true" />
+            <svg className="audience-switch-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true">{option.audience === 'academy' ? <><path d="m3 9 9-5 9 5-9 5-9-5Z"/><path d="M6 12v6h12v-6M9 14v4m6-4v4M3 21h18"/></> : <><circle cx="9" cy="7" r="3"/><path d="M3 20v-3a6 6 0 0 1 12 0v3m2-15h4v12h-4m0-8h4"/></>}</svg>
             {option.label}
           </a>
         );
