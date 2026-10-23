@@ -17,6 +17,10 @@ Entry format:
 
 ## Pending verification
 
+_None._
+
+## Published
+
 ## 2026-10-21 — LES-001 «La feria de Villaluz», A2 (new world)
 - URL(s):
   - https://spanishcue.com/la-feria-de-villaluz (PRO; anonymous users → /acceso);
@@ -38,8 +42,7 @@ Entry format:
 - PR / merged SHA / production deploy run: PR #251 → `6383b3b6de1d09398523619bedca77602da7fd06`. CI + Auto Merge 39547852346 success; staging 39549313371 success; production 39549567404 success (2026-10-21 05:29 UTC).
 - Production smoke evidence:
   - The workflow's own "Production smoke" step passed (`"passed": true`, origin https://spanishcue.com). Rollback was skipped.
-  - That generic smoke does not cover the Feria URLs. **The changed-URL smoke is still owed**: `/la-feria-de-villaluz` anonymous → 302 `/acceso`; the teacher page → 200 with a "3D" title; `/audio/escucha-3d/feria-a2-baile.mp3` → 403.
-  - The 2026-10-21 routine could not reach spanishcue.com or staging (egress proxy). This entry moves to Published once a run with access verifies them.
+  - That generic smoke did not cover the Feria URLs, and the 2026-10-21 routine could not reach spanishcue.com (egress proxy), so the entry stayed pending until the changed-URL smoke below.
 - Concept file / LQG review file:
   - design: LESSON-DECISION-001 v5;
   - LQG: [docs/audits/la-feria-de-villaluz-pedagogy-20261021.md](../audits/la-feria-de-villaluz-pedagogy-20261021.md);
@@ -53,16 +56,16 @@ Entry format:
   - Nobody has listened to the TTS clips.
   - Busca candidates are small on 390 px portrait.
   - The AC12 pilot is post-launch.
+- **Changed-URL smoke VERIFIED 2026-10-22** (recorded by the Friday 2026-10-23 routine): Production Smoke Monitor run [39857963446](https://github.com/agnremote-code/spanishcue-web/actions/runs/39857963446) on main `373e8b33` (production = `373e8b33`, deploy run 39829348447) passed its "Run production smoke" step against `https://spanishcue.com`. Since #266 that script (`scripts/production-smoke.mjs`) asserts, for both `/hospital-san-casi-vivo` and `/la-feria-de-villaluz`: anonymous → redirect to `/acceso`; for the Feria, `/audio/escucha-3d/feria-a2-baile.mp3` → 403; and each `/resources/…` teacher page → 200 with its 3D `<title>`, «Inside the 3D world» and a `BreadcrumbList`. The earlier monitor run 39723380150 on `97f263d` passed the same checks.
 
 ## 2026-10-20 — SEO fix 1: 3D world teacher pages, honest level range, breadcrumbs on /resources (SEO/page)
 - URL(s): every `/resources/{slug}` page (BreadcrumbList, level range); the 5 3D world pages such as https://spanishcue.com/resources/spanish-conversation-activity-a0-c2-hospital-san-casi-vivo ("3D" title and description, "Inside the 3D world", "More 3D Spanish worlds").
 - PR / merged SHA / deploy: PR #224 → `c06c01c325f5188fc2ca6d643eb1bfcc99e41d16`. CI + Auto Merge 39358483836 success; staging run 39359479235 success; production run 39359743902 success (2026-10-20 02:38 UTC).
 - Production smoke evidence: the workflow's own "Production smoke" step passed (`"passed": true`, origin https://spanishcue.com; status checks including the billing/auth refusals, report-launcher and forged-owner checks). Rollback was skipped.
-- **Why it is still pending:** the changed-URL content smoke (title starts "3D Spanish Conversation Activity A0–C2", `educationalLevel` array, BreadcrumbList, "Inside the 3D world", `/hospital-san-casi-vivo` anonymous → 302 `/acceso`) was **not run**. The 2026-10-20 routine's sandbox proxy refuses connections to spanishcue.com (`connect_rejected`; WebFetch: `ENOTFOUND`). The next run with network access to the site must run it and move this entry to Published.
+- Why it was pending until 2026-10-22: the 2026-10-20 routine's sandbox could not reach spanishcue.com (`connect_rejected`), so the changed-URL content smoke was not run then. The automated check below covers the title, «Inside the 3D world», the BreadcrumbList and the anonymous redirect. It does **not** assert the `educationalLevel` array; that one item is still unverified in production.
 - Built by / reviewed by: Alejandro stream (2026-10-17 author) / Sofia (code, APPROVE at 5ea0bcc), Martin role as a fresh agent (QA: RELEASE-READY at 990d1366).
 - Known limitations: no Search Console evidence of effect yet (Windsor reads blocked, STATUS R0). The 3D search-demand hypothesis is untested.
-
-## Published
+- **Changed-URL smoke VERIFIED 2026-10-22** (recorded by the Friday 2026-10-23 routine): Production Smoke Monitor run [39857963446](https://github.com/agnremote-code/spanishcue-web/actions/runs/39857963446) on main `373e8b33` (production = `373e8b33`, deploy run 39829348447) passed its "Run production smoke" step against `https://spanishcue.com`. Since #266 that script (`scripts/production-smoke.mjs`) asserts, for both `/hospital-san-casi-vivo` and `/la-feria-de-villaluz`: anonymous → redirect to `/acceso`; for the Feria, `/audio/escucha-3d/feria-a2-baile.mp3` → 403; and each `/resources/…` teacher page → 200 with its 3D `<title>`, «Inside the 3D world» and a `BreadcrumbList`. The earlier monitor run 39723380150 on `97f263d` passed the same checks.
 
 ## 2026-10-17 — PERF-001: ~1 s TTFB fixed on every Worker-served URL (repair)
 - URL(s): all Worker-served URLs on https://spanishcue.com (pages, `/robots.txt`, `/sitemap.xml`, APIs, redirects).
