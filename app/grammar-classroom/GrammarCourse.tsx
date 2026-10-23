@@ -9,8 +9,7 @@ type Measured = { done: number; total: number; started: boolean };
 type State = 'planned' | 'todo' | 'started' | 'done';
 
 const stateLabel: Record<State, string> = { planned: 'Próximamente', todo: 'Sin empezar', started: 'En curso', done: 'Completada' };
-// The very first class sits with A1, as in the library: no level group with a single class.
-const courseLevels = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
+const courseLevels = ['A0', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
 const levelGroup = (level: string) => (courseLevels.includes(level) ? level : courseLevels[0]);
 const classNumber = (sequence: number) => `Clase ${String(sequence).padStart(3, '0')}`;
 const STUDENT_KEY = 'spanishcue:gramatica:course-student';
