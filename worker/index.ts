@@ -60,7 +60,7 @@ interface ExecutionContext {
 
 function setSecurityHeaders(headers: Headers, url: URL, locale: string): void {
   headers.set('X-Content-Type-Options','nosniff');
-  headers.set('Referrer-Policy',url.pathname.startsWith('/s/') || url.pathname.startsWith('/api/autoestudio/') || url.pathname === '/autoestudio/claim' ? 'no-referrer' : 'strict-origin-when-cross-origin');
+  headers.set('Referrer-Policy',url.pathname.startsWith('/pro/academia') || url.pathname === '/api/academy' || url.pathname.startsWith('/s/') || url.pathname.startsWith('/api/autoestudio/') || url.pathname === '/autoestudio/claim' ? 'no-referrer' : 'strict-origin-when-cross-origin');
   headers.set('X-Frame-Options','DENY');
   // Autoestudio lets learners record themselves; the audio never leaves the browser.
   headers.set('Permissions-Policy',isAutoestudioPath(url.pathname)?'camera=(), microphone=(self), geolocation=()':'camera=(), microphone=(), geolocation=()');
@@ -288,7 +288,7 @@ const app = {
     const audioPrefix = pathname.match(/^\/audio\/([^/]+)\//)?.[1] || null;
     const premiumAudio = Boolean(audioPrefix && !freeAudioPrefixes.has(audioPrefix));
     const administrative=(pathname==='/admin'||pathname.startsWith('/admin/'))||pathname.startsWith('/api/settings')||pathname.startsWith('/api/admin/');
-    const identityAware=pathname==='/'||pathname==='/ingresar'||pathname==='/cuenta'||pathname==='/acceso'||pathname==='/pricing'||pathname==='/pro'||pathname.startsWith('/pro/')||pathname.startsWith('/api/progress')||pathname==='/api/lesson-reports'||pathname==='/api/favorites'||pathname==='/api/live-class'||pathname==='/api/roster'||pathname==='/api/students'||pathname.startsWith('/api/students/')||pathname==='/api/class-records'||pathname.startsWith('/api/class-records/')||pathname.startsWith('/api/founder-access')||pathname.startsWith('/api/billing/')||pathname==='/api/phonetics/speech-attempt'||pathname==='/demo/noche-abierta'||pathname==='/demo/hospital-san-casi-vivo'||pathname==='/sistema-verbal'||pathname==='/choose-conversation'||pathname==='/lp'||pathname.startsWith('/lp/')||administrative||premiumAudio||premiumBoard||autoestudio||shareApi||Boolean(lesson);
+    const identityAware=pathname==='/api/academy'||pathname.startsWith('/api/academy/')||pathname==='/'||pathname==='/ingresar'||pathname==='/cuenta'||pathname==='/acceso'||pathname==='/pricing'||pathname==='/pro'||pathname.startsWith('/pro/')||pathname.startsWith('/api/progress')||pathname==='/api/lesson-reports'||pathname==='/api/favorites'||pathname==='/api/live-class'||pathname==='/api/roster'||pathname==='/api/students'||pathname.startsWith('/api/students/')||pathname==='/api/class-records'||pathname.startsWith('/api/class-records/')||pathname.startsWith('/api/founder-access')||pathname.startsWith('/api/billing/')||pathname==='/api/phonetics/speech-attempt'||pathname==='/demo/noche-abierta'||pathname==='/demo/hospital-san-casi-vivo'||pathname==='/sistema-verbal'||pathname==='/choose-conversation'||pathname==='/lp'||pathname.startsWith('/lp/')||administrative||premiumAudio||premiumBoard||autoestudio||shareApi||Boolean(lesson);
     // Pages only learn the visitor's session where it is resolved; elsewhere the
     // layout must not treat "no verified user" as "signed out" (AuthSessionSync).
     if(identityAware)routedHeaders.set("x-spanishcue-identity-checked","1");

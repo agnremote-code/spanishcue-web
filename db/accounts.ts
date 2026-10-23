@@ -7,6 +7,8 @@ import {
   type OwnerIdentity,
 } from "../app/firebase-session";
 
+import { institutionalAccess } from "./institutions";
+
 const FIREBASE_PROVIDER = "firebase";
 
 // A grant entitles full access when it is an owner/manual library grant, or a
@@ -128,7 +130,12 @@ async function readAccessBySubject(
       subject,
     )
     .first<AccountRow>();
-  return accountFromRow(row);
+  const account = accountFromRow(row);
+  if (account?.status === "active" && account.accessLevel === "free") {
+    const institutional = await institutionalAccess(db, account.userId);
+    if (institutional) return { ...account, accessLevel: "full", accessSource: "institution", accessExpiresAt: institutional.expiresAt };
+  }
+  return account;
 }
 
 export async function resolveFirebaseAccount(

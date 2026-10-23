@@ -15,6 +15,7 @@ export interface RateLimitBinding {
 export const RATE_LIMITED_POSTS: ReadonlySet<string> = new Set([
   "/api/founder-access",
   "/api/academy-demo",
+  "/api/academy",
   "/api/billing/checkout",
   "/api/billing/paddle/checkout",
   "/api/phonetics/speech-attempt",

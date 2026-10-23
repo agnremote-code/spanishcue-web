@@ -12,6 +12,7 @@ import { canonicalUrl } from '../seo';
 import DemoForm from './DemoForm';
 import { demoStorageReady } from './demo-service';
 import { publicContactEmail } from '../legal/operator';
+import { institutionStorageReady } from '../../db/institutions';
 import './style.css';
 
 export const dynamic = 'force-dynamic';
@@ -30,6 +31,7 @@ export default async function Academias() {
   const locale = localeFromHeaders(await headers());
   const es = locale === 'es';
   const formReady = await demoStorageReady(env.DB);
+  const academyReady = await institutionStorageReady(env.DB);
   const contactEmail = publicContactEmail(env);
   const lessonCount = catalogLessons.filter(lesson => !lesson.path?.startsWith('http')).length;
   const benefits = es ? [
@@ -56,13 +58,13 @@ export default async function Academias() {
     ['¿Podemos probarlo antes de decidir?', 'Sí. Puedes explorar la demo 3D gratuita y solicitar una demostración centrada en las necesidades de tu academia.'],
     ['¿Sustituye nuestro programa de español?', 'Puedes utilizar la biblioteca como apoyo a tu programa. Tus profesores deciden qué materiales incorporar y en qué momento.'],
     ['¿Cada profesor utiliza su propia cuenta?', 'Sí. Las cuentas actuales son individuales. Los accesos y condiciones para equipos se consultan en la demo; no se comparten contraseñas.'],
-    ['¿Ya existe un panel para administrar mi academia?', 'Todavía no. La gestión de instituciones, las invitaciones y la asignación de licencias desde un panel están pendientes de implementación. Puedes solicitar una demo y consultar las opciones de acceso actuales.'],
+    ['¿Ya existe un panel para administrar mi academia?', academyReady ? 'Sí. Puedes registrar tu academia, invitar profesores con sus cuentas individuales y administrar las plazas que prepare el propietario de SpanishCue. Las invitaciones requieren que el servicio de correo esté configurado.' : 'El panel institucional está pendiente de preparación en este entorno. Puedes solicitar una demo y consultar las opciones para tu equipo.'],
     ['¿Cuánto cuesta para una academia?', 'No hay una tarifa institucional pública. Consulta las opciones para tu equipo. Los planes y suscripciones de profesores independientes siguen disponibles.'],
   ] : [
     ['Can we try it before deciding?', 'Yes. Explore the free 3D demo and request a demonstration focused on your school’s needs.'],
     ['Does it replace our Spanish curriculum?', 'Use the library alongside your programme. Your teachers choose which materials to include and when.'],
     ['Does each teacher have their own account?', 'Yes. Current accounts are individual. Discuss team access and conditions during the demo; passwords are not shared.'],
-    ['Is there already a school administration dashboard?', 'Not yet. Institution management, invitations and licence assignment from a dashboard are pending implementation. Request a demo to discuss the access options available today.'],
+    ['Is there already a school administration dashboard?', academyReady ? 'Yes. Register your school, invite teachers with their own accounts and manage seats prepared by the SpanishCue owner. Invitations require the email service to be configured.' : 'The institutional dashboard is awaiting preparation in this environment. Request a demo to discuss options for your team.'],
     ['How much does it cost for a school?', 'There is no public institutional price. Ask about options for your team. Independent teacher plans and subscriptions remain available.'],
   ];
   const schema = { '@context': 'https://schema.org', '@type': 'WebPage', name: metadataCopy[locale].title, description: metadataCopy[locale].description, url: canonicalUrl('/academias'), inLanguage: locale, audience: { '@type': 'EducationalAudience', educationalRole: 'administrator' } };
@@ -72,7 +74,7 @@ export default async function Academias() {
     <header className="academy-nav">
       <Link href="/" className="academy-brand" aria-label="SpanishCue"><SpanishCueBrand variant="compact" /></Link>
       <AudienceSwitch active="academy" />
-      <div className="academy-nav-actions"><LanguageSwitcher /><a href="#solicitar-demo" className="academy-nav-demo">{es ? 'Solicitar demo' : 'Request demo'} <span aria-hidden="true">↗</span></a></div>
+      <div className="academy-nav-actions"><LanguageSwitcher />{academyReady && <Link href="/pro/academia" className="academy-text-link">{es ? 'Mi academia' : 'My school'}</Link>}<a href="#solicitar-demo" className="academy-nav-demo">{es ? 'Solicitar demo' : 'Request demo'} <span aria-hidden="true">↗</span></a></div>
     </header>
     <main id="academy-main">
       <section className="academy-hero academy-wrap">
@@ -108,7 +110,7 @@ export default async function Academias() {
       <section className="academy-section academy-wrap" aria-labelledby="academy-steps-title">
         <div className="academy-section-heading"><p className="academy-eyebrow">{es ? 'EMPEZAMOS CON TU EQUIPO' : 'WE START WITH YOUR TEAM'}</p><h2 id="academy-steps-title">{es ? 'Del primer vistazo a tu próxima clase.' : 'From the first look to your next lesson.'}</h2></div>
         <ol className="academy-steps">{steps.map(([title, body], i) => <li key={title}><span>0{i + 1}</span><h3>{title}</h3><p>{body}</p></li>)}</ol>
-        <aside className="academy-status"><span className="academy-status-icon" aria-hidden="true">↗</span><div><h3>{es ? 'Accesos para tu equipo, con información clara.' : 'Team access, with clear expectations.'}</h3><p>{es ? 'La biblioteca, las clases y las cuentas individuales ya están disponibles. El panel institucional para invitar profesores y asignar licencias está pendiente de implementación. Consulta las opciones de acceso actuales en la demo.' : 'The library, lessons and individual accounts are available today. The institutional dashboard for inviting teachers and assigning licences is pending implementation. Discuss current access options during the demo.'}</p></div></aside>
+        <aside className="academy-status"><span className="academy-status-icon" aria-hidden="true">↗</span><div><h3>{es ? 'Accesos para tu equipo, con información clara.' : 'Team access, with clear expectations.'}</h3><p>{academyReady ? (es ? 'Registra tu academia y reúne a tu equipo con cuentas individuales. Administra las plazas y su vencimiento después de que el propietario de SpanishCue prepare la licencia. El registro no activa cobros ni acceso PRO.' : 'Register your school and bring your team together with individual accounts. Manage seats after the SpanishCue owner prepares the licence. Registration starts no charges and grants no PRO access.') : (es ? 'La biblioteca, las clases y las cuentas individuales están disponibles. El panel institucional está pendiente de preparación en este entorno. Consulta las opciones para tu equipo en la demo.' : 'The library, lessons and individual accounts are available. The institutional dashboard is awaiting preparation in this environment. Discuss options for your team during the demo.')}</p>{academyReady && <Link className="academy-text-link" href="/pro/academia">{es ? 'Abrir mi academia' : 'Open my school'} →</Link>}</div></aside>
       </section>
       <section className="academy-demo-section" id="solicitar-demo"><div className="academy-wrap academy-demo-layout">
         <div><p className="academy-eyebrow">{es ? 'HABLEMOS DE TU ACADEMIA' : 'LET’S TALK ABOUT YOUR SCHOOL'}</p><h2>{es ? <>La próxima experiencia<br />de tu equipo <em>empieza aquí.</em></> : <>Your team’s next<br />experience <em>starts here.</em></>}</h2><p>{es ? 'Cuéntanos qué necesita tu academia. Te mostraremos las clases y los mundos 3D que pueden encajar en tu programa.' : 'Tell us what your school needs. We will show you the lessons and 3D worlds that could fit your programme.'}</p><div className="academy-demo-note"><b>{es ? 'Una demo con propósito.' : 'A demo with purpose.'}</b><span>{es ? 'Producto real. Necesidades de tu equipo. Próximos pasos claros.' : 'Real product. Your team’s needs. Clear next steps.'}</span></div></div>

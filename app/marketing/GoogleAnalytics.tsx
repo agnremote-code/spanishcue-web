@@ -59,6 +59,7 @@ export default function GoogleAnalytics() {
   const lastPageView = useRef("");
 
   const sendPageView = useCallback(() => {
+    if (window.location.pathname.startsWith("/pro/academia")) return;
     if (!usableMeasurementId(measurementId) || !readConsent()?.analytics) return;
     const pagePath = `${window.location.pathname}${window.location.search}`;
     if (lastPageView.current === pagePath) return;
@@ -73,7 +74,7 @@ export default function GoogleAnalytics() {
 
   useEffect(() => {
     initialiseGoogleConsent();
-    installGoogleTag();
+    if (!window.location.pathname.startsWith("/pro/academia")) installGoogleTag();
     const sync = () => {
       updateGoogleConsent(readConsent());
       sendPageView();
@@ -81,7 +82,7 @@ export default function GoogleAnalytics() {
     sync();
     window.addEventListener(CONSENT_EVENT, sync);
     return () => window.removeEventListener(CONSENT_EVENT, sync);
-  }, [sendPageView]);
+  }, [pathname, sendPageView]);
 
   useEffect(() => {
     sendPageView();
