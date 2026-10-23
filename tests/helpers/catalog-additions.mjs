@@ -272,6 +272,23 @@ const repairs = [
       'package.json': [['"test:conversation": "node --test tests/uno-o-el-otro-dilemmas.test.mjs ', '"test:conversation": "node --test ']],
     },
   },
+  // 2026-10-23 (Ale): every grammar class belongs to exactly one level, the one it has in the course
+  // (app/grammar-classroom/curriculum.ts). Seven classes lost their level range; content, route and access are unchanged.
+  ...[
+    [46,'/la-central-de-las-identidades','{id:46,curriculumOrder:1300,requires:[48,111],level:"A1",','["A1","A2"]','A1–A2'],
+    [47,'/la-torre-de-las-coordenadas','{id:47,curriculumOrder:1200,requires:[48,111],level:"A1",','["A1","A2"]','A1–A2'],
+    [48,'/la-ciudad-de-los-motores','{id:48,curriculumOrder:700,requires:[40,42],level:"A1",','["A1","A2"]','A1–A2'],
+    [106,'/la-estacion-de-los-dos-destinos','{id:106,curriculumOrder:1400,requires:[46,111],level:"A1",','["A1","A2"]','A1 · ampliación A2'],
+    [107,'/modo-vs-tiempo-verbal','{id:107,curriculumOrder:800,requires:[48],level:"A1",','["A1","A2","B1","B2","C1"]','A1–C1'],
+    [31,'/condicionales-b1','{id:31,curriculumOrder:2000,requires:[18,107],level:"B1",','["B1","B2"]','B1+'],
+    [23,'/condicionales','{id:23,curriculumOrder:2300,requires:[31],level:"B2",','["B2","C1"]','B2–C1'],
+  ].map(([id,path,head,levels,range])=>{
+    const level=head.match(/level:"(..)"/)[1];
+    const edits=[[`${head}levels:["${level}"],displayLevel:"${level}"`,`${head}levels:${levels},displayLevel:"${range}"`]];
+    if(id===23)edits.push(['tag:"Clase maestra · B2",','tag:"Clase maestra · B2–C1",']);
+    return {id,path,latest:true,files:/^(?:public\/grammar-thumbnails\/(?:46|47|48|106|107)\.webp|scripts\/grammar-thumbnails\/data\.mjs|app\/(?:la-central-de-las-identidades|la-torre-de-las-coordenadas|la-ciudad-de-los-motores|modo-vs-tiempo-verbal|condicionales)\/(?:LegacyLesson|layout)\.tsx)$/,
+      restore:{levels:[[level],JSON.parse(levels)],displayLevel:[level,range]},edits:{'app/lesson-catalog.ts':edits}};
+  }),
   {
     // 2026-10-21: Indonesia (ID 24) became a 3D world like Estados Unidos (four regions, twenty
     // places, A0–B1; behaviour covered by tests/paises-3d.test.mjs). The map of the 38 provinces (A1)
