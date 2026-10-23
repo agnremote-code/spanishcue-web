@@ -17,6 +17,21 @@ const {getLiveLesson,liveLessonIds}=require(`../${out}/grammar-classroom/live/re
 const GrammarCourse=require(`../${out}/grammar-classroom/GrammarCourse.js`).default;
 const {lessons}=require(`../${out}/lesson-catalog.js`);
 
+test('every grammar class advertises exactly its curriculum level instead of reference ranges',()=>{
+  const grammar=lessons.filter(lesson=>lesson.category==='Gramática');
+  assert.equal(grammar.length,240);
+  for(const lesson of grammar){
+    const unit=courseUnitById(lesson.id);
+    assert.equal(lesson.level,unit.level,`${lesson.id}: same level as the course`);
+    assert.deepEqual(lesson.levels,[unit.level],`${lesson.id}: a single grammar level`);
+    assert.equal(lesson.displayLevel,unit.level,`${lesson.id}: the visible badge is one level`);
+    const live=getLiveLesson(lesson.id);
+    if(live)assert.equal(lesson.level,live.level,`${lesson.id}: same level as the actual class`);
+  }
+  assert.equal(grammar.find(lesson=>lesson.id===107).displayLevel,'A1');
+  assert.equal(grammar.find(lesson=>lesson.id===239).displayLevel,'A0');
+});
+
 test('the course is one ordered sequence G001…G236 plus extension units, with stable catalog ids and acyclic prerequisites',()=>{
   assert.equal(courseUnits.length,240);
   const base=courseUnits.filter(u=>!u.extends);
@@ -124,6 +139,11 @@ test('the course map lists every class in order and shows this browser’s real 
     assert.equal(v.$$('[data-state="planned"] a').length,0,'planned classes are not links');
     assert.match(v.$('[data-course-count]').textContent,/^1 de \d+ clases disponibles completadas/);
     assert.equal(v.$('[data-course-next]').dataset.courseNext,courseUnitById(140).code,'continue the class in progress');
+    assert.equal(v.$('[data-unit="G001"]').dataset.levelHeading,'A0');
+    await act(async()=>v.$('[data-course-level="A0"]').click());
+    assert.deepEqual(v.$$('[data-unit]').map(li=>li.dataset.unit),['G001']);
+    await act(async()=>v.$('[data-course-level="A1"]').click());
+    assert.ok(!v.$('[data-unit="G001"]'),'A1 does not include the A0 class');
     await act(async()=>v.$('[data-course-level="A2"]').click());
     const a2=v.$$('[data-unit]').map(li=>li.dataset.unit);
     assert.deepEqual(a2,courseUnits.filter(u=>u.level==='A2').map(u=>u.code),'a level filter keeps the order');

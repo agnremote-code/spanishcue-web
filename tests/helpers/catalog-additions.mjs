@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import {beforeGrammarBytes,beforeGrammarLessons,grammarSharedFiles} from './grammar-preservation.mjs';
+import {beforeGrammarBytes,beforeGrammarLessons,beforeSingleLevelBytes,grammarSharedFiles} from './grammar-preservation.mjs';
 import {readFileSync} from 'node:fs';
 
 // Course classes (ids above 300, written from 2026-10-20) as listed in the grammar catalog additions.
@@ -501,6 +501,7 @@ export function isApprovedAdditionPath(path) {
 }
 
 export function withoutApprovedAdditions(path, bytes) {
+  bytes=beforeSingleLevelBytes(path,bytes);
   for (const repair of repairs.filter(item => item.latest && item.edits[path])) {
     let text = bytes.toString('utf8');
     for (const [after, before] of repair.edits[path]) {

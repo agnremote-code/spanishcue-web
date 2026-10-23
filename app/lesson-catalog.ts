@@ -3,6 +3,7 @@ import { boardLessonEntries } from "./boards/catalog-adapter";
 import { conversationLessons } from "./conversation-worlds/catalog";
 import { verbalLessons } from "./verbal-system/lesson-data";
 import { applyGrammarMetadata, newGrammarEntries } from "./grammar-classroom/catalog";
+import { grammarThumbnailPath } from "./grammar-classroom/thumbnail-path.mjs";
 export type Category = "Gramática" | "Conversación" | "Escucha" | "Fonética" | "Vocabulario";
 export type Lesson = { grammarTopic?:string; news?:{addedAt:string;featured:boolean}; id:number; level:string; levels?:string[]; displayLevel?:string; category:Category; conversationMode?:"worlds"|"play"|"boards"; collection?:string; countryCollection?:boolean; countrySequence?:number; searchAliases?:string[]; verbalSystem?:boolean; verbalMood?:string; temporalPlane?:string; productiveStatus?:string; title:string; subtitle:string; duration:string; tag:string; goals:string[]; warmup:string; explanation:string; practice:string[]; speaking:string[]; homework:string; special?:boolean; path?:string; image:string; curriculumOrder?:number; curriculumSequence?:number; routeOrder:number; routeSequence:number; requires?:number[] };
 export type LessonSource = Omit<Lesson,"image"|"curriculumSequence"|"routeOrder"|"routeSequence"> & { image?:string };
@@ -122,7 +123,7 @@ const categoryPreviews:Record<Category,string> = {
 const countryLessonIds = new Set([19, 24, 25, 26, 27, 29, 30, 32, 33, 36, 39, 210, 227, 228, 229]);
 
 function withPreview(lesson:LessonSource):LessonSource & {image:string;countryCollection:boolean} {
-  return {...lesson,countryCollection:countryLessonIds.has(lesson.id),image:lesson.category==="Gramática"?`/grammar-thumbnails/${lesson.id}.webp`:lessonPreviews[lesson.id]||lesson.image||categoryPreviews[lesson.category]};
+  return {...lesson,countryCollection:countryLessonIds.has(lesson.id),image:lesson.category==="Gramática"?grammarThumbnailPath(lesson.id,lesson.level):lessonPreviews[lesson.id]||lesson.image||categoryPreviews[lesson.category]};
 }
 
 const boardLessonIds = [205,206] as const;

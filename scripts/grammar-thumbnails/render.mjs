@@ -5,11 +5,16 @@ import { readFileSync, mkdirSync } from 'node:fs';
 import { createRequire } from 'node:module';
 import sharp from 'sharp';
 import { families, thumbnails } from './data.mjs';
+import { grammarThumbnailPath } from '../../app/grammar-classroom/thumbnail-path.mjs';
 
 const require = createRequire(import.meta.url);
 const { chromium } = require(process.env.PLAYWRIGHT_CORE || 'playwright-core');
 const levelColors = { A0: '#2e9ed9', A1: '#30bda2', A2: '#77b94a', B1: '#f4a52d', B2: '#f1754d', C1: '#9d70d4', C2: '#374f76' };
 const W = 1280, H = 720, AXIS = 96, NOW = 0.62;
+// An inline @font-face stylesheet also supports reproducible offline rendering.
+const fontStyles = process.env.GRAMMAR_THUMBNAIL_FONT_CSS
+  ? `<style>${readFileSync(process.env.GRAMMAR_THUMBNAIL_FONT_CSS, 'utf8')}</style>`
+  : '<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Nunito:wght@600;700;800&display=block" rel="stylesheet">';
 // Some poses share their PNG with a neighbouring sprite: keep only the figure (x range).
 const crops = { headphones: [168, 500], mate: [44, 418], teacher: [158, 543], grammar: [55, 438] };
 
@@ -70,7 +75,7 @@ function page(t, mascot) {
   const visual = t.timeline ? timeline(t.timeline, f.ink)
     : `<div class="chips">${t.chips.map((c) => `<span>${esc(c)}</span>`).join('')}</div>`;
   return `<!doctype html><html><head><meta charset="utf-8">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Nunito:wght@600;700;800&display=block" rel="stylesheet">
+${fontStyles}
 <style>
 *{box-sizing:border-box;margin:0}
 body{width:${W}px;height:${H}px;overflow:hidden;background:${f.bg};font-family:Nunito,sans-serif;position:relative}
@@ -117,8 +122,10 @@ const tab = await browser.newPage({ viewport: { width: W, height: H }, deviceSca
 for (const t of list) {
   await tab.setContent(page(t, mascots[t.mascot]), { waitUntil: 'networkidle' });
   await tab.evaluate(() => document.fonts.ready);
+  if (!await tab.evaluate(() => document.fonts.check('600 98px Fraunces') && document.fonts.check('800 34px Nunito')))
+    throw new Error('Thumbnail fonts failed to load; refusing a cover with substituted typography.');
   const png = await tab.screenshot({ type: 'png' });
-  await sharp(png).webp({ quality: 84 }).toFile(`public/grammar-thumbnails/${t.id}.webp`);
+  await sharp(png).webp({ quality: 84 }).toFile(`public${grammarThumbnailPath(t.id,t.level)}`);
   console.log('ok', t.id);
 }
 await browser.close();

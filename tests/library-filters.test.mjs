@@ -10,8 +10,8 @@ const lessons = [
 ];
 
 test('level and category are intersected in either selection order',()=>{
-  assert.deepEqual(filterLessons(lessons,{level:'A2',category:'Gramática'}).map(x=>x.id),[2,4]);
-  assert.deepEqual(filterLessons(lessons,{category:'Gramática',level:'A2'}).map(x=>x.id),[2,4]);
+  assert.deepEqual(filterLessons(lessons,{level:'A2',category:'Gramática'}).map(x=>x.id),[2]);
+  assert.deepEqual(filterLessons(lessons,{category:'Gramática',level:'A2'}).map(x=>x.id),[2]);
   assert.deepEqual(filterLessons(lessons,{level:'A1',category:'Conversación'}).map(x=>x.id),[3]);
 });
 test('accent-insensitive search remains combined with both facets',()=>{
@@ -20,7 +20,7 @@ test('accent-insensitive search remains combined with both facets',()=>{
 });
 test('all selection only clears its own facet',()=>{
   assert.deepEqual(filterLessons(lessons,{level:'Todos',category:'Gramática'}).map(x=>x.id),[1,2,4]);
-  assert.deepEqual(filterLessons(lessons,{level:'A2',category:'Todas'}).map(x=>x.id),[2,4,3]);
+  assert.deepEqual(filterLessons(lessons,{level:'A2',category:'Todas'}).map(x=>x.id),[2,3]);
   assert.equal(filterLessons(lessons).length,4);
 });
 
@@ -31,7 +31,7 @@ test('grammar uses the central curriculum sequence after level and search filter
     {...lessons[0],curriculumSequence:1},
   ];
   assert.deepEqual(filterLessons(shuffled,{category:'Gramática'}).map(x=>x.id),[1,4,2]);
-  assert.deepEqual(filterLessons(shuffled,{category:'Gramática',level:'A2'}).map(x=>x.id),[4,2]);
+  assert.deepEqual(filterLessons(shuffled,{category:'Gramática',level:'A2'}).map(x=>x.id),[2]);
   assert.deepEqual(filterLessons(shuffled,{category:'Gramática',query:'presente'}).map(x=>x.id),[4]);
 });
 
@@ -61,4 +61,7 @@ test('each category offers only its own levels, including multi-level lessons',(
   assert.equal(levelForCategory(all,'Todos','Vocabulario'),'Todos');
   assert.equal(levelForCategory(all,'B2','Todas'),'B2');
   assert.deepEqual(availableLevels([], 'Conversación'),[]);
+  const staleGrammar={...lessons[3],levels:['A1','C1']};
+  assert.deepEqual(availableLevels([staleGrammar],'Gramática'),['A1'],'reference ranges do not create grammar levels');
+  assert.deepEqual(filterLessons([lessons[2]],{category:'Conversación',level:'A2'}).map(l=>l.id),[3],'conversation still supports its existing levels');
 });

@@ -3,7 +3,7 @@ export function filterLessons(lessons, { level = 'Todos', category = 'Todas', qu
   const normalize = value => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
   const search = normalize(query.trim());
   const filtered = lessons.filter(lesson =>
-    (level === 'Todos' || lesson.level === level || lesson.levels?.includes(level)) &&
+    (level === 'Todos' || lesson.level === level || (lesson.category !== 'Gramática' && lesson.levels?.includes(level))) &&
     (category === 'Todas' || lesson.category === category) &&
     (grammarTopic === 'all' || lesson.category !== 'Gramática' || lesson.grammarTopic === grammarTopic) &&
     normalize(`${lesson.title} ${lesson.subtitle} ${lesson.tag} ${(lesson.searchAliases || []).join(' ')}`).includes(search)
@@ -18,7 +18,7 @@ export function filterLessons(lessons, { level = 'Todos', category = 'Todas', qu
 
 export function availableLevels(lessons, category = 'Todas') {
   const present = new Set(lessons.filter(l => category === 'Todas' || l.category === category)
-    .flatMap(l => [l.level, ...(l.levels || [])]));
+    .flatMap(l => l.category === 'Gramática' ? [l.level] : [l.level, ...(l.levels || [])]));
   return ['A0','A1','A2','B1','B2','C1','C2'].filter(level => present.has(level));
 }
 
