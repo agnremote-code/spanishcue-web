@@ -15,7 +15,7 @@
   - 11 country worlds stop at B1: usa, mexico, argentina, espana, suecia, uk, irlanda, australia, suiza, israel and indonesia. Martin's report says "ten" but then lists all 11, and both the registry and Sofia's report give 11.
   - feria is A2 only.
 - B2 and C1 have no world of their own. They exist only as one level inside the multi-level worlds (Sofia, citing `app/hospital-san-casi-vivo/levels-info.mjs` and `app/madrid-infectada/levels-info.mjs`).
-- Chile, Valparaíso, Colombia and the Eje Cafetero appear in no game, world or atlas. Sofia and Martin each checked this with a grep over `app/`.
+- Chile and Colombia are the setting of no world (they are mentioned in content, e.g. a Hospital clue «Él es de Chile. Ella es de Colombia.»). Valparaíso and the Eje Cafetero appear nowhere in `app/`. Sofia and Martin each checked with a grep over `app/`; wording corrected by the independent reviewer.
 - **Premise near-overlap, noted by Alejandro and not a duplicate.** The approved but paused GROW-001 circle is «El ascensor no funciona» (`docs/board/content/grow-001-circle.md`): A2, `a2.fun.favores`, a broken lift in an apartment building. Valparaíso differs in level, function, setting and mechanic. Still, the new world must not reuse the title or the "lift out of order" framing, so the premise below is a funicular closed for repairs whose reopening terms are disputed.
 
 ## 3. Candidates
@@ -25,9 +25,9 @@
 | K | «La cosecha de la ladera»: coffee cooperative, Eje Cafetero (Quindío) | Sofia (S2) | C1 | `c1.fun.mediacion-conflicto` |
 | D | «Escala en El Dorado: vuelo cancelado»: Bogotá airport | Martin (C2) | B1 | `b1.fun.quejarse-formal` |
 
-**On the convergence.** S1 and C1 share the setting, the level, the primary objective and the vertical-funicular mechanic. Two people working from the same inventory and arriving at the same idea is evidence that the gap is real: no B2 world and no Chile setting. It is not two votes for originality, so V is scored once.
+**On the convergence.** S1 and C1 share the setting, the level, the primary objective and the vertical-funicular mechanic. Two people working from the same inventory and arriving at the same idea is evidence that the gap is real: no dedicated B2 world and no Chile setting. It is not two votes for originality, so V is scored once.
 
-Every objective id above, and every id in §5, was checked in `app/autoestudio/curriculum/objectives/{b1,b2,c1}.ts`. Every voice id was checked in `app/escucha-3d/voices.json` (VERIFIED, this run).
+Every objective id above, and every id in §5, was checked in `app/autoestudio/curriculum/objectives/{a2,b1,b2,c1}.ts`. Every voice id was checked in `app/escucha-3d/voices.json` (VERIFIED, this run).
 
 ## 4. Scores (1–5, 5 = best; build risk 5 = lowest risk; unweighted total)
 | Criterion | V Valparaíso B2 | K Eje Cafetero C1 | D El Dorado B1 |

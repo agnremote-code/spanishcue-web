@@ -26,13 +26,13 @@ _Last updated: 2026-10-23 by the Friday 3D + assessment routine (scheduled cloud
 - **The GA4 property 553569142 returned 0 rows in 30 days.** Analytics fires only after consent (Alejandro, from code), so this needs R2.
 
 ## Backlog (BOARD-DECISION-002, locked 2026-10-17; supersedes the BOARD-DECISION-001 v3 §5 order)
-Parallel streams: **3D = Sofia**, **technical SEO = Alejandro**, **QA/integration = Martin**. PRO order: LES-001 Feria first, then the «Gustar» A1 grammar class. GROW-001 is paused.
+Parallel streams: **3D = Sofia**, **technical SEO = Alejandro**, **QA/integration = Martin**. PRO order (updated 2026-10-23): LES-001 Feria shipped; next «El ascensor del cerro» B2 3D world; the «Gustar» class is dropped as a duplicate. GROW-001 is paused.
 
 | Rank | Item | Owner → reviewer | State |
 |---|---|---|---|
 | 1 | LES-001 «La feria de Villaluz» A2 PRO 3D world (LESSON-DECISION-001 v5 + BOARD-DECISION-001 overlays) | Martin (content) → Sofia (build); G4 by Alejandro or a fresh agent; QA Martin | **Deployed 2026-10-21**: PR #251 → `6383b3b6`, production run 39549567404 (workflow smoke passed). The changed-URL smoke is still owed (see Current work). Open follow-ups: G5(b) real-device check (featured flag stays off until then), T5 fps on a real Android, the cover still shows the baile host in its old spot |
 | 2 | **NEW 2026-10-23: «El ascensor del cerro», B2 PRO 3D world, Valparaíso** ([concept](concepts/2026-10-23-valparaiso-ascensor-del-cerro.md); selected 3 of 3) | Martin (content, after his cultural check) → Sofia (build) → G4 Alejandro or a fresh agent | **Next 3D slot, Mon 2026-10-26** (continue Wed if not gate-passed) |
-| 3 | «También, tampoco, sí, no: reaccionar», A1 PRO grammar (`a1.gram.tambien-tampoco`); Martin confirms scope (short class or G032 follow-up) | Martin → fresh agent (G4) | after rank 2 content |
+| 3 | «También, tampoco, sí, no: reaccionar», A1 PRO grammar (`a1.gram.tambien-tampoco`). **Partly covered already** (VERIFIED: `app/grammar-classroom/live/lessons/g332.ts:129` has a section «También, tampoco, sí, no · Reacting to tastes» with exercises), so whether any gap remains is a HYPOTHESIS; Martin duplicate-checks against main before any authoring | Martin → fresh agent (G4) | after rank 2 content |
 | — | ~~«Gustar y verbos como gustar» A1 PRO grammar class~~ | — | **DROPPED 2026-10-23** (Alejandro, on Martin's evidence): duplicates G032 «Gustar y encantar» (`g332.ts`) + G062 «Gustar, interesar, doler, faltar» (`g362.ts`), both live and PRO. The other gaps in BOARD-DECISION-002 §2 (superlativos, obligación, indefinidos) are also covered (369, 340/380, 370–372). Supersedes BOARD-DECISION-002 §3.1(2) on this point |
 | P | Technical SEO, highest impact first (parallel stream) | Alejandro → Sofia (code review), Martin (QA) | First fix = PR #224, **merged `c06c01c` and deployed 2026-10-20** (production run 39359743902, workflow smoke passed). The changed-URL content smoke is still owed (PUBLISHED.md, Pending verification) |
 | P+1 | COMP-001 ProfeDeELE.com benchmark (plan below) | Alejandro + Martin | after the first technical SEO fix |

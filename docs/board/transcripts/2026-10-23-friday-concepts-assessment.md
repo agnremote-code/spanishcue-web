@@ -282,3 +282,55 @@ I wrote both files and committed nothing. Branch: `claude/friday-assessment-2026
 - Also covered: defects with their PRs, 8 misses with root causes, candid accountability (including my own misses on COMP-001 and the stale rank 2), and a ranked plan for next week.
 - I decided to drop rank 2 and replace it with a narrow A1 «También, tampoco» item. The facilitator needs to record this in STATUS.
 ````
+
+## 2026-10-23T02:15:11.292Z · facilitator → independent reviewer (fresh agent)
+
+````text
+You are an independent reviewer (fresh agent, not one of the authors) for SpanishCue PR #273 on branch `claude/friday-assessment-20261023` in /home/user/spanishcue-web (already checked out; do NOT edit, commit or push anything). It is docs only. Merging it to main triggers a production deploy of an unchanged app, so the review is about truthfulness, not code.
+
+Review the diff `git diff origin/main...HEAD -- docs/board` (files: docs/board/assessments/2026-W43.md, docs/board/concepts/2026-10-23-valparaiso-ascensor-del-cerro.md, docs/board/PUBLISHED.md, docs/board/STATUS.md; the transcript file is exported verbatim, skip its content). The board's rule: every claim is VERIFIED (with source) or HYPOTHESIS; never invent numbers, rankings, agreement or dialogue.
+
+Spot-check claims you can verify locally (~25 tool calls max):
+- PR numbers ↔ merge SHAs ↔ titles via `git log origin/main --first-parent --since=2026-10-19 --format='%h %s %b'`;
+- objective ids exist in `app/autoestudio/curriculum/objectives/{b1,b2,c1}.ts`; voice ids exist in `app/escucha-3d/voices.json`;
+- grammar coverage claims (g332, g362, g369, g340, g380, g370–372 titles; `app/grammar-classroom/curriculum.ts`, `catalog.ts`, `app/access-policy.ts` FREE list);
+- `ls docs/audits | grep pedagog` → only the Feria file;
+- `scripts/production-smoke.mjs` really asserts what PUBLISHED.md says for Hospital and Feria (and does not assert `educationalLevel`);
+- world list in `app/escucha-3d/games.mjs` (11 country worlds, levels);
+- internal consistency between STATUS, PUBLISHED and the assessment; broken relative links.
+GitHub Actions run ids you cannot check locally — treat them as facilitator-provided and don't flag them unless internally inconsistent.
+
+Reply with: VERDICT: APPROVE or CHANGES, then a numbered list of concrete inaccuracies (file:line, what's wrong, the correct fact with source). Mark each as BLOCKING (a false or invented claim) or NIT. Keep it under 400 words.
+````
+
+## 2026-10-23T02:16:53.111Z · independent reviewer → facilitator
+
+````markdown
+VERDICT: APPROVE. I found no false or invented claims, so nothing is BLOCKING. I did not edit, commit or push anything.
+
+**What checks out:**
+- **PRs and merges:** every PR number, merge SHA and day matches `git log origin/main --first-parent --since=2026-10-19` (43 merges). The §1b lists account for every non-board PR.
+- **Worlds:** `games.mjs` has 11 country worlds at A0–B1, Madrid at A0–C2 and Feria at A2 only.
+- **Grammar:** the G032/332, G062/362, 369, 340, 380 and 370–372 titles match `curriculum.ts`. All 240 rows are `"live"`. 332 and 362 are not in the FREE samples in `access-policy.ts` (Gramática 40, 41, 239), so they are PRO.
+- **Audits:** `ls docs/audits | grep pedagog` returns only the Feria file.
+- **Smoke script:** `scripts/production-smoke.mjs` lines 33–43 assert exactly what PUBLISHED says for Hospital and Feria, and do not check `educationalLevel`. The smoke commit 3422f508 is in `bca97ed` and `97f263d` but not in `4d2c680`, which fits "since #266".
+- **Concept ids:** all 12 objective ids exist in `objectives/*.ts`, and all 8 voice ids are in `voices.json`. It is true that only 2 `es-CL` voices exist.
+- **Feria G4:** "line 138, 45–55 min" matches `docs/audits/la-feria-de-villaluz-g4-review-20261021.md:138`. The draw-call figures 618 → 98 match STATUS.
+- **Links:** I found no broken relative links in the four files.
+
+**Inaccuracies:**
+
+1. **NIT** — `docs/board/STATUS.md:29` still says "PRO order: LES-001 Feria first, then the «Gustar» A1 grammar class". That contradicts the DROPPED row at line 36 and assessment §6. Update it to the Valparaíso / también-tampoco order.
+
+2. **NIT (most important)** — Assessment §6, "Decision on rank 2" (replace with «También, tampoco, sí, no: reaccionar»), and `STATUS.md:35`. The replacement already partly exists. `app/grammar-classroom/live/lessons/g332.ts:129` has a section titled «También, tampoco, sí, no · Reacting to tastes» with exercises (lines 133–139). The doc presents this as a narrow gap and asks Martin to "confirm scope". That repeats the duplicate-check miss the assessment itself records (miss 3, §6 item 8). Mark it VERIFIED as partly covered by G032 §(line 129) and treat the item as HYPOTHESIS until the check is done.
+
+3. **NIT** — Concept, line 18: "Chile, Valparaíso, Colombia and the Eje Cafetero appear in no game, world or atlas … grep over `app/`." Taken literally this is false. About 70 files in `app/escucha-3d/content` mention Chile or Colombia, for example the Hospital clue «Él es de Chile. Ella es de Colombia.» Valparaíso and Eje Cafetero do appear nowhere. Reword to "appear as no world's setting".
+
+4. **NIT** — Concept, around line 30: "every objective id … checked in `objectives/{b1,b2,c1}.ts`". But `a2.fun.favores` (line 19) lives in `objectives/a2.ts:70`. Add a2 to the list.
+
+5. **NIT** — Concept, line 28: "no B2 world" overstates it. Lines 14 and 17 of the same file correctly say B2 exists inside the multi-level worlds (noche, casino, bosque, reino, hospital, madrid). Write "no dedicated B2 world", as the score table does.
+
+6. **NIT (judgement call)** — `PUBLISHED.md`: the #224 Hospital entry moved to Published even though its `educationalLevel` array is still unverified in production. The entry says so openly, so it is not misleading. A reviewer may still want it to stay partly pending under the "only after production verification" rule.
+````
+
+Facilitator action: NITs 1–5 applied in the follow-up commit. NIT 6 kept as is: the Hospital entry's changed URLs are verified and the one unverified attribute (`educationalLevel`) is stated in the entry.
