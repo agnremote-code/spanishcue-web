@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import { existsSync, readdirSync, readFileSync } from "node:fs";
 import test from "node:test";
 import { build } from "esbuild";
+import './academias.test.mjs';
 
 /**
  * Guardrails for the organic-growth architecture described in

@@ -77,6 +77,8 @@ const publicRoots = new Set([
   "app/audience/AudienceSwitch.tsx",
   "app/audience/AudienceTopbar.tsx",
   "app/audience/TrackedLink.tsx",
+  // Anonymous institutional demo requests carry no educational lesson bodies.
+  "app/academias/DemoForm.tsx",
   "app/SpanishCueBrand.tsx",
   "app/resources/ResourceCatalog.tsx",
   // Public question bank filters: the questions are free teaching content and

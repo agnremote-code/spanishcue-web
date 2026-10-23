@@ -5,7 +5,9 @@
  * UI language follows the locale cookie, like the rest of the site, so they
  * carry one clean canonical and no hreflang (see app/seo.ts).
  */
-export type Audience = "teacher" | "student";
+export type Audience = "academy" | "teacher" | "student";
+
+export const ACADEMY_LANDING_PATH = "/academias";
 
 export const TEACHER_HOME_PATH = "/";
 export const TEACHER_LANDING_PATH = "/para-profesores";
@@ -21,5 +23,6 @@ export const STUDENT_DEMO_PATH = "/demo/noche-abierta?from=aprender-espanol&leve
 /** Which audience a page speaks to, for the header selector and analytics. */
 export function audienceForPath(pathname: string): Audience {
   const path = pathname.split(/[?#]/)[0].replace(/\/+$/, "") || "/";
+  if (path === ACADEMY_LANDING_PATH || path.startsWith(`${ACADEMY_LANDING_PATH}/`)) return "academy";
   return path === STUDENT_LANDING_PATH || path.startsWith(`${STUDENT_LANDING_PATH}/`) ? "student" : "teacher";
 }

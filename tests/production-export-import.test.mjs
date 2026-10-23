@@ -41,6 +41,7 @@ function fixture() {
     homework_errors: [{id: 'err1', learner_id: 'learner1', owner_id: 'owner', pass_id: 'pass1', level: 'a2', module_id: 'a2-01', section: 'grammar', exercise_id: 'g1', item_index: 0, exercise_type: 'gap', question: 'Ayer ___ cansado.', answer_given: 'soy', answer_correct: 'estaba', explanation: '', category: 'ser-estar', category_label: 'SER / ESTAR', attempt: 1, verdict: 'wrong', created_at: '2026-10-13', corrected_at: null}],
     homework_teacher_notes: [{id: 'note1', owner_id: 'owner', learner_id: 'learner1', category: 'ser-estar', kind: 'worked', text: '', created_at: '2026-10-13'}],
     homework_events: [{id: 'ev1', learner_id: 'learner1', owner_id: 'owner', kind: 'recommended', lesson_id: 48, category: 'ser-estar', module_id: 'a2-01', created_at: '2026-10-13'}],
+    academy_demo_requests: [{id:'academy-demo-1',name:'Ana López',institution:'Instituto Ejemplo',email:'ana@example.test',teachers:'6-15',message:'Una demo para el equipo.',consent_at:'2026-10-23T00:00:00Z',created_at:'2026-10-23T00:00:00Z'}],
     lesson_reports: [], lesson_favorites: [], student_homework_links: [], live_class_sessions: [], lesson_progress: [], offer_settings: [], founder_leads: [], billing_checkout_locks: [], billing_purchase_claims: [], verification_email_deliveries: [],
   };
 }
@@ -59,7 +60,7 @@ async function writeExport(tables, overrides = {}) {
 test("import order inserts parents first and founder_offer_state after founder_assignments", async () => {
   const { db } = await schemaDatabase();
   const order = importOrder(schemaModel(db));
-  assert.equal(order.length, 28);
+  assert.equal(order.length, 29);
   assert.ok(order.indexOf("autoestudio_learners") < order.indexOf("autoestudio_passes"));
   assert.ok(order.indexOf("autoestudio_learners") < order.indexOf("homework_errors"));
   assert.ok(order.indexOf("autoestudio_learners") < order.indexOf("autoestudio_progress"));
@@ -85,6 +86,7 @@ test("a complete export rehearses cleanly: counts, integrity, founder PRO, sandb
     assert.equal(db.prepare("SELECT alias FROM students").get().alias, "Ana O'Neil");
     assert.equal(db.prepare("SELECT alias FROM autoestudio_learners").get().alias, "Luna");
     assert.equal(db.prepare("SELECT revision FROM autoestudio_passes").get().revision, 2);
+    assert.equal(db.prepare("SELECT email FROM academy_demo_requests").get().email, 'ana@example.test');
     assert.deepEqual(JSON.parse(db.prepare("SELECT sections FROM autoestudio_progress").get().sections), {reading:"2026-10-02"});
   } finally {
     await rm(dir, { recursive: true, force: true });

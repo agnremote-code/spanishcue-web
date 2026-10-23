@@ -14,6 +14,7 @@ export interface RateLimitBinding {
 /** POST endpoints limited per client IP. Real users call each a few times at most. */
 export const RATE_LIMITED_POSTS: ReadonlySet<string> = new Set([
   "/api/founder-access",
+  "/api/academy-demo",
   "/api/billing/checkout",
   "/api/billing/paddle/checkout",
   "/api/phonetics/speech-attempt",

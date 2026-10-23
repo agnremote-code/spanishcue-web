@@ -43,6 +43,19 @@
   box-shadow: 0 6px 14px rgba(6, 26, 61, .2);
 }
 
+.audience-switch-icon { width: 18px; height: 18px; flex: 0 0 18px; }
+
+/* The brand keeps its intrinsic width; the selector moves onto its own row
+   before competing for space with account and language actions. */
+.topbar-primary > .topbar-brand-block { flex-shrink: 0; }
+.topbar-brand { flex-shrink: 0; }
+@media (min-width: 761px) and (max-width: 1350px) {
+  .topbar-primary { flex-wrap: wrap; column-gap: 18px; row-gap: 8px; padding-block: 10px; }
+  .topbar-primary > .audience-switch { order: 3; flex-basis: 100%; }
+  .topbar-primary > .audience-switch a { flex: 1 1 0; }
+  .topbar-primary > .topbar-actions { margin-left: auto; }
+}
+
 .audience-switch-dot {
   width: 7px;
   height: 7px;
