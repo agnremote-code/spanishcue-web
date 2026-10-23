@@ -16,7 +16,7 @@ export default function SiteSchema() {
     url: SITE_ORIGIN,
     description: kit.brand.description,
     slogan: kit.brand.tagline,
-    logo: `${SITE_ORIGIN}/brand/ads/spanishcue-logo-light.svg`,
+    logo: `${SITE_ORIGIN}/brand/spanishcue-logo.png`,
     image: socialPreviewUrl,
     knowsLanguage: ["es", "en"],
     contactPoint: {

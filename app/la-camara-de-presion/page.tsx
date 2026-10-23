@@ -103,7 +103,7 @@ export default function CamaraDePresion(){
 
   return <main className="pressure-app">
     <nav className="pressure-top">
-      <Link href="/"><img src="/brand/mascot/portrait.webp" alt=""/><span><b>SPANISHCUE</b><small>C2 · CONVERSACIÓN</small></span></Link>
+      <Link href="/"><img src="/brand/spanishcue-logo.png" alt=""/><span><b>SPANISHCUE</b><small>C2 · CONVERSACIÓN</small></span></Link>
       <div className="session-timer"><button onClick={()=>setRunning(value=>!value)}>{running?"PAUSA":"INICIAR"}</button><b>{time}</b><button onClick={()=>{setSeconds(45*60);setRunning(false)}} aria-label="Reiniciar temporizador">↺</button></div>
       <Link href="/">BIBLIOTECA</Link>
     </nav>

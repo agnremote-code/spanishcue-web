@@ -36,20 +36,17 @@ export const SPANISH_SPEAKING_COUNTRY_COUNT = countries.length;
 
 export type SpanishCueBrandVariant = "full" | "compact" | "micro";
 
+/** The official SC logo (blue SC with gold detail), used everywhere the brand mark appears. */
+export const SPANISHCUE_LOGO_SRC = "/brand/spanishcue-logo.png";
+
 function SpanishCueMonogram({className=""}:{className?:string}) {
-  return <svg className={`sc-monogram ${className}`} viewBox="0 0 52 52" aria-hidden="true">
-    <path className="sc-monogram-c" d="M39 12.5a18 18 0 1 0 0 27" />
-    <path className="sc-monogram-s" d="M29.5 15.5c-2.2-2.2-9.5-2.7-12.2.9-3.1 4.2 1.5 6.8 6 7.9 5.4 1.3 9.1 3.5 7 8.4-2.3 5.3-11 4.6-14.7 1" />
-    <path className="sc-monogram-pencil" d="M36.5 7.5 20.2 43.2l-4.9 2.6 1-5.5L32.6 5Z" />
-    <path className="sc-monogram-pencil-line" d="m18 39.6 4.1 1.9M32.5 9l4 1.9" />
-    <circle cx="41.2" cy="38.8" r="3.2" />
-  </svg>;
+  return <img className={`sc-monogram ${className}`} src={SPANISHCUE_LOGO_SRC} alt="" width="256" height="256" aria-hidden="true" />;
 }
 
 export function SpanishCueBrand({variant="full",tone="auto",context,className=""}:{variant?:SpanishCueBrandVariant;tone?:"auto"|"light"|"dark";context?:string;className?:string}) {
   if(variant==="micro") return <span className={`sc-brand-system micro ${tone} ${className}`} role="img" aria-label="SPANISHCUE"><SpanishCueMonogram /></span>;
   return <span className={`sc-brand-system sc-wordmark ${variant} ${tone} ${className}`}>
-    {variant==="full"?<img className="sc-brand-mascot" src="/brand/mascot/portrait.webp" alt="" width="512" height="512"/>:<SpanishCueMonogram />}
+    <SpanishCueMonogram />
     <span className="sc-brand-name"><span><b>SPANISH</b>CUE</span>{context?<small>{context}</small>:variant==="full"?<small>CHOOSE. OPEN. TEACH.</small>:null}</span>
   </span>;
 }
