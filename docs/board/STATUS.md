@@ -1,6 +1,6 @@
 # Board STATUS: the single source of truth for the next run
 
-_Last updated: 2026-10-22 by the Thursday reliability routine (scheduled cloud run; facilitator plus Sofia (audit) and Alejandro (review) as agents, see "Current work")._
+_Last updated: 2026-10-23 by the Friday 3D + assessment routine (scheduled cloud run; facilitator plus Sofia, Martin and Alejandro as subagents, see "Current work")._
 
 ## Owner decisions in force
 | Date | Decision |
@@ -26,12 +26,14 @@ _Last updated: 2026-10-22 by the Thursday reliability routine (scheduled cloud r
 - **The GA4 property 553569142 returned 0 rows in 30 days.** Analytics fires only after consent (Alejandro, from code), so this needs R2.
 
 ## Backlog (BOARD-DECISION-002, locked 2026-10-17; supersedes the BOARD-DECISION-001 v3 §5 order)
-Parallel streams: **3D = Sofia**, **technical SEO = Alejandro**, **QA/integration = Martin**. PRO order: LES-001 Feria first, then the «Gustar» A1 grammar class. GROW-001 is paused.
+Parallel streams: **3D = Sofia**, **technical SEO = Alejandro**, **QA/integration = Martin**. PRO order (updated 2026-10-23): LES-001 Feria shipped; next «El ascensor del cerro» B2 3D world; the «Gustar» class is dropped as a duplicate. GROW-001 is paused.
 
 | Rank | Item | Owner → reviewer | State |
 |---|---|---|---|
 | 1 | LES-001 «La feria de Villaluz» A2 PRO 3D world (LESSON-DECISION-001 v5 + BOARD-DECISION-001 overlays) | Martin (content) → Sofia (build); G4 by Alejandro or a fresh agent; QA Martin | **Deployed 2026-10-21**: PR #251 → `6383b3b6`, production run 39549567404 (workflow smoke passed). The changed-URL smoke is still owed (see Current work). Open follow-ups: G5(b) real-device check (featured flag stays off until then), T5 fps on a real Android, the cover still shows the baile host in its old spot |
-| 2 | «Gustar y verbos como gustar» A1 PRO grammar class (`a1.gram.gustar`, `a1.gram.tambien-tampoco`, A2 ext. `a2.gram.doler`; house format of `new-lessons.json`) | Martin (content) → Sofia or a fresh agent (wiring); G4 Alejandro | after the Feria content |
+| 2 | **NEW 2026-10-23: «El ascensor del cerro», B2 PRO 3D world, Valparaíso** ([concept](concepts/2026-10-23-valparaiso-ascensor-del-cerro.md); selected 3 of 3) | Martin (content, after his cultural check) → Sofia (build) → G4 Alejandro or a fresh agent | **Next 3D slot, Mon 2026-10-26** (continue Wed if not gate-passed) |
+| 3 | «También, tampoco, sí, no: reaccionar», A1 PRO grammar (`a1.gram.tambien-tampoco`). **Partly covered already** (VERIFIED: `app/grammar-classroom/live/lessons/g332.ts:129` has a section «También, tampoco, sí, no · Reacting to tastes» with exercises), so whether any gap remains is a HYPOTHESIS; Martin duplicate-checks against main before any authoring | Martin → fresh agent (G4) | after rank 2 content |
+| — | ~~«Gustar y verbos como gustar» A1 PRO grammar class~~ | — | **DROPPED 2026-10-23** (Alejandro, on Martin's evidence): duplicates G032 «Gustar y encantar» (`g332.ts`) + G062 «Gustar, interesar, doler, faltar» (`g362.ts`), both live and PRO. The other gaps in BOARD-DECISION-002 §2 (superlativos, obligación, indefinidos) are also covered (369, 340/380, 370–372). Supersedes BOARD-DECISION-002 §3.1(2) on this point |
 | P | Technical SEO, highest impact first (parallel stream) | Alejandro → Sofia (code review), Martin (QA) | First fix = PR #224, **merged `c06c01c` and deployed 2026-10-20** (production run 39359743902, workflow smoke passed). The changed-URL content smoke is still owed (PUBLISHED.md, Pending verification) |
 | P+1 | COMP-001 ProfeDeELE.com benchmark (plan below) | Alejandro + Martin | after the first technical SEO fix |
 | — | GROW-001 build | Sofia | **PAUSED** (content approved in #220, kept in `docs/board/content/`) |
@@ -50,7 +52,7 @@ Parallel streams: **3D = Sofia**, **technical SEO = Alejandro**, **QA/integratio
 | — | **COMP-001** ProfeDeELE.com benchmark: their offer, formats, pricing, the teacher queries they win, and the gaps SpanishCue can win with evidence. Feeds concept selection and SEO-002. | Alejandro (lead) + Martin (pedagogy) | next Tuesday SEO slot, or earlier if capacity allows |
 
 ## Owner data requests (open)
-- **R0 (2026-10-20, blocking SEO measurement):** Windsor.ai paused all reads: "reads are paused because you have 6 accounts connected and your Free plan includes 1 account". Every `searchconsole` query returns that placeholder row with 0 values. Fix: disconnect the 5 extra accounts at https://onboard.windsor.ai/app/ (keep `sc-domain:spanishcue.com`) or upgrade. The board may not buy paid plans. The owner was notified by push on 2026-10-20. Until this is fixed there is no fresh Search Console evidence; the last real numbers are from 2026-10-17 (PR #224 body).
+- **R0 (2026-10-20, blocking SEO measurement; STILL OPEN 2026-10-23, placeholder row again):** Windsor.ai paused all reads: "reads are paused because you have 6 accounts connected and your Free plan includes 1 account". Every `searchconsole` query returns that placeholder row with 0 values. Fix: disconnect the 5 extra accounts at https://onboard.windsor.ai/app/ (keep `sc-domain:spanishcue.com`) or upgrade. The board may not buy paid plans. The owner was notified by push on 2026-10-20. Until this is fixed there is no fresh Search Console evidence; the last real numbers are from 2026-10-17 (PR #224 body).
 - **R1:** Search Console Page-indexing report, Core Web Vitals report and per-query impressions. The Windsor connector exposes only search analytics and sitemaps.
 - **R2:** GA Admin: which property `G-6C7DY2C5LN` reports to.
 - **R3:** a weekly aggregate-only D1 query (new accounts, first payments, opened/completed per 3D lesson). Agents never query production D1.
@@ -75,6 +77,18 @@ All five run on `claude-opus-5-5`, follow [ROUTINES.md](ROUTINES.md), and each i
 - Session 0 (lesson test) took 55 messages, about 15 of them caused by crossed messages over circle 6. That led to the lock rule.
 
 ## Current work and next action
+- **2026-10-23 (Friday 3D + assessment routine): PR (this branch `claude/friday-assessment-20261023`, base main `373e8b33`).** Subscription usage: **UNKNOWN**.
+  - **Board convened as subagents of the facilitator:** Sofia and Martin wrote proposals in parallel, Alejandro scored/selected and wrote the assessment. They did not message each other. Verbatim: [transcripts/2026-10-23-friday-concepts-assessment.md](transcripts/2026-10-23-friday-concepts-assessment.md).
+  - **3D unit: NONE shipped this run.** No ready 3D item existed and rank 2 turned out to be a duplicate, so the run did concept pipeline steps 1–3. Selected: **«El ascensor del cerro», B2, Valparaíso** ([concept file](concepts/2026-10-23-valparaiso-ascensor-del-cerro.md)). Deferred: Eje Cafetero C1 (needs a kit proximity-audio feature first), El Dorado B1 (fallback).
+  - **Weekly assessment:** [assessments/2026-W43.md](assessments/2026-W43.md). Board units: 3 by type (#224 SEO/page, #251 new world, #266 repair), 1 with an LQG file. Non-board sessions shipped 12 3D worlds and the 240-class grammar course with no LQG file (counted separately).
+  - **Search Console:** BLOCKED again (R0). All SEO indicators UNKNOWN this week.
+  - **Production (VERIFIED):** main = production = `373e8b33` (deploy 39829348447). #266's `bca97ed` reached production as an ancestor of `97f263d` (deploy 39718669131), so the 10-22 "production is still `4d2c680`" note below (carried from draft #267, which this PR supersedes) is no longer current.
+  - **PUBLISHED.md:** #224 Hospital and #251 Feria moved to Published. Evidence: Production Smoke Monitor 39857963446 on `373e8b33` (and 39723380150 on `97f263d`) asserts their changed URLs. Not asserted: the Hospital `educationalLevel` array.
+  - **Next action:**
+    - **Mon 2026-10-26 3D slot:** build «El ascensor del cerro» (Martin authors after the §9 checks in the concept file → Sofia builds → G4 by Alejandro or a fresh agent; LQG file; listen to every TTS clip).
+    - **Every run:** write a STATUS line and push the branch before substantive work (the Monday 10-19 slot left no trace); duplicate-check any backlog item against main before claiming it.
+    - Owner requests to raise: R0 (Windsor accounts), the auto-rollback repo setting, R1; proposal to add the LQG rule (N1) to AGENTS.md (assessment §6 item 5).
+    - Thu 10-29: UID → account-id re-keying decision item (Sofia drafts).
 - **2026-10-22 (Thursday reliability routine): PR #266** (branch `claude/thursday-review-20261022`, base main `4d2c680`). Subscription usage: **UNKNOWN**.
   - **The board was convened as agents, proportionately.** Sofia did a read-only API, auth and D1 audit. Alejandro did the independent code review (**APPROVE**, no blockers). The facilitator did the CI/deploy review, the fixes, the tests and the records. Messages are verbatim in [transcripts/2026-10-22-thursday-reliability.md](transcripts/2026-10-22-thursday-reliability.md).
   - **CI and deploy health (VERIFIED, `gh run list` plus the runs API):**
@@ -97,8 +111,18 @@ All five run on `claude-opus-5-5`, follow [ROUTINES.md](ROUTINES.md), and each i
     - `no-store` on every non-cached response;
     - no SQL built from user input, and every query scoped by owner;
     - premium media and chunks decrypted only after server-side access checks.
-  - **Checks:** see the PR #266 comment. Production evidence: see the post-merge note below, if present.
+  - **Checks:** see the PR #266 comment.
+  - **Release outcome: merged, NOT deployed.**
+    - #266 merged as `bca97ed5` (CI + Auto Merge run 39711535604). Then the merge job's **post-merge health check failed**. Its log section can't be read from the sandbox: the blob host returns 403, and the MCP log API returns only the last 5,000 of 29,361 lines.
+    - The auto-rollback pushed `automation/rollback-39711535604-1` (its suite passed) but could not open the PR: `GitHub Actions is not permitted to create or approve pull requests. (HTTP 403)`.
+    - Staging and production were skipped. **Production is still `4d2c680`.**
+    - The same tree passed CI `verify`, CI "Reverify against current main" and two full local `npm test` runs (the second on `bca97ed` exactly, exit 0, 1,324 ok). The same partial failure happened on #255 (run 39556653569), which the next merge carried and deployed.
+    - Publishing `bca97ed` through Deploy Staging (which promotes to production) was **refused by this session's permission classifier** ("Production Deploy"). The run did not work around it.
+  - **Reliability defects to fix (new):**
+    - (a) The post-merge health check fails intermittently while the same tree passes elsewhere. Root cause unknown until someone reads the step log in the GitHub UI (run 39711535604, job 119605240080, around log line 8699).
+    - (b) The auto-rollback can never complete: the repo setting "Allow GitHub Actions to create and approve pull requests" is off, which is owner-only. The `automation/rollback-*` branches accumulate (7 so far).
   - **Next action:**
+    - Publish `bca97ed` (or let the next merge carry it). Then confirm that the push-triggered Production Smoke Monitor passes with the new 3D-world checks.
     - Once the post-merge Production Smoke Monitor run on the merged SHA passes, move the #224 Hospital and #251 Feria entries in PUBLISHED.md from "Pending verification" to Published, citing that run. The next run should do this if this one could not.
     - Board decision needed: whether to schedule the UID → account-id re-keying (above) as a migration item.
     - Friday 3D slot: as planned below («Gustar» A1 PRO grammar, or the Feria G5(b) check).
