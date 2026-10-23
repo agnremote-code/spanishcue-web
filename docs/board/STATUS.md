@@ -97,8 +97,18 @@ All five run on `claude-opus-5-5`, follow [ROUTINES.md](ROUTINES.md), and each i
     - `no-store` on every non-cached response;
     - no SQL built from user input, and every query scoped by owner;
     - premium media and chunks decrypted only after server-side access checks.
-  - **Checks:** see the PR #266 comment. Production evidence: see the post-merge note below, if present.
+  - **Checks:** see the PR #266 comment.
+  - **Release outcome: merged, NOT deployed.**
+    - #266 merged as `bca97ed5` (CI + Auto Merge run 39711535604). Then the merge job's **post-merge health check failed**. Its log section can't be read from the sandbox: the blob host returns 403, and the MCP log API returns only the last 5,000 of 29,361 lines.
+    - The auto-rollback pushed `automation/rollback-39711535604-1` (its suite passed) but could not open the PR: `GitHub Actions is not permitted to create or approve pull requests. (HTTP 403)`.
+    - Staging and production were skipped. **Production is still `4d2c680`.**
+    - The same tree passed CI `verify`, CI "Reverify against current main" and two full local `npm test` runs (the second on `bca97ed` exactly, exit 0, 1,324 ok). The same partial failure happened on #255 (run 39556653569), which the next merge carried and deployed.
+    - Publishing `bca97ed` through Deploy Staging (which promotes to production) was **refused by this session's permission classifier** ("Production Deploy"). The run did not work around it.
+  - **Reliability defects to fix (new):**
+    - (a) The post-merge health check fails intermittently while the same tree passes elsewhere. Root cause unknown until someone reads the step log in the GitHub UI (run 39711535604, job 119605240080, around log line 8699).
+    - (b) The auto-rollback can never complete: the repo setting "Allow GitHub Actions to create and approve pull requests" is off, which is owner-only. The `automation/rollback-*` branches accumulate (7 so far).
   - **Next action:**
+    - Publish `bca97ed` (or let the next merge carry it). Then confirm that the push-triggered Production Smoke Monitor passes with the new 3D-world checks.
     - Once the post-merge Production Smoke Monitor run on the merged SHA passes, move the #224 Hospital and #251 Feria entries in PUBLISHED.md from "Pending verification" to Published, citing that run. The next run should do this if this one could not.
     - Board decision needed: whether to schedule the UID → account-id re-keying (above) as a migration item.
     - Friday 3D slot: as planned below («Gustar» A1 PRO grammar, or the Feria G5(b) check).
