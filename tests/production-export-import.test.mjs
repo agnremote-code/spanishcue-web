@@ -42,6 +42,7 @@ function fixture() {
     homework_teacher_notes: [{id: 'note1', owner_id: 'owner', learner_id: 'learner1', category: 'ser-estar', kind: 'worked', text: '', created_at: '2026-10-13'}],
     homework_events: [{id: 'ev1', learner_id: 'learner1', owner_id: 'owner', kind: 'recommended', lesson_id: 48, category: 'ser-estar', module_id: 'a2-01', created_at: '2026-10-13'}],
     academy_demo_requests: [{id:'academy-demo-1',name:'Ana López',institution:'Instituto Ejemplo',email:'ana@example.test',teachers:'6-15',message:'Una demo para el equipo.',consent_at:'2026-10-23T00:00:00Z',created_at:'2026-10-23T00:00:00Z'}],
+    institutions: [], institution_members: [], institution_invitations: [],
     lesson_reports: [], lesson_favorites: [], student_homework_links: [], live_class_sessions: [], lesson_progress: [], offer_settings: [], founder_leads: [], billing_checkout_locks: [], billing_purchase_claims: [], verification_email_deliveries: [],
   };
 }
@@ -60,7 +61,7 @@ async function writeExport(tables, overrides = {}) {
 test("import order inserts parents first and founder_offer_state after founder_assignments", async () => {
   const { db } = await schemaDatabase();
   const order = importOrder(schemaModel(db));
-  assert.equal(order.length, 29);
+  assert.equal(order.length, 32);
   assert.ok(order.indexOf("autoestudio_learners") < order.indexOf("autoestudio_passes"));
   assert.ok(order.indexOf("autoestudio_learners") < order.indexOf("homework_errors"));
   assert.ok(order.indexOf("autoestudio_learners") < order.indexOf("autoestudio_progress"));
