@@ -207,3 +207,16 @@ test('the catalog cover exists and matches the other 3D covers (1200×750 lossy 
   assert.deepEqual([file.readUInt16LE(26) & 0x3fff, file.readUInt16LE(28) & 0x3fff], [1200, 750]);
   assert.ok(file.length < 120_000, `${file.length} bytes`);
 });
+
+test('unmount frees the GPU: textures, cached low-mode bakes and the WebGL context (code review B1)', () => {
+  const scene = readFileSync('app/el-ascensor-del-cerro/cerro3d.ts', 'utf8');
+  const cleanup = world.slice(world.indexOf('disposed = true;'));
+  assert.match(cleanup, /cerro\.dispose\(\)/);
+  assert.match(cleanup, /renderer\.forceContextLoss\(\)/);
+  assert.match(cleanup, /isTexture[\s\S]*\.dispose\(\)/, 'texture slots of every material are disposed');
+  const dispose = scene.slice(scene.indexOf('function dispose()'));
+  assert.match(scene, /dispose: \(\) => void/);
+  assert.match(dispose, /signTexture\.dispose\(\)/);
+  assert.match(dispose, /muralMap\.dispose\(\)/);
+  assert.match(dispose, /hostBakes/);
+});
