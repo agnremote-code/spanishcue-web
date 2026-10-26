@@ -200,9 +200,11 @@ export default function AscensorGame() {
     setState(r.state);
     if (r.session !== session) setSession(r.session);
   };
-  const open = (id: string) => {
+  const open = (id: string, fromList = false) => {
     setList(false); setMap(false);
-    if (mode === 'escucha') { setListenAt(id); return; }
+    // A listening opened from the list or the plan also takes the mascot
+    // there (and up or down the cerro), as a scene does.
+    if (mode === 'escucha') { if (fromList) setTravel(t => ({ circle: id, n: (t?.n ?? 0) + 1 })); setListenAt(id); return; }
     setTalkAt(0);
     apply(openScene(state, id), session);
   };
@@ -289,7 +291,7 @@ export default function AscensorGame() {
       </div>
     </header>}
     {entered && use3d && !busy && !list && !riding && <aside className={map ? 'ac-mapbox is-big' : 'ac-mapbox'} onClick={() => !map && setMap(true)}>
-      <HillMap pose={pose} done={heardHere} onOpen={(id) => map && open(id)} big={map} />
+      <HillMap pose={pose} done={heardHere} onOpen={(id) => map && open(id, true)} big={map} />
       {map && <p>Toca un círculo para abrirlo. <button type="button" className="ac-secondary" onClick={(e) => { e.stopPropagation(); setMap(false); }}>Cerrar plano</button></p>}
     </aside>}
     {debug && stats && <p className="ac-debug">{stats.calls} draw calls · DPR {stats.dpr} · {stats.fps} fps · {stats.people} personas</p>}
@@ -311,7 +313,7 @@ export default function AscensorGame() {
         const ids = step.oneOf ?? (step.circle ? [step.circle] : []);
         const isDone = step.closing ? session.finished : ids.length > 0 && stepDone(step, routeDone);
         if (!ids.length) return <li key={i}><div className="ac-step-note"><span>{step.closing ? 'Cierre' : 'Calentamiento'} · {step.minutes} min</span><small>{step.do}</small></div></li>;
-        return <li key={i} className="ac-step">{ids.map((id, k) => { const c = circleById(id); if (!c) return null; return <button key={id} type="button" className={isDone ? 'is-done' : undefined} onClick={() => open(id)}>
+        return <li key={i} className="ac-step">{ids.map((id, k) => { const c = circleById(id); if (!c) return null; return <button key={id} type="button" className={isDone ? 'is-done' : undefined} onClick={() => open(id, true)}>
           <span>{k > 0 ? 'o ' : ''}{c.n}. {c.name}{step.closing ? ' · cierre' : ''}</span><small>{step.minutes} min{step.do ? ` · ${step.do}` : ''}</small>{isDone && <i aria-label="hecho">✓</i>}
         </button>; })}</li>;
       })}</ol>}
@@ -319,7 +321,7 @@ export default function AscensorGame() {
       <h3>Todos los círculos, de abajo arriba</h3>
       <div className="ac-heights">{(['puerto', 'medio', 'alto'] as TerraceId[]).map(t => <section key={t} className={`ac-height ac-height-${t}`} aria-label={HEIGHT_LABEL[t]}>
         <h4>{HEIGHT_LABEL[t]} · {terraceById(t)?.y} m</h4>
-        <ol className="ac-all">{CIRCLES_BY_HEIGHT.filter(c => c.terrace === t).map(c => <li key={c.id}><button type="button" className={heardHere.includes(c.id) ? 'is-done' : undefined} onClick={() => open(c.id)}>
+        <ol className="ac-all">{CIRCLES_BY_HEIGHT.filter(c => c.terrace === t).map(c => <li key={c.id}><button type="button" className={heardHere.includes(c.id) ? 'is-done' : undefined} onClick={() => open(c.id, true)}>
           <span>{c.n}. {c.name}</span><small>{circles[c.id]?.status ? 'En preparación' : circles[c.id]?.title ?? c.place}</small>{heardHere.includes(c.id) && <i aria-label="hecho">✓</i>}
         </button></li>)}</ol>
       </section>)}</div>
@@ -335,7 +337,7 @@ export default function AscensorGame() {
           {TERRACES.map(t => <button key={t.id} type="button" className="ac-secondary" onClick={() => go({ terrace: t.id })}>Ir a: {t.name}</button>)}
         </div>
       </>}
-      {!use3d && <div className="ac-flatmap"><HillMap pose={null} done={heardHere} onOpen={open} big /></div>}
+      {!use3d && <div className="ac-flatmap"><HillMap pose={null} done={heardHere} onOpen={id => open(id, true)} big /></div>}
       <div className="ac-row">
         {use3d && <button type="button" className="ac-secondary" onClick={() => setList(false)}>Volver al cerro</button>}
         <button type="button" className="ac-secondary" onClick={() => setState(s => resetLevel(s))}>Marcar todo como no hecho</button>

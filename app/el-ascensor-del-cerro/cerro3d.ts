@@ -94,7 +94,7 @@ function house(b: Batch, o: House, detail: boolean) {
         continue;
       }
       at(lx, ly + 0.1, o.d / 2 + 0.09, new THREE.BoxGeometry(1.0, 1.3, 0.06), TRIM);
-      at(lx, ly + 0.1, o.d / 2 + 0.12, new THREE.BoxGeometry(0.82, 1.1, 0.05), r() < 0.25 ? '#53606a' : '#28323a');
+      at(lx, ly + 0.1, o.d / 2 + 0.12, new THREE.BoxGeometry(0.82, 1.1, 0.05), r() < 0.3 ? '#6a7a86' : '#34424d');
     }
     if (f > 0 && r() < 0.3) {
       // A narrow balcony with a rail.
@@ -415,9 +415,13 @@ export function buildCerro(scene: THREE.Scene, opts: { low: boolean; shadows: bo
   // The mural wall at the stair landing.
   b.block(6.6, 20.4, -3.5, -3, 9, 15.2, '#ece4d4');
   b.block(6.4, 20.6, -3.6, -2.9, 15.2, 15.4, '#9d9282');
-  // A fence along the funicular cutting where it crosses the street.
-  for (const x of [-28.2, -19.8]) b.block(x - 0.05, x + 0.05, -3, 5, 9, 10.1, '#2b2b2b', 'metal');
-  for (const z of [-3, 5]) b.block(-28.2, -19.8, z - 0.05, z + 0.05, 9.95, 10.05, '#2b2b2b', 'metal');
+  // Railings on both lips of the funicular cutting where it crosses the
+  // street (nothing across the rails: the cabins run underneath).
+  for (const x of [gap[0] - 0.1, gap[1] + 0.1]) {
+    for (let z = -3; z <= 5.01; z += 2) b.box(0.07, 1.0, 0.07, '#2b2b2b', x, 9.5, z, 0, 'metal');
+    b.block(x - 0.035, x + 0.035, -3, 5, 9.96, 10.02, '#2b2b2b', 'metal');
+    b.block(x - 0.02, x + 0.02, -3, 5, 9.48, 9.52, '#2b2b2b', 'metal');
+  }
 
   // Railings on the downhill edges (middle street and the mirador), leaving
   // the stair heads and the funicular open.
@@ -463,7 +467,7 @@ export function buildCerro(scene: THREE.Scene, opts: { low: boolean; shadows: bo
   b.put(corrugated(cafe.x1 - cafe.x0 - 0.1, cafe.h - 0.1), '#d39a33', (cafe.x0 + cafe.x1) / 2, 18 + cafe.h / 2, cafe.z1 + 0.05);
   b.block(cafe.x0 - 0.3, cafe.x1 + 0.3, cafe.z0 - 0.3, cafe.z1 + 0.4, 18 + cafe.h, 18 + cafe.h + 0.15, '#7d4b37', 'metal');
   b.block(cafe.x0 + 1.4, cafe.x0 + 4.2, cafe.z1, cafe.z1 + 0.12, 18.2, 20.6, '#3b2a20');
-  b.block(cafe.x0 + 5.2, cafe.x1 - 1.2, cafe.z1, cafe.z1 + 0.12, 19.0, 20.8, '#28323a');
+  b.block(cafe.x0 + 5.2, cafe.x1 - 1.2, cafe.z1, cafe.z1 + 0.12, 19.0, 20.8, '#4a5c68');
   const awning = new THREE.BoxGeometry(cafe.x1 - cafe.x0 - 1, 0.08, 1.8);
   awning.rotateX(0.32);
   b.put(awning, '#a63d40', (cafe.x0 + cafe.x1) / 2, 21.5, cafe.z1 + 0.9);
@@ -475,7 +479,7 @@ export function buildCerro(scene: THREE.Scene, opts: { low: boolean; shadows: bo
   const tl = BUILDINGS.taller;
   b.block(tl.x0, tl.x1, tl.z0, tl.z1, 18, 18 + tl.h, tl.color);
   b.put(corrugated(tl.x1 - tl.x0 - 0.1, tl.h - 0.1), '#6f8f9b', (tl.x0 + tl.x1) / 2, 18 + tl.h / 2, tl.z1 + 0.05);
-  b.block(tl.x0 + 1.2, tl.x1 - 1.2, tl.z1 + 0.06, tl.z1 + 0.14, 18, 22.6, '#1c2228');
+  b.block(tl.x0 + 1.2, tl.x1 - 1.2, tl.z1 + 0.06, tl.z1 + 0.14, 18, 22.6, '#39424a');
   b.block(tl.x0 - 0.3, tl.x1 + 0.3, tl.z0 - 0.3, tl.z1 + 0.5, 18 + tl.h, 18 + tl.h + 0.15, '#8a8f94', 'metal');
   // The old cabin under restoration, on trestles, and a spare cable wheel.
   b.block(4.4, 6.9, -26.5, -24.9, 18, 18.9, '#6b4a30');

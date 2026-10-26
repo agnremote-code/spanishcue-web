@@ -179,7 +179,11 @@ if (RUN.cover) {
   await page.locator('.ac-canvas canvas').waitFor({ timeout: 60000 });
   const shots = ['intro', ...CIRCLES.map(c => c.id), 'ride'];
   const show = async id => {
-    if (id === 'ride') { await page.evaluate(() => { window.__qa.intro(false); window.__qa.circle(null); window.__qa.travel({ link: 'ascensor-sube' }); }); await page.waitForTimeout(2600); return; }
+    if (id === 'ride') {
+      await page.evaluate(() => { window.__qa.intro(false); window.__qa.circle(null); window.__qa.travel({ link: 'ascensor-sube' }); });
+      await page.waitForFunction(() => Number(document.querySelector('.ac-world')?.dataset.rideT ?? 0) >= 0.45, null, { timeout: 120000 });
+      return;
+    }
     await page.evaluate(id => { window.__qa.intro(id === 'intro'); window.__qa.circle(id === 'intro' ? null : id); }, id);
     await frames(page, 45);
   };
@@ -249,7 +253,7 @@ const smoke = (name, passed, detail = {}) => { report.smoke.push({ name, passed,
 /** Layout audit of every visible overlay card (scene, list, listening). */
 async function audit(page, label) {
   const result = await page.evaluate(() => {
-    const out = { overflowX: document.documentElement.scrollWidth > innerWidth + 1, clipped: [], unreachable: [], scrollers: [], buttons: [], height: 0 };
+    const out = { overflowX: document.documentElement.scrollWidth > innerWidth + 1, clipped: [], unreachable: [], shared: [], scrollers: [], buttons: [], height: 0 };
     const cards = [...document.querySelectorAll('.ac-card, .ac-panel, .e3-card')].filter(e => e.getClientRects().length);
     const textOf = e => (e.innerText || e.getAttribute('aria-label') || '').trim().slice(0, 60);
     for (const card of cards) {
@@ -265,7 +269,9 @@ async function audit(page, label) {
           out.scrollers.push({ el: `${e.tagName.toLowerCase()}.${[...e.classList].join('.')}`, sh: e.scrollHeight, ch: e.clientHeight });
           out.height = Math.max(out.height, e.scrollHeight);
         }
-        if (scrolls(cs.overflowX) && e.scrollWidth > e.clientWidth + 1) out.unreachable.push({ el: `${e.tagName.toLowerCase()}.${[...e.classList].join('.')}`, why: 'horizontal overflow inside a card' });
+        // The shared listening card's step strip (escucha-3d, all worlds) is a
+        // deliberate horizontal scroller; it is recorded, not failed here.
+        if (scrolls(cs.overflowX) && e.scrollWidth > e.clientWidth + 1) (e.classList.contains('e3-steps') ? out.shared : out.unreachable).push({ el: `${e.tagName.toLowerCase()}.${[...e.classList].join('.')}`, why: 'horizontal overflow inside a card' });
       }
       for (const s of [card, ...card.querySelectorAll('*')].filter(e => e.getClientRects().length && /auto|scroll/.test(getComputedStyle(e).overflowY) && e.scrollHeight > e.clientHeight + 1)) {
         s.scrollTop = s.scrollHeight;
@@ -290,7 +296,7 @@ async function audit(page, label) {
     return out;
   });
   const passed = !result.overflowX && !result.clipped.length && !result.unreachable.length;
-  smoke(`layout ${label}`, passed, { cards: result.cards, buttons: result.buttons, overflowX: result.overflowX, clipped: result.clipped, unreachable: result.unreachable, scrollers: result.scrollers.length, contentHeight: result.height });
+  smoke(`layout ${label}`, passed, { cards: result.cards, buttons: result.buttons, overflowX: result.overflowX, clipped: result.clipped, unreachable: result.unreachable, sharedKitScrollers: result.shared, scrollers: result.scrollers.length, contentHeight: result.height });
   return { passed, height: result.height };
 }
 
@@ -380,7 +386,8 @@ if (RUN.smoke) {
         await page.locator('.ac-all').getByRole('button', { name: new RegExp(`^${c.n}\\. `) }).click();
         const sel = mode === 'escucha' ? '.e3-card' : `.ac-card[data-scene="${c.id}"], .ac-panel[role="status"]`;
         await page.locator(sel).first().waitFor();
-        await frames(page, 4);
+        const want = c.terrace;
+        await page.waitForFunction(t => document.querySelector('main.ac')?.getAttribute('data-terrace') === t, want, { timeout: 15000 }).catch(() => {});
         const terrace = await terraceOf(page);
         const authored = mode === 'escucha' ? true : await page.locator(`.ac-card[data-scene="${c.id}"]`).count() > 0;
         if (viewport.width === 390 && mode === 'escucha') await audit(page, `390 listening ${c.id}`);
@@ -411,30 +418,33 @@ if (RUN.smoke) {
       const t0 = Date.now();
       await page.locator('.ac-moves').getByRole('button', { name: new RegExp(`^${button}`) }).click();
       const world = page.locator('.ac-world');
-      await page.waitForFunction(() => document.querySelector('.ac-world')?.hasAttribute('data-ride'), null, { timeout: 5000 });
+      await page.waitForFunction(() => document.querySelector('.ac-world')?.hasAttribute('data-ride'), null, { timeout: 15000 });
       const during = await world.getAttribute('data-ride');
       let mid = null;
       if (opts.shot) {
-        await page.waitForTimeout(opts.at ?? 2400);
+        // Mid-ride in world time (the world exposes its ride progress).
+        await page.waitForFunction(at => Number(document.querySelector('.ac-world')?.dataset.rideT ?? 0) >= at, opts.at ?? 0.5, { timeout: 120000 });
         const png = await page.screenshot({ path: resolve(out, 'smoke', `${opts.shot}.png`) });
         await keep(page, png, `${opts.shot}.png`, 0.5);
         mid = await pixelStats(page, png);
         await hudAudit(page, `${label} during ${during}`);
       }
       if (opts.skip) await page.locator('.ac-ride').getByRole('button', { name: /Saltar el viaje/ }).click();
-      await page.waitForFunction(() => !document.querySelector('.ac-world')?.hasAttribute('data-ride'), null, { timeout: 12000 });
+      // SwiftShader renders a few frames a second and the world clock steps at
+      // most 1/20 s a frame, so a 5 s ride takes longer in wall-clock here.
+      await page.waitForFunction(() => !document.querySelector('.ac-world')?.hasAttribute('data-ride'), null, { timeout: 120000 });
       const seconds = (Date.now() - t0) / 1000;
-      await frames(page, 6);
+      await page.waitForFunction(t => document.querySelector('main.ac')?.getAttribute('data-terrace') === t, expectTerrace, { timeout: 15000 }).catch(() => {});
       const terrace = await terraceOf(page);
       return { during, seconds: Math.round(seconds * 10) / 10, terrace, ok: terrace === expectTerrace, mid };
     };
-    const up = await ride('Subir en el ascensor', 'alto', { shot: 'ride-funicular-mid', at: 2600 });
-    smoke('funicular ride up runs (cabin + camera), input locked, ends at the top', up.ok && up.during === 'ascensor-sube' && up.seconds >= 4 && up.seconds <= 8, up);
+    const up = await ride('Subir en el ascensor', 'alto', { shot: 'ride-funicular-mid', at: 0.5 });
+    smoke('funicular ride up runs (cabin + camera) to the end and arrives at the top', up.ok && up.during === 'ascensor-sube' && up.seconds >= 4, up);
     const after = await page.screenshot({ path: resolve(out, 'smoke', 'arrival-alto.png') });
     await keep(page, after, 'arrival-alto.png', 0.5);
     const down = await ride('Bajar en el ascensor', 'puerto', { skip: true });
-    smoke('funicular ride down is skippable («Saltar el viaje»)', down.ok && down.seconds < 3, down);
-    const stairs = await ride('Subir por la escalera', 'medio', { shot: 'ride-stairs-mid', at: 2200 });
+    smoke('funicular ride down is skippable («Saltar el viaje»)', down.ok && down.seconds < 4, down);
+    const stairs = await ride('Subir por la escalera', 'medio', { shot: 'ride-stairs-mid', at: 0.55 });
     smoke('stairway ride up runs and ends on the middle street', stairs.ok && stairs.during === 'escalera-sube-1', stairs);
     const mural = await page.screenshot({ path: resolve(out, 'smoke', 'arrival-medio.png') });
     await keep(page, mural, 'arrival-medio.png', 0.5);
@@ -450,17 +460,17 @@ if (RUN.smoke) {
     // lower marker? Instead check the keyboard skip on a fresh ride.
     await tap(page.getByRole('button', { name: 'Lista del profesor' }), `${label} «Lista del profesor»`);
     await page.locator('.ac-moves').getByRole('button', { name: /^Bajar en el ascensor/ }).click();
-    await page.waitForFunction(() => document.querySelector('.ac-world')?.hasAttribute('data-ride'), null, { timeout: 5000 });
+    await page.waitForFunction(() => document.querySelector('.ac-world')?.hasAttribute('data-ride'), null, { timeout: 15000 });
     await page.keyboard.press('KeyE');
-    await page.waitForFunction(() => !document.querySelector('.ac-world')?.hasAttribute('data-ride'), null, { timeout: 3000 }).catch(() => {});
+    await page.waitForFunction(() => !document.querySelector('.ac-world')?.hasAttribute('data-ride'), null, { timeout: 10000 }).catch(() => {});
+    await page.waitForFunction(() => document.querySelector('main.ac')?.getAttribute('data-terrace') === 'puerto', null, { timeout: 15000 }).catch(() => {});
     smoke('a ride is skippable with the keyboard (E)', (await terraceOf(page)) === 'puerto' && !(await page.locator('.ac-world[data-ride]').count()), { terrace: await terraceOf(page) });
     // On foot: the lower station marker is just north of the exit (exit faces
     // the sea). Turn round and walk north into it.
     await page.locator('.ac-canvas canvas').focus();
     await page.keyboard.down('KeyS');
-    await page.waitForTimeout(700);
+    await page.waitForFunction(() => document.querySelector('.ac-world')?.hasAttribute('data-ride'), null, { timeout: 30000 }).catch(() => {});
     await page.keyboard.up('KeyS');
-    await page.waitForTimeout(400);
     const walked = await page.locator('.ac-world').getAttribute('data-ride');
     smoke('walking into the station marker starts the funicular', walked === 'ascensor-sube', { ride: walked });
     if (walked) await page.locator('.ac-ride').getByRole('button', { name: /Saltar el viaje/ }).click();
@@ -472,10 +482,10 @@ if (RUN.smoke) {
     await page.getByRole('button', { name: 'Usar el 3D' }).click();
     await page.getByRole('button', { name: 'Entrar en el cerro' }).click();
     await page.locator('.ac-canvas canvas').waitFor({ timeout: 60000 });
-    await frames(page, 10);
+    await frames(page, 30);
     await tap(page.getByRole('button', { name: 'Lista del profesor' }), 'reduced «Lista del profesor»');
     await page.locator('.ac-moves').getByRole('button', { name: /^Subir en el ascensor/ }).click();
-    await frames(page, 6);
+    await page.waitForFunction(() => document.querySelector('main.ac')?.getAttribute('data-terrace') === 'alto', null, { timeout: 15000 }).catch(() => {});
     const terrace = await terraceOf(page);
     smoke('reduced motion: the funicular is an instant cut', terrace === 'alto' && !(await page.locator('.ac-world[data-ride]').count()), { terrace });
     await context.close();

@@ -269,7 +269,9 @@ export function circleStep(circle, here, opened, speed, dt) {
 
 // ------------------------------------------------------------------ camera
 /** Keep the follow camera out of the hillside: on the uphill side of a
- * terrace (and past its ends) it rises instead of going into the houses. */
+ * terrace (and past its ends) it rises instead of going into the houses; and
+ * it never stands inside a building on the terraces (the stations, the café,
+ * the workshop, the hall): it slides in towards the player until it is out. */
 export function clampCamera(px, pz, cx, cy, cz) {
   const t = terraceAt(px, pz);
   let x = cx, y = cy, z = cz;
@@ -277,5 +279,18 @@ export function clampCamera(px, pz, cx, cy, cz) {
   if (z < minZ) { y += (minZ - z) * 1.1; z = minZ; }
   const lim = 33;
   if (Math.abs(x) > lim) { y += (Math.abs(x) - lim) * 0.6; x = Math.sign(x) * lim; }
+  const inside = (qx, qy, qz) => Object.values(BUILDINGS).some(b => {
+    const base = groundY((b.x0 + b.x1) / 2, (b.z0 + b.z1) / 2);
+    return qx > b.x0 - 0.4 && qx < b.x1 + 0.4 && qz > b.z0 - 0.4 && qz < b.z1 + 0.4 && qy < base + b.h + 0.6;
+  });
+  if (inside(x, y, z)) {
+    const py = t.y + 1.6;
+    let done = false;
+    for (let k = 0.95; k >= 0.2; k -= 0.05) {
+      const qx = px + (x - px) * k, qz = pz + (z - pz) * k, qy = py + (y - py) * k + (1 - k) * 1.2;
+      if (!inside(qx, qy, qz)) { x = qx; y = qy; z = qz; done = true; break; }
+    }
+    if (!done) { x = px + (x - px) * 0.2; z = pz + (z - pz) * 0.2; y = t.y + 3.4; }
+  }
   return { x, y: Math.max(y, t.y + 0.9), z };
 }

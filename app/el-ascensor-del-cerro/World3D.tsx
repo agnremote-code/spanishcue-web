@@ -22,7 +22,7 @@ import { useEffect, useRef, useState, type PointerEvent as ReactPointerEvent } f
 import { canUseKeys, followYaw, inputFrom, keyAction, stepPlayer, angleBetween } from '../noche-abierta/world3d.mjs';
 import { animateHero, createHero } from '../noche-abierta/hero3d';
 import {
-  BOUNDS, FUNICULAR, LINKS, SOLIDS, SPAWN, TERRACE_ARRIVAL, circleById, circleStep, clampCamera, framing, groundY, isClearGround, linkAt, linkById, ridePose,
+  BOUNDS, FUNICULAR, LINKS, arrival, SOLIDS, SPAWN, TERRACE_ARRIVAL, circleById, circleStep, clampCamera, framing, groundY, isClearGround, linkAt, linkById, ridePose,
   rideSeconds, spotAt, terraceAt, walksInto, type Link, type TerraceId,
 } from './layout.mjs';
 import { createBumpClock, pushOut } from '../escucha-3d/bump.mjs';
@@ -30,8 +30,9 @@ import { insultFor, shout } from '../escucha-3d/shout';
 import { buildCerro, type Cerro } from './cerro3d';
 
 export type Pose = { x: number; z: number; heading: number; terrace: TerraceId };
-/** A move the teacher asks for from the list: ride a link, or jump to a terrace. */
-export type Travel = { n: number; link?: string; terrace?: TerraceId };
+/** A move the teacher asks for from the list: ride a link, jump to a
+ * terrace, or stand next to a circle (a listening opened from the list). */
+export type Travel = { n: number; link?: string; terrace?: TerraceId; circle?: string };
 export type WorldProps = {
   circleId: string | null;
   done: string[];
@@ -197,6 +198,8 @@ export default function World3D(props: WorldProps) {
       heroY = groundY(player.x, player.z);
       ride = null;
       linkSpent = null;
+      poseAt = -10;
+      if (host?.parentElement) delete host.parentElement.dataset.rideT;
       setRiding(null);
       live.current.onRide?.(null);
       camera.position.set(player.x - Math.sin(yaw) * zoom, heroY + 3.2, player.z - Math.cos(yaw) * zoom);
@@ -309,6 +312,7 @@ export default function World3D(props: WorldProps) {
           if (ride) finishRide();
           player = { ...player, x: f.x, z: f.z, heading: f.heading, speed: 0, y: 0, vy: 0 };
           consumed = circleId;
+          poseAt = -10;
         }
       }
       // The teacher list: ride from a station, or go to a terrace.
@@ -320,10 +324,11 @@ export default function World3D(props: WorldProps) {
           player = { ...player, x: link.at.x, z: link.at.z, heading: link.enter, speed: 0, y: 0, vy: 0 };
           heroY = groundY(player.x, player.z);
           startRide(link.id);
-        } else if (p.travel.terrace) {
-          const a = TERRACE_ARRIVAL[p.travel.terrace];
+        } else if (p.travel.terrace || p.travel.circle) {
+          const a = p.travel.circle ? arrival(p.travel.circle) : TERRACE_ARRIVAL[p.travel.terrace!];
           player = { ...player, x: a.x, z: a.z, heading: a.heading, speed: 0, y: 0, vy: 0 };
           yaw = a.heading;
+          poseAt = -10;
         }
       }
       // Anything that pauses the world (a card, the list) ends a ride at once.
@@ -340,6 +345,9 @@ export default function World3D(props: WorldProps) {
           player.speed = ride.link.kind === 'escalera' && t > 0.04 && t < 0.96 ? 2.2 : 0;
           if (rp.cabin != null) { sA = ride.rail === 0 ? rp.cabin : 1 - rp.cabin; cerro.setCabins(sA); }
         }
+        // How far the ride is, on the DOM only (no React render): QA reads it.
+        if (host.parentElement) host.parentElement.dataset.rideT = Math.min(1, t).toFixed(2);
+        if (host.parentElement) host.parentElement.dataset.dbg = JSON.stringify({ hero: hero.root.position.toArray().map(v => +v.toFixed(2)), vis: hero.root.visible, cam: camera.position.toArray().map(v => +v.toFixed(1)), sA }); // DBG
         if (t >= 1) finishRide();
       } else if (moving) {
         const input = inputFrom(held);
@@ -409,7 +417,7 @@ export default function World3D(props: WorldProps) {
       } else if (ride) {
         // Beside the rail (funicular) or above the flight (stairs), on the
         // downhill side, where nothing stands between the camera and the rider.
-        const off = ride.link.kind === 'funicular' ? { x: -8.5, y: 4.2, z: 7.5 } : { x: -5, y: 5, z: 7 };
+        const off = ride.link.kind === 'funicular' ? { x: -6.5, y: 3.6, z: 5.5 } : { x: -5, y: 5, z: 7 };
         desired.set(player.x + off.x, heroY + off.y, player.z + off.z);
         if (camera.position.distanceTo(desired) > 18) camera.position.copy(desired);
         camera.position.lerp(desired, 1 - Math.exp(-dt * 4));
@@ -423,11 +431,16 @@ export default function World3D(props: WorldProps) {
         const mid = temp.set((player.x + c.npc.x) / 2, gy + 1.35, (player.z + c.npc.z) / 2);
         const side = Math.atan2(c.npc.x - player.x, c.npc.z - player.z) + Math.PI / 2;
         const dist = Math.max(2.8, Math.hypot(c.npc.x - player.x, c.npc.z - player.z) * 0.9 + 1.4);
-        // Of the two sides, the one with more room (downhill, away from walls).
-        const sx = mid.x + Math.sin(side) * dist, sz = mid.z + Math.cos(side) * dist;
-        const ox = mid.x - Math.sin(side) * dist, oz = mid.z - Math.cos(side) * dist;
-        const pick = sz >= oz ? { x: sx, z: sz } : { x: ox, z: oz };
-        const safe = clampCamera(player.x, player.z, pick.x, gy + 2.0, pick.z);
+        // Of the two sides: one where the camera stands free (not in the
+        // hillside or a building), and of those the uphill one, so the scene
+        // looks out over the bay behind the people.
+        const sides = [1, -1].map(k => {
+          const x = mid.x + Math.sin(side) * dist * k, z = mid.z + Math.cos(side) * dist * k;
+          const safe = clampCamera(player.x, player.z, x, gy + 2.0, z);
+          return { safe, free: Math.abs(safe.x - x) < 0.01 && Math.abs(safe.z - z) < 0.01 && Math.abs(safe.y - gy - 2.0) < 0.01, z };
+        });
+        sides.sort((a, b) => Number(b.free) - Number(a.free) || a.z - b.z);
+        const safe = sides[0].safe;
         desired.set(safe.x, safe.y, safe.z);
         if (camera.position.distanceTo(desired) > 12) { camera.position.copy(desired); look.copy(mid); }
         camera.position.lerp(desired, 1 - Math.exp(-dt * 3));
