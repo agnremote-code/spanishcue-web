@@ -60,7 +60,7 @@ export const CIRCLES = {
       { id: 'convertirse', form: 'convertirse en + sustantivo', use: 'pasar a ser otra cosa: la casa se convirtió en un hostal' },
       { id: 'llegar-a-ser', form: 'llegar a ser + sustantivo', use: 'el resultado de un proceso largo o de un esfuerzo: llegó a ser jefe' },
       { id: 'quedarse', form: 'quedarse + adjetivo', use: 'el estado en que algo termina, a menudo una pérdida: la calle se queda vacía' },
-      { id: 'ponerse', form: 'ponerse + adjetivo', use: 'un cambio rápido de estado o de ánimo: se puso muy triste' },
+      { id: 'ponerse', form: 'ponerse + adjetivo', use: 'un cambio de estado, aspecto o ánimo, a menudo rápido: se puso muy triste; el carro se ha puesto viejo' },
       { id: 'valorar-cambio', form: 'Para bien / para mal…; lo que más ha cambiado es que + indicativo; me da pena que + subjuntivo', use: 'valorar una transformación' },
     ],
     line: 'La estación de abajo está en el plan, entre una ferretería y una parada de buses. En la reja hay un cartel: «Cerrado por reparación». Don Lorenzo, el ascensorista, sigue viniendo cada mañana a abrir su caseta, aunque el carro no se mueve desde hace ocho meses. Esta tarde, arriba, la junta de vecinos se reúne para decidir cómo reabrirlo.',
@@ -78,8 +78,8 @@ export const CIRCLES = {
         context: 'Don Lorenzo mira la calle: «Cuando empecé, aquí todos se conocían. Ahora la gente pasa y no saluda. Y eso no es de un día: es así desde hace años.»',
         prompt: 'Describe con una frase el cambio de carácter del barrio que cuenta don Lorenzo.',
         options: [
-          { id: 'puesto', label: 'El barrio se ha puesto más anónimo: ya casi nadie saluda.', correct: false, feature: 'ponerse para un cambio duradero',
-            feedback: 'Ponerse para un cambio duradero: «ponerse» indica un cambio rápido y pasajero, de estado o de ánimo («se puso nervioso»). Lo que cuenta don Lorenzo es un cambio profundo y que dura años: «se ha vuelto».' },
+          { id: 'puesto', label: 'El barrio se ha puesto más anónimo: ya casi nadie saluda.', correct: false, feature: 'ponerse con un rasgo de carácter',
+            feedback: 'Ponerse con un rasgo de carácter: «ponerse» va con adjetivos de estado, aspecto o ánimo (nervioso, triste, viejo, caro), a menudo cambios rápidos. «Anónimo» describe el carácter que el barrio ha ido tomando con los años: «se ha vuelto».' },
           { id: 'vuelto', label: 'El barrio se ha vuelto más anónimo: ya casi nadie saluda.', correct: true,
             feedback: 'Bien: «volverse + adjetivo» describe un cambio profundo de carácter, que nadie buscó: el barrio se ha vuelto más anónimo.' },
           { id: 'convertido', label: 'El barrio se ha convertido más anónimo: ya casi nadie saluda.', correct: false, feature: 'convertirse sin «en»',
@@ -92,8 +92,8 @@ export const CIRCLES = {
         context: 'Don Lorenzo señala la casa azul de enfrente: «Ahí vivía la familia Ramírez, con cinco hijos. Ahora es un hostal. En invierno no hay nadie.»',
         prompt: 'Resume en una frase lo que pasó con la casa.',
         options: [
-          { id: 'volvio', label: 'La casa se volvió un hostal y en invierno se queda vacía.', correct: false, feature: 'volverse con un sustantivo',
-            feedback: 'Volverse con un sustantivo: para decir qué cosa es ahora la casa, con un sustantivo, lo normal es «convertirse en»: «se convirtió en un hostal». «Volverse» va sobre todo con adjetivos.' },
+          { id: 'volvio', label: 'La casa se volvió en un hostal y en invierno se queda vacía.', correct: false, feature: 'volverse con «en»',
+            feedback: 'Volverse con «en»: la preposición «en» es de «convertirse»: «se convirtió en un hostal». «Volverse» no lleva «en»; para decir que algo pasa a ser otra cosa, lo claro es «convertirse en».' },
           { id: 'convirtio', label: 'La casa se convirtió en un hostal y en invierno se queda vacía.', correct: true,
             feedback: 'Bien: «se convirtió en» dice que la casa pasó a ser otra cosa, y «se queda vacía» dice cómo termina cada invierno.' },
           { id: 'pone', label: 'La casa se convirtió en un hostal y en invierno se pone vacía.', correct: false, feature: 'ponerse para un resultado',
@@ -127,9 +127,9 @@ export const CIRCLES = {
       },
     ],
     timeline: [
-      'En la estación de abajo, don Lorenzo me contó que el cerro ha cambiado para bien y para mal: las casas están arregladas, pero muchos vecinos de siempre se han ido.',
-      'En la estación de abajo, don Lorenzo me contó que, para él, el cerro se ha convertido en un lugar de paso.',
-      'En la estación de abajo, don Lorenzo me contó que el cambio depende de a quién se le pregunte: al dueño del hostal le va bien; a él, no tanto.',
+      'En la estación de abajo, le dije a don Lorenzo que el cerro ha cambiado para bien y para mal: las casas están arregladas, pero muchos vecinos de siempre se han ido. Él estuvo de acuerdo.',
+      'En la estación de abajo, le dije a don Lorenzo que el cerro se ha convertido en un lugar de paso, y él estuvo de acuerdo.',
+      'En la estación de abajo, le dije a don Lorenzo que el cambio depende de a quién se le pregunte, y él me contestó que al dueño del hostal le va bien; a él, no tanto.',
     ],
     talk: [
       '¿Cómo ha cambiado tu barrio en los últimos diez años? ¿Para bien o para mal?',
@@ -139,7 +139,7 @@ export const CIRCLES = {
       '¿Qué te da pena que haya cambiado en tu ciudad? ¿Y qué te alegra?',
     ],
     words: ['el ascensorista', 'el plan / los cerros', 'volverse + adjetivo', 'convertirse en + sustantivo', 'llegar a ser', 'quedarse vacío'],
-    teacher: 'B2, semana 13 (verbos de cambio). Antes de proyectar, la pregunta de entrada: «¿Cómo ha cambiado tu barrio?». Después del círculo, en la pizarra, cinco columnas: ponerse (estado o ánimo pasajero), volverse (carácter), convertirse en (otra cosa), llegar a ser (resultado de un proceso) y quedarse (cómo termina algo, a menudo una pérdida). Variación chilena (b2.lis.voces-chile): en la escucha de este círculo, don Lorenzo dice «al tiro»; explica el marcador desde el texto. La fonética chilena (por ejemplo, la /s/ aspirada) se trabaja solo con una muestra real que trae el docente: una entrevista o un audio de una persona chilena, con la fuente identificada. Las voces sintéticas de la aplicación no son una muestra de acento. «El plan» y «los cerros» son las palabras de Valparaíso para la parte baja de la ciudad y las colinas.',
+    teacher: 'B2, semana 13 (verbos de cambio). Antes de proyectar, la pregunta de entrada: «¿Cómo ha cambiado tu barrio?». Después del círculo, en la pizarra, cinco columnas: ponerse (estado, aspecto o ánimo; a menudo rápido), volverse (carácter), convertirse en (otra cosa), llegar a ser (resultado de un proceso) y quedarse (cómo termina algo, a menudo una pérdida). Variación chilena (b2.lis.voces-chile): en la escucha de este círculo, don Lorenzo dice «al tiro»; explica el marcador desde el texto. La fonética chilena (por ejemplo, la /s/ aspirada) se trabaja solo con una muestra real que trae el docente: una entrevista o un audio de una persona chilena, con la fuente identificada. Las voces sintéticas de la aplicación no son una muestra de acento. «El plan» y «los cerros» son las palabras de Valparaíso para la parte baja de la ciudad y las colinas.',
   },
 
   escalera: {
@@ -149,7 +149,7 @@ export const CIRCLES = {
     related: ['b2.gram.concesivas', 'b2.pron.concesion', 'b2.lis.voces-chile'],
     exponents: [
       { id: 'aunque-indicativo', form: 'aunque + indicativo', use: 'conceder un dato que se presenta como información o como un hecho que se afirma' },
-      { id: 'aunque-subjuntivo', form: 'aunque + subjuntivo', use: 'conceder algo ya sabido, que no cambia la postura, o una simple posibilidad' },
+      { id: 'aunque-subjuntivo', form: 'aunque + subjuntivo', use: 'conceder algo que ya se sabe o que se presenta como poco relevante, o una simple posibilidad' },
       { id: 'por-mucho-que', form: 'por mucho que + subjuntivo', use: 'decir que algo, por intenso que sea, no cambia el resultado' },
       { id: 'es-cierto-pero', form: 'Es cierto que…, pero… / Tienes razón en que…, pero… / Si bien…', use: 'conceder una parte del argumento y objetar' },
       { id: 'marcadores-chile', form: 'al tiro, ¿cachai? (ejemplos del habla chilena)', use: 'reconocer y explicar marcadores coloquiales que se oyen en Chile' },
@@ -167,7 +167,7 @@ export const CIRCLES = {
     beats: [
       {
         id: 'dato', kind: 'contrast', label: 'Contraste lingüístico', exponent: ['aunque-indicativo'], who: 'catalina',
-        context: 'Catalina se apoya en la baranda y te explica algo que tú no sabías: el café de Paola da trabajo a tres personas del cerro. Para ella es un dato importante, pero su postura no cambia.',
+        context: 'Catalina se apoya en la baranda y te explica algo que tú no sabías: el café de Paola da trabajo a tres personas del cerro. Para ti es información nueva, y ella la reconoce, pero mantiene su postura.',
         prompt: 'Elige la frase de Catalina: te da un dato nuevo y mantiene su postura.',
         options: [
           { id: 'indicativo', label: 'Aunque el café da trabajo a tres vecinos, la prioridad es la tarifa vecinal.', correct: true,
@@ -245,7 +245,7 @@ export const CIRCLES = {
       '¿Conoces expresiones de tu país que solo se usan entre amigos? ¿Cuáles?',
     ],
     words: ['el escalón', 'el descanso', 'la tarifa vecinal', 'aunque + indicativo / subjuntivo', 'por mucho que + subjuntivo', 'al tiro, ¿cachai? (Chile, coloquial)'],
-    teacher: 'B2, semana 6 (concesivas). Después del círculo, en la pizarra: aunque + indicativo (información nueva o un hecho que se afirma) / aunque + subjuntivo (algo ya sabido que no cambia la postura, o una posibilidad). El contraste «al tiro / ¿cachai?» está marcado como ejemplo de habla chilena: se explica desde el texto, sin imitar el acento y sin pedir a la clase que lo use. Para trabajar la pronunciación chilena (b2.lis.voces-chile), trae una muestra real con su fuente; la voz sintética no lo es. El mural no es decoración: en la asamblea, el lugar del panel de la fundación es uno de los puntos del acuerdo.',
+    teacher: 'B2, semana 6 (concesivas). Después del círculo, en la pizarra: aunque + indicativo (información nueva o un hecho que se afirma) / aunque + subjuntivo (algo que los dos ya saben o que se presenta como poco relevante, o una posibilidad). El contraste «al tiro / ¿cachai?» está marcado como ejemplo de habla chilena: se explica desde el texto, sin imitar el acento y sin pedir a la clase que lo use. Para trabajar la pronunciación chilena (b2.lis.voces-chile), trae una muestra real con su fuente; la voz sintética no lo es. El mural no es decoración: en la asamblea, el lugar del panel de la fundación es uno de los puntos del acuerdo.',
   },
 
   cafe: {
@@ -369,8 +369,8 @@ export const CIRCLES = {
             feedback: 'Marco del informe: si lo llamas «atracción turística», la frase se contradice, porque una atracción no garantiza la movilidad de nadie. Alex lo presenta como un servicio: «transporte público».' },
           { id: 'transporte', label: 'El ascensor es transporte público: garantiza la movilidad y la accesibilidad de los vecinos que no pueden subir la escalera.', correct: true,
             feedback: 'Bien: «transporte público», «movilidad» y «accesibilidad» presentan el ascensor como un servicio, no como una atracción. Es el marco de todo el informe.' },
-          { id: 'mobilidad', label: 'El ascensor es transporte público: garantiza la mobilidad y la accesibilidad de los vecinos que no pueden subir la escalera.', correct: false, feature: 'forma de la palabra',
-            feedback: 'Forma de la palabra: en español se escribe «movilidad», con v, como «mover» y «moverse».' },
+          { id: 'mudanza', label: 'El ascensor es transporte público: garantiza la mudanza y la accesibilidad de los vecinos que no pueden subir la escalera.', correct: false, feature: 'movilidad o mudanza',
+            feedback: 'Movilidad o mudanza: una «mudanza» es el cambio de casa, con cajas y camión. Poder moverse cada día por la ciudad es la «movilidad».' },
         ],
         after: 'Don Lorenzo da un golpecito en la mesa: «Transporte público. Eso. Hace treinta años que lo digo.»',
       },
@@ -549,10 +549,10 @@ export const CIRCLES = {
         prompt: 'Elige la síntesis que no deja a nadie fuera.',
         options: [
           { id: 'todos-igual', label: 'Todos queremos lo mismo: que el ascensor reabra con una tarifa barata para todo el mundo.', correct: false, feature: 'síntesis que borra diferencias',
-            feedback: 'Síntesis que borra diferencias: no todos quieren una tarifa barata para todo el mundo. Paola y la fundación necesitan una tarifa turística. Sintetizar no es simplificar hasta que parezca que todos piensan igual.' },
+            feedback: 'Síntesis que borra diferencias: no todos quieren una tarifa barata para todo el mundo. Paola pide también una tarifa turística, y la fundación pone sus propias condiciones. Sintetizar no es simplificar hasta que parezca que todos piensan igual.' },
           { id: 'partido', label: 'Por un lado está Catalina, que tiene razón, y por otro están los demás, que solo piensan en el dinero.', correct: false, feature: 'mediador que toma partido',
             feedback: 'Mediador que toma partido: quien media no dice quién tiene razón ni juzga los motivos de nadie. Presenta las posturas para que el grupo pueda decidir.' },
-          { id: 'coinciden', label: 'En lo que coinciden todos es en que el ascensor tiene que reabrir. Por un lado, los vecinos piden una tarifa propia; por otro, el café y la fundación necesitan que suban visitantes.', correct: true,
+          { id: 'coinciden', label: 'En lo que coinciden todos es en que el ascensor tiene que reabrir. Por un lado, los vecinos piden una tarifa propia; por otro, el café necesita que suban visitantes, y la fundación pone condiciones a cambio de su dinero.', correct: true,
             feedback: 'Bien: empiezas por el punto común y ordenas las diferencias con «por un lado…; por otro…». Nadie queda fuera y nadie gana todavía.' },
         ],
         after: 'Don Lorenzo asiente. Paola también. Al fondo, Elvira abre la carpeta.',
@@ -634,7 +634,7 @@ export const CIRCLES = {
       '¿Cómo le explicarías una decisión complicada a una persona mayor de tu familia?',
     ],
     words: ['la junta de vecinos', 'el acta', 'el borrador', 'la reserva', 'queda pendiente', 'admitir / sostener / advertir que…'],
-    teacher: 'Es el cierre de las dos rutas. Orden fijo: la síntesis → la reserva de Paola → la cita de Elvira → la explicación para don Lorenzo → el juego de roles en grupos → lo decidido y lo pendiente → el acta escrita desde las notas de la sesión, con la lista de control → la pregunta de transferencia. El acta no inventa acuerdos: lo que no se decidió va en «queda pendiente». La lista de control la marca el docente o el grupo; la aplicación no evalúa el habla ni la graba. En la ruta de conversación (20 minutos): los cuatro contrastes, rápidos (4 min), juego de roles 6 min, el acta 8 min y la pregunta final 2 min. En la ruta de comprensión (18 minutos), el juego de roles dura 4 minutos.',
+    teacher: 'Es el cierre de las dos rutas. Orden fijo: la síntesis → la reserva de Paola → la cita de Elvira → la explicación para don Lorenzo → el juego de roles en grupos → lo decidido y lo pendiente → el acta escrita desde las notas de la sesión, con la lista de control → la pregunta de transferencia. El acta no inventa acuerdos: lo que no se decidió va en «queda pendiente». La lista de control la marca el docente o el grupo; la aplicación no evalúa el habla ni la graba. En la ruta de conversación (20 minutos): los cuatro primeros contrastes, rápidos (4 min), juego de roles 5 min, lo decidido y lo pendiente 1 min, el acta 8 min y la pregunta final 2 min. En la ruta de comprensión (18 minutos), el juego de roles dura 3 minutos.',
   },
 };
 
@@ -649,7 +649,7 @@ export const CLOSING = {
     // in the order visited. Circles not visited are left out.
     source: 'sessionStorage',
     opening: 'En la asamblea de la junta de vecinos se escuchó a los vecinos, a los comercios, al técnico y a la fundación.',
-    ending: 'Queda pendiente la gestión del ascensor, que se votará en la próxima asamblea.',
+    ending: 'Queda pendiente la gestión del ascensor, que se votará cuando la fundación responda.',
   },
   // Ticked by the teacher or the group, never computed from speech or text.
   selfCheck: {
@@ -703,4 +703,4 @@ export const ROUTES = [
 export const E1_LABEL = 'accounts that have reached the closing of lesson X at least once ÷ accounts that opened lesson X; signed-in PRO accounts only; not learning; reaching the closing ≠ teaching the route';
 
 // Placement note for the teacher list.
-export const PLACEMENT = 'Para la mitad de B2: concesivas (semana 6), conectores condicionales (semana 8) y verbos de cambio (semana 13); el cierre es una mediación con acta escrita.';
+export const PLACEMENT = 'Para la segunda mitad de B2, a partir de la semana 13: repasa concesivas (semana 6) y conectores condicionales (semana 8), trabaja los verbos de cambio (semana 13); el cierre es una mediación con acta escrita.';

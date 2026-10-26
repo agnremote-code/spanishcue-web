@@ -21,7 +21,7 @@
         { "q": "¿Para qué manda don Lorenzo este audio?", "options": ["Para quejarse del ruido de los hostales", "Para contar cómo ha cambiado el cerro antes de la asamblea", "Para pedir trabajo en la fundación"], "answer": 1 },
         { "q": "¿Qué pasó con la panadería de la esquina?", "options": ["Se convirtió en una tienda de recuerdos", "Se quedó vacía en invierno", "Se convirtió en un hostal"], "answer": 0 },
         { "q": "Según don Lorenzo, ¿qué ha mejorado en el cerro?", "options": ["Hay más vecinos en invierno", "Los precios han bajado", "Las casas ya no se caen"], "answer": 2 },
-        { "q": "¿Qué le pide don Lorenzo a la fundación?", "options": ["Que lo consulten antes de firmar", "Que no ponga a nadie en su caseta", "Que le paguen sus treinta y cinco años de trabajo"], "answer": 0 }
+        { "q": "¿Qué se deduce de lo que dice don Lorenzo sobre su caseta?", "options": ["Que acepta un cambio, pero quiere que cuenten con él antes", "Que no quiere que nadie lo sustituya nunca", "Que piensa dejar el trabajo después de la asamblea"], "answer": 0 }
       ],
       "open": [
         { "q": "¿Cómo ha cambiado tu barrio desde que eras pequeño o pequeña?", "model": "Mi barrio se ha vuelto más caro. La tienda de mi abuelo se convirtió en un café, y muchos vecinos se han ido." },
@@ -176,7 +176,7 @@
         { "q": "¿Qué ofrece la fundación?", "options": ["Pagar toda la restauración", "Pagar el setenta por ciento de la restauración", "Pagar solo los cables"], "answer": 1 },
         { "q": "¿Qué condición aparece en la última página?", "options": ["Un operador elegido por la fundación durante diez años", "Un panel informativo en la estación", "Un horario ampliado en verano"], "answer": 0 },
         { "q": "Según el convenio, ¿quién decidiría la tarifa vecinal?", "options": ["La junta de vecinos", "La fundación, sin ningún límite", "El operador, con un precio máximo"], "answer": 2 },
-        { "q": "¿Qué reconoce Elvira?", "options": ["Que la propuesta no es buena", "Que la junta no tiene dinero", "Que debería haber explicado la condición desde el principio"], "answer": 2 }
+        { "q": "¿Por qué dice Catalina que van a leer el convenio entero?", "options": ["Porque Elvira se lo ha pedido", "Porque la junta tiene mucho tiempo libre", "Porque la condición más importante no estaba en la presentación"], "answer": 2 }
       ],
       "open": [
         { "q": "¿Has firmado algo sin leer la letra pequeña? ¿Qué pasó?", "model": "Sí, un contrato de teléfono. Después me di cuenta de que tenía una permanencia de dos años." },

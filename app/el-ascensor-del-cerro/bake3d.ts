@@ -120,6 +120,9 @@ export function bake(roots: THREE.Object3D[], opts: { skip?: (mesh: THREE.Mesh) 
         key = glowing ? 'glow' : 'person';
         tint = glowing ? m.emissive.clone().multiplyScalar(Math.min(1.6, m.emissiveIntensity)) : m.color.clone();
         material = glowing ? glowMaterial() : personMaterial();
+      } else if ((m as THREE.MeshBasicMaterial).isMeshBasicMaterial && m.map) {
+        // Same texture, same blending (blob shadows): one bucket.
+        key = `map:${m.map.uuid}:${m.transparent}:${m.opacity}:${m.depthWrite}`; uv = true; material = m;
       } else {
         key = `mat:${m.uuid}`; uv = Boolean(m.map); material = m;
       }

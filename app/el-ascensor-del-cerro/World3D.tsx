@@ -396,7 +396,7 @@ export default function World3D(props: WorldProps) {
         npc.person.look = (Math.hypot(dx, dz) < 5 && Math.abs(npc.y - heroY) < 1) || talking ? Math.max(-1.1, Math.min(1.1, angleBetween(npc.heading, facing))) : null;
       }
       // Low mode: only the host of the open circle is live.
-      cerro.focus(circleId);
+      cerro.focus(circleId, terraceAt(player.x, player.z).id);
       cerro.animate(reduced ? 0 : clock, dt, player.x, player.z);
       animateHero(hero, dt, player.speed > 0.2 ? player.speed : 0, turn, circleId ? 'talk' : 'move', reduced);
 

@@ -45,9 +45,9 @@ export function markDone(state, id) {
 // - stimulus with frames: open answer, the teacher moves on.
 const beatState = (scene, beat) => scene?.beats?.[beat.id] ?? { tries: [], pick: null, seen: false };
 
-// `session` keeps the feria's signature; no beat here depends on it.
-// eslint-disable-next-line no-unused-vars
-export function beatDone(scene, beat, session) {
+// Callers may pass the group session as a third argument (the feria's
+// signature); no beat here depends on it.
+export function beatDone(scene, beat) {
   const b = beatState(scene, beat);
   if (beat.kind === 'contrast') return b.tries.some(i => beat.options[i]?.correct);
   if (beat.options) return b.pick !== null;

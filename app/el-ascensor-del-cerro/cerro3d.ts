@@ -22,8 +22,9 @@ export type Cerro = {
   /** The two cabins: `a` (red, rail 0) is at sA, `b` (green, rail 1) at 1 − sA. */
   setCabins: (sA: number) => void;
   animate: (t: number, dt: number, px: number, pz: number) => void;
-  /** Low mode: only the host of the open circle is a live (animated) person. */
-  focus: (circleId: string | null) => void;
+  /** Low mode: only the host of the open circle is a live (animated) person.
+   * `terrace` is where the player is (see visibleHosts). */
+  focus: (circleId: string | null, terrace: string) => void;
   /** Everyone standing on the cerro: the mascot bumps into them, never through. */
   bodies: () => Body[];
   people: () => number;
@@ -133,7 +134,7 @@ function canvasTexture(w: number, h: number, draw: (ctx: CanvasRenderingContext2
 }
 
 const SIGNS = [
-  { text: 'ASCENSOR DEL CERRO', bg: '#1f5a46', fg: '#f3eee4' },
+  { text: 'ASCENSOR LA GAVIOTA', bg: '#1f5a46', fg: '#f3eee4' },
   { text: 'ESTACIÓN ALTA', bg: '#1f5a46', fg: '#f3eee4' },
   { text: 'CAFÉ', bg: '#3b2a20', fg: '#f6d38a' },
   { text: 'TALLER DE RESTAURACIÓN', bg: '#24323a', fg: '#e9e3d6' },
@@ -213,17 +214,33 @@ function muralTexture() {
 }
 
 // ------------------------------------------------------------------ people
-// The person at each circle. Looks follow the cast in levels/b2.mjs (CAST):
-// don Lorenzo the operator, a neighbour on the stairs, Paola at her café,
-// Alex the architect, Elvira the grant consultant, Catalina chairing.
-const HOSTS: Record<string, Look> = {
-  estacion: { skin: '#c99468', age: 'old', body: 'm', hairStyle: 'cap', hairColor: '#cfcdc8', top: 'jacket', topColor: '#24406e', bottom: 'pants', bottomColor: '#2a2a30', extras: ['mustache'] },
-  escalera: { skin: '#b9825c', age: 'adult', body: 'f', hairStyle: 'ponytail', hairColor: '#2a1a12', top: 'sweater', topColor: '#7a2e3b', bottom: 'jeans', bottomColor: '#2f3b52', extras: ['bag'] },
-  cafe: { skin: '#a8724e', age: 'adult', body: 'f', hairStyle: 'curly', hairColor: '#1a1210', top: 'apron', topColor: '#f0ebe0', bottom: 'pants', bottomColor: '#2a2a30', extras: ['earrings'] },
-  taller: { skin: '#8d5a3c', age: 'young', body: 'm', hairStyle: 'short', hairColor: '#120d0b', top: 'jacket', topColor: '#4d5b3a', bottom: 'jeans', bottomColor: '#24304a', extras: ['glasses'] },
-  mirador: { skin: '#f0d0b4', age: 'adult', body: 'f', hairStyle: 'bob', hairColor: '#5a3c26', top: 'coat', topColor: '#3a4a5c', bottom: 'pants', bottomColor: '#1e2430', extras: ['scarf'] },
-  asamblea: { skin: '#dcae88', age: 'adult', body: 'f', hairStyle: 'bun', hairColor: '#3a2014', top: 'shirt', topColor: '#2f6fb0', bottom: 'skirt', bottomColor: '#1b1b1e', extras: ['glasses'] },
+// The person at each circle, dressed as the cast of levels/b2.mjs (CAST):
+// don Lorenzo the operator, Catalina who chairs the junta (on the stairs and
+// at the assembly), Paola at her café, Alex the architect, Elvira the grant
+// consultant.
+const LOOKS: Record<string, Look> = {
+  lorenzo: { skin: '#c99468', age: 'old', body: 'm', hairStyle: 'cap', hairColor: '#cfcdc8', top: 'jacket', topColor: '#24406e', bottom: 'pants', bottomColor: '#2a2a30', extras: ['mustache'] },
+  catalina: { skin: '#dcae88', age: 'adult', body: 'f', hairStyle: 'bun', hairColor: '#3a2014', top: 'sweater', topColor: '#7a2e3b', bottom: 'skirt', bottomColor: '#1b1b1e', extras: ['glasses'] },
+  paola: { skin: '#a8724e', age: 'adult', body: 'f', hairStyle: 'curly', hairColor: '#1a1210', top: 'apron', topColor: '#f0ebe0', bottom: 'pants', bottomColor: '#2a2a30', extras: ['earrings'] },
+  alex: { skin: '#8d5a3c', age: 'young', body: 'm', hairStyle: 'short', hairColor: '#120d0b', top: 'jacket', topColor: '#4d5b3a', bottom: 'jeans', bottomColor: '#24304a', extras: ['glasses'] },
+  elvira: { skin: '#f0d0b4', age: 'adult', body: 'f', hairStyle: 'bob', hairColor: '#5a3c26', top: 'coat', topColor: '#3a4a5c', bottom: 'pants', bottomColor: '#1e2430', extras: ['scarf'] },
 };
+export const HOST_OF: Record<string, keyof typeof LOOKS> = { estacion: 'lorenzo', escalera: 'catalina', cafe: 'paola', taller: 'alex', mirador: 'elvira', asamblea: 'catalina' };
+const HOSTS: Record<string, Look> = Object.fromEntries(Object.entries(HOST_OF).map(([id, who]) => [id, LOOKS[who]]));
+
+/** Which hosts stand on the cerro now. A character who talks at two circles
+ * (Catalina) is shown once: at the circle on the player's terrace, else at
+ * the lower one; the host of an open circle is always there. */
+export function visibleHosts(terrace: string, open: string | null) {
+  const shown = new Set<string>();
+  const byWho = new Map<string, typeof CIRCLES>();
+  for (const c of CIRCLES) byWho.set(HOST_OF[c.id], [...(byWho.get(HOST_OF[c.id]) ?? []), c]);
+  for (const list of byWho.values()) {
+    const pick = list.find(c => c.id === open) ?? list.find(c => c.terrace === terrace) ?? list[0];
+    shown.add(pick.id);
+  }
+  return shown;
+}
 
 function makePerson(look: Look, pose: string, shadows: boolean) {
   const person = createPerson(look, shadows);
@@ -376,7 +393,8 @@ export function buildCerro(scene: THREE.Scene, opts: { low: boolean; shadows: bo
 
   // ---------------------------------------------------------- the stairway
   for (const f of STAIRS.flights) {
-    const steps = Math.round((f.y1 - f.y0) / 0.25);
+    // 70 steps a flight: the «ciento cuarenta escalones» of the scene.
+    const steps = 70;
     const run = (f.z1 - f.z0) / steps, rise = (f.y1 - f.y0) / steps;
     for (let i = 0; i < steps; i++) {
       const top = f.y0 + (i + 1) * rise;
@@ -561,7 +579,6 @@ export function buildCerro(scene: THREE.Scene, opts: { low: boolean; shadows: bo
 
   // ---------------------------------------------------------- people
   const npcs: Npc[] = [];
-  const hostBlobs: THREE.Object3D[] = [];
   for (const c of CIRCLES) {
     const heading = Math.atan2(c.spot.x - c.npc.x, c.spot.z - c.npc.z);
     const y = groundY(c.npc.x, c.npc.z);
@@ -569,7 +586,6 @@ export function buildCerro(scene: THREE.Scene, opts: { low: boolean; shadows: bo
     person.root.position.set(c.npc.x, y, c.npc.z);
     person.root.rotation.y = heading;
     root.add(person.root);
-    hostBlobs.push(person.root.children[person.root.children.length - 1]);
     npcs.push({ id: c.id, person, x: c.npc.x, y, z: c.npc.z, heading });
   }
   const crowdPeople: { person: Person; x: number; y: number; z: number; body?: string; seed: number }[] = [];
@@ -594,39 +610,50 @@ export function buildCerro(scene: THREE.Scene, opts: { low: boolean; shadows: bo
   root.add(gulls);
 
   // ---------------------------------------------------------- low-power bake
+  let focusKey = '';
   let focused: string | null = null;
   let hostBake: THREE.Group | null = null;
   const hostBakes = new Map<string, THREE.Group>();
-  function hostsExcept(id: string | null) {
-    const key = id ?? '';
+  function hostsBaked(key: string, ids: string[]) {
     let group = hostBakes.get(key);
     if (!group) {
-      const others = npcs.filter(n => n.id !== id);
-      for (const n of others) n.person.root.visible = true;
-      group = bake(others.map(n => n.person.root), { hide: false, skip: m => hostBlobs.includes(m) });
+      const list = npcs.filter(n => ids.includes(n.id));
+      for (const n of list) n.person.root.visible = true;
+      group = bake(list.map(n => n.person.root), { hide: false });
       hostBakes.set(key, group);
     }
     return group;
   }
-  function focus(id: string | null) {
-    if (!low || (id === focused && hostBake)) return;
+  let lastTerrace = 'puerto';
+  const focusTerrace = () => lastTerrace;
+  function focus(id: string | null, terrace: string) {
+    lastTerrace = terrace;
+    const shown = visibleHosts(terrace, id);
+    const key = `${id ?? ''}|${[...shown].sort().join()}`;
+    if (key === focusKey) return;
+    focusKey = key;
     focused = id;
+    if (!low) {
+      for (const n of npcs) n.person.root.visible = shown.has(n.id);
+      return;
+    }
+    // Low mode: the hosts who stand still are one baked group (blob shadows
+    // included); the open circle's host is live.
     if (hostBake) root.remove(hostBake);
-    hostBake = hostsExcept(id);
+    hostBake = hostsBaked(key, [...shown].filter(s => s !== id));
     root.add(hostBake);
     for (const n of npcs) n.person.root.visible = n.id === id;
   }
   if (low) {
-    root.add(bake([...crowdPeople.map(c => c.person.root), ...hostBlobs]));
+    root.add(bake(crowdPeople.map(c => c.person.root)));
     for (const c of crowdPeople) root.remove(c.person.root);
-    npcs.forEach((n, i) => n.person.root.remove(hostBlobs[i]));
-    focus(null);
   }
+  focus(null, 'puerto');
 
   const gm = new THREE.Matrix4(), gq = new THREE.Quaternion(), gp = new THREE.Vector3(), gs = new THREE.Vector3(1, 1, 1), up = new THREE.Vector3(0, 1, 0);
   function animate(t: number, dt: number, px: number, pz: number) {
     for (const s of spots) { s.gem.position.y = 2.3 + Math.sin(t * 2 + s.group.position.x) * 0.12; s.gem.rotation.y += dt * 1.5; }
-    for (const n of npcs) if (!low || n.id === focused) animatePerson(n.person, dt, 0, false);
+    for (const n of npcs) if (n.person.root.visible && (!low || n.id === focused)) animatePerson(n.person, dt, 0, false);
     if (!low) for (const c of crowdPeople) if (Math.abs(c.x - px) < 26 && Math.abs(c.z - pz) < 26) animatePerson(c.person, dt, 0, false);
     for (let i = 0; i < GULLS; i++) {
       const a = t * (0.12 + (i % 3) * 0.03) + i * 1.7;
@@ -641,7 +668,7 @@ export function buildCerro(scene: THREE.Scene, opts: { low: boolean; shadows: bo
   animate(0, 0, 0, 0);
 
   const bodies = (): Body[] => [
-    ...npcs.map((n, i) => ({ key: `host-${n.id}`, x: n.x, z: n.z, y: n.y, body: HOSTS[n.id]?.body, seed: i * 7 + 3 })),
+    ...npcs.filter(n => visibleHosts(focusTerrace(), focused).has(n.id)).map((n, i) => ({ key: `host-${n.id}`, x: n.x, z: n.z, y: n.y, body: HOSTS[n.id]?.body, seed: i * 7 + 3 })),
     ...crowdPeople.map((c, i) => ({ key: `vecino-${i}`, x: c.x, z: c.z, y: c.y, body: c.body, seed: c.seed })),
   ];
   return { spots, npcs, setCabins, animate, focus, bodies, people: () => npcs.length + crowdPeople.length };
