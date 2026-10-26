@@ -77,6 +77,7 @@ All five run on `claude-opus-5-5`, follow [ROUTINES.md](ROUTINES.md), and each i
 - Session 0 (lesson test) took 55 messages, about 15 of them caused by crossed messages over circle 6. That led to the lock rule.
 
 ## Current work and next action
+- **2026-10-26 (Monday 3D routine): IN PROGRESS** on branch `claude/escucha-3d-ascensor-cerro-b2-20261026` (base main `25b9253`). Building rank 2, «El ascensor del cerro» B2 (Valparaíso). Subscription usage: **UNKNOWN**. If this line is still here without a result below, the run was cut short: resume from the branch's last pushed commit.
 - **2026-10-23 (Friday 3D + assessment routine): PR (this branch `claude/friday-assessment-20261023`, base main `373e8b33`).** Subscription usage: **UNKNOWN**.
   - **Board convened as subagents of the facilitator:** Sofia and Martin wrote proposals in parallel, Alejandro scored/selected and wrote the assessment. They did not message each other. Verbatim: [transcripts/2026-10-23-friday-concepts-assessment.md](transcripts/2026-10-23-friday-concepts-assessment.md).
   - **3D unit: NONE shipped this run.** No ready 3D item existed and rank 2 turned out to be a duplicate, so the run did concept pipeline steps 1–3. Selected: **«El ascensor del cerro», B2, Valparaíso** ([concept file](concepts/2026-10-23-valparaiso-ascensor-del-cerro.md)). Deferred: Eje Cafetero C1 (needs a kit proximity-audio feature first), El Dorado B1 (fallback).
