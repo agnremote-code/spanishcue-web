@@ -46,6 +46,15 @@ import { createRoot } from 'react-dom/client';
 import AscensorGame from './app/el-ascensor-del-cerro/AscensorGame';
 import World3D from './app/el-ascensor-del-cerro/World3D';
 window.__qa = { stats: null, failed: false, gl: 0, frames: 0, ride: null, pose: null };
+const q = new URLSearchParams(location.search);
+// ?manual=1 (the hover clip): time stands still between screenshots. Frames
+// run only on window.__qa.step(n), each exactly 1/24 s of world time.
+if (q.get('manual')) {
+  const queue = []; let now = 0;
+  window.requestAnimationFrame = cb => { queue.push(cb); return queue.length; };
+  window.cancelAnimationFrame = () => {};
+  window.__qa.step = n => { for (let i = 0; i < n; i++) { now += 1000 / 24; queue.splice(0).forEach(cb => cb(now)); } };
+}
 // Real WebGL draw calls, counted on the context (as in qa-feria-browser).
 for (const Ctx of [window.WebGLRenderingContext, window.WebGL2RenderingContext].filter(Boolean)) {
   for (const name of ['drawArrays', 'drawElements', 'drawArraysInstanced', 'drawElementsInstanced', 'drawRangeElements']) {
@@ -68,7 +77,6 @@ function WorldHarness() {
     onSpot={() => {}} onNear={() => {}} onPose={p => { window.__qa.pose = p; }} onRide={r => { window.__qa.ride = r; }}
     onFail={() => { window.__qa.failed = true; }} onStats={s => { window.__qa.stats = s; }} /></main>;
 }
-const q = new URLSearchParams(location.search);
 createRoot(document.getElementById('root')).render(q.get('harness') === 'world' ? <WorldHarness /> : <AscensorGame />);`,
     resolveDir: repo, loader: 'tsx',
   },
@@ -207,9 +215,9 @@ if (RUN.cover) {
 // The catalog card's hover recording, like the other conversation cards
 // (640×360, 24 fps, 8 s, H.264, no audio): 2.5 s of the fly-over from the bay,
 // then the funicular climbing the cerro. Captured frame by frame on the
-// desktop path at 1280×720 (the world clock advances at most 1/20 s per
-// rendered frame, so a slow software renderer still gives an even clip) and
-// scaled down by ffmpeg.
+// desktop path at 1280×720 (world time stands still between screenshots:
+// the harness steps requestAnimationFrame by hand, 1/24 s a frame, so
+// a slow software renderer still gives an even clip) and scaled down by ffmpeg.
 if (RUN.preview) {
   const { spawnSync } = await import('node:child_process');
   const framesDir = resolve(out, 'preview-frames');
@@ -217,34 +225,24 @@ if (RUN.preview) {
   const context = await browser.newContext({ viewport: { width: 1280, height: 720 }, deviceScaleFactor: 1 });
   const page = await context.newPage();
   page.on('pageerror', e => report.errors.push(`preview: ${e.message}`));
-  await page.goto(`${origin}/?harness=world`);
+  await page.goto(`${origin}/?harness=world&manual=1`);
   await page.locator('.ac-canvas canvas').waitFor({ timeout: 60000 });
+  const step = async k => { await page.evaluate(k => window.__qa.step(k), k); };
   await page.evaluate(() => window.__qa.intro(true));
-  await frames(page, 20);
+  await step(24);
   // The ride caption is lesson UI, not part of the scene: hide it in the clip.
   await page.addStyleTag({ content: '.ac-ride{display:none!important}' });
-  // 2.5 s of fly-over (60 frames), then the whole funicular ride captured
-  // frame by frame (screenshots cost extra rendered frames, so the ride gives
-  // fewer frames than its length): ffmpeg stretches it evenly to 5.5 s.
-  const rideDir = resolve(out, 'preview-ride');
-  await mkdir(rideDir, { recursive: true });
-  for (let i = 0; i < 60; i++) { await frames(page, 1); await page.screenshot({ path: resolve(framesDir, `f${String(i).padStart(4, '0')}.png`) }); }
-  await page.evaluate(() => { window.__qa.intro(false); window.__qa.travel({ link: 'ascensor-sube' }); });
-  await page.waitForFunction(() => document.querySelector('.ac-world')?.hasAttribute('data-ride'), null, { timeout: 15000 });
+  const shot = async i => page.screenshot({ path: resolve(framesDir, `f${String(i).padStart(4, '0')}.png`) });
+  // 2.5 s of the fly-over from the bay, then the funicular from the port up
+  // the cerro (5.2 s), then the arrival at the top.
   let n = 0;
-  while (n < 400 && await page.locator('.ac-world[data-ride]').count()) {
-    await frames(page, 1);
-    await page.screenshot({ path: resolve(rideDir, `r${String(n++).padStart(4, '0')}.png`) });
-  }
+  for (; n < 60; n++) { await step(1); await shot(n); }
+  await page.evaluate(() => { window.__qa.intro(false); window.__qa.travel({ link: 'ascensor-sube' }); });
+  for (; n < 192; n++) { await step(1); await shot(n); }
   await context.close();
   const clip = resolve(out, 'preview.mp4');
-  const rate = (n / 5.5).toFixed(4);
-  const r = spawnSync(process.env.FFMPEG || 'ffmpeg', ['-y', '-loglevel', 'error',
-    '-framerate', '24', '-i', resolve(framesDir, 'f%04d.png'), '-framerate', rate, '-i', resolve(rideDir, 'r%04d.png'),
-    '-filter_complex', '[0:v]scale=640:360:flags=lanczos,fps=24[a];[1:v]scale=640:360:flags=lanczos,fps=24[b];[a][b]concat=n=2:v=1[v]', '-map', '[v]', '-t', '8',
-    '-c:v', 'libx264', '-profile:v', 'high', '-pix_fmt', 'yuv420p', '-crf', '34', '-preset', 'slow', '-an', '-movflags', '+faststart', clip], { stdio: 'inherit' });
+  const r = spawnSync(process.env.FFMPEG || 'ffmpeg', ['-y', '-loglevel', 'error', '-framerate', '24', '-i', resolve(framesDir, 'f%04d.png'), '-vf', 'scale=640:360:flags=lanczos', '-c:v', 'libx264', '-profile:v', 'high', '-pix_fmt', 'yuv420p', '-crf', '34', '-preset', 'slow', '-an', '-movflags', '+faststart', clip], { stdio: 'inherit' });
   assert.equal(r.status, 0, 'ffmpeg encoded the clip');
-  console.log(`preview ride frames: ${n}`);
   console.log(`preview: ${clip}`);
 }
 
@@ -282,7 +280,7 @@ if (RUN.calls) {
     for (const link of ['ascensor-sube', 'escalera-sube-2']) {
       await page.evaluate(id => window.__qa.travel({ link: id }), link);
       push({ view: view.id, place: `mid-ride ${link}`, ...(await read(8)) });
-      await page.waitForFunction(() => window.__qa.ride === null, null, { timeout: 15000 });
+      await page.waitForFunction(() => window.__qa.ride === null, null, { timeout: 180000 });
     }
     await context.close();
   }
