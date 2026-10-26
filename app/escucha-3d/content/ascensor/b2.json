@@ -1,0 +1,235 @@
+{
+  "game": "ascensor",
+  "level": "B2",
+  "items": [
+    {
+      "id": "estacion",
+      "title": "Un audio para Catalina",
+      "place": "La estación de abajo",
+      "context": "Antes de la asamblea, don Lorenzo le manda a Catalina una nota de voz desde la estación de abajo: ella le pidió que contara cómo era el cerro antes.",
+      "speakers": [
+        { "name": "Lorenzo", "country": "Chile", "voice": "es-CL-LorenzoNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Catalina, buenos días, habla Lorenzo. Le mando este audio porque usted me pidió que le contara cómo era el cerro antes, para la asamblea. Bueno, a ver." },
+        { "s": 0, "text": "Cuando empecé en el ascensor, hace treinta y cinco años, yo conocía a cada pasajero. Sabía quién bajaba al puerto, quién iba al hospital, quién volvía tarde." },
+        { "s": 0, "text": "Después el cerro se puso de moda. Primero llegaron los pintores, luego los hostales. La casa de los Ramírez se convirtió en un hostal, y la panadería de la esquina, en una tienda de recuerdos." },
+        { "s": 0, "text": "No digo que todo sea malo, ¿eh? Las casas ya no se caen, y eso es bueno. Pero el barrio se ha vuelto más caro y más callado. En invierno, la calle se queda vacía." },
+        { "s": 0, "text": "Y una cosa más. Si la fundación pone a otra persona en mi caseta, yo no me enojo. Pero que me pregunten, al tiro, antes de firmar nada. Treinta y cinco años algo valen. Nos vemos en la asamblea." }
+      ],
+      "choice": [
+        { "q": "¿Para qué manda don Lorenzo este audio?", "options": ["Para quejarse del ruido de los hostales", "Para contar cómo ha cambiado el cerro antes de la asamblea", "Para pedir trabajo en la fundación"], "answer": 1 },
+        { "q": "¿Qué pasó con la panadería de la esquina?", "options": ["Se convirtió en una tienda de recuerdos", "Se quedó vacía en invierno", "Se convirtió en un hostal"], "answer": 0 },
+        { "q": "Según don Lorenzo, ¿qué ha mejorado en el cerro?", "options": ["Hay más vecinos en invierno", "Los precios han bajado", "Las casas ya no se caen"], "answer": 2 },
+        { "q": "¿Qué le pide don Lorenzo a la fundación?", "options": ["Que lo consulten antes de firmar", "Que no ponga a nadie en su caseta", "Que le paguen sus treinta y cinco años de trabajo"], "answer": 0 }
+      ],
+      "open": [
+        { "q": "¿Cómo ha cambiado tu barrio desde que eras pequeño o pequeña?", "model": "Mi barrio se ha vuelto más caro. La tienda de mi abuelo se convirtió en un café, y muchos vecinos se han ido." },
+        { "q": "¿Qué opinas del turismo en los barrios donde vive gente? ¿Es para bien o para mal?", "model": "Creo que trae dinero, aunque me da pena que los vecinos de siempre tengan que irse." },
+        { "q": "Si fueras don Lorenzo, ¿qué le pedirías a la fundación?", "model": "Le pediría que me consultara antes de cambiar nada y que contara con la gente del cerro." }
+      ],
+      "gaps": "Pero el barrio se ha [vuelto] más [caro] y más callado. En [invierno], la calle se [queda vacía].",
+      "glossary": [
+        { "word": "al tiro", "meaning": "enseguida, inmediatamente (uso coloquial de Chile)" },
+        { "word": "caseta", "meaning": "cabina pequeña donde trabaja el ascensorista" },
+        { "word": "de moda", "meaning": "que le gusta a mucha gente en un momento concreto" },
+        { "word": "tienda de recuerdos", "meaning": "tienda que vende objetos pequeños para los visitantes" }
+      ]
+    },
+    {
+      "id": "escalera",
+      "title": "Discusión en el descanso",
+      "place": "La escalera del mural",
+      "context": "Catalina y Paola suben a pie los ciento cuarenta escalones y se paran a descansar delante del mural. Discuten sobre la tarifa del ascensor.",
+      "speakers": [
+        { "name": "Catalina", "country": "Chile", "voice": "es-CL-CatalinaNeural" },
+        { "name": "Paola", "country": "Venezuela", "voice": "es-VE-PaolaNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Uf, espera, Paola. Ciento cuarenta escalones con esta bolsa. Y hay vecinas de ochenta años que suben esto todos los días, ¿cachai?" },
+        { "s": 1, "text": "Lo sé, Catalina. Aunque no lo creas, yo también subo a pie. Por eso quiero que reabra pronto." },
+        { "s": 0, "text": "Entonces estamos de acuerdo en algo." },
+        { "s": 1, "text": "En casi todo. Mira, aunque la tarifa vecinal es justa, alguien tiene que pagar los cables. Y los turistas pueden pagar más." },
+        { "s": 0, "text": "Puede ser. Pero por mucho que paguen, el ascensor no puede ser de ellos. Si la fundación pone un horario pensado para turistas, a las seis de la mañana no sube nadie." },
+        { "s": 1, "text": "En lo del horario tienes razón. Te lo concedo. Pero sin visitantes, mi café cierra, y con él se pierden tres puestos de trabajo del cerro." },
+        { "s": 0, "text": "Es cierto, no lo discuto. Si bien tu café ayuda al cerro, la asamblea va a pedir primero una tarifa vecinal." },
+        { "s": 1, "text": "Me parece bien, siempre que haya también una tarifa turística. Dos tarifas, Catalina. No es tan difícil." }
+      ],
+      "choice": [
+        { "q": "¿De qué hablan Catalina y Paola?", "options": ["De cómo repartir el trabajo del café", "De las condiciones para reabrir el ascensor", "De las vecinas que no quieren subir"], "answer": 1 },
+        { "q": "¿Qué le concede Paola a Catalina?", "options": ["Que el horario es un problema", "Que los turistas no deben pagar", "Que el café debería cerrar"], "answer": 0 },
+        { "q": "¿Por qué le importan a Paola los visitantes?", "options": ["Porque no conoce a los vecinos", "Porque quiere vender el café", "Porque sin ellos su café cierra y se pierden empleos"], "answer": 2 },
+        { "q": "¿Qué propone Paola al final?", "options": ["Una sola tarifa para todos", "Dos tarifas: una vecinal y una turística", "Que el ascensor sea gratis"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Te parece justo que los turistas paguen más que los vecinos? ¿Por qué?", "model": "Me parece justo, siempre que el dinero extra se use para el barrio." },
+        { "q": "Concede una parte de razón a Catalina o a Paola y defiende tu postura.", "model": "Aunque Paola tiene razón con el dinero, creo que el horario lo deberían decidir los vecinos." },
+        { "q": "¿Qué haces cuando discutes con alguien con quien estás casi de acuerdo?", "model": "Primero digo en qué estamos de acuerdo y después explico mi duda, sin levantar la voz." }
+      ],
+      "gaps": "Mira, aunque la tarifa vecinal es [justa], alguien tiene que pagar los [cables]. Y los [turistas] pueden pagar [más].",
+      "glossary": [
+        { "word": "¿cachai?", "meaning": "¿entiendes?, ¿me sigues? (uso coloquial de Chile)" },
+        { "word": "te lo concedo", "meaning": "acepto que en eso tienes razón" },
+        { "word": "puestos de trabajo", "meaning": "empleos" },
+        { "word": "escalones", "meaning": "cada una de las partes de una escalera donde se pone el pie" }
+      ]
+    },
+    {
+      "id": "cafe",
+      "title": "Micrófono abierto",
+      "place": "El café de Paola",
+      "context": "En el café de Paola suena la radio comunitaria del cerro. El programa de hoy recibe llamadas sobre el precio del ascensor cuando reabra.",
+      "speakers": [
+        { "name": "Ignacio", "country": "Argentina", "voice": "es-AR-TomasNeural" },
+        { "name": "Yaneth", "country": "Colombia", "voice": "es-CO-SalomeNeural" },
+        { "name": "Luis", "country": "Ecuador", "voice": "es-EC-LuisNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Buenas tardes, cerro. Esto es Micrófono abierto. Una sola pregunta hoy: cuando reabra el ascensor, ¿cuánto debería costar? Tenemos la primera llamada. Hola, ¿con quién hablo?" },
+        { "s": 1, "text": "Hola, Ignacio. Soy Yaneth, enfermera. Trabajo de noche en el plan y vuelvo a casa a las siete de la mañana." },
+        { "s": 0, "text": "¿Y qué propones, Yaneth?" },
+        { "s": 1, "text": "Mira, yo acepto una tarifa turística más cara. No me molesta. Pero solo si el primer viaje sale a las seis. Si el ascensor abre a las diez, para los que trabajamos no sirve de nada." },
+        { "s": 0, "text": "Clarísimo. Gracias, Yaneth. Segunda llamada. Luis, adelante." },
+        { "s": 2, "text": "Hola, Ignacio. Yo soy guía y llevo grupos al cerro todas las semanas. Estoy de acuerdo con la tarifa doble para turistas, siempre que el dinero extra vaya a un fondo para mantener el ascensor. Si no, en cinco años estamos otra vez igual." },
+        { "s": 0, "text": "¿Y quién controlaría ese fondo?" },
+        { "s": 2, "text": "La junta de vecinos, con cuentas públicas. No la fundación." },
+        { "s": 0, "text": "Bueno, lo reconozco: hace un mes le pedimos una entrevista a la fundación, y todavía no ha contestado. Seguimos esperando. Vamos a una pausa." }
+      ],
+      "choice": [
+        { "q": "¿Cuál es el tema del programa?", "options": ["El precio del ascensor cuando reabra", "Los horarios del hospital", "La entrevista con la fundación"], "answer": 0 },
+        { "q": "¿Qué condición pone Yaneth?", "options": ["Que los turistas paguen lo mismo", "Que el primer viaje salga a las seis", "Que el ascensor abra a las diez"], "answer": 1 },
+        { "q": "¿Qué pide Luis para apoyar la tarifa doble?", "options": ["Que los guías no paguen", "Que la fundación controle el dinero", "Que el dinero extra vaya a un fondo de mantenimiento"], "answer": 2 },
+        { "q": "¿Qué se deduce de lo que dice Ignacio al final?", "options": ["Que la fundación ya ha dado una entrevista", "Que la radio no ha conseguido hablar con la fundación", "Que la fundación ha cancelado el proyecto"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Llamarías a un programa de radio para opinar sobre tu barrio? ¿Qué dirías?", "model": "Sí, llamaría para pedir que el autobús pasara más a menudo, siempre que no subiera el precio." },
+        { "q": "¿Con quién estás más de acuerdo, con Yaneth o con Luis? ¿Por qué?", "model": "Con Yaneth, aunque la idea del fondo de Luis también me parece buena." },
+        { "q": "¿Qué servicio de tu ciudad debería abrir más temprano o cerrar más tarde?", "model": "El metro debería abrir antes, porque mucha gente empieza a trabajar a las seis." }
+      ],
+      "gaps": "Estoy de acuerdo con la tarifa [doble] para turistas, siempre que el dinero [extra] vaya a un [fondo] para [mantener] el ascensor.",
+      "glossary": [
+        { "word": "el plan", "meaning": "en Valparaíso, la parte baja y plana de la ciudad" },
+        { "word": "adelante", "meaning": "palabra para dar la palabra a alguien" },
+        { "word": "tarifa doble", "meaning": "precio que cuesta dos veces más" },
+        { "word": "cuentas públicas", "meaning": "información sobre el dinero que todo el mundo puede ver" }
+      ]
+    },
+    {
+      "id": "taller",
+      "title": "Cables, madera y fechas",
+      "place": "El taller de restauración",
+      "context": "En el taller, Alex le resume a don Lorenzo el informe técnico antes de presentarlo en la asamblea.",
+      "speakers": [
+        { "name": "Alex", "country": "Perú", "voice": "es-PE-AlexNeural" },
+        { "name": "Lorenzo", "country": "Chile", "voice": "es-CL-LorenzoNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Don Lorenzo, le resumo el informe antes de la asamblea, para que no haya sorpresas. Primero, lo urgente: los cables hay que cambiarlos todos. Eso no se discute." },
+        { "s": 1, "text": "Ya me lo imaginaba. ¿Y el carro?" },
+        { "s": 0, "text": "Hay dos opciones. Se puede restaurar el carro original, el de madera. Se estima que costaría unos ochenta millones de pesos y tardaría unos catorce meses." },
+        { "s": 1, "text": "Catorce meses más subiendo a pie. La señora Rosa no aguanta." },
+        { "s": 0, "text": "Lo sé. La otra opción es una réplica moderna: unos cincuenta millones y seis meses. Es más rápida, pero se pierde el carro de siempre." },
+        { "s": 1, "text": "¿Y usted qué haría?" },
+        { "s": 0, "text": "Yo, como técnico, no decido. Pero convendría que la asamblea pensara en el ascensor como transporte público, no como una postal. Si es transporte, lo urgente es la movilidad de los vecinos." },
+        { "s": 1, "text": "O sea, la réplica." },
+        { "s": 0, "text": "O sea, una solución por etapas: la réplica ahora y, si llega el dinero, restaurar el original más adelante. Pero eso lo decide la junta, no yo." }
+      ],
+      "choice": [
+        { "q": "¿Para qué habla Alex con don Lorenzo?", "options": ["Para pedirle que firme el informe", "Para resumirle el informe antes de la asamblea", "Para preguntarle cómo funciona el carro"], "answer": 1 },
+        { "q": "¿Qué hay que hacer en cualquier caso?", "options": ["Cambiar todos los cables", "Restaurar el carro de madera", "Cerrar el ascensor un año más"], "answer": 0 },
+        { "q": "¿Cuál es la ventaja de la réplica moderna?", "options": ["Es más fiel al carro original", "Es la única opción segura", "Es más barata y más rápida"], "answer": 2 },
+        { "q": "¿Qué piensa Alex de su propio papel?", "options": ["Que él debe decidir porque es el técnico", "Que la decisión es de la junta, no suya", "Que la decisión es de don Lorenzo"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Qué preferirías: restaurar el carro original o una réplica moderna? ¿Por qué?", "model": "Preferiría la réplica, aunque me dé pena, porque los vecinos necesitan el ascensor ya." },
+        { "q": "¿Qué transporte de tu ciudad es importante para las personas mayores?", "model": "El tranvía, porque no tiene escalones y para cerca del hospital." },
+        { "q": "¿Has esperado mucho tiempo una obra en tu barrio? ¿Cómo te afectó?", "model": "Sí, arreglaron mi calle durante un año. Al principio dijeron que serían tres meses." }
+      ],
+      "gaps": "Se puede restaurar el carro original, el de madera. Se [estima] que costaría unos [ochenta millones] de pesos y tardaría unos [catorce] [meses].",
+      "glossary": [
+        { "word": "réplica", "meaning": "copia de un objeto original" },
+        { "word": "por etapas", "meaning": "en varias partes, una después de otra" },
+        { "word": "o sea", "meaning": "es decir; sirve para explicar o resumir lo anterior" },
+        { "word": "postal", "meaning": "tarjeta con una foto bonita; aquí, algo que solo sirve para mirar" }
+      ]
+    },
+    {
+      "id": "mirador",
+      "title": "La última página",
+      "place": "El mirador de arriba",
+      "context": "En el mirador, Elvira, la consultora de la fundación, le presenta a Catalina el convenio para pagar la restauración. Catalina quiere leerlo entero.",
+      "speakers": [
+        { "name": "Elvira", "country": "España", "voice": "es-ES-ElviraNeural" },
+        { "name": "Catalina", "country": "Chile", "voice": "es-CL-CatalinaNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Catalina, la propuesta es buena, de verdad. La fundación pone el setenta por ciento de la restauración. A cambio, pedimos cosas razonables: horario ampliado en verano y un panel informativo en la estación." },
+        { "s": 1, "text": "Hasta ahí, bien. ¿Y en la última página?" },
+        { "s": 0, "text": "En la última página está la gestión. Durante diez años, el ascensor lo gestionaría un operador elegido por la fundación. Es para proteger la inversión, nada más." },
+        { "s": 1, "text": "¿Y la tarifa vecinal? ¿Quién la decide?" },
+        { "s": 0, "text": "El operador, siempre que no supere un precio máximo. Eso está en el anexo." },
+        { "s": 1, "text": "O sea, que la tarifa no la decide la junta. Eso no estaba en la presentación." },
+        { "s": 0, "text": "Tienes razón, debería haberlo dicho al principio. Te lo reconozco. Pero hay una salida: el operador externo es obligatorio, a no ser que la junta pague el treinta por ciento y se haga cargo del mantenimiento." },
+        { "s": 1, "text": "El treinta por ciento son veinticuatro millones. Lo vamos a hablar en la asamblea, Elvira. Y vamos a leer el convenio entero." }
+      ],
+      "choice": [
+        { "q": "¿Qué ofrece la fundación?", "options": ["Pagar toda la restauración", "Pagar el setenta por ciento de la restauración", "Pagar solo los cables"], "answer": 1 },
+        { "q": "¿Qué condición aparece en la última página?", "options": ["Un operador elegido por la fundación durante diez años", "Un panel informativo en la estación", "Un horario ampliado en verano"], "answer": 0 },
+        { "q": "Según el convenio, ¿quién decidiría la tarifa vecinal?", "options": ["La junta de vecinos", "La fundación, sin ningún límite", "El operador, con un precio máximo"], "answer": 2 },
+        { "q": "¿Qué reconoce Elvira?", "options": ["Que la propuesta no es buena", "Que la junta no tiene dinero", "Que debería haber explicado la condición desde el principio"], "answer": 2 }
+      ],
+      "open": [
+        { "q": "¿Has firmado algo sin leer la letra pequeña? ¿Qué pasó?", "model": "Sí, un contrato de teléfono. Después me di cuenta de que tenía una permanencia de dos años." },
+        { "q": "¿Aceptarías el dinero de la fundación con esas condiciones? ¿Con qué cambios?", "model": "Lo aceptaría, siempre que la tarifa vecinal la decidiera la junta." },
+        { "q": "¿Te parece justo que quien paga una obra decida cómo se usa? ¿Por qué?", "model": "En parte, aunque creo que los vecinos deberían tener la última palabra." }
+      ],
+      "gaps": "Durante diez años, el ascensor lo [gestionaría] un [operador] elegido por la [fundación]. Es para proteger la [inversión], nada más.",
+      "glossary": [
+        { "word": "anexo", "meaning": "documento que se añade al final de un contrato" },
+        { "word": "la gestión", "meaning": "la administración diaria de un servicio" },
+        { "word": "inversión", "meaning": "dinero que se pone en algo para que dure o dé resultados" },
+        { "word": "operador", "meaning": "empresa que hace funcionar un servicio" }
+      ]
+    },
+    {
+      "id": "asamblea",
+      "title": "El borrador del acta",
+      "place": "La sede de la junta de vecinos",
+      "context": "Al final de la asamblea, Catalina lee en voz alta el borrador del acta. Paola y don Lorenzo la corrigen para que diga exactamente lo que piensan.",
+      "speakers": [
+        { "name": "Catalina", "country": "Chile", "voice": "es-CL-CatalinaNeural" },
+        { "name": "Paola", "country": "Venezuela", "voice": "es-VE-PaolaNeural" },
+        { "name": "Lorenzo", "country": "Chile", "voice": "es-CL-LorenzoNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Leo el borrador del acta y me corrigen si me equivoco. Uno: la asamblea acuerda pedir la reapertura del ascensor con una tarifa vecinal." },
+        { "s": 1, "text": "De acuerdo. Pero pon que acepto la tarifa vecinal, aunque me preocupa que los turistas dejen de subir si la tarifa turística es muy cara. Con esas palabras." },
+        { "s": 0, "text": "Anotado, Paola. Dos: la junta acepta hablar con un operador externo, siempre que la tarifa vecinal la decida la junta." },
+        { "s": 2, "text": "Y que el operador cuente con la gente del cerro. Eso también quiero que quede escrito." },
+        { "s": 0, "text": "Don Lorenzo advierte que el operador debería contar con los ascensoristas del cerro. ¿Así está bien?" },
+        { "s": 2, "text": "Así está bien. Y que no diga que yo estoy de acuerdo con los diez años, porque no lo estoy." },
+        { "s": 0, "text": "Entendido. Tres: queda pendiente la duración del convenio. La fundación propone diez años; la junta, menos. Se votará cuando la fundación responda." },
+        { "s": 1, "text": "¿Y lo del panel junto al mural?" },
+        { "s": 0, "text": "Cuatro: el panel de la fundación irá en la estación, no junto al mural. Eso sí lo acordamos todos." }
+      ],
+      "choice": [
+        { "q": "¿Qué hace Catalina en esta escucha?", "options": ["Lee el borrador del acta para que lo corrijan", "Vota la duración del convenio", "Firma el convenio con la fundación"], "answer": 0 },
+        { "q": "¿Qué reserva quiere Paola en el acta?", "options": ["Que el café pague menos", "Que la tarifa vecinal sea gratis", "Que una tarifa turística muy cara puede hacer que los turistas dejen de subir"], "answer": 2 },
+        { "q": "¿Qué no quiere don Lorenzo que diga el acta?", "options": ["Que él está de acuerdo con los diez años", "Que los ascensoristas son del cerro", "Que el panel va en la estación"], "answer": 0 },
+        { "q": "¿Qué queda pendiente?", "options": ["El lugar del panel", "La tarifa vecinal", "La duración del convenio"], "answer": 2 }
+      ],
+      "open": [
+        { "q": "¿Por qué es importante que un acta recoja las reservas de cada persona?", "model": "Porque si no, la gente no la firma, aunque esté de acuerdo con casi todo." },
+        { "q": "¿Has estado en una reunión en la que se anotó algo que no se había decidido?", "model": "Sí, en el trabajo. El acta decía que todos aceptábamos el cambio, y no era verdad." },
+        { "q": "Si tuvieras que mediar en esta asamblea, ¿qué punto dejarías pendiente?", "model": "Dejaría pendiente la duración del convenio hasta que la fundación responda." }
+      ],
+      "gaps": "Tres: queda [pendiente] la [duración] del convenio. La fundación propone [diez años]; la [junta], menos.",
+      "glossary": [
+        { "word": "borrador", "meaning": "primera versión de un texto, antes de la versión final" },
+        { "word": "acta", "meaning": "texto que recoge lo que se dijo y se decidió en una reunión" },
+        { "word": "pendiente", "meaning": "que todavía no está decidido" },
+        { "word": "anotado", "meaning": "escrito; aquí quiere decir «lo he escrito, de acuerdo»" }
+      ]
+    }
+  ]
+}
