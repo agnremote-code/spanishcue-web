@@ -13,6 +13,20 @@ const courseLessons=[...readFileSync(new URL('../../app/grammar-classroom/catalo
 const additions = [
   ...courseLessons,
   {
+    // 2026-10-26: El ascensor del cerro (B2), a PRO 3D world in Valparaíso, wired like the feria.
+    id:243,path:'/el-ascensor-del-cerro',files:/^(?:app\/el-ascensor-del-cerro\/|app\/escucha-3d\/content\/ascensor\/|public\/el-ascensor-del-cerro\/|public\/audio\/escucha-3d\/ascensor-|tests\/el-ascensor-del-cerro\.test\.mjs$|scripts\/check-ascensor\.mjs$|scripts\/qa-ascensor-browser\.mjs$)/,
+    edits:{
+      'app/lesson-catalog.ts':[text=>{
+        const lines=text.split('\n');
+        const at=lines.flatMap((line,i)=>line.startsWith('  {id:243,')&&line.includes('path:"/el-ascensor-del-cerro"')?[i]:[]);
+        assert.equal(at.length,1,'one ascensor catalog entry');lines.splice(at[0],1);return lines.join('\n');
+      },[',237,238,240,241,242,243],',',237,238,240,241,242],']],
+      'scripts/test-worker.mjs':[[" await run(['--test','tests/el-ascensor-del-cerro.test.mjs']);\n",'']],
+      'tests/level-cleanup.test.mjs':[['assert.equal(lessons.length, 317);','assert.equal(lessons.length, 316);']],
+      'tests/rendered-html.test.mjs':[['assert.match(html,/295(?:<!-- -->|\\s)+resultados/);assert.match(html,/310(?:<!-- -->|\\s)+clases totales/);','assert.match(html,/294(?:<!-- -->|\\s)+resultados/);assert.match(html,/309(?:<!-- -->|\\s)+clases totales/);']],
+    },
+  },
+  {
     // 2026-10-22: Madrid infectada (A0–C2), a PRO 3D world in ten zones, wired like the feria.
     id:242,path:'/madrid-infectada',files:/^(?:app\/madrid-infectada\/|app\/escucha-3d\/content\/madrid\/|public\/madrid-infectada\/|public\/audio\/escucha-3d\/madrid-|tests\/madrid-infectada\.test\.mjs$|scripts\/check-madrid\.mjs$|docs\/audits\/madrid-infectada-english-additions-20261022\.json$)/,
     edits:{
