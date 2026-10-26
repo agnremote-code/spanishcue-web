@@ -51,6 +51,9 @@ Live public checkout defaults to disabled. A supervised Live purchase can be pre
 
 ## Paddle contract
 
+**Paid-trial retirement (2026-10-26):** The USD 2 one-day trial is no longer offered to new buyers. The public checkout endpoint accepts only the monthly offer, checkout creation rejects `trial` even when called internally, and the availability API returns `trialCheckoutAvailable: false`. Existing Paddle trial subscriptions, their recurring charges, refunds/claims and historical verifications must remain supported; the old trial price ID is intentionally retained for validation only. Disable/archive the historical trial offer in Paddle's own catalog or payment links separately if publicly accessible there; do not delete a price in use by existing subscribers.
+
+
 Paddle was added after the PayPal state machine above. Current source (`app/paddle-server.ts`, `app/api/billing/paddle/*`, `db/paddle-billing.ts`) behaves as follows:
 
 - Paddle is Live-only. The API base is hard-coded to `https://api.paddle.com`, and Paddle billing rows use environment `live`. There is no Paddle Sandbox configuration; Paddle and PayPal Live share the 1,000 Live founder allocation.
