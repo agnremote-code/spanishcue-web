@@ -227,3 +227,32 @@ One agent session of about 60 minutes: reading the concept, the decision and the
 R1–R6 are text edits in `app/el-ascensor-del-cerro/levels/b2.mjs` only. No listening line changes, so no audio needs to be regenerated. Once they are applied and `node scripts/check-ascensor.mjs`, `node scripts/check-escucha-3d.mjs ascensor B2` and `npm run test:language` pass again, the level can ship without another full G4 round. A delta check of the six edits is enough. Deviations 1, 2, 4, 5, 6 and 7 are accepted. Deviation 4 (single-mode routes) is reconfirmed for the board. Separately from G4, the gate (§9.2, §9.4) still requires someone to listen to every clip and to pass G5(a)/(b) before `featured` can be set.
 
 G4 VERDICT: APPROVE WITH REQUIRED CHANGES
+
+---
+
+## Delta check 2026-10-26
+
+- **Reviewer:** Alejandro (same independent reviewer; Martin is still the author).
+- **Delta reviewed:** `git diff e59feb9f d97a3187 -- app/el-ascensor-del-cerro/levels/b2.mjs app/escucha-3d/content/ascensor/b2.json`. No uncommitted changes to either file.
+- **Checks (re-run at `d97a3187`):**
+  - `check-ascensor`: 615/615 passed.
+  - `check-escucha-3d ascensor B2`: OK.
+  - `npm run test:language`: 43 passed, 0 failed.
+  - Neutral Spanish guard: 0 unresolved findings across 1760 files.
+  - English copy: unchanged.
+- **Listening audio:** no `lines` text changed. I compared `speakers` and `lines` of all 6 items in old and new `b2.json` with a script, and they are identical. The only changed fields are `estacion.choice` and `mirador.choice` (N4). Those are text questions, so no audio needs regenerating.
+
+- **R1:** CLOSED. b2.mjs:95-96 is now «se volvió en un hostal», with feature «volverse con «en»», and the feedback is the proposed text verbatim.
+- **R2:** CLOSED. The feature and feedback at :81-82, the exponent use at :63 and the board note at :142 now give the state/aspect/ánimo rule and cite «el carro se ha puesto viejo». They no longer contradict line 71.
+- **R3:** CLOSED. :152 and :248 drop «que no cambia la postura» and use known/low-relevance/possibility. The `dato` context at :170 now reads «Para ti es información nueva…».
+- **R4:** CLOSED. The `sintesis` correct option at :555 and the `todos-igual` feedback at :552 no longer attribute a tourist-fare or visitor need to the fundación.
+- **R5:** CLOSED. The estacion timeline at :130-132 reads «le dije a don Lorenzo que…» plus «él estuvo de acuerdo / él me contestó que…», which attributes each idea correctly.
+- **R6:** CLOSED. The timing at :637 is now 4 + 5 + 1 + 8 + 2 = 20 min for Conversación, and the role-play is 3 min in Comprensión (4 + 3 + 1 + 8 + 2 = 18). The route totals of 45 and 45 are unchanged.
+- **Recommendations applied:**
+  - N3: CLOSING `ending` now says «cuando la fundación responda».
+  - N4: estacion Q4 and mirador Q4 are now inference items. Both can be answered from unchanged audio lines (b2.json:18 and :171-173), and each has one defensible answer.
+  - N7: the «mudanza» lexical distractor has correct feedback.
+  - N8: PLACEMENT now says «segunda mitad de B2, a partir de la semana 13».
+- **Still open (non-blocking, unchanged):** N1, N2, N5, N6, N9, N10, N11. Outside G4, the gate still requires someone to listen to every clip and to pass G5(a)/(b) before the `featured` flag can be set.
+
+G4 VERDICT (final): APPROVE
