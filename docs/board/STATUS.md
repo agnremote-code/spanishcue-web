@@ -1,6 +1,6 @@
 # Board STATUS: the single source of truth for the next run
 
-_Last updated: 2026-10-23 by the Friday 3D + assessment routine (scheduled cloud run; facilitator plus Sofia, Martin and Alejandro as subagents, see "Current work")._
+_Last updated: 2026-10-26 by the Monday 3D routine (scheduled cloud run; facilitator plus Martin, Sofia and Alejandro as subagents, see "Current work")._
 
 ## Owner decisions in force
 | Date | Decision |
@@ -31,7 +31,7 @@ Parallel streams: **3D = Sofia**, **technical SEO = Alejandro**, **QA/integratio
 | Rank | Item | Owner → reviewer | State |
 |---|---|---|---|
 | 1 | LES-001 «La feria de Villaluz» A2 PRO 3D world (LESSON-DECISION-001 v5 + BOARD-DECISION-001 overlays) | Martin (content) → Sofia (build); G4 by Alejandro or a fresh agent; QA Martin | **Deployed 2026-10-21**: PR #251 → `6383b3b6`, production run 39549567404 (workflow smoke passed). The changed-URL smoke is still owed (see Current work). Open follow-ups: G5(b) real-device check (featured flag stays off until then), T5 fps on a real Android, the cover still shows the baile host in its old spot |
-| 2 | **NEW 2026-10-23: «El ascensor del cerro», B2 PRO 3D world, Valparaíso** ([concept](concepts/2026-10-23-valparaiso-ascensor-del-cerro.md); selected 3 of 3) | Martin (content, after his cultural check) → Sofia (build) → G4 Alejandro or a fresh agent | **Next 3D slot, Mon 2026-10-26** (continue Wed if not gate-passed) |
+| 2 | «El ascensor del cerro», B2 PRO 3D world, Valparaíso ([concept](concepts/2026-10-23-valparaiso-ascensor-del-cerro.md)) | Martin (content) → Sofia (build) → G4 Alejandro | **BUILT AND REVIEWED, NOT RELEASED (2026-10-26).** Draft PR #282. G4 final APPROVE, code review final APPROVE, G3/G6/N1/G5(a) pass. **Held by concept §9.2:** a person must listen to the 6 clips (owner request R4). Then mark #282 ready. `featured:false` until G5(b) |
 | 3 | «También, tampoco, sí, no: reaccionar», A1 PRO grammar (`a1.gram.tambien-tampoco`). **Partly covered already** (VERIFIED: `app/grammar-classroom/live/lessons/g332.ts:129` has a section «También, tampoco, sí, no · Reacting to tastes» with exercises), so whether any gap remains is a HYPOTHESIS; Martin duplicate-checks against main before any authoring | Martin → fresh agent (G4) | after rank 2 content |
 | — | ~~«Gustar y verbos como gustar» A1 PRO grammar class~~ | — | **DROPPED 2026-10-23** (Alejandro, on Martin's evidence): duplicates G032 «Gustar y encantar» (`g332.ts`) + G062 «Gustar, interesar, doler, faltar» (`g362.ts`), both live and PRO. The other gaps in BOARD-DECISION-002 §2 (superlativos, obligación, indefinidos) are also covered (369, 340/380, 370–372). Supersedes BOARD-DECISION-002 §3.1(2) on this point |
 | P | Technical SEO, highest impact first (parallel stream) | Alejandro → Sofia (code review), Martin (QA) | First fix = PR #224, **merged `c06c01c` and deployed 2026-10-20** (production run 39359743902, workflow smoke passed). The changed-URL content smoke is still owed (PUBLISHED.md, Pending verification) |
@@ -52,6 +52,7 @@ Parallel streams: **3D = Sofia**, **technical SEO = Alejandro**, **QA/integratio
 | — | **COMP-001** ProfeDeELE.com benchmark: their offer, formats, pricing, the teacher queries they win, and the gaps SpanishCue can win with evidence. Feeds concept selection and SEO-002. | Alejandro (lead) + Martin (pedagogy) | next Tuesday SEO slot, or earlier if capacity allows |
 
 ## Owner data requests (open)
+- **R4 (2026-10-26, blocks the release of PR #282):** listen to the 6 listening clips of «El ascensor del cerro» (about 8 minutes in all: `public/audio/escucha-3d/ascensor-b2-{estacion,escalera,cafe,taller,mirador,asamblea}.mp3` on branch `claude/escucha-3d-ascensor-cerro-b2-20261026`) with the transcripts open (`app/escucha-3d/content/ascensor/b2.json`), and note per clip: OK, or the defect with its timestamp. **Agents cannot hear audio, and speech-to-text could not run** (the model hosts return 403 through the proxy). The result goes into `docs/audits/el-ascensor-del-cerro-pedagogy-20261026.md`. The next board run then marks #282 ready.
 - **R0 (2026-10-20, blocking SEO measurement; STILL OPEN 2026-10-23, placeholder row again):** Windsor.ai paused all reads: "reads are paused because you have 6 accounts connected and your Free plan includes 1 account". Every `searchconsole` query returns that placeholder row with 0 values. Fix: disconnect the 5 extra accounts at https://onboard.windsor.ai/app/ (keep `sc-domain:spanishcue.com`) or upgrade. The board may not buy paid plans. The owner was notified by push on 2026-10-20. Until this is fixed there is no fresh Search Console evidence; the last real numbers are from 2026-10-17 (PR #224 body).
 - **R1:** Search Console Page-indexing report, Core Web Vitals report and per-query impressions. The Windsor connector exposes only search analytics and sitemaps.
 - **R2:** GA Admin: which property `G-6C7DY2C5LN` reports to.
@@ -77,6 +78,35 @@ All five run on `claude-opus-5-5`, follow [ROUTINES.md](ROUTINES.md), and each i
 - Session 0 (lesson test) took 55 messages, about 15 of them caused by crossed messages over circle 6. That led to the lock rule.
 
 ## Current work and next action
+- **2026-10-26 (Monday 3D routine): «El ascensor del cerro» B2 built and fully reviewed; NOT released.** Draft PR #282, branch `claude/escucha-3d-ascensor-cerro-b2-20261026`, base main `25b9253`. Subscription usage: **UNKNOWN**.
+  - **Board convened as subagents of the facilitator** (Martin, Sofia, Alejandro). Every message went between the facilitator and one executive, with no direct messages between executives. 17 messages, exported verbatim from the agents' logs: [transcripts/2026-10-26-monday-3d-ascensor.md](transcripts/2026-10-26-monday-3d-ascensor.md).
+  - **Built:**
+    - `/el-ascensor-del-cerro`, catalog id 243: B2 only, PRO, `featured:false`.
+    - Three terraces at 0 / 9 / 18 m, with a scripted funicular ride (don Lorenzo rides in the cabin) and two scripted stair flights.
+    - 6 circles: estacion, escalera, cafe, taller, mirador, and asamblea (the closing: mediation and the acta).
+    - Both modes, with one listening per circle.
+    - 6 TTS clips (Escucha 3D audio run 40259015039).
+    - Cover, hover clip 243.mp4, the `/resources/` page via `resource-seo.ts`, the checker `scripts/check-ascensor.mjs`, `tests/el-ascensor-del-cerro.test.mjs`, and the world added to the 3d-sin-fantasmas and three.js guards.
+  - **Gate:**
+    - G4 content review (Alejandro): R1–R6 required, all closed; **final APPROVE** ([review](../audits/el-ascensor-del-cerro-g4-review-20261026.md)).
+    - Code review (Alejandro): B1 (GPU leak on unmount) and B2 (copy promised don Lorenzo in an empty cabin) fixed; **final APPROVE** ([review](../audits/el-ascensor-del-cerro-code-review-20261026.md)).
+    - LQG file [el-ascensor-del-cerro-pedagogy-20261026.md](../audits/el-ascensor-del-cerro-pedagogy-20261026.md): G3, G4, G6, N1 (21 contrasts, 6 stimuli, 30/30 exponents targeted) and G5(a) (SwiftShader smoke 65/65, low-mode draw calls ≤103) pass. **LQG VERDICT: NOT YET RELEASABLE** because of concept §9.2 (below).
+  - **Why it is not released.**
+    - Concept §9.2 requires that someone listen to every clip before release. That step was missed for Feria, and the rule exists because of it.
+    - No agent can hear audio, and machine speech-to-text could not run: HuggingFace and Vosk return 403 through the proxy.
+    - Technical audio checks did pass: 61–90 s per clip, 117–159 wpm, no silence over 2 s, −16.9 to −17.7 LUFS, hashes current. These cannot catch a misread gap word or a wrong voice.
+    - Alejandro, as G4 reviewer, ruled that this blocks merge, since merging deploys and every PRO teacher could play the clips. The facilitator does not vote and did not override him, so **#282 stays draft and nothing was merged or deployed**. Owner request R4 above.
+  - **Checks at the branch head** (facilitator):
+    - `npm test`: 890 pass, and the only failure was the LQG file not existing yet. It was added afterwards, and the world test then passed 16/16.
+    - `scripts/test-worker.mjs` re-run after the fixes: see the PR comment.
+    - lint 0 errors; `tsc` only the 3 errors already on main; `git diff --check` clean.
+    - `tests/wave3-preservation.test.mjs` fails on main too and is not part of `npm test`.
+  - **Not verified:** G5(b) real-device check (blocks `featured`), fps on a real Android, touch input, listening by ear, and a look-pass on the façades against the postcard risk (code review NB5).
+  - **Next action:**
+    - When R4 is answered, a board run records the result in the LQG file.
+      - If every clip is OK: re-run `npm test`, follow the one-PR-in-pipeline rule (check merge-lock and open ready PRs), mark #282 ready, verify the merged SHA, watch staging and production, smoke `/el-ascensor-del-cerro` → 302 `/acceso`, `/audio/escucha-3d/ascensor-b2-estacion.mp3` → 403 and the `/resources/` page → 200, then add it to PUBLISHED.md.
+      - If a clip is defective: Martin edits the `lines`, the audio workflow regenerates it, and someone listens again.
+    - **Wed 2026-10-28 3D slot:** while #282 waits, the next unit. BOARD-DECISION-002 rank 3 needs Martin's duplicate check first; otherwise run the concept pipeline (Eje Cafetero C1 stays deferred until the kit has proximity audio).
 - **2026-10-23 (Friday 3D + assessment routine): PR (this branch `claude/friday-assessment-20261023`, base main `373e8b33`).** Subscription usage: **UNKNOWN**.
   - **Board convened as subagents of the facilitator:** Sofia and Martin wrote proposals in parallel, Alejandro scored/selected and wrote the assessment. They did not message each other. Verbatim: [transcripts/2026-10-23-friday-concepts-assessment.md](transcripts/2026-10-23-friday-concepts-assessment.md).
   - **3D unit: NONE shipped this run.** No ready 3D item existed and rank 2 turned out to be a duplicate, so the run did concept pipeline steps 1–3. Selected: **«El ascensor del cerro», B2, Valparaíso** ([concept file](concepts/2026-10-23-valparaiso-ascensor-del-cerro.md)). Deferred: Eje Cafetero C1 (needs a kit proximity-audio feature first), El Dorado B1 (fallback).

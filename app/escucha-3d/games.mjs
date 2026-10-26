@@ -154,6 +154,15 @@ export const GAMES = {
     ownListening: true,
     bilingualA0: true,
   },
+  // El ascensor del cerro (B2): a funicular hillside in Valparaíso. Every
+  // circle has its own listening, and each character keeps one voice
+  // (app/el-ascensor-del-cerro/levels/b2.mjs CAST).
+  ascensor: {
+    title: 'El ascensor del cerro',
+    levels: ['B2'],
+    spots: ['estacion', 'escalera', 'cafe', 'taller', 'mirador', 'asamblea'],
+    ownListening: true,
+  },
 };
 
 // Transcript length in words for each level.

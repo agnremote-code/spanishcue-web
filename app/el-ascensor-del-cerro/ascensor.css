@@ -1,0 +1,252 @@
+/* El ascensor del cerro · the feria's layout and controls (shared house
+   style), in harbour colours: Pacific blue, funicular green, cabin red. */
+.ac { --ink: #1c2329; --muted: #5b6770; --paper: rgba(246, 247, 243, .96); --blue: #1f4e79; --red: #b3332b; --green: #1f5a46; --gold: #e3a52a; --line: rgba(28, 35, 41, .16);
+  position: fixed; inset: 0; overflow: hidden; background: #1b2a36; color: var(--ink); font-family: "Helvetica Neue", "Segoe UI", system-ui, sans-serif; }
+.ac button, .ac select { font: inherit; color: inherit; cursor: pointer; }
+.ac kbd { display: inline-grid; place-items: center; min-width: 1.6em; height: 1.6em; padding: 0 .35em; border: 1px solid currentColor; border-radius: 4px; font: 600 .72rem/1 ui-monospace, monospace; opacity: .8; }
+.ac-world, .ac-canvas { position: absolute; inset: 0; }
+.ac-canvas canvas { display: block; width: 100%; height: 100%; outline: none; touch-action: none; }
+.ac-fade { position: absolute; inset: 0; background: #000; opacity: 0; pointer-events: none; z-index: 2; }
+.ac-loading { position: absolute; inset: 0; display: grid; place-items: center; color: #dfe8ee; letter-spacing: .08em; }
+.ac-flatbg { position: absolute; inset: 0; background: linear-gradient(180deg, #7fb2d6, #bfd6e2 45%, #2d6b86 72%, #1b2a36); }
+
+/* Title */
+.ac-title { position: absolute; inset: 0; display: grid; align-items: center; justify-items: start; padding: 4vh 5vw; background: linear-gradient(90deg, rgba(4,6,10,.9) 0%, rgba(4,6,10,.62) 45%, rgba(4,6,10,0) 78%); z-index: 5; overflow-y: auto; color: #eef2f3; }
+.ac-title-card { max-width: 580px; }
+.ac-kicker { display: inline-flex; gap: .5rem; align-items: center; margin: 0 0 .9rem; padding: .3rem .6rem; background: var(--red); color: #fff; font-size: .72rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; border-radius: 3px; }
+.ac-title h1 { margin: 0; font-weight: 800; font-size: clamp(2.4rem, 6vw, 4.6rem); line-height: .95; letter-spacing: -.02em; color: #fff; }
+.ac-tagline { margin: .7rem 0 0; font-size: clamp(1.05rem, 2.2vw, 1.35rem); font-style: italic; color: #ffe2a8; }
+.ac-lede { margin: 1rem 0 1.5rem; color: #c3ccd2; font-size: 1rem; line-height: 1.55; max-width: 50ch; }
+.ac-label { margin: 0 0 .5rem; color: #9fb6c8; font-size: .74rem; letter-spacing: .22em; text-transform: uppercase; font-weight: 700; }
+.ac-levels { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .45rem; margin-bottom: 1rem; }
+.ac-levels button { display: grid; gap: .15rem; text-align: left; padding: .6rem .7rem; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.16); border-radius: 6px; color: #eef2f3; }
+.ac-levels button b { font-size: 1.15rem; }
+.ac-levels button small { color: #a9b5bd; font-size: .72rem; line-height: 1.3; }
+.ac-levels .is-on { background: rgba(29,95,168,.45); border-color: #7fb2ea; }
+.ac-note { margin: .8rem 0 0; color: #d5e2ea; font-size: .88rem; line-height: 1.45; max-width: 52ch; }
+.ac-enter { margin-top: 1.3rem; padding: .9rem 2rem; border: 0; border-radius: 6px; background: var(--red); color: #fff !important; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; font-size: .9rem; box-shadow: 0 10px 30px rgba(179,51,43,.35); }
+.ac-help { margin: .9rem 0 0; color: #9aa7b0; font-size: .8rem; line-height: 1.45; }
+
+/* HUD */
+.ac-hud { position: absolute; top: 0; left: 0; right: 0; display: flex; justify-content: space-between; align-items: flex-start; gap: .8rem; padding: 12px 16px; pointer-events: none; z-index: 3; }
+.ac-hud > * { pointer-events: auto; }
+.ac-where { display: grid; padding: .45rem .85rem; background: var(--blue); color: #fff; border-radius: 4px; box-shadow: 0 6px 20px rgba(0,0,0,.35); max-width: 46vw; }
+.ac-where span { font-size: .66rem; letter-spacing: .2em; text-transform: uppercase; opacity: .85; font-weight: 700; }
+.ac-where b { font-size: 1.05rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ac-hud-right { display: flex; gap: .35rem; align-items: center; flex-wrap: wrap; justify-content: flex-end; }
+.ac-progress { padding: .42rem .7rem; background: var(--paper); border-radius: 4px; font-size: .8rem; color: var(--muted); }
+.ac-hud-right > button, .ac-secondary { padding: .45rem .8rem; background: var(--paper); border: 1px solid var(--line); border-radius: 4px; font-size: .84rem; color: var(--ink); }
+.ac-hud-right > button[aria-pressed="true"] { background: var(--blue); color: #fff; }
+.ac-secondary:disabled { opacity: .4; cursor: default; }
+.ac-primary { padding: .55rem 1rem; border: 0; border-radius: 4px; background: var(--green); color: #fff !important; font-weight: 700; }
+.ac-mode { background: var(--paper); border-radius: 4px; }
+.ac-hud .ac-mode small { display: none; }
+.ac-hud .ac-mode button { padding: .4rem .7rem; }
+.ac-prompt { position: absolute; left: 50%; bottom: 9vh; transform: translateX(-50%); z-index: 3; }
+.ac-prompt button { display: flex; gap: .6rem; align-items: center; padding: .7rem 1.15rem; background: var(--paper); border: 2px solid var(--blue); border-radius: 6px; font-size: 1rem; font-weight: 600; box-shadow: 0 10px 30px rgba(0,0,0,.4); }
+.ac-hint { position: absolute; left: 50%; bottom: 14px; transform: translateX(-50%); margin: 0; padding: .4rem .8rem; background: rgba(4,6,10,.62); border-radius: 4px; color: #d0d8de; font-size: .78rem; z-index: 2; white-space: nowrap; max-width: calc(100% - 32px); overflow: hidden; text-overflow: ellipsis; }
+
+
+/* Map */
+.ac-mapbox { position: absolute; right: 16px; bottom: 16px; z-index: 3; width: 190px; padding: 6px; background: var(--paper); border-radius: 6px; box-shadow: 0 8px 24px rgba(0,0,0,.4); cursor: zoom-in; }
+.ac-mapbox.is-big { right: 50%; bottom: 50%; transform: translate(50%, 50%); width: min(720px, calc(100% - 32px)); cursor: default; }
+.ac-mapbox p { display: flex; flex-wrap: wrap; gap: .5rem; justify-content: space-between; align-items: center; margin: .5rem .3rem .2rem; font-size: .84rem; color: var(--muted); }
+.ac-map { display: block; width: 100%; height: auto; }
+.ac-map-spot { fill: #fff; stroke: var(--red); stroke-width: .6; cursor: pointer; }
+.ac-map-done { fill: #9aa7b0; stroke: #6b7780; stroke-width: .4; cursor: pointer; }
+.ac-map-me { fill: var(--red); stroke: #fff; stroke-width: .3; }
+
+/* Panels */
+.ac-panel { position: absolute; z-index: 4; top: 50%; left: 50%; transform: translate(-50%, -50%); width: min(540px, calc(100% - 32px)); max-height: calc(100% - 32px); box-sizing: border-box; overflow-y: auto; padding: 1.1rem 1.2rem; background: var(--paper); border-radius: 8px; box-shadow: 0 30px 80px rgba(0,0,0,.6); }
+.ac-panel h2 { margin: 0 0 .9rem; font-size: 1.4rem; font-weight: 800; }
+.ac-list ol { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .35rem; }
+.ac-list li button { width: 100%; position: relative; display: grid; text-align: left; padding: .5rem .7rem; background: #fff; border: 1px solid var(--line); border-radius: 6px; }
+.ac-list li button small { color: var(--muted); font-size: .76rem; }
+.ac-list li button.is-done { border-color: var(--green); background: #eef7f1; }
+.ac-list li button i { position: absolute; right: .6rem; top: .5rem; color: var(--green); font-style: normal; font-weight: 800; }
+.ac-row { display: flex; gap: .5rem; flex-wrap: wrap; margin-top: 1rem; }
+
+/* Conversation card: a clipboard on the right. */
+.ac-card { position: absolute; z-index: 4; top: 16px; right: 16px; bottom: 16px; width: min(480px, calc(100% - 32px)); display: flex; flex-direction: column; background: var(--paper); border-radius: 8px; box-shadow: 0 30px 80px rgba(0,0,0,.55); border-top: 6px solid var(--blue); }
+.ac-card-head { display: flex; justify-content: space-between; gap: .8rem; padding: .8rem 1.1rem .3rem; }
+.ac-card-head p { margin: 0; display: grid; gap: .1rem; }
+.ac-card-head span { color: var(--blue); font-size: .7rem; letter-spacing: .18em; text-transform: uppercase; font-weight: 800; }
+.ac-card-head em { font-style: normal; color: var(--muted); font-size: .84rem; }
+.ac-close { width: 2rem; height: 2rem; border-radius: 50%; border: 1px solid var(--line); background: #fff; font-size: 1.2rem; line-height: 1; flex: none; }
+.ac-card-body { flex: 1; overflow-y: auto; padding: 0 1.1rem 1rem; outline: none; }
+.ac-card-body h2 { margin: .1rem 0 .7rem; font-size: 1.45rem; font-weight: 800; line-height: 1.15; }
+.ac-en { display: block; margin-top: .15rem; color: #6d7a84; font-size: .86em; font-style: italic; font-weight: 400; letter-spacing: 0; text-transform: none; }
+.ac-line { margin: 0 0 .7rem; font-size: 1.03rem; line-height: 1.55; }
+.ac-dialogue { list-style: none; margin: 0 0 .8rem; padding: 0; display: grid; gap: .45rem; }
+.ac-dialogue li { display: grid; gap: .1rem; padding: .5rem .7rem; background: #fff; border: 1px solid var(--line); border-radius: 6px; line-height: 1.45; }
+.ac-dialogue b { color: var(--blue); font-size: .78rem; letter-spacing: .04em; }
+.ac-ask { margin: .2rem 0 .4rem; font-weight: 700; line-height: 1.4; }
+.ac-say { margin: 0 0 .45rem; color: var(--muted); font-size: .8rem; }
+.ac-options { list-style: none; margin: 0; padding: 0; display: grid; gap: .45rem; }
+.ac-options button { width: 100%; display: flex; gap: .7rem; align-items: flex-start; text-align: left; padding: .65rem .8rem; background: #fff; border: 1px solid var(--line); border-radius: 6px; font-size: 1rem; line-height: 1.4; transition: border-color .15s, background .15s; }
+.ac-options button:hover, .ac-options button:focus-visible { border-color: var(--blue); background: #eef4fb; }
+.ac-said { display: grid; gap: .5rem; }
+.ac-chosen { margin: 0; padding: .55rem .8rem; border-left: 4px solid var(--blue); background: #e8f0fa; border-radius: 0 6px 6px 0; }
+.ac-chosen span { display: block; color: var(--blue); font-size: .7rem; letter-spacing: .16em; text-transform: uppercase; font-weight: 800; margin-bottom: .1rem; }
+.ac-reply { margin: 0; line-height: 1.55; }
+.ac-end { margin: .4rem 0 0; padding: .7rem .85rem; border-left: 4px solid var(--red); background: #fbecec; border-radius: 0 6px 6px 0; line-height: 1.5; }
+.ac-talk { margin-top: 1.1rem; padding-top: .9rem; border-top: 2px dashed var(--line); }
+.ac-talk h3 { margin: 0 0 .5rem; color: var(--green); font-size: .78rem; letter-spacing: .2em; text-transform: uppercase; font-weight: 800; }
+.ac-talk ol { margin: 0; padding-left: 1.3rem; display: grid; gap: .3rem; }
+.ac-talk li button { background: none; border: 0; padding: .2rem 0; text-align: left; color: var(--muted); font-size: .98rem; line-height: 1.45; }
+.ac-talk li.is-now button { color: var(--ink); font-size: 1.12rem; font-weight: 600; }
+.ac-words { margin-top: 1rem; color: var(--muted); }
+.ac-words summary { cursor: pointer; font-size: .8rem; color: var(--blue); font-weight: 700; }
+.ac-words ul { list-style: none; padding: 0; margin: .5rem 0 0; display: flex; flex-wrap: wrap; gap: .35rem; }
+.ac-words li { padding: .25rem .55rem; border: 1px solid var(--line); background: #fff; border-radius: 999px; font-size: .84rem; color: var(--ink); }
+.ac-words li .ac-en { display: inline; margin-left: .3rem; }
+.ac-card-foot { display: flex; gap: .5rem; align-items: center; flex-wrap: wrap; padding: .65rem 1.1rem .85rem; border-top: 1px solid var(--line); }
+.ac-toggle { margin-left: auto; display: flex; gap: .35rem; align-items: center; color: var(--muted); font-size: .8rem; }
+.ac-primary kbd { border-color: currentColor; }
+
+/* Touch */
+.ac-joy { position: absolute; left: 22px; bottom: 26px; width: 120px; height: 120px; border-radius: 50%; border: 1px solid rgba(255,255,255,.3); background: rgba(4,6,10,.35); z-index: 3; touch-action: none; }
+.ac-joy span { position: absolute; left: 35px; top: 35px; width: 50px; height: 50px; border-radius: 50%; background: rgba(255,255,255,.6); }
+.ac-touch-actions { position: absolute; right: 18px; bottom: 150px; z-index: 3; display: flex; gap: 10px; }
+.ac-touch-actions button { width: 60px; height: 60px; border-radius: 50%; border: 1px solid rgba(255,255,255,.35); background: rgba(4,6,10,.55); color: #fff; font: 700 1.2rem/1 inherit; display: grid; place-items: center; touch-action: none; }
+.ac-touch-actions small { display: block; font-size: .58rem; letter-spacing: .06em; text-transform: uppercase; margin-top: -10px; }
+
+@media (max-width: 760px) {
+  .ac-title { background: linear-gradient(0deg, rgba(4,6,10,.95) 35%, rgba(4,6,10,.5) 100%); align-items: end; }
+  .ac-levels { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .ac-card { top: auto; left: 12px; right: 12px; bottom: 12px; width: auto; max-height: 68%; }
+  .ac-list ol { grid-template-columns: 1fr; }
+  .ac-progress, .ac-hint { display: none; }
+  .ac-hud { flex-direction: column; padding: 10px 12px; }
+  .ac-where { max-width: 100%; }
+  /* The HUD stacks into ~225 px here: the minimap and the listening badge sit
+     below it, side by side, so neither covers a HUD button (G5(a) smoke). */
+  .ac-mapbox:not(.is-big) { width: 104px; top: 236px; bottom: auto; right: 12px; padding: 4px; }
+  body:has(.ac) .e3-badge.e3-badge { top: 236px; bottom: auto; left: 12px; transform: none; max-width: calc(100% - 140px); }
+  .ac-hud .ac-mode b { font-size: .8rem; }
+  .ac-hud-right > button { padding: .4rem .6rem; font-size: .8rem; }
+}
+@media (pointer: coarse) { .ac-card-foot kbd, .ac-ride kbd { display: none; } }
+
+/* ---------------------------------------------------------------- additions */
+.ac-loading { flex-direction: column; gap: .8rem; }
+.ac-loading p { margin: 0; }
+.ac-on-dark { background: rgba(255,255,255,.1) !important; color: #fff !important; border-color: rgba(255,255,255,.35) !important; }
+.ac-title .ac-row { align-items: center; }
+.ac-title .ac-enter { margin-top: 0; }
+.ac-title .ac-row { margin-top: 1.3rem; }
+.ac-levels { grid-template-columns: minmax(0, 1fr); max-width: 320px; }
+.ac-kicker { background: var(--gold); color: #1c1608; }
+.ac-enter { background: var(--red); }
+.ac-where { background: var(--blue); }
+.ac-debug { position: absolute; left: 16px; bottom: 16px; z-index: 3; margin: 0; padding: .3rem .6rem; background: rgba(0,0,0,.65); color: #9df; font: 12px ui-monospace, monospace; border-radius: 4px; }
+.ac-empty { color: var(--muted); font-style: italic; }
+.ac-privacy { margin: .8rem 0 0; color: var(--muted); font-size: .8rem; }
+
+/* Map */
+.ac-map-spot circle { fill: #fff; stroke: var(--red); stroke-width: .7; cursor: pointer; }
+.ac-map-done circle { fill: #9aa7b0; stroke: #6b7780; stroke-width: .5; cursor: pointer; }
+.ac-map text { font: 700 2.4px system-ui, sans-serif; fill: var(--ink); pointer-events: none; }
+.ac-map-me { fill: var(--red); stroke: #fff; stroke-width: .3; }
+.ac-flatmap { margin-top: 1rem; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: #f3ece0; }
+
+/* Teacher list */
+.ac-list { width: min(620px, calc(100% - 32px)); }
+.ac-list h3 { margin: 1.1rem 0 .4rem; color: var(--blue); font-size: .74rem; letter-spacing: .2em; text-transform: uppercase; font-weight: 800; }
+.ac-routes { display: flex; gap: .35rem; flex-wrap: wrap; margin-bottom: .6rem; }
+.ac-routes button { padding: .45rem .8rem; border: 1px solid var(--line); background: #fff; border-radius: 999px; font-size: .86rem; }
+.ac-routes button[aria-selected="true"] { background: var(--blue); color: #fff; border-color: var(--blue); }
+.ac-list ol { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .35rem; }
+.ac-list ol.ac-route { grid-template-columns: 1fr; }
+.ac-list li button { width: 100%; position: relative; display: grid; text-align: left; padding: .5rem .7rem; background: #fff; border: 1px solid var(--line); border-radius: 6px; }
+.ac-list li button:disabled { cursor: default; opacity: .8; }
+.ac-list li button small { color: var(--muted); font-size: .76rem; }
+.ac-list li button.is-done { border-color: var(--green); background: #eef7f1; }
+.ac-list li button i { position: absolute; right: .6rem; top: .5rem; color: var(--green); font-style: normal; font-weight: 800; }
+.ac-e1 { margin: .5rem 0 0; color: var(--muted); font-size: .82rem; }
+
+/* Scene card extras */
+.ac-dialogue li span { display: block; }
+.ac-teacher { margin-top: .8rem; color: var(--muted); font-size: .9rem; }
+.ac-teacher summary { cursor: pointer; font-size: .8rem; color: var(--blue); font-weight: 700; }
+.ac-exponents { font-size: .85rem; }
+.is-done { border-color: var(--green) !important; }
+.ac-ticks { display: flex; gap: .3rem; align-items: center; flex-wrap: wrap; width: 100%; font-size: .8rem; color: var(--muted); }
+.ac-ticks button { padding: .3rem .55rem; border: 1px solid var(--line); background: #fff; border-radius: 999px; font-size: .8rem; }
+.ac-ticks button[aria-pressed="true"] { background: var(--green); color: #fff; border-color: var(--green); }
+
+/* Closing */
+.ac-closing { margin-top: 1.2rem; padding-top: .9rem; border-top: 2px dashed var(--line); }
+.ac-closing-step { margin: .7rem 0; padding: .7rem .8rem; background: #fff; border: 1px solid var(--line); border-radius: 8px; }
+.ac-closing-step h4 { margin: 0 0 .35rem; font-size: 1rem; }
+.ac-closing-step p, .ac-closing-step ul, .ac-closing-step ol { margin: .25rem 0; line-height: 1.45; }
+.ac-story { padding-left: 1.2rem; }
+.ac-frame { color: var(--muted); font-size: .88rem; }
+.ac-check { list-style: none; padding: 0; display: grid; gap: .3rem; }
+.ac-check label { display: flex; gap: .5rem; align-items: flex-start; }
+.ac-transfer { font-weight: 600; }
+.ac-tally { margin: .6rem 0 0; font-weight: 600; }
+
+/* Beats (N1 labels): contrast and conversation stimulus */
+.ac-beat { margin: .9rem 0; padding: .7rem .8rem; background: #fff; border: 1px solid var(--line); border-radius: 8px; }
+.ac-beat.is-done { border-color: rgba(31,122,69,.35); }
+.ac-beat-label { margin: 0 0 .35rem; color: var(--blue); font-size: .68rem; letter-spacing: .16em; text-transform: uppercase; font-weight: 800; }
+.ac-beat-contrast .ac-beat-label { color: #a0640a; }
+.ac-beat-context { margin: 0 0 .4rem; line-height: 1.5; }
+.ac-beat-prompt { margin: 0 0 .5rem; font-weight: 700; }
+.ac-options button.is-wrong { border-color: var(--red); background: #fbecec; opacity: .85; }
+.ac-options button.is-right { border-color: var(--green); background: #eef7f1; }
+.ac-options button:disabled { cursor: default; }
+.ac-good { margin: .6rem 0 0; padding: .55rem .75rem; border-left: 4px solid var(--green); background: #eef7f1; border-radius: 0 6px 6px 0; }
+.ac-beat .ac-feedback { margin-top: .6rem; }
+.ac-beat .ac-reply { margin-top: .5rem; font-style: italic; }
+.ac-frames { margin: .2rem 0 .6rem; padding-left: 1.2rem; display: grid; gap: .25rem; }
+.ac-step { display: grid; gap: .3rem; }
+.ac-step-note { padding: .5rem .7rem; border: 1px dashed var(--line); border-radius: 6px; display: grid; gap: .15rem; }
+.ac-step-note small { color: var(--muted); }
+.ac-placement { margin: 0 0 .7rem; padding: .45rem .7rem; background: #fff7e6; border-left: 4px solid var(--gold); border-radius: 0 6px 6px 0; font-size: .86rem; }
+.ac-exponents { padding-left: 1.1rem; margin: .4rem 0 0; display: grid; gap: .2rem; }
+
+/* ---------------------------------------------------------------- the cerro */
+/* Plan */
+.ac-map-slope { fill: #c9bfae; }
+.ac-map-terrace { stroke: none; }
+.ac-map-puerto { fill: #9fb7c4; }
+.ac-map-medio { fill: #d8cfbf; }
+.ac-map-alto { fill: #efe7d6; }
+.ac-map-label { font: 700 1.9px system-ui, sans-serif; fill: #3a4650; pointer-events: none; }
+.ac-map-building { fill: #8a7f70; opacity: .55; }
+.ac-map-rail { stroke: var(--green); stroke-width: 1.2; stroke-dasharray: 1.2 .6; }
+.ac-map-stairs { stroke: #6b5a46; stroke-width: 1.6; stroke-dasharray: .35 .35; }
+.ac-map-link { fill: #ffc04a; stroke: #8a5a10; stroke-width: .3; }
+.ac-map-spot circle { fill: #fff; stroke: var(--red); stroke-width: .7; cursor: pointer; }
+.ac-map-done circle { fill: #9aa7b0; stroke: #6b7780; stroke-width: .5; cursor: pointer; }
+.ac-map text { font: 700 2.4px system-ui, sans-serif; fill: var(--ink); pointer-events: none; }
+.ac-map .ac-map-label { font-size: 1.9px; }
+.ac-flatmap { background: #e9e2d2; }
+
+/* Rides: a caption bar with the skip button, and the marker prompt */
+.ac-ride { position: absolute; left: 50%; bottom: 7vh; transform: translateX(-50%); z-index: 3; display: flex; gap: .8rem; align-items: center; width: max-content; max-width: calc(100% - 32px); box-sizing: border-box; padding: .6rem .7rem .6rem 1rem; background: rgba(16,26,34,.86); color: #f3eee4; border-left: 4px solid var(--gold); border-radius: 6px; box-shadow: 0 10px 30px rgba(0,0,0,.4); }
+.ac-ride p { margin: 0; display: grid; gap: .1rem; }
+.ac-ride b { font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); }
+.ac-ride span { font-size: .95rem; line-height: 1.35; }
+.ac-ride button { flex: none; padding: .5rem .8rem; border: 0; border-radius: 4px; background: #f3eee4; color: #1c2329; font-weight: 700; display: flex; gap: .4rem; align-items: center; }
+.ac-prompt-link button { border-color: var(--gold); }
+.ac-prompt-link kbd { color: #8a5a10; }
+
+/* Teacher list: circles by height, ways up and down */
+.ac-heights { display: grid; gap: .5rem; }
+.ac-height { padding: .5rem .6rem .6rem; border-radius: 8px; border-left: 4px solid var(--blue); background: rgba(31,78,121,.06); }
+.ac-height-medio { border-left-color: #8a7f70; background: rgba(138,127,112,.08); }
+.ac-height-alto { border-left-color: var(--gold); background: rgba(227,165,42,.08); }
+.ac-height h4 { margin: 0 0 .4rem; font-size: .8rem; color: var(--muted); letter-spacing: .04em; }
+.ac-moves { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .35rem; }
+.ac-moves button { display: grid; gap: .1rem; text-align: left; padding: .5rem .7rem; background: #fff; border: 1px solid var(--line); border-left: 4px solid var(--gold); border-radius: 6px; font-weight: 600; }
+.ac-moves small { color: var(--muted); font-weight: 400; font-size: .76rem; }
+.ac-jumps { margin-top: .5rem; }
+.ac-kicker { background: var(--gold); color: #1c1608; }
+.ac-where { background: var(--blue); }
+@media (max-width: 760px) {
+  .ac-moves { grid-template-columns: 1fr; }
+  .ac-ride { bottom: 12px; }
+}
