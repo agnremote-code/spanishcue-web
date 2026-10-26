@@ -9,7 +9,8 @@
 //   node scripts/qa-ascensor-browser.mjs            # --smoke
 //   node scripts/qa-ascensor-browser.mjs --smoke    # G5(a) smoke
 //   node scripts/qa-ascensor-browser.mjs --calls    # low-path draw calls per place
-//   node scripts/qa-ascensor-browser.mjs --cover    # 1200×750 cover candidates + cover.webp (ASCENSOR_COVER=<intro|circle id>)
+//   node scripts/qa-ascensor-browser.mjs --cover    # 1200×750 cover candidates + cover.webp (ASCENSOR_COVER=<intro|circle id|ride>)
+//   node scripts/qa-ascensor-browser.mjs --preview  # 8 s 640×360 H.264 hover clip, preview.mp4 (needs ffmpeg)
 //
 // Env: ASCENSOR_QA_OUTPUT (evidence folder, default .qa/ascensor-browser),
 // ASCENSOR_QA_EVIDENCE (also save a few small PNGs there), PLAYWRIGHT_MODULE,
@@ -28,8 +29,8 @@ import { CIRCLES, CIRCLES_BY_HEIGHT, TERRACES } from '../app/el-ascensor-del-cer
 
 const repo = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const argv = new Set(process.argv.slice(2));
-const all = !argv.has('--smoke') && !argv.has('--cover') && !argv.has('--calls');
-const RUN = { smoke: all || argv.has('--smoke'), cover: argv.has('--cover'), calls: argv.has('--calls') };
+const all = !argv.has('--smoke') && !argv.has('--cover') && !argv.has('--calls') && !argv.has('--preview');
+const RUN = { smoke: all || argv.has('--smoke'), cover: argv.has('--cover'), calls: argv.has('--calls'), preview: argv.has('--preview') };
 const out = resolve(process.env.ASCENSOR_QA_OUTPUT || resolve(repo, '.qa/ascensor-browser'));
 const evidence = process.env.ASCENSOR_QA_EVIDENCE ? resolve(process.env.ASCENSOR_QA_EVIDENCE) : null;
 await mkdir(resolve(out, 'smoke'), { recursive: true });
@@ -200,6 +201,51 @@ if (RUN.cover) {
   await writeFile(resolve(out, 'cover.webp'), simpleWebp(Buffer.from(webp, 'base64')));
   console.log(`cover: ${resolve(out, 'cover.webp')} (${pick})`);
   await context.close();
+}
+
+// ------------------------------------------------------------------ hover clip (--preview)
+// The catalog card's hover recording, like the other conversation cards
+// (640×360, 24 fps, 8 s, H.264, no audio): 2.5 s of the fly-over from the bay,
+// then the funicular climbing the cerro. Captured frame by frame on the
+// desktop path at 1280×720 (the world clock advances at most 1/20 s per
+// rendered frame, so a slow software renderer still gives an even clip) and
+// scaled down by ffmpeg.
+if (RUN.preview) {
+  const { spawnSync } = await import('node:child_process');
+  const framesDir = resolve(out, 'preview-frames');
+  await mkdir(framesDir, { recursive: true });
+  const context = await browser.newContext({ viewport: { width: 1280, height: 720 }, deviceScaleFactor: 1 });
+  const page = await context.newPage();
+  page.on('pageerror', e => report.errors.push(`preview: ${e.message}`));
+  await page.goto(`${origin}/?harness=world`);
+  await page.locator('.ac-canvas canvas').waitFor({ timeout: 60000 });
+  await page.evaluate(() => window.__qa.intro(true));
+  await frames(page, 20);
+  // The ride caption is lesson UI, not part of the scene: hide it in the clip.
+  await page.addStyleTag({ content: '.ac-ride{display:none!important}' });
+  // 2.5 s of fly-over (60 frames), then the whole funicular ride captured
+  // frame by frame (screenshots cost extra rendered frames, so the ride gives
+  // fewer frames than its length): ffmpeg stretches it evenly to 5.5 s.
+  const rideDir = resolve(out, 'preview-ride');
+  await mkdir(rideDir, { recursive: true });
+  for (let i = 0; i < 60; i++) { await frames(page, 1); await page.screenshot({ path: resolve(framesDir, `f${String(i).padStart(4, '0')}.png`) }); }
+  await page.evaluate(() => { window.__qa.intro(false); window.__qa.travel({ link: 'ascensor-sube' }); });
+  await page.waitForFunction(() => document.querySelector('.ac-world')?.hasAttribute('data-ride'), null, { timeout: 15000 });
+  let n = 0;
+  while (n < 400 && await page.locator('.ac-world[data-ride]').count()) {
+    await frames(page, 1);
+    await page.screenshot({ path: resolve(rideDir, `r${String(n++).padStart(4, '0')}.png`) });
+  }
+  await context.close();
+  const clip = resolve(out, 'preview.mp4');
+  const rate = (n / 5.5).toFixed(4);
+  const r = spawnSync(process.env.FFMPEG || 'ffmpeg', ['-y', '-loglevel', 'error',
+    '-framerate', '24', '-i', resolve(framesDir, 'f%04d.png'), '-framerate', rate, '-i', resolve(rideDir, 'r%04d.png'),
+    '-filter_complex', '[0:v]scale=640:360:flags=lanczos,fps=24[a];[1:v]scale=640:360:flags=lanczos,fps=24[b];[a][b]concat=n=2:v=1[v]', '-map', '[v]', '-t', '8',
+    '-c:v', 'libx264', '-profile:v', 'high', '-pix_fmt', 'yuv420p', '-crf', '34', '-preset', 'slow', '-an', '-movflags', '+faststart', clip], { stdio: 'inherit' });
+  assert.equal(r.status, 0, 'ffmpeg encoded the clip');
+  console.log(`preview ride frames: ${n}`);
+  console.log(`preview: ${clip}`);
 }
 
 // ------------------------------------------------------------------ draw calls (--calls)

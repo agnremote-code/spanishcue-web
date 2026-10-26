@@ -347,7 +347,6 @@ export default function World3D(props: WorldProps) {
         }
         // How far the ride is, on the DOM only (no React render): QA reads it.
         if (host.parentElement) host.parentElement.dataset.rideT = Math.min(1, t).toFixed(2);
-        if (host.parentElement) host.parentElement.dataset.dbg = JSON.stringify({ hero: hero.root.position.toArray().map(v => +v.toFixed(2)), vis: hero.root.visible, cam: camera.position.toArray().map(v => +v.toFixed(1)), sA }); // DBG
         if (t >= 1) finishRide();
       } else if (moving) {
         const input = inputFrom(held);
@@ -417,7 +416,7 @@ export default function World3D(props: WorldProps) {
       } else if (ride) {
         // Beside the rail (funicular) or above the flight (stairs), on the
         // downhill side, where nothing stands between the camera and the rider.
-        const off = ride.link.kind === 'funicular' ? { x: -6.5, y: 3.6, z: 5.5 } : { x: -5, y: 5, z: 7 };
+        const off = ride.link.kind === 'funicular' ? { x: -5.2, y: 3.1, z: 4.6 } : { x: -5, y: 5, z: 7 };
         desired.set(player.x + off.x, heroY + off.y, player.z + off.z);
         if (camera.position.distanceTo(desired) > 18) camera.position.copy(desired);
         camera.position.lerp(desired, 1 - Math.exp(-dt * 4));

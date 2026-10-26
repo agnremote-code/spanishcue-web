@@ -518,6 +518,7 @@ export function buildCerro(scene: THREE.Scene, opts: { low: boolean; shadows: bo
   // Posts for the stairway signs (at the foot and at the middle landing).
   b.cyl(0.05, 0.05, 2.6, '#2b2b2b', STAIRS.x - 2.4, 1.3, 15.25, 6, 'metal');
   b.cyl(0.05, 0.05, 2.6, '#2b2b2b', STAIRS.x - 2.4, 10.3, -3.2, 6, 'metal');
+  b.cyl(0.05, 0.05, 1.8, '#2b2b2b', 11, 18.9, -12.9, 6, 'metal');
 
   root.add(b.build({ shadows }));
 
@@ -538,7 +539,7 @@ export function buildCerro(scene: THREE.Scene, opts: { low: boolean; shadows: bo
   signAt(4, 7.4, (hall.x0 + hall.x1) / 2, 18 + hall.h - 1.0, hall.z1 + 0.12);
   signAt(5, 2.2, STAIRS.x - 2.4, 2.75, 15.32);
   signAt(5, 2.2, STAIRS.x - 2.4, 11.75, -3.12);
-  signAt(7, 2.6, 11, 19.6, -12.85);
+  signAt(7, 2.6, 11, 19.9, -12.95, Math.PI);
   const signMesh = new THREE.Mesh(mergeGeometries(signs, false)!, new THREE.MeshBasicMaterial({ map: signAtlas(), side: THREE.DoubleSide }));
   for (const g of signs) g.dispose();
   root.add(signMesh);
