@@ -28,6 +28,13 @@ export type Cerro = {
   /** Everyone standing on the cerro: the mascot bumps into them, never through. */
   bodies: () => Body[];
   people: () => number;
+  /** The funicular ride: don Lorenzo rides in cabin `rail` (0 red, 1 green),
+   * or nobody (null). While he rides, his figure at the lower station hides. */
+  setRider: (rail: 0 | 1 | null) => void;
+  /** Free everything on the GPU that the scene traverse cannot reach: the
+   * canvas textures (signs, mural), every cached low-mode host bake and the
+   * rider when he is not in a cabin. */
+  dispose: () => void;
 };
 
 // ------------------------------------------------------------------ palette
@@ -231,11 +238,13 @@ const HOSTS: Record<string, Look> = Object.fromEntries(Object.entries(HOST_OF).m
 /** Which hosts stand on the cerro now. A character who talks at two circles
  * (Catalina) is shown once: at the circle on the player's terrace, else at
  * the lower one; the host of an open circle is always there. */
-export function visibleHosts(terrace: string, open: string | null) {
+export function visibleHosts(terrace: string, open: string | null, riding = false) {
   const shown = new Set<string>();
   const byWho = new Map<string, typeof CIRCLES>();
   for (const c of CIRCLES) byWho.set(HOST_OF[c.id], [...(byWho.get(HOST_OF[c.id]) ?? []), c]);
-  for (const list of byWho.values()) {
+  for (const [who, list] of byWho) {
+    // During the funicular ride don Lorenzo is in the cabin, not at the station.
+    if (riding && who === 'lorenzo' && !list.some(c => c.id === open)) continue;
     const pick = list.find(c => c.id === open) ?? list.find(c => c.terrace === terrace) ?? list[0];
     shown.add(pick.id);
   }
@@ -540,10 +549,12 @@ export function buildCerro(scene: THREE.Scene, opts: { low: boolean; shadows: bo
   signAt(5, 2.2, STAIRS.x - 2.4, 2.75, 15.32);
   signAt(5, 2.2, STAIRS.x - 2.4, 11.75, -3.12);
   signAt(7, 2.6, 11, 19.9, -12.95, Math.PI);
-  const signMesh = new THREE.Mesh(mergeGeometries(signs, false)!, new THREE.MeshBasicMaterial({ map: signAtlas(), side: THREE.DoubleSide }));
+  const signTexture = signAtlas();
+  const signMesh = new THREE.Mesh(mergeGeometries(signs, false)!, new THREE.MeshBasicMaterial({ map: signTexture, side: THREE.DoubleSide }));
   for (const g of signs) g.dispose();
   root.add(signMesh);
-  const mural = new THREE.Mesh(new THREE.PlaneGeometry(13.4, 5.8), new THREE.MeshStandardMaterial({ map: muralTexture(), roughness: 0.9 }));
+  const muralMap = muralTexture();
+  const mural = new THREE.Mesh(new THREE.PlaneGeometry(13.4, 5.8), new THREE.MeshStandardMaterial({ map: muralMap, roughness: 0.9 }));
   mural.position.set(13.5, 12.1, -2.99);
   mural.receiveShadow = shadows;
   root.add(mural);
@@ -558,6 +569,19 @@ export function buildCerro(scene: THREE.Scene, opts: { low: boolean; shadows: bo
     cabinB.position.set(c.x, c.y, c.z);
   }
   setCabins(0);
+  // Don Lorenzo, the operator, rides with you on the test run: he stands at
+  // the uphill end of the cabin, by the controls, facing up the rail. He is a
+  // live person only while he rides (one more figure, no bake).
+  const rider = makePerson(LOOKS.lorenzo, 'stand', shadows);
+  rider.root.position.set(0.55, 0, -0.95);
+  rider.root.rotation.y = Math.PI;
+  let riding: 0 | 1 | null = null;
+  function setRider(rail: 0 | 1 | null) {
+    if (rail === riding) return;
+    riding = rail;
+    rider.root.removeFromParent();
+    if (rail !== null) (rail === 0 ? cabinA : cabinB).add(rider.root);
+  }
 
   // ---------------------------------------------------------- markers for the rides
   // An amber ring with a chevron pointing the way in: two instanced meshes.
@@ -633,7 +657,7 @@ export function buildCerro(scene: THREE.Scene, opts: { low: boolean; shadows: bo
   const focusTerrace = () => lastTerrace;
   function focus(id: string | null, terrace: string) {
     lastTerrace = terrace;
-    const shown = visibleHosts(terrace, id);
+    const shown = visibleHosts(terrace, id, riding !== null);
     const key = `${id ?? ''}|${[...shown].sort().join()}`;
     if (key === focusKey) return;
     focusKey = key;
@@ -659,6 +683,7 @@ export function buildCerro(scene: THREE.Scene, opts: { low: boolean; shadows: bo
   function animate(t: number, dt: number, px: number, pz: number) {
     for (const s of spots) { s.gem.position.y = 2.3 + Math.sin(t * 2 + s.group.position.x) * 0.12; s.gem.rotation.y += dt * 1.5; }
     for (const n of npcs) if (n.person.root.visible && (!low || n.id === focused)) animatePerson(n.person, dt, 0, false);
+    if (riding !== null) animatePerson(rider, dt, 0, false);
     if (!low) for (const c of crowdPeople) if (Math.abs(c.x - px) < 26 && Math.abs(c.z - pz) < 26) animatePerson(c.person, dt, 0, false);
     for (let i = 0; i < GULLS; i++) {
       const a = t * (0.12 + (i % 3) * 0.03) + i * 1.7;
@@ -673,8 +698,22 @@ export function buildCerro(scene: THREE.Scene, opts: { low: boolean; shadows: bo
   animate(0, 0, 0, 0);
 
   const bodies = (): Body[] => [
-    ...npcs.filter(n => visibleHosts(focusTerrace(), focused).has(n.id)).map((n, i) => ({ key: `host-${n.id}`, x: n.x, z: n.z, y: n.y, body: HOSTS[n.id]?.body, seed: i * 7 + 3 })),
+    ...npcs.filter(n => visibleHosts(focusTerrace(), focused, riding !== null).has(n.id)).map((n, i) => ({ key: `host-${n.id}`, x: n.x, z: n.z, y: n.y, body: HOSTS[n.id]?.body, seed: i * 7 + 3 })),
     ...crowdPeople.map((c, i) => ({ key: `vecino-${i}`, x: c.x, z: c.z, y: c.y, body: c.body, seed: c.seed })),
   ];
-  return { spots, npcs, setCabins, animate, focus, bodies, people: () => npcs.length + crowdPeople.length };
+  function dispose() {
+    signTexture.dispose();
+    muralMap.dispose();
+    const free = (o: THREE.Object3D) => o.traverse(x => {
+      const m = x as THREE.Mesh;
+      if (!m.isMesh) return;
+      m.geometry?.dispose();
+      for (const mat of Array.isArray(m.material) ? m.material : [m.material]) mat?.dispose();
+    });
+    // Cached bakes are detached when not in use: the scene traverse misses them.
+    for (const group of hostBakes.values()) free(group);
+    hostBakes.clear();
+    if (riding === null) free(rider.root);
+  }
+  return { spots, npcs, setCabins, animate, focus, bodies, setRider, dispose, people: () => npcs.length + crowdPeople.length + (riding !== null ? 1 : 0) };
 }

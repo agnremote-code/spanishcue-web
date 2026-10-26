@@ -197,6 +197,7 @@ export default function World3D(props: WorldProps) {
       yaw = link.exit.heading;
       heroY = groundY(player.x, player.z);
       ride = null;
+      cerro.setRider(null);
       linkSpent = null;
       poseAt = -10;
       if (host?.parentElement) delete host.parentElement.dataset.rideT;
@@ -214,6 +215,7 @@ export default function World3D(props: WorldProps) {
       const atBottom: 0 | 1 = sA === 0 ? 0 : 1;
       const rail: 0 | 1 = link.kind !== 'funicular' ? 0 : link.from === 'puerto' ? atBottom : (atBottom === 0 ? 1 : 0);
       ride = { link, start: clock, seconds: rideSeconds(link), rail };
+      if (link.kind === 'funicular') cerro.setRider(rail);
       linkSpent = id;
       setRiding(id);
       p.onRide?.(id);
@@ -481,14 +483,20 @@ export default function World3D(props: WorldProps) {
       canvasEl.removeEventListener('pointercancel', onUp);
       canvasEl.removeEventListener('wheel', onWheel);
       canvasEl.removeEventListener('webglcontextlost', lost);
+      cerro.dispose();
       scene.traverse(o => {
         const m = o as THREE.Mesh;
         if (m.geometry) m.geometry.dispose();
         const mat = m.material as THREE.Material | THREE.Material[] | undefined;
-        if (Array.isArray(mat)) mat.forEach(x => x.dispose()); else mat?.dispose();
+        for (const x of Array.isArray(mat) ? mat : mat ? [mat] : []) {
+          // Every texture slot (map, emissiveMap, …), then the material.
+          for (const value of Object.values(x)) if ((value as THREE.Texture | null)?.isTexture) (value as THREE.Texture).dispose();
+          x.dispose();
+        }
       });
       composer?.dispose();
       renderer.dispose();
+      renderer.forceContextLoss();
       renderer.domElement.remove();
       api.current = null;
     };

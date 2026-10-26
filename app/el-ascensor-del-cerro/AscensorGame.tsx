@@ -35,6 +35,10 @@ function webglAvailable() {
     return Boolean(window.WebGLRenderingContext && (c.getContext('webgl2') || c.getContext('webgl')));
   } catch { return false; }
 }
+/** ?debug (draw calls, fps) only outside production builds. */
+function devBuild() {
+  try { return process.env.NODE_ENV !== 'production'; } catch { return false; }
+}
 function read(storage: 'local' | 'session', key: string) {
   try { return (storage === 'local' ? window.localStorage : window.sessionStorage).getItem(key); } catch { return null; }
 }
@@ -153,7 +157,7 @@ export default function AscensorGame() {
       setSession(restoreSession(read('session', SESSION_KEY)));
       setHas3d(webglAvailable());
       setFlat(window.matchMedia('(prefers-reduced-motion: reduce)').matches);
-      setDebug(new URLSearchParams(window.location.search).has('debug'));
+      setDebug(devBuild() && new URLSearchParams(window.location.search).has('debug'));
       setReady(true);
     }, 0);
     useMapNow = () => setFlat(true);
@@ -327,6 +331,7 @@ export default function AscensorGame() {
       </section>)}</div>
       {use3d && <>
         <h3>Moverse por el cerro</h3>
+        <p className="ac-placement">El ascensor sigue cerrado por reparación: la cabina de prueba de don Lorenzo solo sirve para recorrer el cerro en clase, no significa que ya funcione.</p>
         <div className="ac-moves">
           <button type="button" onClick={() => go({ link: 'ascensor-sube' })}>Subir en el ascensor<small>Del puerto a lo alto, con don Lorenzo</small></button>
           <button type="button" onClick={() => go({ link: 'ascensor-baja' })}>Bajar en el ascensor<small>De lo alto al puerto</small></button>
