@@ -65,3 +65,22 @@ Branch `claude/escucha-3d-ascensor-cerro-b2-20261026`. These checks ran in the a
 - **Audio.** The clips exist (facilitator), but I did not listen to them. The page makes no accent claim. The procedural ambience (wind, harbour hum, gulls) was not checked by ear.
 - **Touch.** The joystick and buttons are the same code as Feria's, but no actual touch gestures were driven.
 - **Look.** The non-stereotyped look is my judgement from the screenshots, not a cultural review.
+
+## Code review fixes (Alejandro, REQUEST CHANGES B1 and B2), same day
+- **B1, unmount leak.**
+  - `cerro3d.ts` now returns `dispose()`. It frees the sign-atlas and mural CanvasTextures, every cached low-mode host bake (`hostBakes`, detached and so out of reach of the scene traverse), and the rider figure when he is not in a cabin.
+  - `World3D.tsx` cleanup calls `cerro.dispose()` and disposes every texture slot of every material in the traverse. It then calls `renderer.dispose()` and `renderer.forceContextLoss()`. The context-lost listener is removed before that call, so `onFail` does not fire on unmount.
+  - Regression test: `tests/el-ascensor-del-cerro.test.mjs`, «unmount frees the GPU…».
+- **B2, the empty cabin.**
+  - Don Lorenzo (people3d, his host look) now rides in the cabin that carries you during the funicular ride. He stands by the uphill controls on the side the ride camera sees.
+  - While he rides, his figure at the lower station is hidden, so he never appears twice. Low mode keeps a separate cached bake for that state.
+  - The copy («Don Lorenzo te sube…», «con don Lorenzo», the catalog's «viaje de prueba con el ascensorista») is now true, so I did not change it.
+  - VERIFIED visually in a 1600×1000 SwiftShader crop at ride t = 0.5: the mascot and don Lorenzo are both in the red cabin.
+  - One extra live figure costs about 30 draw calls, during the ride only. VERIFIED by a re-run of `--calls` in low mode: mid-ride on the funicular is 100 on the tablet and 103 on the phone. The maximum over all 12 places is 103 on both, so the world stays ≤ 120.
+- **NB4.** The teacher list («Moverse por el cerro») now says: «El ascensor sigue cerrado por reparación: la cabina de prueba de don Lorenzo solo sirve para recorrer el cerro en clase, no significa que ya funcione.»
+- **NB6.** `?debug` now works only when `process.env.NODE_ENV !== 'production'`. The check is guarded by try/catch.
+- **Checks after the fixes** (VERIFIED):
+  - tsc: 0 errors in my files (3 known errors elsewhere).
+  - eslint: 0 problems.
+  - `node --test tests/el-ascensor-del-cerro.test.mjs tests/3d-sin-fantasmas.test.mjs tests/noche-abierta.test.mjs`: 61/61 pass.
+  - `qa-ascensor-browser.mjs --smoke`: 65/65 passed, 0 page or console errors, no 404s.

@@ -570,10 +570,10 @@ export function buildCerro(scene: THREE.Scene, opts: { low: boolean; shadows: bo
   }
   setCabins(0);
   // Don Lorenzo, the operator, rides with you on the test run: he stands at
-  // the uphill end of the cabin, by the controls, facing up the rail. He is a
+  // the uphill end of the cabin, on the side the ride camera sees (west), facing up the rail. He is a
   // live person only while he rides (one more figure, no bake).
   const rider = makePerson(LOOKS.lorenzo, 'stand', shadows);
-  rider.root.position.set(0.55, 0, -0.95);
+  rider.root.position.set(-0.6, 0, -0.65);
   rider.root.rotation.y = Math.PI;
   let riding: 0 | 1 | null = null;
   function setRider(rail: 0 | 1 | null) {
