@@ -108,9 +108,7 @@ Source: `docs/board/evidence/ascensor-2026-10-26/BUILD.md` («Verified» section
   - `fallback-no-webgl.png`, `card-390-asamblea-end.png`.
   - The auditor viewed `ride-funicular-mid.png` and `fallback-no-webgl.png`. The latter shows the teacher list with routes, PLACEMENT and «o 3. El café».
 
-**Result: G5(a) evidenced (cited).** The code review has two blocking items that do not affect G5(a) itself (`el-ascensor-del-cerro-code-review-20261026.md`):
-- B1: GPU cleanup on unmount.
-- B2: the ride copy claims don Lorenzo rides with you.
+**Result: G5(a) evidenced (cited).** The code review (`el-ascensor-del-cerro-code-review-20261026.md`) raised two blocking items, B1 (GPU cleanup on unmount) and B2 (the ride copy claimed don Lorenzo rides with you). Both were closed in `0774a67d`; see its delta check, final verdict APPROVE. After those fixes Sofia re-ran the smoke (65/65) and the draw calls (max 103 mid-ride); that is cited from the BUILD.md addendum, not re-run by the auditor. The auditor viewed `ride-lorenzo-in-cabin.png`.
 
 ## G5(b): real-device check
 
@@ -169,9 +167,8 @@ Source: `docs/board/evidence/ascensor-2026-10-26/BUILD.md` («Verified» section
 | G5(a) | Evidenced (cited from BUILD.md) |
 | G5(b) | NOT DONE: blocks `featured` |
 | §9.2 listened audio | **NOT MET: blocks release** |
-| Code review (separate file) | REQUEST CHANGES: B1, B2 |
+| Code review (separate file) | APPROVE (final, after the delta check of `0774a67d`; B1 and B2 closed) |
 
-**LQG VERDICT: NOT YET RELEASABLE.** The pedagogy gates pass. Release still requires three things:
-- (1) §9.2: a person listens to the 6 clips and records the result here;
-- (2) code review items B1 and B2 are closed;
-- (3) the world stays `featured:false` until G5(b) passes.
+**LQG VERDICT: NOT YET RELEASABLE.** The pedagogy gates and the code review pass. Release still requires:
+- (1) §9.2: a person listens to the 6 clips and records the result here. Unchanged: there is no new evidence, and nobody has listened.
+- (2) The world stays `featured:false` until G5(b) passes.

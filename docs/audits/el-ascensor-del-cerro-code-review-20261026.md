@@ -136,3 +136,43 @@ I did not run `tests/rendered-html.test.mjs`, which needs a built Worker, or the
 B1 is a small cleanup patch in two files. B2 is a three-string copy change, or a seated figure. Neither touches access, content or audio. Once both are in and the ascensor test passes, no further code review round is needed: a diff check of the two items is enough.
 
 CODE REVIEW VERDICT: REQUEST CHANGES (B1, B2)
+
+---
+
+## Delta check 2026-10-26
+
+- **Reviewer:** Alejandro (same independent reviewer; author Sofia).
+- **Delta reviewed:** `git diff fbdd843c 0774a67d -- app/el-ascensor-del-cerro tests/el-ascensor-del-cerro.test.mjs` (`AscensorGame.tsx` +7/−1, `World3D.tsx` +10/−1, `cerro3d.ts` +53/−6, test +13), plus the BUILD.md addendum and `ride-lorenzo-in-cabin.png`. No uncommitted changes.
+- **Checks (re-run by the reviewer at `0774a67d`):**
+  - `node --test tests/el-ascensor-del-cerro.test.mjs tests/3d-sin-fantasmas.test.mjs`: 26/26 pass, including the new «unmount frees the GPU…» test.
+  - `node scripts/check-ascensor.mjs`: 615/615.
+  - `npx eslint app/el-ascensor-del-cerro`: 0 problems.
+  - `npx tsc --noEmit -p .`: the 3 known errors outside scope, none in scope.
+  - Not re-run, cited from Sofia's addendum: draw calls, mid-ride max 103 against ≤ 120, and the browser smoke, 65/65.
+
+**B1: CLOSED.**
+- `cerro3d.ts` `dispose()` frees `signTexture` and `muralMap`, every group in `hostBakes` (then clears the map), and the rider when he is not in a cabin.
+- `World3D.tsx` cleanup calls `cerro.dispose()` and disposes every `isTexture` value on every material before `material.dispose()`. It then calls `renderer.dispose()` and `renderer.forceContextLoss()`.
+- `forceContextLoss()` fires `webglcontextlost`, but that listener is removed earlier in the same cleanup, so `onFail` cannot run on unmount (VERIFIED by ordering).
+- The attached bake and shared people3d caches can be disposed twice. That is harmless in three.js, and NB3 already covers why.
+- The regression test is source-level (string matches), not a GPU-memory measurement. That is acceptable for this item.
+
+**B2: CLOSED.**
+- `setRider(rail)` (`cerro3d.ts`) puts a people3d don Lorenzo, with his host look, into the cabin that carries the player. `startRide` calls it for funicular links and `finishRide` clears it, so every exit path (end, skip, pause, travel, reduced-motion cut) removes him.
+- While he rides, `visibleHosts(..., riding)` hides his station figure, unless the estación circle itself is open, which cannot happen during a ride. He is also removed from the collision bodies, so he never appears twice.
+- `ride-lorenzo-in-cabin.png` shows him in the red cabin next to the mascot.
+- The catalog, `RIDE_TEXT` and the teacher-list copy are now true as written.
+
+**NB4: done.** The teacher list adds: «El ascensor sigue cerrado por reparación: la cabina de prueba de don Lorenzo solo sirve para recorrer el cerro en clase, no significa que ya funcione.» The Spanish is correct and the tone is neutral.
+
+**NB6: done.** `?debug` requires `process.env.NODE_ENV !== 'production'`. The check is guarded by try/catch, so it fails closed: debug stays off.
+
+**New observations (non-blocking):**
+- During a funicular ride the live rider costs about 30 draw calls in low mode, giving the reported mid-ride maximum of 103. This should be confirmed in the G5(b) real-device run.
+- NB1, NB2, NB3, NB5 and NB7 remain as recorded above. None of them blocks.
+
+**Still open outside code review:**
+- §9.2: nobody has listened to the 6 clips, which blocks release (see the LQG file).
+- G5(b): not done, which blocks `featured`.
+
+CODE REVIEW VERDICT (final): APPROVE
