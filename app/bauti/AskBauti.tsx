@@ -54,7 +54,7 @@ export default function AskBauti({ audience, fullAccess, identityChecked }: { au
       </footer>
     </section>}
     <button type="button" className="bauti-launcher" aria-expanded={open} aria-label={open ? t.close : t.open} onClick={() => { if (!open) track('open'); setOpen(!open); }}>
-      <img src="/bauti/avatar.webp" alt="" width="40" height="40" />
+      <img src="/bauti/bauti-cara.webp" alt="" width="40" height="40" />
       <span><b>{t.launcher}</b><small>{t.launcherHint}</small></span>
       <i aria-hidden="true" />
     </button>
