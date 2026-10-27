@@ -17,17 +17,18 @@ Entry format:
 
 ## Pending verification
 
+_None._
+
+## Published
+
 ## 2026-10-27 — 72 retired /resources URLs 308-redirect to their lesson page (SEO/page)
 - URL(s): 72 old `https://spanishcue.com/resources/...` slugs listed in `app/resource-legacy-slugs.ts`. Example: `/resources/spanish-grammar-lesson-a1-a2-ser-estar-y-hay-describir-personas-y-lugares` → `/resources/spanish-grammar-lesson-a1-ser-estar-y-hay-describir-personas-y-lugares`.
 - Level(s) / objectives: n/a. This is technical SEO: these URLs had been listed in the sitemap and were returning 404 or duplicate pages.
-- PR / merged SHA / production deploy run: PR #284. Merge and deploy are pending.
-- Production smoke evidence: pending. The post-merge Production Smoke Monitor must show `status: 308` for the example path.
+- PR / merged SHA / production deploy run: PR #284 → `c8975523e8450755bf0f5c39eb5c2d4c71a46f7b`; CI + Auto Merge 40438086546, Deploy Staging 40439807119, Deploy Production 40440088211, all successful (Worker version b3abc59f-a34e-4394-a2d1-9f9f201deac0).
+- Production smoke evidence: the production workflow's `scripts/production-smoke.mjs` run against https://spanishcue.com (job 121978101510, 2026-10-27T02:46Z) returned `"passed": true`. The example path returned `status: 308`, and the script asserted a same-origin `Location` pointing at the current lesson page. The other 71 slugs are covered by the Worker-rendered test and the guard test, not by production smoke.
 - Concept file / LQG review file: n/a (no lesson content).
 - Built by / reviewed by: facilitator (audit by Alejandro) / Sofia (APPROVE).
 - Known limitations: `?level=` is not carried through the redirect. Retired id 222 stays a 404.
-
-
-## Published
 
 ## 2026-10-21 — LES-001 «La feria de Villaluz», A2 (new world)
 - URL(s):
