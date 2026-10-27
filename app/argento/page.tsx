@@ -60,7 +60,7 @@ export default function Argento(){
   return <TranslationContext.Provider value={translations}><main className="argento-shell" id="main-content">
     <a className="skip-link" href="#mundos">Saltar al contenido</a>
     <header className="argento-hero">
-      <nav><Link href="/" className="argento-brand"><img src="/brand/mascot/portrait.webp" alt=""/><span><b>SPANISHCUE</b><small>A1 · VOCABULARIO</small></span></Link><Link href="/" className="argento-library">← Biblioteca</Link></nav>
+      <nav><Link href="/" className="argento-brand"><img src="/brand/spanishcue-logo.png" alt=""/><span><b>SPANISHCUE</b><small>A1 · VOCABULARIO</small></span></Link><Link href="/" className="argento-library">← Biblioteca</Link></nav>
       <div className="argento-hero-copy"><span>🇦🇷 ESPAÑOL ARGENTINO</span><h1>ARGENTO</h1><p>Habla español desde el primer día.{translations&&<small>Speak Spanish from Day One.</small>}</p><blockquote>Tu trabajo no es ser perfecto. Tu trabajo es comunicar.{translations&&<small>Your job is not to be perfect. Your job is to communicate.</small>}</blockquote><a href="#mundos">EMPEZAR ↓</a></div>
     </header>
 

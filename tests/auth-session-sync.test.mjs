@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
 import test from "node:test";
 import { build } from "esbuild";
 
@@ -121,4 +122,34 @@ test("a page whose server never resolved the session refreshes the cookie withou
     },
   );
   assert.equal(posts, 1);
+});
+
+test("an iPhone owner restored on the PRO landing gets redirected back to the protected lesson", async () => {
+  const methods = [];
+  let reloads = 0;
+  await syncFirebaseSession({ getIdToken: async () => "owner-token" }, {
+    serverSignedIn: false,
+    identityChecked: true,
+    pathname: "/acceso",
+    initialEvent: true,
+    fetcher: async (_url, options) => {
+      methods.push(options.method);
+      return Response.json(options.method === "GET" ? { authenticated: true } : {});
+    },
+    reload: () => { reloads += 1; },
+    signOut: async () => assert.fail("owner must not be signed out after a successful restoration"),
+  });
+  assert.deepEqual(methods, ["POST", "GET"]);
+  assert.equal(reloads, 1, "the paywall must rerender after server cookie restoration");
+});
+
+test("iOS Safari resumes revalidate the server session without modifying the access gate", () => {
+  const component = readFileSync("app/AuthSessionSync.tsx", "utf8");
+  assert.match(component, /addEventListener\("pageshow", onPageShow\)/);
+  assert.match(component, /event\.persisted/);
+  assert.match(component, /addEventListener\("visibilitychange", onVisibilityChange\)/);
+  assert.match(component, /firebaseAuth\.currentUser/);
+  assert.match(component, /removeEventListener\("visibilitychange", onVisibilityChange\)/);
+  assert.match(component, /removeEventListener\("pageshow", onPageShow\)/);
+  assert.match(component, /if \(!user \|\| disposed \|\| syncing\) return;/);
 });

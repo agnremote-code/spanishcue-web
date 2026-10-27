@@ -1,6 +1,7 @@
 import { lessons, type Category, type Lesson } from "./lesson-catalog";
 import { catalogLessons, conversationFamilyByLessonId } from "./conversation-families/catalog";
 import { GAMES } from "./escucha-3d/games.mjs";
+import { legacyResourceSlugToLessonId } from "./resource-legacy-slugs";
 
 const categorySeo: Record<Category, { prefix: string; label: string; pluralLabel: string; shortLabel: string }> = {
   "Gramática": {
@@ -72,19 +73,6 @@ const resourceSlugById = new Map(
 const lessonBySlug = new Map(
   lessons.map((lesson) => [resourceSlugById.get(lesson.id)!, lesson]),
 );
-// Keep the original UK resource URL valid after its selectable levels change.
-lessonBySlug.set("spanish-conversation-activity-a2-b1-reino-unido-en-relieve", lessons.find(lesson => lesson.id === 32)!);
-// Same for the United States flagship, now a 3D world with more levels.
-lessonBySlug.set("spanish-conversation-activity-a2-b1-estados-unidos", lessons.find(lesson => lesson.id === 36)!);
-lessonBySlug.set("spanish-conversation-activity-b1-mexico", lessons.find(lesson => lesson.id === 210)!);
-// Irlanda, Australia and Suiza also became 3D worlds with more levels.
-lessonBySlug.set("spanish-conversation-activity-b1-irlanda-en-relieve", lessons.find(lesson => lesson.id === 33)!);
-lessonBySlug.set("spanish-conversation-activity-a2-b1-australia-en-movimiento", lessons.find(lesson => lesson.id === 30)!);
-lessonBySlug.set("spanish-conversation-activity-b1-suiza-en-relieve", lessons.find(lesson => lesson.id === 29)!);
-// Israel and Indonesia too.
-lessonBySlug.set("spanish-conversation-activity-b1-israel-en-capas", lessons.find(lesson => lesson.id === 25)!);
-lessonBySlug.set("spanish-conversation-activity-a1-indonesia-fantastica", lessons.find(lesson => lesson.id === 24)!);
-
 function cleanText(value: string): string {
   return value.replace(/\s+/g, " ").trim();
 }
@@ -103,6 +91,13 @@ export function resourceSlugForLesson(lesson: Lesson): string {
 
 export function resourcePathForLesson(lesson: Lesson): string {
   return `/resources/${resourceSlugForLesson(lesson)}`;
+}
+
+/** Current resource path for a retired slug (see resource-legacy-slugs.ts). */
+export function legacyResourceRedirectPath(slug: string): string | undefined {
+  const id = legacyResourceSlugToLessonId.get(slug);
+  const lesson = id === undefined ? undefined : lessons.find((item) => item.id === id);
+  return lesson ? resourcePathForLesson(lesson) : undefined;
 }
 
 export function lessonForResourceSlug(slug: string): Lesson | undefined {

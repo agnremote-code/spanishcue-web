@@ -128,7 +128,7 @@ export default function AdvancedConversation(){
   const chooseTopic=(index:number)=>{setActive(index);setSelected(null);window.scrollTo({top:0,behavior:"smooth"})};
   return <main className="advanced-shell">
     <div className="advanced-frame">
-      <header className="advanced-header"><Link href="/" className="advanced-brand"><img src="/brand/mascot/portrait.webp" alt=""/><span><b>SPANISHCUE</b><small>C1 · CONVERSACIÓN AVANZADA</small></span></Link><Link href="/" className="back-library">← Biblioteca</Link></header>
+      <header className="advanced-header"><Link href="/" className="advanced-brand"><img src="/brand/spanishcue-logo.png" alt=""/><span><b>SPANISHCUE</b><small>C1 · CONVERSACIÓN AVANZADA</small></span></Link><Link href="/" className="back-library">← Biblioteca</Link></header>
       <section className="advanced-intro"><div><i/><p>CONVERSACIÓN · NIVEL C1</p><h1>Preguntas que dan ganas de hablar.</h1></div><p>Elige una categoría. Elige una pregunta. Responde con libertad. Sigue la conversación.</p></section>
       <nav className="advanced-nav" aria-label="Categorías de conversación">{topics.map((item,index)=><button key={item.title} className={index===active?"active":""} aria-pressed={index===active} onClick={()=>chooseTopic(index)}>{item.emoji} {item.title}</button>)}</nav>
       <section className="advanced-panel" aria-label={topic.label} key={topic.title}>

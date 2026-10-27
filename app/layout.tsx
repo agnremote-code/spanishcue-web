@@ -69,8 +69,9 @@ export async function generateMetadata(): Promise<Metadata> {
       images: [socialPreviewUrl],
     },
     icons: {
-      icon: "/favicon.svg",
+      icon: [{ url: "/favicon.svg", type: "image/svg+xml" }, { url: "/icon-192.png", sizes: "192x192", type: "image/png" }],
       shortcut: "/favicon.svg",
+      apple: "/apple-touch-icon.png",
     },
     manifest: "/manifest.webmanifest",
     robots: isSearchPrivatePath(pathname)
