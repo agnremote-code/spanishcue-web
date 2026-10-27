@@ -77,7 +77,7 @@ All five run on `claude-opus-5-5`, follow [ROUTINES.md](ROUTINES.md), and each i
 - Session 0 (lesson test) took 55 messages, about 15 of them caused by crossed messages over circle 6. That led to the lock rule.
 
 ## Current work and next action
-- **2026-10-27 (Tuesday SEO routine): PR #284** (branch `claude/tuesday-seo-20261027`, base main `25b9253`). Subscription usage: **UNKNOWN**.
+- **2026-10-27 (Tuesday SEO routine): PR #284, DEPLOYED and verified in production** (branch `claude/tuesday-seo-20261027`, base main `25b9253`). Subscription usage: **UNKNOWN**.
   - **Board convened as subagents of the facilitator, proportionately:** Alejandro led a read-only technical SEO audit, and Sofia did the independent code review (**APPROVE**, no blockers). Martin was not needed. They did not message each other. The messages are verbatim in [transcripts/2026-10-27-tuesday-seo.md](transcripts/2026-10-27-tuesday-seo.md).
   - **Search Console: still BLOCKED (R0).** Re-checked at the start of the run: the `searchconsole` query for `sc-domain:spanishcue.com` returned the Windsor placeholder row ("reads are paused … 6 accounts connected … Free plan includes 1"). No rankings or traffic are reported.
   - **Finding (VERIFIED from main history, cross-checked by Sofia over 75 commits):**
@@ -97,8 +97,8 @@ All five run on `claude-opus-5-5`, follow [ROUTINES.md](ROUTINES.md), and each i
     - Changed-URL smoke from this sandbox is impossible (the egress proxy blocks spanishcue.com). The evidence must come from the post-merge Production Smoke Monitor results, which show `status: 308` for the legacy path.
     - lastmod is missing on 368/432 sitemap URLs. Low priority: it needs real per-lesson dates, not build dates.
     - Sofia's non-blocking notes: the redirect drops `?level=`, and the page-source regex test is brittle.
+  - **Release (VERIFIED):** #284 merged as `c8975523`. Runs: CI + Auto Merge 40438086546, staging 40439807119 and production 40440088211, all successful. The production smoke on spanishcue.com passed with the legacy path at **308** and its redirect target asserted (job 121978101510). PUBLISHED.md was updated by the records PR from `claude/tuesday-seo-records-20261027`.
   - **Next action:**
-    - Verify #284 in production: the Production Smoke Monitor result lists `/resources/spanish-grammar-lesson-a1-a2-ser-estar-y-hay-describir-personas-y-lugares` with `status: 308`. Then move the PUBLISHED.md entry to Published.
     - Once R0 is fixed, check Search Console for the "Not found" count and for impressions returning to the redirected URLs.
     - COMP-001 pass 2 is still open (draft #225).
 - **2026-10-23 (Friday 3D + assessment routine): PR (this branch `claude/friday-assessment-20261023`, base main `373e8b33`).** Subscription usage: **UNKNOWN**.
