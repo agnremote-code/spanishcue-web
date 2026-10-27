@@ -496,3 +496,8 @@ body::before{
 @media print{
   .sc-hero,.sc-global,.sc-site-footer{display:none!important}
 }
+/* Official SC logo (PNG) wherever the brand mark appears: never crop or tint it. */
+.sc-brand-system .sc-monogram{object-fit:contain}
+.sc-brand-system.full .sc-monogram{width:52px;height:52px}
+@media(max-width:560px){.sc-brand-system.full .sc-monogram{width:44px;height:44px}}
+img[src="/brand/spanishcue-logo.png"]{object-fit:contain!important;object-position:center!important;border-radius:0!important;background:transparent!important}

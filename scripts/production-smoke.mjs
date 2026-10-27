@@ -41,6 +41,17 @@ export async function runSmoke(origin, fetcher = fetch) {
     assert.ok(html.includes("Inside the 3D world"), `${resource} must describe the 3D world`);
     assert.ok(html.includes('"BreadcrumbList"'), `${resource} must carry its breadcrumb`);
   }
+  // A /resources slug that search engines already saw keeps working: retired
+  // slugs 308 to the lesson's current page (app/resource-legacy-slugs.ts).
+  // Production may still 404 it until the release carrying the redirect lands;
+  // staging always requires the redirect.
+  const legacyResource = "/resources/spanish-grammar-lesson-a1-a2-ser-estar-y-hay-describir-personas-y-lugares";
+  const legacy = await check(legacyResource, origin === "https://spanishcue.com" ? [308, 404] : 308);
+  if (legacy.status === 308) {
+    const location = new URL(legacy.headers.get("location") || "", origin);
+    assert.equal(location.origin, origin, `${legacyResource}: foreign redirect`);
+    assert.equal(location.pathname, "/resources/spanish-grammar-lesson-a1-ser-estar-y-hay-describir-personas-y-lugares", `${legacyResource}: wrong redirect target`);
+  }
   const students = await check("/api/students", 401);
   assert.match(students.headers.get("cache-control") || "", /no-store/i);
   const headers = { origin, "content-type": "application/json" };

@@ -1,6 +1,6 @@
 # Board STATUS: the single source of truth for the next run
 
-_Last updated: 2026-10-23 by the Friday 3D + assessment routine (scheduled cloud run; facilitator plus Sofia, Martin and Alejandro as subagents, see "Current work")._
+_Last updated: 2026-10-27 by the Tuesday SEO routine (scheduled cloud run; facilitator plus Alejandro and Sofia as subagents, see "Current work")._
 
 ## Owner decisions in force
 | Date | Decision |
@@ -52,7 +52,7 @@ Parallel streams: **3D = Sofia**, **technical SEO = Alejandro**, **QA/integratio
 | — | **COMP-001** ProfeDeELE.com benchmark: their offer, formats, pricing, the teacher queries they win, and the gaps SpanishCue can win with evidence. Feeds concept selection and SEO-002. | Alejandro (lead) + Martin (pedagogy) | next Tuesday SEO slot, or earlier if capacity allows |
 
 ## Owner data requests (open)
-- **R0 (2026-10-20, blocking SEO measurement; STILL OPEN 2026-10-23, placeholder row again):** Windsor.ai paused all reads: "reads are paused because you have 6 accounts connected and your Free plan includes 1 account". Every `searchconsole` query returns that placeholder row with 0 values. Fix: disconnect the 5 extra accounts at https://onboard.windsor.ai/app/ (keep `sc-domain:spanishcue.com`) or upgrade. The board may not buy paid plans. The owner was notified by push on 2026-10-20. Until this is fixed there is no fresh Search Console evidence; the last real numbers are from 2026-10-17 (PR #224 body).
+- **R0 (2026-10-20, blocking SEO measurement; STILL OPEN 2026-10-27, placeholder row again):** Windsor.ai paused all reads: "reads are paused because you have 6 accounts connected and your Free plan includes 1 account". Every `searchconsole` query returns that placeholder row with 0 values. Fix: disconnect the 5 extra accounts at https://onboard.windsor.ai/app/ (keep `sc-domain:spanishcue.com`) or upgrade. The board may not buy paid plans. The owner was notified by push on 2026-10-20. Until this is fixed there is no fresh Search Console evidence; the last real numbers are from 2026-10-17 (PR #224 body).
 - **R1:** Search Console Page-indexing report, Core Web Vitals report and per-query impressions. The Windsor connector exposes only search analytics and sitemaps.
 - **R2:** GA Admin: which property `G-6C7DY2C5LN` reports to.
 - **R3:** a weekly aggregate-only D1 query (new accounts, first payments, opened/completed per 3D lesson). Agents never query production D1.
@@ -77,6 +77,30 @@ All five run on `claude-opus-5-5`, follow [ROUTINES.md](ROUTINES.md), and each i
 - Session 0 (lesson test) took 55 messages, about 15 of them caused by crossed messages over circle 6. That led to the lock rule.
 
 ## Current work and next action
+- **2026-10-27 (Tuesday SEO routine): PR #284, DEPLOYED and verified in production** (branch `claude/tuesday-seo-20261027`, base main `25b9253`). Subscription usage: **UNKNOWN**.
+  - **Board convened as subagents of the facilitator, proportionately:** Alejandro led a read-only technical SEO audit, and Sofia did the independent code review (**APPROVE**, no blockers). Martin was not needed. They did not message each other. The messages are verbatim in [transcripts/2026-10-27-tuesday-seo.md](transcripts/2026-10-27-tuesday-seo.md).
+  - **Search Console: still BLOCKED (R0).** Re-checked at the start of the run: the `searchconsole` query for `sc-domain:spanishcue.com` returned the Windsor placeholder row ("reads are paused … 6 accounts connected … Free plan includes 1"). No rankings or traffic are reported.
+  - **Finding (VERIFIED from main history, cross-checked by Sofia over 75 commits):**
+    - **65 `/resources/*` URLs the sitemap once listed returned 404**, because the slug follows the level label and title.
+      - 6 broke on 2026-10-23 (032fba09, "one level per grammar class") and 51 with the 10-07 grammar-course rename.
+      - 64 of them still have a lesson. Id 222 (Puerto Neón) was removed, so its URL stays 404.
+    - Another 8 old aliases served duplicate 200 pages.
+  - **Fix (PR #284):**
+    - `app/resource-legacy-slugs.ts` 308-redirects those 72 slugs to the lesson's current page.
+    - `tests/fixtures/published-resource-slugs.json` lists all 389 slugs ever published. The `tests/resource-legacy-slugs.test.mjs` guard fails CI if a future rename drops a URL.
+    - `scripts/production-smoke.mjs` now asserts a legacy slug returns 308 to the right target. On spanishcue.com it accepts 404 until the release lands; staging requires the 308.
+  - **Checks at `f36c721b` (code), smoke test re-run at `ec16d5fa`:**
+    - `npm test`: exit 0, 1,350 pass, 0 fail. This includes the Worker-rendered test, which proves the built Worker returns a 308 with the correct `Location` from `…-b1-mexico`.
+    - lint: clean on the changed files. `tsc`: only the 3 errors already on main. `validate:artifact`: OK. `git diff --check`: clean.
+    - `production-smoke.test`: 11/11.
+  - **Not done / limits:**
+    - Changed-URL smoke from this sandbox is impossible (the egress proxy blocks spanishcue.com). The evidence must come from the post-merge Production Smoke Monitor results, which show `status: 308` for the legacy path.
+    - lastmod is missing on 368/432 sitemap URLs. Low priority: it needs real per-lesson dates, not build dates.
+    - Sofia's non-blocking notes: the redirect drops `?level=`, and the page-source regex test is brittle.
+  - **Release (VERIFIED):** #284 merged as `c8975523`. Runs: CI + Auto Merge 40438086546, staging 40439807119 and production 40440088211, all successful. The production smoke on spanishcue.com passed with the legacy path at **308** and its redirect target asserted (job 121978101510). PUBLISHED.md was updated by the records PR from `claude/tuesday-seo-records-20261027`.
+  - **Next action:**
+    - Once R0 is fixed, check Search Console for the "Not found" count and for impressions returning to the redirected URLs.
+    - COMP-001 pass 2 is still open (draft #225).
 - **2026-10-23 (Friday 3D + assessment routine): PR (this branch `claude/friday-assessment-20261023`, base main `373e8b33`).** Subscription usage: **UNKNOWN**.
   - **Board convened as subagents of the facilitator:** Sofia and Martin wrote proposals in parallel, Alejandro scored/selected and wrote the assessment. They did not message each other. Verbatim: [transcripts/2026-10-23-friday-concepts-assessment.md](transcripts/2026-10-23-friday-concepts-assessment.md).
   - **3D unit: NONE shipped this run.** No ready 3D item existed and rank 2 turned out to be a duplicate, so the run did concept pipeline steps 1–3. Selected: **«El ascensor del cerro», B2, Valparaíso** ([concept file](concepts/2026-10-23-valparaiso-ascensor-del-cerro.md)). Deferred: Eje Cafetero C1 (needs a kit proximity-audio feature first), El Dorado B1 (fallback).
