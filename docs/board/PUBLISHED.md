@@ -17,7 +17,15 @@ Entry format:
 
 ## Pending verification
 
-_None._
+## 2026-10-27 — 72 retired /resources URLs 308-redirect to their lesson page (SEO/page)
+- URL(s): 72 old `https://spanishcue.com/resources/...` slugs listed in `app/resource-legacy-slugs.ts`. Example: `/resources/spanish-grammar-lesson-a1-a2-ser-estar-y-hay-describir-personas-y-lugares` → `/resources/spanish-grammar-lesson-a1-ser-estar-y-hay-describir-personas-y-lugares`.
+- Level(s) / objectives: n/a. This is technical SEO: these URLs had been listed in the sitemap and were returning 404 or duplicate pages.
+- PR / merged SHA / production deploy run: PR #284. Merge and deploy are pending.
+- Production smoke evidence: pending. The post-merge Production Smoke Monitor must show `status: 308` for the example path.
+- Concept file / LQG review file: n/a (no lesson content).
+- Built by / reviewed by: facilitator (audit by Alejandro) / Sofia (APPROVE).
+- Known limitations: `?level=` is not carried through the redirect. Retired id 222 stays a 404.
+
 
 ## Published
 
