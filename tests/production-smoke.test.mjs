@@ -6,6 +6,7 @@ const resourcePages = {
   '/resources/spanish-conversation-activity-a0-c2-hospital-san-casi-vivo': '3D Spanish Conversation Activity A0–C2: Hospital San Casi Vivo',
   '/resources/spanish-conversation-activity-a2-la-feria-de-villaluz': '3D Spanish Conversation Activity A2: La feria de Villaluz',
 };
+const legacyResource = '/resources/spanish-grammar-lesson-a1-a2-ser-estar-y-hay-describir-personas-y-lugares';
 function fixture(overrides = {}) {
   return async (url, options) => {
     const path = new URL(url).pathname;
@@ -24,6 +25,7 @@ function fixture(overrides = {}) {
       if (options.headers?.origin !== 'https://spanishcue.com') return Response.json({ error: 'origin' }, { status: 403 });
       return Response.json({ error: 'invalid' }, { status: 400 });
     }
+    if (path === legacyResource) return new Response(null, { status: 308, headers: { location: '/resources/spanish-grammar-lesson-a1-ser-estar-y-hay-describir-personas-y-lugares' } });
     if (resourcePages[path]) return new Response(`<html><title>${resourcePages[path]} | SPANISHCUE</title><h2>Inside the 3D world</h2><script type="application/ld+json">{"@type":"BreadcrumbList"}</script></html>`);
     if (path.startsWith('/does-not-exist')) return new Response('404', { status: 404 });
     if (path === '/la-fabrica-de-los-nombres') return new Response('<html>La Fábrica de los Nombres</html>');
@@ -114,4 +116,13 @@ test('released PRO 3D worlds stay private while their teacher pages stay public'
     ['/resources/spanish-conversation-activity-a2-la-feria-de-villaluz', () => new Response('<html><title>Spanish Conversation Activity A2: La feria de Villaluz | SPANISHCUE</title><h2>Inside the 3D world</h2>"BreadcrumbList"</html>'), /must carry its 3D title/],
     ['/resources/spanish-conversation-activity-a0-c2-hospital-san-casi-vivo', () => new Response('404', { status: 404 }), /expected 200, got 404/],
   ]) await assert.rejects(runSmoke('https://spanishcue.com', fixture({ [path]: response })), message, path);
+});
+
+test('a retired /resources slug must 308 to the current lesson page (404 tolerated on production until released)', async () => {
+  assert.ok((await runSmoke('https://spanishcue.com', fixture())).some(r => r.path === legacyResource && r.status === 308));
+  const notYet = fixture({ [legacyResource]: () => new Response('404', { status: 404 }) });
+  await runSmoke('https://spanishcue.com', notYet);
+  await assert.rejects(runSmoke('https://spanishcue-staging.agnremote.workers.dev', notYet), /ser-estar-y-hay-describir-personas-y-lugares: expected 308, got 404/);
+  const wrong = fixture({ [legacyResource]: () => new Response(null, { status: 308, headers: { location: '/resources' } }) });
+  await assert.rejects(runSmoke('https://spanishcue.com', wrong), /wrong redirect target/);
 });
