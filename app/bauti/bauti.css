@@ -1,0 +1,35 @@
+.bauti{position:fixed;left:16px;bottom:16px;z-index:70;font-family:Inter,Arial,Helvetica,sans-serif;display:flex;flex-direction:column;align-items:flex-start;gap:10px}
+.bauti *{box-sizing:border-box}
+.bauti-launcher{display:flex;align-items:center;gap:10px;padding:5px 14px 5px 5px;border-radius:999px;border:1px solid #ffffff2e;background:linear-gradient(135deg,#0b2a5c,#075de7);color:#fff;box-shadow:0 10px 26px #06204a3d;cursor:pointer;position:relative;transition:transform .18s,box-shadow .18s;text-align:left}
+.bauti-launcher:hover{transform:translateY(-2px);box-shadow:0 14px 32px #06204a52}
+.bauti-launcher img{width:40px;height:40px;border-radius:50%;object-fit:cover;background:#fff;border:2px solid #fff}
+.bauti-launcher span{display:flex;flex-direction:column;line-height:1.15}
+.bauti-launcher b{font-size:13px;letter-spacing:-.1px}
+.bauti-launcher small{font-size:10px;color:#cfe0ff}
+.bauti-launcher i{position:absolute;left:36px;top:5px;width:10px;height:10px;border-radius:50%;background:#3ddc97;border:2px solid #0b2a5c}
+.bauti.is-open .bauti-launcher small{display:none}
+.bauti-panel{width:min(360px,calc(100vw - 32px));max-height:min(540px,calc(100vh - 100px));display:flex;flex-direction:column;background:#fff;color:#0b1f3f;border-radius:18px;box-shadow:0 26px 70px #06204a40;overflow:hidden;animation:bauti-in .2s ease-out}
+@keyframes bauti-in{from{opacity:0;transform:translateY(8px) scale(.98)}to{opacity:1;transform:none}}
+.bauti-panel header{position:relative;display:flex;align-items:flex-end;gap:12px;padding:14px 16px 0;min-height:96px;background:linear-gradient(135deg,#0b2a5c,#075de7);color:#fff;overflow:hidden}
+.bauti-panel header img{width:96px;height:auto;margin-bottom:-6px;flex-shrink:0}
+.bauti-panel header div{display:flex;flex-direction:column;padding-bottom:16px}
+.bauti-panel header b{font-size:20px;letter-spacing:-.4px}
+.bauti-panel header span{font-size:11px;color:#cfe0ff}
+.bauti-panel header button{position:absolute;top:8px;right:10px;background:#ffffff1f;border:0;color:#fff;width:30px;height:30px;border-radius:50%;font-size:18px;line-height:1;cursor:pointer}
+.bauti-body{padding:16px;overflow:auto;display:flex;flex-direction:column;gap:10px;background:#f6f9fd}
+.bauti-bubble{margin:0;padding:10px 13px;border-radius:14px 14px 14px 4px;background:#fff;border:1px solid #e3ebf5;font-size:13px;line-height:1.55;max-width:92%}
+.bauti-bubble.mine{align-self:flex-end;border-radius:14px 14px 4px 14px;background:#075de7;border-color:#075de7;color:#fff}
+.bauti-body ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.bauti-body li button{border:1px solid #c9d8ee;background:#fff;color:#0753c9;border-radius:999px;padding:8px 12px;font-size:12.5px;font-weight:700;cursor:pointer;text-align:left;transition:background .15s}
+.bauti-body li button:hover{background:#eaf2fe}
+.bauti-cta{align-self:flex-start;font-size:13px;font-weight:800;color:#0753c9;text-decoration:none}
+.bauti-back{align-self:flex-start;border:0;background:none;color:#516581;font-size:12px;padding:2px 0;cursor:pointer}
+.bauti-panel footer{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:12px 16px 14px;border-top:1px solid #e5edf6}
+.bauti-panel footer a{display:flex;justify-content:center;align-items:center;border-radius:10px;padding:10px 8px;font-size:12.5px;font-weight:800;text-decoration:none}
+.bauti-wa{background:#25d366;color:#fff}
+.bauti-main{background:#e8f1fd;color:#0753c9}
+.bauti-panel footer small{grid-column:1/-1;font-size:10px;color:#6b7c93;line-height:1.5}
+.bauti :focus-visible{outline:3px solid #52aaff;outline-offset:2px}
+@media(max-width:600px){.bauti{left:12px;bottom:12px}.bauti-launcher{padding:4px}.bauti-launcher span{display:none}.bauti-launcher i{left:34px}}
+@media(prefers-reduced-motion:reduce){.bauti-panel{animation:none}.bauti-launcher{transition:none}}
+@media print{.bauti{display:none}}

@@ -10,6 +10,8 @@ import TrackedLink from '../audience/TrackedLink';
 import { catalogLessons } from '../conversation-families/catalog';
 import { canonicalUrl } from '../seo';
 import DemoForm from './DemoForm';
+import WhatsAppFloat from './WhatsAppFloat';
+import { lessons } from '../lesson-catalog';
 import { demoStorageReady } from './demo-service';
 import { institutionsReady } from '../../db/institutions';
 import { publicContactEmail } from '../legal/operator';
@@ -34,6 +36,13 @@ export default async function Academias() {
   const panelReady = await institutionsReady(env.DB);
   const contactEmail = publicContactEmail(env);
   const lessonCount = catalogLessons.filter(lesson => !lesson.path?.startsWith('http')).length;
+  const grammarCount = lessons.filter(lesson => lesson.category === 'Gramática').length;
+  const worlds = [
+    { href: '/demo/noche-abierta', image: '/noche-abierta/preview.webp', title: 'Noche abierta', free: true, body: es ? 'Una ciudad de noche para conversar y escuchar. El centro es gratis.' : 'A city at night for speaking and listening. The centre is free.' },
+    { href: '/demo/hospital-san-casi-vivo', image: '/hospital-san-casi-vivo/cover.webp', title: 'Hospital San Casi Vivo', free: true, body: es ? 'Un hospital con humor negro, de principiante a C2. La recepción es gratis.' : 'A darkly funny hospital, from beginner to C2. The reception is free.' },
+    { href: '/el-reino-de-la-rosa-dormida', image: '/reino/cover.webp', title: 'El reino de la rosa dormida', free: false, body: es ? 'Una aventura de fantasía con misiones y hechizos para conversar.' : 'A fantasy adventure with quests and spells to talk about.' },
+    { href: '/madrid-infectada', image: '/madrid-infectada/cover.webp', title: 'Madrid infectada', free: false, body: es ? 'Una ciudad tomada por zombis: decide, negocia y sobrevive en español.' : 'A city overrun by zombies: decide, negotiate and survive in Spanish.' },
+  ];
   const benefits = es ? [
     ['Una base común para tu equipo', 'Cada profesor encuentra los materiales en la misma biblioteca, organizados por nivel y tema.'],
     ['Más tiempo para enseñar', 'Explicaciones, práctica y conversación listas para abrir en pantalla. Menos materiales que preparar desde cero.'],
@@ -87,7 +96,7 @@ export default async function Academias() {
         </div>
         <div className="academy-showcase" id="producto">
           <div className="academy-showcase-top"><span><i /> SPANISHCUE / {es ? 'UNA CLASE REAL' : 'A REAL LESSON'}</span><b>3D</b></div>
-          <video controls playsInline preload="none" poster="/brand/campaign/noche-demo-poster.webp" aria-label={es ? 'Vídeo del mundo 3D Noche abierta en SpanishCue' : 'Video of SpanishCue’s Noche abierta 3D world'}><source src="/brand/campaign/noche-demo.mp4" type="video/mp4" /></video>
+          <video autoPlay muted loop playsInline preload="auto" poster="/brand/campaign/noche-tour-poster.webp" aria-label={es ? 'Vídeo del mundo 3D Noche abierta en SpanishCue' : 'Video of SpanishCue’s Noche abierta 3D world'}><source src="/brand/campaign/noche-tour.webm" type="video/webm" /><source src="/brand/campaign/noche-tour.mp4" type="video/mp4" /></video>
           <div className="academy-showcase-bottom"><div><small>{es ? 'CONVERSACIÓN + ESCUCHA' : 'CONVERSATION + LISTENING'}</small><h2>Noche abierta</h2></div><Link href="/demo/noche-abierta" aria-label={es ? 'Abrir demo gratuita de Noche abierta' : 'Open the free Noche abierta demo'}>↗</Link></div>
           <p className="academy-video-note">{es ? 'Grabación del producto. Abre la demo para recorrer la ciudad.' : 'Product recording. Open the demo to explore the city.'}</p>
         </div>
@@ -107,6 +116,14 @@ export default async function Academias() {
         </div>
         <Link className="academy-text-link" href="/#library-results">{es ? 'Explorar toda la biblioteca' : 'Explore the full library'} →</Link>
       </div></section>
+      <section className="academy-worlds" aria-labelledby="academy-worlds-title"><div className="academy-wrap academy-section">
+        <div className="academy-section-heading"><p className="academy-eyebrow">{es ? 'MUNDOS 3D' : '3D WORLDS'}</p><h2 id="academy-worlds-title">{es ? <>Tus alumnos no miran la clase.<br /><em>Entran en ella.</em></> : <>Your students don’t just watch the lesson.<br /><em>They step into it.</em></>}</h2><p>{es ? 'Cada mundo tiene modo Conversación y modo Comprensión auditiva, con niveles escritos aparte. El profesor guía desde la pantalla compartida.' : 'Each world has a Conversation mode and a Listening mode, with separately written levels. The teacher guides from the shared screen.'}</p></div>
+        <div className="academy-world-grid">{worlds.map(world => <Link key={world.href} href={world.href} className="academy-world"><img src={world.image} alt="" width="640" height="360" loading="lazy" /><div><span className={world.free ? 'academy-tag free' : 'academy-tag'}>{world.free ? (es ? 'Prueba gratis' : 'Free to try') : 'PRO'}</span><h3>{world.title}</h3><p>{world.body}</p></div></Link>)}</div>
+      </div></section>
+      <section className="academy-section academy-wrap academy-grammar" aria-labelledby="academy-grammar-title">
+        <div className="academy-grammar-copy"><p className="academy-eyebrow">{es ? 'GRAMÁTICA DE PRINCIPIANTE A C2' : 'GRAMMAR FROM BEGINNER TO C2'}</p><h2 id="academy-grammar-title">{es ? <>{grammarCount} clases de gramática,<br /><em>una por nivel.</em></> : <>{grammarCount} grammar lessons,<br /><em>one per level.</em></>}</h2><p>{es ? 'Primero se entiende, después se practica, se escucha, se conversa y se escribe. Cada clase tiene un modo para dar con profesor y otro para que el alumno avance por su cuenta.' : 'First understand, then practise, listen, speak and write. Every lesson has a mode for teaching with a teacher and another for students to work on their own.'}</p><Link className="academy-text-link" href="/gramatica/clase-inicial">{es ? 'Abrir la Clase inicial gratis' : 'Open the free first lesson'} →</Link></div>
+        <div className="academy-grammar-cards" aria-hidden="true"><img src="/grammar-thumbnails/239.webp" alt="" width="640" height="360" loading="lazy" /><img src="/grammar-thumbnails/40.webp" alt="" width="640" height="360" loading="lazy" /></div>
+      </section>
       <section className="academy-section academy-wrap" aria-labelledby="academy-steps-title">
         <div className="academy-section-heading"><p className="academy-eyebrow">{es ? 'EMPEZAMOS CON TU EQUIPO' : 'WE START WITH YOUR TEAM'}</p><h2 id="academy-steps-title">{es ? 'Del primer vistazo a tu próxima clase.' : 'From the first look to your next lesson.'}</h2></div>
         <ol className="academy-steps">{steps.map(([title, body], i) => <li key={title}><span>0{i + 1}</span><h3>{title}</h3><p>{body}</p></li>)}</ol>
@@ -120,5 +137,6 @@ export default async function Academias() {
       <div className="academy-teacher-link academy-wrap"><span>{es ? '¿Enseñas por tu cuenta?' : 'Teaching independently?'}</span><Link href="/para-profesores">{es ? 'Descubre SpanishCue para profesores' : 'Discover SpanishCue for teachers'} →</Link></div>
     </main>
     <SpanishCueFooter />
+    <WhatsAppFloat es={es} />
   </div>;
 }
