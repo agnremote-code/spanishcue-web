@@ -1,11 +1,13 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useSyncExternalStore } from 'react';
 import { useI18n } from '../i18n/LocaleProvider';
 import { trackMarketingEvent } from '../marketing/analytics';
 import { bautiCopy, BAUTI_WHATSAPP, type BautiAudience, type BautiTopic } from './copy';
 
 const PRO_FLAG = 'sc-bauti-pro';
+const noSubscribe = () => () => {};
+const storedPro = () => { try { return sessionStorage.getItem(PRO_FLAG) === '1'; } catch { return false; } };
 
 /**
  * Bauti, SpanishCue's floating help for visitors without a subscription.
@@ -16,15 +18,14 @@ const PRO_FLAG = 'sc-bauti-pro';
 export default function AskBauti({ audience, fullAccess, identityChecked }: { audience: BautiAudience; fullAccess: boolean; identityChecked: boolean }) {
   const { locale } = useI18n();
   const t = bautiCopy[locale === 'en' ? 'en' : 'es'][audience];
-  const [hidden, setHidden] = useState(fullAccess);
+  const lastCheckedPro = useSyncExternalStore(noSubscribe, storedPro, () => false);
+  const hidden = fullAccess || (!identityChecked && lastCheckedPro);
   const [open, setOpen] = useState(false);
   const [topic, setTopic] = useState<BautiTopic | null>(null);
 
   useEffect(() => {
-    try {
-      if (identityChecked) sessionStorage.setItem(PRO_FLAG, fullAccess ? '1' : '0');
-      else if (sessionStorage.getItem(PRO_FLAG) === '1') setHidden(true);
-    } catch { /* storage blocked: rely on the server's answer */ }
+    if (!identityChecked) return;
+    try { sessionStorage.setItem(PRO_FLAG, fullAccess ? '1' : '0'); } catch { /* storage blocked: rely on the server's answer */ }
   }, [fullAccess, identityChecked]);
 
   if (hidden) return null;
