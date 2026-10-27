@@ -177,6 +177,7 @@ test('the teacher-resources hub, homepage and pricing page expose clean canonica
  const englishHome=await fetch(root,{headers:{cookie:'spanishcue_locale=en'}});assert.match(await englishHome.text(),/<title>Interactive Spanish Lessons for Teachers \(A1–C2\) \| SPANISHCUE<\/title>/);
  const pricing=await fetch(root+'/pricing',{headers:{cookie:'spanishcue_locale=en'}});const pricingHtml=await pricing.text();
  assert.match(pricingHtml,/rel="canonical" href="https:\/\/spanishcue\.com\/pricing"/i);assert.doesNotMatch(pricingHtml,/hreflang=/i);
- const resource=await fetch(root+'/resources/spanish-conversation-activity-b1-mexico');assert.equal(resource.status,200);
+ const retired=await fetch(root+'/resources/spanish-conversation-activity-b1-mexico',{redirect:'manual'});assert.equal(retired.status,308,'a retired resource slug permanently redirects');assert.equal(new URL(retired.headers.get('location'),root).pathname,'/resources/spanish-conversation-activity-a0-b1-mexico');await retired.arrayBuffer();
+ const resource=await fetch(root+'/resources/spanish-conversation-activity-a0-b1-mexico');assert.equal(resource.status,200);
  assert.match(await resource.text(),/href="\/spanish-conversation-activities\/b1"/);
 });
