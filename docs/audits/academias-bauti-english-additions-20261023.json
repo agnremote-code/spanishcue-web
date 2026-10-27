@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "authorization": "PENDING",
+  "authorization": "Owner request of 2026-10-23 in thread «Academias: landing y panel» (root cmsg_01Gr5R4j3t2Yet65UcmhcVhABMw3SmCoQCaX1DvxWNbQVF): richer /academias landing with a moving tour video, WhatsApp button and the Ask Bauti assistant with separate academy and teacher answers. Ale wrote «APRUEBO lo anterior» on 2026-10-23 16:35Z (cmsg_01Gr5R4j3t2Yet65UcmhcVhA2FYf299jveo7pHi9LbcqPS) and «apruebo» on 2026-10-27 15:59Z (cmsg_01Gr5R4j3t2Yet65UcmhcVhAMcd1aVz6YKacDw3vZPiiso) for this English copy. Approves only the exact English literals listed below.",
   "additions": [
     {
       "path": "app/academias/WhatsAppFloat.tsx",
