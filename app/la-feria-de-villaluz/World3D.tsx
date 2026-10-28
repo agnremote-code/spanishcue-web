@@ -375,6 +375,7 @@ export default function World3D(props: WorldProps) {
       canvasEl.removeEventListener('webglcontextlost', lost);
       fair.dispose();
       scene.traverse(o => {
+        (o as THREE.DirectionalLight).shadow?.dispose();
         const m = o as THREE.Mesh;
         if (m.geometry) m.geometry.dispose();
         const mat = m.material as THREE.Material | THREE.Material[] | undefined;
@@ -384,6 +385,8 @@ export default function World3D(props: WorldProps) {
           x.dispose();
         }
       });
+      // EffectComposer.dispose() frees its own targets, not its passes' (bloom mips).
+      for (const pass of composer?.passes ?? []) pass.dispose();
       composer?.dispose();
       renderer.dispose();
       renderer.forceContextLoss();

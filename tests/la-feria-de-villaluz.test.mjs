@@ -354,6 +354,8 @@ test('unmount frees the GPU: label textures, cached low-mode host bakes and the 
   assert.match(cleanup, /fair\.dispose\(\)/);
   assert.match(cleanup, /renderer\.forceContextLoss\(\)/);
   assert.match(cleanup, /isTexture[\s\S]*\.dispose\(\)/, 'texture slots of every material are disposed');
+  assert.match(cleanup, /shadow\?\.dispose\(\)/, 'shadow maps');
+  assert.match(cleanup, /composer\?\.passes[\s\S]*pass\.dispose\(\)/, 'bloom pass targets');
   assert.match(fair, /dispose: \(\) => void/);
   const dispose = fair.slice(fair.indexOf('function dispose()'));
   assert.match(dispose, /clearBusca\(\)/, 'the Busca label canvas textures');
