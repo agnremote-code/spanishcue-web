@@ -77,6 +77,7 @@ All five run on `claude-opus-5-5`, follow [ROUTINES.md](ROUTINES.md), and each i
 - Session 0 (lesson test) took 55 messages, about 15 of them caused by crossed messages over circle 6. That led to the lock rule.
 
 ## Current work and next action
+- **2026-10-28 (Wednesday 3D routine): IN PROGRESS** on branch `claude/board-wed-3d-20261028` (base main `eaf931a`). Monday's #282 is still held on R4 (no person has listened to the clips; agents cannot). This run's unit: a gated repair of the Feria unmount GPU leak (Feria QA note "dispose textures in World3D cleanup", the same defect as Ascensor code-review B1). Subscription usage: **UNKNOWN**.
 - **2026-10-27 (Tuesday SEO routine): PR #284, DEPLOYED and verified in production** (branch `claude/tuesday-seo-20261027`, base main `25b9253`). Subscription usage: **UNKNOWN**.
   - **Board convened as subagents of the facilitator, proportionately:** Alejandro led a read-only technical SEO audit, and Sofia did the independent code review (**APPROVE**, no blockers). Martin was not needed. They did not message each other. The messages are verbatim in [transcripts/2026-10-27-tuesday-seo.md](transcripts/2026-10-27-tuesday-seo.md).
   - **Search Console: still BLOCKED (R0).** Re-checked at the start of the run: the `searchconsole` query for `sc-domain:spanishcue.com` returned the Windsor placeholder row ("reads are paused … 6 accounts connected … Free plan includes 1"). No rankings or traffic are reported.
