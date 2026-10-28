@@ -91,7 +91,8 @@ export default function World3D(props: WorldProps) {
     try { fair = buildFair(scene, { low, shadows: !low }); hero = createHero(!low); }
     catch (error) {
       console.error(error);
-      renderer.dispose(); renderer.domElement.remove();
+      renderer.domElement.removeEventListener('webglcontextlost', lost);
+      renderer.dispose(); renderer.forceContextLoss(); renderer.domElement.remove();
       const t = window.setTimeout(() => live.current.onFail(), 0);
       return () => window.clearTimeout(t);
     }
@@ -373,14 +374,23 @@ export default function World3D(props: WorldProps) {
       canvasEl.removeEventListener('pointercancel', onUp);
       canvasEl.removeEventListener('wheel', onWheel);
       canvasEl.removeEventListener('webglcontextlost', lost);
+      fair.dispose();
       scene.traverse(o => {
+        (o as THREE.DirectionalLight).shadow?.dispose();
         const m = o as THREE.Mesh;
         if (m.geometry) m.geometry.dispose();
         const mat = m.material as THREE.Material | THREE.Material[] | undefined;
-        if (Array.isArray(mat)) mat.forEach(x => x.dispose()); else mat?.dispose();
+        for (const x of Array.isArray(mat) ? mat : mat ? [mat] : []) {
+          // Every texture slot (map, emissiveMap, …), then the material.
+          for (const value of Object.values(x)) if ((value as THREE.Texture | null)?.isTexture) (value as THREE.Texture).dispose();
+          x.dispose();
+        }
       });
+      // EffectComposer.dispose() frees its own targets, not its passes' (bloom mips).
+      for (const pass of composer?.passes ?? []) pass.dispose();
       composer?.dispose();
       renderer.dispose();
+      renderer.forceContextLoss();
       renderer.domElement.remove();
       api.current = null;
       fairRef.current = null;

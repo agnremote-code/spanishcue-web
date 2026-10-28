@@ -460,6 +460,25 @@ async function newGamePage(viewport, options = {}) {
     const get = HTMLCanvasElement.prototype.getContext;
     HTMLCanvasElement.prototype.getContext = function (type, ...rest) { return /webgl/.test(String(type)) ? null : get.call(this, type, ...rest); };
   });
+  if (options.gpuCount) await context.addInitScript(() => {
+    const gpu = { textures: 0, buffers: 0, lost: 0 };
+    window.__gpu = gpu;
+    for (const C of [window.WebGLRenderingContext, window.WebGL2RenderingContext]) {
+      if (!C) continue;
+      const p = C.prototype;
+      for (const [make, drop, key] of [['createTexture', 'deleteTexture', 'textures'], ['createBuffer', 'deleteBuffer', 'buffers']]) {
+        const m = p[make], d = p[drop];
+        p[make] = function (...a) { const r = m.apply(this, a); if (r) gpu[key]++; return r; };
+        p[drop] = function (x, ...a) { if (x) gpu[key]--; return d.call(this, x, ...a); };
+      }
+    }
+    const get = HTMLCanvasElement.prototype.getContext;
+    HTMLCanvasElement.prototype.getContext = function (type, ...rest) {
+      const ctx = get.call(this, type, ...rest);
+      if (ctx && /webgl/.test(String(type)) && !this.__gpuWatched) { this.__gpuWatched = true; this.addEventListener('webglcontextlost', () => { gpu.lost++; }); }
+      return ctx;
+    };
+  });
   const page = await context.newPage();
   page.setDefaultTimeout(30000);
   const label = options.label ?? `${viewport.width}`;
@@ -541,6 +560,35 @@ if (RUN.smoke) {
       }
       smoke(`${label} teacher list reaches every circle (${mode})`, reached.length === CIRCLES.length, { reached, unauthored: reached.filter(r => !r.authored).map(r => r.id) });
     }
+    await context.close();
+  }
+
+  // 1b. Unmount frees the GPU (Feria QA note; Ascensor code review B1). The
+  // WebGL calls are counted from inside the page: textures and buffers still
+  // alive, and the contexts lost, after the 3D world is switched off.
+  for (const viewport of [{ width: 390, height: 844 }, { width: 1280, height: 800 }]) {
+    const { context, page } = await newGamePage(viewport, { label: `unmount-${viewport.width}`, gpuCount: true });
+    await page.getByRole('button', { name: 'Entrar en la feria' }).click();
+    await page.locator('.fv-canvas canvas').waitFor({ timeout: 60000 });
+    await frames(page, 10);
+    // Two scene cards: in low mode each focus caches one host bake off-scene.
+    for (const c of CIRCLES.slice(0, 2)) {
+      if (!(await page.locator('.fv-list').count())) await page.getByRole('button', { name: 'Lista del profesor' }).click();
+      await page.locator('.fv-all').getByRole('button', { name: new RegExp(`^${c.n}\\. `) }).click();
+      await frames(page, 5);
+      await page.getByRole('button', { name: 'Volver', exact: true }).or(page.locator('.fv-card').getByRole('button', { name: /^(Seguir paseando|Volver a la feria)/ }).last()).first().click();
+      await frames(page, 5);
+    }
+    const before = await page.evaluate(() => ({ ...window.__gpu }));
+    await page.getByRole('button', { name: 'Sin movimiento', exact: true }).click();
+    await page.locator('.fv-canvas canvas').waitFor({ state: 'detached' });
+    await page.waitForTimeout(300);
+    const after = await page.evaluate(() => ({ ...window.__gpu }));
+    // What survives (5 textures on both the low and the full path, 2026-10-28)
+    // is consistent with three.js's own per-renderer placeholders; the forced
+    // context loss releases those too. On main before the fix: 7 → 7 and
+    // 22 → 20 textures, no context lost.
+    smoke(`${viewport.width} unmount frees the world's WebGL textures and buffers and loses the context`, after.lost >= 1 && before.textures > after.textures && after.textures <= 5 && after.buffers <= 5, { before, after });
     await context.close();
   }
 
