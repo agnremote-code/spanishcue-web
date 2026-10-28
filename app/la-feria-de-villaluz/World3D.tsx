@@ -91,7 +91,8 @@ export default function World3D(props: WorldProps) {
     try { fair = buildFair(scene, { low, shadows: !low }); hero = createHero(!low); }
     catch (error) {
       console.error(error);
-      renderer.dispose(); renderer.domElement.remove();
+      renderer.domElement.removeEventListener('webglcontextlost', lost);
+      renderer.dispose(); renderer.forceContextLoss(); renderer.domElement.remove();
       const t = window.setTimeout(() => live.current.onFail(), 0);
       return () => window.clearTimeout(t);
     }

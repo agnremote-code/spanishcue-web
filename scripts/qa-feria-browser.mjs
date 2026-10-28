@@ -588,7 +588,7 @@ if (RUN.smoke) {
     // is consistent with three.js's own per-renderer placeholders; the forced
     // context loss releases those too. On main before the fix: 7 → 7 and
     // 22 → 20 textures, no context lost.
-    smoke(`${viewport.width} unmount frees the world's WebGL textures and buffers and loses the context`, after.lost >= 1 && after.textures <= 5 && after.buffers <= 5, { before, after });
+    smoke(`${viewport.width} unmount frees the world's WebGL textures and buffers and loses the context`, after.lost >= 1 && before.textures > after.textures && after.textures <= 5 && after.buffers <= 5, { before, after });
     await context.close();
   }
 
