@@ -17,7 +17,14 @@ Entry format:
 
 ## Pending verification
 
-_None._
+## 2026-10-28 — «La feria de Villaluz»: the 3D world frees the GPU on unmount (repair)
+- URL(s): https://spanishcue.com/la-feria-de-villaluz (PRO; anonymous users → /acceso).
+- Level(s) / objectives: A2, unchanged. No lesson content changed.
+- PR / merged SHA / production deploy run: PR on `claude/board-wed-3d-20261028`, **not merged yet**.
+- Production smoke evidence: pending.
+- Concept file / LQG review file: [docs/audits/la-feria-de-villaluz-repair-gpu-20261028.md](../audits/la-feria-de-villaluz-repair-gpu-20261028.md).
+- Built by / reviewed by: facilitator / Alejandro (code review APPROVE, delta APPROVE).
+- Known limitations: the fix is client-side, so production smoke can show only that the release deployed and the world still gates and serves. The before/after evidence comes from the SwiftShader browser check, not from a real device.
 
 ## Published
 

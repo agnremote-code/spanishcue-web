@@ -1,6 +1,6 @@
 # Board STATUS: the single source of truth for the next run
 
-_Last updated: 2026-10-27 by the Tuesday SEO routine (scheduled cloud run; facilitator plus Alejandro and Sofia as subagents, see "Current work")._
+_Last updated: 2026-10-28 by the Wednesday 3D routine (scheduled cloud run; facilitator plus Alejandro as a subagent reviewer, see "Current work")._
 
 ## Owner decisions in force
 | Date | Decision |
@@ -77,7 +77,20 @@ All five run on `claude-opus-5-5`, follow [ROUTINES.md](ROUTINES.md), and each i
 - Session 0 (lesson test) took 55 messages, about 15 of them caused by crossed messages over circle 6. That led to the lock rule.
 
 ## Current work and next action
-- **2026-10-28 (Wednesday 3D routine): IN PROGRESS** on branch `claude/board-wed-3d-20261028` (base main `eaf931a`). Monday's #282 is still held on R4 (no person has listened to the clips; agents cannot). This run's unit: a gated repair of the Feria unmount GPU leak (Feria QA note "dispose textures in World3D cleanup", the same defect as Ascensor code-review B1). Subscription usage: **UNKNOWN**.
+- **2026-10-28 (Wednesday 3D routine): gated repair of the Feria unmount GPU leak** (branch `claude/board-wed-3d-20261028`, base main `eaf931a`). Subscription usage: **UNKNOWN**.
+  - **Monday's unit is still held.** #282 «El ascensor del cerro» stays draft on R4, because no person has listened to its 6 clips. The rule needs a person: the G4 ruling in its LQG file says machine checks cannot close it, so this run did not try speech-to-text as a substitute. The model hosts are still blocked by the proxy anyway (openaipublic, huggingface and alphacephei time out). **Nothing about #282 changed.**
+  - **Unit chosen:** no 3D backlog item had its dependencies met. Rank 2 is blocked on R4; rank 3 is a grammar item that still needs Martin's duplicate check. Building a new world would hit the same §9.2 listening blocker, so the run took the verified Feria defect (QA note «dispose textures in World3D cleanup», the same as Ascensor code review B1) as a **gated repair**, reported as a repair.
+  - **Board:** convened proportionately. The facilitator built the fix. A fresh agent acting as Alejandro did the code review (**APPROVE**, NB1 and NB2 applied) and the delta check (**APPROVE**). Martin and Sofia were not needed. Verbatim: [transcripts/2026-10-28-wednesday-3d-feria-repair.md](transcripts/2026-10-28-wednesday-3d-feria-repair.md).
+  - **Evidence:** LQG file [la-feria-de-villaluz-repair-gpu-20261028.md](../audits/la-feria-de-villaluz-repair-gpu-20261028.md).
+    - SwiftShader count of live WebGL textures after the unmount:
+      - on main: 7→7 (390 px) and 22→20 (1280 px), with no context lost;
+      - fixed: 7→5 and 22→5, with the context lost.
+    - Smoke 78/78; `npm test` exit 0; lint clean on the changed files; `tsc` shows only the 3 errors already on main; `validate:artifact` OK; diff-check clean.
+  - **Found, not fixed (grep only, no browser check):** 11 other 3D cleanups call `renderer.dispose()` without texture-slot disposal or `forceContextLoss`: mundo-3d, marketing-de-casinos, bosque, hospital, madrid-infectada, noche-abierta (World3D + ItemStage), the-sound-map, immersive DemoScene, and grammar-classroom duration/studio. The rosa-dormida world calls `forceContextLoss`. Candidate repairs for later 3D or Thursday slots, one world per PR, each measured with the same browser counter.
+  - **Release:** see the PR. Production verification goes into PUBLISHED.md (now under Pending verification).
+  - **Next action:**
+    - **Fri 10-30 3D slot:** if R4 has been answered, release #282 first. Otherwise run the concept pipeline or take the next leak repair (start with the hospital and bosque worlds, which have the most traffic risk on PRO devices).
+    - Raise R4 again in the owner notification.
 - **2026-10-27 (Tuesday SEO routine): PR #284, DEPLOYED and verified in production** (branch `claude/tuesday-seo-20261027`, base main `25b9253`). Subscription usage: **UNKNOWN**.
   - **Board convened as subagents of the facilitator, proportionately:** Alejandro led a read-only technical SEO audit, and Sofia did the independent code review (**APPROVE**, no blockers). Martin was not needed. They did not message each other. The messages are verbatim in [transcripts/2026-10-27-tuesday-seo.md](transcripts/2026-10-27-tuesday-seo.md).
   - **Search Console: still BLOCKED (R0).** Re-checked at the start of the run: the `searchconsole` query for `sc-domain:spanishcue.com` returned the Windsor placeholder row ("reads are paused … 6 accounts connected … Free plan includes 1"). No rankings or traffic are reported.
