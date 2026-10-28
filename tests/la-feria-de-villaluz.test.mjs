@@ -347,3 +347,15 @@ test('T5 low path: static scenery, crowd, hosts and Busca candidates are baked; 
   assert.match(baker, /color: m\.color\.clone\(\)/);
   assert.doesNotMatch(fair, /PointLight[^\n]*low|if \(low\)[^\n]*PointLight/, 'no extra point lights in low mode');
 });
+
+test('unmount frees the GPU: label textures, cached low-mode host bakes and the WebGL context (Feria QA note; Ascensor code review B1)', () => {
+  const fair = readFileSync('app/la-feria-de-villaluz/feria3d.ts', 'utf8');
+  const cleanup = world.slice(world.indexOf('disposed = true;'));
+  assert.match(cleanup, /fair\.dispose\(\)/);
+  assert.match(cleanup, /renderer\.forceContextLoss\(\)/);
+  assert.match(cleanup, /isTexture[\s\S]*\.dispose\(\)/, 'texture slots of every material are disposed');
+  assert.match(fair, /dispose: \(\) => void/);
+  const dispose = fair.slice(fair.indexOf('function dispose()'));
+  assert.match(dispose, /clearBusca\(\)/, 'the Busca label canvas textures');
+  assert.match(dispose, /hostBakes\.values\(\)[\s\S]*geometry\.dispose\(\)[\s\S]*hostBakes\.clear\(\)/, 'every cached host bake, attached or not');
+});
