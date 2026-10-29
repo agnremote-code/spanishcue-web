@@ -126,3 +126,17 @@ test('a retired /resources slug must 308 to the current lesson page (404 tolerat
   const wrong = fixture({ [legacyResource]: () => new Response(null, { status: 308, headers: { location: '/resources' } }) });
   await assert.rejects(runSmoke('https://spanishcue.com', wrong), /wrong redirect target/);
 });
+test('a dropped GET is retried once, and a network failure names the request it hit', async () => {
+  const timeout = () => { throw new DOMException('The operation was aborted due to timeout', 'TimeoutError'); };
+  const normal = fixture();
+  let calls = 0;
+  const blip = (url, options) => new URL(url).pathname === '/ingresar' && ++calls === 1 ? timeout() : normal(url, options);
+  assert.ok((await runSmoke('https://spanishcue.com', blip)).some(r => r.path === '/ingresar'));
+  assert.equal(calls, 2);
+  await assert.rejects(runSmoke('https://spanishcue.com', (url, options) => new URL(url).pathname === '/ingresar' ? timeout() : normal(url, options)),
+    /GET \/ingresar: TimeoutError: The operation was aborted due to timeout/);
+  let posts = 0;
+  await assert.rejects(runSmoke('https://spanishcue.com', (url, options) => options.method === 'POST' && new URL(url).pathname === '/api/auth/verification-email' ? (posts++, timeout()) : normal(url, options)),
+    /POST \/api\/auth\/verification-email: TimeoutError/);
+  assert.equal(posts, 1, 'a write is never retried');
+});

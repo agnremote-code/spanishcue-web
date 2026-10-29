@@ -4,10 +4,22 @@ import { pathToFileURL } from "node:url";
 export async function runSmoke(origin, fetcher = fetch) {
   origin = new URL(origin).origin;
   const results = [];
+  // A network error or timeout names the request it hit (run 40638724042 died
+  // with a bare TimeoutError). GET/HEAD get one retry, so a single dropped
+  // connection does not open a production incident; a wrong status never retries.
+  async function request(path, options) {
+    const method = (options.method || "GET").toUpperCase();
+    for (let attempt = 1; ; attempt++) {
+      try {
+        return await fetcher(origin + path, { ...options, redirect: "manual", signal: AbortSignal.timeout(20000) });
+      } catch (error) {
+        if (attempt < 2 && (method === "GET" || method === "HEAD")) continue;
+        throw new Error(`${method} ${path}: ${error?.name || "Error"}: ${error?.message || error}`, { cause: error });
+      }
+    }
+  }
   async function check(path, statuses, options = {}) {
-    const response = await fetcher(origin + path, {
-      ...options, redirect: "manual", signal: AbortSignal.timeout(20000),
-    });
+    const response = await request(path, options);
     assert.ok([].concat(statuses).includes(response.status), `${path}: expected ${statuses}, got ${response.status}`);
     results.push({ path, status: response.status });
     return response;
