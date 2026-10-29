@@ -131,12 +131,16 @@ test('a dropped GET is retried once, and a network failure names the request it 
   const normal = fixture();
   let calls = 0;
   const blip = (url, options) => new URL(url).pathname === '/ingresar' && ++calls === 1 ? timeout() : normal(url, options);
-  assert.ok((await runSmoke('https://spanishcue.com', blip)).some(r => r.path === '/ingresar'));
+  assert.ok((await runSmoke('https://spanishcue.com', blip, { retryDelayMs: 0 })).some(r => r.path === '/ingresar'));
   assert.equal(calls, 2);
-  await assert.rejects(runSmoke('https://spanishcue.com', (url, options) => new URL(url).pathname === '/ingresar' ? timeout() : normal(url, options)),
+  await assert.rejects(runSmoke('https://spanishcue.com', (url, options) => new URL(url).pathname === '/ingresar' ? timeout() : normal(url, options), { retryDelayMs: 0 }),
     /GET \/ingresar: TimeoutError: The operation was aborted due to timeout/);
   let posts = 0;
   await assert.rejects(runSmoke('https://spanishcue.com', (url, options) => options.method === 'POST' && new URL(url).pathname === '/api/auth/verification-email' ? (posts++, timeout()) : normal(url, options)),
     /POST \/api\/auth\/verification-email: TimeoutError/);
   assert.equal(posts, 1, 'a write is never retried');
+  // A body that stalls is a network failure of that request too.
+  const stalled = { status: 200, headers: new Headers(), arrayBuffer: timeout };
+  await assert.rejects(runSmoke('https://spanishcue.com', (url, options) => new URL(url).pathname === '/ingresar' ? stalled : normal(url, options), { retryDelayMs: 0 }),
+    /GET \/ingresar: TimeoutError/);
 });

@@ -148,6 +148,7 @@ test('academies: admin registers, invites, licences grant access, isolation hold
 });
 
 test('academy panel stays unavailable until the additive migration runs', async () => {
+  // Uses its own database through the lazy env shim in load(); with a frozen env it inherited the previous test's throwing DB and could not fail.
   const sqlite = new DatabaseSync(':memory:');
   globalThis.__INSTITUTION_TEST_ENV = { DB: { prepare: q => ({ bind: () => ({ async first() { return sqlite.prepare(q).get() ?? null; } }) }) } };
   const routes = await load();

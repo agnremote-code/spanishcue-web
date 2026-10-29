@@ -157,7 +157,7 @@ function revokeInstitutionGrant(db: D1Database, userId: string, institutionId: s
   return db
     .prepare(
       `UPDATE access_grants SET status = 'revoked', updated_at = ?
-       WHERE user_id = ? AND product_code = ? AND source = 'institution' AND source_reference = ?`,
+       WHERE user_id = ? AND product_code = ? AND source = 'institution' AND source_reference = ? AND status != 'revoked'`,
     )
     .bind(nowSeconds(), userId, TEACHER_LIBRARY_PRODUCT, institutionId);
 }
