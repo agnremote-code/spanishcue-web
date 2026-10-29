@@ -154,6 +154,15 @@ export const GAMES = {
     ownListening: true,
     bilingualA0: true,
   },
+  // Más allá: every zone of the Cielo and the Infierno has its own listening
+  // at each level; both circles of a zone open it. PRO lesson (ID 243).
+  masalla: {
+    title: 'Más allá',
+    levels: ['A0', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
+    spots: ['portal', 'archivo', 'cumbre', 'antesala', 'juicio', 'abismo'],
+    ownListening: true,
+    bilingualA0: true,
+  },
 };
 
 // Transcript length in words for each level.

@@ -1,0 +1,748 @@
+{
+  "game": "masalla",
+  "level": "C2",
+  "items": [
+    {
+      "id": "portal",
+      "title": "El portero escéptico",
+      "place": "Las Puertas de Perla · la garita",
+      "context": "En la garita de las Puertas de Perla, Gabriel conversa con una catedrática de Filosofía que pone en duda todo lo que ve.",
+      "speakers": [
+        {
+          "name": "Gabriel",
+          "country": "Colombia",
+          "voice": "es-CO-GonzaloNeural"
+        },
+        {
+          "name": "Ximena",
+          "country": "España",
+          "voice": "es-ES-XimenaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Discúlpeme, pero me resisto a aceptar que todo esto sea real. Demasiado parecido a la iconografía que estudiábamos en clase: puertas de perla, nubes, un portero con alas. Huele a construcción cultural."
+        },
+        {
+          "s": 0,
+          "text": "No le falta razón. Lo que ve está hecho con las imágenes que usted trajo. Si hubiera crecido en otra tradición, la entrada tendría otra forma. Lo que hay detrás de la forma, eso ya es otra cuestión."
+        },
+        {
+          "s": 1,
+          "text": "Es decir, que el Cielo se adapta al imaginario de cada cual. Qué conveniente. Así nadie puede refutarlo."
+        },
+        {
+          "s": 0,
+          "text": "Tampoco nadie necesita refutarlo. Aquí no se viene a ganar un debate. Durante setenta años usted ha sido brillante desmontando certezas ajenas. Lo que me pregunto, con todo respeto, es cuándo se permitió no saber algo sin sentirse amenazada."
+        },
+        {
+          "s": 1,
+          "text": "Eso es un golpe bajo."
+        },
+        {
+          "s": 0,
+          "text": "Es una pregunta. Si le duele, quizá sea porque roza algo cierto. Mire: puede pasarse la eternidad analizando la arquitectura del lugar. Hay almas que lo hacen, y son razonablemente felices. Pero también puede probar algo que nunca hizo en vida: entrar sin haberlo entendido antes."
+        },
+        {
+          "s": 1,
+          "text": "¿Y si lo que encuentro dentro no resiste el análisis?"
+        },
+        {
+          "s": 0,
+          "text": "Entonces tendrá usted, por fin, algo interesante que pensar. Le aseguro que aquí el pensamiento no está prohibido. Lo único que se queda en la puerta es la necesidad de tener siempre la última palabra."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Por qué duda Ximena de que el Cielo sea real?",
+          "options": [
+            "Porque no ve a su familia",
+            "Porque se parece demasiado a la iconografía que estudiaba",
+            "Porque hace frío"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Según Gabriel, ¿de qué está hecha la forma del Cielo?",
+          "options": [
+            "De las imágenes que cada alma trae",
+            "De oro y perlas",
+            "De los sueños de los ángeles"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué pregunta incomoda a Ximena?",
+          "options": [
+            "Cuántos libros escribió",
+            "Si fue feliz en su matrimonio",
+            "Cuándo se permitió no saber algo sin sentirse amenazada"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué se queda en la puerta, según Gabriel?",
+          "options": [
+            "El pensamiento crítico",
+            "Los recuerdos tristes",
+            "La necesidad de tener siempre la última palabra"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Puedes tolerar no saber algo sin sentirte amenazado o amenazada? ¿En qué ámbitos te cuesta más?",
+          "model": "En lo profesional me cuesta muchísimo; reconocer que no sé algo delante de colegas me parece casi una derrota."
+        },
+        {
+          "q": "¿Hasta qué punto nuestras creencias sobre lo trascendente son construcciones culturales?",
+          "model": "Creo que la forma es cultural casi por completo, aunque la intuición de fondo podría ser común a todos."
+        },
+        {
+          "q": "¿Qué perderías y qué ganarías si renunciaras a tener la última palabra?",
+          "model": "Perdería cierta sensación de control, pero ganaría conversaciones mucho más honestas."
+        }
+      ],
+      "gaps": "Lo único que se queda en la [puerta] es la [necesidad] de tener [siempre] la [última palabra].",
+      "glossary": [
+        {
+          "word": "iconografía",
+          "meaning": "conjunto de imágenes tradicionales de un tema"
+        },
+        {
+          "word": "refutarlo",
+          "meaning": "demostrar que es falso"
+        },
+        {
+          "word": "golpe bajo",
+          "meaning": "ataque injusto o que duele especialmente"
+        },
+        {
+          "word": "roza",
+          "meaning": "toca ligeramente, se acerca a"
+        }
+      ]
+    },
+    {
+      "id": "archivo",
+      "title": "La archivera y el palimpsesto",
+      "place": "El Archivo de las Vidas · el taller de restauración",
+      "context": "En el taller de restauración del Archivo, una archivera explica a un recién llegado por qué algunos libros de vida están escritos encima de otros.",
+      "speakers": [
+        {
+          "name": "Camila",
+          "country": "Perú",
+          "voice": "es-PE-CamilaNeural"
+        },
+        {
+          "name": "Sebastián",
+          "country": "Venezuela",
+          "voice": "es-VE-SebastianNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Esto que tiene en las manos es un palimpsesto. ¿Ve las letras tenues debajo del texto principal? Es una vida anterior, raspada para escribir encima."
+        },
+        {
+          "s": 1,
+          "text": "¿Una reencarnación?"
+        },
+        {
+          "s": 0,
+          "text": "No exactamente. Es su propia vida, tal como la planeaba a los veinte años. Usted la fue borrando, poco a poco, para escribir la que finalmente vivió. Casi todos los libros acaban así."
+        },
+        {
+          "s": 1,
+          "text": "Qué inquietante. ¿Y se puede recuperar lo borrado?"
+        },
+        {
+          "s": 0,
+          "text": "Con paciencia, sí. Pero le aviso de lo que suele ocurrir: la gente espera encontrar una versión más luminosa de sí misma, el artista que no fue, el viajero que no se atrevió a ser. Y a menudo lo que aparece es más ingenuo, más rígido, incluso más cruel."
+        },
+        {
+          "s": 1,
+          "text": "¿Cruel? A los veinte años yo era un idealista."
+        },
+        {
+          "s": 0,
+          "text": "Los idealistas son con frecuencia los más implacables. Su yo de veinte años despreciaba a gente como la persona en que usted se convirtió: el padre que negocia, que cede, que se conforma con un trabajo digno. Mírelo. Aquí, en el margen, escribió: «Nunca seré como mi padre»."
+        },
+        {
+          "s": 1,
+          "text": "Y acabé siendo exactamente como él."
+        },
+        {
+          "s": 0,
+          "text": "Acabó siendo un hombre que quiso a sus hijos con las herramientas que tenía. Eso no figuraba en el plan original. Y, si me permite la opinión profesional, es con diferencia el mejor texto de todo el volumen."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué es un palimpsesto, según Camila?",
+          "options": [
+            "Un libro escrito encima de otro texto raspado",
+            "Un libro sin terminar",
+            "Un diario secreto"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué hay debajo del texto principal?",
+          "options": [
+            "Una vida anterior en otro cuerpo",
+            "La vida que Sebastián planeaba a los veinte años",
+            "Las notas de un ángel"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué suele aparecer al recuperar lo borrado?",
+          "options": [
+            "Una versión más luminosa",
+            "Nada en absoluto",
+            "Algo más ingenuo, rígido o incluso cruel"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Para Camila, ¿cuál es el mejor texto del volumen?",
+          "options": [
+            "El de un hombre que quiso a sus hijos con las herramientas que tenía",
+            "El plan original de los veinte años",
+            "La nota del margen"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué le diría tu yo de veinte años a la persona que eres hoy? ¿Y qué le responderías tú?",
+          "model": "Me reprocharía haberme acomodado; yo le respondería que la estabilidad también exige valentía."
+        },
+        {
+          "q": "¿Por qué crees que los idealistas pueden ser implacables con los demás?",
+          "model": "Porque juzgan desde una pureza que todavía no ha tenido que pagar ningún precio."
+        },
+        {
+          "q": "¿En qué te has convertido sin querer en alguien que juraste no ser?",
+          "model": "En alguien que valora la rutina, cuando de joven la consideraba una forma de muerte."
+        }
+      ],
+      "gaps": "Usted la fue [borrando], poco a poco, para [escribir] la que finalmente [vivió]. Casi todos los libros [acaban así].",
+      "glossary": [
+        {
+          "word": "tenues",
+          "meaning": "débiles, poco visibles"
+        },
+        {
+          "word": "raspada",
+          "meaning": "frotada para quitar lo escrito"
+        },
+        {
+          "word": "implacables",
+          "meaning": "que no perdonan, muy duros"
+        },
+        {
+          "word": "se conforma",
+          "meaning": "acepta algo sin pedir más"
+        }
+      ]
+    },
+    {
+      "id": "cumbre",
+      "title": "Sobremesa en la Cumbre",
+      "place": "La Cumbre · la sobremesa del banquete",
+      "context": "Al final de un banquete que nunca termina, un argentino y una cubana discuten, entre café y licor, si la felicidad eterna no acabará siendo aburrida.",
+      "speakers": [
+        {
+          "name": "Hernán",
+          "country": "Argentina",
+          "voice": "es-AR-TomasNeural"
+        },
+        {
+          "name": "Belkys",
+          "country": "Cuba",
+          "voice": "es-CU-BelkysNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Voy a decir algo que aquí suena a herejía: empiezo a echar de menos el mal humor. Los lunes, el tráfico, las discusiones absurdas en la cola del banco."
+        },
+        {
+          "s": 1,
+          "text": "No eres el primero. En esta mesa lo llamamos «la nostalgia del roce». Llevamos siglos sin fricción, y resulta que la fricción era la mitad del sabor."
+        },
+        {
+          "s": 0,
+          "text": "Exacto. La felicidad, sin contraste, se vuelve un fondo de pantalla. Bonita, pero ya ni la miras."
+        },
+        {
+          "s": 1,
+          "text": "Aunque cuidado con idealizar el sufrimiento. Tú echas de menos el tráfico porque sabes que no vuelve. Si te devolvieran un año de lunes reales, con sus facturas y sus diagnósticos, quizá cambiarías de opinión."
+        },
+        {
+          "s": 0,
+          "text": "Puede ser. Pero entonces, ¿qué hacemos con esta sensación de que algo falta en un lugar donde supuestamente no falta nada?"
+        },
+        {
+          "s": 1,
+          "text": "Yo creo que lo que falta es el riesgo. En la Tierra, querer a alguien era apostar: podías perderlo mañana. Aquí el amor está asegurado, y lo asegurado se vuelve inercia."
+        },
+        {
+          "s": 0,
+          "text": "Qué deprimente, dicho en el Cielo."
+        },
+        {
+          "s": 1,
+          "text": "No te creas. Hay quien dice que por eso existe el Umbral: para que de vez en cuando alguien elija bajar a ver el Infierno. No por castigo, sino para recordar que la luz solo se ve contra algo."
+        },
+        {
+          "s": 0,
+          "text": "Entonces brindemos por el Infierno. Que alguien tenga que hacerlo."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué empieza a echar de menos Hernán?",
+          "options": [
+            "El mal humor y las molestias cotidianas",
+            "Su casa",
+            "A sus hijos"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cómo llaman en esa mesa a esa sensación?",
+          "options": [
+            "El síndrome del lunes",
+            "La nostalgia del roce",
+            "El aburrimiento eterno"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Por qué advierte Belkys contra idealizar el sufrimiento?",
+          "options": [
+            "Porque es pecado",
+            "Porque nunca sufrió",
+            "Porque Hernán sabe que no vuelve"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Según Belkys, ¿para qué existe quizá el Umbral?",
+          "options": [
+            "Para castigar a los malos",
+            "Para recordar que la luz solo se ve contra algo",
+            "Para volver a la Tierra"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Crees que una felicidad sin contraste acabaría siendo aburrida? Argumenta tu respuesta.",
+          "model": "Creo que sí; necesitamos cierta tensión para percibir la alegría, igual que el silencio necesita ruido."
+        },
+        {
+          "q": "¿Qué «roce» cotidiano echarías de menos si desapareciera de tu vida?",
+          "model": "Las discusiones de sobremesa con mi hermano, aunque siempre acaben mal."
+        },
+        {
+          "q": "¿Es el riesgo de perder a alguien lo que da intensidad al amor?",
+          "model": "En parte sí, aunque me gustaría pensar que el amor también puede crecer en la seguridad."
+        }
+      ],
+      "gaps": "Aquí el amor está [asegurado], y lo asegurado se vuelve [inercia]. Qué [deprimente], dicho en el [Cielo].",
+      "glossary": [
+        {
+          "word": "herejía",
+          "meaning": "idea contraria a lo que se considera correcto"
+        },
+        {
+          "word": "roce",
+          "meaning": "fricción, pequeño conflicto"
+        },
+        {
+          "word": "inercia",
+          "meaning": "tendencia a seguir igual sin esfuerzo"
+        },
+        {
+          "word": "fondo de pantalla",
+          "meaning": "imagen fija en la pantalla de un ordenador o un teléfono"
+        }
+      ]
+    },
+    {
+      "id": "antesala",
+      "title": "La sala de los espejos honestos",
+      "place": "La Antesala · la sala de los espejos",
+      "context": "En la sala de los espejos honestos, Valeria guía a un recién llegado que se niega a mirarse.",
+      "speakers": [
+        {
+          "name": "Valeria",
+          "country": "Chile",
+          "voice": "es-CL-CatalinaNeural"
+        },
+        {
+          "name": "Alex",
+          "country": "Perú",
+          "voice": "es-PE-AlexNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Puede quedarse de espaldas todo el tiempo que quiera. No es obligatorio mirarse. Aunque, si me permite, la nuca también refleja bastante."
+        },
+        {
+          "s": 1,
+          "text": "Muy graciosa. Sé lo que voy a ver. He sido un cobarde toda la vida y no necesito un espejo que me lo confirme."
+        },
+        {
+          "s": 0,
+          "text": "¿Ve? Esa es la trampa más frecuente de esta sala. Las almas llegan con un veredicto preparado, normalmente durísimo, porque un veredicto propio, por cruel que sea, resulta más soportable que la incertidumbre."
+        },
+        {
+          "s": 1,
+          "text": "¿Quiere decir que me equivoco sobre mí?"
+        },
+        {
+          "s": 0,
+          "text": "Quiero decir que la palabra «cobarde» le ahorra mirar los detalles. Este espejo no resume; describe. Muestra, por ejemplo, la noche en que no defendió a su compañero ante el jefe. Pero también la mañana siguiente, cuando le consiguió en secreto una entrevista en otra empresa."
+        },
+        {
+          "s": 1,
+          "text": "Eso fue para tranquilizar mi conciencia."
+        },
+        {
+          "s": 0,
+          "text": "Probablemente. Y aun así le cambió la vida a otra persona. Los motivos mezclados no anulan los actos. Lo que me interesa es por qué usted solo guarda la primera escena."
+        },
+        {
+          "s": 1,
+          "text": "Porque si me perdono la primera, temo volver a hacerlo."
+        },
+        {
+          "s": 0,
+          "text": "Ahí está el núcleo. Usa la culpa como vigilante. Pero un vigilante que nunca descansa termina convirtiéndose en el carcelero. Dese la vuelta cuando quiera. El espejo seguirá aquí, y yo también."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué hace Alex al principio?",
+          "options": [
+            "Se mira fijamente",
+            "Se queda de espaldas al espejo",
+            "Rompe el espejo"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Según Valeria, ¿por qué las almas traen un veredicto preparado?",
+          "options": [
+            "Porque es más soportable que la incertidumbre",
+            "Porque se lo dicen los demonios",
+            "Porque leen su expediente"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué hizo Alex la mañana siguiente?",
+          "options": [
+            "Dejó su trabajo",
+            "Habló con el jefe",
+            "Le consiguió en secreto una entrevista a su compañero"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Para qué usa Alex la culpa, según Valeria?",
+          "options": [
+            "Como castigo para otros",
+            "Como vigilante para no volver a hacerlo",
+            "Como excusa para no trabajar"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué etiqueta dura te pones a ti mismo o a ti misma que te ahorra mirar los detalles?",
+          "model": "«Desorganizada»; me la pongo para no ver que en realidad evito ciertas tareas por miedo."
+        },
+        {
+          "q": "¿Crees que los motivos mezclados anulan el valor de un acto generoso?",
+          "model": "No, creo que casi todos los actos humanos tienen motivos mezclados, y aun así importan."
+        },
+        {
+          "q": "¿Te sirve la culpa como vigilante o se ha convertido en carcelero?",
+          "model": "Durante años fue carcelero; ahora intento que sea solo un aviso."
+        }
+      ],
+      "gaps": "Los motivos [mezclados] no anulan los [actos]. Lo que me interesa es por qué usted solo guarda la primera [escena]. Porque si me [perdono] la primera, temo volver a hacerlo.",
+      "glossary": [
+        {
+          "word": "nuca",
+          "meaning": "parte de atrás del cuello"
+        },
+        {
+          "word": "veredicto",
+          "meaning": "decisión final sobre la culpa de alguien"
+        },
+        {
+          "word": "soportable",
+          "meaning": "que se puede aguantar"
+        },
+        {
+          "word": "carcelero",
+          "meaning": "persona que vigila una cárcel"
+        }
+      ]
+    },
+    {
+      "id": "juicio",
+      "title": "El recurso de apelación",
+      "place": "El Juicio · la sala del barquero",
+      "context": "Junto al embarcadero del río de fuego, un abogado del Infierno prepara con su clienta un recurso para que el barquero le devuelva un recuerdo.",
+      "speakers": [
+        {
+          "name": "Javier",
+          "country": "Guinea Ecuatorial",
+          "voice": "es-GQ-JavierNeural"
+        },
+        {
+          "name": "Lorena",
+          "country": "El Salvador",
+          "voice": "es-SV-LorenaNeural"
+        },
+        {
+          "name": "Flegias",
+          "country": "Cuba",
+          "voice": "es-CU-ManuelNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Le explico la estrategia. Usted pagó la travesía con el recuerdo del nacimiento de su hija. Vamos a alegar que lo hizo bajo coacción emocional: estaba aterrada y no midió el valor de lo que entregaba."
+        },
+        {
+          "s": 1,
+          "text": "Es que es verdad. Lo di sin pensar. Ahora tengo un hueco donde estaba ese día, y no soporto no recordarle la cara."
+        },
+        {
+          "s": 2,
+          "text": "Si me permiten intervenir, nunca he devuelto un recuerdo. No por crueldad: es que nadie lo pide de verdad. Piden recuperar una sensación, no el recuerdo entero."
+        },
+        {
+          "s": 0,
+          "text": "¿Qué diferencia hay?"
+        },
+        {
+          "s": 2,
+          "text": "El recuerdo entero incluye el miedo de aquella noche, el dolor del parto, la ausencia del padre. Ella no quiere eso. Quiere la cara de la niña, aislada, como una postal."
+        },
+        {
+          "s": 1,
+          "text": "¿Y eso es tan malo?"
+        },
+        {
+          "s": 2,
+          "text": "No es malo. Es humano. Pero una postal no es un recuerdo; es un souvenir. Si le devuelvo el día completo, se lleva también lo que hizo de usted la madre que fue: la mujer que sostuvo sola a una recién nacida en un hospital de madrugada."
+        },
+        {
+          "s": 1,
+          "text": "Entonces quiero el día completo. Con el miedo y todo."
+        },
+        {
+          "s": 2,
+          "text": "Eso es lo que nadie dice. Señor abogado, no hace falta recurso. Concedido. Y, señora, cuide ese miedo: fue lo más valiente que tuvo."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Con qué pagó Lorena la travesía?",
+          "options": [
+            "Con el recuerdo del nacimiento de su hija",
+            "Con su boda",
+            "Con su primer beso"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué va a alegar el abogado?",
+          "options": [
+            "Que fue un error del barquero",
+            "Que actuó bajo coacción emocional",
+            "Que el recuerdo era falso"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Según el barquero, ¿qué piden realmente las almas?",
+          "options": [
+            "Dinero a cambio",
+            "Olvidar más cosas",
+            "Recuperar una sensación, no el recuerdo entero"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Por qué el barquero concede la petición?",
+          "options": [
+            "Porque el abogado lo convence",
+            "Porque ella pide el día completo, con el miedo incluido",
+            "Porque es su cumpleaños"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "Si pudieras conservar solo la parte bonita de un recuerdo difícil, ¿lo harías? ¿Qué perderías?",
+          "model": "Sería tentador, pero perdería la comprensión de quién me hizo ese día y de lo que fui capaz."
+        },
+        {
+          "q": "¿En qué se diferencia un recuerdo de un «souvenir»?",
+          "model": "El recuerdo conserva la complejidad; el souvenir solo guarda lo que queremos mostrar."
+        },
+        {
+          "q": "¿Qué miedo de tu pasado fue, visto desde hoy, un acto de valentía?",
+          "model": "Mudarme sola a otro país sin hablar el idioma; estaba aterrada y aun así fui."
+        }
+      ],
+      "gaps": "Pero una [postal] no es un [recuerdo]; es un [souvenir]. Si le devuelvo el día [completo], se lleva también lo que hizo de usted la madre que fue:",
+      "glossary": [
+        {
+          "word": "travesía",
+          "meaning": "viaje por agua de un lado a otro"
+        },
+        {
+          "word": "coacción",
+          "meaning": "presión para obligar a alguien a hacer algo"
+        },
+        {
+          "word": "alegar",
+          "meaning": "presentar un argumento en un juicio"
+        },
+        {
+          "word": "concedido",
+          "meaning": "aceptado, otorgado"
+        }
+      ]
+    },
+    {
+      "id": "abismo",
+      "title": "La última conferencia de Lucero",
+      "place": "El Abismo · el anfiteatro del trono",
+      "context": "Al pie del trono vacío, Lucero se dirige a las almas que han llegado hasta el fondo del Abismo. Es la última parada antes de volver al Umbral.",
+      "speakers": [
+        {
+          "name": "Lucero",
+          "country": "Venezuela",
+          "voice": "es-VE-PaolaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Han recorrido ventanillas, espejos, tribunales y jaulas. Algunos esperaban demonios con tridente y calderas hirviendo. Lamento la decepción: aquí la única tortura que funciona es la que cada uno se administra."
+        },
+        {
+          "s": 0,
+          "text": "Habrán notado que nadie les ha obligado a nada. Que las jaulas estaban abiertas, que la ventanilla no tenía llave, que el trono estaba vacío. Y, sin embargo, muchos de ustedes se han quedado más tiempo del necesario en cada estación. Eso no es un fallo del lugar. Es su principal enseñanza."
+        },
+        {
+          "s": 0,
+          "text": "En la Tierra solían decir que el infierno son los otros. Lo que se aprende aquí es más incómodo: el infierno es la versión de uno mismo que se niega a cambiar porque cambiar implicaría admitir que se ha vivido equivocado demasiado tiempo."
+        },
+        {
+          "s": 0,
+          "text": "No les voy a dar un consejo, porque los consejos se olvidan en el siguiente cruce de caminos. Les voy a dejar una pregunta para el viaje de vuelta al Umbral: ¿qué parte de su sufrimiento es dolor y qué parte es lealtad a una vieja idea de sí mismos?"
+        },
+        {
+          "s": 0,
+          "text": "El dolor se atraviesa. La lealtad a una idea se puede soltar. Confundirlos es lo que convierte una tarde mala en una eternidad. Y ahora, si me disculpan, tengo que ir a sentarme un rato en ese trono. Alguien tiene que mantener la ficción."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué esperaban encontrar algunas almas?",
+          "options": [
+            "Demonios con tridente y calderas",
+            "Ángeles con arpas",
+            "Su casa"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cuál es la principal enseñanza del lugar, según Lucero?",
+          "options": [
+            "Que hay que obedecer",
+            "Que las almas se quedan más de lo necesario aunque nada las obligue",
+            "Que el fuego purifica"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Según Lucero, ¿qué es el infierno?",
+          "options": [
+            "Los otros",
+            "Un lugar de fuego eterno",
+            "La versión de uno mismo que se niega a cambiar"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué distingue Lucero en su pregunta final?",
+          "options": [
+            "El dolor y la lealtad a una vieja idea de sí mismos",
+            "El cielo y el infierno",
+            "El pasado y el futuro"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué parte de tu sufrimiento actual es dolor y qué parte es lealtad a una vieja idea de ti?",
+          "model": "Creo que mucho de mi estrés es lealtad a la idea de que valgo por lo que produzco."
+        },
+        {
+          "q": "¿Estás de acuerdo con que «el infierno son los otros», o con la versión de Lucero?",
+          "model": "Me convence más la de Lucero; los otros pesan, pero la resistencia a cambiar es lo que lo vuelve infierno."
+        },
+        {
+          "q": "¿Por qué cuesta tanto admitir que se ha vivido equivocado mucho tiempo?",
+          "model": "Porque parece que se invalida todo lo vivido, cuando en realidad solo se corrige el rumbo."
+        }
+      ],
+      "gaps": "El dolor se [atraviesa]. La [lealtad] a una idea se puede [soltar]. Confundirlos es lo que convierte una tarde mala en una [eternidad].",
+      "glossary": [
+        {
+          "word": "tridente",
+          "meaning": "arma con tres puntas"
+        },
+        {
+          "word": "calderas",
+          "meaning": "recipientes grandes para hervir"
+        },
+        {
+          "word": "administra",
+          "meaning": "da o aplica"
+        },
+        {
+          "word": "lealtad",
+          "meaning": "fidelidad a algo o a alguien"
+        }
+      ]
+    }
+  ]
+}

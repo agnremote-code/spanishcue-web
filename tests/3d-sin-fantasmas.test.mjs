@@ -18,6 +18,7 @@ const feriaLevels = await import('../app/la-feria-de-villaluz/levels.mjs');
 const madrid = await import('../app/madrid-infectada/layout.mjs');
 const madridCity = await import('../app/madrid-infectada/city.mjs');
 const madridHorde = await import('../app/madrid-infectada/horde.mjs');
+const masAlla = await import('../app/mas-alla/layout.mjs');
 const bosque = await import('../app/bosque-de-los-hongos-gigantes/engine.mjs');
 const { pushOut } = await import('../app/escucha-3d/bump.mjs');
 
@@ -154,7 +155,21 @@ function madridCityWorld() {
   };
 }
 
-const WORLDS = [nocheStreet(), ...nocheRooms(), ...hospitalFloors(), ...casinoFloors(), feriaWorld(), ...madridZones(), madridCityWorld()];
+// Más allá: the Umbral, the Cielo and the Infierno. Walkers loop their path;
+// the mascot is put at the spawn, the exit ring, the portals, the hourglass
+// and every white circle.
+function masAllaPlaces() {
+  return masAlla.PLACE_IDS.map(id => {
+    const L = masAlla.layoutOf(id);
+    return {
+      id: `masalla:${id}`, solids: masAlla.solidsFor(id), bounds: L.bounds, staticWalkers: false,
+      walkers: L.walkers.map(w => ({ id: `alma-${w.seed}`, points: sample(w.path.map(p => [p.x, p.z]), true) })), people: masAlla.peopleOf(id),
+      spots: [{ id: 'spawn', ...L.spawn }, ...(L.exit ? [{ id: 'salida', ...L.exit }] : []), ...L.portals.map(p => ({ id: `portal-${p.to}`, x: p.x, z: p.z })), ...(L.final ? [{ id: 'final', x: L.final.x, z: L.final.z + L.final.r + 0.6 }] : []), ...L.spots.map(s => ({ id: s.id, x: s.x, z: s.z }))],
+    };
+  });
+}
+
+const WORLDS = [nocheStreet(), ...nocheRooms(), ...hospitalFloors(), ...casinoFloors(), feriaWorld(), ...madridZones(), madridCityWorld(), ...masAllaPlaces()];
 
 // ------------------------------------------------------------------ checks
 test('every world in the list has solids, people or walkers to check', () => {
