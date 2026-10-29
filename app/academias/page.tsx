@@ -42,6 +42,7 @@ export default async function Academias() {
     { href: '/demo/hospital-san-casi-vivo', image: '/hospital-san-casi-vivo/cover.webp', title: 'Hospital San Casi Vivo', free: true, body: es ? 'Un hospital con humor negro, de principiante a C2. La recepción es gratis.' : 'A darkly funny hospital, from beginner to C2. The reception is free.' },
     { href: '/el-reino-de-la-rosa-dormida', image: '/reino/cover.webp', title: 'El reino de la rosa dormida', free: false, body: es ? 'Una aventura de fantasía con misiones y hechizos para conversar.' : 'A fantasy adventure with quests and spells to talk about.' },
     { href: '/madrid-infectada', image: '/madrid-infectada/cover.webp', title: 'Madrid infectada', free: false, body: es ? 'Una ciudad tomada por zombis: decide, negocia y sobrevive en español.' : 'A city overrun by zombies: decide, negotiate and survive in Spanish.' },
+    { href: '/mas-alla', image: '/mas-alla/cover.webp', title: 'Más allá', free: false, body: es ? 'Cielo e infierno en 3D: preguntas profundas sobre la vida, para adultos.' : 'Heaven and hell in 3D: deep questions about life, for adults.' },
   ];
   const benefits = es ? [
     ['Una base común para tu equipo', 'Cada profesor encuentra los materiales en la misma biblioteca, organizados por nivel y tema.'],

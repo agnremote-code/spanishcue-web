@@ -1,0 +1,735 @@
+{
+  "game": "masalla",
+  "level": "B2",
+  "items": [
+    {
+      "id": "portal",
+      "title": "La entrevista de admisión",
+      "place": "Las Puertas de Perla · la sala de admisión",
+      "context": "Antes de entrar, cada alma tiene una breve entrevista con un ángel. Hoy le toca a una abogada argentina.",
+      "speakers": [
+        {
+          "name": "Gabriel",
+          "country": "Colombia",
+          "voice": "es-CO-GonzaloNeural"
+        },
+        {
+          "name": "Elena",
+          "country": "Argentina",
+          "voice": "es-AR-ElenaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "No se preocupe, no es un examen. Solo tengo una pregunta: ¿a quién le debe una disculpa?"
+        },
+        {
+          "s": 1,
+          "text": "¿Una sola? Tengo una lista entera. Pero si tengo que elegir, a mi hermano. Dejamos de hablarnos por una herencia, por un departamento que ni siquiera valía tanto."
+        },
+        {
+          "s": 0,
+          "text": "¿Y por qué no lo llamó?"
+        },
+        {
+          "s": 1,
+          "text": "Porque esperaba que llamara él. Los dos esperábamos lo mismo. Pasaron once años así, cada uno convencido de que el orgullo del otro era el problema."
+        },
+        {
+          "s": 0,
+          "text": "Es lo que más vemos aquí. No grandes crímenes, sino silencios que se alargan hasta que ya no queda tiempo."
+        },
+        {
+          "s": 1,
+          "text": "¿Él está aquí?"
+        },
+        {
+          "s": 0,
+          "text": "Todavía no. Pero cuando llegue, la primera persona que verá será usted. Le sugiero que piense qué va a decirle. Y que no empiece explicando quién tenía razón."
+        },
+        {
+          "s": 1,
+          "text": "Me va a costar. Llevo toda la vida ganando discusiones, y ahora resulta que eso no sirve de mucho."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿A quién le debe una disculpa Elena?",
+          "options": [
+            "A su hermano",
+            "A su madre",
+            "A un cliente"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Por qué se pelearon?",
+          "options": [
+            "Por una mujer",
+            "Por un trabajo",
+            "Por una herencia"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Por qué ninguno llamó?",
+          "options": [
+            "Porque vivían lejos",
+            "Porque cada uno esperaba que llamara el otro",
+            "Porque no tenían teléfono"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué le aconseja Gabriel?",
+          "options": [
+            "Que no empiece explicando quién tenía razón",
+            "Que le escriba una carta",
+            "Que lo olvide"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Alguna vez has dejado de hablar con alguien por orgullo? ¿Cómo terminó?",
+          "model": "Sí, con una amiga del colegio. Al final le mandé un mensaje yo, y fue un alivio enorme."
+        },
+        {
+          "q": "¿Por qué crees que nos cuesta tanto dar el primer paso?",
+          "model": "Porque sentimos que pedir perdón es reconocer que perdimos."
+        },
+        {
+          "q": "¿Qué es más importante para ti: tener razón o mantener una relación?",
+          "model": "Depende del tema, pero casi siempre la relación."
+        }
+      ],
+      "gaps": "Es lo que más vemos aquí. No grandes [crímenes], sino [silencios] que se [alargan] hasta que ya no queda [tiempo].",
+      "glossary": [
+        {
+          "word": "disculpa",
+          "meaning": "palabras con las que pides perdón"
+        },
+        {
+          "word": "herencia",
+          "meaning": "lo que alguien deja a su familia al morir"
+        },
+        {
+          "word": "orgullo",
+          "meaning": "sentimiento de que uno no debe ceder ante los demás"
+        },
+        {
+          "word": "discusiones",
+          "meaning": "conversaciones en las que no se está de acuerdo"
+        }
+      ]
+    },
+    {
+      "id": "archivo",
+      "title": "El bibliotecario y la versión alternativa",
+      "place": "El Archivo de las Vidas · la sala de los libros no escritos",
+      "context": "Uriel enseña a un hombre una sala especial del Archivo: la de las vidas que pudo haber vivido.",
+      "speakers": [
+        {
+          "name": "Uriel",
+          "country": "España",
+          "voice": "es-ES-AlvaroNeural"
+        },
+        {
+          "name": "Marcelo",
+          "country": "Bolivia",
+          "voice": "es-BO-MarceloNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Esta es la sala de los libros no escritos. Cada uno es una vida que estuvo a punto de ser la suya."
+        },
+        {
+          "s": 1,
+          "text": "¿Como si hubiera aceptado aquella beca en Alemania?"
+        },
+        {
+          "s": 0,
+          "text": "Aquí está. Tomo cuatrocientos doce. En esa versión es usted ingeniero, habla tres idiomas y vive solo en Múnich."
+        },
+        {
+          "s": 1,
+          "text": "¿Solo? ¿Y mi mujer?"
+        },
+        {
+          "s": 0,
+          "text": "En esa vida no la conoce. La conoció en la parada del autobús, el mismo otoño en que rechazó la beca."
+        },
+        {
+          "s": 1,
+          "text": "Siempre he pensado que me equivoqué. Durante cuarenta años me pregunté qué habría pasado."
+        },
+        {
+          "s": 0,
+          "text": "La mayoría de las almas pide ver estos libros. Casi todas salen de la sala más tranquilas. No porque la otra vida fuera peor, sino porque entienden que cada camino tiene un precio."
+        },
+        {
+          "s": 1,
+          "text": "¿Puedo leerlo entero?"
+        },
+        {
+          "s": 0,
+          "text": "Puede. Pero le advierto que nadie lo termina. Llega un momento en que uno prefiere volver al libro que sí escribió."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué hay en la sala especial?",
+          "options": [
+            "Las vidas que pudieron haber sido",
+            "Los libros prohibidos",
+            "Las cartas de los muertos"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Dónde viviría Marcelo en la otra versión?",
+          "options": [
+            "En Berlín",
+            "En Múnich",
+            "En Viena"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Dónde conoció Marcelo a su mujer?",
+          "options": [
+            "En la universidad",
+            "En una boda",
+            "En la parada del autobús"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Según Uriel, ¿por qué salen tranquilas las almas?",
+          "options": [
+            "Porque la otra vida era peor",
+            "Porque olvidan lo que leyeron",
+            "Porque entienden que cada camino tiene un precio"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué «libro no escrito» de tu vida te gustaría leer? ¿Por qué ese?",
+          "model": "El de la vida en la que estudié música, porque lo dejé por miedo."
+        },
+        {
+          "q": "¿Crees que nos arrepentimos más de lo que hicimos o de lo que no hicimos?",
+          "model": "De lo que no hicimos, porque lo idealizamos."
+        },
+        {
+          "q": "¿Qué precio tiene el camino que has elegido?",
+          "model": "Vivo lejos de mi familia, pero tengo libertad."
+        }
+      ],
+      "gaps": "No porque la otra vida fuera [peor], sino porque entienden que cada [camino] tiene un [precio]. ¿Puedo leerlo [entero]?",
+      "glossary": [
+        {
+          "word": "beca",
+          "meaning": "ayuda económica para estudiar"
+        },
+        {
+          "word": "tomo",
+          "meaning": "cada uno de los libros de una obra larga"
+        },
+        {
+          "word": "rechazó",
+          "meaning": "dijo que no a algo"
+        },
+        {
+          "word": "advierto",
+          "meaning": "aviso de un posible problema"
+        }
+      ]
+    },
+    {
+      "id": "cumbre",
+      "title": "El banquete de los que llegan tarde",
+      "place": "La Cumbre · la mesa larga",
+      "context": "En la mesa infinita de la Cumbre, dos almas conversan mientras comen. Una de ellas no consigue disfrutar.",
+      "speakers": [
+        {
+          "name": "Mateo",
+          "country": "Uruguay",
+          "voice": "es-UY-MateoNeural"
+        },
+        {
+          "name": "Sofía",
+          "country": "Bolivia",
+          "voice": "es-BO-SofiaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "No entiendo cómo puedes comer tan tranquilo. Yo sigo pensando en todo lo que dejé pendiente: el trabajo, la reforma de la casa, la tesis de mi hija."
+        },
+        {
+          "s": 0,
+          "text": "Yo era igual. Me pasé los primeros meses mirando hacia abajo, preocupado por facturas que ya no eran mías."
+        },
+        {
+          "s": 1,
+          "text": "¿Y qué cambió?"
+        },
+        {
+          "s": 0,
+          "text": "Una tarde se sentó aquí una mujer que había muerto muy joven, a los diecinueve. Me dijo que le habría encantado tener cosas pendientes. Que eso significa que tenías una vida llena."
+        },
+        {
+          "s": 1,
+          "text": "Qué manera tan curiosa de verlo."
+        },
+        {
+          "s": 0,
+          "text": "Desde entonces, cada vez que me acuerdo de algo que no terminé, lo convierto en un brindis. Por la reforma que no acabé. Por el libro que dejé a medias."
+        },
+        {
+          "s": 1,
+          "text": "Por la tesis de mi hija, entonces, que la va a terminar sin mí."
+        },
+        {
+          "s": 0,
+          "text": "Esa sí que merece un brindis. Y probablemente la termine mejor de lo que crees."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Por qué Sofía no disfruta de la comida?",
+          "options": [
+            "No le gusta la comida",
+            "Piensa en lo que dejó pendiente",
+            "Está enferma"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué hacía Mateo al principio?",
+          "options": [
+            "Miraba hacia abajo, preocupado por facturas",
+            "Dormía todo el día",
+            "Buscaba a su familia"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué le dijo la mujer joven a Mateo?",
+          "options": [
+            "Que dejara de comer",
+            "Que volviera a la Tierra",
+            "Que tener cosas pendientes significa una vida llena"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué hace ahora Mateo con lo que no terminó?",
+          "options": [
+            "Lo escribe en una lista",
+            "Lo convierte en un brindis",
+            "Lo olvida en el río"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué tienes pendiente ahora mismo que te preocupa?",
+          "model": "Tengo que terminar un proyecto y llamar a un amigo al que no veo hace meses."
+        },
+        {
+          "q": "¿Te cuesta disfrutar cuando tienes cosas sin terminar?",
+          "model": "Muchísimo, siempre estoy pensando en la próxima tarea."
+        },
+        {
+          "q": "¿Qué opinas de la idea de que lo pendiente es señal de una vida llena?",
+          "model": "Me parece bonita, aunque no siempre la puedo aplicar."
+        }
+      ],
+      "gaps": "Desde entonces, cada vez que me acuerdo de algo que no [terminé], lo convierto en un [brindis]. Por la [reforma] que no acabé. Por el libro que dejé [a medias].",
+      "glossary": [
+        {
+          "word": "pendiente",
+          "meaning": "que todavía no está hecho"
+        },
+        {
+          "word": "facturas",
+          "meaning": "papeles con lo que hay que pagar"
+        },
+        {
+          "word": "tesis",
+          "meaning": "trabajo largo de investigación en la universidad"
+        },
+        {
+          "word": "a medias",
+          "meaning": "sin terminar"
+        }
+      ]
+    },
+    {
+      "id": "antesala",
+      "title": "Reclamación en la ventanilla",
+      "place": "La Antesala · la ventanilla de reclamaciones",
+      "context": "Un alma recién llegada al Infierno presenta una reclamación ante Mara, la demonio de la ventanilla.",
+      "speakers": [
+        {
+          "name": "Mara",
+          "country": "España",
+          "voice": "es-ES-XimenaNeural"
+        },
+        {
+          "name": "Víctor",
+          "country": "Puerto Rico",
+          "voice": "es-PR-VictorNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Quiero presentar una queja formal. Yo no debería estar aquí. Nunca maté a nadie, pagaba mis impuestos, iba a misa en Navidad."
+        },
+        {
+          "s": 0,
+          "text": "Formulario siete. Motivo de la reclamación, en una línea."
+        },
+        {
+          "s": 1,
+          "text": "¿En una línea? Mi vida no cabe en una línea."
+        },
+        {
+          "s": 0,
+          "text": "Nadie dice que quepa. Pero el motivo, sí. Lo curioso es que nadie llega al Infierno por lo que dice usted."
+        },
+        {
+          "s": 1,
+          "text": "¿Entonces por qué estoy aquí?"
+        },
+        {
+          "s": 0,
+          "text": "Porque usted eligió venir primero. En el Umbral. ¿No se acuerda? Dijo, cito textualmente: «Prefiero saber lo peor cuanto antes»."
+        },
+        {
+          "s": 1,
+          "text": "Ah… sí. Es que siempre he sido así. Leo el final de las novelas antes de empezar."
+        },
+        {
+          "s": 0,
+          "text": "Pues aquí tiene el final, o una parte. Mire a su alrededor: aquí nadie le castiga. Lo que encuentra es lo que trae consigo. Si quiere, puede irse ahora mismo. Pero casi todos se quedan a ver si es tan grave como temían."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué quiere hacer Víctor?",
+          "options": [
+            "Pedir un abogado",
+            "Presentar una queja formal",
+            "Volver a la Tierra"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Por qué está Víctor en el Infierno?",
+          "options": [
+            "Porque eligió venir primero",
+            "Porque hizo algo terrible",
+            "Porque no pagaba impuestos"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué hace Víctor con las novelas?",
+          "options": [
+            "No las termina nunca",
+            "Las regala",
+            "Lee el final antes de empezar"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué encuentra cada alma en el Infierno, según Mara?",
+          "options": [
+            "Un castigo justo",
+            "Lo que trae consigo",
+            "Fuego eterno"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Prefieres saber lo peor cuanto antes o mantener la esperanza? ¿Por qué?",
+          "model": "Prefiero saberlo, porque la incertidumbre me agota más que las malas noticias."
+        },
+        {
+          "q": "¿Crees que «ser buena persona» es solo no hacer cosas malas?",
+          "model": "No, creo que también hay que hacer algo bueno por los demás."
+        },
+        {
+          "q": "Si tu vida tuviera que caber en una línea, ¿qué dirías?",
+          "model": "Diría que intenté que la gente a mi alrededor estuviera bien."
+        }
+      ],
+      "gaps": "Mire a su [alrededor]: aquí nadie le [castiga]. Lo que encuentra es lo que [trae consigo]. Si quiere, puede irse [ahora mismo].",
+      "glossary": [
+        {
+          "word": "queja",
+          "meaning": "protesta porque algo no te parece bien"
+        },
+        {
+          "word": "impuestos",
+          "meaning": "dinero que se paga al Estado"
+        },
+        {
+          "word": "textualmente",
+          "meaning": "con las mismas palabras exactas"
+        },
+        {
+          "word": "temían",
+          "meaning": "tenían miedo de algo"
+        }
+      ]
+    },
+    {
+      "id": "juicio",
+      "title": "El alegato del barquero",
+      "place": "El Juicio · el embarcadero",
+      "context": "Flegias, el barquero del río de fuego, habla solo mientras rema. Cuenta lo que ha aprendido en siglos de oficio.",
+      "speakers": [
+        {
+          "name": "Flegias",
+          "country": "Cuba",
+          "voice": "es-CU-ManuelNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Llevo tantos siglos remando que ya no recuerdo cuándo empecé. He llevado reyes, ladrones, madres, poetas. Todos suben a la barca con la misma cara: la de alguien que espera una sentencia."
+        },
+        {
+          "s": 0,
+          "text": "Y todos me pagan con una moneda que no es de oro, sino un recuerdo. Al principio me parecía un negocio extraño. Ahora creo que es lo más justo que existe."
+        },
+        {
+          "s": 0,
+          "text": "Porque fíjense en lo que eligen dar. Los avaros dan sus recuerdos más felices, como si quisieran deshacerse de ellos rápido. Los generosos, en cambio, dudan mucho. Se aferran a una tarde cualquiera con sus hijos, a una canción."
+        },
+        {
+          "s": 0,
+          "text": "Hay un detalle que nadie sabe: los recuerdos no desaparecen. Los guardo en el fondo de la barca. A veces, en las noches largas, los miro."
+        },
+        {
+          "s": 0,
+          "text": "Supongo que por eso no me he ido nunca. Porque tengo aquí la colección más bonita del mundo, y ninguna vida propia."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué cara tienen todos los que suben a la barca?",
+          "options": [
+            "La de alguien que espera una sentencia",
+            "La de alguien feliz",
+            "La de alguien dormido"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Con qué pagan los pasajeros?",
+          "options": [
+            "Con oro",
+            "Con un recuerdo",
+            "Con una promesa"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué hacen los generosos antes de pagar?",
+          "options": [
+            "Pagan rápido",
+            "Se niegan",
+            "Dudan mucho"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué hace Flegias con los recuerdos?",
+          "options": [
+            "Los tira al río",
+            "Los guarda en el fondo de la barca",
+            "Los vende"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué recuerdo tuyo nunca darías como pago? ¿Por qué ese?",
+          "model": "Una tarde con mi abuela en la cocina, porque es la última vez que la vi sana."
+        },
+        {
+          "q": "¿Te identificas con el barquero, que vive de las historias de otros?",
+          "model": "Un poco, a veces siento que vivo más las vidas de mis amigos que la mía."
+        },
+        {
+          "q": "¿Qué dice de una persona el recuerdo que más protege?",
+          "model": "Creo que dice lo que realmente valora, aunque no lo diga en voz alta."
+        }
+      ],
+      "gaps": "Los [generosos], en cambio, [dudan] mucho. Se [aferran] a una tarde [cualquiera] con sus hijos, a una canción.",
+      "glossary": [
+        {
+          "word": "sentencia",
+          "meaning": "decisión final de un juez"
+        },
+        {
+          "word": "avaros",
+          "meaning": "personas que no quieren dar nada"
+        },
+        {
+          "word": "se aferran",
+          "meaning": "se agarran con fuerza"
+        },
+        {
+          "word": "remando",
+          "meaning": "moviendo una barca con remos"
+        }
+      ]
+    },
+    {
+      "id": "abismo",
+      "title": "La psicóloga del Abismo",
+      "place": "El Abismo · la jaula del fondo",
+      "context": "En el fondo del Abismo, una mujer que fue psicóloga en vida habla con un alma que no quiere salir de su jaula.",
+      "speakers": [
+        {
+          "name": "Andrea",
+          "country": "Ecuador",
+          "voice": "es-EC-AndreaNeural"
+        },
+        {
+          "name": "Juan",
+          "country": "Costa Rica",
+          "voice": "es-CR-JuanNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "¿Puedo sentarme en la puerta? No voy a entrar, tranquilo."
+        },
+        {
+          "s": 1,
+          "text": "Haga lo que quiera. Ya le digo que no voy a salir."
+        },
+        {
+          "s": 0,
+          "text": "No vengo a convencerle. En vida fui psicóloga durante treinta años, y algo me quedó claro: nadie sale de una jaula porque otro le empuje."
+        },
+        {
+          "s": 1,
+          "text": "¿Entonces para qué viene?"
+        },
+        {
+          "s": 0,
+          "text": "Para preguntarle qué gana quedándose. Todos ganamos algo con nuestras jaulas. Si no, no nos quedaríamos."
+        },
+        {
+          "s": 1,
+          "text": "No gano nada. Aquí estoy solo y aburrido, y hace un frío terrible."
+        },
+        {
+          "s": 0,
+          "text": "Ya. ¿Y qué le pasaría si saliera y le fuera mal?"
+        },
+        {
+          "s": 1,
+          "text": "Pues que tendría que reconocer que el problema era yo, y no las circunstancias."
+        },
+        {
+          "s": 0,
+          "text": "Ahí lo tiene. La jaula le protege de esa pregunta. Mientras esté dentro, siempre puede pensar que fuera le habría ido bien. Es un precio alto, pero entiendo que lo pague. Mañana vuelvo, si me deja. Y pasado mañana también."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué hacía Andrea en vida?",
+          "options": [
+            "Era psicóloga",
+            "Era abogada",
+            "Era maestra"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué aprendió Andrea en su trabajo?",
+          "options": [
+            "Que todos mienten",
+            "Que la gente cambia rápido",
+            "Que nadie sale de una jaula porque otro le empuje"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué teme Juan si sale y le va mal?",
+          "options": [
+            "Volver a la Tierra",
+            "Reconocer que el problema era él",
+            "Perder a su familia"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué hará Andrea mañana?",
+          "options": [
+            "Volver, si él la deja",
+            "Cerrar la jaula",
+            "Llamar a un ángel"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué «ganas» con alguna costumbre que sabes que no te hace bien?",
+          "model": "Con dejar las cosas para mañana gano no enfrentarme al miedo de hacerlas mal."
+        },
+        {
+          "q": "¿Te ayuda más que te empujen o que te pregunten?",
+          "model": "Me ayuda más que me pregunten, porque si me empujan me cierro."
+        },
+        {
+          "q": "¿Culpas a veces a las circunstancias para no mirarte a ti?",
+          "model": "Sí, a veces digo que no tengo tiempo cuando en realidad tengo miedo."
+        }
+      ],
+      "gaps": "Para preguntarle qué [gana] quedándose. Todos ganamos algo con nuestras [jaulas]. Si no, no nos [quedaríamos]. No gano [nada].",
+      "glossary": [
+        {
+          "word": "convencerle",
+          "meaning": "hacer que cambie de opinión"
+        },
+        {
+          "word": "empuje",
+          "meaning": "mueva a alguien con fuerza"
+        },
+        {
+          "word": "reconocer",
+          "meaning": "admitir que algo es verdad"
+        },
+        {
+          "word": "circunstancias",
+          "meaning": "situación que rodea a una persona"
+        }
+      ]
+    }
+  ]
+}

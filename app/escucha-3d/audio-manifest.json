@@ -2121,6 +2121,216 @@
    "seconds": 75.62,
    "src": "/audio/escucha-3d/madrid-c2-sol.mp3"
   },
+  "masalla/a0-abismo": {
+   "hash": "7f1da3f9ff85feb80d32",
+   "seconds": 20.95,
+   "src": "/audio/escucha-3d/masalla-a0-abismo.mp3"
+  },
+  "masalla/a0-antesala": {
+   "hash": "1d014ce043ee155c518c",
+   "seconds": 32.32,
+   "src": "/audio/escucha-3d/masalla-a0-antesala.mp3"
+  },
+  "masalla/a0-archivo": {
+   "hash": "397c9139049d0fac45b7",
+   "seconds": 28.2,
+   "src": "/audio/escucha-3d/masalla-a0-archivo.mp3"
+  },
+  "masalla/a0-cumbre": {
+   "hash": "387c216212f82fcdd771",
+   "seconds": 25.26,
+   "src": "/audio/escucha-3d/masalla-a0-cumbre.mp3"
+  },
+  "masalla/a0-juicio": {
+   "hash": "03261f832d18167943a8",
+   "seconds": 28.1,
+   "src": "/audio/escucha-3d/masalla-a0-juicio.mp3"
+  },
+  "masalla/a0-portal": {
+   "hash": "f7858b5c3234fbc29e1b",
+   "seconds": 25.34,
+   "src": "/audio/escucha-3d/masalla-a0-portal.mp3"
+  },
+  "masalla/a1-abismo": {
+   "hash": "169c4166262b9f1db793",
+   "seconds": 36.94,
+   "src": "/audio/escucha-3d/masalla-a1-abismo.mp3"
+  },
+  "masalla/a1-antesala": {
+   "hash": "939fe0ca49057397cd13",
+   "seconds": 32.32,
+   "src": "/audio/escucha-3d/masalla-a1-antesala.mp3"
+  },
+  "masalla/a1-archivo": {
+   "hash": "e5a7b999f7f050b30aaf",
+   "seconds": 31.03,
+   "src": "/audio/escucha-3d/masalla-a1-archivo.mp3"
+  },
+  "masalla/a1-cumbre": {
+   "hash": "60b416cdbc0a92839bed",
+   "seconds": 32.5,
+   "src": "/audio/escucha-3d/masalla-a1-cumbre.mp3"
+  },
+  "masalla/a1-juicio": {
+   "hash": "1fcb169b8b96f998f2dc",
+   "seconds": 33.96,
+   "src": "/audio/escucha-3d/masalla-a1-juicio.mp3"
+  },
+  "masalla/a1-portal": {
+   "hash": "4726749de2efb9cecd31",
+   "seconds": 35.3,
+   "src": "/audio/escucha-3d/masalla-a1-portal.mp3"
+  },
+  "masalla/a2-abismo": {
+   "hash": "3e4f0d1ef181fc5c39f8",
+   "seconds": 37.06,
+   "src": "/audio/escucha-3d/masalla-a2-abismo.mp3"
+  },
+  "masalla/a2-antesala": {
+   "hash": "97ed44568476b20dd974",
+   "seconds": 37.39,
+   "src": "/audio/escucha-3d/masalla-a2-antesala.mp3"
+  },
+  "masalla/a2-archivo": {
+   "hash": "a165c7bef6f9e4a9e54c",
+   "seconds": 42.96,
+   "src": "/audio/escucha-3d/masalla-a2-archivo.mp3"
+  },
+  "masalla/a2-cumbre": {
+   "hash": "5d2d6805f858bb92cb75",
+   "seconds": 33.09,
+   "src": "/audio/escucha-3d/masalla-a2-cumbre.mp3"
+  },
+  "masalla/a2-juicio": {
+   "hash": "2bef4e6a4eb697f95abd",
+   "seconds": 40.26,
+   "src": "/audio/escucha-3d/masalla-a2-juicio.mp3"
+  },
+  "masalla/a2-portal": {
+   "hash": "7818885cdd80941a9dbc",
+   "seconds": 43.56,
+   "src": "/audio/escucha-3d/masalla-a2-portal.mp3"
+  },
+  "masalla/b1-abismo": {
+   "hash": "0a51cf9d0aef7b347450",
+   "seconds": 53.9,
+   "src": "/audio/escucha-3d/masalla-b1-abismo.mp3"
+  },
+  "masalla/b1-antesala": {
+   "hash": "57b1c0c4c1b1c3585b65",
+   "seconds": 45.57,
+   "src": "/audio/escucha-3d/masalla-b1-antesala.mp3"
+  },
+  "masalla/b1-archivo": {
+   "hash": "d9ebdd8c2c9c0b75608c",
+   "seconds": 52.02,
+   "src": "/audio/escucha-3d/masalla-b1-archivo.mp3"
+  },
+  "masalla/b1-cumbre": {
+   "hash": "7e299129723868e60e19",
+   "seconds": 58.43,
+   "src": "/audio/escucha-3d/masalla-b1-cumbre.mp3"
+  },
+  "masalla/b1-juicio": {
+   "hash": "32bc01243f0080418669",
+   "seconds": 54.39,
+   "src": "/audio/escucha-3d/masalla-b1-juicio.mp3"
+  },
+  "masalla/b1-portal": {
+   "hash": "197a1d50c10c659ea281",
+   "seconds": 56.39,
+   "src": "/audio/escucha-3d/masalla-b1-portal.mp3"
+  },
+  "masalla/b2-abismo": {
+   "hash": "a15839750d9f98f930e8",
+   "seconds": 68.64,
+   "src": "/audio/escucha-3d/masalla-b2-abismo.mp3"
+  },
+  "masalla/b2-antesala": {
+   "hash": "463298463d4b4bac4cda",
+   "seconds": 71.55,
+   "src": "/audio/escucha-3d/masalla-b2-antesala.mp3"
+  },
+  "masalla/b2-archivo": {
+   "hash": "f9586730e2bf53889f75",
+   "seconds": 63.46,
+   "src": "/audio/escucha-3d/masalla-b2-archivo.mp3"
+  },
+  "masalla/b2-cumbre": {
+   "hash": "5caa0588761b770c9e22",
+   "seconds": 56.27,
+   "src": "/audio/escucha-3d/masalla-b2-cumbre.mp3"
+  },
+  "masalla/b2-juicio": {
+   "hash": "50fcd95dc9890d792bc6",
+   "seconds": 69.33,
+   "src": "/audio/escucha-3d/masalla-b2-juicio.mp3"
+  },
+  "masalla/b2-portal": {
+   "hash": "668c3ed7e76168453d2a",
+   "seconds": 63.2,
+   "src": "/audio/escucha-3d/masalla-b2-portal.mp3"
+  },
+  "masalla/c1-abismo": {
+   "hash": "4880cd55b6437fedc84e",
+   "seconds": 93.72,
+   "src": "/audio/escucha-3d/masalla-c1-abismo.mp3"
+  },
+  "masalla/c1-antesala": {
+   "hash": "495b869ee9a73ffc6a5e",
+   "seconds": 77.79,
+   "src": "/audio/escucha-3d/masalla-c1-antesala.mp3"
+  },
+  "masalla/c1-archivo": {
+   "hash": "17d62caa7ca51379ed07",
+   "seconds": 84.44,
+   "src": "/audio/escucha-3d/masalla-c1-archivo.mp3"
+  },
+  "masalla/c1-cumbre": {
+   "hash": "605d57d23ca5536377c7",
+   "seconds": 74.36,
+   "src": "/audio/escucha-3d/masalla-c1-cumbre.mp3"
+  },
+  "masalla/c1-juicio": {
+   "hash": "b5322f5524fadb60d346",
+   "seconds": 84.09,
+   "src": "/audio/escucha-3d/masalla-c1-juicio.mp3"
+  },
+  "masalla/c1-portal": {
+   "hash": "e1ea8fc4f8960c855056",
+   "seconds": 70.46,
+   "src": "/audio/escucha-3d/masalla-c1-portal.mp3"
+  },
+  "masalla/c2-abismo": {
+   "hash": "41f33b952be85d4196fd",
+   "seconds": 89.56,
+   "src": "/audio/escucha-3d/masalla-c2-abismo.mp3"
+  },
+  "masalla/c2-antesala": {
+   "hash": "df45ba28b69847e38a5e",
+   "seconds": 92.4,
+   "src": "/audio/escucha-3d/masalla-c2-antesala.mp3"
+  },
+  "masalla/c2-archivo": {
+   "hash": "4d1b283cfd2533c5d524",
+   "seconds": 83.55,
+   "src": "/audio/escucha-3d/masalla-c2-archivo.mp3"
+  },
+  "masalla/c2-cumbre": {
+   "hash": "6eea27cbf2e822c1ce55",
+   "seconds": 83.57,
+   "src": "/audio/escucha-3d/masalla-c2-cumbre.mp3"
+  },
+  "masalla/c2-juicio": {
+   "hash": "ae789ed280f07502fe82",
+   "seconds": 92.07,
+   "src": "/audio/escucha-3d/masalla-c2-juicio.mp3"
+  },
+  "masalla/c2-portal": {
+   "hash": "9c325321d6edf1fafc0c",
+   "seconds": 89.48,
+   "src": "/audio/escucha-3d/masalla-c2-portal.mp3"
+  },
   "mexico/a0-cdmx": {
    "hash": "dfd0916e7003c1c16c4b",
    "seconds": 27.88,

@@ -1,0 +1,729 @@
+{
+  "game": "masalla",
+  "level": "A0",
+  "items": [
+    {
+      "id": "portal",
+      "title": "Dos almas en la fila",
+      "place": "Las Puertas de Perla · la fila",
+      "context": "Dos almas esperan en la fila de las Puertas de Perla. Se presentan.",
+      "contextEn": "Two souls wait in the line at the Pearly Gates. They introduce themselves.",
+      "speakers": [
+        {
+          "name": "Rosa",
+          "country": "México",
+          "voice": "es-MX-DaliaNeural"
+        },
+        {
+          "name": "Andrés",
+          "country": "Guatemala",
+          "voice": "es-GT-AndresNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Hola. Me llamo Rosa. Soy de México.",
+          "en": "Hello. My name is Rosa. I am from Mexico."
+        },
+        {
+          "s": 1,
+          "text": "Hola, Rosa. Yo soy Andrés. Soy de Guatemala.",
+          "en": "Hello, Rosa. I am Andrés. I am from Guatemala."
+        },
+        {
+          "s": 0,
+          "text": "¿Tienes miedo?",
+          "en": "Are you scared?"
+        },
+        {
+          "s": 1,
+          "text": "Un poco. Pero estoy tranquilo. Hay mucha luz aquí.",
+          "en": "A little. But I am calm. There is a lot of light here."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿De dónde es Rosa?",
+          "options": [
+            "De México",
+            "De Guatemala",
+            "De Chile"
+          ],
+          "answer": 0,
+          "qEn": "Where is Rosa from?"
+        },
+        {
+          "q": "¿Cómo se llama el hombre?",
+          "options": [
+            "Mateo",
+            "Andrés",
+            "Gabriel"
+          ],
+          "answer": 1,
+          "qEn": "What is the man called?"
+        },
+        {
+          "q": "¿Cómo está Andrés?",
+          "options": [
+            "Muy triste",
+            "Enfadado",
+            "Tranquilo"
+          ],
+          "answer": 2,
+          "qEn": "How is Andrés?"
+        },
+        {
+          "q": "¿Qué hay en ese lugar?",
+          "options": [
+            "Mucha luz",
+            "Mucha gente",
+            "Mucho ruido"
+          ],
+          "answer": 0,
+          "qEn": "What is there in that place?"
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Cómo te llamas?",
+          "model": "Me llamo Ana.",
+          "qEn": "What is your name?"
+        },
+        {
+          "q": "¿Tienes miedo a veces?",
+          "model": "Sí, a veces tengo miedo.",
+          "qEn": "Are you scared sometimes?"
+        },
+        {
+          "q": "¿Te gusta la luz?",
+          "model": "Sí, me gusta mucho.",
+          "qEn": "Do you like the light?"
+        }
+      ],
+      "gaps": "Un [poco]. Pero estoy [tranquilo]. Hay mucha [luz] [aquí].",
+      "glossary": [
+        {
+          "word": "miedo",
+          "meaning": "lo que sientes ante un peligro",
+          "en": "fear"
+        },
+        {
+          "word": "tranquilo",
+          "meaning": "sin nervios, en calma",
+          "en": "calm"
+        },
+        {
+          "word": "luz",
+          "meaning": "lo contrario de la oscuridad",
+          "en": "light"
+        }
+      ]
+    },
+    {
+      "id": "archivo",
+      "title": "El libro de Rosa",
+      "place": "El Archivo de las Vidas · una mesa",
+      "context": "Rosa busca el libro de su vida. Un archivero la ayuda.",
+      "contextEn": "Rosa is looking for the book of her life. An archivist helps her.",
+      "speakers": [
+        {
+          "name": "Archivero",
+          "country": "Chile",
+          "voice": "es-CL-LorenzoNeural"
+        },
+        {
+          "name": "Rosa",
+          "country": "México",
+          "voice": "es-MX-DaliaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Buenas tardes. ¿Qué libro buscas?",
+          "en": "Good afternoon. What book are you looking for?"
+        },
+        {
+          "s": 1,
+          "text": "El libro de mi vida. Me llamo Rosa Díaz.",
+          "en": "The book of my life. My name is Rosa Díaz."
+        },
+        {
+          "s": 0,
+          "text": "Aquí está. Es un libro grande y azul.",
+          "en": "Here it is. It is a big blue book."
+        },
+        {
+          "s": 1,
+          "text": "¡Qué grande! ¿Puedo leer la primera página?",
+          "en": "How big! Can I read the first page?"
+        },
+        {
+          "s": 0,
+          "text": "Sí, claro. Es tu vida.",
+          "en": "Yes, of course. It is your life."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué busca Rosa?",
+          "options": [
+            "Un mapa",
+            "Su teléfono",
+            "El libro de su vida"
+          ],
+          "answer": 2,
+          "qEn": "What is Rosa looking for?"
+        },
+        {
+          "q": "¿De qué color es el libro?",
+          "options": [
+            "Rojo",
+            "Azul",
+            "Verde"
+          ],
+          "answer": 1,
+          "qEn": "What color is the book?"
+        },
+        {
+          "q": "¿Cómo es el libro?",
+          "options": [
+            "Grande",
+            "Pequeño",
+            "Viejo"
+          ],
+          "answer": 0,
+          "qEn": "What is the book like?"
+        },
+        {
+          "q": "¿Qué quiere leer Rosa?",
+          "options": [
+            "La última página",
+            "La primera página",
+            "Un poema"
+          ],
+          "answer": 1,
+          "qEn": "What does Rosa want to read?"
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Te gusta leer?",
+          "model": "Sí, leo todas las noches.",
+          "qEn": "Do you like reading?"
+        },
+        {
+          "q": "¿Qué color te gusta?",
+          "model": "Me gusta el azul.",
+          "qEn": "What color do you like?"
+        },
+        {
+          "q": "¿Quieres leer el libro de tu vida?",
+          "model": "No, me da miedo.",
+          "qEn": "Do you want to read the book of your life?"
+        }
+      ],
+      "gaps": "Aquí está. Es un [libro] [grande] y [azul]. ¡Qué [grande]!",
+      "glossary": [
+        {
+          "word": "libro",
+          "meaning": "objeto con páginas para leer",
+          "en": "book"
+        },
+        {
+          "word": "página",
+          "meaning": "una hoja de un libro",
+          "en": "page"
+        },
+        {
+          "word": "vida",
+          "meaning": "el tiempo entre nacer y morir",
+          "en": "life"
+        }
+      ]
+    },
+    {
+      "id": "cumbre",
+      "title": "Una mesa en la Cumbre",
+      "place": "La Cumbre · el banquete",
+      "context": "En el banquete de la Cumbre, una mujer habla de su comida favorita.",
+      "contextEn": "At the banquet on the Summit, a woman talks about her favorite food.",
+      "speakers": [
+        {
+          "name": "Lucía",
+          "country": "Argentina",
+          "voice": "es-AR-ElenaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Hola. Soy Lucía. Estoy en la Cumbre. Aquí hay una mesa muy larga.",
+          "en": "Hello. I am Lucía. I am at the Summit. There is a very long table here."
+        },
+        {
+          "s": 0,
+          "text": "Hay pan, fruta y empanadas. Las empanadas son mi comida favorita.",
+          "en": "There is bread, fruit and empanadas. Empanadas are my favorite food."
+        },
+        {
+          "s": 0,
+          "text": "Pero lo mejor no es la comida. Lo mejor es la gente.",
+          "en": "But the best thing is not the food. The best thing is the people."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Dónde está Lucía?",
+          "options": [
+            "En el hospital",
+            "En la Cumbre",
+            "En el río"
+          ],
+          "answer": 1,
+          "qEn": "Where is Lucía?"
+        },
+        {
+          "q": "¿Cómo es la mesa?",
+          "options": [
+            "Muy larga",
+            "Muy pequeña",
+            "Redonda"
+          ],
+          "answer": 0,
+          "qEn": "What is the table like?"
+        },
+        {
+          "q": "¿Cuál es su comida favorita?",
+          "options": [
+            "La fruta",
+            "El pan",
+            "Las empanadas"
+          ],
+          "answer": 2,
+          "qEn": "What is her favorite food?"
+        },
+        {
+          "q": "Para Lucía, ¿qué es lo mejor?",
+          "options": [
+            "La comida",
+            "La gente",
+            "La música"
+          ],
+          "answer": 1,
+          "qEn": "For Lucía, what is the best thing?"
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Cuál es tu comida favorita?",
+          "model": "Mi comida favorita es la pasta.",
+          "qEn": "What is your favorite food?"
+        },
+        {
+          "q": "¿Comes con tu familia?",
+          "model": "Sí, los domingos.",
+          "qEn": "Do you eat with your family?"
+        },
+        {
+          "q": "¿Qué es lo mejor de tu día?",
+          "model": "Lo mejor es el café de la mañana.",
+          "qEn": "What is the best part of your day?"
+        }
+      ],
+      "gaps": "Hay [pan], [fruta] y empanadas. Las empanadas son mi [comida] [favorita].",
+      "glossary": [
+        {
+          "word": "mesa",
+          "meaning": "mueble para comer",
+          "en": "table"
+        },
+        {
+          "word": "fruta",
+          "meaning": "manzana, plátano, naranja…",
+          "en": "fruit"
+        },
+        {
+          "word": "gente",
+          "meaning": "muchas personas",
+          "en": "people"
+        },
+        {
+          "word": "favorita",
+          "meaning": "la que más te gusta",
+          "en": "favorite"
+        }
+      ]
+    },
+    {
+      "id": "antesala",
+      "title": "La ventanilla seis",
+      "place": "La Antesala · la ventanilla",
+      "context": "En la Antesala del Infierno, una demonio trabaja en una ventanilla. Llega un alma nueva.",
+      "contextEn": "In the Antechamber of Hell, a demon works at a window. A new soul arrives.",
+      "speakers": [
+        {
+          "name": "Mara",
+          "country": "España",
+          "voice": "es-ES-XimenaNeural"
+        },
+        {
+          "name": "Jorge",
+          "country": "Perú",
+          "voice": "es-PE-AlexNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Siguiente. Nombre, por favor.",
+          "en": "Next. Name, please."
+        },
+        {
+          "s": 1,
+          "text": "Jorge. Jorge Quispe. Soy de Perú.",
+          "en": "Jorge. Jorge Quispe. I am from Peru."
+        },
+        {
+          "s": 0,
+          "text": "Muy bien, Jorge. Aquí tienes un papel. Escribe tu nombre.",
+          "en": "Very good, Jorge. Here is a paper. Write your name."
+        },
+        {
+          "s": 1,
+          "text": "¿Y después?",
+          "en": "And after that?"
+        },
+        {
+          "s": 0,
+          "text": "Después esperas. Aquí todos esperan mucho.",
+          "en": "After that you wait. Here everybody waits a lot."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿De dónde es Jorge?",
+          "options": [
+            "De Perú",
+            "De España",
+            "De Cuba"
+          ],
+          "answer": 0,
+          "qEn": "Where is Jorge from?"
+        },
+        {
+          "q": "¿Qué le da Mara?",
+          "options": [
+            "Una llave",
+            "Un papel",
+            "Un café"
+          ],
+          "answer": 1,
+          "qEn": "What does Mara give him?"
+        },
+        {
+          "q": "¿Qué escribe Jorge?",
+          "options": [
+            "Su edad",
+            "Su país",
+            "Su nombre"
+          ],
+          "answer": 2,
+          "qEn": "What does Jorge write?"
+        },
+        {
+          "q": "¿Qué hacen todos allí?",
+          "options": [
+            "Esperan mucho",
+            "Duermen",
+            "Bailan"
+          ],
+          "answer": 0,
+          "qEn": "What does everybody do there?"
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Esperas mucho en tu vida?",
+          "model": "Sí, espero mucho en el médico.",
+          "qEn": "Do you wait a lot in your life?"
+        },
+        {
+          "q": "¿Te gusta escribir?",
+          "model": "No mucho.",
+          "qEn": "Do you like writing?"
+        },
+        {
+          "q": "¿Dónde esperas el autobús?",
+          "model": "En la esquina de mi casa.",
+          "qEn": "Where do you wait for the bus?"
+        }
+      ],
+      "gaps": "Muy bien, Jorge. Aquí tienes un [papel]. Escribe tu [nombre]. ¿Y [después]? Después [esperas].",
+      "glossary": [
+        {
+          "word": "nombre",
+          "meaning": "cómo te llamas",
+          "en": "name"
+        },
+        {
+          "word": "papel",
+          "meaning": "hoja para escribir",
+          "en": "paper"
+        },
+        {
+          "word": "esperas",
+          "meaning": "estás quieto hasta que llega algo",
+          "en": "you wait"
+        }
+      ]
+    },
+    {
+      "id": "juicio",
+      "title": "El barquero y la moneda",
+      "place": "El Juicio · el río de fuego",
+      "context": "El barquero lleva almas en su barca. Una mujer quiere subir.",
+      "contextEn": "The ferryman carries souls in his boat. A woman wants to get on.",
+      "speakers": [
+        {
+          "name": "Flegias",
+          "country": "Cuba",
+          "voice": "es-CU-ManuelNeural"
+        },
+        {
+          "name": "Teresa",
+          "country": "Guinea Ecuatorial",
+          "voice": "es-GQ-TeresaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Hola. ¿Quieres cruzar el río?",
+          "en": "Hello. Do you want to cross the river?"
+        },
+        {
+          "s": 1,
+          "text": "Sí, por favor. ¿Cuánto cuesta?",
+          "en": "Yes, please. How much is it?"
+        },
+        {
+          "s": 0,
+          "text": "Una moneda. Pero no es dinero. Es un recuerdo.",
+          "en": "One coin. But it is not money. It is a memory."
+        },
+        {
+          "s": 1,
+          "text": "Un recuerdo… Bueno. Te doy el recuerdo de mi primer trabajo.",
+          "en": "A memory… Okay. I give you the memory of my first job."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué quiere hacer Teresa?",
+          "options": [
+            "Nadar",
+            "Cruzar el río",
+            "Dormir"
+          ],
+          "answer": 1,
+          "qEn": "What does Teresa want to do?"
+        },
+        {
+          "q": "¿Cuánto cuesta?",
+          "options": [
+            "Una moneda",
+            "Diez euros",
+            "Nada"
+          ],
+          "answer": 0,
+          "qEn": "How much is it?"
+        },
+        {
+          "q": "¿Qué es la moneda?",
+          "options": [
+            "Un papel",
+            "Una piedra",
+            "Un recuerdo"
+          ],
+          "answer": 2,
+          "qEn": "What is the coin?"
+        },
+        {
+          "q": "¿Qué recuerdo da Teresa?",
+          "options": [
+            "Su boda",
+            "Su primer trabajo",
+            "Su casa"
+          ],
+          "answer": 1,
+          "qEn": "What memory does Teresa give?"
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Tienes un recuerdo bonito?",
+          "model": "Sí, un viaje con mi hermana.",
+          "qEn": "Do you have a nice memory?"
+        },
+        {
+          "q": "¿Cómo fue tu primer trabajo?",
+          "model": "Fue en una tienda.",
+          "qEn": "What was your first job like?"
+        },
+        {
+          "q": "¿Te gustan los barcos?",
+          "model": "No, me mareo.",
+          "qEn": "Do you like boats?"
+        }
+      ],
+      "gaps": "Una [moneda]. Pero no es [dinero]. Es un [recuerdo]. Un recuerdo… [Bueno].",
+      "glossary": [
+        {
+          "word": "cruzar",
+          "meaning": "ir al otro lado",
+          "en": "to cross"
+        },
+        {
+          "word": "moneda",
+          "meaning": "dinero de metal, redondo",
+          "en": "coin"
+        },
+        {
+          "word": "recuerdo",
+          "meaning": "algo del pasado que tienes en la cabeza",
+          "en": "memory"
+        }
+      ]
+    },
+    {
+      "id": "abismo",
+      "title": "La jaula abierta",
+      "place": "El Abismo · las jaulas",
+      "context": "En el Abismo hay jaulas abiertas. Dos hombres hablan dentro de sus jaulas.",
+      "contextEn": "In the Abyss there are open cages. Two men talk inside their cages.",
+      "speakers": [
+        {
+          "name": "Ramiro",
+          "country": "Uruguay",
+          "voice": "es-UY-MateoNeural"
+        },
+        {
+          "name": "Carlos",
+          "country": "Honduras",
+          "voice": "es-HN-CarlosNeural"
+        },
+        {
+          "name": "Lucero",
+          "country": "Venezuela",
+          "voice": "es-VE-PaolaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "La puerta está abierta, Carlos.",
+          "en": "The door is open, Carlos."
+        },
+        {
+          "s": 1,
+          "text": "Sí, Ramiro. Pero no quiero salir.",
+          "en": "Yes, Ramiro. But I do not want to go out."
+        },
+        {
+          "s": 0,
+          "text": "¿Por qué?",
+          "en": "Why?"
+        },
+        {
+          "s": 1,
+          "text": "Aquí estoy solo, pero estoy seguro.",
+          "en": "Here I am alone, but I am safe."
+        },
+        {
+          "s": 2,
+          "text": "Siempre dicen lo mismo.",
+          "en": "They always say the same thing."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cómo está la puerta?",
+          "options": [
+            "Cerrada",
+            "Rota",
+            "Abierta"
+          ],
+          "answer": 2,
+          "qEn": "How is the door?"
+        },
+        {
+          "q": "¿Qué no quiere hacer Carlos?",
+          "options": [
+            "Salir",
+            "Comer",
+            "Hablar"
+          ],
+          "answer": 0,
+          "qEn": "What does Carlos not want to do?"
+        },
+        {
+          "q": "¿Cómo está Carlos en la jaula?",
+          "options": [
+            "Feliz y con amigos",
+            "Solo, pero seguro",
+            "Enfermo"
+          ],
+          "answer": 1,
+          "qEn": "How is Carlos in the cage?"
+        },
+        {
+          "q": "¿Qué dice Lucero?",
+          "options": [
+            "Siempre dicen lo mismo",
+            "La puerta está cerrada",
+            "Vamos a comer"
+          ],
+          "answer": 0,
+          "qEn": "What does Lucero say?"
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Hay algo que te da miedo cambiar?",
+          "model": "Sí, mi trabajo.",
+          "qEn": "Is there something you are scared to change?"
+        },
+        {
+          "q": "¿Te gusta estar solo o sola?",
+          "model": "A veces sí.",
+          "qEn": "Do you like being alone?"
+        },
+        {
+          "q": "¿Dónde te sientes seguro o segura?",
+          "model": "En mi casa.",
+          "qEn": "Where do you feel safe?"
+        }
+      ],
+      "gaps": "Aquí estoy [solo], pero estoy [seguro]. Siempre [dicen] lo [mismo].",
+      "glossary": [
+        {
+          "word": "abierta",
+          "meaning": "lo contrario de cerrada",
+          "en": "open"
+        },
+        {
+          "word": "salir",
+          "meaning": "ir afuera",
+          "en": "to go out"
+        },
+        {
+          "word": "seguro",
+          "meaning": "sin peligro",
+          "en": "safe"
+        }
+      ]
+    }
+  ]
+}

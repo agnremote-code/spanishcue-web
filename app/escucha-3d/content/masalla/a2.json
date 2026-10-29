@@ -1,0 +1,687 @@
+{
+  "game": "masalla",
+  "level": "A2",
+  "items": [
+    {
+      "id": "portal",
+      "title": "Un jardín sin relojes",
+      "place": "Las Puertas de Perla · el jardín",
+      "context": "En el jardín que hay detrás de las Puertas de Perla, una recién llegada habla con un hombre que lleva allí muchos años.",
+      "speakers": [
+        {
+          "name": "Andrea",
+          "country": "Ecuador",
+          "voice": "es-EC-AndreaNeural"
+        },
+        {
+          "name": "Federico",
+          "country": "Nicaragua",
+          "voice": "es-NI-FedericoNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Perdone, ¿qué hora es? No encuentro ningún reloj."
+        },
+        {
+          "s": 1,
+          "text": "Aquí no hay relojes. Yo también lo buscaba todo el tiempo cuando llegué."
+        },
+        {
+          "s": 0,
+          "text": "Es que en la Tierra siempre tenía prisa. Me levantaba a las seis, llevaba a los niños al colegio, trabajaba diez horas…"
+        },
+        {
+          "s": 1,
+          "text": "Lo sé. Yo era médico. Comía de pie, en cinco minutos."
+        },
+        {
+          "s": 0,
+          "text": "¿Y ahora qué hace todo el día?"
+        },
+        {
+          "s": 1,
+          "text": "Miro las flores. Hablo con la gente sin mirar el teléfono. Al principio me aburría. Ahora creo que es lo más importante que he hecho nunca."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué busca Andrea?",
+          "options": [
+            "Un reloj",
+            "A sus hijos",
+            "La salida"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿A qué hora se levantaba Andrea?",
+          "options": [
+            "A las ocho",
+            "A las seis",
+            "A las diez"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué trabajo tenía Federico?",
+          "options": [
+            "Profesor",
+            "Jardinero",
+            "Médico"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué sentía Federico al principio?",
+          "options": [
+            "Se aburría",
+            "Tenía miedo",
+            "Estaba feliz"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Tienes prisa todos los días? ¿Por qué?",
+          "model": "Sí, porque trabajo lejos de casa y salgo muy temprano."
+        },
+        {
+          "q": "¿Qué harías en un día sin reloj?",
+          "model": "Caminaría por la playa y cocinaría sin mirar la hora."
+        },
+        {
+          "q": "¿Qué es lo más importante que has hecho en tu vida?",
+          "model": "Creo que cuidar a mi padre cuando estaba enfermo."
+        }
+      ],
+      "gaps": "Yo era médico. Comía [de pie], en [cinco minutos]. ¿Y ahora qué hace [todo el día]? Miro las [flores].",
+      "glossary": [
+        {
+          "word": "prisa",
+          "meaning": "necesidad de hacer algo rápido"
+        },
+        {
+          "word": "reloj",
+          "meaning": "objeto que marca la hora"
+        },
+        {
+          "word": "de pie",
+          "meaning": "sin sentarse"
+        },
+        {
+          "word": "me aburría",
+          "meaning": "no tenía nada interesante que hacer"
+        }
+      ]
+    },
+    {
+      "id": "archivo",
+      "title": "El capítulo que falta",
+      "place": "El Archivo de las Vidas · la estantería",
+      "context": "Uriel, el ángel del Archivo, explica a un alma por qué falta un capítulo en el libro de su vida.",
+      "speakers": [
+        {
+          "name": "Uriel",
+          "country": "España",
+          "voice": "es-ES-AlvaroNeural"
+        },
+        {
+          "name": "Paloma",
+          "country": "Estados Unidos",
+          "voice": "es-US-PalomaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Mire, en mi libro falta un capítulo. Pasa del año noventa y ocho al año dos mil cinco."
+        },
+        {
+          "s": 0,
+          "text": "No falta. Está en blanco. Usted vivió esos años, pero no los miró."
+        },
+        {
+          "s": 1,
+          "text": "¿Cómo que no los miré? Trabajaba, pagaba la casa, cuidaba a mi hermano."
+        },
+        {
+          "s": 0,
+          "text": "Exacto. Hacía muchas cosas, pero siempre pensaba en lo siguiente. Por eso las páginas no tienen palabras."
+        },
+        {
+          "s": 1,
+          "text": "¿Y puedo escribirlas ahora?"
+        },
+        {
+          "s": 0,
+          "text": "Puede recordar. Si recuerda con cariño, las palabras aparecen poco a poco."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué años faltan en el libro?",
+          "options": [
+            "De 1998 a 2005",
+            "De 2005 a 2010",
+            "De 1990 a 1995"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Según Uriel, ¿cómo está el capítulo?",
+          "options": [
+            "Roto",
+            "Escondido",
+            "En blanco"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿A quién cuidaba Paloma?",
+          "options": [
+            "A su madre",
+            "A su hermano",
+            "A sus hijos"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cómo aparecen las palabras?",
+          "options": [
+            "Si recuerda con cariño",
+            "Si paga dinero",
+            "Si espera un año"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Hay años de tu vida que recuerdas poco? ¿Por qué crees que pasa?",
+          "model": "Sí, los años de la universidad, porque estaba siempre cansada."
+        },
+        {
+          "q": "¿Piensas mucho en lo siguiente o vives el momento?",
+          "model": "Pienso demasiado en lo siguiente, sobre todo en el trabajo."
+        },
+        {
+          "q": "¿Qué capítulo de tu vida te gusta recordar?",
+          "model": "Me gusta recordar mi primer viaje sola."
+        }
+      ],
+      "gaps": "Hacía muchas cosas, pero siempre pensaba en [lo siguiente]. Por eso las [páginas] no tienen [palabras]. ¿Y puedo [escribirlas] ahora?",
+      "glossary": [
+        {
+          "word": "capítulo",
+          "meaning": "una parte de un libro"
+        },
+        {
+          "word": "en blanco",
+          "meaning": "sin nada escrito"
+        },
+        {
+          "word": "lo siguiente",
+          "meaning": "lo que viene después"
+        },
+        {
+          "word": "con cariño",
+          "meaning": "con amor, con ternura"
+        }
+      ]
+    },
+    {
+      "id": "cumbre",
+      "title": "El brindis de la Cumbre",
+      "place": "La Cumbre · el banquete",
+      "context": "En el banquete de la Cumbre, una mujer se levanta y hace un brindis. Habla sola delante de todos.",
+      "speakers": [
+        {
+          "name": "Valentina",
+          "country": "Uruguay",
+          "voice": "es-UY-ValentinaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Buenas noches a todos. Bueno, aquí siempre es de día, pero yo digo buenas noches por costumbre."
+        },
+        {
+          "s": 0,
+          "text": "Quiero hacer un brindis. En la Tierra nunca hacía brindis porque me daba vergüenza hablar en público."
+        },
+        {
+          "s": 0,
+          "text": "Hoy brindo por las cosas pequeñas: el pan caliente de la mañana, la voz de mi hija por teléfono, las tardes de lluvia con un libro."
+        },
+        {
+          "s": 0,
+          "text": "Nunca pensé que eran importantes. Ahora sé que eran casi todo. ¡Salud!"
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Por qué dice «buenas noches»?",
+          "options": [
+            "Porque es de noche",
+            "Por costumbre",
+            "Porque está cansada"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Por qué no hacía brindis en la Tierra?",
+          "options": [
+            "Porque no bebía",
+            "Porque no tenía amigos",
+            "Porque le daba vergüenza"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Por qué cosas brinda?",
+          "options": [
+            "Por las cosas pequeñas",
+            "Por el dinero",
+            "Por su trabajo"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué hacía en las tardes de lluvia?",
+          "options": [
+            "Dormía",
+            "Leía un libro",
+            "Cocinaba"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Te da vergüenza hablar en público? ¿Cuándo?",
+          "model": "Sí, en las reuniones del trabajo me pongo roja."
+        },
+        {
+          "q": "¿Por qué cosas pequeñas brindarías tú?",
+          "model": "Por el café con mi pareja los domingos."
+        },
+        {
+          "q": "¿Qué haces en una tarde de lluvia?",
+          "model": "Veo una película y como algo dulce."
+        }
+      ],
+      "gaps": "Hoy brindo por las [cosas pequeñas]: el pan [caliente] de la mañana, la [voz] de mi hija por [teléfono], las tardes de lluvia con un libro.",
+      "glossary": [
+        {
+          "word": "brindis",
+          "meaning": "palabras que dices antes de beber, levantando la copa"
+        },
+        {
+          "word": "vergüenza",
+          "meaning": "sentimiento de incomodidad delante de otros"
+        },
+        {
+          "word": "por costumbre",
+          "meaning": "porque lo haces siempre"
+        },
+        {
+          "word": "salud",
+          "meaning": "palabra que se dice al brindar"
+        }
+      ]
+    },
+    {
+      "id": "antesala",
+      "title": "La sala de los espejos",
+      "place": "La Antesala · los espejos",
+      "context": "En la sala de los espejos del Infierno, una mujer y un hombre ven cosas raras en su reflejo.",
+      "speakers": [
+        {
+          "name": "Valeria",
+          "country": "Chile",
+          "voice": "es-CL-CatalinaNeural"
+        },
+        {
+          "name": "Rodrigo",
+          "country": "El Salvador",
+          "voice": "es-SV-RodrigoNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Este espejo está mal. Yo no tengo esa cara tan seria."
+        },
+        {
+          "s": 0,
+          "text": "No está mal. Este espejo muestra la cara que pones cuando nadie te mira."
+        },
+        {
+          "s": 1,
+          "text": "¿En serio? Parezco enfadado con el mundo."
+        },
+        {
+          "s": 0,
+          "text": "Muchos se sorprenden. Hay otro espejo que muestra la cara que pones para los demás. Siempre sonríe."
+        },
+        {
+          "s": 1,
+          "text": "Entonces tengo dos caras. Una para mí y otra para la gente."
+        },
+        {
+          "s": 0,
+          "text": "Como casi todos. La pregunta es cuál de las dos te cansa más."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué cara ve Rodrigo en el espejo?",
+          "options": [
+            "Una cara muy seria",
+            "Una cara joven",
+            "Una cara feliz"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué muestra el primer espejo?",
+          "options": [
+            "El futuro",
+            "La cara de otra persona",
+            "La cara cuando nadie te mira"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cómo es la cara del otro espejo?",
+          "options": [
+            "Llora",
+            "Siempre sonríe",
+            "No tiene ojos"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué pregunta hace Valeria al final?",
+          "options": [
+            "Cuál de las dos caras le cansa más",
+            "Cuántos años tiene",
+            "Dónde vive"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Pones una cara distinta cuando estás solo o sola?",
+          "model": "Sí, cuando estoy sola estoy más seria."
+        },
+        {
+          "q": "¿Te cansa sonreír cuando no quieres? ¿Cuándo pasa?",
+          "model": "Sí, pasa mucho en mi trabajo con clientes."
+        },
+        {
+          "q": "¿Te gusta mirarte en el espejo?",
+          "model": "No mucho, solo por la mañana para peinarme."
+        }
+      ],
+      "gaps": "Hay otro [espejo] que muestra la cara que pones para [los demás]. Siempre [sonríe]. Entonces tengo [dos caras].",
+      "glossary": [
+        {
+          "word": "espejo",
+          "meaning": "cristal donde ves tu imagen"
+        },
+        {
+          "word": "seria",
+          "meaning": "que no sonríe"
+        },
+        {
+          "word": "parezco",
+          "meaning": "tengo el aspecto de"
+        },
+        {
+          "word": "se sorprenden",
+          "meaning": "se quedan con la boca abierta, no lo esperan"
+        }
+      ]
+    },
+    {
+      "id": "juicio",
+      "title": "La última moneda",
+      "place": "El Juicio · la barca",
+      "context": "En la barca del río de fuego, el barquero habla con un hombre que no quiere pagar.",
+      "speakers": [
+        {
+          "name": "Flegias",
+          "country": "Cuba",
+          "voice": "es-CU-ManuelNeural"
+        },
+        {
+          "name": "Gonzalo",
+          "country": "Colombia",
+          "voice": "es-CO-GonzaloNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Para cruzar hay que pagar. Una moneda: un recuerdo feliz."
+        },
+        {
+          "s": 1,
+          "text": "¿Y si no pago?"
+        },
+        {
+          "s": 0,
+          "text": "Entonces te quedas aquí, en la orilla, con todos tus recuerdos y sin poder avanzar."
+        },
+        {
+          "s": 1,
+          "text": "Es que solo tengo un recuerdo muy feliz. El día que nació mi hijo. No quiero perderlo."
+        },
+        {
+          "s": 0,
+          "text": "Muchos dicen lo mismo. Y se quedan años en la orilla, abrazados a un solo día."
+        },
+        {
+          "s": 1,
+          "text": "¿Y usted qué haría?"
+        },
+        {
+          "s": 0,
+          "text": "Yo soy barquero. Yo nunca cruzo."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué hay que pagar para cruzar?",
+          "options": [
+            "Dinero",
+            "Un recuerdo feliz",
+            "Una promesa"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué pasa si no pagas?",
+          "options": [
+            "Te quedas en la orilla",
+            "Caes al río",
+            "Vuelves a la Tierra"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cuál es el recuerdo más feliz de Gonzalo?",
+          "options": [
+            "Su boda",
+            "Su primer trabajo",
+            "El día que nació su hijo"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué responde el barquero al final?",
+          "options": [
+            "Que él cruza todos los días",
+            "Que él nunca cruza",
+            "Que no sabe nadar"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Cuál es tu recuerdo más feliz? ¿Lo darías para avanzar?",
+          "model": "El día de mi graduación. No sé si lo daría."
+        },
+        {
+          "q": "¿Te cuesta dejar atrás el pasado?",
+          "model": "Sí, pienso mucho en mi antigua ciudad."
+        },
+        {
+          "q": "¿Conoces a alguien que vive «en la orilla», sin avanzar?",
+          "model": "Sí, un amigo que no supera su divorcio."
+        }
+      ],
+      "gaps": "Muchos dicen [lo mismo]. Y se quedan [años] en la [orilla], abrazados a [un solo día].",
+      "glossary": [
+        {
+          "word": "orilla",
+          "meaning": "el borde de un río o del mar"
+        },
+        {
+          "word": "cruzar",
+          "meaning": "pasar al otro lado"
+        },
+        {
+          "word": "barquero",
+          "meaning": "persona que lleva una barca"
+        },
+        {
+          "word": "avanzar",
+          "meaning": "ir hacia delante"
+        }
+      ]
+    },
+    {
+      "id": "abismo",
+      "title": "Cartas desde la jaula",
+      "place": "El Abismo · las jaulas",
+      "context": "En el Abismo, un hombre lee en voz alta la carta que escribe desde su jaula abierta.",
+      "speakers": [
+        {
+          "name": "Ramiro",
+          "country": "Uruguay",
+          "voice": "es-UY-MateoNeural"
+        },
+        {
+          "name": "Karla",
+          "country": "Honduras",
+          "voice": "es-HN-KarlaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Querida Inés: te escribo desde una jaula. La puerta está abierta, pero no salgo."
+        },
+        {
+          "s": 0,
+          "text": "Afuera hay un camino largo y no sé adónde va. Aquí dentro todo es conocido: el frío, el silencio, mis quejas."
+        },
+        {
+          "s": 1,
+          "text": "Ramiro, ¿a quién le escribes?"
+        },
+        {
+          "s": 0,
+          "text": "A mi exmujer. Nunca le dije que tenía miedo. Siempre le decía que estaba ocupado."
+        },
+        {
+          "s": 1,
+          "text": "¿Y vas a enviar la carta?"
+        },
+        {
+          "s": 0,
+          "text": "Todavía no. Primero tengo que salir de aquí, aunque sea un paso."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cómo está la puerta de la jaula?",
+          "options": [
+            "Abierta",
+            "Cerrada con llave",
+            "Rota"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué hay dentro de la jaula, según Ramiro?",
+          "options": [
+            "Comida y agua",
+            "Libros",
+            "El frío, el silencio y sus quejas"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Quién es Inés?",
+          "options": [
+            "Su hija",
+            "Su exmujer",
+            "Su madre"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué le decía siempre Ramiro a Inés?",
+          "options": [
+            "Que estaba ocupado",
+            "Que la quería",
+            "Que estaba enfermo"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Hay algo que nunca le dijiste a alguien importante?",
+          "model": "Sí, nunca le dije a mi padre que estaba orgullosa de él."
+        },
+        {
+          "q": "¿Dices «estoy ocupado» para evitar cosas?",
+          "model": "A veces sí, cuando no quiero ir a una fiesta."
+        },
+        {
+          "q": "¿Qué te da miedo de los caminos nuevos?",
+          "model": "No saber si voy a ser capaz."
+        }
+      ],
+      "gaps": "Afuera hay un [camino] largo y no sé [adónde] va. Aquí dentro todo es [conocido]: el frío, el silencio, mis [quejas].",
+      "glossary": [
+        {
+          "word": "jaula",
+          "meaning": "caja con barras para encerrar a alguien"
+        },
+        {
+          "word": "quejas",
+          "meaning": "palabras para decir que algo no te gusta"
+        },
+        {
+          "word": "ocupado",
+          "meaning": "con mucho trabajo, sin tiempo"
+        },
+        {
+          "word": "conocido",
+          "meaning": "que ya sabes cómo es"
+        }
+      ]
+    }
+  ]
+}
