@@ -286,4 +286,3 @@ export function buildCielo({ low, shadows }: { low: boolean; shadows: boolean })
   };
   return finishPlace('cielo', group, light, talkers, walkers, [], (t, dt) => { for (const a of anims) a(t, dt); });
 }
-
