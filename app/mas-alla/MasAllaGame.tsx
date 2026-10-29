@@ -50,7 +50,7 @@ const GREETINGS: Record<string, string[]> = {
 const VERDICT_TEXT: Record<'cielo' | 'infierno' | 'volver', { label: Text; end: Text }> = {
   cielo: { label: b('Me quedo en el Cielo', 'I stay in Heaven'), end: b('Te quedas en la luz. Gabriel cierra tu expediente sin leerlo: ya no hace falta.', 'You stay in the light. Gabriel closes your file without reading it: there is no need any more.') },
   infierno: { label: b('Me quedo en el Infierno', 'I stay in Hell'), end: b('Te quedas abajo, donde se habla claro. Lucero te ofrece una silla y, por primera vez, alguien te pregunta qué piensas.', 'You stay below, where people speak plainly. Lucero offers you a chair and, for the first time, someone asks what you think.') },
-  volver: { label: b('Quiero volver a vivir', 'I want to live again'), end: b('Abres los ojos. Un llanto de bebé, una luz blanca, alguien que dice tu nombre por primera vez. No recuerdas nada… o casi nada.', 'You open your eyes. A baby crying, a white light, someone saying your name for the first time. You remember nothing… or almost nothing.') },
+  volver: { label: b('Quiero volver a vivir', 'I want to live again'), end: b('Abres los ojos. El llanto de un recién nacido, una luz blanca, alguien que dice tu nombre por primera vez. No recuerdas nada… o casi nada.', 'You open your eyes. A baby crying, a white light, someone saying your name for the first time. You remember nothing… or almost nothing.') },
 };
 const UMBRAL_INTRO = b('Has muerto. Antes de quedarte en algún sitio, puedes ver los dos. ¿Adónde vas primero?', 'You have died. Before you stay anywhere, you can see both. Where do you go first?');
 
