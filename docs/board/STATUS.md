@@ -108,13 +108,19 @@ All five run on `claude-opus-5-5`, follow [ROUTINES.md](ROUTINES.md), and each i
     - L3: two concurrent "create" requests give 503, not 409.
     - L4: no admin hierarchy, and `/api/academy` writes are not rate-limited (product decision).
     - **Clean:** identity headers, cross-academy isolation, invitation tokens (hashed, single-use, email-bound), Origin checks, SQL parameters, `no-store`, internal account ids (not the Firebase UID).
-  - **Checks:**
-    - Targeted tests: 16/16.
+  - **Checks at `0197d48d`:**
+    - `npm test`: exit 0, 1,354 pass, 0 fail. It was run with `SPANISHCUE_TEST_WORKER_TIMEOUT_MS=180000`, because the sandbox proxy slows wrangler dev's startup past the default 30 s.
+    - `validate:artifact`: OK.
     - lint: clean on the changed files.
     - `tsc`: only the 3 errors already on main.
-    - Full `npm test` result: see the PR #290 comment.
+    - `git diff --check`: clean.
+  - **Release (VERIFIED):**
+    - #290 merged as `3fa53e0a` (CI + Auto Merge 40807599981).
+    - Staging 40809300412 and production 40809590103 both succeeded, with Worker version `e68408d8`.
+    - The production smoke on https://spanishcue.com ran the new smoke script and reported `"passed": true`. The lesson-reports smoke passed too, and the rollback was skipped.
+    - The academy fix has no anonymous surface, so it was not smoke-tested in production. Its evidence is the regression test and the deploy.
   - **Next action:**
-    - After #290 deploys, the smoke monitor must keep passing.
+    - The scheduled smoke monitor must keep passing on `3fa53e0a`.
     - Next Thursday: M2 + L1 as one atomic-allocation change in `db/institutions.ts`, plus the test-worker 503 tolerance if the 503 recurs.
     - Fri 10-30 3D slot as planned below.
 - **2026-10-28 (Wednesday 3D routine): gated repair of the Feria unmount GPU leak** (branch `claude/board-wed-3d-20261028`, base main `eaf931a`). Subscription usage: **UNKNOWN**.
