@@ -1,6 +1,6 @@
 # Board STATUS: the single source of truth for the next run
 
-_Last updated: 2026-10-28 by the Wednesday 3D routine (scheduled cloud run; facilitator plus Alejandro as a subagent reviewer, see "Current work")._
+_Last updated: 2026-10-29 by the Thursday reliability routine (in progress; see "Current work")._
 
 ## Owner decisions in force
 | Date | Decision |
@@ -77,6 +77,7 @@ All five run on `claude-opus-5-5`, follow [ROUTINES.md](ROUTINES.md), and each i
 - Session 0 (lesson test) took 55 messages, about 15 of them caused by crossed messages over circle 6. That led to the lock rule.
 
 ## Current work and next action
+- **2026-10-29 (Thursday reliability routine): IN PROGRESS** (branch `claude/thursday-review-20261029`, base main `839ea09`). Subscription usage: **UNKNOWN**.
 - **2026-10-28 (Wednesday 3D routine): gated repair of the Feria unmount GPU leak** (branch `claude/board-wed-3d-20261028`, base main `eaf931a`). Subscription usage: **UNKNOWN**.
   - **Monday's unit is still held.** #282 «El ascensor del cerro» stays draft on R4, because no person has listened to its 6 clips. The rule needs a person: the G4 ruling in its LQG file says machine checks cannot close it, so this run did not try speech-to-text as a substitute. The model hosts are still blocked by the proxy anyway (openaipublic, huggingface and alphacephei time out). **Nothing about #282 changed.**
   - **Unit chosen:** no 3D backlog item had its dependencies met. Rank 2 is blocked on R4; rank 3 is a grammar item that still needs Martin's duplicate check. Building a new world would hit the same §9.2 listening blocker, so the run took the verified Feria defect (QA note «dispose textures in World3D cleanup», the same as Ascensor code review B1) as a **gated repair**, reported as a repair.
