@@ -1,0 +1,1093 @@
+{
+  "baseSha": "e92ab948a8e3a6ef577d240421b3aeed1229377e",
+  "reason": "Owner requires one CEFR level per grammar class. Exact metadata and source reversals keep every historical conversation bank, route and access assertion authoritative.",
+  "sourceEdits": {
+    "app/Library.tsx": [
+      {
+        "before": "        return lesson.category==='Gramática'?{...item,title:lesson.title,copy:`${lesson.duration}. ${lesson.subtitle}`,route:lesson.tag}:item;\n",
+        "after": "        return lesson.category==='Gramática'?{...item,kicker:`NUEVA CLASE · GRAMÁTICA ${lesson.level}`,title:lesson.title,copy:`${lesson.duration}. ${lesson.subtitle}`,route:lesson.tag}:item;\n"
+      }
+    ],
+    "app/grammar-classroom/GrammarCourse.tsx": [
+      {
+        "before": "// The very first class sits with A1, as in the library: no level group with a single class.\nconst courseLevels = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'];\n",
+        "after": "const courseLevels = ['A0', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2'];\n"
+      }
+    ],
+    "app/grammar-classroom/catalog.ts": [
+      {
+        "before": "",
+        "after": "import { courseUnitById } from './curriculum';\n"
+      },
+      {
+        "before": "",
+        "after": "  const unit=courseUnitById(lesson.id);\n  if (!unit) throw new Error(`Falta el nivel curricular de ${lesson.id}`);\n"
+      },
+      {
+        "before": "  return {...lesson,...metadata,subtitle,duration:'≈ 60 min',searchAliases:[...(lesson.searchAliases||[]),lesson.title],\n",
+        "after": "  // Guided classes have one curriculum level; older reference banks can cover\n  // more levels without promoting the class into those library filters.\n  return {...lesson,...metadata,level:unit.level,levels:[unit.level],displayLevel:unit.level,subtitle,duration:'≈ 60 min',searchAliases:[...(lesson.searchAliases||[]),lesson.title],\n"
+      }
+    ],
+    "app/lesson-catalog.ts": [
+      {
+        "before": "",
+        "after": "import { grammarThumbnailPath } from \"./grammar-classroom/thumbnail-path.mjs\";\n"
+      },
+      {
+        "before": "  return {...lesson,countryCollection:countryLessonIds.has(lesson.id),image:lesson.category===\"Gramática\"?`/grammar-thumbnails/${lesson.id}.webp`:lessonPreviews[lesson.id]||lesson.image||categoryPreviews[lesson.category]};\n",
+        "after": "  return {...lesson,countryCollection:countryLessonIds.has(lesson.id),image:lesson.category===\"Gramática\"?grammarThumbnailPath(lesson.id,lesson.level):lessonPreviews[lesson.id]||lesson.image||categoryPreviews[lesson.category]};\n"
+      }
+    ],
+    "app/library-filters.mjs": [
+      {
+        "before": "    (level === 'Todos' || lesson.level === level || lesson.levels?.includes(level)) &&\n",
+        "after": "    (level === 'Todos' || lesson.level === level || (lesson.category !== 'Gramática' && lesson.levels?.includes(level))) &&\n"
+      },
+      {
+        "before": "    .flatMap(l => [l.level, ...(l.levels || [])]));\n",
+        "after": "    .flatMap(l => l.category === 'Gramática' ? [l.level] : [l.level, ...(l.levels || [])]));\n"
+      }
+    ],
+    "scripts/grammar-thumbnails/data.mjs": [
+      {
+        "before": "  { id: 46, level: 'A1–A2', family: 'pronombres', topic: 'Pronombres personales y reflexivos', example: '*Yo me* levanto; *ella se* ducha.', chips: ['me · te · se', 'nos · os · se'], mascot: 'teacher' },\n  { id: 47, level: 'A1–A2', family: 'adverbios', topic: 'Adverbios', example: 'Vivo *cerca* y llego *temprano*.', chips: ['¿dónde? aquí', '¿cuándo? hoy', '¿cómo? bien'], mascot: 'football' },\n  { id: 48, level: 'A1–A2', family: 'ser-estar', topic: 'Ser, estar y hay', example: '*Es* alta, *está* cansada y *hay* café.', chips: ['ser', 'estar', 'hay'], mascot: 'mate' },\n  { id: 106, level: 'A1–A2', family: 'pronombres', topic: 'Objeto directo e indirecto', example: '¿El regalo? *Se lo* di ayer.', chips: ['lo · la', 'le · les', 'se lo'], mascot: 'conversation' },\n  { id: 107, level: 'A1–C1', family: 'tiempos', topic: 'Modo y tiempo verbal', example: '*Hablé*, *hablo*, *hablaré*.', timeline: [dot(0.3, 'hablé'), dot(0.62, 'hablo'), dot(0.88, 'hablaré')], mascot: 'teacher' },\n",
+        "after": "  { id: 46, level: 'A1', family: 'pronombres', topic: 'Pronombres personales y reflexivos', example: '*Yo me* levanto; *ella se* ducha.', chips: ['me · te · se', 'nos · os · se'], mascot: 'teacher' },\n  { id: 47, level: 'A1', family: 'adverbios', topic: 'Adverbios', example: 'Vivo *cerca* y llego *temprano*.', chips: ['¿dónde? aquí', '¿cuándo? hoy', '¿cómo? bien'], mascot: 'football' },\n  { id: 48, level: 'A1', family: 'ser-estar', topic: 'Ser, estar y hay', example: '*Es* alta, *está* cansada y *hay* café.', chips: ['ser', 'estar', 'hay'], mascot: 'mate' },\n  { id: 106, level: 'A1', family: 'pronombres', topic: 'Objeto directo e indirecto', example: '¿El regalo? *Se lo* di ayer.', chips: ['lo · la', 'le · les', 'se lo'], mascot: 'conversation' },\n  { id: 107, level: 'A1', family: 'tiempos', topic: 'Modo y tiempo verbal', example: '*Hablé*, *hablo*, *hablaré*.', timeline: [dot(0.3, 'hablé'), dot(0.62, 'hablo'), dot(0.88, 'hablaré')], mascot: 'teacher' },\n"
+      },
+      {
+        "before": "  { id: 239, level: 'Desde cero', family: 'ser-estar', topic: 'Clase inicial', example: '¡*Hola*! *Soy* Alex y *estoy* bien.', chips: ['hola', 'soy', 'estoy'], mascot: 'scarf' },\n",
+        "after": "  { id: 239, level: 'A0', family: 'ser-estar', topic: 'Clase inicial', example: '¡*Hola*! *Soy* Alex y *estoy* bien.', chips: ['hola', 'soy', 'estoy'], mascot: 'scarf' },\n"
+      }
+    ],
+    "scripts/grammar-thumbnails/render.mjs": [
+      {
+        "before": "",
+        "after": "import { grammarThumbnailPath } from '../../app/grammar-classroom/thumbnail-path.mjs';\n"
+      },
+      {
+        "before": "",
+        "after": "// An inline @font-face stylesheet also supports reproducible offline rendering.\nconst fontStyles = process.env.GRAMMAR_THUMBNAIL_FONT_CSS\n  ? `<style>${readFileSync(process.env.GRAMMAR_THUMBNAIL_FONT_CSS, 'utf8')}</style>`\n  : '<link href=\"https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Nunito:wght@600;700;800&display=block\" rel=\"stylesheet\">';\n"
+      },
+      {
+        "before": "<link href=\"https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Nunito:wght@600;700;800&display=block\" rel=\"stylesheet\">\n",
+        "after": "${fontStyles}\n"
+      },
+      {
+        "before": "",
+        "after": "  if (!await tab.evaluate(() => document.fonts.check('600 98px Fraunces') && document.fonts.check('800 34px Nunito')))\n    throw new Error('Thumbnail fonts failed to load; refusing a cover with substituted typography.');\n"
+      },
+      {
+        "before": "  await sharp(png).webp({ quality: 84 }).toFile(`public/grammar-thumbnails/${t.id}.webp`);\n",
+        "after": "  await sharp(png).webp({ quality: 84 }).toFile(`public${grammarThumbnailPath(t.id,t.level)}`);\n"
+      }
+    ],
+    "tests/grammar-classroom.test.mjs": [
+      {
+        "before": "test('every grammar class has its own clean thumbnail and the first class is listed under A1',async()=>{\n",
+        "after": "test('every grammar cover and badge use the single level of its guided class',async()=>{\n"
+      },
+      {
+        "before": "",
+        "after": " const {grammarThumbnailPath}=await import('../app/grammar-classroom/thumbnail-path.mjs');\n"
+      },
+      {
+        "before": "  assert.equal(l.image,`/grammar-thumbnails/${l.id}.webp`,`${l.id} uses its own grammar thumbnail`);\n",
+        "after": "  assert.equal(l.image,grammarThumbnailPath(l.id,l.level),`${l.id} uses its current grammar thumbnail`);\n"
+      },
+      {
+        "before": "",
+        "after": " for(const thumbnail of thumbnails)assert.equal(thumbnail.level,grammar.find(l=>l.id===thumbnail.id).level,`${thumbnail.id}: cover and class agree`);\n"
+      },
+      {
+        "before": " assert.equal(first.level,'A1');\n assert.ok(!grammar.some(l=>l.level==='A0'||l.levels?.includes('A0')),'no grammar class sits alone in A0');\n",
+        "after": " assert.equal(first.level,'A0');\n assert.deepEqual(grammar.filter(l=>l.level==='A0').map(l=>l.id),[239]);\n"
+      }
+    ],
+    "tests/grammar-course.test.mjs": [
+      {
+        "before": "",
+        "after": "test('every grammar class advertises exactly its curriculum level instead of reference ranges',()=>{\n  const grammar=lessons.filter(lesson=>lesson.category==='Gramática');\n  assert.equal(grammar.length,240);\n  for(const lesson of grammar){\n    const unit=courseUnitById(lesson.id);\n    assert.equal(lesson.level,unit.level,`${lesson.id}: same level as the course`);\n    assert.deepEqual(lesson.levels,[unit.level],`${lesson.id}: a single grammar level`);\n    assert.equal(lesson.displayLevel,unit.level,`${lesson.id}: the visible badge is one level`);\n    const live=getLiveLesson(lesson.id);\n    if(live)assert.equal(lesson.level,live.level,`${lesson.id}: same level as the actual class`);\n  }\n  assert.equal(grammar.find(lesson=>lesson.id===107).displayLevel,'A1');\n  assert.equal(grammar.find(lesson=>lesson.id===239).displayLevel,'A0');\n});\n\n"
+      },
+      {
+        "before": "",
+        "after": "    assert.equal(v.$('[data-unit=\"G001\"]').dataset.levelHeading,'A0');\n    await act(async()=>v.$('[data-course-level=\"A0\"]').click());\n    assert.deepEqual(v.$$('[data-unit]').map(li=>li.dataset.unit),['G001']);\n    await act(async()=>v.$('[data-course-level=\"A1\"]').click());\n    assert.ok(!v.$('[data-unit=\"G001\"]'),'A1 does not include the A0 class');\n"
+      }
+    ],
+    "tests/level-cleanup.test.mjs": [
+      {
+        "before": "    assert.equal(Boolean(lesson.levels?.includes('A0')), [24,25,29,30,32,33,36,210,223,226,227,228,229,236,237,238,240,242].includes(lesson.id), `lesson ${lesson.id}: A0 only when authored`);\n",
+        "after": "    assert.equal(Boolean(lesson.levels?.includes('A0')), [24,25,29,30,32,33,36,210,223,226,227,228,229,236,237,238,239,240,242].includes(lesson.id), `lesson ${lesson.id}: A0 only when authored`);\n"
+      },
+      {
+        "before": "  assert.equal(lessons.filter(l=>l.levels?.includes('A0')).length,18);\n",
+        "after": "  assert.equal(lessons.filter(l=>l.levels?.includes('A0')).length,19);\n"
+      },
+      {
+        "before": "  assert.equal(a1Lessons.length, 76);\n",
+        "after": "  assert.equal(a1Lessons.length, 75);\n"
+      },
+      {
+        "before": "    const authored=relative.includes('/mundo/')||relative.startsWith('app/estados-unidos-a2-b1/')||relative.startsWith('app/mundo-3d/')||relative.startsWith('app/the-sound-map/')||relative.startsWith('app/escucha-3d/')||relative.startsWith('app/el-reino-de-la-rosa-dormida/')||relative.startsWith('app/hospital-san-casi-vivo/')||relative.startsWith('app/madrid-infectada/')||relative.startsWith('app/marketing-de-casinos/')||relative.startsWith('app/bosque-de-los-hongos-gigantes/')||relative.startsWith('app/noche-abierta/')||relative.startsWith('app/conversacion-general/')||relative.startsWith('app/country-atlas/')||['app/grammar-classroom/catalog.ts','app/grammar-classroom/live/LiveClassroom.tsx','app/grammar-classroom/live/lessons/g239.ts','app/argentina/layout.tsx','app/suecia/layout.tsx','app/espana/layout.tsx','app/Library.tsx','app/library-filters.mjs','app/conversation-families/types.ts','app/lesson-catalog.ts','app/grammar-classroom/curriculum.ts'].includes(relative);\n",
+        "after": "    const authored=relative.includes('/mundo/')||relative.startsWith('app/estados-unidos-a2-b1/')||relative.startsWith('app/mundo-3d/')||relative.startsWith('app/the-sound-map/')||relative.startsWith('app/escucha-3d/')||relative.startsWith('app/el-reino-de-la-rosa-dormida/')||relative.startsWith('app/hospital-san-casi-vivo/')||relative.startsWith('app/madrid-infectada/')||relative.startsWith('app/marketing-de-casinos/')||relative.startsWith('app/bosque-de-los-hongos-gigantes/')||relative.startsWith('app/noche-abierta/')||relative.startsWith('app/conversacion-general/')||relative.startsWith('app/country-atlas/')||['app/grammar-classroom/catalog.ts','app/grammar-classroom/live/LiveClassroom.tsx','app/grammar-classroom/live/lessons/g239.ts','app/argentina/layout.tsx','app/suecia/layout.tsx','app/espana/layout.tsx','app/Library.tsx','app/library-filters.mjs','app/conversation-families/types.ts','app/lesson-catalog.ts','app/grammar-classroom/curriculum.ts','app/grammar-classroom/GrammarCourse.tsx'].includes(relative);\n"
+      }
+    ],
+    "tests/library-filters.test.mjs": [
+      {
+        "before": "  assert.deepEqual(filterLessons(lessons,{level:'A2',category:'Gramática'}).map(x=>x.id),[2,4]);\n  assert.deepEqual(filterLessons(lessons,{category:'Gramática',level:'A2'}).map(x=>x.id),[2,4]);\n",
+        "after": "  assert.deepEqual(filterLessons(lessons,{level:'A2',category:'Gramática'}).map(x=>x.id),[2]);\n  assert.deepEqual(filterLessons(lessons,{category:'Gramática',level:'A2'}).map(x=>x.id),[2]);\n"
+      },
+      {
+        "before": "  assert.deepEqual(filterLessons(lessons,{level:'A2',category:'Todas'}).map(x=>x.id),[2,4,3]);\n",
+        "after": "  assert.deepEqual(filterLessons(lessons,{level:'A2',category:'Todas'}).map(x=>x.id),[2,3]);\n"
+      },
+      {
+        "before": "  assert.deepEqual(filterLessons(shuffled,{category:'Gramática',level:'A2'}).map(x=>x.id),[4,2]);\n",
+        "after": "  assert.deepEqual(filterLessons(shuffled,{category:'Gramática',level:'A2'}).map(x=>x.id),[2]);\n"
+      },
+      {
+        "before": "",
+        "after": "  const staleGrammar={...lessons[3],levels:['A1','C1']};\n  assert.deepEqual(availableLevels([staleGrammar],'Gramática'),['A1'],'reference ranges do not create grammar levels');\n  assert.deepEqual(filterLessons([lessons[2]],{category:'Conversación',level:'A2'}).map(l=>l.id),[3],'conversation still supports its existing levels');\n"
+      }
+    ]
+  },
+  "metadata": [
+    {
+      "id": 220,
+      "fields": {
+        "levels": {
+          "after": [
+            "B2"
+          ],
+          "hadBefore": false
+        },
+        "displayLevel": {
+          "after": "B2",
+          "hadBefore": false
+        }
+      }
+    },
+    {
+      "id": 219,
+      "fields": {
+        "levels": {
+          "after": [
+            "B2"
+          ],
+          "hadBefore": false
+        },
+        "displayLevel": {
+          "after": "B2",
+          "hadBefore": false
+        }
+      }
+    },
+    {
+      "id": 140,
+      "fields": {
+        "levels": {
+          "after": [
+            "A1"
+          ],
+          "hadBefore": true
+        },
+        "displayLevel": {
+          "after": "A1",
+          "hadBefore": false
+        }
+      }
+    },
+    {
+      "id": 141,
+      "fields": {
+        "levels": {
+          "after": [
+            "A2"
+          ],
+          "hadBefore": true
+        },
+        "displayLevel": {
+          "after": "A2",
+          "hadBefore": false
+        }
+      }
+    },
+    {
+      "id": 142,
+      "fields": {
+        "levels": {
+          "after": [
+            "A2"
+          ],
+          "hadBefore": true
+        },
+        "displayLevel": {
+          "after": "A2",
+          "hadBefore": false
+        }
+      }
+    },
+    {
+      "id": 143,
+      "fields": {
+        "levels": {
+          "after": [
+            "A2"
+          ],
+          "hadBefore": true
+        },
+        "displayLevel": {
+          "after": "A2",
+          "hadBefore": false
+        }
+      }
+    },
+    {
+      "id": 144,
+      "fields": {
+        "levels": {
+          "after": [
+            "A2"
+          ],
+          "hadBefore": true
+        },
+        "displayLevel": {
+          "after": "A2",
+          "hadBefore": false
+        }
+      }
+    },
+    {
+      "id": 145,
+      "fields": {
+        "levels": {
+          "after": [
+            "A2"
+          ],
+          "hadBefore": true
+        },
+        "displayLevel": {
+          "after": "A2",
+          "hadBefore": false
+        }
+      }
+    },
+    {
+      "id": 146,
+      "fields": {
+        "levels": {
+          "after": [
+            "B1"
+          ],
+          "hadBefore": true
+        },
+        "displayLevel": {
+          "after": "B1",
+          "hadBefore": false
+        }
+      }
+    },
+    {
+      "id": 147,
+      "fields": {
+        "levels": {
+          "after": [
+            "B1"
+          ],
+          "hadBefore": true
+        },
+        "displayLevel": {
+          "after": "B1",
+          "hadBefore": false
+        }
+      }
+    },
+    {
+      "id": 148,
+      "fields": {
+        "levels": {
+          "after": [
+            "B1"
+          ],
+          "hadBefore": true
+        },
+        "displayLevel": {
+          "after": "B1",
+          "hadBefore": false
+        }
+      }
+    },
+    {
+      "id": 149,
+      "fields": {
+        "levels": {
+          "after": [
+            "B1"
+          ],
+          "hadBefore": true
+        },
+        "displayLevel": {
+          "after": "B1",
+          "hadBefore": false
+        }
+      }
+    },
+    {
+      "id": 150,
+      "fields": {
+        "levels": {
+          "after": [
+            "B2"
+          ],
+          "hadBefore": true
+        },
+        "displayLevel": {
+          "after": "B2",
+          "hadBefore": false
+        }
+      }
+    },
+    {
+      "id": 151,
+      "fields": {
+        "levels": {
+          "after": [
+            "B2"
+          ],
+          "hadBefore": true
+        },
+        "displayLevel": {
+          "after": "B2",
+          "hadBefore": false
+        }
+      }
+    },
+    {
+      "id": 152,
+      "fields": {
+        "levels": {
+          "after": [
+            "B2"
+          ],
+          "hadBefore": true
+        },
+        "displayLevel": {
+          "after": "B2",
+          "hadBefore": false
+        }
+      }
+    },
+    {
+      "id": 153,
+      "fields": {
+        "levels": {
+          "after": [
+            "B2"
+          ],
+          "hadBefore": true
+        },
+        "displayLevel": {
+          "after": "B2",
+          "hadBefore": false
+        }
+      }
+    },
+    {
+      "id": 154,
+      "fields": {
+        "levels": {
+          "after": [
+            "C1"
+          ],
+          "hadBefore": true
+        },
+        "displayLevel": {
+          "after": "C1",
+          "hadBefore": false
+        }
+      }
+    },
+    {
+      "id": 155,
+      "fields": {
+        "levels": {
+          "after": [
+            "C1"
+          ],
+          "hadBefore": true
+        },
+        "displayLevel": {
+          "after": "C1",
+          "hadBefore": false
+        }
+      }
+    },
+    {
+      "id": 156,
+      "fields": {
+        "levels": {
+          "after": [
+            "C2"
+          ],
+          "hadBefore": true
+        },
+        "displayLevel": {
+          "after": "C2",
+          "hadBefore": false
+        }
+      }
+    },
+    {
+      "id": 218,
+      "fields": {
+        "levels": {
+          "after": [
+            "B1"
+          ],
+          "hadBefore": false
+        },
+        "displayLevel": {
+          "after": "B1",
+          "hadBefore": false
+        }
+      }
+    },
+    {
+      "id": 217,
+      "fields": {
+        "levels": {
+          "after": [
+            "B1"
+          ],
+          "hadBefore": false
+        },
+        "displayLevel": {
+          "after": "B1",
+          "hadBefore": false
+        }
+      }
+    },
+    {
+      "id": 214,
+      "fields": {
+        "levels": {
+          "after": [
+            "A2"
+          ],
+          "hadBefore": false
+        },
+        "displayLevel": {
+          "after": "A2",
+          "hadBefore": false
+        }
+      }
+    },
+    {
+      "id": 213,
+      "fields": {
+        "levels": {
+          "after": [
+            "A2"
+          ],
+          "hadBefore": false
+        },
+        "displayLevel": {
+          "after": "A2",
+          "hadBefore": false
+        }
+      }
+    },
+    {
+      "id": 212,
+      "fields": {
+        "levels": {
+          "after": [
+            "A1"
+          ],
+          "hadBefore": false
+        },
+        "displayLevel": {
+          "after": "A1",
+          "hadBefore": false
+        }
+      }
+    },
+    {
+      "id": 211,
+      "fields": {
+        "levels": {
+          "after": [
+            "A1"
+          ],
+          "hadBefore": false
+        },
+        "displayLevel": {
+          "after": "A1",
+          "hadBefore": false
+        }
+      }
+    },
+    {
+      "id": 119,
+      "fields": {
+        "levels": {
+          "after": [
+            "C1"
+          ],
+          "hadBefore": false
+        },
+        "displayLevel": {
+          "after": "C1",
+          "hadBefore": false
+        }
+      }
+    },
+    {
+      "id": 118,
+      "fields": {
+        "levels": {
+          "after": [
+            "C1"
+          ],
+          "hadBefore": false
+        },
+        "displayLevel": {
+          "after": "C1",
+          "hadBefore": false
+        }
+      }
+    },
+    {
+      "id": 117,
+      "fields": {
+        "levels": {
+          "after": [
+            "B2"
+          ],
+          "hadBefore": false
+        },
+        "displayLevel": {
+          "after": "B2",
+          "hadBefore": false
+        }
+      }
+    },
+    {
+      "id": 116,
+      "fields": {
+        "levels": {
+          "after": [
+            "B2"
+          ],
+          "hadBefore": false
+        },
+        "displayLevel": {
+          "after": "B2",
+          "hadBefore": false
+        }
+      }
+    },
+    {
+      "id": 115,
+      "fields": {
+        "levels": {
+          "after": [
+            "B1"
+          ],
+          "hadBefore": false
+        },
+        "displayLevel": {
+          "after": "B1",
+          "hadBefore": false
+        }
+      }
+    },
+    {
+      "id": 114,
+      "fields": {
+        "levels": {
+          "after": [
+            "B1"
+          ],
+          "hadBefore": false
+        },
+        "displayLevel": {
+          "after": "B1",
+          "hadBefore": false
+        }
+      }
+    },
+    {
+      "id": 113,
+      "fields": {
+        "levels": {
+          "after": [
+            "A2"
+          ],
+          "hadBefore": false
+        },
+        "displayLevel": {
+          "after": "A2",
+          "hadBefore": false
+        }
+      }
+    },
+    {
+      "id": 112,
+      "fields": {
+        "levels": {
+          "after": [
+            "A2"
+          ],
+          "hadBefore": false
+        },
+        "displayLevel": {
+          "after": "A2",
+          "hadBefore": false
+        }
+      }
+    },
+    {
+      "id": 111,
+      "fields": {
+        "levels": {
+          "after": [
+            "A1"
+          ],
+          "hadBefore": false
+        },
+        "displayLevel": {
+          "after": "A1",
+          "hadBefore": false
+        }
+      }
+    },
+    {
+      "id": 110,
+      "fields": {
+        "levels": {
+          "after": [
+            "A1"
+          ],
+          "hadBefore": false
+        },
+        "displayLevel": {
+          "after": "A1",
+          "hadBefore": false
+        }
+      }
+    },
+    {
+      "id": 107,
+      "fields": {
+        "levels": {
+          "before": [
+            "A1",
+            "A2",
+            "B1",
+            "B2",
+            "C1"
+          ],
+          "after": [
+            "A1"
+          ],
+          "hadBefore": true
+        },
+        "displayLevel": {
+          "before": "A1–C1",
+          "after": "A1",
+          "hadBefore": true
+        },
+        "image": {
+          "before": "/grammar-thumbnails/107.webp",
+          "after": "/grammar-thumbnails/107-a1.webp",
+          "hadBefore": true
+        }
+      }
+    },
+    {
+      "id": 106,
+      "fields": {
+        "levels": {
+          "before": [
+            "A1",
+            "A2"
+          ],
+          "after": [
+            "A1"
+          ],
+          "hadBefore": true
+        },
+        "displayLevel": {
+          "before": "A1 · ampliación A2",
+          "after": "A1",
+          "hadBefore": true
+        },
+        "image": {
+          "before": "/grammar-thumbnails/106.webp",
+          "after": "/grammar-thumbnails/106-a1.webp",
+          "hadBefore": true
+        }
+      }
+    },
+    {
+      "id": 46,
+      "fields": {
+        "levels": {
+          "before": [
+            "A1",
+            "A2"
+          ],
+          "after": [
+            "A1"
+          ],
+          "hadBefore": true
+        },
+        "displayLevel": {
+          "before": "A1–A2",
+          "after": "A1",
+          "hadBefore": true
+        },
+        "image": {
+          "before": "/grammar-thumbnails/46.webp",
+          "after": "/grammar-thumbnails/46-a1.webp",
+          "hadBefore": true
+        }
+      }
+    },
+    {
+      "id": 47,
+      "fields": {
+        "levels": {
+          "before": [
+            "A1",
+            "A2"
+          ],
+          "after": [
+            "A1"
+          ],
+          "hadBefore": true
+        },
+        "displayLevel": {
+          "before": "A1–A2",
+          "after": "A1",
+          "hadBefore": true
+        },
+        "image": {
+          "before": "/grammar-thumbnails/47.webp",
+          "after": "/grammar-thumbnails/47-a1.webp",
+          "hadBefore": true
+        }
+      }
+    },
+    {
+      "id": 48,
+      "fields": {
+        "levels": {
+          "before": [
+            "A1",
+            "A2"
+          ],
+          "after": [
+            "A1"
+          ],
+          "hadBefore": true
+        },
+        "displayLevel": {
+          "before": "A1–A2",
+          "after": "A1",
+          "hadBefore": true
+        },
+        "image": {
+          "before": "/grammar-thumbnails/48.webp",
+          "after": "/grammar-thumbnails/48-a1.webp",
+          "hadBefore": true
+        }
+      }
+    },
+    {
+      "id": 43,
+      "fields": {
+        "levels": {
+          "after": [
+            "A1"
+          ],
+          "hadBefore": false
+        },
+        "displayLevel": {
+          "after": "A1",
+          "hadBefore": false
+        }
+      }
+    },
+    {
+      "id": 44,
+      "fields": {
+        "levels": {
+          "after": [
+            "A1"
+          ],
+          "hadBefore": false
+        },
+        "displayLevel": {
+          "after": "A1",
+          "hadBefore": false
+        }
+      }
+    },
+    {
+      "id": 45,
+      "fields": {
+        "levels": {
+          "after": [
+            "A1"
+          ],
+          "hadBefore": false
+        },
+        "displayLevel": {
+          "after": "A1",
+          "hadBefore": false
+        }
+      }
+    },
+    {
+      "id": 40,
+      "fields": {
+        "levels": {
+          "after": [
+            "A1"
+          ],
+          "hadBefore": false
+        },
+        "displayLevel": {
+          "after": "A1",
+          "hadBefore": false
+        }
+      }
+    },
+    {
+      "id": 41,
+      "fields": {
+        "levels": {
+          "after": [
+            "A1"
+          ],
+          "hadBefore": false
+        },
+        "displayLevel": {
+          "after": "A1",
+          "hadBefore": false
+        }
+      }
+    },
+    {
+      "id": 42,
+      "fields": {
+        "levels": {
+          "after": [
+            "A1"
+          ],
+          "hadBefore": false
+        },
+        "displayLevel": {
+          "after": "A1",
+          "hadBefore": false
+        }
+      }
+    },
+    {
+      "id": 37,
+      "fields": {
+        "levels": {
+          "after": [
+            "C1"
+          ],
+          "hadBefore": false
+        }
+      }
+    },
+    {
+      "id": 31,
+      "fields": {
+        "levels": {
+          "before": [
+            "B1",
+            "B2"
+          ],
+          "after": [
+            "B1"
+          ],
+          "hadBefore": true
+        },
+        "displayLevel": {
+          "before": "B1+",
+          "after": "B1",
+          "hadBefore": true
+        }
+      }
+    },
+    {
+      "id": 23,
+      "fields": {
+        "levels": {
+          "before": [
+            "B2",
+            "C1"
+          ],
+          "after": [
+            "B2"
+          ],
+          "hadBefore": true
+        },
+        "displayLevel": {
+          "before": "B2–C1",
+          "after": "B2",
+          "hadBefore": true
+        }
+      }
+    },
+    {
+      "id": 18,
+      "fields": {
+        "levels": {
+          "after": [
+            "B1"
+          ],
+          "hadBefore": false
+        },
+        "displayLevel": {
+          "after": "B1",
+          "hadBefore": false
+        }
+      }
+    },
+    {
+      "id": 3,
+      "fields": {
+        "levels": {
+          "after": [
+            "A1"
+          ],
+          "hadBefore": false
+        },
+        "displayLevel": {
+          "after": "A1",
+          "hadBefore": false
+        }
+      }
+    },
+    {
+      "id": 230,
+      "fields": {
+        "levels": {
+          "after": [
+            "A2"
+          ],
+          "hadBefore": false
+        },
+        "displayLevel": {
+          "after": "A2",
+          "hadBefore": false
+        }
+      }
+    },
+    {
+      "id": 231,
+      "fields": {
+        "levels": {
+          "after": [
+            "B1"
+          ],
+          "hadBefore": false
+        },
+        "displayLevel": {
+          "after": "B1",
+          "hadBefore": false
+        }
+      }
+    },
+    {
+      "id": 232,
+      "fields": {
+        "levels": {
+          "after": [
+            "B2"
+          ],
+          "hadBefore": false
+        },
+        "displayLevel": {
+          "after": "B2",
+          "hadBefore": false
+        }
+      }
+    },
+    {
+      "id": 233,
+      "fields": {
+        "levels": {
+          "after": [
+            "B2"
+          ],
+          "hadBefore": false
+        },
+        "displayLevel": {
+          "after": "B2",
+          "hadBefore": false
+        }
+      }
+    },
+    {
+      "id": 234,
+      "fields": {
+        "levels": {
+          "after": [
+            "B2"
+          ],
+          "hadBefore": false
+        },
+        "displayLevel": {
+          "after": "B2",
+          "hadBefore": false
+        }
+      }
+    },
+    {
+      "id": 235,
+      "fields": {
+        "levels": {
+          "after": [
+            "B2"
+          ],
+          "hadBefore": false
+        },
+        "displayLevel": {
+          "after": "B2",
+          "hadBefore": false
+        }
+      }
+    },
+    {
+      "id": 239,
+      "fields": {
+        "level": {
+          "before": "A1",
+          "after": "A0",
+          "hadBefore": true
+        },
+        "levels": {
+          "after": [
+            "A0"
+          ],
+          "hadBefore": false
+        },
+        "displayLevel": {
+          "after": "A0",
+          "hadBefore": false
+        },
+        "image": {
+          "before": "/grammar-thumbnails/239.webp",
+          "after": "/grammar-thumbnails/239-a0.webp",
+          "hadBefore": true
+        }
+      }
+    }
+  ]
+}

@@ -31,18 +31,20 @@ test('the six missing teacher-led lessons are individually routable alongside al
  assert.ok(grammar.every(l=>l.grammarTopic),'every existing lesson must use the same taxonomy');
 });
 
-test('every grammar class has its own clean thumbnail and the first class is listed under A1',async()=>{
+test('every grammar cover and badge use the single level of its guided class',async()=>{
  const {existsSync}=await import('node:fs');
+ const {grammarThumbnailPath}=await import('../app/grammar-classroom/thumbnail-path.mjs');
  const grammar=lessons.filter(l=>l.category==='Gramática');
  for(const l of grammar){
-  assert.equal(l.image,`/grammar-thumbnails/${l.id}.webp`,`${l.id} uses its own grammar thumbnail`);
+  assert.equal(l.image,grammarThumbnailPath(l.id,l.level),`${l.id} uses its current grammar thumbnail`);
   assert.ok(existsSync(`public${l.image}`),`${l.image} exists`);
  }
  const {thumbnails}=await import('../scripts/grammar-thumbnails/data.mjs');
  assert.deepEqual(thumbnails.map(t=>t.id).sort((a,b)=>a-b),grammar.map(l=>l.id).sort((a,b)=>a-b));
+ for(const thumbnail of thumbnails)assert.equal(thumbnail.level,grammar.find(l=>l.id===thumbnail.id).level,`${thumbnail.id}: cover and class agree`);
  const first=grammar.find(l=>l.id===239);
- assert.equal(first.level,'A1');
- assert.ok(!grammar.some(l=>l.level==='A0'||l.levels?.includes('A0')),'no grammar class sits alone in A0');
+ assert.equal(first.level,'A0');
+ assert.deepEqual(grammar.filter(l=>l.level==='A0').map(l=>l.id),[239]);
 });
 
 test('every conversation and grammar card has its own real recording that plays on hover',async()=>{

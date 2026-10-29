@@ -644,7 +644,7 @@ function NewsCarousel({
         lessons.some((lesson) => lesson.id === item.lessonId),
       ).map(item=>{
         const lesson=lessons.find(lesson=>lesson.id===item.lessonId)!;
-        return lesson.category==='Gramática'?{...item,title:lesson.title,copy:`${lesson.duration}. ${lesson.subtitle}`,route:lesson.tag}:item;
+        return lesson.category==='Gramática'?{...item,kicker:`NUEVA CLASE · GRAMÁTICA ${lesson.level}`,title:lesson.title,copy:`${lesson.duration}. ${lesson.subtitle}`,route:lesson.tag}:item;
       }),
     [lessons],
   );

@@ -1,4 +1,5 @@
 import type { LessonSource } from '../lesson-catalog';
+import { courseUnitById } from './curriculum';
 
 /** Public discovery metadata only. Never import classroom bodies here. */
 export const grammarTopics = [
@@ -272,8 +273,12 @@ export function applyGrammarMetadata<T extends LessonSource>(lesson:T):T & {gram
   if (lesson.category !== 'Gramática') return lesson;
   const metadata=grammarMetadata[lesson.id];
   if (!metadata) throw new Error(`Falta la categoría gramatical de ${lesson.id}`);
+  const unit=courseUnitById(lesson.id);
+  if (!unit) throw new Error(`Falta el nivel curricular de ${lesson.id}`);
   const use=metadata.title.split(': ').slice(1).join(': ');
   const subtitle=lesson.id>=230?lesson.subtitle:`${use.charAt(0).toUpperCase()+use.slice(1)}. Lectura, escucha, conversación y escritura con apoyo docente.`;
-  return {...lesson,...metadata,subtitle,duration:'≈ 60 min',searchAliases:[...(lesson.searchAliases||[]),lesson.title],
+  // Guided classes have one curriculum level; older reference banks can cover
+  // more levels without promoting the class into those library filters.
+  return {...lesson,...metadata,level:unit.level,levels:[unit.level],displayLevel:unit.level,subtitle,duration:'≈ 60 min',searchAliases:[...(lesson.searchAliases||[]),lesson.title],
     tag:grammarTopics.find(t=>t.id===metadata.grammarTopic)!.label};
 }

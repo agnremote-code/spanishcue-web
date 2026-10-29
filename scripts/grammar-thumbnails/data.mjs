@@ -86,7 +86,7 @@ export const thumbnails = [
   { id: 233, level: 'B2', family: 'discurso', topic: 'Estilo indirecto', example: '«Vendré». → Dijo que *vendría*.', chips: ['dijo que…', 'me pidió que…'], mascot: 'conversation' },
   { id: 234, level: 'B2', family: 'pronombres', topic: 'Relativos con preposición', example: 'La amiga *con la que* viajé.', chips: ['con el que', 'en la que', 'de quien'], mascot: 'van' },
   { id: 235, level: 'B2', family: 'oraciones', topic: 'Tan, tanto y así que', example: 'Estaba *tan* cansada *que* me dormí.', chips: ['tan… que', 'tanto… que', 'así que'], mascot: 'headphones' },
-  { id: 239, level: 'Desde cero', family: 'ser-estar', topic: 'Clase inicial', example: '¡*Hola*! *Soy* Alex y *estoy* bien.', chips: ['hola', 'soy', 'estoy'], mascot: 'scarf' },
+  { id: 239, level: 'A0', family: 'ser-estar', topic: 'Clase inicial', example: '¡*Hola*! *Soy* Alex y *estoy* bien.', chips: ['hola', 'soy', 'estoy'], mascot: 'scarf' },
   { id: 303, level: 'A1', family: 'concordancia', topic: 'Género de los sustantivos', example: '*El* problema y *la* mano.', chips: ['-o → el', '-a → la', '-ma → el'], mascot: 'grammar' },
   { id: 305, level: 'A1', family: 'concordancia', topic: 'Plural y concordancia', example: 'Dos *carpetas azules*, por favor.', chips: ['+ s', '+ es', 'z → ces'], mascot: 'empanadas' },
   { id: 307, level: 'A1', family: 'concordancia', topic: 'Posición del adjetivo', example: 'Una *casa vieja* y un *gran* amigo.', chips: ['casa blanca', 'gran casa', 'casa grande'], mascot: 'explorer' },
