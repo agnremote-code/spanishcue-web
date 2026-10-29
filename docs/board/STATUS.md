@@ -1,6 +1,6 @@
 # Board STATUS: the single source of truth for the next run
 
-_Last updated: 2026-10-29 by the Thursday reliability routine (in progress; see "Current work")._
+_Last updated: 2026-10-29 by the Thursday reliability routine (scheduled cloud run; facilitator plus Sofia and Alejandro as subagents, see "Current work")._
 
 ## Owner decisions in force
 | Date | Decision |
@@ -77,7 +77,46 @@ All five run on `claude-opus-5-5`, follow [ROUTINES.md](ROUTINES.md), and each i
 - Session 0 (lesson test) took 55 messages, about 15 of them caused by crossed messages over circle 6. That led to the lock rule.
 
 ## Current work and next action
-- **2026-10-29 (Thursday reliability routine): IN PROGRESS** (branch `claude/thursday-review-20261029`, base main `839ea09`). Subscription usage: **UNKNOWN**.
+- **2026-10-29 (Thursday reliability routine): PR #290** (branch `claude/thursday-review-20261029`, base main `839ea09`). Subscription usage: **UNKNOWN**.
+  - **Board:** convened proportionately as subagents of the facilitator.
+    - Sofia: read-only audit of the academy/institutions API added since `4d2c680`.
+    - Alejandro: independent code review, **APPROVE** with no blockers; NB1–NB4 applied.
+    - Martin: not needed.
+    - Verbatim: [transcripts/2026-10-29-thursday-reliability.md](transcripts/2026-10-29-thursday-reliability.md).
+  - **CI and deploy health (VERIFIED, `gh run list` plus the runs API):**
+    - **Production:** main = production = `839ea09` (production 40627983845). The latest scheduled smoke, 40780552102, passed.
+    - **Red runs since 10-22:**
+      - The staging/production pairs for `d8f6aa45` and `9df652b8` (10-23) failed on "Promote" and "Enforce a single production deployer", the same safe refusal on overlapping merges seen before; a later SHA deployed each time.
+      - The other failed or cancelled runs are PR CI on other agents' branches.
+    - **Incident #289** (smoke, 10-28 05:33Z) closed itself at 12:45Z. Its run died with a bare `TimeoutError` that named no URL (fixed below).
+  - **Fixed in #290 (each with a regression test that fails on main):**
+    1. **Medium, access:** `removeMember` deleted the academy membership and revoked the `teacher_library` grant in separate D1 calls.
+       - A failure between the two left a former member with a permanent PRO grant that no retry or seat sync could reach.
+       - The delete and the revoke now run in one batch. Every `syncSeats` also revokes this academy's grants held by non-members, so any orphan that already exists in production is revoked at that academy's next sync.
+       - Whether such an orphan exists is UNKNOWN: production D1 was not queried.
+    2. **Low, monitoring:** the smoke script now names the method and path on a network failure, including a body read that stalls, and retries GET/HEAD once after 1.5 s. Status assertions are never retried, and writes are never repeated.
+       - In deploy-staging and deploy-production, a host that is down or hanging still fails both attempts and still rolls back.
+    3. **Test harness:** the academies test's env shim was frozen to the first test's object, so the "migration not run" test could not fail. It now reads the env lazily.
+  - **Diagnosed, not changed: the intermittent `DELETE /api/live-class` 503** from #287's first merge attempt.
+    - **Source (VERIFIED from the job 122602817160 log plus wrangler 4.92.0 `templates/startDevWorker/ProxyWorker.ts:214`):** it is wrangler dev's ProxyWorker reply "Your worker restarted mid-request". wrangler retries GET/HEAD in that case and gives a 1 ms 503 to any other method. The app answers 401 before touching D1.
+    - **What restarts the local Worker: UNKNOWN.** I ran 4 rounds of the 4 concurrent route tests with an fs watcher on `dist/server`: no writes, no failure.
+    - **Proposed fix (not applied):** in `scripts/test-worker.mjs` tests, retry a non-GET once when the 503 body starts with "Your worker restarted mid-request". This only tolerates the dev proxy and never an app 503 (the app's are JSON).
+  - **Sofia's audit, not fixed (for a later slot):**
+    - M2 (HYPOTHESIS): a stale `syncSeats` racing a seat reduction can briefly exceed the limit; the fix is to allocate inside one SQL batch.
+    - L1: accepting an invitation is not atomic (claim, then insert).
+    - L2: a malformed owner admin body gives 503, not 400.
+    - L3: two concurrent "create" requests give 503, not 409.
+    - L4: no admin hierarchy, and `/api/academy` writes are not rate-limited (product decision).
+    - **Clean:** identity headers, cross-academy isolation, invitation tokens (hashed, single-use, email-bound), Origin checks, SQL parameters, `no-store`, internal account ids (not the Firebase UID).
+  - **Checks:**
+    - Targeted tests: 16/16.
+    - lint: clean on the changed files.
+    - `tsc`: only the 3 errors already on main.
+    - Full `npm test` result: see the PR #290 comment.
+  - **Next action:**
+    - After #290 deploys, the smoke monitor must keep passing.
+    - Next Thursday: M2 + L1 as one atomic-allocation change in `db/institutions.ts`, plus the test-worker 503 tolerance if the 503 recurs.
+    - Fri 10-30 3D slot as planned below.
 - **2026-10-28 (Wednesday 3D routine): gated repair of the Feria unmount GPU leak** (branch `claude/board-wed-3d-20261028`, base main `eaf931a`). Subscription usage: **UNKNOWN**.
   - **Monday's unit is still held.** #282 «El ascensor del cerro» stays draft on R4, because no person has listened to its 6 clips. The rule needs a person: the G4 ruling in its LQG file says machine checks cannot close it, so this run did not try speech-to-text as a substitute. The model hosts are still blocked by the proxy anyway (openaipublic, huggingface and alphacephei time out). **Nothing about #282 changed.**
   - **Unit chosen:** no 3D backlog item had its dependencies met. Rank 2 is blocked on R4; rank 3 is a grammar item that still needs Martin's duplicate check. Building a new world would hit the same §9.2 listening blocker, so the run took the verified Feria defect (QA note «dispose textures in World3D cleanup», the same as Ascensor code review B1) as a **gated repair**, reported as a repair.
