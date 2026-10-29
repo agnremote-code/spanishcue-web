@@ -9,7 +9,7 @@
 // is seen, small and blue.
 import * as THREE from 'three';
 import { box, canvas, cylinder, random, solid, type Light } from '../mundo-3d/kit3d';
-import { carved, finishPlace, lightWaterMaterial, particles, populate, skyDome, veinTexture, type Place3D } from './common3d';
+import { carved, finishPlace, lightWaterMaterial, particles, populate, skyDome, cloudTexture, slabTexture, type Place3D } from './common3d';
 import { softGlowTexture } from './figures3d';
 
 export function buildCielo({ low, shadows }: { low: boolean; shadows: boolean }): Place3D {
@@ -30,9 +30,9 @@ export function buildCielo({ low, shadows }: { low: boolean; shadows: boolean })
   group.add(sunDisc);
 
   // ---------------------------------------------------------------- the floor of clouds
-  const cloudFloor = veinTexture('#efe9df', 'rgba(198,160,96,.3)', 11, 512, 22, 1.6);
-  cloudFloor.repeat.set(10, 10);
-  const floor = new THREE.Mesh(new THREE.PlaneGeometry(240, 164), new THREE.MeshStandardMaterial({ map: cloudFloor, color: '#ffffff', emissive: '#fff4e2', emissiveIntensity: 0.06, roughness: 1 }));
+  const cloudFloor = cloudTexture(11);
+  cloudFloor.repeat.set(5, 3.5);
+  const floor = new THREE.Mesh(new THREE.PlaneGeometry(240, 164), new THREE.MeshStandardMaterial({ map: cloudFloor, roughness: 0.6, metalness: 0.05 }));
   floor.rotation.x = -Math.PI / 2; floor.position.z = 38; floor.receiveShadow = true;
   group.add(floor);
   // Puffs of cloud: soft lumps along the edges and all over the floor, and
@@ -69,8 +69,8 @@ export function buildCielo({ low, shadows }: { low: boolean; shadows: boolean })
   group.add(puffs);
 
   // Paths of gold-veined marble from the gate to every place.
-  const marbleTex = veinTexture('#f6f2ea', 'rgba(198,162,96,.55)', 23, 256, 26, 2);
-  marbleTex.repeat.set(1, 8);
+  const marbleTex = slabTexture(23);
+  marbleTex.repeat.set(1, 10);
   const marble = new THREE.MeshStandardMaterial({ map: marbleTex, roughness: 0.35, metalness: 0.05 });
   const path = (x0: number, z0: number, x1: number, z1: number, w = 3.2) => {
     const len = Math.hypot(x1 - x0, z1 - z0);
@@ -279,10 +279,10 @@ export function buildCielo({ low, shadows }: { low: boolean; shadows: boolean })
   const { talkers, walkers } = populate(group, 'cielo', true, shadows);
   const light: Light = {
     sky: ['#a9c8f0', '#fff4dc'],
-    fog: ['#ecd9b6', 55, 230],
-    sun: { color: '#ffe6bc', intensity: 2.1, at: [-24, 26, 30] },
-    hemi: ['#cfdcff', '#d9b27a', 0.8],
-    exposure: 0.92,
+    fog: ['#e6c9a0', 80, 320],
+    sun: { color: '#ffe2b0', intensity: 2.5, at: [-30, 22, 26] },
+    hemi: ['#bcd0ff', '#c89a5e', 0.62],
+    exposure: 0.82,
   };
   return finishPlace('cielo', group, light, talkers, walkers, [], (t, dt) => { for (const a of anims) a(t, dt); });
 }

@@ -132,11 +132,10 @@ export function veinTexture(base: string, vein: string, seed: number, size = 512
   }, true);
 }
 
-/** Volcanic crust for the Infierno: cooled basalt in irregular plates, with
- *  thin organic fissures that glow from below (a soft halo, a hot core). The
- *  same seed draws the colour map and the glow map, so they line up. */
-export function crustTextures(seed: number, size = 1024) {
-  const paths: Array<{ pts: Array<[number, number]>; w: number }> = [];
+type Fissure = { pts: Array<[number, number]>; w: number };
+/** Organic lines that wander and branch, like cracks in rock or veins in marble. */
+function fissures(seed: number, size: number, count: number): Fissure[] {
+  const paths: Fissure[] = [];
   const r = random(seed);
   const branch = (x: number, y: number, angle: number, len: number, w: number, depth: number) => {
     const pts: Array<[number, number]> = [[x, y]];
@@ -147,37 +146,89 @@ export function crustTextures(seed: number, size = 1024) {
     }
     paths.push({ pts, w });
   };
-  for (let i = 0; i < 14; i++) branch(r() * size, r() * size, r() * Math.PI * 2, 26 + Math.floor(r() * 30), 1.6 + r() * 2.2, 0);
-  const stroke = (ctx: CanvasRenderingContext2D, style: string, scale: number, blur = 0, glow = '') => {
-    ctx.strokeStyle = style; ctx.lineCap = 'round'; ctx.lineJoin = 'round'; ctx.shadowBlur = blur; ctx.shadowColor = glow;
-    for (const p of paths) {
-      ctx.lineWidth = p.w * scale; ctx.beginPath(); ctx.moveTo(p.pts[0][0], p.pts[0][1]);
-      for (let i = 1; i < p.pts.length - 1; i++) { const [x, y] = p.pts[i], [nx, ny] = p.pts[i + 1]; ctx.quadraticCurveTo(x, y, (x + nx) / 2, (y + ny) / 2); }
-      ctx.stroke();
-    }
-    ctx.shadowBlur = 0;
-  };
+  for (let i = 0; i < count; i++) branch(r() * size, r() * size, r() * Math.PI * 2, 26 + Math.floor(r() * 30), 1.6 + r() * 2.2, 0);
+  return paths;
+}
+function strokeFissures(ctx: CanvasRenderingContext2D, paths: Fissure[], style: string, scale: number, blur = 0, glow = '') {
+  ctx.strokeStyle = style; ctx.lineCap = 'round'; ctx.lineJoin = 'round'; ctx.shadowBlur = blur; ctx.shadowColor = glow;
+  for (const p of paths) {
+    ctx.lineWidth = p.w * scale; ctx.beginPath(); ctx.moveTo(p.pts[0][0], p.pts[0][1]);
+    for (let i = 1; i < p.pts.length - 1; i++) { const [x, y] = p.pts[i], [nx, ny] = p.pts[i + 1]; ctx.quadraticCurveTo(x, y, (x + nx) / 2, (y + ny) / 2); }
+    ctx.stroke();
+  }
+  ctx.shadowBlur = 0;
+}
+/** Soft blotches of light and shade, so a floor never reads as one flat colour. */
+function mottle(ctx: CanvasRenderingContext2D, size: number, seed: number, count: number, light: string, dark: string, grain: string) {
+  const n = random(seed);
+  for (let i = 0; i < count; i++) {
+    const x = n() * size, y = n() * size, rad = 20 + n() * 90;
+    const g = ctx.createRadialGradient(x, y, 0, x, y, rad);
+    g.addColorStop(0, n() < 0.5 ? light : dark); g.addColorStop(1, 'rgba(0,0,0,0)');
+    ctx.fillStyle = g; ctx.fillRect(x - rad, y - rad, rad * 2, rad * 2);
+  }
+  for (let i = 0; i < count * 30; i++) { ctx.fillStyle = n() < 0.5 ? grain : 'rgba(0,0,0,.04)'; ctx.globalAlpha = n(); ctx.fillRect(n() * size, n() * size, 1 + n() * 2, 1 + n() * 2); }
+  ctx.globalAlpha = 1;
+}
+
+/** Volcanic crust for the Infierno: cooled basalt in irregular plates, with
+ *  thin organic fissures that glow from below (a soft halo, a hot core). The
+ *  same seed draws the colour map and the glow map, so they line up. */
+export function crustTextures(seed: number, size = 1024) {
+  const paths = fissures(seed, size, 14);
   const map = canvas(size, size, ctx => {
-    const n = random(seed + 1);
     ctx.fillStyle = '#17100e'; ctx.fillRect(0, 0, size, size);
-    // Plates of basalt, some ashier, some darker.
-    for (let i = 0; i < 260; i++) {
-      const x = n() * size, y = n() * size, rad = 20 + n() * 90, v = n();
-      const g = ctx.createRadialGradient(x, y, 0, x, y, rad);
-      g.addColorStop(0, v < 0.5 ? 'rgba(60,46,40,.35)' : 'rgba(5,3,3,.45)'); g.addColorStop(1, 'rgba(0,0,0,0)');
-      ctx.fillStyle = g; ctx.fillRect(x - rad, y - rad, rad * 2, rad * 2);
-    }
-    for (let i = 0; i < 9000; i++) { ctx.fillStyle = `rgba(${n() < 0.5 ? '255,235,220' : '0,0,0'},${n() * 0.07})`; ctx.fillRect(n() * size, n() * size, 1 + n() * 2, 1 + n() * 2); }
-    stroke(ctx, '#0a0505', 3.2);
-    stroke(ctx, '#5a1a08', 1.1);
+    mottle(ctx, size, seed + 1, 260, 'rgba(60,46,40,.35)', 'rgba(5,3,3,.45)', 'rgba(255,235,220,.07)');
+    strokeFissures(ctx, paths, '#0a0505', 3.2);
+    strokeFissures(ctx, paths, '#5a1a08', 1.1);
   }, true);
   const glow = canvas(size, size, ctx => {
     ctx.fillStyle = '#000'; ctx.fillRect(0, 0, size, size);
-    stroke(ctx, 'rgba(140,30,4,.55)', 5, 18, 'rgba(255,80,10,.9)');
-    stroke(ctx, '#ff6a1a', 1.2, 6, '#ff9a40');
-    stroke(ctx, '#ffd27a', 0.35);
+    strokeFissures(ctx, paths, 'rgba(140,30,4,.55)', 5, 18, 'rgba(255,80,10,.9)');
+    strokeFissures(ctx, paths, '#ff6a1a', 1.2, 6, '#ff9a40');
+    strokeFissures(ctx, paths, '#ffd27a', 0.35);
   }, true);
   return { map, glow };
+}
+
+/** The floor of the Cielo: a cloud seen from very close, big soft billows of
+ *  white with a faint lavender in the hollows, and a rare thread of gold. */
+export function cloudTexture(seed: number, size = 1024) {
+  const paths = fissures(seed, size, 4);
+  return canvas(size, size, ctx => {
+    const n = random(seed + 2);
+    ctx.fillStyle = '#f3efe9'; ctx.fillRect(0, 0, size, size);
+    for (let i = 0; i < 70; i++) {
+      const x = n() * size, y = n() * size, rad = 140 + n() * 220, hollow = n() < 0.45;
+      for (const [dx, dy] of [[0, 0], [size, 0], [-size, 0], [0, size], [0, -size]]) {
+        const g = ctx.createRadialGradient(x + dx, y + dy, 0, x + dx, y + dy, rad);
+        g.addColorStop(0, hollow ? 'rgba(200,192,222,.09)' : 'rgba(255,255,255,.22)'); g.addColorStop(1, 'rgba(255,255,255,0)');
+        ctx.fillStyle = g; ctx.fillRect(x + dx - rad, y + dy - rad, rad * 2, rad * 2);
+      }
+    }
+    strokeFissures(ctx, paths, 'rgba(196,156,84,.18)', 2.4, 8, 'rgba(214,176,100,.3)');
+    strokeFissures(ctx, paths, 'rgba(196,152,70,.5)', 0.45);
+  }, true);
+}
+
+/** Slabs of polished white marble for the paths: joints of gold, a tone per slab, a vein here and there. */
+export function slabTexture(seed: number, size = 512) {
+  const paths = fissures(seed, size, 3);
+  return canvas(size, size, ctx => {
+    const n = random(seed + 3);
+    const rows = 4, h = size / rows;
+    for (let row = 0; row < rows; row++) {
+      const v = 238 + Math.floor(n() * 12);
+      ctx.fillStyle = `rgb(${v},${v - 4},${v - 11})`; ctx.fillRect(0, row * h, size, h);
+      const g = ctx.createLinearGradient(0, row * h, size, row * h + h);
+      g.addColorStop(0, 'rgba(255,255,255,.25)'); g.addColorStop(0.5, 'rgba(255,255,255,0)'); g.addColorStop(1, 'rgba(210,200,190,.18)');
+      ctx.fillStyle = g; ctx.fillRect(0, row * h, size, h);
+    }
+    strokeFissures(ctx, paths, 'rgba(150,140,130,.25)', 0.5);
+    ctx.fillStyle = 'rgba(190,150,80,.75)';
+    for (let row = 0; row <= rows; row++) ctx.fillRect(0, row * h - 1.5, size, 3);
+    ctx.fillRect(size / 2 - 1.5, 0, 3, size);
+  }, true);
 }
 
 // ---------------------------------------------------------------- fire
