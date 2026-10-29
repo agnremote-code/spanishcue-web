@@ -31,7 +31,7 @@ async function database() {
 async function load() {
   const bundle = await build({ stdin: { contents: `export { GET, POST } from './app/api/academy/route'; export { GET as ownerGET, POST as ownerPOST } from './app/api/admin/academies/route'; export { resolveFirebaseAccount } from './db/accounts';`, resolveDir: process.cwd() }, bundle: true, write: false, format: 'esm', platform: 'node', plugins: [{ name: 'env', setup(b) {
     b.onResolve({ filter: /^cloudflare:workers$/ }, () => ({ path: 'env', namespace: 'test-env' }));
-    b.onLoad({ filter: /.*/, namespace: 'test-env' }, () => ({ contents: 'export const env = globalThis.__INSTITUTION_TEST_ENV;' }));
+    b.onLoad({ filter: /.*/, namespace: 'test-env' }, () => ({ contents: 'export const env = new Proxy({}, { get: (_, key) => globalThis.__INSTITUTION_TEST_ENV[key] });' }));
   } }] });
   return import('data:text/javascript;base64,' + Buffer.from(bundle.outputFiles[0].text).toString('base64'));
 }
@@ -155,4 +155,44 @@ test('academy panel stays unavailable until the additive migration runs', async 
   assert.equal(response.status, 503);
   const worker = await readFile('worker/index.ts', 'utf8');
   for (const path of ['/api/academy', '/academias/panel', '/academias/unirse']) assert.ok(worker.includes(`pathname==='${path}'`), `${path} must receive verified identity`);
+});
+
+test('removing a member never leaves a PRO grant behind, and any sync revokes an orphaned one', async () => {
+  const { sqlite, db, user } = await database();
+  let failRevoke = false;
+  // Same database, but the grant revoke fails on demand (a transient D1 error).
+  const flaky = { ...db, prepare: query => {
+    const wrap = statement => ({ ...statement, bind: (...v) => wrap(statement.bind(...v)),
+      async run() { if (failRevoke && /SET status = 'revoked'/.test(query)) throw new Error('D1 transient'); return statement.run(); } });
+    return wrap(db.prepare(query));
+  } };
+  globalThis.__INSTITUTION_TEST_ENV = { DB: flaky };
+  const routes = await load();
+  user('admin1', 'dir@academia.test'); user('t1', 'profe@academia.test'); user('t2', 'dos@academia.test');
+  const admin = as('admin1', 'dir@academia.test');
+  const institutionId = (await (await routes.POST(post(admin, { action: 'create', name: 'Academia Uno' }))).json()).membership.institution.id;
+  for (const [id, email] of [['t1', 'profe@academia.test'], ['t2', 'dos@academia.test']]) {
+    const invited = await (await routes.POST(post(admin, { action: 'invite', email }))).json();
+    assert.equal((await routes.POST(post(as(id, email), { action: 'accept', token: new URL(invited.link).searchParams.get('token') }))).status, 200);
+  }
+  const ownerPost = body => new Request(`${origin}/api/admin/academies`, { method: 'POST', headers: { origin, 'content-type': 'application/json', 'x-chespanish-owner': '1' }, body: JSON.stringify(body) });
+  assert.equal((await routes.ownerPOST(ownerPost({ institutionId, seats: 3 }))).status, 200);
+  const resolve = id => routes.resolveFirebaseAccount(db, { uid: `uid-${id}`, email: '', emailVerified: true, displayName: null });
+  assert.equal((await resolve('t1')).accessLevel, 'full');
+
+  // The revoke fails: the removal must not half-happen, so a retry can finish it.
+  failRevoke = true;
+  assert.equal((await routes.POST(post(admin, { action: 'remove-member', userId: 't1' }))).status, 503);
+  failRevoke = false;
+  assert.equal(sqlite.prepare("SELECT count(*) AS n FROM institution_members WHERE user_id = 't1'").get().n, 1, 'membership kept when the revoke failed');
+  assert.equal((await routes.POST(post(admin, { action: 'remove-member', userId: 't1' }))).status, 200, 'the retry completes');
+  assert.equal((await resolve('t1')).accessLevel, 'free');
+
+  // A grant left by an earlier interrupted removal is revoked by the next sync.
+  sqlite.prepare("DELETE FROM institution_members WHERE user_id = 't2'").run();
+  assert.equal((await resolve('t2')).accessLevel, 'full');
+  assert.equal((await routes.ownerPOST(ownerPost({ institutionId, seats: 3 }))).status, 200);
+  assert.equal((await resolve('t2')).accessLevel, 'free');
+  assert.equal((await resolve('admin1')).accessLevel, 'full', 'current members keep their seats');
+  sqlite.close();
 });

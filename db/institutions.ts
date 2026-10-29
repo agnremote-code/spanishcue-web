@@ -139,17 +139,27 @@ export async function syncSeats(db: D1Database, institutionId: string): Promise<
           )
           .bind(now, user_id, TEACHER_LIBRARY_PRODUCT),
   );
-  if (statements.length) await db.batch(statements);
+  // A grant from this academy held by someone who is no longer a member (e.g. a
+  // removal interrupted before its revoke) is revoked here, so every sync heals it.
+  statements.push(
+    db
+      .prepare(
+        `UPDATE access_grants SET status = 'revoked', updated_at = ?
+         WHERE product_code = ? AND source = 'institution' AND source_reference = ? AND status != 'revoked'
+           AND user_id NOT IN (SELECT user_id FROM institution_members WHERE institution_id = ?)`,
+      )
+      .bind(now, TEACHER_LIBRARY_PRODUCT, institutionId, institutionId),
+  );
+  await db.batch(statements);
 }
 
-async function revokeInstitutionGrant(db: D1Database, userId: string, institutionId: string) {
-  await db
+function revokeInstitutionGrant(db: D1Database, userId: string, institutionId: string) {
+  return db
     .prepare(
       `UPDATE access_grants SET status = 'revoked', updated_at = ?
        WHERE user_id = ? AND product_code = ? AND source = 'institution' AND source_reference = ?`,
     )
-    .bind(nowSeconds(), userId, TEACHER_LIBRARY_PRODUCT, institutionId)
-    .run();
+    .bind(nowSeconds(), userId, TEACHER_LIBRARY_PRODUCT, institutionId);
 }
 
 export async function createInstitution(db: D1Database, userId: string, input: Record<string, unknown>): Promise<Membership> {
@@ -299,12 +309,12 @@ export async function removeMember(db: D1Database, actorId: string, targetUserId
   const { institution } = await requireAdmin(db, actorId);
   if (typeof targetUserId !== "string" || !targetUserId) throw new InstitutionError("Profesor no válido.");
   if (targetUserId === actorId) throw new InstitutionError("No puedes quitarte a ti mismo de la academia.");
-  const result = await db
-    .prepare("DELETE FROM institution_members WHERE institution_id = ? AND user_id = ?")
-    .bind(institution.id, targetUserId)
-    .run();
+  // One batch: a member never leaves while keeping this academy's PRO grant.
+  const [result] = await db.batch([
+    db.prepare("DELETE FROM institution_members WHERE institution_id = ? AND user_id = ?").bind(institution.id, targetUserId),
+    revokeInstitutionGrant(db, targetUserId, institution.id),
+  ]);
   if (!result.meta.changes) throw new InstitutionError("Esa persona no forma parte de tu academia.", 404);
-  await revokeInstitutionGrant(db, targetUserId, institution.id);
   await syncSeats(db, institution.id);
 }
 
