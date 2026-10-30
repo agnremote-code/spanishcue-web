@@ -23,6 +23,7 @@ import { Bi } from './Pregunta';
 import type { Near, Pose, View } from './World3D';
 import type { Text } from './levels.d.mts';
 import './mas-alla.css';
+import MusicVolume, { useMusicVolume } from '../escucha-3d/MusicVolume';
 
 const World3D = dynamic(() => import('./World3D'), { ssr: false, loading: () => <div className="ma-loading">Cerrando los ojos…</div> });
 export const LESSON_ID = 243;
@@ -75,6 +76,7 @@ export default function MasAllaGame() {
   const [route, setRoute] = useState(false);
   const [ending, setEnding] = useState(false);
   const [sound, setSound] = useState(true);
+  const [musicVolume, setMusicVolume] = useMusicVolume();
   const [toast, setToast] = useState<Text | null>(null);
   const [teaching, setTeaching] = useState<Teaching>('solo');
   const [studentId, setStudentId] = useState<string | null>(null);
@@ -147,6 +149,7 @@ export default function MasAllaGame() {
   useEffect(() => { ambience.current = createAmbience(); return () => { ambience.current?.dispose(); ambience.current = null; }; }, []);
   useEffect(() => { ambience.current?.setKind(entered && view !== 'intro' ? view as Sound : null); }, [view, entered]);
   useEffect(() => { ambience.current?.setMuted(!sound); setShoutMuted(!sound); }, [sound]);
+  useEffect(() => { ambience.current?.setVolume(musicVolume); }, [musicVolume]);
   const [voice, setVoice] = useState(false);
   useEffect(() => { ambience.current?.duck(voice ? 0.05 : spotOpen || listenAt !== undefined ? 0.35 : 1); }, [spotOpen, listenAt, voice]);
   const onAudio = useCallback((playing: boolean) => setVoice(playing), []);
@@ -320,7 +323,7 @@ export default function MasAllaGame() {
         <button type="button" onClick={() => setRoute(r => !r)} aria-pressed={route}>Recorrido</button>
         {view !== 'umbral' && has3d && <button type="button" onClick={() => go('umbral')}>Al Umbral</button>}
         {mode === 'escucha' && <button type="button" onClick={() => setListenAt(null)}>Escuchas</button>}
-        <button type="button" onClick={() => setSound(s => !s)} aria-pressed={!sound} aria-label={sound ? 'Silenciar el ambiente' : 'Activar el ambiente'}>{sound ? '🔊' : '🔇'}</button>
+        <MusicVolume sound={sound} onSound={setSound} volume={musicVolume} onVolume={setMusicVolume} />
         <button type="button" onClick={() => { setSpotOpen(null); setEntered(false); setEnding(false); setChoosing(false); }}>Nivel {level}</button>
       </div>
     </header>}

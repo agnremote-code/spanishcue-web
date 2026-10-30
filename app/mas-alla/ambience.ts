@@ -13,6 +13,8 @@ export type Ambience = {
   setKind: (kind: Sound | null) => void;
   duck: (level: number) => void;
   setMuted: (muted: boolean) => void;
+  /** Music/ambience volume chosen by the teacher, 0–1. */
+  setVolume: (volume: number) => void;
   play: (sfx: Sfx) => void;
   dispose: () => void;
 };
@@ -21,7 +23,7 @@ export function createAmbience(): Ambience {
   let ctx: AudioContext | null = null;
   let master: GainNode, ducker: GainNode, bedGain: Record<Sound, GainNode>;
   let noise: AudioBuffer;
-  let kind: Sound | null = null, muted = false, timer = 0, flatTone: { o: OscillatorNode; g: GainNode } | null = null;
+  let kind: Sound | null = null, muted = false, volume = 1, timer = 0, flatTone: { o: OscillatorNode; g: GainNode } | null = null;
 
   function noiseBuffer(c: AudioContext) {
     const buffer = c.createBuffer(1, c.sampleRate * 4, c.sampleRate);
@@ -65,7 +67,7 @@ export function createAmbience(): Ambience {
     const C = window.AudioContext ?? (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext;
     const c = new C();
     ctx = c; noise = noiseBuffer(c);
-    master = c.createGain(); master.gain.value = muted ? 0 : 0.8;
+    master = c.createGain(); master.gain.value = muted ? 0 : 0.8 * volume;
     ducker = c.createGain(); ducker.gain.value = 1;
     ducker.connect(master); master.connect(c.destination);
     const mk = () => { const g = c.createGain(); g.gain.value = 0; g.connect(ducker); return g; };
@@ -116,7 +118,8 @@ export function createAmbience(): Ambience {
       for (const k of Object.keys(bedGain) as Sound[]) bedGain[k].gain.setTargetAtTime(k === next ? 1 : 0, t, 0.8);
     },
     duck(level) { if (ctx) ducker.gain.setTargetAtTime(level, ctx.currentTime, 0.25); },
-    setMuted(value) { muted = value; if (ctx) master.gain.setTargetAtTime(value ? 0 : 0.8, ctx.currentTime, 0.1); },
+    setMuted(value) { muted = value; if (ctx) master.gain.setTargetAtTime(value ? 0 : 0.8 * volume, ctx.currentTime, 0.1); },
+    setVolume(value) { volume = value; if (ctx) master.gain.setTargetAtTime(muted ? 0 : 0.8 * volume, ctx.currentTime, 0.1); },
     play(sfx) {
       if (!ctx || muted) return;
       const c = ctx;
