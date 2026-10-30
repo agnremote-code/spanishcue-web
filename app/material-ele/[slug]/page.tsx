@@ -5,6 +5,8 @@ import { faqPageSchema, webPageSchema } from "../../growth/schema";
 import { EleActivities, EleBuyBand, EleExerciseBlock, EleLessonGrid, EleLevelNav, EleQuestions, EleTopbar, EleTopicCards, PRICE_LABEL, PRICING_PATH, eleLessonCards, eleMetadata } from "../components";
 import { MATERIAL_ELE_PATH, elePageBySlug, elePages } from "../data";
 import styles from "../../growth/growth.module.css";
+import PrintButton from "../PrintButton";
+import print from "../print.module.css";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -32,12 +34,17 @@ export default async function ElePage({ params }: Props) {
           <JsonLd data={faqPageSchema(page.faq, "es")} />
           <EleTopbar current={page.slug === "preguntas-de-conversacion" || page.slug === "juegos-para-clase-de-espanol" ? page.path : MATERIAL_ELE_PATH} />
           <Breadcrumbs items={[{ name: "SpanishCue", href: "/" }, { name: "Material ELE", href: MATERIAL_ELE_PATH }, { name: page.label, href: page.path }]} />
+          <p className={print.printOnly}>
+            <strong>Ficha de SpanishCue · {page.label}</strong><br />
+            Más actividades y clases interactivas: spanishcue.com{page.path}
+          </p>
           <section className={styles.hero}>
             <p className={styles.eyebrow}>{page.kicker}</p>
             <h1 className={styles.title}>{page.h1}</h1>
             <p className={styles.lead}>{page.intro}</p>
-            <div className={styles.heroActions}>
+            <div className={`${styles.heroActions} ${print.noPrint}`}>
               <Link className={styles.primaryButton} href="#actividades">Ver las actividades</Link>
+              <PrintButton />
               {freeLesson ? <Link className={styles.secondaryButton} href={freeLesson.href}>Clase gratis: {freeLesson.title}</Link> : <Link className={styles.secondaryButton} href="/demo/noche-abierta">Probar una clase gratis</Link>}
             </div>
           </section>
@@ -67,19 +74,24 @@ export default async function ElePage({ params }: Props) {
             <div className={styles.panel}><ul>{page.errors.map((item) => <li key={item}>{item}</li>)}</ul></div>
           </Section>
 
+          <div className={print.noPrint}>
           <Section id="clases" title="Clases interactivas para continuar" intro={`Las clases GRATIS se abren ya. Las PRO están incluidas en la suscripción de ${PRICE_LABEL}.`}>
             <EleLessonGrid lessons={lessons} />
             <p><Link className={styles.textLink} href={PRICING_PATH}>Desbloquear todas las clases →</Link></p>
           </Section>
+          </div>
 
           <Section title="Preguntas frecuentes">
             <Faq items={page.faq} />
           </Section>
 
-          <Section title="Sigue con">
-            <EleTopicCards slugs={page.related} />
-          </Section>
-          <EleBuyBand />
+          <div className={print.noPrint}>
+            <Section title="Sigue con">
+              <EleTopicCards slugs={page.related} />
+            </Section>
+            <EleBuyBand />
+          </div>
+          <p className={print.printOnly}>Ficha gratuita de SpanishCue. Clases interactivas de A1 a C2 para compartir en pantalla: spanishcue.com/material-ele</p>
         </div>
       </main>
       <GrowthFooter />
