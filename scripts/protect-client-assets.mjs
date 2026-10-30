@@ -56,16 +56,27 @@ const manifest = JSON.parse(
 
 const publicRoots = new Set([
   "app/AuthSessionSync.tsx",
+  // Newsletter email capture on public pages (popup + /clase-gratis form).
+  "app/newsletter/EmailGiftPopup.tsx",
+  "app/newsletter/GiftSignup.tsx",
   "app/Library.tsx",
   // Public demo imports geometry/physics only; server allowlists every lesson payload.
   "app/immersive/ImmersiveLanding.tsx",
   "app/immersive/CityDemo.tsx",
   "app/immersive/DemoScene.tsx",
   "app/immersive/ProDiscovery.tsx",
+  // Free-version bar above every browsing page for non-PRO visitors: copy and a /pricing link only.
+  "app/marketing/FreeVersionBar.tsx",
   "app/immersive/PremiumPanel.tsx",
-  // Free hospital demo: geometry, the reception card and the PRO panel; the
-  // reception scene text arrives as page props, the World3D chunk is dynamic.
-  "app/hospital-san-casi-vivo/HospitalDemo.tsx",
+  // Free Noche abierta: the PRO game itself. Its street scenes are not in any
+  // chunk: the free ones arrive as public/noche-abierta/demo-calle.json and
+  // the PRO class registers the rest from NocheAbierta.tsx (private).
+  "app/noche-abierta/NocheDemo.tsx",
+  "app/noche-abierta/World3D.tsx",
+  "app/noche-abierta/ItemStage.tsx",
+  // Free hospital: the PRO game itself. Its scene texts and people are not in
+  // any chunk: the free ones arrive as public/hospital-san-casi-vivo/demo.json.
+  "app/hospital-san-casi-vivo/HospitalFree.tsx",
   "app/hospital-san-casi-vivo/World3D.tsx",
   // Google Search landing: the client chunk carries only the guided-tour
   // script and checkout UI; the free demo scene and catalog titles arrive
@@ -102,6 +113,7 @@ const publicRoots = new Set([
   "app/privacy/GoogleConsentMode.tsx",
   "app/not-found.tsx",
   "app/pro/claim/ClaimClient.tsx",
+  "app/pro/claim/enlace/EmailLinkClient.tsx",
   "app/pro/success/SuccessClient.tsx",
   "app/student-tracker/StudentTracker.tsx",
   "app/sistema-verbal/page.tsx",
@@ -179,18 +191,16 @@ for (const key of publicRoots) {
 
 // Test the actual multi-entry build graph, not only an isolated tree-shaken
 // demo bundle: mixed geometry/content modules can become shared public chunks.
-const paidStreetTitles = [];
-for (const part of ["norte", "centro", "sur"]) {
-  const {default: encounters} = await import(`../app/noche-abierta/street/caos-${part}.mjs`);
-  paidStreetTitles.push(...encounters.map(encounter => encounter.title));
-}
-// Hospital demo: only the reception scene is free; no other scene may ship publicly.
+// No Noche street scene ships in a chunk: free ones come from the demo JSON.
+const {ALL_ENCOUNTERS} = await import("../app/noche-abierta/street.mjs");
+// A title that is also a street shout of the public world (events.mjs, e.g.
+// «¡Ladrón! ¡Mi bolso!») is ambient sound, not the scene.
+const streetShouts = await readFile("app/noche-abierta/events.mjs", "utf8");
+const paidStreetTitles = ALL_ENCOUNTERS.map(encounter => encounter.title).filter(title => !streetShouts.includes(`"${title}"`));
+// Hospital: no scene text ships in a chunk; free ones come from the demo JSON.
 const {CONTENT: hospitalLevels} = await import("../app/hospital-san-casi-vivo/levels.mjs");
 for (const scenes of Object.values(hospitalLevels)) {
-  for (const [id, scene] of Object.entries(scenes)) {
-    if (id === "recepcion") continue;
-    paidStreetTitles.push(typeof scene.line === "string" ? scene.line : scene.line.es);
-  }
+  for (const scene of Object.values(scenes)) paidStreetTitles.push(typeof scene.line === "string" ? scene.line : scene.line.es);
 }
 for (const file of publicFiles) {
   if (!file.endsWith(".js")) continue;
@@ -431,7 +441,7 @@ import privateAssets from './private-client-assets.js';
 import privateMedia from './private-media-assets.js';
 import routedWebp from './public-webp-assets.js';
 import privateLessons from './private-lesson-assets.js';
-import {hasFullLibraryAccess} from './private-access-runtime.js';
+import {mayReadPrivateMedia} from './private-access-runtime.js';
 
 const privateHeaders=()=>new Headers({'Cache-Control':'private, no-store','X-Content-Type-Options':'nosniff','Referrer-Policy':'strict-origin-when-cross-origin'});
 const base64Bytes=value=>Uint8Array.from(atob(value),character=>character.charCodeAt(0));
@@ -497,7 +507,7 @@ export default {async fetch(request,env,ctx){
  let path;try{path=decodeURIComponent(new URL(request.url).pathname)}catch{return new Response('Bad request',{status:400})}
  const media=Object.hasOwn(privateAssets,path)?privateAssets[path]:privateMedia.assets[path];
  if(media){
-  if(!await hasFullLibraryAccess(request,env))return new Response('Acceso restringido',{status:403,headers:privateHeaders()});
+  if(!await mayReadPrivateMedia(request,env,path))return new Response('Acceso restringido',{status:403,headers:privateHeaders()});
   if(request.method!=='GET'&&request.method!=='HEAD'){const headers=privateHeaders();headers.set('Allow','GET, HEAD');return new Response('Method not allowed',{status:405,headers});}
   return servePrivateMedia(request,env,media);
  }

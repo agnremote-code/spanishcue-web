@@ -166,8 +166,21 @@ export function sourceFiles(root) {
   for (const dir of CONTENT_ROOTS) if (existsSync(resolve(root, dir))) walk(resolve(root, dir));
   return paths.sort();
 }
+// Generated copies of existing lessons (the free 3D classes' data, written by
+// scripts/build-noche-demo.mjs) with the source files they copy. They inherit
+// the reviewed exemptions of those sources; check-english-copy requires their
+// English to exist in them already.
+export const DERIVED = [
+  ['public/noche-abierta/demo-calle.json', ['app/noche-abierta/street.mjs', 'app/noche-abierta/street-core.mjs', 'app/noche-abierta/street/', 'app/noche-abierta/talk/']],
+  ['public/hospital-san-casi-vivo/demo.json', ['app/hospital-san-casi-vivo/levels/', 'app/hospital-san-casi-vivo/patients.mjs']],
+];
+const fromSources = (path, sources) => sources.some(prefix => path === prefix || (prefix.endsWith('/') && path.startsWith(prefix)));
 export function scanRepository(root, registry = { version: 1, exemptions: [] }) {
-  return sourceFiles(root).flatMap(path => scanSource(readFileSync(resolve(root, path), 'utf8'), path, registry));
+  return sourceFiles(root).flatMap(path => {
+    const sources = DERIVED.find(([derived]) => derived === path)?.[1];
+    const own = sources ? { ...registry, exemptions: [...registry.exemptions, ...registry.exemptions.filter(e => fromSources(e.path, sources)).map(e => ({ ...e, path }))] } : registry;
+    return scanSource(readFileSync(resolve(root, path), 'utf8'), path, own);
+  });
 }
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const root = process.cwd();

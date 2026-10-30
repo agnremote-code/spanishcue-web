@@ -5,7 +5,7 @@ import { getPaddleTransaction, validatePaddleClaimTransaction } from "../../../.
 import { paddleConfig } from "../../../../paddle-config";
 import { authorizePurchaseClaim } from "../../../../purchase-claim-cookie";
 import { bindPurchaseToUser } from "../../../../../db/purchase-binding";
-import type { PurchaseProvider } from "../../../../../db/purchase-claims";
+import { purchaseClaimByVerifiedEmail, type PurchaseProvider } from "../../../../../db/purchase-claims";
 
 export const dynamic = "force-dynamic";
 
@@ -22,9 +22,12 @@ export async function POST(request: Request) {
     if (parsed.provider !== "paypal" && parsed.provider !== "paddle") throw new Error("invalid");
     provider = parsed.provider;
   } catch { return Response.json({ error: "Solicitud no válida." }, { status: 400 }); }
-  const cookieClaim = await authorizePurchaseClaim(env.DB, request.headers.get("cookie"), provider);
-  if (!cookieClaim || cookieClaim.provider !== provider) return Response.json({ error: "No encontramos esta compra en el navegador." }, { status: 404 });
   const config = billingConfig(env);
+  // Same browser: the claim cookie. Another device (the emailed sign-in link): the paid claim whose
+  // provider-confirmed buyer email is this account's verified email.
+  const cookieClaim = await authorizePurchaseClaim(env.DB, request.headers.get("cookie"), provider)
+    ?? await purchaseClaimByVerifiedEmail(env.DB, provider, config.paypalEnv, email, userId);
+  if (!cookieClaim || cookieClaim.provider !== provider) return Response.json({ error: "No encontramos esta compra en el navegador." }, { status: 404 });
   if (cookieClaim.environment !== config.paypalEnv || cookieClaim.offerCode !== config.founderOffer.code ||
       !(provider === "paddle" ? [200, 1500, 1550].includes(cookieClaim.amountCents ?? 0) : cookieClaim.amountCents === 1500) || cookieClaim.currency !== "USD") {
     return Response.json({ error: "La compra no coincide con la oferta." }, { status: 409 });

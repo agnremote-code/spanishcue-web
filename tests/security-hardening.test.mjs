@@ -9,7 +9,7 @@ const { RATE_LIMITED_POSTS, rateLimitKey, rateLimited, rateLimitResponse } = awa
 const post = (path, ip = "203.0.113.7") => new Request(`https://spanishcue.com${path}`, { method: "POST", headers: ip ? { "cf-connecting-ip": ip } : {} });
 
 test("only the anonymous cost endpoints are limited, per deployment and IP", () => {
-  assert.deepEqual([...RATE_LIMITED_POSTS].sort(), ["/api/academy-demo", "/api/billing/checkout", "/api/billing/paddle/checkout", "/api/founder-access", "/api/phonetics/speech-attempt"]);
+  assert.deepEqual([...RATE_LIMITED_POSTS].sort(), ["/api/academy-demo", "/api/billing/checkout", "/api/billing/paddle/checkout", "/api/founder-access", "/api/newsletter", "/api/phonetics/speech-attempt"]);
   assert.equal(rateLimitKey(post("/api/academy-demo"), "/api/academy-demo", undefined), "production:/api/academy-demo:203.0.113.7");
   assert.equal(rateLimitKey(post("/api/founder-access"), "/api/founder-access", undefined), "production:/api/founder-access:203.0.113.7");
   assert.equal(rateLimitKey(post("/api/billing/checkout"), "/api/billing/checkout", "staging"), "staging:/api/billing/checkout:203.0.113.7");

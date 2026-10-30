@@ -1,4 +1,5 @@
 import { additionalSamples } from "./additional-samples";
+import { classicConversationCovers } from "./conversation-classic-covers";
 import { boardLessonEntries } from "./boards/catalog-adapter";
 import { conversationLessons } from "./conversation-worlds/catalog";
 import { verbalLessons } from "./verbal-system/lesson-data";
@@ -122,7 +123,7 @@ const categoryPreviews:Record<Category,string> = {
 const countryLessonIds = new Set([19, 24, 25, 26, 27, 29, 30, 32, 33, 36, 39, 210, 227, 228, 229]);
 
 function withPreview(lesson:LessonSource):LessonSource & {image:string;countryCollection:boolean} {
-  return {...lesson,countryCollection:countryLessonIds.has(lesson.id),image:lesson.category==="Gramática"?`/grammar-thumbnails/${lesson.id}.webp`:lessonPreviews[lesson.id]||lesson.image||categoryPreviews[lesson.category]};
+  return {...lesson,countryCollection:countryLessonIds.has(lesson.id),image:lesson.category==="Gramática"?`/grammar-thumbnails/${lesson.id}.webp`:classicConversationCovers.get(lesson.id)||lessonPreviews[lesson.id]||lesson.image||categoryPreviews[lesson.category]};
 }
 
 const boardLessonIds = [205,206] as const;

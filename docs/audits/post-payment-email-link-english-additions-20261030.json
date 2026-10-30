@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "authorization": "Owner standing approval (Ale) for new English copy, typed «apruebo (siempre de ahora en más apruebo)» on 2026-10-22 (message cmsg_01Gr5R4j3t2Yet65UcmhcVhAAAbp6kqDfMqxzNm3PL6f5g), applied to Ale's 2026-10-30 request that Suscribirme go straight to payment and the account be created and sent by email afterwards (message cmsg_01Gr5R4j3t2Yet65UcmhcVhAT3PzkaGWpcnckD3BhHfALr).",
+  "additions": [
+    { "path": "app/pro/claim/ClaimClient.tsx", "text": "Done. We emailed your access link to:" },
+    { "path": "app/pro/claim/ClaimClient.tsx", "text": "Creating your access for:" },
+    { "path": "app/pro/claim/ClaimClient.tsx", "text": "Open the email and tap the link: you go straight in, with your account created and PRO active. If you cannot see it, check spam." },
+    { "path": "app/pro/claim/ClaimClient.tsx", "text": "Resend the email" },
+    { "path": "app/pro/claim/ClaimClient.tsx", "text": "I prefer another way in" },
+    { "path": "app/pro/claim/enlace/EmailLinkClient.tsx", "text": "This link was already used or has expired. Go back to the payment page to request a new one." },
+    { "path": "app/pro/claim/enlace/EmailLinkClient.tsx", "text": "This link is not valid." },
+    { "path": "app/pro/claim/enlace/EmailLinkClient.tsx", "text": "YOUR PRO ACCESS" },
+    { "path": "app/pro/claim/enlace/EmailLinkClient.tsx", "text": "We could not sign you in" },
+    { "path": "app/pro/claim/enlace/EmailLinkClient.tsx", "text": "Activating your account" },
+    { "path": "app/pro/claim/enlace/EmailLinkClient.tsx", "text": "One moment…" },
+    { "path": "app/pro/claim/enlace/EmailLinkClient.tsx", "text": "Type the email you paid with to confirm it is you." },
+    { "path": "app/pro/claim/enlace/EmailLinkClient.tsx", "text": "Sign in" }
+  ]
+}

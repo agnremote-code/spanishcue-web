@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import {beforeGrammarBytes,beforeGrammarLessons,grammarSharedFiles} from './grammar-preservation.mjs';
 import {readFileSync} from 'node:fs';
+import {withOldClassicImage, withoutClassicCoverBytes} from './classic-covers.mjs';
 
 // Course classes (ids above 300, written from 2026-10-20) as listed in the grammar catalog additions.
 const courseLessons=[...readFileSync(new URL('../../app/grammar-classroom/catalog.ts',import.meta.url),'utf8').matchAll(/^  \[([3-5]\d\d), '[^']*', '[^']*', '([^']*)'/gm)].map(([,id,slug])=>({id:Number(id),path:`/gramatica/${slug}`,files:/^$/,edits:{}}));
@@ -532,6 +533,7 @@ export function isApprovedAdditionPath(path) {
 }
 
 export function withoutApprovedAdditions(path, bytes) {
+  bytes = withoutClassicCoverBytes(path, bytes);
   for (const repair of repairs.filter(item => item.latest && item.edits[path])) {
     let text = bytes.toString('utf8');
     for (const [after, before] of repair.edits[path]) {
@@ -576,7 +578,7 @@ export function withoutApprovedAdditions(path, bytes) {
 }
 
 export function withoutApprovedLessons(lessons) {
-  return beforeGrammarLessons(lessons).filter(lesson => !additions.some(item => item.id === lesson.id && item.path === lesson.path)).map(lesson => {
+  return beforeGrammarLessons(lessons.map(withOldClassicImage)).filter(lesson => !additions.some(item => item.id === lesson.id && item.path === lesson.path)).map(lesson => {
     if (lesson.id === 221) {
       assert.deepEqual(lesson.news,{addedAt:'2026-09-29',featured:true});
       const preserved = {...lesson}; delete preserved.news; lesson = preserved;

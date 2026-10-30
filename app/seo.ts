@@ -96,6 +96,8 @@ export function isSearchPrivatePath(pathname: string): boolean {
     path === "/autoestudio/claim" ||
     path.startsWith("/autoestudio/clase/") ||
     path === "/zeely" ||
+    path === "/newsletter" ||
+    path.startsWith("/newsletter/") ||
     (isCampaignPath(path) && !isIndexablePurchaseLandingPath(path))
   );
 }
