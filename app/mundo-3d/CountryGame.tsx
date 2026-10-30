@@ -193,7 +193,7 @@ export default function CountryGame({ country, rings, loadContent, loadScene, li
   const other = () => {
     if (!region || !spotOpen) return;
     const pool = region.spots.filter(s => s.id !== spotOpen);
-    const pick = pool.find(s => !done.includes(spotKey(region.id, s.id))) ?? pool[Math.floor(Math.random() * pool.length)];
+    const pick = pool.find(s => !done.includes(spotKey(region.id, s.id))) ?? pool[(region.spots.findIndex(s => s.id === spotOpen)) % pool.length];
     setSpotOpen(null);
     window.setTimeout(() => openSpot(pick.id), 60);
   };
