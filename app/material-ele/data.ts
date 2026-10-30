@@ -1127,7 +1127,7 @@ const topicInputs: PageInput[] = [
     title: "Primera clase de español con un alumno nuevo: guion y material | SpanishCue",
     description: "Guion para la primera clase de español con un alumno nuevo: qué hacer en cada minuto, preguntas para conocer su nivel y una clase inicial A1 gratis.",
     h1: "La primera clase de español con un alumno nuevo: guion y material",
-    kicker: "Clases particulares · A0–A1",
+    kicker: "Clases particulares · Principiantes y A1",
     intro: "En la primera clase el alumno decide si vuelve. Necesita salir hablando un poco de español, entender cómo vas a trabajar y sentir que el plan es para él. Este guion de 50 minutos sirve para clases particulares online y presenciales.",
     keyPoints: {
       title: "Guion de 50 minutos",
