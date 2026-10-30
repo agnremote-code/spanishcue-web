@@ -788,7 +788,7 @@ export default function Library({
   );
   const [level, setLevel] = useState("Todos");
   const [category, setCategory] = useState<"Todas" | Category>("Todas");
-  const [conversationMode, setConversationMode] = useState<"all" | "worlds" | "play" | "boards" | "countries" | "worlds3d" | "classic">("all");
+  const [conversationMode, setConversationMode] = useState<"all" | "worlds" | "play" | "boards" | "countries" | "worlds3d" | "countries3d" | "classic">("all");
   const [grammarTopic, setGrammarTopic] = useState("all");
   const [query, setQuery] = useState("");
   const [catalogSearchActive, setCatalogSearchActive] = useState(false);
@@ -819,10 +819,11 @@ export default function Library({
     selectedLevel?.focus();
   }, [level]);
   const conversationFamilyLabel = (
-    mode: "all" | "worlds" | "play" | "boards" | "countries" | "worlds3d" | "classic",
+    mode: "all" | "worlds" | "play" | "boards" | "countries" | "worlds3d" | "countries3d" | "classic",
   ) => {
     if (mode === "all") return locale === "es" ? "TODAS" : "ALL";
     if (mode === "worlds3d") return locale === "es" ? "MUNDOS 3D" : "3D WORLDS";
+    if (mode === "countries3d") return locale === "es" ? "MUNDOS 3D · PAÍSES" : "3D WORLDS · COUNTRIES";
     if (mode === "classic") return locale === "es" ? "CLÁSICAS" : "CLASSICS";
     if (mode === "worlds") return locale === "es" ? "UNIVERSOS" : "WORLDS";
     if (mode === "play") return locale === "es" ? "MODO PLAY" : "PLAY MODE";
@@ -914,9 +915,10 @@ export default function Library({
       const items=filterLessons(source, { level, category: view === "Biblioteca" ? filterCategory : category, query: catalogQuery }) as Lesson[];
       if (view !== "Biblioteca") return items;
       if (category === "Todas") return items.filter((lesson) => !lesson.countryCollection);
+      if (conversationMode === "countries3d") return [...items].sort((a, b) => (a.countrySequence ?? Number.MAX_SAFE_INTEGER) - (b.countrySequence ?? Number.MAX_SAFE_INTEGER));
       return items;
     },
-    [level, category, filterCategory, catalogQuery, familyLessonSource, lessons, view],
+    [level, category, conversationMode, filterCategory, catalogQuery, familyLessonSource, lessons, view],
   );
   const visibleLessons =
     view === "Favoritas"
@@ -1756,10 +1758,13 @@ export default function Library({
         {view === "Biblioteca" && category === "Conversación" && conversationMode !== "countries" && (
           <section className={`conversation-routes${conversationChooser ? "" : " compact"}`} aria-label={locale === "es" ? "Formatos de conversación" : "Conversation formats"}>
             {(["worlds3d", "classic"] as const).map((value) => {
-              const items = familyLessonsForCategory(lessons, { category: "Conversación", conversationMode: value }) as Lesson[];
+              const items = [
+                ...(familyLessonsForCategory(lessons, { category: "Conversación", conversationMode: value }) as Lesson[]),
+                ...(value === "worlds3d" ? familyLessonsForCategory(lessons, { category: "Conversación", conversationMode: "countries3d" }) as Lesson[] : []),
+              ];
               // One cover per card (Noche abierta, Ciudad en juego); its recording plays on hover.
               const cover = items.find((lesson) => lesson.id === (value === "worlds3d" ? 223 : 139)) || items[0];
-              const active = conversationMode === value;
+              const active = conversationMode === value || (value === "worlds3d" && conversationMode === "countries3d");
               return (
                 <button
                   key={value}
@@ -1792,6 +1797,32 @@ export default function Library({
             })}
           </section>
         )}
+        {view === "Biblioteca" && category === "Conversación" && (conversationMode === "worlds3d" || conversationMode === "countries3d") && !catalogSearchActive && (() => {
+          const countries = familyLessonsForCategory(lessons, { category: "Conversación", conversationMode: "countries3d" }) as Lesson[];
+          if (!countries.length) return null;
+          const open = conversationMode === "countries3d";
+          return (
+            <section className={`countries3d-shelf${open ? " is-open" : ""}`} aria-labelledby="countries3d-title">
+              <img src="/catalog-thumbnails/banderas/paises-3d.webp" alt="" loading="lazy" decoding="async" width="1200" height="800" />
+              <div>
+                <small>{locale === "es" ? "MUNDOS 3D · CATEGORÍA" : "3D WORLDS · CATEGORY"}</small>
+                <h3 id="countries3d-title">{t("library.countries")}</h3>
+                <p>{locale === "es"
+                  ? `Aterrizas en ${countries.length} países, eliges una región y hablas con su gente. Conversación y comprensión auditiva en el mismo mundo.`
+                  : `Land in ${countries.length} countries, choose a region and talk to the people there. Conversation and listening in the same world.`}</p>
+                <ul aria-hidden="true">{countries.map((lesson) => <li key={lesson.id}><img src={lesson.image} alt="" loading="lazy" decoding="async" /></li>)}</ul>
+                <button type="button" aria-pressed={open} onClick={() => {
+                  trackMarketingEvent("filter_used", { filter: "conversation_mode", value: open ? "worlds3d" : "countries3d" });
+                  setConversationMode(open ? "worlds3d" : "countries3d");
+                  setLevel("Todos");
+                  scrollToResults();
+                }}>{open
+                  ? (locale === "es" ? "← Volver a todos los mundos 3D" : "← Back to all 3D worlds")
+                  : (locale === "es" ? `Ver los ${countries.length} países →` : `See the ${countries.length} countries →`)}</button>
+              </div>
+            </section>
+          );
+        })()}
         {view === "Biblioteca" && category === "Gramática" && (
           <section className="grammar-topic-filter" aria-label="Temas de gramática">
             <div><small>GRAMÁTICA PARA UNA CLASE DE 60 MINUTOS</small><h3>¿Qué quieres enseñar?</h3></div>

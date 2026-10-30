@@ -13,6 +13,7 @@ import {
   placeVehicle, random, sign, solid, spotWith, streetLamp, tileTexture, umbrella, water, windowsTexture,
   type Box, type Light, type Look, type SceneBuilder, type SpotPlace, type Talker, type Walker,
 } from './kit3d';
+import { bunting, countryHasFlag, createFlags } from './banderas3d';
 
 export type ZoneStyle = 'colonial' | 'mediterranean' | 'nordic' | 'modern' | 'alpine' | 'tropical' | 'brick' | 'desert';
 export type SpotKind = 'cafe' | 'market' | 'shop' | 'park' | 'beach' | 'harbor' | 'museum' | 'station' | 'stage' | 'viewpoint' | 'restaurant' | 'temple' | 'church' | 'school';
@@ -74,7 +75,7 @@ const GROUNDS: Record<ZoneLayout['ground'], [string, string[]]> = {
   stone: ['#c9bfae', ['#b6ab98', '#ddd3c2']],
 };
 
-const build = (z: ZoneLayout): SceneBuilder => ({ low, shadows }) => {
+const build = (z: ZoneLayout): SceneBuilder => ({ low, shadows, flag }) => {
   const group = new THREE.Group();
   const solids: Box[] = [];
   const spots: SpotPlace[] = [];
@@ -88,6 +89,9 @@ const build = (z: ZoneLayout): SceneBuilder => ({ low, shadows }) => {
     solids.push(top == null ? { x0: Math.min(x0, x1), x1: Math.max(x0, x1), z0: Math.min(z0, z1), z1: Math.max(z0, z1) } : { x0: Math.min(x0, x1), x1: Math.max(x0, x1), z0: Math.min(z0, z1), z1: Math.max(z0, z1), top });
   const east = z.water === 'east', west = z.water === 'west';
   const night = z.light === 'dusk';
+  // The country's flag: on the entrance, on some roofs and in pennants over the avenue.
+  const flags = createFlags();
+  const flies = countryHasFlag(flag);
 
   // ---------------------------------------------------------- ground
   const [base, specks] = GROUNDS[z.ground];
@@ -111,6 +115,7 @@ const build = (z: ZoneLayout): SceneBuilder => ({ low, shadows }) => {
     block(group, x0, z0, x1, z1, h, facade(color, seed), '#ffffff', z.style === 'modern' ? '#5a6168' : '#6b5a4c');
     roof(group, z.style, x0, z0, x1, z1, h, seed);
     solidBox(x0, z0, x1, z1);
+    if (flies && seed % 3 === 0) { const front = Math.abs(x0) < Math.abs(x1) ? x0 : x1; flags.pole(group, flag, front + Math.sign(x0 + x1) * 0.6, h, (z0 + z1) / 2, 3.2, 1.5, front < 0 ? 0 : Math.PI); }
   };
   const height = () => z.style === 'modern' ? 12 + rand() * 18 : z.style === 'nordic' || z.style === 'alpine' ? 6 + rand() * 3 : 5 + rand() * 5;
   // Side rows (or the beach), the south row with the entrance gap.
@@ -125,6 +130,7 @@ const build = (z: ZoneLayout): SceneBuilder => ({ low, shadows }) => {
   group.add(box(14, 1.1, 1, solid(shade(z.palette[0], -0.25), 0.8), 0, 6.3, -38));
   sign(group, z.entrance, 0, 6.3, -37.46, 0, 9, '#fbf6ea', '#1f2a37');
   sign(group, z.entrance, 0, 6.3, -38.54, Math.PI, 9, '#fbf6ea', '#1f2a37');
+  if (flies) for (const s of [-1, 1]) flags.pole(group, flag, s * 6.5, 6.85, -38, 2.6, 1.8, s < 0 ? Math.PI : 0);
   // The north edge: a low wall, and the landmark beyond it.
   group.add(box(96, 1.2, 0.8, solid(shade(base, -0.2), 0.9), 0, 0.6, 48.6));
   solidBox(-48, 48.2, 48, 49);
@@ -177,6 +183,7 @@ const build = (z: ZoneLayout): SceneBuilder => ({ low, shadows }) => {
     }
   }
   for (const zz of [-24, 26]) for (const s of [-1, 1]) { streetLamp(group, s * 4.9, zz, lamps); solidBox(s * 4.9 - 0.2, zz - 0.2, s * 4.9 + 0.2, zz + 0.2); }
+  if (flies) for (const zz of [-24, 26]) bunting(group, flag, -4.9, zz, 4.9, zz, 4.05);
   // A parked car or two by the corners.
   if (z.style !== 'alpine' && !low) {
     for (const [x, zz, c] of [[-29, -30, '#c23b3b'], [29, 31, '#2f6fb0']] as const) {
@@ -221,6 +228,7 @@ const build = (z: ZoneLayout): SceneBuilder => ({ low, shadows }) => {
       if (sea) { sea.offset.x = (sea.offset.x + dt * 0.01) % 1; sea.offset.y = Math.sin(t * 0.3) * 0.03; }
       lamps.forEach((m, k) => { m.emissiveIntensity = (night ? 1.8 : 0.6) + Math.sin(t * 2 + k) * 0.1; });
       for (const s of spinners) s.rotation.z += dt * 0.6;
+      flags.wave(t);
     },
   };
 };

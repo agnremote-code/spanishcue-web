@@ -7,6 +7,8 @@ import * as THREE from 'three';
 import { box, canvas, cylinder, glow, random, solid, addPalm } from './kit3d';
 import type { Box } from './kit3d';
 import type { CountryInfo, RegionInfo } from './types';
+import { countryHasFlag, createFlags, flagColors } from './banderas3d';
+import { FLAG_RATIO, drawFlag } from './banderas.mjs';
 
 export const HUB = { x0: -26, x1: 26, z0: -7, z1: 14 };
 export const RUNWAY = { z0: -6, z1: 1.5 };
@@ -50,6 +52,8 @@ export function mapLayout(country: CountryInfo): MapLayout {
   solids.push({ x0: -23, x1: -13, z0: 6, z1: 13.4 });
   solids.push({ x0: 18.5, x1: 21.5, z0: 8.5, z1: 11.5 });
   solids.push({ x0: PLANE_PARK.x - 7, x1: PLANE_PARK.x + 7, z0: PLANE_PARK.z - 0.9, z1: PLANE_PARK.z + 0.9, top: 1.85 });
+  // The two flagpoles at the ends of the portal row.
+  for (const px of [-24.6, 24.6]) solids.push({ x0: px - 0.15, x1: px + 0.15, z0: 12.65, z1: 12.95 });
   // The welcome sign's two posts (its panel is high enough to walk under).
   for (const px of [-7.5, 3.5]) solids.push({ x0: px - 0.25, x1: px + 0.25, z0: 9.25, z1: 9.75 });
   for (const gate of gates) {
@@ -325,12 +329,25 @@ function portalMesh(region: RegionInfo, p: Portal) {
   ring.position.y = 1.35; g.add(ring);
   const disc = new THREE.Mesh(new THREE.CircleGeometry(1.0, 32), new THREE.MeshBasicMaterial({ color: region.color, transparent: true, opacity: 0.35, side: THREE.DoubleSide, depthWrite: false }));
   disc.position.y = 1.35; disc.userData.veil = true; g.add(disc);
-  const tex = canvas(256, 64, ctx => { ctx.fillStyle = 'rgba(10,20,40,.85)'; ctx.fillRect(0, 0, 256, 64); ctx.fillStyle = '#fff'; ctx.font = '800 30px "Helvetica Neue", Arial, sans-serif'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText(region.sign, 128, 34, 240); });
-  const label = new THREE.Mesh(new THREE.PlaneGeometry(2.2, 0.55), new THREE.MeshBasicMaterial({ map: tex, transparent: true }));
-  label.position.y = 2.85; g.add(label);
+  // A name board above the ring, readable from the spawn: the region and its zone.
+  const tex = canvas(512, 160, ctx => {
+    ctx.fillStyle = 'rgba(10,20,40,.9)'; ctx.fillRect(0, 0, 512, 160);
+    ctx.fillStyle = region.color; ctx.fillRect(0, 0, 512, 14);
+    ctx.fillStyle = '#fff'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+    ctx.font = '800 52px "Helvetica Neue", Arial, sans-serif'; ctx.fillText(region.sign, 256, 66, 488);
+    ctx.fillStyle = '#ffd36b'; ctx.font = '700 28px "Helvetica Neue", Arial, sans-serif'; ctx.fillText(region.zone.es, 256, 124, 488);
+  });
+  // Back to back, so it reads the right way from the spawn and from the bridges.
+  for (const turn of [0, Math.PI]) {
+    const label = new THREE.Mesh(new THREE.PlaneGeometry(3.2, 1), new THREE.MeshBasicMaterial({ map: tex, transparent: true }));
+    label.position.y = 3.15; label.rotation.y = turn; g.add(label);
+  }
   g.position.set(p.x, 0, p.z);
   return g;
 }
+
+/** Height of the welcome panel's centre: high enough that the portal boards show under it. */
+export const SIGN_Y = 7.4;
 
 /** The big welcome sign that rises on the apron at the end of the landing. */
 export function welcomeSign(country: CountryInfo) {
@@ -338,17 +355,24 @@ export function welcomeSign(country: CountryInfo) {
   const tex = canvas(1024, 384, ctx => {
     const grad = ctx.createLinearGradient(0, 0, 0, 384); grad.addColorStop(0, '#16336b'); grad.addColorStop(1, '#0d1f45');
     ctx.fillStyle = grad; ctx.fillRect(0, 0, 1024, 384);
-    ctx.fillStyle = '#c8323c'; ctx.fillRect(0, 0, 1024, 18); ctx.fillRect(0, 366, 1024, 18);
+    const [c1, c2] = flagColors(country.id);
+    ctx.fillStyle = c1; ctx.fillRect(0, 0, 1024, 18); ctx.fillStyle = c2; ctx.fillRect(0, 366, 1024, 18);
     ctx.fillStyle = '#ffffff'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-    for (let i = 0; i < 13; i++) { ctx.font = '28px serif'; ctx.fillText('★', 60 + i * 75.5, 52); }
-    ctx.font = '800 64px "Helvetica Neue", Arial, sans-serif'; ctx.fillText(country.welcome.en, 512, 160, 960);
-    ctx.fillStyle = '#ffd36b'; ctx.font = '700 54px "Helvetica Neue", Arial, sans-serif'; ctx.fillText(country.welcome.es, 512, 262, 960);
+    let left = 512, room = 960;
+    if (countryHasFlag(country.id)) {
+      // The flag on both ends, the welcome between them.
+      const fh = 132, fw = Math.min(210, fh * FLAG_RATIO[country.id]);
+      for (const x of [40, 1024 - 40 - fw]) { ctx.save(); ctx.translate(x, 126); ctx.beginPath(); ctx.rect(0, 0, fw, fh); ctx.clip(); drawFlag(ctx, country.id, fw, fh); ctx.restore(); ctx.strokeStyle = 'rgba(255,255,255,.7)'; ctx.lineWidth = 3; ctx.strokeRect(x, 126, fw, fh); }
+      left = 512; room = 1024 - 2 * (60 + fw);
+    }
+    ctx.font = '800 64px "Helvetica Neue", Arial, sans-serif'; ctx.fillText(country.welcome.en, left, 150, room);
+    ctx.fillStyle = '#ffd36b'; ctx.font = '700 54px "Helvetica Neue", Arial, sans-serif'; ctx.fillText(country.welcome.es, left, 252, room);
   });
   const face = new THREE.MeshStandardMaterial({ map: tex, emissive: '#ffffff', emissiveMap: tex, emissiveIntensity: 0.35, roughness: 0.5 });
   const frame = solid('#e9edf2', 0.4, 0.4);
   const panel = new THREE.Mesh(new THREE.BoxGeometry(14, 5.25, 0.35), [frame, frame, frame, frame, face, face]);
-  panel.position.y = 5.2; panel.castShadow = true; g.add(panel);
-  g.add(box(0.4, 3.2, 0.4, frame, -5.5, 1.6, 0)); g.add(box(0.4, 3.2, 0.4, frame, 5.5, 1.6, 0));
+  panel.position.y = SIGN_Y; panel.castShadow = true; g.add(panel);
+  g.add(box(0.4, SIGN_Y - 2, 0.4, frame, -5.5, (SIGN_Y - 2) / 2, 0)); g.add(box(0.4, SIGN_Y - 2, 0.4, frame, 5.5, (SIGN_Y - 2) / 2, 0));
   return g;
 }
 
@@ -446,6 +470,9 @@ export function buildMap(country: CountryInfo, rings: Record<string, number[][][
   for (let i = 0; i < 12 * count; i++) { const a = rand() * Math.PI * 2, r = 35 + rand() * 90; addCloud(Math.cos(a) * r, 6 + rand() * 10, Math.sin(a) * r, 10 + rand() * 12); }
   for (let i = 0; i < 40 * count; i++) addCloud(-260 + rand() * 260, 38 + rand() * 40, -45 + rand() * 90, 16 + rand() * 26);
 
+  const flags = createFlags();
+  if (countryHasFlag(country.id)) for (const px of [-24.6, 24.6]) flags.pole(group, country.id, px, 0, 12.8, 6, 2.4, px < 0 ? 0 : Math.PI);
+
   const sky = skyTexture('#3c79c4', '#9cc8ec', '#e9f2f8');
   const spinning: THREE.Object3D[] = [];
   const veils: THREE.Mesh[] = [];
@@ -458,6 +485,7 @@ export function buildMap(country: CountryInfo, rings: Record<string, number[][][
       for (const s of spinning) s.rotation.y += dt * 0.8;
       for (const v of veils) (v.material as THREE.MeshBasicMaterial).opacity = 0.22 + Math.sin(t * 2.2) * 0.1;
       sock.rotation.y = Math.sin(t * 0.7) * 0.3;
+      flags.wave(t);
     },
   };
 }

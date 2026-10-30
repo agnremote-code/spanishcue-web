@@ -532,7 +532,31 @@ export function isApprovedAdditionPath(path) {
   return grammarSharedFiles.includes(path) || path==='tests/helpers/grammar-preservation.mjs' || path==='docs/audits/grammar-preservation-20261007.json' || sharedFiles.has(path) || [...additions, ...repairs].some(item => item.files.test(path));
 }
 
+// 2026-10-30: the 3D country worlds use a flag as their library cover (Ale, «Países» inside
+// Conversación → Mundos 3D; scripts/flag-previews.mjs). Only the cover changes: id, route,
+// access, levels and copy stay as they were. [id, flag, old cover, whether the old cover
+// had its own override line]; 227–229 used the image in their catalog record.
+const FLAG_COVERS = [
+  [24, 'indonesia', '/indonesia-fantasy-hero.webp'], [25, 'israel', '/israel-b1-hero.webp'], [29, 'suiza', '/suiza-en-relieve-hero.webp'],
+  [30, 'australia', '/australia-3d-hero.webp'], [32, 'reino-unido', '/catalog-thumbnails/uk-relief.webp'], [33, 'irlanda', '/catalog-thumbnails/ireland-relief.webp'],
+  [36, 'estados-unidos', '/catalog-thumbnails/us-relief.webp'], [210, 'mexico', '/catalog-thumbnails/mexico-relief.svg'],
+  [227, 'suecia', '/catalog-thumbnails/suecia-new.webp', false], [228, 'argentina', '/catalog-thumbnails/argentina-new.webp', false],
+  [229, 'espana', '/catalog-thumbnails/espana-new.webp', false],
+].map(([id, flag, before, override = true]) => ({ id, now: `/catalog-thumbnails/banderas/${flag}.webp`, before, override }));
+
+function withoutFlagCovers(path, bytes) {
+  if (path !== 'app/lesson-catalog.ts') return bytes;
+  let text = bytes.toString('utf8');
+  for (const { id, now, before, override } of FLAG_COVERS) {
+    const line = `  ${id}:"${now}",\n`;
+    assert.equal(text.split(line).length - 1, 1, `one flag cover for ${id}`);
+    text = text.replace(line, override ? `  ${id}:"${before}",\n` : '');
+  }
+  return Buffer.from(text);
+}
+
 export function withoutApprovedAdditions(path, bytes) {
+  bytes = withoutFlagCovers(path, bytes);
   bytes = withoutClassicCoverBytes(path, bytes);
   for (const repair of repairs.filter(item => item.latest && item.edits[path])) {
     let text = bytes.toString('utf8');
@@ -578,6 +602,11 @@ export function withoutApprovedAdditions(path, bytes) {
 }
 
 export function withoutApprovedLessons(lessons) {
+  lessons = lessons.map(lesson => {
+    const cover = FLAG_COVERS.find(item => item.id === lesson.id);
+    if (!cover || lesson.image !== cover.now) return lesson;
+    return { ...lesson, image: cover.before };
+  });
   return beforeGrammarLessons(lessons.map(withOldClassicImage)).filter(lesson => !additions.some(item => item.id === lesson.id && item.path === lesson.path)).map(lesson => {
     if (lesson.id === 221) {
       assert.deepEqual(lesson.news,{addedAt:'2026-09-29',featured:true});

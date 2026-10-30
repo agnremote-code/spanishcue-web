@@ -44,8 +44,15 @@ export function familyLessonsForCategory(
   // The library shows two routes: Gramática and Conversación. Conversación holds
   // every other class (Escucha, Fonética and Vocabulario included), split by how
   // the class is built: a registered 3D world goes to Mundos 3D, the rest to Clásicas.
+  // Inside Mundos 3D the country worlds have their own shelf, «Países»: the
+  // general 3D grid leaves them out.
   if (conversationMode === 'worlds3d' || conversationMode === 'classic') {
-    return lessons.filter(lesson => lesson.category !== 'Gramática' && Boolean(lesson.world3d) === (conversationMode === 'worlds3d'));
+    return lessons.filter(lesson => lesson.category !== 'Gramática' && Boolean(lesson.world3d) === (conversationMode === 'worlds3d') &&
+      !(conversationMode === 'worlds3d' && lesson.countryCollection));
+  }
+  if (conversationMode === 'countries3d') {
+    return lessons.filter(lesson => lesson.category !== 'Gramática' && lesson.world3d && lesson.countryCollection)
+      .sort((a,b) => (a.countrySequence ?? Number.MAX_SAFE_INTEGER) - (b.countrySequence ?? Number.MAX_SAFE_INTEGER));
   }
   if (conversationMode === 'all') {
     return lessons.filter(lesson => lesson.category === 'Conversación');
