@@ -56,6 +56,9 @@ const manifest = JSON.parse(
 
 const publicRoots = new Set([
   "app/AuthSessionSync.tsx",
+  // Newsletter email capture on public pages (popup + /clase-gratis form).
+  "app/newsletter/EmailGiftPopup.tsx",
+  "app/newsletter/GiftSignup.tsx",
   "app/Library.tsx",
   // Public demo imports geometry/physics only; server allowlists every lesson payload.
   "app/immersive/ImmersiveLanding.tsx",
@@ -436,7 +439,7 @@ import privateAssets from './private-client-assets.js';
 import privateMedia from './private-media-assets.js';
 import routedWebp from './public-webp-assets.js';
 import privateLessons from './private-lesson-assets.js';
-import {hasFullLibraryAccess} from './private-access-runtime.js';
+import {mayReadPrivateMedia} from './private-access-runtime.js';
 
 const privateHeaders=()=>new Headers({'Cache-Control':'private, no-store','X-Content-Type-Options':'nosniff','Referrer-Policy':'strict-origin-when-cross-origin'});
 const base64Bytes=value=>Uint8Array.from(atob(value),character=>character.charCodeAt(0));
@@ -502,7 +505,7 @@ export default {async fetch(request,env,ctx){
  let path;try{path=decodeURIComponent(new URL(request.url).pathname)}catch{return new Response('Bad request',{status:400})}
  const media=Object.hasOwn(privateAssets,path)?privateAssets[path]:privateMedia.assets[path];
  if(media){
-  if(!await hasFullLibraryAccess(request,env))return new Response('Acceso restringido',{status:403,headers:privateHeaders()});
+  if(!await mayReadPrivateMedia(request,env,path))return new Response('Acceso restringido',{status:403,headers:privateHeaders()});
   if(request.method!=='GET'&&request.method!=='HEAD'){const headers=privateHeaders();headers.set('Allow','GET, HEAD');return new Response('Method not allowed',{status:405,headers});}
   return servePrivateMedia(request,env,media);
  }

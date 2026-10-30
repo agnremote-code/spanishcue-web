@@ -1,0 +1,7 @@
+# Newsletter y captación de emails
+
+- **Captación**: `app/newsletter/EmailGiftPopup.tsx` vive dentro de `GrowthFooter`, así que aparece en todas las páginas SEO que lo usan (incluido `/material-ele`). Solo corre en el navegador (el HTML cacheado en el edge no cambia), espera a que el visitante responda el banner de cookies, se abre a los 25 s o al 40 % de scroll y, si lo cierran, no vuelve por 14 días. `/clase-gratis` tiene el mismo formulario sin popup.
+- **Regalo**: el email desbloquea solo la clase PRO 393 (`/gramatica/opinion-afirmativa-frente-a-opinion-negada`) y su audio. El permiso es una cookie `__Host-sc-regalo` firmada con HMAC (`AUTOESTUDIO_SHARE_SECRET`, separada por dominio). Sin cookie, la clase redirige a `/clase-gratis`. Cambiar la clase de regalo = cambiar `app/newsletter/gift.ts`.
+- **Datos**: tabla D1 `newsletter_subscribers` (`drizzle/0018`), creada por los workflows de deploy. Lista para el propietario: `GET /api/admin/newsletter`.
+- **Email**: al suscribirse, el Worker agrega el contacto al segmento de Resend «SpanishCue · Newsletter profes ELE» (`NEWSLETTER_SEGMENT_ID`) y manda la bienvenida desde `novedades@spanishcue.com` con `List-Unsubscribe` en un clic (`/api/newsletter/baja`). Si Resend falla, el email queda guardado igual.
+- **Enviar una newsletter**: Claude la redacta y la crea como *broadcast* de Resend para ese segmento (nunca el segmento «General», que es de LogoCut), con `{{{RESEND_UNSUBSCRIBE_URL}}}` en el pie. Se envía solo cuando Ale lo pide.
