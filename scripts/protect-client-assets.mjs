@@ -58,6 +58,8 @@ const publicRoots = new Set([
   "app/AuthSessionSync.tsx",
   // Newsletter email capture on public pages (popup + /clase-gratis form).
   "app/newsletter/EmailGiftPopup.tsx",
+  // «Descargar ficha en PDF» on the public /material-ele pages.
+  "app/material-ele/PrintButton.tsx",
   "app/newsletter/GiftSignup.tsx",
   "app/Library.tsx",
   // Public demo imports geometry/physics only; server allowlists every lesson payload.
