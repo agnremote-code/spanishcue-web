@@ -3,7 +3,7 @@ import test from 'node:test';
 import {JSDOM} from 'jsdom';
 const origin=process.env.CHESPANISH_TEST_ORIGIN || 'http://127.0.0.1:8787';
 const slugs=['a1','a2','b1','b2','c1','c2','ser-y-estar','indefinido-e-imperfecto','subjuntivo','por-y-para','preguntas-de-conversacion','juegos-para-clase-de-espanol','primera-clase-de-espanol'];
-for(const path of ['/material-ele',...slugs.map(s=>'/material-ele/'+s)])test(`material ELE serves indexable Spanish HTML for anonymous visitors: ${path}`,async()=>{
+for(const path of ['/material-ele','/alternativa-a-profedeele',...slugs.map(s=>'/material-ele/'+s)])test(`material ELE serves indexable Spanish HTML for anonymous visitors: ${path}`,async()=>{
  const response=await fetch(origin+path);assert.equal(response.status,200);
  assert.equal(response.headers.get('cache-control'),'public, max-age=0, must-revalidate');assert.ok(!response.headers.has('set-cookie'));
  const dom=new JSDOM(await response.text());const d=dom.window.document;
@@ -18,7 +18,7 @@ for(const path of ['/material-ele',...slugs.map(s=>'/material-ele/'+s)])test(`ma
  assert.match(d.querySelector('main').textContent,/US\$15,50 al mes/);
  if(path.startsWith("/material-ele/"))assert.match(d.querySelector("main").textContent,/Descargar ficha en PDF/);
  assert.ok(d.querySelector('footer a[href="/material-ele"]'),'site footer links the cluster');
- if(path!=='/material-ele')assert.ok(d.querySelectorAll('article').length>=2);
+ if(path.startsWith('/material-ele/'))assert.ok(d.querySelectorAll('article').length>=2);
  dom.window.close();
 });
 test('unknown material ELE slug is a 404',async()=>{assert.equal((await fetch(origin+'/material-ele/no-existe')).status,404);});

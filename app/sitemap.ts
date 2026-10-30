@@ -41,6 +41,7 @@ const curatedRoutes: { path: string; priority: number; changeFrequency: Frequenc
   ...grammarTopicPages.filter(topic => topic.path.startsWith("/spanish-grammar-lessons/")).map(topic => ({path: topic.path, priority: 0.7, changeFrequency: "monthly" as Frequency})),
   { path: "/about", priority: 0.5, changeFrequency: "monthly" },
   { path: MATERIAL_ELE_PATH, priority: 0.95, changeFrequency: "weekly" },
+  { path: "/alternativa-a-profedeele", priority: 0.8, changeFrequency: "monthly" },
   ...elePages.map((page) => ({ path: page.path, priority: page.kind === "level" ? 0.85 : 0.8, changeFrequency: "monthly" as Frequency })),
   { path: "/ele-recursos-profesores", priority: 0.7, changeFrequency: "monthly" },
   { path: "/free-spanish-lesson", priority: 0.7, changeFrequency: "monthly" },
