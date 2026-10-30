@@ -611,3 +611,99 @@
     transition: none;
   }
 }
+
+/* Mundos 3D → «Países»: the country worlds live on their own shelf, with flags. */
+.countries3d-shelf {
+  display: grid;
+  grid-template-columns: minmax(0, 300px) minmax(0, 1fr);
+  gap: 22px;
+  align-items: center;
+  margin: 0 0 22px;
+  padding: 14px;
+  border: 1px solid #d3deec;
+  border-radius: 22px;
+  background: #fff;
+  color: #0b2144;
+  box-shadow: 0 10px 28px rgba(7, 93, 231, .08);
+}
+
+.countries3d-shelf.is-open {
+  border-color: #168cff;
+  box-shadow: 0 0 0 3px #168cff26, 0 14px 32px rgba(7, 93, 231, .14);
+}
+
+.countries3d-shelf > img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.countries3d-shelf > div {
+  display: grid;
+  gap: 8px;
+  justify-items: start;
+}
+
+.countries3d-shelf small {
+  color: #075de7;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1.4px;
+}
+
+.countries3d-shelf h3 {
+  margin: 0;
+  font-size: 28px;
+  line-height: 1.1;
+  letter-spacing: -.4px;
+}
+
+.countries3d-shelf p {
+  max-width: 60ch;
+  margin: 0;
+  color: #4d6378;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.countries3d-shelf ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 2px 0 4px;
+  padding: 0;
+  list-style: none;
+}
+
+.countries3d-shelf li img {
+  display: block;
+  width: 42px;
+  height: 28px;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(11, 33, 68, .18);
+}
+
+.countries3d-shelf button {
+  padding: 11px 18px;
+  border: 0;
+  border-radius: 999px;
+  background: #075de7;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.countries3d-shelf button:hover,
+.countries3d-shelf button:focus-visible {
+  background: #0a4cc0;
+}
+
+@media (max-width: 720px) {
+  .countries3d-shelf {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+}

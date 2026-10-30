@@ -41,7 +41,8 @@ export type RegionScene = {
   /** Extra per-frame life: waves, cars, lights, birds. */
   animate: (t: number, dt: number) => void;
 };
-export type SceneOptions = { low: boolean; shadows: boolean };
+/** `flag`: the country id, so a zone can fly the country's flag (banderas3d.ts). */
+export type SceneOptions = { low: boolean; shadows: boolean; flag?: string };
 export type SceneBuilder = (options: SceneOptions) => RegionScene;
 
 // ---------------------------------------------------------------- textures

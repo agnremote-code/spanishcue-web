@@ -183,3 +183,29 @@
   .mw-levels button { transition: none; }
 }
 .mw-back3d { position: fixed; left: 16px; bottom: 16px; z-index: 50; padding: .6rem 1rem; border: 0; border-radius: 999px; background: #16336b; color: #fff; font-weight: 800; box-shadow: 0 8px 24px rgba(0,0,0,.3); cursor: pointer; }
+
+/* Where to go: the next step under the place name, and the «¿Adónde vas?» panel on the map. */
+.mw-where .mw-next { display: flex; gap: .4rem; align-items: center; margin-top: .3rem; padding: .3rem .55rem; border-radius: 6px; background: #ffd23f; color: #1a1400; font-size: .8rem; font-style: normal; font-weight: 800; white-space: normal; line-height: 1.25; }
+.mw-where .mw-next i { font-style: normal; }
+.mw-where-to { position: absolute; left: 16px; top: 96px; z-index: 3; width: min(340px, calc(100% - 32px)); max-height: calc(100% - 130px); overflow: auto; padding: .8rem; border-radius: 12px; background: rgba(250,248,243,.96); color: var(--ink); box-shadow: 0 12px 34px rgba(0,0,0,.28); }
+.mw-where-to header { display: flex; justify-content: space-between; align-items: center; }
+.mw-where-to h2 { margin: 0; font-size: 1.15rem; color: var(--navy); }
+.mw-where-to header button { width: 30px; height: 30px; border: 0; border-radius: 50%; background: transparent; color: var(--muted); font-size: 1.3rem; cursor: pointer; }
+.mw-where-to p { margin: .3rem 0 .6rem; color: var(--muted); font-size: .8rem; line-height: 1.35; }
+.mw-where-to ol { display: grid; gap: .4rem; margin: 0; padding: 0; list-style: none; }
+.mw-where-to li button { display: grid; gap: .15rem; width: 100%; padding: .55rem .7rem .55rem .85rem; border: 1px solid var(--line); border-left: 6px solid var(--tint); border-radius: 9px; background: #fff; color: var(--ink); text-align: left; cursor: pointer; }
+.mw-where-to li.is-next button { border-color: var(--tint); box-shadow: 0 0 0 2px #ffd23f; }
+.mw-where-to li button:hover, .mw-where-to li button:focus-visible { background: #f4f7fb; outline: none; }
+.mw-where-to b { display: flex; gap: .45rem; align-items: center; font-size: .95rem; }
+.mw-where-to b small { padding: .05rem .4rem; border-radius: 999px; background: #ffd23f; color: #1a1400; font-size: .64rem; letter-spacing: .05em; text-transform: uppercase; }
+.mw-where-to span { color: var(--muted); font-size: .76rem; line-height: 1.3; }
+.mw-where-to em { display: flex; justify-content: space-between; font-size: .74rem; font-style: normal; color: var(--muted); }
+.mw-where-to em i { font-style: normal; font-weight: 800; color: var(--navy); }
+.mw-where-to-open { position: absolute; left: 16px; top: 96px; z-index: 3; padding: .5rem .9rem; border: 0; border-radius: 999px; background: #ffd23f; color: #1a1400; font-weight: 800; box-shadow: 0 6px 18px rgba(0,0,0,.25); cursor: pointer; }
+@media (max-width: 760px) {
+  .mw-where-to { top: auto; bottom: 160px; left: 10px; width: calc(100% - 20px); max-height: 38vh; padding: .6rem; }
+  .mw-where-to p { display: none; }
+  .mw-where-to span { display: none; }
+  .mw-where-to-open { top: auto; bottom: 160px; left: 10px; }
+  .mw-where .mw-next { font-size: .72rem; }
+}
