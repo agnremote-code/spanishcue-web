@@ -206,6 +206,14 @@ export default function MasAllaGame() {
     if (has3d && !state.arrived) { setView('intro'); setIntroT(0); }
     else { setView(state.place); if (!state.first) setChoosing(true); }
   };
+  /** Back to the very beginning, before the death: this level's progress and voices are wiped. */
+  const startOver = () => {
+    if (!window.confirm('¿Empezar de cero? Se borra el progreso de este nivel y vuelves al principio, antes de la muerte.')) return;
+    setState(s => ({ ...resetLevel(s), first: null, arrived: false }));
+    setVoicesDone(all => { const next = { ...all }; delete next[level]; writePref(`${STORAGE_KEY}:voces`, JSON.stringify(next)); return next; });
+    setSpotOpen(null); setVoiceOpen(null); setListenAt(undefined); setEnding(false); setRoute(false); setChoosing(false);
+    setView('umbral'); setEntered(false);
+  };
   const endIntro = useCallback(() => {
     setView('umbral'); setState(s => arrive(goTo(s, 'umbral'))); setChoosing(true);
   }, []);
@@ -317,6 +325,7 @@ export default function MasAllaGame() {
           ? 'Comprensión auditiva: cada zona del Cielo y del Infierno tiene su propia escucha, con voces de distintos países. Escuchar, elegir, responder, completar y leer.'
           : 'Conversación: en cada círculo blanco hay un encuentro breve (puedes saltarlo) y una pregunta profunda con su propia forma de responder: una balanza, unas velas, un espejo roto, un reloj… Después, dos preguntas más para seguir hablando.'}</p>
         <button type="button" className="ma-enter" onClick={enter}>{state.arrived ? 'Volver al más allá' : 'Cerrar los ojos'}</button>
+        {state.arrived && <button type="button" className="ma-restart is-title" onClick={startOver}>⟲ Empezar de cero (ver la intro otra vez)</button>}
         <p className="ma-help">Flechas o WASD para caminar · Espacio para saltar · Shift para correr · N para el nitro · E para hablar o cruzar. En el móvil: joystick y botones. La muerte dura diez segundos y se puede omitir. Contenido para adultos: muerte, culpa y castigo, tratados con respeto.</p>
       </div>
     </section>}
@@ -354,6 +363,7 @@ export default function MasAllaGame() {
         {mode === 'escucha' && <button type="button" onClick={() => setListenAt(null)}>Escuchas</button>}
         <MusicVolume sound={sound} onSound={setSound} volume={musicVolume} onVolume={setMusicVolume} />
         <button type="button" onClick={() => { setSpotOpen(null); setEntered(false); setEnding(false); setChoosing(false); }}>Nivel {level}</button>
+        <button type="button" className="ma-restart" onClick={startOver}>⟲ Empezar de cero</button>
       </div>
     </header>}
 
@@ -400,7 +410,7 @@ export default function MasAllaGame() {
       <div className="ma-row">
         {done.length > 0 && <button type="button" className="ma-primary" onClick={() => { setRoute(false); onFinal(); }}>El final: el retrato de tu alma</button>}
         {has3d && <button type="button" className="ma-secondary" onClick={() => setRoute(false)}>Volver al mundo</button>}
-        <button type="button" className="ma-secondary" onClick={() => setState(s => resetLevel(s))}>Empezar el nivel de nuevo</button>
+        <button type="button" className="ma-secondary" onClick={startOver}>⟲ Empezar de cero</button>
       </div>
     </section>}
 
