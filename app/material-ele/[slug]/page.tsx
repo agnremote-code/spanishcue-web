@@ -2,7 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs, Faq, GrowthFooter, JsonLd, Section } from "../../growth/components";
 import { faqPageSchema, webPageSchema } from "../../growth/schema";
-import { EleActivities, EleBuyBand, EleExerciseBlock, EleLessonGrid, EleLevelNav, EleQuestions, EleTopbar, EleTopicCards, PRICE_LABEL, PRICING_PATH, eleLessonCards, eleMetadata } from "../components";
+import { EleActivities, EleBuyBand, EleExerciseBlock, EleFeaturedLesson, EleLessonGrid, EleLevelNav, EleQuestions, EleTopbar, EleTopicCards, PRICE_LABEL, PRICING_PATH, eleLessonCards, eleMetadata, featuredGrammarLesson } from "../components";
 import { MATERIAL_ELE_PATH, elePageBySlug, elePages } from "../data";
 import styles from "../../growth/growth.module.css";
 import PrintButton from "../PrintButton";
@@ -26,6 +26,7 @@ export default async function ElePage({ params }: Props) {
   if (!page) notFound();
   const lessons = eleLessonCards(page.lessonIds);
   const freeLesson = lessons.find((lesson) => lesson.free);
+  const featured = featuredGrammarLesson(page.lessonIds);
   return (
     <>
       <main className={styles.page} lang="es">
@@ -49,6 +50,7 @@ export default async function ElePage({ params }: Props) {
             </div>
           </section>
           {page.kind === "level" ? <EleLevelNav current={page.slug} /> : null}
+          {featured ? <EleFeaturedLesson lesson={featured} /> : null}
 
           <Section title={page.keyPoints.title}>
             <div className={styles.panel}><ul>{page.keyPoints.items.map((item) => <li key={item}>{item}</li>)}</ul></div>
