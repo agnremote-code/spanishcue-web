@@ -1,0 +1,174 @@
+<!doctype html>
+<!-- Más allá · cover art (1600×900). Painted on a canvas so it can be redrawn:
+     node scripts/covers/render.mjs mas-alla. The subject sits in the middle
+     band so the 3:1 crop of the home carousel and the 16:9 cards keep it. -->
+<html><meta charset="utf-8"><style>html,body{margin:0;background:#000}canvas{display:block}</style>
+<canvas id="c" width="1600" height="900"></canvas>
+<script>
+const c = document.getElementById('c'), x = c.getContext('2d');
+const W = 1600, H = 900, MID = 800, HORIZON = 610;
+let seed = 7; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+
+// The seam between the two worlds: a soft S curve through the middle.
+const seam = y => MID + Math.sin(y / 140) * 26;
+function half(side) {
+  x.beginPath();
+  x.moveTo(side < 0 ? 0 : W, 0);
+  for (let y = 0; y <= H; y += 10) x.lineTo(seam(y), y);
+  x.lineTo(side < 0 ? 0 : W, H); x.closePath();
+}
+
+// ---------------------------------------------------------------- Cielo
+x.save(); half(-1); x.clip();
+let g = x.createLinearGradient(0, 0, 0, HORIZON);
+g.addColorStop(0, '#6f9fd6'); g.addColorStop(0.45, '#b9d3ee'); g.addColorStop(0.8, '#fbe9c6'); g.addColorStop(1, '#fff6e3');
+x.fillStyle = g; x.fillRect(0, 0, W, H);
+// the sun behind the gate
+g = x.createRadialGradient(470, 330, 10, 470, 330, 520);
+g.addColorStop(0, 'rgba(255,252,236,1)'); g.addColorStop(0.18, 'rgba(255,240,196,.85)'); g.addColorStop(1, 'rgba(255,230,170,0)');
+x.fillStyle = g; x.fillRect(0, 0, W, H);
+// rays
+x.globalCompositeOperation = 'lighter';
+for (let i = 0; i < 16; i++) {
+  const a = -Math.PI / 2 + (i - 8) * 0.19 + rnd() * 0.05;
+  x.beginPath(); x.moveTo(470, 330);
+  x.lineTo(470 + Math.cos(a - 0.035) * 1300, 330 + Math.sin(a - 0.035) * 1300);
+  x.lineTo(470 + Math.cos(a + 0.035) * 1300, 330 + Math.sin(a + 0.035) * 1300);
+  x.closePath(); x.fillStyle = `rgba(255,246,214,${0.05 + rnd() * 0.06})`; x.fill();
+}
+x.globalCompositeOperation = 'source-over';
+// clouds: soft heaps along the horizon and drifting above
+function cloud(cx, cy, w, alpha) {
+  x.save(); x.filter = 'blur(6px)';
+  for (let i = 0; i < 14; i++) {
+    const px = cx + (rnd() - 0.5) * w, py = cy + (rnd() - 0.3) * w * 0.12, r = w * (0.08 + rnd() * 0.1);
+    const cg = x.createRadialGradient(px, py - r * 0.3, r * 0.1, px, py, r);
+    cg.addColorStop(0, `rgba(255,255,255,${alpha})`); cg.addColorStop(0.7, `rgba(255,248,236,${alpha * 0.8})`); cg.addColorStop(1, 'rgba(255,240,220,0)');
+    x.fillStyle = cg; x.beginPath(); x.arc(px, py, r, 0, Math.PI * 2); x.fill();
+  }
+  x.restore();
+}
+cloud(140, 250, 380, 0.55); cloud(660, 190, 300, 0.4); cloud(260, 600, 700, 0.95); cloud(640, 640, 520, 0.95); cloud(90, 680, 400, 1);
+// the gate: two marble columns, an arch and thin golden bars
+function column(cx, top, bottom, w) {
+  const cg = x.createLinearGradient(cx - w / 2, 0, cx + w / 2, 0);
+  cg.addColorStop(0, '#d9d2c4'); cg.addColorStop(0.35, '#fffdf7'); cg.addColorStop(0.7, '#efe7d8'); cg.addColorStop(1, '#bfb6a6');
+  x.fillStyle = cg; x.fillRect(cx - w / 2, top, w, bottom - top);
+  x.fillStyle = 'rgba(150,135,110,.25)';
+  for (let i = -2; i <= 2; i++) x.fillRect(cx + i * w / 6 - 1, top + 14, 2, bottom - top - 28);
+  x.fillStyle = '#f7f1e4'; x.fillRect(cx - w / 2 - 10, top - 16, w + 20, 18); x.fillRect(cx - w / 2 - 12, bottom - 4, w + 24, 22);
+}
+const GL = 330, GR = 610, GT = 230, GB = 590;
+x.save(); x.shadowColor = 'rgba(255,235,180,.9)'; x.shadowBlur = 40;
+x.strokeStyle = '#d6b35a'; x.lineWidth = 3;
+for (let bx = GL + 26; bx < GR - 10; bx += 24) { x.beginPath(); x.moveTo(bx, GB); x.lineTo(bx, GT + 40 - Math.sin((bx - GL) / (GR - GL) * Math.PI) * 70); x.stroke(); }
+x.lineWidth = 9; x.strokeStyle = '#f3e3b0';
+x.beginPath(); x.moveTo(GL, GT + 40); x.quadraticCurveTo((GL + GR) / 2, GT - 110, GR, GT + 40); x.stroke();
+x.lineWidth = 3; x.strokeStyle = '#d6b35a';
+x.beginPath(); x.moveTo(GL, GT + 70); x.quadraticCurveTo((GL + GR) / 2, GT - 70, GR, GT + 70); x.stroke();
+x.restore();
+column(GL, GT, GB, 46); column(GR, GT, GB, 46);
+// pearls on the arch
+x.fillStyle = '#fffaf0';
+for (let t = 0.08; t < 0.95; t += 0.07) { const px = (1 - t) ** 2 * GL + 2 * (1 - t) * t * (GL + GR) / 2 + t * t * GR, py = (1 - t) ** 2 * (GT + 40) + 2 * (1 - t) * t * (GT - 110) + t * t * (GT + 40); x.beginPath(); x.arc(px, py + 2, 6, 0, Math.PI * 2); x.fill(); }
+cloud(470, 640, 560, 1);
+x.restore();
+
+// ---------------------------------------------------------------- Infierno
+x.save(); half(1); x.clip();
+g = x.createLinearGradient(0, 0, 0, H);
+g.addColorStop(0, '#0d0306'); g.addColorStop(0.45, '#3a0a0a'); g.addColorStop(0.68, '#8d1d0c'); g.addColorStop(0.78, '#2a0705'); g.addColorStop(1, '#0b0203');
+x.fillStyle = g; x.fillRect(0, 0, W, H);
+// far crags
+x.fillStyle = '#160406';
+x.beginPath(); x.moveTo(MID - 40, HORIZON);
+for (let px = MID - 40; px <= W + 20; px += 40) x.lineTo(px, HORIZON - 40 - rnd() * 140 - (px > 1300 ? 80 : 0));
+x.lineTo(W, HORIZON); x.closePath(); x.fill();
+// glow on the horizon
+g = x.createRadialGradient(1150, HORIZON, 20, 1150, HORIZON, 560);
+g.addColorStop(0, 'rgba(255,140,40,.85)'); g.addColorStop(0.35, 'rgba(220,60,20,.45)'); g.addColorStop(1, 'rgba(120,10,0,0)');
+x.globalCompositeOperation = 'lighter'; x.fillStyle = g; x.fillRect(0, 0, W, H); x.globalCompositeOperation = 'source-over';
+// ground and lava cracks
+x.fillStyle = '#150405'; x.fillRect(0, HORIZON, W, H - HORIZON);
+x.save(); x.globalCompositeOperation = 'lighter';
+function crack(sx, sy, len, ang, width) {
+  x.beginPath(); x.moveTo(sx, sy); let px = sx, py = sy;
+  for (let i = 0; i < len; i++) { ang += (rnd() - 0.5) * 0.5; px += Math.cos(ang) * 26; py += Math.sin(ang) * 6; x.lineTo(px, py); if (rnd() < 0.1) crack(px, py, len / 2, ang + (rnd() - 0.5) * 2, width * 0.6); }
+  x.lineJoin = x.lineCap = 'round'; x.strokeStyle = 'rgba(255,110,30,.9)'; x.lineWidth = width; x.shadowColor = '#ff5a14'; x.shadowBlur = 18; x.stroke();
+}
+for (let i = 0; i < 7; i++) crack(MID + 40 + rnd() * 760, HORIZON + 20 + rnd() * 270, 10 + rnd() * 14, rnd() * Math.PI * 2, 2 + rnd() * 2.5);
+x.restore();
+// flames
+function flame(fx, fy, h, w) {
+  x.save(); x.globalCompositeOperation = 'lighter';
+  for (const [k, col] of [[1, 'rgba(200,30,10,.55)'], [0.75, 'rgba(255,100,20,.7)'], [0.5, 'rgba(255,190,70,.85)'], [0.28, 'rgba(255,245,200,.9)']]) {
+    const hh = h * k, ww = w * k, lean = (rnd() - 0.5) * w * 0.6;
+    x.beginPath(); x.moveTo(fx - ww / 2, fy);
+    x.bezierCurveTo(fx - ww * 0.7, fy - hh * 0.45, fx - ww * 0.1 + lean, fy - hh * 0.6, fx + lean, fy - hh);
+    x.bezierCurveTo(fx + ww * 0.15 + lean, fy - hh * 0.55, fx + ww * 0.75, fy - hh * 0.4, fx + ww / 2, fy);
+    x.closePath(); x.filter = `blur(${3 + (1 - k) * 2}px)`; x.fillStyle = col; x.fill();
+  }
+  x.restore();
+}
+for (const [fx, fy, h, w] of [[905, 610, 150, 70], [985, 625, 230, 95], [1100, 600, 120, 60], [1220, 630, 300, 120], [1330, 605, 170, 80], [1450, 640, 260, 110], [1560, 615, 190, 90], [1040, 700, 110, 60], [1380, 720, 140, 70]]) flame(fx, fy, h, w);
+// a dark iron door with fire inside, mirroring the gate
+x.save();
+x.fillStyle = '#0a0203'; x.fillRect(1010, 250, 300, 340);
+g = x.createLinearGradient(0, 300, 0, 590); g.addColorStop(0, '#ffcf6a'); g.addColorStop(0.5, '#ff6a1a'); g.addColorStop(1, '#8a1406');
+x.fillStyle = g; x.shadowColor = '#ff4d10'; x.shadowBlur = 60; x.fillRect(1040, 290, 240, 300); x.shadowBlur = 0;
+x.fillStyle = '#0a0203';
+for (let bx = 1052; bx < 1280; bx += 26) x.fillRect(bx, 290, 6, 300);
+x.fillRect(1040, 380, 240, 6); x.fillRect(1040, 480, 240, 6);
+x.fillRect(990, 230, 340, 26);
+x.restore();
+flame(1000, 236, 60, 32); flame(1320, 236, 60, 32);
+// embers
+x.save(); x.globalCompositeOperation = 'lighter';
+for (let i = 0; i < 140; i++) { const ex = MID + rnd() * 820, ey = rnd() * 760, r = 0.8 + rnd() * 2.6; x.fillStyle = `rgba(255,${120 + rnd() * 100 | 0},40,${0.3 + rnd() * 0.6})`; x.shadowColor = '#ff7a20'; x.shadowBlur = 8; x.beginPath(); x.arc(ex, ey, r, 0, Math.PI * 2); x.fill(); }
+x.restore();
+x.restore();
+
+// ---------------------------------------------------------------- the seam
+x.save(); x.globalCompositeOperation = 'lighter'; x.filter = 'blur(10px)';
+x.beginPath(); for (let y = 0; y <= H; y += 10) (y ? x.lineTo : x.moveTo).call(x, seam(y), y);
+x.strokeStyle = 'rgba(255,225,170,.55)'; x.lineWidth = 16; x.stroke();
+x.filter = 'blur(2px)'; x.strokeStyle = 'rgba(255,250,235,.9)'; x.lineWidth = 3; x.stroke();
+x.restore();
+
+// ---------------------------------------------------------------- the soul
+// A small figure from behind, standing where the two worlds meet, lit by both.
+const SX = seam(560), SY = 640;
+x.save(); x.globalCompositeOperation = 'lighter';
+g = x.createRadialGradient(SX, SY - 80, 5, SX, SY - 80, 190);
+g.addColorStop(0, 'rgba(255,250,235,.95)'); g.addColorStop(0.3, 'rgba(255,230,190,.45)'); g.addColorStop(1, 'rgba(255,200,150,0)');
+x.fillStyle = g; x.beginPath(); x.arc(SX, SY - 80, 190, 0, Math.PI * 2); x.fill();
+x.restore();
+function figure(fill) {
+  x.save(); x.translate(SX, SY); x.scale(1.3, 1.3); x.translate(-SX, -SY);
+  x.beginPath();
+  x.arc(SX, SY - 152, 15, 0, Math.PI * 2);
+  x.moveTo(SX - 9, SY - 136); x.lineTo(SX + 9, SY - 136);
+  x.bezierCurveTo(SX + 30, SY - 132, SX + 34, SY - 120, SX + 33, SY - 100);
+  x.lineTo(SX + 36, SY - 50); x.lineTo(SX + 27, SY - 48); x.lineTo(SX + 24, SY - 92);
+  x.lineTo(SX + 22, SY - 60); x.lineTo(SX + 15, SY - 2); x.lineTo(SX + 4, SY - 2); x.lineTo(SX, SY - 52);
+  x.lineTo(SX - 4, SY - 2); x.lineTo(SX - 15, SY - 2); x.lineTo(SX - 22, SY - 60);
+  x.lineTo(SX - 24, SY - 92); x.lineTo(SX - 27, SY - 48); x.lineTo(SX - 36, SY - 50); x.lineTo(SX - 33, SY - 100);
+  x.bezierCurveTo(SX - 34, SY - 120, SX - 30, SY - 132, SX - 9, SY - 136);
+  x.closePath(); x.fillStyle = fill; x.fill(); x.restore();
+}
+x.save(); x.shadowColor = 'rgba(255,240,210,1)'; x.shadowBlur = 26; figure('#1b1418'); x.restore();
+// rim light: gold on the left, red on the right
+x.save(); x.beginPath(); x.rect(0, 0, SX, H); x.clip(); x.globalCompositeOperation = 'lighter'; x.filter = 'blur(1.5px)'; x.translate(-2, 0); figure('rgba(255,226,150,.18)'); x.restore();
+x.save(); x.beginPath(); x.rect(SX, 0, W, H); x.clip(); x.globalCompositeOperation = 'lighter'; x.filter = 'blur(1.5px)'; x.translate(2, 0); figure('rgba(255,90,40,.22)'); x.restore();
+// shadow at the feet
+x.save(); x.filter = 'blur(6px)'; x.fillStyle = 'rgba(20,10,10,.45)'; x.beginPath(); x.ellipse(SX, SY + 2, 46, 8, 0, 0, Math.PI * 2); x.fill(); x.restore();
+
+// ---------------------------------------------------------------- grade
+g = x.createRadialGradient(W / 2, H / 2, H * 0.35, W / 2, H / 2, W * 0.72);
+g.addColorStop(0, 'rgba(0,0,0,0)'); g.addColorStop(1, 'rgba(0,0,0,.42)');
+x.fillStyle = g; x.fillRect(0, 0, W, H);
+const grain = x.getImageData(0, 0, W, H), d = grain.data;
+for (let i = 0; i < d.length; i += 4) { const n = (rnd() - 0.5) * 10; d[i] += n; d[i + 1] += n; d[i + 2] += n; }
+x.putImageData(grain, 0, 0);
+document.title = 'ready';
+</script></html>

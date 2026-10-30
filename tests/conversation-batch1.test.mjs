@@ -1,3 +1,4 @@
+import {withoutPreviewImage} from './helpers/classic-covers.mjs';
 import {batch1PreservedLedger} from './helpers/batch1-preservation.mjs';
 import assert from 'node:assert/strict';
 import test from 'node:test';
@@ -47,7 +48,7 @@ test('all ten original lesson banks and the complete route/access ledger retain 
   for(const key of ['defaultLevel','canonicalPath','canonicalLessonId','legacyLessonIds','access'])assert.deepEqual(family[key],original[key],`${family.id}: ${key}`);
   for(const level of Object.keys(original.variants)){
    assert.deepEqual(family.variants[level],original.variants[level]);
-   assert.deepEqual(family.previewByLevel[level],original.previewByLevel[level]);
+   assert.deepEqual(withoutPreviewImage(family.previewByLevel[level]),withoutPreviewImage(original.previewByLevel[level]));
   }
  }
 });

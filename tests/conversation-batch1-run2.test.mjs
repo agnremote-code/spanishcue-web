@@ -1,3 +1,4 @@
+import {withoutPreviewImage} from './helpers/classic-covers.mjs';
 import {batch1PreservedBytes, batch1PreservedLedger} from './helpers/batch1-preservation.mjs';
 import assert from 'node:assert/strict';
 import test from 'node:test';
@@ -29,7 +30,7 @@ test('all fourteen original and Run 1 banks, existing metadata and route ledger 
     for (const key of ['defaultLevel', 'canonicalPath', 'canonicalLessonId', 'legacyLessonIds', 'access']) assert.deepEqual(family[key], original[key], `${family.id}: ${key}`);
     for (const level of Object.keys(original.variants)) {
       assert.deepEqual(family.variants[level], original.variants[level], `${family.id}: ${level}`);
-      assert.deepEqual(family.previewByLevel[level], original.previewByLevel[level], `${family.id}: ${level} preview`);
+      assert.deepEqual(withoutPreviewImage(family.previewByLevel[level]), withoutPreviewImage(original.previewByLevel[level]), `${family.id}: ${level} preview`);
     }
   }
 });
