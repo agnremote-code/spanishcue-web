@@ -1,6 +1,6 @@
 # Board STATUS: the single source of truth for the next run
 
-_Last updated: 2026-10-29 by the Thursday reliability routine (scheduled cloud run; facilitator plus Sofia and Alejandro as subagents, see "Current work")._
+_Last updated: 2026-10-30 by the Friday 3D + assessment routine (scheduled cloud run; facilitator plus two fresh agents acting as Alejandro, see "Current work")._
 
 ## Owner decisions in force
 | Date | Decision |
@@ -77,7 +77,23 @@ All five run on `claude-opus-5-5`, follow [ROUTINES.md](ROUTINES.md), and each i
 - Session 0 (lesson test) took 55 messages, about 15 of them caused by crossed messages over circle 6. That led to the lock rule.
 
 ## Current work and next action
-- **2026-10-30 (Friday 3D + assessment routine): IN PROGRESS** (branch `claude/friday-assessment-20261030`, base main `49ddf69`). Subscription usage: **UNKNOWN**. Started-run marker, pushed before substantive work (W43 item 8).
+- **2026-10-30 (Friday 3D + assessment routine): gated repair of the Hospital unmount GPU leak + W44 assessment** (branch `claude/friday-assessment-20261030`, base main `49ddf69`). Subscription usage: **UNKNOWN**.
+  - **Board:** convened proportionately as subagents of the facilitator. The facilitator built the repair. A fresh agent acting as Alejandro did the code review (**APPROVE**, no blockers; NB1 and NB2 applied). A second fresh agent acting as Alejandro wrote the assessment. Sofia and Martin were not convened. Verbatim: [transcripts/2026-10-30-friday-3d-assessment.md](transcripts/2026-10-30-friday-3d-assessment.md).
+  - **R4 still unanswered** (#282 unchanged since 10-26), so Ascensor was not released. **New blocker found by the assessment (VERIFIED):** #282 and #292 «Más allá» (non-board, merged 10-29) both use **catalog id 243**; #282 must be renumbered before it can merge.
+  - **Search Console: still BLOCKED (R0).** Re-checked this run: the `searchconsole` query returned the Windsor placeholder ("reads are paused … 6 accounts connected (facebook: 2, google_ads: 1, googleanalytics4: 1, searchconsole: 2) … Free plan includes 1"). Every SEO indicator UNKNOWN.
+  - **Unit: gated repair**, the next item on the 10-28 leak list. LQG file [hospital-san-casi-vivo-repair-gpu-20261030.md](../audits/hospital-san-casi-vivo-repair-gpu-20261030.md).
+    - SwiftShader live WebGL textures after unmount: main 40→39 (390 px) and 67→64 (1280 px), no context lost; fixed 40→5 and 67→5, context lost; the world remounts with a non-blank canvas. New check `node scripts/qa-feria-browser.mjs --hospital-gpu` (4/4).
+    - Beyond the Feria pattern: the PMREM render target is now disposed as a target (its depth buffer survived `texture.dispose()`).
+    - Checks at `32425242`: `npm test` exit 0 (1,365 pass, 0 fail, `SPANISHCUE_TEST_WORKER_TIMEOUT_MS=180000`); `validate:artifact` OK; lint clean on changed files; `tsc` only the 3 errors already on main; diff-check clean. Regression test fails on main.
+  - **Weekly assessment:** [assessments/2026-W44.md](assessments/2026-W44.md). Board: 3 units in production by type (#284 SEO, #287 and #290 repairs), 1 strictly gated (#287), plus this repair if it deploys; 0 new worlds. Non-board #292 shipped A0–C2 `featured:true` with no LQG file.
+  - **Release:** see the PR for this branch; the result is recorded below once verified.
+  - **Found, not fixed:** Hospital has no `webglcontextlost` handler (review NB4): a runtime context loss freezes the world instead of falling back to 2D.
+  - **Next action (W45 plan, assessment §6):**
+    1. Mon 11-02 3D slot: unblock Ascensor: renumber #282 off id 243, then the Actions speech-to-text + speaker check with a seeded-defect test and a §9.2 board decision (assessment §4.6). Release only if every clip passes.
+    2. Tue: LQG proposal for non-board units (AGENTS.md N1, owner decides) + sampled G3/G6 audit of #292; SEO compare if R0 is fixed, else COMP-001 pass 2 as a recorded decision.
+    3. Thu: UID → account-id re-keying decision item (Sofia drafts); academy M2 + L1.
+    4. Wed/Fri fallback: the next leak repair (bosque, then mas-alla), one world per PR.
+    5. Every run: a held unit still gets a records PR to main the same day; check catalog ids against main and open PRs before building.
 - **2026-10-29 (Thursday reliability routine): PR #290** (branch `claude/thursday-review-20261029`, base main `839ea09`). Subscription usage: **UNKNOWN**.
   - **Board:** convened proportionately as subagents of the facilitator.
     - Sofia: read-only audit of the academy/institutions API added since `4d2c680`.

@@ -65,7 +65,7 @@ requestAnimationFrame(tick);
 function HospitalHarness() {
   const [view, setView] = useState({ floor: 1, sceneId: null });
   const [mounted, setMounted] = useState(true);
-  useEffect(() => { window.__qa.hospital = (floor, sceneId) => setView({ floor, sceneId }); window.__qa.hospitalOff = () => setMounted(false); }, []);
+  useEffect(() => { window.__qa.hospital = (floor, sceneId) => setView({ floor, sceneId }); window.__qa.hospitalOff = () => setMounted(false); window.__qa.hospitalOn = () => setMounted(true); }, []);
   const none = () => {};
   return <main className="hs">{mounted && <HospitalWorld floor={view.floor} via="lift" sceneId={view.sceneId} mood={null} done={[]} paused={false} intro={false}
     onSpot={none} onLift={none} onNear={none} onPerson={none} personId={null} onCry={none} onPose={none} onFail={() => { window.__qa.failed = true; }} />}</main>;
@@ -678,6 +678,15 @@ if (RUN.hospitalGpu) {
     await page.waitForTimeout(1500);
     const after = await page.evaluate(() => ({ ...window.__gpu, failed: window.__qa.failed }));
     smoke(`${viewport.width} hospital unmount frees the world's WebGL textures and buffers and loses the context`, !after.failed && after.lost >= 1 && before.textures > after.textures && after.textures <= 5 && after.buffers <= 5, { before, after });
+    // Remount in the same page: the disposed cached materials and canvas
+    // textures must upload again (review NB1), with a non-blank canvas.
+    const errorsBefore = report.errors.length;
+    await page.evaluate(() => window.__qa.hospitalOn());
+    await page.locator('.hs canvas').first().waitFor({ timeout: 60000 });
+    await frames(page, 15);
+    const px = await pixelStats(page, await page.locator('.hs canvas').first().screenshot());
+    const failed = await page.evaluate(() => window.__qa.failed);
+    smoke(`${viewport.width} hospital remounts after the unmount with a non-blank canvas`, !failed && report.errors.length === errorsBefore && px.colours > 200 && px.sd > 8, px);
     await context.close();
   }
 }

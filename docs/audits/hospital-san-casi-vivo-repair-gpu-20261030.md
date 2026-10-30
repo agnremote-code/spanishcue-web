@@ -32,13 +32,15 @@ The forced context loss releases all remaining GPU memory.
 
 ## Gates
 - **G3** (`npm run test:language`): run as part of `npm test`. No text changed.
-- **G4** (author ≠ reviewer): see the transcript [2026-10-30-friday-3d-assessment.md](../board/transcripts/2026-10-30-friday-3d-assessment.md).
+- **G4** (author ≠ reviewer): Alejandro's code review returned **APPROVE** with no blocking items. He reproduced the browser numbers independently. NB1 (check a remount) and NB2 (a less brittle catch-path assertion) were applied; NB3–NB5 need no change in this unit. Verbatim: [transcripts/2026-10-30-friday-3d-assessment.md](../board/transcripts/2026-10-30-friday-3d-assessment.md).
 - **G6 level honesty:** unchanged (no level or catalog change).
 - **Beat labelling:** not applicable, since no beat changed.
-- **G5(a)** (SwiftShader): the new `--hospital-gpu` check passes 2/2 with 0 page or console errors and no 404s.
+- **G5(a)** (SwiftShader): the `--hospital-gpu` check passes **4/4** with 0 page or console errors and no 404s: unmount frees the GPU at 390 and 1280 px, and the world then remounts in the same page with a non-blank canvas (867 and 957 colours).
+- **Full checks** at `32425242`: `npm test` exit 0 (1,365 pass, 0 fail; run with `SPANISHCUE_TEST_WORKER_TIMEOUT_MS=180000`), `validate:artifact` OK, lint clean on the changed files, `tsc` only the 3 errors already on main, `git diff --check` clean. The NB commit changes only the test and the QA script; the hospital test file passes 12/12 after it.
 - **Regression test:** `tests/hospital-san-casi-vivo.test.mjs` «unmount frees the GPU…» fails on main (verified with the World3D change stashed) and passes on the branch.
 
 ## Not verified
 - Memory on a real phone or tablet; the counts above come from SwiftShader.
 - The full hospital G5 smoke (cards, HUD) was not re-run: there is no hospital smoke harness, and this repair touches only the unmount path.
+- Hospital has no `webglcontextlost` handler (review NB4, pre-existing): a runtime context loss freezes the world instead of falling back to 2D. A separate candidate repair.
 - The same leak pattern remains in 10 other 3D cleanups (bosque, mundo-3d, marketing-de-casinos, madrid-infectada, noche-abierta World3D + ItemStage, the-sound-map, immersive DemoScene, grammar-classroom duration/studio) and in the new `mas-alla` world (#292, grep only).
