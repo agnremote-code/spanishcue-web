@@ -24,6 +24,7 @@ import type { CountryInfo, RegionContent, WorldLevel } from './types';
 import { WORLD_LEVELS } from './types';
 import type { GameId } from '../escucha-3d/types';
 import './world.css';
+import MusicVolume, { useMusicVolume } from '../escucha-3d/MusicVolume';
 
 const World3D = dynamic(() => import('./World3D'), { ssr: false, loading: () => <div className="mw-loading">Preparando el vuelo…</div> });
 
@@ -60,6 +61,7 @@ export default function CountryGame({ country, rings, loadContent, loadScene, li
   const [pose, setPose] = useState<Pose | null>(null);
   const [list, setList] = useState(false);
   const [sound, setSound] = useState(true);
+  const [musicVolume, setMusicVolume] = useMusicVolume();
   const [voices, setVoices] = useState(false);
   const [teaching, setTeaching] = useState<Teaching>('solo');
   const [studentId, setStudentId] = useState<string | null>(null);
@@ -136,6 +138,7 @@ export default function CountryGame({ country, rings, loadContent, loadScene, li
   useEffect(() => { ambience.current = createAmbience(); return () => { ambience.current?.dispose(); ambience.current = null; }; }, []);
   useEffect(() => { ambience.current?.setKind(screen === 'world' ? (region?.sound ?? 'sky') : null); }, [region?.sound, screen]);
   useEffect(() => { ambience.current?.setMuted(!sound); setShoutMuted(!sound); }, [sound]);
+  useEffect(() => { ambience.current?.setVolume(musicVolume); }, [musicVolume]);
   useEffect(() => { ambience.current?.duck(spotOpen || listenAt !== undefined ? 0.3 : 1); }, [spotOpen, listenAt]);
 
   // The open card covers part of the screen: the 3D talk is framed beside it.
@@ -273,7 +276,7 @@ export default function CountryGame({ country, rings, loadContent, loadScene, li
         <ModeSwitch mode={mode} onChange={switchMode} className="mw-mode" />
         <button type="button" onClick={() => mode === 'escucha' ? setListenAt(null) : setList(true)}>{mode === 'escucha' ? 'Escuchas' : 'Lugares'}</button>
         {region && has3d && <button type="button" onClick={goMap}>Mapa</button>}
-        <button type="button" onClick={() => setSound(s => !s)} aria-pressed={!sound} aria-label={sound ? 'Silenciar el ambiente' : 'Activar el ambiente'}>{sound ? '🔊' : '🔇'}</button>
+        <MusicVolume sound={sound} onSound={setSound} volume={musicVolume} onVolume={setMusicVolume} />
         <button type="button" onClick={toggleVoices} aria-pressed={voices} title="El personaje lee su primera frase con la voz del navegador">Voces {voices ? 'sí' : 'no'}</button>
         <button type="button" onClick={() => { setSpotOpen(null); setScreen('levels'); }}>Inicio</button>
       </div>

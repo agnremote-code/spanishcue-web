@@ -24,6 +24,8 @@ export type Ambience = {
   setKind: (kind: SoundKind | null) => void;
   duck: (level: number) => void;
   setMuted: (muted: boolean) => void;
+  /** Music/ambience volume chosen by the teacher, 0–1. */
+  setVolume: (volume: number) => void;
   /** The plane: 0 silent, 1 full roar. */
   engine: (level: number) => void;
   chime: () => void;
@@ -36,7 +38,7 @@ export function createAmbience(): Ambience {
   let layers: Record<'waves' | 'wind' | 'traffic' | 'murmur' | 'crickets' | 'music', GainNode>;
   let noise: AudioBuffer;
   let mix: Mix = MIXES.sky;
-  let muted = false, timer = 0, beat = 0, waveLfo: OscillatorNode | null = null;
+  let muted = false, volume = 1, timer = 0, beat = 0, waveLfo: OscillatorNode | null = null;
 
   function noiseBuffer(c: AudioContext) {
     const buffer = c.createBuffer(1, c.sampleRate * 4, c.sampleRate);
@@ -90,7 +92,7 @@ export function createAmbience(): Ambience {
       try { ctx = new AC(); } catch { ctx = null; return; }
       const c = ctx;
       noise = noiseBuffer(c);
-      master = c.createGain(); master.gain.value = muted ? 0 : 0.6;
+      master = c.createGain(); master.gain.value = muted ? 0 : 0.6 * volume;
       ducker = c.createGain(); ducker.gain.value = 1;
       ducker.connect(master).connect(c.destination);
       const gain = () => { const g = c.createGain(); g.gain.value = 0; g.connect(ducker); return g; };
@@ -112,7 +114,8 @@ export function createAmbience(): Ambience {
     },
     setKind(kind) { glideTo(kind ? MIXES[kind] : Z); },
     duck(level) { if (ctx) ducker.gain.setTargetAtTime(level, ctx.currentTime, 0.3); },
-    setMuted(value) { muted = value; if (ctx) master.gain.setTargetAtTime(value ? 0 : 0.6, ctx.currentTime, 0.1); },
+    setMuted(value) { muted = value; if (ctx) master.gain.setTargetAtTime(value ? 0 : 0.6 * volume, ctx.currentTime, 0.1); },
+    setVolume(value) { volume = value; if (ctx) master.gain.setTargetAtTime(muted ? 0 : 0.6 * volume, ctx.currentTime, 0.1); },
     engine(level) { if (ctx) engineGain.gain.setTargetAtTime(level * 0.9, ctx.currentTime, 0.4); },
     chime() { blip(660, 0.5, 0.06, 'sine'); window.setTimeout(() => blip(880, 0.7, 0.05, 'sine'), 160); },
     dispose() { window.clearInterval(timer); waveLfo?.stop(); void ctx?.close(); ctx = null; },

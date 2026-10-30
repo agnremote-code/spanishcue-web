@@ -19,8 +19,8 @@ import { animateHero, createHero } from '../noche-abierta/hero3d';
 import { animatePerson, setMood } from '../noche-abierta/people3d';
 import { createBumpClock, pushOut } from '../escucha-3d/bump.mjs';
 import { insultFor, shout } from '../escucha-3d/shout';
-import { createBubbles, disposeGroup, spotRing, stepWalker, type Box, type Talker, type Walker } from '../mundo-3d/kit3d';
-import type { Place3D } from './common3d';
+import { createBubbles, disposeGroup, stepWalker, type Box, type Talker, type Walker } from '../mundo-3d/kit3d';
+import { talkCircle, type Place3D, type TalkCircle, type VoiceWalker } from './common3d';
 import { buildUmbral } from './umbral3d';
 import { buildCielo } from './cielo3d';
 import { buildInfierno } from './infierno3d';
@@ -52,7 +52,7 @@ export type WorldProps = {
 };
 
 type Api = { joy: { x: number; y: number }; held: Set<string>; clear: () => void; interact: () => void; jump: () => void; nitro: { on: boolean } };
-type Live = { place: Place3D; rings: Map<string, ReturnType<typeof spotRing>>; bubbles: ReturnType<typeof createBubbles>; greeted: Set<string> };
+type Live = { place: Place3D; rings: Map<string, TalkCircle>; walking: { w: VoiceWalker; ring: TalkCircle }[]; bubbles: ReturnType<typeof createBubbles>; greeted: Set<string> };
 
 const BUILDERS: Record<string, (o: { low: boolean; shadows: boolean }) => Place3D> = { umbral: buildUmbral, cielo: buildCielo, infierno: buildInfierno };
 
@@ -178,10 +178,14 @@ export default function World3D(props: WorldProps) {
       if (current) { disposeGroup(current.place.group); current = null; }
       if (intro) { disposeGroup(intro.group); intro = null; }
       const built = BUILDERS[id]({ low, shadows: !low });
-      const rings = new Map<string, ReturnType<typeof spotRing>>();
-      for (const s of built.spots) rings.set(s.id, spotRing(built.group, s.x, s.z));
+      const rings = new Map<string, TalkCircle>();
+      const flames = id === 'infierno';
+      for (const s of built.spots) rings.set(s.id, talkCircle(built.group, s.x, s.z, { flames, voice: false }));
+      for (const v of built.voices) rings.set(v.id, talkCircle(built.group, v.x, v.z, { flames, voice: true }));
+      const walking: Live['walking'] = [];
+      for (const w of built.walkers as VoiceWalker[]) if (w.voice) { const ring = talkCircle(built.group, w.x, w.z, { flames, voice: true }); rings.set(w.voice, ring); walking.push({ w, ring }); }
       scene.add(built.group);
-      current = { place: built, rings, bubbles: createBubbles(built.group), greeted: new Set() };
+      current = { place: built, rings, walking, bubbles: createBubbles(built.group), greeted: new Set() };
       doneKey = '';
       applyLight(built);
       // Back in the Umbral you come out in front of the gate you crossed.
@@ -295,19 +299,17 @@ export default function World3D(props: WorldProps) {
         const dk = p.done.join();
         if (dk !== doneKey) {
           doneKey = dk;
-          for (const [id, ring] of current.rings) {
-            const isDone = p.done.includes(id);
-            ring.material.color.set(isDone ? '#9aa8b0' : '#ffffff');
-            ring.material.opacity = isDone ? 0.5 : 0.95;
-            ring.gem.visible = !isDone;
-          }
+          for (const [id, ring] of current.rings) ring.setDone(p.done.includes(id));
         }
       }
       // A card opened from the list puts the mascot on its circle.
       if (p.spotOpen !== openSpot) {
         openSpot = p.spotOpen;
         if (openSpot && pl) {
-          const s = pl.spots.find(x => x.id === openSpot);
+          const mover = current?.walking.find(m => m.w.voice === openSpot)?.w;
+          // A walker's card: the mascot steps in front of them.
+          const s = pl.spots.find(x => x.id === openSpot) ?? pl.voices.find(x => x.id === openSpot)
+            ?? (mover ? { id: openSpot, x: mover.x + Math.sin(mover.heading) * 1.5, z: mover.z + Math.cos(mover.heading) * 1.5, heading: mover.heading + Math.PI } : null);
           if (s) { if (Math.hypot(s.x - player.x, s.z - player.z) > 12) snap = true; player = { ...player, x: s.x, z: s.z, heading: s.heading, speed: 0, y: 0, vy: 0 }; yaw = s.heading; spent = s.id; inside = s.id; }
         }
       }
@@ -353,7 +355,9 @@ export default function World3D(props: WorldProps) {
       let found: Near = null;
       portalCool = Math.max(0, portalCool - dt);
       if (pl && current && !transition) {
-        const here = pl.spots.find(s => Math.hypot(s.x - player.x, s.z - player.z) < 1.45) ?? null;
+        const here = pl.spots.find(s => Math.hypot(s.x - player.x, s.z - player.z) < 1.45)
+          ?? pl.voices.find(s => Math.hypot(s.x - player.x, s.z - player.z) < 1.2)
+          ?? current.walking.map(m => ({ id: m.w.voice!, x: m.w.x, z: m.w.z })).find(s => Math.hypot(s.x - player.x, s.z - player.z) < 1.7) ?? null;
         const id = here?.id ?? null;
         if (id !== inside) { inside = id; still = 0; if (!id) spent = null; }
         if (id && !p.spotOpen && !p.paused && id !== spent) {
@@ -386,7 +390,7 @@ export default function World3D(props: WorldProps) {
         pl.animate(clock, dt);
         pl.face(camera);
         current.bubbles.update(clock);
-        for (const [, ring] of current.rings) { ring.gem.rotation.y += dt * 1.6; ring.gem.position.y = 2.5 + Math.sin(clock * 2) * 0.12; }
+        for (const [, ring] of current.rings) ring.animate(clock, dt);
         for (const tk of pl.talkers) {
           const talking = Boolean(p.spotOpen && tk.spot === p.spotOpen);
           const dx = player.x - tk.x, dz = player.z - tk.z, d = Math.hypot(dx, dz), facing = Math.atan2(dx, dz);
@@ -394,10 +398,14 @@ export default function World3D(props: WorldProps) {
           tk.person.look = d < 6 || talking ? Math.max(-1.1, Math.min(1.1, angleBetween(tk.heading, facing))) : null;
           if (d < 45) animatePerson(tk.person, dt, 0, talking);
         }
-        for (const w of pl.walkers) {
-          const blocked = Math.hypot(w.x - player.x, w.z - player.z) < 1.1;
-          if (Math.hypot(w.x - player.x, w.z - player.z) < 50) stepWalker(w, dt, blocked);
+        for (const w of pl.walkers as VoiceWalker[]) {
+          const d = Math.hypot(w.x - player.x, w.z - player.z);
+          // Someone with a voice waits for you when you come close, and while you talk.
+          const blocked = d < 1.1 || Boolean(w.voice && (w.voice === p.spotOpen || (d < 2.2 && !p.done.includes(w.voice))));
+          if (d < 50) stepWalker(w, dt, blocked);
+          if (w.voice === p.spotOpen && !w.moving) { w.heading += angleBetween(w.heading, Math.atan2(player.x - w.x, player.z - w.z)) * Math.min(1, dt * 4); w.person.root.rotation.y = w.heading; }
         }
+        for (const m of current.walking) m.ring.group.position.set(m.w.x, 0, m.w.z);
       }
       soulGlow.material.opacity = 0.12 + Math.sin(clock * 2) * 0.03;
       if (hero.root.visible) animateHero(hero, dt, player.speed > 0.2 ? player.speed : 0, turn, p.spotOpen ? 'talk' : 'move', reduced);
@@ -405,7 +413,7 @@ export default function World3D(props: WorldProps) {
       // ---------------------------------------------------- camera
       if (pl) {
         if (p.spotOpen) {
-          const tk = pl.talkers.find(t => t.spot === p.spotOpen);
+          const tk = pl.talkers.find(t => t.spot === p.spotOpen) ?? current?.walking.find(m => m.w.voice === p.spotOpen)?.w;
           const ox = tk ? tk.x : player.x + Math.sin(player.heading) * 1.8, oz = tk ? tk.z : player.z + Math.cos(player.heading) * 1.8;
           mid.set((player.x + ox) / 2, 1.35, (player.z + oz) / 2);
           const side = Math.atan2(ox - player.x, oz - player.z) + Math.PI / 2;

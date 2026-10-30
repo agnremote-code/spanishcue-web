@@ -20,6 +20,7 @@ import { PATIENTS } from './patients.mjs';
 import { setShoutMuted } from '../escucha-3d/shout';
 import type { Pose } from './World3D';
 import './hospital.css';
+import MusicVolume, { useMusicVolume } from '../escucha-3d/MusicVolume';
 
 const World3D = dynamic(() => import('./World3D'), { ssr: false, loading: () => <div className="hs-loading">Abriendo las puertas de urgencias…</div> });
 const LETTERS = ['A', 'B', 'C'];
@@ -82,6 +83,7 @@ export default function HospitalGame() {
   const [vocab, setVocab] = useState(true);
   const [talkAt, setTalkAt] = useState(0);
   const [sound, setSound] = useState(true);
+  const [musicVolume, setMusicVolume] = useMusicVolume();
   const [announce, setAnnounce] = useState<string | null>(null);
   const cardRef = useRef<HTMLDivElement>(null);
   const ambience = useRef<Ambience | null>(null);
@@ -110,6 +112,7 @@ export default function HospitalGame() {
   useEffect(() => { ambience.current = createAmbience(); return () => { ambience.current?.dispose(); ambience.current = null; }; }, []);
   useEffect(() => { ambience.current?.setKind(sector?.sound ?? null); }, [sector?.sound]);
   useEffect(() => { ambience.current?.setMuted(!sound); setShoutMuted(!sound); }, [sound]);
+  useEffect(() => { ambience.current?.setVolume(musicVolume); }, [musicVolume]);
   const [voice, setVoice] = useState(false);
   useEffect(() => { ambience.current?.duck(voice ? 0.05 : state.scene || listenAt !== undefined ? 0.3 : 1); }, [state.scene, listenAt, voice]);
   const onAudio = useCallback((playing: boolean) => setVoice(playing), []);
@@ -216,7 +219,7 @@ export default function HospitalGame() {
         <ModeSwitch mode={mode} onChange={switchMode} className="hs-mode" />
         <button type="button" onClick={() => setMap(m => !m)} aria-pressed={map}>Mapa</button>
         <button type="button" onClick={() => mode === 'escucha' ? setListenAt(null) : setList(true)}>{mode === 'escucha' ? 'Escuchas' : 'Escenas'}</button>
-        <button type="button" onClick={() => setSound(s => !s)} aria-pressed={!sound} aria-label={sound ? 'Silenciar el ambiente' : 'Activar el ambiente'}>{sound ? '🔊' : '🔇'}</button>
+        <MusicVolume sound={sound} onSound={setSound} volume={musicVolume} onVolume={setMusicVolume} />
         <button type="button" onClick={() => setEntered(false)}>Nivel</button>
       </div>
     </header>}

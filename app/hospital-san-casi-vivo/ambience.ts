@@ -38,6 +38,8 @@ export type Ambience = {
   /** 1 = full ambience; lower while a card is open or a voice plays. */
   duck: (level: number) => void;
   setMuted: (muted: boolean) => void;
+  /** Music/ambience volume chosen by the teacher, 0–1. */
+  setVolume: (volume: number) => void;
   chime: () => void;
   /** A human-sounding scream: near (volume 1) or far down the corridor. */
   scream: (volume?: number) => void;
@@ -50,7 +52,7 @@ export function createAmbience(): Ambience {
   let layers: Record<'hum' | 'murmur' | 'rumble' | 'drone', GainNode>;
   let noise: AudioBuffer;
   let mix: Mix = MIXES.lobby;
-  let muted = false, timer = 0;
+  let muted = false, volume = 1, timer = 0;
 
   function noiseBuffer(c: AudioContext) {
     const buffer = c.createBuffer(1, c.sampleRate * 4, c.sampleRate);
@@ -71,7 +73,7 @@ export function createAmbience(): Ambience {
     const c = new AC();
     ctx = c;
     noise = noiseBuffer(c);
-    master = c.createGain(); master.gain.value = muted ? 0 : 0.5;
+    master = c.createGain(); master.gain.value = muted ? 0 : 0.5 * volume;
     ducker = c.createGain(); ducker.gain.value = 1;
     ducker.connect(master).connect(c.destination);
     const gain = () => { const g = c.createGain(); g.gain.value = 0; g.connect(ducker); return g; };
@@ -178,7 +180,8 @@ export function createAmbience(): Ambience {
     start,
     setKind: (kind) => { mix = (kind && MIXES[kind]) || MIXES.corridor; apply(); },
     duck: (level) => { if (ctx) ducker.gain.setTargetAtTime(level, ctx.currentTime, 0.25); },
-    setMuted: (on) => { muted = on; if (ctx) master.gain.setTargetAtTime(on ? 0 : 0.5, ctx.currentTime, 0.2); },
+    setMuted: (on) => { muted = on; if (ctx) master.gain.setTargetAtTime(on ? 0 : 0.5 * volume, ctx.currentTime, 0.2); },
+    setVolume: (value) => { volume = value; if (ctx) master.gain.setTargetAtTime(muted ? 0 : 0.5 * volume, ctx.currentTime, 0.2); },
     chime,
     scream,
     dispose: () => { window.clearInterval(timer); void ctx?.close(); ctx = null; },

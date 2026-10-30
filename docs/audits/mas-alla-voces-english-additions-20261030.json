@@ -1,0 +1,178 @@
+{
+  "version": 1,
+  "authorization": "Owner request of 2026-10-30 06:01Z (project thread «Más allá: cielo e infierno», root message cmsg_01Gr5R4j3t2Yet65UcmhcVhAUCdLveWHdt7vSwzqpkmRs3, request cmsg_01Gr5R4j3t2Yet65UcmhcVhA6DbwYKbaxKxKSsoWkiMaBh): many more interactive circles in Más allá, one for every person you see and for the striking places, with questions that make the student talk. The A0 card of each voice shows the English line of who they are under the Spanish. This manifest approves only the exact English support literals listed below (the role.en of each voice in app/mas-alla/voces.mjs the A0 level test in app/mas-alla/Voz.tsx, and the A0 arrival line of the Infierno in app/mas-alla/MasAllaGame.tsx, now «circles of fire» instead of «white circles»); existing English copy stays protected. Owner approval: Ale's standing approval for English copy, «apruebo (siempre de ahora en más apruebo)» on 2026-10-22 06:37Z (project message cmsg_01Gr5R4j3t2Yet65UcmhcVhAAAbp6kqDfMqxzNm3PL6f5g), and «apruebo todo no preguntes más, apruebo todo» on 2026-10-14 16:55Z (cmsg_01Gr5R4j3t2Yet65UcmhcVhADwvzg9kA9GinuWu3D7FSfe).",
+  "additions": [
+    {
+      "path": "app/mas-alla/Voz.tsx",
+      "text": "A0"
+    },
+    {
+      "path": "app/mas-alla/voces.mjs",
+      "text": "She died at a hundred and two and she is calm"
+    },
+    {
+      "path": "app/mas-alla/voces.mjs",
+      "text": "She was nineteen and she does not accept being here"
+    },
+    {
+      "path": "app/mas-alla/voces.mjs",
+      "text": "A nurse: she saw many people die; now it is her turn"
+    },
+    {
+      "path": "app/mas-alla/voces.mjs",
+      "text": "The floor shows your face at every age"
+    },
+    {
+      "path": "app/mas-alla/voces.mjs",
+      "text": "Angel of the gate: he was never human"
+    },
+    {
+      "path": "app/mas-alla/voces.mjs",
+      "text": "Angel who counts everyone who arrives"
+    },
+    {
+      "path": "app/mas-alla/voces.mjs",
+      "text": "She lies on the grass and looks at the clouds"
+    },
+    {
+      "path": "app/mas-alla/voces.mjs",
+      "text": "Its water shows a happy memory"
+    },
+    {
+      "path": "app/mas-alla/voces.mjs",
+      "text": "She runs even in Heaven"
+    },
+    {
+      "path": "app/mas-alla/voces.mjs",
+      "text": "Postwoman angel: she brings the letters of the living"
+    },
+    {
+      "path": "app/mas-alla/voces.mjs",
+      "text": "Angel who guides the newcomers"
+    },
+    {
+      "path": "app/mas-alla/voces.mjs",
+      "text": "He reads the diary he wrote at fifteen"
+    },
+    {
+      "path": "app/mas-alla/voces.mjs",
+      "text": "A huge book open in the air"
+    },
+    {
+      "path": "app/mas-alla/voces.mjs",
+      "text": "She does not know if she should drink from the river of forgetting"
+    },
+    {
+      "path": "app/mas-alla/voces.mjs",
+      "text": "She looks for her book and finds it almost empty"
+    },
+    {
+      "path": "app/mas-alla/voces.mjs",
+      "text": "Mother and daughter: twenty years without speaking"
+    },
+    {
+      "path": "app/mas-alla/voces.mjs",
+      "text": "Married for fifty years; they still argue"
+    },
+    {
+      "path": "app/mas-alla/voces.mjs",
+      "text": "Between the columns, you can hear the light"
+    },
+    {
+      "path": "app/mas-alla/voces.mjs",
+      "text": "She watches her children on Earth"
+    },
+    {
+      "path": "app/mas-alla/voces.mjs",
+      "text": "He hugs his dog, who was waiting for him"
+    },
+    {
+      "path": "app/mas-alla/voces.mjs",
+      "text": "A cook: he carries trays to the banquet"
+    },
+    {
+      "path": "app/mas-alla/voces.mjs",
+      "text": "Angel who watches the Earth from above"
+    },
+    {
+      "path": "app/mas-alla/voces.mjs",
+      "text": "“Abandon all hope here”"
+    },
+    {
+      "path": "app/mas-alla/voces.mjs",
+      "text": "She still tries to call her office"
+    },
+    {
+      "path": "app/mas-alla/voces.mjs",
+      "text": "Her number is 9,999,999,999"
+    },
+    {
+      "path": "app/mas-alla/voces.mjs",
+      "text": "He sells second chances"
+    },
+    {
+      "path": "app/mas-alla/voces.mjs",
+      "text": "She looks for a mirror to see herself"
+    },
+    {
+      "path": "app/mas-alla/voces.mjs",
+      "text": "From here you can see the volcanoes"
+    },
+    {
+      "path": "app/mas-alla/voces.mjs",
+      "text": "Court usher: he has heard every excuse"
+    },
+    {
+      "path": "app/mas-alla/voces.mjs",
+      "text": "Accused of a small lie that grew"
+    },
+    {
+      "path": "app/mas-alla/voces.mjs",
+      "text": "For years he has not dared to get on the boat"
+    },
+    {
+      "path": "app/mas-alla/voces.mjs",
+      "text": "It crosses a river of fire"
+    },
+    {
+      "path": "app/mas-alla/voces.mjs",
+      "text": "She walks in a square for ever"
+    },
+    {
+      "path": "app/mas-alla/voces.mjs",
+      "text": "A messenger: he carries lists of excuses"
+    },
+    {
+      "path": "app/mas-alla/voces.mjs",
+      "text": "He does not leave his open cage"
+    },
+    {
+      "path": "app/mas-alla/voces.mjs",
+      "text": "He cries in the cage of guilt"
+    },
+    {
+      "path": "app/mas-alla/voces.mjs",
+      "text": "He has been angry with his brother for thirty years"
+    },
+    {
+      "path": "app/mas-alla/voces.mjs",
+      "text": "Lucero’s secretary"
+    },
+    {
+      "path": "app/mas-alla/voces.mjs",
+      "text": "Guard of the throne; she is bored"
+    },
+    {
+      "path": "app/mas-alla/voces.mjs",
+      "text": "He buys memories at a good price"
+    },
+    {
+      "path": "app/mas-alla/voces.mjs",
+      "text": "She runs away from her cage and always comes back"
+    },
+    {
+      "path": "app/mas-alla/MasAllaGame.tsx",
+      "text": "Hell. Follow the circles of fire: someone is waiting in each one."
+    }
+  ]
+}

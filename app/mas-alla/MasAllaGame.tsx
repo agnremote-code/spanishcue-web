@@ -19,10 +19,13 @@ import { LEVELS, loadLevel, type LevelContent } from './levels.mjs';
 import { STORAGE_KEY, answer, answersFor, arrive, createState, decide, doneFor, fromSaved, goTo, markDone, nextSpot, normaliseLevel, resetLevel, restore, serialise, setLevel, toSaved, worldDone, type State } from './engine.mjs';
 import { createAmbience, type Ambience, type Sound } from './ambience';
 import { Encuentro, type Teaching } from './Encuentro';
+import { Voz } from './Voz';
+import { VOICES, loadVoices, voiceById, type VoiceText } from './voces.mjs';
 import { Bi } from './Pregunta';
 import type { Near, Pose, View } from './World3D';
 import type { Text } from './levels.d.mts';
 import './mas-alla.css';
+import MusicVolume, { useMusicVolume } from '../escucha-3d/MusicVolume';
 
 const World3D = dynamic(() => import('./World3D'), { ssr: false, loading: () => <div className="ma-loading">Cerrando los ojos…</div> });
 export const LESSON_ID = 243;
@@ -69,12 +72,16 @@ export default function MasAllaGame() {
   const [content, setContent] = useState<Record<string, LevelContent>>({});
   const [failed, setFailed] = useState(false);
   const [spotOpen, setSpotOpen] = useState<string | null>(null);
+  const [voiceOpen, setVoiceOpen] = useState<string | null>(null);
+  const [voiceTexts, setVoiceTexts] = useState<Record<string, Record<string, VoiceText>>>({});
+  const [voicesDone, setVoicesDone] = useState<Record<string, string[]>>({});
   const [near, setNear] = useState<Near>(null);
   const [pose, setPose] = useState<Pose | null>(null);
   const [act, setAct] = useState(0);
   const [route, setRoute] = useState(false);
   const [ending, setEnding] = useState(false);
   const [sound, setSound] = useState(true);
+  const [musicVolume, setMusicVolume] = useMusicVolume();
   const [toast, setToast] = useState<Text | null>(null);
   const [teaching, setTeaching] = useState<Teaching>('solo');
   const [studentId, setStudentId] = useState<string | null>(null);
@@ -93,6 +100,8 @@ export default function MasAllaGame() {
   const done = doneFor(state);
   const answers = answersFor(state);
   const scenes = content[level];
+  const heardVoices = voicesDone[level] ?? [];
+  const talking = spotOpen ?? voiceOpen;
   const place = view === 'intro' ? 'umbral' : view;
   const target = SPOTS.find(s => s.world === place && !done.includes(s.id))?.id ?? null;
 
@@ -106,6 +115,7 @@ export default function MasAllaGame() {
       setState(saved);
       setTeaching(readPref(`${STORAGE_KEY}:modo`) === 'profesor' ? 'profesor' : 'solo');
       setStudentId(readPref(`${STORAGE_KEY}:alumno`));
+      try { const v = JSON.parse(readPref(`${STORAGE_KEY}:voces`) ?? '{}'); if (v && typeof v === 'object') setVoicesDone(v); } catch { /* none yet */ }
       setHas3d(webglAvailable());
       setReady(true);
     }, 0);
@@ -142,13 +152,27 @@ export default function MasAllaGame() {
     loadLevel(level).then(c => { if (alive) setContent(all => ({ ...all, [level]: c })); }).catch(() => { if (alive) setFailed(true); });
     return () => { alive = false; };
   }, [entered, level, content]);
+  useEffect(() => {
+    if (!entered || voiceTexts[level]) return;
+    let alive = true;
+    loadVoices(level).then(c => { if (alive) setVoiceTexts(all => ({ ...all, [level]: c })); }).catch(() => { if (alive) setFailed(true); });
+    return () => { alive = false; };
+  }, [entered, level, voiceTexts]);
+  const voiceDone = useCallback((id: string) => setVoicesDone(all => {
+    const list = all[level] ?? [];
+    if (list.includes(id)) return all;
+    const next = { ...all, [level]: [...list, id] };
+    writePref(`${STORAGE_KEY}:voces`, JSON.stringify(next));
+    return next;
+  }), [level]);
 
   // ------------------------------------------------------------ sound
   useEffect(() => { ambience.current = createAmbience(); return () => { ambience.current?.dispose(); ambience.current = null; }; }, []);
   useEffect(() => { ambience.current?.setKind(entered && view !== 'intro' ? view as Sound : null); }, [view, entered]);
   useEffect(() => { ambience.current?.setMuted(!sound); setShoutMuted(!sound); }, [sound]);
+  useEffect(() => { ambience.current?.setVolume(musicVolume); }, [musicVolume]);
   const [voice, setVoice] = useState(false);
-  useEffect(() => { ambience.current?.duck(voice ? 0.05 : spotOpen || listenAt !== undefined ? 0.35 : 1); }, [spotOpen, listenAt, voice]);
+  useEffect(() => { ambience.current?.duck(voice ? 0.05 : talking || listenAt !== undefined ? 0.35 : 1); }, [talking, listenAt, voice]);
   const onAudio = useCallback((playing: boolean) => setVoice(playing), []);
   const say = useCallback((text: Text, seconds = 5) => {
     setToast(text);
@@ -167,18 +191,18 @@ export default function MasAllaGame() {
   useEffect(() => {
     const measure = () => {
       const wide = window.innerWidth > 900;
-      setInset(spotOpen ? (wide ? { right: Math.min(480, window.innerWidth * 0.42), bottom: 0 } : { right: 0, bottom: window.innerHeight * 0.56 }) : { right: 0, bottom: 0 });
+      setInset(talking ? (wide ? { right: Math.min(480, window.innerWidth * 0.42), bottom: 0 } : { right: 0, bottom: window.innerHeight * 0.56 }) : { right: 0, bottom: 0 });
     };
     measure();
     window.addEventListener('resize', measure);
     return () => window.removeEventListener('resize', measure);
-  }, [spotOpen]);
+  }, [talking]);
 
   // ------------------------------------------------------------ actions
   const enter = () => {
     ambience.current?.start();
     setEntered(true);
-    setSpotOpen(null); setListenAt(undefined); setEnding(false); setFailed(false); setRoute(false);
+    setSpotOpen(null); setVoiceOpen(null); setListenAt(undefined); setEnding(false); setFailed(false); setRoute(false);
     if (has3d && !state.arrived) { setView('intro'); setIntroT(0); }
     else { setView(state.place); if (!state.first) setChoosing(true); }
   };
@@ -191,27 +215,33 @@ export default function MasAllaGame() {
   }, [endIntro]);
   const go = useCallback((to: string) => {
     if (to !== 'umbral' && to !== 'cielo' && to !== 'infierno') return;
-    setChoosing(false); setSpotOpen(null); setListenAt(undefined); setRoute(false);
+    setChoosing(false); setSpotOpen(null); setVoiceOpen(null); setListenAt(undefined); setRoute(false);
     ambience.current?.play('portal');
     setView(to);
     setState(s => goTo(s, to));
-    if (to !== 'umbral') say(to === 'cielo' ? b('El Cielo. Sigue los círculos blancos: en cada uno te espera alguien.', 'Heaven. Follow the white circles: someone is waiting in each one.') : b('El Infierno. Sigue los círculos blancos: en cada uno te espera alguien.', 'Hell. Follow the white circles: someone is waiting in each one.'), 6);
+    if (to !== 'umbral') say(to === 'cielo' ? b('El Cielo. Sigue los círculos blancos: en cada uno te espera alguien.', 'Heaven. Follow the white circles: someone is waiting in each one.') : b('El Infierno. Sigue los círculos de fuego: en cada uno te espera alguien.', 'Hell. Follow the circles of fire: someone is waiting in each one.'), 6);
   }, [say]);
   const openSpot = useCallback((id: string) => {
     setRoute(false);
+    const v = voiceById(id);
+    if (v) {
+      if (mode === 'escucha' && v.zone !== 'umbral') { setListenAt(v.zone); return; }
+      setSpotOpen(null); setVoiceOpen(id); return;
+    }
     const spot = spotById(id);
     if (!spot) return;
     if (mode === 'escucha') { setListenAt(spot.zone); return; }
-    setSpotOpen(id);
+    setVoiceOpen(null); setSpotOpen(id);
   }, [mode]);
   // From the route: go to the encounter's world first, then open it there.
   const goSpot = (id: string) => {
-    const spot = spotById(id)!;
+    const spot = spotById(id) ?? voiceById(id)!;
     if (has3d && view !== spot.world) { go(spot.world); window.setTimeout(() => openSpot(id), 1300); }
     else openSpot(id);
   };
   const onPose = useCallback((p: Pose) => setPose(old => (old && old.place === p.place && Math.abs(old.x - p.x) < 1.5 && Math.abs(old.z - p.z) < 1.5 ? old : p)), []);
   const closeCard = useCallback(() => setSpotOpen(null), []);
+  const closeVoice = useCallback(() => setVoiceOpen(null), []);
   const finish = useCallback(() => {
     if (!spotOpen) return;
     const id = spotOpen;
@@ -228,7 +258,7 @@ export default function MasAllaGame() {
   const onFinal = useCallback(() => { setSpotOpen(null); setEnding(true); ambience.current?.play('gong'); }, []);
   const changeTeaching = (value: Teaching) => { setTeaching(value); writePref(`${STORAGE_KEY}:modo`, value); if (value === 'solo') setState(s => setLevel(restore(readPref(STORAGE_KEY)), s.level)); };
   const selectStudent = (id: string | null) => { loadedFor.current = null; setStudentId(id); writePref(`${STORAGE_KEY}:alumno`, id); if (!id) setState(s => setLevel(restore(readPref(STORAGE_KEY)), s.level)); };
-  const switchMode = (value: Mode) => { setMode(value); setListenAt(undefined); setSpotOpen(null); };
+  const switchMode = (value: Mode) => { setMode(value); setListenAt(undefined); setSpotOpen(null); setVoiceOpen(null); };
 
   useEffect(() => {
     const onKey = (event: KeyboardEvent) => {
@@ -247,7 +277,9 @@ export default function MasAllaGame() {
   const nextLabel = next ? `${CAST[next.cast[0]].name} · ${ZONES.find(z => z.id === next.zone)!.name}` : null;
   const goNext = next ? () => { setSpotOpen(null); window.setTimeout(() => goSpot(next.id), 60); } : null;
   const nearSpot = near?.kind === 'spot' ? spotById(near.id) : null;
-  const busy = Boolean(spotOpen) || listenAt !== undefined || route || ending || choosing;
+  const nearVoice = near?.kind === 'spot' ? voiceById(near.id) : null;
+  const voiceText = voiceOpen ? voiceTexts[level]?.[voiceOpen] ?? null : null;
+  const busy = Boolean(talking) || listenAt !== undefined || route || ending || choosing;
   const flat = ready && !has3d;
   const playing = entered && view !== 'intro';
   const en = bilingual(level);
@@ -256,7 +288,7 @@ export default function MasAllaGame() {
   const placeName = view === 'cielo' ? 'El Cielo' : view === 'infierno' ? 'El Infierno' : 'El Umbral';
 
   return <main className="ma" data-level={level} data-place={view} data-mode={mode} data-conversation-family="mas-alla">
-    {ready && has3d && entered && <World3D view={view} spotOpen={spotOpen} done={done} paused={busy && !spotOpen} inset={inset} greetings={GREETINGS} act={act}
+    {ready && has3d && entered && <World3D view={view} spotOpen={talking} done={[...done, ...heardVoices]} paused={busy && !talking} inset={inset} greetings={GREETINGS} act={act}
       onIntroBeat={onIntroBeat} onNear={setNear} onPortal={go} onExit={() => go('umbral')} onFinal={onFinal} onSpot={openSpot}
       onPose={onPose} onFail={() => { setHas3d(false); if (view === 'intro') endIntro(); }} />}
     {(!entered || flat) && <div className="ma-backdrop" aria-hidden="true"><i className="is-up" /><i className="is-down" /><span /></div>}
@@ -320,7 +352,7 @@ export default function MasAllaGame() {
         <button type="button" onClick={() => setRoute(r => !r)} aria-pressed={route}>Recorrido</button>
         {view !== 'umbral' && has3d && <button type="button" onClick={() => go('umbral')}>Al Umbral</button>}
         {mode === 'escucha' && <button type="button" onClick={() => setListenAt(null)}>Escuchas</button>}
-        <button type="button" onClick={() => setSound(s => !s)} aria-pressed={!sound} aria-label={sound ? 'Silenciar el ambiente' : 'Activar el ambiente'}>{sound ? '🔊' : '🔇'}</button>
+        <MusicVolume sound={sound} onSound={setSound} volume={musicVolume} onVolume={setMusicVolume} />
         <button type="button" onClick={() => { setSpotOpen(null); setEntered(false); setEnding(false); setChoosing(false); }}>Nivel {level}</button>
       </div>
     </header>}
@@ -332,18 +364,20 @@ export default function MasAllaGame() {
     {playing && !busy && near && <div className="ma-prompt" role="status">
       <button type="button" onClick={() => setAct(a => a + 1)}><kbd>E</kbd>{
         nearSpot ? (mode === 'escucha' ? `Escuchar · ${ZONES.find(z => z.id === nearSpot.zone)?.name}` : `Hablar con ${CAST[nearSpot.cast[0]].name}`)
+          : nearVoice ? (mode === 'escucha' && nearVoice.zone !== 'umbral' ? `Escuchar · ${ZONES.find(z => z.id === nearVoice.zone)?.name}` : nearVoice.kind === 'place' ? `Mirar · ${nearVoice.name}` : `Hablar con ${nearVoice.name}`)
           : near.kind === 'portal' ? (near.id === 'cielo' ? 'Subir al Cielo' : 'Bajar al Infierno')
             : near.kind === 'final' ? 'El reloj de arena · el final'
               : 'Volver al Umbral'}</button>
     </div>}
     {playing && has3d && !busy && !near && <p className="ma-hint">{view === 'umbral'
       ? (done.length ? 'A la izquierda, el Cielo; a la derecha, el Infierno. El reloj de arena del centro cierra la clase cuando quieras.' : 'A la izquierda sube la escalera del Cielo; a la derecha se abre el Infierno. Camina hasta una puerta.')
-      : target ? 'Busca los círculos blancos: en cada uno te espera alguien. El anillo del sur te devuelve al Umbral.' : 'Has cerrado todos los encuentros de este mundo. Vuelve al Umbral por el anillo del sur.'}</p>}
+      : target ? `Busca los círculos ${view === 'infierno' ? 'de fuego' : 'blancos'}: en cada uno te espera alguien; en los dorados, más gente con ganas de hablar. El anillo del sur te devuelve al Umbral.` : 'Has cerrado todos los encuentros de este mundo. Vuelve al Umbral por el anillo del sur.'}</p>}
 
     {/* ------------------------------------------------ the route */}
     {entered && view !== 'intro' && (route || (flat && !spotOpen && listenAt === undefined && !ending)) && <section className="ma-panel ma-route" aria-labelledby="ma-route-h">
       <h2 id="ma-route-h">Recorrido · {level}</h2>
       {flat && <p className="ma-flat-note">Este dispositivo no muestra el mundo 3D: los mismos encuentros se abren desde esta lista.</p>}
+      {mode !== 'escucha' && <p className="ma-route-voices ma-route-umbral"><b>El Umbral:</b>{VOICES.filter(v => v.zone === 'umbral').map(v => <button key={v.id} type="button" className={heardVoices.includes(v.id) ? 'is-done' : undefined} onClick={() => goSpot(v.id)}>{v.kind === 'place' ? '◇ ' : ''}{v.name}{heardVoices.includes(v.id) ? ' ✓' : ''}</button>)}</p>}
       <div className="ma-route-worlds">
         {WORLDS.map(w => <section key={w.id} className={`ma-route-world is-${w.id}`}>
           <h3>{w.name} <small>{worldDone(state, w.id)}/6</small></h3>
@@ -356,6 +390,9 @@ export default function MasAllaGame() {
                   {CAST[s.cast[0]].name}{done.includes(s.id) && <i aria-label="hecho"> ✓</i>}
                 </button>)}
             </div>
+            {mode !== 'escucha' && <div className="ma-route-voices" aria-label="Más gente y lugares">
+              {VOICES.filter(v => v.zone === z.id).map(v => <button key={v.id} type="button" className={heardVoices.includes(v.id) ? 'is-done' : undefined} onClick={() => goSpot(v.id)}>{v.kind === 'place' ? '◇ ' : ''}{v.name}{heardVoices.includes(v.id) ? ' ✓' : ''}</button>)}
+            </div>}
           </div>)}
           {has3d && <button type="button" className="ma-go" onClick={() => go(w.id)}>Ir {w.id === 'cielo' ? 'al Cielo' : 'al Infierno'}</button>}
         </section>)}
@@ -371,6 +408,9 @@ export default function MasAllaGame() {
     {scene && openInfo && <Encuentro key={`${openInfo.id}-${level}`} id={openInfo.id} scene={scene} level={level} teaching={teaching}
       done={done.includes(openInfo.id)} answer={answers[openInfo.id] ?? null} onAnswer={i => setState(s => answer(s, openInfo.id, i))}
       onDone={finish} onClose={closeCard} onNext={goNext} nextName={nextLabel} onSound={s => ambience.current?.play(s)} />}
+    {voiceOpen && voiceText && <Voz key={`${voiceOpen}-${level}`} id={voiceOpen} text={voiceText} level={level} teaching={teaching}
+      done={heardVoices.includes(voiceOpen)} onDone={() => voiceDone(voiceOpen)} onClose={closeVoice} />}
+    {voiceOpen && !voiceText && <div className="ma-card ma-card-loading" role="status">{failed ? 'No se pudo cargar. Revisa la conexión y vuelve a abrir el círculo.' : 'Cargando…'}</div>}
     {spotOpen && !scene && <div className="ma-card ma-card-loading" role="status">{failed ? 'No se pudo cargar el encuentro. Revisa la conexión y vuelve a abrir el círculo.' : 'Cargando el encuentro…'}</div>}
 
     {/* ------------------------------------------------ the end: the portrait of your soul */}

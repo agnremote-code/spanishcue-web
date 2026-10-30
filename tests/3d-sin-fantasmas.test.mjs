@@ -157,14 +157,14 @@ function madridCityWorld() {
 
 // Más allá: the Umbral, the Cielo and the Infierno. Walkers loop their path;
 // the mascot is put at the spawn, the exit ring, the portals, the hourglass
-// and every white circle.
+// every white circle and the circle of every voice (people and places).
 function masAllaPlaces() {
   return masAlla.PLACE_IDS.map(id => {
     const L = masAlla.layoutOf(id);
     return {
       id: `masalla:${id}`, solids: masAlla.solidsFor(id), bounds: L.bounds, staticWalkers: false,
       walkers: L.walkers.map(w => ({ id: `alma-${w.seed}`, points: sample(w.path.map(p => [p.x, p.z]), true) })), people: masAlla.peopleOf(id),
-      spots: [{ id: 'spawn', ...L.spawn }, ...(L.exit ? [{ id: 'salida', ...L.exit }] : []), ...L.portals.map(p => ({ id: `portal-${p.to}`, x: p.x, z: p.z })), ...(L.final ? [{ id: 'final', x: L.final.x, z: L.final.z + L.final.r + 0.6 }] : []), ...L.spots.map(s => ({ id: s.id, x: s.x, z: s.z }))],
+      spots: [{ id: 'spawn', ...L.spawn }, ...(L.exit ? [{ id: 'salida', ...L.exit }] : []), ...L.portals.map(p => ({ id: `portal-${p.to}`, x: p.x, z: p.z })), ...(L.final ? [{ id: 'final', x: L.final.x, z: L.final.z + L.final.r + 0.6 }] : []), ...L.spots.map(s => ({ id: s.id, x: s.x, z: s.z })), ...masAlla.voicesFor(id).filter(v => !v.walker).map(v => ({ id: `voz-${v.id}`, x: v.x, z: v.z }))],
     };
   });
 }

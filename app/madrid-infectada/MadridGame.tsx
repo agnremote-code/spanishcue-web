@@ -26,6 +26,7 @@ import { ENCOUNTERS, SURVIVORS, citySpots, whereIs } from './city.mjs';
 import { CityMap } from './CityMap';
 import type { Near, Pose, VaxStage, WorldEvent } from './World3D';
 import './madrid.css';
+import MusicVolume, { useMusicVolume } from '../escucha-3d/MusicVolume';
 
 const World3D = dynamic(() => import('./World3D'), { ssr: false, loading: () => <div className="mi-loading">Abriendo el perímetro…</div> });
 export const LESSON_ID = 242;
@@ -82,6 +83,7 @@ export default function MadridGame() {
   const [fire, setFire] = useState(0);
   const [route, setRoute] = useState(false);
   const [sound, setSound] = useState(true);
+  const [musicVolume, setMusicVolume] = useMusicVolume();
   const [vax, setVax] = useState<VaxStage>(null);
   const [doses, setDoses] = useState(0);
   const [toast, setToast] = useState<string | null>(null);
@@ -168,6 +170,7 @@ export default function MadridGame() {
   useEffect(() => { ambience.current = createAmbience(); return () => { ambience.current?.dispose(); ambience.current = null; }; }, []);
   useEffect(() => { ambience.current?.setKind(entered ? zone.sound as Sound : null); }, [zone.sound, entered]);
   useEffect(() => { ambience.current?.setMuted(!sound); setShoutMuted(!sound); }, [sound]);
+  useEffect(() => { ambience.current?.setVolume(musicVolume); }, [musicVolume]);
   const [voice, setVoice] = useState(false);
   useEffect(() => { ambience.current?.duck(voice ? 0.05 : spotOpen || listenAt !== undefined ? 0.3 : 1); }, [spotOpen, listenAt, voice]);
   const onAudio = useCallback((playing: boolean) => setVoice(playing), []);
@@ -354,7 +357,7 @@ export default function MadridGame() {
         <ModeSwitch mode={mode} onChange={switchMode} className="mi-mode" />
         <button type="button" onClick={() => setRoute(r => !r)} aria-pressed={route}>Ruta</button>
         {mode === 'escucha' && <button type="button" onClick={() => setListenAt(null)}>Escuchas</button>}
-        <button type="button" onClick={() => setSound(s => !s)} aria-pressed={!sound} aria-label={sound ? 'Silenciar el ambiente' : 'Activar el ambiente'}>{sound ? '🔊' : '🔇'}</button>
+        <MusicVolume sound={sound} onSound={setSound} volume={musicVolume} onVolume={setMusicVolume} />
         <button type="button" onClick={() => { setSpotOpen(null); setEntered(false); setFinale(false); setEnding(false); }}>Nivel {level}</button>
       </div>
     </header>}
