@@ -77,6 +77,7 @@ All five run on `claude-opus-5-5`, follow [ROUTINES.md](ROUTINES.md), and each i
 - Session 0 (lesson test) took 55 messages, about 15 of them caused by crossed messages over circle 6. That led to the lock rule.
 
 ## Current work and next action
+- **2026-10-30 (Friday 3D + assessment routine): IN PROGRESS** (branch `claude/friday-assessment-20261030`, base main `49ddf69`). Subscription usage: **UNKNOWN**. Started-run marker, pushed before substantive work (W43 item 8).
 - **2026-10-29 (Thursday reliability routine): PR #290** (branch `claude/thursday-review-20261029`, base main `839ea09`). Subscription usage: **UNKNOWN**.
   - **Board:** convened proportionately as subagents of the facilitator.
     - Sofia: read-only audit of the academy/institutions API added since `4d2c680`.
