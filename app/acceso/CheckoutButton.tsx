@@ -150,14 +150,14 @@ export default function CheckoutButton({ signedIn, returnTo, variant = "default"
     window.location.assign(signedIn ? "/cuenta?checkout=paddle" : "/pro/claim?provider=paddle");
   }
 
-  async function checkoutPaddle(offer: "monthly" | "trial" = "monthly") {
+  async function checkoutPaddle(offer: "monthly" = "monthly") {
     if (starting.current) return;
     trackMarketingEvent("cta_click", { placement: "paywall", cta_type: "subscribe_card", signed_in: signedIn });
-    if (!founder?.available || !founder.paddleCheckoutAvailable || (offer === "trial" && !founder.trialCheckoutAvailable)) return;
+    if (!founder?.available || !founder.paddleCheckoutAvailable) return;
     starting.current = true;
-    // One checkout_start per opened checkout; `plan` tells the trial apart and
-    // `value` is the first real charge. Starting a checkout is not a purchase.
-    trackMarketingEvent("checkout_start", { plan: offer, value: offer === "trial" ? 2 : 15.5, currency: "USD", method: "paddle" });
+    // Starting checkout is not a purchase. Legacy trial subscriptions remain
+    // recognized by the billing back end but cannot be purchased anew.
+    trackMarketingEvent("checkout_start", { plan: offer, value: 15.5, currency: "USD", method: "paddle" });
     setStatus("paddle");
     setMessage("");
     try {
@@ -287,7 +287,7 @@ export default function CheckoutButton({ signedIn, returnTo, variant = "default"
     const es = locale === "es";
     const paddleBusy = status === "paddle" || status === "confirming";
     const pending = loaded === null;
-    const offer = loaded ?? { available: false, mode: "live", paddleCheckoutAvailable: true, trialCheckoutAvailable: true, checkoutLive: true, paypalPriceUsd: undefined } as Pick<FounderStatus, "available" | "mode" | "paddleCheckoutAvailable" | "trialCheckoutAvailable" | "checkoutLive" | "paypalPriceUsd">;
+    const offer = loaded ?? { available: false, mode: "live", paddleCheckoutAvailable: true, trialCheckoutAvailable: false, checkoutLive: true, paypalPriceUsd: undefined } as Pick<FounderStatus, "available" | "mode" | "paddleCheckoutAvailable" | "trialCheckoutAvailable" | "checkoutLive" | "paypalPriceUsd">;
     return <div className="checkout-action checkout-landing" aria-busy={pending}>
       {offer.mode === "sandbox" && <strong className="checkout-availability closed">{es ? "PRUEBA SANDBOX · no es un cobro real" : "SANDBOX TEST · not a real charge"}</strong>}
       {!pending && !offer.available && <strong className="checkout-availability closed">{es ? "Oferta fundadora completa" : "Founder offer fully claimed"}</strong>}

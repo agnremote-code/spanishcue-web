@@ -103,7 +103,7 @@ const copy = {
       ["¿Qué incluye la cuenta gratuita?", "Diez clases reales: dos de cada categoría. No necesitas tarjeta para crear la cuenta."],
       ["¿Qué incluye PRO?", "Acceso a toda la biblioteca de gramática, conversación, escucha, fonética y vocabulario mientras tu suscripción esté vigente."],
       ["¿Cómo funciona el Founder Price?", "Es una oferta limitada a las primeras 1.000 suscripciones con pago mensual confirmado. Los importes actuales se muestran en Precios."],
-      ["¿La suscripción se renueva automáticamente?", "Sí. La suscripción mensual se renueva hasta que canceles. La prueba de un día, cuando está disponible, se convierte después al precio mensual indicado."],
+      ["¿La suscripción se renueva automáticamente?", "Sí. La suscripción mensual se renueva automáticamente hasta que canceles desde Mi cuenta."],
       ["¿Cómo funciona la cancelación?", "Puedes cancelar desde Mi cuenta. Consulta las condiciones del método de pago antes de suscribirte."],
       ["¿Qué pasa con mi precio si cancelo y vuelvo?", "Al cancelar termina la garantía asociada a esa suscripción. Si vuelves, se aplicará la oferta disponible en ese momento."],
       ["¿Puedo pagar ahora?", "Consulta las opciones actuales en Precios."],
@@ -204,7 +204,7 @@ const copy = {
       ["What does the free account include?", "Ten real lessons: two from every category. No card is required to create an account."],
       ["What does PRO include?", "Access to the complete grammar, conversation, listening, pronunciation and vocabulary library while your subscription is active."],
       ["How does Founder Price work?", "The offer is limited to the first 1,000 subscriptions with a confirmed full monthly payment. Current amounts appear on Pricing."],
-      ["Does the subscription renew automatically?", "Yes. Monthly subscriptions renew until cancelled. The one-day trial, when available, converts afterward to the stated monthly price."],
+      ["Does the subscription renew automatically?", "Yes. Monthly subscriptions renew automatically until you cancel from My account."],
       ["How does cancellation work?", "You can cancel in My account. Review your chosen payment method terms before subscribing."],
       ["What happens to my price if I cancel and return?", "Cancellation ends the guarantee tied to that subscription. If you return, the offer available at that time applies."],
       ["Can I pay now?", "Check current payment options on Pricing."],
@@ -432,9 +432,9 @@ export function FAQ() {
     return () => controller.abort();
   }, []);
   const paymentAnswer = billing === "both"
-    ? (locale === "es" ? "Sí. Puedes pagar con tarjeta US$15.50/mes, probar 1 día por US$2 y después US$15.50/mes, o elegir PayPal. Consulta los importes antes de pagar." : "Yes. Pay US$15.50/month by card, try 1 day for US$2 then US$15.50/month, or choose PayPal. Review amounts before payment.")
+    ? (locale === "es" ? "Sí. Puedes pagar con tarjeta US$15.50/mes o elegir PayPal. Consulta los importes antes de pagar." : "Yes. Pay US$15.50/month by card or choose PayPal. Review amounts before payment.")
     : billing === "card"
-      ? (locale === "es" ? "Sí. Puedes pagar con tarjeta US$15.50/mes o probar 1 día por US$2 y después US$15.50/mes." : "Yes. Pay US$15.50/month by card or try 1 day for US$2 then US$15.50/month.")
+      ? (locale === "es" ? "Sí. Puedes suscribirte directamente con tarjeta por US$15.50/mes." : "Yes. Subscribe directly by card for US$15.50/month.")
       : billing === "paypal"
         ? (locale === "es" ? "Sí. Puedes suscribirte con PayPal. Su precio se muestra antes del pago." : "Yes. You can subscribe with PayPal; its price is shown before payment.")
         : billing === "offline"

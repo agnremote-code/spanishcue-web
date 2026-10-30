@@ -23,9 +23,8 @@ export async function GET(request: Request) {
       ...status,
       priceUsd: 15.5,
       paypalPriceUsd: config.founderOffer.priceUsd,
-      trialPriceUsd: 2,
-      trialDays: 1,
-      trialCheckoutAvailable: paddleCheckoutAvailable,
+      // A false legacy flag keeps older cached clients from offering retired trials.
+      trialCheckoutAvailable: false,
       checkoutLive,
       checkoutAvailable: checkoutLive || paddleCheckoutAvailable,
       // This flag excludes Sandbox and supervised-only accounts for public marketing pages.

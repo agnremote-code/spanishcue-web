@@ -409,6 +409,36 @@
       "kind": "english-added",
       "text": "Once subscriptions are available, you can cancel online in My account.",
       "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    },
+    {
+      "path": "app/legal/LegalDocument.tsx",
+      "kind": "english-added",
+      "text": "Before confirmation, checkout identifies the selected payment method: card (Paddle) at US$15.50/month, or PayPal, which displays its own amount. Renewal is automatic until cancellation, with the term and applicable taxes disclosed. Access begins after the relevant payment is confirmed.",
+      "reason": "Owner-authorized 2026-10-26 retirement of the US$2 paid trial from new checkouts"
+    },
+    {
+      "path": "app/marketing/MarketingSections.tsx",
+      "kind": "english-added",
+      "text": "Yes. Monthly subscriptions renew automatically until you cancel from My account.",
+      "reason": "Owner-authorized 2026-10-26 retirement of the US$2 paid trial from new checkouts"
+    },
+    {
+      "path": "app/marketing/MarketingSections.tsx",
+      "kind": "english-added",
+      "text": "Yes. Pay US$15.50/month by card or choose PayPal. Review amounts before payment.",
+      "reason": "Owner-authorized 2026-10-26 retirement of the US$2 paid trial from new checkouts"
+    },
+    {
+      "path": "app/marketing/MarketingSections.tsx",
+      "kind": "english-added",
+      "text": "Yes. Subscribe directly by card for US$15.50/month.",
+      "reason": "Owner-authorized 2026-10-26 retirement of the US$2 paid trial from new checkouts"
+    },
+    {
+      "path": "app/pricing/page.tsx",
+      "kind": "english-added",
+      "text": "Yes. Subscribe for US$15.50/month by card. PayPal shows its price before confirmation.",
+      "reason": "Owner-authorized 2026-10-26 retirement of the US$2 paid trial from new checkouts"
     }
   ]
 }

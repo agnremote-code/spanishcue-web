@@ -40,15 +40,14 @@ export async function POST(request: Request) {
   if (!founder.available) return Response.json({ error: "El precio fundador ya no está disponible." }, { status: 409 });
 
   let returnTo = "/";
-  let offer: PaddleOffer = "monthly";
+  const offer: PaddleOffer = "monthly";
   let attribution: PaddleAttribution = {};
   try {
     const raw = await request.text();
     if (raw.length > 3000) throw new Error("invalid_request");
     const requested = JSON.parse(raw) as { returnTo?: unknown; offer?: unknown; priceId?: unknown; attribution?: unknown };
     attribution = sanitizePaddleAttribution(requested.attribution);
-    if (requested.priceId !== undefined || (requested.offer !== undefined && requested.offer !== "monthly" && requested.offer !== "trial")) throw new Error("invalid_offer");
-    offer = requested.offer === "trial" ? "trial" : "monthly";
+    if (requested.priceId !== undefined || (requested.offer !== undefined && requested.offer !== "monthly")) throw new Error("invalid_offer");
     returnTo = safeRelativeReturnPath(typeof requested.returnTo === "string" && requested.returnTo.length <= 300 ? requested.returnTo : null);
   } catch { return Response.json({ error: "Solicitud no válida." }, { status: 400 }); }
 
