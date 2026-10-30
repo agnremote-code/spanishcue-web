@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "authorization": "Owner approval (Ale) typed «apruebo» in the project thread «Pasar las clases de países a 3D» on 2026-10-30 (message cmsg_01Gr5R4j3t2Yet65UcmhcVhAXfCKoy5oLZtd2gcTESLZDk), for the English copy of the «Países» category inside Conversación → Mundos 3D, requested by Ale the same day (message cmsg_01Gr5R4j3t2Yet65UcmhcVhAUmYVWgRxpJMvaLHBg2pH4n).",
+  "additions": [
+    {
+      "path": "app/Library.tsx",
+      "text": "3D WORLDS · COUNTRIES"
+    },
+    {
+      "path": "app/Library.tsx",
+      "text": "3D WORLDS · CATEGORY"
+    },
+    {
+      "path": "app/Library.tsx",
+      "text": "Land in ${countries.length} countries, choose a region and talk to the people there. Conversation and listening in the same world."
+    },
+    {
+      "path": "app/Library.tsx",
+      "text": "← Back to all 3D worlds"
+    },
+    {
+      "path": "app/Library.tsx",
+      "text": "See the ${countries.length} countries →"
+    }
+  ]
+}
