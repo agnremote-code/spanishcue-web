@@ -9,11 +9,15 @@ const KEY = 'spanishcue:musica-3d:volumen';
 
 export function useMusicVolume(): [number, (volume: number) => void] {
   const [volume, setVolume] = useState(0.7);
+  // Read after the first paint, like the other saved preferences of the worlds.
   useEffect(() => {
-    try {
-      const saved = Number(window.localStorage.getItem(KEY));
-      if (window.localStorage.getItem(KEY) !== null && saved >= 0 && saved <= 1) setVolume(saved);
-    } catch { /* The default volume stays usable. */ }
+    const t = window.setTimeout(() => {
+      try {
+        const raw = window.localStorage.getItem(KEY), saved = Number(raw);
+        if (raw !== null && saved >= 0 && saved <= 1) setVolume(saved);
+      } catch { /* The default volume stays usable. */ }
+    }, 0);
+    return () => window.clearTimeout(t);
   }, []);
   const change = (next: number) => {
     setVolume(next);

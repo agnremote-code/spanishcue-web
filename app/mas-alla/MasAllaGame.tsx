@@ -219,7 +219,7 @@ export default function MasAllaGame() {
     ambience.current?.play('portal');
     setView(to);
     setState(s => goTo(s, to));
-    if (to !== 'umbral') say(to === 'cielo' ? b('El Cielo. Sigue los círculos blancos: en cada uno te espera alguien.', 'Heaven. Follow the white circles: someone is waiting in each one.') : b('El Infierno. Sigue los círculos blancos: en cada uno te espera alguien.', 'Hell. Follow the white circles: someone is waiting in each one.'), 6);
+    if (to !== 'umbral') say(to === 'cielo' ? b('El Cielo. Sigue los círculos blancos: en cada uno te espera alguien.', 'Heaven. Follow the white circles: someone is waiting in each one.') : b('El Infierno. Sigue los círculos de fuego: en cada uno te espera alguien.', 'Hell. Follow the circles of fire: someone is waiting in each one.'), 6);
   }, [say]);
   const openSpot = useCallback((id: string) => {
     setRoute(false);
@@ -371,7 +371,7 @@ export default function MasAllaGame() {
     </div>}
     {playing && has3d && !busy && !near && <p className="ma-hint">{view === 'umbral'
       ? (done.length ? 'A la izquierda, el Cielo; a la derecha, el Infierno. El reloj de arena del centro cierra la clase cuando quieras.' : 'A la izquierda sube la escalera del Cielo; a la derecha se abre el Infierno. Camina hasta una puerta.')
-      : target ? 'Busca los círculos blancos: en cada uno te espera alguien. El anillo del sur te devuelve al Umbral.' : 'Has cerrado todos los encuentros de este mundo. Vuelve al Umbral por el anillo del sur.'}</p>}
+      : target ? `Busca los círculos ${view === 'infierno' ? 'de fuego' : 'blancos'}: en cada uno te espera alguien; en los dorados, más gente con ganas de hablar. El anillo del sur te devuelve al Umbral.` : 'Has cerrado todos los encuentros de este mundo. Vuelve al Umbral por el anillo del sur.'}</p>}
 
     {/* ------------------------------------------------ the route */}
     {entered && view !== 'intro' && (route || (flat && !spotOpen && listenAt === undefined && !ending)) && <section className="ma-panel ma-route" aria-labelledby="ma-route-h">
