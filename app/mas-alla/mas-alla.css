@@ -492,3 +492,5 @@
   .ma-hour { width: 46%; }
   .ma-hour.is-1, .ma-hour.is-3 { top: 50%; width: 30%; }
 }
+.ma-hud-right > .ma-restart { background: #3a1f2a; border-color: #b8737f; color: #ffe9ec; }
+.ma-restart.is-title { display: block; margin: .6rem auto 0; padding: .5rem 1rem; background: transparent; border: 1px solid var(--line); border-radius: 999px; font-size: .9rem; color: var(--ink); }
