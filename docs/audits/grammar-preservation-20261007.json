@@ -14,6 +14,10 @@
     ],
     "app/access-policy.ts": [
       {
+        "before": "/** Fixed free samples per category (Gramática adds the whole Clase inicial, 239); filters never change access permissions. */\nexport const samplesByCategory: Record<string, number[]> = { 'Gramática':[40,41,239],",
+        "after": "/** Fixed free samples per category (Gramática adds the whole Clase inicial, 239, and one live class per level A2–C2: 350, 389, 439, 468, 515); filters never change access permissions. */\nexport const samplesByCategory: Record<string, number[]> = { 'Gramática':[40,41,239,350,389,439,468,515],"
+      },
+      {
         "before": "new Set(['hotel','latam','phonetics','grammar-free']);",
         "after": "new Set(['hotel','latam','phonetics','grammar-free','escucha-3d-libre']);"
       },

@@ -1,5 +1,5 @@
-/** Fixed free samples per category (Gramática adds the whole Clase inicial, 239); filters never change access permissions. */
-export const samplesByCategory: Record<string, number[]> = { 'Gramática':[40,41,239], 'Conversación':[210,36], 'Escucha':[105,28], 'Fonética':[201,202], 'Vocabulario':[16,204] };
+/** Fixed free samples per category (Gramática adds the whole Clase inicial, 239, and one live class per level A2–C2: 350, 389, 439, 468, 515); filters never change access permissions. */
+export const samplesByCategory: Record<string, number[]> = { 'Gramática':[40,41,239,350,389,439,468,515], 'Conversación':[210,36], 'Escucha':[105,28], 'Fonética':[201,202], 'Vocabulario':[16,204] };
 export const freeLessonIds = [...new Set(Object.values(samplesByCategory).flat())];
 export const isFreeLesson = (id:number) => freeLessonIds.includes(id);
 /** Audio collections attached to the existing FREE listening and phonetics samples. */

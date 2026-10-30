@@ -1,8 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync,readdirSync} from 'node:fs';
-// The free live-only Clase inicial (239) keeps its recording here too; the live manifest owns it.
-const LIVE_FREE=new Set(['239.mp3']);
+// The free live-only classes (Clase inicial 239 and one class per level A2–C2) keep its recording here too; the live manifest owns it.
+const LIVE_FREE=new Set(['239.mp3','350.mp3','389.mp3','439.mp3','468.mp3','515.mp3']);
 import {createHash} from 'node:crypto';
 import {execFileSync} from 'node:child_process';
 const read=p=>JSON.parse(readFileSync(p,'utf8'));

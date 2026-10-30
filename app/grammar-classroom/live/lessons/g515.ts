@@ -268,7 +268,7 @@ export const lesson: LiveLesson = {
       steps: [
         { title: 'Un audio desde Rosario · An audio note from Rosario', blocks: [
           { kind: 'guide', text: { teacher: 'Primera escucha: solo la idea general. Segunda escucha: tu alumno anota cada forma de vos que oye y cada cambio de trato que Valeria comenta. Después, las preguntas.', self: 'Escucha una vez para la idea general y otra para los detalles. Anota las formas de vos y los cambios de trato de la serie. (Note the vos forms and the switches she talks about.)' } },
-          { kind: 'listen', title: 'Audio de Valeria', channel: 'MENSAJE DE AUDIO · VALERIA SOSA', src: '/audio/grammar-live/515.mp3',
+          { kind: 'listen', title: 'Audio de Valeria', channel: 'MENSAJE DE AUDIO · VALERIA SOSA', src: '/audio/grammar-free/515.mp3',
             before: 'Valeria le manda a Marta un audio sobre su versión de la escena doce. Es argentina y habla con voseo. ¿Qué crees que va a comentar del trato entre Elena y Ramón? (What do you think she will say about how the characters address each other?)',
             gist: { prompt: '¿De qué trata el audio? · What is the audio note about?', options: ['De las vacaciones que va a tomar.', 'De cómo adaptó los cambios de trato de la serie en la versión rioplatense.', 'De un problema técnico con el sonido del doblaje.'], answer: 1, why: 'Explica qué trato usa en cada capítulo y por qué.', en: 'She explains which form of address she used in each episode and why.' },
             details: [
