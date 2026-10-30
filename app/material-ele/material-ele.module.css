@@ -1,0 +1,16 @@
+.navCta { background: #ffc936; color: #06152f !important; padding: 7px 14px; border-radius: 10px; font-weight: 800 !important; }
+.buyButton {
+  display: inline-flex; align-items: center; justify-content: center; padding: 12px 18px; border-radius: 12px;
+  background: #ffc936; color: #06152f; font-weight: 900; font-size: 15px; text-decoration: none; box-shadow: 0 8px 20px rgba(255, 201, 54, .3);
+}
+.buyButton:hover { transform: translateY(-1px); }
+.exercise { background: #fff; border: 1px solid var(--g-line); border-radius: 16px; padding: 18px 20px; }
+.exercise > p { margin: 0 0 10px; color: var(--g-muted); }
+.exercise ol { margin: 0; padding-left: 22px; display: grid; gap: 8px; }
+.exercise summary { cursor: pointer; font-weight: 600; }
+.exercise details p { margin: 6px 0 0; color: var(--g-blue-dark); }
+.questionGrid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); }
+.questionGrid ol { margin: 0; padding-left: 22px; display: grid; gap: 6px; }
+.stats { display: flex; flex-wrap: wrap; gap: 10px 22px; color: var(--g-muted); font-size: 15px; }
+.stats strong { color: var(--g-ink); }
+.price { font-size: 14px; color: var(--g-muted); margin: 0; }

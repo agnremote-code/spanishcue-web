@@ -1,0 +1,1216 @@
+/**
+ * Spanish-language organic cluster for ELE teachers (/material-ele).
+ * Every page carries usable classroom material (activities, exercises with
+ * answer keys, conversation questions) and links to real catalog lessons.
+ * Lesson ids are resolved against the catalog at render time; unknown ids are
+ * dropped, so a retired lesson never produces a broken card.
+ */
+
+export const MATERIAL_ELE_PATH = "/material-ele";
+
+export type EleActivity = {
+  name: string;
+  minutes: number;
+  goal: string;
+  steps: string[];
+  prompts: string[];
+  model: string;
+  correction: string;
+  online: string;
+};
+
+export type EleExercise = {
+  title: string;
+  instructions: string;
+  items: { q: string; a: string }[];
+};
+
+export type EleQuestionSet = { level: string; items: string[] };
+
+export type ElePage = {
+  slug: string;
+  path: string;
+  kind: "level" | "topic";
+  code?: "A1" | "A2" | "B1" | "B2" | "C1" | "C2";
+  /** Short label for cards and breadcrumbs. */
+  label: string;
+  title: string;
+  description: string;
+  h1: string;
+  kicker: string;
+  intro: string;
+  keyPoints: { title: string; items: string[] };
+  activities: EleActivity[];
+  exercise?: EleExercise;
+  questions?: EleQuestionSet[];
+  errors: string[];
+  lessonIds: number[];
+  faq: { question: string; answer: string }[];
+  related: string[];
+};
+
+type PageInput = Omit<ElePage, "path">;
+
+const levelInputs: PageInput[] = [
+  {
+    slug: "a1",
+    kind: "level",
+    code: "A1",
+    label: "Material ELE A1",
+    title: "Material ELE A1: actividades y clases para principiantes | SpanishCue",
+    description: "Material ELE A1 gratis para profesores: actividades listas para usar, ejercicios con soluciones y clases interactivas para alumnos adultos principiantes.",
+    h1: "Material ELE A1 para profesores: actividades listas para tu primera semana",
+    kicker: "A1 · Principiantes adultos",
+    intro: "En A1 el alumno necesita pocas palabras y muchas razones para combinarlas. Este material parte de objetos, personas y lugares que se pueden ver en pantalla, da un modelo de frase completo y cambia un solo dato cada vez para que el alumno tenga que decidir.",
+    keyPoints: {
+      title: "Contenidos de A1 que trabajas aquí",
+      items: [
+        "Saludos, presentarse y deletrear el nombre",
+        "Sustantivos, artículos y concordancia de género y número",
+        "Ser, estar y hay para describir personas y lugares",
+        "Presente de los verbos más frecuentes y preguntas básicas",
+        "Rutinas, la hora y los días de la semana",
+      ],
+    },
+    activities: [
+      {
+        name: "La oficina compartida",
+        minutes: 10,
+        goal: "Pedir objetos con cantidad y concordancia.",
+        steps: [
+          "Muestra seis objetos: mesa, silla, libro, carpeta, ordenador, lámpara.",
+          "El alumno decide qué necesitan dos personas para trabajar y dice cuántos objetos y de qué color.",
+          "Agrega una tercera persona: el alumno actualiza el pedido y explica un cambio.",
+        ],
+        prompts: ["Necesitamos dos sillas y una mesa grande.", "¿Cuántas carpetas necesitas?"],
+        model: "Necesitamos tres carpetas rojas. La mesa es grande.",
+        correction: "«Dos silla roja» → «dos sillas rojas». Señala que cambian el sustantivo y el adjetivo, y pide otra cantidad para comprobarlo.",
+        online: "En clase individual, tú eres el proveedor. En grupo, cada pareja recibe cantidades distintas y negocia.",
+      },
+      {
+        name: "¿Dónde está la lámpara?",
+        minutes: 8,
+        goal: "Distinguir existencia (hay) y ubicación (estar).",
+        steps: [
+          "Dibuja una habitación con cuatro objetos; el alumno agrega uno más.",
+          "Pregunta primero qué hay en la habitación y después dónde está un objeto concreto.",
+          "Mueve un objeto y describe mal su lugar: el alumno te corrige.",
+        ],
+        prompts: ["Hay una lámpara. La lámpara está al lado de la mesa.", "¿Qué hay en la habitación? ¿Dónde está la silla?"],
+        model: "Hay una silla pequeña. Está al lado de la puerta.",
+        correction: "«La silla hay aquí» → «la silla está aquí». Hay presenta algo nuevo; estar ubica algo que ya conocemos.",
+        online: "Comparte un dibujo simple en la pizarra digital y deja visibles las preposiciones de lugar.",
+      },
+      {
+        name: "Mi semana en cinco frases",
+        minutes: 10,
+        goal: "Contar una rutina con presente y marcadores de tiempo.",
+        steps: [
+          "Escribe los días de la semana y cinco verbos: trabajar, estudiar, comer, salir, descansar.",
+          "El alumno elige tres días y cuenta qué hace normalmente.",
+          "Tú haces preguntas de seguimiento: ¿a qué hora?, ¿con quién?, ¿dónde?",
+        ],
+        prompts: ["Los lunes trabajo en casa.", "¿A qué hora sales los viernes?"],
+        model: "Los sábados como con mi familia y por la tarde descanso.",
+        correction: "«Yo trabaja» → «yo trabajo». Pide la misma frase con otra persona (tú, ella) para fijar la terminación.",
+        online: "Pide al alumno que escriba sus frases en el chat y léelas juntos en voz alta.",
+      },
+    ],
+    exercise: {
+      title: "Ejercicio A1: ser, estar o hay",
+      instructions: "Completa con la forma correcta. Abre cada frase para ver la solución.",
+      items: [
+        { q: "Mi profesora ___ argentina.", a: "es" },
+        { q: "En mi calle ___ dos cafeterías.", a: "hay" },
+        { q: "El libro ___ encima de la mesa.", a: "está" },
+        { q: "Nosotros ___ cansados hoy.", a: "estamos" },
+        { q: "¿Dónde ___ el baño, por favor?", a: "está" },
+        { q: "¿___ un supermercado cerca?", a: "Hay" },
+        { q: "Ellos ___ médicos.", a: "son" },
+        { q: "La sopa ___ muy caliente.", a: "está" },
+      ],
+    },
+    errors: [
+      "No enseñes todos los usos de ser y estar a la vez: empieza por identidad, estado y lugar dentro de una situación.",
+      "Practica la concordancia en frases completas, para que el alumno oiga qué cambia.",
+      "Un alumno A1 adulto entiende más de lo que produce: deja el modelo visible y retíralo de a poco.",
+    ],
+    lessonIds: [239, 40, 41, 48, 311, 312, 240, 201, 16],
+    faq: [
+      { question: "¿Qué material uso en la primera clase con un alumno A1?", answer: "Una presentación personal guiada, el alfabeto aplicado a su nombre y una tarea pequeña con objetos reales. La Clase inicial de SpanishCue es gratis y está pensada exactamente para ese primer encuentro." },
+      { question: "¿Este material sirve para clases online?", answer: "Sí. Todas las actividades tienen una versión para clase individual por videollamada y las clases interactivas se comparten en pantalla." },
+      { question: "¿El material A1 es gratis?", answer: "Las actividades y ejercicios de esta página son gratis. En la biblioteca, las clases marcadas GRATIS se abren sin pagar; el resto es PRO por US$15,50 al mes." },
+    ],
+    related: ["primera-clase-de-espanol", "ser-y-estar", "preguntas-de-conversacion"],
+  },
+  {
+    slug: "a2",
+    kind: "level",
+    code: "A2",
+    label: "Material ELE A2",
+    title: "Material ELE A2: actividades de pasado, rutinas e instrucciones | SpanishCue",
+    description: "Material ELE A2 para profesores: actividades de indefinido e imperfecto, instrucciones y planes, ejercicios con soluciones y clases interactivas gratis.",
+    h1: "Material ELE A2 para profesores: contar, describir y organizar",
+    kicker: "A2 · Plataforma",
+    intro: "En A2 la situación sigue siendo conocida, pero cambia el tiempo: lo que pasó ayer, cómo era antes, qué vamos a hacer. Trabaja primero los pasados por separado y combínalos solo cuando cada significado está claro.",
+    keyPoints: {
+      title: "Contenidos de A2 que trabajas aquí",
+      items: [
+        "Pretérito indefinido regular e irregular de alta frecuencia",
+        "Pretérito imperfecto para describir y hablar de hábitos",
+        "Contraste indefinido e imperfecto en relatos breves",
+        "Ir a + infinitivo, planes e instrucciones",
+        "Por y para: motivo y destino",
+      ],
+    },
+    activities: [
+      {
+        name: "Reconstruye el día",
+        minutes: 12,
+        goal: "Ordenar acciones terminadas para que otra persona entienda la secuencia.",
+        steps: [
+          "Escribe cinco infinitivos: salir, llegar, visitar, comer, volver.",
+          "El alumno inventa un día de paseo y lo cuenta sin mostrar sus notas.",
+          "Repite el relato con un error de orden: el alumno lo corrige.",
+        ],
+        prompts: ["Primero salí de casa. Después llegué al museo.", "¿Qué hiciste antes de volver?"],
+        model: "Visité el museo, comí con una amiga y volví a las seis.",
+        correction: "«Ayer visito el museo» → «ayer visité el museo». Pide el último evento sin mirar el modelo.",
+        online: "En grupo, cada pareja dibuja la línea de tiempo de la otra. Online, usa una lista numerada en el chat.",
+      },
+      {
+        name: "Antes y ahora",
+        minutes: 10,
+        goal: "Describir hábitos y lugares del pasado con imperfecto.",
+        steps: [
+          "Elige un lugar que los dos puedan imaginar: una cafetería, una oficina, una escuela.",
+          "Pide cómo era, qué había y qué hacía la gente allí normalmente.",
+          "Pasa al presente: ¿qué cambió?",
+        ],
+        prompts: ["Antes había dos mesas. La gente estudiaba por la tarde.", "¿Cómo era? ¿Qué hacías allí?"],
+        model: "La biblioteca era pequeña y abría a las nueve.",
+        correction: "No digas que toda acción larga va en imperfecto: también se puede presentar un hecho largo como terminado («Viví diez años allí»).",
+        online: "Si el alumno no quiere hablar de su vida, permite un lugar inventado.",
+      },
+      {
+        name: "El plan del fin de semana",
+        minutes: 10,
+        goal: "Hacer planes y dar instrucciones simples.",
+        steps: [
+          "Propón una visita de un amigo extranjero a la ciudad del alumno.",
+          "El alumno arma el plan con ir a + infinitivo para viernes, sábado y domingo.",
+          "Cambia el clima: el alumno da instrucciones nuevas al amigo.",
+        ],
+        prompts: ["El sábado vamos a ir al mercado.", "Si llueve, toma el metro y ven a mi casa."],
+        model: "El domingo vamos a comer en el puerto. Lleva una chaqueta.",
+        correction: "«Vamos ir» → «vamos a ir». Marca la preposición con la voz y pide otra frase.",
+        online: "Busquen juntos un mapa real de la ciudad y marquen el recorrido.",
+      },
+    ],
+    exercise: {
+      title: "Ejercicio A2: indefinido o imperfecto",
+      instructions: "Elige la forma correcta del verbo entre paréntesis.",
+      items: [
+        { q: "Cuando ___ (ser) niño, ___ (vivir) en un pueblo.", a: "era · vivía" },
+        { q: "Ayer ___ (ir, yo) al médico.", a: "fui" },
+        { q: "___ (llover) mucho cuando ___ (salir, nosotros) del cine.", a: "Llovía · salimos" },
+        { q: "El verano pasado ___ (viajar, ellos) a Perú.", a: "viajaron" },
+        { q: "Mi abuela siempre ___ (cocinar) los domingos.", a: "cocinaba" },
+        { q: "De repente ___ (sonar) el teléfono.", a: "sonó" },
+        { q: "La casa ___ (tener) un jardín enorme.", a: "tenía" },
+        { q: "¿Qué ___ (hacer, tú) el sábado?", a: "hiciste" },
+      ],
+    },
+    errors: [
+      "«Ayer» o «siempre» son pistas, no reglas automáticas: decide por el significado.",
+      "El uso de perfecto e indefinido varía entre regiones; enseña un modelo coherente y reconoce las alternativas.",
+      "«Desde 2022» marca un punto de inicio; «desde hace cuatro años», una duración.",
+    ],
+    lessonIds: [350, 142, 143, 348, 374, 375, 36, 28, 105],
+    faq: [
+      { question: "¿Cómo enseño el contraste indefinido e imperfecto en A2?", answer: "Primero cada tiempo por separado, con su propia tarea: el indefinido para contar hechos y el imperfecto para describir. Después un relato corto donde el imperfecto da el contexto y el indefinido avanza la historia." },
+      { question: "¿Hay una clase de A2 gratis?", answer: "Sí: «Indefinido e imperfecto: evento y contexto» es gratis completa, con lectura, audio, conversación y escritura." },
+      { question: "¿Sirve para grupos?", answer: "Sí. Cada actividad indica cómo adaptarla a parejas o a grupos pequeños." },
+    ],
+    related: ["indefinido-e-imperfecto", "por-y-para", "juegos-para-clase-de-espanol"],
+  },
+  {
+    slug: "b1",
+    kind: "level",
+    code: "B1",
+    label: "Material ELE B1",
+    title: "Material ELE B1: subjuntivo, relatos y opiniones | SpanishCue",
+    description: "Material ELE B1 para profesores: actividades de presente de subjuntivo, relatos en pasado, por y para, ejercicios con soluciones y clases interactivas.",
+    h1: "Material ELE B1 para profesores: opinar, recomendar y contar",
+    kicker: "B1 · Umbral",
+    intro: "En B1 la gramática le da al alumno control sobre una historia o una propuesta. Arma cada tarea alrededor de una decisión: un taller que planificar, una experiencia que explicar, una entrega que reorganizar.",
+    keyPoints: {
+      title: "Contenidos de B1 que trabajas aquí",
+      items: [
+        "Presente de subjuntivo para deseos, recomendaciones y reacciones",
+        "Infinitivo o que + subjuntivo: mismo sujeto u otro sujeto",
+        "Relato en pasado con pluscuamperfecto",
+        "Por y para: causa, finalidad, destinatario y plazo",
+        "Condicional para consejos e hipótesis prácticas",
+      ],
+    },
+    activities: [
+      {
+        name: "El taller perfecto",
+        minutes: 12,
+        goal: "Negociar condiciones con hechos (indicativo) y deseos (subjuntivo).",
+        steps: [
+          "Elige un taller para cuatro adultos con objetivos distintos.",
+          "El alumno dice dos hechos con indicativo y propone tres condiciones para que funcione.",
+          "Rechaza una propuesta: el alumno negocia una alternativa con una razón.",
+        ],
+        prompts: ["El taller dura dos horas. Quiero que todos participen.", "Es importante que haya tiempo para practicar."],
+        model: "Quiero practicar y quiero que el grupo practique conmigo.",
+        correction: "«Quiero que practicar» → «quiero practicar» con el mismo sujeto; «quiero que practiques» cuando lo hace otra persona.",
+        online: "En clase individual, el profesor representa a dos participantes con prioridades opuestas.",
+      },
+      {
+        name: "La entrega cambió",
+        minutes: 10,
+        goal: "Separar motivo, recorrido y finalidad con por y para.",
+        steps: [
+          "Da un paquete, un destinatario y una fecha límite.",
+          "Cierra una calle o cambia la hora del encuentro.",
+          "El alumno explica el nuevo plan con el motivo, el recorrido y el resultado.",
+        ],
+        prompts: ["Cambiamos el plan por la lluvia.", "Pasamos por el centro para recoger la caja."],
+        model: "La caja es para Marta. La necesitamos para el viernes.",
+        correction: "Pregunta qué significa «por Marta» en contexto: en su lugar o a causa de ella. «Para Marta» marca el destinatario.",
+        online: "Basta un mapa inventado de tres calles dibujado en la pizarra.",
+      },
+      {
+        name: "La experiencia que me cambió",
+        minutes: 15,
+        goal: "Contar una experiencia con contexto, hechos y consecuencia presente.",
+        steps: [
+          "El alumno elige una experiencia (real o inventada): un viaje, un trabajo, una mudanza.",
+          "Cuenta qué había pasado antes, qué pasó y cómo se sentía.",
+          "Cierra con una consecuencia actual y una recomendación para otra persona.",
+        ],
+        prompts: ["Cuando llegué, ya habían cerrado la oficina.", "Te recomiendo que no viajes sin seguro."],
+        model: "Antes de mudarme nunca había vivido solo; ahora te aconsejo que lo pruebes.",
+        correction: "Corrige primero la relación temporal que el alumno quiere expresar, no cada terminación.",
+        online: "Graba el relato con el permiso del alumno y escúchenlo juntos para autocorregir.",
+      },
+    ],
+    exercise: {
+      title: "Ejercicio B1: infinitivo, indicativo o subjuntivo",
+      instructions: "Completa con la forma correcta.",
+      items: [
+        { q: "Espero que (tú) ___ (tener) un buen viaje.", a: "tengas" },
+        { q: "Quiero ___ (aprender) a cocinar.", a: "aprender" },
+        { q: "Creo que ___ (ser) una buena idea.", a: "es" },
+        { q: "No creo que ___ (venir, ellos) hoy.", a: "vengan" },
+        { q: "Te recomiendo que ___ (dormir) más.", a: "duermas" },
+        { q: "Ojalá ___ (hacer) buen tiempo mañana.", a: "haga" },
+        { q: "Me alegra que ___ (estar, vosotros / ustedes) aquí.", a: "estéis / estén" },
+        { q: "Es importante ___ (llegar) puntual.", a: "llegar" },
+      ],
+    },
+    errors: [
+      "Subjuntivo no significa «irreal»: «me alegra que estés aquí» se refiere a un hecho.",
+      "Separa el presente de subjuntivo de B1 de la perspectiva de pasado de B2.",
+      "En un relato, corrige primero el orden de los hechos y después las formas.",
+    ],
+    lessonIds: [389, 18, 148, 231, 390, 395, 537, 223, 210],
+    faq: [
+      { question: "¿Cuándo empiezo con el subjuntivo?", answer: "Normalmente al comienzo de B1, con deseos y recomendaciones en situaciones concretas. «Deseos: querer que, esperar que, ojalá» es la clase B1 gratis de SpanishCue." },
+      { question: "¿Qué hago si el alumno de B1 se bloquea al hablar?", answer: "Propón una decisión que tomar, no un tema. Las clases de conversación 3D, como Noche abierta, dan razones para hablar en cada escena." },
+      { question: "¿Cuánto cuesta el acceso completo?", answer: "SpanishCue PRO cuesta US$15,50 al mes e incluye todas las clases de gramática, conversación y comprensión auditiva." },
+    ],
+    related: ["subjuntivo", "por-y-para", "indefinido-e-imperfecto"],
+  },
+  {
+    slug: "b2",
+    kind: "level",
+    code: "B2",
+    label: "Material ELE B2",
+    title: "Material ELE B2: hipótesis, estilo indirecto y argumentación | SpanishCue",
+    description: "Material ELE B2 para profesores: imperfecto de subjuntivo, condicionales, estilo indirecto y conectores, con actividades, soluciones y clases interactivas.",
+    h1: "Material ELE B2 para profesores: argumentar y cambiar de perspectiva",
+    kicker: "B2 · Avanzado",
+    intro: "En B2 la forma correcta es solo una parte de la tarea. El alumno necesita mantener quién dijo qué, cuándo vale un pedido y cuánto se compromete con una afirmación.",
+    keyPoints: {
+      title: "Contenidos de B2 que trabajas aquí",
+      items: [
+        "Imperfecto y pluscuamperfecto de subjuntivo",
+        "Oraciones condicionales posibles, improbables e imposibles",
+        "Estilo indirecto y correlación temporal",
+        "Concesivas: aunque, a pesar de que, por mucho que",
+        "Temporales con subjuntivo para un futuro incierto",
+      ],
+    },
+    activities: [
+      {
+        name: "Transmite el mensaje",
+        minutes: 12,
+        goal: "Pasar un pedido a estilo indirecto sin perder su intención.",
+        steps: [
+          "Da un mensaje: alguien pide a un colega que venga mañana a las nueve.",
+          "Adelanta el momento en que se cuenta: dos días después.",
+          "El alumno transmite el pedido original y aclara qué sigue siendo válido hoy.",
+        ],
+        prompts: ["El lunes dijo: «Ven mañana a las nueve».", "El miércoles explicas: «Pidió que fuera el martes a las nueve»."],
+        model: "Pidió que fuera el martes; ahora tenemos que acordar otra fecha.",
+        correction: "No cambies todos los tiempos de forma mecánica: decide primero si el hecho sigue vigente para quien habla.",
+        online: "Intercambien mensajes de voz simulados durante la clase.",
+      },
+      {
+        name: "Mejora la propuesta",
+        minutes: 12,
+        goal: "Defender un plan con hipótesis y concesión.",
+        steps: [
+          "Ofrece dos planes para un evento, cada uno con un problema práctico.",
+          "El alumno propone un cambio con si + imperfecto de subjuntivo.",
+          "Cuestiona una ventaja: el alumno concede y mantiene su argumento.",
+        ],
+        prompts: ["Si tuviéramos más tiempo, incluiríamos una práctica.", "Aunque el plan cuesta más, permite que participe todo el grupo."],
+        model: "Aunque fuera más caro, lo elegiría si resolviera el problema principal.",
+        correction: "«Si tendríamos» → «si tuviéramos». Separa la condición del resultado.",
+        online: "En clase individual, agrega una restricción nueva después del primer acuerdo.",
+      },
+      {
+        name: "Debate con condiciones",
+        minutes: 15,
+        goal: "Argumentar y refutar con conectores de B2.",
+        steps: [
+          "Plantea una afirmación polémica pero segura: «El teletrabajo debería ser obligatorio dos días por semana».",
+          "El alumno defiende una postura con tres argumentos y un conector cada uno.",
+          "Tú refutas; el alumno concede algo y vuelve a su tesis.",
+        ],
+        prompts: ["Por mucho que ahorre tiempo, no todos tienen espacio en casa.", "No es que esté en contra, sino que..."],
+        model: "No es que el teletrabajo sea malo, sino que no sirve para todos los puestos.",
+        correction: "«No es que es» → «no es que sea». Pide otra frase con la misma estructura.",
+        online: "Usa un temporizador visible: dos minutos por argumento.",
+      },
+    ],
+    exercise: {
+      title: "Ejercicio B2: oraciones condicionales",
+      instructions: "Completa con la forma adecuada.",
+      items: [
+        { q: "Si ___ (tener, yo) más tiempo, aprendería otro idioma.", a: "tuviera / tuviese" },
+        { q: "Si me hubieras avisado, te ___ (esperar).", a: "habría esperado / hubiera esperado" },
+        { q: "Si llueve mañana, ___ (quedarse, nosotros) en casa.", a: "nos quedaremos / nos quedamos" },
+        { q: "Si ___ (estudiar, tú) más el año pasado, ahora hablarías mejor.", a: "hubieras estudiado / hubieses estudiado" },
+        { q: "Aunque ___ (llover) mañana, iremos a la playa. (No sabemos si lloverá.)", a: "llueva" },
+        { q: "Cuando ___ (llegar, tú), llámame.", a: "llegues" },
+        { q: "Me pidió que no ___ (decir, yo) nada.", a: "dijera / dijese" },
+        { q: "Habla como si lo ___ (saber) todo.", a: "supiera / supiese" },
+      ],
+    },
+    errors: [
+      "Aunque admite indicativo o subjuntivo según cómo se presenta la información: no enseñes una sola respuesta sin contexto.",
+      "Una pasiva y una impersonal no comunican siempre la misma responsabilidad.",
+      "Mantén separadas las hipótesis del presente y las del pasado.",
+    ],
+    lessonIds: [439, 150, 219, 23, 438, 430, 206, 133],
+    faq: [
+      { question: "¿Qué actividades funcionan mejor en B2?", answer: "Las que obligan a defender una decisión: negociaciones, debates con restricciones y mensajes que hay que transmitir a otra persona." },
+      { question: "¿Hay una clase de B2 gratis?", answer: "Sí: «Temporales con subjuntivo para futuro incierto» se abre gratis completa." },
+      { question: "¿Las clases traen audio?", answer: "Sí. Las clases de gramática incluyen lectura, audio, conversación y escritura, y hay mundos de comprensión auditiva por nivel." },
+    ],
+    related: ["subjuntivo", "preguntas-de-conversacion", "juegos-para-clase-de-espanol"],
+  },
+  {
+    slug: "c1",
+    kind: "level",
+    code: "C1",
+    label: "Material ELE C1",
+    title: "Material ELE C1: matices, registro y precisión | SpanishCue",
+    description: "Material ELE C1 para profesores: alternancia indicativo y subjuntivo, ambigüedad, registro y reformulación, con actividades listas y clases interactivas.",
+    h1: "Material ELE C1 para profesores: controlar la interpretación",
+    kicker: "C1 · Dominio operativo eficaz",
+    intro: "El trabajo avanzado se centra en cómo entiende el oyente. Pide al alumno que defienda una elección gramatical, que considere una alternativa posible y que reformule sin cambiar el mensaje.",
+    keyPoints: {
+      title: "Contenidos de C1 que trabajas aquí",
+      items: [
+        "Alternancia de indicativo y subjuntivo según la postura",
+        "Subjuntivo en relativas no específicas",
+        "Ambigüedad, elipsis y grupo nominal",
+        "Perífrasis de aspecto: ir, venir, llevar + gerundio",
+        "Registro formal e informal en el mismo tema",
+      ],
+    },
+    activities: [
+      {
+        name: "El editor tiene que decidir",
+        minutes: 15,
+        goal: "Resolver una ambigüedad sin perder el significado.",
+        steps: [
+          "Escribe: «La crítica de la directora sorprendió al equipo».",
+          "Pregunta quién pudo hacer la crítica y quién pudo recibirla.",
+          "El alumno elige un contexto, reescribe la frase y defiende qué quedó más claro.",
+        ],
+        prompts: ["¿La directora hizo la crítica o la recibió?", "Reformula la frase para que solo quede tu lectura."],
+        model: "La crítica que hizo la directora sorprendió al equipo.",
+        correction: "No aceptes una lectura rebuscada solo porque es gramatical: pregunta si el contexto la sostiene.",
+        online: "En clase individual, el profesor hace de editor escéptico.",
+      },
+      {
+        name: "Lo sé, lo dudo, lo concedo",
+        minutes: 12,
+        goal: "Cambiar de modo verbal según el grado de compromiso.",
+        steps: [
+          "Da tres afirmaciones sobre un tema actual del trabajo del alumno.",
+          "El alumno responde a cada una con certeza, duda y concesión.",
+          "Pide que explique qué cambia para el oyente en cada versión.",
+        ],
+        prompts: ["El hecho de que haya subido el precio no significa que la calidad sea mejor.", "Es evidente que hay un problema; no es seguro que sea grave."],
+        model: "Que el proyecto sea caro no lo discuto; que sea innecesario, sí.",
+        correction: "Muestra la diferencia entre «es evidente que hay» y «no es evidente que haya» con ejemplos del propio alumno.",
+        online: "Usa noticias del día como punto de partida, siempre que el tema no sea sensible para el alumno.",
+      },
+      {
+        name: "Informe de avance",
+        minutes: 12,
+        goal: "Distinguir proceso, resultado acumulado y estado actual.",
+        steps: [
+          "Plantea un proyecto con diez archivos: seis revisados, dos en curso y dos sin empezar.",
+          "El alumno informa a un colega y después a la dirección.",
+          "Cuestiona una exageración y pide una versión más exacta.",
+        ],
+        prompts: ["Vamos revisando los archivos.", "Llevamos revisados seis; los otros cuatro no están listos."],
+        model: "Venimos revisando el material desde junio y tenemos preparadas seis fichas.",
+        correction: "«Tenemos preparado seis fichas» → «tenemos preparadas seis fichas»: el participio concuerda con fichas.",
+        online: "Cambia el destinatario para trabajar el registro con los mismos datos.",
+      },
+    ],
+    errors: [
+      "No reduzcas C1 a una lista de tiempos raros para producir.",
+      "Reconocer una forma histórica y usarla en una conversación actual son objetivos distintos.",
+      "Una frase breve puede ser ambigua a propósito: pregunta qué necesita saber el oyente.",
+    ],
+    lessonIds: [468, 37, 469, 128, 134, 11],
+    faq: [
+      { question: "¿Qué material ELE hay para C1?", answer: "Actividades de matiz y registro como las de esta página, y clases interactivas sobre alternancia de modos, subjuntivo en relativas y perspectiva temporal." },
+      { question: "¿Hay una clase de C1 gratis?", answer: "Sí: «Alternancia de indicativo y subjuntivo según postura» se abre gratis completa." },
+      { question: "¿Sirve para preparar el DELE C1?", answer: "Trabaja contenidos de nivel C1 y tareas de interacción y expresión, pero no es un curso de preparación de examen." },
+    ],
+    related: ["subjuntivo", "preguntas-de-conversacion", "c2"],
+  },
+  {
+    slug: "c2",
+    kind: "level",
+    code: "C2",
+    label: "Material ELE C2",
+    title: "Material ELE C2: pragmática, variación y estilo | SpanishCue",
+    description: "Material ELE C2 para profesores: variación regional, registro, modalización y paráfrasis avanzada, con actividades listas y clases interactivas.",
+    h1: "Material ELE C2 para profesores: precisión, registro y variación",
+    kicker: "C2 · Maestría",
+    intro: "En C2 el alumno ya se comunica sin problemas. El trabajo está en elegir la forma que produce el efecto buscado en un oyente concreto: cercanía, distancia, ironía, cautela.",
+    keyPoints: {
+      title: "Contenidos de C2 que trabajas aquí",
+      items: [
+        "Voseo, tuteo y ustedeo como elección pragmática",
+        "Selección fina de indicativo y subjuntivo",
+        "Modalización: certeza, reserva e insinuación",
+        "Variación regional del pasado",
+        "Paráfrasis que conserva el compromiso del hablante",
+      ],
+    },
+    activities: [
+      {
+        name: "Mismo mensaje, tres oyentes",
+        minutes: 15,
+        goal: "Ajustar tratamiento y registro sin cambiar el contenido.",
+        steps: [
+          "Da un mensaje: hay que cancelar una reunión importante.",
+          "El alumno lo escribe para un amigo, para un cliente y para un público argentino o centroamericano.",
+          "Compara las tres versiones y señala qué cambió y por qué.",
+        ],
+        prompts: ["Lo siento, tenemos que cancelar.", "Lamentamos informarle de que la reunión queda suspendida."],
+        model: "Lamentamos comunicarle que la reunión queda aplazada hasta nuevo aviso.",
+        correction: "Si el alumno mezcla tratamientos dentro del mismo mensaje, pídele que decida uno y lo mantenga.",
+        online: "Trabajen sobre un documento compartido con tres columnas.",
+      },
+      {
+        name: "Dilo sin decirlo",
+        minutes: 12,
+        goal: "Modalizar una crítica.",
+        steps: [
+          "Presenta un informe con un error grave hecho por un superior.",
+          "El alumno comunica el problema de tres formas: directa, prudente e insinuada.",
+          "Discutan qué versión funciona en qué cultura de trabajo.",
+        ],
+        prompts: ["Quizá convendría revisar estos datos.", "No sé si me explico, pero las cifras no cierran."],
+        model: "Tal vez valga la pena revisar las cifras antes de enviarlo.",
+        correction: "Pregunta si la insinuación se entiende: una crítica demasiado velada no comunica nada.",
+        online: "Usa un correo real anonimizado o inventado.",
+      },
+      {
+        name: "Parafrasea sin traicionar",
+        minutes: 12,
+        goal: "Reformular un texto conservando el grado de certeza.",
+        steps: [
+          "Da un párrafo de opinión con afirmaciones fuertes y débiles.",
+          "El alumno lo resume en tres frases.",
+          "Comparen: ¿alguna frase del resumen dice más o menos de lo que decía el original?",
+        ],
+        prompts: ["El autor sugiere que...", "Según el texto, es probable que..."],
+        model: "El autor no afirma que la medida fracase, sino que duda de que sea suficiente.",
+        correction: "Señala cuando un verbo de lengua («afirma», «insinúa», «admite») cambia el compromiso del autor.",
+        online: "Usa un texto breve en pantalla y resalten juntos los marcadores de certeza.",
+      },
+    ],
+    errors: [
+      "No presentes el voseo como un error ni como un rasgo exótico: es la norma de millones de hablantes.",
+      "En C2 la corrección se negocia: explica el efecto de cada opción, no solo si es «correcta».",
+    ],
+    lessonIds: [515, 507, 521, 529, 136, 129],
+    faq: [
+      { question: "¿Hay material ELE específico para C2?", answer: "Sí. Además de estas actividades, la biblioteca tiene clases de C2 sobre registro, modalización, variación regional y paráfrasis." },
+      { question: "¿Hay una clase de C2 gratis?", answer: "Sí: «Voseo, tuteo y ustedeo: cambios pragmáticos de registro» es gratis completa." },
+    ],
+    related: ["c1", "subjuntivo", "preguntas-de-conversacion"],
+  },
+];
+
+const topicInputs: PageInput[] = [
+  {
+    slug: "ser-y-estar",
+    kind: "topic",
+    label: "Ser y estar",
+    title: "Actividades de ser y estar para la clase de ELE | SpanishCue",
+    description: "Actividades de ser y estar para profesores de ELE: tareas comunicativas de A1 a B1, ejercicio con soluciones y clases interactivas para practicar en clase.",
+    h1: "Actividades de ser y estar para la clase de ELE",
+    kicker: "Gramática · A1–B1",
+    intro: "«Ser es permanente y estar es temporal» falla demasiadas veces («está muerto», «es joven»). Funciona mejor enseñar ser y estar por funciones dentro de una tarea: identificar, describir, ubicar y valorar un estado.",
+    keyPoints: {
+      title: "Las funciones que el alumno necesita",
+      items: [
+        "Ser: identidad, origen, profesión, características y dónde ocurre un evento («La fiesta es en mi casa»)",
+        "Estar: ubicación de personas y cosas, estados y resultados («La puerta está cerrada»)",
+        "Hay: existencia de algo no identificado («Hay un banco cerca»)",
+        "Adjetivos que cambian de significado: ser listo / estar listo, ser aburrido / estar aburrido",
+      ],
+    },
+    activities: [
+      {
+        name: "¿Quién es quién?",
+        minutes: 10,
+        goal: "Identificar y describir personas con ser.",
+        steps: [
+          "Muestra cuatro fotos de personas (o dibujos) sin nombre.",
+          "El alumno inventa nombre, origen y profesión de cada una.",
+          "Tú describes a una persona y el alumno adivina cuál es.",
+        ],
+        prompts: ["Es Lucía. Es de Chile y es arquitecta.", "¿Es alto o bajo? ¿De dónde es?"],
+        model: "Es Marcos, es mexicano y es profesor de música.",
+        correction: "«Está de Chile» → «es de Chile»: el origen va con ser.",
+        online: "Pega las fotos en una pizarra compartida y numéralas.",
+      },
+      {
+        name: "Hoy no es un día normal",
+        minutes: 10,
+        goal: "Contrastar características (ser) y estados (estar).",
+        steps: [
+          "Presenta a un personaje: «Ana es tranquila y muy ordenada».",
+          "Cuenta que hoy pasó algo raro; el alumno describe cómo está Ana hoy.",
+          "El alumno explica la diferencia entre cómo es Ana y cómo está.",
+        ],
+        prompts: ["Ana es tranquila, pero hoy está nerviosa.", "Su mesa está desordenada."],
+        model: "Normalmente es puntual, pero hoy está muy cansada.",
+        correction: "Si el alumno dice «Ana es nerviosa hoy», pregunta: ¿es su carácter o su estado ahora?",
+        online: "Funciona igual con un personaje de una serie que el alumno conozca.",
+      },
+      {
+        name: "Adjetivos con doble vida",
+        minutes: 12,
+        goal: "Usar adjetivos que cambian de significado con ser y estar (B1).",
+        steps: [
+          "Escribe: listo, aburrido, rico, malo, despierto.",
+          "El alumno crea dos frases para cada adjetivo, una con ser y otra con estar.",
+          "Lee una frase en voz alta; el otro explica qué significa.",
+        ],
+        prompts: ["Mi hermano es muy listo. ¿Estás listo para salir?", "La película es aburrida. Estoy aburrido."],
+        model: "Esta sopa está rica, pero el cocinero no es rico.",
+        correction: "Haz que el alumno parafrasee: «es listo» = inteligente; «está listo» = preparado.",
+        online: "Prepara tarjetas digitales con el adjetivo y dos imágenes.",
+      },
+    ],
+    exercise: {
+      title: "Ejercicio: ser, estar o hay",
+      instructions: "Completa con la forma correcta.",
+      items: [
+        { q: "La reunión ___ en la sala 3.", a: "es (un evento ocurre: ser)" },
+        { q: "Las llaves ___ en la cocina.", a: "están" },
+        { q: "Mi hermana ___ enfermera.", a: "es" },
+        { q: "¿___ farmacias abiertas a esta hora?", a: "Hay" },
+        { q: "El museo ___ cerrado los lunes.", a: "está" },
+        { q: "Este chico ___ muy listo: aprende rápido.", a: "es" },
+        { q: "¿___ (tú) listo? Nos vamos.", a: "Estás" },
+        { q: "El concierto ___ a las ocho.", a: "es" },
+        { q: "Mi abuelo ya ___ muerto.", a: "está" },
+        { q: "Tú ___ muy guapa hoy con ese vestido.", a: "estás" },
+      ],
+    },
+    errors: [
+      "Evita la regla «permanente / temporal» como única explicación: genera más errores de los que evita.",
+      "Los eventos van con ser aunque indiquen un lugar: «La boda es en Sevilla».",
+      "Trabaja hay y estar juntos desde el principio: es la confusión más frecuente en A1.",
+    ],
+    lessonIds: [48, 311, 312, 375, 537, 421],
+    faq: [
+      { question: "¿Cómo explico ser y estar a principiantes?", answer: "Por funciones y dentro de una tarea: ser para identificar y describir, estar para ubicar y hablar de estados, hay para la existencia. Evita la regla de permanente y temporal." },
+      { question: "¿En qué nivel se enseña ser y estar?", answer: "Desde A1 con identidad, lugar y estado; en A2 con descripciones que cambian; en B1 con adjetivos que cambian de significado y con participios." },
+      { question: "¿Hay una clase interactiva de ser y estar?", answer: "Sí. SpanishCue tiene clases de ser, estar y hay en A1, de descripciones cambiantes en A2 y de adjetivos con cambio de significado en B1." },
+    ],
+    related: ["a1", "indefinido-e-imperfecto", "juegos-para-clase-de-espanol"],
+  },
+  {
+    slug: "indefinido-e-imperfecto",
+    kind: "topic",
+    label: "Indefinido e imperfecto",
+    title: "Actividades de pretérito indefinido e imperfecto ELE | SpanishCue",
+    description: "Actividades de pretérito indefinido e imperfecto para clase de ELE: relatos, ejercicio con soluciones y una clase interactiva gratis para A2 y B1.",
+    h1: "Actividades de pretérito indefinido e imperfecto para la clase de ELE",
+    kicker: "Gramática · A2–B1",
+    intro: "El contraste de pasados se entiende cuando el alumno ve una historia: el imperfecto pinta el escenario y el indefinido mueve la acción. Las actividades de esta página parten de relatos breves, no de listas de marcadores.",
+    keyPoints: {
+      title: "La idea central",
+      items: [
+        "Indefinido: hechos terminados que hacen avanzar la historia («Llegué, abrí la puerta y vi...»)",
+        "Imperfecto: contexto, descripciones y hábitos («Era tarde, llovía, siempre íbamos...»)",
+        "Acción interrumpida: imperfecto + indefinido («Cocinaba cuando sonó el teléfono»)",
+        "El mismo hecho puede ir en los dos tiempos según la perspectiva del hablante",
+      ],
+    },
+    activities: [
+      {
+        name: "La noche del apagón",
+        minutes: 15,
+        goal: "Contar una historia con contexto e interrupción.",
+        steps: [
+          "Plantea la situación: anoche se cortó la luz en todo el barrio.",
+          "Pregunta qué estaba haciendo el alumno, dónde estaba y cómo era el lugar.",
+          "Pide qué pasó después: tres acciones en orden y un final.",
+        ],
+        prompts: ["Estaba en casa y miraba una serie cuando se cortó la luz.", "Busqué una vela, llamé a mi vecina y..."],
+        model: "Eran las diez, llovía y yo cocinaba. De repente se apagó todo y bajé a la calle.",
+        correction: "Si el alumno dice «cociné cuando se cortó», pregunta: ¿terminaste de cocinar antes o estabas en medio?",
+        online: "Apaga tu cámara como efecto dramático al comienzo de la historia.",
+      },
+      {
+        name: "Mi primer trabajo",
+        minutes: 12,
+        goal: "Describir una etapa (imperfecto) y destacar un hecho (indefinido).",
+        steps: [
+          "El alumno cuenta cómo era su primer trabajo: lugar, horarios, compañeros.",
+          "Después cuenta un día que fue diferente.",
+          "Tú haces dos preguntas de seguimiento para cada parte.",
+        ],
+        prompts: ["Trabajaba en una tienda y empezaba a las ocho.", "Un día llegó un cliente famoso."],
+        model: "Mi jefe era muy serio, pero un día nos invitó a todos a cenar.",
+        correction: "Ayuda al alumno a ver qué parte de su relato es escenario y cuál es acción.",
+        online: "Pide que comparta una foto (opcional) para apoyar la descripción.",
+      },
+      {
+        name: "Detective de coartadas",
+        minutes: 15,
+        goal: "Preguntar y responder sobre acciones y circunstancias del pasado.",
+        steps: [
+          "Ayer desapareció un cuadro del museo entre las 18 y las 19 h.",
+          "El alumno es sospechoso: explica qué hacía a esa hora y qué hizo después.",
+          "Tú interrogas buscando contradicciones; cambien de rol.",
+        ],
+        prompts: ["¿Qué hacía usted a las seis y media?", "Estaba en el gimnasio y después fui a cenar."],
+        model: "A las seis y media hacía la compra; a las siete volví a casa.",
+        correction: "Una coartada sólida necesita los dos tiempos: úsalo como argumento para corregir.",
+        online: "Funciona muy bien con grupos pequeños: un detective y varios sospechosos.",
+      },
+    ],
+    exercise: {
+      title: "Ejercicio: indefinido o imperfecto",
+      instructions: "Conjuga el verbo en el tiempo adecuado.",
+      items: [
+        { q: "Mientras ___ (ducharse, yo), ___ (llegar) mi hermano.", a: "me duchaba · llegó" },
+        { q: "De niña ___ (tener, ella) un perro que ___ (llamarse) Toby.", a: "tenía · se llamaba" },
+        { q: "El año pasado ___ (cambiar, yo) de trabajo.", a: "cambié" },
+        { q: "___ (hacer) sol y la gente ___ (pasear) por el parque.", a: "Hacía · paseaba" },
+        { q: "Ayer no ___ (poder, nosotros) entrar porque la puerta ___ (estar) cerrada.", a: "pudimos · estaba" },
+        { q: "Todos los veranos ___ (ir, nosotros) a la playa, pero ese año ___ (quedarse, nosotros) en casa.", a: "íbamos · nos quedamos" },
+        { q: "Cuando ___ (ver, yo) el accidente, ___ (llamar, yo) a la policía.", a: "vi · llamé" },
+        { q: "___ (ser) las tres cuando ___ (terminar) la reunión.", a: "Eran · terminó" },
+      ],
+    },
+    errors: [
+      "Los marcadores temporales ayudan, pero no deciden: «ayer estaba cansado» es perfectamente correcto.",
+      "No presentes el imperfecto como «acción larga»: «Viví diez años en Lima» es indefinido.",
+      "Separa el contraste indefinido / perfecto, que varía entre España y América, del contraste indefinido / imperfecto.",
+    ],
+    lessonIds: [350, 142, 143, 18, 348, 147],
+    faq: [
+      { question: "¿Cuál es la mejor forma de enseñar indefinido e imperfecto?", answer: "Con relatos: el imperfecto da el escenario y el indefinido hace avanzar la historia. Primero cada tiempo por separado y después la combinación." },
+      { question: "¿Hay una clase gratis de indefinido e imperfecto?", answer: "Sí. «Indefinido e imperfecto: evento y contexto» (A2) es gratis completa en SpanishCue." },
+      { question: "¿En qué nivel se enseña?", answer: "Se introduce en A2 y se consolida en B1 junto con el pluscuamperfecto." },
+    ],
+    related: ["a2", "b1", "juegos-para-clase-de-espanol"],
+  },
+  {
+    slug: "subjuntivo",
+    kind: "topic",
+    label: "Subjuntivo",
+    title: "Actividades de subjuntivo para la clase de ELE (B1–C1) | SpanishCue",
+    description: "Actividades de subjuntivo para profesores de ELE: deseos, recomendaciones, reacciones e hipótesis, con ejercicio resuelto y clases interactivas gratis.",
+    h1: "Actividades de subjuntivo para la clase de ELE",
+    kicker: "Gramática · B1–C1",
+    intro: "El subjuntivo deja de dar miedo cuando el alumno lo usa para algo concreto: pedir, recomendar, reaccionar, imaginar. Estas actividades presentan cada función en su propia tarea antes de mezclarlas.",
+    keyPoints: {
+      title: "Un orden que funciona",
+      items: [
+        "B1: deseos y recomendaciones (quiero que, te recomiendo que, ojalá)",
+        "B1: reacciones y valoraciones (me alegra que, es una pena que)",
+        "B1–B2: finalidad y tiempo futuro (para que, cuando llegues)",
+        "B2: imperfecto de subjuntivo en hipótesis y estilo indirecto",
+        "C1: alternancia de modos según la postura del hablante",
+      ],
+    },
+    activities: [
+      {
+        name: "La carta a la persona nueva",
+        minutes: 12,
+        goal: "Dar recomendaciones con subjuntivo.",
+        steps: [
+          "Llega una persona nueva al trabajo, a la ciudad o a la escuela del alumno.",
+          "El alumno escribe cinco recomendaciones, cada una con una estructura diferente.",
+          "Tú reaccionas como la persona nueva y pides aclaraciones.",
+        ],
+        prompts: ["Te recomiendo que llegues temprano los lunes.", "Es mejor que no aparques en esa calle."],
+        model: "Te aconsejo que pruebes la cafetería de la esquina y que no comas en la oficina.",
+        correction: "«Te recomiendo que llegas» → «que llegues». Repite con otro verbo irregular: tener, ir, hacer.",
+        online: "El alumno escribe en el chat mientras tú lees y reaccionas en voz alta.",
+      },
+      {
+        name: "Ojalá, ojalá",
+        minutes: 8,
+        goal: "Expresar deseos sobre el futuro inmediato.",
+        steps: [
+          "Plantea situaciones: mañana tienes una entrevista, el sábado hay un partido, viene tu suegra.",
+          "El alumno responde con dos deseos para cada situación.",
+          "Sube la dificultad con deseos para otras personas.",
+        ],
+        prompts: ["Ojalá no llueva el sábado.", "Espero que mi equipo gane."],
+        model: "Ojalá me pregunten por mi experiencia y que la entrevista sea corta.",
+        correction: "Explica que ojalá siempre va con subjuntivo: no hay que decidir nada.",
+        online: "Ideal como calentamiento de cinco minutos al inicio de clase.",
+      },
+      {
+        name: "Noticias y reacciones",
+        minutes: 12,
+        goal: "Reaccionar ante hechos con valoraciones + subjuntivo.",
+        steps: [
+          "Lee cinco titulares inventados, buenos y malos.",
+          "El alumno reacciona a cada uno con una estructura distinta.",
+          "Discutan el titular que más le sorprendió.",
+        ],
+        prompts: ["Me parece increíble que cierren la biblioteca.", "Es genial que el metro sea gratis los domingos."],
+        model: "Me alegra que bajen los precios, pero me preocupa que suban los alquileres.",
+        correction: "Muestra que el subjuntivo aquí se usa con hechos reales: no es «irreal», es una reacción.",
+        online: "Proyecta titulares reales del día si el tema es adecuado para el alumno.",
+      },
+    ],
+    exercise: {
+      title: "Ejercicio: ¿indicativo o subjuntivo?",
+      instructions: "Elige la forma correcta.",
+      items: [
+        { q: "Es verdad que Juan ___ (trabajar) mucho.", a: "trabaja (afirmamos un hecho)" },
+        { q: "No es verdad que Juan ___ (trabajar) mucho.", a: "trabaje (negamos)" },
+        { q: "Cuando ___ (terminar, yo) la carrera, viajaré.", a: "termine" },
+        { q: "Cuando ___ (terminar, yo) el trabajo, siempre salgo a caminar.", a: "termino (hábito)" },
+        { q: "Busco un piso que ___ (tener) terraza.", a: "tenga (no sé si existe)" },
+        { q: "Vivo en un piso que ___ (tener) terraza.", a: "tiene" },
+        { q: "Te lo explico para que lo ___ (entender).", a: "entiendas" },
+        { q: "Me molesta que la gente ___ (hablar) alto en el cine.", a: "hable" },
+        { q: "Pienso que ___ (ser) una buena idea.", a: "es" },
+        { q: "No pienso que ___ (ser) una buena idea.", a: "sea" },
+      ],
+    },
+    errors: [
+      "No enseñes listas de verbos que «llevan subjuntivo» sin función: el alumno las olvida.",
+      "Practica primero cuando el sujeto cambia: «quiero ir» frente a «quiero que vayas».",
+      "Trabaja la morfología irregular (tenga, haga, vaya, sea) antes de pedir producción libre.",
+    ],
+    lessonIds: [389, 148, 390, 392, 395, 150, 439, 468],
+    faq: [
+      { question: "¿Cómo introduzco el subjuntivo en B1?", answer: "Con deseos y recomendaciones en una situación concreta, cambiando el sujeto: «quiero ir» y «quiero que vayas». La clase gratis «Deseos: querer que, esperar que, ojalá» sigue ese orden." },
+      { question: "¿Qué hago si el alumno evita el subjuntivo?", answer: "Diseña tareas que lo necesiten: recomendar a alguien, reaccionar a noticias, negociar condiciones. Si la tarea lo exige, aparece." },
+      { question: "¿Hay clases de subjuntivo gratis?", answer: "Sí, tres: «Deseos» (B1), «Temporales con subjuntivo para futuro incierto» (B2) y «Alternancia de indicativo y subjuntivo según postura» (C1)." },
+    ],
+    related: ["b1", "b2", "c1"],
+  },
+  {
+    slug: "por-y-para",
+    kind: "topic",
+    label: "Por y para",
+    title: "Por y para: actividades y ejercicios para la clase de ELE | SpanishCue",
+    description: "Actividades de por y para para profesores de ELE: causa, finalidad, destinatario, plazo y recorrido, con ejercicio resuelto y clases interactivas.",
+    h1: "Por y para: actividades y ejercicios para la clase de ELE",
+    kicker: "Gramática · A2–B1",
+    intro: "Por mira hacia atrás (la causa, el camino, el medio); para mira hacia adelante (la finalidad, el destinatario, el plazo). Esta imagen sencilla resuelve la mayoría de los casos y se practica mejor en una situación con decisiones.",
+    keyPoints: {
+      title: "Usos principales",
+      items: [
+        "Para: finalidad (para aprender), destinatario (para ti), plazo (para el lunes), dirección (salgo para Madrid), opinión (para mí)",
+        "Por: causa (por la lluvia), recorrido (por el centro), medio (por correo), tiempo aproximado (por la mañana), intercambio (por 10 euros)",
+        "Por en la voz pasiva: «escrito por Cortázar»",
+        "Expresiones fijas: por fin, por supuesto, por eso, para siempre",
+      ],
+    },
+    activities: [
+      {
+        name: "La entrega imposible",
+        minutes: 12,
+        goal: "Explicar causa, recorrido, destinatario y plazo.",
+        steps: [
+          "El alumno es repartidor: tiene un paquete para la Sra. Ruiz que debe llegar para las 12.",
+          "Cada cinco minutos cambias algo: una calle cortada, una huelga, un cliente nuevo.",
+          "El alumno explica cada cambio al cliente por teléfono.",
+        ],
+        prompts: ["El paquete es para la Sra. Ruiz.", "Llego tarde por el tráfico; voy por la avenida."],
+        model: "Por la huelga voy por el puerto, pero el paquete estará allí para las doce.",
+        correction: "Pregunta: ¿miras hacia atrás (causa) o hacia adelante (finalidad)? Que el alumno elija.",
+        online: "Usa un mapa real de Google Maps en pantalla compartida.",
+      },
+      {
+        name: "Regalos para todos",
+        minutes: 8,
+        goal: "Destinatario, finalidad e intercambio.",
+        steps: [
+          "Hay cinco regalos y cinco personas.",
+          "El alumno decide para quién es cada regalo y para qué sirve.",
+          "Después «vende» un regalo: ¿por cuánto lo cambiarías?",
+        ],
+        prompts: ["Este libro es para mi padre, para leer en vacaciones.", "Te lo cambio por la bufanda."],
+        model: "La planta es para Lola, para decorar su oficina; la compré por 15 euros.",
+        correction: "«Lo compré para 15 euros» → «por 15 euros»: es un intercambio.",
+        online: "Muestra imágenes de los regalos en una presentación.",
+      },
+      {
+        name: "Mi plan de estudio",
+        minutes: 10,
+        goal: "Usar para con finalidad y plazo en un plan personal.",
+        steps: [
+          "El alumno define una meta de español con fecha límite.",
+          "Explica qué va a hacer, para qué y para cuándo.",
+          "Tú preguntas por los obstáculos: el alumno responde con por.",
+        ],
+        prompts: ["Para junio quiero hablar con más fluidez.", "Estudio por las mañanas porque por la tarde trabajo."],
+        model: "Para diciembre quiero entender series sin subtítulos; por eso veo un capítulo por semana.",
+        correction: "Señala «por semana» (frecuencia) como uso de por que el alumno ya utiliza correctamente.",
+        online: "Guarden el plan en un documento compartido y revísenlo dentro de un mes.",
+      },
+    ],
+    exercise: {
+      title: "Ejercicio: por o para",
+      instructions: "Completa con por o para.",
+      items: [
+        { q: "Este regalo es ___ ti.", a: "para (destinatario)" },
+        { q: "Gracias ___ tu ayuda.", a: "por (causa)" },
+        { q: "Necesito el informe ___ el viernes.", a: "para (plazo)" },
+        { q: "Paseamos ___ el parque.", a: "por (recorrido)" },
+        { q: "Estudio español ___ trabajar en México.", a: "para (finalidad)" },
+        { q: "Te llamo ___ teléfono esta tarde.", a: "por (medio)" },
+        { q: "Compré la bici ___ 200 dólares.", a: "por (intercambio)" },
+        { q: "___ mí, es la mejor película del año.", a: "Para (opinión)" },
+        { q: "No salimos ___ la lluvia.", a: "por (causa)" },
+        { q: "El tren sale ___ Valencia a las nueve.", a: "para (dirección / destino)" },
+      ],
+    },
+    errors: [
+      "Evita listas de veinte usos en la primera clase: empieza con causa / finalidad y destinatario.",
+      "«Para» con verbos de movimiento marca destino; «por», recorrido: compáralos con un mapa.",
+      "Los alumnos anglófonos traducen «for» siempre por «para»: dedica tiempo a «gracias por» y «por dos horas».",
+    ],
+    lessonIds: [374, 231, 212, 399],
+    faq: [
+      { question: "¿Cuál es la regla más simple para por y para?", answer: "Por mira hacia atrás: causa, recorrido, medio. Para mira hacia adelante: finalidad, destinatario, plazo. Cubre la mayoría de los casos de A2 y B1." },
+      { question: "¿En qué nivel se enseña por y para?", answer: "Los usos básicos en A2 (motivo y destino) y el contraste completo en B1." },
+      { question: "¿Hay una clase interactiva de por y para?", answer: "Sí: una clase A2 de motivo y destino y una clase B1 completa con lectura, audio, conversación y escritura." },
+    ],
+    related: ["a2", "b1", "juegos-para-clase-de-espanol"],
+  },
+  {
+    slug: "preguntas-de-conversacion",
+    kind: "topic",
+    label: "Preguntas de conversación",
+    title: "Preguntas para clase de conversación en español por nivel | SpanishCue",
+    description: "60 preguntas de conversación en español para clase de ELE, ordenadas de A1 a C2, con consejos para que el alumno hable más y clases de conversación 3D.",
+    h1: "Preguntas para clase de conversación en español, de A1 a C2",
+    kicker: "Conversación · Todos los niveles",
+    intro: "Una buena pregunta de conversación tiene una respuesta que el alumno quiere dar. Estas 60 preguntas están ordenadas por nivel: las de A1 se responden con una frase, las de C2 piden matizar, defender y negociar.",
+    keyPoints: {
+      title: "Cómo sacarles más partido",
+      items: [
+        "Haz una sola pregunta y espera: el silencio también es tiempo de pensar",
+        "Pide un ejemplo concreto después de cada respuesta general",
+        "Responde tú también: la conversación es un intercambio, no un examen",
+        "Corrige al final, con dos o tres errores importantes, no durante",
+      ],
+    },
+    questions: [
+      { level: "A1", items: ["¿Cómo te llamas y de dónde eres?", "¿Qué haces un lunes normal?", "¿Qué hay en tu habitación?", "¿Cuál es tu comida favorita?", "¿Con quién vives?", "¿Qué haces los fines de semana?", "¿Cómo es tu ciudad?", "¿Qué día de la semana te gusta más? ¿Por qué?", "¿A qué hora te levantas?", "¿Tienes mascotas? ¿Cómo son?"] },
+      { level: "A2", items: ["¿Qué hiciste el fin de semana pasado?", "¿Cómo era tu escuela cuando eras niño o niña?", "¿Cuál fue tu mejor viaje?", "¿Qué vas a hacer en tus próximas vacaciones?", "¿Qué hacías en verano cuando eras pequeño?", "¿Cuál es el mejor regalo que te hicieron?", "¿Qué cosas haces para cuidar tu salud?", "¿Cómo conociste a tu mejor amigo o amiga?", "¿Qué te gusta cocinar? Explícame la receta.", "¿Qué cambió en tu barrio en los últimos años?"] },
+      { level: "B1", items: ["¿Qué consejo le darías a alguien que quiere vivir en tu país?", "¿Qué te gustaría que cambiara en tu trabajo?", "Cuéntame una situación en la que tuviste que tomar una decisión difícil.", "¿Prefieres vivir en el centro o en las afueras? ¿Por qué?", "¿Qué harías con un mes libre sin trabajar?", "¿Qué te molesta que hagan las personas en el transporte público?", "¿Cómo te imaginas tu vida dentro de diez años?", "¿Qué tradición de tu país te parece más interesante?", "¿Qué aprendiste de un error?", "¿Qué esperas de un buen profesor?"] },
+      { level: "B2", items: ["Si pudieras cambiar una ley de tu país, ¿cuál sería?", "¿Qué habría pasado si hubieras estudiado otra carrera?", "¿Crees que las redes sociales nos acercan o nos alejan?", "¿Es justo que los sueldos dependan tanto del país?", "¿Qué opinas del teletrabajo? Da argumentos a favor y en contra.", "¿Qué noticia reciente te hizo cambiar de opinión?", "¿Hasta qué punto somos responsables de nuestra salud?", "¿Deberían los museos ser gratis?", "¿Qué hace que una ciudad sea agradable para vivir?", "¿Qué le pedirías a un político antes de votarlo?"] },
+      { level: "C1", items: ["¿Qué papel debería tener la inteligencia artificial en la educación?", "¿Es posible ser totalmente objetivo al contar una noticia?", "¿Qué diferencia hay entre ser educado y ser sincero?", "¿Qué valor tienen las tradiciones en una sociedad que cambia rápido?", "¿Cómo explicarías tu profesión a alguien de hace cien años?", "¿Hasta qué punto el idioma que hablamos influye en cómo pensamos?", "¿Qué hace que una disculpa sea creíble?", "¿Deberían existir límites al humor?", "¿Qué te convence más: un dato o una historia?", "¿Qué concepto de éxito te parece más sano?"] },
+      { level: "C2", items: ["¿En qué casos una mentira puede ser éticamente defendible?", "¿Qué se pierde y qué se gana al traducir un chiste?", "¿Puede una ironía malinterpretarse sin que sea culpa del oyente?", "¿Qué debería conservar una lengua y qué debería dejar cambiar?", "¿Es la nostalgia una forma de pensamiento crítico o de evasión?", "Defiende una opinión con la que no estás de acuerdo.", "¿Qué responsabilidad tiene quien comparte una noticia falsa sin saberlo?", "¿Existe el buen gusto o es solo una convención de clase?", "¿Qué diferencia hay entre persuadir y manipular?", "¿Qué pregunta te parece imposible de responder con honestidad?"] },
+    ],
+    activities: [
+      {
+        name: "Pregunta y repregunta",
+        minutes: 10,
+        goal: "Pasar de respuestas cortas a respuestas desarrolladas.",
+        steps: [
+          "Elige tres preguntas del nivel del alumno.",
+          "Después de cada respuesta, haz siempre una repregunta: ¿por qué?, ¿por ejemplo?, ¿y entonces?",
+          "Cambien los roles: el alumno te entrevista a ti.",
+        ],
+        prompts: ["¿Y por qué crees que pasa eso?", "¿Me das un ejemplo?"],
+        model: "Prefiero el centro porque puedo ir caminando a todos lados; por ejemplo, ayer...",
+        correction: "Anota los errores en un documento aparte y revísalos en los últimos cinco minutos.",
+        online: "Usa el chat solo para palabras nuevas, no para la conversación.",
+      },
+      {
+        name: "La pregunta prohibida",
+        minutes: 10,
+        goal: "Mantener la conversación sin usar una palabra clave.",
+        steps: [
+          "Elige una pregunta y una palabra que el alumno no puede usar en su respuesta.",
+          "El alumno responde durante un minuto buscando alternativas.",
+          "Si usa la palabra, pierde el turno y responde otra pregunta.",
+        ],
+        prompts: ["¿Qué haces los fines de semana? (Prohibido: «casa»)"],
+        model: "Normalmente me quedo en mi piso, en el lugar donde vivo, y descanso.",
+        correction: "Celebra las paráfrasis: son exactamente la habilidad que se busca.",
+        online: "Escribe la palabra prohibida en el chat para que quede visible.",
+      },
+    ],
+    errors: [
+      "Evita preguntas de sí o no en niveles bajos: el alumno responde «sí» y se acaba la conversación.",
+      "No corrijas cada error mientras el alumno habla: corta la fluidez y la confianza.",
+      "Cuidado con temas personales delicados: ofrece siempre la opción de inventar la respuesta.",
+    ],
+    lessonIds: [11, 223, 36, 210, 207, 137],
+    faq: [
+      { question: "¿Qué preguntas hago en una clase de conversación de español?", answer: "Preguntas abiertas adaptadas al nivel: en A1, sobre la rutina y el entorno; en B1, sobre experiencias y consejos; en C1 y C2, sobre opiniones con matices." },
+      { question: "¿Cómo consigo que el alumno hable más?", answer: "Haz repreguntas, comparte tu propia respuesta y propón una tarea con un objetivo, como decidir, convencer o resolver un problema." },
+      { question: "¿Hay clases de conversación interactivas?", answer: "Sí. SpanishCue tiene mundos 3D de conversación, como Noche abierta o Estados Unidos, donde cada escena da un motivo para hablar." },
+    ],
+    related: ["juegos-para-clase-de-espanol", "b1", "b2"],
+  },
+  {
+    slug: "juegos-para-clase-de-espanol",
+    kind: "topic",
+    label: "Juegos para clase de español",
+    title: "Juegos para la clase de español con adultos (online y presencial) | SpanishCue",
+    description: "Juegos para la clase de español con adultos: 6 dinámicas sin preparación para clases online o presenciales, de A1 a C1, y juegos interactivos 3D.",
+    h1: "Juegos para la clase de español con adultos: online y presencial",
+    kicker: "Dinámicas · A1–C1",
+    intro: "Un buen juego de clase obliga a usar la lengua para ganar. Estas dinámicas no necesitan preparación, funcionan por videollamada y se adaptan a cualquier nivel cambiando el tema o la estructura.",
+    keyPoints: {
+      title: "Qué hace que un juego funcione con adultos",
+      items: [
+        "Un objetivo claro y corto (adivinar, convencer, elegir)",
+        "Una estructura gramatical que el juego necesita de verdad",
+        "Turnos rápidos: nadie espera más de un minuto",
+        "Nada infantil: temas de adultos y decisiones reales",
+      ],
+    },
+    activities: [
+      {
+        name: "Uno o el otro",
+        minutes: 8,
+        goal: "Elegir y justificar (comparativos, porque).",
+        steps: [
+          "Propón dos opciones: ¿playa o montaña?, ¿madrugar o trasnochar?",
+          "El alumno elige y da dos razones.",
+          "Tú contraargumentas; el alumno defiende su elección.",
+        ],
+        prompts: ["Prefiero la montaña porque es más tranquila.", "Sí, pero la playa es más divertida."],
+        model: "Prefiero trasnochar porque por la noche estoy más concentrado que por la mañana.",
+        correction: "«Más mejor» → «mejor». Repite con otros comparativos irregulares.",
+        online: "Muestra dos imágenes lado a lado en pantalla.",
+      },
+      {
+        name: "¿Red flag o no?",
+        minutes: 10,
+        goal: "Opinar y valorar situaciones (B1: me parece que / no me parece que + subjuntivo).",
+        steps: [
+          "Describe un comportamiento: «Tu pareja revisa tu móvil».",
+          "El alumno decide si es una señal de alarma y explica por qué.",
+          "Suma matices: ¿y si lo hace una sola vez?, ¿y si tú se lo pediste?",
+        ],
+        prompts: ["Me parece una red flag porque...", "No me parece grave que lo haga una vez."],
+        model: "No me parece normal que te pida la contraseña, aunque depende de la relación.",
+        correction: "Usa «no me parece que» para practicar el cambio de modo: «me parece que es» / «no me parece que sea».",
+        online: "Deja que el alumno vote primero con un emoji en el chat.",
+      },
+      {
+        name: "Las 20 preguntas",
+        minutes: 10,
+        goal: "Formular preguntas cerradas y deducir.",
+        steps: [
+          "Piensa en un objeto, un lugar o una persona famosa.",
+          "El alumno tiene 20 preguntas de sí o no para adivinar.",
+          "Cambien de rol.",
+        ],
+        prompts: ["¿Es un objeto? ¿Se usa en la cocina?", "¿Está vivo? ¿Es de América?"],
+        model: "¿Es más grande que una mesa? ¿Lo usas todos los días?",
+        correction: "Corrige la entonación de pregunta, no solo la gramática.",
+        online: "Funciona perfecto con audio solo, sin cámara.",
+      },
+      {
+        name: "La coartada",
+        minutes: 15,
+        goal: "Pasados en contexto (A2–B1).",
+        steps: [
+          "Anoche robaron una pizza de la oficina entre las 21 y las 22 h.",
+          "Dos alumnos (o tú y el alumno) preparan juntos una coartada en dos minutos.",
+          "Los interrogas por separado y buscas contradicciones.",
+        ],
+        prompts: ["¿Dónde estaban a las nueve y media?", "Estábamos en el cine y después fuimos a cenar."],
+        model: "A las nueve y media veíamos una película; salimos a las diez.",
+        correction: "La contradicción entre las dos versiones es la mejor excusa para revisar los tiempos.",
+        online: "Usa salas separadas en la videollamada para el interrogatorio.",
+      },
+      {
+        name: "Una palabra cada uno",
+        minutes: 6,
+        goal: "Concordancia y orden de la frase de forma lúdica.",
+        steps: [
+          "Empiecen una historia diciendo una palabra cada uno.",
+          "Cuando la frase es gramaticalmente imposible, quien la rompió empieza otra.",
+          "Al final, el alumno resume la historia completa.",
+        ],
+        prompts: ["Ayer... mi... vecino... encontró..."],
+        model: "Ayer mi vecino encontró un perro que hablaba francés.",
+        correction: "La regla del juego ya corrige: hay que justificar por qué la frase no funciona.",
+        online: "Escriban la historia en el chat a medida que avanza.",
+      },
+      {
+        name: "Subasta de frases",
+        minutes: 12,
+        goal: "Detectar errores (cualquier nivel).",
+        steps: [
+          "Escribe diez frases, cuatro con errores, usando el contenido de la semana.",
+          "El alumno tiene 100 puntos y apuesta por las frases que cree correctas.",
+          "Revela las respuestas; el alumno corrige las frases incorrectas.",
+        ],
+        prompts: ["Apuesto 20 puntos por la frase 3.", "La frase 5 está mal: debería ser..."],
+        model: "La frase 7 tiene un error: no es «si tendría», es «si tuviera».",
+        correction: "Usa los errores típicos del propio alumno: es la revisión más útil.",
+        online: "Prepara las frases en una diapositiva y anota los puntos en el chat.",
+      },
+    ],
+    errors: [
+      "No uses juegos sin objetivo lingüístico: divierten, pero no se aprende nada nuevo.",
+      "Explica las reglas con un ejemplo, no con un párrafo.",
+      "Evita juegos de competición pública con alumnos tímidos: prefiere parejas.",
+    ],
+    lessonIds: [207, 137, 139, 122, 240, 223],
+    faq: [
+      { question: "¿Qué juegos funcionan en clases de español online?", answer: "Los que solo necesitan voz y pantalla compartida: 20 preguntas, uno o el otro, coartadas, subasta de frases. Todos los de esta página se pueden hacer por videollamada." },
+      { question: "¿Hay juegos interactivos ya preparados?", answer: "Sí. SpanishCue incluye juegos de conversación como Red Flag o No, Uno o el otro y mundos 3D como Hospital San Casi Vivo, listos para compartir en pantalla." },
+      { question: "¿Sirven para adultos?", answer: "Sí. Están pensados para adultos: temas reales, decisiones y opiniones, sin dinámicas infantiles." },
+    ],
+    related: ["preguntas-de-conversacion", "indefinido-e-imperfecto", "a2"],
+  },
+  {
+    slug: "primera-clase-de-espanol",
+    kind: "topic",
+    label: "Primera clase de español",
+    title: "Primera clase de español con un alumno nuevo: guion y material | SpanishCue",
+    description: "Guion para la primera clase de español con un alumno nuevo: qué hacer en cada minuto, preguntas para conocer su nivel y una clase inicial A1 gratis.",
+    h1: "La primera clase de español con un alumno nuevo: guion y material",
+    kicker: "Clases particulares · A0–A1",
+    intro: "En la primera clase el alumno decide si vuelve. Necesita salir hablando un poco de español, entender cómo vas a trabajar y sentir que el plan es para él. Este guion de 50 minutos sirve para clases particulares online y presenciales.",
+    keyPoints: {
+      title: "Guion de 50 minutos",
+      items: [
+        "0–5 min: saludo, nombre y una frase en español que el alumno ya pueda decir",
+        "5–15 min: preguntas para conocer sus objetivos y su experiencia previa",
+        "15–35 min: una tarea real corta (presentarse, pedir algo, describir su casa)",
+        "35–45 min: repaso de lo que ya puede decir y una corrección importante",
+        "45–50 min: plan de las próximas clases y tarea breve",
+      ],
+    },
+    activities: [
+      {
+        name: "Presentación en tres frases",
+        minutes: 10,
+        goal: "Que el alumno diga algo en español en los primeros minutos.",
+        steps: [
+          "Preséntate tú con tres frases: nombre, origen, profesión.",
+          "Escribe el modelo y deja que el alumno lo adapte a su vida.",
+          "Pregunta por una cosa más: ¿dónde vives?, ¿por qué estudias español?",
+        ],
+        prompts: ["Me llamo Ana, soy de Colombia y soy profesora.", "¿Y tú? ¿Cómo te llamas?"],
+        model: "Me llamo John, soy de Canadá y soy ingeniero.",
+        correction: "En la primera clase corrige solo la pronunciación que impide entender.",
+        online: "Escribe el modelo en el chat para que el alumno lo copie.",
+      },
+      {
+        name: "Diagnóstico sin examen",
+        minutes: 10,
+        goal: "Conocer el nivel real sin estresar al alumno.",
+        steps: [
+          "Haz preguntas de dificultad creciente: presente, pasado, futuro, opinión.",
+          "Si el alumno responde con facilidad, sube; si duda, baja y quédate ahí.",
+          "Anota qué puede hacer, no solo sus errores.",
+        ],
+        prompts: ["¿Qué haces normalmente los sábados?", "¿Qué hiciste el sábado pasado?", "¿Qué harías si vivieras en España?"],
+        model: "Los sábados juego al tenis. El sábado pasado fui a la playa.",
+        correction: "No corrijas durante el diagnóstico: solo observa.",
+        online: "Graba la respuesta (con permiso) para comparar dentro de dos meses.",
+      },
+      {
+        name: "La primera misión",
+        minutes: 15,
+        goal: "Completar una tarea comunicativa real en la primera clase.",
+        steps: [
+          "Elige una tarea relacionada con el objetivo del alumno: pedir un café, presentarse en una reunión, reservar una habitación.",
+          "Da el modelo y practiquen con roles.",
+          "Repite la escena cambiando un detalle.",
+        ],
+        prompts: ["Un café con leche, por favor.", "¿Cuánto es?"],
+        model: "Hola, un café con leche y un cruasán, por favor. ¿Cuánto es?",
+        correction: "Termina con la escena completa sin ayuda: el alumno se va con un logro.",
+        online: "Usa una imagen de un menú real.",
+      },
+    ],
+    errors: [
+      "No dediques la primera clase a explicar tu método durante 20 minutos: muéstralo.",
+      "No empieces con el alfabeto completo y los números del 1 al 100: es lo menos motivador.",
+      "No olvides preguntar por qué estudia español: define todo el curso.",
+    ],
+    lessonIds: [239, 40, 201, 204, 16],
+    faq: [
+      { question: "¿Qué hago en la primera clase de español con un principiante?", answer: "Que diga algo en español en los primeros cinco minutos, conocer sus objetivos, completar una tarea real corta y cerrar con un plan. La Clase inicial de SpanishCue es gratis y sigue ese esquema." },
+      { question: "¿Cómo sé el nivel de un alumno nuevo?", answer: "Con preguntas de dificultad creciente (presente, pasado, futuro, hipótesis). Donde empieza a dudar está su nivel de trabajo." },
+      { question: "¿Cuánto debe durar la primera clase?", answer: "Entre 30 y 60 minutos. Este guion está pensado para 50." },
+    ],
+    related: ["a1", "preguntas-de-conversacion", "ser-y-estar"],
+  },
+];
+
+export const eleLevels: ElePage[] = levelInputs.map((page) => ({ ...page, path: `${MATERIAL_ELE_PATH}/${page.slug}` }));
+export const eleTopics: ElePage[] = topicInputs.map((page) => ({ ...page, path: `${MATERIAL_ELE_PATH}/${page.slug}` }));
+export const elePages: ElePage[] = [...eleLevels, ...eleTopics];
+export const elePageBySlug = new Map(elePages.map((page) => [page.slug, page]));
+
+export const hubTitle = "Material ELE para profesores: actividades y clases de A1 a C2 | SpanishCue";
+export const hubDescription =
+  "Material ELE para profesores de español: actividades listas para usar, ejercicios con soluciones, preguntas de conversación y clases interactivas de A1 a C2.";
+
+export const hubFaq = [
+  { question: "¿Qué es el material ELE?", answer: "Es el material para enseñar español como lengua extranjera: actividades, ejercicios, fichas, audios y clases pensadas para alumnos que no tienen el español como lengua materna." },
+  { question: "¿Este material ELE es gratis?", answer: "Todas las actividades, ejercicios y preguntas de estas páginas son gratis. En la biblioteca hay clases interactivas gratis en cada nivel; el acceso completo cuesta US$15,50 al mes." },
+  { question: "¿En qué se diferencia de una ficha en PDF?", answer: "Las clases de SpanishCue se comparten en pantalla y tienen lectura, audio, conversación y escritura en el mismo lugar, con una guía para el profesor y respuestas ocultas para el alumno." },
+  { question: "¿Sirve para clases online por videollamada?", answer: "Sí. Está pensado para clases particulares y grupos pequeños por Zoom, Meet, Preply o italki, y también funciona en el aula con un proyector." },
+  { question: "¿Puedo guardar el progreso de cada alumno?", answer: "Sí. Con PRO puedes elegir el alumno antes de empezar una clase y su progreso queda guardado en tu cuenta." },
+];
