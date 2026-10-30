@@ -6,6 +6,7 @@ import * as E from '../app/mas-alla/engine.mjs';
 import { CAST, FORMS, LEVEL_IDS, SPOTS, WORLD_IDS, ZONES } from '../app/mas-alla/story.mjs';
 import { GAMES } from '../app/escucha-3d/games.mjs';
 import { checkAll } from '../scripts/check-mas-alla.mjs';
+import { VOICES, VOICE_IDS } from '../app/mas-alla/voces.mjs';
 import { PLAYER_RADIUS } from '../app/noche-abierta/world3d.mjs';
 
 const game = readFileSync('app/mas-alla/MasAllaGame.tsx', 'utf8');
@@ -59,6 +60,7 @@ test('in every place the circles, portals and the way out are reachable on foot 
     }
     const near = (p, d = 1.2) => [...seen].some(k => { const [i, j] = k.split(',').map(Number); return Math.hypot(i * step - p.x, j * step - p.z) < d; });
     for (const s of z.spots) assert.ok(near(s), `${id}/${s.id} unreachable`);
+    for (const v of L.voicesFor(id).filter(v => !v.walker)) assert.ok(near(v), `${id}/voz ${v.id} unreachable`);
     for (const p of z.portals) assert.ok(near(p, p.r), `${id}: portal to ${p.to} unreachable`);
     if (z.exit) assert.ok(near(z.exit), `${id}: way back unreachable`);
     if (z.final) assert.ok(near(z.final, z.final.r + 1), `${id}: hourglass unreachable`);
@@ -123,4 +125,25 @@ test('the catalog cover is a 1200×750 lossy WebP like the other 3D covers', () 
   assert.equal(file.toString('ascii', 8, 16), 'WEBPVP8 ');
   assert.deepEqual([file.readUInt16LE(26) & 0x3fff, file.readUInt16LE(28) & 0x3fff], [1200, 750]);
   assert.ok(file.length < 120_000, `${file.length} bytes`);
+});
+
+test('everyone you see has a circle: every extra and walker of the Cielo and the Infierno, the Umbral souls, and the places that stop you', () => {
+  assert.equal(new Set(VOICE_IDS).size, VOICE_IDS.length);
+  assert.ok(VOICES.length >= 40, `${VOICES.length} voices`);
+  for (const id of L.PLACE_IDS) {
+    const z = L.layoutOf(id), voices = L.voicesFor(id);
+    // Each walker has a voice; still people have one each, or one per couple or queue.
+    for (const w of z.walkers) assert.ok(voices.some(v => v.walker === w.seed), `${id}: walker ${w.seed} has no circle`);
+    const covered = new Set(voices.map(v => v.extra).filter(Boolean));
+    for (const e of z.extras) assert.ok(covered.has(e.seed) || [...covered].some(seed => { const o = z.extras.find(x => x.seed === seed); return o && Math.hypot(o.x - e.x, o.z - e.z) < 6; }), `${id}: extra ${e.seed} has nobody to talk to`);
+    const still = voices.filter(v => !v.walker);
+    const all = [...z.spots.map(s => ({ id: s.id, x: s.x, z: s.z })), ...still];
+    for (const v of still) {
+      // A circle never sits in a box or on top of another circle.
+      assert.ok(!z.solids.some(b => v.x > b.x0 - 0.4 && v.x < b.x1 + 0.4 && v.z > b.z0 - 0.4 && v.z < b.z1 + 0.4), `${id}/${v.id} inside a solid`);
+      for (const o of all) if (o.id !== v.id) assert.ok(Math.hypot(o.x - v.x, o.z - v.z) >= 2.8, `${id}/${v.id} too close to ${o.id}`);
+    }
+  }
+  assert.ok(world.includes("flames = id === 'infierno'"), 'the circles of the Infierno are made of flames');
+  assert.ok(game.includes('<Voz '), 'a voice opens its own card');
 });

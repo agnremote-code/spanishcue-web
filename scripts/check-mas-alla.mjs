@@ -4,13 +4,17 @@
 // many answers as its form holds (story.mjs FORMS), each with the character's
 // echo, poles for the river, exactly two open questions for «Más hondo» (long
 // enough from A2 on, never repeated inside a level), A0 fully bilingual and
-// A1 words bilingual, and neutral Spanish (no voseo, no vosotros).
+// A1 words bilingual, and neutral Spanish (no voseo, no vosotros). The voices
+// (voces/<level>.mjs) are checked too: every voice of voces.mjs at every
+// level, what they say plus exactly three questions long enough for the level,
+// A0 bilingual and the rest Spanish only, no question repeated across levels.
 // Run: node scripts/check-mas-alla.mjs [A1 …]
 import { readFileSync } from 'node:fs';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { resolve } from 'node:path';
 import { CAST, FORMS, LEVEL_IDS, SCENE_WORDS, SPOTS, TALK_MIN_WORDS } from '../app/mas-alla/story.mjs';
 import { scanSource } from './neutral-spanish.mjs';
+import { VOICE_IDS, VOICE_MIN_WORDS } from '../app/mas-alla/voces.mjs';
 
 const words = (text) => (String(text).match(/[\p{L}\p{N}]+(?:['’-][\p{L}\p{N}]+)*/gu) ?? []).length;
 const es = (t) => (typeof t === 'string' ? t : t?.es ?? '');
@@ -72,8 +76,53 @@ export function checkLevel(level, content, path = `app/mas-alla/levels/${level.t
   return errors;
 }
 
+export function checkVoices(level, raw, path = `app/mas-alla/voces/${level.toLowerCase()}.mjs`) {
+  const errors = [];
+  const fail = (id, message) => errors.push(`${level} voz ${id}: ${message}`);
+  const a0 = level === 'A0';
+  for (const id of VOICE_IDS) if (!raw[id]) fail(id, 'missing voice');
+  for (const id of Object.keys(raw)) if (!VOICE_IDS.includes(id)) fail(id, 'unknown voice');
+  const seen = new Set();
+  for (const id of VOICE_IDS) {
+    const entry = raw[id];
+    if (!entry) continue;
+    if (!Array.isArray(entry) || entry.length !== 4) { fail(id, 'needs [line, q1, q2, q3]'); continue; }
+    for (const t of entry) {
+      const bi = Array.isArray(t) && t.length === 2 && t.every((x) => typeof x === 'string' && x.trim());
+      if (a0 ? !bi : typeof t !== 'string' || !t.trim()) fail(id, a0 ? `A0 texts are [es, en]: ${JSON.stringify(t)}` : `only A0 is bilingual: ${JSON.stringify(t)}`);
+      const text = Array.isArray(t) ? t[0] : t;
+      if (VOSOTROS.test(String(text))) fail(id, `vosotros in «${text}»`);
+    }
+    for (const q of entry.slice(1)) {
+      const text = String(Array.isArray(q) ? q[0] : q);
+      if (words(text) < VOICE_MIN_WORDS[level]) fail(id, `question too short for ${level}: ${text}`);
+      if (!/[?.]$/.test(text.trim())) fail(id, `question must end in ? or .: ${text}`);
+      const key = text.toLowerCase();
+      if (seen.has(key)) fail(id, `question repeated in the level: ${text}`);
+      seen.add(key);
+    }
+  }
+  for (const f of scanSource(readFileSync(path, 'utf8'), path)) errors.push(`${level} voces: not neutral Spanish «${f.token}» in ${JSON.stringify(f.text).slice(0, 90)}`);
+  return errors;
+}
+
 export async function checkAll(levels = LEVEL_IDS) {
   const errors = [];
+  const voiceLevels = [];
+  for (const level of levels) {
+    const path = `app/mas-alla/voces/${level.toLowerCase()}.mjs`;
+    const raw = (await import(pathToFileURL(resolve(path)).href)).default;
+    errors.push(...checkVoices(level, raw, path));
+    voiceLevels.push([level, raw]);
+  }
+  for (const id of VOICE_IDS) {
+    const seen = new Map();
+    for (const [l, raw] of voiceLevels) for (const q of (raw[id] ?? []).slice(1)) {
+      const key = String(Array.isArray(q) ? q[0] : q).toLowerCase();
+      if (seen.has(key)) errors.push(`${l} voz ${id}: question copied from ${seen.get(key)}`);
+      seen.set(key, l);
+    }
+  }
   for (const level of levels) {
     const path = `app/mas-alla/levels/${level.toLowerCase()}.mjs`;
     const content = (await import(pathToFileURL(resolve(path)).href)).default;

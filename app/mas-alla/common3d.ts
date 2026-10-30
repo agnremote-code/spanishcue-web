@@ -5,13 +5,17 @@
 import * as THREE from 'three';
 import { canvas, random, type Box, type Light, type RegionScene, type Talker, type Walker } from '../mundo-3d/kit3d';
 import { CAST, spotById } from './story.mjs';
-import { layoutOf } from './layout.mjs';
+import { layoutOf, voicesFor } from './layout.mjs';
 import { animateFigure, faceAura, softGlowTexture, talkerOf, walkerOf, type Kind } from './figures3d';
 
 export type Portal = { to: string; x: number; z: number; r: number };
 /** A place of the other side: the kit's region contract plus its portals and the hourglass. */
+/** A walker who has a voice (voces.mjs): their circle walks with them. */
+export type VoiceWalker = Walker & { voice?: string };
 export type Place3D = RegionScene & {
   id: string;
+  /** The circles of the voices that stand still (people and places). */
+  voices: { id: string; x: number; z: number; heading: number }[];
   portals: Portal[];
   final: { x: number; z: number; r: number } | null;
   /** The aura of every figure faces the camera; called once per frame. */
@@ -266,6 +270,62 @@ export function fire(parent: THREE.Object3D, x: number, y: number, z: number, si
   };
 }
 
+// ---------------------------------------------------------------- circles
+
+/**
+ * The circle you stand on to talk. The twelve encounters keep the big white
+ * one with its gem; the voices have a smaller golden one. In the Infierno every
+ * circle is a ring of flames that licks upwards (owner request 2026-10-30).
+ * `group` sits at (x, z), so a walker's circle can follow them.
+ */
+export function talkCircle(parent: THREE.Object3D, x: number, z: number, opts: { flames: boolean; voice: boolean }) {
+  const group = new THREE.Group();
+  group.position.set(x, 0, z);
+  const r0 = opts.voice ? 0.98 : 1.15, r1 = opts.voice ? 1.18 : 1.42;
+  const color = opts.flames ? '#ff7a1a' : opts.voice ? '#ffd98a' : '#ffffff';
+  const material = new THREE.MeshBasicMaterial({ color, transparent: true, opacity: 0.95, depthWrite: false, toneMapped: !opts.flames });
+  const ring = new THREE.Mesh(new THREE.RingGeometry(r0, r1, 40), material);
+  ring.rotation.x = -Math.PI / 2; ring.position.y = 0.04;
+  group.add(ring);
+  const gem = new THREE.Mesh(opts.voice ? new THREE.SphereGeometry(0.13, 10, 8) : new THREE.OctahedronGeometry(0.2, 0), new THREE.MeshStandardMaterial({ color: opts.flames ? '#ffb070' : '#ffffff', emissive: opts.flames ? '#ff5a10' : '#ffe28a', emissiveIntensity: 0.9 }));
+  gem.position.y = opts.voice ? 2.3 : 2.5;
+  group.add(gem);
+  const flames: { s: THREE.Sprite; a: number; seed: number }[] = [];
+  if (opts.flames) {
+    const n = opts.voice ? 12 : 16, size = opts.voice ? 0.42 : 0.55;
+    for (let i = 0; i < n; i++) {
+      const a = (i / n) * Math.PI * 2;
+      const s = new THREE.Sprite(new THREE.SpriteMaterial({ map: flameTexture(), transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, toneMapped: false, color: i % 2 ? '#ffb070' : '#ffffff' }));
+      s.position.set(Math.sin(a) * (r0 + r1) / 2, size * 0.6, Math.cos(a) * (r0 + r1) / 2);
+      s.scale.set(size * 0.8, size * 1.7, 1);
+      group.add(s); flames.push({ s, a, seed: i * 2.3 + x });
+    }
+  }
+  parent.add(group);
+  let lit = 1;
+  return {
+    group, ring, gem, material,
+    /** Done circles go grey (and their fire goes down to embers). */
+    setDone(done: boolean) {
+      material.color.set(done ? (opts.flames ? '#6a3a2a' : '#9aa8b0') : color);
+      material.opacity = done ? 0.5 : 0.95;
+      gem.visible = !done;
+      lit = done ? 0.35 : 1;
+    },
+    animate(t: number, dt: number) {
+      gem.rotation.y += dt * 1.6;
+      gem.position.y = (opts.voice ? 2.3 : 2.5) + Math.sin(t * 2 + x) * 0.12;
+      for (const f of flames) {
+        const k = (0.75 + 0.3 * Math.sin(t * 9 + f.seed * 3) + 0.15 * Math.sin(t * 23 + f.seed)) * lit;
+        f.s.scale.y = (opts.voice ? 0.42 : 0.55) * 1.7 * k;
+        f.s.position.y = (opts.voice ? 0.42 : 0.55) * 0.5 * k + 0.05;
+        f.s.material.rotation = Math.sin(t * 3 + f.seed) * 0.15;
+      }
+    },
+  };
+}
+export type TalkCircle = ReturnType<typeof talkCircle>;
+
 // ---------------------------------------------------------------- signs
 
 /** Big carved letters on a plate: «EL CIELO», «AQUÍ SE ABANDONA TODA ESPERANZA». */
@@ -294,7 +354,8 @@ export function carved(text: string, opts: { w: number; h: number; bg: string; f
 export function populate(group: THREE.Group, id: string, warm: boolean, shadows: boolean) {
   const L = layoutOf(id)!;
   const talkers: Talker[] = [];
-  const walkers: Walker[] = [];
+  const walkers: VoiceWalker[] = [];
+  const voices = voicesFor(id);
   L.spots.forEach((s: { id: string; pose: string; talker: { x: number; z: number; heading: number } }, i: number) => {
     const castId = spotCast(s.id);
     const member = CAST[castId];
@@ -303,9 +364,9 @@ export function populate(group: THREE.Group, id: string, warm: boolean, shadows:
   });
   for (const e of L.extras as { seed: number; kind: Kind; x: number; z: number; heading: number; pose: string }[]) {
     const mood = e.kind === 'demon' ? 'angry' : e.kind === 'angel' ? 'smile' : warm ? (e.pose === 'hug' ? 'love' : 'smile') : e.pose === 'cry' ? 'sad' : 'worried';
-    talkers.push(talkerOf(group, e.kind, null, e.x, e.z, e.heading, e.seed, null, e.pose, mood, warm, false));
+    talkers.push(talkerOf(group, e.kind, voices.find(v => v.extra === e.seed)?.id ?? null, e.x, e.z, e.heading, e.seed, null, e.pose, mood, warm, false));
   }
-  for (const w of L.walkers as { seed: number; kind: Kind; speed: number; path: { x: number; z: number }[] }[]) walkers.push(walkerOf(group, w.kind, w.path, w.seed, w.speed, warm));
+  for (const w of L.walkers as { seed: number; kind: Kind; speed: number; path: { x: number; z: number }[] }[]) walkers.push(Object.assign(walkerOf(group, w.kind, w.path, w.seed, w.speed, warm), { voice: voices.find(v => v.walker === w.seed)?.id }));
   return { talkers, walkers };
 }
 // The encounter's character (story.mjs SPOTS).
@@ -323,6 +384,7 @@ export function finishPlace(id: string, group: THREE.Group, light: Light, talker
     exit: L.exit ?? { x: 9999, z: 9999 },
     spots: L.spots.map((s: { id: string; x: number; z: number; heading: number }) => ({ id: s.id, x: s.x, z: s.z, heading: s.heading })),
     portals: L.portals,
+    voices: voicesFor(id).filter((v: { walker?: number }) => !v.walker) as Place3D['voices'],
     final: L.final ?? null,
     animate(t, dt) { for (const p of people) animateFigure(p, t); animate(t, dt); },
     face(camera) { for (const p of people) faceAura(p, camera); },

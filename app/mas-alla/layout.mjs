@@ -5,6 +5,7 @@
 // people who are just there and the paths of those who walk.
 // x grows east, z grows south; a heading `a` looks along (sin a, cos a).
 import { SPOTS } from './story.mjs';
+import { VOICES } from './voces.mjs';
 
 const box = (x0, x1, z0, z1, extra = {}) => ({ x0, x1, z0, z1, ...extra });
 const around = (cx, cz, half) => box(cx - half, cx + half, cz - half, cz + half);
@@ -172,6 +173,21 @@ export function peopleOf(id) {
     ...L.spots.map((s) => ({ id: s.id, x: s.talker.x, z: s.talker.z, seated: ['sit', 'ground', 'crouch'].includes(s.pose) })),
     ...L.extras.map((e) => ({ id: `extra-${e.seed}`, x: e.x, z: e.z, seated: ['sit', 'ground', 'crouch'].includes(e.pose) })),
   ];
+}
+/**
+ * The circles of the voices of a place (voces.mjs): a still one at `at`,
+ * facing the person or the thing it looks at; a walker's circle has no fixed
+ * place and walks with them (`walker` is the seed in `walkers`).
+ */
+export function voicesFor(id) {
+  const L = LAYOUTS[id];
+  if (!L) return [];
+  return VOICES.filter((v) => v.world === id).map((v) => {
+    if (v.walker) return { id: v.id, walker: v.walker };
+    const who = v.extra ? L.extras.find((e) => e.seed === v.extra) : null;
+    const look = v.look ?? (who ? { x: who.x, z: who.z } : v.at);
+    return { id: v.id, x: v.at.x, z: v.at.z, heading: Math.atan2(look.x - v.at.x, look.z - v.at.z), extra: v.extra ?? null };
+  });
 }
 /** The world each encounter lives in, checked against story.mjs. */
 export const SPOT_PLACE = Object.fromEntries(SPOTS.map((s) => [s.id, s.world]));
