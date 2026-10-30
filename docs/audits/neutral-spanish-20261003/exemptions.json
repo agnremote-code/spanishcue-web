@@ -10920,6 +10920,36 @@
       "text": "Visité el museo, comí con una amiga y volví a las seis.",
       "reason": "First-person preterite in an explicit past-tense example for teachers; not a voseo command.",
       "category": "neutral-context"
+    },
+    {
+      "path": "app/material-ele/data.ts",
+      "text": "¿La cartera? No la encuentro, creo que la perdí.",
+      "reason": "First-person preterite in an explicit past-tense example for teachers; not a voseo command.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/material-ele/data.ts",
+      "text": "¿Escribiste a tu jefe? Sí, ___ escribí un correo.",
+      "reason": "First-person preterite in an explicit past-tense example for teachers; not a voseo command.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/material-ele/data.ts",
+      "text": "Luego perdí el autobús y, al final, llegué tarde.",
+      "reason": "First-person preterite in an explicit past-tense example for teachers; not a voseo command.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/material-ele/data.ts",
+      "text": "Primero no sonó la alarma, después se cortó el agua y al final perdí el tren.",
+      "reason": "First-person preterite in an explicit past-tense example for teachers; not a voseo command.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/material-ele/data.ts",
+      "text": "Perdí el tren; ___, llegué tarde.",
+      "reason": "First-person preterite in an explicit past-tense example for teachers; not a voseo command.",
+      "category": "neutral-context"
     }
   ]
 }
