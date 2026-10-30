@@ -43,6 +43,7 @@ function fixture() {
     homework_events: [{id: 'ev1', learner_id: 'learner1', owner_id: 'owner', kind: 'recommended', lesson_id: 48, category: 'ser-estar', module_id: 'a2-01', created_at: '2026-10-13'}],
     academy_demo_requests: [{id:'academy-demo-1',name:'Ana López',institution:'Instituto Ejemplo',email:'ana@example.test',teachers:'6-15',message:'Una demo para el equipo.',consent_at:'2026-10-23T00:00:00Z',created_at:'2026-10-23T00:00:00Z'}],
     institutions: [], institution_members: [], institution_invitations: [],
+    newsletter_subscribers: [{id:"a".repeat(48),email:"Lea@example.test",normalized_email:"lea@example.test",source_path:"/material-ele",status:"active",unsubscribe_token:"b".repeat(48),consent_at:"2026-10-30T00:00:00Z",created_at:"2026-10-30T00:00:00Z",updated_at:"2026-10-30T00:00:00Z",unsubscribed_at:null}],
     lesson_reports: [], lesson_favorites: [], student_homework_links: [], live_class_sessions: [], lesson_progress: [], offer_settings: [], founder_leads: [], billing_checkout_locks: [], billing_purchase_claims: [], verification_email_deliveries: [],
   };
 }
@@ -61,7 +62,7 @@ async function writeExport(tables, overrides = {}) {
 test("import order inserts parents first and founder_offer_state after founder_assignments", async () => {
   const { db } = await schemaDatabase();
   const order = importOrder(schemaModel(db));
-  assert.equal(order.length, 32);
+  assert.equal(order.length, 33);
   assert.ok(order.indexOf("autoestudio_learners") < order.indexOf("autoestudio_passes"));
   assert.ok(order.indexOf("autoestudio_learners") < order.indexOf("homework_errors"));
   assert.ok(order.indexOf("autoestudio_learners") < order.indexOf("autoestudio_progress"));
