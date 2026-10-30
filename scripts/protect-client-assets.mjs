@@ -104,6 +104,7 @@ const publicRoots = new Set([
   "app/privacy/GoogleConsentMode.tsx",
   "app/not-found.tsx",
   "app/pro/claim/ClaimClient.tsx",
+  "app/pro/claim/enlace/EmailLinkClient.tsx",
   "app/pro/success/SuccessClient.tsx",
   "app/student-tracker/StudentTracker.tsx",
   "app/sistema-verbal/page.tsx",

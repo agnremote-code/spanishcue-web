@@ -75,6 +75,7 @@ export function filterReviewedChanges(findings, reviewed) {
  * exempt an edit or deletion of existing English copy.
  */
 export const APPROVAL_MANIFESTS = [
+  'docs/audits/post-payment-email-link-english-additions-20261030.json',
   'docs/audits/google-teachers-free-grammar-english-additions-20261030.json',
   'docs/audits/free-version-bar-english-additions-20261030.json',
   'docs/audits/academias-english-additions-20261023.json',

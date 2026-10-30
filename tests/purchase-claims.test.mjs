@@ -107,6 +107,29 @@ test('confirmed provider email is required and only a matching verified account 
   sqlite.close();
 });
 
+test('the emailed sign-in link finds only a paid purchase by its verified buyer email', async () => {
+  const claims = await claimModule();
+  const sqlite = await database();
+  sqlite.prepare("INSERT INTO users (id,email,normalized_email,role,status,created_at,updated_at,last_sign_in_at) VALUES ('teacher-1','ale@example.test','ale@example.test','teacher','active',1,1,1)").run();
+  const db = asD1(sqlite);
+  const claim = await claims.createPurchaseClaim(db, { environment: 'live', offerCode: 'founder-1000-usd15-monthly', returnTo: '/', secret: claims.newClaimSecret() });
+  await claims.markPurchaseCheckout(db, claim.claimId, 'paddle', { subscriptionId: 'sub_mail', paymentId: 'txn_mail' });
+  assert.equal(await claims.purchaseClaimByVerifiedEmail(db, 'paddle', 'live', 'ale@example.test', 'teacher-1'), null, 'not before the payment is verified');
+  await claims.recordVerifiedPurchase(db, claim.claimId, 'paddle', {
+    subscriptionId: 'sub_mail', paymentId: 'txn_mail', customerId: 'ctm_m',
+    email: 'Ale@Example.Test', amountCents: 1550, currency: 'USD', paidThrough: Math.floor(Date.now() / 1000) + 2592000,
+    paidAt: Math.floor(Date.now() / 1000),
+  });
+  assert.equal((await claims.purchaseClaimByVerifiedEmail(db, 'paddle', 'live', ' ALE@example.test ', 'teacher-1'))?.claimId, claim.claimId);
+  assert.equal(await claims.purchaseClaimByVerifiedEmail(db, 'paddle', 'live', 'other@example.test', 'teacher-1'), null, 'another email');
+  assert.equal(await claims.purchaseClaimByVerifiedEmail(db, 'paypal', 'live', 'ale@example.test', 'teacher-1'), null, 'another provider');
+  assert.equal(await claims.purchaseClaimByVerifiedEmail(db, 'paddle', 'sandbox', 'ale@example.test', 'teacher-1'), null, 'another environment');
+  assert.equal((await claims.beginPurchaseBind(db, claim.claimId, 'teacher-1', 'ale@example.test'))?.claimId, claim.claimId);
+  assert.equal((await claims.purchaseClaimByVerifiedEmail(db, 'paddle', 'live', 'ale@example.test', 'teacher-1'))?.claimId, claim.claimId, 'the same account can retry');
+  assert.equal(await claims.purchaseClaimByVerifiedEmail(db, 'paddle', 'live', 'ale@example.test', 'teacher-2'), null, 'never another account once claiming');
+  sqlite.close();
+});
+
 test('anonymous checkout sends only the public claim ID to both providers', async () => {
   const result = await build({
     stdin: { contents: 'export * as paddle from "./app/paddle-server"; export * as paypal from "./app/paypal-server";', resolveDir: process.cwd() },
