@@ -10890,6 +10890,36 @@
       "text": "Respondí con una frase completa.",
       "reason": "First-person preterite in a story, reflection, or explicit past-tense example; not a voseo command.",
       "category": "neutral-context"
+    },
+    {
+      "path": "app/material-ele/data.ts",
+      "text": "No digas que toda acción larga va en imperfecto: también se puede presentar un hecho largo como terminado («Viví diez años allí»).",
+      "reason": "First-person preterite in an explicit past-tense example for teachers; not a voseo command.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/material-ele/data.ts",
+      "text": "Indefinido: hechos terminados que hacen avanzar la historia («Llegué, abrí la puerta y vi...»)",
+      "reason": "First-person preterite in an explicit past-tense example for teachers; not a voseo command.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/material-ele/data.ts",
+      "text": "No presentes el imperfecto como «acción larga»: «Viví diez años en Lima» es indefinido.",
+      "reason": "First-person preterite in an explicit past-tense example for teachers; not a voseo command.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/material-ele/data.ts",
+      "text": "Primero salí de casa. Después llegué al museo.",
+      "reason": "First-person preterite in an explicit past-tense example for teachers; not a voseo command.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/material-ele/data.ts",
+      "text": "Visité el museo, comí con una amiga y volví a las seis.",
+      "reason": "First-person preterite in an explicit past-tense example for teachers; not a voseo command.",
+      "category": "neutral-context"
     }
   ]
 }

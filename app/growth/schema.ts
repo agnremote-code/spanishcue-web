@@ -23,6 +23,7 @@ export function collectionPageSchema(input: {
   description: string;
   items: { name: string; href: string }[];
   about?: string[];
+  inLanguage?: string;
 }) {
   return {
     "@context": "https://schema.org",
@@ -30,7 +31,7 @@ export function collectionPageSchema(input: {
     name: input.name,
     description: input.description,
     url: canonicalUrl(input.pathname),
-    inLanguage: "en",
+    inLanguage: input.inLanguage ?? "en",
     isPartOf: { "@type": "WebSite", name: SITE_NAME, url: SITE_ORIGIN },
     publisher: { "@type": "Organization", name: SITE_NAME, url: SITE_ORIGIN },
     audience: { "@type": "EducationalAudience", educationalRole: "teacher" },
@@ -48,19 +49,32 @@ export function collectionPageSchema(input: {
   };
 }
 
-export function webPageSchema(input: { pathname: string; name: string; description: string; about?: string[]; educationalLevel?: string }) {
+export function webPageSchema(input: { pathname: string; name: string; description: string; about?: string[]; educationalLevel?: string; inLanguage?: string }) {
   return {
     "@context": "https://schema.org",
     "@type": "WebPage",
     name: input.name,
     description: input.description,
     url: canonicalUrl(input.pathname),
-    inLanguage: "en",
+    inLanguage: input.inLanguage ?? "en",
     isPartOf: { "@type": "WebSite", name: SITE_NAME, url: SITE_ORIGIN },
     publisher: { "@type": "Organization", name: SITE_NAME, url: SITE_ORIGIN },
     audience: { "@type": "EducationalAudience", educationalRole: "teacher" },
     about: input.about,
     ...(input.educationalLevel ? { educationalLevel: input.educationalLevel } : {}),
+  };
+}
+
+export function faqPageSchema(items: { question: string; answer: string }[], inLanguage = "en") {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    inLanguage,
+    mainEntity: items.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: { "@type": "Answer", text: item.answer },
+    })),
   };
 }
 
