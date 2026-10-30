@@ -16,6 +16,7 @@ for(const path of ['/material-ele',...slugs.map(s=>'/material-ele/'+s)])test(`ma
  assert.ok(schemas.some(s=>['WebPage','CollectionPage'].includes(s['@type'])&&s.inLanguage==='es'));
  assert.ok(d.querySelector('a[href="/pricing"]'),'buy link');
  assert.match(d.querySelector('main').textContent,/US\$15,50 al mes/);
+ if(path.startsWith("/material-ele/"))assert.match(d.querySelector("main").textContent,/Descargar ficha en PDF/);
  assert.ok(d.querySelector('footer a[href="/material-ele"]'),'site footer links the cluster');
  if(path!=='/material-ele')assert.ok(d.querySelectorAll('article').length>=2);
  dom.window.close();
