@@ -31,6 +31,8 @@ import { canvas, createBubbles, disposeGroup, keepPeopleClear, makeWalker, spotR
 import { boat as boatModel, buildZone, helicopter, zombieLook, type Zone3D } from './madrid3d';
 import { buildCity, type City3D } from './city3d';
 import { CITY_BOUNDS, ENCOUNTERS, METRO_EXITS, arrivalOf, encounterSpot, feederSpots, toWorld, turnOf, whereIs, zombieGround } from './city.mjs';
+import { createCharlas, onFreeGround } from '../charlas-3d/charlas3d';
+import { monumentPlaces } from './charlas';
 import { createHorde, knockDown, solidIndex, stepHorde, blockedAt } from './horde.mjs';
 import { SPOTS } from './story.mjs';
 import { VAX_SECONDS, burstCloud, cloudAt, cloudLive, createBeam, createCloud, fireBeam, gearUp, poseAim, poseVaccination, showShield, stepBeam, stepCloud, type Cloud } from './gear3d';
@@ -53,6 +55,8 @@ export type WorldProps = {
   finale: boolean;
   /** The open scene: a circle id or calle/<survivor>. */
   spotOpen: string | null;
+  /** The level being played: the extra conversation circles ask at this level. */
+  level: string;
   /** Keys zone/spot and calle/<survivor> finished at this level. */
   done: string[];
   paused: boolean;
@@ -186,6 +190,16 @@ export default function World3D(props: WorldProps) {
 
     // ------------------------------------------------------------ state
     let place: Place = cityPlace;
+    // Conversation circles: every survivor without a story and every monument.
+    const clearAt = (x: number, z: number) => !blockedAt(x, z, cityPlace.index.near(x, z, 1), 0.6);
+    const monuments = monumentPlaces().map(pl => onFreeGround(pl, clearAt));
+    const charlas = createCharlas({
+      parent: scene, host: mount.current!.parentElement ?? mount.current!, world: 'madrid', level: () => live.current.level,
+      people: function* () {
+        for (const [i, tk] of place.scene.talkers.entries()) if (!tk.spot) yield { key: `${place.id}:${i}`, x: tk.x, z: tk.z, y: tk.person.root.position.y };
+      },
+      places: () => (place.id === 'city' ? monuments : []),
+    });
     let metro: Place | null = null;
     let travel: { t: number; swapped: boolean; to: () => void } | null = null;
     let player = { x: 0, z: 0, heading: 0, speed: 0, y: 0, vy: 0, jumpHeld: false };
@@ -610,6 +624,7 @@ export default function World3D(props: WorldProps) {
           }
         }
       }
+      charlas.update(player, dt, !found && free);
       const nk = found ? `${found.kind}:${found.id}` : '';
       if (nk !== nearKey) { nearKey = nk; near = found; p.onNear(found); }
       const goal = targetPoint(p.target);
@@ -877,6 +892,7 @@ export default function World3D(props: WorldProps) {
     return () => {
       disposed = true;
       cancelAnimationFrame(frame);
+      charlas.dispose();
       window.clearTimeout(touchTimer);
       observer.disconnect();
       window.removeEventListener('keydown', onKeyDown); window.removeEventListener('keyup', onKeyUp); window.removeEventListener('blur', onBlur);

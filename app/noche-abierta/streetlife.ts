@@ -928,7 +928,9 @@ export function createStreetCrowd(scene: THREE.Scene, night: Night, options: { l
     b.react = { mood: 'furious', until, flee: false };
     if (face != null && b.speed < 0.1) b.heading = face;
   };
-  return { inspect, root, update, spots, framing, useItem, stats, movingBoxes, playHearts, leadOf, playFx, setHooks, bumpable, glare, cars: () => cars, walkers: () => walkers };
+  // Everyone on the ground without a scene of their own: each has a conversation circle.
+  const talkable = () => bodies.filter(b => !b.hidden && b.group.visible && b.y < 1.3 && !b.key.includes('/') && !b.react?.flee);
+  return { inspect, root, update, spots, framing, useItem, stats, movingBoxes, playHearts, leadOf, playFx, setHooks, bumpable, glare, talkable, cars: () => cars, walkers: () => walkers };
 }
 
 export type StreetCrowd = ReturnType<typeof createStreetCrowd>;

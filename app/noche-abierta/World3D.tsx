@@ -19,9 +19,11 @@ import { ambientReaction, openingFx, type ItemId, type StreetState } from './str
 import Bi from './Bi';
 import { speakLines } from './voice';
 import { buildCity, buildInterior, placePerson, placeVehicle, type City, type Interior } from './build3d';
-import { buildDistricts, buildStreetRoom } from './district3d';
+import { buildDistricts, buildStreetRoom, LIT_SIGNS } from './district3d';
 import { CAST_SIZES, createStreetCrowd, type StreetSpot } from './streetlife';
 import { createStreetEvents } from './events3d';
+import { createCharlas, onFreeGround, type CharlaPlace } from '../charlas-3d/charlas3d';
+import { EVENT_TALK, FIXED_PLACES, signPlaces } from './charlas';
 import { createDrivables, type Drivable } from './drive3d';
 import { BOARD_RADIUS, OWNER_SHOUT_AFTER, POLICE_AFTER, SPECS, dismountSpot, playerHeading, stepVehicle } from './drive.mjs';
 import { createItemUseFx, disposeItem, heroHand, holdItem } from './items3d';
@@ -191,6 +193,31 @@ export default function World3D(props: WorldProps) {
     const crowd = createStreetCrowd(scene, city.night, { low, boxes });
     boxes.push(...crowd.movingBoxes);
     const events = createStreetEvents(scene, city.night, { low, boxes });
+    // Conversation circles: every person on the street, the lit signs, the
+    // party house and each street event while it lasts.
+    const clearSpot = (pl: CharlaPlace) => onFreeGround(pl, (x, z) => isWalkable(x, z, boxes));
+    let fixedPlaces: CharlaPlace[] | null = null;
+    const eventPlaces = new Map<string, CharlaPlace>();
+    const charlas = createCharlas({
+      parent: scene, host: box, world: 'noche', level: () => live.current.level,
+      people: function* () {
+        for (const b of crowd.talkable()) yield { key: b.key, x: b.x, z: b.z, y: b.y };
+        for (const a of events.talkable()) yield { key: `ev-${a.id}`, x: a.x, z: a.z, y: a.y };
+      },
+      places: () => {
+        fixedPlaces ??= [...FIXED_PLACES, ...signPlaces(LIT_SIGNS)].map(clearSpot);
+        const out = sim.indoor && !sim.streetRoom ? [] : [...fixedPlaces];
+        for (const ev of events.active()) {
+          const talk = EVENT_TALK[ev.kind];
+          if (!talk) continue;
+          let pl = eventPlaces.get(ev.kind);
+          if (!pl) { pl = { id: `evento-${ev.kind}`, x: 0, z: 0, ...talk }; eventPlaces.set(ev.kind, pl); }
+          pl.x = ev.x; pl.z = ev.z;
+          out.push(pl);
+        }
+        return out;
+      },
+    });
     boxes.push(...events.movingBoxes);
     crowd.setHooks({ fly: (x: number, z: number) => events.fly('helicopter', x, z), police: (x: number, z: number) => { events.callPolice(x, z); } });
     const drivables = createDrivables(scene, city.night, { boxes });
@@ -1061,6 +1088,7 @@ export default function World3D(props: WorldProps) {
         sim.turn = 0;
         if (sim.mode !== 'busy') sim.target = null;
       }
+      charlas.update({ x: sim.player.x, z: sim.player.z }, dt, walking && sim.mode === 'walk' && p.phase === 'ciudad' && !sim.target && !sim.drive && (!sim.room || Boolean(sim.streetRoom)));
       const promptId = sim.target ? sim.target.id : '';
       if (promptId !== sim.promptId) {
         sim.promptId = promptId;
@@ -1355,6 +1383,7 @@ export default function World3D(props: WorldProps) {
 
     return () => {
       cancelAnimationFrame(raf);
+      charlas.dispose();
       disposed = true;
       observer.disconnect();
       canvas.removeEventListener('pointerdown', down);

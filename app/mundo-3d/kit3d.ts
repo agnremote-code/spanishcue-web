@@ -10,6 +10,7 @@ import type { Box, Bounds } from '../noche-abierta/world3d.d.mts';
 
 export { addBench, addPalm, addTree, box, canvas, cylinder, glow, makeCar, placeVehicle, random, solid };
 export type { Box, Bounds, Look, Person };
+import type { CharlaPlace } from '../charlas-3d/lugar';
 
 export type SpotPlace = { id: string; x: number; z: number; heading: number };
 export type Talker = { person: Person; spot: string | null; x: number; z: number; heading: number; seed: number; body: string; baseMood: string; seated: boolean; angryUntil?: number };
@@ -40,6 +41,8 @@ export type RegionScene = {
   ceilings?: { x0: number; x1: number; z0: number; z1: number; y: number }[];
   /** Extra per-frame life: waves, cars, lights, birds. */
   animate: (t: number, dt: number) => void;
+  /** Landmarks with a conversation circle of their own (app/charlas-3d). */
+  places?: CharlaPlace[];
 };
 export type SceneOptions = { low: boolean; shadows: boolean };
 export type SceneBuilder = (options: SceneOptions) => RegionScene;

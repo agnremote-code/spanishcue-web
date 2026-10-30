@@ -117,7 +117,7 @@ export default function CasinoGame() {
   const nearScene = near?.kind === 'scene' ? sceneById(near.id) : null;
 
   return <main className="gm" data-level={state.level} data-floor={state.floor}>
-    {ready && has3d && <World3D floor={state.floor} sceneId={state.scene?.id ?? (listenAt && sceneById(listenAt) ? listenAt : null)} done={mode === 'escucha' ? heard : done} paused={!entered || elevator || list || listenAt !== undefined} intro={!entered}
+    {ready && has3d && <World3D level={state.level} floor={state.floor} sceneId={state.scene?.id ?? (listenAt && sceneById(listenAt) ? listenAt : null)} done={mode === 'escucha' ? heard : done} paused={!entered || elevator || list || listenAt !== undefined} intro={!entered}
       onSpot={open} onElevator={() => setElevator(true)} onNear={setNear} onFloorShown={() => undefined} onFail={() => setHas3d(false)} />}
     {ready && !has3d && <div className="gm-flat" aria-hidden="true" />}
 

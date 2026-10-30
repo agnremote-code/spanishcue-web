@@ -84,7 +84,7 @@ export default function HospitalDemo({ content, fence, signedIn }: { content: Ho
   const atReception = near?.kind === 'scene' && near.id === content.scene;
 
   return <main className="hs hs-demo" data-level={level} data-floor={1} data-mode="conversacion">
-    {ready && has3d && <World3D floor={1} via="lift" sceneId={open ? content.scene : null} mood={chosen?.mood ?? null}
+    {ready && has3d && <World3D level={level} floor={1} via="lift" sceneId={open ? content.scene : null} mood={chosen?.mood ?? null}
       done={done ? [content.scene] : []} paused={!entered || Boolean(gate)} intro={!entered}
       onSpot={(id) => id === content.scene ? openReception() : lock(sectorName(id))}
       onLift={(how) => lock(how === 'stairs' ? 'Las escaleras y las otras plantas' : 'El ascensor y las otras plantas')}

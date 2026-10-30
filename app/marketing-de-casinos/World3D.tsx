@@ -16,10 +16,14 @@ import { buildCasino, talking as talkingNow, type Casino, type Npc } from './cas
 import { animatePerson, setMood } from '../noche-abierta/people3d';
 import { createBumpClock, pushOut } from '../escucha-3d/bump.mjs';
 import { insultFor, shout } from '../escucha-3d/shout';
+import { createCharlas } from '../charlas-3d/charlas3d';
+import { casinoPlaces } from './charlas';
 
 export type WorldProps = {
   floor: number;
   sceneId: string | null;
+  /** The level being played: the extra conversation circles ask at this level. */
+  level: string;
   done: string[];
   paused: boolean;
   intro: boolean;
@@ -101,6 +105,15 @@ export default function World3D(props: WorldProps) {
 
     // ------------------------------------------------------------ state
     let floor = live.current.floor;
+    // Conversation circles: everyone without a scene and what stands out on each floor.
+    const places = casinoPlaces();
+    const charlas = createCharlas({
+      parent: scene, host: mount.current!.parentElement ?? mount.current!, world: 'casino', level: () => live.current.level,
+      people: function* () {
+        for (const [i, n] of casino.npcs.entries()) if (n.floor === floor && !n.scene && !n.main) yield { key: `n${i}`, x: n.x, z: n.z, y: n.y };
+      },
+      places: () => places.filter(pl => pl.floor === floor),
+    });
     let solids = solidsFor(floor);
     let walls = cameraBlockers(floor);
     const start = live.current.floor === 1 ? { x: SPAWN.x, z: SPAWN.z, heading: SPAWN.heading } : { ...ELEVATOR_ARRIVAL };
@@ -313,6 +326,7 @@ export default function World3D(props: WorldProps) {
       const lift = !sceneId && !ride && atElevator(player.x, player.z);
       if (lift !== atLift) { atLift = lift; if (!lift) liftConsumed = false; }
       if (atLift && !liftConsumed && player.speed < 0.3 && !p.paused && !p.intro) { liftConsumed = true; p.onElevator(); }
+      charlas.update(player, dt, !inside && !atLift && !sceneId && !ride && !p.paused && !p.intro);
       const near = inside ? `scene:${inside}` : atLift ? 'elevator:lift' : '';
       if (near !== nearKey) { nearKey = near; p.onNear(inside ? { kind: 'scene', id: inside } : atLift ? { kind: 'elevator', id: 'lift' } : null); }
 
@@ -379,6 +393,7 @@ export default function World3D(props: WorldProps) {
     return () => {
       disposed = true;
       cancelAnimationFrame(frame);
+      charlas.dispose();
       window.clearTimeout(touchTimer);
       observer.disconnect();
       window.removeEventListener('keydown', onKeyDown);

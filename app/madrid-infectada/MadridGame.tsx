@@ -297,7 +297,7 @@ export default function MadridGame() {
   const targetAt = target ? (SPOT_ZONE[target] === 'metro' ? null : SPOT_AT[target]) : null;
 
   return <main className="mi" data-level={level} data-zone={state.zone} data-mode={mode} data-conversation-family="madrid-infectada">
-    {ready && has3d && entered && <World3D start={startZone} go={go} target={target} intro={intro} finale={finale} spotOpen={spotOpen} done={done}
+    {ready && has3d && entered && <World3D level={level} start={startZone} go={go} target={target} intro={intro} finale={finale} spotOpen={spotOpen} done={done}
       paused={route || listenAt !== undefined || ending} inset={inset} act={act} fire={fire}
       onIntroEnd={endIntro} onFinaleEnd={endFinale} onNear={setNear} onSpot={openSpot}
       onVax={onVax} onEvent={onEvent} onPose={onPose} onFail={() => { setHas3d(false); setIntro(false); }} />}

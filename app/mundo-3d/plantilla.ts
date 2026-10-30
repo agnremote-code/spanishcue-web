@@ -7,6 +7,7 @@
 // piece, two places on each side of the avenue facing it and the fifth in the
 // north, under the landmark. Every place keeps its props behind the person
 // who talks there, so the side camera always has room.
+import { onFreeGround, type CharlaPlace } from '../charlas-3d/lugar';
 import * as THREE from 'three';
 import {
   addBench, addPalm, addTree, block, box, canvas, cylinder, extra, glow, ground, groundTexture, lightPool, makeCar, makeWalker,
@@ -207,7 +208,17 @@ const build = (z: ZoneLayout): SceneBuilder => ({ low, shadows }) => {
   }
 
   const maxX = east ? 33 : 35.5, minX = west ? -33 : -35.5;
+  const mark = LANDMARK_TALK[z.landmark.kind];
+  const places: CharlaPlace[] = [
+    { id: 'landmark', x: 0, z: 45.2, r: 2.4, title: z.landmark.label ? `${mark.title}: ${z.landmark.label}` : mark.title, intro: mark.intro, themes: mark.themes },
+    { id: 'centro', x: 0, z: 4, r: 3.8, title: CENTRE_TALK[centre].title, intro: CENTRE_TALK[centre].intro, themes: CENTRE_TALK[centre].themes },
+  ];
+  if (east || west) places.push({ id: 'orilla', x: (east ? 1 : -1) * 31, z: 10, r: 2.4, title: 'La orilla del mar', intro: 'Las olas llegan hasta tus pies. Alguien dejó una toalla y un libro.', themes: ['mar', 'naturaleza'] });
+  // A circle never stands inside a building: it moves to the nearest free ground.
+  const freeGround = (x: number, zz: number) => x > minX + 1 && x < maxX - 1 && zz > -36 && zz < 46.6
+    && !solids.some(b => x > b.x0 - 0.9 && x < b.x1 + 0.9 && zz > b.z0 - 0.9 && zz < b.z1 + 0.9);
   return {
+    places: places.map(pl => onFreeGround(pl, freeGround)),
     group,
     bounds: { minX, maxX, minZ: -37, maxZ: 47.6 },
     solids,
@@ -469,6 +480,30 @@ function place(g: THREE.Group, z: ZoneLayout, spot: ZoneSpot, site: Site, index:
     }
   }
 }
+
+// Conversation circles of the zone's landmark and plaza centre.
+const LANDMARK_TALK: Record<LandmarkKind, { title: string; intro: string; themes: string[] }> = {
+  cathedral: { title: 'La catedral', intro: 'Las campanas suenan. Dentro huele a cera y a piedra fría.', themes: ['espiritu', 'historia'] },
+  tower: { title: 'La torre del reloj', intro: 'El reloj marca la hora para toda la ciudad desde hace siglos.', themes: ['tiempo', 'historia'] },
+  obelisk: { title: 'El obelisco', intro: 'La gente se reúne aquí para celebrar y para protestar.', themes: ['historia', 'calle'] },
+  pyramid: { title: 'La pirámide', intro: 'Escalones enormes subiendo hacia el cielo. Aquí vivieron otros pueblos.', themes: ['historia', 'muerte'] },
+  castle: { title: 'El castillo', intro: 'Muros antiguos que vieron reyes, guerras y bodas.', themes: ['poder', 'historia'] },
+  windmill: { title: 'El molino', intro: 'Las aspas giran despacio con el viento del campo.', themes: ['naturaleza', 'trabajo'] },
+  temple: { title: 'El templo', intro: 'Incienso, flores y gente que pide en silencio.', themes: ['espiritu', 'historia'] },
+  opera: { title: 'La ópera', intro: 'Esta noche hay función. Se oye a una cantante ensayar.', themes: ['arte', 'historia'] },
+  arch: { title: 'El gran arco', intro: 'Un arco de piedra que recuerda una victoria de hace mucho.', themes: ['historia', 'poder'] },
+  mountain: { title: 'La montaña', intro: 'La cima tiene nieve todo el año. Hace frío y el aire es limpio.', themes: ['aventura', 'naturaleza'] },
+  lighthouse: { title: 'El faro', intro: 'Su luz guía a los barcos toda la noche.', themes: ['mar', 'soledad'] },
+  dome: { title: 'La gran cúpula', intro: 'Una cúpula brillante que se ve desde toda la ciudad.', themes: ['espiritu', 'arte'] },
+  wall: { title: 'La muralla', intro: 'Una muralla vieja que separaba a unos de otros.', themes: ['historia', 'ley'] },
+  volcano: { title: 'El volcán', intro: 'Sale humo del cráter. La tierra está caliente.', themes: ['naturaleza', 'miedo'] },
+};
+const CENTRE_TALK: Record<'fountain' | 'statue' | 'kiosk' | 'tree', { title: string; intro: string; themes: string[] }> = {
+  fountain: { title: 'La fuente de la plaza', intro: 'Hay monedas en el agua. Cada una es un deseo de alguien.', themes: ['espiritu', 'dinero'] },
+  statue: { title: 'La estatua de la plaza', intro: 'Una figura de bronce señala hacia algún lugar. Nadie recuerda bien quién era.', themes: ['historia', 'poder'] },
+  kiosk: { title: 'El quiosco de música', intro: 'Los domingos tocan aquí y la gente mayor baila.', themes: ['arte', 'fiesta'] },
+  tree: { title: 'El árbol viejo de la plaza', intro: 'Tiene cientos de años. Hay nombres de enamorados en la corteza.', themes: ['amor', 'naturaleza'] },
+};
 
 /** The landmark north of the zone: big, simple and readable from the plaza. */
 function landmark(g: THREE.Group, z: ZoneLayout, spinners: THREE.Object3D[]) {

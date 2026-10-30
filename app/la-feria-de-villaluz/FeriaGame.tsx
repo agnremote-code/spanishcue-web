@@ -316,7 +316,7 @@ export default function FeriaGame() {
   const showList = list || (ready && entered && !use3d && !busy);
 
   return <main className="fv" data-level={state.level} data-mode={mode} data-view={use3d ? '3d' : 'mapa'}>
-    {ready && use3d && <World3D circleId={buscaId ? null : sceneId} busca={buscaId ? placed : null}
+    {ready && use3d && <World3D level={state.level} circleId={buscaId ? null : sceneId} busca={buscaId ? placed : null}
       reveal={buscaSet && buscaState(session, buscaSet.id).solved ? buscaSet.target : null}
       done={heardHere} paused={!entered || list || map || listenAt !== undefined} intro={!entered}
       onSpot={open} onNear={setNear} onPose={setPose} onFail={() => setHas3d(false)} onStats={debug ? setStats : undefined} />}

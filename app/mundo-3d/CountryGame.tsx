@@ -219,7 +219,7 @@ export default function CountryGame({ country, rings, loadContent, loadScene, li
   const heardHere = regions.filter(r => heard.includes(r.id)).length;
 
   return <main className="mw" data-level={level} data-view={screen === 'levels' ? 'levels' : view} data-mode={mode} data-conversation-family={country.lessonId === 36 ? 'estados-unidos-a2-b1' : country.id}>
-    {ready && has3d && screen === 'world' && <World3D country={country} rings={rings} loadScene={loadScene} view={view} spotOpen={spotOpen} done={done}
+    {ready && has3d && screen === 'world' && <World3D country={country} level={level} rings={rings} loadScene={loadScene} view={view} spotOpen={spotOpen} done={done}
       paused={list || listenAt !== undefined} inset={inset} greetings={GREETINGS}
       act={act} onIntroBeat={onIntroBeat} onNear={setNear} onGate={id => goRegion(id)} onSpot={openSpot} onExit={goMap}
       onRegionReady={onRegionReady} onPose={setPose} onFail={() => { setHas3d(false); setView('map'); }} />}

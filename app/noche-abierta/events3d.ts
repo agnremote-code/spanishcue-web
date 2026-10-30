@@ -1089,6 +1089,7 @@ export function createStreetEvents(scene: THREE.Scene, night: Night, deps: Stree
     shout: () => shoutNear(playerRef, lastLevel, clockRef),
     stats, fly, callPolice, trigger, blockers, dispose, bumpable, glare,
     active: () => scenes.map(s => ({ kind: s.kind, x: s.x, z: s.z, t: s.t })),
+    talkable: () => actors.filter(a => a.used && !a.hidden && a.group.visible && a.y < 1.3),
   };
 }
 

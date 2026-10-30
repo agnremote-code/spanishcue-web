@@ -20,6 +20,7 @@ import { animatePerson, setMood } from '../noche-abierta/people3d';
 import { createBumpClock, pushOut } from '../escucha-3d/bump.mjs';
 import { insultFor, shout } from '../escucha-3d/shout';
 import { HUB, ISLAND_RADIUS, MAP_SPAWN, OCEAN_Y, PLANE_PARK, buildMap, cloudTexture, islandAt, onGround } from './map3d';
+import { createCharlas } from '../charlas-3d/charlas3d';
 import { canvas, createBubbles, disposeGroup, keepPeopleClear, spotRing, stepWalker, type Box, type RegionScene, type SceneBuilder, type Talker, type Walker } from './kit3d';
 import type { CountryInfo } from './types';
 
@@ -28,6 +29,8 @@ export type Near = { kind: 'gate' | 'spot' | 'exit' | 'door'; id: string; label?
 export type Pose = { region: string | null; island: string | null; x: number; z: number; heading: number };
 export type WorldProps = {
   country: CountryInfo;
+  /** The level being played: the extra conversation circles ask at this level. */
+  level: string;
   rings: Record<string, number[][][]>;
   loadScene: (id: string) => Promise<SceneBuilder>;
   view: View;
@@ -286,6 +289,16 @@ export default function World3D(props: WorldProps) {
     window.addEventListener('keydown', onKeyDown);
     window.addEventListener('keyup', onKeyUp);
     window.addEventListener('blur', onBlur);
+    // Every person without a story and every landmark has a conversation circle.
+    const charlas = createCharlas({
+      parent: scene, host: mount.current!.parentElement ?? mount.current!, world: 'pais', level: () => live.current.level,
+      people: function* () {
+        if (!region) return;
+        for (const [i, tk] of region.scene.talkers.entries()) if (!tk.spot) yield { key: `${region.id}:t${i}`, x: tk.x, z: tk.z };
+        for (const [i, w] of region.scene.walkers.entries()) yield { key: `${region.id}:w${i}`, x: w.x, z: w.z };
+      },
+      places: () => region?.scene.places?.map(pl => pl.id.includes(':') ? pl : Object.assign(pl, { id: `${region!.id}:${pl.id}` })) ?? [],
+    });
     const el = renderer.domElement;
     const onDown = (e: PointerEvent) => { if (e.button !== 0 && e.pointerType === 'mouse') return; drag = { id: e.pointerId, x: e.clientX, y: e.clientY }; el.setPointerCapture?.(e.pointerId); };
     const onMove = (e: PointerEvent) => {
@@ -525,6 +538,7 @@ export default function World3D(props: WorldProps) {
           }
         }
       }
+      charlas.update(player, dt, Boolean(region) && !found && !falling && !transition && !p.paused && !p.spotOpen && view !== 'intro');
       const nk = found ? `${found.kind}:${found.id}` : '';
       if (nk !== nearKey) { nearKey = nk; near = found; p.onNear(found); }
       if (clock - poseAt > 0.25 && view !== 'intro') {
@@ -605,6 +619,7 @@ export default function World3D(props: WorldProps) {
     return () => {
       disposed = true;
       cancelAnimationFrame(frame);
+      charlas.dispose();
       window.clearTimeout(touchTimer);
       observer.disconnect();
       window.removeEventListener('keydown', onKeyDown); window.removeEventListener('keyup', onKeyUp); window.removeEventListener('blur', onBlur);
