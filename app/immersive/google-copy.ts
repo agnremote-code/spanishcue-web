@@ -10,13 +10,19 @@ export function gtCopy(es:boolean){
  return {
   nav:{watch:t('Ver una clase','Watch a lesson'),demos:t('Demos','Demos'),pricing:t('Precios','Pricing'),openCity:t('ABRIR LA CIUDAD ↗','OPEN THE CITY ↗'),account:t('Mi cuenta','My account'),signIn:t('Entrar','Sign in')},
   hero:{
-   eyebrow:t('PARA PROFES DE ESPAÑOL ONLINE','FOR ONLINE SPANISH TEACHERS'),
+   eyebrow:t('MATERIAL ELE INTERACTIVO · PARA PROFES ONLINE','INTERACTIVE SPANISH MATERIAL · FOR ONLINE TEACHERS'),
    h1a:t('Clases de español interactivas. ','Interactive Spanish Lessons. '),h1b:t('Listas para dar.','Ready to Teach.'),
    lead:t('Deja de preparar clases desde cero. Empieza a darlas.','Stop preparing Spanish lessons from scratch. Start teaching with them.'),
    p:t('Mundos de conversación en 3D, gramática interactiva, comprensión auditiva y tareas de A1 a C2. Abres una clase, compartes pantalla y guías a tu alumno.','3D conversation worlds, interactive grammar, listening and homework for A1–C2. Open a lesson, share your screen, guide your student.'),
    openFull:t('ABRIR LA CIUDAD COMPLETA ↗','OPEN THE FULL CITY ↗'),
    watch:t('VER UNA CLASE REAL — GRATIS ▶','WATCH A REAL LESSON — FREE ▶'),
    reassure:[t('Sin registro para mirar','No sign-up to watch'),t('Funciona en el navegador','Runs in the browser'),'A1–C2',t('Cancelas cuando quieras','Cancel anytime')],
+  },
+  freeGrammar:{
+   eyebrow:t('GRATIS · SIN TARJETA','FREE · NO CARD'),
+   h2:t('Prueba una clase de gramática completa en cada nivel.','Try one complete grammar class at every level.'),
+   p:t('Teoría, práctica, escucha, conversación y escritura. Ábrela, comparte pantalla y dala hoy con tu alumno.','Theory, practice, listening, speaking and writing. Open it, share your screen and teach it today.'),
+   open:t('Abrir gratis →','Open free →'),
   },
   tiers:{
    aria:t('Qué es gratis y qué es PRO','What is free and what is PRO'),

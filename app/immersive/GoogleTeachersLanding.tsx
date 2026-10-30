@@ -18,7 +18,9 @@ import {FLAGS,TESTIMONIALS} from './google-testimonials';
 
 const LANDING='google-teachers';
 
-export default function GoogleTeachersLanding({pro,signedIn,cafe,spots,level,showcase,previews}:{pro:boolean;signedIn:boolean;cafe:Location;spots:TourSpot[];level:string;showcase:ShowcaseCategory[];previews:ProPreviewFragment[]}){
+export type FreeGrammarClass={id:number;level:string;title:string;href:string};
+
+export default function GoogleTeachersLanding({pro,signedIn,cafe,spots,level,showcase,previews,freeGrammar}:{freeGrammar:FreeGrammarClass[];pro:boolean;signedIn:boolean;cafe:Location;spots:TourSpot[];level:string;showcase:ShowcaseCategory[];previews:ProPreviewFragment[]}){
  const {locale}=useI18n();const es=locale==='es';const c=gtCopy(es);
  const [search,setSearch]=useState('');
  const [gate,setGate]=useState<string|null>(null);
@@ -72,6 +74,13 @@ export default function GoogleTeachersLanding({pro,signedIn,cafe,spots,level,sho
     <div className="im-reassurance">{c.hero.reassure.map(r=><span key={r}>✓ {r}</span>)}</div>
    </div>
    <div id="tour" className="gt-hero2-stage"><GuidedTour cafe={cafe} spots={spots} level={level} signedIn={signedIn} pro={pro} exploreHref={exploreHref} autoplay={autoplay} onExploreMore={toShowcase} onBuyClick={buyClick('tour_end')} onUnlockClick={buyClick('tour_fullscreen')} /></div>
+  </section>
+
+  <section className="gt-free" aria-labelledby="gt-free-h">
+   <span className="im-eyebrow"><i/> {c.freeGrammar.eyebrow}</span>
+   <h2 id="gt-free-h">{c.freeGrammar.h2}</h2>
+   <p>{c.freeGrammar.p}</p>
+   <ul>{freeGrammar.map(g=><li key={g.id}><Link href={campaignLink(g.href,search)} onClick={()=>trackMarketingEvent('lesson_preview_open',{lesson_id:g.id,lesson_title:g.title,category:'grammar',access:'free',placement:`landing_${LANDING}_free_grammar`})}><b>{g.level}</b><span>{g.title}</span><em>{c.freeGrammar.open}</em></Link></li>)}</ul>
   </section>
 
   <section className="gt-tiers" aria-label={c.tiers.aria}>

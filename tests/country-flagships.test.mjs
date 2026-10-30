@@ -29,7 +29,7 @@ const product = await import(
 
 test("México and United States are the two free conversation flagships", () => {
   assert.deepEqual(product.samplesByCategory.Conversación, [210, 36]);
-  assert.equal(product.freeLessonIds.length, 11);
+  assert.equal(product.freeLessonIds.length, 16);
 
   const mexico = product.lessons.find((lesson) => lesson.id === 210);
   const usa = product.lessons.find((lesson) => lesson.id === 36);

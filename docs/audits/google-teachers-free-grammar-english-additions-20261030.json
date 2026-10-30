@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "authorization": "Owner standing approval (Ale) for new English copy, typed «apruebo (siempre de ahora en más apruebo)» in the project thread «Biblioteca» on 2026-10-22 (message cmsg_01Gr5R4j3t2Yet65UcmhcVhAAAbp6kqDfMqxzNm3PL6f5g). Applied to the Google Ads teachers landing offer (one free grammar class per level), requested by Ale on 2026-10-30 in thread cmsg_01Gr5R4j3t2Yet65UcmhcVhAXnDSpLAWn9MNohVZ4e6nLr.",
+  "additions": [
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "INTERACTIVE SPANISH MATERIAL · FOR ONLINE TEACHERS"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "FREE · NO CARD"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Try one complete grammar class at every level."
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Theory, practice, listening, speaking and writing. Open it, share your screen and teach it today."
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Open free →"
+    }
+  ]
+}
