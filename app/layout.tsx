@@ -27,6 +27,7 @@ import {
 import MarketingAttribution from "./marketing/MarketingAttribution";
 import GoogleAnalytics from "./marketing/GoogleAnalytics";
 import { FreeLessonConversionBar } from "./marketing/MarketingSections";
+import FreeVersionBar from "./marketing/FreeVersionBar";
 import FreeLessonRegistrationGate from "./marketing/FreeLessonRegistrationGate";
 import { audienceFromAccess, primaryCtaFor } from "./marketing/cta-state";
 import CookieConsent from "./privacy/CookieConsent";
@@ -98,6 +99,8 @@ export default async function RootLayout({
   const freeLessonCta = primaryCtaFor(audience, pathname);
   // Bauti stays out of lessons, 3D worlds and private tools, where the corner belongs to the class.
   const bautiRoute = !currentLesson && !/^\/(demo|admin|autoestudio|clase|gramatica|ingresar|pro\/claim)(\/|$)/.test(pathname);
+  // The free-version bar follows Bauti's browsing pages, minus the pages that already are a checkout or a campaign.
+  const freeVersionBar = !fullAccess && bautiRoute && !/^\/(lp|pricing|acceso|academias)(\/|$)/.test(pathname);
   return (
     <html lang={locale}>
       <body>
@@ -110,6 +113,7 @@ export default async function RootLayout({
             lessonId={currentLesson?.id}
             lessonTitle={currentLesson?.title}
           />
+          {freeVersionBar && <FreeVersionBar />}
           {children}
           {!fullAccess && (freeLesson || pathname === "/" || pathname === "/sistema-verbal" || pathname === "/choose-conversation") && <ProDiscovery signedIn={signedIn} />}
           <LessonReportRoutes lessons={lessons.map(l=>({id:l.id,title:l.title,level:l.level,levels:conversationFamilyByLessonId.get(l.id)?.availableLevels||l.levels,path:l.path||`/clase/${l.id}`}))} signedIn={signedIn} />
