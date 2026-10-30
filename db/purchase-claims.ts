@@ -142,6 +142,19 @@ export async function recordVerifiedPurchase(db: D1Database, claimId: string, pr
 }
 
 /** Only a paid claim and the provider-confirmed email may enter binding. */
+/** The paid, still unclaimed purchase (or the one this user is already claiming) whose buyer email is
+ *  this verified email. Lets a buyer finish activation from the sign-in link on another device, where
+ *  the claim cookie does not exist: Firebase verified the email, the provider confirmed the same email. */
+export async function purchaseClaimByVerifiedEmail(db: D1Database, provider: PurchaseProvider, environment: string, verifiedEmail: string, userId: string) {
+  const email = verifiedEmail.trim().toLowerCase();
+  if (!email || !userId) return null;
+  return db.prepare(`SELECT ${claimColumns} FROM billing_purchase_claims
+    WHERE provider = ? AND environment = ? AND normalized_email = ? AND expires_at > ?
+      AND (status = 'paid' OR (status = 'claiming' AND claimed_user_id = ?))
+    ORDER BY paid_at DESC LIMIT 1`)
+    .bind(provider, environment, email, now(), userId).first<PurchaseClaim>();
+}
+
 export async function beginPurchaseBind(db: D1Database, claimId: string, userId: string, verifiedEmail: string) {
   const email = verifiedEmail.trim().toLowerCase();
   if (!email || !userId) return null;
