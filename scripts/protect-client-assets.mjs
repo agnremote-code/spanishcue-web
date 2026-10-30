@@ -65,6 +65,8 @@ const publicRoots = new Set([
   "app/immersive/CityDemo.tsx",
   "app/immersive/DemoScene.tsx",
   "app/immersive/ProDiscovery.tsx",
+  // Free-version bar above every browsing page for non-PRO visitors: copy and a /pricing link only.
+  "app/marketing/FreeVersionBar.tsx",
   "app/immersive/PremiumPanel.tsx",
   // Free Noche abierta: the PRO game itself. Its street scenes are not in any
   // chunk: the free ones arrive as public/noche-abierta/demo-calle.json and
