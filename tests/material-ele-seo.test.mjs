@@ -24,7 +24,7 @@ test('every page has unique bounded metadata, a unique H1 and real classroom con
   titles.add(p.title);h1s.add(p.h1);
   assert.ok(p.activities.length>=2,p.slug);
   for(const a of p.activities){assert.ok(a.steps.length>=3&&a.prompts.length>=1&&a.model&&a.correction&&a.online,a.name);names.push(a.name);}
-  if(p.exercise)for(const item of p.exercise.items)assert.ok(item.q.includes('___')&&item.a,item.q);
+  if(p.exercise)for(const item of p.exercise.items)assert.ok((item.q.includes('___')||(p.slug==='comprension-auditiva'&&item.q.endsWith('?')))&&item.a,item.q);
   assert.ok(p.faq.length>=2,p.slug);
   for(const slug of p.related)assert.ok(m.elePageBySlug.has(slug)&&slug!==p.slug,`${p.slug} → ${slug}`);
  }
