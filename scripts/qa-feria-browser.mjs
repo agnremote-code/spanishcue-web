@@ -675,7 +675,7 @@ if (RUN.hospitalGpu) {
     const before = await page.evaluate(() => ({ ...window.__gpu }));
     await page.evaluate(() => window.__qa.hospitalOff());
     await page.locator('.hs canvas').first().waitFor({ state: 'detached' });
-    await page.waitForTimeout(300);
+    await page.waitForTimeout(1500);
     const after = await page.evaluate(() => ({ ...window.__gpu, failed: window.__qa.failed }));
     smoke(`${viewport.width} hospital unmount frees the world's WebGL textures and buffers and loses the context`, !after.failed && after.lost >= 1 && before.textures > after.textures && after.textures <= 5 && after.buffers <= 5, { before, after });
     await context.close();

@@ -187,3 +187,14 @@ test('route, catalog, shared engine and no browser speech', () => {
     assert.doesNotMatch(source, /https?:\/\/(?!spanishcue\.com)/, `${file} loads nothing from the network`);
   }
 });
+
+test('unmount frees the GPU: texture slots, shadow map, bloom targets, the PMREM target and the WebGL context (2026-10-30 repair)', () => {
+  const world = readFileSync('app/hospital-san-casi-vivo/World3D.tsx', 'utf8');
+  const cleanup = world.slice(world.indexOf('disposed = true;'));
+  assert.match(cleanup, /isTexture[\s\S]*\.dispose\(\)/, 'texture slots of every material are disposed');
+  assert.match(cleanup, /shadow\?\.dispose\(\)/, 'shadow maps');
+  assert.match(cleanup, /composer\?\.passes[\s\S]*pass\.dispose\(\)/, 'bloom pass targets');
+  assert.match(cleanup, /envTarget\.dispose\(\)/, 'the whole PMREM render target, not only its texture');
+  assert.match(cleanup, /renderer\.forceContextLoss\(\)/);
+  assert.match(world, /catch \(error\) \{\s*console\.error\(error\);\s*renderer\.dispose\(\); renderer\.forceContextLoss\(\);/, 'the build-failure path loses its context too');
+});
