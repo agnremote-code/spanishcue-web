@@ -49,7 +49,7 @@ export default function EmailLinkClient({ provider, locale }: { provider: "paddl
     let saved = "";
     try { saved = window.localStorage.getItem("spanishcue.emailForSignIn") || ""; } catch {}
     // Opened on another device: Firebase needs the address once to confirm it is the same person.
-    if (saved) void finish(saved); else void Promise.resolve().then(() => setState("ask-email"));
+    void Promise.resolve().then(() => saved ? finish(saved) : setState("ask-email"));
   }, [es, finish]);
 
   const submit = (event: FormEvent) => { event.preventDefault(); if (email.trim()) void finish(email.trim()); };
