@@ -17,8 +17,10 @@ import { RISK_WORDS, WEAPON_WORDS, auditSet, normalize } from '../app/conversaci
 const require = createRequire(import.meta.url);
 const React = require('react');
 const { renderToString } = require('react-dom/server');
+// The street scenes are registered by street.mjs (the PRO class does the same).
 async function component(path) {
-  const r = await build({ entryPoints: [path], bundle: true, write: false, format: 'cjs', platform: 'node', jsx: 'automatic', external: ['react', 'react-dom'], loader: { '.css': 'empty' } });
+  const stdin = { contents: `import './app/noche-abierta/street.mjs'; export { default } from './${path}';`, resolveDir: process.cwd(), loader: 'tsx' };
+  const r = await build({ stdin, bundle: true, write: false, format: 'cjs', platform: 'node', jsx: 'automatic', external: ['react', 'react-dom'], loader: { '.css': 'empty' } });
   const loaded = { exports: {} };
   runInNewContext(`(function(require,module,exports){${r.outputFiles[0].text}\n})`, { console, URL, URLSearchParams, process })(require, loaded, loaded.exports);
   return loaded.exports.default;

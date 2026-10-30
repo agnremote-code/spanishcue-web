@@ -2,7 +2,7 @@ import { bi } from './bilingual.mjs';
 import { A0_ROWS } from './pedagogy-a0.mjs';
 import { A2_ROWS } from './pedagogy-a2.mjs';
 import { A1_LABELS, A1_WORDS } from './pedagogy-a1.mjs';
-import { placeTalk } from './talk/index.mjs';
+import { placeTalk } from './talk/core.mjs';
 
 // Authoritative two-moment curriculum. Three choice difficulty bands and six
 // independently authored personal prompts per interaction; no fictional continuations.

@@ -6,7 +6,7 @@
 // controls (a radio group) and, without WebGL, carry large illustrations.
 import { Suspense, lazy, useEffect, useRef, useState, type CSSProperties, type KeyboardEvent as ReactKeyboardEvent } from 'react';
 import ItemIcon, { ITEM_META, ITEM_ORDER, isItemId, type ItemId } from './ItemIcon';
-import { ITEMS } from './street.mjs';
+import { ITEMS } from './street-core.mjs';
 import Bi from './Bi';
 
 const ItemStage = lazy(() => import('./ItemStage'));

@@ -1,3 +1,3 @@
-import HospitalGame from './HospitalGame';
+import HospitalPro from './HospitalPro';
 
-export default function Page() { return <HospitalGame />; }
+export default function Page() { return <HospitalPro />; }

@@ -329,7 +329,7 @@ test('no game economy: nothing in the state or the code counts points, lives, ra
   for (const key of keys) assert.equal(banned.test(key), false, `state key ${key}`);
   for (const name of [...Object.keys(engine), ...Object.keys(activities)]) assert.equal(banned.test(name), false, `export ${name}`);
   for (const name of Object.keys(world)) assert.equal(banned.test(name), false, `3D export ${name}`);
-  for (const file of ['World3D.tsx', 'build3d.ts', 'people3d.ts', 'hero3d.ts', 'NocheAbierta.tsx', 'activities.mjs', 'engine.mjs']) {
+  for (const file of ['World3D.tsx', 'build3d.ts', 'people3d.ts', 'hero3d.ts', 'NocheGame.tsx', 'activities.mjs', 'engine.mjs']) {
     // Our own names only: comments and three.js class names are not state.
     const source = (await readFile(`app/noche-abierta/${file}`, 'utf8')).replace(/\/\/.*$/gm, '').replace(/THREE\.\w+/g, '').replace(/\.(?:setFromPoints|getPoints)\b/g, '').replace(/'[^'\n]*'|"[^"\n]*"|`[^`\n]*`/g, '');
     const identifiers = new Set(source.match(/\b[A-Za-z_]\w*\b/g));
@@ -399,7 +399,7 @@ test('the rendered lesson: one question at a time, compact options, help folded,
 });
 
 test('every card can be closed: an X, a small way back and Esc', () => {
-  const source = readFileSync('app/noche-abierta/NocheAbierta.tsx', 'utf8');
+  const source = readFileSync('app/noche-abierta/NocheGame.tsx', 'utf8');
   assert.match(source, /className="na-close"/);
   assert.match(source, /event\.key === 'Escape'/);
   assert.match(source, /Volver a la calle/);
@@ -604,7 +604,7 @@ test('3D world: original procedural assets only, and three.js stays inside appro
   assert.doesNotMatch(duration, /https?:\/\//, 'the duration neighbourhood creates its own geometry without external assets');
   const gallery = readFileSync('app/grammar-classroom/studio/article-world.ts', 'utf8');
   assert.doesNotMatch(gallery, /https?:\/\//, 'the grammar gallery creates its own textures and loads no external models');
-  const lesson = readFileSync('app/noche-abierta/NocheAbierta.tsx', 'utf8');
+  const lesson = readFileSync('app/noche-abierta/NocheGame.tsx', 'utf8');
   assert.match(lesson, /import\('\.\/World3D'\)/, 'the 3D street is loaded on demand');
   assert.doesNotMatch(lesson, /^import (?!type )[^\n]*from '\.\/World3D'/m, 'only its type is imported eagerly');
   assert.match(lesson, /webglAvailable\(\)/, 'no WebGL means the map fallback');
@@ -841,7 +841,7 @@ test('the people speak their lines, not the questions to the learner; the Spanis
   const streetCard = readFileSync('app/noche-abierta/StreetCard.tsx', 'utf8');
   assert.match(streetCard, /speakLines\(spoken/, 'the street card reads the reply and the next line');
   assert.doesNotMatch(streetCard, /speakLines\([^)]*talk\b/, 'the closing questions are not read');
-  const lesson = readFileSync('app/noche-abierta/NocheAbierta.tsx', 'utf8');
+  const lesson = readFileSync('app/noche-abierta/NocheGame.tsx', 'utf8');
   assert.match(lesson, /speakLines\(\[situation\]/, 'the situation of a place is read');
   assert.match(lesson, /speakLines\(\[event\.text\]/, 'the city event is read');
   assert.doesNotMatch(lesson, /speakLines\(\[[^\]]*(prompt|close)\b/, 'no question to the learner is read');
