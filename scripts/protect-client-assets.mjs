@@ -62,6 +62,8 @@ const publicRoots = new Set([
   "app/immersive/CityDemo.tsx",
   "app/immersive/DemoScene.tsx",
   "app/immersive/ProDiscovery.tsx",
+  // Free-version bar above every browsing page for non-PRO visitors: copy and a /pricing link only.
+  "app/marketing/FreeVersionBar.tsx",
   "app/immersive/PremiumPanel.tsx",
   // Free hospital demo: geometry, the reception card and the PRO panel; the
   // reception scene text arrives as page props, the World3D chunk is dynamic.

@@ -76,6 +76,7 @@ export function filterReviewedChanges(findings, reviewed) {
  */
 export const APPROVAL_MANIFESTS = [
   'docs/audits/google-teachers-free-grammar-english-additions-20261030.json',
+  'docs/audits/free-version-bar-english-additions-20261030.json',
   'docs/audits/academias-english-additions-20261023.json',
   'docs/audits/academias-panel-english-additions-20261023.json',
   'docs/audits/academias-bauti-english-additions-20261023.json',

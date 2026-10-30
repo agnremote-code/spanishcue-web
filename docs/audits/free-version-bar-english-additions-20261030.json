@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "authorization": "Owner standing approval (Ale) for new English copy, typed «apruebo (siempre de ahora en más apruebo)» in the project thread «Biblioteca» on 2026-10-22 (message cmsg_01Gr5R4j3t2Yet65UcmhcVhAAAbp6kqDfMqxzNm3PL6f5g). Applied to the free-version bar Ale asked for on 2026-10-30 (message cmsg_01Gr5R4j3t2Yet65UcmhcVhA873Rip2AoRHXJZk6VWmccU).",
+  "additions": [
+    {
+      "path": "app/marketing/FreeVersionBar.tsx",
+      "text": "SpanishCue free version"
+    },
+    {
+      "path": "app/marketing/FreeVersionBar.tsx",
+      "text": "Free version"
+    },
+    {
+      "path": "app/marketing/FreeVersionBar.tsx",
+      "text": " · Try the lessons marked FREE."
+    },
+    {
+      "path": "app/marketing/FreeVersionBar.tsx",
+      "text": "Unlock everything · US$15.50/month →"
+    }
+  ]
+}
