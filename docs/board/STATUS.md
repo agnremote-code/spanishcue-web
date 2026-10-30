@@ -86,7 +86,7 @@ All five run on `claude-opus-5-5`, follow [ROUTINES.md](ROUTINES.md), and each i
     - Beyond the Feria pattern: the PMREM render target is now disposed as a target (its depth buffer survived `texture.dispose()`).
     - Checks at `32425242`: `npm test` exit 0 (1,365 pass, 0 fail, `SPANISHCUE_TEST_WORKER_TIMEOUT_MS=180000`); `validate:artifact` OK; lint clean on changed files; `tsc` only the 3 errors already on main; diff-check clean. Regression test fails on main.
   - **Weekly assessment:** [assessments/2026-W44.md](assessments/2026-W44.md). Board: 3 units in production by type (#284 SEO, #287 and #290 repairs), 1 strictly gated (#287), plus this repair if it deploys; 0 new worlds. Non-board #292 shipped A0–C2 `featured:true` with no LQG file.
-  - **Release:** see the PR for this branch; the result is recorded below once verified.
+  - **Release (VERIFIED):** #293 merged as `285c2790` (CI + Auto Merge 40991519054). Staging 40992840393 and production 40993143516 both succeeded. The production smoke on https://spanishcue.com returned `"passed": true`, with `/hospital-san-casi-vivo` 302 and its `/resources` page 200, and the rollback was skipped. main = production = `285c2790`. PUBLISHED.md updated by the records PR from `claude/friday-assessment-records-20261030`.
   - **Found, not fixed:** Hospital has no `webglcontextlost` handler (review NB4): a runtime context loss freezes the world instead of falling back to 2D.
   - **Next action (W45 plan, assessment §6):**
     1. Mon 11-02 3D slot: unblock Ascensor: renumber #282 off id 243, then the Actions speech-to-text + speaker check with a seeded-defect test and a §9.2 board decision (assessment §4.6). Release only if every clip passes.

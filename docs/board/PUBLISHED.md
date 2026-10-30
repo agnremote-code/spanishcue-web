@@ -17,16 +17,18 @@ Entry format:
 
 ## Pending verification
 
+_None._
+
+## Published
+
 ## 2026-10-30 — «Hospital San Casi Vivo»: the 3D world frees the GPU on unmount (repair)
 - URL(s): https://spanishcue.com/hospital-san-casi-vivo (PRO; anonymous users → /acceso).
 - Level(s) / objectives: unchanged. No lesson content changed.
-- PR / merged SHA / production deploy run: pending.
-- Production smoke evidence: pending.
+- PR / merged SHA / production deploy run: PR #293 → `285c2790cb417bfa755edec125c393875926bf6f`; CI + Auto Merge 40991519054, Deploy Staging 40992840393, Deploy Production 40993143516, all successful.
+- Production smoke evidence: the production workflow's `scripts/production-smoke.mjs` run against https://spanishcue.com (job 123860031501, 2026-10-30T02:44Z) returned `"passed": true`, including `/hospital-san-casi-vivo` 302 and `/resources/spanish-conversation-activity-a0-c2-hospital-san-casi-vivo` 200. The lesson-reports smoke passed too, and the rollback was skipped.
 - Concept file / LQG review file: [docs/audits/hospital-san-casi-vivo-repair-gpu-20261030.md](../audits/hospital-san-casi-vivo-repair-gpu-20261030.md).
 - Built by / reviewed by: facilitator / Alejandro (code review APPROVE).
 - Known limitations: client-side fix; the before/after evidence comes from the SwiftShader browser check, not a real device.
-
-## Published
 
 ## 2026-10-28 — «La feria de Villaluz»: the 3D world frees the GPU on unmount (repair)
 - URL(s): https://spanishcue.com/la-feria-de-villaluz (PRO; anonymous users → /acceso).
