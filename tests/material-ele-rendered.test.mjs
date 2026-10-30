@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import {JSDOM} from 'jsdom';
 const origin=process.env.CHESPANISH_TEST_ORIGIN || 'http://127.0.0.1:8787';
-const slugs=['a1','a2','b1','b2','c1','c2','ser-y-estar','indefinido-e-imperfecto','subjuntivo','por-y-para','preguntas-de-conversacion','juegos-para-clase-de-espanol','primera-clase-de-espanol','gustar','imperativo','pronombres-de-objeto','conectores','estilo-indirecto'];
+const slugs=['a1','a2','b1','b2','c1','c2','ser-y-estar','indefinido-e-imperfecto','subjuntivo','por-y-para','preguntas-de-conversacion','juegos-para-clase-de-espanol','primera-clase-de-espanol','gustar','imperativo','pronombres-de-objeto','conectores','estilo-indirecto','comprension-auditiva'];
 for(const path of ['/material-ele','/alternativa-a-profedeele',...slugs.map(s=>'/material-ele/'+s)])test(`material ELE serves indexable Spanish HTML for anonymous visitors: ${path}`,async()=>{
  const response=await fetch(origin+path);assert.equal(response.status,200);
  assert.equal(response.headers.get('cache-control'),'public, max-age=0, must-revalidate');assert.ok(!response.headers.has('set-cookie'));
