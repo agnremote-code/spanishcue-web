@@ -6,7 +6,7 @@ const m=await import('data:text/javascript;base64,'+Buffer.from(r.outputFiles[0]
 
 test('the Spanish ELE cluster is in the sitemap, Spanish-first, indexable and edge-cached',()=>{
  const urls=new Set(m.sitemap().map(x=>x.url));
- for(const path of [m.MATERIAL_ELE_PATH,...m.elePages.map(p=>p.path)]){
+ for(const path of ['/alternativa-a-profedeele',m.MATERIAL_ELE_PATH,...m.elePages.map(p=>p.path)]){
   assert.ok(urls.has('https://spanishcue.com'+path),path);
   assert.equal(m.isEnglishDefaultPath(path),false,path);
   assert.equal(m.isSearchPrivatePath(path),false,path);
