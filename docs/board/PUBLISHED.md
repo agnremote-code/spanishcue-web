@@ -17,7 +17,14 @@ Entry format:
 
 ## Pending verification
 
-_None._
+## 2026-10-30 — «Hospital San Casi Vivo»: the 3D world frees the GPU on unmount (repair)
+- URL(s): https://spanishcue.com/hospital-san-casi-vivo (PRO; anonymous users → /acceso).
+- Level(s) / objectives: unchanged. No lesson content changed.
+- PR / merged SHA / production deploy run: pending.
+- Production smoke evidence: pending.
+- Concept file / LQG review file: [docs/audits/hospital-san-casi-vivo-repair-gpu-20261030.md](../audits/hospital-san-casi-vivo-repair-gpu-20261030.md).
+- Built by / reviewed by: facilitator / Alejandro (code review APPROVE).
+- Known limitations: client-side fix; the before/after evidence comes from the SwiftShader browser check, not a real device.
 
 ## Published
 
