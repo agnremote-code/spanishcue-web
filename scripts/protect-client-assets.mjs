@@ -63,9 +63,15 @@ const publicRoots = new Set([
   "app/immersive/DemoScene.tsx",
   "app/immersive/ProDiscovery.tsx",
   "app/immersive/PremiumPanel.tsx",
-  // Free hospital demo: geometry, the reception card and the PRO panel; the
-  // reception scene text arrives as page props, the World3D chunk is dynamic.
-  "app/hospital-san-casi-vivo/HospitalDemo.tsx",
+  // Free Noche abierta: the PRO game itself. Its street scenes are not in any
+  // chunk: the free ones arrive as public/noche-abierta/demo-calle.json and
+  // the PRO class registers the rest from NocheAbierta.tsx (private).
+  "app/noche-abierta/NocheDemo.tsx",
+  "app/noche-abierta/World3D.tsx",
+  "app/noche-abierta/ItemStage.tsx",
+  // Free hospital: the PRO game itself. Its scene texts and people are not in
+  // any chunk: the free ones arrive as public/hospital-san-casi-vivo/demo.json.
+  "app/hospital-san-casi-vivo/HospitalFree.tsx",
   "app/hospital-san-casi-vivo/World3D.tsx",
   // Google Search landing: the client chunk carries only the guided-tour
   // script and checkout UI; the free demo scene and catalog titles arrive
@@ -180,18 +186,16 @@ for (const key of publicRoots) {
 
 // Test the actual multi-entry build graph, not only an isolated tree-shaken
 // demo bundle: mixed geometry/content modules can become shared public chunks.
-const paidStreetTitles = [];
-for (const part of ["norte", "centro", "sur"]) {
-  const {default: encounters} = await import(`../app/noche-abierta/street/caos-${part}.mjs`);
-  paidStreetTitles.push(...encounters.map(encounter => encounter.title));
-}
-// Hospital demo: only the reception scene is free; no other scene may ship publicly.
+// No Noche street scene ships in a chunk: free ones come from the demo JSON.
+const {ALL_ENCOUNTERS} = await import("../app/noche-abierta/street.mjs");
+// A title that is also a street shout of the public world (events.mjs, e.g.
+// «¡Ladrón! ¡Mi bolso!») is ambient sound, not the scene.
+const streetShouts = await readFile("app/noche-abierta/events.mjs", "utf8");
+const paidStreetTitles = ALL_ENCOUNTERS.map(encounter => encounter.title).filter(title => !streetShouts.includes(`"${title}"`));
+// Hospital: no scene text ships in a chunk; free ones come from the demo JSON.
 const {CONTENT: hospitalLevels} = await import("../app/hospital-san-casi-vivo/levels.mjs");
 for (const scenes of Object.values(hospitalLevels)) {
-  for (const [id, scene] of Object.entries(scenes)) {
-    if (id === "recepcion") continue;
-    paidStreetTitles.push(typeof scene.line === "string" ? scene.line : scene.line.es);
-  }
+  for (const scene of Object.values(scenes)) paidStreetTitles.push(typeof scene.line === "string" ? scene.line : scene.line.es);
 }
 for (const file of publicFiles) {
   if (!file.endsWith(".js")) continue;

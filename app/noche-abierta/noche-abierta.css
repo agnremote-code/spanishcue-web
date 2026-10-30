@@ -575,3 +575,8 @@ button.na-inv:active { transform: translateY(1px); }
 @media (max-width: 640px) { .na-card .gq-q.na-ask { font-size: 17px; } }
 /* Someone you crashed into, yelling at you. */
 .na-bubble.is-angry { background: #c81e1e; color: #fff; box-shadow: 0 10px 26px #0009, 0 0 0 2px #ffd2c8 inset; }
+
+/* Free class: the same game, with an unlock button and a note on what is PRO. */
+.na-tool.na-tool-pro { background: #f2b632; color: #1d1606; border-color: #f2b632; font-weight: 600; }
+.na-demo-note { margin: 6px 0 0; font-size: 13px; opacity: .85; }
+.na-demo-loading { min-height: 100vh; display: grid; place-content: center; gap: 16px; text-align: center; }

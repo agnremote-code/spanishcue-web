@@ -14,7 +14,7 @@ import {
   castSpots, districtAt, emergencyRoute, groupMembers, makeWalkers, pathLength, placementOf, pointOnPath, stepCityTraffic, stepWalkers, trafficCar,
   type MovingVehicle, type Walker,
 } from './city.mjs';
-import { ENCOUNTERS, hasA0, heartsUsed, isAvailable, moodOf, type CastMember, type Change, type Encounter, type ItemId, type Mood, type OpeningFx, type StreetState } from './street.mjs';
+import { ENCOUNTERS, hasA0, heartsUsed, isAvailable, moodOf, type CastMember, type Change, type Encounter, type ItemId, type Mood, type OpeningFx, type StreetState } from './street-core.mjs';
 import { TRAFFIC, insideBuilding, type Box } from './world3d.mjs';
 import { addBlobShadow, animatePerson, createPerson, lookFromCast, randomLook, setMood, setPose, type Person } from './people3d';
 import { animateAnimal, createAnimal, type Animal } from './animals3d';
@@ -42,8 +42,8 @@ const GONE: Change[] = ['corre', 'se-va', 'huye'];
 
 const radians = (a: number) => Math.atan2(Math.sin(a), Math.cos(a));
 const faceTo = (from: { x: number; z: number }, to: { x: number; z: number }) => Math.atan2(to.x - from.x, to.z - from.z);
-const castSizes: Record<string, number> = Object.fromEntries(ENCOUNTERS.map(item => [item.id, item.cast.length]));
-export const CAST_SIZES = castSizes;
+// Read when the world is built: the scenes are registered before that.
+export const castSizes = (): Record<string, number> => Object.fromEntries(ENCOUNTERS.map(item => [item.id, item.cast.length]));
 
 // One baked mesh for a person seen from afar: every part of the full body,
 // in its current pose, merged with its colours into a single geometry.
@@ -151,6 +151,8 @@ export function createStreetCrowd(scene: THREE.Scene, night: Night, options: { l
     escena: new THREE.MeshBasicMaterial({ color: '#ffffff', transparent: true, opacity: 0.6, depthWrite: false, blending: THREE.AdditiveBlending }),
     rincon: new THREE.MeshBasicMaterial({ color: '#f4f1ff', transparent: true, opacity: 0.4, depthWrite: false, blending: THREE.AdditiveBlending }),
     door: new THREE.MeshBasicMaterial({ color: '#ffe2a8', transparent: true, opacity: 0.45, depthWrite: false, blending: THREE.AdditiveBlending }),
+    // Free class: a PRO scene glows gold.
+    locked: new THREE.MeshBasicMaterial({ color: '#f2b632', transparent: true, opacity: 0.7, depthWrite: false, blending: THREE.AdditiveBlending }),
   };
   // A soft column of light above a scene, so you can spot it from afar.
   const beamTexture = (() => {
@@ -214,7 +216,7 @@ export function createStreetCrowd(scene: THREE.Scene, night: Night, options: { l
     const spots = castSpots(encounter.id, Math.max(1, encounter.cast.length)).map(spot => ({ x: spot.x, z: spot.z, y: spot.y ?? place.y, face: spot.face }));
     const group = new THREE.Group();
     root.add(group);
-    const rig: EncounterRig = { encounter, spots, bodies: [], animals: [], ring: new THREE.Mesh(ringGeometry, encounter.kind === 'escena' ? ringMaterials.escena : ringMaterials.rincon), beacon: null, extra: group, walk: place.walk ? { t: 0, dir: 1 } : null, leaving: null, lantern: null, fx: null };
+    const rig: EncounterRig = { encounter, spots, bodies: [], animals: [], ring: new THREE.Mesh(ringGeometry, encounter.locked ? ringMaterials.locked : encounter.kind === 'escena' ? ringMaterials.escena : ringMaterials.rincon), beacon: null, extra: group, walk: place.walk ? { t: 0, dir: 1 } : null, leaving: null, lantern: null, fx: null };
     if (!place.nobody) encounter.cast.forEach((member: CastMember, i: number) => {
       const spot = spots[i] ?? spots[0];
       if (member.kind === 'animal') {
@@ -550,6 +552,7 @@ export function createStreetCrowd(scene: THREE.Scene, night: Night, options: { l
     ringMaterials.escena.opacity = 0.55 + pulse;
     ringMaterials.rincon.opacity = 0.34 + pulse * 0.6;
     ringMaterials.door.opacity = 0.42 + pulse * 0.5;
+    ringMaterials.locked.opacity = 0.6 + pulse;
 
     // The scenes: built when you get near, kept afterwards.
     for (const encounter of ENCOUNTERS) {
@@ -813,7 +816,7 @@ export function createStreetCrowd(scene: THREE.Scene, night: Night, options: { l
       const place = PLACEMENTS[id];
       if (!visible(encounter, ctx.street, ctx.eventId) || ctx.street.done[id]) continue;
       // A0 plays only the scenes written for it; the other people stay as the life of the street.
-      if (ctx.level === 'A0' && !hasA0(id)) continue;
+      if (ctx.level === 'A0' && !hasA0(id) && !encounter.locked) continue;
       if (place.room ? ctx.room !== place.room : Boolean(ctx.room)) continue;
       const spot = spotFor(rig);
       out.push({ id: `calle:${id}`, x: spot.x, z: spot.z, radius: encounter.kind === 'escena' ? 1.5 : 1.3, key: 'E', verb: encounter.verb, name: encounter.title, encounter: id, kind: encounter.kind });

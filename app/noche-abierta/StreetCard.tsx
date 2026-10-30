@@ -9,7 +9,7 @@ import Bi from './Bi';
 import { enOf, esOf } from './bilingual.mjs';
 import { speakLines, stopSpeaking } from './voice';
 import type { Level } from './engine.mjs';
-import { encounterById, itemById, streetView, type StreetState } from './street.mjs';
+import { encounterById, itemById, streetView, type StreetState } from './street-core.mjs';
 import ItemIcon from './ItemIcon';
 import GeneralQuestions from '../conversacion-general/GeneralQuestions';
 

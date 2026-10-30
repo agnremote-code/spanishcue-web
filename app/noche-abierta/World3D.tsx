@@ -15,12 +15,12 @@ import {
   type Box, type Hotspot, type RoomExit, type RoomLayout, type Target,
 } from './world3d.mjs';
 import { CANAL, CEILINGS, CITY_BUILDINGS, DISTRICT_ZONES, ROADS, STREET_ROOMS, districtAt, streetRoomLayout, type MovingVehicle } from './city.mjs';
-import { ambientReaction, openingFx, type ItemId, type StreetState } from './street.mjs';
+import { ambientReaction, openingFx, type ItemId, type StreetState } from './street-core.mjs';
 import Bi from './Bi';
 import { speakLines } from './voice';
 import { buildCity, buildInterior, placePerson, placeVehicle, type City, type Interior } from './build3d';
 import { buildDistricts, buildStreetRoom } from './district3d';
-import { CAST_SIZES, createStreetCrowd, type StreetSpot } from './streetlife';
+import { castSizes, createStreetCrowd, type StreetSpot } from './streetlife';
 import { createStreetEvents } from './events3d';
 import { createDrivables, type Drivable } from './drive3d';
 import { BOARD_RADIUS, OWNER_SHOUT_AFTER, POLICE_AFTER, SPECS, dismountSpot, playerHeading, stepVehicle } from './drive.mjs';
@@ -186,7 +186,7 @@ export default function World3D(props: WorldProps) {
 
     const hero = createHero(!low);
     scene.add(hero.root);
-    const boxes: Box[] = colliders(CAST_SIZES);
+    const boxes: Box[] = colliders(castSizes());
     const taxiBox = boxes.find(item => item.vehicle === 'taxi')!;
     const crowd = createStreetCrowd(scene, city.night, { low, boxes });
     boxes.push(...crowd.movingBoxes);
