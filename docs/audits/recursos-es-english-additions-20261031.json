@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "authorization": "Owner approval (Ale), standing approval of English copy typed in the project thread «Posicionar SpanishCue en el top 5 de Google» on 2026-10-31 04:32Z (message cmsg_01Gr5R4j3t2Yet65UcmhcVhADrhouHhTwEhR7AdUoecTVb: «si apruebo todo segui con todo y aun mas»), plus the standing approval of 2026-10-22 (message cmsg_01Gr5R4j3t2Yet65UcmhcVhAAAbp6kqDfMqxzNm3PL6f5g). No new English wording: the existing /resources catalog strings moved into a locale table so the same component can render the Spanish /recursos hub.",
+  "additions": [
+    {
+      "path": "app/resources/ResourceCatalog.tsx",
+      "text": "Search"
+    },
+    {
+      "path": "app/resources/ResourceCatalog.tsx",
+      "text": "Level"
+    },
+    {
+      "path": "app/resources/ResourceCatalog.tsx",
+      "text": "Skill"
+    },
+    {
+      "path": "app/resources/ResourceCatalog.tsx",
+      "text": "All levels"
+    },
+    {
+      "path": "app/resources/ResourceCatalog.tsx",
+      "text": "All skills"
+    },
+    {
+      "path": "app/resources/ResourceCatalog.tsx",
+      "text": "resources"
+    },
+    {
+      "path": "app/resources/ResourceCatalog.tsx",
+      "text": "Free"
+    },
+    {
+      "path": "app/resources/ResourceCatalog.tsx",
+      "text": "Available in"
+    },
+    {
+      "path": "app/resources/ResourceCatalog.tsx",
+      "text": "No resources match these filters. Try another level or topic."
+    },
+    {
+      "path": "app/resources/ResourceCatalog.tsx",
+      "text": "Find teaching resources"
+    }
+  ]
+}

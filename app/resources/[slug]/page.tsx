@@ -6,6 +6,7 @@ import { isFreeLesson, localLessonPath } from "../../access-policy";
 import { conversationFamilyByLessonId } from "../../conversation-families/catalog";
 import { conversationLessonHref, resolveConversationLevel } from "../../conversation-families/navigation";
 import { breadcrumbSchema } from "../../growth/schema";
+import { languageAlternates } from "../../seo";
 import {
   immersiveWorldListeningLevels,
   isImmersiveWorld,
@@ -46,7 +47,7 @@ export async function generateMetadata({ params }: ResourcePageProps): Promise<M
   return {
     title,
     description,
-    alternates: { canonical },
+    alternates: { canonical, languages: languageAlternates(resourcePathForLesson(lesson)) },
     openGraph: {
       title,
       description,
