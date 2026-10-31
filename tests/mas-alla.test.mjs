@@ -147,3 +147,27 @@ test('everyone you see has a circle: every extra and walker of the Cielo and the
   assert.ok(world.includes("flames = id === 'infierno'"), 'the circles of the Infierno are made of flames');
   assert.ok(game.includes('<Voz '), 'a voice opens its own card');
 });
+
+test('nobody is inside an object: the death scene, the dock, the dais and the queue', () => {
+  const intro = readFileSync('app/mas-alla/intro3d.ts', 'utf8');
+  const num = (re) => Number(intro.match(re)?.[1]);
+  // Measured with a vertex check in the browser (2026-10-31): her body rests at 0.84 on a 0.83 mattress,
+  // her legs fit under a hollow blanket, seated hips clear a 0.36 seat, and the soul starts above the blanket.
+  assert.ok(num(/CHAIR = \{ seat: ([\d.]+)/) <= 0.36, 'seated hips would sink into the chair');
+  const blanket = intro.match(/BLANKET = \{ y: ([\d.]+), z: ([-\d.]+), len: ([\d.]+), rx: ([\d.]+), ry: ([\d.]+) \}/).slice(1).map(Number);
+  assert.deepEqual([blanket[0], blanket[3] >= 0.45, blanket[4] >= 0.42], [0.83, true, true]);
+  assert.match(intro, /CylinderGeometry\(BLANKET\.rx, BLANKET\.rx, BLANKET\.len, 22, 1, true/, 'the blanket is a hollow tent, not a solid block');
+  assert.match(intro, /SOUL_Y = BLANKET_TOP \+/);
+  assert.match(intro, /bed\.add\(box\(1\.0, 0\.34, 2\.05/, 'the mattress top is at 0.83');
+  for (const m of intro.matchAll(/x: (-?[\d.]+), z: [-\d.]+, h: [^,]+, pose: 'sit'/g)) assert.ok(Math.abs(Number(m[1])) >= 1.1, 'a sitter too close to the bed');
+  assert.match(intro, /setPose\(kin\[1\], 'cry', true\)/, 'the grandfather keeps sitting when he cries, never standing inside his chair');
+  // In the Infierno, Caronte stands on the dock and Lucero on the top step, clear of the throne.
+  const inf = L.layoutOf('infierno');
+  const trono = inf.spots.find(s => s.id === 'trono').talker, barca = inf.spots.find(s => s.id === 'barca').talker;
+  assert.deepEqual([barca.y, trono.y], [0.2, 0.9]);
+  const throne = inf.solids.find(b => b.kind === 'throne');
+  assert.ok(trono.z - 0.8 >= throne.z1 && trono.z <= -42.2 - 0.2, 'Lucero stands on the top step, in front of the throne');
+  const infierno = readFileSync('app/mas-alla/infierno3d.ts', 'utf8');
+  for (const e of inf.extras) assert.ok(!infierno.includes(`cylinder(0.05, 0.05, 3.3, iron, ${e.x}, 1.65, `) || Math.abs(e.z - 30.05) > 0.4, 'a pole goes through someone in the queue');
+  assert.match(readFileSync('app/mas-alla/figures3d.ts', 'utf8'), /person\.root\.position\.set\(path\[0\]\.x, 0, path\[0\]\.z\)/, 'walkers start on their path');
+});

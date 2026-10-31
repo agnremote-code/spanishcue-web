@@ -149,6 +149,7 @@ export function figure(kind: Kind, seed: number, look: Partial<Look> | null, war
   else if (kind === 'demon') makeDemon(person, seed);
   else makeSoul(person, seed, warm);
   if (!shadows) addBlobShadow(person, kind === 'angel' ? 1.3 : 1);
+  person.root.userData.person = true;
   return { person, body: String(full.body ?? 'm') };
 }
 
@@ -167,6 +168,8 @@ export function walkerOf(parent: THREE.Object3D, kind: Kind, path: { x: number; 
   const { person, body } = figure(kind, seed, null, warm, false);
   setPose(person, 'walk');
   setMood(person, kind === 'demon' ? 'angry' : kind === 'angel' ? 'smile' : warm ? 'neutral' : 'sad');
+  // Start on the path, never parked at the origin until the first step.
+  person.root.position.set(path[0].x, 0, path[0].z);
   parent.add(person.root);
   return { person, path, speed, at: random(seed)() * path.length, x: path[0].x, z: path[0].z, heading: 0, seed, body, pause: 0, moving: true };
 }

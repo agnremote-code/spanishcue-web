@@ -37,7 +37,7 @@ export function buildInfierno({ low, shadows }: { low: boolean; shadows: boolean
   // A road of worn flagstones from the gate down to the throne.
   const flag = veinTexture('#2a1e1a', 'rgba(0,0,0,.6)', 41, 256, 30, 3); flag.repeat.set(1, 18);
   const road = new THREE.Mesh(new THREE.BoxGeometry(4.4, 0.08, 104), new THREE.MeshStandardMaterial({ map: flag, roughness: 0.9 }));
-  road.position.set(0, 0.04, 8); group.add(road);
+  road.position.set(0, -0.028, 8); group.add(road); // top at 0.012: feet on it, never in it
 
   // ---------------------------------------------------------------- lava
   const lava = lavaMaterial();
@@ -112,8 +112,9 @@ export function buildInfierno({ low, shadows }: { low: boolean; shadows: boolean
   // The number display: «Atendiendo al 000.001 · Su número: 9.999.999.999».
   const numbers = canvas(512, 128, ctx => { ctx.fillStyle = '#0b0303'; ctx.fillRect(0, 0, 512, 128); ctx.fillStyle = '#ff3a1a'; ctx.font = '700 40px ui-monospace, monospace'; ctx.textAlign = 'center'; ctx.fillText('ATENDIENDO: 000.001', 256, 52); ctx.font = '700 26px ui-monospace, monospace'; ctx.fillStyle = '#ffb040'; ctx.fillText('SU NÚMERO: 9.999.999.999', 256, 100); });
   const display = new THREE.Mesh(new THREE.PlaneGeometry(2.6, 0.65), new THREE.MeshBasicMaterial({ map: numbers, toneMapped: false }));
-  display.position.set(18, 3.6, 30); group.add(display);
-  group.add(cylinder(0.05, 0.05, 3.3, iron, 18, 1.65, 30.05, 6));
+  display.position.set(19.6, 3.6, 30); group.add(display);
+  // The pole stands beside the queue, never through someone in it.
+  group.add(cylinder(0.05, 0.05, 3.3, iron, 19.6, 1.65, 30.05, 6));
   // Filing cabinets and papers falling for ever.
   for (let k = 0; k < 4; k++) group.add(box(0.9, 2 + (k % 2) * 0.5, 0.7, solid('#5a5048', 0.5, 0.4), 22.6, 1.1, 32 + k * 1.1, false));
   const paperMat = new THREE.MeshBasicMaterial({ color: '#e8dcc0', side: THREE.DoubleSide });

@@ -356,11 +356,14 @@ export function populate(group: THREE.Group, id: string, warm: boolean, shadows:
   const talkers: Talker[] = [];
   const walkers: VoiceWalker[] = [];
   const voices = voicesFor(id);
-  L.spots.forEach((s: { id: string; pose: string; talker: { x: number; z: number; heading: number } }, i: number) => {
+  L.spots.forEach((s: { id: string; pose: string; talker: { x: number; z: number; heading: number; y?: number } }, i: number) => {
     const castId = spotCast(s.id);
     const member = CAST[castId];
     const mood = member.kind === 'demon' ? (castId === 'lucero' ? 'neutral' : 'smile') : member.kind === 'angel' ? 'smile' : castId === 'ramiro' || castId === 'valeria' ? 'sad' : 'neutral';
-    talkers.push(talkerOf(group, member.kind as Kind, s.id, s.talker.x, s.talker.z, s.talker.heading, 700 + i * 13, member.look, s.pose, mood, warm, shadows));
+    const talker = talkerOf(group, member.kind as Kind, s.id, s.talker.x, s.talker.z, s.talker.heading, 700 + i * 13, member.look, s.pose, mood, warm, shadows);
+    // Someone on a dock or a dais stands on it, not inside it.
+    if (s.talker.y) talker.person.root.position.y = s.talker.y;
+    talkers.push(talker);
   });
   for (const e of L.extras as { seed: number; kind: Kind; x: number; z: number; heading: number; pose: string }[]) {
     const mood = e.kind === 'demon' ? 'angry' : e.kind === 'angel' ? 'smile' : warm ? (e.pose === 'hug' ? 'love' : 'smile') : e.pose === 'cry' ? 'sad' : 'worried';
