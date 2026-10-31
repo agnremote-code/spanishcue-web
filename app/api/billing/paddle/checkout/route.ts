@@ -2,10 +2,11 @@ import { env } from "cloudflare:workers";
 import { accountIdFromHeaders, fullAccessFromHeaders, safeRelativeReturnPath } from "../../../../access-policy";
 import { billingConfig, billingReadiness } from "../../../../billing-config";
 import { legalOperator } from "../../../../legal/operator";
-import { paddleConfig, paddleReady, type PaddleOffer } from "../../../../paddle-config";
+import { paddleAnnualReady, paddleConfig, paddleReady, type PaddleOffer } from "../../../../paddle-config";
 import { createPaddleCheckoutTransaction, getPaddleTransaction, paddleOffer, sanitizePaddleAttribution, type PaddleAttribution } from "../../../../paddle-server";
 import { getFounderOfferStatus } from "../../../../../db/billing";
 import { authorizePurchaseClaim, getOrCreatePurchaseClaim } from "../../../../purchase-claim-cookie";
+import { referralCodeFromCookie } from "../../../../referrals-server";
 import { lockPurchaseCheckout, markPurchaseCheckout, releasePurchaseCheckout } from "../../../../../db/purchase-claims";
 
 export const dynamic = "force-dynamic";
@@ -42,13 +43,15 @@ export async function POST(request: Request) {
   let returnTo = "/";
   let offer: PaddleOffer = "monthly";
   let attribution: PaddleAttribution = {};
+  const referralCode = referralCodeFromCookie(request.headers.get("cookie"));
   try {
     const raw = await request.text();
     if (raw.length > 3000) throw new Error("invalid_request");
     const requested = JSON.parse(raw) as { returnTo?: unknown; offer?: unknown; priceId?: unknown; attribution?: unknown };
     attribution = sanitizePaddleAttribution(requested.attribution);
-    if (requested.priceId !== undefined || (requested.offer !== undefined && requested.offer !== "monthly" && requested.offer !== "trial")) throw new Error("invalid_offer");
-    offer = requested.offer === "trial" ? "trial" : "monthly";
+    if (requested.priceId !== undefined || (requested.offer !== undefined && requested.offer !== "monthly" && requested.offer !== "trial" && requested.offer !== "annual")
+      || (requested.offer === "annual" && !paddleAnnualReady(paddle))) throw new Error("invalid_offer");
+    offer = requested.offer === "trial" ? "trial" : requested.offer === "annual" ? "annual" : "monthly";
     returnTo = safeRelativeReturnPath(typeof requested.returnTo === "string" && requested.returnTo.length <= 300 ? requested.returnTo : null);
   } catch { return Response.json({ error: "Solicitud no válida." }, { status: 400 }); }
 
@@ -72,7 +75,7 @@ export async function POST(request: Request) {
       if (!locked) return Response.json({ error: "Estamos preparando tu pago. Vuelve a intentarlo en unos segundos." }, { status: 409, headers });
       try {
         const transactionId = await createPaddleCheckoutTransaction(paddle, {
-          claimId: claim.claimId, offerCode: billing.founderOffer.code, offer, attribution,
+          claimId: claim.claimId, offerCode: billing.founderOffer.code, offer, attribution, referralCode,
         });
         await markPurchaseCheckout(env.DB, claim.claimId, "paddle", { paymentId: transactionId });
         return Response.json({ transactionId, clientToken: paddle.clientToken }, { headers });
@@ -86,6 +89,7 @@ export async function POST(request: Request) {
       offer,
       offerCode: billing.founderOffer.code,
       attribution,
+      referralCode,
     });
     return Response.json(
       { transactionId, clientToken: paddle.clientToken },

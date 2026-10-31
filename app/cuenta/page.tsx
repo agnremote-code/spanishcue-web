@@ -2,7 +2,7 @@ import { env } from "cloudflare:workers";
 import { headers } from "next/headers";
 import { redirect } from "next/navigation";
 import Link from "next/link";
-import { getUserSessionFromHeaders, isFreeLesson, localLessonPath, signedInFromHeaders } from "../access-policy";
+import { accountIdFromHeaders, getUserSessionFromHeaders, isFreeLesson, localLessonPath, signedInFromHeaders } from "../access-policy";
 import type { AccountAccess } from "../account-types";
 import { SpanishCueBrand } from "../SpanishCueBrand";
 import LogoutButton from "../LogoutButton";
@@ -12,6 +12,7 @@ import { localeFromHeaders } from "../i18n/messages";
 import { lessons } from "../lesson-catalog";
 import { catalogLessons } from "../conversation-families/catalog";
 import { resolveFirebaseAccount } from "../../db/accounts";
+import { referralSummary } from "../../db/referrals";
 import "./style.css";
 import SubscriptionManager from "./SubscriptionManager";
 import { DASHBOARD_TABS, dashboardTabFromValue, dashT, dateLabel, type DashKey, type DashLesson, type DashboardTab } from "./copy";
@@ -55,6 +56,14 @@ export default async function Account({
   try {
     if (session.userId) access = await resolveFirebaseAccount(env.DB, { uid: session.userId, email: session.email ?? "", emailVerified: true, displayName: null });
   } catch { access = null; }
+
+  const accountId = accountIdFromHeaders(requestHeaders);
+  let referral: Awaited<ReturnType<typeof referralSummary>> | null = null;
+  if (tab === "suscripcion" && fullAccess && !session.isOwner && accountId) {
+    try { referral = await referralSummary(env.DB, accountId); } catch { referral = null; }
+  }
+  const referralUrl = referral ? `https://spanishcue.com/invitar/${referral.code}` : "";
+  const es = locale === "es";
 
   const roleLabel = session.isOwner ? t("role.owner") : fullAccess ? t("role.pro") : t("role.free");
   const roleTone = session.isOwner ? "owner" : fullAccess ? "pro" : "free";
@@ -124,6 +133,13 @@ export default async function Account({
                 {!fullAccess && <Link className="cx-btn is-primary" href="/pricing">{t("sub.upgrade")}</Link>}
               </section>
               {!session.isOwner && <SubscriptionManager fullAccess={fullAccess} />}
+              {referral && <section className="cx-panel cx-referral" aria-labelledby="referral-title">
+                <header><h2 id="referral-title">{es ? "Invita a un colega" : "Invite a colleague"}</h2></header>
+                <p>{es ? "Comparte tu enlace. Cuando un profesor se suscribe y paga su primer mes, su segundo mes es gratis y tú también recibes un mes gratis." : "Share your link. When a teacher subscribes and pays their first month, their second month is free and you get a free month too."}</p>
+                <input className="cx-referral-link" readOnly value={referralUrl} aria-label={es ? "Tu enlace de invitación" : "Your invitation link"} />
+                <p className="cx-actions"><a className="cx-btn is-primary" href={`https://wa.me/?text=${encodeURIComponent((es ? "Uso SPANISHCUE para mis clases de español. Con mi enlace tu segundo mes es gratis: " : "I use SPANISHCUE for my Spanish lessons. With my link your second month is free: ") + referralUrl)}`} target="_blank" rel="noopener noreferrer">WhatsApp</a> <a className="cx-btn" href={`mailto:?subject=${encodeURIComponent("SPANISHCUE")}&body=${encodeURIComponent((es ? "Con mi enlace tu segundo mes de SPANISHCUE es gratis: " : "With my link your second month of SPANISHCUE is free: ") + referralUrl)}`}>Email</a></p>
+                <p className="cx-muted">{es ? `Colegas suscritos: ${referral.qualified} · Meses gratis pendientes: ${referral.pending} · Usados: ${referral.used}. El mes gratis se aplica a la suscripción mensual con tarjeta.` : `Colleagues subscribed: ${referral.qualified} · Free months pending: ${referral.pending} · Used: ${referral.used}. The free month applies to the monthly card subscription.`}</p>
+              </section>}
             </div>}
             {tab === "ajustes" && <div className="cx-settings">
               <section className="cx-panel"><header><h2>{t("set.profile")}</h2></header>

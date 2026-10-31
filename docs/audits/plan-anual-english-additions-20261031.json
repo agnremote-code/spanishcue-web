@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "authorization": "Owner standing approval (Ale) for new English copy, typed «apruebo (siempre de ahora en más apruebo)» on 2026-10-22 (message cmsg_01Gr5R4j3t2Yet65UcmhcVhAAAbp6kqDfMqxzNm3PL6f5g), applied to Ale's 2026-10-31 request to add an annual plan (message cmsg_01Gr5R4j3t2Yet65UcmhcVhAXyGvYUCYpurVW8LhNF6L1D, «agrega el 3, el 4 agrega un plan anual tambien»).",
+  "additions": [
+    { "path": "app/acceso/CheckoutButton.tsx", "text": "Annual plan · US$129/year (2 months free)" },
+    { "path": "app/acceso/CheckoutButton.tsx", "text": "Card: US$129 now and every year. Final price, taxes included." },
+    { "path": "app/cuenta/SubscriptionManager.tsx", "text": "US$129 / year" }
+  ]
+}
