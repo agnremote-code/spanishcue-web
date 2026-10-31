@@ -270,3 +270,6 @@
 .cx-copy input, .cx-move select { min-height: 38px; padding: 6px 10px; border: 1px solid #cfdcec; border-radius: 9px; background: #fff; color: var(--cx-navy); }
 .cx-unclaimed .cx-list li { flex-wrap: wrap; }
 .cx-hw-detail .ae-level-detail { margin-top: 10px; }
+.cx-referral p { margin: 0 0 10px; }
+.cx-referral-link { width: 100%; box-sizing: border-box; padding: 10px 12px; margin: 0 0 10px; border: 1px solid var(--cx-line, #d6dbe6); border-radius: 10px; font: inherit; background: transparent; color: inherit; }
+.cx-referral .cx-actions { display: flex; flex-wrap: wrap; gap: 8px; }

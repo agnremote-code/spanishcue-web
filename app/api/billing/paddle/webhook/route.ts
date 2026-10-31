@@ -26,6 +26,7 @@ import type { SubscriptionStatus } from "../../../../../db/billing";
 import { getPurchaseClaim, markPurchaseCheckout, updatePurchaseLifecycle } from "../../../../../db/purchase-claims";
 import { verifyGuestPaddlePayment } from "../../../../guest-purchase-verification";
 import { deliverPaddleServerConversion } from "../../../../server-conversions";
+import { processReferrals } from "../../../../referrals-server";
 
 export const dynamic = "force-dynamic";
 
@@ -136,9 +137,10 @@ export async function POST(request: Request) {
             userId: claim.claimedUserId, subscriptionId, transactionId, eventId,
             ...payment, occurredAt,
           }, billing);
-          await deliverPaddleServerConversion(env, env.DB, recorded, {
+          if (!payment.referralFree) await deliverPaddleServerConversion(env, env.DB, recorded, {
             transactionId, amountCents: payment.amountCents, currency: payment.currency, attribution: paddleAttributionFrom(subscription),
           });
+          await processReferrals(env.DB, paddle, { userId: claim.claimedUserId, subscriptionId, subscription, referralFree: payment.referralFree });
         } else if (!(await verifyGuestPaddlePayment(env.DB, paddle, claim, transactionId, eventId))) {
           throw new Error("paddle_claim_payment_pending");
         }
@@ -172,9 +174,10 @@ export async function POST(request: Request) {
         ...payment,
         occurredAt,
       }, billing);
-      await deliverPaddleServerConversion(env, env.DB, recorded, {
+      if (!payment.referralFree) await deliverPaddleServerConversion(env, env.DB, recorded, {
         transactionId, amountCents: payment.amountCents, currency: payment.currency, attribution: paddleAttributionFrom(subscription),
       });
+      await processReferrals(env.DB, paddle, { userId, subscriptionId, subscription, referralFree: payment.referralFree });
       await finishPaddleWebhook(env.DB, eventId, "processed");
       return Response.json({ ok: true });
     }

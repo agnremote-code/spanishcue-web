@@ -16,6 +16,7 @@ type FounderStatus = {
   checkoutAvailable: boolean;
   paddleCheckoutAvailable?: boolean;
   trialCheckoutAvailable?: boolean;
+  annualCheckoutAvailable?: boolean;
   paypalPriceUsd?: number;
   mode: "sandbox" | "live";
 };
@@ -118,7 +119,7 @@ export default function CheckoutButton({ signedIn, returnTo, variant = "default"
           transaction_id: body.transactionId,
           value: body.value,
           currency: body.currency,
-          plan: body.plan === "trial" ? "trial" : "monthly",
+          plan: body.plan === "trial" ? "trial" : body.plan === "annual" ? "annual" : "monthly",
         });
       }
     } catch {}
@@ -150,14 +151,14 @@ export default function CheckoutButton({ signedIn, returnTo, variant = "default"
     window.location.assign(signedIn ? "/cuenta?checkout=paddle" : "/pro/claim?provider=paddle");
   }
 
-  async function checkoutPaddle(offer: "monthly" | "trial" = "monthly") {
+  async function checkoutPaddle(offer: "monthly" | "trial" | "annual" = "monthly") {
     if (starting.current) return;
     trackMarketingEvent("cta_click", { placement: "paywall", cta_type: "subscribe_card", signed_in: signedIn });
-    if (!founder?.available || !founder.paddleCheckoutAvailable || (offer === "trial" && !founder.trialCheckoutAvailable)) return;
+    if (!founder?.available || !founder.paddleCheckoutAvailable || (offer === "trial" && !founder.trialCheckoutAvailable) || (offer === "annual" && !founder.annualCheckoutAvailable)) return;
     starting.current = true;
     // One checkout_start per opened checkout; `plan` tells the trial apart and
     // `value` is the first real charge. Starting a checkout is not a purchase.
-    trackMarketingEvent("checkout_start", { plan: offer, value: offer === "trial" ? 2 : 15.5, currency: "USD", method: "paddle" });
+    trackMarketingEvent("checkout_start", { plan: offer, value: offer === "trial" ? 2 : offer === "annual" ? 129 : 15.5, currency: "USD", method: "paddle" });
     setStatus("paddle");
     setMessage("");
     try {
@@ -267,6 +268,14 @@ export default function CheckoutButton({ signedIn, returnTo, variant = "default"
     )}
 
     {founder.paddleCheckoutAvailable && <p className="checkout-price-note">{locale === "es" ? "Tarjeta: US$15.50 ahora y cada mes. Precio final, impuestos incluidos." : "Card: US$15.50 now and every month. Final price, taxes included."}</p>}
+
+    {founder.annualCheckoutAvailable && (
+      <button className="checkout-card-button checkout-annual-button" type="button" onClick={() => checkoutPaddle("annual")} disabled={busy || !founder.available}>
+        {locale === "es" ? "Plan anual · US$129/año (2 meses gratis)" : "Annual plan · US$129/year (2 months free)"}
+        <PaymentBrands /><span className="sr-only">Visa, Mastercard, American Express</span>
+      </button>
+    )}
+    {founder.annualCheckoutAvailable && <p className="checkout-price-note">{locale === "es" ? "Tarjeta: US$129 ahora y cada año. Precio final, impuestos incluidos." : "Card: US$129 now and every year. Final price, taxes included."}</p>}
 
     {founder.checkoutLive && (
       <button className="checkout-paypal-button" type="button" onClick={checkoutPayPal} disabled={busy || !founder.available}>

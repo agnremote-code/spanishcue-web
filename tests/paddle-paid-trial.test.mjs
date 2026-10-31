@@ -168,3 +168,23 @@ test('checkout carries only allow-listed ad identifiers into Paddle custom_data'
  assert.equal(body.custom_data.spanishcue_gclid,'abc');assert.equal(body.custom_data.spanishcue_claim_id,'c1');assert.equal(body.custom_data.spanishcue_evil,undefined);
  assert.deepEqual(p.paddleAttributionFrom({custom_data:body.custom_data}),{gclid:'abc'});
 });
+test('annual plan stays off until the owner-created Paddle price ID is pinned',async()=>{
+ assert.equal(p.PADDLE_ANNUAL_CENTS,12900);
+ const annualCfg={...cfg,annualPriceId:p.PADDLE_ANNUAL_PRICE_ID||'pri_annual_unpinned'};
+ if(!p.PADDLE_ANNUAL_PRICE_ID){assert.equal(p.paddleAnnualReady(annualCfg),false);assert.equal(p.paddleAnnualReady({...cfg,annualPriceId:''}),false)}
+ const [tx,sub]=pair(false);
+ for(const x of [tx,sub])x.items[0].price={...price(false),id:annualCfg.annualPriceId,unit_price:{amount:'12900',currency_code:'USD'},billing_cycle:{interval:'year',frequency:1}};
+ tx.details.totals.total='12900';tx.billing_period={starts_at:'2026-10-02T00:00:00Z',ends_at:'2027-10-02T00:00:00Z'};sub.current_billing_period=tx.billing_period;
+ const payment=p.paddleCompletedPayment(tx,sub,annualCfg);
+ if(!p.PADDLE_ANNUAL_PRICE_ID){assert.equal(payment,null);assert.equal(p.validatePaddleTransaction(tx,annualCfg,'owner'),false);return}
+ assert.equal(p.paddleAnnualReady(annualCfg),true);assert.equal(payment.amountCents,12900);assert.equal(payment.offer,'annual');
+ for(const edit of [x=>x.unit_price.amount='12000',x=>x.billing_cycle.interval='month',x=>x.unit_price.currency_code='EUR',x=>x.tax_mode='external']){const [t2,s2]=[structuredClone(tx),structuredClone(sub)];edit(t2.items[0].price);edit(s2.items[0].price);assert.equal(p.paddleCompletedPayment(t2,s2,annualCfg),null)}
+ const short=structuredClone(tx);short.billing_period.ends_at='2026-11-02T00:00:00Z';assert.equal(p.paddleCompletedPayment(short,sub,annualCfg),null);
+ const old=globalThis.fetch;const seen=[];globalThis.fetch=async(_u,init)=>{seen.push(JSON.parse(init.body));return Response.json({data:{id:'txn_test'}})};
+ try{await p.createPaddleCheckoutTransaction(annualCfg,{userId:'owner',offerCode:'founder',offer:'annual'});assert.equal(seen[0].items[0].price_id,p.PADDLE_ANNUAL_PRICE_ID)}finally{globalThis.fetch=old}
+});
+test('annual checkout is server-gated and labelled as a yearly charge',async()=>{
+ const route=await readFile('app/api/billing/paddle/checkout/route.ts','utf8');assert.match(route,/paddleAnnualReady/);
+ const status=await readFile('app/api/billing/founder-status/route.ts','utf8');assert.match(status,/annualCheckoutAvailable/);
+ const ui=await readFile('app/acceso/CheckoutButton.tsx','utf8');assert.match(ui,/annualCheckoutAvailable/);assert.match(ui,/US\$129/);
+});

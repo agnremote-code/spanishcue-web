@@ -394,7 +394,7 @@ export async function claimFirstPaidConversionForUser(
       transactionId: event.transactionId,
       value: event.amountCents / 100,
       currency: event.currency,
-      plan: event.eventName === "trial_paid" ? "trial" as const : "monthly" as const,
+      plan: event.eventName === "trial_paid" ? "trial" as const : event.amountCents === 12900 ? "annual" as const : "monthly" as const,
     }
     : null;
 }

@@ -104,7 +104,7 @@ export async function recordVerifiedPurchase(db: D1Database, claimId: string, pr
 }) {
   const normalized = input.email.trim().toLowerCase();
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(normalized) ||
-      !input.subscriptionId || !input.paymentId || !(provider === "paddle" ? [200, 1500, 1550].includes(input.amountCents) : input.amountCents === APPROVED_PRICE_CENTS) ||
+      !input.subscriptionId || !input.paymentId || !(provider === "paddle" ? [200, 1500, 1550, 12900].includes(input.amountCents) : input.amountCents === APPROVED_PRICE_CENTS) ||
       input.currency !== "USD" || !Number.isInteger(input.paidAt) || input.paidAt <= 0 ||
       !Number.isInteger(input.paidThrough) || input.paidThrough <= input.paidAt) {
     throw new Error("purchase_provider_verification_missing");
