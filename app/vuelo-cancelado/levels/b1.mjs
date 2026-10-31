@@ -284,7 +284,7 @@ export default {
     ],
     ask: 'Vanesa te mira con una sonrisa muy fría y te pregunta: «¿Tú qué opinas de este cliente?»',
     options: [
-      { say: 'Opino que es mejor no meterse. Cada uno sabe lo que hace con su vida.', reply: '«Muy diplomática. Aquí no se opina, se vende. Tienes razón.»', end: 'Horacio paga y se va rápido. Vanesa, en silencio, cambia una de las tarjetas de regalo. Nunca sabrás qué escribió.', mood: 'neutral' },
+      { say: 'Opino que es mejor no meterse. Cada uno sabe lo que hace con su vida.', reply: '«Qué diplomacia. Aquí no se opina, se vende. Tienes razón.»', end: 'Horacio paga y se va rápido. Vanesa, en silencio, cambia una de las tarjetas de regalo. Nunca sabrás qué escribió.', mood: 'neutral' },
       { say: 'Horacio, si necesitas el mismo perfume para no equivocarte, ya te has equivocado.', reply: '«Yo… yo no tengo que darle explicaciones a nadie.»', end: 'Horacio se pone rojo y devuelve uno de los perfumes. Se va con un solo regalo y muchas preguntas en la cabeza.', mood: 'angry' },
       { say: 'Vanesa, ¿y si le vendes dos perfumes distintos? Así, por lo menos, es más honesto.', reply: '«Me encanta. Tengo uno que se llama Remordimiento. Es muy caro.»', end: 'Horacio compra Remordimiento sin leer el nombre. Vanesa y tú se ríen tanto que tiene que cerrar la tienda cinco minutos.', mood: 'laugh' },
     ],
@@ -407,7 +407,7 @@ export default {
     ],
     ask: 'Mónica te mira a través del humo: «Ahora que sabes lo del asiento, ¿qué vas a hacer?»',
     options: [
-      { say: 'Voy a la puerta doce ahora mismo. Si sobra una persona, que no sea yo.', reply: '«Muy rápido. Pero recuerda: en la puerta, todos corren.»', end: 'Llegas la primera a la puerta doce. Mónica te guiña un ojo cuando pasa a tu lado con su maleta.', mood: 'surprised' },
+      { say: 'Voy a la puerta doce ahora mismo. Si sobra una persona, que no sea yo.', reply: '«Muy rápido. Pero recuerda: en la puerta, todos corren.»', end: 'Llegas antes que nadie a la puerta doce. Mónica te guiña un ojo cuando pasa a tu lado con su maleta.', mood: 'surprised' },
       { say: 'Nada. Si alguien necesita el asiento más que yo, se lo dejo.', reply: '«Es raro oír eso a estas horas. Normalmente la gente muerde.»', end: 'Iván te apunta en su libreta de «buena gente». Dice que esa libreta sirve, a veces, para conseguir ventanilla.', mood: 'smile' },
       { say: 'Primero voy a dejar de respirar este humo. Después lo pienso.', reply: '«Ja, sabia decisión. Nosotros ya estamos ahumados como jamones.»', end: 'Sales tosiendo. Iván te grita desde dentro: «¡Pregunta por Débora! ¡Débora es la que decide!»', mood: 'laugh' },
     ],
