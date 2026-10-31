@@ -206,11 +206,11 @@ function adTexture(title: string, sub: string, bg: string, fg = '#ffffff') {
   });
 }
 const ADS: [string, string, string][] = [
-  ['SEGURO DE VIAJE', 'Por las dudas.|Y por las otras dudas.', '#2a6ac8'],
+  ['SEGURO DE VIAJE', 'Por si acaso.|Y por si las moscas.', '#2a6ac8'],
   ['PERFUMES SIN IMPUESTOS', 'Huele a rico,|paga como rico.', '#8a1a5a'],
   ['CAMBIO HONESTO', 'Casi siempre.', '#2a7a4a'],
   ['AEROBRUMA', 'Volamos|cuando podemos.', '#1f2f5a'],
-  ['DORMÍ AQUÍ', 'Sillones con|vista a la pista.', '#5a3a8a'],
+  ['DUERME AQUÍ', 'Sillones con|vista a la pista.', '#5a3a8a'],
   ['EMPANADAS 24 H', 'Primer piso.|Planta de embarque.', '#c86a1a'],
 ];
 // The departures board, redrawn every second: the rows flip, your flight blinks.
@@ -815,6 +815,7 @@ function seatUnder(floor: number, x: number, z: number) {
 const SITS = new Set(['sit']);
 function makePerson(look: Look, pose: string, opts: { seat?: boolean; lying?: boolean; mood?: string }) {
   const person = createPerson(look, false);
+  person.root.userData.person = true; // the no-ghost QA check finds people by this tag
   const seated = Boolean(opts.seat) || SITS.has(pose);
   setPose(person, opts.lying ? 'lie' : pose, opts.lying ? false : seated);
   if (opts.mood) setMood(person, opts.mood);
@@ -1179,8 +1180,9 @@ export function buildAirport(scene: THREE.Scene, opts: { low: boolean; shadows: 
       person.root.position.set(c.x, 0, c.z); person.root.rotation.y = c.heading;
       if (c.seat && !seatUnder(floor, c.x, c.z)) {
         // Sitting on their own suitcase.
-        const back = new THREE.Vector3(0, 0, -0.1).applyAxisAngle(new THREE.Vector3(0, 1, 0), c.heading);
-        const sc = suitcaseMesh(CASE_COLORS[i % CASE_COLORS.length], 0.42, 0.38, 0.62); sc.children.slice(-2).forEach(ch => ch.removeFromParent());
+        // Laid on its side at chair height (top 0.35 m): the hips rest on it.
+        const back = new THREE.Vector3(0, 0, -0.16).applyAxisAngle(new THREE.Vector3(0, 1, 0), c.heading);
+        const sc = suitcaseMesh(CASE_COLORS[i % CASE_COLORS.length], 0.42, 0.3, 0.62); sc.children.slice(-2).forEach(ch => ch.removeFromParent());
         sc.position.set(c.x + back.x, 0, c.z + back.z); sc.rotation.y = c.heading; floors[floor].add(sc);
       }
       floors[floor].add(person.root);
@@ -1206,10 +1208,16 @@ export function buildAirport(scene: THREE.Scene, opts: { low: boolean; shadows: 
         mover.carry = m; floors[floor].add(m);
       } else if (walker.carry === 'buggy') {
         const m = new THREE.Group();
-        add(m, B(1.3, 0.5, 2.6), std('#f2f4f6', 0.4, 0.2), 0, 0.5, 0);
-        add(m, B(1.32, 0.12, 2.62), NAVY(), 0, 0.72, 0);
-        add(m, B(1.1, 0.12, 0.5), std('#2a2a2a', 0.6), 0, 0.85, 0.1); add(m, B(1.1, 0.5, 0.1), std('#2a2a2a', 0.6), 0, 1.1, -0.15);
-        add(m, B(1.1, 0.12, 0.5), std('#2a2a2a', 0.6), 0, 0.85, -0.9); add(m, B(1.1, 0.5, 0.1), std('#2a2a2a', 0.6), 0, 1.1, -1.15);
+        // A low deck with an open footwell: the driver's and the passenger's
+        // legs hang in front of their seats, never inside the bodywork.
+        add(m, B(1.3, 0.17, 2.6), std('#f2f4f6', 0.4, 0.2), 0, 0.335, 0);
+        add(m, B(1.32, 0.08, 2.62), NAVY(), 0, 0.29, 0);
+        add(m, B(1.3, 0.55, 0.12), std('#f2f4f6', 0.4, 0.2), 0, 0.7, 1.24); // dashboard
+        for (const z of [0.1, -0.9]) {
+          // Cushion top at 0.77 m: a seated figure 0.42 m up rests its hips right on it.
+          add(m, B(1.1, 0.23, 0.22), std('#f2f4f6', 0.4, 0.2), 0, 0.535, z - 0.15); // seat pedestal, set back under the seat
+          add(m, B(1.1, 0.12, 0.5), std('#2a2a2a', 0.6), 0, 0.71, z); add(m, B(1.1, 0.5, 0.1), std('#2a2a2a', 0.6), 0, 0.98, z - 0.27);
+        }
         add(m, B(1.2, 0.05, 1.8), std('#d8dcdf', 0.4, 0.4), 0, 2.1, -0.3);
         for (const sx of [-0.55, 0.55]) for (const sz of [-1.0, 1.0]) add(m, C(0.03, 0.03, 1.3, 4), STEEL(), sx, 1.45, sz * 0.8 - 0.3);
         for (const sx of [-0.6, 0.6]) for (const sz of [-0.9, 0.9]) add(m, C(0.2, 0.2, 0.14, 12), RUBBER(), sx, 0.2, sz).rotation.z = Math.PI / 2;
@@ -1374,8 +1382,9 @@ export function buildAirport(scene: THREE.Scene, opts: { low: boolean; shadows: 
       animatePerson(m.person, dt, at.moving ? m.walker.speed : 0, false);
       if (m.carry) {
         const kind = m.walker.carry;
-        const ahead = kind === 'trolley' ? 0.85 : kind === 'cleaner' ? 0.8 : -0.55;
-        const side = kind === 'case' || kind === 'crew' ? 0.22 : 0;
+        // A pulled case rides behind and well to the side, clear of the swinging legs.
+        const ahead = kind === 'trolley' ? 0.85 : kind === 'cleaner' ? 0.8 : -0.65;
+        const side = kind === 'case' || kind === 'crew' ? 0.4 : 0;
         m.carry.position.set(at.x + sx * ahead + sz * side, 0, at.z + sz * ahead - sx * side);
         m.carry.rotation.y = at.heading;
         if (kind === 'case' || kind === 'crew') m.carry.rotation.x = at.moving ? -0.25 : 0;
@@ -1387,7 +1396,7 @@ export function buildAirport(scene: THREE.Scene, opts: { low: boolean; shadows: 
         const bx = Math.sin(back.heading), bz = Math.cos(back.heading);
         c.person.root.position.set(back.x, 0, back.z); c.person.root.rotation.y = back.heading;
         animatePerson(c.person, dt, back.moving ? m.walker.speed : 0, false);
-        c.case.position.set(back.x - bx * 0.55 + bz * 0.22, 0, back.z - bz * 0.55 - bx * 0.22); c.case.rotation.y = back.heading; c.case.rotation.x = back.moving ? -0.25 : 0;
+        c.case.position.set(back.x - bx * 0.65 + bz * 0.4, 0, back.z - bz * 0.65 - bx * 0.4); c.case.rotation.y = back.heading; c.case.rotation.x = back.moving ? -0.25 : 0;
       });
       nearDoor.push({ x: at.x + sx * 1.4, z: at.z + sz * 1.4 });
     }

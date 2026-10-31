@@ -14,6 +14,20 @@ const courseLessons=[...readFileSync(new URL('../../app/grammar-classroom/catalo
 const additions = [
   ...courseLessons,
   {
+    // 2026-10-31: Vuelo cancelado (A0–C2), a PRO 3D airport at night, wired like Más allá.
+    id:244,path:'/vuelo-cancelado',files:/^(?:app\/vuelo-cancelado\/|app\/escucha-3d\/content\/vuelo\/|public\/vuelo-cancelado\/|public\/audio\/escucha-3d\/vuelo-|tests\/vuelo-cancelado\.test\.mjs$|scripts\/check-vuelo\.mjs$|docs\/audits\/vuelo-cancelado-english-additions-20261031\.json$)/,
+    edits:{
+      'app/lesson-catalog.ts':[text=>{
+        const lines=text.split('\n');
+        const at=lines.flatMap((line,i)=>line.startsWith('  {id:244,')&&line.includes('path:"/vuelo-cancelado"')?[i]:[]);
+        assert.equal(at.length,1,'one vuelo cancelado catalog entry');lines.splice(at[0],1);return lines.join('\n');
+      },[',237,238,240,241,242,243,244],',',237,238,240,241,242,243],']],
+      'scripts/test-worker.mjs':[[" await run(['--test','tests/vuelo-cancelado.test.mjs']);\n",'']],
+      'tests/level-cleanup.test.mjs':[['assert.equal(lessons.length, 318);','assert.equal(lessons.length, 317);'],['238,240,242,243,244].includes(lesson.id)','238,240,242,243].includes(lesson.id)'],["l.levels?.includes('A0')).length,20);","l.levels?.includes('A0')).length,19);"],['assert.equal(a1Lessons.length, 78);','assert.equal(a1Lessons.length, 77);'],["relative.startsWith('app/vuelo-cancelado/')||",'']],
+      'tests/rendered-html.test.mjs':[['assert.match(html,/296(?:<!-- -->|\\s)+resultados/);assert.match(html,/311(?:<!-- -->|\\s)+clases totales/);','assert.match(html,/295(?:<!-- -->|\\s)+resultados/);assert.match(html,/310(?:<!-- -->|\\s)+clases totales/);']],
+    },
+  },
+  {
     // 2026-10-29: Más allá (A0–C2), a PRO 3D world (hospital intro, Umbral, Cielo, Infierno), wired like Madrid.
     id:243,path:'/mas-alla',files:/^(?:app\/mas-alla\/|app\/escucha-3d\/content\/masalla\/|public\/mas-alla\/|public\/audio\/escucha-3d\/masalla-|tests\/mas-alla\.test\.mjs$|scripts\/check-mas-alla\.mjs$|docs\/audits\/mas-alla-english-additions-20261029\.json$)/,
     edits:{
@@ -567,7 +581,7 @@ export function withoutApprovedAdditions(path, bytes) {
     bytes = Buffer.from(text);
   }
   // Undo the latest additive lessons in reverse order before the grammar snapshot.
-  for (const addition of additions.filter(item=>item.id===300||item.id===243||item.id===242||item.id===241||item.id===240||item.id===239||item.id===238||item.id===237||item.id===236)) {
+  for (const addition of additions.filter(item=>item.id===300||item.id===244||item.id===243||item.id===242||item.id===241||item.id===240||item.id===239||item.id===238||item.id===237||item.id===236)) {
     const latestSteps=addition.edits[path]||[];
     if(!latestSteps.length)continue;
     let latest=bytes.toString('utf8');
@@ -578,7 +592,7 @@ export function withoutApprovedAdditions(path, bytes) {
     bytes=Buffer.from(latest);
   }
   bytes=beforeGrammarBytes(path,bytes);
-  const steps = [...additions.filter(item=>item.id!==300&&item.id!==236&&item.id!==237&&item.id!==238&&item.id!==239&&item.id!==240&&item.id!==241&&item.id!==242&&item.id!==243), ...repairs.filter(item => !item.latest)].flatMap(item => item.edits[path] || []);
+  const steps = [...additions.filter(item=>item.id!==300&&item.id!==244&&item.id!==236&&item.id!==237&&item.id!==238&&item.id!==239&&item.id!==240&&item.id!==241&&item.id!==242&&item.id!==243), ...repairs.filter(item => !item.latest)].flatMap(item => item.edits[path] || []);
   if (!steps.length) return bytes;
   let text = bytes.toString('utf8');
   for (const step of steps) {

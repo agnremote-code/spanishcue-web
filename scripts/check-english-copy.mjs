@@ -156,6 +156,7 @@ export const APPROVAL_MANIFESTS = [
   'docs/audits/madrid-ciudad-english-additions-20261022.json',
   'docs/audits/mas-alla-english-additions-20261029.json',
   'docs/audits/mas-alla-voces-english-additions-20261030.json',
+  'docs/audits/vuelo-cancelado-english-additions-20261031.json',
 ];
 export function loadApprovedAdditions(root) {
   return APPROVAL_MANIFESTS.flatMap(path => {
