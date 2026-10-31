@@ -1,0 +1,2201 @@
+{
+  "game": "vuelo",
+  "level": "A2",
+  "items": [
+    {
+      "id": "taxi",
+      "title": "El taxi de las once y cuarto",
+      "place": "La acera de salidas, bajo la lluvia",
+      "context": "Ramiro, el taxista, deja a una pasajera en la puerta de Salidas. Mientras ella paga, él llama a su esposa, Vanesa.",
+      "speakers": [
+        {
+          "name": "Ramiro",
+          "country": "Argentina",
+          "voice": "es-AR-TomasNeural"
+        },
+        {
+          "name": "Vanesa",
+          "country": "Argentina",
+          "voice": "es-AR-ElenaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Hola, Vane. Ya estoy en el aeropuerto. Llueve muchísimo."
+        },
+        {
+          "s": 1,
+          "text": "Hola, Ramiro. Aquí dentro también hay mucha gente. Dicen que van a cancelar vuelos."
+        },
+        {
+          "s": 0,
+          "text": "¿Sí? Entonces voy a tener mucho trabajo esta noche."
+        },
+        {
+          "s": 1,
+          "text": "¿Y le cobraste la tarifa de tormenta a tu cliente?"
+        },
+        {
+          "s": 0,
+          "text": "Un poquito, nada más. Es que con lluvia el viaje es más peligroso."
+        },
+        {
+          "s": 1,
+          "text": "Ramiro, eres un pirata. ¿Vienes a verme al free shop?"
+        },
+        {
+          "s": 0,
+          "text": "Ahora no puedo, hay una cola enorme de gente que quiere taxi. A las seis te busco y desayunamos juntos."
+        },
+        {
+          "s": 1,
+          "text": "Vale. Trae empanadas de Marisol, por favor."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Dónde está Ramiro cuando llama?",
+          "options": [
+            "En su casa",
+            "En el aeropuerto",
+            "En el free shop"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué dice Vanesa sobre los vuelos?",
+          "options": [
+            "Que van a cancelar vuelos",
+            "Que todos salen a la hora",
+            "Que el aeropuerto está vacío"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Por qué Ramiro no puede ir al free shop ahora?",
+          "options": [
+            "Porque está cansado",
+            "Porque no tiene dinero",
+            "Porque hay mucha gente que quiere taxi"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué van a hacer a las seis?",
+          "options": [
+            "Ir al cine",
+            "Desayunar juntos",
+            "Tomar un avión"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Te gusta viajar en taxi? ¿Por qué?",
+          "model": "Sí, me gusta porque es rápido y cómodo, pero es caro."
+        },
+        {
+          "q": "¿Qué haces tú cuando llueve mucho?",
+          "model": "Me quedo en casa, leo un libro y tomo un té caliente."
+        },
+        {
+          "q": "¿Qué te parece la tarifa de tormenta de Ramiro?",
+          "model": "Me parece un poco injusta, pero lo entiendo."
+        }
+      ],
+      "gaps": "Ahora no puedo, hay una [cola] enorme de gente que quiere [taxi]. A las [seis] te busco y [desayunamos] juntos.",
+      "glossary": [
+        {
+          "word": "cobraste",
+          "meaning": "de «cobrar»: pedir dinero por un servicio"
+        },
+        {
+          "word": "tarifa",
+          "meaning": "precio de un servicio"
+        },
+        {
+          "word": "pirata",
+          "meaning": "aquí: persona que cobra demasiado"
+        },
+        {
+          "word": "cola",
+          "meaning": "fila de personas que esperan"
+        }
+      ]
+    },
+    {
+      "id": "pantalla",
+      "title": "Delfina mira la pantalla",
+      "place": "Bajo la pantalla de salidas",
+      "context": "La pantalla de salidas cambia: el vuelo AB 2317 está cancelado. Delfina, que se casa mañana, habla con su hermano Bruno.",
+      "speakers": [
+        {
+          "name": "Delfina",
+          "country": "Colombia",
+          "voice": "es-CO-SalomeNeural"
+        },
+        {
+          "name": "Bruno",
+          "country": "Colombia",
+          "voice": "es-CO-GonzaloNeural"
+        },
+        {
+          "name": "Valentina",
+          "country": "Uruguay",
+          "voice": "es-UY-ValentinaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 2,
+          "text": "Atención, por favor. El vuelo AB 2317 está cancelado. Los pasajeros pueden ir a Atención al pasajero."
+        },
+        {
+          "s": 0,
+          "text": "Bruno, ¿has oído? ¡Cancelado! Mi boda es mañana a las doce."
+        },
+        {
+          "s": 1,
+          "text": "Tranquila, Delfi. Hay un vuelo a las seis y diez. Llegamos a tiempo."
+        },
+        {
+          "s": 0,
+          "text": "¿Y el vestido? Mi vestido está en una maleta que no aparece."
+        },
+        {
+          "s": 1,
+          "text": "Ya lo sé. Ahora mismo voy a equipaje perdido."
+        },
+        {
+          "s": 0,
+          "text": "Y yo voy a llamar a mamá. No, mejor no. Se va a poner muy nerviosa."
+        },
+        {
+          "s": 1,
+          "text": "Llámala, pero no le hables del vestido."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué pasa con el vuelo AB 2317?",
+          "options": [
+            "Sale tarde",
+            "Está cancelado",
+            "Cambia de puerta"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cuándo es la boda de Delfina?",
+          "options": [
+            "Mañana a las doce",
+            "Hoy por la noche",
+            "El sábado que viene"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Adónde va Bruno?",
+          "options": [
+            "A la cafetería",
+            "A la puerta de embarque",
+            "A equipaje perdido"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Por qué Delfina no quiere llamar a su madre?",
+          "options": [
+            "Porque es muy tarde",
+            "Porque su madre se va a poner nerviosa",
+            "Porque no tiene batería"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Alguna vez cancelaron un vuelo o un tren tuyo? ¿Qué hiciste?",
+          "model": "Sí, cancelaron mi tren. Esperé dos horas y tomé un autobús."
+        },
+        {
+          "q": "¿Qué es lo más importante para ti en una boda?",
+          "model": "Para mí lo más importante es la fiesta con la familia."
+        },
+        {
+          "q": "¿Le cuentas los problemas a tu madre o prefieres no decírselos?",
+          "model": "Le cuento algunos, pero no todos, porque se preocupa mucho."
+        }
+      ],
+      "gaps": "[Tranquila], Delfi. Hay un [vuelo] a las [seis y diez]. Llegamos a [tiempo].",
+      "glossary": [
+        {
+          "word": "cancelado",
+          "meaning": "que no se va a hacer"
+        },
+        {
+          "word": "boda",
+          "meaning": "fiesta y ceremonia cuando dos personas se casan"
+        },
+        {
+          "word": "vestido",
+          "meaning": "ropa de mujer de una sola pieza"
+        },
+        {
+          "word": "nerviosa",
+          "meaning": "que no está tranquila"
+        }
+      ]
+    },
+    {
+      "id": "facturacion",
+      "title": "Una ventana para Amparo",
+      "place": "Los mostradores de facturación",
+      "context": "Yesenia, agente de facturación, habla con su compañero Gerardo sobre un señor mayor que viaja con la urna de su esposa.",
+      "speakers": [
+        {
+          "name": "Yesenia",
+          "country": "República Dominicana",
+          "voice": "es-DO-RamonaNeural"
+        },
+        {
+          "name": "Gerardo",
+          "country": "México",
+          "voice": "es-MX-JorgeNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Gerardo, ¿viste al señor de la urna? Se llama don Teodoro."
+        },
+        {
+          "s": 1,
+          "text": "Sí. ¿Qué quería?"
+        },
+        {
+          "s": 0,
+          "text": "Quiere un asiento de ventana para su esposa, Amparo. A ella le gustaban mucho las nubes."
+        },
+        {
+          "s": 1,
+          "text": "Pero la urna no necesita asiento, Yesenia."
+        },
+        {
+          "s": 0,
+          "text": "Ya lo sé. Pero le di el 14A y le dejé el 14B libre a él. Es una noche especial para ese señor."
+        },
+        {
+          "s": 1,
+          "text": "Eres muy buena persona. Pero si el jefe pregunta, yo no sé nada."
+        },
+        {
+          "s": 0,
+          "text": "Tranquilo. El jefe está dormido en la oficina."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué lleva don Teodoro?",
+          "options": [
+            "Una urna con las cenizas de su esposa",
+            "Un perro pequeño",
+            "Un pastel de cumpleaños"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Por qué quiere un asiento de ventana?",
+          "options": [
+            "Porque tiene frío",
+            "Porque a Amparo le gustaban las nubes",
+            "Porque quiere dormir"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué asiento le da Yesenia a la urna?",
+          "options": [
+            "El 14B",
+            "El 12C",
+            "El 14A"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Dónde está el jefe?",
+          "options": [
+            "En la puerta 12",
+            "Dormido en la oficina",
+            "En el avión"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué te parece lo que hace Yesenia?",
+          "model": "Me parece muy bonito. A veces es bueno no seguir todas las reglas."
+        },
+        {
+          "q": "¿Prefieres ventana o pasillo en el avión? ¿Por qué?",
+          "model": "Prefiero ventana porque me gusta mirar las nubes."
+        },
+        {
+          "q": "¿Guardas algún objeto de una persona querida?",
+          "model": "Sí, guardo el reloj de mi abuelo."
+        }
+      ],
+      "gaps": "Quiere un [asiento] de [ventana] para su [esposa], Amparo. A ella le gustaban mucho las [nubes].",
+      "glossary": [
+        {
+          "word": "urna",
+          "meaning": "recipiente donde se guardan las cenizas de una persona"
+        },
+        {
+          "word": "asiento",
+          "meaning": "lugar para sentarse"
+        },
+        {
+          "word": "nubes",
+          "meaning": "masas blancas o grises en el cielo"
+        },
+        {
+          "word": "jefe",
+          "meaning": "persona que manda en un trabajo"
+        }
+      ]
+    },
+    {
+      "id": "reprogramacion",
+      "title": "La lista de espera de Doña Inés",
+      "place": "La cola de atención al pasajero",
+      "context": "Matías, un pasajero uruguayo, está en la cola detrás de doña Inés, una señora española que teje una bufanda.",
+      "speakers": [
+        {
+          "name": "Matías",
+          "country": "Uruguay",
+          "voice": "es-UY-MateoNeural"
+        },
+        {
+          "name": "Inés",
+          "country": "España",
+          "voice": "es-ES-ElviraNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Perdone, señora, ¿hace mucho que espera?"
+        },
+        {
+          "s": 1,
+          "text": "Tres días, hijo. Pero no me quejo. Ya tengo casi terminada la bufanda."
+        },
+        {
+          "s": 0,
+          "text": "¡Tres días! ¿Y no está cansada?"
+        },
+        {
+          "s": 1,
+          "text": "Un poco. Pero aquí la gente es simpática. Ayer una chica me trajo un café y hoy un señor me regaló un periódico."
+        },
+        {
+          "s": 0,
+          "text": "Yo estoy en la lista de espera del vuelo de las seis y diez."
+        },
+        {
+          "s": 1,
+          "text": "Yo también. Somos el número cuarenta y el cuarenta y uno."
+        },
+        {
+          "s": 0,
+          "text": "¿Y cuántos asientos hay?"
+        },
+        {
+          "s": 1,
+          "text": "No lo sé. Pero si no salimos, la próxima bufanda es para usted."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cuánto tiempo lleva doña Inés en la cola?",
+          "options": [
+            "Tres horas",
+            "Tres días",
+            "Una semana"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué está haciendo doña Inés?",
+          "options": [
+            "Una bufanda",
+            "Un dibujo",
+            "Un pastel"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué le regaló un señor ayer o hoy?",
+          "options": [
+            "Una flor",
+            "Un café",
+            "Un periódico"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué número tienen en la lista de espera?",
+          "options": [
+            "El diez y el once",
+            "El cuarenta y el cuarenta y uno",
+            "El seis y el siete"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Eres una persona paciente? Da un ejemplo.",
+          "model": "Sí, soy bastante paciente. Puedo esperar mucho en el médico sin enfadarme."
+        },
+        {
+          "q": "¿Qué haces para no aburrirte cuando esperas?",
+          "model": "Escucho música o leo noticias en el móvil."
+        },
+        {
+          "q": "¿Sabes tejer, coser o hacer algo con las manos?",
+          "model": "No sé tejer, pero me gusta cocinar."
+        }
+      ],
+      "gaps": "Un poco. Pero aquí la [gente] es [simpática]. Ayer una chica me trajo un [café] y hoy un señor me regaló un [periódico].",
+      "glossary": [
+        {
+          "word": "terminada",
+          "meaning": "acabada, hecha del todo"
+        },
+        {
+          "word": "bufanda",
+          "meaning": "prenda larga para el cuello"
+        },
+        {
+          "word": "periódico",
+          "meaning": "papel con las noticias del día"
+        },
+        {
+          "word": "lista de espera",
+          "meaning": "lista de personas que esperan un lugar libre"
+        }
+      ]
+    },
+    {
+      "id": "cambio",
+      "title": "Doce dólares en monedas",
+      "place": "La casa de cambio",
+      "context": "Nayeli, una mochilera mexicana, quiere cambiar sus últimas monedas. Fabián, el cajero, le explica las comisiones.",
+      "speakers": [
+        {
+          "name": "Nayeli",
+          "country": "México",
+          "voice": "es-MX-DaliaNeural"
+        },
+        {
+          "name": "Fabián",
+          "country": "Venezuela",
+          "voice": "es-VE-SebastianNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Buenas noches. Quiero cambiar estas monedas, por favor. Son doce dólares."
+        },
+        {
+          "s": 1,
+          "text": "Buenas noches. Con la comisión son… tres dólares."
+        },
+        {
+          "s": 0,
+          "text": "¿Tres? ¡Pero son doce dólares!"
+        },
+        {
+          "s": 1,
+          "text": "Lo siento. Hay comisión por monedas, comisión por la noche y comisión por la tormenta."
+        },
+        {
+          "s": 0,
+          "text": "¿Comisión por la tormenta? ¿Es una broma?"
+        },
+        {
+          "s": 1,
+          "text": "Un poco sí. Mire, no le cambio las monedas, pero le compro esas pulseras. Son para mi hija."
+        },
+        {
+          "s": 0,
+          "text": "¿De verdad? Las hice yo en Oaxaca. Le dejo las dos por diez dólares."
+        },
+        {
+          "s": 1,
+          "text": "Trato hecho. Y no le cobro comisión."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cuánto dinero tiene Nayeli en monedas?",
+          "options": [
+            "Tres dólares",
+            "Diez dólares",
+            "Doce dólares"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Por qué Fabián solo le da tres dólares?",
+          "options": [
+            "Por las comisiones",
+            "Porque las monedas son falsas",
+            "Porque la casa de cambio cierra"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué le compra Fabián a Nayeli?",
+          "options": [
+            "Una mochila",
+            "Dos pulseras",
+            "Un mapa"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Para quién son las pulseras?",
+          "options": [
+            "Para la esposa de Fabián",
+            "Para la madre de Nayeli",
+            "Para la hija de Fabián"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué haces cuando un precio te parece injusto?",
+          "model": "Pregunto por qué es tan caro y, si no me gusta la respuesta, no lo compro."
+        },
+        {
+          "q": "¿Alguna vez vendiste algo que hiciste tú?",
+          "model": "Sí, de pequeño vendía galletas en el colegio para pagar un viaje."
+        },
+        {
+          "q": "¿Qué llevas siempre en la mochila cuando viajas?",
+          "model": "Llevo agua, un libro, el cargador del móvil y un jersey."
+        }
+      ],
+      "gaps": "¿De verdad? Las [hice] yo en [Oaxaca]. Le dejo las [dos] por diez [dólares].",
+      "glossary": [
+        {
+          "word": "monedas",
+          "meaning": "dinero en piezas pequeñas de metal"
+        },
+        {
+          "word": "comisión",
+          "meaning": "dinero extra que se cobra por un servicio"
+        },
+        {
+          "word": "broma",
+          "meaning": "algo que se dice para reír"
+        },
+        {
+          "word": "trato hecho",
+          "meaning": "de acuerdo, aceptamos"
+        }
+      ]
+    },
+    {
+      "id": "seguridad",
+      "title": "El frasco de Matías",
+      "place": "El control de seguridad",
+      "context": "Lucrecia, agente de seguridad, encuentra un frasco de dulce de leche en la mochila de Matías.",
+      "speakers": [
+        {
+          "name": "Lucrecia",
+          "country": "Chile",
+          "voice": "es-CL-CatalinaNeural"
+        },
+        {
+          "name": "Matías",
+          "country": "Uruguay",
+          "voice": "es-UY-MateoNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Señor, en su mochila hay un frasco. ¿Qué es?"
+        },
+        {
+          "s": 1,
+          "text": "Es dulce de leche. Es un regalo para mi sobrina."
+        },
+        {
+          "s": 0,
+          "text": "Lo siento, pero el dulce de leche es un líquido. No puede pasar."
+        },
+        {
+          "s": 1,
+          "text": "¿Un líquido? ¡Pero si es casi sólido! Mire, se puede cortar con un cuchillo."
+        },
+        {
+          "s": 0,
+          "text": "Las reglas son las reglas. Tiene más de cien mililitros."
+        },
+        {
+          "s": 1,
+          "text": "Por favor, señora. Mi sobrina cumple siete años mañana."
+        },
+        {
+          "s": 0,
+          "text": "Bueno… Lo guardo en mi taquilla. Usted lo recoge cuando vuelva. Y su sobrina le perdona."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué hay en la mochila de Matías?",
+          "options": [
+            "Un perfume",
+            "Un frasco de dulce de leche",
+            "Una botella de agua"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Para quién es el regalo?",
+          "options": [
+            "Para su sobrina",
+            "Para su madre",
+            "Para Lucrecia"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Por qué no puede pasar el frasco?",
+          "options": [
+            "Porque es de cristal",
+            "Porque es un líquido de más de cien mililitros",
+            "Porque está abierto"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué hace Lucrecia con el frasco?",
+          "options": [
+            "Lo tira a la basura",
+            "Se lo come",
+            "Lo guarda en su taquilla"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué comida típica de tu país le llevarías a un amigo extranjero?",
+          "model": "Le llevaría chocolate y queso, porque son muy buenos en mi país."
+        },
+        {
+          "q": "¿Crees que las reglas de seguridad de los aeropuertos son exageradas?",
+          "model": "Algunas sí, pero creo que son necesarias."
+        },
+        {
+          "q": "¿Qué regalo te hizo ilusión de pequeño?",
+          "model": "Una bicicleta roja. La usaba todos los días."
+        }
+      ],
+      "gaps": "Lo [siento], pero el [dulce de leche] es un [líquido]. No puede [pasar].",
+      "glossary": [
+        {
+          "word": "frasco",
+          "meaning": "recipiente pequeño de cristal"
+        },
+        {
+          "word": "sobrina",
+          "meaning": "hija de tu hermano o de tu hermana"
+        },
+        {
+          "word": "líquido",
+          "meaning": "como el agua, no sólido"
+        },
+        {
+          "word": "taquilla",
+          "meaning": "armario pequeño con llave"
+        }
+      ]
+    },
+    {
+      "id": "cintas",
+      "title": "La maleta de Rocío",
+      "place": "La recogida de equipaje",
+      "context": "La maleta de Rocío llega abierta por la cinta y su ropa da vueltas delante de todos. Wilmer, el maletero, la ayuda.",
+      "speakers": [
+        {
+          "name": "Rocío",
+          "country": "España",
+          "voice": "es-ES-XimenaNeural"
+        },
+        {
+          "name": "Wilmer",
+          "country": "Honduras",
+          "voice": "es-HN-CarlosNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "¡Ay, no! ¡Esa es mi maleta! ¡Está abierta!"
+        },
+        {
+          "s": 1,
+          "text": "Tranquila, señora, ahora paro la cinta."
+        },
+        {
+          "s": 0,
+          "text": "¡Mi ropa interior está dando vueltas delante de todo el mundo!"
+        },
+        {
+          "s": 1,
+          "text": "No pasa nada. Aquí vemos de todo. La semana pasada vimos un pavo vivo."
+        },
+        {
+          "s": 0,
+          "text": "¿Un pavo vivo? ¿En serio?"
+        },
+        {
+          "s": 1,
+          "text": "Sí, señora. Se escapó de una caja y corrió por toda la sala. Su ropa es mucho más normal."
+        },
+        {
+          "s": 0,
+          "text": "Gracias, Wilmer. Me ha salvado la noche."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cómo llega la maleta de Rocío?",
+          "options": [
+            "Rota y mojada",
+            "Abierta",
+            "No llega"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué hace Wilmer primero?",
+          "options": [
+            "Para la cinta",
+            "Llama a la policía",
+            "Cierra la maleta con cinta"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué vieron la semana pasada en la cinta?",
+          "options": [
+            "Un gato",
+            "Un perro",
+            "Un pavo vivo"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cómo se siente Rocío al final?",
+          "options": [
+            "Enfadada",
+            "Agradecida",
+            "Triste"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Alguna vez perdiste una maleta o algo importante en un viaje?",
+          "model": "Sí, una vez llegó mi maleta un día tarde. Compré un cepillo de dientes en el hotel."
+        },
+        {
+          "q": "¿Qué situación vergonzosa recuerdas?",
+          "model": "Una vez me caí en la calle delante de mucha gente."
+        },
+        {
+          "q": "¿Viajas con mucho o con poco equipaje?",
+          "model": "Con poco. Solo llevo una mochila."
+        }
+      ],
+      "gaps": "No pasa nada. Aquí vemos de [todo]. La [semana] pasada vimos un [pavo] [vivo].",
+      "glossary": [
+        {
+          "word": "maleta",
+          "meaning": "bolsa grande para llevar ropa en un viaje"
+        },
+        {
+          "word": "cinta",
+          "meaning": "aquí: banda que mueve las maletas"
+        },
+        {
+          "word": "ropa interior",
+          "meaning": "ropa que se lleva debajo de la otra"
+        },
+        {
+          "word": "se escapó",
+          "meaning": "de «escaparse»: salir y huir"
+        }
+      ]
+    },
+    {
+      "id": "perdidos",
+      "title": "¿Dónde está el vestido?",
+      "place": "La oficina de equipaje perdido",
+      "context": "Bruno va a la oficina de equipaje perdido para buscar la maleta con el vestido de novia de su hermana. Lo atiende Hortensia.",
+      "speakers": [
+        {
+          "name": "Bruno",
+          "country": "Colombia",
+          "voice": "es-CO-GonzaloNeural"
+        },
+        {
+          "name": "Hortensia",
+          "country": "El Salvador",
+          "voice": "es-SV-LorenaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Buenas noches. Busco una maleta azul. Dentro está el vestido de novia de mi hermana."
+        },
+        {
+          "s": 1,
+          "text": "A ver… Maleta azul, nombre Orozco. Sí, aquí está. Está en Lima."
+        },
+        {
+          "s": 0,
+          "text": "¿En Lima? ¡Nosotros estamos aquí! ¿Cuándo llega?"
+        },
+        {
+          "s": 1,
+          "text": "Mañana a las dos de la tarde."
+        },
+        {
+          "s": 0,
+          "text": "¡La boda es a las doce!"
+        },
+        {
+          "s": 1,
+          "text": "Lo siento mucho. Mire, yo tengo mi vestido de novia de mil novecientos noventa y ocho en la oficina. Es una historia larga."
+        },
+        {
+          "s": 0,
+          "text": "¿Su vestido? ¿Y le queda bien a mi hermana?"
+        },
+        {
+          "s": 1,
+          "text": "No lo sé. Pero es bonito y está limpio."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿De qué color es la maleta?",
+          "options": [
+            "Azul",
+            "Roja",
+            "Negra"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Dónde está la maleta ahora?",
+          "options": [
+            "En Bogotá",
+            "En la cinta tres",
+            "En Lima"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cuándo llega la maleta?",
+          "options": [
+            "Esta noche",
+            "Mañana a las dos de la tarde",
+            "Mañana a las doce"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué ofrece Hortensia?",
+          "options": [
+            "Dinero",
+            "Su propio vestido de novia",
+            "Un billete de avión"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué harías tú si pierdes tu ropa antes de una fiesta importante?",
+          "model": "Compraría algo en una tienda o pediría ropa a una amiga."
+        },
+        {
+          "q": "¿Te pondrías la ropa de otra persona?",
+          "model": "Sí, de una persona de confianza, como mi hermana."
+        },
+        {
+          "q": "¿Guardas ropa de ocasiones especiales?",
+          "model": "Sí, guardo el traje de mi graduación."
+        }
+      ],
+      "gaps": "Lo siento mucho. Mire, yo tengo mi [vestido de novia] de mil novecientos noventa y ocho en la [oficina]. Es una [historia] [larga].",
+      "glossary": [
+        {
+          "word": "lo siento mucho",
+          "meaning": "expresión para pedir perdón o mostrar pena"
+        },
+        {
+          "word": "novia",
+          "meaning": "aquí: mujer que se casa"
+        },
+        {
+          "word": "le queda bien",
+          "meaning": "tiene la talla correcta"
+        },
+        {
+          "word": "limpio",
+          "meaning": "sin manchas"
+        }
+      ]
+    },
+    {
+      "id": "aduana",
+      "title": "Los quesos de Doña Carmela",
+      "place": "El control de aduana",
+      "context": "Osvaldo, agente de aduana, revisa la maleta de doña Carmela, una abuela cubana.",
+      "speakers": [
+        {
+          "name": "Osvaldo",
+          "country": "Paraguay",
+          "voice": "es-PY-MarioNeural"
+        },
+        {
+          "name": "Carmela",
+          "country": "Cuba",
+          "voice": "es-CU-BelkysNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Señora, ¿qué lleva en esta maleta tan pesada?"
+        },
+        {
+          "s": 1,
+          "text": "Quesos, mi amor. Doce quesos para mis nietos."
+        },
+        {
+          "s": 0,
+          "text": "¿Doce? Señora, solo puede pasar dos."
+        },
+        {
+          "s": 1,
+          "text": "¿Dos? Pero tengo doce nietos. ¿Cuál de mis nietos no come queso?"
+        },
+        {
+          "s": 0,
+          "text": "Lo siento. ¿Y en esa caja con agujeros qué hay?"
+        },
+        {
+          "s": 1,
+          "text": "Nada. Una caja vacía."
+        },
+        {
+          "s": 0,
+          "text": "¿Vacía? Pues la caja vacía acaba de decir «hola, guapo»."
+        },
+        {
+          "s": 1,
+          "text": "Es la radio. Ay, está bien. Es Pepito, mi loro. Tiene cuarenta años y habla más que yo."
+        },
+        {
+          "s": 0,
+          "text": "Señora, el loro tampoco puede pasar sin papeles. Pero los quesos… dejo pasar cuatro."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cuántos quesos lleva doña Carmela?",
+          "options": [
+            "Dos",
+            "Doce",
+            "Veinte"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cuántos quesos puede pasar?",
+          "options": [
+            "Dos",
+            "Seis",
+            "Ninguno"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Por qué quiere pasar tantos quesos?",
+          "options": [
+            "Porque los vende",
+            "Porque tiene doce nietos",
+            "Porque son para una fiesta"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué hay en la caja?",
+          "options": [
+            "Ropa",
+            "Más quesos",
+            "Un loro que habla"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué comida llevarías a tu familia si vives lejos?",
+          "model": "Llevaría pan y dulces típicos de mi ciudad."
+        },
+        {
+          "q": "¿Tienes o tenías una mascota? ¿Cómo es?",
+          "model": "Tengo un gato negro. Es muy perezoso."
+        },
+        {
+          "q": "¿Alguna vez dijiste una mentira pequeña para ayudar a alguien?",
+          "model": "Sí, dije que una comida estaba buena para no ofender a una amiga."
+        }
+      ],
+      "gaps": "¿Dos? Pero tengo [doce] [nietos]. ¿Cuál de mis [nietos] no come [queso]?",
+      "glossary": [
+        {
+          "word": "pesada",
+          "meaning": "que pesa mucho"
+        },
+        {
+          "word": "nietos",
+          "meaning": "hijos de tus hijos"
+        },
+        {
+          "word": "agujeros",
+          "meaning": "espacios abiertos en algo"
+        },
+        {
+          "word": "vacía",
+          "meaning": "sin nada dentro"
+        }
+      ]
+    },
+    {
+      "id": "reencuentro",
+      "title": "Ulises espera con flores",
+      "place": "El hall de llegadas",
+      "context": "Ulises espera a Valeria, una mujer que conoce por internet. Leonor, la florista, habla con él.",
+      "speakers": [
+        {
+          "name": "Ulises",
+          "country": "Costa Rica",
+          "voice": "es-CR-JuanNeural"
+        },
+        {
+          "name": "Leonor",
+          "country": "Costa Rica",
+          "voice": "es-CR-MariaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Buenas noches. ¿Quiere más flores? Ya tiene dos ramos."
+        },
+        {
+          "s": 0,
+          "text": "Sí, uno más. Valeria llega en el vuelo de Miami. Nos conocemos por internet desde hace un año."
+        },
+        {
+          "s": 1,
+          "text": "¿Un año? ¿Y nunca la vio?"
+        },
+        {
+          "s": 0,
+          "text": "No. Su cámara siempre está rota. Pero es una persona maravillosa."
+        },
+        {
+          "s": 1,
+          "text": "¿Y le pidió dinero alguna vez?"
+        },
+        {
+          "s": 0,
+          "text": "Bueno… tres veces. Para su gato enfermo."
+        },
+        {
+          "s": 1,
+          "text": "Ulises, el vuelo de Miami llegó hace dos horas. Ya no queda nadie."
+        },
+        {
+          "s": 0,
+          "text": "Entonces… ¿Valeria no existe?"
+        },
+        {
+          "s": 1,
+          "text": "Venga, le invito a un café. Las flores son para usted."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿A quién espera Ulises?",
+          "options": [
+            "A su hermana",
+            "A Valeria",
+            "A Leonor"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Desde cuándo se conocen?",
+          "options": [
+            "Desde hace un año",
+            "Desde ayer",
+            "Desde el colegio"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Por qué no la vio nunca?",
+          "options": [
+            "Porque vive muy lejos",
+            "Porque su cámara siempre está rota",
+            "Porque es tímida"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué hace Leonor al final?",
+          "options": [
+            "Le vende más flores",
+            "Llama a la policía",
+            "Lo invita a un café"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué piensas de conocer personas por internet?",
+          "model": "Puede ser bonito, pero hay que tener cuidado."
+        },
+        {
+          "q": "¿Qué consejo le darías a Ulises?",
+          "model": "Le diría que no mande dinero a nadie que no conoce."
+        },
+        {
+          "q": "¿Te gusta regalar flores? ¿Cuáles?",
+          "model": "Sí, me gustan los girasoles porque son alegres."
+        }
+      ],
+      "gaps": "Ulises, el [vuelo] de Miami [llegó] hace dos [horas]. Ya no queda [nadie].",
+      "glossary": [
+        {
+          "word": "ramos",
+          "meaning": "grupos de flores"
+        },
+        {
+          "word": "rota",
+          "meaning": "que no funciona"
+        },
+        {
+          "word": "enfermo",
+          "meaning": "que no está sano"
+        },
+        {
+          "word": "le invito",
+          "meaning": "yo pago por usted"
+        }
+      ]
+    },
+    {
+      "id": "alquiler",
+      "title": "El último coche de alquiler",
+      "place": "El mostrador de alquiler de coches",
+      "context": "Kiara, una comediante puertorriqueña, necesita un coche para llegar a su función. Cristian, el agente, solo tiene uno.",
+      "speakers": [
+        {
+          "name": "Kiara",
+          "country": "Puerto Rico",
+          "voice": "es-PR-KarinaNeural"
+        },
+        {
+          "name": "Cristian",
+          "country": "Chile",
+          "voice": "es-CL-LorenzoNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Hola. Necesito un coche, por favor. Mañana tengo un espectáculo en otra ciudad."
+        },
+        {
+          "s": 1,
+          "text": "Lo siento, señorita. Solo me queda un coche."
+        },
+        {
+          "s": 0,
+          "text": "¡Perfecto! Me lo llevo."
+        },
+        {
+          "s": 1,
+          "text": "Espere. Es un coche fúnebre. Es negro, muy largo y tiene un ataúd atrás."
+        },
+        {
+          "s": 0,
+          "text": "¿Un coche fúnebre? ¿Con ataúd?"
+        },
+        {
+          "s": 1,
+          "text": "Normalmente se quita el ataúd. Normalmente."
+        },
+        {
+          "s": 0,
+          "text": "Bueno… Soy comediante. Esto va a ser mi mejor chiste."
+        },
+        {
+          "s": 1,
+          "text": "Muy bien. Firme aquí, por favor. Y conduzca despacio, que los muertos no tienen prisa."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Por qué necesita un coche Kiara?",
+          "options": [
+            "Para ir a su casa",
+            "Para ir a una boda",
+            "Para llegar a su espectáculo"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cuántos coches le quedan a Cristian?",
+          "options": [
+            "Uno",
+            "Dos",
+            "Ninguno"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué tipo de coche es?",
+          "options": [
+            "Un coche deportivo",
+            "Un coche fúnebre",
+            "Un taxi"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué piensa Kiara al final?",
+          "options": [
+            "Que es muy peligroso",
+            "Que es caro",
+            "Que va a ser un buen chiste"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Conducirías un coche fúnebre? ¿Por qué?",
+          "model": "Sí, si no tengo otra opción. Pero me daría un poco de miedo."
+        },
+        {
+          "q": "¿Te gustan los comediantes? ¿Cuál es tu favorito?",
+          "model": "Sí, me gustan mucho. Mi favorito hace chistes sobre su familia."
+        },
+        {
+          "q": "¿Prefieres conducir o que otra persona conduzca?",
+          "model": "Prefiero conducir yo, porque me pongo nervioso de pasajero."
+        }
+      ],
+      "gaps": "Espere. Es un coche [fúnebre]. Es [negro], muy [largo] y tiene un [ataúd] atrás.",
+      "glossary": [
+        {
+          "word": "coche fúnebre",
+          "meaning": "coche que lleva a los muertos"
+        },
+        {
+          "word": "ataúd",
+          "meaning": "caja donde se pone a un muerto"
+        },
+        {
+          "word": "chiste",
+          "meaning": "historia corta y graciosa"
+        },
+        {
+          "word": "despacio",
+          "meaning": "con poca velocidad"
+        }
+      ]
+    },
+    {
+      "id": "freeshop",
+      "title": "Dos perfumes iguales",
+      "place": "El free shop",
+      "context": "Horacio, un cliente guatemalteco, compra perfumes en la tienda donde trabaja Vanesa.",
+      "speakers": [
+        {
+          "name": "Horacio",
+          "country": "Guatemala",
+          "voice": "es-GT-AndresNeural"
+        },
+        {
+          "name": "Vanesa",
+          "country": "Argentina",
+          "voice": "es-AR-ElenaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Buenas noches. Quiero dos perfumes iguales, por favor. Ese de la botella roja."
+        },
+        {
+          "s": 1,
+          "text": "Muy bien. ¿Son para dos personas?"
+        },
+        {
+          "s": 0,
+          "text": "Sí. Uno para mi esposa y otro para… una compañera de trabajo."
+        },
+        {
+          "s": 1,
+          "text": "¿El mismo perfume para las dos?"
+        },
+        {
+          "s": 0,
+          "text": "Claro. Así no me equivoco nunca de olor."
+        },
+        {
+          "s": 1,
+          "text": "Entiendo. ¿Le pongo tarjetas para los regalos?"
+        },
+        {
+          "s": 0,
+          "text": "Sí, por favor. Usted escribe muy bonito."
+        },
+        {
+          "s": 1,
+          "text": "Con mucho gusto. Por cierto, este perfume se llama «Remordimiento». Me parece muy apropiado."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cuántos perfumes compra Horacio?",
+          "options": [
+            "Uno",
+            "Dos",
+            "Tres"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Para quién es el segundo perfume?",
+          "options": [
+            "Para su madre",
+            "Para su hija",
+            "Para una compañera de trabajo"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Por qué compra el mismo perfume?",
+          "options": [
+            "Para no equivocarse de olor",
+            "Porque está de oferta",
+            "Porque es el único"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cómo se llama el perfume?",
+          "options": [
+            "Amor",
+            "Remordimiento",
+            "Noche roja"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué piensas de Horacio?",
+          "model": "Pienso que no es honesto con su esposa."
+        },
+        {
+          "q": "¿Usas perfume? ¿Cuándo?",
+          "model": "Uso perfume solo los fines de semana o para salir."
+        },
+        {
+          "q": "¿Qué regalo te gusta recibir?",
+          "model": "Me gusta recibir libros y cosas para la casa."
+        }
+      ],
+      "gaps": "[Sí]. Uno para mi [esposa] y otro para… una [compañera] de [trabajo].",
+      "glossary": [
+        {
+          "word": "iguales",
+          "meaning": "que son lo mismo"
+        },
+        {
+          "word": "compañera de trabajo",
+          "meaning": "mujer que trabaja contigo"
+        },
+        {
+          "word": "olor",
+          "meaning": "lo que se nota con la nariz"
+        },
+        {
+          "word": "remordimiento",
+          "meaning": "sentimiento malo cuando hiciste algo mal"
+        }
+      ]
+    },
+    {
+      "id": "comidas",
+      "title": "Empanadas para el comandante",
+      "place": "El patio de comidas",
+      "context": "El comandante Arturo Lezcano cena en el puesto de Marisol. Mañana pilota su último vuelo antes de jubilarse.",
+      "speakers": [
+        {
+          "name": "Arturo",
+          "country": "España",
+          "voice": "es-ES-AlvaroNeural"
+        },
+        {
+          "name": "Marisol",
+          "country": "Ecuador",
+          "voice": "es-EC-AndreaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Buenas noches, comandante. ¿Lo de siempre? ¿Dos empanadas de queso?"
+        },
+        {
+          "s": 0,
+          "text": "Hoy tres, Marisol. Mañana es mi último vuelo."
+        },
+        {
+          "s": 1,
+          "text": "¿Su último vuelo? ¿Se jubila?"
+        },
+        {
+          "s": 0,
+          "text": "Sí. Treinta y cinco años volando. Mañana piloto el vuelo de las seis y diez y después… a casa."
+        },
+        {
+          "s": 1,
+          "text": "Entonces la tercera empanada es un regalo de la casa."
+        },
+        {
+          "s": 0,
+          "text": "Gracias. Voy a echar de menos estas empanadas más que los aviones."
+        },
+        {
+          "s": 1,
+          "text": "Venga a visitarme. Aquí siempre hay empanadas calientes para usted."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué cena el comandante normalmente?",
+          "options": [
+            "Dos empanadas de queso",
+            "Una sopa",
+            "Un bocadillo"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Por qué hoy pide tres?",
+          "options": [
+            "Porque tiene mucha hambre",
+            "Porque mañana es su último vuelo",
+            "Porque invita a un amigo"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cuántos años lleva volando?",
+          "options": [
+            "Quince",
+            "Veinticinco",
+            "Treinta y cinco"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué le regala Marisol?",
+          "options": [
+            "Un café",
+            "La tercera empanada",
+            "Una foto"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué comida te gusta comer de noche?",
+          "model": "Me gusta comer algo ligero, como una sopa o una ensalada."
+        },
+        {
+          "q": "¿Qué te gustaría hacer cuando te jubiles?",
+          "model": "Me gustaría viajar y aprender a pintar."
+        },
+        {
+          "q": "¿Tienes un lugar donde siempre pides lo mismo?",
+          "model": "Sí, en una cafetería cerca de casa siempre pido un café con leche."
+        }
+      ],
+      "gaps": "Sí. Treinta y cinco años [volando]. Mañana [piloto] el [vuelo] de las seis y diez y después… a [casa].",
+      "glossary": [
+        {
+          "word": "comandante",
+          "meaning": "piloto que manda en el avión"
+        },
+        {
+          "word": "se jubila",
+          "meaning": "de «jubilarse»: dejar de trabajar por la edad"
+        },
+        {
+          "word": "regalo de la casa",
+          "meaning": "gratis, lo paga el restaurante"
+        },
+        {
+          "word": "echar de menos",
+          "meaning": "sentir la falta de algo"
+        }
+      ]
+    },
+    {
+      "id": "vip",
+      "title": "El cantante de la gorra",
+      "place": "La recepción de la sala VIP",
+      "context": "Un hombre con gorra y gafas oscuras quiere entrar en la sala VIP. Gisela, la recepcionista, le pide su tarjeta.",
+      "speakers": [
+        {
+          "name": "Tito",
+          "country": "Puerto Rico",
+          "voice": "es-PR-VictorNeural"
+        },
+        {
+          "name": "Gisela",
+          "country": "Panamá",
+          "voice": "es-PA-MargaritaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Buenas noches. ¿Me enseña su tarjeta VIP, por favor?"
+        },
+        {
+          "s": 0,
+          "text": "No tengo tarjeta. Pero… soy Tito Ventura."
+        },
+        {
+          "s": 1,
+          "text": "¿Tito Ventura, el cantante? No le creo. Tito Ventura no lleva gorra."
+        },
+        {
+          "s": 0,
+          "text": "Esta noche sí. No quiero fotos ni selfis. Estoy muy cansado y necesito dormir."
+        },
+        {
+          "s": 1,
+          "text": "Si es Tito Ventura, cante un poco."
+        },
+        {
+          "s": 0,
+          "text": "¿Aquí? ¿Ahora? Bueno… «Baby, baby, tú eres mi luna…»"
+        },
+        {
+          "s": 1,
+          "text": "¡Es usted! Mi sobrina tiene un póster suyo en su cuarto. Pase, por favor."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué le pide Gisela al hombre?",
+          "options": [
+            "Su pasaporte",
+            "Su tarjeta VIP",
+            "Su billete"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Por qué Tito lleva gorra y gafas?",
+          "options": [
+            "Porque tiene frío",
+            "Porque no quiere fotos",
+            "Porque está enfermo"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué hace Tito para demostrar quién es?",
+          "options": [
+            "Enseña una foto",
+            "Llama a su representante",
+            "Canta un poco"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Quién tiene un póster de Tito?",
+          "options": [
+            "La sobrina de Gisela",
+            "La madre de Gisela",
+            "Gisela"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué famoso te gustaría conocer en un aeropuerto?",
+          "model": "Me gustaría conocer a un futbolista famoso."
+        },
+        {
+          "q": "¿Crees que ser famoso es difícil? ¿Por qué?",
+          "model": "Sí, porque nunca tienes tiempo solo para ti."
+        },
+        {
+          "q": "¿Qué música escuchas cuando estás cansado?",
+          "model": "Escucho música tranquila, como jazz o piano."
+        }
+      ],
+      "gaps": "Esta noche sí. No quiero [fotos] ni [selfis]. Estoy muy [cansado] y necesito [dormir].",
+      "glossary": [
+        {
+          "word": "gorra",
+          "meaning": "prenda para la cabeza con visera"
+        },
+        {
+          "word": "cantante",
+          "meaning": "persona que canta"
+        },
+        {
+          "word": "cuarto",
+          "meaning": "habitación"
+        },
+        {
+          "word": "pase",
+          "meaning": "de «pasar»: entrar"
+        }
+      ]
+    },
+    {
+      "id": "capilla",
+      "title": "Raquel tiene miedo de volar",
+      "place": "La capilla del aeropuerto",
+      "context": "Raquel, de cincuenta y ocho años, va a volar por primera vez. Está nerviosa en la capilla y habla con Hugo, el capellán.",
+      "speakers": [
+        {
+          "name": "Raquel",
+          "country": "Nicaragua",
+          "voice": "es-NI-YolandaNeural"
+        },
+        {
+          "name": "Hugo",
+          "country": "Nicaragua",
+          "voice": "es-NI-FedericoNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Perdone, padre. ¿Puedo sentarme aquí un rato?"
+        },
+        {
+          "s": 1,
+          "text": "Claro, hija. ¿Está bien? Está muy pálida."
+        },
+        {
+          "s": 0,
+          "text": "Es mi primer vuelo. Tengo cincuenta y ocho años y nunca me he subido a un avión."
+        },
+        {
+          "s": 1,
+          "text": "¿Y adónde va?"
+        },
+        {
+          "s": 0,
+          "text": "A ver a mi nieta, Luna. Tiene tres años y no la conozco."
+        },
+        {
+          "s": 1,
+          "text": "Entonces no piense en el avión. Piense en Luna."
+        },
+        {
+          "s": 0,
+          "text": "¿Y si tengo miedo en el aire?"
+        },
+        {
+          "s": 1,
+          "text": "Cierre los ojos y cuente hasta diez. Y recuerde: Luna la está esperando."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cuántos años tiene Raquel?",
+          "options": [
+            "Treinta y ocho",
+            "Cuarenta y ocho",
+            "Cincuenta y ocho"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Por qué está nerviosa?",
+          "options": [
+            "Porque es su primer vuelo",
+            "Porque perdió su maleta",
+            "Porque llega tarde"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿A quién va a ver?",
+          "options": [
+            "A su hija",
+            "A su nieta Luna",
+            "A su hermana"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué consejo le da Hugo?",
+          "options": [
+            "Tomar una pastilla",
+            "Hablar con el piloto",
+            "Cerrar los ojos y contar hasta diez"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Tienes miedo de algo? ¿Qué haces para no tenerlo?",
+          "model": "Tengo miedo de las alturas. Intento no mirar hacia abajo."
+        },
+        {
+          "q": "¿Recuerdas tu primer viaje en avión?",
+          "model": "Sí, tenía diez años. Estaba muy emocionado."
+        },
+        {
+          "q": "¿Qué persona te espera siempre con alegría?",
+          "model": "Mi abuela. Siempre me espera con comida."
+        }
+      ],
+      "gaps": "A ver a mi [nieta], Luna. Tiene [tres] [años] y no la [conozco].",
+      "glossary": [
+        {
+          "word": "pálida",
+          "meaning": "con la cara blanca"
+        },
+        {
+          "word": "nieta",
+          "meaning": "hija de tu hijo o de tu hija"
+        },
+        {
+          "word": "en el aire",
+          "meaning": "volando"
+        },
+        {
+          "word": "cuente",
+          "meaning": "de «contar»: decir números en orden"
+        }
+      ]
+    },
+    {
+      "id": "descanso",
+      "title": "Nueve días en el aeropuerto",
+      "place": "La sala de descanso",
+      "context": "Dayana, una enfermera que vuelve de un turno doble, quiere dormir. Esteban, que vive en el aeropuerto desde hace nueve días, habla sin parar.",
+      "speakers": [
+        {
+          "name": "Esteban",
+          "country": "El Salvador",
+          "voice": "es-SV-RodrigoNeural"
+        },
+        {
+          "name": "Dayana",
+          "country": "Venezuela",
+          "voice": "es-VE-PaolaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Buenas noches. ¿Es nueva aquí? Yo vivo aquí."
+        },
+        {
+          "s": 1,
+          "text": "¿Cómo que vive aquí?"
+        },
+        {
+          "s": 0,
+          "text": "Desde hace nueve días. Conozco los mejores sofás, el baño más limpio y la máquina de café que no cobra."
+        },
+        {
+          "s": 1,
+          "text": "Muy interesante. Pero acabo de terminar un turno doble en el hospital. Trabajé dieciséis horas. Quiero dormir."
+        },
+        {
+          "s": 0,
+          "text": "Claro, claro. Solo una cosa más: el sofá azul es el mejor."
+        },
+        {
+          "s": 1,
+          "text": "Gracias. Y ahora, por favor, silencio."
+        },
+        {
+          "s": 0,
+          "text": "Silencio. Entendido. Buenas noches, señora enfermera."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Desde cuándo vive Esteban en el aeropuerto?",
+          "options": [
+            "Desde hace nueve días",
+            "Desde ayer",
+            "Desde hace un mes"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué conoce Esteban?",
+          "options": [
+            "A todos los pilotos",
+            "Los mejores sofás y la máquina de café gratis",
+            "Las tiendas más baratas"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cuántas horas trabajó Dayana?",
+          "options": [
+            "Ocho",
+            "Doce",
+            "Dieciséis"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué quiere Dayana?",
+          "options": [
+            "Hablar con Esteban",
+            "Tomar un café",
+            "Dormir"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Podrías vivir nueve días en un aeropuerto?",
+          "model": "No, me volvería loco. Necesito mi cama."
+        },
+        {
+          "q": "¿Dónde puedes dormir sin problemas?",
+          "model": "Puedo dormir en el tren y en el sofá de mi casa."
+        },
+        {
+          "q": "¿Qué haces cuando alguien habla mucho y tú quieres descansar?",
+          "model": "Le digo con educación que estoy cansado."
+        }
+      ],
+      "gaps": "Desde hace nueve días. Conozco los mejores [sofás], el [baño] más limpio y la [máquina] de café que no [cobra].",
+      "glossary": [
+        {
+          "word": "turno",
+          "meaning": "horas de trabajo"
+        },
+        {
+          "word": "sofás",
+          "meaning": "sillones largos para varias personas"
+        },
+        {
+          "word": "máquina de café",
+          "meaning": "aparato que hace café"
+        },
+        {
+          "word": "silencio",
+          "meaning": "sin ruido"
+        }
+      ]
+    },
+    {
+      "id": "fumadores",
+      "title": "Los secretos del sobrecargo",
+      "place": "La terraza de fumadores",
+      "context": "Mónica, azafata, e Iván, sobrecargo, hablan en la terraza de fumadores. Iván sabe todos los secretos del aeropuerto.",
+      "speakers": [
+        {
+          "name": "Mónica",
+          "country": "Guinea Ecuatorial",
+          "voice": "es-GQ-TeresaNeural"
+        },
+        {
+          "name": "Iván",
+          "country": "Guinea Ecuatorial",
+          "voice": "es-GQ-JavierNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Mónica, soy sobrecargo y lo veo todo. ¿Sabes una cosa? El vuelo de las seis y diez tiene más pasajeros que asientos."
+        },
+        {
+          "s": 0,
+          "text": "¿Cuántos más?"
+        },
+        {
+          "s": 1,
+          "text": "Uno. Falta un asiento. Alguien no va a volar."
+        },
+        {
+          "s": 0,
+          "text": "Pobre persona. ¿Y tú cómo sabes todo eso?"
+        },
+        {
+          "s": 1,
+          "text": "Yo lo sé todo. Por ejemplo, sé que tú no fumas. Siempre vienes aquí sin cigarrillos."
+        },
+        {
+          "s": 0,
+          "text": "Vengo por el aire. Bueno, por el silencio."
+        },
+        {
+          "s": 1,
+          "text": "Y por la lluvia. A ti te gusta mirar la lluvia."
+        },
+        {
+          "s": 0,
+          "text": "Iván, a veces das miedo."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué problema tiene el vuelo de las seis y diez?",
+          "options": [
+            "Sale tarde",
+            "Tiene más pasajeros que asientos",
+            "No tiene piloto"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cuántos asientos faltan?",
+          "options": [
+            "Uno",
+            "Dos",
+            "Diez"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué sabe Iván de Mónica?",
+          "options": [
+            "Que fuma mucho",
+            "Que tiene novio",
+            "Que no fuma"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Por qué va Mónica a la terraza?",
+          "options": [
+            "Para fumar",
+            "Para hablar por teléfono",
+            "Por el aire y el silencio"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Conoces a alguien que lo sabe todo de todos?",
+          "model": "Sí, mi vecina. Sabe todo lo que pasa en el edificio."
+        },
+        {
+          "q": "¿Dónde vas cuando necesitas silencio?",
+          "model": "Voy al parque o a la biblioteca."
+        },
+        {
+          "q": "¿Te gusta mirar la lluvia?",
+          "model": "Sí, me relaja mucho, sobre todo desde la ventana."
+        }
+      ],
+      "gaps": "[Uno]. Falta un [asiento]. [Alguien] no va a [volar].",
+      "glossary": [
+        {
+          "word": "sobrecargo",
+          "meaning": "jefe de los azafatos en un avión"
+        },
+        {
+          "word": "falta",
+          "meaning": "no hay suficiente"
+        },
+        {
+          "word": "cigarrillos",
+          "meaning": "cosas que se fuman"
+        },
+        {
+          "word": "das miedo",
+          "meaning": "haces sentir miedo"
+        }
+      ]
+    },
+    {
+      "id": "puerta",
+      "title": "Puerta doce, seis y diez",
+      "place": "La puerta de embarque 12",
+      "context": "Son casi las seis de la mañana. Débora, la agente de embarque, habla con Gustavo, que necesita subir al avión.",
+      "speakers": [
+        {
+          "name": "Débora",
+          "country": "Estados Unidos",
+          "voice": "es-US-PalomaNeural"
+        },
+        {
+          "name": "Gustavo",
+          "country": "Estados Unidos",
+          "voice": "es-US-AlonsoNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Buenos días, señor. Lo siento, el vuelo está lleno. Usted está en la lista de espera."
+        },
+        {
+          "s": 1,
+          "text": "Por favor, señorita. Mi hija va a tener a su primer hijo esta mañana. Voy a ser abuelo."
+        },
+        {
+          "s": 0,
+          "text": "Entiendo, pero falta un asiento. No puedo hacer nada."
+        },
+        {
+          "s": 1,
+          "text": "¿No hay nadie que quiera esperar al vuelo de la tarde?"
+        },
+        {
+          "s": 0,
+          "text": "Voy a preguntar por la megafonía. A veces la gente es generosa."
+        },
+        {
+          "s": 1,
+          "text": "Gracias. Mi hija me espera. Yo le prometí estar allí."
+        },
+        {
+          "s": 0,
+          "text": "Atención, pasajeros del vuelo AB 0610: ¿alguien puede cederle su asiento a un futuro abuelo?"
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Por qué Gustavo no puede subir?",
+          "options": [
+            "Porque llega tarde",
+            "Porque el vuelo está lleno",
+            "Porque no tiene pasaporte"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué va a pasar esta mañana?",
+          "options": [
+            "Su hija va a tener un hijo",
+            "Su hija se casa",
+            "Su hija se muda"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué va a hacer Débora?",
+          "options": [
+            "Llamar a la policía",
+            "Cancelar el vuelo",
+            "Preguntar por la megafonía"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué pide Débora a los pasajeros?",
+          "options": [
+            "Que se sienten",
+            "Que alguien le ceda su asiento a Gustavo",
+            "Que apaguen el móvil"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Le darías tu asiento a Gustavo? ¿Por qué?",
+          "model": "Sí, porque ser abuelo es muy importante y yo puedo esperar."
+        },
+        {
+          "q": "¿Qué promesa importante hiciste alguna vez?",
+          "model": "Le prometí a mi madre llamarla todos los domingos."
+        },
+        {
+          "q": "¿Qué momento familiar no te quieres perder nunca?",
+          "model": "Los cumpleaños de mis hermanos."
+        }
+      ],
+      "gaps": "Por favor, señorita. Mi [hija] va a tener a su primer [hijo] esta [mañana]. Voy a ser [abuelo].",
+      "glossary": [
+        {
+          "word": "lleno",
+          "meaning": "sin lugar libre"
+        },
+        {
+          "word": "abuelo",
+          "meaning": "padre de tu padre o de tu madre"
+        },
+        {
+          "word": "generosa",
+          "meaning": "que da a los demás"
+        },
+        {
+          "word": "ceder",
+          "meaning": "dar tu lugar a otra persona"
+        }
+      ]
+    }
+  ]
+}

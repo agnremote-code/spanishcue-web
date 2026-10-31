@@ -163,6 +163,14 @@ export const GAMES = {
     ownListening: true,
     bilingualA0: true,
   },
+  vuelo: {
+    title: 'Vuelo cancelado',
+    levels: ['A0', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
+    spots: ['taxi', 'pantalla', 'facturacion', 'reprogramacion', 'cambio', 'seguridad', 'cintas', 'perdidos', 'aduana', 'reencuentro', 'alquiler',
+      'freeshop', 'comidas', 'vip', 'capilla', 'descanso', 'fumadores', 'puerta'],
+    ownListening: true,
+    bilingualA0: true,
+  },
 };
 
 // Transcript length in words for each level.
