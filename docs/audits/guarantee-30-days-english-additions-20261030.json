@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "authorization": "Owner standing approval (Ale) for new English copy, typed «apruebo (siempre de ahora en más apruebo)» on 2026-10-22 (message cmsg_01Gr5R4j3t2Yet65UcmhcVhAAAbp6kqDfMqxzNm3PL6f5g), applied to Ale's 2026-10-30 decision to offer a 30-day money-back guarantee (decision card cmsg_01Gr5R4j3t2Yet65UcmhcVhAHPAjxem7jjKNPQyybZMMQ5, option «Garantía de 30 días»).",
+  "additions": [
+    {
+      "path": "app/legal/LegalDocument.tsx",
+      "text": "30-day guarantee"
+    },
+    {
+      "path": "app/legal/LegalDocument.tsx",
+      "text": "If within 30 days of your first payment you decide SPANISHCUE PRO isn’t right for you, email ${operator.supportEmail} from your account email and we refund that first payment in full, no questions asked. The guarantee covers each account’s first payment."
+    },
+    {
+      "path": "app/marketing/MarketingSections.tsx",
+      "text": "What if PRO isn’t right for me?"
+    },
+    {
+      "path": "app/marketing/MarketingSections.tsx",
+      "text": "You have a 30-day guarantee: if it isn’t right for you, email support and we refund your first payment."
+    },
+    {
+      "path": "app/pricing/page.tsx",
+      "text": "30-day guarantee."
+    },
+    {
+      "path": "app/pricing/page.tsx",
+      "text": "If SPANISHCUE PRO isn’t right for you, we refund your first payment."
+    },
+    {
+      "path": "app/pricing/page.tsx",
+      "text": "How it works"
+    },
+    {
+      "path": "app/pricing/page.tsx",
+      "text": "What if it isn’t right for me?"
+    },
+    {
+      "path": "app/pricing/page.tsx",
+      "text": "You have 30 days from your first payment: email support from your account email and we refund that payment in full."
+    }
+  ]
+}
