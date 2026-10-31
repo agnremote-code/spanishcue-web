@@ -2,7 +2,7 @@ import { env } from "cloudflare:workers";
 import { accountIdFromHeaders, fullAccessFromHeaders, safeRelativeReturnPath } from "../../../../access-policy";
 import { billingConfig, billingReadiness } from "../../../../billing-config";
 import { legalOperator } from "../../../../legal/operator";
-import { paddleConfig, paddleReady, type PaddleOffer } from "../../../../paddle-config";
+import { paddleAnnualReady, paddleConfig, paddleReady, type PaddleOffer } from "../../../../paddle-config";
 import { createPaddleCheckoutTransaction, getPaddleTransaction, paddleOffer, sanitizePaddleAttribution, type PaddleAttribution } from "../../../../paddle-server";
 import { getFounderOfferStatus } from "../../../../../db/billing";
 import { authorizePurchaseClaim, getOrCreatePurchaseClaim } from "../../../../purchase-claim-cookie";
@@ -47,8 +47,9 @@ export async function POST(request: Request) {
     if (raw.length > 3000) throw new Error("invalid_request");
     const requested = JSON.parse(raw) as { returnTo?: unknown; offer?: unknown; priceId?: unknown; attribution?: unknown };
     attribution = sanitizePaddleAttribution(requested.attribution);
-    if (requested.priceId !== undefined || (requested.offer !== undefined && requested.offer !== "monthly" && requested.offer !== "trial")) throw new Error("invalid_offer");
-    offer = requested.offer === "trial" ? "trial" : "monthly";
+    if (requested.priceId !== undefined || (requested.offer !== undefined && requested.offer !== "monthly" && requested.offer !== "trial" && requested.offer !== "annual")
+      || (requested.offer === "annual" && !paddleAnnualReady(paddle))) throw new Error("invalid_offer");
+    offer = requested.offer === "trial" ? "trial" : requested.offer === "annual" ? "annual" : "monthly";
     returnTo = safeRelativeReturnPath(typeof requested.returnTo === "string" && requested.returnTo.length <= 300 ? requested.returnTo : null);
   } catch { return Response.json({ error: "Solicitud no válida." }, { status: 400 }); }
 

@@ -195,7 +195,7 @@ export async function recordPaddleCompletedPayment(
   config: BillingRuntimeConfig,
 ) {
   if (config.paypalEnv !== "live") throw new Error("paddle_requires_live_billing");
-  if (input.currency !== "USD" || (input.isTrial ? input.amountCents !== 200 : ![1500, 1550].includes(input.amountCents))) throw new Error("paddle_payment_amount_invalid");
+  if (input.currency !== "USD" || (input.isTrial ? input.amountCents !== 200 : ![1500, 1550, 12900].includes(input.amountCents))) throw new Error("paddle_payment_amount_invalid");
   const subscription = await paddleSubscriptionById(db, input.subscriptionId);
   if (!subscription || subscription.userId !== input.userId) throw new Error("paddle_subscription_unknown");
 

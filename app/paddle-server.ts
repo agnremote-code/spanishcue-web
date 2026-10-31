@@ -1,4 +1,4 @@
-import { PADDLE_MONTHLY_PRICE_ID, PADDLE_TRIAL_PRICE_ID, PADDLE_MONTHLY_CENTS, PADDLE_TRIAL_CENTS, PADDLE_PRODUCT_ID, type PaddleRuntimeConfig, type PaddleOffer } from "./paddle-config";
+import { PADDLE_MONTHLY_PRICE_ID, PADDLE_TRIAL_PRICE_ID, PADDLE_ANNUAL_PRICE_ID, PADDLE_MONTHLY_CENTS, PADDLE_TRIAL_CENTS, PADDLE_ANNUAL_CENTS, PADDLE_PRODUCT_ID, type PaddleRuntimeConfig, type PaddleOffer } from "./paddle-config";
 
 type PaddlePrice = {
   id?: unknown; product_id?: unknown; tax_mode?: unknown;
@@ -97,7 +97,7 @@ export async function createPaddleCheckoutTransaction(
   const data = await paddleJson<PaddleTransaction>(config, "/transactions", {
     method: "POST",
     body: JSON.stringify({
-      items: [{ price_id: input.offer === "trial" ? config.trialPriceId : config.priceId, quantity: 1 }],
+      items: [{ price_id: input.offer === "trial" ? config.trialPriceId : input.offer === "annual" ? config.annualPriceId : config.priceId, quantity: 1 }],
       currency_code: "USD",
       collection_mode: "automatic",
       custom_data: {
@@ -188,12 +188,19 @@ export function validatePaddleTransaction(transaction: PaddleTransaction, config
   return custom[customKey] === userId && paddleOffer(transaction, config) !== null;
 }
 
-/** Only the two configured catalog prices are valid. The trial remains on its
+/** Only the configured catalog prices (monthly, trial, annual) are valid. The trial remains on its
  * original price ID after conversion; its base billing cycle is still monthly. */
 export function paddleOffer(entity: Pick<PaddleTransaction, "items">, config: PaddleRuntimeConfig): PaddleOffer | null {
   if (config.priceId !== PADDLE_MONTHLY_PRICE_ID || (config.trialPriceId && config.trialPriceId !== PADDLE_TRIAL_PRICE_ID)) return null;
   const item = entity.items?.length === 1 ? entity.items[0] : null;
   const price = item?.price;
+  if (price && item?.quantity === 1 && PADDLE_ANNUAL_PRICE_ID && config.annualPriceId === PADDLE_ANNUAL_PRICE_ID
+      && price.id === PADDLE_ANNUAL_PRICE_ID) {
+    return price.product_id === PADDLE_PRODUCT_ID && price.tax_mode === "internal"
+      && price.unit_price?.amount === String(PADDLE_ANNUAL_CENTS) && price.unit_price.currency_code === "USD"
+      && price.billing_cycle?.interval === "year" && price.billing_cycle.frequency === 1 && price.trial_period == null
+      ? "annual" : null;
+  }
   if (!price || item?.quantity !== 1 || price.product_id !== PADDLE_PRODUCT_ID
       || price.tax_mode !== "internal" || !(price.unit_price?.amount === String(PADDLE_MONTHLY_CENTS) || (config.legacyMonthly && price.id === config.priceId && price.unit_price?.amount === "1500"))
       || price.unit_price?.currency_code !== "USD" || price.billing_cycle?.interval !== "month"
@@ -229,10 +236,11 @@ export function paddleCompletedPayment(transaction: PaddleTransaction, subscript
   const end = typeof period?.ends_at === "string" ? Math.floor(Date.parse(period.ends_at) / 1000) : NaN;
   if (!Number.isInteger(start) || !Number.isInteger(end) || end <= start
       || (isTrial && end - start !== 86400)
-      || (!isTrial && (end - start < 28 * 86400 || end - start > 31 * 86400))
+      || (!isTrial && offer !== "annual" && (end - start < 28 * 86400 || end - start > 31 * 86400))
+      || (offer === "annual" && (end - start < 365 * 86400 || end - start > 366 * 86400))
       || (subscription.status === "trialing" && !isTrial)
       || !["active", "trialing", "canceled", "paused", "past_due"].includes(String(subscription.status))) return null;
-  return { amountCents, currency: "USD", isTrial, paidThrough: end, paidAt: start,
+  return { amountCents, currency: "USD", isTrial, offer, paidThrough: end, paidAt: start,
     priceId: String(transaction.items![0].price!.id) };
 }
 
