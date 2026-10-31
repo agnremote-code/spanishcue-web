@@ -741,11 +741,13 @@ function buildItem(g: THREE.Group, item: Item, floor: number, glows: THREE.MeshS
       break;
     }
     case 'fids': {
-      const board = makeBoard(1024, 768, 'fids');
-      add(g, B(item.w + 0.3, item.w * 0.75 + 0.3, 0.4), DARK(), item.x, 4.25, item.z);
+      // A wide board (13 × 3.8 m) hanging between the doors and the halls.
+      const bh = 3.8, by = 4.05; // bottom edge at 2.15 m: nobody's head reaches it
+      const board = makeBoard(1300, 380, 'fids');
+      add(g, B(item.w + 0.3, bh + 0.3, 0.4), DARK(), item.x, by, item.z);
       if (board) {
         const mat = new THREE.MeshBasicMaterial({ map: board.tex, toneMapped: false });
-        for (const s of [-1, 1]) { const mesh = add(g, new THREE.PlaneGeometry(item.w, item.w * 0.75 * 0.5), mat, item.x, 4.25, item.z + s * 0.21, s > 0 ? 0 : Math.PI); screens.push({ board, mesh }); }
+        for (const s of [-1, 1]) { const mesh = add(g, new THREE.PlaneGeometry(item.w, bh), mat, item.x, by, item.z + s * 0.21, s > 0 ? 0 : Math.PI); screens.push({ board, mesh }); }
       }
       for (const s of [-1, 1]) add(g, C(0.03, 0.03, CEILING - 6.1 + 2.6, 4), STEEL(), item.x + s * item.w * 0.4, CEILING - 0.6, item.z);
       break;
@@ -965,9 +967,9 @@ function buildFloor(id: number, low: boolean, glows: THREE.MeshStandardMaterial[
     hangingSign(group, 'CONTROL DE SEGURIDAD · EMBARQUE ↑', 30, -13.2, Math.PI, 7.4);
     hangingSign(group, 'CASA DE CAMBIO · FARMACIA', -29, -13.2, Math.PI, 6.2);
     // The terminal's name over the doors, seen from the kerb.
-    const name = canvas(2048, 256, ctx => { ctx.fillStyle = '#1d2126'; ctx.fillRect(0, 0, 2048, 256); ctx.fillStyle = '#ffffff'; ctx.font = 'bold 120px "Arial Narrow", Arial'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText('AEROPUERTO INTERNACIONAL DE PUERTO BRUMA', 1024, 110); ctx.fillStyle = '#ffcc00'; ctx.font = 'bold 64px "Arial Narrow", Arial'; ctx.fillText('SALIDAS', 1024, 210); });
+    const name = canvas(2048, 256, ctx => { ctx.fillStyle = '#1d2126'; ctx.fillRect(0, 0, 2048, 256); ctx.fillStyle = '#ffffff'; ctx.font = 'bold 120px "Arial Narrow", Arial'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText('AEROPUERTO INTERNACIONAL DE PUERTO BRUMA', 1024, 110, 1940); ctx.fillStyle = '#ffcc00'; ctx.font = 'bold 64px "Arial Narrow", Arial'; ctx.fillText('SALIDAS', 1024, 210); });
     const m = mapped(name, 0.9); glows.push(m);
-    add(group, new THREE.PlaneGeometry(30, 3.75), m, 0, 7.8, 30.4);
+    add(group, new THREE.PlaneGeometry(30, 3.75), m, 0, 7.8, 30.46);
     add(group, B(96, 3.6, 0.4), std('#d8dcdf', 0.5, 0.3), 0, CEILING + 1.6 + 0.2, 30.2);
   }
   if (id === 0) {

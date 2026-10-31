@@ -176,6 +176,14 @@ export default function World3D(props: WorldProps) {
       if (nearPerson?.talk && !p.personId) p.onPerson(nearPerson.talk);
     }
     const jump = () => { jumpUntil = clock + 0.15; };
+    if (new URLSearchParams(window.location.search).has('qa3d')) {
+      (window as unknown as { __vc3d?: unknown }).__vc3d = {
+        place: (x: number, z: number, heading = 0) => { player = { ...player, x, z, heading, speed: 0, y: 0, vy: 0 }; yaw = heading; },
+        where: () => ({ x: player.x, z: player.z, y: player.y }),
+        look: (y: number, p: number, d: number) => { yaw = y; pitch = p; zoom = d; lastDrag = clock + 1000; },
+        scene,
+      };
+    }
     api.current = { joy, held, clear, interact, jump, nitro: touchNitro };
 
     // ------------------------------------------------------------ input
