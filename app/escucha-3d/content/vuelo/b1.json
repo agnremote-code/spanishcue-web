@@ -1,0 +1,2220 @@
+{
+  "game": "vuelo",
+  "level": "B1",
+  "items": [
+    {
+      "id": "taxi",
+      "title": "Ramiro llama a Vanesa desde la acera",
+      "place": "La acera de salidas, bajo la lluvia",
+      "context": "Ramiro espera clientes en la puerta de Salidas y llama a su esposa, Vanesa, que trabaja esta noche en el free shop del aeropuerto.",
+      "speakers": [
+        {
+          "name": "Ramiro",
+          "country": "Argentina",
+          "voice": "es-AR-TomasNeural"
+        },
+        {
+          "name": "Vanesa",
+          "country": "Argentina",
+          "voice": "es-AR-ElenaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Vane, ¿estás despierta? Estoy abajo, en Salidas. Esto es un diluvio."
+        },
+        {
+          "s": 1,
+          "text": "Claro que estoy despierta, Ramiro, estoy trabajando. ¿Qué pasa? ¿Otra vez cobraste la tarifa de tormenta?"
+        },
+        {
+          "s": 0,
+          "text": "Bueno… un poquito. Pero escucha esto: un cliente me pagó noventa con la condición de que le cantara un tango."
+        },
+        {
+          "s": 1,
+          "text": "¿Y le cantaste? Con lo mal que cantas…"
+        },
+        {
+          "s": 0,
+          "text": "¡Me aplaudieron dos azafatas! Ahora en serio: dicen que no sale ningún avión hasta mañana. ¿A qué hora terminas tú?"
+        },
+        {
+          "s": 1,
+          "text": "A las seis. Pero no me esperes, que vas a cobrarte a ti mismo la espera."
+        },
+        {
+          "s": 0,
+          "text": "Ja. Te espero igual. Te llevo una empanada de las de Marisol, ¿quieres?"
+        },
+        {
+          "s": 1,
+          "text": "Quiero dos. Y, Ramiro, devuelve el dinero del tango. O por lo menos la mitad."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Por qué llama Ramiro a Vanesa?",
+          "options": [
+            "Para contarle lo que pasó y saber cuándo termina",
+            "Para pedirle dinero para el taxi",
+            "Para decirle que no va a volver a casa"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué condición puso el cliente para pagar noventa?",
+          "options": [
+            "Que lo esperara media hora",
+            "Que le cantara un tango",
+            "Que lo llevara hasta el mostrador"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué piensa Vanesa de la voz de Ramiro?",
+          "options": [
+            "Que canta muy bien",
+            "Que debería cantar en el free shop",
+            "Que canta mal"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué le pide Vanesa al final?",
+          "options": [
+            "Que devuelva al menos la mitad del dinero",
+            "Que le traiga un café",
+            "Que deje de trabajar de noche"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Tienes un trabajo o un horario que no coincide con el de tu familia? ¿Cómo lo organizan?",
+          "model": "Sí, mi pareja trabaja de noche y yo de día. Nos vemos en el desayuno y los domingos."
+        },
+        {
+          "q": "¿Qué opinas de que Ramiro cobre más cuando llueve?",
+          "model": "Me parece un poco injusto, pero entiendo que con lluvia trabaja más y hay más peligro."
+        },
+        {
+          "q": "¿Alguna vez hiciste algo un poco ridículo por dinero?",
+          "model": "Una vez me disfracé de pollo para una fiesta infantil. Me pagaron bien, pero no lo repetiría."
+        }
+      ],
+      "gaps": "Bueno… un poquito. Pero escucha esto: un [cliente] me pagó [noventa] con la [condición] de que le cantara un [tango].",
+      "glossary": [
+        {
+          "word": "diluvio",
+          "meaning": "lluvia muy fuerte"
+        },
+        {
+          "word": "tarifa",
+          "meaning": "precio de un servicio"
+        },
+        {
+          "word": "azafatas",
+          "meaning": "mujeres que atienden a los pasajeros en el avión"
+        },
+        {
+          "word": "la mitad",
+          "meaning": "una de las dos partes iguales de algo"
+        }
+      ]
+    },
+    {
+      "id": "pantalla",
+      "title": "El aviso que nadie quería oír",
+      "place": "Bajo la pantalla de salidas",
+      "context": "La megafonía del aeropuerto anuncia la cancelación del vuelo. Después, Delfina y su hermano Bruno hablan sentados en el suelo del hall.",
+      "speakers": [
+        {
+          "name": "Valentina",
+          "country": "Uruguay",
+          "voice": "es-UY-ValentinaNeural"
+        },
+        {
+          "name": "Delfina",
+          "country": "Colombia",
+          "voice": "es-CO-SalomeNeural"
+        },
+        {
+          "name": "Bruno",
+          "country": "Colombia",
+          "voice": "es-CO-GonzaloNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Atención, por favor. Aerobruma informa a los pasajeros del vuelo AB 2317 que su vuelo ha sido cancelado por la tormenta. Les rogamos que se dirijan a Atención al pasajero."
+        },
+        {
+          "s": 1,
+          "text": "Cancelado. Lo ha dicho en voz alta, Bruno. Ahora es oficial."
+        },
+        {
+          "s": 2,
+          "text": "Delfi, piénsalo así: si salimos a las seis y diez, llegamos a las nueve. La boda es a las doce. Tenemos tres horas."
+        },
+        {
+          "s": 1,
+          "text": "Tres horas para peinarme, maquillarme y encontrar un vestido que no tengo."
+        },
+        {
+          "s": 2,
+          "text": "Lo del vestido es culpa mía, ya lo sé. Ahora mismo bajo a equipaje perdido."
+        },
+        {
+          "s": 1,
+          "text": "Y llama a mamá. Pero no le digas lo del vestido, que le da algo."
+        },
+        {
+          "s": 2,
+          "text": "¿Y qué le digo?"
+        },
+        {
+          "s": 1,
+          "text": "Que estamos bien, que llueve y que la quiero. Lo demás, mañana."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué cuenta este audio?",
+          "options": [
+            "Que el vuelo se cancela y los hermanos organizan qué hacer",
+            "Que la boda se cambia a otro día",
+            "Que Bruno encuentra el vestido en la pantalla"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Adónde pide la megafonía que vayan los pasajeros?",
+          "options": [
+            "A la puerta doce",
+            "A Atención al pasajero",
+            "A la salida de taxis"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Según Bruno, ¿cuánto tiempo tendrán antes de la boda?",
+          "options": [
+            "Una hora",
+            "Seis horas",
+            "Tres horas"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué no quiere Delfina que sepa su madre?",
+          "options": [
+            "Que llueve mucho",
+            "Que el vuelo está cancelado",
+            "Lo del vestido"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Cómo das tú una mala noticia a tu familia? ¿Lo cuentas todo o solo una parte?",
+          "model": "Normalmente cuento solo una parte, para no preocupar a mis padres. Después, cuando todo está bien, cuento el resto."
+        },
+        {
+          "q": "¿Qué harías con tres horas antes de un evento muy importante?",
+          "model": "Me ducharía, comería algo y repasaría lo que tengo que decir. Y apagaría el móvil."
+        },
+        {
+          "q": "¿Qué te parece más importante en una boda: la ropa, la comida o las personas?",
+          "model": "Para mí, las personas. Una boda sin amigos de verdad no tiene sentido, aunque el vestido sea perfecto."
+        }
+      ],
+      "gaps": "Que estamos [bien], que [llueve] y que la [quiero]. Lo demás, [mañana].",
+      "glossary": [
+        {
+          "word": "rogamos",
+          "meaning": "de «rogar»: pedir algo con educación"
+        },
+        {
+          "word": "cancelado",
+          "meaning": "que no se va a hacer"
+        },
+        {
+          "word": "peinarme",
+          "meaning": "arreglarme el pelo"
+        },
+        {
+          "word": "le da algo",
+          "meaning": "se pone muy nerviosa o se enferma del susto"
+        }
+      ]
+    },
+    {
+      "id": "facturacion",
+      "title": "Café de medianoche en facturación",
+      "place": "Detrás de los mostradores de facturación",
+      "context": "En su descanso, Yesenia, de facturación, toma un café con Gerardo, de Atención al pasajero, y le cuenta lo que pasó con Don Teodoro.",
+      "speakers": [
+        {
+          "name": "Yesenia",
+          "country": "República Dominicana",
+          "voice": "es-DO-RamonaNeural"
+        },
+        {
+          "name": "Gerardo",
+          "country": "México",
+          "voice": "es-MX-JorgeNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Gerardo, siéntate un minuto. Si no me tomo este café, me duermo de pie."
+        },
+        {
+          "s": 1,
+          "text": "Un minuto, de verdad. Tengo cien personas en la cola. ¿Qué tal tu noche?"
+        },
+        {
+          "s": 0,
+          "text": "Rara. Muy rara. Vino un señor mayor con las cenizas de su esposa en una urna y me pidió un asiento de ventana para ella."
+        },
+        {
+          "s": 1,
+          "text": "¿Y qué hiciste? El sistema no deja."
+        },
+        {
+          "s": 0,
+          "text": "Bloqueé el asiento de al lado con un código interno. Ya sé que no es lo normal, pero no podía decirle que su esposa era equipaje."
+        },
+        {
+          "s": 1,
+          "text": "Hiciste bien. A veces las reglas no piensan en las personas."
+        },
+        {
+          "s": 0,
+          "text": "Me contó que se conocieron en un baile de carnaval, vestidos de pirata. Casi lloro delante de todos."
+        },
+        {
+          "s": 1,
+          "text": "Bueno, si mañana te preguntan por el código, di que fue por motivos operativos. Eso lo entiende cualquier jefe."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿De qué hablan principalmente Yesenia y Gerardo?",
+          "options": [
+            "De la cola de cien personas",
+            "De cómo ayudó Yesenia a un pasajero especial",
+            "De los problemas del sistema informático"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué hizo Yesenia con el asiento de al lado?",
+          "options": [
+            "Lo vendió a otro pasajero",
+            "Lo bloqueó con un código interno",
+            "Lo dejó para un empleado"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cómo se conocieron Don Teodoro y su esposa?",
+          "options": [
+            "En un avión",
+            "En el trabajo",
+            "En un baile de carnaval"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué le aconseja Gerardo a Yesenia?",
+          "options": [
+            "Que diga que fue por motivos operativos",
+            "Que le cuente todo a su jefe",
+            "Que no vuelva a hacerlo"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Crees que un trabajador puede saltarse una regla para ayudar a alguien?",
+          "model": "Creo que sí, si no hace daño a nadie. Las reglas existen para las personas, no al revés."
+        },
+        {
+          "q": "¿Qué haces tú para no dormirte cuando tienes que trabajar o estudiar de noche?",
+          "model": "Tomo mucho té, pongo música y me levanto cada media hora para caminar un poco."
+        },
+        {
+          "q": "¿Conoces una historia de amor bonita de tu familia? Cuéntala brevemente.",
+          "model": "Mis abuelos se conocieron en un tren. Mi abuelo le pidió el periódico y se casaron un año después."
+        }
+      ],
+      "gaps": "Bloqueé el [asiento] de al lado con un [código] interno. Ya sé que no es lo [normal], pero no podía decirle que su esposa era [equipaje].",
+      "glossary": [
+        {
+          "word": "cenizas",
+          "meaning": "lo que queda de una persona después de la cremación"
+        },
+        {
+          "word": "urna",
+          "meaning": "recipiente donde se guardan las cenizas"
+        },
+        {
+          "word": "bloqueé",
+          "meaning": "de «bloquear»: no dejar que se use algo"
+        },
+        {
+          "word": "motivos operativos",
+          "meaning": "razones técnicas de la empresa"
+        }
+      ]
+    },
+    {
+      "id": "reprogramacion",
+      "title": "Doña Inés y el arte de la bufanda",
+      "place": "La cola de Atención al pasajero",
+      "context": "En la cola, Matías, el viajero del dulce de leche, se sienta en el suelo junto a Doña Inés y le pregunta por su bufanda.",
+      "speakers": [
+        {
+          "name": "Matías",
+          "country": "Uruguay",
+          "voice": "es-UY-MateoNeural"
+        },
+        {
+          "name": "Inés",
+          "country": "España",
+          "voice": "es-ES-ElviraNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Disculpe, señora, ¿le molesta si me siento aquí? Llevo una hora de pie y ya no siento las piernas."
+        },
+        {
+          "s": 1,
+          "text": "Siéntate, hijo, que el suelo es de todos. ¿Quieres un caramelo?"
+        },
+        {
+          "s": 0,
+          "text": "Gracias. Oiga, ¿cuánto tiempo lleva haciendo esa bufanda? Es larguísima."
+        },
+        {
+          "s": 1,
+          "text": "La empecé esta tarde, cuando me dijeron que el vuelo tenía retraso. Siempre tejo cuando espero. Mi marido decía que nuestra casa era un museo de esperas."
+        },
+        {
+          "s": 0,
+          "text": "¿Por qué?"
+        },
+        {
+          "s": 1,
+          "text": "Porque cada manta, cada jersey, es una espera distinta. Esta manta azul es del hospital, cuando nació mi hija. Esta bufanda va a ser la de Aerobruma."
+        },
+        {
+          "s": 0,
+          "text": "Qué bonito. Yo, cuando espero, solo como."
+        },
+        {
+          "s": 1,
+          "text": "Pues aprende a tejer, hijo, que engorda menos."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿De qué hablan Matías y Doña Inés?",
+          "options": [
+            "De por qué Doña Inés teje cuando espera",
+            "De la comida del aeropuerto",
+            "De los problemas de la aerolínea"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cuándo empezó Doña Inés la bufanda?",
+          "options": [
+            "El lunes",
+            "Esta tarde",
+            "Hace tres días"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué significa para ella cada manta o jersey?",
+          "options": [
+            "Un regalo para su marido",
+            "Una ciudad que visitó",
+            "Un momento de espera distinto"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Por qué le aconseja tejer a Matías?",
+          "options": [
+            "Porque así gana dinero",
+            "Porque engorda menos que comer",
+            "Porque a su hija le gusta"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué haces tú cuando tienes que esperar mucho tiempo?",
+          "model": "Leo noticias en el móvil o escucho pódcasts. A veces hablo con la gente que tengo al lado."
+        },
+        {
+          "q": "¿Tienes algún objeto que te recuerde un momento importante de tu vida?",
+          "model": "Tengo la pulsera del hospital de cuando nació mi hijo. La guardo en una caja con fotos."
+        },
+        {
+          "q": "¿Te gustaría aprender alguna actividad manual? ¿Cuál y por qué?",
+          "model": "Me gustaría aprender cerámica, porque creo que es relajante y puedes regalar lo que haces."
+        }
+      ],
+      "gaps": "Porque cada [manta], cada [jersey], es una [espera] distinta. Esta manta azul es del [hospital], cuando nació mi hija.",
+      "glossary": [
+        {
+          "word": "tejer",
+          "meaning": "hacer ropa con hilo y agujas"
+        },
+        {
+          "word": "retraso",
+          "meaning": "cuando algo llega o sale más tarde de lo previsto"
+        },
+        {
+          "word": "jersey",
+          "meaning": "prenda de lana para el frío"
+        },
+        {
+          "word": "engorda",
+          "meaning": "de «engordar»: hace subir de peso"
+        }
+      ]
+    },
+    {
+      "id": "cambio",
+      "title": "Mensaje de voz para mamá",
+      "place": "Un banco junto a la casa de cambio",
+      "context": "Nayeli, la mochilera, graba un mensaje de voz para su madre en México después de su aventura en la casa de cambio.",
+      "speakers": [
+        {
+          "name": "Nayeli",
+          "country": "México",
+          "voice": "es-MX-DaliaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Hola, mamá. Ya sé que allá es tarde, no te preocupes, escúchalo mañana. Estoy bien. Bueno, estoy en un aeropuerto, me cancelaron el vuelo y me quedan doce dólares en monedas, pero estoy bien."
+        },
+        {
+          "s": 0,
+          "text": "Te cuento: fui a cambiar las monedas y el cajero me quería dar tres dólares. ¡Tres! Me puse a discutir y, de repente, una persona que estaba en la cola me defendió y me invitó a cenar."
+        },
+        {
+          "s": 0,
+          "text": "No, mamá, no era un loco. Era muy simpático. Le conté lo del desierto y la bicicleta sin frenos y se rio muchísimo."
+        },
+        {
+          "s": 0,
+          "text": "Y el cajero, al final, me compró las dos pulseras que hice en Oaxaca, para su hija. Así que ahora tengo dinero para el desayuno."
+        },
+        {
+          "s": 0,
+          "text": "Te quiero. Dile a papá que ya casi vuelvo. Y que no, no voy a dejar de viajar."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Para qué graba Nayeli este mensaje?",
+          "options": [
+            "Para pedir dinero a su madre",
+            "Para contarle a su madre cómo está y qué le pasó",
+            "Para quejarse de la aerolínea"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cuánto dinero quería darle el cajero al principio?",
+          "options": [
+            "Tres dólares",
+            "Doce dólares",
+            "Ocho dólares"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué hizo la persona de la cola?",
+          "options": [
+            "Llamó a la policía",
+            "Le prestó su tarjeta",
+            "La defendió y la invitó a cenar"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué podemos deducir sobre la familia de Nayeli?",
+          "options": [
+            "Que no saben que está de viaje",
+            "Que están un poco preocupados por sus viajes",
+            "Que viven en el mismo aeropuerto"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué le cuentas tú a tu familia cuando estás de viaje? ¿Todo o solo lo bueno?",
+          "model": "Solo lo bueno, porque mi madre se preocupa mucho. Lo malo lo cuento cuando ya estoy en casa."
+        },
+        {
+          "q": "¿Alguna vez un desconocido te ayudó en un momento difícil?",
+          "model": "Sí, una vez se me rompió el coche en la carretera y un señor me llevó al pueblo más cercano."
+        },
+        {
+          "q": "¿Te gustaría viajar sola o solo durante meses? ¿Por qué?",
+          "model": "Me gustaría, pero me daría un poco de miedo. Creo que lo haría con un amigo."
+        }
+      ],
+      "gaps": "Y el [cajero], al final, me compró las dos [pulseras] que hice en Oaxaca, para su [hija]. Así que ahora tengo dinero para el [desayuno].",
+      "glossary": [
+        {
+          "word": "monedas",
+          "meaning": "dinero en piezas pequeñas de metal"
+        },
+        {
+          "word": "cajero",
+          "meaning": "persona que trabaja en la caja y cuenta el dinero"
+        },
+        {
+          "word": "discutir",
+          "meaning": "hablar con alguien que no está de acuerdo, a veces con enfado"
+        },
+        {
+          "word": "pulseras",
+          "meaning": "adornos que se llevan en la muñeca"
+        }
+      ]
+    },
+    {
+      "id": "seguridad",
+      "title": "La colección de Lucrecia",
+      "place": "El control de seguridad, en un momento tranquilo",
+      "context": "Lucrecia y Osvaldo, de aduanas, comparan los objetos más raros que han encontrado esta noche.",
+      "speakers": [
+        {
+          "name": "Lucrecia",
+          "country": "Chile",
+          "voice": "es-CL-CatalinaNeural"
+        },
+        {
+          "name": "Osvaldo",
+          "country": "Paraguay",
+          "voice": "es-PY-MarioNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Osvaldo, ¿sabes qué he tenido que retener hoy? Un frasco de dulce de leche de un kilo."
+        },
+        {
+          "s": 1,
+          "text": "¿Un kilo? Eso es un arma. ¿Lo tiraste?"
+        },
+        {
+          "s": 0,
+          "text": "No. Lo guardé en mi taquilla hasta mañana. Era de la abuela del pasajero. Me dio pena."
+        },
+        {
+          "s": 1,
+          "text": "Pues yo esta noche tengo doce quesos de cinco kilos y un loro que me insulta."
+        },
+        {
+          "s": 0,
+          "text": "¿Un loro? ¿Y qué te dice?"
+        },
+        {
+          "s": 1,
+          "text": "Que soy un burro con uniforme. Y lo peor es que lo dice con acento cubano, como su dueña."
+        },
+        {
+          "s": 0,
+          "text": "Yo una vez encontré una dentadura postiza dentro de un zapato. El señor dijo que era para no perderla."
+        },
+        {
+          "s": 1,
+          "text": "Deberíamos escribir un libro: «Lo que la gente lleva en la maleta»."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿De qué tratan las historias de Lucrecia y Osvaldo?",
+          "options": [
+            "De pasajeros que perdieron el vuelo",
+            "De objetos extraños que encuentran en su trabajo",
+            "De las reglas nuevas del aeropuerto"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Por qué Lucrecia no tiró el dulce de leche?",
+          "options": [
+            "Porque sentía pena por el pasajero",
+            "Porque quería comérselo",
+            "Porque no estaba prohibido"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué le dice el loro a Osvaldo?",
+          "options": [
+            "Que es muy guapo",
+            "Que suelte los quesos",
+            "Que es un burro con uniforme"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Dónde encontró Lucrecia una dentadura postiza?",
+          "options": [
+            "En un frasco",
+            "Dentro de un zapato",
+            "En una jaula"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué es lo más raro que llevaste alguna vez en una maleta?",
+          "model": "Una vez llevé una guitarra y diez kilos de café para mis tíos. Casi no me dejan subir."
+        },
+        {
+          "q": "¿Crees que las normas de seguridad de los aeropuertos son exageradas?",
+          "model": "Algunas sí, como la de los líquidos. Pero entiendo que es para que todos estemos seguros."
+        },
+        {
+          "q": "Si escribieras un libro sobre tu trabajo o tus estudios, ¿qué título le pondrías?",
+          "model": "Le pondría «Reuniones que podían ser un correo», porque paso horas en reuniones inútiles."
+        }
+      ],
+      "gaps": "No. Lo guardé en mi [taquilla] hasta [mañana]. Era de la [abuela] del pasajero. Me dio [pena].",
+      "glossary": [
+        {
+          "word": "retener",
+          "meaning": "quedarse con algo y no dejarlo pasar"
+        },
+        {
+          "word": "taquilla",
+          "meaning": "armario pequeño con llave para guardar cosas"
+        },
+        {
+          "word": "me dio pena",
+          "meaning": "me puse triste por alguien"
+        },
+        {
+          "word": "dentadura postiza",
+          "meaning": "dientes falsos que se pueden quitar"
+        }
+      ]
+    },
+    {
+      "id": "cintas",
+      "title": "Wilmer y el pavo de la cinta tres",
+      "place": "La recogida de equipaje, junto a la cinta tres",
+      "context": "Después del incidente de la maleta abierta, Rocío le pregunta a Wilmer, el maletero, por las cosas más raras que ha visto en las cintas.",
+      "speakers": [
+        {
+          "name": "Rocío",
+          "country": "España",
+          "voice": "es-ES-XimenaNeural"
+        },
+        {
+          "name": "Wilmer",
+          "country": "Honduras",
+          "voice": "es-HN-CarlosNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Wilmer, gracias por parar la cinta. Por cierto, ¿de verdad viste un pavo vivo aquí?"
+        },
+        {
+          "s": 1,
+          "text": "Como lo oye, señora. Venía en una caja con agujeros, desde un pueblo. Se escapó en la cinta y dio tres vueltas antes de que lo atrapáramos."
+        },
+        {
+          "s": 0,
+          "text": "¡No me lo puedo creer! ¿Y el dueño?"
+        },
+        {
+          "s": 1,
+          "text": "El dueño corría detrás gritando: «¡Es para la cena de Navidad!». Al final nadie se lo quiso comer. Ahora vive en su casa como mascota."
+        },
+        {
+          "s": 0,
+          "text": "Qué historia. ¿Y lo más raro que te ha pasado esta semana?"
+        },
+        {
+          "s": 1,
+          "text": "Un acordeón que sonaba cada vez que la maleta se movía. Toda la sala de llegadas bailaba."
+        },
+        {
+          "s": 0,
+          "text": "Pues mi ropa interior no es nada comparada con eso."
+        },
+        {
+          "s": 1,
+          "text": "Nada, señora. Mañana nadie se va a acordar. Bueno, quizá la señora de los estampados."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué le pregunta Rocío a Wilmer?",
+          "options": [
+            "Por qué se abrió su maleta",
+            "Por las cosas raras que ha visto en las cintas",
+            "Cuánto tiempo lleva en el aeropuerto"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué pasó con el pavo al final?",
+          "options": [
+            "Se convirtió en mascota",
+            "Fue la cena de Navidad",
+            "Se escapó del aeropuerto"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué hacía la gente cuando sonaba el acordeón?",
+          "options": [
+            "Se quejaba del ruido",
+            "Llamaba a seguridad",
+            "Bailaba"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué quiere decir Wilmer con su última frase?",
+          "options": [
+            "Que la señora de los estampados lo recordará",
+            "Que todo el mundo lo olvidará, menos quizá una señora",
+            "Que Rocío debe hablar con esa señora"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Cuál es la historia más divertida que has vivido en un viaje?",
+          "model": "Una vez me equivoqué de autobús y llegué a otra ciudad. Al final fue un día precioso."
+        },
+        {
+          "q": "¿Tendrías un animal poco común como mascota? ¿Cuál?",
+          "model": "Me encantaría tener un loro, porque hablan y viven muchos años."
+        },
+        {
+          "q": "¿Qué trabajo crees que tiene las historias más curiosas?",
+          "model": "Creo que los taxistas, porque cada día conocen a muchas personas distintas."
+        }
+      ],
+      "gaps": "Un [acordeón] que sonaba cada vez que la [maleta] se movía. Toda la sala de [llegadas] [bailaba].",
+      "glossary": [
+        {
+          "word": "agujeros",
+          "meaning": "espacios abiertos en una superficie"
+        },
+        {
+          "word": "atrapáramos",
+          "meaning": "de «atrapar»: coger a alguien que se escapa"
+        },
+        {
+          "word": "mascota",
+          "meaning": "animal que vive en casa con una familia"
+        },
+        {
+          "word": "estampados",
+          "meaning": "dibujos de colores en una tela"
+        }
+      ]
+    },
+    {
+      "id": "perdidos",
+      "title": "El vestido aparece en Lima",
+      "place": "La oficina de equipaje perdido",
+      "context": "Hortensia llama a Bruno a su móvil para darle noticias sobre el vestido de novia de su hermana.",
+      "speakers": [
+        {
+          "name": "Hortensia",
+          "country": "El Salvador",
+          "voice": "es-SV-LorenaNeural"
+        },
+        {
+          "name": "Bruno",
+          "country": "Colombia",
+          "voice": "es-CO-GonzaloNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "¿Bruno Orozco? Le habla Hortensia, de equipaje perdido. Tengo noticias de su vestido."
+        },
+        {
+          "s": 1,
+          "text": "¡Dígame que está aquí, por favor!"
+        },
+        {
+          "s": 0,
+          "text": "Aquí no, pero está bien. Mis compañeros de Lima lo encontraron. Estaba en un carrito con maletas de un equipo de fútbol."
+        },
+        {
+          "s": 1,
+          "text": "¿Con un equipo de fútbol? Mi hermana se va a desmayar."
+        },
+        {
+          "s": 0,
+          "text": "Tranquilo. Lo han puesto en el vuelo que sale de Lima a las seis y diez. Llega aquí a las nueve menos cuarto."
+        },
+        {
+          "s": 1,
+          "text": "Pero nosotros salimos a las seis y diez hacia la boda. No vamos a estar aquí."
+        },
+        {
+          "s": 0,
+          "text": "Ya lo pensé. Lo van a mandar directamente a su destino. Le doy la dirección del hotel y lo llevan en moto."
+        },
+        {
+          "s": 1,
+          "text": "Hortensia, si esto sale bien, la invito a la boda. En serio."
+        },
+        {
+          "s": 0,
+          "text": "Acepto. Pero no me siente al lado del novio, que dicen que ronca."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Por qué llama Hortensia a Bruno?",
+          "options": [
+            "Para pedirle más datos del vestido",
+            "Para darle buenas noticias sobre el vestido",
+            "Para decirle que el vestido se perdió para siempre"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Dónde estaba el vestido?",
+          "options": [
+            "Con las maletas de un equipo de fútbol",
+            "En la cinta tres",
+            "En un hotel de Lima"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cuál es la solución que propone Hortensia?",
+          "options": [
+            "Esperar al vuelo de mañana",
+            "Que Bruno vaya a Lima",
+            "Enviarlo directamente al destino y llevarlo en moto"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Por qué no quiere Hortensia sentarse al lado del novio?",
+          "options": [
+            "Porque no lo conoce",
+            "Porque dicen que ronca",
+            "Porque prefiere bailar"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Alguna vez una empresa solucionó un problema tuyo de forma sorprendente?",
+          "model": "Sí, una tienda perdió mi pedido y me mandaron otro nuevo con un regalo y una carta muy amable."
+        },
+        {
+          "q": "¿Invitarías a tu boda o a tu fiesta a alguien que te ayudó mucho, aunque no lo conocieras antes?",
+          "model": "Sí, me parece una forma bonita de dar las gracias. Las fiestas son para la gente que quieres."
+        },
+        {
+          "q": "¿Qué harías si el día más importante de tu vida empezara con un problema así?",
+          "model": "Primero me enfadaría, pero después intentaría reírme. Al final, lo importante son las personas."
+        }
+      ],
+      "gaps": "Tranquilo. Lo han puesto en el [vuelo] que sale de [Lima] a las seis y diez. Llega aquí a las [nueve] menos [cuarto].",
+      "glossary": [
+        {
+          "word": "desmayar",
+          "meaning": "perder el conocimiento por un susto o un golpe"
+        },
+        {
+          "word": "destino",
+          "meaning": "lugar al que va alguien o algo"
+        },
+        {
+          "word": "dirección",
+          "meaning": "calle y número de un lugar"
+        },
+        {
+          "word": "ronca",
+          "meaning": "de «roncar»: hace ruido al respirar cuando duerme"
+        }
+      ]
+    },
+    {
+      "id": "aduana",
+      "title": "Doña Carmela y el loro chismoso",
+      "place": "La oficina de la aduana",
+      "context": "Mientras Osvaldo revisa los papeles, Doña Carmela le explica la verdadera historia de su loro.",
+      "speakers": [
+        {
+          "name": "Carmela",
+          "country": "Cuba",
+          "voice": "es-CU-BelkysNeural"
+        },
+        {
+          "name": "Osvaldo",
+          "country": "Paraguay",
+          "voice": "es-PY-MarioNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Mi niño, no le haga caso a ese loro. Se llama Pepito y es un mentiroso profesional."
+        },
+        {
+          "s": 1,
+          "text": "Señora, el loro dijo que usted vende los quesos en el mercado."
+        },
+        {
+          "s": 0,
+          "text": "Porque lo aprendió de mi vecina, que es una envidiosa. Pepito repite todo lo que oye en el patio."
+        },
+        {
+          "s": 1,
+          "text": "¿Y por qué viaja con un loro, señora?"
+        },
+        {
+          "s": 0,
+          "text": "Porque mi nieto mayor lo quiere desde que era chiquito. Pepito le enseñó a decir sus primeras palabras. Bueno, malas palabras."
+        },
+        {
+          "s": 1,
+          "text": "¿El loro le enseñó malas palabras a su nieto?"
+        },
+        {
+          "s": 0,
+          "text": "Las primeras palabras de mi nieto fueron «café» y una que no puedo repetir delante de un señor con uniforme."
+        },
+        {
+          "s": 1,
+          "text": "Mire, señora, los quesos pasan. Pero Pepito tiene que estar tres días en cuarentena."
+        },
+        {
+          "s": 0,
+          "text": "Tres días. Pobre veterinario."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué intenta explicar Doña Carmela?",
+          "options": [
+            "Por qué el loro dice cosas que no son verdad",
+            "Cómo se hacen los quesos",
+            "Por qué perdió su vuelo"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Según Doña Carmela, ¿de quién aprendió el loro esa frase?",
+          "options": [
+            "De su nieto",
+            "De su vecina envidiosa",
+            "De un agente de aduanas"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Por qué viaja el loro con ella?",
+          "options": [
+            "Porque está enfermo",
+            "Porque se lo regala al veterinario",
+            "Porque su nieto lo quiere mucho"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué quiere decir la última frase de Doña Carmela?",
+          "options": [
+            "Que el veterinario va a sufrir con el loro",
+            "Que el veterinario es muy pobre",
+            "Que el loro va a estar triste"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Tienes algún vecino o vecina que se entera de todo? ¿Cómo es?",
+          "model": "Sí, en mi edificio hay una señora que sabe quién entra y quién sale. Es simpática, pero un poco chismosa."
+        },
+        {
+          "q": "¿Qué animal te gustaría tener aunque fuera un poco complicado?",
+          "model": "Me gustaría tener un loro, aunque haga ruido, porque me parece muy divertido."
+        },
+        {
+          "q": "¿Recuerdas alguna palabra divertida que decías de pequeño?",
+          "model": "De pequeño decía «tutuga» en lugar de «tortuga», y mi familia todavía lo dice."
+        }
+      ],
+      "gaps": "Mire, señora, los [quesos] pasan. Pero [Pepito] tiene que estar tres [días] en [cuarentena].",
+      "glossary": [
+        {
+          "word": "mentiroso",
+          "meaning": "persona que dice cosas que no son verdad"
+        },
+        {
+          "word": "envidiosa",
+          "meaning": "que siente envidia, que quiere lo que tienen los demás"
+        },
+        {
+          "word": "chiquito",
+          "meaning": "muy pequeño"
+        },
+        {
+          "word": "cuarentena",
+          "meaning": "tiempo en que un animal o una persona está separado por si tiene una enfermedad"
+        }
+      ]
+    },
+    {
+      "id": "reencuentro",
+      "title": "Un café con la florista",
+      "place": "La cafetería del hall de llegadas",
+      "context": "Después de esperar a Valeria, Ulises toma un café con Leonor, la florista, y le cuenta cómo empezó todo.",
+      "speakers": [
+        {
+          "name": "Ulises",
+          "country": "Costa Rica",
+          "voice": "es-CR-JuanNeural"
+        },
+        {
+          "name": "Leonor",
+          "country": "Costa Rica",
+          "voice": "es-CR-MariaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Leonor, gracias por el café. Y perdona por hacerte vender tantas flores para nada."
+        },
+        {
+          "s": 1,
+          "text": "No es para nada, Ulises. Por lo menos ahora sabes la verdad. ¿Cómo la conociste?"
+        },
+        {
+          "s": 0,
+          "text": "En un juego de palabras por internet. Ganaba siempre. Después empezamos a escribirnos cada noche."
+        },
+        {
+          "s": 1,
+          "text": "¿Y nunca te pidió dinero?"
+        },
+        {
+          "s": 0,
+          "text": "Al principio no. Después, que si su gato estaba enfermo, que si había perdido el trabajo… Le mandé dinero tres veces."
+        },
+        {
+          "s": 1,
+          "text": "Ay, Ulises. ¿Y por qué seguías?"
+        },
+        {
+          "s": 0,
+          "text": "Porque me escribía poemas. Nadie me había escrito un poema en mi vida."
+        },
+        {
+          "s": 1,
+          "text": "Pues mira, yo no escribo poemas, pero sé muy bien qué flores te gustan. Y eso también es algo."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿De qué hablan Ulises y Leonor?",
+          "options": [
+            "De cómo empezó la historia con Valeria",
+            "De la tienda de flores de Leonor",
+            "De un viaje que van a hacer juntos"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Dónde conoció Ulises a Valeria?",
+          "options": [
+            "En una fiesta",
+            "En un juego de palabras por internet",
+            "En el aeropuerto"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Por qué seguía Ulises con Valeria aunque le pedía dinero?",
+          "options": [
+            "Porque era muy guapa",
+            "Porque iba a casarse con ella",
+            "Porque le escribía poemas"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué insinúa Leonor al final?",
+          "options": [
+            "Que quiere venderle más flores",
+            "Que ella también se interesa por él",
+            "Que deben llamar a la policía"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué consejo le darías a alguien que conoce a una persona por internet?",
+          "model": "Le diría que haga una videollamada pronto y que nunca mande dinero a alguien que no ha visto."
+        },
+        {
+          "q": "¿Qué es para ti un gesto romántico de verdad?",
+          "model": "Para mí, recordar los pequeños detalles de la otra persona, como su comida favorita."
+        },
+        {
+          "q": "¿Alguna vez confiaste en alguien que no lo merecía? ¿Qué aprendiste?",
+          "model": "Sí, presté dinero a un compañero y nunca lo devolvió. Ahora tengo más cuidado."
+        }
+      ],
+      "gaps": "Al principio no. Después, que si su [gato] estaba enfermo, que si había perdido el [trabajo]… Le mandé [dinero] tres [veces].",
+      "glossary": [
+        {
+          "word": "mandé",
+          "meaning": "de «mandar»: enviar"
+        },
+        {
+          "word": "para nada",
+          "meaning": "sin ningún resultado"
+        },
+        {
+          "word": "seguías",
+          "meaning": "de «seguir»: continuar"
+        },
+        {
+          "word": "poema",
+          "meaning": "texto escrito en verso"
+        }
+      ]
+    },
+    {
+      "id": "alquiler",
+      "title": "Kiara ensaya su número",
+      "place": "El mostrador de alquiler de coches",
+      "context": "Kiara, la comediante, ensaya delante de Cristian el principio de un monólogo nuevo sobre esta noche.",
+      "speakers": [
+        {
+          "name": "Kiara",
+          "country": "Puerto Rico",
+          "voice": "es-PR-KarinaNeural"
+        },
+        {
+          "name": "Cristian",
+          "country": "Chile",
+          "voice": "es-CL-LorenzoNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Cristian, ¿me prestas tus oídos dos minutos? Necesito probar un chiste nuevo."
+        },
+        {
+          "s": 1,
+          "text": "Adelante. No tengo clientes. Bueno, no tengo coches."
+        },
+        {
+          "s": 0,
+          "text": "Vale. «Anoche quise alquilar un coche y solo quedaba un coche fúnebre. Y pensé: perfecto, si el público no se ríe, por lo menos ya tengo transporte para la despedida»."
+        },
+        {
+          "s": 1,
+          "text": "Ja. Está bien. Pero yo diría «para el entierro». Es más fuerte."
+        },
+        {
+          "s": 0,
+          "text": "¿Ves? Tienes talento. Sigue: «El chico del mostrador me dijo que el ataúd se quita normalmente. Normalmente. Esa palabra me dio más miedo que el coche»."
+        },
+        {
+          "s": 1,
+          "text": "Oye, que es verdad. Una vez un cliente lo devolvió con el ataúd dentro y nadie sabe por qué."
+        },
+        {
+          "s": 0,
+          "text": "¡Eso va al final del monólogo! Cristian, si mañana me va bien, te pongo en los créditos."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué hace Kiara en este audio?",
+          "options": [
+            "Ensaya un monólogo con Cristian",
+            "Alquila un coche fúnebre",
+            "Se queja del servicio"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué cambio propone Cristian para el chiste?",
+          "options": [
+            "Decir «para el teatro»",
+            "Decir «para el entierro»",
+            "Quitar la palabra «coche»"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué palabra le dio miedo a Kiara?",
+          "options": [
+            "Fúnebre",
+            "Ataúd",
+            "Normalmente"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué decide hacer Kiara con la historia del cliente?",
+          "options": [
+            "Contarla a la policía",
+            "Ponerla al final del monólogo",
+            "Olvidarla"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Te gusta el humor sobre temas serios, como la muerte?",
+          "model": "Depende. Si se hace con respeto, me parece que ayuda a perder el miedo."
+        },
+        {
+          "q": "¿Has contado alguna vez un chiste que no le hizo gracia a nadie?",
+          "model": "Sí, en una boda conté un chiste sobre suegras y la suegra me miró muy seria."
+        },
+        {
+          "q": "¿Qué situación de tu vida podría ser un buen monólogo cómico?",
+          "model": "Mi primer día de trabajo, cuando llegué a la oficina equivocada y me quedé toda la mañana."
+        }
+      ],
+      "gaps": "El chico del [mostrador] me dijo que el [ataúd] se quita [normalmente]. Normalmente. Esa [palabra] me dio más miedo que el coche",
+      "glossary": [
+        {
+          "word": "probar",
+          "meaning": "intentar algo para ver cómo sale"
+        },
+        {
+          "word": "coche fúnebre",
+          "meaning": "coche que lleva a los muertos al cementerio"
+        },
+        {
+          "word": "entierro",
+          "meaning": "ceremonia en la que se entierra a un muerto"
+        },
+        {
+          "word": "créditos",
+          "meaning": "lista de personas que participan en un trabajo"
+        }
+      ]
+    },
+    {
+      "id": "freeshop",
+      "title": "Vanesa y Gisela cierran la caja",
+      "place": "El free shop, a las tres de la mañana",
+      "context": "Vanesa, la vendedora del free shop, le cuenta a su amiga Gisela, de la sala VIP, la historia del cliente de los dos perfumes.",
+      "speakers": [
+        {
+          "name": "Vanesa",
+          "country": "Argentina",
+          "voice": "es-AR-ElenaNeural"
+        },
+        {
+          "name": "Gisela",
+          "country": "Panamá",
+          "voice": "es-PA-MargaritaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Gise, no te vas a creer lo que me pasó. Un señor compró dos perfumes iguales: uno para su esposa y otro para una compañera de trabajo."
+        },
+        {
+          "s": 1,
+          "text": "¿Iguales? ¿Para no equivocarse de olor?"
+        },
+        {
+          "s": 0,
+          "text": "Exacto. Me lo dijo así, como si fuera lo más normal del mundo."
+        },
+        {
+          "s": 1,
+          "text": "¿Y qué hiciste?"
+        },
+        {
+          "s": 0,
+          "text": "Le cambié la tarjeta de uno de los regalos. En la de la compañera puse: «Con cariño, de parte de Horacio y de su esposa»."
+        },
+        {
+          "s": 1,
+          "text": "¡No! ¡Vanesa, te van a despedir!"
+        },
+        {
+          "s": 0,
+          "text": "No creo. Fue un error de envoltorio. Pasa todos los días."
+        },
+        {
+          "s": 1,
+          "text": "Recuérdame que nunca te haga enfadar."
+        },
+        {
+          "s": 0,
+          "text": "Tranquila. Contigo no lo haría nunca: tú solo compras un perfume."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué le cuenta Vanesa a Gisela?",
+          "options": [
+            "Lo que hizo con el regalo de un cliente infiel",
+            "Que va a cambiar de trabajo",
+            "Que se equivocó con el precio de un perfume"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Por qué compró el señor perfumes iguales?",
+          "options": [
+            "Porque había una oferta",
+            "Para no equivocarse de olor",
+            "Porque le gustaba mucho esa marca"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué escribió Vanesa en la tarjeta de la compañera?",
+          "options": [
+            "Feliz cumpleaños",
+            "Nada, la dejó en blanco",
+            "Que era de parte de Horacio y de su esposa"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cómo justifica Vanesa lo que hizo?",
+          "options": [
+            "Dice que fue un error de envoltorio",
+            "Dice que el señor se lo pidió",
+            "Dice que su jefe estaba de acuerdo"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Te parece bien lo que hizo Vanesa? ¿Por qué?",
+          "model": "Me parece divertido, pero un poco peligroso. No es su trabajo meterse en la vida de los clientes."
+        },
+        {
+          "q": "¿Qué harías si supieras que un conocido engaña a su pareja?",
+          "model": "Creo que hablaría con él, pero no se lo diría a su pareja. Es una situación muy difícil."
+        },
+        {
+          "q": "¿Cuál es el regalo más raro que te han hecho?",
+          "model": "Un compañero me regaló una planta carnívora. Todavía la tengo y come moscas."
+        }
+      ],
+      "gaps": "Le cambié la [tarjeta] de uno de los [regalos]. En la de la compañera puse: «Con [cariño], de parte de [Horacio] y de su esposa».",
+      "glossary": [
+        {
+          "word": "perfume",
+          "meaning": "líquido que huele bien y se pone en la piel"
+        },
+        {
+          "word": "despedir",
+          "meaning": "quitarle el trabajo a alguien"
+        },
+        {
+          "word": "envoltorio",
+          "meaning": "papel con el que se envuelve un regalo"
+        },
+        {
+          "word": "de parte de",
+          "meaning": "enviado por alguien"
+        }
+      ]
+    },
+    {
+      "id": "comidas",
+      "title": "La receta de Marisol",
+      "place": "El patio de comidas, a las tres y media",
+      "context": "El comandante Lezcano le pregunta a Marisol, la cocinera, por qué trabaja de noche en el aeropuerto.",
+      "speakers": [
+        {
+          "name": "Arturo",
+          "country": "España",
+          "voice": "es-ES-AlvaroNeural"
+        },
+        {
+          "name": "Marisol",
+          "country": "Ecuador",
+          "voice": "es-EC-AndreaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Marisol, llevo años comiendo sus empanadas y nunca le he preguntado: ¿por qué trabaja usted siempre de noche?"
+        },
+        {
+          "s": 1,
+          "text": "Porque de día cuido a mi madre, comandante. Y porque de noche la gente come con más ganas. Está triste, cansada, lejos de casa."
+        },
+        {
+          "s": 0,
+          "text": "¿Y de dónde es la receta?"
+        },
+        {
+          "s": 1,
+          "text": "De mi abuela, de Ecuador. Ella vendía empanadas en la estación de autobuses de Cuenca. Decía que una empanada caliente es un abrazo que se puede pagar."
+        },
+        {
+          "s": 0,
+          "text": "Un abrazo que se puede pagar. Me lo voy a apuntar."
+        },
+        {
+          "s": 1,
+          "text": "Usted mañana se jubila, ¿verdad? ¿Qué va a hacer con tanto tiempo?"
+        },
+        {
+          "s": 0,
+          "text": "Mi mujer quiere que aprenda a cocinar. Dice que treinta años comiendo en aeropuertos son suficientes."
+        },
+        {
+          "s": 1,
+          "text": "Pues venga un día y le enseño. Gratis. Bueno, me paga con historias de aviones."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué le pregunta el comandante a Marisol al principio?",
+          "options": [
+            "Por qué trabaja de noche",
+            "Cuánto cuestan las empanadas",
+            "Si tiene miedo a volar"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Por qué trabaja Marisol de noche?",
+          "options": [
+            "Porque le pagan más",
+            "Porque de día cuida a su madre",
+            "Porque no le gusta el sol"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué decía su abuela de las empanadas?",
+          "options": [
+            "Que eran muy difíciles de hacer",
+            "Que se vendían mejor en verano",
+            "Que eran un abrazo que se puede pagar"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué le propone Marisol al comandante?",
+          "options": [
+            "Trabajar en la cocina",
+            "Enseñarle a cocinar a cambio de historias",
+            "Vender empanadas en los aviones"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Hay alguna comida que para ti sea «un abrazo»? ¿Cuál?",
+          "model": "Para mí, la sopa de pollo de mi madre. Cuando estoy enfermo, es lo único que quiero."
+        },
+        {
+          "q": "¿Qué te gustaría aprender cuando tengas más tiempo libre?",
+          "model": "Me gustaría aprender a tocar el piano y a cocinar platos de otros países."
+        },
+        {
+          "q": "¿Qué receta de tu familia te gustaría conservar para siempre?",
+          "model": "La tarta de manzana de mi abuela. Nadie la hace como ella, pero yo tengo la receta escrita."
+        }
+      ],
+      "gaps": "De mi [abuela], de Ecuador. Ella vendía [empanadas] en la estación de [autobuses] de Cuenca. Decía que una empanada caliente es un [abrazo] que se puede pagar.",
+      "glossary": [
+        {
+          "word": "comandante",
+          "meaning": "piloto que manda en un avión"
+        },
+        {
+          "word": "cuido",
+          "meaning": "de «cuidar»: ayudar y atender a alguien"
+        },
+        {
+          "word": "jubila",
+          "meaning": "de «jubilarse»: dejar de trabajar por la edad"
+        },
+        {
+          "word": "apuntar",
+          "meaning": "escribir algo para no olvidarlo"
+        }
+      ]
+    },
+    {
+      "id": "vip",
+      "title": "Tito escucha un bolero",
+      "place": "Dentro de la sala VIP",
+      "context": "Ya dentro de la sala VIP, Tito Ventura se sienta junto al mostrador y habla con Gisela sobre música y fama.",
+      "speakers": [
+        {
+          "name": "Tito",
+          "country": "Puerto Rico",
+          "voice": "es-PR-VictorNeural"
+        },
+        {
+          "name": "Gisela",
+          "country": "Panamá",
+          "voice": "es-PA-MargaritaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Gisela, gracias por dejarme entrar. ¿Qué música es esta? Es muy bonita."
+        },
+        {
+          "s": 1,
+          "text": "Es un bolero de los años cincuenta. Lo pongo cuando no hay nadie. A esta hora solo estamos usted y yo."
+        },
+        {
+          "s": 0,
+          "text": "Es increíble. Las canciones de antes cuentan historias. Las mías solo repiten «baby» veinte veces."
+        },
+        {
+          "s": 1,
+          "text": "No diga eso. Mi sobrina se sabe todas sus canciones."
+        },
+        {
+          "s": 0,
+          "text": "Ya. Pero yo empecé cantando boleros con mi abuelo en Ponce. Después me dijeron que eso no se vendía."
+        },
+        {
+          "s": 1,
+          "text": "¿Y por qué no canta uno en su próximo disco?"
+        },
+        {
+          "s": 0,
+          "text": "Mi representante dice que es un suicidio comercial."
+        },
+        {
+          "s": 1,
+          "text": "Su representante no está aquí. Cante uno ahora, para mí. Si me gusta, le imprimo la tarjeta dorada."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿De qué hablan principalmente Tito y Gisela?",
+          "options": [
+            "De la música que Tito quiere cantar de verdad",
+            "De cómo conseguir la tarjeta dorada",
+            "De los problemas del vuelo"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué opina Tito de sus propias canciones?",
+          "options": [
+            "Que son las mejores",
+            "Que repiten mucho la misma palabra",
+            "Que cuentan historias tristes"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Con quién cantaba boleros Tito de niño?",
+          "options": [
+            "Con su sobrina",
+            "Con su representante",
+            "Con su abuelo"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué le propone Gisela a Tito?",
+          "options": [
+            "Que cante un bolero para ella",
+            "Que se vaya a dormir",
+            "Que llame a su representante"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Prefieres la música antigua o la actual? ¿Por qué?",
+          "model": "Prefiero la antigua, porque las letras me parecen más profundas, aunque también escucho música nueva."
+        },
+        {
+          "q": "¿Alguna vez dejaste algo que te gustaba porque «no se vendía» o no era práctico?",
+          "model": "Sí, dejé de pintar porque pensé que no servía para trabajar. Ahora me arrepiento un poco."
+        },
+        {
+          "q": "¿Qué canción te recuerda a alguien de tu familia?",
+          "model": "Una canción de Juan Luis Guerra me recuerda a mi padre, porque la cantaba en el coche."
+        }
+      ],
+      "gaps": "Ya. Pero yo empecé [cantando] [boleros] con mi [abuelo] en Ponce. Después me dijeron que eso no se [vendía].",
+      "glossary": [
+        {
+          "word": "bolero",
+          "meaning": "canción romántica lenta, típica de América Latina"
+        },
+        {
+          "word": "representante",
+          "meaning": "persona que organiza el trabajo de un artista"
+        },
+        {
+          "word": "disco",
+          "meaning": "grabación con varias canciones"
+        },
+        {
+          "word": "suicidio comercial",
+          "meaning": "decisión que hace perder mucho dinero"
+        }
+      ]
+    },
+    {
+      "id": "capilla",
+      "title": "El miedo del capellán",
+      "place": "La capilla del aeropuerto",
+      "context": "Raquel, ya más tranquila, le pregunta a Hugo, el capellán, si él también tiene miedo de algo.",
+      "speakers": [
+        {
+          "name": "Raquel",
+          "country": "Nicaragua",
+          "voice": "es-NI-YolandaNeural"
+        },
+        {
+          "name": "Hugo",
+          "country": "Nicaragua",
+          "voice": "es-NI-FedericoNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Padre, usted parece tan tranquilo. ¿No tiene miedo de nada?"
+        },
+        {
+          "s": 1,
+          "text": "¿Yo? Tengo miedo de muchas cosas, hija. De las arañas, de los dentistas… y de hablar en público."
+        },
+        {
+          "s": 0,
+          "text": "¿De hablar en público? ¡Pero usted da misa todos los domingos!"
+        },
+        {
+          "s": 1,
+          "text": "Por eso lo sé. Cada domingo me tiemblan las manos. Pero pienso en una persona concreta de los bancos y hablo solo para ella."
+        },
+        {
+          "s": 0,
+          "text": "Eso es lo que me dijeron hoy: pensar en la persona que me espera."
+        },
+        {
+          "s": 1,
+          "text": "Exacto. El miedo es grande cuando piensas en todo. Es pequeño cuando piensas en alguien."
+        },
+        {
+          "s": 0,
+          "text": "Entonces voy a pensar en Luna todo el viaje. Y en usted, cuando tiemble el avión."
+        },
+        {
+          "s": 1,
+          "text": "Mejor piensa en Luna. Yo también me voy a poner nervioso."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué descubre Raquel en esta conversación?",
+          "options": [
+            "Que el capellán también tiene miedos",
+            "Que el vuelo se ha cancelado otra vez",
+            "Que su nieta va a venir al aeropuerto"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué hace Hugo cuando tiene que hablar en público?",
+          "options": [
+            "Bebe agua",
+            "Piensa en una persona concreta",
+            "Cierra los ojos"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Según Hugo, ¿cuándo es pequeño el miedo?",
+          "options": [
+            "Cuando no piensas en nada",
+            "Cuando rezas mucho",
+            "Cuando piensas en alguien"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Por qué le dice Hugo que mejor piense en Luna?",
+          "options": [
+            "Porque él no viaja",
+            "Porque él también se va a poner nervioso",
+            "Porque Luna es su nieta también"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué truco usas tú para controlar los nervios?",
+          "model": "Respiro hondo varias veces y pienso que dentro de una hora todo habrá terminado."
+        },
+        {
+          "q": "¿Te da miedo hablar en público? ¿Cuándo tuviste que hacerlo?",
+          "model": "Sí, mucho. Tuve que presentar un proyecto en la universidad y me temblaba la voz."
+        },
+        {
+          "q": "¿En quién piensas cuando necesitas valor?",
+          "model": "Pienso en mi madre, porque ella siempre ha sido muy valiente."
+        }
+      ],
+      "gaps": "Exacto. El [miedo] es grande cuando piensas en [todo]. Es [pequeño] cuando piensas en [alguien].",
+      "glossary": [
+        {
+          "word": "arañas",
+          "meaning": "animales pequeños de ocho patas"
+        },
+        {
+          "word": "da misa",
+          "meaning": "celebra la ceremonia religiosa"
+        },
+        {
+          "word": "tiemblan",
+          "meaning": "de «temblar»: moverse sin querer por miedo o frío"
+        },
+        {
+          "word": "concreta",
+          "meaning": "una sola, determinada"
+        }
+      ]
+    },
+    {
+      "id": "descanso",
+      "title": "Por qué Esteban no se va",
+      "place": "La zona de descanso, al amanecer",
+      "context": "Dayana se despierta y Esteban, por fin, le cuenta la verdadera razón por la que lleva nueve días en el aeropuerto.",
+      "speakers": [
+        {
+          "name": "Dayana",
+          "country": "Venezuela",
+          "voice": "es-VE-PaolaNeural"
+        },
+        {
+          "name": "Esteban",
+          "country": "El Salvador",
+          "voice": "es-SV-RodrigoNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Esteban, ya descansé un poco. Gracias por callarte un rato. Ahora dime la verdad: ¿por qué sigues aquí?"
+        },
+        {
+          "s": 1,
+          "text": "¿La verdad? Mi vuelo salió el primer día. Lo vi despegar desde esa ventana."
+        },
+        {
+          "s": 0,
+          "text": "¿Y por qué no subiste?"
+        },
+        {
+          "s": 1,
+          "text": "Porque voy a ver a mi padre. No hablamos desde hace diez años. Me llamó porque está enfermo y yo… no sé qué decirle."
+        },
+        {
+          "s": 0,
+          "text": "Esteban, soy enfermera. Te digo una cosa que veo todas las semanas: la gente casi nunca se arrepiente de lo que dice. Se arrepiente de lo que no dice."
+        },
+        {
+          "s": 1,
+          "text": "¿Y si me cierra la puerta?"
+        },
+        {
+          "s": 0,
+          "text": "Entonces por lo menos lo intentaste. Ve al mostrador. Yo te guardo la planta."
+        },
+        {
+          "s": 1,
+          "text": "No. La planta viene conmigo. Es para él."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué revela Esteban en este audio?",
+          "options": [
+            "La verdadera razón por la que no se va del aeropuerto",
+            "Que trabaja en el aeropuerto",
+            "Que perdió su pasaporte"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué pasó con el vuelo de Esteban el primer día?",
+          "options": [
+            "Se canceló",
+            "Salió y él no subió",
+            "Llegó tarde"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Según Dayana, ¿de qué se arrepiente la gente?",
+          "options": [
+            "De lo que dice",
+            "De los viajes que hace",
+            "De lo que no dice"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué quiere hacer Esteban con la planta?",
+          "options": [
+            "Regalársela a Dayana",
+            "Llevársela a su padre",
+            "Dejarla en el aeropuerto"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Hay alguna conversación difícil que llevas tiempo sin tener?",
+          "model": "Sí, con un viejo amigo con el que me enfadé. Creo que debería llamarlo pronto."
+        },
+        {
+          "q": "¿Estás de acuerdo con Dayana: nos arrepentimos más de lo que no decimos?",
+          "model": "Sí, estoy de acuerdo. Las palabras que no dices se quedan contigo mucho tiempo."
+        },
+        {
+          "q": "¿Qué regalo llevarías para hacer las paces con alguien?",
+          "model": "Llevaría algo sencillo, como un libro o una comida que le guste. Lo importante es el gesto."
+        }
+      ],
+      "gaps": "Te digo una cosa que veo todas las [semanas]: la gente casi nunca se [arrepiente] de lo que [dice]. Se arrepiente de lo que no [dice].",
+      "glossary": [
+        {
+          "word": "despegar",
+          "meaning": "cuando un avión sube y empieza a volar"
+        },
+        {
+          "word": "se arrepiente",
+          "meaning": "de «arrepentirse»: sentir que algo que se hizo o no se hizo estuvo mal"
+        },
+        {
+          "word": "me cierra la puerta",
+          "meaning": "no me quiere recibir"
+        },
+        {
+          "word": "mostrador",
+          "meaning": "mesa larga donde atienden los empleados"
+        }
+      ]
+    },
+    {
+      "id": "fumadores",
+      "title": "El secreto de Mónica",
+      "place": "La sala de fumadores, antes del embarque",
+      "context": "Iván, el sobrecargo, sospecha que Mónica le esconde algo. Esta vez, el secreto es de ella.",
+      "speakers": [
+        {
+          "name": "Iván",
+          "country": "Guinea Ecuatorial",
+          "voice": "es-GQ-JavierNeural"
+        },
+        {
+          "name": "Mónica",
+          "country": "Guinea Ecuatorial",
+          "voice": "es-GQ-TeresaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Mónica, estás muy callada. Tú tienes un secreto. Lo sé."
+        },
+        {
+          "s": 1,
+          "text": "Si te lo cuento, mañana lo sabe todo el aeropuerto."
+        },
+        {
+          "s": 0,
+          "text": "Te lo juro por mi libreta. No se lo digo a nadie."
+        },
+        {
+          "s": 1,
+          "text": "Vale. Este es mi último vuelo, como el del comandante. Voy a dejar Aerobruma."
+        },
+        {
+          "s": 0,
+          "text": "¿Qué? ¿Y qué vas a hacer?"
+        },
+        {
+          "s": 1,
+          "text": "Voy a abrir un restaurante en Malabo con mi hermana. Comida de mi tierra y de todos los países donde he volado."
+        },
+        {
+          "s": 0,
+          "text": "¡Eso es fantástico! ¿Y por qué no lo has dicho?"
+        },
+        {
+          "s": 1,
+          "text": "Porque tengo miedo de fracasar. Si no lo digo, no es real."
+        },
+        {
+          "s": 0,
+          "text": "Pues ya es real, porque lo sé yo. Y yo seré tu primer cliente. Y te haré publicidad gratis."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cuál es el secreto de Mónica?",
+          "options": [
+            "Que deja Aerobruma para abrir un restaurante",
+            "Que el vuelo está sobrevendido",
+            "Que va a casarse"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Con quién va a abrir el restaurante?",
+          "options": [
+            "Con Iván",
+            "Con su hermana",
+            "Con el comandante"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Por qué no lo había contado Mónica?",
+          "options": [
+            "Porque es un secreto de la empresa",
+            "Porque Iván habla mucho",
+            "Porque tiene miedo de fracasar"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué quiere decir Iván con «te haré publicidad gratis»?",
+          "options": [
+            "Que le va a contar a todo el mundo lo del restaurante",
+            "Que va a trabajar de camarero",
+            "Que no va a pagar la comida"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Tienes un proyecto que todavía no te atreves a contar?",
+          "model": "Sí, quiero escribir un libro de cuentos, pero todavía no se lo he dicho a casi nadie."
+        },
+        {
+          "q": "¿Crees que contar un plan ayuda a hacerlo realidad o le da mala suerte?",
+          "model": "Creo que ayuda, porque cuando lo cuentas sientes que tienes que cumplirlo."
+        },
+        {
+          "q": "Si abrieras un restaurante, ¿qué tipo de comida servirías?",
+          "model": "Serviría comida casera de mi país, con recetas de mi abuela y precios baratos."
+        }
+      ],
+      "gaps": "Voy a abrir un [restaurante] en Malabo con mi [hermana]. Comida de mi [tierra] y de todos los [países] donde he volado.",
+      "glossary": [
+        {
+          "word": "callada",
+          "meaning": "que no habla"
+        },
+        {
+          "word": "libreta",
+          "meaning": "cuaderno pequeño para apuntar cosas"
+        },
+        {
+          "word": "fracasar",
+          "meaning": "no conseguir lo que querías"
+        },
+        {
+          "word": "publicidad",
+          "meaning": "información para que la gente conozca algo"
+        }
+      ]
+    },
+    {
+      "id": "puerta",
+      "title": "Una llamada antes de despegar",
+      "place": "La puerta doce, durante el embarque",
+      "context": "Mientras Débora controla el embarque, Gustavo recibe una llamada muy esperada.",
+      "speakers": [
+        {
+          "name": "Débora",
+          "country": "Estados Unidos",
+          "voice": "es-US-PalomaNeural"
+        },
+        {
+          "name": "Gustavo",
+          "country": "Estados Unidos",
+          "voice": "es-US-AlonsoNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Señor, su tarjeta de embarque, por favor. Asiento veintidós B. Puede pasar."
+        },
+        {
+          "s": 1,
+          "text": "Un momento, señorita, perdone, me está sonando el teléfono. Es mi yerno. ¿Sí? ¿Sí? ¡No me digas!"
+        },
+        {
+          "s": 0,
+          "text": "¿Todo bien, señor?"
+        },
+        {
+          "s": 1,
+          "text": "¡Ha nacido! ¡Es un niño! Tres kilos y medio. Se llama Gustavo, como yo. Mi hija está bien."
+        },
+        {
+          "s": 0,
+          "text": "¡Enhorabuena! Pues ahora sí que tiene que subir a ese avión."
+        },
+        {
+          "s": 1,
+          "text": "Lloro como un tonto. Perdone. Treinta años esperando ser abuelo y me pilla en un aeropuerto."
+        },
+        {
+          "s": 0,
+          "text": "Aquí vemos llorar a mucha gente, señor. Casi siempre es por cosas tristes. Hoy, por fin, es por algo bonito."
+        },
+        {
+          "s": 1,
+          "text": "Débora, ¿verdad? Si algún día viene a Miami, le presento al pequeño Gustavo."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué noticia recibe Gustavo?",
+          "options": [
+            "Que ha nacido su nieto",
+            "Que su vuelo se cancela",
+            "Que su hija viene al aeropuerto"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Quién llama a Gustavo?",
+          "options": [
+            "Su hija",
+            "Su yerno",
+            "Su esposa"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cómo se llama el recién nacido?",
+          "options": [
+            "Débora",
+            "Luna",
+            "Gustavo"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué comenta Débora sobre la gente que llora en el aeropuerto?",
+          "options": [
+            "Que casi siempre llora por cosas tristes",
+            "Que llora porque tiene miedo a volar",
+            "Que nunca la ve llorar"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Recuerdas una noticia muy buena que recibiste en un lugar inesperado?",
+          "model": "Me ofrecieron mi trabajo actual mientras estaba en el supermercado. Grité delante de todos."
+        },
+        {
+          "q": "¿Qué opinas de poner a los hijos el nombre de los padres o abuelos?",
+          "model": "Me parece bonito porque es una tradición, pero prefiero nombres nuevos para que cada uno tenga su identidad."
+        },
+        {
+          "q": "¿Cómo te imaginas a ti mismo como abuelo o abuela?",
+          "model": "Me imagino muy divertido, contando historias y llevando a mis nietos al parque."
+        }
+      ],
+      "gaps": "¡Ha [nacido]! ¡Es un [niño]! Tres [kilos] y medio. Se llama Gustavo, como yo. Mi [hija] está bien.",
+      "glossary": [
+        {
+          "word": "tarjeta de embarque",
+          "meaning": "papel o código para subir al avión"
+        },
+        {
+          "word": "yerno",
+          "meaning": "el esposo de tu hija"
+        },
+        {
+          "word": "enhorabuena",
+          "meaning": "felicitaciones"
+        },
+        {
+          "word": "me pilla",
+          "meaning": "me encuentra, me sorprende en un lugar o momento"
+        }
+      ]
+    }
+  ]
+}

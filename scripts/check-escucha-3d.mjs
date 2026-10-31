@@ -5,6 +5,7 @@ import { readFileSync, existsSync } from 'node:fs';
 import { GAMES, WORDS, parseGaps, transcriptOf, wordCount } from '../app/escucha-3d/games.mjs';
 import { scanSource } from './neutral-spanish.mjs';
 import { CAST } from '../app/hospital-san-casi-vivo/story.mjs';
+import { CAST as VUELO_CAST } from '../app/vuelo-cancelado/story.mjs';
 
 const voices = JSON.parse(readFileSync('app/escucha-3d/voices.json', 'utf8'));
 const [onlyGame, onlyLevel] = process.argv.slice(2);
@@ -39,6 +40,12 @@ export function checkFile(game, level, data, path) {
     if (game === 'hospital') for (const speaker of speakers) {
       const member = Object.values(CAST).find(c => c.name === speaker.name);
       if (!member) bad(at, `${speaker.name} is not in the hospital cast (story.mjs)`);
+      else if (member.voice !== speaker.voice) bad(at, `${speaker.name} speaks with ${member.voice} in this class, not ${speaker.voice}`);
+    }
+    // So does the cast of Vuelo cancelado.
+    if (game === 'vuelo') for (const speaker of speakers) {
+      const member = Object.values(VUELO_CAST).find(c => c.name === speaker.name);
+      if (!member) bad(at, `${speaker.name} is not in the Vuelo cancelado cast (story.mjs)`);
       else if (member.voice !== speaker.voice) bad(at, `${speaker.name} speaks with ${member.voice} in this class, not ${speaker.voice}`);
     }
     if (spec.bilingualA0 && level === 'A0') {
