@@ -6,6 +6,8 @@ export const PADDLE_TRIAL_CENTS = 200;
 /** Annual plan (US$129/year), created by the owner in Paddle Live on 2026-10-31. */
 export const PADDLE_ANNUAL_PRICE_ID = "pri_01m684zshhms5kzznb7s3kjfss";
 export const PADDLE_ANNUAL_CENTS = 12900;
+/** «Invitá a un colega»: one-period 100% discount (monthly price only, no checkout code), created by the owner in Paddle Live on 2026-10-31. */
+export const PADDLE_REFERRAL_DISCOUNT_ID = "dsc_01m686383k32zpnm3t5geedqss";
 export type PaddleOffer = "monthly" | "trial" | "annual";
 
 export type PaddleRuntimeConfig = {

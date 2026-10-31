@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "authorization": "Owner standing approval (Ale) for new English copy, typed «apruebo (siempre de ahora en más apruebo)» on 2026-10-22 (message cmsg_01Gr5R4j3t2Yet65UcmhcVhAAAbp6kqDfMqxzNm3PL6f5g), applied to Ale’s 2026-10-31 request to add the referral program «Invitá a un colega» (message cmsg_01Gr5R4j3t2Yet65UcmhcVhAXyGvYUCYpurVW8LhNF6L1D, «agrega el 3, el 4 agrega un plan anual tambien»).",
+  "additions": [
+    {
+      "path": "app/cuenta/page.tsx",
+      "text": "Invite a colleague"
+    },
+    {
+      "path": "app/cuenta/page.tsx",
+      "text": "Share your link. When a teacher subscribes and pays their first month, their second month is free and you get a free month too."
+    },
+    {
+      "path": "app/cuenta/page.tsx",
+      "text": "Your invitation link"
+    },
+    {
+      "path": "app/cuenta/page.tsx",
+      "text": "Colleagues subscribed: ${referral.qualified} · Free months pending: ${referral.pending} · Used: ${referral.used}. The free month applies to the monthly card subscription."
+    },
+    {
+      "path": "app/pricing/page.tsx",
+      "text": "A colleague invited you: pay your first month and the second one is free (monthly card subscription)."
+    }
+  ]
+}

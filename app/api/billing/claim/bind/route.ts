@@ -4,6 +4,7 @@ import { billingConfig } from "../../../../billing-config";
 import { getPaddleTransaction, validatePaddleClaimTransaction } from "../../../../paddle-server";
 import { paddleConfig } from "../../../../paddle-config";
 import { authorizePurchaseClaim } from "../../../../purchase-claim-cookie";
+import { processReferrals } from "../../../../referrals-server";
 import { bindPurchaseToUser } from "../../../../../db/purchase-binding";
 import { purchaseClaimByVerifiedEmail, type PurchaseProvider } from "../../../../../db/purchase-claims";
 
@@ -45,6 +46,7 @@ export async function POST(request: Request) {
     }
     const result = await bindPurchaseToUser(env.DB, cookieClaim.claimId, userId, email, config, priceId);
     if (!result) return Response.json({ error: "Estamos esperando la confirmación del pago." }, { status: 409 });
+    if (provider === "paddle") await processReferrals(env.DB, paddle, { userId, subscriptionId: result.subscriptionId });
     return Response.json({ accessConfirmed: true, ...result },
       { headers: { "cache-control": "private, no-store" } });
   } catch {
