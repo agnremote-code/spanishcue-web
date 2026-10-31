@@ -7,7 +7,7 @@ import { grammarTopicPages } from './growth/grammar-topics';
 import { guideModifiedDate } from "./guides/guide-format";
 import { lessons } from "./lesson-catalog";
 import { MATERIAL_ELE_PATH, elePages } from "./material-ele/data";
-import { resourceLessons, resourcePathForLesson } from "./resource-seo";
+import { RECURSOS_PATH, recursoPathForLesson, resourceLessons, resourcePathForLesson } from "./resource-seo";
 import { canonicalUrl, isSearchPrivatePath, languageAlternates } from "./seo";
 import { teachingGuides } from "./teaching-guides";
 
@@ -34,6 +34,7 @@ const curatedRoutes: { path: string; priority: number; changeFrequency: Frequenc
   ...conversationLevels.map((level) => ({ path: level.path, priority: 0.8, changeFrequency: "monthly" as Frequency })),
   { path: CONVERSATION_QUESTIONS_PATH, priority: 0.8, changeFrequency: "monthly" },
   { path: "/resources", priority: 0.8, changeFrequency: "weekly" },
+  { path: RECURSOS_PATH, priority: 0.85, changeFrequency: "weekly" },
   { path: "/guides", priority: 0.8, changeFrequency: "weekly" },
   { path: "/pricing", priority: 0.8, changeFrequency: "monthly" },
   { path: "/spanish-grammar-lessons", priority: 0.9, changeFrequency: "weekly" },
@@ -85,6 +86,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
 
   for (const lesson of resourceLessons) push(entry(resourcePathForLesson(lesson), 0.6, "monthly"));
+  for (const lesson of resourceLessons) push(entry(recursoPathForLesson(lesson), 0.65, "monthly"));
 
   for (const item of teachingGuides.map((guide) => entry(`/guides/${guide.slug}`, 0.6, "monthly", guideModifiedDate(guide)))) push(item);
 
