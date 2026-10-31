@@ -76,6 +76,22 @@ async function main() {
     problems.push(...checkLevel(level, content));
     for (const f of scanSource(readFileSync(path, 'utf8'), path)) problems.push(`${path}:${f.line}: neutral Spanish guard flags «${f.token}» (${f.kind}); rewrite with tú`);
   }
+  // Everyone in the crowd tells a story at three levels.
+  const { CROWD } = await import('../app/vuelo-cancelado/layout.mjs');
+  const { PASAJEROS } = await import('../app/vuelo-cancelado/pasajeros.mjs');
+  const pair = (v) => Boolean(v && typeof v.es === 'string' && v.es && typeof v.en === 'string' && v.en);
+  const keys = Object.entries(CROWD).flatMap(([floor, list]) => list.map((_, i) => `${floor}-${i}`));
+  if (Object.keys(PASAJEROS).sort().join() !== keys.sort().join()) problems.push(`pasajeros.mjs: keys must be exactly ${keys.join(', ')}`);
+  for (const [key, p] of Object.entries(PASAJEROS)) {
+    for (const k of ['who', 'basic', 'basicAsk']) if (!pair(p[k])) problems.push(`pasajeros ${key}: ${k} must be { es, en }`);
+    for (const k of ['mid', 'midAsk', 'high', 'highAsk']) if (typeof p[k] !== 'string' || p[k].length < 12) problems.push(`pasajeros ${key}: ${k} missing`);
+    for (const k of ['basicAsk', 'midAsk', 'highAsk']) if (!/\?\s*$/.test(typeof p[k] === 'string' ? p[k] : p[k]?.es ?? '')) problems.push(`pasajeros ${key}: ${k} must be a question`);
+    const n = words(p.basic?.es ?? ''), m = words(p.mid ?? ''), h = words(p.high ?? '');
+    if (n > 45 || m < 40 || m > 95 || h < 60 || h > 120) problems.push(`pasajeros ${key}: lengths basic ${n} (≤45), mid ${m} (40–95), high ${h} (60–120)`);
+  }
+  if (new Set(Object.values(PASAJEROS).map((p) => p.name)).size !== Object.keys(PASAJEROS).length) problems.push('pasajeros: two people share a name');
+  const path = 'app/vuelo-cancelado/pasajeros.mjs';
+  for (const f of scanSource(readFileSync(path, 'utf8'), path)) problems.push(`${path}:${f.line}: neutral Spanish guard flags «${f.token}» (${f.kind}); rewrite with tú`);
   for (const p of problems) console.error(p);
   console.log(problems.length ? `${problems.length} problems` : 'Vuelo cancelado: all levels OK');
   process.exitCode = problems.length ? 1 : 0;
