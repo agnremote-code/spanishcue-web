@@ -3400,6 +3400,636 @@
    "hash": "976d2c3587acddcdfea8",
    "seconds": 3.63,
    "src": "/audio/escucha-3d/voces-ve-m.mp3"
+  },
+  "vuelo/a0-aduana": {
+   "hash": "141f655a2950470f4f6a",
+   "seconds": 25.51,
+   "src": "/audio/escucha-3d/vuelo-a0-aduana.mp3"
+  },
+  "vuelo/a0-alquiler": {
+   "hash": "aaf33e6ceb63042e4092",
+   "seconds": 25.24,
+   "src": "/audio/escucha-3d/vuelo-a0-alquiler.mp3"
+  },
+  "vuelo/a0-cambio": {
+   "hash": "0cdf0fd7cb05a8fd390c",
+   "seconds": 25.51,
+   "src": "/audio/escucha-3d/vuelo-a0-cambio.mp3"
+  },
+  "vuelo/a0-capilla": {
+   "hash": "d3c14bc11e8e0e9c169e",
+   "seconds": 19.29,
+   "src": "/audio/escucha-3d/vuelo-a0-capilla.mp3"
+  },
+  "vuelo/a0-cintas": {
+   "hash": "513e64c7ef7eaa084d9e",
+   "seconds": 24.79,
+   "src": "/audio/escucha-3d/vuelo-a0-cintas.mp3"
+  },
+  "vuelo/a0-comidas": {
+   "hash": "3ab97d05ac0ec4ec3dca",
+   "seconds": 25.5,
+   "src": "/audio/escucha-3d/vuelo-a0-comidas.mp3"
+  },
+  "vuelo/a0-descanso": {
+   "hash": "6d48e2cc706629869e11",
+   "seconds": 27.45,
+   "src": "/audio/escucha-3d/vuelo-a0-descanso.mp3"
+  },
+  "vuelo/a0-facturacion": {
+   "hash": "51769513efb72ae3edaa",
+   "seconds": 29.66,
+   "src": "/audio/escucha-3d/vuelo-a0-facturacion.mp3"
+  },
+  "vuelo/a0-freeshop": {
+   "hash": "2055e6700f633a6002c5",
+   "seconds": 23.03,
+   "src": "/audio/escucha-3d/vuelo-a0-freeshop.mp3"
+  },
+  "vuelo/a0-fumadores": {
+   "hash": "9a74a379f5e8dab8bea2",
+   "seconds": 18.95,
+   "src": "/audio/escucha-3d/vuelo-a0-fumadores.mp3"
+  },
+  "vuelo/a0-pantalla": {
+   "hash": "2023477474f88cbf1246",
+   "seconds": 24.07,
+   "src": "/audio/escucha-3d/vuelo-a0-pantalla.mp3"
+  },
+  "vuelo/a0-perdidos": {
+   "hash": "fb5412b55767f8cf4897",
+   "seconds": 23.32,
+   "src": "/audio/escucha-3d/vuelo-a0-perdidos.mp3"
+  },
+  "vuelo/a0-puerta": {
+   "hash": "cbda258e7ad7882d3afa",
+   "seconds": 23.04,
+   "src": "/audio/escucha-3d/vuelo-a0-puerta.mp3"
+  },
+  "vuelo/a0-reencuentro": {
+   "hash": "e648a60429f04d3e6100",
+   "seconds": 23.64,
+   "src": "/audio/escucha-3d/vuelo-a0-reencuentro.mp3"
+  },
+  "vuelo/a0-reprogramacion": {
+   "hash": "e097ed35e01c08abc754",
+   "seconds": 24.91,
+   "src": "/audio/escucha-3d/vuelo-a0-reprogramacion.mp3"
+  },
+  "vuelo/a0-seguridad": {
+   "hash": "02227765f0976d6906c1",
+   "seconds": 22.39,
+   "src": "/audio/escucha-3d/vuelo-a0-seguridad.mp3"
+  },
+  "vuelo/a0-taxi": {
+   "hash": "cc20710c5e5da3b3e988",
+   "seconds": 24.04,
+   "src": "/audio/escucha-3d/vuelo-a0-taxi.mp3"
+  },
+  "vuelo/a0-vip": {
+   "hash": "9d824e2dc459d11396bd",
+   "seconds": 25.72,
+   "src": "/audio/escucha-3d/vuelo-a0-vip.mp3"
+  },
+  "vuelo/a1-aduana": {
+   "hash": "cf03e7ee0350ec5ff5f1",
+   "seconds": 34.83,
+   "src": "/audio/escucha-3d/vuelo-a1-aduana.mp3"
+  },
+  "vuelo/a1-alquiler": {
+   "hash": "8530b417d514c21206e4",
+   "seconds": 39.46,
+   "src": "/audio/escucha-3d/vuelo-a1-alquiler.mp3"
+  },
+  "vuelo/a1-cambio": {
+   "hash": "e04e5f847a3b68c3aa27",
+   "seconds": 44.94,
+   "src": "/audio/escucha-3d/vuelo-a1-cambio.mp3"
+  },
+  "vuelo/a1-capilla": {
+   "hash": "db354843b87723239f91",
+   "seconds": 41.0,
+   "src": "/audio/escucha-3d/vuelo-a1-capilla.mp3"
+  },
+  "vuelo/a1-cintas": {
+   "hash": "221b4edfd4e030f2ecc5",
+   "seconds": 38.45,
+   "src": "/audio/escucha-3d/vuelo-a1-cintas.mp3"
+  },
+  "vuelo/a1-comidas": {
+   "hash": "b6fc2043ed22c0ee9753",
+   "seconds": 37.18,
+   "src": "/audio/escucha-3d/vuelo-a1-comidas.mp3"
+  },
+  "vuelo/a1-descanso": {
+   "hash": "8e04946959dc87fc6fba",
+   "seconds": 42.96,
+   "src": "/audio/escucha-3d/vuelo-a1-descanso.mp3"
+  },
+  "vuelo/a1-facturacion": {
+   "hash": "7e9b166d62a15a329671",
+   "seconds": 48.48,
+   "src": "/audio/escucha-3d/vuelo-a1-facturacion.mp3"
+  },
+  "vuelo/a1-freeshop": {
+   "hash": "8e47fa5b39cf542d9dab",
+   "seconds": 37.22,
+   "src": "/audio/escucha-3d/vuelo-a1-freeshop.mp3"
+  },
+  "vuelo/a1-fumadores": {
+   "hash": "5eb9d9b2a416bdf95f16",
+   "seconds": 37.42,
+   "src": "/audio/escucha-3d/vuelo-a1-fumadores.mp3"
+  },
+  "vuelo/a1-pantalla": {
+   "hash": "3610169f119bb7e5916f",
+   "seconds": 38.33,
+   "src": "/audio/escucha-3d/vuelo-a1-pantalla.mp3"
+  },
+  "vuelo/a1-perdidos": {
+   "hash": "fbf509abf91be431a326",
+   "seconds": 40.32,
+   "src": "/audio/escucha-3d/vuelo-a1-perdidos.mp3"
+  },
+  "vuelo/a1-puerta": {
+   "hash": "5456567f18e6fea366f1",
+   "seconds": 40.25,
+   "src": "/audio/escucha-3d/vuelo-a1-puerta.mp3"
+  },
+  "vuelo/a1-reencuentro": {
+   "hash": "2ed43dd626ee1c365335",
+   "seconds": 41.4,
+   "src": "/audio/escucha-3d/vuelo-a1-reencuentro.mp3"
+  },
+  "vuelo/a1-reprogramacion": {
+   "hash": "e473b2b5675e49510e7e",
+   "seconds": 39.12,
+   "src": "/audio/escucha-3d/vuelo-a1-reprogramacion.mp3"
+  },
+  "vuelo/a1-seguridad": {
+   "hash": "03971be815f5f442f938",
+   "seconds": 37.08,
+   "src": "/audio/escucha-3d/vuelo-a1-seguridad.mp3"
+  },
+  "vuelo/a1-taxi": {
+   "hash": "6b9fb76666cf308b887f",
+   "seconds": 39.68,
+   "src": "/audio/escucha-3d/vuelo-a1-taxi.mp3"
+  },
+  "vuelo/a1-vip": {
+   "hash": "8e9f12303ac30a7b133b",
+   "seconds": 41.4,
+   "src": "/audio/escucha-3d/vuelo-a1-vip.mp3"
+  },
+  "vuelo/a2-aduana": {
+   "hash": "aa56a15abad413caed42",
+   "seconds": 53.55,
+   "src": "/audio/escucha-3d/vuelo-a2-aduana.mp3"
+  },
+  "vuelo/a2-alquiler": {
+   "hash": "5706fab612237987ac4c",
+   "seconds": 53.1,
+   "src": "/audio/escucha-3d/vuelo-a2-alquiler.mp3"
+  },
+  "vuelo/a2-cambio": {
+   "hash": "e067eae527ec36a81891",
+   "seconds": 52.31,
+   "src": "/audio/escucha-3d/vuelo-a2-cambio.mp3"
+  },
+  "vuelo/a2-capilla": {
+   "hash": "fce46339de5a2c68fa1c",
+   "seconds": 44.58,
+   "src": "/audio/escucha-3d/vuelo-a2-capilla.mp3"
+  },
+  "vuelo/a2-cintas": {
+   "hash": "d33e738ab1c8219a6ed8",
+   "seconds": 42.26,
+   "src": "/audio/escucha-3d/vuelo-a2-cintas.mp3"
+  },
+  "vuelo/a2-comidas": {
+   "hash": "e3c79dd41a7959f05a69",
+   "seconds": 44.51,
+   "src": "/audio/escucha-3d/vuelo-a2-comidas.mp3"
+  },
+  "vuelo/a2-descanso": {
+   "hash": "b1ef8d45f6fe19808b1c",
+   "seconds": 49.19,
+   "src": "/audio/escucha-3d/vuelo-a2-descanso.mp3"
+  },
+  "vuelo/a2-facturacion": {
+   "hash": "19f0bdf06427d220aeda",
+   "seconds": 47.03,
+   "src": "/audio/escucha-3d/vuelo-a2-facturacion.mp3"
+  },
+  "vuelo/a2-freeshop": {
+   "hash": "be273f6a9b8083bbc2d5",
+   "seconds": 47.41,
+   "src": "/audio/escucha-3d/vuelo-a2-freeshop.mp3"
+  },
+  "vuelo/a2-fumadores": {
+   "hash": "4d0d17748e5d60cae7a4",
+   "seconds": 48.37,
+   "src": "/audio/escucha-3d/vuelo-a2-fumadores.mp3"
+  },
+  "vuelo/a2-pantalla": {
+   "hash": "ba7d2b26418903864517",
+   "seconds": 47.9,
+   "src": "/audio/escucha-3d/vuelo-a2-pantalla.mp3"
+  },
+  "vuelo/a2-perdidos": {
+   "hash": "988f2964d40cca34ca56",
+   "seconds": 47.6,
+   "src": "/audio/escucha-3d/vuelo-a2-perdidos.mp3"
+  },
+  "vuelo/a2-puerta": {
+   "hash": "0662ab881d5e114a0fab",
+   "seconds": 49.82,
+   "src": "/audio/escucha-3d/vuelo-a2-puerta.mp3"
+  },
+  "vuelo/a2-reencuentro": {
+   "hash": "cb7f8f7f52b60eace935",
+   "seconds": 58.44,
+   "src": "/audio/escucha-3d/vuelo-a2-reencuentro.mp3"
+  },
+  "vuelo/a2-reprogramacion": {
+   "hash": "2ad0e62a17015995317e",
+   "seconds": 46.11,
+   "src": "/audio/escucha-3d/vuelo-a2-reprogramacion.mp3"
+  },
+  "vuelo/a2-seguridad": {
+   "hash": "74d7f34daf3729a82152",
+   "seconds": 45.57,
+   "src": "/audio/escucha-3d/vuelo-a2-seguridad.mp3"
+  },
+  "vuelo/a2-taxi": {
+   "hash": "b90cdd39c8833d374357",
+   "seconds": 53.0,
+   "src": "/audio/escucha-3d/vuelo-a2-taxi.mp3"
+  },
+  "vuelo/a2-vip": {
+   "hash": "d54078ed7637418a2f2a",
+   "seconds": 48.71,
+   "src": "/audio/escucha-3d/vuelo-a2-vip.mp3"
+  },
+  "vuelo/b1-aduana": {
+   "hash": "2687be1271d1f44bb6e8",
+   "seconds": 53.98,
+   "src": "/audio/escucha-3d/vuelo-b1-aduana.mp3"
+  },
+  "vuelo/b1-alquiler": {
+   "hash": "455a48e520b53d5b68b2",
+   "seconds": 68.7,
+   "src": "/audio/escucha-3d/vuelo-b1-alquiler.mp3"
+  },
+  "vuelo/b1-cambio": {
+   "hash": "7c5d25bfc9115c9e1e5a",
+   "seconds": 58.77,
+   "src": "/audio/escucha-3d/vuelo-b1-cambio.mp3"
+  },
+  "vuelo/b1-capilla": {
+   "hash": "1c862b692eb36adae877",
+   "seconds": 58.64,
+   "src": "/audio/escucha-3d/vuelo-b1-capilla.mp3"
+  },
+  "vuelo/b1-cintas": {
+   "hash": "23b594aa4c9fd1e109c0",
+   "seconds": 58.62,
+   "src": "/audio/escucha-3d/vuelo-b1-cintas.mp3"
+  },
+  "vuelo/b1-comidas": {
+   "hash": "d29d25c6db1ec5103a11",
+   "seconds": 59.63,
+   "src": "/audio/escucha-3d/vuelo-b1-comidas.mp3"
+  },
+  "vuelo/b1-descanso": {
+   "hash": "bbae4dd970c29faeb065",
+   "seconds": 60.32,
+   "src": "/audio/escucha-3d/vuelo-b1-descanso.mp3"
+  },
+  "vuelo/b1-facturacion": {
+   "hash": "2ab81c0e7c4ef250a664",
+   "seconds": 66.68,
+   "src": "/audio/escucha-3d/vuelo-b1-facturacion.mp3"
+  },
+  "vuelo/b1-freeshop": {
+   "hash": "55a910fcab7fb343ddc0",
+   "seconds": 55.4,
+   "src": "/audio/escucha-3d/vuelo-b1-freeshop.mp3"
+  },
+  "vuelo/b1-fumadores": {
+   "hash": "a576ecd446ae7e6893c8",
+   "seconds": 56.28,
+   "src": "/audio/escucha-3d/vuelo-b1-fumadores.mp3"
+  },
+  "vuelo/b1-pantalla": {
+   "hash": "a7101fdbbb229a7221c8",
+   "seconds": 58.38,
+   "src": "/audio/escucha-3d/vuelo-b1-pantalla.mp3"
+  },
+  "vuelo/b1-perdidos": {
+   "hash": "ee82364733a4989f0f53",
+   "seconds": 60.17,
+   "src": "/audio/escucha-3d/vuelo-b1-perdidos.mp3"
+  },
+  "vuelo/b1-puerta": {
+   "hash": "b45d5f1b92dbff87552e",
+   "seconds": 66.63,
+   "src": "/audio/escucha-3d/vuelo-b1-puerta.mp3"
+  },
+  "vuelo/b1-reencuentro": {
+   "hash": "61a847ae4ba9b6a3fbbc",
+   "seconds": 61.45,
+   "src": "/audio/escucha-3d/vuelo-b1-reencuentro.mp3"
+  },
+  "vuelo/b1-reprogramacion": {
+   "hash": "9a717d471fa74aafd4ed",
+   "seconds": 56.58,
+   "src": "/audio/escucha-3d/vuelo-b1-reprogramacion.mp3"
+  },
+  "vuelo/b1-seguridad": {
+   "hash": "dc41b4e1570b0d5f397e",
+   "seconds": 48.99,
+   "src": "/audio/escucha-3d/vuelo-b1-seguridad.mp3"
+  },
+  "vuelo/b1-taxi": {
+   "hash": "adf6dd53dfa4f1a7d0b2",
+   "seconds": 62.7,
+   "src": "/audio/escucha-3d/vuelo-b1-taxi.mp3"
+  },
+  "vuelo/b1-vip": {
+   "hash": "339e0f26d4a2da835448",
+   "seconds": 60.25,
+   "src": "/audio/escucha-3d/vuelo-b1-vip.mp3"
+  },
+  "vuelo/b2-aduana": {
+   "hash": "5d4757e469e92d2c9f76",
+   "seconds": 66.57,
+   "src": "/audio/escucha-3d/vuelo-b2-aduana.mp3"
+  },
+  "vuelo/b2-alquiler": {
+   "hash": "2d685eec72dff11a500d",
+   "seconds": 68.28,
+   "src": "/audio/escucha-3d/vuelo-b2-alquiler.mp3"
+  },
+  "vuelo/b2-cambio": {
+   "hash": "08736c8a3f7203427038",
+   "seconds": 72.08,
+   "src": "/audio/escucha-3d/vuelo-b2-cambio.mp3"
+  },
+  "vuelo/b2-capilla": {
+   "hash": "049ef2973af13a5d9864",
+   "seconds": 65.12,
+   "src": "/audio/escucha-3d/vuelo-b2-capilla.mp3"
+  },
+  "vuelo/b2-cintas": {
+   "hash": "152b5db7e5f77f9fb3c7",
+   "seconds": 64.17,
+   "src": "/audio/escucha-3d/vuelo-b2-cintas.mp3"
+  },
+  "vuelo/b2-comidas": {
+   "hash": "bfd8cc66a834a7d8edcf",
+   "seconds": 66.44,
+   "src": "/audio/escucha-3d/vuelo-b2-comidas.mp3"
+  },
+  "vuelo/b2-descanso": {
+   "hash": "039e7a4ef270013b7a0e",
+   "seconds": 67.88,
+   "src": "/audio/escucha-3d/vuelo-b2-descanso.mp3"
+  },
+  "vuelo/b2-facturacion": {
+   "hash": "7684fb797b525ab20dab",
+   "seconds": 69.15,
+   "src": "/audio/escucha-3d/vuelo-b2-facturacion.mp3"
+  },
+  "vuelo/b2-freeshop": {
+   "hash": "d25f16b7ca3302c9d874",
+   "seconds": 76.43,
+   "src": "/audio/escucha-3d/vuelo-b2-freeshop.mp3"
+  },
+  "vuelo/b2-fumadores": {
+   "hash": "61e218c297207e125d92",
+   "seconds": 65.26,
+   "src": "/audio/escucha-3d/vuelo-b2-fumadores.mp3"
+  },
+  "vuelo/b2-pantalla": {
+   "hash": "e0e446b03d70c01dc107",
+   "seconds": 66.34,
+   "src": "/audio/escucha-3d/vuelo-b2-pantalla.mp3"
+  },
+  "vuelo/b2-perdidos": {
+   "hash": "0c7f505323191b5c02f2",
+   "seconds": 58.85,
+   "src": "/audio/escucha-3d/vuelo-b2-perdidos.mp3"
+  },
+  "vuelo/b2-puerta": {
+   "hash": "29201581a6cf179eaeec",
+   "seconds": 69.58,
+   "src": "/audio/escucha-3d/vuelo-b2-puerta.mp3"
+  },
+  "vuelo/b2-reencuentro": {
+   "hash": "b79c539c515ddc8b6f54",
+   "seconds": 71.24,
+   "src": "/audio/escucha-3d/vuelo-b2-reencuentro.mp3"
+  },
+  "vuelo/b2-reprogramacion": {
+   "hash": "7e9379cbaf0589c2e1d9",
+   "seconds": 61.69,
+   "src": "/audio/escucha-3d/vuelo-b2-reprogramacion.mp3"
+  },
+  "vuelo/b2-seguridad": {
+   "hash": "44fed52be3386945a07d",
+   "seconds": 65.43,
+   "src": "/audio/escucha-3d/vuelo-b2-seguridad.mp3"
+  },
+  "vuelo/b2-taxi": {
+   "hash": "cd7d5ecbc362359c9cc3",
+   "seconds": 71.55,
+   "src": "/audio/escucha-3d/vuelo-b2-taxi.mp3"
+  },
+  "vuelo/b2-vip": {
+   "hash": "f36d0985b54813daee73",
+   "seconds": 73.97,
+   "src": "/audio/escucha-3d/vuelo-b2-vip.mp3"
+  },
+  "vuelo/c1-aduana": {
+   "hash": "558e499d7f47833c2763",
+   "seconds": 84.44,
+   "src": "/audio/escucha-3d/vuelo-c1-aduana.mp3"
+  },
+  "vuelo/c1-alquiler": {
+   "hash": "fd47c19a419795ca9b83",
+   "seconds": 78.99,
+   "src": "/audio/escucha-3d/vuelo-c1-alquiler.mp3"
+  },
+  "vuelo/c1-cambio": {
+   "hash": "4168073f6f0f531f148f",
+   "seconds": 78.44,
+   "src": "/audio/escucha-3d/vuelo-c1-cambio.mp3"
+  },
+  "vuelo/c1-capilla": {
+   "hash": "5142386def422753dfdc",
+   "seconds": 84.86,
+   "src": "/audio/escucha-3d/vuelo-c1-capilla.mp3"
+  },
+  "vuelo/c1-cintas": {
+   "hash": "1e44fc3c05262602a433",
+   "seconds": 76.28,
+   "src": "/audio/escucha-3d/vuelo-c1-cintas.mp3"
+  },
+  "vuelo/c1-comidas": {
+   "hash": "c9e88e3bf218c8c3bc01",
+   "seconds": 81.44,
+   "src": "/audio/escucha-3d/vuelo-c1-comidas.mp3"
+  },
+  "vuelo/c1-descanso": {
+   "hash": "61daca6085dff882aa73",
+   "seconds": 84.03,
+   "src": "/audio/escucha-3d/vuelo-c1-descanso.mp3"
+  },
+  "vuelo/c1-facturacion": {
+   "hash": "448a67830ba44957847e",
+   "seconds": 93.79,
+   "src": "/audio/escucha-3d/vuelo-c1-facturacion.mp3"
+  },
+  "vuelo/c1-freeshop": {
+   "hash": "654020786b444241647f",
+   "seconds": 79.89,
+   "src": "/audio/escucha-3d/vuelo-c1-freeshop.mp3"
+  },
+  "vuelo/c1-fumadores": {
+   "hash": "e710285dc4cc6748b7ad",
+   "seconds": 78.19,
+   "src": "/audio/escucha-3d/vuelo-c1-fumadores.mp3"
+  },
+  "vuelo/c1-pantalla": {
+   "hash": "b119419c7130cf8eb03f",
+   "seconds": 78.15,
+   "src": "/audio/escucha-3d/vuelo-c1-pantalla.mp3"
+  },
+  "vuelo/c1-perdidos": {
+   "hash": "c985eba0817385cf1dc0",
+   "seconds": 79.22,
+   "src": "/audio/escucha-3d/vuelo-c1-perdidos.mp3"
+  },
+  "vuelo/c1-puerta": {
+   "hash": "36bc8f4e1457913d3f8c",
+   "seconds": 75.84,
+   "src": "/audio/escucha-3d/vuelo-c1-puerta.mp3"
+  },
+  "vuelo/c1-reencuentro": {
+   "hash": "07c0416072c0f7d74b50",
+   "seconds": 84.39,
+   "src": "/audio/escucha-3d/vuelo-c1-reencuentro.mp3"
+  },
+  "vuelo/c1-reprogramacion": {
+   "hash": "368a4219779df9c09289",
+   "seconds": 72.01,
+   "src": "/audio/escucha-3d/vuelo-c1-reprogramacion.mp3"
+  },
+  "vuelo/c1-seguridad": {
+   "hash": "dfe6cea937c41c4b0617",
+   "seconds": 79.3,
+   "src": "/audio/escucha-3d/vuelo-c1-seguridad.mp3"
+  },
+  "vuelo/c1-taxi": {
+   "hash": "7dd1f6c3f5c2e01e5f62",
+   "seconds": 87.84,
+   "src": "/audio/escucha-3d/vuelo-c1-taxi.mp3"
+  },
+  "vuelo/c1-vip": {
+   "hash": "ff65d92bdccb44e22167",
+   "seconds": 80.57,
+   "src": "/audio/escucha-3d/vuelo-c1-vip.mp3"
+  },
+  "vuelo/c2-aduana": {
+   "hash": "bfb9510483af2da0121d",
+   "seconds": 83.27,
+   "src": "/audio/escucha-3d/vuelo-c2-aduana.mp3"
+  },
+  "vuelo/c2-alquiler": {
+   "hash": "3e351e62282b8adb0f29",
+   "seconds": 85.62,
+   "src": "/audio/escucha-3d/vuelo-c2-alquiler.mp3"
+  },
+  "vuelo/c2-cambio": {
+   "hash": "6e96bf76c0c7e49250e9",
+   "seconds": 85.98,
+   "src": "/audio/escucha-3d/vuelo-c2-cambio.mp3"
+  },
+  "vuelo/c2-capilla": {
+   "hash": "f41dd518aed3e1196cde",
+   "seconds": 86.19,
+   "src": "/audio/escucha-3d/vuelo-c2-capilla.mp3"
+  },
+  "vuelo/c2-cintas": {
+   "hash": "8c0f7f983e20ac44f578",
+   "seconds": 81.03,
+   "src": "/audio/escucha-3d/vuelo-c2-cintas.mp3"
+  },
+  "vuelo/c2-comidas": {
+   "hash": "99d12b02bac8b8c139df",
+   "seconds": 87.36,
+   "src": "/audio/escucha-3d/vuelo-c2-comidas.mp3"
+  },
+  "vuelo/c2-descanso": {
+   "hash": "a93e0029e5d821cd3e5c",
+   "seconds": 98.24,
+   "src": "/audio/escucha-3d/vuelo-c2-descanso.mp3"
+  },
+  "vuelo/c2-facturacion": {
+   "hash": "66206c2b2a700739a893",
+   "seconds": 107.14,
+   "src": "/audio/escucha-3d/vuelo-c2-facturacion.mp3"
+  },
+  "vuelo/c2-freeshop": {
+   "hash": "5ef70c698db722323690",
+   "seconds": 88.59,
+   "src": "/audio/escucha-3d/vuelo-c2-freeshop.mp3"
+  },
+  "vuelo/c2-fumadores": {
+   "hash": "fbf6cb4d5ac4189d556f",
+   "seconds": 94.63,
+   "src": "/audio/escucha-3d/vuelo-c2-fumadores.mp3"
+  },
+  "vuelo/c2-pantalla": {
+   "hash": "2acbb48fe388bf24510a",
+   "seconds": 95.25,
+   "src": "/audio/escucha-3d/vuelo-c2-pantalla.mp3"
+  },
+  "vuelo/c2-perdidos": {
+   "hash": "f3d87b8186df32a34d66",
+   "seconds": 84.22,
+   "src": "/audio/escucha-3d/vuelo-c2-perdidos.mp3"
+  },
+  "vuelo/c2-puerta": {
+   "hash": "43423297041030124250",
+   "seconds": 90.6,
+   "src": "/audio/escucha-3d/vuelo-c2-puerta.mp3"
+  },
+  "vuelo/c2-reencuentro": {
+   "hash": "3ba8323b04d0fadf3a23",
+   "seconds": 100.3,
+   "src": "/audio/escucha-3d/vuelo-c2-reencuentro.mp3"
+  },
+  "vuelo/c2-reprogramacion": {
+   "hash": "927f2d552f7b3c6c2875",
+   "seconds": 89.07,
+   "src": "/audio/escucha-3d/vuelo-c2-reprogramacion.mp3"
+  },
+  "vuelo/c2-seguridad": {
+   "hash": "6741f41a645b90ffc6f7",
+   "seconds": 82.14,
+   "src": "/audio/escucha-3d/vuelo-c2-seguridad.mp3"
+  },
+  "vuelo/c2-taxi": {
+   "hash": "c9be056a1f3f912c8a0a",
+   "seconds": 97.08,
+   "src": "/audio/escucha-3d/vuelo-c2-taxi.mp3"
+  },
+  "vuelo/c2-vip": {
+   "hash": "1086d66fa1bedad2a5f3",
+   "seconds": 90.58,
+   "src": "/audio/escucha-3d/vuelo-c2-vip.mp3"
   }
  }
 }
