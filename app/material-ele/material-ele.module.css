@@ -14,3 +14,21 @@
 .stats { display: flex; flex-wrap: wrap; gap: 10px 22px; color: var(--g-muted); font-size: 15px; }
 .stats strong { color: var(--g-ink); }
 .price { font-size: 14px; color: var(--g-muted); margin: 0; }
+.tableWrap { overflow-x: auto; border: 1px solid var(--g-line); border-radius: 16px; background: #fff; }
+.compare { width: 100%; border-collapse: collapse; min-width: 560px; font-size: 15px; }
+.compare th, .compare td { text-align: left; vertical-align: top; padding: 12px 14px; border-bottom: 1px solid var(--g-line); }
+.compare thead th { background: var(--g-paper); font-weight: 800; }
+.compare tbody th { font-weight: 700; width: 22%; }
+.compare tr:last-child th, .compare tr:last-child td { border-bottom: 0; }
+.featured {
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: 22px; align-items: center;
+  background: #fff; border: 1px solid var(--g-line); border-radius: 20px; padding: 18px; margin: 8px 0 28px;
+  box-shadow: 0 14px 34px rgba(6, 21, 47, .08);
+}
+.featured img { width: 100%; height: auto; border-radius: 14px; display: block; }
+.featured h2 { margin: 6px 0 8px; font-size: clamp(22px, 3vw, 30px); line-height: 1.15; }
+.featured > div > p { margin: 0 0 12px; color: var(--g-muted); }
+.featuredKicker { font-size: 13px; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; color: var(--g-blue-dark); }
+.steps { list-style: none; display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 16px; padding: 0; }
+.steps li { font-size: 13px; padding: 4px 10px; border-radius: 999px; background: var(--g-paper); border: 1px solid var(--g-line); }
+@media (max-width: 760px) { .featured { grid-template-columns: 1fr; padding: 14px; } }

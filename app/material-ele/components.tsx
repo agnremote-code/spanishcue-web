@@ -151,6 +151,41 @@ export function EleTopicCards({ slugs }: { slugs?: string[] }) {
   );
 }
 
+const LIVE_CLASS_STEPS = ["Entender", "Explorar", "Practicar", "Escuchar", "Conversar", "Escribir", "Cerrar"];
+
+/** The page's first grammar class, shown above the activities as the ready-to-teach option. */
+export function featuredGrammarLesson(ids: readonly number[]): LessonCardData | undefined {
+  const id = ids.find((lessonId) => categoryLabel.get(lessonId) === "Gramática");
+  return id === undefined ? undefined : eleLessonCards([id])[0];
+}
+
+export function EleFeaturedLesson({ lesson }: { lesson: LessonCardData }) {
+  return (
+    <section className={ele.featured} aria-label="Clase completa lista para dar">
+      <Link href={lesson.href}>
+        <Image src={lesson.image} alt={`Vista previa de la clase ${lesson.title}`} width={720} height={450} sizes="(max-width: 760px) 92vw, 45vw" />
+      </Link>
+      <div>
+        <span className={ele.featuredKicker}>Clase completa lista para dar · {lesson.level} · {lesson.free ? "GRATIS" : "PRO"}</span>
+        <h2>{lesson.title}</h2>
+        <p>{lesson.subtitle}</p>
+        <p>La compartes en pantalla y la das tal cual: teoría primero, práctica con respuestas ocultas, audio, conversación y escritura.</p>
+        <ol className={ele.steps}>{LIVE_CLASS_STEPS.map((step, index) => <li key={step}>{String(index + 1).padStart(2, "0")} {step}</li>)}</ol>
+        <div className={styles.heroActions}>
+          {lesson.free ? (
+            <Link className={styles.primaryButton} href={lesson.href}>Abrir la clase gratis</Link>
+          ) : (
+            <>
+              <Link className={ele.buyButton} href={PRICING_PATH}>Desbloquear · {PRICE_LABEL}</Link>
+              <Link className={styles.secondaryButton} href={lesson.href}>Ver qué incluye</Link>
+            </>
+          )}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export function EleBuyBand() {
   return (
     <section className={styles.ctaBand} aria-label="Suscribirse a SpanishCue PRO">

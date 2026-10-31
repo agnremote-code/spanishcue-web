@@ -105,6 +105,7 @@ export function filterReviewedChanges(findings, reviewed) {
  */
 export const APPROVAL_MANIFESTS = [
   'docs/audits/guarantee-30-days-english-additions-20261030.json',
+  'docs/audits/paises-3d-categoria-english-additions-20261030.json',
   'docs/audits/post-payment-email-link-english-additions-20261030.json',
   'docs/audits/google-teachers-free-grammar-english-additions-20261030.json',
   'docs/audits/free-version-bar-english-additions-20261030.json',

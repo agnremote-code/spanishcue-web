@@ -1,12 +1,12 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import {build} from 'esbuild';
-const r=await build({stdin:{contents:'export {default as sitemap} from "./app/sitemap.ts"; export {isEnglishDefaultPath,isEdgeCacheablePath,isSearchPrivatePath} from "./app/seo.ts"; export * from "./app/material-ele/data.ts"; export {lessons} from "./app/lesson-catalog.ts"; export {isFreeLesson} from "./app/access-policy.ts";',resolveDir:process.cwd()},bundle:true,write:false,platform:'node',format:'esm'});
+const r=await build({stdin:{contents:'export {default as sitemap} from "./app/sitemap.ts"; export {isEnglishDefaultPath,isEdgeCacheablePath,isSearchPrivatePath} from "./app/seo.ts"; export * from "./app/material-ele/data.ts"; export {lessons} from "./app/lesson-catalog.ts"; export {isFreeLesson} from "./app/access-policy.ts"; export {liveLessonIds} from "./app/grammar-classroom/live/registry.ts";',resolveDir:process.cwd()},bundle:true,write:false,platform:'node',format:'esm'});
 const m=await import('data:text/javascript;base64,'+Buffer.from(r.outputFiles[0].text).toString('base64'));
 
 test('the Spanish ELE cluster is in the sitemap, Spanish-first, indexable and edge-cached',()=>{
  const urls=new Set(m.sitemap().map(x=>x.url));
- for(const path of [m.MATERIAL_ELE_PATH,...m.elePages.map(p=>p.path)]){
+ for(const path of ['/alternativa-a-profedeele',m.MATERIAL_ELE_PATH,...m.elePages.map(p=>p.path)]){
   assert.ok(urls.has('https://spanishcue.com'+path),path);
   assert.equal(m.isEnglishDefaultPath(path),false,path);
   assert.equal(m.isSearchPrivatePath(path),false,path);
@@ -24,7 +24,7 @@ test('every page has unique bounded metadata, a unique H1 and real classroom con
   titles.add(p.title);h1s.add(p.h1);
   assert.ok(p.activities.length>=2,p.slug);
   for(const a of p.activities){assert.ok(a.steps.length>=3&&a.prompts.length>=1&&a.model&&a.correction&&a.online,a.name);names.push(a.name);}
-  if(p.exercise)for(const item of p.exercise.items)assert.ok(item.q.includes('___')&&item.a,item.q);
+  if(p.exercise)for(const item of p.exercise.items)assert.ok((item.q.includes('___')||(p.slug==='comprension-auditiva'&&item.q.endsWith('?')))&&item.a,item.q);
   assert.ok(p.faq.length>=2,p.slug);
   for(const slug of p.related)assert.ok(m.elePageBySlug.has(slug)&&slug!==p.slug,`${p.slug} → ${slug}`);
  }
@@ -44,4 +44,12 @@ test('copy keeps the published price and never invents customers or rankings',()
  const text=JSON.stringify(m.elePages)+m.hubDescription+JSON.stringify(m.hubFaq);
  assert.doesNotMatch(text,/US\$\s?(?!15,50)\d/);
  assert.doesNotMatch(text,/profede+le|miles de profesores|n\.º 1|número uno|\d+\s?(?:profesores|clientes) (?:ya|confían)/i);
+});
+
+test('grammar pages feature a complete live grammar class above the activities',()=>{
+ for(const p of m.elePages){
+  const id=p.lessonIds.find(i=>m.lessons.find(l=>l.id===i)?.category==='Gramática');
+  if(p.kind==='level'||!['preguntas-de-conversacion','juegos-para-clase-de-espanol','comprension-auditiva'].includes(p.slug))assert.ok(id!==undefined,`${p.slug} has no grammar class to feature`);
+  if(id!==undefined)assert.ok(m.liveLessonIds.includes(id),`${p.slug} features ${id}, which is not a live class`);
+ }
 });

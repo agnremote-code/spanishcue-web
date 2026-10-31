@@ -67,5 +67,7 @@ export type CountryInfo = {
   lessonId: number;
   name: Bi;
   welcome: { es: string; en: string };
+  /** What the regions are called there, `one` with its article: «un estado / estados», «una comunidad / comunidades»… (default «una región / regiones»). */
+  regionWord?: { one: string; many: string };
   regions: RegionInfo[];
 };

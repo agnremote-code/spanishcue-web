@@ -8,6 +8,7 @@ export const USA: CountryInfo = {
   id: 'estados-unidos',
   lessonId: 36,
   name: { es: 'Estados Unidos', en: 'United States' },
+  regionWord: { one: 'un estado', many: 'estados' },
   welcome: { es: 'BIENVENIDO A ESTADOS UNIDOS', en: 'WELCOME TO THE UNITED STATES' },
   regions: [
     {

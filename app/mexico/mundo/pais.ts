@@ -8,6 +8,7 @@ export const MEXICO: CountryInfo = {
   id: 'mexico',
   lessonId: 210,
   name: { es: 'México', en: 'Mexico' },
+  regionWord: { one: 'un estado', many: 'estados' },
   welcome: { es: 'BIENVENIDO A MÉXICO', en: 'WELCOME TO MEXICO' },
   regions: [
     {
