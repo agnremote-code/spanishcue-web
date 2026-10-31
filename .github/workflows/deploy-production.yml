@@ -144,7 +144,7 @@ jobs:
           VARS="$(echo "$VARS" | jq -c '
             .NEXT_PUBLIC_GA4_MEASUREMENT_ID //= "G-6C7DY2C5LN" |
             .NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_ID //= "AW-17144698608" |
-            .NEXT_PUBLIC_GOOGLE_ADS_PURCHASE_LABEL //= "PnsSCLfHuJQdEPCtne8_" |
+            .NEXT_PUBLIC_GOOGLE_ADS_PURCHASE_LABEL //= "DmpfCIzWzp4dEPCtne8_" |
             .ANALYTICS_CONVERSIONS_ENABLED //= "true"
           ')"
           printf 'PRODUCTION_VARS_JSON=%s\n' "$VARS" >> "$GITHUB_ENV"
