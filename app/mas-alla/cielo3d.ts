@@ -75,7 +75,8 @@ export function buildCielo({ low, shadows }: { low: boolean; shadows: boolean })
   const path = (x0: number, z0: number, x1: number, z1: number, w = 3.2) => {
     const len = Math.hypot(x1 - x0, z1 - z0);
     const m = new THREE.Mesh(new THREE.BoxGeometry(w, 0.06, len), marble);
-    m.position.set((x0 + x1) / 2, 0.03, (z0 + z1) / 2); m.rotation.y = Math.atan2(x1 - x0, z1 - z0); m.receiveShadow = true;
+    // Flush with the clouds (top at 0.012), so feet stand on it, never in it.
+    m.position.set((x0 + x1) / 2, -0.018, (z0 + z1) / 2); m.rotation.y = Math.atan2(x1 - x0, z1 - z0); m.receiveShadow = true;
     group.add(m);
   };
   path(0, 60, 0, -46, 4.2);
@@ -222,9 +223,9 @@ export function buildCielo({ low, shadows }: { low: boolean; shadows: boolean })
   anims.push(t => { waterMat.uniforms.uTime.value = t; });
   // The bridge of light over the gap.
   const bridgeMat = new THREE.MeshStandardMaterial({ color: '#fff4dc', emissive: '#ffe2a0', emissiveIntensity: 0.6, roughness: 0.3, transparent: true, opacity: 0.9 });
-  const bridge = new THREE.Mesh(new THREE.BoxGeometry(4.6, 0.12, 6.4), bridgeMat); bridge.position.set(-2, 0.12, -7.5); group.add(bridge);
-  for (const side of [-4.2, 0.2]) for (let k = 0; k < 5; k++) group.add(cylinder(0.05, 0.05, 1, gold, side, 0.6, -10.2 + k * 1.35, 6));
-  for (const side of [-4.2, 0.2]) { const rail = cylinder(0.06, 0.06, 6.2, gold, side, 1.1, -7.5, 6); rail.rotation.x = Math.PI / 2; group.add(rail); }
+  const bridge = new THREE.Mesh(new THREE.BoxGeometry(4.6, 0.12, 6.4), bridgeMat); bridge.position.set(-2, -0.048, -7.5); group.add(bridge);
+  for (const side of [-4.2, 0.2]) for (let k = 0; k < 5; k++) group.add(cylinder(0.05, 0.05, 1, gold, side, 0.51, -10.2 + k * 1.35, 6));
+  for (const side of [-4.2, 0.2]) { const rail = cylinder(0.06, 0.06, 6.2, gold, side, 1.01, -7.5, 6); rail.rotation.x = Math.PI / 2; group.add(rail); }
   // Ernesto's stool, rod and bucket.
   group.add(cylinder(0.3, 0.3, 0.12, solid('#8a6a52'), -20, 0.06, -4.6, 10));
 

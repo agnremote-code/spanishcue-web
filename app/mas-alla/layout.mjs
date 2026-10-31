@@ -117,9 +117,10 @@ const INFIERNO = {
     spot('ventanilla', 18, 36, Math.PI / 2),
     spot('espejos', -22, 30, -Math.PI / 2),
     spot('tribunal', 22, 4, Math.PI / 2),
-    spot('barca', -22, -4, Math.PI),
+    // Caronte stands on the dock (top 0.2); Lucero on the top step of his dais (0.9), in front of the throne.
+    { ...spot('barca', -22, -4, Math.PI), talker: { x: -22, z: -5.9, heading: 0, y: 0.2 } },
     spot('jaula', 20, -26, Math.PI, 'sit'),
-    spot('trono', 0, -40, Math.PI),
+    { ...spot('trono', 0, -40, Math.PI), talker: { x: 0, z: -42.45, heading: 0, y: 0.9 } },
   ],
   solids: [
     ...gate,

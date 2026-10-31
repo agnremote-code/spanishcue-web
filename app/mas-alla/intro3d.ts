@@ -18,6 +18,13 @@ export type IntroBeat = 'beep' | 'breath' | 'flat' | 'soul' | 'light';
 
 const smooth = (a: number, b: number, t: number) => { const k = Math.min(1, Math.max(0, (t - a) / (b - a))); return k * k * (3 - 2 * k); };
 const lerp = (a: number, b: number, k: number) => a + (b - a) * k;
+/** The chairs: seat height, and how far behind the sitter's root the seat centre is. */
+export const CHAIR = { seat: 0.36, back: 0.08 };
+/** The blanket over her legs (world space): a half-ellipse tube along z, resting on the mattress. */
+export const BLANKET = { y: 0.83, z: -0.72, len: 0.86, rx: 0.45, ry: 0.42 };
+const BLANKET_TOP = BLANKET.y + BLANKET.ry;
+/** Where the soul first shows: clear of the blanket and of her body. */
+const SOUL_Y = BLANKET_TOP + 0.06;
 
 export function buildIntro(low: boolean, shadows: boolean) {
   const group = new THREE.Group();
@@ -56,11 +63,20 @@ export function buildIntro(low: boolean, shadows: boolean) {
   const bed = new THREE.Group();
   const metal = solid('#d8dcdc', 0.4, 0.6);
   bed.add(box(1.05, 0.5, 2.1, metal, 0, 0.32, 0, shadows));
-  bed.add(box(1.0, 0.18, 2.05, solid('#f2f2ee', 0.95), 0, 0.66, 0, shadows));
+  // The mattress top (0.83) is where her body rests; nothing of the bed goes through her.
+  bed.add(box(1.0, 0.34, 2.05, solid('#f2f2ee', 0.95), 0, 0.66, 0, shadows));
   bed.add(box(1.1, 0.7, 0.06, metal, 0, 0.75, -1.06, false));
   bed.add(box(1.1, 0.45, 0.06, metal, 0, 0.62, 1.06, false));
-  const pillow = box(0.6, 0.14, 0.38, solid('#ffffff', 0.95), 0, 0.82, -0.82, false); pillow.rotation.x = 0.25; bed.add(pillow);
-  const blanket = box(1.04, 0.3, 1.4, solid('#9ab0c8', 0.95), 0, 0.93, 0.3, false); bed.add(blanket);
+  // The pillow stands against the headboard, just behind her head.
+  bed.add(box(0.6, 0.15, 0.24, solid('#ffffff', 0.95), 0, 0.905, -0.9, false));
+  // The blanket is a soft tent over her legs: hollow, so her body stays under it, never inside it.
+  const blanketMat = new THREE.MeshStandardMaterial({ color: '#9ab0c8', roughness: 0.95, side: THREE.DoubleSide });
+  const shell = new THREE.CylinderGeometry(BLANKET.rx, BLANKET.rx, BLANKET.len, 22, 1, true, Math.PI / 2, Math.PI);
+  shell.rotateX(Math.PI / 2); shell.scale(1, BLANKET.ry / BLANKET.rx, 1);
+  const blanket = new THREE.Mesh(shell, blanketMat); blanket.name = 'blanket';
+  blanket.position.set(0, BLANKET.y, BLANKET.z - -1.3); bed.add(blanket);
+  const cap = new THREE.Mesh(new THREE.CircleGeometry(BLANKET.rx, 22, 0, Math.PI).scale(1, BLANKET.ry / BLANKET.rx, 1), blanketMat);
+  cap.position.set(0, BLANKET.y, BLANKET.z + BLANKET.len / 2 - -1.3); bed.add(cap);
   bed.position.set(0, 0, -1.3);
   group.add(bed);
 
@@ -81,9 +97,9 @@ export function buildIntro(low: boolean, shadows: boolean) {
   // ---------------------------------------------------------------- the family
   const family: { look: Record<string, unknown>; x: number; z: number; h: number; pose: string }[] = [
     // Your daughter, holding your hand.
-    { look: { body: 'f', age: 'adult', top: 'sweater', topColor: '#8a4a4a', bottom: 'jeans', bottomColor: '#2a3040', hairStyle: 'long', hairColor: '#5a3a22', skin: '#eac0a0' }, x: 0.95, z: -1.25, h: -Math.PI / 2, pose: 'sit' },
+    { look: { body: 'f', age: 'adult', top: 'sweater', topColor: '#8a4a4a', bottom: 'jeans', bottomColor: '#2a3040', hairStyle: 'long', hairColor: '#5a3a22', skin: '#eac0a0' }, x: 1.1, z: -1.25, h: -Math.PI / 2, pose: 'sit' },
     // Your husband, very old too, on the other side.
-    { look: { body: 'm', age: 'elderly', build: 'slim', top: 'sweater', topColor: '#5a6a5a', bottom: 'pants', bottomColor: '#3a3a3a', hairStyle: 'short', hairColor: '#e0ddd6', skin: '#e0ac85', extras: ['glasses'] }, x: -0.95, z: -1.6, h: Math.PI / 2, pose: 'sit' },
+    { look: { body: 'm', age: 'elderly', build: 'slim', top: 'sweater', topColor: '#5a6a5a', bottom: 'pants', bottomColor: '#3a3a3a', hairStyle: 'short', hairColor: '#e0ddd6', skin: '#e0ac85', extras: ['glasses'] }, x: -1.1, z: -1.6, h: Math.PI / 2, pose: 'sit' },
     // Your son, standing behind his sister, a hand on her shoulder.
     { look: { body: 'm', age: 'adult', top: 'jacket', topColor: '#2a3a50', bottom: 'jeans', bottomColor: '#2a2f3a', hairStyle: 'short', hairColor: '#3d2a1c', skin: '#e0ac85', extras: ['beard'] }, x: 1.55, z: -0.85, h: -Math.PI / 2 - 0.3, pose: 'stand' },
     // Your granddaughter, crying in her mother's arms… and your grandson at the foot of the bed.
@@ -99,8 +115,14 @@ export function buildIntro(low: boolean, shadows: boolean) {
     if (!shadows) addBlobShadow(p);
     group.add(p.root); people.push(p); kin.push(p);
   });
-  // Two chairs for the ones who sit.
-  for (const [x, z] of [[1.05, -1.25], [-1.05, -1.6]] as [number, number][]) { group.add(box(0.46, 0.45, 0.46, solid('#6a5a4a', 0.7), x + Math.sign(x) * 0.08, 0.22, z, false)); group.add(box(0.06, 0.5, 0.46, solid('#6a5a4a', 0.7), x + Math.sign(x) * 0.32, 0.65, z, false)); }
+  // Two open chairs for the ones who sit: a thin seat under the hips, legs at the corners, so their legs pass free.
+  const wood = solid('#6a5a4a', 0.7);
+  for (const f of family.filter(f => f.pose === 'sit')) {
+    const cx = f.x + Math.sign(f.x) * CHAIR.back, cz = f.z;
+    group.add(box(0.44, 0.04, 0.44, wood, cx, CHAIR.seat - 0.02, cz, false));
+    for (const [dx, dz] of [[-0.19, -0.19], [-0.19, 0.19], [0.19, -0.19], [0.19, 0.19]]) group.add(box(0.04, CHAIR.seat - 0.04, 0.04, wood, cx + dx, (CHAIR.seat - 0.04) / 2, cz + dz, false));
+    group.add(box(0.04, 0.5, 0.44, wood, cx + Math.sign(f.x) * 0.2, CHAIR.seat + 0.25, cz, false));
+  }
 
   // ---------------------------------------------------------------- the machines
   // Heart monitor on its arm, beside the bed.
@@ -120,7 +142,7 @@ export function buildIntro(low: boolean, shadows: boolean) {
   const column = new THREE.Mesh(new THREE.CylinderGeometry(0.11, 0.11, 0.5, 16, 1, true), new THREE.MeshPhysicalMaterial({ color: '#e8f4ff', transmission: 0.7, transparent: true, opacity: 0.5, roughness: 0.05, side: THREE.DoubleSide })); column.position.y = 1.27; vent.add(column);
   const bellows = cylinder(0.09, 0.09, 0.4, solid('#7ab0d8', 0.5), 0, 1.2, 0, 14); vent.add(bellows);
   vent.position.set(-1.3, 0, -0.5); group.add(vent);
-  const tube = new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3([new THREE.Vector3(-1.3, 1.05, -0.5), new THREE.Vector3(-0.95, 1.12, -1.1), new THREE.Vector3(-0.45, 1.05, -1.75), new THREE.Vector3(-0.06, 1.0, -1.98)]), 20, 0.022, 6), solid('#cfe4f0', 0.3)); group.add(tube);
+  const tube = new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3([new THREE.Vector3(-1.3, 1.05, -0.5), new THREE.Vector3(-0.75, 1.12, -0.8), new THREE.Vector3(-0.38, 1.16, -1.5), new THREE.Vector3(-0.06, 1.12, -1.95)]), 20, 0.022, 6), solid('#cfe4f0', 0.3)); group.add(tube);
   // The IV drip.
   group.add(cylinder(0.02, 0.02, 2, metal, 0.75, 1, -2.4, 6));
   group.add(box(0.16, 0.24, 0.05, new THREE.MeshPhysicalMaterial({ color: '#f0f8ff', transmission: 0.5, transparent: true }), 0.75, 1.9, -2.4, false));
@@ -182,6 +204,8 @@ export function buildIntro(low: boolean, shadows: boolean) {
   const out = { cam: new THREE.Vector3(), look: new THREE.Vector3(), fov: 42, flash: 0 };
   return {
     group,
+    /** Everyone in the room, the soul included (checked by the no-ghost QA). */
+    people: [...people, soul],
     /** Advances the film to `t`; returns the camera and what sounds now. */
     frame(t: number, dt: number) {
       const beats: IntroBeat[] = [];
@@ -198,7 +222,7 @@ export function buildIntro(low: boolean, shadows: boolean) {
 
       // The family: grief grows; at the end they hold each other.
       for (const p of kin) animatePerson(p, dt, 0, false);
-      if (t > FLATLINE && kin[1].pose !== 'cry') { setPose(kin[1], 'cry'); setPose(kin[2], 'cry'); setMood(kin[0], 'sad'); }
+      if (t > FLATLINE && kin[1].pose !== 'cry') { setPose(kin[1], 'cry', true); setPose(kin[2], 'cry'); setMood(kin[0], 'sad'); }
       animatePerson(you, dt * (t < FLATLINE ? 1 - t / 9 : 0), 0, false);
 
       // The soul: it shows at 7.2 s and rises, standing up as it goes.
@@ -206,7 +230,8 @@ export function buildIntro(low: boolean, shadows: boolean) {
       if (t > 7.15) {
         soul.root.visible = true;
         const up = smooth(7.2, 8.4, t);
-        soul.root.position.set(0, 0.88 + k * 4.2, -1.17 - up * 0.5);
+        // It appears just above the blanket, never through it, and rises from there.
+        soul.root.position.set(0, SOUL_Y + k * 3.9, -1.17 - up * 0.5);
         if (up > 0.5 && soul.pose !== 'stand') setPose(soul, 'stand');
         soul.root.rotation.x = 0;
         animatePerson(soul, dt, 0, false);
