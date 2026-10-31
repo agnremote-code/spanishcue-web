@@ -270,6 +270,11 @@ jobs:
           echo "origin=$ORIGIN" >> "$GITHUB_OUTPUT"
           { echo "Mode: $MODE"; echo "Deployed SHA: $SHA"; echo "Origin: $ORIGIN"; } >> "$GITHUB_STEP_SUMMARY"
 
+      - name: Record the live sitemap before the new version
+        if: inputs.action == 'deploy'
+        continue-on-error: true
+        run: curl -fsSL --max-time 30 "${{ steps.deploy.outputs.origin }}/sitemap.xml" -o /tmp/sitemap-before.xml || true
+
       - name: Wait for the new version
         if: inputs.action == 'deploy'
         run: sleep 20
@@ -286,6 +291,11 @@ jobs:
           if curl -sI "$SPANISHCUE_PRODUCTION_ORIGIN/" | grep -qi '^x-robots-tag: noindex'; then
             echo "::error::Production must not carry the staging noindex header."; exit 1
           fi
+
+      - name: IndexNow (new URLs only, Bing/DuckDuckGo/Yandex)
+        if: inputs.action == 'deploy' && steps.smoke.outcome == 'success' && inputs.mode == 'release'
+        continue-on-error: true
+        run: node scripts/indexnow-ping.mjs --before /tmp/sitemap-before.xml --after "${{ steps.deploy.outputs.origin }}/sitemap.xml"
 
       - name: Roll back after failed smoke
         if: inputs.action == 'deploy' && steps.smoke.outcome == 'failure' && steps.previous.outputs.exists == 'true'
