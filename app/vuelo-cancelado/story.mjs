@@ -45,7 +45,7 @@ export const CAST = {
 
 // The 18 circles: sector, floor, who is there (first = the person you talk to).
 export const STORY = [
-  { id: 'taxi', sector: 'Vereda de salidas', floor: 1, cast: ['ramiro'] },
+  { id: 'taxi', sector: 'Acera de salidas', floor: 1, cast: ['ramiro'] },
   { id: 'pantalla', sector: 'Hall de salidas', floor: 1, cast: ['delfina', 'bruno'] },
   { id: 'facturacion', sector: 'Mostradores de facturación', floor: 1, cast: ['yesenia', 'teodoro'] },
   { id: 'reprogramacion', sector: 'Atención al pasajero', floor: 1, cast: ['gerardo', 'ines'] },

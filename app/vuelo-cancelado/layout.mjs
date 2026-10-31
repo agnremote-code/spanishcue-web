@@ -17,7 +17,7 @@ const HALL = { minX: -48, maxX: 48, minZ: -30, maxZ: 30 };
 // Floor 0 is arrivals; 1 departures with the kerb outside; 2 the gates.
 export const FLOORS = [
   { id: 0, name: 'Llegadas', sub: 'Equipaje · aduana · objetos perdidos · alquiler de autos', y: -FLOOR_H, bounds: { ...HALL } },
-  { id: 1, name: 'Salidas', sub: 'Vereda · facturación · atención al pasajero · seguridad', y: 0, bounds: { ...HALL, maxZ: 45.6 } },
+  { id: 1, name: 'Salidas', sub: 'Acera · facturación · atención al pasajero · seguridad', y: 0, bounds: { ...HALL, maxZ: 45.6 } },
   { id: 2, name: 'Embarque', sub: 'Free shop · comidas · sala VIP · capilla · puerta 12', y: FLOOR_H, bounds: { ...HALL } },
 ];
 export const FLOOR_IDS = FLOORS.map((f) => f.id);
@@ -38,7 +38,7 @@ export const STAIRS_ARRIVAL = { x: 5.2, z: -18.2, heading: 0 };
 // before the big halls around them.
 const S = (floor, id, name, x0, z0, x1, z1, sound, light = '#f2f6ff') => ({ floor, id, name, x0, z0, x1, z1, sound, light });
 export const SECTORS = [
-  S(1, 'vereda', 'Vereda de salidas', -48, 30, 48, 46, 'kerb'),
+  S(1, 'vereda', 'Acera de salidas', -48, 30, 48, 46, 'kerb'),
   S(1, 'hall', 'Hall de salidas', -48, 6, 48, 30, 'hall'),
   S(1, 'facturacion', 'Mostradores de facturación', -48, -14, -10, 6, 'checkin'),
   S(1, 'reprogramacion', 'Atención al pasajero', 10, -14, 48, 6, 'queue', '#fff4e2'),
@@ -330,7 +330,7 @@ export const CROWD = {
 export const CHATTER = {
   0: ['¿Esa maleta es la mía?', 'Mi maleta se fue a Lima sin mí.', 'Aquí huele a queso, ¿no?', '¡Bienvenida, mamá!', 'El perro de la aduana me miró raro.', 'Treinta minutos y la cinta no se mueve.'],
   1: ['¿Cancelado? ¿Cómo que cancelado?', 'Yo nunca más vuelo con Aerobruma.', '¿Alguien sabe dónde se hace la cola?', 'Mi abuela llega en ese vuelo.', 'Me dijeron mostrador doce y no hay mostrador doce.', '¡Paso, paso, que llego tarde!', 'Treinta kilos de equipaje y un solo calcetín limpio.', 'La tormenta tiene nombre: se llama Aerobruma.'],
-  2: ['Última llamada para Montevideo.', 'Un café más y vuelo sin avión.', '¿Este enchufe funciona?', 'Me quedo a vivir aquí, ya fue.', 'Shhh, que el piloto duerme.', 'Dicen que en la sala VIP hay sushi gratis.', 'Mi perfume cuesta más que mi pasaje.'],
+  2: ['Última llamada para Montevideo.', 'Un café más y vuelo sin avión.', '¿Este enchufe funciona?', 'Me quedo a vivir aquí, ¿qué más da?', 'Shhh, que el piloto duerme.', 'Dicen que en la sala VIP hay sushi gratis.', 'Mi perfume cuesta más que mi pasaje.'],
 };
 
 // Announcements on the airport speakers, one every minute or so.
