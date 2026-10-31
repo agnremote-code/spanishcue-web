@@ -204,3 +204,74 @@ export function relatedResourceLessons(lesson: Lesson, limit = 6): Lesson[] {
 }
 
 export const resourceLessons = catalogLessons;
+
+/* ---------- Spanish resource pages (/recursos), the hreflang pair of /resources ---------- */
+
+const categorySeoEs: Record<Category, { prefix: string; label: string; pluralLabel: string; shortLabel: string }> = {
+  "Gramática": { prefix: "clase-de-gramatica", label: "Clase de gramática", pluralLabel: "Clases de gramática", shortLabel: "clase de gramática" },
+  "Conversación": { prefix: "actividad-de-conversacion", label: "Actividad de conversación", pluralLabel: "Actividades de conversación", shortLabel: "actividad de conversación" },
+  "Escucha": { prefix: "comprension-auditiva", label: "Comprensión auditiva", pluralLabel: "Comprensión auditiva", shortLabel: "actividad de comprensión auditiva" },
+  "Fonética": { prefix: "pronunciacion", label: "Clase de pronunciación", pluralLabel: "Pronunciación", shortLabel: "clase de pronunciación" },
+  "Vocabulario": { prefix: "vocabulario", label: "Clase de vocabulario", pluralLabel: "Vocabulario", shortLabel: "clase de vocabulario" },
+};
+
+export const RECURSOS_PATH = "/recursos";
+
+const recursoBaseSlugById = new Map(
+  lessons.map((lesson) => [lesson.id, `${categorySeoEs[lesson.category].prefix}-${slugify(levelLabel(lesson))}-${slugify(lesson.title)}`]),
+);
+const recursoSlugCounts = new Map<string, number>();
+for (const slug of recursoBaseSlugById.values()) recursoSlugCounts.set(slug, (recursoSlugCounts.get(slug) ?? 0) + 1);
+const recursoSlugById = new Map(
+  lessons.map((lesson) => {
+    const base = recursoBaseSlugById.get(lesson.id)!;
+    return [lesson.id, recursoSlugCounts.get(base) === 1 ? base : `${base}-${lesson.id}`];
+  }),
+);
+const lessonByRecursoSlug = new Map(lessons.map((lesson) => [recursoSlugById.get(lesson.id)!, lesson]));
+
+export function recursoSlugForLesson(lesson: Lesson): string {
+  return recursoSlugById.get(conversationFamilyByLessonId.get(lesson.id)?.canonicalLessonId ?? lesson.id)!;
+}
+
+export function recursoPathForLesson(lesson: Lesson): string {
+  return `${RECURSOS_PATH}/${recursoSlugForLesson(lesson)}`;
+}
+
+export function lessonForRecursoSlug(slug: string): Lesson | undefined {
+  const original = lessonByRecursoSlug.get(slug);
+  if (!original) return undefined;
+  const family = conversationFamilyByLessonId.get(original.id);
+  if (!family) return original;
+  return catalogLessons.find((item) => item.id === family.canonicalLessonId)!;
+}
+
+/** The es/en pair of a resource page, from either side; undefined for any other path. */
+export function resourceLanguagePair(path: string): { es: string; en: string } | undefined {
+  const en = path.startsWith("/resources/") ? lessonForResourceSlug(path.slice("/resources/".length)) : undefined;
+  const es = path.startsWith(`${RECURSOS_PATH}/`) ? lessonForRecursoSlug(path.slice(RECURSOS_PATH.length + 1)) : undefined;
+  const lesson = en ?? es;
+  if (!lesson) return path === "/resources" || path === RECURSOS_PATH ? { es: RECURSOS_PATH, en: "/resources" } : undefined;
+  return { es: recursoPathForLesson(lesson), en: resourcePathForLesson(lesson) };
+}
+
+export function recursoTypeLabel(lesson: Lesson): string {
+  return categorySeoEs[lesson.category].label;
+}
+
+export function recursoTypePluralLabel(lesson: Lesson): string {
+  return categorySeoEs[lesson.category].pluralLabel;
+}
+
+export function recursoTitle(lesson: Lesson): string {
+  const prefix = isImmersiveWorld(lesson) ? "3D · " : "";
+  return `${prefix}${recursoTypeLabel(lesson)} ${resourceLevelLabel(lesson)}: ${lesson.title} | SPANISHCUE`;
+}
+
+export function recursoDescription(lesson: Lesson): string {
+  const type = categorySeoEs[lesson.category].shortLabel;
+  if (isImmersiveWorld(lesson)) {
+    return truncate(`Mundo 3D de conversación y comprensión auditiva para la clase de ELE, ${resourceLevelLabel(lesson)}: ${lesson.title}. ${lesson.subtitle}`);
+  }
+  return truncate(`${type[0].toUpperCase()}${type.slice(1)} ${resourceLevelLabel(lesson)} lista para dar en clase de ELE: ${lesson.title}. ${lesson.subtitle}`);
+}

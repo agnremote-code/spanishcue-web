@@ -103,7 +103,7 @@ test("the sitemap lists clean, public, deduplicated URLs covering the organic ar
     assert.doesNotMatch(entry.url, /[?#]/, entry.url);
     if (entry.url !== "https://spanishcue.com/") assert.doesNotMatch(entry.url, /\/$/, entry.url);
     assert.equal(mod.isSearchPrivatePath(new URL(entry.url).pathname), false, entry.url);
-    if (entry.alternates) assert.ok(mod.languagePairs.length > 0, "alternates only when a pair exists");
+    if (entry.alternates) assert.ok(mod.languagePairs.length > 0 || mod.languageAlternates(new URL(entry.url).pathname), "alternates only when a pair exists");
   }
   const expected = [
     "/", "/pricing", "/spanish-teacher-resources", mod.CONVERSATION_HUB_PATH, mod.CONVERSATION_QUESTIONS_PATH,

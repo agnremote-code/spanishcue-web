@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ResourceCatalog from "./ResourceCatalog";
 import { isFreeLesson } from "../access-policy";
+import { languageAlternates } from "../seo";
 import styles from "./resources.module.css";
 import {
   resourceLessons,
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
   title: "Spanish Teaching Resources by Level | SPANISHCUE",
   description:
     "Browse ready-to-teach Spanish grammar, conversation, listening, pronunciation and vocabulary resources for A1–C2 teachers.",
-  alternates: { canonical: "https://spanishcue.com/resources" },
+  alternates: { canonical: "https://spanishcue.com/resources", languages: languageAlternates("/resources") },
   robots: { index: true, follow: true },
 };
 
