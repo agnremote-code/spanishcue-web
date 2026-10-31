@@ -10950,6 +10950,42 @@
       "text": "Perdí el tren; ___, llegué tarde.",
       "reason": "First-person preterite in an explicit past-tense example for teachers; not a voseo command.",
       "category": "neutral-context"
+    },
+    {
+      "path": "app/material-ele/data.ts",
+      "text": "Ayer me quedé dormida, me vestí corriendo y me puse muy nerviosa porque se me olvidó el móvil en casa.",
+      "reason": "First-person preterite in an explicit past-tense example for teachers; not a voseo command.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/material-ele/data.ts",
+      "text": "«Me quedé dormido» (quedarse) y «me dormí» (dormirse) no son lo mismo: explica la diferencia con un ejemplo de cada uno.",
+      "reason": "First-person preterite in an explicit past-tense example for teachers; not a voseo command.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/material-ele/data.ts",
+      "text": "En gran parte de Hispanoamérica y en Canarias se prefiere el indefinido: «hoy comí»; las dos formas son correctas",
+      "reason": "First-person preterite in an explicit past-tense example for teachers; not a voseo command.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/material-ele/data.ts",
+      "text": "«He perdido el vuelo el año pasado» → con «el año pasado» va el indefinido: «perdí». Explica que el perfecto no lleva fecha cerrada.",
+      "reason": "First-person preterite in an explicit past-tense example for teachers; not a voseo command.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/material-ele/data.ts",
+      "text": "Dar la regla «hoy = perfecto, ayer = indefinido» sin decir que en gran parte de Hispanoamérica se usa «hoy comí».",
+      "reason": "First-person preterite in an explicit past-tense example for teachers; not a voseo command.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/material-ele/data.ts",
+      "text": "En el español de España se prefiere «hoy he comido»; en la mayor parte de Hispanoamérica y en Canarias, «hoy comí». Las dos formas son correctas: el alumno elige según con quién habla.",
+      "reason": "First-person preterite in an explicit past-tense example for teachers; not a voseo command.",
+      "category": "neutral-context"
     }
   ]
 }
