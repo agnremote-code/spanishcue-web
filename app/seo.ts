@@ -1,4 +1,5 @@
 import type { Locale } from "./i18n/messages";
+import { resourceLanguagePair } from "./resource-seo";
 
 /**
  * Indexation and canonical rules for spanishcue.com.
@@ -43,7 +44,8 @@ export const languagePairs: ReadonlyArray<{ es: string; en: string }> = [
 
 export function languageAlternates(pathname: string): Record<string, string> | undefined {
   const path = normalizePathname(pathname);
-  const pair = languagePairs.find((item) => item.es === path || item.en === path);
+  // Every lesson resource page exists in both languages (/recursos ↔ /resources).
+  const pair = languagePairs.find((item) => item.es === path || item.en === path) ?? resourceLanguagePair(path);
   if (!pair) return undefined;
   return {
     es: canonicalUrl(pair.es),
@@ -117,6 +119,8 @@ export function isEdgeCacheablePath(pathname: string): boolean {
     path === "/about" ||
     path === "/resources" ||
     path.startsWith("/resources/") ||
+    path === "/recursos" ||
+    path.startsWith("/recursos/") ||
     path === "/guides" ||
     path.startsWith("/guides/") ||
     path === "/spanish-teacher-resources" ||
