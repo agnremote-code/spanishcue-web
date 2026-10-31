@@ -1,0 +1,13 @@
+export type CastMember = { name: string; full: string; role: string; gender: 'f' | 'm'; voice: string; country: string };
+export type StoryScene = { id: string; sector: string; floor: number; cast: string[] };
+export type Pass = { state: 'cancelado' | 'espera' | 'abordo'; flight: string; time: string; gate: string | null; seat: string | null; label: string };
+export const CAST: Record<string, CastMember>;
+export const STORY: StoryScene[];
+export const STORY_IDS: string[];
+export function castByName(name: string): string | null;
+export const LEVEL_IDS: string[];
+export const SCENE_WORDS: Record<string, [number, number]>;
+export const MOODS: string[];
+export const TRIP: { airline: string; motto: string; cancelled: { flight: string; time: string; to: string }; rebooked: { flight: string; time: string; gate: string }; seat: string; start: [number, number]; end: [number, number] };
+export function nightClock(done: number, total?: number): string;
+export function boardingPass(done: string[]): Pass;
