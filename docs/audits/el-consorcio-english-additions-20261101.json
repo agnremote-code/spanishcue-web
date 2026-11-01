@@ -1,0 +1,3450 @@
+{
+  "version": 1,
+  "authorization": "Owner request of 2026-10-31 (project thread root message cmsg_01Gr5R4j3t2Yet65UcmhcVhAWNTbYvcaJnuJ8xZk2KEU9x: «vamos con las 11. UNA POR UNA pero BIEN HECHAS PERFECTAS»): the second of the eleven classes, «El consorcio», a new A0–C2 3D conversation and listening class in a Buenos Aires apartment building, whose A0 level is fully bilingual (conversation, neighbours, choices and listening) and whose A1 level glosses its key words in English, plus one English line for the academies listing. This manifest approves only the exact English support literals listed below (the English half of each { es, en } pair in app/el-consorcio/levels/a0.mjs and a1.mjs and the level and UI pairs of app/el-consorcio, the English who / basic lines of app/el-consorcio/vecinos.mjs, the contextEn / en / qEn / glossary fields of app/escucha-3d/content/consorcio/a0.json and the academies card body in app/academias/page.tsx); existing English copy stays protected. Owner approval: Ale's standing approval for English copy, «apruebo (siempre de ahora en más apruebo)» on 2026-10-22 06:37Z (project message cmsg_01Gr5R4j3t2Yet65UcmhcVhAAAbp6kqDfMqxzNm3PL6f5g), and «apruebo todo no preguntes más, apruebo todo» on 2026-10-14 16:55Z (cmsg_01Gr5R4j3t2Yet65UcmhcVhADwvzg9kA9GinuWu3D7FSfe).",
+  "additions": [
+    {
+      "path": "app/academias/page.tsx",
+      "text": "A Buenos Aires apartment building in 3D: neighbours, complaints and a meeting to negotiate in Spanish."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "A coffin on 5A"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "A door opens. Elvira hears everything."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "A jacuzzi? How great!"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "A parcel for fourth floor B."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "A welcome present: a cat for you."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Amalia looks at you and waits."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Amalia smiles. But the new elevator is very expensive for you."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Amalia writes “window” on her list. Very small."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "And the song?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Are you afraid of clowns?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Are you afraid of something?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Are you allergic to something?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Barrionuevo claps. Don Washington is sad."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Barrionuevo gives you a pen."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Barrionuevo smiles. Ramón looks at the floor."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Benjamín’s birthday"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Brian calls an engineer. Cirilo lays bricks."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Brian invites you to the jacuzzi. Cirilo doesn’t smile."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Brian turns on the lights. Cirilo goes home."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "But… there is no sofa."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Carla gives you an empty bucket."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Cirilo is right. It is dangerous."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Cirilo looks at you, very serious."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "closed"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Come in, come in. That is Elsa, my wife. We danced for forty years."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Daisy is right."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Daisy puts flowers on the coffin. Now it is a table."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "dangerous"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Do you buy things online?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Do you compare prices before buying?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Do you cook for other people?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Do you dance?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Do you drink a lot of water?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Do you drink coffee or tea?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Do you eat meat?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Do you get letters or only emails?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Do you give kisses to say hello?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Do you go out of your home a lot?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Do you have a lot of things?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Do you have a notebook?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Do you have a rug?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Do you have a small secret?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Do you have brothers- or sisters-in-law?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Do you have internet?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Do you have mysterious neighbours?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Do you have pets?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Do you have photos on the wall?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Do you have siblings?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Do you have video calls?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Do you know your neighbours?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Do you like flowers?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Do you like hot water?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Do you like meetings?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Do you like parties?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Do you like silence?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Do you like spending time without people?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Do you like the smell of smoke?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Do you live in a house or in a flat?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Do you make lists?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Do you pay for things in instalments?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Do you play an instrument?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Do you play the piano?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Do you practise something every day?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Do you prefer cats or dogs?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Do you prefer old or new things?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Do you read aloud?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Do you sing at birthdays?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Do you take baths or showers?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Do you talk a lot or a little?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Do you talk about your problems with someone?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Do you use notes to remember things?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Do you use the elevator or the stairs?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Do you vote in your country?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Do you work at home or in an office?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Do you work with your family?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Do you write with a pen or with your phone?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Does it rain a lot in your city?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Does the noise reach the fourth floor?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Does your phone have battery now?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Don Aurelio laughs and looks at you."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Don Aurelio lives on 5A. He is ninety-one. There is a coffin in the living room. Daisy is his carer."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Don Aurelio shows you the coffin inside."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Don Aurelio, you are very well. It is not necessary."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Don Washington holds out his hand."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Don Washington puts on another tango, louder."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Don Washington talks about Elsa for an hour. You listen."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Elvira gives you a kiss. Don Aurelio dances with Don Washington."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Elvira is happy. Now you are on her list."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Elvira puts the letter in the mailbox, very red."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Elvira waits with a pen."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Elvira writes something in a notebook."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Everybody eats sausage sandwiches. Ramón smiles."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Everybody looks at you. You read the minutes."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Everybody, everybody!"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Excellent decision!"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Excellent! That’s what I like."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Federico is calmer. Marta takes notes."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Federico looks at you: “Are you afraid?”"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Federico wants to talk to you for one more hour."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Federico, it is your hour. Talk about yourself."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "First, the window."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "First, three quotes."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Flat 6B belonged to Aunt Chela. She is gone now. Now it belongs to Mirta and Rubén. They are siblings. There is a piano and many yellow notes."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Fourteen cats"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Freddy looks at you: “What do we do?”"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "From five to seven. That is fair."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Gastón sneezes and hits his head."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Hello, children! I am Pochoclo! Why are you crying?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Hello, dear. This is Rulo. This is Sardina. And this is…"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Hello! Do you live upstairs? The children are afraid of the clown."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Hello. Welcome to the building. Is it fourth floor B?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Hello. You arrive today, right? Today you write the minutes of the meeting."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Hello… I don’t go out much. Eleven years."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Here is the quote. It is from my brother-in-law’s company."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Hi, are you arriving today? I know everything about the building."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Hi! I am afraid of the elevator. It is very old."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Hi! It’s a jacuzzi! But it is a secret."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Hi. I bring him food every day."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Hi. We are from San Sebastián. The code is one, two, three, four."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Hilda is furious with you too."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Hilda, I’ll move the sheets."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Hmm. Fine, fine."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "How kind! Thank you."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "How many rooms does your home have?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "How many suitcases do you have?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "How many windows does your room have?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "How old are you?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "How old is your grandfather or your grandmother?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "How scary!"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "I am not going to the meeting. Will you vote for me?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "I can’t. It is a very important meeting."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "I don’t know. I only arrive today."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "I don’t sing. I eat cake."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "I vote… “no”. Thank you."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "I want three quotes."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "I want to live here. With the piano."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "I want to sell the flat."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "I won’t say anything."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "I’ll call a plumber."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "I’ll turn off the tap."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Ibarra closes the door. But he opens it a little."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Ibarra has a paper in his hand. He is shaking."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Iker and Nerea go down with the suitcases. Bump, bump, bump."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "In the hall there are mailboxes. Elvira is the neighbour from 1A. She has a letter in her hand. It is not her letter."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "In the hallway of the sixth floor is Barrionuevo. He is the building manager. He has papers. Ramón is with him."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "In the hallway of the third floor there are two tourists. They are Iker and Nerea. They have suitcases. The key box does not open."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Is that letter yours?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Is your bed big or small?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Is your home quiet or noisy?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Is your kitchen big or small?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "It comes up in the old elevator. The elevator works!"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "It doesn’t work. And the phone has no battery."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "It is a very nice coffin."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "It is for the meeting. Sausages for everybody."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "It is nine o’clock. Everybody is on the terrace. You write the minutes. There is one vote: new or old elevator?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "It is not my problem."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "It is nothing. You won’t say anything, please?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "It is six o’clock. Today is your move. There is a truck, boxes and a big mattress. Ramón is the caretaker."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "It is the last box. Phew!"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "It is your flat: 4B. There are boxes, a mattress and one light bulb. Mrs Amalia is the owner. She has a list."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "It’s my coffin! I pay for it in twelve instalments."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Kevin gives you a sausage sandwich."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Kevin, the grill goes somewhere else."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Lili, what food do you bring?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Long live the elevator!"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Mirta and Rubén have a coffee. In silence."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Mirta is right."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Mirta puts a yellow note on your back: “Traitor”."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Miss! There is water in my living room!"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "My sheets! They are grey from the smoke!"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Nerea gives you a kiss on each cheek."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Nerea looks at you with hope."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "No, thank you. I have an allergy."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "No, thanks. I only arrive today."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "No! The old elevator is beautiful. It is from nineteen fifty-eight."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "No? Tomorrow the water reaches your home!"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "No. I like the elevator."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Noelia and Thiago wait for your answer."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Noelia closes the door. Thiago puts on his headphones."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Noelia writes a timetable on the door."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Now you have a cat. Rulo sleeps in your box."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Of course. I have a special key."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Oh, how nice! His name is Rulo."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "OK, I’ll write the minutes."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "OK, OK… and now?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "OK, we go down the stairs."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "On 1B there is a consulting room. Marta is a psychologist. Federico is on the couch. It is quiet."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "On 1C there is a lot of noise. It is a drum kit. Thiago is sixteen. Noelia is his mum."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "On 2A water is falling from the ceiling. There are three buckets on the floor. Wilson and Carla are upset."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "On 3A, Yuliana works from home. She has a video call. The bathtub is full. There is water on the floor."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "On 4C there is music. Don Washington dances tango alone. He is eighty. There are photos of a woman."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "On 5D there is a party. Benjamín is six today. There are balloons and a cake. There is a clown, Pochoclo."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "On 7A there is noise. Brian is doing building works. There is a jacuzzi in the kitchen. Cirilo is a bricklayer. A wall is gone."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "On Saturday I have a contest. I practise every day."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "On the seventh floor there is a door that is always closed. It is 7D. Today the door is open. There is a man. It is Ibarra."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "On the terrace there are clothes on the lines. Hilda owns the white sheets. Kevin is doing a barbecue. There is a lot of smoke."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "One cat, one week. OK?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "One minute? My home is a river!"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "One moment, boss… Oh!"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "One step, two steps. Very good."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "One week. And then, forever!"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Ouch! A cat is on my back."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Perfect! How kind!"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Phew! OK, let’s go."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Please, will you sing happy birthday?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Pocha gives you a grey cat."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Pocha gives you the cat, the food and a photo."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Pocha lives on 2D. She has fourteen cats. Gastón is a plumber. He is under the sink."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Pochoclo, without the red nose?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Practise from five to seven."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Ramón gives you two phone numbers. Barrionuevo doesn’t smile."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Ramón has keys. He is downstairs."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Ramón opens the elevator. The mattress goes in standing up."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Ramón, can you help, please?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Really? It opens!"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Rice with chicken. There is some for you too."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Rubén is right."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Rubén plays a sad note on the piano."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "safe"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Scary? It is a bed forever!"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "She is cheerful. She sings all day."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Shh, not so loud!"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Shh! It is my boss. He is in New York."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "silence"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "So is Gastón. Atchoo!"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Somewhere else? It is very heavy!"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Sorry, I am with a patient now."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Sorry. I am leaving."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Talk calmly. You are siblings."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Ten children look at you."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Thank you, thank you, thank you!"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Thank you! Finally someone normal."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Thank you! He is very strong."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Thank you! I am not alone."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Thank you! It is door A."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Thank you! It is made of good wood."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Thank you. Finally someone polite."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Thank you. Silence, please."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Thank you. Tonight I vote “no”."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Thanks, Kevin. Delicious!"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Thanks! You are my first fan."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "That wall is important. It holds up the building."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "the allergy"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "the balloon"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "the bathtub"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "The bathtub on the third floor"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "the birthday"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "the boss"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "The boss sees Wilson with a bucket. Everybody laughs."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "the bricklayer"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "the brother"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "the brother-in-law"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "the bucket"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "the building"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "the building manager"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "The building manager"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "the building works"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "The building works on 7A"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "the cake"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "the carer"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "the cat"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "the ceiling"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "The children are not afraid anymore. They play with Luis."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "The children sing. Benjamín blows out the candles."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "the clothesline"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "The clotheslines on the terrace"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "the clown"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "the code"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "The code is four, three, two, one. The box opens."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "the coffin"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "the consulting room"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "The consulting room"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "the contest"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "the door"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "the drums"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "The drums"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "The elevator is special for me. I meet Elsa in that elevator."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "The elevator is yours too."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "the fear"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "the flat"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "the food"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "The front door of the building"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "the grill"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "the inheritance"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "The inheritance on 6B"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "the instalment"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "the key"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "the leak"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "The leak"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "the letter"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "the mailbox"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "The mailboxes"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "the mattress"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "The mattress is big. The elevator is small."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "The mattress is on the sidewalk. Ramón laughs a lot."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "the meeting"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "the minutes"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "the move"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "The neighbour on 7D"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "The new elevator costs a lot of money. It is safe."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "The new elevator wins."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "The nine o’clock meeting"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "the noise"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "The old elevator wins. We fix it."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "the owner"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "the parcel"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "the patient"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "the piano"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "the plumber"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "The plumber is on 2D, with the cats."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "the present"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "the quote"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "the result"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "the sheet"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "the smoke"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "The sofa is wet. The rug too."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "the stairs"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "the step"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "the suitcase"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "the tango"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "The tango on 4C"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "the tap"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "the tenant"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "The terrace is for clothes, not for the grill."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "The terrace? Lots of people…"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "The three of you eat in the hallway. Ibarra smiles a little."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "the tourist"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "The tourists on the third floor"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "The two siblings look at you."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "the video call"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "the vote"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "the wall"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "The water comes from 3A. Nobody opens the door."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "The water reaches your shoes."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "the wife"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "The window… tomorrow."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "There are other companies. Cheaper ones."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "There are stairs. It is four floors."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "There is a kitchen, a bathroom and a window. The window doesn’t close well."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "There is a letter against my son. It says: “A lot of noise.”"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Thiago plays louder. Very loud."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "This one? No! It’s… from the second floor."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Three? That… is a lot of work."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "to dance"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "to fix"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "to practise"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "to sell"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "to sign"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "to vote"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Today there is a meeting. The new elevator is very expensive. Will you sign my paper?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Today there is a meeting. Vote “yes” for the new elevator, please."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Tomorrow. Today I sleep on the sofa."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Try four, three, two, one."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Very good! That’s what I like."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "We go up the stairs."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Well, I do know: it is a lot of noise!"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Well… a coffee, right?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Well… another meeting in a month."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Well… you. It is in the contract."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "wet"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "What are you eating today?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "What cake do you like?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "What can you see from your window?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "What colour are your sheets?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "What do you do at nine at night?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "What do you do in a free minute?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "What do you do on Saturdays?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "What do you do when you feel nervous?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "What food do you make for a party?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "What is Elsa like?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "What is expensive in your city?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "What is there in your kitchen?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "What is there in your living room?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "What is your best friend’s name?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "What is your boss or your teacher like?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "What is your favourite aunt like?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "What music do you like?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "What music do you listen to at home?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "What new thing do you want to buy?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "What present do you like to get?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "What time is it now?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "What wooden furniture do you have?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "What would you change in your home?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "When is your birthday?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Where are you from?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Where do you dry your clothes?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Where do you meet your friends?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Which city do you want to visit?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Who fixes the walls in your family?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Who fixes things in your home?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Who looks after you when you have a fever?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Who pays for the elevator?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Will you come with me? It is on the terrace."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Will you dance a tango with me?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Wilson goes to get the plumber. Carla changes the buckets."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Wilson is furious. A drop falls on your head."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Wilson turns off the tap. He is furious with you."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Wilson, calm down. It is one minute."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Without the nose… I am Luis. Hi."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "wood"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Yes, a little."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Yes, but I can’t dance."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Yes, I am going now."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Yes, I vote yes."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Yes, I’ll sign."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Yes, it does. But I like it."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Yes! “Happy birthday to you…”"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Yes! I like cats."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Yes! With coloured lights."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Yes. Take my phone."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Yes. What do you vote?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "You and Kevin move the grill. Now the smoke goes to the street."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "You are the best!"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "You arrive today. Who is right?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "You carry the mattress up. Freddy is very tired."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "You close the door very slowly."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "You dance with Don Washington. He is very happy."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "You eat cake. The children cry more."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "You go up to the third floor with the bucket in your hand."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "You have Ibarra’s paper. Now you have two votes."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "You leave quickly. Don Aurelio laughs a lot."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "You like it? How brave!"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "You live upstairs. Will you go to the third floor, please?"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "You move the sheets away from the smoke. Hilda gives you a sweet."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "You read the contract. It is true. What a surprise!"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "You see, Hilda? It’s delicious."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "You see, Mirta? Someone understands me."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "You turn off the tap. Wilson breathes."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "You write the minutes. You read the result."
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Your brother-in-law? No!"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Your flat"
+    },
+    {
+      "path": "app/el-consorcio/levels/a0.mjs",
+      "text": "Yuliana, the water is more important!"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "cheap"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "closed"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "dust"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "oak"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "safe"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "smoke"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the ad"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the allergy"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the armchair"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the balloon"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the barbecue"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the bathtub"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the birthday"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the boss"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the brick"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the bricklayer"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the brother-in-law"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the bucket"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the building fees"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the building manager"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the building works"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the cake"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the candle"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the carer"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the caretaker"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the cat"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the ceiling"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the clothesline"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the clown"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the code"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the coffin"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the consulting room"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the contest"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the contract"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the couch"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the delivery person"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the drums"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the food container"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the grille"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the headphones"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the inheritance"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the instalment"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the inventory"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the kitchen sink"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the leak"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the light bulb"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the list"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the load-bearing wall"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the mailbox"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the mattress"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the meeting"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the minutes"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the move"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the nephew"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the noise"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the owner"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the patient"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the plumber"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the portrait"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the present"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the quote"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the result"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the rules"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the session"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the sheet"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the sidewalk"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the signature"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the signed letter"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the stain"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the step"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the tango"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the tap"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the tenant"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the timetable"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the tourist"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the underground"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the video call"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the vote"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "the wife"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "to be afraid"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "to dance"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "to divide"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "to fix"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "to keep company"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "to rent"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "to sell"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "to shake"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "to vote"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "to work from home"
+    },
+    {
+      "path": "app/el-consorcio/levels/a1.mjs",
+      "text": "wet"
+    },
+    {
+      "path": "app/el-consorcio/vecinos.mjs",
+      "text": "Are there dogs on your street?"
+    },
+    {
+      "path": "app/el-consorcio/vecinos.mjs",
+      "text": "Benjamín’s cousin, seven years old and very serious"
+    },
+    {
+      "path": "app/el-consorcio/vecinos.mjs",
+      "text": "Do you arrive early or late?"
+    },
+    {
+      "path": "app/el-consorcio/vecinos.mjs",
+      "text": "Do you believe in ghosts?"
+    },
+    {
+      "path": "app/el-consorcio/vecinos.mjs",
+      "text": "Do you do sums with your money?"
+    },
+    {
+      "path": "app/el-consorcio/vecinos.mjs",
+      "text": "Do you fall asleep in class or at work?"
+    },
+    {
+      "path": "app/el-consorcio/vecinos.mjs",
+      "text": "Do you have cousins? How many?"
+    },
+    {
+      "path": "app/el-consorcio/vecinos.mjs",
+      "text": "Do you like reading? What do you read?"
+    },
+    {
+      "path": "app/el-consorcio/vecinos.mjs",
+      "text": "Do you make video calls with your family?"
+    },
+    {
+      "path": "app/el-consorcio/vecinos.mjs",
+      "text": "Do you read the rules of things?"
+    },
+    {
+      "path": "app/el-consorcio/vecinos.mjs",
+      "text": "Do you use social media? Which one?"
+    },
+    {
+      "path": "app/el-consorcio/vecinos.mjs",
+      "text": "Does your home get a lot of sun?"
+    },
+    {
+      "path": "app/el-consorcio/vecinos.mjs",
+      "text": "Estate agent waiting to show flat 6B"
+    },
+    {
+      "path": "app/el-consorcio/vecinos.mjs",
+      "text": "Hi! I live on 4A. Tomorrow I am making empanadas. They are beef. Do you want six?"
+    },
+    {
+      "path": "app/el-consorcio/vecinos.mjs",
+      "text": "Hi. I am recording a video. There is a leak on 2A. My followers love drama."
+    },
+    {
+      "path": "app/el-consorcio/vecinos.mjs",
+      "text": "I am Martina. I am seven. I am Benjamín’s cousin. I am not afraid of the clown."
+    },
+    {
+      "path": "app/el-consorcio/vecinos.mjs",
+      "text": "I am reading the building rules. They have forty-two articles. It is very interesting."
+    },
+    {
+      "path": "app/el-consorcio/vecinos.mjs",
+      "text": "I am sending the meeting on my phone. Many neighbours don’t come. They watch from home."
+    },
+    {
+      "path": "app/el-consorcio/vecinos.mjs",
+      "text": "I bought my flat a month ago. It is my first meeting. I don’t understand anything, but I am happy."
+    },
+    {
+      "path": "app/el-consorcio/vecinos.mjs",
+      "text": "I come to every meeting. I always fall asleep. Then I ask: “What did we vote?”"
+    },
+    {
+      "path": "app/el-consorcio/vecinos.mjs",
+      "text": "I don’t have my keys. They are in my home. I am waiting for the locksmith. He arrives in an hour. It is cold."
+    },
+    {
+      "path": "app/el-consorcio/vecinos.mjs",
+      "text": "I hear noises at night. Knocks on the wall. I think it is a ghost. I am scared."
+    },
+    {
+      "path": "app/el-consorcio/vecinos.mjs",
+      "text": "I live on 1D. I like silence. The drums sound all day. I am writing a letter."
+    },
+    {
+      "path": "app/el-consorcio/vecinos.mjs",
+      "text": "I read in the patio. There is light and there is silence. On Thursdays there is a book club. We are four."
+    },
+    {
+      "path": "app/el-consorcio/vecinos.mjs",
+      "text": "I sit here every afternoon. I watch who comes in and who goes out. It is better than television."
+    },
+    {
+      "path": "app/el-consorcio/vecinos.mjs",
+      "text": "I work at an estate agency. I am selling 6B. It has sun and a piano. I am waiting for the clients."
+    },
+    {
+      "path": "app/el-consorcio/vecinos.mjs",
+      "text": "Is it your first time doing something this week?"
+    },
+    {
+      "path": "app/el-consorcio/vecinos.mjs",
+      "text": "My appointment is at seven. I arrive at six. I always arrive very early. I am a bit nervous."
+    },
+    {
+      "path": "app/el-consorcio/vecinos.mjs",
+      "text": "Neighbour from 1D who wrote the complaint about the drums"
+    },
+    {
+      "path": "app/el-consorcio/vecinos.mjs",
+      "text": "Neighbour from 2A who streams the meeting in the group chat"
+    },
+    {
+      "path": "app/el-consorcio/vecinos.mjs",
+      "text": "Neighbour from 2B who films everything for her followers"
+    },
+    {
+      "path": "app/el-consorcio/vecinos.mjs",
+      "text": "Neighbour from 2C who falls asleep in every meeting"
+    },
+    {
+      "path": "app/el-consorcio/vecinos.mjs",
+      "text": "Neighbour from 4A who welcomes everybody with empanadas"
+    },
+    {
+      "path": "app/el-consorcio/vecinos.mjs",
+      "text": "Neighbour from 5B who always brings up another topic"
+    },
+    {
+      "path": "app/el-consorcio/vecinos.mjs",
+      "text": "Neighbour from 6D who does the maths to pay the fees"
+    },
+    {
+      "path": "app/el-consorcio/vecinos.mjs",
+      "text": "Neighbour from 7C who thinks the building is haunted"
+    },
+    {
+      "path": "app/el-consorcio/vecinos.mjs",
+      "text": "Patient of Dr Goldstein who is waiting for his turn"
+    },
+    {
+      "path": "app/el-consorcio/vecinos.mjs",
+      "text": "Reader in the patio and founder of the building’s book club"
+    },
+    {
+      "path": "app/el-consorcio/vecinos.mjs",
+      "text": "Retired man who watches the door from the bench in the hall"
+    },
+    {
+      "path": "app/el-consorcio/vecinos.mjs",
+      "text": "Retired maths teacher who knows the building rules by heart"
+    },
+    {
+      "path": "app/el-consorcio/vecinos.mjs",
+      "text": "Student from 3D who is locked out without her keys"
+    },
+    {
+      "path": "app/el-consorcio/vecinos.mjs",
+      "text": "The birthday boy: he turns six today"
+    },
+    {
+      "path": "app/el-consorcio/vecinos.mjs",
+      "text": "The building fees are expensive. A new elevator is more expensive. I have two children. I am doing my sums."
+    },
+    {
+      "path": "app/el-consorcio/vecinos.mjs",
+      "text": "The building’s first young owner, from 3B"
+    },
+    {
+      "path": "app/el-consorcio/vecinos.mjs",
+      "text": "Today I am six! I have a chocolate cake. I don’t like the clown. I like dinosaurs."
+    },
+    {
+      "path": "app/el-consorcio/vecinos.mjs",
+      "text": "Today we are talking about the elevator. But I want to talk about the dogs. There is poo on the sidewalk."
+    },
+    {
+      "path": "app/el-consorcio/vecinos.mjs",
+      "text": "What animal do you like?"
+    },
+    {
+      "path": "app/el-consorcio/vecinos.mjs",
+      "text": "What do you watch in the afternoon?"
+    },
+    {
+      "path": "app/el-consorcio/vecinos.mjs",
+      "text": "What food can you make?"
+    },
+    {
+      "path": "app/el-consorcio/vecinos.mjs",
+      "text": "What noise don’t you like?"
+    },
+    {
+      "path": "app/el-consorcio/vecinos.mjs",
+      "text": "Where do you put your keys?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "A big problem?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "A lot of books. I am very tired."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "again"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Again? Where?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "And I want to live here."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "And now do you use the stairs?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Are there meetings in your building?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Are you afraid of something?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Are you tired today?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "aunt"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "backwards"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Bad. I am afraid of the lift."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "balloons"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Barrionuevo is the building manager. He talks to Ramón, the caretaker."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Barrionuevo, Elvira and Ramón are at the residents' meeting."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "bathtub"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "beginning"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "birthday"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Books, I think."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "box"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Brian has building work at home. Cirilo is the builder."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "bucket"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "But I need money."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "But you are very well!"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Can I come in? It is the first time!"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Carla phones Wilson. There is water in the ceiling."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "cats"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "ceiling"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "cheap"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "cheaper"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Cirilo, how is my jacuzzi?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "code"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "coffin"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "cold"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "come in"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "contest"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Daisy looks after Don Aurelio. There is a very big box in the living room."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Do you compare prices before buying?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Do you cook for other people?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Do you have a sofa at home?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Do you have an intercom at home?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Do you have brothers-in-law or sisters-in-law?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Do you have cats or dogs?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Do you have many books?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Do you have online meetings?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Do you have siblings?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Do you have wooden furniture?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Do you like barbecue?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Do you like clowns?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Do you like dancing?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Do you like jacuzzis?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Do you like loud music?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Do you like old things?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Do you like tea?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Do you like the cold?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Do you play an instrument?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Do you play the piano?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Do you prefer a hotel or a flat?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Do you receive parcels at home?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Do you remember numbers well?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Do you take baths or showers?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Do you talk a lot with your neighbours?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Do you talk to your neighbours?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Do you travel a lot?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Do you use the lift or the stairs?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Do you vote in elections?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Do you wait a lot for delivery people?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Do you want a choripán?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Do you work at home?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Don Aurelio, what is this?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Don Ramón is on the roof terrace. He comes down in five minutes."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Don Washington talks about his wife, Elsa."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "engineer"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "fear"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Federico is in the consulting room. He talks to Marta, his psychologist."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Fine. But the wall has a problem."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "first time"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Five. And quietly."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "food"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Fourteen. This is Rulo."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Freddy brings up the last box. Amalia is the owner of the flat."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Freddy rings the intercom. Celeste answers."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Gastón, do you want some tea?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Good afternoon. I have a parcel for 4B."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Good evening. Today we vote on the new lift."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "He is very pretty. But there is no water here."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Hello, miss. There is water in my home!"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Hello, Mr Ibarra. Here is your food."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Hello! Happy birthday! How old is Benjamín?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Hello. I am looking for Don Ramón."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Hello. Who is it?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Hi, Federico. How are you today?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Hi, Pochoclo. Come in, please."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Hilda has sheets on the roof terrace. Kevin is having a barbecue."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "How are you today?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "How do you celebrate your birthday?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "How does Elvira vote?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "How does Yuliana answer?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "How is Federico?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "How is Freddy?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "How is Ibarra today?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "How many buckets does Carla have?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "How many cats does Pocha have?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "How many children are there?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "How many minutes does Noelia give him?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "How many minutes is he inside?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "How many more minutes does Thiago ask for?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "How many more quotes does Ramón have?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "How many neighbours are there?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "How many vote yes?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "How old are you?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "How old is Benjamín?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "How old is Don Aurelio?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "I already have three buckets."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "I am Freddy. I am bringing a move for 4B."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "I am sorry"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "I know. But the neighbours sleep."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "I meet her in the lift, in 1971."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "I need"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "I vote no. The old lift is pretty."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Iker and Nerea are from Spain. They cannot open the key box."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "In the ceiling, above the sofa."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Is there a lot of noise on your street?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "It is Benjamín's birthday. Jennifer, his mum, talks to Pochoclo, the clown."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "It is my coffin. It is made of wood."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "It is the new person. They arrive today."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "It is very heavy. What is inside?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "it weighs"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "jacuzzi"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Kevin! My sheets!"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "lift, elevator"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Lili brings food to Mr Ibarra. Today, the door is open."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Madam, this is the last box."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "meeting"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Mirta and Rubén are siblings. They talk about their aunt's piano."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "move (to a new home)"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Mum, the contest is on Saturday."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "My quotes are cheaper."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Nahuel brings a parcel. Elvira is in the hall."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "neighbours"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Nerea, the code does not work."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "new"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "No, Mirta. I play the piano every Sunday."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "No, no. I am Elvira, from 1A."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Oh, my God!"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Oh, no! I am very sorry."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Oh, the children are crying!"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "OK, I will wait here."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "OK, OK. I will call him."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "OK. A coffee and we talk."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "old"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "On Tuesday it does not work. I am inside for forty minutes."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "One, two, three, four."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Only one? I have two more."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "open"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "parcel"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Perfect! I have balloons and music."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Please, close it now!"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Pocha talks to Gastón, the plumber. There are many cats."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "pretty, nice"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Put a bucket. I arrive in ten minutes."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "quietly"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "quote, estimate"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Ramón, here is the quote for the lift."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "roof terrace"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Rubén, our aunt's piano is for me."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "She laughs. It is the beginning."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "sheets"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "signature (here: signs)"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Six. There are ten children."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Sixteen."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "smoke"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Sorry, Hilda. It is the smoke."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Sorry, I am in a meeting."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "stairs"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "tea"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Ten more minutes, please."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Thank you, Lili. Come in, please."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Thank you. It is very cold here."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "The lift does not work. I sing tangos."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Then have the tea."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "There are thirty neighbours here."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "There is chicken with rice."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "They are clean. They smell of sausage."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "they cry"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "they smell"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Thiago plays the drums. His mum, Noelia, talks to him."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Thiago, it is eight o'clock. Enough, please."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "This is Elsa, my wife."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "This one is good. It is my brother-in-law's."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "tired"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "to live"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Try it backwards: four, three, two, one."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Very good. Put it in the kitchen."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "wall"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "we danced"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "We danced tango for forty-three years."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "we vote"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "We will talk tomorrow, Ramón."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Well… a small one. Thank you, Kevin."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "What are Ramón's quotes like?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "What do the children do at the end?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "What do the sheets smell of?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "What do they dance?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "What do they need?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "What do they vote on?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "What do you buy when it is cheap?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "What do you do if there is water in the ceiling?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "What do you do on Sundays?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "What do you eat at weekends?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "What does Barrionuevo have?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "What does Brian do at the end?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "What does Brian have at home?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "What does Freddy bring up?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "What does Gastón say about the water?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "What does he use now?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "What does Hilda accept at the end?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "What does Hilda have on the terrace?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "What does Ibarra say?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "What does Lili bring?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "What does Mirta need?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "What does Mirta want?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "What does Nahuel bring?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "What does Nahuel do at the end?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "What does Nerea suggest?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "What does not work?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "What does Pocha offer Gastón?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "What does Pochoclo have?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "What does Rubén want?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "What does Washington do in the lift?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "What does Wilson ask for?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "What food do you like?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "What food is there?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "What happens at the end?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "What has a problem?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "What is he afraid of?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "What is in the living room?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "What is in your kitchen?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "What is inside, according to Amalia?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "What is it made of?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "What is Kevin doing?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "What is open?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "What is the cat's name?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "What is the first code?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "What is the water above?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "What is the weather like?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "What is your living room like?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "What is your pet's name?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "What music do you listen to?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "What number is it?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "What time do you go to sleep?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "What time is it?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "What would you change in your home?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "When does Rubén play the piano?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "When does the new person arrive?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "When does Wilson arrive?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "When is the contest?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "When is your birthday?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Where do you dry your clothes?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Where do you live?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Where do you meet your friends?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Where does Elvira live?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Where does he meet her?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Where does the box go?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Where is Don Ramón?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Where is there water?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Where is Yuliana?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Which flat is the move for?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Who is Elsa?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Who is Freddy looking for?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Who signs for parcels at your home?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Who votes yes?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Whose company is it?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Why does he buy it, according to him?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Why?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "wife"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Will you sign, madam?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Wilson, there is water in the living room!"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "wood"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Yes, thank you, madam. How many cats do you have?"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Yes! It is open!"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Yes. Always."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Yes. I am ninety-one. And it is cheap."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Yes. Today I am happy."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Yes. We need an engineer today."
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Your bathtub! It is open!"
+    },
+    {
+      "path": "app/escucha-3d/content/consorcio/a0.json",
+      "text": "Yuliana works at home. Wilson knocks on the door."
+    }
+  ]
+}

@@ -20,6 +20,7 @@ const madridCity = await import('../app/madrid-infectada/city.mjs');
 const madridHorde = await import('../app/madrid-infectada/horde.mjs');
 const masAlla = await import('../app/mas-alla/layout.mjs');
 const vuelo = await import('../app/vuelo-cancelado/layout.mjs');
+const consorcio = await import('../app/el-consorcio/layout.mjs');
 const bosque = await import('../app/bosque-de-los-hongos-gigantes/engine.mjs');
 const { pushOut } = await import('../app/escucha-3d/bump.mjs');
 
@@ -114,6 +115,18 @@ function vueloFloors() {
   }));
 }
 
+// El consorcio: nine floors of one building, the sidewalk and the terrace included.
+function consorcioFloors() {
+  return consorcio.FLOORS.map(f => f.id).map(floor => floorWorld('consorcio', consorcio, floor, {
+    walkers: f => (consorcio.WALKERS[f] ?? []).map((w, i) => {
+      const pts = [];
+      for (let t = 0; t < 900; t += 0.05) pts.push(consorcio.walkerAt(w, t));
+      return { id: `walker-${i}`, points: pts };
+    }),
+    spots: f => [consorcio.ELEVATOR_ARRIVAL, consorcio.STAIRS_ARRIVAL, ...(f === consorcio.SPAWN.floor ? [consorcio.SPAWN] : [])].map((p, i) => ({ id: ['ascensor', 'escalera', 'spawn'][i], ...p })),
+  }));
+}
+
 function casinoFloors() {
   return casino.FLOORS.map(f => f.id).map(floor => floorWorld('casino', casino, floor, {
     walkers: f => (casino.CROWD[f] ?? []).filter(c => c.walk).map((c, i) => ({ id: `walker-${i}`, points: sample(c.walk.axis === 'x' ? [[c.walk.from, c.z], [c.walk.to, c.z]] : [[c.x, c.walk.from], [c.x, c.walk.to]], false) })),
@@ -183,7 +196,7 @@ function masAllaPlaces() {
   });
 }
 
-const WORLDS = [nocheStreet(), ...nocheRooms(), ...hospitalFloors(), ...vueloFloors(), ...casinoFloors(), feriaWorld(), ...madridZones(), madridCityWorld(), ...masAllaPlaces()];
+const WORLDS = [nocheStreet(), ...nocheRooms(), ...hospitalFloors(), ...vueloFloors(), ...consorcioFloors(), ...casinoFloors(), feriaWorld(), ...madridZones(), madridCityWorld(), ...masAllaPlaces()];
 
 // ------------------------------------------------------------------ checks
 test('every world in the list has solids, people or walkers to check', () => {

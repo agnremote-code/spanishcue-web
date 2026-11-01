@@ -171,6 +171,16 @@ export const GAMES = {
     ownListening: true,
     bilingualA0: true,
   },
+  // El consorcio: every circle of the building has its own listening at each
+  // level, voiced by the same neighbour who speaks there. PRO lesson (ID 245).
+  consorcio: {
+    title: 'El consorcio',
+    levels: ['A0', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
+    spots: ['llegada', 'buzones', 'consultorio', 'bateria', 'gotera', 'gatos', 'teletrabajo', 'turistas', 'mudanza', 'tango',
+      'cumple', 'ataud', 'administrador', 'herencia', 'misterio', 'obra', 'sogas', 'asamblea'],
+    ownListening: true,
+    bilingualA0: true,
+  },
 };
 
 // Transcript length in words for each level.
