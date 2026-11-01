@@ -143,6 +143,15 @@ export const LOADERS: Record<string, Record<string, Loader>> = (import.meta as u
     C1: () => import('./content/vuelo/c1.json'),
     C2: () => import('./content/vuelo/c2.json'),
   },
+  consorcio: {
+    A0: () => import('./content/consorcio/a0.json'),
+    A1: () => import('./content/consorcio/a1.json'),
+    A2: () => import('./content/consorcio/a2.json'),
+    B1: () => import('./content/consorcio/b1.json'),
+    B2: () => import('./content/consorcio/b2.json'),
+    C1: () => import('./content/consorcio/c1.json'),
+    C2: () => import('./content/consorcio/c2.json'),
+  },
 };
 
 export async function loadListenings(game: string, level: string): Promise<ListeningFile | null> {

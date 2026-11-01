@@ -1,0 +1,2225 @@
+{
+  "game": "consorcio",
+  "level": "A0",
+  "items": [
+    {
+      "id": "llegada",
+      "title": "El portero eléctrico",
+      "place": "La puerta de Medrano 1417",
+      "context": "Freddy llama al portero eléctrico. Contesta Celeste.",
+      "contextEn": "Freddy rings the intercom. Celeste answers.",
+      "speakers": [
+        {
+          "name": "Freddy",
+          "country": "Bolivia",
+          "voice": "es-BO-MarceloNeural"
+        },
+        {
+          "name": "Celeste",
+          "country": "Paraguay",
+          "voice": "es-PY-TaniaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Hola. Busco a Don Ramón.",
+          "en": "Hello. I am looking for Don Ramón."
+        },
+        {
+          "s": 1,
+          "text": "Hola. ¿Quién es?",
+          "en": "Hello. Who is it?"
+        },
+        {
+          "s": 0,
+          "text": "Soy Freddy. Traigo una mudanza para el cuarto B.",
+          "en": "I am Freddy. I am bringing a move for 4B."
+        },
+        {
+          "s": 1,
+          "text": "Don Ramón está en la terraza. Baja en cinco minutos.",
+          "en": "Don Ramón is on the roof terrace. He comes down in five minutes."
+        },
+        {
+          "s": 0,
+          "text": "Gracias. Hace mucho frío aquí.",
+          "en": "Thank you. It is very cold here."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿A quién busca Freddy?",
+          "qEn": "Who is Freddy looking for?",
+          "options": [
+            "A Don Ramón",
+            "A Celeste",
+            "A Elvira"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Para qué departamento es la mudanza?",
+          "qEn": "Which flat is the move for?",
+          "options": [
+            "El primero A",
+            "El cuarto B",
+            "El quinto D"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Dónde está Don Ramón?",
+          "qEn": "Where is Don Ramón?",
+          "options": [
+            "En la calle",
+            "En el ascensor",
+            "En la terraza"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué tiempo hace?",
+          "qEn": "What is the weather like?",
+          "options": [
+            "Hace calor",
+            "Hace mucho frío",
+            "Llueve"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Dónde vives?",
+          "qEn": "Where do you live?",
+          "model": "Vivo en un departamento."
+        },
+        {
+          "q": "¿Tienes portero eléctrico en tu casa?",
+          "qEn": "Do you have an intercom at home?",
+          "model": "Sí, tengo portero eléctrico."
+        },
+        {
+          "q": "¿Te gusta el frío?",
+          "qEn": "Do you like the cold?",
+          "model": "No, no me gusta el frío."
+        }
+      ],
+      "gaps": "Soy [Freddy]. [Traigo] una [mudanza] para el [cuarto] B.",
+      "glossary": [
+        {
+          "word": "mudanza",
+          "meaning": "cambio de casa",
+          "en": "move (to a new home)"
+        },
+        {
+          "word": "terraza",
+          "meaning": "lugar abierto arriba del edificio",
+          "en": "roof terrace"
+        },
+        {
+          "word": "frío",
+          "meaning": "temperatura baja",
+          "en": "cold"
+        }
+      ]
+    },
+    {
+      "id": "buzones",
+      "title": "Un paquete para ti",
+      "place": "Los buzones del hall",
+      "context": "Nahuel trae un paquete. Elvira está en el hall.",
+      "contextEn": "Nahuel brings a parcel. Elvira is in the hall.",
+      "speakers": [
+        {
+          "name": "Nahuel",
+          "country": "Argentina",
+          "voice": "es-AR-TomasNeural"
+        },
+        {
+          "name": "Elvira",
+          "country": "España",
+          "voice": "es-ES-ElviraNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Buenas tardes. Tengo un paquete para el cuarto B.",
+          "en": "Good afternoon. I have a parcel for 4B."
+        },
+        {
+          "s": 1,
+          "text": "Es la persona nueva. Llega hoy.",
+          "en": "It is the new person. They arrive today."
+        },
+        {
+          "s": 0,
+          "text": "¿Usted firma, señora?",
+          "en": "Will you sign, madam?"
+        },
+        {
+          "s": 1,
+          "text": "No, no. Yo soy Elvira, del primero A.",
+          "en": "No, no. I am Elvira, from 1A."
+        },
+        {
+          "s": 0,
+          "text": "Bueno, espero aquí.",
+          "en": "OK, I will wait here."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué trae Nahuel?",
+          "qEn": "What does Nahuel bring?",
+          "options": [
+            "Una carta",
+            "Un paquete",
+            "Una pizza"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cuándo llega la persona nueva?",
+          "qEn": "When does the new person arrive?",
+          "options": [
+            "Hoy",
+            "Mañana",
+            "El lunes"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Dónde vive Elvira?",
+          "qEn": "Where does Elvira live?",
+          "options": [
+            "En el cuarto B",
+            "En el segundo A",
+            "En el primero A"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué hace Nahuel al final?",
+          "qEn": "What does Nahuel do at the end?",
+          "options": [
+            "Se va",
+            "Espera",
+            "Firma"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Recibes paquetes en tu casa?",
+          "qEn": "Do you receive parcels at home?",
+          "model": "Sí, recibo muchos paquetes."
+        },
+        {
+          "q": "¿Quién firma los paquetes en tu casa?",
+          "qEn": "Who signs for parcels at your home?",
+          "model": "Firmo yo."
+        },
+        {
+          "q": "¿Esperas mucho a los repartidores?",
+          "qEn": "Do you wait a lot for delivery people?",
+          "model": "No, no mucho."
+        }
+      ],
+      "gaps": "[Tengo] un [paquete] para el [cuarto] [B].",
+      "glossary": [
+        {
+          "word": "paquete",
+          "meaning": "caja que llega por correo",
+          "en": "parcel"
+        },
+        {
+          "word": "firma",
+          "meaning": "nombre escrito a mano",
+          "en": "signature (here: signs)"
+        },
+        {
+          "word": "nueva",
+          "meaning": "que llega por primera vez",
+          "en": "new"
+        }
+      ]
+    },
+    {
+      "id": "consultorio",
+      "title": "Una pregunta",
+      "place": "El consultorio del 1.° B",
+      "context": "Federico está en el consultorio. Habla con Marta, su psicóloga.",
+      "contextEn": "Federico is in the consulting room. He talks to Marta, his psychologist.",
+      "speakers": [
+        {
+          "name": "Marta",
+          "country": "Argentina",
+          "voice": "es-AR-ElenaNeural"
+        },
+        {
+          "name": "Federico",
+          "country": "Nicaragua",
+          "voice": "es-NI-FedericoNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Hola, Federico. ¿Cómo estás hoy?",
+          "en": "Hi, Federico. How are you today?"
+        },
+        {
+          "s": 1,
+          "text": "Mal. Tengo miedo del ascensor.",
+          "en": "Bad. I am afraid of the lift."
+        },
+        {
+          "s": 0,
+          "text": "¿Por qué?",
+          "en": "Why?"
+        },
+        {
+          "s": 1,
+          "text": "El martes no funciona. Estoy cuarenta minutos dentro.",
+          "en": "On Tuesday it does not work. I am inside for forty minutes."
+        },
+        {
+          "s": 0,
+          "text": "¿Y ahora usas la escalera?",
+          "en": "And now do you use the stairs?"
+        },
+        {
+          "s": 1,
+          "text": "Sí. Siempre.",
+          "en": "Yes. Always."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cómo está Federico?",
+          "qEn": "How is Federico?",
+          "options": [
+            "Bien",
+            "Mal",
+            "Contento"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿De qué tiene miedo?",
+          "qEn": "What is he afraid of?",
+          "options": [
+            "Del ascensor",
+            "De los gatos",
+            "De la noche"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cuántos minutos está dentro?",
+          "qEn": "How many minutes is he inside?",
+          "options": [
+            "Cuatro",
+            "Catorce",
+            "Cuarenta"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué usa ahora?",
+          "qEn": "What does he use now?",
+          "options": [
+            "El ascensor",
+            "La escalera",
+            "La bicicleta"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Tienes miedo de algo?",
+          "qEn": "Are you afraid of something?",
+          "model": "Sí, tengo miedo de las arañas."
+        },
+        {
+          "q": "¿Usas el ascensor o la escalera?",
+          "qEn": "Do you use the lift or the stairs?",
+          "model": "Uso la escalera."
+        },
+        {
+          "q": "¿Cómo estás hoy?",
+          "qEn": "How are you today?",
+          "model": "Estoy bien, gracias."
+        }
+      ],
+      "gaps": "El [martes] no [funciona]. Estoy [cuarenta] [minutos] dentro.",
+      "glossary": [
+        {
+          "word": "miedo",
+          "meaning": "sensación cuando algo es peligroso",
+          "en": "fear"
+        },
+        {
+          "word": "ascensor",
+          "meaning": "máquina para subir y bajar",
+          "en": "lift, elevator"
+        },
+        {
+          "word": "escalera",
+          "meaning": "escalones para subir",
+          "en": "stairs"
+        }
+      ]
+    },
+    {
+      "id": "bateria",
+      "title": "El concurso",
+      "place": "El palier del primero",
+      "context": "Thiago toca la batería. Su mamá, Noelia, habla con él.",
+      "contextEn": "Thiago plays the drums. His mum, Noelia, talks to him.",
+      "speakers": [
+        {
+          "name": "Noelia",
+          "country": "Costa Rica",
+          "voice": "es-CR-MariaNeural"
+        },
+        {
+          "name": "Thiago",
+          "country": "Costa Rica",
+          "voice": "es-CR-JuanNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Thiago, son las ocho. Basta, por favor.",
+          "en": "Thiago, it is eight o'clock. Enough, please."
+        },
+        {
+          "s": 1,
+          "text": "Mamá, el sábado es el concurso.",
+          "en": "Mum, the contest is on Saturday."
+        },
+        {
+          "s": 0,
+          "text": "Ya sé. Pero los vecinos duermen.",
+          "en": "I know. But the neighbours sleep."
+        },
+        {
+          "s": 1,
+          "text": "Diez minutos más, por favor.",
+          "en": "Ten more minutes, please."
+        },
+        {
+          "s": 0,
+          "text": "Cinco. Y despacio.",
+          "en": "Five. And quietly."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué hora es?",
+          "qEn": "What time is it?",
+          "options": [
+            "Las seis",
+            "Las ocho",
+            "Las diez"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cuándo es el concurso?",
+          "qEn": "When is the contest?",
+          "options": [
+            "El sábado",
+            "El domingo",
+            "Hoy"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cuántos minutos más pide Thiago?",
+          "qEn": "How many more minutes does Thiago ask for?",
+          "options": [
+            "Cinco",
+            "Veinte",
+            "Diez"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cuántos minutos le da Noelia?",
+          "qEn": "How many minutes does Noelia give him?",
+          "options": [
+            "Cinco",
+            "Diez",
+            "Quince"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Tocas algún instrumento?",
+          "qEn": "Do you play an instrument?",
+          "model": "Sí, toco la guitarra."
+        },
+        {
+          "q": "¿A qué hora duermes?",
+          "qEn": "What time do you go to sleep?",
+          "model": "Duermo a las once."
+        },
+        {
+          "q": "¿Te gusta la música fuerte?",
+          "qEn": "Do you like loud music?",
+          "model": "No, me gusta la música suave."
+        }
+      ],
+      "gaps": "[Ya] [sé]. Pero los [vecinos] [duermen].",
+      "glossary": [
+        {
+          "word": "concurso",
+          "meaning": "competición",
+          "en": "contest"
+        },
+        {
+          "word": "vecinos",
+          "meaning": "personas que viven cerca",
+          "en": "neighbours"
+        },
+        {
+          "word": "despacio",
+          "meaning": "sin ruido, suave",
+          "en": "quietly"
+        }
+      ]
+    },
+    {
+      "id": "gotera",
+      "title": "Agua en la casa",
+      "place": "El 2.° A",
+      "context": "Carla llama a Wilson por teléfono. Hay agua en el techo.",
+      "contextEn": "Carla phones Wilson. There is water in the ceiling.",
+      "speakers": [
+        {
+          "name": "Carla",
+          "country": "Perú",
+          "voice": "es-PE-CamilaNeural"
+        },
+        {
+          "name": "Wilson",
+          "country": "Perú",
+          "voice": "es-PE-AlexNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Wilson, ¡hay agua en la sala!",
+          "en": "Wilson, there is water in the living room!"
+        },
+        {
+          "s": 1,
+          "text": "¿Otra vez? ¿Dónde?",
+          "en": "Again? Where?"
+        },
+        {
+          "s": 0,
+          "text": "En el techo, encima del sofá.",
+          "en": "In the ceiling, above the sofa."
+        },
+        {
+          "s": 1,
+          "text": "Pon un balde. Llego en diez minutos.",
+          "en": "Put a bucket. I arrive in ten minutes."
+        },
+        {
+          "s": 0,
+          "text": "Ya tengo tres baldes.",
+          "en": "I already have three buckets."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Dónde hay agua?",
+          "qEn": "Where is there water?",
+          "options": [
+            "En la cocina",
+            "En la sala",
+            "En el baño"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Encima de qué está el agua?",
+          "qEn": "What is the water above?",
+          "options": [
+            "Del sofá",
+            "De la cama",
+            "De la mesa"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cuándo llega Wilson?",
+          "qEn": "When does Wilson arrive?",
+          "options": [
+            "En una hora",
+            "Mañana",
+            "En diez minutos"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cuántos baldes tiene Carla?",
+          "qEn": "How many buckets does Carla have?",
+          "options": [
+            "Uno",
+            "Tres",
+            "Cinco"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Tienes sofá en tu casa?",
+          "qEn": "Do you have a sofa at home?",
+          "model": "Sí, tengo un sofá azul."
+        },
+        {
+          "q": "¿Qué haces si hay agua en el techo?",
+          "qEn": "What do you do if there is water in the ceiling?",
+          "model": "Llamo a un plomero."
+        },
+        {
+          "q": "¿Cómo es tu sala?",
+          "qEn": "What is your living room like?",
+          "model": "Mi sala es pequeña."
+        }
+      ],
+      "gaps": "Pon un [balde]. [Llego] en [diez] [minutos].",
+      "glossary": [
+        {
+          "word": "techo",
+          "meaning": "parte de arriba de una habitación",
+          "en": "ceiling"
+        },
+        {
+          "word": "balde",
+          "meaning": "recipiente para el agua",
+          "en": "bucket"
+        },
+        {
+          "word": "otra vez",
+          "meaning": "una vez más",
+          "en": "again"
+        }
+      ]
+    },
+    {
+      "id": "gatos",
+      "title": "Catorce gatos",
+      "place": "El 2.° D",
+      "context": "Pocha habla con Gastón, el plomero. Hay muchos gatos.",
+      "contextEn": "Pocha talks to Gastón, the plumber. There are many cats.",
+      "speakers": [
+        {
+          "name": "Pocha",
+          "country": "Uruguay",
+          "voice": "es-UY-ValentinaNeural"
+        },
+        {
+          "name": "Gastón",
+          "country": "Venezuela",
+          "voice": "es-VE-SebastianNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Gastón, ¿quieres un té?",
+          "en": "Gastón, do you want some tea?"
+        },
+        {
+          "s": 1,
+          "text": "Sí, gracias, señora. ¿Cuántos gatos tiene?",
+          "en": "Yes, thank you, madam. How many cats do you have?"
+        },
+        {
+          "s": 0,
+          "text": "Catorce. Este es Rulo.",
+          "en": "Fourteen. This is Rulo."
+        },
+        {
+          "s": 1,
+          "text": "Es muy bonito. Pero aquí no hay agua.",
+          "en": "He is very pretty. But there is no water here."
+        },
+        {
+          "s": 0,
+          "text": "Entonces, toma el té.",
+          "en": "Then have the tea."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué le ofrece Pocha a Gastón?",
+          "qEn": "What does Pocha offer Gastón?",
+          "options": [
+            "Un café",
+            "Un té",
+            "Agua"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cuántos gatos tiene Pocha?",
+          "qEn": "How many cats does Pocha have?",
+          "options": [
+            "Catorce",
+            "Cuatro",
+            "Cuarenta"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cómo se llama el gato?",
+          "qEn": "What is the cat's name?",
+          "options": [
+            "Tigre",
+            "Mostaza",
+            "Rulo"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué dice Gastón del agua?",
+          "qEn": "What does Gastón say about the water?",
+          "options": [
+            "Hay mucha",
+            "Aquí no hay",
+            "Está fría"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Tienes gatos o perros?",
+          "qEn": "Do you have cats or dogs?",
+          "model": "Tengo un perro."
+        },
+        {
+          "q": "¿Te gusta el té?",
+          "qEn": "Do you like tea?",
+          "model": "Sí, me gusta el té verde."
+        },
+        {
+          "q": "¿Cómo se llama tu mascota?",
+          "qEn": "What is your pet's name?",
+          "model": "Se llama Luna."
+        }
+      ],
+      "gaps": "Es [muy] [bonito]. Pero [aquí] no hay [agua].",
+      "glossary": [
+        {
+          "word": "gatos",
+          "meaning": "animales pequeños de casa",
+          "en": "cats"
+        },
+        {
+          "word": "bonito",
+          "meaning": "lindo, agradable de ver",
+          "en": "pretty, nice"
+        },
+        {
+          "word": "té",
+          "meaning": "bebida caliente con hojas",
+          "en": "tea"
+        }
+      ]
+    },
+    {
+      "id": "teletrabajo",
+      "title": "La reunión",
+      "place": "El 3.° A",
+      "context": "Yuliana trabaja en casa. Wilson toca la puerta.",
+      "contextEn": "Yuliana works at home. Wilson knocks on the door.",
+      "speakers": [
+        {
+          "name": "Wilson",
+          "country": "Perú",
+          "voice": "es-PE-AlexNeural"
+        },
+        {
+          "name": "Yuliana",
+          "country": "Venezuela",
+          "voice": "es-VE-PaolaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Hola, señorita. ¡Hay agua en mi casa!",
+          "en": "Hello, miss. There is water in my home!"
+        },
+        {
+          "s": 1,
+          "text": "Perdón, estoy en una reunión.",
+          "en": "Sorry, I am in a meeting."
+        },
+        {
+          "s": 0,
+          "text": "¡Su bañera! ¡Está abierta!",
+          "en": "Your bathtub! It is open!"
+        },
+        {
+          "s": 1,
+          "text": "¡Ay, no! Lo siento mucho.",
+          "en": "Oh, no! I am very sorry."
+        },
+        {
+          "s": 0,
+          "text": "Por favor, ¡ciérrela ya!",
+          "en": "Please, close it now!"
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Dónde está Yuliana?",
+          "qEn": "Where is Yuliana?",
+          "options": [
+            "En una reunión",
+            "En la calle",
+            "En la terraza"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué está abierta?",
+          "qEn": "What is open?",
+          "options": [
+            "La ventana",
+            "La puerta",
+            "La bañera"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cómo responde Yuliana?",
+          "qEn": "How does Yuliana answer?",
+          "options": [
+            "Se ríe",
+            "Lo siente mucho",
+            "No contesta"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué pide Wilson?",
+          "qEn": "What does Wilson ask for?",
+          "options": [
+            "Que cierre la bañera",
+            "Un café",
+            "Dinero"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Trabajas en casa?",
+          "qEn": "Do you work at home?",
+          "model": "Sí, a veces trabajo en casa."
+        },
+        {
+          "q": "¿Tienes reuniones por internet?",
+          "qEn": "Do you have online meetings?",
+          "model": "Sí, tengo muchas reuniones."
+        },
+        {
+          "q": "¿Te bañas o te duchas?",
+          "qEn": "Do you take baths or showers?",
+          "model": "Me ducho."
+        }
+      ],
+      "gaps": "¡Ay, [no]! [Lo] [siento] [mucho].",
+      "glossary": [
+        {
+          "word": "reunión",
+          "meaning": "encuentro de trabajo",
+          "en": "meeting"
+        },
+        {
+          "word": "bañera",
+          "meaning": "lugar del baño para bañarse",
+          "en": "bathtub"
+        },
+        {
+          "word": "lo siento",
+          "meaning": "perdón",
+          "en": "I am sorry"
+        }
+      ]
+    },
+    {
+      "id": "turistas",
+      "title": "El código",
+      "place": "El palier del tercero",
+      "context": "Iker y Nerea son de España. No pueden abrir la caja de la llave.",
+      "contextEn": "Iker and Nerea are from Spain. They cannot open the key box.",
+      "speakers": [
+        {
+          "name": "Iker",
+          "country": "España",
+          "voice": "es-ES-AlvaroNeural"
+        },
+        {
+          "name": "Nerea",
+          "country": "España",
+          "voice": "es-ES-XimenaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Nerea, el código no funciona.",
+          "en": "Nerea, the code does not work."
+        },
+        {
+          "s": 1,
+          "text": "¿Qué número es?",
+          "en": "What number is it?"
+        },
+        {
+          "s": 0,
+          "text": "Uno, dos, tres, cuatro.",
+          "en": "One, two, three, four."
+        },
+        {
+          "s": 1,
+          "text": "Prueba al revés: cuatro, tres, dos, uno.",
+          "en": "Try it backwards: four, three, two, one."
+        },
+        {
+          "s": 0,
+          "text": "¡Sí! ¡Está abierta!",
+          "en": "Yes! It is open!"
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué no funciona?",
+          "qEn": "What does not work?",
+          "options": [
+            "El teléfono",
+            "El código",
+            "El ascensor"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cuál es el primer código?",
+          "qEn": "What is the first code?",
+          "options": [
+            "Uno, dos, tres, cuatro",
+            "Cuatro, tres, dos, uno",
+            "Cinco, seis"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué propone Nerea?",
+          "qEn": "What does Nerea suggest?",
+          "options": [
+            "Llamar al dueño",
+            "Ir a un hotel",
+            "Probar al revés"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué pasa al final?",
+          "qEn": "What happens at the end?",
+          "options": [
+            "Se van",
+            "La caja se abre",
+            "Llueve"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Viajas mucho?",
+          "qEn": "Do you travel a lot?",
+          "model": "Sí, viajo en verano."
+        },
+        {
+          "q": "¿Recuerdas bien los números?",
+          "qEn": "Do you remember numbers well?",
+          "model": "No, no recuerdo bien los números."
+        },
+        {
+          "q": "¿Prefieres hotel o departamento?",
+          "qEn": "Do you prefer a hotel or a flat?",
+          "model": "Prefiero un hotel."
+        }
+      ],
+      "gaps": "[Prueba] al [revés]: [cuatro], [tres], dos, uno.",
+      "glossary": [
+        {
+          "word": "código",
+          "meaning": "números secretos",
+          "en": "code"
+        },
+        {
+          "word": "al revés",
+          "meaning": "en el otro orden",
+          "en": "backwards"
+        },
+        {
+          "word": "abierta",
+          "meaning": "que no está cerrada",
+          "en": "open"
+        }
+      ]
+    },
+    {
+      "id": "mudanza",
+      "title": "La última caja",
+      "place": "El 4.° B",
+      "context": "Freddy sube la última caja. Amalia es la dueña del departamento.",
+      "contextEn": "Freddy brings up the last box. Amalia is the owner of the flat.",
+      "speakers": [
+        {
+          "name": "Freddy",
+          "country": "Bolivia",
+          "voice": "es-BO-MarceloNeural"
+        },
+        {
+          "name": "Amalia",
+          "country": "Chile",
+          "voice": "es-CL-CatalinaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Señora, esta es la última caja.",
+          "en": "Madam, this is the last box."
+        },
+        {
+          "s": 1,
+          "text": "Muy bien. Ponla en la cocina.",
+          "en": "Very good. Put it in the kitchen."
+        },
+        {
+          "s": 0,
+          "text": "Pesa mucho. ¿Qué hay dentro?",
+          "en": "It is very heavy. What is inside?"
+        },
+        {
+          "s": 1,
+          "text": "Libros, creo.",
+          "en": "Books, I think."
+        },
+        {
+          "s": 0,
+          "text": "Muchos libros. Estoy muy cansado.",
+          "en": "A lot of books. I am very tired."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué sube Freddy?",
+          "qEn": "What does Freddy bring up?",
+          "options": [
+            "La primera caja",
+            "Una silla",
+            "La última caja"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Dónde va la caja?",
+          "qEn": "Where does the box go?",
+          "options": [
+            "En la cocina",
+            "En el baño",
+            "En la sala"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué hay dentro, según Amalia?",
+          "qEn": "What is inside, according to Amalia?",
+          "options": [
+            "Platos",
+            "Libros",
+            "Ropa"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cómo está Freddy?",
+          "qEn": "How is Freddy?",
+          "options": [
+            "Contento",
+            "Muy cansado",
+            "Enfermo"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Tienes muchos libros?",
+          "qEn": "Do you have many books?",
+          "model": "Sí, tengo muchos libros."
+        },
+        {
+          "q": "¿Qué hay en tu cocina?",
+          "qEn": "What is in your kitchen?",
+          "model": "Hay una mesa y una heladera."
+        },
+        {
+          "q": "¿Estás cansado o cansada hoy?",
+          "qEn": "Are you tired today?",
+          "model": "Sí, un poco."
+        }
+      ],
+      "gaps": "[Pesa] [mucho]. ¿[Qué] hay [dentro]?",
+      "glossary": [
+        {
+          "word": "caja",
+          "meaning": "objeto para guardar cosas",
+          "en": "box"
+        },
+        {
+          "word": "pesa",
+          "meaning": "de «pesar»: es pesado",
+          "en": "it weighs"
+        },
+        {
+          "word": "cansado",
+          "meaning": "sin energía",
+          "en": "tired"
+        }
+      ]
+    },
+    {
+      "id": "tango",
+      "title": "Elsa",
+      "place": "El 4.° C",
+      "context": "Don Washington habla de su esposa, Elsa.",
+      "contextEn": "Don Washington talks about his wife, Elsa.",
+      "speakers": [
+        {
+          "name": "Washington",
+          "country": "Uruguay",
+          "voice": "es-UY-MateoNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Esta es Elsa, mi esposa.",
+          "en": "This is Elsa, my wife."
+        },
+        {
+          "s": 0,
+          "text": "Bailamos tango cuarenta y tres años.",
+          "en": "We danced tango for forty-three years."
+        },
+        {
+          "s": 0,
+          "text": "La conozco en el ascensor, en 1971.",
+          "en": "I meet her in the lift, in 1971."
+        },
+        {
+          "s": 0,
+          "text": "El ascensor no funciona. Yo canto tangos.",
+          "en": "The lift does not work. I sing tangos."
+        },
+        {
+          "s": 0,
+          "text": "Ella se ríe. Es el principio.",
+          "en": "She laughs. It is the beginning."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Quién es Elsa?",
+          "qEn": "Who is Elsa?",
+          "options": [
+            "Su hermana",
+            "Su esposa",
+            "Su hija"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué bailan?",
+          "qEn": "What do they dance?",
+          "options": [
+            "Tango",
+            "Salsa",
+            "Vals"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Dónde la conoce?",
+          "qEn": "Where does he meet her?",
+          "options": [
+            "En una fiesta",
+            "En la calle",
+            "En el ascensor"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué hace Washington en el ascensor?",
+          "qEn": "What does Washington do in the lift?",
+          "options": [
+            "Duerme",
+            "Canta tangos",
+            "Llora"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Te gusta bailar?",
+          "qEn": "Do you like dancing?",
+          "model": "Sí, me gusta bailar salsa."
+        },
+        {
+          "q": "¿Qué música escuchas?",
+          "qEn": "What music do you listen to?",
+          "model": "Escucho música pop."
+        },
+        {
+          "q": "¿Dónde conoces a tus amigos?",
+          "qEn": "Where do you meet your friends?",
+          "model": "En el trabajo."
+        }
+      ],
+      "gaps": "El [ascensor] no [funciona]. Yo [canto] [tangos].",
+      "glossary": [
+        {
+          "word": "esposa",
+          "meaning": "mujer casada con él",
+          "en": "wife"
+        },
+        {
+          "word": "bailamos",
+          "meaning": "de «bailar»: movernos con la música",
+          "en": "we danced"
+        },
+        {
+          "word": "principio",
+          "meaning": "el comienzo",
+          "en": "beginning"
+        }
+      ]
+    },
+    {
+      "id": "cumple",
+      "title": "Seis años",
+      "place": "El 5.° D",
+      "context": "Es el cumpleaños de Benjamín. Jennifer, su mamá, habla con Pochoclo, el payaso.",
+      "contextEn": "It is Benjamín's birthday. Jennifer, his mum, talks to Pochoclo, the clown.",
+      "speakers": [
+        {
+          "name": "Jennifer",
+          "country": "Colombia",
+          "voice": "es-CO-SalomeNeural"
+        },
+        {
+          "name": "Pochoclo",
+          "country": "República Dominicana",
+          "voice": "es-DO-EmilioNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Hola, Pochoclo. Pasa, por favor.",
+          "en": "Hi, Pochoclo. Come in, please."
+        },
+        {
+          "s": 1,
+          "text": "¡Hola! ¡Feliz cumpleaños! ¿Cuántos años tiene Benjamín?",
+          "en": "Hello! Happy birthday! How old is Benjamín?"
+        },
+        {
+          "s": 0,
+          "text": "Seis. Hay diez niños.",
+          "en": "Six. There are ten children."
+        },
+        {
+          "s": 1,
+          "text": "¡Perfecto! Tengo globos y música.",
+          "en": "Perfect! I have balloons and music."
+        },
+        {
+          "s": 0,
+          "text": "¡Ay, los niños lloran!",
+          "en": "Oh, the children are crying!"
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cuántos años tiene Benjamín?",
+          "qEn": "How old is Benjamín?",
+          "options": [
+            "Cinco",
+            "Seis",
+            "Diez"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cuántos niños hay?",
+          "qEn": "How many children are there?",
+          "options": [
+            "Diez",
+            "Seis",
+            "Dos"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué tiene Pochoclo?",
+          "qEn": "What does Pochoclo have?",
+          "options": [
+            "Una torta",
+            "Un perro",
+            "Globos y música"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué hacen los niños al final?",
+          "qEn": "What do the children do at the end?",
+          "options": [
+            "Cantan",
+            "Lloran",
+            "Duermen"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Cuándo es tu cumpleaños?",
+          "qEn": "When is your birthday?",
+          "model": "Mi cumpleaños es en mayo."
+        },
+        {
+          "q": "¿Te gustan los payasos?",
+          "qEn": "Do you like clowns?",
+          "model": "No, no me gustan."
+        },
+        {
+          "q": "¿Cómo celebras tu cumpleaños?",
+          "qEn": "How do you celebrate your birthday?",
+          "model": "Con mi familia."
+        }
+      ],
+      "gaps": "¡[Perfecto]! [Tengo] [globos] y [música].",
+      "glossary": [
+        {
+          "word": "cumpleaños",
+          "meaning": "día en que naciste",
+          "en": "birthday"
+        },
+        {
+          "word": "globos",
+          "meaning": "bolas de colores con aire",
+          "en": "balloons"
+        },
+        {
+          "word": "lloran",
+          "meaning": "de «llorar»: caen lágrimas",
+          "en": "they cry"
+        }
+      ]
+    },
+    {
+      "id": "ataud",
+      "title": "Una caja de madera",
+      "place": "El 5.° A",
+      "context": "Daisy cuida a Don Aurelio. Hay una caja muy grande en la sala.",
+      "contextEn": "Daisy looks after Don Aurelio. There is a very big box in the living room.",
+      "speakers": [
+        {
+          "name": "Daisy",
+          "country": "Honduras",
+          "voice": "es-HN-KarlaNeural"
+        },
+        {
+          "name": "Aurelio",
+          "country": "Cuba",
+          "voice": "es-CU-ManuelNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Don Aurelio, ¿qué es esto?",
+          "en": "Don Aurelio, what is this?"
+        },
+        {
+          "s": 1,
+          "text": "Es mi ataúd. Es de madera.",
+          "en": "It is my coffin. It is made of wood."
+        },
+        {
+          "s": 0,
+          "text": "¡Pero usted está muy bien!",
+          "en": "But you are very well!"
+        },
+        {
+          "s": 1,
+          "text": "Sí. Tengo noventa y un años. Y está barato.",
+          "en": "Yes. I am ninety-one. And it is cheap."
+        },
+        {
+          "s": 0,
+          "text": "¡Ay, Dios mío!",
+          "en": "Oh, my God!"
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué hay en la sala?",
+          "qEn": "What is in the living room?",
+          "options": [
+            "Un piano",
+            "Un ataúd",
+            "Un gato"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿De qué es?",
+          "qEn": "What is it made of?",
+          "options": [
+            "De madera",
+            "De metal",
+            "De plástico"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cuántos años tiene Don Aurelio?",
+          "qEn": "How old is Don Aurelio?",
+          "options": [
+            "Ochenta",
+            "Setenta y uno",
+            "Noventa y uno"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Por qué lo compra, según él?",
+          "qEn": "Why does he buy it, according to him?",
+          "options": [
+            "Es bonito",
+            "Está barato",
+            "Es un regalo"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Cuántos años tienes?",
+          "qEn": "How old are you?",
+          "model": "Tengo treinta años."
+        },
+        {
+          "q": "¿Tienes muebles de madera?",
+          "qEn": "Do you have wooden furniture?",
+          "model": "Sí, tengo una mesa de madera."
+        },
+        {
+          "q": "¿Qué compras cuando está barato?",
+          "qEn": "What do you buy when it is cheap?",
+          "model": "Compro ropa."
+        }
+      ],
+      "gaps": "Sí. [Tengo] [noventa] y un [años]. Y está [barato].",
+      "glossary": [
+        {
+          "word": "ataúd",
+          "meaning": "caja para una persona muerta",
+          "en": "coffin"
+        },
+        {
+          "word": "madera",
+          "meaning": "material de los árboles",
+          "en": "wood"
+        },
+        {
+          "word": "barato",
+          "meaning": "que cuesta poco dinero",
+          "en": "cheap"
+        }
+      ]
+    },
+    {
+      "id": "administrador",
+      "title": "El presupuesto",
+      "place": "El palier del sexto",
+      "context": "Barrionuevo es el administrador. Habla con Ramón, el encargado.",
+      "contextEn": "Barrionuevo is the building manager. He talks to Ramón, the caretaker.",
+      "speakers": [
+        {
+          "name": "Barrionuevo",
+          "country": "Guatemala",
+          "voice": "es-GT-AndresNeural"
+        },
+        {
+          "name": "Ramón",
+          "country": "Paraguay",
+          "voice": "es-PY-MarioNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Ramón, aquí está el presupuesto del ascensor.",
+          "en": "Ramón, here is the quote for the lift."
+        },
+        {
+          "s": 1,
+          "text": "¿Solo uno? Yo tengo dos más.",
+          "en": "Only one? I have two more."
+        },
+        {
+          "s": 0,
+          "text": "Este es bueno. Es de mi cuñado.",
+          "en": "This one is good. It is my brother-in-law's."
+        },
+        {
+          "s": 1,
+          "text": "Mis presupuestos son más baratos.",
+          "en": "My quotes are cheaper."
+        },
+        {
+          "s": 0,
+          "text": "Mañana hablamos, Ramón.",
+          "en": "We will talk tomorrow, Ramón."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué tiene Barrionuevo?",
+          "qEn": "What does Barrionuevo have?",
+          "options": [
+            "Un presupuesto",
+            "Una llave",
+            "Un gato"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cuántos presupuestos más tiene Ramón?",
+          "qEn": "How many more quotes does Ramón have?",
+          "options": [
+            "Uno",
+            "Dos",
+            "Tres"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿De quién es la empresa?",
+          "qEn": "Whose company is it?",
+          "options": [
+            "De Ramón",
+            "De Elvira",
+            "Del cuñado"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cómo son los presupuestos de Ramón?",
+          "qEn": "What are Ramón's quotes like?",
+          "options": [
+            "Más caros",
+            "Más baratos",
+            "Iguales"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Tienes cuñados?",
+          "qEn": "Do you have brothers-in-law or sisters-in-law?",
+          "model": "Sí, tengo una cuñada."
+        },
+        {
+          "q": "¿Comparas precios antes de comprar?",
+          "qEn": "Do you compare prices before buying?",
+          "model": "Sí, siempre comparo."
+        },
+        {
+          "q": "¿Hablas mucho con tus vecinos?",
+          "qEn": "Do you talk a lot with your neighbours?",
+          "model": "No, no mucho."
+        }
+      ],
+      "gaps": "¿Solo [uno]? Yo [tengo] [dos] [más].",
+      "glossary": [
+        {
+          "word": "presupuesto",
+          "meaning": "precio de un trabajo antes de hacerlo",
+          "en": "quote, estimate"
+        },
+        {
+          "word": "cuñado",
+          "meaning": "hermano de tu esposa o esposo",
+          "en": "brother-in-law"
+        },
+        {
+          "word": "más baratos",
+          "meaning": "que cuestan menos",
+          "en": "cheaper"
+        }
+      ]
+    },
+    {
+      "id": "herencia",
+      "title": "El piano de la tía",
+      "place": "El 6.° B",
+      "context": "Mirta y Rubén son hermanos. Hablan del piano de su tía.",
+      "contextEn": "Mirta and Rubén are siblings. They talk about their aunt's piano.",
+      "speakers": [
+        {
+          "name": "Mirta",
+          "country": "Panamá",
+          "voice": "es-PA-MargaritaNeural"
+        },
+        {
+          "name": "Rubén",
+          "country": "Panamá",
+          "voice": "es-PA-RobertoNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Rubén, el piano de la tía es para mí.",
+          "en": "Rubén, our aunt's piano is for me."
+        },
+        {
+          "s": 1,
+          "text": "No, Mirta. Yo toco el piano todos los domingos.",
+          "en": "No, Mirta. I play the piano every Sunday."
+        },
+        {
+          "s": 0,
+          "text": "Pero yo necesito dinero.",
+          "en": "But I need money."
+        },
+        {
+          "s": 1,
+          "text": "Y yo quiero vivir aquí.",
+          "en": "And I want to live here."
+        },
+        {
+          "s": 0,
+          "text": "Bueno. Un café y hablamos.",
+          "en": "OK. A coffee and we talk."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué quiere Mirta?",
+          "qEn": "What does Mirta want?",
+          "options": [
+            "El sofá",
+            "El piano",
+            "La mesa"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cuándo toca Rubén el piano?",
+          "qEn": "When does Rubén play the piano?",
+          "options": [
+            "Los domingos",
+            "Los lunes",
+            "Nunca"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué necesita Mirta?",
+          "qEn": "What does Mirta need?",
+          "options": [
+            "Una casa",
+            "Un piano",
+            "Dinero"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué quiere Rubén?",
+          "qEn": "What does Rubén want?",
+          "options": [
+            "Vivir aquí",
+            "Vender el piano",
+            "Viajar"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Tocas el piano?",
+          "qEn": "Do you play the piano?",
+          "model": "No, no toco el piano."
+        },
+        {
+          "q": "¿Qué haces los domingos?",
+          "qEn": "What do you do on Sundays?",
+          "model": "Los domingos descanso."
+        },
+        {
+          "q": "¿Tienes hermanos?",
+          "qEn": "Do you have siblings?",
+          "model": "Sí, tengo una hermana."
+        }
+      ],
+      "gaps": "No, [Mirta]. Yo [toco] el [piano] todos los [domingos].",
+      "glossary": [
+        {
+          "word": "tía",
+          "meaning": "hermana de tu madre o tu padre",
+          "en": "aunt"
+        },
+        {
+          "word": "necesito",
+          "meaning": "de «necesitar»: me hace falta",
+          "en": "I need"
+        },
+        {
+          "word": "vivir",
+          "meaning": "tener tu casa en un lugar",
+          "en": "to live"
+        }
+      ]
+    },
+    {
+      "id": "misterio",
+      "title": "La puerta abierta",
+      "place": "El 7.° D",
+      "context": "Lili lleva comida al señor Ibarra. Hoy, la puerta está abierta.",
+      "contextEn": "Lili brings food to Mr Ibarra. Today, the door is open.",
+      "speakers": [
+        {
+          "name": "Lili",
+          "country": "El Salvador",
+          "voice": "es-SV-LorenaNeural"
+        },
+        {
+          "name": "Ibarra",
+          "country": "El Salvador",
+          "voice": "es-SV-RodrigoNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Hola, señor Ibarra. Aquí está su comida.",
+          "en": "Hello, Mr Ibarra. Here is your food."
+        },
+        {
+          "s": 1,
+          "text": "Gracias, Lili. Pasa, por favor.",
+          "en": "Thank you, Lili. Come in, please."
+        },
+        {
+          "s": 0,
+          "text": "¿Puedo pasar? ¡Es la primera vez!",
+          "en": "Can I come in? It is the first time!"
+        },
+        {
+          "s": 1,
+          "text": "Sí. Hoy estoy contento.",
+          "en": "Yes. Today I am happy."
+        },
+        {
+          "s": 0,
+          "text": "Hay arroz con pollo.",
+          "en": "There is chicken with rice."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué lleva Lili?",
+          "qEn": "What does Lili bring?",
+          "options": [
+            "Comida",
+            "Flores",
+            "Una carta"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué dice Ibarra?",
+          "qEn": "What does Ibarra say?",
+          "options": [
+            "Adiós",
+            "No",
+            "Pasa, por favor"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cómo está Ibarra hoy?",
+          "qEn": "How is Ibarra today?",
+          "options": [
+            "Triste",
+            "Contento",
+            "Cansado"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué comida hay?",
+          "qEn": "What food is there?",
+          "options": [
+            "Pizza",
+            "Arroz con pollo",
+            "Sopa"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Cocinas para otras personas?",
+          "qEn": "Do you cook for other people?",
+          "model": "Sí, cocino para mi familia."
+        },
+        {
+          "q": "¿Qué comida te gusta?",
+          "qEn": "What food do you like?",
+          "model": "Me gusta el arroz con pollo."
+        },
+        {
+          "q": "¿Hablas con tus vecinos?",
+          "qEn": "Do you talk to your neighbours?",
+          "model": "Sí, a veces."
+        }
+      ],
+      "gaps": "[Gracias], [Lili]. [Pasa], por [favor].",
+      "glossary": [
+        {
+          "word": "comida",
+          "meaning": "lo que comemos",
+          "en": "food"
+        },
+        {
+          "word": "pasa",
+          "meaning": "de «pasar»: entra",
+          "en": "come in"
+        },
+        {
+          "word": "primera vez",
+          "meaning": "la vez número uno",
+          "en": "first time"
+        }
+      ]
+    },
+    {
+      "id": "obra",
+      "title": "Mucho ruido",
+      "place": "El 7.° A",
+      "context": "Brian tiene una obra en su casa. Cirilo es el albañil.",
+      "contextEn": "Brian has building work at home. Cirilo is the builder.",
+      "speakers": [
+        {
+          "name": "Brian",
+          "country": "Puerto Rico",
+          "voice": "es-PR-VictorNeural"
+        },
+        {
+          "name": "Cirilo",
+          "country": "Honduras",
+          "voice": "es-HN-CarlosNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Cirilo, ¿cómo está mi jacuzzi?",
+          "en": "Cirilo, how is my jacuzzi?"
+        },
+        {
+          "s": 1,
+          "text": "Bien. Pero la pared tiene un problema.",
+          "en": "Fine. But the wall has a problem."
+        },
+        {
+          "s": 0,
+          "text": "¿Un problema grande?",
+          "en": "A big problem?"
+        },
+        {
+          "s": 1,
+          "text": "Sí. Necesitamos un ingeniero hoy.",
+          "en": "Yes. We need an engineer today."
+        },
+        {
+          "s": 0,
+          "text": "Bueno, bueno. Lo llamo.",
+          "en": "OK, OK. I will call him."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué tiene Brian en su casa?",
+          "qEn": "What does Brian have at home?",
+          "options": [
+            "Un piano",
+            "Un jacuzzi",
+            "Un gato"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué tiene un problema?",
+          "qEn": "What has a problem?",
+          "options": [
+            "La pared",
+            "La ventana",
+            "La puerta"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué necesitan?",
+          "qEn": "What do they need?",
+          "options": [
+            "Un plomero",
+            "Un médico",
+            "Un ingeniero"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué hace Brian al final?",
+          "qEn": "What does Brian do at the end?",
+          "options": [
+            "Se va",
+            "Lo llama",
+            "Se baña"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Hay mucho ruido en tu calle?",
+          "qEn": "Is there a lot of noise on your street?",
+          "model": "Sí, hay muchos autos."
+        },
+        {
+          "q": "¿Qué cambias en tu casa?",
+          "qEn": "What would you change in your home?",
+          "model": "Cambio la cocina."
+        },
+        {
+          "q": "¿Te gusta el jacuzzi?",
+          "qEn": "Do you like jacuzzis?",
+          "model": "Sí, me gusta mucho."
+        }
+      ],
+      "gaps": "[Sí]. [Necesitamos] un [ingeniero] [hoy].",
+      "glossary": [
+        {
+          "word": "jacuzzi",
+          "meaning": "bañera con agua que se mueve",
+          "en": "jacuzzi"
+        },
+        {
+          "word": "pared",
+          "meaning": "parte vertical de la casa",
+          "en": "wall"
+        },
+        {
+          "word": "ingeniero",
+          "meaning": "profesional que calcula construcciones",
+          "en": "engineer"
+        }
+      ]
+    },
+    {
+      "id": "sogas",
+      "title": "Las sábanas",
+      "place": "La terraza",
+      "context": "Hilda tiene sábanas en la terraza. Kevin hace un asado.",
+      "contextEn": "Hilda has sheets on the roof terrace. Kevin is having a barbecue.",
+      "speakers": [
+        {
+          "name": "Hilda",
+          "country": "Bolivia",
+          "voice": "es-BO-SofiaNeural"
+        },
+        {
+          "name": "Kevin",
+          "country": "Ecuador",
+          "voice": "es-EC-LuisNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "¡Kevin! ¡Mis sábanas!",
+          "en": "Kevin! My sheets!"
+        },
+        {
+          "s": 1,
+          "text": "Perdón, Hilda. Es el humo.",
+          "en": "Sorry, Hilda. It is the smoke."
+        },
+        {
+          "s": 0,
+          "text": "Están limpias. Huelen a chorizo.",
+          "en": "They are clean. They smell of sausage."
+        },
+        {
+          "s": 1,
+          "text": "¿Quieres un choripán?",
+          "en": "Do you want a choripán?"
+        },
+        {
+          "s": 0,
+          "text": "Bueno… uno pequeño. Gracias, Kevin.",
+          "en": "Well… a small one. Thank you, Kevin."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué tiene Hilda en la terraza?",
+          "qEn": "What does Hilda have on the terrace?",
+          "options": [
+            "Plantas",
+            "Sábanas",
+            "Sillas"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué hace Kevin?",
+          "qEn": "What is Kevin doing?",
+          "options": [
+            "Un asado",
+            "Una fiesta",
+            "Una pizza"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿A qué huelen las sábanas?",
+          "qEn": "What do the sheets smell of?",
+          "options": [
+            "A flores",
+            "A jabón",
+            "A chorizo"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué acepta Hilda al final?",
+          "qEn": "What does Hilda accept at the end?",
+          "options": [
+            "Un café",
+            "Un choripán pequeño",
+            "Nada"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Te gusta el asado?",
+          "qEn": "Do you like barbecue?",
+          "model": "Sí, me encanta el asado."
+        },
+        {
+          "q": "¿Dónde secas la ropa?",
+          "qEn": "Where do you dry your clothes?",
+          "model": "En el balcón."
+        },
+        {
+          "q": "¿Qué comes los fines de semana?",
+          "qEn": "What do you eat at weekends?",
+          "model": "Como pasta."
+        }
+      ],
+      "gaps": "[Están] [limpias]. [Huelen] a [chorizo].",
+      "glossary": [
+        {
+          "word": "sábanas",
+          "meaning": "telas para la cama",
+          "en": "sheets"
+        },
+        {
+          "word": "humo",
+          "meaning": "gas gris del fuego",
+          "en": "smoke"
+        },
+        {
+          "word": "huelen",
+          "meaning": "de «oler»: tienen olor",
+          "en": "they smell"
+        }
+      ]
+    },
+    {
+      "id": "asamblea",
+      "title": "La votación",
+      "place": "La terraza, a las nueve",
+      "context": "Barrionuevo, Elvira y Ramón están en la asamblea.",
+      "contextEn": "Barrionuevo, Elvira and Ramón are at the residents' meeting.",
+      "speakers": [
+        {
+          "name": "Barrionuevo",
+          "country": "Guatemala",
+          "voice": "es-GT-AndresNeural"
+        },
+        {
+          "name": "Elvira",
+          "country": "España",
+          "voice": "es-ES-ElviraNeural"
+        },
+        {
+          "name": "Ramón",
+          "country": "Paraguay",
+          "voice": "es-PY-MarioNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Buenas noches. Hoy votamos el ascensor nuevo.",
+          "en": "Good evening. Today we vote on the new lift."
+        },
+        {
+          "s": 1,
+          "text": "Yo voto no. El ascensor viejo es bonito.",
+          "en": "I vote no. The old lift is pretty."
+        },
+        {
+          "s": 2,
+          "text": "Hay treinta vecinos aquí.",
+          "en": "There are thirty neighbours here."
+        },
+        {
+          "s": 0,
+          "text": "¿Quién vota sí?",
+          "en": "Who votes yes?"
+        },
+        {
+          "s": 2,
+          "text": "Dieciséis.",
+          "en": "Sixteen."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué votan?",
+          "qEn": "What do they vote on?",
+          "options": [
+            "El ascensor nuevo",
+            "La terraza",
+            "El encargado"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué vota Elvira?",
+          "qEn": "How does Elvira vote?",
+          "options": [
+            "Sí",
+            "No",
+            "No vota"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cuántos vecinos hay?",
+          "qEn": "How many neighbours are there?",
+          "options": [
+            "Diez",
+            "Veinte",
+            "Treinta"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cuántos votan sí?",
+          "qEn": "How many vote yes?",
+          "options": [
+            "Dieciséis",
+            "Seis",
+            "Doce"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Votas en las elecciones?",
+          "qEn": "Do you vote in elections?",
+          "model": "Sí, siempre voto."
+        },
+        {
+          "q": "¿Te gustan las cosas viejas?",
+          "qEn": "Do you like old things?",
+          "model": "Sí, me gustan los muebles viejos."
+        },
+        {
+          "q": "¿Hay reuniones en tu edificio?",
+          "qEn": "Are there meetings in your building?",
+          "model": "No, no hay reuniones."
+        }
+      ],
+      "gaps": "Yo [voto] [no]. El [ascensor] [viejo] es bonito.",
+      "glossary": [
+        {
+          "word": "votamos",
+          "meaning": "de «votar»: decidir con un sí o un no",
+          "en": "we vote"
+        },
+        {
+          "word": "viejo",
+          "meaning": "que tiene muchos años",
+          "en": "old"
+        },
+        {
+          "word": "vecinos",
+          "meaning": "personas que viven en el mismo edificio",
+          "en": "neighbours"
+        }
+      ]
+    }
+  ]
+}

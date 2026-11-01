@@ -6,6 +6,7 @@ import { GAMES, WORDS, parseGaps, transcriptOf, wordCount } from '../app/escucha
 import { scanSource } from './neutral-spanish.mjs';
 import { CAST } from '../app/hospital-san-casi-vivo/story.mjs';
 import { CAST as VUELO_CAST } from '../app/vuelo-cancelado/story.mjs';
+import { CAST as CONSORCIO_CAST } from '../app/el-consorcio/story.mjs';
 
 const voices = JSON.parse(readFileSync('app/escucha-3d/voices.json', 'utf8'));
 const [onlyGame, onlyLevel] = process.argv.slice(2);
@@ -43,6 +44,11 @@ export function checkFile(game, level, data, path) {
       else if (member.voice !== speaker.voice) bad(at, `${speaker.name} speaks with ${member.voice} in this class, not ${speaker.voice}`);
     }
     // So does the cast of Vuelo cancelado.
+    if (game === 'consorcio') for (const speaker of speakers) {
+      const member = Object.values(CONSORCIO_CAST).find(c => c.name === speaker.name);
+      if (!member) bad(at, `${speaker.name} is not in the El consorcio cast (story.mjs)`);
+      else if (member.voice !== speaker.voice) bad(at, `${speaker.name} speaks with ${member.voice} in this class, not ${speaker.voice}`);
+    }
     if (game === 'vuelo') for (const speaker of speakers) {
       const member = Object.values(VUELO_CAST).find(c => c.name === speaker.name);
       if (!member) bad(at, `${speaker.name} is not in the Vuelo cancelado cast (story.mjs)`);
