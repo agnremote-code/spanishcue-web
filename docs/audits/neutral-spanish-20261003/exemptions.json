@@ -10986,6 +10986,36 @@
       "text": "En el español de España se prefiere «hoy he comido»; en la mayor parte de Hispanoamérica y en Canarias, «hoy comí». Las dos formas son correctas: el alumno elige según con quién habla.",
       "reason": "First-person preterite in an explicit past-tense example for teachers; not a voseo command.",
       "category": "neutral-context"
+    },
+    {
+      "path": "app/material-ele/temas.ts",
+      "text": "Dar instrucciones, pedir y mandar con tú, vos, usted y ustedes: imperativo afirmativo, negativo con subjuntivo, y pronombres pegados al verbo en una sesión de entrenamiento o una receta.",
+      "category": "regional-pedagogy",
+      "reason": "Explicit voseo teaching label or explanation: «vos» is mentioned as the pronoun to teach, next to tú and usted."
+    },
+    {
+      "path": "app/material-ele/temas.ts",
+      "text": "Yo, tú, vos, usted, él: cuándo decirlos y cuándo callarlos, el voseo y el ustedeo según el país, y los pronombres después de preposición: conmigo, para ti.",
+      "category": "regional-pedagogy",
+      "reason": "Explicit voseo teaching label or explanation: «vos» is mentioned as the pronoun to teach, next to tú and usted."
+    },
+    {
+      "path": "app/material-ele/temas.ts",
+      "text": "Tú, vos o usted, «¿podrías?» o «¿te importaría?», estilo formal e informal: elegir el registro y las fórmulas de cortesía según con quién habla el alumno.",
+      "category": "regional-pedagogy",
+      "reason": "Explicit voseo teaching label or explanation: «vos» is mentioned as the pronoun to teach, next to tú and usted."
+    },
+    {
+      "path": "app/material-ele/temas.ts",
+      "text": "Hola, buenos días, ¿qué tal?, me llamo, soy de: las primeras fórmulas para empezar cualquier conversación, con tú, vos y usted.",
+      "category": "regional-pedagogy",
+      "reason": "Explicit voseo teaching label or explanation: «vos» is mentioned as the pronoun to teach, next to tú and usted."
+    },
+    {
+      "path": "app/material-ele/temas.ts",
+      "text": "Tú, vos y usted, el leísmo, los pasados que cambian de país en país y los acentos: enseñar un español real con sus variedades.",
+      "category": "regional-pedagogy",
+      "reason": "Explicit voseo teaching label or explanation: «vos» is mentioned as the pronoun to teach, next to tú and usted."
     }
   ]
 }
