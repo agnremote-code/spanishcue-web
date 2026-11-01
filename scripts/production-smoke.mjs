@@ -14,6 +14,13 @@ export async function runSmoke(origin, fetcher = fetch, { retryDelayMs = 1500 } 
       try {
         const response = await fetcher(origin + path, { ...options, redirect: "manual", signal: AbortSignal.timeout(20000) });
         const body = await response.arrayBuffer();
+        // The edge answers 503 for a moment while a new Worker version takes over (run 41360151202 got one on "/"
+        // right after the deploy and rolled a healthy build back). A GET/HEAD 503 is retried twice; any other
+        // status is final.
+        if (response.status === 503 && attempt < 3 && (method === "GET" || method === "HEAD")) {
+          await new Promise((resolve) => setTimeout(resolve, retryDelayMs));
+          continue;
+        }
         return new Response([101, 204, 205, 304].includes(response.status) ? null : body, response);
       } catch (error) {
         if (attempt < 2 && (method === "GET" || method === "HEAD")) {
