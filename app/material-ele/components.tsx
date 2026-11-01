@@ -6,6 +6,7 @@ import { lessonCards, type LessonCardData } from "../growth/lessons";
 import { canonicalUrl } from "../seo";
 import { socialPreviewImage, socialPreviewUrl } from "../social-preview";
 import { MATERIAL_ELE_PATH, eleLevels, eleTopics, elePageBySlug, type EleActivity, type EleExercise, type EleQuestionSet } from "./data";
+import { actividadPathByName } from "./actividades";
 import styles from "../growth/growth.module.css";
 import grammar from "../growth/grammar.module.css";
 import ele from "./material-ele.module.css";
@@ -89,6 +90,7 @@ export function EleActivities({ activities }: { activities: EleActivity[] }) {
             </div>
           </div>
           <p className={grammar.teacherTip}><strong>Online o en grupo: </strong>{activity.online}</p>
+          {actividadPathByName.has(activity.name) ? <p><Link href={actividadPathByName.get(activity.name)!}>Ficha de esta actividad para imprimir →</Link></p> : null}
         </article>
       ))}
     </div>
