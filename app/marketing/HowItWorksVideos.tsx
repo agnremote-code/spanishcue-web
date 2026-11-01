@@ -11,7 +11,7 @@ import { trackMarketingEvent } from "./analytics";
 const FREE_DEMO_PATH = "/demo/noche-abierta";
 const CLIPS = [
   { key: "gramatica", src: "/grammar-previews/40.mp4", poster: "/grammar-thumbnails/40.webp", href: "/la-fabrica-de-los-nombres", lessonId: 40 },
-  { key: "mundo3d", src: "/conversation-previews/223.mp4", poster: "/noche-abierta/preview.webp", href: FREE_DEMO_PATH, lessonId: 223 },
+  { key: "mundo3d", src: "/noche-abierta/como-funciona.mp4", poster: "/noche-abierta/preview.webp", href: FREE_DEMO_PATH, lessonId: 223 },
 ] as const;
 
 const copy = {
