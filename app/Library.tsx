@@ -47,7 +47,7 @@ import {
 } from "./marketing/cta-state";
 import { trackMarketingEvent } from "./marketing/analytics";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import "./news.css";
 import "./library-access.css";
 import "./catalog-cards.css";
@@ -769,11 +769,14 @@ export default function Library({
   owner,
   signedIn,
   fullAccess,
+  materialEle,
 }: {
   lessons: CatalogItem[];
   owner: boolean;
   signedIn: boolean;
   fullAccess: boolean;
+  /** Server-rendered Material ELE index (home page only, visitors without PRO). */
+  materialEle?: ReactNode;
 }) {
   const { t, locale } = useI18n();
   const routeCount = new Set(lessons.map((lesson) => lesson.category)).size;
@@ -1976,6 +1979,7 @@ export default function Library({
             />
           </>
         )}
+        {!fullAccess && view === "Biblioteca" && materialEle}
         <SpanishCueFooter />
       </main>
       <FounderPricePill audience={audience} />

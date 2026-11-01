@@ -55,14 +55,16 @@ test('the keyword topics ELE teachers search for are all present',()=>{
  for(const s of ['gramatica/presente-de-indicativo','gramatica/preterito-indefinido','gramatica/preterito-imperfecto','gramatica/presente-de-subjuntivo','gramatica/imperativo','gramatica/ser-y-estar','gramatica/por-y-para','gramatica/pronombres-de-objeto','gramatica/conectores','vocabulario/familia','vocabulario/comida-y-restaurante','vocabulario/la-ciudad','funciones/narrar','funciones/dar-consejos-y-recomendaciones','funciones/expresar-opinion','cultura/argentina','cultura/espana'])assert.ok(slugs.has(s),s);
 });
 
-test('grammar level pages exist only where two or more classes are written for that level, with bounded unique metadata',()=>{
- assert.ok(m.temaLevelPages.length>=100,`only ${m.temaLevelPages.length} level pages`);
+test('level pages exist for every group only where two or more classes are written for that level, with bounded unique metadata',()=>{
+ assert.ok(m.temaLevelPages.length>=280,`only ${m.temaLevelPages.length} level pages`);
+ for(const group of ['gramatica','vocabulario','funciones','cultura'])assert.ok(m.temaLevelPages.some(p=>p.group===group),group);
  const paths=new Set(),titles=new Set(),h1s=new Set(),intros=new Set();const urls=new Set(m.sitemap().map(x=>x.url));
  for(const p of m.temaLevelPages){
-  assert.equal(p.group,'gramatica');
+  assert.ok(['gramatica','vocabulario','funciones','cultura'].includes(p.group));
+  assert.ok(p.order.length>20,p.path);
   assert.ok(p.lessonIds.length>=2,p.path);
   for(const id of p.lessonIds){const l=m.lessons.find(x=>x.id===id);assert.ok((l.levels?.length?l.levels:[l.level]).includes(p.level),`${p.path} lists ${id} of level ${l.level}`);}
-  assert.match(p.path,/^\/material-ele\/gramatica\/[a-z0-9-]+\/(a1|a2|b1|b2|c1|c2)$/);
+  assert.match(p.path,/^\/material-ele\/(gramatica|vocabulario|funciones|cultura)\/[a-z0-9-]+\/(a1|a2|b1|b2|c1|c2)$/);
   assert.ok(p.title.length<=78,`${p.path} title ${p.title.length}`);
   assert.ok(p.description.length>=110&&p.description.length<=165,`${p.path} description ${p.description.length}`);
   assert.ok(p.faq.length>=3,p.path);
@@ -72,4 +74,7 @@ test('grammar level pages exist only where two or more classes are written for t
  }
  assert.equal(paths.size,m.temaLevelPages.length);assert.equal(titles.size,m.temaLevelPages.length);assert.equal(h1s.size,m.temaLevelPages.length);assert.equal(intros.size,m.temaLevelPages.length);
  assert.ok(m.temaLevelPageByPath.has('/material-ele/gramatica/presente-de-indicativo/a1'));
+ const vocab=m.temaLevelPages.find(p=>p.group==='vocabulario'),gram=m.temaLevelPages.find(p=>p.group==='gramatica');
+ assert.notEqual(vocab.order,gram.order,'each group describes its classes in its own words');
+ assert.doesNotMatch(vocab.intro,/regla primero/);
 });

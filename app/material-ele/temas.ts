@@ -236,42 +236,51 @@ export function relatedTemas(page: TemaPage, limit = 8): TemaPage[] {
   return [...sameParent, ...sameGroup].slice(0, limit);
 }
 
-/* Level pages: /material-ele/gramatica/<tema>/<nivel>. Only grammar, where every class is written for one level,
- * and only levels with at least two classes, so a level page is never a copy of its topic page. */
+/* Level pages: /material-ele/<grupo>/<tema>/<nivel>. Every group, but only for levels where the topic has
+ * at least two classes written for that level, so a level page is never a copy of its topic page. */
 export type TemaLevelPage = {
   group: TemaGroupId; parent: string; slug: string; level: string; path: string; name: string; h1: string; title: string; description: string; intro: string;
-  lessonIds: number[]; freeCount: number; goals: string[]; warmups: string[]; speaking: string[]; faq: { question: string; answer: string }[]; tema: TemaPage;
+  lessonIds: number[]; freeCount: number; goals: string[]; warmups: string[]; speaking: string[]; faq: { question: string; answer: string }[]; tema: TemaPage; order: string;
 };
 const lessonById = new Map(lessons.map((lesson) => [lesson.id, lesson]));
 const levelSlugs = ["A1", "A2", "B1", "B2", "C1", "C2"];
 const levelWords: Record<string, string> = { A1: "principiantes", A2: "nivel básico", B1: "nivel intermedio", B2: "intermedio alto", C1: "nivel avanzado", C2: "nivel de maestría" };
+type LevelCopy = { where: string; order: string; faqStart: string; descTail: string; shortTail: string };
+/** How each group's classes are described on a level page: a grammar page talks about rules, a vocabulary page about scenes, a function page about acts of speech, a culture page about places. */
+const levelCopy: Record<TemaGroupId, LevelCopy> = {
+  gramatica: { where: "Cada una abre en una pantalla para compartir, con la regla primero, práctica con corrección y una tarea de conversación en la que el alumno necesita", order: "En el orden del curso: primero la forma regular, después las irregularidades y el uso.", faqStart: "las clases están en el orden del curso de gramática de SpanishCue, de lo regular a lo irregular y de la forma al uso", descTail: "ordenadas de lo regular a lo irregular", shortTail: "teoría, práctica y conversación" },
+  vocabulario: { where: "Cada una mete el léxico en una escena real, con audio y contexto, y termina con una tarea oral en la que el alumno necesita", order: "De la escena más simple a la más exigente: primero reconocer y pedir, después comparar, reclamar y contar.", faqStart: "las clases van de la escena más guiada a la más abierta, y el léxico se recicla de una a otra", descTail: "dentro de situaciones reales, con audio y tarea oral", shortTail: "escenas reales, audio y tarea oral" },
+  funciones: { where: "Cada una muestra un modelo, practica las fórmulas con corrección y cierra con una escena en la que la única salida es", order: "Primero el modelo y las fórmulas, después la práctica guiada y al final la escena donde hay que usarlas.", faqStart: "las clases van del modelo a la práctica guiada y de ahí a la tarea real, con la gramática que cada función necesita", descTail: "con modelo, práctica guiada y tarea real", shortTail: "modelo, práctica guiada y tarea real" },
+  cultura: { where: "Cada una lleva al alumno a un lugar que se recorre hablando, con escuchas por zona y preguntas sobre la vida real para que practique", order: "Primero el recorrido y la escucha, después la conversación comparada con la vida del alumno.", faqStart: "las clases van del recorrido y la escucha a la conversación, y cada país o tema suma acentos y registros nuevos", descTail: "con recorrido, escuchas por zona y conversación", shortTail: "recorrido, escucha y conversación" },
+};
 function buildLevelPage(tema: TemaPage, level: string): TemaLevelPage | null {
   const ids = tema.lessonIds.filter((id) => { const lesson = lessonById.get(id); return lesson ? lessonLevels(lesson).includes(level) : false; });
   if (ids.length < 2) return null;
   const items = ids.map((id) => lessonById.get(id)!);
   const freeCount = ids.filter((id) => isFreeLesson(id)).length;
+  const copy = levelCopy[tema.group];
   const lower = tema.name.toLowerCase();
   const titles = items.slice(0, 3).map((lesson) => `«${lesson.title.replace(/:.*$/, "")}»`).join(", ");
   const longTitle = `${tema.name} ${level}: clases y actividades ELE para ${levelWords[level]} | SpanishCue`;
   const title = [longTitle, `${tema.name} ${level}: clases y actividades ELE | SpanishCue`, `${tema.name} ${level}: clases ELE | SpanishCue`].find((candidate) => candidate.length <= 78) ?? `${tema.name} ${level} | SpanishCue`;
-  let description = `${tema.name} para alumnos de ${level}: ${ids.length} clases interactivas con teoría visual, práctica corregida y conversación, ordenadas de lo regular a lo irregular.`;
-  if (description.length > 165) description = `${tema.name} en ${level}: ${ids.length} clases interactivas con teoría, práctica y conversación para la clase de ELE.`;
+  let description = `${tema.name} para alumnos de ${level}: ${ids.length} clases interactivas con teoría visual, práctica corregida y conversación, ${copy.descTail}.`;
+  if (description.length > 165) description = `${tema.name} en ${level}: ${ids.length} clases interactivas con ${copy.shortTail} para la clase de ELE.`;
   if (description.length < 110) description = `${description} Una clase gratis por nivel para probar sin registro.`;
   return {
     group: tema.group, parent: tema.parent, slug: tema.slug, level, path: `${tema.path}/${level.toLowerCase()}`, name: tema.name, tema,
-    h1: `${tema.name} en ${level}: ${ids.length} clases para enseñarlo a ${levelWords[level]}`, title, description,
-    intro: `En ${level}, ${lower} se trabaja en ${ids.length} clases: ${titles}${ids.length > 3 ? " y más" : ""}. Cada una abre en una pantalla para compartir, con la regla primero, práctica con corrección y una tarea de conversación en la que el alumno necesita ${lower} para decir lo que quiere decir.`,
+    h1: `${tema.name} en ${level}: ${ids.length} clases para enseñarlo a ${levelWords[level]}`, title, description, order: copy.order,
+    intro: `En ${level}, ${lower} se trabaja en ${ids.length} clases: ${titles}${ids.length > 3 ? " y más" : ""}. ${copy.where} ${lower} para decir lo que quiere decir.`,
     lessonIds: ids, freeCount,
     goals: uniq(items.flatMap((lesson) => lesson.goals.filter((goal) => goal && goal !== lesson.subtitle))).slice(0, 8),
     warmups: uniq(items.map((lesson) => lesson.warmup).filter(Boolean)).slice(0, 4),
     speaking: uniq(items.flatMap((lesson) => lesson.speaking).filter(Boolean)).slice(0, 8),
     faq: [
       { question: `¿Qué parte de ${lower} corresponde a ${level}?`, answer: `La que enseñan estas ${ids.length} clases, alineadas con el MCER y el PCIC para ${level}: ${items.map((lesson) => lesson.title.replace(/:.*$/, "")).join("; ")}.` },
-      { question: `¿Con cuál empiezo?`, answer: `Con la primera de la lista: las clases están en el orden del curso de gramática de SpanishCue, de lo regular a lo irregular y de la forma al uso. ${freeCount ? `${freeCount === 1 ? "Una es gratis" : `${freeCount} son gratis`} y se abre sin registro.` : "Para probar el formato, abre la clase gratis de este nivel en Material ELE por nivel."}` },
+      { question: `¿Con cuál empiezo?`, answer: `Con la primera de la lista: ${copy.faqStart}. ${freeCount ? `${freeCount === 1 ? "Una es gratis" : `${freeCount} son gratis`} y se abre sin registro.` : "Para probar el formato, abre la clase gratis de este nivel en Material ELE por nivel."}` },
       { question: `¿Hay ${lower} en otros niveles?`, answer: `Sí: la página de ${lower} reúne todas las clases del tema, de ${tema.levels[0]} a ${tema.levels[tema.levels.length - 1]}, y enlaza cada nivel.` },
     ],
   };
 }
-export const temaLevelPages: TemaLevelPage[] = temaPages.filter((page) => page.group === "gramatica").flatMap((tema) => levelSlugs.map((level) => buildLevelPage(tema, level)).filter((page): page is TemaLevelPage => page !== null));
+export const temaLevelPages: TemaLevelPage[] = temaPages.flatMap((tema) => levelSlugs.map((level) => buildLevelPage(tema, level)).filter((page): page is TemaLevelPage => page !== null));
 export const temaLevelPageByPath = new Map(temaLevelPages.map((page) => [page.path, page]));
 export const temaLevelsOf = (tema: TemaPage) => temaLevelPages.filter((page) => page.slug === tema.slug && page.group === tema.group);

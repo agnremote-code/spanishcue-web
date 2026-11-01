@@ -53,7 +53,7 @@ export default async function TemaPageRoute({ params }: Props) {
           </section>
           {featured ? <EleFeaturedLesson lesson={featured} /> : null}
           {levelPages.length ? (
-            <Section title={`${page.name} por nivel`} intro="Cada nivel con sus propias clases, en el orden del curso.">
+            <Section title={`${page.name} por nivel`} intro="Cada nivel con sus propias clases, una página por nivel.">
               <div className={styles.cardGrid}>
                 {levelPages.map((levelPage) => <Link className={styles.levelCard} key={levelPage.path} href={levelPage.path}><em>{levelPage.level}</em><b>{page.name} {levelPage.level}</b><span>{levelPage.lessonIds.length} clases{levelPage.freeCount ? ` · ${levelPage.freeCount} gratis` : ""}</span></Link>)}
               </div>
