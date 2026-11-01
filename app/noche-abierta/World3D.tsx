@@ -1344,6 +1344,7 @@ export default function World3D(props: WorldProps) {
         placePlayer(x, z, heading); sim.yaw = heading; followShot(true);
       };
       (box as HTMLDivElement & { naBodies?: () => unknown }).naBodies = () => crowd.inspect();
+      (box as HTMLDivElement & { naPlayer?: () => unknown }).naPlayer = () => ({ x: sim.player.x, z: sim.player.z, heading: sim.player.heading, mode: sim.mode });
       (box as HTMLDivElement & { naDrive?: (id: string) => boolean }).naDrive = id => {
         const item = drivables.get(id);
         if (!item) return false;
