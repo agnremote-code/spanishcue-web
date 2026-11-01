@@ -100,5 +100,5 @@ export const preguntasBySlug = new Map(preguntasPages.map((page) => [page.slug, 
 export const actividadPathByName = new Map(actividadPages.map((page) => [page.activity.name, page.path]));
 export const bancoPaths = [...actividadPages, ...ejercicioPages, ...preguntasPages].map((page) => page.path);
 
-export const bancoTitle = "Banco de actividades ELE: fichas, ejercicios y preguntas de conversación | SpanishCue";
+export const bancoTitle = "Banco de actividades ELE: fichas, ejercicios y preguntas | SpanishCue";
 export const bancoDescription = `${actividadPages.length} actividades, ${ejercicioPages.length} ejercicios con soluciones y preguntas de conversación por nivel, listos para imprimir o compartir en pantalla.`;
