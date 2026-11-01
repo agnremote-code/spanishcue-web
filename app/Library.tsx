@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import HowItWorksVideos from "./marketing/HowItWorksVideos";
 import NewLessonsBanner from "./NewLessonsBanner";
 import LessonReportPanel from "./lesson-reports/LessonReportPanel";
 import MoodTenseDisclosure from "./verbal-system/MoodTenseDisclosure";
@@ -1677,6 +1678,7 @@ export default function Library({
         )}
         {/* PRO accounts already have everything: no free-lesson hero, just the news carousel and the material. */}
         {!fullAccess && <SpanishCueHero />}
+        {!fullAccess && view === "Biblioteca" && <HowItWorksVideos />}
         <NewLessonsBanner lessons={lessons} />
         <section className="library-heading" id="library-results">
           <div>

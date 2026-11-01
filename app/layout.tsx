@@ -103,7 +103,7 @@ export default async function RootLayout({
   const freeVersionBar = !fullAccess && bautiRoute && !/^\/(lp|pricing|acceso|academias)(\/|$)/.test(pathname);
   return (
     <html lang={locale}>
-      <body>
+      <body className={freeVersionBar ? "has-free-bar" : undefined}>
         <LocaleProvider initialLocale={locale}>
           <AuthSessionSync serverSignedIn={signedIn} identityChecked={requestHeaders.get("x-spanishcue-identity-checked") === "1"} />
           <GoogleAnalytics />
