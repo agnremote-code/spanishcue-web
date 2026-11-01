@@ -7,6 +7,7 @@ import { grammarTopicPages } from './growth/grammar-topics';
 import { guideModifiedDate } from "./guides/guide-format";
 import { lessons } from "./lesson-catalog";
 import { MATERIAL_ELE_PATH, elePages } from "./material-ele/data";
+import { temaGroups, temaPages } from "./material-ele/temas";
 import { RECURSOS_PATH, recursoPathForLesson, resourceLessons, resourcePathForLesson } from "./resource-seo";
 import { canonicalUrl, isSearchPrivatePath, languageAlternates } from "./seo";
 import { teachingGuides } from "./teaching-guides";
@@ -44,6 +45,8 @@ const curatedRoutes: { path: string; priority: number; changeFrequency: Frequenc
   { path: MATERIAL_ELE_PATH, priority: 0.95, changeFrequency: "weekly" },
   { path: "/alternativa-a-profedeele", priority: 0.8, changeFrequency: "monthly" },
   ...elePages.map((page) => ({ path: page.path, priority: page.kind === "level" ? 0.85 : 0.8, changeFrequency: "monthly" as Frequency })),
+  ...temaGroups.map((group) => ({ path: group.path, priority: 0.85, changeFrequency: "weekly" as Frequency })),
+  ...temaPages.map((page) => ({ path: page.path, priority: 0.75, changeFrequency: "monthly" as Frequency })),
   { path: "/ele-recursos-profesores", priority: 0.7, changeFrequency: "monthly" },
   { path: "/free-spanish-lesson", priority: 0.7, changeFrequency: "monthly" },
   { path: "/online-spanish-teaching-resources", priority: 0.6, changeFrequency: "monthly" },

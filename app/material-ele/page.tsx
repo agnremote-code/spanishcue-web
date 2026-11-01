@@ -4,6 +4,8 @@ import { catalogSummary } from "../growth/lessons";
 import { collectionPageSchema, faqPageSchema } from "../growth/schema";
 import { EleBuyBand, EleLessonGrid, EleLevelNav, EleTopbar, EleTopicCards, PRICE_LABEL, PRICING_PATH, eleLessonCards, eleMetadata } from "./components";
 import { MATERIAL_ELE_PATH, eleLevels, eleTopics, hubDescription, hubFaq, hubTitle } from "./data";
+import { TemaGroupCards } from "./tema-components";
+import { temaPages } from "./temas";
 import styles from "../growth/growth.module.css";
 import ele from "./material-ele.module.css";
 
@@ -60,6 +62,10 @@ export default function MaterialElePage() {
                 </Link>
               ))}
             </div>
+          </Section>
+
+          <Section id="indice" title="Índice de temas: gramática, vocabulario, funciones y cultura" intro={`${temaPages.length} temas organizados como los buscas, cada uno con las clases interactivas que lo enseñan: presente de indicativo, pretérito indefinido, subjuntivo, por y para, la familia, la comida, dar consejos, narrar…`}>
+            <TemaGroupCards />
           </Section>
 
           <Section id="temas" title="Actividades ELE por tema" intro="Los temas que más se buscan antes de preparar una clase: los usos difíciles de la gramática, la conversación y los juegos.">

@@ -4,6 +4,8 @@ import { Breadcrumbs, Faq, GrowthFooter, JsonLd, Section } from "../../growth/co
 import { faqPageSchema, webPageSchema } from "../../growth/schema";
 import { EleActivities, EleBuyBand, EleExerciseBlock, EleFeaturedLesson, EleLessonGrid, EleLevelNav, EleQuestions, EleTopbar, EleTopicCards, PRICE_LABEL, PRICING_PATH, eleLessonCards, eleMetadata, featuredGrammarLesson } from "../components";
 import { MATERIAL_ELE_PATH, elePageBySlug, elePages } from "../data";
+import { TemaGroupIndexPage } from "../tema-group-page";
+import { temaGroupById, type TemaGroupId } from "../temas";
 import styles from "../../growth/growth.module.css";
 import PrintButton from "../PrintButton";
 import print from "../print.module.css";
@@ -11,19 +13,24 @@ import print from "../print.module.css";
 type Props = { params: Promise<{ slug: string }> };
 
 export function generateStaticParams() {
-  return elePages.map((page) => ({ slug: page.slug }));
+  return [...elePages.map((page) => ({ slug: page.slug })), ...[...temaGroupById.keys()].map((slug) => ({ slug }))];
 }
 
 export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
   const page = elePageBySlug.get(slug);
-  return page ? eleMetadata(page.path, page.title, page.description) : {};
+  const group = temaGroupById.get(slug as TemaGroupId);
+  return page ? eleMetadata(page.path, page.title, page.description) : group ? eleMetadata(group.path, group.title, group.description) : {};
 }
 
 export default async function ElePage({ params }: Props) {
   const { slug } = await params;
   const page = elePageBySlug.get(slug);
-  if (!page) notFound();
+  if (!page) {
+    const group = temaGroupById.get(slug as TemaGroupId);
+    if (group) return <TemaGroupIndexPage group={group} />;
+    notFound();
+  }
   const lessons = eleLessonCards(page.lessonIds);
   const freeLesson = lessons.find((lesson) => lesson.free);
   const featured = featuredGrammarLesson(page.lessonIds);
