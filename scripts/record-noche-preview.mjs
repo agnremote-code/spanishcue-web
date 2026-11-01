@@ -4,10 +4,11 @@
 // clip is smooth even on the software GPU used here. Usage: node scripts/record-noche-preview.mjs [out.mp4]
 // Needs a finished `npm run build` (dist/server/wrangler.json) and ffmpeg.
 import { spawn, spawnSync } from 'node:child_process';
-import { mkdtemp, mkdir, rm } from 'node:fs/promises';
+import { mkdtemp, mkdir, rm, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
-import { chromium } from 'playwright';
+import { createRequire } from 'node:module';
+const { chromium } = createRequire(import.meta.url)('playwright');
 
 const out = resolve(process.argv[2] ?? 'public/conversation-previews/223.mp4');
 const FPS = 24, WIDTH = 960, HEIGHT = 600;
@@ -33,6 +34,8 @@ try {
   const tick = async (ms) => { await page.clock.runFor(ms); };
   const until = async (selector, limitMs, step = 100) => { for (let t = 0; t < limitMs; t += step) { if (await page.locator(selector).first().isVisible().catch(() => false)) return true; await tick(step); } return false; };
   if (!await until('button.na-ts-start', 20000)) throw new Error('arrival screen never showed');
+  // Cookie consent and the newsletter popup sit above the world: close them before clicking anything.
+  if (await page.locator('.consent-panel .consent-actions button').first().isVisible().catch(() => false)) { await page.locator('.consent-panel .consent-actions button').first().click(); await tick(300); }
   await page.locator('button.na-ts-start').click();
   await tick(1200);
   if (await until('.na-pick-go', 4000, 200)) {
@@ -52,7 +55,9 @@ try {
   await box.click({ position: { x: WIDTH / 2, y: HEIGHT * 0.7 } });
   await tick(200);
   let index = 0;
-  const capture = async () => { await page.screenshot({ path: join(frames, `${String(index++).padStart(4, '0')}.png`), type: 'png' }); };
+  // page.screenshot waits for an animation frame that the fake clock never fires; the raw CDP capture does not.
+  const cdp = await page.context().newCDPSession(page);
+  const capture = async () => { const { data } = await cdp.send('Page.captureScreenshot', { format: 'png' }); await writeFile(join(frames, `${String(index++).padStart(4, '0')}.png`), Buffer.from(data, 'base64')); };
   const frame = async () => { await tick(1000 / FPS); await capture(); };
   // 0.8 s standing, then walk until the prompt appears (at most 7 s), then E and 4 s of the open conversation.
   for (let i = 0; i < FPS * 0.8; i++) await frame();

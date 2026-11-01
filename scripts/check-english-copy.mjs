@@ -203,6 +203,8 @@ export function checkEnglishCopy(root, base = BASE_SHA) {
   if(existsSync(homeFreeReviewedPath))reviewed.push(...JSON.parse(readFileSync(homeFreeReviewedPath,'utf8')).changes);
   const libraryRoutesReviewedPath=resolve(root,'docs/audits/library-two-routes-english-20261022.json');
   if(existsSync(libraryRoutesReviewedPath))reviewed.push(...JSON.parse(readFileSync(libraryRoutesReviewedPath,'utf8')).changes);
+  const pricingDoorsReviewedPath=resolve(root,'docs/audits/pricing-free-doors-english-additions-20261101.json');
+  if(existsSync(pricingDoorsReviewedPath))reviewed.push(...JSON.parse(readFileSync(pricingDoorsReviewedPath,'utf8')).changes);
   const derived = checkDerivedCopies(after);
   const compared = compareEnglishCopy(relocateEnglishSources(before), mergeSplitSources(derived.remaining));
   return { findings: [...derived.findings, ...filterReviewedChanges(filterApprovedAdditions(compared, additions), reviewed)], files: before.size, strings: [...before].reduce((n, [path, source]) => n + extractCopy(source, path).filter(c => c.language === 'en').length, 0), base };

@@ -1,8 +1,21 @@
 {
   "version": 1,
-  "authorization": "Owner standing approval (Ale) for new English copy, typed «apruebo (siempre de ahora en más apruebo)» in the project thread «Biblioteca» on 2026-10-22 (message cmsg_01Gr5R4j3t2Yet65UcmhcVhAAAbp6kqDfMqxzNm3PL6f5g). Applied to the two free doors on /pricing Ale asked for on 2026-11-01 (message cmsg_01Gr5R4j3t2Yet65UcmhcVhASxNhiWBUkmdLDHdnRL8k1x: «dos opciones una probar clase de gramatica - probar clase de conversación»).",
+  "authorization": "Owner standing approval (Ale) for new English copy, typed «apruebo (siempre de ahora en más apruebo)» in the project thread «Biblioteca» on 2026-10-22 (message cmsg_01Gr5R4j3t2Yet65UcmhcVhAAAbp6kqDfMqxzNm3PL6f5g). Applied to the two free doors on /pricing Ale asked for on 2026-11-01 (message cmsg_01Gr5R4j3t2Yet65UcmhcVhASxNhiWBUkmdLDHdnRL8k1x: «dos opciones una probar clase de gramatica - probar clase de conversación»). The single «Open a free lesson» door is replaced by these two doors on purpose.",
   "additions": [
-    { "path": "app/pricing/page.tsx", "text": "Try a grammar lesson" },
-    { "path": "app/pricing/page.tsx", "text": "Try a 3D conversation lesson" }
+    {
+      "path": "app/pricing/page.tsx",
+      "text": "Try a grammar lesson"
+    },
+    {
+      "path": "app/pricing/page.tsx",
+      "text": "Try a 3D conversation lesson"
+    }
+  ],
+  "changes": [
+    {
+      "path": "app/pricing/page.tsx",
+      "kind": "english-changed-or-deleted",
+      "text": "Open a free lesson"
+    }
   ]
 }
