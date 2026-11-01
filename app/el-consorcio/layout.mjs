@@ -28,7 +28,7 @@ export const FLOORS = [
 export const FLOOR_IDS = FLOORS.map((f) => f.id);
 export const floorById = (id) => FLOORS.find((f) => f.id === id) ?? FLOORS[0];
 export const FLOOR_LABEL = { 0: 'PB', 1: '1', 2: '2', 3: '3', 4: '4', 5: '5', 6: '6', 7: '7', 8: 'T' };
-export const OPEN_AIR = (floor, x, z) => floor === 8 || (floor === 0 && (z > 10 || (x > 4 && z < -2.5)));
+export const OPEN_AIR = (floor, x, z) => floor === 8 || (floor === 0 && z > 10);
 
 // You arrive on the sidewalk with your moving van, facing the street door.
 export const SPAWN = { floor: 0, x: 0, z: 12.9, heading: Math.PI };
@@ -103,7 +103,7 @@ export const WALLS = {
     // The portería (west) looks onto the hall through a window; the meter room (east) is locked.
     [-4, 2.5, -4, 4], [-4, 4, -4, 8, 'glass'], [-4, 8, -4, 10], [4, 2.5, 4, 10], [-12, 2.5, -4, 2.5], [4, 2.5, 12, 2.5],
     // The encargado's flat (north-west, closed) and the glass door to the patio.
-    [-12, -2.5, -4, -2.5], [4, -2.5, 7, -2.5], [7, -2.5, 9, -2.5, 'glass-door'], [9, -2.5, 12, -2.5],
+    [-12, -2.5, -4, -2.5], [4, -2.5, 7, -2.5], [9, -2.5, 12, -2.5],
   ],
   ...Object.fromEntries([1, 2, 3, 4, 5, 6, 7].map((n) => [n, palierWalls(n)])),
   8: [
@@ -227,7 +227,7 @@ const PLACES = {
   buzones: { spot: { x: 1.8, z: 5.0 }, npc: { x: 3.05, z: 6.2, heading: -1.9 }, pose: 'read', mood: 'surprised', look: ELVIRA,
     extras: [{ x: 0.4, z: 6.9, heading: 2.6, pose: 'phone', mood: 'neutral', look: L('#c99468', 'young', 'm', 'cap', '#2a1a12', 'jacket', '#e05a1a', 'jeans', '#1f2840', ['backpack'], { seed: 22 }) }] },
   consultorio: { spot: { x: 8.6, z: -4.6 }, npc: { x: 10.6, z: -8.83, heading: 0, seat: true }, pose: 'sit', mood: 'neutral', look: L('#f0d6c0', 'adult', 'f', 'bob', '#3a2416', 'sweater', '#2a2a2a', 'pants', '#2a2a30', ['glasses', 'earrings'], { seed: 31 }),
-    extras: [{ x: 10.9, z: -6.6, heading: 0, pose: 'lie', lying: true, y: 0.42, mood: 'sad', look: L('#d8a57e', 'adult', 'm', 'short', '#2a1a12', 'shirt', '#5a7a9a', 'pants', '#24304a', [], { seed: 32 }) }] },
+    extras: [{ x: 10.9, z: -7.5, heading: 0, pose: 'lie', lying: true, y: 0.42, mood: 'sad', look: L('#d8a57e', 'adult', 'm', 'short', '#2a1a12', 'shirt', '#5a7a9a', 'pants', '#24304a', [], { seed: 32 }) }] },
   bateria: { spot: { x: -6, z: 0.4 }, npc: { x: -7.3, z: 1.6, heading: 2.6 }, pose: 'arms', mood: 'furious', look: L('#c48f69', 'adult', 'f', 'ponytail', '#2a1a12', 'apron', '#3a7a6a', 'jeans', '#24304a', ['earrings'], { seed: 41 }),
     extras: [{ x: -4.9, z: 1.7, heading: -2.4, pose: 'stand', mood: 'sleepy', look: L('#c48f69', 'teen', 'm', 'curly', '#120d0b', 'hoodie', '#141418', 'jeans', '#1f2840', ['headphones'], { seed: 42 }) }] },
   gotera: { spot: { x: -8, z: -4.0 }, npc: { x: -9.6, z: -6.2, heading: 0.6 }, pose: 'carry', mood: 'angry', look: L('#b9825c', 'adult', 'm', 'short', '#120d0b', 'tshirt', '#c8301e', 'pants', '#3a3a3a', [], { seed: 51 }),
@@ -364,7 +364,11 @@ export function solidsFor(floor) {
   const closed = floor >= 1 && floor <= 7 ? ['A', 'B', 'C', 'D'].filter((f) => !(OPEN_FLATS[floor] ?? []).includes(f)).map((f) => { const [x0, z0, x1, z1] = FLAT_BOX[f]; return box(x0, z0, x1, z1); }) : [];
   const street = floor === 0 ? [box(-12, 2.5, -4, 10), box(4, 2.5, 12, 10), box(-12, -10, -4, -2.5)] : [];
   const machine = floor === 8 ? [box(-4, -10, 4, -2.7)] : [];
-  return [...walls, ...things, ...people, ...core, ...closed, ...street, ...machine];
+  // An open flat door swings into the flat and stays open along its hinge side.
+  const leaves = (DOORS[floor] ?? []).filter((d) => d.kind === 'swing').map((d) => box(d.x - 0.62, d.z, d.x - 0.44, d.z + (d.z < 0 ? -1.0 : 1.0)));
+  // The two iron leaves of the street door open out onto the sidewalk.
+  if (floor === 0) leaves.push(box(-1.3, 10, -0.85, 11.25), box(0.85, 10, 1.3, 11.25));
+  return [...walls, ...things, ...people, ...core, ...closed, ...street, ...machine, ...leaves];
 }
 
 // The white circle under the player, if any.
