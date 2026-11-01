@@ -165,7 +165,6 @@
 /* Night clock and boarding pass */
 .ec-night { display: flex; gap: .5rem; align-items: stretch; }
 .ec-clock { display: grid; place-items: center; padding: .35rem .7rem; background: #0b1222; color: var(--amber); border-radius: 4px; font: 700 1.05rem/1 ui-monospace, "SFMono-Regular", monospace; letter-spacing: .08em; box-shadow: 0 6px 20px rgba(0,0,0,.35); }
-@media (max-width: 720px) { 
 /* The secretary's clipboard: units counted for the quorum. */
 .ec-acta { display: grid; grid-template-columns: auto auto; gap: .05rem .7rem; align-items: center; padding: .35rem .7rem .35rem .9rem; background: #fdf6dc; border-radius: 4px; border-left: 6px solid var(--red); font-size: .74rem; color: var(--muted); box-shadow: 0 6px 20px rgba(0,0,0,.35); }
 .ec-acta-title { grid-column: 1 / -1; color: var(--blue); font-size: .62rem; font-weight: 800; letter-spacing: .2em; text-transform: uppercase; }

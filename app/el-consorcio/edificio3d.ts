@@ -582,7 +582,7 @@ export function buildBuilding(scene: THREE.Scene, opts: { low: boolean; shadows:
     const list: [string, number, number, number][] = f.id === 8 ? [] : [['#fff0d8', 0, 0, 0.9]];
     for (const s of SECTORS.filter(s => s.floor === f.id && !['palier', 'vereda', 'terraza', 'sogas', 'asamblea', 'nucleo'].includes(s.id))) list.push([s.light, (s.x0 + s.x1) / 2, (s.z0 + s.z1) / 2, 1.1]);
     for (const [color, x, z, intensity] of list) {
-      const light = new THREE.PointLight(color, intensity * 14, 14, 1.6);
+      const light = new THREE.PointLight(color, intensity * 6, 10, 1.6);
       light.position.set(x, CEILING - 0.5, z);
       floors[f.id].add(light);
     }

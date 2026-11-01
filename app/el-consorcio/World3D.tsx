@@ -236,7 +236,8 @@ export default function World3D(props: WorldProps) {
       for (let i = 1; i <= 12; i++) {
         const k = i / 12;
         const px = x + (cx - x) * k, pz = z + (cz - z) * k;
-        const out = px < b.minX + 0.3 || px > b.maxX - 0.3 || pz < b.minZ + 0.3 || pz > b.maxZ - 0.3;
+        // Out on Medrano and on the terrace the camera may leave the floor plan.
+        const out = !OPEN_AIR(floor, px, pz) && (px < b.minX + 0.3 || px > b.maxX - 0.3 || pz < b.minZ + 0.3 || pz > b.maxZ - 0.3);
         if (out || walls.some(w => px > w.x0 - 0.25 && px < w.x1 + 0.25 && pz > w.z0 - 0.25 && pz < w.z1 + 0.25)) { t = Math.max(0.15, (i - 1) / 12); break; }
       }
       return t;
