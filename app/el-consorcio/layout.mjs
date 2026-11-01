@@ -168,7 +168,7 @@ export const FURNITURE = {
   ],
   3: [...palier(3),
     // 3.° A · the home office: three screens, the ring light, and the bathroom door wide open.
-    F('desk', -10.6, -6.8, 2.4, 0.8, 1), F('gamingchair', -9.75, -6.8, 0.6, 0.6, 1), F('ringlight', -10.8, -8.6, 0.5, 0.5), F('bathtub', -5.2, -8.6, 1.6, 0.8),
+    F('desk', -10.6, -6.8, 2.4, 0.8, 1), F('gamingchair', -9.75, -6.8, 0.6, 0.6, 3), F('ringlight', -10.8, -8.6, 0.5, 0.5), F('bathtub', -5.2, -8.6, 1.6, 0.8),
     F('bed', -10.4, -3.6, 2.0, 1.4, 0), F('beanbag', -6.4, -4.6, 0.8, 0.8), F('bathwall', -6.0, -7.4, 4.0, 0.15), F('puddle', -6.6, -6.4, 2.6, 1.6, 0, { solid: false }),
     // The palier: the lockbox of the rented flat.
     F('lockbox', -6.7, 2.36, 0.25, 0.08, 0, { solid: false }),
@@ -226,15 +226,15 @@ const PLACES = {
     extras: [{ x: -1.9, z: 12.2, heading: 2.3, pose: 'carry', mood: 'worried', look: FREDDY }] },
   buzones: { spot: { x: 1.8, z: 5.0 }, npc: { x: 3.05, z: 6.2, heading: -1.9 }, pose: 'read', mood: 'surprised', look: ELVIRA,
     extras: [{ x: 0.4, z: 6.9, heading: 2.6, pose: 'phone', mood: 'neutral', look: L('#c99468', 'young', 'm', 'cap', '#2a1a12', 'jacket', '#e05a1a', 'jeans', '#1f2840', ['backpack'], { seed: 22 }) }] },
-  consultorio: { spot: { x: 8.6, z: -4.6 }, npc: { x: 10.6, z: -8.83, heading: 0, seat: true }, pose: 'sit', mood: 'neutral', look: L('#f0d6c0', 'adult', 'f', 'bob', '#3a2416', 'sweater', '#2a2a2a', 'pants', '#2a2a30', ['glasses', 'earrings'], { seed: 31 }),
-    extras: [{ x: 10.9, z: -7.5, heading: 0, pose: 'lie', lying: true, y: 0.42, mood: 'sad', look: L('#d8a57e', 'adult', 'm', 'short', '#2a1a12', 'shirt', '#5a7a9a', 'pants', '#24304a', [], { seed: 32 }) }] },
+  consultorio: { spot: { x: 8.6, z: -4.6 }, npc: { x: 10.6, z: -8.5, heading: 0, seat: true }, pose: 'sit', mood: 'neutral', look: L('#f0d6c0', 'adult', 'f', 'bob', '#3a2416', 'sweater', '#2a2a2a', 'pants', '#2a2a30', ['glasses', 'earrings'], { seed: 31 }),
+    extras: [{ x: 10.9, z: -6.35, heading: 0, pose: 'lie', lying: true, y: 0.42, mood: 'sad', look: L('#d8a57e', 'adult', 'm', 'short', '#2a1a12', 'shirt', '#5a7a9a', 'pants', '#24304a', [], { seed: 32 }) }] },
   bateria: { spot: { x: -6, z: 0.4 }, npc: { x: -7.3, z: 1.6, heading: 2.6 }, pose: 'arms', mood: 'furious', look: L('#c48f69', 'adult', 'f', 'ponytail', '#2a1a12', 'apron', '#3a7a6a', 'jeans', '#24304a', ['earrings'], { seed: 41 }),
     extras: [{ x: -4.9, z: 1.7, heading: -2.4, pose: 'stand', mood: 'sleepy', look: L('#c48f69', 'teen', 'm', 'curly', '#120d0b', 'hoodie', '#141418', 'jeans', '#1f2840', ['headphones'], { seed: 42 }) }] },
   gotera: { spot: { x: -8, z: -4.0 }, npc: { x: -9.6, z: -6.2, heading: 0.6 }, pose: 'carry', mood: 'angry', look: L('#b9825c', 'adult', 'm', 'short', '#120d0b', 'tshirt', '#c8301e', 'pants', '#3a3a3a', [], { seed: 51 }),
     extras: [{ x: -6.6, z: -6.2, heading: -0.7, pose: 'arms', mood: 'worried', look: L('#b9825c', 'adult', 'f', 'braids', '#120d0b', 'sweater', '#e0a020', 'skirt', '#2a2a30', ['earrings'], { seed: 52 }) }] },
-  gatos: { spot: { x: 6.2, z: 4.4 }, npc: { x: 8.6, z: 8.83, heading: Math.PI, seat: true }, pose: 'sit', mood: 'smitten', look: L('#e8c0a0', 'old', 'f', 'bun', '#e8e8e8', 'dress', '#6a4a8a', null, null, ['glasses'], { seed: 61 }),
+  gatos: { spot: { x: 6.2, z: 4.4 }, npc: { x: 8.6, z: 8.5, heading: Math.PI, seat: true }, pose: 'sit', mood: 'smitten', look: L('#e8c0a0', 'old', 'f', 'bun', '#e8e8e8', 'sweater', '#6a4a8a', 'pants', '#3a3040', ['glasses'], { seed: 61 }),
     extras: [{ x: 3.4, z: 8.45, heading: Math.PI, pose: 'crouch', mood: 'pain', look: L('#c99468', 'adult', 'm', 'short', '#2a1a12', 'uniform', '#2a5a8a', 'pants', '#2a5a8a', ['beard'], { seed: 62 }) }] },
-  teletrabajo: { spot: { x: -8, z: -4.4 }, npc: { x: -9.85, z: -6.8, heading: -Math.PI / 2, seat: true }, pose: 'sit', mood: 'scared', look: L('#c99468', 'young', 'f', 'long', '#1a1210', 'sweater', '#e88ab0', 'pants', '#f0b8d0', ['headphones', 'glasses'], { seed: 71 }),
+  teletrabajo: { spot: { x: -8, z: -4.4 }, npc: { x: -10.04, z: -6.8, heading: -Math.PI / 2, seat: true }, pose: 'sit', mood: 'scared', look: L('#c99468', 'young', 'f', 'long', '#1a1210', 'sweater', '#e88ab0', 'pants', '#f0b8d0', ['headphones', 'glasses'], { seed: 71 }),
     extras: [{ x: -7.0, z: -5.6, heading: -2.4, pose: 'carry', mood: 'furious', look: L('#b9825c', 'adult', 'm', 'short', '#120d0b', 'tshirt', '#c8301e', 'pants', '#3a3a3a', [], { seed: 51 }) }] },
   turistas: { spot: { x: -4.2, z: 0.2 }, npc: { x: -5.7, z: 1.6, heading: 2.2 }, pose: 'phone', mood: 'worried', look: L('#f0d6c0', 'young', 'm', 'short', '#3a2416', 'jacket', '#2a4a7a', 'shorts', '#c8b890', ['backpack'], { seed: 81 }),
     extras: [{ x: -7.0, z: 1.2, heading: 1.8, pose: 'arms', mood: 'angry', look: L('#f0d6c0', 'young', 'f', 'ponytail', '#7a3a1e', 'tshirt', '#f4f0ea', 'shorts', '#2a4a6a', ['suitcase'], { seed: 82 }) }] },
@@ -243,7 +243,7 @@ const PLACES = {
   tango: { spot: { x: -6, z: 4.4 }, npc: { x: -6.6, z: 6.8, heading: 0.3 }, pose: 'dance', mood: 'love', look: L('#e2b896', 'elderly', 'm', 'short', '#e8e8e8', 'suit', '#2a2a2a', 'pants', '#2a2a2a', ['mustache', 'hat'], { seed: 101 }) },
   cumple: { spot: { x: 6, z: 4.2 }, npc: { x: 7.8, z: 5.9, heading: -2.6 }, pose: 'arms', mood: 'worried', look: L('#c48f69', 'adult', 'f', 'long', '#2a1a12', 'dress', '#e0408a', null, null, ['earrings'], { seed: 111 }),
     extras: [{ x: 4.0, z: 6.4, heading: 2.4, pose: 'wave', mood: 'laugh', look: L('#a8724e', 'adult', 'm', 'afro', '#d8301e', 'suit', '#f0c020', 'pants', '#2a6ac8', ['hat'], { seed: 112 }) }] },
-  ataud: { spot: { x: -8, z: -4.0 }, npc: { x: -10.68, z: -6.4, heading: Math.PI / 2, seat: true }, pose: 'sit', mood: 'laugh', look: L('#c48f69', 'elderly', 'm', 'bald', '#e8e8e8', 'sweater', '#6a5a3a', 'pants', '#3a3a3a', ['glasses', 'mustache'], { seed: 121 }),
+  ataud: { spot: { x: -8, z: -4.0 }, npc: { x: -10.35, z: -6.4, heading: Math.PI / 2, seat: true }, pose: 'sit', mood: 'laugh', look: L('#c48f69', 'elderly', 'm', 'bald', '#e8e8e8', 'sweater', '#6a5a3a', 'pants', '#3a3a3a', ['glasses', 'mustache'], { seed: 121 }),
     extras: [{ x: -6.8, z: -5.8, heading: -2.0, pose: 'arms', mood: 'worried', look: L('#a8724e', 'adult', 'f', 'bun', '#120d0b', 'scrubs', '#7ab0c8', 'pants', '#7ab0c8', [], { seed: 122 }) }] },
   administrador: { spot: { x: 6.0, z: 0.2 }, npc: { x: 7.4, z: -1.2, heading: -2.4 }, pose: 'read', mood: 'smile', look: BARRIONUEVO,
     extras: [{ x: 7.8, z: 1.4, heading: -2.0, pose: 'arms', mood: 'sleepy', look: RAMON }] },
@@ -344,7 +344,7 @@ export function wallBox([x0, z0, x1, z1]) {
 const NOT_SOLID = new Set(['rug', 'notice', 'doormat', 'lamp-ceiling', 'intercom', 'diploma', 'posters', 'egg-foam', 'towels', 'stain', 'cats', 'puddle', 'lockbox', 'bulb', 'photos', 'cross', 'garland', 'portrait', 'tupper', 'notepaper', 'tanks', 'lights', 'drain']);
 const TALL = new Set(['bookshelf', 'tree', 'cattree', 'kitchen', 'mailboxes', 'porteria', 'cabinet', 'halfwall', 'bathwall', 'piano', 'mattress-up', 'antenna', 'balloons', 'ringlight']);
 // How high you stand after jumping onto something (Space).
-const TOPS = { bench: 0.45, chair: 0.45, chairs: 0.45, sofa: 0.45, armchair: 0.45, divan: 0.45, bed: 0.55, mattress: 0.22, coffeetable: 0.42, 'table-dining': 0.76, desk: 0.76, boxes: 0.9, bucket: 0.36, bins: 1.0, coffin: 0.95, partytable: 0.76, foldtable: 0.74, parrilla: 0.95, woodpile: 0.6, rubble: 0.6, cementbags: 0.5, jacuzzi: 0.6, bathtub: 0.6, gifts: 0.5, kerb: 0.15, planter: 0.6, sidetable: 0.6, basket: 0.4, litter: 0.2, tools: 0.4, beanbag: 0.4, drums: 0.9, amp: 0.6 };
+const TOPS = { bench: 0.45, chair: 0.45, chairs: 0.45, sofa: 0.45, armchair: 0.45, gamingchair: 0.45, divan: 0.45, bed: 0.55, mattress: 0.22, coffeetable: 0.42, 'table-dining': 0.76, desk: 0.76, boxes: 0.9, bucket: 0.36, bins: 1.0, coffin: 0.95, partytable: 0.76, foldtable: 0.74, parrilla: 0.95, woodpile: 0.6, rubble: 0.6, cementbags: 0.5, jacuzzi: 0.6, bathtub: 0.6, gifts: 0.5, kerb: 0.15, planter: 0.6, sidetable: 0.6, basket: 0.4, litter: 0.2, tools: 0.4, beanbag: 0.4, drums: 0.9, amp: 0.6 };
 export function topOf(item) { return TOPS[item.type] ?? null; }
 
 export function cameraBlockers(floor) {

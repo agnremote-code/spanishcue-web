@@ -681,7 +681,7 @@ export function buildBuilding(scene: THREE.Scene, opts: { low: boolean; shadows:
     for (const m of cityGlows) m.emissiveIntensity = (m.userData.base as number) + lightsOn * 1.6;
     // The string lights of the meeting come on once the quorum is there, or at night.
     const party = meeting !== 'juntando' || k > 0.75;
-    for (const b of anim.bulbs) b.color.set(party ? '#ffd890' : '#5a5448');
+    for (const b of anim.bulbs) b.color.set(party ? '#ffd890' : '#d8d0b8');
   }
   applyEvening();
   function setEvening(clock: string, state: 'juntando' | 'quorum' | 'votado') {

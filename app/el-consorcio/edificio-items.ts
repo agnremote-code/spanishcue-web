@@ -442,7 +442,11 @@ export function buildItem(g: THREE.Group, item: Furniture & { label?: string }, 
       // String lights over the meeting, between the machine room and the parapet.
       const rand = random(9);
       for (let line = 0; line < 4; line++) {
-        const z0 = -2.4, z1 = 9.6, x = -w / 2 + 1 + line * (w - 2) / 3;
+        const z0 = -2.4, z1 = 9.8, x = -w / 2 + 1 + line * (w - 2) / 3;
+        // The cable they hang from, tied to the machine room and to a pole on the parapet.
+        const sag = (t: number) => new THREE.Vector3(x, 2.96 - Math.sin(t * Math.PI) * 0.5, (z0 + (z1 - z0) * t) - item.z);
+        add(h, new THREE.TubeGeometry(new THREE.CatmullRomCurve3(Array.from({ length: 15 }, (_, k) => sag(k / 14))), 42, 0.012, 4), std('#1a1a1a', 0.8), 0, 0, 0);
+        add(h, C(0.025, 0.03, 3.0, 8), IRON(), x, 1.5, z1 - item.z);
         for (let k = 0; k <= 14; k++) {
           const t = k / 14;
           const b = add(h, new THREE.SphereGeometry(0.05, 8, 6), bright(rand() < 0.5 ? '#ffd890' : '#fff0c8'), x, 2.9 - Math.sin(t * Math.PI) * 0.5, (z0 + (z1 - z0) * t) - item.z);
