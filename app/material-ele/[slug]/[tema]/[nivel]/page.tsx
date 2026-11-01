@@ -47,7 +47,7 @@ export default async function TemaLevelRoute({ params }: Props) {
             </div>
           </section>
           {featured ? <EleFeaturedLesson lesson={featured} /> : null}
-          <Section id="clases" title={`Clases de ${lower} para ${page.level}`} intro="En el orden del curso: primero la forma regular, después las irregularidades y el uso.">
+          <Section id="clases" title={`Clases de ${lower} para ${page.level}`} intro={page.order}>
             <EleLessonGrid lessons={lessons} />
           </Section>
           {page.goals.length ? (

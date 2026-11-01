@@ -53,12 +53,9 @@ export default async function PricingPage() {
   const cardCheckoutLive = checkoutLive && paddleReady(paddleConfig(env));
   const priceLabel = checkoutLive && !cardCheckoutLive ? `US$${config.founderOffer.priceUsd.toFixed(2)}` : "US$15.50";
   const accountEmail = emailFromHeaders(requestHeaders) || "";
-  const freeCta = {
-    href: "/el-hotel-de-lo-imposible",
-    labelKey: "nav.viewLesson" as const,
-    event: "cta_click" as const,
-    intent: "view_lesson" as const,
-  };
+  // Two free doors, one per kind of class: the full Clase inicial (grammar) and the free centre of Noche abierta (3D conversation).
+  const grammarCta = { href: "/gramatica/clase-inicial", labelKey: "nav.viewLesson" as const, event: "cta_click" as const, intent: "view_lesson" as const };
+  const conversationCta = { href: "/demo/noche-abierta", labelKey: "nav.viewLesson" as const, event: "cta_click" as const, intent: "view_lesson" as const };
 
   return <main className="pricing-page" id="main-content">
     <a className="skip-link" href="#pricing-title">{es ? "Saltar al contenido" : "Skip to content"}</a>
@@ -77,7 +74,10 @@ export default async function PricingPage() {
         <div className="pricing-amount"><b>US$0</b></div>
         <p>{es ? "Para conocer el producto con clases verdaderas, no una demo vacía." : "Experience the product through real lessons, not an empty demo."}</p>
         <ul><li>✓ {es ? "10 clases completas gratis" : "10 complete free lessons"}</li><li>✓ {es ? "2 por cada categoría" : "2 from every category"}</li><li>✓ {es ? "Sin tarjeta" : "No card required"}</li><li>✓ {es ? "Cuenta docente personal" : "Personal teacher account"}</li></ul>
-        <MarketingLink cta={freeCta} placement="pricing_free">{es ? "Abrir una clase gratis" : "Open a free lesson"} →</MarketingLink>
+        <div className="pricing-free-doors">
+          <MarketingLink cta={grammarCta} placement="pricing_free_grammar">{es ? "Probar una clase de gramática" : "Try a grammar lesson"} →</MarketingLink>
+          <MarketingLink cta={conversationCta} placement="pricing_free_conversation">{es ? "Probar una clase de conversación 3D" : "Try a 3D conversation lesson"} →</MarketingLink>
+        </div>
         <Link className="pricing-student-demo" href="/demo/mis-alumnos">{es ? "Probar demo de Mis alumnos" : "Try the My students demo"} →</Link>
       </article>
 

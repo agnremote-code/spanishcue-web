@@ -9,6 +9,7 @@ import { lessons } from "./lesson-catalog";
 import { MATERIAL_ELE_PATH, elePages } from "./material-ele/data";
 import { temaGroups, temaLevelPages, temaPages } from "./material-ele/temas";
 import { ACTIVIDADES_PATH, bancoPaths } from "./material-ele/actividades";
+import { INDICE_PATH, lastModifiedByPath } from "./material-ele/indice";
 import { RECURSOS_PATH, recursoPathForLesson, resourceLessons, resourcePathForLesson } from "./resource-seo";
 import { canonicalUrl, isSearchPrivatePath, languageAlternates } from "./seo";
 import { teachingGuides } from "./teaching-guides";
@@ -51,6 +52,7 @@ const curatedRoutes: { path: string; priority: number; changeFrequency: Frequenc
   ...temaLevelPages.map((page) => ({ path: page.path, priority: 0.7, changeFrequency: "monthly" as Frequency })),
   { path: ACTIVIDADES_PATH, priority: 0.85, changeFrequency: "weekly" },
   ...bancoPaths.map((path) => ({ path, priority: 0.7, changeFrequency: "monthly" as Frequency })),
+  { path: INDICE_PATH, priority: 0.8, changeFrequency: "weekly" },
   { path: "/ele-recursos-profesores", priority: 0.7, changeFrequency: "monthly" },
   { path: "/free-spanish-lesson", priority: 0.7, changeFrequency: "monthly" },
   { path: "/online-spanish-teaching-resources", priority: 0.6, changeFrequency: "monthly" },
@@ -84,7 +86,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entries.push(item);
   };
 
-  for (const route of curatedRoutes) push(entry(route.path, route.priority, route.changeFrequency));
+  for (const route of curatedRoutes) push(entry(route.path, route.priority, route.changeFrequency, lastModifiedByPath.get(route.path)));
 
   for (const lesson of lessons) {
     if (!isFreeLesson(lesson.id)) continue;

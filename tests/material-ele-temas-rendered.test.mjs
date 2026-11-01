@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import {JSDOM} from 'jsdom';
 const origin=process.env.CHESPANISH_TEST_ORIGIN || 'http://127.0.0.1:8787';
-const paths=['/material-ele/gramatica','/material-ele/vocabulario','/material-ele/funciones','/material-ele/cultura','/material-ele/gramatica/presente-de-indicativo','/material-ele/gramatica/ser-y-estar','/material-ele/gramatica/presente-de-subjuntivo','/material-ele/vocabulario/comida-y-restaurante','/material-ele/funciones/dar-consejos-y-recomendaciones','/material-ele/cultura/argentina','/material-ele/gramatica/presente-de-indicativo/a1','/material-ele/gramatica/presente-de-subjuntivo/b1'];
+const paths=['/material-ele/gramatica','/material-ele/vocabulario','/material-ele/funciones','/material-ele/cultura','/material-ele/gramatica/presente-de-indicativo','/material-ele/gramatica/ser-y-estar','/material-ele/gramatica/presente-de-subjuntivo','/material-ele/vocabulario/comida-y-restaurante','/material-ele/funciones/dar-consejos-y-recomendaciones','/material-ele/cultura/argentina','/material-ele/gramatica/presente-de-indicativo/a1','/material-ele/gramatica/presente-de-subjuntivo/b1','/material-ele/vocabulario/comida-y-restaurante/a2','/material-ele/funciones/narrar/b1'];
 for(const path of paths)test(`topic index serves indexable Spanish HTML for anonymous visitors: ${path}`,async()=>{
  const response=await fetch(origin+path);assert.equal(response.status,200);
  assert.equal(response.headers.get('cache-control'),'public, max-age=0, must-revalidate');assert.ok(!response.headers.has('set-cookie'));
@@ -25,5 +25,5 @@ test('unknown topic group and topic are 404s',async()=>{
  assert.equal((await fetch(origin+'/material-ele/gramatica/no-existe')).status,404);
  assert.equal((await fetch(origin+'/material-ele/no-existe/presente-de-indicativo')).status,404);
  assert.equal((await fetch(origin+'/material-ele/gramatica/presente-de-indicativo/z9')).status,404);
- assert.equal((await fetch(origin+'/material-ele/vocabulario/familia/a1')).status,404,'level pages are grammar-only');
+ assert.equal((await fetch(origin+'/material-ele/vocabulario/familia/c9')).status,404);
 });

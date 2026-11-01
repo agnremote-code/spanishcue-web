@@ -6,6 +6,7 @@ import { EleBuyBand, EleLessonGrid, EleLevelNav, EleTopbar, EleTopicCards, PRICE
 import { MATERIAL_ELE_PATH, eleLevels, eleTopics, hubDescription, hubFaq, hubTitle } from "./data";
 import { TemaGroupCards } from "./tema-components";
 import { temaPages } from "./temas";
+import { FEED_PATH, INDICE_PATH } from "./indice";
 import { ACTIVIDADES_PATH, actividadPages, ejercicioPages } from "./actividades";
 import styles from "../growth/growth.module.css";
 import ele from "./material-ele.module.css";
@@ -67,6 +68,7 @@ export default function MaterialElePage() {
 
           <Section id="indice" title="Índice de temas: gramática, vocabulario, funciones y cultura" intro={`${temaPages.length} temas organizados como los buscas, cada uno con las clases interactivas que lo enseñan: presente de indicativo, pretérito indefinido, subjuntivo, por y para, la familia, la comida, dar consejos, narrar…`}>
             <TemaGroupCards />
+            <p className={styles.sectionIntro}><Link href={INDICE_PATH}>Índice completo de Material ELE</Link>: todas las páginas en una lista, también disponible como <a href={FEED_PATH}>feed Atom</a>.</p>
           </Section>
 
           <Section id="banco" title="Banco de actividades: cada ficha con su propia página" intro={`${actividadPages.length} actividades, ${ejercicioPages.length} ejercicios con soluciones y preguntas de conversación por nivel, para imprimir o compartir en pantalla.`}>

@@ -29,6 +29,7 @@ const topLinks = [
   { href: MATERIAL_ELE_PATH, label: "Material ELE" },
   { href: `${MATERIAL_ELE_PATH}/preguntas-de-conversacion`, label: "Conversación" },
   { href: `${MATERIAL_ELE_PATH}/juegos-para-clase-de-espanol`, label: "Juegos" },
+  { href: `${MATERIAL_ELE_PATH}/indice`, label: "Índice" },
   { href: "/", label: "Biblioteca" },
   { href: "/para-profesores", label: "Para profesores" },
 ];
