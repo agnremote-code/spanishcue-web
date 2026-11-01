@@ -7,7 +7,7 @@ import { grammarTopicPages } from './growth/grammar-topics';
 import { guideModifiedDate } from "./guides/guide-format";
 import { lessons } from "./lesson-catalog";
 import { MATERIAL_ELE_PATH, elePages } from "./material-ele/data";
-import { temaGroups, temaPages } from "./material-ele/temas";
+import { temaGroups, temaLevelPages, temaPages } from "./material-ele/temas";
 import { ACTIVIDADES_PATH, bancoPaths } from "./material-ele/actividades";
 import { RECURSOS_PATH, recursoPathForLesson, resourceLessons, resourcePathForLesson } from "./resource-seo";
 import { canonicalUrl, isSearchPrivatePath, languageAlternates } from "./seo";
@@ -48,6 +48,7 @@ const curatedRoutes: { path: string; priority: number; changeFrequency: Frequenc
   ...elePages.map((page) => ({ path: page.path, priority: page.kind === "level" ? 0.85 : 0.8, changeFrequency: "monthly" as Frequency })),
   ...temaGroups.map((group) => ({ path: group.path, priority: 0.85, changeFrequency: "weekly" as Frequency })),
   ...temaPages.map((page) => ({ path: page.path, priority: 0.75, changeFrequency: "monthly" as Frequency })),
+  ...temaLevelPages.map((page) => ({ path: page.path, priority: 0.7, changeFrequency: "monthly" as Frequency })),
   { path: ACTIVIDADES_PATH, priority: 0.85, changeFrequency: "weekly" },
   ...bancoPaths.map((path) => ({ path, priority: 0.7, changeFrequency: "monthly" as Frequency })),
   { path: "/ele-recursos-profesores", priority: 0.7, changeFrequency: "monthly" },

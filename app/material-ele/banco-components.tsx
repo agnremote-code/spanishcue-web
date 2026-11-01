@@ -5,6 +5,7 @@ import { EleBuyBand, EleFeaturedLesson, EleLessonGrid, EleTopbar, eleLessonCards
 import { ACTIVIDADES_PATH, MATERIAL_ELE_PATH } from "./actividades";
 import type { ElePage } from "./data";
 import PrintButton from "./PrintButton";
+import ShareSnippet from "./ShareSnippet";
 import styles from "../growth/growth.module.css";
 import print from "./print.module.css";
 import type { ReactNode } from "react";
@@ -45,6 +46,7 @@ export function BancoFrame({ path, title, description, h1, level, kicker, parent
               <div className={print.noPrint}><EleLessonGrid lessons={lessons} /></div>
             </Section>
           ) : null}
+          <div className={print.noPrint}><Section title="Compartir"><ShareSnippet path={path} title={h1} description={description} /></Section></div>
           <Section title="Preguntas frecuentes"><Faq items={faq} /></Section>
           <div className={print.noPrint}><EleBuyBand /></div>
         </div>
