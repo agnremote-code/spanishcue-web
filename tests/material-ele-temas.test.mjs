@@ -54,3 +54,22 @@ test('the keyword topics ELE teachers search for are all present',()=>{
  const slugs=new Set(m.temaPages.map(p=>`${p.group}/${p.slug}`));
  for(const s of ['gramatica/presente-de-indicativo','gramatica/preterito-indefinido','gramatica/preterito-imperfecto','gramatica/presente-de-subjuntivo','gramatica/imperativo','gramatica/ser-y-estar','gramatica/por-y-para','gramatica/pronombres-de-objeto','gramatica/conectores','vocabulario/familia','vocabulario/comida-y-restaurante','vocabulario/la-ciudad','funciones/narrar','funciones/dar-consejos-y-recomendaciones','funciones/expresar-opinion','cultura/argentina','cultura/espana'])assert.ok(slugs.has(s),s);
 });
+
+test('grammar level pages exist only where two or more classes are written for that level, with bounded unique metadata',()=>{
+ assert.ok(m.temaLevelPages.length>=100,`only ${m.temaLevelPages.length} level pages`);
+ const paths=new Set(),titles=new Set(),h1s=new Set(),intros=new Set();const urls=new Set(m.sitemap().map(x=>x.url));
+ for(const p of m.temaLevelPages){
+  assert.equal(p.group,'gramatica');
+  assert.ok(p.lessonIds.length>=2,p.path);
+  for(const id of p.lessonIds){const l=m.lessons.find(x=>x.id===id);assert.ok((l.levels?.length?l.levels:[l.level]).includes(p.level),`${p.path} lists ${id} of level ${l.level}`);}
+  assert.match(p.path,/^\/material-ele\/gramatica\/[a-z0-9-]+\/(a1|a2|b1|b2|c1|c2)$/);
+  assert.ok(p.title.length<=78,`${p.path} title ${p.title.length}`);
+  assert.ok(p.description.length>=110&&p.description.length<=165,`${p.path} description ${p.description.length}`);
+  assert.ok(p.faq.length>=3,p.path);
+  assert.ok(urls.has('https://spanishcue.com'+p.path),p.path);
+  assert.equal(m.isEdgeCacheablePath(p.path),true,p.path);
+  paths.add(p.path);titles.add(p.title);h1s.add(p.h1);intros.add(p.intro);
+ }
+ assert.equal(paths.size,m.temaLevelPages.length);assert.equal(titles.size,m.temaLevelPages.length);assert.equal(h1s.size,m.temaLevelPages.length);assert.equal(intros.size,m.temaLevelPages.length);
+ assert.ok(m.temaLevelPageByPath.has('/material-ele/gramatica/presente-de-indicativo/a1'));
+});

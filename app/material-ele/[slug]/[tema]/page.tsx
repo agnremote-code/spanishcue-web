@@ -5,7 +5,8 @@ import { faqPageSchema, webPageSchema } from "../../../growth/schema";
 import { EleBuyBand, EleLessonGrid, EleTopbar, eleLessonCards, eleMetadata, featuredGrammarLesson, EleFeaturedLesson } from "../../components";
 import { MATERIAL_ELE_PATH, elePageBySlug } from "../../data";
 import { TemaCards, TemaGroupCards, TemaLevelLinks } from "../../tema-components";
-import { relatedTemas, temaGroupById, temaPageByPath, temaPages } from "../../temas";
+import { relatedTemas, temaGroupById, temaLevelsOf, temaPageByPath, temaPages } from "../../temas";
+import ShareSnippet from "../../ShareSnippet";
 import styles from "../../../growth/growth.module.css";
 
 type Props = { params: Promise<{ slug: string; tema: string }> };
@@ -30,6 +31,7 @@ export default async function TemaPageRoute({ params }: Props) {
   const featured = page.group === "gramatica" ? featuredGrammarLesson(page.lessonIds) : undefined;
   const guide = page.guide ? elePageBySlug.get(page.guide) : undefined;
   const related = relatedTemas(page);
+  const levelPages = temaLevelsOf(page);
   const lower = page.name.toLowerCase();
   return (
     <>
@@ -50,6 +52,13 @@ export default async function TemaPageRoute({ params }: Props) {
             </div>
           </section>
           {featured ? <EleFeaturedLesson lesson={featured} /> : null}
+          {levelPages.length ? (
+            <Section title={`${page.name} por nivel`} intro="Cada nivel con sus propias clases, en el orden del curso.">
+              <div className={styles.cardGrid}>
+                {levelPages.map((levelPage) => <Link className={styles.levelCard} key={levelPage.path} href={levelPage.path}><em>{levelPage.level}</em><b>{page.name} {levelPage.level}</b><span>{levelPage.lessonIds.length} clases{levelPage.freeCount ? ` · ${levelPage.freeCount} gratis` : ""}</span></Link>)}
+              </div>
+            </Section>
+          ) : null}
 
           <Section id="clases" title={`Clases para enseñar ${lower}`} intro={`${lessons.length === 1 ? "Una clase interactiva" : `${lessons.length} clases interactivas`} para compartir en pantalla, ordenadas de lo más básico a lo más avanzado. Las gratis se abren sin registro.`}>
             <EleLessonGrid lessons={lessons} />
@@ -81,6 +90,9 @@ export default async function TemaPageRoute({ params }: Props) {
           ) : null}
 
           <Section title="Preguntas frecuentes"><Faq items={page.faq} /></Section>
+          <Section title="Compartir">
+            <ShareSnippet path={page.path} title={`${page.name}: clases y actividades de español`} description={page.description} />
+          </Section>
 
           {related.length ? (
             <Section title={`Más temas de ${group.label.toLowerCase()}`}>

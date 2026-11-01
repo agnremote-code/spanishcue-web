@@ -235,3 +235,43 @@ export function relatedTemas(page: TemaPage, limit = 8): TemaPage[] {
   const sameGroup = temasByGroup(page.group).filter((other) => other.slug !== page.slug && other.parent !== page.parent);
   return [...sameParent, ...sameGroup].slice(0, limit);
 }
+
+/* Level pages: /material-ele/gramatica/<tema>/<nivel>. Only grammar, where every class is written for one level,
+ * and only levels with at least two classes, so a level page is never a copy of its topic page. */
+export type TemaLevelPage = {
+  group: TemaGroupId; parent: string; slug: string; level: string; path: string; name: string; h1: string; title: string; description: string; intro: string;
+  lessonIds: number[]; freeCount: number; goals: string[]; warmups: string[]; speaking: string[]; faq: { question: string; answer: string }[]; tema: TemaPage;
+};
+const lessonById = new Map(lessons.map((lesson) => [lesson.id, lesson]));
+const levelSlugs = ["A1", "A2", "B1", "B2", "C1", "C2"];
+const levelWords: Record<string, string> = { A1: "principiantes", A2: "nivel básico", B1: "nivel intermedio", B2: "intermedio alto", C1: "nivel avanzado", C2: "nivel de maestría" };
+function buildLevelPage(tema: TemaPage, level: string): TemaLevelPage | null {
+  const ids = tema.lessonIds.filter((id) => { const lesson = lessonById.get(id); return lesson ? lessonLevels(lesson).includes(level) : false; });
+  if (ids.length < 2) return null;
+  const items = ids.map((id) => lessonById.get(id)!);
+  const freeCount = ids.filter((id) => isFreeLesson(id)).length;
+  const lower = tema.name.toLowerCase();
+  const titles = items.slice(0, 3).map((lesson) => `«${lesson.title.replace(/:.*$/, "")}»`).join(", ");
+  const longTitle = `${tema.name} ${level}: clases y actividades ELE para ${levelWords[level]} | SpanishCue`;
+  const title = [longTitle, `${tema.name} ${level}: clases y actividades ELE | SpanishCue`, `${tema.name} ${level}: clases ELE | SpanishCue`].find((candidate) => candidate.length <= 78) ?? `${tema.name} ${level} | SpanishCue`;
+  let description = `${tema.name} para alumnos de ${level}: ${ids.length} clases interactivas con teoría visual, práctica corregida y conversación, ordenadas de lo regular a lo irregular.`;
+  if (description.length > 165) description = `${tema.name} en ${level}: ${ids.length} clases interactivas con teoría, práctica y conversación para la clase de ELE.`;
+  if (description.length < 110) description = `${description} Una clase gratis por nivel para probar sin registro.`;
+  return {
+    group: tema.group, parent: tema.parent, slug: tema.slug, level, path: `${tema.path}/${level.toLowerCase()}`, name: tema.name, tema,
+    h1: `${tema.name} en ${level}: ${ids.length} clases para enseñarlo a ${levelWords[level]}`, title, description,
+    intro: `En ${level}, ${lower} se trabaja en ${ids.length} clases: ${titles}${ids.length > 3 ? " y más" : ""}. Cada una abre en una pantalla para compartir, con la regla primero, práctica con corrección y una tarea de conversación en la que el alumno necesita ${lower} para decir lo que quiere decir.`,
+    lessonIds: ids, freeCount,
+    goals: uniq(items.flatMap((lesson) => lesson.goals.filter((goal) => goal && goal !== lesson.subtitle))).slice(0, 8),
+    warmups: uniq(items.map((lesson) => lesson.warmup).filter(Boolean)).slice(0, 4),
+    speaking: uniq(items.flatMap((lesson) => lesson.speaking).filter(Boolean)).slice(0, 8),
+    faq: [
+      { question: `¿Qué parte de ${lower} corresponde a ${level}?`, answer: `La que enseñan estas ${ids.length} clases, alineadas con el MCER y el PCIC para ${level}: ${items.map((lesson) => lesson.title.replace(/:.*$/, "")).join("; ")}.` },
+      { question: `¿Con cuál empiezo?`, answer: `Con la primera de la lista: las clases están en el orden del curso de gramática de SpanishCue, de lo regular a lo irregular y de la forma al uso. ${freeCount ? `${freeCount === 1 ? "Una es gratis" : `${freeCount} son gratis`} y se abre sin registro.` : "Para probar el formato, abre la clase gratis de este nivel en Material ELE por nivel."}` },
+      { question: `¿Hay ${lower} en otros niveles?`, answer: `Sí: la página de ${lower} reúne todas las clases del tema, de ${tema.levels[0]} a ${tema.levels[tema.levels.length - 1]}, y enlaza cada nivel.` },
+    ],
+  };
+}
+export const temaLevelPages: TemaLevelPage[] = temaPages.filter((page) => page.group === "gramatica").flatMap((tema) => levelSlugs.map((level) => buildLevelPage(tema, level)).filter((page): page is TemaLevelPage => page !== null));
+export const temaLevelPageByPath = new Map(temaLevelPages.map((page) => [page.path, page]));
+export const temaLevelsOf = (tema: TemaPage) => temaLevelPages.filter((page) => page.slug === tema.slug && page.group === tema.group);
