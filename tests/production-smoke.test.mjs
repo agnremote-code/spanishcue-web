@@ -126,6 +126,19 @@ test('a retired /resources slug must 308 to the current lesson page (404 tolerat
   const wrong = fixture({ [legacyResource]: () => new Response(null, { status: 308, headers: { location: '/resources' } }) });
   await assert.rejects(runSmoke('https://spanishcue.com', wrong), /wrong redirect target/);
 });
+test('a 503 on a GET right after the version switch is retried twice, a third one or a 500 is final', async () => {
+  const normal = fixture();
+  let calls = 0;
+  const switching = (url, options) => new URL(url).pathname === '/' && ++calls <= 2 ? new Response('busy', { status: 503 }) : normal(url, options);
+  assert.ok((await runSmoke('https://spanishcue.com', switching, { retryDelayMs: 0 })).some(r => r.path === '/'));
+  assert.equal(calls, 4, 'two 503s, the successful third try, then the later / check');
+  const down = (url, options) => new URL(url).pathname === '/' ? new Response('busy', { status: 503 }) : normal(url, options);
+  await assert.rejects(runSmoke('https://spanishcue.com', down, { retryDelayMs: 0 }), /\/: expected 200, got 503/);
+  let crashes = 0;
+  const crash = (url, options) => new URL(url).pathname === '/' && ++crashes ? new Response('boom', { status: 500 }) : normal(url, options);
+  await assert.rejects(runSmoke('https://spanishcue.com', crash, { retryDelayMs: 0 }), /\/: expected 200, got 500/);
+  assert.equal(crashes, 1);
+});
 test('a dropped GET is retried once, and a network failure names the request it hit', async () => {
   const timeout = () => { throw new DOMException('The operation was aborted due to timeout', 'TimeoutError'); };
   const normal = fixture();
