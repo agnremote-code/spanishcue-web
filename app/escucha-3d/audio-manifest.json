@@ -641,6 +641,636 @@
    "seconds": 89.93,
    "src": "/audio/escucha-3d/casino-c2-vip.mp3"
   },
+  "consorcio/a0-administrador": {
+   "hash": "33c549c793ffa494a397",
+   "seconds": 23.01,
+   "src": "/audio/escucha-3d/consorcio-a0-administrador.mp3"
+  },
+  "consorcio/a0-asamblea": {
+   "hash": "4d5825f1f7a583a8e718",
+   "seconds": 21.4,
+   "src": "/audio/escucha-3d/consorcio-a0-asamblea.mp3"
+  },
+  "consorcio/a0-ataud": {
+   "hash": "d5d5877735ebcbc880e0",
+   "seconds": 25.8,
+   "src": "/audio/escucha-3d/consorcio-a0-ataud.mp3"
+  },
+  "consorcio/a0-bateria": {
+   "hash": "4aa824b52cffdd0b5bf2",
+   "seconds": 28.08,
+   "src": "/audio/escucha-3d/consorcio-a0-bateria.mp3"
+  },
+  "consorcio/a0-buzones": {
+   "hash": "ee0d542c410b4b713d15",
+   "seconds": 26.18,
+   "src": "/audio/escucha-3d/consorcio-a0-buzones.mp3"
+  },
+  "consorcio/a0-consultorio": {
+   "hash": "d5af06e6ea6468d213f0",
+   "seconds": 28.63,
+   "src": "/audio/escucha-3d/consorcio-a0-consultorio.mp3"
+  },
+  "consorcio/a0-cumple": {
+   "hash": "16cc2af632ad6d35aff9",
+   "seconds": 30.28,
+   "src": "/audio/escucha-3d/consorcio-a0-cumple.mp3"
+  },
+  "consorcio/a0-gatos": {
+   "hash": "53677335bc8e68949ded",
+   "seconds": 24.93,
+   "src": "/audio/escucha-3d/consorcio-a0-gatos.mp3"
+  },
+  "consorcio/a0-gotera": {
+   "hash": "3e67e088d7b28b3269c0",
+   "seconds": 22.96,
+   "src": "/audio/escucha-3d/consorcio-a0-gotera.mp3"
+  },
+  "consorcio/a0-herencia": {
+   "hash": "939427eb3264f69f9828",
+   "seconds": 25.27,
+   "src": "/audio/escucha-3d/consorcio-a0-herencia.mp3"
+  },
+  "consorcio/a0-llegada": {
+   "hash": "696c91af690f11100aef",
+   "seconds": 27.28,
+   "src": "/audio/escucha-3d/consorcio-a0-llegada.mp3"
+  },
+  "consorcio/a0-misterio": {
+   "hash": "be680066077b4bf4c61e",
+   "seconds": 25.22,
+   "src": "/audio/escucha-3d/consorcio-a0-misterio.mp3"
+  },
+  "consorcio/a0-mudanza": {
+   "hash": "f1692f77258c119e0725",
+   "seconds": 23.64,
+   "src": "/audio/escucha-3d/consorcio-a0-mudanza.mp3"
+  },
+  "consorcio/a0-obra": {
+   "hash": "ace66feac1f1d08975b4",
+   "seconds": 24.52,
+   "src": "/audio/escucha-3d/consorcio-a0-obra.mp3"
+  },
+  "consorcio/a0-sogas": {
+   "hash": "2cb29f7a32630226627d",
+   "seconds": 25.29,
+   "src": "/audio/escucha-3d/consorcio-a0-sogas.mp3"
+  },
+  "consorcio/a0-tango": {
+   "hash": "d8cb3d1668941e2bfb6a",
+   "seconds": 23.75,
+   "src": "/audio/escucha-3d/consorcio-a0-tango.mp3"
+  },
+  "consorcio/a0-teletrabajo": {
+   "hash": "dde67e35a55ac09e7c23",
+   "seconds": 27.43,
+   "src": "/audio/escucha-3d/consorcio-a0-teletrabajo.mp3"
+  },
+  "consorcio/a0-turistas": {
+   "hash": "38a7f254284e49ba6b60",
+   "seconds": 23.8,
+   "src": "/audio/escucha-3d/consorcio-a0-turistas.mp3"
+  },
+  "consorcio/a1-administrador": {
+   "hash": "e3d64db9d59dff45fbe5",
+   "seconds": 35.4,
+   "src": "/audio/escucha-3d/consorcio-a1-administrador.mp3"
+  },
+  "consorcio/a1-asamblea": {
+   "hash": "88d94f1f57cb83b1961d",
+   "seconds": 34.05,
+   "src": "/audio/escucha-3d/consorcio-a1-asamblea.mp3"
+  },
+  "consorcio/a1-ataud": {
+   "hash": "a5f9b05dd343972be579",
+   "seconds": 47.29,
+   "src": "/audio/escucha-3d/consorcio-a1-ataud.mp3"
+  },
+  "consorcio/a1-bateria": {
+   "hash": "e47bfe0b3f12719ec49e",
+   "seconds": 44.86,
+   "src": "/audio/escucha-3d/consorcio-a1-bateria.mp3"
+  },
+  "consorcio/a1-buzones": {
+   "hash": "512b28435749fc7a46bf",
+   "seconds": 39.46,
+   "src": "/audio/escucha-3d/consorcio-a1-buzones.mp3"
+  },
+  "consorcio/a1-consultorio": {
+   "hash": "c00ce441d6ca969cf7e6",
+   "seconds": 36.12,
+   "src": "/audio/escucha-3d/consorcio-a1-consultorio.mp3"
+  },
+  "consorcio/a1-cumple": {
+   "hash": "6478f54ad16d63d21095",
+   "seconds": 42.24,
+   "src": "/audio/escucha-3d/consorcio-a1-cumple.mp3"
+  },
+  "consorcio/a1-gatos": {
+   "hash": "2286d5171aa4e09dc591",
+   "seconds": 39.1,
+   "src": "/audio/escucha-3d/consorcio-a1-gatos.mp3"
+  },
+  "consorcio/a1-gotera": {
+   "hash": "4dbf64cc036b49fc786c",
+   "seconds": 39.84,
+   "src": "/audio/escucha-3d/consorcio-a1-gotera.mp3"
+  },
+  "consorcio/a1-herencia": {
+   "hash": "47d33cd989fdcb55a6c7",
+   "seconds": 36.34,
+   "src": "/audio/escucha-3d/consorcio-a1-herencia.mp3"
+  },
+  "consorcio/a1-llegada": {
+   "hash": "447804b43defc87d8a39",
+   "seconds": 51.72,
+   "src": "/audio/escucha-3d/consorcio-a1-llegada.mp3"
+  },
+  "consorcio/a1-misterio": {
+   "hash": "368da4b58ae64549908e",
+   "seconds": 33.21,
+   "src": "/audio/escucha-3d/consorcio-a1-misterio.mp3"
+  },
+  "consorcio/a1-mudanza": {
+   "hash": "044c3bf47158612244cd",
+   "seconds": 36.42,
+   "src": "/audio/escucha-3d/consorcio-a1-mudanza.mp3"
+  },
+  "consorcio/a1-obra": {
+   "hash": "3140eb5e73d6272f5b6e",
+   "seconds": 39.7,
+   "src": "/audio/escucha-3d/consorcio-a1-obra.mp3"
+  },
+  "consorcio/a1-sogas": {
+   "hash": "dfb5c61b9228a89259a5",
+   "seconds": 41.09,
+   "src": "/audio/escucha-3d/consorcio-a1-sogas.mp3"
+  },
+  "consorcio/a1-tango": {
+   "hash": "f07f5fac25fbfe19c76b",
+   "seconds": 30.12,
+   "src": "/audio/escucha-3d/consorcio-a1-tango.mp3"
+  },
+  "consorcio/a1-teletrabajo": {
+   "hash": "39bb1de206a3d5ad6d58",
+   "seconds": 35.99,
+   "src": "/audio/escucha-3d/consorcio-a1-teletrabajo.mp3"
+  },
+  "consorcio/a1-turistas": {
+   "hash": "e8006fdf36dda05b108f",
+   "seconds": 40.99,
+   "src": "/audio/escucha-3d/consorcio-a1-turistas.mp3"
+  },
+  "consorcio/a2-administrador": {
+   "hash": "859282ab5eca21aa7bb5",
+   "seconds": 41.06,
+   "src": "/audio/escucha-3d/consorcio-a2-administrador.mp3"
+  },
+  "consorcio/a2-asamblea": {
+   "hash": "c5658120dd4a4b3fa7ed",
+   "seconds": 42.43,
+   "src": "/audio/escucha-3d/consorcio-a2-asamblea.mp3"
+  },
+  "consorcio/a2-ataud": {
+   "hash": "957ecf154b44bdf13054",
+   "seconds": 50.81,
+   "src": "/audio/escucha-3d/consorcio-a2-ataud.mp3"
+  },
+  "consorcio/a2-bateria": {
+   "hash": "36c2aa0d1c8f63a658fd",
+   "seconds": 55.86,
+   "src": "/audio/escucha-3d/consorcio-a2-bateria.mp3"
+  },
+  "consorcio/a2-buzones": {
+   "hash": "f6d13547a5da5ec35516",
+   "seconds": 49.62,
+   "src": "/audio/escucha-3d/consorcio-a2-buzones.mp3"
+  },
+  "consorcio/a2-consultorio": {
+   "hash": "9c322c9b6d99ea725234",
+   "seconds": 49.98,
+   "src": "/audio/escucha-3d/consorcio-a2-consultorio.mp3"
+  },
+  "consorcio/a2-cumple": {
+   "hash": "f18eba685baecdf04db0",
+   "seconds": 53.54,
+   "src": "/audio/escucha-3d/consorcio-a2-cumple.mp3"
+  },
+  "consorcio/a2-gatos": {
+   "hash": "eca6c2af6af55cbf29ce",
+   "seconds": 44.13,
+   "src": "/audio/escucha-3d/consorcio-a2-gatos.mp3"
+  },
+  "consorcio/a2-gotera": {
+   "hash": "a3a2ebbf5bc226725ac0",
+   "seconds": 53.4,
+   "src": "/audio/escucha-3d/consorcio-a2-gotera.mp3"
+  },
+  "consorcio/a2-herencia": {
+   "hash": "93b7bd941e2b8e23c14f",
+   "seconds": 50.99,
+   "src": "/audio/escucha-3d/consorcio-a2-herencia.mp3"
+  },
+  "consorcio/a2-llegada": {
+   "hash": "daa39b248d3602662a21",
+   "seconds": 48.88,
+   "src": "/audio/escucha-3d/consorcio-a2-llegada.mp3"
+  },
+  "consorcio/a2-misterio": {
+   "hash": "b9345cbd5d5913663ecb",
+   "seconds": 44.32,
+   "src": "/audio/escucha-3d/consorcio-a2-misterio.mp3"
+  },
+  "consorcio/a2-mudanza": {
+   "hash": "292c07a19ec138233a86",
+   "seconds": 48.64,
+   "src": "/audio/escucha-3d/consorcio-a2-mudanza.mp3"
+  },
+  "consorcio/a2-obra": {
+   "hash": "1259a55dd39afbd7aabf",
+   "seconds": 45.07,
+   "src": "/audio/escucha-3d/consorcio-a2-obra.mp3"
+  },
+  "consorcio/a2-sogas": {
+   "hash": "977d11e3f2f4327bea8b",
+   "seconds": 51.21,
+   "src": "/audio/escucha-3d/consorcio-a2-sogas.mp3"
+  },
+  "consorcio/a2-tango": {
+   "hash": "80a722a996aa1bb02e1a",
+   "seconds": 34.43,
+   "src": "/audio/escucha-3d/consorcio-a2-tango.mp3"
+  },
+  "consorcio/a2-teletrabajo": {
+   "hash": "5dada436340f6b238c5c",
+   "seconds": 52.41,
+   "src": "/audio/escucha-3d/consorcio-a2-teletrabajo.mp3"
+  },
+  "consorcio/a2-turistas": {
+   "hash": "11ed793794ad649c376f",
+   "seconds": 47.71,
+   "src": "/audio/escucha-3d/consorcio-a2-turistas.mp3"
+  },
+  "consorcio/b1-administrador": {
+   "hash": "0667f154a699988b2092",
+   "seconds": 51.5,
+   "src": "/audio/escucha-3d/consorcio-b1-administrador.mp3"
+  },
+  "consorcio/b1-asamblea": {
+   "hash": "f6f309d1e509885a2583",
+   "seconds": 50.95,
+   "src": "/audio/escucha-3d/consorcio-b1-asamblea.mp3"
+  },
+  "consorcio/b1-ataud": {
+   "hash": "0f068d164bcf6972a9da",
+   "seconds": 59.73,
+   "src": "/audio/escucha-3d/consorcio-b1-ataud.mp3"
+  },
+  "consorcio/b1-bateria": {
+   "hash": "43b876c6accaf8820088",
+   "seconds": 53.67,
+   "src": "/audio/escucha-3d/consorcio-b1-bateria.mp3"
+  },
+  "consorcio/b1-buzones": {
+   "hash": "3c7a8b9ef23608962ad1",
+   "seconds": 56.58,
+   "src": "/audio/escucha-3d/consorcio-b1-buzones.mp3"
+  },
+  "consorcio/b1-consultorio": {
+   "hash": "45af97ab4afccf3f2600",
+   "seconds": 52.55,
+   "src": "/audio/escucha-3d/consorcio-b1-consultorio.mp3"
+  },
+  "consorcio/b1-cumple": {
+   "hash": "3ac487919485d6d56028",
+   "seconds": 54.71,
+   "src": "/audio/escucha-3d/consorcio-b1-cumple.mp3"
+  },
+  "consorcio/b1-gatos": {
+   "hash": "588840a78d6581e1f8a2",
+   "seconds": 54.26,
+   "src": "/audio/escucha-3d/consorcio-b1-gatos.mp3"
+  },
+  "consorcio/b1-gotera": {
+   "hash": "ca4469ccb718557f19e0",
+   "seconds": 51.5,
+   "src": "/audio/escucha-3d/consorcio-b1-gotera.mp3"
+  },
+  "consorcio/b1-herencia": {
+   "hash": "965f3c2ae928392d4760",
+   "seconds": 61.8,
+   "src": "/audio/escucha-3d/consorcio-b1-herencia.mp3"
+  },
+  "consorcio/b1-llegada": {
+   "hash": "9b2f25eb1856faabec20",
+   "seconds": 53.15,
+   "src": "/audio/escucha-3d/consorcio-b1-llegada.mp3"
+  },
+  "consorcio/b1-misterio": {
+   "hash": "84b0145201b7020fa52f",
+   "seconds": 51.44,
+   "src": "/audio/escucha-3d/consorcio-b1-misterio.mp3"
+  },
+  "consorcio/b1-mudanza": {
+   "hash": "3c83d1e2d651b2a64919",
+   "seconds": 52.61,
+   "src": "/audio/escucha-3d/consorcio-b1-mudanza.mp3"
+  },
+  "consorcio/b1-obra": {
+   "hash": "8ac9b8679296e66bf0d5",
+   "seconds": 50.58,
+   "src": "/audio/escucha-3d/consorcio-b1-obra.mp3"
+  },
+  "consorcio/b1-sogas": {
+   "hash": "87fc0eda0edb3c70a8fc",
+   "seconds": 55.98,
+   "src": "/audio/escucha-3d/consorcio-b1-sogas.mp3"
+  },
+  "consorcio/b1-tango": {
+   "hash": "4360b01299e5728ba6bf",
+   "seconds": 49.15,
+   "src": "/audio/escucha-3d/consorcio-b1-tango.mp3"
+  },
+  "consorcio/b1-teletrabajo": {
+   "hash": "5a9d08c0c2d6d279eee2",
+   "seconds": 56.87,
+   "src": "/audio/escucha-3d/consorcio-b1-teletrabajo.mp3"
+  },
+  "consorcio/b1-turistas": {
+   "hash": "148a8aa139074c8749dd",
+   "seconds": 54.21,
+   "src": "/audio/escucha-3d/consorcio-b1-turistas.mp3"
+  },
+  "consorcio/b2-administrador": {
+   "hash": "5d58300f895ab6bab172",
+   "seconds": 55.93,
+   "src": "/audio/escucha-3d/consorcio-b2-administrador.mp3"
+  },
+  "consorcio/b2-asamblea": {
+   "hash": "46dfde2117d93073b8ec",
+   "seconds": 62.87,
+   "src": "/audio/escucha-3d/consorcio-b2-asamblea.mp3"
+  },
+  "consorcio/b2-ataud": {
+   "hash": "198bba60d7c39b58ea65",
+   "seconds": 68.07,
+   "src": "/audio/escucha-3d/consorcio-b2-ataud.mp3"
+  },
+  "consorcio/b2-bateria": {
+   "hash": "61a077e257708558741e",
+   "seconds": 68.31,
+   "src": "/audio/escucha-3d/consorcio-b2-bateria.mp3"
+  },
+  "consorcio/b2-buzones": {
+   "hash": "11a8b4b0b84e05ef2b06",
+   "seconds": 66.15,
+   "src": "/audio/escucha-3d/consorcio-b2-buzones.mp3"
+  },
+  "consorcio/b2-consultorio": {
+   "hash": "e808303a9f954c12ee74",
+   "seconds": 65.36,
+   "src": "/audio/escucha-3d/consorcio-b2-consultorio.mp3"
+  },
+  "consorcio/b2-cumple": {
+   "hash": "c3ba5d13c253ef4da09f",
+   "seconds": 70.95,
+   "src": "/audio/escucha-3d/consorcio-b2-cumple.mp3"
+  },
+  "consorcio/b2-gatos": {
+   "hash": "01199de9298e9cd4a55f",
+   "seconds": 66.9,
+   "src": "/audio/escucha-3d/consorcio-b2-gatos.mp3"
+  },
+  "consorcio/b2-gotera": {
+   "hash": "66ccd098608dc38e8b68",
+   "seconds": 75.8,
+   "src": "/audio/escucha-3d/consorcio-b2-gotera.mp3"
+  },
+  "consorcio/b2-herencia": {
+   "hash": "31629ef3a1dfd3b36b22",
+   "seconds": 78.2,
+   "src": "/audio/escucha-3d/consorcio-b2-herencia.mp3"
+  },
+  "consorcio/b2-llegada": {
+   "hash": "229c234c2225dcab8a99",
+   "seconds": 55.7,
+   "src": "/audio/escucha-3d/consorcio-b2-llegada.mp3"
+  },
+  "consorcio/b2-misterio": {
+   "hash": "19d1582c1f2235e510c3",
+   "seconds": 61.79,
+   "src": "/audio/escucha-3d/consorcio-b2-misterio.mp3"
+  },
+  "consorcio/b2-mudanza": {
+   "hash": "392733e5b7efd88e2931",
+   "seconds": 64.04,
+   "src": "/audio/escucha-3d/consorcio-b2-mudanza.mp3"
+  },
+  "consorcio/b2-obra": {
+   "hash": "f0cb88328799a5339e31",
+   "seconds": 70.02,
+   "src": "/audio/escucha-3d/consorcio-b2-obra.mp3"
+  },
+  "consorcio/b2-sogas": {
+   "hash": "f25b106ed67f69094e1b",
+   "seconds": 70.88,
+   "src": "/audio/escucha-3d/consorcio-b2-sogas.mp3"
+  },
+  "consorcio/b2-tango": {
+   "hash": "09bbc363004bcf49ed72",
+   "seconds": 53.04,
+   "src": "/audio/escucha-3d/consorcio-b2-tango.mp3"
+  },
+  "consorcio/b2-teletrabajo": {
+   "hash": "59c00d7b475b2b83363c",
+   "seconds": 63.36,
+   "src": "/audio/escucha-3d/consorcio-b2-teletrabajo.mp3"
+  },
+  "consorcio/b2-turistas": {
+   "hash": "bcc79ad75e725aee2e7a",
+   "seconds": 64.07,
+   "src": "/audio/escucha-3d/consorcio-b2-turistas.mp3"
+  },
+  "consorcio/c1-administrador": {
+   "hash": "182e4c72bfa12ae48112",
+   "seconds": 74.81,
+   "src": "/audio/escucha-3d/consorcio-c1-administrador.mp3"
+  },
+  "consorcio/c1-asamblea": {
+   "hash": "04d1c423c8711eda565b",
+   "seconds": 69.06,
+   "src": "/audio/escucha-3d/consorcio-c1-asamblea.mp3"
+  },
+  "consorcio/c1-ataud": {
+   "hash": "78867c123dd3297df807",
+   "seconds": 95.87,
+   "src": "/audio/escucha-3d/consorcio-c1-ataud.mp3"
+  },
+  "consorcio/c1-bateria": {
+   "hash": "ac108d9a6b8725c8961a",
+   "seconds": 82.92,
+   "src": "/audio/escucha-3d/consorcio-c1-bateria.mp3"
+  },
+  "consorcio/c1-buzones": {
+   "hash": "c501a5c578709c3934b3",
+   "seconds": 80.93,
+   "src": "/audio/escucha-3d/consorcio-c1-buzones.mp3"
+  },
+  "consorcio/c1-consultorio": {
+   "hash": "95fd0464b0d61342f3a7",
+   "seconds": 87.12,
+   "src": "/audio/escucha-3d/consorcio-c1-consultorio.mp3"
+  },
+  "consorcio/c1-cumple": {
+   "hash": "500a2a26c309fe0281b3",
+   "seconds": 89.17,
+   "src": "/audio/escucha-3d/consorcio-c1-cumple.mp3"
+  },
+  "consorcio/c1-gatos": {
+   "hash": "0417eff8b2701ee9e603",
+   "seconds": 83.28,
+   "src": "/audio/escucha-3d/consorcio-c1-gatos.mp3"
+  },
+  "consorcio/c1-gotera": {
+   "hash": "22675dd554d47c89c2a7",
+   "seconds": 82.94,
+   "src": "/audio/escucha-3d/consorcio-c1-gotera.mp3"
+  },
+  "consorcio/c1-herencia": {
+   "hash": "f8f5b552caa628b471ff",
+   "seconds": 65.68,
+   "src": "/audio/escucha-3d/consorcio-c1-herencia.mp3"
+  },
+  "consorcio/c1-llegada": {
+   "hash": "b1cef96f1a85693e152d",
+   "seconds": 77.12,
+   "src": "/audio/escucha-3d/consorcio-c1-llegada.mp3"
+  },
+  "consorcio/c1-misterio": {
+   "hash": "f3714c7e4772ba6af6e4",
+   "seconds": 83.0,
+   "src": "/audio/escucha-3d/consorcio-c1-misterio.mp3"
+  },
+  "consorcio/c1-mudanza": {
+   "hash": "f9d30366f7cc040080de",
+   "seconds": 75.17,
+   "src": "/audio/escucha-3d/consorcio-c1-mudanza.mp3"
+  },
+  "consorcio/c1-obra": {
+   "hash": "ff893bbe27ad313c374d",
+   "seconds": 84.5,
+   "src": "/audio/escucha-3d/consorcio-c1-obra.mp3"
+  },
+  "consorcio/c1-sogas": {
+   "hash": "abe72ad469ee4c7fca42",
+   "seconds": 86.63,
+   "src": "/audio/escucha-3d/consorcio-c1-sogas.mp3"
+  },
+  "consorcio/c1-tango": {
+   "hash": "86276043c87cb9ba74af",
+   "seconds": 73.18,
+   "src": "/audio/escucha-3d/consorcio-c1-tango.mp3"
+  },
+  "consorcio/c1-teletrabajo": {
+   "hash": "5ddf08d890dcdab3b446",
+   "seconds": 90.29,
+   "src": "/audio/escucha-3d/consorcio-c1-teletrabajo.mp3"
+  },
+  "consorcio/c1-turistas": {
+   "hash": "b547df734c6faa25028f",
+   "seconds": 90.16,
+   "src": "/audio/escucha-3d/consorcio-c1-turistas.mp3"
+  },
+  "consorcio/c2-administrador": {
+   "hash": "f341e80beb86d99c24b3",
+   "seconds": 98.06,
+   "src": "/audio/escucha-3d/consorcio-c2-administrador.mp3"
+  },
+  "consorcio/c2-asamblea": {
+   "hash": "c536d266dca7594304a9",
+   "seconds": 93.91,
+   "src": "/audio/escucha-3d/consorcio-c2-asamblea.mp3"
+  },
+  "consorcio/c2-ataud": {
+   "hash": "f4e51fbcebbf0f13b5b7",
+   "seconds": 105.86,
+   "src": "/audio/escucha-3d/consorcio-c2-ataud.mp3"
+  },
+  "consorcio/c2-bateria": {
+   "hash": "a164a8eed4af0c56c967",
+   "seconds": 101.24,
+   "src": "/audio/escucha-3d/consorcio-c2-bateria.mp3"
+  },
+  "consorcio/c2-buzones": {
+   "hash": "87ab996a90ec1d8899a7",
+   "seconds": 97.97,
+   "src": "/audio/escucha-3d/consorcio-c2-buzones.mp3"
+  },
+  "consorcio/c2-consultorio": {
+   "hash": "01385d79f646a9ad953c",
+   "seconds": 96.76,
+   "src": "/audio/escucha-3d/consorcio-c2-consultorio.mp3"
+  },
+  "consorcio/c2-cumple": {
+   "hash": "0acf1f454cdbf7b36bcd",
+   "seconds": 96.13,
+   "src": "/audio/escucha-3d/consorcio-c2-cumple.mp3"
+  },
+  "consorcio/c2-gatos": {
+   "hash": "d00f80b9ea2e22b7ddf9",
+   "seconds": 85.1,
+   "src": "/audio/escucha-3d/consorcio-c2-gatos.mp3"
+  },
+  "consorcio/c2-gotera": {
+   "hash": "54cdf5c5487ab3f6734c",
+   "seconds": 113.14,
+   "src": "/audio/escucha-3d/consorcio-c2-gotera.mp3"
+  },
+  "consorcio/c2-herencia": {
+   "hash": "e08cbefff9d324fa4984",
+   "seconds": 99.55,
+   "src": "/audio/escucha-3d/consorcio-c2-herencia.mp3"
+  },
+  "consorcio/c2-llegada": {
+   "hash": "c6ebb52ad1349c038144",
+   "seconds": 91.95,
+   "src": "/audio/escucha-3d/consorcio-c2-llegada.mp3"
+  },
+  "consorcio/c2-misterio": {
+   "hash": "399fe8bae4ae2aca7f60",
+   "seconds": 80.97,
+   "src": "/audio/escucha-3d/consorcio-c2-misterio.mp3"
+  },
+  "consorcio/c2-mudanza": {
+   "hash": "9b4486f6c76523b82631",
+   "seconds": 92.63,
+   "src": "/audio/escucha-3d/consorcio-c2-mudanza.mp3"
+  },
+  "consorcio/c2-obra": {
+   "hash": "d7b3fa3cace4d0126ccc",
+   "seconds": 97.41,
+   "src": "/audio/escucha-3d/consorcio-c2-obra.mp3"
+  },
+  "consorcio/c2-sogas": {
+   "hash": "4b816e173da1e9b06864",
+   "seconds": 96.26,
+   "src": "/audio/escucha-3d/consorcio-c2-sogas.mp3"
+  },
+  "consorcio/c2-tango": {
+   "hash": "135756c2d243b3aaa390",
+   "seconds": 80.71,
+   "src": "/audio/escucha-3d/consorcio-c2-tango.mp3"
+  },
+  "consorcio/c2-teletrabajo": {
+   "hash": "221126e98e1fd7cba538",
+   "seconds": 106.56,
+   "src": "/audio/escucha-3d/consorcio-c2-teletrabajo.mp3"
+  },
+  "consorcio/c2-turistas": {
+   "hash": "9fbeb423e3121998e436",
+   "seconds": 100.5,
+   "src": "/audio/escucha-3d/consorcio-c2-turistas.mp3"
+  },
   "espana/a0-andalucia": {
    "hash": "393dfae0170406416f2c",
    "seconds": 29.86,
