@@ -4,6 +4,8 @@ import { catalogSummary } from "../growth/lessons";
 import { faqPageSchema, webPageSchema } from "../growth/schema";
 import { EleBuyBand, EleLessonGrid, EleTopbar, PRICE_LABEL, PRICING_PATH, eleLessonCards, eleMetadata } from "../material-ele/components";
 import { MATERIAL_ELE_PATH } from "../material-ele/data";
+import { guiaPages } from "../material-ele/guias";
+import { ACTIVIDADES_PATH, actividadPages, ejercicioPages } from "../material-ele/actividades";
 import styles from "../growth/growth.module.css";
 import ele from "../material-ele/material-ele.module.css";
 
@@ -17,6 +19,23 @@ export const metadata = eleMetadata(ALTERNATIVE_PATH, title, description);
 /** Facts about the other site come from its public pages; keep the check date when updating. */
 const CHECKED = "30 de octubre de 2026";
 const OTHER_PRICE_SOURCE = "https://profedeele.gumroad.com/l/individual";
+/** The other material sites a Spanish teacher meets in the same search, as their public pages described them on this day. No prices: they change. */
+const OTHERS_CHECKED = "2 de noviembre de 2026";
+const otherSites: { name: string; offers: string; bestFor: string }[] = [
+  { name: "ProfeDeELE.es", offers: "Actividades interactivas por nivel, categoría y formato (dictados, canciones, escape rooms), descargables y formación. Parte gratis y membresía de pago.", bestFor: "Fichas y actividades sueltas para el aula, sobre todo presencial." },
+  { name: "profe-de-espanol.de", offers: "Blog con recursos por destrezas, tipología y foco, muchos gratis, más membresía y cursos de formación para profesores.", bestFor: "Ideas y recursos para completar tu propio programa." },
+  { name: "Lección-E", offers: "Tienda de materiales por unidad (guías de lectura, secuencias, ejercicios DELE) que se compran uno a uno, con algunos recursos gratuitos.", bestFor: "Comprar una unidad concreta cuando la necesitas." },
+  { name: "DELE Ahora", offers: "Ejercicios autocorregibles por categoría, pensados para el alumno que prepara el examen más que para el profesor.", bestFor: "Deberes de preparación del DELE." },
+  { name: "Lesson Here", offers: "Materiales interactivos para profes online con un plan gratis limitado y planes de pago.", bestFor: "Profesores online que quieren materiales interactivos sueltos." },
+  { name: "SpanishCue", offers: "Clases completas e interactivas para compartir en pantalla, de A1 a C2, con mundos 3D de conversación y comprensión auditiva; Material ELE gratis con fichas, ejercicios y preguntas.", bestFor: "Clases particulares online y grupos pequeños de adultos: elegir, abrir y enseñar." },
+];
+const howYouTeach: { situation: string; pick: string }[] = [
+  { situation: "Das clase online, uno a uno, y compartes pantalla.", pick: "Clases completas en pantalla (SpanishCue). La preparación baja a elegir el objetivo; el resto está dentro de la clase." },
+  { situation: "Das clase presencial a grupos y trabajas sobre papel.", pick: "Fichas descargables (ProfeDeELE, profe-de-espanol.de) o las fichas imprimibles gratis de Material ELE; las clases interactivas sirven para proyectar." },
+  { situation: "Tienes tu propio libro y te faltan actividades puntuales.", pick: "Material suelto gratis: el banco de actividades de Material ELE, los blogs y, para una unidad concreta, Lección-E." },
+  { situation: "Tu alumno prepara el DELE.", pick: "Ejercicios autocorregibles (DELE Ahora) para casa y clases de gramática por uso para la sesión en vivo." },
+  { situation: "Enseñas conversación a adultos y los temas de manual no funcionan.", pick: "Mundos 3D y roleplays con desenlace, donde hablar sirve para resolver algo. Es lo que diferencia a SpanishCue." },
+];
 
 const rows: { feature: string; spanishcue: string; other: string }[] = [
   { feature: "Formato principal", spanishcue: "Clases interactivas para compartir en pantalla: teoría, práctica, audio, conversación y escritura en el mismo lugar.", other: "Materiales didácticos y actividades, muchos pensados para descargar e imprimir." },
@@ -90,6 +109,32 @@ export default function AlternativePage() {
                 <p>Y si te sirven los dos formatos, combínalos: las <Link className={styles.textLink} href={MATERIAL_ELE_PATH}>actividades de Material ELE</Link> son gratis.</p>
               </article>
             </div>
+          </Section>
+
+          <Section title="Los otros sitios de material ELE, en una tabla" intro={`Lo que ofrecía cada uno según sus páginas públicas el ${OTHERS_CHECKED}. Sin precios, porque cambian: cada sitio los publica en su web.`}>
+            <div className={ele.tableWrap}>
+              <table className={ele.compare}>
+                <thead><tr><th scope="col">Sitio</th><th scope="col">Qué ofrece</th><th scope="col">Para quién encaja mejor</th></tr></thead>
+                <tbody>
+                  {otherSites.map((site) => (
+                    <tr key={site.name}><th scope="row">{site.name}</th><td>{site.offers}</td><td>{site.bestFor}</td></tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className={styles.footnote}>Todos son proyectos independientes de SpanishCue y marcas de sus propietarios. El patrón se repite en todos: lo gratis sirve para probar y la clase completa suele ser de pago; lo que cambia es si compras fichas para montar tú o clases ya montadas.</p>
+          </Section>
+
+          <Section title="Qué conviene según cómo das clase">
+            <div className={styles.panel}>
+              <ul>
+                {howYouTeach.map((row) => <li key={row.situation}><strong>{row.situation}</strong> {row.pick}</li>)}
+              </ul>
+            </div>
+            <p>
+              Antes de decidir, mira las guías para profesores de Material ELE: {guiaPages.map((guide, index) => <span key={guide.path}>{index ? " · " : ""}<Link className={styles.textLink} href={guide.path}>{guide.h1}</Link></span>)}.
+              Y si lo que buscas es material suelto gratis, el <Link className={styles.textLink} href={ACTIVIDADES_PATH}>banco de actividades</Link> tiene {actividadPages.length} actividades y {ejercicioPages.length} ejercicios con soluciones.
+            </p>
           </Section>
 
           <Section id="gratis" title="Prueba una clase completa, gratis" intro="Una clase por nivel, sin tarjeta. Ábrela y compártela con tu alumno hoy.">

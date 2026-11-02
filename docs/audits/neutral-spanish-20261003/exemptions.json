@@ -11016,6 +11016,12 @@
       "text": "Tú, vos y usted, el leísmo, los pasados que cambian de país en país y los acentos: enseñar un español real con sus variedades.",
       "category": "regional-pedagogy",
       "reason": "Explicit voseo teaching label or explanation: «vos» is mentioned as the pronoun to teach, next to tú and usted."
+    },
+    {
+      "path": "app/material-ele/guias.ts",
+      "text": "Objetivo: pasar de «tú» a «usted» y a «vos» según la situación. Clase: [Voseo, tuteo y ustedeo](/gramatica/voseo-tuteo-y-ustedeo-cambios-pragmaticos). Entrada: «¿Con quién usas usted en tu lengua, si existe?». Producción: la misma queja a un amigo, a un jefe y a un desconocido en Buenos Aires. Más en [registro y cortesía](/material-ele/gramatica/registro-y-cortesia) y [variedades del español](/material-ele/cultura/variedades-del-espanol).",
+      "reason": "Metalinguistic mention of the pronoun «vos» as the object of a C2 register lesson (voseo, tuteo, ustedeo); the page itself addresses the teacher with «tú».",
+      "category": "regional-pedagogy"
     }
   ]
 }

@@ -3,6 +3,7 @@ import { ACTIVIDADES_PATH } from "./actividades";
 import { MATERIAL_ELE_PATH, eleLevels } from "./data";
 import { INDICE_PATH, indiceCount } from "./indice";
 import { temaGroups, temaPages } from "./temas";
+import { guiaPages } from "./guias";
 
 /** Server-rendered index of Material ELE on the home page, for visitors without PRO: every topic is one click from the home page,
  * which is how crawlers find the Spanish cluster fastest. Spanish only, because the pages are Spanish. */
@@ -24,6 +25,9 @@ export default function MaterialEleHomeLinks() {
           </nav>
         ))}
       </div>
+      <p className="mk-ele-levels">
+        Guías para profesores: {guiaPages.map((guide, index) => <span key={guide.path}>{index ? " · " : ""}<Link href={guide.path}>{guide.h1}</Link></span>)}
+      </p>
       <p className="mk-ele-levels">
         Por nivel: {eleLevels.map((level, index) => <span key={level.slug}>{index ? " · " : ""}<Link href={level.path}>{level.code}</Link></span>)}
         {" · "}<Link href={ACTIVIDADES_PATH}>Banco de actividades</Link>{" · "}<Link href={MATERIAL_ELE_PATH}>Todo el material ELE</Link>
