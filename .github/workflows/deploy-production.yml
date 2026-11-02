@@ -107,10 +107,18 @@ jobs:
             echo "::error::Sites is still the production deployer. 'release' mode requires state.json enabled=false (CUTOVER_RUNBOOK.md step 9)."
             exit 1
           fi
-          if gh api "repos/${GITHUB_REPOSITORY}/git/ref/heads/automation/merge-lock" >/dev/null 2>&1; then
-            echo "::error::A merge is in progress (automation/merge-lock). Retry after it finishes."
-            exit 1
-          fi
+          # Back-to-back merges keep the lock busy for minutes; failing at once left
+          # production behind main (runs 41398428596, 41399804240). Wait for the merge
+          # that holds it to land, then deploy.
+          for attempt in $(seq 1 100); do
+            gh api "repos/${GITHUB_REPOSITORY}/git/ref/heads/automation/merge-lock" >/dev/null 2>&1 || break
+            if [ "$attempt" = "100" ]; then
+              echo "::error::A merge is in progress (automation/merge-lock). Retry after it finishes."
+              exit 1
+            fi
+            echo "Merge lock busy; waiting (${attempt}/100)."
+            sleep 15
+          done
 
       - uses: actions/checkout@v5
         with:
