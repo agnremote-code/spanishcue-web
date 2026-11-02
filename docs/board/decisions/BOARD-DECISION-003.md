@@ -3,7 +3,7 @@
 - Date: 2026-11-02 (Monday 3D routine, scheduled cloud run)
 - Drafted by: the facilitator, from the resolution proposed in [assessments/2026-W44.md](../assessments/2026-W44.md) §4.6 (Alejandro).
 - Reviewed by: see §6. The clips' author (Martin) does not review this decision or its results.
-- Status: **DRAFT until §6 records an independent APPROVE.** v1 of the rule was committed before any run (`70f871b2`). The independent review (§6) asked for changes before any result was seen; v2 (this text) was committed while the v1 run was still installing its tools, and that run was cancelled unread. No result was used to shape the rule.
+- Status: **DRAFT until §6 records an independent APPROVE.** v1 of the rule was committed before any run (`70f871b2`). The independent review (§6) asked for changes before any result was seen; v2 (this text, `55f7cd21`, 02:22:31Z) was pushed while the v1 run (41376728456) was still in its check step. The push cancelled that run; its always-run step then committed a 9-line partial log (`6db5baac`, 02:22:50Z), which postdates v2 and was not used. No result was used to shape the rule.
 
 ## 1. Problem
 The Ascensor concept §9.2 says «Someone listens to every clip before release». The G4 reviewer ruled that it blocks release and that machine checks cannot close it (`docs/audits/el-ascensor-del-cerro-pedagogy-20261026.md`). No agent can hear audio. The sandbox proxy blocks the speech-to-text model hosts. R4, the request to the owner to listen, has been unanswered since 2026-10-26, and it conflicts with the owner's standing directive that the board never asks him. The W44 assessment classed this as an access limitation, not a lack of judgement.
