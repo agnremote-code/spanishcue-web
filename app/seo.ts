@@ -131,7 +131,11 @@ export function isEdgeCacheablePath(pathname: string): boolean {
     path.startsWith("/spanish-grammar-lessons/") ||
     path === "/alternativa-a-profedeele" ||
     path === "/material-ele" ||
-    path.startsWith("/material-ele/")
+    path.startsWith("/material-ele/") ||
+    // Crawler endpoints: identical for every visitor and fetched constantly by
+    // bots, so the edge answers them instead of the Worker (2026-11-02 incident).
+    path === "/sitemap.xml" ||
+    path === "/robots.txt"
   );
 }
 
