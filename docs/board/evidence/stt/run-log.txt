@@ -1,0 +1,9 @@
+loading models
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loaded the voice encoder model on cpu in 0.01 seconds.
+seeded words estacion: verdict HOLD, found [True, True]
+seeded speaker escalera: verdict HOLD, found [True]
+estacion: PASS
+escalera: PASS
+cafe: HOLD
+taller: PASS
