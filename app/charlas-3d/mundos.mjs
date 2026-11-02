@@ -27,7 +27,7 @@ export const CASTS = {
     r('Una estudiante con libros', 'Estudia para un examen mañana a las ocho.', ['trabajo', 'miedo']),
     r('Un hombre que perdió el último autobús', 'Mira el horario con cara de desastre.', ['transporte', 'noche']),
     r('Una camarera que cierra el bar', 'Baja la persiana y por fin se sienta.', ['trabajo', 'soledad']),
-    r('Un turista perdido', 'Gira un mapa de papel en todas las direcciones.', ['viaje', 'calle']),
+    r('Un turista con un mapa de papel', 'Gira el mapa de papel en todas las direcciones.', ['viaje', 'calle']),
     r('Una señora que no puede dormir', 'Sale al balcón en bata y saluda a la calle.', ['noche', 'familia']),
     r('Un repartidor en bicicleta', 'Para un segundo a respirar entre dos pedidos.', ['trabajo', 'dinero']),
   ],
