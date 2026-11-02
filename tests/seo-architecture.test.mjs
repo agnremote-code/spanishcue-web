@@ -206,7 +206,11 @@ test("the homepage never ships hidden text and carries site-wide Organization an
   const schema = read("app/growth/SiteSchema.tsx");
   assert.match(schema, /"Organization"/);
   assert.match(schema, /"WebSite"/);
-  assert.doesNotMatch(schema, /"(?:aggregateRating|review|award|sameAs)"/);
+  assert.doesNotMatch(schema, /"(?:aggregateRating|review|award)"/);
+  assert.match(schema, /alternateName: BRAND_ALTERNATE_NAMES/);
+  assert.match(schema, /BRAND_ALTERNATE_NAMES = \["SpanishCue", "Spanish Cue", "spanishcue", "spanishcue.com"\]/);
+  assert.match(schema, /BRAND_PROFILES = \["https:\/\/www\.linkedin\.com\/company\/144023469"\]/);
+  assert.doesNotMatch(schema, /facebook|instagram|twitter|x\.com|youtube|tiktok/i, "only profiles the owner runs may be declared");
 });
 
 test("indexable hub pages declare clean canonicals and the layout no longer emits parameter alternates", () => {
