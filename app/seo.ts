@@ -178,12 +178,12 @@ export type SeoLocale = Locale;
 
 export const homeMetaCopy: Record<Locale, { title: string; description: string }> = {
   es: {
-    title: "Clases de español listas para enseñar (A1–C2) | SPANISHCUE",
+    title: "SPANISHCUE: clases de español listas para enseñar (A1–C2)",
     description:
       "Clases visuales de español para profesores y tutores: conversación, gramática, escucha y fonética de A1 a C2. Elige, abre y enseña sin preparar desde cero.",
   },
   en: {
-    title: "Interactive Spanish Lessons for Teachers (A1–C2) | SPANISHCUE",
+    title: "SPANISHCUE: Interactive Spanish Lessons for Teachers (A1–C2)",
     description:
       "Interactive Spanish lessons for teachers and online tutors: conversation, grammar, listening and pronunciation from A1 to C2. Choose a lesson, open it, teach.",
   },

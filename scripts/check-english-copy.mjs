@@ -105,6 +105,7 @@ export function filterReviewedChanges(findings, reviewed) {
  */
 export const APPROVAL_MANIFESTS = [
   'docs/audits/pricing-free-doors-english-additions-20261101.json',
+  'docs/audits/brand-query-english-additions-20261102.json',
   'docs/audits/how-it-works-videos-english-additions-20261101.json',
   'docs/audits/referidos-english-additions-20261031.json',
   'docs/audits/plan-anual-english-additions-20261031.json',
@@ -205,6 +206,8 @@ export function checkEnglishCopy(root, base = BASE_SHA) {
   if(existsSync(libraryRoutesReviewedPath))reviewed.push(...JSON.parse(readFileSync(libraryRoutesReviewedPath,'utf8')).changes);
   const pricingDoorsReviewedPath=resolve(root,'docs/audits/pricing-free-doors-english-additions-20261101.json');
   if(existsSync(pricingDoorsReviewedPath))reviewed.push(...JSON.parse(readFileSync(pricingDoorsReviewedPath,'utf8')).changes);
+  const brandQueryReviewedPath=resolve(root,'docs/audits/brand-query-english-additions-20261102.json');
+  if(existsSync(brandQueryReviewedPath))reviewed.push(...JSON.parse(readFileSync(brandQueryReviewedPath,'utf8')).changes);
   const derived = checkDerivedCopies(after);
   const compared = compareEnglishCopy(relocateEnglishSources(before), mergeSplitSources(derived.remaining));
   return { findings: [...derived.findings, ...filterReviewedChanges(filterApprovedAdditions(compared, additions), reviewed)], files: before.size, strings: [...before].reduce((n, [path, source]) => n + extractCopy(source, path).filter(c => c.language === 'en').length, 0), base };
