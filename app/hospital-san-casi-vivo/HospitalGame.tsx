@@ -192,7 +192,7 @@ export default function HospitalGame({ demo }: { demo?: { signedIn: boolean } })
   const heardHere = mode === 'escucha' ? heard : done;
 
   return <main className="hs" data-level={state.level} data-floor={state.floor} data-mode={mode}>
-    {ready && has3d && <World3D floor={state.floor} via={via} sceneId={state.scene?.id ?? (listenAt && sceneById(listenAt) ? listenAt : null)} mood={view?.mood ?? null}
+    {ready && has3d && <World3D level={state.level} floor={state.floor} via={via} sceneId={state.scene?.id ?? (listenAt && sceneById(listenAt) ? listenAt : null)} mood={view?.mood ?? null}
       done={heardHere} paused={!entered || Boolean(panel) || list || map || listenAt !== undefined} intro={!entered}
       onSpot={open} onLift={(how) => setPanel(how)} onNear={setNear} onPose={setPose} onFail={() => setHas3d(false)}
       personId={personId} onPerson={meet} onCry={(volume) => ambience.current?.scream(volume)} />}

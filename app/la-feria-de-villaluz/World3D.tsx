@@ -19,10 +19,14 @@ import { BOUNDS, SOLIDS, SPAWN, buscaCamera, buscaHeading, circleById, circleSte
 import { createBumpClock, pushOut } from '../escucha-3d/bump.mjs';
 import { insultFor, shout } from '../escucha-3d/shout';
 import { buildFair, type Fair, type Placed } from './feria3d';
+import { createCharlas } from '../charlas-3d/charlas3d';
+import { fairPlaces } from './charlas';
 
 export type Pose = { x: number; z: number; heading: number };
 export type WorldProps = {
   circleId: string | null;
+  /** The level being played: the extra conversation circles ask at this level. */
+  level: string;
   busca: { circle: string; placed: Placed[] } | null;
   reveal: string | null;
   done: string[];
@@ -98,6 +102,12 @@ export default function World3D(props: WorldProps) {
     }
     fairRef.current = fair;
     fair.showBusca(live.current.busca?.placed ?? null);
+    // Conversation circles: everyone in the crowd and the big things of the fair.
+    const charlas = createCharlas({
+      parent: scene, host: mount.current!.parentElement ?? mount.current!, world: 'feria', level: () => live.current.level,
+      people: function* () { for (const b of fair.bodies()) if (b.key.startsWith('crowd-')) yield { key: b.key, x: b.x, z: b.z }; },
+      places: fairPlaces(),
+    });
     fair.reveal(live.current.reveal);
     scene.add(hero.root);
     const hemi = new THREE.HemisphereLight('#8a9ad8', '#3a2a22', 0.85);
@@ -287,6 +297,7 @@ export default function World3D(props: WorldProps) {
       const circle = circleStep({ inside, still, spent: consumed }, here, circleId, p.paused || p.intro || busca ? 1 : player.speed, dt);
       inside = circle.inside; still = circle.still; consumed = circle.spent;
       if (circle.open && !busca) p.onSpot(circle.open);
+      charlas.update(player, dt, !inside && !circleId && !busca && !p.paused && !p.intro);
       const near = inside ?? '';
       if (near !== nearKey) { nearKey = near; p.onNear(inside); }
       if (clock - poseAt > 0.2) { poseAt = clock; p.onPose({ x: player.x, z: player.z, heading: player.heading }); }
@@ -363,6 +374,7 @@ export default function World3D(props: WorldProps) {
     return () => {
       disposed = true;
       cancelAnimationFrame(frame);
+      charlas.dispose();
       window.clearTimeout(touchTimer);
       observer.disconnect();
       window.removeEventListener('keydown', onKeyDown);
