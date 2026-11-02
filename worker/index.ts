@@ -38,6 +38,7 @@ import { giftCoversPath, hasGift } from "../app/newsletter/server";
 import { GIFT_LANDING_PATH } from "../app/newsletter/gift";
 import { rateLimitKey, rateLimited, rateLimitResponse, type RateLimitBinding } from "./rate-limit";
 import { watermarkDay, watermarkToken, withWatermark, type Rewriter } from "../app/license-watermark";
+import { deviceCookieHeader, deviceHash, deviceIdFromCookie, deviceLabel, newDeviceId, recordPremiumOpen } from "../db/account-security";
 
 // vinext's default in-memory ISR cache is unbounded and grew past the isolate's
 // 128 MB under crawler traffic (Error 1102, 2026-11-02). Install the bounded one
@@ -412,12 +413,27 @@ const app = {
     }
     // PRO documents carry an invisible per-account, per-day licence mark (app/license-watermark.ts).
     const premiumDocument = (lesson && !isFreeLesson(lesson.id)) || premiumAutoestudio;
-    if (premiumDocument && accountId && fullAccess && request.method === 'GET' && !rscPayload && env.AUTOESTUDIO_SHARE_SECRET) {
+    const premiumOpen = Boolean(premiumDocument && accountId && fullAccess && request.method === 'GET' && !rscPayload);
+    // Account-sharing signals (db/account-security.ts): warn the owner in Admin, never block the teacher.
+    let deviceCookie: string | null = null;
+    if (premiumOpen && accountId && !owner && !writeFreezeActive(env.SPANISHCUE_WRITE_FREEZE)) {
+      const existingDevice = deviceIdFromCookie(request.headers.get('cookie'));
+      const deviceId = existingDevice ?? newDeviceId();
+      if (!existingDevice) deviceCookie = deviceCookieHeader(deviceId);
+      const label = deviceLabel(request.headers.get('user-agent'));
+      ctx.waitUntil(deviceHash(deviceId).then((hash) => recordPremiumOpen(env.DB, accountId, hash, label, new Date())).catch(() => undefined));
+    }
+    let finalResponse = safeResponse;
+    if (premiumOpen && accountId && env.AUTOESTUDIO_SHARE_SECRET) {
       const token = await watermarkToken(env.AUTOESTUDIO_SHARE_SECRET, accountId, watermarkDay(new Date())).catch(() => '');
       const rewriter = (globalThis as unknown as { HTMLRewriter?: new () => Rewriter }).HTMLRewriter;
-      return withWatermark(safeResponse, token, rewriter ? () => new rewriter() : undefined);
+      finalResponse = withWatermark(safeResponse, token, rewriter ? () => new rewriter() : undefined);
     }
-    return safeResponse;
+    if (deviceCookie) {
+      finalResponse = new Response(finalResponse.body, finalResponse);
+      finalResponse.headers.append('Set-Cookie', deviceCookie);
+    }
+    return finalResponse;
   },
 };
 
