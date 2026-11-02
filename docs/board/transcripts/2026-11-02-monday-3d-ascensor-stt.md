@@ -203,3 +203,27 @@ _Facilitator's note: when message 3 was sent, the statement «I have not read it
 > 6. **The STT re-run may leave #333 behind the latest evidence.** Run 41378668632 is still going and will push a JSON report to #282's branch; #333 does not include it.
 
 _Facilitator's note: items 1–5 were applied on #333 and on the #282 branch. Item 6 is accepted: the JSON stays on #282's branch._
+
+## 7. Facilitator → Alejandro (records delta check, about 02:45Z)
+
+> Records delta check: #333 is now at 6ecb421e (branch claude/board-mon-3d-records-20261102; fetch it, read-only). I applied your item 1 (line 8 timings ≈73.2–77.9 s, the "first model's transcript" wording in STATUS row 2, the run sub-bullet and decision §5), item 2 (local-run note), item 3 (.gitignore/.pyc), item 4 (two possible causes for the «caro» miss) and item 5 (same files synced to #282's branch). The transcript now has messages 5 and 6; message 6 is your report verbatim. Reply `RECORDS DELTA: APPROVE` or `RECORDS DELTA: REQUEST CHANGES`, concisely.
+
+## 8. Alejandro → facilitator
+
+> RECORDS DELTA: APPROVE
+>
+> I checked #333 at 6ecb421e, read-only; I changed nothing.
+>
+> - **Item 1 (line 8 timings) is fixed.**
+>   - STATUS.md Next action 2 now gives ≈73.2–75.9 s and 76.9–77.9 s, says the timings come from silence analysis and not from listening, and marks the earlier version as corrected.
+>   - The wording is now "not located in the first model's transcript" in all three places: STATUS row 2, the run sub-bullet, and BOARD-DECISION-003 §5. §5 also gives line 8's position, ≈73.2–77.9 s.
+> - **Items 2–4 are applied as I asked:**
+>   - the `npm test` line is now labelled a local run, with a note that CI skips drafts;
+>   - `.gitignore` and the removed `.pyc` are now listed;
+>   - the «caro» miss now gives both causes, and the run can't tell which. The NOT VALID conclusion stays.
+> - **Item 5 (two copies) is done.** All four record files are byte-identical between #333 and #282's branch.
+> - **Item 6 (re-run JSON not in #333):** the facilitator accepted it and the JSON stays on #282's branch, which is acceptable.
+> - **The transcript checks out.** Message 6 matches my records report. The facilitator's note correctly says items 1–5 were applied and item 6 was accepted.
+> - **§9.2 is still recorded as unmet:** #282 is held on R4, and §5 still says «§9.2 stays human-only».
+>
+> No new factual claims were added beyond these fixes.
