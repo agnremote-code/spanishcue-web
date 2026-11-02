@@ -47,5 +47,6 @@ test("only successful HTML gets the meta tag, and only a well-formed token", asy
 test("the Worker marks PRO documents only, never RSC payloads or free samples", async () => {
   const source = await readFile("worker/index.ts", "utf8");
   assert.match(source, /const premiumDocument = \(lesson && !isFreeLesson\(lesson\.id\)\) \|\| premiumAutoestudio;/);
-  assert.match(source, /premiumDocument && accountId && fullAccess && request\.method === 'GET' && !rscPayload && env\.AUTOESTUDIO_SHARE_SECRET/);
+  assert.match(source, /const premiumOpen = Boolean\(premiumDocument && accountId && fullAccess && request\.method === 'GET' && !rscPayload\);/);
+  assert.match(source, /premiumOpen && accountId && env\.AUTOESTUDIO_SHARE_SECRET/);
 });
