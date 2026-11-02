@@ -240,6 +240,16 @@ jobs:
           npx wrangler d1 execute DB --remote --config dist/server/wrangler.json --command "SELECT name FROM sqlite_master WHERE type='table' AND name IN ('referral_codes','referrals','referral_rewards')" --json > referral-schema.json
           node scripts/verify-referrals-schema.mjs referral-schema.json
 
+      # Owner authorization 2026-11-02 (Ale chose «Sí, crealas» on the D1 decision card in thread
+      # "Seguridad y protección del contenido"): idempotent CREATE-only SQL for account devices and
+      # daily PRO opens; existing tables and rows are never touched.
+      - name: Prepare account security tables
+        if: inputs.action == 'deploy'
+        run: |
+          npx wrangler d1 execute DB --remote --config dist/server/wrangler.json --file drizzle/0020_account_security.sql --yes
+          npx wrangler d1 execute DB --remote --config dist/server/wrangler.json --command "SELECT name FROM sqlite_master WHERE type='table' AND name IN ('account_devices','account_daily_usage')" --json > account-security-schema.json
+          node scripts/verify-account-security-schema.mjs account-security-schema.json
+
       - name: Record current production version
         if: inputs.action == 'deploy'
         id: previous

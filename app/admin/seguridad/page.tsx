@@ -4,6 +4,7 @@ import { redirect } from "next/navigation";
 import Link from "next/link";
 import { ownerFromHeaders, signedInFromHeaders } from "../../access-policy";
 import { traceWatermark, WATERMARK_META } from "../../license-watermark";
+import { DAILY_OPENS_ALERT_THRESHOLD, DAILY_WINDOW_DAYS, DEVICE_ALERT_THRESHOLD, DEVICE_WINDOW_DAYS, listSharingAlerts, type SharingAlert } from "../../../db/account-security";
 import "../../teachers.css";
 
 export const dynamic = "force-dynamic";
@@ -28,6 +29,7 @@ export default async function SecurityAdmin({ searchParams }: { searchParams: Pr
   if (!ownerFromHeaders(requestHeaders)) redirect("/cuenta");
   const token = typeof (await searchParams).marca === "string" ? (await searchParams).marca!.slice(0, 80) : "";
   const result = await trace(token).catch((): TraceResult => ({ state: "unavailable" }));
+  const alerts = await listSharingAlerts(env.DB, new Date()).catch((): SharingAlert[] | null => null);
 
   return (
     <div className="teacher-app">
@@ -48,6 +50,31 @@ export default async function SecurityAdmin({ searchParams }: { searchParams: Pr
         {result.state === "found" && <p role="status">Esta copia salió de la cuenta <strong>{result.email}</strong>, abierta el {result.day} (UTC).</p>}
         {result.state === "unknown" && <p role="status">Esta marca no corresponde a ninguna cuenta. Puede estar incompleta o alterada.</p>}
         {result.state === "unavailable" && <p role="status">No pudimos comprobar la marca ahora. Vuelve a intentarlo más tarde.</p>}
+        <section style={{ marginTop: 48 }}>
+          <h2>Posibles cuentas compartidas</h2>
+          <p>
+            Cuentas PRO con más de {DEVICE_ALERT_THRESHOLD} dispositivos en los últimos {DEVICE_WINDOW_DAYS} días o más de{" "}
+            {DAILY_OPENS_ALERT_THRESHOLD} clases PRO abiertas en un mismo día (últimos {DAILY_WINDOW_DAYS} días). Es solo un aviso: nadie queda bloqueado.
+          </p>
+          {alerts === null && <p role="status">No pudimos cargar los avisos ahora. Vuelve a intentarlo más tarde.</p>}
+          {alerts?.length === 0 && <p role="status">Ninguna cuenta supera los límites.</p>}
+          {alerts && alerts.length > 0 && (
+            <div className="legal-table-wrap">
+              <table>
+                <thead><tr><th>Cuenta</th><th>Dispositivos (30 días)</th><th>Máximo de clases en un día</th></tr></thead>
+                <tbody>
+                  {alerts.map((alert) => (
+                    <tr key={alert.accountId}>
+                      <td>{alert.email ?? alert.accountId}</td>
+                      <td>{alert.devices > 0 ? `${alert.devices}: ${alert.deviceLabels.join(", ")}` : "—"}</td>
+                      <td>{alert.peakOpens > 0 ? `${alert.peakOpens} (${alert.peakDay})` : "—"}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
+        </section>
       </main>
     </div>
   );
