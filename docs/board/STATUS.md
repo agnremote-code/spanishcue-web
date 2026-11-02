@@ -90,7 +90,7 @@ All five run on `claude-opus-5-5`, follow [ROUTINES.md](ROUTINES.md), and each i
   - **R4 restated to the owner** (Owner data requests, above) as the single access request the decision allows.
   - **Next action:**
     1. **Wed 11-04 3D slot:** if R4 is answered with a listening record, fix any defect it names, regenerate through the canonical pipeline, merge main and release #282. Otherwise do not touch #282. Take the next GPU-leak repair (bosque, then mas-alla), one world per PR, or run the concept pipeline for a new world.
-    2. Check whether cafe line 8 really is missing from the mp3: duration versus the manifest, and silence at the end. That is a measurable defect check, not a listening substitute. If it is missing, regenerate.
+    2. Cafe line 8, measured this run: the mp3 is 90.65 s against the manifest's 90.58 s, and ffmpeg silencedetect at −40 dB finds speech at 79.4–85.4 s, 86.3–87.3 s and 88.3–89.3 s. So the file is not truncated. Whether line 8 is read correctly is UNKNOWN; the listener checks it.
     3. Fold the review's non-blocking notes a–e (decision §6) into a declared v3 of the check before its next use. Strengthening the gap-word -s case may need a phoneme-level aligner; whether one is reachable from Actions is UNKNOWN.
     4. The W45 plan items for Tue and Thu are unchanged (2026-10-30 entry below).
 - **2026-10-30 (Friday 3D + assessment routine): gated repair of the Hospital unmount GPU leak + W44 assessment** (branch `claude/friday-assessment-20261030`, base main `49ddf69`). Subscription usage: **UNKNOWN**.
