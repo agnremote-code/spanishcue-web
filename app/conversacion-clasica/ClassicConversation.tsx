@@ -6,6 +6,7 @@
 // you choose the level, a category and a question, and you talk. Every class
 // is authored at the seven levels A0–C2; A0 and A1 carry the English under
 // the Spanish.
+import Link from 'next/link';
 import { useEffect, useState, type CSSProperties } from 'react';
 import { LEVEL_IDS, type Bi, type ClassicContent, type ClassicMeta, type LevelId } from './types';
 import './clasica.css';
@@ -34,6 +35,7 @@ export default function ClassicConversation({ meta, content }: { meta: ClassicMe
   const [level, setLevel] = useState<LevelId>('B1');
   const [active, setActive] = useState(0);
   const [selected, setSelected] = useState<number | null>(null);
+  // eslint-disable-next-line react-hooks/set-state-in-effect -- restore the saved level after hydration
   useEffect(() => { const saved = readLevel(storageKey); if (saved) setLevel(saved); }, [storageKey]);
   const pick = (next: LevelId) => {
     setLevel(next); setSelected(null);
@@ -51,7 +53,7 @@ export default function ClassicConversation({ meta, content }: { meta: ClassicMe
   return <main className="cc" style={style}>
     <header className="cc-hero">
       <div className="cc-hero-text">
-        <a className="cc-back" href="/">← Biblioteca</a>
+        <Link className="cc-back" href="/">← Biblioteca</Link>
         <p className="cc-kicker">{meta.kicker} · {level}</p>
         <h1>{meta.title}</h1>
         <Text value={lesson.intro} as="p" className="cc-intro" />
