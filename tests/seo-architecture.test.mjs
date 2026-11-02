@@ -88,10 +88,16 @@ test("hreflang exists only for declared real pairs, and every pair is indexable 
   assert.equal(mod.languageAlternates("/spanish-conversation-activities"), undefined);
 });
 
-test("robots.txt blocks machine endpoints only, never a page that relies on noindex", () => {
+test("robots.txt blocks machine endpoints and abusive crawlers only, never a page that relies on noindex", () => {
   const rules = mod.robots().rules;
-  assert.deepEqual(rules.disallow, ["/api/"]);
-  assert.equal(rules.allow, "/");
+  const everyone = rules.find((rule) => rule.userAgent === "*");
+  assert.deepEqual(everyone.disallow, ["/api/"]);
+  assert.equal(everyone.allow, "/");
+  assert.equal(everyone.crawlDelay, 10);
+  const blocked = rules.find((rule) => Array.isArray(rule.userAgent));
+  assert.equal(blocked.disallow, "/");
+  for (const bot of ["AhrefsBot", "SemrushBot", "GPTBot", "Bytespider"]) assert.ok(blocked.userAgent.includes(bot), bot);
+  for (const bot of blocked.userAgent) assert.doesNotMatch(bot, /google|bing/i, bot);
 });
 
 test("the sitemap lists clean, public, deduplicated URLs covering the organic architecture", () => {
