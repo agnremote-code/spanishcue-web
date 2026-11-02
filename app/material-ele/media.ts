@@ -22,4 +22,3 @@ export function elePreviewLesson(ids: readonly number[]): (LessonCardData & { vi
 }
 
 export const formatDateEs = (iso: string) => new Date(`${iso}T12:00:00Z`).toLocaleDateString("es-ES", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });
-
