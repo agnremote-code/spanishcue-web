@@ -442,7 +442,7 @@ export const guiaPages: GuiaPage[] = [
             "**Hipótesis**: «¿Qué harías con un mes libre y sin dinero?» → [expresar hipótesis y probabilidad](/material-ele/funciones/expresar-hipotesis-y-probabilidad).",
             "**Cultura**: «¿Qué costumbre de otro país adoptarías?» → [fiestas y tradiciones](/material-ele/cultura/fiestas-y-tradiciones).",
           ] },
-          { type: "p", text: "Con un principiante, la misma pregunta se hace con dos opciones («¿coche o tren?») y se responde con una frase. Con un C2, se pide la razón, la excepción y la opinión contraria. El tema no cambia; cambia lo que se exige." },
+          { type: "p", text: "Con un principiante, la misma pregunta se hace con dos opciones («¿té o café?») y se responde con una frase. Con un C2, se pide la razón, la excepción y la opinión contraria. El tema no cambia; cambia lo que se exige." },
         ],
       },
       {
