@@ -12,7 +12,7 @@ export default function MaterialEleHomeLinks() {
       <div className="mk-section-heading">
         <small>MATERIAL ELE GRATIS PARA PROFESORES</small>
         <h2 id="mk-ele-title">Material ELE por tema y por nivel</h2>
-        <p>{temaPages.length} temas de gramática, vocabulario, funciones y cultura, con las clases que enseñan cada uno. <Link href={INDICE_PATH}>Índice completo ({indiceCount} páginas)</Link></p>
+        <p>{temaPages.length} temas de gramática, vocabulario, funciones, cultura y formatos, con las clases que enseñan cada uno. <Link href={INDICE_PATH}>Índice completo ({indiceCount} páginas)</Link></p>
       </div>
       <div className="mk-ele-grid">
         {temaGroups.map((group) => (

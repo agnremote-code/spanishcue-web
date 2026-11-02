@@ -10,6 +10,8 @@ import { MATERIAL_ELE_PATH, elePages } from "./material-ele/data";
 import { temaGroups, temaLevelPages, temaPages } from "./material-ele/temas";
 import { ACTIVIDADES_PATH, bancoPaths } from "./material-ele/actividades";
 import { INDICE_PATH, lastModifiedByPath } from "./material-ele/indice";
+import { elePreviewLesson } from "./material-ele/media";
+import { lessonCards } from "./growth/lessons";
 import { RECURSOS_PATH, recursoPathForLesson, resourceLessons, resourcePathForLesson } from "./resource-seo";
 import { canonicalUrl, isSearchPrivatePath, languageAlternates } from "./seo";
 import { teachingGuides } from "./teaching-guides";
@@ -66,7 +68,21 @@ const curatedRoutes: { path: string; priority: number; changeFrequency: Frequenc
   { path: "/cookies", priority: 0.3, changeFrequency: "yearly" },
 ];
 
-function entry(path: string, priority: number, changeFrequency: Frequency, lastModified?: string): Entry {
+type Media = Pick<Entry, "images" | "videos">;
+
+/** Image and video sitemap data of a Material ELE page: the covers of its classes and the recording the page shows. */
+function pageMedia(path: string, lessonIds: readonly number[]): Media {
+  const images = [...new Set(lessonCards(lessonIds).slice(0, 8).map((card) => canonicalUrl(card.image)))];
+  const preview = elePreviewLesson(lessonIds);
+  const videos: Entry["videos"] = preview
+    ? [{ title: `Así se ve la clase «${preview.title}»`, thumbnail_loc: canonicalUrl(preview.image), description: `${preview.subtitle} Grabación de la clase interactiva de SpanishCue (${preview.level}), tal como la ve el alumno en pantalla.`, content_loc: canonicalUrl(preview.video), publication_date: `${preview.addedAt}T06:00:00Z`, family_friendly: "yes", requires_subscription: preview.free ? "no" : "yes", live: "no" }]
+    : undefined;
+  return { ...(images.length ? { images } : {}), ...(videos ? { videos } : {}) };
+}
+const mediaByPath = new Map<string, Media>([...temaPages, ...temaLevelPages].map((page) => [page.path, pageMedia(page.path, page.lessonIds)]));
+for (const page of elePages) mediaByPath.set(page.path, pageMedia(page.path, page.lessonIds));
+
+function entry(path: string, priority: number, changeFrequency: Frequency, lastModified?: string, media?: Media): Entry {
   const languages = languageAlternates(path);
   return {
     url: canonicalUrl(path),
@@ -74,6 +90,7 @@ function entry(path: string, priority: number, changeFrequency: Frequency, lastM
     changeFrequency,
     ...(lastModified ? { lastModified } : {}),
     ...(languages ? { alternates: { languages } } : {}),
+    ...(media ?? {}),
   };
 }
 
@@ -86,16 +103,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entries.push(item);
   };
 
-  for (const route of curatedRoutes) push(entry(route.path, route.priority, route.changeFrequency, lastModifiedByPath.get(route.path)));
+  for (const route of curatedRoutes) push(entry(route.path, route.priority, route.changeFrequency, lastModifiedByPath.get(route.path), mediaByPath.get(route.path)));
 
   for (const lesson of lessons) {
     if (!isFreeLesson(lesson.id)) continue;
     const path = localLessonPath(lesson);
-    if (path) push(entry(path, 0.7, "monthly"));
+    if (path) push(entry(path, 0.7, "monthly", undefined, { images: [canonicalUrl(lesson.image)] }));
   }
 
-  for (const lesson of resourceLessons) push(entry(resourcePathForLesson(lesson), 0.6, "monthly"));
-  for (const lesson of resourceLessons) push(entry(recursoPathForLesson(lesson), 0.65, "monthly"));
+  for (const lesson of resourceLessons) push(entry(resourcePathForLesson(lesson), 0.6, "monthly", undefined, { images: [canonicalUrl(lesson.image)] }));
+  for (const lesson of resourceLessons) push(entry(recursoPathForLesson(lesson), 0.65, "monthly", undefined, { images: [canonicalUrl(lesson.image)] }));
 
   for (const item of teachingGuides.map((guide) => entry(`/guides/${guide.slug}`, 0.6, "monthly", guideModifiedDate(guide)))) push(item);
 

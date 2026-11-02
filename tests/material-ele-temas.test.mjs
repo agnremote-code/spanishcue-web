@@ -1,13 +1,13 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import {build} from 'esbuild';
-const r=await build({stdin:{contents:'export {default as sitemap} from "./app/sitemap.ts"; export {isEnglishDefaultPath,isEdgeCacheablePath,isSearchPrivatePath} from "./app/seo.ts"; export * from "./app/material-ele/temas.ts"; export {elePageBySlug} from "./app/material-ele/data.ts"; export {lessons} from "./app/lesson-catalog.ts"; export {isFreeLesson} from "./app/access-policy.ts";',resolveDir:process.cwd()},bundle:true,write:false,platform:'node',format:'esm'});
+const r=await build({stdin:{contents:'export {default as sitemap} from "./app/sitemap.ts"; export {isEnglishDefaultPath,isEdgeCacheablePath,isSearchPrivatePath} from "./app/seo.ts"; export * from "./app/material-ele/temas.ts"; export {pageDates} from "./app/material-ele/indice.ts"; export {elePageBySlug} from "./app/material-ele/data.ts"; export {lessons} from "./app/lesson-catalog.ts"; export {isFreeLesson} from "./app/access-policy.ts";',resolveDir:process.cwd()},bundle:true,write:false,platform:'node',format:'esm'});
 const m=await import('data:text/javascript;base64,'+Buffer.from(r.outputFiles[0].text).toString('base64'));
 
 test('the topic index is large, grouped like ELE teachers search, and never emits an empty page',()=>{
  assert.ok(m.temaPages.length>=90,`only ${m.temaPages.length} topic pages`);
- assert.deepEqual(m.temaGroups.map(g=>g.id),['gramatica','vocabulario','funciones','cultura']);
- for(const group of m.temaGroups)assert.ok(m.temasByGroup(group.id).length>=10,group.id);
+ assert.deepEqual(m.temaGroups.map(g=>g.id),['gramatica','vocabulario','funciones','cultura','formatos']);
+ for(const group of m.temaGroups)assert.ok(m.temasByGroup(group.id).length>=(group.id==='formatos'?6:10),group.id);
  assert.deepEqual(m.temaSourcesWithoutLessons,[],'every listed topic must be taught by at least one real class');
  for(const p of m.temaPages){
   assert.ok(p.lessonIds.length>=1,p.path);
@@ -28,7 +28,7 @@ test('every topic page has unique bounded metadata, a unique H1 and its own intr
   assert.ok(p.intro.length>=80,`${p.path} intro too short`);
   assert.ok(p.faq.length>=3,p.path);
   titles.add(p.title);h1s.add(p.h1);paths.add(p.path);intros.add(p.intro);
-  assert.match(p.path,/^\/material-ele\/(gramatica|vocabulario|funciones|cultura)\/[a-z0-9-]+$/);
+  assert.match(p.path,/^\/material-ele\/(gramatica|vocabulario|funciones|cultura|formatos)\/[a-z0-9-]+$/);
  }
  assert.equal(titles.size,m.temaPages.length);assert.equal(h1s.size,m.temaPages.length);assert.equal(paths.size,m.temaPages.length);assert.equal(intros.size,m.temaPages.length);
  for(const g of m.temaGroups){assert.ok(g.title.length<=78,g.id);assert.ok(g.description.length>=110&&g.description.length<=165,`${g.id} ${g.description.length}`);}
@@ -52,19 +52,30 @@ test('copy keeps the published price and never invents customers, rankings or co
 
 test('the keyword topics ELE teachers search for are all present',()=>{
  const slugs=new Set(m.temaPages.map(p=>`${p.group}/${p.slug}`));
- for(const s of ['gramatica/presente-de-indicativo','gramatica/preterito-indefinido','gramatica/preterito-imperfecto','gramatica/presente-de-subjuntivo','gramatica/imperativo','gramatica/ser-y-estar','gramatica/por-y-para','gramatica/pronombres-de-objeto','gramatica/conectores','vocabulario/familia','vocabulario/comida-y-restaurante','vocabulario/la-ciudad','funciones/narrar','funciones/dar-consejos-y-recomendaciones','funciones/expresar-opinion','cultura/argentina','cultura/espana'])assert.ok(slugs.has(s),s);
+ for(const s of ['gramatica/presente-de-indicativo','gramatica/preterito-indefinido','gramatica/preterito-imperfecto','gramatica/presente-de-subjuntivo','gramatica/imperativo','gramatica/ser-y-estar','gramatica/por-y-para','gramatica/pronombres-de-objeto','gramatica/conectores','vocabulario/familia','vocabulario/comida-y-restaurante','vocabulario/la-ciudad','funciones/narrar','funciones/dar-consejos-y-recomendaciones','funciones/expresar-opinion','cultura/argentina','cultura/espana','formatos/mundos-3d','formatos/comprension-auditiva','formatos/roleplays'])assert.ok(slugs.has(s),s);
+});
+
+test('the sitemap carries the covers of each topic page and the recording it shows, and lastmod moves when a newer class joins',()=>{
+ const byUrl=new Map(m.sitemap().map(x=>[x.url,x]));
+ const tema=byUrl.get('https://spanishcue.com/material-ele/formatos/mundos-3d');
+ assert.ok(tema.images.length>=3,'images');for(const i of tema.images)assert.match(i,/^https:\/\/spanishcue\.com\/.+\.(webp|png|jpg)$/);
+ assert.equal(tema.videos.length,1);assert.match(tema.videos[0].content_loc,/^https:\/\/spanishcue\.com\/(conversation|grammar)-previews\/\d+\.mp4$/);assert.match(tema.videos[0].thumbnail_loc,/^https:\/\/spanishcue\.com\//);assert.ok(tema.videos[0].title.length>10&&tema.videos[0].description.length>40);
+ assert.ok(tema.lastModified>='2026-11-02',tema.lastModified);
+ const withVideo=m.sitemap().filter(x=>x.videos?.length).length,withImages=m.sitemap().filter(x=>x.images?.length).length;
+ assert.ok(withVideo>=200,`${withVideo} pages with a video`);assert.ok(withImages>=600,`${withImages} pages with images`);
+ assert.ok(m.pageDates('/material-ele/gramatica/presente-de-indicativo').datePublished<=m.pageDates('/material-ele/gramatica/presente-de-indicativo').dateModified);
 });
 
 test('level pages exist for every group only where two or more classes are written for that level, with bounded unique metadata',()=>{
  assert.ok(m.temaLevelPages.length>=280,`only ${m.temaLevelPages.length} level pages`);
- for(const group of ['gramatica','vocabulario','funciones','cultura'])assert.ok(m.temaLevelPages.some(p=>p.group===group),group);
+ for(const group of ['gramatica','vocabulario','funciones','cultura','formatos'])assert.ok(m.temaLevelPages.some(p=>p.group===group),group);
  const paths=new Set(),titles=new Set(),h1s=new Set(),intros=new Set();const urls=new Set(m.sitemap().map(x=>x.url));
  for(const p of m.temaLevelPages){
-  assert.ok(['gramatica','vocabulario','funciones','cultura'].includes(p.group));
+  assert.ok(['gramatica','vocabulario','funciones','cultura','formatos'].includes(p.group));
   assert.ok(p.order.length>20,p.path);
   assert.ok(p.lessonIds.length>=2,p.path);
   for(const id of p.lessonIds){const l=m.lessons.find(x=>x.id===id);assert.ok((l.levels?.length?l.levels:[l.level]).includes(p.level),`${p.path} lists ${id} of level ${l.level}`);}
-  assert.match(p.path,/^\/material-ele\/(gramatica|vocabulario|funciones|cultura)\/[a-z0-9-]+\/(a1|a2|b1|b2|c1|c2)$/);
+  assert.match(p.path,/^\/material-ele\/(gramatica|vocabulario|funciones|cultura|formatos)\/[a-z0-9-]+\/(a1|a2|b1|b2|c1|c2)$/);
   assert.ok(p.title.length<=78,`${p.path} title ${p.title.length}`);
   assert.ok(p.description.length>=110&&p.description.length<=165,`${p.path} description ${p.description.length}`);
   assert.ok(p.faq.length>=3,p.path);
