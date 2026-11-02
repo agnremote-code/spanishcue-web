@@ -2,7 +2,8 @@ import Link from "next/link";
 import { Breadcrumbs, Faq, GrowthFooter, JsonLd, Section } from "../growth/components";
 import { catalogSummary } from "../growth/lessons";
 import { collectionPageSchema, faqPageSchema } from "../growth/schema";
-import { EleBuyBand, EleLessonGrid, EleLevelNav, EleTopbar, EleTopicCards, PRICE_LABEL, PRICING_PATH, eleLessonCards, eleMetadata } from "./components";
+import { EleBuyBand, EleLessonGrid, EleLevelNav, EleTopbar, EleTopicCards, PRICE_LABEL, PRICING_PATH, eleLessonCards, eleMetadata, formatDateEs } from "./components";
+import { lessons as catalog } from "../lesson-catalog";
 import { MATERIAL_ELE_PATH, eleLevels, eleTopics, hubDescription, hubFaq, hubTitle } from "./data";
 import { TemaGroupCards } from "./tema-components";
 import { temaPages } from "./temas";
@@ -15,6 +16,9 @@ export const metadata = eleMetadata(MATERIAL_ELE_PATH, hubTitle, hubDescription)
 
 /** One free classroom per level plus the free conversation and listening entries. */
 const freeEntryIds = [239, 350, 389, 439, 468, 515, 36, 28];
+
+/** The newest classes of the catalog, with the day each went live. */
+const novedades = catalog.filter((lesson) => lesson.news?.addedAt).sort((a, b) => (a.news!.addedAt < b.news!.addedAt ? 1 : -1)).slice(0, 6);
 
 export default function MaterialElePage() {
   const free = eleLessonCards(freeEntryIds);
@@ -66,7 +70,16 @@ export default function MaterialElePage() {
             </div>
           </Section>
 
-          <Section id="indice" title="Índice de temas: gramática, vocabulario, funciones y cultura" intro={`${temaPages.length} temas organizados como los buscas, cada uno con las clases interactivas que lo enseñan: presente de indicativo, pretérito indefinido, subjuntivo, por y para, la familia, la comida, dar consejos, narrar…`}>
+          <Section id="novedades" title="Novedades" intro="Las últimas clases publicadas, con su fecha. Cada una entra automáticamente en los temas y niveles que le corresponden.">
+            <div className={styles.cardGrid}>
+              {eleLessonCards(novedades.map((lesson) => lesson.id)).map((card) => {
+                const added = novedades.find((lesson) => lesson.id === card.id)!.news!.addedAt;
+                return <Link className={styles.levelCard} key={card.id} href={card.href}><em><time dateTime={added}>{formatDateEs(added)}</time> · {card.level}</em><b>{card.title}</b><span>{card.category} · {card.free ? "GRATIS" : "PRO"}</span></Link>;
+              })}
+            </div>
+          </Section>
+
+          <Section id="indice" title="Índice de temas: gramática, vocabulario, funciones, cultura y formatos" intro={`${temaPages.length} temas organizados como los buscas, cada uno con las clases interactivas que lo enseñan: presente de indicativo, pretérito indefinido, subjuntivo, por y para, la familia, la comida, dar consejos, narrar, mundos 3D, comprensión auditiva, roleplays…`}>
             <TemaGroupCards />
             <p className={styles.sectionIntro}><Link href={INDICE_PATH}>Índice completo de Material ELE</Link>: todas las páginas en una lista, también disponible como <a href={FEED_PATH}>feed Atom</a>.</p>
           </Section>

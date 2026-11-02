@@ -32,3 +32,9 @@
 .steps { list-style: none; display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 16px; padding: 0; }
 .steps li { font-size: 13px; padding: 4px 10px; border-radius: 999px; background: var(--g-paper); border: 1px solid var(--g-line); }
 @media (max-width: 760px) { .featured { grid-template-columns: 1fr; padding: 14px; } }
+
+.dates { margin: 10px 0 0; font-size: 13px; color: var(--g-muted); }
+.dates span { font-weight: 700; color: var(--g-blue-dark); }
+.preview { margin: 0 0 28px; padding: 14px; background: #fff; border: 1px solid var(--g-line); border-radius: 20px; box-shadow: 0 14px 34px rgba(6, 21, 47, .08); }
+.preview video { display: block; width: 100%; max-width: 720px; height: auto; border-radius: 14px; background: #06152f; margin: 0 auto; }
+.preview figcaption { margin: 10px 0 0; font-size: 14px; color: var(--g-muted); text-align: center; }

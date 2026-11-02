@@ -2,7 +2,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs, Faq, GrowthFooter, JsonLd, Section } from "../../../../growth/components";
 import { faqPageSchema, webPageSchema } from "../../../../growth/schema";
-import { EleBuyBand, EleFeaturedLesson, EleLessonGrid, EleTopbar, eleLessonCards, eleMetadata, featuredGrammarLesson } from "../../../components";
+import { EleBuyBand, EleFeaturedLesson, EleLessonGrid, ElePageDates, ElePreviewVideo, EleTopbar, eleLessonCards, eleMetadata, elePreviewLesson, featuredGrammarLesson, pageImage } from "../../../components";
+import { pageDates } from "../../../indice";
 import { MATERIAL_ELE_PATH, eleLevels } from "../../../data";
 import ShareSnippet from "../../../ShareSnippet";
 import { TemaCards, TemaGroupCards } from "../../../tema-components";
@@ -14,7 +15,7 @@ export function generateStaticParams() { return temaLevelPages.map((page) => ({ 
 export async function generateMetadata({ params }: Props) {
   const { slug, tema, nivel } = await params;
   const page = temaLevelPageByPath.get(`${MATERIAL_ELE_PATH}/${slug}/${tema}/${nivel}`);
-  return page ? eleMetadata(page.path, page.title, page.description) : {};
+  return page ? eleMetadata(page.path, page.title, page.description, pageImage(page.lessonIds)) : {};
 }
 
 export default async function TemaLevelRoute({ params }: Props) {
@@ -28,11 +29,13 @@ export default async function TemaLevelRoute({ params }: Props) {
   const levelGuide = eleLevels.find((level) => level.code === page.level);
   const otherLevels = temaLevelsOf(page.tema).filter((other) => other.level !== page.level);
   const lower = page.name.toLowerCase();
+  const dates = pageDates(page.path);
+  const preview = elePreviewLesson(page.lessonIds);
   return (
     <>
       <main className={styles.page} lang="es">
         <div className={styles.shell}>
-          <JsonLd data={webPageSchema({ pathname: page.path, name: page.title, description: page.description, about: [page.name, page.level, group.label, "ELE"], inLanguage: "es", educationalLevel: page.level })} />
+          <JsonLd data={webPageSchema({ pathname: page.path, name: page.title, description: page.description, about: [page.name, page.level, group.label, "ELE"], inLanguage: "es", educationalLevel: page.level, image: pageImage(page.lessonIds), dates })} />
           <JsonLd data={faqPageSchema(page.faq, "es")} />
           <EleTopbar current={MATERIAL_ELE_PATH} />
           <Breadcrumbs items={[{ name: "SpanishCue", href: "/" }, { name: "Material ELE", href: MATERIAL_ELE_PATH }, { name: group.label, href: group.path }, { name: page.name, href: page.tema.path }, { name: page.level, href: page.path }]} />
@@ -45,7 +48,9 @@ export default async function TemaLevelRoute({ params }: Props) {
               {freeLesson ? <Link className={styles.secondaryButton} href={freeLesson.href}>Clase gratis: {freeLesson.title}</Link> : levelGuide ? <Link className={styles.secondaryButton} href={levelGuide.path}>Material {page.level} con clase gratis</Link> : null}
               <Link className={styles.secondaryButton} href={page.tema.path}>{page.name}: todos los niveles</Link>
             </div>
+            <ElePageDates dates={dates} />
           </section>
+          {preview ? <ElePreviewVideo lesson={preview} pathname={page.path} /> : null}
           {featured ? <EleFeaturedLesson lesson={featured} /> : null}
           <Section id="clases" title={`Clases de ${lower} para ${page.level}`} intro={page.order}>
             <EleLessonGrid lessons={lessons} />

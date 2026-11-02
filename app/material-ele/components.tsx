@@ -5,6 +5,10 @@ import { catalogLessons } from "../conversation-families/catalog";
 import { lessonCards, type LessonCardData } from "../growth/lessons";
 import { canonicalUrl } from "../seo";
 import { socialPreviewImage, socialPreviewUrl } from "../social-preview";
+import { JsonLd } from "../growth/components";
+import { elePreviewLesson, formatDateEs, pageImage } from "./media";
+export { elePreviewLesson, formatDateEs, pageImage } from "./media";
+import { videoObjectSchema, type PageDates } from "../growth/schema";
 import { MATERIAL_ELE_PATH, eleLevels, eleTopics, elePageBySlug, type EleActivity, type EleExercise, type EleQuestionSet } from "./data";
 import { actividadPathByName } from "./actividades";
 import styles from "../growth/growth.module.css";
@@ -14,15 +18,43 @@ import ele from "./material-ele.module.css";
 export const PRICING_PATH = "/pricing";
 export const PRICE_LABEL = "US$15,50 al mes";
 
-export function eleMetadata(path: string, title: string, description: string): Metadata {
+/** Page metadata; `image` is the page's own featured class picture (the cover of its first class), so every page shares a different picture and Google can show it next to the result. */
+export function eleMetadata(path: string, title: string, description: string, image?: string): Metadata {
+  const ogImage = image ? { url: canonicalUrl(image), alt: title } : socialPreviewImage;
   return {
     title,
     description,
     alternates: { canonical: canonicalUrl(path) },
     robots: { index: true, follow: true },
-    openGraph: { title, description, url: canonicalUrl(path), type: "website", locale: "es_ES", images: [socialPreviewImage] },
-    twitter: { card: "summary_large_image", title, description, images: [socialPreviewUrl] },
+    openGraph: { title, description, url: canonicalUrl(path), type: "website", locale: "es_ES", images: [ogImage] },
+    twitter: { card: "summary_large_image", title, description, images: [image ? canonicalUrl(image) : socialPreviewUrl] },
   };
+}
+
+/** Visible publication line: the same dates the WebPage schema and the sitemap carry. */
+export function ElePageDates({ dates }: { dates: PageDates }) {
+  return (
+    <p className={ele.dates}>
+      <span>SpanishCue</span>
+      {" · "}Publicado el <time dateTime={dates.datePublished}>{formatDateEs(dates.datePublished)}</time>
+      {dates.dateModified !== dates.datePublished ? <>{" · "}Actualizado el <time dateTime={dates.dateModified}>{formatDateEs(dates.dateModified)}</time></> : null}
+    </p>
+  );
+}
+
+/** A short real recording of one class of the page, visible and described for search engines as a VideoObject. */
+export function ElePreviewVideo({ lesson, pathname }: { lesson: NonNullable<ReturnType<typeof elePreviewLesson>>; pathname: string }) {
+  const name = `Así se ve la clase «${lesson.title}»`;
+  const description = `${lesson.subtitle} Grabación de la clase interactiva de SpanishCue (${lesson.level}), tal como la ve el alumno en pantalla.`;
+  return (
+    <figure className={ele.preview}>
+      <JsonLd data={videoObjectSchema({ name, description, thumbnail: lesson.image, contentPath: lesson.video, uploadDate: lesson.addedAt, pathname })} />
+      <video src={lesson.video} poster={lesson.image} controls muted playsInline preload="none" width={720} height={450} aria-label={name} />
+      <figcaption>
+        <strong>{name}</strong> · {lesson.level} · {lesson.free ? "GRATIS" : "PRO"}. <Link href={lesson.href}>{lesson.free ? "Abrir la clase" : "Ver qué incluye"}</Link>
+      </figcaption>
+    </figure>
+  );
 }
 
 const topLinks = [

@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { Breadcrumbs, Faq, GrowthFooter, JsonLd, Section } from "../growth/components";
 import { collectionPageSchema, faqPageSchema } from "../growth/schema";
-import { EleBuyBand, EleTopbar } from "./components";
+import { EleBuyBand, ElePageDates, EleTopbar } from "./components";
+import { pageDates } from "./indice";
 import { MATERIAL_ELE_PATH } from "./data";
 import { TemaGroupCards, TemaIndex, TemaLevelLinks } from "./tema-components";
 import { temasByGroup, type TemaGroup } from "./temas";
@@ -32,6 +33,7 @@ export function TemaGroupIndexPage({ group }: { group: TemaGroup }) {
               <Link className={styles.primaryButton} href="#indice">Ver el índice</Link>
               <Link className={styles.secondaryButton} href="/demo/noche-abierta">Probar una clase gratis</Link>
             </div>
+            <ElePageDates dates={pageDates(group.path)} />
           </section>
           <div id="indice" />
           <TemaIndex group={group.id} />

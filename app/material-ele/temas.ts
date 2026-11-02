@@ -12,8 +12,9 @@ import { isFreeLesson } from "../access-policy";
 import { grammarTopics } from "../grammar-classroom/catalog";
 import { courseLevels } from "../grammar-classroom/curriculum";
 import { MATERIAL_ELE_PATH, elePageBySlug } from "./data";
+import { immersiveWorldGameByLessonId } from "../resource-seo";
 
-export type TemaGroupId = "gramatica" | "vocabulario" | "funciones" | "cultura";
+export type TemaGroupId = "gramatica" | "vocabulario" | "funciones" | "cultura" | "formatos";
 export type TemaGroup = { id: TemaGroupId; label: string; path: string; title: string; description: string; h1: string; intro: string; method: string[] };
 
 export const temaGroups: TemaGroup[] = [
@@ -49,6 +50,14 @@ export const temaGroups: TemaGroup[] = [
     intro: "Madrid, Buenos Aires, México, Estados Unidos y los países de donde vienen los alumnos, en 3D, más fiestas, historia y variedades del español. La cultura entra como lugar donde conversar, no como texto para leer.",
     method: ["Recorrer: el alumno se mueve por un país o una ciudad y encuentra a personas con algo que contar.", "Comprender: escuchas por zona con acentos y registros reales.", "Conversar: preguntas sobre la vida real, comparadas con la del alumno."],
   },
+  {
+    id: "formatos", label: "Formatos", path: `${MATERIAL_ELE_PATH}/formatos`,
+    title: "Formatos de clase ELE: mundos 3D, escucha, juegos y roleplays | SpanishCue",
+    description: "Material ELE por formato: mundos 3D, comprensión auditiva, juegos de conversación, roleplays y clases para principiantes, adultos y fines específicos.",
+    h1: "Formatos de clase: elige cómo quieres que tu alumno hable hoy",
+    intro: "A veces el profesor no busca un tema sino un tipo de clase: un mundo 3D para una hora entera, una escucha corta, un juego para romper el hielo o un roleplay para practicar una situación. Aquí están todos los formatos de SpanishCue, cada uno con las clases que lo usan.",
+    method: ["Elegir el formato: cada tipo de clase pide algo distinto del alumno, de escuchar a decidir y negociar.", "Compartir la pantalla: el formato se abre en el navegador y avanza con el profesor.", "Cerrar hablando: todos los formatos terminan en producción oral, con el tema y el nivel del alumno."],
+  },
 ];
 export const temaGroupById = new Map(temaGroups.map((group) => [group.id, group]));
 
@@ -58,6 +67,9 @@ const strip = (text: string) => text.normalize("NFD").replace(/[̀-ͯ]/g, "").to
 // A grammar unit's tag is its whole topic label («Oraciones y conectores»), which would match every unit of the topic; the title and slug name the point.
 const topicLabels = new Set(grammarTopics.map((topic) => topic.label));
 const haystackByLesson = new Map<number, string>(lessons.map((lesson) => [lesson.id, strip([lesson.title, lesson.subtitle, topicLabels.has(lesson.tag) ? "" : lesson.tag, lesson.path ?? "", lesson.collection ?? "", ...(lesson.searchAliases ?? []), ...lesson.goals, lesson.explanation].join(" \n "))]));
+
+/** The free grammar classroom of each level: the sample of the live-class format. */
+const grammarLiveIds = [239, 350, 389, 439, 468, 515];
 
 /* Patterns are tested against accent-stripped lowercase text, so they are written without accents. */
 const sources: Source[] = [
@@ -161,6 +173,15 @@ const sources: Source[] = [
   { group: "funciones", parent: "Funciones", slug: "negociar-y-convencer", name: "Negociar y convencer", match: /negoci|convenc|persuad|\bacuerdo\b|\bofertas\b|\bmediar|\bmedias\b/, intro: "Proponer, ceder, poner condiciones y convencer: negociar con condicionales, conectores y fórmulas de cortesía en escenas con intereses opuestos." },
   { group: "funciones", parent: "Funciones", slug: "invitar-y-hacer-planes", name: "Invitar y hacer planes", match: /invit|\bplanes\b|\bquedar\b|\bcita\b|salva el plan|cambia el plan/, intro: "¿Quedamos?, ¿te apetece?, lo siento, no puedo: invitar, aceptar, rechazar y rehacer un plan cuando algo cambia." },
   { group: "funciones", parent: "Funciones", slug: "argumentar-y-debatir", name: "Argumentar y debatir", match: /argument|debat|refut|contraargument|\bobjecion|sintesis|ensayo/, intro: "Conceder, objetar, reformular y concluir: la argumentación oral y escrita de B2 a C2 con sus conectores y sus marcadores de cautela." },
+  // Formatos: how the class works, for teachers who search by type of class rather than by topic.
+  { group: "formatos", parent: "Mundos y juegos", slug: "mundos-3d", name: "Mundos 3D de conversación", match: /(?!)/, ids: [...immersiveWorldGameByLessonId.keys()], intro: "Una ciudad, un hospital, un aeropuerto, un edificio de vecinos, un casino, un bosque, países enteros: mundos en 3D que el alumno recorre con el teclado y en los que cada persona que encuentra abre una conversación de su nivel." },
+  { group: "formatos", parent: "Mundos y juegos", slug: "comprension-auditiva", name: "Comprensión auditiva", match: /comprension auditiva|\bescuchas? (por zona|nueva|propia|cortas?)\b|modo comprension|\bescucha\b.*\bvoces\b/, ids: lessons.filter((lesson) => lesson.category === "Escucha").map((lesson) => lesson.id), intro: "Escuchas cortas con voces de distintos países, preguntas de comprensión y una conversación después: el modo Comprensión auditiva de los mundos 3D y las clases de escucha por nivel." },
+  { group: "formatos", parent: "Mundos y juegos", slug: "juegos-de-conversacion", name: "Juegos de conversación", match: /videojuego|modo play|juego de conversacion|\bjuego\b|\bjuegos\b|plataformas|\btablero/, intro: "Clases que funcionan como un juego: decisiones, consecuencias, tableros, plataformas y misiones, con una pregunta de conversación en cada paso para que el alumno hable sin darse cuenta de que practica." },
+  { group: "formatos", parent: "Mundos y juegos", slug: "roleplays", name: "Roleplays y simulaciones", match: /roleplay|role play|juego de rol|simulacion|\bescena/, intro: "El alumno es el entrenador, el vecino nuevo, el pasajero, el cliente: roleplays con una situación concreta, varias salidas posibles y una conversación sobre la vida real al final." },
+  { group: "formatos", parent: "Tipos de clase", slug: "principiantes-absolutos", name: "Principiantes absolutos", match: /principiante|desde cero|primera clase|clase inicial|con el ingles al lado/, intro: "Clases para el primer día: palabras con el inglés al lado, frases mínimas y mundos 3D con un nivel de entrada anterior a A1, para que el alumno hable desde la primera hora." },
+  { group: "formatos", parent: "Tipos de clase", slug: "ele-para-adultos", name: "ELE para adultos", match: /\badultos\b|vida adulta|despues de los 30|\bmuerte\b|\bcasino\b/, intro: "Temas de adulto tratados como adulto: la vida después de los 30, la muerte y la vida, una noche en la ciudad, el dinero y el riesgo, sin infantilizar al alumno ni evitar la conversación real." },
+  { group: "formatos", parent: "Tipos de clase", slug: "fines-especificos", name: "Español para fines específicos", match: /negocio|empresa|\bmarketing\b|entrevista de trabajo|\blaboral\b|profesional|\bhospital\b|\bmedic/, intro: "Español del trabajo, de la empresa, del marketing y de la salud: clases con el léxico y las situaciones de un ámbito profesional, para alumnos que lo necesitan en su trabajo." },
+  { group: "formatos", parent: "Tipos de clase", slug: "clases-de-gramatica-en-vivo", name: "Clases de gramática en vivo", match: /(?!)/, ids: grammarLiveIds, intro: "El formato de siete pasos de las clases de gramática: entender, explorar, practicar, escuchar, conversar, escribir y cerrar, en una pantalla que se comparte y avanza con el profesor. Aquí, una clase de muestra por nivel." },
   // Cultura y países: the country worlds that exist today (the student's countries and the Spanish-speaking ones).
   { group: "cultura", parent: "Países hispanohablantes", slug: "espana", name: "España", match: /\bespana\b|\bmadrid\b|espanol de espana/, intro: "Madrid entera en 3D y un viaje por España: lugares reales, costumbres y el español peninsular con su «vosotros» y su leísmo, para conversar y escuchar por nivel." },
   { group: "cultura", parent: "Países hispanohablantes", slug: "argentina", name: "Argentina", match: /argentin|buenos aires|rioplatense|\bvoseo\b|almagro|\bconsorcio\b/, intro: "Buenos Aires en la calle, un edificio de Almagro con asamblea de vecinos, Argento Roleplays y el voseo: la Argentina cotidiana para enseñar español rioplatense." },
@@ -252,6 +273,7 @@ const levelCopy: Record<TemaGroupId, LevelCopy> = {
   vocabulario: { where: "Cada una mete el léxico en una escena real, con audio y contexto, y termina con una tarea oral en la que el alumno necesita", order: "De la escena más simple a la más exigente: primero reconocer y pedir, después comparar, reclamar y contar.", faqStart: "las clases van de la escena más guiada a la más abierta, y el léxico se recicla de una a otra", descTail: "dentro de situaciones reales, con audio y tarea oral", shortTail: "escenas reales, audio y tarea oral" },
   funciones: { where: "Cada una muestra un modelo, practica las fórmulas con corrección y cierra con una escena en la que la única salida es", order: "Primero el modelo y las fórmulas, después la práctica guiada y al final la escena donde hay que usarlas.", faqStart: "las clases van del modelo a la práctica guiada y de ahí a la tarea real, con la gramática que cada función necesita", descTail: "con modelo, práctica guiada y tarea real", shortTail: "modelo, práctica guiada y tarea real" },
   cultura: { where: "Cada una lleva al alumno a un lugar que se recorre hablando, con escuchas por zona y preguntas sobre la vida real para que practique", order: "Primero el recorrido y la escucha, después la conversación comparada con la vida del alumno.", faqStart: "las clases van del recorrido y la escucha a la conversación, y cada país o tema suma acentos y registros nuevos", descTail: "con recorrido, escuchas por zona y conversación", shortTail: "recorrido, escucha y conversación" },
+  formatos: { where: "Cada una usa este formato con la exigencia del nivel: la misma mecánica pide más lengua a medida que el alumno sube, y en todas hay un momento en que necesita", order: "De la clase más corta a la más larga: primero la que entra en media hora, después las que llenan una sesión entera.", faqStart: "las clases van de la más corta a la más larga, y dentro del formato cada una cambia la situación y el léxico", descTail: "con la mecánica del formato y conversación final", shortTail: "mecánica del formato y conversación final" },
 };
 function buildLevelPage(tema: TemaPage, level: string): TemaLevelPage | null {
   const ids = tema.lessonIds.filter((id) => { const lesson = lessonById.get(id); return lesson ? lessonLevels(lesson).includes(level) : false; });

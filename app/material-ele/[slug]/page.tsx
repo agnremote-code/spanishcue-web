@@ -2,10 +2,11 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs, Faq, GrowthFooter, JsonLd, Section } from "../../growth/components";
 import { faqPageSchema, webPageSchema } from "../../growth/schema";
-import { EleActivities, EleBuyBand, EleExerciseBlock, EleFeaturedLesson, EleLessonGrid, EleLevelNav, EleQuestions, EleTopbar, EleTopicCards, PRICE_LABEL, PRICING_PATH, eleLessonCards, eleMetadata, featuredGrammarLesson } from "../components";
+import { EleActivities, EleBuyBand, EleExerciseBlock, EleFeaturedLesson, EleLessonGrid, EleLevelNav, ElePageDates, ElePreviewVideo, EleQuestions, EleTopbar, EleTopicCards, PRICE_LABEL, PRICING_PATH, eleLessonCards, eleMetadata, elePreviewLesson, featuredGrammarLesson, pageImage } from "../components";
+import { pageDates } from "../indice";
 import { MATERIAL_ELE_PATH, elePageBySlug, elePages } from "../data";
 import { TemaGroupIndexPage } from "../tema-group-page";
-import { temaGroupById, type TemaGroupId } from "../temas";
+import { temaGroupById, temasByGroup, type TemaGroupId } from "../temas";
 import styles from "../../growth/growth.module.css";
 import PrintButton from "../PrintButton";
 import print from "../print.module.css";
@@ -20,7 +21,7 @@ export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
   const page = elePageBySlug.get(slug);
   const group = temaGroupById.get(slug as TemaGroupId);
-  return page ? eleMetadata(page.path, page.title, page.description) : group ? eleMetadata(group.path, group.title, group.description) : {};
+  return page ? eleMetadata(page.path, page.title, page.description, pageImage(page.lessonIds)) : group ? eleMetadata(group.path, group.title, group.description, pageImage(temasByGroup(group.id).flatMap((tema) => tema.lessonIds))) : {};
 }
 
 export default async function ElePage({ params }: Props) {
@@ -34,11 +35,13 @@ export default async function ElePage({ params }: Props) {
   const lessons = eleLessonCards(page.lessonIds);
   const freeLesson = lessons.find((lesson) => lesson.free);
   const featured = featuredGrammarLesson(page.lessonIds);
+  const dates = pageDates(page.path);
+  const preview = elePreviewLesson(page.lessonIds);
   return (
     <>
       <main className={styles.page} lang="es">
         <div className={styles.shell}>
-          <JsonLd data={webPageSchema({ pathname: page.path, name: page.title, description: page.description, about: page.keyPoints.items, inLanguage: "es", ...(page.code ? { educationalLevel: page.code } : {}) })} />
+          <JsonLd data={webPageSchema({ pathname: page.path, name: page.title, description: page.description, about: page.keyPoints.items, inLanguage: "es", ...(page.code ? { educationalLevel: page.code } : {}), image: pageImage(page.lessonIds), dates })} />
           <JsonLd data={faqPageSchema(page.faq, "es")} />
           <EleTopbar current={page.slug === "preguntas-de-conversacion" || page.slug === "juegos-para-clase-de-espanol" ? page.path : MATERIAL_ELE_PATH} />
           <Breadcrumbs items={[{ name: "SpanishCue", href: "/" }, { name: "Material ELE", href: MATERIAL_ELE_PATH }, { name: page.label, href: page.path }]} />
@@ -55,8 +58,10 @@ export default async function ElePage({ params }: Props) {
               <PrintButton />
               {freeLesson ? <Link className={styles.secondaryButton} href={freeLesson.href}>Clase gratis: {freeLesson.title}</Link> : <Link className={styles.secondaryButton} href="/demo/noche-abierta">Probar una clase gratis</Link>}
             </div>
+            <ElePageDates dates={dates} />
           </section>
           {page.kind === "level" ? <EleLevelNav current={page.slug} /> : null}
+          {preview ? <div className={print.noPrint}><ElePreviewVideo lesson={preview} pathname={page.path} /></div> : null}
           {featured ? <EleFeaturedLesson lesson={featured} /> : null}
 
           <Section title={page.keyPoints.title}>

@@ -4,7 +4,7 @@ import { MATERIAL_ELE_PATH, eleLevels } from "./data";
 import { temaGroups, temaParents, type TemaGroupId, type TemaPage } from "./temas";
 import styles from "../growth/growth.module.css";
 
-/** Cards for the four topic groups, shown on the hub and at the end of every topic page. */
+/** Cards for the topic groups, shown on the hub and at the end of every topic page. */
 export function TemaGroupCards({ current }: { current?: TemaGroupId }) {
   return (
     <div className={styles.cardGrid}>
