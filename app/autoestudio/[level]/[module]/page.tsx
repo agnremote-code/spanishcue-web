@@ -5,30 +5,30 @@ import { notFound } from "next/navigation";
 import { fullAccessFromHeaders } from "../../../access-policy";
 import { isFreeAutoestudioModule, modulePath } from "../../access";
 import { moduleClips } from "../../curriculum/audio-clips";
-import { findModule, neighbours } from "../../curriculum/course";
+import { findModuleSummary, loadModule, neighbours } from "../../curriculum/course";
 import { levelMeta } from "../../curriculum/levels";
 import { objectiveById } from "../../curriculum/objectives";
 import { shareSessionFromHeaders } from "../../session-display";
 import ModulePlayer from "../../ModulePlayer";
 import audioManifest from "../../audio-manifest.json";
 import { recommendationCatalog } from "../../errors/catalog";
-import { englishFor } from "../../english";
 
 export async function generateMetadata({ params }: { params: Promise<{ level: string; module: string }> }): Promise<Metadata> {
   const { level, module: slug } = await params;
-  const mod = findModule(level, slug);
+  const mod = findModuleSummary(level, slug);
   if (!mod) return {};
   return {
     title: `${mod.title} · ${mod.level.toUpperCase()} semana ${mod.week} | Autoestudio SPANISHCUE`,
-    description: mod.goal.canDo,
+    description: mod.canDo,
   };
 }
 
 export default async function Page({ params }: { params: Promise<{ level: string; module: string }> }) {
   const { level: levelId, module: slug } = await params;
-  const mod = findModule(levelId, slug);
+  const loaded = await loadModule(levelId, slug);
   const level = levelMeta(levelId);
-  if (!mod || !level) notFound();
+  if (!loaded || !level) notFound();
+  const mod = loaded.module;
 
   const path = modulePath(mod.level, mod.week);
   const h = await headers();
@@ -69,7 +69,7 @@ export default async function Page({ params }: { params: Promise<{ level: string
       nextLocked={nextLocked}
       recommendations={recommendationCatalog(mod.level)}
       fullAccess={fullAccess}
-      english={englishFor(mod.level, mod.week)}
+      english={loaded.english ?? undefined}
     />
   );
 }

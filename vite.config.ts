@@ -4,6 +4,7 @@ import hostingConfig from "./.openai/hosting.json";
 import { sites } from "./build/sites-vite-plugin";
 import { createRequire } from "node:module";
 import { liveLessonData, liveLessonIndexModule } from "./scripts/live-lessons.mjs";
+import { autoestudioModuleData, autoestudioIndexModule } from "./scripts/autoestudio-modules.mjs";
 
 const serverRequire = createRequire(import.meta.url);
 
@@ -95,6 +96,18 @@ export default defineConfig(async ({ command }) => {
           if (!id.replace(/\\/g, "/").endsWith("/app/grammar-classroom/live/registry.ts")) return null;
           if (this.environment?.name === "client") throw new Error("The live lesson registry is server-only");
           return liveLessonIndexModule(await liveLessonData());
+        },
+      },
+      {
+        // Autoestudio module bodies ship as encrypted blobs too
+        // (scripts/autoestudio-modules.mjs); the Worker keeps their summaries.
+        name: "spanishcue-autoestudio-index",
+        apply: "build",
+        enforce: "pre",
+        async load(id: string) {
+          if (!id.replace(/\\/g, "/").endsWith("/app/autoestudio/curriculum/course.ts")) return null;
+          if (this.environment?.name === "client") throw new Error("The Autoestudio course registry is server-only");
+          return autoestudioIndexModule(await autoestudioModuleData());
         },
       },
       vinext(),

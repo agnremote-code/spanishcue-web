@@ -23,6 +23,7 @@ import {
 } from "node:crypto";
 import { build } from "esbuild";
 import { liveLessonData } from "./live-lessons.mjs";
+import { autoestudioModuleData } from "./autoestudio-modules.mjs";
 import { tmpdir } from "node:os";
 import { dirname, extname, relative, resolve } from "node:path";
 
@@ -400,6 +401,19 @@ for (const [id, body] of Object.entries(lessonBodies)) {
     "application/json",
   );
 }
+// Autoestudio modules (scripts/autoestudio-modules.mjs): same scheme, one blob per
+// weekly module with its English support.
+await mkdir(resolve("dist/client/_protected-autoestudio"), { recursive: true });
+const { bodies: autoestudioBodies } = await autoestudioModuleData();
+const autoestudioAssets = {};
+for (const [id, body] of Object.entries(autoestudioBodies)) {
+  autoestudioAssets[id] = await encryptAsset(
+    Buffer.from(body),
+    `/autoestudio-module/${id}`,
+    "_protected-autoestudio",
+    "application/json",
+  );
+}
 const serverText = async (directory) => {
   let text = "";
   for (const entry of await readdir(directory, { withFileTypes: true })) {
@@ -418,6 +432,16 @@ for (const [id, body] of Object.entries(lessonBodies)) {
   const probe = listen?.transcript.slice(0, 80);
   if (probe && workerText.includes(probe)) throw new Error(`Lesson ${id} body is still inside the Worker bundle`);
 }
+for (const [id, body] of Object.entries(autoestudioBodies)) {
+  const text = JSON.stringify(JSON.parse(body).module);
+  // Any 80-char slice deep inside the body identifies it; titles also live in the summaries.
+  const deep = text.slice(Math.floor(text.length / 2), Math.floor(text.length / 2) + 80);
+  if (deep.length === 80 && workerText.includes(deep)) throw new Error(`Autoestudio module ${id} body is still inside the Worker bundle`);
+}
+await writeFile(
+  "dist/server/private-autoestudio-assets.js",
+  `export default ${JSON.stringify(autoestudioAssets)};\n`,
+);
 await writeFile(
   "dist/server/private-lesson-assets.js",
   `export default ${JSON.stringify(lessonAssets)};\n`,
@@ -445,6 +469,7 @@ import privateAssets from './private-client-assets.js';
 import privateMedia from './private-media-assets.js';
 import routedWebp from './public-webp-assets.js';
 import privateLessons from './private-lesson-assets.js';
+import privateAutoestudio from './private-autoestudio-assets.js';
 import {mayReadPrivateMedia} from './private-access-runtime.js';
 
 const privateHeaders=()=>new Headers({'Cache-Control':'private, no-store','X-Content-Type-Options':'nosniff','Referrer-Policy':'strict-origin-when-cross-origin'});
@@ -502,6 +527,15 @@ globalThis.__spanishcueLiveLessons={async load(assets,id){
  if(!record)return undefined;
  const response=await assets.fetch(new Request(new URL(record.assetPath,'https://assets.local')));
  if(!response.ok)throw new Error(\`Live lesson \${id} unavailable (\${response.status})\`);
+ const plain=await crypto.subtle.decrypt({name:'AES-GCM',iv:base64Bytes(record.iv)},await mediaKey(),await response.arrayBuffer());
+ return JSON.parse(new TextDecoder().decode(plain));
+}};
+// Read by the Autoestudio course index inside app-worker.js (scripts/autoestudio-modules.mjs).
+globalThis.__spanishcueAutoestudio={async load(assets,id){
+ const record=Object.hasOwn(privateAutoestudio,id)?privateAutoestudio[id]:undefined;
+ if(!record)return undefined;
+ const response=await assets.fetch(new Request(new URL(record.assetPath,'https://assets.local')));
+ if(!response.ok)throw new Error(\`Autoestudio module \${id} unavailable (\${response.status})\`);
  const plain=await crypto.subtle.decrypt({name:'AES-GCM',iv:base64Bytes(record.iv)},await mediaKey(),await response.arrayBuffer());
  return JSON.parse(new TextDecoder().decode(plain));
 }};

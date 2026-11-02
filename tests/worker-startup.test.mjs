@@ -69,3 +69,18 @@ test("live grammar lessons ship as encrypted blobs and decrypt in the Worker", a
   }
   assert.equal(await globalThis.__spanishcueLiveLessons.load(assets, 222), undefined);
 });
+
+test("Autoestudio modules ship as encrypted blobs and decrypt in the Worker", async () => {
+  await import(pathToFileURL(resolve(server, "index.js")).href);
+  const modules = (await import(pathToFileURL(resolve(server, "private-autoestudio-assets.js")).href)).default;
+  const ids = Object.keys(modules);
+  assert.ok(ids.length >= 80, "every published module has an encrypted record");
+  const assets = { fetch: async (request) => new Response(await readFile(client + new URL(request.url).pathname)) };
+  for (const id of ids) {
+    assert.match(modules[id].assetPath, /^\/_protected-autoestudio\/[0-9a-f]{64}\.bin$/, id);
+    const body = await globalThis.__spanishcueAutoestudio.load(assets, id);
+    assert.equal(body.module.id, id);
+    assert.ok(Array.isArray(body.module.newObjectives), id);
+  }
+  assert.equal(await globalThis.__spanishcueAutoestudio.load(assets, "zz-99"), undefined);
+});

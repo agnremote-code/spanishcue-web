@@ -4,7 +4,7 @@
  * The history is append-only; a later correct answer only fills corrected_at.
  */
 import { SECTION_ORDER, type SectionKey } from "../curriculum/types";
-import { findModule } from "../curriculum/course";
+import { loadModule } from "../curriculum/course";
 import { resolveItem } from "../curriculum/lookup";
 import { categorize, categories, defaultExplanation, type CategoryId } from "./categorize";
 import { classesFor, type RecommendedClass } from "./catalog";
@@ -40,7 +40,7 @@ export async function recordAnswer(request: Request, env: ShareEnvironment) {
   if (!SECTION_ORDER.includes(section)) fail(400, "invalid_error");
   const exerciseId = text(data.exerciseId, 80), itemIndex = Number(data.itemIndex), attempt = Number(data.attempt), verdict = data.verdict;
   if (!exerciseId || !Number.isInteger(itemIndex) || itemIndex < 0 || itemIndex > 99 || !Number.isInteger(attempt) || attempt < 1 || attempt > 999 || !["correct", "accent", "wrong"].includes(String(verdict))) fail(400, "invalid_error");
-  const mod = findModule(identity.level, `semana-${Number(moduleId.split("-")[1])}`);
+  const mod = (await loadModule(identity.level, `semana-${Number(moduleId.split("-")[1])}`))?.module;
   const item = mod ? resolveItem(mod, section, exerciseId, itemIndex) : null;
   if (!mod || !item) fail(404, "exercise_not_found");
   const now = new Date().toISOString();

@@ -7,6 +7,7 @@ import { b2Modules } from "./modules/b2";
 import { c1Modules } from "./modules/c1";
 import { c2Modules } from "./modules/c2";
 import type { LevelId, LevelMeta, Module, ModuleSummary } from "./types";
+import { englishFor } from "../english";
 
 /**
  * Server-side course registry. Never import this from a client component:
@@ -52,7 +53,20 @@ export function findModule(levelId: string, slug: string): Module | undefined {
   return modulesByLevel[levelId as LevelId]?.find((module) => module.week === Number(match[1]));
 }
 
-export function neighbours(module: Module): { previous: ModuleSummary | null; next: ModuleSummary | null } {
+export function findModuleSummary(levelId: string, slug: string): ModuleSummary | undefined {
+  const found = findModule(levelId, slug);
+  return found ? summarize(found) : undefined;
+}
+
+/** A module body with its English support. In the Worker build this reads an encrypted blob (scripts/autoestudio-modules.mjs). */
+export type LoadedModule = { module: Module; english: Readonly<Record<string, string>> | null };
+
+export async function loadModule(levelId: string, slug: string): Promise<LoadedModule | undefined> {
+  const found = findModule(levelId, slug);
+  return found ? { module: found, english: englishFor(found.level, found.week) ?? null } : undefined;
+}
+
+export function neighbours(module: { id: string }): { previous: ModuleSummary | null; next: ModuleSummary | null } {
   const ordered = levels.flatMap((level) => modulesByLevel[level.id]);
   const index = ordered.findIndex((candidate) => candidate.id === module.id);
   return {
