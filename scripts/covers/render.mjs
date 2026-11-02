@@ -1,6 +1,7 @@
 // Renders the covers from the painted scenes in scripts/covers/art/ to WebP.
 //   node scripts/covers/render.mjs mas-alla            → public/mas-alla/cover.webp (the scene alone)
 //   node scripts/covers/render.mjs clasicas            → public/conversation-classics/<slug>.webp
+//   node scripts/covers/render.mjs mundos [slug]       → the 3D worlds' illustrated covers (art/<art>.webp cropped to 1200×750)
 // Needs Playwright's Chromium and python3 with Pillow (the WebP encoder).
 import { execFileSync } from 'node:child_process';
 import { mkdir, readFile } from 'node:fs/promises';
@@ -20,10 +21,25 @@ function webp(png, target, quality = 74, fit = '') {
 
 const art = slug => pathToFileURL(resolve(repo, 'scripts/covers/art', `${slug}.webp`)).href;
 const url = pathToFileURL(resolve(repo, 'scripts/covers', `${name}.html`)).href;
-if (name === 'mas-alla') {
-  const target = resolve(repo, 'public/mas-alla/cover.webp');
-  webp(await readFile(resolve(repo, 'scripts/covers/art/mas-alla.webp')), target, 84, 'cover16x10');
-  console.log(target);
+// 3D worlds: key art in the grammar mascots' cartoon style (Canva AI, 2026-11-02), never game screenshots.
+const WORLDS = [
+  ['mas-alla', 'public/mas-alla/cover.webp'],
+  ['vuelo-cancelado', 'public/vuelo-cancelado/cover.webp'],
+  ['el-consorcio', 'public/el-consorcio/cover.webp'],
+  ['noche-abierta', 'public/noche-abierta/cover.webp', ''], // 16:9 kept (tests/noche-abierta)
+  ['hospital-san-casi-vivo', 'public/hospital-san-casi-vivo/cover.webp'],
+  ['madrid-infectada', 'public/madrid-infectada/cover.webp'],
+  ['marketing-de-casinos', 'public/marketing-de-casinos/cover.webp'],
+  ['reino', 'public/reino/cover.webp'],
+  ['la-feria-de-villaluz', 'public/la-feria-de-villaluz/cover.webp'],
+];
+if (name === 'mas-alla' || name === 'mundos') {
+  for (const [art, path, fit = 'cover16x10'] of WORLDS) {
+    if (name === 'mas-alla' ? art !== 'mas-alla' : only && art !== only) continue;
+    const target = resolve(repo, path);
+    webp(await readFile(resolve(repo, 'scripts/covers/art', `${art}.webp`)), target, fit ? 80 : 70, fit);
+    console.log(target);
+  }
 } else {
   const { CLASSICS } = await import(pathToFileURL(resolve(repo, 'scripts/covers/clasicas.mjs')).href);
   const out = resolve(repo, 'public/conversation-classics');
