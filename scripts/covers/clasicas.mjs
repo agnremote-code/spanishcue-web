@@ -58,16 +58,4 @@ export const CLASSICS = [
   c('lets-talk-c2', [], 'Let’s Talk', 'C2', 'lets-talk'),
   c('preguntas-que-dan-ganas-de-hablar', [11], 'Preguntas que dan ganas de hablar', 'Conversación', 'preguntas-que-dan-ganas-de-hablar'),
   c('museo-de-las-decisiones', [203], 'El museo de las decisiones', 'Conversación', 'museo-de-las-decisiones'),
-  // 2026-11-02: the ten classic question banks (ids 246–255). Their catalog
-  // entries point at these files directly, so ids stay empty here.
-  c('speed-dating-de-personajes', [], 'Speed dating de personajes', 'Conversación', 'speed-dating-de-personajes'),
-  c('el-restaurante-imposible', [], 'El restaurante imposible', 'Conversación', 'el-restaurante-imposible'),
-  c('el-dia-que-todo-salio-mal', [], 'El día que todo salió mal', 'Conversación', 'el-dia-que-todo-salio-mal'),
-  c('tradiciones-que-nadie-entiende', [], 'Tradiciones que nadie entiende', 'Conversación', 'tradiciones-que-nadie-entiende'),
-  c('mi-yo-de-2035', [], 'Mi yo de 2035', 'Conversación', 'mi-yo-de-2035'),
-  c('el-consultorio-sentimental', [], 'El consultorio sentimental de la radio', 'Conversación', 'el-consultorio-sentimental'),
-  c('resenas-de-una-estrella', [], 'Reseñas de una estrella', 'Conversación', 'resenas-de-una-estrella'),
-  c('el-billete-ganador', [], 'El billete ganador', 'Conversación', 'el-billete-ganador'),
-  c('un-dia-sin-pantallas', [], 'Un día sin pantallas', 'Conversación', 'un-dia-sin-pantallas'),
-  c('el-tribunal-de-las-cosas-pequenas', [], 'El tribunal de las cosas pequeñas', 'Conversación', 'el-tribunal-de-las-cosas-pequenas'),
 ];

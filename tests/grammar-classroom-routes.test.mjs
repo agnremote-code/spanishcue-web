@@ -3,10 +3,6 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 const origin=process.env.CHESPANISH_TEST_ORIGIN||'http://127.0.0.1:8787';
 const get=path=>fetch(origin+path,{redirect:'manual'});
-// wrangler dev answers an in-flight request with this 503 when its local worker restarts and only retries GET/HEAD itself;
-// the app never sends it, so a write that met it is sent once more.
-const devRestart=async response=>response.status===503&&(await response.clone().text()).startsWith('Your worker restarted mid-request');
-const write=async(url,init)=>{const response=await fetch(url,init);return await devRestart(response)?fetch(url,init):response;};
 test('existing free grammar routes serve the live class and their reference banks remain reachable',async()=>{
   for(const [id,path] of [[40,'/la-fabrica-de-los-nombres'],[41,'/el-atelier-de-la-concordancia']]){
     const response=await get(path);assert.equal(response.status,200);const html=await response.text();
@@ -54,9 +50,9 @@ test('per-student live class sessions are an account API: anonymous visitors get
   const list=await get('/api/live-class?lessonId=239');assert.equal(list.status,401);
   assert.equal(list.headers.get('cache-control'),'private, no-store');await list.arrayBuffer();
   const one=await get('/api/live-class?lessonId=239&studentId=abc');assert.equal(one.status,401);await one.arrayBuffer();
-  const put=await write(origin+'/api/live-class',{method:'PUT',headers:{'content-type':'application/json','origin':'https://evil.example'},body:JSON.stringify({lessonId:239,studentId:'abc',saved:{values:{},results:{}}})});
+  const put=await fetch(origin+'/api/live-class',{method:'PUT',headers:{'content-type':'application/json','origin':'https://evil.example'},body:JSON.stringify({lessonId:239,studentId:'abc',saved:{values:{},results:{}}})});
   assert.equal(put.status,401);await put.arrayBuffer();
-  const del=await write(origin+'/api/live-class?lessonId=239&studentId=abc',{method:'DELETE'});assert.equal(del.status,401);await del.arrayBuffer();
+  const del=await fetch(origin+'/api/live-class?lessonId=239&studentId=abc',{method:'DELETE'});assert.equal(del.status,401);await del.arrayBuffer();
 });
 test('encrypted live lesson blobs are not served to visitors',async()=>{
   const lessons=(await import(new URL('../dist/server/private-lesson-assets.js',import.meta.url))).default;

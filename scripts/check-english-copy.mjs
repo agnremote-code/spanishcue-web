@@ -104,7 +104,6 @@ export function filterReviewedChanges(findings, reviewed) {
  * exempt an edit or deletion of existing English copy.
  */
 export const APPROVAL_MANIFESTS = [
-  'docs/audits/clasicas-conversacion-english-additions-20261102.json',
   'docs/audits/pricing-free-doors-english-additions-20261101.json',
   'docs/audits/brand-query-english-additions-20261102.json',
   'docs/audits/how-it-works-videos-english-additions-20261101.json',
@@ -121,7 +120,6 @@ export const APPROVAL_MANIFESTS = [
   'docs/audits/academias-bauti-english-additions-20261023.json',
   'docs/audits/duration-english-additions-20261009.json',
   'docs/audits/content-protection-english-additions-20261021.json',
-  'docs/audits/account-sharing-english-additions-20261102.json',
   'docs/audits/resource-3d-worlds-english-additions-20261017.json',
   'docs/audits/grammar-live-english-additions-20261013.json',
   'docs/audits/grammar-live-english-all-20261013.json',
