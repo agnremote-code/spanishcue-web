@@ -142,7 +142,7 @@ test('PRO by default: route, catalog, cover, preview, shared engine and no brows
   assert.match(catalog, /\{id:245,[^\n]*levels:\["A0","A1","A2","B1","B2","C1","C2"\],displayLevel:"A0–C2"[^\n]*path:"\/el-consorcio"/);
   assert.doesNotMatch(readFileSync('app/access-policy.ts', 'utf8'), /245|el-consorcio/);
   assert.match(readFileSync('app/el-consorcio/layout.tsx', 'utf8'), /canonical:"https:\/\/spanishcue\.com\/el-consorcio"/);
-  const cover = readFileSync('public/el-consorcio/cover.webp');
+  const cover = readFileSync('public/el-consorcio/portada.webp');
   assert.equal(cover.toString('ascii', 0, 4), 'RIFF');
   assert.equal(cover.toString('ascii', 8, 16), 'WEBPVP8 ');
   assert.deepEqual([cover.readUInt16LE(26) & 0x3fff, cover.readUInt16LE(28) & 0x3fff], [1200, 750]);

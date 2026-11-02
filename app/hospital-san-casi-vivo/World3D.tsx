@@ -18,6 +18,8 @@ import { buildHospital, talking as talkingNow, type Hospital, type Npc, type Mov
 import { createBumpClock, pushOut } from '../escucha-3d/bump.mjs';
 import { CRIES, insultFor, shout } from '../escucha-3d/shout';
 import { setMood } from '../noche-abierta/people3d';
+import { createCharlas } from '../charlas-3d/charlas3d';
+import { hospitalPlaces } from './charlas';
 
 export type Pose = { floor: number; x: number; z: number; heading: number; sector: string | null };
 export type WorldProps = {
@@ -25,6 +27,8 @@ export type WorldProps = {
   /** How the last floor change happens: the elevator doors or a walk up the stairs. */
   via: 'lift' | 'stairs';
   sceneId: string | null;
+  /** The level being played: the extra conversation circles ask at this level. */
+  level: string;
   mood: string | null;
   done: string[];
   paused: boolean;
@@ -124,6 +128,17 @@ export default function World3D(props: WorldProps) {
     let walls = cameraBlockers(floor);
     const start = floor === 1 ? { x: SPAWN.x, z: SPAWN.z, heading: SPAWN.heading } : { ...ELEVATOR_ARRIVAL };
     let player = { x: start.x, z: start.z, heading: start.heading, speed: 0, y: 0, vy: 0, jumpHeld: false };
+    // Conversation circles: everyone without a scene, every room and the things that stand out.
+    const places = hospitalPlaces();
+    const charlas = createCharlas({
+      parent: scene, host: mount.current!.parentElement ?? mount.current!, world: 'hospital', level: () => live.current.level,
+      people: function* () {
+        const y = floorById(floor).y;
+        for (const [i, n] of hospital.npcs.entries()) if (n.floor === floor && !n.scene && !n.talk && !n.main) yield { key: `n${i}`, x: n.x, z: n.z, y };
+        for (const [i, m] of hospital.movers.entries()) if (m.floor === floor) yield { key: `m${i}`, x: m.x, z: m.z, y };
+      },
+      places: () => places.filter(pl => pl.floor === floor),
+    });
     let yaw = player.heading, pitch = 0.22, zoom = low ? 3.7 : 3.9;
     let turn = 0;
     const held = new Set<string>();
@@ -390,6 +405,7 @@ export default function World3D(props: WorldProps) {
           if (d < best) { best = d; nearPerson = n; }
         }
       }
+      charlas.update(player, dt, !inside && !atLift && !nearPerson && !sceneId && !ride && !p.paused && !p.intro && !p.personId);
       const near = inside ? `scene:${inside}` : atLift ? `${atLift}:${atLift}` : nearPerson ? `person:${nearPerson.talk}` : '';
       if (near !== nearKey) { nearKey = near; p.onNear(inside ? { kind: 'scene', id: inside } : atLift ? { kind: atLift, id: atLift } : nearPerson ? { kind: 'person', id: nearPerson.talk! } : null); }
       if (clock - poseAt > 0.2) {
@@ -457,6 +473,7 @@ export default function World3D(props: WorldProps) {
     return () => {
       disposed = true;
       cancelAnimationFrame(frame);
+      charlas.dispose();
       window.clearTimeout(touchTimer);
       observer.disconnect();
       window.removeEventListener('keydown', onKeyDown);

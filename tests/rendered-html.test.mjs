@@ -172,9 +172,9 @@ test('the teacher-resources hub, homepage and pricing page expose clean canonica
  assert.match(hubHtml,/<h1[^>]*>Spanish Teacher Resources/);assert.match(hubHtml,/rel="canonical" href="https:\/\/spanishcue\.com\/spanish-teacher-resources"/i);
  assert.match(hubHtml,/href="\/spanish-conversation-activities"/);assert.match(hubHtml,/href="\/guides"/);assert.match(hubHtml,/href="\/autoestudio"/);assert.doesNotMatch(hubHtml,/hreflang=/i);
  const home=await fetch(root);const homeHtml=await home.text();
- assert.match(homeHtml,/"@type":"Organization"/);assert.match(homeHtml,/"@type":"WebSite"/);assert.doesNotMatch(homeHtml,/id="spanishcue-marketing-assets"/);assert.match(homeHtml,/href="\/zeely"/);
- assert.match(homeHtml,/<title>Clases de español listas para enseñar \(A1–C2\) \| SPANISHCUE<\/title>/);
- const englishHome=await fetch(root,{headers:{cookie:'spanishcue_locale=en'}});assert.match(await englishHome.text(),/<title>Interactive Spanish Lessons for Teachers \(A1–C2\) \| SPANISHCUE<\/title>/);
+ assert.match(homeHtml,/"@type":"Organization"/);assert.match(homeHtml,/"alternateName":\["SpanishCue","Spanish Cue","spanishcue","spanishcue.com"\]/);assert.match(homeHtml,/"sameAs":\["https:\/\/www\.linkedin\.com\/company\/144023469"\]/);assert.match(homeHtml,/"@type":"WebSite"/);assert.doesNotMatch(homeHtml,/id="spanishcue-marketing-assets"/);assert.match(homeHtml,/href="\/zeely"/);
+ assert.match(homeHtml,/<title>SPANISHCUE: clases de español listas para enseñar \(A1–C2\)<\/title>/);
+ const englishHome=await fetch(root,{headers:{cookie:'spanishcue_locale=en'}});assert.match(await englishHome.text(),/<title>SPANISHCUE: Interactive Spanish Lessons for Teachers \(A1–C2\)<\/title>/);
  const pricing=await fetch(root+'/pricing',{headers:{cookie:'spanishcue_locale=en'}});const pricingHtml=await pricing.text();
  assert.match(pricingHtml,/rel="canonical" href="https:\/\/spanishcue\.com\/pricing"/i);assert.doesNotMatch(pricingHtml,/hreflang=/i);
  const retired=await fetch(root+'/resources/spanish-conversation-activity-b1-mexico',{redirect:'manual'});assert.equal(retired.status,308,'a retired resource slug permanently redirects');assert.equal(new URL(retired.headers.get('location'),root).pathname,'/resources/spanish-conversation-activity-a0-b1-mexico');await retired.arrayBuffer();
