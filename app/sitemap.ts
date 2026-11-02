@@ -11,6 +11,7 @@ import { temaGroups, temaLevelPages, temaPages } from "./material-ele/temas";
 import { ACTIVIDADES_PATH, bancoPaths } from "./material-ele/actividades";
 import { INDICE_PATH, lastModifiedByPath } from "./material-ele/indice";
 import { elePreviewLesson } from "./material-ele/media";
+import { guiaPages } from "./material-ele/guias";
 import { lessonCards } from "./growth/lessons";
 import { RECURSOS_PATH, recursoPathForLesson, resourceLessons, resourcePathForLesson } from "./resource-seo";
 import { canonicalUrl, isSearchPrivatePath, languageAlternates } from "./seo";
@@ -48,6 +49,7 @@ const curatedRoutes: { path: string; priority: number; changeFrequency: Frequenc
   { path: "/about", priority: 0.5, changeFrequency: "monthly" },
   { path: MATERIAL_ELE_PATH, priority: 0.95, changeFrequency: "weekly" },
   { path: "/alternativa-a-profedeele", priority: 0.8, changeFrequency: "monthly" },
+  ...guiaPages.map((page) => ({ path: page.path, priority: 0.85, changeFrequency: "monthly" as Frequency })),
   ...elePages.map((page) => ({ path: page.path, priority: page.kind === "level" ? 0.85 : 0.8, changeFrequency: "monthly" as Frequency })),
   ...temaGroups.map((group) => ({ path: group.path, priority: 0.85, changeFrequency: "weekly" as Frequency })),
   ...temaPages.map((page) => ({ path: page.path, priority: 0.75, changeFrequency: "monthly" as Frequency })),
@@ -80,7 +82,7 @@ function pageMedia(path: string, lessonIds: readonly number[]): Media {
   return { ...(images.length ? { images } : {}), ...(videos ? { videos } : {}) };
 }
 const mediaByPath = new Map<string, Media>([...temaPages, ...temaLevelPages].map((page) => [page.path, pageMedia(page.path, page.lessonIds)]));
-for (const page of elePages) mediaByPath.set(page.path, pageMedia(page.path, page.lessonIds));
+for (const page of [...elePages, ...guiaPages]) mediaByPath.set(page.path, pageMedia(page.path, page.lessonIds));
 
 function entry(path: string, priority: number, changeFrequency: Frequency, lastModified?: string, media?: Media): Entry {
   const languages = languageAlternates(path);

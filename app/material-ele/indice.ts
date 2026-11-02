@@ -2,6 +2,7 @@ import { MATERIAL_ELE_PATH, eleLevels, eleTopics } from "./data";
 import { ACTIVIDADES_PATH, actividadPages, ejercicioPages, preguntasPages } from "./actividades";
 import { temaGroups, temaLevelPages, temaPages } from "./temas";
 import { lessons } from "../lesson-catalog";
+import { guiaPages } from "./guias";
 
 export const INDICE_PATH = `${MATERIAL_ELE_PATH}/indice`;
 export const FEED_PATH = `${MATERIAL_ELE_PATH}/feed.xml`;
@@ -28,6 +29,7 @@ export const indiceSections: { id: string; title: string; entries: IndiceEntry[]
     row(ACTIVIDADES_PATH, "Banco de actividades ELE: fichas, ejercicios y preguntas | SpanishCue", "Todas las fichas, ejercicios con soluciones y preguntas de conversación, cada una en su página.", "Portadas", published.banco),
   ] },
   { id: "niveles", title: "Material ELE por nivel", entries: eleLevels.map((page) => row(page.path, page.title, page.description, "Por nivel", published.levels, page.lessonIds)) },
+  { id: "guias-largas", title: "Guías completas para profesores", entries: guiaPages.map((page) => row(page.path, page.title, page.description, "Guías completas", page.published, page.lessonIds)) },
   { id: "guias", title: "Guías por tema con fichas imprimibles", entries: eleTopics.map((page) => row(page.path, page.title, page.description, "Guías", published.topics, page.lessonIds)) },
   { id: "indices", title: "Índices de temas", entries: temaGroups.map((group) => row(group.path, group.title, group.description, group.label, group.id === "formatos" ? published.formatos : published.groups, temaPages.filter((page) => page.group === group.id).flatMap((page) => page.lessonIds))) },
   ...temaGroups.map((group) => ({ id: `temas-${group.id}`, title: `${group.label}: temas`, entries: temaPages.filter((page) => page.group === group.id).map((page) => row(page.path, page.title, page.description, group.label, temaPublished(group.id), page.lessonIds)) })),
