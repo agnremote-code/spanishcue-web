@@ -154,6 +154,33 @@ export const GAMES = {
     ownListening: true,
     bilingualA0: true,
   },
+  // Más allá: every zone of the Cielo and the Infierno has its own listening
+  // at each level; both circles of a zone open it. PRO lesson (ID 243).
+  masalla: {
+    title: 'Más allá',
+    levels: ['A0', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
+    spots: ['portal', 'archivo', 'cumbre', 'antesala', 'juicio', 'abismo'],
+    ownListening: true,
+    bilingualA0: true,
+  },
+  vuelo: {
+    title: 'Vuelo cancelado',
+    levels: ['A0', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
+    spots: ['taxi', 'pantalla', 'facturacion', 'reprogramacion', 'cambio', 'seguridad', 'cintas', 'perdidos', 'aduana', 'reencuentro', 'alquiler',
+      'freeshop', 'comidas', 'vip', 'capilla', 'descanso', 'fumadores', 'puerta'],
+    ownListening: true,
+    bilingualA0: true,
+  },
+  // El consorcio: every circle of the building has its own listening at each
+  // level, voiced by the same neighbour who speaks there. PRO lesson (ID 245).
+  consorcio: {
+    title: 'El consorcio',
+    levels: ['A0', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
+    spots: ['llegada', 'buzones', 'consultorio', 'bateria', 'gotera', 'gatos', 'teletrabajo', 'turistas', 'mudanza', 'tango',
+      'cumple', 'ataud', 'administrador', 'herencia', 'misterio', 'obra', 'sogas', 'asamblea'],
+    ownListening: true,
+    bilingualA0: true,
+  },
   // El ascensor del cerro (B2): a funicular hillside in Valparaíso. Every
   // circle has its own listening, and each character keeps one voice
   // (app/el-ascensor-del-cerro/levels/b2.mjs CAST).

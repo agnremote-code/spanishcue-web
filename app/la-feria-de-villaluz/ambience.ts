@@ -2,13 +2,13 @@
 // files): filtered noise for the crowd and a slow organ-like drone from the
 // rides. Its gain follows engine.ambienceGain (AC5): silent under any clip,
 // lower with a card open.
-export type Ambience = { start: () => void; setGain: (gain: number) => void; setMuted: (muted: boolean) => void; dispose: () => void };
+export type Ambience = { start: () => void; setGain: (gain: number) => void; setMuted: (muted: boolean) => void; setVolume: (volume: number) => void; dispose: () => void };
 
 export function createAmbience(): Ambience {
   let ctx: AudioContext | null = null;
   let master: GainNode | null = null;
-  let gain = 1, muted = false;
-  const apply = () => { if (ctx && master) master.gain.setTargetAtTime(muted ? 0 : 0.16 * gain, ctx.currentTime, 0.25); };
+  let gain = 1, volume = 1, muted = false;
+  const apply = () => { if (ctx && master) master.gain.setTargetAtTime(muted ? 0 : 0.16 * gain * volume, ctx.currentTime, 0.25); };
 
   function start() {
     if (ctx) { void ctx.resume(); return; }
@@ -48,6 +48,7 @@ export function createAmbience(): Ambience {
     start,
     setGain: value => { gain = value; apply(); },
     setMuted: value => { muted = value; apply(); },
+    setVolume: value => { volume = value; apply(); },
     dispose: () => { void ctx?.close(); ctx = null; master = null; },
   };
 }

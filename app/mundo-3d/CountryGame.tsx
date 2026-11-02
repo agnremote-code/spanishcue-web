@@ -18,12 +18,13 @@ import type { Progress } from './progress.d.mts';
 import { createAmbience, type Ambience } from './ambience';
 import { GREETINGS, LEVEL_INFO } from './frames';
 import { SpotCard, type Teaching } from './SpotCard';
-import type { Near, Pose, View } from './World3D';
+import type { Guide, Near, Pose, View } from './World3D';
 import type { SceneBuilder } from './kit3d';
 import type { CountryInfo, RegionContent, WorldLevel } from './types';
 import { WORLD_LEVELS } from './types';
 import type { GameId } from '../escucha-3d/types';
 import './world.css';
+import MusicVolume, { useMusicVolume } from '../escucha-3d/MusicVolume';
 
 const World3D = dynamic(() => import('./World3D'), { ssr: false, loading: () => <div className="mw-loading">Preparando el vuelo…</div> });
 
@@ -60,6 +61,7 @@ export default function CountryGame({ country, rings, loadContent, loadScene, li
   const [pose, setPose] = useState<Pose | null>(null);
   const [list, setList] = useState(false);
   const [sound, setSound] = useState(true);
+  const [musicVolume, setMusicVolume] = useMusicVolume();
   const [voices, setVoices] = useState(false);
   const [teaching, setTeaching] = useState<Teaching>('solo');
   const [studentId, setStudentId] = useState<string | null>(null);
@@ -136,6 +138,7 @@ export default function CountryGame({ country, rings, loadContent, loadScene, li
   useEffect(() => { ambience.current = createAmbience(); return () => { ambience.current?.dispose(); ambience.current = null; }; }, []);
   useEffect(() => { ambience.current?.setKind(screen === 'world' ? (region?.sound ?? 'sky') : null); }, [region?.sound, screen]);
   useEffect(() => { ambience.current?.setMuted(!sound); setShoutMuted(!sound); }, [sound]);
+  useEffect(() => { ambience.current?.setVolume(musicVolume); }, [musicVolume]);
   useEffect(() => { ambience.current?.duck(spotOpen || listenAt !== undefined ? 0.3 : 1); }, [spotOpen, listenAt]);
 
   // The open card covers part of the screen: the 3D talk is framed beside it.
@@ -190,7 +193,7 @@ export default function CountryGame({ country, rings, loadContent, loadScene, li
   const other = () => {
     if (!region || !spotOpen) return;
     const pool = region.spots.filter(s => s.id !== spotOpen);
-    const pick = pool.find(s => !done.includes(spotKey(region.id, s.id))) ?? pool[Math.floor(Math.random() * pool.length)];
+    const pick = pool.find(s => !done.includes(spotKey(region.id, s.id))) ?? pool[(region.spots.findIndex(s => s.id === spotOpen)) % pool.length];
     setSpotOpen(null);
     window.setTimeout(() => openSpot(pick.id), 60);
   };
@@ -217,10 +220,22 @@ export default function CountryGame({ country, rings, loadContent, loadScene, li
   const busy = Boolean(spotOpen) || listenAt !== undefined || list;
   const flat = ready && !has3d;
   const heardHere = regions.filter(r => heard.includes(r.id)).length;
+  const word = country.regionWord ?? { one: 'una región', many: 'regiones' };
+  const names = regions.map(r => r.name.es);
+  const nameList = names.length > 1 ? `${names.slice(0, -1).join(', ')} o ${names[names.length - 1]}` : names[0] ?? '';
+  // Where to go next: the first region with something left to do, and inside a
+  // zone the first circle not done yet (or the way back when all are done).
+  const unfinished = (r: (typeof regions)[number]) => mode === 'escucha' ? !heard.includes(r.id) : r.spots.some(s => !done.includes(spotKey(r.id, s.id)));
+  const suggested = regions.find(unfinished) ?? null;
+  const nextHere = region ? (mode === 'escucha' ? (heard.includes(region.id) ? null : region.spots[0]) : region.spots.find(s => !done.includes(spotKey(region.id, s.id)))) ?? null : null;
+  const nextWho = nextHere && content ? content.spots.find(s => s.id === nextHere.id)?.who.name : null;
+  const guide: Guide = view === 'map' ? (suggested ? { kind: 'region', id: suggested.id } : null)
+    : region ? (nextHere ? { kind: 'spot', id: nextHere.id } : { kind: 'exit', id: 'map' }) : null;
+  const [whereOpen, setWhereOpen] = useState(true);
 
   return <main className="mw" data-level={level} data-view={screen === 'levels' ? 'levels' : view} data-mode={mode} data-conversation-family={country.lessonId === 36 ? 'estados-unidos-a2-b1' : country.id}>
     {ready && has3d && screen === 'world' && <World3D country={country} rings={rings} loadScene={loadScene} view={view} spotOpen={spotOpen} done={done}
-      paused={list || listenAt !== undefined} inset={inset} greetings={GREETINGS}
+      paused={list || listenAt !== undefined} inset={inset} greetings={GREETINGS} guide={guide}
       act={act} onIntroBeat={onIntroBeat} onNear={setNear} onGate={id => goRegion(id)} onSpot={openSpot} onExit={goMap}
       onRegionReady={onRegionReady} onPose={setPose} onFail={() => { setHas3d(false); setView('map'); }} />}
     {(screen === 'levels' || flat) && <div className="mw-backdrop" aria-hidden="true"><i /><i /><i /></div>}
@@ -228,9 +243,9 @@ export default function CountryGame({ country, rings, loadContent, loadScene, li
     {/* ------------------------------------------------ level screen */}
     {screen === 'levels' && <section className="mw-title" aria-labelledby="mw-title-h">
       <div className="mw-title-card">
-        <p className="mw-kicker">Conversación 3D · {regions.length} estados · {total} lugares</p>
+        <p className="mw-kicker">Conversación 3D · {regions.length} {word.many} · {total} lugares</p>
         <h1 id="mw-title-h">{country.name.es}</h1>
-        <p className="mw-lede">Aterrizas, recorres el mapa, entras en Florida, Nueva York, California, Texas, Hawái o Colorado y hablas con la gente de cada lugar. Cada lugar tiene su situación, una decisión, una sorpresa y una conversación de verdad.</p>
+        <p className="mw-lede">Aterrizas en el aeropuerto de {country.name.es} y eliges adónde ir: {nameList}. Una flecha amarilla te lleva a cada lugar, y allí hablas con su gente. Cada lugar tiene su situación, una decisión, una sorpresa y una conversación de verdad.</p>
         <p className="mw-label">Elige el nivel y despega</p>
         <div className="mw-levels">
           {WORLD_LEVELS.map(l => <button key={l} type="button" className={level === l ? 'is-on' : undefined} onClick={() => start(l)} data-level-start={l}>
@@ -262,6 +277,12 @@ export default function CountryGame({ country, rings, loadContent, loadScene, li
       <div className="mw-where">
         <span>{country.name.es}{region ? ` · ${region.name.es}` : ''}</span>
         <b>{region ? region.zone.es : islandName ?? 'Aeropuerto'}</b>
+        {guide && !busy && <em className="mw-next" data-guide={guide.kind}>
+          <i aria-hidden="true">➜</i>
+          {guide.kind === 'region' && suggested ? `Sigue la flecha amarilla: ${suggested.name.es}`
+            : guide.kind === 'spot' && nextHere ? (mode === 'escucha' ? `Sigue la flecha: escucha en ${nextHere.name.es}` : `Sigue la flecha: ${nextWho ? `${nextWho} · ` : ''}${nextHere.name.es}`)
+            : guide.kind === 'exit' ? `¡${region?.name.es} completo! La flecha te lleva al mapa` : ''}
+        </em>}
       </div>
       <div className="mw-hud-right">
         <span className="mw-progress">{mode === 'escucha' ? `${heardHere} de ${regions.length} escuchas` : `${done.length} de ${total} lugares`}</span>
@@ -273,7 +294,7 @@ export default function CountryGame({ country, rings, loadContent, loadScene, li
         <ModeSwitch mode={mode} onChange={switchMode} className="mw-mode" />
         <button type="button" onClick={() => mode === 'escucha' ? setListenAt(null) : setList(true)}>{mode === 'escucha' ? 'Escuchas' : 'Lugares'}</button>
         {region && has3d && <button type="button" onClick={goMap}>Mapa</button>}
-        <button type="button" onClick={() => setSound(s => !s)} aria-pressed={!sound} aria-label={sound ? 'Silenciar el ambiente' : 'Activar el ambiente'}>{sound ? '🔊' : '🔇'}</button>
+        <MusicVolume sound={sound} onSound={setSound} volume={musicVolume} onVolume={setMusicVolume} />
         <button type="button" onClick={toggleVoices} aria-pressed={voices} title="El personaje lee su primera frase con la voz del navegador">Voces {voices ? 'sí' : 'no'}</button>
         <button type="button" onClick={() => { setSpotOpen(null); setScreen('levels'); }}>Inicio</button>
       </div>
@@ -285,8 +306,25 @@ export default function CountryGame({ country, rings, loadContent, loadScene, li
         : near.kind === 'door' ? <button type="button" onClick={() => setAct(a => a + 1)}><kbd>E</kbd>{near.label}</button>
         : <button type="button" onClick={goMap}><kbd>E</kbd>Volver al mapa</button>}
     </div>}
-    {screen === 'world' && has3d && view === 'map' && !busy && !near && <p className="mw-hint">Cruza un puente o entra en un portal. Delante de cada puerta, pulsa E para entrar en el estado.</p>}
-    {screen === 'world' && has3d && region && !busy && !near && <p className="mw-hint">Los círculos blancos son conversaciones. El arco «MAPA» te devuelve a las islas.</p>}
+    {screen === 'world' && has3d && view === 'map' && !busy && (whereOpen
+      ? <aside className="mw-where-to" aria-labelledby="mw-where-to-h" style={{ '--tint': suggested?.color ?? '#16336b' } as React.CSSProperties}>
+        <header>
+          <h2 id="mw-where-to-h">¿Adónde vas?</h2>
+          <button type="button" onClick={() => setWhereOpen(false)} aria-label="Ocultar">×</button>
+        </header>
+        <p>Elige {word.one}. Puedes ir directo con el botón o caminar: cada portal de colores del aeropuerto lleva a {word.one}.</p>
+        <ol>
+          {regions.map(r => <li key={r.id} style={{ '--tint': r.color } as React.CSSProperties} className={r.id === suggested?.id ? 'is-next' : undefined}>
+            <button type="button" onClick={() => goRegion(r.id)}>
+              <b>{r.name.es}{r.id === suggested?.id && <small>Siguiente</small>}</b>
+              <span>{r.zone.es} · {r.hook.es}</span>
+              <em>{mode === 'escucha' ? (heard.includes(r.id) ? 'Escucha hecha ✓' : 'Escucha pendiente') : `${counts[r.id] ?? 0} de ${r.spots.length} lugares`}<i aria-hidden="true">Ir →</i></em>
+            </button>
+          </li>)}
+        </ol>
+      </aside>
+      : <button type="button" className="mw-where-to-open" onClick={() => setWhereOpen(true)}>¿Adónde vas?</button>)}
+    {screen === 'world' && has3d && region && !busy && !near && <p className="mw-hint">Sigue la flecha amarilla hasta el círculo blanco y quédate quieto para hablar. El arco «MAPA» te devuelve al aeropuerto.</p>}
 
     {screen === 'world' && mode === 'escucha' && listenAt === undefined && !spotOpen && <ListeningBadge game={listening} done={heard} onList={() => setListenAt(null)} />}
     {listenAt !== undefined && <ListeningCard game={listening} level={level} spot={listenAt} done={heard} onDone={markHeard} onClose={() => setListenAt(undefined)} />}

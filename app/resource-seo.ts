@@ -1,6 +1,7 @@
 import { lessons, type Category, type Lesson } from "./lesson-catalog";
 import { catalogLessons, conversationFamilyByLessonId } from "./conversation-families/catalog";
 import { GAMES } from "./escucha-3d/games.mjs";
+import { legacyResourceSlugToLessonId } from "./resource-legacy-slugs";
 
 const categorySeo: Record<Category, { prefix: string; label: string; pluralLabel: string; shortLabel: string }> = {
   "Gramática": {
@@ -72,19 +73,6 @@ const resourceSlugById = new Map(
 const lessonBySlug = new Map(
   lessons.map((lesson) => [resourceSlugById.get(lesson.id)!, lesson]),
 );
-// Keep the original UK resource URL valid after its selectable levels change.
-lessonBySlug.set("spanish-conversation-activity-a2-b1-reino-unido-en-relieve", lessons.find(lesson => lesson.id === 32)!);
-// Same for the United States flagship, now a 3D world with more levels.
-lessonBySlug.set("spanish-conversation-activity-a2-b1-estados-unidos", lessons.find(lesson => lesson.id === 36)!);
-lessonBySlug.set("spanish-conversation-activity-b1-mexico", lessons.find(lesson => lesson.id === 210)!);
-// Irlanda, Australia and Suiza also became 3D worlds with more levels.
-lessonBySlug.set("spanish-conversation-activity-b1-irlanda-en-relieve", lessons.find(lesson => lesson.id === 33)!);
-lessonBySlug.set("spanish-conversation-activity-a2-b1-australia-en-movimiento", lessons.find(lesson => lesson.id === 30)!);
-lessonBySlug.set("spanish-conversation-activity-b1-suiza-en-relieve", lessons.find(lesson => lesson.id === 29)!);
-// Israel and Indonesia too.
-lessonBySlug.set("spanish-conversation-activity-b1-israel-en-capas", lessons.find(lesson => lesson.id === 25)!);
-lessonBySlug.set("spanish-conversation-activity-a1-indonesia-fantastica", lessons.find(lesson => lesson.id === 24)!);
-
 function cleanText(value: string): string {
   return value.replace(/\s+/g, " ").trim();
 }
@@ -103,6 +91,13 @@ export function resourceSlugForLesson(lesson: Lesson): string {
 
 export function resourcePathForLesson(lesson: Lesson): string {
   return `/resources/${resourceSlugForLesson(lesson)}`;
+}
+
+/** Current resource path for a retired slug (see resource-legacy-slugs.ts). */
+export function legacyResourceRedirectPath(slug: string): string | undefined {
+  const id = legacyResourceSlugToLessonId.get(slug);
+  const lesson = id === undefined ? undefined : lessons.find((item) => item.id === id);
+  return lesson ? resourcePathForLesson(lesson) : undefined;
 }
 
 export function lessonForResourceSlug(slug: string): Lesson | undefined {
@@ -151,7 +146,10 @@ export const immersiveWorldGameByLessonId: ReadonlyMap<number, string> = new Map
   [240, "hospital"],
   [241, "feria"],
   [242, "madrid"],
-  [243, "ascensor"],
+  [243, "masalla"],
+  [244, "vuelo"],
+  [245, "consorcio"],
+  [246, "ascensor"],
 ]);
 
 export function isImmersiveWorld(lesson: Lesson): boolean {
@@ -209,3 +207,74 @@ export function relatedResourceLessons(lesson: Lesson, limit = 6): Lesson[] {
 }
 
 export const resourceLessons = catalogLessons;
+
+/* ---------- Spanish resource pages (/recursos), the hreflang pair of /resources ---------- */
+
+const categorySeoEs: Record<Category, { prefix: string; label: string; pluralLabel: string; shortLabel: string }> = {
+  "Gramática": { prefix: "clase-de-gramatica", label: "Clase de gramática", pluralLabel: "Clases de gramática", shortLabel: "clase de gramática" },
+  "Conversación": { prefix: "actividad-de-conversacion", label: "Actividad de conversación", pluralLabel: "Actividades de conversación", shortLabel: "actividad de conversación" },
+  "Escucha": { prefix: "comprension-auditiva", label: "Comprensión auditiva", pluralLabel: "Comprensión auditiva", shortLabel: "actividad de comprensión auditiva" },
+  "Fonética": { prefix: "pronunciacion", label: "Clase de pronunciación", pluralLabel: "Pronunciación", shortLabel: "clase de pronunciación" },
+  "Vocabulario": { prefix: "vocabulario", label: "Clase de vocabulario", pluralLabel: "Vocabulario", shortLabel: "clase de vocabulario" },
+};
+
+export const RECURSOS_PATH = "/recursos";
+
+const recursoBaseSlugById = new Map(
+  lessons.map((lesson) => [lesson.id, `${categorySeoEs[lesson.category].prefix}-${slugify(levelLabel(lesson))}-${slugify(lesson.title)}`]),
+);
+const recursoSlugCounts = new Map<string, number>();
+for (const slug of recursoBaseSlugById.values()) recursoSlugCounts.set(slug, (recursoSlugCounts.get(slug) ?? 0) + 1);
+const recursoSlugById = new Map(
+  lessons.map((lesson) => {
+    const base = recursoBaseSlugById.get(lesson.id)!;
+    return [lesson.id, recursoSlugCounts.get(base) === 1 ? base : `${base}-${lesson.id}`];
+  }),
+);
+const lessonByRecursoSlug = new Map(lessons.map((lesson) => [recursoSlugById.get(lesson.id)!, lesson]));
+
+export function recursoSlugForLesson(lesson: Lesson): string {
+  return recursoSlugById.get(conversationFamilyByLessonId.get(lesson.id)?.canonicalLessonId ?? lesson.id)!;
+}
+
+export function recursoPathForLesson(lesson: Lesson): string {
+  return `${RECURSOS_PATH}/${recursoSlugForLesson(lesson)}`;
+}
+
+export function lessonForRecursoSlug(slug: string): Lesson | undefined {
+  const original = lessonByRecursoSlug.get(slug);
+  if (!original) return undefined;
+  const family = conversationFamilyByLessonId.get(original.id);
+  if (!family) return original;
+  return catalogLessons.find((item) => item.id === family.canonicalLessonId)!;
+}
+
+/** The es/en pair of a resource page, from either side; undefined for any other path. */
+export function resourceLanguagePair(path: string): { es: string; en: string } | undefined {
+  const en = path.startsWith("/resources/") ? lessonForResourceSlug(path.slice("/resources/".length)) : undefined;
+  const es = path.startsWith(`${RECURSOS_PATH}/`) ? lessonForRecursoSlug(path.slice(RECURSOS_PATH.length + 1)) : undefined;
+  const lesson = en ?? es;
+  if (!lesson) return path === "/resources" || path === RECURSOS_PATH ? { es: RECURSOS_PATH, en: "/resources" } : undefined;
+  return { es: recursoPathForLesson(lesson), en: resourcePathForLesson(lesson) };
+}
+
+export function recursoTypeLabel(lesson: Lesson): string {
+  return categorySeoEs[lesson.category].label;
+}
+
+export function recursoTypePluralLabel(lesson: Lesson): string {
+  return categorySeoEs[lesson.category].pluralLabel;
+}
+
+export function recursoTitle(lesson: Lesson): string {
+  const prefix = isImmersiveWorld(lesson) ? "3D · " : "";
+  return `${prefix}${recursoTypeLabel(lesson)} ${resourceLevelLabel(lesson)}: ${lesson.title} | SPANISHCUE`;
+}
+
+export function recursoDescription(lesson: Lesson): string {
+  const type = categorySeoEs[lesson.category].shortLabel;
+  if (isImmersiveWorld(lesson)) {
+    return truncate(`Mundo 3D de conversación y comprensión auditiva para la clase de ELE, ${resourceLevelLabel(lesson)}: ${lesson.title}. ${lesson.subtitle}`);
+  }
+  return truncate(`${type[0].toUpperCase()}${type.slice(1)} ${resourceLevelLabel(lesson)} lista para dar en clase de ELE: ${lesson.title}. ${lesson.subtitle}`);
+}

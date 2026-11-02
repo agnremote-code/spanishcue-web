@@ -53,12 +53,9 @@ export default async function PricingPage() {
   const cardCheckoutLive = checkoutLive && paddleReady(paddleConfig(env));
   const priceLabel = checkoutLive && !cardCheckoutLive ? `US$${config.founderOffer.priceUsd.toFixed(2)}` : "US$15.50";
   const accountEmail = emailFromHeaders(requestHeaders) || "";
-  const freeCta = {
-    href: "/el-hotel-de-lo-imposible",
-    labelKey: "nav.viewLesson" as const,
-    event: "cta_click" as const,
-    intent: "view_lesson" as const,
-  };
+  // Two free doors, one per kind of class: the full Clase inicial (grammar) and the free centre of Noche abierta (3D conversation).
+  const grammarCta = { href: "/gramatica/clase-inicial", labelKey: "nav.viewLesson" as const, event: "cta_click" as const, intent: "view_lesson" as const };
+  const conversationCta = { href: "/demo/noche-abierta", labelKey: "nav.viewLesson" as const, event: "cta_click" as const, intent: "view_lesson" as const };
 
   return <main className="pricing-page" id="main-content">
     <a className="skip-link" href="#pricing-title">{es ? "Saltar al contenido" : "Skip to content"}</a>
@@ -77,7 +74,10 @@ export default async function PricingPage() {
         <div className="pricing-amount"><b>US$0</b></div>
         <p>{es ? "Para conocer el producto con clases verdaderas, no una demo vacía." : "Experience the product through real lessons, not an empty demo."}</p>
         <ul><li>✓ {es ? "10 clases completas gratis" : "10 complete free lessons"}</li><li>✓ {es ? "2 por cada categoría" : "2 from every category"}</li><li>✓ {es ? "Sin tarjeta" : "No card required"}</li><li>✓ {es ? "Cuenta docente personal" : "Personal teacher account"}</li></ul>
-        <MarketingLink cta={freeCta} placement="pricing_free">{es ? "Abrir una clase gratis" : "Open a free lesson"} →</MarketingLink>
+        <div className="pricing-free-doors">
+          <MarketingLink cta={grammarCta} placement="pricing_free_grammar">{es ? "Probar una clase de gramática" : "Try a grammar lesson"} →</MarketingLink>
+          <MarketingLink cta={conversationCta} placement="pricing_free_conversation">{es ? "Probar una clase de conversación 3D" : "Try a 3D conversation lesson"} →</MarketingLink>
+        </div>
         <Link className="pricing-student-demo" href="/demo/mis-alumnos">{es ? "Probar demo de Mis alumnos" : "Try the My students demo"} →</Link>
       </article>
 
@@ -88,6 +88,8 @@ export default async function PricingPage() {
         <p>{checkoutLive ? (es ? `${priceLabel} por mes, con renovación automática hasta que canceles. Mantienes el precio mientras la misma suscripción continúe activa.` : `${priceLabel} per month, renewing automatically until cancelled. Keep the price while the same subscription remains active.`) : (es ? `Precio fundador previsto: ${priceLabel} por mes. El checkout todavía no está activo; reservar no inicia una suscripción ni un cobro.` : `Planned Founder Price: ${priceLabel} per month. Checkout is not active yet; reserving starts neither a subscription nor a charge.`)}</p>
         <ul><li>✓ {es ? "Toda la biblioteca" : "The complete library"}</li><li>✓ {es ? "Acceso ilimitado" : "Unlimited access"}</li><li>✓ {es ? "Gramática, conversación y escucha" : "Grammar, conversation and listening"}</li><li>✓ {es ? "Fonética y vocabulario" : "Pronunciation and vocabulary"}</li><li>✓ {es ? "Nuevas clases dentro de la plataforma" : "New lessons added to the platform"}</li></ul>
         {fullAccess ? <Link className="pricing-open-library" href="/">{es ? "Abrir mi biblioteca" : "Open my library"} →</Link> : checkoutLive ? <CheckoutButton signedIn={signedIn} returnTo="/" /> : <FounderAccessForm defaultEmail={accountEmail} priceLabel={`${priceLabel}/${es ? "mes" : "month"}`} returnTo="/" />}
+        {checkoutLive && !fullAccess && <p id="invitacion" className="pricing-invite">{es ? "Te invitó un colega: pagas tu primer mes y el segundo es gratis (suscripción mensual con tarjeta)." : "A colleague invited you: pay your first month and the second one is free (monthly card subscription)."}</p>}
+        {checkoutLive && !fullAccess && <p className="pricing-guarantee"><b>{es ? "Garantía de 30 días." : "30-day guarantee."}</b> {es ? "Si SPANISHCUE PRO no te sirve, te devolvemos tu primer pago." : "If SPANISHCUE PRO isn’t right for you, we refund your first payment."} <Link href="/refunds">{es ? "Cómo funciona" : "How it works"}</Link></p>}
         <nav className="pricing-legal-links" aria-label={es ? "Información legal y de privacidad" : "Legal and privacy information"}><Link href="/terms">{es ? "Términos" : "Terms"}</Link><Link href="/privacy">{es ? "Privacidad" : "Privacy"}</Link><Link href="/contact">{es ? "Contacto" : "Contact"}</Link><Link href="/subscription-terms">{es ? "Estado de suscripción" : "Subscription status"}</Link></nav>
       </article>
     </section>
@@ -98,7 +100,7 @@ export default async function PricingPage() {
   ? cardCheckoutLive
     ? (es ? "Sí. Puedes pagar con tarjeta US$15.50/mes o probar 1 día por US$2 y después US$15.50/mes. PayPal muestra su precio antes de confirmar." : "Yes. Pay US$15.50/month by card or try 1 day for US$2, then US$15.50/month. PayPal shows its price before confirmation.")
     : (es ? `Sí. Puedes suscribirte mediante PayPal por ${priceLabel}/mes; el importe final se muestra antes de confirmar.` : `Yes. You can subscribe via PayPal for ${priceLabel}/month; the final amount is shown before confirmation.`)
-  : (es ? "No todavía. El checkout público está desactivado; reservar no produce ningún cobro." : "Not yet. Public checkout is disabled; reserving does not create a charge.")}</p></details><details><summary>{es ? "¿Cómo funcionará la cancelación?" : "How will cancellation work?"}</summary><p>{checkoutLive ? (es ? "Puedes cancelar online desde Mi cuenta; los términos de renovación se muestran antes del pago." : "You can cancel online in My account; renewal terms are shown before payment.") : (es ? "La integración permite cancelar online desde Mi cuenta cuando las suscripciones estén disponibles." : "Once subscriptions are available, you can cancel online in My account.")}</p></details></div></section>
+  : (es ? "No todavía. El checkout público está desactivado; reservar no produce ningún cobro." : "Not yet. Public checkout is disabled; reserving does not create a charge.")}</p></details>{checkoutLive && <details><summary>{es ? "¿Y si no me sirve?" : "What if it isn’t right for me?"}</summary><p>{es ? "Tienes 30 días desde tu primer pago: escribe a soporte desde el email de tu cuenta y te devolvemos ese pago completo." : "You have 30 days from your first payment: email support from your account email and we refund that payment in full."}</p></details>}<details><summary>{es ? "¿Cómo funcionará la cancelación?" : "How will cancellation work?"}</summary><p>{checkoutLive ? (es ? "Puedes cancelar online desde Mi cuenta; los términos de renovación se muestran antes del pago." : "You can cancel online in My account; renewal terms are shown before payment.") : (es ? "La integración permite cancelar online desde Mi cuenta cuando las suscripciones estén disponibles." : "Once subscriptions are available, you can cancel online in My account.")}</p></details></div></section>
     <footer className="pricing-footer"><SpanishCueBrand variant="compact" tone="light" /><nav aria-label={es ? "Legal" : "Legal"}><Link href="/privacy">{es ? "Privacidad" : "Privacy"}</Link><Link href="/terms">{es ? "Términos" : "Terms"}</Link><Link href="/contact">{es ? "Contacto" : "Contact"}</Link></nav><p>{es ? "Clases visuales listas para enseñar." : "Visual lessons ready to teach."}</p></footer>
   </main>;
 }

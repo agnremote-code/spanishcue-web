@@ -10890,6 +10890,132 @@
       "text": "Respondí con una frase completa.",
       "reason": "First-person preterite in a story, reflection, or explicit past-tense example; not a voseo command.",
       "category": "neutral-context"
+    },
+    {
+      "path": "app/material-ele/data.ts",
+      "text": "No digas que toda acción larga va en imperfecto: también se puede presentar un hecho largo como terminado («Viví diez años allí»).",
+      "reason": "First-person preterite in an explicit past-tense example for teachers; not a voseo command.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/material-ele/data.ts",
+      "text": "Indefinido: hechos terminados que hacen avanzar la historia («Llegué, abrí la puerta y vi...»)",
+      "reason": "First-person preterite in an explicit past-tense example for teachers; not a voseo command.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/material-ele/data.ts",
+      "text": "No presentes el imperfecto como «acción larga»: «Viví diez años en Lima» es indefinido.",
+      "reason": "First-person preterite in an explicit past-tense example for teachers; not a voseo command.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/material-ele/data.ts",
+      "text": "Primero salí de casa. Después llegué al museo.",
+      "reason": "First-person preterite in an explicit past-tense example for teachers; not a voseo command.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/material-ele/data.ts",
+      "text": "Visité el museo, comí con una amiga y volví a las seis.",
+      "reason": "First-person preterite in an explicit past-tense example for teachers; not a voseo command.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/material-ele/data.ts",
+      "text": "¿La cartera? No la encuentro, creo que la perdí.",
+      "reason": "First-person preterite in an explicit past-tense example for teachers; not a voseo command.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/material-ele/data.ts",
+      "text": "¿Escribiste a tu jefe? Sí, ___ escribí un correo.",
+      "reason": "First-person preterite in an explicit past-tense example for teachers; not a voseo command.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/material-ele/data.ts",
+      "text": "Luego perdí el autobús y, al final, llegué tarde.",
+      "reason": "First-person preterite in an explicit past-tense example for teachers; not a voseo command.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/material-ele/data.ts",
+      "text": "Primero no sonó la alarma, después se cortó el agua y al final perdí el tren.",
+      "reason": "First-person preterite in an explicit past-tense example for teachers; not a voseo command.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/material-ele/data.ts",
+      "text": "Perdí el tren; ___, llegué tarde.",
+      "reason": "First-person preterite in an explicit past-tense example for teachers; not a voseo command.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/material-ele/data.ts",
+      "text": "Ayer me quedé dormida, me vestí corriendo y me puse muy nerviosa porque se me olvidó el móvil en casa.",
+      "reason": "First-person preterite in an explicit past-tense example for teachers; not a voseo command.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/material-ele/data.ts",
+      "text": "«Me quedé dormido» (quedarse) y «me dormí» (dormirse) no son lo mismo: explica la diferencia con un ejemplo de cada uno.",
+      "reason": "First-person preterite in an explicit past-tense example for teachers; not a voseo command.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/material-ele/data.ts",
+      "text": "En gran parte de Hispanoamérica y en Canarias se prefiere el indefinido: «hoy comí»; las dos formas son correctas",
+      "reason": "First-person preterite in an explicit past-tense example for teachers; not a voseo command.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/material-ele/data.ts",
+      "text": "«He perdido el vuelo el año pasado» → con «el año pasado» va el indefinido: «perdí». Explica que el perfecto no lleva fecha cerrada.",
+      "reason": "First-person preterite in an explicit past-tense example for teachers; not a voseo command.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/material-ele/data.ts",
+      "text": "Dar la regla «hoy = perfecto, ayer = indefinido» sin decir que en gran parte de Hispanoamérica se usa «hoy comí».",
+      "reason": "First-person preterite in an explicit past-tense example for teachers; not a voseo command.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/material-ele/data.ts",
+      "text": "En el español de España se prefiere «hoy he comido»; en la mayor parte de Hispanoamérica y en Canarias, «hoy comí». Las dos formas son correctas: el alumno elige según con quién habla.",
+      "reason": "First-person preterite in an explicit past-tense example for teachers; not a voseo command.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/material-ele/temas.ts",
+      "text": "Dar instrucciones, pedir y mandar con tú, vos, usted y ustedes: imperativo afirmativo, negativo con subjuntivo, y pronombres pegados al verbo en una sesión de entrenamiento o una receta.",
+      "category": "regional-pedagogy",
+      "reason": "Explicit voseo teaching label or explanation: «vos» is mentioned as the pronoun to teach, next to tú and usted."
+    },
+    {
+      "path": "app/material-ele/temas.ts",
+      "text": "Yo, tú, vos, usted, él: cuándo decirlos y cuándo callarlos, el voseo y el ustedeo según el país, y los pronombres después de preposición: conmigo, para ti.",
+      "category": "regional-pedagogy",
+      "reason": "Explicit voseo teaching label or explanation: «vos» is mentioned as the pronoun to teach, next to tú and usted."
+    },
+    {
+      "path": "app/material-ele/temas.ts",
+      "text": "Tú, vos o usted, «¿podrías?» o «¿te importaría?», estilo formal e informal: elegir el registro y las fórmulas de cortesía según con quién habla el alumno.",
+      "category": "regional-pedagogy",
+      "reason": "Explicit voseo teaching label or explanation: «vos» is mentioned as the pronoun to teach, next to tú and usted."
+    },
+    {
+      "path": "app/material-ele/temas.ts",
+      "text": "Hola, buenos días, ¿qué tal?, me llamo, soy de: las primeras fórmulas para empezar cualquier conversación, con tú, vos y usted.",
+      "category": "regional-pedagogy",
+      "reason": "Explicit voseo teaching label or explanation: «vos» is mentioned as the pronoun to teach, next to tú and usted."
+    },
+    {
+      "path": "app/material-ele/temas.ts",
+      "text": "Tú, vos y usted, el leísmo, los pasados que cambian de país en país y los acentos: enseñar un español real con sus variedades.",
+      "category": "regional-pedagogy",
+      "reason": "Explicit voseo teaching label or explanation: «vos» is mentioned as the pronoun to teach, next to tú and usted."
     }
   ]
 }

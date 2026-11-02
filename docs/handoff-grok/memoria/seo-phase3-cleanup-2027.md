@@ -1,0 +1,16 @@
+---
+name: seo-phase3-cleanup-2027
+description: SEO Phase 3 (2026-10-14, PR #192, live): ?lang= 301 redirect, 642-URL audit results, Search Console facts (connector mixes in logocutsvg.com), benchmark + 2027 outlook annexes, open cleanup queue and owner checks
+metadata:
+  type: project
+---
+
+Phase 3 of the SEO thread ("SEO y crecimiento orgánico") answered Ale's 2026-10-14 ask (benchmark the best Spanish teacher/learner sites, keywords, deep-clean and index the site, project 2027, "todo, todo"). Shipped in PR #192 (main 400ebfc, merged 18:16Z, staging + production deploy and smoke green 18:26Z), which also carried the whole PR #163 grammar extension: legacy `?lang=` URLs now 301 to the clean URL on every indexable page (`redirectsLanguageQuery` in app/seo.ts, `languageRedirect` in worker/index.ts; `/ingresar`, `/acceso`, `/auth/*`, `/lp/*` and other noindex paths keep the parameter); the edge cache explicitly skips `.rsc` payloads; docs/seo-strategy.md §12. Report (Spanish): /mnt/project-files/seo/informe-seo-fase-3-limpieza-2027.md; annexes and crawl output in /mnt/project-files/seo/fase3/ (anexo-a-benchmark-sitios.md, anexo-b-tendencias-2027.md, auditoria/audit-summary.md + audit.json; crawler at the thread scratchpad impl/audit.mjs is not kept).
+
+Facts worth keeping: the Windsor `searchconsole` connector returns TWO properties (spanishcue.com and Ale's unrelated www.logocutsvg.com): always filter by page/URL. GSC 2026-07-01→10-13 for spanishcue.com: 3 clicks total, `/spanish-grammar-lessons` 21 impressions at position 11, `?lang=en` duplicates (e.g. /clase/201?lang=en 15 vs /clase/201 9). The Worker already normalizes `www` and `http` to https://spanishcue.com in one 308 hop (tests/teacher-access.test.mjs asserts the exact source); a WebFetch of www returned the apex page, so do not "fix" www again. CI runs `git diff --check origin/main...HEAD`: a trailing blank line at EOF fails the PR. The auto-mode classifier denies `gh pr ready` (un-drafting = merge without review); opening a non-draft PR is allowed.
+
+Open queue (not done, with reasons in the report): meta descriptions over 160 chars on 4 hubs + 15 guides; retired lesson 26's `/resources/...coast-to-coast` page overlaps ESTADOS UNIDOS A2–B1 and links to a 308 (legacy-URL tests require it to resolve); `/latinoamerica-al-oido` title lacks the brand suffix; no JSON-LD on /resources, /guides, legal pages. Ale requested indexing in GSC on 2026-10-15 03:12Z ("listo ya mandé a indexar"); the www browser check was never confirmed but the Worker redirect is tested. DUE ~2026-11-05: re-read GSC (filter to spanishcue.com) to confirm the `?lang=` duplicates are gone and the grammar kit URLs show impressions; no copy changes before that. Next moves after it: sub-plan page per level; printable/projectable companions; YouTube demos.
+
+**Why:** Ale asked for a deep clean and a 2027 projection with few credits; the data showed one structural problem (duplicate `?lang=` URLs) and an otherwise healthy site.
+
+**How to apply:** Before any new SEO work, read §12 of docs/seo-strategy.md and the report; do not re-audit (the crawl is in audit.json); do not touch copy until the GSC re-read; keep every number sourced (no search volumes exist). Related: [[seo-grammar-cluster-phase2]], [[seo-foundation-pr126]].

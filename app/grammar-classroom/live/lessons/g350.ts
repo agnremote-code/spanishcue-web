@@ -263,7 +263,7 @@ export const lesson: LiveLesson = {
       steps: [
         { title: 'Diego da las gracias · Diego says thank you', blocks: [
           { kind: 'guide', text: { teacher: 'Primera escucha: solo la idea general (¿cómo está Diego?). Segunda escucha: tu alumno levanta la mano con cada verbo de escena (iba, llovía…) y da una palmada con cada hecho (salió, frené…). Después, las preguntas.', self: 'Escucha una vez para la idea general y otra vez para los detalles. Separa los verbos de escena y los verbos de hechos. Vas a oír «me caí» (I fell): solo tienes que entenderlo. (Listen once for the gist, once for the details.)' } },
-          { kind: 'listen', title: 'Un mensaje de voz de Diego', channel: 'MENSAJE DE VOZ · DE DIEGO PARA CARMEN', src: '/audio/grammar-live/350.mp3',
+          { kind: 'listen', title: 'Un mensaje de voz de Diego', channel: 'MENSAJE DE VOZ · DE DIEGO PARA CARMEN', src: '/audio/grammar-free/350.mp3',
             before: 'Diego, el chico de la bicicleta, tiene el número de Carmen. Le manda un mensaje de voz. ¿Qué crees que cuenta: cómo está, adónde iba, qué pasó…? (Diego sends Carmen a voice message. What do you think he talks about?)',
             gist: { prompt: '¿Cuál es la idea general? · What is the main idea?', options: ['Diego pide a Carmen hablar con la agente.', 'Diego da las gracias, cuenta su versión y dice que está bien.', 'Diego está enfermo y no puede trabajar más.'], answer: 1, why: '«Muchas gracias por su ayuda», cuenta qué pasó y dice «estoy bien».', en: 'What is the main idea?' },
             details: [

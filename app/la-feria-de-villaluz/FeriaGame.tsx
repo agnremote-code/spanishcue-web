@@ -26,6 +26,7 @@ import { BuscaPlan, FigureSvg } from './Busca2D';
 import { createAmbience, type Ambience } from './ambience';
 import type { Pose } from './World3D';
 import './feria.css';
+import MusicVolume, { useMusicVolume } from '../escucha-3d/MusicVolume';
 
 const LETTERS = ['A', 'B', 'C'];
 
@@ -184,6 +185,7 @@ export default function FeriaGame() {
   const [near, setNear] = useState<string | null>(null);
   const [pose, setPose] = useState<Pose | null>(null);
   const [sound, setSound] = useState(true);
+  const [musicVolume, setMusicVolume] = useMusicVolume();
   const [talkAt, setTalkAt] = useState(0);
   const [buscaId, setBuscaId] = useState<string | null>(null);
   const [voice, setVoice] = useState(false);
@@ -245,6 +247,7 @@ export default function FeriaGame() {
   // Sound: ducked under cards, silent under any clip (AC5).
   useEffect(() => { ambience.current = createAmbience(); return () => { ambience.current?.dispose(); ambience.current = null; }; }, []);
   useEffect(() => { ambience.current?.setMuted(!sound); setShoutMuted(!sound); }, [sound]);
+  useEffect(() => { ambience.current?.setVolume(musicVolume); }, [musicVolume]);
   const cardOpen = Boolean(state.scene) || listenAt !== undefined || Boolean(buscaId);
   useEffect(() => { ambience.current?.setGain(ambienceGain({ clip: voice, card: cardOpen })); }, [voice, cardOpen]);
   const onAudio = useCallback((playing: boolean) => setVoice(playing), []);
@@ -356,7 +359,7 @@ export default function FeriaGame() {
         <button type="button" onClick={() => setMap(m => !m)} aria-pressed={map}>Mapa</button>
         <button type="button" onClick={() => setList(true)}>Lista del profesor</button>
         {has3d && <button type="button" onClick={() => setFlat(f => !f)} aria-pressed={flat}>{flat ? '3D' : 'Sin movimiento'}</button>}
-        <button type="button" onClick={() => setSound(s => !s)} aria-pressed={!sound} aria-label={sound ? 'Silenciar el ambiente' : 'Activar el ambiente'}>{sound ? '🔊' : '🔇'}</button>
+        <MusicVolume sound={sound} onSound={setSound} volume={musicVolume} onVolume={setMusicVolume} />
         <button type="button" onClick={() => setEntered(false)}>Inicio</button>
       </div>
     </header>}

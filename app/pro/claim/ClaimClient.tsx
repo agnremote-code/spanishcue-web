@@ -1,6 +1,6 @@
 "use client";
 
-import { browserLocalPersistence, GoogleAuthProvider, setPersistence, signInWithPopup, signOut } from "firebase/auth";
+import { browserLocalPersistence, GoogleAuthProvider, sendSignInLinkToEmail, setPersistence, signInWithPopup, signOut } from "firebase/auth";
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { firebaseAuth } from "../../firebase-client";
@@ -21,7 +21,10 @@ export default function ClaimClient({ initialProvider, signedIn, locale }: {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [busy, setBusy] = useState(false);
+  const [linkSent, setLinkSent] = useState<"idle" | "sending" | "sent" | "failed">("idle");
+  const [otherWays, setOtherWays] = useState(false);
   const binding = useRef(false);
+  const autoLink = useRef(false);
 
   const bind = useCallback(async (selected: Provider) => {
     if (binding.current) return;
@@ -99,6 +102,27 @@ export default function ClaimClient({ initialProvider, signedIn, locale }: {
   const registrationUrl = `/ingresar?modo=registro&returnTo=${encodeURIComponent(returnPath)}`;
   const signInUrl = `/ingresar?modo=entrar&returnTo=${encodeURIComponent(returnPath)}`;
 
+  /** Paid without an account: no form. Firebase emails a sign-in link to the buyer email the provider
+   *  confirmed; opening it creates the account (or signs in) and activates PRO (see ./enlace). */
+  const sendAccessLink = useCallback(async (selected: Provider, buyerEmail: string) => {
+    setLinkSent("sending");
+    try {
+      window.localStorage.setItem("spanishcue.emailForSignIn", buyerEmail);
+      await sendSignInLinkToEmail(firebaseAuth, buyerEmail, {
+        url: `${window.location.origin}/pro/claim/enlace?provider=${selected}`,
+        handleCodeInApp: true,
+      });
+      setLinkSent("sent");
+      trackMarketingEvent("signup_start", { placement: "post_payment_email_link" });
+    } catch { setLinkSent("failed"); setOtherWays(true); }
+  }, []);
+
+  useEffect(() => {
+    if (state !== "paid" || signedIn || !email || !provider || autoLink.current) return;
+    autoLink.current = true;
+    void Promise.resolve().then(() => sendAccessLink(provider, email));
+  }, [state, signedIn, email, provider, sendAccessLink]);
+
   const google = async () => {
     setBusy(true); setMessage("");
     try {
@@ -128,11 +152,21 @@ export default function ClaimClient({ initialProvider, signedIn, locale }: {
       <button className="pro-success-button" type="button" onClick={() => void check()}>{es ? "Volver a comprobar" : "Check again"}</button>
     </>}
     {state === "paid" && !signedIn && <>
-      <p>{es ? "Vincula la compra a tu cuenta para abrir la clase." : "Link your purchase to an account to open the lesson."}</p>
-      {email && <p>{es ? "Email confirmado para la compra:" : "Confirmed buyer email:"} <strong>{email}</strong></p>}
-      <button className="pro-success-button" type="button" disabled={busy} onClick={() => void google()}>{es ? "Continuar con Google" : "Continue with Google"}</button>
-      <p><Link className="pro-secondary" href={registrationUrl} onClick={() => { if (email) sessionStorage.setItem("spanishcue.claim.confirmedEmail", email); }}>{es ? "Crear cuenta con email" : "Create account with email"}</Link></p>
-      <p><Link className="pro-secondary" href={signInUrl} onClick={() => { if (email) sessionStorage.setItem("spanishcue.claim.confirmedEmail", email); }}>{es ? "Ya tengo cuenta" : "I already have an account"}</Link></p>
+      {email && linkSent !== "failed" && <>
+        <p>{linkSent === "sent"
+          ? (es ? "Listo. Te enviamos un email con tu acceso a:" : "Done. We emailed your access link to:")
+          : (es ? "Estamos creando tu acceso para:" : "Creating your access for:")} <strong>{email}</strong></p>
+        {linkSent === "sent" && <p>{es ? "Abre el email y toca el enlace: entras directo, con tu cuenta creada y PRO activado. Si no lo ves, revisa spam." : "Open the email and tap the link: you go straight in, with your account created and PRO active. If you cannot see it, check spam."}</p>}
+        {linkSent === "sent" && provider && <button className="pro-secondary" type="button" onClick={() => void sendAccessLink(provider, email)}>{es ? "Reenviar el email" : "Resend the email"}</button>}
+      </>}
+      {email && linkSent === "failed" && <p>{es ? "Email confirmado para la compra:" : "Confirmed buyer email:"} <strong>{email}</strong></p>}
+      {!email && <p>{es ? "Vincula la compra a tu cuenta para abrir la clase." : "Link your purchase to an account to open the lesson."}</p>}
+      {!otherWays && email && <p><button className="pro-secondary" type="button" onClick={() => setOtherWays(true)}>{es ? "Prefiero entrar de otra forma" : "I prefer another way in"}</button></p>}
+      {(otherWays || !email) && <>
+        <button className="pro-success-button" type="button" disabled={busy} onClick={() => void google()}>{es ? "Continuar con Google" : "Continue with Google"}</button>
+        <p><Link className="pro-secondary" href={registrationUrl} onClick={() => { if (email) sessionStorage.setItem("spanishcue.claim.confirmedEmail", email); }}>{es ? "Crear cuenta con email" : "Create account with email"}</Link></p>
+        <p><Link className="pro-secondary" href={signInUrl} onClick={() => { if (email) sessionStorage.setItem("spanishcue.claim.confirmedEmail", email); }}>{es ? "Ya tengo cuenta" : "I already have an account"}</Link></p>
+      </>}
     </>}
     {state === "error" && <>
       <p role="alert">{message}</p>

@@ -1,0 +1,61 @@
+// The covers of the classic (not 3D) conversation lessons, set like animated
+// film key art: a painted scene (scripts/covers/art/<art>.webp, made with
+// Canva's image generator) under a film-poster title. The levels of a family
+// share one scene and differ in the level badge.
+//   node scripts/covers/render.mjs clasicas [slug]
+// app/conversation-classic-covers.ts maps the lesson ids to these files.
+
+const c = (slug, ids, title, kicker, art, focus = 'center') => ({ slug, ids, title, kicker, art, focus });
+
+export const CLASSICS = [
+  c('la-ciudad-no-duerme', [221], 'La ciudad no duerme', 'Modo Play', 'la-ciudad-no-duerme'),
+  c('entrenador-personal', [216], 'Entrenador personal', 'Modo Play', 'entrenador-personal'),
+  c('vida-despues-de-los-30', [215], 'La vida después de los 30', 'Exploración visual', 'vida-despues-de-los-30'),
+  c('de-eso-si-hablo', [205], 'De eso sí hablo', 'Tableros', 'de-eso-si-hablo'),
+  c('no-es-tan-simple', [206], 'No es tan simple', 'Tableros', 'no-es-tan-simple'),
+  c('red-flag-o-no-a1', [], 'Red Flag o No', 'A1', 'red-flag'),
+  c('red-flag-o-no-a2', [207], 'Red Flag o No', 'A2', 'red-flag'),
+  c('red-flag-o-no-b1', [208], 'Red Flag o No', 'B1', 'red-flag'),
+  c('red-flag-o-no-b2', [209], 'Red Flag o No', 'B2', 'red-flag'),
+  c('red-flag-o-no-c1', [], 'Red Flag o No', 'C1', 'red-flag'),
+  c('red-flag-o-no-c2', [], 'Red Flag o No', 'C2', 'red-flag'),
+  c('ciudad-en-juego', [139], 'Ciudad en juego', 'Modo Play', 'ciudad-en-juego'),
+  c('y-ahora-que', [138], '¿Y ahora qué?', 'Modo Play', 'y-ahora-que'),
+  c('uno-o-el-otro', [137], 'Uno o el otro', 'Modo Play', 'uno-o-el-otro'),
+  c('camara-de-presion', [136], 'La Cámara de Presión', 'Conversación', 'camara-de-presion'),
+  c('ministerio-de-las-versiones', [129], 'El Ministerio de las Versiones', 'Conversación', 'ministerio-de-las-versiones'),
+  c('agencia-de-vidas-paralelas', [128], 'La Agencia de Vidas Paralelas', 'Conversación', 'agencia-de-vidas-paralelas'),
+  c('protocolo-aurora', [127], 'El Protocolo Aurora', 'Conversación', 'protocolo-aurora'),
+  c('noche-de-las-siete-llamadas', [126], 'La Noche de las Siete Llamadas', 'Conversación', 'noche-de-las-siete-llamadas'),
+  c('mesa-de-las-tres-ofertas', [125], 'La Mesa de las Tres Ofertas', 'Conversación', 'mesa-de-las-tres-ofertas'),
+  c('mensajes-fuera-de-contexto', [124], 'Mensajes fuera de contexto', 'Conversación', 'mensajes-fuera-de-contexto'),
+  c('en-vivo-en-diez-minutos', [123], 'En Vivo en Diez Minutos', 'Conversación', 'en-vivo-en-diez-minutos'),
+  c('teatro-de-las-coartadas', [122], 'El Teatro de las Coartadas', 'Conversación', 'teatro-de-las-coartadas'),
+  c('cine-de-las-tres-funciones', [121], 'El Cine de las Tres Funciones', 'Conversación', 'cine-de-las-tres-funciones'),
+  c('invitaciones-cruzadas', [120], 'La Noche de las Invitaciones Cruzadas', 'Conversación', 'invitaciones-cruzadas'),
+  c('la-isla-vota', [109], 'La isla vota', 'Conversación', 'la-isla-vota'),
+  c('maquina-que-elimina-cosas-a1', [], 'La máquina que elimina cosas del mundo', 'A1', 'maquina'),
+  c('maquina-que-elimina-cosas-a2', [103], 'La máquina que elimina cosas del mundo', 'A2', 'maquina'),
+  c('maquina-que-elimina-cosas-b1', [101], 'La máquina que elimina cosas del mundo', 'B1', 'maquina'),
+  c('maquina-que-elimina-cosas-b2', [], 'La máquina que elimina cosas del mundo', 'B2', 'maquina'),
+  c('maquina-que-elimina-cosas-c1', [], 'La máquina que elimina cosas del mundo', 'C1', 'maquina'),
+  c('maquina-que-elimina-cosas-c2', [], 'La máquina que elimina cosas del mundo', 'C2', 'maquina'),
+  c('vida-con-una-regla-absurda-a1', [], 'Tu vida con una regla absurda', 'A1', 'regla'),
+  c('vida-con-una-regla-absurda-a2', [104], 'Tu vida con una regla absurda', 'A2', 'regla'),
+  c('vida-con-una-regla-absurda-b1', [102], 'Tu vida con una regla absurda', 'B1', 'regla'),
+  c('vida-con-una-regla-absurda-b2', [], 'Tu vida con una regla absurda', 'B2', 'regla'),
+  c('vida-con-una-regla-absurda-c1', [], 'Tu vida con una regla absurda', 'C1', 'regla'),
+  c('vida-con-una-regla-absurda-c2', [], 'Tu vida con una regla absurda', 'C2', 'regla'),
+  c('monasterio-de-las-ideas', [34], 'El Monasterio de las Ideas', 'Conversación', 'monasterio-de-las-ideas'),
+  c('ciudad-del-futuro', [22], 'La Ciudad del Futuro', 'Conversación', 'ciudad-del-futuro'),
+  c('reino-de-las-preguntas-prohibidas', [20, 21], 'El Reino de las Preguntas Prohibidas', 'Conversación', 'reino-de-las-preguntas-prohibidas'),
+  c('ruleta-de-tu-vida', [17], 'La Ruleta de Tu Vida', 'Conversación', 'ruleta-de-tu-vida'),
+  c('lets-talk-a1', [15], 'Let’s Talk', 'A1', 'lets-talk'),
+  c('lets-talk-a2', [14], 'Let’s Talk', 'A2', 'lets-talk'),
+  c('lets-talk-b1', [13], 'Let’s Talk', 'B1', 'lets-talk'),
+  c('lets-talk-b2', [], 'Let’s Talk', 'B2', 'lets-talk'),
+  c('lets-talk-c1', [], 'Let’s Talk', 'C1', 'lets-talk'),
+  c('lets-talk-c2', [], 'Let’s Talk', 'C2', 'lets-talk'),
+  c('preguntas-que-dan-ganas-de-hablar', [11], 'Preguntas que dan ganas de hablar', 'Conversación', 'preguntas-que-dan-ganas-de-hablar'),
+  c('museo-de-las-decisiones', [203], 'El museo de las decisiones', 'Conversación', 'museo-de-las-decisiones'),
+];

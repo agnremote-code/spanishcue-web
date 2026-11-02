@@ -2,7 +2,9 @@ import { execFileSync } from 'node:child_process';
 import { readFileSync, existsSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { CONTENT_ROOTS, SOURCE_EXTENSION, extractCopy, isMachineValue, sourceFiles } from './neutral-spanish.mjs';
+import { CONTENT_ROOTS, DERIVED, SOURCE_EXTENSION, extractCopy, isMachineValue, sourceFiles } from './neutral-spanish.mjs';
+// Generated copies (DERIVED) add no English: every literal in them must
+// already exist, word for word, in their source files.
 export const BASE_SHA = '43e4b3eb1dc76031481d2406a62b9210f0dd97e2';
 // Exact server-wrapper relocations. Compare every original English literal at
 // its new path; changes, missing copies and duplicate old copies still fail.
@@ -24,6 +26,33 @@ export function relocateEnglishSources(files) {
     relocated.set(to,relocated.get(from));relocated.delete(from);
   }
   return relocated;
+}
+// A module split in two keeps its English under the original path: the parts
+// are compared together against the original file.
+export const SPLITS = [
+  ['app/noche-abierta/street.mjs', 'app/noche-abierta/street-core.mjs'],
+  ['app/noche-abierta/talk/a0.mjs', 'app/noche-abierta/talk/a0-places.mjs'],
+];
+export function mergeSplitSources(files) {
+  const merged = new Map(files);
+  for (const [original, part] of SPLITS) {
+    if (!merged.has(part)) continue;
+    merged.set(original, `${merged.get(original) ?? ''}\n${merged.get(part)}`);
+    merged.delete(part);
+  }
+  return merged;
+}
+export function checkDerivedCopies(files) {
+  const findings = [];
+  const remaining = new Map(files);
+  for (const [path, sources] of DERIVED) {
+    if (!remaining.has(path)) continue;
+    const known = new Set();
+    for (const [source, text] of files) if (sources.some(prefix => source === prefix || (prefix.endsWith('/') && source.startsWith(prefix)))) for (const item of extractCopy(text, source)) if (item.language === 'en') known.add(item.text);
+    for (const item of extractCopy(remaining.get(path), path)) if (item.language === 'en' && !isMachineValue(item.text) && !known.has(item.text)) findings.push({ ...item, kind: 'english-added' });
+    remaining.delete(path);
+  }
+  return { findings, remaining };
 }
 /** Multiset per file allows harmless object restructuring but detects removals/edits. */
 export function compareEnglishCopy(beforeFiles, afterFiles) {
@@ -75,8 +104,19 @@ export function filterReviewedChanges(findings, reviewed) {
  * exempt an edit or deletion of existing English copy.
  */
 export const APPROVAL_MANIFESTS = [
+  'docs/audits/pricing-free-doors-english-additions-20261101.json',
+  'docs/audits/how-it-works-videos-english-additions-20261101.json',
+  'docs/audits/referidos-english-additions-20261031.json',
+  'docs/audits/plan-anual-english-additions-20261031.json',
+  'docs/audits/recursos-es-english-additions-20261031.json',
+  'docs/audits/guarantee-30-days-english-additions-20261030.json',
+  'docs/audits/paises-3d-categoria-english-additions-20261030.json',
+  'docs/audits/post-payment-email-link-english-additions-20261030.json',
+  'docs/audits/google-teachers-free-grammar-english-additions-20261030.json',
+  'docs/audits/free-version-bar-english-additions-20261030.json',
   'docs/audits/academias-english-additions-20261023.json',
   'docs/audits/academias-panel-english-additions-20261023.json',
+  'docs/audits/academias-bauti-english-additions-20261023.json',
   'docs/audits/duration-english-additions-20261009.json',
   'docs/audits/content-protection-english-additions-20261021.json',
   'docs/audits/resource-3d-worlds-english-additions-20261017.json',
@@ -116,6 +156,10 @@ export const APPROVAL_MANIFESTS = [
   'docs/audits/library-two-routes-english-20261022.json',
   'docs/audits/madrid-infectada-english-additions-20261022.json',
   'docs/audits/madrid-ciudad-english-additions-20261022.json',
+  'docs/audits/mas-alla-english-additions-20261029.json',
+  'docs/audits/mas-alla-voces-english-additions-20261030.json',
+  'docs/audits/vuelo-cancelado-english-additions-20261031.json',
+  'docs/audits/el-consorcio-english-additions-20261101.json',
 ];
 export function loadApprovedAdditions(root) {
   return APPROVAL_MANIFESTS.flatMap(path => {
@@ -159,7 +203,11 @@ export function checkEnglishCopy(root, base = BASE_SHA) {
   if(existsSync(homeFreeReviewedPath))reviewed.push(...JSON.parse(readFileSync(homeFreeReviewedPath,'utf8')).changes);
   const libraryRoutesReviewedPath=resolve(root,'docs/audits/library-two-routes-english-20261022.json');
   if(existsSync(libraryRoutesReviewedPath))reviewed.push(...JSON.parse(readFileSync(libraryRoutesReviewedPath,'utf8')).changes);
-  return { findings: filterReviewedChanges(filterApprovedAdditions(compareEnglishCopy(relocateEnglishSources(before), after), additions), reviewed), files: before.size, strings: [...before].reduce((n, [path, source]) => n + extractCopy(source, path).filter(c => c.language === 'en').length, 0), base };
+  const pricingDoorsReviewedPath=resolve(root,'docs/audits/pricing-free-doors-english-additions-20261101.json');
+  if(existsSync(pricingDoorsReviewedPath))reviewed.push(...JSON.parse(readFileSync(pricingDoorsReviewedPath,'utf8')).changes);
+  const derived = checkDerivedCopies(after);
+  const compared = compareEnglishCopy(relocateEnglishSources(before), mergeSplitSources(derived.remaining));
+  return { findings: [...derived.findings, ...filterReviewedChanges(filterApprovedAdditions(compared, additions), reviewed)], files: before.size, strings: [...before].reduce((n, [path, source]) => n + extractCopy(source, path).filter(c => c.language === 'en').length, 0), base };
 }
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const result = checkEnglishCopy(process.cwd(), process.argv.find(a => a.startsWith('--base='))?.slice(7) || BASE_SHA);

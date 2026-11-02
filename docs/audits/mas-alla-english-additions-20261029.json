@@ -1,0 +1,1830 @@
+{
+  "version": 1,
+  "authorization": "Owner request of 2026-10-29 17:53Z (project thread «Más allá: cielo e infierno», root message cmsg_01Gr5R4j3t2Yet65UcmhcVhAUCdLveWHdt7vSwzqpkmRs3): a new A0–C2 3D conversation class whose A0 level is fully bilingual (conversation, intro captions, choices and listening) and whose A1 level glosses its key words and river poles in English, plus one English line for the academies listing. This manifest approves only the exact English support literals listed below (the English half of each { es, en } pair in app/mas-alla/levels/a0.mjs and a1.mjs, the English lines of app/mas-alla/MasAllaGame.tsx shown under the Spanish at A0, the contextEn / en / qEn fields of app/escucha-3d/content/masalla/a0.json and the academies card body in app/academias/page.tsx); existing English copy stays protected. Owner approval: Ale's standing approval for English copy, «apruebo (siempre de ahora en más apruebo)» on 2026-10-22 06:37Z (project message cmsg_01Gr5R4j3t2Yet65UcmhcVhAAAbp6kqDfMqxzNm3PL6f5g), and «apruebo todo no preguntes más, apruebo todo» on 2026-10-14 16:55Z (cmsg_01Gr5R4j3t2Yet65UcmhcVhADwvzg9kA9GinuWu3D7FSfe).",
+  "additions": [
+    {
+      "path": "app/academias/page.tsx",
+      "text": "Heaven and hell in 3D: deep questions about life, for adults."
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "Two souls wait in the line at the Pearly Gates. They introduce themselves."
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "Hello. My name is Rosa. I am from Mexico."
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "Hello, Rosa. I am Andrés. I am from Guatemala."
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "Are you scared?"
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "A little. But I am calm. There is a lot of light here."
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "Where is Rosa from?"
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "What is the man called?"
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "How is Andrés?"
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "What is there in that place?"
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "What is your name?"
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "Are you scared sometimes?"
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "Do you like the light?"
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "fear"
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "calm"
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "light"
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "Rosa is looking for the book of her life. An archivist helps her."
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "Good afternoon. What book are you looking for?"
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "The book of my life. My name is Rosa Díaz."
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "Here it is. It is a big blue book."
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "How big! Can I read the first page?"
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "Yes, of course. It is your life."
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "What is Rosa looking for?"
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "What color is the book?"
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "What is the book like?"
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "What does Rosa want to read?"
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "Do you like reading?"
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "What color do you like?"
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "Do you want to read the book of your life?"
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "book"
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "page"
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "life"
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "At the banquet on the Summit, a woman talks about her favorite food."
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "Hello. I am Lucía. I am at the Summit. There is a very long table here."
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "There is bread, fruit and empanadas. Empanadas are my favorite food."
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "But the best thing is not the food. The best thing is the people."
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "Where is Lucía?"
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "What is the table like?"
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "What is her favorite food?"
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "For Lucía, what is the best thing?"
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "What is your favorite food?"
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "Do you eat with your family?"
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "What is the best part of your day?"
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "table"
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "fruit"
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "people"
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "favorite"
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "In the Antechamber of Hell, a demon works at a window. A new soul arrives."
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "Next. Name, please."
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "Jorge. Jorge Quispe. I am from Peru."
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "Very good, Jorge. Here is a paper. Write your name."
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "And after that?"
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "After that you wait. Here everybody waits a lot."
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "Where is Jorge from?"
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "What does Mara give him?"
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "What does Jorge write?"
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "What does everybody do there?"
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "Do you wait a lot in your life?"
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "Do you like writing?"
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "Where do you wait for the bus?"
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "name"
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "paper"
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "you wait"
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "The ferryman carries souls in his boat. A woman wants to get on."
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "Hello. Do you want to cross the river?"
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "Yes, please. How much is it?"
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "One coin. But it is not money. It is a memory."
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "A memory… Okay. I give you the memory of my first job."
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "What does Teresa want to do?"
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "How much is it?"
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "What is the coin?"
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "What memory does Teresa give?"
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "Do you have a nice memory?"
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "What was your first job like?"
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "Do you like boats?"
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "to cross"
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "coin"
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "memory"
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "In the Abyss there are open cages. Two men talk inside their cages."
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "The door is open, Carlos."
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "Yes, Ramiro. But I do not want to go out."
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "Why?"
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "Here I am alone, but I am safe."
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "They always say the same thing."
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "How is the door?"
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "What does Carlos not want to do?"
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "How is Carlos in the cage?"
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "What does Lucero say?"
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "Is there something you are scared to change?"
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "Do you like being alone?"
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "Where do you feel safe?"
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "open"
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "to go out"
+    },
+    {
+      "path": "app/escucha-3d/content/masalla/a0.json",
+      "text": "safe"
+    },
+    {
+      "path": "app/mas-alla/MasAllaGame.tsx",
+      "text": "Santa Clara Hospital · room 7 · 3:12 a.m."
+    },
+    {
+      "path": "app/mas-alla/MasAllaGame.tsx",
+      "text": "“We are all here. We love you so much.”"
+    },
+    {
+      "path": "app/mas-alla/MasAllaGame.tsx",
+      "text": "And then, everything turns to light."
+    },
+    {
+      "path": "app/mas-alla/MasAllaGame.tsx",
+      "text": "I stay in Heaven"
+    },
+    {
+      "path": "app/mas-alla/MasAllaGame.tsx",
+      "text": "You stay in the light. Gabriel closes your file without reading it: there is no need any more."
+    },
+    {
+      "path": "app/mas-alla/MasAllaGame.tsx",
+      "text": "I stay in Hell"
+    },
+    {
+      "path": "app/mas-alla/MasAllaGame.tsx",
+      "text": "You stay below, where people speak plainly. Lucero offers you a chair and, for the first time, someone asks what you think."
+    },
+    {
+      "path": "app/mas-alla/MasAllaGame.tsx",
+      "text": "I want to live again"
+    },
+    {
+      "path": "app/mas-alla/MasAllaGame.tsx",
+      "text": "You open your eyes. A baby crying, a white light, someone saying your name for the first time. You remember nothing… or almost nothing."
+    },
+    {
+      "path": "app/mas-alla/MasAllaGame.tsx",
+      "text": "You have died. Before you stay anywhere, you can see both. Where do you go first?"
+    },
+    {
+      "path": "app/mas-alla/MasAllaGame.tsx",
+      "text": "Heaven. Follow the white circles: someone is waiting in each one."
+    },
+    {
+      "path": "app/mas-alla/MasAllaGame.tsx",
+      "text": "Hell. Follow the white circles: someone is waiting in each one."
+    },
+    {
+      "path": "app/mas-alla/MasAllaGame.tsx",
+      "text": "You have closed the six encounters of ${spot.world === 'cielo' ? 'Heaven' : 'Hell'}."
+    },
+    {
+      "path": "app/mas-alla/MasAllaGame.tsx",
+      "text": "Heaven"
+    },
+    {
+      "path": "app/mas-alla/MasAllaGame.tsx",
+      "text": "Hell"
+    },
+    {
+      "path": "app/mas-alla/MasAllaGame.tsx",
+      "text": "After everything you have seen, where do you stay?"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "The gate of Heaven"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "There is a white gate. There is an angel. His name is Gabriel."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Hello. I am Gabriel."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Hello. Can I come in?"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Yes. But first, a question."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "OK. What question?"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Forgiving or saying “sorry”? What is hard for you?"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "What is hard for you?"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Forgiving"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Yes. Forgiving is hard."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Both things"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "For many people, too."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Saying “sorry”"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "It is a small, hard word."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Do you forgive your family quickly?"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Do you say “sorry” a lot?"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "the gate"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "the angel"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "heaven"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "to forgive"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "hard"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "The garden"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "There is a garden with many flowers. There is a young woman. Her name is Lucía."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Hello. I am Lucía. I am from Argentina."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Hello, Lucía. How pretty!"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Each flower is a dream."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "A dream?"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Yes. Things I do not do in life."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "You have one year to live. What do you stop doing?"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Working a lot"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Yes. A year is not long."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Worrying about others"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Your life is yours."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Waiting"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Yes. The moment is now."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Looking at my phone"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Ha ha. That is true."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "What do you want to do?"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Do you like your job?"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "the garden"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "the flower"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "the dream"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "one year"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "to wait"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "The book of your life"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "There are many books. There is an angel with glasses. Her name is Uriel."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Hello. I am Uriel. This book is your life."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "My life? How big!"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Yes. It has many parts."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Can I change a part?"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Yes. Only one."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Which part do you want to change?"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "My childhood"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Your childhood is important."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "A love"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Ah, a love. It is beautiful and sad."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "My job"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Another job, another life."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Nothing"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Very good. You like your book."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Do you like your life?"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "What is your family like?"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "the book"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "life"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "to change"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "childhood"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "love"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "The river"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "There is a white river. There is an old man with a hat. His name is Ernesto."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Hello. I am Ernesto. I am from Cuba."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Hello. What river is it?"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "It is the river of forgetting."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Of forgetting?"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Yes. You drink water and you forget."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "How much water do you want to drink?"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Not forgetting"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Forgetting everything"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "None"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Like me. I do not want to forget."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "A little"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "A little. A small memory."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "A glass"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "A glass is a lot."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "A lot"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "And your family?"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "All of it"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "All new. Interesting."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Do you have a nice memory?"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Do you want to forget something?"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "the river"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "the water"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "to drink"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "to forget"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "the memory"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "The dinner"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "There is a very long table. There is a lot of food. There is a man with an apron. His name is Mateo."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Hello. I am Mateo. Would you like water?"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Yes, thank you."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "On Earth I am rich. Here I am a waiter."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "And are you happy?"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Here, yes. Very happy."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "What is important in life?"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Family"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Yes. Family is very important."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Being free"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Being free is beautiful."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Helping"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Helping is very good."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Being calm"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Yes. Peace is important."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Work"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Work, yes. But not everything."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "What is important for you?"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Are you happy with your life?"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "the table"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "the food"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "rich"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "happy"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "important"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "The Earth"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "There is a balcony. Below is the Earth. It is blue. There is a young angel. His name is Azael."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Hello. I am Azael. Look down."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "What is down there?"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Your family. They are sad."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "What do they say?"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "There are three cards. Choose one."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Which sentence do you want for yourself?"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "A good person"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "It is a nice sentence."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "A free person"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "I like it. It is brave."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "A fun person"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Laughter is a gift."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "What are you like?"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Who is your friend?"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "the Earth"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "blue"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "the family"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "sad"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "the card"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "The office"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Hell is an office. There is smoke and paper. There is a demon. Her name is Mara."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Hello. Number six, six, six."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Hello. I just want to look."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "OK. There are four doors."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "What is behind them?"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Your hell. Open a door."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "What is hell for you?"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Being alone"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Yes. Loneliness is hard."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Days that are all the same"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "How boring."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Criticism"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Ugh. That is hard."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Not saying “sorry”"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "It is very sad."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "What scares you?"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Are you alone?"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "hell"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "the office"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "the door"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "smoke"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "alone"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "The mirrors"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "There are many mirrors. There is a girl in the middle. Her name is Valeria."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Hello. I am Valeria. I am from Venezuela."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Hello. Are you OK?"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "No. I always smile, but I am sad."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "I am sorry."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Look at this mirror. It is broken."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "What do you hide?"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "My fear"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Many people hide their fear."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "My sadness"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Like me."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "My envy"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "It is normal."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "My love"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Ah. That is beautiful."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Do you smile a lot at home?"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Are you sad sometimes?"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "the mirror"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "broken"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "to smile"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "to hide"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "The lies"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "There is a dark room. There is a big demon in a suit. His name is Asmodeo."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Hello. I am Asmodeo. I have your list."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "What list?"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Your list of lies."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Me? Lies?"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Yes. Small lies. Look."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Which lie do you say a lot?"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "“I am fine”"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Are you really fine?"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "“I do not have time”"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "You do have time."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "“I do not care”"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "You do care."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "“Tomorrow”"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Ha ha. Tomorrow."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Do you tell lies sometimes?"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Are you fine today?"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "the lie"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "the list"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "small"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "time"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "tomorrow"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "The boat"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "There is a river of fire. There is a black boat. There is an old demon. His name is Flegias."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Hello. I am Flegias. One coin, please."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "I do not have money."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "I have an offer. One day on Earth."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "One day with my family?"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Yes. But you have to pay."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "What do you pay for one day?"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Ten years of heaven"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "That is a lot!"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "A nice memory"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Interesting."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "My pride"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Very good."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "You do not want to go back. That is OK."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "What do you do on that day?"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Who are you with?"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "the boat"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "fire"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "the coin"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "the day"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "to pay"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "The cage"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "There are many cages. There is a man in a cage. His name is Ramiro."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Hello. I am Ramiro."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Hello. The door is open."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Yes, I know."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Why do you not come out?"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "I have chains. And you?"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "What chain do you have?"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Fear"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Comfort"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Yes. It is easy not to change."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "My family"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "It is hard."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Do you want to change something?"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Are you scared sometimes?"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "the cage"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "the chain"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "open"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "to go out"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "fear"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "The throne"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "There is a black throne and fire. There is a tall, elegant man. His name is Lucero."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Hello. I am Lucero. Sit down."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Hello. Are you the devil?"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Yes. But I am tired."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "What do you want?"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "One question. Look at the clock."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Do you want your life again, the same?"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Yes"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "How nice."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Yes, with the bad parts"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Very brave."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "No"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "I understand."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "I do not know"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Thank you. That is honest."
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "What good thing does your life have?"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "Which day do you like?"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "the throne"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "the devil"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "tired"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "again"
+    },
+    {
+      "path": "app/mas-alla/levels/a0.mjs",
+      "text": "the same"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "the door"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "the angel"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "to forgive"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "I am sorry"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "difficult"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "the folder"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "the garden"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "the flower"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "to plant"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "to travel"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "tomorrow"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "forever"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "the library"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "the book"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "the chapter"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "to change"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "childhood"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "happy"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "Not forgetting"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "Forgetting everything"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "the river"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "the water"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "to drink"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "to forget"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "the memory"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "sad"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "the table"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "the food"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "the waiter"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "rich"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "success"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "the Earth"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "the funeral"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "the grave"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "the sentence"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "to laugh"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "to prefer"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "hell"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "the office"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "the line"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "the smoke"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "fear"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "alone"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "the mirror"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "to hide"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "to smile"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "broken"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "sadness"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "envy"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "the lie"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "to lie"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "the list"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "small"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "time"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "the truth"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "the boat"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "the fire"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "the coin"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "to pay"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "the day"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "to come back"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "the cage"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "the chain"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "open"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "to go out"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "the key"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "strong"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "the throne"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "the devil"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "tired"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "again"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "the same"
+    },
+    {
+      "path": "app/mas-alla/levels/a1.mjs",
+      "text": "the clock hand"
+    }
+  ]
+}

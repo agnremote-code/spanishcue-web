@@ -276,7 +276,7 @@ export const lesson: LiveLesson = {
       steps: [
         { title: 'La hermana de Daniel · Daniel’s sister', blocks: [
           { kind: 'guide', text: { teacher: 'Primera escucha: solo la idea general. Segunda escucha: tu alumno levanta la mano con cada deseo para Daniel y dice si es «quiero que», «espero que», «ojalá» o «¡que…!». Después, las preguntas.', self: 'Escucha una vez para la idea general y otra vez para los detalles. Cuenta los deseos de Paula: ¿con «quiero que», «espero que», «ojalá» o «¡que…!»? (Count Paula’s wishes.)' } },
-          { kind: 'listen', title: 'Un audio de Paula para la fiesta', channel: 'MENSAJE DE VOZ · DE PAULA PARA DANIEL', src: '/audio/grammar-live/389.mp3',
+          { kind: 'listen', title: 'Un audio de Paula para la fiesta', channel: 'MENSAJE DE VOZ · DE PAULA PARA DANIEL', src: '/audio/grammar-free/389.mp3',
             before: 'Paula, la hermana de Daniel, vive en Cali y no puede ir a la fiesta. Manda un audio para Daniel. ¿Qué crees que le desea? (Paula can’t come to the party, so she sends Daniel a voice message. What do you think she wishes him?)',
             gist: { prompt: '¿Cuál es la idea general? · What is the main idea?', options: ['Paula quiere que Daniel no se vaya a Montreal.', 'Paula no puede ir a la fiesta y le manda a Daniel buenos deseos para su nueva vida.', 'Paula le pide a Daniel dinero para el viaje.'], answer: 1, why: '«Como yo no puedo ir, te mando este audio», y después le desea muchas cosas para el viaje y la nueva vida.', en: 'What is the main idea?' },
             details: [

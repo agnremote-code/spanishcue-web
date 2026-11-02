@@ -87,14 +87,15 @@ export default function World3D(props: WorldProps) {
     try { hospital = buildHospital(scene, { low, shadows: !low, cries: CRIES, onCry: (cry, volume) => { if (cry) shout(cry, volume); live.current.onCry(volume); } }); hero = createHero(!low); }
     catch (error) {
       console.error(error);
-      renderer.dispose(); renderer.domElement.remove();
+      renderer.dispose(); renderer.forceContextLoss(); renderer.domElement.remove();
       const t = window.setTimeout(() => live.current.onFail(), 0);
       return () => window.clearTimeout(t);
     }
     scene.add(hero.root);
     // A cold clinical reflection so vinyl floors, steel and glass read as such.
     const pmrem = new THREE.PMREMGenerator(renderer);
-    const envMap = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
+    const envTarget = pmrem.fromScene(new RoomEnvironment(), 0.04);
+    const envMap = envTarget.texture;
     scene.environment = envMap;
     scene.environmentIntensity = 0.3;
     const hemi = new THREE.HemisphereLight('#e2ecf6', '#2a2c30', 0.82);
@@ -467,15 +468,24 @@ export default function World3D(props: WorldProps) {
       canvasEl.removeEventListener('pointercancel', onUp);
       canvasEl.removeEventListener('wheel', onWheel);
       scene.traverse(o => {
+        (o as THREE.DirectionalLight).shadow?.dispose();
         const m = o as THREE.Mesh;
         if (m.geometry) m.geometry.dispose();
         const mat = m.material as THREE.Material | THREE.Material[] | undefined;
-        if (Array.isArray(mat)) mat.forEach(x => x.dispose()); else mat?.dispose();
+        for (const x of Array.isArray(mat) ? mat : mat ? [mat] : []) {
+          // Every texture slot (map, emissiveMap, …), then the material.
+          for (const value of Object.values(x)) if ((value as THREE.Texture | null)?.isTexture) (value as THREE.Texture).dispose();
+          x.dispose();
+        }
       });
+      // EffectComposer.dispose() frees its own targets, not its passes' (bloom mips).
+      for (const pass of composer?.passes ?? []) pass.dispose();
       composer?.dispose();
-      envMap.dispose();
+      // The whole PMREM target, not only its texture: fromScene gives it a depth buffer.
+      envTarget.dispose();
       pmrem.dispose();
       renderer.dispose();
+      renderer.forceContextLoss();
       renderer.domElement.remove();
       api.current = null;
     };

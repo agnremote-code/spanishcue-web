@@ -10,16 +10,17 @@
 import dynamic from 'next/dynamic';
 import { useCallback, useEffect, useMemo, useRef, useState, type KeyboardEvent as ReactKeyboardEvent, type ReactNode } from 'react';
 import { ANNOUNCEMENTS, FLOORS, SCENES, SECTORS, WALLS, ELEVATOR, STAIRS, sceneById } from './layout.mjs';
-import { LEVELS } from './levels.mjs';
+import { LEVELS } from './levels-info.mjs';
 import type { Text } from './levels.d.mts';
 import { CAST } from './story.mjs';
-import { STORAGE_KEY, choose, closeScene, createState, doneFor, normaliseLevel, openScene, progress, resetLevel, restore, sceneView, serialise, setFloor, setLevel, undo } from './engine.mjs';
-import { ListeningBadge, ListeningCard, ModeSwitch, useListeningDone, useListeningMode } from '../escucha-3d/Escucha';
+import { STORAGE_KEY, choose, closeScene, createState, doneFor, isLocked, normaliseLevel, openScene, patientById, progress, resetLevel, restore, sceneView, serialise, setFloor, setLevel, undo } from './engine-core.mjs';
+import { ListeningBadge, ListeningCard, ModeSwitch, useListeningDone, useListeningMode, type Mode } from '../escucha-3d/Escucha';
 import { createAmbience, type Ambience } from './ambience';
-import { PATIENTS } from './patients.mjs';
+import PremiumPanel from '../immersive/PremiumPanel';
 import { setShoutMuted } from '../escucha-3d/shout';
 import type { Pose } from './World3D';
 import './hospital.css';
+import MusicVolume, { useMusicVolume } from '../escucha-3d/MusicVolume';
 
 const World3D = dynamic(() => import('./World3D'), { ssr: false, loading: () => <div className="hs-loading">Abriendo las puertas de urgencias…</div> });
 const LETTERS = ['A', 'B', 'C'];
@@ -66,7 +67,10 @@ function MiniMap({ floor, pose, done, onOpen }: { floor: number; pose: Pose | nu
   </svg>;
 }
 
-export default function HospitalGame() {
+// The free class (/demo/hospital-san-casi-vivo) is this same game: some
+// floors, circles and people are locked, and touching one offers PRO.
+export default function HospitalGame({ demo }: { demo?: { signedIn: boolean } }) {
+  const [gate, setGate] = useState<string | null>(null);
   const [state, setState] = useState<State>(() => createState());
   const [ready, setReady] = useState(false);
   const [entered, setEntered] = useState(false);
@@ -82,11 +86,15 @@ export default function HospitalGame() {
   const [vocab, setVocab] = useState(true);
   const [talkAt, setTalkAt] = useState(0);
   const [sound, setSound] = useState(true);
+  const [musicVolume, setMusicVolume] = useMusicVolume();
   const [announce, setAnnounce] = useState<string | null>(null);
   const cardRef = useRef<HTMLDivElement>(null);
   const ambience = useRef<Ambience | null>(null);
   // Comprensión auditiva: the circles open a listening (undefined = closed, null = the list).
-  const [mode, setMode] = useListeningMode('hospital');
+  const [listenMode, setListenMode] = useListeningMode('hospital');
+  // Comprensión auditiva is PRO in the free class.
+  const mode: Mode = demo ? 'conversacion' : listenMode;
+  const setMode = useCallback((next: Mode) => { if (demo && next === 'escucha') setGate('Comprensión auditiva'); else setListenMode(next); }, [demo, setListenMode]);
   const [listenAt, setListenAt] = useState<string | null | undefined>(undefined);
 
   useEffect(() => {
@@ -110,6 +118,7 @@ export default function HospitalGame() {
   useEffect(() => { ambience.current = createAmbience(); return () => { ambience.current?.dispose(); ambience.current = null; }; }, []);
   useEffect(() => { ambience.current?.setKind(sector?.sound ?? null); }, [sector?.sound]);
   useEffect(() => { ambience.current?.setMuted(!sound); setShoutMuted(!sound); }, [sound]);
+  useEffect(() => { ambience.current?.setVolume(musicVolume); }, [musicVolume]);
   const [voice, setVoice] = useState(false);
   useEffect(() => { ambience.current?.duck(voice ? 0.05 : state.scene || listenAt !== undefined ? 0.3 : 1); }, [state.scene, listenAt, voice]);
   const onAudio = useCallback((playing: boolean) => setVoice(playing), []);
@@ -132,11 +141,13 @@ export default function HospitalGame() {
   const enter = () => { setEntered(true); ambience.current?.start(); };
   const open = useCallback((id: string) => {
     setPanel(null); setList(false); setMap(false);
+    if (isLocked(id)) { setGate(`${sceneById(id)?.sector ?? 'Hospital'} · escena PRO`); return; }
     if (mode === 'escucha') { setListenAt(id); setState(s => setFloor(s, sceneById(id)?.floor ?? s.floor)); return; }
     setTalkAt(0);
     setState(s => openScene({ ...s, floor: sceneById(id)?.floor ?? s.floor }, id));
   }, [mode]);
   const close = useCallback(() => setState(s => closeScene(s)), []);
+  const meet = useCallback((id: string | null) => { if (id && isLocked(id)) setGate('Gente del hospital · PRO'); else setPersonId(id); }, []);
   const goFloor = (floor: number) => {
     const how = panel ?? 'lift';
     setPanel(null);
@@ -174,8 +185,9 @@ export default function HospitalGame() {
   const nearScene = near?.kind === 'scene' ? sceneById(near.id) : null;
   const nearWho = nearScene ? CAST[nearScene.cast[0]] : null;
   const busy = Boolean(state.scene) || listenAt !== undefined || Boolean(personId);
-  const nearPatient = near?.kind === 'person' ? PATIENTS[near.id] : null;
-  const patient = personId ? PATIENTS[personId] : null;
+  const nearPatient = near?.kind === 'person' ? patientById(near.id) : null;
+  const nearLocked = near?.kind === 'person' && isLocked(near.id);
+  const patient = personId ? patientById(personId) : null;
   const band = ['A0', 'A1', 'A2'].includes(state.level) ? 'basic' : ['B1', 'B2'].includes(state.level) ? 'mid' : 'high';
   const heardHere = mode === 'escucha' ? heard : done;
 
@@ -183,7 +195,7 @@ export default function HospitalGame() {
     {ready && has3d && <World3D floor={state.floor} via={via} sceneId={state.scene?.id ?? (listenAt && sceneById(listenAt) ? listenAt : null)} mood={view?.mood ?? null}
       done={heardHere} paused={!entered || Boolean(panel) || list || map || listenAt !== undefined} intro={!entered}
       onSpot={open} onLift={(how) => setPanel(how)} onNear={setNear} onPose={setPose} onFail={() => setHas3d(false)}
-      personId={personId} onPerson={setPersonId} onCry={(volume) => ambience.current?.scream(volume)} />}
+      personId={personId} onPerson={meet} onCry={(volume) => ambience.current?.scream(volume)} />}
     {ready && !has3d && <div className="hs-flat" aria-hidden="true" />}
 
     {/* ------------------------------------------------ title */}
@@ -216,8 +228,9 @@ export default function HospitalGame() {
         <ModeSwitch mode={mode} onChange={switchMode} className="hs-mode" />
         <button type="button" onClick={() => setMap(m => !m)} aria-pressed={map}>Mapa</button>
         <button type="button" onClick={() => mode === 'escucha' ? setListenAt(null) : setList(true)}>{mode === 'escucha' ? 'Escuchas' : 'Escenas'}</button>
-        <button type="button" onClick={() => setSound(s => !s)} aria-pressed={!sound} aria-label={sound ? 'Silenciar el ambiente' : 'Activar el ambiente'}>{sound ? '🔊' : '🔇'}</button>
+        <MusicVolume sound={sound} onSound={setSound} volume={musicVolume} onVolume={setMusicVolume} />
         <button type="button" onClick={() => setEntered(false)}>Nivel</button>
+        {demo && <button type="button" className="hs-pro" onClick={() => setGate('Todo el hospital')}>🔒 Desbloquear todo</button>}
       </div>
     </header>}
     {entered && !busy && !panel && !list && <aside className={map ? 'hs-mapbox is-big' : 'hs-mapbox'} onClick={() => !map && setMap(true)}>
@@ -232,9 +245,10 @@ export default function HospitalGame() {
     {entered && !busy && !panel && !list && !map && near && <div className="hs-prompt" role="status">
       {nearScene ? <button type="button" onClick={() => open(nearScene.id)}><kbd>E</kbd>{mode === 'escucha' ? `Escuchar · ${nearScene.sector}` : `Hablar con ${nearWho?.name ?? ''}`}</button>
         : nearPatient ? <button type="button" onClick={() => setPersonId(near.id)}><kbd>E</kbd>{`Hablar con ${nearPatient.name}`}</button>
+        : nearLocked ? <button type="button" onClick={() => meet(near.id)}><kbd>E</kbd>Hablar · PRO 🔒</button>
         : <button type="button" onClick={() => setPanel(near.kind === 'stairs' ? 'stairs' : 'lift')}><kbd>E</kbd>{near.kind === 'stairs' ? 'Subir o bajar por la escalera' : 'Llamar al ascensor'}</button>}
     </div>}
-    {entered && mode !== 'escucha' && !busy && !near && !panel && !list && !map && <p className="hs-hint">Los círculos blancos son las escenas. El ascensor y las escaleras están al fondo del pasillo central.</p>}
+    {entered && mode !== 'escucha' && !busy && !near && !panel && !list && !map && <p className="hs-hint">Los círculos blancos son las escenas. El ascensor y las escaleras están al fondo del pasillo central.{demo && ' Clase gratis: la planta baja está abierta; las otras plantas y algunos círculos son PRO.'}</p>}
 
     {/* ------------------------------------------------ anyone in the hospital */}
     {patient && <section className="hs-panel hs-person" aria-labelledby="hs-person-h">
@@ -272,7 +286,7 @@ export default function HospitalGame() {
         <h3>{FLOOR_LABEL[f.id]} · {f.name}</h3>
         <ol>{SCENES.filter(s => s.floor === f.id).map(s => <li key={s.id}>
           <button type="button" className={heardHere.includes(s.id) ? 'is-done' : undefined} onClick={() => open(s.id)}>
-            <span>{s.sector}</span><small>{CAST[s.cast[0]].full}</small>{heardHere.includes(s.id) && <i aria-label="hecha">✓</i>}
+            <span>{isLocked(s.id) && '🔒 '}{s.sector}</span><small>{CAST[s.cast[0]].full}</small>{heardHere.includes(s.id) && <i aria-label="hecha">✓</i>}
           </button>
         </li>)}</ol>
       </div>)}
@@ -320,5 +334,6 @@ export default function HospitalGame() {
         <label className="hs-toggle"><input type="checkbox" checked={vocab} onChange={e => setVocab(e.target.checked)} /> Vocabulario</label>
       </footer>
     </section>}
+    {gate && demo && <PremiumPanel area={gate} signedIn={demo.signedIn} returnTo="/hospital-san-casi-vivo" onClose={() => setGate(null)} />}
   </main>;
 }

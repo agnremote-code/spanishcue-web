@@ -8,6 +8,7 @@ export const REINO_UNIDO: CountryInfo = {
   id: 'reino-unido',
   lessonId: 32,
   name: { es: 'Reino Unido', en: 'United Kingdom' },
+  regionWord: { one: 'una nación', many: 'naciones' },
   welcome: { es: 'BIENVENIDO AL REINO UNIDO', en: 'WELCOME TO THE UNITED KINGDOM' },
   regions: [
     {

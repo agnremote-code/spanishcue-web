@@ -1,0 +1,2337 @@
+{
+  "game": "vuelo",
+  "level": "C1",
+  "items": [
+    {
+      "id": "taxi",
+      "title": "Gardel bajo el diluvio",
+      "place": "La acera de salidas, bajo la lluvia",
+      "context": "Ramiro le cuenta a Vanesa, con todo lujo de detalles, el viaje con el cliente que le pagó por cantar un tango.",
+      "speakers": [
+        {
+          "name": "Vanesa",
+          "country": "Argentina",
+          "voice": "es-AR-ElenaNeural"
+        },
+        {
+          "name": "Ramiro",
+          "country": "Argentina",
+          "voice": "es-AR-TomasNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "A ver, Ramiro, reconstruyamos los hechos, porque en el free shop ya circulan tres versiones distintas de lo que pasó en tu taxi."
+        },
+        {
+          "s": 1,
+          "text": "La verdadera es la mía, como siempre. El hombre subió empapado, con un ramo de flores destrozado, y me dijo que su novia lo había dejado por mensaje de texto justo antes de embarcar."
+        },
+        {
+          "s": 0,
+          "text": "Pobre. ¿Y a ti se te ocurrió cobrarle la tarifa de tormenta en ese estado?"
+        },
+        {
+          "s": 1,
+          "text": "Fue él quien insistió. Me dijo: «Le pago el doble si me canta algo que me haga llorar con dignidad». Y yo, que soy un profesional, le arranqué con «Volver»."
+        },
+        {
+          "s": 0,
+          "text": "Con esa voz de sartén que tienes, lo raro es que no saliera corriendo."
+        },
+        {
+          "s": 1,
+          "text": "Pues lloró como un niño desde la autopista hasta la terminal. Al bajarse me abrazó, me dejó noventa y me juró que iba a llamarla para decirle cuatro verdades."
+        },
+        {
+          "s": 0,
+          "text": "O sea, que en lugar de consolarlo, lo animaste a montar un escándalo."
+        },
+        {
+          "s": 1,
+          "text": "Lo animé a no tragarse lo que sentía, que no es lo mismo. Además, dos azafatas que pasaban se pararon a aplaudir. Fue un momento de cine."
+        },
+        {
+          "s": 0,
+          "text": "Mira, te perdono la tarifa con una condición: esta noche, al primer pasajero que veas hundido, lo llevas gratis y sin repertorio."
+        },
+        {
+          "s": 1,
+          "text": "Trato hecho. Aunque sin repertorio el servicio pierde mucho."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Por qué Vanesa quiere «reconstruir los hechos»?",
+          "options": [
+            "Porque la policía le ha preguntado",
+            "Porque circulan varias versiones de lo ocurrido",
+            "Porque Ramiro no recuerda nada"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿En qué estado subió el cliente al taxi?",
+          "options": [
+            "Empapado y recién dejado por su novia",
+            "Borracho y feliz",
+            "Enfadado con la aerolínea"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cómo interpreta Vanesa la reacción de Ramiro?",
+          "options": [
+            "Como un gesto de enorme generosidad",
+            "Como una forma de cobrar menos",
+            "Como una invitación a montar un escándalo"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué condición le pone Vanesa para perdonarlo?",
+          "options": [
+            "Devolver los noventa",
+            "Llevar gratis y sin cantar al primer pasajero hundido",
+            "Dejar de trabajar de noche"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Crees que hay límites éticos para cobrar más en situaciones de emergencia?",
+          "model": "Creo que sí: aprovecharse de la desesperación ajena es abusivo, aunque el cliente lo acepte."
+        },
+        {
+          "q": "¿Qué canción elegirías para «llorar con dignidad»? ¿Por qué?",
+          "model": "Elegiría un bolero clásico, porque convierte el dolor en algo elegante y casi bonito."
+        },
+        {
+          "q": "¿Es mejor desahogarse en el momento o esperar a estar más tranquilo?",
+          "model": "Depende, pero suele ser mejor esperar unas horas para no decir cosas de las que te arrepientas."
+        }
+      ],
+      "gaps": "Lo animé a no [tragarse] lo que sentía, que no es lo mismo. Además, dos [azafatas] que pasaban se pararon a [aplaudir]. Fue un momento de [cine].",
+      "glossary": [
+        {
+          "word": "empapado",
+          "meaning": "completamente mojado"
+        },
+        {
+          "word": "voz de sartén",
+          "meaning": "expresión humorística: voz áspera y desagradable"
+        },
+        {
+          "word": "tragarse",
+          "meaning": "aquí: callarse y guardarse un sentimiento"
+        },
+        {
+          "word": "hundido",
+          "meaning": "muy triste, sin ánimo"
+        },
+        {
+          "word": "repertorio",
+          "meaning": "conjunto de canciones que alguien interpreta"
+        }
+      ]
+    },
+    {
+      "id": "pantalla",
+      "title": "La novia contra el algoritmo",
+      "place": "Bajo la pantalla de salidas",
+      "context": "Tras el aviso de megafonía, Delfina y Bruno discuten sobre el algoritmo que decide quién entra en el vuelo de las seis y diez.",
+      "speakers": [
+        {
+          "name": "Valentina",
+          "country": "Uruguay",
+          "voice": "es-UY-ValentinaNeural"
+        },
+        {
+          "name": "Delfina",
+          "country": "Colombia",
+          "voice": "es-CO-SalomeNeural"
+        },
+        {
+          "name": "Bruno",
+          "country": "Colombia",
+          "voice": "es-CO-GonzaloNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Se recuerda a los pasajeros reubicados que la asignación de asientos del vuelo AB 0610 se realiza de forma automática según criterios de prioridad. Rogamos no acudan al mostrador para solicitar cambios."
+        },
+        {
+          "s": 1,
+          "text": "¿Has oído, Bruno? «Criterios de prioridad». Un programa informático va a decidir si llego a mi propia boda."
+        },
+        {
+          "s": 2,
+          "text": "Dicen que priorizan a quienes tienen conexiones internacionales, a los niños que viajan solos y a los pasajeros frecuentes. Tú no entras en ninguna categoría."
+        },
+        {
+          "s": 1,
+          "text": "¿Y no existe la categoría «novia al borde de un ataque de nervios»? Porque la inauguro yo."
+        },
+        {
+          "s": 2,
+          "text": "Lo pregunté. La empleada me miró con cara de lástima y me dio un bono de comida."
+        },
+        {
+          "s": 1,
+          "text": "Esto es lo que me indigna: nadie decide nada, todo lo decide «el sistema». Y cuando le preguntas al sistema, el sistema no tiene cara."
+        },
+        {
+          "s": 2,
+          "text": "Bueno, Delfi, el sistema tampoco tiene la culpa de que yo facturara tu vestido en la maleta equivocada."
+        },
+        {
+          "s": 1,
+          "text": "No me lo recuerdes, que todavía no he decidido si te perdono antes o después de la boda."
+        },
+        {
+          "s": 2,
+          "text": "Hagamos algo útil. Tú escribes a los invitados para que no entren en pánico y yo vuelvo a perdidos a negociar con la señora del vestido de noventa y ocho."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué pide la megafonía a los pasajeros?",
+          "options": [
+            "Que esperen en la puerta doce",
+            "Que no acudan al mostrador para pedir cambios",
+            "Que recojan un bono de comida"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Quiénes tienen prioridad según Bruno?",
+          "options": [
+            "Las parejas que van a casarse",
+            "Los pasajeros con conexiones internacionales, niños solos y pasajeros frecuentes",
+            "Los primeros que llegaron a la cola"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué indigna especialmente a Delfina?",
+          "options": [
+            "Que nadie asuma la responsabilidad de las decisiones",
+            "Que el bono sea muy pequeño",
+            "Que la empleada sea antipática"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué propone Bruno al final?",
+          "options": [
+            "Alquilar un coche",
+            "Cancelar la boda",
+            "Repartirse tareas: avisar a los invitados y negociar el vestido"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué decisiones crees que nunca deberían dejarse en manos de un algoritmo?",
+          "model": "Las que afectan a la salud, al trabajo o a la libertad de las personas, porque requieren empatía."
+        },
+        {
+          "q": "¿Cómo reaccionas cuando una institución te responde «es el sistema»?",
+          "model": "Me frustra mucho, así que pido hablar con una persona responsable y dejo constancia por escrito."
+        },
+        {
+          "q": "¿Perdonarías a un familiar que te causó un problema así antes de un día importante?",
+          "model": "Sí, pero probablemente le haría pagar la primera ronda de la fiesta."
+        }
+      ],
+      "gaps": "Esto es lo que me [indigna]: nadie [decide] nada, todo lo decide «el [sistema]». Y cuando le preguntas al sistema, el sistema no tiene [cara].",
+      "glossary": [
+        {
+          "word": "reubicados",
+          "meaning": "colocados en otro lugar o vuelo"
+        },
+        {
+          "word": "al borde de",
+          "meaning": "muy cerca de"
+        },
+        {
+          "word": "lástima",
+          "meaning": "pena, compasión"
+        },
+        {
+          "word": "indigna",
+          "meaning": "de «indignar»: provocar enfado ante algo injusto"
+        },
+        {
+          "word": "entren en pánico",
+          "meaning": "de «entrar en pánico»: asustarse mucho"
+        }
+      ]
+    },
+    {
+      "id": "facturacion",
+      "title": "Cincuenta años y una ventanilla",
+      "place": "Los mostradores de facturación",
+      "context": "Don Teodoro le cuenta a Yesenia, la agente de facturación, por qué su esposa siempre pedía ventanilla.",
+      "speakers": [
+        {
+          "name": "Teodoro",
+          "country": "Perú",
+          "voice": "es-PE-AlexNeural"
+        },
+        {
+          "name": "Yesenia",
+          "country": "República Dominicana",
+          "voice": "es-DO-RamonaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Don Teodoro, ya tiene el 14A para Amparo y el 14B para usted. ¿Puedo preguntarle por qué era tan importante la ventanilla?"
+        },
+        {
+          "s": 0,
+          "text": "Porque mi mujer era una optimista empedernida, señorita. Decía que las nubes son la prueba de que hasta lo más pesado puede flotar."
+        },
+        {
+          "s": 1,
+          "text": "Qué manera tan bonita de verlo."
+        },
+        {
+          "s": 0,
+          "text": "La conocí en un autobús, en Arequipa. Ella iba mirando por la ventana y yo la miraba a ella. Cincuenta y dos años después, seguía igual: ella mirando el paisaje y yo mirándola."
+        },
+        {
+          "s": 1,
+          "text": "¿Y adónde la lleva ahora?"
+        },
+        {
+          "s": 0,
+          "text": "Al pueblo de su madre, en la sierra. Quería que la esparciéramos en el río donde aprendió a nadar. Me hizo prometérselo tres veces, porque sabía que soy un despistado."
+        },
+        {
+          "s": 1,
+          "text": "Pues no lo parece. Lleva la urna como si fuera de cristal."
+        },
+        {
+          "s": 0,
+          "text": "Es que es lo único que no puedo perder. Las llaves, el paraguas, la paciencia… todo eso lo he perdido mil veces. A ella no."
+        },
+        {
+          "s": 1,
+          "text": "Le voy a poner una etiqueta de prioridad. Y si alguien le dice algo por el asiento vacío, mándemelo a mí."
+        },
+        {
+          "s": 0,
+          "text": "Gracias, hija. Amparo le habría regalado una de sus mermeladas. Eran terribles, pero las regalaba con mucho amor."
+        }
+      ],
+      "choice": [
+        {
+          "q": "Según Amparo, ¿qué demuestran las nubes?",
+          "options": [
+            "Que va a llover pronto",
+            "Que hasta lo más pesado puede flotar",
+            "Que el cielo siempre cambia"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Dónde se conocieron Teodoro y Amparo?",
+          "options": [
+            "En un autobús en Arequipa",
+            "En un avión",
+            "En un río de la sierra"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué le prometió Teodoro a Amparo?",
+          "options": [
+            "Volar en primera clase",
+            "Vender la casa del pueblo",
+            "Esparcir sus cenizas en el río donde aprendió a nadar"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué dice Teodoro sobre las mermeladas de Amparo?",
+          "options": [
+            "Que eran famosas en Lima",
+            "Que eran malas, pero regaladas con amor",
+            "Que nunca las probó"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué rituales de despedida te parecen más significativos?",
+          "model": "Me emociona cuando la familia cumple un deseo concreto de la persona, como esparcir sus cenizas en un lugar especial."
+        },
+        {
+          "q": "¿Te consideras una persona optimista o pesimista? Pon un ejemplo.",
+          "model": "Más bien optimista: cuando algo sale mal, intento pensar qué puedo aprender de ello."
+        },
+        {
+          "q": "¿Qué objeto sería para ti «lo único que no puedes perder»?",
+          "model": "Probablemente las cartas que me escribió mi abuela cuando me mudé de ciudad."
+        }
+      ],
+      "gaps": "Porque mi mujer era una [optimista] empedernida, señorita. Decía que las [nubes] son la prueba de que hasta lo más [pesado] puede [flotar].",
+      "glossary": [
+        {
+          "word": "empedernida",
+          "meaning": "que tiene un hábito o carácter muy arraigado"
+        },
+        {
+          "word": "esparciéramos",
+          "meaning": "de «esparcir»: extender algo por un lugar"
+        },
+        {
+          "word": "despistado",
+          "meaning": "que olvida las cosas, distraído"
+        },
+        {
+          "word": "etiqueta",
+          "meaning": "papel pegado con información"
+        }
+      ]
+    },
+    {
+      "id": "reprogramacion",
+      "title": "Setenta y dos horas de cola",
+      "place": "La cola de atención al pasajero",
+      "context": "Doña Inés y Matías comentan el sistema de reubicación de la aerolínea mientras esperan, ya de madrugada.",
+      "speakers": [
+        {
+          "name": "Inés",
+          "country": "España",
+          "voice": "es-ES-ElviraNeural"
+        },
+        {
+          "name": "Matías",
+          "country": "Uruguay",
+          "voice": "es-UY-MateoNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Doña Inés, usted que es veterana: ¿hay alguna estrategia para que lo atiendan antes, o esto es pura lotería?"
+        },
+        {
+          "s": 0,
+          "text": "Mira, hijo, después de setenta y dos horas he desarrollado una teoría. Los agentes atienden más rápido a quien les hace la vida fácil: papeles en orden, voz baja y una sonrisa, aunque sea de mentira."
+        },
+        {
+          "s": 1,
+          "text": "O sea, que gritar no sirve de nada."
+        },
+        {
+          "s": 0,
+          "text": "Gritar sirve para que te atiendan el último y con cara de vinagre. El primer día vi a un ejecutivo amenazar con llamar a su abogado. Sigue en la cola, por cierto. Es aquel del traje arrugado."
+        },
+        {
+          "s": 1,
+          "text": "Pobre hombre. ¿Y usted por qué no ha pedido que la manden a un hotel?"
+        },
+        {
+          "s": 0,
+          "text": "Porque en el hotel me pierdo los avisos. Aquí, cuando se libera un asiento, lo sé antes que nadie. Además, en casa me espera un marido que ronca como un tractor. Esto, comparado, es un balneario."
+        },
+        {
+          "s": 1,
+          "text": "Me está dando una lección de estrategia y de matrimonio a la vez."
+        },
+        {
+          "s": 0,
+          "text": "Las dos cosas se parecen: paciencia, buena cara y saber cuándo callarse. Toma, sujeta este ovillo, que se me escapa."
+        }
+      ],
+      "choice": [
+        {
+          "q": "Según doña Inés, ¿a quién atienden más rápido?",
+          "options": [
+            "A quien grita más fuerte",
+            "A quien les facilita el trabajo con orden y amabilidad",
+            "A quien tiene billete de primera"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué le pasó al ejecutivo que amenazó con su abogado?",
+          "options": [
+            "Sigue en la cola",
+            "Lo mandaron a un hotel de lujo",
+            "Consiguió el primer asiento"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Por qué doña Inés no quiere ir a un hotel?",
+          "options": [
+            "Porque es demasiado caro",
+            "Porque no le gustan los hoteles",
+            "Porque se perdería los avisos de asientos libres"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué tienen en común, según ella, la estrategia y el matrimonio?",
+          "options": [
+            "El dinero y el tiempo",
+            "La paciencia, la buena cara y saber callarse",
+            "Los viajes"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Crees que la amabilidad es más eficaz que la presión para conseguir lo que quieres?",
+          "model": "En la mayoría de los casos sí, aunque a veces hace falta firmeza para que te tomen en serio."
+        },
+        {
+          "q": "¿Qué consejo práctico le darías a alguien atrapado en un aeropuerto?",
+          "model": "Que cargue el móvil siempre que pueda, que lleve snacks y que pregunte por sus derechos como pasajero."
+        },
+        {
+          "q": "¿Estás de acuerdo con la comparación entre la espera y el matrimonio?",
+          "model": "Me hace gracia, pero creo que en una pareja también hace falta hablar, no solo callarse."
+        }
+      ],
+      "gaps": "Porque en el hotel me pierdo los [avisos]. Aquí, cuando se [libera] un asiento, lo sé antes que nadie. Además, en casa me espera un marido que [ronca] como un [tractor].",
+      "glossary": [
+        {
+          "word": "veterana",
+          "meaning": "persona con mucha experiencia"
+        },
+        {
+          "word": "cara de vinagre",
+          "meaning": "expresión de disgusto o mal humor"
+        },
+        {
+          "word": "arrugado",
+          "meaning": "con pliegues, sin planchar"
+        },
+        {
+          "word": "balneario",
+          "meaning": "lugar de descanso con aguas termales"
+        },
+        {
+          "word": "ovillo",
+          "meaning": "bola de hilo o lana"
+        }
+      ]
+    },
+    {
+      "id": "cambio",
+      "title": "La casa siempre gana",
+      "place": "La casa de cambio",
+      "context": "Fabián, el cajero, le confiesa a Nayeli lo que piensa de su trabajo mientras cuenta las monedas.",
+      "speakers": [
+        {
+          "name": "Fabián",
+          "country": "Venezuela",
+          "voice": "es-VE-SebastianNeural"
+        },
+        {
+          "name": "Nayeli",
+          "country": "México",
+          "voice": "es-MX-DaliaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "¿Sabe lo peor de este trabajo, señorita? No es el horario ni el sueldo. Es mirar a la gente a los ojos mientras le explico que su dinero vale la cuarta parte."
+        },
+        {
+          "s": 1,
+          "text": "Pues lo disimula muy bien. Hace una hora me pareció usted el villano de la noche."
+        },
+        {
+          "s": 0,
+          "text": "Es la técnica que nos enseñan: hablar despacio, no pedir perdón y señalar el cartel de tarifas. El cartel es nuestro escudo."
+        },
+        {
+          "s": 1,
+          "text": "¿Y por qué no se va? Con esa cara de buena persona podría trabajar en cualquier sitio."
+        },
+        {
+          "s": 0,
+          "text": "Porque soy venezolano, llevo tres años aquí y este fue el único trabajo que me dieron sin preguntarme por los papeles que aún no tengo. Mi título de economista está colgado en casa, de adorno."
+        },
+        {
+          "s": 1,
+          "text": "Vaya. Yo me quejo de doce dólares y usted tiene una carrera entera esperando."
+        },
+        {
+          "s": 0,
+          "text": "No se compare. Su enfado de antes era justo. Las comisiones son un abuso, y lo sé mejor que nadie: las calculé yo para el informe del jefe."
+        },
+        {
+          "s": 1,
+          "text": "¿Las calculó usted?"
+        },
+        {
+          "s": 0,
+          "text": "Exacto. Por eso sé que la de tormenta no tiene ninguna justificación. Ni la nocturna. Algún día escribiré un artículo sobre esto. Mientras tanto, le compro las pulseras."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué es lo peor del trabajo según Fabián?",
+          "options": [
+            "El horario nocturno",
+            "Explicar a la gente que su dinero vale muy poco",
+            "El sueldo bajo"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué técnica les enseñan a los cajeros?",
+          "options": [
+            "Hablar despacio, no pedir perdón y señalar el cartel",
+            "Ofrecer descuentos a los enfadados",
+            "Llamar al jefe en caso de queja"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Por qué Fabián sigue en ese trabajo?",
+          "options": [
+            "Porque le encanta el aeropuerto",
+            "Porque gana mucho dinero",
+            "Porque fue el único que lo contrató sin sus papeles en regla"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué revela Fabián sobre las comisiones?",
+          "options": [
+            "Que son obligatorias por ley",
+            "Que él mismo las calculó y sabe que algunas no tienen justificación",
+            "Que las va a eliminar mañana"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué dificultades enfrentan los profesionales migrantes para trabajar en su campo?",
+          "model": "La homologación de títulos, la burocracia y, a veces, la discriminación por el acento o el origen."
+        },
+        {
+          "q": "¿Es responsable un empleado de las políticas injustas de su empresa?",
+          "model": "Solo en parte. Puede intentar cambiarlas desde dentro, pero el poder real está arriba."
+        },
+        {
+          "q": "¿Has trabajado alguna vez en algo muy distinto de lo que estudiaste?",
+          "model": "Sí, estudié Historia y durante dos años trabajé como camarero en un hotel."
+        }
+      ],
+      "gaps": "Es la [técnica] que nos enseñan: hablar [despacio], no pedir perdón y señalar el cartel de [tarifas]. El cartel es nuestro [escudo].",
+      "glossary": [
+        {
+          "word": "disimula",
+          "meaning": "de «disimular»: ocultar lo que se siente"
+        },
+        {
+          "word": "villano",
+          "meaning": "el malo de una historia"
+        },
+        {
+          "word": "escudo",
+          "meaning": "objeto que protege de los ataques"
+        },
+        {
+          "word": "de adorno",
+          "meaning": "solo para decorar, sin utilidad"
+        },
+        {
+          "word": "abuso",
+          "meaning": "uso injusto o excesivo"
+        }
+      ]
+    },
+    {
+      "id": "seguridad",
+      "title": "El museo de Lucrecia",
+      "place": "El control de seguridad",
+      "context": "Lucrecia, la agente de seguridad, le enseña a Matías su taquilla llena de objetos retenidos y le cuenta algunas historias.",
+      "speakers": [
+        {
+          "name": "Lucrecia",
+          "country": "Chile",
+          "voice": "es-CL-CatalinaNeural"
+        },
+        {
+          "name": "Matías",
+          "country": "Uruguay",
+          "voice": "es-UY-MateoNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Mire, aquí va a quedar su dulce de leche. Le presento a sus compañeros: una espada de samurái de juguete, un perfume francés de trescientos euros y una dentadura postiza que nadie ha reclamado en cuatro años."
+        },
+        {
+          "s": 1,
+          "text": "¿Cuatro años? ¿Y cómo come esa persona?"
+        },
+        {
+          "s": 0,
+          "text": "Esa es la gran pregunta de este aeropuerto. Tenemos varias teorías. La más aceptada es que tenía otra de repuesto y prefirió no volver por vergüenza."
+        },
+        {
+          "s": 1,
+          "text": "¿Y nunca se ha quedado con nada? Ese perfume, por ejemplo."
+        },
+        {
+          "s": 0,
+          "text": "Jamás. Si me quedo con algo, pierdo el trabajo y la dignidad. Aunque confieso que a veces lo abro para olerlo cuando el turno se hace largo."
+        },
+        {
+          "s": 1,
+          "text": "Me tranquiliza saber que mi frasco queda en buenas manos."
+        },
+        {
+          "s": 0,
+          "text": "Su frasco es lo más dulce que ha entrado aquí. La mayoría de las cosas que retengo son tristes: cartas de despedida, botellas para brindar en entierros, juguetes de niños que no llegaron a viajar."
+        },
+        {
+          "s": 1,
+          "text": "No me imaginaba que este control fuera tan emocional."
+        },
+        {
+          "s": 0,
+          "text": "La gente cree que solo miramos rayos X. En realidad, miramos vidas enteras pasar en bandejas grises. Váyase tranquilo, que a la vuelta lo espera su dulce."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué objeto lleva cuatro años sin reclamar?",
+          "options": [
+            "Una espada de juguete",
+            "Un perfume francés",
+            "Una dentadura postiza"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cuál es la teoría más aceptada sobre la dentadura?",
+          "options": [
+            "Que su dueño tenía otra de repuesto y le dio vergüenza volver",
+            "Que la dejó un actor",
+            "Que es de un muñeco"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué confiesa Lucrecia sobre el perfume?",
+          "options": [
+            "Que se lo va a regalar a su madre",
+            "Que a veces lo abre para olerlo",
+            "Que lo usa todos los días"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué quiere decir Lucrecia con «vidas enteras pasar en bandejas grises»?",
+          "options": [
+            "Que los objetos revelan mucho de las personas",
+            "Que las bandejas están sucias",
+            "Que trabaja demasiado"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué crees que dicen de una persona los objetos que lleva en su equipaje?",
+          "model": "Dicen mucho de sus prioridades: hay quien lleva libros, quien lleva maquillaje y quien lleva medicinas."
+        },
+        {
+          "q": "¿Te parece aceptable que un trabajador abra un objeto retenido aunque no se lo quede?",
+          "model": "Es una zona gris. Mientras no lo use ni lo dañe, no me parece grave."
+        },
+        {
+          "q": "¿Qué trabajos crees que tienen un componente emocional que no se ve desde fuera?",
+          "model": "Los de los conductores de ambulancia, los funcionarios de aduanas y los dependientes de funerarias."
+        }
+      ],
+      "gaps": "Jamás. Si me quedo con algo, pierdo el [trabajo] y la [dignidad]. Aunque confieso que a veces lo abro para [olerlo] cuando el [turno] se hace largo.",
+      "glossary": [
+        {
+          "word": "reclamado",
+          "meaning": "de «reclamar»: pedir algo que es tuyo"
+        },
+        {
+          "word": "de repuesto",
+          "meaning": "de reserva, para sustituir otro"
+        },
+        {
+          "word": "brindar",
+          "meaning": "levantar las copas para celebrar o recordar"
+        },
+        {
+          "word": "bandejas",
+          "meaning": "recipientes planos donde se ponen objetos"
+        }
+      ]
+    },
+    {
+      "id": "cintas",
+      "title": "Veinte años de cinta tres",
+      "place": "La recogida de equipaje",
+      "context": "Rocío, ya más tranquila, le pregunta a Wilmer cómo es trabajar de noche en la zona de equipajes.",
+      "speakers": [
+        {
+          "name": "Rocío",
+          "country": "España",
+          "voice": "es-ES-XimenaNeural"
+        },
+        {
+          "name": "Wilmer",
+          "country": "Honduras",
+          "voice": "es-HN-CarlosNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Wilmer, después de este espectáculo le debo al menos una conversación. ¿Cuánto tiempo lleva trabajando aquí?"
+        },
+        {
+          "s": 1,
+          "text": "Veinte años, señora. Llegué de Honduras con una mochila y empecé a cargar maletas ajenas la primera semana. Desde entonces he visto pasar medio mundo por esta cinta."
+        },
+        {
+          "s": 0,
+          "text": "¿Y no se cansa? Debe de ser agotador físicamente."
+        },
+        {
+          "s": 1,
+          "text": "La espalda se queja, eso sí. Pero lo que más cansa es la invisibilidad. La gente pasa a nuestro lado como si fuéramos parte de la maquinaria. Usted es la primera en semanas que me pregunta el nombre."
+        },
+        {
+          "s": 0,
+          "text": "Pues es una pena, porque usted me ha salvado la dignidad delante de cien personas."
+        },
+        {
+          "s": 1,
+          "text": "Esto que le ha pasado le pasa a más gente de la que cree. Una vez se abrió la maleta de un obispo y salieron revistas de lucha libre. Nadie dijo nada, pero todos lo vimos."
+        },
+        {
+          "s": 0,
+          "text": "¡No me diga! ¿Y qué hizo usted?"
+        },
+        {
+          "s": 1,
+          "text": "Lo mismo que con usted: parar la cinta, recoger con calma y mirar hacia otro lado. En este trabajo la discreción vale más que la fuerza."
+        },
+        {
+          "s": 0,
+          "text": "Pues que conste que, a partir de hoy, voy a saludar a todos los maleteros que vea."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cuánto tiempo lleva Wilmer en el aeropuerto?",
+          "options": [
+            "Diez años",
+            "Veinte años",
+            "Dos años"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué es lo que más cansa a Wilmer?",
+          "options": [
+            "El peso de las maletas",
+            "Los turnos de noche",
+            "Sentirse invisible para los viajeros"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué salió de la maleta del obispo?",
+          "options": [
+            "Revistas de lucha libre",
+            "Botellas de vino",
+            "Ropa interior de colores"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué valora Wilmer más en su trabajo?",
+          "options": [
+            "La fuerza",
+            "La discreción",
+            "La velocidad"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué trabajos te parecen más «invisibles» en la sociedad?",
+          "model": "Los de limpieza, los repartidores y los cuidadores de personas mayores."
+        },
+        {
+          "q": "¿Por qué crees que nos cuesta reconocer a quienes nos prestan un servicio?",
+          "model": "Por las prisas y porque a veces consideramos el servicio algo automático, no un trabajo humano."
+        },
+        {
+          "q": "¿Has vivido una situación vergonzosa en la que alguien fue muy discreto contigo?",
+          "model": "Sí, una vez se me rompió el pantalón en una reunión y una compañera me prestó su chaqueta sin decir nada."
+        }
+      ],
+      "gaps": "La [espalda] se queja, eso sí. Pero lo que más cansa es la [invisibilidad]. La gente pasa a nuestro lado como si fuéramos parte de la [maquinaria]. Usted es la primera en semanas que me pregunta el [nombre].",
+      "glossary": [
+        {
+          "word": "ajenas",
+          "meaning": "que son de otras personas"
+        },
+        {
+          "word": "agotador",
+          "meaning": "que cansa muchísimo"
+        },
+        {
+          "word": "obispo",
+          "meaning": "sacerdote con un cargo importante en la Iglesia"
+        },
+        {
+          "word": "discreción",
+          "meaning": "capacidad de guardar silencio y no llamar la atención"
+        }
+      ]
+    },
+    {
+      "id": "perdidos",
+      "title": "Una boda con vestido prestado",
+      "place": "La oficina de equipaje perdido",
+      "context": "Bruno vuelve a la oficina de equipaje perdido para negociar con Hortensia el préstamo de su vestido de novia.",
+      "speakers": [
+        {
+          "name": "Bruno",
+          "country": "Colombia",
+          "voice": "es-CO-GonzaloNeural"
+        },
+        {
+          "name": "Hortensia",
+          "country": "El Salvador",
+          "voice": "es-SV-LorenaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Hortensia, vengo en misión diplomática. Mi hermana ha aceptado probarse su vestido, pero tiene algunas condiciones."
+        },
+        {
+          "s": 1,
+          "text": "Me lo imaginaba. Las novias siempre tienen condiciones. Adelante."
+        },
+        {
+          "s": 0,
+          "text": "Primera: quiere saber si el vestido ha estado en alguna boda que terminó mal. Es supersticiosa."
+        },
+        {
+          "s": 1,
+          "text": "Técnicamente, la mía. Duró dos años. Pero el vestido se perdió antes de la boda, así que no estuvo presente en el desastre. Está limpio de mala energía."
+        },
+        {
+          "s": 0,
+          "text": "Excelente argumento. Segunda: si le queda grande, ¿se puede ajustar con alfileres?"
+        },
+        {
+          "s": 1,
+          "text": "Tengo un costurero en el cajón desde hace veinte años. En esta oficina se descosen más cosas de las que la gente imagina."
+        },
+        {
+          "s": 0,
+          "text": "Y tercera, la más delicada: mi hermana quiere invitarla a la boda. Dice que quien le salva el día merece un sitio en la mesa principal."
+        },
+        {
+          "s": 1,
+          "text": "¿A mí? Hace años que nadie me invita a una boda. Me da miedo llorar delante de desconocidos."
+        },
+        {
+          "s": 0,
+          "text": "Pues llore. En mi familia lloramos todos, incluso en los bautizos. Pasará desapercibida."
+        },
+        {
+          "s": 1,
+          "text": "Entonces dígale que acepto. Pero que me deje bailar una cumbia con el padrino."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Por qué quiere saber Delfina si el vestido estuvo en una boda que terminó mal?",
+          "options": [
+            "Porque es supersticiosa",
+            "Porque quiere saber su precio",
+            "Porque conoce a Hortensia"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué argumento da Hortensia para tranquilizarla?",
+          "options": [
+            "Que el vestido es nuevo",
+            "Que el vestido se perdió antes de su boda y no estuvo en el desastre",
+            "Que lo bendijo un cura"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué tercera condición pone Delfina?",
+          "options": [
+            "Que Hortensia lave el vestido",
+            "Que no se lo cuente a nadie",
+            "Invitar a Hortensia a la boda"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué pide Hortensia a cambio?",
+          "options": [
+            "Que le devuelvan el vestido con una foto",
+            "Bailar una cumbia con el padrino",
+            "Un vuelo gratis"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Eres supersticioso o supersticiosa? ¿Con qué cosas?",
+          "model": "Un poco: no me gusta pasar por debajo de una escalera, aunque sé que no tiene sentido."
+        },
+        {
+          "q": "¿Invitarías a tu boda a alguien que conociste el día anterior?",
+          "model": "Si me hubiera ayudado así, sin duda. Esas historias son las que se recuerdan."
+        },
+        {
+          "q": "¿Por qué crees que algunas personas lloran en las bodas?",
+          "model": "Por la emoción, por los recuerdos de su propia historia o por la música, que siempre ayuda."
+        }
+      ],
+      "gaps": "Tengo un [costurero] en el [cajón] desde hace veinte años. En esta oficina se [descosen] más cosas de las que la gente [imagina].",
+      "glossary": [
+        {
+          "word": "misión diplomática",
+          "meaning": "encargo de negociar con cuidado"
+        },
+        {
+          "word": "supersticiosa",
+          "meaning": "que cree en la suerte y en señales"
+        },
+        {
+          "word": "alfileres",
+          "meaning": "agujas pequeñas para sujetar tela"
+        },
+        {
+          "word": "pasará desapercibida",
+          "meaning": "nadie la va a notar"
+        }
+      ]
+    },
+    {
+      "id": "aduana",
+      "title": "Contrabando de cariño",
+      "place": "El control de aduana",
+      "context": "Osvaldo, el agente de aduana, y doña Carmela negocian qué hacer con los quesos y el loro mientras la cola crece detrás.",
+      "speakers": [
+        {
+          "name": "Carmela",
+          "country": "Cuba",
+          "voice": "es-CU-BelkysNeural"
+        },
+        {
+          "name": "Osvaldo",
+          "country": "Paraguay",
+          "voice": "es-PY-MarioNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Mire, mi niño, yo entiendo que usted tiene sus normas. Pero estos quesos no son contrabando: son cariño envasado al vacío. Cada uno lleva el nombre de un nieto."
+        },
+        {
+          "s": 1,
+          "text": "Señora Ruiz, la ley no distingue entre queso con cariño y queso sin cariño. Lo que preocupa son las bacterias, no los sentimientos."
+        },
+        {
+          "s": 0,
+          "text": "Las bacterias de mi pueblo son de toda confianza. Llevo setenta años comiendo este queso y aquí estoy, más fuerte que un roble."
+        },
+        {
+          "s": 1,
+          "text": "No lo dudo. Pero si los dejo pasar y alguien se pone enfermo, el que pierde el trabajo soy yo. Y tengo una hija en la universidad."
+        },
+        {
+          "s": 0,
+          "text": "Ah, eso cambia las cosas. Yo no quiero perjudicar a un padre trabajador. ¿Cuántos puede dejarme sin meterse en un lío?"
+        },
+        {
+          "s": 1,
+          "text": "Dos, envasados y declarados. Los otros diez se quedan, aunque le prometo que no van a la basura: los donamos al comedor de los empleados."
+        },
+        {
+          "s": 0,
+          "text": "Entonces mis nietos se quedan sin queso, pero los maleteros comen bien. Bueno, es una forma de repartir la familia."
+        },
+        {
+          "s": 1,
+          "text": "Y el loro, señora. Pepito necesita un certificado veterinario. Sin eso, se queda en cuarentena."
+        },
+        {
+          "s": 0,
+          "text": "¿En cuarentena? Si se queda solo, empieza a recitar todos mis secretos al primero que pase. Le aviso: Pepito sabe dónde escondo el dinero."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cómo describe doña Carmela los quesos?",
+          "options": [
+            "Como un regalo caro",
+            "Como cariño envasado al vacío",
+            "Como comida de emergencia"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué le preocupa a la ley, según Osvaldo?",
+          "options": [
+            "Las bacterias",
+            "El precio de los quesos",
+            "El peso de la maleta"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué hace cambiar de actitud a doña Carmela?",
+          "options": [
+            "La amenaza de una multa",
+            "Que el loro empiece a hablar",
+            "Saber que Osvaldo tiene una hija en la universidad"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué pasará con los diez quesos que se quedan?",
+          "options": [
+            "Se tirarán a la basura",
+            "Se donarán al comedor de los empleados",
+            "Se enviarán por correo"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Te parece razonable la normativa sobre alimentos en las fronteras?",
+          "model": "Sí, porque protege la agricultura y la salud, aunque a veces parezca exagerada."
+        },
+        {
+          "q": "¿Qué alimento llevarías «de contrabando» a un familiar que vive lejos?",
+          "model": "Le llevaría embutido casero de mi pueblo, porque allí no lo encuentra."
+        },
+        {
+          "q": "¿Qué te parece la estrategia de Carmela de apelar a las emociones?",
+          "model": "Es muy humana y eficaz, aunque un buen agente debería mantener la cabeza fría."
+        }
+      ],
+      "gaps": "Dos, envasados y [declarados]. Los otros diez se quedan, aunque le prometo que no van a la [basura]: los [donamos] al [comedor] de los empleados.",
+      "glossary": [
+        {
+          "word": "contrabando",
+          "meaning": "introducción ilegal de mercancías"
+        },
+        {
+          "word": "envasado al vacío",
+          "meaning": "guardado sin aire dentro de un plástico"
+        },
+        {
+          "word": "roble",
+          "meaning": "árbol muy fuerte"
+        },
+        {
+          "word": "perjudicar",
+          "meaning": "causar un daño"
+        },
+        {
+          "word": "cuarentena",
+          "meaning": "periodo de aislamiento por motivos sanitarios"
+        }
+      ]
+    },
+    {
+      "id": "reencuentro",
+      "title": "La estafa más tierna",
+      "place": "La cafetería del hall de llegadas",
+      "context": "Ulises y Leonor analizan, con un café, cómo cayó Ulises en la estafa de la falsa Valeria.",
+      "speakers": [
+        {
+          "name": "Ulises",
+          "country": "Costa Rica",
+          "voice": "es-CR-JuanNeural"
+        },
+        {
+          "name": "Leonor",
+          "country": "Costa Rica",
+          "voice": "es-CR-MariaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Lo que más me avergüenza, Leonor, no es el dinero. Es que yo sabía. En el fondo, lo sabía desde el principio y preferí no verlo."
+        },
+        {
+          "s": 1,
+          "text": "Eso le pasa a mucha gente. Quien te engaña no te vende una mentira, te vende lo que necesitas oír. Tú necesitabas que alguien te preguntara cómo estabas."
+        },
+        {
+          "s": 0,
+          "text": "Exacto. Después de la muerte de mi madre, la casa se quedó en silencio. Valeria me escribía cada mañana: «¿Has desayunado?». Nadie me preguntaba eso desde que era niño."
+        },
+        {
+          "s": 1,
+          "text": "Y por esa pregunta pagaste tres veces el veterinario de un gato que no existía."
+        },
+        {
+          "s": 0,
+          "text": "Visto así, es carísima la pregunta."
+        },
+        {
+          "s": 1,
+          "text": "Mira, en este hall veo cada noche a gente que espera a alguien. La mayoría de los abrazos son de verdad. Algunos, no. Pero la esperanza, Ulises, no es ridícula. Lo ridículo sería dejar de tenerla."
+        },
+        {
+          "s": 0,
+          "text": "¿Y qué hago con tantas flores?"
+        },
+        {
+          "s": 1,
+          "text": "Se las regalamos a la gente que llega sola. Hay más de las que imaginas. Y mañana, si quieres, desayunamos aquí. Te pregunto yo si has desayunado, pero no te cobro."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué es lo que más avergüenza a Ulises?",
+          "options": [
+            "Haber perdido dinero",
+            "Haber sabido la verdad y preferir no verla",
+            "Haber comprado tantas flores"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Según Leonor, ¿qué vende quien engaña?",
+          "options": [
+            "Lo que la víctima necesita oír",
+            "Productos falsos",
+            "Viajes imposibles"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué pregunta le hacía Valeria cada mañana?",
+          "options": [
+            "«¿Me quieres?»",
+            "«¿Cuándo vienes?»",
+            "«¿Has desayunado?»"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué propone Leonor hacer con las flores?",
+          "options": [
+            "Venderlas a mitad de precio",
+            "Regalarlas a la gente que llega sola",
+            "Tirarlas"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Por qué crees que algunas personas prefieren no ver una verdad evidente?",
+          "model": "Porque la verdad duele y la ilusión, aunque sea falsa, les hace compañía."
+        },
+        {
+          "q": "¿Qué pequeños gestos cotidianos te hacen sentir cuidado?",
+          "model": "Que alguien me pregunte cómo he dormido o que me guarde la última porción de algo."
+        },
+        {
+          "q": "¿Estás de acuerdo en que «lo ridículo sería dejar de tener esperanza»?",
+          "model": "Sí, porque sin esperanza dejamos de intentarlo, y eso es peor que equivocarse."
+        }
+      ],
+      "gaps": "Exacto. Después de la muerte de mi madre, la casa se quedó en [silencio]. Valeria me escribía cada [mañana]: «¿Has [desayunado]?». Nadie me preguntaba eso desde que era [niño].",
+      "glossary": [
+        {
+          "word": "avergüenza",
+          "meaning": "de «avergonzar»: hacer sentir vergüenza"
+        },
+        {
+          "word": "en el fondo",
+          "meaning": "en realidad, en lo más íntimo"
+        },
+        {
+          "word": "engaña",
+          "meaning": "de «engañar»: hacer creer algo falso"
+        },
+        {
+          "word": "esperanza",
+          "meaning": "confianza en que algo bueno va a pasar"
+        }
+      ]
+    },
+    {
+      "id": "alquiler",
+      "title": "Humor negro, coche negro",
+      "place": "El mostrador de alquiler de coches",
+      "context": "Kiara le explica a Cristian por qué ha decidido convertir el coche fúnebre en el centro de su espectáculo.",
+      "speakers": [
+        {
+          "name": "Kiara",
+          "country": "Puerto Rico",
+          "voice": "es-PR-KarinaNeural"
+        },
+        {
+          "name": "Cristian",
+          "country": "Chile",
+          "voice": "es-CL-LorenzoNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Señorita Santiago, perdone que insista, pero ¿no le preocupa que el público se ofenda? Llegar a un teatro de comedia en un coche fúnebre es, como mínimo, arriesgado."
+        },
+        {
+          "s": 0,
+          "text": "Cristian, la comedia que no arriesga es como un café descafeinado: no hace daño, pero tampoco despierta a nadie."
+        },
+        {
+          "s": 1,
+          "text": "Ya, pero la muerte es un tema delicado. Hay gente que acaba de perder a alguien."
+        },
+        {
+          "s": 0,
+          "text": "Precisamente por eso. Mi abuela murió el año pasado y lo único que nos salvó en el velorio fue reírnos de sus manías. Ella misma pidió que pusieran salsa en el entierro."
+        },
+        {
+          "s": 1,
+          "text": "¿Y lo hicieron?"
+        },
+        {
+          "s": 0,
+          "text": "Claro. Mi tío bailó encima de una silla y se rompió el tobillo. Esa noche me di cuenta de que el humor no le falta el respeto al dolor: lo hace soportable."
+        },
+        {
+          "s": 1,
+          "text": "Visto así, casi me convence. Aunque mi jefe me va a matar cuando vea el coche en las redes sociales."
+        },
+        {
+          "s": 0,
+          "text": "No te preocupes, voy a decir que la empresa tiene un sentido del humor excelente. Publicidad gratis."
+        },
+        {
+          "s": 1,
+          "text": "Entonces le hago un descuento del diez por ciento. Pero devuélvalo con el depósito lleno y sin flores dentro."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué le preocupa a Cristian?",
+          "options": [
+            "Que el coche se averíe",
+            "Que el público se ofenda",
+            "Que Kiara no sepa conducir"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Con qué compara Kiara la comedia que no arriesga?",
+          "options": [
+            "Con un café descafeinado",
+            "Con una película mala",
+            "Con un coche sin gasolina"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué pasó en el entierro de la abuela de Kiara?",
+          "options": [
+            "Nadie fue",
+            "Llovió todo el día",
+            "Pusieron salsa y su tío se rompió el tobillo bailando"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Según Kiara, ¿qué hace el humor con el dolor?",
+          "options": [
+            "Lo esconde",
+            "Lo hace soportable",
+            "Lo hace más grande"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Crees que hay temas sobre los que no se debería hacer humor?",
+          "model": "Creo que se puede hacer humor sobre todo, pero importa mucho quién lo hace y desde dónde."
+        },
+        {
+          "q": "¿Cómo se viven los funerales en tu cultura? ¿Hay espacio para la alegría?",
+          "model": "En mi país son muy serios, aunque después en la comida la gente cuenta anécdotas divertidas del difunto."
+        },
+        {
+          "q": "¿Te gustaría que en tu despedida hubiera música alegre?",
+          "model": "Sí, me gustaría que pusieran mis canciones favoritas y que la gente bailara."
+        }
+      ],
+      "gaps": "Claro. Mi tío bailó encima de una [silla] y se rompió el [tobillo]. Esa noche me di cuenta de que el humor no le falta el [respeto] al dolor: lo hace [soportable].",
+      "glossary": [
+        {
+          "word": "arriesgado",
+          "meaning": "que puede salir mal"
+        },
+        {
+          "word": "descafeinado",
+          "meaning": "sin cafeína; aquí: sin fuerza"
+        },
+        {
+          "word": "velorio",
+          "meaning": "reunión para acompañar a un muerto antes del entierro"
+        },
+        {
+          "word": "manías",
+          "meaning": "costumbres raras de una persona"
+        },
+        {
+          "word": "depósito",
+          "meaning": "lugar del coche donde va la gasolina"
+        }
+      ]
+    },
+    {
+      "id": "freeshop",
+      "title": "Un frasco llamado culpa",
+      "place": "El free shop",
+      "context": "Horacio vuelve a la tienda y, para sorpresa de Vanesa, le pide ayuda para escribir una tarjeta sincera.",
+      "speakers": [
+        {
+          "name": "Horacio",
+          "country": "Guatemala",
+          "voice": "es-GT-AndresNeural"
+        },
+        {
+          "name": "Vanesa",
+          "country": "Argentina",
+          "voice": "es-AR-ElenaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Señorita, vuelvo porque no puedo dejar de pensar en lo que me dijo. Llevo media hora mirando la tarjeta en blanco."
+        },
+        {
+          "s": 1,
+          "text": "Vaya, no esperaba que le afectara tanto. Normalmente los clientes se ofenden y se van."
+        },
+        {
+          "s": 0,
+          "text": "Me ofendí, no se crea. Pero luego leí el nombre del perfume, «Remordimiento», y me pareció que el universo me estaba mandando un mensaje bastante poco sutil."
+        },
+        {
+          "s": 1,
+          "text": "El universo y el departamento de marketing, sí. ¿Qué quiere escribir?"
+        },
+        {
+          "s": 0,
+          "text": "Esa es la cuestión. A mi compañera le quiero decir que esto se acabó. Y a mi esposa… no sé si contarle la verdad o simplemente empezar a ser otro hombre."
+        },
+        {
+          "s": 1,
+          "text": "No soy quién para aconsejarle, pero una tarjeta de free shop no es el lugar para confesiones. Eso se dice mirando a los ojos."
+        },
+        {
+          "s": 0,
+          "text": "Tiene razón. Entonces escriba solo esto en la de mi esposa: «Tenemos que hablar. Y esta vez voy a escuchar»."
+        },
+        {
+          "s": 1,
+          "text": "Me parece un buen principio. ¿Y la otra?"
+        },
+        {
+          "s": 0,
+          "text": "La otra devuélvala. Y cámbiela por algo que se llame «Sinceridad», si de verdad existe."
+        },
+        {
+          "s": 1,
+          "text": "Existe, aunque huele un poco fuerte. Como todas las cosas sinceras."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Por qué vuelve Horacio a la tienda?",
+          "options": [
+            "Porque quiere devolver los dos perfumes",
+            "Porque no deja de pensar en lo que le dijo Vanesa",
+            "Porque se olvidó la cartera"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cómo interpreta Horacio el nombre del perfume?",
+          "options": [
+            "Como un mensaje poco sutil del universo",
+            "Como un error de traducción",
+            "Como una broma de su esposa"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Según Vanesa, ¿dónde deben hacerse las confesiones?",
+          "options": [
+            "En una carta larga",
+            "Por teléfono",
+            "Mirando a los ojos"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué hace Horacio con el segundo perfume?",
+          "options": [
+            "Se lo regala a Vanesa",
+            "Lo devuelve y pide cambiarlo por «Sinceridad»",
+            "Se lo queda para él"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Crees que una persona infiel debe confesar o simplemente cambiar su comportamiento?",
+          "model": "Creo que debe confesar, porque la otra persona tiene derecho a decidir con toda la información."
+        },
+        {
+          "q": "¿Has cambiado alguna vez de opinión gracias a un comentario de un desconocido?",
+          "model": "Sí, un taxista me hizo ver que estaba siendo injusto con mi hermano y lo llamé esa misma noche."
+        },
+        {
+          "q": "¿Por qué crees que las «cosas sinceras huelen fuerte», según Vanesa?",
+          "model": "Porque la verdad incomoda y no se puede ignorar, aunque al final sea lo más sano."
+        }
+      ],
+      "gaps": "No soy quién para [aconsejarle], pero una [tarjeta] de free shop no es el lugar para [confesiones]. Eso se dice mirando a los [ojos].",
+      "glossary": [
+        {
+          "word": "afectara",
+          "meaning": "de «afectar»: impresionar, influir"
+        },
+        {
+          "word": "sutil",
+          "meaning": "delicado, poco evidente"
+        },
+        {
+          "word": "confesiones",
+          "meaning": "declaraciones de algo que se ocultaba"
+        },
+        {
+          "word": "no soy quién",
+          "meaning": "no tengo derecho a"
+        }
+      ]
+    },
+    {
+      "id": "comidas",
+      "title": "La última escala del comandante",
+      "place": "El patio de comidas",
+      "context": "El comandante Arturo le cuenta a Marisol el momento más difícil de su carrera.",
+      "speakers": [
+        {
+          "name": "Arturo",
+          "country": "España",
+          "voice": "es-ES-AlvaroNeural"
+        },
+        {
+          "name": "Marisol",
+          "country": "Ecuador",
+          "voice": "es-EC-AndreaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Comandante, en tantos años nunca le he preguntado: ¿cuál fue el peor momento que vivió allá arriba?"
+        },
+        {
+          "s": 0,
+          "text": "Un aterrizaje en Quito, en mil novecientos noventa y nueve. Niebla cerrada, un motor fallando y ciento ochenta pasajeros que no sabían nada. Tuve que decidir en cuatro segundos si intentarlo o desviarnos."
+        },
+        {
+          "s": 1,
+          "text": "¿Y qué hizo?"
+        },
+        {
+          "s": 0,
+          "text": "Me desvié. Aterrizamos en Guayaquil con el depósito casi vacío. Los pasajeros se quejaron muchísimo porque iban a llegar tarde a sus reuniones. Ninguno supo que quizá les había salvado la vida."
+        },
+        {
+          "s": 1,
+          "text": "Qué ironía. Usted de héroe y ellos de mal humor."
+        },
+        {
+          "s": 0,
+          "text": "Así es este oficio. Cuando todo sale bien, nadie se entera. Solo se nota cuando sale mal. Por eso me gustan tanto sus empanadas: son lo único en este aeropuerto que la gente agradece en voz alta."
+        },
+        {
+          "s": 1,
+          "text": "Mi abuela decía que la comida es el único idioma que no necesita traducción."
+        },
+        {
+          "s": 0,
+          "text": "Sabia mujer. Mañana, cuando aterrice por última vez, voy a decir algo por megafonía. Treinta y cinco años callado, creo que me lo he ganado."
+        },
+        {
+          "s": 1,
+          "text": "Pues dígales que se acuerden de Quito. Y que, si tienen hambre, aquí los espero."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Dónde ocurrió el peor momento de la carrera de Arturo?",
+          "options": [
+            "En Guayaquil",
+            "En Quito",
+            "En Madrid"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué decidió hacer el comandante?",
+          "options": [
+            "Desviarse a otro aeropuerto",
+            "Aterrizar a pesar de la niebla",
+            "Volver al punto de origen"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cómo reaccionaron los pasajeros?",
+          "options": [
+            "Le aplaudieron",
+            "Le escribieron cartas de agradecimiento",
+            "Se quejaron porque llegaban tarde"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué piensa hacer Arturo en su último aterrizaje?",
+          "options": [
+            "Invitar a todos a empanadas",
+            "Decir algo por megafonía",
+            "Dar una vuelta extra"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué trabajos crees que solo se valoran cuando algo sale mal?",
+          "model": "Los de los técnicos de mantenimiento, los controladores aéreos y los informáticos."
+        },
+        {
+          "q": "¿Alguna vez tomaste una decisión impopular que resultó ser la correcta?",
+          "model": "Sí, cancelé un viaje de grupo por una alerta de tormenta y luego supimos que la carretera se había cortado."
+        },
+        {
+          "q": "¿Qué le dirías a los pasajeros si fueras el comandante en su último vuelo?",
+          "model": "Les daría las gracias por confiar en nosotros y les pediría que fueran amables con la tripulación."
+        }
+      ],
+      "gaps": "Así es este [oficio]. Cuando todo sale bien, nadie se [entera]. Solo se nota cuando sale [mal]. Por eso me gustan tanto sus [empanadas]",
+      "glossary": [
+        {
+          "word": "niebla cerrada",
+          "meaning": "niebla muy densa que no deja ver"
+        },
+        {
+          "word": "desviarnos",
+          "meaning": "de «desviarse»: cambiar de ruta"
+        },
+        {
+          "word": "oficio",
+          "meaning": "profesión, trabajo"
+        },
+        {
+          "word": "sabia",
+          "meaning": "que tiene mucha sabiduría"
+        }
+      ]
+    },
+    {
+      "id": "vip",
+      "title": "Boleros para nadie",
+      "place": "Dentro de la sala VIP",
+      "context": "De madrugada, Tito Ventura canta un bolero para Gisela en la sala VIP vacía y luego hablan de autenticidad.",
+      "speakers": [
+        {
+          "name": "Gisela",
+          "country": "Panamá",
+          "voice": "es-PA-MargaritaNeural"
+        },
+        {
+          "name": "Tito",
+          "country": "Puerto Rico",
+          "voice": "es-PR-VictorNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Señor Ventura, eso ha sido precioso. Le juro que se me ha puesto la piel de gallina. ¿Por qué no canta así en sus discos?"
+        },
+        {
+          "s": 1,
+          "text": "Porque los boleros no generan reproducciones, Gisela. Mi discográfica tiene un equipo que analiza qué palabras funcionan en las redes. Si no repito «baby» ocho veces, el algoritmo no me recomienda."
+        },
+        {
+          "s": 0,
+          "text": "Entonces usted canta para una máquina."
+        },
+        {
+          "s": 1,
+          "text": "Literalmente. Y la máquina me ha hecho millonario y profundamente aburrido. Mi abuelo cantaba boleros en las fiestas de Ponce por una botella de ron y era el hombre más feliz que he conocido."
+        },
+        {
+          "s": 0,
+          "text": "¿Y no podría hacer un disco solo de boleros, aunque venda menos?"
+        },
+        {
+          "s": 1,
+          "text": "Lo he pensado mil veces. Pero tengo miedo de que, sin el ruido y las luces, la gente descubra que solo soy un tipo normal con buena voz."
+        },
+        {
+          "s": 0,
+          "text": "Con todo respeto, eso es lo que yo acabo de descubrir. Y me ha gustado mucho más que el cantante del póster de mi sobrina."
+        },
+        {
+          "s": 1,
+          "text": "¿De verdad?"
+        },
+        {
+          "s": 0,
+          "text": "De verdad. Hágalo. Si nadie lo compra, yo lo pongo aquí todas las madrugadas. Usted tendrá por lo menos una oyente fiel."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Por qué no canta Tito boleros en sus discos?",
+          "options": [
+            "Porque no sabe cantarlos",
+            "Porque los boleros no generan reproducciones",
+            "Porque a su abuelo no le gustaban"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué analiza el equipo de la discográfica?",
+          "options": [
+            "Qué palabras funcionan en las redes",
+            "Qué ciudades visitan más",
+            "Qué ropa debe llevar"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿De qué tiene miedo Tito?",
+          "options": [
+            "De perder la voz",
+            "De quedarse sin dinero",
+            "De que descubran que es un tipo normal"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué le promete Gisela?",
+          "options": [
+            "Comprar diez copias",
+            "Poner su disco cada madrugada",
+            "Contárselo a la prensa"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Crees que los algoritmos están empobreciendo la música actual?",
+          "model": "En parte sí, porque premian lo repetitivo, aunque también permiten descubrir artistas pequeños."
+        },
+        {
+          "q": "¿Preferirías ser muy famoso y aburrido o desconocido y feliz?",
+          "model": "Sin duda desconocido y feliz, aunque un poco de reconocimiento no me vendría mal."
+        },
+        {
+          "q": "¿Qué te da miedo mostrar de ti mismo a los demás?",
+          "model": "Mi inseguridad. Intento parecer muy seguro aunque por dentro dude mucho."
+        }
+      ],
+      "gaps": "Literalmente. Y la [máquina] me ha hecho [millonario] y profundamente [aburrido]. Mi abuelo cantaba boleros en las fiestas de Ponce por una botella de [ron]",
+      "glossary": [
+        {
+          "word": "piel de gallina",
+          "meaning": "reacción de la piel por emoción o frío"
+        },
+        {
+          "word": "reproducciones",
+          "meaning": "veces que se escucha una canción en internet"
+        },
+        {
+          "word": "discográfica",
+          "meaning": "empresa que produce y vende música"
+        },
+        {
+          "word": "oyente",
+          "meaning": "persona que escucha"
+        }
+      ]
+    },
+    {
+      "id": "capilla",
+      "title": "Aviones de papel",
+      "place": "La capilla del aeropuerto",
+      "context": "Hugo, el capellán, le cuenta a Raquel cómo ayuda a los pasajeros con miedo y le enseña un pequeño ritual.",
+      "speakers": [
+        {
+          "name": "Hugo",
+          "country": "Nicaragua",
+          "voice": "es-NI-FedericoNeural"
+        },
+        {
+          "name": "Raquel",
+          "country": "Nicaragua",
+          "voice": "es-NI-YolandaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Raquel, ¿ve esa caja junto al altar? Está llena de aviones de papel. Cada uno lo ha doblado alguien que tenía miedo de volar, con su miedo escrito por dentro."
+        },
+        {
+          "s": 1,
+          "text": "¿Y qué hace con ellos, padre?"
+        },
+        {
+          "s": 0,
+          "text": "Nada. Se quedan aquí. La idea es que el miedo no tiene por qué subir al avión con usted. Puede dejarlo en tierra, bien doblado, y recogerlo a la vuelta si todavía lo quiere."
+        },
+        {
+          "s": 1,
+          "text": "Suena infantil, pero me gusta. ¿Funciona?"
+        },
+        {
+          "s": 0,
+          "text": "No lo sé. Pero nadie ha vuelto a reclamar su miedo. Eso ya me dice algo."
+        },
+        {
+          "s": 1,
+          "text": "¿Qué escribo? Tengo tantos miedos que no caben en una hoja."
+        },
+        {
+          "s": 0,
+          "text": "Escriba solo el más grande. Normalmente no es el miedo a caerse. Es el miedo a llegar y que la vida que nos espera no sea la que imaginamos."
+        },
+        {
+          "s": 1,
+          "text": "Usted lee la mente, padre. Mi miedo es que Luna no me reconozca como su abuela. Que me vea como a una extraña."
+        },
+        {
+          "s": 0,
+          "text": "Los niños no reconocen caras, hija: reconocen el cariño. En diez minutos con usted, Luna sabrá exactamente quién es."
+        },
+        {
+          "s": 1,
+          "text": "Entonces lo escribo y lo doblo. Y le pongo alas grandes, para que no vuelva a buscarme."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué hay dentro de la caja junto al altar?",
+          "options": [
+            "Cartas de agradecimiento",
+            "Aviones de papel con miedos escritos",
+            "Billetes de avión antiguos"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué simboliza dejar el avión de papel en la capilla?",
+          "options": [
+            "Dejar el miedo en tierra",
+            "Pedir un deseo",
+            "Agradecer un buen viaje"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cuál es el verdadero miedo de Raquel?",
+          "options": [
+            "Que el avión se caiga",
+            "Perder la conexión",
+            "Que su nieta no la reconozca"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Según Hugo, ¿qué reconocen los niños?",
+          "options": [
+            "Las caras",
+            "El cariño",
+            "Las voces"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Te parecen útiles los pequeños rituales para afrontar el miedo?",
+          "model": "Sí, porque dan una forma concreta a algo abstracto y ayudan a sentir control."
+        },
+        {
+          "q": "¿Qué miedo dejarías tú en un avión de papel?",
+          "model": "El miedo a no estar a la altura de lo que esperan de mí."
+        },
+        {
+          "q": "¿Estás de acuerdo en que los niños reconocen el cariño antes que las caras?",
+          "model": "Creo que sí: los niños perciben enseguida quién los trata con ternura."
+        }
+      ],
+      "gaps": "Escriba solo el más [grande]. Normalmente no es el miedo a [caerse]. Es el miedo a [llegar] y que la vida que nos espera no sea la que [imaginamos].",
+      "glossary": [
+        {
+          "word": "altar",
+          "meaning": "mesa principal de una iglesia o capilla"
+        },
+        {
+          "word": "doblado",
+          "meaning": "de «doblar»: plegar un papel"
+        },
+        {
+          "word": "reclamar",
+          "meaning": "pedir algo que es tuyo"
+        },
+        {
+          "word": "extraña",
+          "meaning": "persona desconocida"
+        }
+      ]
+    },
+    {
+      "id": "descanso",
+      "title": "Diez años de silencio",
+      "place": "La sala de descanso",
+      "context": "Dayana ayuda a Esteban a preparar lo que le va a decir a su padre, al que no ve desde hace diez años.",
+      "speakers": [
+        {
+          "name": "Esteban",
+          "country": "El Salvador",
+          "voice": "es-SV-RodrigoNeural"
+        },
+        {
+          "name": "Dayana",
+          "country": "Venezuela",
+          "voice": "es-VE-PaolaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Llevo nueve días ensayando un discurso, Dayana. Tengo cuatro versiones en el móvil: una furiosa, una dolida, una indiferente y una en la que hago como que no ha pasado nada."
+        },
+        {
+          "s": 1,
+          "text": "¿Y cuál le gusta más?"
+        },
+        {
+          "s": 0,
+          "text": "Ninguna. Todas suenan a otra persona. La furiosa es la de mis veinticinco años. La indiferente, la que me gustaría ser."
+        },
+        {
+          "s": 1,
+          "text": "Mire, en el hospital he visto muchos reencuentros con enfermos graves. Los discursos preparados casi nunca se dicen. La gente entra, ve a su padre con tubos y bata, y se le olvida todo."
+        },
+        {
+          "s": 0,
+          "text": "Eso es lo que me da miedo. Llegar y no saber qué hacer con las manos."
+        },
+        {
+          "s": 1,
+          "text": "Pues le doy un consejo profesional: sujétele la mano. Las manos saben lo que la boca no se atreve a decir. Y después, si quiere hablar, que hable él primero."
+        },
+        {
+          "s": 0,
+          "text": "¿Y si me pide perdón? No sé si estoy preparado para perdonar."
+        },
+        {
+          "s": 1,
+          "text": "Nadie está preparado. El perdón no es un examen que se aprueba, es una puerta que se deja entreabierta. Usted solo tiene que no cerrarla."
+        },
+        {
+          "s": 0,
+          "text": "Me lo voy a apuntar. Bueno, no: me lo voy a aprender, que el móvil ya tiene demasiados discursos."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cuántas versiones del discurso tiene Esteban?",
+          "options": [
+            "Dos",
+            "Cuatro",
+            "Nueve"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué suele pasar con los discursos preparados, según Dayana?",
+          "options": [
+            "Casi nunca se dicen",
+            "Siempre funcionan",
+            "Son demasiado largos"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué consejo profesional le da Dayana?",
+          "options": [
+            "Que lleve un regalo",
+            "Que hable primero",
+            "Que le sujete la mano a su padre"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cómo define Dayana el perdón?",
+          "options": [
+            "Como un examen difícil",
+            "Como una puerta entreabierta",
+            "Como una obligación familiar"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Sueles preparar lo que vas a decir en conversaciones difíciles?",
+          "model": "Sí, pero como dice Dayana, cuando llega el momento casi nunca digo lo que tenía preparado."
+        },
+        {
+          "q": "¿Qué opinas de la idea de que el perdón «es una puerta entreabierta»?",
+          "model": "Me parece una imagen muy acertada, porque perdonar es un proceso y no un momento."
+        },
+        {
+          "q": "¿Crees que el contacto físico puede comunicar más que las palabras?",
+          "model": "Sí, un abrazo o una mano en el hombro pueden decir cosas que nos cuesta expresar."
+        }
+      ],
+      "gaps": "Pues le doy un consejo [profesional]: sujétele la [mano]. Las manos saben lo que la boca no se [atreve] a decir. Y después, si quiere hablar, que hable él [primero].",
+      "glossary": [
+        {
+          "word": "ensayando",
+          "meaning": "de «ensayar»: practicar antes de hacer algo"
+        },
+        {
+          "word": "dolida",
+          "meaning": "que siente dolor emocional"
+        },
+        {
+          "word": "bata",
+          "meaning": "ropa que se lleva en el hospital"
+        },
+        {
+          "word": "entreabierta",
+          "meaning": "un poco abierta"
+        }
+      ]
+    },
+    {
+      "id": "fumadores",
+      "title": "Malabo, mesa para dos",
+      "place": "La terraza de fumadores",
+      "context": "Mónica se anima a contarle a Iván su plan de negocio, y él le hace de abogado del diablo.",
+      "speakers": [
+        {
+          "name": "Mónica",
+          "country": "Guinea Ecuatorial",
+          "voice": "es-GQ-TeresaNeural"
+        },
+        {
+          "name": "Iván",
+          "country": "Guinea Ecuatorial",
+          "voice": "es-GQ-JavierNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Está bien, Iván, ya que lo sabes todo, te cuento el plan completo. Un restaurante pequeño en Malabo, doce mesas, junto al puerto. El plato estrella: el pescado con salsa de cacahuete de mi abuela."
+        },
+        {
+          "s": 1,
+          "text": "Suena delicioso. Ahora déjame hacer de abogado del diablo. ¿Cuánto dinero tienes ahorrado?"
+        },
+        {
+          "s": 0,
+          "text": "Lo suficiente para el alquiler de un año y la cocina. No para los imprevistos."
+        },
+        {
+          "s": 1,
+          "text": "¿Y si el primer año no viene nadie? ¿Y si tu abuela no te da la receta?"
+        },
+        {
+          "s": 0,
+          "text": "La receta ya la tengo. Me la dictó por teléfono durante tres meses, ingrediente a ingrediente, porque no se fía de los papeles. En cuanto a los clientes, todas las tripulaciones que paran en Malabo me conocen."
+        },
+        {
+          "s": 1,
+          "text": "Eso es un buen argumento. ¿Y el miedo?"
+        },
+        {
+          "s": 0,
+          "text": "El miedo lo tengo, y mucho. Pero he hecho la cuenta: llevo quince años sirviendo cafés con una sonrisa ensayada a gente que no me mira. Prefiero equivocarme con algo mío que acertar con algo ajeno."
+        },
+        {
+          "s": 1,
+          "text": "Entonces solo me queda una pregunta."
+        },
+        {
+          "s": 0,
+          "text": "Dime."
+        },
+        {
+          "s": 1,
+          "text": "¿Me reservas la mesa doce para la inauguración? La de la ventana."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cuál es el plato estrella del restaurante?",
+          "options": [
+            "Pollo con arroz",
+            "Pescado con salsa de cacahuete",
+            "Empanadas de queso"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Para qué le alcanza el dinero ahorrado a Mónica?",
+          "options": [
+            "Para el alquiler de un año y la cocina",
+            "Para cinco años de alquiler",
+            "Para nada"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cómo consiguió Mónica la receta?",
+          "options": [
+            "La encontró en un libro",
+            "Se la compró a un chef",
+            "Su abuela se la dictó por teléfono durante meses"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué quiere decir Mónica con «prefiero equivocarme con algo mío»?",
+          "options": [
+            "Que prefiere arriesgarse en su propio proyecto",
+            "Que no le importa el dinero",
+            "Que va a cerrar pronto"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué preguntas harías tú como «abogado del diablo» a alguien que quiere emprender?",
+          "model": "Le preguntaría por el plan financiero, la competencia y qué haría si en dos años no hay beneficios."
+        },
+        {
+          "q": "¿Estás de acuerdo con la frase «prefiero equivocarme con algo mío que acertar con algo ajeno»?",
+          "model": "En general sí, aunque entiendo que no todo el mundo puede permitirse ese riesgo."
+        },
+        {
+          "q": "¿Qué receta familiar te gustaría conservar para siempre?",
+          "model": "El guiso de lentejas de mi madre, que lleva un ingrediente secreto que nunca me ha querido decir."
+        }
+      ],
+      "gaps": "Lo [suficiente] para el [alquiler] de un año y la [cocina]. No para los [imprevistos].",
+      "glossary": [
+        {
+          "word": "plato estrella",
+          "meaning": "el plato más importante de un restaurante"
+        },
+        {
+          "word": "abogado del diablo",
+          "meaning": "persona que critica una idea para ponerla a prueba"
+        },
+        {
+          "word": "imprevistos",
+          "meaning": "gastos o problemas que no se esperan"
+        },
+        {
+          "word": "no se fía",
+          "meaning": "de «fiarse»: no confía"
+        }
+      ]
+    },
+    {
+      "id": "puerta",
+      "title": "Un asiento vacío lleno de historias",
+      "place": "La puerta de embarque 12",
+      "context": "Débora, la agente de embarque, le explica a Gustavo lo que ha visto esta noche mientras esperan a que alguien ceda un asiento.",
+      "speakers": [
+        {
+          "name": "Débora",
+          "country": "Estados Unidos",
+          "voice": "es-US-PalomaNeural"
+        },
+        {
+          "name": "Gustavo",
+          "country": "Estados Unidos",
+          "voice": "es-US-AlonsoNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Señor Peralta, llevo once años en esta puerta y nunca había visto una noche como esta. Le juro que el aeropuerto entero parece haberse puesto de acuerdo para ser buena gente."
+        },
+        {
+          "s": 1,
+          "text": "¿A qué se refiere?"
+        },
+        {
+          "s": 0,
+          "text": "Una agente de facturación ha bloqueado un asiento para la urna de una señora. Un cajero ha comprado pulseras para no cobrar comisiones. Una enfermera ha convencido a un hombre que llevaba nueve días aquí de que se suba al avión. Y todos ellos, curiosamente, van en este vuelo."
+        },
+        {
+          "s": 1,
+          "text": "Y por eso falta un asiento."
+        },
+        {
+          "s": 0,
+          "text": "Exacto. La bondad, a veces, también crea problemas logísticos."
+        },
+        {
+          "s": 1,
+          "text": "Mire, señorita, si al final no hay sitio para mí, no quiero que nadie renuncie por obligación. Mi nieto va a nacer con o sin su abuelo en la sala."
+        },
+        {
+          "s": 0,
+          "text": "Eso le honra. Pero acabo de recibir un mensaje: alguien en la sala dice que tiene un asiento que no necesita. Todavía no sé quién es."
+        },
+        {
+          "s": 1,
+          "text": "¿Alguien que no conozco va a perder su vuelo por mí?"
+        },
+        {
+          "s": 0,
+          "text": "Alguien que, por lo que veo, ha pasado la noche entera ayudando a todo el mundo. Supongo que quiere terminar igual."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cuánto tiempo lleva Débora trabajando en esa puerta?",
+          "options": [
+            "Un año",
+            "Once años",
+            "Treinta y cinco años"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué tienen en común las personas que ha ayudado esta noche?",
+          "options": [
+            "Que todas van en el mismo vuelo",
+            "Que son de la misma familia",
+            "Que trabajan en el aeropuerto"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué actitud muestra Gustavo?",
+          "options": [
+            "Exige un asiento a cualquier precio",
+            "Amenaza con quejarse",
+            "No quiere que nadie renuncie por obligación"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué noticia recibe Débora al final?",
+          "options": [
+            "Que el vuelo se cancela",
+            "Que alguien ofrece el asiento que no necesita",
+            "Que hay un avión más grande"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Crees que la bondad puede causar problemas? Pon un ejemplo.",
+          "model": "Sí, cuando ayudas a alguien sin pensar puedes perjudicar a otra persona, como en este caso del asiento."
+        },
+        {
+          "q": "¿Qué te parece la actitud de Gustavo?",
+          "model": "Me parece muy digna: quiere llegar, pero no a costa de presionar a otros."
+        },
+        {
+          "q": "¿Has cedido alguna vez algo importante para que otra persona pudiera tenerlo?",
+          "model": "Sí, le cedí mi entrada para un concierto a una amiga que llevaba años esperando ver a ese grupo."
+        }
+      ],
+      "gaps": "Eso le [honra]. Pero acabo de recibir un [mensaje]: alguien en la sala dice que tiene un [asiento] que no [necesita].",
+      "glossary": [
+        {
+          "word": "haberse puesto de acuerdo",
+          "meaning": "haber decidido algo entre varios"
+        },
+        {
+          "word": "logísticos",
+          "meaning": "relacionados con la organización práctica"
+        },
+        {
+          "word": "renuncie",
+          "meaning": "de «renunciar»: dejar algo voluntariamente"
+        },
+        {
+          "word": "le honra",
+          "meaning": "dice algo bueno de usted"
+        }
+      ]
+    }
+  ]
+}

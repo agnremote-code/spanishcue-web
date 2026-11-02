@@ -1,4 +1,4 @@
-import { PADDLE_MONTHLY_PRICE_ID, PADDLE_TRIAL_PRICE_ID, PADDLE_MONTHLY_CENTS, PADDLE_TRIAL_CENTS, PADDLE_PRODUCT_ID, type PaddleRuntimeConfig, type PaddleOffer } from "./paddle-config";
+import { PADDLE_MONTHLY_PRICE_ID, PADDLE_TRIAL_PRICE_ID, PADDLE_ANNUAL_PRICE_ID, PADDLE_MONTHLY_CENTS, PADDLE_TRIAL_CENTS, PADDLE_ANNUAL_CENTS, PADDLE_PRODUCT_ID, PADDLE_REFERRAL_DISCOUNT_ID, type PaddleRuntimeConfig, type PaddleOffer } from "./paddle-config";
 
 type PaddlePrice = {
   id?: unknown; product_id?: unknown; tax_mode?: unknown;
@@ -15,6 +15,7 @@ type PaddleTransaction = {
   customer?: { id?: unknown; email?: unknown } | null;
   custom_data?: unknown;
   currency_code?: unknown;
+  discount_id?: unknown;
   billing_period?: { starts_at?: unknown; ends_at?: unknown } | null;
   items?: Array<{
     quantity?: unknown;
@@ -29,6 +30,7 @@ type PaddleSubscription = {
   customer_id?: unknown;
   custom_data?: unknown;
   next_billed_at?: unknown;
+  discount?: { id?: unknown } | null;
   current_billing_period?: { starts_at?: unknown; ends_at?: unknown } | null;
   items?: Array<{
     quantity?: unknown;
@@ -91,13 +93,13 @@ async function paddleJson<T>(config: PaddleRuntimeConfig, path: string, init: Re
 export async function createPaddleCheckoutTransaction(
   config: PaddleRuntimeConfig,
   input: ({ userId: string; claimId?: never } | { claimId: string; userId?: never }) & {
-    offerCode: string; offer?: PaddleOffer; attribution?: PaddleAttribution;
+    offerCode: string; offer?: PaddleOffer; attribution?: PaddleAttribution; referralCode?: string | null;
   },
 ) {
   const data = await paddleJson<PaddleTransaction>(config, "/transactions", {
     method: "POST",
     body: JSON.stringify({
-      items: [{ price_id: input.offer === "trial" ? config.trialPriceId : config.priceId, quantity: 1 }],
+      items: [{ price_id: input.offer === "trial" ? config.trialPriceId : input.offer === "annual" ? config.annualPriceId : config.priceId, quantity: 1 }],
       currency_code: "USD",
       collection_mode: "automatic",
       custom_data: {
@@ -105,11 +107,21 @@ export async function createPaddleCheckoutTransaction(
         spanishcue_offer_code: input.offerCode,
         spanishcue_checkout_offer: input.offer || "monthly",
         ...paddleAttributionData(input.attribution),
+        ...(input.referralCode && REFERRAL_CODE.test(input.referralCode) ? { spanishcue_ref: input.referralCode } : {}),
       },
     }),
   });
   if (typeof data.id !== "string" || !data.id.startsWith("txn_")) throw new Error("paddle_transaction_invalid");
   return data.id;
+}
+
+/** Referral codes are 8 characters from an unambiguous alphabet (see db/referrals.ts). */
+export const REFERRAL_CODE = /^[A-HJ-NP-Z2-9]{8}$/;
+
+/** Referral code stored on the subscription at checkout, if any. */
+export function paddleReferralCode(entity: { custom_data?: unknown }) {
+  const custom = entity.custom_data && typeof entity.custom_data === "object" ? entity.custom_data as Record<string, unknown> : {};
+  return typeof custom.spanishcue_ref === "string" && REFERRAL_CODE.test(custom.spanishcue_ref) ? custom.spanishcue_ref : null;
 }
 
 export type PaddleAttribution = Partial<Record<(typeof attributionKeys)[number], string>>;
@@ -188,12 +200,19 @@ export function validatePaddleTransaction(transaction: PaddleTransaction, config
   return custom[customKey] === userId && paddleOffer(transaction, config) !== null;
 }
 
-/** Only the two configured catalog prices are valid. The trial remains on its
+/** Only the configured catalog prices (monthly, trial, annual) are valid. The trial remains on its
  * original price ID after conversion; its base billing cycle is still monthly. */
 export function paddleOffer(entity: Pick<PaddleTransaction, "items">, config: PaddleRuntimeConfig): PaddleOffer | null {
   if (config.priceId !== PADDLE_MONTHLY_PRICE_ID || (config.trialPriceId && config.trialPriceId !== PADDLE_TRIAL_PRICE_ID)) return null;
   const item = entity.items?.length === 1 ? entity.items[0] : null;
   const price = item?.price;
+  if (price && item?.quantity === 1 && PADDLE_ANNUAL_PRICE_ID && config.annualPriceId === PADDLE_ANNUAL_PRICE_ID
+      && price.id === PADDLE_ANNUAL_PRICE_ID) {
+    return price.product_id === PADDLE_PRODUCT_ID && price.tax_mode === "internal"
+      && price.unit_price?.amount === String(PADDLE_ANNUAL_CENTS) && price.unit_price.currency_code === "USD"
+      && price.billing_cycle?.interval === "year" && price.billing_cycle.frequency === 1 && price.trial_period == null
+      ? "annual" : null;
+  }
   if (!price || item?.quantity !== 1 || price.product_id !== PADDLE_PRODUCT_ID
       || price.tax_mode !== "internal" || !(price.unit_price?.amount === String(PADDLE_MONTHLY_CENTS) || (config.legacyMonthly && price.id === config.priceId && price.unit_price?.amount === "1500"))
       || price.unit_price?.currency_code !== "USD" || price.billing_cycle?.interval !== "month"
@@ -206,10 +225,16 @@ export function paddleOffer(entity: Pick<PaddleTransaction, "items">, config: Pa
   return null;
 }
 
+/** A US$0 charge is valid only as a monthly renewal carrying the owner's referral discount. */
+function referralFreeMonth(transaction: PaddleTransaction, offer: PaddleOffer | null) {
+  return offer === "monthly" && transaction.details?.totals?.total === "0" && transaction.discount_id === PADDLE_REFERRAL_DISCOUNT_ID;
+}
+
 function paddleTransactionAmountValid(transaction: PaddleTransaction, config: PaddleRuntimeConfig) {
   const offer = paddleOffer(transaction, config);
   const amount = Number(transaction.details?.totals?.total);
-  return offer !== null && (amount === Number(transaction.items?.[0].price?.unit_price?.amount) || (offer === "trial" && amount === PADDLE_TRIAL_CENTS));
+  return offer !== null && (amount === Number(transaction.items?.[0].price?.unit_price?.amount) || (offer === "trial" && amount === PADDLE_TRIAL_CENTS)
+    || referralFreeMonth(transaction, offer));
 }
 
 /** Derive grants from the paid transaction's period, never from a newer
@@ -229,10 +254,11 @@ export function paddleCompletedPayment(transaction: PaddleTransaction, subscript
   const end = typeof period?.ends_at === "string" ? Math.floor(Date.parse(period.ends_at) / 1000) : NaN;
   if (!Number.isInteger(start) || !Number.isInteger(end) || end <= start
       || (isTrial && end - start !== 86400)
-      || (!isTrial && (end - start < 28 * 86400 || end - start > 31 * 86400))
+      || (!isTrial && offer !== "annual" && (end - start < 28 * 86400 || end - start > 31 * 86400))
+      || (offer === "annual" && (end - start < 365 * 86400 || end - start > 366 * 86400))
       || (subscription.status === "trialing" && !isTrial)
       || !["active", "trialing", "canceled", "paused", "past_due"].includes(String(subscription.status))) return null;
-  return { amountCents, currency: "USD", isTrial, paidThrough: end, paidAt: start,
+  return { amountCents, currency: "USD", isTrial, offer, referralFree: referralFreeMonth(transaction, offer), paidThrough: end, paidAt: start,
     priceId: String(transaction.items![0].price!.id) };
 }
 
@@ -246,6 +272,14 @@ export async function createPaddlePortalSession(config: PaddleRuntimeConfig, cus
   const url = data.urls?.general?.overview;
   if (typeof url !== "string" || !url.startsWith("https://")) throw new Error("paddle_portal_invalid");
   return url;
+}
+
+/** Schedules the referral free month on the subscription's next renewal. */
+export async function applyPaddleReferralDiscount(config: PaddleRuntimeConfig, subscriptionId: string) {
+  return paddleJson<PaddleSubscription>(config, `/subscriptions/${encodeURIComponent(subscriptionId)}`, {
+    method: "PATCH",
+    body: JSON.stringify({ discount: { id: PADDLE_REFERRAL_DISCOUNT_ID, effective_from: "next_billing_period" } }),
+  });
 }
 
 export async function pausePaddleSubscription(config: PaddleRuntimeConfig, subscriptionId: string) {

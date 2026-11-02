@@ -1,6 +1,6 @@
 # Board STATUS: the single source of truth for the next run
 
-_Last updated: 2026-10-26 by the Monday 3D routine (scheduled cloud run; facilitator plus Martin, Sofia and Alejandro as subagents, see "Current work")._
+_Last updated: 2026-10-30 by the Friday 3D + assessment routine (scheduled cloud run; facilitator plus two fresh agents acting as Alejandro, see "Current work")._
 
 ## Owner decisions in force
 | Date | Decision |
@@ -31,7 +31,7 @@ Parallel streams: **3D = Sofia**, **technical SEO = Alejandro**, **QA/integratio
 | Rank | Item | Owner → reviewer | State |
 |---|---|---|---|
 | 1 | LES-001 «La feria de Villaluz» A2 PRO 3D world (LESSON-DECISION-001 v5 + BOARD-DECISION-001 overlays) | Martin (content) → Sofia (build); G4 by Alejandro or a fresh agent; QA Martin | **Deployed 2026-10-21**: PR #251 → `6383b3b6`, production run 39549567404 (workflow smoke passed). The changed-URL smoke is still owed (see Current work). Open follow-ups: G5(b) real-device check (featured flag stays off until then), T5 fps on a real Android, the cover still shows the baile host in its old spot |
-| 2 | «El ascensor del cerro», B2 PRO 3D world, Valparaíso ([concept](concepts/2026-10-23-valparaiso-ascensor-del-cerro.md)) | Martin (content) → Sofia (build) → G4 Alejandro | **BUILT AND REVIEWED, NOT RELEASED (2026-10-26).** Draft PR #282. G4 final APPROVE, code review final APPROVE, G3/G6/N1/G5(a) pass. **Held by concept §9.2:** a person must listen to the 6 clips (owner request R4). Then mark #282 ready. `featured:false` until G5(b) |
+| 2 | **NEW 2026-10-23: «El ascensor del cerro», B2 PRO 3D world, Valparaíso** ([concept](concepts/2026-10-23-valparaiso-ascensor-del-cerro.md); selected 3 of 3) | Martin (content, after his cultural check) → Sofia (build) → G4 Alejandro or a fresh agent | **Next 3D slot, Mon 2026-10-26** (continue Wed if not gate-passed) |
 | 3 | «También, tampoco, sí, no: reaccionar», A1 PRO grammar (`a1.gram.tambien-tampoco`). **Partly covered already** (VERIFIED: `app/grammar-classroom/live/lessons/g332.ts:129` has a section «También, tampoco, sí, no · Reacting to tastes» with exercises), so whether any gap remains is a HYPOTHESIS; Martin duplicate-checks against main before any authoring | Martin → fresh agent (G4) | after rank 2 content |
 | — | ~~«Gustar y verbos como gustar» A1 PRO grammar class~~ | — | **DROPPED 2026-10-23** (Alejandro, on Martin's evidence): duplicates G032 «Gustar y encantar» (`g332.ts`) + G062 «Gustar, interesar, doler, faltar» (`g362.ts`), both live and PRO. The other gaps in BOARD-DECISION-002 §2 (superlativos, obligación, indefinidos) are also covered (369, 340/380, 370–372). Supersedes BOARD-DECISION-002 §3.1(2) on this point |
 | P | Technical SEO, highest impact first (parallel stream) | Alejandro → Sofia (code review), Martin (QA) | First fix = PR #224, **merged `c06c01c` and deployed 2026-10-20** (production run 39359743902, workflow smoke passed). The changed-URL content smoke is still owed (PUBLISHED.md, Pending verification) |
@@ -52,8 +52,7 @@ Parallel streams: **3D = Sofia**, **technical SEO = Alejandro**, **QA/integratio
 | — | **COMP-001** ProfeDeELE.com benchmark: their offer, formats, pricing, the teacher queries they win, and the gaps SpanishCue can win with evidence. Feeds concept selection and SEO-002. | Alejandro (lead) + Martin (pedagogy) | next Tuesday SEO slot, or earlier if capacity allows |
 
 ## Owner data requests (open)
-- **R4 (2026-10-26, blocks the release of PR #282):** listen to the 6 listening clips of «El ascensor del cerro» (about 8 minutes in all: `public/audio/escucha-3d/ascensor-b2-{estacion,escalera,cafe,taller,mirador,asamblea}.mp3` on branch `claude/escucha-3d-ascensor-cerro-b2-20261026`) with the transcripts open (`app/escucha-3d/content/ascensor/b2.json`), and note per clip: OK, or the defect with its timestamp. **Agents cannot hear audio, and speech-to-text could not run** (the model hosts return 403 through the proxy). The result goes into `docs/audits/el-ascensor-del-cerro-pedagogy-20261026.md`. The next board run then marks #282 ready.
-- **R0 (2026-10-20, blocking SEO measurement; STILL OPEN 2026-10-23, placeholder row again):** Windsor.ai paused all reads: "reads are paused because you have 6 accounts connected and your Free plan includes 1 account". Every `searchconsole` query returns that placeholder row with 0 values. Fix: disconnect the 5 extra accounts at https://onboard.windsor.ai/app/ (keep `sc-domain:spanishcue.com`) or upgrade. The board may not buy paid plans. The owner was notified by push on 2026-10-20. Until this is fixed there is no fresh Search Console evidence; the last real numbers are from 2026-10-17 (PR #224 body).
+- **R0 (2026-10-20, blocking SEO measurement; STILL OPEN 2026-10-27, placeholder row again):** Windsor.ai paused all reads: "reads are paused because you have 6 accounts connected and your Free plan includes 1 account". Every `searchconsole` query returns that placeholder row with 0 values. Fix: disconnect the 5 extra accounts at https://onboard.windsor.ai/app/ (keep `sc-domain:spanishcue.com`) or upgrade. The board may not buy paid plans. The owner was notified by push on 2026-10-20. Until this is fixed there is no fresh Search Console evidence; the last real numbers are from 2026-10-17 (PR #224 body).
 - **R1:** Search Console Page-indexing report, Core Web Vitals report and per-query impressions. The Windsor connector exposes only search analytics and sitemaps.
 - **R2:** GA Admin: which property `G-6C7DY2C5LN` reports to.
 - **R3:** a weekly aggregate-only D1 query (new accounts, first payments, opened/completed per 3D lesson). Agents never query production D1.
@@ -78,35 +77,108 @@ All five run on `claude-opus-5-5`, follow [ROUTINES.md](ROUTINES.md), and each i
 - Session 0 (lesson test) took 55 messages, about 15 of them caused by crossed messages over circle 6. That led to the lock rule.
 
 ## Current work and next action
-- **2026-10-26 (Monday 3D routine): «El ascensor del cerro» B2 built and fully reviewed; NOT released.** Draft PR #282, branch `claude/escucha-3d-ascensor-cerro-b2-20261026`, base main `25b9253`. Subscription usage: **UNKNOWN**.
-  - **Board convened as subagents of the facilitator** (Martin, Sofia, Alejandro). Every message went between the facilitator and one executive, with no direct messages between executives. 17 messages, exported verbatim from the agents' logs: [transcripts/2026-10-26-monday-3d-ascensor.md](transcripts/2026-10-26-monday-3d-ascensor.md).
-  - **Built:**
-    - `/el-ascensor-del-cerro`, catalog id 243: B2 only, PRO, `featured:false`.
-    - Three terraces at 0 / 9 / 18 m, with a scripted funicular ride (don Lorenzo rides in the cabin) and two scripted stair flights.
-    - 6 circles: estacion, escalera, cafe, taller, mirador, and asamblea (the closing: mediation and the acta).
-    - Both modes, with one listening per circle.
-    - 6 TTS clips (Escucha 3D audio run 40259015039).
-    - Cover, hover clip 243.mp4, the `/resources/` page via `resource-seo.ts`, the checker `scripts/check-ascensor.mjs`, `tests/el-ascensor-del-cerro.test.mjs`, and the world added to the 3d-sin-fantasmas and three.js guards.
-  - **Gate:**
-    - G4 content review (Alejandro): R1–R6 required, all closed; **final APPROVE** ([review](../audits/el-ascensor-del-cerro-g4-review-20261026.md)).
-    - Code review (Alejandro): B1 (GPU leak on unmount) and B2 (copy promised don Lorenzo in an empty cabin) fixed; **final APPROVE** ([review](../audits/el-ascensor-del-cerro-code-review-20261026.md)).
-    - LQG file [el-ascensor-del-cerro-pedagogy-20261026.md](../audits/el-ascensor-del-cerro-pedagogy-20261026.md): G3, G4, G6, N1 (21 contrasts, 6 stimuli, 30/30 exponents targeted) and G5(a) (SwiftShader smoke 65/65, low-mode draw calls ≤103) pass. **LQG VERDICT: NOT YET RELEASABLE** because of concept §9.2 (below).
-  - **Why it is not released.**
-    - Concept §9.2 requires that someone listen to every clip before release. That step was missed for Feria, and the rule exists because of it.
-    - No agent can hear audio, and machine speech-to-text could not run: HuggingFace and Vosk return 403 through the proxy.
-    - Technical audio checks did pass: 61–90 s per clip, 117–159 wpm, no silence over 2 s, −16.9 to −17.7 LUFS, hashes current. These cannot catch a misread gap word or a wrong voice.
-    - Alejandro, as G4 reviewer, ruled that this blocks merge, since merging deploys and every PRO teacher could play the clips. The facilitator does not vote and did not override him, so **#282 stays draft and nothing was merged or deployed**. Owner request R4 above.
-  - **Checks at the branch head** (facilitator):
-    - `npm test`: 890 pass, and the only failure was the LQG file not existing yet. It was added afterwards, and the world test then passed 16/16.
-    - `scripts/test-worker.mjs` re-run after the fixes: see the PR comment.
-    - lint 0 errors; `tsc` only the 3 errors already on main; `git diff --check` clean.
-    - `tests/wave3-preservation.test.mjs` fails on main too and is not part of `npm test`.
-  - **Not verified:** G5(b) real-device check (blocks `featured`), fps on a real Android, touch input, listening by ear, and a look-pass on the façades against the postcard risk (code review NB5).
+- **2026-10-30 (Friday 3D + assessment routine): gated repair of the Hospital unmount GPU leak + W44 assessment** (branch `claude/friday-assessment-20261030`, base main `49ddf69`). Subscription usage: **UNKNOWN**.
+  - **Board:** convened proportionately as subagents of the facilitator. The facilitator built the repair. A fresh agent acting as Alejandro did the code review (**APPROVE**, no blockers; NB1 and NB2 applied). A second fresh agent acting as Alejandro wrote the assessment. Sofia and Martin were not convened. Verbatim: [transcripts/2026-10-30-friday-3d-assessment.md](transcripts/2026-10-30-friday-3d-assessment.md).
+  - **R4 still unanswered** (#282 unchanged since 10-26), so Ascensor was not released. **New blocker found by the assessment (VERIFIED):** #282 and #292 «Más allá» (non-board, merged 10-29) both use **catalog id 243**; #282 must be renumbered before it can merge.
+  - **Search Console: still BLOCKED (R0).** Re-checked this run: the `searchconsole` query returned the Windsor placeholder ("reads are paused … 6 accounts connected (facebook: 2, google_ads: 1, googleanalytics4: 1, searchconsole: 2) … Free plan includes 1"). Every SEO indicator UNKNOWN.
+  - **Unit: gated repair**, the next item on the 10-28 leak list. LQG file [hospital-san-casi-vivo-repair-gpu-20261030.md](../audits/hospital-san-casi-vivo-repair-gpu-20261030.md).
+    - SwiftShader live WebGL textures after unmount: main 40→39 (390 px) and 67→64 (1280 px), no context lost; fixed 40→5 and 67→5, context lost; the world remounts with a non-blank canvas. New check `node scripts/qa-feria-browser.mjs --hospital-gpu` (4/4).
+    - Beyond the Feria pattern: the PMREM render target is now disposed as a target (its depth buffer survived `texture.dispose()`).
+    - Checks at `32425242`: `npm test` exit 0 (1,365 pass, 0 fail, `SPANISHCUE_TEST_WORKER_TIMEOUT_MS=180000`); `validate:artifact` OK; lint clean on changed files; `tsc` only the 3 errors already on main; diff-check clean. Regression test fails on main.
+  - **Weekly assessment:** [assessments/2026-W44.md](assessments/2026-W44.md). Board: 3 units in production by type (#284 SEO, #287 and #290 repairs), 1 strictly gated (#287), plus this repair if it deploys; 0 new worlds. Non-board #292 shipped A0–C2 `featured:true` with no LQG file.
+  - **Release (VERIFIED):** #293 merged as `285c2790` (CI + Auto Merge 40991519054). Staging 40992840393 and production 40993143516 both succeeded. The production smoke on https://spanishcue.com returned `"passed": true`, with `/hospital-san-casi-vivo` 302 and its `/resources` page 200, and the rollback was skipped. main = production = `285c2790`. PUBLISHED.md updated by the records PR from `claude/friday-assessment-records-20261030`.
+  - **Found, not fixed:** Hospital has no `webglcontextlost` handler (review NB4): a runtime context loss freezes the world instead of falling back to 2D.
+  - **Next action (W45 plan, assessment §6):**
+    1. Mon 11-02 3D slot: unblock Ascensor: renumber #282 off id 243, then the Actions speech-to-text + speaker check with a seeded-defect test and a §9.2 board decision (assessment §4.6). Release only if every clip passes.
+    2. Tue: LQG proposal for non-board units (AGENTS.md N1, owner decides) + sampled G3/G6 audit of #292; SEO compare if R0 is fixed, else COMP-001 pass 2 as a recorded decision.
+    3. Thu: UID → account-id re-keying decision item (Sofia drafts); academy M2 + L1.
+    4. Wed/Fri fallback: the next leak repair (bosque, then mas-alla), one world per PR.
+    5. Every run: a held unit still gets a records PR to main the same day; check catalog ids against main and open PRs before building.
+- **2026-10-29 (Thursday reliability routine): PR #290** (branch `claude/thursday-review-20261029`, base main `839ea09`). Subscription usage: **UNKNOWN**.
+  - **Board:** convened proportionately as subagents of the facilitator.
+    - Sofia: read-only audit of the academy/institutions API added since `4d2c680`.
+    - Alejandro: independent code review, **APPROVE** with no blockers; NB1–NB4 applied.
+    - Martin: not needed.
+    - Verbatim: [transcripts/2026-10-29-thursday-reliability.md](transcripts/2026-10-29-thursday-reliability.md).
+  - **CI and deploy health (VERIFIED, `gh run list` plus the runs API):**
+    - **Production:** main = production = `839ea09` (production 40627983845). The latest scheduled smoke, 40780552102, passed.
+    - **Red runs since 10-22:**
+      - The staging/production pairs for `d8f6aa45` and `9df652b8` (10-23) failed on "Promote" and "Enforce a single production deployer", the same safe refusal on overlapping merges seen before; a later SHA deployed each time.
+      - The other failed or cancelled runs are PR CI on other agents' branches.
+    - **Incident #289** (smoke, 10-28 05:33Z) closed itself at 12:45Z. Its run died with a bare `TimeoutError` that named no URL (fixed below).
+  - **Fixed in #290 (each with a regression test that fails on main):**
+    1. **Medium, access:** `removeMember` deleted the academy membership and revoked the `teacher_library` grant in separate D1 calls.
+       - A failure between the two left a former member with a permanent PRO grant that no retry or seat sync could reach.
+       - The delete and the revoke now run in one batch. Every `syncSeats` also revokes this academy's grants held by non-members, so any orphan that already exists in production is revoked at that academy's next sync.
+       - Whether such an orphan exists is UNKNOWN: production D1 was not queried.
+    2. **Low, monitoring:** the smoke script now names the method and path on a network failure, including a body read that stalls, and retries GET/HEAD once after 1.5 s. Status assertions are never retried, and writes are never repeated.
+       - In deploy-staging and deploy-production, a host that is down or hanging still fails both attempts and still rolls back.
+    3. **Test harness:** the academies test's env shim was frozen to the first test's object, so the "migration not run" test could not fail. It now reads the env lazily.
+  - **Diagnosed, not changed: the intermittent `DELETE /api/live-class` 503** from #287's first merge attempt.
+    - **Source (VERIFIED from the job 122602817160 log plus wrangler 4.92.0 `templates/startDevWorker/ProxyWorker.ts:214`):** it is wrangler dev's ProxyWorker reply "Your worker restarted mid-request". wrangler retries GET/HEAD in that case and gives a 1 ms 503 to any other method. The app answers 401 before touching D1.
+    - **What restarts the local Worker: UNKNOWN.** I ran 4 rounds of the 4 concurrent route tests with an fs watcher on `dist/server`: no writes, no failure.
+    - **Proposed fix (not applied):** in `scripts/test-worker.mjs` tests, retry a non-GET once when the 503 body starts with "Your worker restarted mid-request". This only tolerates the dev proxy and never an app 503 (the app's are JSON).
+  - **Sofia's audit, not fixed (for a later slot):**
+    - M2 (HYPOTHESIS): a stale `syncSeats` racing a seat reduction can briefly exceed the limit; the fix is to allocate inside one SQL batch.
+    - L1: accepting an invitation is not atomic (claim, then insert).
+    - L2: a malformed owner admin body gives 503, not 400.
+    - L3: two concurrent "create" requests give 503, not 409.
+    - L4: no admin hierarchy, and `/api/academy` writes are not rate-limited (product decision).
+    - **Clean:** identity headers, cross-academy isolation, invitation tokens (hashed, single-use, email-bound), Origin checks, SQL parameters, `no-store`, internal account ids (not the Firebase UID).
+  - **Checks at `0197d48d`:**
+    - `npm test`: exit 0, 1,354 pass, 0 fail. It was run with `SPANISHCUE_TEST_WORKER_TIMEOUT_MS=180000`, because the sandbox proxy slows wrangler dev's startup past the default 30 s.
+    - `validate:artifact`: OK.
+    - lint: clean on the changed files.
+    - `tsc`: only the 3 errors already on main.
+    - `git diff --check`: clean.
+  - **Release (VERIFIED):**
+    - #290 merged as `3fa53e0a` (CI + Auto Merge 40807599981).
+    - Staging 40809300412 and production 40809590103 both succeeded, with Worker version `e68408d8`.
+    - The production smoke on https://spanishcue.com ran the new smoke script and reported `"passed": true`. The lesson-reports smoke passed too, and the rollback was skipped.
+    - The academy fix has no anonymous surface, so it was not smoke-tested in production. Its evidence is the regression test and the deploy.
   - **Next action:**
-    - When R4 is answered, a board run records the result in the LQG file.
-      - If every clip is OK: re-run `npm test`, follow the one-PR-in-pipeline rule (check merge-lock and open ready PRs), mark #282 ready, verify the merged SHA, watch staging and production, smoke `/el-ascensor-del-cerro` → 302 `/acceso`, `/audio/escucha-3d/ascensor-b2-estacion.mp3` → 403 and the `/resources/` page → 200, then add it to PUBLISHED.md.
-      - If a clip is defective: Martin edits the `lines`, the audio workflow regenerates it, and someone listens again.
-    - **Wed 2026-10-28 3D slot:** while #282 waits, the next unit. BOARD-DECISION-002 rank 3 needs Martin's duplicate check first; otherwise run the concept pipeline (Eje Cafetero C1 stays deferred until the kit has proximity audio).
+    - The scheduled smoke monitor must keep passing on `3fa53e0a`.
+    - Next Thursday: M2 + L1 as one atomic-allocation change in `db/institutions.ts`, plus the test-worker 503 tolerance if the 503 recurs.
+    - Fri 10-30 3D slot as planned below.
+- **2026-10-28 (Wednesday 3D routine): gated repair of the Feria unmount GPU leak** (branch `claude/board-wed-3d-20261028`, base main `eaf931a`). Subscription usage: **UNKNOWN**.
+  - **Monday's unit is still held.** #282 «El ascensor del cerro» stays draft on R4, because no person has listened to its 6 clips. The rule needs a person: the G4 ruling in its LQG file says machine checks cannot close it, so this run did not try speech-to-text as a substitute. The model hosts are still blocked by the proxy anyway (openaipublic, huggingface and alphacephei time out). **Nothing about #282 changed.**
+  - **Unit chosen:** no 3D backlog item had its dependencies met. Rank 2 is blocked on R4; rank 3 is a grammar item that still needs Martin's duplicate check. Building a new world would hit the same §9.2 listening blocker, so the run took the verified Feria defect (QA note «dispose textures in World3D cleanup», the same as Ascensor code review B1) as a **gated repair**, reported as a repair.
+  - **Board:** convened proportionately. The facilitator built the fix. A fresh agent acting as Alejandro did the code review (**APPROVE**, NB1 and NB2 applied) and the delta check (**APPROVE**). Martin and Sofia were not needed. Verbatim: [transcripts/2026-10-28-wednesday-3d-feria-repair.md](transcripts/2026-10-28-wednesday-3d-feria-repair.md).
+  - **Evidence:** LQG file [la-feria-de-villaluz-repair-gpu-20261028.md](../audits/la-feria-de-villaluz-repair-gpu-20261028.md).
+    - SwiftShader count of live WebGL textures after the unmount:
+      - on main: 7→7 (390 px) and 22→20 (1280 px), with no context lost;
+      - fixed: 7→5 and 22→5, with the context lost.
+    - Smoke 78/78; `npm test` exit 0; lint clean on the changed files; `tsc` shows only the 3 errors already on main; `validate:artifact` OK; diff-check clean.
+  - **Found, not fixed (grep only, no browser check):** 11 other 3D cleanups call `renderer.dispose()` without texture-slot disposal or `forceContextLoss`: mundo-3d, marketing-de-casinos, bosque, hospital, madrid-infectada, noche-abierta (World3D + ItemStage), the-sound-map, immersive DemoScene, and grammar-classroom duration/studio. The rosa-dormida world calls `forceContextLoss`. Candidate repairs for later 3D or Thursday slots, one world per PR, each measured with the same browser counter.
+  - **Release (VERIFIED):** #287 merged as `bea20888` (CI + Auto Merge 40622898546). Staging 40625198904 and production 40625458992 both succeeded, with Worker version `ac61fd17`. The production smoke passed on spanishcue.com and included the Feria world (302), its audio (403) and its teacher page (200); the rollback was skipped. PUBLISHED.md moved the entry to Published (records PR from `claude/board-wed-3d-records-20261028`).
+    - The first `merge` attempt failed on an unrelated test: `tests/grammar-classroom-routes.test.mjs:55`, where an anonymous `DELETE /api/live-class` returned 503 instead of 401, in 1 ms. The same suite had passed in the `verify` job on the same tree. The one allowed re-run passed. **Root cause not found; treat it as an intermittent defect to investigate** (Thursday slot): a 503 that fast suggests the route's catch or a Worker-level response, not D1.
+  - **Next action:**
+    - **Fri 10-30 3D slot:** if R4 has been answered, release #282 first. Otherwise run the concept pipeline or take the next leak repair (start with the hospital and bosque worlds, which have the most traffic risk on PRO devices).
+    - Raise R4 again in the owner notification.
+- **2026-10-27 (Tuesday SEO routine): PR #284, DEPLOYED and verified in production** (branch `claude/tuesday-seo-20261027`, base main `25b9253`). Subscription usage: **UNKNOWN**.
+  - **Board convened as subagents of the facilitator, proportionately:** Alejandro led a read-only technical SEO audit, and Sofia did the independent code review (**APPROVE**, no blockers). Martin was not needed. They did not message each other. The messages are verbatim in [transcripts/2026-10-27-tuesday-seo.md](transcripts/2026-10-27-tuesday-seo.md).
+  - **Search Console: still BLOCKED (R0).** Re-checked at the start of the run: the `searchconsole` query for `sc-domain:spanishcue.com` returned the Windsor placeholder row ("reads are paused … 6 accounts connected … Free plan includes 1"). No rankings or traffic are reported.
+  - **Finding (VERIFIED from main history, cross-checked by Sofia over 75 commits):**
+    - **65 `/resources/*` URLs the sitemap once listed returned 404**, because the slug follows the level label and title.
+      - 6 broke on 2026-10-23 (032fba09, "one level per grammar class") and 51 with the 10-07 grammar-course rename.
+      - 64 of them still have a lesson. Id 222 (Puerto Neón) was removed, so its URL stays 404.
+    - Another 8 old aliases served duplicate 200 pages.
+  - **Fix (PR #284):**
+    - `app/resource-legacy-slugs.ts` 308-redirects those 72 slugs to the lesson's current page.
+    - `tests/fixtures/published-resource-slugs.json` lists all 389 slugs ever published. The `tests/resource-legacy-slugs.test.mjs` guard fails CI if a future rename drops a URL.
+    - `scripts/production-smoke.mjs` now asserts a legacy slug returns 308 to the right target. On spanishcue.com it accepts 404 until the release lands; staging requires the 308.
+  - **Checks at `f36c721b` (code), smoke test re-run at `ec16d5fa`:**
+    - `npm test`: exit 0, 1,350 pass, 0 fail. This includes the Worker-rendered test, which proves the built Worker returns a 308 with the correct `Location` from `…-b1-mexico`.
+    - lint: clean on the changed files. `tsc`: only the 3 errors already on main. `validate:artifact`: OK. `git diff --check`: clean.
+    - `production-smoke.test`: 11/11.
+  - **Not done / limits:**
+    - Changed-URL smoke from this sandbox is impossible (the egress proxy blocks spanishcue.com). The evidence must come from the post-merge Production Smoke Monitor results, which show `status: 308` for the legacy path.
+    - lastmod is missing on 368/432 sitemap URLs. Low priority: it needs real per-lesson dates, not build dates.
+    - Sofia's non-blocking notes: the redirect drops `?level=`, and the page-source regex test is brittle.
+  - **Release (VERIFIED):** #284 merged as `c8975523`. Runs: CI + Auto Merge 40438086546, staging 40439807119 and production 40440088211, all successful. The production smoke on spanishcue.com passed with the legacy path at **308** and its redirect target asserted (job 121978101510). PUBLISHED.md was updated by the records PR from `claude/tuesday-seo-records-20261027`.
+  - **Next action:**
+    - Once R0 is fixed, check Search Console for the "Not found" count and for impressions returning to the redirected URLs.
+    - COMP-001 pass 2 is still open (draft #225).
 - **2026-10-23 (Friday 3D + assessment routine): PR (this branch `claude/friday-assessment-20261023`, base main `373e8b33`).** Subscription usage: **UNKNOWN**.
   - **Board convened as subagents of the facilitator:** Sofia and Martin wrote proposals in parallel, Alejandro scored/selected and wrote the assessment. They did not message each other. Verbatim: [transcripts/2026-10-23-friday-concepts-assessment.md](transcripts/2026-10-23-friday-concepts-assessment.md).
   - **3D unit: NONE shipped this run.** No ready 3D item existed and rank 2 turned out to be a duplicate, so the run did concept pipeline steps 1–3. Selected: **«El ascensor del cerro», B2, Valparaíso** ([concept file](concepts/2026-10-23-valparaiso-ascensor-del-cerro.md)). Deferred: Eje Cafetero C1 (needs a kit proximity-audio feature first), El Dorado B1 (fallback).

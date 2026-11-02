@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "authorization": "Owner standing approval (Ale) for new English copy, typed «apruebo (siempre de ahora en más apruebo)» in the project thread «Biblioteca» on 2026-10-22 (message cmsg_01Gr5R4j3t2Yet65UcmhcVhAAAbp6kqDfMqxzNm3PL6f5g). Applied to the «Ver cómo funciona» video section Ale asked for on 2026-11-01 (message cmsg_01Gr5R4j3t2Yet65UcmhcVhABAyL823E1AQcm1MKkh4oG8).",
+  "additions": [
+    { "path": "app/marketing/HowItWorksVideos.tsx", "text": "SEE HOW IT WORKS" },
+    { "path": "app/marketing/HowItWorksVideos.tsx", "text": "This is what a SPANISHCUE lesson looks like on your screen." },
+    { "path": "app/marketing/HowItWorksVideos.tsx", "text": "Two real lessons, running on their own: a grammar lesson and a 3D conversation world. No sign-up to watch." },
+    { "path": "app/marketing/HowItWorksVideos.tsx", "text": "Grammar lesson" },
+    { "path": "app/marketing/HowItWorksVideos.tsx", "text": "Theory first, practice next and conversation to close. One screen, ready to share." },
+    { "path": "app/marketing/HowItWorksVideos.tsx", "text": "3D conversation world" },
+    { "path": "app/marketing/HowItWorksVideos.tsx", "text": "A 3D video game with seven levels, from absolute beginner to C2: your student talks because they want to solve the scene." },
+    { "path": "app/marketing/HowItWorksVideos.tsx", "text": "Open this lesson" },
+    { "path": "app/marketing/HowItWorksVideos.tsx", "text": "Try a free lesson" },
+    { "path": "app/marketing/HowItWorksVideos.tsx", "text": "See pricing" }
+  ]
+}

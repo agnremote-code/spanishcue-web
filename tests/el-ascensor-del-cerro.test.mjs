@@ -22,8 +22,8 @@ test('release gate: every circle of the only listed level is authored (G6) and t
   assert.deepEqual(blocked, []);
   assert.deepEqual(LEVELS.map(l => l.id), ['B2']);
   assert.deepEqual(GAMES.ascensor.levels, ['B2']);
-  assert.match(catalog, /\{id:243,[^\n]*levels:\["B2"\],displayLevel:"B2"[^\n]*path:"\/el-ascensor-del-cerro"/);
-  assert.match(catalog, /\{id:243,news:\{addedAt:"2026-10-26",featured:false\}/, 'not featured until the G5(b) real-device check');
+  assert.match(catalog, /\{id:246,[^\n]*levels:\["B2"\],displayLevel:"B2"[^\n]*path:"\/el-ascensor-del-cerro"/);
+  assert.match(catalog, /\{id:246,news:\{addedAt:"2026-11-02",featured:false\}/, 'not featured until the G5(b) real-device check');
   for (const path of ['docs/audits/el-ascensor-del-cerro-g4-review-20261026.md', 'docs/audits/el-ascensor-del-cerro-pedagogy-20261026.md']) assert.ok(existsSync(path), path);
   assert.match(readFileSync('docs/audits/el-ascensor-del-cerro-g4-review-20261026.md', 'utf8'), /G4 VERDICT \(final\): APPROVE/);
 });
@@ -159,7 +159,7 @@ test('E1: route progress counts route circles and reaches 100 only on «Terminar
   }
   assert.match(game, /fetch\('\/api\/progress', \{ method: 'PUT'/);
   assert.match(game, /lessonId: LESSON_ID/);
-  assert.equal(E.LESSON_ID, 243);
+  assert.equal(E.LESSON_ID, 246);
 });
 
 test('without 3D the list reaches every circle, listening and the closing; reduced motion and context loss fall back', () => {
@@ -186,8 +186,8 @@ test('no new dependency, no API route, access policy untouched; PRO by default; 
   const pkg = JSON.parse(readFileSync('package.json', 'utf8'));
   assert.ok(!Object.keys({ ...pkg.dependencies, ...pkg.devDependencies }).some(d => /fiber|drei|cannon|rapier|gltf/i.test(d)));
   assert.ok(!existsSync('app/api/ascensor'));
-  assert.doesNotMatch(readFileSync('app/access-policy.ts', 'utf8'), /243|ascensor/);
-  const row = catalog.split('\n').find(line => line.startsWith('  {id:243,'));
+  assert.doesNotMatch(readFileSync('app/access-policy.ts', 'utf8'), /246|ascensor/);
+  const row = catalog.split('\n').find(line => line.startsWith('  {id:246,'));
   const layout = readFileSync('app/el-ascensor-del-cerro/layout.tsx', 'utf8');
   for (const text of [row, layout]) assert.doesNotMatch(text, /acento chileno|Chilean accent|voces chilenas/i);
 });
@@ -198,7 +198,7 @@ test('same controls and teacher tools as the other 3D worlds', () => {
 });
 
 test('the catalog cover exists and matches the other 3D covers (1200×750 lossy WebP)', () => {
-  const row = catalog.split('\n').find(line => line.startsWith('  {id:243,'));
+  const row = catalog.split('\n').find(line => line.startsWith('  {id:246,'));
   const image = row.match(/image:"([^"]+)"/)?.[1];
   assert.equal(image, '/el-ascensor-del-cerro/cover.webp');
   const file = readFileSync(`public${image}`);

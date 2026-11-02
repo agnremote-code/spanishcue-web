@@ -365,7 +365,7 @@ test('the language of every scene: three bands, the level of the URL, neutral Sp
   assert.equal(street.bandFor('B2'), 'B');
   state = street.chooseLine(state, one.nodes[one.start].options[0].id);
   assert.equal(street.streetView(state, 'A2').said.reply, one.nodes[one.start].options[0].reply.A);
-  const lesson = readFileSync('app/noche-abierta/NocheAbierta.tsx', 'utf8');
+  const lesson = readFileSync('app/noche-abierta/NocheGame.tsx', 'utf8');
   assert.match(lesson, /params\.get\('level'\) \?\? params\.get\('nivel'\)/, '?nivel= works like ?level=');
 });
 
@@ -431,7 +431,7 @@ test('the 3D street: object choice, inventory, Q to use it, street scenes and th
   assert.match(scene, /createStreetCrowd\(/);
   assert.match(scene, /buildDistricts\(/);
   assert.match(scene, /holdItem\(/);
-  const lesson = readFileSync('app/noche-abierta/NocheAbierta.tsx', 'utf8');
+  const lesson = readFileSync('app/noche-abierta/NocheGame.tsx', 'utf8');
   assert.match(lesson, /<StreetCard /);
   assert.match(lesson, /<ItemPicker /);
   assert.match(lesson, /streetSummary\(street\)/, 'the final recap includes the street');

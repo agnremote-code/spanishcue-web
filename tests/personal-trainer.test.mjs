@@ -122,7 +122,7 @@ test("the activity is published as a locked B1 conversation lesson", () => {
   assert.equal(lesson.category, "Conversación");
   assert.equal(lesson.conversationMode, "play");
   assert.equal(lesson.title, "Entrenador personal");
-  assert.equal(lesson.image, "/entrenador-personal/hero.webp");
+  assert.equal(lesson.image, "/conversation-classics/entrenador-personal.webp");
   assert.equal(product.free, false);
   assert.equal(product.trailingId, lesson.id);
 });

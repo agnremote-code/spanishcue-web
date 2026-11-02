@@ -1,0 +1,2132 @@
+{
+  "game": "consorcio",
+  "level": "C1",
+  "items": [
+    {
+      "id": "llegada",
+      "title": "Crónica de un encargado",
+      "place": "La vereda de Medrano 1417",
+      "context": "Don Ramón le cuenta a Freddy, con ironía, cómo ha cambiado el oficio de encargado en treinta años.",
+      "speakers": [
+        {
+          "name": "Ramón",
+          "country": "Paraguay",
+          "voice": "es-PY-MarioNeural"
+        },
+        {
+          "name": "Freddy",
+          "country": "Bolivia",
+          "voice": "es-BO-MarceloNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Mire, Freddy, cuando empecé en este edificio, en 1994, el encargado era una mezcla de cura, médico y archivista. Uno sabía quién se peleaba con quién, quién no pagaba las expensas y quién volvía tarde los viernes."
+        },
+        {
+          "s": 1,
+          "text": "O sea, una especie de Doña Elvira con escoba."
+        },
+        {
+          "s": 0,
+          "text": "No sea irrespetuoso. Elvira sabe las cosas; yo las guardaba. Esa es la diferencia entre el chisme y el oficio."
+        },
+        {
+          "s": 1,
+          "text": "¿Y ahora qué cambió?"
+        },
+        {
+          "s": 0,
+          "text": "Ahora todo pasa por el grupo de WhatsApp. Si se rompe una lamparita, hay veinte mensajes antes de que yo me entere. La gente ya no toca mi timbre: me escribe a las tres de la mañana con signos de exclamación."
+        },
+        {
+          "s": 1,
+          "text": "Bueno, pero al menos así le avisan antes."
+        },
+        {
+          "s": 0,
+          "text": "Me avisan, sí. Lo que se perdió es la conversación. Antes, cuando alguien bajaba a decirme que perdía la canilla, de paso me contaba que su hija se casaba o que tenía miedo de perder el trabajo. Ahora me mandan una foto de la canilla y listo."
+        },
+        {
+          "s": 1,
+          "text": "Es decir, que el problema no es la tecnología, sino que nadie baja."
+        },
+        {
+          "s": 0,
+          "text": "Exactamente. Por eso a los recién llegados les pido que, al menos la primera vez, me vengan a ver en persona. Después, que escriban lo que quieran."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cómo describe Ramón el trabajo del encargado en 1994?",
+          "options": [
+            "Como un trabajo solo de limpieza",
+            "Como una mezcla de cura, médico y archivista",
+            "Como un trabajo aburrido"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué diferencia hay entre Elvira y Ramón, según él?",
+          "options": [
+            "Elvira sabe las cosas y él las guardaba",
+            "Elvira trabaja más",
+            "Ramón cuenta más chismes"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué se perdió, según Ramón?",
+          "options": [
+            "El respeto",
+            "El dinero",
+            "La conversación"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué les pide Ramón a los recién llegados?",
+          "options": [
+            "Que no usen WhatsApp",
+            "Que lo visiten en persona al menos la primera vez",
+            "Que paguen las expensas a tiempo"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Crees que la mensajería instantánea ha empobrecido la vida de barrio?",
+          "model": "En parte sí, porque resolvemos todo por escrito y casi no nos vemos, aunque también facilita la organización."
+        },
+        {
+          "q": "¿Qué diferencia ves entre saber cosas de los demás y ser discreto con lo que sabes?",
+          "model": "La discreción convierte la información en confianza; el chisme la convierte en poder."
+        },
+        {
+          "q": "¿Qué oficio tradicional te parece que ha perdido su dimensión humana?",
+          "model": "El del cartero, que antes conocía a todo el barrio y ahora apenas tiene tiempo de saludar."
+        }
+      ],
+      "gaps": "Lo que se [perdió] es la [conversación]. Antes, cuando alguien [bajaba] a decirme que perdía la [canilla]",
+      "glossary": [
+        {
+          "word": "archivista",
+          "meaning": "persona que organiza y guarda documentos"
+        },
+        {
+          "word": "irrespetuoso",
+          "meaning": "que no muestra respeto"
+        },
+        {
+          "word": "lamparita",
+          "meaning": "bombilla pequeña"
+        }
+      ]
+    },
+    {
+      "id": "buzones",
+      "title": "Elogio del chisme",
+      "place": "El hall de entrada",
+      "context": "Doña Elvira defiende ante Nahuel su manera de informarse sobre el edificio.",
+      "speakers": [
+        {
+          "name": "Elvira",
+          "country": "España",
+          "voice": "es-ES-ElviraNeural"
+        },
+        {
+          "name": "Nahuel",
+          "country": "Argentina",
+          "voice": "es-AR-TomasNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Mira, Nahuel, la gente me llama chismosa, pero en este edificio, si no fuera por mí, nadie se habría enterado de la mitad de las cosas importantes."
+        },
+        {
+          "s": 1,
+          "text": "¿Como qué, señora?"
+        },
+        {
+          "s": 0,
+          "text": "Como que el administrador, casualmente, solo presentó el presupuesto de su cuñado. O que alguien en el séptimo está rompiendo paredes. ¿Tú crees que el contador lo habría contado por iniciativa propia?"
+        },
+        {
+          "s": 1,
+          "text": "Visto así, usted sería una especie de periodista de investigación."
+        },
+        {
+          "s": 0,
+          "text": "Exacto. Solo que sin sueldo y con más ética que muchos diarios."
+        },
+        {
+          "s": 1,
+          "text": "Con todo respeto, señora, los periodistas no suelen abrir cartas ajenas."
+        },
+        {
+          "s": 0,
+          "text": "Yo no abro cartas. A veces se caen de los buzones, que están rotos desde 2003, y alguien tiene que asegurarse de que no se pierdan. Si de paso me entero de algo, no es culpa mía."
+        },
+        {
+          "s": 1,
+          "text": "Comprendo. Entonces le voy a pedir un favor: si algún día se le cae una carta mía, devuélvamela cerrada."
+        },
+        {
+          "s": 0,
+          "text": "Querido, tú no recibes cartas. Recibes paquetes. Y los paquetes, por suerte para ti, no se pueden leer."
+        },
+        {
+          "s": 1,
+          "text": "Menos mal. Aunque estoy seguro de que, por el tamaño, usted ya sabe qué hay dentro."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cómo se ve Elvira a sí misma?",
+          "options": [
+            "Como una chismosa sin remedio",
+            "Como una especie de periodista de investigación",
+            "Como una administradora"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué ejemplos da de lo que ha descubierto?",
+          "options": [
+            "El presupuesto del cuñado y las paredes rotas del séptimo",
+            "La boda de una vecina",
+            "Las deudas del encargado"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cómo explica que lea cartas?",
+          "options": [
+            "Dice que tiene permiso",
+            "Dice que son suyas",
+            "Dice que se caen de los buzones rotos"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué le pide Nahuel?",
+          "options": [
+            "Que no hable de él",
+            "Que le devuelva cerradas sus cartas",
+            "Que firme por él"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Puede el chisme cumplir alguna función positiva en una comunidad?",
+          "model": "Puede servir como control social y destapar abusos, aunque también hace mucho daño."
+        },
+        {
+          "q": "¿Dónde está, para ti, el límite entre curiosidad e intromisión?",
+          "model": "Cuando lo que averiguas no te afecta y puede perjudicar a otra persona."
+        },
+        {
+          "q": "¿Qué opinas de quienes justifican sus actos con razones aparentemente nobles?",
+          "model": "Me generan desconfianza, porque muchas veces la causa noble es solo una excusa."
+        }
+      ],
+      "gaps": "A veces se [caen] de los [buzones], que están [rotos] desde [2003]",
+      "glossary": [
+        {
+          "word": "chismosa",
+          "meaning": "persona que cuenta cosas de los demás"
+        },
+        {
+          "word": "por iniciativa propia",
+          "meaning": "sin que nadie lo pida"
+        },
+        {
+          "word": "ajenas",
+          "meaning": "que son de otras personas"
+        }
+      ]
+    },
+    {
+      "id": "consultorio",
+      "title": "Notas de una psicoanalista",
+      "place": "El consultorio del 1.° B",
+      "context": "Marta graba una nota de voz para sí misma después de la sesión con Federico y la inesperada visita.",
+      "speakers": [
+        {
+          "name": "Marta",
+          "country": "Argentina",
+          "voice": "es-AR-ElenaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Nota del martes, siete y media de la tarde. Sesión con F. Interrumpida, una vez más, por un tercero. Esta vez, la persona que se acaba de mudar al cuarto B."
+        },
+        {
+          "s": 0,
+          "text": "Curiosamente, la interrupción ha resultado más productiva que las últimas cuatro sesiones. F. ha aceptado escuchar de un desconocido lo que lleva semanas sin aceptar de mí: que su miedo no tiene tanto que ver con el ascensor como con la pérdida de control."
+        },
+        {
+          "s": 0,
+          "text": "Esto me obliga a reflexionar sobre mi propio lugar. ¿Será que mi silencio, en lugar de abrir un espacio, le está devolviendo la imagen de su hermano mayor, el que lo encerraba en el armario y no contestaba?"
+        },
+        {
+          "s": 0,
+          "text": "Hipótesis para el jueves: introducir alguna intervención más directa, sin abandonar el encuadre. Y analizar por qué F. necesita llevar sus conflictos al terreno público: primero el grupo de WhatsApp, ahora la asamblea."
+        },
+        {
+          "s": 0,
+          "text": "Apunte personal: tengo que admitir que me molestó que la intervención del vecino fuera tan acertada. Eso habla más de mi vanidad profesional que de F. Lo dejo anotado para mi propia supervisión."
+        },
+        {
+          "s": 0,
+          "text": "Y, por último, recordar que esta noche hay asamblea. No pienso hablar. Aunque, si votan reemplazar ese ascensor, voy a extrañar el ruido de la reja: es lo único que me avisa de que llega un paciente."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Quién interrumpió la sesión?",
+          "options": [
+            "Federico",
+            "La persona nueva del cuarto B",
+            "Ramón"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué ha aceptado Federico gracias a la interrupción?",
+          "options": [
+            "Que su miedo tiene que ver con la pérdida de control",
+            "Que el ascensor es peligroso",
+            "Que tiene que mudarse"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué se pregunta Marta sobre su silencio?",
+          "options": [
+            "Si es demasiado caro",
+            "Si aburre a Federico",
+            "Si le recuerda al hermano que lo encerraba"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué reconoce Marta sobre sí misma?",
+          "options": [
+            "Que tiene miedo del ascensor",
+            "Que le molestó que el vecino acertara",
+            "Que quiere mudarse"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Te cuesta aceptar que otra persona haya acertado donde tú no lo conseguiste?",
+          "model": "Me cuesta un poco, sobre todo en mi campo profesional, pero intento aprender de ello."
+        },
+        {
+          "q": "¿Por qué crees que algunas personas llevan sus conflictos privados al espacio público?",
+          "model": "Quizás porque necesitan testigos o porque buscan apoyo que no encuentran en privado."
+        },
+        {
+          "q": "¿Qué sonido cotidiano extrañarías si desapareciera?",
+          "model": "El ruido de la persiana del vecino por la mañana, que me indica que empieza el día."
+        }
+      ],
+      "gaps": "Y [analizar] por qué F. [necesita] llevar sus [conflictos] al terreno [público]",
+      "glossary": [
+        {
+          "word": "interrumpida",
+          "meaning": "cortada antes de terminar"
+        },
+        {
+          "word": "acertada",
+          "meaning": "correcta, adecuada"
+        },
+        {
+          "word": "vanidad",
+          "meaning": "orgullo excesivo por uno mismo"
+        }
+      ]
+    },
+    {
+      "id": "bateria",
+      "title": "Elogio del ruido",
+      "place": "El 1.° C",
+      "context": "Noelia y Thiago reflexionan sobre el ruido y la convivencia mientras esperan la asamblea.",
+      "speakers": [
+        {
+          "name": "Noelia",
+          "country": "Costa Rica",
+          "voice": "es-CR-MariaNeural"
+        },
+        {
+          "name": "Thiago",
+          "country": "Costa Rica",
+          "voice": "es-CR-JuanNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "¿Sabes qué es lo que más me indigna, Thiago? Que en este edificio se toleran ruidos de todo tipo, siempre que no sean de jóvenes."
+        },
+        {
+          "s": 1,
+          "text": "¿A qué te refieres?"
+        },
+        {
+          "s": 0,
+          "text": "A que nadie se queja del tango de Washington a todo volumen, ni de los gatos de Pocha a las tres de la mañana, ni del martillo del séptimo, que lleva un mes sonando. Pero tú tocas dos horas en horario permitido y te dejan una carta anónima."
+        },
+        {
+          "s": 1,
+          "text": "Bueno, mamá, la batería suena bastante más fuerte que un tango."
+        },
+        {
+          "s": 0,
+          "text": "No te pongas del lado de tus enemigos, por favor. Lo que digo es que el ruido de los mayores se considera tradición, y el de los jóvenes, molestia."
+        },
+        {
+          "s": 1,
+          "text": "Puede ser. Aunque también es verdad que nunca les pregunté a los vecinos si les molestaba. Simplemente me puse a tocar."
+        },
+        {
+          "s": 0,
+          "text": "Eso es cierto. Quizás los dos hemos dado por sentado que teníamos razón."
+        },
+        {
+          "s": 1,
+          "text": "Entonces esta noche propongo algo: que el sótano se use como sala de ensayo para todos. Para mí, para Don Horacio si vuelve a tocar el saxofón, para quien quiera."
+        },
+        {
+          "s": 0,
+          "text": "Me encanta. Convertir una queja en un proyecto. Eso sí que no se lo esperan."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué indigna a Noelia?",
+          "options": [
+            "Que se toleren ruidos de todos excepto de los jóvenes",
+            "Que el sótano esté cerrado",
+            "Que Thiago no practique"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué reconoce Thiago?",
+          "options": [
+            "Que su batería es silenciosa",
+            "Que nunca les preguntó a los vecinos si les molestaba",
+            "Que escribió la carta"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué conclusión saca Noelia?",
+          "options": [
+            "Que Thiago debe dejar de tocar",
+            "Que tienen que mudarse",
+            "Que los dos dieron por sentado que tenían razón"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué propone Thiago para la asamblea?",
+          "options": [
+            "Prohibir el tango",
+            "Usar el sótano como sala de ensayo para todos",
+            "Poner goma espuma en todo el edificio"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Crees que en tu cultura se juzgan de forma distinta los ruidos de jóvenes y mayores?",
+          "model": "Sí, la música de los jóvenes suele verse como molestia y la de los mayores, como costumbre."
+        },
+        {
+          "q": "¿Has dado por sentado alguna vez que tenías razón y después descubriste que no?",
+          "model": "Sí, en una discusión con mi pareja sobre las tareas de la casa."
+        },
+        {
+          "q": "¿Qué proyecto comunitario podría nacer de un conflicto en tu barrio?",
+          "model": "De las quejas por la basura podría salir un sistema de reciclaje vecinal."
+        }
+      ],
+      "gaps": "Lo que digo es que el [ruido] de los mayores se [considera] [tradición], y el de los jóvenes, [molestia].",
+      "glossary": [
+        {
+          "word": "indigna",
+          "meaning": "de «indignar»: provocar enojo por algo injusto"
+        },
+        {
+          "word": "dado por sentado",
+          "meaning": "aceptado sin comprobar"
+        },
+        {
+          "word": "sala de ensayo",
+          "meaning": "lugar para practicar música"
+        }
+      ]
+    },
+    {
+      "id": "gotera",
+      "title": "Ingeniería de la paciencia",
+      "place": "El 2.° A",
+      "context": "Carla le confiesa a Wilson algo que lleva meses pensando, mientras él prepara su presentación.",
+      "speakers": [
+        {
+          "name": "Carla",
+          "country": "Perú",
+          "voice": "es-PE-CamilaNeural"
+        },
+        {
+          "name": "Wilson",
+          "country": "Perú",
+          "voice": "es-PE-AlexNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Wilson, deja un momento el plano. Tengo que decirte algo y prefiero hacerlo antes de la asamblea."
+        },
+        {
+          "s": 1,
+          "text": "Me estás asustando."
+        },
+        {
+          "s": 0,
+          "text": "No es para tanto. Es que la gotera no es el verdadero motivo por el que quiero mudarme. Es un buen pretexto, nada más."
+        },
+        {
+          "s": 1,
+          "text": "¿Y cuál es el verdadero motivo?"
+        },
+        {
+          "s": 0,
+          "text": "Que en este edificio somos «los peruanos del segundo». Llevamos seis años aquí y la mitad de los vecinos todavía no sabe cómo me llamo. Elvira me saluda como si yo trabajara en el edificio."
+        },
+        {
+          "s": 1,
+          "text": "Carla, yo no lo había visto así. Siempre pensé que era cuestión de tiempo."
+        },
+        {
+          "s": 0,
+          "text": "Seis años es bastante tiempo. Por eso me molesta tanto que el administrador diga que es un problema entre particulares. Para mí suena a «arréglense ustedes, que no son de aquí»."
+        },
+        {
+          "s": 1,
+          "text": "Entonces esta noche no voy a hablar solo de caños. Voy a decir que llevamos seis años pagando expensas y que merecemos el mismo trato que cualquiera."
+        },
+        {
+          "s": 0,
+          "text": "No hace falta que lo digas así. Basta con que hables con la seguridad de quien sabe que tiene razón. Lo demás lo van a entender solos."
+        },
+        {
+          "s": 1,
+          "text": "De acuerdo. Pero tú te sientas en primera fila y, cuando termine, te presento con nombre y apellido."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué confiesa Carla?",
+          "options": [
+            "Que la gotera es un pretexto",
+            "Que quiere volver a Perú",
+            "Que no le gusta el departamento"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué le molesta de cómo la tratan?",
+          "options": [
+            "Que le cobran más",
+            "Que la mitad de los vecinos no sabe su nombre",
+            "Que no la invitan a las fiestas"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cómo interpreta Carla la frase del administrador?",
+          "options": [
+            "Como un consejo técnico",
+            "Como una broma",
+            "Como «arréglense, que no son de aquí»"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué le aconseja Carla a Wilson?",
+          "options": [
+            "Que hable con seguridad, sin necesidad de decirlo explícitamente",
+            "Que no hable en la asamblea",
+            "Que denuncie al administrador"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Has sentido alguna vez que te trataban como a alguien de fuera en tu propio barrio o trabajo?",
+          "model": "Sí, al principio en mi trabajo me sentía invisible por no hablar bien el idioma."
+        },
+        {
+          "q": "¿Por qué crees que a veces usamos un problema práctico como pretexto para hablar de otro más profundo?",
+          "model": "Porque es más fácil hablar de una gotera que de cómo nos sentimos."
+        },
+        {
+          "q": "¿Es más eficaz denunciar una discriminación de forma explícita o mostrar seguridad sin nombrarla?",
+          "model": "Depende del contexto, pero a veces la seguridad desarma más que la denuncia."
+        }
+      ],
+      "gaps": "Basta con que [hables] con la [seguridad] de quien sabe que [tiene] [razón].",
+      "glossary": [
+        {
+          "word": "pretexto",
+          "meaning": "motivo falso que se usa para ocultar el verdadero"
+        },
+        {
+          "word": "trato",
+          "meaning": "manera de comportarse con alguien"
+        },
+        {
+          "word": "nombre y apellido",
+          "meaning": "identidad completa de una persona"
+        }
+      ]
+    },
+    {
+      "id": "gatos",
+      "title": "Sobre la soledad y los gatos",
+      "place": "El 2.° D",
+      "context": "Gastón y Doña Pocha toman el té mientras ella le explica su teoría sobre los edificios y la soledad.",
+      "speakers": [
+        {
+          "name": "Pocha",
+          "country": "Uruguay",
+          "voice": "es-UY-ValentinaNeural"
+        },
+        {
+          "name": "Gastón",
+          "country": "Venezuela",
+          "voice": "es-VE-SebastianNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Gastón, ¿sabes cuánta gente vive sola en este edificio? Yo los conté: once de veintiocho departamentos. Casi la mitad."
+        },
+        {
+          "s": 1,
+          "text": "Es mucho, señora. En Caracas, en mi edificio, vivíamos nueve en un tres ambientes."
+        },
+        {
+          "s": 0,
+          "text": "Ahí está la diferencia. Aquí la soledad se disfraza de independencia. La gente dice que vive sola porque le gusta, y a veces es verdad, pero muchas veces es que nadie toca su puerta en semanas."
+        },
+        {
+          "s": 1,
+          "text": "¿Y los gatos lo solucionan?"
+        },
+        {
+          "s": 0,
+          "text": "No lo solucionan, pero lo hacen más llevadero. Un gato te obliga a comprar comida, a limpiar, a volver a casa. Y, sobre todo, te da un tema de conversación. Cuando Washington tuvo a Tango, empezó a bajar al hall a contarme sus travesuras. Fue después de enterrar a Elsa."
+        },
+        {
+          "s": 1,
+          "text": "O sea, que usted no regala gatos. Regala excusas para hablar con los demás."
+        },
+        {
+          "s": 0,
+          "text": "Lo has entendido mejor que nadie. Ni siquiera mi hija lo entiende: cree que estoy loca."
+        },
+        {
+          "s": 1,
+          "text": "Señora, le prometo una cosa: voy a cuidar a Merengue y, cada vez que venga a arreglar algo, le cuento cómo está."
+        },
+        {
+          "s": 0,
+          "text": "Así me gusta. Y si alguna vez te sientes solo en tu monoambiente, ya sabes dónde hay té."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cuántos departamentos tienen una persona sola?",
+          "options": [
+            "Nueve",
+            "Once",
+            "Veintiocho"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cómo se disfraza la soledad, según Pocha?",
+          "options": [
+            "De independencia",
+            "De trabajo",
+            "De tristeza"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué cambió en Washington cuando tuvo a Tango?",
+          "options": [
+            "Se mudó",
+            "Dejó de bailar",
+            "Empezó a bajar al hall a hablar"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué concluye Gastón?",
+          "options": [
+            "Que Pocha está loca",
+            "Que Pocha regala excusas para hablar con los demás",
+            "Que los gatos son caros"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Crees que la soledad urbana está aumentando? ¿Por qué?",
+          "model": "Sí, porque vivimos más solos y trabajamos más horas frente a pantallas."
+        },
+        {
+          "q": "¿Qué «excusas para hablar» usas tú para relacionarte con desconocidos?",
+          "model": "El perro, sin duda: en el parque siempre empiezo conversaciones gracias a él."
+        },
+        {
+          "q": "¿Qué diferencia hay, para ti, entre vivir sola o solo por elección y por necesidad?",
+          "model": "La elección te da libertad; la necesidad suele ir acompañada de aislamiento."
+        }
+      ],
+      "gaps": "Aquí la [soledad] se [disfraza] de [independencia]. La gente dice que vive [sola] porque le gusta",
+      "glossary": [
+        {
+          "word": "llevadero",
+          "meaning": "fácil de soportar"
+        },
+        {
+          "word": "travesuras",
+          "meaning": "acciones traviesas, juegos que causan pequeños problemas"
+        },
+        {
+          "word": "enterrar",
+          "meaning": "poner bajo tierra a una persona muerta"
+        }
+      ]
+    },
+    {
+      "id": "teletrabajo",
+      "title": "La economía de la atención",
+      "place": "El 3.° A",
+      "context": "Yuliana y Wilson, ya reconciliados, conversan sobre el trabajo remoto mientras toman café colombiano.",
+      "speakers": [
+        {
+          "name": "Yuliana",
+          "country": "Venezuela",
+          "voice": "es-VE-PaolaNeural"
+        },
+        {
+          "name": "Wilson",
+          "country": "Perú",
+          "voice": "es-PE-AlexNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Wilson, ¿sabe qué me hizo pensar lo de la bañera? Que llevo un año viviendo en Buenos Aires y en realidad vivo en Nueva York. Me despierto con sus horarios, almuerzo frente a la pantalla y ceno con los auriculares puestos."
+        },
+        {
+          "s": 1,
+          "text": "Es curioso. Yo vine de Lima para estar presente en una obra, físicamente. Usted vino de Bogotá para estar ausente en un departamento."
+        },
+        {
+          "s": 0,
+          "text": "Qué manera tan cruel y tan exacta de decirlo."
+        },
+        {
+          "s": 1,
+          "text": "No lo digo para criticarla. Mi hijo trabaja así también, desde Mendoza, para una empresa de Alemania. Gana bien, pero a veces lo llamo y noto que tiene la cabeza en otro continente."
+        },
+        {
+          "s": 0,
+          "text": "Lo peor es que nadie te obliga. Uno mismo se exige estar siempre disponible, por si acaso alguien piensa que no estás comprometido."
+        },
+        {
+          "s": 1,
+          "text": "Pues hoy su jefe le demostró lo contrario. Usted cortó diez minutos por una emergencia y le dieron el ascenso."
+        },
+        {
+          "s": 0,
+          "text": "Es verdad. Y desde hoy tengo una nueva regla: los auriculares se quitan a las siete de la tarde, pase lo que pase."
+        },
+        {
+          "s": 1,
+          "text": "Muy bien. Y si quiere comprobar que funciona, le invito el domingo a un ceviche. Sin pantallas."
+        },
+        {
+          "s": 0,
+          "text": "Acepto. Pero yo llevo el café."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué descubrió Yuliana con lo de la bañera?",
+          "options": [
+            "Que su departamento es pequeño",
+            "Que vive en Buenos Aires pero en realidad vive en Nueva York",
+            "Que su jefe es injusto"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cómo resume Wilson la diferencia entre ambos?",
+          "options": [
+            "Él vino a estar presente; ella, a estar ausente",
+            "Él trabaja más que ella",
+            "Ella gana más que él"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué le pasa al hijo de Wilson?",
+          "options": [
+            "Está desempleado",
+            "Vive en Alemania",
+            "Tiene la cabeza en otro continente"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cuál es la nueva regla de Yuliana?",
+          "options": [
+            "No trabajar los domingos",
+            "Quitarse los auriculares a las siete de la tarde",
+            "Cambiar de trabajo"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Crees que el trabajo remoto nos hace estar «ausentes» de donde vivimos?",
+          "model": "En parte sí; puedes vivir años en una ciudad sin integrarte en ella."
+        },
+        {
+          "q": "¿Te exiges estar siempre disponible en tu trabajo o tus estudios?",
+          "model": "Sí, y me cuesta desconectar incluso los fines de semana."
+        },
+        {
+          "q": "¿Qué regla personal te ayuda a separar la vida profesional de la privada?",
+          "model": "No contesto mensajes de trabajo después de las ocho."
+        }
+      ],
+      "gaps": "Uno [mismo] se [exige] estar siempre [disponible], por si acaso alguien piensa que no estás [comprometido].",
+      "glossary": [
+        {
+          "word": "ausente",
+          "meaning": "que no está presente"
+        },
+        {
+          "word": "disponible",
+          "meaning": "preparado para atender en cualquier momento"
+        },
+        {
+          "word": "ceviche",
+          "meaning": "plato peruano de pescado crudo con limón"
+        }
+      ]
+    },
+    {
+      "id": "turistas",
+      "title": "El viajero y el vecino",
+      "place": "El 3.° C",
+      "context": "Nerea e Iker discuten, ya en la cama, sobre su responsabilidad como turistas en un barrio residencial.",
+      "speakers": [
+        {
+          "name": "Nerea",
+          "country": "España",
+          "voice": "es-ES-XimenaNeural"
+        },
+        {
+          "name": "Iker",
+          "country": "España",
+          "voice": "es-ES-AlvaroNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Iker, no puedo dormir. Me ha quedado dando vueltas lo que dijo el profesor del tercero D."
+        },
+        {
+          "s": 1,
+          "text": "¿Que somos ilegales? Nerea, por favor, pagamos todo por la aplicación."
+        },
+        {
+          "s": 0,
+          "text": "No, lo otro. Lo de que en su barrio de toda la vida ya no quedan vecinos porque todos los pisos son para turistas. Que la panadería de la esquina ahora vende tostadas de aguacate a precio de oro."
+        },
+        {
+          "s": 1,
+          "text": "Ya, pero eso pasa también en San Sebastián. En la parte vieja, ya casi no vive nadie."
+        },
+        {
+          "s": 0,
+          "text": "Precisamente por eso. Nos quejamos de los turistas en casa y aquí somos nosotros los turistas. Es un poco hipócrita, ¿no?"
+        },
+        {
+          "s": 1,
+          "text": "Visto así… Pero no vamos a solucionar el problema de la vivienda en Buenos Aires durmiendo en un hotel."
+        },
+        {
+          "s": 0,
+          "text": "No, pero podemos ser conscientes. Comprar en el mercado del barrio, no en las cadenas. Hablar con los vecinos. Y esta noche, en la asamblea, reconocer que el problema existe, aunque no sea culpa nuestra."
+        },
+        {
+          "s": 1,
+          "text": "Y llevar sidra."
+        },
+        {
+          "s": 0,
+          "text": "Y llevar sidra, sí. La conciencia social no está reñida con la buena educación."
+        },
+        {
+          "s": 1,
+          "text": "Vale. Pero si el profesor nos acusa, me lo dejas a mí."
+        },
+        {
+          "s": 0,
+          "text": "Ni hablar. Si te lo dejo a ti, terminamos en el consulado."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué le dio vueltas a Nerea?",
+          "options": [
+            "Que son ilegales",
+            "Que en el barrio del profesor ya no quedan vecinos",
+            "Que el departamento es caro"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué pasa en San Sebastián, según Iker?",
+          "options": [
+            "En la parte vieja ya casi no vive nadie",
+            "No hay turistas",
+            "Los alquileres son baratos"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Por qué dice Nerea que son un poco hipócritas?",
+          "options": [
+            "Porque mintieron al dueño",
+            "Porque no pagaron",
+            "Porque se quejan de los turistas en casa y aquí son turistas"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué propone hacer Nerea?",
+          "options": [
+            "Irse a un hotel",
+            "Comprar en el barrio, hablar con vecinos y reconocer el problema",
+            "Denunciar al dueño"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Cómo afecta el turismo a la vivienda en tu ciudad?",
+          "model": "Ha subido mucho los precios del alquiler en el centro."
+        },
+        {
+          "q": "¿Te sientes responsable del impacto que tienes cuando viajas?",
+          "model": "Sí, intento alojarme en lugares que no expulsen a los vecinos."
+        },
+        {
+          "q": "¿Es posible ser turista sin ser hipócrita?",
+          "model": "Creo que sí, si eres consciente y respetuoso con el lugar."
+        }
+      ],
+      "gaps": "La [conciencia] [social] no está [reñida] con la buena [educación].",
+      "glossary": [
+        {
+          "word": "dando vueltas",
+          "meaning": "pensando una y otra vez en algo"
+        },
+        {
+          "word": "hipócrita",
+          "meaning": "que critica en otros lo que hace él mismo"
+        },
+        {
+          "word": "reñida",
+          "meaning": "en conflicto, incompatible"
+        }
+      ]
+    },
+    {
+      "id": "mudanza",
+      "title": "Instrucciones para un inquilino",
+      "place": "El 4.° B",
+      "context": "Freddy, antes de irse, le deja a la persona nueva un mensaje de voz con consejos.",
+      "speakers": [
+        {
+          "name": "Freddy",
+          "country": "Bolivia",
+          "voice": "es-BO-MarceloNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Hola, soy Freddy, el de la mudanza. Te dejo un audio porque estabas ocupado u ocupada con Amalia y no quería interrumpir."
+        },
+        {
+          "s": 0,
+          "text": "Primero: la cláusula siete. Ya la leíste, bien. Pero ojo con la nueve, que dice que cualquier arreglo menor lo paga el inquilino. Para esa señora, una persiana rota es un arreglo menor y un ascensor nuevo, una inversión común."
+        },
+        {
+          "s": 0,
+          "text": "Segundo: el termotanque no es nuevo, es nuevo para ella. Lo compró usado en 2015. Si hace un ruido raro por la noche, no es un fantasma, es la válvula."
+        },
+        {
+          "s": 0,
+          "text": "Tercero: en este edificio, el poder no lo tiene el administrador, sino Ramón. Si Ramón te quiere, el ascensor funciona; si no, vas a subir mucha escalera. Llévale medialunas los sábados."
+        },
+        {
+          "s": 0,
+          "text": "Cuarto, y esto te lo digo por experiencia: no tomes partido en la asamblea el primer día. Escucha, anota y vota con la cabeza. Los vecinos se olvidan de lo que votaste, pero no de cómo lo hiciste."
+        },
+        {
+          "s": 0,
+          "text": "Y quinto: si alguna vez te mudas otra vez, llámame. Te hago precio. Siempre que no sea un colchón de dos plazas."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Por qué deja Freddy un audio?",
+          "options": [
+            "Porque no tiene tiempo",
+            "Porque la persona nueva estaba ocupada con Amalia",
+            "Porque no sabe escribir"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué dice la cláusula nueve?",
+          "options": [
+            "Que los arreglos menores los paga el inquilino",
+            "Que no se permiten animales",
+            "Que el alquiler sube cada año"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Quién tiene el poder en el edificio, según Freddy?",
+          "options": [
+            "El administrador",
+            "Elvira",
+            "Ramón"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué consejo da sobre la asamblea?",
+          "options": [
+            "Votar lo mismo que Amalia",
+            "No tomar partido el primer día",
+            "No ir"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué consejo práctico le darías a alguien que acaba de mudarse a tu barrio?",
+          "model": "Que conozca al de la tienda de la esquina, porque sabe todo lo que pasa."
+        },
+        {
+          "q": "¿Estás de acuerdo con que la gente recuerda más cómo votaste que lo que votaste?",
+          "model": "Sí, la forma de participar dice mucho del carácter de una persona."
+        },
+        {
+          "q": "¿Quién tiene el poder real, no el oficial, en tu lugar de trabajo?",
+          "model": "La secretaria, que controla las agendas de todos."
+        }
+      ],
+      "gaps": "Los vecinos se [olvidan] de lo que [votaste], pero no de [cómo] lo [hiciste].",
+      "glossary": [
+        {
+          "word": "ojo",
+          "meaning": "cuidado, presta atención"
+        },
+        {
+          "word": "válvula",
+          "meaning": "pieza que regula el paso de agua o gas"
+        },
+        {
+          "word": "tomes partido",
+          "meaning": "de «tomar partido»: elegir un bando"
+        }
+      ]
+    },
+    {
+      "id": "tango",
+      "title": "El ascensor como metáfora",
+      "place": "El 4.° C",
+      "context": "Don Washington habla con su nieta por teléfono antes de la asamblea, y ella le hace dudar de su discurso.",
+      "speakers": [
+        {
+          "name": "Washington",
+          "country": "Uruguay",
+          "voice": "es-UY-MateoNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Hola, Sofi. Sí, ya estoy preparado. Me puse el traje gris, el de los domingos con tu abuela."
+        },
+        {
+          "s": 0,
+          "text": "¿Que si no tengo miedo de ponerme sentimental delante de todos? Mira, a mi edad, el ridículo es un lujo que uno ya se puede permitir."
+        },
+        {
+          "s": 0,
+          "text": "¿Cómo dices? ¿Que quizás el ascensor viejo es peligroso para los mayores? Bueno, sí, Federico se quedó encerrado cuarenta minutos el martes. Pero eso le pasa a cualquiera."
+        },
+        {
+          "s": 0,
+          "text": "Ya sé que a mí también me podría pasar. Y que, a lo mejor, si se traba con Don Aurelio dentro, a su edad… Sí, lo entiendo."
+        },
+        {
+          "s": 0,
+          "text": "Tienes razón, Sofi. Hasta ahora pensaba solo en lo que significa para mí. No en lo que significa para los que vienen después."
+        },
+        {
+          "s": 0,
+          "text": "Hagamos una cosa: voy a contar la historia de tu abuela, porque es lo único que sé contar bien. Pero al final voy a proponer que lo restauren con todas las medidas de seguridad, aunque cueste un poco más. Que siga siendo el mismo ascensor, pero que no deje a nadie encerrado tres horas."
+        },
+        {
+          "s": 0,
+          "text": "Aunque, si te soy sincero, si no se hubiera trabado aquella vez, tú no existirías. Así que algún mérito tiene."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Con quién habla Washington?",
+          "options": [
+            "Con su hija",
+            "Con su nieta",
+            "Con Elsa"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué dice Washington del ridículo?",
+          "options": [
+            "Que es un lujo que a su edad se puede permitir",
+            "Que le da mucho miedo",
+            "Que es peligroso"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué le hace ver su nieta?",
+          "options": [
+            "Que el traje es feo",
+            "Que el tango está pasado de moda",
+            "Que el ascensor viejo puede ser peligroso para los mayores"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué va a proponer al final del discurso?",
+          "options": [
+            "Comprar un ascensor nuevo",
+            "Restaurarlo con medidas de seguridad",
+            "No hacer nada"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Alguna vez cambiaste de opinión gracias a una persona más joven?",
+          "model": "Sí, mi sobrino me convenció de que el reciclaje sí sirve."
+        },
+        {
+          "q": "¿Cómo se equilibra la memoria emocional con la seguridad o la utilidad?",
+          "model": "Buscando soluciones que respeten la historia sin poner en riesgo a nadie."
+        },
+        {
+          "q": "¿Qué «ridículo» te permitirías si no te importara lo que piensan los demás?",
+          "model": "Cantaría en voz alta en el transporte público."
+        }
+      ],
+      "gaps": "Que siga siendo el [mismo] [ascensor], pero que no deje a [nadie] [encerrado] tres horas.",
+      "glossary": [
+        {
+          "word": "sentimental",
+          "meaning": "que se emociona con facilidad"
+        },
+        {
+          "word": "el ridículo",
+          "meaning": "situación en la que alguien parece tonto ante otros"
+        },
+        {
+          "word": "mérito",
+          "meaning": "valor que merece reconocimiento"
+        }
+      ]
+    },
+    {
+      "id": "cumple",
+      "title": "La teoría del payaso",
+      "place": "El 5.° D",
+      "context": "Pochoclo y Jennifer, ya con los niños dormidos, reflexionan sobre por qué asustan los payasos.",
+      "speakers": [
+        {
+          "name": "Jennifer",
+          "country": "Colombia",
+          "voice": "es-CO-SalomeNeural"
+        },
+        {
+          "name": "Pochoclo",
+          "country": "República Dominicana",
+          "voice": "es-DO-EmilioNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Pochoclo, perdóneme la pregunta, pero después de quince años, ¿nunca pensó por qué los niños tienen miedo de los payasos?"
+        },
+        {
+          "s": 1,
+          "text": "Muchas veces, señora. Tengo mi teoría. El payaso es una cara humana exagerada: la sonrisa demasiado grande, los ojos pintados, la nariz roja. El niño ve algo que se parece a una persona, pero no del todo. Y eso inquieta."
+        },
+        {
+          "s": 0,
+          "text": "Es verdad. Hoy, cuando se quitó la nariz y la peluca, de repente era usted. Un señor normal, simpático, con ganas de jugar."
+        },
+        {
+          "s": 1,
+          "text": "Por eso funcionó. Los niños no querían un personaje; querían una persona. A veces, en este oficio, lo más difícil es dejar de actuar."
+        },
+        {
+          "s": 0,
+          "text": "Qué curioso. A mí me pasa algo parecido con mi trabajo. Soy enfermera, y cuando llevo el uniforme, los pacientes me hablan de una manera. Cuando me ven en el supermercado, se sorprenden de que tenga vida propia."
+        },
+        {
+          "s": 1,
+          "text": "Todos llevamos una nariz roja, señora. Lo importante es saber cuándo quitársela."
+        },
+        {
+          "s": 0,
+          "text": "Qué frase. Debería ponerla en su tarjeta."
+        },
+        {
+          "s": 1,
+          "text": "No, que entonces me contratan para charlas de autoayuda y gano el doble. Prefiero los cumpleaños."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Por qué asustan los payasos, según Pochoclo?",
+          "options": [
+            "Porque hacen ruido",
+            "Porque son una cara humana exagerada",
+            "Porque los padres les tienen miedo"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Por qué funcionó quitarse la nariz?",
+          "options": [
+            "Porque los niños querían una persona, no un personaje",
+            "Porque era más gracioso",
+            "Porque hacía calor"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿En qué trabaja Jennifer?",
+          "options": [
+            "Es maestra",
+            "Es médica",
+            "Es enfermera"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué significa «todos llevamos una nariz roja»?",
+          "options": [
+            "Que todos somos ridículos",
+            "Que todos tenemos un papel que a veces conviene quitarse",
+            "Que todos queremos ser payasos"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué «uniforme» o papel llevas tú en tu trabajo o tu vida social?",
+          "model": "En el trabajo soy muy formal, pero con mis amigos soy mucho más bromista."
+        },
+        {
+          "q": "¿Por qué crees que nos inquieta lo que se parece a lo humano sin serlo del todo?",
+          "model": "Porque el cerebro detecta que algo no encaja y lo interpreta como una amenaza."
+        },
+        {
+          "q": "¿Cuándo te ha resultado útil «dejar de actuar» delante de los demás?",
+          "model": "En una entrevista de trabajo en la que fui natural y me contrataron."
+        }
+      ],
+      "gaps": "Todos [llevamos] una [nariz] [roja], señora. Lo importante es saber cuándo [quitársela].",
+      "glossary": [
+        {
+          "word": "inquieta",
+          "meaning": "de «inquietar»: preocupar, poner nervioso"
+        },
+        {
+          "word": "uniforme",
+          "meaning": "ropa igual que usan los de una profesión"
+        },
+        {
+          "word": "autoayuda",
+          "meaning": "consejos para mejorar uno mismo"
+        }
+      ]
+    },
+    {
+      "id": "ataud",
+      "title": "El humor como armadura",
+      "place": "El 5.° A",
+      "context": "Daisy y Don Aurelio, ya tarde, tienen una conversación más seria sobre la muerte y el humor.",
+      "speakers": [
+        {
+          "name": "Daisy",
+          "country": "Honduras",
+          "voice": "es-HN-KarlaNeural"
+        },
+        {
+          "name": "Aurelio",
+          "country": "Cuba",
+          "voice": "es-CU-ManuelNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Don Aurelio, puedo preguntarle algo personal. ¿Usted se ríe tanto del ataúd porque de verdad le hace gracia, o porque le da miedo?"
+        },
+        {
+          "s": 1,
+          "text": "Qué pregunta, Daisy. Las dos cosas, supongo. A mi edad, uno ve morir a casi todos sus amigos. Si no te ríes, te quedas paralizado esperando tu turno."
+        },
+        {
+          "s": 0,
+          "text": "En mi pueblo, en Honduras, los velorios duran toda la noche. Se cuentan chistes, se toma café y se juega a las cartas. Mi abuela decía que la risa espanta a la tristeza."
+        },
+        {
+          "s": 1,
+          "text": "Tu abuela era una mujer sabia. Aquí, en cambio, la gente habla de la muerte en voz baja, como si fuera una enfermedad contagiosa."
+        },
+        {
+          "s": 0,
+          "text": "Por eso me asustó tanto el ataúd. No por el objeto, sino porque me obligó a pensar en que algún día voy a tener que despedirme de usted."
+        },
+        {
+          "s": 1,
+          "text": "Daisy, me vas a hacer llorar, y eso no está en el contrato. Mira, hagamos un trato: cuando llegue el momento, quiero un velorio como los de tu pueblo. Con chistes, café y cartas. Y tú te encargas de que nadie hable en voz baja."
+        },
+        {
+          "s": 0,
+          "text": "Trato hecho. Pero hasta entonces, el ataúd sigue con mantel, florero y prohibido abrirlo."
+        },
+        {
+          "s": 1,
+          "text": "De acuerdo. Ahora pásame las cartas, que todavía tengo que ganarte un truco antes de morirme."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué le pregunta Daisy a Don Aurelio?",
+          "options": [
+            "Si piensa vender el ataúd",
+            "Si se ríe por gracia o por miedo",
+            "Si tiene hijos"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cómo son los velorios en el pueblo de Daisy?",
+          "options": [
+            "Con chistes, café y cartas toda la noche",
+            "Muy cortos y silenciosos",
+            "Solo para la familia"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Por qué se asustó realmente Daisy?",
+          "options": [
+            "Porque el ataúd era feo",
+            "Porque creía en fantasmas",
+            "Porque pensó en despedirse de él algún día"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué tipo de velorio quiere Aurelio?",
+          "options": [
+            "Uno en silencio",
+            "Uno como los del pueblo de Daisy",
+            "Uno en la iglesia"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Cómo se vive la muerte en tu cultura: con humor, con silencio o con ritual?",
+          "model": "Con mucho ritual religioso y bastante silencio, aunque los más jóvenes lo están cambiando."
+        },
+        {
+          "q": "¿Usas el humor para enfrentarte a cosas que te dan miedo?",
+          "model": "Sí, bromeo mucho antes de ir al médico, por ejemplo."
+        },
+        {
+          "q": "¿Te parece sano hablar abiertamente de la muerte con las personas mayores?",
+          "model": "Sí, porque les permite expresar sus deseos y vivir con más tranquilidad."
+        }
+      ],
+      "gaps": "Si no te [ríes], te [quedas] [paralizado] esperando tu [turno].",
+      "glossary": [
+        {
+          "word": "paralizado",
+          "meaning": "sin poder moverse ni reaccionar"
+        },
+        {
+          "word": "espanta",
+          "meaning": "de «espantar»: hacer huir"
+        },
+        {
+          "word": "truco",
+          "meaning": "juego de cartas típico de Argentina"
+        }
+      ]
+    },
+    {
+      "id": "administrador",
+      "title": "Apología de un administrador",
+      "place": "El palier del sexto",
+      "context": "Barrionuevo, ya solo, graba un audio para su esposa justificando lo que ha pasado esa tarde.",
+      "speakers": [
+        {
+          "name": "Barrionuevo",
+          "country": "Guatemala",
+          "voice": "es-GT-AndresNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Graciela, te mando un audio porque no tengo fuerzas para llamarte. Ha sido una tarde espantosa."
+        },
+        {
+          "s": 0,
+          "text": "Resulta que el encargado tenía copias de los presupuestos que yo, digamos, había archivado en un lugar poco visible. Y para colmo, la persona nueva, la que escribe el acta, ha dicho en voz alta la palabra «conflicto de intereses» delante de Doña Elvira."
+        },
+        {
+          "s": 0,
+          "text": "Yo sé lo que vas a decir: que ya me lo habías advertido. Que mezclar la familia con el consorcio iba a terminar mal. Pero entiéndeme: Cacho atraviesa una mala época y el contrato le habría salvado el año."
+        },
+        {
+          "s": 0,
+          "text": "No, no lo justifico. Lo explico. Que no es lo mismo. Aunque, si te soy honesto, reconozco que la frontera entre explicar y justificar se me ha vuelto un poco borrosa en estos quince años."
+        },
+        {
+          "s": 0,
+          "text": "Esta noche voy a hacer lo que me pidió Ramón: presentar los tres presupuestos y reconocer lo de Cacho antes de que lo haga Elvira. Por lo menos, que quede en el acta que lo dije yo."
+        },
+        {
+          "s": 0,
+          "text": "Y otra cosa: quizás sea el momento de pensar en dejar la administración. No por este escándalo, sino porque, por primera vez, me he visto a mí mismo como me ven los vecinos. Y no me ha gustado."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿A quién le manda el audio Barrionuevo?",
+          "options": [
+            "A su cuñado",
+            "A su esposa",
+            "A Ramón"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué dice que hizo con los presupuestos?",
+          "options": [
+            "Que los archivó en un lugar poco visible",
+            "Que los perdió en la calle",
+            "Que los rompió"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Por qué quería darle el contrato a Cacho?",
+          "options": [
+            "Porque es el más barato",
+            "Porque es el mejor",
+            "Porque atraviesa una mala época"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué está pensando hacer?",
+          "options": [
+            "Mudarse",
+            "Dejar la administración",
+            "Despedir a Ramón"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Dónde situarías la frontera entre explicar una mala decisión y justificarla?",
+          "model": "Explicar es dar contexto; justificar es pretender que estuvo bien."
+        },
+        {
+          "q": "¿Te ha pasado verte a ti mismo o a ti misma desde los ojos de los demás y no gustarte?",
+          "model": "Sí, cuando un amigo me dijo que siempre llegaba tarde y que eso le molestaba."
+        },
+        {
+          "q": "¿Crees que alguien que ha cometido un abuso de confianza puede recuperar su credibilidad?",
+          "model": "Puede, pero necesita tiempo, transparencia y un cambio de conducta real."
+        }
+      ],
+      "gaps": "la [frontera] entre [explicar] y [justificar] se me ha vuelto un poco [borrosa]",
+      "glossary": [
+        {
+          "word": "espantosa",
+          "meaning": "horrible, muy desagradable"
+        },
+        {
+          "word": "atraviesa",
+          "meaning": "de «atravesar»: pasar por una situación"
+        },
+        {
+          "word": "borrosa",
+          "meaning": "poco clara, difícil de distinguir"
+        }
+      ]
+    },
+    {
+      "id": "herencia",
+      "title": "Lo que callaba la tía",
+      "place": "El 6.° B",
+      "context": "Mirta, sola en el departamento, llama a una amiga para contarle lo que descubrió en la carta de la tía.",
+      "speakers": [
+        {
+          "name": "Mirta",
+          "country": "Panamá",
+          "voice": "es-PA-MargaritaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Lucía, ¿tienes un minuto? Necesito contarle esto a alguien que no sea de la familia."
+        },
+        {
+          "s": 0,
+          "text": "Rubén encontró una carta de la tía Chela dentro del piano. Y en esa carta dice que yo nunca tuve mal oído. Que dejé de tocar porque Rubén se reía de mí cuando éramos chicos."
+        },
+        {
+          "s": 0,
+          "text": "Lo raro es que yo no me acordaba. O no quería acordarme. Durante cuarenta años estuve convencida de que era la torpe de la familia, la que no tenía talento. Y resulta que era simplemente una niña a la que le daba vergüenza."
+        },
+        {
+          "s": 0,
+          "text": "Lo que más me impresiona es que la tía lo supo siempre y nunca lo dijo. Esperó a morirse para decirlo. Al principio me enojé muchísimo con ella. Después me di cuenta de que quizás lo hizo para que lo descubriéramos juntos, Rubén y yo, y no por separado."
+        },
+        {
+          "s": 0,
+          "text": "Al final, no voy a vender. Rubén me va a pagar mi parte en cuotas, y el domingo vamos a tocar juntos. «Para Elisa», con dos dedos. Pero esta vez, si alguien se ríe, que sea de alegría."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Por qué llama Mirta a Lucía?",
+          "options": [
+            "Para pedirle dinero",
+            "Para contarle algo a alguien de fuera de la familia",
+            "Para invitarla al concierto"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué se había convencido Mirta durante años?",
+          "options": [
+            "De que era la torpe sin talento",
+            "De que la tía no la quería",
+            "De que Rubén era cruel"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Por qué cree que la tía esperó a morir para decirlo?",
+          "options": [
+            "Porque tenía miedo",
+            "Porque se olvidó",
+            "Para que lo descubrieran juntos"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué decide Mirta al final?",
+          "options": [
+            "Vender el departamento",
+            "No vender y tocar con Rubén el domingo",
+            "Llevarse el piano"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Hay alguna idea sobre ti que te formaste en la infancia y que hoy dudas que sea verdad?",
+          "model": "Siempre creí que era malo en matemáticas, y ahora trabajo con números."
+        },
+        {
+          "q": "¿Por qué crees que algunas personas esperan hasta el final para decir cosas importantes?",
+          "model": "Por miedo a las consecuencias o porque quieren que la revelación tenga más peso."
+        },
+        {
+          "q": "¿Qué sentirías si descubrieras un secreto familiar a través de una carta?",
+          "model": "Sorpresa y probablemente enojo, pero también curiosidad por entender el porqué."
+        }
+      ],
+      "gaps": "Y resulta que [era] [simplemente] una [niña] a la que le daba [vergüenza].",
+      "glossary": [
+        {
+          "word": "torpe",
+          "meaning": "que no tiene habilidad"
+        },
+        {
+          "word": "por separado",
+          "meaning": "cada uno por su lado"
+        },
+        {
+          "word": "impresiona",
+          "meaning": "de «impresionar»: causar un fuerte efecto"
+        }
+      ]
+    },
+    {
+      "id": "misterio",
+      "title": "El regreso a la terraza",
+      "place": "La terraza, a las nueve",
+      "context": "Ibarra, sentado junto a la puerta, le habla en voz baja a Lili mientras empieza la asamblea.",
+      "speakers": [
+        {
+          "name": "Ibarra",
+          "country": "El Salvador",
+          "voice": "es-SV-RodrigoNeural"
+        },
+        {
+          "name": "Lili",
+          "country": "El Salvador",
+          "voice": "es-SV-LorenaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Lili, ¿ve aquella antena? Cuando me encerré, no estaba. Y la ciudad parece más alta. O quizás yo me hice más pequeño."
+        },
+        {
+          "s": 1,
+          "text": "Usted no se hizo pequeño, señor Ibarra. Lleva veinte minutos aquí y nadie se ha atrevido a preguntarle nada. Eso es respeto, no indiferencia."
+        },
+        {
+          "s": 0,
+          "text": "Es extraño. Durante once años imaginé que, si salía, todos me mirarían con lástima. Y resulta que la gente está más ocupada con el ascensor que conmigo. Es casi un alivio ser irrelevante."
+        },
+        {
+          "s": 1,
+          "text": "No es irrelevante. Su carta poder es uno de los votos que pueden decidir esta noche."
+        },
+        {
+          "s": 0,
+          "text": "Ya no la necesito. Si me animo, voy a votar yo mismo. Aunque, para ser sincero, todavía no sé qué votar. Mi madre usaba ese ascensor todos los días para ir al mercado. Pero también fue el lugar donde se mareó la última vez que salió."
+        },
+        {
+          "s": 1,
+          "text": "Entonces vote por lo que le parezca más justo para los que siguen viviendo aquí. Su madre lo entendería."
+        },
+        {
+          "s": 0,
+          "text": "¿Sabe una cosa, Lili? Me había olvidado de cómo suena una ciudad de noche. Los colectivos, la música de algún bar, una persona que se ríe en la calle."
+        },
+        {
+          "s": 1,
+          "text": "Y ahora, además, va a sonar el tango de Washington. Prepárese."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué le parece extraño a Ibarra de la ciudad?",
+          "options": [
+            "Que está más silenciosa",
+            "Que parece más alta",
+            "Que hay menos gente"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cómo interpreta Lili que nadie le pregunte nada?",
+          "options": [
+            "Como respeto",
+            "Como indiferencia",
+            "Como miedo"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué siente Ibarra al ver que la gente no le presta atención?",
+          "options": [
+            "Tristeza",
+            "Enojo",
+            "Alivio"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué decide hacer con su voto?",
+          "options": [
+            "Dárselo a Lili",
+            "Votar él mismo si se anima",
+            "No votar"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué cambios notarías en tu ciudad si volvieras después de once años?",
+          "model": "Seguramente más edificios altos y menos tiendas de barrio."
+        },
+        {
+          "q": "¿Es a veces un alivio pasar desapercibido?",
+          "model": "Sí, sobre todo después de una época difícil en la que todos opinaban sobre mí."
+        },
+        {
+          "q": "¿Qué sonidos asocias con la noche en tu ciudad?",
+          "model": "Las motos, los perros y alguna sirena lejana."
+        }
+      ],
+      "gaps": "Durante once años [imaginé] que, si [salía], todos me mirarían con [lástima]. Y resulta que la [gente] está más ocupada con el ascensor que conmigo.",
+      "glossary": [
+        {
+          "word": "indiferencia",
+          "meaning": "falta de interés"
+        },
+        {
+          "word": "irrelevante",
+          "meaning": "que no tiene importancia"
+        },
+        {
+          "word": "se mareó",
+          "meaning": "de «marearse»: sentir que todo gira"
+        }
+      ]
+    },
+    {
+      "id": "obra",
+      "title": "Elvira descubre el jacuzzi",
+      "place": "El 7.° A",
+      "context": "Doña Elvira sube al séptimo con una excusa y se encuentra con Cirilo y Brian.",
+      "speakers": [
+        {
+          "name": "Cirilo",
+          "country": "Honduras",
+          "voice": "es-HN-CarlosNeural"
+        },
+        {
+          "name": "Brian",
+          "country": "Puerto Rico",
+          "voice": "es-PR-VictorNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Señor Brian, viene subiendo alguien por la escalera. Por el ritmo de los pasos y el sonido del bastón, diría que es la señora del primero A."
+        },
+        {
+          "s": 1,
+          "text": "¿Elvira? ¡Cierra la puerta del baño, rápido!"
+        },
+        {
+          "s": 0,
+          "text": "No hay puerta, señor. Usted la sacó para que entrara el jacuzzi."
+        },
+        {
+          "s": 1,
+          "text": "Entonces ponte delante. Eres grande."
+        },
+        {
+          "s": 0,
+          "text": "Señor Brian, con todo el respeto, tengo cuarenta años de oficio y no voy a hacer de biombo. Además, el ingeniero le dijo que lo contara en la asamblea. ¿No es mejor que se entere ahora, por usted, que esta noche, por otro?"
+        },
+        {
+          "s": 1,
+          "text": "Tienes razón. Si lo cuento yo, al menos controlo el relato. Si lo descubre ella, el relato me controla a mí."
+        },
+        {
+          "s": 0,
+          "text": "Así se habla. Y recuerde: reconozca el error, no lo minimice, y ofrezca pagar todo. La señora Elvira es dura, pero respeta a quien da la cara."
+        },
+        {
+          "s": 1,
+          "text": "¿Y si me grita?"
+        },
+        {
+          "s": 0,
+          "text": "Le va a gritar. Pero un grito ahora es mucho más barato que un juicio después. Ánimo, ya llegó."
+        },
+        {
+          "s": 1,
+          "text": "Buenas tardes, Doña Elvira. Pase, por favor. Tengo algo que contarle, y le pido que me deje terminar antes de juzgarme."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cómo sabe Cirilo que llega Elvira?",
+          "options": [
+            "Porque la ve por la ventana",
+            "Por el ritmo de los pasos y el bastón",
+            "Porque lo avisó Ramón"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Por qué no se puede cerrar la puerta del baño?",
+          "options": [
+            "Porque Brian la sacó para el jacuzzi",
+            "Porque está rota",
+            "Porque no tiene llave"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué se niega a hacer Cirilo?",
+          "options": [
+            "Trabajar de noche",
+            "Hablar con Elvira",
+            "Hacer de biombo"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué decide Brian al final?",
+          "options": [
+            "Esconderse",
+            "Contarle todo a Elvira",
+            "Llamar a un abogado"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Por qué es importante «controlar el relato» cuando cometes un error?",
+          "model": "Porque si otros lo cuentan primero, tu versión pierde credibilidad."
+        },
+        {
+          "q": "¿Qué consejo darías a alguien que tiene que confesar algo a una persona muy estricta?",
+          "model": "Que sea breve, honesto y que llegue con una solución."
+        },
+        {
+          "q": "¿Has tenido que dar la cara por algo que hiciste mal?",
+          "model": "Sí, en el trabajo, cuando envié un correo con datos equivocados a un cliente."
+        }
+      ],
+      "gaps": "Si lo [cuento] yo, al menos [controlo] el [relato]. Si lo descubre ella, el relato me [controla] a mí.",
+      "glossary": [
+        {
+          "word": "biombo",
+          "meaning": "pantalla para separar o esconder un espacio"
+        },
+        {
+          "word": "minimice",
+          "meaning": "de «minimizar»: quitar importancia"
+        },
+        {
+          "word": "relato",
+          "meaning": "forma de contar unos hechos"
+        }
+      ]
+    },
+    {
+      "id": "sogas",
+      "title": "La política de la parrilla",
+      "place": "La terraza",
+      "context": "Kevin y Hilda, ya reconciliados, discuten con humor sobre la comida como herramienta política.",
+      "speakers": [
+        {
+          "name": "Kevin",
+          "country": "Ecuador",
+          "voice": "es-EC-LuisNeural"
+        },
+        {
+          "name": "Hilda",
+          "country": "Bolivia",
+          "voice": "es-BO-SofiaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Hilda, ¿usted sabía que en Ecuador, en mi pueblo, ninguna reunión importante se hace sin comida? Si no hay comida, la gente piensa que no la respetas."
+        },
+        {
+          "s": 1,
+          "text": "Aquí pasa lo mismo, muchacho. Los mejores acuerdos de este edificio se firmaron con empanadas. En 1983, cuando volvió la democracia, hicimos la primera asamblea libre en esta terraza, con pastelitos."
+        },
+        {
+          "s": 0,
+          "text": "¿En serio? ¿Y qué se votó?"
+        },
+        {
+          "s": 1,
+          "text": "Que el ascensor se pintara de verde, porque el gris recordaba a los militares. Duró verde hasta 1995. Después volvió a ser gris, porque nadie se acordaba del motivo."
+        },
+        {
+          "s": 0,
+          "text": "Qué historia. Entonces, si lo pienso bien, mi asado de hoy es parte de una tradición política."
+        },
+        {
+          "s": 1,
+          "text": "No te des tantos aires. Tu asado es parte de una estrategia para que la gente vote tranquila. Que no es lo mismo, aunque se parezca."
+        },
+        {
+          "s": 0,
+          "text": "Bueno, admito que hay un poco de estrategia. Pero también hay cariño. Yo me mudé aquí hace dos años y es la primera vez que siento que formo parte de algo."
+        },
+        {
+          "s": 1,
+          "text": "Eso sí te lo creo. Y te voy a dar un consejo de vieja: la comida abre la conversación, pero no la cierra. Esta noche, cuando hayan comido, todavía tienen que escucharse."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué pasa en el pueblo de Kevin si no hay comida en una reunión?",
+          "options": [
+            "Nadie viene",
+            "La gente piensa que no la respetas",
+            "Se cancela la reunión"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué se votó en 1983?",
+          "options": [
+            "Pintar el ascensor de verde",
+            "Comprar un ascensor nuevo",
+            "Prohibir los asados"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Por qué volvió a ser gris el ascensor?",
+          "options": [
+            "Porque el verde era caro",
+            "Porque lo pidió el administrador",
+            "Porque nadie se acordaba del motivo"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué consejo le da Hilda a Kevin?",
+          "options": [
+            "Que no haga más asados",
+            "Que la comida abre la conversación pero no la cierra",
+            "Que se mude"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué papel tiene la comida en las negociaciones o celebraciones de tu cultura?",
+          "model": "Es fundamental; ninguna boda ni acuerdo familiar se hace sin una comida larga."
+        },
+        {
+          "q": "¿Conoces alguna decisión simbólica que se haya olvidado con el tiempo?",
+          "model": "En mi ciudad cambiaron el nombre de una calle y hoy nadie recuerda por qué."
+        },
+        {
+          "q": "¿Qué diferencia hay entre una estrategia y un gesto de cariño?",
+          "model": "La estrategia busca un resultado; el cariño no espera nada a cambio, aunque a veces se mezclan."
+        }
+      ],
+      "gaps": "la [comida] [abre] la [conversación], pero no la [cierra]",
+      "glossary": [
+        {
+          "word": "pastelitos",
+          "meaning": "dulces fritos típicos de Argentina"
+        },
+        {
+          "word": "No te des tantos aires",
+          "meaning": "no te creas más importante de lo que eres"
+        },
+        {
+          "word": "estrategia",
+          "meaning": "plan para conseguir un objetivo"
+        }
+      ]
+    },
+    {
+      "id": "asamblea",
+      "title": "Discurso de cierre",
+      "place": "La terraza, a medianoche",
+      "context": "Ramón cierra la asamblea con unas palabras. Elvira y Barrionuevo intervienen al final.",
+      "speakers": [
+        {
+          "name": "Ramón",
+          "country": "Paraguay",
+          "voice": "es-PY-MarioNeural"
+        },
+        {
+          "name": "Elvira",
+          "country": "España",
+          "voice": "es-ES-ElviraNeural"
+        },
+        {
+          "name": "Barrionuevo",
+          "country": "Guatemala",
+          "voice": "es-GT-AndresNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Vecinos, antes de levantar la sesión, permítanme decir algo. Llevo treinta años en este edificio y es la primera vez que veo a los veintiocho departamentos representados. Hasta el señor Ibarra, a quien muchos de ustedes no conocían, subió hoy a la terraza."
+        },
+        {
+          "s": 0,
+          "text": "No sé si hoy votamos bien o mal. Eso lo dirá el tiempo. Pero sé que esta noche hemos hablado de una gotera, de un concurso de batería, de un jacuzzi ilegal y de una historia de amor. Es decir, de nosotros."
+        },
+        {
+          "s": 1,
+          "text": "Ramón, se me va a correr el rímel. Y yo que venía preparada para pelear."
+        },
+        {
+          "s": 2,
+          "text": "Permítame agregar algo, Ramón. Quiero que conste en el acta que, a partir del mes próximo, pongo mi cargo a disposición de la asamblea. Si quieren otro administrador, lo aceptaré sin rencor."
+        },
+        {
+          "s": 1,
+          "text": "Vaya. Eso no me lo esperaba. Contador, por primera vez en quince años, le voy a decir que estoy de acuerdo con usted en algo."
+        },
+        {
+          "s": 0,
+          "text": "Bueno, que conste todo. Y ahora, por favor, ayúdenme a bajar las sillas. Y que nadie use el ascensor hasta mañana, por las dudas."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué es la primera vez que Ramón ve en treinta años?",
+          "options": [
+            "Una votación empatada",
+            "Los veintiocho departamentos representados",
+            "Un asado en la terraza"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿De qué dice Ramón que hablaron realmente?",
+          "options": [
+            "De nosotros",
+            "De dinero",
+            "Del ascensor solamente"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué anuncia Barrionuevo?",
+          "options": [
+            "Que baja las expensas",
+            "Que se muda",
+            "Que pone su cargo a disposición"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué pide Ramón al final?",
+          "options": [
+            "Que voten otra vez",
+            "Que lo ayuden a bajar las sillas y no usen el ascensor",
+            "Que se queden a cenar"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué significa para ti que una comunidad esté «representada» en una decisión?",
+          "model": "Que todas las voces, también las más silenciosas, puedan influir en el resultado."
+        },
+        {
+          "q": "¿Crees que poner un cargo a disposición es un gesto sincero o estratégico?",
+          "model": "Puede ser las dos cosas: un gesto de humildad que también protege la imagen."
+        },
+        {
+          "q": "¿Qué reunión de tu vida terminó siendo más importante por lo humano que por lo que se decidió?",
+          "model": "Una reunión de padres en la escuela de la que salieron mis mejores amigos actuales."
+        }
+      ],
+      "gaps": "No sé si hoy [votamos] bien o mal. Eso lo dirá el [tiempo]. Pero sé que esta [noche] hemos [hablado]",
+      "glossary": [
+        {
+          "word": "levantar la sesión",
+          "meaning": "terminar oficialmente una reunión"
+        },
+        {
+          "word": "rímel",
+          "meaning": "maquillaje para las pestañas"
+        },
+        {
+          "word": "pongo mi cargo a disposición",
+          "meaning": "ofrezco dejar mi puesto si los demás lo deciden"
+        }
+      ]
+    }
+  ]
+}

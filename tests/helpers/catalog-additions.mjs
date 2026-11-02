@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import {beforeGrammarBytes,beforeGrammarLessons,grammarSharedFiles} from './grammar-preservation.mjs';
 import {readFileSync} from 'node:fs';
+import {withOldClassicImage, withoutClassicCoverBytes} from './classic-covers.mjs';
 
 // Course classes (ids above 300, written from 2026-10-20) as listed in the grammar catalog additions.
 const courseLessons=[...readFileSync(new URL('../../app/grammar-classroom/catalog.ts',import.meta.url),'utf8').matchAll(/^  \[([3-5]\d\d), '[^']*', '[^']*', '([^']*)'/gm)].map(([,id,slug])=>({id:Number(id),path:`/gramatica/${slug}`,files:/^$/,edits:{}}));
@@ -13,16 +14,58 @@ const courseLessons=[...readFileSync(new URL('../../app/grammar-classroom/catalo
 const additions = [
   ...courseLessons,
   {
-    // 2026-10-26: El ascensor del cerro (B2), a PRO 3D world in Valparaíso, wired like the feria.
-    id:243,path:'/el-ascensor-del-cerro',files:/^(?:app\/el-ascensor-del-cerro\/|app\/escucha-3d\/content\/ascensor\/|public\/el-ascensor-del-cerro\/|public\/audio\/escucha-3d\/ascensor-|tests\/el-ascensor-del-cerro\.test\.mjs$|scripts\/check-ascensor\.mjs$|scripts\/qa-ascensor-browser\.mjs$)/,
+    // 2026-11-02: El ascensor del cerro (B2), a PRO 3D world in Valparaíso, wired like the feria (id 246; was 243 before Más allá took it).
+    id:246,path:'/el-ascensor-del-cerro',files:/^(?:app\/el-ascensor-del-cerro\/|app\/escucha-3d\/content\/ascensor\/|public\/el-ascensor-del-cerro\/|public\/audio\/escucha-3d\/ascensor-|tests\/el-ascensor-del-cerro\.test\.mjs$|scripts\/check-ascensor\.mjs$|scripts\/qa-ascensor-browser\.mjs$)/,
     edits:{
       'app/lesson-catalog.ts':[text=>{
         const lines=text.split('\n');
-        const at=lines.flatMap((line,i)=>line.startsWith('  {id:243,')&&line.includes('path:"/el-ascensor-del-cerro"')?[i]:[]);
+        const at=lines.flatMap((line,i)=>line.startsWith('  {id:246,')&&line.includes('path:"/el-ascensor-del-cerro"')?[i]:[]);
         assert.equal(at.length,1,'one ascensor catalog entry');lines.splice(at[0],1);return lines.join('\n');
-      },[',237,238,240,241,242,243],',',237,238,240,241,242],']],
+      },[',237,238,240,241,242,243,244,245,246],',',237,238,240,241,242,243,244,245],']],
       'scripts/test-worker.mjs':[[" await run(['--test','tests/el-ascensor-del-cerro.test.mjs']);\n",'']],
-      'tests/level-cleanup.test.mjs':[['assert.equal(lessons.length, 317);','assert.equal(lessons.length, 316);']],
+      'tests/level-cleanup.test.mjs':[['assert.equal(lessons.length, 320);','assert.equal(lessons.length, 319);']],
+      'tests/rendered-html.test.mjs':[['assert.match(html,/298(?:<!-- -->|\\s)+resultados/);assert.match(html,/313(?:<!-- -->|\\s)+clases totales/);','assert.match(html,/297(?:<!-- -->|\\s)+resultados/);assert.match(html,/312(?:<!-- -->|\\s)+clases totales/);']],
+    },
+  },
+  {
+    // 2026-11-01: El consorcio (A0–C2), a PRO 3D apartment building in Buenos Aires, wired like Vuelo cancelado.
+    id:245,path:'/el-consorcio',files:/^(?:app\/el-consorcio\/|app\/escucha-3d\/content\/consorcio\/|public\/el-consorcio\/|public\/audio\/escucha-3d\/consorcio-|tests\/el-consorcio\.test\.mjs$|scripts\/check-consorcio\.mjs$|docs\/audits\/el-consorcio-english-additions-20261101\.json$)/,
+    edits:{
+      'app/lesson-catalog.ts':[text=>{
+        const lines=text.split('\n');
+        const at=lines.flatMap((line,i)=>line.startsWith('  {id:245,')&&line.includes('path:"/el-consorcio"')?[i]:[]);
+        assert.equal(at.length,1,'one el consorcio catalog entry');lines.splice(at[0],1);return lines.join('\n');
+      },[',237,238,240,241,242,243,244,245],',',237,238,240,241,242,243,244],']],
+      'scripts/test-worker.mjs':[[" await run(['--test','tests/el-consorcio.test.mjs']);\n",'']],
+      'tests/level-cleanup.test.mjs':[['assert.equal(lessons.length, 319);','assert.equal(lessons.length, 318);'],['238,240,242,243,244,245].includes(lesson.id)','238,240,242,243,244].includes(lesson.id)'],["l.levels?.includes('A0')).length,21);","l.levels?.includes('A0')).length,20);"],['assert.equal(a1Lessons.length, 79);','assert.equal(a1Lessons.length, 78);'],["relative.startsWith('app/el-consorcio/')||",'']],
+      'tests/rendered-html.test.mjs':[['assert.match(html,/297(?:<!-- -->|\\s)+resultados/);assert.match(html,/312(?:<!-- -->|\\s)+clases totales/);','assert.match(html,/296(?:<!-- -->|\\s)+resultados/);assert.match(html,/311(?:<!-- -->|\\s)+clases totales/);']],
+    },
+  },
+  {
+    // 2026-10-31: Vuelo cancelado (A0–C2), a PRO 3D airport at night, wired like Más allá.
+    id:244,path:'/vuelo-cancelado',files:/^(?:app\/vuelo-cancelado\/|app\/escucha-3d\/content\/vuelo\/|public\/vuelo-cancelado\/|public\/audio\/escucha-3d\/vuelo-|tests\/vuelo-cancelado\.test\.mjs$|scripts\/check-vuelo\.mjs$|docs\/audits\/vuelo-cancelado-english-additions-20261031\.json$)/,
+    edits:{
+      'app/lesson-catalog.ts':[text=>{
+        const lines=text.split('\n');
+        const at=lines.flatMap((line,i)=>line.startsWith('  {id:244,')&&line.includes('path:"/vuelo-cancelado"')?[i]:[]);
+        assert.equal(at.length,1,'one vuelo cancelado catalog entry');lines.splice(at[0],1);return lines.join('\n');
+      },[',237,238,240,241,242,243,244],',',237,238,240,241,242,243],']],
+      'scripts/test-worker.mjs':[[" await run(['--test','tests/vuelo-cancelado.test.mjs']);\n",'']],
+      'tests/level-cleanup.test.mjs':[['assert.equal(lessons.length, 318);','assert.equal(lessons.length, 317);'],['238,240,242,243,244].includes(lesson.id)','238,240,242,243].includes(lesson.id)'],["l.levels?.includes('A0')).length,20);","l.levels?.includes('A0')).length,19);"],['assert.equal(a1Lessons.length, 78);','assert.equal(a1Lessons.length, 77);'],["relative.startsWith('app/vuelo-cancelado/')||",'']],
+      'tests/rendered-html.test.mjs':[['assert.match(html,/296(?:<!-- -->|\\s)+resultados/);assert.match(html,/311(?:<!-- -->|\\s)+clases totales/);','assert.match(html,/295(?:<!-- -->|\\s)+resultados/);assert.match(html,/310(?:<!-- -->|\\s)+clases totales/);']],
+    },
+  },
+  {
+    // 2026-10-29: Más allá (A0–C2), a PRO 3D world (hospital intro, Umbral, Cielo, Infierno), wired like Madrid.
+    id:243,path:'/mas-alla',files:/^(?:app\/mas-alla\/|app\/escucha-3d\/content\/masalla\/|public\/mas-alla\/|public\/audio\/escucha-3d\/masalla-|tests\/mas-alla\.test\.mjs$|scripts\/check-mas-alla\.mjs$|docs\/audits\/mas-alla-english-additions-20261029\.json$)/,
+    edits:{
+      'app/lesson-catalog.ts':[text=>{
+        const lines=text.split('\n');
+        const at=lines.flatMap((line,i)=>line.startsWith('  {id:243,')&&line.includes('path:"/mas-alla"')?[i]:[]);
+        assert.equal(at.length,1,'one más allá catalog entry');lines.splice(at[0],1);return lines.join('\n');
+      },[',237,238,240,241,242,243],',',237,238,240,241,242],']],
+      'scripts/test-worker.mjs':[[" await run(['--test','tests/mas-alla.test.mjs']);\n",'']],
+      'tests/level-cleanup.test.mjs':[['assert.equal(lessons.length, 317);','assert.equal(lessons.length, 316);'],['238,240,242,243].includes(lesson.id)','238,240,242].includes(lesson.id)'],["l.levels?.includes('A0')).length,19);","l.levels?.includes('A0')).length,18);"],['assert.equal(a1Lessons.length, 77);','assert.equal(a1Lessons.length, 76);'],["relative.startsWith('app/mas-alla/')||",'']],
       'tests/rendered-html.test.mjs':[['assert.match(html,/295(?:<!-- -->|\\s)+resultados/);assert.match(html,/310(?:<!-- -->|\\s)+clases totales/);','assert.match(html,/294(?:<!-- -->|\\s)+resultados/);assert.match(html,/309(?:<!-- -->|\\s)+clases totales/);']],
     },
   },
@@ -531,7 +574,32 @@ export function isApprovedAdditionPath(path) {
   return grammarSharedFiles.includes(path) || path==='tests/helpers/grammar-preservation.mjs' || path==='docs/audits/grammar-preservation-20261007.json' || sharedFiles.has(path) || [...additions, ...repairs].some(item => item.files.test(path));
 }
 
+// 2026-10-30: the 3D country worlds use a flag as their library cover (Ale, «Países» inside
+// Conversación → Mundos 3D; scripts/flag-previews.mjs). Only the cover changes: id, route,
+// access, levels and copy stay as they were. [id, flag, old cover, whether the old cover
+// had its own override line]; 227–229 used the image in their catalog record.
+const FLAG_COVERS = [
+  [24, 'indonesia', '/indonesia-fantasy-hero.webp'], [25, 'israel', '/israel-b1-hero.webp'], [29, 'suiza', '/suiza-en-relieve-hero.webp'],
+  [30, 'australia', '/australia-3d-hero.webp'], [32, 'reino-unido', '/catalog-thumbnails/uk-relief.webp'], [33, 'irlanda', '/catalog-thumbnails/ireland-relief.webp'],
+  [36, 'estados-unidos', '/catalog-thumbnails/us-relief.webp'], [210, 'mexico', '/catalog-thumbnails/mexico-relief.svg'],
+  [227, 'suecia', '/catalog-thumbnails/suecia-new.webp', false], [228, 'argentina', '/catalog-thumbnails/argentina-new.webp', false],
+  [229, 'espana', '/catalog-thumbnails/espana-new.webp', false],
+].map(([id, flag, before, override = true]) => ({ id, now: `/catalog-thumbnails/banderas/${flag}.webp`, before, override }));
+
+function withoutFlagCovers(path, bytes) {
+  if (path !== 'app/lesson-catalog.ts') return bytes;
+  let text = bytes.toString('utf8');
+  for (const { id, now, before, override } of FLAG_COVERS) {
+    const line = `  ${id}:"${now}",\n`;
+    assert.equal(text.split(line).length - 1, 1, `one flag cover for ${id}`);
+    text = text.replace(line, override ? `  ${id}:"${before}",\n` : '');
+  }
+  return Buffer.from(text);
+}
+
 export function withoutApprovedAdditions(path, bytes) {
+  bytes = withoutFlagCovers(path, bytes);
+  bytes = withoutClassicCoverBytes(path, bytes);
   for (const repair of repairs.filter(item => item.latest && item.edits[path])) {
     let text = bytes.toString('utf8');
     for (const [after, before] of repair.edits[path]) {
@@ -541,7 +609,7 @@ export function withoutApprovedAdditions(path, bytes) {
     bytes = Buffer.from(text);
   }
   // Undo the latest additive lessons in reverse order before the grammar snapshot.
-  for (const addition of additions.filter(item=>item.id===300||item.id===243||item.id===242||item.id===241||item.id===240||item.id===239||item.id===238||item.id===237||item.id===236)) {
+  for (const addition of additions.filter(item=>item.id===300||item.id===246||item.id===245||item.id===244||item.id===243||item.id===242||item.id===241||item.id===240||item.id===239||item.id===238||item.id===237||item.id===236)) {
     const latestSteps=addition.edits[path]||[];
     if(!latestSteps.length)continue;
     let latest=bytes.toString('utf8');
@@ -552,7 +620,7 @@ export function withoutApprovedAdditions(path, bytes) {
     bytes=Buffer.from(latest);
   }
   bytes=beforeGrammarBytes(path,bytes);
-  const steps = [...additions.filter(item=>item.id!==300&&item.id!==236&&item.id!==237&&item.id!==238&&item.id!==239&&item.id!==240&&item.id!==241&&item.id!==242&&item.id!==243), ...repairs.filter(item => !item.latest)].flatMap(item => item.edits[path] || []);
+  const steps = [...additions.filter(item=>item.id!==300&&item.id!==246&&item.id!==245&&item.id!==244&&item.id!==236&&item.id!==237&&item.id!==238&&item.id!==239&&item.id!==240&&item.id!==241&&item.id!==242&&item.id!==243), ...repairs.filter(item => !item.latest)].flatMap(item => item.edits[path] || []);
   if (!steps.length) return bytes;
   let text = bytes.toString('utf8');
   for (const step of steps) {
@@ -576,7 +644,12 @@ export function withoutApprovedAdditions(path, bytes) {
 }
 
 export function withoutApprovedLessons(lessons) {
-  return beforeGrammarLessons(lessons).filter(lesson => !additions.some(item => item.id === lesson.id && item.path === lesson.path)).map(lesson => {
+  lessons = lessons.map(lesson => {
+    const cover = FLAG_COVERS.find(item => item.id === lesson.id);
+    if (!cover || lesson.image !== cover.now) return lesson;
+    return { ...lesson, image: cover.before };
+  });
+  return beforeGrammarLessons(lessons.map(withOldClassicImage)).filter(lesson => !additions.some(item => item.id === lesson.id && item.path === lesson.path)).map(lesson => {
     if (lesson.id === 221) {
       assert.deepEqual(lesson.news,{addedAt:'2026-09-29',featured:true});
       const preserved = {...lesson}; delete preserved.news; lesson = preserved;

@@ -106,7 +106,7 @@ test('the player is pushed out of a person, never into a wall', () => {
 test('crashing into someone: insult, angry face, red bubble, mute wired to the voices switch', () => {
   const src = readFileSync(new URL('../app/noche-abierta/World3D.tsx', import.meta.url), 'utf8');
   for (const needle of ['pushOut(', 'createBumpClock(', 'insultFor(', 'shout(', "'furious'", 'angry: true']) assert.ok(src.includes(needle), needle);
-  const ui = readFileSync(new URL('../app/noche-abierta/NocheAbierta.tsx', import.meta.url), 'utf8');
+  const ui = readFileSync(new URL('../app/noche-abierta/NocheGame.tsx', import.meta.url), 'utf8');
   assert.ok(ui.includes('setShoutMuted('), 'the voices switch mutes the yells too');
   const css = readFileSync(new URL('../app/noche-abierta/noche-abierta.css', import.meta.url), 'utf8');
   assert.ok(/\.na-bubble\.is-angry\s*\{[^}]*background:\s*#[a-f0-9]{3,6}/i.test(css), 'red bubble');

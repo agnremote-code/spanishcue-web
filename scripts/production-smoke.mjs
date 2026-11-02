@@ -1,13 +1,38 @@
 import assert from "node:assert/strict";
 import { pathToFileURL } from "node:url";
 
-export async function runSmoke(origin, fetcher = fetch) {
+export async function runSmoke(origin, fetcher = fetch, { retryDelayMs = 1500 } = {}) {
   origin = new URL(origin).origin;
   const results = [];
+  // A network error or timeout names the request it hit (run 40638724042 died
+  // with a bare TimeoutError). GET/HEAD get one retry, so a single dropped
+  // connection does not open a production incident; a wrong status never retries.
+  // The body is read here too, so a timeout while reading it is covered as well.
+  async function request(path, options) {
+    const method = (options.method || "GET").toUpperCase();
+    for (let attempt = 1; ; attempt++) {
+      try {
+        const response = await fetcher(origin + path, { ...options, redirect: "manual", signal: AbortSignal.timeout(20000) });
+        const body = await response.arrayBuffer();
+        // The edge answers 503 for a moment while a new Worker version takes over (run 41360151202 got one on "/"
+        // right after the deploy and rolled a healthy build back). A GET/HEAD 503 is retried twice; any other
+        // status is final.
+        if (response.status === 503 && attempt < 3 && (method === "GET" || method === "HEAD")) {
+          await new Promise((resolve) => setTimeout(resolve, retryDelayMs));
+          continue;
+        }
+        return new Response([101, 204, 205, 304].includes(response.status) ? null : body, response);
+      } catch (error) {
+        if (attempt < 2 && (method === "GET" || method === "HEAD")) {
+          await new Promise((resolve) => setTimeout(resolve, retryDelayMs));
+          continue;
+        }
+        throw new Error(`${method} ${path}: ${error?.name || "Error"}: ${error?.message || error}`, { cause: error });
+      }
+    }
+  }
   async function check(path, statuses, options = {}) {
-    const response = await fetcher(origin + path, {
-      ...options, redirect: "manual", signal: AbortSignal.timeout(20000),
-    });
+    const response = await request(path, options);
     assert.ok([].concat(statuses).includes(response.status), `${path}: expected ${statuses}, got ${response.status}`);
     results.push({ path, status: response.status });
     return response;
@@ -40,6 +65,17 @@ export async function runSmoke(origin, fetcher = fetch) {
     assert.ok(html.includes(`<title>${title}`), `${resource} must carry its 3D title`);
     assert.ok(html.includes("Inside the 3D world"), `${resource} must describe the 3D world`);
     assert.ok(html.includes('"BreadcrumbList"'), `${resource} must carry its breadcrumb`);
+  }
+  // A /resources slug that search engines already saw keeps working: retired
+  // slugs 308 to the lesson's current page (app/resource-legacy-slugs.ts).
+  // Production may still 404 it until the release carrying the redirect lands;
+  // staging always requires the redirect.
+  const legacyResource = "/resources/spanish-grammar-lesson-a1-a2-ser-estar-y-hay-describir-personas-y-lugares";
+  const legacy = await check(legacyResource, origin === "https://spanishcue.com" ? [308, 404] : 308);
+  if (legacy.status === 308) {
+    const location = new URL(legacy.headers.get("location") || "", origin);
+    assert.equal(location.origin, origin, `${legacyResource}: foreign redirect`);
+    assert.equal(location.pathname, "/resources/spanish-grammar-lesson-a1-ser-estar-y-hay-describir-personas-y-lugares", `${legacyResource}: wrong redirect target`);
   }
   const students = await check("/api/students", 401);
   assert.match(students.headers.get("cache-control") || "", /no-store/i);

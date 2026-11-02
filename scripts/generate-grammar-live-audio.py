@@ -14,7 +14,7 @@ CLIPS = ROOT / 'app/grammar-classroom/live/audio/clips.json'
 MANIFEST = ROOT / 'app/grammar-classroom/live/audio/manifest.json'
 OUT = ROOT / 'public/audio/grammar-live'
 # Free classes keep their audio in the public grammar-free prefix (access-policy freeAudioPrefixes).
-FREE = {239}
+FREE = {239, 350, 389, 439, 468, 515}
 FREE_OUT = ROOT / 'public/audio/grammar-free'
 folder = lambda id: 'grammar-free' if id in FREE else 'grammar-live'
 edge_tts.communicate._SSL_CTX = ssl.create_default_context()

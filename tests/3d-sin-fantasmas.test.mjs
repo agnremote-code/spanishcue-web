@@ -19,6 +19,9 @@ const ascensor = await import('../app/el-ascensor-del-cerro/layout.mjs');
 const madrid = await import('../app/madrid-infectada/layout.mjs');
 const madridCity = await import('../app/madrid-infectada/city.mjs');
 const madridHorde = await import('../app/madrid-infectada/horde.mjs');
+const masAlla = await import('../app/mas-alla/layout.mjs');
+const vuelo = await import('../app/vuelo-cancelado/layout.mjs');
+const consorcio = await import('../app/el-consorcio/layout.mjs');
 const bosque = await import('../app/bosque-de-los-hongos-gigantes/engine.mjs');
 const { pushOut } = await import('../app/escucha-3d/bump.mjs');
 
@@ -100,6 +103,31 @@ function hospitalFloors() {
   }));
 }
 
+// Vuelo cancelado: three airport floors; the departures floor includes the kerb.
+function vueloFloors() {
+  const carry = w => (['trolley', 'cleaner', 'buggy'].includes(w.carry) ? 0.45 : BODY);
+  return vuelo.FLOORS.map(f => f.id).map(floor => floorWorld('vuelo', vuelo, floor, {
+    walkers: f => (vuelo.WALKERS[f] ?? []).map((w, i) => {
+      const pts = [];
+      for (let t = 0; t < 900; t += 0.05) pts.push(vuelo.walkerAt(w, t));
+      return { id: `walker-${i}`, r: carry(w), points: pts };
+    }),
+    spots: f => [vuelo.ELEVATOR_ARRIVAL, vuelo.STAIRS_ARRIVAL, ...(f === vuelo.SPAWN.floor ? [vuelo.SPAWN] : [])].map((p, i) => ({ id: ['ascensor', 'escalera', 'spawn'][i], ...p })),
+  }));
+}
+
+// El consorcio: nine floors of one building, the sidewalk and the terrace included.
+function consorcioFloors() {
+  return consorcio.FLOORS.map(f => f.id).map(floor => floorWorld('consorcio', consorcio, floor, {
+    walkers: f => (consorcio.WALKERS[f] ?? []).map((w, i) => {
+      const pts = [];
+      for (let t = 0; t < 900; t += 0.05) pts.push(consorcio.walkerAt(w, t));
+      return { id: `walker-${i}`, points: pts };
+    }),
+    spots: f => [consorcio.ELEVATOR_ARRIVAL, consorcio.STAIRS_ARRIVAL, ...(f === consorcio.SPAWN.floor ? [consorcio.SPAWN] : [])].map((p, i) => ({ id: ['ascensor', 'escalera', 'spawn'][i], ...p })),
+  }));
+}
+
 function casinoFloors() {
   return casino.FLOORS.map(f => f.id).map(floor => floorWorld('casino', casino, floor, {
     walkers: f => (casino.CROWD[f] ?? []).filter(c => c.walk).map((c, i) => ({ id: `walker-${i}`, points: sample(c.walk.axis === 'x' ? [[c.walk.from, c.z], [c.walk.to, c.z]] : [[c.x, c.walk.from], [c.x, c.walk.to]], false) })),
@@ -166,7 +194,21 @@ function madridCityWorld() {
   };
 }
 
-const WORLDS = [nocheStreet(), ...nocheRooms(), ...hospitalFloors(), ...casinoFloors(), feriaWorld(), ascensorWorld(), ...madridZones(), madridCityWorld()];
+// Más allá: the Umbral, the Cielo and the Infierno. Walkers loop their path;
+// the mascot is put at the spawn, the exit ring, the portals, the hourglass
+// every white circle and the circle of every voice (people and places).
+function masAllaPlaces() {
+  return masAlla.PLACE_IDS.map(id => {
+    const L = masAlla.layoutOf(id);
+    return {
+      id: `masalla:${id}`, solids: masAlla.solidsFor(id), bounds: L.bounds, staticWalkers: false,
+      walkers: L.walkers.map(w => ({ id: `alma-${w.seed}`, points: sample(w.path.map(p => [p.x, p.z]), true) })), people: masAlla.peopleOf(id),
+      spots: [{ id: 'spawn', ...L.spawn }, ...(L.exit ? [{ id: 'salida', ...L.exit }] : []), ...L.portals.map(p => ({ id: `portal-${p.to}`, x: p.x, z: p.z })), ...(L.final ? [{ id: 'final', x: L.final.x, z: L.final.z + L.final.r + 0.6 }] : []), ...L.spots.map(s => ({ id: s.id, x: s.x, z: s.z })), ...masAlla.voicesFor(id).filter(v => !v.walker).map(v => ({ id: `voz-${v.id}`, x: v.x, z: v.z }))],
+    };
+  });
+}
+
+const WORLDS = [nocheStreet(), ...nocheRooms(), ...hospitalFloors(), ...vueloFloors(), ...consorcioFloors(), ...casinoFloors(), feriaWorld(), ascensorWorld(), ...madridZones(), madridCityWorld(), ...masAllaPlaces()];
 
 // ------------------------------------------------------------------ checks
 test('every world in the list has solids, people or walkers to check', () => {

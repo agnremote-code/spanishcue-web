@@ -1,0 +1,2079 @@
+{
+  "game": "consorcio",
+  "level": "B2",
+  "items": [
+    {
+      "id": "llegada",
+      "title": "Si el colchón hubiera entrado",
+      "place": "La vereda de Medrano 1417",
+      "context": "Ya con el colchón arriba, Freddy y Don Ramón descansan en la vereda y hablan de cómo ha cambiado el oficio de cada uno.",
+      "speakers": [
+        {
+          "name": "Freddy",
+          "country": "Bolivia",
+          "voice": "es-BO-MarceloNeural"
+        },
+        {
+          "name": "Ramón",
+          "country": "Paraguay",
+          "voice": "es-PY-MarioNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Don Ramón, si me hubieran dicho esta mañana que iba a subir un colchón de pie en un ascensor de 1958, no lo habría creído."
+        },
+        {
+          "s": 1,
+          "text": "Así es este edificio. Aquí las cosas imposibles pasan todos los días; lo difícil es que pasen las normales."
+        },
+        {
+          "s": 0,
+          "text": "Le confieso que estoy pensando en dejar las mudanzas. Mi espalda ya no aguanta, y con las aplicaciones cualquiera con una camioneta se hace fletero."
+        },
+        {
+          "s": 1,
+          "text": "A mí me pasa algo parecido. Antes el encargado era el que sabía todo: quién llegaba, quién se iba, quién estaba enfermo. Ahora la gente se entera de todo por el grupo de WhatsApp."
+        },
+        {
+          "s": 0,
+          "text": "Pero nadie sabe sacar la reja del ascensor como usted."
+        },
+        {
+          "s": 1,
+          "text": "Eso es cierto. Por eso, aunque me ofrecieran jubilarme mañana, no lo aceptaría hasta enseñarle el truco a alguien de confianza."
+        },
+        {
+          "s": 0,
+          "text": "Pues si busca aprendiz, yo tengo experiencia con colchones imposibles."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué dice Ramón que es lo difícil en ese edificio?",
+          "options": [
+            "Que pasen cosas imposibles",
+            "Que pasen las cosas normales",
+            "Que los vecinos se entiendan"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Por qué piensa Freddy en dejar las mudanzas?",
+          "options": [
+            "Por su espalda y por la competencia de las aplicaciones",
+            "Porque no le pagan",
+            "Porque quiere ser encargado"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué ha cambiado en el trabajo de Ramón?",
+          "options": [
+            "Ahora cobra menos",
+            "Ahora trabaja de noche",
+            "Ahora la gente se entera de todo por WhatsApp"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué haría Ramón antes de jubilarse?",
+          "options": [
+            "Vender el edificio",
+            "Enseñarle el truco a alguien de confianza",
+            "Cambiar el ascensor"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Cómo ha cambiado la tecnología un oficio que conoces bien?",
+          "model": "En la enseñanza, ahora muchas clases se dan por internet y el profesor tiene que saber usar plataformas."
+        },
+        {
+          "q": "¿Qué conocimiento tuyo te gustaría transmitir a alguien antes de dejar un trabajo?",
+          "model": "Me gustaría enseñar a organizar bien el tiempo, porque me costó mucho aprenderlo."
+        },
+        {
+          "q": "Si pudieras cambiar de profesión mañana, ¿lo harías? ¿Por qué?",
+          "model": "Probablemente no, aunque me gustaría tener más tiempo libre."
+        }
+      ],
+      "gaps": "Por eso, aunque me [ofrecieran] [jubilarme] mañana, no lo [aceptaría] hasta enseñarle el [truco] a alguien de confianza.",
+      "glossary": [
+        {
+          "word": "aguanta",
+          "meaning": "de «aguantar»: soportar un esfuerzo"
+        },
+        {
+          "word": "fletero",
+          "meaning": "persona que hace mudanzas y transportes con su camioneta"
+        },
+        {
+          "word": "aprendiz",
+          "meaning": "persona que aprende un oficio con un experto"
+        }
+      ]
+    },
+    {
+      "id": "buzones",
+      "title": "El poder de la información",
+      "place": "El hall de entrada",
+      "context": "Nahuel y Doña Elvira discuten, medio en broma, sobre quién sabe más de los vecinos.",
+      "speakers": [
+        {
+          "name": "Elvira",
+          "country": "España",
+          "voice": "es-ES-ElviraNeural"
+        },
+        {
+          "name": "Nahuel",
+          "country": "Argentina",
+          "voice": "es-AR-TomasNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Nahuel, querido, tú y yo tenemos algo en común: sabemos más de este edificio que el propio administrador."
+        },
+        {
+          "s": 1,
+          "text": "Usted, puede ser. Yo solo sé quién compra qué. Aunque eso dice mucho de la gente."
+        },
+        {
+          "s": 0,
+          "text": "¿Por ejemplo?"
+        },
+        {
+          "s": 1,
+          "text": "Por ejemplo, que el del séptimo A compró luces de colores, un motor de agua y doce bolsas de cemento en un mes. Si yo fuera usted, preguntaría qué está construyendo."
+        },
+        {
+          "s": 0,
+          "text": "¡Lo sabía! Ese ruido no era un televisor. Y dime, ¿la persona nueva del cuarto B qué compra?"
+        },
+        {
+          "s": 1,
+          "text": "Ah, no, señora. Eso es secreto profesional. Si le contara todo, me quedaría sin trabajo y usted sin misterio."
+        },
+        {
+          "s": 0,
+          "text": "Qué lástima. Bueno, al menos dime si es una persona de confianza."
+        },
+        {
+          "s": 1,
+          "text": "Me firmó sin quejarse y me ofreció agua. Para mí, eso ya dice bastante. De lo que compra la gente se puede deducir casi todo, pero de cómo trata al repartidor se deduce lo más importante."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué tienen en común Elvira y Nahuel, según ella?",
+          "options": [
+            "Que viven en el mismo barrio",
+            "Que saben más del edificio que el administrador",
+            "Que trabajan juntos"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué compró el vecino del séptimo A?",
+          "options": [
+            "Luces, un motor de agua y cemento",
+            "Un televisor nuevo",
+            "Muebles de cocina"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Por qué Nahuel no habla de la persona nueva?",
+          "options": [
+            "Porque no la conoce",
+            "Porque Elvira no le cae bien",
+            "Porque es secreto profesional"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué hizo la persona nueva con Nahuel?",
+          "options": [
+            "Se quejó del retraso",
+            "Le firmó sin quejarse y le ofreció agua",
+            "No abrió la puerta"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué información sobre ti se podría deducir de tus compras?",
+          "model": "Se podría deducir que cocino mucho y que leo bastante."
+        },
+        {
+          "q": "¿Te parece ético que un repartidor comente lo que compran los clientes?",
+          "model": "No, creo que debería ser discreto, aunque sea en broma."
+        },
+        {
+          "q": "¿Qué gesto pequeño te hace confiar en una persona desconocida?",
+          "model": "Que sea amable con la gente que trabaja, como camareros o repartidores."
+        }
+      ],
+      "gaps": "Si le [contara] todo, me [quedaría] sin [trabajo] y usted sin [misterio].",
+      "glossary": [
+        {
+          "word": "en común",
+          "meaning": "compartido por dos o más personas"
+        },
+        {
+          "word": "secreto profesional",
+          "meaning": "obligación de no contar información del trabajo"
+        },
+        {
+          "word": "deducir",
+          "meaning": "llegar a una conclusión a partir de datos"
+        }
+      ]
+    },
+    {
+      "id": "consultorio",
+      "title": "Lo que no se vota",
+      "place": "El consultorio del 1.° B",
+      "context": "Después de la sesión, Marta habla por teléfono con Federico, que la llama nervioso antes de la asamblea.",
+      "speakers": [
+        {
+          "name": "Federico",
+          "country": "Nicaragua",
+          "voice": "es-NI-FedericoNeural"
+        },
+        {
+          "name": "Marta",
+          "country": "Argentina",
+          "voice": "es-AR-ElenaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Marta, perdón que la llame fuera del horario. Estoy en la escalera del sexto y no sé si subir a la terraza."
+        },
+        {
+          "s": 1,
+          "text": "Federico, respira. ¿Qué es lo que te preocupa exactamente?"
+        },
+        {
+          "s": 0,
+          "text": "Que si voto por el ascensor nuevo, Washington no me va a perdonar. Y si voto por restaurarlo, voy a seguir subiendo siete pisos a pie durante años."
+        },
+        {
+          "s": 1,
+          "text": "Fíjate en lo que acabas de decir. Hablas de lo que pensarán los demás y de tu miedo, pero no de lo que crees que es mejor para el edificio."
+        },
+        {
+          "s": 0,
+          "text": "Es que no lo sé. Como arquitecto, sé que el ascensor viejo es una joya. Como persona, me da pánico."
+        },
+        {
+          "s": 1,
+          "text": "Entonces quizás no tengas que resolverlo esta noche. Podrías proponer que lo restauren con más medidas de seguridad. Así no traicionas ni al arquitecto ni a la persona."
+        },
+        {
+          "s": 0,
+          "text": "Eso no se me había ocurrido. Marta, ¿esto cuenta como sesión?"
+        },
+        {
+          "s": 1,
+          "text": "Cuenta como media. Te la cobro el martes."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Dónde está Federico cuando llama?",
+          "options": [
+            "En el ascensor",
+            "En la escalera del sexto",
+            "En la terraza"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué le preocupa de votar por el ascensor nuevo?",
+          "options": [
+            "Que Washington no lo perdone",
+            "Que sea muy caro",
+            "Que no funcione"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué observa Marta sobre lo que dice Federico?",
+          "options": [
+            "Que exagera los precios",
+            "Que habla demasiado rápido",
+            "Que no habla de lo que cree mejor para el edificio"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué le propone Marta?",
+          "options": [
+            "Que no vaya a la asamblea",
+            "Que proponga restaurarlo con más seguridad",
+            "Que vote por el ascensor nuevo"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Te ha pasado que tu opinión profesional y tus emociones no coincidían?",
+          "model": "Sí, una vez tuve que despedir a un compañero que me caía muy bien."
+        },
+        {
+          "q": "¿Hasta qué punto te influye lo que piensan los demás cuando decides algo?",
+          "model": "Bastante, aunque intento que no sea lo más importante."
+        },
+        {
+          "q": "¿Crees que siempre hay una tercera opción en los dilemas?",
+          "model": "Muchas veces sí, pero hay que buscarla con calma."
+        }
+      ],
+      "gaps": "Así [no] [traicionas] ni al [arquitecto] ni a la [persona].",
+      "glossary": [
+        {
+          "word": "fuera del horario",
+          "meaning": "en un momento que no es el normal de trabajo"
+        },
+        {
+          "word": "joya",
+          "meaning": "algo de gran valor"
+        },
+        {
+          "word": "traicionas",
+          "meaning": "de «traicionar»: ir en contra de alguien o de algo"
+        }
+      ]
+    },
+    {
+      "id": "bateria",
+      "title": "La respuesta de Don Horacio",
+      "place": "El 1.° C",
+      "context": "Thiago vuelve del primero D y le cuenta a su madre cómo fue la conversación con el vecino.",
+      "speakers": [
+        {
+          "name": "Thiago",
+          "country": "Costa Rica",
+          "voice": "es-CR-JuanNeural"
+        },
+        {
+          "name": "Noelia",
+          "country": "Costa Rica",
+          "voice": "es-CR-MariaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Mamá, no te lo vas a creer. Don Horacio no escribió la carta."
+        },
+        {
+          "s": 1,
+          "text": "¿Y entonces quién fue?"
+        },
+        {
+          "s": 0,
+          "text": "No lo sabe, pero dice que él también recibió una, hace años, cuando tocaba el saxofón. Por eso dejó de tocar."
+        },
+        {
+          "s": 1,
+          "text": "¿Don Horacio tocaba el saxofón? Llevo diez años en este piso y nunca lo había escuchado."
+        },
+        {
+          "s": 0,
+          "text": "Porque lo dejó en 2009. Dice que se arrepiente todos los días. Me pidió que no hiciera lo mismo, aunque me lleguen cien cartas."
+        },
+        {
+          "s": 1,
+          "text": "Qué historia tan triste. ¿Y aceptó la entrada para el concurso?"
+        },
+        {
+          "s": 0,
+          "text": "Aceptó, pero con una condición: que el día que gane la beca, toquemos algo juntos. Él con el saxofón y yo con la batería."
+        },
+        {
+          "s": 1,
+          "text": "Si eso pasa, que sea en la terraza, para que se entere todo el edificio. Incluido quien escribe cartas sin firma. Y esta vez, yo misma voy a subir las sillas."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué descubrió Thiago?",
+          "options": [
+            "Que Don Horacio escribió la carta",
+            "Que Don Horacio no escribió la carta",
+            "Que la carta era de Elvira"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué tocaba Don Horacio antes?",
+          "options": [
+            "El saxofón",
+            "La batería",
+            "El piano"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Desde cuándo no toca?",
+          "options": [
+            "Desde el año pasado",
+            "Desde que llegó Noelia",
+            "Desde 2009"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué condición pone Don Horacio?",
+          "options": [
+            "Que Thiago deje de tocar",
+            "Que le paguen la entrada",
+            "Que toquen algo juntos si Thiago gana"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Abandonaste alguna actividad por presión de otras personas? ¿Te arrepientes?",
+          "model": "Dejé de cantar en un coro porque se reían de mí, y sí, me arrepiento."
+        },
+        {
+          "q": "¿Qué le aconsejarías a un joven que recibe críticas por su pasión?",
+          "model": "Que siga, pero que busque la manera de respetar a los demás."
+        },
+        {
+          "q": "¿Qué dúo musical inesperado te gustaría escuchar?",
+          "model": "Un violinista clásico con un rapero."
+        }
+      ],
+      "gaps": "Porque lo [dejó] en [2009]. Dice que se [arrepiente] todos los [días].",
+      "glossary": [
+        {
+          "word": "se arrepiente",
+          "meaning": "de «arrepentirse»: sentir pena por algo que hizo"
+        },
+        {
+          "word": "saxofón",
+          "meaning": "instrumento de viento de metal"
+        },
+        {
+          "word": "se entere",
+          "meaning": "de «enterarse»: llegar a saber algo"
+        }
+      ]
+    },
+    {
+      "id": "gotera",
+      "title": "Los caños de 1958",
+      "place": "El 2.° A",
+      "context": "Wilson le explica a Carla, con datos técnicos, por qué la gotera no es un problema entre vecinos.",
+      "speakers": [
+        {
+          "name": "Wilson",
+          "country": "Perú",
+          "voice": "es-PE-AlexNeural"
+        },
+        {
+          "name": "Carla",
+          "country": "Perú",
+          "voice": "es-PE-CamilaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Carla, mira este plano del edificio. Lo conseguí en el archivo municipal. Los caños de agua son los originales, de 1958, de hierro galvanizado."
+        },
+        {
+          "s": 1,
+          "text": "Traduce, por favor. No todos somos ingenieros."
+        },
+        {
+          "s": 0,
+          "text": "Que esos caños se oxidan por dentro. Duran unos cincuenta años, y estos ya tienen sesenta y ocho. La bañera de Yuliana solo aceleró algo que iba a pasar igual."
+        },
+        {
+          "s": 1,
+          "text": "O sea que, aunque ella hubiera cerrado la canilla, tarde o temprano habríamos tenido otra gotera."
+        },
+        {
+          "s": 0,
+          "text": "Exacto. Y no solo nosotros. Todos los departamentos de la columna A tienen el mismo riesgo. Si el consorcio no cambia la cañería, esto se va a repetir en cada piso."
+        },
+        {
+          "s": 1,
+          "text": "Entonces no es un conflicto entre particulares, como dice el administrador. Es un problema del edificio."
+        },
+        {
+          "s": 0,
+          "text": "Eso es lo que voy a demostrar esta noche. Con plano, fotos y presupuesto."
+        },
+        {
+          "s": 1,
+          "text": "Y yo voy a estar en primera fila. Por primera vez, me alegra que seas tan aburrido con los caños."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Dónde consiguió Wilson el plano?",
+          "options": [
+            "En la administración",
+            "En el archivo municipal",
+            "En internet"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cuántos años duran normalmente esos caños?",
+          "options": [
+            "Unos cincuenta años",
+            "Unos veinte años",
+            "Unos cien años"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué hizo la bañera de Yuliana, según Wilson?",
+          "options": [
+            "Causó todo el problema",
+            "Rompió el techo",
+            "Aceleró algo que iba a pasar igual"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué quiere demostrar Wilson en la asamblea?",
+          "options": [
+            "Que Yuliana es culpable",
+            "Que es un problema del edificio",
+            "Que el sofá era caro"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Crees que en las discusiones los datos técnicos convencen más que las emociones?",
+          "model": "Depende del público, pero un buen dato ayuda mucho."
+        },
+        {
+          "q": "¿Has investigado alguna vez el origen de un problema doméstico?",
+          "model": "Sí, busqué en internet por qué había humedad en mi pared."
+        },
+        {
+          "q": "¿Qué infraestructura de tu ciudad necesita una renovación urgente?",
+          "model": "El transporte público, que tiene trenes muy viejos."
+        }
+      ],
+      "gaps": "La [bañera] de [Yuliana] solo [aceleró] algo que iba a [pasar] igual.",
+      "glossary": [
+        {
+          "word": "galvanizado",
+          "meaning": "cubierto de una capa de metal contra la oxidación"
+        },
+        {
+          "word": "se oxidan",
+          "meaning": "de «oxidarse»: se estropean por el agua y el aire"
+        },
+        {
+          "word": "cañería",
+          "meaning": "conjunto de caños de un edificio"
+        }
+      ]
+    },
+    {
+      "id": "gatos",
+      "title": "Gastón y el gato blanco",
+      "place": "El 2.° D",
+      "context": "Gastón vuelve a casa de Pocha una hora después, con una excusa poco creíble.",
+      "speakers": [
+        {
+          "name": "Gastón",
+          "country": "Venezuela",
+          "voice": "es-VE-SebastianNeural"
+        },
+        {
+          "name": "Pocha",
+          "country": "Uruguay",
+          "voice": "es-UY-ValentinaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Señora Pocha, perdone que vuelva. Creo que me olvidé una llave inglesa debajo del fregadero."
+        },
+        {
+          "s": 1,
+          "text": "Pasa, Gastón. Aunque yo revisé y no hay ninguna llave. ¿No será que vienes por otra cosa?"
+        },
+        {
+          "s": 0,
+          "text": "Bueno… Se lo digo con sinceridad. El gato blanco me siguió hasta la escalera. Y cuando bajé, se quedó llorando en la puerta."
+        },
+        {
+          "s": 1,
+          "text": "Se llama Merengue. Elvira lo devolvió en una semana y desde entonces no confía en nadie. Si te eligió a ti, es porque algo vio."
+        },
+        {
+          "s": 0,
+          "text": "Señora, yo vivo en un monoambiente y trabajo doce horas por día. No sé si puedo cuidarlo bien."
+        },
+        {
+          "s": 1,
+          "text": "Los gatos no necesitan mucho espacio. Necesitan a alguien que vuelva. ¿Tú vuelves a tu casa todas las noches?"
+        },
+        {
+          "s": 0,
+          "text": "Todas las noches, aunque llegue muerto de cansancio."
+        },
+        {
+          "s": 1,
+          "text": "Entonces ya está. Te llevas a Merengue, su manta y su plato. Y si algún día no puedes, me lo traes. Pero no creo que pase."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué excusa pone Gastón para volver?",
+          "options": [
+            "Que olvidó su teléfono",
+            "Que olvidó una llave inglesa",
+            "Que quiere otro té"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué hizo el gato blanco?",
+          "options": [
+            "Siguió a Gastón hasta la escalera",
+            "Rompió una cortina",
+            "Se escondió"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Por qué Merengue no confía en nadie?",
+          "options": [
+            "Porque vivía en la calle",
+            "Porque es muy viejo",
+            "Porque Elvira lo devolvió"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué necesitan los gatos, según Pocha?",
+          "options": [
+            "Mucho espacio",
+            "Comida cara",
+            "Alguien que vuelva"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Te has encariñado alguna vez con un animal que no era tuyo?",
+          "model": "Sí, con el perro de mis vecinos, que siempre venía a mi puerta."
+        },
+        {
+          "q": "¿Crees que una persona que trabaja mucho puede tener mascota?",
+          "model": "Sí, si elige un animal independiente y se organiza bien."
+        },
+        {
+          "q": "¿Qué excusas usas cuando no quieres reconocer lo que sientes?",
+          "model": "Digo que estoy cansado, aunque no sea verdad."
+        }
+      ],
+      "gaps": "Los gatos no [necesitan] [mucho] [espacio]. Necesitan a [alguien] que vuelva.",
+      "glossary": [
+        {
+          "word": "llave inglesa",
+          "meaning": "herramienta para ajustar tuercas"
+        },
+        {
+          "word": "monoambiente",
+          "meaning": "departamento de un solo ambiente"
+        },
+        {
+          "word": "manta",
+          "meaning": "tela gruesa para abrigarse"
+        }
+      ]
+    },
+    {
+      "id": "teletrabajo",
+      "title": "Diez minutos de honestidad",
+      "place": "El 3.° A",
+      "context": "Yuliana graba un mensaje de voz para su compañera de trabajo en Bogotá contándole la reunión.",
+      "speakers": [
+        {
+          "name": "Yuliana",
+          "country": "Venezuela",
+          "voice": "es-VE-PaolaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Caro, tienes que escuchar esto. Hoy, en plena reunión con Nueva York, se me desbordó la bañera y le inundé la casa al vecino de abajo."
+        },
+        {
+          "s": 0,
+          "text": "Al principio no quería cortar la llamada, porque ya sabes cómo es Mark: si te levantas, piensa que no te comprometes. Pero el vecino estaba en mi puerta gritando y una persona que se acababa de mudar al edificio me dijo que le contara la verdad."
+        },
+        {
+          "s": 0,
+          "text": "Y se la conté. Le dije: «Mark, tengo una emergencia doméstica, necesito diez minutos». ¿Y sabes qué hizo? Se rió y me contó que a él le había pasado lo mismo en Brooklyn."
+        },
+        {
+          "s": 0,
+          "text": "Al final me dio el ascenso. Y me dijo algo que no me esperaba: que valoraba que fuera honesta."
+        },
+        {
+          "s": 0,
+          "text": "Así que, amiga, he aprendido una cosa: llevamos años fingiendo que no tenemos vida fuera de la pantalla. Y resulta que el jefe también tiene una bañera."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué pasó durante la reunión?",
+          "options": [
+            "Se cortó internet",
+            "Se desbordó la bañera",
+            "Llegó el jefe a su casa"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Por qué no quería cortar la llamada al principio?",
+          "options": [
+            "Porque Mark piensa que si te levantas no te comprometes",
+            "Porque era una reunión corta",
+            "Porque no escuchaba al vecino"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Quién le aconsejó contar la verdad?",
+          "options": [
+            "Su amiga Caro",
+            "El vecino de abajo",
+            "Una persona que se acababa de mudar"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué valoró el jefe?",
+          "options": [
+            "Su puntualidad",
+            "Que fuera honesta",
+            "Su inglés"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Sientes que en tu trabajo tienes que fingir que no tienes vida personal?",
+          "model": "A veces sí, sobre todo en las reuniones por videollamada."
+        },
+        {
+          "q": "¿Qué emergencia doméstica te pasó en un mal momento?",
+          "model": "Se me cortó la luz justo antes de un examen en línea."
+        },
+        {
+          "q": "¿Crees que la honestidad siempre se valora en el trabajo?",
+          "model": "No siempre, depende mucho de la cultura de la empresa."
+        }
+      ],
+      "gaps": "Y [resulta] que el [jefe] también [tiene] una [bañera].",
+      "glossary": [
+        {
+          "word": "en plena reunión",
+          "meaning": "en medio de la reunión"
+        },
+        {
+          "word": "se me desbordó",
+          "meaning": "de «desbordarse»: el agua salió por encima del borde"
+        },
+        {
+          "word": "fingiendo",
+          "meaning": "de «fingir»: aparentar algo que no es verdad"
+        }
+      ]
+    },
+    {
+      "id": "turistas",
+      "title": "Una reseña en la servilleta",
+      "place": "El 3.° C",
+      "context": "Iker le lee a Nerea la reseña que está escribiendo sobre el departamento.",
+      "speakers": [
+        {
+          "name": "Iker",
+          "country": "España",
+          "voice": "es-ES-AlvaroNeural"
+        },
+        {
+          "name": "Nerea",
+          "country": "España",
+          "voice": "es-ES-XimenaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Escucha, Nerea: «El departamento está limpio y bien ubicado, pero el anuncio promete una vista al Obelisco que solo existe en la imaginación del dueño»."
+        },
+        {
+          "s": 1,
+          "text": "Es un poco agresivo, ¿no? Al fin y al cabo, la cama es comodísima y los vecinos nos han tratado de maravilla."
+        },
+        {
+          "s": 0,
+          "text": "También pienso poner eso. «Los vecinos compensan los defectos del anuncio: una señora nos regaló un gato y un señor nos invitó a un tango»."
+        },
+        {
+          "s": 1,
+          "text": "Lo del gato no lo pongas, que todavía no hemos decidido si nos lo llevamos a San Sebastián."
+        },
+        {
+          "s": 0,
+          "text": "Vale. Y al final: «Recomendable, siempre que el viajero tenga paciencia, sentido del humor y un código de seguridad al revés»."
+        },
+        {
+          "s": 1,
+          "text": "Me gusta. Pero espera a publicarla hasta después de la asamblea. Si el dueño se entera de que nos quejamos, quizás nos echa antes de tiempo."
+        },
+        {
+          "s": 0,
+          "text": "Tienes razón. La guardo hasta el domingo. Si para entonces seguimos aquí, cinco estrellas."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué critica la reseña?",
+          "options": [
+            "La limpieza",
+            "La vista prometida en el anuncio",
+            "El ruido"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué opina Nerea de la reseña al principio?",
+          "options": [
+            "Que es un poco agresiva",
+            "Que es demasiado larga",
+            "Que es perfecta"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué le pide Nerea que no ponga?",
+          "options": [
+            "Lo del tango",
+            "Lo del código",
+            "Lo del gato"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cuándo van a publicar la reseña?",
+          "options": [
+            "Hoy mismo",
+            "Después del domingo",
+            "Nunca"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Cómo escribes una reseña negativa sin ser injusto o injusta?",
+          "model": "Intento mencionar también lo positivo y dar datos concretos."
+        },
+        {
+          "q": "¿Qué valoras más en un alojamiento: la ubicación, la limpieza o la gente?",
+          "model": "La gente, porque hace que te sientas en casa."
+        },
+        {
+          "q": "¿Confías en las reseñas cuando eliges un hotel o un restaurante?",
+          "model": "Sí, pero leo varias y no solo las más extremas."
+        }
+      ],
+      "gaps": "Si el [dueño] se [entera] de que nos [quejamos], quizás nos [echa] antes de tiempo.",
+      "glossary": [
+        {
+          "word": "compensan",
+          "meaning": "de «compensar»: equilibran algo negativo"
+        },
+        {
+          "word": "recomendable",
+          "meaning": "que se puede aconsejar"
+        },
+        {
+          "word": "nos echa",
+          "meaning": "de «echar»: nos obliga a irnos"
+        }
+      ]
+    },
+    {
+      "id": "mudanza",
+      "title": "La negociación de Amalia",
+      "place": "El 4.° B",
+      "context": "Amalia llama por teléfono a su hija para contarle cómo fue la firma del contrato.",
+      "speakers": [
+        {
+          "name": "Amalia",
+          "country": "Chile",
+          "voice": "es-CL-CatalinaNeural"
+        },
+        {
+          "name": "Freddy",
+          "country": "Bolivia",
+          "voice": "es-BO-MarceloNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Hija, ya está alquilado el cuarto B. Pero no fue tan fácil como pensaba. La persona nueva leyó la cláusula siete."
+        },
+        {
+          "s": 0,
+          "text": "Sí, la de las expensas extraordinarias. Tuve que aceptar pagar la mitad del aumento si aprueban el ascensor. Si no hubiera estado el fletero tosiendo como un loco, no se habría dado cuenta."
+        },
+        {
+          "s": 1,
+          "text": "Señora, perdone, me olvidé el destornillador. Y para que conste, yo tosía porque había mucho polvo."
+        },
+        {
+          "s": 0,
+          "text": "Freddy, usted no tosía por el polvo. Pero bueno, no importa. Hija, al final creo que salimos ganando: un inquilino que lee contratos es un inquilino que paga."
+        },
+        {
+          "s": 1,
+          "text": "Eso mismo le dije yo, señora. Los inquilinos contentos pagan a tiempo."
+        },
+        {
+          "s": 0,
+          "text": "Freddy, váyase con su destornillador, por favor. Hija, te llamo después de la asamblea. Y recuérdame que mañana tengo que llamar al señor de las persianas, que también lo prometí por escrito."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué leyó la persona nueva?",
+          "options": [
+            "Todo el reglamento",
+            "La cláusula siete",
+            "Las reseñas"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué tuvo que aceptar Amalia?",
+          "options": [
+            "Pagar la mitad del aumento",
+            "Bajar el alquiler",
+            "Arreglar el ascensor"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué excusa da Freddy por la tos?",
+          "options": [
+            "Que estaba resfriado",
+            "Que había humo",
+            "Que había mucho polvo"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué concluye Amalia al final?",
+          "options": [
+            "Que perdió dinero",
+            "Que un inquilino que lee contratos es un inquilino que paga",
+            "Que no va a alquilar más"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Te parece justo que el inquilino pague las mejoras de un edificio?",
+          "model": "No del todo, porque el dueño es quien se beneficia a largo plazo."
+        },
+        {
+          "q": "¿Has negociado alguna condición de un contrato?",
+          "model": "Sí, negocié la fecha de entrada en un departamento."
+        },
+        {
+          "q": "¿Qué haces cuando alguien te da una pista discreta en una situación difícil?",
+          "model": "Le presto atención y después le doy las gracias en privado."
+        }
+      ],
+      "gaps": "Si no [hubiera] estado el [fletero] tosiendo como un loco, no se [habría] dado [cuenta].",
+      "glossary": [
+        {
+          "word": "cláusula",
+          "meaning": "parte de un contrato"
+        },
+        {
+          "word": "destornillador",
+          "meaning": "herramienta para tornillos"
+        },
+        {
+          "word": "salimos ganando",
+          "meaning": "el resultado fue bueno para nosotros"
+        }
+      ]
+    },
+    {
+      "id": "tango",
+      "title": "Elsa y la claustrofobia",
+      "place": "El 4.° C",
+      "context": "Don Washington le cuenta a una vecina joven lo que Elsa le dijo años después sobre aquel día en el ascensor.",
+      "speakers": [
+        {
+          "name": "Washington",
+          "country": "Uruguay",
+          "voice": "es-UY-MateoNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Durante treinta años creí que Elsa se había enamorado de mí por los tangos que le canté en el ascensor. Siempre lo contaba en las fiestas."
+        },
+        {
+          "s": 0,
+          "text": "Pero un día, en nuestro aniversario número treinta, me confesó algo. Me dijo: «Washington, yo no tenía claustrofobia. Fingí el miedo para que no dejaras de cantar»."
+        },
+        {
+          "s": 0,
+          "text": "Yo no lo podía creer. Le pregunté por qué. Y me respondió: «Porque cantabas fatal, pero con tantas ganas que pensé: este hombre nunca se va a rendir. Y yo quería a alguien así»."
+        },
+        {
+          "s": 0,
+          "text": "Desde ese día, cada vez que el ascensor se traba, me río solo. Los vecinos piensan que estoy loco. Pero es que me acuerdo de que el amor de mi vida empezó con una mentira piadosa."
+        },
+        {
+          "s": 0,
+          "text": "Si esta noche deciden cambiar ese ascensor, lo voy a aceptar. Pero que sepan que se llevan algo más que una máquina."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué creyó Washington durante treinta años?",
+          "options": [
+            "Que Elsa tenía miedo de él",
+            "Que Elsa se enamoró por sus tangos",
+            "Que el ascensor era peligroso"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué le confesó Elsa?",
+          "options": [
+            "Que fingió el miedo",
+            "Que no le gustaba el tango",
+            "Que conocía a los bomberos"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué pensó Elsa de él?",
+          "options": [
+            "Que cantaba muy bien",
+            "Que era muy tímido",
+            "Que nunca se iba a rendir"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué hará Washington si cambian el ascensor?",
+          "options": [
+            "Se mudará",
+            "Lo aceptará",
+            "Irá a juicio"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué mentira piadosa has dicho o te han dicho alguna vez?",
+          "model": "Le dije a mi abuela que su comida era la mejor, aunque estaba salada."
+        },
+        {
+          "q": "¿Qué cualidad te enamora más de una persona: el talento o las ganas?",
+          "model": "Las ganas, porque el talento se puede aprender."
+        },
+        {
+          "q": "¿Cómo sería tu discurso para defender un objeto con valor sentimental?",
+          "model": "Contaría una historia concreta en lugar de dar argumentos."
+        }
+      ],
+      "gaps": "Porque [cantabas] [fatal], pero con tantas [ganas] que [pensé]: este hombre nunca se va a rendir.",
+      "glossary": [
+        {
+          "word": "claustrofobia",
+          "meaning": "miedo a los lugares cerrados"
+        },
+        {
+          "word": "fingí",
+          "meaning": "de «fingir»: aparentar algo falso"
+        },
+        {
+          "word": "mentira piadosa",
+          "meaning": "mentira que se dice para no hacer daño"
+        }
+      ]
+    },
+    {
+      "id": "cumple",
+      "title": "La reseña de Pochoclo",
+      "place": "El 5.° D",
+      "context": "Pochoclo llama a su primo, el mago, para contarle la fiesta y pedirle un consejo.",
+      "speakers": [
+        {
+          "name": "Pochoclo",
+          "country": "República Dominicana",
+          "voice": "es-DO-EmilioNeural"
+        },
+        {
+          "name": "Jennifer",
+          "country": "Colombia",
+          "voice": "es-CO-SalomeNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Primo, necesito un consejo. Hoy, en un cumpleaños, los niños se pusieron a llorar en cuanto me vieron. Diez niños."
+        },
+        {
+          "s": 0,
+          "text": "No, no era la nariz. Bueno, quizás un poco. El ascensor se quedó parado veinte minutos y con el calor se me derritió el maquillaje. Parecía un payaso de película de terror."
+        },
+        {
+          "s": 1,
+          "text": "Pochoclo, perdón que interrumpa, me olvidé de pagarle. Y quería decirle que, si no hubiera sido por usted, Benjamín no habría tenido un cumpleaños tan especial."
+        },
+        {
+          "s": 0,
+          "text": "Señora, qué amable. Primo, ¿oíste? Dice que fue especial."
+        },
+        {
+          "s": 1,
+          "text": "Fue especial porque usted supo cambiar de plan. Un mago con un truco que sale mal no sirve para nada. Usted, en cambio, se quitó el disfraz y siguió."
+        },
+        {
+          "s": 0,
+          "text": "Primo, ya no necesito el consejo. Pero el año que viene, si la señora te llama, dile que yo hago descuento. Y que voy sin nariz desde el principio."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Por qué llama Pochoclo a su primo?",
+          "options": [
+            "Para invitarlo a una fiesta",
+            "Para pedirle un consejo",
+            "Para pedirle dinero"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Por qué se derritió el maquillaje?",
+          "options": [
+            "Porque el ascensor estuvo parado veinte minutos",
+            "Porque hacía calor en la fiesta",
+            "Porque lloró"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Por qué vuelve Jennifer?",
+          "options": [
+            "Para quejarse",
+            "Para despedirse de los niños",
+            "Para pagarle"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Por qué fue especial el cumpleaños, según Jennifer?",
+          "options": [
+            "Por la torta",
+            "Porque Pochoclo supo cambiar de plan",
+            "Por el mago"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué valoras más en un profesional: que todo salga perfecto o que sepa improvisar?",
+          "model": "Que sepa improvisar, porque siempre hay imprevistos."
+        },
+        {
+          "q": "¿Recuerdas una situación en la que un error terminó siendo positivo?",
+          "model": "Sí, en un viaje tomé el tren equivocado y así llegué a un pueblo precioso."
+        },
+        {
+          "q": "¿Pedirías un consejo a un familiar sobre tu trabajo?",
+          "model": "Sí, a mi hermana, porque tiene mucha experiencia."
+        }
+      ],
+      "gaps": "Usted, en [cambio], se [quitó] el [disfraz] y [siguió].",
+      "glossary": [
+        {
+          "word": "derritió",
+          "meaning": "de «derretirse»: pasar de sólido a líquido por el calor"
+        },
+        {
+          "word": "descuento",
+          "meaning": "rebaja en el precio"
+        },
+        {
+          "word": "disfraz",
+          "meaning": "ropa para parecer otra persona o personaje"
+        }
+      ]
+    },
+    {
+      "id": "ataud",
+      "title": "Una conversación con Canadá",
+      "place": "El 5.° A",
+      "context": "Don Aurelio habla por videollamada con su hijo, que vive en Canadá. Daisy interviene.",
+      "speakers": [
+        {
+          "name": "Aurelio",
+          "country": "Cuba",
+          "voice": "es-CU-ManuelNeural"
+        },
+        {
+          "name": "Daisy",
+          "country": "Honduras",
+          "voice": "es-HN-KarlaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Hijo, no te enojes. Ya está comprado y pagado. Si hubieras visto el precio, me darías la razón: con esta inflación, fue un negocio."
+        },
+        {
+          "s": 0,
+          "text": "No, no estoy enfermo. Precisamente porque estoy bien quiero dejar todo organizado. No quiero que tú y tu hermana discutan como los hijos de tu tío Ernesto."
+        },
+        {
+          "s": 1,
+          "text": "Don Aurelio, dígale también lo de la música."
+        },
+        {
+          "s": 0,
+          "text": "Ah, sí. Quiero que en el funeral suene «Volver», de Gardel. Ya lo grabé en un disco y está dentro del ataúd, junto con una carta para cada uno de ustedes. No la pueden abrir antes de tiempo, eh."
+        },
+        {
+          "s": 1,
+          "text": "Y dígale que ahora lo usa de mesa para el mate, que eso también es importante."
+        },
+        {
+          "s": 0,
+          "text": "Bueno, eso no hace falta. Hijo, lo que quiero decirte es esto: si me pasa algo, ustedes solo tienen que venir, abrazarse y escuchar tango. Lo demás ya está resuelto."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Por qué Aurelio cree que fue un negocio?",
+          "options": [
+            "Porque tenía descuento",
+            "Por la inflación",
+            "Porque lo compró usado"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué no quiere que pase entre sus hijos?",
+          "options": [
+            "Que discutan como los hijos de su tío",
+            "Que vendan la casa",
+            "Que se muden"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué canción quiere en su funeral?",
+          "options": [
+            "Un bolero",
+            "Un tango de Piazzolla",
+            "«Volver», de Gardel"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué quiere que hagan sus hijos si le pasa algo?",
+          "options": [
+            "Que vendan el ataúd",
+            "Que vengan, se abracen y escuchen tango",
+            "Que organicen todo"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Te parece una buena idea dejar organizados estos temas con tiempo?",
+          "model": "Sí, aunque es difícil hablar de eso con la familia."
+        },
+        {
+          "q": "¿Qué canción te gustaría que sonara en un momento importante de tu vida?",
+          "model": "Una canción de los Beatles que escuchaba con mi madre."
+        },
+        {
+          "q": "¿Cómo mantienes el contacto con familiares que viven lejos?",
+          "model": "Hacemos videollamadas los domingos."
+        }
+      ],
+      "gaps": "si me [pasa] algo, ustedes solo tienen que [venir], [abrazarse] y escuchar [tango].",
+      "glossary": [
+        {
+          "word": "negocio",
+          "meaning": "operación que da beneficio"
+        },
+        {
+          "word": "precisamente",
+          "meaning": "justamente, exactamente"
+        },
+        {
+          "word": "resuelto",
+          "meaning": "solucionado"
+        }
+      ]
+    },
+    {
+      "id": "administrador",
+      "title": "La versión del contador",
+      "place": "El palier del sexto",
+      "context": "Barrionuevo habla por teléfono con su cuñado antes de la asamblea. Ramón lo escucha desde la escalera.",
+      "speakers": [
+        {
+          "name": "Barrionuevo",
+          "country": "Guatemala",
+          "voice": "es-GT-AndresNeural"
+        },
+        {
+          "name": "Ramón",
+          "country": "Paraguay",
+          "voice": "es-PY-MarioNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Cacho, tenemos un problema. El encargado consiguió dos presupuestos más baratos y los va a presentar esta noche."
+        },
+        {
+          "s": 0,
+          "text": "Ya sé que el nuestro incluye mantenimiento. Pero si la diferencia es de un treinta por ciento, los vecinos no lo van a aprobar. Y encima la señora del primero A anda diciendo que es un conflicto de intereses."
+        },
+        {
+          "s": 0,
+          "text": "No, no puedo hacer desaparecer los papeles. Ya lo intenté y el encargado tiene copias."
+        },
+        {
+          "s": 1,
+          "text": "Contador, buenas noches. Perdone, subía por la escalera y no pude evitar escuchar."
+        },
+        {
+          "s": 0,
+          "text": "Ramón… No es lo que parece."
+        },
+        {
+          "s": 1,
+          "text": "Es exactamente lo que parece. Pero le doy una oportunidad: si esta noche presenta usted mismo los tres presupuestos y aclara que uno es de su cuñado, yo no digo nada de esta llamada."
+        },
+        {
+          "s": 0,
+          "text": "¿Y si no lo hago?"
+        },
+        {
+          "s": 1,
+          "text": "Entonces la persona que escribe el acta va a tener mucho material."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Con quién habla Barrionuevo?",
+          "options": [
+            "Con Elvira",
+            "Con su cuñado",
+            "Con la persona nueva"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Por qué cree que los vecinos no aprobarán su presupuesto?",
+          "options": [
+            "Por la diferencia del treinta por ciento",
+            "Porque no tiene mantenimiento",
+            "Porque es muy lento"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué intentó hacer con los papeles?",
+          "options": [
+            "Romperlos",
+            "Copiarlos",
+            "Hacerlos desaparecer"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué le propone Ramón?",
+          "options": [
+            "Que renuncie",
+            "Que presente los tres presupuestos y aclare lo del cuñado",
+            "Que le pague"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué harías si escucharas por casualidad una conversación comprometedora?",
+          "model": "Hablaría directamente con la persona antes de contarlo."
+        },
+        {
+          "q": "¿Crees que la gente merece una segunda oportunidad cuando hace algo poco ético?",
+          "model": "Depende de la gravedad, pero muchas veces sí."
+        },
+        {
+          "q": "¿Qué conflicto de intereses has visto en tu entorno?",
+          "model": "Un jefe que contrató a la empresa de su esposa."
+        }
+      ],
+      "gaps": "si esta noche [presenta] usted [mismo] los tres [presupuestos] y [aclara] que uno es de su cuñado",
+      "glossary": [
+        {
+          "word": "encima",
+          "meaning": "además, para empeorar las cosas"
+        },
+        {
+          "word": "no pude evitar",
+          "meaning": "no tuve otra opción que"
+        },
+        {
+          "word": "oportunidad",
+          "meaning": "ocasión para hacer algo"
+        }
+      ]
+    },
+    {
+      "id": "herencia",
+      "title": "El testamento de la tía Chela",
+      "place": "El 6.° B",
+      "context": "Rubén encuentra una carta de la tía Chela dentro del piano y se la lee a Mirta.",
+      "speakers": [
+        {
+          "name": "Rubén",
+          "country": "Panamá",
+          "voice": "es-PA-RobertoNeural"
+        },
+        {
+          "name": "Mirta",
+          "country": "Panamá",
+          "voice": "es-PA-MargaritaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Mirta, ven. Estaba afinando el piano y dentro había un sobre con nuestros nombres. Es la letra de la tía."
+        },
+        {
+          "s": 1,
+          "text": "Léela, por favor. Yo no puedo."
+        },
+        {
+          "s": 0,
+          "text": "«Queridos Mirta y Rubén: si están leyendo esto, seguramente están peleando por el piano. Los conozco. Mirta, tú necesitas el dinero; Rubén, tú necesitas el lugar. Les propongo algo: que Rubén se quede a vivir, que pague a Mirta su parte como pueda, y que el piano no sea de nadie, sino de la casa»."
+        },
+        {
+          "s": 1,
+          "text": "Siempre fue más inteligente que nosotros."
+        },
+        {
+          "s": 0,
+          "text": "Hay más: «Y una última cosa. Mirta, nunca tuviste mal oído. Dejaste de tocar porque Rubén se reía de ti. Rubén, pídele perdón»."
+        },
+        {
+          "s": 1,
+          "text": "¿Te reías de mí?"
+        },
+        {
+          "s": 0,
+          "text": "Tenía nueve años, Mirta. Pero sí. Perdóname. Y si quieres, el domingo tocamos juntos, como hacíamos con ella. Tú eliges la pieza."
+        },
+        {
+          "s": 1,
+          "text": "«Para Elisa». Con dos dedos, como en 1985."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Dónde encontró Rubén la carta?",
+          "options": [
+            "En un cajón",
+            "Dentro del piano",
+            "Debajo de la puerta"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué propone la tía sobre el piano?",
+          "options": [
+            "Que sea de la casa",
+            "Que sea de Mirta",
+            "Que lo vendan"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Por qué dejó Mirta de tocar, según la carta?",
+          "options": [
+            "Porque no tenía tiempo",
+            "Porque tenía mal oído",
+            "Porque Rubén se reía de ella"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué hace Rubén al final?",
+          "options": [
+            "Se va",
+            "Le pide perdón",
+            "Rompe la carta"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué propondrías tú si dos personas se pelean por un objeto que no se puede dividir?",
+          "model": "Que el objeto se quede en un lugar donde ambos puedan disfrutarlo."
+        },
+        {
+          "q": "¿Has dejado alguna actividad por las burlas de alguien?",
+          "model": "Sí, dejé de bailar porque mis compañeros se burlaban."
+        },
+        {
+          "q": "¿Crees que las personas mayores conocen mejor a su familia de lo que creemos?",
+          "model": "Sí, observan mucho aunque no digan nada."
+        }
+      ],
+      "gaps": "Mirta, tú [necesitas] el [dinero]; Rubén, tú necesitas el [lugar]. Les [propongo] algo",
+      "glossary": [
+        {
+          "word": "afinando",
+          "meaning": "de «afinar»: ajustar un instrumento para que suene bien"
+        },
+        {
+          "word": "sobre",
+          "meaning": "papel doblado donde se guarda una carta"
+        },
+        {
+          "word": "perdóname",
+          "meaning": "de «perdonar»: forma de pedir disculpas"
+        }
+      ]
+    },
+    {
+      "id": "misterio",
+      "title": "Cinco minutos en la terraza",
+      "place": "El 7.° D",
+      "context": "Lili y el señor Ibarra están en la escalera, a pocos pasos de la puerta de la terraza.",
+      "speakers": [
+        {
+          "name": "Lili",
+          "country": "El Salvador",
+          "voice": "es-SV-LorenaNeural"
+        },
+        {
+          "name": "Ibarra",
+          "country": "El Salvador",
+          "voice": "es-SV-RodrigoNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Señor Ibarra, ya estamos. Detrás de esa puerta está la terraza. Hay unas treinta personas. ¿Cómo se siente?"
+        },
+        {
+          "s": 1,
+          "text": "Como si tuviera que subir una montaña. Me tiemblan las piernas."
+        },
+        {
+          "s": 0,
+          "text": "Podemos quedarnos aquí, en la escalera. Desde aquí se escucha todo y nadie lo ve."
+        },
+        {
+          "s": 1,
+          "text": "No. Si me quedo en la escalera, es como si siguiera encerrado. Necesito ver el cielo, aunque sea un minuto."
+        },
+        {
+          "s": 0,
+          "text": "Entonces vamos. Usted se sienta al lado de la puerta y si necesita salir, salimos."
+        },
+        {
+          "s": 1,
+          "text": "Lili, antes de entrar, quiero decirle algo. Durante once años, su comida fue lo único que me recordaba que había alguien del otro lado de la puerta. Si no hubiera sido por usted, quizás nunca habría vuelto a abrir."
+        },
+        {
+          "s": 0,
+          "text": "Pues ahora me toca a mí agradecerle. No sabe lo que significa para mí que suba. Venga, le guardé la silla más cercana a la puerta."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cuántas personas hay en la terraza?",
+          "options": [
+            "Unas diez",
+            "Unas treinta",
+            "Unas cien"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cómo se siente Ibarra?",
+          "options": [
+            "Como si tuviera que subir una montaña",
+            "Muy tranquilo",
+            "Enojado"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Por qué Ibarra no quiere quedarse en la escalera?",
+          "options": [
+            "Porque hace frío",
+            "Porque no se escucha nada",
+            "Porque sería como seguir encerrado"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué le recordaba la comida de Lili?",
+          "options": [
+            "Su infancia",
+            "Que había alguien del otro lado de la puerta",
+            "A su madre"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué pequeño paso te costó mucho dar en algún momento de tu vida?",
+          "model": "Volver a conducir después de un accidente."
+        },
+        {
+          "q": "¿Qué gesto de otra persona te ayudó a salir de una mala época?",
+          "model": "Una amiga que me llamaba cada noche para charlar."
+        },
+        {
+          "q": "¿Cómo puede una comunidad ayudar a las personas que viven aisladas?",
+          "model": "Visitándolas con regularidad y sin presionarlas."
+        }
+      ],
+      "gaps": "[Necesito] [ver] el [cielo], aunque sea un [minuto].",
+      "glossary": [
+        {
+          "word": "me tiemblan",
+          "meaning": "de «temblar»: moverse sin control por el miedo o el frío"
+        },
+        {
+          "word": "encerrado",
+          "meaning": "sin poder salir"
+        },
+        {
+          "word": "me toca",
+          "meaning": "es mi turno"
+        }
+      ]
+    },
+    {
+      "id": "obra",
+      "title": "La confesión de Brian",
+      "place": "El 7.° A",
+      "context": "Brian ensaya con Cirilo la confesión que va a hacer en la asamblea.",
+      "speakers": [
+        {
+          "name": "Brian",
+          "country": "Puerto Rico",
+          "voice": "es-PR-VictorNeural"
+        },
+        {
+          "name": "Cirilo",
+          "country": "Honduras",
+          "voice": "es-HN-CarlosNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Cirilo, escucha: «Queridos vecinos, quiero contarles que hice una pequeña reforma en mi departamento»."
+        },
+        {
+          "s": 1,
+          "text": "Pequeña no, señor Brian. Sacó una pared maestra. Si dice «pequeña», la señora Elvira lo va a destrozar."
+        },
+        {
+          "s": 0,
+          "text": "Bueno: «Hice una reforma importante sin pedir permiso. Fue un error. Pero ya pusimos una viga de hierro y el ingeniero dice que la terraza está segura»."
+        },
+        {
+          "s": 1,
+          "text": "Mejor. Y agregue que va a pagar usted todos los gastos y que va a presentar el informe del ingeniero."
+        },
+        {
+          "s": 0,
+          "text": "¿Todos los gastos? Pensé que podíamos dividirlos con el consorcio."
+        },
+        {
+          "s": 1,
+          "text": "Señor Brian, si yo fuera usted, no pediría ni un peso. Usted rompió la pared; usted la arregla. Así la gente lo perdona más rápido."
+        },
+        {
+          "s": 0,
+          "text": "Tienes razón. ¿Y el jacuzzi? ¿Lo menciono?"
+        },
+        {
+          "s": 1,
+          "text": "Si no lo menciona, se lo van a preguntar. Mejor que lo diga usted, con una sonrisa. Y ofrezca invitar a los vecinos a probarlo."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué palabra le pide Cirilo que no use?",
+          "options": [
+            "Error",
+            "Pequeña",
+            "Jacuzzi"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué ya pusieron en el departamento?",
+          "options": [
+            "Una viga de hierro",
+            "Una pared nueva",
+            "Una puerta"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué quería Brian al principio sobre los gastos?",
+          "options": [
+            "No pagar nada",
+            "Que los pague Cirilo",
+            "Dividirlos con el consorcio"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué le aconseja Cirilo sobre el jacuzzi?",
+          "options": [
+            "Que lo esconda",
+            "Que lo mencione él mismo",
+            "Que lo venda"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Cómo pides disculpas cuando cometes un error que afecta a otros?",
+          "model": "Reconozco el error sin excusas y propongo una solución."
+        },
+        {
+          "q": "¿Crees que quien causa un problema debe pagarlo siempre todo?",
+          "model": "Normalmente sí, sobre todo si lo hizo sin permiso."
+        },
+        {
+          "q": "¿Qué reforma ilegal o arriesgada conoces?",
+          "model": "Un vecino cerró un balcón sin permiso y tuvo que abrirlo otra vez."
+        }
+      ],
+      "gaps": "Usted [rompió] la [pared]; usted la [arregla]. Así la [gente] lo perdona más rápido.",
+      "glossary": [
+        {
+          "word": "reforma",
+          "meaning": "cambio en una construcción"
+        },
+        {
+          "word": "destrozar",
+          "meaning": "romper por completo; aquí, criticar duramente"
+        },
+        {
+          "word": "informe",
+          "meaning": "documento con datos y conclusiones"
+        }
+      ]
+    },
+    {
+      "id": "sogas",
+      "title": "Hilda en 1972",
+      "place": "La terraza",
+      "context": "Mientras miran las luces de la ciudad, Hilda le cuenta a Kevin cómo era la terraza cuando ella era joven.",
+      "speakers": [
+        {
+          "name": "Hilda",
+          "country": "Bolivia",
+          "voice": "es-BO-SofiaNeural"
+        },
+        {
+          "name": "Kevin",
+          "country": "Ecuador",
+          "voice": "es-EC-LuisNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Kevin, ¿ves esa antena? En 1972 no había ninguna. Desde aquí se veía la cúpula del Congreso."
+        },
+        {
+          "s": 1,
+          "text": "¿Y qué hacía la gente en la terraza?"
+        },
+        {
+          "s": 0,
+          "text": "Los sábados, las mujeres lavábamos la ropa en esa pileta y charlábamos durante horas. Los hombres jugaban a las cartas. Los chicos corrían entre las sábanas."
+        },
+        {
+          "s": 1,
+          "text": "Parece otro mundo."
+        },
+        {
+          "s": 0,
+          "text": "Lo era. Mi madre conoció aquí a todas sus amigas. Cuando murió, vinieron cuarenta personas al velorio, casi todas del edificio. Hoy, si me pasa algo, no sé quién vendría."
+        },
+        {
+          "s": 1,
+          "text": "Hilda, no diga eso. Yo vendría. Y traería choripanes."
+        },
+        {
+          "s": 0,
+          "text": "Qué tonto eres. Pero mira, por eso me enojé con tu parrilla. No es por el olor. Es porque estas sábanas son lo único que queda de aquella terraza."
+        },
+        {
+          "s": 1,
+          "text": "Entonces hagamos algo: los domingos, asado y sobremesa como antes. Usted cuenta historias y yo cocino. Así los nuevos conocen el edificio de verdad."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué se veía desde la terraza en 1972?",
+          "options": [
+            "El río",
+            "La cúpula del Congreso",
+            "El Obelisco"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué hacían los chicos?",
+          "options": [
+            "Corrían entre las sábanas",
+            "Jugaban a las cartas",
+            "Lavaban la ropa"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cuántas personas fueron al velorio de la madre?",
+          "options": [
+            "Diez",
+            "Cien",
+            "Cuarenta"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Por qué se enojó Hilda realmente?",
+          "options": [
+            "Por el olor del chorizo",
+            "Porque las sábanas son lo único que queda de aquella terraza",
+            "Porque no la invitaron"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué lugar de tu infancia ha cambiado completamente?",
+          "model": "La plaza de mi barrio, que ahora es un estacionamiento."
+        },
+        {
+          "q": "¿Crees que hoy la gente tiene menos vida de barrio que antes?",
+          "model": "Sí, en las ciudades grandes casi no nos conocemos."
+        },
+        {
+          "q": "¿Qué tradición antigua te gustaría recuperar en tu comunidad?",
+          "model": "Las cenas en la calle en verano."
+        }
+      ],
+      "gaps": "No es por el [olor]. Es porque estas [sábanas] son lo [único] que queda de aquella [terraza].",
+      "glossary": [
+        {
+          "word": "cúpula",
+          "meaning": "techo redondo de un edificio"
+        },
+        {
+          "word": "velorio",
+          "meaning": "reunión para despedir a una persona muerta"
+        },
+        {
+          "word": "sobremesa",
+          "meaning": "tiempo de charla después de comer"
+        }
+      ]
+    },
+    {
+      "id": "asamblea",
+      "title": "Las cartas poder",
+      "place": "La terraza, a las diez",
+      "context": "Antes de leer el resultado, Ramón cuenta los votos con Elvira y Barrionuevo.",
+      "speakers": [
+        {
+          "name": "Ramón",
+          "country": "Paraguay",
+          "voice": "es-PY-MarioNeural"
+        },
+        {
+          "name": "Barrionuevo",
+          "country": "Guatemala",
+          "voice": "es-GT-AndresNeural"
+        },
+        {
+          "name": "Elvira",
+          "country": "España",
+          "voice": "es-ES-ElviraNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Bien, cuento en voz alta. Veintiocho unidades: veinticinco presentes y tres cartas poder. Una de ellas es del señor Ibarra, del séptimo D."
+        },
+        {
+          "s": 1,
+          "text": "¿Ibarra? Pensé que ese departamento estaba vacío."
+        },
+        {
+          "s": 2,
+          "text": "No está vacío, contador. Usted lo sabría si alguna vez hubiera subido al séptimo."
+        },
+        {
+          "s": 0,
+          "text": "Señora, por favor. Sigo: la carta poder del séptimo D está a nombre de la persona del cuarto B. Es válida, tiene firma y fecha."
+        },
+        {
+          "s": 1,
+          "text": "Muy bien. Antes del resultado, quiero aclarar algo, por transparencia. Uno de los presupuestos es de la empresa de mi cuñado. Lo digo para que conste en el acta."
+        },
+        {
+          "s": 2,
+          "text": "Vaya, por fin. Aunque si no lo hubiera dicho usted, lo habría dicho yo en cinco segundos."
+        },
+        {
+          "s": 0,
+          "text": "Que conste. Ahora sí, la persona del acta tiene los números. Silencio, por favor. Y que nadie se levante a buscar choripán hasta que termine de leer."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cuántas cartas poder hay?",
+          "options": [
+            "Una",
+            "Tres",
+            "Cinco"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué pensaba Barrionuevo del séptimo D?",
+          "options": [
+            "Que estaba vacío",
+            "Que era de Lili",
+            "Que estaba en obra"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué aclara Barrionuevo por transparencia?",
+          "options": [
+            "Que va a renunciar",
+            "Que el ascensor es peligroso",
+            "Que un presupuesto es de su cuñado"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué habría hecho Elvira si él no lo decía?",
+          "options": [
+            "Se habría ido",
+            "Lo habría dicho ella",
+            "Habría llamado a la policía"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Por qué crees que a veces la gente solo es transparente cuando no tiene otra opción?",
+          "model": "Porque tiene miedo de perder algo si dice la verdad antes."
+        },
+        {
+          "q": "¿Qué te parece más importante en una votación: la participación o el resultado?",
+          "model": "La participación, porque da legitimidad al resultado."
+        },
+        {
+          "q": "¿Has votado alguna vez en nombre de otra persona?",
+          "model": "No, pero acompañé a mi abuela a votar."
+        }
+      ],
+      "gaps": "Usted lo [sabría] si alguna [vez] hubiera [subido] al [séptimo].",
+      "glossary": [
+        {
+          "word": "unidades",
+          "meaning": "departamentos de un edificio"
+        },
+        {
+          "word": "válida",
+          "meaning": "que cumple las reglas"
+        },
+        {
+          "word": "transparencia",
+          "meaning": "claridad, sin ocultar nada"
+        }
+      ]
+    }
+  ]
+}

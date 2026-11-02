@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { SpanishCueFooter } from "../SpanishCueBrand";
+import EmailGiftPopup from "../newsletter/EmailGiftPopup";
 import { CONVERSATION_HUB_PATH, CONVERSATION_QUESTIONS_PATH, conversationLevels, type ConversationLevel } from "./conversation-levels";
 import type { LessonCardData } from "./lessons";
 import { breadcrumbSchema, serializeJsonLd, type BreadcrumbItem } from "./schema";
@@ -129,10 +130,11 @@ export function Faq({ items }: { items: { question: string; answer: string }[] }
  * column, so this wrapper supplies the same padding and keeps the footer
  * inside the viewport (no horizontal scroll on desktop).
  */
-export function GrowthFooter() {
+export function GrowthFooter({ emailGift = true }: { emailGift?: boolean } = {}) {
   return (
     <div className={styles.footerWrap}>
       <SpanishCueFooter />
+      {emailGift && <EmailGiftPopup />}
     </div>
   );
 }

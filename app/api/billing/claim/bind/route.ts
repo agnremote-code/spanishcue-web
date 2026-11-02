@@ -4,8 +4,9 @@ import { billingConfig } from "../../../../billing-config";
 import { getPaddleTransaction, validatePaddleClaimTransaction } from "../../../../paddle-server";
 import { paddleConfig } from "../../../../paddle-config";
 import { authorizePurchaseClaim } from "../../../../purchase-claim-cookie";
+import { processReferrals } from "../../../../referrals-server";
 import { bindPurchaseToUser } from "../../../../../db/purchase-binding";
-import type { PurchaseProvider } from "../../../../../db/purchase-claims";
+import { purchaseClaimByVerifiedEmail, type PurchaseProvider } from "../../../../../db/purchase-claims";
 
 export const dynamic = "force-dynamic";
 
@@ -22,11 +23,14 @@ export async function POST(request: Request) {
     if (parsed.provider !== "paypal" && parsed.provider !== "paddle") throw new Error("invalid");
     provider = parsed.provider;
   } catch { return Response.json({ error: "Solicitud no válida." }, { status: 400 }); }
-  const cookieClaim = await authorizePurchaseClaim(env.DB, request.headers.get("cookie"), provider);
-  if (!cookieClaim || cookieClaim.provider !== provider) return Response.json({ error: "No encontramos esta compra en el navegador." }, { status: 404 });
   const config = billingConfig(env);
+  // Same browser: the claim cookie. Another device (the emailed sign-in link): the paid claim whose
+  // provider-confirmed buyer email is this account's verified email.
+  const cookieClaim = await authorizePurchaseClaim(env.DB, request.headers.get("cookie"), provider)
+    ?? await purchaseClaimByVerifiedEmail(env.DB, provider, config.paypalEnv, email, userId);
+  if (!cookieClaim || cookieClaim.provider !== provider) return Response.json({ error: "No encontramos esta compra en el navegador." }, { status: 404 });
   if (cookieClaim.environment !== config.paypalEnv || cookieClaim.offerCode !== config.founderOffer.code ||
-      !(provider === "paddle" ? [200, 1500, 1550].includes(cookieClaim.amountCents ?? 0) : cookieClaim.amountCents === 1500) || cookieClaim.currency !== "USD") {
+      !(provider === "paddle" ? [200, 1500, 1550, 12900].includes(cookieClaim.amountCents ?? 0) : cookieClaim.amountCents === 1500) || cookieClaim.currency !== "USD") {
     return Response.json({ error: "La compra no coincide con la oferta." }, { status: 409 });
   }
   if (cookieClaim.normalizedEmail !== email.trim().toLowerCase()) {
@@ -42,6 +46,7 @@ export async function POST(request: Request) {
     }
     const result = await bindPurchaseToUser(env.DB, cookieClaim.claimId, userId, email, config, priceId);
     if (!result) return Response.json({ error: "Estamos esperando la confirmación del pago." }, { status: 409 });
+    if (provider === "paddle") await processReferrals(env.DB, paddle, { userId, subscriptionId: result.subscriptionId });
     return Response.json({ accessConfirmed: true, ...result },
       { headers: { "cache-control": "private, no-store" } });
   } catch {

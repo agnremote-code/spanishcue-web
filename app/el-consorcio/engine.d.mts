@@ -1,0 +1,25 @@
+import type { Text, Option } from './levels.d.mts';
+import type { Vecino } from './vecinos.d.mts';
+export type State = { level: string; floor: number; done: Record<string, string[]>; scene: { id: string; pick: number | null } | null };
+export type SceneView = {
+  id: string; level: string; floor: number; sector: string; name: string; role: string;
+  title: Text; line: Text; dialogue: { who: string; line: Text }[]; ask: Text; options: Option[]; pick: number | null; chosen: Option | null; ended: boolean;
+  mood: string | null; talk: Text[]; words: Text[];
+};
+export const STORAGE_KEY: string;
+export const DEFAULT_LEVEL: string;
+export function vecinoById(id: string): Vecino | null;
+export function normaliseLevel(value: unknown): string | null;
+export function createState(level?: string): State;
+export function doneFor(state: State, level?: string): string[];
+export function openScene(state: State, id: string): State;
+export function closeScene(state: State): State;
+export function choose(state: State, index: number): State;
+export function undo(state: State): State;
+export function setLevel(state: State, level: string): State;
+export function setFloor(state: State, floor: number): State;
+export function resetLevel(state: State): State;
+export function sceneView(state: State): SceneView | null;
+export function progress(state: State): { done: number; total: number };
+export function serialise(state: State): string;
+export function restore(raw: string | null, fallbackLevel?: string): State;

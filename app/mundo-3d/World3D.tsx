@@ -19,12 +19,15 @@ import { animateHero, createHero } from '../noche-abierta/hero3d';
 import { animatePerson, setMood } from '../noche-abierta/people3d';
 import { createBumpClock, pushOut } from '../escucha-3d/bump.mjs';
 import { insultFor, shout } from '../escucha-3d/shout';
-import { HUB, ISLAND_RADIUS, MAP_SPAWN, OCEAN_Y, PLANE_PARK, buildMap, cloudTexture, islandAt, onGround } from './map3d';
+import { HUB, ISLAND_RADIUS, MAP_SPAWN, OCEAN_Y, PLANE_PARK, SIGN_Y, buildMap, cloudTexture, islandAt, onGround } from './map3d';
+import { countryHasFlag, createFlags } from './banderas3d';
 import { canvas, createBubbles, disposeGroup, keepPeopleClear, spotRing, stepWalker, type Box, type RegionScene, type SceneBuilder, type Talker, type Walker } from './kit3d';
 import type { CountryInfo } from './types';
 
 export type View = 'intro' | 'map' | `region:${string}`;
 export type Near = { kind: 'gate' | 'spot' | 'exit' | 'door'; id: string; label?: string } | null;
+/** Where the yellow arrow points: a region's portal or gate (map), a circle or the way out (zone). */
+export type Guide = { kind: 'region' | 'spot' | 'exit'; id: string } | null;
 export type Pose = { region: string | null; island: string | null; x: number; z: number; heading: number };
 export type WorldProps = {
   country: CountryInfo;
@@ -38,6 +41,7 @@ export type WorldProps = {
   /** Screen space the open card covers, so the talk is framed beside it. */
   inset: { right: number; bottom: number };
   greetings: string[];
+  guide: Guide;
   /** Bumped by the on-screen prompt button: same as pressing E. */
   act: number;
   onIntroBeat: (beat: 'engine' | 'touchdown' | 'sign' | 'end') => void;
@@ -51,7 +55,7 @@ export type WorldProps = {
 };
 
 type Api = { joy: { x: number; y: number }; held: Set<string>; clear: () => void; interact: () => void; jump: () => void; nitro: { on: boolean } };
-type Region = { id: string; scene: RegionScene; rings: Map<string, ReturnType<typeof spotRing>>; bubbles: ReturnType<typeof createBubbles>; exitVeil: THREE.Mesh; greeted: Set<string> };
+type Region = { id: string; scene: RegionScene; rings: Map<string, ReturnType<typeof spotRing>>; bubbles: ReturnType<typeof createBubbles>; exitVeil: THREE.Mesh; greeted: Set<string>; flags: ReturnType<typeof createFlags> };
 
 const INTRO_END = 14.2;
 const smooth = (a: number, b: number, t: number) => { const k = Math.min(1, Math.max(0, (t - a) / (b - a))); return k * k * (3 - 2 * k); };
@@ -112,6 +116,16 @@ export default function World3D(props: WorldProps) {
       return () => window.clearTimeout(t);
     }
     scene.add(map.group, hero.root);
+    // The guide: a yellow arrow at the mascot's feet and a column of light over
+    // where it points, so after landing (or entering a zone) the way is clear.
+    const guideMat = new THREE.MeshBasicMaterial({ color: '#ffd23f', transparent: true, opacity: 0.95, depthWrite: false });
+    const arrowShape = new THREE.Shape([new THREE.Vector2(-0.32, -0.55), new THREE.Vector2(0.32, -0.55), new THREE.Vector2(0.32, 0.05), new THREE.Vector2(0.62, 0.05), new THREE.Vector2(0, 0.85), new THREE.Vector2(-0.62, 0.05), new THREE.Vector2(-0.32, 0.05)]);
+    const arrow = new THREE.Mesh(new THREE.ShapeGeometry(arrowShape), guideMat);
+    arrow.geometry.rotateX(-Math.PI / 2); arrow.geometry.rotateY(Math.PI);
+    arrow.renderOrder = 5; arrow.visible = false;
+    const beam = new THREE.Mesh(new THREE.CylinderGeometry(0.55, 0.9, 16, 20, 1, true), new THREE.MeshBasicMaterial({ color: '#ffd23f', transparent: true, opacity: 0.22, side: THREE.DoubleSide, depthWrite: false }));
+    beam.visible = false;
+    scene.add(arrow, beam);
     const hemi = new THREE.HemisphereLight('#dfefff', '#5a6a48', 0.9);
     const sun = new THREE.DirectionalLight('#fff4e0', 2.1);
     sun.castShadow = !low;
@@ -228,7 +242,7 @@ export default function World3D(props: WorldProps) {
       spent = null; inside = null;
     }
     function buildRegion(id: string, builder: SceneBuilder) {
-      const built = keepPeopleClear(builder({ low, shadows: !low }));
+      const built = keepPeopleClear(builder({ low, shadows: !low, flag: live.current.country.id }));
       const rings = new Map<string, ReturnType<typeof spotRing>>();
       for (const s of built.spots) rings.set(s.id, spotRing(built.group, s.x, s.z));
       // Doors glow blue on the ground, so they read as a way somewhere else.
@@ -245,13 +259,16 @@ export default function World3D(props: WorldProps) {
       const tex = canvas(256, 64, ctx => { ctx.fillStyle = '#16336b'; ctx.fillRect(0, 0, 256, 64); ctx.fillStyle = '#fff'; ctx.font = '800 32px "Helvetica Neue", Arial'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText('MAPA · MAP', 128, 34); });
       const top = new THREE.Mesh(new THREE.BoxGeometry(3.8, 0.7, 0.2), new THREE.MeshStandardMaterial({ map: tex }));
       top.position.y = 3.5; arch.add(top);
+      // The country's flag on both posts of the way back.
+      const flags = createFlags();
+      if (countryHasFlag(live.current.country.id)) for (const s of [-1, 1]) flags.pole(arch, live.current.country.id, s * 1.6, 3.4, 0, 1.3, 1.1, s < 0 ? Math.PI : 0);
       const veil = new THREE.Mesh(new THREE.PlaneGeometry(2.9, 3.2), new THREE.MeshBasicMaterial({ color: '#7fb2ff', transparent: true, opacity: 0.3, side: THREE.DoubleSide, depthWrite: false }));
       veil.position.y = 1.6; arch.add(veil);
       arch.position.set(built.exit.x, 0, built.exit.z);
       arch.rotation.y = Math.atan2(built.spawn.x - built.exit.x, built.spawn.z - built.exit.z);
       built.group.add(arch);
       scene.add(built.group);
-      region = { id, scene: built, rings, bubbles: createBubbles(built.group), exitVeil: veil, greeted: new Set() };
+      region = { id, scene: built, rings, bubbles: createBubbles(built.group), exitVeil: veil, greeted: new Set(), flags };
       doneKey = '';
       map.group.visible = false;
       const L = built.light;
@@ -384,7 +401,7 @@ export default function World3D(props: WorldProps) {
         // The flash of the cut to the sign.
         if (fade.current && t > 9.4 && t < 10.6) fade.current.style.opacity = String(Math.max(0, 1 - Math.abs(t - 9.75) / 0.6) * 0.85);
         if (fade.current && t >= 10.6 && fade.current.style.background) { fade.current.style.opacity = '0'; fade.current.style.background = ''; }
-        map.sign.position.y = -6 + 6 * smooth(9.7, 10.9, t);
+        map.sign.position.y = -(SIGN_Y + 3) + (SIGN_Y + 3) * smooth(9.7, 10.9, t);
         // Camera: behind the jet, then beside it on the approach, low by the
         // runway, the sign, and a long climb that reveals the islands.
         let cx: number, cy: number, cz: number, lx: number, ly: number, lz: number;
@@ -394,10 +411,10 @@ export default function World3D(props: WorldProps) {
           cx = lerp(ax, plane.x * 0.35 - 4, b); cy = lerp(ay, 2.4, b); cz = lerp(az, 13, b);
           lx = plane.x + 6 * (1 - b); ly = plane.y + 0.5; lz = PLANE_PARK.z;
         } else if (t < 11) {
-          cx = -2; cy = 4.2 + (t - 9.6) * 0.3; cz = -5.5; lx = -2; ly = 4.8; lz = 9.5;
+          cx = -2; cy = SIGN_Y - 3 + (t - 9.6) * 0.3; cz = -5.5; lx = -2; ly = SIGN_Y - 0.4; lz = 9.5;
         } else {
           const k = smooth(11, INTRO_END - 0.4, t);
-          cx = lerp(-2, 4, k); cy = lerp(4.6, 92, k); cz = lerp(-5.5, -104, k); lx = lerp(-2, -4, k); ly = lerp(4.8, -2, k); lz = lerp(9.5, 6, k);
+          cx = lerp(-2, 4, k); cy = lerp(SIGN_Y - 2.6, 92, k); cz = lerp(-5.5, -104, k); lx = lerp(-2, -4, k); ly = lerp(SIGN_Y - 0.4, -2, k); lz = lerp(9.5, 6, k);
         }
         camera.position.set(cx, cy, cz);
         camera.lookAt(lx, ly, lz);
@@ -536,6 +553,7 @@ export default function World3D(props: WorldProps) {
       map.animate(clock, dt);
       if (region) {
         region.scene.animate(clock, dt);
+        region.flags.wave(clock);
         region.bubbles.update(clock);
         region.exitVeil.rotation.y = 0;
         (region.exitVeil.material as THREE.MeshBasicMaterial).opacity = 0.2 + Math.sin(clock * 2.4) * 0.1;
@@ -560,6 +578,31 @@ export default function World3D(props: WorldProps) {
         else { b.v.y -= 2.2 * dt; b.obj.position.addScaledVector(b.v, dt); b.obj.rotation.x += b.spin * dt; b.obj.rotation.y += b.spin * 0.7 * dt; }
       }
       if (hero.root.visible) animateHero(hero, dt, player.speed > 0.2 ? player.speed : 0, turn, p.spotOpen ? 'talk' : 'move', reduced);
+
+      // ---------------------------------------------------- the guide
+      let target: { x: number; z: number } | null = null;
+      const g = p.guide;
+      if (g && view !== 'intro' && !transition && !p.spotOpen && !p.paused && !falling) {
+        if (region) {
+          if (g.kind === 'spot') { const s = region.scene.spots.find(x => x.id === g.id); if (s) target = { x: s.x, z: s.z }; }
+          else if (g.kind === 'exit') target = region.scene.exit;
+        } else if (g.kind === 'region') {
+          const gt = map.layout.gates.find(x => x.region === g.id), pt = map.layout.portals.find(x => x.region === g.id);
+          // From the airport the portal is the short way; on the island, the gate.
+          if (gt && pt) target = islandAt(regions, player.x, player.z)?.id === g.id || Math.hypot(gt.x - player.x, gt.z - player.z) < Math.hypot(pt.x - player.x, pt.z - player.z) ? gt : pt;
+        }
+      }
+      const far = target ? Math.hypot(target.x - player.x, target.z - player.z) : 0;
+      arrow.visible = Boolean(target) && far > 2.2;
+      beam.visible = Boolean(target);
+      if (target) {
+        const a = Math.atan2(target.x - player.x, target.z - player.z);
+        const lead = 1.5 + Math.sin(clock * 4) * 0.12;
+        arrow.position.set(player.x + Math.sin(a) * lead, player.y + 0.12, player.z + Math.cos(a) * lead);
+        arrow.rotation.y = a;
+        beam.position.set(target.x, 8, target.z);
+        (beam.material as THREE.MeshBasicMaterial).opacity = 0.16 + Math.sin(clock * 2.5) * 0.06;
+      }
 
       // ---------------------------------------------------- camera
       if (view !== 'intro') {

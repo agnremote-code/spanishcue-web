@@ -3,7 +3,7 @@ import { accountIdFromHeaders } from "../../../access-policy";
 import { billingConfig, billingReadiness, checkoutAllowed } from "../../../billing-config";
 import { getFounderOfferStatus } from "../../../../db/billing";
 import { legalOperator } from "../../../legal/operator";
-import { paddleConfig, paddleReady } from "../../../paddle-config";
+import { paddleAnnualReady, paddleConfig, paddleReady } from "../../../paddle-config";
 
 export const dynamic = "force-dynamic";
 
@@ -26,6 +26,8 @@ export async function GET(request: Request) {
       trialPriceUsd: 2,
       trialDays: 1,
       trialCheckoutAvailable: paddleCheckoutAvailable,
+      annualPriceUsd: 129,
+      annualCheckoutAvailable: paddleCheckoutAvailable && paddleAnnualReady(paddleConfig(env)),
       checkoutLive,
       checkoutAvailable: checkoutLive || paddleCheckoutAvailable,
       // This flag excludes Sandbox and supervised-only accounts for public marketing pages.

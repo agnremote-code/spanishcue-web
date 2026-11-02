@@ -15,7 +15,7 @@ export const DEFAULT_LEVEL = 'B2';
 export const TICKS = ['logrado', 'con-ayuda', 'todavia'];
 export const TICK_LABEL = { logrado: 'Logrado', 'con-ayuda': 'Con ayuda', todavia: 'Todavía no' };
 // The catalog id of this lesson (app/lesson-catalog.ts). E1 progress uses it.
-export const LESSON_ID = 243;
+export const LESSON_ID = 246;
 
 export const normaliseLevel = value => (LEVEL_IDS.includes(String(value ?? '').toUpperCase()) ? String(value).toUpperCase() : null);
 

@@ -19,6 +19,9 @@ try{
  await run(['--test','tests/hospital-san-casi-vivo.test.mjs']);
  await run(['--test','tests/la-feria-de-villaluz.test.mjs','tests/feria-look-contract.test.mjs']);
  await run(['--test','tests/madrid-infectada.test.mjs']);
+ await run(['--test','tests/mas-alla.test.mjs']);
+ await run(['--test','tests/vuelo-cancelado.test.mjs']);
+ await run(['--test','tests/el-consorcio.test.mjs']);
  await run(['--test','tests/el-ascensor-del-cerro.test.mjs']);
  await run(['--test','tests/grammar-classroom.test.mjs','tests/grammar-classroom-ui.test.mjs','tests/observatory-ui.test.mjs','tests/noun-studio-ui.test.mjs', 'tests/adjective-studio-ui.test.mjs', 'tests/article-studio-ui.test.mjs','tests/article-world.test.mjs','tests/duration-studio.test.mjs','tests/duration-world.test.mjs','tests/grammar-classroom-content.test.mjs','tests/grammar-classroom-audio.test.mjs']);
  await run(['--test','tests/phonetics-capture.test.mjs','tests/phonetics-audio-signal.test.mjs','tests/phonetics-speech-analysis.test.mjs','tests/phonetics-speech-provider.test.mjs','tests/phonetics-speech-route.test.mjs']);
@@ -31,7 +34,7 @@ try{
  server=spawn(process.execPath,[cli,'dev','--config',config,'--port','0','--ip','127.0.0.1','--local','--persist-to',state,'--var',`AUTOESTUDIO_SHARE_SECRET:${shareTestSecret}`],{env:workerEnv,stdio:['ignore','pipe','pipe']});
  for(const stream of [server.stdout,server.stderr])stream.on('data',chunk=>{workerOutput=(workerOutput+chunk.toString().replaceAll(shareTestSecret,'[test-secret]')).slice(-16000)});
  const origin=await new Promise((resolve,reject)=>{let output='';const timer=setTimeout(()=>reject(new Error(`Worker startup timed out: ${output.slice(-2400)}`)),Number(process.env.SPANISHCUE_TEST_WORKER_TIMEOUT_MS)||30000);function read(chunk){output+=chunk.toString();const m=output.match(/Ready on (http:\/\/127\.0\.0\.1:\d+)/);if(m){clearTimeout(timer);resolve(m[1])}}server.stdout.on('data',read);server.stderr.on('data',read);server.once('error',reject);server.once('exit',code=>{clearTimeout(timer);reject(new Error(`Worker exited ${code}: ${output.slice(-1200)}`))})});
- await run(['--test','tests/grammar-classroom-routes.test.mjs','tests/grammar-seo-rendered.test.mjs','tests/edge-cache-rendered.test.mjs','tests/security-paths-rendered.test.mjs'],{...process.env,CHESPANISH_TEST_ORIGIN:origin});
+ await run(['--test','tests/grammar-classroom-routes.test.mjs','tests/newsletter-rendered.test.mjs','tests/grammar-seo-rendered.test.mjs','tests/material-ele-rendered.test.mjs','tests/material-ele-temas-rendered.test.mjs','tests/material-ele-actividades-rendered.test.mjs','tests/material-ele-indice-rendered.test.mjs','tests/recursos-rendered.test.mjs','tests/edge-cache-rendered.test.mjs','tests/security-paths-rendered.test.mjs'],{...process.env,CHESPANISH_TEST_ORIGIN:origin});
  await run(['--test','tests/lesson-reports-routes.test.mjs'],{...process.env,CHESPANISH_TEST_ORIGIN:origin});
  await run(['--test','tests/country-flagships.test.mjs'],{...process.env,CHESPANISH_TEST_ORIGIN:origin});
  await run(['--test','tests/autoestudio-routes.test.mjs','tests/autoestudio-share-worker.test.mjs','tests/homework-errors-routes.test.mjs'],{...process.env,CHESPANISH_TEST_ORIGIN:origin,AUTOESTUDIO_TEST_SHARE_SECRET:shareTestSecret});

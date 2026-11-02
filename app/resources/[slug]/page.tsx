@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import { isFreeLesson, localLessonPath } from "../../access-policy";
 import { conversationFamilyByLessonId } from "../../conversation-families/catalog";
 import { conversationLessonHref, resolveConversationLevel } from "../../conversation-families/navigation";
 import { breadcrumbSchema } from "../../growth/schema";
+import { languageAlternates } from "../../seo";
 import {
   immersiveWorldListeningLevels,
   isImmersiveWorld,
+  legacyResourceRedirectPath,
   lessonForResourceSlug,
   otherImmersiveWorldLessons,
   relatedResourceLessons,
@@ -45,7 +47,7 @@ export async function generateMetadata({ params }: ResourcePageProps): Promise<M
   return {
     title,
     description,
-    alternates: { canonical },
+    alternates: { canonical, languages: languageAlternates(resourcePathForLesson(lesson)) },
     openGraph: {
       title,
       description,
@@ -65,6 +67,8 @@ export async function generateMetadata({ params }: ResourcePageProps): Promise<M
 
 export default async function ResourcePage({ params, searchParams }: ResourcePageProps) {
   const { slug } = await params;
+  const legacyPath = legacyResourceRedirectPath(slug);
+  if (legacyPath) permanentRedirect(legacyPath);
   const lesson = lessonForResourceSlug(slug);
   if (!lesson) notFound();
 

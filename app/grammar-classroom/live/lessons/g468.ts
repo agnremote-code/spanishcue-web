@@ -284,7 +284,7 @@ export const lesson: LiveLesson = {
       steps: [
         { title: '«La letra pequeña» · “The small print”', blocks: [
           { kind: 'guide', text: { teacher: 'Primera escucha: la idea general. Segunda escucha: tu alumno anota qué presenta Mercedes como dato, qué como posibilidad y qué como valoración. Después, las preguntas.', self: 'Escucha una vez para la idea general. En la segunda escucha, separa lo que Mercedes presenta como dato, como posibilidad y como valoración. (Facts, possibilities, evaluations.)' } },
-          { kind: 'listen', title: 'La letra pequeña', channel: 'PÓDCAST · LA PLAZA · LA LETRA PEQUEÑA', src: '/audio/grammar-live/468.mp3',
+          { kind: 'listen', title: 'La letra pequeña', channel: 'PÓDCAST · LA PLAZA · LA LETRA PEQUEÑA', src: '/audio/grammar-free/468.mp3',
             before: 'Mercedes graba el pódcast semanal del periódico y habla del Mercado Central. ¿Qué crees que va a presentar como seguro y qué como posible? (Mercedes records the paper’s weekly podcast about the market. What will she present as certain and what as possible?)',
             gist: { prompt: '¿Cuál es la idea principal? · What is the main idea?', options: ['Anunciar que el mercado cierra en enero.', 'Separar lo que se sabe de lo que solo es posible, y pedir prudencia.', 'Criticar a los vendedores por difundir rumores.'], answer: 1, why: 'Mercedes ordena «lo que sabemos», «lo que no sabemos» y su opinión, y advierte contra los rumores.', en: 'What is the main idea?' },
             details: [

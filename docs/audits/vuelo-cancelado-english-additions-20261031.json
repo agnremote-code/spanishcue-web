@@ -1,0 +1,3518 @@
+{
+  "version": 1,
+  "authorization": "Owner request of 2026-10-31 (project thread root message cmsg_01Gr5R4j3t2Yet65UcmhcVhAWNTbYvcaJnuJ8xZk2KEU9x: «vamos con las 11. UNA POR UNA pero BIEN HECHAS PERFECTAS»): a new A0–C2 3D conversation and listening class, «Vuelo cancelado», whose A0 level is fully bilingual (conversation, passengers, choices and listening) and whose A1 level glosses its key words in English, plus one English line for the academies listing. This manifest approves only the exact English support literals listed below (the English half of each { es, en } pair in app/vuelo-cancelado/levels/a0.mjs and a1.mjs, the English who / basic lines of app/vuelo-cancelado/pasajeros.mjs, the contextEn / en / qEn / glossary fields of app/escucha-3d/content/vuelo/a0.json and the academies card body in app/academias/page.tsx); existing English copy stays protected. Owner approval: Ale's standing approval for English copy, «apruebo (siempre de ahora en más apruebo)» on 2026-10-22 06:37Z (project message cmsg_01Gr5R4j3t2Yet65UcmhcVhAAAbp6kqDfMqxzNm3PL6f5g), and «apruebo todo no preguntes más, apruebo todo» on 2026-10-14 16:55Z (cmsg_01Gr5R4j3t2Yet65UcmhcVhADwvzg9kA9GinuWu3D7FSfe).",
+  "additions": [
+    {
+      "path": "app/academias/page.tsx",
+      "text": "A whole night in a 3D airport: real Spanish for travelling, complaining and negotiating."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "A hearse? How scary! Well, yes."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "A man in a cap wants to go in. Gisela works in the VIP lounge."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Ah… And in the box?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "airport"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "And my dress?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Are you afraid of flying?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Are you coming at six?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Are you tired now?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Are you tired today?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Attention. Flight AB 2317 is cancelled."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "black"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Bruno is looking for a suitcase. Hortensia works here."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Calm down, madam. I am stopping the belt."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Calm down. There is another flight at six."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Can the jar go through?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Can Tito go in?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "cancelled"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "captain"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Captain Arturo eats empanadas. Marisol cooks."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "car"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "card"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "cheeses"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Cheeses. Twelve cheeses for my grandchildren."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "clothes"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "clouds"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "coins"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "come in"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Congratulations!"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Dayana is a nurse. Esteban lives at the airport."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Delfina and her brother Bruno look at the screen."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Do you cook?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Do you give your seat to other people?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Do you have a big family?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Do you have a cap?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Do you have a car?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Do you have a passport?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Do you have a pet?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Do you have a scarf?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Do you have brothers or sisters?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Do you have children?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Do you have dollars?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Do you have grandparents?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Do you have nieces or nephews?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Do you know Lima?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Do you like cheese?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Do you like clouds?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Do you like empanadas?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Do you like flowers?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Do you like planes?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Do you like singing?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Do you like sweets?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Do you like the rain?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Do you like weddings?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Do you prefer the train or the plane?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Do you prefer window or aisle?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Do you travel a lot?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Do you travel alone or with your family?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Do you travel by plane?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Do you use coins?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Do you use the internet every day?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Do you wait a lot in lines?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Do you wear perfume?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Does Kiara want the car?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "dollars"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Don Teodoro talks to Yesenia. He travels with his wife's urn."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Doña Inés waits in the line. She talks to Gerardo."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "dress"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "empanadas, filled pastries"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Father, I am scared. It is my first flight."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "fear"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "fee"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "first"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "flowers"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "For Valeria. She is my internet girlfriend."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "For you?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "full"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Full?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "girlfriend"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Good evening, Captain. Two empanadas?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Good evening. Your passport?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "grandchildren"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "granddaughter"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "grandfather"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Gustavo wants to get on the plane. Débora works at gate 12."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Hello, Doña Inés. How are you?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Hello. Do you change coins?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Hello. Do you want flowers?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Hello. I am looking for a blue suitcase."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Hello. I live here."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Hello. I need a car."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Hello. Two perfumes, please."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Hello. Your VIP card?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Here you are. A window, please."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Here? At the airport?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Hi, Ramiro. Is it raining?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Hi, Vanesa. I am at the airport."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Hmm… Very well. That is one hundred dollars."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Horacio buys perfume. Vanesa works in the shop."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "How is Doña Inés?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "How is the flight?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "How is the suitcase?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "How lovely!"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "How many days has she been waiting?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "How many days?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "How many does he buy?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "How many empanadas does he order?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "How many grandchildren does she have?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "How many hours do you sleep?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "How much does Fabián give her?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "How much is it?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "How much money does she have?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "I am a nurse. I am tired. I want to sleep."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "I am going to ask the passengers."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "I am going to ask."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "I am going to be a grandfather."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "I am looking for"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "I am sorry, sir. The flight is full."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "I am sorry. Those are the rules."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "I am very sorry."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "I do not have one. I am Tito Ventura."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "I have one car. It is black and big."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "I have twelve grandchildren."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "I live"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "In Lima? When does it arrive?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "inside"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Is it her first flight?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "is missing"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Is your suitcase big?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "it arrives"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "It is a hearse."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "It is a liquid. It cannot go through."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "It is dulce de leche. For my niece."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "It is not a liquid!"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "It is okay. Here you are."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "it is raining"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "It is three dollars, with the fee."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "It is you! Come in, come in."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Kiara needs a car. Cristian rents cars."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "last"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "line, queue"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "liquid"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Look. A scarf for you."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Lucrecia looks at Matías's backpack."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Madam, what is in the suitcase?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Mónica and Iván work on the plane. They talk on the terrace."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Mónica, the six o'clock flight is full."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "My clothes! How embarrassing!"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "My parrot, Pepito."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Nayeli changes coins. Fabián works here."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "niece"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "No, three. Tomorrow is my last flight."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "No! My wedding is tomorrow."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "No. For my wife. She likes the clouds."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "nurse"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Of course. Good night."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Oh, no! The dress is inside."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Oh! Congratulations!"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Oh! My suitcase is open!"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "One moment. It is in Lima."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "open"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Osvaldo talks to Doña Carmela. She is carrying a lot of cheese."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "parrot"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "passengers"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "passport"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Perfect!"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "perfume"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Please. My daughter is having a baby today."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Ramiro is a taxi driver. He calls his wife, Vanesa."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Raquel is afraid of flying. She talks to Hugo."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Rocío's suitcase is open. Wilmer helps."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "roses"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "rules"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "scarf"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "seat"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "singer"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Sir, what is this?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "suitcase"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Thank you very much."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Thank you, Marisol. Your empanadas are the best."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Thank you! It is very pretty."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "the best"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "the same"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "The singer? It is not possible!"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Think about Luna. Everything is going to be fine."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Three? That is very little! No, thank you."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "tired"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Tired. Three days in the line."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "To see my granddaughter, Luna."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "to sleep"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Tomorrow afternoon."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Twelve dollars in coins."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Twelve? That is a lot!"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Two of the same?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Ulises buys flowers. Leonor sells flowers."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Very well. Seat 14A."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "wedding"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "What a problem! One person is not travelling today."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "What are the empanadas like?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "What car color do you like?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "What color are your clothes today?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "What color do you like for flowers?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "What color do you like?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "What color is the car?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "What color is the suitcase?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "What do you buy at the airport?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "What do you buy with twelve dollars?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "What do you eat at night?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "What do you think of Horacio?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "What does Dayana want?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "What does Don Teodoro want?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "What does Gisela ask for?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "What does his wife like?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "What does Horacio buy?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "What does Hugo say?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "What does Kiara need?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "What does Leonor sell?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "What does Lucrecia say?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "What does Marisol say?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "What does Mónica say?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "What does Nayeli change?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "What does Nayeli think?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "What does Raquel feel?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "What does Rocío say at the end?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "What does she give Gerardo?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "What does Tito do?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "What does Ulises buy?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "What does Wilmer stop?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "What does Yesenia ask for?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "What food do you like?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "What happens today?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "What happens tomorrow?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "What happens with the flight?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "What is Dayana?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "What is Gustavo going to be?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "What is in the backpack?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "What is in the box?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "What is in the suitcase?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "What is in your backpack?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "What is in your suitcase?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "What is inside?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "What is missing?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "What is on the belt?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "What is Ramiro bringing?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "What is the parrot called?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "What is the scarf like?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "What is the weather like?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "What is your grandfather's name?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "What kind of car is it?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "What music do you like?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "What scares you?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "What time is the other flight?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "When does it arrive?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "When is the wedding?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "When is your next trip?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Where are you going?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Where are you now?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Where do they talk?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Where do you live?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Where does Esteban live?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Where does he know Valeria from?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Where is Ramiro?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Where is the suitcase?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Which seat is it?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Who are the flowers for?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Who are they for?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Who does Débora ask?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Who is Bruno?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Who is it for?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Who is Luna?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Who is the man?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Who is the second perfume for?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Who is Vanesa?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "wife"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "window"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Yes, it is raining a lot."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Yes. \"Baby, baby…\""
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Yes. How much is it?"
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Yes. I am bringing empanadas for breakfast."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Yes. Nine days."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Yes. One for my wife and one for a friend."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Yes. One seat is missing."
+    },
+    {
+      "path": "app/escucha-3d/content/vuelo/a0.json",
+      "text": "Yes. Red roses, please."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "A black car? No, thanks!"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "A car, please."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "A cheese for you?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "A draw?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "A liquid? No! It’s my grandmother’s."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "A little. I breathe slowly."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "A lot of people are sleeping here. Esteban has a blanket and a plant. Dayana is a nurse. She is very tired."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "A wedding in jeans?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "A window seat for Amparo."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Amparo goes in your arms."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Amparo plays the guitar!"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "An empanada for me, please!"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "And a seat for a guitar?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "And Iván? Iván can wait."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "And today is my wedding!"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Are there queues at your supermarket?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Are there taxis in your city?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Are you happy now?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Are you hungry now?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Are you kind?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Are you lucky?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Are you nervous today?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Are you romantic?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Are you sad or happy today?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Are you scared of something?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Are you scared of storms?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Are you tired today?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Arturo is calm."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Arturo looks at you: “Are you scared?”"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "At customs there is a lady with twelve cheeses and a parrot. Osvaldo works here."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Because of the storm."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "big"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "black"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Bruno calls. Delfina shouts."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Bruno has an old, ugly dress."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Bruno is happy."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Bruno looks at you: “What do I do?”"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Bruno, and my dress?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Bruno, where is the dress?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "But there are seats on the plane. They don’t use the car."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Call Delfina."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Calm down, madam."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Calm down. There is another flight."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Can the dress come on the six o’clock plane?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "cancelled"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Cheeses for my grandchildren."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Cough, cough! So much smoke!"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Dayana looks at you. What do you do?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Dayana sleeps."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Dayana, take my headphones."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Débora looks at you: “And you?”"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Delfina gives you a hug."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Delfina laughs. She is better."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Delfina looks at you: “What do I do?”"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Delfina shouts a lot."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Do you cook?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Do you dance?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Do you drink coffee?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Do you drink milk?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Do you drink tea?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Do you eat bread?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Do you have a backpack?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Do you have a boyfriend or girlfriend?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Do you have a car?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Do you have a card?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Do you have a pet?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Do you have a photo of your granddaughter?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Do you have a scarf?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Do you have a secret?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Do you have a sister?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Do you have a special card?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Do you have a special friend?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Do you have an umbrella?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Do you have brothers or sisters?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Do you have coins?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Do you have grandparents?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Do you have headphones?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Do you have nephews or nieces?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Do you have old clothes?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Do you have photos on your phone?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Do you have plants?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Do you have sunglasses?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Do you help your friends?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Do you like black?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Do you like blue?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Do you like candles?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Do you like cheese?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Do you like empanadas?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Do you like flowers?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Do you like laughing?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Do you like parrots?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Do you like presents?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Do you like queues?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Do you like shops?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Do you like singing?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Do you like sweet things?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Do you like sweets?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Do you like the rain?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Do you like the window?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Do you like weddings?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Do you like white?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Do you play the guitar?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Do you ride a bike?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Do you run fast?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Do you sing in the shower?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Do you sing?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Do you sleep well?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Do you talk a lot?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Do you wait patiently?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Do you wear jeans?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Do you wear perfume?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Does your grandmother cook?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Don Teodoro cries a little."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Don Teodoro is very happy."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Don Teodoro laughs a lot."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Doña Carmela is happy."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Doña Carmela is very angry."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Doña Inés first."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Doña Inés gives you a kiss."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Esteban is sad."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Esteban talks to his plant."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Esteban, a coffee?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Esteban, please. I want to sleep!"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Esteban’s home"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Everybody eats. Lucrecia too."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Everybody gets on the plane."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Fabián is angry."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Fabián works at the currency exchange. Nayeli has a backpack and a lot of coins."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Fabián, ten dollars, please."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "fast, quick"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "fear"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Fear"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "For funerals? Ha!"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "For your wife?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Gate twelve"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Gerardo gives you a place very quickly."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Gerardo gives you a place."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Gerardo looks at you: “Do you want a place?”"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Gisela, he’s my friend."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Good idea!"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Great!"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Ha, ha, yes!"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Ha, ha!"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Ha, ha! No!"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Ha, ha! What a man!"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Here, in the urn. Her name is Amparo."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Here? OK!"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Hi. I don’t have my sister’s dress."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Hi. This is the airport. It’s ninety dollars."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Horacio is very red."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Horacio pays and leaves."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Horacio, that’s wrong."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "How are you now?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "How kind!"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "How many cousins do you have?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "How much is twelve plus three?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "How old are you?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "How old is your grandmother?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "hunger"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "I don’t know."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "I don’t know…"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "I have twelve dollars. I’m hungry."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "I live here. Nine days."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "I want two seats: one for me and one for my wife."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "I’ll make a scarf too."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "I’ll sing! Everybody looks at me."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "I’ll sit next to you."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "I’ll wait. It’s fine."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "I’m going to gate twelve!"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "I’m going to see my granddaughter."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "I’m scared…"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "I’m Tito Ventura. I’m a singer."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "I’ve been here three days."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Is it white?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Is Lima a pretty city?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "is missing"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Is there another dress here?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Is your suitcase big?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "It is night. It is raining a lot. You are in a taxi. The taxi driver is Ramiro."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "It’s a quarter to six. It isn’t raining any more. Débora is at gate twelve."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "It’s a rip-off!"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "It’s a small chapel. There are candles. Raquel is scared. Hugo is the chaplain."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "It’s all right."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "It’s in Lima."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "It’s my fifth empanada. I’m nervous."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "It’s my first flight. I’m scared."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "It’s not your problem!"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "It’s raining today. With rain, the price is double."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "It’s the last one."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "It’s the rain, not me!"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "It’s three in the morning. Arturo is a pilot. He is eating empanadas. Marisol is the cook."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Iván gives you a sweet."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Iván, it’s a secret!"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Iván’s name comes out. Everybody gets on!"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Kiara asks you: “Are you coming?”"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Kiara laughs a lot."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Kiara waits for the plane."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Kiara wants a car. Cristian works here. There is one key."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Leonor looks at you: “What do you say?”"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Let’s wait a little longer."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Lie! Lie!"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Like this?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "long"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "lost"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Lucrecia looks at Matías’s backpack. There is a jar of dulce de leche."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Lucrecia, can you keep the jar?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Marisol brings two coffees."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Marisol, two more!"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Matías is calm."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Matías is very sad."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Matías looks at you: “What do I do?”"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Me neither."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Me too."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Mmm… how tasty!"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Mmm… OK."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Mónica looks at you: “What do you do?”"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "My grandson is born today!"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Nayeli is happy."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Nayeli looks at you. What do you say?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Nayeli, I’ll pay for the food."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "nervous"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Nine days? That’s a lot!"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "ninety"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Ninety? That’s a rip-off!"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "No, madam. Two hours."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "No, please!"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "No, sir. It’s a liquid."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "No! My wedding is tomorrow!"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "No? Why?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "No. It’s raining a lot."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "No. Ninety is a lot."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "No. No card, no entry."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "No. Twelve cheeses is a lot."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "No. You’re a good pilot."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "No…"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Oh, no!"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Oh, please!"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "OK!"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "OK… fifty."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "OK… ten."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "On the six o’clock plane there isn’t a seat for everybody."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "One for my wife. One for a friend."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "open"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Osvaldo eats cheese."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Osvaldo looks at you: “Does she go through or not?”"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Quick!"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Ramiro is angry. So are you."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Ramiro is very happy. He sings in the rain."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Ramiro looks at you: “Are you paying?”"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Raquel gives you a hug."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Raquel is calm."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Raquel laughs at the photo."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Raquel looks at you: “And you? Are you scared?”"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Rocío is red. But she laughs."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Rocío picks up her clothes."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Rocío says to you: “Help!”"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "safe"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Shall we eat a little?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "She’s in the bathroom."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "So calm!"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Thank you, dear!"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Thank you!"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Thank you! One moment…"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "That’s the rule. Bye, jar."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "the backpack"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "the belt"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "the blanket"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "the candle"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "the car"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "The car"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "the card"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "the cheese"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "The cheeses"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "the clothes"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "the coins"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "The coins"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "the dress"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "The dress in Lima"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "the empanada"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "the flight attendant"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "the flowers"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "The flowers"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "the friend"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "the gate"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "the girlfriend, the bride"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "the grandchildren"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "the granddaughter"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "the grandmother"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "the jar"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "The jar"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "the key"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "the liquid"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "the money"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "the parrot"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "the perfume"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "The perfumes"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "the pilot"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "The pilot"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "the place, the seat"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "The plane is safe, my child."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "the plant"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "the queue"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "The queue"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "the rain"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "the same, identical"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "the scarf"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "the screen"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "The screen"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "the seat"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "the secret"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "The secret"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "the sign"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "the singer"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "The singer"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "the sister"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "the smoke"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "the storm"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "the suitcase"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "The suitcase"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "the sunglasses"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "the taxi"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "The taxi"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "the umbrella"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "the urn"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "the wedding"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "the wife"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "the window"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "There are three places. Only three."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "There is a big screen. Your flight is AB 2317. It says: CANCELLED. Delfina is very sad."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "There is a lot of smoke in this room. Mónica is a flight attendant. Iván talks a lot."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "There is a very long queue. Gerardo works here. Doña Inés is sitting down. She is making a scarf."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "There is another flight at six."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "There is one. It’s black and big. It’s for funerals."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "There’s a problem. One seat is missing."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "There’s a seat! It’s 14C. It’s for you."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "They are red roses."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "This is the duty-free shop. Vanesa sells perfumes. Horacio is buying two identical perfumes."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "This is the lost luggage office. Hortensia works here. Bruno comes in."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "This is the VIP lounge. Gisela is at the door. A young man is wearing sunglasses. It is night."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Those are my clothes! Don’t look!"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Those are the rules."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "three"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Three dollars for you."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Three? That’s very little!"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "tired"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Tito goes in. He is happy."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Tito is angry."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Tito looks at you: “Will you help me?”"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Tito sings. Gisela dances."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Tito, sing!"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "to buy"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "to dance"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "to sleep"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "to wait"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "twelve"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Two perfumes, please. The same."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Two seats"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Ulises gives you a rose."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Ulises has a coffee with Leonor."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Ulises has flowers and a sign: “Welcome, Valeria”. Leonor sells flowers."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Ulises is sad."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Ulises, there are no more passengers."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Ulises, Valeria isn’t coming."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Valeria arrives today. She’s my girlfriend!"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Vanesa and you laugh a lot."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Vanesa looks at you: “What do you think?”"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Very good! Have a good trip."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "welcome"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Well, yes."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Well… there is no dress."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "What are you doing today?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "What are you eating today?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "What beautiful flowers!"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "What colour are your clothes today?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "What colour is your car?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "What colour is your suitcase?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "What do you eat at night?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "What is in here, madam?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "What is in your backpack?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "What is your favourite colour?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "What is your mother’s name?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "What pretty colours!"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "What time do you go to sleep?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "What time is it now?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "When is your birthday?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Where is your phone now?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Where is your wife?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Which flower do you like?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Which number do you like?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "white"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Who is your favourite singer?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Why, captain?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Wilmer, can you stop the belt?"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Yes, a little."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Yes, I’ll pay. Thank you."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Yes, it’s possible."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Yes, one moment."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Yes, please. Thank you."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Yes, she goes through. They’re for her family."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Yes, that’s true."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Yes, until tomorrow."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Yes!"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Yes! How tasty!"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Yes! Let’s go!"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Yes! Look."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Yes. It’s very old."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Yes. That’s fine."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Yes. White and long."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Yes… I want to go home."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Yes… in my arms."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Yes… thank you."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Yesenia looks at you: “What do I say?”"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "Yesenia works here. Don Teodoro is an old man. He has a blue urn."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "You are in Arrivals. There is an open suitcase on the belt. Rocío’s clothes go round and round."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "You arrive first."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "You eat with Nayeli. She is very nice."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "You eat with the pilot."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "You help Rocío."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "You leave the room."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "You pay fifty. Ramiro gives you a broken umbrella."
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a0.mjs",
+      "text": "You’re so mean!"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "calm"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "cancelled"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "customs"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "dangerous"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "different"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "double"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "famous"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "fear"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "hunger"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "kind"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "long"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "lost"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "nervous"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "real"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "safe"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "slow"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "the backpack"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "the belt"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "the blanket"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "the car"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "the card"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "the chapel"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "the check-in"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "the checkpoint"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "the cheese"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "the clothes"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "the coins"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "the cook"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "the draw"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "the dress"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "the empanada, the pasty"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "the flight attendant"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "the flowers"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "the friend"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "the gate, the door"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "the gift"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "the grandchildren"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "the granddaughter"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "the grandson"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "the headphones"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "the jar"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "the key"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "the lie"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "the liquid"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "the list"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "the money"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "the nurse"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "the office"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "the padlock"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "the parrot"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "the passenger"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "the perfume"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "the pilot"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "the place, the seat"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "the price"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "the queue"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "the rain"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "the same"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "the scarf"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "the screen"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "the seat"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "the secret"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "the sign"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "the singer"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "the smoke"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "the storm"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "the suitcase"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "the sunglasses"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "the taxi"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "the umbrella"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "the urn"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "the wedding"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "the wedding dress"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "the wife"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "the window"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "tired"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "to be missing"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "to breathe"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "to change, to exchange"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "to pick up"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "to rent"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "to share"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "to sleep"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "to treat, to invite"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "to wait"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "welcome"
+    },
+    {
+      "path": "app/vuelo-cancelado/levels/a1.mjs",
+      "text": "white"
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "…No, Mum… the flight is at six… put the bread on the table… zzz… Who are you?"
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "A dog is arriving today from another country. It is for me. Its name is Tango. I do not know it, but I already love it very much."
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "Are you good at speaking in public?"
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "Boyfriend trying to talk his girlfriend out of flying"
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "Businessman closing a deal on the phone"
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "Can you sleep standing up?"
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "Do you fall asleep in strange places?"
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "Do you get angry a lot or a little?"
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "Do you have a driving licence?"
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "Do you have a favourite teacher?"
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "Do you have pets at home?"
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "Do you like dancing? What do you dance?"
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "Do you like dogs?"
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "Do you like maths?"
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "Do you like taking photos?"
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "Do you like the sea or the mountains?"
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "Do you like writing?"
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "Do you play an instrument?"
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "Do you read the newspaper on paper or on your phone?"
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "Do you sometimes work at night?"
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "Do you talk in your sleep?"
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "Do you use your phone a lot?"
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "Economist reading a newspaper from three days ago"
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "Girl doing her homework in the queue"
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "Grandfather eating the most expensive soup of his life"
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "Grandmother narrating the cancellation live to her family"
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "Grandmother who has been waiting for a suitcase since 2009"
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "Have you ever travelled alone?"
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "Huh? What? I am awake. I am working. I am waiting for Mr Ortega. My sign is… upside down? Oh!"
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "I am a teacher. Well, I was a teacher. I read the airport signs. There are a lot of mistakes! I have a red pen."
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "I am a writer. I am writing a novel. Tonight there are a lot of stories here. It is perfect for my book!"
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "I am doing my maths homework. My mum is in the queue. I am sleepy. What is seven times eight?"
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "I am eating a soup. It costs twenty dollars. Twenty! At home, a soup costs two. But I am hungry."
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "I am eighty. I have never seen the sea. My wife always wanted to go. Now I am going, for her."
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "I am fifteen. I am travelling alone. My mum does not know yet, but my suitcase is lost. I am a bit nervous."
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "I am reading a book. It is called “Learn to Wait”. I am on page two. I am waiting for my girlfriend. She is late."
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "I am reading the newspaper. It is from Monday. The news is old, but it is interesting. There is no new newspaper today."
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "I am talking to my girlfriend. She is travelling to another country to work. I do not want her to. I am going to miss her a lot."
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "I am talking to my grandchildren on my phone. I tell them everything: the rain, the queue, the angry man. It is like a film!"
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "I am the barman. I make drinks for famous people. Today there is a singer hiding in the toilet. Shhh!"
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "I am very tired. I sleep standing up. It is easy: I close my eyes and… What? No, I am not sleeping!"
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "I am waiting for my suitcase. It is green and has flowers. It is coming from Madrid. I have been waiting for many years. I come every Thursday."
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "I am working on the phone. I am talking to a client in Japan. It is daytime there. It is night here. I am very tired!"
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "I want a car, but I do not have a driving licence. Is that a problem? Cristian says yes. I do not understand why."
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "I want to speak to the boss! To the boss’s boss! I pay a lot of money. And there is no flight. It is unbelievable!"
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "Influencer sleeping with a luxury eye mask"
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "Man crying because he is going to miss a dance contest"
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "Man demanding to speak to the owner of Aerobruma"
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "Man who talks to his suitcase on the phone"
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "Mother waiting for her son after five years"
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "Musician sleeping with his arms around his guitar"
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "My first perfume! It is vanilla. It is very expensive, but it is my money. I work on Saturdays in an ice-cream shop."
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "My guitar travels with me. It does not go in the suitcase. I sleep with it. It is my best friend."
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "My son lives in Australia. I have not seen him for five years. He arrives today. My sign says: “Welcome home, Nico”."
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "My suitcase has a phone inside. I am calling it now. It is ringing! It is close, but I cannot see it."
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "Retired teacher who corrects the airport signs"
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "Shhh. I am sleeping a little. My eye mask is silk. Tomorrow I take photos on the beach. Today, photos on the floor."
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "Sleeping chauffeur with an upside-down sign"
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "Student reading a self-help book to pass the wait"
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "Teenager travelling alone for the first time"
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "Teenager who has bought her first perfume"
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "The customs dog is following me! I do not have anything. I only have my grandmother’s biscuits in my backpack."
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "Today is my day! I signed my divorce this morning. I am very happy. This glass is the third… or the fourth."
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "Tomorrow is my ex-husband’s wedding. I am speaking at the wedding. I am writing my speech. It is difficult, but it is nice."
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "Tomorrow there is a dance contest. I have danced with my wife for fifty years. No flight, no contest."
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "Traveller the customs dog will not leave alone"
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "VIP lounge barman who knows every secret"
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "What book are you reading now?"
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "What colour is your suitcase?"
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "What did you buy with your first money?"
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "What do you celebrate with a party?"
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "What do you eat when you are cold?"
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "What is your favourite drink?"
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "Where do you keep your documents?"
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "Where is my passport? It is in my bag. No, it is not. Is it in my jacket? Oh, no!"
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "Where is your phone right now?"
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "Who do you miss?"
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "Who do you want to see soon?"
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "Widower travelling for the first time to see the sea"
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "Woman celebrating her divorce in the VIP lounge"
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "Woman preparing a speech for her ex-husband’s wedding"
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "Woman who cannot find her passport"
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "Woman who has come to pick up a dog she has never met"
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "Woman who talks in her sleep"
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "Writer taking notes on everything that happens"
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "Young man trying to rent a car without a licence"
+    },
+    {
+      "path": "app/vuelo-cancelado/pasajeros.mjs",
+      "text": "Young man who sleeps standing up in the queue"
+    }
+  ]
+}

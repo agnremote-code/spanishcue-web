@@ -9,6 +9,7 @@
 //   node scripts/qa-feria-browser.mjs --look     # Look contract renders only
 //   node scripts/qa-feria-browser.mjs --smoke    # G5(a) smoke only
 //   node scripts/qa-feria-browser.mjs --preview  # 8 s 640×360 H.264 hover clip (needs ffmpeg)
+//   node scripts/qa-feria-browser.mjs --hospital-gpu  # Hospital San Casi Vivo: unmount frees the GPU (2026-10-30 repair)
 //   node scripts/qa-feria-browser.mjs --cover    # 1200×750 cover candidates + cover.webp (FERIA_COVER=<circle|intro>)
 //
 // Env: FERIA_QA_OUTPUT (evidence folder), FERIA_QA_LOOK_CIRCLES (Busca
@@ -32,8 +33,8 @@ import { CONTENT } from '../app/la-feria-de-villaluz/levels.mjs';
 
 const repo = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const argv = new Set(process.argv.slice(2));
-const all = !argv.has('--look') && !argv.has('--smoke') && !argv.has('--cover') && !argv.has('--calls') && !argv.has('--preview');
-const RUN = { look: all || argv.has('--look'), smoke: all || argv.has('--smoke'), cover: argv.has('--cover'), calls: argv.has('--calls'), preview: argv.has('--preview') };
+const all = !argv.has('--look') && !argv.has('--smoke') && !argv.has('--cover') && !argv.has('--calls') && !argv.has('--preview') && !argv.has('--hospital-gpu');
+const RUN = { look: all || argv.has('--look'), smoke: all || argv.has('--smoke'), cover: argv.has('--cover'), calls: argv.has('--calls'), preview: argv.has('--preview'), hospitalGpu: argv.has('--hospital-gpu') };
 const out = resolve(process.env.FERIA_QA_OUTPUT || resolve(repo, '.qa/feria-browser'));
 await mkdir(resolve(out, 'look'), { recursive: true });
 await mkdir(resolve(out, 'smoke'), { recursive: true });
@@ -63,10 +64,11 @@ const tick = () => { window.__qa.frames++; requestAnimationFrame(tick); };
 requestAnimationFrame(tick);
 function HospitalHarness() {
   const [view, setView] = useState({ floor: 1, sceneId: null });
-  useEffect(() => { window.__qa.hospital = (floor, sceneId) => setView({ floor, sceneId }); }, []);
+  const [mounted, setMounted] = useState(true);
+  useEffect(() => { window.__qa.hospital = (floor, sceneId) => setView({ floor, sceneId }); window.__qa.hospitalOff = () => setMounted(false); window.__qa.hospitalOn = () => setMounted(true); }, []);
   const none = () => {};
-  return <main className="hs"><HospitalWorld floor={view.floor} via="lift" sceneId={view.sceneId} mood={null} done={[]} paused={false} intro={false}
-    onSpot={none} onLift={none} onNear={none} onPerson={none} personId={null} onCry={none} onPose={none} onFail={() => { window.__qa.failed = true; }} /></main>;
+  return <main className="hs">{mounted && <HospitalWorld floor={view.floor} via="lift" sceneId={view.sceneId} mood={null} done={[]} paused={false} intro={false}
+    onSpot={none} onLift={none} onNear={none} onPerson={none} personId={null} onCry={none} onPose={none} onFail={() => { window.__qa.failed = true; }} />}</main>;
 }
 function LookHarness() {
   const [busca, setBusca] = useState(null);
@@ -454,12 +456,34 @@ async function tap(locator, label) {
   }
 }
 
+/** Init script: counts live WebGL textures and buffers, and lost contexts, from inside the page. */
+const countGpu = () => {
+  const gpu = { textures: 0, buffers: 0, lost: 0 };
+  window.__gpu = gpu;
+  for (const C of [window.WebGLRenderingContext, window.WebGL2RenderingContext]) {
+    if (!C) continue;
+    const p = C.prototype;
+    for (const [make, drop, key] of [['createTexture', 'deleteTexture', 'textures'], ['createBuffer', 'deleteBuffer', 'buffers']]) {
+      const m = p[make], d = p[drop];
+      p[make] = function (...a) { const r = m.apply(this, a); if (r) gpu[key]++; return r; };
+      p[drop] = function (x, ...a) { if (x) gpu[key]--; return d.call(this, x, ...a); };
+    }
+  }
+  const get = HTMLCanvasElement.prototype.getContext;
+  HTMLCanvasElement.prototype.getContext = function (type, ...rest) {
+    const ctx = get.call(this, type, ...rest);
+    if (ctx && /webgl/.test(String(type)) && !this.__gpuWatched) { this.__gpuWatched = true; this.addEventListener('webglcontextlost', () => { gpu.lost++; }); }
+    return ctx;
+  };
+};
+
 async function newGamePage(viewport, options = {}) {
   const context = await browser.newContext({ viewport, deviceScaleFactor: 1.25, reducedMotion: options.reduced ? 'reduce' : 'no-preference', ...(viewport.width < 760 ? { hasTouch: true, isMobile: true } : {}) });
   if (options.noWebGL) await context.addInitScript(() => {
     const get = HTMLCanvasElement.prototype.getContext;
     HTMLCanvasElement.prototype.getContext = function (type, ...rest) { return /webgl/.test(String(type)) ? null : get.call(this, type, ...rest); };
   });
+  if (options.gpuCount) await context.addInitScript(countGpu);
   const page = await context.newPage();
   page.setDefaultTimeout(30000);
   const label = options.label ?? `${viewport.width}`;
@@ -544,6 +568,35 @@ if (RUN.smoke) {
     await context.close();
   }
 
+  // 1b. Unmount frees the GPU (Feria QA note; Ascensor code review B1). The
+  // WebGL calls are counted from inside the page: textures and buffers still
+  // alive, and the contexts lost, after the 3D world is switched off.
+  for (const viewport of [{ width: 390, height: 844 }, { width: 1280, height: 800 }]) {
+    const { context, page } = await newGamePage(viewport, { label: `unmount-${viewport.width}`, gpuCount: true });
+    await page.getByRole('button', { name: 'Entrar en la feria' }).click();
+    await page.locator('.fv-canvas canvas').waitFor({ timeout: 60000 });
+    await frames(page, 10);
+    // Two scene cards: in low mode each focus caches one host bake off-scene.
+    for (const c of CIRCLES.slice(0, 2)) {
+      if (!(await page.locator('.fv-list').count())) await page.getByRole('button', { name: 'Lista del profesor' }).click();
+      await page.locator('.fv-all').getByRole('button', { name: new RegExp(`^${c.n}\\. `) }).click();
+      await frames(page, 5);
+      await page.getByRole('button', { name: 'Volver', exact: true }).or(page.locator('.fv-card').getByRole('button', { name: /^(Seguir paseando|Volver a la feria)/ }).last()).first().click();
+      await frames(page, 5);
+    }
+    const before = await page.evaluate(() => ({ ...window.__gpu }));
+    await page.getByRole('button', { name: 'Sin movimiento', exact: true }).click();
+    await page.locator('.fv-canvas canvas').waitFor({ state: 'detached' });
+    await page.waitForTimeout(300);
+    const after = await page.evaluate(() => ({ ...window.__gpu }));
+    // What survives (5 textures on both the low and the full path, 2026-10-28)
+    // is consistent with three.js's own per-renderer placeholders; the forced
+    // context loss releases those too. On main before the fix: 7 → 7 and
+    // 22 → 20 textures, no context lost.
+    smoke(`${viewport.width} unmount frees the world's WebGL textures and buffers and loses the context`, after.lost >= 1 && before.textures > after.textures && after.textures <= 5 && after.buffers <= 5, { before, after });
+    await context.close();
+  }
+
   // 2. Fallbacks: no WebGL, "Mapa sin movimiento", reduced motion.
   for (const [name, opts, toggle] of [['no-webgl', { noWebGL: true }, false], ['mapa-sin-movimiento', {}, true], ['reduced-motion', { reduced: true }, false]]) {
     const { context, page } = await newGamePage({ width: 390, height: 844 }, { ...opts, label: name });
@@ -597,6 +650,47 @@ if (RUN.smoke) {
   }
 }
 
+// ------------------------------------------------------------------ Hospital unmount (gated repair, 2026-10-30)
+// The same leak as the Feria (2026-10-28): the cleanup disposed materials but
+// not their textures, nor the bloom pass targets or the shadow map, and never
+// lost the context. Mounted alone through ?harness=hospital, walked through
+// two scenes, then unmounted. On main 49ddf69 before the fix: see the LQG file.
+if (RUN.hospitalGpu) {
+  const { SCENES } = await import('../app/hospital-san-casi-vivo/layout.mjs');
+  for (const viewport of [{ width: 390, height: 844 }, { width: 1280, height: 800 }]) {
+    const label = `hospital-unmount-${viewport.width}`;
+    const context = await browser.newContext({ viewport, deviceScaleFactor: 1.25, ...(viewport.width < 760 ? { hasTouch: true, isMobile: true } : {}) });
+    await context.addInitScript(countGpu);
+    const page = await context.newPage();
+    page.setDefaultTimeout(30000);
+    page.on('pageerror', e => report.errors.push(`${label}: ${e.message}`));
+    page.on('console', m => { if (m.type() === 'error' && !/Failed to load resource/.test(m.text())) report.errors.push(`${label} console: ${m.text()}`); });
+    await page.goto(`${origin}/?harness=hospital`);
+    await page.locator('.hs canvas').first().waitFor({ timeout: 60000 });
+    await frames(page, 10);
+    for (const scene of SCENES.slice(0, 2)) {
+      await page.evaluate(([floor, id]) => window.__qa.hospital(floor, id), [scene.floor, scene.id]);
+      await frames(page, 10);
+    }
+    const before = await page.evaluate(() => ({ ...window.__gpu }));
+    await page.evaluate(() => window.__qa.hospitalOff());
+    await page.locator('.hs canvas').first().waitFor({ state: 'detached' });
+    await page.waitForTimeout(1500);
+    const after = await page.evaluate(() => ({ ...window.__gpu, failed: window.__qa.failed }));
+    smoke(`${viewport.width} hospital unmount frees the world's WebGL textures and buffers and loses the context`, !after.failed && after.lost >= 1 && before.textures > after.textures && after.textures <= 5 && after.buffers <= 5, { before, after });
+    // Remount in the same page: the disposed cached materials and canvas
+    // textures must upload again (review NB1), with a non-blank canvas.
+    const errorsBefore = report.errors.length;
+    await page.evaluate(() => window.__qa.hospitalOn());
+    await page.locator('.hs canvas').first().waitFor({ timeout: 60000 });
+    await frames(page, 15);
+    const px = await pixelStats(page, await page.locator('.hs canvas').first().screenshot());
+    const failed = await page.evaluate(() => window.__qa.failed);
+    smoke(`${viewport.width} hospital remounts after the unmount with a non-blank canvas`, !failed && report.errors.length === errorsBefore && px.colours > 200 && px.sd > 8, px);
+    await context.close();
+  }
+}
+
 report.missing = [...missing].sort();
 await writeFile(resolve(out, 'results.json'), JSON.stringify(report, null, 2));
 await browser.close();
@@ -605,5 +699,5 @@ console.log(`Evidence: ${out}`);
 console.log(`Page/console errors: ${report.errors.length}${report.errors.length ? `\n  ${report.errors.join('\n  ')}` : ''}`);
 console.log(`404s: ${report.missing.join(', ') || 'none'}`);
 const failed = report.smoke.filter(s => !s.passed);
-if (RUN.smoke) console.log(`Smoke: ${report.smoke.length - failed.length}/${report.smoke.length} passed`);
+if (RUN.smoke || RUN.hospitalGpu) console.log(`Smoke: ${report.smoke.length - failed.length}/${report.smoke.length} passed`);
 if (failed.length || report.errors.length) process.exitCode = 1;

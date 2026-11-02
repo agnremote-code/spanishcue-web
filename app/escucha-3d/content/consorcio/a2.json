@@ -1,0 +1,2048 @@
+{
+  "game": "consorcio",
+  "level": "A2",
+  "items": [
+    {
+      "id": "llegada",
+      "title": "Treinta años de mudanzas",
+      "place": "La vereda de Medrano 1417",
+      "context": "Mientras esperan el ascensor, Don Ramón le cuenta a Freddy cómo era el edificio antes.",
+      "speakers": [
+        {
+          "name": "Ramón",
+          "country": "Paraguay",
+          "voice": "es-PY-MarioNeural"
+        },
+        {
+          "name": "Freddy",
+          "country": "Bolivia",
+          "voice": "es-BO-MarceloNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Freddy, yo llegué a este edificio en 1994. Antes trabajaba en una fábrica de zapatos."
+        },
+        {
+          "s": 1,
+          "text": "¿Y cómo era el edificio en esa época?"
+        },
+        {
+          "s": 0,
+          "text": "Era más tranquilo. No había internet ni repartidores. Los vecinos se conocían y tomaban mate en la terraza todos los sábados."
+        },
+        {
+          "s": 1,
+          "text": "¿Y el ascensor? ¿Siempre fue tan pequeño?"
+        },
+        {
+          "s": 0,
+          "text": "Siempre. Pero subimos pianos, heladeras, un ataúd… Una vez subimos una vaca de plástico para una fiesta."
+        },
+        {
+          "s": 1,
+          "text": "¡Una vaca! Bueno, entonces un colchón no es nada."
+        },
+        {
+          "s": 0,
+          "text": "Exacto. Usted ponga el colchón de pie y yo hago el resto. Y no le cuente nada al administrador."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Dónde trabajaba Ramón antes?",
+          "options": [
+            "En un hotel",
+            "En una fábrica de zapatos",
+            "En una escuela"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué hacían los vecinos los sábados?",
+          "options": [
+            "Tomaban mate en la terraza",
+            "Iban al cine",
+            "Limpiaban el hall"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué subieron una vez para una fiesta?",
+          "options": [
+            "Un caballo",
+            "Una mesa enorme",
+            "Una vaca de plástico"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué le pide Ramón a Freddy al final?",
+          "options": [
+            "Que suba por la escalera",
+            "Que no le cuente nada al administrador",
+            "Que pague más"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Cómo era tu barrio cuando eras pequeño o pequeña?",
+          "model": "Era más tranquilo y había más árboles."
+        },
+        {
+          "q": "¿Qué cosa difícil tuviste que subir o mover alguna vez?",
+          "model": "Una vez mi hermano y yo cargamos un sofá por la escalera."
+        },
+        {
+          "q": "¿Crees que antes los vecinos se conocían más? ¿Por qué?",
+          "model": "Sí, porque la gente pasaba más tiempo en el barrio."
+        }
+      ],
+      "gaps": "Era más [tranquilo]. No había [internet] ni [repartidores]. Los [vecinos] se conocían",
+      "glossary": [
+        {
+          "word": "fábrica",
+          "meaning": "lugar donde se hacen productos"
+        },
+        {
+          "word": "heladeras",
+          "meaning": "aparatos para conservar fría la comida"
+        },
+        {
+          "word": "de pie",
+          "meaning": "en posición vertical"
+        }
+      ]
+    },
+    {
+      "id": "buzones",
+      "title": "La carta equivocada",
+      "place": "El hall de entrada",
+      "context": "Nahuel, el repartidor, le explica a Doña Elvira un problema con una carta.",
+      "speakers": [
+        {
+          "name": "Nahuel",
+          "country": "Argentina",
+          "voice": "es-AR-TomasNeural"
+        },
+        {
+          "name": "Elvira",
+          "country": "España",
+          "voice": "es-ES-ElviraNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Señora, perdone. Esta mañana dejé una carta en el buzón del segundo B, pero era para el primero A. ¿Usted es del primero A?"
+        },
+        {
+          "s": 1,
+          "text": "Sí, soy Elvira, del primero A. ¿De quién es la carta?"
+        },
+        {
+          "s": 0,
+          "text": "De un banco. Dice «urgente»."
+        },
+        {
+          "s": 1,
+          "text": "Ah… Yo ya la tengo abierta. Pensé que era para mí. Bueno, era para mí, ¿no?"
+        },
+        {
+          "s": 0,
+          "text": "Sí, pero estaba en el buzón del segundo. ¿Cómo la sacó?"
+        },
+        {
+          "s": 1,
+          "text": "Los buzones de este edificio son muy viejos. Se abren con cualquier llave. No es culpa mía."
+        },
+        {
+          "s": 0,
+          "text": "Bueno, señora. Firme aquí, por favor, y todo está bien."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Dónde dejó Nahuel la carta?",
+          "options": [
+            "En el buzón del primero A",
+            "En el buzón del segundo B",
+            "En la puerta de Elvira"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿De quién era la carta?",
+          "options": [
+            "De un banco",
+            "De la hija de Elvira",
+            "Del administrador"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué dice Elvira de los buzones?",
+          "options": [
+            "Que son nuevos",
+            "Que tienen alarma",
+            "Que se abren con cualquier llave"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué tiene que hacer Elvira al final?",
+          "options": [
+            "Devolver la carta",
+            "Llamar al banco",
+            "Firmar"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Recibes muchas cartas o solo mensajes electrónicos?",
+          "model": "Recibo casi todo por correo electrónico."
+        },
+        {
+          "q": "¿Alguna vez recibiste algo que era para otra persona?",
+          "model": "Sí, una vez me llegó un paquete del vecino."
+        },
+        {
+          "q": "¿Qué haces si encuentras una carta que no es tuya?",
+          "model": "La dejo en el buzón correcto."
+        }
+      ],
+      "gaps": "Los [buzones] de este [edificio] son muy [viejos]. Se abren con [cualquier] llave.",
+      "glossary": [
+        {
+          "word": "perdone",
+          "meaning": "de «perdonar»: forma educada de pedir disculpas"
+        },
+        {
+          "word": "urgente",
+          "meaning": "que necesita atención rápida"
+        },
+        {
+          "word": "culpa",
+          "meaning": "responsabilidad de algo malo"
+        }
+      ]
+    },
+    {
+      "id": "consultorio",
+      "title": "Un consejo de Marta",
+      "place": "El consultorio del 1.° B",
+      "context": "Al terminar la sesión, Marta le da a Federico una tarea para la semana.",
+      "speakers": [
+        {
+          "name": "Marta",
+          "country": "Argentina",
+          "voice": "es-AR-ElenaNeural"
+        },
+        {
+          "name": "Federico",
+          "country": "Nicaragua",
+          "voice": "es-NI-FedericoNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Federico, esta semana te propongo un ejercicio. Primero, mira el ascensor desde el hall, cinco minutos."
+        },
+        {
+          "s": 1,
+          "text": "¿Solo mirarlo? Eso es fácil."
+        },
+        {
+          "s": 0,
+          "text": "El miércoles, entra en el ascensor con la puerta abierta. No subas, solo entra y respira."
+        },
+        {
+          "s": 1,
+          "text": "¿Y el viernes?"
+        },
+        {
+          "s": 0,
+          "text": "El viernes subes un piso, solo uno, con una persona de confianza."
+        },
+        {
+          "s": 1,
+          "text": "¿Con Ramón? Él estaba en la terraza el martes, cuando me quedé dentro."
+        },
+        {
+          "s": 0,
+          "text": "Con quien tú quieras. Y escribe en un cuaderno qué sientes cada día."
+        },
+        {
+          "s": 1,
+          "text": "Está bien. Pero esta noche voy a votar por el ascensor nuevo."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué tiene que hacer Federico primero?",
+          "options": [
+            "Subir al séptimo",
+            "Mirar el ascensor cinco minutos",
+            "Llamar a Ramón"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué hace el miércoles?",
+          "options": [
+            "Entra con la puerta abierta",
+            "Sube tres pisos",
+            "No hace nada"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cuántos pisos sube el viernes?",
+          "options": [
+            "Tres",
+            "Ninguno",
+            "Uno"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Dónde tiene que escribir lo que siente?",
+          "options": [
+            "En el teléfono",
+            "En un cuaderno",
+            "En una carta"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué haces para controlar los nervios?",
+          "model": "Respiro profundo y salgo a caminar."
+        },
+        {
+          "q": "¿Escribes un diario o notas sobre tus emociones?",
+          "model": "No, pero a veces escribo en el teléfono."
+        },
+        {
+          "q": "¿Quién es una persona de confianza para ti?",
+          "model": "Mi hermana es mi persona de confianza."
+        }
+      ],
+      "gaps": "El viernes [subes] un [piso], solo [uno], con una [persona] de confianza.",
+      "glossary": [
+        {
+          "word": "ejercicio",
+          "meaning": "actividad para practicar algo"
+        },
+        {
+          "word": "confianza",
+          "meaning": "seguridad en otra persona"
+        },
+        {
+          "word": "cuaderno",
+          "meaning": "libro con hojas en blanco para escribir"
+        }
+      ]
+    },
+    {
+      "id": "bateria",
+      "title": "La final del sábado",
+      "place": "El 1.° C",
+      "context": "Thiago le cuenta a su mamá cómo es el concurso de bateristas.",
+      "speakers": [
+        {
+          "name": "Thiago",
+          "country": "Costa Rica",
+          "voice": "es-CR-JuanNeural"
+        },
+        {
+          "name": "Noelia",
+          "country": "Costa Rica",
+          "voice": "es-CR-MariaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Mamá, ya sé las reglas del concurso. Hay doce bateristas. Cada uno toca cinco minutos."
+        },
+        {
+          "s": 1,
+          "text": "¿Y quién decide?"
+        },
+        {
+          "s": 0,
+          "text": "Tres jueces. Uno es un baterista famoso, toca con una banda de rock nacional."
+        },
+        {
+          "s": 1,
+          "text": "¿Y el premio?"
+        },
+        {
+          "s": 0,
+          "text": "Una beca de un año en el conservatorio. Clases gratis, todos los días."
+        },
+        {
+          "s": 1,
+          "text": "Qué bien, hijo. Estoy muy orgullosa. ¿Qué vas a tocar?"
+        },
+        {
+          "s": 0,
+          "text": "Una canción mía. Pero necesito practicar más. Por eso toco tanto."
+        },
+        {
+          "s": 1,
+          "text": "Entiendo. Pero el vecino de abajo dejó otra carta. Mañana hablamos con él, ¿sí?"
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cuántos bateristas hay en el concurso?",
+          "options": [
+            "Doce",
+            "Cinco",
+            "Tres"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Quién es uno de los jueces?",
+          "options": [
+            "Un profesor de Thiago",
+            "Un baterista famoso",
+            "El vecino de abajo"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué es el premio?",
+          "options": [
+            "Una batería nueva",
+            "Un viaje",
+            "Una beca en el conservatorio"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué va a tocar Thiago?",
+          "options": [
+            "Un tango",
+            "Una canción suya",
+            "Una canción de rock famosa"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué premio te gustaría ganar?",
+          "model": "Me gustaría ganar un viaje."
+        },
+        {
+          "q": "¿Hay algún músico en tu familia?",
+          "model": "Sí, mi tío toca la guitarra."
+        },
+        {
+          "q": "¿Qué haces cuando un vecino se queja?",
+          "model": "Hablo con él para encontrar una solución."
+        }
+      ],
+      "gaps": "Una [beca] de un [año] en el [conservatorio]. Clases [gratis], todos los días.",
+      "glossary": [
+        {
+          "word": "jueces",
+          "meaning": "personas que deciden quién gana"
+        },
+        {
+          "word": "premio",
+          "meaning": "lo que recibe la persona que gana"
+        },
+        {
+          "word": "orgullosa",
+          "meaning": "contenta por algo bueno de otra persona"
+        }
+      ]
+    },
+    {
+      "id": "gotera",
+      "title": "Otra vez el agua",
+      "place": "El 2.° A",
+      "context": "Wilson llama al administrador. Carla escucha y opina.",
+      "speakers": [
+        {
+          "name": "Wilson",
+          "country": "Perú",
+          "voice": "es-PE-AlexNeural"
+        },
+        {
+          "name": "Carla",
+          "country": "Perú",
+          "voice": "es-PE-CamilaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Buenas tardes, contador. Soy Wilson, del segundo A. Otra vez tenemos agua en el techo."
+        },
+        {
+          "s": 0,
+          "text": "Sí, como el año pasado. El agua viene del tercero A. ¿El consorcio puede mandar un plomero?"
+        },
+        {
+          "s": 1,
+          "text": "¿Qué dice?"
+        },
+        {
+          "s": 0,
+          "text": "Dice que es un problema entre vecinos y que el consorcio no paga. Que hablemos con la chica de arriba."
+        },
+        {
+          "s": 1,
+          "text": "¡Siempre lo mismo! El año pasado pagamos nosotros la pintura. Este año no."
+        },
+        {
+          "s": 0,
+          "text": "Tranquila, Carla. Esta noche hay asamblea. Voy a explicar el problema delante de todos."
+        },
+        {
+          "s": 1,
+          "text": "Bien. Y llevo las fotos del sofá. Que todos vean cómo está."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué problema tienen Wilson y Carla?",
+          "options": [
+            "No tienen luz",
+            "Hay agua en el techo",
+            "Se rompió la puerta"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué responde el administrador?",
+          "options": [
+            "Que es un problema entre vecinos",
+            "Que manda un plomero hoy",
+            "Que paga la pintura"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Quién pagó la pintura el año pasado?",
+          "options": [
+            "El consorcio",
+            "La chica de arriba",
+            "Wilson y Carla"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué va a llevar Carla a la asamblea?",
+          "options": [
+            "Un balde",
+            "Fotos del sofá",
+            "Una carta"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Quién paga las reparaciones en tu casa?",
+          "model": "Las pago yo, pero algunas las paga el dueño."
+        },
+        {
+          "q": "¿Tuviste algún problema con agua en tu casa?",
+          "model": "Sí, una vez se rompió un caño en la cocina."
+        },
+        {
+          "q": "¿Te gusta hablar delante de muchas personas?",
+          "model": "No mucho, pero puedo hacerlo."
+        }
+      ],
+      "gaps": "El año pasado [pagamos] [nosotros] la [pintura]. Este [año] no.",
+      "glossary": [
+        {
+          "word": "plomero",
+          "meaning": "persona que arregla caños y agua"
+        },
+        {
+          "word": "consorcio",
+          "meaning": "grupo de dueños de un edificio"
+        },
+        {
+          "word": "pintura",
+          "meaning": "líquido de color para paredes"
+        }
+      ]
+    },
+    {
+      "id": "gatos",
+      "title": "La historia de Rulo",
+      "place": "El 2.° D",
+      "context": "Doña Pocha le cuenta a Gastón de dónde vienen sus gatos.",
+      "speakers": [
+        {
+          "name": "Pocha",
+          "country": "Uruguay",
+          "voice": "es-UY-ValentinaNeural"
+        },
+        {
+          "name": "Gastón",
+          "country": "Venezuela",
+          "voice": "es-VE-SebastianNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Gastón, ¿sabes de dónde viene Rulo? Lo encontré en una caja, en la puerta del edificio, una noche de lluvia."
+        },
+        {
+          "s": 1,
+          "text": "Pobrecito. ¿Y los otros?"
+        },
+        {
+          "s": 0,
+          "text": "Tigre vino de la plaza. A Mostaza y a Merengue los encontraron unos chicos en el subte."
+        },
+        {
+          "s": 1,
+          "text": "Usted tiene un corazón muy grande, señora."
+        },
+        {
+          "s": 0,
+          "text": "Y una casa pequeña. Por eso regalo un gato a cada persona nueva del edificio. Hoy llega alguien al cuarto B."
+        },
+        {
+          "s": 1,
+          "text": "¿Y si esa persona no quiere un gato?"
+        },
+        {
+          "s": 0,
+          "text": "Todos quieren un gato. Solo que algunos todavía no lo saben."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Dónde encontró Pocha a Rulo?",
+          "options": [
+            "En la plaza",
+            "En una caja, en la puerta",
+            "En el subte"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿De dónde vino Tigre?",
+          "options": [
+            "De la plaza",
+            "Del subte",
+            "De una tienda"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Por qué regala gatos Pocha?",
+          "options": [
+            "Porque no le gustan",
+            "Porque son caros",
+            "Porque su casa es pequeña"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué piensa Pocha de las personas que no quieren un gato?",
+          "options": [
+            "Que son malas",
+            "Que todavía no lo saben",
+            "Que tienen alergia"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Adoptaste algún animal de la calle?",
+          "model": "Sí, mi perro era de la calle."
+        },
+        {
+          "q": "¿Qué regalo le das a una persona que llega a tu barrio?",
+          "model": "Le llevo algo de comer."
+        },
+        {
+          "q": "¿Prefieres los gatos o los perros? ¿Por qué?",
+          "model": "Prefiero los perros porque son más sociables."
+        }
+      ],
+      "gaps": "Y una [casa] [pequeña]. Por eso [regalo] un [gato] a cada persona nueva del edificio.",
+      "glossary": [
+        {
+          "word": "pobrecito",
+          "meaning": "pobre, con cariño"
+        },
+        {
+          "word": "corazón",
+          "meaning": "órgano del cuerpo; aquí, bondad"
+        },
+        {
+          "word": "regalo",
+          "meaning": "de «regalar»: doy algo sin pedir dinero"
+        }
+      ]
+    },
+    {
+      "id": "teletrabajo",
+      "title": "Mi primera semana en Buenos Aires",
+      "place": "El 3.° A",
+      "context": "Yuliana le cuenta a Wilson por qué siempre usa auriculares.",
+      "speakers": [
+        {
+          "name": "Yuliana",
+          "country": "Venezuela",
+          "voice": "es-VE-PaolaNeural"
+        },
+        {
+          "name": "Wilson",
+          "country": "Perú",
+          "voice": "es-PE-AlexNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Wilson, otra vez, perdón. Le explico: trabajo para una empresa de Nueva York. Las reuniones empiezan a las nueve de la mañana y terminan a veces a las ocho de la noche."
+        },
+        {
+          "s": 1,
+          "text": "¿Y por eso nunca abre la puerta?"
+        },
+        {
+          "s": 0,
+          "text": "Con los auriculares no escucho nada. Cuando llegué hace un año, no conocía a nadie y trabajaba todo el día."
+        },
+        {
+          "s": 1,
+          "text": "Entiendo. Yo también llegué solo de Lima hace diez años. Fue difícil."
+        },
+        {
+          "s": 0,
+          "text": "Mañana le pago la pintura. Y si quiere, le hago un café colombiano."
+        },
+        {
+          "s": 1,
+          "text": "Acepto el café. Y la próxima vez, ponga una alarma para la bañera."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Para qué ciudad trabaja Yuliana?",
+          "options": [
+            "Para Bogotá",
+            "Para Nueva York",
+            "Para Lima"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Por qué no abre la puerta?",
+          "options": [
+            "Porque con los auriculares no escucha",
+            "Porque no está en casa",
+            "Porque tiene miedo"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿De dónde llegó Wilson?",
+          "options": [
+            "De Bogotá",
+            "De Caracas",
+            "De Lima"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué le aconseja Wilson al final?",
+          "options": [
+            "Comprar un sofá",
+            "Poner una alarma para la bañera",
+            "Cambiar de trabajo"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Cuántas horas trabajas al día?",
+          "model": "Trabajo unas ocho horas."
+        },
+        {
+          "q": "¿Cómo fue tu primera semana en una ciudad nueva?",
+          "model": "Fue rara, pero conocí a gente muy amable."
+        },
+        {
+          "q": "¿Qué bebida típica de tu país ofreces a las visitas?",
+          "model": "Ofrezco un café o un té."
+        }
+      ],
+      "gaps": "Cuando [llegué] hace un [año], no [conocía] a [nadie] y trabajaba todo el día.",
+      "glossary": [
+        {
+          "word": "reuniones",
+          "meaning": "encuentros de trabajo"
+        },
+        {
+          "word": "alarma",
+          "meaning": "aparato que hace ruido para avisar"
+        },
+        {
+          "word": "pintura",
+          "meaning": "líquido de color para paredes"
+        }
+      ]
+    },
+    {
+      "id": "turistas",
+      "title": "El plan de la semana",
+      "place": "El 3.° C",
+      "context": "Iker y Nerea hacen planes para su semana en Buenos Aires.",
+      "speakers": [
+        {
+          "name": "Nerea",
+          "country": "España",
+          "voice": "es-ES-XimenaNeural"
+        },
+        {
+          "name": "Iker",
+          "country": "España",
+          "voice": "es-ES-AlvaroNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Iker, mañana quiero ir a San Telmo. El domingo hay una feria con antigüedades y tango en la calle."
+        },
+        {
+          "s": 1,
+          "text": "Mañana es miércoles, Nerea. La feria es el domingo."
+        },
+        {
+          "s": 0,
+          "text": "Vale. Entonces mañana vamos a La Boca y a ver un partido."
+        },
+        {
+          "s": 1,
+          "text": "¿Un partido? Las entradas son carísimas y se agotan."
+        },
+        {
+          "s": 0,
+          "text": "Bueno, al menos vemos el estadio. El jueves, el Obelisco. Desde cerca, no desde el pasillo."
+        },
+        {
+          "s": 1,
+          "text": "Muy graciosa. Y el viernes quiero comer el mejor asado de la ciudad. El vecino del tercero B, Kevin, me dio una dirección."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cuándo es la feria de San Telmo?",
+          "options": [
+            "El miércoles",
+            "El domingo",
+            "El jueves"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué día es mañana?",
+          "options": [
+            "Miércoles",
+            "Domingo",
+            "Viernes"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Por qué es difícil ver un partido?",
+          "options": [
+            "Porque llueve",
+            "Porque no hay partido",
+            "Porque las entradas son caras y se agotan"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Quién le dio a Iker una dirección?",
+          "options": [
+            "Kevin",
+            "Ramón",
+            "Elvira"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué haces primero cuando visitas una ciudad nueva?",
+          "model": "Camino por el centro y como algo típico."
+        },
+        {
+          "q": "¿Te gusta ir a ferias de antigüedades?",
+          "model": "Sí, me encanta buscar cosas antiguas."
+        },
+        {
+          "q": "¿Fuiste alguna vez a un estadio?",
+          "model": "Sí, fui a ver un partido de fútbol."
+        }
+      ],
+      "gaps": "Entonces [mañana] [vamos] a La [Boca] y a ver un [partido].",
+      "glossary": [
+        {
+          "word": "feria",
+          "meaning": "mercado en la calle"
+        },
+        {
+          "word": "antigüedades",
+          "meaning": "objetos viejos y valiosos"
+        },
+        {
+          "word": "se agotan",
+          "meaning": "de «agotarse»: no quedan más"
+        }
+      ]
+    },
+    {
+      "id": "mudanza",
+      "title": "El contrato",
+      "place": "El 4.° B",
+      "context": "Amalia le explica a Freddy por qué es importante el voto de esta noche.",
+      "speakers": [
+        {
+          "name": "Amalia",
+          "country": "Chile",
+          "voice": "es-CL-CatalinaNeural"
+        },
+        {
+          "name": "Freddy",
+          "country": "Bolivia",
+          "voice": "es-BO-MarceloNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Freddy, usted conoce a muchos inquilinos. ¿Ellos leen los contratos?"
+        },
+        {
+          "s": 1,
+          "text": "Casi nunca, señora. Firman rápido y después se quejan."
+        },
+        {
+          "s": 0,
+          "text": "Bueno. Yo quiero que la persona nueva vote a favor del ascensor nuevo. Con un ascensor moderno, el departamento vale más."
+        },
+        {
+          "s": 1,
+          "text": "¿Y quién paga el ascensor? ¿Usted o el inquilino?"
+        },
+        {
+          "s": 0,
+          "text": "Según el contrato, las expensas extraordinarias las paga el inquilino. Está en la cláusula siete."
+        },
+        {
+          "s": 1,
+          "text": "Entonces la persona nueva paga y usted gana. Muy inteligente."
+        },
+        {
+          "s": 0,
+          "text": "Así son los negocios, Freddy. Usted no diga nada."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué hacen los inquilinos con los contratos, según Freddy?",
+          "options": [
+            "Los leen con cuidado",
+            "Firman rápido y después se quejan",
+            "Los rompen"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Por qué quiere Amalia el ascensor nuevo?",
+          "options": [
+            "Porque el departamento vale más",
+            "Porque tiene miedo",
+            "Porque es barato"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿En qué cláusula está la información?",
+          "options": [
+            "En la tres",
+            "En la diez",
+            "En la siete"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Quién paga las expensas extraordinarias?",
+          "options": [
+            "Amalia",
+            "El inquilino",
+            "Ramón"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Lees los contratos antes de firmar?",
+          "model": "Sí, siempre, aunque son muy largos."
+        },
+        {
+          "q": "¿Qué es importante para ti en un departamento?",
+          "model": "La luz y una cocina cómoda."
+        },
+        {
+          "q": "¿Prefieres alquilar o comprar una casa?",
+          "model": "Prefiero comprar, pero es muy caro."
+        }
+      ],
+      "gaps": "Según el [contrato], las [expensas] [extraordinarias] las paga el [inquilino].",
+      "glossary": [
+        {
+          "word": "inquilinos",
+          "meaning": "personas que alquilan una casa"
+        },
+        {
+          "word": "expensas",
+          "meaning": "dinero mensual para los gastos del edificio"
+        },
+        {
+          "word": "cláusula",
+          "meaning": "parte de un contrato"
+        }
+      ]
+    },
+    {
+      "id": "tango",
+      "title": "Domingos de milonga",
+      "place": "El 4.° C",
+      "context": "Don Washington recuerda cómo eran los domingos con Elsa.",
+      "speakers": [
+        {
+          "name": "Washington",
+          "country": "Uruguay",
+          "voice": "es-UY-MateoNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Los domingos eran el mejor día de la semana. Por la mañana, Elsa preparaba ravioles y yo compraba el diario."
+        },
+        {
+          "s": 0,
+          "text": "Después de comer, dormíamos la siesta. Y a las ocho de la noche, nos poníamos la mejor ropa y caminábamos hasta la milonga, en la calle Sarmiento."
+        },
+        {
+          "s": 0,
+          "text": "Elsa bailaba mejor que yo, pero siempre decía que yo la llevaba muy bien."
+        },
+        {
+          "s": 0,
+          "text": "Ahora los domingos son largos. A veces pongo un disco y bailo solo en el living. Los vecinos creen que estoy loco, pero no me importa."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué preparaba Elsa los domingos?",
+          "options": [
+            "Ravioles",
+            "Asado",
+            "Empanadas"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué compraba Washington?",
+          "options": [
+            "Pan",
+            "El diario",
+            "Flores"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Adónde iban a las ocho?",
+          "options": [
+            "Al cine",
+            "Al teatro",
+            "A la milonga"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué hace Washington ahora algunos domingos?",
+          "options": [
+            "Va al cine",
+            "Baila solo en el living",
+            "Duerme todo el día"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Cómo eran los domingos en tu infancia?",
+          "model": "Comíamos en casa de mis abuelos."
+        },
+        {
+          "q": "¿Qué haces ahora los domingos?",
+          "model": "Descanso y veo películas."
+        },
+        {
+          "q": "¿Qué comida te recuerda a alguien de tu familia?",
+          "model": "Las empanadas me recuerdan a mi abuela."
+        }
+      ],
+      "gaps": "Elsa [bailaba] [mejor] que [yo], pero siempre [decía] que yo la llevaba muy bien.",
+      "glossary": [
+        {
+          "word": "milonga",
+          "meaning": "lugar donde se baila tango"
+        },
+        {
+          "word": "siesta",
+          "meaning": "sueño corto después de comer"
+        },
+        {
+          "word": "disco",
+          "meaning": "objeto redondo con música"
+        }
+      ]
+    },
+    {
+      "id": "cumple",
+      "title": "Plan B para la fiesta",
+      "place": "El 5.° D",
+      "context": "Antes de la fiesta, Jennifer habla con Pochoclo sobre lo que va a hacer.",
+      "speakers": [
+        {
+          "name": "Jennifer",
+          "country": "Colombia",
+          "voice": "es-CO-SalomeNeural"
+        },
+        {
+          "name": "Pochoclo",
+          "country": "República Dominicana",
+          "voice": "es-DO-EmilioNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Pochoclo, el año pasado contratamos un mago y fue fantástico. Este año quiero algo diferente."
+        },
+        {
+          "s": 1,
+          "text": "Tranquila, señora. Primero canto canciones, después hago figuras con globos y al final saco una paloma del sombrero."
+        },
+        {
+          "s": 0,
+          "text": "¿Una paloma de verdad? En el departamento no hay mucho espacio."
+        },
+        {
+          "s": 1,
+          "text": "Es una paloma pequeña. Se llama Copito."
+        },
+        {
+          "s": 0,
+          "text": "Bueno. Pero si los niños tienen miedo, ¿qué hacemos?"
+        },
+        {
+          "s": 1,
+          "text": "Nunca tienen miedo de mí. Llevo quince años en este trabajo."
+        },
+        {
+          "s": 0,
+          "text": "Perfecto. Los niños llegan a las cinco. ¿Usted puede subir por la escalera? El ascensor a veces se traba."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué contrataron el año pasado?",
+          "options": [
+            "Un payaso",
+            "Un mago",
+            "Un músico"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué hace Pochoclo al final del show?",
+          "options": [
+            "Saca una paloma del sombrero",
+            "Canta canciones",
+            "Hace figuras con globos"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cómo se llama la paloma?",
+          "options": [
+            "Merengue",
+            "Pochoclo",
+            "Copito"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Por qué Jennifer le pide subir por la escalera?",
+          "options": [
+            "Porque es más rápido",
+            "Porque el ascensor a veces se traba",
+            "Porque Ramón lo pide"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué tipo de fiesta te gusta organizar?",
+          "model": "Me gusta organizar cenas pequeñas en casa."
+        },
+        {
+          "q": "¿Qué hacías en los cumpleaños cuando eras pequeño o pequeña?",
+          "model": "Jugábamos y comíamos torta."
+        },
+        {
+          "q": "¿Tienes un plan B cuando organizas algo?",
+          "model": "A veces, pero normalmente improviso."
+        }
+      ],
+      "gaps": "Primero canto [canciones], después hago [figuras] con [globos] y al final saco una [paloma] del sombrero.",
+      "glossary": [
+        {
+          "word": "paloma",
+          "meaning": "pájaro blanco o gris"
+        },
+        {
+          "word": "se traba",
+          "meaning": "de «trabarse»: se queda parado"
+        },
+        {
+          "word": "globos",
+          "meaning": "bolas de colores con aire"
+        }
+      ]
+    },
+    {
+      "id": "ataud",
+      "title": "La mañana del ataúd",
+      "place": "El 5.° A",
+      "context": "Daisy le cuenta a Don Aurelio cómo subieron el ataúd por la mañana.",
+      "speakers": [
+        {
+          "name": "Daisy",
+          "country": "Honduras",
+          "voice": "es-HN-KarlaNeural"
+        },
+        {
+          "name": "Aurelio",
+          "country": "Cuba",
+          "voice": "es-CU-ManuelNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Don Aurelio, ¿usted vio a los dos señores de la empresa? Llegaron a las cinco, con el ataúd en una camioneta."
+        },
+        {
+          "s": 1,
+          "text": "Claro que los vi. Yo estaba en el balcón."
+        },
+        {
+          "s": 0,
+          "text": "Ramón no quería abrir la puerta. Dijo que era una broma."
+        },
+        {
+          "s": 1,
+          "text": "Y después lo subieron de pie en el ascensor. ¡El ascensor viejo! Todos dicen que no funciona, pero subió perfecto."
+        },
+        {
+          "s": 0,
+          "text": "Doña Elvira sacó una foto y la mandó al grupo del edificio. Ahora todos saben."
+        },
+        {
+          "s": 1,
+          "text": "Mejor. Esta noche en la asamblea voy a decir: si el ascensor subió mi ataúd, puede subir cualquier cosa."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿A qué hora llegó el ataúd?",
+          "options": [
+            "A las nueve",
+            "A las cinco",
+            "A las doce"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Dónde estaba Don Aurelio?",
+          "options": [
+            "En el balcón",
+            "En la cama",
+            "En la calle"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué pensó Ramón?",
+          "options": [
+            "Que era un regalo",
+            "Que era muy caro",
+            "Que era una broma"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué hizo Doña Elvira?",
+          "options": [
+            "Llamó a la policía",
+            "Sacó una foto y la mandó al grupo",
+            "No dijo nada"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Cuál fue la entrega más rara que recibiste?",
+          "model": "Una vez me llegó una planta enorme."
+        },
+        {
+          "q": "¿Qué cosas se saben rápido en tu barrio?",
+          "model": "Las noticias de los vecinos se saben muy rápido."
+        },
+        {
+          "q": "¿Te gusta el humor sobre la muerte?",
+          "model": "A veces, depende de la situación."
+        }
+      ],
+      "gaps": "Y después lo [subieron] de [pie] en el [ascensor]. ¡El ascensor [viejo]!",
+      "glossary": [
+        {
+          "word": "camioneta",
+          "meaning": "auto grande para transportar cosas"
+        },
+        {
+          "word": "broma",
+          "meaning": "algo que se dice o hace para reír"
+        },
+        {
+          "word": "cualquier cosa",
+          "meaning": "todo, sin importar qué"
+        }
+      ]
+    },
+    {
+      "id": "administrador",
+      "title": "Quince años de administrador",
+      "place": "El palier del sexto",
+      "context": "Barrionuevo habla con Ramón de su trabajo en el edificio.",
+      "speakers": [
+        {
+          "name": "Barrionuevo",
+          "country": "Guatemala",
+          "voice": "es-GT-AndresNeural"
+        },
+        {
+          "name": "Ramón",
+          "country": "Paraguay",
+          "voice": "es-PY-MarioNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Ramón, llevo quince años como administrador de este edificio. Nunca tuve un problema tan grande."
+        },
+        {
+          "s": 1,
+          "text": "Contador, el problema es que usted solo presentó un presupuesto. El de su cuñado."
+        },
+        {
+          "s": 0,
+          "text": "Mi cuñado trabaja muy bien. Instaló ascensores en muchos edificios de Palermo."
+        },
+        {
+          "s": 1,
+          "text": "Puede ser. Pero los otros dos presupuestos eran un treinta por ciento más baratos. Los vecinos tienen que ver los tres."
+        },
+        {
+          "s": 0,
+          "text": "Está bien. Pero no los encuentro."
+        },
+        {
+          "s": 1,
+          "text": "No se preocupe. Yo tengo copias. Las llevo a la asamblea esta noche."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cuántos años lleva Barrionuevo como administrador?",
+          "options": [
+            "Cinco",
+            "Quince",
+            "Treinta"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Dónde instaló ascensores el cuñado?",
+          "options": [
+            "En Palermo",
+            "En Almagro",
+            "En Caballito"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cuánto más baratos eran los otros presupuestos?",
+          "options": [
+            "Un diez por ciento",
+            "Un cincuenta por ciento",
+            "Un treinta por ciento"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué va a hacer Ramón?",
+          "options": [
+            "Llamar al cuñado",
+            "Llevar copias a la asamblea",
+            "Renunciar"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Cuántos años llevas en tu trabajo o tus estudios?",
+          "model": "Llevo tres años en mi trabajo."
+        },
+        {
+          "q": "¿Comparas precios antes de contratar un servicio?",
+          "model": "Sí, siempre pido varios precios."
+        },
+        {
+          "q": "¿Trabajarías con alguien de tu familia?",
+          "model": "Sí, pero con reglas claras."
+        }
+      ],
+      "gaps": "Pero los [otros] [dos] [presupuestos] eran un treinta por ciento más [baratos].",
+      "glossary": [
+        {
+          "word": "presupuesto",
+          "meaning": "precio de un trabajo antes de hacerlo"
+        },
+        {
+          "word": "instaló",
+          "meaning": "de «instalar»: puso un aparato en su lugar"
+        },
+        {
+          "word": "copias",
+          "meaning": "documentos iguales al original"
+        }
+      ]
+    },
+    {
+      "id": "herencia",
+      "title": "La tía Chela",
+      "place": "El 6.° B",
+      "context": "Rubén y Mirta recuerdan a su tía mientras miran fotos.",
+      "speakers": [
+        {
+          "name": "Rubén",
+          "country": "Panamá",
+          "voice": "es-PA-RobertoNeural"
+        },
+        {
+          "name": "Mirta",
+          "country": "Panamá",
+          "voice": "es-PA-MargaritaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Mira esta foto, Mirta. La tía Chela en Mar del Plata, en 1975. Era muy elegante."
+        },
+        {
+          "s": 1,
+          "text": "Siempre llevaba sombrero, incluso en la playa. Y siempre nos compraba helado de dulce de leche."
+        },
+        {
+          "s": 0,
+          "text": "¿Te acuerdas de los domingos? Ella tocaba el piano y yo cantaba."
+        },
+        {
+          "s": 1,
+          "text": "Yo no venía mucho los domingos. Estaba ocupada con los chicos y el trabajo."
+        },
+        {
+          "s": 0,
+          "text": "Ya lo sé. La tía lo entendía. Pero me preguntaba siempre por ti."
+        },
+        {
+          "s": 1,
+          "text": "¿De verdad? Nunca me lo dijo."
+        },
+        {
+          "s": 0,
+          "text": "Ella era así. Hablaba poco de las cosas importantes."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Dónde estaba la tía en la foto?",
+          "options": [
+            "En Córdoba",
+            "En Mar del Plata",
+            "En Buenos Aires"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué llevaba siempre la tía?",
+          "options": [
+            "Sombrero",
+            "Anteojos",
+            "Un bolso rojo"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué hacía Rubén los domingos?",
+          "options": [
+            "Tocaba el piano",
+            "Jugaba a las cartas",
+            "Cantaba"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Por qué Mirta no venía mucho?",
+          "options": [
+            "Vivía lejos",
+            "No le gustaba la tía",
+            "Estaba ocupada con los chicos y el trabajo"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué familiar mayor recuerdas con cariño?",
+          "model": "Recuerdo a mi abuelo, que contaba historias."
+        },
+        {
+          "q": "¿Adónde iba tu familia de vacaciones?",
+          "model": "Íbamos a la playa en verano."
+        },
+        {
+          "q": "¿Qué cosas importantes te cuesta decir?",
+          "model": "Me cuesta decir que estoy triste."
+        }
+      ],
+      "gaps": "Siempre [llevaba] [sombrero], incluso en la [playa]. Y siempre nos [compraba] helado de dulce de leche.",
+      "glossary": [
+        {
+          "word": "elegante",
+          "meaning": "que se viste muy bien"
+        },
+        {
+          "word": "ocupada",
+          "meaning": "con mucho trabajo o muchas tareas"
+        },
+        {
+          "word": "helado",
+          "meaning": "postre frío"
+        }
+      ]
+    },
+    {
+      "id": "misterio",
+      "title": "El primer táper",
+      "place": "El 7.° D",
+      "context": "El señor Ibarra le cuenta a Lili por qué nunca sale de su casa.",
+      "speakers": [
+        {
+          "name": "Ibarra",
+          "country": "El Salvador",
+          "voice": "es-SV-RodrigoNeural"
+        },
+        {
+          "name": "Lili",
+          "country": "El Salvador",
+          "voice": "es-SV-LorenaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Lili, hace once años me quedé sin trabajo. Era profesor de historia en un colegio."
+        },
+        {
+          "s": 1,
+          "text": "No lo sabía. Lo siento mucho."
+        },
+        {
+          "s": 0,
+          "text": "Después, mi mamá murió. Me quedé solo en casa y cada día era más difícil salir."
+        },
+        {
+          "s": 1,
+          "text": "¿Y el primer táper? ¿Se acuerda?"
+        },
+        {
+          "s": 0,
+          "text": "Claro. Era un pastel de papa. Usted lo dejó en mi puerta por error. Era para el séptimo C."
+        },
+        {
+          "s": 1,
+          "text": "¡Es verdad! Y usted me lo devolvió lavado, con una nota."
+        },
+        {
+          "s": 0,
+          "text": "Esa nota fue lo primero que salió de mi mano en meses. Gracias por no dejar de venir."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué trabajo tenía Ibarra?",
+          "options": [
+            "Profesor de historia",
+            "Médico",
+            "Contador"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué pasó después?",
+          "options": [
+            "Se mudó",
+            "Su mamá murió",
+            "Ganó un premio"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué había en el primer táper?",
+          "options": [
+            "Arroz con pollo",
+            "Ravioles",
+            "Pastel de papa"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Para quién era la comida?",
+          "options": [
+            "Para el séptimo C",
+            "Para Ibarra",
+            "Para Ramón"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué pequeño gesto te ayudó en un momento difícil?",
+          "model": "Un amigo me llamaba todos los días."
+        },
+        {
+          "q": "¿Te gusta cocinar para otras personas?",
+          "model": "Sí, me encanta cocinar para mi familia."
+        },
+        {
+          "q": "¿Qué materia te gustaba más en el colegio?",
+          "model": "Me gustaba mucho la historia."
+        }
+      ],
+      "gaps": "Era un [pastel] de [papa]. Usted lo [dejó] en mi [puerta] por error.",
+      "glossary": [
+        {
+          "word": "colegio",
+          "meaning": "escuela"
+        },
+        {
+          "word": "por error",
+          "meaning": "sin querer, equivocadamente"
+        },
+        {
+          "word": "nota",
+          "meaning": "mensaje corto escrito"
+        }
+      ]
+    },
+    {
+      "id": "obra",
+      "title": "El plan de Brian",
+      "place": "El 7.° A",
+      "context": "Brian le explica a Cirilo su gran idea para el departamento.",
+      "speakers": [
+        {
+          "name": "Brian",
+          "country": "Puerto Rico",
+          "voice": "es-PR-VictorNeural"
+        },
+        {
+          "name": "Cirilo",
+          "country": "Honduras",
+          "voice": "es-HN-CarlosNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Cirilo, el año pasado fui a Bali y conocí un hotel con un spa increíble. Desde ese día, quería uno en mi casa."
+        },
+        {
+          "s": 1,
+          "text": "Señor Brian, un spa en un séptimo piso es complicado. El agua pesa mucho."
+        },
+        {
+          "s": 0,
+          "text": "Por eso sacamos la cocina. Ahora tengo jacuzzi y pido comida por aplicación."
+        },
+        {
+          "s": 1,
+          "text": "El problema no es la cocina. Es la pared que rompimos ayer. Era una pared maestra."
+        },
+        {
+          "s": 0,
+          "text": "¿Y qué significa eso?"
+        },
+        {
+          "s": 1,
+          "text": "Que sostiene el edificio. Sin ella, la terraza puede caerse. Necesitamos un ingeniero hoy mismo."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Dónde vio Brian el spa?",
+          "options": [
+            "En un hotel de Bali",
+            "En un gimnasio",
+            "En la televisión"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué sacaron para poner el jacuzzi?",
+          "options": [
+            "El baño",
+            "La cocina",
+            "El dormitorio"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cómo come Brian ahora?",
+          "options": [
+            "Come en la casa de su madre",
+            "Cocina en el balcón",
+            "Pide comida por aplicación"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué puede pasar sin la pared?",
+          "options": [
+            "Puede entrar agua",
+            "La terraza puede caerse",
+            "El ascensor se para"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué viaje te dio una idea para tu casa?",
+          "model": "En Japón vi baños muy modernos."
+        },
+        {
+          "q": "¿Pides comida por aplicación?",
+          "model": "Sí, los viernes por la noche."
+        },
+        {
+          "q": "¿Qué cambiarías en tu casa si tuvieras dinero?",
+          "model": "Haría un balcón más grande."
+        }
+      ],
+      "gaps": "Que [sostiene] el [edificio]. Sin [ella], la [terraza] puede caerse.",
+      "glossary": [
+        {
+          "word": "spa",
+          "meaning": "lugar para relajarse con agua y masajes"
+        },
+        {
+          "word": "pesa",
+          "meaning": "de «pesar»: es pesado"
+        },
+        {
+          "word": "ingeniero",
+          "meaning": "profesional que calcula construcciones"
+        }
+      ]
+    },
+    {
+      "id": "sogas",
+      "title": "Los sábados de Hilda",
+      "place": "La terraza",
+      "context": "Hilda le explica a Kevin por qué sus sábanas son tan importantes.",
+      "speakers": [
+        {
+          "name": "Hilda",
+          "country": "Bolivia",
+          "voice": "es-BO-SofiaNeural"
+        },
+        {
+          "name": "Kevin",
+          "country": "Ecuador",
+          "voice": "es-EC-LuisNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Kevin, estas sábanas eran de mi madre. Las lavo a mano todos los sábados desde 1972."
+        },
+        {
+          "s": 1,
+          "text": "¿Desde 1972? Yo no había nacido."
+        },
+        {
+          "s": 0,
+          "text": "Mi madre lavaba la ropa en esta terraza. Yo la ayudaba cuando era niña. Para mí, esto no es solo ropa."
+        },
+        {
+          "s": 1,
+          "text": "Perdón, Hilda. No lo sabía. Movimos la parrilla al rincón del fondo. Ahora el humo va hacia la calle."
+        },
+        {
+          "s": 0,
+          "text": "Bueno. Gracias, muchacho."
+        },
+        {
+          "s": 1,
+          "text": "¿Quiere probar un choripán? Es mi receta, con chimichurri casero."
+        },
+        {
+          "s": 0,
+          "text": "Uno pequeño. Y después me ayudas a doblar las sábanas."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿De quién eran las sábanas?",
+          "options": [
+            "De la madre de Hilda",
+            "De Kevin",
+            "De la tía Chela"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Desde cuándo las lava Hilda?",
+          "options": [
+            "Desde 1982",
+            "Desde 1972",
+            "Desde el año pasado"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Adónde va ahora el humo?",
+          "options": [
+            "A las sábanas",
+            "Al ascensor",
+            "Hacia la calle"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué le pide Hilda a Kevin al final?",
+          "options": [
+            "Que limpie la parrilla",
+            "Que doble las sábanas con ella",
+            "Que se vaya"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué tarea de casa aprendiste de tus padres?",
+          "model": "Mi padre me enseñó a cocinar."
+        },
+        {
+          "q": "¿Tienes algún objeto de tus padres o abuelos?",
+          "model": "Tengo un reloj de mi abuelo."
+        },
+        {
+          "q": "¿Qué receta tuya es famosa entre tus amigos?",
+          "model": "Mi tortilla de papas."
+        }
+      ],
+      "gaps": "Mi madre [lavaba] la [ropa] en esta [terraza]. Yo la [ayudaba] cuando era niña.",
+      "glossary": [
+        {
+          "word": "a mano",
+          "meaning": "sin máquina"
+        },
+        {
+          "word": "parrilla",
+          "meaning": "lugar para cocinar carne con fuego"
+        },
+        {
+          "word": "casero",
+          "meaning": "hecho en casa"
+        }
+      ]
+    },
+    {
+      "id": "asamblea",
+      "title": "Cuando termina la asamblea",
+      "place": "La terraza, a medianoche",
+      "context": "Después de la votación, Elvira, Ramón y Barrionuevo comentan la noche.",
+      "speakers": [
+        {
+          "name": "Elvira",
+          "country": "España",
+          "voice": "es-ES-ElviraNeural"
+        },
+        {
+          "name": "Ramón",
+          "country": "Paraguay",
+          "voice": "es-PY-MarioNeural"
+        },
+        {
+          "name": "Barrionuevo",
+          "country": "Guatemala",
+          "voice": "es-GT-AndresNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "¡Qué noche! Hace veinte años que no veíamos una asamblea tan llena."
+        },
+        {
+          "s": 1,
+          "text": "Vinieron todos. Hasta el señor Ibarra mandó su carta poder."
+        },
+        {
+          "s": 2,
+          "text": "Fue una asamblea muy democrática. Aunque yo esperaba otro resultado."
+        },
+        {
+          "s": 0,
+          "text": "Contador, la próxima vez traiga tres presupuestos desde el principio. Así ganamos tiempo."
+        },
+        {
+          "s": 2,
+          "text": "Tiene razón, señora. Ya tengo la lección aprendida."
+        },
+        {
+          "s": 1,
+          "text": "Bueno, ahora a comer. Kevin hizo choripanes para cuarenta personas y quedan muchos. Y Don Washington trajo su disco de tango para bailar un rato."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cuánto tiempo hacía que no veían una asamblea tan llena?",
+          "options": [
+            "Diez años",
+            "Veinte años",
+            "Cinco años"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué mandó el señor Ibarra?",
+          "options": [
+            "Una carta poder",
+            "Un pastel",
+            "Un mensaje de voz"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué esperaba Barrionuevo?",
+          "options": [
+            "Más comida",
+            "Menos gente",
+            "Otro resultado"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué le pide Elvira al contador?",
+          "options": [
+            "Que renuncie",
+            "Que traiga tres presupuestos desde el principio",
+            "Que pague la comida"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Cuál fue la reunión más larga en la que estuviste?",
+          "model": "Una reunión de trabajo de cuatro horas."
+        },
+        {
+          "q": "¿Qué lección aprendiste este año?",
+          "model": "Ahora sé pedir ayuda."
+        },
+        {
+          "q": "¿Qué comida te gusta compartir con un grupo?",
+          "model": "Me gusta compartir pizza."
+        }
+      ],
+      "gaps": "Contador, la [próxima] [vez] traiga [tres] [presupuestos] desde el principio.",
+      "glossary": [
+        {
+          "word": "llena",
+          "meaning": "con mucha gente"
+        },
+        {
+          "word": "carta poder",
+          "meaning": "papel para votar en lugar de otra persona"
+        },
+        {
+          "word": "lección",
+          "meaning": "algo que aprendes"
+        }
+      ]
+    }
+  ]
+}

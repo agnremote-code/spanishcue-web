@@ -21,6 +21,33 @@ _None._
 
 ## Published
 
+## 2026-10-30 — «Hospital San Casi Vivo»: the 3D world frees the GPU on unmount (repair)
+- URL(s): https://spanishcue.com/hospital-san-casi-vivo (PRO; anonymous users → /acceso).
+- Level(s) / objectives: unchanged. No lesson content changed.
+- PR / merged SHA / production deploy run: PR #293 → `285c2790cb417bfa755edec125c393875926bf6f`; CI + Auto Merge 40991519054, Deploy Staging 40992840393, Deploy Production 40993143516, all successful.
+- Production smoke evidence: the production workflow's `scripts/production-smoke.mjs` run against https://spanishcue.com (job 123860031501, 2026-10-30T02:44Z) returned `"passed": true`, including `/hospital-san-casi-vivo` 302 and `/resources/spanish-conversation-activity-a0-c2-hospital-san-casi-vivo` 200. The lesson-reports smoke passed too, and the rollback was skipped.
+- Concept file / LQG review file: [docs/audits/hospital-san-casi-vivo-repair-gpu-20261030.md](../audits/hospital-san-casi-vivo-repair-gpu-20261030.md).
+- Built by / reviewed by: facilitator / Alejandro (code review APPROVE).
+- Known limitations: client-side fix; the before/after evidence comes from the SwiftShader browser check, not a real device.
+
+## 2026-10-28 — «La feria de Villaluz»: the 3D world frees the GPU on unmount (repair)
+- URL(s): https://spanishcue.com/la-feria-de-villaluz (PRO; anonymous users → /acceso).
+- Level(s) / objectives: A2, unchanged. No lesson content changed.
+- PR / merged SHA / production deploy run: PR #287 → `bea20888c9e9cafaaf80beb98746667f4957a544`; CI + Auto Merge 40622898546 (attempt 2), Deploy Staging 40625198904, Deploy Production 40625458992, all successful (Worker version ac61fd17-9ab5-4855-8feb-cb44f7233f4e).
+- Production smoke evidence: the production workflow's `scripts/production-smoke.mjs` run against https://spanishcue.com (job 122609179330, 2026-10-28T03:16Z) returned `"passed": true`, including `/la-feria-de-villaluz` 302, `/audio/escucha-3d/feria-a2-baile.mp3` 403 and `/resources/spanish-conversation-activity-a2-la-feria-de-villaluz` 200. The rollback was skipped.
+- Concept file / LQG review file: [docs/audits/la-feria-de-villaluz-repair-gpu-20261028.md](../audits/la-feria-de-villaluz-repair-gpu-20261028.md).
+- Built by / reviewed by: facilitator / Alejandro (code review APPROVE, delta APPROVE).
+- Known limitations: the fix is client-side, so production smoke can show only that the release deployed and the world still gates and serves. The before/after evidence comes from the SwiftShader browser check, not from a real device.
+
+## 2026-10-27 — 72 retired /resources URLs 308-redirect to their lesson page (SEO/page)
+- URL(s): 72 old `https://spanishcue.com/resources/...` slugs listed in `app/resource-legacy-slugs.ts`. Example: `/resources/spanish-grammar-lesson-a1-a2-ser-estar-y-hay-describir-personas-y-lugares` → `/resources/spanish-grammar-lesson-a1-ser-estar-y-hay-describir-personas-y-lugares`.
+- Level(s) / objectives: n/a. This is technical SEO: these URLs had been listed in the sitemap and were returning 404 or duplicate pages.
+- PR / merged SHA / production deploy run: PR #284 → `c8975523e8450755bf0f5c39eb5c2d4c71a46f7b`; CI + Auto Merge 40438086546, Deploy Staging 40439807119, Deploy Production 40440088211, all successful (Worker version b3abc59f-a34e-4394-a2d1-9f9f201deac0).
+- Production smoke evidence: the production workflow's `scripts/production-smoke.mjs` run against https://spanishcue.com (job 121978101510, 2026-10-27T02:46Z) returned `"passed": true`. The example path returned `status: 308`, and the script asserted a same-origin `Location` pointing at the current lesson page. The other 71 slugs are covered by the Worker-rendered test and the guard test, not by production smoke.
+- Concept file / LQG review file: n/a (no lesson content).
+- Built by / reviewed by: facilitator (audit by Alejandro) / Sofia (APPROVE).
+- Known limitations: `?level=` is not carried through the redirect. Retired id 222 stays a 404.
+
 ## 2026-10-21 — LES-001 «La feria de Villaluz», A2 (new world)
 - URL(s):
   - https://spanishcue.com/la-feria-de-villaluz (PRO; anonymous users → /acceso);

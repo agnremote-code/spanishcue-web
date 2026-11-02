@@ -8,6 +8,7 @@ export const ESPANA: CountryInfo = {
   id: 'espana',
   lessonId: 229,
   name: { es: 'España', en: 'Spain' },
+  regionWord: { one: 'una comunidad', many: 'comunidades' },
   welcome: { es: 'BIENVENIDO A ESPAÑA', en: 'WELCOME TO SPAIN' },
   regions: [
     {

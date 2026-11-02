@@ -1,0 +1,743 @@
+{
+  "game": "masalla",
+  "level": "C1",
+  "items": [
+    {
+      "id": "portal",
+      "title": "Conferencia de bienvenida",
+      "place": "Las Puertas de Perla · el anfiteatro",
+      "context": "En un anfiteatro de nubes, una veterana del Cielo da la charla de bienvenida a las almas recién llegadas.",
+      "speakers": [
+        {
+          "name": "Catalina",
+          "country": "Chile",
+          "voice": "es-CL-CatalinaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Bienvenidos. Sé que muchos esperaban coros, arpas y una luz cegadora. Lamento decepcionarlos: lo primero que van a notar aquí es el silencio."
+        },
+        {
+          "s": 0,
+          "text": "Durante los próximos días, casi todos ustedes van a sentir una especie de síndrome de abstinencia. No de una sustancia, sino de la urgencia. Llevan décadas viviendo con la sensación de que algo debía resolverse ya: un correo, una deuda, una discusión pendiente."
+        },
+        {
+          "s": 0,
+          "text": "Aquí esa urgencia no tiene dónde apoyarse, y al principio eso desconcierta. Algunos se inventan tareas; otros se dedican a revisar obsesivamente lo que dejaron abajo."
+        },
+        {
+          "s": 0,
+          "text": "Mi consejo, después de mucho tiempo aquí, es que no se resistan. El Cielo no es un premio por haber sido buenos, sino el lugar donde por fin pueden atender a lo que siempre postergaban: escuchar a alguien sin preparar la respuesta, mirar algo sin pensar en fotografiarlo."
+        },
+        {
+          "s": 0,
+          "text": "Y una advertencia: no comparen. Cada uno encuentra aquí exactamente lo que es capaz de recibir. Si su Cielo les parece pequeño, quizá sea porque todavía no han aprendido a mirar."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué es lo primero que notan las almas en el Cielo?",
+          "options": [
+            "La música",
+            "El silencio",
+            "La luz"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿De qué tienen «abstinencia» los recién llegados?",
+          "options": [
+            "De la urgencia",
+            "Del café",
+            "De sus familias"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Según Catalina, ¿qué es el Cielo?",
+          "options": [
+            "Un premio por ser buenos",
+            "Un lugar de descanso eterno",
+            "El lugar donde atender lo que siempre postergaban"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué significa que el Cielo de alguien parezca pequeño?",
+          "options": [
+            "Que se portó mal",
+            "Que todavía no ha aprendido a mirar",
+            "Que llegó tarde"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué urgencia te costaría más soltar si de repente no existiera?",
+          "model": "La del trabajo: responder mensajes al instante se ha vuelto casi un reflejo."
+        },
+        {
+          "q": "¿Qué has postergado durante años que te gustaría atender de verdad?",
+          "model": "Aprender a tocar el piano, que siempre dejo para cuando tenga tiempo."
+        },
+        {
+          "q": "¿Crees que la felicidad depende de lo que recibimos o de nuestra capacidad de recibir?",
+          "model": "Más de la capacidad, porque he visto a gente con poco ser muy feliz."
+        }
+      ],
+      "gaps": "Aquí esa [urgencia] no tiene dónde [apoyarse], y al principio eso [desconcierta]. Algunos se inventan [tareas];",
+      "glossary": [
+        {
+          "word": "decepcionarlos",
+          "meaning": "no darles lo que esperaban"
+        },
+        {
+          "word": "síndrome de abstinencia",
+          "meaning": "malestar por dejar algo a lo que uno está acostumbrado"
+        },
+        {
+          "word": "postergaban",
+          "meaning": "dejaban para más tarde"
+        },
+        {
+          "word": "obsesivamente",
+          "meaning": "sin poder dejar de hacerlo"
+        }
+      ]
+    },
+    {
+      "id": "archivo",
+      "title": "Debate en el Archivo",
+      "place": "El Archivo de las Vidas · la sala de lectura",
+      "context": "En la sala de lectura del Archivo, dos almas discuten si conviene leer el libro de la propia vida.",
+      "speakers": [
+        {
+          "name": "Roberto",
+          "country": "Panamá",
+          "voice": "es-PA-RobertoNeural"
+        },
+        {
+          "name": "Karina",
+          "country": "Puerto Rico",
+          "voice": "es-PR-KarinaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Yo lo leí entero en una semana. Fue como ver mi vida en una pantalla gigante, sin poder apartar la vista."
+        },
+        {
+          "s": 1,
+          "text": "¿Y te sirvió de algo?"
+        },
+        {
+          "s": 0,
+          "text": "Me sirvió para desmontar el relato que me había contado a mí mismo. Siempre me consideré una víctima de mi padre. El libro cuenta otra cosa: que yo también fui cruel, con mis propios hijos, y que repetía sus frases sin darme cuenta."
+        },
+        {
+          "s": 1,
+          "text": "Precisamente por eso no quiero leer el mío. Tengo una versión de mi vida con la que puedo convivir. ¿Para qué arriesgarme a destruirla?"
+        },
+        {
+          "s": 0,
+          "text": "Porque esa versión es cómoda, pero falsa. Y lo falso pesa, aunque no lo notes."
+        },
+        {
+          "s": 1,
+          "text": "Hablas como si la verdad siempre liberara. A veces solo hiere. Mi madre supo poco antes de morir que mi padre había tenido otra familia durante veinte años. No la liberó; le amargó el final."
+        },
+        {
+          "s": 0,
+          "text": "Es un argumento serio. Pero quizá lo que le amargó no fue saberlo, sino no tener tiempo para hacer algo con ello. Aquí, en cambio, tiempo es lo único que sobra."
+        },
+        {
+          "s": 1,
+          "text": "Puede ser. Déjame pensarlo. Al menos un siglo."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cuánto tardó Roberto en leer su libro?",
+          "options": [
+            "Un día",
+            "Un año",
+            "Una semana"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué descubrió Roberto al leerlo?",
+          "options": [
+            "Que también fue cruel con sus hijos",
+            "Que su padre lo quería",
+            "Que tenía un hermano"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Por qué Karina no quiere leer su libro?",
+          "options": [
+            "Porque no sabe leer",
+            "Para no destruir una versión de su vida con la que puede convivir",
+            "Porque está prohibido"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Según Roberto, ¿qué le amargó el final a la madre de Karina?",
+          "options": [
+            "El divorcio",
+            "La enfermedad",
+            "No tener tiempo para hacer algo con la verdad"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Leerías el libro de tu vida sabiendo que podría desmontar el relato que tienes de ti? ¿Por qué?",
+          "model": "Creo que sí, aunque me da miedo descubrir que fui injusta con personas que quiero."
+        },
+        {
+          "q": "¿La verdad siempre libera, o a veces solo hiere?",
+          "model": "Creo que libera a largo plazo, pero en el momento puede ser devastadora."
+        },
+        {
+          "q": "¿Qué frases de tus padres te descubres repitiendo?",
+          "model": "«Ya te lo dije», que odiaba de niña y ahora digo constantemente."
+        }
+      ],
+      "gaps": "Porque esa versión es [cómoda], pero [falsa]. Y lo falso [pesa], aunque no lo [notes].",
+      "glossary": [
+        {
+          "word": "apartar la vista",
+          "meaning": "dejar de mirar"
+        },
+        {
+          "word": "desmontar",
+          "meaning": "deshacer algo pieza por pieza"
+        },
+        {
+          "word": "relato",
+          "meaning": "historia que se cuenta"
+        },
+        {
+          "word": "le amargó",
+          "meaning": "le quitó la alegría"
+        }
+      ]
+    },
+    {
+      "id": "cumbre",
+      "title": "Un ángel en el mirador",
+      "place": "La Cumbre · el mirador",
+      "context": "En el mirador desde el que se ve la Tierra, el ángel Azael explica a una mujer por qué no conviene mirar demasiado.",
+      "speakers": [
+        {
+          "name": "Azael",
+          "country": "Costa Rica",
+          "voice": "es-CR-JuanNeural"
+        },
+        {
+          "name": "Teresa",
+          "country": "Guinea Ecuatorial",
+          "voice": "es-GQ-TeresaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Llevo tres días sin moverme de aquí. Mi marido ha vuelto a casa del funeral y se ha sentado en mi sillón. No ha encendido ni la luz."
+        },
+        {
+          "s": 0,
+          "text": "Lo sé. Es lo que más cuesta del mirador: ver el dolor que uno ha dejado sin poder tocarlo."
+        },
+        {
+          "s": 1,
+          "text": "¿Y por qué lo permiten? Sería más compasivo cerrar esta ventana."
+        },
+        {
+          "s": 0,
+          "text": "Lo hemos debatido muchas veces. Pero quien deja de mirar demasiado pronto suele idealizar la vida que tuvo, o idealizar el duelo de los demás. Y ambas cosas son mentiras."
+        },
+        {
+          "s": 1,
+          "text": "¿Qué quiere decir?"
+        },
+        {
+          "s": 0,
+          "text": "Que dentro de unos meses su marido volverá a reírse. Un día cualquiera, con una tontería de la tele. Y usted tendrá que decidir si eso le parece una traición o un alivio."
+        },
+        {
+          "s": 1,
+          "text": "Ahora mismo me parece imposible que se ría."
+        },
+        {
+          "s": 0,
+          "text": "Lo sé. Por eso le recomiendo que se aparte un tiempo del borde. No para olvidarlo, sino para no confundir su amor con la necesidad de que él siga sufriendo."
+        },
+        {
+          "s": 1,
+          "text": "Qué dura es esa frase. Y qué verdadera."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué hace el marido de Teresa al volver del funeral?",
+          "options": [
+            "Se sienta en el sillón sin encender la luz",
+            "Llama a sus hijos",
+            "Sale a caminar"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué propone Teresa?",
+          "options": [
+            "Bajar a la Tierra",
+            "Cerrar la ventana del mirador",
+            "Hablar con su marido"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Según Azael, ¿qué pasa si alguien deja de mirar demasiado pronto?",
+          "options": [
+            "Olvida su vida",
+            "Se vuelve ángel",
+            "Suele idealizar su vida o el duelo de los demás"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué no debe confundir Teresa, según Azael?",
+          "options": [
+            "El cielo con el infierno",
+            "Su amor con la necesidad de que él siga sufriendo",
+            "El pasado con el futuro"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "Si alguien que amas volviera a reír pronto después de perderte, ¿lo vivirías como traición o como alivio?",
+          "model": "Creo que al principio me dolería un poco, pero en el fondo sentiría alivio."
+        },
+        {
+          "q": "¿Por qué crees que a veces confundimos el amor con la necesidad de ser imprescindibles?",
+          "model": "Porque sentirnos necesarios nos da valor, y tememos que sin eso no nos quieran."
+        },
+        {
+          "q": "¿Es sano mirar mucho hacia atrás después de una pérdida?",
+          "model": "Durante un tiempo sí, pero llega un punto en que hay que apartarse del borde."
+        }
+      ],
+      "gaps": "Por eso le recomiendo que se [aparte] un tiempo del [borde]. No para [olvidarlo], sino para no [confundir] su amor con la necesidad de que él siga sufriendo.",
+      "glossary": [
+        {
+          "word": "compasivo",
+          "meaning": "que siente pena por el sufrimiento ajeno y quiere aliviarlo"
+        },
+        {
+          "word": "idealizar",
+          "meaning": "ver algo mejor de lo que es"
+        },
+        {
+          "word": "duelo",
+          "meaning": "dolor y proceso tras la muerte de alguien"
+        },
+        {
+          "word": "traición",
+          "meaning": "falta de lealtad"
+        }
+      ]
+    },
+    {
+      "id": "antesala",
+      "title": "Terapia de grupo en el Infierno",
+      "place": "La Antesala · la sala de espera",
+      "context": "En la sala de espera, mientras avanzan las colas, un grupo de almas improvisa una especie de terapia. Habla un dominicano que no cree estar donde debe.",
+      "speakers": [
+        {
+          "name": "Emilio",
+          "country": "República Dominicana",
+          "voice": "es-DO-EmilioNeural"
+        },
+        {
+          "name": "Marta",
+          "country": "Guatemala",
+          "voice": "es-GT-MartaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Bueno, ya que estamos aquí, empiezo yo. Me llamo Emilio y creo que estoy en el Infierno por error."
+        },
+        {
+          "s": 1,
+          "text": "Todos decimos eso la primera semana. Sigue."
+        },
+        {
+          "s": 0,
+          "text": "Fui un buen padre, un vecino servicial. Nunca levanté la voz. Mi problema, si acaso, es que nunca dije que no. A nada. A nadie."
+        },
+        {
+          "s": 1,
+          "text": "¿Y eso te parece una virtud?"
+        },
+        {
+          "s": 0,
+          "text": "Me lo parecía. Ahora, en esta sala de espejos, me veo con cara de resentimiento. Resulta que cada sí que dije a regañadientes se me quedó dentro como una piedra."
+        },
+        {
+          "s": 1,
+          "text": "A mí me pasa lo contrario. Dije tantos noes que me quedé sola. Yo lo llamaba proteger mis límites. Visto desde aquí, era más bien miedo a necesitar a alguien."
+        },
+        {
+          "s": 0,
+          "text": "Así que tú te encerraste con un no y yo me fui perdiendo con un sí."
+        },
+        {
+          "s": 1,
+          "text": "Eso es. Lo curioso es que los dos acabamos en la misma cola, esperando que alguien nos diga quiénes somos."
+        },
+        {
+          "s": 0,
+          "text": "Quizá por eso nadie atiende la ventanilla. Para que lo averigüemos nosotros, sin formularios ni sellos, solo hablando como ahora."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué piensa Emilio de su presencia en el Infierno?",
+          "options": [
+            "Que la merece",
+            "Que es un error",
+            "Que es temporal"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cuál era el problema de Emilio?",
+          "options": [
+            "Nunca decía que no",
+            "Gritaba mucho",
+            "Mentía a su familia"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué le pasó a Marta por decir tantos noes?",
+          "options": [
+            "Se hizo rica",
+            "Se enfermó",
+            "Se quedó sola"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Por qué cree Emilio que nadie atiende la ventanilla?",
+          "options": [
+            "Porque es domingo",
+            "Para que lo averigüen ellos mismos",
+            "Porque los demonios descansan"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Te cuesta más decir que sí o decir que no? ¿Qué consecuencias ha tenido?",
+          "model": "Me cuesta decir que no, y eso me ha llevado a aceptar trabajos que no quería."
+        },
+        {
+          "q": "¿Dónde está la frontera entre proteger tus límites y tener miedo a necesitar a alguien?",
+          "model": "Creo que la frontera está en si el límite te deja respirar o te aísla."
+        },
+        {
+          "q": "¿Qué «sí a regañadientes» se te ha quedado dentro como una piedra?",
+          "model": "Aceptar organizar cada año la cena familiar, que me agota."
+        }
+      ],
+      "gaps": "Resulta que cada [sí] que dije [a regañadientes] se me quedó [dentro] como una [piedra].",
+      "glossary": [
+        {
+          "word": "servicial",
+          "meaning": "que siempre ayuda a los demás"
+        },
+        {
+          "word": "resentimiento",
+          "meaning": "enfado guardado durante mucho tiempo"
+        },
+        {
+          "word": "a regañadientes",
+          "meaning": "sin ganas, de mala gana"
+        },
+        {
+          "word": "averigüemos",
+          "meaning": "descubramos"
+        }
+      ]
+    },
+    {
+      "id": "juicio",
+      "title": "El fiscal de las pequeñas mentiras",
+      "place": "El Juicio · el tribunal",
+      "context": "Asmodeo, el fiscal del tribunal de las pequeñas mentiras, pronuncia su alegato final contra un hombre acusado de «vivir en piloto automático».",
+      "speakers": [
+        {
+          "name": "Asmodeo",
+          "country": "México",
+          "voice": "es-MX-JorgeNeural"
+        },
+        {
+          "name": "Carlos",
+          "country": "Honduras",
+          "voice": "es-HN-CarlosNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Señorías, el acusado no robó, no golpeó a nadie, no traicionó a ningún amigo. Su delito es más sutil: pasó por la vida sin estar del todo en ella."
+        },
+        {
+          "s": 0,
+          "text": "Durante cuarenta y tres años respondió «bien, gracias» sin escuchar la pregunta. Asintió en reuniones que no entendía. Dijo «te quiero» al colgar el teléfono con la misma entonación con que decía «hasta luego»."
+        },
+        {
+          "s": 1,
+          "text": "Objeción. Eso no es mentir. Es la vida normal de cualquiera."
+        },
+        {
+          "s": 0,
+          "text": "Exactamente, y por eso estamos aquí. Las pequeñas mentiras no son las que se dicen a los demás, sino las que nos permiten no darnos cuenta de nada. Cada «bien, gracias» automático es una puerta que se cierra sin ruido."
+        },
+        {
+          "s": 1,
+          "text": "¿Y qué quería que hiciera? ¿Analizar cada frase? Habría sido agotador."
+        },
+        {
+          "s": 0,
+          "text": "No le pido que analizara cada frase. Le pido que recuerde una sola vez en que dijera «te quiero» y lo sintiera de verdad mientras lo decía."
+        },
+        {
+          "s": 1,
+          "text": "… Ahora mismo no se me ocurre ninguna."
+        },
+        {
+          "s": 0,
+          "text": "No hay más preguntas, señorías. El acusado acaba de dictar su propia sentencia. Y lo bueno es que, a diferencia de las sentencias de la Tierra, esta se puede revocar en cualquier momento."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿De qué acusan a Carlos?",
+          "options": [
+            "De robar",
+            "De vivir en piloto automático",
+            "De traicionar a un amigo"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cómo decía Carlos «te quiero»?",
+          "options": [
+            "Con la misma entonación que «hasta luego»",
+            "Gritando",
+            "Llorando"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Según Asmodeo, ¿qué son las pequeñas mentiras?",
+          "options": [
+            "Las que se dicen a los niños",
+            "Las que se dicen para ganar dinero",
+            "Las que nos permiten no darnos cuenta de nada"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué tiene de especial esta sentencia?",
+          "options": [
+            "Es eterna",
+            "Es secreta",
+            "Se puede revocar en cualquier momento"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿En qué momentos del día vives en «piloto automático»?",
+          "model": "Sobre todo por la mañana, en el trayecto al trabajo, no recuerdo nada del camino."
+        },
+        {
+          "q": "¿Cuándo fue la última vez que dijiste «te quiero» sintiéndolo de verdad?",
+          "model": "Hace poco, cuando mi hija se quedó dormida en el coche."
+        },
+        {
+          "q": "¿Es posible vivir siempre con plena atención, o sería agotador?",
+          "model": "Creo que sería agotador; el automático también es una forma de descansar."
+        }
+      ],
+      "gaps": "Cada «bien, gracias» [automático] es una [puerta] que se [cierra] sin [ruido].",
+      "glossary": [
+        {
+          "word": "señorías",
+          "meaning": "forma de dirigirse a los jueces"
+        },
+        {
+          "word": "sutil",
+          "meaning": "difícil de notar"
+        },
+        {
+          "word": "asintió",
+          "meaning": "dijo que sí con la cabeza"
+        },
+        {
+          "word": "revocar",
+          "meaning": "anular una decisión"
+        }
+      ]
+    },
+    {
+      "id": "abismo",
+      "title": "Diálogo ante el trono",
+      "place": "El Abismo · el trono vacío",
+      "context": "Ante el trono vacío que corona el Abismo, Lucero conversa con una filósofa uruguaya que lleva siglos estudiando el lugar.",
+      "speakers": [
+        {
+          "name": "Lucero",
+          "country": "Venezuela",
+          "voice": "es-VE-PaolaNeural"
+        },
+        {
+          "name": "Valentina",
+          "country": "Uruguay",
+          "voice": "es-UY-ValentinaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Hay algo que no consigo resolver. Si el trono está vacío, ¿por qué todo el Abismo está orientado hacia él? Las jaulas, los caminos, hasta las grietas del suelo apuntan aquí."
+        },
+        {
+          "s": 0,
+          "text": "Porque las almas lo necesitan así. Cada una llega convencida de que alguien la juzga desde lo alto. Si no encontraran un trono, se inventarían otro."
+        },
+        {
+          "s": 1,
+          "text": "Entonces el trono es una proyección colectiva."
+        },
+        {
+          "s": 0,
+          "text": "Es algo más incómodo. Es la prueba de que la mayoría prefiere un juez cruel a la libertad absoluta. Con un juez, al menos, uno sabe a qué atenerse."
+        },
+        {
+          "s": 1,
+          "text": "Eso recuerda a lo que decían algunos pensadores: que estamos condenados a ser libres."
+        },
+        {
+          "s": 0,
+          "text": "Lo dijeron mejor que yo. Pero aquí abajo se ve en carne viva. Hay almas que pasan siglos arrodilladas ante este trono, pidiendo perdón a nadie."
+        },
+        {
+          "s": 1,
+          "text": "¿Y tú no intentas sacarlas de su error?"
+        },
+        {
+          "s": 0,
+          "text": "Al principio lo intentaba. Les decía: «No hay nadie, levántense». Se enfadaban conmigo. Algunas incluso me acusaban de crueldad. Descubrir que nadie te juzga puede ser más aterrador que el peor castigo."
+        },
+        {
+          "s": 1,
+          "text": "Porque entonces la responsabilidad es solo tuya."
+        },
+        {
+          "s": 0,
+          "text": "Exacto. Y eso, querida, es el verdadero fuego de este lugar."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué no consigue entender Valentina?",
+          "options": [
+            "Por qué todo el Abismo apunta a un trono vacío",
+            "Quién construyó las jaulas",
+            "Por qué hace calor"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Según Lucero, ¿qué prefiere la mayoría de las almas?",
+          "options": [
+            "La libertad absoluta",
+            "Volver a la Tierra",
+            "Un juez cruel"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué hacen algunas almas ante el trono?",
+          "options": [
+            "Cantan",
+            "Piden perdón a nadie",
+            "Duermen"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cómo reaccionaban las almas cuando Lucero les decía que no había nadie?",
+          "options": [
+            "Se enfadaban con ella",
+            "Le daban las gracias",
+            "Se iban al Cielo"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Por qué crees que alguien preferiría un juez cruel a la libertad absoluta?",
+          "model": "Porque la libertad total te obliga a decidir qué está bien sin nadie que te lo confirme."
+        },
+        {
+          "q": "¿Ante qué «trono vacío» te has arrodillado tú: la opinión de quién?",
+          "model": "Ante la opinión de mi padre, aunque él ni siquiera esperaba lo que yo creía."
+        },
+        {
+          "q": "¿Te aterra o te alivia pensar que nadie te juzga desde arriba?",
+          "model": "Me alivia en teoría, pero en la práctica creo que me pondría muy nerviosa."
+        }
+      ],
+      "gaps": "Hay almas que pasan [siglos] [arrodilladas] ante este trono, pidiendo [perdón] a [nadie].",
+      "glossary": [
+        {
+          "word": "proyección",
+          "meaning": "imagen que la mente pone fuera de sí misma"
+        },
+        {
+          "word": "atenerse",
+          "meaning": "saber a qué reglas ajustarse"
+        },
+        {
+          "word": "en carne viva",
+          "meaning": "de forma muy directa y dolorosa"
+        },
+        {
+          "word": "aterrador",
+          "meaning": "que da muchísimo miedo"
+        }
+      ]
+    }
+  ]
+}

@@ -24,6 +24,8 @@ export type Fair = {
   focus: (circleId: string | null) => void;
   /** Everyone standing in the fair: the mascot bumps into them, never through. */
   bodies: () => Body[];
+  /** Unmount: frees what the scene traverse cannot reach (cached host bakes, label textures). */
+  dispose: () => void;
 };
 export type Body = { key: string; x: number; z: number; body?: string; seed: number };
 
@@ -399,10 +401,26 @@ export function buildFair(scene: THREE.Scene, opts: { low: boolean; shadows: boo
   }
   animate(0, 0, 0, 0);
 
+  // Unmount (code review B1 of El ascensor del cerro, the same leak here): the
+  // Busca labels' canvas textures and the cached host bakes not attached to
+  // the scene are invisible to World3D's traverse.
+  function dispose() {
+    clearBusca();
+    for (const group of hostBakes.values()) group.traverse(o => {
+      const m = o as THREE.Mesh;
+      if (!m.isMesh) return;
+      m.geometry.dispose();
+      const mat = m.material as THREE.Material | THREE.Material[];
+      if (Array.isArray(mat)) mat.forEach(x => x.dispose()); else mat.dispose();
+    });
+    hostBakes.clear();
+    hostBake = null;
+  }
+
   const bodies = (): Body[] => [
     ...npcs.map((n, i) => ({ key: `host-${n.id}`, x: n.x, z: n.z, body: HOSTS[n.id]?.body, seed: i * 7 + 3 })),
     ...crowdPeople.map((c, i) => ({ key: `crowd-${i}`, x: c.x, z: c.z, body: c.body, seed: c.seed })),
     ...candidates.map((c, i) => ({ key: `busca-${c.id}`, x: c.x, z: c.z, body: c.body, seed: i * 11 + 5 })),
   ];
-  return { spots, npcs, showBusca, reveal, animate, focus, bodies, people: () => npcs.length + crowdPeople.length + candidates.length };
+  return { spots, npcs, showBusca, reveal, animate, focus, bodies, dispose, people: () => npcs.length + crowdPeople.length + candidates.length };
 }

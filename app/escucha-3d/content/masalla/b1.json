@@ -1,0 +1,729 @@
+{
+  "game": "masalla",
+  "level": "B1",
+  "items": [
+    {
+      "id": "portal",
+      "title": "El expediente de Gabriel",
+      "place": "Las Puertas de Perla · el mostrador",
+      "context": "Gabriel, el portero, revisa el expediente de un hombre recién llegado. El hombre esperaba otra cosa.",
+      "speakers": [
+        {
+          "name": "Gabriel",
+          "country": "Colombia",
+          "voice": "es-CO-GonzaloNeural"
+        },
+        {
+          "name": "Emilio",
+          "country": "República Dominicana",
+          "voice": "es-DO-EmilioNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Perdone, creo que hay un error. Yo pensaba que aquí se miraban las cosas importantes: mi empresa, mis premios, los edificios que levanté."
+        },
+        {
+          "s": 0,
+          "text": "Aquí está todo eso, en la página tres. Pero el expediente empieza por otra cosa."
+        },
+        {
+          "s": 1,
+          "text": "¿Por qué?"
+        },
+        {
+          "s": 0,
+          "text": "Empieza por el día en que su vecino perdió el trabajo y usted le dejó su coche durante un mes sin pedir nada a cambio."
+        },
+        {
+          "s": 1,
+          "text": "¡Pero eso no tiene importancia! Ni siquiera lo recordaba."
+        },
+        {
+          "s": 0,
+          "text": "Precisamente por eso está en la primera página. Las cosas que uno hace sin esperar aplausos son las que más pesan aquí."
+        },
+        {
+          "s": 1,
+          "text": "Entonces todos esos años de trabajo… ¿no sirvieron para nada?"
+        },
+        {
+          "s": 0,
+          "text": "Sirvieron. Pero no le definen. Pase, por favor. Su vecino lleva una semana esperándolo."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué pensaba Emilio que se miraba en el Cielo?",
+          "options": [
+            "Sus errores",
+            "Su empresa y sus premios",
+            "Sus amigos"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué hizo Emilio por su vecino?",
+          "options": [
+            "Le dejó su coche un mes",
+            "Le dio dinero",
+            "Le buscó trabajo"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Por qué ese día está en la primera página?",
+          "options": [
+            "Porque fue el más difícil",
+            "Porque es el más reciente",
+            "Porque lo hizo sin esperar aplausos"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Quién espera a Emilio?",
+          "options": [
+            "Su madre",
+            "Su vecino",
+            "Su socio"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué cosa buena hiciste sin esperar nada a cambio?",
+          "model": "Una vez ayudé a una señora mayor con la mudanza y no le dije a nadie."
+        },
+        {
+          "q": "¿Crees que el trabajo nos define? ¿Por qué?",
+          "model": "En parte sí, porque pasamos muchas horas allí, pero no del todo."
+        },
+        {
+          "q": "¿Qué te gustaría encontrar en la primera página de tu expediente?",
+          "model": "Me gustaría encontrar las tardes que pasé con mis abuelos."
+        }
+      ],
+      "gaps": "Las cosas que uno hace sin esperar [aplausos] son las que más [pesan] aquí. Entonces todos esos [años de trabajo]… ¿no [sirvieron] para nada?",
+      "glossary": [
+        {
+          "word": "expediente",
+          "meaning": "conjunto de papeles sobre una persona o un asunto"
+        },
+        {
+          "word": "aplausos",
+          "meaning": "golpes con las manos para felicitar a alguien"
+        },
+        {
+          "word": "pesan",
+          "meaning": "tienen importancia, cuentan"
+        },
+        {
+          "word": "a cambio",
+          "meaning": "como pago por algo"
+        }
+      ]
+    },
+    {
+      "id": "archivo",
+      "title": "La memoria del río",
+      "place": "El Archivo de las Vidas · la orilla",
+      "context": "Junto al río del olvido, una mujer que bebió mucho agua habla con una recién llegada.",
+      "speakers": [
+        {
+          "name": "Margarita",
+          "country": "Panamá",
+          "voice": "es-PA-MargaritaNeural"
+        },
+        {
+          "name": "Yolanda",
+          "country": "Nicaragua",
+          "voice": "es-NI-YolandaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Yo me tomé casi todo el río cuando llegué. Quería olvidar a mi marido, sus gritos, el miedo de cada noche."
+        },
+        {
+          "s": 1,
+          "text": "¿Y funcionó?"
+        },
+        {
+          "s": 0,
+          "text": "Sí. No recuerdo nada de él. Pero tampoco recuerdo por qué soy tan valiente. Ni por qué ayudaba a otras mujeres en el barrio."
+        },
+        {
+          "s": 1,
+          "text": "Porque lo valiente salió de lo malo, ¿no?"
+        },
+        {
+          "s": 0,
+          "text": "Exacto. Al olvidar el dolor, olvidé también lo que levanté con él. Ahora soy amable, pero no sé quién soy."
+        },
+        {
+          "s": 1,
+          "text": "Yo pensaba beber solo un vaso. Hay un año que no quiero recordar."
+        },
+        {
+          "s": 0,
+          "text": "Bebe si lo necesitas. Pero antes pregúntate qué aprendiste en ese año. A veces lo que más duele es lo que más nos enseña."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué quería olvidar Margarita?",
+          "options": [
+            "Su infancia",
+            "A su marido y su miedo",
+            "Su trabajo"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué hacía Margarita en el barrio?",
+          "options": [
+            "Ayudaba a otras mujeres",
+            "Vendía comida",
+            "Daba clases"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cuál es el problema de Margarita ahora?",
+          "options": [
+            "Tiene mucho miedo",
+            "Quiere volver",
+            "No sabe quién es"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué consejo le da a Yolanda?",
+          "options": [
+            "Que beba todo el río",
+            "Que se pregunte qué aprendió ese año",
+            "Que no hable con nadie"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Hay algo doloroso que te enseñó mucho?",
+          "model": "Sí, perder mi trabajo me enseñó a pedir ayuda."
+        },
+        {
+          "q": "Si pudieras olvidar un año, ¿lo harías? ¿Por qué?",
+          "model": "No, porque también pasaron cosas buenas ese año."
+        },
+        {
+          "q": "¿Qué te hace valiente?",
+          "model": "Creo que me hacen valiente las personas que dependen de mí."
+        }
+      ],
+      "gaps": "Bebe si lo [necesitas]. Pero antes pregúntate qué [aprendiste] en ese año. A veces lo que más [duele] es lo que más nos [enseña].",
+      "glossary": [
+        {
+          "word": "valiente",
+          "meaning": "que no se deja vencer por el miedo"
+        },
+        {
+          "word": "olvidar",
+          "meaning": "dejar de recordar"
+        },
+        {
+          "word": "gritos",
+          "meaning": "palabras dichas con la voz muy alta"
+        },
+        {
+          "word": "amable",
+          "meaning": "simpático y educado con los demás"
+        }
+      ]
+    },
+    {
+      "id": "cumbre",
+      "title": "Lo que se ve desde arriba",
+      "place": "La Cumbre · el mirador",
+      "context": "Desde el mirador, un ángel enseña a un hombre cómo se vive su ausencia en la Tierra.",
+      "speakers": [
+        {
+          "name": "Azael",
+          "country": "Costa Rica",
+          "voice": "es-CR-JuanNeural"
+        },
+        {
+          "name": "Alonso",
+          "country": "Estados Unidos",
+          "voice": "es-US-AlonsoNeural"
+        },
+        {
+          "name": "Ramona",
+          "country": "República Dominicana",
+          "voice": "es-DO-RamonaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Mira hacia abajo. Es tu cocina. Tu hija está cocinando tu receta de frijoles."
+        },
+        {
+          "s": 1,
+          "text": "¡Le salen fatal! Le pone demasiada sal. Siempre se lo decía."
+        },
+        {
+          "s": 0,
+          "text": "Escucha lo que dice."
+        },
+        {
+          "s": 2,
+          "text": "Papá, me salen salados, como siempre. Pero cada vez que los hago, es como si estuvieras aquí regañándome."
+        },
+        {
+          "s": 1,
+          "text": "Ay… Yo creía que mis críticas le molestaban."
+        },
+        {
+          "s": 0,
+          "text": "Le molestaban. Y ahora las echa de menos. Así es el amor en la Tierra: mezclado, imperfecto."
+        },
+        {
+          "s": 1,
+          "text": "Me gustaría decirle que están bien así, con sal."
+        },
+        {
+          "s": 0,
+          "text": "No puedes. Pero puedes recordarlo para la próxima vez que alguien cocine para ti, aunque lo haga mal y con mucho amor."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué cocina la hija?",
+          "options": [
+            "Una sopa",
+            "Un pastel",
+            "La receta de frijoles del padre"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué problema tienen los frijoles?",
+          "options": [
+            "Tienen demasiada sal",
+            "Están fríos",
+            "Están quemados"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cómo se siente la hija al cocinar?",
+          "options": [
+            "Enfadada",
+            "Como si su padre estuviera allí",
+            "Aburrida"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Según Azael, ¿cómo es el amor en la Tierra?",
+          "options": [
+            "Perfecto",
+            "Mezclado e imperfecto",
+            "Muy tranquilo"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué receta de tu familia te recuerda a alguien?",
+          "model": "La tortilla de mi abuela me recuerda los veranos en su casa."
+        },
+        {
+          "q": "¿Criticas mucho a las personas que quieres?",
+          "model": "Sí, a veces critico a mi hermano por cosas pequeñas."
+        },
+        {
+          "q": "¿Qué echarías de menos de alguien, aunque te molestara?",
+          "model": "Echaría de menos cómo mi madre me llama tres veces al día."
+        }
+      ],
+      "gaps": "Le [molestaban]. Y ahora las echa [de menos]. Así es el amor en la [Tierra]: mezclado, [imperfecto].",
+      "glossary": [
+        {
+          "word": "receta",
+          "meaning": "instrucciones para preparar una comida"
+        },
+        {
+          "word": "regañándome",
+          "meaning": "diciéndome que algo está mal"
+        },
+        {
+          "word": "echa de menos",
+          "meaning": "siente la falta de algo o de alguien"
+        },
+        {
+          "word": "salados",
+          "meaning": "con mucha sal"
+        }
+      ]
+    },
+    {
+      "id": "antesala",
+      "title": "El aviso de megafonía",
+      "place": "La Antesala · los altavoces",
+      "context": "Por los altavoces de la Antesala del Infierno se oye un aviso para las almas que esperan.",
+      "speakers": [
+        {
+          "name": "Mara",
+          "country": "España",
+          "voice": "es-ES-XimenaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Atención, almas en espera. Les informamos de que el tiempo medio de espera es de trescientos años."
+        },
+        {
+          "s": 0,
+          "text": "Por favor, no se quejen en la ventanilla. La ventanilla no tiene la culpa."
+        },
+        {
+          "s": 0,
+          "text": "Recuerden que deben rellenar el formulario de arrepentimiento por triplicado. Si dejan una casilla vacía, vuelven al final de la fila."
+        },
+        {
+          "s": 0,
+          "text": "Les recordamos también que la sala de los espejos está abierta las veinticuatro horas. Muchos dicen que es peor que el fuego."
+        },
+        {
+          "s": 0,
+          "text": "Y una última información, aunque casi nadie la escucha: la puerta del fondo no tiene llave. Cualquier alma puede salir cuando quiera. Gracias por su paciencia."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cuánto tiempo hay que esperar?",
+          "options": [
+            "Trescientos años",
+            "Tres horas",
+            "Treinta días"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué pasa si dejan una casilla vacía?",
+          "options": [
+            "Pagan una multa",
+            "Vuelven al final de la fila",
+            "Van a los espejos"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué dicen muchos de la sala de los espejos?",
+          "options": [
+            "Que está cerrada",
+            "Que es divertida",
+            "Que es peor que el fuego"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué dice la última información?",
+          "options": [
+            "La puerta del fondo no tiene llave",
+            "Hay comida gratis",
+            "Mañana cierran"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué te parece peor: el fuego o verte en un espejo que no miente? ¿Por qué?",
+          "model": "Verme en el espejo, porque el fuego pasa y la verdad se queda."
+        },
+        {
+          "q": "¿Te quejas cuando esperas mucho? ¿Con quién?",
+          "model": "Sí, con mi pareja, nunca con la persona que trabaja allí."
+        },
+        {
+          "q": "¿Hay una «puerta sin llave» en tu vida que no abres?",
+          "model": "Quizás cambiar de ciudad. Puedo hacerlo, pero no me atrevo."
+        }
+      ],
+      "gaps": "Si dejan una [casilla] vacía, vuelven al [final] de la [fila]. Les recordamos también que la sala de los [espejos] está abierta las veinticuatro horas.",
+      "glossary": [
+        {
+          "word": "ventanilla",
+          "meaning": "abertura en una oficina donde atienden al público"
+        },
+        {
+          "word": "arrepentimiento",
+          "meaning": "pena por haber hecho algo mal"
+        },
+        {
+          "word": "casilla",
+          "meaning": "cuadrado pequeño de un formulario"
+        },
+        {
+          "word": "paciencia",
+          "meaning": "capacidad de esperar sin enfadarse"
+        }
+      ]
+    },
+    {
+      "id": "juicio",
+      "title": "La defensa de Asmodeo",
+      "place": "El Juicio · el tribunal",
+      "context": "En el tribunal de las pequeñas mentiras, una abogada defiende a una mujer acusada por el demonio Asmodeo.",
+      "speakers": [
+        {
+          "name": "Asmodeo",
+          "country": "México",
+          "voice": "es-MX-JorgeNeural"
+        },
+        {
+          "name": "Lorena",
+          "country": "El Salvador",
+          "voice": "es-SV-LorenaNeural"
+        },
+        {
+          "name": "Tania",
+          "country": "Paraguay",
+          "voice": "es-PY-TaniaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "La acusada dijo «estoy bien» cuatro mil veces en su vida. En casi todas, mentía."
+        },
+        {
+          "s": 1,
+          "text": "Protesto. Mi clienta lo decía para proteger a su familia. Su madre estaba enferma y no quería preocuparla."
+        },
+        {
+          "s": 0,
+          "text": "¿Y a quién protegía cuando se lo decía a su médica?"
+        },
+        {
+          "s": 1,
+          "text": "Bueno… a nadie."
+        },
+        {
+          "s": 2,
+          "text": "¿Puedo hablar? Es verdad. Decía «estoy bien» porque, si decía la verdad, tenía que hacer algo con ella."
+        },
+        {
+          "s": 0,
+          "text": "Interesante. ¿Y qué habría tenido que hacer?"
+        },
+        {
+          "s": 2,
+          "text": "Dejar a mi marido, quizás. O llorar delante de alguien. Era más fácil sonreír."
+        },
+        {
+          "s": 0,
+          "text": "El tribunal no la condena. Solo le pide que lo diga una vez más, aquí, sin mentir: ¿cómo está?"
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cuántas veces dijo «estoy bien» la acusada?",
+          "options": [
+            "Cuatrocientas",
+            "Cuatro mil",
+            "Cuarenta"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Según la abogada, ¿por qué lo decía?",
+          "options": [
+            "Para proteger a su familia",
+            "Para ganar dinero",
+            "Porque era verdad"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Por qué decía Tania «estoy bien», según ella misma?",
+          "options": [
+            "Porque estaba feliz",
+            "Porque su médica se lo pedía",
+            "Para no tener que hacer algo con la verdad"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué le pide el tribunal al final?",
+          "options": [
+            "Que pague una multa",
+            "Que diga cómo está, sin mentir",
+            "Que se vaya al fuego"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Dices «estoy bien» cuando no es verdad? ¿A quién?",
+          "model": "Sí, a mis compañeros de trabajo, porque no quiero hablar de mis cosas."
+        },
+        {
+          "q": "¿Qué es más difícil: decir la verdad o vivir con ella?",
+          "model": "Vivir con ella, porque después tienes que cambiar algo."
+        },
+        {
+          "q": "¿Cómo estás de verdad hoy?",
+          "model": "Un poco cansado, pero tranquilo."
+        }
+      ],
+      "gaps": "Decía «estoy bien» porque, si decía la [verdad], tenía que [hacer algo] con ella. [Interesante]. ¿Y qué habría tenido que [hacer]?",
+      "glossary": [
+        {
+          "word": "acusada",
+          "meaning": "persona a la que se culpa de algo en un juicio"
+        },
+        {
+          "word": "protesto",
+          "meaning": "palabra de un abogado para decir que no está de acuerdo"
+        },
+        {
+          "word": "clienta",
+          "meaning": "mujer que recibe un servicio"
+        },
+        {
+          "word": "condena",
+          "meaning": "castigo de un juez"
+        }
+      ]
+    },
+    {
+      "id": "abismo",
+      "title": "El hombre que cuidaba la jaula",
+      "place": "El Abismo · las jaulas",
+      "context": "En el Abismo, un alma ha decorado su jaula abierta como si fuera una casa. Otra alma lo visita.",
+      "speakers": [
+        {
+          "name": "Javier",
+          "country": "Guinea Ecuatorial",
+          "voice": "es-GQ-JavierNeural"
+        },
+        {
+          "name": "Belkys",
+          "country": "Cuba",
+          "voice": "es-CU-BelkysNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "¡Qué bonita tienes la jaula! Hasta tiene cortinas."
+        },
+        {
+          "s": 0,
+          "text": "Gracias. Llevo aquí cincuenta años. Pinté las barras, puse una alfombra, colgué fotos."
+        },
+        {
+          "s": 1,
+          "text": "Pero la puerta está abierta. ¿Nunca has pensado en salir?"
+        },
+        {
+          "s": 0,
+          "text": "Todos los días. Pero si salgo, todo este trabajo no tiene sentido."
+        },
+        {
+          "s": 1,
+          "text": "¿Sabes qué? Mi padre hacía lo mismo con su trabajo. Lo odiaba, pero llevaba treinta años mejorando su oficina."
+        },
+        {
+          "s": 0,
+          "text": "Es que cuanto más inviertes en algo, más difícil es dejarlo."
+        },
+        {
+          "s": 1,
+          "text": "Ya. Pero quedarse por eso es como seguir viendo una película mala solo porque has pagado la entrada. Sal conmigo un rato. Si no te gusta, vuelves."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué tiene la jaula de Javier?",
+          "options": [
+            "Cortinas, alfombra y fotos",
+            "Una televisión",
+            "Un jardín"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cuánto tiempo lleva allí Javier?",
+          "options": [
+            "Cinco años",
+            "Quince años",
+            "Cincuenta años"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Por qué no sale Javier?",
+          "options": [
+            "Porque la puerta está cerrada",
+            "Porque todo su trabajo perdería sentido",
+            "Porque está enfermo"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Con qué compara Belkys la situación?",
+          "options": [
+            "Con una película mala ya pagada",
+            "Con un viaje largo",
+            "Con una cárcel"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Hay algo que sigues haciendo solo porque ya invertiste mucho?",
+          "model": "Sí, una carrera que no me gusta, pero me falta un año."
+        },
+        {
+          "q": "¿Cómo decoras los lugares donde vives?",
+          "model": "Pongo plantas y fotos de mi familia."
+        },
+        {
+          "q": "¿Qué «jaula cómoda» conoces?",
+          "model": "Un trabajo seguro pero aburrido."
+        }
+      ],
+      "gaps": "Es que cuanto más [inviertes] en algo, más [difícil] es [dejarlo]. Ya. Pero quedarse por eso es como seguir viendo una [película mala] solo porque has pagado la entrada.",
+      "glossary": [
+        {
+          "word": "cortinas",
+          "meaning": "telas que cubren una ventana"
+        },
+        {
+          "word": "barras",
+          "meaning": "palos largos de metal"
+        },
+        {
+          "word": "inviertes",
+          "meaning": "pones tiempo, dinero o esfuerzo"
+        },
+        {
+          "word": "alfombra",
+          "meaning": "tela gruesa para el suelo"
+        }
+      ]
+    }
+  ]
+}

@@ -46,11 +46,12 @@ test('Instagram experiment is opt-in and preserves campaign attribution on both 
  const previous=await get('/lp/spanish-teacher-resources');assert.equal(previous.status,200);await previous.arrayBuffer();
 });
 
-test('each category has its fixed, matching free lessons (two; Gramática three with the Clase inicial)',()=>{
- for(const [category,ids] of Object.entries(p.samplesByCategory)){assert.equal(new Set(ids).size,category==='Gramática'?3:2);for(const id of ids)assert.equal(p.lessons.find(l=>l.id===id)?.category,category)}
+test('each category has its fixed, matching free lessons (two; Gramática eight: the Clase inicial and one class per level)',()=>{
+ for(const [category,ids] of Object.entries(p.samplesByCategory)){assert.equal(new Set(ids).size,category==='Gramática'?8:2);for(const id of ids)assert.equal(p.lessons.find(l=>l.id===id)?.category,category)}
  assert.deepEqual(new Set(p.freeLessonIds),new Set(Object.values(p.samplesByCategory).flat()));
- assert.equal(p.freeLessonIds.length,Object.keys(p.samplesByCategory).length*2+1);
- assert.equal(p.isFreeLesson(239),true);
+ assert.equal(p.freeLessonIds.length,Object.keys(p.samplesByCategory).length*2+6);
+ for(const id of [239,350,389,439,468,515])assert.equal(p.isFreeLesson(id),true);
+ assert.deepEqual([40,350,389,439,468,515].map(id=>p.lessons.find(l=>l.id===id)?.level),['A1','A2','B1','B2','C1','C2']);
  assert.equal(new Set(p.lessons.map(l=>l.id)).size,p.lessons.length);
 });
 

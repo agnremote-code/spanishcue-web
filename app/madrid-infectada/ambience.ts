@@ -30,6 +30,8 @@ export type Ambience = {
   setKind: (kind: Sound | null) => void;
   duck: (level: number) => void;
   setMuted: (muted: boolean) => void;
+  /** Music/ambience volume chosen by the teacher, 0–1. */
+  setVolume: (volume: number) => void;
   /** `gain` 0–1: how close it is (the dead groan louder near you). */
   play: (sfx: Sfx, gain?: number) => void;
   dispose: () => void;
@@ -41,7 +43,7 @@ export function createAmbience(): Ambience {
   let layers: Record<'wind' | 'hum' | 'water' | 'crowd' | 'fire' | 'static', GainNode>;
   let noise: AudioBuffer;
   let mix: Mix | null = null;
-  let muted = false, timer = 0, beat = 0;
+  let muted = false, volume = 1, timer = 0, beat = 0;
 
   function noiseBuffer(c: AudioContext) {
     const buffer = c.createBuffer(1, c.sampleRate * 4, c.sampleRate);
@@ -138,7 +140,7 @@ export function createAmbience(): Ambience {
       try { ctx = new AC(); } catch { ctx = null; return; }
       const c = ctx;
       noise = noiseBuffer(c);
-      master = c.createGain(); master.gain.value = 0.9; master.connect(c.destination);
+      master = c.createGain(); master.gain.value = muted ? 0 : 0.9 * volume; master.connect(c.destination);
       ducker = c.createGain(); ducker.gain.value = 1; ducker.connect(master);
       const g = () => { const n = c.createGain(); n.gain.value = 0; n.connect(ducker); return n; };
       layers = { wind: g(), hum: g(), water: g(), crowd: g(), fire: g(), static: g() };
@@ -156,7 +158,8 @@ export function createAmbience(): Ambience {
     },
     setKind(kind) { mix = kind ? MIXES[kind] : null; apply(); },
     duck(level) { if (ctx && ducker) ducker.gain.setTargetAtTime(level, ctx.currentTime, 0.3); },
-    setMuted(value) { muted = value; if (ctx && master) master.gain.setTargetAtTime(value ? 0 : 0.9, ctx.currentTime, 0.1); apply(); },
+    setMuted(value) { muted = value; if (ctx && master) master.gain.setTargetAtTime(value ? 0 : 0.9 * volume, ctx.currentTime, 0.1); apply(); },
+    setVolume(value) { volume = value; if (ctx && master) master.gain.setTargetAtTime(muted ? 0 : 0.9 * volume, ctx.currentTime, 0.1); },
     play(sfx, gain = 1) {
       if (!ctx || muted) return;
       switch (sfx) {

@@ -137,6 +137,34 @@ jobs:
           npx wrangler d1 execute DB --remote --config dist/server/wrangler.json --command "PRAGMA table_info(live_class_sessions)" --json > live-class-schema.json
           node scripts/verify-live-class-schema.mjs live-class-schema.json
 
+      # Owner authorization 2026-10-23 (Ale, «Academias: landing y panel»): idempotent CREATE-only
+      # SQL for academy demo requests and institutions; existing tables and rows are never touched.
+      - name: Prepare academy tables
+        if: github.event_name == 'push' || inputs.action == 'deploy'
+        run: |
+          npx wrangler d1 execute DB --remote --config dist/server/wrangler.json --file drizzle/0016_academy_demo_requests.sql --yes
+          npx wrangler d1 execute DB --remote --config dist/server/wrangler.json --file drizzle/0017_institutions.sql --yes
+          npx wrangler d1 execute DB --remote --config dist/server/wrangler.json --command "SELECT name FROM sqlite_master WHERE type='table' AND name IN ('academy_demo_requests','institutions','institution_members','institution_invitations')" --json > academy-schema.json
+          node scripts/verify-academy-schema.mjs academy-schema.json
+
+      # Owner authorization 2026-10-30 (Ale, «Captar emails y enviar newsletters»): idempotent CREATE-only
+      # SQL for newsletter subscribers; existing tables and rows are never touched.
+      - name: Prepare newsletter table
+        if: github.event_name == 'push' || inputs.action == 'deploy'
+        run: |
+          npx wrangler d1 execute DB --remote --config dist/server/wrangler.json --file drizzle/0018_newsletter_subscribers.sql --yes
+          npx wrangler d1 execute DB --remote --config dist/server/wrangler.json --command "PRAGMA table_info(newsletter_subscribers)" --json > newsletter-schema.json
+          node scripts/verify-newsletter-schema.mjs newsletter-schema.json
+
+      # Owner authorization 2026-10-31 (Ale, «agrega el 3»: referral program): idempotent CREATE-only
+      # SQL for referral codes, referrals and rewards; existing tables and rows are never touched.
+      - name: Prepare referral tables
+        if: github.event_name == 'push' || inputs.action == 'deploy'
+        run: |
+          npx wrangler d1 execute DB --remote --config dist/server/wrangler.json --file drizzle/0019_referrals.sql --yes
+          npx wrangler d1 execute DB --remote --config dist/server/wrangler.json --command "SELECT name FROM sqlite_master WHERE type='table' AND name IN ('referral_codes','referrals','referral_rewards')" --json > referral-schema.json
+          node scripts/verify-referrals-schema.mjs referral-schema.json
+
       - name: Record current staging version
         if: github.event_name == 'push' || inputs.action == 'deploy'
         id: previous

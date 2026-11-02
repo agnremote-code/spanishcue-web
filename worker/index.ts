@@ -32,6 +32,8 @@ import handler from "vinext/server/app-router-entry";
 import { withDeploymentHeaders } from "./deployment-headers";
 import { writeFreezeActive, writeFreezeResponse } from "./write-freeze";
 import { pagePathname, pageSearch } from "./page-path";
+import { giftCoversPath, hasGift } from "../app/newsletter/server";
+import { GIFT_LANDING_PATH } from "../app/newsletter/gift";
 import { rateLimitKey, rateLimited, rateLimitResponse, type RateLimitBinding } from "./rate-limit";
 import { watermarkDay, watermarkToken, withWatermark, type Rewriter } from "../app/license-watermark";
 
@@ -322,12 +324,14 @@ const app = {
         return hit;
       }
     }
-    if (premiumAudio && !fullAccess) {
+    // Newsletter gift: an authentic email-signup cookie opens one PRO grammar class and its audio, nothing else.
+    const gifted=!fullAccess&&giftCoversPath(pathname,lesson?.id??null)&&await hasGift(request.headers.get('cookie'),env.AUTOESTUDIO_SHARE_SECRET).catch(()=>false);
+    if (premiumAudio && !fullAccess && !gifted) {
       const headers = new Headers({'Cache-Control':'private, no-store'});
       setSecurityHeaders(headers,url,verifiedLocale);
       return new Response('Forbidden',{status:403,headers});
     }
-    if ((administrative&&!owner)||(lesson&&!isFreeLesson(lesson.id)&&!fullAccess)||(premiumBoard&&!fullAccess)||(premiumAutoestudio&&!fullAccess&&!shareAllowsPath(pathname,shareSession))) {
+    if ((administrative&&!owner)||(lesson&&!isFreeLesson(lesson.id)&&!fullAccess&&!gifted)||(premiumBoard&&!fullAccess)||(premiumAutoestudio&&!fullAccess&&!shareAllowsPath(pathname,shareSession))) {
       if(pathname.startsWith('/api/')) {
         const headers = new Headers({'content-type':'application/json','Cache-Control':'private, no-store'});
         setSecurityHeaders(headers,url,verifiedLocale);
@@ -335,6 +339,7 @@ const app = {
       }
       if(administrative&&!verifiedUser) return noStoreRedirect(new URL('/ingresar?modo=entrar&returnTo=%2Fadmin',url),verifiedLocale);
       if(administrative) return noStoreRedirect(new URL('/cuenta',url),verifiedLocale);
+      if(lesson&&giftCoversPath(pathname,lesson.id)) return noStoreRedirect(new URL(GIFT_LANDING_PATH,url),verifiedLocale);
       return noStoreRedirect(new URL(`/acceso?returnTo=${encodeURIComponent(pagePath+pageSearch(url))}`,url),verifiedLocale);
     }
     // PRO visitors skip the free demos: answer before any page render.
