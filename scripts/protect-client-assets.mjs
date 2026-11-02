@@ -24,6 +24,7 @@ import {
 import { build } from "esbuild";
 import { liveLessonData } from "./live-lessons.mjs";
 import { autoestudioModuleData } from "./autoestudio-modules.mjs";
+import { clasicasData } from "./clasicas-content.mjs";
 import { tmpdir } from "node:os";
 import { dirname, extname, relative, resolve } from "node:path";
 
@@ -414,6 +415,18 @@ for (const [id, body] of Object.entries(autoestudioBodies)) {
     "application/json",
   );
 }
+// Classic conversation question banks (scripts/clasicas-content.mjs): one blob per class.
+await mkdir(resolve("dist/client/_protected-clasicas"), { recursive: true });
+const { bodies: clasicasBodies } = await clasicasData();
+const clasicasAssets = {};
+for (const [slug, body] of Object.entries(clasicasBodies)) {
+  clasicasAssets[slug] = await encryptAsset(
+    Buffer.from(body),
+    `/clasica-content/${slug}`,
+    "_protected-clasicas",
+    "application/json",
+  );
+}
 const serverText = async (directory) => {
   let text = "";
   for (const entry of await readdir(directory, { withFileTypes: true })) {
@@ -438,6 +451,17 @@ for (const [id, body] of Object.entries(autoestudioBodies)) {
   const deep = text.slice(Math.floor(text.length / 2), Math.floor(text.length / 2) + 80);
   if (deep.length === 80 && workerText.includes(deep)) throw new Error(`Autoestudio module ${id} body is still inside the Worker bundle`);
 }
+for (const [slug, body] of Object.entries(clasicasBodies)) {
+  for (const level of Object.values(JSON.parse(body))) {
+    const question = level.categorias[2].questions[3];
+    const probe = typeof question === "string" ? question : question.es;
+    if (workerText.includes(probe)) throw new Error(`Classic conversation ${slug} questions are still inside the Worker bundle`);
+  }
+}
+await writeFile(
+  "dist/server/private-clasicas-assets.js",
+  `export default ${JSON.stringify(clasicasAssets)};\n`,
+);
 await writeFile(
   "dist/server/private-autoestudio-assets.js",
   `export default ${JSON.stringify(autoestudioAssets)};\n`,
@@ -470,6 +494,7 @@ import privateMedia from './private-media-assets.js';
 import routedWebp from './public-webp-assets.js';
 import privateLessons from './private-lesson-assets.js';
 import privateAutoestudio from './private-autoestudio-assets.js';
+import privateClasicas from './private-clasicas-assets.js';
 import {mayReadPrivateMedia} from './private-access-runtime.js';
 
 const privateHeaders=()=>new Headers({'Cache-Control':'private, no-store','X-Content-Type-Options':'nosniff','Referrer-Policy':'strict-origin-when-cross-origin'});
@@ -527,6 +552,15 @@ globalThis.__spanishcueLiveLessons={async load(assets,id){
  if(!record)return undefined;
  const response=await assets.fetch(new Request(new URL(record.assetPath,'https://assets.local')));
  if(!response.ok)throw new Error(\`Live lesson \${id} unavailable (\${response.status})\`);
+ const plain=await crypto.subtle.decrypt({name:'AES-GCM',iv:base64Bytes(record.iv)},await mediaKey(),await response.arrayBuffer());
+ return JSON.parse(new TextDecoder().decode(plain));
+}};
+// Read by the classic conversation loader inside app-worker.js (scripts/clasicas-content.mjs).
+globalThis.__spanishcueClasicas={async load(assets,slug){
+ const record=Object.hasOwn(privateClasicas,slug)?privateClasicas[slug]:undefined;
+ if(!record)return undefined;
+ const response=await assets.fetch(new Request(new URL(record.assetPath,'https://assets.local')));
+ if(!response.ok)throw new Error(\`Classic conversation \${slug} unavailable (\${response.status})\`);
  const plain=await crypto.subtle.decrypt({name:'AES-GCM',iv:base64Bytes(record.iv)},await mediaKey(),await response.arrayBuffer());
  return JSON.parse(new TextDecoder().decode(plain));
 }};

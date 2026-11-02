@@ -5,6 +5,7 @@ import { sites } from "./build/sites-vite-plugin";
 import { createRequire } from "node:module";
 import { liveLessonData, liveLessonIndexModule } from "./scripts/live-lessons.mjs";
 import { autoestudioModuleData, autoestudioIndexModule } from "./scripts/autoestudio-modules.mjs";
+import { clasicasData, clasicasIndexModule } from "./scripts/clasicas-content.mjs";
 
 const serverRequire = createRequire(import.meta.url);
 
@@ -108,6 +109,18 @@ export default defineConfig(async ({ command }) => {
           if (!id.replace(/\\/g, "/").endsWith("/app/autoestudio/curriculum/course.ts")) return null;
           if (this.environment?.name === "client") throw new Error("The Autoestudio course registry is server-only");
           return autoestudioIndexModule(await autoestudioModuleData());
+        },
+      },
+      {
+        // Classic conversation question banks ship as encrypted blobs too
+        // (scripts/clasicas-content.mjs); the Worker keeps only their slugs.
+        name: "spanishcue-clasicas-index",
+        apply: "build",
+        enforce: "pre",
+        async load(id: string) {
+          if (!id.replace(/\\/g, "/").endsWith("/app/conversacion-clasica/content.ts")) return null;
+          if (this.environment?.name === "client") throw new Error("The classic conversation loader is server-only");
+          return clasicasIndexModule(await clasicasData());
         },
       },
       vinext(),
