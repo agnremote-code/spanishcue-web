@@ -52,6 +52,9 @@ const PLACES = PLACEMENTS as unknown as Record<string, Placement>;
 const STREETS = ROADS as unknown as Road[];
 
 export type Sector = { id: string; group: THREE.Group; x0: number; x1: number; z0: number; z1: number };
+/** The lit shop signs (a conversation circle stands in front of each). */
+export const LIT_SIGNS: { text: string; x: number; z: number }[] = [];
+
 export type Districts = {
   root: THREE.Group;
   sectors: Sector[];
@@ -2837,6 +2840,8 @@ function dressing(ctxAt: (x: number, z: number) => Ctx) {
     if (!b) return;
     const ctx = ctxAt((b.x0 + b.x1) / 2, (b.z0 + b.z1) / 2);
     const f = faceOf(b, side);
+    const front = onFace(f, t, 0, 2.4);
+    if (!LIT_SIGNS.some(s => s.text === text)) LIT_SIGNS.push({ text, x: front.x, z: front.z });
     sign(ctx, text, bg, fg, w, h, onFace(f, t, y, 0.06), f.ry);
   };
   lit('c-sur-2', 'south', 28, 3.6, 'PIZZERÍA LUNA', '#2a1a3a', '#ff9ad1', 4.6);

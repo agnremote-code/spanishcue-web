@@ -1,0 +1,686 @@
+{
+  "version": 1,
+  "authorization": "Owner request of 2026-10-30 06:01Z (project thread «Más allá: cielo e infierno», message cmsg_01Gr5R4j3t2Yet65UcmhcVhA6DbwYKbaxKxKSsoWkiMaBh): many more conversation circles in every 3D conversation world, on every person and every landmark, with interesting questions that make the student talk. A0 questions are bilingual like every A0 level of the 3D worlds. This manifest approves only the English half of each A0 { es, en } question in app/charlas-3d/banco.mjs; existing English copy stays protected. Owner approval: Ale typed «apruebo» for these English additions on 2026-11-02 05:45Z in the project thread «Más círculos y preguntas en todos los mundos 3D» (message cmsg_01Gr5R4j3t2Yet65UcmhcVhASf2kbXhD21LdwuSgUMQNr5).",
+  "additions": [
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "What is your name? Do you like your name?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Where do you live? Do you like your home?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "What are you doing today?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Are you happy or tired today?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "What do you like to do on Sundays?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you go out at night? Where do you go?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "What time do you sleep?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you like the night or the day?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Are you afraid on the street at night?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "What do you do when you cannot sleep?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you like dancing?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "What music do you like?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you go to parties? With whom?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you dance well or badly?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "What do you drink at a party?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Are you afraid of fire?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you like looking at fire?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "What do you do if you see smoke?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you like cooking with fire?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "What thing do you never want to lose?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Are you okay today?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you have a car?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you ride a bike or walk?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you call your family when something bad happens?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Are you a calm person?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Are there many police in your city?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Is your city safe?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you like police movies?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you always tell the truth?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "What scares you on the street?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you live in a city or in a town?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you walk a lot?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Are there many people on your street?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you like your neighbourhood?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you talk with your neighbours?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "What are you eating today?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you like spicy food?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you cook at home?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "What is your favourite food?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Are you hungry now?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you work or study?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you like your job?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "What time do you start work?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you work at night?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "What job do you want to have?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you have brothers or sisters?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you live with your family?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "What is your mother’s name?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you have children?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Who cooks in your house?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you have a partner?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you like romantic movies?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "What do you like in a person?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you give lots of kisses and hugs?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you believe in love at first sight?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Are you afraid of something?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you like horror movies?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you sleep with the light on?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Are you scared of big dogs?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you scream when you are scared?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you have money in your pocket?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you buy a lot?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you like saving money?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "What do you buy with a hundred dollars?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you pay by card or in cash?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you like games?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you play cards?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Are you lucky?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you like winning?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you play with your family?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "How is your health?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you go to the doctor often?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Does anything hurt today?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you sleep well?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you do sports?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you like travelling?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Which country do you want to visit?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you travel by plane or by train?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you travel alone or with friends?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "What do you carry in your suitcase?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you like trees and flowers?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you go to the countryside?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Which animal do you like?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you like the rain?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you have plants at home?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you like the beach?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Can you swim?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Is the water cold or warm?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you live near the sea?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you like the sun?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you like old buildings?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you go to museums?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you take photos?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Is your city old or new?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you like history?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you like music?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you sing in the shower?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you play an instrument?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you like drawing?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you go to the cinema?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you go to church or to a temple?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you like quiet places?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you pray sometimes?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you like silence?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you make wishes?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you like football?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you run?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you go to the gym?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "What is your team?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you watch sports on TV?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you go by bus or by metro?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you have a bike?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you wait a long time for the bus?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you like the train?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Are you late sometimes?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you go to the market?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Which fruits do you like?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you like going shopping?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you buy clothes?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Is this expensive or cheap?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you like castles?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you want to be a king or a queen?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you like princess stories?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Who is the boss in your house?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Are you a good leader?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you like magic?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Which magic animal do you want to have?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you dream a lot?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you like fairy tales?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Can you fly in your dreams?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you like fairs?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "What did you eat as a child?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you like sweets?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you like the big wheel?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Which game do you like?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you run fast?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you like zombie movies?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "What food do you carry in your backpack?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you have water?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Who do you want to be with in danger?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you have a pet?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you prefer dogs or cats?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "What is your pet’s name?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you like horses?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Which animal do you not like?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you live alone?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you like being alone?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you have many friends?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you talk with someone every day?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "What do you do when you are sad?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "What time is it?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you have a watch?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "How old are you?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Are you punctual?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you have free time?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you have grandparents?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you think about your family?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you bring flowers to someone?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Which person do you love a lot?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you have photos of your family?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you use your phone a lot?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you play video games?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you have social media?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you take many selfies?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Can you live without the internet?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you like adventure?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you jump high?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you climb mountains?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you like speed?"
+    },
+    {
+      "path": "app/charlas-3d/banco.mjs",
+      "text": "Do you do new things?"
+    }
+  ]
+}

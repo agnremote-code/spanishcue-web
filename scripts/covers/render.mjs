@@ -1,5 +1,5 @@
 // Renders the covers from the painted scenes in scripts/covers/art/ to WebP.
-//   node scripts/covers/render.mjs mas-alla            → public/mas-alla/cover.webp (the scene alone)
+//   node scripts/covers/render.mjs mas-alla            → public/mas-alla/portada.webp (the scene alone)
 //   node scripts/covers/render.mjs clasicas            → public/conversation-classics/<slug>.webp
 //   node scripts/covers/render.mjs mundos [slug]       → the 3D worlds' illustrated covers (art/<art>.webp cropped to 1200×750)
 // Needs Playwright's Chromium and python3 with Pillow (the WebP encoder).
@@ -23,15 +23,15 @@ const art = slug => pathToFileURL(resolve(repo, 'scripts/covers/art', `${slug}.w
 const url = pathToFileURL(resolve(repo, 'scripts/covers', `${name}.html`)).href;
 // 3D worlds: key art in the grammar mascots' cartoon style (Canva AI, 2026-11-02), never game screenshots.
 const WORLDS = [
-  ['mas-alla', 'public/mas-alla/cover.webp'],
-  ['vuelo-cancelado', 'public/vuelo-cancelado/cover.webp'],
-  ['el-consorcio', 'public/el-consorcio/cover.webp'],
-  ['noche-abierta', 'public/noche-abierta/cover.webp', ''], // 16:9 kept (tests/noche-abierta)
-  ['hospital-san-casi-vivo', 'public/hospital-san-casi-vivo/cover.webp'],
-  ['madrid-infectada', 'public/madrid-infectada/cover.webp'],
-  ['marketing-de-casinos', 'public/marketing-de-casinos/cover.webp'],
-  ['reino', 'public/reino/cover.webp'],
-  ['la-feria-de-villaluz', 'public/la-feria-de-villaluz/cover.webp'],
+  ['mas-alla', 'public/mas-alla/portada.webp'],
+  ['vuelo-cancelado', 'public/vuelo-cancelado/portada.webp'],
+  ['el-consorcio', 'public/el-consorcio/portada.webp'],
+  ['noche-abierta', 'public/noche-abierta/portada.webp', ''], // 16:9 kept (tests/noche-abierta)
+  ['hospital-san-casi-vivo', 'public/hospital-san-casi-vivo/portada.webp'],
+  ['madrid-infectada', 'public/madrid-infectada/portada.webp'],
+  ['marketing-de-casinos', 'public/marketing-de-casinos/portada.webp'],
+  ['reino', 'public/reino/portada.webp'],
+  ['la-feria-de-villaluz', 'public/la-feria-de-villaluz/portada.webp'],
 ];
 if (name === 'mas-alla' || name === 'mundos') {
   for (const [art, path, fit = 'cover16x10'] of WORLDS) {

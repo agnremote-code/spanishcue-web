@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "authorization": "Owner standing approval (Ale) for new English copy, typed «apruebo (siempre de ahora en más apruebo)» in the project thread «Biblioteca» on 2026-10-22 (message cmsg_01Gr5R4j3t2Yet65UcmhcVhAAAbp6kqDfMqxzNm3PL6f5g). Applied on 2026-11-02 to the branded-search fix Ale asked for («esto es GRAVISIMO cuando pongo spanishcue en google no estamos en el primer resultado», message cmsg_01Gr5R4j3t2Yet65UcmhcVhAXYPTxWTpoYbtvbPXnw9A7t): the homepage title now leads with the brand so Google ties the query «spanishcue» to this site.",
+  "additions": [
+    {
+      "path": "app/seo.ts",
+      "text": "SPANISHCUE: Interactive Spanish Lessons for Teachers (A1–C2)"
+    }
+  ],
+  "changes": [
+    {
+      "path": "app/seo.ts",
+      "kind": "english-changed-or-deleted",
+      "text": "Interactive Spanish Lessons for Teachers (A1–C2) | SPANISHCUE"
+    }
+  ]
+}

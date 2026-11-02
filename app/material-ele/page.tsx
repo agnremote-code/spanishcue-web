@@ -8,6 +8,7 @@ import { MATERIAL_ELE_PATH, eleLevels, eleTopics, hubDescription, hubFaq, hubTit
 import { TemaGroupCards } from "./tema-components";
 import { temaPages } from "./temas";
 import { FEED_PATH, INDICE_PATH } from "./indice";
+import { guiaPages } from "./guias";
 import { ACTIVIDADES_PATH, actividadPages, ejercicioPages } from "./actividades";
 import styles from "../growth/growth.module.css";
 import ele from "./material-ele.module.css";
@@ -81,6 +82,7 @@ export default function MaterialElePage() {
 
           <Section id="indice" title="Índice de temas: gramática, vocabulario, funciones, cultura y formatos" intro={`${temaPages.length} temas organizados como los buscas, cada uno con las clases interactivas que lo enseñan: presente de indicativo, pretérito indefinido, subjuntivo, por y para, la familia, la comida, dar consejos, narrar, mundos 3D, comprensión auditiva, roleplays…`}>
             <TemaGroupCards />
+            <p className={styles.sectionIntro}>Guías completas para profesores: {guiaPages.map((guide, index) => <span key={guide.path}>{index ? " · " : ""}<Link href={guide.path}>{guide.h1}</Link></span>)}.</p>
             <p className={styles.sectionIntro}><Link href={INDICE_PATH}>Índice completo de Material ELE</Link>: todas las páginas en una lista, también disponible como <a href={FEED_PATH}>feed Atom</a>.</p>
           </Section>
 

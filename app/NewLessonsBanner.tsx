@@ -1,5 +1,6 @@
 'use client';
 import {useEffect,useState} from 'react';
+import { versionedCover } from "./cover-version";
 import type {CatalogItem} from './Library';
 import {selectNews} from './news-selector.mjs';
 import {useI18n} from './i18n/LocaleProvider';
@@ -13,7 +14,7 @@ export default function NewLessonsBanner({lessons}:{lessons:CatalogItem[]}) {
  if(!items.length)return null;const lesson=items[index%items.length];
  return <section className="new-lessons" aria-label={es?'Nuevas clases':'New lessons'} onMouseEnter={()=>setHovered(true)} onMouseLeave={()=>setHovered(false)} onFocusCapture={()=>setFocused(true)} onBlurCapture={event=>{if(!event.currentTarget.contains(event.relatedTarget as Node))setFocused(false);}}>
   <h2 className="new-lessons-heading">{es?'¡NUEVAS CLASES!':'NEW CLASSES!'}</h2>
-  <a key={lesson.id} className="new-lessons-feature" href={lesson.href}><img className="new-lessons-preview" src={lesson.image} alt="" width="600" height="338"/><div className="new-lessons-copy"><span>{lesson.category} · {lesson.displayLevel||lesson.level}</span><h3>{lesson.title}</h3><p>{lesson.subtitle}</p><strong>{es?'Abrir clase':'Open lesson'} <span aria-hidden="true">↗</span></strong></div></a>
+  <a key={lesson.id} className="new-lessons-feature" href={lesson.href}><img className="new-lessons-preview" src={versionedCover(lesson.image)} alt="" width="600" height="338"/><div className="new-lessons-copy"><span>{lesson.category} · {lesson.displayLevel||lesson.level}</span><h3>{lesson.title}</h3><p>{lesson.subtitle}</p><strong>{es?'Abrir clase':'Open lesson'} <span aria-hidden="true">↗</span></strong></div></a>
   <div className="new-lessons-controls"><button type="button" aria-label={es?'Novedad anterior':'Previous lesson'} onClick={()=>setIndex(i=>(i-1+items.length)%items.length)}>←</button><span aria-live="polite">{String(index%items.length+1).padStart(2,'0')} / {String(items.length).padStart(2,'0')}</span><button type="button" aria-label={es?'Siguiente novedad':'Next lesson'} onClick={()=>setIndex(i=>(i+1)%items.length)}>→</button>{!reduced&&<button type="button" onClick={()=>setManuallyPaused(p=>!p)} aria-label={manuallyPaused?(es?'Reanudar novedades':'Resume rotation'):(es?'Pausar novedades':'Pause rotation')} aria-pressed={manuallyPaused}>{manuallyPaused?'▶':'Ⅱ'}</button>}</div>
   {!reduced&&items.length>1&&<div className="new-lessons-progress" aria-hidden="true"><span key={`${lesson.id}-${paused}`} className={paused?'is-paused':undefined}/></div>}
  </section>;
