@@ -13,6 +13,29 @@ const courseLessons=[...readFileSync(new URL('../../app/grammar-classroom/catalo
 // The additions' own behaviour is covered by their tests (tests/noche-abierta.test.mjs).
 const additions = [
   ...courseLessons,
+  // 2026-11-02: ten classic conversation classes (question banks by category, A0–C2) on the
+  // shared engine app/conversacion-clasica. Every shared-file edit sits on the first entry (255);
+  // the other nine only take their lesson out of the historical catalog.
+  ...[255,254,253,252,251,250,249,248,247,246].map((id,i)=>({
+    id,path:`/${['el-tribunal-de-las-cosas-pequenas','un-dia-sin-pantallas','el-billete-ganador','resenas-de-una-estrella','el-consultorio-sentimental','mi-yo-de-2035','tradiciones-que-nadie-entiende','el-dia-que-todo-salio-mal','el-restaurante-imposible','speed-dating-de-personajes'][i]}`,files:i?/^$/:/^(?:app\/conversacion-clasica\/|app\/(?:speed-dating-de-personajes|el-restaurante-imposible|el-dia-que-todo-salio-mal|tradiciones-que-nadie-entiende|mi-yo-de-2035|el-consultorio-sentimental|resenas-de-una-estrella|el-billete-ganador|un-dia-sin-pantallas|el-tribunal-de-las-cosas-pequenas)\/|public\/conversation-classics\/(?:speed-dating-de-personajes|el-restaurante-imposible|el-dia-que-todo-salio-mal|tradiciones-que-nadie-entiende|mi-yo-de-2035|el-consultorio-sentimental|resenas-de-una-estrella|el-billete-ganador|un-dia-sin-pantallas|el-tribunal-de-las-cosas-pequenas)\.webp$|scripts\/covers\/art\/(?:speed-dating-de-personajes|el-restaurante-imposible|el-dia-que-todo-salio-mal|tradiciones-que-nadie-entiende|mi-yo-de-2035|el-consultorio-sentimental|resenas-de-una-estrella|el-billete-ganador|un-dia-sin-pantallas|el-tribunal-de-las-cosas-pequenas)\.webp$|public\/conversation-previews\/2(?:4[6-9]|5[0-5])\.mp4$|tests\/clasicas-(?:conversacion|routes)\.test\.mjs$|scripts\/(?:check-clasicas|question-index|record-clasica-preview|clasicas-content)\.mjs$|docs\/audits\/clasicas-conversacion-english-additions-20261102\.json$)/,
+    edits:i?{}:{
+      'app/lesson-catalog.ts':[text=>{
+        const lines=text.split('\n');
+        const at=lines.flatMap((line,n)=>/^  \{id:(24[6-9]|25[0-5]),/.test(line)?[n]:[]);
+        assert.equal(at.length,10,'ten classic conversation catalog entries');
+        assert.deepEqual(at,at.map((_,k)=>at[0]+k),'the ten entries sit together');lines.splice(at[0],10);return lines.join('\n');
+      },[',244,245,246,247,248,249,250,251,252,253,254,255],',',244,245],']],
+      'app/conversation-preview-videos.ts':[[',244,245,246,247,248,249,250,251,252,253,254,255]);',',244,245]);']],
+      'scripts/covers/clasicas.mjs':[text=>{
+        const at=text.indexOf('  // 2026-11-02: the ten classic question banks');assert.ok(at>0,'classic cover block');
+        const end=text.indexOf('];',at);return text.slice(0,at)+text.slice(end);
+      }],
+      'scripts/check-english-copy.mjs':[["\n  'docs/audits/clasicas-conversacion-english-additions-20261102.json',",'']],
+      'scripts/test-worker.mjs':[[" await run(['--test','tests/clasicas-conversacion.test.mjs']);\n",''],["'tests/lesson-reports-routes.test.mjs','tests/clasicas-routes.test.mjs']","'tests/lesson-reports-routes.test.mjs']"]],
+      'tests/level-cleanup.test.mjs':[['assert.equal(lessons.length, 329);','assert.equal(lessons.length, 319);'],['244,245,246,247,248,249,250,251,252,253,254,255].includes(lesson.id)','244,245].includes(lesson.id)'],["l.levels?.includes('A0')).length,31);","l.levels?.includes('A0')).length,21);"],['assert.equal(a1Lessons.length, 89);','assert.equal(a1Lessons.length, 79);'],["relative.startsWith('app/conversacion-clasica/')||relative.startsWith('app/speed-dating-de-personajes/')||relative.startsWith('app/el-restaurante-imposible/')||relative.startsWith('app/el-dia-que-todo-salio-mal/')||relative.startsWith('app/tradiciones-que-nadie-entiende/')||relative.startsWith('app/mi-yo-de-2035/')||relative.startsWith('app/el-consultorio-sentimental/')||relative.startsWith('app/resenas-de-una-estrella/')||relative.startsWith('app/el-billete-ganador/')||relative.startsWith('app/un-dia-sin-pantallas/')||relative.startsWith('app/el-tribunal-de-las-cosas-pequenas/')||",'']],
+      'tests/rendered-html.test.mjs':[['assert.match(html,/307(?:<!-- -->|\\s)+resultados/);assert.match(html,/322(?:<!-- -->|\\s)+clases totales/);','assert.match(html,/297(?:<!-- -->|\\s)+resultados/);assert.match(html,/312(?:<!-- -->|\\s)+clases totales/);']],
+    },
+  })),
   {
     // 2026-11-01: El consorcio (A0–C2), a PRO 3D apartment building in Buenos Aires, wired like Vuelo cancelado.
     id:245,path:'/el-consorcio',files:/^(?:app\/el-consorcio\/|app\/escucha-3d\/content\/consorcio\/|public\/el-consorcio\/|public\/audio\/escucha-3d\/consorcio-|tests\/el-consorcio\.test\.mjs$|scripts\/check-consorcio\.mjs$|docs\/audits\/el-consorcio-english-additions-20261101\.json$)/,
@@ -595,7 +618,7 @@ export function withoutApprovedAdditions(path, bytes) {
     bytes = Buffer.from(text);
   }
   // Undo the latest additive lessons in reverse order before the grammar snapshot.
-  for (const addition of additions.filter(item=>item.id===300||item.id===245||item.id===244||item.id===243||item.id===242||item.id===241||item.id===240||item.id===239||item.id===238||item.id===237||item.id===236)) {
+  for (const addition of additions.filter(item=>item.id===300||(item.id>=246&&item.id<=255)||item.id===245||item.id===244||item.id===243||item.id===242||item.id===241||item.id===240||item.id===239||item.id===238||item.id===237||item.id===236)) {
     const latestSteps=addition.edits[path]||[];
     if(!latestSteps.length)continue;
     let latest=bytes.toString('utf8');
@@ -606,7 +629,7 @@ export function withoutApprovedAdditions(path, bytes) {
     bytes=Buffer.from(latest);
   }
   bytes=beforeGrammarBytes(path,bytes);
-  const steps = [...additions.filter(item=>item.id!==300&&item.id!==245&&item.id!==244&&item.id!==236&&item.id!==237&&item.id!==238&&item.id!==239&&item.id!==240&&item.id!==241&&item.id!==242&&item.id!==243), ...repairs.filter(item => !item.latest)].flatMap(item => item.edits[path] || []);
+  const steps = [...additions.filter(item=>item.id!==300&&!(item.id>=246&&item.id<=255)&&item.id!==245&&item.id!==244&&item.id!==236&&item.id!==237&&item.id!==238&&item.id!==239&&item.id!==240&&item.id!==241&&item.id!==242&&item.id!==243), ...repairs.filter(item => !item.latest)].flatMap(item => item.edits[path] || []);
   if (!steps.length) return bytes;
   let text = bytes.toString('utf8');
   for (const step of steps) {

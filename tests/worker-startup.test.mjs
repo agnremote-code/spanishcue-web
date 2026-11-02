@@ -84,3 +84,18 @@ test("Autoestudio modules ship as encrypted blobs and decrypt in the Worker", as
   }
   assert.equal(await globalThis.__spanishcueAutoestudio.load(assets, "zz-99"), undefined);
 });
+
+test("classic conversation question banks ship as encrypted blobs and decrypt in the Worker", async () => {
+  await import(pathToFileURL(resolve(server, "index.js")).href);
+  const classes = (await import(pathToFileURL(resolve(server, "private-clasicas-assets.js")).href)).default;
+  const slugs = Object.keys(classes);
+  assert.equal(slugs.length, 10, "every classic class has an encrypted record");
+  const assets = { fetch: async (request) => new Response(await readFile(client + new URL(request.url).pathname)) };
+  for (const slug of slugs) {
+    assert.match(classes[slug].assetPath, /^\/_protected-clasicas\/[0-9a-f]{64}\.bin$/, slug);
+    const content = await globalThis.__spanishcueClasicas.load(assets, slug);
+    assert.deepEqual(Object.keys(content), ["A0", "A1", "A2", "B1", "B2", "C1", "C2"], slug);
+    assert.equal(content.B1.categorias.length, 6, slug);
+  }
+  assert.equal(await globalThis.__spanishcueClasicas.load(assets, "no-existe"), undefined);
+});
