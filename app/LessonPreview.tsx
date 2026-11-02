@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState, type CSSProperties } from "react";
 import { previewVideo } from "./conversation-preview-videos";
+import { versionedCover } from "./cover-version";
 import { useI18n } from "./i18n/LocaleProvider";
 import "./lesson-preview.css";
 
@@ -96,7 +97,7 @@ export default function LessonPreview({
       ref={figure}
     >
       <img
-        src={lesson.image}
+        src={versionedCover(lesson.image)}
         alt=""
         loading={news ? "eager" : "lazy"}
         decoding="async"
@@ -104,7 +105,7 @@ export default function LessonPreview({
         height="941"
       />
       {video && hovered && (
-        <video ref={startClip} muted autoPlay loop playsInline poster={lesson.image} aria-hidden="true" tabIndex={-1}>
+        <video ref={startClip} muted autoPlay loop playsInline poster={versionedCover(lesson.image)} aria-hidden="true" tabIndex={-1}>
           <source src={video} type="video/mp4" />
         </video>
       )}

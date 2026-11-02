@@ -1767,8 +1767,12 @@ export default function Library({
                 ...(familyLessonsForCategory(lessons, { category: "Conversación", conversationMode: value }) as Lesson[]),
                 ...(value === "worlds3d" ? familyLessonsForCategory(lessons, { category: "Conversación", conversationMode: "countries3d" }) as Lesson[] : []),
               ];
-              // One cover per card (Noche abierta, Ciudad en juego); its recording plays on hover.
-              const cover = items.find((lesson) => lesson.id === (value === "worlds3d" ? 223 : 139)) || items[0];
+              // One cover per card. Mundos 3D keeps the Noche abierta still (its recording plays on
+              // hover); Clásicas has its own painted café scene in the classic covers' style.
+              const noche = items.find((lesson) => lesson.id === 223);
+              const cover = value === "worlds3d"
+                ? (noche ? { ...noche, image: "/noche-abierta/preview.webp" } : items[0])
+                : { id: -2, title: locale === "es" ? "Clásicas" : "Classics", image: "/conversation-classics/ruta-clasicas.webp" };
               const active = conversationMode === value || (value === "worlds3d" && conversationMode === "countries3d");
               return (
                 <button

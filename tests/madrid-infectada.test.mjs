@@ -157,7 +157,7 @@ test('PRO by default: listed in the catalog, not in the access policy, no new de
 });
 
 test('the catalog cover is a 1200×750 lossy WebP like the other 3D covers', () => {
-  const file = readFileSync('public/madrid-infectada/cover.webp');
+  const file = readFileSync('public/madrid-infectada/portada.webp');
   assert.equal(file.toString('ascii', 0, 4), 'RIFF');
   assert.equal(file.toString('ascii', 8, 16), 'WEBPVP8 ');
   assert.deepEqual([file.readUInt16LE(26) & 0x3fff, file.readUInt16LE(28) & 0x3fff], [1200, 750]);
