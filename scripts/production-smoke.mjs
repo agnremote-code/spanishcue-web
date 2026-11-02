@@ -127,6 +127,14 @@ export async function runSmoke(origin, fetcher = fetch, { retryDelayMs = 1500 } 
     assert.equal(founder.trialCheckoutAvailable, true, "Paddle US$2 trial checkout must be available");
     // A ready Live Paddle webhook rejects a forged signature (503 = not configured).
     await check("/api/billing/paddle/webhook", 401, { method: "POST", headers: { "content-type": "application/json", "paddle-signature": "ts=1;h1=release-smoke" }, body: "{}" });
+    // Report only, never fail: whether Paddle's notification destination points
+    // here with every handled event. Paddle-side settings must not roll back a release.
+    try {
+      const response = await request("/api/billing/paddle/webhook-status", { headers });
+      results.push({ path: "/api/billing/paddle/webhook-status", status: response.status, paddleWebhook: await response.json().catch(() => null) });
+    } catch (error) {
+      results.push({ path: "/api/billing/paddle/webhook-status", status: 0, paddleWebhook: { error: String(error?.message || error).slice(0, 120) } });
+    }
   }
   // Checkout, payment confirmation and conversions refuse cross-site calls.
   for (const path of ["/api/billing/paddle/checkout", "/api/billing/paddle/confirm", "/api/billing/checkout", "/api/billing/conversion"]) {
@@ -139,4 +147,6 @@ export async function runSmoke(origin, fetcher = fetch, { retryDelayMs = 1500 } 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   const results = await runSmoke(process.env.SPANISHCUE_PRODUCTION_ORIGIN || "https://spanishcue.com");
   console.log(JSON.stringify({ passed: true, checks: results }, null, 2));
+  const webhook = results.find((result) => result.paddleWebhook)?.paddleWebhook;
+  if (webhook && process.env.GITHUB_ACTIONS) console.log(`::notice title=Paddle webhook::${JSON.stringify(webhook)}`);
 }

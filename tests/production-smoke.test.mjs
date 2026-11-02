@@ -157,3 +157,10 @@ test('a dropped GET is retried once, and a network failure names the request it 
   await assert.rejects(runSmoke('https://spanishcue.com', (url, options) => new URL(url).pathname === '/ingresar' ? stalled : normal(url, options), { retryDelayMs: 0 }),
     /GET \/ingresar: TimeoutError/);
 });
+
+test('the Paddle webhook status is reported and never fails the smoke', async () => {
+  const report = await runSmoke('https://spanishcue.com', fixture({ '/api/billing/paddle/webhook-status': () => Response.json({ destination: 'found', active: true, missingEvents: [] }) }));
+  assert.deepEqual(report.find(r => r.path === '/api/billing/paddle/webhook-status').paddleWebhook, { destination: 'found', active: true, missingEvents: [] });
+  const broken = await runSmoke('https://spanishcue.com', fixture({ '/api/billing/paddle/webhook-status': () => new Response('boom', { status: 500 }) }));
+  assert.equal(broken.find(r => r.path === '/api/billing/paddle/webhook-status').status, 500);
+});

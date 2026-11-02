@@ -322,6 +322,16 @@ function constantTimeEqual(left: string, right: string) {
   return diff === 0;
 }
 
+export type PaddleNotificationSetting = {
+  id?: string; type?: string; destination?: string; active?: boolean; api_version?: number;
+  subscribed_events?: { name?: string }[];
+};
+
+/** Notification destinations (read-only). The response also carries each endpoint secret: never pass it on. */
+export async function listPaddleNotificationSettings(config: PaddleRuntimeConfig) {
+  return paddleJson<PaddleNotificationSetting[]>(config, "/notification-settings");
+}
+
 export async function verifyPaddleWebhook(
   config: PaddleRuntimeConfig,
   rawBody: string,
