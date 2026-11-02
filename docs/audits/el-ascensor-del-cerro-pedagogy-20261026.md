@@ -172,3 +172,10 @@ Source: `docs/board/evidence/ascensor-2026-10-26/BUILD.md` («Verified» section
 **LQG VERDICT: NOT YET RELEASABLE.** The pedagogy gates and the code review pass. Release still requires:
 - (1) §9.2: a person listens to the 6 clips and records the result here. Unchanged: there is no new evidence, and nobody has listened.
 - (2) The world stays `featured:false` until G5(b) passes.
+
+## Addendum 2026-11-02 (Monday 3D routine): renumber and the automatic §9.2 check
+
+- **Renumbered 243 → 246.** Main's #292 «Más allá» took catalog id 243 on 2026-10-29 (#322 and #325 then took 244 and 245). The catalog row, route list, resource map, preview clip (`246.mp4`), `LESSON_ID` and test helpers now use 246; `addedAt` is 2026-11-02, `featured:false`. References to 243 above and in `BUILD.md` are historical.
+- **Speech-to-text and speaker check under [BOARD-DECISION-003](../board/decisions/BOARD-DECISION-003.md): NOT VALID on its first run** (run 41377386724, report [`ascensor-b2-run-41377386724.md`](../board/evidence/stt/ascensor-b2-run-41377386724.md)). It missed the seeded gap-word minimal pair «caro»→«caros», so its passes prove nothing.
+- Informative findings a listener must check first: in **cafe**, «Yaneth» is heard as «Janet»/«Jeanette» on lines 2, 3 and 5, and **line 8** («La junta de vecinos, con cuentas públicas. No la fundación.») was not located in the audio.
+- **§9.2 is still NOT MET. Release stays blocked.** No other gate changed.

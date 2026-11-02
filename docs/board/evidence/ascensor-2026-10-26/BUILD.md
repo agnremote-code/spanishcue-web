@@ -1,5 +1,7 @@
 # «El ascensor del cerro» B2: build evidence (Sofia, 2026-10-26)
 
+> 2026-11-02: the world was renumbered from catalog id 243 to **246** (243 went to «Más allá» on main). References to 243 below are historical.
+
 Branch `claude/escucha-3d-ascensor-cerro-b2-20261026`. These checks ran in the agent's Linux sandbox on the working tree as it stood when this note was written. They are not CI.
 
 ## What was built

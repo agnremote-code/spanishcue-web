@@ -1,6 +1,6 @@
 # Board STATUS: the single source of truth for the next run
 
-_Last updated: 2026-10-30 by the Friday 3D + assessment routine (scheduled cloud run; facilitator plus two fresh agents acting as Alejandro, see "Current work")._
+_Last updated: 2026-11-02 by the Monday 3D routine (scheduled cloud run; facilitator plus one fresh agent acting as Alejandro, see "Current work")._
 
 ## Owner decisions in force
 | Date | Decision |
@@ -31,7 +31,7 @@ Parallel streams: **3D = Sofia**, **technical SEO = Alejandro**, **QA/integratio
 | Rank | Item | Owner → reviewer | State |
 |---|---|---|---|
 | 1 | LES-001 «La feria de Villaluz» A2 PRO 3D world (LESSON-DECISION-001 v5 + BOARD-DECISION-001 overlays) | Martin (content) → Sofia (build); G4 by Alejandro or a fresh agent; QA Martin | **Deployed 2026-10-21**: PR #251 → `6383b3b6`, production run 39549567404 (workflow smoke passed). The changed-URL smoke is still owed (see Current work). Open follow-ups: G5(b) real-device check (featured flag stays off until then), T5 fps on a real Android, the cover still shows the baile host in its old spot |
-| 2 | **NEW 2026-10-23: «El ascensor del cerro», B2 PRO 3D world, Valparaíso** ([concept](concepts/2026-10-23-valparaiso-ascensor-del-cerro.md); selected 3 of 3) | Martin (content, after his cultural check) → Sofia (build) → G4 Alejandro or a fresh agent | **Next 3D slot, Mon 2026-10-26** (continue Wed if not gate-passed) |
+| 2 | **NEW 2026-10-23: «El ascensor del cerro», B2 PRO 3D world, Valparaíso** ([concept](concepts/2026-10-23-valparaiso-ascensor-del-cerro.md); selected 3 of 3) | Martin (content, after his cultural check) → Sofia (build) → G4 Alejandro or a fresh agent | **HELD on R4 (§9.2 listening).** Draft #282, renumbered to catalog id **246** on 2026-11-02 (243 went to «Más allá»). The BOARD-DECISION-003 speech-to-text check was NOT VALID on its first run (missed a seeded gap-word -s pair), and it flagged cafe («Yaneth» misheard; line 8 not located) |
 | 3 | «También, tampoco, sí, no: reaccionar», A1 PRO grammar (`a1.gram.tambien-tampoco`). **Partly covered already** (VERIFIED: `app/grammar-classroom/live/lessons/g332.ts:129` has a section «También, tampoco, sí, no · Reacting to tastes» with exercises), so whether any gap remains is a HYPOTHESIS; Martin duplicate-checks against main before any authoring | Martin → fresh agent (G4) | after rank 2 content |
 | — | ~~«Gustar y verbos como gustar» A1 PRO grammar class~~ | — | **DROPPED 2026-10-23** (Alejandro, on Martin's evidence): duplicates G032 «Gustar y encantar» (`g332.ts`) + G062 «Gustar, interesar, doler, faltar» (`g362.ts`), both live and PRO. The other gaps in BOARD-DECISION-002 §2 (superlativos, obligación, indefinidos) are also covered (369, 340/380, 370–372). Supersedes BOARD-DECISION-002 §3.1(2) on this point |
 | P | Technical SEO, highest impact first (parallel stream) | Alejandro → Sofia (code review), Martin (QA) | First fix = PR #224, **merged `c06c01c` and deployed 2026-10-20** (production run 39359743902, workflow smoke passed). The changed-URL content smoke is still owed (PUBLISHED.md, Pending verification) |
@@ -55,6 +55,7 @@ Parallel streams: **3D = Sofia**, **technical SEO = Alejandro**, **QA/integratio
 - **R0 (2026-10-20, blocking SEO measurement; STILL OPEN 2026-10-27, placeholder row again):** Windsor.ai paused all reads: "reads are paused because you have 6 accounts connected and your Free plan includes 1 account". Every `searchconsole` query returns that placeholder row with 0 values. Fix: disconnect the 5 extra accounts at https://onboard.windsor.ai/app/ (keep `sc-domain:spanishcue.com`) or upgrade. The board may not buy paid plans. The owner was notified by push on 2026-10-20. Until this is fixed there is no fresh Search Console evidence; the last real numbers are from 2026-10-17 (PR #224 body).
 - **R1:** Search Console Page-indexing report, Core Web Vitals report and per-query impressions. The Windsor connector exposes only search analytics and sitemaps.
 - **R2:** GA Admin: which property `G-6C7DY2C5LN` reports to.
+- **R4 (2026-10-26; restated 2026-11-02, the one access request BOARD-DECISION-003 §3.1 allows):** the Ascensor B2 clips need a person's listening (6 clips, about 7.7 min; first cafe lines 2, 3, 5 and 8), because the automatic check could not prove itself. Alternative: tell the board which speech-to-text host it may use from the sandbox. Until then #282 stays draft.
 - **R3:** a weekly aggregate-only D1 query (new accounts, first payments, opened/completed per 3D lesson). Agents never query production D1.
 
 ## Scheduled routines (created 2026-10-16; manage at https://claude.ai/code/routines)
@@ -77,6 +78,21 @@ All five run on `claude-opus-5-5`, follow [ROUTINES.md](ROUTINES.md), and each i
 - Session 0 (lesson test) took 55 messages, about 15 of them caused by crossed messages over circle 6. That led to the lock rule.
 
 ## Current work and next action
+- **2026-11-02 (Monday 3D routine): NO unit shipped. #282 «El ascensor del cerro» is still held, and the new automatic listening check proved NOT VALID** (branch `claude/escucha-3d-ascensor-cerro-b2-20261026`, draft PR #282; records PR from `claude/board-mon-3d-records-20261102`). Subscription usage: **UNKNOWN**.
+  - **Board:** convened proportionately. The facilitator built everything. A fresh agent acting as Alejandro reviewed it: REQUEST CHANGES with 4 blockers on v1, then DELTA APPROVE on v2, both before any result was seen. Sofia and Martin were not convened; Martin wrote the clips, so he could not review the check. Verbatim: [transcripts/2026-11-02-monday-3d-ascensor-stt.md](transcripts/2026-11-02-monday-3d-ascensor-stt.md).
+  - **Renumber done (VERIFIED):** #282 now uses catalog id **246**, merged with main `4a58863` (commit `22586846`). The new slug was added to the published-slug fixture. Reviewer D: clean, still PRO, no id collision with open PRs.
+  - **Checks:** `npm test` exit 0 at `70f871b2` (1,504 pass, 0 fail, `SPANISHCUE_TEST_WORKER_TIMEOUT_MS=180000`). Later commits touch only the STT script, its workflow and docs.
+  - **Listening check:** [BOARD-DECISION-003](decisions/BOARD-DECISION-003.md) (adopted) with `scripts/check-escucha-3d-stt.py` and `.github/workflows/escucha-3d-stt.yml`. The workflow runs whisper and Resemblyzer in GitHub Actions and commits only a report to its own `claude/*` branch.
+    - Run [41377386724](https://github.com/agnremote-code/spanishcue-web/actions/runs/41377386724) (v2, `55f7cd21`): **NOT VALID.** It held every seeded broken clip and found every seeded line defect, plus both speaker swaps (margins −0.205 and −0.344). It reported the seeded gap word «caro»→«caros» as heard.
+    - Real clips (informative only): 5 PASS. **cafe HOLD:** «Yaneth» heard as «Janet»/«Jeanette» (lines 2, 3 and 5), and line 8 not located in the audio.
+    - Report: [evidence/stt/ascensor-b2-run-41377386724.md](evidence/stt/ascensor-b2-run-41377386724.md). The rule was not tuned after the result. A re-run of the identical rule was started only to commit the full JSON (`ef276953`).
+  - **Disclosed:** the facilitator saw the cancelled v1 run's 9-line partial log after v2 had been pushed and approved (BOARD-DECISION-003 §5).
+  - **R4 restated to the owner** (Owner data requests, above) as the single access request the decision allows.
+  - **Next action:**
+    1. **Wed 11-04 3D slot:** if R4 is answered with a listening record, fix any defect it names, regenerate through the canonical pipeline, merge main and release #282. Otherwise do not touch #282. Take the next GPU-leak repair (bosque, then mas-alla), one world per PR, or run the concept pipeline for a new world.
+    2. Check whether cafe line 8 really is missing from the mp3: duration versus the manifest, and silence at the end. That is a measurable defect check, not a listening substitute. If it is missing, regenerate.
+    3. Fold the review's non-blocking notes a–e (decision §6) into a declared v3 of the check before its next use. Strengthening the gap-word -s case may need a phoneme-level aligner; whether one is reachable from Actions is UNKNOWN.
+    4. The W45 plan items for Tue and Thu are unchanged (2026-10-30 entry below).
 - **2026-10-30 (Friday 3D + assessment routine): gated repair of the Hospital unmount GPU leak + W44 assessment** (branch `claude/friday-assessment-20261030`, base main `49ddf69`). Subscription usage: **UNKNOWN**.
   - **Board:** convened proportionately as subagents of the facilitator. The facilitator built the repair. A fresh agent acting as Alejandro did the code review (**APPROVE**, no blockers; NB1 and NB2 applied). A second fresh agent acting as Alejandro wrote the assessment. Sofia and Martin were not convened. Verbatim: [transcripts/2026-10-30-friday-3d-assessment.md](transcripts/2026-10-30-friday-3d-assessment.md).
   - **R4 still unanswered** (#282 unchanged since 10-26), so Ascensor was not released. **New blocker found by the assessment (VERIFIED):** #282 and #292 «Más allá» (non-board, merged 10-29) both use **catalog id 243**; #282 must be renumbered before it can merge.
