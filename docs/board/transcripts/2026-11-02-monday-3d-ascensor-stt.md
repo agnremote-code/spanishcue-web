@@ -168,20 +168,38 @@ _Facilitator's note: when message 3 was sent, the statement «I have not read it
 
 > RECORDS VERDICT: REQUEST CHANGES
 >
-> One required fix; everything else in #333 matches the evidence, and §9.2 is correctly recorded as unmet. (Read-only; nothing modified. My own check: ffmpeg silence analysis of the clip; I did not listen.)
+> There is one required fix: the cafe line 8 measurement points at the wrong line. Everything else in PR #333 matches the evidence, and §9.2 is correctly recorded as still unmet. I worked read-only and modified nothing. My own check was a silence analysis of the clip with ffmpeg; I did not listen to it.
 >
-> **Required**
+> **Required change**
 >
-> 1. **The STATUS.md "Cafe line 8, measured this run" timings are line 9's, not line 8's** (Next action item 2: "speech at 79.4–85.4 s, 86.3–87.3 s and 88.3–89.3 s"). I re-ran silencedetect (−40 dB, 0.3 s) on `ascensor-b2-cafe.mp3` from the #282 branch: the last speech blocks are …68.6 (end of line 6), 70.18–71.71, 73.23–75.89, 76.88–77.85, 79.43–80.95, 81.26–85.37, 86.32–87.28, 88.27–89.28. Matched by length to the lines, 70.2–71.7 is line 7 («¿Y quién controlaría ese fondo?»), **73.2–77.9 (with a 1 s pause) fits line 8** (two sentences), and 79.4–89.3 is line 9 («Bueno, lo reconozco» … «Seguimos esperando» / «Vamos a una pausa»). So the quoted timings say nothing about line 8 and would send a listener to the wrong place. Suggested wording: speech is present at ≈73.2–75.9 and 76.9–77.9 s where line 8 should be (an estimate from silence analysis, not listening); the first model's transcript placed none of line 8's words, so whether line 8 is read correctly is UNKNOWN. Also say "not located in the first model's transcript" rather than "not located in the audio" (STATUS row 2 and run sub-bullet; BOARD-DECISION-003 §5 says «not located in the audio at all»). Keep "the file is not truncated" (90.648 s measured vs 90.58 s manifest).
+> 1. **The STATUS.md "Cafe line 8, measured this run" timings belong to line 9** (Next action item 2). It lists speech at 79.4–85.4, 86.3–87.3 and 88.3–89.3 s.
+>    - I ran silencedetect at −40 dB, 0.3 s minimum, on `ascensor-b2-cafe.mp3` from the #282 branch. The last speech blocks are 68.6 (end of line 6), 70.18–71.71, 73.23–75.89, 76.88–77.85, 79.43–80.95, 81.26–85.37, 86.32–87.28 and 88.27–89.28 s.
+>    - Matched by length against the lines: 70.2–71.7 is line 7 («¿Y quién controlaría ese fondo?»). 73.2–77.9, with a 1 s pause in the middle, fits line 8, which is two sentences. 79.4–89.3 is line 9: «Bueno, lo reconozco» / … / «Seguimos esperando» / «Vamos a una pausa».
+>    - So the timings quoted say nothing about line 8, and a listener would be sent to the wrong place.
+>    - Suggested wording: there is speech at ≈73.2–75.9 and 76.9–77.9 s, where line 8 should be. This is an estimate from silence analysis, not from listening. The first model's transcript placed none of line 8's words, so whether line 8 is read correctly is UNKNOWN.
+>    - Also say "not located in the first model's transcript" rather than "not located in the audio" (STATUS row 2, the run sub-bullet, and BOARD-DECISION-003 §5, which says «not located in the audio at all»).
+>    - Keep "the file is not truncated" (90.648 s measured, 90.58 s in the manifest).
 >
-> **Verified correct** (abridged by the facilitator: the reviewer listed the evidence report, the seeded and real-clip results, the v1 run and re-run, the #282 facts and the §9.2 status as matching the run logs and the repository.)
+> **Verified correct**
+>
+> - **Evidence report matches the job log.** `evidence/stt/ascensor-b2-run-41377386724.md` is the same, line for line, as the report printed in the job log (job 125060577371). The run was on `55f7cd21` and concluded failure. The Check step exited 1; the Commit report step failed on add/add conflicts in `run-log.txt` and `run.txt`. That matches the "add/add conflict" claim.
+> - **Seeded-test summary is accurate.** The log line reads `found [True ×6, False]`. Both speaker seeds were found, with margins −0.205 and −0.344. Every broken clip was held. «caro» was MISSED.
+> - **Real-clip results are accurate.** Five clips PASS and cafe HOLDs. Both models heard «Yaneth» wrongly on lines 2, 3 and 5. Line 8 has no span.
+> - **v1 run and re-run are as recorded.** v1 run 41376728456 on `70f871b2` was cancelled. The re-run 41378668632 on `ef276953` exists and is in progress. Between `23b87550` and `ef276953` the only script or workflow change is `git pull --rebase -X theirs`, so it is the "identical v2 rule".
+> - **Facts about #282 hold.**
+>   - #282 is a draft.
+>   - The renumber merge `22586846` has main `4a588632` as its parent.
+>   - The listening total is 7.73 min from the manifest.
+>   - The review messages in the transcript are verbatim, and both verdicts are reported correctly.
+>   - The v1/v2 timeline and the facilitator's note about the partial log are consistent between the transcript and §5.
+> - **§9.2 is correctly unmet everywhere.** STATUS row 2 says "HELD on R4", the run entry says "NO unit shipped", R4 is restated, and decision §5 says «§9.2 stays human-only». Nothing claims a pass.
 >
 > **Non-blocking**
 >
-> 2. The `npm test` count can't be confirmed from GitHub (CI + Auto Merge was skipped for the draft, run 41376734483). Mark it as a local run.
-> 3. "Later commits touch only the STT script, its workflow and docs" omits `.gitignore` and the deleted `.pyc` in `55f7cd21`.
-> 4. The «caro» miss has a second possible cause: the Chilean voice may soften the final -s in «caros y», so the seeded audio may itself have sounded like «caro». NOT VALID stands either way, but "cannot catch a swallowed -s" is one explanation, not a finding.
-> 5. The records exist on two branches; the item 1 fix must be made on both.
-> 6. The STT re-run (41378668632) will push a JSON report to #282's branch that #333 does not include.
+> 2. **The `npm test` count can't be confirmed from GitHub.** "`npm test` exit 0 at `70f871b2` (1,504 pass)" has no CI behind it, because CI + Auto Merge was skipped for the draft (run 41376734483). Mark it as a local run.
+> 3. **"Later commits touch only the STT script, its workflow and docs" is slightly incomplete.** `55f7cd21` also changed `.gitignore` and deleted the committed `.pyc`.
+> 4. **The «caro» miss has a second possible cause, so §5 overstates it a little.** The voice is Chilean (es-CL-Lorenzo), and Chilean speech often drops or softens a final -s, as in «caros y». So the seeded audio may itself have sounded like «caro». The verdict NOT VALID stands either way. But "the check cannot be trusted to catch a swallowed -s" is one explanation, not a finding.
+> 5. **The records exist in two branches.** All four files are byte-identical on #282's branch (`3d8113f2`/`be2aff55`) and on #333. The fix in item 1 has to be made in both, or one copy will be stale or conflict when #282 merges.
+> 6. **The STT re-run may leave #333 behind the latest evidence.** Run 41378668632 is still going and will push a JSON report to #282's branch; #333 does not include it.
 
-_Facilitator's note: message 6 is abridged in its "Verified correct" section only (marked above); the required and non-blocking items are as received, lightly condensed. Items 1–5 were applied (`#333` and #282 branch); item 6 is accepted: the JSON stays on #282's branch._
+_Facilitator's note: items 1–5 were applied on #333 and on the #282 branch. Item 6 is accepted: the JSON stays on #282's branch._
