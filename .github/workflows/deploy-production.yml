@@ -268,6 +268,15 @@ jobs:
             echo "exists=false" >> "$GITHUB_OUTPUT"
           fi
 
+      - name: Record the live sitemap before the new version
+        # Must run before the Worker is replaced: IndexNow submits only the URLs
+        # absent from this copy, so recording it after the deploy submits nothing.
+        if: inputs.action == 'deploy'
+        continue-on-error: true
+        run: |
+          if [ "$MODE" = "inert" ]; then ORIGIN="$PRODUCTION_WORKERS_DEV_URL"; else ORIGIN="https://spanishcue.com"; fi
+          curl -fsSL --max-time 30 -H 'Cache-Control: no-cache' "${ORIGIN}/sitemap.xml" -o /tmp/sitemap-before.xml || true
+
       - name: Deploy production Worker
         if: inputs.action == 'deploy'
         id: deploy
@@ -287,11 +296,6 @@ jobs:
           test -n "$ORIGIN"
           echo "origin=$ORIGIN" >> "$GITHUB_OUTPUT"
           { echo "Mode: $MODE"; echo "Deployed SHA: $SHA"; echo "Origin: $ORIGIN"; } >> "$GITHUB_STEP_SUMMARY"
-
-      - name: Record the live sitemap before the new version
-        if: inputs.action == 'deploy'
-        continue-on-error: true
-        run: curl -fsSL --max-time 30 "${{ steps.deploy.outputs.origin }}/sitemap.xml" -o /tmp/sitemap-before.xml || true
 
       - name: Wait for the new version
         if: inputs.action == 'deploy'
