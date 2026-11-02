@@ -1,0 +1,51 @@
+name: Escucha 3D speech-to-text check
+
+# BOARD-DECISION-003: an automatic word, gap-word and speaker check of the
+# listening clips, run where the model hosts are reachable. It never deploys:
+# it only commits its report to the same claude/* branch.
+on:
+  push:
+    branches: ["claude/escucha-3d-*"]
+    paths: ["docs/board/evidence/stt/request.json", "scripts/check-escucha-3d-stt.py", ".github/workflows/escucha-3d-stt.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: escucha-3d-stt-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  stt:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install tools
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends ffmpeg
+          pip install --index-url https://download.pytorch.org/whl/cpu torch
+          pip install faster-whisper resemblyzer edge-tts num2words numpy
+      - name: Check
+        run: |
+          set -o pipefail
+          game=$(python -c "import json;print(json.load(open('docs/board/evidence/stt/request.json'))['game'])")
+          level=$(python -c "import json;print(json.load(open('docs/board/evidence/stt/request.json'))['level'])")
+          seeded=$(python -c "import json;print('--seeded' if json.load(open('docs/board/evidence/stt/request.json')).get('seeded') else '')")
+          mkdir -p docs/board/evidence/stt
+          python scripts/check-escucha-3d-stt.py "$game" "$level" $seeded 2>&1 | tee docs/board/evidence/stt/run-log.txt
+      - name: Commit report
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
+          echo "run: ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID} at ${GITHUB_SHA}" > docs/board/evidence/stt/run.txt
+          git add -A docs/board/evidence/stt
+          if git diff --cached --quiet; then echo "No report"; exit 0; fi
+          git commit -m "Escucha 3D speech-to-text report"
+          git pull --rebase origin ${GITHUB_REF_NAME}
+          git push origin HEAD:${GITHUB_REF_NAME}
