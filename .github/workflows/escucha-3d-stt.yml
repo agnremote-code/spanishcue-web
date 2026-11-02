@@ -18,6 +18,8 @@ concurrency:
 
 jobs:
   stt:
+    # Never on main: the report is committed to the claude/* branch that ran it.
+    if: startsWith(github.ref_name, 'claude/')
     runs-on: ubuntu-latest
     timeout-minutes: 120
     steps:
