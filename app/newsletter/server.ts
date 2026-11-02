@@ -7,6 +7,9 @@ export const GIFT_COOKIE = '__Host-sc-regalo';
 /** Resend segment «SpanishCue · Newsletter profes ELE»; broadcasts go to this segment only. */
 export const NEWSLETTER_SEGMENT_ID = '0cc01e46-2405-4064-b35b-999ed0c27026';
 export const NEWSLETTER_FROM = 'Ale de SpanishCue <novedades@spanishcue.com>';
+/** Starts the Resend automation «SpanishCue · Secuencia profes» (emails on days 2, 4, 7 and 10; the welcome is day 0). */
+export const NURTURE_EVENT = 'spanishcue.newsletter.subscribed';
+export const PRICING_CTA = 'Desbloquear todo · US$15,50/mes';
 const GIFT_MAX_AGE = 60 * 60 * 24 * 365;
 const encoder = new TextEncoder();
 const hex = (bytes: Uint8Array) => Array.from(bytes, b => b.toString(16).padStart(2, '0')).join('');
@@ -95,6 +98,7 @@ const escapeHtml = (value: string) => value.replace(/[&<>"']/g, c => ({ '&': '&a
 export function welcomeEmail(origin: string, unsubscribeToken: string) {
   const lesson = `${origin}${GIFT_LESSON_PATH}`;
   const leave = `${origin}/api/newsletter/baja?t=${unsubscribeToken}`;
+  const pricing = `${origin}/pricing?utm_source=email&utm_medium=email&utm_campaign=nurture_d0`;
   const subject = `Tu clase de regalo: ${GIFT_LESSON_TITLE}`;
   const text = [
     '¡Hola!',
@@ -107,6 +111,8 @@ export function welcomeEmail(origin: string, unsubscribeToken: string) {
     'Si la abres desde otro dispositivo, vuelve a dejar tu email en la página de la clase y se desbloquea ahí también.',
     '',
     'De vez en cuando te voy a escribir con ideas para tus clases de ELE y las clases nuevas de SpanishCue.',
+    '',
+    `${PRICING_CTA}: ${pricing}`,
     '',
     'Ale',
     'SpanishCue',
@@ -124,6 +130,7 @@ export function welcomeEmail(origin: string, unsubscribeToken: string) {
 <p style="margin:0 0 22px"><a href="${escapeHtml(lesson)}" style="display:inline-block;background:#2457c5;color:#fff;text-decoration:none;padding:13px 22px;border-radius:10px;font-size:15px;font-weight:bold">Abrir la clase</a></p>
 <p style="font-size:14px;line-height:1.6;margin:0 0 14px;color:#4a5875">Si la abres desde otro dispositivo, vuelve a dejar tu email en la página de la clase y se desbloquea ahí también.</p>
 <p style="font-size:15px;line-height:1.6;margin:0">De vez en cuando te voy a escribir con ideas para tus clases de ELE y las clases nuevas de SpanishCue.</p>
+<p style="margin:22px 0 0"><a href="${escapeHtml(pricing)}" style="display:inline-block;background:#f6c343;color:#06152f;text-decoration:none;padding:13px 22px;border-radius:10px;font-size:15px;font-weight:bold">${PRICING_CTA}</a></p>
 <p style="font-size:15px;line-height:1.6;margin:18px 0 0">Ale<br>SpanishCue</p>
 </div>
 <p style="font-size:12px;color:#7a869e;margin:18px 0 0;text-align:center"><a href="${escapeHtml(leave)}" style="color:#7a869e">Darme de baja</a></p>
@@ -166,6 +173,13 @@ export async function deliverWelcome(env: NewsletterEnvironment, fetcher: Fetche
     });
     sent = response.ok;
   } catch { sent = false; }
+  // Only after the welcome went out: the automation sends the rest of the sequence to this contact.
+  if (sent) {
+    try {
+      const started = await resend(env, fetcher, '/events/send', { method: 'POST', idempotencyKey: `newsletter-nurture/${subscriber.id}`, body: { event: NURTURE_EVENT, email: subscriber.email, payload: { source: 'newsletter' } } });
+      if (!started.ok) console.warn('newsletter_nurture', { status: started.status });
+    } catch { console.warn('newsletter_nurture', { status: 0 }); }
+  }
   if (!sent || !synced) console.warn('newsletter_delivery', { sent, synced });
   return { sent, synced };
 }

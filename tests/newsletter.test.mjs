@@ -61,11 +61,17 @@ test('newsletter signup stores consented emails, unlocks only the gift class and
   assert.deepEqual(sent.to, ['ana@example.test']);
   assert.match(sent.html, new RegExp(mod.GIFT_LESSON_PATH));
   assert.match(sent.headers['List-Unsubscribe'], new RegExp(`/api/newsletter/baja\\?t=${row.unsubscribe_token}`));
+  assert.match(sent.html, /pricing\?utm_source=email&amp;utm_medium=email&amp;utm_campaign=nurture_d0/);
+  // The welcome starts the Resend nurture automation exactly once.
+  const nurture = calls.filter(c => c.url === 'https://api.resend.com/events/send');
+  assert.equal(nurture.length, 1);
+  assert.deepEqual(JSON.parse(nurture[0].init.body), { event: mod.NURTURE_EVENT, email: 'ana@example.test', payload: { source: 'newsletter' } });
 
   // Same email again: no duplicate row, no second welcome email.
   assert.equal((await mod.POST(request({ ...valid, email: 'ana@example.test' }))).status, 201);
   assert.equal(sqlite.prepare('SELECT count(*) n FROM newsletter_subscribers').get().n, 1);
   assert.equal(calls.filter(c => c.url === 'https://api.resend.com/emails').length, 1);
+  assert.equal(calls.filter(c => c.url === 'https://api.resend.com/events/send').length, 1);
 
   // The cookie opens the gift lesson and its audio only; forged or foreign cookies do not.
   const token = cookie.split(';')[0];
