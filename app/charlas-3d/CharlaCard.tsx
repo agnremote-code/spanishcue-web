@@ -1,14 +1,15 @@
 'use client';
 // Charlas 3D · the «E · Hablar» prompt and the question card of a circle.
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import './charlas.css';
 
 export type Charla = { key: string; title: string; intro: string; band: string; questions: { es: string; en?: string }[] };
 
 export default function CharlaCard({ near, charla, onOpen, onClose }: { near: string | null; charla: Charla | null; onOpen: () => void; onClose: () => void }) {
-  const [i, setI] = useState(0);
-  useEffect(() => { setI(0); }, [charla?.key]);
+  // The counter belongs to one circle: a new circle starts again at question 1.
+  const [step, setStep] = useState<{ key: string | undefined; i: number }>({ key: undefined, i: 0 });
+  const i = step.key === charla?.key ? step.i : 0;
   if (!charla) {
     if (!near) return null;
     return <button type="button" className="charla-prompt" onClick={onOpen}>
@@ -29,7 +30,7 @@ export default function CharlaCard({ near, charla, onOpen, onClose }: { near: st
       <p className="charla-guide">Respondes en voz alta con un ejemplo de tu vida y explicas por qué.{a0 && <span>Answer out loud with an example from your life.</span>}</p>
       <div className="charla-actions">
         <span className="charla-count">{(i % charla.questions.length) + 1} / {charla.questions.length}</span>
-        <button type="button" className="charla-next" onClick={() => setI(n => n + 1)} autoFocus>Otra pregunta</button>
+        <button type="button" className="charla-next" onClick={() => setStep({ key: charla.key, i: i + 1 })} autoFocus>Otra pregunta</button>
         <button type="button" className="charla-close" onClick={onClose}>Seguir caminando</button>
       </div>
     </div>
