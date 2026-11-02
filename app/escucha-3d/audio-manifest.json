@@ -81,6 +81,36 @@
    "seconds": 56.46,
    "src": "/audio/escucha-3d/argentina-b1-mendoza.mp3"
   },
+  "ascensor/b2-asamblea": {
+   "hash": "963d7227ae7ae3015777",
+   "seconds": 76.18,
+   "src": "/audio/escucha-3d/ascensor-b2-asamblea.mp3"
+  },
+  "ascensor/b2-cafe": {
+   "hash": "5dd113c1468b0984ff43",
+   "seconds": 90.58,
+   "src": "/audio/escucha-3d/ascensor-b2-cafe.mp3"
+  },
+  "ascensor/b2-escalera": {
+   "hash": "a0ca3f20ee6eba2b758c",
+   "seconds": 79.98,
+   "src": "/audio/escucha-3d/ascensor-b2-escalera.mp3"
+  },
+  "ascensor/b2-estacion": {
+   "hash": "b5241f081bdc4cfcc24d",
+   "seconds": 61.32,
+   "src": "/audio/escucha-3d/ascensor-b2-estacion.mp3"
+  },
+  "ascensor/b2-mirador": {
+   "hash": "9897052841476a87691b",
+   "seconds": 73.07,
+   "src": "/audio/escucha-3d/ascensor-b2-mirador.mp3"
+  },
+  "ascensor/b2-taller": {
+   "hash": "08d88f7067f56aebafa6",
+   "seconds": 82.54,
+   "src": "/audio/escucha-3d/ascensor-b2-taller.mp3"
+  },
   "australia/a0-nueva-gales": {
    "hash": "f220b9021c6ec241434a",
    "seconds": 31.68,

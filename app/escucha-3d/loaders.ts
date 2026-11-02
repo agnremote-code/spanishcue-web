@@ -116,6 +116,9 @@ export const LOADERS: Record<string, Record<string, Loader>> = (import.meta as u
   feria: {
     A2: () => import('./content/feria/a2.json'),
   },
+  ascensor: {
+    B2: () => import('./content/ascensor/b2.json'),
+  },
   madrid: {
     A0: () => import('./content/madrid/a0.json'),
     A1: () => import('./content/madrid/a1.json'),

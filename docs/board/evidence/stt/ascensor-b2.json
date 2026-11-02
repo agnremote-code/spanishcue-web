@@ -1,0 +1,1762 @@
+{
+ "game": "ascensor",
+ "level": "B2",
+ "rule": "BOARD-DECISION-003",
+ "models": [
+  "large-v3-turbo (faster-whisper, int8)",
+  "large-v3 (second model, findings only)",
+  "Resemblyzer VoiceEncoder"
+ ],
+ "margin": 0.02,
+ "seeded": {
+  "all_found": false,
+  "cases": [
+   {
+    "kind": "words",
+    "clip": "estacion",
+    "verdict_on_broken_clip": "HOLD",
+    "expected": [
+     {
+      "line": 4,
+      "what": "gap word «vuelto» deleted, gap word «caro» → «caros»",
+      "found": true
+     },
+     {
+      "line": 1,
+      "what": "«a ver» repeated twice at the line join",
+      "found": true
+     },
+     {
+      "line": 2,
+      "what": "plain word «ascensor» deleted",
+      "found": true
+     },
+     {
+      "line": 3,
+      "what": "article «la» → «las»",
+      "found": true
+     },
+     {
+      "line": 5,
+      "what": "first word «Y» → «Ya»",
+      "found": true
+     },
+     {
+      "line": null,
+      "what": "gap word «vuelto» reported as not heard",
+      "found": true
+     },
+     {
+      "line": null,
+      "what": "gap word «caro» reported as not heard",
+      "found": false
+     }
+    ],
+    "broken_lines": [
+     "Catalina, buenos días, habla Lorenzo. Le mando este audio porque usted me pidió que le contara cómo era el cerro antes, para la asamblea. Bueno, a ver. A ver, a ver.",
+     "Cuando empecé en el, hace treinta y cinco años, yo conocía a cada pasajero. Sabía quién bajaba al puerto, quién iba al hospital, quién volvía tarde.",
+     "Después el cerro se puso de moda. Primero llegaron los pintores, luego los hostales. La casa de los Ramírez se convirtió en un hostal, y las panadería de la esquina, en una tienda de recuerdos.",
+     "No digo que todo sea malo, ¿eh? Las casas ya no se caen, y eso es bueno. Pero el barrio se ha más caros y más callado. En invierno, la calle se queda vacía.",
+     "Ya una cosa más. Si la fundación pone a otra persona en mi caseta, yo no me enojo. Pero que me pregunten, al tiro, antes de firmar nada. Treinta y cinco años algo valen. Nos vemos en la asamblea."
+    ],
+    "detail": {
+     "clip": "seeded-words-estacion",
+     "verdict": "HOLD",
+     "gap_note": null,
+     "gap_words": [
+      {
+       "word": "vuelto",
+       "heard": false
+      },
+      {
+       "word": "caro",
+       "heard": true
+      },
+      {
+       "word": "invierno",
+       "heard": true
+      },
+      {
+       "word": "queda",
+       "heard": true
+      },
+      {
+       "word": "vacia",
+       "heard": true
+      }
+     ],
+     "lines": [
+      {
+       "line": 1,
+       "speaker": "Lorenzo",
+       "voice": "es-CL-LorenzoNeural",
+       "span": [
+        0.0,
+        10.32
+       ],
+       "findings": [
+        {
+         "authored": "",
+         "heard": "a ver a ver",
+         "at": 10.9,
+         "kind": "insert",
+         "clearable": false
+        }
+       ],
+       "cleared_by_second_model": false,
+       "second_model_heard": "catalina buenos dias habla lorenzo le mando este audio porque usted me pidio que le contara como era el cerro antes para la asamblea bueno a ver",
+       "words_ok": false,
+       "speaker_ok": true,
+       "speaker_note": "one voice in the clip"
+      },
+      {
+       "line": 2,
+       "speaker": "Lorenzo",
+       "voice": "es-CL-LorenzoNeural",
+       "span": [
+        13.18,
+        22.0
+       ],
+       "findings": [
+        {
+         "authored": "",
+         "heard": "a ver a ver",
+         "at": 10.9,
+         "kind": "insert",
+         "clearable": false
+        },
+        {
+         "authored": "ascensor",
+         "heard": "",
+         "at": 14.52,
+         "kind": "delete",
+         "clearable": true
+        }
+       ],
+       "cleared_by_second_model": false,
+       "second_model_heard": "cuando empece en el hace treinta y cinco años yo conocia a cada pasajero sabia quien bajaba al puerto quien iba al hospital quien volvia tarde",
+       "words_ok": false,
+       "speaker_ok": true,
+       "speaker_note": "one voice in the clip"
+      },
+      {
+       "line": 3,
+       "speaker": "Lorenzo",
+       "voice": "es-CL-LorenzoNeural",
+       "span": [
+        23.08,
+        34.56
+       ],
+       "findings": [
+        {
+         "authored": "la",
+         "heard": "las",
+         "at": 31.8,
+         "kind": "replace",
+         "clearable": true
+        }
+       ],
+       "cleared_by_second_model": false,
+       "second_model_heard": "despues el cerro se puso de moda primero llegaron los pintores luego los hostales la casa de los ramirez se convirtio en un hostal y la espanaderia de la esquina en una tienda de recuerdos",
+       "words_ok": false,
+       "speaker_ok": true,
+       "speaker_note": "one voice in the clip"
+      },
+      {
+       "line": 4,
+       "speaker": "Lorenzo",
+       "voice": "es-CL-LorenzoNeural",
+       "span": [
+        35.56,
+        46.5
+       ],
+       "findings": [
+        {
+         "authored": "se ha vuelto",
+         "heard": "sea",
+         "at": 42.06,
+         "kind": "replace",
+         "clearable": true
+        },
+        {
+         "authored": "y",
+         "heard": "si",
+         "at": 42.78,
+         "kind": "replace",
+         "clearable": true
+        }
+       ],
+       "cleared_by_second_model": false,
+       "second_model_heard": "no digo que todo sea malo eh las casas ya no se caen y eso es bueno pero el barrio sea mas caro si mas callado en invierno la calle se queda vacia",
+       "words_ok": false,
+       "speaker_ok": true,
+       "speaker_note": "one voice in the clip"
+      },
+      {
+       "line": 5,
+       "speaker": "Lorenzo",
+       "voice": "es-CL-LorenzoNeural",
+       "span": [
+        47.44,
+        61.32
+       ],
+       "findings": [
+        {
+         "authored": "y",
+         "heard": "ya",
+         "at": 47.44,
+         "kind": "replace",
+         "clearable": true
+        },
+        {
+         "authored": "valen",
+         "heard": "vale",
+         "at": 58.86,
+         "kind": "replace",
+         "clearable": true
+        }
+       ],
+       "cleared_by_second_model": false,
+       "second_model_heard": "ya una cosa mas si la fundacion pone a otra persona en mi caseta yo no me enojo pero que me pregunten al tiro antes de firmar nada treinta y cinco años algo valen nos vemos en la asamblea",
+       "words_ok": false,
+       "speaker_ok": true,
+       "speaker_note": "one voice in the clip"
+      }
+     ],
+     "transcript": "catalina buenos dias habla lorenzo le mando este audio porque usted me pidio que le contara como era el cerro antes para la asamblea bueno a ver a ver a ver cuando empece en el hace treinta y cinco años yo conocia a cada pasajero sabia quien bajaba al puerto quien iba al hospital quien volvia tarde despues el cerro se puso de moda primero llegaron los pintores luego los hostales la casa de los ramirez se convirtio en un hostal y las panaderia de la esquina en una tienda de recuerdos no digo que todo sea malo eh las casas ya no se caen y eso es bueno pero el barrio sea mas caro si mas callado en invierno la calle se queda vacia ya una cosa mas si la fundacion pone a otra persona en mi caseta yo no me enojo pero que me pregunten al tiro antes de firmar nada treinta y cinco años algo vale nos vemos en la asamblea",
+     "authored_words": 163,
+     "heard_words": 164
+    }
+   },
+   {
+    "kind": "speaker",
+    "clip": "escalera",
+    "verdict_on_broken_clip": "HOLD",
+    "expected": [
+     {
+      "line": 2,
+      "what": "line read by es-CL-CatalinaNeural instead of es-VE-PaolaNeural",
+      "found": true,
+      "margin_declared_minus_best_other": -0.208
+     }
+    ],
+    "broken_lines": [
+     "Uf, espera, Paola. Ciento cuarenta escalones con esta bolsa. Y hay vecinas de ochenta años que suben esto todos los días, ¿cachai?",
+     "Lo sé, Catalina. Aunque no lo creas, yo también subo a pie. Por eso quiero que reabra pronto.",
+     "Entonces estamos de acuerdo en algo.",
+     "En casi todo. Mira, aunque la tarifa vecinal es justa, alguien tiene que pagar los cables. Y los turistas pueden pagar más.",
+     "Puede ser. Pero por mucho que paguen, el ascensor no puede ser de ellos. Si la fundación pone un horario pensado para turistas, a las seis de la mañana no sube nadie.",
+     "En lo del horario tienes razón. Te lo concedo. Pero sin visitantes, mi café cierra, y con él se pierden tres puestos de trabajo del cerro.",
+     "Es cierto, no lo discuto. Si bien tu café ayuda al cerro, la asamblea va a pedir primero una tarifa vecinal.",
+     "Me parece bien, siempre que haya también una tarifa turística. Dos tarifas, Catalina. No es tan difícil."
+    ],
+    "detail": {
+     "clip": "seeded-speaker-escalera",
+     "verdict": "HOLD",
+     "gap_note": null,
+     "gap_words": [
+      {
+       "word": "justa",
+       "heard": true
+      },
+      {
+       "word": "cables",
+       "heard": true
+      },
+      {
+       "word": "turistas",
+       "heard": true
+      },
+      {
+       "word": "mas",
+       "heard": true
+      }
+     ],
+     "lines": [
+      {
+       "line": 1,
+       "speaker": "Catalina",
+       "voice": "es-CL-CatalinaNeural",
+       "span": [
+        0.0,
+        10.0
+       ],
+       "findings": [],
+       "cleared_by_second_model": false,
+       "words_ok": true,
+       "similarity": {
+        "es-CL-CatalinaNeural": 0.962,
+        "es-VE-PaolaNeural": 0.798
+       },
+       "closest_voice": "es-CL-CatalinaNeural",
+       "speaker_ok": true
+      },
+      {
+       "line": 2,
+       "speaker": "Paola",
+       "voice": "es-VE-PaolaNeural",
+       "span": [
+        10.98,
+        18.46
+       ],
+       "findings": [],
+       "cleared_by_second_model": false,
+       "words_ok": true,
+       "similarity": {
+        "es-CL-CatalinaNeural": 0.961,
+        "es-VE-PaolaNeural": 0.753
+       },
+       "closest_voice": "es-CL-CatalinaNeural",
+       "speaker_ok": false,
+       "speaker_note": "closest voice es-CL-CatalinaNeural, margin -0.207"
+      },
+      {
+       "line": 3,
+       "speaker": "Catalina",
+       "voice": "es-CL-CatalinaNeural",
+       "span": [
+        19.68,
+        21.74
+       ],
+       "findings": [],
+       "cleared_by_second_model": false,
+       "words_ok": true,
+       "similarity": {
+        "es-CL-CatalinaNeural": 0.885,
+        "es-VE-PaolaNeural": 0.624
+       },
+       "closest_voice": "es-CL-CatalinaNeural",
+       "speaker_ok": true
+      },
+      {
+       "line": 4,
+       "speaker": "Paola",
+       "voice": "es-VE-PaolaNeural",
+       "span": [
+        22.74,
+        33.22
+       ],
+       "findings": [],
+       "cleared_by_second_model": false,
+       "words_ok": true,
+       "similarity": {
+        "es-CL-CatalinaNeural": 0.743,
+        "es-VE-PaolaNeural": 0.964
+       },
+       "closest_voice": "es-VE-PaolaNeural",
+       "speaker_ok": true
+      },
+      {
+       "line": 5,
+       "speaker": "Catalina",
+       "voice": "es-CL-CatalinaNeural",
+       "span": [
+        34.5,
+        45.74
+       ],
+       "findings": [],
+       "cleared_by_second_model": false,
+       "words_ok": true,
+       "similarity": {
+        "es-CL-CatalinaNeural": 0.97,
+        "es-VE-PaolaNeural": 0.78
+       },
+       "closest_voice": "es-CL-CatalinaNeural",
+       "speaker_ok": true
+      },
+      {
+       "line": 6,
+       "speaker": "Paola",
+       "voice": "es-VE-PaolaNeural",
+       "span": [
+        46.8,
+        57.72
+       ],
+       "findings": [],
+       "cleared_by_second_model": false,
+       "words_ok": true,
+       "similarity": {
+        "es-CL-CatalinaNeural": 0.752,
+        "es-VE-PaolaNeural": 0.963
+       },
+       "closest_voice": "es-VE-PaolaNeural",
+       "speaker_ok": true
+      },
+      {
+       "line": 7,
+       "speaker": "Catalina",
+       "voice": "es-CL-CatalinaNeural",
+       "span": [
+        58.68,
+        66.46
+       ],
+       "findings": [],
+       "cleared_by_second_model": false,
+       "words_ok": true,
+       "similarity": {
+        "es-CL-CatalinaNeural": 0.947,
+        "es-VE-PaolaNeural": 0.775
+       },
+       "closest_voice": "es-CL-CatalinaNeural",
+       "speaker_ok": true
+      },
+      {
+       "line": 8,
+       "speaker": "Paola",
+       "voice": "es-VE-PaolaNeural",
+       "span": [
+        67.4,
+        77.12
+       ],
+       "findings": [],
+       "cleared_by_second_model": false,
+       "words_ok": true,
+       "similarity": {
+        "es-CL-CatalinaNeural": 0.705,
+        "es-VE-PaolaNeural": 0.94
+       },
+       "closest_voice": "es-VE-PaolaNeural",
+       "speaker_ok": true
+      }
+     ],
+     "transcript": "uf espera paola ciento cuarenta escalones con esta bolsa y hay vecinas de ochenta años que suben esto todos los dias cachai lo se catalina aunque no lo creas yo tambien subo a pie por eso quiero que reabra pronto entonces estamos de acuerdo en algo en casi todo mira aunque la tarifa vecinal es justa alguien tiene que pagar los cables y los turistas pueden pagar mas puede ser pero por mucho que paguen el ascensor no puede ser de ellos si la fundacion pone un horario pensado para turistas a las seis de la mañana no sube nadie en lo del horario tienes razon te lo concedo pero sin visitantes mi cafe cierra y con el se pierden tres puestos de trabajo del cerro es cierto no lo discuto si bien tu cafe ayuda al cerro la asamblea va a pedir primero una tarifa vecinal me parece bien siempre que haya tambien una tarifa turistica dos tarifas catalina no es tan dificil",
+     "authored_words": 164,
+     "heard_words": 164
+    }
+   },
+   {
+    "kind": "speaker",
+    "clip": "cafe",
+    "verdict_on_broken_clip": "HOLD",
+    "expected": [
+     {
+      "line": 2,
+      "what": "line read by es-AR-TomasNeural instead of es-CO-SalomeNeural",
+      "found": true,
+      "margin_declared_minus_best_other": -0.342
+     }
+    ],
+    "broken_lines": [
+     "Buenas tardes, cerro. Esto es Micrófono abierto. Una sola pregunta hoy: cuando reabra el ascensor, ¿cuánto debería costar? Tenemos la primera llamada. Hola, ¿con quién hablo?",
+     "Hola, Ignacio. Soy Yaneth, enfermera. Trabajo de noche en el plan y vuelvo a casa a las siete de la mañana.",
+     "¿Y qué propones, Yaneth?",
+     "Mira, yo acepto una tarifa turística más cara. No me molesta. Pero solo si el primer viaje sale a las seis. Si el ascensor abre a las diez, para los que trabajamos no sirve de nada.",
+     "Clarísimo. Gracias, Yaneth. Segunda llamada. Luis, adelante.",
+     "Hola, Ignacio. Yo soy guía y llevo grupos al cerro todas las semanas. Estoy de acuerdo con la tarifa doble para turistas, siempre que el dinero extra vaya a un fondo para mantener el ascensor. Si no, en cinco años estamos otra vez igual.",
+     "¿Y quién controlaría ese fondo?",
+     "La junta de vecinos, con cuentas públicas. No la fundación.",
+     "Bueno, lo reconozco: hace un mes le pedimos una entrevista a la fundación, y todavía no ha contestado. Seguimos esperando. Vamos a una pausa."
+    ],
+    "detail": {
+     "clip": "seeded-speaker-cafe",
+     "verdict": "HOLD",
+     "gap_note": null,
+     "gap_words": [
+      {
+       "word": "doble",
+       "heard": true
+      },
+      {
+       "word": "extra",
+       "heard": true
+      },
+      {
+       "word": "fondo",
+       "heard": true
+      },
+      {
+       "word": "mantener",
+       "heard": true
+      }
+     ],
+     "lines": [
+      {
+       "line": 1,
+       "speaker": "Ignacio",
+       "voice": "es-AR-TomasNeural",
+       "span": [
+        0.0,
+        13.88
+       ],
+       "findings": [],
+       "cleared_by_second_model": false,
+       "words_ok": true,
+       "similarity": {
+        "es-AR-TomasNeural": 0.959,
+        "es-CO-SalomeNeural": 0.577,
+        "es-EC-LuisNeural": 0.714
+       },
+       "closest_voice": "es-AR-TomasNeural",
+       "speaker_ok": true
+      },
+      {
+       "line": 2,
+       "speaker": "Yaneth",
+       "voice": "es-CO-SalomeNeural",
+       "span": [
+        14.96,
+        22.74
+       ],
+       "findings": [
+        {
+         "authored": "yaneth",
+         "heard": "janet",
+         "at": 17.64,
+         "kind": "replace",
+         "clearable": true
+        }
+       ],
+       "cleared_by_second_model": false,
+       "second_model_heard": "hola ignacio soy janet enfermera trabajo de noche en el plan y vuelvo a casa a las siete de la mañana",
+       "words_ok": false,
+       "similarity": {
+        "es-AR-TomasNeural": 0.947,
+        "es-CO-SalomeNeural": 0.605,
+        "es-EC-LuisNeural": 0.684
+       },
+       "closest_voice": "es-AR-TomasNeural",
+       "speaker_ok": false,
+       "speaker_note": "closest voice es-AR-TomasNeural, margin -0.342"
+      },
+      {
+       "line": 3,
+       "speaker": "Ignacio",
+       "voice": "es-AR-TomasNeural",
+       "span": [
+        23.74,
+        25.56
+       ],
+       "findings": [
+        {
+         "authored": "yaneth",
+         "heard": "janet",
+         "at": 25.34,
+         "kind": "replace",
+         "clearable": true
+        }
+       ],
+       "cleared_by_second_model": false,
+       "second_model_heard": "y que propones jeanette",
+       "words_ok": false,
+       "similarity": {
+        "es-AR-TomasNeural": 0.816,
+        "es-CO-SalomeNeural": 0.568,
+        "es-EC-LuisNeural": 0.616
+       },
+       "closest_voice": "es-AR-TomasNeural",
+       "speaker_ok": true
+      },
+      {
+       "line": 4,
+       "speaker": "Yaneth",
+       "voice": "es-CO-SalomeNeural",
+       "span": [
+        26.9,
+        40.54
+       ],
+       "findings": [],
+       "cleared_by_second_model": false,
+       "words_ok": true,
+       "similarity": {
+        "es-AR-TomasNeural": 0.577,
+        "es-CO-SalomeNeural": 0.967,
+        "es-EC-LuisNeural": 0.586
+       },
+       "closest_voice": "es-CO-SalomeNeural",
+       "speaker_ok": true
+      },
+      {
+       "line": 5,
+       "speaker": "Ignacio",
+       "voice": "es-AR-TomasNeural",
+       "span": [
+        41.92,
+        48.62
+       ],
+       "findings": [
+        {
+         "authored": "yaneth",
+         "heard": "janet",
+         "at": 44.42,
+         "kind": "replace",
+         "clearable": true
+        }
+       ],
+       "cleared_by_second_model": false,
+       "second_model_heard": "clarisimo gracias jeanette segunda llamada luis adelante",
+       "words_ok": false,
+       "similarity": {
+        "es-AR-TomasNeural": 0.89,
+        "es-CO-SalomeNeural": 0.582,
+        "es-EC-LuisNeural": 0.647
+       },
+       "closest_voice": "es-AR-TomasNeural",
+       "speaker_ok": true
+      },
+      {
+       "line": 6,
+       "speaker": "Luis",
+       "voice": "es-EC-LuisNeural",
+       "span": [
+        50.02,
+        67.76
+       ],
+       "findings": [],
+       "cleared_by_second_model": false,
+       "words_ok": true,
+       "similarity": {
+        "es-AR-TomasNeural": 0.704,
+        "es-CO-SalomeNeural": 0.618,
+        "es-EC-LuisNeural": 0.957
+       },
+       "closest_voice": "es-EC-LuisNeural",
+       "speaker_ok": true
+      },
+      {
+       "line": 7,
+       "speaker": "Ignacio",
+       "voice": "es-AR-TomasNeural",
+       "span": [
+        68.8,
+        70.84
+       ],
+       "findings": [],
+       "cleared_by_second_model": false,
+       "words_ok": true,
+       "similarity": {
+        "es-AR-TomasNeural": 0.87,
+        "es-CO-SalomeNeural": 0.526,
+        "es-EC-LuisNeural": 0.647
+       },
+       "closest_voice": "es-AR-TomasNeural",
+       "speaker_ok": true
+      },
+      {
+       "line": 8,
+       "speaker": "Luis",
+       "voice": "es-EC-LuisNeural",
+       "span": [
+        71.9,
+        77.0
+       ],
+       "findings": [],
+       "cleared_by_second_model": false,
+       "words_ok": true,
+       "similarity": {
+        "es-AR-TomasNeural": 0.648,
+        "es-CO-SalomeNeural": 0.594,
+        "es-EC-LuisNeural": 0.916
+       },
+       "closest_voice": "es-EC-LuisNeural",
+       "speaker_ok": true
+      },
+      {
+       "line": 9,
+       "speaker": "Ignacio",
+       "voice": "es-AR-TomasNeural",
+       "span": [
+        78.38,
+        88.44
+       ],
+       "findings": [],
+       "cleared_by_second_model": false,
+       "words_ok": true,
+       "similarity": {
+        "es-AR-TomasNeural": 0.953,
+        "es-CO-SalomeNeural": 0.565,
+        "es-EC-LuisNeural": 0.698
+       },
+       "closest_voice": "es-AR-TomasNeural",
+       "speaker_ok": true
+      }
+     ],
+     "transcript": "buenas tardes cerro esto es microfono abierto una sola pregunta hoy cuando reabra el ascensor cuanto deberia costar tenemos la primera llamada hola con quien hablo hola ignacio soy janet enfermera trabajo de noche en el plan y vuelvo a casa a las siete de la mañana y que propones janet mira yo acepto una tarifa turistica mas cara no me molesta pero solo si el primer viaje sale a las seis si el ascensor abre a las diez para los que trabajamos no sirve de nada clarisimo gracias janet segunda llamada luis adelante hola ignacio yo soy guia y llevo grupos al cerro todas las semanas estoy de acuerdo con la tarifa doble para turistas siempre que el dinero extra vaya a un fondo para mantener el ascensor si no en cinco años estamos otra vez igual y quien controlaria ese fondo la junta de vecinos con cuentas publicas no la fundacion bueno lo reconozco hace un mes le pedimos una entrevista a la fundacion y todavia no ha contestado seguimos esperando vamos a una pausa",
+     "authored_words": 177,
+     "heard_words": 177
+    }
+   }
+  ]
+ },
+ "clips": [
+  {
+   "clip": "estacion",
+   "verdict": "PASS",
+   "gap_note": null,
+   "gap_words": [
+    {
+     "word": "vuelto",
+     "heard": true
+    },
+    {
+     "word": "caro",
+     "heard": true
+    },
+    {
+     "word": "invierno",
+     "heard": true
+    },
+    {
+     "word": "queda",
+     "heard": true
+    },
+    {
+     "word": "vacia",
+     "heard": true
+    }
+   ],
+   "lines": [
+    {
+     "line": 1,
+     "speaker": "Lorenzo",
+     "voice": "es-CL-LorenzoNeural",
+     "span": [
+      0.0,
+      10.32
+     ],
+     "findings": [],
+     "cleared_by_second_model": false,
+     "words_ok": true,
+     "speaker_ok": true,
+     "speaker_note": "one voice in the clip"
+    },
+    {
+     "line": 2,
+     "speaker": "Lorenzo",
+     "voice": "es-CL-LorenzoNeural",
+     "span": [
+      11.26,
+      20.54
+     ],
+     "findings": [],
+     "cleared_by_second_model": false,
+     "words_ok": true,
+     "speaker_ok": true,
+     "speaker_note": "one voice in the clip"
+    },
+    {
+     "line": 3,
+     "speaker": "Lorenzo",
+     "voice": "es-CL-LorenzoNeural",
+     "span": [
+      21.6,
+      33.06
+     ],
+     "findings": [],
+     "cleared_by_second_model": false,
+     "words_ok": true,
+     "speaker_ok": true,
+     "speaker_note": "one voice in the clip"
+    },
+    {
+     "line": 4,
+     "speaker": "Lorenzo",
+     "voice": "es-CL-LorenzoNeural",
+     "span": [
+      34.08,
+      45.26
+     ],
+     "findings": [],
+     "cleared_by_second_model": false,
+     "words_ok": true,
+     "speaker_ok": true,
+     "speaker_note": "one voice in the clip"
+    },
+    {
+     "line": 5,
+     "speaker": "Lorenzo",
+     "voice": "es-CL-LorenzoNeural",
+     "span": [
+      46.2,
+      60.06
+     ],
+     "findings": [
+      {
+       "authored": "valen",
+       "heard": "vale",
+       "at": 57.58,
+       "kind": "replace",
+       "clearable": true
+      }
+     ],
+     "cleared_by_second_model": true,
+     "second_model_heard": "y una cosa mas si la fundacion pone a otra persona en mi caseta yo no me enojo pero que me pregunten al tiro antes de firmar nada treinta y cinco años algo valen nos vemos en la asamblea",
+     "words_ok": true,
+     "speaker_ok": true,
+     "speaker_note": "one voice in the clip"
+    }
+   ],
+   "transcript": "catalina buenos dias habla lorenzo le mando este audio porque usted me pidio que le contara como era el cerro antes para la asamblea bueno a ver cuando empece en el ascensor hace treinta y cinco años yo conocia a cada pasajero sabia quien bajaba al puerto quien iba al hospital quien volvia tarde despues el cerro se puso de moda primero llegaron los pintores luego los hostales la casa de los ramirez se convirtio en un hostal y la panaderia de la esquina en una tienda de recuerdos no digo que todo sea malo eh las casas ya no se caen y eso es bueno pero el barrio se ha vuelto mas caro y mas callado en invierno la calle se queda vacia y una cosa mas si la fundacion pone a otra persona en mi caseta yo no me enojo pero que me pregunten al tiro antes de firmar nada treinta y cinco años algo vale nos vemos en la asamblea",
+   "authored_words": 163,
+   "heard_words": 163
+  },
+  {
+   "clip": "escalera",
+   "verdict": "PASS",
+   "gap_note": null,
+   "gap_words": [
+    {
+     "word": "justa",
+     "heard": true
+    },
+    {
+     "word": "cables",
+     "heard": true
+    },
+    {
+     "word": "turistas",
+     "heard": true
+    },
+    {
+     "word": "mas",
+     "heard": true
+    }
+   ],
+   "lines": [
+    {
+     "line": 1,
+     "speaker": "Catalina",
+     "voice": "es-CL-CatalinaNeural",
+     "span": [
+      0.0,
+      10.0
+     ],
+     "findings": [],
+     "cleared_by_second_model": false,
+     "words_ok": true,
+     "similarity": {
+      "es-CL-CatalinaNeural": 0.958,
+      "es-VE-PaolaNeural": 0.799
+     },
+     "closest_voice": "es-CL-CatalinaNeural",
+     "speaker_ok": true
+    },
+    {
+     "line": 2,
+     "speaker": "Paola",
+     "voice": "es-VE-PaolaNeural",
+     "span": [
+      10.98,
+      19.72
+     ],
+     "findings": [],
+     "cleared_by_second_model": false,
+     "words_ok": true,
+     "similarity": {
+      "es-CL-CatalinaNeural": 0.761,
+      "es-VE-PaolaNeural": 0.94
+     },
+     "closest_voice": "es-VE-PaolaNeural",
+     "speaker_ok": true
+    },
+    {
+     "line": 3,
+     "speaker": "Catalina",
+     "voice": "es-CL-CatalinaNeural",
+     "span": [
+      21.0,
+      23.08
+     ],
+     "findings": [],
+     "cleared_by_second_model": false,
+     "words_ok": true,
+     "similarity": {
+      "es-CL-CatalinaNeural": 0.872,
+      "es-VE-PaolaNeural": 0.596
+     },
+     "closest_voice": "es-CL-CatalinaNeural",
+     "speaker_ok": true
+    },
+    {
+     "line": 4,
+     "speaker": "Paola",
+     "voice": "es-VE-PaolaNeural",
+     "span": [
+      24.18,
+      34.56
+     ],
+     "findings": [],
+     "cleared_by_second_model": false,
+     "words_ok": true,
+     "similarity": {
+      "es-CL-CatalinaNeural": 0.733,
+      "es-VE-PaolaNeural": 0.96
+     },
+     "closest_voice": "es-VE-PaolaNeural",
+     "speaker_ok": true
+    },
+    {
+     "line": 5,
+     "speaker": "Catalina",
+     "voice": "es-CL-CatalinaNeural",
+     "span": [
+      35.88,
+      47.08
+     ],
+     "findings": [],
+     "cleared_by_second_model": false,
+     "words_ok": true,
+     "similarity": {
+      "es-CL-CatalinaNeural": 0.972,
+      "es-VE-PaolaNeural": 0.779
+     },
+     "closest_voice": "es-CL-CatalinaNeural",
+     "speaker_ok": true
+    },
+    {
+     "line": 6,
+     "speaker": "Paola",
+     "voice": "es-VE-PaolaNeural",
+     "span": [
+      48.08,
+      59.06
+     ],
+     "findings": [],
+     "cleared_by_second_model": false,
+     "words_ok": true,
+     "similarity": {
+      "es-CL-CatalinaNeural": 0.753,
+      "es-VE-PaolaNeural": 0.963
+     },
+     "closest_voice": "es-VE-PaolaNeural",
+     "speaker_ok": true
+    },
+    {
+     "line": 7,
+     "speaker": "Catalina",
+     "voice": "es-CL-CatalinaNeural",
+     "span": [
+      60.08,
+      67.8
+     ],
+     "findings": [],
+     "cleared_by_second_model": false,
+     "words_ok": true,
+     "similarity": {
+      "es-CL-CatalinaNeural": 0.949,
+      "es-VE-PaolaNeural": 0.78
+     },
+     "closest_voice": "es-CL-CatalinaNeural",
+     "speaker_ok": true
+    },
+    {
+     "line": 8,
+     "speaker": "Paola",
+     "voice": "es-VE-PaolaNeural",
+     "span": [
+      68.8,
+      78.46
+     ],
+     "findings": [],
+     "cleared_by_second_model": false,
+     "words_ok": true,
+     "similarity": {
+      "es-CL-CatalinaNeural": 0.713,
+      "es-VE-PaolaNeural": 0.944
+     },
+     "closest_voice": "es-VE-PaolaNeural",
+     "speaker_ok": true
+    }
+   ],
+   "transcript": "uf espera paola ciento cuarenta escalones con esta bolsa y hay vecinas de ochenta años que suben esto todos los dias cachai lo se catalina aunque no lo creas yo tambien subo a pie por eso quiero que reabra pronto entonces estamos de acuerdo en algo en casi todo mira aunque la tarifa vecinal es justa alguien tiene que pagar los cables y los turistas pueden pagar mas puede ser pero por mucho que paguen el ascensor no puede ser de ellos si la fundacion pone un horario pensado para turistas a las seis de la mañana no sube nadie en lo del horario tienes razon te lo concedo pero sin visitantes mi cafe cierra y con el se pierden tres puestos de trabajo del cerro es cierto no lo discuto si bien tu cafe ayuda al cerro la asamblea va a pedir primero una tarifa vecinal me parece bien siempre que haya tambien una tarifa turistica dos tarifas catalina no es tan dificil",
+   "authored_words": 164,
+   "heard_words": 164
+  },
+  {
+   "clip": "cafe",
+   "verdict": "HOLD",
+   "gap_note": null,
+   "gap_words": [
+    {
+     "word": "doble",
+     "heard": true
+    },
+    {
+     "word": "extra",
+     "heard": true
+    },
+    {
+     "word": "fondo",
+     "heard": true
+    },
+    {
+     "word": "mantener",
+     "heard": true
+    }
+   ],
+   "lines": [
+    {
+     "line": 1,
+     "speaker": "Ignacio",
+     "voice": "es-AR-TomasNeural",
+     "span": [
+      0.0,
+      13.88
+     ],
+     "findings": [],
+     "cleared_by_second_model": false,
+     "words_ok": true,
+     "similarity": {
+      "es-AR-TomasNeural": 0.955,
+      "es-CO-SalomeNeural": 0.581,
+      "es-EC-LuisNeural": 0.717
+     },
+     "closest_voice": "es-AR-TomasNeural",
+     "speaker_ok": true
+    },
+    {
+     "line": 2,
+     "speaker": "Yaneth",
+     "voice": "es-CO-SalomeNeural",
+     "span": [
+      15.02,
+      23.52
+     ],
+     "findings": [
+      {
+       "authored": "yaneth",
+       "heard": "janet",
+       "at": 17.84,
+       "kind": "replace",
+       "clearable": true
+      }
+     ],
+     "cleared_by_second_model": false,
+     "second_model_heard": "hola ignacio soy janet enfermera trabajo de noche en el plan y vuelvo a casa a las siete de la mañana",
+     "words_ok": false,
+     "similarity": {
+      "es-AR-TomasNeural": 0.569,
+      "es-CO-SalomeNeural": 0.963,
+      "es-EC-LuisNeural": 0.546
+     },
+     "closest_voice": "es-CO-SalomeNeural",
+     "speaker_ok": true
+    },
+    {
+     "line": 3,
+     "speaker": "Ignacio",
+     "voice": "es-AR-TomasNeural",
+     "span": [
+      24.48,
+      26.34
+     ],
+     "findings": [
+      {
+       "authored": "yaneth",
+       "heard": "janet",
+       "at": 26.08,
+       "kind": "replace",
+       "clearable": true
+      }
+     ],
+     "cleared_by_second_model": false,
+     "second_model_heard": "y que propones jeanette",
+     "words_ok": false,
+     "similarity": {
+      "es-AR-TomasNeural": 0.81,
+      "es-CO-SalomeNeural": 0.538,
+      "es-EC-LuisNeural": 0.612
+     },
+     "closest_voice": "es-AR-TomasNeural",
+     "speaker_ok": true
+    },
+    {
+     "line": 4,
+     "speaker": "Yaneth",
+     "voice": "es-CO-SalomeNeural",
+     "span": [
+      27.66,
+      41.3
+     ],
+     "findings": [],
+     "cleared_by_second_model": false,
+     "words_ok": true,
+     "similarity": {
+      "es-AR-TomasNeural": 0.578,
+      "es-CO-SalomeNeural": 0.969,
+      "es-EC-LuisNeural": 0.591
+     },
+     "closest_voice": "es-CO-SalomeNeural",
+     "speaker_ok": true
+    },
+    {
+     "line": 5,
+     "speaker": "Ignacio",
+     "voice": "es-AR-TomasNeural",
+     "span": [
+      42.68,
+      49.38
+     ],
+     "findings": [
+      {
+       "authored": "yaneth",
+       "heard": "janet",
+       "at": 45.14,
+       "kind": "replace",
+       "clearable": true
+      }
+     ],
+     "cleared_by_second_model": false,
+     "second_model_heard": "clarisimo gracias jeanette segunda llamada luis adelante",
+     "words_ok": false,
+     "similarity": {
+      "es-AR-TomasNeural": 0.892,
+      "es-CO-SalomeNeural": 0.574,
+      "es-EC-LuisNeural": 0.643
+     },
+     "closest_voice": "es-AR-TomasNeural",
+     "speaker_ok": true
+    },
+    {
+     "line": 6,
+     "speaker": "Luis",
+     "voice": "es-EC-LuisNeural",
+     "span": [
+      50.8,
+      68.52
+     ],
+     "findings": [],
+     "cleared_by_second_model": false,
+     "words_ok": true,
+     "similarity": {
+      "es-AR-TomasNeural": 0.704,
+      "es-CO-SalomeNeural": 0.615,
+      "es-EC-LuisNeural": 0.959
+     },
+     "closest_voice": "es-EC-LuisNeural",
+     "speaker_ok": true
+    },
+    {
+     "line": 7,
+     "speaker": "Ignacio",
+     "voice": "es-AR-TomasNeural",
+     "span": [
+      69.91,
+      71.6
+     ],
+     "findings": [],
+     "cleared_by_second_model": false,
+     "words_ok": true,
+     "similarity": {
+      "es-AR-TomasNeural": 0.893,
+      "es-CO-SalomeNeural": 0.514,
+      "es-EC-LuisNeural": 0.653
+     },
+     "closest_voice": "es-AR-TomasNeural",
+     "speaker_ok": true
+    },
+    {
+     "line": 8,
+     "speaker": "Luis",
+     "voice": "es-EC-LuisNeural",
+     "span": [
+      72.7,
+      77.78
+     ],
+     "findings": [],
+     "cleared_by_second_model": false,
+     "words_ok": true,
+     "similarity": {
+      "es-AR-TomasNeural": 0.646,
+      "es-CO-SalomeNeural": 0.598,
+      "es-EC-LuisNeural": 0.919
+     },
+     "closest_voice": "es-EC-LuisNeural",
+     "speaker_ok": true
+    },
+    {
+     "line": 9,
+     "speaker": "Ignacio",
+     "voice": "es-AR-TomasNeural",
+     "span": [
+      79.12,
+      89.2
+     ],
+     "findings": [],
+     "cleared_by_second_model": false,
+     "words_ok": true,
+     "similarity": {
+      "es-AR-TomasNeural": 0.956,
+      "es-CO-SalomeNeural": 0.562,
+      "es-EC-LuisNeural": 0.695
+     },
+     "closest_voice": "es-AR-TomasNeural",
+     "speaker_ok": true
+    }
+   ],
+   "transcript": "buenas tardes cerro esto es microfono abierto una sola pregunta hoy cuando reabra el ascensor cuanto deberia costar tenemos la primera llamada hola con quien hablo hola ignacio soy janet enfermera trabajo de noche en el plan y vuelvo a casa a las siete de la mañana y que propones janet mira yo acepto una tarifa turistica mas cara no me molesta pero solo si el primer viaje sale a las seis si el ascensor abre a las diez para los que trabajamos no sirve de nada clarisimo gracias janet segunda llamada luis adelante hola ignacio yo soy guia y llevo grupos al cerro todas las semanas estoy de acuerdo con la tarifa doble para turistas siempre que el dinero extra vaya a un fondo para mantener el ascensor si no en cinco años estamos otra vez igual y quien controlaria ese fondo la junta de vecinos con cuentas publicas no la fundacion bueno lo reconozco hace un mes le pedimos una entrevista a la fundacion y todavia no ha contestado seguimos esperando vamos a una pausa",
+   "authored_words": 177,
+   "heard_words": 177
+  },
+  {
+   "clip": "taller",
+   "verdict": "PASS",
+   "gap_note": null,
+   "gap_words": [
+    {
+     "word": "estima",
+     "heard": true
+    },
+    {
+     "word": "ochenta",
+     "heard": true
+    },
+    {
+     "word": "millones",
+     "heard": true
+    },
+    {
+     "word": "catorce",
+     "heard": true
+    },
+    {
+     "word": "meses",
+     "heard": true
+    }
+   ],
+   "lines": [
+    {
+     "line": 1,
+     "speaker": "Alex",
+     "voice": "es-PE-AlexNeural",
+     "span": [
+      0.0,
+      13.12
+     ],
+     "findings": [],
+     "cleared_by_second_model": false,
+     "words_ok": true,
+     "similarity": {
+      "es-CL-LorenzoNeural": 0.758,
+      "es-PE-AlexNeural": 0.952
+     },
+     "closest_voice": "es-PE-AlexNeural",
+     "speaker_ok": true
+    },
+    {
+     "line": 2,
+     "speaker": "Lorenzo",
+     "voice": "es-CL-LorenzoNeural",
+     "span": [
+      14.48,
+      17.1
+     ],
+     "findings": [],
+     "cleared_by_second_model": false,
+     "words_ok": true,
+     "similarity": {
+      "es-CL-LorenzoNeural": 0.819,
+      "es-PE-AlexNeural": 0.633
+     },
+     "closest_voice": "es-CL-LorenzoNeural",
+     "speaker_ok": true
+    },
+    {
+     "line": 3,
+     "speaker": "Alex",
+     "voice": "es-PE-AlexNeural",
+     "span": [
+      18.14,
+      30.14
+     ],
+     "findings": [],
+     "cleared_by_second_model": false,
+     "words_ok": true,
+     "similarity": {
+      "es-CL-LorenzoNeural": 0.763,
+      "es-PE-AlexNeural": 0.965
+     },
+     "closest_voice": "es-PE-AlexNeural",
+     "speaker_ok": true
+    },
+    {
+     "line": 4,
+     "speaker": "Lorenzo",
+     "voice": "es-CL-LorenzoNeural",
+     "span": [
+      31.42,
+      35.7
+     ],
+     "findings": [],
+     "cleared_by_second_model": false,
+     "words_ok": true,
+     "similarity": {
+      "es-CL-LorenzoNeural": 0.927,
+      "es-PE-AlexNeural": 0.75
+     },
+     "closest_voice": "es-CL-LorenzoNeural",
+     "speaker_ok": true
+    },
+    {
+     "line": 5,
+     "speaker": "Alex",
+     "voice": "es-PE-AlexNeural",
+     "span": [
+      36.66,
+      47.5
+     ],
+     "findings": [],
+     "cleared_by_second_model": false,
+     "words_ok": true,
+     "similarity": {
+      "es-CL-LorenzoNeural": 0.77,
+      "es-PE-AlexNeural": 0.936
+     },
+     "closest_voice": "es-PE-AlexNeural",
+     "speaker_ok": true
+    },
+    {
+     "line": 6,
+     "speaker": "Lorenzo",
+     "voice": "es-CL-LorenzoNeural",
+     "span": [
+      48.56,
+      49.96
+     ],
+     "findings": [],
+     "cleared_by_second_model": false,
+     "words_ok": true,
+     "similarity": {
+      "es-CL-LorenzoNeural": 0.759,
+      "es-PE-AlexNeural": 0.692
+     },
+     "closest_voice": "es-CL-LorenzoNeural",
+     "speaker_ok": true
+    },
+    {
+     "line": 7,
+     "speaker": "Alex",
+     "voice": "es-PE-AlexNeural",
+     "span": [
+      51.04,
+      65.66
+     ],
+     "findings": [],
+     "cleared_by_second_model": false,
+     "words_ok": true,
+     "similarity": {
+      "es-CL-LorenzoNeural": 0.764,
+      "es-PE-AlexNeural": 0.971
+     },
+     "closest_voice": "es-PE-AlexNeural",
+     "speaker_ok": true
+    },
+    {
+     "line": 8,
+     "speaker": "Lorenzo",
+     "voice": "es-CL-LorenzoNeural",
+     "span": [
+      66.9,
+      68.6
+     ],
+     "findings": [],
+     "cleared_by_second_model": false,
+     "words_ok": true,
+     "similarity": {
+      "es-CL-LorenzoNeural": 0.844,
+      "es-PE-AlexNeural": 0.744
+     },
+     "closest_voice": "es-CL-LorenzoNeural",
+     "speaker_ok": true
+    },
+    {
+     "line": 9,
+     "speaker": "Alex",
+     "voice": "es-PE-AlexNeural",
+     "span": [
+      69.64,
+      81.08
+     ],
+     "findings": [],
+     "cleared_by_second_model": false,
+     "words_ok": true,
+     "similarity": {
+      "es-CL-LorenzoNeural": 0.76,
+      "es-PE-AlexNeural": 0.957
+     },
+     "closest_voice": "es-PE-AlexNeural",
+     "speaker_ok": true
+    }
+   ],
+   "transcript": "don lorenzo le resumo el informe antes de la asamblea para que no haya sorpresas primero lo urgente los cables hay que cambiarlos todos eso no se discute ya me lo imaginaba y el carro hay dos opciones se puede restaurar el carro original el de madera se estima que costaria unos ochenta millones de pesos y tardaria unos catorce meses catorce meses mas subiendo a pie la señora rosa no aguanta lo se la otra opcion es una replica moderna unos cincuenta millones y seis meses es mas rapida pero se pierde el carro de siempre y usted que haria yo como tecnico no decido pero convendria que la asamblea pensara en el ascensor como transporte publico no como una postal si es transporte lo urgente es la movilidad de los vecinos o sea la replica o sea una solucion por etapas la replica ahora y si llega el dinero restaurar el original mas adelante pero eso lo decide la junta no yo",
+   "authored_words": 164,
+   "heard_words": 164
+  },
+  {
+   "clip": "mirador",
+   "verdict": "PASS",
+   "gap_note": null,
+   "gap_words": [
+    {
+     "word": "gestionaria",
+     "heard": true
+    },
+    {
+     "word": "operador",
+     "heard": true
+    },
+    {
+     "word": "fundacion",
+     "heard": true
+    },
+    {
+     "word": "inversion",
+     "heard": true
+    }
+   ],
+   "lines": [
+    {
+     "line": 1,
+     "speaker": "Elvira",
+     "voice": "es-ES-ElviraNeural",
+     "span": [
+      0.0,
+      13.0
+     ],
+     "findings": [],
+     "cleared_by_second_model": false,
+     "words_ok": true,
+     "similarity": {
+      "es-CL-CatalinaNeural": 0.789,
+      "es-ES-ElviraNeural": 0.958
+     },
+     "closest_voice": "es-ES-ElviraNeural",
+     "speaker_ok": true
+    },
+    {
+     "line": 2,
+     "speaker": "Catalina",
+     "voice": "es-CL-CatalinaNeural",
+     "span": [
+      14.16,
+      17.7
+     ],
+     "findings": [],
+     "cleared_by_second_model": false,
+     "words_ok": true,
+     "similarity": {
+      "es-CL-CatalinaNeural": 0.884,
+      "es-ES-ElviraNeural": 0.735
+     },
+     "closest_voice": "es-CL-CatalinaNeural",
+     "speaker_ok": true
+    },
+    {
+     "line": 3,
+     "speaker": "Elvira",
+     "voice": "es-ES-ElviraNeural",
+     "span": [
+      18.76,
+      29.96
+     ],
+     "findings": [],
+     "cleared_by_second_model": false,
+     "words_ok": true,
+     "similarity": {
+      "es-CL-CatalinaNeural": 0.781,
+      "es-ES-ElviraNeural": 0.957
+     },
+     "closest_voice": "es-ES-ElviraNeural",
+     "speaker_ok": true
+    },
+    {
+     "line": 4,
+     "speaker": "Catalina",
+     "voice": "es-CL-CatalinaNeural",
+     "span": [
+      31.1,
+      34.12
+     ],
+     "findings": [],
+     "cleared_by_second_model": false,
+     "words_ok": true,
+     "similarity": {
+      "es-CL-CatalinaNeural": 0.839,
+      "es-ES-ElviraNeural": 0.731
+     },
+     "closest_voice": "es-CL-CatalinaNeural",
+     "speaker_ok": true
+    },
+    {
+     "line": 5,
+     "speaker": "Elvira",
+     "voice": "es-ES-ElviraNeural",
+     "span": [
+      35.14,
+      40.96
+     ],
+     "findings": [],
+     "cleared_by_second_model": false,
+     "words_ok": true,
+     "similarity": {
+      "es-CL-CatalinaNeural": 0.78,
+      "es-ES-ElviraNeural": 0.94
+     },
+     "closest_voice": "es-ES-ElviraNeural",
+     "speaker_ok": true
+    },
+    {
+     "line": 6,
+     "speaker": "Catalina",
+     "voice": "es-CL-CatalinaNeural",
+     "span": [
+      42.22,
+      47.52
+     ],
+     "findings": [],
+     "cleared_by_second_model": false,
+     "words_ok": true,
+     "similarity": {
+      "es-CL-CatalinaNeural": 0.893,
+      "es-ES-ElviraNeural": 0.769
+     },
+     "closest_voice": "es-CL-CatalinaNeural",
+     "speaker_ok": true
+    },
+    {
+     "line": 7,
+     "speaker": "Elvira",
+     "voice": "es-ES-ElviraNeural",
+     "span": [
+      48.66,
+      62.06
+     ],
+     "findings": [],
+     "cleared_by_second_model": false,
+     "words_ok": true,
+     "similarity": {
+      "es-CL-CatalinaNeural": 0.802,
+      "es-ES-ElviraNeural": 0.963
+     },
+     "closest_voice": "es-ES-ElviraNeural",
+     "speaker_ok": true
+    },
+    {
+     "line": 8,
+     "speaker": "Catalina",
+     "voice": "es-CL-CatalinaNeural",
+     "span": [
+      63.18,
+      71.76
+     ],
+     "findings": [],
+     "cleared_by_second_model": false,
+     "words_ok": true,
+     "similarity": {
+      "es-CL-CatalinaNeural": 0.953,
+      "es-ES-ElviraNeural": 0.769
+     },
+     "closest_voice": "es-CL-CatalinaNeural",
+     "speaker_ok": true
+    }
+   ],
+   "transcript": "catalina la propuesta es buena de verdad la fundacion pone el setenta por ciento de la restauracion a cambio pedimos cosas razonables horario ampliado en verano y un panel informativo en la estacion hasta ahi bien y en la ultima pagina en la ultima pagina esta la gestion durante diez años el ascensor lo gestionaria un operador elegido por la fundacion es para proteger la inversion nada mas y la tarifa vecinal quien la decide el operador siempre que no supere un precio maximo eso esta en el anexo o sea que la tarifa no la decide la junta eso no estaba en la presentacion tienes razon deberia haberlo dicho al principio te lo reconozco pero hay una salida el operador externo es obligatorio a no ser que la junta pague el treinta por ciento y se haga cargo del mantenimiento el treinta por ciento son veinticuatro millones lo vamos a hablar en la asamblea elvira y vamos a leer el convenio entero",
+   "authored_words": 163,
+   "heard_words": 163
+  },
+  {
+   "clip": "asamblea",
+   "verdict": "PASS",
+   "gap_note": null,
+   "gap_words": [
+    {
+     "word": "pendiente",
+     "heard": true
+    },
+    {
+     "word": "duracion",
+     "heard": true
+    },
+    {
+     "word": "diez",
+     "heard": true
+    },
+    {
+     "word": "años",
+     "heard": true
+    },
+    {
+     "word": "junta",
+     "heard": true
+    }
+   ],
+   "lines": [
+    {
+     "line": 1,
+     "speaker": "Catalina",
+     "voice": "es-CL-CatalinaNeural",
+     "span": [
+      0.0,
+      8.52
+     ],
+     "findings": [],
+     "cleared_by_second_model": false,
+     "words_ok": true,
+     "similarity": {
+      "es-CL-CatalinaNeural": 0.963,
+      "es-CL-LorenzoNeural": 0.586,
+      "es-VE-PaolaNeural": 0.767
+     },
+     "closest_voice": "es-CL-CatalinaNeural",
+     "speaker_ok": true
+    },
+    {
+     "line": 2,
+     "speaker": "Paola",
+     "voice": "es-VE-PaolaNeural",
+     "span": [
+      9.8,
+      21.02
+     ],
+     "findings": [],
+     "cleared_by_second_model": false,
+     "words_ok": true,
+     "similarity": {
+      "es-CL-CatalinaNeural": 0.758,
+      "es-CL-LorenzoNeural": 0.529,
+      "es-VE-PaolaNeural": 0.965
+     },
+     "closest_voice": "es-VE-PaolaNeural",
+     "speaker_ok": true
+    },
+    {
+     "line": 3,
+     "speaker": "Catalina",
+     "voice": "es-CL-CatalinaNeural",
+     "span": [
+      22.68,
+      30.92
+     ],
+     "findings": [],
+     "cleared_by_second_model": false,
+     "words_ok": true,
+     "similarity": {
+      "es-CL-CatalinaNeural": 0.959,
+      "es-CL-LorenzoNeural": 0.631,
+      "es-VE-PaolaNeural": 0.775
+     },
+     "closest_voice": "es-CL-CatalinaNeural",
+     "speaker_ok": true
+    },
+    {
+     "line": 4,
+     "speaker": "Lorenzo",
+     "voice": "es-CL-LorenzoNeural",
+     "span": [
+      31.94,
+      37.06
+     ],
+     "findings": [],
+     "cleared_by_second_model": false,
+     "words_ok": true,
+     "similarity": {
+      "es-CL-CatalinaNeural": 0.607,
+      "es-CL-LorenzoNeural": 0.909,
+      "es-VE-PaolaNeural": 0.53
+     },
+     "closest_voice": "es-CL-LorenzoNeural",
+     "speaker_ok": true
+    },
+    {
+     "line": 5,
+     "speaker": "Catalina",
+     "voice": "es-CL-CatalinaNeural",
+     "span": [
+      38.18,
+      44.4
+     ],
+     "findings": [],
+     "cleared_by_second_model": false,
+     "words_ok": true,
+     "similarity": {
+      "es-CL-CatalinaNeural": 0.953,
+      "es-CL-LorenzoNeural": 0.604,
+      "es-VE-PaolaNeural": 0.725
+     },
+     "closest_voice": "es-CL-CatalinaNeural",
+     "speaker_ok": true
+    },
+    {
+     "line": 6,
+     "speaker": "Lorenzo",
+     "voice": "es-CL-LorenzoNeural",
+     "span": [
+      45.64,
+      51.14
+     ],
+     "findings": [],
+     "cleared_by_second_model": false,
+     "words_ok": true,
+     "similarity": {
+      "es-CL-CatalinaNeural": 0.652,
+      "es-CL-LorenzoNeural": 0.955,
+      "es-VE-PaolaNeural": 0.544
+     },
+     "closest_voice": "es-CL-LorenzoNeural",
+     "speaker_ok": true
+    },
+    {
+     "line": 7,
+     "speaker": "Catalina",
+     "voice": "es-CL-CatalinaNeural",
+     "span": [
+      52.66,
+      63.8
+     ],
+     "findings": [],
+     "cleared_by_second_model": false,
+     "words_ok": true,
+     "similarity": {
+      "es-CL-CatalinaNeural": 0.96,
+      "es-CL-LorenzoNeural": 0.556,
+      "es-VE-PaolaNeural": 0.752
+     },
+     "closest_voice": "es-CL-CatalinaNeural",
+     "speaker_ok": true
+    },
+    {
+     "line": 8,
+     "speaker": "Paola",
+     "voice": "es-VE-PaolaNeural",
+     "span": [
+      64.84,
+      66.74
+     ],
+     "findings": [],
+     "cleared_by_second_model": false,
+     "words_ok": true,
+     "similarity": {
+      "es-CL-CatalinaNeural": 0.608,
+      "es-CL-LorenzoNeural": 0.438,
+      "es-VE-PaolaNeural": 0.85
+     },
+     "closest_voice": "es-VE-PaolaNeural",
+     "speaker_ok": true
+    },
+    {
+     "line": 9,
+     "speaker": "Catalina",
+     "voice": "es-CL-CatalinaNeural",
+     "span": [
+      68.1,
+      74.72
+     ],
+     "findings": [],
+     "cleared_by_second_model": false,
+     "words_ok": true,
+     "similarity": {
+      "es-CL-CatalinaNeural": 0.953,
+      "es-CL-LorenzoNeural": 0.575,
+      "es-VE-PaolaNeural": 0.793
+     },
+     "closest_voice": "es-CL-CatalinaNeural",
+     "speaker_ok": true
+    }
+   ],
+   "transcript": "leo el borrador del acta y me corrigen si me equivoco uno la asamblea acuerda pedir la reapertura del ascensor con una tarifa vecinal de acuerdo pero pon que acepto la tarifa vecinal aunque me preocupa que los turistas dejen de subir si la tarifa turistica es muy cara con esas palabras anotado paola dos la junta acepta hablar con un operador externo siempre que la tarifa vecinal la decida la junta y que el operador cuente con la gente del cerro eso tambien quiero que quede escrito don lorenzo advierte que el operador deberia contar con los ascensoristas del cerro asi esta bien asi esta bien y que no diga que yo estoy de acuerdo con los diez años porque no lo estoy entendido tres queda pendiente la duracion del convenio la fundacion propone diez años la junta menos se votara cuando la fundacion responda y lo del panel junto al mural cuatro el panel de la fundacion ira en la estacion no junto al mural eso si lo acordamos todos",
+   "authored_words": 172,
+   "heard_words": 172
+  }
+ ],
+ "tool_valid": false,
+ "all_pass": false
+}

@@ -61,7 +61,7 @@ test('public images and the vinext optimizer return inline image MIME types',asy
 test('lesson cards expose real links and explain view results versus the complete catalog',async()=>{
  const response=await fetch(root);assert.equal(response.status,200);const html=await response.text();
  assert.match(html,/class="card-hitarea" href="\/acceso\?returnTo=/);assert.match(html,/class="card-hitarea" href="\/el-hotel-de-lo-imposible"/);
- assert.match(html,/297(?:<!-- -->|\s)+resultados/);assert.match(html,/312(?:<!-- -->|\s)+clases totales/);
+ assert.match(html,/298(?:<!-- -->|\s)+resultados/);assert.match(html,/313(?:<!-- -->|\s)+clases totales/);
  assert.match(html,/No está afiliado ni respaldado por el Instituto Cervantes/);
 });
 

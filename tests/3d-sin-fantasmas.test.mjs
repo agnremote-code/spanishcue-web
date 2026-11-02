@@ -15,6 +15,7 @@ const hospital = await import('../app/hospital-san-casi-vivo/layout.mjs');
 const casino = await import('../app/marketing-de-casinos/layout.mjs');
 const feria = await import('../app/la-feria-de-villaluz/layout.mjs');
 const feriaLevels = await import('../app/la-feria-de-villaluz/levels.mjs');
+const ascensor = await import('../app/el-ascensor-del-cerro/layout.mjs');
 const madrid = await import('../app/madrid-infectada/layout.mjs');
 const madridCity = await import('../app/madrid-infectada/city.mjs');
 const madridHorde = await import('../app/madrid-infectada/horde.mjs');
@@ -146,6 +147,17 @@ function feriaWorld() {
   };
 }
 
+// El ascensor del cerro: one hillside, terraces at three heights; the
+// funicular and the stairs are scripted rides between them.
+function ascensorWorld() {
+  return {
+    id: 'ascensor', solids: ascensor.SOLIDS, bounds: ascensor.BOUNDS, walkers: [], staticWalkers: true,
+    people: [...ascensor.CIRCLES.map(c => ({ id: `host-${c.id}`, x: c.npc.x, z: c.npc.z })), ...ascensor.CROWD.map((p, i) => ({ id: `crowd-${i}`, x: p.x, z: p.z, seated: p.pose === 'sit' || p.pose === 'seated' }))],
+    spots: [{ id: 'spawn', ...ascensor.SPAWN }, ...ascensor.CIRCLES.flatMap(c => [{ id: c.id, ...c.spot }, { id: `${c.id}-llegada`, ...ascensor.arrival(c.id) }]),
+      ...ascensor.LINKS.map(l => ({ id: `${l.id}-salida`, ...l.exit })), ...Object.entries(ascensor.TERRACE_ARRIVAL).map(([id, p]) => ({ id: `terraza-${id}`, ...p }))],
+  };
+}
+
 // Madrid infectada: one world per zone. The mascot starts at the spawn, a few
 // steps past it, or (coming back from the next zone) just inside the gate.
 function madridZones() {
@@ -196,7 +208,7 @@ function masAllaPlaces() {
   });
 }
 
-const WORLDS = [nocheStreet(), ...nocheRooms(), ...hospitalFloors(), ...vueloFloors(), ...consorcioFloors(), ...casinoFloors(), feriaWorld(), ...madridZones(), madridCityWorld(), ...masAllaPlaces()];
+const WORLDS = [nocheStreet(), ...nocheRooms(), ...hospitalFloors(), ...vueloFloors(), ...consorcioFloors(), ...casinoFloors(), feriaWorld(), ascensorWorld(), ...madridZones(), madridCityWorld(), ...masAllaPlaces()];
 
 // ------------------------------------------------------------------ checks
 test('every world in the list has solids, people or walkers to check', () => {
