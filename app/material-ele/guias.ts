@@ -1,5 +1,6 @@
 import { MATERIAL_ELE_PATH } from "./data";
-import { ACTIVIDADES_PATH, actividadPages, ejercicioPages } from "./actividades";
+import { ACTIVIDADES_PATH, actividadPages, ejercicioPages, preguntasPages } from "./actividades";
+import { temasByGroup } from "./temas";
 import { catalogSummary } from "../growth/lessons";
 
 /**
@@ -38,6 +39,10 @@ const total = catalogSummary.total;
 const free = catalogSummary.free;
 const activities = actividadPages.length;
 const exercises = ejercicioPages.length;
+const questions = preguntasPages.reduce((n, page) => n + page.set.items.length, 0);
+const worlds3d = temasByGroup("formatos").find((page) => page.slug === "mundos-3d")?.lessonIds.length ?? 0;
+const conversationGames = temasByGroup("formatos").find((page) => page.slug === "juegos-de-conversacion")?.lessonIds.length ?? 0;
+const roleplays = temasByGroup("formatos").find((page) => page.slug === "roleplays")?.lessonIds.length ?? 0;
 
 export const guiaPages: GuiaPage[] = [
   {
@@ -152,6 +157,317 @@ export const guiaPages: GuiaPage[] = [
       { question: "¿Cómo sé el nivel de un material?", answer: "Por el MCER y el PCIC. Cada clase y cada página de SpanishCue indica su nivel y, en los mundos 3D, el nivel se elige dentro." },
     ],
     related: ["a1", "b1", "preguntas-de-conversacion", "primera-clase-de-espanol", "juegos-para-clase-de-espanol", "comprension-auditiva"],
+  },
+  {
+    slug: "preparar-una-clase-de-espanol-rapido",
+    path: `${GUIAS_PATH}/preparar-una-clase-de-espanol-rapido`,
+    title: "Cómo preparar una clase de español en 10 minutos (con ejemplos por nivel)",
+    description:
+      "Método en seis pasos para preparar una clase de español rápido: objetivo, material listo, calentamiento, práctica, conversación y cierre. Con ejemplos de A1 a C2.",
+    h1: "Cómo preparar una clase de español en 10 minutos (con ejemplos por nivel)",
+    kicker: "Guía para profesores de ELE",
+    intro:
+      "Preparar una clase de español no debería costar más que darla. Si cada sesión de 45 minutos te lleva una hora de búsqueda, recorte y montaje, el problema no eres tú: es que trabajas con materia prima en vez de con clases. Esta guía te da un método de diez minutos que funciona con cualquier alumno, un ejemplo concreto por nivel y los enlaces a las clases ya montadas para que mañana solo tengas que elegir, abrir y enseñar.",
+    keywords: ["preparar clases de español rápido", "cómo preparar una clase de español", "planificar una clase de ELE", "plan de clase de español", "clases de español listas", "profesor de español online"],
+    published: "2026-11-02",
+    lessonIds: [239, 350, 389, 439, 468, 515],
+    sections: [
+      {
+        id: "por-que-tarda",
+        title: "Por qué preparar una clase tarda tanto (y qué cambia cuando no)",
+        blocks: [
+          { type: "p", text: "La preparación se come el tiempo en tres sitios: buscar (abrir diez pestañas para encontrar una actividad decente), adaptar (recortar un PDF pensado para un grupo de veinte y convertirlo en algo que sirva para un alumno por videollamada) y montar (pegar la explicación, los ejercicios, el audio y las preguntas en un documento que puedas compartir en pantalla). Ninguno de los tres es enseñar." },
+          { type: "p", text: "Cuando el material ya viene secuenciado, el único trabajo real es decidir **qué** necesita tu alumno hoy. Ese es el paso que vale tu tiempo, y es el único que esta guía te pide hacer con cuidado. El resto se resuelve con enlaces." },
+        ],
+      },
+      {
+        id: "metodo",
+        title: "El método de diez minutos, paso a paso",
+        blocks: [
+          { type: "ol", items: [
+            "**Minuto 1 a 2: un objetivo que se pueda decir.** No «el pretérito indefinido» sino «contar qué hizo el fin de semana con cinco verbos en pasado». Si el objetivo cabe en una frase que el alumno podría decir al final, está bien formulado. Si no, es un tema, no un objetivo.",
+            `**Minuto 3 a 4: elegir la clase ya montada.** Busca el tema en [Material ELE](/material-ele): hay ${total} clases interactivas organizadas por [nivel](/material-ele#niveles), por [tema de gramática](/material-ele/gramatica), por [vocabulario](/material-ele/vocabulario), por [función comunicativa](/material-ele/funciones) y por [formato](/material-ele/formatos). Cada página de tema dice qué clases lo enseñan y en qué nivel.`,
+            `**Minuto 5: la pregunta de entrada.** Copia una o dos de las [preguntas de conversación por nivel](/material-ele/preguntas-de-conversacion) relacionadas con el tema. Son ${questions} preguntas ordenadas de fácil a difícil, pensadas para que el alumno hable de su vida, no de la gramática.`,
+            `**Minuto 6 a 7: la práctica con corrección.** Si la clase elegida ya trae ejercicios, no busques más. Si quieres uno extra, el [banco de actividades](${ACTIVIDADES_PATH}) tiene ${activities} actividades con pasos y respuesta modelo y ${exercises} ejercicios con soluciones, uno por nivel y punto gramatical.`,
+            "**Minuto 8 a 9: la tarea de producción.** Decide qué va a hacer el alumno con la lengua durante diez minutos: contar, aconsejar, quejarse, negociar, convencer. Un [roleplay](/material-ele/formatos/roleplays) o un [juego de conversación](/material-ele/formatos/juegos-de-conversacion) resuelven esto sin que tengas que inventar nada.",
+            "**Minuto 10: el cierre.** Escribe la pregunta final: «¿Qué puedes decir ahora que antes no podías?». El alumno responde con tres frases. Esa respuesta es tu evaluación y, de paso, el punto de partida de la clase siguiente.",
+          ] },
+          { type: "p", text: "Diez minutos. Nada de buscar, nada de recortar, nada de montar. Lo que has hecho es decidir y enlazar." },
+        ],
+      },
+      {
+        id: "ejemplos",
+        title: "Un ejemplo por nivel, de principiantes absolutos a C2",
+        blocks: [],
+        subsections: [
+          { title: "Principiantes absolutos y A1: la primera clase", blocks: [
+            { type: "p", text: "Objetivo: que el alumno diga diez frases sobre sí mismo. Clase: la [Clase inicial](/gramatica/clase-inicial), que es gratis y está pensada para la primera hora, con el inglés al lado cuando hace falta. Entrada: «¿De dónde eres?». Producción: presentarse a un compañero imaginario. Cierre: tres frases con «soy», «vivo» y «me gusta». El resto del nivel está en [Material ELE A1](/material-ele/a1) y en las clases para [principiantes absolutos](/material-ele/formatos/principiantes-absolutos)." },
+          ] },
+          { title: "A2: contar el fin de semana", blocks: [
+            { type: "p", text: "Objetivo: narrar con indefinido e imperfecto sin mezclarlos. Clase: [Indefinido e imperfecto: evento y contexto](/gramatica/indefinido-e-imperfecto), gratis en este nivel. Entrada: «¿Qué hiciste el sábado?». Práctica: el ejercicio de [indefinido o imperfecto](/material-ele/ejercicio/a2). Producción: contar una anécdota real con un detalle inventado que el profesor tiene que detectar. Más clases en [Material ELE A2](/material-ele/a2) y en la página de [contraste de pasados](/material-ele/gramatica/contraste-de-pasados)." },
+          ] },
+          { title: "B1: dar consejos a un amigo", blocks: [
+            { type: "p", text: "Objetivo: expresar deseos y dar consejos con subjuntivo. Clase: [Deseos: querer que, esperar que, ojalá](/gramatica/deseos-querer-que-esperar-que-ojala). Entrada: «¿Qué le deseas a alguien que conoces esta semana?». Producción: un amigo tiene tres problemas y el alumno le aconseja; la página de [dar consejos y recomendaciones](/material-ele/funciones/dar-consejos-y-recomendaciones) tiene las clases que lo trabajan. Cierre: tres consejos con «te recomiendo que»." },
+          ] },
+          { title: "B2: hablar del futuro incierto", blocks: [
+            { type: "p", text: "Objetivo: usar «cuando», «en cuanto» y «hasta que» con subjuntivo para planes. Clase: [Temporales con subjuntivo para futuro incierto](/gramatica/temporales-con-subjuntivo-para-futuro-incierto). Entrada: «¿Qué vas a hacer cuando termine el curso?». Producción: planificar un viaje con un presupuesto que cambia. Más en [oraciones temporales](/material-ele/gramatica/oraciones-temporales) y [Material ELE B2](/material-ele/b2)." },
+          ] },
+          { title: "C1: tomar postura", blocks: [
+            { type: "p", text: "Objetivo: elegir indicativo o subjuntivo según la actitud del hablante. Clase: [Alternancia de indicativo y subjuntivo según postura](/gramatica/alternancia-de-indicativo-y-subjuntivo-segun). Entrada: una noticia polémica y «¿Qué opinas?». Producción: defender una posición que no es la propia. La página de [argumentar y debatir](/material-ele/funciones/argumentar-y-debatir) reúne las clases de debate." },
+          ] },
+          { title: "C2: cambiar de registro", blocks: [
+            { type: "p", text: "Objetivo: pasar de «tú» a «usted» y a «vos» según la situación. Clase: [Voseo, tuteo y ustedeo](/gramatica/voseo-tuteo-y-ustedeo-cambios-pragmaticos). Entrada: «¿Con quién usas usted en tu lengua, si existe?». Producción: la misma queja a un amigo, a un jefe y a un desconocido en Buenos Aires. Más en [registro y cortesía](/material-ele/gramatica/registro-y-cortesia) y [variedades del español](/material-ele/cultura/variedades-del-espanol)." },
+          ] },
+        ],
+      },
+      {
+        id: "sin-preparar",
+        title: "Cuando no tienes ni diez minutos: clases que se dan sin preparar",
+        blocks: [
+          { type: "p", text: `Hay días en que el alumno aparece sin avisar o la clase anterior se alarga. Para eso existen las clases que no necesitan preparación porque la secuencia ya está dentro: las [clases de gramática en vivo](/material-ele/formatos/clases-de-gramatica-en-vivo) avanzan contigo en siete pasos (entender, explorar, practicar, escuchar, conversar, escribir, cerrar) en una sola pantalla, y los [mundos 3D de conversación](/material-ele/formatos/mundos-3d) (${worlds3d} en total) traen la situación, las preguntas y la escucha dentro del mismo mundo, con el nivel elegible desde principiantes hasta C2.` },
+          { type: "p", text: "En los dos casos tu única decisión es el nivel. Lo demás lo hace la clase mientras tú escuchas y corriges, que es para lo que te pagan." },
+        ],
+      },
+      {
+        id: "errores",
+        title: "Cinco errores que alargan la preparación",
+        blocks: [
+          { type: "ul", items: [
+            "**Preparar «el tema» entero.** Una clase es un objetivo, no un capítulo. El subjuntivo son doce clases, no una.",
+            "**Buscar el material perfecto.** No existe. Existe el material secuenciado que termina en producción; lo demás se corrige en clase.",
+            "**Traducir instrucciones.** Si el alumno no puede leer la consigna en pantalla, el material no era para pantalla compartida.",
+            "**Empezar por la gramática.** Empieza por una pregunta sobre su vida. La gramática llega cuando el alumno la necesita para responder.",
+            "**No cerrar.** Sin las tres frases finales, el alumno sale sin saber qué aprendió y tú sin saber qué preparar la próxima vez.",
+          ] },
+        ],
+      },
+    ],
+    faq: [
+      { question: "¿Cuánto tiempo debería tardar en preparar una clase de español de 45 minutos?", answer: "Con material secuenciado, entre cinco y diez minutos: elegir el objetivo, la clase, la pregunta de entrada y la tarea de producción. Más de veinte minutos suele significar que estás montando material en vez de eligiéndolo." },
+      { question: "¿Sirve el mismo método para clases presenciales?", answer: "Sí. Los seis pasos son los mismos; cambia solo el soporte: proyectas en vez de compartir pantalla, y las fichas se imprimen desde cada guía." },
+      { question: "¿Qué hago si el alumno no sabe su nivel?", answer: "Empieza por la pregunta de entrada de un nivel por debajo del que crees. Si responde con soltura, sube. La respuesta a tres preguntas de conversación te dice más que un test de huecos." },
+      { question: "¿Puedo preparar varias clases de golpe?", answer: "Sí, y es lo más eficiente: elige el objetivo de las próximas cuatro sesiones en la página de nivel de tu alumno y guarda las clases como favoritas. Cada día solo ajustas la pregunta de entrada según lo que pasó en la clase anterior." },
+      { question: "¿Las clases de SpanishCue son gratis?", answer: `Hay ${free} clases gratis, incluida una de gramática en cada nivel, y todas las fichas, ejercicios y preguntas de Material ELE son gratis sin registro. El resto de clases está en la suscripción de US$15,50 al mes.` },
+    ],
+    related: ["primera-clase-de-espanol", "a1", "a2", "b1", "indefinido-e-imperfecto", "subjuntivo"],
+  },
+  {
+    slug: "fichas-ele-para-imprimir-y-proyectar",
+    path: `${GUIAS_PATH}/fichas-ele-para-imprimir-y-proyectar`,
+    title: `Fichas ELE para imprimir y proyectar: ${activities + exercises} fichas gratis por nivel y tema`,
+    description:
+      "Fichas ELE gratis para imprimir o compartir en pantalla: actividades con respuesta modelo, ejercicios con soluciones y preguntas de conversación, de A1 a C2.",
+    h1: "Fichas ELE para imprimir y proyectar: fichas gratis por nivel y tema",
+    kicker: "Guía para profesores de ELE",
+    intro:
+      `Una ficha ELE buena hace dos cosas: le da al alumno algo que leer y hacer, y te da a ti la respuesta modelo y la forma de corregir. Esta guía explica qué tipos de fichas existen, cómo elegir la correcta según el nivel y el momento de la clase, y dónde están las ${activities + exercises} fichas gratuitas de SpanishCue, cada una con su página, su versión imprimible y su versión para pantalla compartida.`,
+    keywords: ["fichas ELE", "fichas ELE para imprimir", "fichas de español para extranjeros", "fichas ELE gratis", "actividades ELE imprimibles", "ejercicios ELE con soluciones"],
+    published: "2026-11-02",
+    lessonIds: [239, 350, 389, 36, 223],
+    sections: [
+      {
+        id: "tipos",
+        title: "Los cuatro tipos de ficha ELE y para qué sirve cada uno",
+        blocks: [
+          { type: "ul", items: [
+            "**Ficha de actividad comunicativa.** Una situación, pasos numerados, frases que el alumno puede usar y una respuesta modelo. Sirve para la parte de «conversar» de la clase. Ejemplo: [La oficina compartida](/material-ele/actividad/la-oficina-compartida) o [Mi semana en cinco frases](/material-ele/actividad/mi-semana-en-cinco-frases).",
+            "**Ficha de ejercicio con soluciones.** Diez frases para completar o elegir, con las respuestas y la explicación del error más frecuente. Sirve para «practicar con corrección». Ejemplo: [ser, estar o hay](/material-ele/ejercicio/a1), [indefinido o imperfecto](/material-ele/ejercicio/a2), [infinitivo, indicativo o subjuntivo](/material-ele/ejercicio/b1).",
+            `**Ficha de preguntas de conversación.** Diez preguntas por nivel, ordenadas de fácil a difícil, para abrir la clase o cerrarla. Hay ${questions} en [preguntas de conversación por nivel](/material-ele/preguntas-de-conversacion).`,
+            "**Ficha de tema.** La guía completa de un punto gramatical o de un tema de vocabulario: objetivos, calentamiento, tarea de producción y errores frecuentes, más las clases interactivas que lo enseñan. Ejemplo: [ser y estar](/material-ele/ser-y-estar), [por y para](/material-ele/por-y-para), [el imperativo](/material-ele/imperativo).",
+          ] },
+          { type: "p", text: "Las cuatro se imprimen con el botón «Descargar ficha en PDF» de cada página, que quita los menús y deja solo lo que va al papel, y las cuatro se comparten en pantalla tal cual, porque están escritas para que el alumno lea la consigna sin que tú la traduzcas." },
+        ],
+      },
+      {
+        id: "por-nivel",
+        title: "Qué ficha elegir según el nivel",
+        blocks: [],
+        subsections: [
+          { title: "Principiantes absolutos y A1", blocks: [
+            { type: "p", text: "Fichas con mucho apoyo visual, instrucciones de una línea y vocabulario antes que reglas. Empieza por la [Clase inicial](/gramatica/clase-inicial), gratis, y sigue con las fichas de [Material ELE A1](/material-ele/a1): presentarse, la familia, la casa, los números y las horas. El ejercicio de [ser, estar o hay](/material-ele/ejercicio/a1) es el primero que conviene hacer dos veces." },
+          ] },
+          { title: "A2", blocks: [
+            { type: "p", text: "Fichas de contraste: pasados, gustos, rutinas, la ciudad. Las de [Material ELE A2](/material-ele/a2) terminan todas con una producción corta (contar, describir, pedir). El tema estrella es [indefinido e imperfecto](/material-ele/indefinido-e-imperfecto), con su ejercicio y su actividad de anécdotas." },
+          ] },
+          { title: "B1 y B2", blocks: [
+            { type: "p", text: "Fichas que obligan a decidir: aconsejar, quejarse, hacer planes, argumentar. Mira [Material ELE B1](/material-ele/b1) y [B2](/material-ele/b2), y las fichas de [funciones comunicativas](/material-ele/funciones) cuando lo que necesitas no es un punto gramatical sino «que el alumno sepa negociar». Para el subjuntivo, la [guía del subjuntivo](/material-ele/subjuntivo) presenta un uso por ficha." },
+          ] },
+          { title: "C1 y C2", blocks: [
+            { type: "p", text: "Fichas con lengua auténtica, registro y variedades. Las de [Material ELE C1](/material-ele/c1) y [C2](/material-ele/c2) no tienen respuesta única: la respuesta modelo es un punto de partida para discutir matices. Las fichas de [estilo indirecto](/material-ele/estilo-indirecto) y de [conectores](/material-ele/conectores) son las que más piden los alumnos que preparan exámenes." },
+          ] },
+        ],
+      },
+      {
+        id: "como-usar",
+        title: "Cómo usar una ficha en clase sin que se convierta en deberes",
+        blocks: [
+          { type: "ol", items: [
+            "**Léela con el alumno, no para el alumno.** La consigna está escrita para que la lea él en pantalla. Tú escuchas cómo la lee: ahí ya hay corrección.",
+            "**Haz la mitad en clase y deja la otra mitad para la próxima.** Diez frases son demasiadas para una sesión si cada una genera conversación, que es lo que quieres.",
+            "**Corrige con la respuesta modelo, no contra ella.** Si el alumno dice algo distinto pero correcto, gana él. La respuesta modelo existe para que tú no tengas que improvisar la explicación.",
+            "**Termina con producción.** Cada ficha de actividad acaba en una tarea oral o escrita. No la saltes: es la parte que el alumno recuerda.",
+            "**Guarda la ficha para el cierre.** Al final, el alumno vuelve a la ficha y marca qué puede hacer ahora. Eso es la evaluación, sin examen.",
+          ] },
+        ],
+      },
+      {
+        id: "imprimir-o-proyectar",
+        title: "Imprimir o proyectar: cuándo conviene cada cosa",
+        blocks: [
+          { type: "p", text: "Imprime cuando el alumno escribe a mano (dictados, completar, escribir un párrafo) o cuando la clase es presencial y quieres que se lleve algo. Proyecta o comparte pantalla cuando la ficha se usa para hablar: la consigna a la vista, el alumno responde, tú anotas. En clases online, la ficha compartida en pantalla funciona mejor que el PDF enviado antes, porque el alumno no la hace solo de antemano." },
+          { type: "p", text: `Cuando la ficha se queda corta, la clase interactiva del mismo tema la continúa: cada página de tema enlaza las clases que lo enseñan, de las que ${free} son gratis. Y si lo que buscas es una clase entera sin preparar, mira las [clases de gramática en vivo](/material-ele/formatos/clases-de-gramatica-en-vivo) o el [banco de actividades](${ACTIVIDADES_PATH}) completo.` },
+        ],
+      },
+      {
+        id: "diez-para-empezar",
+        title: "Diez fichas para empezar esta semana",
+        blocks: [
+          { type: "p", text: "Si no sabes por dónde empezar, estas diez cubren una semana de clases con alumnos de niveles distintos. Cada una se abre, se imprime o se comparte en pantalla en un clic:" },
+          { type: "ol", items: [
+            "[¿Dónde está la lámpara?](/material-ele/actividad/donde-esta-la-lampara): la casa y las preposiciones de lugar para A1, con un plano que el alumno describe.",
+            "[Mi semana en cinco frases](/material-ele/actividad/mi-semana-en-cinco-frases): rutinas y frecuencia en A1, cierre oral obligatorio.",
+            "[Ejercicio A1: ser, estar o hay](/material-ele/ejercicio/a1): el contraste que más errores produce en el primer mes, con soluciones y explicación.",
+            "[Preguntas de conversación A2](/material-ele/preguntas/a2): diez preguntas de pasados y planes para abrir cualquier clase de A2.",
+            "[Ejercicio A2: indefinido o imperfecto](/material-ele/ejercicio/a2): diez frases de una anécdota para elegir el pasado correcto.",
+            "[La oficina compartida](/material-ele/actividad/la-oficina-compartida): quejas, normas y negociación entre compañeros, de B1 en adelante.",
+            "[Ejercicio B1: infinitivo, indicativo o subjuntivo](/material-ele/ejercicio/b1): la primera decisión de modo, explicada frase a frase.",
+            "[Preguntas de conversación B2](/material-ele/preguntas/b2): hipótesis y valoraciones para que el alumno se moje.",
+            "[Guía de por y para](/material-ele/por-y-para): la ficha de tema completa, con calentamiento, producción y errores frecuentes.",
+            "[Preguntas de conversación C1](/material-ele/preguntas/c1): matices e ironía para alumnos que ya hablan y quieren afinar.",
+          ] },
+          { type: "p", text: "Después de esta semana, el resto está ordenado por tema y por nivel en el banco completo, y cada ficha enlaza la clase interactiva que la continúa." },
+        ],
+      },
+      {
+        id: "por-tema",
+        title: "Fichas por tema: gramática, vocabulario, funciones y cultura",
+        blocks: [
+          { type: "p", text: "Además de por nivel, cada ficha está clasificada por tema, que es como suele buscarse en el momento de preparar: [gramática](/material-ele/gramatica) (tiempos verbales, pronombres, preposiciones, oraciones), [vocabulario](/material-ele/vocabulario) (familia, casa, ciudad, comida, trabajo, viajes), [funciones](/material-ele/funciones) (saludar, describir, narrar, opinar, aconsejar, negociar) y [cultura](/material-ele/cultura) (países, fiestas, historia, cine, variedades del español). Y cuando lo que falta es un tipo de clase y no un tema, por [formato](/material-ele/formatos)." },
+        ],
+      },
+    ],
+    faq: [
+      { question: "¿Las fichas ELE son gratis de verdad?", answer: "Sí. Todas las fichas de actividad, los ejercicios con soluciones y las preguntas de conversación de Material ELE se abren e imprimen sin registro. Lo que es de pago son las clases interactivas marcadas PRO." },
+      { question: "¿En qué formato se descargan?", answer: "En PDF desde el botón «Descargar ficha en PDF» de cada página, que usa la impresión del navegador y quita menús y botones. No hay archivos sueltos que mantener: la ficha siempre es la versión actual de la página." },
+      { question: "¿Sirven para grupos o solo para clases individuales?", answer: "Sirven para las dos cosas. Las fichas de actividad tienen pasos pensados para un alumno, pero cada paso se reparte sin cambios entre parejas o grupos pequeños." },
+      { question: "¿Vienen con las soluciones?", answer: "Los ejercicios sí, con la explicación del error más frecuente. Las actividades comunicativas traen una respuesta modelo, que es una posibilidad, no la única correcta." },
+      { question: "¿Cómo sé el nivel de cada ficha?", answer: "Cada ficha indica su nivel del MCER en la cabecera y en su página de nivel. Si dudas entre dos, elige la inferior: una ficha fácil que termina en conversación rinde más que una difícil que termina en silencio." },
+    ],
+    related: ["a1", "a2", "b1", "ser-y-estar", "preguntas-de-conversacion", "vocabulario-por-temas"],
+  },
+  {
+    slug: "actividades-de-conversacion-en-espanol-para-adultos",
+    path: `${GUIAS_PATH}/actividades-de-conversacion-en-espanol-para-adultos`,
+    title: `Actividades de conversación en español para adultos: preguntas, roleplays y 3D`,
+    description:
+      "Actividades de conversación en español para adultos por nivel: preguntas, roleplays, juegos y mundos 3D que ponen al alumno a hablar de su vida real.",
+    h1: "Actividades de conversación en español para adultos: de las preguntas a los mundos 3D",
+    kicker: "Guía para profesores de ELE",
+    intro:
+      "Los adultos no quieren jugar a ser niños ni hablar de temas de manual. Quieren contar su trabajo, quejarse de su casero, decidir qué hacer en un aeropuerto cerrado o convencer a un vecino en una reunión de consorcio. Esta guía reúne las actividades de conversación que funcionan con adultos, de principiantes a C2, explica cómo llevarlas sin que se conviertan en un interrogatorio y enlaza cada una a la página donde ya está lista.",
+    keywords: ["actividades de conversación en español", "actividades de conversación para adultos", "conversación ELE", "temas de conversación en español", "roleplays en español", "juegos de conversación ELE"],
+    published: "2026-11-02",
+    lessonIds: [36, 223, 240, 244, 245, 243],
+    sections: [
+      {
+        id: "que-funciona",
+        title: "Qué hace que una actividad de conversación funcione con adultos",
+        blocks: [
+          { type: "p", text: "Tres condiciones. Primera: el alumno habla de algo que le importa o que tiene que resolver, no de un tema abstracto. «¿Qué opinas de la tecnología?» produce silencio; «¿Qué aplicación borrarías hoy del teléfono y por qué?» produce tres minutos. Segunda: hay una decisión o un desenlace, para que hablar sirva para algo. Tercera: el nivel está controlado por el profesor, no por el tema; la misma situación se puede jugar en A1 con frases mínimas y en C2 leyendo el subtexto." },
+          { type: "p", text: "Todo lo que sigue cumple las tres." },
+        ],
+      },
+      {
+        id: "preguntas",
+        title: `${questions} preguntas de conversación por nivel`,
+        blocks: [
+          { type: "p", text: "La base. Diez preguntas por nivel, ordenadas de fácil a difícil, sobre la vida real del alumno: rutinas, dinero, vecinos, trabajo, manías, decisiones. Se usan para abrir la clase, para rellenar diez minutos que sobran o como cierre. Cada lista tiene su página para copiarla al chat o proyectarla:" },
+          { type: "ul", items: [
+            "[Preguntas A1](/material-ele/preguntas/a1): presente, gustos, rutina, familia.",
+            "[Preguntas A2](/material-ele/preguntas/a2): pasados, ciudad, comida, planes.",
+            "[Preguntas B1](/material-ele/preguntas/b1): consejos, experiencias, opiniones con «creo que».",
+            "[Preguntas B2](/material-ele/preguntas/b2): hipótesis, valoraciones, desacuerdo cortés.",
+            "[Preguntas C1](/material-ele/preguntas/c1): matices, ironía, posturas incómodas.",
+            "[Preguntas C2](/material-ele/preguntas/c2): registro, variedades, lo que no se dice.",
+          ] },
+          { type: "p", text: "Regla para llevarlas: una pregunta, una repregunta, y después el alumno te la hace a ti. Si te la hace, la actividad funcionó." },
+        ],
+      },
+      {
+        id: "roleplays",
+        title: `Roleplays con desenlace: ${roleplays} clases`,
+        blocks: [
+          { type: "p", text: "Un roleplay para adultos necesita un conflicto y un final abierto: reclamar un cobro, negociar un alquiler, convencer a un jefe, pedir un favor incómodo. Los [roleplays de SpanishCue](/material-ele/formatos/roleplays) traen el papel del alumno, el del profesor y las frases que cada uno puede usar, con el nivel marcado. Las funciones que más se practican con ellos tienen su propia página: [expresar quejas y reclamar](/material-ele/funciones/expresar-quejas-y-reclamar), [negociar y convencer](/material-ele/funciones/negociar-y-convencer), [invitar y hacer planes](/material-ele/funciones/invitar-y-hacer-planes) y [dar consejos](/material-ele/funciones/dar-consejos-y-recomendaciones)." },
+        ],
+      },
+      {
+        id: "juegos",
+        title: `Juegos de conversación: ${conversationGames} clases para hablar sin darse cuenta`,
+        blocks: [
+          { type: "p", text: "Los juegos funcionan con adultos cuando el reto es intelectual, no infantil: detectar la mentira en una anécdota, decidir con un presupuesto que cambia, sobrevivir a una noche en una ciudad desconocida. En los [juegos de conversación](/material-ele/formatos/juegos-de-conversacion) la lengua es la herramienta para ganar, y por eso el alumno habla más de lo que hablaría en un ejercicio. Si lo que quieres es un juego corto para empezar, los [juegos para clase de español](/material-ele/juegos-para-clase-de-espanol) tienen varios de cinco minutos." },
+        ],
+      },
+      {
+        id: "mundos-3d",
+        title: `Mundos 3D: ${worlds3d} situaciones donde la conversación es el juego`,
+        blocks: [
+          { type: "p", text: "Es el diferencial de SpanishCue y lo que más engancha a los adultos: el alumno camina por un lugar real (un aeropuerto con el vuelo cancelado, un hospital, un edificio de Buenos Aires en plena reunión de consorcio, una ciudad de noche) y cada persona con la que se cruza abre una conversación. El profesor elige el nivel dentro del mundo: la misma situación pide frases mínimas a un principiante y leer el subtexto a un C2. Cada mundo tiene también su modo de comprensión auditiva, con escuchas por zona." },
+          { type: "ul", items: [
+            "[Estados Unidos](/estados-unidos-a2-b1), gratis: seis estados, cinco lugares cada uno y escuchas cortas; ideal para probar el formato.",
+            "[Vuelo cancelado](/resources/spanish-conversation-activity-a0-c2-vuelo-cancelado): un aeropuerto cerrado, decisiones con tiempo y dinero, quejas y negociación.",
+            "[El consorcio](/resources/spanish-conversation-activity-a0-c2-el-consorcio): la reunión de vecinos donde hay que convencer, ceder y votar.",
+            "[Hospital San Casi Vivo](/resources/spanish-conversation-activity-a0-c2-hospital-san-casi-vivo): pacientes, médicos y familiares con más de cien audios de voz.",
+            "[Noche abierta](/resources/spanish-conversation-activity-a0-c2-noche-abierta): una noche en la ciudad, con el centro gratis para probar.",
+            "[Más allá: cielo e infierno](/resources/spanish-conversation-activity-a0-c2-mas-alla-cielo-e-infierno): doce encuentros con preguntas que no tienen respuesta correcta.",
+          ] },
+          { type: "p", text: "Todos están en [mundos 3D de conversación](/material-ele/formatos/mundos-3d), con su nivel y su escucha. Se juegan por pantalla compartida: el alumno dice adónde ir y qué responder, el profesor mueve y corrige." },
+        ],
+      },
+      {
+        id: "temas",
+        title: "Doce temas de conversación que funcionan con adultos (y la pregunta que los abre)",
+        blocks: [
+          { type: "p", text: "Los temas de manual (la familia, las vacaciones, el medio ambiente) no fallan por el tema sino por la pregunta. Estos doce, con su pregunta de apertura, producen conversación real en casi cualquier nivel; abajo de cada uno, la página de tema con las clases que lo trabajan:" },
+          { type: "ol", items: [
+            "**Dinero**: «¿En qué gastas más de lo que deberías?» → [compras y dinero](/material-ele/vocabulario/compras-y-dinero).",
+            "**Vecinos**: «¿Qué haría falta para que te mudaras?» → [la casa](/material-ele/vocabulario/la-casa).",
+            "**Trabajo**: «¿Qué parte de tu trabajo haría mejor una máquina?» → [trabajo y profesiones](/material-ele/vocabulario/trabajo-y-profesiones).",
+            "**Comida**: «¿Qué plato no volverías a pedir nunca?» → [comida y restaurante](/material-ele/vocabulario/comida-y-restaurante).",
+            "**Viajes**: «¿Cuál fue el peor hotel de tu vida?» → [viajes y transporte](/material-ele/vocabulario/viajes-y-transporte).",
+            "**Tecnología**: «¿Qué aplicación borrarías hoy?» → [tecnología y medios](/material-ele/vocabulario/tecnologia-y-medios).",
+            "**Salud**: «¿Cuándo fue la última vez que fuiste al médico sin querer ir?» → [el cuerpo y la salud](/material-ele/vocabulario/el-cuerpo-y-la-salud).",
+            "**Emociones**: «¿Qué te pone de mal humor antes de las nueve?» → [emociones y sentimientos](/material-ele/vocabulario/emociones-y-sentimientos).",
+            "**Tiempo libre**: «¿Qué hobby abandonaste y por qué?» → [ocio y tiempo libre](/material-ele/vocabulario/ocio-y-tiempo-libre).",
+            "**Opinión**: «¿En qué tema cambiaste de opinión el último año?» → [expresar opinión](/material-ele/funciones/expresar-opinion).",
+            "**Hipótesis**: «¿Qué harías con un mes libre y sin dinero?» → [expresar hipótesis y probabilidad](/material-ele/funciones/expresar-hipotesis-y-probabilidad).",
+            "**Cultura**: «¿Qué costumbre de otro país adoptarías?» → [fiestas y tradiciones](/material-ele/cultura/fiestas-y-tradiciones).",
+          ] },
+          { type: "p", text: "Con un principiante, la misma pregunta se hace con dos opciones («¿té o café?») y se responde con una frase. Con un C2, se pide la razón, la excepción y la opinión contraria. El tema no cambia; cambia lo que se exige." },
+        ],
+      },
+      {
+        id: "llevarlas",
+        title: "Cómo llevar una actividad de conversación sin que sea un interrogatorio",
+        blocks: [
+          { type: "ol", items: [
+            "**Tú primero.** Responde tú la primera pregunta en dos frases. Das modelo, bajas la tensión y muestras el nivel esperado.",
+            "**Repregunta antes de corregir.** «¿Y por qué?» produce más lengua que «se dice *fui*». La corrección va después, agrupada.",
+            "**Anota, no interrumpas.** Tres errores recurrentes apuntados valen más que diez correcciones en vivo. Al final se repasan con el alumno.",
+            "**Cierra con una decisión.** ¿Qué harías? ¿A quién le darías la razón? Una decisión obliga a usar lo que se practicó.",
+            "**Reutiliza.** La misma actividad, un nivel más arriba, es otra clase. Los mundos 3D están diseñados para eso.",
+          ] },
+          { type: "p", text: `Las clases que lo trabajan de forma guiada están en [funciones comunicativas](/material-ele/funciones) y en [Material ELE por nivel](/material-ele#niveles); de las ${total} clases, ${free} son gratis para empezar hoy.` },
+        ],
+      },
+    ],
+    faq: [
+      { question: "¿Qué actividades de conversación funcionan con adultos principiantes?", answer: "Preguntas cerradas sobre su vida con apoyo visual, roleplays de una situación cotidiana (pedir en un bar, presentarse) y un mundo 3D en nivel principiante, donde cada escena trae cuatro o seis palabras clave. La Clase inicial gratis termina con el alumno diciendo diez frases sobre sí mismo." },
+      { question: "¿Cómo evito que el alumno conteste con monosílabos?", answer: "Pregunta por decisiones y razones, no por hechos: «¿qué harías?» y «¿por qué?» en vez de «¿te gusta?». Y responde tú primero: el modelo baja la tensión y marca la longitud esperada." },
+      { question: "¿Sirven estas actividades para clases presenciales en grupo?", answer: "Sí. Las preguntas y los roleplays se reparten en parejas sin cambios; los mundos 3D se proyectan y el grupo decide adónde ir y qué responder." },
+      { question: "¿Las actividades de conversación son gratis?", answer: `Las preguntas de conversación, las fichas y los ejercicios de Material ELE son gratis sin registro. De los mundos 3D, Estados Unidos es gratis completo y Noche abierta tiene el centro gratis; el resto está en la suscripción de US$15,50 al mes, que incluye las ${total} clases.` },
+      { question: "¿Cuánto dura una actividad de conversación?", answer: "Una lista de preguntas, de cinco a diez minutos; un roleplay, de diez a quince; un mundo 3D, la clase entera de 45 minutos, con su escucha incluida." },
+    ],
+    related: ["preguntas-de-conversacion", "juegos-para-clase-de-espanol", "comprension-auditiva", "b1", "b2", "c1"],
   },
 ];
 
