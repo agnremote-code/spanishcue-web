@@ -29,6 +29,8 @@ import { redirectsLanguageQuery, isEdgeCacheablePath, robotsHeaderFor } from "..
 /** Cloudflare Worker entry point for the vinext-starter template. */
 import { handleImageOptimization, DEFAULT_DEVICE_SIZES, DEFAULT_IMAGE_SIZES } from "vinext/server/image-optimization";
 import handler from "vinext/server/app-router-entry";
+import { setCacheHandler } from "vinext/shims/cache";
+import { BoundedCacheHandler } from "./bounded-cache-handler";
 import { withDeploymentHeaders } from "./deployment-headers";
 import { writeFreezeActive, writeFreezeResponse } from "./write-freeze";
 import { pagePathname, pageSearch } from "./page-path";
@@ -36,6 +38,11 @@ import { giftCoversPath, hasGift } from "../app/newsletter/server";
 import { GIFT_LANDING_PATH } from "../app/newsletter/gift";
 import { rateLimitKey, rateLimited, rateLimitResponse, type RateLimitBinding } from "./rate-limit";
 import { watermarkDay, watermarkToken, withWatermark, type Rewriter } from "../app/license-watermark";
+
+// vinext's default in-memory ISR cache is unbounded and grew past the isolate's
+// 128 MB under crawler traffic (Error 1102, 2026-11-02). Install the bounded one
+// before the first request; the edge cache keeps serving repeat anonymous HTML.
+setCacheHandler(new BoundedCacheHandler());
 
 interface Env {
   ASSETS: Fetcher;
