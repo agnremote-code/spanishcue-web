@@ -49,5 +49,5 @@ jobs:
           git add -A docs/board/evidence/stt
           if git diff --cached --quiet; then echo "No report"; exit 0; fi
           git commit -m "Escucha 3D speech-to-text report"
-          git pull --rebase origin ${GITHUB_REF_NAME}
+          git pull --rebase -X theirs origin ${GITHUB_REF_NAME}
           git push origin HEAD:${GITHUB_REF_NAME}
