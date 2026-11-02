@@ -51,7 +51,7 @@ export default {
       icon: '🌍', title: 'Comida y cultura',
       questions: [
         '¿Qué costumbre en la mesa de otro país te pareció extraña al principio?',
-        '¿Qué plato de tu cultura defenderías ante alguien que lo critica?',
+        '¿Qué plato típico de tu tierra te ofende ver mal preparado en el extranjero?',
         '¿Qué cocina extranjera se puso de moda en tu ciudad en los últimos años?',
         '¿Qué dice de tus raíces el plato que cocinas cuando tienes nostalgia?',
         '¿Cómo cambiarías la forma de comer de tu país si pudieras?',

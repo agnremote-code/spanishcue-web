@@ -64,7 +64,7 @@ export default {
       questions: [
         t('¿Qué arreglas tú en casa sin llamar a nadie?', 'What do you fix at home without calling anyone?'),
         t('¿Qué haces un sábado para recuperar energía?', 'What do you do on a Saturday to get your energy back?'),
-        t('¿Qué persona de tu vida te hace reír en los días malos?', 'Who in your life makes you laugh on bad days?'),
+        t('¿A quién llamas primero cuando tu día es un desastre?', 'Who do you call first when your day is a disaster?'),
         t('¿Qué frase dices cuando todo sale mal?', 'What phrase do you say when everything goes wrong?'),
         t('¿Qué cosa buena pasa esta semana, aunque sea pequeña?', 'What good thing happens this week, even if it is small?'),
       ],

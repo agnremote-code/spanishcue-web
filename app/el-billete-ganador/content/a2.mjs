@@ -10,7 +10,7 @@ export default {
         '¿En qué gastaste tu primer sueldo?',
         '¿Qué te daban tus padres o tus abuelos para gastar cuando eras pequeño o pequeña?',
         '¿Qué hacías para ganar un poco de dinero de adolescente?',
-        '¿Qué te enseñaron en casa sobre el dinero?',
+        '¿Qué frase sobre el dinero repetían tus padres o tus abuelos?',
       ],
       starters: ['Mi primer trabajo fue…', 'Con mi primer sueldo…', 'En casa me decían que…'],
     },

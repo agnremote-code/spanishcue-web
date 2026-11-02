@@ -31,7 +31,7 @@ export default {
       questions: [
         t('¿Qué comida de la calle de tu ciudad recomiendas?', 'What street food in your city do you recommend?'),
         t('¿Qué puesto de comida conoces desde hace muchos años?', 'Which food stall have you known for many years?'),
-        t('¿Qué comes después de una fiesta, a las tres de la mañana?', 'What do you eat after a party, at three in the morning?'),
+        t('¿Qué pides en un puesto de comida de madrugada?', 'What do you order at a late-night food stall?'),
         t('¿Qué mercado de tu ciudad tiene la mejor comida?', 'Which market in your city has the best food?'),
         t('¿Qué comida de la calle de otro país recuerdas de un viaje?', 'What street food from another country do you remember from a trip?'),
       ],

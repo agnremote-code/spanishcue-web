@@ -51,7 +51,7 @@ export default {
     {
       icon: '🚀', title: t('Valentina, la ingeniera que quiere ir a Marte', 'Valentina, the engineer who wants to go to Mars'),
       questions: [
-        t('¿Qué tres cosas llevas a Marte?', 'What three things do you take to Mars?'),
+        t('¿Qué comida de tu país quieres comer en Marte?', 'What food from your country do you want to eat on Mars?'),
         t('¿Qué planeta o estrella conoces por su nombre?', 'Which planet or star do you know by name?'),
         t('¿Qué robot o máquina usas cada día?', 'What robot or machine do you use every day?'),
         t('¿Hablas con una inteligencia artificial? ¿Para qué?', 'Do you talk to an artificial intelligence? What for?'),
