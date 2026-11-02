@@ -245,7 +245,7 @@ test('the catalog cover exists and matches the other 3D covers (1200×750 lossy 
   const row = readFileSync('app/lesson-catalog.ts', 'utf8').split('\n').find(line => line.startsWith('  {id:241,'));
   assert.ok(row, 'catalog row 241');
   const image = row.match(/image:"([^"]+)"/)?.[1];
-  assert.equal(image, '/la-feria-de-villaluz/cover.webp');
+  assert.equal(image, '/la-feria-de-villaluz/portada.webp');
   const file = readFileSync(`public${image}`);
   assert.equal(file.toString('ascii', 0, 4), 'RIFF');
   assert.equal(file.toString('ascii', 8, 16), 'WEBPVP8 ', 'plain lossy VP8, no metadata chunks');

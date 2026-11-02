@@ -139,7 +139,7 @@ test('PRO by default: route, catalog, cover, preview, shared engine and no brows
   assert.match(catalog, /\{id:244,[^\n]*levels:\["A0","A1","A2","B1","B2","C1","C2"\],displayLevel:"A0–C2"[^\n]*path:"\/vuelo-cancelado"/);
   assert.doesNotMatch(readFileSync('app/access-policy.ts', 'utf8'), /244|vuelo-cancelado/);
   assert.match(readFileSync('app/vuelo-cancelado/layout.tsx', 'utf8'), /canonical:"https:\/\/spanishcue\.com\/vuelo-cancelado"/);
-  const cover = readFileSync('public/vuelo-cancelado/cover.webp');
+  const cover = readFileSync('public/vuelo-cancelado/portada.webp');
   assert.equal(cover.toString('ascii', 0, 4), 'RIFF');
   assert.equal(cover.toString('ascii', 8, 16), 'WEBPVP8 ');
   assert.deepEqual([cover.readUInt16LE(26) & 0x3fff, cover.readUInt16LE(28) & 0x3fff], [1200, 750]);

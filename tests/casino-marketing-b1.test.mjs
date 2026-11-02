@@ -26,7 +26,7 @@ test('one A0–C2 Modo Play lesson keeps ID 237 and its route',async()=>{
   const {lessons,lessonAtPath,isFreeLesson}=product.exports;
   const entry=lessons.filter(item=>item.id===237);
   assert.equal(entry.length,1);
-  assert.deepEqual([entry[0].path,entry[0].displayLevel,entry[0].conversationMode,entry[0].image],['/marketing-de-casinos','A0–C2','play','/marketing-de-casinos/cover.webp']);
+  assert.deepEqual([entry[0].path,entry[0].displayLevel,entry[0].conversationMode,entry[0].image],['/marketing-de-casinos','A0–C2','play','/marketing-de-casinos/portada.webp']);
   assert.deepEqual(entry[0].levels,['A0','A1','A2','B1','B2','C1','C2']);
   assert.equal(lessonAtPath('/marketing-de-casinos',lessons)?.id,237);
   assert.equal(isFreeLesson(237),false);
