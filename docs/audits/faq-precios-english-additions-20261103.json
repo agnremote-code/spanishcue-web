@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "authorization": "Owner standing approval (Ale) for new English copy, typed «apruebo (siempre de ahora en más apruebo)» on 2026-10-22 (message cmsg_01Gr5R4j3t2Yet65UcmhcVhAAAbp6kqDfMqxzNm3PL6f5g), applied to Ale’s 2026-11-03 request that the Google campaign and what it sells be configured perfectly (message cmsg_01Gr5R4j3t2Yet65UcmhcVhA1oJQo1qd5f8D64utjXxkZs): the payment FAQ no longer promises the retired US$2 trial and states the monthly and annual prices plus the 30-day guarantee.",
+  "additions": [
+    {
+      "path": "app/marketing/MarketingSections.tsx",
+      "text": "Yes. By card you pay US$15.50/month or US$129/year (2 months free), or choose PayPal. Your first payment has a 30-day guarantee and you can cancel anytime."
+    },
+    {
+      "path": "app/marketing/MarketingSections.tsx",
+      "text": "Yes. By card you pay US$15.50/month or US$129/year (2 months free). Your first payment has a 30-day guarantee and you can cancel anytime."
+    },
+    {
+      "path": "app/pricing/page.tsx",
+      "text": "Yes. By card you pay US$15.50/month or US$129/year (2 months free). PayPal shows its price before confirmation. Your first payment has a 30-day guarantee."
+    }
+  ]
+}

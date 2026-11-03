@@ -165,6 +165,18 @@
     {
       "path": "app/marketing/FreeVersionBar.tsx",
       "text": "Unlock everything · US$19.90/month →"
+    },
+    {
+      "path": "app/marketing/MarketingSections.tsx",
+      "text": "Yes. By card you pay US$19.90/month or US$199/year (2 months free), or choose PayPal. Your first payment has a 30-day guarantee and you can cancel anytime."
+    },
+    {
+      "path": "app/marketing/MarketingSections.tsx",
+      "text": "Yes. By card you pay US$19.90/month or US$199/year (2 months free). Your first payment has a 30-day guarantee and you can cancel anytime."
+    },
+    {
+      "path": "app/pricing/page.tsx",
+      "text": "Yes. By card you pay US$19.90/month or US$199/year (2 months free). PayPal shows its price before confirmation. Your first payment has a 30-day guarantee."
     }
   ],
   "changes": [

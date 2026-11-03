@@ -434,9 +434,9 @@ export function FAQ() {
     return () => controller.abort();
   }, []);
   const paymentAnswer = billing === "both"
-    ? (locale === "es" ? "Sí. Puedes pagar US$19.90/mes o US$199/año con tarjeta, o elegir PayPal. Consulta los importes antes de pagar." : "Yes. Pay US$19.90/month or US$199/year by card, or choose PayPal. Review amounts before payment.")
+    ? (locale === "es" ? "Sí. Con tarjeta pagas US$19.90/mes o US$199/año (2 meses gratis), o eliges PayPal. Tienes garantía de 30 días en tu primer pago y cancelas cuando quieras." : "Yes. By card you pay US$19.90/month or US$199/year (2 months free), or choose PayPal. Your first payment has a 30-day guarantee and you can cancel anytime.")
     : billing === "card"
-      ? (locale === "es" ? "Sí. Puedes pagar con tarjeta US$19.90/mes o US$199/año." : "Yes. Pay US$19.90/month or US$199/year by card.")
+      ? (locale === "es" ? "Sí. Con tarjeta pagas US$19.90/mes o US$199/año (2 meses gratis). Tienes garantía de 30 días en tu primer pago y cancelas cuando quieras." : "Yes. By card you pay US$19.90/month or US$199/year (2 months free). Your first payment has a 30-day guarantee and you can cancel anytime.")
       : billing === "paypal"
         ? (locale === "es" ? "Sí. Puedes suscribirte con PayPal. Su precio se muestra antes del pago." : "Yes. You can subscribe with PayPal; its price is shown before payment.")
         : billing === "offline"

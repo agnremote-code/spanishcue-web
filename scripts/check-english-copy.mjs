@@ -105,6 +105,7 @@ export function filterReviewedChanges(findings, reviewed) {
  */
 export const APPROVAL_MANIFESTS = [
   'docs/audits/price-1990-annual-199-english-20261103.json',
+  'docs/audits/faq-precios-english-additions-20261103.json',
   'docs/audits/clasicas-conversacion-english-additions-20261102.json',
   'docs/audits/pricing-free-doors-english-additions-20261101.json',
   'docs/audits/brand-query-english-additions-20261102.json',
