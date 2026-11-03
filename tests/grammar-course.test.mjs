@@ -162,7 +162,7 @@ test('every new course class plays its own recording, built from the transcript 
     assert.equal(lesson.title,unit.title,`${unit.code}: the class has its course title`);
     const listen=lesson.stages.find(s=>s.id==='escuchar').steps.flatMap(s=>s.blocks).find(b=>b.kind==='listen');
     // The FREE class per level (access-policy samplesByCategory) keeps their recording in the public grammar-free prefix.
-    assert.equal(listen.src,`/audio/${[350,389,439,468,515].includes(unit.catalogId)?'grammar-free':'grammar-live'}/${unit.catalogId}.mp3`);
+    assert.equal(listen.src,`/audio/${[332,350,358,374,389,390,402,436,439,461,468,480,481,507,515,523].includes(unit.catalogId)?'grammar-free':'grammar-live'}/${unit.catalogId}.mp3`);
     const clip=clips.find(c=>c.id===unit.catalogId);const audio=recorded.find(c=>c.id===unit.catalogId);
     assert.equal(clip.text,listen.transcript.replace(/\[\[([^\]|]+)\|[a-z]+\]\]/g,'$1'),`${unit.code}: the recording reads the transcript`);
     assert.ok(audio,`${unit.code}: recorded`);

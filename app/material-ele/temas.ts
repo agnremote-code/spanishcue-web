@@ -74,8 +74,8 @@ const strip = (text: string) => text.normalize("NFD").replace(/[̀-ͯ]/g, "").to
 const topicLabels = new Set(grammarTopics.map((topic) => topic.label));
 const haystackByLesson = new Map<number, string>(lessons.map((lesson) => [lesson.id, strip([lesson.title, lesson.subtitle, topicLabels.has(lesson.tag) ? "" : lesson.tag, lesson.path ?? "", lesson.collection ?? "", ...(lesson.searchAliases ?? []), ...lesson.goals, lesson.explanation].join(" \n "))]));
 
-/** The free grammar classroom of each level: the sample of the live-class format. */
-const grammarLiveIds = [239, 350, 389, 439, 468, 515];
+/** The free grammar classrooms of each level: samples of the live-class format. */
+const grammarLiveIds = [239, 40, 41, 332, 350, 358, 374, 389, 390, 402, 436, 439, 461, 468, 480, 481, 507, 515, 523];
 
 /* Patterns are tested against accent-stripped lowercase text, so they are written without accents. */
 const sources: Source[] = [
@@ -187,7 +187,7 @@ const sources: Source[] = [
   { group: "formatos", parent: "Tipos de clase", slug: "principiantes-absolutos", name: "Principiantes absolutos", match: /principiante|desde cero|primera clase|clase inicial|con el ingles al lado/, intro: "Clases para el primer día: palabras con el inglés al lado, frases mínimas y mundos 3D con un nivel de entrada anterior a A1, para que el alumno hable desde la primera hora." },
   { group: "formatos", parent: "Tipos de clase", slug: "ele-para-adultos", name: "ELE para adultos", match: /\badultos\b|vida adulta|despues de los 30|\bmuerte\b|\bcasino\b/, intro: "Temas de adulto tratados como adulto: la vida después de los 30, la muerte y la vida, una noche en la ciudad, el dinero y el riesgo, sin infantilizar al alumno ni evitar la conversación real." },
   { group: "formatos", parent: "Tipos de clase", slug: "fines-especificos", name: "Español para fines específicos", match: /negocio|empresa|\bmarketing\b|entrevista de trabajo|\blaboral\b|profesional|\bhospital\b|\bmedic/, intro: "Español del trabajo, de la empresa, del marketing y de la salud: clases con el léxico y las situaciones de un ámbito profesional, para alumnos que lo necesitan en su trabajo." },
-  { group: "formatos", parent: "Tipos de clase", slug: "clases-de-gramatica-en-vivo", name: "Clases de gramática en vivo", match: /(?!)/, ids: grammarLiveIds, intro: "El formato de siete pasos de las clases de gramática: entender, explorar, practicar, escuchar, conversar, escribir y cerrar, en una pantalla que se comparte y avanza con el profesor. Aquí, una clase de muestra por nivel." },
+  { group: "formatos", parent: "Tipos de clase", slug: "clases-de-gramatica-en-vivo", name: "Clases de gramática en vivo", match: /(?!)/, ids: grammarLiveIds, intro: "El formato de siete pasos de las clases de gramática: entender, explorar, practicar, escuchar, conversar, escribir y cerrar, en una pantalla que se comparte y avanza con el profesor. Aquí, tres clases de muestra por nivel." },
   // Cultura y países: the country worlds that exist today (the student's countries and the Spanish-speaking ones).
   { group: "cultura", parent: "Países hispanohablantes", slug: "espana", name: "España", match: /\bespana\b|\bmadrid\b|espanol de espana/, intro: "Madrid entera en 3D y un viaje por España: lugares reales, costumbres y el español peninsular con su «vosotros» y su leísmo, para conversar y escuchar por nivel." },
   { group: "cultura", parent: "Países hispanohablantes", slug: "argentina", name: "Argentina", match: /argentin|buenos aires|rioplatense|\bvoseo\b|almagro|\bconsorcio\b/, intro: "Buenos Aires en la calle, un edificio de Almagro con asamblea de vecinos, Argento Roleplays y el voseo: la Argentina cotidiana para enseñar español rioplatense." },
@@ -299,7 +299,7 @@ function buildLevelPage(tema: TemaPage, level: string): TemaLevelPage | null {
   const title = [longTitle, `${tema.name} ${level}: clases y actividades ELE | SpanishCue`, `${tema.name} ${level}: clases ELE | SpanishCue`].find((candidate) => candidate.length <= 78) ?? `${tema.name} ${level} | SpanishCue`;
   let description = `${tema.name} para alumnos de ${level}: ${ids.length} clases interactivas con teoría visual, práctica corregida y conversación, ${copy.descTail}.`;
   if (description.length > 165) description = `${tema.name} en ${level}: ${ids.length} clases interactivas con ${copy.shortTail} para la clase de ELE.`;
-  if (description.length < 110) description = `${description} Una clase gratis por nivel para probar sin registro.`;
+  if (description.length < 110) description = `${description} Tres clases gratis por nivel para probar sin registro.`;
   return {
     group: tema.group, parent: tema.parent, slug: tema.slug, level, path: `${tema.path}/${level.toLowerCase()}`, name: tema.name, tema,
     h1: `${tema.name} en ${level}: ${ids.length} clases ${levelPhrase[level]}`, title, description, order: copy.order,

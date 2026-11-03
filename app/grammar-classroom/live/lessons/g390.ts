@@ -283,7 +283,7 @@ export const lesson: LiveLesson = {
       steps: [
         { title: 'Carolina manda un mensaje de voz · Carolina sends a voice message', blocks: [
           { kind: 'guide', text: { teacher: 'Primera escucha: la idea general. Segunda escucha: tu alumno levanta la mano cada vez que oye un consejo o una petición. Después, las preguntas.', self: 'Escucha una vez para la idea general y otra vez para los detalles. Cuenta los consejos y las peticiones. (Listen once for the gist, once for the details.)' } },
-          { kind: 'listen', title: 'Un audio de Carolina', channel: 'MENSAJE DE VOZ · CAROLINA, DESDE SANTIAGO', src: '/audio/grammar-live/390.mp3',
+          { kind: 'listen', title: 'Un audio de Carolina', channel: 'MENSAJE DE VOZ · CAROLINA, DESDE SANTIAGO', src: '/audio/grammar-free/390.mp3',
             before: 'Carolina responde a las preguntas de Rafael con un mensaje de voz. ¿Sobre qué temas crees que da consejos? (Carolina answers Rafael’s questions in a voice message. What topics do you think she gives advice on?)',
             gist: { prompt: '¿Para qué manda Carolina el audio?', options: ['Para decir que no puede ir al aeropuerto.', 'Para dar consejos sobre la mudanza y hacer una petición.', 'Para contar su fin de semana.'], answer: 1, why: 'Habla del departamento, del clima y del trabajo, y le pide la fecha del vuelo.', en: 'Why does Carolina send the message?' },
             details: [

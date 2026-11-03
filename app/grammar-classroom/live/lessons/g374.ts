@@ -277,7 +277,7 @@ export const lesson: LiveLesson = {
       steps: [
         { title: 'Ana organiza la semana · Ana organises the week', blocks: [
           { kind: 'guide', text: { teacher: 'Primera escucha: solo la idea general. Segunda escucha: tu alumno dice «¡por!» o «¡para!» cada vez que oye una y después explica qué pregunta responde. Después, las preguntas.', self: 'Escucha una vez para la idea general y otra vez para los detalles. Anota cada «por» y cada «para» que oyes. (Listen once for the gist, once for the details.)' } },
-          { kind: 'listen', title: 'Un audio de Ana para Lucía', channel: 'MENSAJE DE VOZ · DE ANA PARA LUCÍA', src: '/audio/grammar-live/374.mp3',
+          { kind: 'listen', title: 'Un audio de Ana para Lucía', channel: 'MENSAJE DE VOZ · DE ANA PARA LUCÍA', src: '/audio/grammar-free/374.mp3',
             before: 'Ana, la dueña de La Espiga, manda un audio a Lucía el martes por la noche. ¿De qué crees que habla: del horario, del regalo, del sábado…? (Ana sends Lucía a voice message. What do you think she talks about?)',
             gist: { prompt: '¿Cuál es la idea general?', options: ['Ana da las gracias a Lucía y organiza el horario y el regalo.', 'Ana dice que la panadería cierra el sábado.', 'Ana pide a Lucía un viaje a Valencia.'], answer: 0, why: 'Ana da las gracias por el cambio, pide el horario, habla del sábado y del regalo para Marta.', en: 'What is the main idea?' },
             details: [

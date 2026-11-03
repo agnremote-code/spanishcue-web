@@ -15,8 +15,8 @@ import ele from "./material-ele.module.css";
 
 export const metadata = eleMetadata(MATERIAL_ELE_PATH, hubTitle, hubDescription);
 
-/** One free classroom per level plus the free conversation and listening entries. */
-const freeEntryIds = [239, 350, 389, 439, 468, 515, 36, 28];
+/** Every free grammar classroom (three per level plus the Clase inicial) and the free conversation and listening entries. */
+const freeEntryIds = [239, 40, 41, 332, 350, 358, 374, 389, 390, 402, 436, 439, 461, 468, 480, 481, 507, 515, 523, 36, 28];
 
 /** The newest classes of the catalog, with the day each went live. */
 const novedades = catalog.filter((lesson) => lesson.news?.addedAt).sort((a, b) => (a.news!.addedAt < b.news!.addedAt ? 1 : -1)).slice(0, 6);
@@ -94,7 +94,7 @@ export default function MaterialElePage() {
             <EleTopicCards />
           </Section>
 
-          <Section id="gratis" title="Clases interactivas gratis, una por nivel" intro="Ábrelas sin pagar y úsalas con tu alumno hoy. Cada clase tiene teoría, práctica, audio, conversación y escritura, con una guía para el profesor.">
+          <Section id="gratis" title="Clases interactivas gratis, tres por nivel" intro="Ábrelas sin pagar y úsalas con tu alumno hoy. Cada clase tiene teoría, práctica, audio, conversación y escritura, con una guía para el profesor.">
             <EleLessonGrid lessons={free} />
           </Section>
 

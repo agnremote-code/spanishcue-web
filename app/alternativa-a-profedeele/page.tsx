@@ -54,7 +54,7 @@ const faq = [
 ];
 
 export default function AlternativePage() {
-  const free = eleLessonCards([239, 350, 389, 439, 468, 515]);
+  const free = eleLessonCards([239, 40, 41, 332, 350, 358, 374, 389, 390, 402, 436, 439, 461, 468, 480, 481, 507, 515, 523]);
   return (
     <>
       <main className={styles.page} lang="es">

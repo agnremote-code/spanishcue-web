@@ -288,7 +288,7 @@ export const lesson: LiveLesson = {
       steps: [
         { title: '«Butaca de primera fila» · Front-row seat', blocks: [
           { kind: 'guide', text: { teacher: 'Primera escucha: la idea general. Segunda escucha: tu alumno anota cada lítote e ironía y dice qué piensa de verdad la crítica.', self: 'Escucha una vez para la idea general. En la segunda, anota cada lítote e ironía. Vas a oír «patio de butacas» (stalls) y «cambios de escena» (scene changes).' } },
-          { kind: 'listen', title: 'Crítica de «Una boda tranquila»', channel: 'RADIO · BUTACA DE PRIMERA FILA', src: '/audio/grammar-live/523.mp3',
+          { kind: 'listen', title: 'Crítica de «Una boda tranquila»', channel: 'RADIO · BUTACA DE PRIMERA FILA', src: '/audio/grammar-free/523.mp3',
             before: 'Adela Montoya, crítica de teatro, comenta en la radio el estreno de «Una boda tranquila». ¿Crees que le ha gustado? ¿Cómo lo dirá sin decirlo directamente? (Did she like it? How will she say so indirectly?)',
             gist: { prompt: '¿Qué opina Adela de la obra? · What does Adela think of the play?', options: ['No le ha gustado y recomienda no verla.', 'No ha visto la obra entera.', 'Le ha gustado mucho, con algún defecto menor, y critica el horario del festival.'], answer: 2, why: 'Termina con «no está nada mal» y «lo mejor que he visto esta temporada»; los defectos son de ritmo, y la ironía va contra el horario.', en: 'Positive with minor reservations, and ironic about the festival slot.' },
             details: [

@@ -244,7 +244,7 @@ export const lesson: LiveLesson = {
       steps: [
         { title: 'Un audio para el elenco · A voice note for the cast', blocks: [
           { kind: 'guide', text: { teacher: 'Primera escucha: solo la idea general. Segunda escucha: tu alumno anota cada «como si» y dice si lo imaginado es simultáneo o anterior. Después, las preguntas.', self: 'Escucha una vez para la idea general y otra para los detalles. Anota cada «como si» y piensa: ¿simultáneo o anterior? Irene habla a todo el grupo con «ustedes», como en toda América. (Listen once for the gist and once for the details.)' } },
-          { kind: 'listen', title: 'Las notas de Irene', channel: 'AUDIO DE WHATSAPP · DE IRENE PARA EL ELENCO', src: '/audio/grammar-live/436.mp3',
+          { kind: 'listen', title: 'Las notas de Irene', channel: 'AUDIO DE WHATSAPP · DE IRENE PARA EL ELENCO', src: '/audio/grammar-free/436.mp3',
             before: 'Es miércoles por la noche. Irene manda un audio al grupo del elenco después del ensayo. ¿Qué crees que dice: qué salió bien, qué tienen que cambiar, a qué hora empiezan mañana…? (Irene sends the cast a voice note after rehearsal. What do you think she says?)',
             gist: { prompt: '¿Para qué manda Irene el audio? · Why does Irene send the voice note?', options: ['Para cancelar el estreno.', 'Para dar sus notas sobre el ensayo y recordar el horario de mañana.', 'Para presentar a una actriz nueva.'], answer: 1, why: '«Les mando las notas del ensayo de hoy» y «Mañana empezamos a las seis en punto».', en: 'She gives her notes on the rehearsal and reminds them of tomorrow’s schedule.' },
             details: [

@@ -261,7 +261,7 @@ export const lesson: LiveLesson = {
       steps: [
         { title: 'Lucía llama a Raúl · Lucía calls Raúl', blocks: [
           { kind: 'guide', text: { teacher: 'Primera escucha: solo la idea general. Segunda escucha: tu alumno levanta la mano con cada «si» de condición y dice qué tipo de consecuencia sigue. Después, las preguntas.', self: 'Escucha una vez para la idea general y otra vez para los detalles. Cuenta los «si» de condición. Vas a oír «calentador» (water heater). (Listen once for the gist, then for the details.)' } },
-          { kind: 'listen', title: 'Un mensaje de voz de Lucía', channel: 'MENSAJE DE VOZ · DE LUCÍA PARA RAÚL', src: '/audio/grammar-live/402.mp3',
+          { kind: 'listen', title: 'Un mensaje de voz de Lucía', channel: 'MENSAJE DE VOZ · DE LUCÍA PARA RAÚL', src: '/audio/grammar-free/402.mp3',
             before: 'Lucía lleva tres días en Lima y le deja a Raúl un mensaje de voz. ¿Qué crees que dice: noticias del viaje, nuevas instrucciones, la fecha de vuelta…? (Lucía has been in Lima for three days and leaves Raúl a voice message. What do you think she says?)',
             gist: { prompt: '¿Cuál es la idea general? · What is the main idea?', options: ['Lucía da dos instrucciones nuevas y habla de su vuelta.', 'Lucía cuenta que la conferencia fue un desastre.', 'Lucía pide a Raúl que lleve a Canela al veterinario.'], answer: 0, why: 'Habla de la técnica del jueves, de Canela y de la fecha de vuelta.', en: 'What is the main idea?' },
             details: [
