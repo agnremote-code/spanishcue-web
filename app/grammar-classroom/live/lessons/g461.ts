@@ -264,7 +264,7 @@ export const lesson: LiveLesson = {
       steps: [
         { title: 'Un audio de Héctor · A voice message from Héctor', blocks: [
           { kind: 'guide', text: { teacher: 'Primera escucha: solo la idea general. Segunda escucha: tu alumno anota cada suposición y dice si es sobre ahora, sobre lo que acaba de pasar o sobre el pasado. Después, las preguntas.', self: 'Escucha una vez para la idea general y otra para los detalles. Anota cada suposición y su momento. Vas a oír «no lo podía ni ver» (couldn’t stand him). (Listen once for the gist and once for details.)' } },
-          { kind: 'listen', title: 'Un audio de Héctor', channel: 'MENSAJE DE VOZ · DE HÉCTOR PARA CLARA', src: '/audio/grammar-live/461.mp3',
+          { kind: 'listen', title: 'Un audio de Héctor', channel: 'MENSAJE DE VOZ · DE HÉCTOR PARA CLARA', src: '/audio/grammar-free/461.mp3',
             before: 'El lunes, Héctor habla con doña Rosario, una vecina mayor del edificio, y le manda un audio a Clara. ¿Qué crees que recuerda la vecina del chico de la foto? (On Monday Héctor talks to an elderly neighbour. What do you think she remembers?)',
             gist: { prompt: '¿Para qué manda Héctor el audio? · Why does Héctor send the message?', options: ['Para contar lo que recuerda la vecina sobre el cartero y la abuela.', 'Para decir que ha encontrado la foto de la boda.', 'Para cancelar la visita del domingo.'], answer: 0, why: 'Resume lo que le contó doña Rosario y propone preguntar a la abuela.', en: 'He passes on what the neighbour remembers and suggests asking grandma.' },
             details: [

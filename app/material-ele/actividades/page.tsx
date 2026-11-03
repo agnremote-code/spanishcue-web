@@ -9,7 +9,7 @@ import styles from "../../growth/growth.module.css";
 export const metadata = eleMetadata(ACTIVIDADES_PATH, bancoTitle, bancoDescription);
 
 const faq = [
-  { question: "¿Las actividades son gratis?", answer: "Sí. Cada ficha se abre, se imprime o se guarda en PDF sin registro. Las clases interactivas que acompañan cada tema tienen una versión gratis por nivel y el resto es PRO." },
+  { question: "¿Las actividades son gratis?", answer: "Sí. Cada ficha se abre, se imprime o se guarda en PDF sin registro. Las clases interactivas que acompañan cada tema tienen tres clases gratis por nivel y el resto es PRO." },
   { question: "¿Cómo están organizadas?", answer: "Por guía: cada tema de Material ELE (ser y estar, indefinido e imperfecto, subjuntivo, por y para…) trae varias actividades, un ejercicio con soluciones y, en conversación, una lista de preguntas por nivel. Aquí está todo junto para encontrarlo por nombre." },
   { question: "¿Sirven para clases online?", answer: "Están escritas para clases particulares online y grupos pequeños de adultos: cada actividad dice cómo hacerla en pantalla compartida o en pizarra colaborativa." },
 ];

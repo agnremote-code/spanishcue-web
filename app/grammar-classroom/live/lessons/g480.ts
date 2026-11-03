@@ -279,7 +279,7 @@ export const lesson: LiveLesson = {
       steps: [
         { title: 'Un minuto con la lengua · A minute on language', blocks: [
           { kind: 'guide', text: { teacher: 'Primera escucha: la idea general. Segunda escucha: tu alumno apunta qué truco da Lucía, qué casos admiten las dos formas y qué dice sobre la conversación. Después, las preguntas.', self: 'Escucha una vez para la idea general y otra para los detalles: el truco, los casos dobles y lo que dice del habla. (Listen once for the gist, once for the details.)' } },
-          { kind: 'listen', title: 'La cápsula de la lengua', channel: 'PÓDCAST DE CUADERNO URBANO · LUCÍA ARANGO', src: '/audio/grammar-live/480.mp3',
+          { kind: 'listen', title: 'La cápsula de la lengua', channel: 'PÓDCAST DE CUADERNO URBANO · LUCÍA ARANGO', src: '/audio/grammar-free/480.mp3',
             before: 'Lucía graba cada semana una cápsula de un minuto sobre el idioma para el pódcast del medio. Después de la entrevista de Daniela, ¿de qué crees que habla esta vez? (What do you think this week’s capsule is about?)',
             gist: { prompt: '¿Cuál es el mensaje principal de la cápsula?', options: ['Que en los textos cuidados conviene revisar los «de que», sin juzgar a nadie por cómo habla.', 'Que «de que» siempre es incorrecto.', 'Que en Colombia no hay que preocuparse por estas formas.'], answer: 0, why: 'Explica los dos errores, da un truco, aclara que se oyen en todas partes y recomienda revisarlos al escribir para publicar.', en: 'What is the main message of the capsule?' },
             details: [

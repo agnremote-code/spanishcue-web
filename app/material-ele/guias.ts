@@ -138,7 +138,7 @@ export const guiaPages: GuiaPage[] = [
             "**Conversar (10 min)**: una tarea donde el alumno necesita el punto de la clase para decir lo que quiere decir. Un roleplay, una decisión, una historia.",
             "**Cerrar (5 min)**: el alumno resume en tres frases qué puede hacer ahora que antes no podía. Esa es tu evaluación.",
           ] },
-          { type: "p", text: "Las clases de gramática de SpanishCue siguen exactamente este orden en siete pasos, en una sola pantalla que avanza contigo. Puedes ver una completa gratis en cada nivel desde [Material ELE por nivel](/material-ele#niveles)." },
+          { type: "p", text: "Las clases de gramática de SpanishCue siguen exactamente este orden en siete pasos, en una sola pantalla que avanza contigo. Puedes ver tres completas gratis en cada nivel desde [Material ELE por nivel](/material-ele#niveles)." },
         ],
       },
       {
@@ -151,7 +151,7 @@ export const guiaPages: GuiaPage[] = [
     ],
     faq: [
       { question: "¿Qué materiales necesito para empezar a enseñar español online?", answer: "Una clase inicial lista, una lista de preguntas de conversación por nivel y un material de gramática secuenciado para A1 y A2. Con eso cubres las primeras semanas con cualquier alumno." },
-      { question: "¿Hay materiales para enseñar español gratis de verdad?", answer: `Sí. En Material ELE todas las fichas, ejercicios y preguntas son gratis sin registro, y hay ${free} clases interactivas gratis, incluida una de gramática por nivel. Los sitios de la lista de arriba también tienen parte gratuita.` },
+      { question: "¿Hay materiales para enseñar español gratis de verdad?", answer: `Sí. En Material ELE todas las fichas, ejercicios y preguntas son gratis sin registro, y hay ${free} clases interactivas gratis, incluidas tres de gramática por nivel. Los sitios de la lista de arriba también tienen parte gratuita.` },
       { question: "¿Cuánto cuesta tener todas las clases?", answer: "En SpanishCue, US$15,50 al mes o US$129 al año, con tarjeta o PayPal, y se cancela cuando quieras. Se prueban primero las clases marcadas GRATIS." },
       { question: "¿Sirven para clases presenciales?", answer: "Sí: cada guía tiene una ficha imprimible, y las clases interactivas se proyectan igual que se comparten por pantalla." },
       { question: "¿Cómo sé el nivel de un material?", answer: "Por el MCER y el PCIC. Cada clase y cada página de SpanishCue indica su nivel y, en los mundos 3D, el nivel se elige dentro." },
@@ -247,7 +247,7 @@ export const guiaPages: GuiaPage[] = [
       { question: "¿Sirve el mismo método para clases presenciales?", answer: "Sí. Los seis pasos son los mismos; cambia solo el soporte: proyectas en vez de compartir pantalla, y las fichas se imprimen desde cada guía." },
       { question: "¿Qué hago si el alumno no sabe su nivel?", answer: "Empieza por la pregunta de entrada de un nivel por debajo del que crees. Si responde con soltura, sube. La respuesta a tres preguntas de conversación te dice más que un test de huecos." },
       { question: "¿Puedo preparar varias clases de golpe?", answer: "Sí, y es lo más eficiente: elige el objetivo de las próximas cuatro sesiones en la página de nivel de tu alumno y guarda las clases como favoritas. Cada día solo ajustas la pregunta de entrada según lo que pasó en la clase anterior." },
-      { question: "¿Las clases de SpanishCue son gratis?", answer: `Hay ${free} clases gratis, incluida una de gramática en cada nivel, y todas las fichas, ejercicios y preguntas de Material ELE son gratis sin registro. El resto de clases está en la suscripción de US$15,50 al mes.` },
+      { question: "¿Las clases de SpanishCue son gratis?", answer: `Hay ${free} clases gratis, incluidas tres de gramática en cada nivel, y todas las fichas, ejercicios y preguntas de Material ELE son gratis sin registro. El resto de clases está en la suscripción de US$15,50 al mes.` },
     ],
     related: ["primera-clase-de-espanol", "a1", "a2", "b1", "indefinido-e-imperfecto", "subjuntivo"],
   },
