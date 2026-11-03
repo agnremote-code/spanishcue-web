@@ -17,7 +17,19 @@ Entry format:
 
 ## Pending verification
 
-_None._
+## 2026-11-03 — Material ELE: template Spanish, activity levels, video sitemap, grammar topic relevance (SEO/page)
+- URL(s):
+  - every `https://spanishcue.com/material-ele/<grupo>/<tema>` and `…/<nivel>` page;
+  - `https://spanishcue.com/material-ele/actividad/*`;
+  - `https://spanishcue.com/sitemap.xml` (video entries);
+  - 308s from `/material-ele/gramatica/comparativos-y-superlativos/{c1,c2}` and `/material-ele/gramatica/oraciones-finales/a1` to their topic pages;
+  - `https://spanishcue.com/madrid-infectada` (teacher instruction, PRO).
+- Level(s) / objectives: no lesson content changed. Activity pages now state the level their goal names (32 pages).
+- PR / merged SHA / production deploy run: PR #357 → `cb94f5e6591125a83f0a9f8e894b982dd5db45f5`. All successful: CI + Auto Merge 41567142244, Deploy Staging 41568829220, Deploy Production 41569196779.
+- Production smoke evidence: the workflow smoke on https://spanishcue.com returned `"passed": true` (job 125697889451) and the rollback was skipped. **The changed URLs were not smoked individually** (the sandbox cannot reach spanishcue.com, and the workflow smoke does not cover them), so this entry stays here until they are.
+- Concept file / LQG review file: not a new lesson, level or teacher page, so N1 does not apply. Audits: `docs/audits/non-board-sample-g3-g6-20261103.md` (Martin) and the technical SEO audit (Alejandro, in `docs/board/transcripts/2026-11-03-tuesday-seo.md`).
+- Built by / reviewed by: facilitator / Sofia (code review, REQUEST CHANGES B1, then DELTA APPROVE).
+- Known limitations: the generated `/material-ele` families still fail the Indexable Teacher Page standard (§3.2), and a board decision is pending. SEO defects 4 (lesson 26 A1 link) and 5 (long resource titles) are open.
 
 ## Published
 
