@@ -669,7 +669,7 @@ export const guiaPages: GuiaPage[] = [
           {
             title: "A1 y A2: imagen, palabra y frase mínima",
             blocks: [
-              { type: "p", text: "En los primeros niveles la pantalla hace el trabajo que en el aula hacen los gestos y los objetos. Funciona el vocabulario con imagen, el apoyo bilingüe cuando hace falta y frases cortas que el alumno pueda repetir y cambiar. Una clase de [gustar y encantar](/gramatica/gustar-y-encantar) o de [imperativo](/gramatica/imperativo-afirmativo-tu-vos-usted) se entiende mejor con una imagen por ejemplo que con una tabla de conjugación. Material de los dos niveles en [Material ELE A1](/material-ele/a1) y [A2](/material-ele/a2)." },
+              { type: "p", text: "En los primeros niveles la pantalla hace el trabajo que en el aula hacen los gestos y los objetos. Funciona el vocabulario con imagen, el apoyo bilingüe cuando hace falta y frases cortas que el alumno pueda repetir y cambiar. Una clase de [gustar y encantar](/gramatica/gustar-y-encantar) o de [imperativo](/material-ele/imperativo) se entiende mejor con una imagen por ejemplo que con una tabla de conjugación. Material de los dos niveles en [Material ELE A1](/material-ele/a1) y [A2](/material-ele/a2)." },
             ],
           },
           {
