@@ -2530,7 +2530,7 @@ const topicInputs: PageInput[] = [
         minutes: 6,
         goal: "Oír y marcar la sílaba tónica (A1).",
         steps: [
-          "Di palabras de tres sílabas y da una palmada en la fuerte: te-LÉ-fo-no, ca-FÉ, MÚ-si-ca.",
+          "Di palabras de dos y tres sílabas y da una palmada en la fuerte: ca-FÉ, ME-sa, MÚ-si-ca, pe-LO-ta.",
           "El alumno repite con la palmada y después marca la sílaba en la pizarra.",
           "Pasa a palabras nuevas sin tu modelo.",
         ],

@@ -94,7 +94,7 @@ export function SceneCard({ id, zoneName, scene, level, teaching, done, onDone, 
         <button type="button" className="mi-x" onClick={onClose} aria-label="Cerrar y seguir explorando">×</button>
       </header>
       <div className="mi-card-body" ref={body} tabIndex={-1}>
-        {teaching === 'profesor' && <p className="mi-guide">Tú lees la situación. Tu alumno lee las líneas de «Tú»; las demás las leéis juntos o con la voz del navegador.</p>}
+        {teaching === 'profesor' && <p className="mi-guide">Tú lees la situación. Tu alumno lee las líneas de «Tú»; las demás las leen entre los dos o con la voz del navegador.</p>}
         <h2 id="mi-card-h" className="mi-h"><Bi t={scene.title} /></h2>
         <Bi t={scene.line} as="p" className="mi-line" />
         <div className="mi-dialogue-head">

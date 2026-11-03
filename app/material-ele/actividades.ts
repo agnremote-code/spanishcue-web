@@ -22,6 +22,12 @@ export function pageLevel(page: ElePage): string {
   return found ? (found[2] ? `${found[1]}–${found[2]}` : found[1]) : "A1–C2";
 }
 
+/** An activity's own level when its goal names one («Oír y marcar la sílaba tónica (A1).»), otherwise its guide's range. */
+export function activityLevel(page: ElePage, activity: EleActivity): string {
+  const found = activity.goal.match(/\b([ABC][12])(?:\s?[–-]\s?([ABC][12]))?\b/);
+  return found ? (found[2] ? `${found[1]}–${found[2]}` : found[1]) : pageLevel(page);
+}
+
 export type ActividadPage = {
   kind: "actividad"; slug: string; path: string; title: string; description: string; h1: string; level: string;
   activity: EleActivity; parent: ElePage; siblings: { name: string; path: string; minutes: number }[]; faq: { question: string; answer: string }[];
@@ -46,14 +52,15 @@ const describe = (base: string, extra: string) => {
 
 function activityPage(page: ElePage, activity: EleActivity): ActividadPage {
   const slug = slugify(activity.name);
-  const level = pageLevel(page);
-  const topic = page.label.replace(/^Material ELE /, "");
-  const title = fit(`${activity.name}: actividad ELE ${level} de ${topic.toLowerCase()} | SpanishCue`, `${activity.name}: actividad ELE ${level} | SpanishCue`);
+  const level = activityLevel(page, activity);
+  // A level guide («Material ELE A1») has no topic to name; only topic guides («Ser y estar») add «de …».
+  const topic = page.kind === "topic" ? page.label.toLowerCase() : "";
+  const title = fit(...(topic ? [`${activity.name}: actividad ELE ${level} de ${topic} | SpanishCue`] : []), `${activity.name}: actividad ELE ${level} | SpanishCue`);
   const description = describe(`Actividad de ${activity.minutes} minutos para ${activity.goal.charAt(0).toLowerCase()}${activity.goal.slice(1).replace(/\.$/, "")}.`, `Con pasos, frases modelo, corrección y versión online. Nivel ${level}, ficha en PDF.`);
   const siblings = page.activities.filter((other) => other.name !== activity.name).map((other) => ({ name: other.name, path: `${MATERIAL_ELE_PATH}/actividad/${slugify(other.name)}`, minutes: other.minutes }));
   return {
     kind: "actividad", slug, path: `${MATERIAL_ELE_PATH}/actividad/${slug}`, title, description, level, activity, parent: page, siblings,
-    h1: `${activity.name}: actividad de ${topic.toLowerCase()} para la clase de ELE`,
+    h1: topic ? `${activity.name}: actividad de ${topic} para la clase de ELE` : `${activity.name}: actividad de ELE de nivel ${level}`,
     faq: [
       { question: `¿Para qué nivel es «${activity.name}»?`, answer: `Para alumnos de nivel ${level}. Está pensada para una clase particular online o un grupo pequeño de adultos, y dura unos ${activity.minutes} minutos.` },
       { question: "¿Qué necesito para hacerla?", answer: `Solo la ficha: ${activity.steps.length} pasos, ${activity.prompts.length === 1 ? "una frase modelo" : `${activity.prompts.length} frases modelo`} y la corrección más frecuente. ${activity.online}` },
