@@ -19,7 +19,7 @@ function fixture(overrides = {}) {
     if (path === '/api/auth/session') return options.method === 'GET'
       ? Response.json({authenticated:false},{headers:{'cache-control':'private, no-store'}})
       : Response.json({ error: 'invalid session' }, { status: 401 });
-    if (path === '/api/billing/founder-status') return Response.json({ mode: 'live', paddleCheckoutAvailable: true, trialCheckoutAvailable: true, priceUsd: 15.5, trialPriceUsd: 2 });
+    if (path === '/api/billing/founder-status') return Response.json({ mode: 'live', paddleCheckoutAvailable: true, trialCheckoutAvailable: true, priceUsd: 19.9, trialPriceUsd: 2 });
     if (path === '/api/billing/paddle/webhook') return new Response('invalid signature', { status: 401 });
     if (path.startsWith('/api/billing/')) {
       if (options.headers?.origin !== 'https://spanishcue.com') return Response.json({ error: 'origin' }, { status: 403 });
@@ -73,8 +73,8 @@ test('soft 404, leaked account, foreign redirect and verification 500 each fail'
 });
 test('billing smoke fails when Live Paddle checkout or its webhook is not ready', async () => {
   for (const [path, response] of [
-    ['/api/billing/founder-status', () => Response.json({ mode: 'sandbox', paddleCheckoutAvailable: true, trialCheckoutAvailable: true, priceUsd: 15.5, trialPriceUsd: 2 })],
-    ['/api/billing/founder-status', () => Response.json({ mode: 'live', paddleCheckoutAvailable: true, trialCheckoutAvailable: false, priceUsd: 15.5, trialPriceUsd: 2 })],
+    ['/api/billing/founder-status', () => Response.json({ mode: 'sandbox', paddleCheckoutAvailable: true, trialCheckoutAvailable: true, priceUsd: 19.9, trialPriceUsd: 2 })],
+    ['/api/billing/founder-status', () => Response.json({ mode: 'live', paddleCheckoutAvailable: true, trialCheckoutAvailable: false, priceUsd: 19.9, trialPriceUsd: 2 })],
     ['/api/billing/paddle/webhook', () => new Response('billing unavailable', { status: 503 })],
     ['/api/billing/conversion', () => Response.json({}, { status: 200 })],
     ['/demo/noche-abierta', () => new Response('Worker error', { status: 500 })],
@@ -85,7 +85,7 @@ test('staging (Sandbox, no Paddle) passes the billing smoke without Live checks'
   const normal = fixture();
   const results = await runSmoke(staging, (url, options) => {
     const path = new URL(url).pathname;
-    if (path === '/api/billing/founder-status') return Response.json({ mode: 'sandbox', paddleCheckoutAvailable: false, trialCheckoutAvailable: false, priceUsd: 15.5, trialPriceUsd: 2 });
+    if (path === '/api/billing/founder-status') return Response.json({ mode: 'sandbox', paddleCheckoutAvailable: false, trialCheckoutAvailable: false, priceUsd: 19.9, trialPriceUsd: 2 });
     if (path === '/api/billing/paddle/webhook') return new Response('billing unavailable', { status: 503 });
     if (path.startsWith('/api/billing/') && options.headers?.origin === staging) return Response.json({ error: 'invalid' }, { status: 400 });
     return normal(url, options);

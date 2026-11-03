@@ -41,6 +41,6 @@ test('bank pages are in the sitemap, Spanish-first, indexable and edge-cached',(
 
 test('copy keeps the published price and never invents customers or competitors',()=>{
  const text=JSON.stringify(all.map(p=>[p.title,p.description,p.h1,p.faq]))+m.bancoTitle+m.bancoDescription;
- assert.doesNotMatch(text,/US\$\s?(?!15,50)\d/);
+ assert.doesNotMatch(text,/US\$\s?(?!19,90|150 al año)\d/);
  assert.doesNotMatch(text,/profede+le|miles de profesores|n\.º 1|número uno/i);
 });

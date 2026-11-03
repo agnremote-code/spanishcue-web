@@ -1,4 +1,4 @@
-import { PADDLE_MONTHLY_PRICE_ID, PADDLE_TRIAL_PRICE_ID, PADDLE_ANNUAL_PRICE_ID, PADDLE_MONTHLY_CENTS, PADDLE_TRIAL_CENTS, PADDLE_ANNUAL_CENTS, PADDLE_PRODUCT_ID, PADDLE_REFERRAL_DISCOUNT_ID, type PaddleRuntimeConfig, type PaddleOffer } from "./paddle-config";
+import { PADDLE_MONTHLY_PRICE_ID, PADDLE_LEGACY_MONTHLY_PRICE_ID, PADDLE_TRIAL_PRICE_ID, PADDLE_ANNUAL_PRICE_ID, PADDLE_LEGACY_ANNUAL_PRICE_ID, PADDLE_LEGACY_ANNUAL_CENTS, PADDLE_MONTHLY_CENTS, PADDLE_TRIAL_CENTS, PADDLE_ANNUAL_CENTS, PADDLE_PRODUCT_ID, PADDLE_REFERRAL_DISCOUNT_ID, type PaddleRuntimeConfig, type PaddleOffer } from "./paddle-config";
 
 type PaddlePrice = {
   id?: unknown; product_id?: unknown; tax_mode?: unknown;
@@ -207,19 +207,26 @@ export function paddleOffer(entity: Pick<PaddleTransaction, "items">, config: Pa
   const item = entity.items?.length === 1 ? entity.items[0] : null;
   const price = item?.price;
   if (price && item?.quantity === 1 && PADDLE_ANNUAL_PRICE_ID && config.annualPriceId === PADDLE_ANNUAL_PRICE_ID
-      && price.id === PADDLE_ANNUAL_PRICE_ID) {
+      && (price.id === PADDLE_ANNUAL_PRICE_ID || price.id === PADDLE_LEGACY_ANNUAL_PRICE_ID)) {
+    // US$150/year; subscriptions created on the legacy US$129/year price stay valid.
+    const annualCents = price.id === PADDLE_ANNUAL_PRICE_ID ? PADDLE_ANNUAL_CENTS : PADDLE_LEGACY_ANNUAL_CENTS;
     return price.product_id === PADDLE_PRODUCT_ID && price.tax_mode === "internal"
-      && price.unit_price?.amount === String(PADDLE_ANNUAL_CENTS) && price.unit_price.currency_code === "USD"
+      && price.unit_price?.amount === String(annualCents) && price.unit_price.currency_code === "USD"
       && price.billing_cycle?.interval === "year" && price.billing_cycle.frequency === 1 && price.trial_period == null
       ? "annual" : null;
   }
   if (!price || item?.quantity !== 1 || price.product_id !== PADDLE_PRODUCT_ID
-      || price.tax_mode !== "internal" || !(price.unit_price?.amount === String(PADDLE_MONTHLY_CENTS) || (config.legacyMonthly && price.id === config.priceId && price.unit_price?.amount === "1500"))
-      || price.unit_price?.currency_code !== "USD" || price.billing_cycle?.interval !== "month"
+      || price.tax_mode !== "internal" || price.unit_price?.currency_code !== "USD" || price.billing_cycle?.interval !== "month"
       || price.billing_cycle.frequency !== 1) return null;
-  if (price.id === config.priceId && price.trial_period == null) return "monthly";
+  const amount = price.unit_price?.amount;
+  // Current US$19.90 price; the legacy monthly price stays valid for subscriptions created on it
+  // (US$15.50, or US$15.00 for the server-only legacy path).
+  if (price.id === config.priceId && amount === String(PADDLE_MONTHLY_CENTS) && price.trial_period == null) return "monthly";
+  if (price.id === PADDLE_LEGACY_MONTHLY_PRICE_ID && price.trial_period == null
+      && (amount === "1550" || (config.legacyMonthly && amount === "1500"))) return "monthly";
   const trial = price.trial_period;
-  if (config.trialPriceId && config.trialPriceId !== config.priceId && price.id === config.trialPriceId
+  // The paid trial (not offered on the site) keeps its original US$15.50 base price.
+  if (amount === "1550" && config.trialPriceId && config.trialPriceId !== config.priceId && price.id === config.trialPriceId
       && trial?.interval === "day" && trial.frequency === 1 && trial.requires_payment_method !== false
       && trial.unit_price?.amount === String(PADDLE_TRIAL_CENTS) && trial.unit_price.currency_code === "USD") return "trial";
   return null;

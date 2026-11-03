@@ -35,7 +35,7 @@ test('marketing assets never depend on private lessons or user data', () => {
   assert.ok(kit.assets?.length >= 20);
   assert.ok(kit.assets.some(a => a.kind === 'screenshot'));
   assert.ok(kit.assets.some(a => a.kind === 'ad'));
-  assert.equal(kit.pricing.monthly.amount, 15.5);
+  assert.equal(kit.pricing.monthly.amount, 19.9);
   assert.equal(kit.pricing.paidTrial.amount, 2);
   assert.equal(kit.pricing.paidTrial.days, 1);
   for (const asset of kit.assets) {

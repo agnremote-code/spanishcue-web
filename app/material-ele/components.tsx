@@ -16,7 +16,7 @@ import grammar from "../growth/grammar.module.css";
 import ele from "./material-ele.module.css";
 
 export const PRICING_PATH = "/pricing";
-export const PRICE_LABEL = "US$15,50 al mes";
+export const PRICE_LABEL = "US$19,90 al mes";
 
 /** Page metadata; `image` is the page's own featured class picture (the cover of its first class), so every page shares a different picture and Google can show it next to the result. */
 export function eleMetadata(path: string, title: string, description: string, image?: string): Metadata {

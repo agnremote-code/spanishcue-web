@@ -9,10 +9,10 @@ export default function BrandKit() {
     <h3>Who it is for</h3><ul>{kit.brand.audience.map(item => <li key={item}>{item}</li>)}</ul>
     <h3>Features / Funciones</h3><ul>{kit.features.map(item => <li key={item.en}>{item.en}<br /><span lang="es">{item.es}</span></li>)}</ul>
     <h3>Pricing / Precios</h3>
-    <p>Founder monthly plan: US$15.50/month, tax included, paid by card. Automatically renews until cancelled.</p>
-    <p>Optional paid trial by card: US$2 for 1 day, then US$15.50/month until cancelled. This is a paid trial.</p>
+    <p>Founder monthly plan: US$19.90/month, tax included, paid by card. Automatically renews until cancelled.</p>
+    <p>Optional paid trial by card: US$2 for 1 day, then US$19.90/month until cancelled. This is a paid trial.</p>
     <p>Free account: 10 complete sample lessons, no card required. Founder offer: first 1,000 eligible subscriptions.</p>
-    <p lang="es">Plan mensual fundador: US$15.50/mes con impuestos incluidos, con tarjeta. Prueba paga opcional: US$2 por 1 día y después US$15.50/mes hasta cancelar.</p>
+    <p lang="es">Plan mensual fundador: US$19.90/mes con impuestos incluidos, con tarjeta. Prueba paga opcional: US$2 por 1 día y después US$19.90/mes hasta cancelar.</p>
     <a href={kit.pricing.source}>Current plans and subscription terms</a>
     <h3>Ad headlines / Textos para anuncios</h3>
     {kit.copy.map(item => <p key={item.en}><strong>{item.en}</strong><br /><span lang="es">{item.es}</span></p>)}

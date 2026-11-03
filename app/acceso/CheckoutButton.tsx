@@ -158,7 +158,7 @@ export default function CheckoutButton({ signedIn, returnTo, variant = "default"
     starting.current = true;
     // One checkout_start per opened checkout; `plan` tells the trial apart and
     // `value` is the first real charge. Starting a checkout is not a purchase.
-    trackMarketingEvent("checkout_start", { plan: offer, value: offer === "trial" ? 2 : offer === "annual" ? 129 : 15.5, currency: "USD", method: "paddle" });
+    trackMarketingEvent("checkout_start", { plan: offer, value: offer === "trial" ? 2 : offer === "annual" ? 150 : 19.9, currency: "USD", method: "paddle" });
     setStatus("paddle");
     setMessage("");
     try {
@@ -262,20 +262,20 @@ export default function CheckoutButton({ signedIn, returnTo, variant = "default"
       <button className="checkout-card-button" type="button" onClick={() => checkoutPaddle("monthly")} disabled={busy || !founder.available}>
         {status === "paddle" || status === "confirming"
           ? (locale === "es" ? "Procesando pago…" : "Processing payment…")
-          : (locale === "es" ? "Pagar con tarjeta · US$15.50/mes" : "Pay by card · US$15.50/month")}
+          : (locale === "es" ? "Pagar con tarjeta · US$19.90/mes" : "Pay by card · US$19.90/month")}
         <PaymentBrands /><span className="sr-only">Visa, Mastercard, American Express</span>
       </button>
     )}
 
-    {founder.paddleCheckoutAvailable && <p className="checkout-price-note">{locale === "es" ? "Tarjeta: US$15.50 ahora y cada mes. Precio final, impuestos incluidos." : "Card: US$15.50 now and every month. Final price, taxes included."}</p>}
+    {founder.paddleCheckoutAvailable && <p className="checkout-price-note">{locale === "es" ? "Tarjeta: US$19.90 ahora y cada mes. Precio final, impuestos incluidos." : "Card: US$19.90 now and every month. Final price, taxes included."}</p>}
 
     {founder.annualCheckoutAvailable && (
       <button className="checkout-card-button checkout-annual-button" type="button" onClick={() => checkoutPaddle("annual")} disabled={busy || !founder.available}>
-        {locale === "es" ? "Plan anual · US$129/año (2 meses gratis)" : "Annual plan · US$129/year (2 months free)"}
+        {locale === "es" ? "Plan anual · US$150/año" : "Annual plan · US$150/year"} <span className="checkout-save-badge">{locale === "es" ? "AHORRAS 37 %" : "SAVE 37%"}</span>
         <PaymentBrands /><span className="sr-only">Visa, Mastercard, American Express</span>
       </button>
     )}
-    {founder.annualCheckoutAvailable && <p className="checkout-price-note">{locale === "es" ? "Tarjeta: US$129 ahora y cada año. Precio final, impuestos incluidos." : "Card: US$129 now and every year. Final price, taxes included."}</p>}
+    {founder.annualCheckoutAvailable && <p className="checkout-price-note">{locale === "es" ? "Tarjeta: US$150 ahora y cada año. Precio final, impuestos incluidos." : "Card: US$150 now and every year. Final price, taxes included."}</p>}
 
     {founder.checkoutLive && (
       <button className="checkout-paypal-button" type="button" onClick={checkoutPayPal} disabled={busy || !founder.available}>
@@ -303,10 +303,10 @@ export default function CheckoutButton({ signedIn, returnTo, variant = "default"
       <div className="checkout-landing-plans">
         {offer.paddleCheckoutAvailable && <div className="checkout-landing-plan checkout-landing-monthly">
           <button className="checkout-card-button" type="button" onClick={() => checkoutPaddle("monthly")} disabled={busy || !offer.available}>
-            {paddleBusy ? (es ? "Abriendo el pago…" : "Opening checkout…") : (es ? "Suscríbete · US$15.50/mes" : "Subscribe · US$15.50/month")}
+            {paddleBusy ? (es ? "Abriendo el pago…" : "Opening checkout…") : (es ? "Suscríbete · US$19.90/mes" : "Subscribe · US$19.90/month")}
           </button>
           <span className="checkout-landing-cards"><PaymentBrands /></span>
-          <span>{es ? "Tarjeta: US$15.50 ahora y cada mes. Precio final, impuestos incluidos." : "Card: US$15.50 now and every month. Final price, taxes included."}</span>
+          <span>{es ? "Tarjeta: US$19.90 ahora y cada mes. Precio final, impuestos incluidos." : "Card: US$19.90 now and every month. Final price, taxes included."}</span>
         </div>}
       </div>
       {!paddleOnly && offer.checkoutLive && <button className="checkout-landing-paypal" type="button" onClick={checkoutPayPal} disabled={busy || !offer.available}>

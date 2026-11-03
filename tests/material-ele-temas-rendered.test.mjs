@@ -15,7 +15,7 @@ for(const path of paths)test(`topic index serves indexable Spanish HTML for anon
  for(const type of ['BreadcrumbList','FAQPage'])assert.ok(schemas.some(s=>s['@type']===type),type);
  assert.ok(schemas.some(s=>['WebPage','CollectionPage'].includes(s['@type'])&&s.inLanguage==='es'));
  assert.ok(d.querySelector('a[href="/pricing"]'),'buy link');
- assert.match(d.querySelector('main').textContent,/US\$15,50 al mes/);
+ assert.match(d.querySelector('main').textContent,/US\$19,90 al mes/);
  assert.ok(d.querySelector('a[href="/material-ele"]'),'links the hub');
  if(path.split('/').length>=4)assert.ok(d.querySelectorAll('main a[href^="/"]').length>=12,'topic page links its classes and related topics');
  if(path.split('/').length>=4)assert.match(d.querySelector('main').textContent,/Compartir en tu aula virtual/);

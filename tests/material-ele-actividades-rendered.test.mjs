@@ -15,7 +15,7 @@ for(const path of paths)test(`activity bank serves indexable, printable Spanish 
  for(const type of ['BreadcrumbList','FAQPage'])assert.ok(schemas.some(s=>s['@type']===type),type);
  assert.ok(schemas.some(s=>['WebPage','CollectionPage'].includes(s['@type'])&&s.inLanguage==='es'));
  assert.ok(d.querySelector('a[href="/pricing"]'),'buy link');
- assert.match(d.querySelector('main').textContent,/US\$15,50 al mes/);
+ assert.match(d.querySelector('main').textContent,/US\$19,90 al mes/);
  if(path!=='/material-ele/actividades')assert.match(d.querySelector('main').textContent,/Descargar ficha en PDF/);
  assert.ok(d.querySelector('a[href="/material-ele"]'),'links the hub');
  dom.window.close();

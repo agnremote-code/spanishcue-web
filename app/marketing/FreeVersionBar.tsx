@@ -10,6 +10,6 @@ export default function FreeVersionBar(){
  const {locale}=useI18n();const es=locale==='es';
  return <aside className="mk-free-version" aria-label={es?'Versión gratis de SpanishCue':'SpanishCue free version'}>
   <p><b>{es?'Versión gratis':'Free version'}</b><span>{es?' · Prueba las clases marcadas FREE.':' · Try the lessons marked FREE.'}</span></p>
-  <Link href="/pricing" onClick={()=>trackMarketingEvent('cta_click',{cta_type:'buy',placement:'free_version_bar',destination:'/pricing'})}>{es?'Desbloquear todo · US$15,50/mes →':'Unlock everything · US$15.50/month →'}</Link>
+  <Link href="/pricing" onClick={()=>trackMarketingEvent('cta_click',{cta_type:'buy',placement:'free_version_bar',destination:'/pricing'})}>{es?'Desbloquear todo · US$19,90/mes →':'Unlock everything · US$19.90/month →'}</Link>
  </aside>;
 }

@@ -3,16 +3,16 @@ import test from 'node:test';
 import { build } from 'esbuild';
 const built = await build({stdin:{contents:'export * from "./app/paddle-server"; export * from "./app/paddle-config";',resolveDir:process.cwd()},bundle:true,write:false,format:'esm',platform:'node'});
 const p = await import(`data:text/javascript;base64,${Buffer.from(built.outputFiles[0].text).toString('base64')}`);
-const monthly='pri_01m38sk06dtyhga2d4h36rt5dc', trial='pri_01m3xv2ybze2yve1phknvm3r4b';
+const monthly='pri_01m6nnnnnnnnnnnnnnnnnnnnnn', legacy='pri_01m38sk06dtyhga2d4h36rt5dc', trial='pri_01m3xv2ybze2yve1phknvm3r4b';
 const cfg={apiKey:'test',clientToken:'test',webhookSecret:'test',priceId:monthly,trialPriceId:trial};
-const price=(isTrial=false)=>({id:isTrial?trial:monthly,product_id:'pro_01m38sbhv4c8756pat80kfhda0',tax_mode:'internal',unit_price:{amount:'1550',currency_code:'USD'},billing_cycle:{interval:'month',frequency:1},trial_period:isTrial?{interval:'day',frequency:1,requires_payment_method:true,unit_price:{amount:'200',currency_code:'USD'}}:null});
+const price=(isTrial=false)=>({id:isTrial?trial:monthly,product_id:'pro_01m38sbhv4c8756pat80kfhda0',tax_mode:'internal',unit_price:{amount:isTrial?'1550':'1990',currency_code:'USD'},billing_cycle:{interval:'month',frequency:1},trial_period:isTrial?{interval:'day',frequency:1,requires_payment_method:true,unit_price:{amount:'200',currency_code:'USD'}}:null});
 const pair=(isTrial=false)=>{
  const period={starts_at:'2026-10-02T00:00:00Z',ends_at:isTrial?'2026-10-03T00:00:00Z':'2026-11-02T00:00:00Z'};
  const common={customer_id:'ctm_owner',custom_data:{spanishcue_user_id:'owner'},items:[{quantity:1,price:price(isTrial)}]};
- return [{...structuredClone(common),id:'txn_test',status:'completed',subscription_id:'sub_test',currency_code:'USD',billing_period:period,details:{totals:{total:isTrial?'200':'1550'}}},{...common,id:'sub_test',status:isTrial?'trialing':'active',current_billing_period:period}];
+ return [{...structuredClone(common),id:'txn_test',status:'completed',subscription_id:'sub_test',currency_code:'USD',billing_period:period,details:{totals:{total:isTrial?'200':'1990'}}},{...common,id:'sub_test',status:isTrial?'trialing':'active',current_billing_period:period}];
 };
 test('runtime has the two distinct owner-authorized price IDs',()=>{const c=p.paddleConfig({});assert.equal(c.priceId,monthly);assert.equal(c.trialPriceId,trial)});
-test('monthly and paid trial validate independently',()=>{for(const t of [false,true]){const [tx,sub]=pair(t);assert.ok(p.validatePaddleTransaction(tx,cfg,'owner'));assert.ok(p.validatePaddleSubscription(sub,cfg,'owner'));const payment=p.paddleCompletedPayment(tx,sub,cfg);assert.equal(payment.amountCents,t?200:1550);assert.equal(payment.isTrial,t);assert.equal(payment.priceId,t?trial:monthly)}});
+test('monthly and paid trial validate independently',()=>{for(const t of [false,true]){const [tx,sub]=pair(t);assert.ok(p.validatePaddleTransaction(tx,cfg,'owner'));assert.ok(p.validatePaddleSubscription(sub,cfg,'owner'));const payment=p.paddleCompletedPayment(tx,sub,cfg);assert.equal(payment.amountCents,t?200:1990);assert.equal(payment.isTrial,t);assert.equal(payment.priceId,t?trial:monthly)}});
 test('rejects arbitrary trials, prices, currencies, amounts and swapped IDs',()=>{for(const edit of [x=>x.id='pri_other',x=>x.id=monthly,x=>x.trial_period.frequency=2,x=>x.trial_period.unit_price.amount='0',x=>x.trial_period.unit_price.currency_code='EUR',x=>x.unit_price.amount='1500',x=>x.billing_cycle.interval='day',x=>x.tax_mode='external',x=>x.trial_period.requires_payment_method=false]){const [tx]=pair(true);edit(tx.items[0].price);assert.equal(p.validatePaddleTransaction(tx,cfg,'owner'),false)}const [tx]=pair(false);tx.items[0].price.id=trial;assert.equal(p.validatePaddleTransaction(tx,cfg,'owner'),false)});
 test('only a completed, correctly priced, owned and linked payment can grant access',()=>{for(const edit of [(tx)=>tx.status='billed',(tx)=>tx.details.totals.total='0',(tx)=>tx.currency_code='EUR',(tx)=>tx.subscription_id='sub_other',(tx)=>tx.customer_id='ctm_other',(tx,sub)=>sub.items[0].price=price(false),(tx)=>tx.billing_period.ends_at='2026-11-03T00:00:00Z']){const [tx,sub]=pair(true);edit(tx,sub);assert.equal(p.paddleCompletedPayment(tx,sub,cfg),null)}const [tx]=pair(true);assert.equal(p.validatePaddleTransaction(tx,cfg,'wrong-owner'),false)});
 test('trial renewal bills base amount using SAME trial price and original payment cannot extend access',()=>{const [tx,sub]=pair(true);const originalEnd=tx.billing_period.ends_at;sub.status='active';sub.current_billing_period={starts_at:originalEnd,ends_at:'2026-11-03T00:00:00Z'};assert.equal(p.paddleCompletedPayment(tx,sub,cfg).paidThrough,Date.parse(originalEnd)/1000);tx.details.totals.total='1550';tx.billing_period=sub.current_billing_period;const payment=p.paddleCompletedPayment(tx,sub,cfg);assert.equal(payment.isTrial,false);assert.equal(payment.amountCents,1550)});
@@ -55,7 +55,7 @@ test('new checkout shows direct monthly and PayPal while legacy trial billing re
  assert.match(config,/trialCheckoutAvailable/);
 });
 test('Paddle timestamps may contain milliseconds',()=>{const [tx,sub]=pair(true);tx.billing_period={starts_at:'2026-10-02T00:00:00.123Z',ends_at:'2026-10-03T00:00:00.123Z'};assert.ok(p.paddleCompletedPayment(tx,sub,cfg))});
-test('existing USD15 subscriptions require explicit persisted legacy context',()=>{const [tx,sub]=pair(false);for(const x of [tx,sub])x.items[0].price.unit_price.amount='1500';tx.details.totals.total='1500';assert.equal(p.paddleCompletedPayment(tx,sub,cfg),null);assert.equal(p.paddleCompletedPayment(tx,sub,{...cfg,legacyMonthly:true}).amountCents,1500)});
+test('existing USD15 subscriptions require explicit persisted legacy context',()=>{const [tx,sub]=pair(false);for(const x of [tx,sub]){x.items[0].price.id=legacy;x.items[0].price.unit_price.amount='1500'};tx.details.totals.total='1500';assert.equal(p.paddleCompletedPayment(tx,sub,cfg),null);assert.equal(p.paddleCompletedPayment(tx,sub,{...cfg,legacyMonthly:true}).amountCents,1500)});
 import { createHmac } from 'node:crypto';
 async function trialDatabase(){const sqlite=new DatabaseSync(':memory:');for(const n of (await readdir('drizzle')).filter(n=>n.endsWith('.sql')).sort())sqlite.exec((await readFile(`drizzle/${n}`,'utf8')).replaceAll('--> statement-breakpoint',''));const stmt=(sql,args=[])=>({bind:(...v)=>stmt(sql,v),run:async()=>({meta:{changes:Number(sqlite.prepare(sql).run(...args).changes)}}),first:async()=>sqlite.prepare(sql).get(...args)??null,all:async()=>({results:sqlite.prepare(sql).all(...args)})});return {sqlite,db:{prepare:s=>stmt(s)}}}
 async function trialRoute(path){const b=await build({entryPoints:[path],bundle:true,write:false,format:'esm',platform:'node',plugins:[{name:'env',setup(b){b.onResolve({filter:/^cloudflare:workers$/},()=>({path:'env',namespace:'mock'}));b.onLoad({filter:/.*/,namespace:'mock'},()=>({contents:'export const env=globalThis.__paidTrialEnv',loader:'js'}))}}]});return import(`data:text/javascript;base64,${Buffer.from(b.outputFiles[0].text).toString('base64')}`)}
@@ -112,7 +112,7 @@ test('legacy unclaimed paid purchase renews and concurrent trial claim replay st
  const previous={subscriptionId:`sub_${'c'.repeat(26)}`,paymentId:'txn_old',customerId:'ctm_owner',email:'owner@example.test',amountCents:1500,currency:'USD',paidAt:now-31*86400,paidThrough:now-86400};
  await c.recordVerifiedPurchase(db,claimId,'paddle',previous);
  const [tx,sub]=pair(false);tx.id='txn_new';tx.subscription_id=sub.id=previous.subscriptionId;
- for(const x of [tx,sub]){x.items[0].price.unit_price.amount='1500';x.custom_data={spanishcue_claim_id:claimId,spanishcue_offer_code:'founder'}}
+ for(const x of [tx,sub]){x.items[0].price.id=legacy;x.items[0].price.unit_price.amount='1500';x.custom_data={spanishcue_claim_id:claimId,spanishcue_offer_code:'founder'}}
  tx.details.totals.total='1500';tx.customer={id:'ctm_owner',email:previous.email};
  tx.billing_period={starts_at:new Date(now*1000).toISOString(),ends_at:new Date((now+30*86400)*1000).toISOString()};
  const old=globalThis.fetch;globalThis.fetch=async url=>Response.json({data:String(url).includes('/transactions/')?tx:sub});
@@ -169,15 +169,15 @@ test('checkout carries only allow-listed ad identifiers into Paddle custom_data'
  assert.deepEqual(p.paddleAttributionFrom({custom_data:body.custom_data}),{gclid:'abc'});
 });
 test('annual plan stays off until the owner-created Paddle price ID is pinned',async()=>{
- assert.equal(p.PADDLE_ANNUAL_CENTS,12900);
+ assert.equal(p.PADDLE_ANNUAL_CENTS,15000);
  const annualCfg={...cfg,annualPriceId:p.PADDLE_ANNUAL_PRICE_ID||'pri_annual_unpinned'};
  if(!p.PADDLE_ANNUAL_PRICE_ID){assert.equal(p.paddleAnnualReady(annualCfg),false);assert.equal(p.paddleAnnualReady({...cfg,annualPriceId:''}),false)}
  const [tx,sub]=pair(false);
- for(const x of [tx,sub])x.items[0].price={...price(false),id:annualCfg.annualPriceId,unit_price:{amount:'12900',currency_code:'USD'},billing_cycle:{interval:'year',frequency:1}};
- tx.details.totals.total='12900';tx.billing_period={starts_at:'2026-10-02T00:00:00Z',ends_at:'2027-10-02T00:00:00Z'};sub.current_billing_period=tx.billing_period;
+ for(const x of [tx,sub])x.items[0].price={...price(false),id:annualCfg.annualPriceId,unit_price:{amount:'15000',currency_code:'USD'},billing_cycle:{interval:'year',frequency:1}};
+ tx.details.totals.total='15000';tx.billing_period={starts_at:'2026-10-02T00:00:00Z',ends_at:'2027-10-02T00:00:00Z'};sub.current_billing_period=tx.billing_period;
  const payment=p.paddleCompletedPayment(tx,sub,annualCfg);
  if(!p.PADDLE_ANNUAL_PRICE_ID){assert.equal(payment,null);assert.equal(p.validatePaddleTransaction(tx,annualCfg,'owner'),false);return}
- assert.equal(p.paddleAnnualReady(annualCfg),true);assert.equal(payment.amountCents,12900);assert.equal(payment.offer,'annual');
+ assert.equal(p.paddleAnnualReady(annualCfg),true);assert.equal(payment.amountCents,15000);assert.equal(payment.offer,'annual');
  for(const edit of [x=>x.unit_price.amount='12000',x=>x.billing_cycle.interval='month',x=>x.unit_price.currency_code='EUR',x=>x.tax_mode='external']){const [t2,s2]=[structuredClone(tx),structuredClone(sub)];edit(t2.items[0].price);edit(s2.items[0].price);assert.equal(p.paddleCompletedPayment(t2,s2,annualCfg),null)}
  const short=structuredClone(tx);short.billing_period.ends_at='2026-11-02T00:00:00Z';assert.equal(p.paddleCompletedPayment(short,sub,annualCfg),null);
  const old=globalThis.fetch;const seen=[];globalThis.fetch=async(_u,init)=>{seen.push(JSON.parse(init.body));return Response.json({data:{id:'txn_test'}})};
@@ -186,5 +186,5 @@ test('annual plan stays off until the owner-created Paddle price ID is pinned',a
 test('annual checkout is server-gated and labelled as a yearly charge',async()=>{
  const route=await readFile('app/api/billing/paddle/checkout/route.ts','utf8');assert.match(route,/paddleAnnualReady/);
  const status=await readFile('app/api/billing/founder-status/route.ts','utf8');assert.match(status,/annualCheckoutAvailable/);
- const ui=await readFile('app/acceso/CheckoutButton.tsx','utf8');assert.match(ui,/annualCheckoutAvailable/);assert.match(ui,/US\$129/);
+ const ui=await readFile('app/acceso/CheckoutButton.tsx','utf8');assert.match(ui,/annualCheckoutAvailable/);assert.match(ui,/US\$150/);
 });

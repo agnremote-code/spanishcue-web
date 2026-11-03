@@ -50,8 +50,8 @@ export function gtCopy(es:boolean){
   plans:{
    eyebrow:t('PLANES','PLANS'),h2:t('Compra PRO y úsalo en tus clases.','Unlock PRO for your Spanish classes.'),
    rows:[
-    [t('COMPRAR PRO','BUY PRO'),t('US$15.50/mes con tarjeta o US$15/mes con PayPal. Sin compromiso anual.','US$15.50/month by card or US$15/month with PayPal. No annual commitment.')],
-    [t('SUSCRIBIRSE','SUBSCRIBE'),t('US$15.50/mes, precio final con impuestos. Cancelas cuando quieras antes de la próxima renovación.','US$15.50/month, final price with taxes. Cancel anytime before the next renewal.')],
+    [t('COMPRAR PRO','BUY PRO'),t('US$19.90/mes con tarjeta o US$15/mes con PayPal. Sin compromiso anual.','US$19.90/month by card or US$15/month with PayPal. No annual commitment.')],
+    [t('SUSCRIBIRSE','SUBSCRIBE'),t('US$19.90/mes, precio final con impuestos. Cancelas cuando quieras antes de la próxima renovación.','US$19.90/month, final price with taxes. Cancel anytime before the next renewal.')],
     [t('INCLUYE','INCLUDED'),t('La ciudad completa de Noche Abierta, todos los mundos 3D, todas las clases de gramática interactiva, escucha, tareas de Autoestudio A1–C2 y el panel del profe.','The full Noche Abierta city, every 3D world, all interactive grammar classes, listening, Autoestudio homework A1–C2 and the teacher panel.')],
     [t('GRATIS','FREE'),t('La vista guiada y las conversaciones gratis del centro en seis niveles, las clases marcadas FREE arriba y las semanas 1–2 de Autoestudio A1. Sin tarjeta.','The guided preview and free centre conversations across six levels, the lessons marked FREE above and Autoestudio A1 weeks 1–2. No card needed.')],
    ],
