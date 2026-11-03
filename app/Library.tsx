@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import HowItWorksVideos from "./marketing/HowItWorksVideos";
+import TrustStats from "./marketing/TrustStats";
 import NewLessonsBanner from "./NewLessonsBanner";
 import LessonReportPanel from "./lesson-reports/LessonReportPanel";
 import MoodTenseDisclosure from "./verbal-system/MoodTenseDisclosure";
@@ -1681,6 +1682,7 @@ export default function Library({
         )}
         {/* PRO accounts already have everything: no free-lesson hero, just the news carousel and the material. */}
         {!fullAccess && <SpanishCueHero />}
+        {!fullAccess && view === "Biblioteca" && <TrustStats primary={primaryCta} primaryLabel={primaryCtaLabel} secondary={subscriptionCta.href === primaryCta.href ? secondaryCta : subscriptionCta} secondaryLabel={subscriptionCta.href === primaryCta.href ? secondaryCtaLabel : subscriptionCtaLabel} />}
         {!fullAccess && view === "Biblioteca" && <HowItWorksVideos />}
         <NewLessonsBanner lessons={lessons} />
         <section className="library-heading" id="library-results">
