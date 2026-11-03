@@ -3,7 +3,7 @@
 - Date: 2026-11-03 (Tuesday SEO routine, scheduled cloud run)
 - Drafted by: the facilitator, following W45 plan item 3 ([assessments/2026-W44.md](../assessments/2026-W44.md) §6): "If R0 is not fixed: COMP-001 pass 2 on #225, as a recorded decision, not by default".
 - Decided by: Alejandro (COMP-001 lead); see §5.
-- Status: see §5.
+- Status: **ADOPTED 2026-11-03** (§5).
 
 ## 1. Situation (VERIFIED this run unless marked)
 - **R0 is still open.** The `searchconsole` read for `sc-domain:spanishcue.com` (last 28 days) returned Windsor's error "reads are paused because you have 6 accounts connected (facebook: 2, google_ads: 1, googleanalytics4: 1, searchconsole: 2) and your Free plan includes 1 account". So the SEO-compare branch of the plan is unavailable and no ranking or traffic figure exists for this run.
@@ -20,6 +20,7 @@
 ## 3. Decision
 1. COMP-001 pass 2 is **parked**, not abandoned. It resumes the first time a run can reach `www.profedeele.es` with a real browser, or a rank or Search Console source is available. #225 stays a draft, as evidence.
 2. The board's public comparison work is now **an accuracy check of `/alternativa-a-profedeele`**, not a new page. When access exists, the check confirms each competitor statement against a dated public source, and resolves the 95,88 € vs €192 question by naming both products if both exist.
+   - **Added on Alejandro's sign-off:** the check covers both sides of every row. SpanishCue's own claims can be checked now, without outside access. Example: the "Precio individual" row (`app/alternativa-a-profedeele/page.tsx:42`) shows `PRICE_LABEL` = «US$15,50 al mes» (`app/material-ele/components.tsx:19`). The pricing page says US$15.50, but `docs/billing-contract.md:58` still says the server validates `1500` USD. Which figure is current is an open item for the Thursday reliability slot, which reads the billing source; it is not an edit.
 3. No change to the page is made by this decision.
 4. The Tuesday slot's work this run goes to the items that do not need outside access: the technical SEO audit of main and the sampled quality audit (W45 item 2).
 
@@ -27,4 +28,4 @@
 New evidence only: access to the competitor's pages, a SERP source, or R0 fixed (then the SEO compare of the plan runs first).
 
 ## 5. Sign-off
-Pending Alejandro's reply in this run; recorded verbatim in [transcripts/2026-11-03-tuesday-seo.md](../transcripts/2026-11-03-tuesday-seo.md).
+**APPROVED by Alejandro (COMP-001 lead), 2026-11-03, with one wording change, applied as the sub-item of §3.2.** One deviation from his text: he wrote «The owner should confirm which figure is current»; the facilitator routed that question to the Thursday slot instead, because the board does not ask the owner (STATUS, owner decision 2026-10-16). His reply is verbatim in [transcripts/2026-11-03-tuesday-seo.md](../transcripts/2026-11-03-tuesday-seo.md). Sofia and Martin were not asked to vote: the decision changes no product and parks an item that has no other way forward. Status: **ADOPTED**.
