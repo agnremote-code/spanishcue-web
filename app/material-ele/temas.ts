@@ -64,8 +64,9 @@ export const temaGroupById = new Map(temaGroups.map((group) => [group.id, group]
 type Source = { group: TemaGroupId; parent: string; slug: string; name: string; match: RegExp; intro: string; guide?: string; ids?: number[] };
 
 /** A topic name inside a sentence: countries keep their capital («México»), acronyms stay («ELE», «3D»), common nouns start lower case («los adjetivos» → «adjetivos»). */
+const countrySlugs = new Set(["espana", "argentina", "mexico", "estados-unidos-hispano", "suiza", "suecia", "australia", "reino-unido-e-irlanda", "israel", "indonesia"]);
 export const nameInSentence = (source: { group: string; parent: string; slug: string; name: string }) =>
-  (source.group === "cultura" && source.parent.startsWith("Países") && source.slug !== "el-mundo") || !/^\p{Lu}\p{Ll}/u.test(source.name)
+  (source.group === "cultura" && countrySlugs.has(source.slug)) || !/^\p{Lu}\p{Ll}/u.test(source.name)
     ? source.name
     : source.name.charAt(0).toLowerCase() + source.name.slice(1);
 const strip = (text: string) => text.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
@@ -238,7 +239,7 @@ function buildPage(source: Source): TemaPage | null {
   const description = (base + extra).length <= 165 ? base + extra : base;
   return {
     group: source.group, parent: source.parent, slug: source.slug, path: `${group.path}/${source.slug}`, name: source.name,
-    h1: `${source.name}: clases y actividades para la clase de ELE`, title, description, intro: source.intro, guide: source.guide,
+    h1: `${source.name} en la clase de ELE: clases y actividades`, title, description, intro: source.intro, guide: source.guide,
     lessonIds: ordered.map((lesson) => lesson.id), levels, freeCount,
     goals: uniq(ordered.flatMap((lesson) => lesson.goals.filter((goal) => goal && goal !== lesson.subtitle))).slice(0, 8),
     warmups: uniq(ordered.map((lesson) => lesson.warmup).filter(Boolean)).slice(0, 4),
@@ -316,4 +317,12 @@ function buildLevelPage(tema: TemaPage, level: string): TemaLevelPage | null {
 }
 export const temaLevelPages: TemaLevelPage[] = temaPages.flatMap((tema) => levelSlugs.map((level) => buildLevelPage(tema, level)).filter((page): page is TemaLevelPage => page !== null));
 export const temaLevelPageByPath = new Map(temaLevelPages.map((page) => [page.path, page]));
+/** Level pages that were published and no longer have two classes of their level (2026-11-03: phonetics classes left the
+ * grammar topics). Each 308-redirects to its topic page so the URL never turns into a 404.
+ * tests/material-ele-copy-quality.test.mjs fails if a published level path is neither generated nor listed here. */
+export const retiredTemaLevelPaths: ReadonlyMap<string, string> = new Map([
+  ["/material-ele/gramatica/comparativos-y-superlativos/c1", "/material-ele/gramatica/comparativos-y-superlativos"],
+  ["/material-ele/gramatica/comparativos-y-superlativos/c2", "/material-ele/gramatica/comparativos-y-superlativos"],
+  ["/material-ele/gramatica/oraciones-finales/a1", "/material-ele/gramatica/oraciones-finales"],
+]);
 export const temaLevelsOf = (tema: TemaPage) => temaLevelPages.filter((page) => page.slug === tema.slug && page.group === tema.group);

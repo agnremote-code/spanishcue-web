@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import { Breadcrumbs, Faq, GrowthFooter, JsonLd, Section } from "../../../../growth/components";
 import { faqPageSchema, webPageSchema } from "../../../../growth/schema";
 import { EleBuyBand, EleFeaturedLesson, EleLessonGrid, ElePageDates, ElePreviewVideo, EleTopbar, eleLessonCards, eleMetadata, elePreviewLesson, featuredGrammarLesson, pageImage } from "../../../components";
@@ -7,7 +7,7 @@ import { pageDates } from "../../../indice";
 import { MATERIAL_ELE_PATH, eleLevels } from "../../../data";
 import ShareSnippet from "../../../ShareSnippet";
 import { TemaCards, TemaGroupCards } from "../../../tema-components";
-import { temaGroupById, temaLevelPageByPath, temaLevelPages, temaLevelsOf } from "../../../temas";
+import { retiredTemaLevelPaths, temaGroupById, temaLevelPageByPath, temaLevelPages, temaLevelsOf } from "../../../temas";
 import styles from "../../../../growth/growth.module.css";
 
 type Props = { params: Promise<{ slug: string; tema: string; nivel: string }> };
@@ -20,7 +20,10 @@ export async function generateMetadata({ params }: Props) {
 
 export default async function TemaLevelRoute({ params }: Props) {
   const { slug, tema, nivel } = await params;
-  const page = temaLevelPageByPath.get(`${MATERIAL_ELE_PATH}/${slug}/${tema}/${nivel}`);
+  const path = `${MATERIAL_ELE_PATH}/${slug}/${tema}/${nivel}`;
+  const page = temaLevelPageByPath.get(path);
+  const retiredTo = retiredTemaLevelPaths.get(path);
+  if (!page && retiredTo) permanentRedirect(retiredTo);
   if (!page) notFound();
   const group = temaGroupById.get(page.group)!;
   const lessons = eleLessonCards(page.lessonIds);

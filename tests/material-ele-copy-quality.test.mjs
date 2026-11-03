@@ -73,3 +73,26 @@ test('every sitemap video is marked as not requiring a subscription',()=>{
  for(const entry of m.sitemap())for(const v of entry.videos??[]){videos++;assert.equal(v.requires_subscription,'no',`${entry.url} → ${v.content_loc}`);}
  assert.ok(videos>=100,`only ${videos} videos`);
 });
+
+// Review B1 (Sofia, 2026-11-03): a published level page that loses its classes redirects to its topic, never 404s.
+import {readFileSync} from 'node:fs';
+test('every level page ever published is still generated or redirects to an existing topic page',()=>{
+ const published=JSON.parse(readFileSync('tests/fixtures/published-material-ele-level-paths.json','utf8'));
+ const generated=new Set(m.temaLevelPages.map((p)=>p.path));
+ const topics=new Set(m.temaPages.map((p)=>p.path));
+ for(const path of published){
+  if(generated.has(path))continue;
+  const to=m.retiredTemaLevelPaths.get(path);
+  assert.ok(to,`${path} was published and is now neither generated nor redirected (add it to retiredTemaLevelPaths)`);
+  assert.ok(topics.has(to),`${path} redirects to missing topic ${to}`);
+ }
+ for(const path of m.retiredTemaLevelPaths.keys())assert.ok(!generated.has(path),`${path} is generated again; drop it from retiredTemaLevelPaths`);
+ for(const path of generated)assert.ok(published.includes(path),`new level page ${path}: add it to tests/fixtures/published-material-ele-level-paths.json`);
+});
+
+// Review NB3: fixed expectations, independent of the activityLevel regex.
+test('known activities carry their own level',()=>{
+ const level=(slug)=>m.actividadPages.find((p)=>p.slug===slug)?.level;
+ assert.equal(level('palmas-en-la-silaba-fuerte'),'A1');
+ assert.equal(level('es-decir'),'C1');
+});
