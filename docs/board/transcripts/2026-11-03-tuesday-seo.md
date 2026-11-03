@@ -351,4 +351,3 @@ Address this before completing your current task.
 
 NB1 (the plural «son las clases» even when there is one class) is still open and does not block.
 ````
-
