@@ -4,7 +4,7 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import {build} from 'esbuild';
-const r=await build({stdin:{contents:'export * from "./app/material-ele/temas.ts"; export {actividadPages,activityLevel} from "./app/material-ele/actividades.ts";',resolveDir:process.cwd()},bundle:true,write:false,platform:'node',format:'esm'});
+const r=await build({stdin:{contents:'export * from "./app/material-ele/temas.ts"; export {actividadPages,activityLevel} from "./app/material-ele/actividades.ts"; export {lessons as lessonsForTest} from "./app/lesson-catalog.ts"; export {default as sitemap} from "./app/sitemap.ts";',resolveDir:process.cwd()},bundle:true,write:false,platform:'node',format:'esm'});
 const m=await import('data:text/javascript;base64,'+Buffer.from(r.outputFiles[0].text).toString('base64'));
 
 const copyOf=(p)=>[p.h1,p.description,p.intro,...p.faq.flatMap((f)=>[f.question,f.answer])].join('\n');
@@ -47,4 +47,29 @@ test('an activity page states the level its own goal names',()=>{
  assert.ok(palmas);
  assert.equal(palmas.level,'A1');
  assert.doesNotMatch(palmas.activity.steps.join(' '),/palabras de tres sílabas/,'«café» has two syllables');
+});
+
+// Board technical SEO audit 2026-11-03 (Alejandro), defects 2 and 3.
+test('activity titles and headings from level guides never name the level as a topic',()=>{
+ for(const p of m.actividadPages){
+  assert.doesNotMatch(p.title,/ de (a1|a2|b1|b2|c1|c2)\b/i,p.path);
+  assert.doesNotMatch(p.h1,/ de (a1|a2|b1|b2|c1|c2) para\b/i,p.path);
+ }
+});
+
+test('grammar topics list phonetics classes only under spelling and pronunciation',()=>{
+ const allowed=new Set(['acentuacion','pronunciacion-y-entonacion']);
+ const fonetica=new Set(m.lessonsForTest.filter((l)=>l.category==='Fonética').map((l)=>l.id));
+ assert.ok(fonetica.size>0,'there are phonetics classes to check');
+ for(const p of [...m.temaPages,...m.temaLevelPages]){
+  if(p.group!=='gramatica'||allowed.has(p.slug))continue;
+  for(const id of p.lessonIds)assert.ok(!fonetica.has(id),`${p.path} lists phonetics class ${id}`);
+ }
+});
+
+// Defect 1: the preview recordings play without an account, so no sitemap video claims a subscription.
+test('every sitemap video is marked as not requiring a subscription',()=>{
+ let videos=0;
+ for(const entry of m.sitemap())for(const v of entry.videos??[]){videos++;assert.equal(v.requires_subscription,'no',`${entry.url} → ${v.content_loc}`);}
+ assert.ok(videos>=100,`only ${videos} videos`);
 });

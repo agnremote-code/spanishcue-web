@@ -72,12 +72,13 @@ const curatedRoutes: { path: string; priority: number; changeFrequency: Frequenc
 
 type Media = Pick<Entry, "images" | "videos">;
 
-/** Image and video sitemap data of a Material ELE page: the covers of its classes and the recording the page shows. */
+/** Image and video sitemap data of a Material ELE page: the covers of its classes and the recording the page shows.
+ * The recording itself is public (it plays without an account), so `requires_subscription` is always "no", even for a PRO class. */
 function pageMedia(path: string, lessonIds: readonly number[]): Media {
   const images = [...new Set(lessonCards(lessonIds).slice(0, 8).map((card) => canonicalUrl(card.image)))];
   const preview = elePreviewLesson(lessonIds);
   const videos: Entry["videos"] = preview
-    ? [{ title: `Así se ve la clase «${preview.title}»`, thumbnail_loc: canonicalUrl(preview.image), description: `${preview.subtitle} Grabación de la clase interactiva de SpanishCue (${preview.level}), tal como la ve el alumno en pantalla.`, content_loc: canonicalUrl(preview.video), publication_date: `${preview.addedAt}T06:00:00Z`, family_friendly: "yes", requires_subscription: preview.free ? "no" : "yes", live: "no" }]
+    ? [{ title: `Así se ve la clase «${preview.title}»`, thumbnail_loc: canonicalUrl(preview.image), description: `${preview.subtitle} Grabación de la clase interactiva de SpanishCue (${preview.level}), tal como la ve el alumno en pantalla.`, content_loc: canonicalUrl(preview.video), publication_date: `${preview.addedAt}T06:00:00Z`, family_friendly: "yes", requires_subscription: "no", live: "no" }]
     : undefined;
   return { ...(images.length ? { images } : {}), ...(videos ? { videos } : {}) };
 }

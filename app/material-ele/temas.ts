@@ -214,12 +214,15 @@ const levelOrder: string[] = courseLevels;
 const lessonLevels = (lesson: Lesson) => (lesson.levels?.length ? lesson.levels : [lesson.level]).filter((level) => levelOrder.includes(level));
 const uniq = <T,>(items: T[]) => [...new Set(items)];
 
+const phoneticsTopics = new Set(["acentuacion", "pronunciacion-y-entonacion"]);
 function buildPage(source: Source): TemaPage | null {
   const group = temaGroupById.get(source.group)!;
   const inSentence = nameInSentence(source);
   const matched = lessons.filter((lesson) => (source.ids?.includes(lesson.id) ?? false) || source.match.test(haystackByLesson.get(lesson.id) ?? ""));
   // Grammar points are taught by grammar classes; conversation worlds only join a grammar topic when named explicitly.
-  const relevant = source.group === "gramatica" ? matched.filter((lesson) => lesson.category === "Gramática" || lesson.category === "Fonética" || (source.ids?.includes(lesson.id) ?? false)) : matched;
+  // Phonetics classes belong only to the spelling and pronunciation topics, never to a grammar point they happen to mention.
+  const phonetics = phoneticsTopics.has(source.slug);
+  const relevant = source.group === "gramatica" ? matched.filter((lesson) => lesson.category === "Gramática" || (phonetics && lesson.category === "Fonética") || (source.ids?.includes(lesson.id) ?? false)) : matched;
   if (relevant.length === 0) return null;
   const ordered = [...relevant].sort((a, b) => Number(isFreeLesson(b.id)) - Number(isFreeLesson(a.id)) || levelOrder.indexOf(a.level) - levelOrder.indexOf(b.level) || (a.curriculumOrder ?? 0) - (b.curriculumOrder ?? 0));
   const levels = uniq(ordered.flatMap(lessonLevels)).sort((a, b) => levelOrder.indexOf(a) - levelOrder.indexOf(b));
