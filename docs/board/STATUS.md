@@ -1,6 +1,6 @@
 # Board STATUS: the single source of truth for the next run
 
-_Last updated: 2026-11-02 by the Monday 3D routine (scheduled cloud run; facilitator plus one fresh agent acting as Alejandro, see "Current work")._
+_Last updated: 2026-11-03 by the Tuesday SEO routine (scheduled cloud run; Alejandro, Martin and Sofia convened as subagents of the facilitator, see "Current work")._
 
 ## Owner decisions in force
 | Date | Decision |
@@ -52,7 +52,7 @@ Parallel streams: **3D = Sofia**, **technical SEO = Alejandro**, **QA/integratio
 | — | **COMP-001** ProfeDeELE.com benchmark: their offer, formats, pricing, the teacher queries they win, and the gaps SpanishCue can win with evidence. Feeds concept selection and SEO-002. | Alejandro (lead) + Martin (pedagogy) | next Tuesday SEO slot, or earlier if capacity allows |
 
 ## Owner data requests (open)
-- **R0 (2026-10-20, blocking SEO measurement; STILL OPEN 2026-10-27, placeholder row again):** Windsor.ai paused all reads: "reads are paused because you have 6 accounts connected and your Free plan includes 1 account". Every `searchconsole` query returns that placeholder row with 0 values. Fix: disconnect the 5 extra accounts at https://onboard.windsor.ai/app/ (keep `sc-domain:spanishcue.com`) or upgrade. The board may not buy paid plans. The owner was notified by push on 2026-10-20. Until this is fixed there is no fresh Search Console evidence; the last real numbers are from 2026-10-17 (PR #224 body).
+- **R0 (2026-10-20, blocking SEO measurement; STILL OPEN 2026-11-03, Windsor returned the same "reads are paused … 6 accounts connected" error):** Windsor.ai paused all reads: "reads are paused because you have 6 accounts connected and your Free plan includes 1 account". Every `searchconsole` query returns that placeholder row with 0 values. Fix: disconnect the 5 extra accounts at https://onboard.windsor.ai/app/ (keep `sc-domain:spanishcue.com`) or upgrade. The board may not buy paid plans. The owner was notified by push on 2026-10-20. Until this is fixed there is no fresh Search Console evidence; the last real numbers are from 2026-10-17 (PR #224 body).
 - **R1:** Search Console Page-indexing report, Core Web Vitals report and per-query impressions. The Windsor connector exposes only search analytics and sitemaps.
 - **R2:** GA Admin: which property `G-6C7DY2C5LN` reports to.
 - **R4 (2026-10-26; restated 2026-11-02, the one access request BOARD-DECISION-003 §3.1 allows):** the Ascensor B2 clips need a person's listening (6 clips, about 7.7 min; first cafe lines 2, 3, 5 and 8), because the automatic check could not prove itself. Alternative: tell the board which speech-to-text host it may use from the sandbox. Until then #282 stays draft.
@@ -78,6 +78,29 @@ All five run on `claude-opus-5-5`, follow [ROUTINES.md](ROUTINES.md), and each i
 - Session 0 (lesson test) took 55 messages, about 15 of them caused by crossed messages over circle 6. That led to the lock rule.
 
 ## Current work and next action
+- **2026-11-03 (Tuesday SEO routine): PR #357**, branch `claude/tuesday-seo-20261103`, base main `6e4a2e7`. Subscription usage: **UNKNOWN**.
+  - **Board:** convened proportionately as subagents of the facilitator; they did not message each other. Alejandro ran the read-only technical SEO audit and signed off BOARD-DECISION-004. Martin ran the sampled quality audit. Sofia did the independent code review: **REQUEST CHANGES** (B1), then **DELTA APPROVE**. Verbatim: [transcripts/2026-11-03-tuesday-seo.md](transcripts/2026-11-03-tuesday-seo.md).
+  - **Search Console: still BLOCKED (R0).** The 28-day `searchconsole` read returned Windsor's "reads are paused" error. No ranking, impression or click figure exists for this run.
+  - **Technical SEO audit of main (Alejandro; local build + `wrangler dev`, VERIFIED):**
+    - Clean: all 1,430 sitemap URLs 200, self-canonical, not noindex, no duplicates; 0 duplicate titles or descriptions; `/recursos` ↔ `/resources` hreflang reciprocal on 646 pages; no internal 404s; robots.txt does not block Googlebot or Bingbot.
+    - Fixed in #357: (1) the video sitemap marked ~415 public preview recordings `requires_subscription: yes`; (2) 44 activity titles read «… actividad ELE A1 de a1»; (3) 7 grammar topic pages and 17 topic-level pages listed phonetics classes.
+    - Open: (4) lesson 26's A1 resource pair links to `/estados-unidos-basico`, which 308s to the A2 world (2 URLs; needs a catalog decision); (5) 522 of 644 resource titles exceed 70 characters.
+    - Risks, not defects: the 371 topic-level pages have a median of 89 unique words and repeat most of their parent's strings; indexable pages link 889 times to PRO URLs that 302 to `/acceso`; one preview video is reused on up to 82 pages; `Crawl-delay: 10` may slow Bing's recrawl of changed URLs (HYPOTHESIS).
+  - **Sampled quality audit of non-board units (Martin):** [docs/audits/non-board-sample-g3-g6-20261103.md](../audits/non-board-sample-g3-g6-20261103.md). G3 (`npm run test:language`) passes.
+    - «Más allá» A2 + B2 read in full, all levels machine-checked: **PASS WITH NOTES**. Levels are genuinely different. A2 has four «si + imperfecto de subjuntivo» prompts (a2.mjs:33, 53, 202, 241) that belong to B1, and there are no per-level teacher notes. No level removed.
+    - Madrid infectada B1: **PASS WITH NOTES**. The «leéis» teacher instruction is fixed in #357.
+    - Three `/material-ele` pages (topic, level, activity): **FAIL** the Indexable Teacher Page standard (no single objective, fewer than 8 prompts, no stated sequence). The cause is the page generators, so it applies to each family. No noindex was done: that needs a board decision (see next action).
+  - **Fixed in #357 from the quality audit:** template Spanish errors on every topic and level page («enseñarlo», «adjetivos se trabaja», «se abre» for plurals, lower-cased «méxico»/«3d», a grammar-only ordering claim on non-grammar FAQs); activity pages state their own level (32 change); the «café» syllable error.
+  - **Review B1 and its fix:** dropping the phonetics classes removed 3 published level pages. They now 308 to their topic page (`retiredTemaLevelPaths`), guarded by `tests/fixtures/published-material-ele-level-paths.json` (371 paths = main `6e4a2e7`) and a rendered Worker test.
+  - **Decisions and proposals:** [BOARD-DECISION-004](decisions/BOARD-DECISION-004.md), ADOPTED: COMP-001 pass 2 is parked until a run can see the competitor (the sandbox gets no HTTP response from profedeele.es). Proposal [N1 for all agents](proposals/N1-lqg-for-all-agents-20261103.md): the exact `AGENTS.md` text, not adopted; the owner decides.
+  - **Overlap disclosed:** non-board PR #324 (`grok/material-ele-tanda5`, no CI run since 10-31) also edits `app/material-ele/data.ts`, about 250 lines away from #357's one-line fix. HYPOTHESIS: #324 is broken, because it appends two page objects inside the `hubFaq` array.
+  - **Checks and release:** see the PR body; the release evidence goes into the records PR.
+  - **Next action:**
+    1. Release #357 per ROUTINES (ready only after the checks pass), smoke the changed URLs, then a records PR for PUBLISHED.md.
+    2. **Board decision needed (next Tue or Fri):** the generated `/material-ele` families fail §3.2. Either give the generators authored `objective`, `prompts` (≥8) and `sequence` fields and audit, or noindex the families until they have them, or narrow §3.2's scope. Martin's options (a)/(b) are in his audit file. Nothing is noindexed by default.
+    3. «Más allá» A2: reword the four B1 conditional prompts. Martin authors, a fresh agent does G4. Wed/Fri 3D slot, if there is capacity.
+    4. Thu reliability slot: confirm the current price figure. Public copy says US$15.50; `docs/billing-contract.md:58` says the Paddle check validates `1500` USD. Read-only, no billing change.
+    5. Open SEO defects 4 (lesson 26 A1 link) and 5 (long resource titles) are for the next Tuesday.
 - **2026-11-02 (Monday 3D routine): NO unit shipped. #282 «El ascensor del cerro» is still held, and the new automatic listening check proved NOT VALID** (branch `claude/escucha-3d-ascensor-cerro-b2-20261026`, draft PR #282; records PR from `claude/board-mon-3d-records-20261102`). Subscription usage: **UNKNOWN**.
   - **Board:** convened proportionately. The facilitator built everything. A fresh agent acting as Alejandro reviewed it: REQUEST CHANGES with 4 blockers on v1, then DELTA APPROVE on v2, both before any result was seen. Sofia and Martin were not convened; Martin wrote the clips, so he could not review the check. Verbatim: [transcripts/2026-11-02-monday-3d-ascensor-stt.md](transcripts/2026-11-02-monday-3d-ascensor-stt.md).
   - **Renumber done (VERIFIED):** #282 now uses catalog id **246**, merged with main `4a58863` (commit `22586846`). The new slug was added to the published-slug fixture. Reviewer D: clean, still PRO, no id collision with open PRs.
