@@ -15,7 +15,7 @@ export async function generateMetadata():Promise<Metadata>{
  const es=localeFromHeaders(await headers())==='es';
  return {
   title:es?'Clases de español interactivas para profes online. Listas para dar. | SPANISHCUE':'Interactive Spanish Lessons for Online Teachers. Ready to Teach. | SPANISHCUE',
-  description:es?'Deja de preparar clases de español desde cero. Mundos de conversación 3D, gramática interactiva, escucha y tareas para profes de español online, A1–C2. Prueba gratis una clase de gramática por nivel.':'Stop preparing Spanish lessons from scratch. 3D conversation worlds, interactive grammar, listening and homework for online Spanish teachers, A1–C2. Try PRO for US$2.',
+  description:es?'Deja de preparar clases de español desde cero. Mundos de conversación 3D, gramática interactiva, escucha y tareas para profes de español online, A1–C2. Prueba gratis una clase de gramática por nivel.':'Stop preparing Spanish lessons from scratch. 3D conversation worlds, interactive grammar, listening and homework for online Spanish teachers, A1–C2. Try one grammar lesson free at every level.',
   robots:{index:false,follow:true},
   alternates:{canonical:'https://spanishcue.com/lp/google-teachers'},
  };

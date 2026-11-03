@@ -8,7 +8,7 @@ const p=await load('export * from "./app/paddle-server"; export * from "./app/pa
 const d=await load('export * from "./db/referrals"; export * from "./db/paddle-billing"; export * from "./app/billing-config";');
 const monthly='pri_01m38sk06dtyhga2d4h36rt5dc', trial='pri_01m3xv2ybze2yve1phknvm3r4b', discount='dsc_01m686383k32zpnm3t5geedqss';
 const cfg={apiKey:'test',clientToken:'test',webhookSecret:'test',priceId:monthly,trialPriceId:trial,annualPriceId:p.PADDLE_ANNUAL_PRICE_ID};
-const price={id:monthly,product_id:'pro_01m38sbhv4c8756pat80kfhda0',tax_mode:'internal',unit_price:{amount:'1550',currency_code:'USD'},billing_cycle:{interval:'month',frequency:1},trial_period:null};
+const price={id:monthly,product_id:'pro_01m38sbhv4c8756pat80kfhda0',tax_mode:'internal',unit_price:{amount:'1990',currency_code:'USD'},billing_cycle:{interval:'month',frequency:1},trial_period:null};
 const renewal=(total,discount_id)=>{const period={starts_at:'2026-12-02T00:00:00Z',ends_at:'2027-01-02T00:00:00Z'};const common={customer_id:'ctm_x',custom_data:{spanishcue_user_id:'u1'},items:[{quantity:1,price:structuredClone(price)}]};
  return [{...structuredClone(common),id:'txn_free',status:'completed',subscription_id:'sub_1',currency_code:'USD',billing_period:period,discount_id,details:{totals:{total}}},{...common,id:'sub_1',status:'active',current_billing_period:period}]};
 
@@ -17,7 +17,7 @@ test('a US$0 renewal is valid only with the owner referral discount on the month
  const [tx,sub]=renewal('0',discount);const payment=p.paddleCompletedPayment(tx,sub,cfg);
  assert.equal(payment.amountCents,0);assert.equal(payment.referralFree,true);assert.equal(payment.isTrial,false);
  for(const [total,id] of [['0',null],['0','dsc_other'],['100',discount]]){const [t,s]=renewal(total,id);assert.equal(p.paddleCompletedPayment(t,s,cfg),null)}
- const [paid,s2]=renewal('1550',null);assert.equal(p.paddleCompletedPayment(paid,s2,cfg).referralFree,false);
+ const [paid,s2]=renewal('1990',null);assert.equal(p.paddleCompletedPayment(paid,s2,cfg).referralFree,false);
  const [t3,s3]=renewal('0',discount);for(const x of [t3,s3])x.items[0].price={...price,id:trial,trial_period:{interval:'day',frequency:1,requires_payment_method:true,unit_price:{amount:'200',currency_code:'USD'}}};assert.equal(p.paddleCompletedPayment(t3,s3,cfg),null);
 });
 test('discount is scheduled for the next period and the checkout carries only a well-formed code',async()=>{
@@ -52,7 +52,7 @@ test('referral qualifies only after a settled full payment, once, never for self
  assert.equal(sqlite.prepare('SELECT referrer_user_id r FROM referrals').all().map(x=>x.r).join(),'ref');
  assert.equal(await d.qualifyReferral(db,'new'),null);assert.equal(sqlite.prepare('SELECT count(*) n FROM referral_rewards').get().n,0);
  await d.upsertPaddleSubscription(db,{userId:'new',subscriptionId:'sub_new',priceId:monthly,offerCode:config.founderOffer.code,status:'ACTIVE'});
- await d.recordPaddleCompletedPayment(db,{userId:'new',subscriptionId:'sub_new',transactionId:'txn_1',amountCents:1550,currency:'USD',occurredAt:now,paidThrough:now+30*86400},config);
+ await d.recordPaddleCompletedPayment(db,{userId:'new',subscriptionId:'sub_new',transactionId:'txn_1',amountCents:1990,currency:'USD',occurredAt:now,paidThrough:now+30*86400},config);
  await d.qualifyReferral(db,'new');await d.qualifyReferral(db,'new');
  assert.deepEqual(sqlite.prepare("SELECT user_id u, role, status FROM referral_rewards ORDER BY role").all().map(x=>({...x})),[{u:'new',role:'referred',status:'queued'},{u:'ref',role:'referrer',status:'queued'}]);
  assert.equal(await d.rewardableSubscription(db,'new',monthly),'sub_new');assert.equal(await d.rewardableSubscription(db,'ref',monthly),null);

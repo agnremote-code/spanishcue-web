@@ -48,7 +48,7 @@ try{
   await page.screenshot({path:resolve(out,`${name}-activity.png`)});
   await page.getByRole('button',{name:/I have answered/}).click();await page.getByRole('button',{name:/City map/}).click();
   await page.locator('.im-districts button').first().click();await page.getByRole('dialog').waitFor();
-  assert.match(await page.locator('.im-pass').innerText(),/US\$2/);assert.match(await page.locator('.im-pass').innerText(),/US\$15.50/);
+  assert.match(await page.locator('.im-pass').innerText(),/US\$19.90/);
   await page.screenshot({path:resolve(out,`${name}-pass.png`)});await page.getByRole('button',{name:/Keep exploring free/}).click();
   await page.getByRole('button',{name:/Close map/}).click();
   // Context loss must retain all learning through the interactive map.

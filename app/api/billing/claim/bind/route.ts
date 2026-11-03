@@ -1,6 +1,6 @@
 import { env } from "cloudflare:workers";
 import { accountIdFromHeaders, emailFromHeaders } from "../../../../access-policy";
-import { billingConfig } from "../../../../billing-config";
+import { APPROVED_PRICE_CENTS, billingConfig } from "../../../../billing-config";
 import { getPaddleTransaction, validatePaddleClaimTransaction } from "../../../../paddle-server";
 import { paddleConfig } from "../../../../paddle-config";
 import { authorizePurchaseClaim } from "../../../../purchase-claim-cookie";
@@ -30,7 +30,7 @@ export async function POST(request: Request) {
     ?? await purchaseClaimByVerifiedEmail(env.DB, provider, config.paypalEnv, email, userId);
   if (!cookieClaim || cookieClaim.provider !== provider) return Response.json({ error: "No encontramos esta compra en el navegador." }, { status: 404 });
   if (cookieClaim.environment !== config.paypalEnv || cookieClaim.offerCode !== config.founderOffer.code ||
-      !(provider === "paddle" ? [200, 1500, 1550, 12900].includes(cookieClaim.amountCents ?? 0) : cookieClaim.amountCents === 1500) || cookieClaim.currency !== "USD") {
+      !(provider === "paddle" ? [200, 1500, 1550, 1990, 12900, 19900].includes(cookieClaim.amountCents ?? 0) : cookieClaim.amountCents === APPROVED_PRICE_CENTS) || cookieClaim.currency !== "USD") {
     return Response.json({ error: "La compra no coincide con la oferta." }, { status: 409 });
   }
   if (cookieClaim.normalizedEmail !== email.trim().toLowerCase()) {

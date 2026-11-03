@@ -83,7 +83,7 @@ Primary production domain:
 
 Launch/commercial positioning:
 
-- Founder subscription: USD 15/month
+- Founder subscription: USD 19.90/month or USD 199/year (since 2026-11-03)
 - no trial in the current billing contract
 - first 1,000 valid founder allocations across supported payment providers
 - allocation occurs only after the billing contract's valid settled-payment conditions are met
@@ -338,7 +338,7 @@ Read `docs/billing-contract.md` before touching billing.
 Important commercial invariant:
 
 - product code: `spanishcue-pro`
-- Founder offer: USD 15/month
+- Founder offer: USD 19.90/month or USD 199/year (since 2026-11-03)
 - automatic renewal
 - no trial
 - no setup fee

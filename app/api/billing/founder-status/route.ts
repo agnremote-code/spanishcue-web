@@ -21,12 +21,11 @@ export async function GET(request: Request) {
       && paddleReady(paddleConfig(env));
     return Response.json({
       ...status,
-      priceUsd: 15.5,
+      priceUsd: 19.9,
       paypalPriceUsd: config.founderOffer.priceUsd,
-      trialPriceUsd: 2,
-      trialDays: 1,
-      trialCheckoutAvailable: paddleCheckoutAvailable,
-      annualPriceUsd: 129,
+      // A false legacy flag keeps older cached clients from offering the retired trial.
+      trialCheckoutAvailable: false,
+      annualPriceUsd: 199,
       annualCheckoutAvailable: paddleCheckoutAvailable && paddleAnnualReady(paddleConfig(env)),
       checkoutLive,
       checkoutAvailable: checkoutLive || paddleCheckoutAvailable,

@@ -1,0 +1,247 @@
+{
+  "version": 1,
+  "authorization": "Owner request on 2026-11-03 (Claude Code desktop session): change the SPANISHCUE price to US$19.90/month «en todos los lugares posibles», with an annual plan at US$199 («anual 199») and the US$2 one-day trial retired («retira la prueba de 2»). Every listed literal only updates the price, the annual price or removes the retired trial.",
+  "additions": [
+    {
+      "path": "app/acceso/CheckoutButton.tsx",
+      "text": "Pay by card · US$19.90/month"
+    },
+    {
+      "path": "app/acceso/CheckoutButton.tsx",
+      "text": "Card: US$19.90 now and every month. Final price, taxes included."
+    },
+    {
+      "path": "app/acceso/CheckoutButton.tsx",
+      "text": "Annual plan · US$199/year (2 months free)"
+    },
+    {
+      "path": "app/acceso/CheckoutButton.tsx",
+      "text": "Card: US$199 now and every year. Final price, taxes included."
+    },
+    {
+      "path": "app/acceso/CheckoutButton.tsx",
+      "text": "Pay with PayPal · US$${(founder.paypalPriceUsd ?? 19.9).toFixed(2)}/month"
+    },
+    {
+      "path": "app/acceso/CheckoutButton.tsx",
+      "text": "Subscribe · US$19.90/month"
+    },
+    {
+      "path": "app/acceso/CheckoutButton.tsx",
+      "text": "Card: US$19.90 now and every month. Final price, taxes included."
+    },
+    {
+      "path": "app/acceso/CheckoutButton.tsx",
+      "text": "Or pay with PayPal · US$${(offer.paypalPriceUsd ?? 19.9).toFixed(2)}/month"
+    },
+    {
+      "path": "app/cuenta/SubscriptionManager.tsx",
+      "text": "First monthly charge"
+    },
+    {
+      "path": "app/cuenta/SubscriptionManager.tsx",
+      "text": "US$199 / year"
+    },
+    {
+      "path": "app/i18n/messages.ts",
+      "text": "PRO · UNLIMITED ACCESS · US$19.90/mo"
+    },
+    {
+      "path": "app/i18n/messages.ts",
+      "text": "US$19.90 per month"
+    },
+    {
+      "path": "app/i18n/messages.ts",
+      "text": "Unlimited access. Keep US$19.90/month while the same subscription remains active."
+    },
+    {
+      "path": "app/i18n/messages.ts",
+      "text": "Subscribe for US$19.90/month →"
+    },
+    {
+      "path": "app/legal/LegalDocument.tsx",
+      "text": "The conditions shown before payment—plan, currency, price, period, renewal and applicable taxes—form part of the purchase. SPANISHCUE PRO can be purchased by card through Paddle or via PayPal, depending on which methods are available. The monthly plan renews automatically until cancelled. Any future price change is disclosed before it applies and does not reduce rights already acquired."
+    },
+    {
+      "path": "app/legal/LegalDocument.tsx",
+      "text": "Before confirmation, checkout identifies the selected method: card (Paddle) at US$19.90/month or US$199/year; PayPal shows its own amount. Renewal is automatic until cancellation, with the term and applicable taxes disclosed. Access begins after the relevant payment is confirmed."
+    },
+    {
+      "path": "app/legal/PrelaunchLegalDocument.tsx",
+      "text": "SPANISHCUE provides a digital library of visual lessons for Spanish teachers. The free account provides access to samples marked as free without a card. The planned PRO plan and US$19.90 monthly Founder Price are displayed to explain the launch, but public checkout is not active; creating an account starts neither a subscription nor a charge."
+    },
+    {
+      "path": "app/marketing-landing/LandingConversion.tsx",
+      "text": "PRO coming soon · planned Founder Price US$19.90/month"
+    },
+    {
+      "path": "app/marketing-landing/LandingConversion.tsx",
+      "text": "Buy PRO · US$19.90/month"
+    },
+    {
+      "path": "app/marketing-landing/campaign-copy.ts",
+      "text": "Keep US$19.90/month while that same subscription remains active."
+    },
+    {
+      "path": "app/marketing-landing/campaign-copy.ts",
+      "text": "Planned Founder Price: US$19.90/month. Payments are not enabled yet. Explore the launch with no card or charge."
+    },
+    {
+      "path": "app/marketing-landing/campaign-copy.ts",
+      "text": "UNLOCK WITH PRO · US$19.90/MONTH"
+    },
+    {
+      "path": "app/marketing-landing/campaign-copy.ts",
+      "text": "All of SPANISHCUE for US$19.90/month."
+    },
+    {
+      "path": "app/marketing/MarketingSections.tsx",
+      "text": "US$19.90/month by card"
+    },
+    {
+      "path": "app/marketing/MarketingSections.tsx",
+      "text": "Yes. Subscriptions renew every month or year, as chosen, until cancelled."
+    },
+    {
+      "path": "app/marketing/MarketingSections.tsx",
+      "text": "Yes. Pay US$19.90/month or US$199/year by card, or choose PayPal. Review amounts before payment."
+    },
+    {
+      "path": "app/marketing/MarketingSections.tsx",
+      "text": "Yes. Pay US$19.90/month or US$199/year by card."
+    },
+    {
+      "path": "app/pricing/page.tsx",
+      "text": "Compare SPANISHCUE Free and PRO. Try ten real Spanish lessons or unlock the complete interactive library for US$19.90/month with Founder Price."
+    },
+    {
+      "path": "app/pricing/page.tsx",
+      "text": "Compare SPANISHCUE Free with the upcoming PRO plan. Try ten real lessons with no card and reserve the planned US$19.90 monthly Founder Price."
+    },
+    {
+      "path": "app/pricing/page.tsx",
+      "text": "Yes. Pay US$19.90/month or US$199/year by card. PayPal shows its price before confirmation."
+    },
+    {
+      "path": "app/bauti/copy.ts",
+      "text": "US$19.90 a month, final price including taxes. It unlocks the whole library and you can cancel any time before the next renewal."
+    },
+    {
+      "path": "app/immersive/PremiumPanel.tsx",
+      "text": "PRO · US$19.90 a month"
+    },
+    {
+      "path": "app/immersive/PremiumPanel.tsx",
+      "text": "Unlock PRO for US$19.90/month by card or PayPal. No annual commitment; cancel before renewal."
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "US$19.90/month by card or PayPal. No annual commitment."
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "US$19.90/month, final price with taxes. Cancel anytime before the next renewal."
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Prices in USD; cards through Paddle, taxes handled at checkout; PayPal at US$19.90/month. Pay first, then link the purchase to your account. Access is granted only after the payment is confirmed."
+    },
+    {
+      "path": "app/lp/google-teachers/page.tsx",
+      "text": "Stop preparing Spanish lessons from scratch. 3D conversation worlds, interactive grammar, listening and homework for online Spanish teachers, A1–C2. Try one grammar lesson free at every level."
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Founder price: US$19.90/month, kept while that same subscription stays active. That is about 66¢ a day."
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Subscribe to PRO · US$19.90/month"
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Unlock PRO · US$19.90/month"
+    },
+    {
+      "path": "app/marketing/FreeVersionBar.tsx",
+      "text": "Unlock everything · US$19.90/month →"
+    }
+  ],
+  "changes": [
+    {
+      "path": "app/acceso/CheckoutButton.tsx",
+      "kind": "english-changed-or-deleted",
+      "text": "Pay by card · US$15.50/month"
+    },
+    {
+      "path": "app/acceso/CheckoutButton.tsx",
+      "kind": "english-changed-or-deleted",
+      "text": "Card: US$15.50 now and every month. Final price, taxes included."
+    },
+    {
+      "path": "app/acceso/CheckoutButton.tsx",
+      "kind": "english-changed-or-deleted",
+      "text": "Pay with PayPal · US$${founder.paypalPriceUsd ?? 15}/month"
+    },
+    {
+      "path": "app/i18n/messages.ts",
+      "kind": "english-changed-or-deleted",
+      "text": "PRO · UNLIMITED ACCESS · US$15.50/mo"
+    },
+    {
+      "path": "app/i18n/messages.ts",
+      "kind": "english-changed-or-deleted",
+      "text": "US$15.50 per month"
+    },
+    {
+      "path": "app/i18n/messages.ts",
+      "kind": "english-changed-or-deleted",
+      "text": "Unlimited access. Keep US$15.50/month while the same subscription remains active."
+    },
+    {
+      "path": "app/i18n/messages.ts",
+      "kind": "english-changed-or-deleted",
+      "text": "Subscribe for US$15.50/month →"
+    },
+    {
+      "path": "app/marketing-landing/LandingConversion.tsx",
+      "kind": "english-changed-or-deleted",
+      "text": "PRO coming soon · planned Founder Price US$15.50/month"
+    },
+    {
+      "path": "app/marketing-landing/LandingConversion.tsx",
+      "kind": "english-changed-or-deleted",
+      "text": "Buy PRO · US$15.50/month"
+    },
+    {
+      "path": "app/marketing-landing/campaign-copy.ts",
+      "kind": "english-changed-or-deleted",
+      "text": "Keep US$15.50/month while that same subscription remains active."
+    },
+    {
+      "path": "app/marketing-landing/campaign-copy.ts",
+      "kind": "english-changed-or-deleted",
+      "text": "Planned Founder Price: US$15.50/month. Payments are not enabled yet. Explore the launch with no card or charge."
+    },
+    {
+      "path": "app/marketing-landing/campaign-copy.ts",
+      "kind": "english-changed-or-deleted",
+      "text": "UNLOCK WITH PRO · US$15.50/MONTH"
+    },
+    {
+      "path": "app/marketing-landing/campaign-copy.ts",
+      "kind": "english-changed-or-deleted",
+      "text": "All of SPANISHCUE for US$15.50/month."
+    },
+    {
+      "path": "app/pricing/page.tsx",
+      "kind": "english-changed-or-deleted",
+      "text": "Compare SPANISHCUE Free and PRO. Try ten real Spanish lessons or unlock the complete interactive library for US$15.50/month with Founder Price."
+    },
+    {
+      "path": "app/pricing/page.tsx",
+      "kind": "english-changed-or-deleted",
+      "text": "Compare SPANISHCUE Free with the upcoming PRO plan. Try ten real lessons with no card and reserve the planned US$15.50 monthly Founder Price."
+    }
+  ]
+}

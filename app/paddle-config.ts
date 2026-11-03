@@ -1,11 +1,12 @@
 export const PADDLE_MONTHLY_PRICE_ID = "pri_01m38sk06dtyhga2d4h36rt5dc";
+/** Retired US$2 one-day trial: never sold again, kept only to verify historic purchases. */
 export const PADDLE_TRIAL_PRICE_ID = "pri_01m3xv2ybze2yve1phknvm3r4b";
 export const PADDLE_PRODUCT_ID = "pro_01m38sbhv4c8756pat80kfhda0";
-export const PADDLE_MONTHLY_CENTS = 1550;
+export const PADDLE_MONTHLY_CENTS = 1990;
 export const PADDLE_TRIAL_CENTS = 200;
-/** Annual plan (US$129/year), created by the owner in Paddle Live on 2026-10-31. */
+/** Annual plan (US$199/year). */
 export const PADDLE_ANNUAL_PRICE_ID = "pri_01m684zshhms5kzznb7s3kjfss";
-export const PADDLE_ANNUAL_CENTS = 12900;
+export const PADDLE_ANNUAL_CENTS = 19900;
 /** «Invitá a un colega»: one-period 100% discount (monthly price only, no checkout code), created by the owner in Paddle Live on 2026-10-31. */
 export const PADDLE_REFERRAL_DISCOUNT_ID = "dsc_01m686383k32zpnm3t5geedqss";
 export type PaddleOffer = "monthly" | "trial" | "annual";

@@ -41,8 +41,9 @@ test("public pages honor live checkout availability and both providers", async (
   assert.doesNotMatch(home, /PayPal está integrado en modo de pruebas y el checkout público permanece desactivado/);
   assert.doesNotMatch(home, /The full library for US\$15 a month/);
   assert.match(legal, /<td>Paddle<\/td>/);
-  assert.match(legal, /US\$15\.50\/mes/);
-  assert.match(prelaunch, /US\$15\.50 monthly Founder Price/);
+  assert.match(legal, /US\$19\.90 al mes o US\$199 al año/);
+  assert.doesNotMatch(legal, /prueba de 1 día por US\$2|US\$2 one-day trial/);
+  assert.match(prelaunch, /US\$19\.90 monthly Founder Price/);
 });
 
 test("pricing presents card or PayPal without falsely promising unavailable trial", async () => {

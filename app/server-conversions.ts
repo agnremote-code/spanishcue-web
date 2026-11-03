@@ -4,7 +4,7 @@ import type { PaddleAttribution } from "./paddle-server";
 type ConversionEnv = Partial<Record<"NEXT_PUBLIC_GA4_MEASUREMENT_ID" | "GA4_API_SECRET" | "ANALYTICS_CONVERSIONS_ENABLED", string>>;
 
 /**
- * Charges that happen while the buyer is not on the site (the first US$15.50
+ * Charges that happen while the buyer is not on the site (the first US$19.90
  * month after a US$2 trial, and every renewal) are reported server-side to
  * GA4 through the Measurement Protocol. The browser already reports the first
  * paid transaction, so it is never sent from here.

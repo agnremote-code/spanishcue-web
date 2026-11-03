@@ -22,7 +22,7 @@ test('the long guide «materiales para enseñar español» is a full indexable a
  assert.ok(main.querySelector('strong'),'bold runs render as elements');assert.doesNotMatch(main.textContent,/\*\*|\]\(/,'no raw markdown');
  assert.ok(main.querySelector('a[href="/material-ele/gramatica/preterito-indefinido"]'),'internal topic link');
  assert.ok(main.querySelector('a[href="/gramatica/clase-inicial"]'),'free class link');
- assert.ok(main.querySelector('a[href="/pricing"]'),'buy link');assert.match(main.textContent,/US\$15,50 al mes/);
+ assert.ok(main.querySelector('a[href="/pricing"]'),'buy link');assert.match(main.textContent,/US\$19,90 al mes/);
  assert.match(main.textContent,/Descargar ficha en PDF/);assert.match(main.textContent,/Publicado el/);
  assert.ok(main.querySelector('video')||main.querySelector('figure'),'class preview');
  assert.ok(d.querySelector('footer a[href="/material-ele"]'));
