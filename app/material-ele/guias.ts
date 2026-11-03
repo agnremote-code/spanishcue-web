@@ -597,12 +597,147 @@ export const guiaPages: GuiaPage[] = [
       },
     ],
     faq: [
-      { question: "¿Los ejercicios ELE con soluciones son gratis?", answer: `Sí. Los ${exercises} ejercicios del banco de actividades se abren sin registro, se pueden imprimir en PDF y cada frase muestra su solución. Las clases completas de gramática a las que enlazan son de pago, salvo una gratis por nivel y la clase inicial.` },
+      { question: "¿Los ejercicios ELE con soluciones son gratis?", answer: `Sí. Los ${exercises} ejercicios del banco de actividades se abren sin registro, se pueden imprimir en PDF y cada frase muestra su solución. Las clases completas de gramática a las que enlazan son de pago, salvo tres gratis por nivel y la clase inicial.` },
       { question: "¿Para qué niveles hay ejercicios?", answer: "De A1 a B2 por nivel y de A1 a C1 por tema (conectores, subjuntivo). Para C1 y C2 el material recomendado son las preguntas de conversación y las clases de esos niveles, porque el error ya no es de forma." },
       { question: "¿Cómo se ven las soluciones?", answer: "Cada frase del ejercicio se abre al tocarla o al hacer clic y muestra la respuesta. El alumno puede corregirse solo y el profesor puede abrirlas una por una en pantalla compartida." },
       { question: "¿Puedo usar los ejercicios en una clase online?", answer: "Sí. Están pensados para pantalla compartida: una página, una consigna de una línea y soluciones que se abren a voluntad. También se pueden mandar como PDF por el chat de la clase." },
     ],
     related: ["ser-y-estar", "indefinido-e-imperfecto", "subjuntivo", "por-y-para", "a1", "b1"],
+  },
+  {
+    slug: "como-dar-clases-de-espanol-online",
+    path: `${GUIAS_PATH}/como-dar-clases-de-espanol-online`,
+    title: "Cómo dar clases de español online: guía práctica para profesores de ELE",
+    description:
+      "Cómo dar clases de español online que funcionen: la pantalla, el ritmo de 45 minutos, qué compartir en cada nivel y cómo hacer hablar al alumno desde el primer día.",
+    h1: "Cómo dar clases de español online: pantalla, ritmo y materiales que funcionan",
+    kicker: "Guía para profesores de ELE",
+    intro:
+      "Dar clases de español online no es dar la misma clase de siempre delante de una cámara. Cambia lo que el alumno ve, cambia el ritmo y cambia lo que cuenta como material. Esta guía reúne lo que funciona en clases particulares y grupos pequeños por videollamada: cómo preparar la pantalla, cómo repartir los 45 minutos, qué compartir en cada nivel y cómo conseguir que el alumno hable más que tú.",
+    keywords: ["cómo dar clases de español online", "clases de español online", "enseñar español online", "profesor de español online", "dar clases de ELE online", "material para clases de español online"],
+    published: "2026-11-03",
+    lessonIds: [239, 332, 358, 390, 36, 28],
+    sections: [
+      {
+        id: "que-cambia",
+        title: "Qué cambia cuando la clase de español es online",
+        blocks: [
+          { type: "p", text: "En una clase presencial el alumno mira al profesor, a la pizarra, al libro y a sus compañeros. En una clase online mira **una sola ventana**. Todo lo que no está en esa ventana no existe: la ficha que tienes en el escritorio, el gesto que haces fuera de cámara, el ejemplo que escribiste en un papel. Por eso la primera regla de una clase online es que el material tiene que estar pensado para la pantalla compartida, no adaptado a ella." },
+          { type: "p", text: "La segunda diferencia es la atención. Delante de una pantalla el alumno tiene el correo, el móvil y otra pestaña a un clic. Una explicación de diez minutos sin interacción pierde a cualquiera, en cualquier nivel. Lo que funciona son bloques cortos, de cinco a ocho minutos, que terminan siempre con el alumno haciendo algo: contestar, elegir, leer en voz alta, contar." },
+          { type: "p", text: "La tercera es a favor: la clase online permite cosas que en el aula son difíciles. El alumno puede escuchar un audio con buenos auriculares, ver una imagen a pantalla completa, moverse por un escenario o corregirse solo abriendo una solución. Una buena clase online aprovecha eso en lugar de imitar la pizarra." },
+        ],
+      },
+      {
+        id: "preparar-pantalla",
+        title: "Cómo preparar la pantalla antes de empezar",
+        blocks: [
+          { type: "p", text: "Cinco minutos de preparación técnica ahorran diez de clase perdida. Antes de cada sesión:" },
+          { type: "ol", items: [
+            "**Abre todo lo que vas a compartir en pestañas de un mismo navegador**, en el orden de la clase. Cambiar de programa en mitad de la clase es donde se pierde el ritmo.",
+            "**Comparte la pestaña, no la pantalla entera.** El alumno no necesita ver tus notificaciones ni tu escritorio, y el audio de la pestaña llega mejor.",
+            "**Comprueba el audio compartido** si la clase tiene escucha. Muchas plataformas de videollamada necesitan que actives «compartir sonido» al compartir la pestaña.",
+            "**Ten las respuestas fuera de la vista del alumno.** Si el material muestra las soluciones en la misma página, necesitas un modo que las oculte; si no, el ejercicio se corrige solo antes de empezar.",
+            "**Prepara un plan B sin pantalla compartida**: tres preguntas de conversación por si falla la conexión. Las [preguntas de conversación por nivel](/material-ele/preguntas-de-conversacion) sirven para eso.",
+          ] },
+          { type: "p", text: "Las clases de SpanishCue están pensadas para este punto: cada una se abre en una pestaña, ocupa la pantalla compartida y tiene un **modo profesor** que oculta las respuestas en la pantalla del alumno. Puedes probar el formato completo con la [Clase inicial](/gramatica/clase-inicial), que es gratis." },
+        ],
+      },
+      {
+        id: "estructura-45",
+        title: "La estructura de una clase online de 45 minutos",
+        blocks: [
+          { type: "p", text: "Una clase online de 45 minutos funciona mejor con una secuencia fija que el alumno reconoce. La que usan las clases de gramática de SpanishCue tiene siete pasos, y sirve también si montas la clase con tu propio material:" },
+          { type: "ol", items: [
+            "**Entrada (3 minutos).** Una pregunta personal que conecta con el tema: «¿Qué hiciste el sábado?» antes de los pasados, «¿Qué te gusta hacer los domingos?» antes de gustar.",
+            "**Entender (7 minutos).** La regla con ejemplos en pantalla. Corta: tres ejemplos claros valen más que una tabla completa.",
+            "**Explorar (5 minutos).** El alumno descubre la forma en un texto o en un diálogo antes de practicarla.",
+            "**Practicar (10 minutos).** Ejercicios con solución, que el alumno contesta en voz alta. Los [ejercicios ELE con soluciones](/material-ele/guia/ejercicios-ele-con-soluciones) explican tres formas de corregirlos.",
+            "**Escuchar (5 minutos).** Un audio corto con la forma en uso. La [comprensión auditiva](/material-ele/comprension-auditiva) es donde más gana la clase online frente a la presencial.",
+            "**Conversar (10 minutos).** Preguntas abiertas que obligan a usar lo aprendido para decir algo propio.",
+            "**Cerrar (5 minutos).** Tres frases que el alumno escribe en el chat. Te las quedas: son el punto de partida de la próxima clase.",
+          ] },
+          { type: "p", text: "Si quieres montar esta secuencia con tus propios materiales, la guía [cómo preparar una clase de español en 10 minutos](/material-ele/guia/preparar-una-clase-de-espanol-rapido) explica cómo elegir cada pieza. Si prefieres no montarla, las [clases de gramática en vivo](/material-ele/formatos/clases-de-gramatica-en-vivo) ya la traen hecha, con tres gratis en cada nivel." },
+        ],
+      },
+      {
+        id: "por-nivel",
+        title: "Qué compartir en pantalla en cada nivel",
+        blocks: [
+          { type: "p", text: "La pantalla compartida no es igual de útil en todos los niveles. Lo que necesita el alumno cambia mucho de A1 a C2." },
+        ],
+        subsections: [
+          {
+            title: "A1 y A2: imagen, palabra y frase mínima",
+            blocks: [
+              { type: "p", text: "En los primeros niveles la pantalla hace el trabajo que en el aula hacen los gestos y los objetos. Funciona el vocabulario con imagen, el apoyo bilingüe cuando hace falta y frases cortas que el alumno pueda repetir y cambiar. Una clase de [gustar y encantar](/gramatica/gustar-y-encantar) o de [imperativo](/gramatica/imperativo-afirmativo-tu-vos-usted) se entiende mejor con una imagen por ejemplo que con una tabla de conjugación. Material de los dos niveles en [Material ELE A1](/material-ele/a1) y [A2](/material-ele/a2)." },
+            ],
+          },
+          {
+            title: "B1 y B2: texto, contraste y opinión",
+            blocks: [
+              { type: "p", text: "A partir de B1 la pantalla sirve para mostrar contraste: dos frases casi iguales con un modo distinto, un mensaje con dos interpretaciones, un texto corto con los conectores marcados. Es el nivel del [subjuntivo](/material-ele/subjuntivo), de las [recomendaciones con «que»](/gramatica/recomendaciones-sugerir-que-aconsejar-que) y de la opinión argumentada. Comparte poco texto y deja que el alumno lo comente: a este nivel la producción es la clase. Más en [Material ELE B1](/material-ele/b1) y [B2](/material-ele/b2)." },
+            ],
+          },
+          {
+            title: "C1 y C2: registro, matiz y situación",
+            blocks: [
+              { type: "p", text: "En los niveles altos la pantalla compartida casi desaparece: lo que importa es la conversación. Comparte una situación, un fragmento o un dilema, y el resto es hablar. El error ya no es de forma sino de registro, así que la corrección se hace sobre cómo dijo el alumno algo, no sobre qué dijo. Ideas para esos niveles en [Material ELE C1](/material-ele/c1) y [C2](/material-ele/c2)." },
+            ],
+          },
+        ],
+      },
+      {
+        id: "hacer-hablar",
+        title: "Cómo conseguir que el alumno hable más que tú",
+        blocks: [
+          { type: "p", text: "El problema más común de las clases online es que el profesor habla demasiado. La cámara invita a explicar, y el alumno, que no quiere interrumpir con el micrófono, escucha. Algunas reglas que lo corrigen:" },
+          { type: "ul", items: [
+            "**Pregunta en segunda persona desde el minuto uno.** No «el pretérito indefinido se usa para…», sino «¿qué hiciste ayer?».",
+            "**Cuenta los minutos que hablas.** Si en un bloque de diez minutos hablaste más de cuatro, el bloque era una explicación, no una práctica.",
+            "**Usa el silencio.** En videollamada parece más largo de lo que es. Espera cinco segundos antes de reformular una pregunta.",
+            "**Da una tarea con un motivo para hablar.** Un [juego de conversación](/material-ele/formatos/juegos-de-conversacion) o un [roleplay](/material-ele/formatos/roleplays) da al alumno algo que conseguir, no solo algo que contestar.",
+            "**Corrige después, no durante.** Anota los errores en el chat y repásalos al final del bloque; interrumpir cada frase en una videollamada corta la conversación.",
+          ] },
+          { type: "p", text: "La guía [actividades de conversación en español para adultos](/material-ele/guia/actividades-de-conversacion-en-espanol-para-adultos) tiene actividades concretas por nivel, y los [juegos para la clase de español](/material-ele/juegos-para-clase-de-espanol) funcionan igual de bien por pantalla compartida." },
+        ],
+      },
+      {
+        id: "mundos-3d",
+        title: "Lo que solo se puede hacer online: escenarios para recorrer",
+        blocks: [
+          { type: "p", text: "Una ventaja de la clase online que casi nadie aprovecha es que el alumno puede **recorrer un lugar**. En lugar de describir un aeropuerto con una ficha, el alumno camina por uno, encuentra a una persona con un problema y tiene que resolverlo hablando. Es la diferencia entre practicar el vocabulario del viaje y vivir un vuelo cancelado." },
+          { type: "p", text: "SpanishCue tiene varios [mundos 3D](/material-ele/formatos/mundos-3d) pensados para eso: el alumno se mueve por la escena y cada punto de conversación abre preguntas para su nivel. Puedes probar la [demo gratis de Noche abierta](/demo/noche-abierta), una ciudad de noche con locales para conversar, o la clase gratis de [Estados Unidos](/estados-unidos-a2-b1). Para escuchar, [Latinoamérica al Oído](/latinoamerica-al-oido) es gratis y trabaja acentos de distintos países." },
+        ],
+      },
+      {
+        id: "primera-clase",
+        title: "La primera clase online con un alumno nuevo",
+        blocks: [
+          { type: "p", text: "La primera clase decide si el alumno vuelve. En una clase online, además, es cuando el alumno descubre si la tecnología le va a complicar la vida. Tres objetivos para esa clase: que hable en español en los primeros cinco minutos, que tú sepas su nivel real al final y que se lleve algo que pueda usar." },
+          { type: "p", text: "Para lo primero, empieza con preguntas personales en el nivel más bajo posible y sube hasta que el alumno se trabe. Para lo segundo, usa un ejercicio corto con solución: diez minutos de [ejercicio por nivel](/material-ele/ejercicio/a1) dicen más que una prueba larga. Para lo tercero, cierra con tres frases escritas en el chat. La guía de la [primera clase de español](/material-ele/primera-clase-de-espanol) tiene la secuencia completa." },
+        ],
+      },
+      {
+        id: "errores",
+        title: "Cinco errores frecuentes al dar clases de español online",
+        blocks: [
+          { type: "ul", items: [
+            "**Compartir un PDF y leerlo.** Un documento pensado para imprimir es pequeño, denso y obliga a hacer zoom. Si usas fichas, que sean las que están pensadas para proyectar; las [fichas ELE para imprimir y proyectar](/material-ele/guia/fichas-ele-para-imprimir-y-proyectar) explican la diferencia.",
+            "**Cambiar de herramienta cada diez minutos.** Una pizarra digital, un documento, un vídeo y un juego en cuatro programas distintos es una clase de informática.",
+            "**Mostrar las respuestas sin querer.** Si el alumno ve la solución antes de contestar, el ejercicio no sirvió.",
+            "**No dejar nada escrito.** Sin pizarra física, el alumno olvida lo que no está en el chat o en su cuaderno. Termina siempre con algo escrito.",
+            "**Preparar cada clase desde cero.** Es el error que más horas cuesta. Un banco de clases y actividades por nivel, como el [banco de actividades de Material ELE](/material-ele/actividades), te deja preparar en diez minutos.",
+          ] },
+        ],
+      },
+    ],
+    faq: [
+      { question: "¿Qué necesito para dar clases de español online?", answer: "Una plataforma de videollamada que permita compartir una pestaña con sonido, un navegador con el material abierto en el orden de la clase y un material pensado para la pantalla compartida, con las respuestas ocultas para el alumno." },
+      { question: "¿Cuánto debe durar una clase de español online?", answer: "Lo habitual son 45 o 60 minutos. Con 45 minutos y una secuencia fija (entrada, explicación, práctica, escucha, conversación y cierre) el alumno no pierde la atención y hay tiempo para que hable." },
+      { question: "¿Qué material uso para clases de español online?", answer: "Material pensado para pantalla compartida: clases que ocupan la pantalla y avanzan contigo, ejercicios con soluciones que se abren a voluntad y preguntas de conversación por nivel. En Material ELE todo eso es gratis y sin registro, y hay tres clases de gramática completas gratis en cada nivel." },
+      { question: "¿Cómo hago que el alumno hable más en una clase online?", answer: "Pregunta en segunda persona desde el primer minuto, da tareas con un motivo para hablar (juegos, roleplays, escenarios), espera antes de reformular y corrige al final del bloque, no en mitad de cada frase." },
+    ],
+    related: ["primera-clase-de-espanol", "preguntas-de-conversacion", "juegos-para-clase-de-espanol", "comprension-auditiva", "a1", "b1"],
   },
 ];
 
