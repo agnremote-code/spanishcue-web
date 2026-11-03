@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "authorization": "Owner standing approval (Ale) for new English copy, typed «apruebo (siempre de ahora en más apruebo)» in the project thread «Biblioteca» on 2026-10-22 (message cmsg_01Gr5R4j3t2Yet65UcmhcVhAAAbp6kqDfMqxzNm3PL6f5g). Applied to the «Confían en SpanishCue» figures bar Ale asked for on 2026-11-03 (message cmsg_01Gr5R4j3t2Yet65UcmhcVhANg2ZKBRL37wdvbCAkgwfow), with Ale's own figures. Extended the same day with a value line, three benefits and two CTAs after Ale asked for «más marketing» for non-PRO visitors (message cmsg_01Gr5R4j3t2Yet65UcmhcVhAGBXurx8thBZ9pJjNfU4JaQ).",
+  "additions": [
+    {
+      "path": "app/marketing/TrustStats.tsx",
+      "text": "Trusted by teachers and academies"
+    },
+    {
+      "path": "app/marketing/TrustStats.tsx",
+      "text": "Teachers"
+    },
+    {
+      "path": "app/marketing/TrustStats.tsx",
+      "text": "Academies"
+    },
+    {
+      "path": "app/marketing/TrustStats.tsx",
+      "text": "Years getting people to speak and understand Spanish"
+    },
+    {
+      "path": "app/marketing/TrustStats.tsx",
+      "text": "Your next lesson is already done. Open it, share it and teach."
+    },
+    {
+      "path": "app/marketing/TrustStats.tsx",
+      "text": "Grammar from A1 to C2 with theory, practice and conversation"
+    },
+    {
+      "path": "app/marketing/TrustStats.tsx",
+      "text": "3D worlds where your student talks to solve the scene"
+    },
+    {
+      "path": "app/marketing/TrustStats.tsx",
+      "text": "One screen to share on Zoom, Meet or Preply"
+    },
+    {
+      "path": "app/marketing/TrustStats.tsx",
+      "text": "Get started with SpanishCue"
+    }
+  ]
+}
