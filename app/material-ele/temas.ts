@@ -63,6 +63,11 @@ export const temaGroupById = new Map(temaGroups.map((group) => [group.id, group]
 
 type Source = { group: TemaGroupId; parent: string; slug: string; name: string; match: RegExp; intro: string; guide?: string; ids?: number[] };
 
+/** A topic name inside a sentence: countries keep their capital («México»), acronyms stay («ELE», «3D»), common nouns start lower case («los adjetivos» → «adjetivos»). */
+export const nameInSentence = (source: { group: string; parent: string; slug: string; name: string }) =>
+  (source.group === "cultura" && source.parent.startsWith("Países") && source.slug !== "el-mundo") || !/^\p{Lu}\p{Ll}/u.test(source.name)
+    ? source.name
+    : source.name.charAt(0).toLowerCase() + source.name.slice(1);
 const strip = (text: string) => text.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
 // A grammar unit's tag is its whole topic label («Oraciones y conectores»), which would match every unit of the topic; the title and slug name the point.
 const topicLabels = new Set(grammarTopics.map((topic) => topic.label));
@@ -211,6 +216,7 @@ const uniq = <T,>(items: T[]) => [...new Set(items)];
 
 function buildPage(source: Source): TemaPage | null {
   const group = temaGroupById.get(source.group)!;
+  const inSentence = nameInSentence(source);
   const matched = lessons.filter((lesson) => (source.ids?.includes(lesson.id) ?? false) || source.match.test(haystackByLesson.get(lesson.id) ?? ""));
   // Grammar points are taught by grammar classes; conversation worlds only join a grammar topic when named explicitly.
   const relevant = source.group === "gramatica" ? matched.filter((lesson) => lesson.category === "Gramática" || lesson.category === "Fonética" || (source.ids?.includes(lesson.id) ?? false)) : matched;
@@ -224,21 +230,21 @@ function buildPage(source: Source): TemaPage | null {
   const guideLabel = source.guide ? elePageBySlug.get(source.guide)?.h1 : undefined;
   const longTitle = `${source.name}: actividades y clases ELE ${span} | SpanishCue`;
   const title = longTitle.length <= 78 ? longTitle : `${source.name}: clases ELE ${span} | SpanishCue`;
-  const base = `${source.name} en clase de ELE: ${classes} de nivel ${span} para enseñarlo con teoría visual, práctica y conversación.`;
+  const base = `${source.name} en clase de ELE: ${classes} de nivel ${span} con teoría visual, práctica y conversación.`;
   const extra = freeCount > 0 ? ` ${freeCount === 1 ? "Una clase gratis" : `${freeCount} clases gratis`} para probar hoy.` : " Material listo para compartir en pantalla.";
   const description = (base + extra).length <= 165 ? base + extra : base;
   return {
     group: source.group, parent: source.parent, slug: source.slug, path: `${group.path}/${source.slug}`, name: source.name,
-    h1: `${source.name}: clases y actividades para enseñarlo en ELE`, title, description, intro: source.intro, guide: source.guide,
+    h1: `${source.name}: clases y actividades para la clase de ELE`, title, description, intro: source.intro, guide: source.guide,
     lessonIds: ordered.map((lesson) => lesson.id), levels, freeCount,
     goals: uniq(ordered.flatMap((lesson) => lesson.goals.filter((goal) => goal && goal !== lesson.subtitle))).slice(0, 8),
     warmups: uniq(ordered.map((lesson) => lesson.warmup).filter(Boolean)).slice(0, 4),
     speaking: uniq(ordered.flatMap((lesson) => lesson.speaking).filter(Boolean)).slice(0, 8),
     faq: [
-      { question: `¿Para qué nivel es ${source.name.toLowerCase()}?`, answer: `En SpanishCue hay ${classes} que ${count === 1 ? "trabaja" : "trabajan"} ${source.name.toLowerCase()} entre ${span}. Cada clase indica su nivel según el MCER y el PCIC, y las de un mismo tema se ordenan de lo regular a lo irregular y de la forma al uso.` },
-      { question: `¿Hay alguna clase gratis sobre ${source.name.toLowerCase()}?`, answer: freeCount > 0 ? `Sí: ${freeCount === 1 ? "una de estas clases es gratis" : `${freeCount} de estas clases son gratis`} y se abre sin registrarse. Las demás están incluidas en la suscripción PRO.` : `Las clases de este tema son PRO. Para ver cómo funciona una clase completa antes de suscribirte, abre una clase gratis de tu nivel en Material ELE por nivel.` },
+      { question: `¿Para qué nivel son las clases de ${inSentence}?`, answer: `En SpanishCue hay ${classes} sobre ${inSentence} entre ${span}. Cada clase indica su nivel según el MCER y el PCIC.` },
+      { question: `¿Hay alguna clase gratis sobre ${inSentence}?`, answer: freeCount > 0 ? `Sí: ${freeCount === 1 ? "una de estas clases es gratis y se abre" : `${freeCount} de estas clases son gratis y se abren`} sin registrarse. Las demás están incluidas en la suscripción PRO.` : `Las clases de este tema son PRO. Para ver cómo funciona una clase completa antes de suscribirte, abre una clase gratis de tu nivel en Material ELE por nivel.` },
       { question: "¿Qué incluye cada clase?", answer: group.method.join(" ") },
-      ...(guideLabel ? [{ question: `¿Dónde hay actividades y ejercicios sobre ${source.name.toLowerCase()}?`, answer: `En la guía «${guideLabel}»: actividades comunicativas con pasos y frases modelo, un ejercicio con soluciones y una ficha para descargar en PDF.` }] : []),
+      ...(guideLabel ? [{ question: `¿Dónde hay actividades y ejercicios sobre ${inSentence}?`, answer: `En la guía «${guideLabel}»: actividades comunicativas con pasos y frases modelo, un ejercicio con soluciones y una ficha para descargar en PDF.` }] : []),
     ],
   };
 }
@@ -266,6 +272,8 @@ export type TemaLevelPage = {
 const lessonById = new Map(lessons.map((lesson) => [lesson.id, lesson]));
 const levelSlugs = ["A1", "A2", "B1", "B2", "C1", "C2"];
 const levelWords: Record<string, string> = { A1: "principiantes", A2: "nivel básico", B1: "nivel intermedio", B2: "intermedio alto", C1: "nivel avanzado", C2: "nivel de maestría" };
+/** The level as it reads after «N clases» in a heading. */
+const levelPhrase: Record<string, string> = { A1: "para principiantes", A2: "de nivel básico", B1: "de nivel intermedio", B2: "de nivel intermedio alto", C1: "de nivel avanzado", C2: "de nivel de maestría" };
 type LevelCopy = { where: string; order: string; faqStart: string; descTail: string; shortTail: string };
 /** How each group's classes are described on a level page: a grammar page talks about rules, a vocabulary page about scenes, a function page about acts of speech, a culture page about places. */
 const levelCopy: Record<TemaGroupId, LevelCopy> = {
@@ -281,7 +289,7 @@ function buildLevelPage(tema: TemaPage, level: string): TemaLevelPage | null {
   const items = ids.map((id) => lessonById.get(id)!);
   const freeCount = ids.filter((id) => isFreeLesson(id)).length;
   const copy = levelCopy[tema.group];
-  const lower = tema.name.toLowerCase();
+  const lower = nameInSentence(tema);
   const titles = items.slice(0, 3).map((lesson) => `«${lesson.title.replace(/:.*$/, "")}»`).join(", ");
   const longTitle = `${tema.name} ${level}: clases y actividades ELE para ${levelWords[level]} | SpanishCue`;
   const title = [longTitle, `${tema.name} ${level}: clases y actividades ELE | SpanishCue`, `${tema.name} ${level}: clases ELE | SpanishCue`].find((candidate) => candidate.length <= 78) ?? `${tema.name} ${level} | SpanishCue`;
@@ -290,15 +298,15 @@ function buildLevelPage(tema: TemaPage, level: string): TemaLevelPage | null {
   if (description.length < 110) description = `${description} Una clase gratis por nivel para probar sin registro.`;
   return {
     group: tema.group, parent: tema.parent, slug: tema.slug, level, path: `${tema.path}/${level.toLowerCase()}`, name: tema.name, tema,
-    h1: `${tema.name} en ${level}: ${ids.length} clases para enseñarlo a ${levelWords[level]}`, title, description, order: copy.order,
-    intro: `En ${level}, ${lower} se trabaja en ${ids.length} clases: ${titles}${ids.length > 3 ? " y más" : ""}. ${copy.where} ${lower} para decir lo que quiere decir.`,
+    h1: `${tema.name} en ${level}: ${ids.length} clases ${levelPhrase[level]}`, title, description, order: copy.order,
+    intro: `En ${level}, el tema «${tema.name}» se trabaja en ${ids.length} clases: ${titles}${ids.length > 3 ? " y más" : ""}. ${copy.where} ${lower} para decir lo que quiere decir.`,
     lessonIds: ids, freeCount,
     goals: uniq(items.flatMap((lesson) => lesson.goals.filter((goal) => goal && goal !== lesson.subtitle))).slice(0, 8),
     warmups: uniq(items.map((lesson) => lesson.warmup).filter(Boolean)).slice(0, 4),
     speaking: uniq(items.flatMap((lesson) => lesson.speaking).filter(Boolean)).slice(0, 8),
     faq: [
       { question: `¿Qué parte de ${lower} corresponde a ${level}?`, answer: `La que enseñan estas ${ids.length} clases, alineadas con el MCER y el PCIC para ${level}: ${items.map((lesson) => lesson.title.replace(/:.*$/, "")).join("; ")}.` },
-      { question: `¿Con cuál empiezo?`, answer: `Con la primera de la lista: ${copy.faqStart}. ${freeCount ? `${freeCount === 1 ? "Una es gratis" : `${freeCount} son gratis`} y se abre sin registro.` : "Para probar el formato, abre la clase gratis de este nivel en Material ELE por nivel."}` },
+      { question: `¿Con cuál empiezo?`, answer: `Con la primera de la lista: ${copy.faqStart}. ${freeCount ? `${freeCount === 1 ? "Una es gratis y se abre" : `${freeCount} son gratis y se abren`} sin registro.` : "Para probar el formato, abre la clase gratis de este nivel en Material ELE por nivel."}` },
       { question: `¿Hay ${lower} en otros niveles?`, answer: `Sí: la página de ${lower} reúne todas las clases del tema, de ${tema.levels[0]} a ${tema.levels[tema.levels.length - 1]}, y enlaza cada nivel.` },
     ],
   };

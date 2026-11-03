@@ -22,6 +22,12 @@ export function pageLevel(page: ElePage): string {
   return found ? (found[2] ? `${found[1]}–${found[2]}` : found[1]) : "A1–C2";
 }
 
+/** An activity's own level when its goal names one («Oír y marcar la sílaba tónica (A1).»), otherwise its guide's range. */
+export function activityLevel(page: ElePage, activity: EleActivity): string {
+  const found = activity.goal.match(/\b([ABC][12])(?:\s?[–-]\s?([ABC][12]))?\b/);
+  return found ? (found[2] ? `${found[1]}–${found[2]}` : found[1]) : pageLevel(page);
+}
+
 export type ActividadPage = {
   kind: "actividad"; slug: string; path: string; title: string; description: string; h1: string; level: string;
   activity: EleActivity; parent: ElePage; siblings: { name: string; path: string; minutes: number }[]; faq: { question: string; answer: string }[];
@@ -46,7 +52,7 @@ const describe = (base: string, extra: string) => {
 
 function activityPage(page: ElePage, activity: EleActivity): ActividadPage {
   const slug = slugify(activity.name);
-  const level = pageLevel(page);
+  const level = activityLevel(page, activity);
   const topic = page.label.replace(/^Material ELE /, "");
   const title = fit(`${activity.name}: actividad ELE ${level} de ${topic.toLowerCase()} | SpanishCue`, `${activity.name}: actividad ELE ${level} | SpanishCue`);
   const description = describe(`Actividad de ${activity.minutes} minutos para ${activity.goal.charAt(0).toLowerCase()}${activity.goal.slice(1).replace(/\.$/, "")}.`, `Con pasos, frases modelo, corrección y versión online. Nivel ${level}, ficha en PDF.`);
