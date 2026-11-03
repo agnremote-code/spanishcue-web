@@ -117,14 +117,14 @@ export async function runSmoke(origin, fetcher = fetch, { retryDelayMs = 1500 } 
   }
   assert.match(await (await check("/acceso", 200)).text(), /SPANISHCUE/i);
   const founder = await (await check("/api/billing/founder-status", 200)).json();
-  assert.equal(founder.priceUsd, 15.5);
-  assert.equal(founder.trialPriceUsd, 2);
+  assert.equal(founder.priceUsd, 19.9);
+  assert.equal(founder.annualPriceUsd, 199);
+  assert.equal(founder.trialCheckoutAvailable, false, "the retired US$2 trial must never be offered");
   // Only spanishcue.com runs Live billing; staging and inert workers.dev
   // deploys use PayPal Sandbox and have no Paddle.
   if (origin === "https://spanishcue.com") {
     assert.equal(founder.mode, "live", "billing must run in Live mode");
     assert.equal(founder.paddleCheckoutAvailable, true, "Paddle monthly checkout must be available");
-    assert.equal(founder.trialCheckoutAvailable, true, "Paddle US$2 trial checkout must be available");
     // A ready Live Paddle webhook rejects a forged signature (503 = not configured).
     await check("/api/billing/paddle/webhook", 401, { method: "POST", headers: { "content-type": "application/json", "paddle-signature": "ts=1;h1=release-smoke" }, body: "{}" });
     // Report only, never fail: whether Paddle's notification destination points

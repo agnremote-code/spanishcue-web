@@ -266,7 +266,7 @@ export const lesson: LiveLesson = {
       steps: [
         { title: '«Cuando el inglés no elige» · “When English doesn’t choose”', blocks: [
           { kind: 'guide', text: { teacher: 'Primera escucha: la idea general. Segunda escucha: tu alumno anota los ejemplos de Irene y qué decide en cada uno. Después, las preguntas.', self: 'Escucha una vez para la idea general. En la segunda escucha, anota cada ejemplo y qué modo elige Irene y por qué. (Note each example, the mood and the reason.)' } },
-          { kind: 'listen', title: 'Cuando el inglés no elige', channel: 'TALLER · SUBTITULAR CON MATICES · BOGOTÁ', src: '/audio/grammar-live/507.mp3',
+          { kind: 'listen', title: 'Cuando el inglés no elige', channel: 'TALLER · SUBTITULAR CON MATICES · BOGOTÁ', src: '/audio/grammar-free/507.mp3',
             before: 'Irene Cárdenas da una charla a traductores jóvenes sobre el modo en los subtítulos. ¿Qué consejos crees que va a dar? (Irene gives a talk to young translators about mood in subtitles. What advice do you think she will give?)',
             gist: { prompt: '¿Cuál es la idea principal? · What is the main idea?', options: ['Que el traductor debe decidir el modo según el contexto, porque el inglés no lo marca.', 'Que hay que traducir siempre de forma literal.', 'Que el subjuntivo es más elegante que el indicativo en los subtítulos.'], answer: 0, why: 'Irene insiste en que la imagen, el tono y la escena deciden, «no el diccionario».', en: 'What is the main idea?' },
             details: [

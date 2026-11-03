@@ -271,7 +271,7 @@ export const lesson: LiveLesson = {
       steps: [
         { title: 'Paula deja un audio · Paula sends a voice note', blocks: [
           { kind: 'guide', text: { teacher: 'Primera escucha: solo la idea general. Segunda escucha: tu alumno anota cada pronombre citado y dice qué decide Paula con él. Después, las preguntas.', self: 'Escucha una vez para la idea general y otra para los detalles: anota cada pronombre que cita Paula y qué decide. (Note each pronoun Paula quotes and her decision.)' } },
-          { kind: 'listen', title: 'Un audio de Paula', channel: 'NOTA DE VOZ · DE PAULA PARA CARMEN', src: '/audio/grammar-live/481.mp3',
+          { kind: 'listen', title: 'Un audio de Paula', channel: 'NOTA DE VOZ · DE PAULA PARA CARMEN', src: '/audio/grammar-free/481.mp3',
             before: 'Paula ha terminado de revisar el capítulo seis y le deja un audio a Carmen. ¿Qué crees que va a cambiar y qué va a respetar? (What do you think she will change and what will she keep?)',
             gist: { prompt: '¿Para qué deja Paula este audio? · Why does Paula send this voice note?', options: ['Para pedir más tiempo para la edición mexicana.', 'Para explicar sus cambios en el capítulo seis y hacer una consulta.', 'Para quejarse del estilo de Gonzalo.'], answer: 1, why: 'Explica qué cambia, qué respeta y pregunta por un caso para las dos ediciones.', en: 'She explains her changes, what she keeps and asks about one case.' },
             details: [

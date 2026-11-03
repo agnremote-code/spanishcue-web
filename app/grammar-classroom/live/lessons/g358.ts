@@ -296,7 +296,7 @@ export const lesson: LiveLesson = {
       steps: [
         { title: 'Un mensaje para don Ernesto · A message for don Ernesto', blocks: [
           { kind: 'guide', text: { teacher: 'Primera escucha: solo la idea general. Segunda escucha: tu alumno anota los pasos de la receta en orden, con el verbo que oye (lave, corte…). Después, las preguntas.', self: 'Escucha una vez para la idea general. En la segunda escucha, anota los pasos de la receta en orden. (Listen once for the gist, then note the steps in order.)' } },
-          { kind: 'listen', title: 'La receta de Rosa', channel: 'MENSAJE DE VOZ · DE ROSA PARA DON ERNESTO', src: '/audio/grammar-live/358.mp3',
+          { kind: 'listen', title: 'La receta de Rosa', channel: 'MENSAJE DE VOZ · DE ROSA PARA DON ERNESTO', src: '/audio/grammar-free/358.mp3',
             before: 'Don Ernesto quiere hacer la sopa en casa con su nieta. Rosa le manda un mensaje de voz. ¿Qué formas vas a oír: de tú o de usted? ¿Qué pasos crees que da? (Will you hear tú or usted forms? Which steps do you expect?)',
             gist: { prompt: '¿Cuál es la idea general? · What is the main idea?', options: ['Rosa explica la receta de la sopa y le recuerda algo para el sábado.', 'Rosa cancela el taller del sábado.', 'Rosa pide a don Ernesto una receta de pan.'], answer: 0, why: 'Da los pasos de la sopa y dice: «el sábado venga un poco antes».', en: 'What is the main idea?' },
             details: [

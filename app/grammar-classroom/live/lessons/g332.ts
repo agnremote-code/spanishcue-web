@@ -285,7 +285,7 @@ export const lesson: LiveLesson = {
       steps: [
         { title: 'Valeria llama a Carmen · Valeria calls Carmen', blocks: [
           { kind: 'guide', text: { teacher: 'Primera escucha: solo la idea general (¿para qué llama Valeria?). Segunda escucha: tu alumno levanta la mano cada vez que oye gusta, gustan, encanta o encantan. Después, las preguntas.', self: 'Escucha una vez para la idea general y otra vez para los detalles. Cuenta cuántas veces oyes gusta, gustan, encanta o encantan. (Listen once for the gist, once for the details.)' } },
-          { kind: 'listen', title: 'Un mensaje de voz de Valeria', channel: 'MENSAJE DE VOZ · DE LA RECEPCIÓN DEL HOTEL, VIERNES 18:10', src: '/audio/grammar-live/332.mp3',
+          { kind: 'listen', title: 'Un mensaje de voz de Valeria', channel: 'MENSAJE DE VOZ · DE LA RECEPCIÓN DEL HOTEL, VIERNES 18:10', src: '/audio/grammar-free/332.mp3',
             before: 'Carmen y Diego están en la playa. Valeria deja un mensaje de voz para Carmen. ¿Qué crees que dice? (Valeria leaves Carmen a voice message. What do you think she says?)',
             gist: { prompt: '¿Para qué llama Valeria?', options: ['Para dar la reserva en Casa Rosa.', 'Para cancelar la cena.', 'Para recomendar La Huerta.'], answer: 0, why: '«Hay mesa en Casa Rosa a las ocho y media».', en: 'Why does Valeria call?' },
             details: [

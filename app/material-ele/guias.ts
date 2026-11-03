@@ -138,7 +138,7 @@ export const guiaPages: GuiaPage[] = [
             "**Conversar (10 min)**: una tarea donde el alumno necesita el punto de la clase para decir lo que quiere decir. Un roleplay, una decisión, una historia.",
             "**Cerrar (5 min)**: el alumno resume en tres frases qué puede hacer ahora que antes no podía. Esa es tu evaluación.",
           ] },
-          { type: "p", text: "Las clases de gramática de SpanishCue siguen exactamente este orden en siete pasos, en una sola pantalla que avanza contigo. Puedes ver una completa gratis en cada nivel desde [Material ELE por nivel](/material-ele#niveles)." },
+          { type: "p", text: "Las clases de gramática de SpanishCue siguen exactamente este orden en siete pasos, en una sola pantalla que avanza contigo. Puedes ver tres completas gratis en cada nivel desde [Material ELE por nivel](/material-ele#niveles)." },
         ],
       },
       {
@@ -151,7 +151,7 @@ export const guiaPages: GuiaPage[] = [
     ],
     faq: [
       { question: "¿Qué materiales necesito para empezar a enseñar español online?", answer: "Una clase inicial lista, una lista de preguntas de conversación por nivel y un material de gramática secuenciado para A1 y A2. Con eso cubres las primeras semanas con cualquier alumno." },
-      { question: "¿Hay materiales para enseñar español gratis de verdad?", answer: `Sí. En Material ELE todas las fichas, ejercicios y preguntas son gratis sin registro, y hay ${free} clases interactivas gratis, incluida una de gramática por nivel. Los sitios de la lista de arriba también tienen parte gratuita.` },
+      { question: "¿Hay materiales para enseñar español gratis de verdad?", answer: `Sí. En Material ELE todas las fichas, ejercicios y preguntas son gratis sin registro, y hay ${free} clases interactivas gratis, incluidas tres de gramática por nivel. Los sitios de la lista de arriba también tienen parte gratuita.` },
       { question: "¿Cuánto cuesta tener todas las clases?", answer: "En SpanishCue, US$19,90 al mes o US$199 al año, con tarjeta o PayPal, y se cancela cuando quieras. Se prueban primero las clases marcadas GRATIS." },
       { question: "¿Sirven para clases presenciales?", answer: "Sí: cada guía tiene una ficha imprimible, y las clases interactivas se proyectan igual que se comparten por pantalla." },
       { question: "¿Cómo sé el nivel de un material?", answer: "Por el MCER y el PCIC. Cada clase y cada página de SpanishCue indica su nivel y, en los mundos 3D, el nivel se elige dentro." },
@@ -247,7 +247,7 @@ export const guiaPages: GuiaPage[] = [
       { question: "¿Sirve el mismo método para clases presenciales?", answer: "Sí. Los seis pasos son los mismos; cambia solo el soporte: proyectas en vez de compartir pantalla, y las fichas se imprimen desde cada guía." },
       { question: "¿Qué hago si el alumno no sabe su nivel?", answer: "Empieza por la pregunta de entrada de un nivel por debajo del que crees. Si responde con soltura, sube. La respuesta a tres preguntas de conversación te dice más que un test de huecos." },
       { question: "¿Puedo preparar varias clases de golpe?", answer: "Sí, y es lo más eficiente: elige el objetivo de las próximas cuatro sesiones en la página de nivel de tu alumno y guarda las clases como favoritas. Cada día solo ajustas la pregunta de entrada según lo que pasó en la clase anterior." },
-      { question: "¿Las clases de SpanishCue son gratis?", answer: `Hay ${free} clases gratis, incluida una de gramática en cada nivel, y todas las fichas, ejercicios y preguntas de Material ELE son gratis sin registro. El resto de clases está en la suscripción de US$19,90 al mes.` },
+      { question: "¿Las clases de SpanishCue son gratis?", answer: `Hay ${free} clases gratis, incluidas tres de gramática en cada nivel, y todas las fichas, ejercicios y preguntas de Material ELE son gratis sin registro. El resto de clases está en la suscripción de US$19,90 al mes.` },
     ],
     related: ["primera-clase-de-espanol", "a1", "a2", "b1", "indefinido-e-imperfecto", "subjuntivo"],
   },
@@ -468,6 +468,141 @@ export const guiaPages: GuiaPage[] = [
       { question: "¿Cuánto dura una actividad de conversación?", answer: "Una lista de preguntas, de cinco a diez minutos; un roleplay, de diez a quince; un mundo 3D, la clase entera de 45 minutos, con su escucha incluida." },
     ],
     related: ["preguntas-de-conversacion", "juegos-para-clase-de-espanol", "comprension-auditiva", "b1", "b2", "c1"],
+  },
+  {
+    slug: "ejercicios-ele-con-soluciones",
+    path: `${GUIAS_PATH}/ejercicios-ele-con-soluciones`,
+    title: `Ejercicios ELE con soluciones: ${exercises} ejercicios gratis por nivel y tema`,
+    description:
+      "Ejercicios ELE con soluciones, gratis y sin registro: por nivel y por tema (ser y estar, pasados, subjuntivo, por y para…), con tres formas de corregirlos en clase.",
+    h1: "Ejercicios ELE con soluciones: por nivel, por tema y listos para corregir en clase",
+    kicker: "Guía para profesores de ELE",
+    intro:
+      "Un ejercicio sin solución es trabajo para el profesor; un ejercicio con solución es un material que se corrige solo, en clase o en casa. Esta guía reúne los ejercicios ELE con soluciones que puedes usar hoy, ordenados por nivel y por tema, y explica cómo corregirlos sin que la clase se convierta en una lectura de respuestas: qué hacer antes, qué hacer con el error y cómo pasar del ejercicio a una conversación.",
+    keywords: ["ejercicios ELE con soluciones", "ejercicios de español con soluciones", "ejercicios ELE", "ejercicios de gramática española con respuestas", "ejercicios ser y estar con soluciones", "ejercicios subjuntivo con soluciones"],
+    published: "2026-11-03",
+    lessonIds: [239, 350, 389, 439, 48, 374],
+    sections: [
+      {
+        id: "que-es",
+        title: "Qué tiene que tener un ejercicio ELE con soluciones para servir en clase",
+        blocks: [
+          { type: "p", text: "No todos los ejercicios con respuestas valen lo mismo. Para que uno funcione en una clase real, en persona o por pantalla compartida, tiene que cumplir cuatro condiciones. **Una sola cosa por ejercicio**: ocho frases sobre ser y estar, no ocho frases que mezclan ser, estar, pasados y pronombres. **Frases con contexto**: «Mi profesora ___ argentina» se entiende sola; «___ alto» no. **Una solución visible a voluntad**: el alumno decide cuándo mirarla, el profesor decide si la proyecta. **Una consigna de una línea**: si la instrucción necesita un párrafo, el ejercicio está mal diseñado." },
+          { type: "p", text: `Los ${exercises} ejercicios del [banco de actividades](/material-ele/actividades) de SpanishCue cumplen las cuatro: entre seis y diez frases cada uno, una consigna, y cada frase se abre para ver la solución. Son gratis y no piden registro. Abajo están ordenados por nivel y por tema, con lo que practica cada uno.` },
+        ],
+      },
+      {
+        id: "por-nivel",
+        title: "Ejercicios con soluciones por nivel",
+        blocks: [
+          { type: "p", text: "Un ejercicio por nivel, pensado como prueba rápida de lo que el alumno debería dominar al terminar ese nivel. Sirven para la primera clase con un alumno nuevo (diez minutos y sabes dónde está) y para repasar antes de un examen." },
+          { type: "ul", items: [
+            "[Ejercicio A1: ser, estar o hay](/material-ele/ejercicio/a1). La confusión más frecuente del primer año, en frases de la vida diaria.",
+            "[Ejercicio A2: indefinido o imperfecto](/material-ele/ejercicio/a2). Elegir el pasado correcto en un relato corto.",
+            "[Ejercicio B1: infinitivo, indicativo o subjuntivo](/material-ele/ejercicio/b1). La decisión que separa un B1 de un A2.",
+            "[Ejercicio B2: oraciones condicionales](/material-ele/ejercicio/b2). Reales, posibles e imposibles, con la concordancia de tiempos.",
+          ] },
+          { type: "p", text: "Para C1 y C2 no hay un ejercicio de huecos porque a ese nivel el error ya no es de forma sino de registro y de matiz; lo que corresponde ahí son las [preguntas de conversación C1](/material-ele/preguntas/c1) y [C2](/material-ele/preguntas/c2), que obligan a elegir cómo decir las cosas, no solo qué forma usar." },
+        ],
+      },
+      {
+        id: "por-tema",
+        title: "Ejercicios con soluciones por tema",
+        blocks: [
+          { type: "p", text: "Cada tema de gramática de Material ELE tiene su ejercicio con soluciones, enlazado desde la guía del tema. Aquí están agrupados por el tipo de dificultad que trabajan." },
+        ],
+        subsections: [
+          {
+            title: "Las parejas que siempre se confunden",
+            blocks: [
+              { type: "ul", items: [
+                "[Ser, estar o hay](/material-ele/ejercicio/ser-y-estar) (A1–B1), con la [guía de ser y estar](/material-ele/ser-y-estar) para explicar antes de practicar.",
+                "[Indefinido o imperfecto](/material-ele/ejercicio/indefinido-e-imperfecto) (A2–B1): conjugar el verbo en el pasado que pide el relato. La [guía de los pasados](/material-ele/indefinido-e-imperfecto) tiene la explicación con ejemplos.",
+                "[Por o para](/material-ele/ejercicio/por-y-para) (A2–B1), diez frases con las preposiciones que más errores producen; guía en [por y para](/material-ele/por-y-para).",
+                "[Indicativo o subjuntivo](/material-ele/ejercicio/subjuntivo) (B1–C1): elegir el modo en frases con «creo que», «no creo que», «cuando», «aunque». Explicación en la [guía del subjuntivo](/material-ele/subjuntivo).",
+              ] },
+            ],
+          },
+          {
+            title: "Verbos y tiempos",
+            blocks: [
+              { type: "ul", items: [
+                "[Pretérito perfecto](/material-ele/ejercicio/preterito-perfecto) (A1–A2): el primer pasado que aprende un alumno, con «hoy», «esta semana», «ya» y «todavía no».",
+                "[Futuro: ir a, presente o futuro simple](/material-ele/ejercicio/futuro) (A2–B1): la forma más natural para cada plan, no la más gramatical.",
+                "[Condicional y oraciones con si](/material-ele/ejercicio/condicional) (B1–B2): condicional simple, compuesto o imperfecto de subjuntivo.",
+                "[Imperativo afirmativo y negativo](/material-ele/ejercicio/imperativo) (A2–B1), con la persona indicada en cada frase.",
+                "[Verbos reflexivos](/material-ele/ejercicio/verbos-reflexivos) (A1–A2): el pronombre y la forma en presente.",
+                "[Perífrasis verbales](/material-ele/ejercicio/perifrasis-verbales) (B1–B2): «acabar de», «seguir + gerundio», «volver a», «dejar de».",
+                "[Verbos de cambio](/material-ele/ejercicio/verbos-de-cambio) (B1–B2): ponerse, volverse, hacerse, quedarse, convertirse en, llegar a ser.",
+                "[Gustar, encantar, interesar, doler](/material-ele/ejercicio/gustar) (A1–A2): pronombre más verbo concordado con lo que gusta.",
+              ] },
+            ],
+          },
+          {
+            title: "Pronombres, conectores y textos",
+            blocks: [
+              { type: "ul", items: [
+                "[Lo, la, le, se lo](/material-ele/ejercicio/pronombres-de-objeto) (A1–B1): completar respuestas con el pronombre o los pronombres correctos.",
+                "[Conectores](/material-ele/ejercicio/conectores) (A2–C1): porque, como, por eso, sin embargo, además, en el lugar que pide cada frase.",
+                "[Estilo indirecto](/material-ele/ejercicio/estilo-indirecto) (B1–B2): transmitir un mensaje con el verbo introductor en pasado.",
+                "[Acentuación](/material-ele/ejercicio/acentuacion) (A1–B2): escribir la palabra con tilde si la necesita.",
+                "[Vocabulario por temas](/material-ele/ejercicio/vocabulario-por-temas) (A1–B1): la palabra del tema que falta en cada frase.",
+                "[Comprensión auditiva](/material-ele/ejercicio/comprension-auditiva) (A1–C2): un mensaje de voz que lees dos veces y seis preguntas con solución; el único ejercicio de la lista que se corrige escuchando.",
+              ] },
+            ],
+          },
+        ],
+      },
+      {
+        id: "como-corregir",
+        title: "Tres formas de corregir un ejercicio con soluciones en clase",
+        blocks: [
+          { type: "p", text: "La solución visible cambia quién corrige. Hay tres maneras de aprovecharlo, y conviene alternarlas." },
+          { type: "ol", items: [
+            "**Corrección a ciegas.** El alumno completa las ocho frases sin abrir nada. Después abre las soluciones una por una y marca sus errores. Tú solo intervienes en los que marcó: ahí está la explicación que necesita, no en las frases que acertó.",
+            "**Corrección en voz alta.** Proyectas el ejercicio en pantalla compartida, el alumno lee cada frase completa y justifica la forma en una palabra («es porque es nacionalidad»). Abres la solución después de la justificación, nunca antes. Sirve para B1 en adelante, donde explicar la regla es parte de la práctica.",
+            "**Corrección invertida.** Abres primero todas las soluciones y el alumno tiene que explicar por qué cada una es correcta, o inventar una frase nueva con la misma forma. Es la versión para repasar un tema que ya conoce: no busca el acierto sino la regla.",
+          ] },
+          { type: "p", text: "En las tres, el error es el material. Un ejercicio de ocho frases en el que el alumno falla dos te da los dos puntos exactos para la siguiente explicación; uno en el que acierta todo te dice que el tema está cerrado y puedes pasar a la producción." },
+        ],
+      },
+      {
+        id: "de-ejercicio-a-clase",
+        title: "Del ejercicio a la clase completa",
+        blocks: [
+          { type: "p", text: "Un ejercicio dura diez minutos; una clase, cuarenta y cinco. El error habitual es encadenar cuatro ejercicios y llamarlo clase. Lo que funciona es la secuencia **entender, practicar, usar**: una explicación corta con ejemplos, el ejercicio con soluciones y una tarea de producción en la que el alumno use la forma para decir algo suyo." },
+          { type: "p", text: "Las clases de gramática de SpanishCue ya vienen con esa secuencia montada en siete pasos (entender, explorar, practicar, escuchar, conversar, escribir, cerrar), con el modo profesor que oculta las respuestas en la pantalla del alumno. La [clase inicial](/gramatica/clase-inicial) es gratis y muestra el formato; las de [A1](/material-ele/a1), [A2](/material-ele/a2), [B1](/material-ele/b1) y [B2](/material-ele/b2) tienen tres clases gratis por nivel para probar antes de pagar." },
+          { type: "p", text: "Si prefieres montar la clase tú, la guía [cómo preparar una clase de español en 10 minutos](/material-ele/guia/preparar-una-clase-de-espanol-rapido) explica cómo elegir el ejercicio, la explicación y la producción para cada nivel, y [fichas ELE para imprimir y proyectar](/material-ele/guia/fichas-ele-para-imprimir-y-proyectar) cubre la versión en papel." },
+        ],
+      },
+      {
+        id: "errores",
+        title: "Cinco errores al usar ejercicios con soluciones",
+        blocks: [
+          { type: "ul", items: [
+            "**Darlos como deberes sin volver sobre ellos.** Si el alumno corrige solo en casa y nadie mira qué falló, el ejercicio no enseñó nada. Pide que te mande las dos frases que falló, no las ocho.",
+            "**Mezclar temas para «hacerlo más difícil».** Un ejercicio difícil no es uno que mezcla; es uno con frases más largas o más ambiguas sobre el mismo punto.",
+            "**Corregir el acierto.** Explicar por qué una frase correcta es correcta aburre al que ya lo sabía. Explica solo el error.",
+            "**Usar el ejercicio como examen.** Con la solución a un clic, no mide nada. Mide la corrección en voz alta, donde el alumno justifica.",
+            "**Saltar la producción.** Ocho huecos bien rellenados no demuestran que el alumno pueda usar la forma hablando. Cierra siempre con dos minutos de conversación sobre el tema; las [preguntas de conversación por nivel](/material-ele/preguntas-de-conversacion) sirven para eso.",
+          ] },
+        ],
+      },
+      {
+        id: "imprimir",
+        title: "Imprimir, proyectar o compartir",
+        blocks: [
+          { type: "p", text: "Cada ejercicio tiene su propia página, con el botón «Descargar ficha en PDF» para imprimirlo o mandarlo por el chat de la clase. Proyectado en pantalla compartida, las soluciones se abren frase por frase, así que no hace falta una versión «para el profesor» y otra «para el alumno»: es la misma página. El [índice completo de Material ELE](/material-ele/indice) lista los ejercicios junto con las fichas y las preguntas, y el [banco de actividades](/material-ele/actividades) los agrupa por nivel." },
+        ],
+      },
+    ],
+    faq: [
+      { question: "¿Los ejercicios ELE con soluciones son gratis?", answer: `Sí. Los ${exercises} ejercicios del banco de actividades se abren sin registro, se pueden imprimir en PDF y cada frase muestra su solución. Las clases completas de gramática a las que enlazan son de pago, salvo una gratis por nivel y la clase inicial.` },
+      { question: "¿Para qué niveles hay ejercicios?", answer: "De A1 a B2 por nivel y de A1 a C1 por tema (conectores, subjuntivo). Para C1 y C2 el material recomendado son las preguntas de conversación y las clases de esos niveles, porque el error ya no es de forma." },
+      { question: "¿Cómo se ven las soluciones?", answer: "Cada frase del ejercicio se abre al tocarla o al hacer clic y muestra la respuesta. El alumno puede corregirse solo y el profesor puede abrirlas una por una en pantalla compartida." },
+      { question: "¿Puedo usar los ejercicios en una clase online?", answer: "Sí. Están pensados para pantalla compartida: una página, una consigna de una línea y soluciones que se abren a voluntad. También se pueden mandar como PDF por el chat de la clase." },
+    ],
+    related: ["ser-y-estar", "indefinido-e-imperfecto", "subjuntivo", "por-y-para", "a1", "b1"],
   },
 ];
 
