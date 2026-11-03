@@ -47,3 +47,10 @@ test('unknown topic group and topic are 404s',async()=>{
  assert.equal((await fetch(origin+'/material-ele/gramatica/presente-de-indicativo/z9')).status,404);
  assert.equal((await fetch(origin+'/material-ele/vocabulario/familia/c9')).status,404);
 });
+
+// Board review 2026-11-03 (B1): a level page that lost its classes answers 308 to its topic page in the built Worker.
+test('a retired level page 308-redirects to its topic page',async()=>{
+ const response=await fetch(origin+'/material-ele/gramatica/oraciones-finales/a1',{redirect:'manual'});
+ assert.equal(response.status,308);
+ assert.equal(new URL(response.headers.get('location'),origin).pathname,'/material-ele/gramatica/oraciones-finales');
+});
