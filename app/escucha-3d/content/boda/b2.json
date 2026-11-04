@@ -1,0 +1,2003 @@
+{
+  "game": "boda",
+  "level": "B2",
+  "items": [
+    {
+      "id": "porton",
+      "title": "Mensaje para el video: el portero",
+      "place": "El portón de la estancia",
+      "context": "Para el video de los novios, Anselmo y Wilmer graban un saludo desde el portón, ya de noche.",
+      "speakers": [
+        {
+          "name": "Anselmo",
+          "country": "Paraguay",
+          "voice": "es-PY-MarioNeural"
+        },
+        {
+          "name": "Wilmer",
+          "country": "Honduras",
+          "voice": "es-HN-CarlosNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Queridos novios, les habla Anselmo, el portero. Si me hubieran dicho esta mañana todo lo que iba a pasar en este portón, no me lo habría creído."
+        },
+        {
+          "s": 1,
+          "text": "Primero llegó el auto del padrino, solo, con el motor encendido. Parecía una película de misterio."
+        },
+        {
+          "s": 0,
+          "text": "Después apareció un invitado que no estaba en la lista. Yo casi no lo dejo pasar, y resulta que fue el que más ayudó en toda la noche."
+        },
+        {
+          "s": 1,
+          "text": "Y a las nueve llegó la tía Carmen caminando por la ruta con una lámpara de bronce en los brazos. Si no la hubiéramos visto, la habría atropellado un camión."
+        },
+        {
+          "s": 0,
+          "text": "Lo que quiero decirles es esto: en cuarenta años de portero, vi muchas bodas perfectas que no duraron. Ojalá la de ustedes sea imperfecta y eterna."
+        },
+        {
+          "s": 1,
+          "text": "Y si algún día quieren escaparse, ya saben: el portón queda abierto hasta las seis."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cómo describe Wilmer la llegada del auto del padrino?",
+          "options": [
+            "Como un accidente",
+            "Como una película de misterio",
+            "Como una broma"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué dice Anselmo del invitado que no estaba en la lista?",
+          "options": [
+            "Que causó problemas con los autos de los invitados",
+            "Que se fue temprano",
+            "Que fue el que más ayudó"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué traía la tía Carmen?",
+          "options": [
+            "Una lámpara de bronce",
+            "Una torta",
+            "Un perro"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué les desea Anselmo a los novios?",
+          "options": [
+            "Una boda perfecta",
+            "Mucho dinero",
+            "Una boda imperfecta y eterna"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué le dirías en un video a una pareja que se casa?",
+          "model": "Les diría que no intenten ser perfectos, sino sinceros el uno con el otro."
+        },
+        {
+          "q": "Si hubieras sido el portero, ¿habrías dejado pasar al invitado sin nombre?",
+          "model": "Probablemente sí, si me hubiera explicado bien la situación."
+        },
+        {
+          "q": "¿Has juzgado mal a alguien al principio y después cambiaste de opinión?",
+          "model": "Sí, a un compañero que parecía antipático y resultó ser muy generoso."
+        }
+      ],
+      "gaps": "Si me [hubieran] dicho esta mañana todo lo que iba a pasar en este [portón], no me lo [habría] [creído].",
+      "glossary": [
+        {
+          "word": "atropellado",
+          "meaning": "golpeado por un vehículo"
+        },
+        {
+          "word": "eterna",
+          "meaning": "que dura para siempre"
+        },
+        {
+          "word": "bronce",
+          "meaning": "metal de color dorado oscuro"
+        }
+      ]
+    },
+    {
+      "id": "capilla",
+      "title": "Entrevista al padre Benito",
+      "place": "La capilla blanca",
+      "context": "Joaquín entrevista al padre Benito para el video de la boda.",
+      "speakers": [
+        {
+          "name": "Benito",
+          "country": "España",
+          "voice": "es-ES-AlvaroNeural"
+        },
+        {
+          "name": "Joaquín",
+          "country": "México",
+          "voice": "es-MX-JorgeNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Padre, gracias por aceptar esta entrevista. Para el video: ¿qué pensó cuando abrió la cajita y no había anillos?"
+        },
+        {
+          "s": 0,
+          "text": "Pensé: «Dios mío, otra vez no». Porque en 1987 me pasó lo mismo, y el novio se desmayó encima del altar. Así que lo primero que hice fue mirarte las rodillas."
+        },
+        {
+          "s": 1,
+          "text": "¿Y por qué tenía gomitas en la sacristía?"
+        },
+        {
+          "s": 0,
+          "text": "Para los niños del catecismo. Aunque, si te soy sincero, la mitad me las como yo cuando preparo los sermones."
+        },
+        {
+          "s": 1,
+          "text": "¿Le parece que la ceremonia fue válida, con anillos de caramelo?"
+        },
+        {
+          "s": 0,
+          "text": "Hijo, si el amor dependiera del oro, la mitad de los matrimonios de esta provincia serían inválidos. Lo que importa es lo que dijiste, no lo que te pusiste en el dedo. Y lo que dijiste, aunque lo leíste de una servilleta, fue de lo más bonito que escuché en años."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué pasó en 1987?",
+          "options": [
+            "Un novio se desmayó en el altar",
+            "Se perdieron los anillos para siempre",
+            "Se quemó la capilla"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué fue lo primero que hizo el cura?",
+          "options": [
+            "Llamar a la policía del pueblo para pedir ayuda",
+            "Mirar las rodillas de Joaquín",
+            "Rezar"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Quién se come la mitad de las gomitas?",
+          "options": [
+            "El cura",
+            "Los niños",
+            "Joaquín"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué importa según el cura?",
+          "options": [
+            "El oro de los anillos",
+            "El vestido de la novia",
+            "Lo que dijo Joaquín"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué importa más en una ceremonia: la forma o el contenido?",
+          "model": "El contenido, aunque una forma bonita ayuda a recordarlo."
+        },
+        {
+          "q": "¿Tienes algún hábito secreto en tu trabajo?",
+          "model": "Escucho música de los ochenta cuando tengo que concentrarme."
+        },
+        {
+          "q": "Si se te perdiera algo importante en público, ¿cómo reaccionarías?",
+          "model": "Intentaría mantener la calma y buscar una solución creativa."
+        }
+      ],
+      "gaps": "Hijo, si el [amor] [dependiera] del oro, la mitad de los [matrimonios] de esta provincia [serían] inválidos.",
+      "glossary": [
+        {
+          "word": "sacristía",
+          "meaning": "cuarto de la iglesia donde se guardan cosas del cura"
+        },
+        {
+          "word": "sermones",
+          "meaning": "discursos del cura en la misa"
+        },
+        {
+          "word": "válida",
+          "meaning": "que cuenta, que es legal"
+        }
+      ]
+    },
+    {
+      "id": "ninos",
+      "title": "La teoría de Tadeo",
+      "place": "El cantero de flores",
+      "context": "Marisol graba a Tadeo para el video. Tadeo explica su plan con los anillos.",
+      "speakers": [
+        {
+          "name": "Marisol",
+          "country": "República Dominicana",
+          "voice": "es-DO-RamonaNeural"
+        },
+        {
+          "name": "Tadeo",
+          "country": "República Dominicana",
+          "voice": "es-DO-EmilioNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "A ver, Tadeo, explícale a la cámara por qué plantaste los anillos."
+        },
+        {
+          "s": 1,
+          "text": "Porque en el colegio plantamos porotos en un frasco con algodón y crecieron un montón. La señorita dijo que todo lo que se cuida con amor crece."
+        },
+        {
+          "s": 0,
+          "text": "¿Y pensaste que de los anillos iba a salir un árbol?"
+        },
+        {
+          "s": 1,
+          "text": "Claro. Un árbol de anillos. Así, si un día se pierden, la tía Vale y el tío Joaquín pueden sacar otros del árbol."
+        },
+        {
+          "s": 0,
+          "text": "¿Y si te hubieran descubierto antes de la ceremonia?"
+        },
+        {
+          "s": 1,
+          "text": "Me habrían castigado, como ahora. Pero valió la pena, porque todos se rieron con las gomitas."
+        },
+        {
+          "s": 0,
+          "text": "Lo que no cuenta Tadeo es que uno de los anillos terminó en el agua de los caballos. Si Ceferino no lo hubiera encontrado, yo estaría pagándolo hasta que Tadeo fuera abuelo."
+        },
+        {
+          "s": 1,
+          "text": "Pero lo encontró. Porque lo planté con amor. Y el año que viene voy a plantar mi diente."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué plantaron en el colegio?",
+          "options": [
+            "Flores secas en un libro de la abuela",
+            "Porotos en un frasco",
+            "Árboles en el patio"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Para qué quería Tadeo un árbol de anillos?",
+          "options": [
+            "Para venderlos",
+            "Para sacar otros si se pierden",
+            "Para regalarlos a sus amigos del barrio"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Por qué cree Tadeo que valió la pena?",
+          "options": [
+            "Porque no lo castigaron",
+            "Porque ganó un premio",
+            "Porque todos se rieron con las gomitas"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Dónde terminó uno de los anillos?",
+          "options": [
+            "En el agua de los caballos",
+            "En la torta",
+            "En la laguna"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué idea tenías de niño que ahora te parece graciosa?",
+          "model": "Creía que si me tragaba una semilla, me iba a crecer un árbol en el estómago."
+        },
+        {
+          "q": "¿Qué te habría pasado si tus padres hubieran descubierto alguna travesura tuya?",
+          "model": "Me habrían dejado sin televisión durante una semana."
+        },
+        {
+          "q": "¿Crees que lo que se cuida con amor siempre crece?",
+          "model": "No siempre, pero creo que tiene más posibilidades."
+        }
+      ],
+      "gaps": "Si Ceferino no lo [hubiera] [encontrado], yo [estaría] [pagándolo] hasta que Tadeo fuera abuelo.",
+      "glossary": [
+        {
+          "word": "algodón",
+          "meaning": "material blanco y suave"
+        },
+        {
+          "word": "castigado",
+          "meaning": "con una pena por portarse mal"
+        },
+        {
+          "word": "un montón",
+          "meaning": "mucho"
+        }
+      ]
+    },
+    {
+      "id": "novia",
+      "title": "La novia habla del vestido",
+      "place": "El cuarto de la novia",
+      "context": "Camila entrevista a Valentina sobre el cambio de vestido.",
+      "speakers": [
+        {
+          "name": "Valentina",
+          "country": "Argentina",
+          "voice": "es-AR-ElenaNeural"
+        },
+        {
+          "name": "Camila",
+          "country": "Nicaragua",
+          "voice": "es-NI-YolandaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Vale, cuéntale al video qué pasó con el cierre."
+        },
+        {
+          "s": 0,
+          "text": "Se rompió diez minutos antes de la ceremonia, cuando me agaché a buscar un arete. Si no hubiera estado sola con Camila, creo que me habría desmayado."
+        },
+        {
+          "s": 1,
+          "text": "Y entonces entró un desconocido buscando el baño."
+        },
+        {
+          "s": 0,
+          "text": "Sí. Y en lugar de irse, preguntó si mi abuela había guardado su vestido. Yo nunca me había atrevido a probármelo. Siempre pensé que era demasiado importante, como si fuera de un museo."
+        },
+        {
+          "s": 1,
+          "text": "Y te quedaba perfecto."
+        },
+        {
+          "s": 0,
+          "text": "Perfecto. Lo raro es que, cuando me lo puse, me quedé más tranquila. Como si mi abuela me estuviera abrazando. Si tuviera que elegir otra vez, elegiría este vestido sin dudar, aunque el otro me costó tres sueldos."
+        },
+        {
+          "s": 1,
+          "text": "¿Y qué vas a hacer con el otro?"
+        },
+        {
+          "s": 0,
+          "text": "Lo voy a guardar para mi hija. Con el cierre arreglado, eso sí."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cuándo se rompió el cierre?",
+          "options": [
+            "Diez minutos antes de la ceremonia",
+            "Durante el baile",
+            "La noche anterior"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué pensaba Valentina del vestido de la abuela?",
+          "options": [
+            "Que era feo",
+            "Que era pequeño",
+            "Que era demasiado importante, como de museo"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cómo se sintió al ponérselo?",
+          "options": [
+            "Más nerviosa que en toda la semana",
+            "Más tranquila",
+            "Incómoda"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué va a hacer con el otro vestido?",
+          "options": [
+            "Venderlo en una tienda de segunda mano",
+            "Guardarlo para su hija",
+            "Regalárselo a Camila"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Hay algún objeto de tu familia que te daría miedo usar?",
+          "model": "El reloj de mi abuelo; tengo miedo de romperlo."
+        },
+        {
+          "q": "Si tuvieras que casarte mañana, ¿qué llevarías puesto?",
+          "model": "Llevaría algo cómodo y sencillo, quizás un traje de lino."
+        },
+        {
+          "q": "¿Qué objeto te hace sentir acompañado?",
+          "model": "Un collar que me regaló mi madre cuando me fui a estudiar."
+        }
+      ],
+      "gaps": "Si [tuviera] que [elegir] otra vez, [elegiría] este vestido sin [dudar], aunque el otro me costó tres sueldos.",
+      "glossary": [
+        {
+          "word": "arete",
+          "meaning": "joya para la oreja"
+        },
+        {
+          "word": "atrevido",
+          "meaning": "con valor para hacer algo"
+        },
+        {
+          "word": "sueldos",
+          "meaning": "dinero que se gana trabajando"
+        }
+      ]
+    },
+    {
+      "id": "abuela",
+      "title": "La fuga contada por su protagonista",
+      "place": "La galería de la casa",
+      "context": "Doña Chela cuenta para el video la historia de su fuga a caballo en 1962.",
+      "speakers": [
+        {
+          "name": "Chela",
+          "country": "Uruguay",
+          "voice": "es-UY-ValentinaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Mi padre odiaba a Aurelio porque era peón y no tenía tierras. Decía que si me casaba con él, iba a terminar comiendo pasto."
+        },
+        {
+          "s": 0,
+          "text": "Una noche de septiembre, sin luna, Aurelio llegó con un caballo blanco robado de esta misma estancia. Yo bajé por la ventana con un vestido de novia que me había hecho mi tía en secreto."
+        },
+        {
+          "s": 0,
+          "text": "Cabalgamos toda la noche hasta el pueblo. Mi padre nos persiguió con la escopeta hasta el puente, pero el caballo era más rápido que su furia."
+        },
+        {
+          "s": 0,
+          "text": "Si mi padre nos hubiera alcanzado, yo no estaría aquí contándolo, y mi nieta no habría nacido."
+        },
+        {
+          "s": 0,
+          "text": "Seis meses después nos casamos en la capilla, y mi padre fue el primero en llorar. Así son los hombres de esta familia: gritan mucho y lloran más. Por eso le dije a mi nieta que, si el mexicano la hace feliz, no le importe lo que diga nadie. Ni siquiera yo."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Por qué el padre de Chela odiaba a Aurelio?",
+          "options": [
+            "Porque era extranjero",
+            "Porque era viejo",
+            "Porque era peón y no tenía tierras"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Quién le hizo el vestido a Chela?",
+          "options": [
+            "Su tía, en secreto",
+            "Su madre",
+            "Una costurera del pueblo"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Hasta dónde los persiguió su padre?",
+          "options": [
+            "Hasta la capilla",
+            "Hasta la ciudad",
+            "Hasta el puente"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué hizo su padre en la boda seis meses después?",
+          "options": [
+            "No fue",
+            "Fue el primero en llorar",
+            "Se enojó"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Hay alguna historia de amor prohibido en tu familia?",
+          "model": "Sí, mis bisabuelos eran de religiones distintas y se casaron en secreto."
+        },
+        {
+          "q": "¿Hasta qué punto debe importar la opinión de la familia en una pareja?",
+          "model": "Debe importar un poco, pero la decisión final es de la pareja."
+        },
+        {
+          "q": "Si hubieras vivido en 1962, ¿qué te habría gustado hacer?",
+          "model": "Me habría gustado viajar por Sudamérica en tren."
+        }
+      ],
+      "gaps": "Si mi padre nos [hubiera] [alcanzado], yo no [estaría] aquí [contándolo], y mi nieta no habría nacido.",
+      "glossary": [
+        {
+          "word": "cabalgamos",
+          "meaning": "fuimos a caballo"
+        },
+        {
+          "word": "escopeta",
+          "meaning": "arma de fuego larga"
+        },
+        {
+          "word": "furia",
+          "meaning": "enojo muy fuerte"
+        }
+      ]
+    },
+    {
+      "id": "novio",
+      "title": "Lupita confiesa",
+      "place": "El cuarto del novio",
+      "context": "Ximena graba a Lupita para el video, aunque ella no quiere.",
+      "speakers": [
+        {
+          "name": "Lupita",
+          "country": "México",
+          "voice": "es-MX-DaliaNeural"
+        },
+        {
+          "name": "Ximena",
+          "country": "España",
+          "voice": "es-ES-XimenaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Tía, mira a la cámara y cuenta lo de la plancha."
+        },
+        {
+          "s": 0,
+          "text": "Ay, no, qué vergüenza. Bueno, está bien. Estaba planchando la camisa de mi hijo y vi por la ventana que llegaban los mariachis. Me distraje veinte segundos, y cuando miré, había un agujero negro justo en el corazón."
+        },
+        {
+          "s": 1,
+          "text": "Y casi te desmayas."
+        },
+        {
+          "s": 0,
+          "text": "Casi. Si no hubiera estado Ximena riéndose como loca, habría llorado una hora. Pero su risa me contagió. Y después vino ese chico tan amable y me dijo que un mariachi es una declaración de amor de una madre."
+        },
+        {
+          "s": 1,
+          "text": "¿Y es verdad?"
+        },
+        {
+          "s": 0,
+          "text": "Claro que es verdad. Yo crie a Joaquín sola desde que tenía diez años. Trabajé en dos restaurantes al mismo tiempo para que pudiera estudiar ingeniería. Si tuviera que hacerlo otra vez, lo haría. Los mariachis son lo de menos. Pero que sepa que la camisa se la quemé con amor."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Por qué se distrajo Lupita?",
+          "options": [
+            "Porque vio llegar a los mariachis",
+            "Porque sonó el teléfono de su hija en el bolso",
+            "Porque alguien la llamó"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué la ayudó a no llorar?",
+          "options": [
+            "La risa de Ximena",
+            "Un vaso de agua con hielo y limón",
+            "Una llamada"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Desde cuándo crio sola a Joaquín?",
+          "options": [
+            "Desde que nació",
+            "Desde que fue a la universidad",
+            "Desde que él tenía diez años"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Dónde trabajó Lupita para pagarle los estudios?",
+          "options": [
+            "En una oficina del centro de Buenos Aires",
+            "En dos restaurantes",
+            "En un hotel"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué sacrificio hizo alguien de tu familia para que estudiaras?",
+          "model": "Mis padres dejaron de ir de vacaciones durante años para pagar mi universidad."
+        },
+        {
+          "q": "¿La risa de otra persona te ayudó alguna vez en un momento malo?",
+          "model": "Sí, mi hermana siempre me hace reír cuando estoy preocupado."
+        },
+        {
+          "q": "Si tuvieras que hacer un regalo enorme a alguien, ¿qué sería?",
+          "model": "Le regalaría a mi madre un viaje a Italia, su sueño."
+        }
+      ],
+      "gaps": "Si [tuviera] que hacerlo otra vez, lo [haría]. Los [mariachis] son lo de [menos].",
+      "glossary": [
+        {
+          "word": "contagió",
+          "meaning": "pasó a otra persona"
+        },
+        {
+          "word": "crie",
+          "meaning": "eduqué desde pequeño"
+        },
+        {
+          "word": "lo de menos",
+          "meaning": "lo menos importante"
+        }
+      ]
+    },
+    {
+      "id": "cocina",
+      "title": "El chef y la ayudante",
+      "place": "La cocina de la estancia",
+      "context": "Para el video, Ramiro y Yesenia cuentan la historia de la torta equivocada.",
+      "speakers": [
+        {
+          "name": "Ramiro",
+          "country": "Perú",
+          "voice": "es-PE-AlexNeural"
+        },
+        {
+          "name": "Yesenia",
+          "country": "Perú",
+          "voice": "es-PE-CamilaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Cuando vi «Joaquín y Renata» en la torta, pensé que se me caía el techo encima. En veinte años de cocina nunca me había pasado algo así."
+        },
+        {
+          "s": 1,
+          "text": "Yo pensé que el chef me iba a despedir. Si me hubiera despedido, lo habría entendido. El nombre lo puse yo, con mi mano."
+        },
+        {
+          "s": 0,
+          "text": "Pero tú copiaste el pedido exactamente como estaba. El error no fue tuyo. Y además, tienes la mejor letra de esta cocina, aunque nunca te lo había dicho."
+        },
+        {
+          "s": 1,
+          "text": "Eso fue lo que me dijo un invitado. Y me dio tanta confianza que pude hacer los nombres otra vez sin que me temblara la mano."
+        },
+        {
+          "s": 0,
+          "text": "La lección de hoy para mí es que un jefe no tiene que gritar cuando algo sale mal. Tiene que proteger a su equipo. Si yo hubiera gritado, Yesenia no habría podido escribir ni su propio nombre."
+        },
+        {
+          "s": 1,
+          "text": "Y ahora que lo dice delante de la cámara, chef, ¿me va a subir el sueldo?"
+        },
+        {
+          "s": 0,
+          "text": "Eso lo hablamos sin cámara."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cuántos años lleva Ramiro en la cocina?",
+          "options": [
+            "Diez",
+            "Treinta",
+            "Veinte"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué pensó Yesenia que iba a pasar?",
+          "options": [
+            "Que el chef la iba a despedir",
+            "Que la novia se iba a enojar delante de todos los invitados",
+            "Que la torta se iba a caer"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué aprendió Ramiro?",
+          "options": [
+            "Que hay que gritar más",
+            "Que un jefe tiene que proteger a su equipo",
+            "Que hay que revisar los pedidos dos veces antes de cada servicio"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué le pregunta Yesenia al final?",
+          "options": [
+            "Si puede irse a casa antes de la medianoche",
+            "Si le va a subir el sueldo",
+            "Si le gustó la torta"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Cómo debería reaccionar un buen jefe ante un error?",
+          "model": "Debería buscar soluciones primero y hablar del error después, con calma."
+        },
+        {
+          "q": "¿Alguna vez un jefe te protegió de un problema?",
+          "model": "Sí, mi primera jefa asumió la culpa de un error mío delante del cliente."
+        },
+        {
+          "q": "¿Qué habría pasado si tu peor error en el trabajo se hubiera descubierto?",
+          "model": "Probablemente me habrían llamado la atención, pero no me habrían despedido."
+        }
+      ],
+      "gaps": "Si yo [hubiera] [gritado], Yesenia no [habría] podido escribir ni su propio [nombre].",
+      "glossary": [
+        {
+          "word": "despedir",
+          "meaning": "quitar el trabajo a alguien"
+        },
+        {
+          "word": "equipo",
+          "meaning": "grupo de personas que trabajan juntas"
+        },
+        {
+          "word": "sueldo",
+          "meaning": "dinero que se gana al mes"
+        }
+      ]
+    },
+    {
+      "id": "asado",
+      "title": "El asador frente a la cámara",
+      "place": "La parrilla del jardín",
+      "context": "Don Beto graba su mensaje para los novios con la pinza en la mano.",
+      "speakers": [
+        {
+          "name": "Beto",
+          "country": "Chile",
+          "voice": "es-CL-LorenzoNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Hola, chiquillos. Les habla Beto, el asador. No soy de muchas palabras, así que voy a ser breve."
+        },
+        {
+          "s": 0,
+          "text": "Hoy llegaron cuarenta primos sin avisar y por un momento pensé que la carne no alcanzaba. Si no me hubieran aconsejado cortar más fino, habría tenido que salir a cazar vacas al campo."
+        },
+        {
+          "s": 0,
+          "text": "También tuve una discusión con un tío argentino sobre cómo se corta el vacío. Al final hicimos choripanes juntos y ahora me invitó a su casa en Rosario. Si alguien me hubiera dicho esta mañana que iba a terminar abrazado a un argentino, me habría reído en su cara."
+        },
+        {
+          "s": 0,
+          "text": "Lo que les quiero decir es que un matrimonio es como un asado. Si lo apuran, se quema. Si lo descuidan, se enfría. Hay que estar al lado, con paciencia, y con una copa de vino para pensar."
+        },
+        {
+          "s": 0,
+          "text": "Y otra cosa: nunca dejen que un argentino toque su parrilla. Bueno, salvo este."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cómo se presenta Don Beto?",
+          "options": [
+            "Como alguien de pocas palabras",
+            "Como un gran orador que convence a cualquiera",
+            "Como un amigo del novio"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué habría tenido que hacer si no le hubieran aconsejado?",
+          "options": [
+            "Pedir pizza",
+            "Irse a casa",
+            "Salir a cazar vacas al campo"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Dónde lo invitó el tío argentino?",
+          "options": [
+            "A un partido de fútbol",
+            "A su restaurante",
+            "A su casa en Rosario"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Con qué compara Beto el matrimonio?",
+          "options": [
+            "Con un asado",
+            "Con un vino",
+            "Con un partido"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Con qué compararías el matrimonio o una relación larga?",
+          "model": "Con un jardín: si no lo riegas todos los días, se seca."
+        },
+        {
+          "q": "¿Hiciste amistad con alguien con quien empezaste discutiendo?",
+          "model": "Sí, con un compañero de piso; al principio peleábamos por la limpieza."
+        },
+        {
+          "q": "¿Qué consejo darías tú con una metáfora de cocina?",
+          "model": "Que la vida es como una sopa: si tiene demasiada sal, ya no se puede arreglar."
+        }
+      ],
+      "gaps": "Si lo [apuran], se [quema]. Si lo [descuidan], se [enfría].",
+      "glossary": [
+        {
+          "word": "chiquillos",
+          "meaning": "chicos (en Chile)"
+        },
+        {
+          "word": "apuran",
+          "meaning": "hacen ir más rápido"
+        },
+        {
+          "word": "descuidan",
+          "meaning": "no prestan atención"
+        }
+      ]
+    },
+    {
+      "id": "mesa",
+      "title": "Gloria y Pepe, ¿otra vez?",
+      "place": "Las mesas largas",
+      "context": "Gonzalo pidió a Gloria y Pepe un mensaje para el video. No es fácil.",
+      "speakers": [
+        {
+          "name": "Gloria",
+          "country": "Panamá",
+          "voice": "es-PA-MargaritaNeural"
+        },
+        {
+          "name": "Pepe",
+          "country": "Panamá",
+          "voice": "es-PA-RobertoNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "¿Tenemos que hablar los dos juntos? Bueno. Hola, Valentina. Soy tu tía Gloria. Y este es Pepe, que ya sabes quién es."
+        },
+        {
+          "s": 1,
+          "text": "Hola. Queríamos decirles que la boda fue muy bonita, aunque nos sentaron juntos."
+        },
+        {
+          "s": 0,
+          "text": "Sobre todo porque nos sentaron juntos, Pepe. No mientas en el video de tu sobrina."
+        },
+        {
+          "s": 1,
+          "text": "Tienes razón. Si tu hermana no hubiera hecho ese plano, no habríamos hablado nunca más. Doce años perdidos por una herencia y un departamento que ni siquiera vendimos."
+        },
+        {
+          "s": 0,
+          "text": "Bueno, no exageres. Solo hablamos un rato."
+        },
+        {
+          "s": 1,
+          "text": "Y bailamos un bolero. Y fuimos a ver los caballos."
+        },
+        {
+          "s": 0,
+          "text": "Eso último no lo cuentes, por favor. Valentina, lo que quería decirte es esto: elige bien las peleas. Hay peleas que duran doce años y no valen ni un minuto."
+        },
+        {
+          "s": 1,
+          "text": "Muy sabio. ¿Lo dices por nosotros?"
+        },
+        {
+          "s": 0,
+          "text": "Lo digo por quien lo quiera escuchar. Y ahora apaga eso, Gonzalo."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué reconoce Pepe sobre el plano de las mesas?",
+          "options": [
+            "Que fue un error",
+            "Que sin él no habrían hablado nunca más",
+            "Que lo hizo él"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Por qué se pelearon hace doce años?",
+          "options": [
+            "Por otra persona",
+            "Por un viaje",
+            "Por una herencia y un departamento"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué no quiere Gloria que cuente Pepe?",
+          "options": [
+            "Que bailaron",
+            "Que fueron a ver los caballos",
+            "Que hablaron"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué consejo le da Gloria a Valentina?",
+          "options": [
+            "Que elija bien las peleas",
+            "Que no se case todavía, que espere unos años",
+            "Que no hable con su ex"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué pelea larga crees que no valió la pena?",
+          "model": "Una pelea con mi hermano por un videojuego; estuvimos un mes sin hablarnos."
+        },
+        {
+          "q": "¿Crees que dos personas separadas pueden volver a estar juntas?",
+          "model": "Sí, si los dos han cambiado y han aprendido de sus errores."
+        },
+        {
+          "q": "¿Qué consejo le darías a alguien que empieza una relación?",
+          "model": "Que hable de los problemas pronto, antes de que se hagan grandes."
+        }
+      ],
+      "gaps": "Si tu [hermana] no [hubiera] hecho ese [plano], no [habríamos] hablado nunca más.",
+      "glossary": [
+        {
+          "word": "exageres",
+          "meaning": "digas más de lo que es"
+        },
+        {
+          "word": "sabio",
+          "meaning": "que sabe mucho de la vida"
+        },
+        {
+          "word": "herencia",
+          "meaning": "lo que deja una persona al morir"
+        }
+      ]
+    },
+    {
+      "id": "ex",
+      "title": "Renata pide la palabra",
+      "place": "El rosedal",
+      "context": "A las dos de la mañana, Renata le pide a Rocío que la grabe para el video de los novios.",
+      "speakers": [
+        {
+          "name": "Renata",
+          "country": "Venezuela",
+          "voice": "es-VE-PaolaNeural"
+        },
+        {
+          "name": "Rocío",
+          "country": "Ecuador",
+          "voice": "es-EC-AndreaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Rocío, ¿me grabas? Quiero dejar un mensaje para Joaquín y Valentina. Prometo que es breve."
+        },
+        {
+          "s": 1,
+          "text": "Adelante, pero si dices algo horrible, lo borro."
+        },
+        {
+          "s": 0,
+          "text": "Joaquín, Valentina: hoy vine a una boda donde nadie me quería. Lo entiendo. Si yo hubiera estado en su lugar, tampoco me habría querido aquí."
+        },
+        {
+          "s": 0,
+          "text": "Vine porque Facundo me invitó, y porque quería devolverte una caja con cartas de nuestra época. Pensé que, si las tenía en casa, nunca iba a cerrar esa puerta."
+        },
+        {
+          "s": 0,
+          "text": "Esta noche te vi bailar con Valentina, y entendimos todos que esa época terminó de verdad. Me alegra. Durante seis años quise que bailaras así, y ahora lo haces con la persona correcta."
+        },
+        {
+          "s": 0,
+          "text": "Les deseo lo mejor. Y Valentina: el vestido de tu abuela es mucho más bonito que el mío. No se lo digas a nadie."
+        },
+        {
+          "s": 1,
+          "text": "No lo borro. Es lo más bonito que grabé hoy."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué hará Rocío si Renata dice algo horrible?",
+          "options": [
+            "Se lo enviará a todos",
+            "Lo guardará",
+            "Lo borrará"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Por qué quería devolver la caja?",
+          "options": [
+            "Para cerrar esa época",
+            "Para molestar a Joaquín",
+            "Para pedir dinero"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué siente Renata al ver bailar a Joaquín?",
+          "options": [
+            "Rabia contenida",
+            "Alegría",
+            "Celos"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué opina Renata del vestido de la abuela?",
+          "options": [
+            "Que es pasado de moda y nadie lo usaría hoy",
+            "Que es más bonito que el suyo",
+            "Que es demasiado largo"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué objetos guardas de una relación pasada?",
+          "model": "Guardo algunas fotos, pero las cartas las tiré hace años."
+        },
+        {
+          "q": "Si estuvieras en el lugar de los novios, ¿habrías querido a Renata en la boda?",
+          "model": "Probablemente no al principio, pero después de este mensaje sí."
+        },
+        {
+          "q": "¿Cómo se cierra de verdad una etapa de la vida?",
+          "model": "Aceptando lo que pasó y dejando de esperar que algo cambie."
+        }
+      ],
+      "gaps": "Si yo [hubiera] [estado] en su [lugar], tampoco me [habría] querido aquí.",
+      "glossary": [
+        {
+          "word": "breve",
+          "meaning": "corto"
+        },
+        {
+          "word": "época",
+          "meaning": "periodo de tiempo"
+        },
+        {
+          "word": "correcta",
+          "meaning": "adecuada, la que corresponde"
+        }
+      ]
+    },
+    {
+      "id": "planner",
+      "title": "La organizadora sin filtro",
+      "place": "La entrada de la carpa",
+      "context": "A las cuatro de la mañana, Mariela graba para el video algo que no estaba en su plan.",
+      "speakers": [
+        {
+          "name": "Mariela",
+          "country": "Colombia",
+          "voice": "es-CO-SalomeNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Normalmente las organizadoras no salimos en los videos. Somos invisibles, y si todo sale bien, nadie se acuerda de nosotras. Pero hoy voy a hacer una excepción."
+        },
+        {
+          "s": 0,
+          "text": "Esta boda fue la más caótica de mi carrera. Se rompió un vestido, se perdieron los anillos, un caballo se comió el ramo, la torta tenía el nombre de otra mujer y el padrino desapareció."
+        },
+        {
+          "s": 0,
+          "text": "Si me hubieran dado a elegir esta mañana, habría cancelado todo y me habría ido a dormir. Además, hoy firmé mi divorcio en una estación de servicio, así que no era mi mejor día."
+        },
+        {
+          "s": 0,
+          "text": "Pero ustedes estaban felices a pesar de todo, y eso me recordó por qué hago este trabajo. No organizo bodas perfectas. Organizo el caos para que la gente pueda ser feliz en medio de él."
+        },
+        {
+          "s": 0,
+          "text": "Y si algún día deciden renovar los votos, llámenme. Les hago descuento."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Por qué las organizadoras normalmente no salen en los videos?",
+          "options": [
+            "Porque son invisibles",
+            "Porque no quieren hablar con nadie",
+            "Porque cobran más"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué habría hecho Mariela si le hubieran dado a elegir esta mañana?",
+          "options": [
+            "Organizar otra boda en otra estancia",
+            "Llamar a su abogado",
+            "Cancelar todo y dormir"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué le recordó la felicidad de los novios?",
+          "options": [
+            "Por qué hace este trabajo",
+            "Su propia boda, que salió fatal",
+            "Que necesita vacaciones"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué ofrece si renuevan los votos?",
+          "options": [
+            "Un caballo nuevo",
+            "Un fotógrafo gratis",
+            "Un descuento"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué trabajos son importantes aunque nadie los vea?",
+          "model": "Los de limpieza y los de mantenimiento; sin ellos, nada funcionaría."
+        },
+        {
+          "q": "Si tuvieras un día terrible, ¿cancelarías tus compromisos?",
+          "model": "Depende; si son importantes para otros, intentaría cumplirlos igual."
+        },
+        {
+          "q": "¿Por qué haces el trabajo o los estudios que haces?",
+          "model": "Porque me gusta ayudar a la gente a aprender idiomas."
+        }
+      ],
+      "gaps": "Si me [hubieran] dado a [elegir] esta mañana, [habría] [cancelado] todo y me habría ido a dormir.",
+      "glossary": [
+        {
+          "word": "caótica",
+          "meaning": "muy desordenada"
+        },
+        {
+          "word": "excepción",
+          "meaning": "algo que no es normal"
+        },
+        {
+          "word": "descuento",
+          "meaning": "rebaja en el precio"
+        }
+      ]
+    },
+    {
+      "id": "banda",
+      "title": "Dos directores, un micrófono",
+      "place": "El escenario de la carpa",
+      "context": "Willy, Don Chuy y Yamilé graban un saludo para el video después de tocar.",
+      "speakers": [
+        {
+          "name": "Willy",
+          "country": "Cuba",
+          "voice": "es-CU-ManuelNeural"
+        },
+        {
+          "name": "Chuy",
+          "country": "Guatemala",
+          "voice": "es-GT-AndresNeural"
+        },
+        {
+          "name": "Yamilé",
+          "country": "Cuba",
+          "voice": "es-CU-BelkysNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Hola, novios. Aquí la orquesta Son de La Habana y, aunque no lo crean, el mariachi de Don Chuy. Juntos."
+        },
+        {
+          "s": 1,
+          "text": "Si nos hubieran dicho que íbamos a terminar tocando la misma canción, habríamos dicho que estaban locos."
+        },
+        {
+          "s": 2,
+          "text": "Yo sí lo sabía. Los músicos se pelean por el escenario, pero en cuanto suena un bolero, todos tenemos la misma abuela."
+        },
+        {
+          "s": 0,
+          "text": "Lo que pasó fue que un invitado propuso que tocáramos juntos «Bésame mucho». Y funcionó. La pista se llenó como nunca."
+        },
+        {
+          "s": 1,
+          "text": "Ahora vamos a grabar un disco juntos. Se va a llamar «Boda en la pampa». Si se vende bien, les mandamos la mitad de las ganancias."
+        },
+        {
+          "s": 2,
+          "text": "Mentira, no les vamos a mandar nada. Pero les vamos a dedicar la primera canción, que es la que le canté a la abuela Chela."
+        },
+        {
+          "s": 0,
+          "text": "Felicidades, y que nunca les falte música en la casa."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cómo se llama la orquesta de Willy?",
+          "options": [
+            "Boda en la pampa, la banda del pueblo",
+            "Son de La Habana",
+            "Los Charros"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Según Yamilé, ¿qué pasa cuando suena un bolero?",
+          "options": [
+            "Todos los músicos tienen la misma abuela",
+            "Todos se pelean",
+            "La gente se va"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Quién propuso que tocaran juntos?",
+          "options": [
+            "Yamilé",
+            "La novia, que se reía",
+            "Un invitado"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué les van a dedicar a los novios?",
+          "options": [
+            "La mitad de las ganancias de la gira",
+            "La primera canción del disco",
+            "Un concierto privado"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué música une a personas de culturas diferentes?",
+          "model": "Creo que el bolero y el rock clásico; los conoce todo el mundo."
+        },
+        {
+          "q": "Si grabaras un disco, ¿a quién se lo dedicarías?",
+          "model": "A mi abuela, que me enseñó mis primeras canciones."
+        },
+        {
+          "q": "¿Alguna vez trabajaste con alguien que al principio era tu rival?",
+          "model": "Sí, con una compañera de clase; al final hicimos el mejor proyecto del curso."
+        }
+      ],
+      "gaps": "Si nos [hubieran] dicho que íbamos a [terminar] tocando la misma [canción], [habríamos] dicho que estaban locos.",
+      "glossary": [
+        {
+          "word": "ganancias",
+          "meaning": "dinero que se gana con un negocio"
+        },
+        {
+          "word": "dedicar",
+          "meaning": "ofrecer algo a alguien"
+        },
+        {
+          "word": "funcionó",
+          "meaning": "salió bien"
+        }
+      ]
+    },
+    {
+      "id": "pista",
+      "title": "El vals del padre",
+      "place": "La pista de baile",
+      "context": "Don Horacio graba un mensaje para su hija, para que lo vea cuando vuelva de la luna de miel.",
+      "speakers": [
+        {
+          "name": "Horacio",
+          "country": "Uruguay",
+          "voice": "es-UY-MateoNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Valentina, hija, cuando veas este video ya vas a estar casada y bronceada. Quiero decirte algunas cosas que esta noche no pude decir porque tenía un nudo en la garganta."
+        },
+        {
+          "s": 0,
+          "text": "Durante el vals, me dolía la rodilla como si me clavaran un cuchillo. Pero un chico me enseñó a dar pasos cortos, y tú no notaste nada. O sí lo notaste y fuiste amable, como siempre."
+        },
+        {
+          "s": 0,
+          "text": "Si tu mamá estuviera viva, habría bailado mucho mejor que yo. Ella sí sabía bailar. Yo solo sabía mirarla."
+        },
+        {
+          "s": 0,
+          "text": "Hay algo que no te voy a contar nunca, ni en este video. Digamos que esta fiesta me costó un poco más de lo que pensaba. No te preocupes. Valió cada peso."
+        },
+        {
+          "s": 0,
+          "text": "Si tuviera que hacerlo otra vez, lo haría igual, con la rodilla rota y todo. Te quiero, hija. Bueno, ya, que me pongo a llorar."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Por qué no pudo decir estas cosas durante la noche?",
+          "options": [
+            "Porque tenía un nudo en la garganta",
+            "Porque la música estaba alta y nadie lo escuchaba",
+            "Porque estaba cansado"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué le enseñó un chico?",
+          "options": [
+            "A cantar",
+            "A dar pasos cortos",
+            "A dar un discurso delante de toda la familia"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué dice de la madre de Valentina?",
+          "options": [
+            "Que no le gustaba bailar ni la música de esa época",
+            "Que no vino a la boda",
+            "Que bailaba mucho mejor que él"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué no le va a contar nunca?",
+          "options": [
+            "Que le dolía la rodilla desde el vals",
+            "Que lloró",
+            "Cuánto le costó la fiesta"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué le dirías a un padre o madre en un video para el futuro?",
+          "model": "Le diría que gracias por enseñarme a no rendirme."
+        },
+        {
+          "q": "Si tuvieras que gastar todos tus ahorros en un día, ¿en qué lo harías?",
+          "model": "En una fiesta para toda mi familia en un lugar bonito."
+        },
+        {
+          "q": "¿Qué cosas no le contarías nunca a tus hijos o a tus padres?",
+          "model": "Algunas tonterías que hice de adolescente."
+        }
+      ],
+      "gaps": "Si tu [mamá] [estuviera] viva, [habría] [bailado] mucho mejor que yo.",
+      "glossary": [
+        {
+          "word": "bronceada",
+          "meaning": "con la piel morena por el sol"
+        },
+        {
+          "word": "nudo en la garganta",
+          "meaning": "ganas de llorar que no te dejan hablar"
+        },
+        {
+          "word": "valió",
+          "meaning": "tuvo valor"
+        }
+      ]
+    },
+    {
+      "id": "barra",
+      "title": "La barra del amanecer",
+      "place": "La barra",
+      "context": "Ximena y Edgardo graban un brindis para el video cuando la fiesta está terminando.",
+      "speakers": [
+        {
+          "name": "Edgardo",
+          "country": "Puerto Rico",
+          "voice": "es-PR-VictorNeural"
+        },
+        {
+          "name": "Ximena",
+          "country": "España",
+          "voice": "es-ES-XimenaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Hola, primo. Hola, Valentina. Les habla la prima soltera, como me llaman en la familia. Y este es Edgardo, mi terapeuta de esta noche."
+        },
+        {
+          "s": 0,
+          "text": "Barman, por favor. Aunque a veces es lo mismo."
+        },
+        {
+          "s": 1,
+          "text": "Esta noche me hicieron doce veces la misma pregunta: «¿Y tú, cuándo te casas?». Si me hubieran preguntado una vez más, creo que habría tirado una copa."
+        },
+        {
+          "s": 0,
+          "text": "Pero no la tiró. Salió a bailar sola y fue la persona más feliz de la pista."
+        },
+        {
+          "s": 1,
+          "text": "Lo que quiero decirles es esto: yo no sé si me voy a casar algún día. Pero hoy, viéndolos a ustedes, me di cuenta de que el matrimonio no es una meta. Es una decisión que se toma todos los días."
+        },
+        {
+          "s": 0,
+          "text": "Y si un día deciden no tomarla, la barra siempre está abierta."
+        },
+        {
+          "s": 1,
+          "text": "¡Edgardo! Eso no se dice en un video de boda."
+        },
+        {
+          "s": 0,
+          "text": "Perdón. Por los novios. Y por las solteras felices."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cómo llama Ximena a Edgardo?",
+          "options": [
+            "Su novio",
+            "Su terapeuta de esta noche",
+            "Su primo"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué habría hecho Ximena si le hubieran preguntado una vez más?",
+          "options": [
+            "Tirar una copa",
+            "Llorar en silencio en la barra",
+            "Irse a casa"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Según Ximena, ¿qué es el matrimonio?",
+          "options": [
+            "Una meta",
+            "Un contrato",
+            "Una decisión que se toma todos los días"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Por quiénes brinda Edgardo al final?",
+          "options": [
+            "Por la familia",
+            "Por los novios y las solteras felices",
+            "Por los músicos"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué piensas: el matrimonio es una meta o una decisión diaria?",
+          "model": "Una decisión diaria; casarse es fácil, lo difícil es elegir cada día."
+        },
+        {
+          "q": "¿Quién ha sido tu «terapeuta» en un momento difícil?",
+          "model": "Un taxista que me escuchó durante un viaje de una hora."
+        },
+        {
+          "q": "Si alguien te hiciera una pregunta incómoda doce veces, ¿cómo reaccionarías?",
+          "model": "Le respondería con humor y cambiaría de tema."
+        }
+      ],
+      "gaps": "Si me [hubieran] [preguntado] una vez más, creo que [habría] [tirado] una copa.",
+      "glossary": [
+        {
+          "word": "terapeuta",
+          "meaning": "persona que ayuda con problemas emocionales"
+        },
+        {
+          "word": "meta",
+          "meaning": "objetivo final"
+        },
+        {
+          "word": "soltera",
+          "meaning": "mujer que no está casada"
+        }
+      ]
+    },
+    {
+      "id": "establo",
+      "title": "Ceferino y la salida de los novios",
+      "place": "El establo",
+      "context": "Ceferino graba un mensaje para los novios después de la salida a caballo.",
+      "speakers": [
+        {
+          "name": "Ceferino",
+          "country": "Bolivia",
+          "voice": "es-BO-MarceloNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Señores novios, buenas noches, les habla Ceferino. No soy bueno con las cámaras, pero quería contarles algo que no vieron porque estaban arriba del caballo."
+        },
+        {
+          "s": 0,
+          "text": "Cuando explotaron los fuegos artificiales, Lucero levantó las orejas y se le tensó todo el cuerpo. Si se hubiera asustado, los habría tirado al suelo, con vestido y todo."
+        },
+        {
+          "s": 0,
+          "text": "Pero yo le estaba hablando bajito, en quechua, como me hablaba mi abuela cuando yo era chico y tenía miedo a las tormentas. Y la veterinaria estaba al otro lado, aunque ella temblaba más que el caballo."
+        },
+        {
+          "s": 0,
+          "text": "Lucero respiró, bajó la cabeza y caminó despacio hasta el portón, como si supiera que llevaba algo importante."
+        },
+        {
+          "s": 0,
+          "text": "Eso es lo que les deseo: que cuando haya ruido y fuego alrededor, alguien les hable bajito al oído. Y ah, perdón por el ramo. Bueno, no tanto. Lucero tiene buen gusto."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Por qué los novios no vieron lo que pasó?",
+          "options": [
+            "Porque estaban arriba del caballo",
+            "Porque se fueron temprano a otra fiesta del pueblo",
+            "Porque estaba oscuro"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué habría pasado si Lucero se hubiera asustado?",
+          "options": [
+            "Se habría escapado solo hacia el campo",
+            "Nada",
+            "Los habría tirado al suelo"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿En qué idioma le hablaba Ceferino a Lucero?",
+          "options": [
+            "En quechua",
+            "En español, con palabras de su país",
+            "En inglés"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué les desea Ceferino a los novios?",
+          "options": [
+            "Que compren un caballo",
+            "Que alguien les hable bajito cuando haya ruido",
+            "Que vivan en el campo"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Quién te calmaba de niño cuando tenías miedo?",
+          "model": "Mi abuela; me cantaba una canción hasta que me dormía."
+        },
+        {
+          "q": "¿Qué te deseas a ti mismo para los momentos difíciles?",
+          "model": "Tener cerca a alguien que me escuche sin juzgarme."
+        },
+        {
+          "q": "Si un animal arruinara algo importante tuyo, ¿cómo reaccionarías?",
+          "model": "Me enojaría un rato, pero después lo contaría como una anécdota divertida."
+        }
+      ],
+      "gaps": "Si se [hubiera] [asustado], los [habría] [tirado] al suelo, con vestido y todo.",
+      "glossary": [
+        {
+          "word": "tensó",
+          "meaning": "se puso rígido"
+        },
+        {
+          "word": "tormentas",
+          "meaning": "lluvias fuertes con truenos"
+        },
+        {
+          "word": "alrededor",
+          "meaning": "cerca, en todo el espacio que rodea algo"
+        }
+      ]
+    },
+    {
+      "id": "fotos",
+      "title": "El fotógrafo confiesa",
+      "place": "Debajo del ombú",
+      "context": "Gonzalo graba el final del video y explica a los novios qué pasó con las fotos.",
+      "speakers": [
+        {
+          "name": "Gonzalo",
+          "country": "Colombia",
+          "voice": "es-CO-GonzaloNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Valentina, Joaquín: tengo que confesarles algo. Las fotos de la ceremonia se borraron. Todas. No sé si fue la tarjeta o mi torpeza, pero se perdieron."
+        },
+        {
+          "s": 0,
+          "text": "Si no me lo hubiera sugerido un invitado, habría pasado la noche llorando debajo de este árbol. En cambio, repetimos el beso aquí, bajo el ombú, con estas luces. Y les juro que son las mejores fotos de mi carrera."
+        },
+        {
+          "s": 0,
+          "text": "También hicimos una foto con toda la familia. Salió movida, con un perro en el centro y la abuela con los ojos cerrados. Si fuera un concurso, perdería. Pero es la foto más verdadera que hice en quince años."
+        },
+        {
+          "s": 0,
+          "text": "Hay otra foto más, pero esa no es para ustedes. Es para dos personas de su familia que tienen que decidir si quieren que exista. Yo la guardo."
+        },
+        {
+          "s": 0,
+          "text": "Gracias por perdonarme antes de saber lo que tenían que perdonar."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué fotos se borraron?",
+          "options": [
+            "Las del baile, con poca luz",
+            "Las de la familia",
+            "Las de la ceremonia"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué habría hecho Gonzalo sin el consejo del invitado?",
+          "options": [
+            "Pasar la noche llorando",
+            "Irse a casa sin despedirse de nadie",
+            "Llamar a otro fotógrafo"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Por qué la foto de familia perdería un concurso?",
+          "options": [
+            "Porque estaba oscura",
+            "Porque salió movida y con un perro en el centro",
+            "Porque faltaba gente"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué hace Gonzalo con la otra foto?",
+          "options": [
+            "La guarda",
+            "La borra",
+            "Se la da a los novios"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué foto tuya es imperfecta pero muy verdadera?",
+          "model": "Una de mis amigos riendo en la lluvia; está borrosa pero me encanta."
+        },
+        {
+          "q": "¿Has tenido que confesar un error profesional?",
+          "model": "Sí, olvidé enviar un informe importante y tuve que decírselo a mi jefa."
+        },
+        {
+          "q": "Si tuvieras una foto que revela un secreto, ¿qué harías con ella?",
+          "model": "La guardaría y se la daría a las personas que aparecen en ella."
+        }
+      ],
+      "gaps": "Si [fuera] un [concurso], [perdería]. Pero es la foto más [verdadera] que hice en quince años.",
+      "glossary": [
+        {
+          "word": "torpeza",
+          "meaning": "falta de habilidad"
+        },
+        {
+          "word": "concurso",
+          "meaning": "competición"
+        },
+        {
+          "word": "confesarles",
+          "meaning": "decirles algo que uno escondía"
+        }
+      ]
+    },
+    {
+      "id": "muelle",
+      "title": "Facundo vuelve al muelle",
+      "place": "El muelle de la laguna",
+      "context": "Al amanecer, Facundo graba su mensaje para el video desde el muelle.",
+      "speakers": [
+        {
+          "name": "Facundo",
+          "country": "Argentina",
+          "voice": "es-AR-TomasNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Joaquín, hermano: este es el discurso que no pude leer. Bueno, no este exactamente. El que leyó otro por mí."
+        },
+        {
+          "s": 0,
+          "text": "Si me hubieras preguntado ayer por qué desaparecí, te habría mentido. Te habría dicho que se me rompió el auto o que me sentía mal. La verdad es que tenía miedo de llorar delante de ti, en tu día, por mi papá."
+        },
+        {
+          "s": 0,
+          "text": "También tenía miedo de contarte lo de Renata. Si lo hubiera hecho antes, todo habría sido más fácil. Fui un cobarde y te pido perdón."
+        },
+        {
+          "s": 0,
+          "text": "Pero anoche, cuando escuché mis palabras con la voz de otro, me quedó algo claro: no hace falta ser fuerte para ser buen amigo. A veces basta con dejar que otros te sostengan."
+        },
+        {
+          "s": 0,
+          "text": "Mi viejo te quería como a un hijo. Si estuviera aquí, te habría dado un abrazo y te habría dicho que tu asado sigue siendo malo. Felicidades, hermano. Ahora sí estoy."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué habría dicho Facundo si le hubieran preguntado ayer?",
+          "options": [
+            "La verdad",
+            "Nada",
+            "Una mentira sobre el auto o que se sentía mal"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Por qué desapareció realmente?",
+          "options": [
+            "Estaba enfermo",
+            "Tenía miedo de llorar por su papá",
+            "Se perdió en el campo"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué entendió Facundo anoche?",
+          "options": [
+            "Que tenía que irse",
+            "Que Renata no lo quería",
+            "Que no hace falta ser fuerte para ser buen amigo"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué le habría dicho su padre a Joaquín?",
+          "options": [
+            "Que su asado sigue siendo malo",
+            "Que no se case",
+            "Que baila bien"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Alguna vez desapareciste de un evento por miedo?",
+          "model": "Sí, de una fiesta de trabajo; no conocía a nadie y me fui a los diez minutos."
+        },
+        {
+          "q": "¿Crees que hay que ser fuerte para ser buen amigo?",
+          "model": "No, creo que hay que ser sincero, aunque a veces seas débil."
+        },
+        {
+          "q": "Si pudieras hablar con alguien que ya no está, ¿qué le dirías?",
+          "model": "Le diría a mi abuelo que terminé la carrera, como él quería."
+        }
+      ],
+      "gaps": "Si lo [hubiera] [hecho] antes, todo [habría] sido más [fácil].",
+      "glossary": [
+        {
+          "word": "cobarde",
+          "meaning": "persona sin valor"
+        },
+        {
+          "word": "basta",
+          "meaning": "es suficiente"
+        },
+        {
+          "word": "sostengan",
+          "meaning": "ayuden a no caer"
+        }
+      ]
+    },
+    {
+      "id": "brindis",
+      "title": "El final del video",
+      "place": "La carpa a medianoche",
+      "context": "Los novios graban el cierre del video con Mariela, en la carpa vacía.",
+      "speakers": [
+        {
+          "name": "Valentina",
+          "country": "Argentina",
+          "voice": "es-AR-ElenaNeural"
+        },
+        {
+          "name": "Joaquín",
+          "country": "México",
+          "voice": "es-MX-JorgeNeural"
+        },
+        {
+          "name": "Mariela",
+          "country": "Colombia",
+          "voice": "es-CO-SalomeNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 2,
+          "text": "Bueno, último mensaje. Ustedes dos, a la cámara. ¿Qué aprendieron hoy?"
+        },
+        {
+          "s": 0,
+          "text": "Que si hubiéramos planeado todo a la perfección, habría sido una boda aburrida. Lo mejor de hoy fueron los desastres."
+        },
+        {
+          "s": 1,
+          "text": "Y que la familia no es solo la que tiene tu apellido. Hoy un desconocido se convirtió en parte de la nuestra."
+        },
+        {
+          "s": 0,
+          "text": "Cuando empezó el brindis, pensé que iba a decir algo corto y gracioso. Pero leyó una nota para cada persona: la abuela, Don Beto, el caballo, Yesenia. Hasta para Mariela."
+        },
+        {
+          "s": 2,
+          "text": "Eso no me lo esperaba. Casi lloro, y yo nunca lloro en el trabajo. Nunca."
+        },
+        {
+          "s": 1,
+          "text": "Si Facundo no hubiera desaparecido, nunca lo habríamos conocido. Así que, en cierto modo, gracias, Facundo, por ser un desastre."
+        },
+        {
+          "s": 0,
+          "text": "Y a todos los que vieron este video: gracias por venir, por ayudar y por bailar con los zapatos en la mano."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué fue lo mejor de la boda según Valentina?",
+          "options": [
+            "La comida y el vino de la estancia",
+            "Los desastres",
+            "La música"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué aprendió Joaquín sobre la familia?",
+          "options": [
+            "Que no es solo la que tiene tu apellido",
+            "Que siempre causa problemas",
+            "Que hay que invitar a pocos"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué hizo el invitado en el brindis?",
+          "options": [
+            "Contó un chiste corto",
+            "Cantó una canción",
+            "Leyó una nota para cada persona"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Por qué agradece Joaquín a Facundo?",
+          "options": [
+            "Porque hizo el discurso",
+            "Porque, por su desaparición, conocieron al invitado",
+            "Porque trajo a Renata"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué desastre de tu vida terminó siendo lo mejor?",
+          "model": "Perder un tren en Italia; me quedé un día más y conocí a mi mejor amiga."
+        },
+        {
+          "q": "¿Qué persona sin tu apellido es parte de tu familia?",
+          "model": "Mi mejor amigo; mis padres lo tratan como a un hijo."
+        },
+        {
+          "q": "Si tuvieras que hacer un brindis mañana, ¿a quién se lo dedicarías?",
+          "model": "A mis compañeros de trabajo, que me ayudan cada día."
+        }
+      ],
+      "gaps": "Que si [hubiéramos] [planeado] todo a la [perfección], [habría] sido una boda aburrida.",
+      "glossary": [
+        {
+          "word": "apellido",
+          "meaning": "nombre de familia"
+        },
+        {
+          "word": "en cierto modo",
+          "meaning": "de alguna manera"
+        },
+        {
+          "word": "desastre",
+          "meaning": "algo que sale muy mal"
+        }
+      ]
+    }
+  ]
+}

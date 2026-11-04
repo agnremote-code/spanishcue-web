@@ -1,0 +1,1864 @@
+{
+  "game": "boda",
+  "level": "A1",
+  "items": [
+    {
+      "id": "porton",
+      "title": "Un audio de Anselmo",
+      "place": "El portón de la estancia",
+      "context": "Anselmo deja un mensaje de voz a su esposa desde el portón.",
+      "speakers": [
+        {
+          "name": "Anselmo",
+          "country": "Paraguay",
+          "voice": "es-PY-MarioNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Hola, Marta. Soy yo. Hoy voy a llegar tarde a casa."
+        },
+        {
+          "s": 0,
+          "text": "Hay una boda grande en la estancia y tengo que cuidar el portón hasta la medianoche."
+        },
+        {
+          "s": 0,
+          "text": "Hay muchos autos y mucha gente elegante. Un invitado no está en la lista, pero es simpático."
+        },
+        {
+          "s": 0,
+          "text": "En la heladera hay sopa. Un beso y no me esperes despierta."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿A quién le habla Anselmo?",
+          "options": [
+            "A su hija",
+            "A su esposa",
+            "A la novia y a su madre"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Hasta qué hora tiene que trabajar?",
+          "options": [
+            "Hasta las ocho",
+            "Hasta la mañana",
+            "Hasta la medianoche"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cómo es el invitado que no está en la lista?",
+          "options": [
+            "Simpático",
+            "Antipático",
+            "Muy viejo"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué hay en la heladera?",
+          "options": [
+            "Sopa",
+            "Carne",
+            "Pizza"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Mandas mensajes de voz o escribes?",
+          "model": "Prefiero escribir, pero a veces mando audios."
+        },
+        {
+          "q": "¿A qué hora llegas a casa normalmente?",
+          "model": "Llego a casa a las siete."
+        },
+        {
+          "q": "¿Qué comes cuando llegas tarde?",
+          "model": "Como algo rápido, un sándwich o una sopa."
+        }
+      ],
+      "gaps": "En la [heladera] hay [sopa]. Un beso y no me [esperes] [despierta].",
+      "glossary": [
+        {
+          "word": "heladera",
+          "meaning": "aparato frío para la comida"
+        },
+        {
+          "word": "invitado",
+          "meaning": "persona que va a una fiesta"
+        },
+        {
+          "word": "despierta",
+          "meaning": "que no duerme"
+        }
+      ]
+    },
+    {
+      "id": "capilla",
+      "title": "El cura tiene un plan",
+      "place": "La capilla blanca",
+      "context": "El padre Benito habla con Joaquín por teléfono antes de la boda.",
+      "speakers": [
+        {
+          "name": "Benito",
+          "country": "España",
+          "voice": "es-ES-AlvaroNeural"
+        },
+        {
+          "name": "Joaquín",
+          "country": "México",
+          "voice": "es-MX-JorgeNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Joaquín, soy el padre Benito. ¿Estás listo?"
+        },
+        {
+          "s": 1,
+          "text": "Más o menos, padre. Tengo que buscar la corbata y los zapatos."
+        },
+        {
+          "s": 0,
+          "text": "La ceremonia va a empezar a las seis. Tienes que llegar a las cinco y media."
+        },
+        {
+          "s": 1,
+          "text": "Sí, padre. ¿Y qué digo en el altar?"
+        },
+        {
+          "s": 0,
+          "text": "Dices «sí, quiero». Es corto. No vas a tener problemas."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué tiene que buscar Joaquín?",
+          "options": [
+            "Los anillos",
+            "El auto",
+            "La corbata y los zapatos"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿A qué hora empieza la ceremonia?",
+          "options": [
+            "A las cinco",
+            "A las seis",
+            "A las siete"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿A qué hora tiene que llegar Joaquín?",
+          "options": [
+            "A las seis y media en punto",
+            "A las cinco y media",
+            "A las cuatro"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué tiene que decir Joaquín?",
+          "options": [
+            "Muchas gracias",
+            "Buenas tardes",
+            "Sí, quiero"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Llegas temprano a las citas importantes?",
+          "model": "Sí, siempre llego diez minutos antes."
+        },
+        {
+          "q": "¿Qué te pones para un evento formal?",
+          "model": "Me pongo un traje oscuro."
+        },
+        {
+          "q": "¿Qué frase corta usas mucho?",
+          "model": "Uso mucho «no pasa nada»."
+        }
+      ],
+      "gaps": "La [ceremonia] va a [empezar] a las seis. Tienes que [llegar] a las cinco y [media].",
+      "glossary": [
+        {
+          "word": "ceremonia",
+          "meaning": "acto formal y serio"
+        },
+        {
+          "word": "altar",
+          "meaning": "mesa principal de la iglesia"
+        },
+        {
+          "word": "listo",
+          "meaning": "preparado"
+        }
+      ]
+    },
+    {
+      "id": "ninos",
+      "title": "Las reglas para Tadeo",
+      "place": "Al lado de la capilla",
+      "context": "Marisol le explica a Tadeo qué tiene que hacer en la ceremonia.",
+      "speakers": [
+        {
+          "name": "Marisol",
+          "country": "República Dominicana",
+          "voice": "es-DO-RamonaNeural"
+        },
+        {
+          "name": "Tadeo",
+          "country": "República Dominicana",
+          "voice": "es-DO-EmilioNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Tadeo, escucha. Tú vas a caminar adelante de la novia."
+        },
+        {
+          "s": 1,
+          "text": "¿Con la caja de los anillos?"
+        },
+        {
+          "s": 0,
+          "text": "Sí. Tienes que caminar despacio y no correr."
+        },
+        {
+          "s": 1,
+          "text": "¿Y puedo saludar a mis amigos?"
+        },
+        {
+          "s": 0,
+          "text": "No. Tienes que mirar adelante. Después de la ceremonia vas a jugar con ellos en el jardín."
+        },
+        {
+          "s": 1,
+          "text": "Bueno. Pero quiero un helado."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Dónde va a caminar Tadeo?",
+          "options": [
+            "Adelante de la novia",
+            "Atrás de la novia",
+            "Con el cura"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cómo tiene que caminar?",
+          "options": [
+            "Muy rápido, corriendo",
+            "Despacio",
+            "Saltando"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cuándo va a jugar con sus amigos?",
+          "options": [
+            "Antes de la ceremonia, en la capilla",
+            "Mañana",
+            "Después de la ceremonia"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué quiere Tadeo?",
+          "options": [
+            "Un helado",
+            "Un juguete",
+            "Una torta"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué reglas tenías de niño en las fiestas?",
+          "model": "Tenía que saludar a todos los adultos."
+        },
+        {
+          "q": "¿Te gusta caminar despacio o rápido?",
+          "model": "Camino rápido porque siempre llego tarde."
+        },
+        {
+          "q": "¿Qué helado te gusta?",
+          "model": "Me gusta el helado de chocolate."
+        }
+      ],
+      "gaps": "Sí. Tienes que [caminar] [despacio] y no [correr]. ¿Y puedo [saludar] a mis amigos?",
+      "glossary": [
+        {
+          "word": "anillos",
+          "meaning": "joyas redondas para los dedos"
+        },
+        {
+          "word": "despacio",
+          "meaning": "sin prisa"
+        },
+        {
+          "word": "helado",
+          "meaning": "postre frío"
+        }
+      ]
+    },
+    {
+      "id": "novia",
+      "title": "Valentina graba un video",
+      "place": "El cuarto de la novia",
+      "context": "Valentina graba un video para sus amigas de Barcelona.",
+      "speakers": [
+        {
+          "name": "Valentina",
+          "country": "Argentina",
+          "voice": "es-AR-ElenaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "¡Hola, chicas! Las extraño mucho. Hoy me caso."
+        },
+        {
+          "s": 0,
+          "text": "Estoy en la casa de mi abuela, en el campo. El vestido es blanco y muy largo."
+        },
+        {
+          "s": 0,
+          "text": "Tengo nervios, pero estoy feliz. Joaquín está en la otra casa, con su mamá."
+        },
+        {
+          "s": 0,
+          "text": "Mañana les mando fotos. ¡Las quiero!"
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Para quién es el video?",
+          "options": [
+            "Para Joaquín",
+            "Para sus amigas de Barcelona",
+            "Para su abuela"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Dónde está Valentina?",
+          "options": [
+            "En la casa de su abuela",
+            "En un hotel",
+            "En la iglesia"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cómo se siente Valentina?",
+          "options": [
+            "Muy triste",
+            "Enojada",
+            "Nerviosa pero feliz"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cuándo va a mandar fotos?",
+          "options": [
+            "Mañana",
+            "Esta noche",
+            "Nunca"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Grabas videos para tus amigos?",
+          "model": "Sí, a veces grabo videos cortos."
+        },
+        {
+          "q": "¿Tienes amigos en otro país?",
+          "model": "Sí, tengo una amiga en Canadá."
+        },
+        {
+          "q": "¿Qué haces cuando tienes nervios antes de un día importante?",
+          "model": "Salgo a caminar y escucho música."
+        }
+      ],
+      "gaps": "Tengo [nervios], pero estoy [feliz]. Joaquín está en la [otra] [casa], con su mamá.",
+      "glossary": [
+        {
+          "word": "extraño",
+          "meaning": "siento la falta de alguien"
+        },
+        {
+          "word": "campo",
+          "meaning": "lugar fuera de la ciudad"
+        },
+        {
+          "word": "nervios",
+          "meaning": "sensación de miedo antes de algo"
+        }
+      ]
+    },
+    {
+      "id": "abuela",
+      "title": "Las reglas de Doña Chela",
+      "place": "La galería de la casa",
+      "context": "Doña Chela da consejos a todos los que pasan por la galería.",
+      "speakers": [
+        {
+          "name": "Chela",
+          "country": "Uruguay",
+          "voice": "es-UY-ValentinaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Tú, el de la camisa verde: no tomes mucho vino. Esta noche hay que bailar."
+        },
+        {
+          "s": 0,
+          "text": "Y tú, nena, ponte un abrigo. En el campo hace frío por la noche."
+        },
+        {
+          "s": 0,
+          "text": "Y ustedes dos, los primos: no hablen de política en la mesa."
+        },
+        {
+          "s": 0,
+          "text": "Una boda es para comer, bailar y criticar a la familia. Pero en voz baja."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué no tiene que hacer el chico de la camisa verde?",
+          "options": [
+            "Bailar",
+            "Tomar mucho vino",
+            "Comer carne"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Por qué la chica necesita un abrigo?",
+          "options": [
+            "Porque llueve",
+            "Porque es invierno",
+            "Porque hace frío por la noche"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿De qué no tienen que hablar los primos?",
+          "options": [
+            "De fútbol y de caballos",
+            "De amor",
+            "De política"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Según la abuela, ¿cómo hay que criticar a la familia?",
+          "options": [
+            "En voz baja",
+            "En voz alta",
+            "Por teléfono"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué consejos te dan las personas mayores?",
+          "model": "Me dicen que tengo que dormir más."
+        },
+        {
+          "q": "¿De qué temas no hablas en la mesa?",
+          "model": "No hablo de dinero ni de política."
+        },
+        {
+          "q": "¿Hace frío por la noche donde vives?",
+          "model": "Sí, en invierno hace mucho frío."
+        }
+      ],
+      "gaps": "Y tú, [nena], ponte un [abrigo]. En el [campo] hace [frío] por la noche.",
+      "glossary": [
+        {
+          "word": "abrigo",
+          "meaning": "ropa para el frío"
+        },
+        {
+          "word": "nena",
+          "meaning": "forma cariñosa de decir niña"
+        },
+        {
+          "word": "en voz baja",
+          "meaning": "sin hacer ruido"
+        }
+      ]
+    },
+    {
+      "id": "novio",
+      "title": "Lupita llama a Guadalajara",
+      "place": "El cuarto del novio",
+      "context": "Lupita habla con Ximena antes de llamar a su hermana en México.",
+      "speakers": [
+        {
+          "name": "Lupita",
+          "country": "México",
+          "voice": "es-MX-DaliaNeural"
+        },
+        {
+          "name": "Ximena",
+          "country": "España",
+          "voice": "es-ES-XimenaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Ximena, ¿qué hora es en Guadalajara?"
+        },
+        {
+          "s": 1,
+          "text": "Allá son tres horas menos, tía. Son las dos de la tarde."
+        },
+        {
+          "s": 0,
+          "text": "Mi hermana va a ver la boda por videollamada. No puede viajar."
+        },
+        {
+          "s": 1,
+          "text": "Yo tengo el teléfono. Voy a grabar todo."
+        },
+        {
+          "s": 0,
+          "text": "Gracias, mija. Y no grabes a la abuela de la novia cuando come."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cuántas horas de diferencia hay con Guadalajara?",
+          "options": [
+            "Dos horas",
+            "Tres horas",
+            "Cinco horas"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué hora es en Guadalajara?",
+          "options": [
+            "Las cinco",
+            "Las dos de la tarde",
+            "Las once"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cómo va a ver la boda la hermana de Lupita?",
+          "options": [
+            "Por videollamada",
+            "En persona",
+            "En fotos"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿A quién no tiene que grabar Ximena?",
+          "options": [
+            "A los novios",
+            "A los niños",
+            "A la abuela cuando come"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Usas videollamadas con tu familia?",
+          "model": "Sí, hablo con mis padres los domingos."
+        },
+        {
+          "q": "¿Qué hora es ahora en tu ciudad?",
+          "model": "Son las cuatro de la tarde."
+        },
+        {
+          "q": "¿Te gusta grabar videos en las fiestas?",
+          "model": "No, prefiero bailar."
+        }
+      ],
+      "gaps": "Mi [hermana] va a ver la [boda] por [videollamada]. No puede [viajar].",
+      "glossary": [
+        {
+          "word": "videollamada",
+          "meaning": "llamada con imagen"
+        },
+        {
+          "word": "grabar",
+          "meaning": "registrar con una cámara"
+        },
+        {
+          "word": "mija",
+          "meaning": "forma cariñosa de decir mi hija"
+        }
+      ]
+    },
+    {
+      "id": "cocina",
+      "title": "El menú de la noche",
+      "place": "La cocina de la estancia",
+      "context": "Ramiro y Yesenia repasan el menú de la boda.",
+      "speakers": [
+        {
+          "name": "Ramiro",
+          "country": "Perú",
+          "voice": "es-PE-AlexNeural"
+        },
+        {
+          "name": "Yesenia",
+          "country": "Perú",
+          "voice": "es-PE-CamilaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Yesenia, repetimos el menú. Primero, empanadas de carne y de queso."
+        },
+        {
+          "s": 1,
+          "text": "Después, asado con ensalada y papas."
+        },
+        {
+          "s": 0,
+          "text": "Para los vegetarianos, hay verduras a la parrilla."
+        },
+        {
+          "s": 1,
+          "text": "Y de postre, torta y helado de dulce de leche."
+        },
+        {
+          "s": 0,
+          "text": "Perfecto. A las diez vamos a servir el café."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué hay primero?",
+          "options": [
+            "Asado",
+            "Torta",
+            "Empanadas de carne y de queso"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Con qué se sirve el asado?",
+          "options": [
+            "Con ensalada y papas",
+            "Con arroz",
+            "Con pan solo"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué comen los vegetarianos?",
+          "options": [
+            "Pescado",
+            "Verduras a la parrilla",
+            "Pollo"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿A qué hora sirven el café?",
+          "options": [
+            "A las once",
+            "A las nueve",
+            "A las diez"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué menú preparas para una fiesta?",
+          "model": "Preparo pizzas y ensaladas."
+        },
+        {
+          "q": "¿Conoces a personas vegetarianas?",
+          "model": "Sí, mi hermana es vegetariana."
+        },
+        {
+          "q": "¿Qué postre prefieres?",
+          "model": "Prefiero el flan."
+        }
+      ],
+      "gaps": "Para los [vegetarianos], hay [verduras] a la [parrilla]. Y de [postre], torta y helado de dulce de leche.",
+      "glossary": [
+        {
+          "word": "menú",
+          "meaning": "lista de comidas"
+        },
+        {
+          "word": "postre",
+          "meaning": "comida dulce del final"
+        },
+        {
+          "word": "parrilla",
+          "meaning": "lugar para cocinar con fuego"
+        }
+      ]
+    },
+    {
+      "id": "asado",
+      "title": "Don Beto explica el asado",
+      "place": "La parrilla del jardín",
+      "context": "Don Beto explica a unos invitados cómo hace el asado.",
+      "speakers": [
+        {
+          "name": "Beto",
+          "country": "Chile",
+          "voice": "es-CL-LorenzoNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Primero, el fuego. Tiene que ser de leña, nunca de gas."
+        },
+        {
+          "s": 0,
+          "text": "Después, la sal. Un poco, no mucha."
+        },
+        {
+          "s": 0,
+          "text": "La carne tiene que estar en la parrilla cuatro horas. Despacio, con paciencia."
+        },
+        {
+          "s": 0,
+          "text": "Y el secreto más importante: el asador no habla de fútbol mientras trabaja."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cómo tiene que ser el fuego?",
+          "options": [
+            "De leña",
+            "De gas",
+            "Eléctrico"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cuánta sal pone?",
+          "options": [
+            "Mucha, demasiada",
+            "Un poco",
+            "Nada"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cuántas horas está la carne en la parrilla?",
+          "options": [
+            "Una hora",
+            "Ocho horas o más",
+            "Cuatro horas"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cuál es el secreto más importante?",
+          "options": [
+            "No hablar de fútbol mientras trabaja",
+            "Usar mucha sal",
+            "Cocinar rápido"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué secreto tienes para cocinar algo bien?",
+          "model": "Siempre uso ajo y aceite de oliva."
+        },
+        {
+          "q": "¿Eres paciente cuando cocinas?",
+          "model": "No, quiero comer rápido."
+        },
+        {
+          "q": "¿Hablas mientras trabajas?",
+          "model": "Sí, hablo mucho con mis compañeros."
+        }
+      ],
+      "gaps": "La [carne] tiene que estar en la parrilla cuatro [horas]. [Despacio], con [paciencia].",
+      "glossary": [
+        {
+          "word": "leña",
+          "meaning": "madera para el fuego"
+        },
+        {
+          "word": "sal",
+          "meaning": "condimento blanco"
+        },
+        {
+          "word": "paciencia",
+          "meaning": "calma para esperar"
+        }
+      ]
+    },
+    {
+      "id": "mesa",
+      "title": "Gloria organiza las mesas",
+      "place": "Las mesas largas",
+      "context": "Gloria explica el plano de las mesas. Pepe escucha.",
+      "speakers": [
+        {
+          "name": "Gloria",
+          "country": "Panamá",
+          "voice": "es-PA-MargaritaNeural"
+        },
+        {
+          "name": "Pepe",
+          "country": "Panamá",
+          "voice": "es-PA-RobertoNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Hay doce mesas. Los novios van a estar en el centro."
+        },
+        {
+          "s": 0,
+          "text": "La familia de la novia está a la derecha y la familia del novio, a la izquierda."
+        },
+        {
+          "s": 1,
+          "text": "¿Y los amigos?"
+        },
+        {
+          "s": 0,
+          "text": "Los amigos están cerca de la pista. Los niños, cerca de la puerta."
+        },
+        {
+          "s": 1,
+          "text": "¿Y yo?"
+        },
+        {
+          "s": 0,
+          "text": "Tú estás lejos. Muy lejos."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cuántas mesas hay?",
+          "options": [
+            "Diez",
+            "Doce",
+            "Veinte"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Dónde está la familia de la novia?",
+          "options": [
+            "A la derecha",
+            "A la izquierda",
+            "En el centro"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Dónde están los niños?",
+          "options": [
+            "Cerca de la pista de baile",
+            "En el jardín",
+            "Cerca de la puerta"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Dónde está Pepe?",
+          "options": [
+            "Al lado de Gloria",
+            "Muy lejos",
+            "En el centro"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Dónde te gusta sentarte en una boda?",
+          "model": "Me gusta sentarme cerca de la pista."
+        },
+        {
+          "q": "¿Te gusta organizar cosas?",
+          "model": "Sí, me gusta hacer listas."
+        },
+        {
+          "q": "¿Hay alguien en tu familia que no habla con otra persona?",
+          "model": "Sí, mis dos tíos no hablan."
+        }
+      ],
+      "gaps": "Los [amigos] están [cerca] de la [pista]. Los [niños], cerca de la puerta.",
+      "glossary": [
+        {
+          "word": "centro",
+          "meaning": "lugar del medio"
+        },
+        {
+          "word": "derecha",
+          "meaning": "lado contrario a la izquierda"
+        },
+        {
+          "word": "lejos",
+          "meaning": "a mucha distancia"
+        }
+      ]
+    },
+    {
+      "id": "ex",
+      "title": "Renata pregunta por Facundo",
+      "place": "El rosedal",
+      "context": "Renata busca a Facundo y habla con Rocío.",
+      "speakers": [
+        {
+          "name": "Renata",
+          "country": "Venezuela",
+          "voice": "es-VE-PaolaNeural"
+        },
+        {
+          "name": "Rocío",
+          "country": "Ecuador",
+          "voice": "es-EC-AndreaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Hola. ¿Conoces a Facundo? Es alto, tiene barba y un traje gris."
+        },
+        {
+          "s": 1,
+          "text": "¿El padrino? No sé. No lo veo desde las cinco."
+        },
+        {
+          "s": 0,
+          "text": "Su teléfono no contesta. Tengo que hablar con él."
+        },
+        {
+          "s": 1,
+          "text": "Puedes esperar aquí. Yo voy a preguntar en la carpa."
+        },
+        {
+          "s": 0,
+          "text": "Gracias. Eres muy amable."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cómo es Facundo?",
+          "options": [
+            "Alto y con barba",
+            "Bajo y rubio",
+            "Gordo y calvo"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿De qué color es su traje?",
+          "options": [
+            "Negro",
+            "Azul",
+            "Gris"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Desde cuándo no lo ve Rocío?",
+          "options": [
+            "Desde la mañana temprano",
+            "Desde las cinco",
+            "Desde ayer"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué va a hacer Rocío?",
+          "options": [
+            "Preguntar en la carpa",
+            "Llamar a la policía del pueblo",
+            "Irse a casa"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué ropa eliges para ir a una boda?",
+          "model": "Elijo un vestido azul y zapatos cómodos para bailar."
+        },
+        {
+          "q": "¿Qué haces si un amigo no contesta el teléfono?",
+          "model": "Le mando un mensaje y espero."
+        },
+        {
+          "q": "¿Eres una persona amable con los desconocidos?",
+          "model": "Sí, siempre intento ayudar."
+        }
+      ],
+      "gaps": "Su [teléfono] no [contesta]. Tengo que [hablar] con [él].",
+      "glossary": [
+        {
+          "word": "barba",
+          "meaning": "pelo en la cara"
+        },
+        {
+          "word": "carpa",
+          "meaning": "tienda grande de tela"
+        },
+        {
+          "word": "amable",
+          "meaning": "buena con los demás"
+        }
+      ]
+    },
+    {
+      "id": "planner",
+      "title": "Mariela pide ayuda",
+      "place": "La entrada de la carpa",
+      "context": "Mariela manda un audio al grupo de los camareros.",
+      "speakers": [
+        {
+          "name": "Mariela",
+          "country": "Colombia",
+          "voice": "es-CO-SalomeNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Chicos, atención. Las empanadas van a salir en cinco minutos."
+        },
+        {
+          "s": 0,
+          "text": "Necesito dos personas en la puerta de la cocina y una persona en la barra."
+        },
+        {
+          "s": 0,
+          "text": "No olviden las servilletas. Y, por favor, sonrían. Es una boda, no un funeral."
+        },
+        {
+          "s": 0,
+          "text": "Si hay problemas, me llaman. Tengo dos teléfonos."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿A quién le habla Mariela?",
+          "options": [
+            "A los novios",
+            "A los camareros",
+            "A los músicos de la banda"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cuándo salen las empanadas?",
+          "options": [
+            "En una hora",
+            "Ahora mismo",
+            "En cinco minutos"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cuántas personas necesita en la puerta de la cocina?",
+          "options": [
+            "Una",
+            "Tres",
+            "Dos"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué no tienen que olvidar?",
+          "options": [
+            "Las servilletas",
+            "Las copas",
+            "Los platos"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Te gusta organizar celebraciones con otras personas?",
+          "model": "Sí, organizo los cumpleaños con mis hermanos."
+        },
+        {
+          "q": "¿Usas grupos de mensajes en el trabajo?",
+          "model": "Sí, tenemos un grupo para todo."
+        },
+        {
+          "q": "¿Sonríes en una celebración aunque tengas sueño?",
+          "model": "Sí, porque quiero ver feliz a mi familia."
+        }
+      ],
+      "gaps": "No [olviden] las [servilletas]. Y, por favor, [sonrían]. Es una boda, no un [funeral].",
+      "glossary": [
+        {
+          "word": "servilletas",
+          "meaning": "papeles para limpiarse la boca"
+        },
+        {
+          "word": "funeral",
+          "meaning": "ceremonia para una persona muerta"
+        },
+        {
+          "word": "atención",
+          "meaning": "palabra para pedir que escuchen"
+        }
+      ]
+    },
+    {
+      "id": "banda",
+      "title": "Ensayo antes de tocar",
+      "place": "El escenario de la carpa",
+      "context": "Willy y Yamilé ensayan antes de tocar.",
+      "speakers": [
+        {
+          "name": "Willy",
+          "country": "Cuba",
+          "voice": "es-CU-ManuelNeural"
+        },
+        {
+          "name": "Yamilé",
+          "country": "Cuba",
+          "voice": "es-CU-BelkysNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Yamilé, ¿cuántas canciones vamos a tocar?"
+        },
+        {
+          "s": 1,
+          "text": "Veinte canciones. Diez salsas, cinco boleros y cinco cumbias."
+        },
+        {
+          "s": 0,
+          "text": "¿Y la canción de los novios?"
+        },
+        {
+          "s": 1,
+          "text": "Es la número uno. Es un bolero muy romántico."
+        },
+        {
+          "s": 0,
+          "text": "Bien. Yo tengo que tomar agua. Voy a cantar mucho esta noche."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cuántas canciones van a tocar?",
+          "options": [
+            "Diez",
+            "Veinte",
+            "Cinco o seis"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cuántas salsas hay?",
+          "options": [
+            "Cinco",
+            "Diez",
+            "Veinte"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué tipo de canción es la de los novios?",
+          "options": [
+            "Una salsa",
+            "Una cumbia",
+            "Un bolero"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué tiene que hacer Willy?",
+          "options": [
+            "Tomar agua",
+            "Comer algo dulce y salado",
+            "Dormir"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Cuál es tu canción romántica favorita?",
+          "model": "Mi canción favorita es «Bésame mucho»."
+        },
+        {
+          "q": "¿Cuántas canciones escuchas al día?",
+          "model": "Escucho muchas, en el autobús y en casa."
+        },
+        {
+          "q": "¿Te gusta la cumbia?",
+          "model": "Sí, es muy alegre."
+        }
+      ],
+      "gaps": "Es la [número] uno. Es un [bolero] muy [romántico]. Bien. Yo tengo que [tomar] agua.",
+      "glossary": [
+        {
+          "word": "romántico",
+          "meaning": "que habla de amor"
+        },
+        {
+          "word": "bolero",
+          "meaning": "canción lenta y romántica"
+        },
+        {
+          "word": "cumbia",
+          "meaning": "música alegre para bailar"
+        }
+      ]
+    },
+    {
+      "id": "pista",
+      "title": "Don Horacio en el teléfono",
+      "place": "La pista de baile",
+      "context": "Don Horacio escucha un mensaje de su médico y responde.",
+      "speakers": [
+        {
+          "name": "Horacio",
+          "country": "Uruguay",
+          "voice": "es-UY-MateoNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Doctor, recibo su mensaje. Sí, la rodilla me duele un poco."
+        },
+        {
+          "s": 0,
+          "text": "Usted dice que no tengo que bailar mucho. Pero hoy es la boda de mi hija."
+        },
+        {
+          "s": 0,
+          "text": "Voy a bailar un vals. Solo uno. Y después me siento."
+        },
+        {
+          "s": 0,
+          "text": "Bueno, uno y una cumbia. No más. Lo prometo."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Con quién habla Don Horacio?",
+          "options": [
+            "Con su médico",
+            "Con su hija mayor de Rosario",
+            "Con su esposa"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué le duele?",
+          "options": [
+            "La espalda y los hombros",
+            "La rodilla",
+            "El pie"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué va a bailar primero?",
+          "options": [
+            "Una cumbia",
+            "Un tango",
+            "Un vals"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cuántos bailes promete al final?",
+          "options": [
+            "Uno",
+            "Dos",
+            "Tres"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Haces siempre lo que dice el médico?",
+          "model": "No siempre, pero intento."
+        },
+        {
+          "q": "¿Qué promesas no cumples?",
+          "model": "Prometo hacer deporte y no lo hago."
+        },
+        {
+          "q": "¿Te gusta bailar en las bodas?",
+          "model": "Sí, bailo toda la noche."
+        }
+      ],
+      "gaps": "Voy a [bailar] un vals. Solo [uno]. Y después me [siento]. Bueno, uno y una [cumbia].",
+      "glossary": [
+        {
+          "word": "rodilla",
+          "meaning": "parte de la pierna"
+        },
+        {
+          "word": "prometo",
+          "meaning": "digo que voy a hacerlo seguro"
+        },
+        {
+          "word": "doctor",
+          "meaning": "médico"
+        }
+      ]
+    },
+    {
+      "id": "barra",
+      "title": "Los cócteles de Edgardo",
+      "place": "La barra",
+      "context": "Edgardo le explica a Ximena qué cócteles prepara.",
+      "speakers": [
+        {
+          "name": "Edgardo",
+          "country": "Puerto Rico",
+          "voice": "es-PR-VictorNeural"
+        },
+        {
+          "name": "Ximena",
+          "country": "España",
+          "voice": "es-ES-XimenaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Esta noche tengo tres cócteles especiales."
+        },
+        {
+          "s": 0,
+          "text": "El «Valentina» es de frutilla. El «Joaquín» tiene tequila y limón."
+        },
+        {
+          "s": 1,
+          "text": "¿Y hay algo sin alcohol?"
+        },
+        {
+          "s": 0,
+          "text": "Sí, el «Abuela Chela»: mate frío con menta."
+        },
+        {
+          "s": 1,
+          "text": "¡Ja! Voy a probar ese. Y después, el de tequila."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cuántos cócteles especiales hay?",
+          "options": [
+            "Tres",
+            "Dos",
+            "Cinco"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿De qué es el «Valentina»?",
+          "options": [
+            "De limón",
+            "De menta",
+            "De frutilla"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué cóctel no tiene alcohol?",
+          "options": [
+            "El «Abuela Chela»",
+            "El «Joaquín»",
+            "El «Valentina»"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué va a probar Ximena primero?",
+          "options": [
+            "El de tequila",
+            "El cóctel sin alcohol",
+            "El de frutilla"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué cóctel te gusta?",
+          "model": "Me gusta el mojito."
+        },
+        {
+          "q": "¿Tomas bebidas sin alcohol en las fiestas?",
+          "model": "Sí, tomo agua con gas."
+        },
+        {
+          "q": "¿Qué nombre le pones a un cóctel especial?",
+          "model": "Le pongo el nombre de mi ciudad."
+        }
+      ],
+      "gaps": "Sí, el «Abuela Chela»: [mate] [frío] con [menta]. ¡Ja! Voy a [probar] ese.",
+      "glossary": [
+        {
+          "word": "cócteles",
+          "meaning": "bebidas mezcladas"
+        },
+        {
+          "word": "frutilla",
+          "meaning": "fruta roja y pequeña"
+        },
+        {
+          "word": "menta",
+          "meaning": "planta verde con sabor fresco"
+        }
+      ]
+    },
+    {
+      "id": "establo",
+      "title": "Ceferino prepara a Lucero",
+      "place": "El establo",
+      "context": "Ceferino habla con Lucero mientras lo prepara para la noche.",
+      "speakers": [
+        {
+          "name": "Ceferino",
+          "country": "Bolivia",
+          "voice": "es-BO-MarceloNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Quieto, Lucero. Ahora te pongo las cintas."
+        },
+        {
+          "s": 0,
+          "text": "Esta noche vas a llevar a los novios. Vas a caminar despacio por el jardín."
+        },
+        {
+          "s": 0,
+          "text": "Hay mucha gente y mucha música. Tú no tienes que tener miedo."
+        },
+        {
+          "s": 0,
+          "text": "Yo voy a estar a tu lado, como siempre."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué le pone Ceferino a Lucero?",
+          "options": [
+            "Flores",
+            "Una manta",
+            "Cintas"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿A quién va a llevar Lucero?",
+          "options": [
+            "A los niños de la familia",
+            "A los novios",
+            "A la abuela"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cómo tiene que caminar?",
+          "options": [
+            "Rápido",
+            "Saltando en un pie",
+            "Despacio"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Dónde va a estar Ceferino?",
+          "options": [
+            "Al lado de Lucero",
+            "En la carpa",
+            "En su casa"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Tienes miedo de los lugares con mucha gente?",
+          "model": "No, me gustan los conciertos."
+        },
+        {
+          "q": "¿Quién está a tu lado en los momentos difíciles?",
+          "model": "Mi hermano siempre está a mi lado."
+        },
+        {
+          "q": "¿Les hablas a los caballos o a los perros de otras personas?",
+          "model": "Sí, siempre saludo a los perros de mis vecinos."
+        }
+      ],
+      "gaps": "Hay mucha [gente] y mucha [música]. Tú no tienes que [tener] [miedo].",
+      "glossary": [
+        {
+          "word": "quieto",
+          "meaning": "sin moverse"
+        },
+        {
+          "word": "cintas",
+          "meaning": "tiras de tela de colores"
+        },
+        {
+          "word": "miedo",
+          "meaning": "sensación ante un peligro"
+        }
+      ]
+    },
+    {
+      "id": "fotos",
+      "title": "Las fotos de Gonzalo",
+      "place": "Debajo del ombú",
+      "context": "Gonzalo explica su plan de fotos a los novios por audio.",
+      "speakers": [
+        {
+          "name": "Gonzalo",
+          "country": "Colombia",
+          "voice": "es-CO-GonzaloNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Hola, chicos. Este es el plan para las fotos."
+        },
+        {
+          "s": 0,
+          "text": "A las siete, fotos con la familia debajo del ombú."
+        },
+        {
+          "s": 0,
+          "text": "A las ocho, fotos de ustedes dos con el caballo."
+        },
+        {
+          "s": 0,
+          "text": "Y a las once, fotos en la pista con las luces. Por favor, no coman antes de las fotos. La salsa en la camisa no es elegante."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Dónde son las fotos de las siete?",
+          "options": [
+            "Debajo del ombú",
+            "En la capilla",
+            "En la pista, entre la gente"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Con qué animal son las fotos de las ocho?",
+          "options": [
+            "Con un perro del vecino",
+            "Con el caballo",
+            "Con unas vacas"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿A qué hora son las fotos en la pista?",
+          "options": [
+            "A las diez",
+            "A las nueve",
+            "A las once"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué no tienen que hacer los novios antes de las fotos?",
+          "options": [
+            "Bailar",
+            "Tomar agua",
+            "Comer"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Te gusta salir en las fotos de una celebración?",
+          "model": "Sí, pero solo si salgo bien."
+        },
+        {
+          "q": "¿Dónde haces las mejores fotos?",
+          "model": "En la playa, con el sol."
+        },
+        {
+          "q": "¿Manchas tu ropa cuando comes?",
+          "model": "Sí, siempre con kétchup."
+        }
+      ],
+      "gaps": "Por favor, no [coman] antes de las [fotos]. La [salsa] en la [camisa] no es elegante.",
+      "glossary": [
+        {
+          "word": "ombú",
+          "meaning": "árbol muy grande de la pampa"
+        },
+        {
+          "word": "luces",
+          "meaning": "lámparas pequeñas"
+        },
+        {
+          "word": "elegante",
+          "meaning": "bonito y fino"
+        }
+      ]
+    },
+    {
+      "id": "muelle",
+      "title": "Facundo escribe a Joaquín",
+      "place": "El muelle de la laguna",
+      "context": "Facundo graba un audio para Joaquín, pero no lo manda.",
+      "speakers": [
+        {
+          "name": "Facundo",
+          "country": "Argentina",
+          "voice": "es-AR-TomasNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Joaquín, soy yo. Perdón por no estar en la capilla."
+        },
+        {
+          "s": 0,
+          "text": "Estoy en el muelle. No estoy bien. Hoy pienso mucho en mi papá."
+        },
+        {
+          "s": 0,
+          "text": "Tengo tus anillos. Bueno, no. Los tiene Tadeo. Es una historia larga."
+        },
+        {
+          "s": 0,
+          "text": "Voy a ir a la fiesta más tarde. Te quiero, hermano. Felicidades."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Por qué pide perdón Facundo?",
+          "options": [
+            "Por llegar borracho",
+            "Por no estar en la capilla",
+            "Por romper algo"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Dónde está Facundo?",
+          "options": [
+            "En el muelle",
+            "En la carpa grande",
+            "En el auto"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Quién tiene los anillos?",
+          "options": [
+            "Tadeo",
+            "Facundo",
+            "Joaquín"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cuándo va a ir a la fiesta?",
+          "options": [
+            "Ahora",
+            "Más tarde",
+            "Mañana"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Grabas mensajes que después no mandas?",
+          "model": "Sí, a veces borro mensajes largos."
+        },
+        {
+          "q": "¿Qué haces cuando no estás bien?",
+          "model": "Camino solo o llamo a una amiga."
+        },
+        {
+          "q": "¿Cómo felicitas a un amigo que se casa?",
+          "model": "Le digo «felicidades» y le doy un abrazo."
+        }
+      ],
+      "gaps": "Voy a ir a la [fiesta] más [tarde]. Te [quiero], [hermano].",
+      "glossary": [
+        {
+          "word": "muelle",
+          "meaning": "plataforma de madera en el agua"
+        },
+        {
+          "word": "perdón",
+          "meaning": "palabra para disculparse"
+        },
+        {
+          "word": "hermano",
+          "meaning": "amigo muy cercano"
+        }
+      ]
+    },
+    {
+      "id": "brindis",
+      "title": "Mariela presenta el brindis",
+      "place": "La carpa a medianoche",
+      "context": "Mariela presenta el momento del brindis.",
+      "speakers": [
+        {
+          "name": "Mariela",
+          "country": "Colombia",
+          "voice": "es-CO-SalomeNeural"
+        },
+        {
+          "name": "Valentina",
+          "country": "Argentina",
+          "voice": "es-AR-ElenaNeural"
+        },
+        {
+          "name": "Joaquín",
+          "country": "México",
+          "voice": "es-MX-JorgeNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Señoras y señores, es medianoche. Es el momento del brindis."
+        },
+        {
+          "s": 0,
+          "text": "El padrino no está, pero tenemos a un invitado especial."
+        },
+        {
+          "s": 1,
+          "text": "¡Sí! Es amigo de Facundo y hoy nos ayuda mucho."
+        },
+        {
+          "s": 2,
+          "text": "No lo conocemos, pero ya es de la familia."
+        },
+        {
+          "s": 0,
+          "text": "Por favor, todos con la copa en la mano. ¡Un aplauso!"
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué hora es?",
+          "options": [
+            "Las once",
+            "La una",
+            "Medianoche"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Quién no está?",
+          "options": [
+            "La novia",
+            "El padrino",
+            "El cura"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿De quién es amigo el invitado especial?",
+          "options": [
+            "De Facundo",
+            "De Joaquín",
+            "De Mariela, la organizadora"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué tienen que tener todos en la mano?",
+          "options": [
+            "El teléfono",
+            "Una flor",
+            "La copa"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Te da miedo hablar delante de toda tu familia?",
+          "model": "Sí, un poco. Me tiemblan las manos."
+        },
+        {
+          "q": "¿Cuándo aplaudes?",
+          "model": "Aplaudo en los conciertos y en el teatro."
+        },
+        {
+          "q": "¿Quién es una persona especial para ti?",
+          "model": "Mi abuela es muy especial para mí."
+        }
+      ],
+      "gaps": "No lo [conocemos], pero ya es de la [familia]. Por favor, todos con la [copa] en la [mano].",
+      "glossary": [
+        {
+          "word": "brindis",
+          "meaning": "momento de levantar la copa y decir algo"
+        },
+        {
+          "word": "aplauso",
+          "meaning": "golpes de manos para felicitar"
+        },
+        {
+          "word": "medianoche",
+          "meaning": "las doce de la noche"
+        }
+      ]
+    }
+  ]
+}

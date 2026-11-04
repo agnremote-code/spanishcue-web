@@ -1,0 +1,2255 @@
+{
+  "game": "boda",
+  "level": "C2",
+  "items": [
+    {
+      "id": "porton",
+      "title": "Un año después, el portón",
+      "place": "El portón de la estancia",
+      "context": "Un año después de la boda, Wilmer vuelve de Buenos Aires para el aniversario y se encuentra con Anselmo en el portón.",
+      "speakers": [
+        {
+          "name": "Anselmo",
+          "country": "Paraguay",
+          "voice": "es-PY-MarioNeural"
+        },
+        {
+          "name": "Wilmer",
+          "country": "Honduras",
+          "voice": "es-HN-CarlosNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Mira quién aparece. El chofer de la capital. Te veo más flaco y con cara de no haber dormido desde que te fuiste."
+        },
+        {
+          "s": 1,
+          "text": "Es que en Buenos Aires nadie duerme, Don Anselmo. Se trabaja, se corre, se come de parado. Allá el tiempo no pasa: se escurre."
+        },
+        {
+          "s": 0,
+          "text": "¿Y te arrepientes? Porque yo te dije que era mejor equivocarse por hacer que por no hacer, y desde entonces cargo con la duda."
+        },
+        {
+          "s": 1,
+          "text": "No me arrepiento, pero tampoco lo idealizo. Gané plata, conocí gente, me hice experto en manejar en una ciudad donde los semáforos son una sugerencia. Lo que no esperaba es echar de menos el aburrimiento."
+        },
+        {
+          "s": 0,
+          "text": "El aburrimiento es un lujo que solo se aprecia cuando se pierde. Aquí uno se aburre, sí, pero también tiene tiempo para mirar. Hace un año, si no hubiéramos estado aburridos, ni nos habríamos fijado en el auto del padrino."
+        },
+        {
+          "s": 1,
+          "text": "¿Y usted? ¿No pensó nunca en irse?"
+        },
+        {
+          "s": 0,
+          "text": "Lo pensé cada invierno durante cuarenta años. Pero hay gente que nace para cruzar portones y gente que nace para cuidarlos. Lo importante es saber cuál es uno antes de que sea tarde."
+        },
+        {
+          "s": 1,
+          "text": "Entonces, ¿me guarda el puesto?"
+        },
+        {
+          "s": 0,
+          "text": "Te guardo el banco. El puesto se lo gana cada uno."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cómo describe Wilmer el paso del tiempo en Buenos Aires?",
+          "infer": true,
+          "options": [
+            "Se escurre",
+            "Se detiene en seco",
+            "Se repite sin remedio"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué no esperaba Wilmer de la vida en la ciudad?",
+          "options": [
+            "Ganar dinero",
+            "Echar de menos el aburrimiento",
+            "Conocer gente"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Según Anselmo, ¿qué permite el aburrimiento?",
+          "options": [
+            "Descansar más y dormir la siesta",
+            "Ahorrar dinero",
+            "Tener tiempo para mirar"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué diferencia hace Anselmo entre las personas?",
+          "infer": true,
+          "options": [
+            "Las ricas y las pobres",
+            "Las que nacen para cruzar portones y las que nacen para cuidarlos",
+            "Las del campo y las de la ciudad"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué has echado de menos que nunca pensaste que extrañarías?",
+          "model": "El silencio de los domingos en casa de mis padres, que de adolescente me parecía insoportable."
+        },
+        {
+          "q": "¿Te consideras alguien que cruza portones o que los cuida?",
+          "model": "Creo que soy de los que cruzan, aunque cada vez valoro más volver a los mismos lugares."
+        },
+        {
+          "q": "¿Es el aburrimiento un lujo en la vida moderna?",
+          "model": "Sí; vivimos tan estimulados que pocas veces tenemos tiempo para no hacer nada y pensar."
+        }
+      ],
+      "gaps": "El [aburrimiento] es un [lujo] que solo se [aprecia] cuando se [pierde].",
+      "glossary": [
+        {
+          "word": "se escurre",
+          "meaning": "se va sin que uno se dé cuenta"
+        },
+        {
+          "word": "idealizo",
+          "meaning": "imagino mejor de lo que es"
+        },
+        {
+          "word": "puesto",
+          "meaning": "lugar de trabajo"
+        },
+        {
+          "word": "semáforos",
+          "meaning": "luces que regulan el tráfico"
+        }
+      ]
+    },
+    {
+      "id": "capilla",
+      "title": "Un año de matrimonio",
+      "place": "La capilla blanca",
+      "context": "Un año después, Joaquín vuelve a la capilla y conversa con el padre Benito sobre su primer año de casado.",
+      "speakers": [
+        {
+          "name": "Benito",
+          "country": "España",
+          "voice": "es-ES-AlvaroNeural"
+        },
+        {
+          "name": "Joaquín",
+          "country": "México",
+          "voice": "es-MX-JorgeNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Bueno, Joaquín, primer aniversario. Según mis estadísticas, el primer año es el más difícil o el más engañoso. ¿Cuál fue el tuyo?"
+        },
+        {
+          "s": 1,
+          "text": "Las dos cosas, padre. Hubo semanas en que todo parecía una prolongación de la luna de miel, y otras en que discutíamos por cómo se cuelga el papel higiénico como si fuera una cuestión de Estado."
+        },
+        {
+          "s": 0,
+          "text": "Eso es buena señal. Las parejas que no discuten por tonterías suelen estar guardándose las discusiones importantes para el día del divorcio."
+        },
+        {
+          "s": 1,
+          "text": "Lo que más me sorprendió fue descubrir que casarme no resolvió mis miedos. Seguía teniendo pánico de repetir la historia de mis padres. Solo que ahora tenía a alguien al lado para hablarlo."
+        },
+        {
+          "s": 0,
+          "text": "El matrimonio no es un remedio, hijo. Es un testigo. No te cura, pero te obliga a mirarte. Y eso, a veces, duele más que estar solo."
+        },
+        {
+          "s": 1,
+          "text": "Valentina dice que usted debería escribir un libro."
+        },
+        {
+          "s": 0,
+          "text": "Ya lo intenté. Se titulaba «Gomitas y sacramentos». El editor dijo que era demasiado frívolo para los católicos y demasiado católico para los frívolos."
+        },
+        {
+          "s": 1,
+          "text": "Pues yo lo compraría. Y Valentina también, aunque solo fuera para subrayar las partes en las que usted tiene razón y yo no."
+        },
+        {
+          "s": 0,
+          "text": "Por eso no te casé con un anillo de verdad: tienes un gusto pésimo para la literatura."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cómo describe Joaquín su primer año?",
+          "options": [
+            "Fue perfecto",
+            "Fue un desastre",
+            "Fue a la vez el más difícil y el más engañoso"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Según el cura, ¿qué indica discutir por tonterías?",
+          "infer": true,
+          "options": [
+            "Que es buena señal",
+            "Que el matrimonio va mal",
+            "Que hay que ir a terapia"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué descubrió Joaquín al casarse?",
+          "infer": true,
+          "options": [
+            "Que ya no tenía miedos desde el día de la boda",
+            "Que sus padres tenían razón",
+            "Que el matrimonio no resolvió sus miedos"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Por qué no publicaron el libro del cura?",
+          "options": [
+            "Era demasiado frívolo para unos y demasiado católico para otros",
+            "Era muy largo",
+            "No lo terminó"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Crees que una relación puede curar los miedos personales?",
+          "model": "No los cura, pero puede ayudar a enfrentarlos si hay confianza para hablar de ellos."
+        },
+        {
+          "q": "¿Por qué tonterías discute la gente que convive?",
+          "model": "Por la limpieza, por el volumen de la tele y, sobre todo, por quién olvidó comprar algo."
+        },
+        {
+          "q": "¿Qué libro escribirías sobre tu propia vida y cómo lo titularías?",
+          "model": "Escribiría sobre mis mudanzas y lo titularía «Cajas a medio deshacer»."
+        }
+      ],
+      "gaps": "El [matrimonio] no es un [remedio], hijo. Es un [testigo]. No te cura, pero te [obliga] a mirarte.",
+      "glossary": [
+        {
+          "word": "engañoso",
+          "meaning": "que parece una cosa y es otra"
+        },
+        {
+          "word": "prolongación",
+          "meaning": "continuación"
+        },
+        {
+          "word": "frívolo",
+          "meaning": "superficial, poco serio"
+        },
+        {
+          "word": "remedio",
+          "meaning": "solución, medicina"
+        }
+      ]
+    },
+    {
+      "id": "ninos",
+      "title": "Tadeo cumple nueve",
+      "place": "El cantero de flores",
+      "context": "En el aniversario, Tadeo, ya de nueve años, muestra a Marisol lo que creció en el cantero.",
+      "speakers": [
+        {
+          "name": "Marisol",
+          "country": "República Dominicana",
+          "voice": "es-DO-RamonaNeural"
+        },
+        {
+          "name": "Tadeo",
+          "country": "República Dominicana",
+          "voice": "es-DO-EmilioNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Tía, mira. Ahí, donde enterré los anillos, creció una planta. No es un árbol, pero algo es."
+        },
+        {
+          "s": 0,
+          "text": "Es un jazmín, Tadeo. Ya estaba ahí antes, solo que ahora alguien lo riega. Creo que Ceferino lo cuida desde que se enteró de tu teoría."
+        },
+        {
+          "s": 1,
+          "text": "Entonces funcionó. Yo planté amor y ahora hay alguien que cuida la planta."
+        },
+        {
+          "s": 0,
+          "text": "Visto así, no se te puede discutir. Aunque te advierto que la botánica no está de tu lado."
+        },
+        {
+          "s": 1,
+          "text": "Mis papás vinieron juntos al aniversario. No están juntos juntos, pero se sentaron en la misma mesa y se rieron de mí cuando conté lo de los anillos."
+        },
+        {
+          "s": 0,
+          "text": "Eso es más de lo que muchos adultos consiguen. Cuando se separaron, pensé que nunca volverían a compartir ni un ascensor."
+        },
+        {
+          "s": 1,
+          "text": "¿Tú crees que fue por mi árbol?"
+        },
+        {
+          "s": 0,
+          "text": "Creo que fue porque un día un niño se puso a cavar un cantero para que nadie más se separara, y todos los adultos nos dimos cuenta de que estábamos asustando a los chicos con nuestros silencios. No es magia, Tadeo; es vergüenza bien aprovechada."
+        },
+        {
+          "s": 1,
+          "text": "No entiendo nada, pero suena bien."
+        },
+        {
+          "s": 0,
+          "text": "Ya lo entenderás cuando seas mayor. O no, que también es una posibilidad respetable. En cualquier caso, la próxima vez planta tus dientes, que son más baratos."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué creció donde Tadeo enterró los anillos?",
+          "options": [
+            "Un árbol nuevo traído del vivero del pueblo",
+            "Un jazmín que ya estaba allí",
+            "Nada"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Quién cuida la planta?",
+          "options": [
+            "Ceferino",
+            "Marisol",
+            "Los padres de Tadeo"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué hicieron los padres de Tadeo en el aniversario?",
+          "infer": true,
+          "options": [
+            "Volvieron a vivir juntos en la casa de siempre",
+            "No vinieron",
+            "Se sentaron en la misma mesa y se rieron"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Según Marisol, ¿qué hicieron los adultos gracias a Tadeo?",
+          "infer": true,
+          "options": [
+            "Volvieron a casarse",
+            "Se dieron cuenta de que asustaban a los niños con sus silencios",
+            "Plantaron árboles"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué gesto ingenuo de un niño ha provocado un cambio en los adultos que conoces?",
+          "model": "Mi sobrina preguntó en Navidad por qué dos tíos no se hablaban, y esa misma noche se reconciliaron."
+        },
+        {
+          "q": "¿Crees que la vergüenza puede ser útil?",
+          "model": "Sí, cuando nos obliga a revisar comportamientos que no queremos ver."
+        },
+        {
+          "q": "¿Qué idea infantil tuya resultó tener algo de razón?",
+          "model": "Pensaba que si cuidaba bien a mi perro, viviría para siempre; no fue así, pero vivió muchísimo."
+        }
+      ],
+      "gaps": "No es [magia], Tadeo; es [vergüenza] bien [aprovechada]. No [entiendo] nada, pero suena bien.",
+      "glossary": [
+        {
+          "word": "botánica",
+          "meaning": "ciencia que estudia las plantas"
+        },
+        {
+          "word": "riega",
+          "meaning": "echa agua"
+        },
+        {
+          "word": "aprovechada",
+          "meaning": "usada de forma útil"
+        },
+        {
+          "word": "advierto",
+          "meaning": "aviso"
+        }
+      ]
+    },
+    {
+      "id": "novia",
+      "title": "El vestido vuelve al armario",
+      "place": "El cuarto de la novia",
+      "context": "Un año después, Valentina y Camila guardan el vestido de la abuela, que acaba de morir.",
+      "speakers": [
+        {
+          "name": "Valentina",
+          "country": "Argentina",
+          "voice": "es-AR-ElenaNeural"
+        },
+        {
+          "name": "Camila",
+          "country": "Nicaragua",
+          "voice": "es-NI-YolandaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "¿Estás segura de que quieres guardarlo hoy? Podemos dejarlo para otro día."
+        },
+        {
+          "s": 0,
+          "text": "Hoy es el día. La abuela murió hace dos meses y todavía no he podido abrir su armario. Si no lo hago en el aniversario, no lo haré nunca."
+        },
+        {
+          "s": 1,
+          "text": "Es raro pensar que hace un año estaba sentada en esa galería criticando a todo el mundo."
+        },
+        {
+          "s": 0,
+          "text": "Criticando y dando su bendición a la vez. Era una especialista en el elogio envenenado. A Joaquín le dijo que bailaba como un ropero, y la semana antes de morir le pidió que le enseñara a bailar una ranchera."
+        },
+        {
+          "s": 1,
+          "text": "¿Y lo hizo?"
+        },
+        {
+          "s": 0,
+          "text": "En el hospital, con el suero colgado. Dos pasos y medio. Dice Joaquín que fue el baile más importante de su vida, más que el vals de la boda."
+        },
+        {
+          "s": 1,
+          "text": "Vale, ¿qué vas a hacer con el vestido?"
+        },
+        {
+          "s": 0,
+          "text": "Voy a hacer lo que ella hizo conmigo sin saberlo: guardarlo para cuando alguien lo necesite. No para obligar a nadie a ponérselo, sino para que exista la posibilidad. Las herencias más valiosas no son objetos, son permisos."
+        },
+        {
+          "s": 1,
+          "text": "¿Permisos?"
+        },
+        {
+          "s": 0,
+          "text": "Ella me dio permiso para casarme con alguien que no le gustaba del todo. Para equivocarme a mi manera. Ese vestido es eso: una autorización firmada en 1962 para desobedecer."
+        },
+        {
+          "s": 1,
+          "text": "Entonces guárdalo bien. Puede que algún día lo necesite yo."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Por qué Valentina quiere guardar el vestido ese día?",
+          "infer": true,
+          "options": [
+            "Porque se va de viaje",
+            "Porque Camila lo necesita",
+            "Porque si no lo hace en el aniversario, no lo hará nunca"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué le pidió la abuela a Joaquín antes de morir?",
+          "options": [
+            "Que cuidara a Valentina cuando él ya no estuviera",
+            "Que le enseñara a bailar una ranchera",
+            "Que aprendiera a tomar mate"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Según Valentina, ¿qué son las herencias más valiosas?",
+          "options": [
+            "Permisos",
+            "Objetos de valor",
+            "Dinero"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué representa el vestido para Valentina?",
+          "infer": true,
+          "options": [
+            "Una autorización para desobedecer",
+            "Una obligación familiar que nadie se atreve a discutir",
+            "Un recuerdo triste"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué permiso te dio alguien de tu familia sin decirlo explícitamente?",
+          "model": "Mi abuela, que se divorció en los años setenta, me dio permiso para no aguantar una relación infeliz."
+        },
+        {
+          "q": "¿Cómo se gestiona el duelo de alguien que muere poco después de una celebración?",
+          "model": "Recordando la celebración como el último gran momento compartido, no como una ironía cruel."
+        },
+        {
+          "q": "¿Qué objeto heredado guardas para que exista una posibilidad, no una obligación?",
+          "model": "El violín de mi abuelo; nadie lo toca, pero me gusta que alguien pueda hacerlo algún día."
+        }
+      ],
+      "gaps": "Las [herencias] más [valiosas] no son [objetos], son [permisos].",
+      "glossary": [
+        {
+          "word": "elogio envenenado",
+          "meaning": "halago que esconde una crítica"
+        },
+        {
+          "word": "suero",
+          "meaning": "líquido que se da por vía intravenosa"
+        },
+        {
+          "word": "autorización",
+          "meaning": "permiso oficial"
+        },
+        {
+          "word": "desobedecer",
+          "meaning": "no hacer lo que se manda"
+        }
+      ]
+    },
+    {
+      "id": "abuela",
+      "title": "La última grabación de Chela",
+      "place": "La galería de la casa",
+      "context": "En el aniversario, la familia escucha una grabación que Doña Chela dejó para los novios antes de morir.",
+      "speakers": [
+        {
+          "name": "Chela",
+          "country": "Uruguay",
+          "voice": "es-UY-ValentinaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Si están escuchando esto, es que me morí y ustedes siguen casados. Me alegro de lo segundo; de lo primero, no tanto."
+        },
+        {
+          "s": 0,
+          "text": "Les dejo esta grabación porque nunca supe decir las cosas bonitas a la cara. Aurelio tampoco. Nos pasamos cincuenta y un años diciéndonos «qué pesado eres» cuando queríamos decir «no te vayas nunca»."
+        },
+        {
+          "s": 0,
+          "text": "Joaquín, cuando te conocí pensé que eras demasiado blando para mi nieta. Me equivoqué. No eras blando; eras tierno, que es otra cosa y mucho más difícil. Los blandos ceden por miedo. Los tiernos ceden porque eligen hacerlo."
+        },
+        {
+          "s": 0,
+          "text": "Valentina, tú eres igualita a mí, y eso no es un elogio. Eres terca, orgullosa y tienes la manía de tener razón. Úsala poco. En un matrimonio, tener razón es el premio más caro y el que menos se disfruta."
+        },
+        {
+          "s": 0,
+          "text": "Y al muchacho que dio el brindis, si está por ahí: gracias por leer mi nombre en voz alta. A mi edad, una ya no espera que la nombren en las fiestas, salvo para pedirle que se siente. Usted me nombró para recordarme que todavía estaba."
+        },
+        {
+          "s": 0,
+          "text": "Ahora apaguen esto y pongan un tango. Y que nadie llore, que el rímel es caro y yo ya no estoy para prestarles el mío."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Por qué dejó Chela una grabación?",
+          "infer": true,
+          "options": [
+            "Porque estaba enferma de la voz",
+            "Porque quería un video",
+            "Porque nunca supo decir las cosas bonitas a la cara"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué diferencia hace Chela entre blando y tierno?",
+          "infer": true,
+          "options": [
+            "No hay diferencia",
+            "Los blandos ceden por miedo; los tiernos, porque eligen",
+            "Los tiernos son más débiles"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué le aconseja a Valentina sobre tener razón?",
+          "options": [
+            "Que siempre la defienda",
+            "Que la use poco, porque es un premio caro",
+            "Que la busque en todo"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Por qué le agradece al invitado del brindis?",
+          "options": [
+            "Por bailar con ella",
+            "Por traerle mate",
+            "Por nombrarla y recordarle que todavía estaba"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué frase cotidiana de tu familia esconde, en realidad, una declaración de amor?",
+          "model": "Mi padre dice «abrígate» cada vez que salgo, y sé que significa «te quiero»."
+        },
+        {
+          "q": "¿Estás de acuerdo en que tener razón es un premio caro en una pareja?",
+          "model": "Sí; ganar una discusión a costa de herir al otro casi nunca compensa."
+        },
+        {
+          "q": "¿Qué te gustaría que dijera de ti una grabación que dejaras para tu familia?",
+          "model": "Que intenté escuchar más de lo que hablaba, aunque no siempre lo conseguí."
+        }
+      ],
+      "gaps": "Los [blandos] ceden por [miedo]. Los tiernos [ceden] porque [eligen] hacerlo.",
+      "glossary": [
+        {
+          "word": "tierno",
+          "meaning": "cariñoso, afectuoso"
+        },
+        {
+          "word": "terca",
+          "meaning": "que no cambia de opinión"
+        },
+        {
+          "word": "manía",
+          "meaning": "costumbre obsesiva"
+        },
+        {
+          "word": "rímel",
+          "meaning": "maquillaje para las pestañas"
+        }
+      ]
+    },
+    {
+      "id": "novio",
+      "title": "La abuela de Guadalajara viaja otra vez",
+      "place": "El cuarto del novio",
+      "context": "Un año después, Lupita y Ximena vuelven a la estancia para el aniversario y recuerdan la boda.",
+      "speakers": [
+        {
+          "name": "Lupita",
+          "country": "México",
+          "voice": "es-MX-DaliaNeural"
+        },
+        {
+          "name": "Ximena",
+          "country": "España",
+          "voice": "es-ES-XimenaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Tía, ¿te das cuenta de que este cuarto todavía huele un poco a camisa quemada?"
+        },
+        {
+          "s": 0,
+          "text": "No exageres. Huele a jazmín. Lo que pasa es que tú tienes la memoria de un perro rastreador para las vergüenzas ajenas."
+        },
+        {
+          "s": 1,
+          "text": "Hablando de vergüenzas, ¿le contaste a Joaquín que el mariachi te costó tus ahorros de diez años?"
+        },
+        {
+          "s": 0,
+          "text": "Ni loca. Pero se enteró igual, porque en esta familia los secretos duran lo que un helado al sol. Me llamó llorando y me dijo que no tenía que haberlo hecho."
+        },
+        {
+          "s": 1,
+          "text": "¿Y qué le contestaste?"
+        },
+        {
+          "s": 0,
+          "text": "Que una madre no hace cuentas con el amor; hace cuentas con el supermercado. Y que, si quería devolvérmelo, me diera un nieto que supiera cantar «El Rey» con acento argentino."
+        },
+        {
+          "s": 1,
+          "text": "¿Y?"
+        },
+        {
+          "s": 0,
+          "text": "Valentina está embarazada de cuatro meses. Me lo dijeron anoche, en la cena. Así que he venido para el aniversario y me voy con un encargo: enseñarle rancheras a una criatura que todavía no tiene ni nombre."
+        },
+        {
+          "s": 1,
+          "text": "¡Tía! ¿Y por qué no me lo dijiste?"
+        },
+        {
+          "s": 0,
+          "text": "Porque tú grabas todo, mija, y lo subes a internet antes de que una termine la frase. Esta vez quería que la noticia la dieran ellos, con sus palabras y a su tiempo. Ya te enterarás oficialmente en el brindis, y vas a poner cara de sorpresa."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿A qué huele el cuarto según Lupita?",
+          "options": [
+            "A jazmín",
+            "A camisa quemada",
+            "A perfume"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cómo se enteró Joaquín del gasto del mariachi?",
+          "infer": true,
+          "options": [
+            "Porque Lupita se lo contó",
+            "Porque en esa familia los secretos no duran",
+            "Por un extracto bancario"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué le pidió Lupita a Joaquín para devolvérselo?",
+          "options": [
+            "Un nieto que supiera cantar «El Rey»",
+            "El dinero",
+            "Un viaje"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Por qué Lupita no le contó a Ximena lo del embarazo?",
+          "infer": true,
+          "options": [
+            "Porque no lo sabía",
+            "Porque era un secreto para siempre",
+            "Porque Ximena graba todo"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Crees que el amor de los padres debe tener límites económicos?",
+          "model": "Sí; ayudar está bien, pero no a costa de poner en riesgo su propia seguridad."
+        },
+        {
+          "q": "¿Cuánto duran los secretos en tu familia?",
+          "model": "Muy poco; en cuanto se lo cuentas a una tía, lo sabe todo el barrio."
+        },
+        {
+          "q": "¿Qué tradición te gustaría transmitir a una generación que aún no ha nacido?",
+          "model": "Las canciones que mi abuela cantaba en la cocina mientras preparaba el pan."
+        }
+      ],
+      "gaps": "Que una [madre] no hace [cuentas] con el [amor]; hace cuentas con el [supermercado].",
+      "glossary": [
+        {
+          "word": "rastreador",
+          "meaning": "que sigue un rastro"
+        },
+        {
+          "word": "encargo",
+          "meaning": "tarea que alguien te pide"
+        },
+        {
+          "word": "criatura",
+          "meaning": "niño muy pequeño"
+        },
+        {
+          "word": "embarazada",
+          "meaning": "que espera un hijo"
+        }
+      ]
+    },
+    {
+      "id": "cocina",
+      "title": "El restaurante Plan B",
+      "place": "La cocina de la estancia",
+      "context": "Un año después, Ramiro y Yesenia, ahora socios, cocinan el aniversario desde su propio negocio.",
+      "speakers": [
+        {
+          "name": "Ramiro",
+          "country": "Perú",
+          "voice": "es-PE-AlexNeural"
+        },
+        {
+          "name": "Yesenia",
+          "country": "Perú",
+          "voice": "es-PE-CamilaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Chef, perdón, socio. Todavía no me acostumbro. ¿Se acuerda de que hace un año yo pensaba que me iba a despedir por la torta?"
+        },
+        {
+          "s": 0,
+          "text": "Me acuerdo de que pensaste que te despediría por obedecer. Que es, por cierto, el error más frecuente de los jefes mediocres: castigar a quien cumple las instrucciones porque las instrucciones eran malas."
+        },
+        {
+          "s": 1,
+          "text": "Y en cambio aquí estamos, con un restaurante que se llama «Plan B» y una carta en la que el postre más pedido sigue siendo el vasito de dulce de leche."
+        },
+        {
+          "s": 0,
+          "text": "La ironía es deliciosa. Llevo veinte años intentando que me reconozcan por platos sofisticados, y la fama me llega por un postre improvisado en quince minutos para tapar un sabotaje familiar."
+        },
+        {
+          "s": 1,
+          "text": "Es que la gente no busca perfección, busca historia. Cuando contamos en la carta que el postre nació para salvar una boda, todos lo quieren probar."
+        },
+        {
+          "s": 0,
+          "text": "Eso me inquieta un poco. ¿Vendemos comida o vendemos anécdotas?"
+        },
+        {
+          "s": 1,
+          "text": "Las dos cosas. Si la anécdota no tuviera buena comida detrás, nadie volvería. Y vuelven."
+        },
+        {
+          "s": 0,
+          "text": "Tienes razón. Por cierto, ¿sabes quién reservó para el aniversario? La tía de la novia. La de la torta."
+        },
+        {
+          "s": 1,
+          "text": "Entonces le preparamos su postre con un nombre equivocado escrito encima. Para que entienda que aquí no olvidamos."
+        },
+        {
+          "s": 0,
+          "text": "Eso, socia, se llama justicia poética. Y es gratis."
+        }
+      ],
+      "choice": [
+        {
+          "q": "Según Ramiro, ¿cuál es el error de los jefes mediocres?",
+          "infer": true,
+          "options": [
+            "Castigar a quien cumple instrucciones malas",
+            "Pagar poco",
+            "No dar vacaciones"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Por qué se ha hecho famoso el restaurante?",
+          "options": [
+            "Por sus platos sofisticados",
+            "Por su ubicación",
+            "Por un postre improvisado"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Según Yesenia, ¿qué busca la gente?",
+          "infer": true,
+          "options": [
+            "Precios bajos y raciones generosas",
+            "Historia, no perfección",
+            "Comida tradicional"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué quieren hacer con la tía que reservó?",
+          "options": [
+            "No atenderla",
+            "Invitarla gratis",
+            "Prepararle un postre con un nombre equivocado"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Vendemos hoy más historias que productos?",
+          "model": "Sí; el marketing actual se basa en contar de dónde viene algo y quién lo hizo."
+        },
+        {
+          "q": "¿Qué éxito tuyo llegó por algo que hiciste casi sin querer?",
+          "model": "Un vídeo que grabé por diversión tuvo miles de visitas y me consiguió un cliente."
+        },
+        {
+          "q": "¿Crees en la justicia poética?",
+          "model": "Me gusta como idea, aunque en la vida real los que hacen daño no siempre reciben su merecido."
+        }
+      ],
+      "gaps": "Es que la [gente] no busca [perfección], busca [historia]. Cuando contamos en la carta que el postre nació para [salvar] una boda, todos lo quieren probar.",
+      "glossary": [
+        {
+          "word": "mediocres",
+          "meaning": "de poca calidad"
+        },
+        {
+          "word": "sofisticados",
+          "meaning": "complejos, refinados"
+        },
+        {
+          "word": "inquieta",
+          "meaning": "preocupa"
+        },
+        {
+          "word": "justicia poética",
+          "meaning": "castigo adecuado e irónico"
+        }
+      ]
+    },
+    {
+      "id": "asado",
+      "title": "Don Beto en Rosario",
+      "place": "La parrilla del jardín",
+      "context": "Don Beto cuenta a los invitados del aniversario cómo fue su visita a Rosario, invitado por el tío argentino.",
+      "speakers": [
+        {
+          "name": "Beto",
+          "country": "Chile",
+          "voice": "es-CL-LorenzoNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Les cuento, porque me lo han preguntado veinte veces. Sí, fui a Rosario. Sí, el argentino me recibió en su casa. Y no, no nos matamos, aunque estuvimos cerca dos o tres veces."
+        },
+        {
+          "s": 0,
+          "text": "La primera noche él hizo el asado. Con leña de quebracho, fuego bajísimo, cuatro horas. Les confieso, con la mano en el corazón y la otra en el vino, que estaba casi tan bueno como el mío."
+        },
+        {
+          "s": 0,
+          "text": "La segunda noche lo hice yo, al estilo chileno, con la carne más fina y el pebre al lado. Él lo probó en silencio y después dijo: «Esto no es asado, pero lo voy a repetir». Viniendo de un argentino, eso es una medalla."
+        },
+        {
+          "s": 0,
+          "text": "Lo que más me impresionó no fue la comida. Fue que su nieta, de diez años, no entendía por qué peleábamos. Para ella, chileno y argentino eran como Boca y River: algo de lo que se habla los domingos, pero que no sirve para odiar a nadie."
+        },
+        {
+          "s": 0,
+          "text": "Y pensé que quizás las rivalidades son como los idiomas: se aprenden de niño, y se pueden desaprender si uno tiene la humildad de sentarse a la mesa del otro."
+        },
+        {
+          "s": 0,
+          "text": "Así que este año el asado del aniversario lo hacemos a cuatro manos. Él trae la leña y yo pongo la paciencia. El fuego, eso sí, lo sigo controlando yo."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cómo fue el asado del argentino según Beto?",
+          "options": [
+            "Casi tan bueno como el suyo",
+            "Malísimo, de principio a fin",
+            "Mucho mejor que el suyo, sin discusión"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué dijo el argentino del asado chileno?",
+          "options": [
+            "Que era el mejor",
+            "Que no era asado, pero lo iba a repetir",
+            "Que no le gustó"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué le impresionó más a Beto?",
+          "infer": true,
+          "options": [
+            "La casa del argentino",
+            "El vino",
+            "Que la nieta no entendía por qué peleaban"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Con qué compara Beto las rivalidades?",
+          "infer": true,
+          "options": [
+            "Con el fútbol y sus rivalidades",
+            "Con los idiomas",
+            "Con el fuego"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Crees que las rivalidades se pueden desaprender?",
+          "model": "Sí, sobre todo cuando conoces personalmente a alguien del otro lado."
+        },
+        {
+          "q": "¿Has visitado a alguien con quien antes tenías una rivalidad?",
+          "model": "Sí, a un antiguo compañero de clase con el que competía en todo; hoy somos buenos amigos."
+        },
+        {
+          "q": "¿Qué hace falta para sentarse a la mesa del otro?",
+          "model": "Curiosidad y humildad; reconocer que tu manera no es la única válida."
+        }
+      ],
+      "gaps": "quizás las [rivalidades] son como los [idiomas]: se aprenden de niño, y se pueden [desaprender] si uno tiene la [humildad] de sentarse a la mesa del otro.",
+      "glossary": [
+        {
+          "word": "quebracho",
+          "meaning": "árbol de madera muy dura"
+        },
+        {
+          "word": "pebre",
+          "meaning": "salsa chilena picante con cebolla y cilantro"
+        },
+        {
+          "word": "medalla",
+          "meaning": "premio"
+        },
+        {
+          "word": "humildad",
+          "meaning": "modestia, falta de orgullo"
+        }
+      ]
+    },
+    {
+      "id": "mesa",
+      "title": "Gloria y Pepe, segunda temporada",
+      "place": "Las mesas largas",
+      "context": "En el aniversario, Gloria y Pepe llegan juntos, ante el asombro de toda la familia.",
+      "speakers": [
+        {
+          "name": "Gloria",
+          "country": "Panamá",
+          "voice": "es-PA-MargaritaNeural"
+        },
+        {
+          "name": "Pepe",
+          "country": "Panamá",
+          "voice": "es-PA-RobertoNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Gloria, todos nos miran como si fuéramos una aparición."
+        },
+        {
+          "s": 0,
+          "text": "Es que lo somos, Pepe. Para esta familia, dos personas que se reconcilian después de doce años son un milagro equiparable a la multiplicación de los panes. Déjalos que miren."
+        },
+        {
+          "s": 1,
+          "text": "Mi hermano me preguntó si nos vamos a casar otra vez."
+        },
+        {
+          "s": 0,
+          "text": "Ni se te ocurra. Lo nuestro funcionó peor con papeles que sin ellos. Ahora cada uno vive en su casa, cenamos los jueves y los domingos discutimos de política por teléfono. Es la relación más sana que he tenido."
+        },
+        {
+          "s": 1,
+          "text": "Yo te lo propondría igual, para que lo sepas."
+        },
+        {
+          "s": 0,
+          "text": "Y yo te diría que no, para que lo sepas también. Pero me gusta que lo propongas. A cierta edad, la propuesta vale más que la boda."
+        },
+        {
+          "s": 1,
+          "text": "¿Y tu hermana? La del plano de las mesas."
+        },
+        {
+          "s": 0,
+          "text": "Vino a verme en marzo, con una caja de alfajores, a confesar que lo hizo a propósito. Esperaba que la perdonara."
+        },
+        {
+          "s": 1,
+          "text": "¿Y la perdonaste?"
+        },
+        {
+          "s": 0,
+          "text": "Le dije que no había nada que perdonar, que le debía la mejor venganza de mi vida: ser feliz justo donde ella quería verme sufrir. Se fue sin dejar los alfajores."
+        },
+        {
+          "s": 1,
+          "text": "Eso es muy tuyo."
+        },
+        {
+          "s": 0,
+          "text": "Lo sé. Por eso volviste, y por eso te dejo volver los jueves."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cómo ve la familia la reconciliación de Gloria y Pepe?",
+          "infer": true,
+          "options": [
+            "Como un milagro",
+            "Como una broma",
+            "Como algo normal"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cómo es ahora su relación?",
+          "options": [
+            "Viven juntos otra vez, como antes de separarse",
+            "Se casaron de nuevo",
+            "Cada uno en su casa, cenan los jueves"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué confesó la hermana de Gloria?",
+          "options": [
+            "Que hizo el plano a propósito",
+            "Que mandó la torta desde Buenos Aires sin avisar",
+            "Que robó los anillos"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cuál fue la \"venganza\" de Gloria?",
+          "infer": true,
+          "options": [
+            "No perdonarla nunca",
+            "Ser feliz donde su hermana quería verla sufrir",
+            "Quedarse con los alfajores"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Crees que una relación puede funcionar mejor sin convivir?",
+          "model": "Para algunas personas sí, sobre todo cuando ambos valoran mucho su independencia."
+        },
+        {
+          "q": "¿Es la felicidad la mejor venganza?",
+          "model": "Probablemente sí, porque no depende de la otra persona y no te convierte en alguien rencoroso."
+        },
+        {
+          "q": "¿Qué vale más para ti: una propuesta o la ceremonia en sí?",
+          "model": "La propuesta, porque es el momento en que alguien expresa su deseo de compartir la vida."
+        }
+      ],
+      "gaps": "A cierta [edad], la [propuesta] vale más que la [boda]. ¿Y tu [hermana]?",
+      "glossary": [
+        {
+          "word": "aparición",
+          "meaning": "algo que se ve y parece irreal"
+        },
+        {
+          "word": "equiparable",
+          "meaning": "comparable"
+        },
+        {
+          "word": "alfajores",
+          "meaning": "dulces de dos galletas con relleno"
+        },
+        {
+          "word": "a propósito",
+          "meaning": "intencionadamente"
+        }
+      ]
+    },
+    {
+      "id": "ex",
+      "title": "Renata, la madrina",
+      "place": "El rosedal",
+      "context": "Un año después, Renata vuelve al rosedal, esta vez invitada por los novios, y se encuentra con Rocío.",
+      "speakers": [
+        {
+          "name": "Renata",
+          "country": "Venezuela",
+          "voice": "es-VE-PaolaNeural"
+        },
+        {
+          "name": "Rocío",
+          "country": "Ecuador",
+          "voice": "es-EC-AndreaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Renata. Esta vez de verde. Veo que has aprendido la lección cromática."
+        },
+        {
+          "s": 0,
+          "text": "El rojo quedó retirado del servicio activo. Esta vez vine invitada por Valentina, no por Facundo. Lo cual, si me lo hubieras dicho hace un año, me habría parecido ciencia ficción."
+        },
+        {
+          "s": 1,
+          "text": "¿Y cómo pasó?"
+        },
+        {
+          "s": 0,
+          "text": "Pasó que Valentina me escribió en enero. Quería devolverme la caja de cartas que dejé en la boda. Me dijo que no las había leído, que no le correspondía. Quedamos a tomar un café, y en lugar de hablar de Joaquín hablamos dos horas de nosotras."
+        },
+        {
+          "s": 1,
+          "text": "Eso es casi más raro que tu vestido rojo."
+        },
+        {
+          "s": 0,
+          "text": "Lo sé. Pero creo que las dos entendimos algo: que habíamos pasado años definiéndonos por un hombre que, francamente, no es tan interesante. Lo digo con cariño."
+        },
+        {
+          "s": 1,
+          "text": "¿Y las cartas?"
+        },
+        {
+          "s": 0,
+          "text": "Las quemamos juntas en una parrilla, con Don Beto mirando horrorizado porque decía que el papel le arruinaba el sabor de la leña."
+        },
+        {
+          "s": 1,
+          "text": "¿Y Facundo?"
+        },
+        {
+          "s": 0,
+          "text": "Facundo me pidió matrimonio en julio. Le dije que sí, con una condición: que el padrino no desaparezca. Y que tú hagas las flores. Sin arcos para esconder a nadie."
+        },
+        {
+          "s": 1,
+          "text": "Trato hecho. Aunque siempre conviene tener un arco a mano, por si acaso. Nunca se sabe quién aparece."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué color lleva Renata esta vez?",
+          "options": [
+            "Rojo intenso",
+            "Azul",
+            "Verde"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Por qué le escribió Valentina?",
+          "infer": true,
+          "options": [
+            "Para devolverle la caja de cartas",
+            "Para pedirle perdón por lo que dijo en la boda",
+            "Para invitarla a su casa"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué hicieron con las cartas?",
+          "options": [
+            "Las leyeron juntas en voz alta, una por una",
+            "Las quemaron en una parrilla",
+            "Se las dieron a Joaquín"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué condición puso Renata para casarse con Facundo?",
+          "infer": true,
+          "options": [
+            "Que el padrino no desaparezca",
+            "Que la boda se celebre en otro lugar, lejos del campo",
+            "Que no haya música"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Puede surgir una amistad entre dos personas unidas por la misma expareja?",
+          "model": "Sí, si ambas dejan de verse como rivales y descubren intereses propios."
+        },
+        {
+          "q": "¿Qué ritual harías para cerrar definitivamente una etapa?",
+          "model": "Escribiría una carta de despedida y la guardaría en un lugar al que no vuelva."
+        },
+        {
+          "q": "¿Te has definido alguna vez por otra persona más de lo que debías?",
+          "model": "Sí, durante una relación dejé de lado aficiones mías para adaptarme a las de mi pareja."
+        }
+      ],
+      "gaps": "que [habíamos] pasado años [definiéndonos] por un [hombre] que, francamente, no es tan [interesante].",
+      "glossary": [
+        {
+          "word": "cromática",
+          "meaning": "relacionada con los colores"
+        },
+        {
+          "word": "retirado",
+          "meaning": "fuera de uso"
+        },
+        {
+          "word": "horrorizado",
+          "meaning": "muy asustado o disgustado"
+        },
+        {
+          "word": "por si acaso",
+          "meaning": "por precaución"
+        }
+      ]
+    },
+    {
+      "id": "planner",
+      "title": "Mariela, después de la tormenta",
+      "place": "La entrada de la carpa",
+      "context": "Mariela organiza el aniversario de los novios y habla a su nuevo equipo antes de empezar.",
+      "speakers": [
+        {
+          "name": "Mariela",
+          "country": "Colombia",
+          "voice": "es-CO-SalomeNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Equipo, antes de abrir las puertas, quiero contarles algo, aunque sea a costa de mi reputación de mujer de hierro."
+        },
+        {
+          "s": 0,
+          "text": "Hace un año, en esta misma estancia, organicé la boda más catastrófica de mi carrera. Aquel día también firmé mi divorcio en una estación de servicio, entre un café recalentado y una medialuna fosilizada."
+        },
+        {
+          "s": 0,
+          "text": "Pensaba que la profesionalidad consistía en que nadie notara nada. En tragarse el cansancio, el miedo y la tristeza como quien se traga un chicle. Y aquella noche, un invitado me preguntó cómo estaba, y me desmoroné encima de una caja de vino."
+        },
+        {
+          "s": 0,
+          "text": "Al lunes siguiente empecé terapia. Descubrimos, mi terapeuta y yo, que llevaba diez años organizando la felicidad ajena para no tener que ocuparme de la mía. Una estrategia brillante, salvo por un detalle: no funcionaba."
+        },
+        {
+          "s": 0,
+          "text": "Por eso, desde hoy, hay tres reglas nuevas en esta empresa. Primera: nadie trabaja más de doce horas seguidas. Segunda: si alguien no está bien, lo dice, y el resto lo cubre sin hacer preguntas. Tercera: al final de cada evento, nos sentamos a comer juntos, como invitados."
+        },
+        {
+          "s": 0,
+          "text": "No les prometo que no haya desastres. Les prometo que no los vamos a vivir solos. Ahora sí, abran las puertas. Y si ven un caballo cerca de un ramo, avísenme."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué pensaba Mariela antes sobre la profesionalidad?",
+          "infer": true,
+          "options": [
+            "Que era trabajar más horas que nadie en la empresa",
+            "Que consistía en que nadie notara nada",
+            "Que era tener éxito"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué descubrió en terapia?",
+          "infer": true,
+          "options": [
+            "Que debía cambiar de trabajo",
+            "Que no le gustaban las bodas",
+            "Que organizaba la felicidad ajena para no ocuparse de la suya"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cuál es una de las nuevas reglas?",
+          "options": [
+            "Comer juntos al final de cada evento",
+            "Trabajar más rápido para irse antes a casa",
+            "No hablar con los invitados"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué promete Mariela a su equipo?",
+          "options": [
+            "Que no habrá desastres si todo se planifica bien",
+            "Que no vivirán los desastres solos",
+            "Que ganarán más dinero"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué regla añadirías a un lugar de trabajo para cuidar a las personas?",
+          "model": "Prohibiría enviar correos de trabajo fuera del horario laboral."
+        },
+        {
+          "q": "¿Has usado alguna vez el trabajo para no enfrentarte a tus problemas?",
+          "model": "Sí, durante una ruptura me apunté a todos los proyectos posibles para no pensar."
+        },
+        {
+          "q": "¿Qué significa para ti ser profesional?",
+          "model": "Ser responsable y competente, pero sin dejar de ser humano."
+        }
+      ],
+      "gaps": "No les [prometo] que no [haya] [desastres]. Les prometo que no los vamos a [vivir] solos.",
+      "glossary": [
+        {
+          "word": "reputación",
+          "meaning": "opinión que los demás tienen de alguien"
+        },
+        {
+          "word": "fosilizada",
+          "meaning": "muy vieja y dura"
+        },
+        {
+          "word": "desmoroné",
+          "meaning": "me derrumbé"
+        },
+        {
+          "word": "estrategia",
+          "meaning": "plan para conseguir algo"
+        }
+      ]
+    },
+    {
+      "id": "banda",
+      "title": "El disco que nadie esperaba",
+      "place": "El escenario de la carpa",
+      "context": "Un año después, la orquesta y el mariachi presentan juntos su disco en el aniversario.",
+      "speakers": [
+        {
+          "name": "Willy",
+          "country": "Cuba",
+          "voice": "es-CU-ManuelNeural"
+        },
+        {
+          "name": "Chuy",
+          "country": "Guatemala",
+          "voice": "es-GT-AndresNeural"
+        },
+        {
+          "name": "Yamilé",
+          "country": "Cuba",
+          "voice": "es-CU-BelkysNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Buenas noches. Hace un año, en este mismo escenario, Don Chuy y yo estuvimos a punto de batirnos a duelo con trompetas y sombreros."
+        },
+        {
+          "s": 1,
+          "text": "Y hoy venimos a presentarles un disco que se llama «Boda en la pampa». Lo grabamos en La Habana, en Guadalajara y en un estudio de Buenos Aires que olía a humedad y a gloria."
+        },
+        {
+          "s": 2,
+          "text": "Les advierto que no todo fue armonía. Discutimos seis meses sobre si la trompeta cubana debía ir delante o detrás del violín mexicano. Hubo amenazas, portazos y un tequila lanzado contra una pared."
+        },
+        {
+          "s": 0,
+          "text": "El tequila era barato. No hubo víctimas."
+        },
+        {
+          "s": 2,
+          "text": "Lo que aprendimos es que la fusión no consiste en mezclarlo todo hasta que nada se distinga. Consiste en que cada uno conserve su voz y aun así deje espacio para la del otro. Es lo contrario de un batido: es más bien una conversación."
+        },
+        {
+          "s": 1,
+          "text": "Muy filosófica la muchacha. Lo que quiere decir es que yo sigo cantando como mexicano y Willy sigue tocando como cubano, y que a la gente le gusta igual."
+        },
+        {
+          "s": 0,
+          "text": "La primera canción está dedicada a Doña Chela, que nos dejó este año. Ella lloró con el son de Yamilé y luego nos dijo que desafinábamos todos. Las dos cosas eran verdad."
+        },
+        {
+          "s": 2,
+          "text": "Por ella, por los novios, y por todos los que alguna vez se pelearon por un escenario que podían compartir."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Dónde grabaron el disco?",
+          "options": [
+            "Solo en Cuba",
+            "En la estancia",
+            "En La Habana, Guadalajara y Buenos Aires"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Sobre qué discutieron seis meses?",
+          "infer": true,
+          "options": [
+            "Sobre el dinero",
+            "Sobre la posición de la trompeta y el violín",
+            "Sobre el nombre del disco"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Según Yamilé, ¿en qué consiste la fusión?",
+          "infer": true,
+          "options": [
+            "En mezclarlo todo",
+            "En que uno mande",
+            "En que cada uno conserve su voz y deje espacio al otro"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿A quién está dedicada la primera canción?",
+          "options": [
+            "A Doña Chela",
+            "A los novios y a sus padres",
+            "A Mariela"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Estás de acuerdo en que la fusión es más una conversación que un batido?",
+          "model": "Sí; las mejores mezclas culturales son aquellas en las que todavía se reconocen las partes."
+        },
+        {
+          "q": "¿Qué proyecto conjunto te costó discusiones pero valió la pena?",
+          "model": "Un trabajo de fin de carrera con dos compañeros; casi no nos hablábamos, pero sacamos la mejor nota."
+        },
+        {
+          "q": "¿Puede algo ser a la vez emocionante y técnicamente imperfecto?",
+          "model": "Claro; muchas canciones que me emocionan están grabadas en directo y con errores."
+        }
+      ],
+      "gaps": "Lo que [aprendimos] es que la [fusión] no consiste en [mezclarlo] todo hasta que nada se [distinga].",
+      "glossary": [
+        {
+          "word": "batirnos a duelo",
+          "meaning": "enfrentarnos en combate"
+        },
+        {
+          "word": "portazos",
+          "meaning": "golpes fuertes al cerrar puertas"
+        },
+        {
+          "word": "desafinábamos",
+          "meaning": "cantábamos sin el tono correcto"
+        },
+        {
+          "word": "armonía",
+          "meaning": "acuerdo, equilibrio"
+        }
+      ]
+    },
+    {
+      "id": "pista",
+      "title": "El auto que volvió",
+      "place": "La pista de baile",
+      "context": "En el aniversario, Don Horacio cuenta a un invitado una sorpresa que recibió durante el año.",
+      "speakers": [
+        {
+          "name": "Horacio",
+          "country": "Uruguay",
+          "voice": "es-UY-MateoNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "¿Se acuerda del auto que tuve que vender para pagar la boda? El que Valentina creía robado. Pues ya no hay secreto. Se lo contó mi hermano en Navidad, después del tercer vino."
+        },
+        {
+          "s": 0,
+          "text": "Ella no me habló durante una semana. Dijo que se sentía culpable, que nunca me había pedido una fiesta así, que habría preferido casarse en el registro civil con empanadas. Probablemente es verdad. Pero eso es lo que dicen los hijos cuando ya tuvieron la fiesta."
+        },
+        {
+          "s": 0,
+          "text": "Y en marzo, para mi cumpleaños, apareció en la puerta de casa con Joaquín y un auto. No el mismo; uno más viejo todavía, con la pintura saltada y un ruido en el motor que suena a tos de fumador. Lo habían comprado entre los dos, ahorrando todo el año."
+        },
+        {
+          "s": 0,
+          "text": "Me dieron las llaves y me dijeron: «Ahora estamos a mano». Yo les dije que no, que entre un padre y una hija nunca se está a mano, que esa es justamente la gracia."
+        },
+        {
+          "s": 0,
+          "text": "Lo manejo todos los días. Se para en los semáforos, se calienta en las subidas, y cada vez que arranca me acuerdo del vals. Es el peor auto que tuve y el único que no pienso vender nunca."
+        },
+        {
+          "s": 0,
+          "text": "Ahora, si me disculpa, voy a sacar a bailar a mi hija. La rodilla sigue igual, pero los pasos cortos ya me salen solos."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cómo se enteró Valentina de la venta del auto?",
+          "options": [
+            "Lo descubrió en unos papeles guardados en el desván",
+            "Se lo dijo su padre",
+            "Su tío se lo contó en Navidad"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué dijo Valentina al enterarse?",
+          "infer": true,
+          "options": [
+            "Que estaba orgullosa de cada detalle de la fiesta",
+            "Que habría preferido una boda sencilla",
+            "Que quería otra fiesta"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué le regalaron a Horacio para su cumpleaños?",
+          "options": [
+            "Un auto viejo",
+            "El mismo auto de la boda",
+            "Un viaje"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Según Horacio, ¿cuál es la gracia entre un padre y una hija?",
+          "infer": true,
+          "options": [
+            "Que todo se devuelve tarde o temprano",
+            "Que nunca se está a mano",
+            "Que no hay secretos"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Crees que entre padres e hijos se puede estar «a mano»?",
+          "model": "No; la relación no es un intercambio, aunque los gestos recíprocos la enriquecen."
+        },
+        {
+          "q": "¿Qué objeto imperfecto conservas por lo que significa?",
+          "model": "Una bicicleta vieja que me regaló mi padre; casi no funciona, pero no puedo deshacerme de ella."
+        },
+        {
+          "q": "¿Qué dicen los hijos cuando ya han recibido lo que querían?",
+          "model": "Que no hacía falta, aunque en el fondo se alegran mucho de haberlo recibido."
+        }
+      ],
+      "gaps": "Yo les dije que no, que entre un [padre] y una [hija] nunca se está a [mano], que esa es justamente la [gracia].",
+      "glossary": [
+        {
+          "word": "pintura saltada",
+          "meaning": "pintura que se cae a trozos"
+        },
+        {
+          "word": "a mano",
+          "meaning": "sin deudas entre dos personas"
+        },
+        {
+          "word": "subidas",
+          "meaning": "cuestas, pendientes"
+        },
+        {
+          "word": "arranca",
+          "meaning": "empieza a funcionar"
+        }
+      ]
+    },
+    {
+      "id": "barra",
+      "title": "Ximena y la vida llena",
+      "place": "La barra",
+      "context": "Un año después, Ximena vuelve a la barra de Edgardo en el aniversario, y la familia la mira de otra forma.",
+      "speakers": [
+        {
+          "name": "Edgardo",
+          "country": "Puerto Rico",
+          "voice": "es-PR-VictorNeural"
+        },
+        {
+          "name": "Ximena",
+          "country": "España",
+          "voice": "es-ES-XimenaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Licenciada, bienvenida. ¿Le sirvo lo de siempre o ha cambiado de estado civil y de bebida?"
+        },
+        {
+          "s": 1,
+          "text": "Lo de siempre, por favor. Ni estado civil ni bebida. Lo que sí cambió es la pregunta de mis tías. Ahora ya no me preguntan cuándo me caso. Me preguntan cuándo me voy a vivir a Lisboa."
+        },
+        {
+          "s": 0,
+          "text": "¿Lisboa?"
+        },
+        {
+          "s": 1,
+          "text": "Me ofrecieron un puesto en un tribunal internacional de derecho laboral. Sesenta años de tradición familiar de abogadas que nunca salieron de Guadalajara, y yo me voy a Portugal. Sola."
+        },
+        {
+          "s": 0,
+          "text": "Y supongo que ahora el problema es que se vaya sola."
+        },
+        {
+          "s": 1,
+          "text": "Exactamente. Antes era «¿y tú, para cuándo?». Ahora es «¿y no te da miedo?». Es la misma pregunta con otro disfraz. Lo que les inquieta no es mi soltería, sino mi libertad."
+        },
+        {
+          "s": 0,
+          "text": "Hay personas a las que la libertad ajena les parece un reproche. Como si, al vivir distinto, usted les estuviera diciendo que ellas se equivocaron."
+        },
+        {
+          "s": 1,
+          "text": "Qué lucidez, Edgardo. ¿Seguro que es barman y no filósofo?"
+        },
+        {
+          "s": 0,
+          "text": "Es lo mismo, pero con hielo. Por cierto, ¿sabe quién me preguntó por usted? La tía Concha. Me dijo, en voz baja, que la envidia. Que ella habría querido irse a algún sitio a los cuarenta, y no se atrevió."
+        },
+        {
+          "s": 1,
+          "text": "¿La tía Concha? ¿La número trece?"
+        },
+        {
+          "s": 0,
+          "text": "La misma. Las preguntas más insistentes suelen esconder las respuestas que uno no se dio."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué preguntan ahora las tías a Ximena?",
+          "options": [
+            "Cuándo se va a vivir a Lisboa",
+            "Cuándo piensa casarse y con quién",
+            "Si tiene novio"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué trabajo le ofrecieron?",
+          "options": [
+            "Una cátedra en una universidad de Coímbra",
+            "Un bar en Lisboa",
+            "Un puesto en un tribunal internacional"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Según Ximena, ¿qué inquieta realmente a su familia?",
+          "infer": true,
+          "options": [
+            "Su soltería prolongada",
+            "Su libertad",
+            "Su trabajo"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué le confesó la tía Concha a Edgardo?",
+          "infer": true,
+          "options": [
+            "Que envidia a Ximena",
+            "Que quiere casarla con alguien de su entorno",
+            "Que se va a mudar"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Has notado que la libertad de otra persona incomoda a quienes no se atrevieron a ejercerla?",
+          "model": "Sí; cuando dejé mi trabajo para viajar, algunos conocidos me criticaron con una mezcla de envidia y miedo."
+        },
+        {
+          "q": "¿Qué pregunta insistente de tu entorno esconde, quizá, una respuesta que esa persona no se dio?",
+          "model": "Un amigo me pregunta siempre si no me aburro viviendo solo, y creo que en realidad le cuesta estar solo a él."
+        },
+        {
+          "q": "¿Te irías a vivir sola o solo a otro país?",
+          "model": "Sí, aunque me costaría dejar a mi familia; creo que sería una experiencia que me cambiaría."
+        }
+      ],
+      "gaps": "Las [preguntas] más [insistentes] suelen [esconder] las [respuestas] que uno no se dio.",
+      "glossary": [
+        {
+          "word": "disfraz",
+          "meaning": "ropa para parecer otra cosa"
+        },
+        {
+          "word": "reproche",
+          "meaning": "crítica"
+        },
+        {
+          "word": "lucidez",
+          "meaning": "claridad mental"
+        },
+        {
+          "word": "envidia",
+          "meaning": "deseo de tener lo que otro tiene"
+        }
+      ]
+    },
+    {
+      "id": "establo",
+      "title": "El jubilado y su caballo",
+      "place": "El establo",
+      "context": "Un año después, Ceferino, recién jubilado, se despide de Lucero en el establo.",
+      "speakers": [
+        {
+          "name": "Ceferino",
+          "country": "Bolivia",
+          "voice": "es-BO-MarceloNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Bueno, Lucero, hoy es mi último día. El patrón dice que veinte años son suficientes y que ahora me toca descansar. Como si descansar fuera un oficio que uno sabe hacer."
+        },
+        {
+          "s": 0,
+          "text": "Te va a cuidar la doctora Julieta. Sí, la que temblaba más que tú con los fuegos artificiales. Ahora viene los sábados y te habla sin miedo. Hasta aprendió tres palabras en quechua, mal pronunciadas, pero tú se las perdonas."
+        },
+        {
+          "s": 0,
+          "text": "¿Te acuerdas de la noche de la boda? Todo el mundo cree que te calmé yo. La verdad es que me calmaste tú a mí. Cuando explotó el primer cohete, yo estaba temblando, y tú bajaste la cabeza y me empujaste el hombro con el hocico, como diciendo «tranquilo, viejo, que esto lo hacemos juntos»."
+        },
+        {
+          "s": 0,
+          "text": "Mi abuela decía que los animales no nos pertenecen; que, como mucho, nos acompañan un tramo del camino y después siguen el suyo. Yo nunca le creí. Pensaba que tú eras mío. Hoy entiendo que el que era tuyo era yo."
+        },
+        {
+          "s": 0,
+          "text": "No voy a llorar, porque los peones no lloran. Bueno, sí lloran, pero en el establo, donde solo los ven los caballos. Y ustedes no cuentan nada."
+        },
+        {
+          "s": 0,
+          "text": "Come bien, no te comas más ramos, y si alguna vez organizan otra boda con fuegos artificiales, patea al que tenga la idea. De mi parte."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Por qué se despide Ceferino de Lucero?",
+          "infer": true,
+          "options": [
+            "Porque vende el caballo",
+            "Porque se muda de país",
+            "Porque se jubila"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Quién va a cuidar a Lucero?",
+          "options": [
+            "Los novios, que lo pidieron expresamente",
+            "La doctora Julieta",
+            "Mariela"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué pasó realmente la noche de la boda según Ceferino?",
+          "infer": true,
+          "options": [
+            "Él calmó a Lucero con una canción",
+            "Ninguno se calmó",
+            "Lucero lo calmó a él"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué decía la abuela de Ceferino sobre los animales?",
+          "options": [
+            "Que no nos pertenecen, solo nos acompañan un tramo",
+            "Que hay que domarlos",
+            "Que son peligrosos"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Crees que los animales nos pertenecen o solo nos acompañan?",
+          "model": "Creo que nos acompañan; la idea de poseer a un ser vivo siempre me ha parecido extraña."
+        },
+        {
+          "q": "¿Qué despedida de un lugar o de un ser querido recuerdas especialmente?",
+          "model": "La de la casa de mis abuelos cuando la vendieron; recorrí cada habitación en silencio."
+        },
+        {
+          "q": "¿Es el descanso algo que hay que aprender?",
+          "model": "Sí; para mucha gente que ha trabajado toda la vida, no hacer nada provoca ansiedad."
+        }
+      ],
+      "gaps": "Yo nunca le [creí]. Pensaba que tú eras [mío]. Hoy [entiendo] que el que era tuyo era [yo].",
+      "glossary": [
+        {
+          "word": "patrón",
+          "meaning": "jefe, dueño"
+        },
+        {
+          "word": "hocico",
+          "meaning": "nariz y boca de un animal"
+        },
+        {
+          "word": "tramo",
+          "meaning": "parte de un camino"
+        },
+        {
+          "word": "patea",
+          "meaning": "da golpes con la pata"
+        }
+      ]
+    },
+    {
+      "id": "fotos",
+      "title": "El álbum imposible",
+      "place": "Debajo del ombú",
+      "context": "Un año después, Gonzalo entrega a los novios el álbum de la boda y explica sus decisiones.",
+      "speakers": [
+        {
+          "name": "Gonzalo",
+          "country": "Colombia",
+          "voice": "es-CO-GonzaloNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Valentina, Joaquín, aquí está el álbum. Tardé un año porque no sabía cómo hacer un álbum de una boda sin fotos de la ceremonia. Al final opté por no disimularlo."
+        },
+        {
+          "s": 0,
+          "text": "La primera página está en blanco, con una sola frase: «Aquí debería estar el momento del sí. Lo recuerdan ustedes mejor que cualquier cámara». Me pareció más honesto que inventar algo con inteligencia artificial."
+        },
+        {
+          "s": 0,
+          "text": "Después vienen las fotos bajo el ombú, con los faroles. Y la foto de familia movida, con el perro en el centro y Doña Chela con los ojos cerrados. Esa foto, ahora que ella no está, ha cambiado de significado. Antes era graciosa. Ahora es un tesoro."
+        },
+        {
+          "s": 0,
+          "text": "Hay una página más, sellada. Contiene la foto de Gloria y Pepe detrás del establo. Les pregunté a ellos en marzo si querían que existiera. Gloria me dijo que sí, pero sellada, para que la abran los nietos cuando ellos dos ya no puedan avergonzarse."
+        },
+        {
+          "s": 0,
+          "text": "Esta boda me enseñó algo: que mi oficio no es fijar la realidad, sino administrar la memoria. Decidir qué se ve, qué se insinúa y qué se protege. Y que, a veces, el mejor recuerdo es el que no se fotografió."
+        },
+        {
+          "s": 0,
+          "text": "Les pido una cosa: no lo pongan en la estantería. Ábranlo cuando discutan. Funciona mejor que cualquier terapia de pareja."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué hay en la primera página del álbum?",
+          "options": [
+            "La foto de la ceremonia",
+            "Una foto hecha con inteligencia artificial",
+            "Una página en blanco con una frase"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Por qué ha cambiado el significado de la foto de familia?",
+          "infer": true,
+          "options": [
+            "Porque está movida y nadie sale bien en ella",
+            "Porque Doña Chela ya no está",
+            "Porque hay un perro"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué decidieron Gloria y Pepe sobre su foto?",
+          "options": [
+            "Que existiera, pero sellada, para los nietos",
+            "Que se borrara",
+            "Que se publicara"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Según Gonzalo, ¿cuál es su oficio realmente?",
+          "infer": true,
+          "options": [
+            "Fijar la realidad tal como fue, sin adornos",
+            "Administrar la memoria",
+            "Hacer fotos bonitas"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué opinas de reconstruir con inteligencia artificial recuerdos que no se fotografiaron?",
+          "model": "Me parece peligroso; un recuerdo inventado, por bonito que sea, deja de ser un recuerdo."
+        },
+        {
+          "q": "¿Qué foto de tu familia ha cambiado de significado con el tiempo?",
+          "model": "Una foto de mis abuelos riendo en la playa; cuando murieron, pasó de ser una anécdota a ser un tesoro."
+        },
+        {
+          "q": "¿Crees que el mejor recuerdo es a veces el que no se fotografió?",
+          "model": "Sí; cuando no hay foto, el recuerdo depende solo de nosotros y se vuelve más íntimo."
+        }
+      ],
+      "gaps": "que mi [oficio] no es fijar la [realidad], sino [administrar] la [memoria].",
+      "glossary": [
+        {
+          "word": "disimularlo",
+          "meaning": "esconderlo"
+        },
+        {
+          "word": "sellada",
+          "meaning": "cerrada para que no se abra"
+        },
+        {
+          "word": "insinúa",
+          "meaning": "sugiere sin decir directamente"
+        },
+        {
+          "word": "estantería",
+          "meaning": "mueble con estantes"
+        }
+      ]
+    },
+    {
+      "id": "muelle",
+      "title": "El padrino, esta vez presente",
+      "place": "El muelle de la laguna",
+      "context": "Un año después, Facundo vuelve al muelle la noche del aniversario y graba un mensaje para su padre.",
+      "speakers": [
+        {
+          "name": "Facundo",
+          "country": "Argentina",
+          "voice": "es-AR-TomasNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Viejo, hace un año estuve sentado en este mismo banco escondiéndome de la boda de Joaquín. Hoy vengo a contarte cómo terminó la historia, por si allá arriba no llegan las noticias."
+        },
+        {
+          "s": 0,
+          "text": "Joaquín y Valentina siguen juntos y van a tener un hijo. Me pidieron que fuera el padrino. Les dije que lo pensaría, que tenía antecedentes. Joaquín me contestó que precisamente por eso, que ya había agotado mi cupo de desapariciones."
+        },
+        {
+          "s": 0,
+          "text": "Renata y yo nos casamos en diciembre. Pequeño, en el registro civil, con empanadas, como siempre quisiste para mí. Tu silla estaba vacía en la primera fila, con tu gorra de pescar encima. Nadie la tocó en toda la noche."
+        },
+        {
+          "s": 0,
+          "text": "Este año me enseñó algo, aunque tarde, como me llega todo. Pensaba que el duelo era un pasillo que había que cruzar rápido para llegar a la alegría. Y resulta que es más bien una habitación de la casa. No se sale de ella para siempre; se aprende a entrar y salir sin perderse."
+        },
+        {
+          "s": 0,
+          "text": "El amigo que leyó mi discurso aquella noche vino a la boda. Le agradecí lo que hizo, y me dijo una cosa que no olvido: que las palabras no eran suyas, que él solo las había llevado de un lugar a otro, como quien lleva un vaso de agua sin derramarlo."
+        },
+        {
+          "s": 0,
+          "text": "Bueno, me voy a la carpa. Esta vez sí estoy. Te quiero, viejo."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué le pidieron Joaquín y Valentina a Facundo?",
+          "options": [
+            "Que organizara la fiesta del primer aniversario",
+            "Que diera otro brindis",
+            "Que fuera el padrino de su hijo"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cómo fue la boda de Facundo y Renata?",
+          "options": [
+            "Pequeña, en el registro civil, con empanadas",
+            "Grande, en la estancia",
+            "En la capilla"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Con qué compara Facundo el duelo ahora?",
+          "infer": true,
+          "options": [
+            "Con un pasillo largo y sin ventanas",
+            "Con una tormenta de verano",
+            "Con una habitación de la casa"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cómo describió el amigo lo que hizo con el discurso?",
+          "infer": true,
+          "options": [
+            "Escribió un discurso nuevo",
+            "Llevó las palabras como un vaso de agua sin derramarlo",
+            "Cambió todo"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Estás de acuerdo en que el duelo es una habitación a la que se entra y se sale?",
+          "model": "Sí; la tristeza no desaparece, pero con el tiempo uno aprende a visitarla sin quedarse atrapado."
+        },
+        {
+          "q": "¿Cómo se incluye a los que faltan en las celebraciones de tu entorno?",
+          "model": "En mi familia dejamos un plato preparado en la mesa de Navidad para mi abuelo."
+        },
+        {
+          "q": "¿Has transmitido alguna vez las palabras de otra persona en un momento importante?",
+          "model": "Sí, leí la carta de mi hermana en la boda de nuestra prima porque ella no pudo viajar."
+        }
+      ],
+      "gaps": "Pensaba que el [duelo] era un [pasillo] que había que [cruzar] rápido para llegar a la [alegría].",
+      "glossary": [
+        {
+          "word": "antecedentes",
+          "meaning": "hechos del pasado que cuentan"
+        },
+        {
+          "word": "cupo",
+          "meaning": "cantidad máxima permitida"
+        },
+        {
+          "word": "gorra",
+          "meaning": "sombrero con visera"
+        },
+        {
+          "word": "derramarlo",
+          "meaning": "dejar caer el líquido"
+        }
+      ]
+    },
+    {
+      "id": "brindis",
+      "title": "El brindis del aniversario",
+      "place": "La carpa a medianoche",
+      "context": "En el primer aniversario, a medianoche, Valentina, Joaquín y Mariela suben al escenario de la misma carpa.",
+      "speakers": [
+        {
+          "name": "Valentina",
+          "country": "Argentina",
+          "voice": "es-AR-ElenaNeural"
+        },
+        {
+          "name": "Joaquín",
+          "country": "México",
+          "voice": "es-MX-JorgeNeural"
+        },
+        {
+          "name": "Mariela",
+          "country": "Colombia",
+          "voice": "es-CO-SalomeNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 2,
+          "text": "Buenas noches. Hace un año, a esta misma hora, un desconocido subió a este escenario sin preparación y nos regaló el mejor brindis que he escuchado en once años de bodas. Hoy los novios quieren devolver el gesto."
+        },
+        {
+          "s": 0,
+          "text": "Hace un año alguien leyó notas escritas en servilletas, y cada nota era un nombre. Este año nosotros también escribimos notas. Ha sido un año de despedidas y de llegadas: se nos fue la abuela Chela, viene en camino una criatura, Facundo se casó, Ceferino se jubiló, Ramiro y Yesenia abrieron su restaurante."
+        },
+        {
+          "s": 1,
+          "text": "Y nos dimos cuenta de que aquella noche no fue un accidente. Fue un ensayo. Aprendimos que una familia no se define por la sangre, sino por quién se queda cuando el vestido se rompe, la torta dice otro nombre y el padrino desaparece."
+        },
+        {
+          "s": 0,
+          "text": "Así que esta vez el brindis es para los que llegaron sin invitación y se quedaron a ayudar. Para los que estuvieron en la lista equivocada. Para los que cocinaron, cosieron, tocaron y aguantaron."
+        },
+        {
+          "s": 1,
+          "text": "Y para nuestro plan B, que esta noche sí está en la lista. Primera fila, mesa uno. Al lado de la abuela, que, aunque no esté, tiene su silla."
+        },
+        {
+          "s": 2,
+          "text": "Por favor, todos con la copa en alto."
+        },
+        {
+          "s": 0,
+          "text": "¡Por los que se quedan!"
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué quieren hacer los novios este año?",
+          "options": [
+            "Devolver el gesto del brindis",
+            "Repetir la boda con todos los invitados de entonces",
+            "Despedirse de todos"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué cambios hubo en el año, según Valentina?",
+          "infer": true,
+          "options": [
+            "Solo despedidas, ninguna llegada",
+            "Nada importante",
+            "Despedidas y llegadas"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Según Joaquín, ¿cómo se define una familia?",
+          "infer": true,
+          "options": [
+            "Por la sangre",
+            "Por quién se queda cuando todo sale mal",
+            "Por el apellido"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Dónde está sentado esta vez el invitado del plan B?",
+          "options": [
+            "En la mesa uno, primera fila",
+            "En la barra, junto a los camareros de siempre",
+            "Al fondo de la carpa"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Quién se quedó a ayudarte cuando todo salió mal?",
+          "model": "Una vecina a la que apenas conocía; cuando se me inundó la casa, pasó la noche ayudándome a sacar agua."
+        },
+        {
+          "q": "¿Estás de acuerdo en que una familia se define por quién se queda?",
+          "model": "Sí, aunque la sangre también importa; las dos cosas no son incompatibles."
+        },
+        {
+          "q": "Si tuvieras que hacer un brindis por los que se quedan, ¿a quién nombrarías?",
+          "model": "A mis amigos de la universidad, que siguen ahí después de veinte años y tres mudanzas."
+        }
+      ],
+      "gaps": "Aprendimos que una [familia] no se [define] por la [sangre], sino por quién se [queda] cuando el vestido se rompe, la torta dice otro nombre y el padrino desaparece.",
+      "glossary": [
+        {
+          "word": "ensayo",
+          "meaning": "práctica antes de algo"
+        },
+        {
+          "word": "aguantaron",
+          "meaning": "resistieron"
+        },
+        {
+          "word": "en alto",
+          "meaning": "levantado"
+        },
+        {
+          "word": "despedidas",
+          "meaning": "momentos de decir adiós"
+        }
+      ]
+    }
+  ]
+}

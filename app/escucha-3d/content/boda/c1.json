@@ -1,0 +1,2095 @@
+{
+  "game": "boda",
+  "level": "C1",
+  "items": [
+    {
+      "id": "porton",
+      "title": "Las reglas y las excepciones",
+      "place": "El portón de la estancia",
+      "context": "En una pausa de la noche, Anselmo y Wilmer discuten si las normas están para cumplirse o para saltárselas.",
+      "speakers": [
+        {
+          "name": "Anselmo",
+          "country": "Paraguay",
+          "voice": "es-PY-MarioNeural"
+        },
+        {
+          "name": "Wilmer",
+          "country": "Honduras",
+          "voice": "es-HN-CarlosNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Don Anselmo, con todo respeto, usted se pasó la tarde diciendo que nadie entraba sin estar en la lista, y al final dejó pasar al amigo del padrino."
+        },
+        {
+          "s": 0,
+          "text": "Es que una norma no es un dogma, muchacho. Las normas existen para que el mundo no se desordene, pero quien las aplica tiene que tener criterio. Si no, para eso pondrían una máquina en el portón."
+        },
+        {
+          "s": 1,
+          "text": "Pero entonces, ¿quién decide cuándo se puede hacer una excepción? Porque si cada portero decide según su humor, la lista no sirve para nada."
+        },
+        {
+          "s": 0,
+          "text": "Ahí está la gracia. No es el humor; es la experiencia. Llevo cuarenta años mirando caras. Ese muchacho no venía a colarse a la fiesta; venía a cumplir con un amigo que lo había dejado plantado."
+        },
+        {
+          "s": 1,
+          "text": "¿Y si se hubiera equivocado? ¿Si hubiera sido un ladrón con traje alquilado?"
+        },
+        {
+          "s": 0,
+          "text": "Entonces habría asumido la culpa. Esa es la diferencia entre obedecer y ser responsable: el que obedece se esconde detrás del papel; el responsable da la cara. Por mucho que digan las organizadoras, yo prefiero equivocarme por confiar que acertar por desconfiado."
+        },
+        {
+          "s": 1,
+          "text": "Eso suena muy bonito hasta que desaparece la platería."
+        },
+        {
+          "s": 0,
+          "text": "Por eso las cucharas de esta casa son de acero inoxidable."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué le reprocha Wilmer a Anselmo?",
+          "infer": true,
+          "options": [
+            "Que hizo una excepción a su propia regla",
+            "Que dejó entrar a demasiada gente sin invitación y sin preguntar nombres",
+            "Que cerró el portón temprano"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Según Anselmo, ¿qué necesita quien aplica una norma?",
+          "options": [
+            "Una lista más detallada",
+            "Criterio",
+            "Permiso de la organizadora"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cuál es para Anselmo la diferencia entre obedecer y ser responsable?",
+          "infer": true,
+          "options": [
+            "El que obedece trabaja más",
+            "No hay diferencia",
+            "El responsable da la cara; el que obedece se esconde detrás del papel"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Por qué no le preocupa la platería?",
+          "options": [
+            "Porque la guarda la abuela bajo llave en el ropero de su cuarto",
+            "Porque no hay platería",
+            "Porque las cucharas son de acero inoxidable"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Prefieres equivocarte por confiar o acertar por desconfiar?",
+          "model": "Prefiero equivocarme por confiar, aunque reconozco que en algunos ámbitos, como el dinero, conviene ser prudente."
+        },
+        {
+          "q": "¿En qué situaciones crees que está justificado saltarse una norma?",
+          "model": "Cuando cumplirla causaría un daño evidente a alguien y nadie sale perjudicado por la excepción."
+        },
+        {
+          "q": "¿Qué diferencia hay, para ti, entre obedecer y ser responsable?",
+          "model": "Obedecer es cumplir sin pensar; ser responsable implica entender las consecuencias y asumirlas."
+        }
+      ],
+      "gaps": "Por mucho que [digan] las organizadoras, yo prefiero [equivocarme] por confiar que [acertar] por [desconfiado].",
+      "glossary": [
+        {
+          "word": "dogma",
+          "meaning": "idea que no se puede discutir"
+        },
+        {
+          "word": "colarse",
+          "meaning": "entrar sin permiso"
+        },
+        {
+          "word": "da la cara",
+          "meaning": "asume la responsabilidad"
+        },
+        {
+          "word": "criterio",
+          "meaning": "capacidad de juzgar"
+        }
+      ]
+    },
+    {
+      "id": "capilla",
+      "title": "¿Sigue teniendo sentido casarse?",
+      "place": "La capilla blanca",
+      "context": "Durante la cena, Joaquín y el padre Benito debaten sobre el sentido del matrimonio hoy.",
+      "speakers": [
+        {
+          "name": "Benito",
+          "country": "España",
+          "voice": "es-ES-AlvaroNeural"
+        },
+        {
+          "name": "Joaquín",
+          "country": "México",
+          "voice": "es-MX-JorgeNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Padre, le hago una pregunta incómoda. Muchos de mis amigos dicen que casarse es una formalidad anticuada, que lo importante es el compromiso, no el papel. ¿Qué les respondería?"
+        },
+        {
+          "s": 0,
+          "text": "Que en parte tienen razón. Un papel no sostiene a nadie. He casado a parejas que se separaron antes de terminar de pagar el salón, y conozco a otras que viven juntas cuarenta años sin haber pisado una iglesia."
+        },
+        {
+          "s": 1,
+          "text": "¿Entonces para qué sirve la ceremonia?"
+        },
+        {
+          "s": 0,
+          "text": "Para decir en voz alta, delante de los que te quieren, algo que normalmente se dice en voz baja. No es que la promesa sea más verdadera por hacerla en público, sino que se vuelve más difícil de olvidar. Tienes testigos."
+        },
+        {
+          "s": 1,
+          "text": "Eso suena casi a una estrategia de presión social."
+        },
+        {
+          "s": 0,
+          "text": "Llámalo como quieras. Yo lo llamo comunidad. Cuando te pelees con Valentina, y te vas a pelear, habrá ochenta personas que te vieron temblar en ese altar. Alguno te recordará lo que dijiste."
+        },
+        {
+          "s": 1,
+          "text": "Sobre todo la abuela Chela."
+        },
+        {
+          "s": 0,
+          "text": "La abuela Chela es mejor que cualquier sacramento. Ella no olvida nada."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué opinan los amigos de Joaquín sobre casarse?",
+          "options": [
+            "Que es imprescindible para que una pareja dure",
+            "Que es una formalidad anticuada",
+            "Que es muy caro"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Según el cura, ¿para qué sirve la ceremonia?",
+          "options": [
+            "Para decir en público lo que se dice en voz baja",
+            "Para cumplir con la ley",
+            "Para hacer una fiesta"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Por qué la promesa es más difícil de olvidar?",
+          "infer": true,
+          "options": [
+            "Porque hay testigos",
+            "Porque está escrita",
+            "Porque es más verdadera"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cómo llama el cura a lo que Joaquín considera presión social?",
+          "infer": true,
+          "options": [
+            "Tradición",
+            "Comunidad",
+            "Obligación"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Crees que el matrimonio sigue teniendo sentido hoy en día?",
+          "model": "Creo que sí, aunque no como obligación, sino como una forma de celebrar un compromiso ante la gente que quieres."
+        },
+        {
+          "q": "¿Qué promesa hiciste en público y cómo influyó que hubiera testigos?",
+          "model": "Prometí a mi equipo que terminaría un proyecto y, precisamente porque lo sabían todos, me esforcé el doble."
+        },
+        {
+          "q": "¿Qué papel debería tener la comunidad en la vida de una pareja?",
+          "model": "Un papel de apoyo, no de control; es bueno tener a quién acudir, pero sin que nadie decida por ti."
+        }
+      ],
+      "gaps": "No es que la [promesa] [sea] más verdadera por hacerla en [público], sino que se vuelve más difícil de [olvidar].",
+      "glossary": [
+        {
+          "word": "formalidad",
+          "meaning": "requisito sin importancia real"
+        },
+        {
+          "word": "testigos",
+          "meaning": "personas que ven algo y pueden contarlo"
+        },
+        {
+          "word": "sacramento",
+          "meaning": "rito religioso importante"
+        },
+        {
+          "word": "anticuada",
+          "meaning": "pasada de moda"
+        }
+      ]
+    },
+    {
+      "id": "ninos",
+      "title": "Hablar de divorcio con los niños",
+      "place": "El cantero de flores",
+      "context": "Marisol habla con Tadeo, ya más tranquila, sobre por qué los adultos no le explicaron nada.",
+      "speakers": [
+        {
+          "name": "Marisol",
+          "country": "República Dominicana",
+          "voice": "es-DO-RamonaNeural"
+        },
+        {
+          "name": "Tadeo",
+          "country": "República Dominicana",
+          "voice": "es-DO-EmilioNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Tadeo, quiero pedirte perdón. No por el anillo, sino por algo más importante. Cuando tus papás se separaron, nadie te explicó nada. Te dijimos que era «cosa de grandes»."
+        },
+        {
+          "s": 1,
+          "text": "Sí. Y yo pensé que era culpa mía, porque esa semana había roto la tele jugando a la pelota."
+        },
+        {
+          "s": 0,
+          "text": "¿Ves? Por eso hay que hablar. Los adultos creemos que callar protege a los niños, pero a veces solo deja espacio para que inventen explicaciones peores que la verdad."
+        },
+        {
+          "s": 1,
+          "text": "¿Y cuál es la verdad?"
+        },
+        {
+          "s": 0,
+          "text": "Que tus papás se querían, que dejaron de entenderse y que ninguno de los dos dejó de quererte a ti. Que se separaran no tuvo nada que ver con la tele, ni contigo."
+        },
+        {
+          "s": 1,
+          "text": "¿Y por qué no se quieren más?"
+        },
+        {
+          "s": 0,
+          "text": "Esa es una pregunta que ni los grandes sabemos contestar del todo. A veces el amor cambia de forma, como el agua cuando hierve. No desaparece; se convierte en otra cosa."
+        },
+        {
+          "s": 1,
+          "text": "Entonces, ¿mi árbol de anillos no sirve?"
+        },
+        {
+          "s": 0,
+          "text": "Sirve para que todos sepamos lo que te preocupaba. Eso ya es mucho."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Por qué pide perdón Marisol?",
+          "infer": true,
+          "options": [
+            "Por enojarse por el anillo delante de todos los invitados",
+            "Por romper la tele",
+            "Porque nadie le explicó la separación a Tadeo"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué pensaba Tadeo sobre la separación?",
+          "options": [
+            "Que era culpa suya",
+            "Que sus padres volverían",
+            "Que era normal"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Según Marisol, ¿qué provoca a veces el silencio de los adultos?",
+          "infer": true,
+          "options": [
+            "Que los niños estén tranquilos y no pregunten nada durante la fiesta",
+            "Que los niños olviden",
+            "Que los niños inventen explicaciones peores"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Con qué compara Marisol el amor que cambia?",
+          "options": [
+            "Con una planta que crece despacio pero sin parar",
+            "Con el agua cuando hierve",
+            "Con el fuego"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Crees que a los niños hay que contarles siempre la verdad?",
+          "model": "Sí, pero adaptada a su edad; ocultarles todo genera más angustia que la propia verdad."
+        },
+        {
+          "q": "¿Qué explicación inventaste de niño para algo que no entendías?",
+          "model": "Pensaba que mis padres discutían porque yo sacaba malas notas en matemáticas."
+        },
+        {
+          "q": "¿Estás de acuerdo con que el amor cambia de forma pero no desaparece?",
+          "model": "En parte; creo que a veces se transforma en cariño o respeto, pero otras veces sí se acaba."
+        }
+      ],
+      "gaps": "Los adultos creemos que [callar] [protege] a los niños, pero a veces solo deja [espacio] para que [inventen] explicaciones peores que la verdad.",
+      "glossary": [
+        {
+          "word": "callar",
+          "meaning": "no decir nada"
+        },
+        {
+          "word": "hierve",
+          "meaning": "llega a cien grados"
+        },
+        {
+          "word": "entenderse",
+          "meaning": "comprenderse mutuamente"
+        }
+      ]
+    },
+    {
+      "id": "novia",
+      "title": "Lo nuevo y lo heredado",
+      "place": "El cuarto de la novia",
+      "context": "Valentina y Camila reflexionan sobre por qué el vestido de la abuela significó tanto.",
+      "speakers": [
+        {
+          "name": "Valentina",
+          "country": "Argentina",
+          "voice": "es-AR-ElenaNeural"
+        },
+        {
+          "name": "Camila",
+          "country": "Nicaragua",
+          "voice": "es-NI-YolandaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Vale, hay algo que no entiendo. Tú siempre fuiste la más moderna de la familia. Te fuiste a vivir a Barcelona, cambiaste tres veces de carrera, te casas con un mexicano. ¿Y de repente el vestido de la abuela te hace llorar?"
+        },
+        {
+          "s": 0,
+          "text": "Justamente por eso. Cuando una se pasa la vida rompiendo con lo heredado, llega un momento en que necesita algo que la ate al suelo. No es que quiera volver atrás, sino que quiero saber de dónde vengo antes de irme más lejos."
+        },
+        {
+          "s": 1,
+          "text": "Suena a sesión de terapia."
+        },
+        {
+          "s": 0,
+          "text": "Es que lo es. Ese vestido tiene la historia de una mujer que se escapó a caballo contra la voluntad de su padre. Ponérmelo fue como recibir permiso para hacer lo mismo, aunque mi padre no tenga escopeta."
+        },
+        {
+          "s": 1,
+          "text": "¿Y el vestido nuevo? Costó una fortuna."
+        },
+        {
+          "s": 0,
+          "text": "El vestido nuevo era el de la novia que yo creía que tenía que ser. El de la abuela es el de la que soy. Por mucho que me haya costado el otro, no me arrepiento del cambio."
+        },
+        {
+          "s": 1,
+          "text": "Entonces el cierre roto fue un regalo."
+        },
+        {
+          "s": 0,
+          "text": "El mejor accidente de mi vida. Después de Joaquín, claro."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Por qué le sorprende a Camila la reacción de Valentina?",
+          "infer": true,
+          "options": [
+            "Porque no quiere a su abuela ni sus costumbres antiguas",
+            "Porque siempre fue la más moderna de la familia",
+            "Porque odia los vestidos"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué necesita alguien que siempre rompe con lo heredado, según Valentina?",
+          "options": [
+            "Algo que la ate al suelo",
+            "Más libertad para viajar y trabajar donde quiera",
+            "Un cambio de país"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué significó para Valentina ponerse el vestido?",
+          "infer": true,
+          "options": [
+            "Obedecer a su familia",
+            "Ahorrar dinero",
+            "Recibir permiso para elegir su propio camino"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué diferencia hay entre los dos vestidos?",
+          "options": [
+            "Uno era caro y otro barato",
+            "Uno era de la novia que creía que debía ser; el otro, de la que es",
+            "Uno era blanco y otro no"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué parte de tu herencia familiar has rechazado y cuál has recuperado?",
+          "model": "Rechacé la religión de mis padres, pero recuperé su costumbre de cocinar juntos los domingos."
+        },
+        {
+          "q": "¿Hay algún accidente que haya resultado ser un regalo en tu vida?",
+          "model": "Perder un trabajo me obligó a cambiar de sector, y hoy estoy mucho más contento."
+        },
+        {
+          "q": "¿Crees que necesitamos saber de dónde venimos para avanzar?",
+          "model": "Creo que ayuda, porque entender tu historia te permite elegir qué repetir y qué cambiar."
+        }
+      ],
+      "gaps": "No es que [quiera] [volver] atrás, sino que quiero saber de dónde [vengo] antes de irme más [lejos].",
+      "glossary": [
+        {
+          "word": "heredado",
+          "meaning": "recibido de la familia"
+        },
+        {
+          "word": "escopeta",
+          "meaning": "arma de fuego larga"
+        },
+        {
+          "word": "fortuna",
+          "meaning": "mucho dinero"
+        }
+      ]
+    },
+    {
+      "id": "abuela",
+      "title": "El amor en tiempos de mate",
+      "place": "La galería de la casa",
+      "context": "Doña Chela da a un grupo de nietos su visión, poco romántica, del matrimonio.",
+      "speakers": [
+        {
+          "name": "Chela",
+          "country": "Uruguay",
+          "voice": "es-UY-ValentinaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Ustedes los jóvenes creen que el amor es un sentimiento. Error. El sentimiento dura lo que dura una tormenta de verano. Lo que queda después es una decisión, y hay que tomarla todas las mañanas, con el mate."
+        },
+        {
+          "s": 0,
+          "text": "Aurelio y yo nos peleábamos por todo: por la política, por la sal de la comida, por quién había dejado la puerta abierta. Si me preguntan si éramos felices, les digo que sí, pero no como en las películas. Éramos felices como dos árboles que crecen torcidos el uno hacia el otro."
+        },
+        {
+          "s": 0,
+          "text": "Hoy todo el mundo se separa a la primera discusión. No digo que haya que aguantar cualquier cosa; yo, si Aurelio me hubiera faltado el respeto, lo habría echado con escopeta y todo. Pero discutir no es faltarse el respeto. Discutir es tomarse en serio al otro."
+        },
+        {
+          "s": 0,
+          "text": "Y otra cosa: no se casen con alguien que los haga reír solo al principio. Cásense con alguien que los haga reír cuando estén enfermos, cansados y feos. Eso es lo difícil."
+        },
+        {
+          "s": 0,
+          "text": "Bueno, ya hablé demasiado. Tráiganme otro mate, que este está frío como un yerno."
+        }
+      ],
+      "choice": [
+        {
+          "q": "Según Chela, ¿qué queda después del sentimiento?",
+          "options": [
+            "El aburrimiento",
+            "Los recuerdos",
+            "Una decisión que se toma cada mañana"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cómo describe su felicidad con Aurelio?",
+          "infer": true,
+          "options": [
+            "Como dos árboles que crecen torcidos el uno hacia el otro",
+            "Como en las películas",
+            "Como una tormenta"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué diferencia hace entre discutir y faltar el respeto?",
+          "infer": true,
+          "options": [
+            "Discutir es tomarse en serio al otro",
+            "Son lo mismo",
+            "Discutir es peor"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Con quién aconseja casarse?",
+          "options": [
+            "Con alguien rico",
+            "Con alguien que nunca discuta",
+            "Con alguien que te haga reír cuando estés enfermo y cansado"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Estás de acuerdo en que el amor es más una decisión que un sentimiento?",
+          "model": "En parte; el sentimiento es el punto de partida, pero mantener una relación exige decidir cada día."
+        },
+        {
+          "q": "¿Crees que hoy las parejas se separan con demasiada facilidad?",
+          "model": "No necesariamente; creo que hoy la gente tiene más libertad para irse de relaciones que la hacen infeliz."
+        },
+        {
+          "q": "¿Qué cualidad te parece imprescindible en una pareja a largo plazo?",
+          "model": "El sentido del humor en los momentos malos, como dice la abuela."
+        }
+      ],
+      "gaps": "No digo que [haya] que [aguantar] cualquier cosa; yo, si Aurelio me [hubiera] [faltado] el respeto, lo habría echado con escopeta y todo.",
+      "glossary": [
+        {
+          "word": "torcidos",
+          "meaning": "que no están rectos"
+        },
+        {
+          "word": "aguantar",
+          "meaning": "soportar"
+        },
+        {
+          "word": "yerno",
+          "meaning": "marido de la hija"
+        }
+      ]
+    },
+    {
+      "id": "novio",
+      "title": "La madre que cruzó la frontera",
+      "place": "El cuarto del novio",
+      "context": "Lupita y Ximena hablan sobre lo que significa criar a un hijo y verlo construir su vida en otro país.",
+      "speakers": [
+        {
+          "name": "Lupita",
+          "country": "México",
+          "voice": "es-MX-DaliaNeural"
+        },
+        {
+          "name": "Ximena",
+          "country": "España",
+          "voice": "es-ES-XimenaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Tía, ¿te puedo preguntar algo serio? ¿No te da pena que Joaquín se quede a vivir en Argentina?"
+        },
+        {
+          "s": 0,
+          "text": "Pena no es la palabra. Es una mezcla de orgullo y de duelo. Una cría a los hijos para que se vayan, y cuando se van, una descubre que no estaba preparada."
+        },
+        {
+          "s": 1,
+          "text": "Pero él te llama todos los días."
+        },
+        {
+          "s": 0,
+          "text": "Sí, y me manda fotos del asado, como si yo no supiera lo que es la carne. Lo que me cuesta no es la distancia. Es que sus hijos, si los tiene, van a hablar como porteños y van a tomar mate. Van a ser un poquito extranjeros para mí."
+        },
+        {
+          "s": 1,
+          "text": "Bueno, pero vas a tener nietos que hablen dos variedades de español. Eso es una riqueza."
+        },
+        {
+          "s": 0,
+          "text": "Eso dice la gente para consolarse. Y tiene razón, no te creas. Por eso traje al mariachi: no para lucirme, sino para que esos nietos, algún día, sepan que hubo una abuela de Guadalajara que llenó de trompetas una estancia en la pampa."
+        },
+        {
+          "s": 1,
+          "text": "Tía, eso es lo más bonito que te escuché decir en treinta años."
+        },
+        {
+          "s": 0,
+          "text": "No te acostumbres. Mañana vuelvo a ser insoportable."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué siente Lupita porque Joaquín vive en Argentina?",
+          "infer": true,
+          "options": [
+            "Solo tristeza, sin ningún consuelo posible",
+            "Una mezcla de orgullo y duelo",
+            "Indiferencia"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué le cuesta más a Lupita?",
+          "options": [
+            "Que sus nietos sean un poco extranjeros para ella",
+            "La distancia",
+            "Los gastos del viaje"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Según Ximena, ¿qué tendrán los nietos?",
+          "options": [
+            "Dos pasaportes que nunca usa al mismo tiempo",
+            "Dos casas",
+            "Dos variedades de español"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Por qué trajo Lupita al mariachi realmente?",
+          "infer": true,
+          "options": [
+            "Para lucirse delante de los invitados de la capital",
+            "Para que los nietos sepan de dónde viene su familia",
+            "Para molestar a la familia de la novia"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué significa para ti criar a alguien para que se vaya?",
+          "model": "Significa darle herramientas para que sea independiente, aunque duela verlo partir."
+        },
+        {
+          "q": "¿Qué riqueza aporta crecer entre dos culturas?",
+          "model": "Permite entender que no hay una sola forma correcta de vivir y facilita la empatía."
+        },
+        {
+          "q": "¿Qué gesto harías para que tus descendientes recuerden tus raíces?",
+          "model": "Les dejaría un cuaderno con las recetas de mi familia y sus historias."
+        }
+      ],
+      "gaps": "Por eso [traje] al mariachi: no para [lucirme], sino para que esos [nietos], algún día, [sepan] que hubo una abuela de Guadalajara que llenó de trompetas una estancia en la pampa.",
+      "glossary": [
+        {
+          "word": "duelo",
+          "meaning": "dolor por una pérdida"
+        },
+        {
+          "word": "lucirme",
+          "meaning": "presumir, mostrarme"
+        },
+        {
+          "word": "insoportable",
+          "meaning": "muy difícil de aguantar"
+        }
+      ]
+    },
+    {
+      "id": "cocina",
+      "title": "La dignidad del oficio",
+      "place": "La cocina de la estancia",
+      "context": "Al terminar el servicio, Ramiro y Yesenia hablan sobre el trabajo invisible de las cocinas.",
+      "speakers": [
+        {
+          "name": "Ramiro",
+          "country": "Perú",
+          "voice": "es-PE-AlexNeural"
+        },
+        {
+          "name": "Yesenia",
+          "country": "Perú",
+          "voice": "es-PE-CamilaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Chef, ¿usted nunca se cansa de que nadie sepa quién cocinó? Los invitados aplauden al asador porque lo ven, pero a nosotros nadie nos ve."
+        },
+        {
+          "s": 0,
+          "text": "Al principio me molestaba. Cuando llegué de Lima, trabajé en un hotel de Buenos Aires donde ni siquiera nos dejaban salir por la puerta principal. Entrábamos por la de servicio, como si fuéramos una mancha."
+        },
+        {
+          "s": 1,
+          "text": "¿Y qué cambió?"
+        },
+        {
+          "s": 0,
+          "text": "Cambié yo. Me di cuenta de que el reconocimiento ajeno es una moneda que no controlas. En cambio, el orgullo de un trabajo bien hecho es tuyo, y nadie te lo puede quitar. Hoy salvamos una boda con cien vasitos de postre y una mano firme. Eso lo sabemos nosotros."
+        },
+        {
+          "s": 1,
+          "text": "Pero un poco de reconocimiento no vendría mal. Sobre todo en el sueldo."
+        },
+        {
+          "s": 0,
+          "text": "En eso tienes toda la razón. La dignidad no paga el alquiler. Por eso, el lunes voy a hablar con el dueño. Si queremos que la gente buena se quede en la cocina, tenemos que pagarle como merece."
+        },
+        {
+          "s": 1,
+          "text": "¿Lo dice en serio?"
+        },
+        {
+          "s": 0,
+          "text": "Totalmente. Y si no acepta, nos vamos los dos y abrimos un restaurante que se llame «Plan B»."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿De qué se queja Yesenia?",
+          "infer": true,
+          "options": [
+            "De las horas de trabajo, que en las bodas no terminan nunca",
+            "De que nadie ve el trabajo de la cocina",
+            "Del calor"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué pasaba en el hotel de Buenos Aires?",
+          "options": [
+            "Pagaban muy bien",
+            "Ramiro era el jefe",
+            "Los cocineros entraban por la puerta de servicio"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Según Ramiro, ¿qué no puedes controlar?",
+          "infer": true,
+          "options": [
+            "El reconocimiento ajeno",
+            "El orgullo del trabajo bien hecho",
+            "La calidad de la comida"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué va a hacer Ramiro el lunes?",
+          "options": [
+            "Renunciar y buscar trabajo en otra cocina de la capital",
+            "Abrir un restaurante",
+            "Hablar con el dueño sobre los sueldos"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué trabajos invisibles crees que merecen más reconocimiento?",
+          "model": "Los cuidados de personas mayores y la limpieza, porque sin ellos la sociedad no funcionaría."
+        },
+        {
+          "q": "¿Te importa más el reconocimiento ajeno o la satisfacción personal?",
+          "model": "Me importa más la satisfacción personal, aunque reconozco que un elogio a tiempo motiva mucho."
+        },
+        {
+          "q": "¿Crees que la dignidad en el trabajo depende del sueldo?",
+          "model": "No solo, pero un sueldo justo es una forma concreta de respeto."
+        }
+      ],
+      "gaps": "Me di cuenta de que el [reconocimiento] [ajeno] es una [moneda] que no [controlas].",
+      "glossary": [
+        {
+          "word": "reconocimiento",
+          "meaning": "aprecio de los demás"
+        },
+        {
+          "word": "mancha",
+          "meaning": "marca de suciedad"
+        },
+        {
+          "word": "dignidad",
+          "meaning": "respeto que merece una persona"
+        },
+        {
+          "word": "merece",
+          "meaning": "es digno de"
+        }
+      ]
+    },
+    {
+      "id": "asado",
+      "title": "Rivalidades de vecinos",
+      "place": "La parrilla del jardín",
+      "context": "Don Beto reflexiona, frente a un grupo de invitados, sobre la rivalidad entre chilenos y argentinos.",
+      "speakers": [
+        {
+          "name": "Beto",
+          "country": "Chile",
+          "voice": "es-CL-LorenzoNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Me preguntan si es verdad que chilenos y argentinos nos odiamos. Les voy a decir lo que pienso, aunque no les guste a ninguno de los dos lados."
+        },
+        {
+          "s": 0,
+          "text": "Nos peleamos como hermanos que comparten una cordillera. Discutimos por el fútbol, por el vino, por quién inventó el asado y por cómo se dice cada palabra. Pero cuando hubo terremotos en Chile, los primeros camiones con ayuda venían de Mendoza. Y cuando Argentina tuvo su crisis, había argentinos trabajando en todas las obras de Santiago."
+        },
+        {
+          "s": 0,
+          "text": "Lo que pasa es que la rivalidad es cómoda. Te da una identidad sin esfuerzo: yo soy esto porque no soy aquello. Es más fácil que preguntarse quién es uno de verdad."
+        },
+        {
+          "s": 0,
+          "text": "Hoy un tío argentino me corrigió el corte del vacío. Me dio una rabia tremenda. Pero después, preparando choripanes juntos, descubrimos que su abuelo era de Valparaíso y el mío de Mendoza. O sea que, en el fondo, estábamos discutiendo con nuestros propios abuelos."
+        },
+        {
+          "s": 0,
+          "text": "Así que, cuando alguien les diga que el vecino es el enemigo, pregúntenle de dónde era su abuela. Se van a llevar sorpresas."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cómo describe Beto la relación entre chilenos y argentinos?",
+          "infer": true,
+          "options": [
+            "Como enemigos históricos que nunca se van a reconciliar",
+            "Como hermanos que comparten una cordillera",
+            "Como desconocidos"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué pasó cuando hubo terremotos en Chile?",
+          "options": [
+            "Llegaron camiones con ayuda desde Mendoza",
+            "Los argentinos no ayudaron y cerraron el paso de la cordillera",
+            "Beto se fue a Argentina"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Según Beto, ¿por qué es cómoda la rivalidad?",
+          "infer": true,
+          "options": [
+            "Porque da una identidad sin esfuerzo",
+            "Porque es divertida y une a la familia los domingos por la tarde",
+            "Porque genera dinero"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué descubrieron Beto y el tío argentino?",
+          "options": [
+            "Que eran primos lejanos por parte de madre",
+            "Que sus abuelos eran del país del otro",
+            "Que trabajaban juntos"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué rivalidad entre países o regiones conoces bien?",
+          "model": "La de mi ciudad con la capital; nos burlamos mutuamente, pero dependemos los unos de los otros."
+        },
+        {
+          "q": "¿Estás de acuerdo en que la rivalidad da una identidad sin esfuerzo?",
+          "model": "Sí; definirse en contra de otro es más fácil que preguntarse qué valoras de verdad."
+        },
+        {
+          "q": "¿Qué sorpresa te has llevado al investigar tus orígenes?",
+          "model": "Supe que mi bisabuelo era italiano y que mi apellido se escribía distinto."
+        }
+      ],
+      "gaps": "Te da una [identidad] sin [esfuerzo]: yo soy esto porque no soy [aquello]. Es más fácil que [preguntarse] quién es uno de verdad.",
+      "glossary": [
+        {
+          "word": "cordillera",
+          "meaning": "cadena de montañas"
+        },
+        {
+          "word": "terremotos",
+          "meaning": "movimientos fuertes de la tierra"
+        },
+        {
+          "word": "rabia",
+          "meaning": "enojo fuerte"
+        }
+      ]
+    },
+    {
+      "id": "mesa",
+      "title": "Rencores con fecha de vencimiento",
+      "place": "Las mesas largas",
+      "context": "En la sobremesa, Gloria y Pepe discuten, por primera vez con calma, sobre el rencor.",
+      "speakers": [
+        {
+          "name": "Gloria",
+          "country": "Panamá",
+          "voice": "es-PA-MargaritaNeural"
+        },
+        {
+          "name": "Pepe",
+          "country": "Panamá",
+          "voice": "es-PA-RobertoNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Gloria, ¿puedo preguntarte algo sin que me tires la copa? ¿Por qué duró tanto? Doce años por un departamento."
+        },
+        {
+          "s": 0,
+          "text": "No fue por el departamento, Pepe. Fue porque, cuando murió mi madre, tú hablabas de metros cuadrados mientras yo todavía estaba eligiendo el ataúd. No fue la herencia; fue la sensación de estar sola en el peor momento."
+        },
+        {
+          "s": 1,
+          "text": "Nunca lo había visto así. Yo creía que estabas enojada por el dinero."
+        },
+        {
+          "s": 0,
+          "text": "Ese es el problema de los rencores: uno cree que sabe por qué el otro está enojado, y casi nunca acierta. Y como no se habla, el malentendido se convierte en un muro."
+        },
+        {
+          "s": 1,
+          "text": "¿Y ahora qué? ¿Se puede bajar ese muro después de tanto tiempo?"
+        },
+        {
+          "s": 0,
+          "text": "No lo sé. Por mucho que hoy me haya reído contigo, doce años no se borran con un bolero y un beso detrás del establo."
+        },
+        {
+          "s": 1,
+          "text": "¿Entonces el beso fue un error?"
+        },
+        {
+          "s": 0,
+          "text": "No he dicho eso. He dicho que no basta. Si quieres que esto vaya a algún lado, empieza por invitarme a cenar. Sin hablar de metros cuadrados."
+        }
+      ],
+      "choice": [
+        {
+          "q": "Según Gloria, ¿por qué duró tanto la pelea?",
+          "infer": true,
+          "options": [
+            "Por el dinero del departamento que compraron juntos en Santiago",
+            "Por otra mujer",
+            "Por sentirse sola en el peor momento"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué creía Pepe?",
+          "options": [
+            "Que Gloria quería volver con él después de tantos años separados",
+            "Que Gloria no se acordaba",
+            "Que Gloria estaba enojada por el dinero"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿En qué se convierte un malentendido si no se habla?",
+          "infer": true,
+          "options": [
+            "En una broma",
+            "En un muro",
+            "En una herencia"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué le pide Gloria a Pepe para empezar?",
+          "options": [
+            "Que la invite a cenar sin hablar de metros cuadrados",
+            "Que le pida perdón en público",
+            "Que le devuelva el departamento"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Has descubierto alguna vez que el motivo de un enfado no era el que creías?",
+          "model": "Sí; pensaba que mi hermano estaba enojado por un préstamo, y en realidad le dolía que no lo hubiera llamado en su cumpleaños."
+        },
+        {
+          "q": "¿Crees que un rencor largo puede superarse del todo?",
+          "model": "Puede suavizarse mucho, pero creo que siempre deja alguna cicatriz."
+        },
+        {
+          "q": "¿Qué hace falta para derribar el muro de un malentendido?",
+          "model": "Hablar con honestidad y, sobre todo, escuchar sin defenderse."
+        }
+      ],
+      "gaps": "Ese es el problema de los rencores: uno cree que [sabe] por qué el otro está [enojado], y casi nunca [acierta]. Y como no se habla, el [malentendido] se convierte en un muro.",
+      "glossary": [
+        {
+          "word": "rencor",
+          "meaning": "resentimiento que dura"
+        },
+        {
+          "word": "ataúd",
+          "meaning": "caja para enterrar a un muerto"
+        },
+        {
+          "word": "malentendido",
+          "meaning": "error al interpretar algo"
+        }
+      ]
+    },
+    {
+      "id": "ex",
+      "title": "El derecho a estar",
+      "place": "El rosedal",
+      "context": "Renata y Rocío discuten si fue correcto que Renata viniera a la boda.",
+      "speakers": [
+        {
+          "name": "Renata",
+          "country": "Venezuela",
+          "voice": "es-VE-PaolaNeural"
+        },
+        {
+          "name": "Rocío",
+          "country": "Ecuador",
+          "voice": "es-EC-AndreaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Te lo digo con cariño, Renata: muchos piensan que venir fue una provocación. Una exnovia de seis años, de rojo, en la boda del novio."
+        },
+        {
+          "s": 0,
+          "text": "Lo sé. Y te concedo lo del rojo; fue una mala idea. Pero dime una cosa: ¿quién decide quién tiene derecho a estar en un sitio? Me invitó el padrino, que además es mi pareja."
+        },
+        {
+          "s": 1,
+          "text": "Nadie te prohibió venir. Pero tener derecho a algo no significa que sea oportuno hacerlo. Puedo tener derecho a decir lo que pienso de tu vestido y aun así callarme."
+        },
+        {
+          "s": 0,
+          "text": "Ya. Entonces, ¿debería haberme quedado en casa por miedo a incomodar? Me pasé dos años esquivando a Joaquín en cumpleaños y supermercados. Estaba harta de esconderme."
+        },
+        {
+          "s": 1,
+          "text": "Eso lo entiendo. Pero hay un matiz: tu necesidad de dejar de esconderte no es responsabilidad de la novia. Ella no tenía por qué pagar ese precio en su día."
+        },
+        {
+          "s": 0,
+          "text": "Tienes razón. Por eso no me acerqué a la carpa. Me quedé detrás del arco, con una desconocida que me trató mejor que la mitad de mi familia."
+        },
+        {
+          "s": 1,
+          "text": "Una desconocida no. Ya somos casi amigas."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué piensan muchos de la presencia de Renata?",
+          "infer": true,
+          "options": [
+            "Que fue un gesto bonito hacia la novia y su familia",
+            "Que fue una provocación",
+            "Que era necesaria"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué concede Renata?",
+          "options": [
+            "Que el vestido rojo fue mala idea",
+            "Que no debería haber venido sin hablar antes con la novia",
+            "Que no tenía invitación"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Según Rocío, ¿qué diferencia hay entre derecho y oportunidad?",
+          "infer": true,
+          "options": [
+            "No hay diferencia",
+            "El derecho es más importante",
+            "Tener derecho no significa que sea oportuno hacerlo"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué matiz añade Rocío?",
+          "options": [
+            "Que Joaquín la sigue queriendo",
+            "Que el padrino no debía invitarla",
+            "Que la necesidad de Renata no es responsabilidad de la novia"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Cuándo es mejor no ejercer un derecho que tienes?",
+          "model": "Cuando ejercerlo haría daño a alguien sin aportar nada importante."
+        },
+        {
+          "q": "¿Has dejado de ir a algún sitio para evitar a una persona?",
+          "model": "Sí, durante un tiempo dejé de ir a un bar porque trabajaba allí mi ex."
+        },
+        {
+          "q": "¿Quién tiene derecho a estar en una celebración, según tú?",
+          "model": "Quien ha sido invitado, pero siempre que su presencia no robe protagonismo a los anfitriones."
+        }
+      ],
+      "gaps": "Pero tener [derecho] a algo no [significa] que [sea] [oportuno] hacerlo.",
+      "glossary": [
+        {
+          "word": "provocación",
+          "meaning": "acción para molestar"
+        },
+        {
+          "word": "matiz",
+          "meaning": "pequeña diferencia"
+        },
+        {
+          "word": "esquivando",
+          "meaning": "evitando"
+        },
+        {
+          "word": "oportuno",
+          "meaning": "adecuado en ese momento"
+        }
+      ]
+    },
+    {
+      "id": "planner",
+      "title": "Cuidar a los que cuidan",
+      "place": "La entrada de la carpa",
+      "context": "Mariela da una charla improvisada a sus camareros sobre el trabajo de cuidar a otros.",
+      "speakers": [
+        {
+          "name": "Mariela",
+          "country": "Colombia",
+          "voice": "es-CO-SalomeNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Chicos, antes de que se vayan, cinco minutos. Hoy fue un día muy duro y quiero decirles algo que nunca les digo."
+        },
+        {
+          "s": 0,
+          "text": "En este oficio nos entrenan para que nadie note nuestro cansancio. Sonreír, servir, resolver. Si se rompe un vestido, lo arreglamos; si un caballo se come el ramo, conseguimos otro. Y si a nosotros se nos rompe algo por dentro, lo tapamos con maquillaje."
+        },
+        {
+          "s": 0,
+          "text": "Hoy, en medio del caos, un invitado me preguntó cómo estaba. Y me di cuenta de que llevaba meses sin que nadie me lo preguntara. Ni siquiera yo misma."
+        },
+        {
+          "s": 0,
+          "text": "Les pido una cosa: cuídense entre ustedes. Si ven a un compañero que no está bien, pregúntenle. No hace falta resolverle la vida; basta con que alguien lo vea. Las personas que cuidan a todo el mundo suelen ser las últimas a las que alguien cuida."
+        },
+        {
+          "s": 0,
+          "text": "Y otra cosa: el lunes empiezo terapia. Se los cuento porque quiero que sepan que no es un fracaso pedir ayuda. Es parte del trabajo. Ahora sí, a casa. Y gracias. De verdad."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Para qué entrenan a los trabajadores en este oficio, según Mariela?",
+          "infer": true,
+          "options": [
+            "Para que nadie note su cansancio",
+            "Para trabajar más rápido cuando el salón está lleno de gente",
+            "Para ganar más propinas"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿De qué se dio cuenta Mariela gracias al invitado?",
+          "infer": true,
+          "options": [
+            "De que quería cambiar de trabajo",
+            "De que llevaba meses sin que nadie le preguntara cómo estaba",
+            "De que la boda era un éxito"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué les pide a los camareros?",
+          "options": [
+            "Que se cuiden entre ellos",
+            "Que trabajen más horas cuando hay eventos grandes",
+            "Que sonrían más"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué va a empezar Mariela el lunes?",
+          "options": [
+            "Unas vacaciones",
+            "Un nuevo negocio",
+            "Terapia"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Quién cuida a las personas que cuidan en tu entorno?",
+          "model": "Pocas veces alguien; por ejemplo, mi madre cuida de todos y nadie le pregunta cómo está."
+        },
+        {
+          "q": "¿Crees que pedir ayuda psicológica sigue siendo un tabú?",
+          "model": "Cada vez menos, pero todavía hay gente que lo ve como una debilidad."
+        },
+        {
+          "q": "¿Qué gesto sencillo puede ayudar a un compañero que no está bien?",
+          "model": "Preguntarle con sinceridad cómo está y tener tiempo para escuchar la respuesta."
+        }
+      ],
+      "gaps": "Las personas que [cuidan] a todo el mundo [suelen] ser las [últimas] a las que alguien [cuida].",
+      "glossary": [
+        {
+          "word": "oficio",
+          "meaning": "profesión"
+        },
+        {
+          "word": "caos",
+          "meaning": "desorden total"
+        },
+        {
+          "word": "fracaso",
+          "meaning": "resultado malo"
+        },
+        {
+          "word": "terapia",
+          "meaning": "tratamiento psicológico"
+        }
+      ]
+    },
+    {
+      "id": "banda",
+      "title": "La música como idioma común",
+      "place": "El escenario de la carpa",
+      "context": "Willy, Don Chuy y Yamilé debaten si la música une o separa a las culturas.",
+      "speakers": [
+        {
+          "name": "Willy",
+          "country": "Cuba",
+          "voice": "es-CU-ManuelNeural"
+        },
+        {
+          "name": "Chuy",
+          "country": "Guatemala",
+          "voice": "es-GT-AndresNeural"
+        },
+        {
+          "name": "Yamilé",
+          "country": "Cuba",
+          "voice": "es-CU-BelkysNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Lo de esta noche me hizo pensar. Siempre creí que la salsa y el mariachi eran mundos distintos, casi enemigos. Y resulta que compartimos más de lo que imaginaba."
+        },
+        {
+          "s": 1,
+          "text": "Es que, si te pones a escarbar, todo viene de los mismos lugares: España, África, los pueblos originarios. Cambian los instrumentos y los sombreros, pero el corazón es el mismo."
+        },
+        {
+          "s": 2,
+          "text": "No estoy tan segura. Me parece un poco romántico decir que la música une a todos. También sirve para marcar fronteras. Cada país usa su música para decir «esto es nuestro y no vuestro»."
+        },
+        {
+          "s": 0,
+          "text": "Pero lo que pasó hoy lo desmiente. Un bolero cubano, cantado con mariachi, en una boda argentina."
+        },
+        {
+          "s": 2,
+          "text": "Hoy funcionó porque había una razón para unirse: dos novios que se querían. No es que la música elimine las diferencias, sino que, en ciertos momentos, hace que dejen de importar."
+        },
+        {
+          "s": 1,
+          "text": "Bonita distinción. ¿Y cuál es la diferencia en la práctica?"
+        },
+        {
+          "s": 2,
+          "text": "Que mañana usted y Willy van a volver a pelearse por el escenario. Pero ya saben que pueden tocar juntos."
+        },
+        {
+          "s": 0,
+          "text": "Eso es cierto. Aunque yo sigo pensando que la trompeta cubana es superior."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué creía Willy antes de esta noche?",
+          "options": [
+            "Que el mariachi era mejor",
+            "Que la salsa y el mariachi eran mundos distintos",
+            "Que la música no importaba"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Según Chuy, ¿de dónde viene todo?",
+          "options": [
+            "Solo de Cuba",
+            "De España, África y los pueblos originarios",
+            "De Estados Unidos"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Por qué duda Yamilé de que la música una a todos?",
+          "infer": true,
+          "options": [
+            "Porque no le gusta esa música y le parece de otra generación",
+            "Porque es muy cara",
+            "Porque también sirve para marcar fronteras"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué distinción propone Yamilé?",
+          "infer": true,
+          "options": [
+            "La música no elimina las diferencias, pero hace que dejen de importar",
+            "La música elimina las diferencias",
+            "La música solo sirve para bailar"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Crees que la música une a las culturas o las separa?",
+          "model": "Creo que las dos cosas; puede ser un símbolo de identidad y, a la vez, un puente."
+        },
+        {
+          "q": "¿Qué música de otra cultura has adoptado como tuya?",
+          "model": "El flamenco; no tengo raíces andaluzas, pero me emociona como si las tuviera."
+        },
+        {
+          "q": "¿En qué situación has visto que las diferencias dejaban de importar?",
+          "model": "En un partido de fútbol entre vecinos de distintos países; durante noventa minutos solo importaba el balón."
+        }
+      ],
+      "gaps": "No es que la [música] [elimine] las diferencias, sino que, en ciertos [momentos], hace que dejen de [importar].",
+      "glossary": [
+        {
+          "word": "escarbar",
+          "meaning": "buscar en profundidad"
+        },
+        {
+          "word": "desmiente",
+          "meaning": "demuestra que algo es falso"
+        },
+        {
+          "word": "distinción",
+          "meaning": "diferencia que se señala"
+        }
+      ]
+    },
+    {
+      "id": "pista",
+      "title": "El precio del amor",
+      "place": "La pista de baile",
+      "context": "Don Horacio, ya sentado, reflexiona con un invitado sobre gastar demasiado en una boda.",
+      "speakers": [
+        {
+          "name": "Horacio",
+          "country": "Uruguay",
+          "voice": "es-UY-MateoNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Usted me preguntará si estoy loco por haber vendido el auto para pagar esta fiesta. Mi hermano dice que sí. Mi contador, también. Y probablemente tengan razón."
+        },
+        {
+          "s": 0,
+          "text": "Pero déjeme explicarle algo. Mi esposa murió hace ocho años. Durante ese tiempo, Valentina y yo vivimos como dos náufragos que se cuidan en una balsa. Ella se fue a Barcelona, volvió, se enamoró, y yo me quedé mirando desde la orilla."
+        },
+        {
+          "s": 0,
+          "text": "Esta fiesta no es para impresionar a nadie. Es mi forma de decirle que la veo, que estoy orgulloso, que su madre habría bailado hasta el amanecer. No sé decir esas cosas con palabras. Las digo con vals, con asado, con una carpa llena de luces."
+        },
+        {
+          "s": 0,
+          "text": "¿Que podría haber gastado menos? Sin duda. ¿Que habría sido más sensato invertir en mi jubilación? También. Pero hay decisiones que no se toman con la calculadora. Si me arrepiento, será dentro de veinte años, y para entonces ya no me acordaré de cuánto costó."
+        },
+        {
+          "s": 0,
+          "text": "Lo único que le pido es que no se lo cuente. Ella cree que me robaron el auto, y prefiero que piense que su padre es un descuidado antes que un sacrificado."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Quién piensa que Horacio está loco?",
+          "options": [
+            "Su hermano y su contador",
+            "Su hija y el novio de su hija, Joaquín",
+            "Su esposa"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cómo describe su vida con Valentina tras la muerte de su esposa?",
+          "infer": true,
+          "options": [
+            "Como una fiesta que nunca termina del todo",
+            "Como dos náufragos en una balsa",
+            "Como una guerra"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Para qué es la fiesta, según Horacio?",
+          "options": [
+            "Para impresionar a la familia del novio con su buen gusto",
+            "Para olvidar a su esposa",
+            "Para decirle a su hija que la ve y está orgulloso"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué prefiere que piense Valentina?",
+          "infer": true,
+          "options": [
+            "Que su padre es un descuidado",
+            "Que su padre es generoso con todos menos con él mismo",
+            "Que su padre es rico"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Hay decisiones que no deberían tomarse con la calculadora?",
+          "model": "Sí, las que tienen que ver con las personas que quieres, aunque conviene no arruinarse."
+        },
+        {
+          "q": "¿Cómo expresan el afecto las personas de tu familia que no saben decirlo con palabras?",
+          "model": "Mi padre lo expresa arreglando cosas: si te quiere, te repara la bicicleta."
+        },
+        {
+          "q": "¿Te parece aceptable endeudarse para una celebración?",
+          "model": "Me parece arriesgado; prefiero una fiesta sencilla que años de deudas."
+        }
+      ],
+      "gaps": "Pero hay [decisiones] que no se [toman] con la [calculadora]. Si me [arrepiento], será dentro de veinte años, y para entonces ya no me acordaré de cuánto costó.",
+      "glossary": [
+        {
+          "word": "náufragos",
+          "meaning": "personas que sobreviven a un barco hundido"
+        },
+        {
+          "word": "sensato",
+          "meaning": "razonable"
+        },
+        {
+          "word": "jubilación",
+          "meaning": "época en que ya no se trabaja por la edad"
+        },
+        {
+          "word": "sacrificado",
+          "meaning": "que renuncia a algo por otros"
+        }
+      ]
+    },
+    {
+      "id": "barra",
+      "title": "Soltera por elección",
+      "place": "La barra",
+      "context": "Ximena y Edgardo debaten sobre la presión social para formar pareja.",
+      "speakers": [
+        {
+          "name": "Edgardo",
+          "country": "Puerto Rico",
+          "voice": "es-PR-VictorNeural"
+        },
+        {
+          "name": "Ximena",
+          "country": "España",
+          "voice": "es-ES-XimenaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Edgardo, ¿usted cree que una mujer de cuarenta años sin pareja es un caso que hay que resolver? Porque así me miran mis tías."
+        },
+        {
+          "s": 0,
+          "text": "Yo creo que sus tías vienen de una época en la que una mujer sola era una mujer sin protección. Para ellas, preguntarle cuándo se casa es casi una forma de cariño."
+        },
+        {
+          "s": 1,
+          "text": "Una forma de cariño muy cansadora. Y la presión no es solo de las tías. Las aplicaciones, las series, hasta los anuncios de seguros: todo te dice que la vida completa es en pareja."
+        },
+        {
+          "s": 0,
+          "text": "En eso tiene razón. Pero déjeme hacer de abogado del diablo: ¿no será que usted también se defiende tanto porque, en el fondo, alguna vez quiso casarse?"
+        },
+        {
+          "s": 1,
+          "text": "Touché. Sí, quise. A los treinta. Y me alegro de que no saliera. Que haya querido algo no significa que lo necesite ahora."
+        },
+        {
+          "s": 0,
+          "text": "Me parece una respuesta muy madura."
+        },
+        {
+          "s": 1,
+          "text": "Lo que me molesta no es la pregunta, sino lo que esconde: que mi vida está incompleta. Yo tengo amigos, trabajo, viajes y un gato que me odia. Mi vida está llenísima."
+        },
+        {
+          "s": 0,
+          "text": "Entonces brindemos por las vidas llenas, con o sin anillo."
+        }
+      ],
+      "choice": [
+        {
+          "q": "Según Edgardo, ¿por qué las tías preguntan tanto?",
+          "options": [
+            "Porque quieren molestar",
+            "Porque vienen de una época en que una mujer sola estaba desprotegida",
+            "Porque están aburridas"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿De dónde viene también la presión, según Ximena?",
+          "options": [
+            "Solo de la familia y de los amigos de toda la vida",
+            "Del trabajo",
+            "De aplicaciones, series y anuncios"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué reconoce Ximena?",
+          "infer": true,
+          "options": [
+            "Que quiere casarse ahora, antes de que sea tarde",
+            "Que quiso casarse a los treinta",
+            "Que nunca quiso casarse"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué le molesta realmente de la pregunta?",
+          "infer": true,
+          "options": [
+            "Que da a entender que su vida está incompleta",
+            "Que se la hagan en público",
+            "Que sea indiscreta"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Crees que la sociedad sigue considerando incompleta la vida sin pareja?",
+          "model": "En gran parte sí, aunque cada vez hay más personas que eligen vivir solas y lo defienden."
+        },
+        {
+          "q": "¿Has deseado algo que ahora te alegras de no haber conseguido?",
+          "model": "Sí, un trabajo en un banco; hoy sé que habría sido muy infeliz allí."
+        },
+        {
+          "q": "¿Cómo responderías a una pregunta indiscreta sin ofender a nadie?",
+          "model": "Con humor y cambiando de tema, sin entrar en explicaciones."
+        }
+      ],
+      "gaps": "[Que] haya [querido] algo no significa que lo [necesite] [ahora].",
+      "glossary": [
+        {
+          "word": "cansadora",
+          "meaning": "que cansa"
+        },
+        {
+          "word": "abogado del diablo",
+          "meaning": "alguien que defiende la postura contraria para debatir"
+        },
+        {
+          "word": "madura",
+          "meaning": "sensata, adulta"
+        }
+      ]
+    },
+    {
+      "id": "establo",
+      "title": "Animales en nuestras fiestas",
+      "place": "El establo",
+      "context": "Ceferino responde a la veterinaria, que critica el uso de caballos en las bodas.",
+      "speakers": [
+        {
+          "name": "Ceferino",
+          "country": "Bolivia",
+          "voice": "es-BO-MarceloNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Usted me dice, doctora, que no está bien usar a Lucero en una boda con fuegos artificiales. Y le doy la razón a medias."
+        },
+        {
+          "s": 0,
+          "text": "A medias, porque los fuegos sí que son un disparate. Eso fue idea de una organizadora que piensa en las fotos, no en el animal. Si de mí dependiera, no habría ni un petardo en esta estancia."
+        },
+        {
+          "s": 0,
+          "text": "Pero hay otra mitad. Lucero no es un objeto decorativo. Trabaja conmigo todos los días: recorremos el campo, cuidamos las vacas, conoce cada piedra del camino. Para él, llevar a los novios hasta el portón no es un espectáculo; es un trabajo como cualquier otro, y le gusta."
+        },
+        {
+          "s": 0,
+          "text": "Lo que me preocupa es otra cosa: que la gente solo se acuerde de los caballos para las fotos. Que lo vean con cintas y flores, y no sepan que necesita agua, sombra, compañía y alguien que lo conozca."
+        },
+        {
+          "s": 0,
+          "text": "Así que no, no estoy en contra de que participe. Estoy en contra de que lo usen sin conocerlo. Usted, que es veterinaria, sabe que no es lo mismo."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿En qué le da la razón Ceferino a la veterinaria?",
+          "options": [
+            "En que los caballos no deben trabajar en las fiestas ni en los desfiles",
+            "En todo",
+            "En que los fuegos artificiales son un disparate"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Por qué no considera a Lucero un objeto decorativo?",
+          "infer": true,
+          "options": [
+            "Porque trabaja con él todos los días",
+            "Porque es muy caro y no puede permitirse perderlo",
+            "Porque es suyo"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué le preocupa a Ceferino?",
+          "infer": true,
+          "options": [
+            "Que Lucero se enferme",
+            "Que la gente solo se acuerde de los caballos para las fotos",
+            "Que los novios se caigan"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿A qué se opone Ceferino?",
+          "options": [
+            "A que participe en la boda",
+            "A que la veterinaria lo examine",
+            "A que lo usen sin conocerlo"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Te parece ético que los animales participen en celebraciones humanas?",
+          "model": "Depende de las condiciones; si no sufren y están acostumbrados, no lo veo mal."
+        },
+        {
+          "q": "¿Qué relación tienes con algún animal que trabaje o haya trabajado?",
+          "model": "Mi abuelo tenía un perro pastor que cuidaba las ovejas mejor que cualquier persona."
+        },
+        {
+          "q": "¿Qué diferencia hay entre usar algo y conocerlo?",
+          "model": "Usar es aprovecharse sin interés por lo que es; conocer implica respeto y cuidado."
+        }
+      ],
+      "gaps": "Estoy en [contra] de que lo [usen] sin [conocerlo]. Usted, que es [veterinaria], sabe que no es lo mismo.",
+      "glossary": [
+        {
+          "word": "disparate",
+          "meaning": "idea absurda"
+        },
+        {
+          "word": "petardo",
+          "meaning": "explosivo pequeño de fiesta"
+        },
+        {
+          "word": "decorativo",
+          "meaning": "que solo sirve para adornar"
+        }
+      ]
+    },
+    {
+      "id": "fotos",
+      "title": "La foto perfecta y la verdadera",
+      "place": "Debajo del ombú",
+      "context": "Gonzalo reflexiona en voz alta sobre su oficio después de una noche caótica.",
+      "speakers": [
+        {
+          "name": "Gonzalo",
+          "country": "Colombia",
+          "voice": "es-CO-GonzaloNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Llevo quince años haciendo fotos de bodas y he desarrollado una teoría: la gente no quiere recuerdos, quiere pruebas. Pruebas de que fue feliz, de que estaba guapa, de que la fiesta fue un éxito."
+        },
+        {
+          "s": 0,
+          "text": "Por eso todos posan. Sonrisa, barbilla abajo, mano en la cintura. Y yo, durante años, colaboré con esa mentira amable. Retocaba arrugas, borraba ojeras, eliminaba al tío borracho del fondo."
+        },
+        {
+          "s": 0,
+          "text": "Hoy se borraron las fotos de la ceremonia y tuve que improvisar. Lo mejor que hice fue una foto movida de toda la familia, con un perro en el centro y la abuela con los ojos cerrados. Técnicamente, es un desastre. Emocionalmente, es lo más verdadero que he capturado."
+        },
+        {
+          "s": 0,
+          "text": "Y luego está esa otra foto que no debería existir, la de dos tíos que llevaban doce años sin hablarse besándose detrás del establo. Ahí está el dilema: una foto verdadera puede ser también una foto indiscreta."
+        },
+        {
+          "s": 0,
+          "text": "Creo que mi trabajo no es elegir entre la perfección y la verdad, sino saber cuándo cada una tiene derecho a salir a la luz. Esa foto, por ejemplo, no es mía. Es suya. Yo solo la guardo."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué quiere la gente según la teoría de Gonzalo?",
+          "options": [
+            "Fotos baratas que nadie vuelve a mirar",
+            "Pruebas, no recuerdos",
+            "Muchas fotos"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué hacía Gonzalo durante años?",
+          "options": [
+            "Retocaba y eliminaba imperfecciones",
+            "Hacía solo fotos espontáneas, sin pedir a nadie que posara",
+            "No retocaba nada"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cómo describe la foto de la familia?",
+          "infer": true,
+          "options": [
+            "Perfecta en todo",
+            "Aburrida",
+            "Técnicamente un desastre, emocionalmente verdadera"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cuál es el dilema de la foto del beso?",
+          "infer": true,
+          "options": [
+            "Está mal hecha",
+            "No se ve nada",
+            "Una foto verdadera puede ser también indiscreta"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Prefieres las fotos retocadas o las espontáneas?",
+          "model": "Las espontáneas, aunque reconozco que para algunas cosas, como un currículum, prefiero una foto cuidada."
+        },
+        {
+          "q": "¿Crees que las redes sociales nos han convertido en coleccionistas de pruebas?",
+          "model": "Sí, a veces vivimos más pendientes de demostrar que de disfrutar."
+        },
+        {
+          "q": "¿Cuándo tiene derecho una verdad a salir a la luz?",
+          "model": "Cuando los implicados están preparados o cuando ocultarla perjudica a otros."
+        }
+      ],
+      "gaps": "Creo que mi trabajo no es [elegir] entre la [perfección] y la verdad, sino saber cuándo cada una tiene [derecho] a salir a la [luz].",
+      "glossary": [
+        {
+          "word": "posan",
+          "meaning": "se colocan para una foto"
+        },
+        {
+          "word": "ojeras",
+          "meaning": "manchas oscuras bajo los ojos"
+        },
+        {
+          "word": "indiscreta",
+          "meaning": "que revela algo privado"
+        }
+      ]
+    },
+    {
+      "id": "muelle",
+      "title": "El duelo en medio de la fiesta",
+      "place": "El muelle de la laguna",
+      "context": "Facundo, ya más tranquilo, reflexiona sobre cómo vivir el duelo en una celebración.",
+      "speakers": [
+        {
+          "name": "Facundo",
+          "country": "Argentina",
+          "voice": "es-AR-TomasNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Durante semanas estuve convencido de que no tenía derecho a estar triste en la boda de mi mejor amigo. Que mi dolor era una mancha en un día que no me pertenecía."
+        },
+        {
+          "s": 0,
+          "text": "Por eso desaparecí. Me parecía más digno esconderme que arriesgarme a llorar delante de todos. Hoy pienso que fue una forma de egoísmo disfrazada de discreción."
+        },
+        {
+          "s": 0,
+          "text": "Porque Joaquín también quería a mi viejo. Mi papá le enseñó a hacer el asado, lo invitaba a pescar, le prestó plata cuando llegó de México sin nada. Mi duelo no era solo mío. Al esconderme, le quité a él la posibilidad de recordarlo conmigo."
+        },
+        {
+          "s": 0,
+          "text": "Cuando escuché el brindis con mis palabras, en la voz de alguien que casi no me conoce, entendimos todos algo que yo no sabía decir: que se puede celebrar y echar de menos al mismo tiempo. Que la alegría no exige que olvides a nadie."
+        },
+        {
+          "s": 0,
+          "text": "Creo que las fiestas deberían tener un espacio para los que faltan. No para entristecer a nadie, sino para que estén presentes de otra manera. Una silla vacía, un nombre en el brindis. Algo que diga: también estuvo aquí."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿De qué estaba convencido Facundo durante semanas?",
+          "options": [
+            "De que no tenía derecho a estar triste en la boda",
+            "De que no lo habían invitado",
+            "De que Joaquín estaba enojado"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cómo interpreta hoy su desaparición?",
+          "infer": true,
+          "options": [
+            "Como un acto de valentía que pocos se atreven a tener",
+            "Como egoísmo disfrazado de discreción",
+            "Como un error de organización"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué le quitó a Joaquín al esconderse?",
+          "infer": true,
+          "options": [
+            "El discurso",
+            "Los anillos",
+            "La posibilidad de recordar a su padre con él"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué propone Facundo para las fiestas?",
+          "options": [
+            "Menos música y más tiempo para conversar en las mesas",
+            "Un espacio para los que faltan",
+            "Más discursos"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Crees que se puede celebrar y echar de menos a alguien al mismo tiempo?",
+          "model": "Sí; de hecho, recordar a alguien en una fiesta puede ser una forma de celebrarlo."
+        },
+        {
+          "q": "¿Cómo se recuerda en tu cultura a los que faltan en las celebraciones?",
+          "model": "En mi familia brindamos por los ausentes antes de empezar a comer."
+        },
+        {
+          "q": "¿Has confundido alguna vez discreción con egoísmo?",
+          "model": "Sí, no conté a mis amigos un problema para no preocuparlos, y se sintieron excluidos."
+        }
+      ],
+      "gaps": "que se puede [celebrar] y echar de [menos] al mismo [tiempo]. Que la alegría no exige que [olvides] a nadie.",
+      "glossary": [
+        {
+          "word": "digno",
+          "meaning": "con dignidad, respetable"
+        },
+        {
+          "word": "disfrazada",
+          "meaning": "escondida bajo otra apariencia"
+        },
+        {
+          "word": "echar de menos",
+          "meaning": "sentir la falta de alguien"
+        }
+      ]
+    },
+    {
+      "id": "brindis",
+      "title": "El arte del brindis",
+      "place": "El escenario de la carpa",
+      "context": "Al día siguiente, Valentina, Joaquín y Mariela comentan qué hizo especial el brindis.",
+      "speakers": [
+        {
+          "name": "Valentina",
+          "country": "Argentina",
+          "voice": "es-AR-ElenaNeural"
+        },
+        {
+          "name": "Joaquín",
+          "country": "México",
+          "voice": "es-MX-JorgeNeural"
+        },
+        {
+          "name": "Mariela",
+          "country": "Colombia",
+          "voice": "es-CO-SalomeNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 2,
+          "text": "Llevo once años escuchando brindis y les confieso que casi todos se parecen. Anécdotas de la universidad, una broma sobre la suegra, una cita de internet y «¡Vivan los novios!»."
+        },
+        {
+          "s": 0,
+          "text": "Este fue distinto. No habló de nosotros como pareja, sino de todos los que estaban allí. La abuela, Don Beto, Yesenia, hasta el caballo."
+        },
+        {
+          "s": 1,
+          "text": "Creo que lo especial fue que no intentó ser brillante. Leyó notas escritas en servilletas, con la letra temblorosa. Y precisamente porque no era perfecto, todos se sintieron incluidos."
+        },
+        {
+          "s": 2,
+          "text": "Hay una lección ahí para los que hablan en público. El mejor discurso no es el que lucha por el protagonismo, sino el que se lo devuelve a los demás."
+        },
+        {
+          "s": 0,
+          "text": "Y además era un desconocido. Eso le daba una libertad que ninguno de nuestros amigos tenía. No arrastraba historias viejas ni rencores."
+        },
+        {
+          "s": 1,
+          "text": "Yo me quedo con lo último que dijo: que una boda no la hacen los novios, sino la gente que se queda a ayudar cuando todo sale mal."
+        },
+        {
+          "s": 2,
+          "text": "Si me permiten, voy a usar esa frase en mis próximas bodas. Sin pagarle derechos de autor."
+        }
+      ],
+      "choice": [
+        {
+          "q": "Según Mariela, ¿cómo son casi todos los brindis?",
+          "options": [
+            "Muy parecidos entre sí",
+            "Muy originales, casi de autor",
+            "Demasiado largos para una boda"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué hizo distinto este brindis?",
+          "infer": true,
+          "options": [
+            "Fue muy gracioso",
+            "Fue en inglés",
+            "Habló de todos los presentes, no solo de la pareja"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Por qué se sintieron todos incluidos, según Joaquín?",
+          "options": [
+            "Porque era demasiado largo para la hora que era",
+            "Porque no era perfecto",
+            "Porque había música"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué ventaja tenía ser un desconocido?",
+          "infer": true,
+          "options": [
+            "No arrastraba historias viejas ni rencores",
+            "Conocía a todos",
+            "Hablaba mejor"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué elementos debería tener un buen brindis, en tu opinión?",
+          "model": "Debería ser breve, sincero, incluir a los presentes y terminar con un deseo claro."
+        },
+        {
+          "q": "¿Crees que la imperfección puede hacer un discurso más eficaz?",
+          "model": "Sí, porque transmite autenticidad y la gente se identifica más con alguien vulnerable."
+        },
+        {
+          "q": "¿Quién «hace» realmente una celebración: los anfitriones o los invitados?",
+          "model": "Los dos, pero los momentos inolvidables suelen depender de cómo responden los invitados a lo imprevisto."
+        }
+      ],
+      "gaps": "El mejor [discurso] no es el que lucha por el [protagonismo], sino el que se lo [devuelve] a los [demás].",
+      "glossary": [
+        {
+          "word": "protagonismo",
+          "meaning": "papel principal"
+        },
+        {
+          "word": "temblorosa",
+          "meaning": "que tiembla"
+        },
+        {
+          "word": "arrastraba",
+          "meaning": "llevaba consigo"
+        }
+      ]
+    }
+  ]
+}

@@ -21,6 +21,7 @@ const madridHorde = await import('../app/madrid-infectada/horde.mjs');
 const masAlla = await import('../app/mas-alla/layout.mjs');
 const vuelo = await import('../app/vuelo-cancelado/layout.mjs');
 const consorcio = await import('../app/el-consorcio/layout.mjs');
+const boda = await import('../app/la-boda/layout.mjs');
 const tren = await import('../app/el-tren-de-las-2340/layout.mjs');
 const bosque = await import('../app/bosque-de-los-hongos-gigantes/engine.mjs');
 const { pushOut } = await import('../app/escucha-3d/bump.mjs');
@@ -209,7 +210,22 @@ function masAllaPlaces() {
   });
 }
 
-const WORLDS = [nocheStreet(), ...nocheRooms(), ...hospitalFloors(), ...vueloFloors(), ...consorcioFloors(), ...trenFloors(), ...casinoFloors(), feriaWorld(), ...madridZones(), madridCityWorld(), ...masAllaPlaces()];
+// La boda: one estancia in the open air, from the gate to the barn: the
+// people of the 18 circles, the 17 guests who talk, the party around them, the
+// waiters and the two children who run up and down the avenue.
+function bodaWorld() {
+  const scenePeople = boda.SCENES.flatMap(s => [s.npc, ...(s.extras ?? [])].map((p, i) => ({ id: s.id, x: p.x, z: p.z, y: p.y ?? 0, seated: Boolean(p.seat || /sit|lie|sleep/.test(p.pose ?? (i === 0 ? s.pose : '') ?? '')), lying: Boolean(p.lying) })));
+  const isPersonBox = b => scenePeople.some(p => Math.abs((b.x0 + b.x1) / 2 - p.x) < 1e-6 && Math.abs((b.z0 + b.z1) / 2 - p.z) < 1e-6 && Math.abs(b.x1 - b.x0 - 0.6) < 1e-6);
+  const party = (list, tag) => list.map((c, i) => ({ id: `${tag}-${i}`, x: c.x, z: c.z, y: c.y ?? 0, seated: Boolean(c.seat || /sit|lie|sleep/.test(c.pose)), lying: /lie|fallen/.test(c.pose) }));
+  return {
+    id: 'boda', solids: boda.solidsFor().filter(b => !isPersonBox(b)), bounds: boda.BOUNDS, staticWalkers: true,
+    people: [...scenePeople, ...party(boda.CROWD, 'invitado'), ...party(boda.FILLERS, 'fiesta')],
+    walkers: boda.WALKERS.map((w, i) => { const pts = []; for (let t = 0; t < 900; t += 0.05) pts.push(boda.walkerAt(w, t)); return { id: `walker-${i}`, points: pts }; }),
+    spots: [{ id: 'spawn', ...boda.SPAWN }, ...boda.SCENES.map(s => ({ id: s.id, ...s.spot }))],
+  };
+}
+
+const WORLDS = [nocheStreet(), ...nocheRooms(), ...hospitalFloors(), ...vueloFloors(), ...consorcioFloors(), ...trenFloors(), bodaWorld(), ...casinoFloors(), feriaWorld(), ...madridZones(), madridCityWorld(), ...masAllaPlaces()];
 
 // ------------------------------------------------------------------ checks
 test('every world in the list has solids, people or walkers to check', () => {

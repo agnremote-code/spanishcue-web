@@ -1,0 +1,1951 @@
+{
+  "game": "boda",
+  "level": "B1",
+  "items": [
+    {
+      "id": "porton",
+      "title": "El portero aconseja al chofer",
+      "place": "El portón de la estancia",
+      "context": "Durante la cena, Anselmo y Wilmer comen un sándwich en el portón y hablan del futuro de Wilmer.",
+      "speakers": [
+        {
+          "name": "Anselmo",
+          "country": "Paraguay",
+          "voice": "es-PY-MarioNeural"
+        },
+        {
+          "name": "Wilmer",
+          "country": "Honduras",
+          "voice": "es-HN-CarlosNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Don Anselmo, me ofrecieron trabajo de chofer en Buenos Aires. Pagan el doble, pero tendría que vivir en la ciudad."
+        },
+        {
+          "s": 0,
+          "text": "Mira, muchacho, yo pasé veinte años en la capital y después volví al campo. No digo que no vayas, pero te pido que lo pienses bien."
+        },
+        {
+          "s": 1,
+          "text": "Es que aquí no pasa nada. Cuido autos de gente que se divierte y yo miro desde el portón."
+        },
+        {
+          "s": 0,
+          "text": "Hoy pasó de todo: un padrino desaparecido, un auto con el motor encendido, una tía que llegó caminando con una lámpara."
+        },
+        {
+          "s": 1,
+          "text": "Bueno, hoy sí. Pero es una vez al año."
+        },
+        {
+          "s": 0,
+          "text": "Entonces ve. Es mejor que te arrepientas de algo que hiciste que de algo que no hiciste. Y si no te gusta, el portón te espera."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué le ofrecieron a Wilmer?",
+          "options": [
+            "Un puesto de portero",
+            "Un trabajo de chofer en Buenos Aires",
+            "Un auto nuevo"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cuánto tiempo vivió Anselmo en la capital?",
+          "options": [
+            "Diez años",
+            "Toda su vida",
+            "Veinte años"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Por qué Wilmer quiere irse?",
+          "options": [
+            "Porque en el campo no pasa nada",
+            "Porque no le gusta nada Anselmo, el casero",
+            "Porque está enfermo"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué consejo le da Anselmo al final?",
+          "options": [
+            "Que vaya, porque es mejor arrepentirse de lo que hizo",
+            "Que se quede en el campo",
+            "Que pida más dinero"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Te irías a otra ciudad por un sueldo mejor?",
+          "model": "Depende; si la ciudad me gusta, sí, pero no me iría lejos de mi familia solo por dinero."
+        },
+        {
+          "q": "¿Qué es mejor para ti: la vida en el campo o en la ciudad?",
+          "model": "Prefiero la ciudad porque hay más cultura, aunque el campo es más tranquilo."
+        },
+        {
+          "q": "¿De qué te arrepientes de no haber hecho?",
+          "model": "Me arrepiento de no haber estudiado en el extranjero cuando tenía la oportunidad."
+        }
+      ],
+      "gaps": "Es mejor que te [arrepientas] de algo que [hiciste] que de algo que no hiciste. Y si no te gusta, el [portón] te [espera].",
+      "glossary": [
+        {
+          "word": "arrepientas",
+          "meaning": "sientas pena por algo que hiciste o no hiciste"
+        },
+        {
+          "word": "muchacho",
+          "meaning": "chico joven"
+        },
+        {
+          "word": "capital",
+          "meaning": "ciudad principal de un país"
+        }
+      ]
+    },
+    {
+      "id": "capilla",
+      "title": "La confesión del novio",
+      "place": "La capilla blanca",
+      "context": "Después de la ceremonia, Joaquín vuelve a la capilla vacía para hablar con el padre Benito.",
+      "speakers": [
+        {
+          "name": "Benito",
+          "country": "España",
+          "voice": "es-ES-AlvaroNeural"
+        },
+        {
+          "name": "Joaquín",
+          "country": "México",
+          "voice": "es-MX-JorgeNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Padre, ¿puedo contarle algo? Durante la ceremonia pensé que me iba a desmayar. No por los anillos, sino por el miedo."
+        },
+        {
+          "s": 0,
+          "text": "Es normal, hijo. Casarse da miedo. Lo raro sería que no tuvieras miedo."
+        },
+        {
+          "s": 1,
+          "text": "Es que mis padres se divorciaron cuando yo tenía diez años. Tengo miedo de repetir la historia."
+        },
+        {
+          "s": 0,
+          "text": "Te voy a decir algo que digo a todas las parejas: no creo que el matrimonio sea una cuestión de suerte. Es una cuestión de trabajo, como un jardín."
+        },
+        {
+          "s": 1,
+          "text": "¿Y si no sé cuidar un jardín?"
+        },
+        {
+          "s": 0,
+          "text": "Aprendes. Y si un día no sabes qué hacer, ven a verme. Pero trae gomitas."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Por qué pensó Joaquín que se iba a desmayar?",
+          "options": [
+            "Por el calor",
+            "Por los anillos",
+            "Por el miedo"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué les pasó a los padres de Joaquín?",
+          "options": [
+            "Se murieron",
+            "Se divorciaron",
+            "Se mudaron a otra ciudad"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Según el cura, ¿qué es el matrimonio?",
+          "options": [
+            "Una cuestión de trabajo, como un jardín",
+            "Una cuestión de suerte",
+            "Un contrato legal"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué tiene que llevar Joaquín si vuelve a verlo?",
+          "options": [
+            "Flores secas",
+            "Vino",
+            "Gomitas"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué te da miedo de los compromisos importantes?",
+          "model": "Me da miedo equivocarme y no poder cambiar de opinión después."
+        },
+        {
+          "q": "¿Crees que las relaciones dependen de la suerte o del esfuerzo?",
+          "model": "Creo que un poco de las dos, pero sobre todo del esfuerzo diario."
+        },
+        {
+          "q": "¿A quién le pides consejo cuando tienes dudas?",
+          "model": "Le pido consejo a mi hermana mayor, porque siempre es sincera."
+        }
+      ],
+      "gaps": "Te voy a decir algo que digo a todas las [parejas]: no creo que el [matrimonio] [sea] una cuestión de [suerte].",
+      "glossary": [
+        {
+          "word": "desmayar",
+          "meaning": "perder el conocimiento"
+        },
+        {
+          "word": "repetir",
+          "meaning": "hacer otra vez"
+        },
+        {
+          "word": "cuestión",
+          "meaning": "asunto, tema"
+        }
+      ]
+    },
+    {
+      "id": "ninos",
+      "title": "Marisol y el divorcio",
+      "place": "El cantero de flores",
+      "context": "Durante la cena, Marisol habla con Tadeo sobre sus padres.",
+      "speakers": [
+        {
+          "name": "Marisol",
+          "country": "República Dominicana",
+          "voice": "es-DO-RamonaNeural"
+        },
+        {
+          "name": "Tadeo",
+          "country": "República Dominicana",
+          "voice": "es-DO-EmilioNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Tadeo, quiero que sepas algo. Que tus papás ya no vivan juntos no significa que no te quieran."
+        },
+        {
+          "s": 1,
+          "text": "Pero mamá llora en la cocina cuando cree que estoy dormido."
+        },
+        {
+          "s": 0,
+          "text": "Los adultos también lloramos. Eso no es malo. Es mejor que llore a que esté triste por dentro sin decir nada."
+        },
+        {
+          "s": 1,
+          "text": "¿Y por qué no se quieren más?"
+        },
+        {
+          "s": 0,
+          "text": "A veces la gente cambia, como las plantas. Algunas crecen para el mismo lado y otras no."
+        },
+        {
+          "s": 1,
+          "text": "Entonces voy a plantar los anillos de mis papás también."
+        },
+        {
+          "s": 0,
+          "text": "Ojalá funcionara así, mi amor. Pero tú puedes regar otras cosas: los dibujos para papá, los abrazos para mamá."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué quiere Marisol que sepa Tadeo?",
+          "options": [
+            "Que sus papás van a volver",
+            "Que sus papás lo quieren aunque no vivan juntos",
+            "Que tiene que portarse bien"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Dónde llora la mamá de Tadeo?",
+          "options": [
+            "En la cama",
+            "En la cocina",
+            "En el asiento del auto"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Con qué compara Marisol a la gente que cambia?",
+          "options": [
+            "Con las plantas",
+            "Con los animales",
+            "Con el clima"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué puede \"regar\" Tadeo según Marisol?",
+          "options": [
+            "Las flores del jardín",
+            "Los anillos",
+            "Dibujos y abrazos"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Cómo explicarías una mala noticia a un niño?",
+          "model": "Usaría palabras simples y le diría la verdad, pero con mucho cariño."
+        },
+        {
+          "q": "¿Crees que es bueno llorar delante de los demás?",
+          "model": "Sí, porque muestra lo que sientes y ayuda a que otros te entiendan."
+        },
+        {
+          "q": "¿Qué hacías de niño para que tus padres estuvieran contentos?",
+          "model": "Les hacía dibujos y les preparaba el desayuno los domingos."
+        }
+      ],
+      "gaps": "Es mejor que [llore] a que [esté] [triste] por dentro sin [decir] nada.",
+      "glossary": [
+        {
+          "word": "significa",
+          "meaning": "quiere decir"
+        },
+        {
+          "word": "regar",
+          "meaning": "echar agua a las plantas"
+        },
+        {
+          "word": "crecen",
+          "meaning": "se hacen más grandes"
+        }
+      ]
+    },
+    {
+      "id": "novia",
+      "title": "Consejos de la dama de honor",
+      "place": "El cuarto de la novia",
+      "context": "Entre el plato principal y el postre, Valentina y Camila escapan un momento al cuarto.",
+      "speakers": [
+        {
+          "name": "Valentina",
+          "country": "Argentina",
+          "voice": "es-AR-ElenaNeural"
+        },
+        {
+          "name": "Camila",
+          "country": "Nicaragua",
+          "voice": "es-NI-YolandaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Camila, necesito cinco minutos sin nadie. Todos me dicen que sonría, que coma, que baile."
+        },
+        {
+          "s": 1,
+          "text": "Siéntate. Te quito los zapatos. ¿Cómo estás de verdad?"
+        },
+        {
+          "s": 0,
+          "text": "Feliz, pero rara. Esta mañana tenía mi vida, y esta noche tengo otra. ¿Es normal que me sienta así?"
+        },
+        {
+          "s": 1,
+          "text": "Claro. Mi hermana dijo lo mismo en su boda. Te aconsejo que no pienses tanto y que disfrutes. Mañana vas a tener tiempo para pensar."
+        },
+        {
+          "s": 0,
+          "text": "¿Y tú? Felipe te mira toda la noche como si quisiera decirte algo."
+        },
+        {
+          "s": 1,
+          "text": "No sé de qué hablas. Bueno… un poco sí sé. Creo que tiene algo en el bolsillo y le da miedo sacarlo. Pero hoy es tu noche, no la mía."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué necesita Valentina?",
+          "options": [
+            "Un vaso de agua fresca",
+            "Otro vestido",
+            "Cinco minutos sin nadie"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cómo se siente Valentina?",
+          "options": [
+            "Muy triste y cansada",
+            "Feliz, pero rara",
+            "Enojada"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué le aconseja Camila?",
+          "options": [
+            "Que no piense tanto y disfrute",
+            "Que vuelva a la fiesta con su madre",
+            "Que llame a su abuela"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué hace Felipe según Valentina?",
+          "options": [
+            "Baila con todos los invitados",
+            "Mira a Camila toda la noche",
+            "Habla con la abuela"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué haces cuando necesitas un momento solo en una fiesta?",
+          "model": "Salgo al balcón o voy al baño unos minutos para respirar."
+        },
+        {
+          "q": "¿Qué cambio importante en tu vida te hizo sentir raro?",
+          "model": "Cuando me mudé solo por primera vez; estaba feliz, pero me sentía extraño."
+        },
+        {
+          "q": "¿Qué consejo le darías a una amiga el día de su boda?",
+          "model": "Le diría que disfrute cada minuto y que no se preocupe por los detalles."
+        }
+      ],
+      "gaps": "Te [aconsejo] que no [pienses] tanto y que [disfrutes]. Mañana vas a tener [tiempo] para pensar.",
+      "glossary": [
+        {
+          "word": "rara",
+          "meaning": "extraña, diferente"
+        },
+        {
+          "word": "disfrutes",
+          "meaning": "pases bien, goces"
+        },
+        {
+          "word": "aconsejo",
+          "meaning": "doy un consejo"
+        }
+      ]
+    },
+    {
+      "id": "abuela",
+      "title": "Lo que la abuela nunca contó",
+      "place": "La galería de la casa",
+      "context": "Ya de noche, Doña Chela habla sola, mirando una foto de su marido.",
+      "speakers": [
+        {
+          "name": "Chela",
+          "country": "Uruguay",
+          "voice": "es-UY-ValentinaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Aurelio, ¿te acuerdas de nuestra boda? Bueno, de nuestra fuga. No hubo boda hasta seis meses después, cuando mi padre se cansó de buscarnos."
+        },
+        {
+          "s": 0,
+          "text": "Hoy vi a nuestra nieta con mi vestido. Le quedaba mejor que a mí, no se lo digas a nadie."
+        },
+        {
+          "s": 0,
+          "text": "El novio no es tan malo. No sabe tomar mate, pero la mira como tú me mirabas a mí en la estación de tren."
+        },
+        {
+          "s": 0,
+          "text": "Ojalá vivan tantos años como nosotros. Y ojalá se peleen menos. Aunque, si no se pelean, ¿de qué van a hablar?"
+        },
+        {
+          "s": 0,
+          "text": "Bueno, me voy a bailar con el mexicano. Que no se diga que la abuela no colabora."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Con quién habla Doña Chela?",
+          "options": [
+            "Con la foto de su marido",
+            "Con su nieta",
+            "Con su hermana"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cuándo hubo boda después de la fuga?",
+          "options": [
+            "Al día siguiente de la boda",
+            "Un año después",
+            "Seis meses después"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cómo mira el novio a Valentina?",
+          "options": [
+            "Con miedo",
+            "Sin interés",
+            "Como Aurelio la miraba a ella"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué va a hacer la abuela al final?",
+          "options": [
+            "Irse a dormir a la habitación",
+            "Bailar con el novio",
+            "Tomar mate"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué historia de amor de tu familia te gusta?",
+          "model": "Mis abuelos se conocieron en un baile y se casaron tres meses después."
+        },
+        {
+          "q": "¿Crees que discutir es bueno en una pareja?",
+          "model": "Sí, si se discute con respeto; es mejor que guardar todo."
+        },
+        {
+          "q": "¿Hablas a veces con personas que ya no están?",
+          "model": "Sí, a veces le hablo a mi abuelo cuando voy al cementerio."
+        }
+      ],
+      "gaps": "[Ojalá] [vivan] tantos años como nosotros. Y ojalá se [peleen] [menos].",
+      "glossary": [
+        {
+          "word": "fuga",
+          "meaning": "escapada"
+        },
+        {
+          "word": "colabora",
+          "meaning": "ayuda, participa"
+        },
+        {
+          "word": "estación",
+          "meaning": "lugar donde paran los trenes"
+        }
+      ]
+    },
+    {
+      "id": "novio",
+      "title": "Madre e hijo",
+      "place": "El cuarto del novio",
+      "context": "Ximena encuentra a Lupita sola en el cuarto, comiendo postre.",
+      "speakers": [
+        {
+          "name": "Lupita",
+          "country": "México",
+          "voice": "es-MX-DaliaNeural"
+        },
+        {
+          "name": "Ximena",
+          "country": "España",
+          "voice": "es-ES-XimenaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Tía, ¿qué haces aquí sola, a escondidas? Todo el mundo te busca para bailar. El mariachi quiere tocar otra vez y no empieza sin ti."
+        },
+        {
+          "s": 0,
+          "text": "Necesitaba descansar. Y comer este postre sin que nadie me mire. ¿Sabes qué me dijo Joaquín hoy?"
+        },
+        {
+          "s": 1,
+          "text": "¿Qué?"
+        },
+        {
+          "s": 0,
+          "text": "Que el mariachi fue el mejor regalo de su vida. Que, cuando lo escuchó, sintió que estaba en su casa."
+        },
+        {
+          "s": 1,
+          "text": "¿Ves? Tenías miedo de que pensaran que eras exagerada."
+        },
+        {
+          "s": 0,
+          "text": "Ya sé. Pero cuando estás lejos de tu tierra, quieres que todos entiendan de dónde vienes. Te pido una cosa: cuando yo sea vieja, no dejes que Joaquín se olvide de Guadalajara."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué hace Lupita sola?",
+          "options": [
+            "Come postre a escondidas",
+            "Llora",
+            "Habla por teléfono con su hija"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué dijo Joaquín del mariachi?",
+          "options": [
+            "Que fue demasiado",
+            "Que no le gustó",
+            "Que fue el mejor regalo de su vida"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué sintió Joaquín al escuchar el mariachi?",
+          "options": [
+            "Que estaba cansado de tanto trabajar",
+            "Que estaba en su casa",
+            "Que era raro"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué le pide Lupita a Ximena?",
+          "options": [
+            "Que Joaquín no se olvide de Guadalajara",
+            "Que baile con ella",
+            "Que guarde el postre"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué te hace sentir en casa cuando estás lejos?",
+          "model": "La comida de mi madre y la música de mi país."
+        },
+        {
+          "q": "¿Comes a escondidas a veces?",
+          "model": "Sí, chocolate por la noche, cuando todos duermen."
+        },
+        {
+          "q": "¿Qué tradición de tu familia quieres conservar?",
+          "model": "Quiero conservar la comida de los domingos con toda la familia."
+        }
+      ],
+      "gaps": "Te [pido] una cosa: cuando yo [sea] vieja, no [dejes] que Joaquín se [olvide] de Guadalajara.",
+      "glossary": [
+        {
+          "word": "a escondidas",
+          "meaning": "sin que nadie vea"
+        },
+        {
+          "word": "tierra",
+          "meaning": "país o región de origen"
+        },
+        {
+          "word": "exagerada",
+          "meaning": "que hace demasiado"
+        }
+      ]
+    },
+    {
+      "id": "cocina",
+      "title": "La venganza de la torta",
+      "place": "La cocina de la estancia",
+      "context": "Mientras lavan platos, Ramiro y Yesenia intentan descubrir quién cambió el nombre de la torta.",
+      "speakers": [
+        {
+          "name": "Ramiro",
+          "country": "Perú",
+          "voice": "es-PE-AlexNeural"
+        },
+        {
+          "name": "Yesenia",
+          "country": "Perú",
+          "voice": "es-PE-CamilaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Yesenia, alguien de la familia mandó ese pedido con el nombre de Renata. No creo que fuera un error."
+        },
+        {
+          "s": 1,
+          "text": "La tía Gloria es la que hizo el plano de las mesas. ¿Y si fue ella?"
+        },
+        {
+          "s": 0,
+          "text": "No, Gloria hizo el plano. El pedido de la torta lo mandó otra persona. La hermana de Gloria, me parece."
+        },
+        {
+          "s": 1,
+          "text": "¿La que sentó a Gloria al lado de su exmarido? Esa señora es un peligro."
+        },
+        {
+          "s": 0,
+          "text": "Te pido que no digas nada. En esta cocina no hablamos de los clientes."
+        },
+        {
+          "s": 1,
+          "text": "Claro, chef. Pero yo me aseguro de que esa señora no reciba postre doble esta noche."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué cree Ramiro sobre el nombre de la torta?",
+          "options": [
+            "Que fue un error de Yesenia",
+            "Que no fue un error",
+            "Que fue una broma de los novios"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Quién hizo el plano de las mesas?",
+          "options": [
+            "La tía Gloria",
+            "La hermana de Gloria",
+            "Mariela"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Quién mandó probablemente el pedido?",
+          "options": [
+            "Renata",
+            "Facundo",
+            "La hermana de Gloria"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué va a hacer Yesenia?",
+          "options": [
+            "Contárselo a la novia",
+            "Renunciar",
+            "No darle postre doble a esa señora"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Hablas de los clientes o compañeros cuando no están?",
+          "model": "A veces, pero intento no criticar a nadie."
+        },
+        {
+          "q": "¿Alguna vez alguien te hizo una broma pesada?",
+          "model": "Sí, un compañero cambió el idioma de mi teléfono al japonés."
+        },
+        {
+          "q": "¿Qué harías si descubrieras que alguien hizo algo malo a propósito?",
+          "model": "Hablaría con esa persona directamente antes de decir nada a otros."
+        }
+      ],
+      "gaps": "Te [pido] que no [digas] nada. En esta [cocina] no hablamos de los [clientes].",
+      "glossary": [
+        {
+          "word": "pedido",
+          "meaning": "encargo de algo"
+        },
+        {
+          "word": "peligro",
+          "meaning": "algo que puede hacer daño"
+        },
+        {
+          "word": "me aseguro",
+          "meaning": "hago lo necesario para estar seguro"
+        }
+      ]
+    },
+    {
+      "id": "asado",
+      "title": "El asador da consejos",
+      "place": "La parrilla del jardín",
+      "context": "Don Beto les explica a unos jóvenes cómo se hace un buen asado.",
+      "speakers": [
+        {
+          "name": "Beto",
+          "country": "Chile",
+          "voice": "es-CL-LorenzoNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Muchachos, les voy a contar el secreto. No es la carne. No es el fuego. Es la paciencia."
+        },
+        {
+          "s": 0,
+          "text": "La gente quiere que el asado esté listo en una hora. Imposible. Es mejor que esperen tres horas y coman bien."
+        },
+        {
+          "s": 0,
+          "text": "Otro secreto: no muevan la carne todo el tiempo. Déjenla tranquila, como a una persona enojada."
+        },
+        {
+          "s": 0,
+          "text": "Y lo más importante: que el asador tenga siempre una copa de vino en la mano. No para tomar mucho, sino para pensar."
+        },
+        {
+          "s": 0,
+          "text": "Ah, y si viene un argentino a darles consejos, sonrían y no le hagan caso. Después, cuando él se vaya, hagan lo que ustedes quieran."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cuál es el secreto principal del asado?",
+          "options": [
+            "La paciencia",
+            "La carne de buena calidad",
+            "El fuego"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cuánto tiempo es mejor esperar?",
+          "options": [
+            "Una hora y algo",
+            "Tres horas",
+            "Media hora"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cómo hay que tratar la carne?",
+          "options": [
+            "Moverla todo el tiempo",
+            "Ponerle mucha sal",
+            "Dejarla tranquila"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Para qué sirve la copa de vino según Beto?",
+          "options": [
+            "Para pensar",
+            "Para emborracharse",
+            "Para la carne"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Tienes paciencia cuando una comida tarda mucho en estar lista?",
+          "model": "No mucho; cuando cocino, siempre quiero comer antes de que esté listo."
+        },
+        {
+          "q": "¿Qué secreto de cocina de tu familia conoces?",
+          "model": "Mi madre siempre pone un poco de azúcar en las salsas."
+        },
+        {
+          "q": "¿Qué haces cuando alguien te da consejos que no pediste?",
+          "model": "Sonrío, digo gracias y hago lo que pensaba hacer."
+        }
+      ],
+      "gaps": "La gente [quiere] que el asado [esté] listo en una hora. [Imposible]. Es mejor que [esperen] tres horas y coman bien.",
+      "glossary": [
+        {
+          "word": "paciencia",
+          "meaning": "capacidad de esperar con calma"
+        },
+        {
+          "word": "muevan",
+          "meaning": "cambien de lugar"
+        },
+        {
+          "word": "no le hagan caso",
+          "meaning": "no lo escuchen"
+        }
+      ]
+    },
+    {
+      "id": "mesa",
+      "title": "Pepe intenta hablar",
+      "place": "Las mesas largas",
+      "context": "En la mesa siete, Pepe intenta romper doce años de silencio.",
+      "speakers": [
+        {
+          "name": "Gloria",
+          "country": "Panamá",
+          "voice": "es-PA-MargaritaNeural"
+        },
+        {
+          "name": "Pepe",
+          "country": "Panamá",
+          "voice": "es-PA-RobertoNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Gloria, ya sé que no quieres hablar conmigo. Solo te pido que me escuches dos minutos."
+        },
+        {
+          "s": 0,
+          "text": "Tienes uno. Y empezó hace diez segundos."
+        },
+        {
+          "s": 1,
+          "text": "Lo de la herencia de tu madre fue culpa mía. Yo quería vender el departamento y tú no. Me equivoqué."
+        },
+        {
+          "s": 0,
+          "text": "¿Me lo dices doce años después? ¿En la boda de mi sobrina?"
+        },
+        {
+          "s": 1,
+          "text": "Es que antes no tenía el valor. Y hoy, viéndote con ese vestido, pensé que no quiero morirme sin decírtelo."
+        },
+        {
+          "s": 0,
+          "text": "Qué dramático. Siempre fuiste dramático, Pepe, desde el día que te conocí. Bueno, pásame el pan. No significa que te perdone. Significa que tengo hambre."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cuánto tiempo le da Gloria a Pepe para hablar?",
+          "options": [
+            "Dos minutos",
+            "Un minuto",
+            "Diez minutos"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Por qué discutieron hace doce años?",
+          "options": [
+            "Por otra mujer",
+            "Por dinero de un viaje",
+            "Por la herencia de la madre de Gloria"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Por qué Pepe no habló antes?",
+          "options": [
+            "Porque vivía lejos, en otra provincia",
+            "Porque no tenía el valor",
+            "Porque Gloria no quería"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué significa que Gloria le pida el pan?",
+          "options": [
+            "Que tiene hambre, no que lo perdone",
+            "Que lo perdona",
+            "Que quiere irse"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Pediste perdón alguna vez mucho tiempo después?",
+          "model": "Sí, a un amigo del colegio, diez años después de una pelea tonta."
+        },
+        {
+          "q": "¿Crees que todo se puede perdonar?",
+          "model": "No todo, pero muchas cosas sí, si la otra persona está arrepentida."
+        },
+        {
+          "q": "¿Qué peleas familiares ocurren por dinero en tu cultura?",
+          "model": "Las herencias causan muchas peleas entre hermanos."
+        }
+      ],
+      "gaps": "Lo de la [herencia] de tu madre fue [culpa] mía. Yo [quería] vender el departamento y tú no. Me [equivoqué].",
+      "glossary": [
+        {
+          "word": "herencia",
+          "meaning": "bienes que deja una persona al morir"
+        },
+        {
+          "word": "valor",
+          "meaning": "coraje"
+        },
+        {
+          "word": "culpa",
+          "meaning": "responsabilidad de algo malo"
+        }
+      ]
+    },
+    {
+      "id": "ex",
+      "title": "Renata y Rocío, detrás del arco",
+      "place": "Detrás del arco de flores",
+      "context": "Escondidas detrás del arco de flores, Renata y Rocío miran el baile.",
+      "speakers": [
+        {
+          "name": "Renata",
+          "country": "Venezuela",
+          "voice": "es-VE-PaolaNeural"
+        },
+        {
+          "name": "Rocío",
+          "country": "Ecuador",
+          "voice": "es-EC-AndreaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Mira cómo baila Joaquín. Conmigo nunca bailaba. Decía que le daba vergüenza."
+        },
+        {
+          "s": 1,
+          "text": "La gente cambia. ¿Te duele verlo así?"
+        },
+        {
+          "s": 0,
+          "text": "No, eso es lo raro. Me alegra. Durante seis años quise que fuera así, y ahora lo es con otra. No sé si reírme o llorar."
+        },
+        {
+          "s": 1,
+          "text": "Yo te recomiendo que te rías. Llorar con ese vestido rojo sería demasiado dramático."
+        },
+        {
+          "s": 0,
+          "text": "Tienes razón. Además, Facundo baila mucho mejor que él."
+        },
+        {
+          "s": 1,
+          "text": "Mejor no le digas eso a nadie esta noche. ¿Y dónde está Facundo? No lo vi en toda la fiesta."
+        },
+        {
+          "s": 0,
+          "text": "Esa es la pregunta de la noche. No contesta mis mensajes desde las cinco. Ojalá aparezca antes del brindis."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué decía Joaquín cuando estaba con Renata?",
+          "options": [
+            "Que le daba vergüenza bailar",
+            "Que no le gustaba nada esa música",
+            "Que estaba cansado"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué siente Renata al verlo bailar?",
+          "options": [
+            "Tristeza",
+            "Rabia",
+            "Alegría"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué le recomienda Rocío?",
+          "options": [
+            "Que llore",
+            "Que se ría",
+            "Que se vaya"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué desea Renata?",
+          "options": [
+            "Que Facundo aparezca antes del brindis",
+            "Que Joaquín la vea",
+            "Que termine la fiesta"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Cómo te sientes cuando ves a una expareja feliz con otra persona?",
+          "model": "Me alegro, aunque al principio me resulta un poco raro."
+        },
+        {
+          "q": "¿Has cambiado mucho desde tu primera relación?",
+          "model": "Sí, ahora soy más paciente y digo lo que pienso."
+        },
+        {
+          "q": "¿Prefieres reírte o llorar en las situaciones difíciles?",
+          "model": "Prefiero reírme, pero a veces llorar también ayuda."
+        }
+      ],
+      "gaps": "Yo te [recomiendo] que te [rías]. Llorar con ese [vestido] rojo sería demasiado [dramático].",
+      "glossary": [
+        {
+          "word": "vergüenza",
+          "meaning": "sensación de timidez o ridículo"
+        },
+        {
+          "word": "me alegra",
+          "meaning": "me pone contenta"
+        },
+        {
+          "word": "dramático",
+          "meaning": "exagerado"
+        }
+      ]
+    },
+    {
+      "id": "planner",
+      "title": "Mariela y su abogado",
+      "place": "La entrada de la carpa",
+      "context": "Mariela deja un mensaje de voz a su abogado mientras sirven el postre.",
+      "speakers": [
+        {
+          "name": "Mariela",
+          "country": "Colombia",
+          "voice": "es-CO-SalomeNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Doctor Pérez, soy Mariela. Estoy en una boda, así que hablo rápido. Ya leí el último correo. Le pido que no cambie nada más del acuerdo."
+        },
+        {
+          "s": 0,
+          "text": "Que él se quede con el auto. Yo me quedo con el perro y con mi empresa. Es lo justo."
+        },
+        {
+          "s": 0,
+          "text": "Y otra cosa. Quiero que sepa algo: hoy, en medio de un desastre de boda, un invitado me preguntó cómo estaba. Nadie me lo preguntaba desde hace meses."
+        },
+        {
+          "s": 0,
+          "text": "No sé por qué le cuento esto a mi abogado. Supongo que porque usted me cobra por escuchar. Bueno, firmo el lunes a primera hora. Buenas noches, doctor."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿A quién le deja el mensaje Mariela?",
+          "options": [
+            "A su exmarido",
+            "A un cliente",
+            "A su abogado"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Con qué se queda Mariela?",
+          "options": [
+            "Con el auto",
+            "Con el perro y su empresa",
+            "Con la casa"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué le preguntó el invitado?",
+          "options": [
+            "Cómo estaba",
+            "Dónde estaba el baño",
+            "A qué hora era la cena"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cuándo va a firmar Mariela?",
+          "options": [
+            "Mañana",
+            "Esta noche",
+            "El lunes"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Quién te pregunta cómo estás de verdad?",
+          "model": "Mi mejor amiga; ella siempre nota cuando algo me pasa."
+        },
+        {
+          "q": "¿Qué es lo justo cuando una pareja se separa?",
+          "model": "Creo que lo justo es repartir todo por la mitad y pensar en los hijos."
+        },
+        {
+          "q": "¿Hablas de tu vida personal en el trabajo?",
+          "model": "Poco; solo con dos compañeros que son mis amigos."
+        }
+      ],
+      "gaps": "[Quiero] que [sepa] algo: hoy, en medio de un [desastre] de boda, un [invitado] me preguntó cómo estaba.",
+      "glossary": [
+        {
+          "word": "acuerdo",
+          "meaning": "documento con lo que deciden dos partes"
+        },
+        {
+          "word": "justo",
+          "meaning": "correcto, equilibrado"
+        },
+        {
+          "word": "cobra",
+          "meaning": "pide dinero"
+        }
+      ]
+    },
+    {
+      "id": "banda",
+      "title": "Yamilé tiene una propuesta",
+      "place": "El escenario de la carpa",
+      "context": "En una pausa, Yamilé propone algo a los dos directores.",
+      "speakers": [
+        {
+          "name": "Willy",
+          "country": "Cuba",
+          "voice": "es-CU-ManuelNeural"
+        },
+        {
+          "name": "Chuy",
+          "country": "Guatemala",
+          "voice": "es-GT-AndresNeural"
+        },
+        {
+          "name": "Yamilé",
+          "country": "Cuba",
+          "voice": "es-CU-BelkysNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 2,
+          "text": "Willy, Don Chuy: ahora que son amigos, tengo una idea. ¿Por qué no grabamos un disco juntos?"
+        },
+        {
+          "s": 0,
+          "text": "¿Salsa con mariachi? No sé si eso se puede vender."
+        },
+        {
+          "s": 1,
+          "text": "Yo creo que sí. En México la gente quiere cosas nuevas. Pero es necesario que alguien escriba las canciones."
+        },
+        {
+          "s": 2,
+          "text": "Yo escribo. Tengo un cuaderno lleno de letras que nadie quiere cantar."
+        },
+        {
+          "s": 0,
+          "text": "Bueno, pero si lo hacemos, quiero que la primera canción sea para la abuela de esta boda. Lloró tanto con tu son que se le cayó el mate."
+        },
+        {
+          "s": 1,
+          "text": "Trato hecho. Y que el disco se llame «Boda en la pampa». Con una foto del caballo en la portada."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué propone Yamilé?",
+          "options": [
+            "Tocar en otra boda en diciembre",
+            "Grabar un disco juntos",
+            "Hacer una gira"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué duda tiene Willy?",
+          "options": [
+            "Si Yamilé canta bien",
+            "Si hay dinero",
+            "Si se puede vender"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Quién va a escribir las canciones?",
+          "options": [
+            "Yamilé",
+            "Willy",
+            "Don Chuy"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cómo se va a llamar el disco?",
+          "options": [
+            "«Salsa y mariachi en Areco»",
+            "«Boda en la pampa»",
+            "«La abuela»"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Mezclarías dos estilos de música? ¿Cuáles?",
+          "model": "Mezclaría el rock con la música clásica; creo que sonaría muy bien."
+        },
+        {
+          "q": "¿Tienes algún cuaderno o archivo con ideas que nunca usaste?",
+          "model": "Sí, tengo una carpeta con ideas para un negocio."
+        },
+        {
+          "q": "¿Qué nombre le pondrías a un disco sobre tu vida?",
+          "model": "Lo llamaría «Siempre tarde», porque nunca llego a tiempo."
+        }
+      ],
+      "gaps": "Pero es [necesario] que alguien [escriba] las [canciones]. Yo escribo. Tengo un [cuaderno] lleno de letras que nadie quiere cantar.",
+      "glossary": [
+        {
+          "word": "disco",
+          "meaning": "grabación de canciones"
+        },
+        {
+          "word": "letras",
+          "meaning": "palabras de las canciones"
+        },
+        {
+          "word": "trato hecho",
+          "meaning": "acuerdo cerrado"
+        }
+      ]
+    },
+    {
+      "id": "pista",
+      "title": "El secreto del auto",
+      "place": "La pista de baile",
+      "context": "Don Horacio habla por teléfono con su hermano, en un rincón de la pista.",
+      "speakers": [
+        {
+          "name": "Horacio",
+          "country": "Uruguay",
+          "voice": "es-UY-MateoNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Hermano, tengo que pedirte un favor. Si Valentina te pregunta por mi auto, dile que me lo robaron."
+        },
+        {
+          "s": 0,
+          "text": "No, no me lo robaron. Tuve que venderlo para pagar la fiesta. Ella no lo sabe, y quiero que siga así."
+        },
+        {
+          "s": 0,
+          "text": "Ya sé que me vas a decir que estoy loco. Pero mírala: está bailando con los zapatos en la mano y no deja de reír."
+        },
+        {
+          "s": 0,
+          "text": "Un auto se compra con tiempo y trabajo. Esto no se compra. Ojalá tú lo hubieras visto."
+        },
+        {
+          "s": 0,
+          "text": "Bueno, te dejo. Me toca el vals y estoy muy nervioso. Y por favor, cuando venga el seguro, no digas nada."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué favor le pide Don Horacio a su hermano?",
+          "options": [
+            "Que le preste dinero",
+            "Que venga a la boda",
+            "Que diga que le robaron el auto"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Por qué vendió el auto?",
+          "options": [
+            "Para pagar la fiesta",
+            "Porque era viejo y gastaba mucho",
+            "Para comprar otro"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué está haciendo Valentina?",
+          "options": [
+            "Habla con la abuela",
+            "Baila con los zapatos en la mano",
+            "Come torta"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué le toca a Don Horacio ahora?",
+          "options": [
+            "El brindis",
+            "La cena",
+            "El vals"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué vendiste o dejaste para conseguir algo más importante?",
+          "model": "Dejé de salir un año para ahorrar y viajar a México."
+        },
+        {
+          "q": "¿Mentirías para proteger a alguien que quieres?",
+          "model": "En algunos casos sí, si la verdad solo le va a hacer daño."
+        },
+        {
+          "q": "¿Qué regalo de una celebración no se puede comprar con dinero?",
+          "model": "Que todas las personas que quiero estén juntas en la misma mesa."
+        }
+      ],
+      "gaps": "Un auto se [compra] con tiempo y trabajo. Esto no se compra. [Ojalá] tú lo [hubieras] [visto].",
+      "glossary": [
+        {
+          "word": "robaron",
+          "meaning": "quitaron sin permiso"
+        },
+        {
+          "word": "seguro",
+          "meaning": "empresa que paga si pasa algo malo"
+        },
+        {
+          "word": "me toca",
+          "meaning": "es mi turno"
+        }
+      ]
+    },
+    {
+      "id": "barra",
+      "title": "Edgardo cuenta su historia",
+      "place": "La barra",
+      "context": "A las tres de la mañana, Ximena y Edgardo hablan con la barra casi vacía.",
+      "speakers": [
+        {
+          "name": "Edgardo",
+          "country": "Puerto Rico",
+          "voice": "es-PR-VictorNeural"
+        },
+        {
+          "name": "Ximena",
+          "country": "España",
+          "voice": "es-ES-XimenaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Edgardo, tú me escuchaste toda la noche. Ahora cuéntame algo de ti."
+        },
+        {
+          "s": 0,
+          "text": "Bueno… yo estuve casado quince años. Mi esposa me pidió el divorcio el mismo día de la inauguración de este negocio de barras. Ese día preparé doscientos mojitos y no me tomé ninguno."
+        },
+        {
+          "s": 1,
+          "text": "¡Qué horror! ¿Y no odias las bodas?"
+        },
+        {
+          "s": 0,
+          "text": "Al principio, sí. Pero con el tiempo me di cuenta de que las bodas no son el problema. El problema es casarse sin conocerse."
+        },
+        {
+          "s": 1,
+          "text": "¿Y qué me recomiendas a mí?"
+        },
+        {
+          "s": 0,
+          "text": "Que no te cases para que tu familia esté tranquila. Si un día te casas, que sea porque no puedes imaginar tu vida sin esa persona."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cuántos años estuvo casado Edgardo?",
+          "options": [
+            "Cinco",
+            "Quince",
+            "Veinticinco"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cuándo le pidió el divorcio su esposa?",
+          "options": [
+            "El día que abrió su negocio",
+            "En una boda",
+            "En Navidad"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Según Edgardo, ¿cuál es el problema?",
+          "options": [
+            "Casarse sin conocerse",
+            "Las bodas caras",
+            "Las peleas de la familia en las fiestas"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué le recomienda a Ximena?",
+          "options": [
+            "Que se case pronto",
+            "Que no se case para tranquilizar a su familia",
+            "Que nunca se case"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Por qué razones se casa la gente en tu país?",
+          "model": "Por amor, pero también por la familia o por razones económicas."
+        },
+        {
+          "q": "¿Hay algo que odiabas y ahora te gusta?",
+          "model": "Antes odiaba correr y ahora corro tres veces por semana."
+        },
+        {
+          "q": "¿Qué te recomendaría un buen amigo sobre el amor?",
+          "model": "Que no tenga prisa y que elija a alguien que me haga reír."
+        }
+      ],
+      "gaps": "Que no te [cases] para que tu [familia] [esté] [tranquila].",
+      "glossary": [
+        {
+          "word": "negocio",
+          "meaning": "empresa propia"
+        },
+        {
+          "word": "odias",
+          "meaning": "no soportas"
+        },
+        {
+          "word": "imaginar",
+          "meaning": "pensar algo en la mente"
+        }
+      ]
+    },
+    {
+      "id": "establo",
+      "title": "La veterinaria y el caballo",
+      "place": "El establo",
+      "context": "Ceferino habla con Julieta, la veterinaria, que tiene miedo de acercarse a Lucero.",
+      "speakers": [
+        {
+          "name": "Ceferino",
+          "country": "Bolivia",
+          "voice": "es-BO-MarceloNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Doctora, no tenga miedo. Lucero es más tranquilo que muchos invitados de esta fiesta."
+        },
+        {
+          "s": 0,
+          "text": "Le pido que se acerque despacio, por el costado, y que le hable bajito. No le dé la espalda."
+        },
+        {
+          "s": 0,
+          "text": "¿Ve? Ya baja la cabeza y mueve las orejas. Eso significa que confía en usted."
+        },
+        {
+          "s": 0,
+          "text": "Las flores del ramo no le hacen daño. Lo que me preocupa son los fuegos artificiales. Es importante que alguien esté a su lado cuando empiecen."
+        },
+        {
+          "s": 0,
+          "text": "Si usted quiere, puede venir conmigo a medianoche. Entre los dos, lo calmamos. Y si se asusta, usted es la doctora. Yo solo soy el que le canta."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cómo es Lucero según Ceferino?",
+          "options": [
+            "Muy nervioso",
+            "Peligroso",
+            "Más tranquilo que muchos invitados"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cómo tiene que acercarse la veterinaria?",
+          "options": [
+            "Rápido y por delante, sin mirar",
+            "Por detrás",
+            "Despacio y por el costado"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué significa que Lucero baje la cabeza?",
+          "options": [
+            "Que tiene hambre",
+            "Que confía en ella",
+            "Que está enfermo y quiere irse"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué le preocupa a Ceferino?",
+          "options": [
+            "Los fuegos artificiales",
+            "Las flores del ramo de la novia",
+            "La comida"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Cómo te acercas a un animal que no conoces?",
+          "model": "Despacio, sin hacer movimientos rápidos y dejando que me huela."
+        },
+        {
+          "q": "¿Qué te da miedo aunque sepas que no es peligroso?",
+          "model": "Las arañas pequeñas; sé que no hacen nada, pero me dan miedo."
+        },
+        {
+          "q": "¿Alguna vez ayudaste a alguien a calmarse?",
+          "model": "Sí, a una amiga en un avión con turbulencias."
+        }
+      ],
+      "gaps": "Es [importante] que alguien [esté] a su [lado] cuando [empiecen].",
+      "glossary": [
+        {
+          "word": "costado",
+          "meaning": "lado"
+        },
+        {
+          "word": "confía",
+          "meaning": "cree en alguien"
+        },
+        {
+          "word": "calmamos",
+          "meaning": "tranquilizamos"
+        }
+      ]
+    },
+    {
+      "id": "fotos",
+      "title": "El fotógrafo duda",
+      "place": "Debajo del ombú",
+      "context": "Gonzalo graba un audio a su socia para pedirle consejo.",
+      "speakers": [
+        {
+          "name": "Gonzalo",
+          "country": "Colombia",
+          "voice": "es-CO-GonzaloNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Laura, soy yo. Tú eres mi socia y necesito tu opinión. Las fotos de la ceremonia desaparecieron, todas. No sé cómo pasó, pero la tarjeta está vacía."
+        },
+        {
+          "s": 0,
+          "text": "Un invitado me sugirió que hiciera fotos nuevas con los novios, aquí, con las luces del ombú. Creo que es buena idea."
+        },
+        {
+          "s": 0,
+          "text": "Pero también tengo una foto que no debería tener: dos tíos de la novia besándose detrás del establo. Están divorciados."
+        },
+        {
+          "s": 0,
+          "text": "No quiero que nadie la vea, pero tampoco quiero borrarla. Es la foto más bonita del día."
+        },
+        {
+          "s": 0,
+          "text": "¿Qué harías tú? Contéstame pronto, por favor, antes de que me vuelva loco. Estoy debajo de un árbol, hablando solo como un actor de teatro."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿A quién le pide consejo Gonzalo?",
+          "options": [
+            "A los novios",
+            "A su madre, que vive en Lima",
+            "A su socia Laura"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué le sugirió un invitado?",
+          "options": [
+            "Hacer fotos nuevas con los novios",
+            "Pedir perdón",
+            "Borrar todo"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué tiene de especial la foto de los tíos?",
+          "options": [
+            "Están bailando",
+            "Están divorciados y se besan",
+            "Están peleando"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué no quiere hacer Gonzalo con esa foto?",
+          "options": [
+            "Borrarla",
+            "Guardarla",
+            "Mirarla"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿A quién le pides consejo en el trabajo?",
+          "model": "A una compañera con mucha experiencia."
+        },
+        {
+          "q": "¿Borrarías una foto bonita para proteger un secreto?",
+          "model": "No la borraría, pero la guardaría donde nadie pueda verla."
+        },
+        {
+          "q": "¿Qué harías si perdieras un trabajo importante por un error técnico?",
+          "model": "Lo diría enseguida y propondría una solución."
+        }
+      ],
+      "gaps": "No [quiero] que nadie la [vea], pero [tampoco] quiero [borrarla].",
+      "glossary": [
+        {
+          "word": "sugirió",
+          "meaning": "propuso"
+        },
+        {
+          "word": "socia",
+          "meaning": "compañera de negocio"
+        },
+        {
+          "word": "besándose",
+          "meaning": "dándose besos"
+        }
+      ]
+    },
+    {
+      "id": "muelle",
+      "title": "Facundo prepara el discurso",
+      "place": "El muelle de la laguna",
+      "context": "Facundo lee en voz alta el discurso que escribió para la boda.",
+      "speakers": [
+        {
+          "name": "Facundo",
+          "country": "Argentina",
+          "voice": "es-AR-TomasNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "«Joaquín, cuando nos conocimos en la universidad, tú no sabías hacer un asado y yo no sabía hablar de lo que sentía.»"
+        },
+        {
+          "s": 0,
+          "text": "«Mi papá nos enseñó a los dos. A ti, el asado. A mí, que un amigo es alguien que te acompaña aunque no le pidas nada.»"
+        },
+        {
+          "s": 0,
+          "text": "«Hoy él no está, pero estoy seguro de que le gustaría que yo dijera estas palabras con una copa en la mano. Por ti, por Valentina, y por él.»"
+        },
+        {
+          "s": 0,
+          "text": "No puedo. Cada vez que llego a esta parte, me quiebro. Es mejor que no lo lea. Que lo lea otro, o nadie."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Dónde se conocieron Facundo y Joaquín?",
+          "options": [
+            "En el colegio, de muy chicos",
+            "En la universidad",
+            "En el trabajo"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué le enseñó el papá de Facundo a Joaquín?",
+          "options": [
+            "A bailar",
+            "A hablar",
+            "A hacer un asado"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Según el papá, ¿qué es un amigo?",
+          "options": [
+            "Alguien que te acompaña aunque no le pidas nada",
+            "Alguien que te presta dinero",
+            "Alguien que te dice la verdad"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué decide Facundo al final?",
+          "options": [
+            "Que va a leerlo igual",
+            "Que va a cambiarlo",
+            "Que es mejor que no lo lea él"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué te enseñaron los padres de un amigo?",
+          "model": "El padre de mi amiga me enseñó a pescar."
+        },
+        {
+          "q": "¿Cómo defines a un buen amigo?",
+          "model": "Un buen amigo es alguien que está en los momentos malos, no solo en los buenos."
+        },
+        {
+          "q": "¿Te cuesta hablar de lo que sientes?",
+          "model": "Sí, me resulta más fácil escribirlo que decirlo."
+        }
+      ],
+      "gaps": "Hoy él no [está], pero estoy [seguro] de que le [gustaría] que yo [dijera] estas palabras con una copa en la mano.",
+      "glossary": [
+        {
+          "word": "acompaña",
+          "meaning": "está con alguien"
+        },
+        {
+          "word": "me quiebro",
+          "meaning": "empiezo a llorar"
+        },
+        {
+          "word": "universidad",
+          "meaning": "centro de estudios superiores"
+        }
+      ]
+    },
+    {
+      "id": "brindis",
+      "title": "Antes del micrófono",
+      "place": "El escenario de la carpa",
+      "context": "Cinco minutos antes del brindis, Mariela, Valentina y Joaquín hablan detrás del escenario.",
+      "speakers": [
+        {
+          "name": "Valentina",
+          "country": "Argentina",
+          "voice": "es-AR-ElenaNeural"
+        },
+        {
+          "name": "Joaquín",
+          "country": "México",
+          "voice": "es-MX-JorgeNeural"
+        },
+        {
+          "name": "Mariela",
+          "country": "Colombia",
+          "voice": "es-CO-SalomeNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 2,
+          "text": "Chicos, tengo una mala noticia: el padrino no aparece. Nadie lo vio desde la tarde. Tenemos que decidir ahora mismo quién hace el brindis, porque en cinco minutos es medianoche."
+        },
+        {
+          "s": 0,
+          "text": "¿Y si lo hace el amigo de Facundo? Hoy nos ayudó en todo: el vestido, la torta, la abuela."
+        },
+        {
+          "s": 1,
+          "text": "No lo conocemos. ¿Y si dice algo raro?"
+        },
+        {
+          "s": 2,
+          "text": "Les recomiendo que confíen en él. Lleva toda la noche escribiendo notas en servilletas. Creo que tiene algo preparado."
+        },
+        {
+          "s": 0,
+          "text": "Entonces que hable. Ojalá diga algo de Facundo también."
+        },
+        {
+          "s": 1,
+          "text": "Está bien. Si ustedes dos confían en él, yo también. Pero que no hable de Renata, por favor. Esta noche no."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué tienen que decidir?",
+          "options": [
+            "A qué hora termina la fiesta",
+            "Quién hace el brindis",
+            "Qué canción tocar"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿En qué ayudó el amigo de Facundo?",
+          "options": [
+            "En la música",
+            "En el vestido, la torta y la abuela",
+            "En las fotos"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué ha estado haciendo el invitado toda la noche?",
+          "options": [
+            "Escribir notas en servilletas",
+            "Bailar con todos",
+            "Tomar vino"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿De qué no quiere Joaquín que hable?",
+          "options": [
+            "De Facundo",
+            "De la abuela",
+            "De Renata"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Confías en personas que acabas de conocer?",
+          "model": "Depende de la situación, pero normalmente doy una oportunidad."
+        },
+        {
+          "q": "¿Alguna vez tuviste que hablar en público sin prepararte?",
+          "model": "Sí, en una reunión de trabajo; mi jefe me pidió que presentara un proyecto."
+        },
+        {
+          "q": "¿De qué temas no hablarías en un discurso de boda?",
+          "model": "No hablaría de exparejas ni de dinero."
+        }
+      ],
+      "gaps": "Les [recomiendo] que [confíen] en él. Lleva toda la noche [escribiendo] notas en [servilletas].",
+      "glossary": [
+        {
+          "word": "brindis",
+          "meaning": "momento de levantar la copa y decir unas palabras"
+        },
+        {
+          "word": "confíen",
+          "meaning": "crean en alguien"
+        },
+        {
+          "word": "preparado",
+          "meaning": "listo"
+        }
+      ]
+    }
+  ]
+}

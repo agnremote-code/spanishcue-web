@@ -1,0 +1,3582 @@
+{
+  "version": 1,
+  "authorization": "Owner approvals cmsg_01Gr5R4j3t2Yet65UcmhcVhADwvzg9kA9GinuWu3D7FSfe and cmsg_01Gr5R4j3t2Yet65UcmhcVhAAAbp6kqDfMqxzNm3PL6f5g (2026-11-04): «La boda» (ID 257), a new A0–C2 3D conversation and listening class at a wedding on an estancia, whose A0 level is fully bilingual (conversation, guests, choices and listening) and whose A1 level glosses its key words in English, plus one English line for the academies listing. This manifest approves only the exact English support literals listed below; it cannot exempt any edit or deletion of existing English copy.",
+  "additions": [
+    {
+      "path": "app/academias/page.tsx",
+      "text": "A wedding at a country estate, from sunset to dawn: celebrate, give advice and make the toast in Spanish."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Anselmo and Wilmer count the cars at the gate."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Wilmer, how many cars are there?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "There are forty cars and two minibuses."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "And the blue car?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "It is the best man’s. It is near the tree."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Good. Now I am having a coffee."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "How many cars are there?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "How many minibuses are there?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Whose is the blue car?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "What does Anselmo have?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Do you go to celebrations by car?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "What do you drink in the afternoon?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "How many people are at a family dinner?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "minibuses"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "best man"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "tree"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Father Benito and Joaquín get the chapel ready."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Joaquín, do you like the candles?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Yes, Father. They are very pretty. But it is hot."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "The chapel is small. There are eighty people."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Shall I open the door?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Yes, open the door, please."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "What does Joaquín like?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "How is the chapel?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "How many people are there?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "What does Joaquín open?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Do you prefer a celebration in summer or in winter?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Is there a church near your home?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Do you put candles on the table for a special dinner?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "candles"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "chapel"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "heat"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Tadeo and his aunt Marisol talk before the ceremony."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Auntie, I am hungry."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Not now, Tadeo. First the ceremony."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "And afterwards is there cake?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Yes, there is chocolate cake."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "I like chocolate!"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "What does Tadeo have?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "What comes first?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "What flavour is the cake?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Who is Marisol?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "What sweet do you eat on a happy day?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Are there many children in your family?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "What do you eat after a long day?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "hunger"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "cake"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "ceremony"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Camila helps Valentina with her dress."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Valentina, your dress is beautiful."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Thank you. But it is very long."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Your shoes are high. It is fine."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "And my hair?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Your hair is perfect. Let’s go!"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "What is the dress like?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "What are the shoes like?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "How is the hair?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Who helps Valentina?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "What clothes do you like to wear at a party?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Do you wear high shoes?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Who is your best friend?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "dress"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "beautiful"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "shoes"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Grandma Chela talks to herself in her chair."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "It is five o’clock. I am having mate."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "My granddaughter is getting married today. She is twenty-nine."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "I am eighty-six."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "The mate is cold. How awful!"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "What time is it?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "What does Chela drink?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "How old is the granddaughter?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "How is the mate?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Did your grandparents go to your last celebration?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Do you like hot drinks?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "What do you do at five in the afternoon?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "granddaughter"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "mate (herbal drink)"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "cold"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Lupita and Ximena look at the groom’s clothes."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Ximena, which tie is better?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "The red tie, auntie."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Red? It is a wedding, not a circus."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Then the blue one."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Yes. Blue, like his dad’s eyes."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Which tie does Ximena like?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "What does Lupita say about the red one?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Which tie do they choose in the end?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "What colour are the dad’s eyes?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "What colour do you like for clothes?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Do you wear a tie sometimes?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "What colour are your eyes?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "tie"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "circus"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "eyes"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Ramiro and Yesenia cook for the wedding."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Yesenia, how many empanadas are there?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "There are three hundred, chef."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "We need five hundred."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Five hundred! I need another table and more hands."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "I will help you. Quick, quick."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "What are they cooking?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "How many empanadas are there now?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "How many do they need?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "What does Ramiro do?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Do you cook for your friends on your birthday?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "What food do you order on a special day?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Who makes the cake in your family?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "empanadas (pastries)"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "chef"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "fast"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Don Beto talks to the meat while he works."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Good afternoon, meat. Today is an important day."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "The fire is fine. It is not high. It is not low."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "There are a hundred and twenty people. I have a lot of meat."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "And I have a wine. For me."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Who is Don Beto talking to?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "How is the fire?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Who is the wine for?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "What meat do you prefer on the grill?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Do you talk to yourself sometimes?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "What do you drink with meat, wine or water?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "meat"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "fire"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "wine"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Gloria and Pepe look for their table."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "This is table seven."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "My chair is here. Next to your chair."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "No, thank you. I sit over there."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Gloria, it is a wedding."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "That’s why. Today I am not talking to you."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "What number is the table?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Where is Pepe’s chair?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Where does Gloria sit?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "What does Gloria not do today?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Where do you sit at a party?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Do you talk with everyone in your family?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Where do you sit in a restaurant, near or far from the door?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "chair"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "next to"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "over there"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Renata buys a flower from Rocío."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Hello. Do you have a red rose?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Yes, I have red and white roses."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "A red one, please. For my dress."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Your dress is red too. A lot of red!"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Yes. Today I like red."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Which flower does Renata want?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "What colours of roses does Rocío have?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "What is the flower for?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "What colour is Renata’s dress?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "What flowers are there in your neighbourhood?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "What clothes do you wear to an elegant celebration?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Do you buy flowers sometimes?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "rose"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "too"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Mariela gives a message on the microphone."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Good afternoon, everyone. I am Mariela."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "The food is at seven."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "The toilets are next to the house."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "And the music is at eight. Thank you!"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Who is speaking?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "What time is the food?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Where are the toilets?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "What time is the music?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "What time do you usually eat?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Do you like speaking into a microphone?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "What song do you play when you want to dance with your friends?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "toilets"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "food"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "music"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Willy, Don Chuy and Yamilé get the music ready."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Yamilé, do you have the guitar?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "No. I have the microphone."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "The guitar is here. It is mine."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "OK. First a salsa."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "No, first a ranchera."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "What does Yamilé have?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Whose is the guitar?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "What does Willy want to play first?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "What does Don Chuy want to play first?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Which instrument sounds good at a celebration?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Do you like dancing salsa?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Do you sing at parties?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "guitar"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "microphone"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "ranchera (Mexican song)"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Don Horacio practises the waltz alone."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "One, two, three. The waltz is difficult."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "My daughter dances very well. I do not."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "At ten I dance with her."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "I am nervous. And my knee hurts."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "What does Don Horacio dance?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Who dances very well?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "What time does he dance with his daughter?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "What hurts?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Who do you dance with in your family?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Do you get nervous when you dance in front of people?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Do you wear comfortable shoes to dance?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "waltz"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "nervous"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "knee"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Ximena orders something at the bar."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Good evening. What would you like to drink?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "A lemonade, please. Without sugar."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Large or small?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Large. And another one for my friend."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Two large lemonades. Cheers!"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "What does Ximena order?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "How does she want it?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "What size?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "How many lemonades does she order in total?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "What do you order at the bar of a celebration?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Do you take coffee with sugar?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "What do you say to make a toast in your language?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "lemonade"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "sugar"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "cheers"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Ceferino introduces his horse."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "This is Lucero. He is my horse."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "He is white and he is ten years old."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "He eats a lot. He eats grass, apples and… flowers."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Today he is very elegant. He has a blue ribbon."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "What is the horse’s name?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "How old is he?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "What does the horse eat?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "What colour is the ribbon?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Are there animals at your grandparents' house?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Do you get on a horse or are you scared?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Do you eat apples?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "horse"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "grass"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "ribbon"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Gonzalo, the photographer, sets up a photo."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Hello, family! One photo, please."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "The children in front. The grandparents on the chairs."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "The uncles and aunts at the back. Very good!"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "One, two, three… Smile!"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Where are the children?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Where are the grandparents?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Where are the uncles and aunts?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Do you like family photos?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Do you smile in photos?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "How many uncles and aunts do you have?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "in front"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "at the back"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "smile"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Facundo is alone on the jetty at night."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "It is night. There is a moon."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "The water is calm. There are frogs."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "My friend is getting married today. I am happy."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "But I am also sad. I miss my dad."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "What is in the sky?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "How is the water?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "What animals are there?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Who does Facundo miss?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "What time does a celebration end in your country?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Who do you miss?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Are you in a good mood today?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "moon"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "frogs"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "I miss"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Mariela, Valentina and Joaquín are on the stage."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "It is twelve o’clock. Raise your glasses!"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Thank you all for coming."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Thanks to our families."
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Long live the bride and groom! And now, let’s dance!"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Cheers!"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "What does everyone raise?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Who does Joaquín thank?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "What does Valentina say at the end?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "What do you say in a toast?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "Who do you thank today?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "What do you celebrate with your friends?"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "glasses"
+    },
+    {
+      "path": "app/escucha-3d/content/boda/a0.json",
+      "text": "bride and groom"
+    },
+    {
+      "path": "app/la-boda/invitados.mjs",
+      "text": "Widower who goes to every wedding for the food"
+    },
+    {
+      "path": "app/la-boda/invitados.mjs",
+      "text": "I go to many weddings. I like the food. This is my thirtieth wedding this year. The meat is very good."
+    },
+    {
+      "path": "app/la-boda/invitados.mjs",
+      "text": "What is your favourite food at a party?"
+    },
+    {
+      "path": "app/la-boda/invitados.mjs",
+      "text": "The bride’s cousin, divorced three times"
+    },
+    {
+      "path": "app/la-boda/invitados.mjs",
+      "text": "I am Valentina’s cousin. I have three ex-husbands. Today I am alone at the table. I am not sad, I am calm."
+    },
+    {
+      "path": "app/la-boda/invitados.mjs",
+      "text": "What do you do at a celebration when you don’t know anyone?"
+    },
+    {
+      "path": "app/la-boda/invitados.mjs",
+      "text": "Vegan at a wedding with a barbecue"
+    },
+    {
+      "path": "app/la-boda/invitados.mjs",
+      "text": "I don’t eat meat. Here everything is meat. I have bread and a potato. I am happy with the potato."
+    },
+    {
+      "path": "app/la-boda/invitados.mjs",
+      "text": "What do you eat at a barbecue?"
+    },
+    {
+      "path": "app/la-boda/invitados.mjs",
+      "text": "Influencer streaming the wedding live"
+    },
+    {
+      "path": "app/la-boda/invitados.mjs",
+      "text": "Hi, guys. I am at a wedding in the countryside. There are many cows. Say hello to the camera!"
+    },
+    {
+      "path": "app/la-boda/invitados.mjs",
+      "text": "Do you post photos of celebrations on social media?"
+    },
+    {
+      "path": "app/la-boda/invitados.mjs",
+      "text": "Neighbour of the estate who prays in the chapel"
+    },
+    {
+      "path": "app/la-boda/invitados.mjs",
+      "text": "I live near here. I come to the chapel every day. Today I pray for the couple. And for the best man."
+    },
+    {
+      "path": "app/la-boda/invitados.mjs",
+      "text": "Do you have a quiet place in your city?"
+    },
+    {
+      "path": "app/la-boda/invitados.mjs",
+      "text": "Driver of the guests’ minibus"
+    },
+    {
+      "path": "app/la-boda/invitados.mjs",
+      "text": "I am the driver. My minibus leaves at six in the morning. Now I sleep a little. I am very tired."
+    },
+    {
+      "path": "app/la-boda/invitados.mjs",
+      "text": "What time do you get home after a celebration?"
+    },
+    {
+      "path": "app/la-boda/invitados.mjs",
+      "text": "Grandma Chela’s sister and rival"
+    },
+    {
+      "path": "app/la-boda/invitados.mjs",
+      "text": "I am Chela’s sister. I am the younger one. My dress is prettier than her dress. She does not agree."
+    },
+    {
+      "path": "app/la-boda/invitados.mjs",
+      "text": "Do you have siblings? Do you get along?"
+    },
+    {
+      "path": "app/la-boda/invitados.mjs",
+      "text": "Improvised salsa teacher"
+    },
+    {
+      "path": "app/la-boda/invitados.mjs",
+      "text": "I am a salsa teacher. Well, today I am. One, two, three, five, six, seven. Will you dance with me?"
+    },
+    {
+      "path": "app/la-boda/invitados.mjs",
+      "text": "Do you dance? What music do you like?"
+    },
+    {
+      "path": "app/la-boda/invitados.mjs",
+      "text": "Guest who was fired yesterday"
+    },
+    {
+      "path": "app/la-boda/invitados.mjs",
+      "text": "Since yesterday I have no job. Today I dance. Tomorrow I look for a job."
+    },
+    {
+      "path": "app/la-boda/invitados.mjs",
+      "text": "Do you go to a celebration even on a bad day?"
+    },
+    {
+      "path": "app/la-boda/invitados.mjs",
+      "text": "Nineteen-year-old in love with the maid of honour"
+    },
+    {
+      "path": "app/la-boda/invitados.mjs",
+      "text": "I am nineteen. I like Camila. She has a boyfriend. I dance near her. I am shy."
+    },
+    {
+      "path": "app/la-boda/invitados.mjs",
+      "text": "Are you shy with new people?"
+    },
+    {
+      "path": "app/la-boda/invitados.mjs",
+      "text": "Seventy-year-old who has already danced with fourteen people"
+    },
+    {
+      "path": "app/la-boda/invitados.mjs",
+      "text": "I am seventy. I dance with everyone. I have danced with fourteen people. Are you number fifteen?"
+    },
+    {
+      "path": "app/la-boda/invitados.mjs",
+      "text": "What do you like to do at a party?"
+    },
+    {
+      "path": "app/la-boda/invitados.mjs",
+      "text": "Work colleague handing out business cards"
+    },
+    {
+      "path": "app/la-boda/invitados.mjs",
+      "text": "Hi, I am Ignacio. I work with Joaquín. Here is my card. I sell insurance. Do you have life insurance?"
+    },
+    {
+      "path": "app/la-boda/invitados.mjs",
+      "text": "What do you do for work?"
+    },
+    {
+      "path": "app/la-boda/invitados.mjs",
+      "text": "Pregnant guest looking for a comfortable chair"
+    },
+    {
+      "path": "app/la-boda/invitados.mjs",
+      "text": "I am pregnant. It is a girl. She arrives in December. I am hungry all the time. Is there more bread?"
+    },
+    {
+      "path": "app/la-boda/invitados.mjs",
+      "text": "Do you like the names in your family?"
+    },
+    {
+      "path": "app/la-boda/invitados.mjs",
+      "text": "Uninvited neighbour fishing in the pond"
+    },
+    {
+      "path": "app/la-boda/invitados.mjs",
+      "text": "I live next door. I don’t have an invitation. I fish here every Saturday. Today there is music. The fish don’t come."
+    },
+    {
+      "path": "app/la-boda/invitados.mjs",
+      "text": "Do you go to celebrations without an invitation?"
+    },
+    {
+      "path": "app/la-boda/invitados.mjs",
+      "text": "Camila’s boyfriend who wants to propose tonight"
+    },
+    {
+      "path": "app/la-boda/invitados.mjs",
+      "text": "I have a ring. It is for Camila. I want to talk to her today. But it is her friend’s wedding. I am scared."
+    },
+    {
+      "path": "app/la-boda/invitados.mjs",
+      "text": "Are you scared of something important?"
+    },
+    {
+      "path": "app/la-boda/invitados.mjs",
+      "text": "Vet who is scared of horses"
+    },
+    {
+      "path": "app/la-boda/invitados.mjs",
+      "text": "I am a vet. I work with dogs and cats. Horses are very big. I am scared."
+    },
+    {
+      "path": "app/la-boda/invitados.mjs",
+      "text": "What farm animal scares you?"
+    },
+    {
+      "path": "app/la-boda/invitados.mjs",
+      "text": "Aunt arriving late with a huge gift"
+    },
+    {
+      "path": "app/la-boda/invitados.mjs",
+      "text": "I am late! I have a very big present. It is a lamp. Where are the couple?"
+    },
+    {
+      "path": "app/la-boda/invitados.mjs",
+      "text": "Are you late sometimes? Why?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "The gate of the estate"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "It is five o’clock. There is a wedding in the countryside. Facundo, your friend, is the best man. But Facundo is not here. His car is here, with the engine running."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Good afternoon. Your name? You are not on the list."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Whose is this blue car? The door is open."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "The best man’s jacket is on the seat."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Anselmo and Wilmer look at you. What do you say?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "It is Facundo’s car. I take his jacket."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "And where is Facundo?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "You have the best man’s jacket. There are no rings in the pocket."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Sir, please. Facundo is my friend."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "OK, come in. Today is a special day."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Anselmo writes your name on the list with a pencil."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Wilmer, I will help you with the car."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Thank you! I do not have the key."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "The key is in the car. Wilmer turns off the engine and breathes."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Does your house have a gate or a door?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Do you have a car? What colour is it?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Are you late to your family’s celebrations?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Who invites you to their celebrations?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "How many weddings are there in your family this year?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "the gate"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "the list"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "the best man"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "the jacket"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "The white chapel"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "The chapel is small and white. There are flowers and candles. Joaquín is the groom. He is very nervous. Father Benito has a box. The box is empty."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "The rings are with the best man, right?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "There is no best man! There are no rings! I am hot."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Calm down, son. Breathe."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Joaquín looks at you: “And now?”"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Calm down. You love her. That is enough."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Yes… yes. I love her a lot."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Joaquín is shaking, but he smiles. He is ready."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Father, do you have sweets?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "I have gummy rings. They are the children’s."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "There are two red gummy rings in the box."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Joaquín, write your words here."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "On a napkin? OK."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Joaquín writes three sentences on a napkin."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "When do you get nervous?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "What do you do before an important day?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Are there candles at celebrations in your country?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Do you have a ring?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "What sweets do you like?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "the groom"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "the chapel"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "the rings"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "nervous"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "The page boys"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Next to the chapel there is a flowerbed. Tadeo is eight years old. He has soil on his hands and on his white suit. Marisol, his aunt, is very angry."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Tadeo! Where are the rings?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Down here. They are seeds of love."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Oh, no! They are gold!"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Tadeo looks at you with a smile. What do you do?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Why, Tadeo?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "That way love grows big, like a flower."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Marisol is not angry now. She cries a little."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "I have a spoon. I will look."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "One! And two! Here they are!"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Marisol finds the two rings with the spoon."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Are there more things down there?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Yes. A ring, a key and a sweet."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "There is only one ring. The other one is with the horse, says Tadeo."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Are there children at your family gatherings?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Do you plant flowers in your garden or on your balcony?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "What do you do when a child cries?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Do you have a garden at home?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "As a child, were you calm or naughty?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "the flowerbed"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "the soil"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "the spoon"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "the aunt"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "The bride’s dress"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "You are in the house, in the bride’s room. Valentina has a long white dress. But the zip is broken. Camila, her friend, has a needle."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "The zip is broken! The wedding is in ten minutes!"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "I have a needle, but I do not have white thread."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Who are you?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Valentina is very nervous. What do you say?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "I have fishing line. It is strong."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Fishing line? Perfect!"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Camila sews the dress with fishing line. It works."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Camila, you can do it. I will look for thread."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Thank you. I always have a needle for everything."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Camila sews fast. Valentina breathes."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Does Grandma have a dress?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Yes… her wedding dress is from 1962."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Valentina puts on her grandmother’s dress. It is perfect."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "What clothes do you wear for a party?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Is your favourite colour white?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Do you sew your clothes?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Do you have clothes from your grandmother or grandfather?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Who is your friend for everything?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "the bride"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "the dress"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "the zip"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "the needle"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Grandma Chela"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "On the porch of the house there is a chair. Doña Chela is sitting. She is eighty-six years old. She drinks mate. She is not happy."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "The groom is Mexican. He does not drink mate. He cannot dance tango."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "And you, who are you? Are you married or single?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Grandma waits for your answer."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "And you, grandma? What is your wedding like?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "My wedding… it is on horseback, at three in the morning."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Grandma laughs. In 1962 she runs away with her boyfriend on horseback."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Joaquín is good. Ask him something."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "OK. I have three questions for him."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Grandma gives the groom a test. He passes with a six."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "How many years with your husband?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Fifty-one years. Fights and kisses."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Grandma looks at a photo of her husband. She is sad and happy."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Does your grandmother dance at celebrations?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Do you drink mate, tea or coffee?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Can you dance a waltz?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Are you married or single?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Who in your family talks a lot?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "the grandmother"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "the porch"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "married"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "single"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "The groom’s shirt"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Now you are in the groom’s room. Doña Lupita is Joaquín’s mother. She has an iron. The shirt has a black hole. Ximena, the cousin, laughs."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Oh, the shirt! It is burned!"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Aunt, the hole is small."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "And there is another problem. There is a mariachi band at the door. It is my surprise."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Lupita cries. What do you say?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "A big tie. That way you cannot see it."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Yes! I have a red tie."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "The tie covers the hole. Lupita smiles."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Madam, a mariachi band is a nice gift."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Yes? My son is getting married far from Mexico."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Lupita hugs Ximena and cries with happiness."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Ximena, will you sew?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Yes. I come from Madrid to sew, ha!"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Ximena sews up the hole in two minutes."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Do you iron your clothes?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Do you wear a tie?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "What is your mother like?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Do you like preparing surprises for your friends?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Do you have cousins in another country?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "the shirt"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "the iron"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "the hole"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "the tie"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "The wrong cake"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "It is hot in the kitchen. There is a big white cake. The cake says “Joaquín and Renata”. But the bride’s name is Valentina."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Renata? Who is Renata?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "She is the groom’s ex. The paper says Renata."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "It is a disaster! We have twenty minutes."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "The chef looks at you. What do you do?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "I put flowers over “Renata”."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Good! And we write “Valentina” below."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Now the cake says “Joaquín and Valentina”. With flowers."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Chef, a new dessert?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Yes! Cake in glasses, with cream."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "The chef makes a hundred desserts in glasses. They are delicious."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Yesenia, you write very well."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Me? My hand is shaking…"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Yesenia writes the names again. Her hand is steady."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Do you cook at home?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "What cake do you eat on your birthday?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Do you write by hand or with your phone?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Is your name easy to write on a cake?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "What do you do when there is a mistake?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "the cake"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "the kitchen"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "the dessert"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "the name"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "The grill"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "In the garden there is a big grill. There is smoke and meat. Don Beto is the grill master. He is Chilean. There are forty more cousins at the party."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Forty more cousins! There is not enough meat."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "And the Argentinians say my barbecue is not barbecue."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Don Beto has a big knife in his hand. What do you say?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "There is food for everyone. They are family."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "You are right. Children first."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Don Beto feeds the forty cousins."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "A choripán for everyone, Chileans and Argentinians."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Ha! Choripán belongs to everyone."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "An Argentinian uncle and Don Beto eat choripán together."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Cut the meat thinner."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Thinner… more plates. Good idea!"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "There is enough meat for everyone. Nobody says anything."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "What food is there at your family’s celebrations?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "What food is typical in your country?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "How many people eat at your house on Sundays?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Who cooks in your family?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Do you eat outdoors in summer with your family?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "the grill"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "the meat"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "the smoke"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "to be enough"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "The seating plan"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "There are two very long tables in the garden. Aunt Gloria has a paper: the seating plan. Uncle Pepe is her ex-husband. He is sitting in her place."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Pepe! This is my chair."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Your chair is next to my chair, Gloria."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "No. I do not talk to him. Twelve years without talking."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Gloria gives you the paper. What do you do?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "One night together. It is a wedding."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "OK… one night."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Gloria and Pepe are sitting together. They talk a little."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "This paper is dangerous. I will keep it."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "No! It is a month of my work!"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "The plan is in your pocket. Now everyone sits where they want."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "There is a new table: table nine."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Table nine? I do not know anybody there."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Gloria goes to table nine. She laughs with strangers."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Where do you sit at a party?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Do you talk to strangers at a long table?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Do you have uncles and aunts? What are their names?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Do you prefer big or small tables?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Who do you not talk to?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "the table"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "the chair"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "the ex-husband"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "together"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "The red dress"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Among the roses there is a woman in a red dress. It is Renata, Joaquín’s ex. She has a box in her hands. Rocío, the florist, is nervous."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Hi. I have an invitation. It is from Facundo."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "From Facundo? The best man?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Yes. Facundo is my boyfriend. Since March."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Renata looks at you. What do you say?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Hi, Renata. Are you OK?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Not really. Facundo does not answer."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "You talk for five minutes. Renata is calm."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "What is in the box?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Letters. Letters from Joaquín. They are for him."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "You have the box. They are old letters, from 2015."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Rocío, is there a quiet place?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Yes. Behind the flower arch."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Renata waits behind the flower arch. Nobody sees her."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "What colour are your clothes for a celebration?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Do you have old letters at home?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Do you have a good relationship with your exes?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "What flowers do you give to a special person?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "What do you do when someone does not answer?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "the ex"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "the box"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "the letters"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "the florist"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "The wedding planner"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Mariela organises the wedding. She has two phones and an earpiece. She is at the entrance of the tent. Everything is late: the music, the food, the best man."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "I need twenty minutes. Twenty!"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "And on this phone… my lawyer. I am getting divorced."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Mariela gives you a microphone. What do you do?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "You first. Are you OK?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "No… I organise weddings and my marriage ends today."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Mariela breathes. She smiles a little. She goes back to work."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "I will talk. I have bad jokes."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Bad ones? Perfect. Go."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "You tell bad jokes for twenty minutes. People laugh."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "We have a new plan. Food first."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Food first? OK, yes."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "The plan changes. Everyone eats. Nobody waits."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Do you have two phones?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Do you organise your things well?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Can you tell jokes?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "What do you do when everything is late?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Do you speak well with a microphone?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "the tent"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "the microphone"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "the joke"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "late"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Two bands, one stage"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "In the tent there is a stage. Willy is the director of the Cuban band. Don Chuy is the boss of the mariachi band. Both want to play now."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "This is my stage. My band plays at eight."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "The groom’s mother pays. The mariachi band plays now."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Willy, please. It is a wedding."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "The musicians look at you. What do you say?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "A song together? A bolero."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Together? Well… a bolero, yes."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "The band and the mariachi play a bolero. Everyone dances."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Ten minutes each. And a tequila."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Cheers, my friend!"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Willy and Don Chuy drink a tequila. They share the stage."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Yamilé, will you sing a song?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Yes. Grandma’s favourite song."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Yamilé sings. Grandma Chela cries in her chair."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "What song do you put on to dance?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "What song do you dance to at a wedding?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Do you sing in the car or in the kitchen?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Which song belongs to your family?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Do you prefer live music or music on your phone?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "the stage"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "the band"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "to play (music)"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "the song"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "The father’s waltz"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "On the dance floor is Don Horacio, the bride’s father. He practises the waltz alone. He has a bad knee. At ten he dances with his daughter."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "One, two, three… Ouch, my knee!"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "This party is expensive. My car is not here anymore. Shhh."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Don Horacio looks at you, sad. What do you say?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "No car? Because of the party?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Yes. It is a secret. My daughter does not know."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Don Horacio smiles. Today his daughter is happy. It is enough."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Small step. One, two, three. Slowly."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Slowly… Yes! It does not hurt."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Don Horacio dances slowly. He is very elegant."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "You dance badly, but you dance. That is what matters."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Ha! I dance badly, yes."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Don Horacio dances badly and laughs a lot."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Do you dance cumbia, salsa or waltz?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Do your feet hurt after dancing?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Does your father dance well or badly?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Do you have a secret with someone in your family?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Which dance is easy for you?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "the dance floor"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "the waltz"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "the knee"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "the daughter"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "The bar"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "At the bar is Edgardo, the bartender. Ximena, the groom’s cousin, is forty years old. Everybody asks her: “And you, when are you getting married?”"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Twelve people. Twelve times the same question."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Another wine, Ximena?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "I do not know. And what are you drinking?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Ximena is sad. What do you say?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Your life is yours. Do not answer."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "You are right! I will not answer anymore."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Ximena says “no” to question number thirteen. She is happy."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Edgardo, do you have some advice?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Yes. Dance. The dance floor does not ask anything."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Ximena goes to the dance floor. She dances alone and well."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "An orange juice for me."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Without alcohol? Me too."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Ximena and you drink juice. You talk for real."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "What do you drink at a party?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Which question do you not like?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Do you toast with water, juice or wine?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Do you dance when nobody is watching?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Who gives you advice about love?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "the bar"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "the bartender"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "the cousin"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "the advice"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Lucero, the horse"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Behind the tent is the stable. Ceferino is the farmhand. Lucero is his horse. Lucero has white flowers in his mouth. They are the flowers from the bride’s bouquet."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Lucero! It is the bride’s bouquet!"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "And at midnight the couple leaves on Lucero. With fireworks."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Lucero eats and looks at you. What do you say?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Ha! Lucero is hungry. It is OK."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Yes… he does not say sorry, huh?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Lucero eats the last flower. Ceferino laughs."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Ceferino, how do you talk to him?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Slowly. Like with a friend."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Ceferino talks to Lucero. The horse is calm."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "And the fireworks? Is Lucero afraid?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Very afraid. I do not know if it is a good idea."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Ceferino looks at the sky. Tomorrow we will know."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Do you ride horses on holiday?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Does your dog or cat have a funny name?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Are you afraid of fireworks?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "What do you eat at midnight after dancing?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Do you talk to horses or dogs?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "the horse"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "the stable"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "the bouquet"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "fear"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "The deleted photos"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Under the ombú, a huge tree, is Gonzalo, the photographer. He looks at his camera. He is pale."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "There are no photos of the ceremony. The card is empty."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Well, there is one photo. Aunt Gloria and Uncle Pepe… are kissing. Behind the stable."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Gonzalo waits for your answer. What do you say?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "We take new photos. Now."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Now? Yes! The light is pretty."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "The couple repeats the kiss under the ombú. Gonzalo takes a hundred photos."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "The photo of the kiss is a secret."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Yes. It is their secret, not my secret."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Gonzalo keeps the photo. He says nothing to anyone."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "A photo of the whole family. Quick!"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Everyone here! One, two, three!"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "The photo is blurry. Everyone laughs. It is the best photo."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Do you take many photos with your phone?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Do you have a favourite photo of your family?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Do you smile in group photos?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Is there a big tree near your home?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Do you delete the bad photos from your phone?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "the photo"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "the camera"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "the kiss"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "blurry"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "The best man on the jetty"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "It is eleven at night. There is a pond and a wooden jetty. On a bench, at the end of the jetty, is Facundo. He looks at the water."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Hi. Sorry. I cannot speak at the wedding."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "My dad died in June. My speech is sad. Very sad."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Facundo has a paper in his hand. What do you say?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Will you give me your words? I will speak."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Yes. Here. You read, I listen."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "You have Facundo’s paper. There are very beautiful words."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "What is your dad like?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "He is cheerful. He dances badly. Like Valentina’s dad."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Facundo talks about his dad. He cries and laughs."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Come on. Your friends need you."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Now? Well… let’s go."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Facundo stands up. You walk to the party."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Do you like water at night?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Do you get nervous before speaking in public?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Who in your family cries at celebrations?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Where do you go when you are sad?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Which friend helps you on a difficult day?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "the pond"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "the jetty"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "the speech"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "the bench"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "The midnight toast"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "It is twelve o’clock. The music stops. Everyone has a glass. Mariela gives you the microphone. Valentina and Joaquín look at you."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "It is your moment. Speak."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "I do not know you, but thank you."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Relax. Here we are all family."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "You have your notes in your hand. How do you start?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Hello, everyone. I am not the best man. I am plan B."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Ha, ha! Good!"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Everyone laughs. You read your notes. At the end, everyone raises their glass."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Today I meet a family. A big, crazy family."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Yes! Crazy!"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Grandma Chela claps. You read your notes slowly."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Valentina, Joaquín: congratulations. This toast belongs to everyone."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Thank you!"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "You read every note. Every person hears their name. Everyone claps."
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Do you talk a lot at family gatherings?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "What do you say in a toast?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "What do you drink to celebrate something good?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "Do you like speaking with a microphone?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "What time do you go to sleep after a party?"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "the toast"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "the glass"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "congratulations"
+    },
+    {
+      "path": "app/la-boda/levels/a0.mjs",
+      "text": "midnight"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "the gate"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "the invitation"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "the best man"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "the engine running"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "the jacket"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "the chapel"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "the altar"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "the rings"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "empty"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "to faint"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "the page boy"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "the soil"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "to plant"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "the spoon"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "to grow"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "the zip"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "the needle"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "the thread"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "to sew"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "the maid of honour"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "the veranda"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "the rocking chair"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "mate (herbal tea)"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "to run away"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "the exam"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "the iron"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "burnt"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "the hole"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "the tie"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "the mariachi band"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "the cake"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "the chef"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "the order"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "the dessert"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "the handwriting"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "the barbecue"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "the grill master"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "the smoke"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "to be enough"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "sausage sandwich"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "the seating plan"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "the ex-husband"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "the tablecloth"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "to sit down"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "together"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "the rose garden"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "the ex-girlfriend"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "the florist"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "the flower arch"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "the letters"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "the planner"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "the marquee"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "the headset"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "to get divorced"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "the waiters"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "the stage"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "the band"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "to play (music)"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "to share"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "the bolero"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "the dance floor"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "the waltz"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "the knee"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "to practise"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "slowly"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "the bar"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "the bartender"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "single"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "the advice"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "the juice"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "the stable"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "the farmhand"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "the bouquet"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "the hay"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "the fireworks"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "the photographer"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "the memory card"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "to kiss"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "the secret"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "blurry"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "the pond"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "the jetty"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "the speech"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "to miss"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "to hate"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "the toast"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "the glass"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "the microphone"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "Congratulations!"
+    },
+    {
+      "path": "app/la-boda/levels/a1.mjs",
+      "text": "Cheers!"
+    },
+    {
+      "path": "app/la-boda/story.mjs",
+      "text": "To Facundo, who left us his jacket, his car and no explanation."
+    },
+    {
+      "path": "app/la-boda/story.mjs",
+      "text": "To Don Anselmo, who let me in without being on the list."
+    },
+    {
+      "path": "app/la-boda/story.mjs",
+      "text": "To Wilmer, who parked a car with the engine running and his heart in his hand."
+    },
+    {
+      "path": "app/la-boda/story.mjs",
+      "text": "To Joaquín, who was shaking at the altar and still said “yes”."
+    },
+    {
+      "path": "app/la-boda/story.mjs",
+      "text": "To Father Benito, who married a couple with gummy rings."
+    },
+    {
+      "path": "app/la-boda/story.mjs",
+      "text": "To the vows Joaquín wrote on a napkin five minutes before."
+    },
+    {
+      "path": "app/la-boda/story.mjs",
+      "text": "To Tadeo, who planted the rings so that love would grow."
+    },
+    {
+      "path": "app/la-boda/story.mjs",
+      "text": "To Marisol, who found the rings with a dessert spoon."
+    },
+    {
+      "path": "app/la-boda/story.mjs",
+      "text": "To the rings, which travelled more than we did this afternoon."
+    },
+    {
+      "path": "app/la-boda/story.mjs",
+      "text": "To Valentina, who got married in a dress sewn with fishing line."
+    },
+    {
+      "path": "app/la-boda/story.mjs",
+      "text": "To Camila, the friend who has a needle for every disaster."
+    },
+    {
+      "path": "app/la-boda/story.mjs",
+      "text": "To Grandma’s dress, which waited sixty years for this party."
+    },
+    {
+      "path": "app/la-boda/story.mjs",
+      "text": "To Grandma Chela, who eloped on horseback in 1962 and has no regrets."
+    },
+    {
+      "path": "app/la-boda/story.mjs",
+      "text": "To Grandma Chela, who gave the groom an exam and passed him with a six."
+    },
+    {
+      "path": "app/la-boda/story.mjs",
+      "text": "To Grandma’s fifty-one years, with their fights and their forgiveness."
+    },
+    {
+      "path": "app/la-boda/story.mjs",
+      "text": "To Doña Lupita, who burned the shirt and saved the ceremony with a tie."
+    },
+    {
+      "path": "app/la-boda/story.mjs",
+      "text": "To the mothers who iron, cry and hire a mariachi band without telling anyone."
+    },
+    {
+      "path": "app/la-boda/story.mjs",
+      "text": "To Ximena, who came all the way from Madrid to sew up a hole."
+    },
+    {
+      "path": "app/la-boda/story.mjs",
+      "text": "To the cake that said “Joaquín and Renata” and now says “Joaquín and Valentina”."
+    },
+    {
+      "path": "app/la-boda/story.mjs",
+      "text": "To Chef Ramiro, who turned a mistake into a new dessert."
+    },
+    {
+      "path": "app/la-boda/story.mjs",
+      "text": "To Yesenia, who wrote two names again with a steady hand."
+    },
+    {
+      "path": "app/la-boda/story.mjs",
+      "text": "To Don Beto, who fed forty cousins nobody invited."
+    },
+    {
+      "path": "app/la-boda/story.mjs",
+      "text": "To peace between the Chilean and the Argentine barbecue, signed with a choripán."
+    },
+    {
+      "path": "app/la-boda/story.mjs",
+      "text": "To the meat that was enough because someone cut it thinner."
+    },
+    {
+      "path": "app/la-boda/story.mjs",
+      "text": "To Aunt Gloria and Uncle Pepe, seated together for the first time in twelve years."
+    },
+    {
+      "path": "app/la-boda/story.mjs",
+      "text": "To the seating plan, the most dangerous document in this family."
+    },
+    {
+      "path": "app/la-boda/story.mjs",
+      "text": "To table nine, where nobody knew each other and now nobody wants to leave."
+    },
+    {
+      "path": "app/la-boda/story.mjs",
+      "text": "To Renata, who came in red and left in peace."
+    },
+    {
+      "path": "app/la-boda/story.mjs",
+      "text": "To the gifts that arrive late and the letters that were never sent."
+    },
+    {
+      "path": "app/la-boda/story.mjs",
+      "text": "To Rocío, who hid an ex behind an arch of flowers."
+    },
+    {
+      "path": "app/la-boda/story.mjs",
+      "text": "To Mariela, who organises other people’s weddings while she sorts out her own life."
+    },
+    {
+      "path": "app/la-boda/story.mjs",
+      "text": "To the twenty minutes I won by telling bad jokes."
+    },
+    {
+      "path": "app/la-boda/story.mjs",
+      "text": "To plan B, plan C and the plan we invented as we went."
+    },
+    {
+      "path": "app/la-boda/story.mjs",
+      "text": "To the bolero the Cuban band and the mariachi played together."
+    },
+    {
+      "path": "app/la-boda/story.mjs",
+      "text": "To Willy and Don Chuy, who shared a stage and a tequila."
+    },
+    {
+      "path": "app/la-boda/story.mjs",
+      "text": "To Yamilé, who sang Grandma’s song without rehearsing."
+    },
+    {
+      "path": "app/la-boda/story.mjs",
+      "text": "To Don Horacio, who sold his car to pay for this party and told nobody."
+    },
+    {
+      "path": "app/la-boda/story.mjs",
+      "text": "To the most elegant waltz with a bad knee in the province."
+    },
+    {
+      "path": "app/la-boda/story.mjs",
+      "text": "To the fathers who dance even though they cannot."
+    },
+    {
+      "path": "app/la-boda/story.mjs",
+      "text": "To Ximena, whom nobody is going to ask again when she is getting married."
+    },
+    {
+      "path": "app/la-boda/story.mjs",
+      "text": "To Edgardo, who serves drinks and advice too."
+    },
+    {
+      "path": "app/la-boda/story.mjs",
+      "text": "To the saddest and most honest alcohol-free drink of the night."
+    },
+    {
+      "path": "app/la-boda/story.mjs",
+      "text": "To Lucero, the horse that ate the bouquet and did not apologise."
+    },
+    {
+      "path": "app/la-boda/story.mjs",
+      "text": "To Ceferino, who talked to a horse the way you talk to a friend."
+    },
+    {
+      "path": "app/la-boda/story.mjs",
+      "text": "To the exit on horseback that we still do not know will go well."
+    },
+    {
+      "path": "app/la-boda/story.mjs",
+      "text": "To the photos that got deleted and the ones we are going to take now."
+    },
+    {
+      "path": "app/la-boda/story.mjs",
+      "text": "To Gonzalo, who photographed a secret and decided to keep it."
+    },
+    {
+      "path": "app/la-boda/story.mjs",
+      "text": "To the blurry photo of the whole family, the most honest one of the night."
+    },
+    {
+      "path": "app/la-boda/story.mjs",
+      "text": "To Facundo, who turned up on the jetty and lent me his words."
+    },
+    {
+      "path": "app/la-boda/story.mjs",
+      "text": "To Facundo’s dad, who is also at this table tonight."
+    },
+    {
+      "path": "app/la-boda/story.mjs",
+      "text": "To the friends who get lost for a while and come back in time."
+    }
+  ]
+}

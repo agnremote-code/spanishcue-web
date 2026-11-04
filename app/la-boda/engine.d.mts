@@ -1,0 +1,27 @@
+import type { Text, Option } from './levels.d.mts';
+import type { Invitado } from './invitados.d.mts';
+import type { Note } from './story.d.mts';
+export type State = { level: string; done: Record<string, string[]>; picks: Record<string, Record<string, number>>; scene: { id: string; pick: number | null } | null };
+export type SceneView = {
+  id: string; level: string; sector: string; name: string; role: string;
+  title: Text; line: Text; dialogue: { who: string; line: Text }[]; ask: Text; options: Option[]; pick: number | null; chosen: Option | null; ended: boolean;
+  mood: string | null; talk: Text[]; words: Text[]; note: Note | null; toast: Note[] | null;
+};
+export const STORAGE_KEY: string;
+export const DEFAULT_LEVEL: string;
+export function invitadoById(id: string): Invitado | null;
+export function normaliseLevel(value: unknown): string | null;
+export function createState(level?: string): State;
+export function doneFor(state: State, level?: string): string[];
+export function picksFor(state: State, level?: string): Record<string, number>;
+export function openScene(state: State, id: string): State;
+export function closeScene(state: State): State;
+export function choose(state: State, index: number): State;
+export function undo(state: State): State;
+export function setLevel(state: State, level: string): State;
+export function resetLevel(state: State): State;
+export function notesFor(state: State): { id: string; note: Note }[];
+export function sceneView(state: State): SceneView | null;
+export function progress(state: State): { done: number; total: number };
+export function serialise(state: State): string;
+export function restore(raw: string | null, fallbackLevel?: string): State;
