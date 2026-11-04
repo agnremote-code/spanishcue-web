@@ -161,6 +161,636 @@
    "seconds": 58.95,
    "src": "/audio/escucha-3d/australia-b1-victoria.mp3"
   },
+  "boda/a0-abuela": {
+   "hash": "2d25f03c2d25ac72d8f4",
+   "seconds": 19.53,
+   "src": "/audio/escucha-3d/boda-a0-abuela.mp3"
+  },
+  "boda/a0-asado": {
+   "hash": "34d53b469d5809fae1b4",
+   "seconds": 23.3,
+   "src": "/audio/escucha-3d/boda-a0-asado.mp3"
+  },
+  "boda/a0-banda": {
+   "hash": "69349133b2dcab37a6ed",
+   "seconds": 24.57,
+   "src": "/audio/escucha-3d/boda-a0-banda.mp3"
+  },
+  "boda/a0-barra": {
+   "hash": "5ba26cafefa9aaf9dff2",
+   "seconds": 27.04,
+   "src": "/audio/escucha-3d/boda-a0-barra.mp3"
+  },
+  "boda/a0-brindis": {
+   "hash": "67d5916f62b2076e4755",
+   "seconds": 22.48,
+   "src": "/audio/escucha-3d/boda-a0-brindis.mp3"
+  },
+  "boda/a0-capilla": {
+   "hash": "e1b4bb5d24db44686228",
+   "seconds": 27.38,
+   "src": "/audio/escucha-3d/boda-a0-capilla.mp3"
+  },
+  "boda/a0-cocina": {
+   "hash": "3c32a93bacbcc319100a",
+   "seconds": 25.34,
+   "src": "/audio/escucha-3d/boda-a0-cocina.mp3"
+  },
+  "boda/a0-establo": {
+   "hash": "5580281ff57f9817bd53",
+   "seconds": 20.95,
+   "src": "/audio/escucha-3d/boda-a0-establo.mp3"
+  },
+  "boda/a0-ex": {
+   "hash": "e2bb40ff62e94f2d7ae7",
+   "seconds": 29.56,
+   "src": "/audio/escucha-3d/boda-a0-ex.mp3"
+  },
+  "boda/a0-fotos": {
+   "hash": "520c49939bab70a74f7e",
+   "seconds": 22.25,
+   "src": "/audio/escucha-3d/boda-a0-fotos.mp3"
+  },
+  "boda/a0-mesa": {
+   "hash": "c3a88cdf8277cc6a9f60",
+   "seconds": 25.03,
+   "src": "/audio/escucha-3d/boda-a0-mesa.mp3"
+  },
+  "boda/a0-muelle": {
+   "hash": "187682d99b7982e69573",
+   "seconds": 21.29,
+   "src": "/audio/escucha-3d/boda-a0-muelle.mp3"
+  },
+  "boda/a0-ninos": {
+   "hash": "fe86c31d8f0f1585b5b4",
+   "seconds": 23.35,
+   "src": "/audio/escucha-3d/boda-a0-ninos.mp3"
+  },
+  "boda/a0-novia": {
+   "hash": "e99774970d92be3bfaa7",
+   "seconds": 26.11,
+   "src": "/audio/escucha-3d/boda-a0-novia.mp3"
+  },
+  "boda/a0-novio": {
+   "hash": "109b161f8acac167c169",
+   "seconds": 24.96,
+   "src": "/audio/escucha-3d/boda-a0-novio.mp3"
+  },
+  "boda/a0-pista": {
+   "hash": "417a3472a1b504b6ff7f",
+   "seconds": 19.85,
+   "src": "/audio/escucha-3d/boda-a0-pista.mp3"
+  },
+  "boda/a0-planner": {
+   "hash": "1ca8b7145c03d0915260",
+   "seconds": 18.6,
+   "src": "/audio/escucha-3d/boda-a0-planner.mp3"
+  },
+  "boda/a0-porton": {
+   "hash": "e03d8189adc2ed6c1124",
+   "seconds": 20.9,
+   "src": "/audio/escucha-3d/boda-a0-porton.mp3"
+  },
+  "boda/a1-abuela": {
+   "hash": "a28a05e074dfa6288619",
+   "seconds": 28.68,
+   "src": "/audio/escucha-3d/boda-a1-abuela.mp3"
+  },
+  "boda/a1-asado": {
+   "hash": "aeb7dda297ffe2b24df5",
+   "seconds": 25.13,
+   "src": "/audio/escucha-3d/boda-a1-asado.mp3"
+  },
+  "boda/a1-banda": {
+   "hash": "8d0dc696f858a4ce3e7d",
+   "seconds": 31.1,
+   "src": "/audio/escucha-3d/boda-a1-banda.mp3"
+  },
+  "boda/a1-barra": {
+   "hash": "1fedbc2cd2f5fab3fa66",
+   "seconds": 30.58,
+   "src": "/audio/escucha-3d/boda-a1-barra.mp3"
+  },
+  "boda/a1-brindis": {
+   "hash": "6ac34a989f9555f47aea",
+   "seconds": 30.99,
+   "src": "/audio/escucha-3d/boda-a1-brindis.mp3"
+  },
+  "boda/a1-capilla": {
+   "hash": "1ad3286afd6a472475c8",
+   "seconds": 35.4,
+   "src": "/audio/escucha-3d/boda-a1-capilla.mp3"
+  },
+  "boda/a1-cocina": {
+   "hash": "2a643bd4cbdffc946e05",
+   "seconds": 29.92,
+   "src": "/audio/escucha-3d/boda-a1-cocina.mp3"
+  },
+  "boda/a1-establo": {
+   "hash": "645a24ed8fc4abbb1088",
+   "seconds": 22.61,
+   "src": "/audio/escucha-3d/boda-a1-establo.mp3"
+  },
+  "boda/a1-ex": {
+   "hash": "41d60a9d4a7857e1ce2a",
+   "seconds": 34.75,
+   "src": "/audio/escucha-3d/boda-a1-ex.mp3"
+  },
+  "boda/a1-fotos": {
+   "hash": "cf45ba35cf8bb141c819",
+   "seconds": 26.25,
+   "src": "/audio/escucha-3d/boda-a1-fotos.mp3"
+  },
+  "boda/a1-mesa": {
+   "hash": "93af414a8486e9ea45ae",
+   "seconds": 30.18,
+   "src": "/audio/escucha-3d/boda-a1-mesa.mp3"
+  },
+  "boda/a1-muelle": {
+   "hash": "8463bb3f4799a3ac4041",
+   "seconds": 30.72,
+   "src": "/audio/escucha-3d/boda-a1-muelle.mp3"
+  },
+  "boda/a1-ninos": {
+   "hash": "5959b2ab3661a801cf3a",
+   "seconds": 37.32,
+   "src": "/audio/escucha-3d/boda-a1-ninos.mp3"
+  },
+  "boda/a1-novia": {
+   "hash": "d58f3105be782e463db5",
+   "seconds": 29.04,
+   "src": "/audio/escucha-3d/boda-a1-novia.mp3"
+  },
+  "boda/a1-novio": {
+   "hash": "8d84f142ee223c307320",
+   "seconds": 31.41,
+   "src": "/audio/escucha-3d/boda-a1-novio.mp3"
+  },
+  "boda/a1-pista": {
+   "hash": "574870a750bc2cbb070c",
+   "seconds": 27.09,
+   "src": "/audio/escucha-3d/boda-a1-pista.mp3"
+  },
+  "boda/a1-planner": {
+   "hash": "f1ad20dff181bd52bd3c",
+   "seconds": 30.96,
+   "src": "/audio/escucha-3d/boda-a1-planner.mp3"
+  },
+  "boda/a1-porton": {
+   "hash": "eaced76bfcdd59cee77c",
+   "seconds": 25.34,
+   "src": "/audio/escucha-3d/boda-a1-porton.mp3"
+  },
+  "boda/a2-abuela": {
+   "hash": "4b469d42132034c85889",
+   "seconds": 30.95,
+   "src": "/audio/escucha-3d/boda-a2-abuela.mp3"
+  },
+  "boda/a2-asado": {
+   "hash": "9c3e149f8d48975336f0",
+   "seconds": 34.53,
+   "src": "/audio/escucha-3d/boda-a2-asado.mp3"
+  },
+  "boda/a2-banda": {
+   "hash": "ca4f4f36603700aedd89",
+   "seconds": 40.32,
+   "src": "/audio/escucha-3d/boda-a2-banda.mp3"
+  },
+  "boda/a2-barra": {
+   "hash": "7671b3435ac0396adcf9",
+   "seconds": 40.46,
+   "src": "/audio/escucha-3d/boda-a2-barra.mp3"
+  },
+  "boda/a2-brindis": {
+   "hash": "786bdca99934f9258cdd",
+   "seconds": 38.19,
+   "src": "/audio/escucha-3d/boda-a2-brindis.mp3"
+  },
+  "boda/a2-capilla": {
+   "hash": "58959f234a5f6e968926",
+   "seconds": 43.34,
+   "src": "/audio/escucha-3d/boda-a2-capilla.mp3"
+  },
+  "boda/a2-cocina": {
+   "hash": "32ad95d26f72fb0b5478",
+   "seconds": 37.71,
+   "src": "/audio/escucha-3d/boda-a2-cocina.mp3"
+  },
+  "boda/a2-establo": {
+   "hash": "6422eed94188a2436661",
+   "seconds": 34.5,
+   "src": "/audio/escucha-3d/boda-a2-establo.mp3"
+  },
+  "boda/a2-ex": {
+   "hash": "1f9acf45df2aa68bc225",
+   "seconds": 41.64,
+   "src": "/audio/escucha-3d/boda-a2-ex.mp3"
+  },
+  "boda/a2-fotos": {
+   "hash": "1e6e8ce2fd5ff3aa26d9",
+   "seconds": 28.6,
+   "src": "/audio/escucha-3d/boda-a2-fotos.mp3"
+  },
+  "boda/a2-mesa": {
+   "hash": "0a51bd99da4c45839906",
+   "seconds": 49.63,
+   "src": "/audio/escucha-3d/boda-a2-mesa.mp3"
+  },
+  "boda/a2-muelle": {
+   "hash": "efb9f53a02279966b2ad",
+   "seconds": 35.82,
+   "src": "/audio/escucha-3d/boda-a2-muelle.mp3"
+  },
+  "boda/a2-ninos": {
+   "hash": "b9a8d5899b03cb05b39d",
+   "seconds": 44.88,
+   "src": "/audio/escucha-3d/boda-a2-ninos.mp3"
+  },
+  "boda/a2-novia": {
+   "hash": "9eefc01b9c2dc6c30559",
+   "seconds": 39.82,
+   "src": "/audio/escucha-3d/boda-a2-novia.mp3"
+  },
+  "boda/a2-novio": {
+   "hash": "d8bb2c8051f389817ad8",
+   "seconds": 38.79,
+   "src": "/audio/escucha-3d/boda-a2-novio.mp3"
+  },
+  "boda/a2-pista": {
+   "hash": "2ec35f01863afec48fe9",
+   "seconds": 34.98,
+   "src": "/audio/escucha-3d/boda-a2-pista.mp3"
+  },
+  "boda/a2-planner": {
+   "hash": "e9b4df1be3aeb928f3c6",
+   "seconds": 31.17,
+   "src": "/audio/escucha-3d/boda-a2-planner.mp3"
+  },
+  "boda/a2-porton": {
+   "hash": "9034f11360fa69af31f3",
+   "seconds": 34.25,
+   "src": "/audio/escucha-3d/boda-a2-porton.mp3"
+  },
+  "boda/b1-abuela": {
+   "hash": "3593c08385c7e83ee22c",
+   "seconds": 43.27,
+   "src": "/audio/escucha-3d/boda-b1-abuela.mp3"
+  },
+  "boda/b1-asado": {
+   "hash": "b1157a72080940590dc0",
+   "seconds": 42.72,
+   "src": "/audio/escucha-3d/boda-b1-asado.mp3"
+  },
+  "boda/b1-banda": {
+   "hash": "f471f100d5c75c7e36f0",
+   "seconds": 47.93,
+   "src": "/audio/escucha-3d/boda-b1-banda.mp3"
+  },
+  "boda/b1-barra": {
+   "hash": "e64342f72717171b3e9a",
+   "seconds": 50.3,
+   "src": "/audio/escucha-3d/boda-b1-barra.mp3"
+  },
+  "boda/b1-brindis": {
+   "hash": "9f9a66d250eba9401538",
+   "seconds": 54.24,
+   "src": "/audio/escucha-3d/boda-b1-brindis.mp3"
+  },
+  "boda/b1-capilla": {
+   "hash": "e8bd36a36c34de36e8ec",
+   "seconds": 47.9,
+   "src": "/audio/escucha-3d/boda-b1-capilla.mp3"
+  },
+  "boda/b1-cocina": {
+   "hash": "311665b98ee93d1a1273",
+   "seconds": 45.12,
+   "src": "/audio/escucha-3d/boda-b1-cocina.mp3"
+  },
+  "boda/b1-establo": {
+   "hash": "c98d199fadcda2fb6ed4",
+   "seconds": 44.71,
+   "src": "/audio/escucha-3d/boda-b1-establo.mp3"
+  },
+  "boda/b1-ex": {
+   "hash": "6f8d789b252084ac5ef5",
+   "seconds": 60.06,
+   "src": "/audio/escucha-3d/boda-b1-ex.mp3"
+  },
+  "boda/b1-fotos": {
+   "hash": "0cb5d8e043e57da30fe8",
+   "seconds": 46.46,
+   "src": "/audio/escucha-3d/boda-b1-fotos.mp3"
+  },
+  "boda/b1-mesa": {
+   "hash": "9e837ac69cfda566fdb0",
+   "seconds": 51.89,
+   "src": "/audio/escucha-3d/boda-b1-mesa.mp3"
+  },
+  "boda/b1-muelle": {
+   "hash": "d88581e1ab67e0a58d8e",
+   "seconds": 37.46,
+   "src": "/audio/escucha-3d/boda-b1-muelle.mp3"
+  },
+  "boda/b1-ninos": {
+   "hash": "ece1cf91264c7b514d08",
+   "seconds": 51.14,
+   "src": "/audio/escucha-3d/boda-b1-ninos.mp3"
+  },
+  "boda/b1-novia": {
+   "hash": "9c4f8d9ce9f62af4bce3",
+   "seconds": 59.09,
+   "src": "/audio/escucha-3d/boda-b1-novia.mp3"
+  },
+  "boda/b1-novio": {
+   "hash": "a5340b6fdc07180f6eff",
+   "seconds": 49.39,
+   "src": "/audio/escucha-3d/boda-b1-novio.mp3"
+  },
+  "boda/b1-pista": {
+   "hash": "461d66376a5e0beb186f",
+   "seconds": 40.63,
+   "src": "/audio/escucha-3d/boda-b1-pista.mp3"
+  },
+  "boda/b1-planner": {
+   "hash": "a290a51abc35282c6fe0",
+   "seconds": 44.9,
+   "src": "/audio/escucha-3d/boda-b1-planner.mp3"
+  },
+  "boda/b1-porton": {
+   "hash": "6ac308616586d780c678",
+   "seconds": 46.22,
+   "src": "/audio/escucha-3d/boda-b1-porton.mp3"
+  },
+  "boda/b2-abuela": {
+   "hash": "459edb27c58621177545",
+   "seconds": 55.15,
+   "src": "/audio/escucha-3d/boda-b2-abuela.mp3"
+  },
+  "boda/b2-asado": {
+   "hash": "b8ccc57e7bfdc01c6e1c",
+   "seconds": 55.44,
+   "src": "/audio/escucha-3d/boda-b2-asado.mp3"
+  },
+  "boda/b2-banda": {
+   "hash": "1640f079a004a5c5569d",
+   "seconds": 60.88,
+   "src": "/audio/escucha-3d/boda-b2-banda.mp3"
+  },
+  "boda/b2-barra": {
+   "hash": "091578bfc36a808457b6",
+   "seconds": 66.32,
+   "src": "/audio/escucha-3d/boda-b2-barra.mp3"
+  },
+  "boda/b2-brindis": {
+   "hash": "b9f91845dcb354908192",
+   "seconds": 64.19,
+   "src": "/audio/escucha-3d/boda-b2-brindis.mp3"
+  },
+  "boda/b2-capilla": {
+   "hash": "0ba9f715664a59d8a224",
+   "seconds": 56.35,
+   "src": "/audio/escucha-3d/boda-b2-capilla.mp3"
+  },
+  "boda/b2-cocina": {
+   "hash": "5d7841e1766d3087b630",
+   "seconds": 64.26,
+   "src": "/audio/escucha-3d/boda-b2-cocina.mp3"
+  },
+  "boda/b2-establo": {
+   "hash": "73a69093f0bce8616cae",
+   "seconds": 55.56,
+   "src": "/audio/escucha-3d/boda-b2-establo.mp3"
+  },
+  "boda/b2-ex": {
+   "hash": "5b27eb50fde6d775d28c",
+   "seconds": 69.45,
+   "src": "/audio/escucha-3d/boda-b2-ex.mp3"
+  },
+  "boda/b2-fotos": {
+   "hash": "f0adebb5b0742855c3a6",
+   "seconds": 53.88,
+   "src": "/audio/escucha-3d/boda-b2-fotos.mp3"
+  },
+  "boda/b2-mesa": {
+   "hash": "0e5f9ab8c4296a6c42cd",
+   "seconds": 74.21,
+   "src": "/audio/escucha-3d/boda-b2-mesa.mp3"
+  },
+  "boda/b2-muelle": {
+   "hash": "88173e1de06964778b9f",
+   "seconds": 58.24,
+   "src": "/audio/escucha-3d/boda-b2-muelle.mp3"
+  },
+  "boda/b2-ninos": {
+   "hash": "d16f2ad05ee820739996",
+   "seconds": 66.8,
+   "src": "/audio/escucha-3d/boda-b2-ninos.mp3"
+  },
+  "boda/b2-novia": {
+   "hash": "c7c71e65d4b3a8c500fa",
+   "seconds": 64.33,
+   "src": "/audio/escucha-3d/boda-b2-novia.mp3"
+  },
+  "boda/b2-novio": {
+   "hash": "a71aa9b0be3725f2ba22",
+   "seconds": 62.76,
+   "src": "/audio/escucha-3d/boda-b2-novio.mp3"
+  },
+  "boda/b2-pista": {
+   "hash": "e07261c717a2883e1250",
+   "seconds": 53.28,
+   "src": "/audio/escucha-3d/boda-b2-pista.mp3"
+  },
+  "boda/b2-planner": {
+   "hash": "85e8c790c0d0e33078dd",
+   "seconds": 57.76,
+   "src": "/audio/escucha-3d/boda-b2-planner.mp3"
+  },
+  "boda/b2-porton": {
+   "hash": "d9592ef30185fd8c4c0f",
+   "seconds": 50.04,
+   "src": "/audio/escucha-3d/boda-b2-porton.mp3"
+  },
+  "boda/c1-abuela": {
+   "hash": "9fd4e5c10053cf230e18",
+   "seconds": 70.58,
+   "src": "/audio/escucha-3d/boda-c1-abuela.mp3"
+  },
+  "boda/c1-asado": {
+   "hash": "c5d2d11ac05618a19f0b",
+   "seconds": 66.86,
+   "src": "/audio/escucha-3d/boda-c1-asado.mp3"
+  },
+  "boda/c1-banda": {
+   "hash": "b15c64a13007a80b2610",
+   "seconds": 79.5,
+   "src": "/audio/escucha-3d/boda-c1-banda.mp3"
+  },
+  "boda/c1-barra": {
+   "hash": "132315fd8dcc13e1f11b",
+   "seconds": 79.88,
+   "src": "/audio/escucha-3d/boda-c1-barra.mp3"
+  },
+  "boda/c1-brindis": {
+   "hash": "c8e3c17399bfe3e2e3ac",
+   "seconds": 75.83,
+   "src": "/audio/escucha-3d/boda-c1-brindis.mp3"
+  },
+  "boda/c1-capilla": {
+   "hash": "963a98e8749213e2d195",
+   "seconds": 73.31,
+   "src": "/audio/escucha-3d/boda-c1-capilla.mp3"
+  },
+  "boda/c1-cocina": {
+   "hash": "cb63bec8196c588bef8f",
+   "seconds": 81.83,
+   "src": "/audio/escucha-3d/boda-c1-cocina.mp3"
+  },
+  "boda/c1-establo": {
+   "hash": "dc2012f93b4072bd0351",
+   "seconds": 65.2,
+   "src": "/audio/escucha-3d/boda-c1-establo.mp3"
+  },
+  "boda/c1-ex": {
+   "hash": "27bc70464ae8ff3f28db",
+   "seconds": 80.1,
+   "src": "/audio/escucha-3d/boda-c1-ex.mp3"
+  },
+  "boda/c1-fotos": {
+   "hash": "19fdf4754c20bf4599c2",
+   "seconds": 69.14,
+   "src": "/audio/escucha-3d/boda-c1-fotos.mp3"
+  },
+  "boda/c1-mesa": {
+   "hash": "7c259b731d3e05cf65fc",
+   "seconds": 72.39,
+   "src": "/audio/escucha-3d/boda-c1-mesa.mp3"
+  },
+  "boda/c1-muelle": {
+   "hash": "8cda920a28eeca69a193",
+   "seconds": 66.67,
+   "src": "/audio/escucha-3d/boda-c1-muelle.mp3"
+  },
+  "boda/c1-ninos": {
+   "hash": "b0218a2e5bffd8add89b",
+   "seconds": 80.43,
+   "src": "/audio/escucha-3d/boda-c1-ninos.mp3"
+  },
+  "boda/c1-novia": {
+   "hash": "1ba5249f7f9f69a1947c",
+   "seconds": 78.3,
+   "src": "/audio/escucha-3d/boda-c1-novia.mp3"
+  },
+  "boda/c1-novio": {
+   "hash": "64f2bc725853063fa070",
+   "seconds": 74.03,
+   "src": "/audio/escucha-3d/boda-c1-novio.mp3"
+  },
+  "boda/c1-pista": {
+   "hash": "4624a4143487b3a3ec20",
+   "seconds": 72.36,
+   "src": "/audio/escucha-3d/boda-c1-pista.mp3"
+  },
+  "boda/c1-planner": {
+   "hash": "1599e3e3df0ce9990da8",
+   "seconds": 72.45,
+   "src": "/audio/escucha-3d/boda-c1-planner.mp3"
+  },
+  "boda/c1-porton": {
+   "hash": "6db8866038ed602ce1ff",
+   "seconds": 73.31,
+   "src": "/audio/escucha-3d/boda-c1-porton.mp3"
+  },
+  "boda/c2-abuela": {
+   "hash": "9ca2b8e3f511350800c8",
+   "seconds": 77.62,
+   "src": "/audio/escucha-3d/boda-c2-abuela.mp3"
+  },
+  "boda/c2-asado": {
+   "hash": "fc3ead32710e4ddfdc7d",
+   "seconds": 73.25,
+   "src": "/audio/escucha-3d/boda-c2-asado.mp3"
+  },
+  "boda/c2-banda": {
+   "hash": "58279dc862dbe51d82a4",
+   "seconds": 82.69,
+   "src": "/audio/escucha-3d/boda-c2-banda.mp3"
+  },
+  "boda/c2-barra": {
+   "hash": "89ed7666358ee4fe6bd4",
+   "seconds": 100.96,
+   "src": "/audio/escucha-3d/boda-c2-barra.mp3"
+  },
+  "boda/c2-brindis": {
+   "hash": "a8a6e45234c88771c6bc",
+   "seconds": 82.22,
+   "src": "/audio/escucha-3d/boda-c2-brindis.mp3"
+  },
+  "boda/c2-capilla": {
+   "hash": "2250cb52cf319eb49377",
+   "seconds": 86.5,
+   "src": "/audio/escucha-3d/boda-c2-capilla.mp3"
+  },
+  "boda/c2-cocina": {
+   "hash": "80c75b0d0b5f0f420878",
+   "seconds": 92.57,
+   "src": "/audio/escucha-3d/boda-c2-cocina.mp3"
+  },
+  "boda/c2-establo": {
+   "hash": "72c261bfd66efd376364",
+   "seconds": 80.02,
+   "src": "/audio/escucha-3d/boda-c2-establo.mp3"
+  },
+  "boda/c2-ex": {
+   "hash": "981e1417710912cdc175",
+   "seconds": 94.77,
+   "src": "/audio/escucha-3d/boda-c2-ex.mp3"
+  },
+  "boda/c2-fotos": {
+   "hash": "ea404604dd981af0b126",
+   "seconds": 77.4,
+   "src": "/audio/escucha-3d/boda-c2-fotos.mp3"
+  },
+  "boda/c2-mesa": {
+   "hash": "c2a528b50f2fef2e45e0",
+   "seconds": 83.65,
+   "src": "/audio/escucha-3d/boda-c2-mesa.mp3"
+  },
+  "boda/c2-muelle": {
+   "hash": "0d4028d36a2dfd7ba19a",
+   "seconds": 80.83,
+   "src": "/audio/escucha-3d/boda-c2-muelle.mp3"
+  },
+  "boda/c2-ninos": {
+   "hash": "2403cf491ddd7571bd35",
+   "seconds": 93.24,
+   "src": "/audio/escucha-3d/boda-c2-ninos.mp3"
+  },
+  "boda/c2-novia": {
+   "hash": "d09dcdb4a3cfe0ac94bb",
+   "seconds": 92.58,
+   "src": "/audio/escucha-3d/boda-c2-novia.mp3"
+  },
+  "boda/c2-novio": {
+   "hash": "0f2b4ac29e07bb3efe53",
+   "seconds": 83.83,
+   "src": "/audio/escucha-3d/boda-c2-novio.mp3"
+  },
+  "boda/c2-pista": {
+   "hash": "982d3f125197a7967a01",
+   "seconds": 72.26,
+   "src": "/audio/escucha-3d/boda-c2-pista.mp3"
+  },
+  "boda/c2-planner": {
+   "hash": "ef013f49201163932e37",
+   "seconds": 88.08,
+   "src": "/audio/escucha-3d/boda-c2-planner.mp3"
+  },
+  "boda/c2-porton": {
+   "hash": "ad83048b00c0c7956518",
+   "seconds": 73.61,
+   "src": "/audio/escucha-3d/boda-c2-porton.mp3"
+  },
   "bosque/a1-cambia": {
    "hash": "a584a4cf0452c7383fc3",
    "seconds": 37.03,
