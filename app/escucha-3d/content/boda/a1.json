@@ -1016,8 +1016,8 @@
       ],
       "open": [
         {
-          "q": "¿Cómo eres físicamente?",
-          "model": "Soy alta, tengo el pelo largo y castaño."
+          "q": "¿Qué ropa eliges para ir a una boda?",
+          "model": "Elijo un vestido azul y zapatos cómodos para bailar."
         },
         {
           "q": "¿Qué haces si un amigo no contesta el teléfono?",

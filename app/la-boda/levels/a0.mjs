@@ -267,7 +267,7 @@ export default {
     ],
     talk: [
       t('¿Qué canción pones para bailar?', 'What song do you put on to dance?'),
-      t('¿Quién toca un instrumento en tu familia?', 'Who plays an instrument in your family?'),
+      t('¿Qué canción bailas en una boda?', 'What song do you dance to at a wedding?'),
       t('¿Cantas en el auto o en la cocina?', 'Do you sing in the car or in the kitchen?'),
       t('¿Qué canción es de tu familia?', 'Which song belongs to your family?'),
       t('¿Prefieres música en vivo o en el teléfono?', 'Do you prefer live music or music on your phone?'),
@@ -313,7 +313,7 @@ export default {
     talk: [
       t('¿Qué tomas en una fiesta?', 'What do you drink at a party?'),
       t('¿Qué pregunta no te gusta?', 'Which question do you not like?'),
-      t('¿Qué bebida pides para celebrar algo?', 'What drink do you order to celebrate something?'),
+      t('¿Brindas con agua, con jugo o con vino?', 'Do you toast with water, juice or wine?'),
       t('¿Bailas cuando no te mira nadie?', 'Do you dance when nobody is watching?'),
       t('¿Quién te da consejos sobre el amor?', 'Who gives you advice about love?'),
     ],
