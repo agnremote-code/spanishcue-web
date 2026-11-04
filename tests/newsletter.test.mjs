@@ -18,7 +18,16 @@ async function setup() {
     async run() { return { meta: { changes: Number(statement.run(...values).changes) } }; },
   }; }, async all() { return { results: sqlite.prepare(query).all() }; } }; } };
   const calls = [];
-  globalThis.fetch = async (url, init) => { calls.push({ url: String(url), init }); return new Response('{"id":"x"}', { status: 200 }); };
+  const known = new Set();
+  globalThis.fetch = async (url, init) => {
+    calls.push({ url: String(url), init });
+    // Minimal Resend contacts: GET answers 404 until a POST /contacts created the contact.
+    const contact = String(url).match(/\/contacts\/([^/]+)$/);
+    if (contact && (init?.method ?? 'GET') === 'GET') return new Response('{}', { status: known.has(decodeURIComponent(contact[1])) ? 200 : 404 });
+    if (String(url).endsWith('/contacts') && init?.method === 'POST') known.add(JSON.parse(init.body).email);
+    return new Response('{"id":"x"}', { status: 200 });
+  };
+  globalThis.__resendKnown = known;
   // The bundled module is cached across tests: update the env object it captured.
   globalThis.__NEWSLETTER_TEST_ENV = Object.assign(globalThis.__NEWSLETTER_TEST_ENV ?? {}, { DB: db, AUTOESTUDIO_SHARE_SECRET: SECRET, RESEND_API_KEY: 're_test' });
   const bundle = await build({ stdin: { contents: `export { POST } from './app/api/newsletter/route'; export { GET as leave, POST as oneClick } from './app/api/newsletter/baja/route'; export { GET as admin } from './app/api/admin/newsletter/route'; export * from './app/newsletter/server'; export * from './app/newsletter/gift';`, resolveDir: process.cwd() }, bundle: true, write: false, format: 'esm', platform: 'node', plugins: [{ name: 'env', setup(b) {
@@ -73,6 +82,12 @@ test('newsletter signup stores consented emails, unlocks only the gift class and
   assert.equal(calls.filter(c => c.url === 'https://api.resend.com/emails').length, 1);
   assert.equal(calls.filter(c => c.url === 'https://api.resend.com/events/send').length, 1);
 
+  // A returning email that never reached Resend (mail was not configured when it signed up) gets the welcome now.
+  globalThis.__resendKnown.delete('ana@example.test');
+  assert.equal((await mod.POST(request({ ...valid, email: 'ana@example.test' }))).status, 201);
+  assert.equal(calls.filter(c => c.url === 'https://api.resend.com/emails').length, 2);
+  assert.equal(calls.filter(c => c.url === 'https://api.resend.com/events/send').length, 2);
+
   // The cookie opens the gift lesson and its audio only; forged or foreign cookies do not.
   const token = cookie.split(';')[0];
   assert.equal(await mod.hasGift(token, SECRET), true);
@@ -90,7 +105,7 @@ test('newsletter signup stores consented emails, unlocks only the gift class and
   const good = await mod.oneClick(new Request(`https://spanishcue.test/api/newsletter/baja?t=${row.unsubscribe_token}`, { method: 'POST' }));
   assert.equal(good.status, 200);
   assert.equal(sqlite.prepare('SELECT status FROM newsletter_subscribers').get().status, 'unsubscribed');
-  assert.ok(calls.some(c => c.url === 'https://api.resend.com/contacts/ana%40example.test' && JSON.parse(c.init.body).unsubscribed === true));
+  assert.ok(calls.some(c => c.url === 'https://api.resend.com/contacts/ana%40example.test' && c.init.method === 'PATCH' && JSON.parse(c.init.body).unsubscribed === true));
 
   // Owner-only list without unsubscribe tokens.
   assert.equal((await mod.admin(new Request('https://spanishcue.test/api/admin/newsletter'))).status, 403);
@@ -98,6 +113,10 @@ test('newsletter signup stores consented emails, unlocks only the gift class and
   assert.equal(list.total, 1);
   assert.equal(list.active, 0);
   assert.equal(JSON.stringify(list).includes(row.unsubscribe_token), false);
+  const csv = await mod.admin(new Request('https://spanishcue.test/api/admin/newsletter?format=csv', { headers: { 'x-chespanish-owner': '1' } }));
+  assert.match(csv.headers.get('content-type'), /^text\/csv/);
+  assert.match(await csv.text(), /^email,created_at,source_path,status,unsubscribed_at\n"ana@example.test",/i);
+  assert.equal((await mod.admin(new Request('https://spanishcue.test/api/admin/newsletter?format=csv'))).status, 403);
 });
 
 test('signup refuses to store emails when the class cannot be unlocked', async () => {

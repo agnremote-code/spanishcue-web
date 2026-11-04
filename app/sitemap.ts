@@ -12,6 +12,7 @@ import { ACTIVIDADES_PATH, bancoPaths } from "./material-ele/actividades";
 import { INDICE_PATH, lastModifiedByPath } from "./material-ele/indice";
 import { elePreviewLesson } from "./material-ele/media";
 import { guiaPages } from "./material-ele/guias";
+import { FICHAS_PATH, fichaPages } from "./material-ele/fichas";
 import { lessonCards } from "./growth/lessons";
 import { RECURSOS_PATH, recursoPathForLesson, resourceLessons, resourcePathForLesson } from "./resource-seo";
 import { canonicalUrl, isSearchPrivatePath, languageAlternates } from "./seo";
@@ -56,6 +57,8 @@ const curatedRoutes: { path: string; priority: number; changeFrequency: Frequenc
   ...temaLevelPages.map((page) => ({ path: page.path, priority: 0.7, changeFrequency: "monthly" as Frequency })),
   { path: ACTIVIDADES_PATH, priority: 0.85, changeFrequency: "weekly" },
   ...bancoPaths.map((path) => ({ path, priority: 0.7, changeFrequency: "monthly" as Frequency })),
+  { path: FICHAS_PATH, priority: 0.85, changeFrequency: "weekly" },
+  ...fichaPages.map((page) => ({ path: page.path, priority: 0.75, changeFrequency: "monthly" as Frequency })),
   { path: INDICE_PATH, priority: 0.8, changeFrequency: "weekly" },
   { path: "/ele-recursos-profesores", priority: 0.7, changeFrequency: "monthly" },
   { path: "/free-spanish-lesson", priority: 0.7, changeFrequency: "monthly" },

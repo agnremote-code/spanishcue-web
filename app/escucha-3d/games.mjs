@@ -191,6 +191,17 @@ export const GAMES = {
     ownListening: true,
     bilingualA0: true,
   },
+  // El tren de las 23:40: every circle of the night train has its own
+  // listening at each level, voiced by the same passengers and crew who
+  // speak there. PRO lesson (ID 256).
+  tren: {
+    title: 'El tren de las 23:40',
+    levels: ['A0', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
+    spots: ['equipaje', 'despedida', 'ronquidos', 'lunademiel', 'camarote7', 'sobrino', 'cena', 'sobremesa', 'barman', 'cartas',
+      'astronoma', 'directo', 'perro', 'violonchelo', 'nieve', 'frontera', 'maquinista', 'amanecer'],
+    ownListening: true,
+    bilingualA0: true,
+  },
 };
 
 // Transcript length in words for each level.
