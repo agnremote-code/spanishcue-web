@@ -4,6 +4,7 @@ import { runSmoke } from '../scripts/production-smoke.mjs';
 
 const resourcePages = {
   '/resources/spanish-conversation-activity-a0-c2-hospital-san-casi-vivo': '3D Spanish Conversation Activity A0–C2: Hospital San Casi Vivo',
+  '/resources/spanish-conversation-activity-a0-c2-el-bosque-de-los-hongos-gigantes': '3D Spanish Conversation Activity A0–C2: El bosque de los hongos gigantes',
   '/resources/spanish-conversation-activity-a2-la-feria-de-villaluz': '3D Spanish Conversation Activity A2: La feria de Villaluz',
 };
 const legacyResource = '/resources/spanish-grammar-lesson-a1-a2-ser-estar-y-hay-describir-personas-y-lugares';
@@ -12,7 +13,7 @@ function fixture(overrides = {}) {
     const path = new URL(url).pathname;
     if (overrides[path]) return overrides[path]();
     if (path === '/cuenta') return new Response(null, { status: 307, headers: { location: '/ingresar?next=/cuenta' } });
-    if (path === '/tablero-de-eso-si-hablo' || path === '/noche-abierta' || path === '/hospital-san-casi-vivo' || path === '/la-feria-de-villaluz') return new Response(null, { status: 302, headers: { location: '/acceso' } });
+    if (path === '/tablero-de-eso-si-hablo' || path === '/noche-abierta' || path === '/hospital-san-casi-vivo' || path === '/bosque-de-los-hongos-gigantes' || path === '/la-feria-de-villaluz') return new Response(null, { status: 302, headers: { location: '/acceso' } });
     if (path.startsWith('/audio/')) return new Response('Forbidden', { status: 403 });
     if (path === '/api/students') return Response.json({ error: 'unauthorized' }, { status: 401, headers: { 'cache-control': 'private, no-store' } });
     if (path === '/api/auth/verification-email') return Response.json({ code: 'INVALID_SESSION' }, { status: 401 });
