@@ -1,0 +1,2052 @@
+{
+  "game": "tren",
+  "level": "A1",
+  "items": [
+    {
+      "id": "equipaje",
+      "title": "El maletero y la señora del abrigo rojo",
+      "place": "El andén de Mendoza",
+      "context": "Fermín le cuenta a Rosa quién es la señora del abrigo rojo.",
+      "speakers": [
+        {
+          "name": "Fermín",
+          "country": "Argentina",
+          "voice": "es-AR-TomasNeural"
+        },
+        {
+          "name": "Rosa",
+          "country": "Paraguay",
+          "voice": "es-PY-TaniaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Perdone, ¿quién es esa señora del abrigo rojo?"
+        },
+        {
+          "s": 0,
+          "text": "Es Olga Ríos, una escritora chilena muy famosa. Escribe novelas policiales."
+        },
+        {
+          "s": 1,
+          "text": "¡Ah! ¿Y por qué lleva una caja en los brazos?"
+        },
+        {
+          "s": 0,
+          "text": "Es una urna. Dentro están las cenizas de su marido. Tiene billete propio."
+        },
+        {
+          "s": 1,
+          "text": "¿Un billete para las cenizas? ¡Qué mujer tan rara!"
+        },
+        {
+          "s": 0,
+          "text": "Rara no. Enamorada."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿De quién hablan Fermín y Rosa?",
+          "options": [
+            "De una escritora",
+            "De una camarera",
+            "De una actriz"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué escribe Olga?",
+          "options": [
+            "Poemas",
+            "Libros de cocina",
+            "Novelas policiales"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué hay dentro de la urna?",
+          "options": [
+            "Joyas",
+            "Las cenizas de su marido",
+            "Cartas"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué piensa Fermín de Olga?",
+          "options": [
+            "Que está enamorada",
+            "Que es rara",
+            "Que es antipática"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué escritor de tu país es famoso?",
+          "model": "Gabriel García Márquez es muy famoso."
+        },
+        {
+          "q": "¿Te gustan las novelas policiales?",
+          "model": "Sí, leo una novela policial cada mes."
+        },
+        {
+          "q": "¿Qué llevas siempre en un viaje?",
+          "model": "Siempre llevo un libro y el cargador del móvil."
+        }
+      ],
+      "gaps": "Es [Olga Ríos], una [escritora] chilena muy [famosa]. Escribe novelas [policiales].",
+      "glossary": [
+        {
+          "word": "escritora",
+          "meaning": "mujer que escribe libros"
+        },
+        {
+          "word": "urna",
+          "meaning": "caja para guardar las cenizas de una persona muerta"
+        },
+        {
+          "word": "cenizas",
+          "meaning": "lo que queda después de quemar algo"
+        },
+        {
+          "word": "enamorada",
+          "meaning": "que siente amor por alguien"
+        }
+      ]
+    },
+    {
+      "id": "despedida",
+      "title": "La lista de mamá",
+      "place": "El andén de Mendoza",
+      "context": "Rosa le da a Matías una lista de cosas importantes.",
+      "speakers": [
+        {
+          "name": "Rosa",
+          "country": "Paraguay",
+          "voice": "es-PY-TaniaNeural"
+        },
+        {
+          "name": "Matías",
+          "country": "Paraguay",
+          "voice": "es-PY-MarioNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Matías, aquí tienes una lista. Número uno: comes tres veces al día."
+        },
+        {
+          "s": 1,
+          "text": "Sí, mamá."
+        },
+        {
+          "s": 0,
+          "text": "Número dos: duermes ocho horas. Número tres: me llamas los domingos."
+        },
+        {
+          "s": 1,
+          "text": "Mamá, los domingos trabajo en la mina."
+        },
+        {
+          "s": 0,
+          "text": "Pues me llamas los lunes. Y número cuatro: no hablas con señoras raras en el tren."
+        },
+        {
+          "s": 1,
+          "text": "¿Por qué?"
+        },
+        {
+          "s": 0,
+          "text": "Porque esa del abrigo rojo me da mala espina."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué le da Rosa a Matías?",
+          "options": [
+            "Una lista",
+            "Un regalo",
+            "Dinero"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cuántas horas tiene que dormir Matías?",
+          "options": [
+            "Seis",
+            "Ocho",
+            "Diez"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Por qué Matías no puede llamar los domingos?",
+          "options": [
+            "Porque no tiene teléfono",
+            "Porque está cansado",
+            "Porque trabaja"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Quién le da mala espina a Rosa?",
+          "options": [
+            "El maquinista",
+            "La señora del abrigo rojo",
+            "Un mochilero"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Cuántas horas duermes normalmente?",
+          "model": "Duermo siete horas, más o menos."
+        },
+        {
+          "q": "¿Qué día llamas a tu familia?",
+          "model": "Llamo a mis padres los domingos."
+        },
+        {
+          "q": "¿Qué consejo te da siempre tu madre o tu padre?",
+          "model": "Mi padre siempre me dice: «Ahorra dinero»."
+        }
+      ],
+      "gaps": "Número dos: [duermes] [ocho horas]. Número tres: me [llamas] los [domingos].",
+      "glossary": [
+        {
+          "word": "lista",
+          "meaning": "cosas escritas una debajo de otra"
+        },
+        {
+          "word": "mina",
+          "meaning": "lugar bajo la tierra donde se sacan metales"
+        },
+        {
+          "word": "me da mala espina",
+          "meaning": "no me inspira confianza"
+        }
+      ]
+    },
+    {
+      "id": "ronquidos",
+      "title": "Tapones para dos",
+      "place": "El pasillo del coche cama A",
+      "context": "Lucas pide ayuda a Celia porque no puede dormir.",
+      "speakers": [
+        {
+          "name": "Lucas",
+          "country": "España",
+          "voice": "es-ES-AlvaroNeural"
+        },
+        {
+          "name": "Celia",
+          "country": "Perú",
+          "voice": "es-PE-CamilaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Perdone, señorita. ¿Tiene tapones para los oídos?"
+        },
+        {
+          "s": 1,
+          "text": "¿Tapones? ¿Hay mucho ruido?"
+        },
+        {
+          "s": 0,
+          "text": "Mi compañero de camarote ronca como un tractor. Son las doce y no duermo nada."
+        },
+        {
+          "s": 1,
+          "text": "Ay, es Don Evaristo. Siempre ronca. Tome, aquí tiene dos tapones. Y una manta extra."
+        },
+        {
+          "s": 0,
+          "text": "¡Muchas gracias! ¿Usted no tiene sueño?"
+        },
+        {
+          "s": 1,
+          "text": "Sí, pero trabajo hasta las seis."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué necesita Lucas?",
+          "options": [
+            "Una almohada",
+            "Tapones para los oídos",
+            "Un café"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Por qué no duerme?",
+          "options": [
+            "Porque su compañero ronca",
+            "Porque tiene hambre",
+            "Porque hace frío"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué le da Celia además de los tapones?",
+          "options": [
+            "Un té",
+            "Un libro",
+            "Una manta"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Hasta qué hora trabaja Celia?",
+          "options": [
+            "Hasta las seis",
+            "Hasta las doce",
+            "Hasta las tres"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué haces cuando hay ruido por la noche?",
+          "model": "Me pongo música suave."
+        },
+        {
+          "q": "¿Duermes bien en los viajes?",
+          "model": "No, en los viajes duermo muy mal."
+        },
+        {
+          "q": "¿Hasta qué hora trabajas?",
+          "model": "Trabajo hasta las cinco de la tarde."
+        }
+      ],
+      "gaps": "Mi [compañero] de camarote [ronca] como un [tractor]. Son las doce y no duermo [nada].",
+      "glossary": [
+        {
+          "word": "tapones",
+          "meaning": "cosas pequeñas para no oír ruido"
+        },
+        {
+          "word": "ronca",
+          "meaning": "hace ruido con la nariz al dormir"
+        },
+        {
+          "word": "manta",
+          "meaning": "tela gruesa para tener calor"
+        },
+        {
+          "word": "sueño",
+          "meaning": "ganas de dormir"
+        }
+      ]
+    },
+    {
+      "id": "lunademiel",
+      "title": "La foto de la boda",
+      "place": "El camarote cinco",
+      "context": "Yesenia le enseña a Brayan una foto en el móvil.",
+      "speakers": [
+        {
+          "name": "Yesenia",
+          "country": "Colombia",
+          "voice": "es-CO-SalomeNeural"
+        },
+        {
+          "name": "Brayan",
+          "country": "Colombia",
+          "voice": "es-CO-GonzaloNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Mira esta foto de la boda. ¡Qué guapo estás con el traje!"
+        },
+        {
+          "s": 1,
+          "text": "Y tú estás preciosa con el vestido blanco."
+        },
+        {
+          "s": 0,
+          "text": "¿Y quién es ese señor con sombrero?"
+        },
+        {
+          "s": 1,
+          "text": "Es mi tío Rigoberto. Siempre llega tarde y siempre come mucho."
+        },
+        {
+          "s": 0,
+          "text": "En la foto tiene tres pasteles en el plato."
+        },
+        {
+          "s": 1,
+          "text": "Sí. Ese es mi tío."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué miran Yesenia y Brayan?",
+          "options": [
+            "Una foto de la boda",
+            "Un mapa",
+            "Un libro"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cómo está Yesenia en la foto?",
+          "options": [
+            "Cansada",
+            "Preciosa",
+            "Seria"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Quién es el señor del sombrero?",
+          "options": [
+            "El padre de Yesenia",
+            "El maquinista",
+            "El tío de Brayan"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cuántos pasteles tiene el tío?",
+          "options": [
+            "Uno",
+            "Dos",
+            "Tres"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Cómo es tu ropa para una boda?",
+          "model": "Llevo un vestido azul y zapatos negros."
+        },
+        {
+          "q": "¿Tienes un tío o una tía divertida?",
+          "model": "Sí, mi tía Carmen es muy divertida."
+        },
+        {
+          "q": "¿Llegas tarde a veces?",
+          "model": "Sí, llego tarde casi siempre."
+        }
+      ],
+      "gaps": "Es mi [tío Rigoberto]. Siempre [llega] [tarde] y siempre [come] mucho.",
+      "glossary": [
+        {
+          "word": "boda",
+          "meaning": "fiesta cuando dos personas se casan"
+        },
+        {
+          "word": "traje",
+          "meaning": "ropa elegante de chaqueta y pantalón"
+        },
+        {
+          "word": "preciosa",
+          "meaning": "muy guapa"
+        },
+        {
+          "word": "sombrero",
+          "meaning": "cosa que llevas en la cabeza"
+        }
+      ]
+    },
+    {
+      "id": "camarote7",
+      "title": "El té de las doce y media",
+      "place": "El camarote siete",
+      "context": "Celia lleva el té a Olga antes de la desaparición.",
+      "speakers": [
+        {
+          "name": "Celia",
+          "country": "Perú",
+          "voice": "es-PE-CamilaNeural"
+        },
+        {
+          "name": "Olga",
+          "country": "Chile",
+          "voice": "es-CL-CatalinaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Buenas noches, señora. Aquí tiene su té. ¿Con azúcar?"
+        },
+        {
+          "s": 1,
+          "text": "No, gracias, sin azúcar. Pon la taza en la mesa, por favor."
+        },
+        {
+          "s": 0,
+          "text": "¿Escribe una carta?"
+        },
+        {
+          "s": 1,
+          "text": "Escribo una nota. Una nota muy importante."
+        },
+        {
+          "s": 0,
+          "text": "¿Vuelvo más tarde con galletas?"
+        },
+        {
+          "s": 1,
+          "text": "No, Celia. Esta noche no vuelvas. Gracias por todo."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué lleva Celia?",
+          "options": [
+            "Un café",
+            "Un té",
+            "Una sopa"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cómo quiere Olga el té?",
+          "options": [
+            "Sin azúcar",
+            "Con leche",
+            "Con limón"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué escribe Olga?",
+          "options": [
+            "Una novela",
+            "Una carta de amor",
+            "Una nota importante"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué le dice Olga a Celia al final?",
+          "options": [
+            "Que vuelva con galletas",
+            "Que no vuelva esta noche",
+            "Que llame al jefe"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Tomas té con azúcar o sin azúcar?",
+          "model": "Tomo el té sin azúcar."
+        },
+        {
+          "q": "¿Escribes notas a mano?",
+          "model": "Sí, escribo la lista de la compra a mano."
+        },
+        {
+          "q": "¿Qué tomas antes de dormir?",
+          "model": "Tomo un vaso de leche caliente."
+        }
+      ],
+      "gaps": "No, gracias, [sin azúcar]. Pon la [taza] en la [mesa], por [favor].",
+      "glossary": [
+        {
+          "word": "azúcar",
+          "meaning": "polvo blanco y dulce"
+        },
+        {
+          "word": "taza",
+          "meaning": "recipiente para el té o el café"
+        },
+        {
+          "word": "nota",
+          "meaning": "mensaje corto escrito"
+        },
+        {
+          "word": "galletas",
+          "meaning": "dulces pequeños y secos"
+        }
+      ]
+    },
+    {
+      "id": "sobrino",
+      "title": "Un sobrino muy ocupado",
+      "place": "El camarote nueve",
+      "context": "Ramiro habla con Bruno, que trabaja con su ordenador.",
+      "speakers": [
+        {
+          "name": "Ramiro",
+          "country": "Bolivia",
+          "voice": "es-BO-MarceloNeural"
+        },
+        {
+          "name": "Bruno",
+          "country": "Chile",
+          "voice": "es-CL-LorenzoNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Buenas noches, señor Ríos. ¿Ve usted a su tía después de la cena?"
+        },
+        {
+          "s": 1,
+          "text": "No. Estoy aquí con mi ordenador. Trabajo mucho, ¿sabe?"
+        },
+        {
+          "s": 0,
+          "text": "¿A qué se dedica?"
+        },
+        {
+          "s": 1,
+          "text": "Soy asesor de inversiones. Ayudo a la gente con su dinero."
+        },
+        {
+          "s": 0,
+          "text": "¿Y a su tía también?"
+        },
+        {
+          "s": 1,
+          "text": "Mi tía no quiere mi ayuda. Ese es el problema."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Con quién habla Ramiro?",
+          "options": [
+            "Con el sobrino de Olga",
+            "Con el maquinista",
+            "Con Olga"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué hace Bruno?",
+          "options": [
+            "Duerme",
+            "Lee",
+            "Trabaja con el ordenador"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cuál es su trabajo?",
+          "options": [
+            "Es abogado",
+            "Es asesor de inversiones",
+            "Es médico"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cuál es el problema de Bruno?",
+          "options": [
+            "Su tía no quiere su ayuda",
+            "No tiene dinero",
+            "No tiene ordenador"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿A qué te dedicas?",
+          "model": "Soy profesora de música."
+        },
+        {
+          "q": "¿Trabajas en los viajes?",
+          "model": "No, en los viajes descanso."
+        },
+        {
+          "q": "¿Ayudas a tu familia con algo?",
+          "model": "Sí, ayudo a mi abuela con el móvil."
+        }
+      ],
+      "gaps": "Soy [asesor] de [inversiones]. [Ayudo] a la gente con su [dinero].",
+      "glossary": [
+        {
+          "word": "ordenador",
+          "meaning": "computadora"
+        },
+        {
+          "word": "asesor",
+          "meaning": "persona que da consejos en su trabajo"
+        },
+        {
+          "word": "inversiones",
+          "meaning": "dinero que pones en algo para ganar más"
+        },
+        {
+          "word": "ayuda",
+          "meaning": "lo que haces para que otro tenga menos problemas"
+        }
+      ]
+    },
+    {
+      "id": "cena",
+      "title": "El menú de la noche",
+      "place": "La cocina del coche comedor",
+      "context": "Fela le explica el menú a Jacinto.",
+      "speakers": [
+        {
+          "name": "Fela",
+          "country": "México",
+          "voice": "es-MX-DaliaNeural"
+        },
+        {
+          "name": "Jacinto",
+          "country": "México",
+          "voice": "es-MX-JorgeNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Jacinto, escucha. Hoy el menú es así: de primero, sopa de lentejas o ensalada."
+        },
+        {
+          "s": 1,
+          "text": "¿Y de segundo?"
+        },
+        {
+          "s": 0,
+          "text": "De segundo, pollo con arroz o pescado con papas."
+        },
+        {
+          "s": 1,
+          "text": "¿Y de postre?"
+        },
+        {
+          "s": 0,
+          "text": "Flan o fruta. Y café, claro."
+        },
+        {
+          "s": 1,
+          "text": "¿Escribo todo en la pizarra?"
+        },
+        {
+          "s": 0,
+          "text": "Sí, y con buena letra, por favor."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿De qué hablan Fela y Jacinto?",
+          "options": [
+            "Del menú",
+            "Del horario del tren",
+            "De una pasajera"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué hay de primero?",
+          "options": [
+            "Pollo o pescado",
+            "Sopa o ensalada",
+            "Flan o fruta"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué hay de postre?",
+          "options": [
+            "Helado",
+            "Tarta",
+            "Flan o fruta"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Dónde escribe Jacinto el menú?",
+          "options": [
+            "En la pizarra",
+            "En una servilleta",
+            "En el móvil"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué prefieres de primero, sopa o ensalada?",
+          "model": "Prefiero la ensalada."
+        },
+        {
+          "q": "¿Cuál es tu postre favorito?",
+          "model": "Mi postre favorito es el flan."
+        },
+        {
+          "q": "¿Tienes buena letra?",
+          "model": "No, mi letra es muy fea."
+        }
+      ],
+      "gaps": "De segundo, [pollo] con [arroz] o [pescado] con [papas].",
+      "glossary": [
+        {
+          "word": "menú",
+          "meaning": "lista de la comida del día"
+        },
+        {
+          "word": "de primero",
+          "meaning": "el primer plato"
+        },
+        {
+          "word": "postre",
+          "meaning": "comida dulce al final"
+        },
+        {
+          "word": "pizarra",
+          "meaning": "superficie para escribir con tiza"
+        }
+      ]
+    },
+    {
+      "id": "sobremesa",
+      "title": "Un inspector en vacaciones",
+      "place": "La mesa cuatro",
+      "context": "Pilar habla con Horacio después de la cena.",
+      "speakers": [
+        {
+          "name": "Pilar",
+          "country": "España",
+          "voice": "es-ES-ElviraNeural"
+        },
+        {
+          "name": "Horacio",
+          "country": "Cuba",
+          "voice": "es-CU-ManuelNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Horacio, ¿ves a la señora del abrigo rojo? Es Olga Ríos."
+        },
+        {
+          "s": 1,
+          "text": "Sí, la veo. ¿Y qué?"
+        },
+        {
+          "s": 0,
+          "text": "Pregunta a qué hora para el tren en Puente del Inca. ¿No es raro?"
+        },
+        {
+          "s": 1,
+          "text": "Pilar, es una pregunta normal. Los turistas preguntan esas cosas."
+        },
+        {
+          "s": 0,
+          "text": "Tú eres policía. Tú sabes que nada es normal."
+        },
+        {
+          "s": 1,
+          "text": "Estoy jubilado, mi amor. Y de vacaciones."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿A quién mira Pilar?",
+          "options": [
+            "A Olga Ríos",
+            "A la cocinera",
+            "Al jefe de tren"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué pregunta Olga?",
+          "options": [
+            "El precio de la cena",
+            "La hora de una parada",
+            "El nombre del maquinista"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué piensa Horacio de la pregunta?",
+          "options": [
+            "Que es muy rara",
+            "Que es peligrosa",
+            "Que es normal"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Por qué Horacio no quiere investigar?",
+          "options": [
+            "Porque está cansado",
+            "Porque está jubilado y de vacaciones",
+            "Porque no le gusta Pilar"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué preguntas tú cuando viajas?",
+          "model": "Pregunto dónde está el baño."
+        },
+        {
+          "q": "¿Tienes un amigo jubilado?",
+          "model": "Sí, mi vecino está jubilado."
+        },
+        {
+          "q": "¿Qué haces en tus vacaciones?",
+          "model": "Leo y voy a la playa."
+        }
+      ],
+      "gaps": "Pilar, es una [pregunta] [normal]. Los [turistas] [preguntan] esas cosas.",
+      "glossary": [
+        {
+          "word": "para",
+          "meaning": "deja de moverse"
+        },
+        {
+          "word": "turistas",
+          "meaning": "personas que visitan otro lugar"
+        },
+        {
+          "word": "jubilado",
+          "meaning": "persona que ya no trabaja por su edad"
+        },
+        {
+          "word": "vacaciones",
+          "meaning": "días libres sin trabajo"
+        }
+      ]
+    },
+    {
+      "id": "barman",
+      "title": "La cuenta de Nelson",
+      "place": "La barra del coche bar",
+      "context": "Wilmer le pide a Nelson que pague.",
+      "speakers": [
+        {
+          "name": "Wilmer",
+          "country": "Venezuela",
+          "voice": "es-VE-SebastianNeural"
+        },
+        {
+          "name": "Nelson",
+          "country": "República Dominicana",
+          "voice": "es-DO-EmilioNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Nelson, son tres cervezas y un sándwich. Doce dólares."
+        },
+        {
+          "s": 1,
+          "text": "¿Doce? Uy, no tengo efectivo. ¿Aceptas tarjeta?"
+        },
+        {
+          "s": 0,
+          "text": "Sí, claro. Aquí tienes la máquina."
+        },
+        {
+          "s": 1,
+          "text": "Mmm… la tarjeta no funciona. Es por la montaña."
+        },
+        {
+          "s": 0,
+          "text": "La tarjeta funciona. Es tu cuenta del banco, hermano."
+        },
+        {
+          "s": 1,
+          "text": "Mañana te pago, te lo prometo."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué toma Nelson?",
+          "options": [
+            "Tres cervezas y un sándwich",
+            "Dos cafés",
+            "Un vino"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cuánto cuesta todo?",
+          "options": [
+            "Diez dólares",
+            "Doce dólares",
+            "Veinte dólares"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué dice Nelson de la tarjeta?",
+          "options": [
+            "Que no la tiene",
+            "Que es nueva",
+            "Que no funciona por la montaña"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué promete Nelson?",
+          "options": [
+            "Pagar mañana",
+            "No beber más",
+            "Pagar en efectivo ahora"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Pagas con tarjeta o en efectivo?",
+          "model": "Normalmente pago con tarjeta."
+        },
+        {
+          "q": "¿Cuánto cuesta una cerveza en tu ciudad?",
+          "model": "Cuesta unos tres euros."
+        },
+        {
+          "q": "¿Prestas dinero a tus amigos?",
+          "model": "Sí, pero poco."
+        }
+      ],
+      "gaps": "La [tarjeta] [funciona]. Es tu [cuenta del banco], [hermano].",
+      "glossary": [
+        {
+          "word": "efectivo",
+          "meaning": "dinero en billetes y monedas"
+        },
+        {
+          "word": "tarjeta",
+          "meaning": "plástico del banco para pagar"
+        },
+        {
+          "word": "hermano",
+          "meaning": "aquí, forma amistosa de hablar a un hombre"
+        },
+        {
+          "word": "cuenta del banco",
+          "meaning": "lugar del banco donde está tu dinero"
+        }
+      ]
+    },
+    {
+      "id": "cartas",
+      "title": "Las reglas del juego",
+      "place": "La mesa de juego del coche bar",
+      "context": "Inés le explica a Lucas un juego de cartas.",
+      "speakers": [
+        {
+          "name": "Inés",
+          "country": "Guatemala",
+          "voice": "es-GT-MartaNeural"
+        },
+        {
+          "name": "Lucas",
+          "country": "España",
+          "voice": "es-ES-AlvaroNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "¿Juegas con nosotros? Es fácil. Cada persona tiene cinco cartas."
+        },
+        {
+          "s": 1,
+          "text": "Vale. ¿Y cómo se gana?"
+        },
+        {
+          "s": 0,
+          "text": "Gana la persona con más cartas del mismo color."
+        },
+        {
+          "s": 1,
+          "text": "¿Y ese señor? Tiene muchas cartas en la mano."
+        },
+        {
+          "s": 0,
+          "text": "Es Nelson. Tiene más cartas en la manga que en la mano."
+        },
+        {
+          "s": 1,
+          "text": "¡Ja! Entonces no juego con él."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué le explica Inés a Lucas?",
+          "options": [
+            "Un juego de cartas",
+            "El camino al bar",
+            "El menú"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cuántas cartas tiene cada persona?",
+          "options": [
+            "Tres",
+            "Cinco",
+            "Siete"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Quién gana?",
+          "options": [
+            "La persona más rápida",
+            "La persona con el as",
+            "La persona con más cartas del mismo color"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué dice Inés de Nelson?",
+          "options": [
+            "Que juega muy mal",
+            "Que tiene cartas en la manga",
+            "Que es su amigo"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué juego de cartas conoces?",
+          "model": "Conozco el póker."
+        },
+        {
+          "q": "¿Te gusta ganar?",
+          "model": "Sí, me encanta ganar."
+        },
+        {
+          "q": "¿Juegas con tu familia?",
+          "model": "Sí, jugamos los domingos."
+        }
+      ],
+      "gaps": "Gana la [persona] con más [cartas] del [mismo] [color].",
+      "glossary": [
+        {
+          "word": "gana",
+          "meaning": "es el primero en un juego"
+        },
+        {
+          "word": "cartas",
+          "meaning": "papeles con números para jugar"
+        },
+        {
+          "word": "manga",
+          "meaning": "parte de la ropa que cubre el brazo"
+        }
+      ]
+    },
+    {
+      "id": "astronoma",
+      "title": "La Cruz del Sur",
+      "place": "El coche mirador",
+      "context": "Amaranta le enseña a Valentina una constelación.",
+      "speakers": [
+        {
+          "name": "Amaranta",
+          "country": "Ecuador",
+          "voice": "es-EC-AndreaNeural"
+        },
+        {
+          "name": "Valentina",
+          "country": "Uruguay",
+          "voice": "es-UY-ValentinaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "¿Ves esas cuatro estrellas allí? Es la Cruz del Sur."
+        },
+        {
+          "s": 1,
+          "text": "¿Dónde? No veo nada."
+        },
+        {
+          "s": 0,
+          "text": "Allí, a la derecha de la montaña. Forman una cruz."
+        },
+        {
+          "s": 1,
+          "text": "¡Ah, sí! ¡Qué bonita! ¿Se ve desde Europa?"
+        },
+        {
+          "s": 0,
+          "text": "No. Solo se ve desde el sur del mundo."
+        },
+        {
+          "s": 1,
+          "text": "Entonces es una estrella de aquí, como el mate."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué enseña Amaranta?",
+          "options": [
+            "La Cruz del Sur",
+            "La luna",
+            "Un avión"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cuántas estrellas forman la cruz?",
+          "options": [
+            "Tres",
+            "Cinco",
+            "Cuatro"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Dónde está la cruz?",
+          "options": [
+            "A la derecha de la montaña",
+            "Encima del tren",
+            "A la izquierda del río"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Desde dónde se ve?",
+          "options": [
+            "Desde Europa",
+            "Solo desde el sur del mundo",
+            "Desde todo el mundo"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Conoces alguna constelación?",
+          "model": "Conozco la Osa Mayor."
+        },
+        {
+          "q": "¿Qué ves desde tu ventana por la noche?",
+          "model": "Veo otros edificios y luces."
+        },
+        {
+          "q": "¿Qué cosa típica hay en tu país?",
+          "model": "En mi país es típico el té."
+        }
+      ],
+      "gaps": "Allí, a la [derecha] de la [montaña]. [Forman] una [cruz].",
+      "glossary": [
+        {
+          "word": "estrellas",
+          "meaning": "puntos de luz en el cielo de noche"
+        },
+        {
+          "word": "cruz",
+          "meaning": "figura de dos líneas que se cortan"
+        },
+        {
+          "word": "derecha",
+          "meaning": "lado contrario a la izquierda"
+        },
+        {
+          "word": "mate",
+          "meaning": "bebida típica del sur de América"
+        }
+      ]
+    },
+    {
+      "id": "directo",
+      "title": "Las preguntas del chat",
+      "place": "La cúpula del coche mirador",
+      "context": "Kiara lee las preguntas de sus seguidores. Joel responde.",
+      "speakers": [
+        {
+          "name": "Kiara",
+          "country": "Puerto Rico",
+          "voice": "es-PR-KarinaNeural"
+        },
+        {
+          "name": "Joel",
+          "country": "Puerto Rico",
+          "voice": "es-PR-VictorNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Joel, el chat pregunta: ¿cuántas personas viajan en el tren?"
+        },
+        {
+          "s": 1,
+          "text": "Sesenta y una, más o menos."
+        },
+        {
+          "s": 0,
+          "text": "Otra pregunta: ¿cómo es la señora desaparecida?"
+        },
+        {
+          "s": 1,
+          "text": "Mayor, con pelo blanco, gafas grandes y un abrigo rojo."
+        },
+        {
+          "s": 0,
+          "text": "Y la última: ¿por qué no duermes?"
+        },
+        {
+          "s": 1,
+          "text": "Porque mi hermana hace un directo a las cuatro de la mañana."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Quién hace las preguntas?",
+          "options": [
+            "El jefe de tren",
+            "El chat de Kiara",
+            "La policía"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cuántas personas viajan en el tren?",
+          "options": [
+            "Unas sesenta y una",
+            "Unas treinta",
+            "Unas cien"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cómo es la señora desaparecida?",
+          "options": [
+            "Joven y morena",
+            "Alta y rubia",
+            "Mayor, con pelo blanco y abrigo rojo"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Por qué no duerme Joel?",
+          "options": [
+            "Porque tiene hambre",
+            "Porque su hermana hace un directo",
+            "Porque hace frío"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Cómo eres físicamente?",
+          "model": "Soy alto, moreno y llevo gafas."
+        },
+        {
+          "q": "¿Usas redes sociales?",
+          "model": "Sí, uso Instagram todos los días."
+        },
+        {
+          "q": "¿A qué hora te acuestas?",
+          "model": "Me acuesto a las doce."
+        }
+      ],
+      "gaps": "Mayor, con [pelo blanco], [gafas] [grandes] y un [abrigo] rojo.",
+      "glossary": [
+        {
+          "word": "chat",
+          "meaning": "mensajes escritos en directo"
+        },
+        {
+          "word": "desaparecida",
+          "meaning": "que no está y nadie sabe dónde está"
+        },
+        {
+          "word": "gafas",
+          "meaning": "cristales para ver mejor"
+        },
+        {
+          "word": "directo",
+          "meaning": "video que la gente ve en el mismo momento"
+        }
+      ]
+    },
+    {
+      "id": "perro",
+      "title": "Un perro con billete",
+      "place": "El furgón",
+      "context": "Ramiro y Cosme hablan del perro que viaja en el furgón.",
+      "speakers": [
+        {
+          "name": "Ramiro",
+          "country": "Bolivia",
+          "voice": "es-BO-MarceloNeural"
+        },
+        {
+          "name": "Cosme",
+          "country": "Honduras",
+          "voice": "es-HN-CarlosNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Cosme, ¿de quién es este perro?"
+        },
+        {
+          "s": 1,
+          "text": "De una familia de Santiago. Viaja solo. Se llama Tango."
+        },
+        {
+          "s": 0,
+          "text": "¿Solo? ¿Y quién le da de comer?"
+        },
+        {
+          "s": 1,
+          "text": "Yo. Come dos veces al día. Y bebe mucha agua."
+        },
+        {
+          "s": 0,
+          "text": "¿Por qué mira siempre la puerta de adelante?"
+        },
+        {
+          "s": 1,
+          "text": "No sé. Huele algo. Huele un perfume de jazmín."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿De quién es el perro?",
+          "options": [
+            "De Cosme",
+            "De una familia de Santiago",
+            "De Ramiro"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Quién le da de comer?",
+          "options": [
+            "Cosme",
+            "Ramiro",
+            "La familia"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cuántas veces al día come?",
+          "options": [
+            "Una",
+            "Tres",
+            "Dos"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué huele Tango?",
+          "options": [
+            "Comida",
+            "Un perfume de jazmín",
+            "Humo"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Tienes animales en casa?",
+          "model": "Sí, tengo dos gatos."
+        },
+        {
+          "q": "¿Qué perfume te gusta?",
+          "model": "Me gusta el perfume de rosas."
+        },
+        {
+          "q": "¿Cuántas veces al día comes?",
+          "model": "Como tres veces al día."
+        }
+      ],
+      "gaps": "No sé. [Huele] [algo]. Huele un [perfume] de [jazmín].",
+      "glossary": [
+        {
+          "word": "de comer",
+          "meaning": "comida, en «dar de comer»"
+        },
+        {
+          "word": "adelante",
+          "meaning": "en la parte de delante"
+        },
+        {
+          "word": "perfume",
+          "meaning": "líquido con buen olor"
+        },
+        {
+          "word": "jazmín",
+          "meaning": "flor blanca con olor fuerte"
+        }
+      ]
+    },
+    {
+      "id": "violonchelo",
+      "title": "El concierto de Santiago",
+      "place": "El furgón",
+      "context": "Valentina le habla a Cosme de su concierto.",
+      "speakers": [
+        {
+          "name": "Valentina",
+          "country": "Uruguay",
+          "voice": "es-UY-ValentinaNeural"
+        },
+        {
+          "name": "Cosme",
+          "country": "Honduras",
+          "voice": "es-HN-CarlosNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Mañana tengo un concierto en Santiago, en el Teatro Municipal."
+        },
+        {
+          "s": 1,
+          "text": "¡Qué bien! ¿Qué música toca usted?"
+        },
+        {
+          "s": 0,
+          "text": "Música clásica. Bach, sobre todo. Toco el violonchelo en una orquesta."
+        },
+        {
+          "s": 1,
+          "text": "¿Y está nerviosa?"
+        },
+        {
+          "s": 0,
+          "text": "Un poco. Pero mi abuela va al concierto. Ella me da fuerza."
+        },
+        {
+          "s": 1,
+          "text": "Entonces, mucha suerte. Yo cuido su violonchelo."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Dónde es el concierto?",
+          "options": [
+            "En Mendoza",
+            "En Santiago",
+            "En el tren"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué música toca Valentina?",
+          "options": [
+            "Música clásica",
+            "Rock",
+            "Tango"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cómo está Valentina?",
+          "options": [
+            "Muy contenta",
+            "Enferma",
+            "Un poco nerviosa"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Quién va al concierto?",
+          "options": [
+            "Su madre",
+            "Su abuela",
+            "Cosme"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué música escuchas?",
+          "model": "Escucho música pop y salsa."
+        },
+        {
+          "q": "¿Te pones nervioso antes de un examen?",
+          "model": "Sí, me pongo muy nervioso."
+        },
+        {
+          "q": "¿Quién te da fuerza en los momentos difíciles?",
+          "model": "Mi mejor amiga me da fuerza."
+        }
+      ],
+      "gaps": "Música [clásica]. Bach, sobre [todo]. [Toco] el violonchelo en una [orquesta].",
+      "glossary": [
+        {
+          "word": "concierto",
+          "meaning": "espectáculo de música"
+        },
+        {
+          "word": "orquesta",
+          "meaning": "grupo grande de músicos"
+        },
+        {
+          "word": "nerviosa",
+          "meaning": "con un poco de miedo"
+        },
+        {
+          "word": "suerte",
+          "meaning": "cosas buenas que pasan sin buscarlas"
+        }
+      ]
+    },
+    {
+      "id": "nieve",
+      "title": "Diez minutos en la nieve",
+      "place": "El andén de Puente del Inca",
+      "context": "Gloria anuncia la parada por los altavoces.",
+      "speakers": [
+        {
+          "name": "Gloria",
+          "country": "Estados Unidos",
+          "voice": "es-US-PalomaNeural"
+        },
+        {
+          "name": "Teófilo",
+          "country": "Guatemala",
+          "voice": "es-GT-AndresNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Señores pasajeros, llegamos a Puente del Inca. El tren para diez minutos. Fuera hace mucho frío: doce grados bajo cero. Por favor, abríguense bien."
+        },
+        {
+          "s": 1,
+          "text": "Bienvenidos a Puente del Inca. Cuidado: el andén está resbaladizo. El puente de piedra está a la izquierda."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Dónde llega el tren?",
+          "options": [
+            "A Mendoza",
+            "A Los Andes",
+            "A Puente del Inca"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cuánto tiempo para el tren?",
+          "options": [
+            "Diez minutos",
+            "Cinco minutos",
+            "Una hora"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cómo está el andén?",
+          "options": [
+            "Seco",
+            "Resbaladizo",
+            "Lleno de gente"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Dónde está el puente de piedra?",
+          "options": [
+            "A la derecha",
+            "Detrás del tren",
+            "A la izquierda"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué ropa llevas cuando hace mucho frío?",
+          "model": "Llevo abrigo, gorro y guantes."
+        },
+        {
+          "q": "¿Te gusta la nieve?",
+          "model": "Sí, me encanta la nieve."
+        },
+        {
+          "q": "¿Te caes a veces?",
+          "model": "Sí, en invierno me caigo a veces."
+        }
+      ],
+      "gaps": "Cuidado: el [andén] está [resbaladizo]. El [puente] de [piedra] está a la izquierda.",
+      "glossary": [
+        {
+          "word": "abríguense",
+          "meaning": "pónganse ropa de abrigo"
+        },
+        {
+          "word": "resbaladizo",
+          "meaning": "que hace caer a la gente"
+        },
+        {
+          "word": "puente",
+          "meaning": "construcción para pasar sobre un río"
+        },
+        {
+          "word": "bajo cero",
+          "meaning": "menos de cero grados"
+        }
+      ]
+    },
+    {
+      "id": "frontera",
+      "title": "La lista de la cabo",
+      "place": "El control de Gendarmería",
+      "context": "Yolanda cuenta los pasajeros con Ramiro.",
+      "speakers": [
+        {
+          "name": "Yolanda",
+          "country": "Nicaragua",
+          "voice": "es-NI-YolandaNeural"
+        },
+        {
+          "name": "Ramiro",
+          "country": "Bolivia",
+          "voice": "es-BO-MarceloNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Jefe, ¿cuántos pasajeros suben en Mendoza?"
+        },
+        {
+          "s": 1,
+          "text": "Sesenta y uno."
+        },
+        {
+          "s": 0,
+          "text": "Bien. En mi lista hay sesenta y uno. Nadie baja aquí."
+        },
+        {
+          "s": 1,
+          "text": "¿Y la señora Olga Ríos?"
+        },
+        {
+          "s": 0,
+          "text": "Olga Ríos está en la lista del tren. No pasa por este control. Para mí, está en el tren."
+        },
+        {
+          "s": 1,
+          "text": "Entonces está escondida en algún lugar."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cuántos pasajeros suben en Mendoza?",
+          "options": [
+            "Sesenta y uno",
+            "Setenta y uno",
+            "Cincuenta"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cuántas personas bajan en el control?",
+          "options": [
+            "Una",
+            "Dos",
+            "Ninguna"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Dónde está Olga para Yolanda?",
+          "options": [
+            "En Chile",
+            "En el tren",
+            "En el río"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué piensa Ramiro al final?",
+          "options": [
+            "Que Olga está escondida",
+            "Que Olga está en Mendoza",
+            "Que la lista está mal"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué documentos llevas cuando viajas?",
+          "model": "Llevo el pasaporte y la tarjeta."
+        },
+        {
+          "q": "¿Te gustan los controles de frontera?",
+          "model": "No, me ponen nervioso."
+        },
+        {
+          "q": "¿Dónde te escondes para estar tranquilo?",
+          "model": "Me escondo en mi habitación."
+        }
+      ],
+      "gaps": "Bien. En mi [lista] hay [sesenta y uno]. [Nadie] [baja] aquí.",
+      "glossary": [
+        {
+          "word": "lista",
+          "meaning": "nombres escritos uno debajo de otro"
+        },
+        {
+          "word": "control",
+          "meaning": "lugar donde revisan los documentos"
+        },
+        {
+          "word": "escondida",
+          "meaning": "en un lugar secreto"
+        }
+      ]
+    },
+    {
+      "id": "maquinista",
+      "title": "El primer viaje de Aniceto",
+      "place": "La cabina de la locomotora",
+      "context": "Rocío le pregunta a Aniceto por su primer viaje.",
+      "speakers": [
+        {
+          "name": "Rocío",
+          "country": "Costa Rica",
+          "voice": "es-CR-MariaNeural"
+        },
+        {
+          "name": "Aniceto",
+          "country": "Costa Rica",
+          "voice": "es-CR-JuanNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Don Aniceto, ¿cuándo es su primer viaje como maquinista?"
+        },
+        {
+          "s": 1,
+          "text": "En agosto de 1968. Tengo veintidós años, como tú ahora."
+        },
+        {
+          "s": 0,
+          "text": "¿Y se acuerda de los pasajeros?"
+        },
+        {
+          "s": 1,
+          "text": "De una pareja, sí. Están de luna de miel. Él se llama Ernesto. Ella lleva un abrigo rojo."
+        },
+        {
+          "s": 0,
+          "text": "¿Un abrigo rojo? ¡Como la señora del siete!"
+        },
+        {
+          "s": 1,
+          "text": "Mira la vía, Rocío. Mira la vía."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cuándo es el primer viaje de Aniceto?",
+          "options": [
+            "En 1978",
+            "En 1968",
+            "En 1988"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cuántos años tiene Aniceto en su primer viaje?",
+          "options": [
+            "Veintidós",
+            "Treinta",
+            "Dieciocho"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿De quién se acuerda Aniceto?",
+          "options": [
+            "De un niño",
+            "De un perro",
+            "De una pareja en su luna de miel"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué hace Aniceto al final?",
+          "options": [
+            "Le cuenta todo",
+            "Cambia de tema",
+            "Se ríe"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Cuándo es tu primer día de trabajo o de clase?",
+          "model": "Mi primer día de trabajo es en 2019."
+        },
+        {
+          "q": "¿Qué haces a los veintidós años?",
+          "model": "A los veintidós años estudio en la universidad."
+        },
+        {
+          "q": "¿Te acuerdas de un viaje especial?",
+          "model": "Sí, me acuerdo de un viaje a Perú."
+        }
+      ],
+      "gaps": "De una [pareja], sí. Están de [luna de miel]. Él se llama [Ernesto]. Ella lleva un [abrigo] rojo.",
+      "glossary": [
+        {
+          "word": "maquinista",
+          "meaning": "persona que conduce el tren"
+        },
+        {
+          "word": "vía",
+          "meaning": "camino de hierro del tren"
+        },
+        {
+          "word": "pareja",
+          "meaning": "dos personas que se quieren"
+        },
+        {
+          "word": "luna de miel",
+          "meaning": "viaje después de la boda"
+        }
+      ]
+    },
+    {
+      "id": "amanecer",
+      "title": "Desayuno en Los Andes",
+      "place": "El andén de Los Andes",
+      "context": "Olga invita a Bruno a desayunar.",
+      "speakers": [
+        {
+          "name": "Olga",
+          "country": "Chile",
+          "voice": "es-CL-CatalinaNeural"
+        },
+        {
+          "name": "Bruno",
+          "country": "Chile",
+          "voice": "es-CL-LorenzoNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Bruno, ¿desayunamos? En la estación hay una cafetería muy buena."
+        },
+        {
+          "s": 1,
+          "text": "Tía, no tengo hambre. Estoy muy enfadado contigo."
+        },
+        {
+          "s": 0,
+          "text": "Hay café, jugo de naranja y medialunas."
+        },
+        {
+          "s": 1,
+          "text": "¿Medialunas? Bueno… pero estoy enfadado."
+        },
+        {
+          "s": 0,
+          "text": "Muy bien. Enfadado y con medialunas. Así me gusta, sobrino."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué propone Olga?",
+          "options": [
+            "Desayunar",
+            "Dormir",
+            "Volver a Mendoza"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cómo está Bruno?",
+          "options": [
+            "Contento",
+            "Enfadado",
+            "Enfermo"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué hay en la cafetería?",
+          "options": [
+            "Té y tostadas",
+            "Huevos y pan",
+            "Café, jugo y medialunas"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué hace Bruno al final?",
+          "options": [
+            "Acepta desayunar",
+            "Se va solo",
+            "Llora"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué desayunas normalmente?",
+          "model": "Desayuno café con tostadas."
+        },
+        {
+          "q": "¿Qué haces cuando estás enfadado?",
+          "model": "Camino un poco o escucho música."
+        },
+        {
+          "q": "¿Te gustan las medialunas?",
+          "model": "Sí, me encantan con café."
+        }
+      ],
+      "gaps": "Hay [café], [jugo] de [naranja] y [medialunas].",
+      "glossary": [
+        {
+          "word": "desayunamos",
+          "meaning": "comemos por la mañana"
+        },
+        {
+          "word": "cafetería",
+          "meaning": "lugar para tomar café"
+        },
+        {
+          "word": "enfadado",
+          "meaning": "con mucho enojo"
+        },
+        {
+          "word": "medialunas",
+          "meaning": "pan dulce con forma de luna"
+        }
+      ]
+    }
+  ]
+}

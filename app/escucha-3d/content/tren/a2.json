@@ -1,0 +1,2097 @@
+{
+  "game": "tren",
+  "level": "A2",
+  "items": [
+    {
+      "id": "equipaje",
+      "title": "Cuarenta años cargando maletas",
+      "place": "El andén de Mendoza",
+      "context": "Fermín le cuenta a Ramiro cómo fue su día y qué pasó con la señora de la urna.",
+      "speakers": [
+        {
+          "name": "Fermín",
+          "country": "Argentina",
+          "voice": "es-AR-TomasNeural"
+        },
+        {
+          "name": "Ramiro",
+          "country": "Bolivia",
+          "voice": "es-BO-MarceloNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Fermín, ¿qué tal el día? Te vi discutir con una pasajera."
+        },
+        {
+          "s": 0,
+          "text": "Uf, un día largo. Esta mañana cargué cuarenta maletas. Y esta noche llegó una señora con abrigo rojo y una urna."
+        },
+        {
+          "s": 1,
+          "text": "¿Y qué pasó?"
+        },
+        {
+          "s": 0,
+          "text": "Le dije que la urna tenía que ir al furgón. Me contestó que era su marido y que tenía billete. Me lo enseñó: camarote siete, cama de abajo."
+        },
+        {
+          "s": 1,
+          "text": "¿Y al final?"
+        },
+        {
+          "s": 0,
+          "text": "Al final un pasajero joven llevó la urna. La señora se rio. Y yo, en cuarenta años de trabajo, nunca vi un muerto con billete."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿De qué habla Fermín?",
+          "options": [
+            "De su día y de una pasajera especial",
+            "De sus vacaciones",
+            "De un problema con el tren"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cuántas maletas cargó por la mañana?",
+          "options": [
+            "Catorce",
+            "Cuarenta",
+            "Cuatro"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué tenía el marido de la señora?",
+          "options": [
+            "Una maleta",
+            "Un perro",
+            "Un billete"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Quién llevó la urna al final?",
+          "options": [
+            "Fermín",
+            "Un pasajero joven",
+            "Ramiro"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Cómo fue tu día ayer?",
+          "model": "Ayer fue un día tranquilo. Trabajé y después cené con mi hermana."
+        },
+        {
+          "q": "¿Discutiste alguna vez con alguien en un viaje?",
+          "model": "Sí, una vez tuve una discusión con un taxista por el precio."
+        },
+        {
+          "q": "¿Qué es lo más raro que viste en una estación?",
+          "model": "Una vez vi a un hombre con una gallina en una caja."
+        }
+      ],
+      "gaps": "Le dije que la [urna] tenía que ir al [furgón]. Me [contestó] que era su [marido] y que tenía billete.",
+      "glossary": [
+        {
+          "word": "cargué",
+          "meaning": "llevé cosas pesadas"
+        },
+        {
+          "word": "urna",
+          "meaning": "caja para las cenizas de un muerto"
+        },
+        {
+          "word": "furgón",
+          "meaning": "vagón para el equipaje"
+        },
+        {
+          "word": "discutir",
+          "meaning": "hablar fuerte porque no estás de acuerdo"
+        }
+      ]
+    },
+    {
+      "id": "despedida",
+      "title": "El primer viaje de Matías",
+      "place": "El andén de Mendoza",
+      "context": "Matías habla con Lucas en el andén antes de subir.",
+      "speakers": [
+        {
+          "name": "Matías",
+          "country": "Paraguay",
+          "voice": "es-PY-MarioNeural"
+        },
+        {
+          "name": "Lucas",
+          "country": "España",
+          "voice": "es-ES-AlvaroNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "¿Es tu primer viaje en tren nocturno?"
+        },
+        {
+          "s": 0,
+          "text": "Es mi primer viaje fuera de Paraguay. Ayer crucé la frontera en autobús con mi madre. Viajamos catorce horas."
+        },
+        {
+          "s": 1,
+          "text": "¡Catorce horas! ¿Y tu madre vuelve hoy?"
+        },
+        {
+          "s": 0,
+          "text": "Sí, mañana por la mañana. Mira, me preparó una bolsa de doce kilos. Hay chipa, queso, un poncho…"
+        },
+        {
+          "s": 1,
+          "text": "Mi madre también hizo eso cuando me fui a Sudamérica. Me puso tres kilos de jamón en la mochila."
+        },
+        {
+          "s": 0,
+          "text": "¿Y qué hiciste con el jamón?"
+        },
+        {
+          "s": 1,
+          "text": "Me lo terminé en el avión. Todo. Pasé el viaje entero en el baño."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Para quién es el primer viaje fuera de su país?",
+          "options": [
+            "Para Lucas",
+            "Para Matías",
+            "Para la madre"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cuántas horas viajaron en autobús?",
+          "options": [
+            "Catorce",
+            "Cuatro",
+            "Cuarenta"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué le puso la madre de Lucas en la mochila?",
+          "options": [
+            "Queso",
+            "Chipa",
+            "Jamón"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué le pasó a Lucas en el avión?",
+          "options": [
+            "Perdió la mochila",
+            "Pasó el viaje en el baño",
+            "Durmió todo el viaje"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Cuándo hiciste tu primer viaje fuera de tu país?",
+          "model": "Lo hice a los dieciocho años, a Francia."
+        },
+        {
+          "q": "¿Qué te preparaba tu madre para los viajes?",
+          "model": "Me preparaba bocadillos y fruta."
+        },
+        {
+          "q": "¿Comiste alguna vez demasiado en un viaje?",
+          "model": "Sí, en Italia cené pizza todos los días."
+        }
+      ],
+      "gaps": "Ayer [crucé] la [frontera] en [autobús] con mi [madre].",
+      "glossary": [
+        {
+          "word": "crucé",
+          "meaning": "pasé de un lado a otro"
+        },
+        {
+          "word": "frontera",
+          "meaning": "línea entre dos países"
+        },
+        {
+          "word": "poncho",
+          "meaning": "prenda de lana sin mangas"
+        },
+        {
+          "word": "mochila",
+          "meaning": "bolsa que se lleva en la espalda"
+        }
+      ]
+    },
+    {
+      "id": "ronquidos",
+      "title": "La noche más larga de Lucas",
+      "place": "El pasillo del coche cama A",
+      "context": "Lucas le cuenta a Kiara cómo empezó su noche.",
+      "speakers": [
+        {
+          "name": "Lucas",
+          "country": "España",
+          "voice": "es-ES-AlvaroNeural"
+        },
+        {
+          "name": "Kiara",
+          "country": "Puerto Rico",
+          "voice": "es-PR-KarinaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "¡Hey! ¿Qué haces en el pasillo a estas horas?"
+        },
+        {
+          "s": 0,
+          "text": "No puedo dormir. A las once me acosté y a las once y cinco el señor de mi camarote empezó a roncar. Primero bajito, después como un camión."
+        },
+        {
+          "s": 1,
+          "text": "¡Qué horror! ¿Y no lo despertaste?"
+        },
+        {
+          "s": 0,
+          "text": "Sí, tres veces. La primera dijo que no roncaba. La segunda dijo que era el tren. La tercera no se despertó."
+        },
+        {
+          "s": 1,
+          "text": "Jaja. ¿Y viste algo raro en el pasillo?"
+        },
+        {
+          "s": 0,
+          "text": "Pues sí. A la una pasó alguien con pantuflas de leopardo hacia adelante. Muy despacio."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Dónde está Lucas?",
+          "options": [
+            "En el pasillo",
+            "En el bar",
+            "En su cama"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿A qué hora empezó a roncar el señor?",
+          "options": [
+            "A las once",
+            "A las once y cinco",
+            "A la una"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué dijo el señor la segunda vez?",
+          "options": [
+            "Que no roncaba",
+            "Que tenía sueño",
+            "Que era el tren"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué vio Lucas a la una?",
+          "options": [
+            "A alguien con pantuflas de leopardo",
+            "A un perro",
+            "A la policía"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿A qué hora te acostaste anoche?",
+          "model": "Me acosté a las doce y media."
+        },
+        {
+          "q": "¿Qué hiciste la última vez que no podías dormir?",
+          "model": "Leí un libro hasta las tres."
+        },
+        {
+          "q": "¿Despertaste alguna vez a alguien que roncaba?",
+          "model": "Sí, a mi hermano. Se enfadó mucho."
+        }
+      ],
+      "gaps": "A las once me [acosté] y a las once y cinco el [señor] de mi camarote [empezó] a [roncar].",
+      "glossary": [
+        {
+          "word": "me acosté",
+          "meaning": "me metí en la cama"
+        },
+        {
+          "word": "bajito",
+          "meaning": "con poco ruido"
+        },
+        {
+          "word": "despacio",
+          "meaning": "sin prisa, lento"
+        },
+        {
+          "word": "pantuflas",
+          "meaning": "zapatos para estar en casa"
+        }
+      ]
+    },
+    {
+      "id": "lunademiel",
+      "title": "Cómo se conocieron",
+      "place": "El camarote cinco",
+      "context": "Brayan le cuenta a Celia cómo conoció a Yesenia.",
+      "speakers": [
+        {
+          "name": "Celia",
+          "country": "Perú",
+          "voice": "es-PE-CamilaNeural"
+        },
+        {
+          "name": "Brayan",
+          "country": "Colombia",
+          "voice": "es-CO-GonzaloNeural"
+        },
+        {
+          "name": "Yesenia",
+          "country": "Colombia",
+          "voice": "es-CO-SalomeNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "¿Y cómo se conocieron ustedes?"
+        },
+        {
+          "s": 1,
+          "text": "En un autobús en Medellín, hace cuatro años. Ella leía un libro y no me miraba."
+        },
+        {
+          "s": 2,
+          "text": "Era un libro de Olga Ríos, claro. Como siempre."
+        },
+        {
+          "s": 1,
+          "text": "Le pregunté qué leía y me contestó: «Una novela de crímenes. ¿Quieres ser la víctima?»"
+        },
+        {
+          "s": 0,
+          "text": "¡Qué romántico!"
+        },
+        {
+          "s": 2,
+          "text": "Al final bajamos en la misma parada y tomamos un café. Y aquí estamos, en nuestra luna de miel."
+        },
+        {
+          "s": 1,
+          "text": "Con la misma escritora."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Dónde se conocieron?",
+          "options": [
+            "En un tren",
+            "En un autobús",
+            "En una cafetería"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Hace cuánto tiempo?",
+          "options": [
+            "Cuatro años",
+            "Un año",
+            "Diez años"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué leía Yesenia?",
+          "options": [
+            "Un periódico",
+            "Una revista",
+            "Una novela de Olga Ríos"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué hicieron después de bajar?",
+          "options": [
+            "Fueron al cine",
+            "Tomaron un café",
+            "Se despidieron"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Cómo conociste a tu mejor amigo o a tu pareja?",
+          "model": "Conocí a mi mejor amiga en la universidad."
+        },
+        {
+          "q": "¿Qué leías cuando eras adolescente?",
+          "model": "Leía cómics y novelas de aventuras."
+        },
+        {
+          "q": "¿Hablaste alguna vez con un desconocido en un autobús?",
+          "model": "Sí, una vez hablé con una señora muy simpática."
+        }
+      ],
+      "gaps": "Al final [bajamos] en la misma [parada] y [tomamos] un [café].",
+      "glossary": [
+        {
+          "word": "se conocieron",
+          "meaning": "se vieron por primera vez"
+        },
+        {
+          "word": "víctima",
+          "meaning": "persona que sufre un crimen"
+        },
+        {
+          "word": "parada",
+          "meaning": "lugar donde para el autobús"
+        },
+        {
+          "word": "luna de miel",
+          "meaning": "viaje después de la boda"
+        }
+      ]
+    },
+    {
+      "id": "camarote7",
+      "title": "Lo que vio Celia",
+      "place": "El pasillo del coche cama B",
+      "context": "Celia le explica a Ramiro todo lo que pasó en el camarote siete.",
+      "speakers": [
+        {
+          "name": "Celia",
+          "country": "Perú",
+          "voice": "es-PE-CamilaNeural"
+        },
+        {
+          "name": "Ramiro",
+          "country": "Bolivia",
+          "voice": "es-BO-MarceloNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Celia, cuéntame todo desde el principio."
+        },
+        {
+          "s": 0,
+          "text": "A las doce y media le llevé el té a la señora Olga. Estaba sentada y escribía algo con un bolígrafo negro."
+        },
+        {
+          "s": 1,
+          "text": "¿Estaba nerviosa?"
+        },
+        {
+          "s": 0,
+          "text": "No, al contrario. Estaba contenta. Me dijo que no volviera. Pero a la una menos diez volví con el azúcar y la puerta estaba abierta."
+        },
+        {
+          "s": 1,
+          "text": "¿Y qué faltaba?"
+        },
+        {
+          "s": 0,
+          "text": "El abrigo rojo y la urna de su marido. La ventana estaba abierta y en la almohada había una nota."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué le pide Ramiro a Celia?",
+          "options": [
+            "Que le cuente todo",
+            "Que le traiga un té",
+            "Que cierre la puerta"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué hacía Olga a las doce y media?",
+          "options": [
+            "Dormía",
+            "Leía",
+            "Escribía"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cómo estaba Olga?",
+          "options": [
+            "Nerviosa",
+            "Contenta",
+            "Triste"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué faltaba en el camarote?",
+          "options": [
+            "El abrigo y la urna",
+            "La maleta",
+            "El libro"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué hiciste ayer a las doce y media?",
+          "model": "Ayer a las doce y media estaba comiendo en el trabajo."
+        },
+        {
+          "q": "¿Escribes a mano o con el ordenador?",
+          "model": "Escribo casi todo con el ordenador."
+        },
+        {
+          "q": "¿Perdiste alguna vez algo importante?",
+          "model": "Sí, se me perdieron las llaves de casa el año pasado."
+        }
+      ],
+      "gaps": "El [abrigo rojo] y la [urna] de su [marido]. La [ventana] estaba abierta y en la almohada había una nota.",
+      "glossary": [
+        {
+          "word": "al contrario",
+          "meaning": "lo opuesto"
+        },
+        {
+          "word": "faltaba",
+          "meaning": "no estaba"
+        },
+        {
+          "word": "bolígrafo",
+          "meaning": "objeto para escribir con tinta"
+        },
+        {
+          "word": "almohada",
+          "meaning": "cojín para la cabeza en la cama"
+        }
+      ]
+    },
+    {
+      "id": "sobrino",
+      "title": "La última Navidad",
+      "place": "El camarote nueve",
+      "context": "Bruno le habla a Marga por teléfono de su última Navidad con Olga.",
+      "speakers": [
+        {
+          "name": "Marga",
+          "country": "Argentina",
+          "voice": "es-AR-ElenaNeural"
+        },
+        {
+          "name": "Bruno",
+          "country": "Chile",
+          "voice": "es-CL-LorenzoNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Bruno, ¿cuándo viste a tu tía por última vez antes de este viaje?"
+        },
+        {
+          "s": 1,
+          "text": "En Navidad. Cenamos juntos en su casa de Viña del Mar."
+        },
+        {
+          "s": 0,
+          "text": "¿Y cómo estaba?"
+        },
+        {
+          "s": 1,
+          "text": "Rara. Me regaló un libro sobre trenes antiguos. Yo esperaba un reloj, o algo mejor."
+        },
+        {
+          "s": 0,
+          "text": "¿Te dijo algo especial?"
+        },
+        {
+          "s": 1,
+          "text": "Sí. Me dijo: «Bruno, el dinero no es una persona». No supe qué quería decir. Después se fue a dormir a las nueve."
+        },
+        {
+          "s": 0,
+          "text": "Pues yo creo que la entiendo muy bien."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cuándo vio Bruno a su tía por última vez antes del viaje?",
+          "options": [
+            "En su cumpleaños",
+            "En Navidad",
+            "En verano"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Dónde cenaron?",
+          "options": [
+            "En un restaurante",
+            "En Santiago",
+            "En la casa de Olga en Viña del Mar"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué le regaló Olga a Bruno?",
+          "options": [
+            "Un libro sobre trenes",
+            "Un reloj",
+            "Dinero"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué piensa Marga de la frase de Olga?",
+          "options": [
+            "Que no tiene sentido",
+            "Que la entiende muy bien",
+            "Que es triste"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué hiciste la Navidad pasada?",
+          "model": "Cené con mis padres y mis primos."
+        },
+        {
+          "q": "¿Qué regalo te sorprendió?",
+          "model": "Una vez me regalaron una planta carnívora."
+        },
+        {
+          "q": "¿Qué opinas de la frase «el dinero no es una persona»?",
+          "model": "Creo que es verdad. Las personas son más importantes."
+        }
+      ],
+      "gaps": "En [Navidad]. [Cenamos] [juntos] en su [casa] de Viña del Mar.",
+      "glossary": [
+        {
+          "word": "por última vez",
+          "meaning": "la vez más reciente"
+        },
+        {
+          "word": "regaló",
+          "meaning": "dio algo como regalo"
+        },
+        {
+          "word": "antiguos",
+          "meaning": "muy viejos"
+        },
+        {
+          "word": "juntos",
+          "meaning": "unos con otros"
+        }
+      ]
+    },
+    {
+      "id": "cena",
+      "title": "Treinta y un años en la cocina",
+      "place": "La cocina del coche comedor",
+      "context": "Jacinto le pregunta a Fela cómo empezó a trabajar en el tren.",
+      "speakers": [
+        {
+          "name": "Jacinto",
+          "country": "México",
+          "voice": "es-MX-JorgeNeural"
+        },
+        {
+          "name": "Fela",
+          "country": "México",
+          "voice": "es-MX-DaliaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Doña Fela, ¿cuándo empezó a trabajar en este tren?"
+        },
+        {
+          "s": 1,
+          "text": "En 1993. Tenía veinticinco años y no sabía cocinar casi nada."
+        },
+        {
+          "s": 0,
+          "text": "¿En serio? Pero usted cocina muy bien."
+        },
+        {
+          "s": 1,
+          "text": "Me enseñó aquí la cocinera de antes, Doña Lupe. Era muy dura. Si la sopa estaba salada, la tiraba."
+        },
+        {
+          "s": 0,
+          "text": "¿Y conoció a su marido aquí?"
+        },
+        {
+          "s": 1,
+          "text": "Sí. Era el mozo, como tú. Un día se le cayó una bandeja encima de mí. Así empezó todo."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿En qué año empezó Fela a trabajar en el tren?",
+          "options": [
+            "En 1983",
+            "En 2003",
+            "En 1993"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué sabía cocinar al principio?",
+          "options": [
+            "Casi nada",
+            "Todo",
+            "Solo sopas"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué hacía Doña Lupe con la sopa salada?",
+          "options": [
+            "La comía",
+            "La tiraba",
+            "La vendía"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cómo conoció Fela a su marido?",
+          "options": [
+            "En una fiesta",
+            "Le cayó una bandeja encima",
+            "En el andén"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Cuándo empezaste tu trabajo o tus estudios actuales?",
+          "model": "Empecé en septiembre del año pasado."
+        },
+        {
+          "q": "¿Quién te enseñó a cocinar?",
+          "model": "Me enseñó mi abuela."
+        },
+        {
+          "q": "¿Cómo conociste a una persona importante en tu vida?",
+          "model": "Conocí a mi novio en un concierto."
+        }
+      ],
+      "gaps": "En [1993]. [Tenía] veinticinco años y no [sabía] [cocinar] casi nada.",
+      "glossary": [
+        {
+          "word": "salada",
+          "meaning": "con mucha sal"
+        },
+        {
+          "word": "la tiraba",
+          "meaning": "la echaba a la basura"
+        },
+        {
+          "word": "mozo",
+          "meaning": "camarero"
+        },
+        {
+          "word": "bandeja",
+          "meaning": "plato grande para llevar cosas"
+        }
+      ]
+    },
+    {
+      "id": "sobremesa",
+      "title": "El primer caso de Horacio",
+      "place": "La mesa cuatro",
+      "context": "Horacio le cuenta a Pilar y a Jacinto su primer caso de policía.",
+      "speakers": [
+        {
+          "name": "Horacio",
+          "country": "Cuba",
+          "voice": "es-CU-ManuelNeural"
+        },
+        {
+          "name": "Pilar",
+          "country": "España",
+          "voice": "es-ES-ElviraNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Horacio, cuéntale tu primer caso. Es muy divertido."
+        },
+        {
+          "s": 0,
+          "text": "Bueno. Fue en La Habana, en 1975. Una señora llamó porque desapareció su gallina."
+        },
+        {
+          "s": 1,
+          "text": "Y él buscó la gallina durante tres días."
+        },
+        {
+          "s": 0,
+          "text": "Hablé con todos los vecinos. Revisé todos los patios. Nada."
+        },
+        {
+          "s": 1,
+          "text": "¿Y dónde estaba la gallina al final?"
+        },
+        {
+          "s": 0,
+          "text": "En la cocina de la misma señora. Su marido la cocinó el domingo y no le dijo nada. Fue mi primer caso resuelto."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿De qué habla Horacio?",
+          "options": [
+            "De su primer caso",
+            "De su boda",
+            "De sus vacaciones"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué desapareció?",
+          "options": [
+            "Un perro",
+            "Una gallina",
+            "Un coche"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cuántos días buscó Horacio?",
+          "options": [
+            "Un día",
+            "Una semana",
+            "Tres días"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Quién se llevó la gallina?",
+          "options": [
+            "Un vecino",
+            "El marido de la señora",
+            "Un ladrón"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Cuál fue tu primer trabajo?",
+          "model": "Mi primer trabajo fue en una tienda de ropa."
+        },
+        {
+          "q": "¿Buscaste algo durante mucho tiempo?",
+          "model": "Sí, busqué mi pasaporte durante dos días."
+        },
+        {
+          "q": "¿Qué historia divertida cuenta siempre tu familia?",
+          "model": "Mi familia siempre cuenta el día que no me encontraban en la playa."
+        }
+      ],
+      "gaps": "Bueno. Fue en La [Habana], en [1975]. Una [señora] llamó porque desapareció su [gallina].",
+      "glossary": [
+        {
+          "word": "caso",
+          "meaning": "problema que investiga la policía"
+        },
+        {
+          "word": "vecinos",
+          "meaning": "personas que viven cerca"
+        },
+        {
+          "word": "patios",
+          "meaning": "espacios abiertos dentro de las casas"
+        },
+        {
+          "word": "resuelto",
+          "meaning": "terminado, con solución"
+        }
+      ]
+    },
+    {
+      "id": "barman",
+      "title": "Un barman entre dos países",
+      "place": "La barra del coche bar",
+      "context": "Kiara entrevista a Wilmer para su directo.",
+      "speakers": [
+        {
+          "name": "Kiara",
+          "country": "Puerto Rico",
+          "voice": "es-PR-KarinaNeural"
+        },
+        {
+          "name": "Wilmer",
+          "country": "Venezuela",
+          "voice": "es-VE-SebastianNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Wilmer, mis seguidores quieren saber: ¿cómo llegaste a este tren?"
+        },
+        {
+          "s": 1,
+          "text": "Me fui de Caracas en 2018. Primero trabajé en un bar en Bogotá, después en Lima y al final en Mendoza."
+        },
+        {
+          "s": 0,
+          "text": "¿Y por qué un tren?"
+        },
+        {
+          "s": 1,
+          "text": "Porque un día un cliente me dijo que el barman del tren nocturno se jubilaba. Al día siguiente me presenté."
+        },
+        {
+          "s": 0,
+          "text": "¿Qué es lo mejor del trabajo?"
+        },
+        {
+          "s": 1,
+          "text": "Las historias. Aquí la gente bebe y cuenta su vida. Esta noche, una señora me compró pisco y dos vasos."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿De dónde es Wilmer?",
+          "options": [
+            "De Bogotá",
+            "De Caracas",
+            "De Lima"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Dónde trabajó primero?",
+          "options": [
+            "En Bogotá",
+            "En Mendoza",
+            "En Lima"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cómo consiguió el trabajo en el tren?",
+          "options": [
+            "Por internet",
+            "Por un amigo de la familia",
+            "Por un cliente que le habló del puesto"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué es lo mejor de su trabajo?",
+          "options": [
+            "El dinero",
+            "Las historias de la gente",
+            "Los viajes"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿En cuántas ciudades viviste?",
+          "model": "He vivido en tres ciudades: Madrid, Lyon y Lisboa."
+        },
+        {
+          "q": "¿Cómo conseguiste tu primer trabajo?",
+          "model": "Lo conseguí por un amigo."
+        },
+        {
+          "q": "¿Qué historia te contó un desconocido?",
+          "model": "Un taxista me contó que fue boxeador."
+        }
+      ],
+      "gaps": "Primero [trabajé] en un [bar] en Bogotá, después en [Lima] y al final en [Mendoza].",
+      "glossary": [
+        {
+          "word": "seguidores",
+          "meaning": "personas que ven tus videos"
+        },
+        {
+          "word": "se jubilaba",
+          "meaning": "dejaba de trabajar por su edad"
+        },
+        {
+          "word": "me presenté",
+          "meaning": "fui a ofrecerme"
+        },
+        {
+          "word": "pisco",
+          "meaning": "bebida alcohólica de uva"
+        }
+      ]
+    },
+    {
+      "id": "cartas",
+      "title": "La partida de Asunción",
+      "place": "La mesa de juego del coche bar",
+      "context": "Nelson le cuenta a Matías cómo perdió dinero jugando a las cartas.",
+      "speakers": [
+        {
+          "name": "Nelson",
+          "country": "República Dominicana",
+          "voice": "es-DO-EmilioNeural"
+        },
+        {
+          "name": "Matías",
+          "country": "Paraguay",
+          "voice": "es-PY-MarioNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Nelson, ¿siempre juegas a las cartas en los viajes?"
+        },
+        {
+          "s": 0,
+          "text": "Siempre. Pero la peor partida fue en Asunción, hace dos años. Me dejé mil dólares en una noche."
+        },
+        {
+          "s": 1,
+          "text": "¡Mil dólares! ¿Contra quién?"
+        },
+        {
+          "s": 0,
+          "text": "Contra una abuelita de ochenta años. Parecía muy dulce. Me invitó a té y galletas."
+        },
+        {
+          "s": 1,
+          "text": "¿Y qué pasó?"
+        },
+        {
+          "s": 0,
+          "text": "Me ganó todas las manos. Al final me dijo: «Gracias, mijo, con esto me compro un televisor». Desde entonces, no juego con abuelitas."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Dónde fue la peor partida de Nelson?",
+          "options": [
+            "En Mendoza",
+            "En Asunción",
+            "En el tren"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cuánto dinero perdió?",
+          "options": [
+            "Cien dólares",
+            "Diez mil dólares",
+            "Mil dólares"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Contra quién jugó?",
+          "options": [
+            "Contra una abuelita",
+            "Contra un policía",
+            "Contra un amigo"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué compró la abuelita?",
+          "options": [
+            "Un coche",
+            "Un televisor",
+            "Galletas"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Perdiste alguna vez dinero en un juego?",
+          "model": "Sí, gasté veinte euros en la lotería y no gané nada."
+        },
+        {
+          "q": "¿Qué juegos jugabas con tus abuelos?",
+          "model": "Jugaba al dominó con mi abuelo."
+        },
+        {
+          "q": "¿Te pareció alguien muy dulce y después no lo era?",
+          "model": "Sí, un compañero de trabajo."
+        }
+      ],
+      "gaps": "Contra una [abuelita] de [ochenta] años. [Parecía] muy [dulce].",
+      "glossary": [
+        {
+          "word": "partida",
+          "meaning": "cada vez que se juega a algo"
+        },
+        {
+          "word": "abuelita",
+          "meaning": "abuela, con cariño"
+        },
+        {
+          "word": "manos",
+          "meaning": "en las cartas, cada vuelta del juego"
+        },
+        {
+          "word": "mijo",
+          "meaning": "mi hijo, forma cariñosa de hablar"
+        }
+      ]
+    },
+    {
+      "id": "astronoma",
+      "title": "La foto de Puente del Inca",
+      "place": "El coche mirador",
+      "context": "Amaranta le enseña a Horacio la foto que sacó durante la parada.",
+      "speakers": [
+        {
+          "name": "Amaranta",
+          "country": "Ecuador",
+          "voice": "es-EC-AndreaNeural"
+        },
+        {
+          "name": "Horacio",
+          "country": "Cuba",
+          "voice": "es-CU-ManuelNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Señor, usted fue policía, ¿verdad? Mire esta foto. La saqué a las tres y diez en Puente del Inca."
+        },
+        {
+          "s": 1,
+          "text": "A ver… Es la nieve, el puente… ¿Y eso rojo?"
+        },
+        {
+          "s": 0,
+          "text": "Un abrigo rojo. Una persona caminó hacia el puente con algo en los brazos."
+        },
+        {
+          "s": 1,
+          "text": "¿Vio la cara?"
+        },
+        {
+          "s": 0,
+          "text": "No, estaba muy lejos y oscuro. Pero caminaba despacio, sin miedo."
+        },
+        {
+          "s": 1,
+          "text": "Interesante. Una persona con miedo corre. Esta persona sabía muy bien adónde iba."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué le enseña Amaranta a Horacio?",
+          "options": [
+            "Una foto",
+            "Un mapa",
+            "Un telescopio"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿A qué hora sacó la foto?",
+          "options": [
+            "A las tres y cinco",
+            "A las tres y diez",
+            "A las cuatro"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cómo caminaba la persona?",
+          "options": [
+            "Muy rápido",
+            "Con miedo",
+            "Despacio y sin miedo"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué piensa Horacio?",
+          "options": [
+            "Que la persona sabía adónde iba",
+            "Que la persona estaba perdida",
+            "Que la foto es falsa"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué foto sacaste la semana pasada?",
+          "model": "Saqué una foto de mi gato en la ventana."
+        },
+        {
+          "q": "¿Caminas rápido o despacio?",
+          "model": "Camino muy rápido, siempre llego temprano."
+        },
+        {
+          "q": "¿Qué haces cuando tienes miedo?",
+          "model": "Llamo a un amigo."
+        }
+      ],
+      "gaps": "Un [abrigo] rojo. Una [persona] [caminó] hacia el [puente] con algo en los brazos.",
+      "glossary": [
+        {
+          "word": "saqué",
+          "meaning": "hice una foto"
+        },
+        {
+          "word": "lejos",
+          "meaning": "a mucha distancia"
+        },
+        {
+          "word": "oscuro",
+          "meaning": "sin luz"
+        },
+        {
+          "word": "despacio",
+          "meaning": "sin prisa"
+        }
+      ]
+    },
+    {
+      "id": "directo",
+      "title": "El mejor directo de Kiara",
+      "place": "La cúpula del coche mirador",
+      "context": "Joel y Kiara hablan del directo de esta noche.",
+      "speakers": [
+        {
+          "name": "Joel",
+          "country": "Puerto Rico",
+          "voice": "es-PR-VictorNeural"
+        },
+        {
+          "name": "Kiara",
+          "country": "Puerto Rico",
+          "voice": "es-PR-KarinaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Kiara, ¿cuántas personas vieron el directo esta noche?"
+        },
+        {
+          "s": 1,
+          "text": "Ocho mil en total. Es mi récord. El mes pasado, en Machu Picchu, solo tuve dos mil."
+        },
+        {
+          "s": 0,
+          "text": "¿Y cuánto dinero ganaste?"
+        },
+        {
+          "s": 1,
+          "text": "Unos trescientos dólares. Y un patrocinador me escribió. Una marca de pantuflas."
+        },
+        {
+          "s": 0,
+          "text": "¿De pantuflas? ¿En serio? ¿Por qué?"
+        },
+        {
+          "s": 1,
+          "text": "Porque en mi video de las tres y cuarto se ven unas pantuflas de leopardo en la nieve. Ahora todo el mundo quiere unas."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cuántas personas vieron el directo?",
+          "options": [
+            "Dos mil",
+            "Ocho mil",
+            "Trescientas"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Dónde hizo Kiara el directo del mes pasado?",
+          "options": [
+            "En Machu Picchu",
+            "En Mendoza",
+            "En Santiago"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Quién le escribió?",
+          "options": [
+            "Su madre",
+            "La policía",
+            "Una marca de pantuflas"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué se ve en el video de las tres y cuarto?",
+          "options": [
+            "Un perro",
+            "Pantuflas de leopardo en la nieve",
+            "Una estrella"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Cuál fue tu récord personal en algo?",
+          "model": "Hice diez kilómetros corriendo en cincuenta minutos."
+        },
+        {
+          "q": "¿Ganaste dinero con algo divertido?",
+          "model": "Sí, gané algo con unos dibujos en una feria."
+        },
+        {
+          "q": "¿Compraste algo por ver un video?",
+          "model": "Sí, compré unas zapatillas que vi en internet."
+        }
+      ],
+      "gaps": "Ocho [mil] en total. Es mi [récord]. El [mes] pasado, en Machu Picchu, solo tuve [dos mil].",
+      "glossary": [
+        {
+          "word": "récord",
+          "meaning": "el mejor resultado"
+        },
+        {
+          "word": "patrocinador",
+          "meaning": "empresa que paga por publicidad"
+        },
+        {
+          "word": "marca",
+          "meaning": "nombre de una empresa y sus productos"
+        },
+        {
+          "word": "pantuflas",
+          "meaning": "zapatos para estar en casa"
+        }
+      ]
+    },
+    {
+      "id": "perro",
+      "title": "La vida de Tango",
+      "place": "El furgón",
+      "context": "Cosme le cuenta a Rocío la historia de Tango.",
+      "speakers": [
+        {
+          "name": "Rocío",
+          "country": "Costa Rica",
+          "voice": "es-CR-MariaNeural"
+        },
+        {
+          "name": "Cosme",
+          "country": "Honduras",
+          "voice": "es-HN-CarlosNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Don Cosme, ¿por qué viaja solo este perro?"
+        },
+        {
+          "s": 1,
+          "text": "Su dueño murió en marzo. Era un señor mayor de Mendoza. Tango pasó tres meses en un refugio."
+        },
+        {
+          "s": 0,
+          "text": "¡Pobrecito!"
+        },
+        {
+          "s": 1,
+          "text": "Pero una familia de Santiago lo vio en internet y lo adoptó. Tienen dos niños y un jardín grande."
+        },
+        {
+          "s": 0,
+          "text": "¿Y por qué aúlla tanto?"
+        },
+        {
+          "s": 1,
+          "text": "Creo que huele a alguien que le recuerda a su dueño. Esta tarde una señora le dio jamón y le habló mucho tiempo. Tango no la olvidó."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué le pasó al dueño de Tango?",
+          "options": [
+            "Se mudó a Chile",
+            "Murió",
+            "Se fue de viaje"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cuánto tiempo pasó Tango en un refugio?",
+          "options": [
+            "Tres meses",
+            "Tres años",
+            "Tres semanas"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Quién adoptó a Tango?",
+          "options": [
+            "Cosme",
+            "Una señora mayor",
+            "Una familia de Santiago"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Por qué aúlla Tango según Cosme?",
+          "options": [
+            "Porque tiene hambre",
+            "Porque huele a alguien que le recuerda a su dueño",
+            "Porque tiene frío"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Adoptaste alguna vez un animal?",
+          "model": "Sí, adopté un gato hace dos años."
+        },
+        {
+          "q": "¿Qué olor te recuerda a alguien?",
+          "model": "El olor del café me recuerda a mi abuelo."
+        },
+        {
+          "q": "¿Cómo fue tu primera mascota?",
+          "model": "Mi primera mascota fue un pez rojo."
+        }
+      ],
+      "gaps": "Pero una [familia] de Santiago lo vio en [internet] y lo [adoptó]. Tienen dos niños y un [jardín] grande.",
+      "glossary": [
+        {
+          "word": "dueño",
+          "meaning": "persona que tiene algo o un animal"
+        },
+        {
+          "word": "refugio",
+          "meaning": "lugar para animales sin casa"
+        },
+        {
+          "word": "adoptó",
+          "meaning": "lo llevó a su casa como de la familia"
+        },
+        {
+          "word": "aúlla",
+          "meaning": "hace un sonido largo, como un lobo"
+        }
+      ]
+    },
+    {
+      "id": "violonchelo",
+      "title": "El violonchelo de la abuela",
+      "place": "El furgón",
+      "context": "Valentina le cuenta a Pilar la historia de su violonchelo.",
+      "speakers": [
+        {
+          "name": "Pilar",
+          "country": "España",
+          "voice": "es-ES-ElviraNeural"
+        },
+        {
+          "name": "Valentina",
+          "country": "Uruguay",
+          "voice": "es-UY-ValentinaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Qué estuche tan bonito. ¿Es un instrumento antiguo?"
+        },
+        {
+          "s": 1,
+          "text": "Sí. Era de mi abuela. Ella tocó en la orquesta de Montevideo cuarenta años."
+        },
+        {
+          "s": 0,
+          "text": "¿Y cuándo te lo regaló?"
+        },
+        {
+          "s": 1,
+          "text": "Cuando tenía quince años. Me dijo: «Ahora tú cuidas de él y él cuida de ti»."
+        },
+        {
+          "s": 0,
+          "text": "Qué bonito. ¿Y tu abuela todavía toca?"
+        },
+        {
+          "s": 1,
+          "text": "No, ya tiene noventa y dos años. Pero mañana viene a mi concierto en Santiago. Le llevo tres quesos uruguayos."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿De quién era el violonchelo?",
+          "options": [
+            "De su abuela",
+            "De su madre",
+            "De su profesor"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cuántos años tocó la abuela en la orquesta?",
+          "options": [
+            "Catorce",
+            "Cuarenta",
+            "Noventa"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cuándo recibió Valentina el violonchelo?",
+          "options": [
+            "A los diez años",
+            "A los veinte años",
+            "A los quince años"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué le lleva Valentina a su abuela?",
+          "options": [
+            "Flores",
+            "Tres quesos",
+            "Un libro"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué objeto de tu familia es especial para ti?",
+          "model": "El reloj de mi abuelo es muy especial."
+        },
+        {
+          "q": "¿Qué recibiste cuando cumpliste quince años?",
+          "model": "Me regalaron una bicicleta."
+        },
+        {
+          "q": "¿Qué le llevas a tu familia cuando la visitas?",
+          "model": "Les llevo dulces o vino."
+        }
+      ],
+      "gaps": "Cuando [tenía] [quince años]. Me dijo: «Ahora tú [cuidas] de él y él [cuida] de ti».",
+      "glossary": [
+        {
+          "word": "estuche",
+          "meaning": "caja para guardar un instrumento"
+        },
+        {
+          "word": "antiguo",
+          "meaning": "muy viejo"
+        },
+        {
+          "word": "orquesta",
+          "meaning": "grupo grande de músicos"
+        },
+        {
+          "word": "quesos",
+          "meaning": "alimentos hechos con leche"
+        }
+      ]
+    },
+    {
+      "id": "nieve",
+      "title": "Once años en Puente del Inca",
+      "place": "El andén de Puente del Inca",
+      "context": "Teófilo le cuenta a Ramiro cómo llegó a la estación.",
+      "speakers": [
+        {
+          "name": "Ramiro",
+          "country": "Bolivia",
+          "voice": "es-BO-MarceloNeural"
+        },
+        {
+          "name": "Teófilo",
+          "country": "Guatemala",
+          "voice": "es-GT-AndresNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Don Teófilo, ¿cuánto tiempo lleva aquí?"
+        },
+        {
+          "s": 1,
+          "text": "Once años. Antes trabajé en la estación de Mendoza, con mucha gente y mucho ruido."
+        },
+        {
+          "s": 0,
+          "text": "¿Y por qué vino a un lugar tan solitario?"
+        },
+        {
+          "s": 1,
+          "text": "Mi mujer murió en 2013. Yo quería silencio. Solicité el puesto y nadie más lo quería."
+        },
+        {
+          "s": 0,
+          "text": "¿No se siente solo?"
+        },
+        {
+          "s": 1,
+          "text": "A veces. Pero tengo un gato, una radio y cuatro trenes por semana. Y esta noche vi algo bonito: una señora le dijo adiós a su marido en el río."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cuánto tiempo lleva Teófilo en Puente del Inca?",
+          "options": [
+            "Once años",
+            "Un año",
+            "Veinte años"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Dónde trabajó antes?",
+          "options": [
+            "En Santiago",
+            "En un hotel",
+            "En la estación de Mendoza"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Por qué fue a Puente del Inca?",
+          "options": [
+            "Por dinero",
+            "Porque quería silencio",
+            "Por su gato"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué vio esta noche?",
+          "options": [
+            "Un accidente",
+            "A una señora que se despidió de su marido en el río",
+            "Un oso"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Cuánto tiempo llevas en tu ciudad?",
+          "model": "Llevo cinco años en Barcelona."
+        },
+        {
+          "q": "¿Prefieres un lugar con mucha gente o un lugar solitario?",
+          "model": "Prefiero un lugar tranquilo, con poca gente."
+        },
+        {
+          "q": "¿Qué cosa bonita viste esta semana?",
+          "model": "Vi un arcoíris desde mi oficina."
+        }
+      ],
+      "gaps": "Pero tengo un [gato], una [radio] y cuatro [trenes] por [semana].",
+      "glossary": [
+        {
+          "word": "solitario",
+          "meaning": "donde hay muy poca gente"
+        },
+        {
+          "word": "puesto",
+          "meaning": "trabajo"
+        },
+        {
+          "word": "silencio",
+          "meaning": "falta de ruido"
+        },
+        {
+          "word": "adiós",
+          "meaning": "palabra de despedida"
+        }
+      ]
+    },
+    {
+      "id": "frontera",
+      "title": "El pasaporte en los otros pantalones",
+      "place": "El control de Gendarmería",
+      "context": "Ulises le explica a Yolanda dónde dejó su pasaporte.",
+      "speakers": [
+        {
+          "name": "Ulises",
+          "country": "El Salvador",
+          "voice": "es-SV-RodrigoNeural"
+        },
+        {
+          "name": "Yolanda",
+          "country": "Nicaragua",
+          "voice": "es-NI-YolandaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "A ver, explíqueme otra vez. ¿Dónde está su pasaporte?"
+        },
+        {
+          "s": 0,
+          "text": "Ayer pasé la noche en un hostal de Mendoza. Esta mañana me cambié de pantalones y dejé los viejos detrás de la puerta. El pasaporte estaba en el bolsillo."
+        },
+        {
+          "s": 1,
+          "text": "¿Y no lo revisó antes de salir?"
+        },
+        {
+          "s": 0,
+          "text": "No. Llegué tarde al tren y tuve que correr. Solo me acordé en Uspallata."
+        },
+        {
+          "s": 1,
+          "text": "¿Llamó al hostal?"
+        },
+        {
+          "s": 0,
+          "text": "Sí, pero no contestaron. Mi madre siempre dice que soy un desastre. Hoy tiene razón."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Dónde durmió Ulises ayer?",
+          "options": [
+            "En el tren",
+            "En un hostal de Mendoza",
+            "En casa de un amigo"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Dónde estaba el pasaporte?",
+          "options": [
+            "En la mochila",
+            "En la maleta",
+            "En el bolsillo de los pantalones viejos"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cuándo se acordó del pasaporte?",
+          "options": [
+            "En Uspallata",
+            "En Mendoza",
+            "En Chile"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué dice siempre la madre de Ulises?",
+          "options": [
+            "Que es muy listo",
+            "Que es un desastre",
+            "Que es muy ordenado"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Olvidaste algo importante en un hotel?",
+          "model": "Sí, una vez dejé mi cargador en un hotel de Roma."
+        },
+        {
+          "q": "¿Llegaste tarde a un tren o a un avión?",
+          "model": "Sí, una vez se me fue un avión en Londres."
+        },
+        {
+          "q": "¿Qué dice siempre tu madre de ti?",
+          "model": "Dice que como muy rápido."
+        }
+      ],
+      "gaps": "No. [Llegué] [tarde] al [tren] y tuve que [correr].",
+      "glossary": [
+        {
+          "word": "hostal",
+          "meaning": "hotel barato"
+        },
+        {
+          "word": "bolsillo",
+          "meaning": "parte del pantalón para guardar cosas"
+        },
+        {
+          "word": "me acordé",
+          "meaning": "recordé"
+        },
+        {
+          "word": "desastre",
+          "meaning": "persona muy desordenada"
+        }
+      ]
+    },
+    {
+      "id": "maquinista",
+      "title": "Agosto de 1968",
+      "place": "La cabina de la locomotora",
+      "context": "Aniceto le cuenta a Rocío su primer viaje.",
+      "speakers": [
+        {
+          "name": "Aniceto",
+          "country": "Costa Rica",
+          "voice": "es-CR-JuanNeural"
+        },
+        {
+          "name": "Rocío",
+          "country": "Costa Rica",
+          "voice": "es-CR-MariaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Mi primer viaje fue en agosto de 1968. El tren era de vapor y tardaba catorce horas."
+        },
+        {
+          "s": 1,
+          "text": "¿Catorce horas? ¡Qué lento!"
+        },
+        {
+          "s": 0,
+          "text": "Sí, pero era precioso. Esa noche viajaba una pareja de recién casados. Me pidieron ver el amanecer desde la locomotora."
+        },
+        {
+          "s": 1,
+          "text": "¿Y usted los dejó?"
+        },
+        {
+          "s": 0,
+          "text": "No estaba permitido, pero los dejé. Ella llevaba un abrigo rojo. Él se llamaba Ernesto y contaba chistes malos."
+        },
+        {
+          "s": 1,
+          "text": "Don Aniceto… ¿por qué me cuenta esto ahora?"
+        },
+        {
+          "s": 0,
+          "text": "Porque esta noche es igual, Rocío. Casi igual."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cuándo fue el primer viaje de Aniceto?",
+          "options": [
+            "En agosto de 1968",
+            "En agosto de 1986",
+            "En marzo de 1968"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cuántas horas tardaba el tren?",
+          "options": [
+            "Cuatro",
+            "Catorce",
+            "Cuarenta"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué pidió la pareja?",
+          "options": [
+            "Comida",
+            "Una manta",
+            "Ver el amanecer desde la locomotora"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cómo eran los chistes de Ernesto?",
+          "options": [
+            "Muy buenos",
+            "Malos",
+            "Tristes"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Cómo fue tu primer día en tu trabajo o en tu escuela?",
+          "model": "Fue difícil, pero conocí a gente simpática."
+        },
+        {
+          "q": "¿Hiciste algo no permitido por un amigo?",
+          "model": "Sí, una vez entré a un concierto sin entrada."
+        },
+        {
+          "q": "¿Cuál fue el viaje más lento que hiciste?",
+          "model": "Un autobús de veinte horas en México."
+        }
+      ],
+      "gaps": "El [tren] era de [vapor] y [tardaba] [catorce horas].",
+      "glossary": [
+        {
+          "word": "vapor",
+          "meaning": "agua caliente convertida en gas"
+        },
+        {
+          "word": "recién casados",
+          "meaning": "personas que se casaron hace poco"
+        },
+        {
+          "word": "amanecer",
+          "meaning": "momento en que sale el sol"
+        },
+        {
+          "word": "chistes",
+          "meaning": "historias cortas para hacer reír"
+        }
+      ]
+    },
+    {
+      "id": "amanecer",
+      "title": "La llamada a Marga",
+      "place": "El andén de Los Andes",
+      "context": "Olga llama a su editora al llegar a Chile.",
+      "speakers": [
+        {
+          "name": "Olga",
+          "country": "Chile",
+          "voice": "es-CL-CatalinaNeural"
+        },
+        {
+          "name": "Marga",
+          "country": "Argentina",
+          "voice": "es-AR-ElenaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "¿Olga? ¡Por fin! Bruno me llamó a la una de la mañana. Pensé que te había pasado algo."
+        },
+        {
+          "s": 0,
+          "text": "Me pasó todo, Marga. Dejé a Ernesto en el río, vi el amanecer con Aniceto y encontré a mi detective."
+        },
+        {
+          "s": 1,
+          "text": "¿Tu detective?"
+        },
+        {
+          "s": 0,
+          "text": "El pasajero del ocho. Investigó toda la noche. Habló con todo el tren. Ya tengo mi última novela."
+        },
+        {
+          "s": 1,
+          "text": "¿Y cuándo me la mandas?"
+        },
+        {
+          "s": 0,
+          "text": "Dentro de seis meses. Primero voy a dormir una semana."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Por qué estaba preocupada Marga?",
+          "options": [
+            "Porque Bruno la llamó de noche",
+            "Porque el tren llegó tarde",
+            "Porque Olga no escribía"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Dónde dejó Olga a Ernesto?",
+          "options": [
+            "En Mendoza",
+            "En el río",
+            "En el tren"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Quién es el detective de Olga?",
+          "options": [
+            "Horacio",
+            "Ramiro",
+            "El pasajero del ocho"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cuándo va a mandar la novela?",
+          "options": [
+            "Mañana",
+            "Dentro de seis meses",
+            "Dentro de una semana"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿A quién llamas cuando llegas de un viaje?",
+          "model": "Llamo a mi madre."
+        },
+        {
+          "q": "¿Qué hiciste la última vez que no dormiste?",
+          "model": "Tomé mucho café y trabajé mal."
+        },
+        {
+          "q": "¿Qué historia de tu vida puede ser una novela?",
+          "model": "El viaje que hice sola a la India."
+        }
+      ],
+      "gaps": "Me pasó todo, Marga. [Dejé] a Ernesto en el [río], vi el [amanecer] con Aniceto y encontré a mi [detective].",
+      "glossary": [
+        {
+          "word": "por fin",
+          "meaning": "después de esperar mucho"
+        },
+        {
+          "word": "detective",
+          "meaning": "persona que investiga un misterio"
+        },
+        {
+          "word": "investigó",
+          "meaning": "buscó información"
+        },
+        {
+          "word": "novela",
+          "meaning": "libro con una historia larga"
+        }
+      ]
+    }
+  ]
+}

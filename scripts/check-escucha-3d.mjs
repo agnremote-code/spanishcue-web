@@ -7,6 +7,7 @@ import { scanSource } from './neutral-spanish.mjs';
 import { CAST } from '../app/hospital-san-casi-vivo/story.mjs';
 import { CAST as VUELO_CAST } from '../app/vuelo-cancelado/story.mjs';
 import { CAST as CONSORCIO_CAST } from '../app/el-consorcio/story.mjs';
+import { CAST as TREN_CAST } from '../app/el-tren-de-las-2340/story.mjs';
 
 const voices = JSON.parse(readFileSync('app/escucha-3d/voices.json', 'utf8'));
 const [onlyGame, onlyLevel] = process.argv.slice(2);
@@ -47,6 +48,11 @@ export function checkFile(game, level, data, path) {
     if (game === 'consorcio') for (const speaker of speakers) {
       const member = Object.values(CONSORCIO_CAST).find(c => c.name === speaker.name);
       if (!member) bad(at, `${speaker.name} is not in the El consorcio cast (story.mjs)`);
+      else if (member.voice !== speaker.voice) bad(at, `${speaker.name} speaks with ${member.voice} in this class, not ${speaker.voice}`);
+    }
+    if (game === 'tren') for (const speaker of speakers) {
+      const member = Object.values(TREN_CAST).find(c => c.name === speaker.name);
+      if (!member) bad(at, `${speaker.name} is not in the El tren de las 23:40 cast (story.mjs)`);
       else if (member.voice !== speaker.voice) bad(at, `${speaker.name} speaks with ${member.voice} in this class, not ${speaker.voice}`);
     }
     if (game === 'vuelo') for (const speaker of speakers) {

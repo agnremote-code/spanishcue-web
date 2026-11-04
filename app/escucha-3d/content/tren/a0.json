@@ -1,0 +1,2180 @@
+{
+  "game": "tren",
+  "level": "A0",
+  "items": [
+    {
+      "id": "equipaje",
+      "title": "Tres maletas y una caja",
+      "place": "El andén de Mendoza",
+      "context": "Fermín ayuda a Olga con el equipaje.",
+      "contextEn": "Fermín helps Olga with the luggage.",
+      "speakers": [
+        {
+          "name": "Fermín",
+          "country": "Argentina",
+          "voice": "es-AR-TomasNeural"
+        },
+        {
+          "name": "Olga",
+          "country": "Chile",
+          "voice": "es-CL-CatalinaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Buenas noches, señora. ¿Cuántas maletas tiene?",
+          "en": "Good evening, madam. How many suitcases do you have?"
+        },
+        {
+          "s": 1,
+          "text": "Tres maletas y una caja.",
+          "en": "Three suitcases and a box."
+        },
+        {
+          "s": 0,
+          "text": "¿La caja va al furgón?",
+          "en": "Does the box go to the luggage van?"
+        },
+        {
+          "s": 1,
+          "text": "No. La caja va conmigo. Es mi marido.",
+          "en": "No. The box goes with me. It is my husband."
+        },
+        {
+          "s": 0,
+          "text": "¡Ay! Perdón, señora.",
+          "en": "Oh! Sorry, madam."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cuántas maletas tiene Olga?",
+          "qEn": "How many suitcases does Olga have?",
+          "options": [
+            "Dos",
+            "Tres",
+            "Cuatro"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué más tiene Olga?",
+          "qEn": "What else does Olga have?",
+          "options": [
+            "Una caja",
+            "Un perro",
+            "Una bicicleta"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Adónde va la caja?",
+          "qEn": "Where does the box go?",
+          "options": [
+            "Al furgón",
+            "A la cocina",
+            "Con Olga"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué hay en la caja?",
+          "qEn": "What is in the box?",
+          "options": [
+            "Ropa",
+            "Su marido",
+            "Libros"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Cuántas maletas llevas en un viaje?",
+          "qEn": "How many suitcases do you take on a trip?",
+          "model": "Llevo una maleta."
+        },
+        {
+          "q": "¿Tu maleta es grande o pequeña?",
+          "qEn": "Is your suitcase big or small?",
+          "model": "Mi maleta es pequeña."
+        },
+        {
+          "q": "¿Viajas en tren?",
+          "qEn": "Do you travel by train?",
+          "model": "Sí, a veces viajo en tren."
+        }
+      ],
+      "gaps": "[No]. La [caja] va [conmigo]. Es mi [marido].",
+      "glossary": [
+        {
+          "word": "maleta",
+          "meaning": "bolsa grande para viajar",
+          "en": "suitcase"
+        },
+        {
+          "word": "caja",
+          "meaning": "objeto para guardar cosas",
+          "en": "box"
+        },
+        {
+          "word": "furgón",
+          "meaning": "parte del tren para el equipaje",
+          "en": "luggage van"
+        }
+      ]
+    },
+    {
+      "id": "despedida",
+      "title": "Llama todos los días",
+      "place": "El andén de Mendoza",
+      "context": "Rosa se despide de su hijo Matías.",
+      "contextEn": "Rosa says goodbye to her son Matías.",
+      "speakers": [
+        {
+          "name": "Rosa",
+          "country": "Paraguay",
+          "voice": "es-PY-TaniaNeural"
+        },
+        {
+          "name": "Matías",
+          "country": "Paraguay",
+          "voice": "es-PY-MarioNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Hijo, ¿tienes el billete?",
+          "en": "Son, do you have the ticket?"
+        },
+        {
+          "s": 1,
+          "text": "Sí, mamá. Camarote dos.",
+          "en": "Yes, Mum. Cabin two."
+        },
+        {
+          "s": 0,
+          "text": "¿Y el pasaporte?",
+          "en": "And the passport?"
+        },
+        {
+          "s": 1,
+          "text": "Sí, aquí está.",
+          "en": "Yes, here it is."
+        },
+        {
+          "s": 0,
+          "text": "Llama todos los días, por favor.",
+          "en": "Call every day, please."
+        },
+        {
+          "s": 1,
+          "text": "Sí, mamá. Te quiero.",
+          "en": "Yes, Mum. I love you."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Quién es Matías?",
+          "qEn": "Who is Matías?",
+          "options": [
+            "El hijo de Rosa",
+            "El maquinista",
+            "El maletero"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿En qué camarote viaja Matías?",
+          "qEn": "Which cabin is Matías travelling in?",
+          "options": [
+            "En el siete",
+            "En el ocho",
+            "En el dos"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué tiene Matías?",
+          "qEn": "What does Matías have?",
+          "options": [
+            "Una urna",
+            "El pasaporte",
+            "Un perro"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué quiere Rosa?",
+          "qEn": "What does Rosa want?",
+          "options": [
+            "Una llamada todos los días",
+            "Un café",
+            "Un taxi"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Llamas a tu madre todos los días?",
+          "qEn": "Do you call your mother every day?",
+          "model": "No, llamo los domingos."
+        },
+        {
+          "q": "¿Dónde está tu pasaporte?",
+          "qEn": "Where is your passport?",
+          "model": "Está en mi casa."
+        },
+        {
+          "q": "¿Quién te dice «te quiero»?",
+          "qEn": "Who says “I love you” to you?",
+          "model": "Mi madre me dice «te quiero»."
+        }
+      ],
+      "gaps": "[Sí], [mamá]. [Te] [quiero].",
+      "glossary": [
+        {
+          "word": "billete",
+          "meaning": "papel para viajar en el tren",
+          "en": "ticket"
+        },
+        {
+          "word": "pasaporte",
+          "meaning": "documento para ir a otro país",
+          "en": "passport"
+        },
+        {
+          "word": "camarote",
+          "meaning": "habitación pequeña del tren",
+          "en": "cabin"
+        }
+      ]
+    },
+    {
+      "id": "ronquidos",
+      "title": "El vecino de cama",
+      "place": "El camarote tres",
+      "context": "Lucas habla con Don Evaristo antes de dormir.",
+      "contextEn": "Lucas talks to Don Evaristo before going to sleep.",
+      "speakers": [
+        {
+          "name": "Lucas",
+          "country": "España",
+          "voice": "es-ES-AlvaroNeural"
+        },
+        {
+          "name": "Evaristo",
+          "country": "Uruguay",
+          "voice": "es-UY-MateoNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Buenas noches. Soy Lucas. Duermo arriba.",
+          "en": "Good night. I am Lucas. I sleep on top."
+        },
+        {
+          "s": 1,
+          "text": "Hola, Lucas. Yo duermo abajo. Soy Evaristo.",
+          "en": "Hello, Lucas. I sleep below. I am Evaristo."
+        },
+        {
+          "s": 0,
+          "text": "Una pregunta, ¿usted ronca?",
+          "en": "One question, do you snore?"
+        },
+        {
+          "s": 1,
+          "text": "¿Yo? No, nunca. Duermo como un ángel.",
+          "en": "Me? No, never. I sleep like an angel."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Dónde duerme Lucas?",
+          "qEn": "Where does Lucas sleep?",
+          "options": [
+            "Arriba",
+            "Abajo",
+            "En el pasillo"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cómo se llama el señor?",
+          "qEn": "What is the man’s name?",
+          "options": [
+            "Ernesto",
+            "Evaristo",
+            "Fermín"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué pregunta Lucas?",
+          "qEn": "What does Lucas ask?",
+          "options": [
+            "Si tiene hambre",
+            "Si tiene frío",
+            "Si ronca"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué dice Evaristo?",
+          "qEn": "What does Evaristo say?",
+          "options": [
+            "Que ronca mucho",
+            "Que no ronca nunca",
+            "Que no duerme"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Duermes arriba o abajo en una litera?",
+          "qEn": "Do you sleep on the top or bottom bunk?",
+          "model": "Duermo abajo."
+        },
+        {
+          "q": "¿Roncas?",
+          "qEn": "Do you snore?",
+          "model": "No, no ronco."
+        },
+        {
+          "q": "¿A qué hora duermes?",
+          "qEn": "What time do you sleep?",
+          "model": "Duermo a las once."
+        }
+      ],
+      "gaps": "[Yo] [duermo] [abajo]. Soy [Evaristo].",
+      "glossary": [
+        {
+          "word": "arriba",
+          "meaning": "en la parte de encima",
+          "en": "on top"
+        },
+        {
+          "word": "abajo",
+          "meaning": "en la parte de debajo",
+          "en": "below"
+        },
+        {
+          "word": "ronca",
+          "meaning": "hace ruido al dormir",
+          "en": "snores"
+        }
+      ]
+    },
+    {
+      "id": "lunademiel",
+      "title": "Champán en el camarote",
+      "place": "El camarote cinco",
+      "context": "Celia lleva champán a los recién casados.",
+      "contextEn": "Celia brings champagne to the newlyweds.",
+      "speakers": [
+        {
+          "name": "Celia",
+          "country": "Perú",
+          "voice": "es-PE-CamilaNeural"
+        },
+        {
+          "name": "Yesenia",
+          "country": "Colombia",
+          "voice": "es-CO-SalomeNeural"
+        },
+        {
+          "name": "Brayan",
+          "country": "Colombia",
+          "voice": "es-CO-GonzaloNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Buenas noches. Champán para el camarote cinco.",
+          "en": "Good evening. Champagne for cabin five."
+        },
+        {
+          "s": 1,
+          "text": "¡Gracias! Es nuestra luna de miel.",
+          "en": "Thank you! It is our honeymoon."
+        },
+        {
+          "s": 2,
+          "text": "Nos casamos el sábado.",
+          "en": "We got married on Saturday."
+        },
+        {
+          "s": 0,
+          "text": "¡Felicidades! ¿Dos copas?",
+          "en": "Congratulations! Two glasses?"
+        },
+        {
+          "s": 1,
+          "text": "Sí, dos copas, por favor.",
+          "en": "Yes, two glasses, please."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué lleva Celia?",
+          "qEn": "What does Celia bring?",
+          "options": [
+            "Café",
+            "Champán",
+            "Agua"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Para qué camarote es?",
+          "qEn": "Which cabin is it for?",
+          "options": [
+            "El cinco",
+            "El siete",
+            "El nueve"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cuándo se casan?",
+          "qEn": "When did they get married?",
+          "options": [
+            "El lunes",
+            "El domingo",
+            "El sábado"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cuántas copas quieren?",
+          "qEn": "How many glasses do they want?",
+          "options": [
+            "Una",
+            "Dos",
+            "Tres"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Te gusta el champán?",
+          "qEn": "Do you like champagne?",
+          "model": "Sí, me gusta mucho."
+        },
+        {
+          "q": "¿Qué día es tu cumpleaños?",
+          "qEn": "What day is your birthday?",
+          "model": "Es el doce de mayo."
+        },
+        {
+          "q": "¿Estás casado o casada?",
+          "qEn": "Are you married?",
+          "model": "No, no estoy casado."
+        }
+      ],
+      "gaps": "[Sí], [dos] [copas], [por favor].",
+      "glossary": [
+        {
+          "word": "champán",
+          "meaning": "vino con burbujas",
+          "en": "champagne"
+        },
+        {
+          "word": "luna de miel",
+          "meaning": "viaje después de la boda",
+          "en": "honeymoon"
+        },
+        {
+          "word": "copas",
+          "meaning": "vasos para el vino",
+          "en": "glasses"
+        }
+      ]
+    },
+    {
+      "id": "camarote7",
+      "title": "La puerta abierta",
+      "place": "El pasillo del coche cama B",
+      "context": "Ramiro y Celia miran el camarote siete.",
+      "contextEn": "Ramiro and Celia look at cabin seven.",
+      "speakers": [
+        {
+          "name": "Ramiro",
+          "country": "Bolivia",
+          "voice": "es-BO-MarceloNeural"
+        },
+        {
+          "name": "Celia",
+          "country": "Perú",
+          "voice": "es-PE-CamilaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Celia, ¿qué pasa?",
+          "en": "Celia, what is happening?"
+        },
+        {
+          "s": 1,
+          "text": "La puerta del siete está abierta. No hay nadie.",
+          "en": "The door of seven is open. There is nobody there."
+        },
+        {
+          "s": 0,
+          "text": "¿Y la señora Olga?",
+          "en": "And Mrs Olga?"
+        },
+        {
+          "s": 1,
+          "text": "No está. Hay una nota en la almohada.",
+          "en": "She is not here. There is a note on the pillow."
+        },
+        {
+          "s": 0,
+          "text": "Dame la nota, por favor.",
+          "en": "Give me the note, please."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué puerta está abierta?",
+          "qEn": "Which door is open?",
+          "options": [
+            "La del ocho",
+            "La del siete",
+            "La del dos"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Quién no está?",
+          "qEn": "Who is not there?",
+          "options": [
+            "Olga",
+            "Celia",
+            "Ramiro"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Dónde está la nota?",
+          "qEn": "Where is the note?",
+          "options": [
+            "En la mesa",
+            "En la ventana",
+            "En la almohada"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué quiere Ramiro?",
+          "qEn": "What does Ramiro want?",
+          "options": [
+            "Un té",
+            "La nota",
+            "La llave"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Cierras la puerta de tu casa con llave?",
+          "qEn": "Do you lock the door of your home?",
+          "model": "Sí, siempre cierro con llave."
+        },
+        {
+          "q": "¿Escribes notas?",
+          "qEn": "Do you write notes?",
+          "model": "Sí, escribo notas en el móvil."
+        },
+        {
+          "q": "¿Tu almohada es grande?",
+          "qEn": "Is your pillow big?",
+          "model": "No, mi almohada es pequeña."
+        }
+      ],
+      "gaps": "La [puerta] del [siete] está [abierta]. No hay [nadie].",
+      "glossary": [
+        {
+          "word": "abierta",
+          "meaning": "no cerrada",
+          "en": "open"
+        },
+        {
+          "word": "nadie",
+          "meaning": "ninguna persona",
+          "en": "nobody"
+        },
+        {
+          "word": "nota",
+          "meaning": "papel con un mensaje corto",
+          "en": "note"
+        }
+      ]
+    },
+    {
+      "id": "sobrino",
+      "title": "Sin señal",
+      "place": "El camarote nueve",
+      "context": "Bruno habla por teléfono con Marga, la editora de Olga.",
+      "contextEn": "Bruno talks on the phone with Marga, Olga’s editor.",
+      "speakers": [
+        {
+          "name": "Bruno",
+          "country": "Chile",
+          "voice": "es-CL-LorenzoNeural"
+        },
+        {
+          "name": "Marga",
+          "country": "Argentina",
+          "voice": "es-AR-ElenaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "¿Hola? ¿Marga? Soy Bruno, el sobrino de Olga.",
+          "en": "Hello? Marga? I am Bruno, Olga’s nephew."
+        },
+        {
+          "s": 1,
+          "text": "Hola, Bruno. ¿Qué pasa? Es la una.",
+          "en": "Hi, Bruno. What is happening? It is one o’clock."
+        },
+        {
+          "s": 0,
+          "text": "Mi tía no está en el tren.",
+          "en": "My aunt is not on the train."
+        },
+        {
+          "s": 1,
+          "text": "¿Cómo? No te oigo bien.",
+          "en": "What? I cannot hear you well."
+        },
+        {
+          "s": 0,
+          "text": "No hay señal aquí. ¡Uf!",
+          "en": "There is no signal here. Ugh!"
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Quién es Bruno?",
+          "qEn": "Who is Bruno?",
+          "options": [
+            "El sobrino de Olga",
+            "El hijo de Marga",
+            "El maquinista"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué hora es?",
+          "qEn": "What time is it?",
+          "options": [
+            "Las doce",
+            "Las tres",
+            "La una"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué dice Bruno?",
+          "qEn": "What does Bruno say?",
+          "options": [
+            "Que tiene hambre",
+            "Que su tía no está",
+            "Que está en Chile"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué problema hay?",
+          "qEn": "What is the problem?",
+          "options": [
+            "No hay señal",
+            "No hay agua",
+            "No hay luz"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Tienes buena señal en tu casa?",
+          "qEn": "Do you have a good signal at home?",
+          "model": "Sí, tengo buena señal."
+        },
+        {
+          "q": "¿Tienes una tía?",
+          "qEn": "Do you have an aunt?",
+          "model": "Sí, tengo dos tías."
+        },
+        {
+          "q": "¿A quién llamas por la noche?",
+          "qEn": "Who do you call at night?",
+          "model": "Llamo a mi hermana."
+        }
+      ],
+      "gaps": "Mi [tía] [no] [está] en el [tren].",
+      "glossary": [
+        {
+          "word": "sobrino",
+          "meaning": "hijo de tu hermano o hermana",
+          "en": "nephew"
+        },
+        {
+          "word": "señal",
+          "meaning": "conexión del teléfono",
+          "en": "signal"
+        },
+        {
+          "word": "tía",
+          "meaning": "hermana de tu padre o tu madre",
+          "en": "aunt"
+        }
+      ]
+    },
+    {
+      "id": "cena",
+      "title": "Sopa o pollo",
+      "place": "El coche comedor",
+      "context": "Jacinto pregunta qué quiere cenar Olga.",
+      "contextEn": "Jacinto asks what Olga wants for dinner.",
+      "speakers": [
+        {
+          "name": "Jacinto",
+          "country": "México",
+          "voice": "es-MX-JorgeNeural"
+        },
+        {
+          "name": "Olga",
+          "country": "Chile",
+          "voice": "es-CL-CatalinaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Buenas noches. Hay sopa de lentejas o pollo con arroz.",
+          "en": "Good evening. There is lentil soup or chicken with rice."
+        },
+        {
+          "s": 1,
+          "text": "Dos sopas, por favor. Y un termo de agua caliente.",
+          "en": "Two soups, please. And a thermos of hot water."
+        },
+        {
+          "s": 0,
+          "text": "¿Dos sopas? ¿Para el camarote?",
+          "en": "Two soups? For the cabin?"
+        },
+        {
+          "s": 1,
+          "text": "No. Para la cabina.",
+          "en": "No. For the cab."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué hay para cenar?",
+          "qEn": "What is there for dinner?",
+          "options": [
+            "Pescado o carne",
+            "Sopa o pollo",
+            "Pizza o pasta"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cuántas sopas pide Olga?",
+          "qEn": "How many soups does Olga order?",
+          "options": [
+            "Una",
+            "Tres",
+            "Dos"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué más pide?",
+          "qEn": "What else does she order?",
+          "options": [
+            "Un termo de agua caliente",
+            "Un café",
+            "Una cerveza"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Para dónde es la cena?",
+          "qEn": "Where is the dinner for?",
+          "options": [
+            "Para el camarote",
+            "Para la cabina",
+            "Para el bar"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Prefieres sopa o pollo?",
+          "qEn": "Do you prefer soup or chicken?",
+          "model": "Prefiero el pollo."
+        },
+        {
+          "q": "¿Qué cenas hoy?",
+          "qEn": "What are you having for dinner today?",
+          "model": "Hoy ceno ensalada."
+        },
+        {
+          "q": "¿Bebes agua caliente?",
+          "qEn": "Do you drink hot water?",
+          "model": "No, bebo agua fría."
+        }
+      ],
+      "gaps": "[Dos] [sopas], por favor. Y un [termo] de agua [caliente].",
+      "glossary": [
+        {
+          "word": "lentejas",
+          "meaning": "legumbres pequeñas y marrones",
+          "en": "lentils"
+        },
+        {
+          "word": "termo",
+          "meaning": "botella para el agua caliente",
+          "en": "thermos"
+        },
+        {
+          "word": "cabina",
+          "meaning": "lugar del maquinista",
+          "en": "cab"
+        }
+      ]
+    },
+    {
+      "id": "sobremesa",
+      "title": "Las tres y cinco",
+      "place": "La mesa cuatro",
+      "context": "Olga habla con Pilar en el coche comedor.",
+      "contextEn": "Olga talks to Pilar in the dining car.",
+      "speakers": [
+        {
+          "name": "Olga",
+          "country": "Chile",
+          "voice": "es-CL-CatalinaNeural"
+        },
+        {
+          "name": "Pilar",
+          "country": "España",
+          "voice": "es-ES-ElviraNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Perdón. ¿A qué hora para el tren en Puente del Inca?",
+          "en": "Excuse me. What time does the train stop at Puente del Inca?"
+        },
+        {
+          "s": 1,
+          "text": "A las tres y cinco.",
+          "en": "At five past three."
+        },
+        {
+          "s": 0,
+          "text": "¿Cuántos minutos?",
+          "en": "How many minutes?"
+        },
+        {
+          "s": 1,
+          "text": "Diez minutos.",
+          "en": "Ten minutes."
+        },
+        {
+          "s": 0,
+          "text": "Perfecto. Muchas gracias.",
+          "en": "Perfect. Thank you very much."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué pregunta Olga?",
+          "qEn": "What does Olga ask?",
+          "options": [
+            "La hora de una parada",
+            "El precio del billete",
+            "El nombre de Pilar"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿A qué hora para el tren?",
+          "qEn": "What time does the train stop?",
+          "options": [
+            "A las tres y diez",
+            "A las dos y cinco",
+            "A las tres y cinco"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cuántos minutos para?",
+          "qEn": "How many minutes does it stop?",
+          "options": [
+            "Cinco",
+            "Diez",
+            "Veinte"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cómo está Olga al final?",
+          "qEn": "How is Olga at the end?",
+          "options": [
+            "Contenta",
+            "Triste",
+            "Enfadada"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿A qué hora sale tu tren o tu autobús?",
+          "qEn": "What time does your train or bus leave?",
+          "model": "Sale a las ocho."
+        },
+        {
+          "q": "¿Qué hora es ahora?",
+          "qEn": "What time is it now?",
+          "model": "Son las cinco."
+        },
+        {
+          "q": "¿Te gusta viajar de noche?",
+          "qEn": "Do you like travelling at night?",
+          "model": "Sí, me gusta."
+        }
+      ],
+      "gaps": "¿A qué [hora] [para] el [tren] en Puente del [Inca]?",
+      "glossary": [
+        {
+          "word": "para",
+          "meaning": "no continúa",
+          "en": "stops"
+        },
+        {
+          "word": "minutos",
+          "meaning": "partes de una hora",
+          "en": "minutes"
+        },
+        {
+          "word": "perfecto",
+          "meaning": "muy bien",
+          "en": "perfect"
+        }
+      ]
+    },
+    {
+      "id": "barman",
+      "title": "Una botella de pisco",
+      "place": "La barra del coche bar",
+      "context": "Olga compra algo en el bar.",
+      "contextEn": "Olga buys something at the bar.",
+      "speakers": [
+        {
+          "name": "Wilmer",
+          "country": "Venezuela",
+          "voice": "es-VE-SebastianNeural"
+        },
+        {
+          "name": "Olga",
+          "country": "Chile",
+          "voice": "es-CL-CatalinaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Buenas noches, señora. ¿Qué toma?",
+          "en": "Good evening, madam. What will you have?"
+        },
+        {
+          "s": 1,
+          "text": "Una botella de pisco, por favor. Y dos vasos.",
+          "en": "A bottle of pisco, please. And two glasses."
+        },
+        {
+          "s": 0,
+          "text": "¿Dos vasos? ¿Espera a alguien?",
+          "en": "Two glasses? Are you waiting for someone?"
+        },
+        {
+          "s": 1,
+          "text": "Yo nunca bebo sola.",
+          "en": "I never drink alone."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Dónde están?",
+          "qEn": "Where are they?",
+          "options": [
+            "En el bar",
+            "En el andén",
+            "En el furgón"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué compra Olga?",
+          "qEn": "What does Olga buy?",
+          "options": [
+            "Vino",
+            "Cerveza",
+            "Pisco"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cuántos vasos pide?",
+          "qEn": "How many glasses does she ask for?",
+          "options": [
+            "Uno",
+            "Dos",
+            "Tres"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué dice Olga?",
+          "qEn": "What does Olga say?",
+          "options": [
+            "Que bebe mucho",
+            "Que no bebe nunca",
+            "Que nunca bebe sola"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué tomas en un bar?",
+          "qEn": "What do you have in a bar?",
+          "model": "Tomo un café."
+        },
+        {
+          "q": "¿Bebes solo o con amigos?",
+          "qEn": "Do you drink alone or with friends?",
+          "model": "Con amigos."
+        },
+        {
+          "q": "¿Conoces el pisco?",
+          "qEn": "Do you know pisco?",
+          "model": "No, no lo conozco."
+        }
+      ],
+      "gaps": "Una [botella] de [pisco], por favor. Y [dos] [vasos].",
+      "glossary": [
+        {
+          "word": "botella",
+          "meaning": "objeto de vidrio para bebidas",
+          "en": "bottle"
+        },
+        {
+          "word": "vasos",
+          "meaning": "objetos para beber",
+          "en": "glasses"
+        },
+        {
+          "word": "sola",
+          "meaning": "sin otra persona",
+          "en": "alone"
+        }
+      ]
+    },
+    {
+      "id": "cartas",
+      "title": "Tengo un as",
+      "place": "La mesa de juego del coche bar",
+      "context": "Inés y Nelson juegan a las cartas.",
+      "contextEn": "Inés and Nelson are playing cards.",
+      "speakers": [
+        {
+          "name": "Inés",
+          "country": "Guatemala",
+          "voice": "es-GT-MartaNeural"
+        },
+        {
+          "name": "Nelson",
+          "country": "República Dominicana",
+          "voice": "es-DO-EmilioNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Nelson, te toca.",
+          "en": "Nelson, it is your turn."
+        },
+        {
+          "s": 1,
+          "text": "Un momento… ¡Tengo un as!",
+          "en": "One moment… I have an ace!"
+        },
+        {
+          "s": 0,
+          "text": "¿Otro as? Es tu cuarto as.",
+          "en": "Another ace? It is your fourth ace."
+        },
+        {
+          "s": 1,
+          "text": "Hoy tengo suerte.",
+          "en": "Today I am lucky."
+        },
+        {
+          "s": 0,
+          "text": "O tienes ases en la manga.",
+          "en": "Or you have aces up your sleeve."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿A qué juegan?",
+          "qEn": "What are they playing?",
+          "options": [
+            "Al fútbol",
+            "A las cartas",
+            "Al ajedrez"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué tiene Nelson?",
+          "qEn": "What does Nelson have?",
+          "options": [
+            "Un as",
+            "Un rey",
+            "Una reina"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cuántos ases tiene Nelson?",
+          "qEn": "How many aces does Nelson have?",
+          "options": [
+            "Dos",
+            "Tres",
+            "Cuatro"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué piensa Inés?",
+          "qEn": "What does Inés think?",
+          "options": [
+            "Que Nelson tiene suerte",
+            "Que Nelson tiene ases en la manga",
+            "Que Nelson está cansado"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Juegas a las cartas?",
+          "qEn": "Do you play cards?",
+          "model": "Sí, juego con mi familia."
+        },
+        {
+          "q": "¿Tienes suerte en los juegos?",
+          "qEn": "Are you lucky at games?",
+          "model": "No, no tengo suerte."
+        },
+        {
+          "q": "¿Qué juego te gusta?",
+          "qEn": "What game do you like?",
+          "model": "Me gusta el dominó."
+        }
+      ],
+      "gaps": "Hoy [tengo] [suerte]. O tienes [ases] en la [manga].",
+      "glossary": [
+        {
+          "word": "te toca",
+          "meaning": "es tu turno",
+          "en": "it is your turn"
+        },
+        {
+          "word": "suerte",
+          "meaning": "cosas buenas por casualidad",
+          "en": "luck"
+        },
+        {
+          "word": "manga",
+          "meaning": "parte de la camisa en el brazo",
+          "en": "sleeve"
+        }
+      ]
+    },
+    {
+      "id": "astronoma",
+      "title": "Mira el cielo",
+      "place": "El coche mirador",
+      "context": "Amaranta enseña las estrellas a Joel.",
+      "contextEn": "Amaranta shows the stars to Joel.",
+      "speakers": [
+        {
+          "name": "Amaranta",
+          "country": "Ecuador",
+          "voice": "es-EC-AndreaNeural"
+        },
+        {
+          "name": "Joel",
+          "country": "Puerto Rico",
+          "voice": "es-PR-VictorNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Mira el cielo. Hay muchas estrellas.",
+          "en": "Look at the sky. There are many stars."
+        },
+        {
+          "s": 1,
+          "text": "¡Qué bonito! ¿Qué es eso blanco?",
+          "en": "How beautiful! What is that white thing?"
+        },
+        {
+          "s": 0,
+          "text": "Es la Vía Láctea.",
+          "en": "It is the Milky Way."
+        },
+        {
+          "s": 1,
+          "text": "¿Y esa luz roja?",
+          "en": "And that red light?"
+        },
+        {
+          "s": 0,
+          "text": "Es Marte, un planeta.",
+          "en": "It is Mars, a planet."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué hay en el cielo?",
+          "qEn": "What is in the sky?",
+          "options": [
+            "Muchas estrellas",
+            "Muchas nubes",
+            "Un avión"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cómo es el cielo para Joel?",
+          "qEn": "What is the sky like for Joel?",
+          "options": [
+            "Feo",
+            "Bonito",
+            "Aburrido"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué es lo blanco?",
+          "qEn": "What is the white thing?",
+          "options": [
+            "La luna",
+            "Una nube",
+            "La Vía Láctea"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué es la luz roja?",
+          "qEn": "What is the red light?",
+          "options": [
+            "Un tren",
+            "Marte",
+            "Una estrella"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Ves estrellas desde tu casa?",
+          "qEn": "Can you see stars from your home?",
+          "model": "No, veo pocas estrellas."
+        },
+        {
+          "q": "¿Te gusta mirar el cielo?",
+          "qEn": "Do you like looking at the sky?",
+          "model": "Sí, me gusta mucho."
+        },
+        {
+          "q": "¿Qué planeta conoces?",
+          "qEn": "Which planet do you know?",
+          "model": "Conozco Marte."
+        }
+      ],
+      "gaps": "[Mira] el [cielo]. Hay [muchas] [estrellas].",
+      "glossary": [
+        {
+          "word": "cielo",
+          "meaning": "lo que ves arriba, sobre la tierra",
+          "en": "sky"
+        },
+        {
+          "word": "estrellas",
+          "meaning": "puntos de luz en el cielo de noche",
+          "en": "stars"
+        },
+        {
+          "word": "planeta",
+          "meaning": "mundo como la Tierra o Marte",
+          "en": "planet"
+        }
+      ]
+    },
+    {
+      "id": "directo",
+      "title": "Hola, gente",
+      "place": "La cúpula del coche mirador",
+      "context": "Kiara habla en directo con su teléfono.",
+      "contextEn": "Kiara is talking live on her phone.",
+      "speakers": [
+        {
+          "name": "Kiara",
+          "country": "Puerto Rico",
+          "voice": "es-PR-KarinaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "¡Hola, gente! Estoy en un tren en los Andes. Son las cuatro de la mañana. Hace mucho frío. Hay nieve en las montañas.",
+          "en": "Hi, everyone! I am on a train in the Andes. It is four in the morning. It is very cold. There is snow on the mountains."
+        },
+        {
+          "s": 0,
+          "text": "Y hay un misterio: una señora no está. ¿Dónde está?",
+          "en": "And there is a mystery: a lady is missing. Where is she?"
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Dónde está Kiara?",
+          "qEn": "Where is Kiara?",
+          "options": [
+            "En un avión",
+            "En un tren",
+            "En un hotel"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué hora es?",
+          "qEn": "What time is it?",
+          "options": [
+            "Las cuatro de la mañana",
+            "Las cuatro de la tarde",
+            "Las doce"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué hay en las montañas?",
+          "qEn": "What is on the mountains?",
+          "options": [
+            "Árboles",
+            "Casas",
+            "Nieve"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cuál es el misterio?",
+          "qEn": "What is the mystery?",
+          "options": [
+            "Un perro no está",
+            "Una señora no está",
+            "El tren no para"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Haces videos en directo?",
+          "qEn": "Do you make live videos?",
+          "model": "No, no hago videos."
+        },
+        {
+          "q": "¿Hay nieve en tu país?",
+          "qEn": "Is there snow in your country?",
+          "model": "Sí, en las montañas."
+        },
+        {
+          "q": "¿Te gustan los misterios?",
+          "qEn": "Do you like mysteries?",
+          "model": "Sí, me gustan mucho."
+        }
+      ],
+      "gaps": "[Hace] mucho [frío]. Hay [nieve] en las [montañas].",
+      "glossary": [
+        {
+          "word": "gente",
+          "meaning": "personas",
+          "en": "people"
+        },
+        {
+          "word": "nieve",
+          "meaning": "agua blanca y fría que cae del cielo",
+          "en": "snow"
+        },
+        {
+          "word": "misterio",
+          "meaning": "algo que no entiendes",
+          "en": "mystery"
+        }
+      ]
+    },
+    {
+      "id": "perro",
+      "title": "Tango tiene hambre",
+      "place": "El furgón",
+      "context": "Cosme da de comer a Tango.",
+      "contextEn": "Cosme feeds Tango.",
+      "speakers": [
+        {
+          "name": "Cosme",
+          "country": "Honduras",
+          "voice": "es-HN-CarlosNeural"
+        },
+        {
+          "name": "Valentina",
+          "country": "Uruguay",
+          "voice": "es-UY-ValentinaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Este es Tango. Es un perro muy bueno.",
+          "en": "This is Tango. He is a very good dog."
+        },
+        {
+          "s": 1,
+          "text": "¡Qué grande es! ¿Tiene hambre?",
+          "en": "How big he is! Is he hungry?"
+        },
+        {
+          "s": 0,
+          "text": "Sí. Siempre tiene hambre. Come mucho.",
+          "en": "Yes. He is always hungry. He eats a lot."
+        },
+        {
+          "s": 1,
+          "text": "Toma, Tango. Una galleta.",
+          "en": "Here, Tango. A biscuit."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Quién es Tango?",
+          "qEn": "Who is Tango?",
+          "options": [
+            "Un gato",
+            "Un perro",
+            "Un pasajero"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cómo es Tango?",
+          "qEn": "What is Tango like?",
+          "options": [
+            "Grande",
+            "Pequeño",
+            "Viejo"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué le pasa a Tango?",
+          "qEn": "What is wrong with Tango?",
+          "options": [
+            "Tiene frío",
+            "Tiene sueño",
+            "Tiene hambre"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué le da Valentina?",
+          "qEn": "What does Valentina give him?",
+          "options": [
+            "Una galleta",
+            "Agua",
+            "Jamón"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Tienes perro?",
+          "qEn": "Do you have a dog?",
+          "model": "No, tengo un gato."
+        },
+        {
+          "q": "¿Comes mucho?",
+          "qEn": "Do you eat a lot?",
+          "model": "Sí, como mucho."
+        },
+        {
+          "q": "¿Te gustan los perros grandes?",
+          "qEn": "Do you like big dogs?",
+          "model": "Sí, me gustan."
+        }
+      ],
+      "gaps": "Sí. [Siempre] [tiene] [hambre]. [Come] mucho.",
+      "glossary": [
+        {
+          "word": "perro",
+          "meaning": "animal amigo de las personas",
+          "en": "dog"
+        },
+        {
+          "word": "hambre",
+          "meaning": "ganas de comer",
+          "en": "hunger"
+        },
+        {
+          "word": "galleta",
+          "meaning": "dulce pequeño y seco",
+          "en": "biscuit"
+        }
+      ]
+    },
+    {
+      "id": "violonchelo",
+      "title": "Un estuche muy pesado",
+      "place": "El furgón",
+      "context": "Valentina busca su violonchelo.",
+      "contextEn": "Valentina is looking for her cello.",
+      "speakers": [
+        {
+          "name": "Valentina",
+          "country": "Uruguay",
+          "voice": "es-UY-ValentinaNeural"
+        },
+        {
+          "name": "Cosme",
+          "country": "Honduras",
+          "voice": "es-HN-CarlosNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Perdón, ¿dónde está mi violonchelo?",
+          "en": "Excuse me, where is my cello?"
+        },
+        {
+          "s": 1,
+          "text": "Aquí, el estuche negro. Pesa mucho.",
+          "en": "Here, the black case. It is very heavy."
+        },
+        {
+          "s": 0,
+          "text": "Sí, es muy pesado.",
+          "en": "Yes, it is very heavy."
+        },
+        {
+          "s": 1,
+          "text": "¿Qué hay dentro?",
+          "en": "What is inside?"
+        },
+        {
+          "s": 0,
+          "text": "Un violonchelo… y queso para mi abuela.",
+          "en": "A cello… and cheese for my grandmother."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué busca Valentina?",
+          "qEn": "What is Valentina looking for?",
+          "options": [
+            "Su perro",
+            "Su violonchelo",
+            "Su billete"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿De qué color es el estuche?",
+          "qEn": "What colour is the case?",
+          "options": [
+            "Negro",
+            "Rojo",
+            "Blanco"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cómo es el estuche?",
+          "qEn": "What is the case like?",
+          "options": [
+            "Muy pequeño",
+            "Muy nuevo",
+            "Muy pesado"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Para quién es el queso?",
+          "qEn": "Who is the cheese for?",
+          "options": [
+            "Para su abuela",
+            "Para Cosme",
+            "Para Tango"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Tocas un instrumento?",
+          "qEn": "Do you play an instrument?",
+          "model": "Sí, toco la guitarra."
+        },
+        {
+          "q": "¿Te gusta el queso?",
+          "qEn": "Do you like cheese?",
+          "model": "Sí, me gusta mucho."
+        },
+        {
+          "q": "¿Dónde vive tu abuela?",
+          "qEn": "Where does your grandmother live?",
+          "model": "Vive en el campo."
+        }
+      ],
+      "gaps": "Aquí, el [estuche] [negro]. [Pesa] [mucho].",
+      "glossary": [
+        {
+          "word": "violonchelo",
+          "meaning": "instrumento grande de cuerdas",
+          "en": "cello"
+        },
+        {
+          "word": "estuche",
+          "meaning": "caja para un instrumento",
+          "en": "case"
+        },
+        {
+          "word": "pesado",
+          "meaning": "que pesa mucho",
+          "en": "heavy"
+        }
+      ]
+    },
+    {
+      "id": "nieve",
+      "title": "Doce grados bajo cero",
+      "place": "El andén de Puente del Inca",
+      "context": "Teófilo recibe a Ramiro en la estación.",
+      "contextEn": "Teófilo welcomes Ramiro at the station.",
+      "speakers": [
+        {
+          "name": "Teófilo",
+          "country": "Guatemala",
+          "voice": "es-GT-AndresNeural"
+        },
+        {
+          "name": "Ramiro",
+          "country": "Bolivia",
+          "voice": "es-BO-MarceloNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Buenas noches. Bienvenido a Puente del Inca.",
+          "en": "Good evening. Welcome to Puente del Inca."
+        },
+        {
+          "s": 1,
+          "text": "Buenas noches. ¡Qué frío!",
+          "en": "Good evening. How cold!"
+        },
+        {
+          "s": 0,
+          "text": "Sí. Hace doce grados bajo cero.",
+          "en": "Yes. It is twelve degrees below zero."
+        },
+        {
+          "s": 1,
+          "text": "¿Vive usted aquí?",
+          "en": "Do you live here?"
+        },
+        {
+          "s": 0,
+          "text": "Sí, solo, con mi gato.",
+          "en": "Yes, alone, with my cat."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Dónde están?",
+          "qEn": "Where are they?",
+          "options": [
+            "En Mendoza",
+            "En Puente del Inca",
+            "En Los Andes"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué tiempo hace?",
+          "qEn": "What is the weather like?",
+          "options": [
+            "Hace calor",
+            "Llueve",
+            "Hace mucho frío"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cuántos grados hace?",
+          "qEn": "How many degrees is it?",
+          "options": [
+            "Doce bajo cero",
+            "Dos bajo cero",
+            "Doce"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Con quién vive Teófilo?",
+          "qEn": "Who does Teófilo live with?",
+          "options": [
+            "Con su mujer",
+            "Con su gato",
+            "Con su hijo"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué temperatura hace hoy en tu ciudad?",
+          "qEn": "What is the temperature in your city today?",
+          "model": "Hace veinte grados."
+        },
+        {
+          "q": "¿Vives solo?",
+          "qEn": "Do you live alone?",
+          "model": "No, vivo con mi familia."
+        },
+        {
+          "q": "¿Tienes gato?",
+          "qEn": "Do you have a cat?",
+          "model": "Sí, tengo un gato negro."
+        }
+      ],
+      "gaps": "Sí. [Hace] [doce] [grados] bajo [cero].",
+      "glossary": [
+        {
+          "word": "bienvenido",
+          "meaning": "palabra para recibir a alguien",
+          "en": "welcome"
+        },
+        {
+          "word": "bajo cero",
+          "meaning": "menos de cero grados",
+          "en": "below zero"
+        },
+        {
+          "word": "gato",
+          "meaning": "animal pequeño de casa",
+          "en": "cat"
+        }
+      ]
+    },
+    {
+      "id": "frontera",
+      "title": "Nombre y nacionalidad",
+      "place": "El control de Gendarmería",
+      "context": "Yolanda pregunta a Ulises por sus datos.",
+      "contextEn": "Yolanda asks Ulises for his details.",
+      "speakers": [
+        {
+          "name": "Yolanda",
+          "country": "Nicaragua",
+          "voice": "es-NI-YolandaNeural"
+        },
+        {
+          "name": "Ulises",
+          "country": "El Salvador",
+          "voice": "es-SV-RodrigoNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Buenas noches. ¿Nombre?",
+          "en": "Good evening. Name?"
+        },
+        {
+          "s": 1,
+          "text": "Ulises Cañete.",
+          "en": "Ulises Cañete."
+        },
+        {
+          "s": 0,
+          "text": "¿Nacionalidad?",
+          "en": "Nationality?"
+        },
+        {
+          "s": 1,
+          "text": "Salvadoreño.",
+          "en": "Salvadoran."
+        },
+        {
+          "s": 0,
+          "text": "¿Pasaporte?",
+          "en": "Passport?"
+        },
+        {
+          "s": 1,
+          "text": "Pues… no tengo. Está en Mendoza.",
+          "en": "Well… I do not have it. It is in Mendoza."
+        },
+        {
+          "s": 0,
+          "text": "¿Y adónde va?",
+          "en": "And where are you going?"
+        },
+        {
+          "s": 1,
+          "text": "A Santiago, a la casa de mi tía.",
+          "en": "To Santiago, to my aunt’s house."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cómo se llama el chico?",
+          "qEn": "What is the young man’s name?",
+          "options": [
+            "Ulises",
+            "Matías",
+            "Lucas"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿De dónde es?",
+          "qEn": "Where is he from?",
+          "options": [
+            "De Chile",
+            "De El Salvador",
+            "De España"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Tiene pasaporte?",
+          "qEn": "Does he have a passport?",
+          "options": [
+            "Sí, aquí",
+            "Sí, dos",
+            "No"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Dónde está el pasaporte?",
+          "qEn": "Where is the passport?",
+          "options": [
+            "En Mendoza",
+            "En la mochila",
+            "En el tren"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Cuál es tu nacionalidad?",
+          "qEn": "What is your nationality?",
+          "model": "Soy canadiense."
+        },
+        {
+          "q": "¿Tienes pasaporte?",
+          "qEn": "Do you have a passport?",
+          "model": "Sí, tengo pasaporte."
+        },
+        {
+          "q": "¿Olvidas cosas?",
+          "qEn": "Do you forget things?",
+          "model": "Sí, olvido las llaves."
+        }
+      ],
+      "gaps": "[Pues]… [no] [tengo]. [Está] en Mendoza.",
+      "glossary": [
+        {
+          "word": "nombre",
+          "meaning": "cómo te llamas",
+          "en": "name"
+        },
+        {
+          "word": "nacionalidad",
+          "meaning": "tu país de origen",
+          "en": "nationality"
+        },
+        {
+          "word": "pasaporte",
+          "meaning": "documento para viajar a otro país",
+          "en": "passport"
+        }
+      ]
+    },
+    {
+      "id": "maquinista",
+      "title": "Té en la locomotora",
+      "place": "La cabina de la locomotora",
+      "context": "Aniceto y Rocío toman algo en la cabina.",
+      "contextEn": "Aniceto and Rocío have a drink in the cab.",
+      "speakers": [
+        {
+          "name": "Aniceto",
+          "country": "Costa Rica",
+          "voice": "es-CR-JuanNeural"
+        },
+        {
+          "name": "Rocío",
+          "country": "Costa Rica",
+          "voice": "es-CR-MariaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Rocío, ¿quieres té?",
+          "en": "Rocío, do you want tea?"
+        },
+        {
+          "s": 1,
+          "text": "Sí, gracias. ¿Por qué hay dos tazas aquí?",
+          "en": "Yes, thank you. Why are there two cups here?"
+        },
+        {
+          "s": 0,
+          "text": "Una es mía. La otra… también es mía.",
+          "en": "One is mine. The other… is mine too."
+        },
+        {
+          "s": 1,
+          "text": "Ajá. Y la manta azul, ¿también?",
+          "en": "Uh-huh. And the blue blanket, that too?"
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué ofrece Aniceto?",
+          "qEn": "What does Aniceto offer?",
+          "options": [
+            "Café",
+            "Té",
+            "Agua"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cuántas tazas hay?",
+          "qEn": "How many cups are there?",
+          "options": [
+            "Una",
+            "Tres",
+            "Dos"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué dice Aniceto?",
+          "qEn": "What does Aniceto say?",
+          "options": [
+            "Que las dos tazas son suyas",
+            "Que una taza es de Rocío",
+            "Que no hay tazas"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿De qué color es la manta?",
+          "qEn": "What colour is the blanket?",
+          "options": [
+            "Roja",
+            "Azul",
+            "Verde"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Tomas té o café?",
+          "qEn": "Do you drink tea or coffee?",
+          "model": "Tomo café."
+        },
+        {
+          "q": "¿Cuántas tazas tienes en casa?",
+          "qEn": "How many cups do you have at home?",
+          "model": "Tengo seis tazas."
+        },
+        {
+          "q": "¿Tienes una manta favorita?",
+          "qEn": "Do you have a favourite blanket?",
+          "model": "Sí, una manta roja."
+        }
+      ],
+      "gaps": "Una es [mía]. La [otra]… [también] es [mía].",
+      "glossary": [
+        {
+          "word": "taza",
+          "meaning": "vaso con asa para el té o el café",
+          "en": "cup"
+        },
+        {
+          "word": "mía",
+          "meaning": "de mí",
+          "en": "mine"
+        },
+        {
+          "word": "manta",
+          "meaning": "tela grande para tener calor",
+          "en": "blanket"
+        }
+      ]
+    },
+    {
+      "id": "amanecer",
+      "title": "Llegada a Los Andes",
+      "place": "El andén de Los Andes",
+      "context": "Gloria habla por los altavoces del tren.",
+      "contextEn": "Gloria speaks over the train loudspeakers.",
+      "speakers": [
+        {
+          "name": "Gloria",
+          "country": "Estados Unidos",
+          "voice": "es-US-PalomaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Buenos días, señores pasajeros. Son las seis y cuarenta. Llegamos a Los Andes, en Chile. Hace sol.",
+          "en": "Good morning, passengers. It is six forty. We are arriving in Los Andes, in Chile. It is sunny."
+        },
+        {
+          "s": 0,
+          "text": "Por favor, bajen con todo su equipaje. Gracias por viajar con nosotros.",
+          "en": "Please get off with all your luggage. Thank you for travelling with us."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué hora es?",
+          "qEn": "What time is it?",
+          "options": [
+            "Las seis y cuarenta",
+            "Las siete",
+            "Las seis y cuarto"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Dónde llega el tren?",
+          "qEn": "Where does the train arrive?",
+          "options": [
+            "A Mendoza",
+            "A Puente del Inca",
+            "A Los Andes"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué tiempo hace?",
+          "qEn": "What is the weather like?",
+          "options": [
+            "Llueve",
+            "Hace sol",
+            "Nieva"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué tienen que hacer los pasajeros?",
+          "qEn": "What do the passengers have to do?",
+          "options": [
+            "Dormir",
+            "Bajar con su equipaje",
+            "Comer"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿A qué hora te levantas?",
+          "qEn": "What time do you get up?",
+          "model": "Me levanto a las siete."
+        },
+        {
+          "q": "¿Te gusta el sol de la mañana?",
+          "qEn": "Do you like the morning sun?",
+          "model": "Sí, me gusta mucho."
+        },
+        {
+          "q": "¿Conoces Chile?",
+          "qEn": "Do you know Chile?",
+          "model": "No, no conozco Chile."
+        }
+      ],
+      "gaps": "Por [favor], [bajen] con todo su [equipaje]. [Gracias] por viajar con nosotros.",
+      "glossary": [
+        {
+          "word": "pasajeros",
+          "meaning": "personas que viajan",
+          "en": "passengers"
+        },
+        {
+          "word": "equipaje",
+          "meaning": "maletas y bolsas",
+          "en": "luggage"
+        },
+        {
+          "word": "bajen",
+          "meaning": "salgan del tren",
+          "en": "get off"
+        }
+      ]
+    }
+  ]
+}

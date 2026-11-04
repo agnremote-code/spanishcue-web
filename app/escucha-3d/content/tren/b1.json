@@ -1,0 +1,2182 @@
+{
+  "game": "tren",
+  "level": "B1",
+  "items": [
+    {
+      "id": "equipaje",
+      "title": "Una entrevista en el andén",
+      "place": "El andén de Mendoza",
+      "context": "Antes de subir, Kiara le pide a Olga una entrevista para su canal.",
+      "speakers": [
+        {
+          "name": "Kiara",
+          "country": "Puerto Rico",
+          "voice": "es-PR-KarinaNeural"
+        },
+        {
+          "name": "Olga",
+          "country": "Chile",
+          "voice": "es-CL-CatalinaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "¡Señora Ríos! Soy Kiara, tengo un canal de viajes. ¿Me da un minuto para mis seguidores?"
+        },
+        {
+          "s": 1,
+          "text": "Un minuto, ni uno más. Y no me grabes la urna, que mi marido era muy tímido."
+        },
+        {
+          "s": 0,
+          "text": "Claro, claro. ¿Por qué viaja en tren y no en avión? En avión son cuarenta minutos."
+        },
+        {
+          "s": 1,
+          "text": "Porque en avión no se ve nada y no pasa nada. En un tren nocturno siempre pasa algo. Yo creo que las mejores historias empiezan después de medianoche."
+        },
+        {
+          "s": 0,
+          "text": "¿Está escribiendo una novela nueva?"
+        },
+        {
+          "s": 1,
+          "text": "Estoy escribiendo la última. Les digo a tus seguidores que la van a leer muy pronto. Y que esta noche no se duerman."
+        },
+        {
+          "s": 0,
+          "text": "¿Por qué?"
+        },
+        {
+          "s": 1,
+          "text": "Porque se van a perder lo mejor. Se acabó el minuto, querida."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué quiere Kiara?",
+          "options": [
+            "Una entrevista para su canal",
+            "Una foto con la urna",
+            "Un libro firmado"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué le pide Olga a Kiara?",
+          "options": [
+            "Que hable más bajo",
+            "Que no grabe la urna",
+            "Que le compre un café"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Por qué prefiere Olga el tren, según ella?",
+          "options": [
+            "Porque tiene miedo a volar",
+            "Porque es más barato",
+            "Porque en un tren siempre pasa algo"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué se puede deducir de lo que dice Olga?",
+          "options": [
+            "Que tiene un plan para esa noche",
+            "Que está muy enferma",
+            "Que no quiere escribir más"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Prefieres viajar en tren o en avión? ¿Por qué?",
+          "model": "Prefiero el tren porque puedo mirar el paisaje y leer tranquilo."
+        },
+        {
+          "q": "¿Crees que de noche pasan cosas más interesantes?",
+          "model": "Sí, creo que la gente se abre más por la noche."
+        },
+        {
+          "q": "¿Qué le preguntarías a tu escritor favorito en un minuto?",
+          "model": "Le preguntaría de dónde saca sus ideas."
+        }
+      ],
+      "gaps": "Porque en avión no se ve [nada] y no [pasa] nada. En un tren [nocturno] siempre pasa [algo].",
+      "glossary": [
+        {
+          "word": "canal",
+          "meaning": "espacio en internet donde alguien publica videos"
+        },
+        {
+          "word": "seguidores",
+          "meaning": "personas que ven a alguien en las redes"
+        },
+        {
+          "word": "medianoche",
+          "meaning": "las doce de la noche"
+        },
+        {
+          "word": "se van a perder",
+          "meaning": "no van a ver algo"
+        }
+      ]
+    },
+    {
+      "id": "despedida",
+      "title": "El trabajo en la mina",
+      "place": "El andén de Mendoza",
+      "context": "Matías le explica a Ramiro por qué se va a Chile.",
+      "speakers": [
+        {
+          "name": "Ramiro",
+          "country": "Bolivia",
+          "voice": "es-BO-MarceloNeural"
+        },
+        {
+          "name": "Matías",
+          "country": "Paraguay",
+          "voice": "es-PY-MarioNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Billete, por favor. Camarote dos… ¿Viaja por trabajo?"
+        },
+        {
+          "s": 1,
+          "text": "Sí, voy a trabajar en una mina de cobre en Antofagasta. Me han ofrecido un contrato de dos años."
+        },
+        {
+          "s": 0,
+          "text": "Es un trabajo duro. Mi hermano trabajó allí y volvió con la espalda destrozada."
+        },
+        {
+          "s": 1,
+          "text": "Lo sé. Pero en Paraguay gano en un mes lo que allí voy a ganar en una semana. Quiero ahorrar y abrir un taller mecánico con mi primo."
+        },
+        {
+          "s": 0,
+          "text": "Es un buen plan. ¿Y su madre qué opina?"
+        },
+        {
+          "s": 1,
+          "text": "Mi madre dice que estoy loco, que la mina es peligrosa y que los chilenos comen mal. Pero me ha preparado comida para un mes, así que creo que en el fondo está orgullosa."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Por qué viaja Matías?",
+          "options": [
+            "Por trabajo",
+            "Por vacaciones",
+            "Para visitar a su primo"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué le pasó al hermano de Ramiro?",
+          "options": [
+            "Se hizo rico",
+            "Volvió con la espalda destrozada",
+            "Se quedó en Chile"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué quiere hacer Matías con el dinero?",
+          "options": [
+            "Comprar una casa",
+            "Viajar por el mundo",
+            "Abrir un taller con su primo"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué piensa Matías de su madre?",
+          "options": [
+            "Que está enfadada de verdad",
+            "Que en el fondo está orgullosa",
+            "Que quiere ir con él"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Te irías a trabajar a otro país por más dinero?",
+          "model": "Sí, me iría un par de años para ahorrar."
+        },
+        {
+          "q": "¿Qué negocio te gustaría abrir?",
+          "model": "Me gustaría abrir una librería con café."
+        },
+        {
+          "q": "¿Qué opina tu familia de tus planes?",
+          "model": "Mi familia me apoya, aunque a veces se preocupa."
+        }
+      ],
+      "gaps": "Quiero [ahorrar] y [abrir] un [taller mecánico] con mi [primo].",
+      "glossary": [
+        {
+          "word": "cobre",
+          "meaning": "metal de color rojizo"
+        },
+        {
+          "word": "destrozada",
+          "meaning": "muy dañada"
+        },
+        {
+          "word": "ahorrar",
+          "meaning": "guardar dinero"
+        },
+        {
+          "word": "en el fondo",
+          "meaning": "en realidad, aunque no se vea"
+        }
+      ]
+    },
+    {
+      "id": "ronquidos",
+      "title": "Las quejas del camarote tres",
+      "place": "El pasillo del coche cama A",
+      "context": "Lucas se queja a Ramiro y le pide otro camarote.",
+      "speakers": [
+        {
+          "name": "Lucas",
+          "country": "España",
+          "voice": "es-ES-AlvaroNeural"
+        },
+        {
+          "name": "Ramiro",
+          "country": "Bolivia",
+          "voice": "es-BO-MarceloNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Disculpe, ¿es usted el jefe de tren? Quiero cambiar de camarote."
+        },
+        {
+          "s": 1,
+          "text": "¿Qué problema tiene?"
+        },
+        {
+          "s": 0,
+          "text": "Mi compañero ronca como una sierra eléctrica. He intentado de todo: tapones, música, hasta le he puesto una almohada en la cara. Con cariño, ¿eh?"
+        },
+        {
+          "s": 1,
+          "text": "Lo siento, pero el tren va lleno. No hay camarotes libres, y esta noche tengo un problema más grave."
+        },
+        {
+          "s": 0,
+          "text": "¿Más grave que esto?"
+        },
+        {
+          "s": 1,
+          "text": "Ha desaparecido una pasajera. ¿Usted ha visto algo raro esta noche?"
+        },
+        {
+          "s": 0,
+          "text": "Pues ahora que lo dice, a la una pasó alguien con pantuflas de leopardo. Iba hacia la locomotora, muy despacio. Me pareció raro, pero pensé que iba al baño."
+        },
+        {
+          "s": 1,
+          "text": "El baño está en la otra dirección."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué quiere Lucas al principio?",
+          "options": [
+            "Cambiar de camarote",
+            "Comprar tapones",
+            "Bajar del tren"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Por qué Ramiro no puede ayudarlo?",
+          "options": [
+            "Porque no es su trabajo",
+            "Porque el tren va lleno",
+            "Porque es muy tarde"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué vio Lucas a la una?",
+          "options": [
+            "A alguien en el baño",
+            "A un perro",
+            "A alguien con pantuflas de leopardo"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué sugiere la última frase de Ramiro?",
+          "options": [
+            "Que la persona no iba al baño",
+            "Que Lucas miente",
+            "Que el baño está roto"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué haces cuando un compañero de habitación te molesta?",
+          "model": "Hablo con él con calma y busco una solución."
+        },
+        {
+          "q": "¿Te has quejado alguna vez en un hotel?",
+          "model": "Sí, me quejé porque la habitación estaba sucia."
+        },
+        {
+          "q": "¿Crees que eres un buen testigo?",
+          "model": "No mucho, porque me fijo poco en los detalles."
+        }
+      ],
+      "gaps": "Lo siento, pero el tren va [lleno]. No hay [camarotes] [libres], y esta noche tengo un problema más [grave].",
+      "glossary": [
+        {
+          "word": "sierra eléctrica",
+          "meaning": "máquina para cortar madera"
+        },
+        {
+          "word": "lleno",
+          "meaning": "sin espacio"
+        },
+        {
+          "word": "grave",
+          "meaning": "serio, importante"
+        },
+        {
+          "word": "ahora que lo dice",
+          "meaning": "expresión para recordar algo de repente"
+        }
+      ]
+    },
+    {
+      "id": "lunademiel",
+      "title": "La primera pelea de casados",
+      "place": "El camarote cinco",
+      "context": "Yesenia y Brayan discuten sobre el libro y la luna de miel.",
+      "speakers": [
+        {
+          "name": "Brayan",
+          "country": "Colombia",
+          "voice": "es-CO-GonzaloNeural"
+        },
+        {
+          "name": "Yesenia",
+          "country": "Colombia",
+          "voice": "es-CO-SalomeNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Yesi, ya son las dos. ¿Vas a seguir leyendo toda la noche?"
+        },
+        {
+          "s": 1,
+          "text": "Solo un capítulo más. Brayan, la dedicatoria dice «Nos vemos al amanecer». Esa señora sabe algo."
+        },
+        {
+          "s": 0,
+          "text": "Esa señora sabe vender libros. Yo te propuse ir a la playa, a Cartagena, y tú elegiste un tren por los Andes."
+        },
+        {
+          "s": 1,
+          "text": "Porque es romántico. Y porque Olga Ríos viajaba en este tren. Lo leí en una entrevista."
+        },
+        {
+          "s": 0,
+          "text": "¿O sea que nuestra luna de miel la organizaste por una escritora?"
+        },
+        {
+          "s": 1,
+          "text": "No solo por eso… también por las montañas. Mira, te prometo que mañana no leo nada. Ni el menú."
+        },
+        {
+          "s": 0,
+          "text": "Eso quiero verlo."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Por qué discuten?",
+          "options": [
+            "Porque Yesenia lee en la luna de miel",
+            "Porque no tienen dinero",
+            "Porque el camarote es pequeño"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Adónde quería ir Brayan?",
+          "options": [
+            "A los Andes",
+            "A Cartagena",
+            "A Medellín"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cómo supo Yesenia que Olga viajaba en ese tren?",
+          "options": [
+            "Se lo dijo un amigo",
+            "Lo vio en la televisión",
+            "Lo leyó en una entrevista"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué piensa Brayan de la promesa de Yesenia?",
+          "options": [
+            "Que no la va a cumplir",
+            "Que es muy romántica",
+            "Que es una buena idea"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué prefieres para unas vacaciones, la playa o la montaña?",
+          "model": "Prefiero la montaña porque no me gusta el calor."
+        },
+        {
+          "q": "¿Has organizado un viaje por una razón extraña?",
+          "model": "Sí, fui a Londres solo para ver un concierto."
+        },
+        {
+          "q": "¿Qué promesa te cuesta cumplir?",
+          "model": "Me cuesta cumplir la promesa de no mirar el móvil en la cama."
+        }
+      ],
+      "gaps": "Esa señora sabe [vender] [libros]. Yo te [propuse] ir a la [playa], a Cartagena, y tú elegiste un tren por los Andes.",
+      "glossary": [
+        {
+          "word": "capítulo",
+          "meaning": "parte de un libro"
+        },
+        {
+          "word": "dedicatoria",
+          "meaning": "texto que escribe el autor para alguien en un libro"
+        },
+        {
+          "word": "propuse",
+          "meaning": "di una idea"
+        },
+        {
+          "word": "o sea",
+          "meaning": "es decir"
+        }
+      ]
+    },
+    {
+      "id": "camarote7",
+      "title": "Las instrucciones del jefe de tren",
+      "place": "El pasillo del coche cama B",
+      "context": "Ramiro le da instrucciones a Celia después de encontrar el camarote vacío.",
+      "speakers": [
+        {
+          "name": "Ramiro",
+          "country": "Bolivia",
+          "voice": "es-BO-MarceloNeural"
+        },
+        {
+          "name": "Celia",
+          "country": "Perú",
+          "voice": "es-PE-CamilaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Celia, escúchame bien. Quiero que revises todos los baños de este coche y del siguiente."
+        },
+        {
+          "s": 1,
+          "text": "Sí, señor. ¿Y si la encuentro?"
+        },
+        {
+          "s": 0,
+          "text": "Me avisas por radio enseguida. Y no le digas nada a los pasajeros. No quiero pánico."
+        },
+        {
+          "s": 1,
+          "text": "Señor Quispe, perdone, pero hay algo raro. La señora me dijo que esta noche no volviera. Como si supiera que se iba a ir."
+        },
+        {
+          "s": 0,
+          "text": "¿Te dijo eso exactamente?"
+        },
+        {
+          "s": 1,
+          "text": "Sí. Y estaba de buen humor. Me dio una propina enorme, cincuenta dólares, y me dijo que era «por las molestias de esta noche»."
+        },
+        {
+          "s": 0,
+          "text": "Entonces lo tenía todo planeado. Ve a buscar al pasajero del ocho. La nota es para él."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué le pide Ramiro a Celia primero?",
+          "options": [
+            "Que revise los baños",
+            "Que despierte a todos",
+            "Que pare el tren"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué no quiere Ramiro?",
+          "options": [
+            "Que llamen a la policía",
+            "Que haya pánico",
+            "Que Celia trabaje sola"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué le dio Olga a Celia?",
+          "options": [
+            "Un libro",
+            "Una carta",
+            "Una propina de cincuenta dólares"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿A qué conclusión llega Ramiro?",
+          "options": [
+            "Que Olga se cayó",
+            "Que Olga lo tenía todo planeado",
+            "Que Celia miente"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué harías tú si encontraras un camarote vacío y una nota?",
+          "model": "Llamaría al jefe de tren y no tocaría nada."
+        },
+        {
+          "q": "¿Das propina normalmente?",
+          "model": "Sí, en los restaurantes dejo un diez por ciento."
+        },
+        {
+          "q": "¿Te gusta planearlo todo o improvisar?",
+          "model": "Me gusta improvisar, pero en los viajes planeo un poco."
+        }
+      ],
+      "gaps": "Me [avisas] por radio [enseguida]. Y no le digas [nada] a los [pasajeros].",
+      "glossary": [
+        {
+          "word": "revises",
+          "meaning": "mires con atención"
+        },
+        {
+          "word": "enseguida",
+          "meaning": "inmediatamente"
+        },
+        {
+          "word": "propina",
+          "meaning": "dinero extra que se da por un servicio"
+        },
+        {
+          "word": "molestias",
+          "meaning": "problemas que causas a otra persona"
+        }
+      ]
+    },
+    {
+      "id": "sobrino",
+      "title": "Un heredero preocupado",
+      "place": "El camarote nueve",
+      "context": "Bruno llama a Inés, la abogada de su tía, para preguntarle por el testamento.",
+      "speakers": [
+        {
+          "name": "Bruno",
+          "country": "Chile",
+          "voice": "es-CL-LorenzoNeural"
+        },
+        {
+          "name": "Inés",
+          "country": "Guatemala",
+          "voice": "es-GT-MartaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Licenciada Barragán, perdone la hora. Soy Bruno Ríos, el sobrino de Olga. Sé que usted viaja en este tren."
+        },
+        {
+          "s": 1,
+          "text": "Lo sé, señor Ríos. Lo vi en la cena. ¿En qué puedo ayudarlo?"
+        },
+        {
+          "s": 0,
+          "text": "Mi tía ha desaparecido. Y necesito saber qué cambió en su testamento en octubre."
+        },
+        {
+          "s": 1,
+          "text": "Lo siento, pero no puedo hablar de eso. Es secreto profesional."
+        },
+        {
+          "s": 0,
+          "text": "Pero yo soy de la familia. ¡Tengo derecho a saberlo!"
+        },
+        {
+          "s": 1,
+          "text": "Tiene derecho a saberlo cuando corresponda. Y le recomiendo que se preocupe primero por su tía. Si usted fuera yo, ¿no le parecería raro que el sobrino pregunte primero por el dinero?"
+        },
+        {
+          "s": 0,
+          "text": "Yo… no lo había pensado así."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿A quién llama Bruno?",
+          "options": [
+            "A la abogada de su tía",
+            "A la policía",
+            "A su madre"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué quiere saber Bruno?",
+          "options": [
+            "Dónde está Inés",
+            "Qué cambió en el testamento",
+            "A qué hora llega el tren"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Por qué Inés no responde?",
+          "options": [
+            "Porque no lo sabe",
+            "Porque tiene sueño",
+            "Por el secreto profesional"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué le hace pensar Inés a Bruno?",
+          "options": [
+            "Que su actitud parece sospechosa",
+            "Que su tía está bien",
+            "Que necesita otro abogado"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Crees que la familia tiene derecho a saberlo todo?",
+          "model": "No, creo que cada persona tiene derecho a su privacidad."
+        },
+        {
+          "q": "¿Qué te parece más importante, el dinero o la familia?",
+          "model": "La familia, aunque el dinero ayuda."
+        },
+        {
+          "q": "¿Te ha dicho alguien algo que te hizo cambiar de opinión?",
+          "model": "Sí, una profesora me hizo ver que era muy impaciente."
+        }
+      ],
+      "gaps": "Lo [siento], pero no puedo [hablar] de eso. Es [secreto] [profesional].",
+      "glossary": [
+        {
+          "word": "testamento",
+          "meaning": "documento que dice quién recibe tus cosas cuando mueres"
+        },
+        {
+          "word": "secreto profesional",
+          "meaning": "obligación de no contar información de un cliente"
+        },
+        {
+          "word": "derecho",
+          "meaning": "algo que la ley te permite"
+        },
+        {
+          "word": "cuando corresponda",
+          "meaning": "en el momento adecuado"
+        }
+      ]
+    },
+    {
+      "id": "cena",
+      "title": "Un pedido muy raro",
+      "place": "La cocina del coche comedor",
+      "context": "Jacinto le cuenta a Wilmer el pedido de Olga.",
+      "speakers": [
+        {
+          "name": "Jacinto",
+          "country": "México",
+          "voice": "es-MX-JorgeNeural"
+        },
+        {
+          "name": "Wilmer",
+          "country": "Venezuela",
+          "voice": "es-VE-SebastianNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Wilmer, ¿a ti también te pidió algo raro la señora del siete?"
+        },
+        {
+          "s": 1,
+          "text": "Sí, una botella de pisco y dos vasos. ¿Y a ti?"
+        },
+        {
+          "s": 0,
+          "text": "Cena para dos y un termo de agua caliente. Me dijo que era para la cabina. Yo pensé que se había equivocado y quería decir camarote."
+        },
+        {
+          "s": 1,
+          "text": "No creo. Esa señora es escritora. Las escritoras no se equivocan con las palabras."
+        },
+        {
+          "s": 0,
+          "text": "Eso mismo me dijo Doña Fela. Ahora me siento tonto."
+        },
+        {
+          "s": 1,
+          "text": "Tranquilo, hermano. Mira, si sumamos todo, dos vasos, dos cenas, un termo… esa señora no iba a desaparecer sola. Iba a encontrarse con alguien."
+        },
+        {
+          "s": 0,
+          "text": "¿Con quién? ¿Con el maquinista?"
+        },
+        {
+          "s": 1,
+          "text": "Eso lo dijiste tú, no yo."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué compró Olga en el bar?",
+          "options": [
+            "Pisco y dos vasos",
+            "Vino y una copa",
+            "Cerveza"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué pensó Jacinto de la palabra «cabina»?",
+          "options": [
+            "Que era correcta",
+            "Que Olga se había equivocado",
+            "Que era un código"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué piensa Wilmer de las escritoras?",
+          "options": [
+            "Que hablan mucho",
+            "Que son raras",
+            "Que no se equivocan con las palabras"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué conclusión saca Wilmer?",
+          "options": [
+            "Que Olga quería encontrarse con alguien",
+            "Que Olga estaba borracha",
+            "Que Olga tenía hambre"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Te has equivocado alguna vez con una palabra importante?",
+          "model": "Sí, en Chile quise una cosa y me trajeron otra."
+        },
+        {
+          "q": "¿Te sientes tonto cuando te equivocas?",
+          "model": "A veces, pero intento reírme de mí mismo."
+        },
+        {
+          "q": "¿Qué pedirías para una cena especial con alguien?",
+          "model": "Pediría pasta, vino tinto y un postre de chocolate."
+        }
+      ],
+      "gaps": "No [creo]. Esa señora es [escritora]. Las escritoras no se [equivocan] con las [palabras].",
+      "glossary": [
+        {
+          "word": "termo",
+          "meaning": "botella que mantiene el agua caliente"
+        },
+        {
+          "word": "cabina",
+          "meaning": "lugar donde va el maquinista"
+        },
+        {
+          "word": "sumamos",
+          "meaning": "ponemos todo junto"
+        },
+        {
+          "word": "hermano",
+          "meaning": "forma amistosa de llamar a un amigo"
+        }
+      ]
+    },
+    {
+      "id": "sobremesa",
+      "title": "Pilar tiene una teoría",
+      "place": "La mesa cuatro",
+      "context": "Pilar le explica a Horacio su teoría sobre la desaparición.",
+      "speakers": [
+        {
+          "name": "Pilar",
+          "country": "España",
+          "voice": "es-ES-ElviraNeural"
+        },
+        {
+          "name": "Horacio",
+          "country": "Cuba",
+          "voice": "es-CU-ManuelNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Horacio, tengo una teoría. Escúchame sin poner esa cara."
+        },
+        {
+          "s": 1,
+          "text": "No pongo ninguna cara. Es mi cara de siempre."
+        },
+        {
+          "s": 0,
+          "text": "Olga nos preguntó a qué hora paraba el tren en Puente del Inca. Llevaba una urna. Y en sus novelas, los personajes siempre vuelven al lugar donde fueron felices."
+        },
+        {
+          "s": 1,
+          "text": "¿Y entonces?"
+        },
+        {
+          "s": 0,
+          "text": "Entonces creo que va a bajar allí para esparcir las cenizas de su marido. Y luego, quién sabe."
+        },
+        {
+          "s": 1,
+          "text": "Pilar, eso no es una desaparición. Es una despedida."
+        },
+        {
+          "s": 0,
+          "text": "Exacto. Y por eso no se lo dijo a nadie. Porque las despedidas de verdad se hacen a solas."
+        },
+        {
+          "s": 1,
+          "text": "Te voy a decir algo: en cuarenta años de policía, pocas veces vi una teoría tan buena."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué tiene Pilar?",
+          "options": [
+            "Una teoría",
+            "Una pista falsa",
+            "Un problema de salud"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué hacen los personajes de las novelas de Olga?",
+          "options": [
+            "Siempre mueren",
+            "Vuelven al lugar donde fueron felices",
+            "Nunca se despiden"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué cree Pilar que va a hacer Olga en Puente del Inca?",
+          "options": [
+            "Escaparse a Chile",
+            "Comprar algo",
+            "Esparcir las cenizas de su marido"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué opina Horacio de la teoría?",
+          "options": [
+            "Que es muy buena",
+            "Que es ridícula",
+            "Que es peligrosa"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Hay un lugar donde fuiste muy feliz y al que te gustaría volver?",
+          "model": "Sí, la casa de mis abuelos en el campo."
+        },
+        {
+          "q": "¿Crees que las despedidas importantes se hacen a solas?",
+          "model": "Depende. Yo prefiero despedirme con gente cerca."
+        },
+        {
+          "q": "¿Tienes alguna teoría sobre algún misterio famoso?",
+          "model": "Creo que el monstruo del lago Ness es un tronco."
+        }
+      ],
+      "gaps": "[Exacto]. Y por eso no se lo dijo a [nadie]. Porque las [despedidas] de verdad se hacen [a solas].",
+      "glossary": [
+        {
+          "word": "teoría",
+          "meaning": "idea para explicar algo"
+        },
+        {
+          "word": "esparcir",
+          "meaning": "tirar algo en distintas direcciones"
+        },
+        {
+          "word": "despedida",
+          "meaning": "momento de decir adiós"
+        },
+        {
+          "word": "a solas",
+          "meaning": "sin nadie más"
+        }
+      ]
+    },
+    {
+      "id": "barman",
+      "title": "Consejos de barra",
+      "place": "La barra del coche bar",
+      "context": "Nelson le cuenta sus problemas a Wilmer, que le da consejos.",
+      "speakers": [
+        {
+          "name": "Nelson",
+          "country": "República Dominicana",
+          "voice": "es-DO-EmilioNeural"
+        },
+        {
+          "name": "Wilmer",
+          "country": "Venezuela",
+          "voice": "es-VE-SebastianNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Wilmer, mi mujer me ha escrito. Dice que si pierdo más dinero en apuestas, me deja."
+        },
+        {
+          "s": 1,
+          "text": "¿Y cuánto perdiste este mes?"
+        },
+        {
+          "s": 0,
+          "text": "Bastante. Pero esta noche puedo recuperarlo todo con la apuesta de la señora desaparecida."
+        },
+        {
+          "s": 1,
+          "text": "Nelson, te voy a dar un consejo gratis. Primero, deja de apostar. Segundo, llama a tu mujer mañana y dile la verdad. Y tercero, págame las cervezas."
+        },
+        {
+          "s": 0,
+          "text": "¿Y si gano la apuesta?"
+        },
+        {
+          "s": 1,
+          "text": "No vas a ganar. Te lo digo yo, que vi a esa señora comprar dos vasos. Una mujer que compra dos vasos no se escapa en taxi."
+        },
+        {
+          "s": 0,
+          "text": "Bueno… entonces, ¿apuesto lo contrario?"
+        },
+        {
+          "s": 1,
+          "text": "Hermano, no has entendido nada."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué le ha escrito la mujer a Nelson?",
+          "options": [
+            "Que lo va a dejar si sigue apostando",
+            "Que lo espera en Santiago",
+            "Que tiene una sorpresa"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué quiere hacer Nelson esta noche?",
+          "options": [
+            "Dejar de beber",
+            "Recuperar el dinero con una apuesta",
+            "Llamar a su mujer"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cuál es el segundo consejo de Wilmer?",
+          "options": [
+            "Pagar las cervezas",
+            "Dejar de apostar",
+            "Llamar a su mujer y decirle la verdad"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué demuestra la última pregunta de Nelson?",
+          "options": [
+            "Que no ha entendido el consejo",
+            "Que va a cambiar",
+            "Que está muy cansado"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué consejo le darías a alguien que apuesta demasiado?",
+          "model": "Le diría que pida ayuda y que no lleve tarjetas encima."
+        },
+        {
+          "q": "¿Escuchas los consejos de los demás?",
+          "model": "Los escucho, pero no siempre los sigo."
+        },
+        {
+          "q": "¿Quién te da los mejores consejos?",
+          "model": "Mi hermana mayor me da los mejores consejos."
+        }
+      ],
+      "gaps": "Primero, deja de [apostar]. Segundo, llama a tu [mujer] mañana y dile la [verdad]. Y tercero, [págame] las cervezas.",
+      "glossary": [
+        {
+          "word": "apuestas",
+          "meaning": "juego en el que pones dinero"
+        },
+        {
+          "word": "recuperarlo",
+          "meaning": "volver a tenerlo"
+        },
+        {
+          "word": "consejo",
+          "meaning": "recomendación"
+        },
+        {
+          "word": "lo contrario",
+          "meaning": "lo opuesto"
+        }
+      ]
+    },
+    {
+      "id": "cartas",
+      "title": "La abogada y el viajante",
+      "place": "La mesa de juego del coche bar",
+      "context": "Inés y Nelson hablan de sus trabajos mientras juegan.",
+      "speakers": [
+        {
+          "name": "Inés",
+          "country": "Guatemala",
+          "voice": "es-GT-MartaNeural"
+        },
+        {
+          "name": "Nelson",
+          "country": "República Dominicana",
+          "voice": "es-DO-EmilioNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Licenciada, ¿y usted qué tipo de abogada es? ¿De divorcios?"
+        },
+        {
+          "s": 0,
+          "text": "De herencias. Testamentos, familias que se pelean por una casa, hermanos que no se hablan durante veinte años."
+        },
+        {
+          "s": 1,
+          "text": "Qué trabajo tan triste."
+        },
+        {
+          "s": 0,
+          "text": "Al contrario, es muy divertido. La gente muestra cómo es de verdad cuando hay dinero en la mesa. Como tú ahora, con ese as en la manga."
+        },
+        {
+          "s": 1,
+          "text": "¿Qué as?"
+        },
+        {
+          "s": 0,
+          "text": "Te voy a contar algo. Tengo una clienta que viaja en este tren. Ha cambiado su testamento y su familia todavía no lo sabe. Mañana va a haber una sorpresa muy grande."
+        },
+        {
+          "s": 1,
+          "text": "¿Para bien o para mal?"
+        },
+        {
+          "s": 0,
+          "text": "Depende de quién la reciba."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿De qué es especialista Inés?",
+          "options": [
+            "De herencias",
+            "De divorcios",
+            "De accidentes"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Por qué le parece divertido su trabajo?",
+          "options": [
+            "Porque gana mucho",
+            "Porque la gente muestra cómo es de verdad",
+            "Porque viaja mucho"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué tiene Nelson en la manga?",
+          "options": [
+            "Un pañuelo",
+            "Dinero",
+            "Un as"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué sugiere Inés sobre la sorpresa?",
+          "options": [
+            "Que será buena para unos y mala para otros",
+            "Que será buena para todos",
+            "Que no es importante"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué trabajo te parece triste y cuál divertido?",
+          "model": "Me parece divertido el trabajo de guía turístico."
+        },
+        {
+          "q": "¿Crees que el dinero muestra cómo es la gente de verdad?",
+          "model": "Sí, creo que con el dinero se conoce a las personas."
+        },
+        {
+          "q": "¿Te gustan las sorpresas?",
+          "model": "Me gustan las buenas, claro."
+        }
+      ],
+      "gaps": "Al [contrario], es muy [divertido]. La gente muestra cómo es de [verdad] cuando hay [dinero] en la mesa.",
+      "glossary": [
+        {
+          "word": "herencias",
+          "meaning": "bienes que se reciben cuando alguien muere"
+        },
+        {
+          "word": "se pelean",
+          "meaning": "discuten fuerte"
+        },
+        {
+          "word": "clienta",
+          "meaning": "mujer que usa los servicios de un profesional"
+        },
+        {
+          "word": "para bien o para mal",
+          "meaning": "con un resultado bueno o malo"
+        }
+      ]
+    },
+    {
+      "id": "astronoma",
+      "title": "La astrónoma recuerda",
+      "place": "El coche mirador",
+      "context": "Amaranta le cuenta a Joel por qué se hizo astrónoma.",
+      "speakers": [
+        {
+          "name": "Joel",
+          "country": "Puerto Rico",
+          "voice": "es-PR-VictorNeural"
+        },
+        {
+          "name": "Amaranta",
+          "country": "Ecuador",
+          "voice": "es-EC-AndreaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Doctora, ¿desde cuándo le interesan las estrellas?"
+        },
+        {
+          "s": 1,
+          "text": "Desde los ocho años. Mi padre trabajaba en el observatorio de Quito. Me despertaba a las cuatro de la mañana para mirar el cielo con él."
+        },
+        {
+          "s": 0,
+          "text": "¿No le molestaba levantarse tan temprano?"
+        },
+        {
+          "s": 1,
+          "text": "Al contrario. Era el mejor momento del día. Mi padre decía que las estrellas son cartas que llegan tarde: la luz que vemos salió hace miles de años."
+        },
+        {
+          "s": 0,
+          "text": "Qué bonito. ¿Y su padre sigue mirando el cielo?"
+        },
+        {
+          "s": 1,
+          "text": "Murió hace diez años. Por eso esta noche entiendo a la señora del abrigo rojo. La vi en Puente del Inca con una caja en los brazos. Creo que se despedía de alguien."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Desde cuándo le interesan las estrellas a Amaranta?",
+          "options": [
+            "Desde los ocho años",
+            "Desde la universidad",
+            "Desde hace diez años"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Dónde trabajaba su padre?",
+          "options": [
+            "En una escuela",
+            "En un tren",
+            "En el observatorio de Quito"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué decía su padre de las estrellas?",
+          "options": [
+            "Que son fuego",
+            "Que son cartas que llegan tarde",
+            "Que son ojos"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Por qué Amaranta entiende a la señora del abrigo rojo?",
+          "options": [
+            "Porque también perdió a alguien querido",
+            "Porque la conoce",
+            "Porque también escribe"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué te interesaba cuando tenías ocho años?",
+          "model": "Me interesaban los dinosaurios."
+        },
+        {
+          "q": "¿Qué te enseñó tu padre o tu madre?",
+          "model": "Mi madre me enseñó a cocinar."
+        },
+        {
+          "q": "¿Cuál es tu momento favorito del día?",
+          "model": "Mi momento favorito es la mañana, con el primer café."
+        }
+      ],
+      "gaps": "Mi padre decía que las [estrellas] son [cartas] que llegan [tarde]: la [luz] que vemos salió hace miles de años.",
+      "glossary": [
+        {
+          "word": "observatorio",
+          "meaning": "lugar para estudiar el cielo"
+        },
+        {
+          "word": "temprano",
+          "meaning": "pronto, al principio del día"
+        },
+        {
+          "word": "se despedía",
+          "meaning": "decía adiós"
+        }
+      ]
+    },
+    {
+      "id": "directo",
+      "title": "El hermano que no quería venir",
+      "place": "La cúpula del coche mirador",
+      "context": "Joel habla con Valentina mientras su hermana transmite.",
+      "speakers": [
+        {
+          "name": "Valentina",
+          "country": "Uruguay",
+          "voice": "es-UY-ValentinaNeural"
+        },
+        {
+          "name": "Joel",
+          "country": "Puerto Rico",
+          "voice": "es-PR-VictorNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "¿Tú también eres influencer, como tu hermana?"
+        },
+        {
+          "s": 1,
+          "text": "No, por favor. Yo estudio ingeniería en San Juan. Mi hermana me pagó el viaje para que le llevara la cámara."
+        },
+        {
+          "s": 0,
+          "text": "¿Y te gusta viajar con ella?"
+        },
+        {
+          "s": 1,
+          "text": "Me gusta y no me gusta. Ella siempre quiere grabar y yo quiero mirar. Por ejemplo, esta noche vi las mejores estrellas de mi vida y no pude disfrutarlas porque tenía que sujetar el trípode."
+        },
+        {
+          "s": 0,
+          "text": "Pues dile que necesitas un día libre."
+        },
+        {
+          "s": 1,
+          "text": "Ya se lo dije. Me contestó que el día libre era hoy y que me lo estaba perdiendo por quejarme."
+        },
+        {
+          "s": 0,
+          "text": "Ja, tiene sentido del humor."
+        },
+        {
+          "s": 1,
+          "text": "Sí, eso no se lo puedo negar."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué hace Joel en la vida?",
+          "options": [
+            "Estudia ingeniería",
+            "Es influencer",
+            "Es fotógrafo"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Por qué viaja Joel con su hermana?",
+          "options": [
+            "Porque quería conocer los Andes",
+            "Porque ella le pagó el viaje para llevar la cámara",
+            "Porque trabaja en el tren"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué no pudo disfrutar Joel esta noche?",
+          "options": [
+            "La cena",
+            "La música",
+            "Las estrellas"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué le contestó Kiara cuando él pidió un día libre?",
+          "options": [
+            "Que el día libre era hoy",
+            "Que no tenía días libres",
+            "Que mañana"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Te gusta viajar con tu familia?",
+          "model": "Me gusta, pero solo unos días."
+        },
+        {
+          "q": "¿Prefieres grabar los momentos o vivirlos?",
+          "model": "Prefiero vivirlos y hacer pocas fotos."
+        },
+        {
+          "q": "¿Qué le pedirías a alguien que viaja contigo?",
+          "model": "Le pediría un poco de tiempo para estar solo."
+        }
+      ],
+      "gaps": "Ella siempre quiere [grabar] y yo quiero [mirar]. Por ejemplo, esta noche vi las mejores [estrellas] de mi [vida] y no pude disfrutarlas porque tenía que sujetar el trípode.",
+      "glossary": [
+        {
+          "word": "influencer",
+          "meaning": "persona famosa en las redes sociales"
+        },
+        {
+          "word": "sujetar",
+          "meaning": "tener algo con las manos"
+        },
+        {
+          "word": "trípode",
+          "meaning": "soporte de tres patas para la cámara"
+        },
+        {
+          "word": "negar",
+          "meaning": "decir que algo no es verdad"
+        }
+      ]
+    },
+    {
+      "id": "perro",
+      "title": "Un perro con buen olfato",
+      "place": "El furgón",
+      "context": "Horacio baja al furgón y habla con Cosme sobre Tango.",
+      "speakers": [
+        {
+          "name": "Horacio",
+          "country": "Cuba",
+          "voice": "es-CU-ManuelNeural"
+        },
+        {
+          "name": "Cosme",
+          "country": "Honduras",
+          "voice": "es-HN-CarlosNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Buenas noches. Me dijeron que hay un perro que no deja de aullar."
+        },
+        {
+          "s": 1,
+          "text": "Sí, señor. Se llama Tango. Lleva toda la noche mirando la puerta de adelante."
+        },
+        {
+          "s": 0,
+          "text": "En Cuba trabajé con perros policía. Cuando un perro mira siempre en la misma dirección, es porque sigue un olor que conoce."
+        },
+        {
+          "s": 1,
+          "text": "Pues conoce el perfume de una señora. La del abrigo rojo. Le dio jamón en Mendoza."
+        },
+        {
+          "s": 0,
+          "text": "¿La señora desaparecida?"
+        },
+        {
+          "s": 1,
+          "text": "Esa misma. ¿Usted cree que el perro sabe dónde está?"
+        },
+        {
+          "s": 0,
+          "text": "Le diría que es muy probable. Los perros no mienten. Las personas, en cambio, mienten constantemente. Si yo fuera usted, abriría la jaula y lo seguiría."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Por qué baja Horacio al furgón?",
+          "options": [
+            "Porque le hablaron de un perro que aúlla",
+            "Porque busca su maleta",
+            "Porque quiere fumar"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Con qué trabajó Horacio en Cuba?",
+          "options": [
+            "Con caballos",
+            "Con perros policía",
+            "Con gatos"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué significa, según Horacio, que un perro mire siempre en la misma dirección?",
+          "options": [
+            "Que tiene miedo",
+            "Que tiene hambre",
+            "Que sigue un olor que conoce"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué le recomienda Horacio a Cosme?",
+          "options": [
+            "Abrir la jaula y seguir al perro",
+            "Darle de comer",
+            "Llamar al dueño"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Confías más en los animales o en las personas?",
+          "model": "Confío más en los animales, la verdad."
+        },
+        {
+          "q": "¿Has visto a un perro policía trabajar?",
+          "model": "Sí, en el aeropuerto, buscando drogas."
+        },
+        {
+          "q": "¿Qué harías tú en el lugar de Cosme?",
+          "model": "Abriría la jaula, pero con la correa puesta."
+        }
+      ],
+      "gaps": "Le diría que es muy [probable]. Los [perros] no [mienten]. Las personas, en cambio, mienten [constantemente].",
+      "glossary": [
+        {
+          "word": "aullar",
+          "meaning": "hacer un sonido largo como un lobo"
+        },
+        {
+          "word": "perros policía",
+          "meaning": "perros entrenados para ayudar a la policía"
+        },
+        {
+          "word": "en cambio",
+          "meaning": "por el contrario"
+        },
+        {
+          "word": "jaula",
+          "meaning": "caja con barras para animales"
+        }
+      ]
+    },
+    {
+      "id": "violonchelo",
+      "title": "Antes del concierto",
+      "place": "El furgón",
+      "context": "Valentina habla con Rocío sobre los nervios antes de tocar.",
+      "speakers": [
+        {
+          "name": "Rocío",
+          "country": "Costa Rica",
+          "voice": "es-CR-MariaNeural"
+        },
+        {
+          "name": "Valentina",
+          "country": "Uruguay",
+          "voice": "es-UY-ValentinaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Disculpa, ¿tú eres la violonchelista? Don Aniceto me mandó a buscar algo."
+        },
+        {
+          "s": 1,
+          "text": "Sí, soy yo. ¿Qué necesita?"
+        },
+        {
+          "s": 0,
+          "text": "Pues… nada importante. Oye, ¿no te pones nerviosa antes de un concierto?"
+        },
+        {
+          "s": 1,
+          "text": "Muchísimo. La noche antes no duermo, me duele el estómago y pienso que voy a olvidar todas las notas."
+        },
+        {
+          "s": 0,
+          "text": "¿Y qué haces?"
+        },
+        {
+          "s": 1,
+          "text": "Mi abuela me dio un consejo: que toque para una sola persona del público, no para todos. Así parece una conversación."
+        },
+        {
+          "s": 0,
+          "text": "Es un buen consejo. Yo hoy también estoy nerviosa. Tengo que guardar un secreto y no se me da bien."
+        },
+        {
+          "s": 1,
+          "text": "¿Un secreto? ¿Sobre la señora desaparecida?"
+        },
+        {
+          "s": 0,
+          "text": "Me tengo que ir."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Por qué baja Rocío al furgón?",
+          "options": [
+            "Aniceto la mandó a buscar algo",
+            "Para escuchar música",
+            "Para ver al perro"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué le pasa a Valentina la noche antes de un concierto?",
+          "options": [
+            "Duerme muy bien",
+            "No duerme y le duele el estómago",
+            "Come mucho"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué le aconsejó su abuela?",
+          "options": [
+            "Que no mire al público",
+            "Que practique más",
+            "Que toque para una sola persona"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué se puede deducir del final?",
+          "options": [
+            "Que Rocío sabe algo de la señora",
+            "Que Rocío está enferma",
+            "Que Rocío quiere tocar"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué te pone nervioso?",
+          "model": "Me pone nervioso hablar en público."
+        },
+        {
+          "q": "¿Qué haces para calmarte antes de algo importante?",
+          "model": "Respiro hondo y escucho música."
+        },
+        {
+          "q": "¿Se te da bien guardar secretos?",
+          "model": "Sí, se me da muy bien."
+        }
+      ],
+      "gaps": "Mi abuela me dio un [consejo]: que toque para una sola [persona] del [público], no para [todos].",
+      "glossary": [
+        {
+          "word": "violonchelista",
+          "meaning": "persona que toca el violonchelo"
+        },
+        {
+          "word": "nerviosa",
+          "meaning": "intranquila, preocupada"
+        },
+        {
+          "word": "notas",
+          "meaning": "sonidos de la música"
+        },
+        {
+          "word": "no se me da bien",
+          "meaning": "no lo hago bien"
+        }
+      ]
+    },
+    {
+      "id": "nieve",
+      "title": "Lo que vio el jefe de estación",
+      "place": "El andén de Puente del Inca",
+      "context": "Teófilo le cuenta a Ramiro lo que vio a las tres y diez.",
+      "speakers": [
+        {
+          "name": "Teófilo",
+          "country": "Guatemala",
+          "voice": "es-GT-AndresNeural"
+        },
+        {
+          "name": "Ramiro",
+          "country": "Bolivia",
+          "voice": "es-BO-MarceloNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Jefe, le cuento lo que vi. A las tres y diez una señora bajó del tren. Caminó despacio hasta el puente, abrió una cajita y echó algo al río."
+        },
+        {
+          "s": 1,
+          "text": "¿Algo? ¿Qué cosa?"
+        },
+        {
+          "s": 0,
+          "text": "Parecía ceniza. Después se quedó un rato hablando sola. Y se rio, ¿sabe? No parecía triste. Parecía feliz."
+        },
+        {
+          "s": 1,
+          "text": "¿Y luego volvió al coche cama?"
+        },
+        {
+          "s": 0,
+          "text": "No. Volvió por adelante, hacia la locomotora. Alguien le abrió la puerta desde dentro."
+        },
+        {
+          "s": 1,
+          "text": "Entonces está en el tren. Gracias, Don Teófilo. Nos tenemos que ir, la nieve no espera."
+        },
+        {
+          "s": 0,
+          "text": "Vaya tranquilo. Y si la encuentra, dígale que el río estaba precioso esta noche."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué hizo la señora en el puente?",
+          "options": [
+            "Echó algo al río",
+            "Hizo fotos",
+            "Se cayó"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cómo parecía la señora?",
+          "options": [
+            "Triste",
+            "Feliz",
+            "Enfadada"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Por dónde volvió al tren?",
+          "options": [
+            "Por el coche cama",
+            "Por el furgón",
+            "Por adelante, hacia la locomotora"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué deduce Ramiro?",
+          "options": [
+            "Que la señora está en el tren",
+            "Que la señora se quedó en el pueblo",
+            "Que Teófilo miente"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Has visto alguna vez a alguien despedirse de un ser querido?",
+          "model": "Sí, en el funeral de mi abuelo."
+        },
+        {
+          "q": "¿Crees que se puede estar feliz en una despedida?",
+          "model": "Sí, si recuerdas los buenos momentos."
+        },
+        {
+          "q": "¿Qué mensaje le dejarías a alguien que no ves?",
+          "model": "Le diría que lo echo de menos."
+        }
+      ],
+      "gaps": "Parecía [ceniza]. Después se quedó un rato [hablando] [sola]. Y se rio, ¿sabe? No parecía [triste].",
+      "glossary": [
+        {
+          "word": "cajita",
+          "meaning": "caja pequeña"
+        },
+        {
+          "word": "ceniza",
+          "meaning": "polvo gris que queda cuando algo se quema"
+        },
+        {
+          "word": "vaya tranquilo",
+          "meaning": "no se preocupe"
+        },
+        {
+          "word": "precioso",
+          "meaning": "muy bonito"
+        }
+      ]
+    },
+    {
+      "id": "frontera",
+      "title": "Una solución para Ulises",
+      "place": "El control de Gendarmería",
+      "context": "Ramiro intenta ayudar a Ulises con la gendarme.",
+      "speakers": [
+        {
+          "name": "Ramiro",
+          "country": "Bolivia",
+          "voice": "es-BO-MarceloNeural"
+        },
+        {
+          "name": "Yolanda",
+          "country": "Nicaragua",
+          "voice": "es-NI-YolandaNeural"
+        },
+        {
+          "name": "Ulises",
+          "country": "El Salvador",
+          "voice": "es-SV-RodrigoNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Cabo Perrone, ¿hay alguna solución para el muchacho? Es un buen pasajero, no ha causado problemas."
+        },
+        {
+          "s": 1,
+          "text": "Sin documento no puede entrar en Chile. Son las normas."
+        },
+        {
+          "s": 2,
+          "text": "Tengo una foto del pasaporte en el móvil. Mi madre me obligó a hacerla."
+        },
+        {
+          "s": 1,
+          "text": "A ver… La foto está bien. Le puedo hacer un permiso provisional, pero en Santiago tiene que ir al consulado de El Salvador en menos de tres días."
+        },
+        {
+          "s": 2,
+          "text": "¡Gracias! Le prometo que voy mañana mismo."
+        },
+        {
+          "s": 1,
+          "text": "Y llame a su madre. Le ha salvado el viaje."
+        },
+        {
+          "s": 0,
+          "text": "Gracias, cabo. ¿Y sobre la señora Ríos, tiene alguna novedad?"
+        },
+        {
+          "s": 1,
+          "text": "La misma: no ha cruzado la frontera. Para mí, sigue en su tren."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué pide Ramiro a la cabo?",
+          "options": [
+            "Una solución para Ulises",
+            "Un café",
+            "Una lista de pasajeros"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué tiene Ulises en el móvil?",
+          "options": [
+            "Un billete",
+            "Una foto del pasaporte",
+            "Un mensaje del consulado"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué tiene que hacer Ulises en Santiago?",
+          "options": [
+            "Comprar otro billete",
+            "Llamar a la policía",
+            "Ir al consulado en menos de tres días"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué dice la cabo sobre la señora Ríos?",
+          "options": [
+            "Que sigue en el tren",
+            "Que cruzó la frontera",
+            "Que está en el hospital"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Tienes fotos de tus documentos en el móvil?",
+          "model": "Sí, tengo una foto del pasaporte y del carné."
+        },
+        {
+          "q": "¿Has tenido que ir a un consulado?",
+          "model": "Sí, para pedir un visado."
+        },
+        {
+          "q": "¿Qué consejo de tu madre te ha salvado alguna vez?",
+          "model": "Llevar siempre dinero en efectivo."
+        }
+      ],
+      "gaps": "Le puedo hacer un [permiso] [provisional], pero en Santiago tiene que ir al [consulado] de El Salvador en menos de tres [días].",
+      "glossary": [
+        {
+          "word": "muchacho",
+          "meaning": "chico joven"
+        },
+        {
+          "word": "normas",
+          "meaning": "reglas"
+        },
+        {
+          "word": "provisional",
+          "meaning": "que no es definitivo"
+        },
+        {
+          "word": "consulado",
+          "meaning": "oficina de un país en otro país"
+        }
+      ]
+    },
+    {
+      "id": "maquinista",
+      "title": "Rocío no sabe mentir",
+      "place": "La cabina de la locomotora",
+      "context": "Rocío le pide a Aniceto que cuente la verdad.",
+      "speakers": [
+        {
+          "name": "Rocío",
+          "country": "Costa Rica",
+          "voice": "es-CR-MariaNeural"
+        },
+        {
+          "name": "Aniceto",
+          "country": "Costa Rica",
+          "voice": "es-CR-JuanNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Don Aniceto, no puedo más. Celia me preguntó si había visto a la señora y le dije que no. Me puse roja como una amapola."
+        },
+        {
+          "s": 1,
+          "text": "Rocío, solo faltan dos horas. Al amanecer, ella misma lo va a contar."
+        },
+        {
+          "s": 0,
+          "text": "¿Y si llaman a la policía antes? ¿Y si nos despiden?"
+        },
+        {
+          "s": 1,
+          "text": "A mí no me pueden despedir: me jubilo el mes que viene. Y a ti te voy a proteger. Te lo prometo."
+        },
+        {
+          "s": 0,
+          "text": "¿Por qué hace esto?"
+        },
+        {
+          "s": 1,
+          "text": "Porque hace cincuenta años, una pareja me pidió ver el amanecer desde aquí. Fue el día más bonito de mi vida. Ella ha vuelto para despedirse de él. ¿Tú le dirías que no?"
+        },
+        {
+          "s": 0,
+          "text": "No… supongo que no."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Por qué está nerviosa Rocío?",
+          "options": [
+            "Porque le mintió a Celia",
+            "Porque el tren va tarde",
+            "Porque tiene frío"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cuándo va a contar la señora la verdad?",
+          "options": [
+            "Nunca",
+            "Al amanecer",
+            "En Mendoza"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Por qué no pueden despedir a Aniceto?",
+          "options": [
+            "Porque es el jefe",
+            "Porque es amigo del director",
+            "Porque se jubila el mes que viene"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué decide Rocío al final?",
+          "options": [
+            "Guardar el secreto",
+            "Contárselo a todos",
+            "Llamar a la policía"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Te pones rojo cuando mientes?",
+          "model": "Sí, se me nota mucho."
+        },
+        {
+          "q": "¿Has guardado un secreto por un amigo?",
+          "model": "Sí, guardé el secreto de una fiesta sorpresa."
+        },
+        {
+          "q": "¿Cuál fue el día más bonito de tu vida?",
+          "model": "El día que nació mi sobrina."
+        }
+      ],
+      "gaps": "A mí no me pueden [despedir]: me [jubilo] el [mes] que [viene].",
+      "glossary": [
+        {
+          "word": "no puedo más",
+          "meaning": "estoy muy cansado de esta situación"
+        },
+        {
+          "word": "despiden",
+          "meaning": "quitan el trabajo a alguien"
+        },
+        {
+          "word": "proteger",
+          "meaning": "cuidar de un peligro"
+        },
+        {
+          "word": "supongo",
+          "meaning": "creo, pero no estoy seguro"
+        }
+      ]
+    },
+    {
+      "id": "amanecer",
+      "title": "El anuncio de la llegada",
+      "place": "El andén de Los Andes",
+      "context": "Gloria anuncia la llegada y Ramiro habla con Olga en el andén.",
+      "speakers": [
+        {
+          "name": "Gloria",
+          "country": "Estados Unidos",
+          "voice": "es-US-PalomaNeural"
+        },
+        {
+          "name": "Ramiro",
+          "country": "Bolivia",
+          "voice": "es-BO-MarceloNeural"
+        },
+        {
+          "name": "Olga",
+          "country": "Chile",
+          "voice": "es-CL-CatalinaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Señores pasajeros, bienvenidos a Los Andes. Son las seis y cuarenta. Les recordamos que deben pasar por el control de equipaje antes de salir de la estación."
+        },
+        {
+          "s": 1,
+          "text": "Señora Ríos, nos ha dado una noche terrible. Toda la tripulación la ha buscado."
+        },
+        {
+          "s": 2,
+          "text": "Lo sé, Ramiro, y le pido perdón. Pero si se lo hubiera pedido, usted me habría dicho que no."
+        },
+        {
+          "s": 1,
+          "text": "Por supuesto que le habría dicho que no."
+        },
+        {
+          "s": 2,
+          "text": "¿Ve? Por eso no le pregunté. Ahora, si me permite, le voy a invitar a un desayuno. Y a su tripulación también. Y al pasajero del ocho, que se lo ha ganado."
+        },
+        {
+          "s": 1,
+          "text": "Acepto el desayuno. Pero el informe se lo voy a escribir igual."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué deben hacer los pasajeros antes de salir?",
+          "options": [
+            "Pasar por el control de equipaje",
+            "Pagar el billete",
+            "Devolver las mantas"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cómo fue la noche para Ramiro?",
+          "options": [
+            "Tranquila",
+            "Terrible",
+            "Divertida"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Por qué Olga no le pidió permiso a Ramiro?",
+          "options": [
+            "Porque no lo conocía",
+            "Porque no tenía tiempo",
+            "Porque él le habría dicho que no"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué va a hacer Ramiro a pesar del desayuno?",
+          "options": [
+            "Escribir el informe",
+            "Llamar a la policía",
+            "Bajar del tren"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Has hecho algo sin pedir permiso porque sabías la respuesta?",
+          "model": "Sí, de niño me comía las galletas sin preguntar."
+        },
+        {
+          "q": "¿Cómo pides perdón cuando te equivocas?",
+          "model": "Lo digo directamente e intento arreglarlo."
+        },
+        {
+          "q": "¿Qué desayuno te gustaría después de una noche sin dormir?",
+          "model": "Un café grande con huevos y pan tostado."
+        }
+      ],
+      "gaps": "Lo sé, Ramiro, y le pido [perdón]. Pero si se lo hubiera [pedido], usted me habría [dicho] que [no].",
+      "glossary": [
+        {
+          "word": "tripulación",
+          "meaning": "personas que trabajan en un tren, barco o avión"
+        },
+        {
+          "word": "por supuesto",
+          "meaning": "claro"
+        },
+        {
+          "word": "se lo ha ganado",
+          "meaning": "lo merece"
+        },
+        {
+          "word": "informe",
+          "meaning": "documento que explica lo que pasó"
+        }
+      ]
+    }
+  ]
+}

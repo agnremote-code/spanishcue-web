@@ -1,0 +1,17 @@
+type Pair = { es: string; en: string };
+export type CastMember = { name: string; full: string; role: string; gender: 'f' | 'm'; voice: string; country: string };
+export type StoryScene = { id: string; sector: string; floor: number; cast: string[] };
+export type Notebook = { clues: ({ id: string } & Pair)[]; total: number; hypothesis: { id: string } & Pair; solved: boolean };
+export const CAST: Record<string, CastMember>;
+export const STORY: StoryScene[];
+export const STORY_IDS: string[];
+export function castByName(name: string): string | null;
+export const LEVEL_IDS: string[];
+export const SCENE_WORDS: Record<string, [number, number]>;
+export const MOODS: string[];
+export const TRAIN: { name: string; route: string; cabin: number; start: [number, number]; arrival: [number, number] };
+export function nightClock(done: number, total?: number): string;
+export function nightProgress(clock: string): number;
+export const CLUES: Record<string, Pair>;
+export function hypothesis(done: string[]): { id: string } & Pair;
+export function notebook(done: string[]): Notebook;

@@ -1,0 +1,3494 @@
+{
+  "version": 1,
+  "authorization": "Orchestrator task of 2026-11-04 relaying the owner's plan for the 3D classes: «El tren de las 23:40» (ID 256), a new A0–C2 3D conversation and listening class on a night train from Mendoza to Los Andes, whose A0 level is fully bilingual (conversation, passengers, choices, clue notebook and listening) and whose A1 level glosses its key words in English, plus one English line for the academies listing. This manifest approves only the exact English support literals listed below (the English half of each { es, en } pair in app/el-tren-de-las-2340/levels/a0.mjs and a1.mjs and the clue / hypothesis pairs of app/el-tren-de-las-2340/story.mjs, the English who / basic lines of app/el-tren-de-las-2340/pasajeros.mjs, the contextEn / en / qEn / glossary fields of app/escucha-3d/content/tren/a0.json and the academies card body in app/academias/page.tsx); existing English copy stays protected. Owner approval: Ale's standing approval for English copy, «apruebo (siempre de ahora en más apruebo)» on 2026-10-22 06:37Z (project message cmsg_01Gr5R4j3t2Yet65UcmhcVhAAAbp6kqDfMqxzNm3PL6f5g), and «apruebo todo no preguntes más, apruebo todo» on 2026-10-14 16:55Z (cmsg_01Gr5R4j3t2Yet65UcmhcVhADwvzg9kA9GinuWu3D7FSfe).",
+  "additions": [
+    {
+      "path": "app/academias/page.tsx",
+      "text": "A night train across the Andes in 3D: a novelist vanishes and you investigate in Spanish."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "A suitcase with a ticket"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "It is twenty past eleven. You are on the platform in Mendoza. Olga is an old lady. She has a red coat, three suitcases and a box."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Madam, the box goes to the luggage van."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "No. The box is Ernesto, my husband. He has a ticket."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Your husband… is in the box?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Yes. It is an urn. Ernesto travels with me, in cabin seven."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Fermín looks at you. He does not know what to do."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "I will carry the urn, madam."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Thank you. Carefully, please."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "You carry Ernesto to cabin seven. Olga smiles."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Can I see Ernesto’s ticket?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Of course. Seat seven B. Window."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "The ticket is real. Fermín says nothing more."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Fermín, the urn is small. It is not a suitcase."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "All right, all right. But it is not my problem."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Fermín carries the suitcases. Olga carries her husband."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Do you travel with a lot of luggage?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "How many suitcases do you have at home?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Do you like travelling at night?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "What is in your bag now?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "What colour is your coat?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "the platform"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "the suitcase"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "the ticket"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "the husband"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "the urn"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "A mother on the platform"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Rosa is crying. Her son Matías is going to Chile. He has a job there. Rosa has a huge bag."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Son, here are chipa, cheese and three shirts."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Mum, there are shirts in Chile. And there is cheese."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "It is not my cheese. Look, that lady is hugging the train driver. How odd!"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Rosa looks at you: “Are you travelling on this train?”"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Yes. I will keep an eye on Matías, no problem."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Oh, thank you! Here, a chipa for you."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "You have a chipa and a new job: looking after Matías."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Matías, the bag is very big for you."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "It is not big! It is a mother’s love."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Matías gets on the train with the bag. It weighs twelve kilos."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Why is the lady odd?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "She hugs the driver like a boyfriend."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "You look at the engine. The lady in the red coat is not there any more."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Does your mother cry when you travel?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "What food do you take on a trip?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Do you have family in another country?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Do you work in your city or in another city?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Do you like cheese?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "the son"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "the bag"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "the train driver"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "to cry"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "The man who snores"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "It is one o’clock. You are in sleeping car A. In cabin three, Lucas is not sleeping. Don Evaristo snores a lot."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Hi. I am not sleeping. This man snores like a train."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Zzz… Zzz…"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "And there is another thing. At one o’clock, a person goes along the corridor. They have leopard slippers on. They are going towards the front."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Lucas is very tired. What do you say?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Here, I have earplugs."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "You are an angel!"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Lucas sleeps. Don Evaristo snores. Everybody is happy."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Leopard slippers? A man or a woman?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "I do not know. I only see the feet."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "You write “leopard” in your notebook. Lucas does not sleep."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Don Evaristo, wake up, please!"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "What? Is it Chile already?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Don Evaristo wakes up. Two minutes later, he snores again."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Do you sleep well on a train?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Do you snore?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "What time do you normally go to sleep?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Do you have slippers? What colour are they?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Do you travel with a backpack or with a suitcase?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "to snore"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "the cabin"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "the corridor"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "the slippers"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "towards the front"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "The honeymoon"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Cabin five. Yesenia and Brayan have been married since yesterday. It is their honeymoon. Yesenia has a book in her hand."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Look! It is a book by Olga Ríos. It is signed."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "My love, it is our honeymoon. It is not a book club."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Read the signature: “See you at dawn.” What does it mean?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "They both look at you."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "It is a message. It is very interesting."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Yes! You are on my team."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Yesenia looks for more clues in the book. Brayan sleeps alone."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Brayan is right. Tonight is your night."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Thank you. Finally, a normal person!"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "You close the door. There is laughter inside the cabin."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "It is normal. It is a writer’s phrase."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "No. Olga does not write normal phrases."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Yesenia is not happy. You copy the phrase in your notebook."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Are you married?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Do you have a favourite book?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Do you have a signed book?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Do you read in bed?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Do you like watching the sunrise?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "the honeymoon"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "signed"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "the dawn"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "my love"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Cabin seven is empty"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "It is ten to one. The door of cabin seven is open. There is nobody there. The window is open. It is cold."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Mrs Olga is not here. Her bed is made."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "I am the train manager. Are you the passenger in eight?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "There is a note on the pillow. Read it, please."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "It says: “If I disappear, let the passenger in eight investigate.”"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "The passenger in eight is you."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "All right. I will investigate. Do you have a notebook?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Here you are. It is new."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Now you have a notebook. On the first page you write: “Olga.”"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Quick! Stop the train!"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "It is not possible. We are in the mountains."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "The train does not stop. Ramiro is nervous. Celia is too."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Me? But I am not a police officer."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "No. But she says “the passenger in eight”."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "You have no choice. Celia gives you the note."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Is your bed made now?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Do you have a notebook?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Do you read crime novels?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Do you sleep with the window open?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Are you cold now?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "empty"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "the note"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "the pillow"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "to disappear"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "the train manager"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "The nephew"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Cabin nine. Bruno is Olga’s nephew. He is forty, has an expensive suit and a phone in his hand."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "My aunt is not here. It is terrible. And I am her only nephew."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "I am sorry, Mr Ríos."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "But there is a problem. In October, my aunt has an appointment with her lawyer. She changes her will."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Bruno talks a lot about money. What do you ask?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Do you love your aunt very much?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Of course! Well… it is complicated."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Bruno looks at the floor. You write “complicated” in the notebook."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "What does the new will say?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "I do not know. That is the problem!"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Bruno is very angry. He calls his lawyer. It is ten past one."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Calm down. Your aunt is seventy-nine and has a lot of energy."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Yes. Too much energy."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Bruno laughs a little. It is a sad laugh."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Do you have nephews or nieces?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "How old is your favourite aunt?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Do you wear a suit to travel?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Do you talk a lot about money with your family?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "How many hours a day do you use your phone?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "the nephew"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "the aunt"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "the will"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "the lawyer"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Dinner for two"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "The kitchen in the dining car is very small. Fela is the cook. Jacinto is the waiter. There are two plates of soup on the table."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Jacinto, why are there two soups here?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "It is the order from the lady in seven. Dinner for two and a thermos of hot water."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "For the cabin?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "No. She says: “For the cab.”"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Fela has a big spoon in her hand."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "The cab? The driver’s cab?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Oh my God. It could be."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "You write “cab” in the notebook. Fela covers the soups."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "I am hungry. Can I eat a soup?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Sit down. It is lentil soup."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "You eat a soup. It is very tasty. The other soup waits."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Jacinto, do you read orders properly?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Yes! Well… sometimes."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Fela looks at Jacinto. Jacinto washes the dishes very quickly."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Do you cook at home?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "What do you normally have for dinner?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Do you like soup?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Do you drink tea or coffee at night?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "What time do you have dinner?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "the cook"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "the waiter"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "the order"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "the thermos"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "the cab"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Table four"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "At table four there is an older couple. Pilar reads crime novels. Horacio is a police officer, but he is retired."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "It is the nephew! In novels, it is always the nephew."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Pilar, I am on holiday."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Olga has dinner here at ten. She asks one thing: “What time does the train stop at Puente del Inca?”"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Pilar looks at you with big eyes."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "And what time does it stop?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "At five past three. Ten minutes."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "You write “3:05, Puente del Inca”. Pilar is happy."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Horacio, you are a police officer. Will you help me?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "No. I am retired. Well… a little."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Horacio takes out an old pen. Pilar claps."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "The nephew is not the guilty one. It is too easy."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Easy? You do not read novels!"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Pilar is offended. Horacio smiles behind his newspaper."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Do you read novels or watch series?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Who in your family is retired?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "What do you do on your holidays?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Do you like having dinner late?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Do you have a partner?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "the crime novel"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "retired"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "the holidays"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "to stop"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "The bar counter"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "It is two o’clock. In the bar car there is music. Wilmer is the barman. Nelson drinks a lot and talks even more."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Nelson, that is three beers. Three. Are you paying today?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Tomorrow, brother. Hey, want to bet? The lady from seven is in Chile."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "At half past eleven, she buys pisco and two glasses. Two."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Wilmer dries a glass and looks at you."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Two glasses? Who is the other one for?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "I do not know. She says: “I never drink alone.”"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "You write “pisco and two glasses”. Wilmer gives you a free coffee."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Nelson, pay for your beers, please."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Whoa! All right, all right. Here you are."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Nelson pays. Wilmer is happy. Nelson is not."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "I accept the bet. Ten pesos."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "That’s it! A brave person."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Nelson writes your name on a napkin. He is a bit drunk."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "What do you drink in a bar?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Do you drink alone or with friends?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Do you make bets?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "What music do you like?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "How much is a coffee in your city?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "the bar counter"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "the glass"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "to pay"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "the bet"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "A game of cards"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "At a table in the bar, Inés and Nelson are playing cards. Inés is a lawyer. She is Olga’s lawyer."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Nelson, you have an ace up your sleeve."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Me? No. It is… my arm."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "There is a new will. It is secret, but well: everything goes to the railway museum."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Inés puts the cards on the table."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Everything for the museum? And Bruno?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Bruno gets a photo of his aunt. Signed."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "You write “museum”. Inés laughs. It is a lawyer’s laugh."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Nelson, your sleeve, please."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Well… yes, there is an ace."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Inés wins the game. Nelson pays with coins."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Can I play with you?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Of course. But the cards are mine."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "You play three games. Inés wins all three."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Do you play cards?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Do you win or lose at games?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Do you like museums?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Do you have a secret that is easy to tell?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "What games are there in your house?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "the cards"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "the sleeve"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "the museum"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "the railway"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "to win"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "The stars"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "The observation car has big windows. Amaranta is an astronomer. She looks at the sky with a telescope. Kiara has a phone with a lot of light."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Please, not the light. You cannot see the stars."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Sorry. I am live."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "At ten past three, at Puente del Inca, I see a red coat. It walks towards the stone bridge."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Amaranta shows you a photo. It is dark."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "A red coat? Olga has a red coat."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Then it is her."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "You write “3:10, red coat, bridge”. Amaranta keeps the photo."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Kiara, turn off the light, please."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "All right. But my fans are sad."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Everything is dark. You see the Milky Way. It is huge."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Which star is that?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "It is not a star. It is Jupiter."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Amaranta talks about planets for twenty minutes. You yawn."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Can you see stars from your home?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Do you like the mountains or the beach?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Do you take photos with your phone?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Do you have a red coat?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "What is your favourite planet?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "the star"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "the sky"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "the coat"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "the bridge"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "the stone"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Live"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Kiara is in the dome of the observation car. She has four thousand people on her livestream. Joel is her brother. He is sleepy."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Hi, everyone! There is a missing lady on the train."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Kiara, it is four o’clock. I want to sleep."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Look at the video from quarter past three. A red coat gets on the train at the front."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Kiara puts the phone in front of your face."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Again, please. Slower."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "There! See? She gets on the engine."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "You write “red coat comes back at the front”. Joel sleeps standing up."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Kiara, it is not a game. Turn off the stream."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Turn it off? I have four thousand fans."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Kiara does not turn it off. Joel turns the phone off for her."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Hi, everyone. I am the passenger in eight."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Oh, the fans love you!"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Now you have a thousand new followers. And no answers."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Do you use social media?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Do you have brothers or sisters?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Do you watch live videos?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Are you sleepy now?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "How many followers do you have?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "live"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "the brother"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "to be sleepy"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "to get on"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "A dog in the luggage van"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "The luggage van is full of suitcases. Don Cosme is the guard. In a crate there is a big dog. His name is Tango. Valentina is here for her cello."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Tango cries all night. He looks at the front door."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "He smells something. It smells of perfume."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "It is Mrs Olga’s perfume. She gives him ham in Mendoza."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Tango looks at you. He wags his tail."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Open the crate. Tango knows the way."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "All right. But you hold the lead."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Tango runs to the engine door and sits down."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Poor Tango. Does he have water?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Yes, and biscuits. He is a lucky dog."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Tango eats a biscuit and sleeps on your feet."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "I can smell the perfume too."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "You? Are you a dog?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Cosme and Valentina laugh. Tango barks once."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Do you have a dog or a cat?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Do you wear perfume?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Do you like ham?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Is your home quiet at night?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "What animal do you like a lot?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "the dog"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "the crate"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "to smell"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "the tail"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "The heavy case"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Valentina is a cellist. Her case is huge and very heavy. Cosme is not happy."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "My cello is very delicate."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "It weighs forty kilos. A cello weighs four."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Well… there is also cheese. It is for my grandmother in Chile. Oh, and Olga has my blanket. She says: “It is cold up front.”"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Cosme opens the case. It smells of cheese."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Up front? In the engine?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "I suppose so. Up front is up front."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "You write “blanket, up front, cold”. Valentina closes the case."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Cosme, cheese is not a crime."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "At the border, it is."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Valentina eats a piece of cheese. It is the evidence."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Can you play something?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "With cheese inside, it does not sound good. But all right."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Valentina plays. The van is silent. Even Tango listens."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Do you play an instrument?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Does your grandmother live near or far?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "What cheese do you like?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "How much does your backpack weigh?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Are you cold in winter?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "the cello"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "the case"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "heavy"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "the blanket"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "at the front"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Snow at Puente del Inca"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "It is five past three. The train stops at Puente del Inca. There is snow. Don Teófilo is the station master. He lives here alone."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Good evening. Here it is twelve degrees below zero."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Don Teófilo, we are looking for an old lady."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "At ten past three I see a lady under the bridge. She throws ashes into the river. Then she goes back to the train."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "It is very cold. What do you say?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Ashes? They are Ernesto’s ashes."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Ah. Then it is a farewell."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "You write “ashes, river”. Teófilo takes off his hat."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Do you live here alone? Is it not sad?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "No. I have the mountain and the radio."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Teófilo gives you a hot mate. Ramiro looks at his watch."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Brrr! Let’s go to the train, quickly."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Yes. The train leaves in two minutes."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "You run to the train. Your feet are frozen."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Is there snow in your city?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Do you like the cold or the heat?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Do you live alone or with other people?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Do you listen to the radio?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "What is the temperature today?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "the snow"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "below zero"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "the ashes"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "the river"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "the station"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "The border check"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "At Puente del Inca there is a border police check. Corporal Yolanda looks at the passports. Ulises does not have a passport."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Passport, please."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "It is in my other trousers. At home."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Here is the list. Sixty-one passengers. Olga Ríos does not get off the train. Never."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Yolanda looks at you. Ulises does too."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Never? But at ten past three she is at the bridge."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Not for me. For me, she is on the train."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "You write “never gets off the train”. Yolanda closes the list."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Ulises is my friend. He is a good person."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Your friend? Fine. A photo of the passport, at least."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Ulises calls his mother. She sends a photo. Ulises gets through."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Ulises, do you have another document?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "I have my library card."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Yolanda does not laugh. Ulises goes back to Mendoza in a lorry."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Where is your passport now?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "How many countries do you know?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Do you have a library card?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Do you forget things at home?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "What is in your pockets?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "the border"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "the passport"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "the list"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "to get off"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "The engine cab"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "It is five o’clock. You are in the engine cab. Don Aniceto is the driver. He has been a driver since 1968. Rocío is his assistant."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Passengers cannot come in here."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Don Aniceto, there are two cups. And a blanket."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "The two cups are mine. I am very thirsty."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "And that urn… is empty."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Don Aniceto looks at the track. He does not look at you."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Do you know Olga Ríos?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Since 1968. It is a long story."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "You write “two cups, blanket, empty urn”. Aniceto smiles a little."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Rocío, where is the lady?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "I… I do not know anything. Really."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Rocío is red in the face. She looks at a small door."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Sorry. I am leaving."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Thank you. See you at dawn."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "You leave the cab. “See you at dawn.” That phrase again?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Do you drink a lot of coffee?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Since what year have you been working?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Do you have a favourite mug?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Do you like driving?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Do you have very old friends?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "the engine"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "the cup"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "the assistant"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "the track"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Dawn in Los Andes"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "It is six forty. The train arrives in Los Andes. The sun is coming up. On the platform there is a lady in a red coat. It is Olga."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Good morning, passenger in eight."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Auntie! Where are you all night?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "In the engine, with Aniceto. In 1968, on my honeymoon, I see this dawn with Ernesto. Today Ernesto is in the river."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Madam, and the note!"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "It is for my last novel. I need a detective."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Olga looks at you. “Well? Case closed?”"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Case closed. And you are a great actress."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Thank you. And you are a good detective."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Olga gives you a signed book: “For the passenger in eight.”"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Bruno, the money is for the museum."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "What? All of it? And me?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Bruno cries. Olga gives him a signed photo."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "A whole night without sleep! For a novel."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "For a good novel, darling."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Everybody laughs on the platform. You do too, a little."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "What time do you get up?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Do you like happy endings?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "What city do you want to see at dawn?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "Are you a good detective?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "What are you having for breakfast today?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "the sun"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "to arrive"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a0.mjs",
+      "text": "closed"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "the porter"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "the ashes"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "the luggage van"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "the lower bunk"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "own"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "to see off"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "short"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "the braids"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "to hug"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "the backpacker"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "the earplugs"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "the moustache"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "the dark circles under the eyes"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "slowly"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "the newlyweds"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "the dedication"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "curly"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "to make a toast"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "the attendant"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "to shake"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "the pillow"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "to investigate"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "the shiver"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "the heir"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "the signal"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "the suit"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "the suspect"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "the apron"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "the lentils"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "the wooden spoon"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "the reader"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "the timetable"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "to sigh"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "to serve"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "to bet"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "to owe"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "the gold tooth"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "to dry"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "the ace"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "to deal"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "to sweat"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "the handkerchief"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "the astronomer"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "the glass roof"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "shy"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "the corner"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "to stream"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "the dome"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "the followers"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "slow"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "the guard"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "to howl"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "the ears"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "to lick"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "to run away"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "the fringe"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "to lend"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "smuggling"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "the accomplice"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "to snow"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "the scarf"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "the torch"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "to throw"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "the hut"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "the ID card"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "tied back"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "to cross"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "narrow"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "the blanket"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "to cough"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "to bother"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "to paint"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "alive"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "to stay"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/levels/a1.mjs",
+      "text": "the breakfast"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/pasajeros.mjs",
+      "text": "Retired man who comes every night to watch the train leave"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/pasajeros.mjs",
+      "text": "I come here every night. I don’t travel. I only watch the train. I was a train driver for forty years."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/pasajeros.mjs",
+      "text": "What do you like to watch when you are doing nothing?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/pasajeros.mjs",
+      "text": "Passenger who lost her ticket in the taxi"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/pasajeros.mjs",
+      "text": "I don’t have my ticket. It is in the taxi. The taxi is gone. I call and call, but nobody answers."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/pasajeros.mjs",
+      "text": "Do you often lose things? What things?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/pasajeros.mjs",
+      "text": "Postal worker who travels with the mail bags"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/pasajeros.mjs",
+      "text": "I take letters to Chile. There are a hundred letters in each bag. Today there is a letter for the lady in seven."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/pasajeros.mjs",
+      "text": "Do you write letters on paper? To whom?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/pasajeros.mjs",
+      "text": "Executive trying to work with very little signal"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/pasajeros.mjs",
+      "text": "I have a video meeting. But there is no signal on the train. Here, at the end of the car, there is a little."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/pasajeros.mjs",
+      "text": "Do you work when you travel or do you rest?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/pasajeros.mjs",
+      "text": "Reader of Olga Ríos’s novels"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/pasajeros.mjs",
+      "text": "I am reading a book by Olga Ríos. It is a crime novel. She is on this train. How exciting!"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/pasajeros.mjs",
+      "text": "Do you like mystery novels?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/pasajeros.mjs",
+      "text": "Passenger from cabin 11, nervous"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/pasajeros.mjs",
+      "text": "My cabin is number eleven. It is near seven. I am scared. I won’t sleep tonight."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/pasajeros.mjs",
+      "text": "Do you sleep well when you travel?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/pasajeros.mjs",
+      "text": "Student looking at the snow through the window"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/pasajeros.mjs",
+      "text": "Look at the window. There is snow. It is the first time I see snow. I am nineteen."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/pasajeros.mjs",
+      "text": "What did you do for the first time this year?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/pasajeros.mjs",
+      "text": "Food critic having dinner alone"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/pasajeros.mjs",
+      "text": "I am eating empanadas. They are very tasty. I write about food. Tomorrow I write about this train."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/pasajeros.mjs",
+      "text": "What is your favourite food for travelling?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/pasajeros.mjs",
+      "text": "Man who has had too much wine"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/pasajeros.mjs",
+      "text": "I am drinking wine from Mendoza. It is my third glass. Or fourth. I know who the culprit is. Well, no."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/pasajeros.mjs",
+      "text": "What drink do you order at a party?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/pasajeros.mjs",
+      "text": "Lady sleeping in the bar armchair"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/pasajeros.mjs",
+      "text": "I don’t sleep in my cabin. My husband snores. Here it is quiet. Well, almost."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/pasajeros.mjs",
+      "text": "Do you snore? Does anybody in your family snore?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/pasajeros.mjs",
+      "text": "Passenger who bets at every table"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/pasajeros.mjs",
+      "text": "In the bar there are bets. Who is guilty? I bet on the nephew. And you?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/pasajeros.mjs",
+      "text": "Do you like betting or playing cards?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/pasajeros.mjs",
+      "text": "Woman who is going to propose in Chile"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/pasajeros.mjs",
+      "text": "I have a ring. My girlfriend lives in Chile. Tomorrow I am going to propose. I am very nervous."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/pasajeros.mjs",
+      "text": "How would you like someone to propose to you? Or would you not like it?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/pasajeros.mjs",
+      "text": "Lady crossing the Andes for the first time at eighty"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/pasajeros.mjs",
+      "text": "I am eighty years old. It is my first trip to Chile. Look at the stars! I never saw so many."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/pasajeros.mjs",
+      "text": "What place do you want to visit before you are very old?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/pasajeros.mjs",
+      "text": "Seller of stone souvenirs at Puente del Inca"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/pasajeros.mjs",
+      "text": "I sell stone souvenirs. I put a shoe in the river water. In a month, it is stone."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/pasajeros.mjs",
+      "text": "What souvenir do you buy when you travel?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/pasajeros.mjs",
+      "text": "Mountaineer waiting to climb Aconcagua"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/pasajeros.mjs",
+      "text": "Tomorrow I am climbing Aconcagua. It is the highest mountain in the Americas. I am cold, but I am happy."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/pasajeros.mjs",
+      "text": "Do you like the mountains or do you prefer the beach?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/pasajeros.mjs",
+      "text": "Driver waiting for a passenger with a sign"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/pasajeros.mjs",
+      "text": "I am waiting for a lady. Her name is Olga Ríos. I have a sign with her name. Do you know her?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/pasajeros.mjs",
+      "text": "Do you like someone waiting for you at the airport or at the station?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/pasajeros.mjs",
+      "text": "Mother waiting for her son Matías in Chile"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/pasajeros.mjs",
+      "text": "I am waiting for my son. He arrives on this train. He comes to work in Chile. I haven’t seen him for a year."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/pasajeros.mjs",
+      "text": "Who would you like to see today?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/story.mjs",
+      "text": "Olga travels with an urn: Ernesto, her husband. She bought him his own ticket."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/story.mjs",
+      "text": "On the platform, Olga hugged the train driver like an old friend."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/story.mjs",
+      "text": "At one o’clock, someone in leopard slippers walked towards the front."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/story.mjs",
+      "text": "Olga signed a book: “See you at dawn.”"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/story.mjs",
+      "text": "On the pillow: “If I disappear, let the passenger in 8 investigate.”"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/story.mjs",
+      "text": "Bruno thought he would inherit everything. Olga changed her will in October."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/story.mjs",
+      "text": "Olga ordered dinner for two and a thermos of hot water “for the cab”."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/story.mjs",
+      "text": "Olga asked what time the train stops at Puente del Inca."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/story.mjs",
+      "text": "Olga bought a bottle of pisco and two glasses."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/story.mjs",
+      "text": "The new will leaves everything to the railway museum."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/story.mjs",
+      "text": "At 3:10, a red coat walked towards the stone bridge."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/story.mjs",
+      "text": "The livestream shows a red coat getting back on the train at the front."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/story.mjs",
+      "text": "Tango follows Olga’s perfume to the locomotive door."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/story.mjs",
+      "text": "Olga borrowed a blanket: “It is cold up front.”"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/story.mjs",
+      "text": "A lady scattered ashes in the river, under the Inca bridge."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/story.mjs",
+      "text": "According to the border police, Olga Ríos never left the train."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/story.mjs",
+      "text": "In the cab there are two cups, a blanket and an empty urn."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/story.mjs",
+      "text": "Case closed: Olga wanted to see the dawn where she saw it with Ernesto."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/story.mjs",
+      "text": "Case closed at dawn."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/story.mjs",
+      "text": "Olga is still on the train. Something is in the locomotive."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/story.mjs",
+      "text": "Olga got off at Puente del Inca… and got back on?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/story.mjs",
+      "text": "Did someone want her money?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/story.mjs",
+      "text": "Olga vanished from cabin 7. Did she fall? Was she kidnapped?"
+    },
+    {
+      "path": "app/el-tren-de-las-2340/story.mjs",
+      "text": "An odd lady with an urn. Nothing has happened yet."
+    },
+    {
+      "path": "app/el-tren-de-las-2340/story.mjs",
+      "text": "The notebook is blank."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Fermín helps Olga with the luggage."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Good evening, madam. How many suitcases do you have?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Three suitcases and a box."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Does the box go to the luggage van?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "No. The box goes with me. It is my husband."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Oh! Sorry, madam."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "How many suitcases does Olga have?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "What else does Olga have?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Where does the box go?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "What is in the box?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "How many suitcases do you take on a trip?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Is your suitcase big or small?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Do you travel by train?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "suitcase"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "box"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "luggage van"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Rosa says goodbye to her son Matías."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Son, do you have the ticket?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Yes, Mum. Cabin two."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "And the passport?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Yes, here it is."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Call every day, please."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Yes, Mum. I love you."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Who is Matías?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Which cabin is Matías travelling in?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "What does Matías have?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "What does Rosa want?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Do you call your mother every day?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Where is your passport?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Who says “I love you” to you?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "ticket"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "passport"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "cabin"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Lucas talks to Don Evaristo before going to sleep."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Good night. I am Lucas. I sleep on top."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Hello, Lucas. I sleep below. I am Evaristo."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "One question, do you snore?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Me? No, never. I sleep like an angel."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Where does Lucas sleep?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "What is the man’s name?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "What does Lucas ask?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "What does Evaristo say?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Do you sleep on the top or bottom bunk?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Do you snore?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "What time do you sleep?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "on top"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "below"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "snores"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Celia brings champagne to the newlyweds."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Good evening. Champagne for cabin five."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Thank you! It is our honeymoon."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "We got married on Saturday."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Congratulations! Two glasses?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Yes, two glasses, please."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "What does Celia bring?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Which cabin is it for?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "When did they get married?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "How many glasses do they want?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Do you like champagne?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "What day is your birthday?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Are you married?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "champagne"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "honeymoon"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "glasses"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Ramiro and Celia look at cabin seven."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Celia, what is happening?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "The door of seven is open. There is nobody there."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "And Mrs Olga?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "She is not here. There is a note on the pillow."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Give me the note, please."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Which door is open?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Who is not there?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Where is the note?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "What does Ramiro want?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Do you lock the door of your home?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Do you write notes?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Is your pillow big?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "open"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "nobody"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "note"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Bruno talks on the phone with Marga, Olga’s editor."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Hello? Marga? I am Bruno, Olga’s nephew."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Hi, Bruno. What is happening? It is one o’clock."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "My aunt is not on the train."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "What? I cannot hear you well."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "There is no signal here. Ugh!"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Who is Bruno?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "What time is it?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "What does Bruno say?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "What is the problem?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Do you have a good signal at home?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Do you have an aunt?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Who do you call at night?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "nephew"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "signal"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "aunt"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Jacinto asks what Olga wants for dinner."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Good evening. There is lentil soup or chicken with rice."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Two soups, please. And a thermos of hot water."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Two soups? For the cabin?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "No. For the cab."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "What is there for dinner?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "How many soups does Olga order?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "What else does she order?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Where is the dinner for?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Do you prefer soup or chicken?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "What are you having for dinner today?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Do you drink hot water?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "lentils"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "thermos"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "cab"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Olga talks to Pilar in the dining car."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Excuse me. What time does the train stop at Puente del Inca?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "At five past three."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "How many minutes?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Ten minutes."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Perfect. Thank you very much."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "What does Olga ask?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "What time does the train stop?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "How many minutes does it stop?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "How is Olga at the end?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "What time does your train or bus leave?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "What time is it now?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Do you like travelling at night?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "stops"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "minutes"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "perfect"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Olga buys something at the bar."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Good evening, madam. What will you have?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "A bottle of pisco, please. And two glasses."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Two glasses? Are you waiting for someone?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "I never drink alone."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Where are they?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "What does Olga buy?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "How many glasses does she ask for?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "What does Olga say?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "What do you have in a bar?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Do you drink alone or with friends?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Do you know pisco?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "bottle"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "alone"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Inés and Nelson are playing cards."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Nelson, it is your turn."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "One moment… I have an ace!"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Another ace? It is your fourth ace."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Today I am lucky."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Or you have aces up your sleeve."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "What are they playing?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "What does Nelson have?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "How many aces does Nelson have?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "What does Inés think?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Do you play cards?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Are you lucky at games?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "What game do you like?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "it is your turn"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "luck"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "sleeve"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Amaranta shows the stars to Joel."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Look at the sky. There are many stars."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "How beautiful! What is that white thing?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "It is the Milky Way."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "And that red light?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "It is Mars, a planet."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "What is in the sky?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "What is the sky like for Joel?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "What is the white thing?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "What is the red light?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Can you see stars from your home?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Do you like looking at the sky?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Which planet do you know?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "sky"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "stars"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "planet"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Kiara is talking live on her phone."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Hi, everyone! I am on a train in the Andes. It is four in the morning. It is very cold. There is snow on the mountains."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "And there is a mystery: a lady is missing. Where is she?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Where is Kiara?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "What is on the mountains?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "What is the mystery?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Do you make live videos?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Is there snow in your country?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Do you like mysteries?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "people"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "snow"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "mystery"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Cosme feeds Tango."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "This is Tango. He is a very good dog."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "How big he is! Is he hungry?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Yes. He is always hungry. He eats a lot."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Here, Tango. A biscuit."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Who is Tango?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "What is Tango like?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "What is wrong with Tango?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "What does Valentina give him?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Do you have a dog?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Do you eat a lot?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Do you like big dogs?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "dog"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "hunger"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "biscuit"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Valentina is looking for her cello."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Excuse me, where is my cello?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Here, the black case. It is very heavy."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Yes, it is very heavy."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "What is inside?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "A cello… and cheese for my grandmother."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "What is Valentina looking for?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "What colour is the case?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "What is the case like?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Who is the cheese for?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Do you play an instrument?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Do you like cheese?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Where does your grandmother live?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "cello"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "case"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "heavy"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Teófilo welcomes Ramiro at the station."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Good evening. Welcome to Puente del Inca."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Good evening. How cold!"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Yes. It is twelve degrees below zero."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Do you live here?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Yes, alone, with my cat."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "What is the weather like?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "How many degrees is it?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Who does Teófilo live with?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "What is the temperature in your city today?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Do you live alone?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Do you have a cat?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "welcome"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "below zero"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "cat"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Yolanda asks Ulises for his details."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Good evening. Name?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Ulises Cañete."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Nationality?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Salvadoran."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Passport?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Well… I do not have it. It is in Mendoza."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "And where are you going?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "To Santiago, to my aunt’s house."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "What is the young man’s name?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Where is he from?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Does he have a passport?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Where is the passport?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "What is your nationality?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Do you have a passport?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Do you forget things?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "name"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "nationality"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Aniceto and Rocío have a drink in the cab."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Rocío, do you want tea?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Yes, thank you. Why are there two cups here?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "One is mine. The other… is mine too."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Uh-huh. And the blue blanket, that too?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "What does Aniceto offer?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "How many cups are there?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "What does Aniceto say?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "What colour is the blanket?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Do you drink tea or coffee?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "How many cups do you have at home?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Do you have a favourite blanket?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "cup"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "mine"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "blanket"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Gloria speaks over the train loudspeakers."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Good morning, passengers. It is six forty. We are arriving in Los Andes, in Chile. It is sunny."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Please get off with all your luggage. Thank you for travelling with us."
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Where does the train arrive?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "What do the passengers have to do?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "What time do you get up?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Do you like the morning sun?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "Do you know Chile?"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "passengers"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "luggage"
+    },
+    {
+      "path": "app/escucha-3d/content/tren/a0.json",
+      "text": "get off"
+    }
+  ]
+}
