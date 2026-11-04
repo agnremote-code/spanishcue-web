@@ -6,3 +6,9 @@
 - **Email**: al suscribirse, el Worker agrega el contacto al segmento de Resend «SpanishCue · Newsletter profes ELE» (`NEWSLETTER_SEGMENT_ID`) y manda la bienvenida desde `novedades@spanishcue.com` con `List-Unsubscribe` en un clic (`/api/newsletter/baja`). Si Resend falla, el email queda guardado igual.
 - **Enviar una newsletter**: Claude la redacta y la crea como *broadcast* de Resend para ese segmento (nunca el segmento «General», que es de LogoCut), con `{{{RESEND_UNSUBSCRIBE_URL}}}` en el pie. Se envía solo cuando Ale lo pide.
 - **Secuencia automática** (Ale aprobó activarla, 2026-11-02): cada alta nueva recibe la bienvenida (día 0, con «Desbloquear todo · US$19,90/mes» → /pricing con `utm_campaign=nurture_d0`) y el Worker dispara el evento `spanishcue.newsletter.subscribed`, que arranca la automatización de Resend «SpanishCue · Secuencia profes (5 emails en 10 días)»: días 2 (gramática gratis por nivel), 4 (Clase inicial), 7 (Noche abierta + garantía de 30 días) y 10 (Hospital + garantía). Las plantillas son `spanishcue-nurture-d2/d4/d7/d10`; cada paso salta a quien se dio de baja.
+
+## Si no llegan los emails
+
+- El Worker de producción necesita el secreto `RESEND_API_KEY` (clave «Full access» de la cuenta de Resend que tiene `spanishcue.com`; desde 2026-11-04 es «SpanishCue Worker 2026-11»). Comprobar con `npx wrangler secret list --name spanishcue` (solo nombres). Se carga con `pbpaste | npx wrangler secret put RESEND_API_KEY --name spanishcue`; no hace falta deploy.
+- Sin clave, el alta se guarda en D1 y abre la clase, pero no sale nada: el log dice `newsletter_delivery {reason:'no_resend_key'}`.
+- Con clave, cada fallo deja `newsletter_delivery {sent, synced, newContact, contact, mail}` con los códigos HTTP de Resend o el nombre del error (nunca claves ni direcciones). Ver con `npx wrangler tail spanishcue` mientras se hace un alta de prueba a `delivered+algo@resend.dev` (buzón de prueba de Resend).
