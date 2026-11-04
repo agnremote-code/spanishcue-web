@@ -218,8 +218,15 @@ jobs:
         run: |
           node scripts/production-smoke.mjs
           node scripts/lesson-reports-smoke.mjs
-          curl -sfI "$SPANISHCUE_PRODUCTION_ORIGIN/" | grep -qi '^x-robots-tag: noindex'
-          curl -sf "$SPANISHCUE_PRODUCTION_ORIGIN/api/billing/founder-status" | grep -q '"mode":"sandbox"'
+          # Same two checks as before, but print what staging answered when one fails.
+          headers="$(curl -sSI --retry 2 "$SPANISHCUE_PRODUCTION_ORIGIN/" || true)"
+          if ! head -1 <<<"$headers" | grep -q ' 2[0-9][0-9]' || ! grep -qi '^x-robots-tag: noindex' <<<"$headers"; then
+            echo "::error::Staging home did not answer 2xx with X-Robots-Tag noindex. Headers:"; echo "$headers" | head -25; exit 1
+          fi
+          founder="$(curl -sS --retry 2 "$SPANISHCUE_PRODUCTION_ORIGIN/api/billing/founder-status" || true)"
+          if ! grep -q '"mode":"sandbox"' <<<"$founder"; then
+            echo "::error::Staging founder-status is not in sandbox mode. Body:"; echo "$founder" | head -c 800; exit 1
+          fi
 
       - name: Roll back staging after failed smoke
         if: (github.event_name == 'push' || inputs.action == 'deploy') && steps.smoke.outcome == 'failure' && steps.previous.outputs.exists == 'true'
