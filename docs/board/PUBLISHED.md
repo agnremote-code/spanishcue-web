@@ -17,6 +17,15 @@ Entry format:
 
 ## Pending verification
 
+## 2026-11-04 — «El bosque de los hongos gigantes»: the 3D world frees the GPU on unmount (repair)
+- URL(s): https://spanishcue.com/bosque-de-los-hongos-gigantes (PRO; anonymous users → /acceso).
+- Level(s) / objectives: unchanged. No lesson content changed.
+- PR / merged SHA / production deploy run: branch `claude/board-wed-3d-20261104`; merge and runs to be recorded after the release.
+- Production smoke evidence: pending.
+- Concept file / LQG review file: `docs/audits/bosque-de-los-hongos-gigantes-repair-gpu-20261104.md`.
+- Built by / reviewed by: facilitator / Alejandro (code review APPROVE, delta APPROVE).
+- Known limitations: SwiftShader counts only, no real-device memory check. The production smoke does not assert this world yet (row withdrawn because of #360's overlap).
+
 ## 2026-11-03 — Material ELE: template Spanish, activity levels, video sitemap, grammar topic relevance (SEO/page)
 - URL(s):
   - every `https://spanishcue.com/material-ele/<grupo>/<tema>` and `…/<nivel>` page;

@@ -21,7 +21,7 @@ The new check `node scripts/qa-feria-browser.mjs --bosque-gpu` mounts the forest
 | 390 px (low path) | 24 → **7**, 491 → **37**; **no** | 24 → 5, 491 → 0; **yes** |
 | 1280 px (full path, shadows) | 26 → **7**, 534 → **37**; **no** | 26 → 5, 534 → 0; **yes** |
 
-The 5 surviving textures are three.js's per-renderer placeholders, the same as after the Feria and Hospital repairs, and the forced context loss releases them.
+5 textures stay counted, the same number as after the Feria and Hospital repairs. They are probably three.js's per-renderer placeholder textures (HYPOTHESIS here; the Hospital repair traced 4 of its 5 to `WebGLState`). The forced context loss releases them in any case.
 
 An intermediate version that traversed the scene *after* `forest.dispose()` left 6 textures and 37 buffers (it lost the context but found nothing to dispose). That is why the traverse now runs first.
 
@@ -32,12 +32,12 @@ An intermediate version that traversed the scene *after* `forest.dispose()` left
 
 ## Gates
 - **G3** (`npm run test:language`): run as part of `npm test`. No text changed.
-- **G4** (author ≠ reviewer): Alejandro's code review. Verdict and notes: see the transcript [2026-11-04-wednesday-3d-bosque-repair.md](../board/transcripts/2026-11-04-wednesday-3d-bosque-repair.md).
+- **G4** (author ≠ reviewer): Alejandro's code review returned **APPROVE** on `cb995389` with 0 blocking items and 5 notes. NB1 (this file) and NB2 (a less brittle order check) were applied; NB3–NB5 need no change in this unit (QA thresholds, harness layout, shader-uniform textures, all outside CI or covered by the context loss). He reproduced the browser numbers independently in separate worktrees. His **DELTA APPROVE** covers `cb995389..71a0f05c`, and its three wording notes were applied to this file. Verbatim: [2026-11-04-wednesday-3d-bosque-repair.md](../board/transcripts/2026-11-04-wednesday-3d-bosque-repair.md).
 - **G6 level honesty:** unchanged (no level or catalog change).
 - **Beat labelling:** not applicable, since no beat changed.
 - **G5(a)** (SwiftShader): the `--bosque-gpu` check passes **4/4** with 0 page or console errors and no 404s: unmount frees the GPU at 390 and 1280 px, and the world then remounts in the same page with a non-blank canvas (838 and 1,683 colours).
-- **Regression test:** `tests/bosque-world-controls.test.mjs` «unmount frees the GPU…» fails on main (verified with the World3D change stashed: 6 pass, 1 fail) and passes on the branch (7/7). It mounts the real World3D in JSDOM, then checks that the context is lost once, the canvas is removed, instanced meshes and texture slots are disposed, and the traverse runs before `forest.dispose()`.
-- **Full checks:** recorded in STATUS.md and the PR body.
+- **Regression test:** `tests/bosque-world-controls.test.mjs` «unmount frees the GPU…» fails on main (the facilitator checked it with the World3D change stashed, and the reviewer separately in a worktree at `5eed8ab4`: 6 pass, 1 fail) and passes on the branch (7/7). It mounts the real World3D in JSDOM, then checks that the context is lost once, the canvas is removed, instanced meshes and texture slots are disposed, and the traverse runs before `forest.dispose()`.
+- **Full checks** at `cb995389`: `npm test` exit 0 (1,527 pass, 0 fail; `SPANISHCUE_TEST_WORKER_TIMEOUT_MS=180000`), `validate:artifact` OK, lint clean on the changed files, `tsc` only the 3 errors already on main. After that, only this file and one test line changed: at `71a0f05c`, `npm run test:bosque` passes 54/54 and `npm run test:language` passes 43/43.
 
 ## Not verified
 - Memory on a real phone or tablet; the counts above come from SwiftShader.
