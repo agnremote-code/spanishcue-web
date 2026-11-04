@@ -1026,8 +1026,8 @@
           "model": "He vivido en tres ciudades: Madrid, Lyon y Lisboa."
         },
         {
-          "q": "¿Cómo conseguiste tu primer trabajo?",
-          "model": "Lo conseguí por un amigo."
+          "q": "¿Quién te ayudó a encontrar tu primer empleo?",
+          "model": "Me ayudó un amigo de mi padre."
         },
         {
           "q": "¿Qué historia te contó un desconocido?",

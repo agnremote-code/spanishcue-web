@@ -163,7 +163,7 @@ export default {
     talk: [
       '¿Cómo es tu primo o tu prima favorita?',
       '¿Cuándo ves a toda tu familia?',
-      '¿Qué ropa llevas para una cita importante?',
+      '¿Qué ropa te pones para un viaje largo de noche?',
       '¿Qué haces cuando no tienes señal?',
       '¿Te pones nervioso con facilidad?',
     ],
@@ -213,7 +213,7 @@ export default {
     ],
     ask: 'Horacio suspira. Pilar te sirve un café sin preguntar.',
     options: [
-      { say: '¿A qué hora para el tren allí?', reply: 'A las tres y cinco. Diez minutos. Lo pone en el horario.', end: 'Escribes: «Olga pregunta por Puente del Inca, 3:05». Pilar cierra el libro, feliz.', mood: 'smile' },
+      { say: '¿A qué hora para el tren allí?', reply: 'A las tres y diez. Veinte minutos. Lo pone en el horario.', end: 'Escribes: «Olga pregunta por Puente del Inca, 3:10». Pilar cierra el libro, feliz.', mood: 'smile' },
       { say: 'Horacio, ¿me ayuda? Usted tiene experiencia.', reply: 'Un poquito. Pero no le digas nada a mi esposa.', end: 'Horacio se quita las gafas de sol. Tiene ojos de policía todavía. Pilar lo ve todo y sonríe.', mood: 'laugh' },
       { say: 'Pilar, la vida real no es una novela.', reply: 'Ay, cariño. La vida real es una novela mala.', end: 'Pilar abre el libro otra vez. No te mira más esta noche.', mood: 'angry' },
     ],

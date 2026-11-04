@@ -420,7 +420,7 @@ export default {
       { es: '¿Hay montañas con nieve cerca de tu ciudad?', en: 'Are there snowy mountains near your city?' },
       { es: '¿Prefieres un viaje con nieve o con sol?', en: 'Do you prefer a trip with snow or with sun?' },
       { es: '¿Con quién hablas por la noche?', en: 'Who do you talk to at night?' },
-      { es: '¿Escuchas la radio en el coche?', en: 'Do you listen to the radio in the car?' },
+      { es: '¿Duermes bien en un tren o en un autobús?', en: 'Do you sleep well on a train or a bus?' },
       { es: '¿Qué temperatura hace hoy?', en: 'What is the temperature today?' },
     ],
     words: [

@@ -388,7 +388,7 @@ export default {
       { say: 'Perdón por la molestia. Ya me voy.', reply: 'Muy amable. Nos vemos al amanecer.', end: '«Nos vemos al amanecer». Otra vez la misma frase. Saliste de la cabina con el corazón a mil.', mood: 'surprised' },
     ],
     talk: [
-      '¿Desde cuándo conoces a tu amigo más antiguo?',
+      '¿Qué amistad tuya sobrevivió a una mudanza lejos?',
       '¿Algún abuelo tuyo trabajó en trenes, barcos o camiones?',
       '¿Alguna vez intentaste mentir y no pudiste?',
       '¿Qué te gustaba de niño que todavía te gusta?',
