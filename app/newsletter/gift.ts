@@ -1,9 +1,11 @@
 /** The PRO grammar class a visitor unlocks by leaving an email. Client-safe: no secrets here. */
-export const GIFT_LESSON_ID = 393;
-export const GIFT_LESSON_PATH = '/gramatica/opinion-afirmativa-frente-a-opinion-negada';
-export const GIFT_LESSON_TITLE = 'Opinión afirmativa frente a opinión negada';
-export const GIFT_LESSON_LEVEL = 'B1';
-export const GIFT_AUDIO_PATH = `/audio/grammar-live/${GIFT_LESSON_ID}.mp3`;
+export const GIFT_LESSON_ID = 143;
+export const GIFT_LESSON_PATH = '/sistema-verbal/preterito-imperfecto-indicativo';
+export const GIFT_LESSON_TITLE = 'Pretérito imperfecto';
+export const GIFT_LESSON_LEVEL = 'A2';
+/** One line on what the class teaches, shared by the form, /clase-gratis and the welcome email. */
+export const GIFT_LESSON_PITCH = 'Hablaba, comía, vivía: describir cómo eran las cosas antes, contar hábitos del pasado y lo que estaba pasando.';
+export const GIFT_AUDIO_PATH = `/audio/grammar-classroom/${GIFT_LESSON_ID}.mp3`;
 /** Silent looping preview of the gift class, shown next to the signup form on /clase-gratis. */
 export const GIFT_PREVIEW_VIDEO = `/grammar-previews/${GIFT_LESSON_ID}.mp4`;
 export const GIFT_PREVIEW_POSTER = `/grammar-thumbnails/${GIFT_LESSON_ID}.webp`;

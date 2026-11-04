@@ -8,7 +8,7 @@ async function leave(request: Request) {
   const token = new URL(request.url).searchParams.get('t') ?? '';
   const environment = env as unknown as NewsletterEnvironment;
   const email = await unsubscribe(environment.DB, token).catch(() => null);
-  if (email) await markResendUnsubscribed(environment, fetch, email);
+  if (email) await markResendUnsubscribed(environment, (input, init) => fetch(input, init), email);
   return Boolean(email);
 }
 

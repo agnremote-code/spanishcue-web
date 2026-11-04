@@ -21,7 +21,8 @@ export async function POST(request: Request) {
     // Without the signing secret the class cannot be opened: refuse before storing the email.
     if ((environment.AUTOESTUDIO_SHARE_SECRET ?? '').length < 32) throw new NewsletterError('El regalo no está disponible ahora.', 503);
     const subscriber = await subscribe(environment.DB, value);
-    await deliverWelcome(environment, fetch, new URL(request.url).origin, subscriber);
+    // Wrapped so the Workers runtime always calls fetch with the global receiver.
+    await deliverWelcome(environment, (input, init) => fetch(input, init), new URL(request.url).origin, subscriber);
     return Response.json({ ok: true, href: GIFT_LESSON_PATH }, { status: 201, headers: { ...noStore, 'Set-Cookie': await giftCookie(environment, subscriber.id) } });
   } catch (error) {
     if (error instanceof NewsletterError) return Response.json({ message: error.message }, { status: error.status, headers: noStore });

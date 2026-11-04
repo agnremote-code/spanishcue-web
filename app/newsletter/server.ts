@@ -1,4 +1,4 @@
-import { GIFT_AUDIO_PATH, GIFT_LESSON_ID, GIFT_LESSON_PATH, GIFT_LESSON_TITLE } from './gift';
+import { GIFT_AUDIO_PATH, GIFT_LESSON_ID, GIFT_LESSON_LEVEL, GIFT_LESSON_PATH, GIFT_LESSON_PITCH, GIFT_LESSON_TITLE } from './gift';
 
 // Imported only by route handlers and the Worker. Never import from a client component.
 export type NewsletterEnvironment = { DB: D1Database; AUTOESTUDIO_SHARE_SECRET?: string; RESEND_API_KEY?: string };
@@ -103,8 +103,8 @@ export function welcomeEmail(origin: string, unsubscribeToken: string) {
   const text = [
     '¡Hola!',
     '',
-    `Gracias por sumarte a la newsletter de SpanishCue. Tu clase de gramática PRO ya está desbloqueada en este navegador: «${GIFT_LESSON_TITLE}» (B1).`,
-    'Es una clase completa para dar en vivo: explicación, práctica guiada, audio, conversación y escritura. Opinar con «creo que» + indicativo y negar con «no creo que» + subjuntivo.',
+    `Gracias por sumarte a la newsletter de SpanishCue. Tu clase de gramática PRO ya está desbloqueada en este navegador: «${GIFT_LESSON_TITLE}» (${GIFT_LESSON_LEVEL}).`,
+    `Es una clase completa para dar en vivo: explicación, práctica guiada, audio, conversación y escritura. ${GIFT_LESSON_PITCH}`,
     '',
     `Abrir la clase: ${lesson}`,
     '',
@@ -125,8 +125,8 @@ export function welcomeEmail(origin: string, unsubscribeToken: string) {
 <div style="background:#fff;border-radius:14px;padding:28px 26px;border:1px solid #e3e8f2">
 <p style="font-size:17px;margin:0 0 14px">¡Hola!</p>
 <p style="font-size:15px;line-height:1.6;margin:0 0 14px">Gracias por sumarte a la newsletter de SpanishCue. Tu clase de gramática PRO ya está desbloqueada en este navegador:</p>
-<p style="font-size:18px;line-height:1.4;margin:0 0 6px;font-weight:bold">${escapeHtml(GIFT_LESSON_TITLE)} · B1</p>
-<p style="font-size:15px;line-height:1.6;margin:0 0 22px;color:#4a5875">Una clase completa para dar en vivo: explicación, práctica guiada, audio, conversación y escritura. Opinar con «creo que» + indicativo y negar con «no creo que» + subjuntivo.</p>
+<p style="font-size:18px;line-height:1.4;margin:0 0 6px;font-weight:bold">${escapeHtml(GIFT_LESSON_TITLE)} · ${GIFT_LESSON_LEVEL}</p>
+<p style="font-size:15px;line-height:1.6;margin:0 0 22px;color:#4a5875">Una clase completa para dar en vivo: explicación, práctica guiada, audio, conversación y escritura. ${escapeHtml(GIFT_LESSON_PITCH)}</p>
 <p style="margin:0 0 22px"><a href="${escapeHtml(lesson)}" style="display:inline-block;background:#2457c5;color:#fff;text-decoration:none;padding:13px 22px;border-radius:10px;font-size:15px;font-weight:bold">Abrir la clase</a></p>
 <p style="font-size:14px;line-height:1.6;margin:0 0 14px;color:#4a5875">Si la abres desde otro dispositivo, vuelve a dejar tu email en la página de la clase y se desbloquea ahí también.</p>
 <p style="font-size:15px;line-height:1.6;margin:0">De vez en cuando te voy a escribir con ideas para tus clases de ELE y las clases nuevas de SpanishCue.</p>
@@ -139,28 +139,37 @@ export function welcomeEmail(origin: string, unsubscribeToken: string) {
 }
 
 async function resend(env: NewsletterEnvironment, fetcher: Fetcher, path: string, init: { method: string; body?: unknown; idempotencyKey?: string }) {
-  const headers: Record<string, string> = { authorization: `Bearer ${env.RESEND_API_KEY}`, 'content-type': 'application/json' };
+  // Trimmed: a key pasted into `wrangler secret put` with a trailing newline would make the header invalid.
+  const headers: Record<string, string> = { authorization: `Bearer ${(env.RESEND_API_KEY ?? '').trim()}`, 'content-type': 'application/json' };
   if (init.idempotencyKey) headers['idempotency-key'] = init.idempotencyKey;
   return fetcher(`https://api.resend.com${path}`, { method: init.method, headers, body: init.body === undefined ? undefined : JSON.stringify(init.body), signal: AbortSignal.timeout(8000) });
 }
 
+function errorName(error: unknown) {
+  return error instanceof Error ? `${error.name}: ${error.message}`.slice(0, 160) : 'error';
+}
+
 /** Best effort: the subscriber is already saved in D1, so mail or sync failures never fail the signup. */
 export async function deliverWelcome(env: NewsletterEnvironment, fetcher: Fetcher, origin: string, subscriber: { id: string; email: string; unsubscribeToken: string; created: boolean }) {
-  if (!env.RESEND_API_KEY) return { sent: false, synced: false };
+  if (!env.RESEND_API_KEY?.trim()) { console.warn('newsletter_delivery', { reason: 'no_resend_key' }); return { sent: false, synced: false }; }
   let synced = false, sent = false, newContact = subscriber.created;
+  // Sanitized diagnostics: Resend HTTP statuses and error class names only, never keys or addresses.
+  const trace: { contact?: number | string; mail?: number | string } = {};
   try {
     // A returning email that Resend has never seen (it signed up while mail was not configured) still gets the welcome.
     if (!subscriber.created) newContact = (await resend(env, fetcher, `/contacts/${encodeURIComponent(subscriber.email)}`, { method: 'GET' })).status === 404;
     const created = await resend(env, fetcher, '/contacts', { method: 'POST', body: { email: subscriber.email, unsubscribed: false, segments: [{ id: NEWSLETTER_SEGMENT_ID }] } });
     synced = created.ok;
+    trace.contact = created.status;
     if (!created.ok) {
       // Already a contact (for example from an earlier signup): re-subscribe and add to the segment.
       const target = encodeURIComponent(subscriber.email);
       const updated = await resend(env, fetcher, `/contacts/${target}`, { method: 'PATCH', body: { unsubscribed: false } });
       const joined = await resend(env, fetcher, `/contacts/${target}/segments/${NEWSLETTER_SEGMENT_ID}`, { method: 'POST' });
       synced = updated.ok && joined.ok;
+      trace.contact = `${created.status}/${updated.status}/${joined.status}`;
     }
-  } catch { synced = false; }
+  } catch (error) { synced = false; trace.contact = errorName(error); }
   if (!newContact) return { sent, synced };
   try {
     const mail = welcomeEmail(origin, subscriber.unsubscribeToken);
@@ -174,7 +183,8 @@ export async function deliverWelcome(env: NewsletterEnvironment, fetcher: Fetche
       },
     });
     sent = response.ok;
-  } catch { sent = false; }
+    trace.mail = response.status;
+  } catch (error) { sent = false; trace.mail = errorName(error); }
   // Only after the welcome went out: the automation sends the rest of the sequence to this contact.
   if (sent) {
     try {
@@ -182,7 +192,7 @@ export async function deliverWelcome(env: NewsletterEnvironment, fetcher: Fetche
       if (!started.ok) console.warn('newsletter_nurture', { status: started.status });
     } catch { console.warn('newsletter_nurture', { status: 0 }); }
   }
-  if (!sent || !synced) console.warn('newsletter_delivery', { sent, synced });
+  if (!sent || !synced) console.warn('newsletter_delivery', { sent, synced, newContact, ...trace });
   return { sent, synced };
 }
 
