@@ -3868,7 +3868,7 @@ const encounters = [
         options: [
           {
             id: "calmar",
-            say: { A: "¡Wilson, vuelve! ¡Es de mentira! ¡Los gatitos!", B: "¡Wilson, vuelve! Es de mentira. ¡Y hay algo detrás de los ladrillos!", C: "¡Wilson, vuelva! Es de mentira, y detrás de esos ladrillos hay algo que maúlla!" },
+            say: { A: "¡Wilson, vuelve! ¡Es de mentira! ¡Los gatitos!", B: "¡Wilson, vuelve! Es de mentira. ¡Y hay algo detrás de los ladrillos!", C: "¡Wilson, vuelva! ¡Es de mentira, y detrás de esos ladrillos hay algo que maúlla!" },
             reply: { A: "Wilson se asoma desde la caseta. «¿De mentira? ¿Gatitos? Bueno… ¿Vamos?»", B: "Wilson asoma la cabeza desde la caseta. «¿De mentira? ¿Y qué es lo que suena detrás? Está bien, voy… pero tú delante.»", C: "Wilson asoma la cabeza por la ventana de la caseta. «¿De mentira? ¿Y eso que maúlla? Está bien, voy, pero usted delante y con esa cosa guardada.»" },
             mood: "worried", next: "gatitos",
           },

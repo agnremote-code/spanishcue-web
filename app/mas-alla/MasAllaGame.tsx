@@ -258,7 +258,7 @@ export default function MasAllaGame() {
       if (next !== s) {
         ambience.current?.play('reward');
         const spot = spotById(id)!;
-        if (worldDone(next, spot.world) === 6) say(b(`Has cerrado los seis encuentros de ${spot.world === 'cielo' ? 'el Cielo' : 'el Infierno'}.`, `You have closed the six encounters of ${spot.world === 'cielo' ? 'Heaven' : 'Hell'}.`), 6);
+        if (worldDone(next, spot.world) === 6) say(b(`Has cerrado los seis encuentros ${spot.world === 'cielo' ? 'del Cielo' : 'del Infierno'}.`, `You have closed the six encounters of ${spot.world === 'cielo' ? 'Heaven' : 'Hell'}.`), 6);
       }
       return next;
     });

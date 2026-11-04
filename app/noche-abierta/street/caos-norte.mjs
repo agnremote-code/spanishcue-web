@@ -1578,7 +1578,7 @@ const encounters = [
           {
             id: "gas-pegatina",
             say: { A: "Antes, la pegatina. Quítala. Y todos en paz.", B: "Antes, quita la pegatina. Así todos quedamos en paz.", C: "Antes de irte, quita la pegatina; así todos nos vamos en paz." },
-            reply: { A: "Ivana quita la pegatina. «Contentos?» Gustavo: «Sí.»", B: "Ivana arranca la pegatina de mala gana. «¿Contentos?» Gustavo: «Mucho.»", C: "Ivana arranca la pegatina con teatro. «¿Contentos todos?» Gustavo: «Muchísimo.»" },
+            reply: { A: "Ivana quita la pegatina. «¿Contentos?» Gustavo: «Sí.»", B: "Ivana arranca la pegatina de mala gana. «¿Contentos?» Gustavo: «Mucho.»", C: "Ivana arranca la pegatina con teatro. «¿Contentos todos?» Gustavo: «Muchísimo.»" },
             mood: "neutral", end: "gas-paz",
           },
           {
