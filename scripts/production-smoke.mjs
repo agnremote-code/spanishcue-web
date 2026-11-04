@@ -57,7 +57,6 @@ export async function runSmoke(origin, fetcher = fetch, { retryDelayMs = 1500 } 
   // while its indexable teacher page stays public and names the 3D world.
   for (const [world, audio, resource, title] of [
     ["/hospital-san-casi-vivo", null, "/resources/spanish-conversation-activity-a0-c2-hospital-san-casi-vivo", "3D Spanish Conversation Activity A0–C2: Hospital San Casi Vivo"],
-    ["/bosque-de-los-hongos-gigantes", null, "/resources/spanish-conversation-activity-a0-c2-el-bosque-de-los-hongos-gigantes", "3D Spanish Conversation Activity A0–C2: El bosque de los hongos gigantes"],
     ["/la-feria-de-villaluz", "/audio/escucha-3d/feria-a2-baile.mp3", "/resources/spanish-conversation-activity-a2-la-feria-de-villaluz", "3D Spanish Conversation Activity A2: La feria de Villaluz"],
   ]) {
     await protectedRedirect(world, "/acceso");
