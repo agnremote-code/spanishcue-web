@@ -3721,6 +3721,636 @@
    "seconds": 72.2,
    "src": "/audio/escucha-3d/suiza-b1-zurich.mp3"
   },
+  "tren/a0-amanecer": {
+   "hash": "936794b5f6eae41a7e86",
+   "seconds": 20.99,
+   "src": "/audio/escucha-3d/tren-a0-amanecer.mp3"
+  },
+  "tren/a0-astronoma": {
+   "hash": "d55077ac00b626f4f0b0",
+   "seconds": 21.88,
+   "src": "/audio/escucha-3d/tren-a0-astronoma.mp3"
+  },
+  "tren/a0-barman": {
+   "hash": "78188a18551f921bd44c",
+   "seconds": 20.75,
+   "src": "/audio/escucha-3d/tren-a0-barman.mp3"
+  },
+  "tren/a0-camarote7": {
+   "hash": "1916abd2093444f64812",
+   "seconds": 22.6,
+   "src": "/audio/escucha-3d/tren-a0-camarote7.mp3"
+  },
+  "tren/a0-cartas": {
+   "hash": "b9f3799e750f320df4c0",
+   "seconds": 21.12,
+   "src": "/audio/escucha-3d/tren-a0-cartas.mp3"
+  },
+  "tren/a0-cena": {
+   "hash": "284bd919bd03d7c98c55",
+   "seconds": 23.94,
+   "src": "/audio/escucha-3d/tren-a0-cena.mp3"
+  },
+  "tren/a0-despedida": {
+   "hash": "250e876c316ab4a4bb28",
+   "seconds": 24.62,
+   "src": "/audio/escucha-3d/tren-a0-despedida.mp3"
+  },
+  "tren/a0-directo": {
+   "hash": "d903780bf50f5b82a088",
+   "seconds": 24.86,
+   "src": "/audio/escucha-3d/tren-a0-directo.mp3"
+  },
+  "tren/a0-equipaje": {
+   "hash": "838639f80fa18e109e68",
+   "seconds": 26.18,
+   "src": "/audio/escucha-3d/tren-a0-equipaje.mp3"
+  },
+  "tren/a0-frontera": {
+   "hash": "8ddd9b196d042a11f44d",
+   "seconds": 31.52,
+   "src": "/audio/escucha-3d/tren-a0-frontera.mp3"
+  },
+  "tren/a0-lunademiel": {
+   "hash": "b979bbb2d407057b524b",
+   "seconds": 25.34,
+   "src": "/audio/escucha-3d/tren-a0-lunademiel.mp3"
+  },
+  "tren/a0-maquinista": {
+   "hash": "5a075a18b3cb19456151",
+   "seconds": 23.97,
+   "src": "/audio/escucha-3d/tren-a0-maquinista.mp3"
+  },
+  "tren/a0-nieve": {
+   "hash": "3350e4a63b5dc4191d18",
+   "seconds": 23.18,
+   "src": "/audio/escucha-3d/tren-a0-nieve.mp3"
+  },
+  "tren/a0-perro": {
+   "hash": "f1ae31554f6c6d7d7740",
+   "seconds": 22.67,
+   "src": "/audio/escucha-3d/tren-a0-perro.mp3"
+  },
+  "tren/a0-ronquidos": {
+   "hash": "ea06b3dcdd8a1de597d4",
+   "seconds": 26.87,
+   "src": "/audio/escucha-3d/tren-a0-ronquidos.mp3"
+  },
+  "tren/a0-sobremesa": {
+   "hash": "5d1a450b35d9bf911bc4",
+   "seconds": 21.21,
+   "src": "/audio/escucha-3d/tren-a0-sobremesa.mp3"
+  },
+  "tren/a0-sobrino": {
+   "hash": "0d303235f479c0fd26a7",
+   "seconds": 28.41,
+   "src": "/audio/escucha-3d/tren-a0-sobrino.mp3"
+  },
+  "tren/a0-violonchelo": {
+   "hash": "e700148d16a550df30ca",
+   "seconds": 21.74,
+   "src": "/audio/escucha-3d/tren-a0-violonchelo.mp3"
+  },
+  "tren/a1-amanecer": {
+   "hash": "f04f956c94f63c34e117",
+   "seconds": 32.08,
+   "src": "/audio/escucha-3d/tren-a1-amanecer.mp3"
+  },
+  "tren/a1-astronoma": {
+   "hash": "e2d7f856fc18b3cea9ec",
+   "seconds": 33.89,
+   "src": "/audio/escucha-3d/tren-a1-astronoma.mp3"
+  },
+  "tren/a1-barman": {
+   "hash": "ac57cb38f5fac93fd1d0",
+   "seconds": 38.76,
+   "src": "/audio/escucha-3d/tren-a1-barman.mp3"
+  },
+  "tren/a1-camarote7": {
+   "hash": "53285753f7fcca0b9c27",
+   "seconds": 35.04,
+   "src": "/audio/escucha-3d/tren-a1-camarote7.mp3"
+  },
+  "tren/a1-cartas": {
+   "hash": "bc2e9b4705fdcc73e112",
+   "seconds": 33.96,
+   "src": "/audio/escucha-3d/tren-a1-cartas.mp3"
+  },
+  "tren/a1-cena": {
+   "hash": "b5c76490e2bebe508fb1",
+   "seconds": 33.82,
+   "src": "/audio/escucha-3d/tren-a1-cena.mp3"
+  },
+  "tren/a1-despedida": {
+   "hash": "a651fe5a5b0567946add",
+   "seconds": 38.24,
+   "src": "/audio/escucha-3d/tren-a1-despedida.mp3"
+  },
+  "tren/a1-directo": {
+   "hash": "fa9fd0348cc969488c4b",
+   "seconds": 33.84,
+   "src": "/audio/escucha-3d/tren-a1-directo.mp3"
+  },
+  "tren/a1-equipaje": {
+   "hash": "9c536f99eeb96ab224b4",
+   "seconds": 36.22,
+   "src": "/audio/escucha-3d/tren-a1-equipaje.mp3"
+  },
+  "tren/a1-frontera": {
+   "hash": "c684d9b20758cc16a883",
+   "seconds": 35.5,
+   "src": "/audio/escucha-3d/tren-a1-frontera.mp3"
+  },
+  "tren/a1-lunademiel": {
+   "hash": "5d0af07c3379d141d659",
+   "seconds": 29.64,
+   "src": "/audio/escucha-3d/tren-a1-lunademiel.mp3"
+  },
+  "tren/a1-maquinista": {
+   "hash": "2a4cd014208ce859a4b5",
+   "seconds": 43.03,
+   "src": "/audio/escucha-3d/tren-a1-maquinista.mp3"
+  },
+  "tren/a1-nieve": {
+   "hash": "96627c71e0689c9fc768",
+   "seconds": 25.21,
+   "src": "/audio/escucha-3d/tren-a1-nieve.mp3"
+  },
+  "tren/a1-perro": {
+   "hash": "1707fbb0baedab5a4db2",
+   "seconds": 33.19,
+   "src": "/audio/escucha-3d/tren-a1-perro.mp3"
+  },
+  "tren/a1-ronquidos": {
+   "hash": "d01f19e0f9f3675e6b54",
+   "seconds": 39.17,
+   "src": "/audio/escucha-3d/tren-a1-ronquidos.mp3"
+  },
+  "tren/a1-sobremesa": {
+   "hash": "0a4ce721f0caa7936a79",
+   "seconds": 39.86,
+   "src": "/audio/escucha-3d/tren-a1-sobremesa.mp3"
+  },
+  "tren/a1-sobrino": {
+   "hash": "89d1821bf3842f0a484b",
+   "seconds": 32.54,
+   "src": "/audio/escucha-3d/tren-a1-sobrino.mp3"
+  },
+  "tren/a1-violonchelo": {
+   "hash": "5c816e04507adf991cc8",
+   "seconds": 35.76,
+   "src": "/audio/escucha-3d/tren-a1-violonchelo.mp3"
+  },
+  "tren/a2-amanecer": {
+   "hash": "88e3054ab679451a3a29",
+   "seconds": 39.79,
+   "src": "/audio/escucha-3d/tren-a2-amanecer.mp3"
+  },
+  "tren/a2-astronoma": {
+   "hash": "a4cccc3487cd9458eb3a",
+   "seconds": 42.45,
+   "src": "/audio/escucha-3d/tren-a2-astronoma.mp3"
+  },
+  "tren/a2-barman": {
+   "hash": "e22992b6f7a2527678ff",
+   "seconds": 38.71,
+   "src": "/audio/escucha-3d/tren-a2-barman.mp3"
+  },
+  "tren/a2-camarote7": {
+   "hash": "64d2fa5188f6a4480c37",
+   "seconds": 36.45,
+   "src": "/audio/escucha-3d/tren-a2-camarote7.mp3"
+  },
+  "tren/a2-cartas": {
+   "hash": "c8b6e2ac36e5a407cd6a",
+   "seconds": 43.73,
+   "src": "/audio/escucha-3d/tren-a2-cartas.mp3"
+  },
+  "tren/a2-cena": {
+   "hash": "5f3706640d9539380db8",
+   "seconds": 41.01,
+   "src": "/audio/escucha-3d/tren-a2-cena.mp3"
+  },
+  "tren/a2-despedida": {
+   "hash": "54b001f764589fe6111a",
+   "seconds": 44.8,
+   "src": "/audio/escucha-3d/tren-a2-despedida.mp3"
+  },
+  "tren/a2-directo": {
+   "hash": "6451591b3f2046b78724",
+   "seconds": 43.51,
+   "src": "/audio/escucha-3d/tren-a2-directo.mp3"
+  },
+  "tren/a2-equipaje": {
+   "hash": "7ea47c76415b7479ae33",
+   "seconds": 44.13,
+   "src": "/audio/escucha-3d/tren-a2-equipaje.mp3"
+  },
+  "tren/a2-frontera": {
+   "hash": "bd4fd51c08ca96ca55da",
+   "seconds": 40.39,
+   "src": "/audio/escucha-3d/tren-a2-frontera.mp3"
+  },
+  "tren/a2-lunademiel": {
+   "hash": "b53a0248990abd063bd1",
+   "seconds": 36.86,
+   "src": "/audio/escucha-3d/tren-a2-lunademiel.mp3"
+  },
+  "tren/a2-maquinista": {
+   "hash": "e3f89d9029ca713e343b",
+   "seconds": 50.94,
+   "src": "/audio/escucha-3d/tren-a2-maquinista.mp3"
+  },
+  "tren/a2-nieve": {
+   "hash": "b4d83d8ae72e71396fed",
+   "seconds": 37.61,
+   "src": "/audio/escucha-3d/tren-a2-nieve.mp3"
+  },
+  "tren/a2-perro": {
+   "hash": "26bf37c9c1e41c4191fc",
+   "seconds": 36.14,
+   "src": "/audio/escucha-3d/tren-a2-perro.mp3"
+  },
+  "tren/a2-ronquidos": {
+   "hash": "c9cb802e3e9d5171b30a",
+   "seconds": 48.07,
+   "src": "/audio/escucha-3d/tren-a2-ronquidos.mp3"
+  },
+  "tren/a2-sobremesa": {
+   "hash": "7206b8fab61ec4fece3a",
+   "seconds": 44.18,
+   "src": "/audio/escucha-3d/tren-a2-sobremesa.mp3"
+  },
+  "tren/a2-sobrino": {
+   "hash": "92b7138787720ead4518",
+   "seconds": 38.97,
+   "src": "/audio/escucha-3d/tren-a2-sobrino.mp3"
+  },
+  "tren/a2-violonchelo": {
+   "hash": "e78566f216dbf819aa47",
+   "seconds": 39.0,
+   "src": "/audio/escucha-3d/tren-a2-violonchelo.mp3"
+  },
+  "tren/b1-amanecer": {
+   "hash": "3f1381c17e1d1abc0f9d",
+   "seconds": 50.09,
+   "src": "/audio/escucha-3d/tren-b1-amanecer.mp3"
+  },
+  "tren/b1-astronoma": {
+   "hash": "2ab07e9c71c49b201aaa",
+   "seconds": 48.21,
+   "src": "/audio/escucha-3d/tren-b1-astronoma.mp3"
+  },
+  "tren/b1-barman": {
+   "hash": "ae2bb84117614eb4abb2",
+   "seconds": 53.31,
+   "src": "/audio/escucha-3d/tren-b1-barman.mp3"
+  },
+  "tren/b1-camarote7": {
+   "hash": "45289a395303686fc358",
+   "seconds": 50.42,
+   "src": "/audio/escucha-3d/tren-b1-camarote7.mp3"
+  },
+  "tren/b1-cartas": {
+   "hash": "9032f8338efc8847dab7",
+   "seconds": 48.59,
+   "src": "/audio/escucha-3d/tren-b1-cartas.mp3"
+  },
+  "tren/b1-cena": {
+   "hash": "b4a1d37f6f7de0c88efe",
+   "seconds": 54.42,
+   "src": "/audio/escucha-3d/tren-b1-cena.mp3"
+  },
+  "tren/b1-despedida": {
+   "hash": "5e5b7af57e0117ee9ed6",
+   "seconds": 43.51,
+   "src": "/audio/escucha-3d/tren-b1-despedida.mp3"
+  },
+  "tren/b1-directo": {
+   "hash": "b7c7eace99c6462f63ab",
+   "seconds": 49.81,
+   "src": "/audio/escucha-3d/tren-b1-directo.mp3"
+  },
+  "tren/b1-equipaje": {
+   "hash": "d5cfd4a14ceb8e70e572",
+   "seconds": 58.86,
+   "src": "/audio/escucha-3d/tren-b1-equipaje.mp3"
+  },
+  "tren/b1-frontera": {
+   "hash": "565fd8b852a3b623e976",
+   "seconds": 56.39,
+   "src": "/audio/escucha-3d/tren-b1-frontera.mp3"
+  },
+  "tren/b1-lunademiel": {
+   "hash": "60520d8edcadeba8e4e3",
+   "seconds": 48.4,
+   "src": "/audio/escucha-3d/tren-b1-lunademiel.mp3"
+  },
+  "tren/b1-maquinista": {
+   "hash": "e36f0956456fb10b0da3",
+   "seconds": 54.62,
+   "src": "/audio/escucha-3d/tren-b1-maquinista.mp3"
+  },
+  "tren/b1-nieve": {
+   "hash": "47d072b72ea1e93bad59",
+   "seconds": 51.52,
+   "src": "/audio/escucha-3d/tren-b1-nieve.mp3"
+  },
+  "tren/b1-perro": {
+   "hash": "11c1b7bd020d515302cf",
+   "seconds": 55.62,
+   "src": "/audio/escucha-3d/tren-b1-perro.mp3"
+  },
+  "tren/b1-ronquidos": {
+   "hash": "8c27d3217dd68ea35057",
+   "seconds": 53.05,
+   "src": "/audio/escucha-3d/tren-b1-ronquidos.mp3"
+  },
+  "tren/b1-sobremesa": {
+   "hash": "e9b9713a2c670e9d20a1",
+   "seconds": 56.82,
+   "src": "/audio/escucha-3d/tren-b1-sobremesa.mp3"
+  },
+  "tren/b1-sobrino": {
+   "hash": "a82b1479cc4e1f5c026f",
+   "seconds": 48.26,
+   "src": "/audio/escucha-3d/tren-b1-sobrino.mp3"
+  },
+  "tren/b1-violonchelo": {
+   "hash": "e12ddb6cec63faeb7480",
+   "seconds": 56.24,
+   "src": "/audio/escucha-3d/tren-b1-violonchelo.mp3"
+  },
+  "tren/b2-amanecer": {
+   "hash": "3500ab42e833c8e95b6d",
+   "seconds": 67.25,
+   "src": "/audio/escucha-3d/tren-b2-amanecer.mp3"
+  },
+  "tren/b2-astronoma": {
+   "hash": "2655c72e8d1d90fd88ee",
+   "seconds": 65.57,
+   "src": "/audio/escucha-3d/tren-b2-astronoma.mp3"
+  },
+  "tren/b2-barman": {
+   "hash": "e3577c144e9dcc7c858e",
+   "seconds": 61.85,
+   "src": "/audio/escucha-3d/tren-b2-barman.mp3"
+  },
+  "tren/b2-camarote7": {
+   "hash": "691bb6ea74485171a7b3",
+   "seconds": 69.89,
+   "src": "/audio/escucha-3d/tren-b2-camarote7.mp3"
+  },
+  "tren/b2-cartas": {
+   "hash": "031d1d285c7322338710",
+   "seconds": 64.86,
+   "src": "/audio/escucha-3d/tren-b2-cartas.mp3"
+  },
+  "tren/b2-cena": {
+   "hash": "0a8a41131769cb72bf7d",
+   "seconds": 66.56,
+   "src": "/audio/escucha-3d/tren-b2-cena.mp3"
+  },
+  "tren/b2-despedida": {
+   "hash": "fd6840576193b4565de7",
+   "seconds": 67.49,
+   "src": "/audio/escucha-3d/tren-b2-despedida.mp3"
+  },
+  "tren/b2-directo": {
+   "hash": "eab0f2c726df149fc70a",
+   "seconds": 77.28,
+   "src": "/audio/escucha-3d/tren-b2-directo.mp3"
+  },
+  "tren/b2-equipaje": {
+   "hash": "d67cfe5c3f57ad8fa791",
+   "seconds": 65.99,
+   "src": "/audio/escucha-3d/tren-b2-equipaje.mp3"
+  },
+  "tren/b2-frontera": {
+   "hash": "fcbb9279eb9f2adfe474",
+   "seconds": 68.36,
+   "src": "/audio/escucha-3d/tren-b2-frontera.mp3"
+  },
+  "tren/b2-lunademiel": {
+   "hash": "f5f18857f650d765933b",
+   "seconds": 70.85,
+   "src": "/audio/escucha-3d/tren-b2-lunademiel.mp3"
+  },
+  "tren/b2-maquinista": {
+   "hash": "06cdbaf8a8a69c4fcadc",
+   "seconds": 73.04,
+   "src": "/audio/escucha-3d/tren-b2-maquinista.mp3"
+  },
+  "tren/b2-nieve": {
+   "hash": "545419a3d6ad2548eddb",
+   "seconds": 64.2,
+   "src": "/audio/escucha-3d/tren-b2-nieve.mp3"
+  },
+  "tren/b2-perro": {
+   "hash": "aff910c5e10db5085b8a",
+   "seconds": 69.52,
+   "src": "/audio/escucha-3d/tren-b2-perro.mp3"
+  },
+  "tren/b2-ronquidos": {
+   "hash": "52fdac57621cdf3a16ad",
+   "seconds": 65.97,
+   "src": "/audio/escucha-3d/tren-b2-ronquidos.mp3"
+  },
+  "tren/b2-sobremesa": {
+   "hash": "a0a5a81500fc02cb8751",
+   "seconds": 70.18,
+   "src": "/audio/escucha-3d/tren-b2-sobremesa.mp3"
+  },
+  "tren/b2-sobrino": {
+   "hash": "6223596e48312dd75c9c",
+   "seconds": 70.85,
+   "src": "/audio/escucha-3d/tren-b2-sobrino.mp3"
+  },
+  "tren/b2-violonchelo": {
+   "hash": "fc5b465789e0c924b62f",
+   "seconds": 67.32,
+   "src": "/audio/escucha-3d/tren-b2-violonchelo.mp3"
+  },
+  "tren/c1-amanecer": {
+   "hash": "31818698d6e229d4aa88",
+   "seconds": 71.89,
+   "src": "/audio/escucha-3d/tren-c1-amanecer.mp3"
+  },
+  "tren/c1-astronoma": {
+   "hash": "a3b85fcdf5121e163c2d",
+   "seconds": 79.08,
+   "src": "/audio/escucha-3d/tren-c1-astronoma.mp3"
+  },
+  "tren/c1-barman": {
+   "hash": "84fbd441466b83ba62c7",
+   "seconds": 83.03,
+   "src": "/audio/escucha-3d/tren-c1-barman.mp3"
+  },
+  "tren/c1-camarote7": {
+   "hash": "758de21de083b8a2d523",
+   "seconds": 75.56,
+   "src": "/audio/escucha-3d/tren-c1-camarote7.mp3"
+  },
+  "tren/c1-cartas": {
+   "hash": "ebef71e368db20e8a6d4",
+   "seconds": 80.63,
+   "src": "/audio/escucha-3d/tren-c1-cartas.mp3"
+  },
+  "tren/c1-cena": {
+   "hash": "322286d3a7b04bc1b691",
+   "seconds": 77.57,
+   "src": "/audio/escucha-3d/tren-c1-cena.mp3"
+  },
+  "tren/c1-despedida": {
+   "hash": "0bb50da3d3175f668311",
+   "seconds": 82.02,
+   "src": "/audio/escucha-3d/tren-c1-despedida.mp3"
+  },
+  "tren/c1-directo": {
+   "hash": "448bff50f8994ec535fa",
+   "seconds": 84.83,
+   "src": "/audio/escucha-3d/tren-c1-directo.mp3"
+  },
+  "tren/c1-equipaje": {
+   "hash": "c07e0532ba1b8b5a1376",
+   "seconds": 78.65,
+   "src": "/audio/escucha-3d/tren-c1-equipaje.mp3"
+  },
+  "tren/c1-frontera": {
+   "hash": "8ba7bc3a3ae2315d2cd7",
+   "seconds": 81.48,
+   "src": "/audio/escucha-3d/tren-c1-frontera.mp3"
+  },
+  "tren/c1-lunademiel": {
+   "hash": "b9c99ec20afd58d76473",
+   "seconds": 73.44,
+   "src": "/audio/escucha-3d/tren-c1-lunademiel.mp3"
+  },
+  "tren/c1-maquinista": {
+   "hash": "6768a553bd0ae0034d5d",
+   "seconds": 81.66,
+   "src": "/audio/escucha-3d/tren-c1-maquinista.mp3"
+  },
+  "tren/c1-nieve": {
+   "hash": "a6b2bf2a629ffd626c44",
+   "seconds": 75.26,
+   "src": "/audio/escucha-3d/tren-c1-nieve.mp3"
+  },
+  "tren/c1-perro": {
+   "hash": "55bfc5f98bae0548fe62",
+   "seconds": 85.34,
+   "src": "/audio/escucha-3d/tren-c1-perro.mp3"
+  },
+  "tren/c1-ronquidos": {
+   "hash": "c437cbed7fe4a1967f9c",
+   "seconds": 88.58,
+   "src": "/audio/escucha-3d/tren-c1-ronquidos.mp3"
+  },
+  "tren/c1-sobremesa": {
+   "hash": "05f8f7d826dbebf19826",
+   "seconds": 79.18,
+   "src": "/audio/escucha-3d/tren-c1-sobremesa.mp3"
+  },
+  "tren/c1-sobrino": {
+   "hash": "a5cc3d9181f1b31286b6",
+   "seconds": 75.14,
+   "src": "/audio/escucha-3d/tren-c1-sobrino.mp3"
+  },
+  "tren/c1-violonchelo": {
+   "hash": "7cc22c858ee273dc6a7a",
+   "seconds": 87.76,
+   "src": "/audio/escucha-3d/tren-c1-violonchelo.mp3"
+  },
+  "tren/c2-amanecer": {
+   "hash": "6e0aee73852186b53927",
+   "seconds": 79.1,
+   "src": "/audio/escucha-3d/tren-c2-amanecer.mp3"
+  },
+  "tren/c2-astronoma": {
+   "hash": "7b63ddc49093300854cb",
+   "seconds": 80.89,
+   "src": "/audio/escucha-3d/tren-c2-astronoma.mp3"
+  },
+  "tren/c2-barman": {
+   "hash": "451be33e106505b1eb8a",
+   "seconds": 90.43,
+   "src": "/audio/escucha-3d/tren-c2-barman.mp3"
+  },
+  "tren/c2-camarote7": {
+   "hash": "fbd2dccee67f8d23e070",
+   "seconds": 92.57,
+   "src": "/audio/escucha-3d/tren-c2-camarote7.mp3"
+  },
+  "tren/c2-cartas": {
+   "hash": "5662e7260102b7421f3e",
+   "seconds": 87.09,
+   "src": "/audio/escucha-3d/tren-c2-cartas.mp3"
+  },
+  "tren/c2-cena": {
+   "hash": "7137f19383d172a88596",
+   "seconds": 76.67,
+   "src": "/audio/escucha-3d/tren-c2-cena.mp3"
+  },
+  "tren/c2-despedida": {
+   "hash": "901f4f77bb7effa042bd",
+   "seconds": 79.4,
+   "src": "/audio/escucha-3d/tren-c2-despedida.mp3"
+  },
+  "tren/c2-directo": {
+   "hash": "a2e5b7e891d55d8e7031",
+   "seconds": 95.8,
+   "src": "/audio/escucha-3d/tren-c2-directo.mp3"
+  },
+  "tren/c2-equipaje": {
+   "hash": "72e0586fe9d0d040a0d3",
+   "seconds": 78.24,
+   "src": "/audio/escucha-3d/tren-c2-equipaje.mp3"
+  },
+  "tren/c2-frontera": {
+   "hash": "d9117108aa3f78f2951f",
+   "seconds": 92.13,
+   "src": "/audio/escucha-3d/tren-c2-frontera.mp3"
+  },
+  "tren/c2-lunademiel": {
+   "hash": "de05101509ec0a72fe4d",
+   "seconds": 88.77,
+   "src": "/audio/escucha-3d/tren-c2-lunademiel.mp3"
+  },
+  "tren/c2-maquinista": {
+   "hash": "59588d8cf56cfba879f7",
+   "seconds": 85.35,
+   "src": "/audio/escucha-3d/tren-c2-maquinista.mp3"
+  },
+  "tren/c2-nieve": {
+   "hash": "47e29169578c1046c4ce",
+   "seconds": 71.56,
+   "src": "/audio/escucha-3d/tren-c2-nieve.mp3"
+  },
+  "tren/c2-perro": {
+   "hash": "ed307a997f21b345f1d8",
+   "seconds": 77.1,
+   "src": "/audio/escucha-3d/tren-c2-perro.mp3"
+  },
+  "tren/c2-ronquidos": {
+   "hash": "b4671304c05a4916306b",
+   "seconds": 81.82,
+   "src": "/audio/escucha-3d/tren-c2-ronquidos.mp3"
+  },
+  "tren/c2-sobremesa": {
+   "hash": "bde08e1452e16742f6e6",
+   "seconds": 84.01,
+   "src": "/audio/escucha-3d/tren-c2-sobremesa.mp3"
+  },
+  "tren/c2-sobrino": {
+   "hash": "a89eed265deba939c993",
+   "seconds": 67.43,
+   "src": "/audio/escucha-3d/tren-c2-sobrino.mp3"
+  },
+  "tren/c2-violonchelo": {
+   "hash": "9a4faf60567c565db45d",
+   "seconds": 84.42,
+   "src": "/audio/escucha-3d/tren-c2-violonchelo.mp3"
+  },
   "uk/a0-escocia": {
    "hash": "207b278ea2dac6bc3391",
    "seconds": 31.13,
