@@ -185,7 +185,21 @@ test("Sandbox and Live use distinct credentials and exact monthly plan validatio
   assert.equal(sandbox.clientId, "sandbox-client");
   assert.equal(live.clientId, "live-client");
   assert.equal(sandbox.founderPlanId, "sandbox-plan");
-  assert.equal(live.founderPlanId, "live-plan");
+  // Live is pinned in code to the owner-created US$19.90 plan; the environment's plan stays only as legacy.
+  assert.equal(live.founderPlanId, "P-6KF00654VL845614NNLVQQNY");
+  assert.equal(live.legacyFounderPlanId, "live-plan");
+  assert.equal(live.founderOffer.priceUsd, 19.9);
+  assert.equal(sandbox.founderOffer.priceUsd, 15);
+  const livePlan = structuredClone(validPlan(live));
+  livePlan.billing_cycles[0].pricing_scheme.fixed_price.value = "19.90";
+  assert.equal(billing.validatePaypalPlan(livePlan, live), true);
+  livePlan.billing_cycles[0].pricing_scheme.fixed_price.value = "15.00";
+  assert.equal(billing.validatePaypalPlan(livePlan, live), false);
+  assert.equal(billing.validatePaypalPayment({ value: "19.90", currency_code: "USD" }, live), true);
+  assert.equal(billing.validatePaypalPayment({ value: "15.00", currency_code: "USD" }, live), true);
+  assert.equal(billing.validatePaypalPayment({ value: "17.00", currency_code: "USD" }, live), false);
+  assert.equal(billing.validatePaypalSubscription({ id: "I-old", plan_id: "live-plan", custom_id: "u" }, { subscriptionId: "I-old", userId: "u", config: live }), true);
+  assert.equal(billing.validatePaypalSubscription({ id: "I-x", plan_id: "P-other", custom_id: "u" }, { subscriptionId: "I-x", userId: "u", config: live }), false);
   assert.equal(billing.billingReadiness(sandbox, false), "sandbox_ready");
   assert.equal(billing.billingReadiness(live, false), "unconfigured");
   assert.equal(billing.billingReadiness(live, true), "live_ready");

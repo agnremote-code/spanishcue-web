@@ -117,7 +117,7 @@ export async function runSmoke(origin, fetcher = fetch, { retryDelayMs = 1500 } 
   }
   assert.match(await (await check("/acceso", 200)).text(), /SPANISHCUE/i);
   const founder = await (await check("/api/billing/founder-status", 200)).json();
-  assert.equal(founder.priceUsd, 15.5);
+  assert.equal(founder.priceUsd, 19.9);
   assert.equal(founder.trialPriceUsd, 2);
   // Only spanishcue.com runs Live billing; staging and inert workers.dev
   // deploys use PayPal Sandbox and have no Paddle.

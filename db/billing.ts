@@ -267,7 +267,8 @@ export async function recordPaypalPayment(
   config: BillingRuntimeConfig,
 ) {
   if (input.environment !== config.paypalEnv) throw new Error("paypal_environment_mismatch");
-  if (input.amountCents !== APPROVED_PRICE_CENTS || input.amountCents !== Math.round(config.founderOffer.priceUsd * 100)
+  // A subscription created on the legacy US$15 Founder plan keeps renewing at US$15.
+  if (!(input.amountCents === Math.round(config.founderOffer.priceUsd * 100) || input.amountCents === APPROVED_PRICE_CENTS)
       || input.currency !== APPROVED_CURRENCY) throw new Error("paypal_payment_mismatch");
   const subscription = await subscriptionByPaypalId(db, input.paypalSubscriptionId, input.environment);
   if (!subscription) throw new Error("paypal_subscription_unknown");
@@ -394,7 +395,7 @@ export async function claimFirstPaidConversionForUser(
       transactionId: event.transactionId,
       value: event.amountCents / 100,
       currency: event.currency,
-      plan: event.eventName === "trial_paid" ? "trial" as const : event.amountCents === 12900 ? "annual" as const : "monthly" as const,
+      plan: event.eventName === "trial_paid" ? "trial" as const : (event.amountCents === 12900 || event.amountCents === 15000) ? "annual" as const : "monthly" as const,
     }
     : null;
 }

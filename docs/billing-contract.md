@@ -3,8 +3,9 @@
 ## Commercial invariant
 
 - Product: `spanishcue-pro`.
-- Offer: USD 15.00 every month, automatic renewal, no trial and no setup fee.
-- Founder allocation: at most 1,000 per environment, shared across PayPal and Paddle, assigned only after the first valid USD 15.00 payment is persisted and the verified buyer binds it to an account.
+- Offer (since 2026-11-04): USD 19.90 every month (Paddle `pri_01m6k17xns79tsteephk45n7qq`, PayPal Live `P-6KF00654VL845614NNLVQQNY`) or USD 150.00 every year by card (Paddle `pri_01m6k19ak3sep13j06ysgrxzp7`), automatic renewal, no trial and no setup fee. The new IDs are pinned in `app/paddle-config.ts` and `app/billing-config.ts`.
+- Legacy prices stay valid only for subscriptions already on them: Paddle monthly `pri_01m38sk06dtyhga2d4h36rt5dc` (USD 15.50, earlier 15.00), Paddle annual `pri_01m684zshhms5kzznb7s3kjfss` (USD 129), PayPal Founder `P-4YG87078YY366283WNKYNVLI` (USD 15.00). PayPal Sandbox keeps USD 15.00.
+- Founder allocation: at most 1,000 per environment, shared across PayPal and Paddle, assigned only after the first valid payment is persisted and the verified buyer binds it to an account.
 - PayPal subscription approval or `ACTIVE` status never grants PRO by itself.
 - Historical provider transactions keep their original facts. This implementation does not rewrite legitimate old agreements.
 

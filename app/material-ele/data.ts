@@ -139,7 +139,7 @@ const levelInputs: PageInput[] = [
     faq: [
       { question: "¿Qué material uso en la primera clase con un alumno A1?", answer: "Una presentación personal guiada, el alfabeto aplicado a su nombre y una tarea pequeña con objetos reales. La Clase inicial de SpanishCue es gratis y está pensada exactamente para ese primer encuentro." },
       { question: "¿Este material sirve para clases online?", answer: "Sí. Todas las actividades tienen una versión para clase individual por videollamada y las clases interactivas se comparten en pantalla." },
-      { question: "¿El material A1 es gratis?", answer: "Las actividades y ejercicios de esta página son gratis. En la biblioteca, las clases marcadas GRATIS se abren sin pagar; el resto es PRO por US$15,50 al mes." },
+      { question: "¿El material A1 es gratis?", answer: "Las actividades y ejercicios de esta página son gratis. En la biblioteca, las clases marcadas GRATIS se abren sin pagar; el resto es PRO por US$19,90 al mes." },
     ],
     related: ["primera-clase-de-espanol", "ser-y-estar", "preguntas-de-conversacion"],
   },
@@ -321,7 +321,7 @@ const levelInputs: PageInput[] = [
     faq: [
       { question: "¿Cuándo empiezo con el subjuntivo?", answer: "Normalmente al comienzo de B1, con deseos y recomendaciones en situaciones concretas. «Deseos: querer que, esperar que, ojalá» es la clase B1 gratis de SpanishCue." },
       { question: "¿Qué hago si el alumno de B1 se bloquea al hablar?", answer: "Propón una decisión que tomar, no un tema. Las clases de conversación 3D, como Noche abierta, dan razones para hablar en cada escena." },
-      { question: "¿Cuánto cuesta el acceso completo?", answer: "SpanishCue PRO cuesta US$15,50 al mes e incluye todas las clases de gramática, conversación y comprensión auditiva." },
+      { question: "¿Cuánto cuesta el acceso completo?", answer: "SpanishCue PRO cuesta US$19,90 al mes e incluye todas las clases de gramática, conversación y comprensión auditiva." },
     ],
     related: ["subjuntivo", "por-y-para", "indefinido-e-imperfecto"],
   },
@@ -2784,7 +2784,7 @@ export const hubDescription =
 
 export const hubFaq = [
   { question: "¿Qué es el material ELE?", answer: "Es el material para enseñar español como lengua extranjera: actividades, ejercicios, fichas, audios y clases pensadas para alumnos que no tienen el español como lengua materna." },
-  { question: "¿Este material ELE es gratis?", answer: "Todas las actividades, ejercicios y preguntas de estas páginas son gratis. En la biblioteca hay clases interactivas gratis en cada nivel; el acceso completo cuesta US$15,50 al mes." },
+  { question: "¿Este material ELE es gratis?", answer: "Todas las actividades, ejercicios y preguntas de estas páginas son gratis. En la biblioteca hay clases interactivas gratis en cada nivel; el acceso completo cuesta US$19,90 al mes." },
   { question: "¿En qué se diferencia de una ficha en PDF?", answer: "Las clases de SpanishCue se comparten en pantalla y tienen lectura, audio, conversación y escritura en el mismo lugar, con una guía para el profesor y respuestas ocultas para el alumno." },
   { question: "¿Sirve para clases online por videollamada?", answer: "Sí. Está pensado para clases particulares y grupos pequeños por Zoom, Meet, Preply o italki, y también funciona en el aula con un proyector." },
   { question: "¿Puedo guardar el progreso de cada alumno?", answer: "Sí. Con PRO puedes elegir el alumno antes de empezar una clase y su progreso queda guardado en tu cuenta." },

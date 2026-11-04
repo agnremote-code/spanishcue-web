@@ -29,7 +29,7 @@ import styles from "../../resources/resources.module.css";
 
 type Props = { params: Promise<{ slug: string }> };
 
-const PRICE_LABEL = "US$15,50 al mes";
+const PRICE_LABEL = "US$19,90 al mes";
 
 export function generateStaticParams() {
   return resourceLessons.map((lesson) => ({ slug: recursoSlugForLesson(lesson) }));

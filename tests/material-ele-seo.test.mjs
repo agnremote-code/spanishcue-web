@@ -42,7 +42,7 @@ test('linked lessons exist and every level offers a free classroom of that level
 
 test('copy keeps the published price and never invents customers or rankings',()=>{
  const text=JSON.stringify(m.elePages)+m.hubDescription+JSON.stringify(m.hubFaq);
- assert.doesNotMatch(text,/US\$\s?(?!15,50)\d/);
+ assert.doesNotMatch(text,/US\$\s?(?!19,90|150 al año)\d/);
  assert.doesNotMatch(text,/profede+le|miles de profesores|n\.º 1|número uno|\d+\s?(?:profesores|clientes) (?:ya|confían)/i);
 });
 

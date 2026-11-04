@@ -61,10 +61,10 @@
     "currency": "USD",
     "monthly": {
       "name": "Founder monthly plan",
-      "amount": 15.5,
+      "amount": 19.9,
       "taxIncluded": true,
       "renews": "monthly",
-      "terms": "Card subscription: US$15.50 now and monthly until cancelled. Founder offer for the first 1,000 eligible subscriptions. Preserve founder price while the same subscription remains active. Provider amounts must match checkout."
+      "terms": "Card subscription: US$19.90 now and monthly until cancelled. Founder offer for the first 1,000 eligible subscriptions. Preserve founder price while the same subscription remains active. Provider amounts must match checkout."
     },
     "paidTrial": {
       "amount": 2,

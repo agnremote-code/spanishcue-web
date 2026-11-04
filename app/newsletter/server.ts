@@ -9,7 +9,7 @@ export const NEWSLETTER_SEGMENT_ID = '0cc01e46-2405-4064-b35b-999ed0c27026';
 export const NEWSLETTER_FROM = 'Ale de SpanishCue <novedades@spanishcue.com>';
 /** Starts the Resend automation «SpanishCue · Secuencia profes» (emails on days 2, 4, 7 and 10; the welcome is day 0). */
 export const NURTURE_EVENT = 'spanishcue.newsletter.subscribed';
-export const PRICING_CTA = 'Desbloquear todo · US$15,50/mes';
+export const PRICING_CTA = 'Desbloquear todo · US$19,90/mes';
 const GIFT_MAX_AGE = 60 * 60 * 24 * 365;
 const encoder = new TextEncoder();
 const hex = (bytes: Uint8Array) => Array.from(bytes, b => b.toString(16).padStart(2, '0')).join('');

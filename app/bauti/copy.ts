@@ -33,7 +33,7 @@ export const bautiCopy: Record<'es' | 'en', Record<BautiAudience, BautiCopy>> = 
       topics: [
         { id: 'what', question: '¿Qué es SpanishCue?', answer: 'Clases de español listas para dar: abres la clase, compartes pantalla y enseñas. Gramática desde principiante absoluto hasta C2, conversación y mundos 3D para que tus alumnos hablen.' },
         { id: 'free', question: '¿Qué puedo probar gratis?', answer: 'El centro de Noche abierta, la entrada y la recepción del Hospital San Casi Vivo, la Clase inicial y Latinoamérica al Oído son gratis.', link: { href: '/demo/noche-abierta', label: 'Probar Noche abierta' } },
-        { id: 'price', question: '¿Cuánto cuesta PRO?', answer: 'US$15.50 al mes, precio final con impuestos. Desbloquea toda la biblioteca y cancelas cuando quieras antes de la próxima renovación.', link: { href: '/pricing', label: 'Ver PRO' } },
+        { id: 'price', question: '¿Cuánto cuesta PRO?', answer: 'US$19.90 al mes, precio final con impuestos. Desbloquea toda la biblioteca y cancelas cuando quieras antes de la próxima renovación.', link: { href: '/pricing', label: 'Ver PRO' } },
         { id: 'online', question: '¿Cómo lo uso en clases online?', answer: 'Abre la clase en el navegador y comparte pantalla en Zoom o Meet. Activa «compartir sonido» para que tu alumno escuche los audios. Con el modo Con profesor guardas el progreso de cada alumno.' },
         { id: 'school', question: 'Trabajo en una academia', answer: 'SpanishCue también tiene licencias para equipos: cada profesor con su cuenta y un panel para la academia.', link: { href: '/academias', label: 'Ver SpanishCue para academias' } },
       ],
@@ -61,7 +61,7 @@ export const bautiCopy: Record<'es' | 'en', Record<BautiAudience, BautiCopy>> = 
       topics: [
         { id: 'what', question: 'What is SpanishCue?', answer: 'Spanish lessons ready to teach: open the lesson, share your screen and teach. Grammar from absolute beginner to C2, conversation and 3D worlds that get your students talking.' },
         { id: 'free', question: 'What can I try for free?', answer: 'The centre of Noche abierta, the entrance and reception of Hospital San Casi Vivo, the Clase inicial and Latinoamérica al Oído are free.', link: { href: '/demo/noche-abierta', label: 'Try Noche abierta' } },
-        { id: 'price', question: 'How much is PRO?', answer: 'US$15.50 a month, final price including taxes. It unlocks the whole library and you can cancel any time before the next renewal.', link: { href: '/pricing', label: 'See PRO' } },
+        { id: 'price', question: 'How much is PRO?', answer: 'US$19.90 a month, final price including taxes. It unlocks the whole library and you can cancel any time before the next renewal.', link: { href: '/pricing', label: 'See PRO' } },
         { id: 'online', question: 'How do I use it in online lessons?', answer: 'Open the lesson in your browser and share your screen in Zoom or Meet. Turn on “share sound” so your student hears the audio. Teacher mode saves each student’s progress.' },
         { id: 'school', question: 'I work at a language school', answer: 'SpanishCue also offers team licences: each teacher with their own account and a dashboard for the school.', link: { href: '/academias', label: 'See SpanishCue for schools' } },
       ],
