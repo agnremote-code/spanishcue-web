@@ -15,8 +15,10 @@ export type FichaContent = {
 /** «[[palabra|tone]]» marks colour a word in the class; on paper only the word stays. */
 export const clean = (text: string) => text.replace(/\[\[([^|\]]+)\|[a-z]+\]\]/g, "$1").replace(/\s+/g, " ").trim();
 const MAX_EXERCISES = 12;
+export const SAMPLE_EXERCISES = 5;
 
-export async function fichaContent(id: number): Promise<FichaContent | undefined> {
+/** `sample` (PRO classes): two concepts and five exercises with answers; nothing else leaves the class. */
+export async function fichaContent(id: number, sample = false): Promise<FichaContent | undefined> {
   // In the build the registry is a small index and each lesson an encrypted blob, so loading is async.
   const lesson: LiveLesson | undefined = await loadLiveLesson(id);
   if (!lesson) return undefined;
@@ -37,6 +39,11 @@ export async function fichaContent(id: number): Promise<FichaContent | undefined
   const take = (list: FichaContent["exercises"], n: number) => list.slice(0, n);
   const fixN = Math.min(fix.length, 3), rewriteN = Math.min(rewrite.length, 3);
   content.exercises = [...take(choice, MAX_EXERCISES - fixN - rewriteN), ...take(fix, fixN), ...take(rewrite, rewriteN)].filter((item) => item.prompt && item.answer);
+  if (sample) {
+    const picked = [...take(choice, 3), ...take(fix, 1), ...take(rewrite, 1)].filter((item) => item.prompt && item.answer);
+    const extra = choice.slice(3).filter((item) => item.prompt && item.answer);
+    return { subtitle: content.subtitle, theory: content.theory.slice(0, 2).map((concept) => ({ ...concept, examples: concept.examples.slice(0, 2) })), tables: [], mistakes: [], exercises: [...picked, ...extra].slice(0, SAMPLE_EXERCISES), talk: [] };
+  }
   content.theory = content.theory.slice(0, 6);
   content.tables = content.tables.slice(0, 2);
   content.mistakes = content.mistakes.slice(0, 5);
