@@ -1,6 +1,6 @@
 # Board STATUS: the single source of truth for the next run
 
-_Last updated: 2026-11-03 by the Tuesday SEO routine (scheduled cloud run; Alejandro, Martin and Sofia convened as subagents of the facilitator, see "Current work")._
+_Last updated: 2026-11-04 by the Wednesday 3D routine (scheduled cloud run; Alejandro convened as a subagent of the facilitator for review, see "Current work")._
 
 ## Owner decisions in force
 | Date | Decision |
@@ -78,6 +78,23 @@ All five run on `claude-opus-5-5`, follow [ROUTINES.md](ROUTINES.md), and each i
 - Session 0 (lesson test) took 55 messages, about 15 of them caused by crossed messages over circle 6. That led to the lock rule.
 
 ## Current work and next action
+- **2026-11-04 (Wednesday 3D routine): gated repair of the Bosque unmount GPU leak** (branch `claude/board-wed-3d-20261104`, base main `5eed8ab4`). Subscription usage: **UNKNOWN**.
+  - **Monday's unit is still held.** R4 is unanswered: #282 has no new comment since 11-02, so it was **not touched**. A new world would hit the same §9.2 listening blocker. Rank 3 still needs Martin's duplicate check. The run therefore took the W45 fallback, the next leak repair (bosque), as a **gated repair**, reported as a repair.
+  - **Board:** convened proportionately. The facilitator built the fix. A fresh agent acting as Alejandro did the code review (**APPROVE** on `cb995389`, 0 blockers, 5 notes; NB1 and NB2 applied) and the delta review (**DELTA APPROVE** on `cb995389..71a0f05c`, 3 wording notes applied). Sofia and Martin were not needed: no content changed. Verbatim: [transcripts/2026-11-04-wednesday-3d-bosque-repair.md](transcripts/2026-11-04-wednesday-3d-bosque-repair.md).
+  - **Evidence:** LQG file [bosque-de-los-hongos-gigantes-repair-gpu-20261104.md](../audits/bosque-de-los-hongos-gigantes-repair-gpu-20261104.md). SwiftShader count of live WebGL textures and buffers after the unmount (`node scripts/qa-feria-browser.mjs --bosque-gpu`, new):
+    - on main: 24→7 textures and 491→37 buffers (390 px), 26→7 and 534→37 (1280 px), no context lost;
+    - fixed: 24→5 and 491→0, 26→5 and 534→0, context lost; the world remounts with a non-blank canvas. 4/4, reproduced by the reviewer.
+    - Cause: no `forceContextLoss`, `InstancedMesh` instance buffers never released, and `forest.dispose()` ends with `root.clear()`, so nothing could reach the leftovers. The fix traverses the scene first.
+  - **Checks:** `npm test` exit 0 at `cb995389` (1,527 pass, 0 fail, `SPANISHCUE_TEST_WORKER_TIMEOUT_MS=180000`); `validate:artifact` OK; lint clean on the changed files; `tsc` only the 3 errors already on main; diff-check clean. Later commits touch only one test line and docs: `test:bosque` 54/54 and `test:language` 43/43 at `71a0f05c`. Regression test fails on main (6 pass, 1 fail).
+  - **Overlap handled:** a smoke row asserting the Bosque world (302 `/acceso`) and its teacher page (200, 3D title) was written and then **withdrawn** (`71a0f05c`), because draft #360 (billing price) also edits `scripts/production-smoke.mjs` (AGENTS.md rule 5). The reviewer verified the row independently: correct.
+  - **Pipeline check before ready:** no `automation/merge-lock`, and no workflow run in progress. Five old non-draft PRs from other agents are open (#324, #283, #275, #257, #209), but none has moved since 10-31 or earlier, and none touches these files.
+  - **Release:** recorded by the follow-up records PR (or in the PR comments if that cannot run).
+  - **Next action:**
+    1. Verify this PR's merge SHA, staging and production runs, and the production smoke. Then move the PUBLISHED.md entry to Published. This repair has no anonymous surface, so its production evidence is the deploy plus the workflow smoke.
+    2. After #360 merges or closes: re-add the Bosque smoke row (the exact row is in the transcript, message 3, and commit `00d9aa24`).
+    3. Next leak repair: mas-alla, one world per PR, same `--*-gpu` harness pattern.
+    4. If R4 is answered, Ascensor #282 comes first in any 3D slot.
+    5. The 11-03 next actions (material-ele §3.2 decision, «Más allá» A2 B1 prompts, price-figure check on Thursday) are unchanged.
 - **2026-11-03 (Tuesday SEO routine): PR #357**, branch `claude/tuesday-seo-20261103`, base main `6e4a2e7`. Subscription usage: **UNKNOWN**.
   - **Board:** convened proportionately as subagents of the facilitator; they did not message each other. Alejandro ran the read-only technical SEO audit and signed off BOARD-DECISION-004. Martin ran the sampled quality audit. Sofia did the independent code review: **REQUEST CHANGES** (B1), then **DELTA APPROVE**. Verbatim: [transcripts/2026-11-03-tuesday-seo.md](transcripts/2026-11-03-tuesday-seo.md).
   - **Search Console: still BLOCKED (R0).** The 28-day `searchconsole` read returned Windsor's "reads are paused" error. No ranking, impression or click figure exists for this run.

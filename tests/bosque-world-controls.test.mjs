@@ -4,13 +4,15 @@ import {JSDOM} from 'jsdom';
 import {build} from 'esbuild';
 import {createRequire} from 'node:module';
 import * as THREE from 'three';
+import {readFileSync} from 'node:fs';
 import {mergeGeometries} from 'three/addons/utils/BufferGeometryUtils.js';
 import {ZONES} from '../app/bosque-de-los-hongos-gigantes/engine.mjs';
 const require=createRequire(import.meta.url);
 const React=require('react'),{act}=React,{createRoot}=require('react-dom/client');
 // Keep scene construction, raycasting, physics, RAF updates and React UI real.
 // Only the unavailable GPU, atlas loading and texture drawing are replaced.
-class Renderer{constructor(){this.domElement=document.createElement('canvas');this.shadowMap={};}setPixelRatio(){}setSize(){}render(){}dispose(){}}
+const renderers=[];
+class Renderer{constructor(){this.domElement=document.createElement('canvas');this.shadowMap={};this.lost=0;renderers.push(this);}setPixelRatio(){}setSize(){}render(){}dispose(){}forceContextLoss(){this.lost++;}}
 class TextureLoader{load(){return new THREE.Texture();}}
 const compiled=await build({entryPoints:['app/bosque-de-los-hongos-gigantes/World3D.tsx'],bundle:true,platform:'node',format:'cjs',write:false,loader:{'.css':'empty'},jsx:'automatic',external:['three','three/*','react']});
 const m={exports:{}};new Function('require','module','exports',compiled.outputFiles[0].text)(name=>name==='three'?{...THREE,WebGLRenderer:Renderer,TextureLoader}:name.includes('BufferGeometryUtils')?{mergeGeometries}:require(name),m,m.exports);
@@ -84,4 +86,21 @@ test('reaching the summit celebrates and unlocks the final conversation',async()
  const top=ZONES.at(-1);const t=await mount(top);try{
   await t.advance(10);assert.ok(t.calls.includes('summit'));assert.match(document.querySelector('.bfg-world-banner').textContent,/Llegaste a la cima/);
  }finally{await t.stop();}
+});
+
+// Gated repair 2026-11-04 (docs/audits/bosque-de-los-hongos-gigantes-repair-gpu-20261104.md): on main the
+// unmount left 2 textures and 33 buffers alive and never lost the context (SwiftShader count in the LQG file).
+test('unmount frees the GPU: material texture slots, instance buffers and the WebGL context (2026-11-04 repair)',async()=>{
+ const t=await mount();await t.advance(5);
+ const renderer=renderers.at(-1),counts={texture:0,instanced:0};
+ const texDispose=THREE.Texture.prototype.dispose,instDispose=THREE.InstancedMesh.prototype.dispose;
+ THREE.Texture.prototype.dispose=function(){counts.texture++;return texDispose.call(this);};
+ THREE.InstancedMesh.prototype.dispose=function(){counts.instanced++;return instDispose.call(this);};
+ try{await t.stop();}finally{THREE.Texture.prototype.dispose=texDispose;THREE.InstancedMesh.prototype.dispose=instDispose;}
+ assert.equal(renderer.lost,1,'the context is lost exactly once');
+ assert.equal(renderer.domElement.isConnected,false,'the canvas is removed');
+ assert.ok(counts.instanced>0,'instanced meshes release their instance buffers');
+ assert.ok(counts.texture>0,'material texture slots are disposed');
+ const world=readFileSync('app/bosque-de-los-hongos-gigantes/World3D.tsx','utf8'),cleanup=world.slice(world.lastIndexOf("removeEventListener('webglcontextlost'"));
+ const code=cleanup.replace(/\/\/.*$/gm,'');assert.ok(code.indexOf('scene.traverse(')>=0&&code.indexOf('scene.traverse(')<code.search(/forest\.dispose\(\)/),'the scene is traversed before forest.dispose() clears its root');
 });
