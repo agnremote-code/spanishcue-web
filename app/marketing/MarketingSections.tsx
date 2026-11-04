@@ -6,6 +6,7 @@ import { cantonShapes } from "../suiza-en-relieve/map-data";
 import { subscriptionCtaFor, type MarketingAudience, type MarketingCta } from "./cta-state";
 import { markFreeLessonCompleted, trackMarketingEvent, type MarketingEvent } from "./analytics";
 import { selectHomeFeatured, type FreeSampleLesson } from "./free-sample-selector";
+import ArsPrice from "./ArsPrice";
 
 type MarketingLesson = FreeSampleLesson & {
   title: string;
@@ -326,7 +327,7 @@ export function SocialProof({ lessonCount, routeCount, levelRange, cultureCount 
   return <section className="mk-proof" aria-label={c.proofAria}>{values.map((value, index) => <div key={value}><b>{value}</b><span>{c.proof[index]}</span></div>)}</section>;
 }
 
-type FounderStatus = { enabled: boolean; limit: number; claimed: number; remaining: number; available: boolean; priceUsd: number; checkoutLive: boolean; publicCheckoutAvailable?: boolean; paddleCheckoutAvailable?: boolean; paypalPriceUsd?: number; mode?: "sandbox" | "live" };
+type FounderStatus = { enabled: boolean; limit: number; claimed: number; remaining: number; available: boolean; priceUsd: number; checkoutLive: boolean; publicCheckoutAvailable?: boolean; paddleCheckoutAvailable?: boolean; paypalPriceUsd?: number; mode?: "sandbox" | "live"; annualCheckoutAvailable?: boolean };
 
 export function FounderOffer({ audience, primary, primaryLabel }: { audience: MarketingAudience; primary: MarketingCta; primaryLabel: string }) {
   const c = useCopy();
@@ -365,6 +366,8 @@ export function FounderOffer({ audience, primary, primaryLabel }: { audience: Ma
     <div className="mk-founder-offer">
       <small className={status && !status.available ? "closed" : ""}><i />{availability}</small>
       {audience !== "pro" && <div className="mk-founder-price"><b>{priceLabel}</b><span>/ {locale === "es" ? "mes" : "month"}</span></div>}
+      {audience !== "pro" && priceLabel === "US$19.90" && <ArsPrice usd={19.9} />}
+      {audience !== "pro" && status?.annualCheckoutAvailable && <p className="mk-founder-annual">{locale === "es" ? <>o <b>US$150/año</b> <span className="sc-hero-save">Ahorras 37 %</span></> : <>or <b>US$150/year</b> <span className="sc-hero-save">Save 37%</span></>}<ArsPrice usd={150} /></p>}
       {audience === "pro" ? <MarketingLink cta={primary} className="mk-founder-cta" placement="home_founder_offer">{primaryLabel}<span>→</span></MarketingLink> : checkoutLive ? <MarketingLink cta={subscriptionCta} className="mk-founder-cta" placement="home_founder_offer">{c.subscribe}<span>→</span></MarketingLink> : <MarketingLink cta={launchCta} className="mk-founder-cta" placement="home_founder_reservation">{c.reserve}<span>→</span></MarketingLink>}
       {audience !== "pro" && <em>{checkoutLive ? c.payment : c.launchPayment}</em>}
     </div>

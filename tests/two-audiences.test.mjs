@@ -66,7 +66,7 @@ test("each landing has its own metadata, H1, canonical and structured data", () 
 
 test("the home page keeps its hero and only gains the selector", () => {
   const library = read("app/Library.tsx");
-  assert.match(library, /<SpanishCueHero \/>/);
+  assert.match(library, /<SpanishCueHero pricing \/>/);
   assert.match(library, /<AudienceSwitch active="teacher" \/>/);
   const brand = read("app/SpanishCueBrand.tsx");
   assert.match(brand, /src="\/brand\/spanishcue-hero-online\.webp"/);

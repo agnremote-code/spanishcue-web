@@ -7,6 +7,7 @@ import PaymentBrands from "./PaymentBrands";
 import "./payment-options.css";
 import { checkoutAttribution, trackMarketingEvent } from "../marketing/analytics";
 import { consentFor } from "../privacy/consent";
+import ArsPrice from "../marketing/ArsPrice";
 
 type FounderStatus = {
   limit: number;
@@ -267,7 +268,7 @@ export default function CheckoutButton({ signedIn, returnTo, variant = "default"
       </button>
     )}
 
-    {founder.paddleCheckoutAvailable && <p className="checkout-price-note">{locale === "es" ? "Tarjeta: US$19.90 ahora y cada mes. Precio final, impuestos incluidos." : "Card: US$19.90 now and every month. Final price, taxes included."}</p>}
+    {founder.paddleCheckoutAvailable && <p className="checkout-price-note">{locale === "es" ? "Tarjeta: US$19.90 ahora y cada mes. Precio final, impuestos incluidos." : "Card: US$19.90 now and every month. Final price, taxes included."}<ArsPrice usd={19.9} /></p>}
 
     {founder.annualCheckoutAvailable && (
       <button className="checkout-card-button checkout-annual-button" type="button" onClick={() => checkoutPaddle("annual")} disabled={busy || !founder.available}>
@@ -275,7 +276,7 @@ export default function CheckoutButton({ signedIn, returnTo, variant = "default"
         <PaymentBrands /><span className="sr-only">Visa, Mastercard, American Express</span>
       </button>
     )}
-    {founder.annualCheckoutAvailable && <p className="checkout-price-note">{locale === "es" ? "Tarjeta: US$150 ahora y cada año. Precio final, impuestos incluidos." : "Card: US$150 now and every year. Final price, taxes included."}</p>}
+    {founder.annualCheckoutAvailable && <p className="checkout-price-note">{locale === "es" ? "Tarjeta: US$150 ahora y cada año. Precio final, impuestos incluidos." : "Card: US$150 now and every year. Final price, taxes included."}<ArsPrice usd={150} /></p>}
 
     {founder.checkoutLive && (
       <button className="checkout-paypal-button" type="button" onClick={checkoutPayPal} disabled={busy || !founder.available}>
@@ -306,7 +307,7 @@ export default function CheckoutButton({ signedIn, returnTo, variant = "default"
             {paddleBusy ? (es ? "Abriendo el pago…" : "Opening checkout…") : (es ? "Suscríbete · US$19.90/mes" : "Subscribe · US$19.90/month")}
           </button>
           <span className="checkout-landing-cards"><PaymentBrands /></span>
-          <span>{es ? "Tarjeta: US$19.90 ahora y cada mes. Precio final, impuestos incluidos." : "Card: US$19.90 now and every month. Final price, taxes included."}</span>
+          <span>{es ? "Tarjeta: US$19.90 ahora y cada mes. Precio final, impuestos incluidos." : "Card: US$19.90 now and every month. Final price, taxes included."}<ArsPrice usd={19.9} /></span>
         </div>}
       </div>
       {!paddleOnly && offer.checkoutLive && <button className="checkout-landing-paypal" type="button" onClick={checkoutPayPal} disabled={busy || !offer.available}>

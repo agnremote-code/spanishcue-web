@@ -1102,3 +1102,34 @@
     width: 100%;
   }
 }
+
+/* Home hero price line (2026-11-04): what the ads promise, visible at the top. */
+.sc-hero-price {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 8px;
+  margin: 8px 0 0;
+  color: #d8e8f8;
+  font-size: 14px;
+  font-weight: 600;
+}
+.sc-hero-price b { color: #fff; font-weight: 900; }
+.sc-hero-save {
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: #ffd36b;
+  color: #3a2600;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .3px;
+}
+.sc-hero-ars { flex-basis: 100%; color: #a9c7df; font-size: 12px; font-weight: 600; }
+.ars-price { display: block; margin-top: 4px; font-size: 12px; opacity: .85; }
+.mk-founder-annual { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; margin: 6px 0 0; font-size: 15px; }
+.mk-founder-annual .ars-price { flex-basis: 100%; margin-top: 0; }
+.sc-hero-more { margin: 8px 0 0; color: #a9c7df; font-size: 12px; font-weight: 700; }
+.sc-hero-more a { color: #e5f5ff; text-decoration: underline; text-underline-offset: 2px; }
+.sc-hero-more a:hover, .sc-hero-more a:focus-visible { color: #fff; }
+/* The selling hero has two buttons and a price line; the pointing mascot would cover them. */
+.sc-hero--sell .sc-mascot-cue { display: none; }

@@ -5,6 +5,7 @@ import { useI18n } from "./i18n/LocaleProvider";
 import type { MessageKey } from "./i18n/messages";
 import { trackMarketingEvent } from "./marketing/analytics";
 import { CookieSettingsButton } from "./privacy/CookieConsent";
+import ArsPrice from "./marketing/ArsPrice";
 
 /** Where «Probar una clase gratis» goes; a PRO visitor is sent on to the full game. */
 const FREE_DEMO_PATH = "/demo/noche-abierta";
@@ -60,7 +61,7 @@ export function SpanishCueWordmark({ compact = false }: { compact?: boolean }) {
  * it unchanged; /para-profesores passes its own kicker and puts it inside the
  * H1 so each landing has a distinct heading with the same composition.
  */
-export function SpanishCueHero({ kicker, kickerInHeading = false }: { kicker?: string; kickerInHeading?: boolean } = {}) {
+export function SpanishCueHero({ kicker, kickerInHeading = false, pricing = false }: { kicker?: string; kickerInHeading?: boolean; pricing?: boolean } = {}) {
   const { locale, t } = useI18n();
   const kickerText = kicker ?? t("hero.kicker");
   // The free lesson is Noche abierta: the centre is free, the districts are PRO.
@@ -73,7 +74,7 @@ export function SpanishCueHero({ kicker, kickerInHeading = false }: { kicker?: s
     trackMarketingEvent("teacher_demo_started", { placement: "hero_primary" });
   };
   return (
-    <section className="sc-hero" id="main-content" tabIndex={-1} aria-labelledby="sc-hero-title">
+    <section className={pricing ? "sc-hero sc-hero--sell" : "sc-hero"} id="main-content" tabIndex={-1} aria-labelledby="sc-hero-title">
       <div className="sc-hero-art" aria-hidden="true">
         <img
           src="/brand/spanishcue-hero-online.webp"
@@ -107,8 +108,33 @@ export function SpanishCueHero({ kicker, kickerInHeading = false }: { kicker?: s
               <img src="/brand/mascot/pointing.webp" alt="" width="900" height="1350" />
             </div>
           </div>
+          {pricing && (
+            <a
+              href="/pricing"
+              className="sc-hero-secondary"
+              onClick={() => trackMarketingEvent("cta_click", { placement: "hero_secondary", cta_type: "buy", destination: "/pricing" })}
+            >
+              {locale === "es" ? "Ver planes PRO" : "See PRO plans"}
+            </a>
+          )}
         </div>
         <p className="sc-hero-reassurance">{locale === "es" ? "Gratis · Sin tarjeta · Clase real incluida" : "Free · No card · Real lesson included"}</p>
+        {pricing && (
+          <p className="sc-hero-price">
+            {locale === "es"
+              ? <>Todo PRO: <b>US$19,90/mes</b> o <b>US$150/año</b> <span className="sc-hero-save">Ahorras 37 %</span></>
+              : <>Full PRO: <b>US$19.90/month</b> or <b>US$150/year</b> <span className="sc-hero-save">Save 37%</span></>}
+            <ArsPrice usd={19.9} className="sc-hero-ars" />
+          </p>
+        )}
+        {pricing && (
+          <p className="sc-hero-more">
+            {locale === "es" ? "Prueba también gratis:" : "Also free to try:"}{" "}
+            <a href="/demo/hospital-san-casi-vivo" onClick={() => trackMarketingEvent("cta_click", { placement: "hero_more_hospital", cta_type: "view_lesson", destination: "/demo/hospital-san-casi-vivo" })}>Hospital San Casi Vivo (3D)</a>
+            {" · "}
+            <a href="/gramatica/clase-inicial" onClick={() => trackMarketingEvent("cta_click", { placement: "hero_more_grammar", cta_type: "view_lesson", destination: "/gramatica/clase-inicial" })}>{locale === "es" ? "Clase inicial de gramática" : "First grammar lesson"}</a>
+          </p>
+        )}
       </div>
     </section>
   );

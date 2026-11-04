@@ -15,6 +15,7 @@ import { billingConfig, paypalReady } from "../billing-config";
 import { paddleConfig, paddleReady } from "../paddle-config";
 import FounderAccessForm from "../acceso/FounderAccessForm";
 import { socialPreviewImage, socialPreviewUrl } from "../social-preview";
+import ArsPrice from "../marketing/ArsPrice";
 
 export const dynamic = "force-dynamic";
 
@@ -85,6 +86,7 @@ export default async function PricingPage() {
         <div className="pricing-card-label">FOUNDING TEACHERS · {checkoutLive ? (es ? "PRIMEROS 1.000" : "FIRST 1,000") : (es ? "LANZAMIENTO PRÓXIMO" : "LAUNCHING SOON")}</div>
         <h2>SPANISHCUE PRO</h2>
         <div className="pricing-amount"><b>{priceLabel}</b><span>{es ? "/ mes" : "/ month"}</span></div>
+        {priceLabel === "US$19.90" && <ArsPrice usd={19.9} />}
         <p>{checkoutLive ? (es ? `${priceLabel} por mes, con renovación automática hasta que canceles. Mantienes el precio mientras la misma suscripción continúe activa.` : `${priceLabel} per month, renewing automatically until cancelled. Keep the price while the same subscription remains active.`) : (es ? `Precio fundador previsto: ${priceLabel} por mes. El checkout todavía no está activo; reservar no inicia una suscripción ni un cobro.` : `Planned Founder Price: ${priceLabel} per month. Checkout is not active yet; reserving starts neither a subscription nor a charge.`)}</p>
         <ul><li>✓ {es ? "Toda la biblioteca" : "The complete library"}</li><li>✓ {es ? "Acceso ilimitado" : "Unlimited access"}</li><li>✓ {es ? "Gramática, conversación y escucha" : "Grammar, conversation and listening"}</li><li>✓ {es ? "Fonética y vocabulario" : "Pronunciation and vocabulary"}</li><li>✓ {es ? "Nuevas clases dentro de la plataforma" : "New lessons added to the platform"}</li></ul>
         {fullAccess ? <Link className="pricing-open-library" href="/">{es ? "Abrir mi biblioteca" : "Open my library"} →</Link> : checkoutLive ? <CheckoutButton signedIn={signedIn} returnTo="/" /> : <FounderAccessForm defaultEmail={accountEmail} priceLabel={`${priceLabel}/${es ? "mes" : "month"}`} returnTo="/" />}

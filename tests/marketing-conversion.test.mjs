@@ -82,7 +82,9 @@ test("marketing surfaces stay reusable and the free lesson close is global", asy
   assert.match(brand, /PROBAR UNA CLASE GRATIS/);
   assert.match(brand, /FREE_DEMO_PATH = "\/demo\/noche-abierta"/);
   assert.match(brand, /href=\{FREE_DEMO_PATH\}/);
-  assert.doesNotMatch(brand, /hero_secondary/);
+  // Ale 2026-11-04: the home hero also sells: a PRO plans button, monthly + annual price, more free lessons.
+  assert.match(brand, /placement: "hero_secondary", cta_type: "buy", destination: "\/pricing"/);
+  assert.match(brand, /US\$150\/año/);
   assert.match(sections, /id="free-lessons"/);
   assert.match(layout, /MarketingAttribution/);
   assert.match(layout, /FreeLessonConversionBar/);
