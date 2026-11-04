@@ -111,3 +111,24 @@ test('pending alias tabs bind the visible pass and cannot claim another tab lear
   const active=await (await call(api.sessionResponse,req(null,{cookie:cookie(claimed)}))).json();
   assert.equal(active.pending,false);assert.equal(active.pendingPass,undefined);
 });
+test('student access never lapses by time: long pending cookie, renewal of old cookies, nothing for fresh, revoked or forged ones',async()=>{
+  const made=await (await call(api.createPass,req({level:'b1'}))).json();
+  const link=made.link.split('/s/')[1];
+  const redeemed=await api.redeem(req(),link,env);
+  assert.match(redeemed.headers.get('set-cookie'),/Max-Age=34560000/);
+  const fresh=cookie(redeemed);
+  assert.equal(await api.renewShareCookie(fresh,env),null);
+  const realNow=Date.now;
+  try {
+    Date.now=()=>realNow()+300*86_400_000;
+    const renewed=await api.renewShareCookie(fresh,env);
+    assert.match(renewed,/^__Host-sc-autoestudio=p1\..+Max-Age=34560000/);
+    Date.now=()=>realNow()+401*86_400_000;
+    assert.equal(await api.renewShareCookie(fresh,env),null);
+    // The link itself has no clock: it still opens after any amount of time.
+    assert.equal((await api.redeem(req(),link,env)).headers.get('location'),'/autoestudio/claim');
+  } finally { Date.now=realNow; }
+  assert.equal(await api.renewShareCookie(fresh.slice(0,-2)+'00',env),null);
+  await call(api.mutatePass,req({action:'revoke'}),made.pass.id);
+  assert.equal(await api.renewShareCookie(fresh,env),null);
+});

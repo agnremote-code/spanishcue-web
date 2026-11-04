@@ -1,7 +1,7 @@
 const messages: Record<string,string> = {
  invalid_alias:'Elige un apodo de 2 a 24 caracteres, con al menos una letra. No incluyas email, teléfono ni enlaces.',
  session_changed:'El acceso cambió en otra pestaña. Vuelve a abrir el enlace que quieres usar.',
- invalid_pass:'Este acceso ya no está disponible. Pídele a tu profe el enlace vigente.',
+ invalid_pass:'No encontramos tu acceso en este navegador. Vuelve a abrir el enlace que te mandó tu profe: sirve siempre, en cualquier dispositivo.',
  share_unavailable:'Los accesos de Autoestudio no están disponibles en este momento. Vuelve a intentarlo más tarde.',
  sign_in_required:'Ingresa a tu cuenta para administrar los accesos.',
  pro_required:'Necesitas SpanishCue PRO para crear accesos para tus alumnos.',

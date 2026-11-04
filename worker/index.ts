@@ -7,7 +7,7 @@ import {
   localLessonPath,
   ownerFromHeaders,
 } from "../app/access-policy";
-import { verifyShareSession, redeem, privateHeaders } from "../app/autoestudio/share/server";
+import { verifyShareSession, redeem, privateHeaders, renewShareCookie } from "../app/autoestudio/share/server";
 import { applyShareHeaders, shareAllowsPath } from "./autoestudio-access";
 import { lessons } from "../app/lesson-catalog";
 import { isPremiumBoardPath } from "../app/boards/access";
@@ -211,7 +211,7 @@ const app = {
         safe.headers.set('Referrer-Policy','no-referrer');
         return safe;
       } catch {
-        return new Response('Este acceso no está disponible. Vuelve a consultar a tu profesor.',{status:503,headers:{...privateHeaders,'content-type':'text/plain; charset=utf-8'}});
+        return new Response('No pudimos abrir tu acceso en este momento. Vuelve a abrir el enlace de tu profe en unos minutos.',{status:503,headers:{...privateHeaders,'content-type':'text/plain; charset=utf-8'}});
       }
     }
 
@@ -348,6 +348,9 @@ const app = {
       if(administrative&&!verifiedUser) return noStoreRedirect(new URL('/ingresar?modo=entrar&returnTo=%2Fadmin',url),verifiedLocale);
       if(administrative) return noStoreRedirect(new URL('/cuenta',url),verifiedLocale);
       if(lesson&&giftCoversPath(pathname,lesson.id)) return noStoreRedirect(new URL(GIFT_LANDING_PATH,url),verifiedLocale);
+      // A student whose browser lost its pass (another device, an in-app browser, cleared cookies)
+      // must see «open your teacher's link again», never the teacher PRO paywall.
+      if(premiumAutoestudio&&!rscPayload) return noStoreRedirect(new URL(`/autoestudio/claim?semana=${encodeURIComponent(pagePath)}`,url),verifiedLocale);
       return noStoreRedirect(new URL(`/acceso?returnTo=${encodeURIComponent(pagePath+pageSearch(url))}`,url),verifiedLocale);
     }
     // PRO visitors skip the free demos: answer before any page render.
@@ -405,6 +408,11 @@ const app = {
       if (store) ctx.waitUntil(store.put(edgeKey, stored).catch(() => undefined));
     }
     setSecurityHeaders(safeResponse.headers,url,verifiedLocale);
+    // Student pass cookies slide forward on every visit: access lasts until the teacher revokes it.
+    if (autoestudio && request.method === 'GET' && !safeResponse.headers.has('Set-Cookie')) {
+      const renewed = await renewShareCookie(request.headers.get('cookie'), env).catch(() => null);
+      if (renewed) safeResponse.headers.append('Set-Cookie', renewed);
+    }
     if (requestedLocale) {
       safeResponse.headers.append(
         'Set-Cookie',

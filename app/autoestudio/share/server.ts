@@ -58,10 +58,26 @@ export async function verifyShareSession(cookieHeader: string | null, env: Share
   const state=await shareCookieState(cookieHeader,env);
   return state && !state.pending && state.pass.alias ? session(state.pass) : null;
 }
+// Student access never expires on its own: only the teacher revokes or rotates it.
+// Browsers cap cookies at 400 days, so every visit renews the cookie (renewShareCookie)
+// and the /s/ link can always be opened again on any device.
+const SHARE_COOKIE_AGE=34_560_000;
+const RENEW_BELOW=SHARE_COOKIE_AGE-86_400;
 async function sessionCookie(env: ShareEnvironment, pass: Pass, pending: boolean) {
-  const age=pending?1800:34_560_000;
+  const age=SHARE_COOKIE_AGE;
   const token=await signed(env,`${pending?'p1':'s1'}.${pass.id}.${pass.level}.${pass.revision}.${Math.floor(Date.now()/1000)+age}.0`);
   return `${SHARE_COOKIE}=${token}; Path=/; HttpOnly; Secure; SameSite=Lax; Max-Age=${age}`;
+}
+/** A fresh Set-Cookie for a still-valid pass cookie that is older than a day, so access never lapses while the student keeps studying. */
+export async function renewShareCookie(header: string | null, env: ShareEnvironment): Promise<string|null> {
+  try {
+    const raw=cookieValue(header);
+    const state=await resolveToken(env,raw,true);
+    if(!state) return null;
+    const expires=Number(raw.split('.')[4]);
+    if(expires-Math.floor(Date.now()/1000)>RENEW_BELOW) return null;
+    return await sessionCookie(env,state.pass,state.pending);
+  } catch { return null; }
 }
 export const privateHeaders = {'cache-control':'private, no-store','referrer-policy':'no-referrer','x-robots-tag':'noindex, nofollow'};
 export function response(data: unknown, status=200, headers: Record<string,string>={}) { return Response.json(data,{status,headers:{...privateHeaders,...headers}}); }

@@ -39,7 +39,8 @@ test('PRO weeks redirect anonymous visitors, including forged headers and RSC re
       const response = await fetch(origin + path, { redirect: 'manual', headers });
       assert.equal(response.status, 302, path);
       const location = new URL(response.headers.get('location'), origin);
-      assert.equal(location.pathname, '/acceso', path);
+      assert.equal(location.pathname, '/autoestudio/claim', path);
+      assert.equal(location.searchParams.get('semana'), path.split('?')[0], path);
     }
   }
   const rsc = await fetch(origin + '/autoestudio/a1/semana-3.rsc', { redirect: 'manual', headers: { RSC: '1' } });
