@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "authorization": "Owner (Ale) ordered the price change on 2026-11-03: monthly PRO US$19.90 (message cmsg_01Gr5R4j3t2Yet65UcmhcVhA7g4TEHP2SensXrDhfNdTLm) and annual US$150 with a «save %» label (cmsg_01Gr5R4j3t2Yet65UcmhcVhAA2P52brpXeQba9HdUJDK3R), under the standing English-copy approval «apruebo (siempre de ahora en más apruebo)» of 2026-10-22 (cmsg_01Gr5R4j3t2Yet65UcmhcVhAAAbp6kqDfMqxzNm3PL6f5g). Only the prices changed.",
+  "authorization": "Owner (Ale) ordered the price change on 2026-11-03: monthly PRO US$19.90 (message cmsg_01Gr5R4j3t2Yet65UcmhcVhA7g4TEHP2SensXrDhfNdTLm) and annual US$150 with a «save %» label (cmsg_01Gr5R4j3t2Yet65UcmhcVhAA2P52brpXeQba9HdUJDK3R), under the standing English-copy approval «apruebo (siempre de ahora en más apruebo)» of 2026-10-22 (cmsg_01Gr5R4j3t2Yet65UcmhcVhAAAbp6kqDfMqxzNm3PL6f5g). Only the prices changed. PayPal Live moved to the US$19.90 plan on 2026-11-04 at Ale's direct order (cmsg_01Gr5R4j3t2Yet65UcmhcVhAYE27bRGNyVSfUkDSxt5PtZ).",
   "additions": [
     {
       "path": "app/acceso/CheckoutButton.tsx",
@@ -153,6 +153,18 @@
     {
       "path": "app/marketing/FreeVersionBar.tsx",
       "text": "Unlock everything · US$19.90/month →"
+    },
+    {
+      "path": "app/immersive/PremiumPanel.tsx",
+      "text": "Unlock PRO for US$19.90/month by card or PayPal. No annual commitment; cancel before renewal."
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "US$19.90/month by card or PayPal. No annual commitment."
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Prices in USD; cards through Paddle, taxes handled at checkout; PayPal at US$19.90/month. Pay first, then link the purchase to your account. Access is granted only after the payment is confirmed."
     }
   ],
   "changes": [

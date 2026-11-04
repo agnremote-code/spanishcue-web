@@ -3,7 +3,7 @@ import test from 'node:test';
 import { build } from 'esbuild';
 const built = await build({stdin:{contents:'export * from "./app/paddle-server"; export * from "./app/paddle-config";',resolveDir:process.cwd()},bundle:true,write:false,format:'esm',platform:'node'});
 const p = await import(`data:text/javascript;base64,${Buffer.from(built.outputFiles[0].text).toString('base64')}`);
-const monthly='pri_01m6nnnnnnnnnnnnnnnnnnnnnn', legacy='pri_01m38sk06dtyhga2d4h36rt5dc', trial='pri_01m3xv2ybze2yve1phknvm3r4b';
+const monthly='pri_01m6k17xns79tsteephk45n7qq', legacy='pri_01m38sk06dtyhga2d4h36rt5dc', trial='pri_01m3xv2ybze2yve1phknvm3r4b';
 const cfg={apiKey:'test',clientToken:'test',webhookSecret:'test',priceId:monthly,trialPriceId:trial};
 const price=(isTrial=false)=>({id:isTrial?trial:monthly,product_id:'pro_01m38sbhv4c8756pat80kfhda0',tax_mode:'internal',unit_price:{amount:isTrial?'1550':'1990',currency_code:'USD'},billing_cycle:{interval:'month',frequency:1},trial_period:isTrial?{interval:'day',frequency:1,requires_payment_method:true,unit_price:{amount:'200',currency_code:'USD'}}:null});
 const pair=(isTrial=false)=>{

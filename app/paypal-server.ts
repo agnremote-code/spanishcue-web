@@ -1,6 +1,7 @@
 import {
   APPROVED_CURRENCY,
   APPROVED_INTERVAL,
+  APPROVED_PRICE_CENTS,
   PAYPAL_ALLOWED_CENTS,
   type BillingRuntimeConfig,
 } from "./billing-config";
@@ -43,9 +44,17 @@ function cents(value: unknown) {
   return Number(whole) * 100 + Number(fraction.padEnd(2, "0"));
 }
 
+/** A payment carries the current plan price, or US$15 for a subscription still on the legacy Founder plan. */
 export function validatePaypalPayment(money: PaypalMoney, config: BillingRuntimeConfig) {
+  const amount = cents(money.value);
   return money.currency_code === APPROVED_CURRENCY
-    && cents(money.value) === Math.round(config.founderOffer.priceUsd * 100)
+    && (amount === Math.round(config.founderOffer.priceUsd * 100) || amount === APPROVED_PRICE_CENTS)
+    && (PAYPAL_ALLOWED_CENTS as readonly number[]).includes(amount ?? -1);
+}
+
+/** The configured plan itself must carry exactly the current price. */
+function validatePaypalPlanPrice(money: PaypalMoney, config: BillingRuntimeConfig) {
+  return money.currency_code === APPROVED_CURRENCY && cents(money.value) === Math.round(config.founderOffer.priceUsd * 100)
     && (PAYPAL_ALLOWED_CENTS as readonly number[]).includes(cents(money.value) ?? -1);
 }
 
@@ -57,7 +66,7 @@ export function validatePaypalPlan(plan: PaypalPlan, config: BillingRuntimeConfi
     && cycle.total_cycles === 0
     && cycle.frequency?.interval_unit === APPROVED_INTERVAL.unit
     && cycle.frequency?.interval_count === APPROVED_INTERVAL.count
-    && validatePaypalPayment(cycle.pricing_scheme?.fixed_price || {}, config)
+    && validatePaypalPlanPrice(cycle.pricing_scheme?.fixed_price || {}, config)
     && cents(plan.payment_preferences?.setup_fee?.value ?? "0") === 0
     && plan.payment_preferences?.setup_fee?.currency_code === APPROVED_CURRENCY;
 }
@@ -67,7 +76,8 @@ export function validatePaypalSubscription(
   expected: { subscriptionId: string; userId: string; config: BillingRuntimeConfig },
 ) {
   return subscription.id === expected.subscriptionId
-    && subscription.plan_id === expected.config.founderPlanId
+    && (subscription.plan_id === expected.config.founderPlanId
+      || (Boolean(expected.config.legacyFounderPlanId) && subscription.plan_id === expected.config.legacyFounderPlanId))
     && subscription.custom_id === expected.userId;
 }
 

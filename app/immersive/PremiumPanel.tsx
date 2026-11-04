@@ -23,7 +23,7 @@ export default function PremiumPanel({area,signedIn,onClose,returnTo='/noche-abi
   <p>{es?'Desbloquea los ocho barrios de Noche abierta, el hospital entero y toda la biblioteca de clases para enseñar español.':'Unlock all eight Noche abierta districts, the whole hospital and the full library of ready-to-teach Spanish lessons.'}</p>
   <ul><li>{es?'Mundos interactivos y conversación A1–C2':'Interactive worlds and A1–C2 conversation'}</li><li>{es?'Clases de gramática, escucha y vocabulario':'Grammar, listening and vocabulary lessons'}</li><li>{es?'Actividades para compartir pantalla en clase':'Activities to share on screen in class'}</li></ul>
   <p className="im-free-line">{es?'Demo gratuita: US$0 · Sin tarjeta':'Free demo: US$0 · No card needed'}</p>
-  <p className="im-terms">{es?'Desbloquea PRO por US$19.90/mes con tarjeta o elige PayPal (US$15/mes). Sin obligación anual; cancela antes de la próxima renovación.':'Unlock PRO for US$19.90/month by card or choose PayPal (US$15/month). No annual commitment; cancel before renewal.'}</p>
+  <p className="im-terms">{es?'Desbloquea PRO por US$19.90/mes con tarjeta o PayPal. Sin obligación anual; cancela antes de la próxima renovación.':'Unlock PRO for US$19.90/month by card or PayPal. No annual commitment; cancel before renewal.'}</p>
   <CheckoutButton signedIn={signedIn} returnTo={returnTo} variant="landing" onPaddleOverlayChange={open=>{
    const panel=dialog.current;if(!panel)return;
    if(open)panel.close();else if(!panel.open)panel.showModal();

@@ -2,7 +2,7 @@ export const PRO_PRODUCT_CODE = "spanishcue-pro";
 export const FOUNDER_PLAN_CODE = "spanishcue-founder-monthly";
 export const APPROVED_PRICE_CENTS = 1500;
 /** PayPal Live monthly plan at US$19.90, created by the owner on 2026-11-04. Empty keeps the legacy US$15 Founder plan from the environment. */
-export const PAYPAL_LIVE_MONTHLY_PLAN_ID = "";
+export const PAYPAL_LIVE_MONTHLY_PLAN_ID = "P-6KF00654VL845614NNLVQQNY";
 export const PAYPAL_LIVE_PRICE_CENTS = 1990;
 /** Amounts a PayPal payment may carry: the legacy US$15 Founder plan and, in Live, the US$19.90 plan. */
 export const PAYPAL_ALLOWED_CENTS = [APPROVED_PRICE_CENTS, PAYPAL_LIVE_PRICE_CENTS] as const;
@@ -17,6 +17,8 @@ export type BillingRuntimeConfig = {
   webhookId: string;
   productId: string;
   founderPlanId: string;
+  /** The environment's previous Founder plan; only subscriptions already on it stay valid. */
+  legacyFounderPlanId?: string;
   publicCheckoutEnabled: boolean;
   supervisedUserId: string;
   founderOffer: {
@@ -81,6 +83,7 @@ export function billingConfig(values: unknown): BillingRuntimeConfig {
     webhookId: scoped("WEBHOOK_ID"),
     productId: scoped("PRODUCT_ID"),
     founderPlanId: paypalEnv === "live" && PAYPAL_LIVE_MONTHLY_PLAN_ID ? PAYPAL_LIVE_MONTHLY_PLAN_ID : scoped("FOUNDER_PLAN_ID"),
+    legacyFounderPlanId: scoped("FOUNDER_PLAN_ID"),
     publicCheckoutEnabled: bool(runtime.PAYPAL_PUBLIC_CHECKOUT_ENABLED, paypalEnv === "sandbox"),
     supervisedUserId: paypalEnv === "live" ? runtime.PAYPAL_LIVE_SUPERVISED_USER_ID?.trim() || "" : "",
     founderOffer: {

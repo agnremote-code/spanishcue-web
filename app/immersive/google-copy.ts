@@ -50,12 +50,12 @@ export function gtCopy(es:boolean){
   plans:{
    eyebrow:t('PLANES','PLANS'),h2:t('Compra PRO y úsalo en tus clases.','Unlock PRO for your Spanish classes.'),
    rows:[
-    [t('COMPRAR PRO','BUY PRO'),t('US$19.90/mes con tarjeta o US$15/mes con PayPal. Sin compromiso anual.','US$19.90/month by card or US$15/month with PayPal. No annual commitment.')],
+    [t('COMPRAR PRO','BUY PRO'),t('US$19.90/mes con tarjeta o PayPal. Sin compromiso anual.','US$19.90/month by card or PayPal. No annual commitment.')],
     [t('SUSCRIBIRSE','SUBSCRIBE'),t('US$19.90/mes, precio final con impuestos. Cancelas cuando quieras antes de la próxima renovación.','US$19.90/month, final price with taxes. Cancel anytime before the next renewal.')],
     [t('INCLUYE','INCLUDED'),t('La ciudad completa de Noche Abierta, todos los mundos 3D, todas las clases de gramática interactiva, escucha, tareas de Autoestudio A1–C2 y el panel del profe.','The full Noche Abierta city, every 3D world, all interactive grammar classes, listening, Autoestudio homework A1–C2 and the teacher panel.')],
     [t('GRATIS','FREE'),t('La vista guiada y las conversaciones gratis del centro en seis niveles, las clases marcadas FREE arriba y las semanas 1–2 de Autoestudio A1. Sin tarjeta.','The guided preview and free centre conversations across six levels, the lessons marked FREE above and Autoestudio A1 weeks 1–2. No card needed.')],
    ],
-   terms:t('Precios en USD; tarjetas por Paddle, impuestos resueltos en el checkout; PayPal a US$15/mes. Pagas primero y después vinculas la compra a tu cuenta. El acceso se activa solo cuando el pago está confirmado.','Prices in USD; cards through Paddle, taxes handled at checkout; PayPal at US$15/month. Pay first, then link the purchase to your account. Access is granted only after the payment is confirmed.'),
+   terms:t('Precios en USD; tarjetas por Paddle, impuestos resueltos en el checkout; PayPal a US$19.90/mes. Pagas primero y después vinculas la compra a tu cuenta. El acceso se activa solo cuando el pago está confirmado.','Prices in USD; cards through Paddle, taxes handled at checkout; PayPal at US$19.90/month. Pay first, then link the purchase to your account. Access is granted only after the payment is confirmed.'),
    havePro:t('Ya tienes PRO.','You already have PRO.'),openFull:t('Abrir la ciudad completa ↗','Open the full city ↗'),
   },
   faq:{

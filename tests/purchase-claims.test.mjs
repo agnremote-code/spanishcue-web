@@ -548,7 +548,7 @@ test('Paddle API must confirm exact price, completed transaction and customer em
     throw new Error('No separate customer.read API call is needed');
   };
   try {
-    const config = { apiKey: 'test', priceId: 'pri_01m6nnnnnnnnnnnnnnnnnnnnnn' };
+    const config = { apiKey: 'test', priceId: 'pri_01m6k17xns79tsteephk45n7qq' };
     assert.equal(await claims.verifyGuestPaddlePayment(db, config, await claims.getPurchaseClaim(db, claimId), paymentId), null);
     customerEmail = 'ale@example.test'; total = '1400';
     assert.equal(await claims.verifyGuestPaddlePayment(db, config, await claims.getPurchaseClaim(db, claimId), paymentId), null);

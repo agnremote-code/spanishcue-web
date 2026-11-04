@@ -1,5 +1,5 @@
 /** Monthly PRO at US$19.90, created by the owner in Paddle Live on 2026-11-03. */
-export const PADDLE_MONTHLY_PRICE_ID = "pri_01m6nnnnnnnnnnnnnnnnnnnnnn";
+export const PADDLE_MONTHLY_PRICE_ID = "pri_01m6k17xns79tsteephk45n7qq";
 /** The previous monthly price (US$15.00, then US$15.50). Kept only to validate subscriptions already on it. */
 export const PADDLE_LEGACY_MONTHLY_PRICE_ID = "pri_01m38sk06dtyhga2d4h36rt5dc";
 export const PADDLE_TRIAL_PRICE_ID = "pri_01m3xv2ybze2yve1phknvm3r4b";
@@ -7,7 +7,7 @@ export const PADDLE_PRODUCT_ID = "pro_01m38sbhv4c8756pat80kfhda0";
 export const PADDLE_MONTHLY_CENTS = 1990;
 export const PADDLE_TRIAL_CENTS = 200;
 /** Annual plan at US$150/year, created by the owner in Paddle Live on 2026-11-03. */
-export const PADDLE_ANNUAL_PRICE_ID = "pri_01m6aaaaaaaaaaaaaaaaaaaaaa";
+export const PADDLE_ANNUAL_PRICE_ID = "pri_01m6k19ak3sep13j06ysgrxzp7";
 /** The previous annual price (US$129/year, 2026-10-31). Kept only to validate subscriptions already on it. */
 export const PADDLE_LEGACY_ANNUAL_PRICE_ID = "pri_01m684zshhms5kzznb7s3kjfss";
 export const PADDLE_LEGACY_ANNUAL_CENTS = 12900;
