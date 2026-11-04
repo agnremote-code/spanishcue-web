@@ -9,6 +9,7 @@ import { TemaGroupCards } from "./tema-components";
 import { temaPages } from "./temas";
 import { FEED_PATH, INDICE_PATH } from "./indice";
 import { guiaPages } from "./guias";
+import { FICHAS_PATH } from "./fichas";
 import { ACTIVIDADES_PATH, actividadPages, ejercicioPages } from "./actividades";
 import styles from "../growth/growth.module.css";
 import ele from "./material-ele.module.css";
@@ -88,6 +89,7 @@ export default function MaterialElePage() {
 
           <Section id="banco" title="Banco de actividades: cada ficha con su propia página" intro={`${actividadPages.length} actividades, ${ejercicioPages.length} ejercicios con soluciones y preguntas de conversación por nivel, para imprimir o compartir en pantalla.`}>
             <Link className={styles.primaryButton} href={ACTIVIDADES_PATH}>Abrir el banco de actividades</Link>
+            <Link className={styles.secondaryButton} href={FICHAS_PATH}>Fichas de gramática con soluciones</Link>
           </Section>
 
           <Section id="temas" title="Actividades ELE por tema" intro="Los temas que más se buscan antes de preparar una clase: los usos difíciles de la gramática, la conversación y los juegos.">
