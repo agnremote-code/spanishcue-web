@@ -216,7 +216,8 @@ export const SPOT_RADIUS = 1.1;
 // Whoever sits does so at the front of the seat (chair centre ± 1.0; 0.25 nearer the table, past half its depth, so skirts clear the seat).
 const T = (i, row) => { const t = TABLES[i]; return row < 0 ? { z: t.z - 0.75, heading: 0 } : { z: t.z + 0.75, heading: Math.PI }; };
 const atTable = (i, row, chair, mood) => ({ x: chairX(chair), ...T(i, row), pose: 'sit', seat: true, mood });
-const atRound = (t, k, mood) => { const s = roundSeat(ROUND[t], k); return { x: s.x, z: s.z, heading: s.heading, pose: 'sit', seat: true, mood }; };
+// `out` moves a guest that far further from the table centre (whose hands would touch the top).
+const atRound = (t, k, mood, out = 0) => { const s = roundSeat(ROUND[t], k), a = k * Math.PI / 3; s.x += Math.sin(a) * out; s.z += Math.cos(a) * out; return { x: s.x, z: s.z, heading: s.heading, pose: 'sit', seat: true, mood }; };
 export const CROWD = [
   atTable(0, -1, 3, 'tipsy'), atTable(0, 1, 5, 'sad'), atTable(1, -1, 7, 'worried'), atTable(1, 1, 12, 'laugh'),
   { x: -28.6, z: 13.93, heading: Math.PI, pose: 'sit', seat: true, mood: 'neutral' },
@@ -224,7 +225,7 @@ export const CROWD = [
   { x: 6.8, z: -20.0, heading: 0.4, pose: 'arms', mood: 'angry' },
   { x: 26.2, z: -7.4, heading: 0.5, pose: 'dance', mood: 'laugh' }, { x: 31.8, z: -3.2, heading: -2.4, pose: 'dance', mood: 'sad' },
   { x: 33.6, z: -7.6, heading: 2.8, pose: 'dance', mood: 'smitten' }, { x: 28.8, z: -5.0, heading: 1.2, pose: 'dance', mood: 'love' },
-  atRound(0, 1, 'smile'), atRound(2, 5, 'worried'),
+  atRound(0, 1, 'smile'), atRound(2, 5, 'worried', 0.04),
   { x: -22.6, z: -24.6, heading: -1.9, pose: 'fish', mood: 'sleepy' },
   { x: -10.0, z: 16.4, heading: -2.6, pose: 'phone', mood: 'scared' },
   { x: 28.4, z: -25.6, heading: Math.PI, pose: 'arms', mood: 'scared' },
