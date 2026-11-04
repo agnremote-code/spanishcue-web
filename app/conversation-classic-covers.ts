@@ -38,4 +38,10 @@ export const classicConversationCovers: ReadonlyMap<number, string> = new Map([
   [13, "/conversation-classics/lets-talk-b1.webp"],
   [11, "/conversation-classics/preguntas-que-dan-ganas-de-hablar.webp"],
   [203, "/conversation-classics/museo-de-las-decisiones.webp"],
+  // Country classics: illustrated covers made by Ale with ChatGPT (2026-11-04),
+  // title baked into the art, so they are not drawn by clasicas.mjs.
+  [27, "/conversation-classics/mundo-fantastico.webp"],
+  [26, "/conversation-classics/coast-to-coast.webp"],
+  [19, "/conversation-classics/argento-roleplays.webp"],
+  [39, "/conversation-classics/buenos-aires-calle.webp"],
 ]);
