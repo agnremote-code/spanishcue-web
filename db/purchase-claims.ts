@@ -1,4 +1,4 @@
-import { APPROVED_PRICE_CENTS } from "../app/billing-config";
+import { PAYPAL_ALLOWED_CENTS } from "../app/billing-config";
 
 export type PurchaseProvider = "paddle" | "paypal";
 export type PurchaseClaim = {
@@ -104,7 +104,7 @@ export async function recordVerifiedPurchase(db: D1Database, claimId: string, pr
 }) {
   const normalized = input.email.trim().toLowerCase();
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(normalized) ||
-      !input.subscriptionId || !input.paymentId || !(provider === "paddle" ? [200, 1500, 1550, 1990, 12900, 15000].includes(input.amountCents) : input.amountCents === APPROVED_PRICE_CENTS) ||
+      !input.subscriptionId || !input.paymentId || !(provider === "paddle" ? [200, 1500, 1550, 1990, 12900, 15000].includes(input.amountCents) : (PAYPAL_ALLOWED_CENTS as readonly number[]).includes(input.amountCents)) ||
       input.currency !== "USD" || !Number.isInteger(input.paidAt) || input.paidAt <= 0 ||
       !Number.isInteger(input.paidThrough) || input.paidThrough <= input.paidAt) {
     throw new Error("purchase_provider_verification_missing");

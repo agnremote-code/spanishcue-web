@@ -1,6 +1,11 @@
 export const PRO_PRODUCT_CODE = "spanishcue-pro";
 export const FOUNDER_PLAN_CODE = "spanishcue-founder-monthly";
 export const APPROVED_PRICE_CENTS = 1500;
+/** PayPal Live monthly plan at US$19.90, created by the owner on 2026-11-04. Empty keeps the legacy US$15 Founder plan from the environment. */
+export const PAYPAL_LIVE_MONTHLY_PLAN_ID = "";
+export const PAYPAL_LIVE_PRICE_CENTS = 1990;
+/** Amounts a PayPal payment may carry: the legacy US$15 Founder plan and, in Live, the US$19.90 plan. */
+export const PAYPAL_ALLOWED_CENTS = [APPROVED_PRICE_CENTS, PAYPAL_LIVE_PRICE_CENTS] as const;
 export const APPROVED_CURRENCY = "USD";
 export const APPROVED_FOUNDER_LIMIT = 1000;
 export const APPROVED_INTERVAL = { unit: "MONTH", count: 1 } as const;
@@ -75,14 +80,14 @@ export function billingConfig(values: unknown): BillingRuntimeConfig {
     clientSecret: scoped("CLIENT_SECRET"),
     webhookId: scoped("WEBHOOK_ID"),
     productId: scoped("PRODUCT_ID"),
-    founderPlanId: scoped("FOUNDER_PLAN_ID"),
+    founderPlanId: paypalEnv === "live" && PAYPAL_LIVE_MONTHLY_PLAN_ID ? PAYPAL_LIVE_MONTHLY_PLAN_ID : scoped("FOUNDER_PLAN_ID"),
     publicCheckoutEnabled: bool(runtime.PAYPAL_PUBLIC_CHECKOUT_ENABLED, paypalEnv === "sandbox"),
     supervisedUserId: paypalEnv === "live" ? runtime.PAYPAL_LIVE_SUPERVISED_USER_ID?.trim() || "" : "",
     founderOffer: {
       enabled: bool(runtime.FOUNDER_OFFER_ENABLED, true),
       code: runtime.FOUNDER_OFFER_CODE?.trim() || "founder-1000-usd15-monthly",
       limit: whole(runtime.FOUNDER_LIMIT, APPROVED_FOUNDER_LIMIT, 1, APPROVED_FOUNDER_LIMIT),
-      priceUsd: whole(runtime.FOUNDER_PRICE_USD, 15, 1, 100000),
+      priceUsd: paypalEnv === "live" && PAYPAL_LIVE_MONTHLY_PLAN_ID ? PAYPAL_LIVE_PRICE_CENTS / 100 : whole(runtime.FOUNDER_PRICE_USD, 15, 1, 100000),
     },
   };
 }

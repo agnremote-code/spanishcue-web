@@ -1,7 +1,7 @@
 import {
   APPROVED_CURRENCY,
   APPROVED_INTERVAL,
-  APPROVED_PRICE_CENTS,
+  PAYPAL_ALLOWED_CENTS,
   type BillingRuntimeConfig,
 } from "./billing-config";
 
@@ -46,7 +46,7 @@ function cents(value: unknown) {
 export function validatePaypalPayment(money: PaypalMoney, config: BillingRuntimeConfig) {
   return money.currency_code === APPROVED_CURRENCY
     && cents(money.value) === Math.round(config.founderOffer.priceUsd * 100)
-    && cents(money.value) === APPROVED_PRICE_CENTS;
+    && (PAYPAL_ALLOWED_CENTS as readonly number[]).includes(cents(money.value) ?? -1);
 }
 
 export function validatePaypalPlan(plan: PaypalPlan, config: BillingRuntimeConfig) {
