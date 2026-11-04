@@ -10,6 +10,7 @@
 //   node scripts/qa-feria-browser.mjs --smoke    # G5(a) smoke only
 //   node scripts/qa-feria-browser.mjs --preview  # 8 s 640×360 H.264 hover clip (needs ffmpeg)
 //   node scripts/qa-feria-browser.mjs --hospital-gpu  # Hospital San Casi Vivo: unmount frees the GPU (2026-10-30 repair)
+//   node scripts/qa-feria-browser.mjs --bosque-gpu    # Bosque de los hongos gigantes: unmount frees the GPU (2026-11-04 repair)
 //   node scripts/qa-feria-browser.mjs --cover    # 1200×750 cover candidates + cover.webp (FERIA_COVER=<circle|intro>)
 //
 // Env: FERIA_QA_OUTPUT (evidence folder), FERIA_QA_LOOK_CIRCLES (Busca
@@ -33,8 +34,8 @@ import { CONTENT } from '../app/la-feria-de-villaluz/levels.mjs';
 
 const repo = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const argv = new Set(process.argv.slice(2));
-const all = !argv.has('--look') && !argv.has('--smoke') && !argv.has('--cover') && !argv.has('--calls') && !argv.has('--preview') && !argv.has('--hospital-gpu');
-const RUN = { look: all || argv.has('--look'), smoke: all || argv.has('--smoke'), cover: argv.has('--cover'), calls: argv.has('--calls'), preview: argv.has('--preview'), hospitalGpu: argv.has('--hospital-gpu') };
+const all = !argv.has('--look') && !argv.has('--smoke') && !argv.has('--cover') && !argv.has('--calls') && !argv.has('--preview') && !argv.has('--hospital-gpu') && !argv.has('--bosque-gpu');
+const RUN = { look: all || argv.has('--look'), smoke: all || argv.has('--smoke'), cover: argv.has('--cover'), calls: argv.has('--calls'), preview: argv.has('--preview'), hospitalGpu: argv.has('--hospital-gpu'), bosqueGpu: argv.has('--bosque-gpu') };
 const out = resolve(process.env.FERIA_QA_OUTPUT || resolve(repo, '.qa/feria-browser'));
 await mkdir(resolve(out, 'look'), { recursive: true });
 await mkdir(resolve(out, 'smoke'), { recursive: true });
@@ -50,6 +51,7 @@ import FeriaGame from './app/la-feria-de-villaluz/FeriaGame';
 import World3D from './app/la-feria-de-villaluz/World3D';
 import HospitalWorld from './app/hospital-san-casi-vivo/World3D';
 import './app/hospital-san-casi-vivo/hospital.css';
+import BosqueWorld from './app/bosque-de-los-hongos-gigantes/World3D';
 import { placeSet } from './app/la-feria-de-villaluz/layout.mjs';
 window.__qa = { stats: null, failed: false, gl: 0, frames: 0 };
 // T5: real WebGL draw calls, counted on the context the same way for every
@@ -70,6 +72,13 @@ function HospitalHarness() {
   return <main className="hs">{mounted && <HospitalWorld floor={view.floor} via="lift" sceneId={view.sceneId} mood={null} done={[]} paused={false} intro={false}
     onSpot={none} onLift={none} onNear={none} onPerson={none} personId={null} onCry={none} onPose={none} onFail={() => { window.__qa.failed = true; }} />}</main>;
 }
+function BosqueHarness() {
+  const [mounted, setMounted] = useState(true);
+  useEffect(() => { window.__qa.bosqueOff = () => setMounted(false); window.__qa.bosqueOn = () => setMounted(true); }, []);
+  const none = () => {};
+  return <main className="bq-harness" style={{ position: 'fixed', inset: 0 }}>{mounted && <BosqueWorld paused={false} visited={[]} completed={false} unlocked={false}
+    onZone={none} onFail={() => { window.__qa.failed = true; }} />}</main>;
+}
 function LookHarness() {
   const [busca, setBusca] = useState(null);
   const [intro, setIntro] = useState(false);
@@ -83,7 +92,7 @@ function LookHarness() {
     onSpot={() => {}} onNear={() => {}} onPose={() => {}} onFail={() => { window.__qa.failed = true; }} onStats={s => { window.__qa.stats = s; }} /></main>;
 }
 const q = new URLSearchParams(location.search);
-createRoot(document.getElementById('root')).render(q.get('harness') === 'look' ? <LookHarness /> : q.get('harness') === 'hospital' ? <HospitalHarness /> : <FeriaGame />);`,
+createRoot(document.getElementById('root')).render(q.get('harness') === 'look' ? <LookHarness /> : q.get('harness') === 'hospital' ? <HospitalHarness /> : q.get('harness') === 'bosque' ? <BosqueHarness /> : <FeriaGame />);`,
     resolveDir: repo, loader: 'tsx',
   },
   bundle: true, format: 'esm', splitting: true, outdir: resolve(out, 'assets'), entryNames: 'lesson', chunkNames: 'chunk-[hash]', jsx: 'automatic',
@@ -691,6 +700,42 @@ if (RUN.hospitalGpu) {
   }
 }
 
+// ------------------------------------------------------------------ Bosque unmount (gated repair, 2026-11-04)
+// Same pattern (STATUS 2026-10-28 leak list): the cleanup disposed materials
+// and the shadow map but never lost the WebGL context. Mounted alone through
+// ?harness=bosque, walked forward, then unmounted. Main numbers: LQG file.
+if (RUN.bosqueGpu) {
+  for (const viewport of [{ width: 390, height: 844 }, { width: 1280, height: 800 }]) {
+    const label = `bosque-unmount-${viewport.width}`;
+    const context = await browser.newContext({ viewport, deviceScaleFactor: 1.25, ...(viewport.width < 760 ? { hasTouch: true, isMobile: true } : {}) });
+    await context.addInitScript(countGpu);
+    const page = await context.newPage();
+    page.setDefaultTimeout(30000);
+    page.on('pageerror', e => report.errors.push(`${label}: ${e.message}`));
+    page.on('console', m => { if (m.type() === 'error' && !/Failed to load resource/.test(m.text())) report.errors.push(`${label} console: ${m.text()}`); });
+    await page.goto(`${origin}/?harness=bosque`);
+    await page.locator('.bq-harness canvas').first().waitFor({ timeout: 60000 });
+    await frames(page, 10);
+    await page.locator('.bq-harness canvas').first().focus();
+    await page.keyboard.down('KeyW'); await frames(page, 20); await page.keyboard.up('KeyW');
+    await frames(page, 10);
+    const before = await page.evaluate(() => ({ ...window.__gpu }));
+    await page.evaluate(() => window.__qa.bosqueOff());
+    await page.locator('.bq-harness canvas').first().waitFor({ state: 'detached' });
+    await page.waitForTimeout(1500);
+    const after = await page.evaluate(() => ({ ...window.__gpu, failed: window.__qa.failed }));
+    smoke(`${viewport.width} bosque unmount frees the world's WebGL textures and buffers and loses the context`, !after.failed && after.lost >= 1 && before.textures > after.textures && after.textures <= 5 && after.buffers <= 5, { before, after });
+    const errorsBefore = report.errors.length;
+    await page.evaluate(() => window.__qa.bosqueOn());
+    await page.locator('.bq-harness canvas').first().waitFor({ timeout: 60000 });
+    await frames(page, 15);
+    const px = await pixelStats(page, await page.locator('.bq-harness canvas').first().screenshot());
+    const failed = await page.evaluate(() => window.__qa.failed);
+    smoke(`${viewport.width} bosque remounts after the unmount with a non-blank canvas`, !failed && report.errors.length === errorsBefore && px.colours > 200 && px.sd > 8, px);
+    await context.close();
+  }
+}
+
 report.missing = [...missing].sort();
 await writeFile(resolve(out, 'results.json'), JSON.stringify(report, null, 2));
 await browser.close();
@@ -699,5 +744,5 @@ console.log(`Evidence: ${out}`);
 console.log(`Page/console errors: ${report.errors.length}${report.errors.length ? `\n  ${report.errors.join('\n  ')}` : ''}`);
 console.log(`404s: ${report.missing.join(', ') || 'none'}`);
 const failed = report.smoke.filter(s => !s.passed);
-if (RUN.smoke || RUN.hospitalGpu) console.log(`Smoke: ${report.smoke.length - failed.length}/${report.smoke.length} passed`);
+if (RUN.smoke || RUN.hospitalGpu || RUN.bosqueGpu) console.log(`Smoke: ${report.smoke.length - failed.length}/${report.smoke.length} passed`);
 if (failed.length || report.errors.length) process.exitCode = 1;

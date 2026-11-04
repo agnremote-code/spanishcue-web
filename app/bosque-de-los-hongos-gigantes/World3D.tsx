@@ -331,7 +331,22 @@ export default function World3D(props: WorldProps) {
       if (slowTime > 4) { if (frames / slowTime < 35 && ratio > .85) { ratio = Math.max(.85, ratio - .2); renderer.setPixelRatio(ratio); resize(); } frames = 0; slowTime = 0; }
     };
     frame = requestAnimationFrame(tick);
-    return () => { alive = false; save(); cancelAnimationFrame(frame); clear(); api.current = null; observer.disconnect(); window.removeEventListener('keydown', keydown); window.removeEventListener('keyup', keyup); window.removeEventListener('blur', blur); document.removeEventListener('visibilitychange', visibility); canvas.removeEventListener('pointerdown', pointerdown); canvas.removeEventListener('pointermove', pointermove); canvas.removeEventListener('pointerup', onUp); canvas.removeEventListener('pointercancel', onCancel); canvas.removeEventListener('lostpointercapture', onUp); canvas.removeEventListener('wheel', wheel); canvas.removeEventListener('webglcontextlost', contextLost); forest.dispose(); hero.dispose(); sky.geometry.dispose(); skyMaterial.dispose(); sun.shadow.map?.dispose(); renderer.dispose(); canvas.remove(); };
+    return () => { alive = false; save(); cancelAnimationFrame(frame); clear(); api.current = null; observer.disconnect(); window.removeEventListener('keydown', keydown); window.removeEventListener('keyup', keyup); window.removeEventListener('blur', blur); document.removeEventListener('visibilitychange', visibility); canvas.removeEventListener('pointerdown', pointerdown); canvas.removeEventListener('pointermove', pointermove); canvas.removeEventListener('pointerup', onUp); canvas.removeEventListener('pointercancel', onCancel); canvas.removeEventListener('lostpointercapture', onUp); canvas.removeEventListener('wheel', wheel); canvas.removeEventListener('webglcontextlost', contextLost);
+      // Anything the module disposers miss (2026-11-04 repair): every geometry, instance buffer and material
+      // texture slot still in the scene (before forest.dispose() clears its root), then the module disposers,
+      // then the context itself, which frees whatever GPU memory remains.
+      scene.traverse(o => {
+        const m = o as THREE.Mesh;
+        if ((o as THREE.InstancedMesh).isInstancedMesh) (o as THREE.InstancedMesh).dispose();
+        m.geometry?.dispose();
+        const mat = m.material as THREE.Material | THREE.Material[] | undefined;
+        for (const x of Array.isArray(mat) ? mat : mat ? [mat] : []) {
+          for (const value of Object.values(x)) if ((value as THREE.Texture | null)?.isTexture) (value as THREE.Texture).dispose();
+          x.dispose();
+        }
+      });
+      forest.dispose(); hero.dispose(); sky.geometry.dispose(); skyMaterial.dispose(); sun.shadow.map?.dispose();
+      renderer.dispose(); renderer.forceContextLoss(); canvas.remove(); };
   }, []);
 
   const updateJoy = (event: ReactPointerEvent<HTMLDivElement>) => { if (joyPointer.current !== event.pointerId || props.paused || mapOpen) return; const rect = event.currentTarget.getBoundingClientRect(); const x = (event.clientX - rect.left - rect.width / 2) / (rect.width * .33), y = (event.clientY - rect.top - rect.height / 2) / (rect.height * .33), length = Math.max(1, Math.hypot(x, y)); if (api.current) { api.current.joy.x = x / length; api.current.joy.y = y / length; } if (stick.current) stick.current.style.transform = `translate(${x / length * 30}px, ${y / length * 30}px)`; };
