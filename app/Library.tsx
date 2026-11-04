@@ -1682,7 +1682,7 @@ export default function Library({
           </div>
         )}
         {/* PRO accounts already have everything: no free-lesson hero, just the news carousel and the material. */}
-        {!fullAccess && <SpanishCueHero />}
+        {!fullAccess && <SpanishCueHero pricing />}
         {!fullAccess && view === "Biblioteca" && <TrustStats primary={primaryCta} primaryLabel={primaryCtaLabel} secondary={subscriptionCta.href === primaryCta.href ? secondaryCta : subscriptionCta} secondaryLabel={subscriptionCta.href === primaryCta.href ? secondaryCtaLabel : subscriptionCtaLabel} />}
         {!fullAccess && view === "Biblioteca" && <HowItWorksVideos />}
         <NewLessonsBanner lessons={lessons} />

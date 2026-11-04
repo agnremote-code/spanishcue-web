@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "authorization": "Owner standing approval (Ale) for new English copy, typed «apruebo (siempre de ahora en más apruebo)» on 2026-10-22 (message cmsg_01Gr5R4j3t2Yet65UcmhcVhAAAbp6kqDfMqxzNm3PL6f5g), applied to Ale’s 2026-11-04 request to add more CTAs to the spanishcue.com home so it sells more (message cmsg_01Gr5R4j3t2Yet65UcmhcVhAVsnpzZ7yt7wFJXcTNBAETy): the hero shows the PRO plans button, the monthly and annual prices with the 37% saving and two more free lessons; the pricing block shows the annual plan.",
+  "additions": [
+    { "path": "app/SpanishCueBrand.tsx", "text": "See PRO plans" },
+    { "path": "app/SpanishCueBrand.tsx", "text": "Full PRO:" },
+    { "path": "app/SpanishCueBrand.tsx", "text": "US$19.90/month" },
+    { "path": "app/SpanishCueBrand.tsx", "text": "or" },
+    { "path": "app/SpanishCueBrand.tsx", "text": "US$150/year" },
+    { "path": "app/SpanishCueBrand.tsx", "text": "Save 37%" },
+    { "path": "app/SpanishCueBrand.tsx", "text": "Also free to try:" },
+    { "path": "app/SpanishCueBrand.tsx", "text": "First grammar lesson" },
+    { "path": "app/marketing/MarketingSections.tsx", "text": "or" },
+    { "path": "app/marketing/MarketingSections.tsx", "text": "US$150/year" },
+    { "path": "app/marketing/MarketingSections.tsx", "text": "Save 37%" }
+  ]
+}
