@@ -147,8 +147,10 @@ async function resend(env: NewsletterEnvironment, fetcher: Fetcher, path: string
 /** Best effort: the subscriber is already saved in D1, so mail or sync failures never fail the signup. */
 export async function deliverWelcome(env: NewsletterEnvironment, fetcher: Fetcher, origin: string, subscriber: { id: string; email: string; unsubscribeToken: string; created: boolean }) {
   if (!env.RESEND_API_KEY) return { sent: false, synced: false };
-  let synced = false, sent = false;
+  let synced = false, sent = false, newContact = subscriber.created;
   try {
+    // A returning email that Resend has never seen (it signed up while mail was not configured) still gets the welcome.
+    if (!subscriber.created) newContact = (await resend(env, fetcher, `/contacts/${encodeURIComponent(subscriber.email)}`, { method: 'GET' })).status === 404;
     const created = await resend(env, fetcher, '/contacts', { method: 'POST', body: { email: subscriber.email, unsubscribed: false, segments: [{ id: NEWSLETTER_SEGMENT_ID }] } });
     synced = created.ok;
     if (!created.ok) {
@@ -159,7 +161,7 @@ export async function deliverWelcome(env: NewsletterEnvironment, fetcher: Fetche
       synced = updated.ok && joined.ok;
     }
   } catch { synced = false; }
-  if (!subscriber.created) return { sent, synced };
+  if (!newContact) return { sent, synced };
   try {
     const mail = welcomeEmail(origin, subscriber.unsubscribeToken);
     const response = await resend(env, fetcher, '/emails', {
