@@ -7,10 +7,10 @@ export type Listening = {
   contextEn?: string;
   speakers: Speaker[];
   lines: { s: number; text: string; en?: string }[];
-  choice: { q: string; options: string[]; answer: number; qEn?: string }[];
+  choice: { q: string; options: string[]; answer: number; qEn?: string; infer?: boolean }[];
   open: { q: string; model: string; qEn?: string }[];
   gaps: string;
   glossary: { word: string; meaning: string; en?: string }[];
 };
 export type ListeningFile = { game: string; level: string; items: Listening[] };
-export type GameId = 'noche' | 'casino' | 'bosque' | 'reino' | 'hospital' | 'usa' | 'mexico' | 'argentina' | 'espana' | 'suecia' | 'uk' | 'irlanda' | 'australia' | 'suiza' | 'israel' | 'indonesia' | 'feria' | 'madrid' | 'masalla' | 'vuelo' | 'consorcio';
+export type GameId = 'noche' | 'casino' | 'bosque' | 'reino' | 'hospital' | 'usa' | 'mexico' | 'argentina' | 'espana' | 'suecia' | 'uk' | 'irlanda' | 'australia' | 'suiza' | 'israel' | 'indonesia' | 'feria' | 'madrid' | 'masalla' | 'vuelo' | 'consorcio' | 'tren';
