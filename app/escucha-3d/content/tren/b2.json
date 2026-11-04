@@ -57,38 +57,38 @@
         {
           "q": "¿De qué se preocupa Marga?",
           "options": [
-            "De que a Olga le pase algo en el viaje",
             "De que el tren llegue tarde",
-            "De que Olga pierda la urna"
+            "De que a Olga le pase algo en el viaje",
+            "De que Olga pierda la urna en el andén de Mendoza"
           ],
-          "answer": 0
+          "answer": 1
         },
         {
           "q": "¿Por qué Olga no ha firmado el contrato?",
           "options": [
-            "Porque no le gusta el dinero",
+            "Porque está enfadada con Marga desde la última novela",
             "Porque prefiere firmarlo cuando la novela esté escrita",
-            "Porque está enfadada con Marga"
+            "Porque no le gusta el dinero"
           ],
           "answer": 1
         },
         {
           "q": "¿Qué insinúa Olga sobre Bruno?",
           "options": [
-            "Que es muy cariñoso",
-            "Que está enfermo",
-            "Que le interesa la herencia"
+            "Que le interesa la herencia",
+            "Que está enfermo y no se lo ha dicho",
+            "Que es muy cariñoso"
           ],
-          "answer": 2
+          "answer": 0
         },
         {
           "q": "¿Qué sugiere la última frase de Olga?",
           "options": [
-            "Que alguien más sabrá lo que pasa antes que Marga",
+            "Que Marga ya no es importante para su carrera",
             "Que no va a llamar",
-            "Que Marga no es importante"
+            "Que alguien más sabrá lo que pasa antes que Marga"
           ],
-          "answer": 0
+          "answer": 2
         }
       ],
       "open": [
@@ -184,20 +184,20 @@
         {
           "q": "¿Por qué Rosa mira la locomotora?",
           "options": [
-            "Porque vio una escena rara",
+            "Porque le gustan los trenes",
             "Porque busca a su hijo",
-            "Porque le gustan los trenes"
+            "Porque vio una escena rara"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "q": "¿Qué explicación propone Fermín?",
           "options": [
+            "Que el maquinista está enfermo",
             "Que son familia",
-            "Que son viejos amigos",
-            "Que el maquinista está enfermo"
+            "Que son viejos amigos"
           ],
-          "answer": 1
+          "answer": 2
         },
         {
           "q": "¿Qué le hace pensar a Rosa que hay algo más?",
@@ -211,11 +211,11 @@
         {
           "q": "¿Por qué Rosa no va a dormir?",
           "options": [
-            "Porque su hijo viaja en el tren y está preocupada",
-            "Porque tiene que trabajar",
-            "Porque bebió café"
+            "Porque bebió café",
+            "Porque tiene que trabajar muy temprano en el mercado",
+            "Porque su hijo viaja en el tren y está preocupada"
           ],
-          "answer": 0
+          "answer": 2
         }
       ],
       "open": [
@@ -317,7 +317,7 @@
           "options": [
             "Porque Lucas le puso una almohada en la cara",
             "Porque hace frío",
-            "Porque Lucas hace ruido"
+            "Porque Lucas hace ruido con la mochila y la linterna"
           ],
           "answer": 0
         },
@@ -333,7 +333,7 @@
         {
           "q": "¿Qué admite Evaristo al final?",
           "options": [
-            "Que ronca muchísimo",
+            "Que ronca muchísimo desde que se jubiló",
             "Que no cenó",
             "Que quizá ronca un poco cuando come mucho"
           ],
@@ -343,7 +343,7 @@
           "q": "¿Qué deja claro la última frase de Evaristo?",
           "options": [
             "Que no quiere reconocer del todo que ronca",
-            "Que se siente culpable",
+            "Que se siente culpable y quiere pedir perdón a Lucas",
             "Que no va a pagar el desayuno"
           ],
           "answer": 0
@@ -442,16 +442,16 @@
         {
           "q": "¿Por qué viene Celia al camarote cinco?",
           "options": [
-            "Para preguntar por Olga",
-            "Para traer champán",
-            "Para limpiar"
+            "Para limpiar",
+            "Para traer champán y felicitar a los novios",
+            "Para preguntar por Olga"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "q": "¿Qué cree Yesenia de la dedicatoria?",
           "options": [
-            "Que es un error",
+            "Que es un simple error",
             "Que es una pista",
             "Que es un poema"
           ],
@@ -460,20 +460,20 @@
         {
           "q": "¿Qué pasaba en la novela que cuenta Yesenia?",
           "options": [
-            "La víctima moría al amanecer",
-            "El asesino era el sobrino",
-            "La víctima estaba viva y vigilaba a todos"
+            "La víctima estaba viva y vigilaba a todos",
+            "El asesino era el sobrino, que quería la herencia",
+            "La víctima moría al amanecer"
           ],
-          "answer": 2
+          "answer": 0
         },
         {
           "q": "¿Qué le recomienda Yesenia a Celia?",
           "options": [
-            "Buscar donde nadie mira y esperar al amanecer",
-            "Llamar a la policía",
-            "Parar el tren"
+            "Parar el tren",
+            "Llamar a la policía chilena en la frontera",
+            "Buscar donde nadie mira y esperar al amanecer"
           ],
-          "answer": 0
+          "answer": 2
         }
       ],
       "open": [
@@ -569,25 +569,25 @@
         {
           "q": "¿Con quién habla Ramiro?",
           "options": [
-            "Con la central de la empresa",
+            "Con el pasajero del ocho",
             "Con la policía",
-            "Con el pasajero del ocho"
+            "Con la central de la empresa"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "q": "¿Por qué no pudo salir por la ventana?",
           "options": [
-            "Porque estaba cerrada",
             "Porque es demasiado pequeña",
+            "Porque estaba cerrada por fuera con llave",
             "Porque tiene barrotes"
           ],
-          "answer": 1
+          "answer": 0
         },
         {
           "q": "¿Por qué Ramiro no quiere avisar todavía a la policía?",
           "options": [
-            "Porque no confía en ellos",
+            "Porque no confía en ellos desde un caso anterior en el que lo culparon",
             "Porque no hay señal",
             "Porque cree que ella lo planeó y no quiere perder el paso antes de la nevada"
           ],
@@ -596,11 +596,11 @@
         {
           "q": "¿Qué condición le pone la central?",
           "options": [
-            "Que si no aparece, él será el responsable",
-            "Que pare el tren",
-            "Que vuelva a Mendoza"
+            "Que vuelva a Mendoza",
+            "Que pare el tren en la próxima estación",
+            "Que si no aparece, él será el responsable"
           ],
-          "answer": 0
+          "answer": 2
         }
       ],
       "open": [
@@ -705,17 +705,17 @@
         {
           "q": "¿Qué problema tiene Bruno?",
           "options": [
-            "Está enfermo",
             "Su empresa tiene muchas deudas",
-            "Ha perdido el trabajo"
+            "Está enfermo",
+            "Ha perdido el trabajo y no se lo ha dicho"
           ],
-          "answer": 1
+          "answer": 0
         },
         {
           "q": "¿Qué le contestó su tía en octubre?",
           "options": [
             "Que le daría todo",
-            "Que lo pensaría",
+            "Que lo pensaría después de la Navidad",
             "Que tenía que aprender a nadar solo"
           ],
           "answer": 2
@@ -723,11 +723,11 @@
         {
           "q": "¿Por qué Horacio le cree a Bruno?",
           "options": [
+            "Porque tiene una coartada que confirma Jacinto",
             "Porque un culpable habría preparado mejor su historia",
-            "Porque tiene una coartada",
             "Porque es de la familia"
           ],
-          "answer": 0
+          "answer": 1
         }
       ],
       "open": [
@@ -824,17 +824,17 @@
           "q": "¿Desde cuándo conocía Fela a Olga?",
           "options": [
             "Desde hace muchos años",
-            "Desde esta noche",
-            "Desde el mes pasado"
+            "Desde el mes pasado",
+            "Desde esta noche"
           ],
           "answer": 0
         },
         {
           "q": "¿Qué pedían siempre Olga y su marido?",
           "options": [
-            "Pollo y vino",
+            "Café y medialunas",
             "Sopa de lentejas y un pisco",
-            "Café y medialunas"
+            "Pollo asado y una botella de vino"
           ],
           "answer": 1
         },
@@ -842,7 +842,7 @@
           "q": "¿Qué tiene de especial la cena de esta noche?",
           "options": [
             "Era muy cara",
-            "Era vegetariana",
+            "Era vegetariana por primera vez",
             "Era la misma de siempre, para dos"
           ],
           "answer": 2
@@ -850,11 +850,11 @@
         {
           "q": "¿Qué descubre Ramiro al final?",
           "options": [
-            "Que el maquinista de 1968 puede ser el mismo de hoy",
-            "Que Fela miente",
-            "Que Olga está en la cocina"
+            "Que Olga está en la cocina",
+            "Que Fela le está mintiendo desde el principio",
+            "Que el maquinista de 1968 puede ser el mismo de hoy"
           ],
-          "answer": 0
+          "answer": 2
         }
       ],
       "open": [
@@ -950,18 +950,18 @@
         {
           "q": "¿Qué propone Pilar?",
           "options": [
-            "Interrogar al sobrino",
             "Llamar a la policía",
-            "Buscar en la cocina"
+            "Interrogar al sobrino",
+            "Buscar en la cocina y en la despensa"
           ],
-          "answer": 0
+          "answer": 1
         },
         {
           "q": "¿Qué piensa Horacio de los nerviosos?",
           "options": [
             "Que suelen ser culpables",
             "Que suelen ser inocentes con miedo",
-            "Que mienten mucho"
+            "Que mienten mucho y no se les puede creer"
           ],
           "answer": 1
         },
@@ -979,7 +979,7 @@
           "options": [
             "Que la desaparición es un plan de la propia escritora",
             "Que Pilar escribe muy bien",
-            "Que no le gustó la historia"
+            "Que no le gustó nada la historia que Pilar le acaba de contar"
           ],
           "answer": 0
         }
@@ -1088,14 +1088,14 @@
           "options": [
             "Que es falsa",
             "Que sale cuando ya han muerto",
-            "Que es la más fuerte"
+            "Que es la más fuerte del cielo"
           ],
           "answer": 1
         },
         {
           "q": "¿Para quién era el segundo vaso, según Wilmer?",
           "options": [
-            "Para el maquinista",
+            "Para el maquinista, que es un viejo amigo",
             "Para él",
             "Para alguien que ya no está"
           ],
@@ -1104,11 +1104,11 @@
         {
           "q": "¿Qué quiere decir la última frase?",
           "options": [
-            "Que la señora se despidió de su marido en el río",
             "Que el vaso se cayó al río",
-            "Que la señora tiró el pisco"
+            "Que la señora se despidió de su marido en el río",
+            "Que la señora tiró el pisco por la ventana del tren"
           ],
-          "answer": 0
+          "answer": 1
         }
       ],
       "open": [
@@ -1200,25 +1200,25 @@
         {
           "q": "¿Qué le pide Inés a Nelson?",
           "options": [
+            "Que se vaya a jugar a otra mesa",
             "Que ponga las manos sobre la mesa",
-            "Que pague la cerveza",
-            "Que se vaya"
+            "Que pague la cerveza"
           ],
-          "answer": 0
+          "answer": 1
         },
         {
           "q": "¿Cómo descubre Inés la trampa?",
           "options": [
-            "Lo ve en un espejo",
+            "Porque Nelson lo confiesa",
             "Contando los ases de la baraja",
-            "Porque Nelson lo confiesa"
+            "Lo ve en un espejo"
           ],
           "answer": 1
         },
         {
           "q": "¿Qué trato le propone Inés?",
           "options": [
-            "Jugar otra partida",
+            "Jugar otra partida con la baraja nueva",
             "Llamar al jefe de tren",
             "Olvidar el as a cambio de información"
           ],
@@ -1227,11 +1227,11 @@
         {
           "q": "¿Qué vio Nelson?",
           "options": [
-            "A la señora ir hacia la locomotora con el pisco",
+            "Al sobrino discutiendo en el pasillo con alguien",
             "A la señora bajar del tren",
-            "Al sobrino en el pasillo"
+            "A la señora ir hacia la locomotora con el pisco"
           ],
-          "answer": 0
+          "answer": 2
         }
       ],
       "open": [
@@ -1329,7 +1329,7 @@
           "options": [
             "Porque la luz de Kiara arruina sus fotos",
             "Porque hay mucho ruido",
-            "Porque hace frío"
+            "Porque hace frío en el mirador por la noche"
           ],
           "answer": 0
         },
@@ -1345,20 +1345,20 @@
         {
           "q": "¿Qué le propone Amaranta a Kiara?",
           "options": [
-            "Que se vaya a otro vagón",
+            "Enseñar sus fotos en el directo",
             "Que pague una multa",
-            "Enseñar sus fotos en el directo"
+            "Que se vaya a otro vagón con su teléfono"
           ],
-          "answer": 2
+          "answer": 0
         },
         {
           "q": "¿Cómo termina la conversación?",
           "options": [
-            "Con un acuerdo y una disculpa",
             "Con una pelea",
-            "Con la intervención del jefe"
+            "Con la intervención del jefe de tren",
+            "Con un acuerdo y una disculpa"
           ],
-          "answer": 0
+          "answer": 2
         }
       ],
       "open": [
@@ -1463,7 +1463,7 @@
         {
           "q": "¿Qué descubre Joel?",
           "options": [
-            "Que el comentario es falso",
+            "Que el comentario es falso y viene de un bot",
             "Que son las iniciales de Olga Ríos",
             "Que no hay señal"
           ],
@@ -1472,20 +1472,20 @@
         {
           "q": "¿Cuál es el mejor asiento, según Joel?",
           "options": [
-            "El del mirador",
+            "El de adelante",
             "El del bar",
-            "El de adelante"
+            "El del mirador"
           ],
-          "answer": 2
+          "answer": 0
         },
         {
           "q": "¿Qué le aconseja Joel a Kiara?",
           "options": [
-            "Que no lo diga en directo",
             "Que lo diga en directo",
-            "Que llame a la policía"
+            "Que no lo diga en directo",
+            "Que llame a la policía antes de seguir"
           ],
-          "answer": 0
+          "answer": 1
         }
       ],
       "open": [
@@ -1585,25 +1585,25 @@
         {
           "q": "¿Hacia dónde va Tango?",
           "options": [
-            "Hacia adelante",
+            "Hacia el andén",
             "Hacia el bar",
-            "Hacia el andén"
+            "Hacia adelante"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "q": "¿Qué sigue Tango?",
           "options": [
-            "Un ruido",
+            "Una luz",
             "Un perfume de jazmín",
-            "Una luz"
+            "Un ruido extraño que viene del techo"
           ],
           "answer": 1
         },
         {
           "q": "¿Qué ven por la ventanita?",
           "options": [
-            "Al maquinista solo",
+            "Al maquinista solo, dormido en su asiento",
             "Un gato",
             "A alguien con abrigo rojo durmiendo"
           ],
@@ -1725,20 +1725,20 @@
         {
           "q": "¿Qué le parece raro a Pilar?",
           "options": [
-            "Que Olga bajara al furgón",
+            "Que hablara con un perro como si fuera una persona",
             "Que pidiera una manta si hay calefacción",
-            "Que hablara con un perro"
+            "Que Olga bajara al furgón"
           ],
           "answer": 1
         },
         {
           "q": "¿Hacia dónde fue Olga?",
           "options": [
-            "Hacia el bar",
+            "Hacia la locomotora",
             "Hacia su camarote",
-            "Hacia la locomotora"
+            "Hacia el bar a buscar otro pisco"
           ],
-          "answer": 2
+          "answer": 0
         },
         {
           "q": "¿Qué dice Valentina de sí misma al final?",
@@ -1843,25 +1843,25 @@
         {
           "q": "¿Qué pregunta la central primero?",
           "options": [
-            "Cómo está la vía",
+            "Qué hora es",
             "Dónde está la señora",
-            "Qué hora es"
+            "Cómo está la vía"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "q": "¿Qué riesgo hay si el tren se queda mucho?",
           "options": [
-            "Que se acabe el café",
+            "Que se pierdan pasajeros que bajaron a pasear",
             "Que no pueda pasar por la nieve",
-            "Que se pierdan pasajeros"
+            "Que se acabe el café"
           ],
           "answer": 1
         },
         {
           "q": "¿Cómo describe Teófilo a la señora?",
           "options": [
-            "Como una persona perdida",
+            "Como una persona perdida que no sabía adónde iba",
             "Como una persona asustada",
             "Como una persona que encontró lo que buscaba"
           ],
@@ -1870,11 +1870,11 @@
         {
           "q": "¿Quién ayudó a la señora a subir?",
           "options": [
-            "El maquinista",
             "El jefe de tren",
+            "El maquinista",
             "Teófilo"
           ],
-          "answer": 0
+          "answer": 1
         }
       ],
       "open": [
@@ -1970,36 +1970,36 @@
         {
           "q": "¿Qué le pregunta Ulises a la cabo?",
           "options": [
-            "Por qué es tan estricta",
+            "Cuánto cuesta el permiso",
             "Dónde está el consulado",
-            "Cuánto cuesta el permiso"
+            "Por qué es tan estricta"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "q": "¿Por qué Yolanda es estricta, según ella?",
           "options": [
-            "Porque es su carácter",
+            "Porque su jefe la vigila",
             "Porque las normas protegen a la gente",
-            "Porque su jefe la vigila"
+            "Porque es su carácter desde que era niña"
           ],
           "answer": 1
         },
         {
           "q": "¿Por qué Ulises puede pasar?",
           "options": [
-            "Porque la cabo hace una excepción",
+            "Porque la foto es un documento provisional válido",
             "Porque el jefe de tren lo pidió",
-            "Porque la foto es un documento provisional válido"
+            "Porque la cabo hace una excepción solo por esta vez"
           ],
-          "answer": 2
+          "answer": 0
         },
         {
           "q": "¿Qué consejo le da Yolanda?",
           "options": [
             "Que no guarde lo importante en los pantalones de ayer",
-            "Que no viaje solo",
-            "Que llame a la policía"
+            "Que llame a la policía",
+            "Que no viaje solo por la cordillera de noche"
           ],
           "answer": 0
         }
@@ -2097,38 +2097,38 @@
         {
           "q": "¿De qué noche se acuerdan?",
           "options": [
-            "De una noche de 1968",
             "De la noche de ayer",
-            "De una noche en Santiago"
+            "De una noche en Santiago",
+            "De una noche de 1968"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "q": "¿Cómo eran los chistes de Ernesto?",
           "options": [
-            "Muy buenos",
+            "Muy largos",
             "Malísimos",
-            "Muy largos"
+            "Muy buenos"
           ],
           "answer": 1
         },
         {
           "q": "¿Qué le preocupa a Aniceto?",
           "options": [
-            "Perder su pensión",
+            "Terminar su carrera con un expediente",
             "Que llegue tarde el tren",
-            "Terminar su carrera con un expediente"
+            "Perder su pensión de jubilado por una falta grave"
           ],
-          "answer": 2
+          "answer": 0
         },
         {
           "q": "¿Para quién dejan el segundo vaso de pisco?",
           "options": [
-            "Para Ernesto",
+            "Para el pasajero del ocho",
             "Para Rocío",
-            "Para el pasajero del ocho"
+            "Para Ernesto"
           ],
-          "answer": 0
+          "answer": 2
         }
       ],
       "open": [
@@ -2224,16 +2224,16 @@
         {
           "q": "¿Qué le ha contado Inés a Bruno?",
           "options": [
+            "Que tiene que volver a Mendoza",
             "Que el testamento deja todo al museo",
-            "Que su tía está enferma",
-            "Que tiene que volver a Mendoza"
+            "Que su tía está enferma desde hace meses"
           ],
-          "answer": 0
+          "answer": 1
         },
         {
           "q": "¿Por qué Olga no deja su dinero a Bruno?",
           "options": [
-            "Porque no lo quiere",
+            "Porque no lo quiere como sobrino",
             "Porque cree que lo perdería",
             "Porque él no la llamaba"
           ],
@@ -2242,20 +2242,20 @@
         {
           "q": "¿Qué dice Olga que vio en Bruno esa noche?",
           "options": [
-            "Que mentía",
+            "Que estaba preocupado por ella de verdad",
             "Que tenía miedo de la policía",
-            "Que estaba preocupado por ella de verdad"
+            "Que mentía sobre sus deudas desde octubre"
           ],
-          "answer": 2
+          "answer": 0
         },
         {
           "q": "¿Qué quiere decir Bruno con «muy tuyo»?",
           "options": [
+            "Que la quiere mucho",
             "Que es típico del carácter de su tía",
-            "Que el dinero es de ella",
-            "Que la quiere mucho"
+            "Que el dinero es de ella y puede hacer lo que quiera"
           ],
-          "answer": 0
+          "answer": 1
         }
       ],
       "open": [

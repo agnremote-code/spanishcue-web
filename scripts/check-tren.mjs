@@ -2,7 +2,7 @@
 // all 18 circles, three answers with their own reaction, consequence and
 // mood, five different open questions about the student's life, words, level
 // length and neutral Spanish. Usage: node scripts/check-tren.mjs [level]
-import { readFileSync } from 'node:fs';
+import { readFileSync, readdirSync } from 'node:fs';
 import { pathToFileURL } from 'node:url';
 import { CAST, LEVEL_IDS, MOODS, SCENE_WORDS, STORY, STORY_IDS } from '../app/el-tren-de-las-2340/story.mjs';
 import { scanSource } from './neutral-spanish.mjs';
@@ -64,6 +64,23 @@ export function checkLevel(level, content) {
   return out;
 }
 
+// Talk questions must be this class's own: none may already exist, word for
+// word, anywhere else in app/ (other classes, other worlds, the grammar
+// classroom). Returns «LEVEL scene: question» for every repeat.
+export function crossClassDuplicates(contentByLevel, root = '.') {
+  const skip = /(^|\/)(node_modules|el-tren-de-las-2340)(\/|$)|content\/tren\//;
+  const files = [];
+  const walk = (dir) => { for (const e of readdirSync(dir, { withFileTypes: true })) { const f = `${dir}/${e.name}`; if (skip.test(f)) continue; if (e.isDirectory()) walk(f); else if (/\.(mjs|ts|tsx|json)$/.test(e.name)) files.push(f); } };
+  walk(`${root}/app`);
+  const corpus = files.map((f) => readFileSync(f, 'utf8')).join('\n');
+  const out = [];
+  for (const [level, content] of Object.entries(contentByLevel)) for (const [id, s] of Object.entries(content ?? {})) for (const q of s.talk ?? []) {
+    const text = typeof q === 'string' ? q : q?.es;
+    if (text && corpus.includes(text)) out.push(`${level} ${id}: «${text}» already exists in another class`);
+  }
+  return out;
+}
+
 async function main() {
   const only = process.argv[2]?.toUpperCase();
   const problems = [];
@@ -75,6 +92,10 @@ async function main() {
     catch (error) { problems.push(`${path}: ${error.message}`); continue; }
     problems.push(...checkLevel(level, content));
     for (const f of scanSource(readFileSync(path, 'utf8'), path)) problems.push(`${path}:${f.line}: neutral Spanish guard flags «${f.token}» (${f.kind}); rewrite with tú`);
+  }
+  if (!only) {
+    const { CONTENT } = await import('../app/el-tren-de-las-2340/levels.mjs');
+    problems.push(...crossClassDuplicates(CONTENT));
   }
   // Everyone in the crowd tells a story at three levels.
   const { CROWD } = await import('../app/el-tren-de-las-2340/layout.mjs');

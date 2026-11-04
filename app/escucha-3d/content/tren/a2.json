@@ -49,38 +49,38 @@
         {
           "q": "¿De qué habla Fermín?",
           "options": [
+            "De sus vacaciones en la costa con su familia",
             "De su día y de una pasajera especial",
-            "De sus vacaciones",
             "De un problema con el tren"
           ],
-          "answer": 0
+          "answer": 1
         },
         {
           "q": "¿Cuántas maletas cargó por la mañana?",
           "options": [
-            "Catorce",
+            "Cuatro",
             "Cuarenta",
-            "Cuatro"
+            "Catorce"
           ],
           "answer": 1
         },
         {
           "q": "¿Qué tenía el marido de la señora?",
           "options": [
-            "Una maleta",
+            "Un billete",
             "Un perro",
-            "Un billete"
+            "Una maleta"
           ],
-          "answer": 2
+          "answer": 0
         },
         {
           "q": "¿Quién llevó la urna al final?",
           "options": [
-            "Fermín",
             "Un pasajero joven",
-            "Ramiro"
+            "Ramiro",
+            "Fermín, con mucho cuidado"
           ],
-          "answer": 1
+          "answer": 0
         }
       ],
       "open": [
@@ -177,29 +177,29 @@
         {
           "q": "¿Cuántas horas viajaron en autobús?",
           "options": [
-            "Catorce",
+            "Cuarenta",
             "Cuatro",
-            "Cuarenta"
+            "Catorce"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "q": "¿Qué le puso la madre de Lucas en la mochila?",
           "options": [
             "Queso",
-            "Chipa",
-            "Jamón"
+            "Jamón",
+            "Chipa"
           ],
-          "answer": 2
+          "answer": 1
         },
         {
           "q": "¿Qué le pasó a Lucas en el avión?",
           "options": [
-            "Perdió la mochila",
             "Pasó el viaje en el baño",
-            "Durmió todo el viaje"
+            "Perdió la mochila",
+            "Durmió todo el viaje sin despertarse"
           ],
-          "answer": 1
+          "answer": 0
         }
       ],
       "open": [
@@ -283,18 +283,18 @@
         {
           "q": "¿Dónde está Lucas?",
           "options": [
-            "En el pasillo",
+            "En su cama, con los tapones",
             "En el bar",
-            "En su cama"
+            "En el pasillo"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "q": "¿A qué hora empezó a roncar el señor?",
           "options": [
-            "A las once",
+            "A la una menos cuarto",
             "A las once y cinco",
-            "A la una"
+            "A las once"
           ],
           "answer": 1
         },
@@ -311,7 +311,7 @@
           "q": "¿Qué vio Lucas a la una?",
           "options": [
             "A alguien con pantuflas de leopardo",
-            "A un perro",
+            "A un perro que corría por el pasillo",
             "A la policía"
           ],
           "answer": 0
@@ -407,36 +407,36 @@
         {
           "q": "¿Dónde se conocieron?",
           "options": [
-            "En un tren",
             "En un autobús",
+            "En un tren",
             "En una cafetería"
-          ],
-          "answer": 1
-        },
-        {
-          "q": "¿Hace cuánto tiempo?",
-          "options": [
-            "Cuatro años",
-            "Un año",
-            "Diez años"
           ],
           "answer": 0
         },
         {
+          "q": "¿Hace cuánto tiempo?",
+          "options": [
+            "Un año",
+            "Cuatro años",
+            "Diez años"
+          ],
+          "answer": 1
+        },
+        {
           "q": "¿Qué leía Yesenia?",
           "options": [
-            "Un periódico",
-            "Una revista",
-            "Una novela de Olga Ríos"
+            "Una novela de Olga Ríos",
+            "Una revista de viajes y de bodas",
+            "Un periódico"
           ],
-          "answer": 2
+          "answer": 0
         },
         {
           "q": "¿Qué hicieron después de bajar?",
           "options": [
             "Fueron al cine",
             "Tomaron un café",
-            "Se despidieron"
+            "Se despidieron sin darse el teléfono"
           ],
           "answer": 1
         }
@@ -522,20 +522,20 @@
         {
           "q": "¿Qué le pide Ramiro a Celia?",
           "options": [
-            "Que le cuente todo",
             "Que le traiga un té",
+            "Que le cuente todo",
             "Que cierre la puerta"
           ],
-          "answer": 0
+          "answer": 1
         },
         {
           "q": "¿Qué hacía Olga a las doce y media?",
           "options": [
+            "Escribía",
             "Dormía",
-            "Leía",
-            "Escribía"
+            "Leía"
           ],
-          "answer": 2
+          "answer": 0
         },
         {
           "q": "¿Cómo estaba Olga?",
@@ -549,11 +549,11 @@
         {
           "q": "¿Qué faltaba en el camarote?",
           "options": [
-            "El abrigo y la urna",
-            "La maleta",
-            "El libro"
+            "El libro",
+            "La maleta y el pasaporte",
+            "El abrigo y la urna"
           ],
-          "answer": 0
+          "answer": 2
         }
       ],
       "open": [
@@ -650,11 +650,11 @@
         {
           "q": "¿Dónde cenaron?",
           "options": [
-            "En un restaurante",
             "En Santiago",
-            "En la casa de Olga en Viña del Mar"
+            "En la casa de Olga en Viña del Mar",
+            "En un restaurante del puerto de Valparaíso"
           ],
-          "answer": 2
+          "answer": 1
         },
         {
           "q": "¿Qué le regaló Olga a Bruno?",
@@ -668,11 +668,11 @@
         {
           "q": "¿Qué piensa Marga de la frase de Olga?",
           "options": [
-            "Que no tiene sentido",
             "Que la entiende muy bien",
-            "Que es triste"
+            "Que es triste",
+            "Que no tiene ningún sentido"
           ],
-          "answer": 1
+          "answer": 0
         }
       ],
       "open": [
@@ -765,29 +765,29 @@
         {
           "q": "¿Qué sabía cocinar al principio?",
           "options": [
-            "Casi nada",
+            "Solo sopas",
             "Todo",
-            "Solo sopas"
+            "Casi nada"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "q": "¿Qué hacía Doña Lupe con la sopa salada?",
           "options": [
-            "La comía",
             "La tiraba",
+            "La comía",
             "La vendía"
           ],
-          "answer": 1
+          "answer": 0
         },
         {
           "q": "¿Cómo conoció Fela a su marido?",
           "options": [
-            "En una fiesta",
             "Le cayó una bandeja encima",
-            "En el andén"
+            "En el andén",
+            "En una fiesta de cumpleaños"
           ],
-          "answer": 1
+          "answer": 0
         }
       ],
       "open": [
@@ -871,18 +871,18 @@
         {
           "q": "¿De qué habla Horacio?",
           "options": [
-            "De su primer caso",
+            "De sus vacaciones",
             "De su boda",
-            "De sus vacaciones"
+            "De su primer caso"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "q": "¿Qué desapareció?",
           "options": [
-            "Un perro",
+            "Un coche",
             "Una gallina",
-            "Un coche"
+            "Un perro"
           ],
           "answer": 1
         },
@@ -899,10 +899,10 @@
           "q": "¿Quién se llevó la gallina?",
           "options": [
             "Un vecino",
-            "El marido de la señora",
-            "Un ladrón"
+            "Un ladrón del pueblo de al lado",
+            "El marido de la señora"
           ],
-          "answer": 1
+          "answer": 2
         }
       ],
       "open": [
@@ -996,26 +996,26 @@
           "q": "¿Dónde trabajó primero?",
           "options": [
             "En Bogotá",
-            "En Mendoza",
-            "En Lima"
+            "En Lima",
+            "En Mendoza"
           ],
           "answer": 0
         },
         {
           "q": "¿Cómo consiguió el trabajo en el tren?",
           "options": [
-            "Por internet",
+            "Por un cliente que le habló del puesto",
             "Por un amigo de la familia",
-            "Por un cliente que le habló del puesto"
+            "Por un anuncio que vio en internet"
           ],
-          "answer": 2
+          "answer": 0
         },
         {
           "q": "¿Qué es lo mejor de su trabajo?",
           "options": [
-            "El dinero",
+            "Los viajes",
             "Las historias de la gente",
-            "Los viajes"
+            "El dinero de las propinas"
           ],
           "answer": 1
         }
@@ -1101,36 +1101,36 @@
         {
           "q": "¿Dónde fue la peor partida de Nelson?",
           "options": [
+            "En el tren",
             "En Mendoza",
-            "En Asunción",
-            "En el tren"
-          ],
-          "answer": 1
-        },
-        {
-          "q": "¿Cuánto dinero perdió?",
-          "options": [
-            "Cien dólares",
-            "Diez mil dólares",
-            "Mil dólares"
+            "En Asunción"
           ],
           "answer": 2
         },
         {
-          "q": "¿Contra quién jugó?",
+          "q": "¿Cuánto dinero perdió?",
           "options": [
-            "Contra una abuelita",
-            "Contra un policía",
-            "Contra un amigo"
+            "Mil dólares",
+            "Diez mil dólares",
+            "Cien dólares"
           ],
           "answer": 0
         },
         {
+          "q": "¿Contra quién jugó?",
+          "options": [
+            "Contra un amigo",
+            "Contra una abuelita",
+            "Contra un policía jubilado"
+          ],
+          "answer": 1
+        },
+        {
           "q": "¿Qué compró la abuelita?",
           "options": [
-            "Un coche",
+            "Galletas",
             "Un televisor",
-            "Galletas"
+            "Un coche"
           ],
           "answer": 1
         }
@@ -1217,19 +1217,19 @@
           "q": "¿Qué le enseña Amaranta a Horacio?",
           "options": [
             "Una foto",
-            "Un mapa",
-            "Un telescopio"
+            "Un telescopio",
+            "Un mapa"
           ],
           "answer": 0
         },
         {
           "q": "¿A qué hora sacó la foto?",
           "options": [
-            "A las tres y cinco",
             "A las tres y diez",
+            "A las tres y cinco",
             "A las cuatro"
           ],
-          "answer": 1
+          "answer": 0
         },
         {
           "q": "¿Cómo caminaba la persona?",
@@ -1245,7 +1245,7 @@
           "options": [
             "Que la persona sabía adónde iba",
             "Que la persona estaba perdida",
-            "Que la foto es falsa"
+            "Que la foto es falsa o está editada"
           ],
           "answer": 0
         }
@@ -1332,35 +1332,35 @@
           "q": "¿Cuántas personas vieron el directo?",
           "options": [
             "Dos mil",
-            "Ocho mil",
-            "Trescientas"
+            "Trescientas",
+            "Ocho mil"
           ],
-          "answer": 1
+          "answer": 2
         },
         {
           "q": "¿Dónde hizo Kiara el directo del mes pasado?",
           "options": [
-            "En Machu Picchu",
             "En Mendoza",
+            "En Machu Picchu",
             "En Santiago"
           ],
-          "answer": 0
+          "answer": 1
         },
         {
           "q": "¿Quién le escribió?",
           "options": [
-            "Su madre",
+            "Una marca de pantuflas",
             "La policía",
-            "Una marca de pantuflas"
+            "Su madre"
           ],
-          "answer": 2
+          "answer": 0
         },
         {
           "q": "¿Qué se ve en el video de las tres y cuarto?",
           "options": [
             "Un perro",
             "Pantuflas de leopardo en la nieve",
-            "Una estrella"
+            "Una estrella fugaz sobre la montaña"
           ],
           "answer": 1
         }
@@ -1446,9 +1446,9 @@
         {
           "q": "¿Qué le pasó al dueño de Tango?",
           "options": [
-            "Se mudó a Chile",
+            "Se fue de viaje",
             "Murió",
-            "Se fue de viaje"
+            "Se mudó a Chile"
           ],
           "answer": 1
         },
@@ -1456,26 +1456,26 @@
           "q": "¿Cuánto tiempo pasó Tango en un refugio?",
           "options": [
             "Tres meses",
-            "Tres años",
-            "Tres semanas"
+            "Tres semanas",
+            "Tres años"
           ],
           "answer": 0
         },
         {
           "q": "¿Quién adoptó a Tango?",
           "options": [
-            "Cosme",
+            "Una familia de Santiago",
             "Una señora mayor",
-            "Una familia de Santiago"
+            "Cosme"
           ],
-          "answer": 2
+          "answer": 0
         },
         {
           "q": "¿Por qué aúlla Tango según Cosme?",
           "options": [
             "Porque tiene hambre",
             "Porque huele a alguien que le recuerda a su dueño",
-            "Porque tiene frío"
+            "Porque tiene frío y está solo en una jaula oscura"
           ],
           "answer": 1
         }
@@ -1562,25 +1562,25 @@
           "q": "¿De quién era el violonchelo?",
           "options": [
             "De su abuela",
-            "De su madre",
-            "De su profesor"
+            "De su profesor",
+            "De su madre"
           ],
           "answer": 0
         },
         {
           "q": "¿Cuántos años tocó la abuela en la orquesta?",
           "options": [
-            "Catorce",
             "Cuarenta",
-            "Noventa"
+            "Noventa",
+            "Catorce"
           ],
-          "answer": 1
+          "answer": 0
         },
         {
           "q": "¿Cuándo recibió Valentina el violonchelo?",
           "options": [
-            "A los diez años",
             "A los veinte años",
+            "A los diez años",
             "A los quince años"
           ],
           "answer": 2
@@ -1588,9 +1588,9 @@
         {
           "q": "¿Qué le lleva Valentina a su abuela?",
           "options": [
-            "Flores",
+            "Un libro",
             "Tres quesos",
-            "Un libro"
+            "Flores"
           ],
           "answer": 1
         }
@@ -1676,11 +1676,11 @@
         {
           "q": "¿Cuánto tiempo lleva Teófilo en Puente del Inca?",
           "options": [
+            "Veinte años",
             "Once años",
-            "Un año",
-            "Veinte años"
+            "Un año"
           ],
-          "answer": 0
+          "answer": 1
         },
         {
           "q": "¿Dónde trabajó antes?",
@@ -1694,16 +1694,16 @@
         {
           "q": "¿Por qué fue a Puente del Inca?",
           "options": [
-            "Por dinero",
             "Porque quería silencio",
+            "Por dinero",
             "Por su gato"
           ],
-          "answer": 1
+          "answer": 0
         },
         {
           "q": "¿Qué vio esta noche?",
           "options": [
-            "Un accidente",
+            "Un accidente de coche en la carretera de la montaña",
             "A una señora que se despidió de su marido en el río",
             "Un oso"
           ],
@@ -1793,15 +1793,15 @@
           "options": [
             "En el tren",
             "En un hostal de Mendoza",
-            "En casa de un amigo"
+            "En casa de un amigo de la universidad"
           ],
           "answer": 1
         },
         {
           "q": "¿Dónde estaba el pasaporte?",
           "options": [
-            "En la mochila",
             "En la maleta",
+            "En la mochila",
             "En el bolsillo de los pantalones viejos"
           ],
           "answer": 2
@@ -1818,11 +1818,11 @@
         {
           "q": "¿Qué dice siempre la madre de Ulises?",
           "options": [
+            "Que es muy ordenado",
             "Que es muy listo",
-            "Que es un desastre",
-            "Que es muy ordenado"
+            "Que es un desastre"
           ],
-          "answer": 1
+          "answer": 2
         }
       ],
       "open": [
@@ -1911,25 +1911,25 @@
           "q": "¿Cuándo fue el primer viaje de Aniceto?",
           "options": [
             "En agosto de 1968",
-            "En agosto de 1986",
-            "En marzo de 1968"
+            "En marzo de 1968",
+            "En agosto de 1986"
           ],
           "answer": 0
         },
         {
           "q": "¿Cuántas horas tardaba el tren?",
           "options": [
-            "Cuatro",
+            "Cuarenta",
             "Catorce",
-            "Cuarenta"
+            "Cuatro"
           ],
           "answer": 1
         },
         {
           "q": "¿Qué pidió la pareja?",
           "options": [
+            "Una manta y dos tazas de café caliente",
             "Comida",
-            "Una manta",
             "Ver el amanecer desde la locomotora"
           ],
           "answer": 2
@@ -1937,11 +1937,11 @@
         {
           "q": "¿Cómo eran los chistes de Ernesto?",
           "options": [
-            "Muy buenos",
             "Malos",
+            "Muy buenos",
             "Tristes"
           ],
-          "answer": 1
+          "answer": 0
         }
       ],
       "open": [
@@ -2025,18 +2025,18 @@
         {
           "q": "¿Por qué estaba preocupada Marga?",
           "options": [
-            "Porque Bruno la llamó de noche",
             "Porque el tren llegó tarde",
-            "Porque Olga no escribía"
+            "Porque Olga no contestaba sus mensajes",
+            "Porque Bruno la llamó de noche"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "q": "¿Dónde dejó Olga a Ernesto?",
           "options": [
-            "En Mendoza",
+            "En el tren",
             "En el río",
-            "En el tren"
+            "En Mendoza"
           ],
           "answer": 1
         },

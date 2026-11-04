@@ -12,15 +12,15 @@ export default {
     ask: { es: 'Fermín te mira. No sabe qué hacer.', en: 'Fermín looks at you. He does not know what to do.' },
     options: [
       { say: { es: 'Yo llevo la urna, señora.', en: 'I will carry the urn, madam.' }, reply: { es: 'Gracias. Con cuidado, por favor.', en: 'Thank you. Carefully, please.' }, end: { es: 'Llevas a Ernesto al camarote siete. Olga sonríe.', en: 'You carry Ernesto to cabin seven. Olga smiles.' }, mood: 'smile' },
-      { say: { es: '¿Puedo ver el billete de Ernesto?', en: 'Can I see Ernesto’s ticket?' }, reply: { es: 'Claro. Asiento siete B. Ventana.', en: 'Of course. Seat seven B. Window.' }, end: { es: 'El billete es real. Fermín no dice nada más.', en: 'The ticket is real. Fermín says nothing more.' }, mood: 'surprised' },
+      { say: { es: '¿Puedo ver el billete de Ernesto?', en: 'Can I see Ernesto’s ticket?' }, reply: { es: 'Claro. Camarote siete, cama de arriba.', en: 'Of course. Cabin seven, top bunk.' }, end: { es: 'El billete es real. Fermín no dice nada más.', en: 'The ticket is real. Fermín says nothing more.' }, mood: 'surprised' },
       { say: { es: 'Fermín, la urna es pequeña. No es una maleta.', en: 'Fermín, the urn is small. It is not a suitcase.' }, reply: { es: 'Bueno, bueno. Pero no es mi problema.', en: 'All right, all right. But it is not my problem.' }, end: { es: 'Fermín lleva las maletas. Olga lleva a su marido.', en: 'Fermín carries the suitcases. Olga carries her husband.' }, mood: 'laugh' },
     ],
     talk: [
-      { es: '¿Viajas con mucho equipaje?', en: 'Do you travel with a lot of luggage?' },
+      { es: '¿Viajas con una maleta grande o pequeña?', en: 'Do you travel with a big suitcase or a small one?' },
       { es: '¿Cuántas maletas tienes en casa?', en: 'How many suitcases do you have at home?' },
       { es: '¿Te gusta viajar de noche?', en: 'Do you like travelling at night?' },
-      { es: '¿Qué hay en tu bolso ahora?', en: 'What is in your bag now?' },
-      { es: '¿De qué color es tu abrigo?', en: 'What colour is your coat?' },
+      { es: '¿Qué tres cosas hay en tu bolso hoy?', en: 'What three things are in your bag today?' },
+      { es: '¿Tienes un abrigo rojo, como Olga?', en: 'Do you have a red coat, like Olga?' },
     ],
     words: [
       { es: 'el andén', en: 'the platform' },
@@ -49,7 +49,7 @@ export default {
       { es: '¿Qué comida llevas en un viaje?', en: 'What food do you take on a trip?' },
       { es: '¿Tienes familia en otro país?', en: 'Do you have family in another country?' },
       { es: '¿Trabajas en tu ciudad o en otra ciudad?', en: 'Do you work in your city or in another city?' },
-      { es: '¿Te gusta el queso?', en: 'Do you like cheese?' },
+      { es: '¿Llevas comida cuando viajas en tren?', en: 'Do you take food when you travel by train?' },
     ],
     words: [
       { es: 'el hijo', en: 'the son' },
@@ -102,10 +102,10 @@ export default {
       { say: { es: 'Es normal. Es una frase de escritora.', en: 'It is normal. It is a writer’s phrase.' }, reply: { es: 'No. Olga no escribe frases normales.', en: 'No. Olga does not write normal phrases.' }, end: { es: 'Yesenia no está contenta. Copias la frase en tu cuaderno.', en: 'Yesenia is not happy. You copy the phrase in your notebook.' }, mood: 'angry' },
     ],
     talk: [
-      { es: '¿Estás casado o casada?', en: 'Are you married?' },
+      { es: '¿Conoces a una pareja de recién casados?', en: 'Do you know a newly married couple?' },
       { es: '¿Tienes un libro favorito?', en: 'Do you have a favourite book?' },
       { es: '¿Tienes un libro firmado?', en: 'Do you have a signed book?' },
-      { es: '¿Lees en la cama?', en: 'Do you read in bed?' },
+      { es: '¿Lees libros en el tren o en el autobús?', en: 'Do you read books on the train or the bus?' },
       { es: '¿Te gusta ver el amanecer?', en: 'Do you like watching the sunrise?' },
     ],
     words: [
@@ -117,7 +117,7 @@ export default {
   },
   camarote7: {
     title: { es: 'El camarote siete está vacío', en: 'Cabin seven is empty' },
-    line: { es: 'Son la una menos diez. La puerta del camarote siete está abierta. No hay nadie. La ventana está abierta. Hace frío.', en: 'It is ten to one. The door of cabin seven is open. There is nobody there. The window is open. It is cold.' },
+    line: { es: 'Es la una menos diez. La puerta del camarote siete está abierta. No hay nadie. La ventana está abierta. Hace frío.', en: 'It is ten to one. The door of cabin seven is open. There is nobody there. The window is open. It is cold.' },
     dialogue: [
       ['celia', { es: 'La señora Olga no está. Su cama está hecha.', en: 'Mrs Olga is not here. Her bed is made.' }],
       ['ramiro', { es: 'Soy el jefe de tren. ¿Usted es el pasajero del ocho?', en: 'I am the train manager. Are you the passenger in eight?' }],
@@ -132,10 +132,10 @@ export default {
     ],
     talk: [
       { es: '¿Tu cama está hecha ahora?', en: 'Is your bed made now?' },
-      { es: '¿Tienes un cuaderno?', en: 'Do you have a notebook?' },
+      { es: '¿Escribes notas en un cuaderno o en el teléfono?', en: 'Do you write notes in a notebook or on your phone?' },
       { es: '¿Lees novelas policiales?', en: 'Do you read crime novels?' },
-      { es: '¿Duermes con la ventana abierta?', en: 'Do you sleep with the window open?' },
-      { es: '¿Tienes frío ahora?', en: 'Are you cold now?' },
+      { es: '¿Abres la ventana del tren o del coche?', en: 'Do you open the window on a train or in a car?' },
+      { es: '¿Tienes frío o calor en esta clase?', en: 'Are you cold or warm in this class?' },
     ],
     words: [
       { es: 'vacío', en: 'empty' },
@@ -156,15 +156,15 @@ export default {
     ask: { es: 'Bruno habla mucho de dinero. ¿Qué preguntas?', en: 'Bruno talks a lot about money. What do you ask?' },
     options: [
       { say: { es: '¿Usted quiere mucho a su tía?', en: 'Do you love your aunt very much?' }, reply: { es: '¡Claro! Bueno… es complicado.', en: 'Of course! Well… it is complicated.' }, end: { es: 'Bruno mira el suelo. Escribes «complicado» en el cuaderno.', en: 'Bruno looks at the floor. You write “complicated” in the notebook.' }, mood: 'worried' },
-      { say: { es: '¿Qué dice el testamento nuevo?', en: 'What does the new will say?' }, reply: { es: 'No sé. ¡Ese es el problema!', en: 'I do not know. That is the problem!' }, end: { es: 'Bruno está muy enfadado. Llama a su abogado. Son la una y diez.', en: 'Bruno is very angry. He calls his lawyer. It is ten past one.' }, mood: 'furious' },
+      { say: { es: '¿Qué dice el testamento nuevo?', en: 'What does the new will say?' }, reply: { es: 'No sé. ¡Ese es el problema!', en: 'I do not know. That is the problem!' }, end: { es: 'Bruno está muy enfadado. Llama a su abogado. Es la una y diez.', en: 'Bruno is very angry. He calls his lawyer. It is ten past one.' }, mood: 'furious' },
       { say: { es: 'Tranquilo. Su tía tiene setenta y nueve años y mucha energía.', en: 'Calm down. Your aunt is seventy-nine and has a lot of energy.' }, reply: { es: 'Sí. Demasiada energía.', en: 'Yes. Too much energy.' }, end: { es: 'Bruno ríe un poco. Es una risa triste.', en: 'Bruno laughs a little. It is a sad laugh.' }, mood: 'sad' },
     ],
     talk: [
-      { es: '¿Tienes sobrinos?', en: 'Do you have nephews or nieces?' },
+      { es: '¿Tienes tíos o tías? ¿Dónde viven?', en: 'Do you have uncles or aunts? Where do they live?' },
       { es: '¿Cuántos años tiene tu tía favorita?', en: 'How old is your favourite aunt?' },
       { es: '¿Llevas traje para viajar?', en: 'Do you wear a suit to travel?' },
       { es: '¿Hablas mucho de dinero con tu familia?', en: 'Do you talk a lot about money with your family?' },
-      { es: '¿Cuántas horas al día usas el teléfono?', en: 'How many hours a day do you use your phone?' },
+      { es: '¿Hay señal de teléfono en tu casa?', en: 'Is there phone signal at your home?' },
     ],
     words: [
       { es: 'el sobrino', en: 'the nephew' },
@@ -189,11 +189,11 @@ export default {
       { say: { es: 'Jacinto, ¿tú lees bien los pedidos?', en: 'Jacinto, do you read orders properly?' }, reply: { es: '¡Sí! Bueno… a veces.', en: 'Yes! Well… sometimes.' }, end: { es: 'Fela mira a Jacinto. Jacinto lava los platos muy rápido.', en: 'Fela looks at Jacinto. Jacinto washes the dishes very quickly.' }, mood: 'furious' },
     ],
     talk: [
-      { es: '¿Cocinas en casa?', en: 'Do you cook at home?' },
-      { es: '¿Qué cenas normalmente?', en: 'What do you normally have for dinner?' },
-      { es: '¿Te gusta la sopa?', en: 'Do you like soup?' },
+      { es: '¿Quién prepara la comida de los domingos en tu familia?', en: 'Who makes Sunday lunch in your family?' },
+      { es: '¿Qué cenas en un viaje largo?', en: 'What do you have for dinner on a long trip?' },
+      { es: '¿Comes lentejas? ¿Te gustan?', en: 'Do you eat lentils? Do you like them?' },
       { es: '¿Tomas té o café por la noche?', en: 'Do you drink tea or coffee at night?' },
-      { es: '¿A qué hora cenas?', en: 'What time do you have dinner?' },
+      { es: '¿Cenas antes o después de las nueve?', en: 'Do you have dinner before or after nine?' },
     ],
     words: [
       { es: 'la cocinera', en: 'the cook' },
@@ -246,11 +246,11 @@ export default {
       { say: { es: 'Acepto la apuesta. Diez pesos.', en: 'I accept the bet. Ten pesos.' }, reply: { es: '¡Eso! Una persona con valor.', en: 'That’s it! A brave person.' }, end: { es: 'Nelson escribe tu nombre en una servilleta. Está un poco borracho.', en: 'Nelson writes your name on a napkin. He is a bit drunk.' }, mood: 'tipsy' },
     ],
     talk: [
-      { es: '¿Qué bebes en un bar?', en: 'What do you drink in a bar?' },
+      { es: '¿Qué pides en el bar de un tren?', en: 'What do you order at the bar on a train?' },
       { es: '¿Bebes solo o con amigos?', en: 'Do you drink alone or with friends?' },
       { es: '¿Haces apuestas?', en: 'Do you make bets?' },
-      { es: '¿Qué música te gusta?', en: 'What music do you like?' },
-      { es: '¿Cuánto cuesta un café en tu ciudad?', en: 'How much is a coffee in your city?' },
+      { es: '¿Qué música escuchas en un viaje?', en: 'What music do you listen to on a trip?' },
+      { es: '¿Cuánto cuesta un billete de tren en tu país?', en: 'How much is a train ticket in your country?' },
     ],
     words: [
       { es: 'la barra', en: 'the bar counter' },
@@ -274,9 +274,9 @@ export default {
       { say: { es: '¿Puedo jugar con ustedes?', en: 'Can I play with you?' }, reply: { es: 'Claro. Pero las cartas son mías.', en: 'Of course. But the cards are mine.' }, end: { es: 'Juegas tres partidas. Inés gana las tres.', en: 'You play three games. Inés wins all three.' }, mood: 'smile' },
     ],
     talk: [
-      { es: '¿Juegas a las cartas?', en: 'Do you play cards?' },
+      { es: '¿Con quién juegas a las cartas o a juegos de mesa?', en: 'Who do you play cards or board games with?' },
       { es: '¿Ganas o pierdes en los juegos?', en: 'Do you win or lose at games?' },
-      { es: '¿Te gustan los museos?', en: 'Do you like museums?' },
+      { es: '¿Hay un museo de trenes en tu ciudad?', en: 'Is there a train museum in your city?' },
       { es: '¿Tienes un secreto fácil de contar?', en: 'Do you have a secret that is easy to tell?' },
       { es: '¿Qué juegos hay en tu casa?', en: 'What games are there in your house?' },
     ],
@@ -303,7 +303,7 @@ export default {
       { say: { es: '¿Qué estrella es esa?', en: 'Which star is that?' }, reply: { es: 'No es una estrella. Es Júpiter.', en: 'It is not a star. It is Jupiter.' }, end: { es: 'Amaranta habla de planetas veinte minutos. Tú bostezas.', en: 'Amaranta talks about planets for twenty minutes. You yawn.' }, mood: 'sleepy' },
     ],
     talk: [
-      { es: '¿Ves estrellas desde tu casa?', en: 'Can you see stars from your home?' },
+      { es: '¿Ves muchas estrellas desde tu ventana?', en: 'Do you see many stars from your window?' },
       { es: '¿Te gusta la montaña o la playa?', en: 'Do you like the mountains or the beach?' },
       { es: '¿Haces fotos con tu teléfono?', en: 'Do you take photos with your phone?' },
       { es: '¿Tienes un abrigo rojo?', en: 'Do you have a red coat?' },
@@ -332,10 +332,10 @@ export default {
       { say: { es: 'Hola, gente. Soy el pasajero del ocho.', en: 'Hi, everyone. I am the passenger in eight.' }, reply: { es: '¡Ay, los fans te quieren!', en: 'Oh, the fans love you!' }, end: { es: 'Ahora tienes mil seguidores nuevos. Y ninguna respuesta.', en: 'Now you have a thousand new followers. And no answers.' }, mood: 'laugh' },
     ],
     talk: [
-      { es: '¿Usas redes sociales?', en: 'Do you use social media?' },
-      { es: '¿Tienes hermanos o hermanas?', en: 'Do you have brothers or sisters?' },
+      { es: '¿Haces videos de tus viajes?', en: 'Do you make videos of your trips?' },
+      { es: '¿Viajas con tu hermano o tu hermana?', en: 'Do you travel with your brother or your sister?' },
       { es: '¿Ves videos en directo?', en: 'Do you watch live videos?' },
-      { es: '¿Tienes sueño ahora?', en: 'Are you sleepy now?' },
+      { es: '¿Te quedas despierto toda la noche a veces?', en: 'Do you sometimes stay awake all night?' },
       { es: '¿Cuántos seguidores tienes?', en: 'How many followers do you have?' },
     ],
     words: [
@@ -360,11 +360,11 @@ export default {
       { say: { es: 'Yo también huelo el perfume.', en: 'I can smell the perfume too.' }, reply: { es: '¿Tú? ¿Eres perro?', en: 'You? Are you a dog?' }, end: { es: 'Cosme y Valentina ríen. Tango ladra una vez.', en: 'Cosme and Valentina laugh. Tango barks once.' }, mood: 'laugh' },
     ],
     talk: [
-      { es: '¿Tienes perro o gato?', en: 'Do you have a dog or a cat?' },
-      { es: '¿Usas perfume?', en: 'Do you wear perfume?' },
+      { es: '¿Viajas con un animal?', en: 'Do you travel with an animal?' },
+      { es: '¿Hay un olor que te recuerda a alguien?', en: 'Is there a smell that reminds you of someone?' },
       { es: '¿Te gusta el jamón?', en: 'Do you like ham?' },
       { es: '¿Tu casa es tranquila por la noche?', en: 'Is your home quiet at night?' },
-      { es: '¿Qué animal te gusta mucho?', en: 'What animal do you like a lot?' },
+      { es: '¿Qué animal te gustaría tener en casa?', en: 'What animal would you like to have at home?' },
     ],
     words: [
       { es: 'el perro', en: 'the dog' },
@@ -388,7 +388,7 @@ export default {
       { say: { es: '¿Puedes tocar algo?', en: 'Can you play something?' }, reply: { es: 'Con queso dentro, no suena bien. Pero bueno.', en: 'With cheese inside, it does not sound good. But all right.' }, end: { es: 'Valentina toca. El furgón está en silencio. Hasta Tango escucha.', en: 'Valentina plays. The van is silent. Even Tango listens.' }, mood: 'love' },
     ],
     talk: [
-      { es: '¿Tocas un instrumento?', en: 'Do you play an instrument?' },
+      { es: '¿Quién toca un instrumento en tu familia?', en: 'Who plays an instrument in your family?' },
       { es: '¿Tu abuela vive cerca o lejos?', en: 'Does your grandmother live near or far?' },
       { es: '¿Qué queso te gusta?', en: 'What cheese do you like?' },
       { es: '¿Cuánto pesa tu mochila?', en: 'How much does your backpack weigh?' },
@@ -417,10 +417,10 @@ export default {
       { say: { es: '¡Brrr! Vamos al tren, rápido.', en: 'Brrr! Let’s go to the train, quickly.' }, reply: { es: 'Sí. El tren sale en dos minutos.', en: 'Yes. The train leaves in two minutes.' }, end: { es: 'Corres al tren. Tus pies están helados.', en: 'You run to the train. Your feet are frozen.' }, mood: 'scared' },
     ],
     talk: [
-      { es: '¿Hay nieve en tu ciudad?', en: 'Is there snow in your city?' },
-      { es: '¿Te gusta el frío o el calor?', en: 'Do you like the cold or the heat?' },
-      { es: '¿Vives solo o con otras personas?', en: 'Do you live alone or with other people?' },
-      { es: '¿Escuchas la radio?', en: 'Do you listen to the radio?' },
+      { es: '¿Hay montañas con nieve cerca de tu ciudad?', en: 'Are there snowy mountains near your city?' },
+      { es: '¿Prefieres un viaje con nieve o con sol?', en: 'Do you prefer a trip with snow or with sun?' },
+      { es: '¿Con quién hablas por la noche?', en: 'Who do you talk to at night?' },
+      { es: '¿Escuchas la radio en el coche?', en: 'Do you listen to the radio in the car?' },
       { es: '¿Qué temperatura hace hoy?', en: 'What is the temperature today?' },
     ],
     words: [
@@ -437,11 +437,11 @@ export default {
     dialogue: [
       ['yolanda', { es: 'Pasaporte, por favor.', en: 'Passport, please.' }],
       ['ulises', { es: 'Está en mis otros pantalones. En casa.', en: 'It is in my other trousers. At home.' }],
-      ['yolanda', { es: 'Aquí está la lista. Sesenta y un pasajeros. Olga Ríos no baja del tren. Nunca.', en: 'Here is the list. Sixty-one passengers. Olga Ríos does not get off the train. Never.' }],
+      ['yolanda', { es: 'Aquí está la lista. Sesenta y un pasajeros. Olga Ríos no pasa por este control.', en: 'Here is the list. Sixty-one passengers. Olga Ríos does not go through this checkpoint.' }],
     ],
     ask: { es: 'Yolanda te mira. Ulises también.', en: 'Yolanda looks at you. Ulises does too.' },
     options: [
-      { say: { es: '¿Nunca? Pero a las tres y diez está en el puente.', en: 'Never? But at ten past three she is at the bridge.' }, reply: { es: 'Para mí, no. Para mí, está en el tren.', en: 'Not for me. For me, she is on the train.' }, end: { es: 'Escribes «nunca baja del tren». Yolanda cierra la lista.', en: 'You write “never gets off the train”. Yolanda closes the list.' }, mood: 'neutral' },
+      { say: { es: 'Pero a las tres y diez está en el puente.', en: 'But at ten past three she is at the bridge.' }, reply: { es: 'El puente está en Argentina. Ella no pasa la frontera.', en: 'The bridge is in Argentina. She does not cross the border.' }, end: { es: 'Escribes «no pasa la frontera». Yolanda cierra la lista.', en: 'You write “does not cross the border”. Yolanda closes the list.' }, mood: 'neutral' },
       { say: { es: 'Ulises es mi amigo. Es buena persona.', en: 'Ulises is my friend. He is a good person.' }, reply: { es: '¿Su amigo? Bueno. Una foto del pasaporte, mínimo.', en: 'Your friend? Fine. A photo of the passport, at least.' }, end: { es: 'Ulises llama a su madre. Ella manda una foto. Ulises pasa.', en: 'Ulises calls his mother. She sends a photo. Ulises gets through.' }, mood: 'smile' },
       { say: { es: 'Ulises, ¿tienes otro documento?', en: 'Ulises, do you have another document?' }, reply: { es: 'Tengo mi carnet de la biblioteca.', en: 'I have my library card.' }, end: { es: 'Yolanda no ríe. Ulises vuelve a Mendoza en un camión.', en: 'Yolanda does not laugh. Ulises goes back to Mendoza in a lorry.' }, mood: 'sad' },
     ],
@@ -475,10 +475,10 @@ export default {
       { say: { es: 'Perdón. Me voy.', en: 'Sorry. I am leaving.' }, reply: { es: 'Gracias. Nos vemos al amanecer.', en: 'Thank you. See you at dawn.' }, end: { es: 'Sales de la cabina. «Nos vemos al amanecer». ¿Otra vez esa frase?', en: 'You leave the cab. “See you at dawn.” That phrase again?' }, mood: 'surprised' },
     ],
     talk: [
-      { es: '¿Bebes mucho café?', en: 'Do you drink a lot of coffee?' },
+      { es: '¿Tomas café o té por la noche?', en: 'Do you have coffee or tea at night?' },
       { es: '¿Desde qué año trabajas?', en: 'Since what year have you been working?' },
       { es: '¿Tienes una taza favorita?', en: 'Do you have a favourite mug?' },
-      { es: '¿Te gusta conducir?', en: 'Do you like driving?' },
+      { es: '¿Te gustaría conducir un tren?', en: 'Would you like to drive a train?' },
       { es: '¿Tienes amigos muy viejos?', en: 'Do you have very old friends?' },
     ],
     words: [
@@ -493,8 +493,8 @@ export default {
     line: { es: 'Son las seis y cuarenta. El tren llega a Los Andes. El sol sale. En el andén hay una señora con un abrigo rojo. Es Olga.', en: 'It is six forty. The train arrives in Los Andes. The sun is coming up. On the platform there is a lady in a red coat. It is Olga.' },
     dialogue: [
       ['olga', { es: 'Buenos días, pasajero del ocho.', en: 'Good morning, passenger in eight.' }],
-      ['bruno', { es: '¡Tía! ¿Dónde estás toda la noche?', en: 'Auntie! Where are you all night?' }],
-      ['olga', { es: 'En la locomotora, con Aniceto. En 1968, en mi luna de miel, veo este amanecer con Ernesto. Hoy Ernesto está en el río.', en: 'In the engine, with Aniceto. In 1968, on my honeymoon, I see this dawn with Ernesto. Today Ernesto is in the river.' }],
+      ['bruno', { es: '¡Tía! ¿Dónde está? ¡Toda la noche sin noticias!', en: 'Auntie! Where are you? All night with no news!' }],
+      ['olga', { es: 'En la locomotora. Este amanecer es especial: es mi luna de miel, en 1968, con Ernesto. Hoy Ernesto está en el río.', en: 'In the engine. This sunrise is special: it is my honeymoon, in 1968, with Ernesto. Today Ernesto is in the river.' }],
       ['ramiro', { es: 'Señora, ¡y la nota!', en: 'Madam, and the note!' }],
       ['olga', { es: 'Es para mi última novela. Necesito un detective.', en: 'It is for my last novel. I need a detective.' }],
     ],
@@ -505,7 +505,7 @@ export default {
       { say: { es: '¡Toda la noche sin dormir! Por una novela.', en: 'A whole night without sleep! For a novel.' }, reply: { es: 'Por una novela buena, querido.', en: 'For a good novel, darling.' }, end: { es: 'Todos ríen en el andén. Tú también, un poco.', en: 'Everybody laughs on the platform. You do too, a little.' }, mood: 'laugh' },
     ],
     talk: [
-      { es: '¿A qué hora te levantas?', en: 'What time do you get up?' },
+      { es: '¿Cuándo viste el amanecer por última vez?', en: 'When did you last see the sunrise?' },
       { es: '¿Te gustan los finales felices?', en: 'Do you like happy endings?' },
       { es: '¿Qué ciudad quieres ver al amanecer?', en: 'What city do you want to see at dawn?' },
       { es: '¿Eres un buen detective?', en: 'Are you a good detective?' },

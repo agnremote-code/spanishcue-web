@@ -49,36 +49,36 @@
         {
           "q": "¿De quién hablan Fermín y Rosa?",
           "options": [
-            "De una escritora",
             "De una camarera",
+            "De una escritora",
             "De una actriz"
           ],
-          "answer": 0
+          "answer": 1
         },
         {
           "q": "¿Qué escribe Olga?",
           "options": [
+            "Novelas policiales",
             "Poemas",
-            "Libros de cocina",
-            "Novelas policiales"
+            "Libros de cocina y de viajes"
           ],
-          "answer": 2
+          "answer": 0
         },
         {
           "q": "¿Qué hay dentro de la urna?",
           "options": [
             "Joyas",
-            "Las cenizas de su marido",
-            "Cartas"
+            "Cartas de su marido",
+            "Las cenizas de su marido"
           ],
-          "answer": 1
+          "answer": 2
         },
         {
           "q": "¿Qué piensa Fermín de Olga?",
           "options": [
             "Que está enamorada",
             "Que es rara",
-            "Que es antipática"
+            "Que es antipática y maleducada"
           ],
           "answer": 0
         }
@@ -168,38 +168,38 @@
         {
           "q": "¿Qué le da Rosa a Matías?",
           "options": [
-            "Una lista",
             "Un regalo",
-            "Dinero"
+            "Dinero",
+            "Una lista"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "q": "¿Cuántas horas tiene que dormir Matías?",
           "options": [
-            "Seis",
             "Ocho",
+            "Seis",
             "Diez"
           ],
-          "answer": 1
+          "answer": 0
         },
         {
           "q": "¿Por qué Matías no puede llamar los domingos?",
           "options": [
             "Porque no tiene teléfono",
-            "Porque está cansado",
-            "Porque trabaja"
+            "Porque trabaja",
+            "Porque está cansado"
           ],
-          "answer": 2
+          "answer": 1
         },
         {
           "q": "¿Quién le da mala espina a Rosa?",
           "options": [
             "El maquinista",
-            "La señora del abrigo rojo",
-            "Un mochilero"
+            "Un mochilero muy joven y nervioso",
+            "La señora del abrigo rojo"
           ],
-          "answer": 1
+          "answer": 2
         }
       ],
       "open": [
@@ -279,7 +279,7 @@
         {
           "q": "¿Qué necesita Lucas?",
           "options": [
-            "Una almohada",
+            "Una almohada más grande",
             "Tapones para los oídos",
             "Un café"
           ],
@@ -289,28 +289,28 @@
           "q": "¿Por qué no duerme?",
           "options": [
             "Porque su compañero ronca",
-            "Porque tiene hambre",
-            "Porque hace frío"
+            "Porque hace mucho frío en el coche",
+            "Porque tiene hambre"
           ],
           "answer": 0
         },
         {
           "q": "¿Qué le da Celia además de los tapones?",
           "options": [
-            "Un té",
+            "Una manta",
             "Un libro",
-            "Una manta"
+            "Un té"
           ],
-          "answer": 2
+          "answer": 0
         },
         {
           "q": "¿Hasta qué hora trabaja Celia?",
           "options": [
-            "Hasta las seis",
             "Hasta las doce",
+            "Hasta las seis",
             "Hasta las tres"
           ],
-          "answer": 0
+          "answer": 1
         }
       ],
       "open": [
@@ -394,18 +394,18 @@
         {
           "q": "¿Qué miran Yesenia y Brayan?",
           "options": [
+            "Un libro",
             "Una foto de la boda",
-            "Un mapa",
-            "Un libro"
+            "Un mapa de los Andes"
           ],
-          "answer": 0
+          "answer": 1
         },
         {
           "q": "¿Cómo está Yesenia en la foto?",
           "options": [
-            "Cansada",
+            "Seria",
             "Preciosa",
-            "Seria"
+            "Cansada"
           ],
           "answer": 1
         },
@@ -509,9 +509,9 @@
         {
           "q": "¿Qué lleva Celia?",
           "options": [
-            "Un café",
+            "Una sopa",
             "Un té",
-            "Una sopa"
+            "Un café"
           ],
           "answer": 1
         },
@@ -527,8 +527,8 @@
         {
           "q": "¿Qué escribe Olga?",
           "options": [
+            "Una carta de amor larga",
             "Una novela",
-            "Una carta de amor",
             "Una nota importante"
           ],
           "answer": 2
@@ -536,7 +536,7 @@
         {
           "q": "¿Qué le dice Olga a Celia al final?",
           "options": [
-            "Que vuelva con galletas",
+            "Que vuelva con galletas y más té",
             "Que no vuelva esta noche",
             "Que llame al jefe"
           ],
@@ -624,25 +624,25 @@
         {
           "q": "¿Con quién habla Ramiro?",
           "options": [
+            "Con Olga",
             "Con el sobrino de Olga",
-            "Con el maquinista",
-            "Con Olga"
+            "Con el maquinista del tren"
           ],
-          "answer": 0
+          "answer": 1
         },
         {
           "q": "¿Qué hace Bruno?",
           "options": [
-            "Duerme",
+            "Trabaja con el ordenador",
             "Lee",
-            "Trabaja con el ordenador"
+            "Duerme"
           ],
-          "answer": 2
+          "answer": 0
         },
         {
           "q": "¿Cuál es su trabajo?",
           "options": [
-            "Es abogado",
+            "Es abogado de una empresa",
             "Es asesor de inversiones",
             "Es médico"
           ],
@@ -652,8 +652,8 @@
           "q": "¿Cuál es el problema de Bruno?",
           "options": [
             "Su tía no quiere su ayuda",
-            "No tiene dinero",
-            "No tiene ordenador"
+            "No tiene ordenador",
+            "No tiene dinero para el billete"
           ],
           "answer": 0
         }
@@ -752,9 +752,9 @@
         {
           "q": "¿Qué hay de primero?",
           "options": [
-            "Pollo o pescado",
+            "Flan o fruta",
             "Sopa o ensalada",
-            "Flan o fruta"
+            "Pollo o pescado"
           ],
           "answer": 1
         },
@@ -858,36 +858,36 @@
         {
           "q": "¿A quién mira Pilar?",
           "options": [
-            "A Olga Ríos",
+            "Al jefe de tren",
             "A la cocinera",
-            "Al jefe de tren"
+            "A Olga Ríos"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "q": "¿Qué pregunta Olga?",
           "options": [
-            "El precio de la cena",
+            "El nombre del maquinista",
             "La hora de una parada",
-            "El nombre del maquinista"
+            "El precio de la cena"
           ],
           "answer": 1
         },
         {
           "q": "¿Qué piensa Horacio de la pregunta?",
           "options": [
-            "Que es muy rara",
+            "Que es normal",
             "Que es peligrosa",
-            "Que es normal"
+            "Que es muy rara"
           ],
-          "answer": 2
+          "answer": 0
         },
         {
           "q": "¿Por qué Horacio no quiere investigar?",
           "options": [
-            "Porque está cansado",
+            "Porque no le gusta Pilar",
             "Porque está jubilado y de vacaciones",
-            "Porque no le gusta Pilar"
+            "Porque está cansado y tiene mucho sueño"
           ],
           "answer": 1
         }
@@ -973,11 +973,11 @@
         {
           "q": "¿Qué toma Nelson?",
           "options": [
+            "Dos cafés con leche y una tostada",
             "Tres cervezas y un sándwich",
-            "Dos cafés",
             "Un vino"
           ],
-          "answer": 0
+          "answer": 1
         },
         {
           "q": "¿Cuánto cuesta todo?",
@@ -991,7 +991,7 @@
         {
           "q": "¿Qué dice Nelson de la tarjeta?",
           "options": [
-            "Que no la tiene",
+            "Que no la tiene porque la perdió",
             "Que es nueva",
             "Que no funciona por la montaña"
           ],
@@ -1000,11 +1000,11 @@
         {
           "q": "¿Qué promete Nelson?",
           "options": [
-            "Pagar mañana",
+            "Pagar en efectivo ahora",
             "No beber más",
-            "Pagar en efectivo ahora"
+            "Pagar mañana"
           ],
-          "answer": 0
+          "answer": 2
         }
       ],
       "open": [
@@ -1088,11 +1088,11 @@
         {
           "q": "¿Qué le explica Inés a Lucas?",
           "options": [
-            "Un juego de cartas",
-            "El camino al bar",
-            "El menú"
+            "El menú",
+            "El camino al coche bar del tren",
+            "Un juego de cartas"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "q": "¿Cuántas cartas tiene cada persona?",
@@ -1107,7 +1107,7 @@
           "q": "¿Quién gana?",
           "options": [
             "La persona más rápida",
-            "La persona con el as",
+            "La persona que tiene el as de oros",
             "La persona con más cartas del mismo color"
           ],
           "answer": 2
@@ -1115,11 +1115,11 @@
         {
           "q": "¿Qué dice Inés de Nelson?",
           "options": [
-            "Que juega muy mal",
             "Que tiene cartas en la manga",
+            "Que juega muy mal",
             "Que es su amigo"
           ],
-          "answer": 1
+          "answer": 0
         }
       ],
       "open": [
@@ -1208,29 +1208,29 @@
         {
           "q": "¿Cuántas estrellas forman la cruz?",
           "options": [
-            "Tres",
+            "Cuatro",
             "Cinco",
-            "Cuatro"
+            "Tres"
           ],
-          "answer": 2
+          "answer": 0
         },
         {
           "q": "¿Dónde está la cruz?",
           "options": [
             "A la derecha de la montaña",
             "Encima del tren",
-            "A la izquierda del río"
+            "A la izquierda del río y del puente"
           ],
           "answer": 0
         },
         {
           "q": "¿Desde dónde se ve?",
           "options": [
-            "Desde Europa",
             "Solo desde el sur del mundo",
-            "Desde todo el mundo"
+            "Desde Europa",
+            "Desde cualquier lugar del mundo"
           ],
-          "answer": 1
+          "answer": 0
         }
       ],
       "open": [
@@ -1323,17 +1323,17 @@
         {
           "q": "¿Cuántas personas viajan en el tren?",
           "options": [
+            "Unas cien",
             "Unas sesenta y una",
-            "Unas treinta",
-            "Unas cien"
+            "Unas treinta"
           ],
-          "answer": 0
+          "answer": 1
         },
         {
           "q": "¿Cómo es la señora desaparecida?",
           "options": [
-            "Joven y morena",
             "Alta y rubia",
+            "Joven y morena, con un abrigo azul",
             "Mayor, con pelo blanco y abrigo rojo"
           ],
           "answer": 2
@@ -1341,11 +1341,11 @@
         {
           "q": "¿Por qué no duerme Joel?",
           "options": [
-            "Porque tiene hambre",
             "Porque su hermana hace un directo",
+            "Porque tiene hambre y no hay comida",
             "Porque hace frío"
           ],
-          "answer": 1
+          "answer": 0
         }
       ],
       "open": [
@@ -1429,26 +1429,26 @@
         {
           "q": "¿De quién es el perro?",
           "options": [
-            "De Cosme",
+            "De Ramiro",
             "De una familia de Santiago",
-            "De Ramiro"
+            "De Cosme, el guarda del furgón"
           ],
           "answer": 1
         },
         {
           "q": "¿Quién le da de comer?",
           "options": [
+            "La familia",
             "Cosme",
-            "Ramiro",
-            "La familia"
+            "Ramiro"
           ],
-          "answer": 0
+          "answer": 1
         },
         {
           "q": "¿Cuántas veces al día come?",
           "options": [
-            "Una",
             "Tres",
+            "Una",
             "Dos"
           ],
           "answer": 2
@@ -1544,9 +1544,9 @@
         {
           "q": "¿Dónde es el concierto?",
           "options": [
-            "En Mendoza",
+            "En el tren",
             "En Santiago",
-            "En el tren"
+            "En Mendoza"
           ],
           "answer": 1
         },
@@ -1554,28 +1554,28 @@
           "q": "¿Qué música toca Valentina?",
           "options": [
             "Música clásica",
-            "Rock",
-            "Tango"
+            "Tango",
+            "Rock"
           ],
           "answer": 0
         },
         {
           "q": "¿Cómo está Valentina?",
           "options": [
-            "Muy contenta",
+            "Un poco nerviosa",
             "Enferma",
-            "Un poco nerviosa"
+            "Muy contenta y tranquila"
           ],
-          "answer": 2
+          "answer": 0
         },
         {
           "q": "¿Quién va al concierto?",
           "options": [
-            "Su madre",
             "Su abuela",
-            "Cosme"
+            "Cosme",
+            "Su madre"
           ],
-          "answer": 1
+          "answer": 0
         }
       ],
       "open": [
@@ -1652,11 +1652,11 @@
         {
           "q": "¿Cuánto tiempo para el tren?",
           "options": [
-            "Diez minutos",
             "Cinco minutos",
+            "Diez minutos",
             "Una hora"
           ],
-          "answer": 0
+          "answer": 1
         },
         {
           "q": "¿Cómo está el andén?",
@@ -1776,20 +1776,20 @@
         {
           "q": "¿Dónde está Olga para Yolanda?",
           "options": [
-            "En Chile",
             "En el tren",
+            "En Chile",
             "En el río"
           ],
-          "answer": 1
+          "answer": 0
         },
         {
           "q": "¿Qué piensa Ramiro al final?",
           "options": [
-            "Que Olga está escondida",
             "Que Olga está en Mendoza",
-            "Que la lista está mal"
+            "Que la lista está mal",
+            "Que Olga está escondida"
           ],
-          "answer": 0
+          "answer": 2
         }
       ],
       "open": [
@@ -1869,9 +1869,9 @@
         {
           "q": "¿Cuándo es el primer viaje de Aniceto?",
           "options": [
-            "En 1978",
+            "En 1988",
             "En 1968",
-            "En 1988"
+            "En 1978"
           ],
           "answer": 1
         },
@@ -1887,11 +1887,11 @@
         {
           "q": "¿De quién se acuerda Aniceto?",
           "options": [
-            "De un niño",
+            "De una pareja en su luna de miel",
             "De un perro",
-            "De una pareja en su luna de miel"
+            "De un niño que viajaba solo"
           ],
-          "answer": 2
+          "answer": 0
         },
         {
           "q": "¿Qué hace Aniceto al final?",
@@ -1980,25 +1980,25 @@
         {
           "q": "¿Qué propone Olga?",
           "options": [
-            "Desayunar",
+            "Volver a Mendoza",
             "Dormir",
-            "Volver a Mendoza"
+            "Desayunar"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "q": "¿Cómo está Bruno?",
           "options": [
-            "Contento",
+            "Enfermo",
             "Enfadado",
-            "Enfermo"
+            "Contento"
           ],
           "answer": 1
         },
         {
           "q": "¿Qué hay en la cafetería?",
           "options": [
-            "Té y tostadas",
+            "Té, tostadas y mermelada",
             "Huevos y pan",
             "Café, jugo y medialunas"
           ],

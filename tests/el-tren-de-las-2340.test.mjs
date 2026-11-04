@@ -13,7 +13,9 @@ import * as L from '../app/el-tren-de-las-2340/layout.mjs';
 import { choose, closeScene, createState, doneFor, notebookEntries, openScene, pasajeroById, progress, restore, sceneView, serialise, setFloor, setLevel, undo } from '../app/el-tren-de-las-2340/engine.mjs';
 import { PASAJEROS } from '../app/el-tren-de-las-2340/pasajeros.mjs';
 import { GAMES, listeningFor } from '../app/escucha-3d/games.mjs';
-import { checkLevel } from '../scripts/check-tren.mjs';
+import { checkLevel, crossClassDuplicates } from '../scripts/check-tren.mjs';
+import { stepPlayer } from '../app/noche-abierta/world3d.mjs';
+import { strictKey } from '../scripts/check-escucha-3d.mjs';
 import { scanSource } from '../scripts/neutral-spanish.mjs';
 import postcss from 'postcss';
 
@@ -74,6 +76,52 @@ test('conversation: 18 scenes × 7 levels pass the checker, every level written 
     const source = readFileSync(`${DIR}/levels/${level.toLowerCase()}.mjs`, 'utf8');
     assert.deepEqual(scanSource(source, level), [], `${level} is neutral Spanish with tú`);
   }
+});
+
+test('talk questions are this class\'s own: none repeats a question of another class', () => {
+  assert.deepEqual(crossClassDuplicates(CONTENT), []);
+});
+
+test('jumping inside a car never puts the head through the roof; from a table there is no jump', () => {
+  for (const car of L.TRAIN_ORDER) {
+    const tops = [0, ...new Set(L.solidsFor(car).filter(b => b.top != null).map(b => b.top))];
+    for (const top of tops) {
+      const v = L.jumpSpeedFor(car, top);
+      if (top > 0.45) { assert.equal(v, 0, `car ${car}: no jump from ${top} m`); continue; }
+      const box = { x0: -1, x1: 1, z0: -1, z1: 1, top };
+      let p = { x: 0, z: 0, y: top, vy: 0, heading: 0, speed: 0 };
+      let apex = top;
+      for (let i = 0; i < 120; i++) { p = stepPlayer(p, { x: 0, y: 0, yaw: 0, jump: i === 0, jumpSpeed: v }, 1 / 60, top ? [box] : [], { minX: -5, maxX: 5, minZ: -5, maxZ: 5 }); apex = Math.max(apex, p.y); }
+      assert.ok(apex + L.HERO_HEIGHT < L.CEILING - 0.1 + 0.02, `car ${car}, from ${top} m: head at ${(apex + L.HERO_HEIGHT).toFixed(2)} m under a ${L.CEILING} m roof`);
+    }
+  }
+  assert.equal(L.jumpSpeedFor(8, 0), 7.6, 'outside, the full jump');
+  assert.match(readFileSync(`${DIR}/World3D.tsx`, 'utf8'), /jumpSpeed: jumpSpeedFor\(floor, player\.y \?\? 0\)/);
+});
+
+test('loudspeakers fit the place and the moment: no search before cabin 7, no Uspallata, twelve below at the bridge', () => {
+  const all = L.ANNOUNCEMENTS.map(a => a.text).join(' ');
+  assert.doesNotMatch(all, /Uspallata/);
+  assert.doesNotMatch(all, /ocho grados/);
+  const search = /Se busca a la señora Olga/;
+  assert.ok(!L.announcementsFor(4, []).some(t => search.test(t)), 'nobody looks for Olga before cabin 7 is empty');
+  assert.ok(L.announcementsFor(4, ['camarote7']).some(t => search.test(t)));
+  assert.ok(!L.announcementsFor(4, ['camarote7', 'maquinista']).some(t => search.test(t)), 'nor once she is found');
+  assert.ok(!L.announcementsFor(0, []).some(t => /Los Andes/.test(t) && /Próxima/.test(t)));
+  assert.ok(L.announcementsFor(8, []).some(t => /doce grados bajo cero/.test(t)));
+  for (const f of L.FLOORS) assert.ok(L.announcementsFor(f.id, STORY_IDS.slice(0, 9)).length + L.announcementsFor(f.id, []).length > 0, `place ${f.id} hears something`);
+  assert.match(readFileSync(`${DIR}/TrenGame.tsx`, 'utf8'), /announcementsFor\(state\.floor, doneFor\(state\)\)/);
+});
+
+test('the HUD place label is never cut', () => {
+  const css = readFileSync(`${DIR}/tren.css`, 'utf8');
+  assert.match(css, /\.et-where \{[^}]*flex: 0 0 auto;[^}]*min-width: max-content/);
+  assert.doesNotMatch(css.match(/\.et-where b \{[^}]*\}/)[0], /ellipsis/);
+  for (const s of L.SECTORS) assert.ok(s.name.length <= 26, `${s.id}: «${s.name}» is short`);
+});
+
+test('the listening key cannot be guessed (letters, patterns, longest option), and C1–C2 ask for inference', () => {
+  for (const level of LEVEL_IDS) assert.deepEqual(strictKey(level, listening(level).items), [], level);
 });
 
 test('the notebook: a clue per circle, the hypothesis grows with them, your answer is written under the clue', () => {

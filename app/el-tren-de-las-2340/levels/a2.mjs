@@ -42,7 +42,7 @@ export default {
       '¿Cuándo fue la última vez que te despediste de alguien en una estación?',
       '¿Qué te ponía tu familia en la maleta cuando eras joven?',
       '¿Saliste de tu país por primera vez solo o acompañado?',
-      '¿Qué comida de tu casa echas de menos cuando viajas?',
+      '¿Qué comida de tu familia te llevarías a otro país?',
       '¿Quién de tu familia se preocupa más por ti?',
     ],
     words: ['el silbato', 'estar pendiente de', 'la mina', 'echar de menos'],
@@ -389,7 +389,7 @@ export default {
     ],
     talk: [
       '¿Desde cuándo conoces a tu amigo más antiguo?',
-      '¿Qué trabajo hacían tus abuelos?',
+      '¿Algún abuelo tuyo trabajó en trenes, barcos o camiones?',
       '¿Alguna vez intentaste mentir y no pudiste?',
       '¿Qué te gustaba de niño que todavía te gusta?',
       '¿En qué año pasó algo muy importante para ti?',

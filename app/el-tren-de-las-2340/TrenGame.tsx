@@ -9,7 +9,7 @@
 // world: switching never leaves it. Without WebGL the circles open from a list.
 import dynamic from 'next/dynamic';
 import { useCallback, useEffect, useMemo, useRef, useState, type KeyboardEvent as ReactKeyboardEvent, type ReactNode } from 'react';
-import { ANNOUNCEMENTS, FLOORS, FLOOR_LABEL, PORTALS, SCENES, SECTORS, TRAIN_ORDER, WALLS, floorById, isCar, sceneById } from './layout.mjs';
+import { announcementsFor, FLOORS, FLOOR_LABEL, PORTALS, SCENES, SECTORS, TRAIN_ORDER, WALLS, floorById, isCar, sceneById } from './layout.mjs';
 import { LEVELS } from './levels-info.mjs';
 import type { Text } from './levels.d.mts';
 import { CAST, TRAIN, notebook, nightClock } from './story.mjs';
@@ -133,18 +133,21 @@ export default function TrenGame() {
   // The loudspeakers of the train: a new announcement about every 60 seconds.
   useEffect(() => {
     if (!entered) return;
-    let i = Math.floor(Math.random() * ANNOUNCEMENTS.length);
+    let i = Math.floor(Math.random() * 100);
     let hide = 0;
     const timer = window.setInterval(() => {
       if (state.scene || listenAt !== undefined) return;
-      i = (i + 1) % ANNOUNCEMENTS.length;
+      // Only what fits this place and this moment of the night.
+      const list = announcementsFor(state.floor, doneFor(state));
+      if (!list.length) return;
+      i += 1;
       ambience.current?.chime();
-      setAnnounce(ANNOUNCEMENTS[i]);
+      setAnnounce(list[i % list.length]);
       window.clearTimeout(hide);
       hide = window.setTimeout(() => setAnnounce(null), 8000);
     }, 60000);
     return () => { window.clearInterval(timer); window.clearTimeout(hide); };
-  }, [entered, state.scene, listenAt]);
+  }, [entered, state, listenAt]);
 
   const enter = () => { setEntered(true); ambience.current?.start(); };
   const open = useCallback((id: string) => {
@@ -214,7 +217,7 @@ export default function TrenGame() {
       <div className="et-title-card">
         <p className="et-kicker">{TRAIN.name} · {TRAIN.route}</p>
         <h1 id="et-title-h">El tren de las 23:40</h1>
-        <p className="et-tagline">Una novelista de 79 años desaparece de su camarote a la una de la mañana. En la almohada deja una nota: «Que investigue el pasajero del 8». El 8 eres tú.</p>
+        <p className="et-tagline">Una novelista de 79 años desaparece de su camarote a la una menos diez. En la almohada deja una nota: «Que investigue el pasajero del 8». El 8 eres tú.</p>
         <p className="et-lede">Un tren nocturno cruza los Andes de Mendoza a Chile. Locomotora, furgón, dos coches cama, comedor, bar, mirador y dos andenes: dieciocho círculos blancos y diecisiete pasajeros más con su propia historia. Cada respuesta tuya queda escrita en tu cuaderno. Al amanecer, en la última estación, se cierra el caso.</p>
         <p className="et-label">Elige el nivel</p>
         <div className="et-levels" role="radiogroup" aria-label="Nivel">

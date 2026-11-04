@@ -19,7 +19,7 @@ const P = (id, name, sub, kind, bounds = CAR) => ({ id, name, sub, kind, y: 0, b
 export const FLOORS = [
   P(0, 'Andén de Mendoza', '23:40 · salida del Nocturno', 'platform', PLATFORM),
   P(1, 'Locomotora', 'El motor y la cabina del maquinista', 'car'),
-  P(2, 'Furgón de equipajes', 'Valijas, sacas de correo y un perro', 'car'),
+  P(2, 'Furgón de equipajes', 'Maletas, sacas de correo y un perro', 'car'),
   P(3, 'Coche cama A', 'Camarotes 1 a 6', 'car'),
   P(4, 'Coche cama B', 'Camarotes 7 a 12 · el tuyo es el 8', 'car'),
   P(5, 'Coche comedor', 'Cocina y diez mesas', 'car'),
@@ -85,7 +85,7 @@ export function cabinAt(floor, x, z) {
 // ------------------------------------------------------------------ sectors
 const S = (floor, id, name, x0, z0, x1, z1, sound, light = '#ffe2b0') => ({ floor, id, name, x0, z0, x1, z1, sound, light });
 export const SECTORS = [
-  S(0, 'anden', 'Andén 1 · Mendoza', -12, -1.0, 12, 7.6, 'station', '#ffd890'),
+  S(0, 'anden', 'Andén 1', -12, -1.0, 12, 7.6, 'station', '#ffd890'),
   S(1, 'cabina', 'Cabina del maquinista', 5.6, -1.7, 12, 1.7, 'cab', '#a8c8ff'),
   S(1, 'motor', 'Sala de motores', -12, -1.7, 5.6, 1.7, 'engine', '#ffb070'),
   S(2, 'furgon', 'Furgón de equipajes', -12, -1.7, 12, 1.7, 'van', '#ffe0a8'),
@@ -96,8 +96,8 @@ export const SECTORS = [
   S(5, 'comedor', 'Coche comedor', -12, -1.7, 12, 1.7, 'dining', '#ffd8a0'),
   S(6, 'bar', 'Coche bar', -12, -1.7, 12, 1.7, 'bar', '#ffb080'),
   S(7, 'mirador', 'Coche mirador', -12, -1.7, 12, 1.7, 'dome', '#b8c8ff'),
-  S(8, 'anden', 'Andén de Puente del Inca · 2720 m', -12, -1.0, 12, 7.6, 'snow', '#ffe8c0'),
-  S(9, 'anden', 'Andén de Los Andes', -12, -1.0, 12, 7.6, 'dawn', '#fff0d8'),
+  S(8, 'anden', 'A 2720 m de altura', -12, -1.0, 12, 7.6, 'snow', '#ffe8c0'),
+  S(9, 'anden', 'Llegada a Chile', -12, -1.0, 12, 7.6, 'dawn', '#fff0d8'),
 ];
 export function sectorAt(floor, x, z) {
   return SECTORS.find((s) => s.floor === floor && x >= s.x0 && x <= s.x1 && z >= s.z0 && z <= s.z1) ?? null;
@@ -288,6 +288,18 @@ const PLACES = {
 export const SCENES = STORY.map((story) => ({ ...story, ...PLACES[story.id] }));
 export const SCENE_IDS = SCENES.map((s) => s.id);
 export const sceneById = (id) => SCENES.find((s) => s.id === id);
+// How hard Space jumps. Outside, the full jump of the other worlds. Inside a
+// car the head must stay under the roof: the jump is capped so that the top
+// of the mascot (HERO_HEIGHT) stays 10 cm below CEILING, and from anything
+// higher than a seat (a table, a counter, a crate) there is no jump at all.
+export const HERO_HEIGHT = 1.8;
+export const GRAVITY = 18;
+export function jumpSpeedFor(floor, standingOn = 0) {
+  if (OPEN_AIR(floor)) return 7.6;
+  if (standingOn > 0.45) return 0;
+  const room = CEILING - 0.1 - HERO_HEIGHT - standingOn;
+  return room > 0.05 ? Math.sqrt(2 * GRAVITY * room) : 0;
+}
 export const SPOT_RADIUS = 1.0;
 
 // ------------------------------------------------------------------ life
@@ -326,17 +338,27 @@ export const CHATTER = {
   9: ['¡Bienvenidos a Chile!', '¿Taxi?', 'Qué amanecer, ¿no?', 'Llegamos.'],
 };
 
-// The train's loudspeakers, a new announcement every minute or so.
+// The train's loudspeakers, a new announcement every minute or so. Each one
+// belongs to some places and to a moment of the night: `after` / `before` are
+// circles you have (or have not yet) played, so nobody looks for Olga before
+// cabin 7 is empty and nobody announces Puente del Inca on the way to Chile.
+const CARS = [1, 2, 3, 4, 5, 6, 7];
 export const ANNOUNCEMENTS = [
-  'Buenas noches. El Nocturno de los Andes sale de Mendoza a las 23:40. Próxima parada: Uspallata.',
-  'Se informa a los señores pasajeros que el coche comedor cierra a la una.',
-  'Por favor, no saquen la cabeza por las ventanillas. Sobre todo en los túneles.',
-  'Se busca a la señora Olga Ríos, del camarote 7. Si la ven, avisen al jefe de tren.',
-  'Puente del Inca: veinte minutos de parada. Hace ocho grados bajo cero.',
-  'Control de Gendarmería en el andén. Tengan su documento a mano.',
-  'El coche bar recuerda que el pisco no se lleva a los camarotes. Bueno, sí, pero en vaso.',
-  'Próxima estación: Los Andes. Hora estimada de llegada: 06:40.',
+  { text: 'Buenas noches. El Nocturno de los Andes sale de Mendoza a las 23:40. Próxima parada: Puente del Inca.', where: [0, ...CARS], before: 'camarote7' },
+  { text: 'Andén uno: el Nocturno de los Andes está listo para el embarque. Tengan el billete a mano.', where: [0] },
+  { text: 'Se informa a los señores pasajeros que el coche comedor cierra a la una.', where: CARS, before: 'camarote7' },
+  { text: 'Por favor, no saquen la cabeza por las ventanillas. Sobre todo en los túneles.', where: CARS },
+  { text: 'Se busca a la señora Olga Ríos, del camarote 7. Si la ven, avisen al jefe de tren.', where: [...CARS, 8], after: 'camarote7', before: 'maquinista' },
+  { text: 'Puente del Inca: veinte minutos de parada. Hace doce grados bajo cero.', where: [8] },
+  { text: 'Próxima parada: Puente del Inca. Abríguense si van a bajar al andén.', where: CARS, after: 'sobremesa', before: 'nieve' },
+  { text: 'Control de Gendarmería en el andén. Tengan su documento a mano.', where: [8, ...CARS], after: 'nieve', before: 'frontera' },
+  { text: 'El coche bar recuerda que el pisco no se lleva a los camarotes. Bueno, sí, pero en vaso.', where: [5, 6, 7] },
+  { text: 'Próxima estación: Los Andes. Hora estimada de llegada: 06:40.', where: CARS, after: 'frontera' },
+  { text: 'Bienvenidos a Los Andes. Por favor, no olviden su equipaje ni sus secretos.', where: [9] },
 ];
+export function announcementsFor(floor, done = []) {
+  return ANNOUNCEMENTS.filter((a) => a.where.includes(floor) && (!a.after || done.includes(a.after)) && (!a.before || !done.includes(a.before))).map((a) => a.text);
+}
 
 // ------------------------------------------------------------------ colliders
 const box = (x0, z0, x1, z1) => ({ x0: Math.min(x0, x1), x1: Math.max(x0, x1), z0: Math.min(z0, z1), z1: Math.max(z0, z1) });

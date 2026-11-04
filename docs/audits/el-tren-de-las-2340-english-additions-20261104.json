@@ -52,7 +52,7 @@
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
-      "text": "Of course. Seat seven B. Window."
+      "text": "Of course. Cabin seven, top bunk."
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
@@ -72,7 +72,7 @@
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
-      "text": "Do you travel with a lot of luggage?"
+      "text": "Do you travel with a big suitcase or a small one?"
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
@@ -84,11 +84,11 @@
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
-      "text": "What is in your bag now?"
+      "text": "What three things are in your bag today?"
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
-      "text": "What colour is your coat?"
+      "text": "Do you have a red coat, like Olga?"
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
@@ -188,7 +188,7 @@
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
-      "text": "Do you like cheese?"
+      "text": "Do you take food when you travel by train?"
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
@@ -368,7 +368,7 @@
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
-      "text": "Are you married?"
+      "text": "Do you know a newly married couple?"
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
@@ -380,7 +380,7 @@
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
-      "text": "Do you read in bed?"
+      "text": "Do you read books on the train or the bus?"
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
@@ -472,7 +472,7 @@
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
-      "text": "Do you have a notebook?"
+      "text": "Do you write notes in a notebook or on your phone?"
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
@@ -480,11 +480,11 @@
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
-      "text": "Do you sleep with the window open?"
+      "text": "Do you open the window on a train or in a car?"
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
-      "text": "Are you cold now?"
+      "text": "Are you cold or warm in this class?"
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
@@ -568,7 +568,7 @@
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
-      "text": "Do you have nephews or nieces?"
+      "text": "Do you have uncles or aunts? Where do they live?"
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
@@ -584,7 +584,7 @@
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
-      "text": "How many hours a day do you use your phone?"
+      "text": "Is there phone signal at your home?"
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
@@ -668,15 +668,15 @@
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
-      "text": "Do you cook at home?"
+      "text": "Who makes Sunday lunch in your family?"
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
-      "text": "What do you normally have for dinner?"
+      "text": "What do you have for dinner on a long trip?"
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
-      "text": "Do you like soup?"
+      "text": "Do you eat lentils? Do you like them?"
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
@@ -684,7 +684,7 @@
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
-      "text": "What time do you have dinner?"
+      "text": "Do you have dinner before or after nine?"
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
@@ -864,7 +864,7 @@
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
-      "text": "What do you drink in a bar?"
+      "text": "What do you order at the bar on a train?"
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
@@ -876,11 +876,11 @@
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
-      "text": "What music do you like?"
+      "text": "What music do you listen to on a trip?"
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
-      "text": "How much is a coffee in your city?"
+      "text": "How much is a train ticket in your country?"
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
@@ -960,7 +960,7 @@
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
-      "text": "Do you play cards?"
+      "text": "Who do you play cards or board games with?"
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
@@ -968,7 +968,7 @@
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
-      "text": "Do you like museums?"
+      "text": "Is there a train museum in your city?"
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
@@ -1060,7 +1060,7 @@
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
-      "text": "Can you see stars from your home?"
+      "text": "Do you see many stars from your window?"
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
@@ -1160,11 +1160,11 @@
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
-      "text": "Do you use social media?"
+      "text": "Do you make videos of your trips?"
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
-      "text": "Do you have brothers or sisters?"
+      "text": "Do you travel with your brother or your sister?"
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
@@ -1172,7 +1172,7 @@
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
-      "text": "Are you sleepy now?"
+      "text": "Do you sometimes stay awake all night?"
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
@@ -1256,11 +1256,11 @@
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
-      "text": "Do you have a dog or a cat?"
+      "text": "Do you travel with an animal?"
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
-      "text": "Do you wear perfume?"
+      "text": "Is there a smell that reminds you of someone?"
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
@@ -1272,7 +1272,7 @@
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
-      "text": "What animal do you like a lot?"
+      "text": "What animal would you like to have at home?"
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
@@ -1352,7 +1352,7 @@
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
-      "text": "Do you play an instrument?"
+      "text": "Who plays an instrument in your family?"
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
@@ -1452,19 +1452,19 @@
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
-      "text": "Is there snow in your city?"
+      "text": "Are there snowy mountains near your city?"
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
-      "text": "Do you like the cold or the heat?"
+      "text": "Do you prefer a trip with snow or with sun?"
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
-      "text": "Do you live alone or with other people?"
+      "text": "Who do you talk to at night?"
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
-      "text": "Do you listen to the radio?"
+      "text": "Do you listen to the radio in the car?"
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
@@ -1508,7 +1508,7 @@
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
-      "text": "Here is the list. Sixty-one passengers. Olga Ríos does not get off the train. Never."
+      "text": "Here is the list. Sixty-one passengers. Olga Ríos does not go through this checkpoint."
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
@@ -1516,15 +1516,15 @@
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
-      "text": "Never? But at ten past three she is at the bridge."
+      "text": "But at ten past three she is at the bridge."
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
-      "text": "Not for me. For me, she is on the train."
+      "text": "The bridge is in Argentina. She does not cross the border."
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
-      "text": "You write “never gets off the train”. Yolanda closes the list."
+      "text": "You write “does not cross the border”. Yolanda closes the list."
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
@@ -1652,7 +1652,7 @@
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
-      "text": "Do you drink a lot of coffee?"
+      "text": "Do you have coffee or tea at night?"
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
@@ -1664,7 +1664,7 @@
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
-      "text": "Do you like driving?"
+      "text": "Would you like to drive a train?"
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
@@ -1700,11 +1700,11 @@
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
-      "text": "Auntie! Where are you all night?"
+      "text": "Auntie! Where are you? All night with no news!"
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
-      "text": "In the engine, with Aniceto. In 1968, on my honeymoon, I see this dawn with Ernesto. Today Ernesto is in the river."
+      "text": "In the engine. This sunrise is special: it is my honeymoon, in 1968, with Ernesto. Today Ernesto is in the river."
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
@@ -1756,7 +1756,7 @@
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",
-      "text": "What time do you get up?"
+      "text": "When did you last see the sunrise?"
     },
     {
       "path": "app/el-tren-de-las-2340/levels/a0.mjs",

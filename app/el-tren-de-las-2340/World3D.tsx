@@ -14,7 +14,7 @@ import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 import { useEffect, useRef, useState, type PointerEvent as ReactPointerEvent } from 'react';
 import { canUseKeys, followYaw, inputFrom, keyAction, stepPlayer, angleBetween } from '../noche-abierta/world3d.mjs';
 import { animateHero, createHero } from '../noche-abierta/hero3d';
-import { CEILING, OPEN_AIR, SPAWN, arrivalFor, cameraBlockers, circleStep, sceneCamera, floorById, isCar, portalAt, sceneById, sceneFraming, sectorAt, solidsFor, spotAt } from './layout.mjs';
+import { CEILING, OPEN_AIR, SPAWN, arrivalFor, cameraBlockers, circleStep, jumpSpeedFor, sceneCamera, floorById, isCar, portalAt, sceneById, sceneFraming, sectorAt, solidsFor, spotAt } from './layout.mjs';
 import { buildTrain, talking as talkingNow, type Train, type Npc, type Mover } from './tren3d';
 import { createBumpClock, pushOut } from '../escucha-3d/bump.mjs';
 import { insultFor, shout } from '../escucha-3d/shout';
@@ -311,7 +311,7 @@ export default function World3D(props: WorldProps) {
         const factor = input.sprint || nitro ? 1 : 0.7;
         // Space jumps; benches, chairs, tables and boxes can be climbed on.
         const jumping = input.jump || clock < jumpUntil;
-        const next = stepPlayer({ ...player, speed: player.speed / factor }, { x: ix, y: iy, yaw, sprint: input.sprint, nitro, walk: false, jump: jumping, jumpSpeed: 7.6 }, dt * factor, solids, floorById(floor).bounds);
+        const next = stepPlayer({ ...player, speed: player.speed / factor }, { x: ix, y: iy, yaw, sprint: input.sprint, nitro, walk: false, jump: jumping, jumpSpeed: jumpSpeedFor(floor, player.y ?? 0) }, dt * factor, solids, floorById(floor).bounds);
         player = { ...player, x: next.x, z: next.z, heading: next.heading, speed: next.speed * factor, y: next.y, vy: next.vy, jumpHeld: next.jumpHeld };
         // People are solid, and nobody likes being run into: whoever you crash
         // into (or who crashes into you) turns, glares and yells at you.

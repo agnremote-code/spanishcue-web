@@ -250,8 +250,8 @@ export default {
     ],
     talk: [
       '¿Qué le aconsejarías a alguien que quiere ver un cielo muy estrellado?',
-      '¿Te molesta que la gente use el móvil en lugares tranquilos?',
-      '¿Crees que hay vida en otros planetas?',
+      '¿Te molesta que la gente use el teléfono en lugares tranquilos?',
+      '¿Qué sentiste la última vez que viste un cielo muy estrellado?',
       '¿Qué foto tuya podría servir como prueba de algo?',
       '¿Qué afición tienes que a otras personas les parece aburrida?',
     ],
@@ -351,7 +351,7 @@ export default {
   },
   frontera: {
     title: 'Sesenta y uno cuadra',
-    line: 'El control de Gendarmería era una caseta con una estufa de leña, un mapa amarillento de los Andes y una computadora de 2003. La cabo Yolanda Perrone revisaba documentos con la paciencia de un glaciar. Delante de ti, Ulises, un chico salvadoreño con una mochila enorme, vaciaba los bolsillos sobre el mostrador.',
+    line: 'El control de Gendarmería era una caseta con una estufa de leña, un mapa amarillento de los Andes y un monitor de 2003. La cabo Yolanda Perrone revisaba documentos con la paciencia de un glaciar. Delante de ti, Ulises, un chico salvadoreño con una mochila enorme, vaciaba los bolsillos sobre el mostrador.',
     dialogue: [
       ['yolanda', 'Pasaporte o documento, joven. No tengo toda la noche. Bueno, sí la tengo, pero no quiero gastarla con usted.'],
       ['ulises', 'Lo tenía esta mañana, se lo juro. Estaba en mis otros pantalones. Y los pantalones se han quedado en un hostal de Mendoza.'],
@@ -360,7 +360,7 @@ export default {
     ask: 'Yolanda cierra la carpeta. Ulises te mira con cara de cachorro abandonado.',
     options: [
       { say: 'Entonces, ¿me confirma que para ustedes sigue dentro del tren?', reply: 'Se lo confirmo y se lo sello. Sesenta y uno de sesenta y uno.', end: 'Anotaste: «Gendarmería: Olga nunca salió del tren». Yolanda te dio una copia de la lista con un sello morado.', mood: 'neutral' },
-      { say: 'Ulises, te aconsejo que busques una foto del pasaporte en el móvil. Seguro que tienes una.', reply: '¡Sí! Mi mamá me obligó a hacerla antes de salir de San Salvador.', end: 'Yolanda estudió la foto cinco minutos y firmó un permiso provisional. Ulises llamó a su madre para darle las gracias, llorando.', mood: 'smile' },
+      { say: 'Ulises, te aconsejo que busques una foto del pasaporte en el teléfono. Seguro que tienes una.', reply: '¡Sí! Mi mamá me obligó a hacerla antes de salir de San Salvador.', end: 'Yolanda estudió la foto cinco minutos y firmó un permiso provisional. Ulises llamó a su madre para darle las gracias, llorando.', mood: 'smile' },
       { say: 'Cabo, yo respondo por él. Es un buen chico.', reply: '¿Usted? ¿Y quién responde por usted?', end: 'Yolanda no se dejó convencer. Ulises volvió a Mendoza en un camión de verduras, despidiéndose con la mano.', mood: 'sad' },
     ],
     talk: [

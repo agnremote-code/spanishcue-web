@@ -19,7 +19,7 @@ export default {
       '¿Qué habrías hecho tú en el lugar del maletero?',
       '¿Hay alguna regla que hayas desobedecido por una buena razón?',
       '¿Qué objeto heredado no venderías aunque te ofrecieran mucho dinero?',
-      '¿Cómo te gustaría que te recordaran?',
+      '¿Qué objeto tuyo te gustaría que alguien conservara?',
       '¿Te parece que la burocracia tiene sentido del humor?',
     ],
     words: ['el hormiguero', 'desarmado', 'el difunto', 'refunfuñar', 'enigmático'],
@@ -40,7 +40,7 @@ export default {
     ],
     talk: [
       '¿Qué consejo de tu familia habrías hecho mejor en seguir?',
-      '¿Aceptarías un trabajo muy bien pagado en un lugar aislado?',
+      '¿Te irías a trabajar dos años a una mina en el desierto si pagaran muy bien?',
       '¿Qué le dirías a una madre que exagera con la comida?',
       '¿Cómo habría sido tu vida si te hubieras ido a vivir a otro país?',
       '¿Qué te pondrías en la maleta si te fueras un año lejos?',

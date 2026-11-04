@@ -52,9 +52,9 @@
           "q": "¿Cuántas maletas tiene Olga?",
           "qEn": "How many suitcases does Olga have?",
           "options": [
-            "Dos",
+            "Cuatro",
             "Tres",
-            "Cuatro"
+            "Dos"
           ],
           "answer": 1
         },
@@ -62,11 +62,11 @@
           "q": "¿Qué más tiene Olga?",
           "qEn": "What else does Olga have?",
           "options": [
-            "Una caja",
+            "Una bicicleta",
             "Un perro",
-            "Una bicicleta"
+            "Una caja"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "q": "¿Adónde va la caja?",
@@ -82,11 +82,11 @@
           "q": "¿Qué hay en la caja?",
           "qEn": "What is in the box?",
           "options": [
-            "Ropa",
             "Su marido",
-            "Libros"
+            "Ropa",
+            "Ropa de invierno"
           ],
-          "answer": 1
+          "answer": 0
         }
       ],
       "open": [
@@ -180,18 +180,18 @@
           "q": "¿Quién es Matías?",
           "qEn": "Who is Matías?",
           "options": [
-            "El hijo de Rosa",
-            "El maquinista",
-            "El maletero"
+            "El maletero",
+            "El hermano de Rosa",
+            "El hijo de Rosa"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "q": "¿En qué camarote viaja Matías?",
           "qEn": "Which cabin is Matías travelling in?",
           "options": [
-            "En el siete",
             "En el ocho",
+            "En el siete",
             "En el dos"
           ],
           "answer": 2
@@ -200,9 +200,9 @@
           "q": "¿Qué tiene Matías?",
           "qEn": "What does Matías have?",
           "options": [
-            "Una urna",
+            "Un perro",
             "El pasaporte",
-            "Un perro"
+            "Una urna"
           ],
           "answer": 1
         },
@@ -211,7 +211,7 @@
           "qEn": "What does Rosa want?",
           "options": [
             "Una llamada todos los días",
-            "Un café",
+            "Un café caliente para el viaje",
             "Un taxi"
           ],
           "answer": 0
@@ -298,11 +298,11 @@
           "q": "¿Dónde duerme Lucas?",
           "qEn": "Where does Lucas sleep?",
           "options": [
-            "Arriba",
             "Abajo",
-            "En el pasillo"
+            "En el pasillo",
+            "Arriba"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "q": "¿Cómo se llama el señor?",
@@ -318,21 +318,21 @@
           "q": "¿Qué pregunta Lucas?",
           "qEn": "What does Lucas ask?",
           "options": [
-            "Si tiene hambre",
+            "Si ronca",
             "Si tiene frío",
-            "Si ronca"
+            "Si tiene hambre"
           ],
-          "answer": 2
+          "answer": 0
         },
         {
           "q": "¿Qué dice Evaristo?",
           "qEn": "What does Evaristo say?",
           "options": [
-            "Que ronca mucho",
             "Que no ronca nunca",
-            "Que no duerme"
+            "Que ronca mucho",
+            "Que no duerme nunca en el tren"
           ],
-          "answer": 1
+          "answer": 0
         }
       ],
       "open": [
@@ -426,9 +426,9 @@
           "q": "¿Qué lleva Celia?",
           "qEn": "What does Celia bring?",
           "options": [
-            "Café",
+            "Agua con gas",
             "Champán",
-            "Agua"
+            "Café"
           ],
           "answer": 1
         },
@@ -446,8 +446,8 @@
           "q": "¿Cuándo se casan?",
           "qEn": "When did they get married?",
           "options": [
-            "El lunes",
             "El domingo",
+            "El lunes",
             "El sábado"
           ],
           "answer": 2
@@ -457,10 +457,10 @@
           "qEn": "How many glasses do they want?",
           "options": [
             "Una",
-            "Dos",
-            "Tres"
+            "Tres",
+            "Dos"
           ],
-          "answer": 1
+          "answer": 2
         }
       ],
       "open": [
@@ -549,9 +549,9 @@
           "q": "¿Qué puerta está abierta?",
           "qEn": "Which door is open?",
           "options": [
-            "La del ocho",
+            "La del dos",
             "La del siete",
-            "La del dos"
+            "La del ocho"
           ],
           "answer": 1
         },
@@ -570,7 +570,7 @@
           "qEn": "Where is the note?",
           "options": [
             "En la mesa",
-            "En la ventana",
+            "En la ventana abierta",
             "En la almohada"
           ],
           "answer": 2
@@ -674,7 +674,7 @@
           "options": [
             "El sobrino de Olga",
             "El hijo de Marga",
-            "El maquinista"
+            "El hijo del maquinista"
           ],
           "answer": 0
         },
@@ -683,10 +683,10 @@
           "qEn": "What time is it?",
           "options": [
             "Las doce",
-            "Las tres",
-            "La una"
+            "La una",
+            "Las tres"
           ],
-          "answer": 2
+          "answer": 1
         },
         {
           "q": "¿Qué dice Bruno?",
@@ -694,7 +694,7 @@
           "options": [
             "Que tiene hambre",
             "Que su tía no está",
-            "Que está en Chile"
+            "Que su tía está en Chile"
           ],
           "answer": 1
         },
@@ -791,10 +791,10 @@
           "qEn": "What is there for dinner?",
           "options": [
             "Pescado o carne",
-            "Sopa o pollo",
-            "Pizza o pasta"
+            "Pizza o pasta",
+            "Sopa o pollo"
           ],
-          "answer": 1
+          "answer": 2
         },
         {
           "q": "¿Cuántas sopas pide Olga?",
@@ -812,7 +812,7 @@
           "options": [
             "Un termo de agua caliente",
             "Un café",
-            "Una cerveza"
+            "Una botella de vino tinto"
           ],
           "answer": 0
         },
@@ -913,11 +913,11 @@
           "q": "¿Qué pregunta Olga?",
           "qEn": "What does Olga ask?",
           "options": [
-            "La hora de una parada",
+            "El nombre de Pilar",
             "El precio del billete",
-            "El nombre de Pilar"
+            "La hora de una parada"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "q": "¿A qué hora para el tren?",
@@ -934,20 +934,20 @@
           "qEn": "How many minutes does it stop?",
           "options": [
             "Cinco",
-            "Diez",
-            "Veinte"
+            "Veinte",
+            "Diez"
           ],
-          "answer": 1
+          "answer": 2
         },
         {
           "q": "¿Cómo está Olga al final?",
           "qEn": "How is Olga at the end?",
           "options": [
-            "Contenta",
+            "Enfadada",
             "Triste",
-            "Enfadada"
+            "Contenta"
           ],
-          "answer": 0
+          "answer": 2
         }
       ],
       "open": [
@@ -1031,38 +1031,38 @@
           "q": "¿Dónde están?",
           "qEn": "Where are they?",
           "options": [
-            "En el bar",
             "En el andén",
-            "En el furgón"
+            "En el furgón",
+            "En el bar"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "q": "¿Qué compra Olga?",
           "qEn": "What does Olga buy?",
           "options": [
-            "Vino",
+            "Pisco",
             "Cerveza",
-            "Pisco"
+            "Vino"
           ],
-          "answer": 2
+          "answer": 0
         },
         {
           "q": "¿Cuántos vasos pide?",
           "qEn": "How many glasses does she ask for?",
           "options": [
-            "Uno",
             "Dos",
-            "Tres"
+            "Tres",
+            "Uno"
           ],
-          "answer": 1
+          "answer": 0
         },
         {
           "q": "¿Qué dice Olga?",
           "qEn": "What does Olga say?",
           "options": [
             "Que bebe mucho",
-            "Que no bebe nunca",
+            "Que no bebe nunca en un tren",
             "Que nunca bebe sola"
           ],
           "answer": 2
@@ -1154,21 +1154,21 @@
           "q": "¿A qué juegan?",
           "qEn": "What are they playing?",
           "options": [
-            "Al fútbol",
             "A las cartas",
-            "Al ajedrez"
+            "Al ajedrez",
+            "Al fútbol"
           ],
-          "answer": 1
+          "answer": 0
         },
         {
           "q": "¿Qué tiene Nelson?",
           "qEn": "What does Nelson have?",
           "options": [
-            "Un as",
             "Un rey",
+            "Un as",
             "Una reina"
           ],
-          "answer": 0
+          "answer": 1
         },
         {
           "q": "¿Cuántos ases tiene Nelson?",
@@ -1184,11 +1184,11 @@
           "q": "¿Qué piensa Inés?",
           "qEn": "What does Inés think?",
           "options": [
-            "Que Nelson tiene suerte",
             "Que Nelson tiene ases en la manga",
-            "Que Nelson está cansado"
+            "Que Nelson tiene suerte",
+            "Que Nelson está muy cansado y quiere dormir"
           ],
-          "answer": 1
+          "answer": 0
         }
       ],
       "open": [
@@ -1277,39 +1277,39 @@
           "q": "¿Qué hay en el cielo?",
           "qEn": "What is in the sky?",
           "options": [
-            "Muchas estrellas",
+            "Un avión",
             "Muchas nubes",
-            "Un avión"
+            "Muchas estrellas"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "q": "¿Cómo es el cielo para Joel?",
           "qEn": "What is the sky like for Joel?",
           "options": [
-            "Feo",
             "Bonito",
-            "Aburrido"
+            "Aburrido",
+            "Feo"
           ],
-          "answer": 1
+          "answer": 0
         },
         {
           "q": "¿Qué es lo blanco?",
           "qEn": "What is the white thing?",
           "options": [
-            "La luna",
             "Una nube",
-            "La Vía Láctea"
+            "La Vía Láctea",
+            "La luna"
           ],
-          "answer": 2
+          "answer": 1
         },
         {
           "q": "¿Qué es la luz roja?",
           "qEn": "What is the red light?",
           "options": [
-            "Un tren",
+            "Una estrella",
             "Marte",
-            "Una estrella"
+            "Un tren"
           ],
           "answer": 1
         }
@@ -1390,21 +1390,21 @@
           "q": "¿Qué hora es?",
           "qEn": "What time is it?",
           "options": [
+            "Las cuatro y media de la tarde",
             "Las cuatro de la mañana",
-            "Las cuatro de la tarde",
             "Las doce"
           ],
-          "answer": 0
+          "answer": 1
         },
         {
           "q": "¿Qué hay en las montañas?",
           "qEn": "What is on the mountains?",
           "options": [
-            "Árboles",
             "Casas",
-            "Nieve"
+            "Nieve",
+            "Árboles"
           ],
-          "answer": 2
+          "answer": 1
         },
         {
           "q": "¿Cuál es el misterio?",
@@ -1509,8 +1509,8 @@
           "qEn": "What is Tango like?",
           "options": [
             "Grande",
-            "Pequeño",
-            "Viejo"
+            "Viejo",
+            "Pequeño"
           ],
           "answer": 0
         },
@@ -1518,8 +1518,8 @@
           "q": "¿Qué le pasa a Tango?",
           "qEn": "What is wrong with Tango?",
           "options": [
-            "Tiene frío",
             "Tiene sueño",
+            "Tiene frío",
             "Tiene hambre"
           ],
           "answer": 2
@@ -1528,11 +1528,11 @@
           "q": "¿Qué le da Valentina?",
           "qEn": "What does Valentina give him?",
           "options": [
-            "Una galleta",
             "Agua",
+            "Una galleta",
             "Jamón"
           ],
-          "answer": 0
+          "answer": 1
         }
       ],
       "open": [
@@ -1622,30 +1622,30 @@
           "qEn": "What is Valentina looking for?",
           "options": [
             "Su perro",
-            "Su violonchelo",
-            "Su billete"
+            "Su billete",
+            "Su violonchelo"
           ],
-          "answer": 1
+          "answer": 2
         },
         {
           "q": "¿De qué color es el estuche?",
           "qEn": "What colour is the case?",
           "options": [
+            "Blanco",
             "Negro",
-            "Rojo",
-            "Blanco"
+            "Rojo"
           ],
-          "answer": 0
+          "answer": 1
         },
         {
           "q": "¿Cómo es el estuche?",
           "qEn": "What is the case like?",
           "options": [
-            "Muy pequeño",
+            "Muy pesado",
             "Muy nuevo",
-            "Muy pesado"
+            "Muy pequeño"
           ],
-          "answer": 2
+          "answer": 0
         },
         {
           "q": "¿Para quién es el queso?",
@@ -1754,7 +1754,7 @@
           "q": "¿Qué tiempo hace?",
           "qEn": "What is the weather like?",
           "options": [
-            "Hace calor",
+            "Hace mucho calor",
             "Llueve",
             "Hace mucho frío"
           ],
@@ -1764,19 +1764,19 @@
           "q": "¿Cuántos grados hace?",
           "qEn": "How many degrees is it?",
           "options": [
-            "Doce bajo cero",
+            "Doce",
             "Dos bajo cero",
-            "Doce"
+            "Doce bajo cero"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "q": "¿Con quién vive Teófilo?",
           "qEn": "Who does Teófilo live with?",
           "options": [
-            "Con su mujer",
+            "Con su hijo",
             "Con su gato",
-            "Con su hijo"
+            "Con su mujer"
           ],
           "answer": 1
         }
@@ -2000,9 +2000,9 @@
           "q": "¿Qué ofrece Aniceto?",
           "qEn": "What does Aniceto offer?",
           "options": [
-            "Café",
+            "Agua",
             "Té",
-            "Agua"
+            "Café"
           ],
           "answer": 1
         },
@@ -2021,7 +2021,7 @@
           "qEn": "What does Aniceto say?",
           "options": [
             "Que las dos tazas son suyas",
-            "Que una taza es de Rocío",
+            "Que una de las tazas es de Rocío",
             "Que no hay tazas"
           ],
           "answer": 0
@@ -2030,9 +2030,9 @@
           "q": "¿De qué color es la manta?",
           "qEn": "What colour is the blanket?",
           "options": [
-            "Roja",
+            "Verde",
             "Azul",
-            "Verde"
+            "Roja"
           ],
           "answer": 1
         }
@@ -2103,11 +2103,11 @@
           "q": "¿Qué hora es?",
           "qEn": "What time is it?",
           "options": [
-            "Las seis y cuarenta",
+            "Las seis y cuarto",
             "Las siete",
-            "Las seis y cuarto"
+            "Las seis y cuarenta"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "q": "¿Dónde llega el tren?",
@@ -2133,11 +2133,11 @@
           "q": "¿Qué tienen que hacer los pasajeros?",
           "qEn": "What do the passengers have to do?",
           "options": [
-            "Dormir",
             "Bajar con su equipaje",
+            "Esperar en el tren una hora más",
             "Comer"
           ],
-          "answer": 1
+          "answer": 0
         }
       ],
       "open": [

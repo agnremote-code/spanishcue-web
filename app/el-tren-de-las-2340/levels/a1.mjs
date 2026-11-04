@@ -17,10 +17,10 @@ export default {
     ],
     talk: [
       '¿Cómo es la persona más elegante de tu familia?',
-      '¿Qué llevas siempre cuando viajas?',
+      '¿Qué no puede faltar en tu maleta?',
       '¿Prefieres la ventana o el pasillo?',
       '¿Tienes algo muy importante para ti?',
-      '¿Usas gafas?',
+      '¿Llevas algo que te recuerda a una persona?',
     ],
     words: [
       { es: 'el maletero', en: 'the porter' },
@@ -47,8 +47,8 @@ export default {
     talk: [
       '¿Quién te despide cuando viajas?',
       '¿Qué comida típica de tu país llevas a otro país?',
-      '¿Lloras en las despedidas?',
-      '¿Cómo es tu madre o tu padre?',
+      '¿Cómo te despides de tu familia antes de un viaje?',
+      '¿Quién te llama cuando estás de viaje?',
       '¿Te gustaría trabajar en otro país?',
     ],
     words: [
@@ -75,7 +75,7 @@ export default {
     ],
     talk: [
       '¿Con quién compartes habitación?',
-      '¿Qué haces cuando no puedes dormir?',
+      '¿Qué haces si tu compañero de cuarto ronca?',
       '¿Alguien de tu familia ronca?',
       '¿Viajas con mochila?',
       '¿Qué llevas para dormir?',
@@ -118,7 +118,7 @@ export default {
   },
   camarote7: {
     title: 'Una cama sin nadie',
-    line: 'Son la una menos diez. Celia, la camarera, lleva un uniforme azul y tiembla un poco. La puerta del camarote siete está abierta. La ventana también. Dentro solo queda un perfume fuerte.',
+    line: 'Es la una menos diez. Celia, la camarera, lleva un uniforme azul y tiembla un poco. La puerta del camarote siete está abierta. La ventana también. Dentro solo queda un perfume fuerte.',
     dialogue: [
       ['celia', 'Paso con el té de la noche y… nada. La señora no está. La cama está perfecta.'],
       ['ramiro', 'Ramiro Quispe, jefe de tren. Usted es el pasajero del ocho, ¿verdad? Lea esto, por favor.'],
@@ -132,7 +132,7 @@ export default {
       { say: '¿Por qué yo? No conozco a esta señora.', reply: 'Ella sí lo conoce a usted, parece.', end: 'Te da un escalofrío. Celia te da un té caliente y la nota.', mood: 'worried' },
     ],
     talk: [
-      '¿Qué haces cuando tienes miedo?',
+      '¿Qué haces si una amiga no contesta el teléfono?',
       '¿Haces la cama todos los días?',
       '¿Qué perfume usas?',
       '¿Te gustan las historias de misterio?',
@@ -192,7 +192,7 @@ export default {
     talk: [
       '¿Cocinas bien o mal?',
       '¿Cuál es tu sopa favorita?',
-      '¿Eres una persona despistada?',
+      '¿Olvidas cosas en los trenes o en los autobuses?',
       '¿Qué pides en un restaurante?',
       '¿Llevas un termo al trabajo?',
     ],
@@ -220,7 +220,7 @@ export default {
     talk: [
       '¿Lees en vacaciones?',
       '¿Qué hacen tus abuelos ahora?',
-      '¿Llevas gafas de sol?',
+      '¿Llevas sombrero cuando sales a pasear?',
       '¿Quieres trabajar muchos años o jubilarte pronto?',
       '¿Qué hace la gente mayor en tu ciudad?',
     ],
@@ -246,7 +246,7 @@ export default {
       { say: 'Apuesto. Pero creo que la señora está en el tren.', reply: '¿En el tren? ¿Dónde? ¿En la nevera?', end: 'Nelson escribe la apuesta en una servilleta. Se equivoca con tu nombre dos veces.', mood: 'tipsy' },
     ],
     talk: [
-      '¿Cuál es tu bebida favorita?',
+      '¿Qué bebida pides para celebrar algo?',
       '¿Bebes solo a veces?',
       '¿Cómo es tu bar favorito?',
       '¿Debes dinero a alguien?',
@@ -276,9 +276,9 @@ export default {
     talk: [
       '¿Qué juegos de cartas conoces?',
       '¿Haces trampas en los juegos?',
-      '¿Llevas joyas?',
-      '¿Cuál es tu museo favorito?',
-      '¿Sabes guardar un secreto?',
+      '¿Llevas un anillo o un reloj especial?',
+      '¿Qué museo de tu país recomiendas?',
+      '¿Quién conoce tus secretos?',
     ],
     words: [
       { es: 'el as', en: 'the ace' },
@@ -306,7 +306,7 @@ export default {
       '¿Qué te aburre mucho?',
       '¿Cómo es tu abrigo de invierno?',
       '¿Usas mucho la luz del teléfono?',
-      '¿Te interesa el espacio?',
+      '¿Conoces el nombre de alguna constelación?',
     ],
     words: [
       { es: 'la astrónoma', en: 'the astronomer' },
@@ -330,7 +330,7 @@ export default {
       { say: '¡Hola! Soy el pasajero del ocho. Si alguien sabe algo, escriba.', reply: '¡Wow! El chat explota.', end: 'Recibes cien mensajes: tres teorías, dos proposiciones de matrimonio y una receta de pan.', mood: 'laugh' },
     ],
     talk: [
-      '¿Qué redes sociales usas?',
+      '¿Sigues a alguien que viaja y hace videos?',
       '¿Cómo es tu hermano o tu hermana?',
       '¿Te gusta salir en videos?',
       '¿De qué color es tu pelo?',
@@ -359,8 +359,8 @@ export default {
     ],
     talk: [
       '¿Cómo es tu animal favorito?',
-      '¿Tienes miedo de algún animal?',
-      '¿Qué olor te gusta mucho?',
+      '¿Qué animal no te gusta tener cerca?',
+      '¿Qué olor te recuerda tu casa?',
       '¿Llevas gorra?',
       '¿Viajas con tu mascota?',
     ],
@@ -387,10 +387,10 @@ export default {
       { say: '¿Puedes tocar algo? Es una noche larga.', reply: 'Con tres quesos dentro suena raro. Pero bueno.', end: 'Valentina toca una canción lenta. Cosme se quita la gorra. Tango deja de aullar.', mood: 'love' },
     ],
     talk: [
-      '¿Qué instrumento te gusta escuchar?',
+      '¿Qué música te gusta escuchar en un concierto?',
       '¿Llevas comida a tu familia?',
       '¿Cómo son tus zapatos favoritos?',
-      '¿Prestas tus cosas?',
+      '¿Qué cosa tuya no prestas nunca?',
       '¿Qué comida no puedes comer?',
     ],
     words: [
@@ -402,11 +402,11 @@ export default {
   },
   nieve: {
     title: 'El hombre de la estación',
-    line: 'Son las tres y cinco en Puente del Inca. Nieva. Don Teófilo, el jefe de estación, es un señor bajito con bufanda verde y una linterna. Vive aquí solo con una radio y un gato.',
+    line: 'Son las tres y cuarto en Puente del Inca. Nieva. Don Teófilo, el jefe de estación, es un señor bajito con bufanda verde y una linterna. Vive aquí solo con una radio y un gato.',
     dialogue: [
       ['teofilo', 'Bienvenidos a Puente del Inca. Aquí hace doce bajo cero. Pasan cuatro trenes por semana.'],
       ['ramiro', 'Buscamos a una señora mayor, abrigo rojo. ¿La ve?'],
-      ['teofilo', 'Sí. A las tres y diez está bajo el puente, con una cajita. Echa cenizas al río. Después vuelve al tren, por adelante.'],
+      ['teofilo', 'Sí. Hace cinco minutos, a las tres y diez, ha bajado al río con una cajita. Ha echado cenizas al agua. Después ha vuelto al tren, por adelante.'],
     ],
     ask: 'La nieve cae despacio. Ramiro mira el reloj.',
     options: [
@@ -416,8 +416,8 @@ export default {
     ],
     talk: [
       '¿Cómo es el invierno en tu país?',
-      '¿Te gusta estar solo?',
-      '¿Qué ropa llevas cuando hace mucho frío?',
+      '¿Te gustaría trabajar en un lugar muy tranquilo?',
+      '¿Qué te pones para ir a la montaña en invierno?',
       '¿Tomas bebidas calientes?',
       '¿Conoces un lugar muy tranquilo?',
     ],
@@ -473,10 +473,10 @@ export default {
     ],
     talk: [
       '¿Desde cuándo haces tu trabajo o tus estudios?',
-      '¿Cómo es tu mejor amigo?',
-      '¿Qué bebes por la mañana?',
-      '¿Te gustan las máquinas?',
       '¿Tienes un amigo desde hace muchos años?',
+      '¿Qué desayunas cuando estás de viaje?',
+      '¿Te gustan las máquinas?',
+      '¿Quién es tu amigo más antiguo?',
     ],
     words: [
       { es: 'estrecho', en: 'narrow' },
@@ -502,10 +502,10 @@ export default {
       { say: 'Señora, toda la noche sin dormir. ¡Me debe un desayuno!', reply: 'Te debo un desayuno y un capítulo.', end: 'Desayunan todos juntos en la estación. Aniceto paga los cafés.', mood: 'laugh' },
     ],
     talk: [
-      '¿Qué haces los domingos por la mañana?',
+      '¿Qué haces en una estación cuando llegas temprano?',
       '¿Dónde quieres ver un amanecer especial?',
       '¿Qué desayuno te gusta?',
-      '¿Haces bromas a tus amigos?',
+      '¿Te gustan las sorpresas de tus amigos?',
       '¿Cómo es una persona inteligente para ti?',
     ],
     words: [

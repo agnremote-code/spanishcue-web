@@ -59,40 +59,43 @@
       ],
       "choice": [
         {
-          "q": "¿Qué pregunta impertinente hace Fermín?",
+          "q": "¿Con qué estrategia responde Olga a la pregunta «impertinente»?",
           "options": [
-            "Si no es macabro viajar con su marido en una caja",
-            "Cuánto cuesta el billete de Ernesto",
-            "Por qué no viaja en avión"
+            "Devuelve la acusación de macabro a las costumbres ajenas",
+            "Admite que es macabro y pide disculpas al maletero por la escena",
+            "Cambia de tema para hablar del reglamento del tren"
           ],
-          "answer": 0
+          "answer": 0,
+          "infer": true
         },
         {
-          "q": "¿Qué considera Olga verdaderamente macabro?",
+          "q": "¿Qué revela la comparación de Ernesto sobre los cementerios?",
           "options": [
-            "Viajar con cenizas",
-            "Las costumbres funerarias convencionales",
-            "Los trenes nocturnos"
+            "Su desprecio por los porteros de edificio",
+            "Su miedo a la muerte, que Olga critica",
+            "Su humor, que Olga comparte y conserva"
+          ],
+          "answer": 2,
+          "infer": true
+        },
+        {
+          "q": "¿Qué matiz añade Olga al citar «atado y bien atado»?",
+          "options": [
+            "Confiesa que copia sus frases de los políticos",
+            "Rinde homenaje sincero a un general que admiraba en su juventud",
+            "Usa la frase con distancia irónica hacia quien la dijo"
+          ],
+          "answer": 2,
+          "infer": true
+        },
+        {
+          "q": "¿Qué pide Fermín al final?",
+          "options": [
+            "Cobrar derechos por el personaje",
+            "Salir mejorado en la novela",
+            "Que lo dejen fuera del libro"
           ],
           "answer": 1
-        },
-        {
-          "q": "¿Qué ironía contiene la frase sobre el general?",
-          "options": [
-            "Que Olga admira al general",
-            "Que Olga fue militar",
-            "Que usa una cita de alguien que no le gustaba"
-          ],
-          "answer": 2
-        },
-        {
-          "q": "¿Qué revela Olga sobre sus planes?",
-          "options": [
-            "Que prepara sorpresas y un capítulo final",
-            "Que va a vender su casa",
-            "Que se va a quedar en Chile"
-          ],
-          "answer": 0
         }
       ],
       "open": [
@@ -186,40 +189,43 @@
       ],
       "choice": [
         {
-          "q": "¿Qué ha escondido Rosa en la mochila de su hijo?",
+          "q": "¿Qué escondió Rosa en el forro de la mochila?",
           "options": [
-            "Un rosario cosido en el forro",
-            "Dinero",
-            "Una carta"
+            "Un rosario cosido",
+            "Dinero para el viaje",
+            "Una carta para la mina"
           ],
           "answer": 0
         },
         {
-          "q": "¿Qué significa «una madre, aunque no esté de acuerdo, empaqueta»?",
+          "q": "¿Qué quiere decir «una madre, aunque no esté de acuerdo, empaqueta»?",
           "options": [
-            "Que las madres siempre discuten",
-            "Que apoya a su hijo aunque no comparta su decisión",
-            "Que le gusta hacer maletas"
+            "Que en el fondo prefiere que su hijo se vaya cuanto antes",
+            "Que obedece sin opinar sobre nada",
+            "Que apoya en los hechos lo que critica en palabras"
           ],
-          "answer": 1
+          "answer": 2,
+          "infer": true
         },
         {
-          "q": "¿Qué dice Rosa de los hombres de su familia?",
+          "q": "¿Qué ironía comparten Rosa y Yesenia sobre los hombres de su familia?",
           "options": [
-            "Que nunca aceptan ayuda",
-            "Que siempre piden ayuda",
-            "Que aceptan ayuda si creen que fue idea suya"
+            "Que nunca piden ayuda aunque de verdad la necesiten",
+            "Que siempre llegan tarde a las despedidas",
+            "Que aceptan ayuda solo si creen que la idea fue suya"
           ],
-          "answer": 2
+          "answer": 2,
+          "infer": true
         },
         {
-          "q": "¿Qué tienen en común Rosa y Yesenia?",
+          "q": "¿Por qué quiere Rosa que el tren se vaya ya?",
           "options": [
-            "Saben manipular con cariño a los hombres de su vida",
-            "Viajan juntas",
-            "Son de la misma familia"
+            "Porque no quiere hablar más con Yesenia",
+            "Porque tiene prisa por volver a casa",
+            "Para poder llorar sin que nadie la vea"
           ],
-          "answer": 0
+          "answer": 2,
+          "infer": true
         }
       ],
       "open": [
@@ -313,40 +319,42 @@
       ],
       "choice": [
         {
-          "q": "¿Qué percibe Evaristo en Lucas al principio?",
+          "q": "¿Con qué registro habla Evaristo al principio?",
           "options": [
-            "Hostilidad",
-            "Admiración",
-            "Cansancio"
+            "Brusco, cortante y lleno de quejas",
+            "Ceremonioso y algo teatral",
+            "Técnico, como un médico"
           ],
-          "answer": 0
+          "answer": 1,
+          "infer": true
         },
         {
-          "q": "¿Cómo justifica Evaristo sus ronquidos?",
+          "q": "¿Qué paradoja plantea Evaristo sobre los ronquidos?",
           "options": [
-            "Como una enfermedad",
-            "Como una prueba de vida",
-            "Como culpa del tren"
-          ],
-          "answer": 1
-        },
-        {
-          "q": "¿Qué le pidió la señora del siete a Evaristo?",
-          "options": [
-            "Que no roncara",
-            "Que la acompañara",
-            "Que roncara fuerte para tapar sus pasos"
+            "Que los jóvenes roncan más que los viejos",
+            "Que roncar es malo para quien escucha y bueno para él",
+            "Que el ruido tranquiliza y el silencio debería asustar"
           ],
           "answer": 2
         },
         {
-          "q": "¿Qué tono tiene la última frase de Evaristo?",
+          "q": "¿Qué le pidió Olga a Evaristo a las once?",
           "options": [
-            "Irónico, presentándose como un artista",
-            "Arrepentido",
-            "Enfadado"
+            "Que avisara al jefe si ella no volvía",
+            "Que roncara fuerte a partir de la una",
+            "Que vigilara la puerta del camarote siete"
           ],
-          "answer": 0
+          "answer": 1
+        },
+        {
+          "q": "¿Qué tono tiene «algunos artistas trabajamos por encargo»?",
+          "options": [
+            "Amenazador, como una advertencia",
+            "Avergonzado, como una disculpa",
+            "Orgulloso y burlón a la vez"
+          ],
+          "answer": 2,
+          "infer": true
         }
       ],
       "open": [
@@ -448,40 +456,43 @@
       ],
       "choice": [
         {
-          "q": "¿A qué conclusión irónica llega Brayan?",
+          "q": "¿Qué reproche esconde la frase sobre el «servicio de habitaciones»?",
           "options": [
-            "Que está casado con una detective frustrada",
-            "Que el tren es incómodo",
-            "Que la escritora miente"
+            "Que el tren no ofrece servicio por la noche",
+            "Que Brayan pidió demasiada comida al camarote anoche",
+            "Que Brayan confunde comodidad con romanticismo"
           ],
-          "answer": 0
+          "answer": 2,
+          "infer": true
         },
         {
-          "q": "¿De cuántas maneras puede leerse la dedicatoria según Yesenia?",
+          "q": "Según Yesenia, ¿qué es lo interesante de la dedicatoria?",
           "options": [
-            "De una",
-            "De tres",
-            "De ninguna"
-          ],
-          "answer": 1
-        },
-        {
-          "q": "¿Qué le dijo la escritora a Yesenia?",
-          "options": [
-            "Que no leyera el libro",
-            "Que se fuera a dormir",
-            "Que iba a estar despierta"
+            "Que repite una frase de otra novela",
+            "Que está escrita con letra temblorosa",
+            "Que admite tres lecturas a la vez"
           ],
           "answer": 2
         },
         {
-          "q": "¿Cómo termina la discusión?",
+          "q": "¿Qué intención tiene la «lectura alternativa» de Brayan?",
           "options": [
-            "Con una reconciliación y un compromiso",
-            "Con un enfado",
-            "Con Brayan saliendo del camarote"
+            "Burlarse de la escritora en público",
+            "Demostrar que Olga es peligrosa",
+            "Reconducir la noche hacia la pareja"
           ],
-          "answer": 0
+          "answer": 2,
+          "infer": true
+        },
+        {
+          "q": "¿Qué muestra la frase final de Yesenia?",
+          "options": [
+            "Que prefiere ver el amanecer sola",
+            "Que ha perdido todo interés por el misterio de la escritora",
+            "Que une el misterio y la pareja en un solo plan"
+          ],
+          "answer": 2,
+          "infer": true
         }
       ],
       "open": [
@@ -520,9 +531,9 @@
     },
     {
       "id": "camarote7",
-      "title": "Las instrucciones de la desaparecida",
+      "title": "Una nota con letra firme",
       "place": "El camarote siete",
-      "context": "Ramiro lee en voz alta, para Celia, las notas que Olga dejó en su libreta junto a la cama.",
+      "context": "Ramiro y Celia examinan la nota que Olga dejó en la almohada y lo poco que falta en el camarote.",
       "speakers": [
         {
           "name": "Ramiro",
@@ -538,31 +549,31 @@
       "lines": [
         {
           "s": 0,
-          "text": "Celia, escucha esto. Lo encontré en la libreta, debajo de la almohada. Parece un plan de trabajo: «Doce y media: té con Celia, ser amable pero no sospechosa. Doce y cuarenta: nota en la almohada, letra firme, nada de lágrimas. Doce y cuarenta y cinco: ventana abierta, por el efecto dramático»."
+          "text": "Celia, mira la letra. «Si desaparezco, que investigue el pasajero del 8». Ni un temblor, ni una tachadura. Y debajo, la hora: doce y cuarenta. Quien escribe así no está asustada; está firmando un contrato."
         },
         {
           "s": 1,
-          "text": "¿Por el efecto dramático? Me dio un susto de muerte."
+          "text": "¿Y la ventana abierta, jefe? Cuando entré, la cortina volaba como en una película de terror. Me dio un susto de muerte."
         },
         {
           "s": 0,
-          "text": "Escucha, que sigue: «Una menos cuarto: pantuflas de leopardo, pasillo, locomotora. Si me cruzo con alguien, sonreír como una abuela despistada. Nadie sospecha de una abuela despistada»."
+          "text": "Por esa ventana no cabe ni un gato bien alimentado. Si alguien la abrió, fue para que la viéramos abierta. Fíjate en lo que falta: el abrigo rojo, la urna y las pantuflas. En cambio, la dentadura postiza sigue en el vaso."
         },
         {
           "s": 1,
-          "text": "Esa mujer es un genio. Y una sinvergüenza."
+          "text": "Una señora que se lleva las pantuflas y deja los dientes no piensa ir muy lejos."
         },
         {
           "s": 0,
-          "text": "Las dos cosas suelen ir juntas. La última línea dice: «Ramiro se preocupará. Es su trabajo y lo hace bien. Pedirle perdón al amanecer. Invitarlo a desayunar»."
+          "text": "Ni piensa comer en público, que es otra pista. Y hay algo más: ha elegido a un desconocido para investigar, no a mí. O no confía en el reglamento, o confía demasiado en el azar."
         },
         {
           "s": 1,
-          "text": "¿Y qué va a hacer usted, jefe? ¿Va a fingir que no ha leído esto?"
+          "text": "¿Y qué va a hacer usted? ¿Avisar a la central?"
         },
         {
           "s": 0,
-          "text": "Voy a hacer lo que hace un buen jefe de tren: cumplir el reglamento hasta donde llegue y, a partir de ahí, ser humano. Cierra la ventana, que hace frío. Y no le digas nada al pasajero del ocho. Que investigue. Ella quería que investigara."
+          "text": "Voy a hacer lo que hace un buen jefe de tren: cumplir el reglamento hasta donde llegue y, a partir de ahí, ser humano. Cierra la ventana, que hace frío. Y no les digas nada a los pasajeros todavía. Que investigue el del ocho, ya que ella lo quiso así."
         },
         {
           "s": 1,
@@ -575,40 +586,43 @@
       ],
       "choice": [
         {
-          "q": "¿Qué encuentra Ramiro debajo de la almohada?",
+          "q": "¿Qué deduce Ramiro de la letra de la nota?",
           "options": [
-            "Una libreta con un plan detallado",
-            "Una carta de despedida",
-            "Un billete de avión"
+            "Que la autora tenía mucha prisa y bastante miedo",
+            "Que la nota la escribió otra persona",
+            "Que la autora escribía tranquila y decidida"
           ],
-          "answer": 0
+          "answer": 2,
+          "infer": true
         },
         {
-          "q": "¿Por qué abrió Olga la ventana?",
+          "q": "¿Por qué cree Ramiro que la ventana se abrió?",
           "options": [
-            "Para escapar",
-            "Por el efecto dramático",
-            "Porque tenía calor"
+            "Para que la vieran abierta, no para salir",
+            "Para ventilar el camarote después del té",
+            "Para tirar la urna a las vías"
           ],
-          "answer": 1
+          "answer": 0,
+          "infer": true
         },
         {
-          "q": "¿Qué estrategia planeaba Olga si se cruzaba con alguien?",
+          "q": "¿Qué falta en el camarote?",
           "options": [
-            "Esconderse",
-            "Correr",
-            "Sonreír como una abuela despistada"
+            "La maleta, el pasaporte y el abrigo",
+            "La dentadura, la libreta y el billete",
+            "El abrigo, la urna y las pantuflas"
           ],
           "answer": 2
         },
         {
-          "q": "¿Qué decide hacer Ramiro?",
+          "q": "¿Qué humor hay en la última frase de Ramiro?",
           "options": [
-            "Guardar el secreto y dejar que el pasajero investigue",
-            "Llamar a la policía",
-            "Despertar a todo el tren"
+            "Se burla de la salud de la camarera",
+            "Amenaza a Celia con un informe disciplinario a la empresa",
+            "Convierte el estrés de Celia en un trámite oficial"
           ],
-          "answer": 0
+          "answer": 2,
+          "infer": true
         }
       ],
       "open": [
@@ -617,27 +631,27 @@
           "model": "Cuando la norma haría daño a alguien sin ningún beneficio."
         },
         {
-          "q": "¿Crees que el genio y la sinvergüencería suelen ir juntos?",
-          "model": "Bastante a menudo, la creatividad necesita algo de descaro."
+          "q": "¿Qué dice de una persona su forma de escribir a mano?",
+          "model": "Bastante: la prisa, el cuidado y a veces hasta el miedo."
         },
         {
-          "q": "¿Has planificado alguna vez una sorpresa con tanto detalle?",
-          "model": "Sí, una fiesta para mi padre, con horarios y contraseñas."
+          "q": "¿Confiarías un misterio a un desconocido? ¿Por qué?",
+          "model": "Quizá sí, porque mira sin prejuicios y no tiene nada que perder."
         }
       ],
-      "gaps": "Si me cruzo con alguien, [sonreír] como una [abuela] [despistada]. Nadie [sospecha] de una abuela despistada",
+      "gaps": "Quien [escribe] así no está [asustada]; está [firmando] un [contrato].",
       "glossary": [
         {
-          "word": "efecto dramático",
-          "meaning": "impresión fuerte que se busca a propósito"
+          "word": "tachadura",
+          "meaning": "raya sobre algo escrito para borrarlo"
         },
         {
           "word": "un susto de muerte",
           "meaning": "un susto enorme"
         },
         {
-          "word": "sinvergüenza",
-          "meaning": "persona sin vergüenza, a veces con simpatía"
+          "word": "dentadura postiza",
+          "meaning": "dientes artificiales que se pueden quitar"
         },
         {
           "word": "me cueste la úlcera",
@@ -673,40 +687,43 @@
       ],
       "choice": [
         {
-          "q": "¿A quién le habla Bruno?",
+          "q": "¿Qué reconoce Bruno sobre su primera reacción?",
           "options": [
-            "A su psicóloga",
-            "A su tía",
-            "A la abogada"
-          ],
-          "answer": 0
-        },
-        {
-          "q": "¿De qué se arrepiente Bruno?",
-          "options": [
-            "De haber viajado",
-            "De haber preguntado primero por el testamento",
-            "De haber jugado al póker"
-          ],
-          "answer": 1
-        },
-        {
-          "q": "¿Qué echa de menos de su tía?",
-          "options": [
-            "Su dinero",
-            "Su casa de Viña",
-            "Que le corrija la gramática y le pregunte por sus negocios"
+            "Que llamó a la policía de Mendoza antes que a su abogada",
+            "Que no se enteró de nada hasta la mañana",
+            "Que preguntó por el testamento antes que por su tía"
           ],
           "answer": 2
         },
         {
-          "q": "¿Qué intención tiene Bruno si su tía aparece?",
+          "q": "¿Qué ironía hay en «un sobrino con estudios»?",
           "options": [
-            "Decirle algo que no tenga que ver con dinero",
-            "Pedirle explicaciones",
-            "Hablar con la abogada"
+            "Se reprocha que la educación no le dio decencia",
+            "Presume de sus títulos universitarios ante la terapeuta",
+            "Critica a los sobrinos que no estudiaron"
           ],
-          "answer": 0
+          "answer": 0,
+          "infer": true
+        },
+        {
+          "q": "¿Qué revela lo que Bruno echa de menos de su tía?",
+          "options": [
+            "Un cariño que antes disfrazaba de fastidio",
+            "Un alivio secreto por perder a quien siempre lo corregía",
+            "Un interés por las cuentas de su tía"
+          ],
+          "answer": 0,
+          "infer": true
+        },
+        {
+          "q": "¿Qué quiere decir «algo que no tenga números»?",
+          "options": [
+            "Hablarle sin pensar en dinero ni en negocios",
+            "Escribirle una carta sin fechas",
+            "Dejar de usar su teléfono móvil"
+          ],
+          "answer": 0,
+          "infer": true
         }
       ],
       "open": [
@@ -796,40 +813,43 @@
       ],
       "choice": [
         {
-          "q": "¿De qué acusa Jacinto a Fela?",
+          "q": "¿Cómo responde Fela a la acusación de Jacinto?",
           "options": [
-            "De saber algo y fingir sorpresa",
-            "De haber robado comida",
-            "De haber mentido al jefe sobre la cena"
+            "Con miedo, pidiendo que no se lo cuente al jefe",
+            "Con enfado, negándolo todo",
+            "Con sarcasmo, y luego admite lo que sabía"
+          ],
+          "answer": 2,
+          "infer": true
+        },
+        {
+          "q": "¿Qué pidió Olga por teléfono hace un mes?",
+          "options": [
+            "Lentejas para dos personas que se iban a despedir",
+            "Un camarote en el coche más cercano a la cocina y al bar",
+            "Que nadie supiera que viajaba en el tren"
           ],
           "answer": 0
         },
         {
-          "q": "¿Qué le pidió Olga a Fela un mes antes?",
+          "q": "¿Para qué sirve la lista de pedidas, partos y velorios?",
           "options": [
-            "Una mesa especial",
-            "Las lentejas de siempre para una despedida",
-            "Una botella de pisco"
+            "Para mostrar que nada en ese tren la sorprende",
+            "Para presumir de los premios de su cocina",
+            "Para quejarse de lo duro que es su trabajo"
           ],
-          "answer": 1
+          "answer": 0,
+          "infer": true
         },
         {
-          "q": "¿Qué demuestra la lista de cosas que ha visto Fela?",
+          "q": "¿Por qué fue útil el malentendido de Jacinto?",
           "options": [
-            "Que su trabajo es aburrido",
-            "Que el tren es peligroso",
-            "Que ya nada en el tren le sorprende"
+            "Porque obligó al jefe a buscar en la cocina",
+            "Porque nadie sospecha de un mozo despistado",
+            "Porque retrasó la cena de todo el tren"
           ],
-          "answer": 2
-        },
-        {
-          "q": "¿Por qué Jacinto ha sido «el mejor cómplice posible»?",
-          "options": [
-            "Porque no sabía que lo era",
-            "Porque lo planeó todo",
-            "Porque guardó el secreto conscientemente"
-          ],
-          "answer": 0
+          "answer": 1,
+          "infer": true
         }
       ],
       "open": [
@@ -919,40 +939,43 @@
       ],
       "choice": [
         {
-          "q": "¿Cómo valora Pilar el final del caso?",
+          "q": "¿Qué paradoja defiende Horacio sobre lo inverosímil?",
           "options": [
-            "Como inverosímil pero bueno",
-            "Como aburrido",
-            "Como triste"
+            "Que las novelas policiales son más creíbles que la vida real",
+            "Que lo absurdo suele ser verdad y lo razonable mentira",
+            "Que los casos fáciles son siempre los falsos"
           ],
-          "answer": 0
+          "answer": 1,
+          "infer": true
         },
         {
-          "q": "¿Qué paradoja plantea Horacio sobre las mentiras?",
+          "q": "¿Qué ilustra la «otra mitad» de los casos de Horacio?",
           "options": [
-            "Que son siempre absurdas",
-            "Que suelen ser más razonables que la verdad",
-            "Que nunca se descubren"
+            "Que muchos maridos acaban en la cárcel",
+            "Que la vida real suele ser poco imaginativa",
+            "Que él nunca resolvió los casos difíciles"
           ],
-          "answer": 1
+          "answer": 1,
+          "infer": true
         },
         {
-          "q": "¿Qué dice Horacio de la otra mitad de sus casos?",
+          "q": "¿Qué se ha caído de la teoría de Pilar?",
           "options": [
-            "Que eran crímenes terribles",
-            "Que nunca se resolvieron",
-            "Que eran maridos que aparecían en el bar de enfrente"
+            "La gendarme y el pasaporte falso",
+            "El maquinista cómplice y la fuga en taxi",
+            "El sobrino culpable y la víctima muerta"
           ],
           "answer": 2
         },
         {
-          "q": "¿Por qué se casó Pilar con Horacio, según ella?",
+          "q": "¿Qué revela el intercambio final sobre su matrimonio?",
           "options": [
-            "Porque la dejaba terminar las frases",
-            "Porque era policía",
-            "Porque le gustaban las novelas"
+            "Una rivalidad que todavía no han resuelto",
+            "Una complicidad hecha de escucharse mutuamente",
+            "Un cansancio después de tantos años juntos"
           ],
-          "answer": 0
+          "answer": 1,
+          "infer": true
         }
       ],
       "open": [
@@ -1050,40 +1073,43 @@
       ],
       "choice": [
         {
-          "q": "¿Qué reconoce Nelson al principio?",
+          "q": "¿Por qué corrige Wilmer a Nelson?",
           "options": [
-            "Que ha perdido la apuesta",
-            "Que ha ganado la apuesta",
-            "Que no apostó"
+            "La señora era más joven de lo que pensaba",
+            "Nelson se equivocó al contar las cervezas que se tomó",
+            "Le parece una falta de respeto llamarla «vieja»"
           ],
-          "answer": 0
+          "answer": 2,
+          "infer": true
         },
         {
-          "q": "¿Por qué Wilmer critica la palabra «vieja»?",
+          "q": "¿Qué teoría tiene Wilmer sobre cómo pide la gente?",
           "options": [
-            "Porque es mentira",
-            "Porque considera que la señora merece respeto",
-            "Porque ella está presente"
+            "Revela de qué país vienen y qué edad tienen más o menos",
+            "Revela si quieren olvidar, recordar o celebrar",
+            "Revela cuánto dinero tienen para gastar"
           ],
           "answer": 1
         },
         {
-          "q": "¿Qué significa pedir dos vasos, según Wilmer?",
+          "q": "¿Qué ironía hay en la nota de la propina?",
           "options": [
-            "Querer olvidar",
-            "Tener mucha sed",
-            "Querer recordar"
+            "Le reprocha que no hable con los clientes",
+            "Elogia el mismo defecto que Olga le criticó",
+            "Le promete un papel en la próxima novela"
           ],
-          "answer": 2
+          "answer": 1,
+          "infer": true
         },
         {
-          "q": "¿Qué consejo final le da Wilmer a Nelson?",
+          "q": "¿Qué sugiere «la segunda llamada ya empieza con ventaja»?",
           "options": [
-            "Que llame a su mujer",
-            "Que deje de beber",
-            "Que apueste mejor"
+            "Que la mujer de Nelson contesta siempre a la segunda",
+            "Que insistir después de un rechazo muestra interés",
+            "Que es mejor llamar cuando ella esté dormida"
           ],
-          "answer": 0
+          "answer": 1,
+          "infer": true
         }
       ],
       "open": [
@@ -1181,40 +1207,43 @@
       ],
       "choice": [
         {
-          "q": "¿Qué piensa Nelson de la decisión de la señora?",
+          "q": "¿Qué es un testamento, según Inés?",
           "options": [
-            "Que es una locura",
-            "Que es muy sensata",
-            "Que es ilegal"
+            "La última conversación sin interrupciones",
+            "Una forma de castigar a la familia",
+            "Un trámite para evitar impuestos"
           ],
           "answer": 0
         },
         {
-          "q": "¿Qué es un testamento para Inés?",
+          "q": "¿Qué contraste plantea Inés entre herencias y desheredaciones?",
           "options": [
-            "Un reparto de dinero",
-            "La última conversación con la familia",
-            "Un documento sin importancia"
+            "Unas unen a la familia y otras la separan",
+            "Unas son legales y otras se pueden recurrir ante un juez",
+            "Unas resuelven la vida y otras obligan a vivirla"
           ],
-          "answer": 1
+          "answer": 2,
+          "infer": true
         },
         {
-          "q": "¿Qué paradoja plantea Inés sobre las herencias?",
+          "q": "¿Qué insinúa Inés con «por eso escondes ases en la manga»?",
           "options": [
-            "Que siempre causan peleas",
-            "Que el dinero siempre ayuda",
-            "Que algunas arruinan la vida porque la resuelven"
+            "Que Nelson prefiere el atajo al esfuerzo",
+            "Que Nelson le ha robado dinero a ella",
+            "Que Nelson es un jugador muy hábil"
           ],
-          "answer": 2
+          "answer": 0,
+          "infer": true
         },
         {
-          "q": "¿Por qué quiere Inés la baraja de Nelson?",
+          "q": "¿Qué ironía tiene la última frase de Inés?",
           "options": [
-            "Porque tiene cinco ases y es una pieza curiosa",
-            "Porque es antigua",
-            "Porque le gusta jugar"
+            "Habla de las cartas y también de la vida de Nelson",
+            "Se burla de la mala vista de Nelson",
+            "Reconoce que ella también hizo trampa"
           ],
-          "answer": 0
+          "answer": 0,
+          "infer": true
         }
       ],
       "open": [
@@ -1304,40 +1333,43 @@
       ],
       "choice": [
         {
-          "q": "¿Para qué contacta Amaranta con Teófilo?",
+          "q": "¿Qué paralelismo establece Teófilo con la luz de las estrellas?",
           "options": [
-            "Para contarle cómo terminó la noche",
-            "Para pedir ayuda",
-            "Para informar de un accidente"
+            "La radio funciona mejor por la noche",
+            "Las noticias le llegan tarde, como esa luz",
+            "Las estrellas se ven mejor en la nieve"
+          ],
+          "answer": 1,
+          "infer": true
+        },
+        {
+          "q": "Según Amaranta, ¿qué fotografió a las tres y diez?",
+          "options": [
+            "Un funeral íntimo, no una fuga",
+            "Una fuga hacia la frontera",
+            "Un accidente junto al río"
           ],
           "answer": 0
         },
         {
-          "q": "¿Qué era en realidad lo que fotografió Amaranta?",
+          "q": "¿Qué metáfora une el oficio de Amaranta con lo que hizo Olga?",
           "options": [
-            "Una fuga",
-            "Un funeral íntimo",
-            "Un accidente"
+            "Mirar una luz que salió hace mucho tiempo",
+            "Fotografiar a personas que no quieren salir",
+            "Buscar estrellas que todavía no existen"
           ],
-          "answer": 1
+          "answer": 0,
+          "infer": true
         },
         {
-          "q": "¿Qué comparación hace Amaranta?",
+          "q": "¿Qué deja ver el comentario sobre la radio y el gato?",
           "options": [
-            "Entre la nieve y las estrellas",
-            "Entre el tren y un cometa",
-            "Entre la luz de las estrellas y el recuerdo de 1968"
+            "El enfado de Teófilo con sus vecinos",
+            "La soledad de Teófilo, dicha con humor",
+            "La pasión de Teófilo por la tecnología"
           ],
-          "answer": 2
-        },
-        {
-          "q": "¿Cómo llama Teófilo a esa luz del pasado?",
-          "options": [
-            "Memoria",
-            "Nostalgia",
-            "Tristeza"
-          ],
-          "answer": 0
+          "answer": 1,
+          "infer": true
         }
       ],
       "open": [
@@ -1423,40 +1455,42 @@
       ],
       "choice": [
         {
-          "q": "¿Qué ofrece Kiara a sus seguidores al principio?",
+          "q": "¿Qué es una «fe de erratas» en boca de Kiara?",
           "options": [
-            "Una fe de erratas",
-            "Un sorteo",
-            "Un video exclusivo"
-          ],
-          "answer": 0
-        },
-        {
-          "q": "¿Qué reconoce Kiara sobre su comportamiento?",
-          "options": [
-            "Que mintió sobre la señora",
-            "Que convirtió a la señora en contenido",
-            "Que no grabó nada importante"
-          ],
-          "answer": 1
-        },
-        {
-          "q": "¿Qué papel dice Kiara que tenía en la historia?",
-          "options": [
-            "El de narradora principal",
-            "El de detective",
-            "El de personaje secundario"
+            "Un anuncio de su próximo viaje",
+            "Una lista de preguntas del chat",
+            "Una corrección pública de lo que dijo"
           ],
           "answer": 2
         },
         {
-          "q": "¿Qué propone Kiara para el amanecer?",
+          "q": "¿Qué autocrítica hace Kiara con «personaje secundario con aro de luz»?",
           "options": [
-            "Apagar la cámara y mirarlo de verdad",
-            "Grabarlo en alta definición",
-            "Hacer un sorteo"
+            "Se queja de que su hermano le roba protagonismo",
+            "Reconoce que se creyó protagonista de algo ajeno",
+            "Presume de su equipo profesional de iluminación"
           ],
-          "answer": 0
+          "answer": 1,
+          "infer": true
+        },
+        {
+          "q": "¿Qué propone Kiara a su público?",
+          "options": [
+            "Pagar una suscripción para ver el final",
+            "Grabar el amanecer desde sus casas",
+            "Apagar la cámara y mirar algo real"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué tono tiene «Mañana vuelvo a ser insoportable»?",
+          "options": [
+            "Autoirónico, para no ponerse solemne",
+            "Amenazante, como una advertencia al chat",
+            "Triste, como si renunciara a cambiar"
+          ],
+          "answer": 0,
+          "infer": true
         }
       ],
       "open": [
@@ -1546,40 +1580,43 @@
       ],
       "choice": [
         {
-          "q": "¿Qué le reconoce Cosme a Tango?",
+          "q": "¿Qué distinción hace Cosme entre informe y agradecimiento?",
           "options": [
-            "Que supo desde el principio dónde estaba la señora",
-            "Que es muy obediente",
-            "Que es peligroso"
+            "Que el perro no entiende las palabras",
+            "Que solo los humanos merecen informes",
+            "Que habla al perro por gratitud, no por trámite"
           ],
-          "answer": 0
+          "answer": 2,
+          "infer": true
         },
         {
-          "q": "¿Qué ha aprendido Cosme de los animales?",
+          "q": "¿Por qué Valentina menciona a Casandra?",
           "options": [
-            "Que son peligrosos",
-            "Que saben más que nosotros, pero no presumen",
-            "Que necesitan mucha comida"
+            "Porque el perro dijo la verdad y nadie le creyó",
+            "Porque así se llamaba el perro antes",
+            "Porque la mitología griega es su asignatura preferida"
           ],
-          "answer": 1
+          "answer": 0,
+          "infer": true
         },
         {
-          "q": "¿Con quién compara Valentina a Tango?",
+          "q": "¿Qué tienen en común Tango y Olga, según Valentina?",
           "options": [
-            "Con un detective",
-            "Con un músico",
-            "Con Casandra, que decía la verdad y nadie la creía"
+            "Los dos viajan solos hasta Santiago",
+            "Los dos odian el ruido del tren",
+            "Los dos perdieron a alguien en marzo"
           ],
           "answer": 2
         },
         {
-          "q": "¿Qué conclusión sacan sobre el jamón?",
+          "q": "¿Qué quiere decir «no fue un soborno, fue un pésame»?",
           "options": [
-            "Que fue un pésame, no un soborno",
-            "Que fue un error",
-            "Que estaba caducado"
+            "Que Cosme se comió el jamón sin permiso",
+            "Que el jamón fue un gesto de consuelo",
+            "Que Olga quería comprar el silencio del perro"
           ],
-          "answer": 0
+          "answer": 1,
+          "infer": true
         }
       ],
       "open": [
@@ -1669,40 +1706,43 @@
       ],
       "choice": [
         {
-          "q": "¿Con quién habla Valentina por teléfono?",
+          "q": "¿Qué tono usa Valentina al hablar con su abuela?",
           "options": [
-            "Con su abuela",
-            "Con su madre",
-            "Con el director de la orquesta"
+            "Nervioso y muy preocupado",
+            "Cariñoso y lleno de bromas",
+            "Formal, algo distante y cortante"
+          ],
+          "answer": 1,
+          "infer": true
+        },
+        {
+          "q": "¿Qué le devuelve Olga a Valentina?",
+          "options": [
+            "La manta que le prestó",
+            "Los quesos de la abuela",
+            "El estuche del violonchelo"
           ],
           "answer": 0
         },
         {
-          "q": "¿Por qué la gendarme no confiscó los quesos?",
+          "q": "¿Qué humor encierra «se ha ido al otro mundo con buen gusto»?",
           "options": [
-            "Porque no los vio",
-            "Porque tenía asuntos más graves",
-            "Porque le dieron un trozo"
+            "Un comentario ligero sobre algo muy serio",
+            "Una crítica a la comida del tren",
+            "Un reproche a Olga por compartir el queso"
           ],
-          "answer": 1
+          "answer": 0,
+          "infer": true
         },
         {
-          "q": "¿Qué hizo Olga con el trozo de queso?",
+          "q": "¿Qué significa «la eternidad puede esperar»?",
           "options": [
-            "Se lo dio a Tango",
-            "Se lo comió en el bar",
-            "Lo compartió con su marido en el río"
+            "Un deseo de que Olga viva mucho tiempo",
+            "Una queja por lo largo que es el viaje",
+            "Una forma de rechazar el encargo de Olga"
           ],
-          "answer": 2
-        },
-        {
-          "q": "¿Qué pide Olga para su propia despedida?",
-          "options": [
-            "Bach con un violonchelo que huela a queso",
-            "Un entierro tranquilo",
-            "Que esparzan sus cenizas en el mar"
-          ],
-          "answer": 0
+          "answer": 0,
+          "infer": true
         }
       ],
       "open": [
@@ -1767,40 +1807,43 @@
       ],
       "choice": [
         {
-          "q": "¿Qué está escribiendo Teófilo?",
+          "q": "¿Qué tipo de texto es lo que dicta Teófilo?",
           "options": [
-            "El parte de la estación",
-            "Una carta de amor",
-            "Un poema"
+            "Una carta de amor a su mujer",
+            "Un parte oficial que se vuelve personal",
+            "Una denuncia contra la gendarme"
           ],
-          "answer": 0
+          "answer": 1,
+          "infer": true
         },
         {
-          "q": "¿Por qué dice «uno» o «ninguno» al contar los pasajeros?",
+          "q": "¿Qué ironía hay en el recuento de pasajeros que bajaron?",
           "options": [
-            "Porque no sabe contar",
-            "Porque depende de si cuenta a la señora o hace caso a la lista de la gendarme",
-            "Porque está nevando mucho"
+            "Que ningún pasajero quiso bajar por el frío",
+            "Que la cifra depende de a quién se le haga caso",
+            "Que la gendarme contó mal la lista"
+          ],
+          "answer": 1,
+          "infer": true
+        },
+        {
+          "q": "¿Quién ayudó a la señora a subir al tren?",
+          "options": [
+            "El jefe de tren, Ramiro",
+            "El maquinista, Aniceto",
+            "El guarda del furgón, Cosme"
           ],
           "answer": 1
         },
         {
-          "q": "¿Qué le recuerda a Teófilo la escena del río?",
+          "q": "¿Qué lamenta Teófilo en sus observaciones personales?",
           "options": [
-            "Un caso policial",
-            "Su infancia",
-            "A su mujer, Elena, y algo que no hizo con ella"
+            "No haber hecho a tiempo algo por su mujer",
+            "Haber trabajado tantos inviernos solo",
+            "Haber dejado subir a la señora sin control"
           ],
-          "answer": 2
-        },
-        {
-          "q": "¿Para qué sirven también los partes, según Teófilo?",
-          "options": [
-            "Para dejar constancia de lo que uno no se atrevió a hacer a tiempo",
-            "Para pedir más dinero",
-            "Para quejarse del frío"
-          ],
-          "answer": 0
+          "answer": 0,
+          "infer": true
         }
       ],
       "open": [
@@ -1886,40 +1929,43 @@
       ],
       "choice": [
         {
-          "q": "¿Qué ha conseguido Ulises?",
+          "q": "¿Cómo se define Yolanda frente al elogio de Ulises?",
           "options": [
-            "Un permiso provisional",
-            "Un pasaporte nuevo",
-            "Una multa"
+            "Rechaza el favor y defiende el sentido común",
+            "Acepta que ha hecho una excepción por él",
+            "Reconoce que se equivocó al principio"
+          ],
+          "answer": 0,
+          "infer": true
+        },
+        {
+          "q": "¿Qué humor hay en el «camión de lechugas»?",
+          "options": [
+            "Se burla de los camioneros de la frontera",
+            "Amenaza de verdad con devolverlo a Mendoza en un camión",
+            "Imagina con ironía el castigo que Ulises se ha ahorrado"
+          ],
+          "answer": 2,
+          "infer": true
+        },
+        {
+          "q": "¿Qué paradoja plantea sobre los funcionarios?",
+          "options": [
+            "Que imaginan tanto que prefieren la lista",
+            "Que trabajan poco y cobran mucho",
+            "Que no tienen imaginación y por eso aciertan"
           ],
           "answer": 0
         },
         {
-          "q": "¿Cómo ha cambiado la opinión de Ulises sobre la cabo?",
+          "q": "¿Qué quiere decir «oficialmente, no ha pasado nada»?",
           "options": [
-            "De justa a fría",
-            "De fría a justa",
-            "No ha cambiado"
+            "Que la señora nunca subió al tren",
+            "Que la noche fue aburrida para ella",
+            "Que el acta no refleja todo lo que ocurrió"
           ],
-          "answer": 1
-        },
-        {
-          "q": "¿Qué dice Yolanda sobre la imaginación de los funcionarios?",
-          "options": [
-            "Que no tienen ninguna",
-            "Que la usan para escribir",
-            "Que imaginan tanto que prefieren atenerse a la lista"
-          ],
-          "answer": 2
-        },
-        {
-          "q": "¿Qué ironía hay en «oficialmente, no ha pasado nada»?",
-          "options": [
-            "Que en realidad ha pasado muchísimo",
-            "Que ella se aburrió",
-            "Que el tren no salió"
-          ],
-          "answer": 0
+          "answer": 2,
+          "infer": true
         }
       ],
       "open": [
@@ -2013,40 +2059,42 @@
       ],
       "choice": [
         {
-          "q": "¿Qué compara Olga con humor?",
+          "q": "¿Qué tono tiene el recuerdo de los dientes y el pelo?",
           "options": [
-            "Su aspecto de 1968 con el de ahora",
-            "El tren de antes con el de ahora",
-            "Los Andes con los Alpes"
+            "Tierno y burlón con la vejez",
+            "Amargo y lleno de reproches",
+            "Solemne, como un discurso"
+          ],
+          "answer": 0,
+          "infer": true
+        },
+        {
+          "q": "Según Olga, ¿en qué consiste la amistad de verdad?",
+          "options": [
+            "En reírse de los chistes malos del otro hasta que mejoran",
+            "En no contar nunca chistes malos",
+            "En decir siempre la verdad sobre los chistes"
           ],
           "answer": 0
         },
         {
-          "q": "¿Qué opinaba Ernesto sobre la amistad?",
+          "q": "¿Qué le daba más miedo a Olga del plan?",
           "options": [
-            "Que había que decir siempre la verdad",
-            "Que consistía en reírse de los chistes malos del otro",
-            "Que era más importante que el amor"
-          ],
-          "answer": 1
-        },
-        {
-          "q": "¿Qué temía más Olga al planear su viaje?",
-          "options": [
-            "El frío",
-            "Que la descubrieran",
-            "Que Aniceto dijera que no"
-          ],
-          "answer": 2
-        },
-        {
-          "q": "¿Qué le dieron Olga y Ernesto a Aniceto en 1968?",
-          "options": [
-            "La sensación de que su trabajo servía para algo más",
-            "Mucho dinero",
-            "Un libro"
+            "Que Aniceto le dijera que no",
+            "Que la descubrieran en la frontera",
+            "Que hiciera demasiado frío en la cabina"
           ],
           "answer": 0
+        },
+        {
+          "q": "¿Qué revela la lista de pasajeros famosos de Aniceto?",
+          "options": [
+            "Que aquella noche le dio un sentido a su oficio",
+            "Que prefiere a los pasajeros importantes",
+            "Que está cansado de llevar a gente rara y famosa en su tren"
+          ],
+          "answer": 0,
+          "infer": true
         }
       ],
       "open": [
@@ -2087,7 +2135,7 @@
       "id": "amanecer",
       "title": "Epílogo en el andén",
       "place": "El andén de Los Andes",
-      "context": "Gloria anuncia la llegada y Olga toma el micrófono para despedirse de los pasajeros.",
+      "context": "Gloria anuncia la llegada y Olga toma el micrófono para despedirse de los pasajeros y confesar su plan.",
       "speakers": [
         {
           "name": "Gloria",
@@ -2103,57 +2151,60 @@
       "lines": [
         {
           "s": 0,
-          "text": "Señores pasajeros, bienvenidos a Los Andes. Son las seis y cuarenta y el tren ha llegado con puntualidad casi suiza, cosa que no ocurría desde 1994. Antes de que bajen, una pasajera ha pedido decir unas palabras. La empresa no se responsabiliza del contenido."
+          "text": "Señores pasajeros, bienvenidos a Los Andes. Son las seis y cuarenta y el tren ha llegado con puntualidad casi suiza. Antes de que bajen, una pasajera ha pedido decir unas palabras. La empresa no se responsabiliza del contenido."
         },
         {
           "s": 1,
-          "text": "Buenos días a todos. Soy la señora del camarote siete, la que, según me cuentan, ha desaparecido, ha sido secuestrada, se ha fugado a Santiago en taxi y ha sido devorada por un perro. Les tranquilizo: estoy viva, desayunada y con más ganas de escribir que nunca. Les debo una disculpa por el susto, sobre todo a Celia, a Ramiro y a mi sobrino, que por primera vez en años me ha preguntado cómo estaba antes de preguntar cuánto valía."
+          "text": "Buenos días. Soy la señora del camarote siete, la que, según me cuentan, ha sido secuestrada, se ha fugado en taxi y ha sido devorada por un perro. Estoy viva y desayunada. Les debo el plan, ya que estamos: a las doce y media, un té con Celia, amable pero no sospechosa. A las doce y cuarenta, la nota, con letra firme y sin lágrimas. Después, la ventana abierta, por puro efecto dramático. Y a la una menos cuarto, pantuflas de leopardo, pasillo y locomotora, sonriendo como una abuela despistada, porque nadie sospecha de una abuela despistada."
         },
         {
           "s": 1,
-          "text": "Esta noche he devuelto a mi marido al río donde empezamos a vivir juntos. Si les parece una locura, tienen razón. Pero a mi edad las locuras son la única forma decente de cordura que queda. Y al pasajero del ocho, que ha investigado sin saber por qué, le doy las gracias: acaba de protagonizar mi última novela. Le aviso que no cobra derechos de autor."
+          "text": "Pido perdón a Celia, a Ramiro y a mi sobrino, que por primera vez en años me ha preguntado cómo estaba antes de preguntar cuánto valía. Esta noche he devuelto a mi marido al río donde empezamos a vivir juntos. A mi edad, las locuras son la única forma decente de cordura que queda. Y al pasajero del ocho, gracias: acaba de protagonizar mi última novela. No cobra derechos de autor."
         },
         {
           "s": 0,
-          "text": "Gracias, señora. La empresa les recuerda que no se deben dejar urnas ni secretos en los compartimentos. Que tengan un buen día."
+          "text": "Gracias, señora. La empresa les recuerda que no se deben dejar urnas ni secretos en los compartimentos."
         }
       ],
       "choice": [
         {
-          "q": "¿Qué ironía contiene el anuncio inicial de Gloria?",
+          "q": "¿Qué ironía tiene el aviso «La empresa no se responsabiliza del contenido»?",
           "options": [
-            "Que el tren llegó puntual por primera vez en décadas",
-            "Que el tren llegó muy tarde",
-            "Que no hay pasajeros"
+            "Prohíbe a Olga hablar del accidente",
+            "Anticipa con humor un discurso imprevisible",
+            "Exige a los pasajeros que no graben"
+          ],
+          "answer": 1,
+          "infer": true
+        },
+        {
+          "q": "¿A qué hora salió Olga del camarote hacia la locomotora?",
+          "options": [
+            "A la una menos cuarto",
+            "A las doce y cuarenta",
+            "A las doce y media"
           ],
           "answer": 0
         },
         {
-          "q": "¿Qué rumores menciona Olga con humor?",
+          "q": "¿Por qué la «abuela despistada» era el disfraz perfecto?",
           "options": [
-            "Que estaba enferma",
-            "Que había sido secuestrada, que había huido o que la había devorado un perro",
-            "Que era una espía"
+            "Porque nadie sospecha de una abuela despistada",
+            "Porque así podía pedir ayuda a cualquiera",
+            "Porque llevaba gafas y no veía bien"
           ],
-          "answer": 1
+          "answer": 0,
+          "infer": true
         },
         {
-          "q": "¿Qué cambio nota Olga en su sobrino?",
+          "q": "¿Qué cambio celebra Olga en su sobrino?",
           "options": [
-            "Que ya no le pide dinero",
-            "Que se ha ido",
-            "Que le preguntó cómo estaba antes de hablar de dinero"
+            "Que se va a vivir a Los Andes con ella",
+            "Que le preguntó cómo estaba antes de hablar de dinero",
+            "Que aceptó el testamento nuevo sin quejarse ni discutir"
           ],
-          "answer": 2
-        },
-        {
-          "q": "¿Qué tono tiene el último anuncio de Gloria?",
-          "options": [
-            "Humorístico y cómplice",
-            "Serio y amenazante",
-            "Triste"
-          ],
-          "answer": 0
+          "answer": 1,
+          "infer": true
         }
       ],
       "open": [
@@ -2170,7 +2221,7 @@
           "model": "Sí, siempre que el final fuera bueno y no me pidieran firmar nada."
         }
       ],
-      "gaps": "Pero a mi [edad] las [locuras] son la única forma [decente] de [cordura] que queda.",
+      "gaps": "A mi [edad], las [locuras] son la única forma [decente] de [cordura] que queda.",
       "glossary": [
         {
           "word": "puntualidad",
@@ -2181,8 +2232,8 @@
           "meaning": "asume la responsabilidad"
         },
         {
-          "word": "devorada",
-          "meaning": "comida con voracidad"
+          "word": "efecto dramático",
+          "meaning": "impresión fuerte que se busca a propósito"
         },
         {
           "word": "cordura",

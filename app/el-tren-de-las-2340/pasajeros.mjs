@@ -17,9 +17,9 @@ export const PASAJEROS = {
     who: { es: 'Pasajera que perdió el billete en el taxi', en: 'Passenger who lost her ticket in the taxi' },
     basic: { es: 'No tengo mi billete. Está en el taxi. El taxi no está. Llamo y llamo, pero no contesta.', en: 'I don’t have my ticket. It is in the taxi. The taxi is gone. I call and call, but nobody answers.' },
     basicAsk: { es: '¿Pierdes cosas a menudo? ¿Qué cosas?', en: 'Do you often lose things? What things?' },
-    mid: 'Llevaba seis meses planeando este viaje y dejé el billete en el asiento del taxi. El jefe de tren dice que sin billete no subo, pero que «si aparece un camarote libre, hablamos». Ahora resulta que hay uno libre, el siete, porque la señora no aparece. No sé si alegrarme o sentirme culpable por alegrarme.',
+    mid: 'Llevaba seis meses planeando este viaje y dejé el billete en el asiento del taxi. El jefe de tren dice que sin billete no subo, pero que «si aparece un camarote libre, hablamos». Hay uno reservado, el once, por un señor que todavía no ha llegado. Si a las 23:39 no aparece, es mío. No sé si alegrarme o sentirme culpable por alegrarme.',
     midAsk: '¿Alguna vez te benefició la mala suerte de otra persona? ¿Cómo te sentiste?',
-    high: 'Seis meses de planes y el billete se fue en el asiento de un taxi que ya debe de estar en San Juan. El jefe de tren me miró con esa compasión burocrática que consiste en no prometer nada y dejar la puerta entornada. Y ahora corre el rumor de que el camarote siete se quedó vacío. Me da vergüenza confesarlo, pero mi primer pensamiento no fue «pobre señora» sino «¿tendrá sábanas limpias?». Supongo que la decencia también viaja en clase económica.',
+    high: 'Seis meses de planes y el billete se fue en el asiento de un taxi que ya debe de estar en San Juan. El jefe de tren me miró con esa compasión burocrática que consiste en no prometer nada y dejar la puerta entornada. Y resulta que el pasajero del camarote once no ha llegado. Me da vergüenza confesarlo, pero mi primer pensamiento no fue «ojalá no le haya pasado nada» sino «¿tendrá sábanas limpias?». Supongo que la decencia también viaja en clase económica.',
     highAsk: '¿Qué pensamiento poco elegante has tenido alguna vez y nunca le has contado a nadie?',
   },
   '2-0': {

@@ -109,6 +109,33 @@ export function checkFile(game, level, data, path) {
   // At least 6 per letter; a small file (four regions × 4 questions) needs a third each.
   const minUse = Math.min(6, Math.floor(answerUse.reduce((a, b) => a + b, 0) / 3));
   if (answerUse.some(n => n < minUse)) bad('', `correct answers are badly spread over A/B/C: ${answerUse.join('/')}`);
+  if (STRICT_KEYS.includes(game)) out.push(...strictKey(level, items).map(m => `${path} ${m}`));
+  return out;
+}
+
+// Opt-in for new games (older classes are grandfathered): an answer key that
+// cannot be guessed. No letter takes more than 40% of the answers, the items
+// do not repeat one pattern of letters, the right option is the longest one
+// at most 40% of the time, and from C1 every item asks at least two
+// inference questions (intention, irony, register, what is implied), marked
+// `infer: true`.
+export const STRICT_KEYS = ['tren', 'boda'];
+export function strictKey(level, items) {
+  const out = [];
+  const qs = items.flatMap(item => (item.choice ?? []).map(q => ({ item: item.id, ...q })));
+  if (!qs.length) return out;
+  const use = [0, 1, 2].map(k => qs.filter(q => q.answer === k).length);
+  if (Math.max(...use) > qs.length * 0.4) out.push(`: answer key leans on one letter (${use.join('/')}); no letter above 40%`);
+  const patterns = new Map();
+  for (const item of items) { const p = (item.choice ?? []).map(q => q.answer).join(''); patterns.set(p, (patterns.get(p) ?? 0) + 1); }
+  const top = Math.max(...patterns.values());
+  if (top > 3) out.push(`: ${top} items share the answer pattern ${[...patterns].find(([, n]) => n === top)[0]}; at most 3`);
+  const longest = qs.filter(q => { const len = q.options.map(o => o.length); return len.every((l, i) => i === q.answer || l < len[q.answer]); });
+  if (longest.length > qs.length * 0.4) out.push(`: the right option is the longest in ${longest.length} of ${qs.length} questions; at most 40% (${longest.slice(0, 8).map(q => `${q.item} «${q.q}»`).join('; ')}…)`);
+  if (['C1', 'C2'].includes(level)) for (const item of items) {
+    const n = (item.choice ?? []).filter(q => q.infer === true).length;
+    if (n < 2) out.push(`${item.id}: ${level} needs at least 2 inference questions (infer: true), has ${n}`);
+  }
   return out;
 }
 

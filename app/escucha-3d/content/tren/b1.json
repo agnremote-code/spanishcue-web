@@ -57,11 +57,11 @@
         {
           "q": "¿Qué quiere Kiara?",
           "options": [
-            "Una entrevista para su canal",
             "Una foto con la urna",
-            "Un libro firmado"
+            "Un libro firmado para sus seguidores",
+            "Una entrevista para su canal"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "q": "¿Qué le pide Olga a Kiara?",
@@ -75,7 +75,7 @@
         {
           "q": "¿Por qué prefiere Olga el tren, según ella?",
           "options": [
-            "Porque tiene miedo a volar",
+            "Porque tiene miedo a volar desde hace años",
             "Porque es más barato",
             "Porque en un tren siempre pasa algo"
           ],
@@ -84,11 +84,11 @@
         {
           "q": "¿Qué se puede deducir de lo que dice Olga?",
           "options": [
-            "Que tiene un plan para esa noche",
-            "Que está muy enferma",
-            "Que no quiere escribir más"
+            "Que no quiere escribir más",
+            "Que está muy enferma y quiere despedirse",
+            "Que tiene un plan para esa noche"
           ],
-          "answer": 0
+          "answer": 2
         }
       ],
       "open": [
@@ -181,7 +181,7 @@
         {
           "q": "¿Qué le pasó al hermano de Ramiro?",
           "options": [
-            "Se hizo rico",
+            "Se hizo rico y no quiso volver",
             "Volvió con la espalda destrozada",
             "Se quedó en Chile"
           ],
@@ -190,8 +190,8 @@
         {
           "q": "¿Qué quiere hacer Matías con el dinero?",
           "options": [
-            "Comprar una casa",
             "Viajar por el mundo",
+            "Comprar una casa para su madre",
             "Abrir un taller con su primo"
           ],
           "answer": 2
@@ -201,7 +201,7 @@
           "options": [
             "Que está enfadada de verdad",
             "Que en el fondo está orgullosa",
-            "Que quiere ir con él"
+            "Que en el fondo quiere irse con él"
           ],
           "answer": 1
         }
@@ -297,7 +297,7 @@
           "options": [
             "Cambiar de camarote",
             "Comprar tapones",
-            "Bajar del tren"
+            "Bajar del tren en Uspallata"
           ],
           "answer": 0
         },
@@ -305,28 +305,28 @@
           "q": "¿Por qué Ramiro no puede ayudarlo?",
           "options": [
             "Porque no es su trabajo",
-            "Porque el tren va lleno",
-            "Porque es muy tarde"
-          ],
-          "answer": 1
-        },
-        {
-          "q": "¿Qué vio Lucas a la una?",
-          "options": [
-            "A alguien en el baño",
-            "A un perro",
-            "A alguien con pantuflas de leopardo"
+            "Porque es muy tarde",
+            "Porque el tren va lleno"
           ],
           "answer": 2
         },
         {
-          "q": "¿Qué sugiere la última frase de Ramiro?",
+          "q": "¿Qué vio Lucas a la una?",
           "options": [
-            "Que la persona no iba al baño",
-            "Que Lucas miente",
-            "Que el baño está roto"
+            "A alguien con pantuflas de leopardo",
+            "A un perro",
+            "A alguien que salía del baño a oscuras"
           ],
           "answer": 0
+        },
+        {
+          "q": "¿Qué sugiere la última frase de Ramiro?",
+          "options": [
+            "Que el baño está roto",
+            "Que Lucas se lo está inventando todo",
+            "Que la persona no iba al baño"
+          ],
+          "answer": 2
         }
       ],
       "open": [
@@ -414,35 +414,35 @@
         {
           "q": "¿Por qué discuten?",
           "options": [
-            "Porque Yesenia lee en la luna de miel",
             "Porque no tienen dinero",
-            "Porque el camarote es pequeño"
+            "Porque Yesenia lee en la luna de miel",
+            "Porque el camarote es pequeño y hace calor"
           ],
-          "answer": 0
+          "answer": 1
         },
         {
           "q": "¿Adónde quería ir Brayan?",
           "options": [
             "A los Andes",
-            "A Cartagena",
-            "A Medellín"
+            "A Medellín",
+            "A Cartagena"
           ],
-          "answer": 1
+          "answer": 2
         },
         {
           "q": "¿Cómo supo Yesenia que Olga viajaba en ese tren?",
           "options": [
             "Se lo dijo un amigo",
-            "Lo vio en la televisión",
-            "Lo leyó en una entrevista"
+            "Lo leyó en una entrevista",
+            "Lo vio en un programa de televisión"
           ],
-          "answer": 2
+          "answer": 1
         },
         {
           "q": "¿Qué piensa Brayan de la promesa de Yesenia?",
           "options": [
             "Que no la va a cumplir",
-            "Que es muy romántica",
+            "Que es una promesa muy romántica",
             "Que es una buena idea"
           ],
           "answer": 0
@@ -510,7 +510,7 @@
         },
         {
           "s": 0,
-          "text": "Me avisas por radio enseguida. Y no le digas nada a los pasajeros. No quiero pánico."
+          "text": "Me avisas por radio enseguida. Y no les digas nada a los pasajeros. No quiero pánico."
         },
         {
           "s": 1,
@@ -551,18 +551,18 @@
         {
           "q": "¿Qué le dio Olga a Celia?",
           "options": [
-            "Un libro",
+            "Una propina de cincuenta dólares",
             "Una carta",
-            "Una propina de cincuenta dólares"
+            "Un libro dedicado con su firma"
           ],
-          "answer": 2
+          "answer": 0
         },
         {
           "q": "¿A qué conclusión llega Ramiro?",
           "options": [
-            "Que Olga se cayó",
+            "Que Celia miente",
             "Que Olga lo tenía todo planeado",
-            "Que Celia miente"
+            "Que Olga se cayó por la ventana abierta"
           ],
           "answer": 1
         }
@@ -581,7 +581,7 @@
           "model": "Me gusta improvisar, pero en los viajes planeo un poco."
         }
       ],
-      "gaps": "Me [avisas] por radio [enseguida]. Y no le digas [nada] a los [pasajeros].",
+      "gaps": "Me [avisas] por radio [enseguida]. Y no les digas [nada] a los [pasajeros].",
       "glossary": [
         {
           "word": "revises",
@@ -653,7 +653,7 @@
           "q": "¿A quién llama Bruno?",
           "options": [
             "A la abogada de su tía",
-            "A la policía",
+            "A la policía de Mendoza para denunciar",
             "A su madre"
           ],
           "answer": 0
@@ -663,14 +663,14 @@
           "options": [
             "Dónde está Inés",
             "Qué cambió en el testamento",
-            "A qué hora llega el tren"
+            "A qué hora llega el tren a Los Andes"
           ],
           "answer": 1
         },
         {
           "q": "¿Por qué Inés no responde?",
           "options": [
-            "Porque no lo sabe",
+            "Porque ella tampoco lo sabe todavía",
             "Porque tiene sueño",
             "Por el secreto profesional"
           ],
@@ -681,7 +681,7 @@
           "options": [
             "Que su actitud parece sospechosa",
             "Que su tía está bien",
-            "Que necesita otro abogado"
+            "Que necesita buscarse otro abogado ya"
           ],
           "answer": 0
         }
@@ -776,7 +776,7 @@
           "q": "¿Qué compró Olga en el bar?",
           "options": [
             "Pisco y dos vasos",
-            "Vino y una copa",
+            "Vino tinto y una sola copa",
             "Cerveza"
           ],
           "answer": 0
@@ -784,9 +784,9 @@
         {
           "q": "¿Qué pensó Jacinto de la palabra «cabina»?",
           "options": [
-            "Que era correcta",
+            "Que era un código secreto entre amigos",
             "Que Olga se había equivocado",
-            "Que era un código"
+            "Que era correcta"
           ],
           "answer": 1
         },
@@ -794,7 +794,7 @@
           "q": "¿Qué piensa Wilmer de las escritoras?",
           "options": [
             "Que hablan mucho",
-            "Que son raras",
+            "Que son raras y algo exageradas",
             "Que no se equivocan con las palabras"
           ],
           "answer": 2
@@ -802,11 +802,11 @@
         {
           "q": "¿Qué conclusión saca Wilmer?",
           "options": [
-            "Que Olga quería encontrarse con alguien",
             "Que Olga estaba borracha",
-            "Que Olga tenía hambre"
+            "Que Olga tenía hambre y no quería cenar sola",
+            "Que Olga quería encontrarse con alguien"
           ],
-          "answer": 0
+          "answer": 2
         }
       ],
       "open": [
@@ -908,28 +908,28 @@
           "q": "¿Qué hacen los personajes de las novelas de Olga?",
           "options": [
             "Siempre mueren",
-            "Vuelven al lugar donde fueron felices",
-            "Nunca se despiden"
-          ],
-          "answer": 1
-        },
-        {
-          "q": "¿Qué cree Pilar que va a hacer Olga en Puente del Inca?",
-          "options": [
-            "Escaparse a Chile",
-            "Comprar algo",
-            "Esparcir las cenizas de su marido"
+            "Nunca se despiden de las personas que quieren",
+            "Vuelven al lugar donde fueron felices"
           ],
           "answer": 2
         },
         {
-          "q": "¿Qué opina Horacio de la teoría?",
+          "q": "¿Qué cree Pilar que va a hacer Olga en Puente del Inca?",
           "options": [
-            "Que es muy buena",
-            "Que es ridícula",
-            "Que es peligrosa"
+            "Esparcir las cenizas de su marido",
+            "Comprar algo",
+            "Escaparse a Chile sin pasar el control"
           ],
           "answer": 0
+        },
+        {
+          "q": "¿Qué opina Horacio de la teoría?",
+          "options": [
+            "Que es ridícula",
+            "Que es muy buena",
+            "Que es peligrosa"
+          ],
+          "answer": 1
         }
       ],
       "open": [
@@ -1022,7 +1022,7 @@
           "q": "¿Qué le ha escrito la mujer a Nelson?",
           "options": [
             "Que lo va a dejar si sigue apostando",
-            "Que lo espera en Santiago",
+            "Que lo espera en Santiago con los niños",
             "Que tiene una sorpresa"
           ],
           "answer": 0
@@ -1030,11 +1030,11 @@
         {
           "q": "¿Qué quiere hacer Nelson esta noche?",
           "options": [
-            "Dejar de beber",
             "Recuperar el dinero con una apuesta",
-            "Llamar a su mujer"
+            "Dejar de beber",
+            "Llamar a su mujer y pedirle perdón"
           ],
-          "answer": 1
+          "answer": 0
         },
         {
           "q": "¿Cuál es el segundo consejo de Wilmer?",
@@ -1048,11 +1048,11 @@
         {
           "q": "¿Qué demuestra la última pregunta de Nelson?",
           "options": [
+            "Que por fin va a cambiar de vida",
             "Que no ha entendido el consejo",
-            "Que va a cambiar",
             "Que está muy cansado"
           ],
-          "answer": 0
+          "answer": 1
         }
       ],
       "open": [
@@ -1144,29 +1144,29 @@
         {
           "q": "¿De qué es especialista Inés?",
           "options": [
-            "De herencias",
+            "De accidentes",
             "De divorcios",
-            "De accidentes"
+            "De herencias"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "q": "¿Por qué le parece divertido su trabajo?",
           "options": [
-            "Porque gana mucho",
             "Porque la gente muestra cómo es de verdad",
-            "Porque viaja mucho"
+            "Porque gana mucho",
+            "Porque viaja mucho y conoce a gente nueva"
           ],
-          "answer": 1
+          "answer": 0
         },
         {
           "q": "¿Qué tiene Nelson en la manga?",
           "options": [
-            "Un pañuelo",
             "Dinero",
-            "Un as"
+            "Un as",
+            "Un pañuelo"
           ],
-          "answer": 2
+          "answer": 1
         },
         {
           "q": "¿Qué sugiere Inés sobre la sorpresa?",
@@ -1259,16 +1259,16 @@
         {
           "q": "¿Desde cuándo le interesan las estrellas a Amaranta?",
           "options": [
-            "Desde los ocho años",
             "Desde la universidad",
+            "Desde los ocho años",
             "Desde hace diez años"
           ],
-          "answer": 0
+          "answer": 1
         },
         {
           "q": "¿Dónde trabajaba su padre?",
           "options": [
-            "En una escuela",
+            "En una escuela de pilotos de la Fuerza Aérea",
             "En un tren",
             "En el observatorio de Quito"
           ],
@@ -1277,9 +1277,9 @@
         {
           "q": "¿Qué decía su padre de las estrellas?",
           "options": [
-            "Que son fuego",
+            "Que son ojos",
             "Que son cartas que llegan tarde",
-            "Que son ojos"
+            "Que son fuego"
           ],
           "answer": 1
         },
@@ -1288,7 +1288,7 @@
           "options": [
             "Porque también perdió a alguien querido",
             "Porque la conoce",
-            "Porque también escribe"
+            "Porque también escribe novelas de misterio"
           ],
           "answer": 0
         }
@@ -1378,38 +1378,38 @@
         {
           "q": "¿Qué hace Joel en la vida?",
           "options": [
+            "Es fotógrafo de bodas y de eventos",
             "Estudia ingeniería",
-            "Es influencer",
-            "Es fotógrafo"
+            "Es influencer"
           ],
-          "answer": 0
+          "answer": 1
         },
         {
           "q": "¿Por qué viaja Joel con su hermana?",
           "options": [
-            "Porque quería conocer los Andes",
+            "Porque trabaja en el tren",
             "Porque ella le pagó el viaje para llevar la cámara",
-            "Porque trabaja en el tren"
+            "Porque quería conocer los Andes"
           ],
           "answer": 1
         },
         {
           "q": "¿Qué no pudo disfrutar Joel esta noche?",
           "options": [
-            "La cena",
+            "Las estrellas",
             "La música",
-            "Las estrellas"
+            "La cena"
           ],
-          "answer": 2
+          "answer": 0
         },
         {
           "q": "¿Qué le contestó Kiara cuando él pidió un día libre?",
           "options": [
-            "Que el día libre era hoy",
             "Que no tenía días libres",
+            "Que el día libre era hoy",
             "Que mañana"
           ],
-          "answer": 0
+          "answer": 1
         }
       ],
       "open": [
@@ -1497,26 +1497,26 @@
         {
           "q": "¿Por qué baja Horacio al furgón?",
           "options": [
-            "Porque le hablaron de un perro que aúlla",
-            "Porque busca su maleta",
-            "Porque quiere fumar"
+            "Porque quiere fumar",
+            "Porque busca su maleta con las medicinas",
+            "Porque le hablaron de un perro que aúlla"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "q": "¿Con qué trabajó Horacio en Cuba?",
           "options": [
-            "Con caballos",
             "Con perros policía",
+            "Con caballos",
             "Con gatos"
           ],
-          "answer": 1
+          "answer": 0
         },
         {
           "q": "¿Qué significa, según Horacio, que un perro mire siempre en la misma dirección?",
           "options": [
-            "Que tiene miedo",
             "Que tiene hambre",
+            "Que tiene miedo del ruido del tren",
             "Que sigue un olor que conoce"
           ],
           "answer": 2
@@ -1524,11 +1524,11 @@
         {
           "q": "¿Qué le recomienda Horacio a Cosme?",
           "options": [
+            "Llamar al dueño y esperar hasta Los Andes",
             "Abrir la jaula y seguir al perro",
-            "Darle de comer",
-            "Llamar al dueño"
+            "Darle de comer"
           ],
-          "answer": 0
+          "answer": 1
         }
       ],
       "open": [
@@ -1633,17 +1633,17 @@
         {
           "q": "¿Qué le pasa a Valentina la noche antes de un concierto?",
           "options": [
-            "Duerme muy bien",
             "No duerme y le duele el estómago",
-            "Come mucho"
+            "Come mucho",
+            "Duerme muy bien"
           ],
-          "answer": 1
+          "answer": 0
         },
         {
           "q": "¿Qué le aconsejó su abuela?",
           "options": [
             "Que no mire al público",
-            "Que practique más",
+            "Que practique más horas cada día",
             "Que toque para una sola persona"
           ],
           "answer": 2
@@ -1653,7 +1653,7 @@
           "options": [
             "Que Rocío sabe algo de la señora",
             "Que Rocío está enferma",
-            "Que Rocío quiere tocar"
+            "Que Rocío quiere aprender a tocar el violonchelo"
           ],
           "answer": 0
         }
@@ -1745,18 +1745,18 @@
           "options": [
             "Echó algo al río",
             "Hizo fotos",
-            "Se cayó"
+            "Se cayó en la nieve y no se pudo levantar"
           ],
           "answer": 0
         },
         {
           "q": "¿Cómo parecía la señora?",
           "options": [
-            "Triste",
             "Feliz",
+            "Triste",
             "Enfadada"
           ],
-          "answer": 1
+          "answer": 0
         },
         {
           "q": "¿Por dónde volvió al tren?",
@@ -1872,7 +1872,7 @@
           "q": "¿Qué pide Ramiro a la cabo?",
           "options": [
             "Una solución para Ulises",
-            "Un café",
+            "Un café caliente para todos los pasajeros",
             "Una lista de pasajeros"
           ],
           "answer": 0
@@ -1898,11 +1898,11 @@
         {
           "q": "¿Qué dice la cabo sobre la señora Ríos?",
           "options": [
-            "Que sigue en el tren",
+            "Que está en el hospital",
             "Que cruzó la frontera",
-            "Que está en el hospital"
+            "Que sigue en el tren"
           ],
-          "answer": 0
+          "answer": 2
         }
       ],
       "open": [
@@ -1990,38 +1990,38 @@
         {
           "q": "¿Por qué está nerviosa Rocío?",
           "options": [
+            "Porque el tren va tarde y la culpan a ella",
             "Porque le mintió a Celia",
-            "Porque el tren va tarde",
             "Porque tiene frío"
           ],
-          "answer": 0
+          "answer": 1
         },
         {
           "q": "¿Cuándo va a contar la señora la verdad?",
           "options": [
-            "Nunca",
+            "En Mendoza",
             "Al amanecer",
-            "En Mendoza"
+            "Nunca"
           ],
           "answer": 1
         },
         {
           "q": "¿Por qué no pueden despedir a Aniceto?",
           "options": [
-            "Porque es el jefe",
+            "Porque se jubila el mes que viene",
             "Porque es amigo del director",
-            "Porque se jubila el mes que viene"
+            "Porque es el jefe"
           ],
-          "answer": 2
+          "answer": 0
         },
         {
           "q": "¿Qué decide Rocío al final?",
           "options": [
+            "Llamar a la policía",
             "Guardar el secreto",
-            "Contárselo a todos",
-            "Llamar a la policía"
+            "Contárselo a todos"
           ],
-          "answer": 0
+          "answer": 1
         }
       ],
       "open": [
@@ -2110,26 +2110,26 @@
         {
           "q": "¿Qué deben hacer los pasajeros antes de salir?",
           "options": [
-            "Pasar por el control de equipaje",
+            "Devolver las mantas y las almohadas del camarote",
             "Pagar el billete",
-            "Devolver las mantas"
+            "Pasar por el control de equipaje"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "q": "¿Cómo fue la noche para Ramiro?",
           "options": [
-            "Tranquila",
+            "Divertida",
             "Terrible",
-            "Divertida"
+            "Tranquila"
           ],
           "answer": 1
         },
         {
           "q": "¿Por qué Olga no le pidió permiso a Ramiro?",
           "options": [
-            "Porque no lo conocía",
             "Porque no tenía tiempo",
+            "Porque no lo conocía",
             "Porque él le habría dicho que no"
           ],
           "answer": 2

@@ -7,7 +7,7 @@ export type Listening = {
   contextEn?: string;
   speakers: Speaker[];
   lines: { s: number; text: string; en?: string }[];
-  choice: { q: string; options: string[]; answer: number; qEn?: string }[];
+  choice: { q: string; options: string[]; answer: number; qEn?: string; infer?: boolean }[];
   open: { q: string; model: string; qEn?: string }[];
   gaps: string;
   glossary: { word: string; meaning: string; en?: string }[];
