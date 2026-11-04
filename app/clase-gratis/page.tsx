@@ -2,13 +2,13 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { SpanishCueBrand } from '../SpanishCueBrand';
 import { GrowthFooter } from '../growth/components';
-import { GIFT_LANDING_PATH, GIFT_LESSON_TITLE, GIFT_PREVIEW_POSTER, GIFT_PREVIEW_VIDEO } from '../newsletter/gift';
+import { GIFT_LANDING_PATH, GIFT_LESSON_LEVEL, GIFT_LESSON_TITLE, GIFT_PREVIEW_POSTER, GIFT_PREVIEW_VIDEO } from '../newsletter/gift';
 import { GiftPitch, GiftSignupForm } from '../newsletter/GiftSignup';
 import growth from '../growth/growth.module.css';
 import styles from '../newsletter/newsletter.module.css';
 
 const title = `Clase gratis de subjuntivo para profes de ELE: ${GIFT_LESSON_TITLE} | SPANISHCUE`;
-const description = 'Desbloquea con tu email una clase PRO de gramática B1 lista para dar en vivo: creo que + indicativo, no creo que + subjuntivo, con audio y práctica.';
+const description = `Desbloquea con tu email una clase PRO de gramática ${GIFT_LESSON_LEVEL} lista para dar en vivo: ${GIFT_LESSON_TITLE.toLowerCase()}, con explicación, práctica, escucha y conversación.`;
 export const metadata: Metadata = { title, description, alternates: { canonical: GIFT_LANDING_PATH }, openGraph: { title, description, url: GIFT_LANDING_PATH } };
 
 export default function ClaseGratisPage() {
