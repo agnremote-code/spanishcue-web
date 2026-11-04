@@ -20,11 +20,11 @@ export default function FichasPage() {
           <section className={styles.hero}>
             <p className={styles.eyebrow}>Fichas ELE gratis · A1–C2</p>
             <h1 className={styles.title}>Fichas ELE de gramática: gratis, para imprimir y con soluciones</h1>
-            <p className={styles.lead}>{fichasDescription} Cada ficha sale de una clase interactiva gratis: puedes darla completa en pantalla o imprimir solo la ficha.</p>
+            <p className={styles.lead}>{fichasDescription} Cada ficha sale de una clase interactiva: las de las clases gratis son completas y las de las clases PRO son una muestra con cinco ejercicios.</p>
           </section>
           {LEVELS.map((level) => (
             <Section key={level} id={level.toLowerCase()} title={`Fichas de ${level}`}>
-              <div className={styles.cardGrid}>{fichaPages.filter((page) => page.level === level).map((page) => <Link className={styles.levelCard} key={page.path} href={page.path}><em>Ficha {page.level}</em><b>{page.name}</b></Link>)}</div>
+              <div className={styles.cardGrid}>{fichaPages.filter((page) => page.level === level).map((page) => <Link className={styles.levelCard} key={page.path} href={page.path}><em>{page.sample ? `Muestra ${page.level}` : `Ficha completa ${page.level}`}</em><b>{page.name}</b></Link>)}</div>
             </Section>
           ))}
           <EleBuyBand />

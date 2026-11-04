@@ -4,6 +4,7 @@ import { Breadcrumbs, Faq, GrowthFooter, JsonLd, Section } from "../../../growth
 import { faqPageSchema, webPageSchema } from "../../../growth/schema";
 import { EleBuyBand, EleTopbar, eleMetadata } from "../../components";
 import { MATERIAL_ELE_PATH } from "../../data";
+import { lessonCards } from "../../../growth/lessons";
 import { FICHAS_PATH, fichaBySlug, fichaPages } from "../../fichas";
 import { fichaContent } from "../../ficha-content";
 import { Bold } from "../../ficha-components";
@@ -23,12 +24,15 @@ export async function generateMetadata({ params }: Props) {
 
 export default async function FichaPage({ params }: Props) {
   const page = fichaBySlug.get((await params).slug);
-  const content = page ? await fichaContent(page.id) : undefined;
+  const content = page ? await fichaContent(page.id, page.sample) : undefined;
   if (!page || !content) notFound();
-  const siblings = fichaPages.filter((other) => other.level === page.level && other.slug !== page.slug);
+  const siblings = fichaPages.filter((other) => other.level === page.level && other.slug !== page.slug).slice(0, 12);
+  const lessonHref = lessonCards([page.id])[0]?.href ?? page.lessonPath;
   const faq = [
     { question: "¿La ficha es gratis?", answer: "Sí. Se abre sin registro, se imprime o se guarda en PDF con el botón de la página y se puede proyectar en pantalla compartida." },
-    { question: "¿De dónde salen los ejercicios?", answer: `De la clase interactiva «${page.name}» de SpanishCue, que trae además audio, conversación guiada y escritura con corrección. La clase completa también es gratis.` },
+    page.sample
+      ? { question: "¿De dónde salen los ejercicios?", answer: `Son una muestra de la clase interactiva «${page.name}» de SpanishCue. La clase completa, con toda la práctica, audio, conversación guiada y escritura con corrección, está en la suscripción.` }
+      : { question: "¿De dónde salen los ejercicios?", answer: `De la clase interactiva «${page.name}» de SpanishCue, que trae además audio, conversación guiada y escritura con corrección. La clase completa también es gratis.` },
     { question: "¿Dónde están las soluciones?", answer: "Al final de la ficha, numeradas igual que los ejercicios y con una explicación corta de cada respuesta." },
   ];
   return (
@@ -41,16 +45,16 @@ export default async function FichaPage({ params }: Props) {
           <Breadcrumbs items={[{ name: "SpanishCue", href: "/" }, { name: "Material ELE", href: MATERIAL_ELE_PATH }, { name: "Fichas de gramática", href: FICHAS_PATH }, { name: page.h1, href: page.path }]} />
           <p className={print.printOnly}><strong>Ficha de SpanishCue · {page.level}</strong><br />Clase interactiva: spanishcue.com{page.lessonPath}</p>
           <section className={styles.hero}>
-            <p className={styles.eyebrow}>Ficha ELE de gramática · {page.level}</p>
+            <p className={styles.eyebrow}>{page.sample ? "Ficha ELE de muestra" : "Ficha ELE de gramática"} · {page.level}</p>
             <h1 className={styles.title}>{page.h1}</h1>
             <p className={styles.lead}>{content.subtitle}</p>
             <div className={`${styles.heroActions} ${print.noPrint}`}>
               <PrintButton />
-              <Link className={styles.secondaryButton} href={page.lessonPath}>Abrir la clase interactiva gratis</Link>
+              <Link className={styles.secondaryButton} href={lessonHref}>{page.sample ? "Ver la clase completa" : "Abrir la clase interactiva gratis"}</Link>
             </div>
           </section>
 
-          <Section id="teoria" title="1. Entender">
+          <Section id="teoria" title="Entender">
             {content.theory.map((concept) => (
               <article className={grammar.activity} key={concept.label}>
                 <h3>{concept.label}</h3>
@@ -69,12 +73,12 @@ export default async function FichaPage({ params }: Props) {
           </Section>
 
           {content.mistakes.length ? (
-            <Section id="errores" title="2. Errores típicos">
+            <Section id="errores" title="Errores típicos">
               <ul className={sheet.mistakes}>{content.mistakes.map((mistake) => <li key={mistake.wrong}><s>{mistake.wrong}</s> → <strong>{mistake.right}</strong>. <Bold text={mistake.why} /></li>)}</ul>
             </Section>
           ) : null}
 
-          <Section id="ejercicios" title="3. Practicar" intro="Contesta primero sin mirar las soluciones del final.">
+          <Section id="ejercicios" title="Practicar" intro="Contesta primero sin mirar las soluciones del final.">
             <ol className={sheet.items}>
               {content.exercises.map((item, index) => (
                 <li key={index}>
@@ -87,8 +91,16 @@ export default async function FichaPage({ params }: Props) {
             </ol>
           </Section>
 
+          {page.sample ? (
+            <div className={print.noPrint}>
+              <Section id="clase-completa" title="El resto está en la clase completa" intro="Esta ficha es una muestra. La clase interactiva trae toda la práctica, el audio, la conversación guiada y la escritura con corrección, lista para compartir en pantalla.">
+                <Link className={styles.primaryButton} href={lessonHref}>Ver la clase completa</Link>
+              </Section>
+            </div>
+          ) : null}
+
           {content.writing || content.talk.length ? (
-            <Section id="usar" title="4. Usar">
+            <Section id="usar" title="Usar">
               {content.writing ? (
                 <article className={grammar.activity}>
                   <h3>Escribir: {content.writing.title}</h3>
