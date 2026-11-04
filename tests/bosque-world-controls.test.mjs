@@ -102,5 +102,5 @@ test('unmount frees the GPU: material texture slots, instance buffers and the We
  assert.ok(counts.instanced>0,'instanced meshes release their instance buffers');
  assert.ok(counts.texture>0,'material texture slots are disposed');
  const world=readFileSync('app/bosque-de-los-hongos-gigantes/World3D.tsx','utf8'),cleanup=world.slice(world.lastIndexOf("removeEventListener('webglcontextlost'"));
- assert.ok(cleanup.indexOf('scene.traverse(')<cleanup.indexOf('forest.dispose(); hero.dispose()'),'the scene is traversed before forest.dispose() clears its root');
+ const code=cleanup.replace(/\/\/.*$/gm,'');assert.ok(code.indexOf('scene.traverse(')>=0&&code.indexOf('scene.traverse(')<code.search(/forest\.dispose\(\)/),'the scene is traversed before forest.dispose() clears its root');
 });
