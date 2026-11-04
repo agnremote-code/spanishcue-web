@@ -18,7 +18,7 @@ test('owner data and premium bodies stay closed to anonymous visitors',async()=>
  }
  for(const path of ['/autoestudio/a1/semana-3','/autoestudio/a1/semana-3.rsc','/gramatica/genero-de-sustantivos','/gramatica/genero-de-sustantivos.rsc','/noche-abierta','/hospital-san-casi-vivo','/marketing-de-casinos']){
   const response=await get(path);await response.arrayBuffer();
-  assert.equal(response.status,302,path);assert.match(response.headers.get('location'),/\/acceso\?returnTo=/,path);
+  assert.equal(response.status,302,path);assert.match(response.headers.get('location'),path==='/autoestudio/a1/semana-3'?/\/autoestudio\/claim\?semana=/:/\/acceso\?returnTo=/,path);
  }
 });
 
