@@ -1,0 +1,2160 @@
+{
+  "game": "boda",
+  "level": "A0",
+  "items": [
+    {
+      "id": "porton",
+      "title": "Los autos del portón",
+      "place": "El portón de la estancia",
+      "context": "Anselmo y Wilmer cuentan los autos en el portón.",
+      "contextEn": "Anselmo and Wilmer count the cars at the gate.",
+      "speakers": [
+        {
+          "name": "Anselmo",
+          "country": "Paraguay",
+          "voice": "es-PY-MarioNeural"
+        },
+        {
+          "name": "Wilmer",
+          "country": "Honduras",
+          "voice": "es-HN-CarlosNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Wilmer, ¿cuántos autos hay?",
+          "en": "Wilmer, how many cars are there?"
+        },
+        {
+          "s": 1,
+          "text": "Hay cuarenta autos y dos combis.",
+          "en": "There are forty cars and two minibuses."
+        },
+        {
+          "s": 0,
+          "text": "¿Y el auto azul?",
+          "en": "And the blue car?"
+        },
+        {
+          "s": 1,
+          "text": "Es del padrino. Está cerca del árbol.",
+          "en": "It is the best man’s. It is near the tree."
+        },
+        {
+          "s": 0,
+          "text": "Bien. Ahora tomo un café.",
+          "en": "Good. Now I am having a coffee."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cuántos autos hay?",
+          "qEn": "How many cars are there?",
+          "options": [
+            "Cuarenta",
+            "Catorce",
+            "Cuatro"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cuántas combis hay?",
+          "qEn": "How many minibuses are there?",
+          "options": [
+            "Una",
+            "Dos",
+            "Tres"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿De quién es el auto azul?",
+          "qEn": "Whose is the blue car?",
+          "options": [
+            "Del novio",
+            "De Wilmer",
+            "Del padrino"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué toma Anselmo?",
+          "qEn": "What does Anselmo have?",
+          "options": [
+            "Un café",
+            "Un mate",
+            "Un vino"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Tienes auto?",
+          "qEn": "Do you have a car?",
+          "model": "Sí, tengo un auto rojo."
+        },
+        {
+          "q": "¿Qué tomas por la tarde?",
+          "qEn": "What do you drink in the afternoon?",
+          "model": "Tomo un café o un té."
+        },
+        {
+          "q": "¿Cuántas personas hay en tu familia?",
+          "qEn": "How many people are in your family?",
+          "model": "Hay cinco personas."
+        }
+      ],
+      "gaps": "Es del [padrino]. Está [cerca] del [árbol]. Bien. Ahora [tomo] un café.",
+      "glossary": [
+        {
+          "word": "combis",
+          "meaning": "autos grandes para muchas personas",
+          "en": "minibuses"
+        },
+        {
+          "word": "padrino",
+          "meaning": "amigo especial del novio",
+          "en": "best man"
+        },
+        {
+          "word": "árbol",
+          "meaning": "planta muy alta",
+          "en": "tree"
+        }
+      ]
+    },
+    {
+      "id": "capilla",
+      "title": "Las velas de la capilla",
+      "place": "La capilla blanca",
+      "context": "El padre Benito y Joaquín preparan la capilla.",
+      "contextEn": "Father Benito and Joaquín get the chapel ready.",
+      "speakers": [
+        {
+          "name": "Benito",
+          "country": "España",
+          "voice": "es-ES-AlvaroNeural"
+        },
+        {
+          "name": "Joaquín",
+          "country": "México",
+          "voice": "es-MX-JorgeNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Joaquín, ¿te gustan las velas?",
+          "en": "Joaquín, do you like the candles?"
+        },
+        {
+          "s": 1,
+          "text": "Sí, padre. Son muy bonitas. Pero hace calor.",
+          "en": "Yes, Father. They are very pretty. But it is hot."
+        },
+        {
+          "s": 0,
+          "text": "La capilla es pequeña. Hay ochenta personas.",
+          "en": "The chapel is small. There are eighty people."
+        },
+        {
+          "s": 1,
+          "text": "¿Abro la puerta?",
+          "en": "Shall I open the door?"
+        },
+        {
+          "s": 0,
+          "text": "Sí, abre la puerta, por favor.",
+          "en": "Yes, open the door, please."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué le gusta a Joaquín?",
+          "qEn": "What does Joaquín like?",
+          "options": [
+            "Las flores",
+            "Las velas",
+            "La música"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cómo está la capilla?",
+          "qEn": "How is the chapel?",
+          "options": [
+            "Hace frío",
+            "Llueve",
+            "Hace calor"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cuántas personas hay?",
+          "qEn": "How many people are there?",
+          "options": [
+            "Ochenta",
+            "Ocho",
+            "Dieciocho"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué abre Joaquín?",
+          "qEn": "What does Joaquín open?",
+          "options": [
+            "La ventana",
+            "La puerta",
+            "La caja"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Te gusta el calor o el frío?",
+          "qEn": "Do you like heat or cold?",
+          "model": "Me gusta el frío."
+        },
+        {
+          "q": "¿Hay una iglesia cerca de tu casa?",
+          "qEn": "Is there a church near your home?",
+          "model": "Sí, hay una iglesia pequeña."
+        },
+        {
+          "q": "¿Te gustan las velas?",
+          "qEn": "Do you like candles?",
+          "model": "Sí, me gustan mucho."
+        }
+      ],
+      "gaps": "La [capilla] es [pequeña]. Hay [ochenta] [personas].",
+      "glossary": [
+        {
+          "word": "velas",
+          "meaning": "luz pequeña de cera",
+          "en": "candles"
+        },
+        {
+          "word": "capilla",
+          "meaning": "iglesia pequeña",
+          "en": "chapel"
+        },
+        {
+          "word": "calor",
+          "meaning": "temperatura alta",
+          "en": "heat"
+        }
+      ]
+    },
+    {
+      "id": "ninos",
+      "title": "Tadeo tiene hambre",
+      "place": "El cantero de flores",
+      "context": "Tadeo y su tía Marisol hablan antes de la ceremonia.",
+      "contextEn": "Tadeo and his aunt Marisol talk before the ceremony.",
+      "speakers": [
+        {
+          "name": "Marisol",
+          "country": "República Dominicana",
+          "voice": "es-DO-RamonaNeural"
+        },
+        {
+          "name": "Tadeo",
+          "country": "República Dominicana",
+          "voice": "es-DO-EmilioNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Tía, tengo hambre.",
+          "en": "Auntie, I am hungry."
+        },
+        {
+          "s": 0,
+          "text": "Ahora no, Tadeo. Primero la ceremonia.",
+          "en": "Not now, Tadeo. First the ceremony."
+        },
+        {
+          "s": 1,
+          "text": "¿Y después hay torta?",
+          "en": "And afterwards is there cake?"
+        },
+        {
+          "s": 0,
+          "text": "Sí, hay torta de chocolate.",
+          "en": "Yes, there is chocolate cake."
+        },
+        {
+          "s": 1,
+          "text": "¡Me gusta el chocolate!",
+          "en": "I like chocolate!"
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué tiene Tadeo?",
+          "qEn": "What does Tadeo have?",
+          "options": [
+            "Sueño",
+            "Frío",
+            "Hambre"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué es primero?",
+          "qEn": "What comes first?",
+          "options": [
+            "La ceremonia",
+            "La torta",
+            "La música"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿De qué es la torta?",
+          "qEn": "What flavour is the cake?",
+          "options": [
+            "De limón",
+            "De chocolate",
+            "De fresa"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Quién es Marisol?",
+          "qEn": "Who is Marisol?",
+          "options": [
+            "La mamá de Tadeo",
+            "La abuela de Tadeo",
+            "La tía de Tadeo"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Te gusta el chocolate?",
+          "qEn": "Do you like chocolate?",
+          "model": "Sí, me gusta mucho."
+        },
+        {
+          "q": "¿Tienes sobrinos?",
+          "qEn": "Do you have nephews or nieces?",
+          "model": "Sí, tengo dos sobrinos."
+        },
+        {
+          "q": "¿Qué comes cuando tienes hambre?",
+          "qEn": "What do you eat when you are hungry?",
+          "model": "Como pan o fruta."
+        }
+      ],
+      "gaps": "[Sí], hay [torta] de [chocolate]. ¡Me [gusta] el chocolate!",
+      "glossary": [
+        {
+          "word": "hambre",
+          "meaning": "ganas de comer",
+          "en": "hunger"
+        },
+        {
+          "word": "torta",
+          "meaning": "pastel dulce",
+          "en": "cake"
+        },
+        {
+          "word": "ceremonia",
+          "meaning": "momento formal de la boda",
+          "en": "ceremony"
+        }
+      ]
+    },
+    {
+      "id": "novia",
+      "title": "Un vestido largo",
+      "place": "El cuarto de la novia",
+      "context": "Camila ayuda a Valentina con el vestido.",
+      "contextEn": "Camila helps Valentina with her dress.",
+      "speakers": [
+        {
+          "name": "Valentina",
+          "country": "Argentina",
+          "voice": "es-AR-ElenaNeural"
+        },
+        {
+          "name": "Camila",
+          "country": "Nicaragua",
+          "voice": "es-NI-YolandaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Valentina, tu vestido es precioso.",
+          "en": "Valentina, your dress is beautiful."
+        },
+        {
+          "s": 0,
+          "text": "Gracias. Pero es muy largo.",
+          "en": "Thank you. But it is very long."
+        },
+        {
+          "s": 1,
+          "text": "Tus zapatos son altos. Está bien.",
+          "en": "Your shoes are high. It is fine."
+        },
+        {
+          "s": 0,
+          "text": "¿Y mi pelo?",
+          "en": "And my hair?"
+        },
+        {
+          "s": 1,
+          "text": "Tu pelo está perfecto. ¡Vamos!",
+          "en": "Your hair is perfect. Let’s go!"
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cómo es el vestido?",
+          "qEn": "What is the dress like?",
+          "options": [
+            "Muy largo",
+            "Muy corto",
+            "Muy feo"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cómo son los zapatos?",
+          "qEn": "What are the shoes like?",
+          "options": [
+            "Bajos",
+            "Altos",
+            "Rojos"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cómo está el pelo?",
+          "qEn": "How is the hair?",
+          "options": [
+            "Mojado",
+            "Largo",
+            "Perfecto"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Quién ayuda a Valentina?",
+          "qEn": "Who helps Valentina?",
+          "options": [
+            "Camila",
+            "Su mamá",
+            "Su abuela"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué ropa te gusta llevar en una fiesta?",
+          "qEn": "What clothes do you like to wear at a party?",
+          "model": "Me gusta llevar una camisa blanca."
+        },
+        {
+          "q": "¿Llevas zapatos altos?",
+          "qEn": "Do you wear high shoes?",
+          "model": "No, llevo zapatillas."
+        },
+        {
+          "q": "¿Quién es tu mejor amiga o amigo?",
+          "qEn": "Who is your best friend?",
+          "model": "Mi mejor amiga es Laura."
+        }
+      ],
+      "gaps": "Tus [zapatos] son [altos]. Está [bien]. ¿Y mi [pelo]?",
+      "glossary": [
+        {
+          "word": "vestido",
+          "meaning": "ropa de mujer, una sola pieza",
+          "en": "dress"
+        },
+        {
+          "word": "precioso",
+          "meaning": "muy bonito",
+          "en": "beautiful"
+        },
+        {
+          "word": "zapatos",
+          "meaning": "ropa para los pies",
+          "en": "shoes"
+        }
+      ]
+    },
+    {
+      "id": "abuela",
+      "title": "El mate de la tarde",
+      "place": "La galería de la casa",
+      "context": "La abuela Chela habla sola en su silla.",
+      "contextEn": "Grandma Chela talks to herself in her chair.",
+      "speakers": [
+        {
+          "name": "Chela",
+          "country": "Uruguay",
+          "voice": "es-UY-ValentinaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Son las cinco. Tomo mate.",
+          "en": "It is five o’clock. I am having mate."
+        },
+        {
+          "s": 0,
+          "text": "Mi nieta se casa hoy. Tiene veintinueve años.",
+          "en": "My granddaughter is getting married today. She is twenty-nine."
+        },
+        {
+          "s": 0,
+          "text": "Yo tengo ochenta y seis.",
+          "en": "I am eighty-six."
+        },
+        {
+          "s": 0,
+          "text": "El mate está frío. ¡Qué horror!",
+          "en": "The mate is cold. How awful!"
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué hora es?",
+          "qEn": "What time is it?",
+          "options": [
+            "Las seis",
+            "Las cinco",
+            "Las doce"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué toma Chela?",
+          "qEn": "What does Chela drink?",
+          "options": [
+            "Café",
+            "Vino",
+            "Mate"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cuántos años tiene la nieta?",
+          "qEn": "How old is the granddaughter?",
+          "options": [
+            "Veintinueve",
+            "Diecinueve",
+            "Treinta y nueve"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cómo está el mate?",
+          "qEn": "How is the mate?",
+          "options": [
+            "Caliente",
+            "Frío",
+            "Dulce"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Cuántos años tienen tus abuelos?",
+          "qEn": "How old are your grandparents?",
+          "model": "Mi abuela tiene setenta años."
+        },
+        {
+          "q": "¿Te gustan las bebidas calientes?",
+          "qEn": "Do you like hot drinks?",
+          "model": "Sí, me gusta el té."
+        },
+        {
+          "q": "¿Qué haces a las cinco de la tarde?",
+          "qEn": "What do you do at five in the afternoon?",
+          "model": "Trabajo o estudio."
+        }
+      ],
+      "gaps": "Mi [nieta] se casa [hoy]. Tiene [veintinueve] [años].",
+      "glossary": [
+        {
+          "word": "nieta",
+          "meaning": "hija de tu hija o de tu hijo",
+          "en": "granddaughter"
+        },
+        {
+          "word": "mate",
+          "meaning": "bebida caliente de Argentina y Uruguay",
+          "en": "mate (herbal drink)"
+        },
+        {
+          "word": "frío",
+          "meaning": "no caliente",
+          "en": "cold"
+        }
+      ]
+    },
+    {
+      "id": "novio",
+      "title": "La corbata roja",
+      "place": "El cuarto del novio",
+      "context": "Lupita y Ximena miran la ropa del novio.",
+      "contextEn": "Lupita and Ximena look at the groom’s clothes.",
+      "speakers": [
+        {
+          "name": "Lupita",
+          "country": "México",
+          "voice": "es-MX-DaliaNeural"
+        },
+        {
+          "name": "Ximena",
+          "country": "España",
+          "voice": "es-ES-XimenaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Ximena, ¿qué corbata es mejor?",
+          "en": "Ximena, which tie is better?"
+        },
+        {
+          "s": 1,
+          "text": "La corbata roja, tía.",
+          "en": "The red tie, auntie."
+        },
+        {
+          "s": 0,
+          "text": "¿Roja? Es una boda, no un circo.",
+          "en": "Red? It is a wedding, not a circus."
+        },
+        {
+          "s": 1,
+          "text": "Entonces la azul.",
+          "en": "Then the blue one."
+        },
+        {
+          "s": 0,
+          "text": "Sí. Azul, como los ojos de su papá.",
+          "en": "Yes. Blue, like his dad’s eyes."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué corbata le gusta a Ximena?",
+          "qEn": "Which tie does Ximena like?",
+          "options": [
+            "La verde",
+            "La negra",
+            "La roja"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué dice Lupita de la roja?",
+          "qEn": "What does Lupita say about the red one?",
+          "options": [
+            "Es de circo",
+            "Es elegante",
+            "Es pequeña"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué corbata eligen al final?",
+          "qEn": "Which tie do they choose in the end?",
+          "options": [
+            "La roja",
+            "La azul",
+            "La blanca"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿De qué color son los ojos del papá?",
+          "qEn": "What colour are the dad’s eyes?",
+          "options": [
+            "Verdes",
+            "Negros",
+            "Azules"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué color te gusta para la ropa?",
+          "qEn": "What colour do you like for clothes?",
+          "model": "Me gusta el azul."
+        },
+        {
+          "q": "¿Llevas corbata a veces?",
+          "qEn": "Do you wear a tie sometimes?",
+          "model": "No, nunca llevo corbata."
+        },
+        {
+          "q": "¿De qué color son tus ojos?",
+          "qEn": "What colour are your eyes?",
+          "model": "Mis ojos son marrones."
+        }
+      ],
+      "gaps": "[Sí]. [Azul], como los [ojos] de su [papá].",
+      "glossary": [
+        {
+          "word": "corbata",
+          "meaning": "ropa larga y fina para el cuello",
+          "en": "tie"
+        },
+        {
+          "word": "circo",
+          "meaning": "espectáculo con payasos",
+          "en": "circus"
+        },
+        {
+          "word": "ojos",
+          "meaning": "parte de la cara para ver",
+          "en": "eyes"
+        }
+      ]
+    },
+    {
+      "id": "cocina",
+      "title": "Mucho trabajo en la cocina",
+      "place": "La cocina de la estancia",
+      "context": "Ramiro y Yesenia cocinan para la boda.",
+      "contextEn": "Ramiro and Yesenia cook for the wedding.",
+      "speakers": [
+        {
+          "name": "Ramiro",
+          "country": "Perú",
+          "voice": "es-PE-AlexNeural"
+        },
+        {
+          "name": "Yesenia",
+          "country": "Perú",
+          "voice": "es-PE-CamilaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Yesenia, ¿cuántas empanadas hay?",
+          "en": "Yesenia, how many empanadas are there?"
+        },
+        {
+          "s": 1,
+          "text": "Hay trescientas, chef.",
+          "en": "There are three hundred, chef."
+        },
+        {
+          "s": 0,
+          "text": "Necesitamos quinientas.",
+          "en": "We need five hundred."
+        },
+        {
+          "s": 1,
+          "text": "¡Quinientas! Necesito otra mesa y más manos.",
+          "en": "Five hundred! I need another table and more hands."
+        },
+        {
+          "s": 0,
+          "text": "Yo te ayudo. Rápido, rápido.",
+          "en": "I will help you. Quick, quick."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué cocinan?",
+          "qEn": "What are they cooking?",
+          "options": [
+            "Empanadas",
+            "Pizzas",
+            "Tortas"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cuántas empanadas hay ahora?",
+          "qEn": "How many empanadas are there now?",
+          "options": [
+            "Quinientas",
+            "Trescientas",
+            "Treinta"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cuántas necesitan?",
+          "qEn": "How many do they need?",
+          "options": [
+            "Cien",
+            "Trescientas",
+            "Quinientas"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué hace Ramiro?",
+          "qEn": "What does Ramiro do?",
+          "options": [
+            "Ayuda a Yesenia",
+            "Se va a casa",
+            "Duerme"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Te gusta cocinar?",
+          "qEn": "Do you like cooking?",
+          "model": "Sí, me gusta cocinar pasta."
+        },
+        {
+          "q": "¿Cuál es tu comida favorita?",
+          "qEn": "What is your favourite food?",
+          "model": "Mi comida favorita es el arroz."
+        },
+        {
+          "q": "¿Quién cocina en tu casa?",
+          "qEn": "Who cooks at your home?",
+          "model": "Mi papá cocina."
+        }
+      ],
+      "gaps": "¡[Quinientas]! Necesito [otra] [mesa] y más [manos].",
+      "glossary": [
+        {
+          "word": "empanadas",
+          "meaning": "comida con masa y relleno",
+          "en": "empanadas (pastries)"
+        },
+        {
+          "word": "chef",
+          "meaning": "jefe de la cocina",
+          "en": "chef"
+        },
+        {
+          "word": "rápido",
+          "meaning": "con mucha velocidad",
+          "en": "fast"
+        }
+      ]
+    },
+    {
+      "id": "asado",
+      "title": "El fuego de Don Beto",
+      "place": "La parrilla del jardín",
+      "context": "Don Beto habla con la carne mientras trabaja.",
+      "contextEn": "Don Beto talks to the meat while he works.",
+      "speakers": [
+        {
+          "name": "Beto",
+          "country": "Chile",
+          "voice": "es-CL-LorenzoNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Buenas tardes, carne. Hoy es un día importante.",
+          "en": "Good afternoon, meat. Today is an important day."
+        },
+        {
+          "s": 0,
+          "text": "El fuego está bien. No es alto. No es bajo.",
+          "en": "The fire is fine. It is not high. It is not low."
+        },
+        {
+          "s": 0,
+          "text": "Hay ciento veinte personas. Tengo mucha carne.",
+          "en": "There are a hundred and twenty people. I have a lot of meat."
+        },
+        {
+          "s": 0,
+          "text": "Y tengo un vino. Para mí.",
+          "en": "And I have a wine. For me."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Con quién habla Don Beto?",
+          "qEn": "Who is Don Beto talking to?",
+          "options": [
+            "Con el novio",
+            "Con la carne",
+            "Con un perro"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cómo está el fuego?",
+          "qEn": "How is the fire?",
+          "options": [
+            "Muy alto",
+            "Apagado",
+            "Bien"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cuántas personas hay?",
+          "qEn": "How many people are there?",
+          "options": [
+            "Ciento veinte",
+            "Ochenta",
+            "Doscientas"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Para quién es el vino?",
+          "qEn": "Who is the wine for?",
+          "options": [
+            "Para la novia",
+            "Para Don Beto",
+            "Para la abuela"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Comes carne?",
+          "qEn": "Do you eat meat?",
+          "model": "Sí, como carne los domingos."
+        },
+        {
+          "q": "¿Hablas solo a veces?",
+          "qEn": "Do you talk to yourself sometimes?",
+          "model": "Sí, cuando cocino."
+        },
+        {
+          "q": "¿Te gusta el vino?",
+          "qEn": "Do you like wine?",
+          "model": "No, prefiero el agua."
+        }
+      ],
+      "gaps": "El [fuego] está bien. No es [alto]. No es [bajo]. Hay ciento [veinte] personas.",
+      "glossary": [
+        {
+          "word": "carne",
+          "meaning": "comida de animal",
+          "en": "meat"
+        },
+        {
+          "word": "fuego",
+          "meaning": "llamas calientes",
+          "en": "fire"
+        },
+        {
+          "word": "vino",
+          "meaning": "bebida de uva",
+          "en": "wine"
+        }
+      ]
+    },
+    {
+      "id": "mesa",
+      "title": "La mesa número siete",
+      "place": "Las mesas largas",
+      "context": "Gloria y Pepe buscan su mesa.",
+      "contextEn": "Gloria and Pepe look for their table.",
+      "speakers": [
+        {
+          "name": "Gloria",
+          "country": "Panamá",
+          "voice": "es-PA-MargaritaNeural"
+        },
+        {
+          "name": "Pepe",
+          "country": "Panamá",
+          "voice": "es-PA-RobertoNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Esta es la mesa siete.",
+          "en": "This is table seven."
+        },
+        {
+          "s": 1,
+          "text": "Mi silla está aquí. Al lado de tu silla.",
+          "en": "My chair is here. Next to your chair."
+        },
+        {
+          "s": 0,
+          "text": "No, gracias. Yo me siento allá.",
+          "en": "No, thank you. I sit over there."
+        },
+        {
+          "s": 1,
+          "text": "Gloria, es una boda.",
+          "en": "Gloria, it is a wedding."
+        },
+        {
+          "s": 0,
+          "text": "Por eso. Hoy no hablo contigo.",
+          "en": "That’s why. Today I am not talking to you."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué número es la mesa?",
+          "qEn": "What number is the table?",
+          "options": [
+            "Nueve",
+            "Once",
+            "Siete"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Dónde está la silla de Pepe?",
+          "qEn": "Where is Pepe’s chair?",
+          "options": [
+            "Al lado de la silla de Gloria",
+            "Lejos de la mesa",
+            "En la cocina"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Dónde se sienta Gloria?",
+          "qEn": "Where does Gloria sit?",
+          "options": [
+            "Al lado de Pepe",
+            "Allá",
+            "En el suelo"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué no hace Gloria hoy?",
+          "qEn": "What does Gloria not do today?",
+          "options": [
+            "Comer",
+            "Bailar",
+            "Hablar con Pepe"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Dónde te sientas en una fiesta?",
+          "qEn": "Where do you sit at a party?",
+          "model": "Me siento cerca de mis amigos."
+        },
+        {
+          "q": "¿Hablas con todos en tu familia?",
+          "qEn": "Do you talk with everyone in your family?",
+          "model": "Sí, hablo con todos."
+        },
+        {
+          "q": "¿Cuál es tu número favorito?",
+          "qEn": "What is your favourite number?",
+          "model": "Mi número favorito es el siete."
+        }
+      ],
+      "gaps": "Mi [silla] está [aquí]. Al [lado] de tu [silla].",
+      "glossary": [
+        {
+          "word": "silla",
+          "meaning": "mueble para sentarse",
+          "en": "chair"
+        },
+        {
+          "word": "al lado de",
+          "meaning": "muy cerca de",
+          "en": "next to"
+        },
+        {
+          "word": "allá",
+          "meaning": "en otro lugar, lejos",
+          "en": "over there"
+        }
+      ]
+    },
+    {
+      "id": "ex",
+      "title": "Rosas rojas",
+      "place": "El rosedal",
+      "context": "Renata compra una flor a Rocío.",
+      "contextEn": "Renata buys a flower from Rocío.",
+      "speakers": [
+        {
+          "name": "Renata",
+          "country": "Venezuela",
+          "voice": "es-VE-PaolaNeural"
+        },
+        {
+          "name": "Rocío",
+          "country": "Ecuador",
+          "voice": "es-EC-AndreaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Hola. ¿Tienes una rosa roja?",
+          "en": "Hello. Do you have a red rose?"
+        },
+        {
+          "s": 1,
+          "text": "Sí, tengo rosas rojas y blancas.",
+          "en": "Yes, I have red and white roses."
+        },
+        {
+          "s": 0,
+          "text": "Una roja, por favor. Para mi vestido.",
+          "en": "A red one, please. For my dress."
+        },
+        {
+          "s": 1,
+          "text": "Tu vestido es rojo también. ¡Mucho rojo!",
+          "en": "Your dress is red too. A lot of red!"
+        },
+        {
+          "s": 0,
+          "text": "Sí. Hoy me gusta el rojo.",
+          "en": "Yes. Today I like red."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué flor quiere Renata?",
+          "qEn": "Which flower does Renata want?",
+          "options": [
+            "Una rosa roja",
+            "Una rosa blanca",
+            "Un jazmín"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué colores de rosas tiene Rocío?",
+          "qEn": "What colours of roses does Rocío have?",
+          "options": [
+            "Amarillas y rosas",
+            "Rojas y blancas",
+            "Solo blancas"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Para qué es la flor?",
+          "qEn": "What is the flower for?",
+          "options": [
+            "Para la novia",
+            "Para la mesa",
+            "Para el vestido"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿De qué color es el vestido de Renata?",
+          "qEn": "What colour is Renata’s dress?",
+          "options": [
+            "Rojo",
+            "Blanco",
+            "Azul"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué flores te gustan?",
+          "qEn": "What flowers do you like?",
+          "model": "Me gustan las rosas."
+        },
+        {
+          "q": "¿Tienes ropa roja?",
+          "qEn": "Do you have red clothes?",
+          "model": "Sí, tengo una camiseta roja."
+        },
+        {
+          "q": "¿Compras flores a veces?",
+          "qEn": "Do you buy flowers sometimes?",
+          "model": "Sí, para mi mamá."
+        }
+      ],
+      "gaps": "Una [roja], por [favor]. Para mi [vestido]. Tu vestido es [rojo] también.",
+      "glossary": [
+        {
+          "word": "rosa",
+          "meaning": "flor con espinas",
+          "en": "rose"
+        },
+        {
+          "word": "vestido",
+          "meaning": "ropa de mujer",
+          "en": "dress"
+        },
+        {
+          "word": "también",
+          "meaning": "además, igual",
+          "en": "too"
+        }
+      ]
+    },
+    {
+      "id": "planner",
+      "title": "La hora de la comida",
+      "place": "La entrada de la carpa",
+      "context": "Mariela da un mensaje por el micrófono.",
+      "contextEn": "Mariela gives a message on the microphone.",
+      "speakers": [
+        {
+          "name": "Mariela",
+          "country": "Colombia",
+          "voice": "es-CO-SalomeNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Buenas tardes a todos. Soy Mariela.",
+          "en": "Good afternoon, everyone. I am Mariela."
+        },
+        {
+          "s": 0,
+          "text": "La comida es a las siete.",
+          "en": "The food is at seven."
+        },
+        {
+          "s": 0,
+          "text": "Los baños están al lado de la casa.",
+          "en": "The toilets are next to the house."
+        },
+        {
+          "s": 0,
+          "text": "Y la música es a las ocho. ¡Gracias!",
+          "en": "And the music is at eight. Thank you!"
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Quién habla?",
+          "qEn": "Who is speaking?",
+          "options": [
+            "La novia",
+            "Mariela",
+            "El chef"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿A qué hora es la comida?",
+          "qEn": "What time is the food?",
+          "options": [
+            "A las ocho",
+            "A las seis",
+            "A las siete"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Dónde están los baños?",
+          "qEn": "Where are the toilets?",
+          "options": [
+            "Al lado de la casa",
+            "En la carpa",
+            "En la capilla"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿A qué hora es la música?",
+          "qEn": "What time is the music?",
+          "options": [
+            "A las siete",
+            "A las ocho",
+            "A las nueve"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿A qué hora comes normalmente?",
+          "qEn": "What time do you usually eat?",
+          "model": "Como a la una."
+        },
+        {
+          "q": "¿Te gusta hablar por micrófono?",
+          "qEn": "Do you like speaking into a microphone?",
+          "model": "No, me da vergüenza."
+        },
+        {
+          "q": "¿Qué música te gusta?",
+          "qEn": "What music do you like?",
+          "model": "Me gusta el pop."
+        }
+      ],
+      "gaps": "Los [baños] están al [lado] de la [casa]. Y la [música] es a las ocho.",
+      "glossary": [
+        {
+          "word": "baños",
+          "meaning": "lugar con inodoro",
+          "en": "toilets"
+        },
+        {
+          "word": "comida",
+          "meaning": "lo que comemos",
+          "en": "food"
+        },
+        {
+          "word": "música",
+          "meaning": "sonidos bonitos y canciones",
+          "en": "music"
+        }
+      ]
+    },
+    {
+      "id": "banda",
+      "title": "Una canción para empezar",
+      "place": "El escenario de la carpa",
+      "context": "Willy, Don Chuy y Yamilé preparan la música.",
+      "contextEn": "Willy, Don Chuy and Yamilé get the music ready.",
+      "speakers": [
+        {
+          "name": "Willy",
+          "country": "Cuba",
+          "voice": "es-CU-ManuelNeural"
+        },
+        {
+          "name": "Chuy",
+          "country": "Guatemala",
+          "voice": "es-GT-AndresNeural"
+        },
+        {
+          "name": "Yamilé",
+          "country": "Cuba",
+          "voice": "es-CU-BelkysNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Yamilé, ¿tienes la guitarra?",
+          "en": "Yamilé, do you have the guitar?"
+        },
+        {
+          "s": 2,
+          "text": "No. Tengo el micrófono.",
+          "en": "No. I have the microphone."
+        },
+        {
+          "s": 1,
+          "text": "La guitarra está aquí. Es mía.",
+          "en": "The guitar is here. It is mine."
+        },
+        {
+          "s": 0,
+          "text": "Bueno. Primero una salsa.",
+          "en": "OK. First a salsa."
+        },
+        {
+          "s": 1,
+          "text": "No, primero una ranchera.",
+          "en": "No, first a ranchera."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué tiene Yamilé?",
+          "qEn": "What does Yamilé have?",
+          "options": [
+            "La guitarra",
+            "Una trompeta",
+            "El micrófono"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿De quién es la guitarra?",
+          "qEn": "Whose is the guitar?",
+          "options": [
+            "De Don Chuy",
+            "De Willy",
+            "De Yamilé"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué quiere tocar Willy primero?",
+          "qEn": "What does Willy want to play first?",
+          "options": [
+            "Una ranchera",
+            "Una salsa",
+            "Un tango"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué quiere tocar Don Chuy primero?",
+          "qEn": "What does Don Chuy want to play first?",
+          "options": [
+            "Una salsa",
+            "Un vals",
+            "Una ranchera"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Tocas algún instrumento?",
+          "qEn": "Do you play an instrument?",
+          "model": "Sí, toco el piano."
+        },
+        {
+          "q": "¿Te gusta bailar salsa?",
+          "qEn": "Do you like dancing salsa?",
+          "model": "Sí, pero bailo mal."
+        },
+        {
+          "q": "¿Cantas en las fiestas?",
+          "qEn": "Do you sing at parties?",
+          "model": "No, solo en la ducha."
+        }
+      ],
+      "gaps": "La [guitarra] está [aquí]. Es [mía]. Bueno. [Primero] una salsa.",
+      "glossary": [
+        {
+          "word": "guitarra",
+          "meaning": "instrumento con cuerdas",
+          "en": "guitar"
+        },
+        {
+          "word": "micrófono",
+          "meaning": "aparato para hablar fuerte",
+          "en": "microphone"
+        },
+        {
+          "word": "ranchera",
+          "meaning": "canción típica de México",
+          "en": "ranchera (Mexican song)"
+        }
+      ]
+    },
+    {
+      "id": "pista",
+      "title": "Un, dos, tres",
+      "place": "La pista de baile",
+      "context": "Don Horacio practica el vals solo.",
+      "contextEn": "Don Horacio practises the waltz alone.",
+      "speakers": [
+        {
+          "name": "Horacio",
+          "country": "Uruguay",
+          "voice": "es-UY-MateoNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Uno, dos, tres. El vals es difícil.",
+          "en": "One, two, three. The waltz is difficult."
+        },
+        {
+          "s": 0,
+          "text": "Mi hija baila muy bien. Yo no.",
+          "en": "My daughter dances very well. I do not."
+        },
+        {
+          "s": 0,
+          "text": "A las diez bailo con ella.",
+          "en": "At ten I dance with her."
+        },
+        {
+          "s": 0,
+          "text": "Estoy nervioso. Y me duele la rodilla.",
+          "en": "I am nervous. And my knee hurts."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué baila Don Horacio?",
+          "qEn": "What does Don Horacio dance?",
+          "options": [
+            "Un vals",
+            "Un tango",
+            "Una salsa"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Quién baila muy bien?",
+          "qEn": "Who dances very well?",
+          "options": [
+            "Él",
+            "Su hija",
+            "Su esposa"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿A qué hora baila con su hija?",
+          "qEn": "What time does he dance with his daughter?",
+          "options": [
+            "A las nueve",
+            "A las once",
+            "A las diez"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué le duele?",
+          "qEn": "What hurts?",
+          "options": [
+            "La rodilla",
+            "La cabeza",
+            "La espalda"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Sabes bailar?",
+          "qEn": "Can you dance?",
+          "model": "Sí, sé bailar un poco."
+        },
+        {
+          "q": "¿Cuándo estás nervioso?",
+          "qEn": "When are you nervous?",
+          "model": "Estoy nervioso en los exámenes."
+        },
+        {
+          "q": "¿Te duele algo hoy?",
+          "qEn": "Does anything hurt today?",
+          "model": "No, estoy bien."
+        }
+      ],
+      "gaps": "A las [diez] bailo con [ella]. Estoy [nervioso]. Y me duele la [rodilla].",
+      "glossary": [
+        {
+          "word": "vals",
+          "meaning": "baile lento en tres tiempos",
+          "en": "waltz"
+        },
+        {
+          "word": "nervioso",
+          "meaning": "con miedo y tensión",
+          "en": "nervous"
+        },
+        {
+          "word": "rodilla",
+          "meaning": "parte de la pierna",
+          "en": "knee"
+        }
+      ]
+    },
+    {
+      "id": "barra",
+      "title": "Dos limonadas",
+      "place": "La barra",
+      "context": "Ximena pide algo en la barra.",
+      "contextEn": "Ximena orders something at the bar.",
+      "speakers": [
+        {
+          "name": "Edgardo",
+          "country": "Puerto Rico",
+          "voice": "es-PR-VictorNeural"
+        },
+        {
+          "name": "Ximena",
+          "country": "España",
+          "voice": "es-ES-XimenaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Buenas noches. ¿Qué quieres tomar?",
+          "en": "Good evening. What would you like to drink?"
+        },
+        {
+          "s": 1,
+          "text": "Una limonada, por favor. Sin azúcar.",
+          "en": "A lemonade, please. Without sugar."
+        },
+        {
+          "s": 0,
+          "text": "¿Grande o pequeña?",
+          "en": "Large or small?"
+        },
+        {
+          "s": 1,
+          "text": "Grande. Y otra para mi amigo.",
+          "en": "Large. And another one for my friend."
+        },
+        {
+          "s": 0,
+          "text": "Dos limonadas grandes. ¡Salud!",
+          "en": "Two large lemonades. Cheers!"
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué pide Ximena?",
+          "qEn": "What does Ximena order?",
+          "options": [
+            "Un vino",
+            "Una limonada",
+            "Un café"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cómo la quiere?",
+          "qEn": "How does she want it?",
+          "options": [
+            "Con hielo",
+            "Con leche",
+            "Sin azúcar"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿De qué tamaño?",
+          "qEn": "What size?",
+          "options": [
+            "Grande",
+            "Pequeña",
+            "Mediana"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cuántas limonadas pide en total?",
+          "qEn": "How many lemonades does she order in total?",
+          "options": [
+            "Una",
+            "Dos",
+            "Tres"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué tomas en un bar?",
+          "qEn": "What do you drink in a bar?",
+          "model": "Tomo una cerveza."
+        },
+        {
+          "q": "¿Tomas café con azúcar?",
+          "qEn": "Do you take coffee with sugar?",
+          "model": "No, sin azúcar."
+        },
+        {
+          "q": "¿Qué dices para brindar en tu idioma?",
+          "qEn": "What do you say to make a toast in your language?",
+          "model": "Digo «cheers»."
+        }
+      ],
+      "gaps": "[Grande]. Y [otra] para mi [amigo]. Dos [limonadas] grandes.",
+      "glossary": [
+        {
+          "word": "limonada",
+          "meaning": "bebida de limón",
+          "en": "lemonade"
+        },
+        {
+          "word": "azúcar",
+          "meaning": "cosa dulce y blanca",
+          "en": "sugar"
+        },
+        {
+          "word": "salud",
+          "meaning": "palabra para brindar",
+          "en": "cheers"
+        }
+      ]
+    },
+    {
+      "id": "establo",
+      "title": "Un caballo blanco",
+      "place": "El establo",
+      "context": "Ceferino presenta a su caballo.",
+      "contextEn": "Ceferino introduces his horse.",
+      "speakers": [
+        {
+          "name": "Ceferino",
+          "country": "Bolivia",
+          "voice": "es-BO-MarceloNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Este es Lucero. Es mi caballo.",
+          "en": "This is Lucero. He is my horse."
+        },
+        {
+          "s": 0,
+          "text": "Es blanco y tiene diez años.",
+          "en": "He is white and he is ten years old."
+        },
+        {
+          "s": 0,
+          "text": "Come mucho. Come pasto, manzanas y… flores.",
+          "en": "He eats a lot. He eats grass, apples and… flowers."
+        },
+        {
+          "s": 0,
+          "text": "Hoy es muy elegante. Tiene una cinta azul.",
+          "en": "Today he is very elegant. He has a blue ribbon."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cómo se llama el caballo?",
+          "qEn": "What is the horse’s name?",
+          "options": [
+            "Ceferino",
+            "Blanco",
+            "Lucero"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cuántos años tiene?",
+          "qEn": "How old is he?",
+          "options": [
+            "Diez",
+            "Dos",
+            "Doce"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué come el caballo?",
+          "qEn": "What does the horse eat?",
+          "options": [
+            "Carne y pan",
+            "Pasto, manzanas y flores",
+            "Solo agua"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿De qué color es la cinta?",
+          "qEn": "What colour is the ribbon?",
+          "options": [
+            "Roja",
+            "Blanca",
+            "Azul"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Tienes un animal?",
+          "qEn": "Do you have an animal?",
+          "model": "Sí, tengo un gato."
+        },
+        {
+          "q": "¿Te gustan los caballos?",
+          "qEn": "Do you like horses?",
+          "model": "Sí, pero me dan miedo."
+        },
+        {
+          "q": "¿Comes manzanas?",
+          "qEn": "Do you eat apples?",
+          "model": "Sí, como una manzana al día."
+        }
+      ],
+      "gaps": "Es [blanco] y tiene [diez] años. Come [mucho]. Come [pasto], manzanas y… flores.",
+      "glossary": [
+        {
+          "word": "caballo",
+          "meaning": "animal grande para montar",
+          "en": "horse"
+        },
+        {
+          "word": "pasto",
+          "meaning": "hierba verde del campo",
+          "en": "grass"
+        },
+        {
+          "word": "cinta",
+          "meaning": "tira de tela",
+          "en": "ribbon"
+        }
+      ]
+    },
+    {
+      "id": "fotos",
+      "title": "¡Sonrían!",
+      "place": "Debajo del ombú",
+      "context": "Gonzalo, el fotógrafo, organiza una foto.",
+      "contextEn": "Gonzalo, the photographer, sets up a photo.",
+      "speakers": [
+        {
+          "name": "Gonzalo",
+          "country": "Colombia",
+          "voice": "es-CO-GonzaloNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "¡Hola, familia! Una foto, por favor.",
+          "en": "Hello, family! One photo, please."
+        },
+        {
+          "s": 0,
+          "text": "Los niños adelante. Los abuelos en las sillas.",
+          "en": "The children in front. The grandparents on the chairs."
+        },
+        {
+          "s": 0,
+          "text": "Los tíos atrás. ¡Muy bien!",
+          "en": "The uncles and aunts at the back. Very good!"
+        },
+        {
+          "s": 0,
+          "text": "Uno, dos, tres… ¡Sonrían!",
+          "en": "One, two, three… Smile!"
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Quién habla?",
+          "qEn": "Who is speaking?",
+          "options": [
+            "El fotógrafo",
+            "El novio",
+            "El cura"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Dónde están los niños?",
+          "qEn": "Where are the children?",
+          "options": [
+            "Atrás",
+            "Adelante",
+            "En las sillas"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Dónde están los abuelos?",
+          "qEn": "Where are the grandparents?",
+          "options": [
+            "Atrás",
+            "En la pista",
+            "En las sillas"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Dónde están los tíos?",
+          "qEn": "Where are the uncles and aunts?",
+          "options": [
+            "Atrás",
+            "Adelante",
+            "En la casa"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Te gustan las fotos de familia?",
+          "qEn": "Do you like family photos?",
+          "model": "Sí, me gustan mucho."
+        },
+        {
+          "q": "¿Sonríes en las fotos?",
+          "qEn": "Do you smile in photos?",
+          "model": "Sí, siempre sonrío."
+        },
+        {
+          "q": "¿Cuántos tíos tienes?",
+          "qEn": "How many uncles and aunts do you have?",
+          "model": "Tengo cuatro tíos."
+        }
+      ],
+      "gaps": "Los [niños] adelante. Los [abuelos] en las [sillas]. Los [tíos] atrás.",
+      "glossary": [
+        {
+          "word": "adelante",
+          "meaning": "en la parte de enfrente",
+          "en": "in front"
+        },
+        {
+          "word": "atrás",
+          "meaning": "en la parte de detrás",
+          "en": "at the back"
+        },
+        {
+          "word": "sonrían",
+          "meaning": "pongan una cara feliz",
+          "en": "smile"
+        }
+      ]
+    },
+    {
+      "id": "muelle",
+      "title": "La luna en el agua",
+      "place": "El muelle de la laguna",
+      "context": "Facundo está solo en el muelle, de noche.",
+      "contextEn": "Facundo is alone on the jetty at night.",
+      "speakers": [
+        {
+          "name": "Facundo",
+          "country": "Argentina",
+          "voice": "es-AR-TomasNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Es de noche. Hay luna.",
+          "en": "It is night. There is a moon."
+        },
+        {
+          "s": 0,
+          "text": "El agua está tranquila. Hay ranas.",
+          "en": "The water is calm. There are frogs."
+        },
+        {
+          "s": 0,
+          "text": "Mi amigo se casa hoy. Estoy contento.",
+          "en": "My friend is getting married today. I am happy."
+        },
+        {
+          "s": 0,
+          "text": "Pero también estoy triste. Extraño a mi papá.",
+          "en": "But I am also sad. I miss my dad."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué hay en el cielo?",
+          "qEn": "What is in the sky?",
+          "options": [
+            "El sol",
+            "La luna",
+            "Nubes"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cómo está el agua?",
+          "qEn": "How is the water?",
+          "options": [
+            "Fría",
+            "Sucia",
+            "Tranquila"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué animales hay?",
+          "qEn": "What animals are there?",
+          "options": [
+            "Ranas",
+            "Patos",
+            "Peces"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿A quién extraña Facundo?",
+          "qEn": "Who does Facundo miss?",
+          "options": [
+            "A su novia",
+            "A su papá",
+            "A su perro"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Te gusta la noche?",
+          "qEn": "Do you like the night?",
+          "model": "Sí, me gusta mucho."
+        },
+        {
+          "q": "¿A quién extrañas?",
+          "qEn": "Who do you miss?",
+          "model": "Extraño a mi abuelo."
+        },
+        {
+          "q": "¿Estás contento hoy?",
+          "qEn": "Are you happy today?",
+          "model": "Sí, estoy contento."
+        }
+      ],
+      "gaps": "Mi [amigo] se casa hoy. Estoy [contento]. Pero [también] estoy [triste].",
+      "glossary": [
+        {
+          "word": "luna",
+          "meaning": "luz grande del cielo de noche",
+          "en": "moon"
+        },
+        {
+          "word": "ranas",
+          "meaning": "animales verdes que saltan",
+          "en": "frogs"
+        },
+        {
+          "word": "extraño",
+          "meaning": "siento la falta de alguien",
+          "en": "I miss"
+        }
+      ]
+    },
+    {
+      "id": "brindis",
+      "title": "¡Vivan los novios!",
+      "place": "La carpa a medianoche",
+      "context": "Mariela, Valentina y Joaquín están en el escenario.",
+      "contextEn": "Mariela, Valentina and Joaquín are on the stage.",
+      "speakers": [
+        {
+          "name": "Valentina",
+          "country": "Argentina",
+          "voice": "es-AR-ElenaNeural"
+        },
+        {
+          "name": "Joaquín",
+          "country": "México",
+          "voice": "es-MX-JorgeNeural"
+        },
+        {
+          "name": "Mariela",
+          "country": "Colombia",
+          "voice": "es-CO-SalomeNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 2,
+          "text": "Son las doce. ¡Arriba las copas!",
+          "en": "It is twelve o’clock. Raise your glasses!"
+        },
+        {
+          "s": 0,
+          "text": "Gracias a todos por venir.",
+          "en": "Thank you all for coming."
+        },
+        {
+          "s": 1,
+          "text": "Gracias a nuestras familias.",
+          "en": "Thanks to our families."
+        },
+        {
+          "s": 2,
+          "text": "¡Vivan los novios! Y ahora, ¡a bailar!",
+          "en": "Long live the bride and groom! And now, let’s dance!"
+        },
+        {
+          "s": 0,
+          "text": "¡Salud!",
+          "en": "Cheers!"
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué hora es?",
+          "qEn": "What time is it?",
+          "options": [
+            "Las diez",
+            "Las once",
+            "Las doce"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué levantan todos?",
+          "qEn": "What does everyone raise?",
+          "options": [
+            "Las copas",
+            "Las manos",
+            "Las sillas"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿A quién da las gracias Joaquín?",
+          "qEn": "Who does Joaquín thank?",
+          "options": [
+            "Al cura",
+            "A las familias",
+            "Al chef"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué dice Valentina al final?",
+          "qEn": "What does Valentina say at the end?",
+          "options": [
+            "¡Adiós!",
+            "¡Hola!",
+            "¡Salud!"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué dices en un brindis?",
+          "qEn": "What do you say in a toast?",
+          "model": "Digo «¡salud!»."
+        },
+        {
+          "q": "¿A quién das las gracias hoy?",
+          "qEn": "Who do you thank today?",
+          "model": "Doy las gracias a mi familia."
+        },
+        {
+          "q": "¿Te gustan las fiestas?",
+          "qEn": "Do you like parties?",
+          "model": "Sí, me gustan mucho."
+        }
+      ],
+      "gaps": "[Gracias] a [todos] por [venir]. Gracias a nuestras [familias].",
+      "glossary": [
+        {
+          "word": "copas",
+          "meaning": "vasos altos para vino",
+          "en": "glasses"
+        },
+        {
+          "word": "novios",
+          "meaning": "la pareja que se casa",
+          "en": "bride and groom"
+        },
+        {
+          "word": "salud",
+          "meaning": "palabra para brindar",
+          "en": "cheers"
+        }
+      ]
+    }
+  ]
+}

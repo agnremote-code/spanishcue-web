@@ -1,0 +1,1903 @@
+{
+  "game": "boda",
+  "level": "A2",
+  "items": [
+    {
+      "id": "porton",
+      "title": "La mañana después",
+      "place": "El portón de la estancia",
+      "context": "A las siete de la mañana, Anselmo y Wilmer recuerdan la noche mientras se van los últimos autos.",
+      "speakers": [
+        {
+          "name": "Anselmo",
+          "country": "Paraguay",
+          "voice": "es-PY-MarioNeural"
+        },
+        {
+          "name": "Wilmer",
+          "country": "Honduras",
+          "voice": "es-HN-CarlosNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "¡Qué noche, Wilmer! A las tres todavía llegaban invitados."
+        },
+        {
+          "s": 1,
+          "text": "Y a las cinco se iban. Tuve que despertar a un señor que dormía dentro de su auto."
+        },
+        {
+          "s": 0,
+          "text": "¿El de la camisa verde? Ese bailó toda la noche con la abuela."
+        },
+        {
+          "s": 1,
+          "text": "Ese mismo. Me dio cien pesos y un abrazo."
+        },
+        {
+          "s": 0,
+          "text": "Yo estuve en este portón dieciséis horas. Ahora voy a dormir hasta el lunes."
+        },
+        {
+          "s": 1,
+          "text": "Primero tenemos que encontrar al dueño de ese zapato rojo que quedó en el camino."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Hasta qué hora llegaban invitados?",
+          "options": [
+            "Hasta las tres",
+            "Hasta las cinco",
+            "Hasta la medianoche"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Dónde dormía el señor?",
+          "options": [
+            "En el jardín",
+            "Dentro de su auto",
+            "En la carpa"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Con quién bailó el señor de la camisa verde?",
+          "options": [
+            "Con la novia",
+            "Con Wilmer",
+            "Con la abuela"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué quedó en el camino?",
+          "options": [
+            "Un zapato rojo",
+            "Un teléfono",
+            "Una corbata"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Cuál fue la fiesta más larga de tu vida?",
+          "model": "Fue el cumpleaños de un amigo; terminamos a las siete de la mañana."
+        },
+        {
+          "q": "¿Alguna vez dormiste en un lugar raro después de una fiesta?",
+          "model": "Sí, una vez me quedé dormido en el sofá de un desconocido."
+        },
+        {
+          "q": "¿Qué haces el día después de una fiesta grande?",
+          "model": "Duermo mucho y como algo salado."
+        }
+      ],
+      "gaps": "Yo [estuve] en este [portón] dieciséis [horas]. Ahora voy a [dormir] hasta el lunes.",
+      "glossary": [
+        {
+          "word": "portón",
+          "meaning": "puerta grande de entrada"
+        },
+        {
+          "word": "dueño",
+          "meaning": "persona a quien pertenece algo"
+        },
+        {
+          "word": "abrazo",
+          "meaning": "gesto de rodear a alguien con los brazos"
+        }
+      ]
+    },
+    {
+      "id": "capilla",
+      "title": "El sermón más corto",
+      "place": "La capilla blanca",
+      "context": "El domingo por la mañana, Joaquín pasa por la capilla para agradecer al padre Benito.",
+      "speakers": [
+        {
+          "name": "Benito",
+          "country": "España",
+          "voice": "es-ES-AlvaroNeural"
+        },
+        {
+          "name": "Joaquín",
+          "country": "México",
+          "voice": "es-MX-JorgeNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Padre, gracias por todo. Y perdón por los anillos de gomita."
+        },
+        {
+          "s": 0,
+          "text": "No te preocupes, hijo. Fue la ceremonia más divertida de mis cuarenta años de cura."
+        },
+        {
+          "s": 1,
+          "text": "Usted habló muy poco. Pensé que iba a hablar una hora."
+        },
+        {
+          "s": 0,
+          "text": "Hacía demasiado calor. Además, cuando vi tu cara, supe que necesitabas terminar rápido."
+        },
+        {
+          "s": 1,
+          "text": "¿Y las gomitas? ¿Se las comió alguien?"
+        },
+        {
+          "s": 0,
+          "text": "Yo. Esta mañana, con el café. La roja estaba muy buena. La verde la guardé para la próxima boda."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Por qué pide perdón Joaquín?",
+          "options": [
+            "Por llegar tarde",
+            "Por los anillos de gomita",
+            "Por no ir a misa"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cómo fue la ceremonia para el padre Benito?",
+          "options": [
+            "La más aburrida",
+            "La más larga",
+            "La más divertida"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Por qué habló poco el cura?",
+          "options": [
+            "Porque hacía mucho calor",
+            "Porque estaba enfermo",
+            "Porque no tenía tiempo"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Quién se comió las gomitas?",
+          "options": [
+            "Joaquín",
+            "El padre Benito",
+            "Tadeo"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Cuál fue el discurso más largo que tuviste que escuchar?",
+          "model": "Fue en mi graduación; el director habló casi una hora."
+        },
+        {
+          "q": "¿Qué dulce comías con el café cuando eras niño?",
+          "model": "Comía galletas de mantequilla con mi abuela."
+        },
+        {
+          "q": "¿A quién le diste las gracias por algo importante últimamente?",
+          "model": "Le di las gracias a mi profesora de inglés."
+        }
+      ],
+      "gaps": "Hacía [demasiado] calor. Además, cuando vi tu [cara], [supe] que necesitabas [terminar] rápido.",
+      "glossary": [
+        {
+          "word": "cura",
+          "meaning": "sacerdote de la iglesia"
+        },
+        {
+          "word": "gomitas",
+          "meaning": "caramelos blandos de colores"
+        },
+        {
+          "word": "además",
+          "meaning": "también, y otra cosa"
+        }
+      ]
+    },
+    {
+      "id": "ninos",
+      "title": "Lo que Tadeo contó en el desayuno",
+      "place": "La galería, en el desayuno",
+      "context": "En el desayuno, Tadeo cuenta a su tía su versión de la boda.",
+      "speakers": [
+        {
+          "name": "Marisol",
+          "country": "República Dominicana",
+          "voice": "es-DO-RamonaNeural"
+        },
+        {
+          "name": "Tadeo",
+          "country": "República Dominicana",
+          "voice": "es-DO-EmilioNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Tía, ¿sabes que el anillo que le di a Lucero apareció?"
+        },
+        {
+          "s": 0,
+          "text": "¿Apareció? ¿Dónde?"
+        },
+        {
+          "s": 1,
+          "text": "Ceferino lo encontró en el establo, en el agua de los caballos. Brillaba como una estrella."
+        },
+        {
+          "s": 0,
+          "text": "Menos mal. Ayer pensé que me iban a echar de la familia."
+        },
+        {
+          "s": 1,
+          "text": "Yo me porté bien después: nada de correr, nada de gritar. Solo tres porciones de torta."
+        },
+        {
+          "s": 0,
+          "text": "Tres porciones no es portarse bien, Tadeo. Es otra cosa. Pero gracias por el anillo, y por el árbol de amor."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Dónde apareció el anillo?",
+          "options": [
+            "En el jardín",
+            "En la cocina",
+            "En el agua de los caballos"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Quién lo encontró?",
+          "options": [
+            "Ceferino",
+            "Marisol",
+            "Tadeo"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué pensó Marisol ayer?",
+          "options": [
+            "Que Tadeo estaba enfermo",
+            "Que la iban a echar de la familia",
+            "Que la boda se cancelaba"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cuántas porciones de torta comió Tadeo?",
+          "options": [
+            "Una",
+            "Dos",
+            "Tres"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué objeto importante perdiste alguna vez y después apareció?",
+          "model": "Una vez mis llaves aparecieron dentro de la heladera."
+        },
+        {
+          "q": "¿Cómo te portabas en las fiestas cuando eras niño?",
+          "model": "Mi hermano y yo corríamos todo el tiempo y comíamos muchos dulces."
+        },
+        {
+          "q": "¿Cuántas porciones de torta puedes comer?",
+          "model": "Normalmente una, pero en los cumpleaños dos."
+        }
+      ],
+      "gaps": "Ceferino lo [encontró] en el [establo], en el [agua] de los [caballos].",
+      "glossary": [
+        {
+          "word": "apareció",
+          "meaning": "se pudo ver otra vez"
+        },
+        {
+          "word": "brillaba",
+          "meaning": "daba luz"
+        },
+        {
+          "word": "portarse bien",
+          "meaning": "comportarse de forma correcta"
+        }
+      ]
+    },
+    {
+      "id": "novia",
+      "title": "Las fotos del vestido",
+      "place": "El cuarto de la novia",
+      "context": "Valentina y Camila miran fotos en el teléfono la mañana siguiente.",
+      "speakers": [
+        {
+          "name": "Valentina",
+          "country": "Argentina",
+          "voice": "es-AR-ElenaNeural"
+        },
+        {
+          "name": "Camila",
+          "country": "Nicaragua",
+          "voice": "es-NI-YolandaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Mira esta foto. Aquí todavía tenía el vestido de mi abuela perfecto, sin una mancha."
+        },
+        {
+          "s": 1,
+          "text": "Y aquí ya bailabas cumbia con los zapatos en la mano."
+        },
+        {
+          "s": 0,
+          "text": "¿Sabes qué me dijo la abuela cuando me vio con su vestido? Que yo estaba más linda que ella en 1962."
+        },
+        {
+          "s": 1,
+          "text": "¡Mentira! La abuela nunca dice eso. Ella siempre dice que es la más linda de la familia."
+        },
+        {
+          "s": 0,
+          "text": "Bueno, me dijo que estaba casi tan linda como ella. Para la abuela, es lo mismo."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué miran Valentina y Camila?",
+          "options": [
+            "Fotos en el teléfono",
+            "Un video",
+            "Una revista"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué bailaba Valentina con los zapatos en la mano?",
+          "options": [
+            "Tango",
+            "Cumbia",
+            "Vals"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué vestido llevaba Valentina?",
+          "options": [
+            "Uno nuevo",
+            "Uno de Camila",
+            "El de su abuela"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué le dijo realmente la abuela?",
+          "options": [
+            "Que estaba casi tan linda como ella",
+            "Que estaba más linda que ella",
+            "Que el vestido era feo"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué foto de una fiesta te gusta mirar otra vez?",
+          "model": "Me gusta una foto de mi cumpleaños con todos mis amigos."
+        },
+        {
+          "q": "¿Bailaste alguna vez descalzo en una fiesta?",
+          "model": "Sí, en la boda de mi hermana, porque me dolían los pies."
+        },
+        {
+          "q": "¿Qué cosa bonita te dijo alguien mayor de tu familia?",
+          "model": "Mi abuelo me dijo que yo era su nieto favorito."
+        }
+      ],
+      "gaps": "Y aquí ya [bailabas] cumbia con los [zapatos] en la [mano]. ¿Sabes qué me [dijo] la abuela cuando me vio con su vestido?",
+      "glossary": [
+        {
+          "word": "todavía",
+          "meaning": "hasta ese momento"
+        },
+        {
+          "word": "linda",
+          "meaning": "bonita"
+        },
+        {
+          "word": "mentira",
+          "meaning": "algo que no es verdad"
+        }
+      ]
+    },
+    {
+      "id": "abuela",
+      "title": "Doña Chela critica la fiesta",
+      "place": "La galería de la casa",
+      "context": "Doña Chela da su opinión sobre la boda a una vecina, el domingo por la mañana.",
+      "speakers": [
+        {
+          "name": "Chela",
+          "country": "Uruguay",
+          "voice": "es-UY-ValentinaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "La boda estuvo bien, no te voy a mentir. La comida era buena, aunque el asado lo hizo un chileno."
+        },
+        {
+          "s": 0,
+          "text": "El novio bailó el tango mejor que en la prueba. No mucho mejor, pero mejor."
+        },
+        {
+          "s": 0,
+          "text": "Lo que más me gustó fue la chica cubana que cantó la canción de mi juventud. Lloré como una tonta."
+        },
+        {
+          "s": 0,
+          "text": "Lo que menos me gustó fue mi hermana Ofelia, con ese vestido verde. Parecía una lechuga con collar."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué opina Chela de la comida?",
+          "options": [
+            "Que era mala",
+            "Que era buena",
+            "Que era poca"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cómo bailó el novio el tango?",
+          "options": [
+            "Muy mal",
+            "Perfecto",
+            "Un poco mejor que en la prueba"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué fue lo que más le gustó?",
+          "options": [
+            "La canción de la chica cubana",
+            "El vestido de la novia",
+            "La torta"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué fue lo que menos le gustó?",
+          "options": [
+            "La música",
+            "El vestido verde de su hermana",
+            "El cura"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué fue lo mejor de la última fiesta a la que fuiste?",
+          "model": "Lo mejor fue la música; bailamos toda la noche."
+        },
+        {
+          "q": "¿Qué canción te recuerda tu juventud?",
+          "model": "Una canción de los noventa que escuchaba en el colegio."
+        },
+        {
+          "q": "¿Criticas la ropa de otras personas?",
+          "model": "A veces, pero solo con mi mejor amiga."
+        }
+      ],
+      "gaps": "Lo que más me [gustó] fue la [chica] cubana que [cantó] la canción de mi [juventud].",
+      "glossary": [
+        {
+          "word": "prueba",
+          "meaning": "momento para practicar"
+        },
+        {
+          "word": "juventud",
+          "meaning": "época de cuando eras joven"
+        },
+        {
+          "word": "lechuga",
+          "meaning": "verdura verde de las ensaladas"
+        }
+      ]
+    },
+    {
+      "id": "novio",
+      "title": "El mariachi fue un éxito",
+      "place": "El cuarto del novio",
+      "context": "Lupita y Ximena recuerdan la noche mientras hacen las maletas.",
+      "speakers": [
+        {
+          "name": "Lupita",
+          "country": "México",
+          "voice": "es-MX-DaliaNeural"
+        },
+        {
+          "name": "Ximena",
+          "country": "España",
+          "voice": "es-ES-XimenaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Ximena, ¿viste las caras de la familia de Valentina cuando entró el mariachi?"
+        },
+        {
+          "s": 1,
+          "text": "Sí, tía. Al principio estaban serios. Después, la abuela Chela pidió tres canciones más."
+        },
+        {
+          "s": 0,
+          "text": "¡Y el papá de la novia cantó «El Rey» con el sombrero de Don Chuy!"
+        },
+        {
+          "s": 1,
+          "text": "Y tú llorabas en la primera fila."
+        },
+        {
+          "s": 0,
+          "text": "Lloraba de felicidad. Mi hijo estaba tan contento… Y nadie vio el agujero de la camisa. Ahora ayúdame con estas maletas, que el avión sale a las tres."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué hacen Lupita y Ximena?",
+          "options": [
+            "El desayuno",
+            "Las camas",
+            "Las maletas"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cuántas canciones más pidió la abuela Chela?",
+          "options": [
+            "Tres",
+            "Una",
+            "Cinco"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué cantó el papá de la novia?",
+          "options": [
+            "Un tango",
+            "«El Rey»",
+            "Un bolero"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué no vio nadie?",
+          "options": [
+            "El mariachi",
+            "Las lágrimas de Lupita",
+            "El agujero de la camisa"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué sorpresa salió muy bien en tu familia?",
+          "model": "Una fiesta sorpresa para mi papá; lloró de alegría."
+        },
+        {
+          "q": "¿Lloras de felicidad a veces?",
+          "model": "Sí, en las bodas siempre lloro un poco."
+        },
+        {
+          "q": "¿Qué canción cantas en las fiestas?",
+          "model": "Siempre canto una canción de Shakira."
+        }
+      ],
+      "gaps": "Al [principio] estaban [serios]. Después, la abuela Chela [pidió] tres [canciones] más.",
+      "glossary": [
+        {
+          "word": "maletas",
+          "meaning": "bolsas grandes para viajar"
+        },
+        {
+          "word": "serios",
+          "meaning": "sin sonreír"
+        },
+        {
+          "word": "agujero",
+          "meaning": "hueco, abertura"
+        }
+      ]
+    },
+    {
+      "id": "cocina",
+      "title": "El postre que salvó la noche",
+      "place": "La cocina de la estancia",
+      "context": "Ramiro y Yesenia limpian la cocina y comentan la noche.",
+      "speakers": [
+        {
+          "name": "Ramiro",
+          "country": "Perú",
+          "voice": "es-PE-AlexNeural"
+        },
+        {
+          "name": "Yesenia",
+          "country": "Perú",
+          "voice": "es-PE-CamilaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Yesenia, ¿sabes cuántos vasitos de postre sirvieron?"
+        },
+        {
+          "s": 1,
+          "text": "Ciento ochenta, chef. Faltaron diez para los mozos, que estaban un poco enojados."
+        },
+        {
+          "s": 0,
+          "text": "Y la torta con el jardín de azúcar, ¿quién la comió?"
+        },
+        {
+          "s": 1,
+          "text": "Nadie. La tía Gloria preguntó por qué había flores en un costado. Le dije que era moderno."
+        },
+        {
+          "s": 0,
+          "text": "Muy bien. Ahora vamos a llevar la torta al pueblo. A los bomberos les encanta el merengue, y nunca preguntan quién es Renata."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cuántos vasitos de postre sirvieron?",
+          "options": [
+            "Ciento ochenta",
+            "Cien",
+            "Doscientos"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Para quién faltaron postres?",
+          "options": [
+            "Para los niños",
+            "Para los mozos",
+            "Para los novios"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué le dijo Yesenia a la tía Gloria sobre las flores?",
+          "options": [
+            "Que era un error",
+            "Que era una sorpresa",
+            "Que era moderno"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Adónde van a llevar la torta?",
+          "options": [
+            "A los bomberos del pueblo",
+            "A la iglesia",
+            "A la casa de los novios"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué haces con la comida que sobra de una fiesta?",
+          "model": "La reparto entre los amigos o la congelo."
+        },
+        {
+          "q": "¿Alguna vez dijiste una mentira pequeña para salvar una situación?",
+          "model": "Sí, le dije a mi tía que me encantaba su regalo."
+        },
+        {
+          "q": "¿Qué postre te gusta preparar?",
+          "model": "Me gusta preparar flan con caramelo."
+        }
+      ],
+      "gaps": "Nadie. La tía Gloria [preguntó] por qué había [flores] en un [costado]. Le dije que era [moderno].",
+      "glossary": [
+        {
+          "word": "vasitos",
+          "meaning": "vasos pequeños"
+        },
+        {
+          "word": "costado",
+          "meaning": "lado"
+        },
+        {
+          "word": "bomberos",
+          "meaning": "personas que apagan incendios"
+        }
+      ]
+    },
+    {
+      "id": "asado",
+      "title": "Don Beto hace cuentas",
+      "place": "La parrilla del jardín",
+      "context": "Don Beto limpia la parrilla y habla con su hijo por teléfono.",
+      "speakers": [
+        {
+          "name": "Beto",
+          "country": "Chile",
+          "voice": "es-CL-LorenzoNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Hola, Nico. Sí, terminé a las cuatro de la mañana. Estoy muerto. Me duelen los brazos y huelo a humo."
+        },
+        {
+          "s": 0,
+          "text": "Al final vinieron cuarenta primos más. Corté la carne más fina y alcanzó para todos."
+        },
+        {
+          "s": 0,
+          "text": "¿Y sabes qué? Un tío argentino me ayudó con los choripanes. Hablamos de fútbol tres horas."
+        },
+        {
+          "s": 0,
+          "text": "No, no nos peleamos. Bueno, un poco. Pero me invitó a su casa en Rosario. Creo que voy a ir."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿A qué hora terminó Don Beto?",
+          "options": [
+            "A la medianoche",
+            "A las cuatro de la mañana",
+            "A las dos"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué hizo con la carne?",
+          "options": [
+            "Compró más",
+            "La guardó",
+            "La cortó más fina"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿De qué hablaron Don Beto y el tío argentino?",
+          "options": [
+            "De fútbol",
+            "De política",
+            "De vinos"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Adónde lo invitó el tío argentino?",
+          "options": [
+            "A un partido",
+            "A su casa en Rosario",
+            "A Chile"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Hiciste alguna vez un amigo en una fiesta?",
+          "model": "Sí, conocí a mi mejor amiga en un cumpleaños."
+        },
+        {
+          "q": "¿Hasta qué hora trabajaste el día más largo de tu vida?",
+          "model": "Trabajé hasta las tres de la mañana en un restaurante."
+        },
+        {
+          "q": "¿Con quién puedes hablar de fútbol horas y horas?",
+          "model": "Con mi primo; los dos somos del mismo equipo."
+        }
+      ],
+      "gaps": "Al final [vinieron] cuarenta [primos] más. [Corté] la carne más [fina] y alcanzó para todos.",
+      "glossary": [
+        {
+          "word": "muerto",
+          "meaning": "muy cansado (coloquial)"
+        },
+        {
+          "word": "alcanzó",
+          "meaning": "fue suficiente"
+        },
+        {
+          "word": "choripanes",
+          "meaning": "panes con chorizo"
+        }
+      ]
+    },
+    {
+      "id": "mesa",
+      "title": "¿Qué pasó en la mesa siete?",
+      "place": "Las mesas largas",
+      "context": "A la mañana, Gloria y Pepe se encuentran solos en la mesa del desayuno.",
+      "speakers": [
+        {
+          "name": "Gloria",
+          "country": "Panamá",
+          "voice": "es-PA-MargaritaNeural"
+        },
+        {
+          "name": "Pepe",
+          "country": "Panamá",
+          "voice": "es-PA-RobertoNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Buenos días, Gloria. ¿Dormiste bien? Te traje un café con leche, como antes."
+        },
+        {
+          "s": 0,
+          "text": "Poco. La música estaba muy alta. ¿Y tú?"
+        },
+        {
+          "s": 1,
+          "text": "Yo tampoco. Pensaba en anoche. En lo que pasó detrás del establo."
+        },
+        {
+          "s": 0,
+          "text": "No pasó nada detrás del establo, Pepe. Tomamos demasiado vino."
+        },
+        {
+          "s": 1,
+          "text": "Bueno. Entonces mañana no pasa nada otra vez, ¿te parece? Te invito a cenar."
+        },
+        {
+          "s": 0,
+          "text": "Una cena. Solo una. Y pagas tú. Y no le digas nada a mi hermana, que ya tiene suficiente con su victoria."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Por qué Gloria durmió poco?",
+          "options": [
+            "Porque hacía frío",
+            "Porque tenía hambre",
+            "Porque la música estaba muy alta"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿En qué pensaba Pepe?",
+          "options": [
+            "En lo que pasó detrás del establo",
+            "En el trabajo",
+            "En el viaje"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Según Gloria, ¿qué pasó?",
+          "options": [
+            "Que discutieron",
+            "Que tomaron demasiado vino",
+            "Que bailaron tango"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Quién va a pagar la cena?",
+          "options": [
+            "Gloria",
+            "Los dos",
+            "Pepe"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Dormiste bien anoche?",
+          "model": "Sí, descansé ocho horas."
+        },
+        {
+          "q": "¿Volviste a hablar alguna vez con alguien después de mucho tiempo?",
+          "model": "Sí, con una amiga del colegio después de diez años."
+        },
+        {
+          "q": "¿Quién paga en tu país cuando dos personas salen a cenar?",
+          "model": "Normalmente cada uno paga lo suyo."
+        }
+      ],
+      "gaps": "Yo [tampoco]. Pensaba en [anoche]. En lo que [pasó] detrás del [establo].",
+      "glossary": [
+        {
+          "word": "anoche",
+          "meaning": "la noche anterior"
+        },
+        {
+          "word": "tampoco",
+          "meaning": "también no"
+        },
+        {
+          "word": "cenar",
+          "meaning": "comer por la noche"
+        }
+      ]
+    },
+    {
+      "id": "ex",
+      "title": "El regreso de Renata",
+      "place": "El rosedal",
+      "context": "Rocío recoge las flores y Renata viene a despedirse.",
+      "speakers": [
+        {
+          "name": "Renata",
+          "country": "Venezuela",
+          "voice": "es-VE-PaolaNeural"
+        },
+        {
+          "name": "Rocío",
+          "country": "Ecuador",
+          "voice": "es-EC-AndreaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Rocío, me voy. Gracias por esconderme ayer detrás del arco."
+        },
+        {
+          "s": 1,
+          "text": "De nada. Fue la misión más rara de mi vida. ¿Al final hablaste con Joaquín?"
+        },
+        {
+          "s": 0,
+          "text": "Sí, a las dos de la mañana. Facundo y yo le contamos todo. Primero se enojó un poco, después se rió."
+        },
+        {
+          "s": 1,
+          "text": "¿Y la novia?"
+        },
+        {
+          "s": 0,
+          "text": "Valentina me dio un abrazo y me dijo que mi vestido era precioso. Fue muy raro, pero bonito. Ahora Facundo y yo vamos a desayunar en el pueblo."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Dónde estuvo escondida Renata?",
+          "options": [
+            "Detrás del arco",
+            "En el establo",
+            "En el auto"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿A qué hora hablaron con Joaquín?",
+          "options": [
+            "A la medianoche",
+            "A las dos de la mañana",
+            "A las cinco"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cómo reaccionó Joaquín al final?",
+          "options": [
+            "Lloró",
+            "Se fue",
+            "Se rió"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué hizo Valentina?",
+          "options": [
+            "Le dio un abrazo",
+            "No le habló",
+            "Le pidió que se fuera"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Alguna vez tuviste que contar una verdad difícil?",
+          "model": "Sí, le dije a un amigo que no quería ir a su viaje."
+        },
+        {
+          "q": "¿Qué haces cuando alguien se enoja contigo?",
+          "model": "Espero un poco y después hablo con calma."
+        },
+        {
+          "q": "¿Cuál fue una situación rara pero bonita de tu vida?",
+          "model": "Conocí a mi pareja en una sala de espera del dentista."
+        }
+      ],
+      "gaps": "Sí, a las [dos] de la mañana. Facundo y yo le [contamos] todo. Primero se [enojó] un poco, después se [rió].",
+      "glossary": [
+        {
+          "word": "esconderme",
+          "meaning": "ponerme donde no me vean"
+        },
+        {
+          "word": "arco",
+          "meaning": "estructura curva con flores"
+        },
+        {
+          "word": "se enojó",
+          "meaning": "se puso enfadado"
+        }
+      ]
+    },
+    {
+      "id": "planner",
+      "title": "Mariela evalúa la boda",
+      "place": "La entrada de la carpa",
+      "context": "Mariela graba una nota de voz para su agenda.",
+      "speakers": [
+        {
+          "name": "Mariela",
+          "country": "Colombia",
+          "voice": "es-CO-SalomeNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Nota sobre la boda de Valentina y Joaquín. Fue un desastre perfecto."
+        },
+        {
+          "s": 0,
+          "text": "El padrino desapareció, la torta tenía otro nombre, el cierre del vestido se rompió y un caballo se comió el ramo."
+        },
+        {
+          "s": 0,
+          "text": "Pero los novios estaban felices y la gente bailó hasta las cinco."
+        },
+        {
+          "s": 0,
+          "text": "Lo más importante: tuve ayuda de un invitado que no estaba en la lista. Para la próxima boda, necesito una persona así en mi equipo."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cómo describe Mariela la boda?",
+          "options": [
+            "Un éxito total",
+            "Un desastre perfecto",
+            "Un desastre completo"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué se comió el caballo?",
+          "options": [
+            "La torta",
+            "Las flores de la mesa",
+            "El ramo"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Hasta qué hora bailó la gente?",
+          "options": [
+            "Hasta las cinco",
+            "Hasta las tres",
+            "Hasta la medianoche"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué quiere Mariela para la próxima boda?",
+          "options": [
+            "Otro caballo",
+            "Una persona como el invitado en su equipo",
+            "Más dinero"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué evento salió mal pero fue divertido?",
+          "model": "Un viaje con mis amigos; perdimos el tren, pero fue genial."
+        },
+        {
+          "q": "¿Usas notas de voz para recordar cosas?",
+          "model": "Sí, las uso para la lista del supermercado."
+        },
+        {
+          "q": "¿Qué persona necesitas en tu equipo de trabajo?",
+          "model": "Alguien organizado y con buen humor."
+        }
+      ],
+      "gaps": "Pero los [novios] estaban [felices] y la [gente] bailó hasta las [cinco].",
+      "glossary": [
+        {
+          "word": "desapareció",
+          "meaning": "no se pudo ver más"
+        },
+        {
+          "word": "ramo",
+          "meaning": "flores que lleva la novia"
+        },
+        {
+          "word": "equipo",
+          "meaning": "grupo de personas que trabajan juntas"
+        }
+      ]
+    },
+    {
+      "id": "banda",
+      "title": "Dos bandas, una amistad",
+      "place": "El escenario de la carpa",
+      "context": "Los músicos guardan los instrumentos al amanecer.",
+      "speakers": [
+        {
+          "name": "Willy",
+          "country": "Cuba",
+          "voice": "es-CU-ManuelNeural"
+        },
+        {
+          "name": "Chuy",
+          "country": "Guatemala",
+          "voice": "es-GT-AndresNeural"
+        },
+        {
+          "name": "Yamilé",
+          "country": "Cuba",
+          "voice": "es-CU-BelkysNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Willy, ¿dónde guardaste mi sombrero?"
+        },
+        {
+          "s": 0,
+          "text": "No sé, compadre. La última vez lo tenía el papá de la novia."
+        },
+        {
+          "s": 2,
+          "text": "Lo tiene Don Horacio, sí. Se durmió con el sombrero puesto en una silla."
+        },
+        {
+          "s": 1,
+          "text": "Bueno, que se lo quede. Es un regalo. Fue una buena noche."
+        },
+        {
+          "s": 0,
+          "text": "La mejor. Tocamos juntos hasta el amanecer y nadie se peleó. Oye, el mes que viene tocamos en Miami. ¿Vienen con nosotros?"
+        },
+        {
+          "s": 1,
+          "text": "Si hay tequila, sí."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué busca Don Chuy?",
+          "options": [
+            "Su guitarra",
+            "Su teléfono",
+            "Su sombrero"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Quién tiene el sombrero?",
+          "options": [
+            "Don Horacio",
+            "Willy",
+            "Yamilé"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Dónde se durmió Don Horacio?",
+          "options": [
+            "En el auto",
+            "En una silla",
+            "En la pista"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Dónde tocan el mes que viene?",
+          "options": [
+            "En Guadalajara",
+            "En La Habana",
+            "En Miami"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Perdiste algo en una fiesta alguna vez?",
+          "model": "Sí, una chaqueta en un concierto."
+        },
+        {
+          "q": "¿Te quedaste dormido en un lugar público?",
+          "model": "Sí, en el tren, y me pasé de estación."
+        },
+        {
+          "q": "¿Qué artista te gustaría ver en concierto?",
+          "model": "Me gustaría ver a Bad Bunny."
+        }
+      ],
+      "gaps": "Lo tiene Don Horacio, sí. Se [durmió] con el [sombrero] [puesto] en una [silla].",
+      "glossary": [
+        {
+          "word": "compadre",
+          "meaning": "amigo, compañero"
+        },
+        {
+          "word": "guardaste",
+          "meaning": "pusiste en un lugar seguro"
+        },
+        {
+          "word": "amanecer",
+          "meaning": "cuando sale el sol"
+        }
+      ]
+    },
+    {
+      "id": "pista",
+      "title": "El vals que salió bien",
+      "place": "La pista de baile",
+      "context": "Don Horacio le cuenta el vals a su hermano por teléfono.",
+      "speakers": [
+        {
+          "name": "Horacio",
+          "country": "Uruguay",
+          "voice": "es-UY-MateoNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Hermano, ¡bailé el vals sin caerme! La rodilla aguantó. Tú decías que me iba a caer delante de todos."
+        },
+        {
+          "s": 0,
+          "text": "Un chico me enseñó a dar pasos cortos y funcionó. Parecía un actor de cine."
+        },
+        {
+          "s": 0,
+          "text": "Valentina me miraba y sonreía. Yo casi lloraba. Toda la gente aplaudía y la abuela Chela gritaba «¡bravo!» desde su silla."
+        },
+        {
+          "s": 0,
+          "text": "Después bailé una cumbia y ahí sí me dolió. Pero valió la pena. Ahora estoy con hielo en la rodilla y muy feliz."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Con quién habla Don Horacio?",
+          "options": [
+            "Con su hermano",
+            "Con su médico",
+            "Con su hija"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué le enseñó el chico?",
+          "options": [
+            "A bailar tango",
+            "A dar pasos cortos",
+            "A cantar"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cuándo le dolió la rodilla?",
+          "options": [
+            "Durante el vals",
+            "Al llegar",
+            "Cuando bailó la cumbia"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué tiene ahora en la rodilla?",
+          "options": [
+            "Hielo",
+            "Una venda nueva",
+            "Nada"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué cosa difícil hiciste y valió la pena?",
+          "model": "Hice una maratón; me dolió todo, pero valió la pena."
+        },
+        {
+          "q": "¿Quién te enseñó a bailar?",
+          "model": "Mi madre me enseñó en la cocina."
+        },
+        {
+          "q": "¿Qué haces cuando te duele algo después de hacer deporte?",
+          "model": "Me pongo hielo y descanso."
+        }
+      ],
+      "gaps": "Después bailé una [cumbia] y ahí sí me [dolió]. Pero [valió] la [pena].",
+      "glossary": [
+        {
+          "word": "aguantó",
+          "meaning": "resistió, no se rompió"
+        },
+        {
+          "word": "hielo",
+          "meaning": "agua congelada"
+        },
+        {
+          "word": "valió la pena",
+          "meaning": "fue bueno aunque fue difícil"
+        }
+      ]
+    },
+    {
+      "id": "barra",
+      "title": "Ximena y el barman",
+      "place": "La barra",
+      "context": "Ximena vuelve a la barra a la mañana para recuperar su chal.",
+      "speakers": [
+        {
+          "name": "Edgardo",
+          "country": "Puerto Rico",
+          "voice": "es-PR-VictorNeural"
+        },
+        {
+          "name": "Ximena",
+          "country": "España",
+          "voice": "es-ES-XimenaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Edgardo, buenos días. ¿Viste un chal azul?"
+        },
+        {
+          "s": 0,
+          "text": "Sí, aquí está, al lado de las botellas. Lo dejaste cuando saliste a bailar sola."
+        },
+        {
+          "s": 1,
+          "text": "¡Qué noche! Me dolían los pies, pero bailé hasta las cuatro. Al final nadie más me preguntó cuándo me caso."
+        },
+        {
+          "s": 0,
+          "text": "Porque las tías te vieron bailar y entendieron todo. Yo lo vi desde aquí."
+        },
+        {
+          "s": 1,
+          "text": "¿Qué entendieron?"
+        },
+        {
+          "s": 0,
+          "text": "Que eras la persona más feliz de la fiesta. Y eso no necesita explicación."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué busca Ximena?",
+          "options": [
+            "Su teléfono",
+            "Un chal azul",
+            "Sus zapatos"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cuándo dejó el chal?",
+          "options": [
+            "Cuando llegó",
+            "Cuando se fue",
+            "Cuando salió a bailar sola"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué no pasó más?",
+          "options": [
+            "Nadie le preguntó cuándo se casa",
+            "Nadie la invitó a bailar",
+            "Nadie habló con ella"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Según Edgardo, ¿qué entendieron las tías?",
+          "options": [
+            "Que tenía novio",
+            "Que era la persona más feliz de la fiesta",
+            "Que estaba cansada"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué cosa olvidaste en una fiesta?",
+          "model": "Me olvidé el paraguas en la casa de un amigo."
+        },
+        {
+          "q": "¿Bailas solo a veces?",
+          "model": "Sí, en mi cocina, cuando cocino."
+        },
+        {
+          "q": "¿Qué pregunta te hacía tu familia y ya no te hace?",
+          "model": "Me preguntaban cuándo iba a terminar la universidad."
+        }
+      ],
+      "gaps": "Que eras la [persona] más [feliz] de la [fiesta]. Y eso no necesita [explicación].",
+      "glossary": [
+        {
+          "word": "chal",
+          "meaning": "tela grande para los hombros"
+        },
+        {
+          "word": "dejaste",
+          "meaning": "no te llevaste"
+        },
+        {
+          "word": "entendieron",
+          "meaning": "comprendieron"
+        }
+      ]
+    },
+    {
+      "id": "establo",
+      "title": "La salida a caballo",
+      "place": "El establo",
+      "context": "Ceferino le cuenta a la veterinaria lo que pasó a medianoche.",
+      "speakers": [
+        {
+          "name": "Ceferino",
+          "country": "Bolivia",
+          "voice": "es-BO-MarceloNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Doctora, quería contarle lo de anoche, porque usted estaba preocupada. A medianoche explotaron los fuegos artificiales."
+        },
+        {
+          "s": 0,
+          "text": "Lucero levantó las orejas, pero no se movió. Yo le hablaba bajito, en quechua."
+        },
+        {
+          "s": 0,
+          "text": "Los novios subieron y él caminó despacio hasta el portón. Parecía un caballo de desfile."
+        },
+        {
+          "s": 0,
+          "text": "Después comió un poco de pasto y se durmió. Yo no pude cerrar los ojos en toda la noche. Estaba muy orgulloso de él, como un padre."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Con quién habla Ceferino?",
+          "options": [
+            "Con los novios",
+            "Con Mariela",
+            "Con la veterinaria"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué hizo Lucero con los fuegos artificiales?",
+          "options": [
+            "Levantó las orejas, pero no se movió",
+            "Corrió hacia el campo",
+            "Relinchó fuerte"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Hasta dónde caminó con los novios?",
+          "options": [
+            "Hasta la laguna",
+            "Hasta el portón",
+            "Hasta la capilla"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cómo se sentía Ceferino?",
+          "options": [
+            "Muy triste",
+            "Muy enojado",
+            "Muy orgulloso"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿De quién estuviste muy orgulloso alguna vez?",
+          "model": "De mi hermana, cuando terminó la carrera."
+        },
+        {
+          "q": "¿Qué animal te parece más inteligente?",
+          "model": "El perro, porque entiende muchas palabras."
+        },
+        {
+          "q": "¿Qué te gusta de los fuegos artificiales?",
+          "model": "Los colores, pero no me gusta el ruido."
+        }
+      ],
+      "gaps": "Los novios [subieron] y él [caminó] [despacio] hasta el [portón]. Parecía un caballo de desfile.",
+      "glossary": [
+        {
+          "word": "orejas",
+          "meaning": "partes de la cabeza para oír"
+        },
+        {
+          "word": "desfile",
+          "meaning": "marcha de personas o animales"
+        },
+        {
+          "word": "orgulloso",
+          "meaning": "muy contento por lo que hizo alguien"
+        }
+      ]
+    },
+    {
+      "id": "fotos",
+      "title": "Las mejores fotos de la noche",
+      "place": "Debajo del ombú",
+      "context": "Gonzalo manda un audio a los novios con las primeras fotos.",
+      "speakers": [
+        {
+          "name": "Gonzalo",
+          "country": "Colombia",
+          "voice": "es-CO-GonzaloNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Hola, chicos. Ya tengo las primeras fotos. Las de la ceremonia se perdieron, ya lo saben, y lo siento mucho."
+        },
+        {
+          "s": 0,
+          "text": "Pero las fotos debajo del ombú, con las luces, son las mejores de mi carrera."
+        },
+        {
+          "s": 0,
+          "text": "Hay una de la familia completa. Está movida y hay un perro en el centro."
+        },
+        {
+          "s": 0,
+          "text": "Para mí es la mejor foto de la noche. Ustedes deciden si la ponen en la sala o en el baño."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué fotos se perdieron?",
+          "options": [
+            "Las de la ceremonia",
+            "Las del baile",
+            "Las del ombú"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cómo son las fotos debajo del ombú?",
+          "options": [
+            "Muy oscuras",
+            "Las mejores de su carrera",
+            "Muy normales"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué hay en el centro de la foto de familia?",
+          "options": [
+            "La abuela",
+            "Un caballo",
+            "Un perro"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué tienen que decidir los novios?",
+          "options": [
+            "Dónde poner la foto",
+            "Qué fotos borrar",
+            "Cuánto pagar"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Cuál es tu foto favorita de tu familia?",
+          "model": "Una foto de todos en la playa, con mi abuelo."
+        },
+        {
+          "q": "¿Pones fotos en las paredes de tu casa?",
+          "model": "Sí, tengo tres fotos en la sala."
+        },
+        {
+          "q": "¿Perdiste fotos importantes alguna vez?",
+          "model": "Sí, cuando se me rompió el teléfono."
+        }
+      ],
+      "gaps": "Hay una de la [familia] [completa]. Está [movida] y hay un [perro] en el centro.",
+      "glossary": [
+        {
+          "word": "carrera",
+          "meaning": "vida profesional"
+        },
+        {
+          "word": "movida",
+          "meaning": "poco clara porque algo se movió"
+        },
+        {
+          "word": "sala",
+          "meaning": "habitación principal de la casa"
+        }
+      ]
+    },
+    {
+      "id": "muelle",
+      "title": "Facundo escribe otra vez",
+      "place": "El muelle de la laguna",
+      "context": "Al amanecer, Facundo vuelve al muelle y graba un mensaje para el amigo que dio el brindis.",
+      "speakers": [
+        {
+          "name": "Facundo",
+          "country": "Argentina",
+          "voice": "es-AR-TomasNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Hola. Te quería dar las gracias. Ayer me salvaste."
+        },
+        {
+          "s": 0,
+          "text": "Cuando leíste mis palabras en el brindis, toda la carpa se quedó en silencio. Joaquín lloraba."
+        },
+        {
+          "s": 0,
+          "text": "Yo estaba atrás, al lado de la barra, con Renata. Escuché el nombre de mi papá y algo muy bonito se movió aquí, en el pecho. Fue como tenerlo un minuto en la fiesta."
+        },
+        {
+          "s": 0,
+          "text": "Te debo una. Bueno, te debo muchas. Cuando vuelvas a Buenos Aires, el asado lo pago yo."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cuándo graba el mensaje Facundo?",
+          "options": [
+            "A medianoche",
+            "Al amanecer",
+            "Por la tarde"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué pasó en la carpa durante el brindis?",
+          "options": [
+            "Todos se fueron",
+            "Empezó la música",
+            "Se quedó en silencio"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Dónde estaba Facundo durante el brindis?",
+          "options": [
+            "Al lado de la barra",
+            "En el escenario",
+            "En el muelle"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué nombre escuchó Facundo?",
+          "options": [
+            "El de Renata",
+            "El de su papá",
+            "El suyo"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Alguien te salvó en un momento difícil?",
+          "model": "Sí, un compañero me ayudó con un trabajo muy urgente."
+        },
+        {
+          "q": "¿A quién le debes un favor grande?",
+          "model": "A mi vecina, que cuidó a mi gato un mes."
+        },
+        {
+          "q": "¿Qué sientes cuando alguien habla bien de tu familia?",
+          "model": "Me siento orgulloso y un poco tímido."
+        }
+      ],
+      "gaps": "Cuando [leíste] mis [palabras] en el brindis, toda la carpa se quedó en [silencio]. Joaquín [lloraba].",
+      "glossary": [
+        {
+          "word": "salvaste",
+          "meaning": "ayudaste en un problema grave"
+        },
+        {
+          "word": "pecho",
+          "meaning": "parte delantera del cuerpo"
+        },
+        {
+          "word": "te debo una",
+          "meaning": "tengo que devolverte un favor"
+        }
+      ]
+    },
+    {
+      "id": "brindis",
+      "title": "Los novios se despiden",
+      "place": "La carpa al amanecer",
+      "context": "Al amanecer, los novios se despiden de Mariela antes de irse.",
+      "speakers": [
+        {
+          "name": "Valentina",
+          "country": "Argentina",
+          "voice": "es-AR-ElenaNeural"
+        },
+        {
+          "name": "Joaquín",
+          "country": "México",
+          "voice": "es-MX-JorgeNeural"
+        },
+        {
+          "name": "Mariela",
+          "country": "Colombia",
+          "voice": "es-CO-SalomeNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 2,
+          "text": "Bueno, chicos. Ya se van. Es hora de despedirse. ¿Qué tal la boda?"
+        },
+        {
+          "s": 0,
+          "text": "Increíble. Nada salió como estaba en el plan, y fue perfecto."
+        },
+        {
+          "s": 1,
+          "text": "Lo mejor fue el brindis. Ese invitado leyó notas de toda la noche: la abuela, el caballo, la torta…"
+        },
+        {
+          "s": 2,
+          "text": "Yo pensaba que iba a decir algo corto. Habló cinco minutos y nadie se aburrió."
+        },
+        {
+          "s": 0,
+          "text": "Lo vamos a invitar a nuestro aniversario. Y esta vez va a estar en la lista."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cuándo se despiden los novios?",
+          "options": [
+            "A medianoche",
+            "Al mediodía",
+            "Al amanecer"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cómo salió la boda según Valentina?",
+          "options": [
+            "Nada salió según el plan, pero fue perfecto",
+            "Todo salió según el plan",
+            "Fue un desastre"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cuánto tiempo habló el invitado?",
+          "options": [
+            "Un minuto",
+            "Cinco minutos",
+            "Media hora"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Adónde van a invitar al invitado?",
+          "options": [
+            "A su casa",
+            "A su luna de miel",
+            "A su aniversario"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué evento de tu vida no salió como lo planeaste y fue mejor?",
+          "model": "Mi viaje a Perú; perdimos el vuelo y conocimos un pueblo precioso."
+        },
+        {
+          "q": "¿Te acuerdas de un brindis especial?",
+          "model": "Sí, el de mi abuelo en sus bodas de oro."
+        },
+        {
+          "q": "¿Celebras los aniversarios?",
+          "model": "Sí, siempre salimos a cenar."
+        }
+      ],
+      "gaps": "Increíble. Nada [salió] como [estaba] en el [plan], y fue [perfecto].",
+      "glossary": [
+        {
+          "word": "despedirse",
+          "meaning": "decir adiós"
+        },
+        {
+          "word": "aniversario",
+          "meaning": "fecha que se recuerda cada año"
+        },
+        {
+          "word": "se aburrió",
+          "meaning": "no se divirtió"
+        }
+      ]
+    }
+  ]
+}

@@ -181,6 +181,16 @@ export const GAMES = {
     ownListening: true,
     bilingualA0: true,
   },
+  // La boda: every guest with a problem has a listening at each level, voiced
+  // by the same people who speak in that scene. PRO lesson (ID 257).
+  boda: {
+    title: 'La boda',
+    levels: ['A0', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
+    spots: ['porton', 'capilla', 'ninos', 'novia', 'abuela', 'novio', 'cocina', 'asado', 'mesa', 'ex',
+      'planner', 'banda', 'pista', 'barra', 'establo', 'fotos', 'muelle', 'brindis'],
+    ownListening: true,
+    bilingualA0: true,
+  },
 };
 
 // Transcript length in words for each level.
