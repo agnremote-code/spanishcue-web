@@ -132,7 +132,7 @@ export function SpanishCueHero({ kicker, kickerInHeading = false, pricing = fals
             {locale === "es" ? "Prueba también gratis:" : "Also free to try:"}{" "}
             <a href="/demo/hospital-san-casi-vivo" onClick={() => trackMarketingEvent("cta_click", { placement: "hero_more_hospital", cta_type: "view_lesson", destination: "/demo/hospital-san-casi-vivo" })}>Hospital San Casi Vivo (3D)</a>
             {" · "}
-            <a href="/gramatica/clase-inicial" onClick={() => trackMarketingEvent("cta_click", { placement: "hero_more_grammar", cta_type: "view_lesson", destination: "/gramatica/clase-inicial" })}>{locale === "es" ? "Clase inicial de gramática" : "First grammar lesson"}</a>
+            <Link href="/gramatica/clase-inicial" onClick={() => trackMarketingEvent("cta_click", { placement: "hero_more_grammar", cta_type: "view_lesson", destination: "/gramatica/clase-inicial" })}>{locale === "es" ? "Clase inicial de gramática" : "First grammar lesson"}</Link>
           </p>
         )}
       </div>
