@@ -19,7 +19,7 @@ function safe(subscription: Awaited<ReturnType<typeof currentSubscriptionForUser
     paidThrough: subscription.paidThrough,
     accessConfirmed: Boolean(subscription.paidThrough && subscription.paidThrough > Math.floor(Date.now() / 1000)),
     cancelledAt: subscription.cancelledAt,
-    // The paid US$2 day: the first US$15.50 charge is due when it ends.
+    // The paid US$2 day: the first US$19.90 charge is due when it ends.
     trial: subscription.provider === "paddle" && subscription.lastAmountCents === 200,
     amountCents: subscription.lastAmountCents,
     // A declined renewal newer than the last completed payment.

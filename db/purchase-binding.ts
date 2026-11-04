@@ -1,4 +1,4 @@
-import type { BillingRuntimeConfig } from "../app/billing-config";
+import { APPROVED_PRICE_CENTS, type BillingRuntimeConfig } from "../app/billing-config";
 import {
   applyPaypalSubscriptionLifecycle, createPendingSubscription, recordPaypalPayment,
   subscriptionByPaypalId, type SubscriptionStatus,
@@ -14,7 +14,7 @@ export async function bindPurchaseToUser(
 ) {
   const claim = await beginPurchaseBind(db, claimId, userId, verifiedEmail);
   if (!claim || claim.environment !== config.paypalEnv || claim.offerCode !== config.founderOffer.code ||
-      typeof claim.amountCents !== "number" || !(claim.provider === "paddle" ? [200, 1500, 1550, 12900].includes(claim.amountCents ?? 0) : claim.amountCents === 1500) || claim.currency !== "USD" ||
+      typeof claim.amountCents !== "number" || !(claim.provider === "paddle" ? [200, 1500, 1550, 1990, 12900, 19900].includes(claim.amountCents ?? 0) : claim.amountCents === APPROVED_PRICE_CENTS) || claim.currency !== "USD" ||
       !claim.providerSubscriptionId || !claim.providerPaymentId || !claim.paidAt ||
       !claim.paidThrough || claim.paidThrough <= Math.floor(Date.now() / 1000)) return null;
 

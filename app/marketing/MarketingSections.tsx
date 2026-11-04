@@ -80,7 +80,7 @@ const copy = {
     ],
     launchBillingFacts: [
       ["Estado", "Lanzamiento próximo"],
-      ["Precio previsto", "US$15.50/mes con tarjeta"],
+      ["Precio previsto", "US$19.90/mes con tarjeta"],
       ["Pago hoy", "Ninguno"],
       ["Aviso", "Antes de activar cobros"],
     ],
@@ -182,7 +182,7 @@ const copy = {
     ],
     launchBillingFacts: [
       ["Status", "Launching soon"],
-      ["Planned price", "US$15.50/month by card"],
+      ["Planned price", "US$19.90/month by card"],
       ["Payment today", "None"],
       ["Notice", "Before charges start"],
     ],
@@ -205,7 +205,7 @@ const copy = {
       ["What does the free account include?", "Ten real lessons: two from every category. No card is required to create an account."],
       ["What does PRO include?", "Access to the complete grammar, conversation, listening, pronunciation and vocabulary library while your subscription is active."],
       ["How does Founder Price work?", "The offer is limited to the first 1,000 subscriptions with a confirmed full monthly payment. Current amounts appear on Pricing."],
-      ["Does the subscription renew automatically?", "Yes. Monthly subscriptions renew until cancelled. The one-day trial, when available, converts afterward to the stated monthly price."],
+      ["Does the subscription renew automatically?", "Yes. Subscriptions renew every month or year, as chosen, until cancelled."],
       ["How does cancellation work?", "You can cancel in My account. Review your chosen payment method terms before subscribing."],
       ["What if PRO isn’t right for me?", "You have a 30-day guarantee: if it isn’t right for you, email support and we refund your first payment."],
       ["What happens to my price if I cancel and return?", "Cancellation ends the guarantee tied to that subscription. If you return, the offer available at that time applies."],
@@ -348,8 +348,8 @@ export function FounderOffer({ audience, primary, primaryLabel }: { audience: Ma
   }, [audience]);
   const checkoutLive = Boolean(status?.available && status.mode === "live" && status.publicCheckoutAvailable);
   const priceLabel = checkoutLive && !status?.paddleCheckoutAvailable
-    ? `US$${(status?.paypalPriceUsd ?? 15).toFixed(2)}`
-    : "US$15.50";
+    ? `US$${(status?.paypalPriceUsd ?? 19.9).toFixed(2)}`
+    : "US$19.90";
   const subscriptionCta = subscriptionCtaFor(audience);
   const launchCta: MarketingCta = { href: "/pricing", labelKey: "nav.subscribe", event: "cta_click", intent: "subscribe" };
   const availability = status && !status.publicCheckoutAvailable
@@ -434,9 +434,9 @@ export function FAQ() {
     return () => controller.abort();
   }, []);
   const paymentAnswer = billing === "both"
-    ? (locale === "es" ? "Sí. Con tarjeta pagas US$15.50/mes o US$129/año (2 meses gratis), o eliges PayPal. Tienes garantía de 30 días en tu primer pago y cancelas cuando quieras." : "Yes. By card you pay US$15.50/month or US$129/year (2 months free), or choose PayPal. Your first payment has a 30-day guarantee and you can cancel anytime.")
+    ? (locale === "es" ? "Sí. Con tarjeta pagas US$19.90/mes o US$199/año (2 meses gratis), o eliges PayPal. Tienes garantía de 30 días en tu primer pago y cancelas cuando quieras." : "Yes. By card you pay US$19.90/month or US$199/year (2 months free), or choose PayPal. Your first payment has a 30-day guarantee and you can cancel anytime.")
     : billing === "card"
-      ? (locale === "es" ? "Sí. Con tarjeta pagas US$15.50/mes o US$129/año (2 meses gratis). Tienes garantía de 30 días en tu primer pago y cancelas cuando quieras." : "Yes. By card you pay US$15.50/month or US$129/year (2 months free). Your first payment has a 30-day guarantee and you can cancel anytime.")
+      ? (locale === "es" ? "Sí. Con tarjeta pagas US$19.90/mes o US$199/año (2 meses gratis). Tienes garantía de 30 días en tu primer pago y cancelas cuando quieras." : "Yes. By card you pay US$19.90/month or US$199/year (2 months free). Your first payment has a 30-day guarantee and you can cancel anytime.")
       : billing === "paypal"
         ? (locale === "es" ? "Sí. Puedes suscribirte con PayPal. Su precio se muestra antes del pago." : "Yes. You can subscribe with PayPal; its price is shown before payment.")
         : billing === "offline"

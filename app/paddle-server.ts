@@ -96,10 +96,13 @@ export async function createPaddleCheckoutTransaction(
     offerCode: string; offer?: PaddleOffer; attribution?: PaddleAttribution; referralCode?: string | null;
   },
 ) {
+  // Retired offers must never create new subscriptions. Keep their verification
+  // path intact for customers who already purchased them.
+  if (input.offer === "trial") throw new Error("trial_checkout_disabled");
   const data = await paddleJson<PaddleTransaction>(config, "/transactions", {
     method: "POST",
     body: JSON.stringify({
-      items: [{ price_id: input.offer === "trial" ? config.trialPriceId : input.offer === "annual" ? config.annualPriceId : config.priceId, quantity: 1 }],
+      items: [{ price_id: input.offer === "annual" ? config.annualPriceId : config.priceId, quantity: 1 }],
       currency_code: "USD",
       collection_mode: "automatic",
       custom_data: {

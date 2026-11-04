@@ -46,7 +46,7 @@ test('topic pages are in the sitemap, Spanish-first, indexable and edge-cached',
 
 test('copy keeps the published price and never invents customers, rankings or competitors',()=>{
  const text=JSON.stringify(m.temaPages)+JSON.stringify(m.temaGroups);
- assert.doesNotMatch(text,/US\$\s?(?!15,50)\d/);
+ assert.doesNotMatch(text,/US\$\s?(?!19,90|199\b)\d/);
  assert.doesNotMatch(text,/profede+le|miles de profesores|n\.º 1|número uno|\d+\s?(?:profesores|clientes) (?:ya|confían)/i);
 });
 

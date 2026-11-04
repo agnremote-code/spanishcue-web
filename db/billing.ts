@@ -362,7 +362,7 @@ export async function recordPaypalPayment(
 /**
  * The customer's first verified paid transaction is the Google Ads purchase
  * conversion: the US$2 trial when they started with one, otherwise the first
- * US$15.50 month. A later first full month after a trial is never returned
+ * US$19.90 month. A later first full month after a trial is never returned
  * here, so the browser cannot report one customer twice.
  */
 export async function claimFirstPaidConversionForUser(
@@ -394,7 +394,7 @@ export async function claimFirstPaidConversionForUser(
       transactionId: event.transactionId,
       value: event.amountCents / 100,
       currency: event.currency,
-      plan: event.eventName === "trial_paid" ? "trial" as const : event.amountCents === 12900 ? "annual" as const : "monthly" as const,
+      plan: event.eventName === "trial_paid" ? "trial" as const : [12900, 19900].includes(event.amountCents) ? "annual" as const : "monthly" as const,
     }
     : null;
 }

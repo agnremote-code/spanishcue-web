@@ -62,7 +62,7 @@ test('migration 0009 preserves an existing subscription, completed payment and P
   sqlite.prepare("INSERT INTO users (id,email,normalized_email,role,status,created_at,updated_at,last_sign_in_at) VALUES ('existing','paid@example.test','paid@example.test','teacher','active',1,1,1)").run();
   sqlite.prepare("INSERT INTO billing_subscriptions (user_id,provider,environment,provider_subscription_id,provider_plan_id,product_code,status,created_at,updated_at) VALUES ('existing','paypal','live','I-EXISTING','P-15','spanishcue-pro','ACTIVE',1,1)").run();
   const subscriptionId = sqlite.prepare("SELECT id FROM billing_subscriptions WHERE provider_subscription_id = 'I-EXISTING'").get().id;
-  sqlite.prepare("INSERT INTO billing_payments (user_id,subscription_id,provider,environment,provider_payment_id,amount_cents,currency,status,occurred_at,created_at,updated_at) VALUES ('existing',?,'paypal','live','SALE-EXISTING',1500,'USD','COMPLETED',1,1,1)").run(subscriptionId);
+  sqlite.prepare("INSERT INTO billing_payments (user_id,subscription_id,provider,environment,provider_payment_id,amount_cents,currency,status,occurred_at,created_at,updated_at) VALUES ('existing',?,'paypal','live','SALE-EXISTING',1990,'USD','COMPLETED',1,1,1)").run(subscriptionId);
   sqlite.prepare("INSERT INTO access_grants (user_id,product_code,access_level,source,source_reference,status,starts_at,created_at,updated_at) VALUES ('existing','spanishcue-pro','full','billing','I-EXISTING','active',1,1,1)").run();
   sqlite.exec((await readFile('drizzle/0009_glossy_mariko_yashida.sql', 'utf8')).replaceAll('--> statement-breakpoint', ''));
   assert.equal(sqlite.prepare("SELECT COUNT(*) AS count FROM billing_purchase_claims").get().count, 0);
@@ -97,7 +97,7 @@ test('confirmed provider email is required and only a matching verified account 
   assert.equal(await claims.beginPurchaseBind(db, claim.claimId, 'teacher-1', 'ale@example.test'), null);
   await claims.recordVerifiedPurchase(db, claim.claimId, 'paddle', {
     subscriptionId: 'sub_guest', paymentId: 'txn_guest', customerId: 'ctm_1',
-    email: 'Ale@Example.Test', amountCents: 1500, currency: 'USD', paidThrough: Math.floor(Date.now() / 1000) + 2592000,
+    email: 'Ale@Example.Test', amountCents: 1990, currency: 'USD', paidThrough: Math.floor(Date.now() / 1000) + 2592000,
     paidAt: Math.floor(Date.now() / 1000),
   });
   assert.equal(await claims.beginPurchaseBind(db, claim.claimId, 'teacher-other', 'other@example.test'), null);
@@ -117,7 +117,7 @@ test('the emailed sign-in link finds only a paid purchase by its verified buyer 
   assert.equal(await claims.purchaseClaimByVerifiedEmail(db, 'paddle', 'live', 'ale@example.test', 'teacher-1'), null, 'not before the payment is verified');
   await claims.recordVerifiedPurchase(db, claim.claimId, 'paddle', {
     subscriptionId: 'sub_mail', paymentId: 'txn_mail', customerId: 'ctm_m',
-    email: 'Ale@Example.Test', amountCents: 1550, currency: 'USD', paidThrough: Math.floor(Date.now() / 1000) + 2592000,
+    email: 'Ale@Example.Test', amountCents: 1990, currency: 'USD', paidThrough: Math.floor(Date.now() / 1000) + 2592000,
     paidAt: Math.floor(Date.now() / 1000),
   });
   assert.equal((await claims.purchaseClaimByVerifiedEmail(db, 'paddle', 'live', ' ALE@example.test ', 'teacher-1'))?.claimId, claim.claimId);
@@ -201,7 +201,7 @@ test('anonymous PayPal route starts provider checkout and reuses the same claim 
     const claims = await claimModule();
     await claims.recordVerifiedPurchase(globalThis.__issue40TestEnv.DB, claim.claim_id, 'paypal', {
       subscriptionId: 'I-GUEST', paymentId: 'SALE-FIRST', email: 'ale@example.test',
-      amountCents: 1500, currency: 'USD', paidAt: Math.floor(Date.now() / 1000),
+      amountCents: 1990, currency: 'USD', paidAt: Math.floor(Date.now() / 1000),
       paidThrough: Math.floor(Date.now() / 1000) + 2592000,
     });
     const paidRetry = await POST(request(cookie.split(';')[0]));
@@ -261,7 +261,7 @@ test('anonymous Paddle route returns a real transaction token without a SPANISHC
     const claimId = sqlite.prepare('SELECT claim_id FROM billing_purchase_claims').get().claim_id;
     await claims.recordVerifiedPurchase(globalThis.__issue40TestEnv.DB, claimId, 'paddle', {
       subscriptionId: `sub_${'b'.repeat(26)}`, paymentId: checkout.transactionId,
-      customerId: 'ctm_1', email: 'ale@example.test', amountCents: 1500, currency: 'USD',
+      customerId: 'ctm_1', email: 'ale@example.test', amountCents: 1990, currency: 'USD',
       paidAt: Math.floor(Date.now() / 1000), paidThrough: Math.floor(Date.now() / 1000) + 2592000,
     });
     const paidRetry = await POST(new Request(`${origin}/api/billing/paddle/checkout`, {
@@ -291,7 +291,7 @@ test('a verified purchase binds PRO, one Founder slot and one first-paid convers
   await claims.markPurchaseCheckout(db, claimId, 'paddle', { subscriptionId: 'sub_guest', paymentId: 'txn_guest' });
   await claims.recordVerifiedPurchase(db, claimId, 'paddle', {
     subscriptionId: 'sub_guest', paymentId: 'txn_guest', customerId: 'ctm_guest',
-    email: 'ale@example.test', amountCents: 1500, currency: 'USD',
+    email: 'ale@example.test', amountCents: 1990, currency: 'USD',
     paidAt: Math.floor(Date.now() / 1000), paidThrough: Math.floor(Date.now() / 1000) + 2592000,
   });
   assert.equal(await claims.bindPurchaseToUser(db, claimId, 'teacher-1', 'different@example.test', config, 'pri_founder'), null);
@@ -326,7 +326,7 @@ test('anonymous PayPal payment binds only after verified email and preserves sub
   assert.equal(await claims.bindPurchaseToUser(db, claimId, 'teacher-1', 'ale@example.test', config, ''), null);
   await claims.recordVerifiedPurchase(db, claimId, 'paypal', {
     subscriptionId: 'I-GUEST', paymentId: 'SALE-GUEST', email: 'Ale@Example.Test',
-    amountCents: 1500, currency: 'USD', paidAt: Math.floor(Date.now() / 1000),
+    amountCents: 1990, currency: 'USD', paidAt: Math.floor(Date.now() / 1000),
     paidThrough: Math.floor(Date.now() / 1000) + 2592000, providerStatus: 'ACTIVE',
   });
   assert.equal(await claims.bindPurchaseToUser(db, claimId, 'teacher-1', 'wrong@example.test', config, ''), null);
@@ -358,7 +358,7 @@ test('a claimed PayPal subscription keeps its original guest custom ID for later
   await claims.markPurchaseCheckout(db, claimId, 'paypal', { subscriptionId: 'I-GUEST' });
   await claims.recordVerifiedPurchase(db, claimId, 'paypal', {
     subscriptionId: 'I-GUEST', paymentId: 'SALE-GUEST', email: 'ale@example.test',
-    amountCents: 1500, currency: 'USD', paidAt: Math.floor(Date.now() / 1000),
+    amountCents: 1990, currency: 'USD', paidAt: Math.floor(Date.now() / 1000),
     paidThrough: Math.floor(Date.now() / 1000) + 2592000,
   });
   await claims.bindPurchaseToUser(db, claimId, 'teacher-1', 'ale@example.test', config, '');
@@ -391,7 +391,7 @@ test('claimed guest PayPal renewals pass signed webhook validation and remain id
   await claims.markPurchaseCheckout(db, claimId, 'paypal', { subscriptionId: 'I-GUEST' });
   await claims.recordVerifiedPurchase(db, claimId, 'paypal', {
     subscriptionId: 'I-GUEST', paymentId: 'SALE-FIRST', email: 'ale@example.test',
-    amountCents: 1500, currency: 'USD', paidAt: Math.floor(Date.now() / 1000),
+    amountCents: 1990, currency: 'USD', paidAt: Math.floor(Date.now() / 1000),
     paidThrough: Math.floor(Date.now() / 1000) + 2592000,
   });
   await claims.bindPurchaseToUser(db, claimId, 'teacher-1', 'ale@example.test', config, '');
@@ -410,7 +410,7 @@ test('claimed guest PayPal renewals pass signed webhook validation and remain id
   try {
     const event = {
       id: 'WH-RENEW', event_type: 'PAYMENT.SALE.COMPLETED', create_time: new Date().toISOString(),
-      resource: { billing_agreement_id: 'I-GUEST', id: 'SALE-RENEW', amount: { total: '15.00', currency: 'USD' } },
+      resource: { billing_agreement_id: 'I-GUEST', id: 'SALE-RENEW', amount: { total: '19.90', currency: 'USD' } },
     };
     const send = () => POST(new Request('https://spanishcue.com/api/billing/webhook', {
       method: 'POST', headers: {
@@ -457,7 +457,7 @@ test('a paid claim is not replaced by another tab before its owner registers', a
   await claims.markPurchaseCheckout(db, claimId, 'paddle', { subscriptionId: 'sub_guest', paymentId: 'txn_guest' });
   await claims.recordVerifiedPurchase(db, claimId, 'paddle', {
     subscriptionId: 'sub_guest', paymentId: 'txn_guest', customerId: 'ctm_guest', email: 'ale@example.test',
-    amountCents: 1500, currency: 'USD', paidAt: Math.floor(Date.now() / 1000),
+    amountCents: 1990, currency: 'USD', paidAt: Math.floor(Date.now() / 1000),
     paidThrough: Math.floor(Date.now() / 1000) + 2592000,
   });
   const result = await claims.getOrCreatePurchaseClaim(db, cookie, 'paddle', {
@@ -501,7 +501,7 @@ test('Paddle and PayPal paid claims allocate from one Live Founder pool', async 
     await claims.markPurchaseCheckout(db, claimId, provider, { subscriptionId, paymentId });
     await claims.recordVerifiedPurchase(db, claimId, provider, {
       subscriptionId, paymentId, email, customerId: provider === 'paddle' ? 'ctm_paddle' : null,
-      amountCents: 1500, currency: 'USD', paidAt: now, paidThrough: now + 2592000,
+      amountCents: 1990, currency: 'USD', paidAt: now, paidThrough: now + 2592000,
     });
     await claims.bindPurchaseToUser(db, claimId, userId, email, config, 'pri_founder');
   }
@@ -527,10 +527,10 @@ test('Paddle API must confirm exact price, completed transaction and customer em
   const paymentId = `txn_${'a'.repeat(26)}`;
   const subscriptionId = `sub_${'b'.repeat(26)}`;
   await claims.markPurchaseCheckout(db, claimId, 'paddle', { paymentId });
-  const price = { id: 'pri_01m38sk06dtyhga2d4h36rt5dc', product_id:'pro_01m38sbhv4c8756pat80kfhda0',tax_mode:'internal', unit_price: { amount: '1550', currency_code: 'USD' }, billing_cycle: { interval: 'month', frequency: 1 }, trial_period: null };
+  const price = { id: 'pri_01m38sk06dtyhga2d4h36rt5dc', product_id:'pro_01m38sbhv4c8756pat80kfhda0',tax_mode:'internal', unit_price: { amount: '1990', currency_code: 'USD' }, billing_cycle: { interval: 'month', frequency: 1 }, trial_period: null };
   const custom_data = { spanishcue_claim_id: claimId, spanishcue_offer_code: 'founder-1000-usd15-monthly' };
   let customerEmail;
-  let total = '1550';
+  let total = '1990';
   const originalFetch = globalThis.fetch;
   globalThis.fetch = async url => {
     if (String(url).includes('/transactions/')) {
@@ -552,7 +552,7 @@ test('Paddle API must confirm exact price, completed transaction and customer em
     assert.equal(await claims.verifyGuestPaddlePayment(db, config, await claims.getPurchaseClaim(db, claimId), paymentId), null);
     customerEmail = 'ale@example.test'; total = '1400';
     assert.equal(await claims.verifyGuestPaddlePayment(db, config, await claims.getPurchaseClaim(db, claimId), paymentId), null);
-    total = '1550';
+    total = '1990';
     assert.equal((await claims.verifyGuestPaddlePayment(db, config, await claims.getPurchaseClaim(db, claimId), paymentId))?.status, 'paid');
     assert.equal(sqlite.prepare('SELECT normalized_email FROM billing_purchase_claims WHERE claim_id = ?').get(claimId).normalized_email, customerEmail);
   } finally { globalThis.fetch = originalFetch; sqlite.close(); }
@@ -583,18 +583,18 @@ test('claimed Paddle renewal accepts a verified customer whose billing email lat
   await claims.markPurchaseCheckout(db, claimId, 'paddle', { subscriptionId, paymentId: firstPayment });
   await claims.recordVerifiedPurchase(db, claimId, 'paddle', {
     subscriptionId, paymentId: firstPayment, customerId: 'ctm_1', email: 'ale@example.test',
-    amountCents: 1500, currency: 'USD', paidAt: Math.floor(Date.now() / 1000),
+    amountCents: 1990, currency: 'USD', paidAt: Math.floor(Date.now() / 1000),
     paidThrough: Math.floor(Date.now() / 1000) + 2592000,
   });
   await claims.bindPurchaseToUser(db, claimId, 'teacher-1', 'ale@example.test', config, 'pri_01m38sk06dtyhga2d4h36rt5dc');
   const { POST } = await route('app/api/billing/paddle/webhook/route.ts');
   const custom_data = { spanishcue_claim_id: claimId, spanishcue_offer_code: config.founderOffer.code };
-  const price = { id: 'pri_01m38sk06dtyhga2d4h36rt5dc', product_id:'pro_01m38sbhv4c8756pat80kfhda0',tax_mode:'internal', unit_price: { amount: '1500', currency_code: 'USD' }, billing_cycle: { interval: 'month', frequency: 1 }, trial_period: null };
+  const price = { id: 'pri_01m38sk06dtyhga2d4h36rt5dc', product_id:'pro_01m38sbhv4c8756pat80kfhda0',tax_mode:'internal', unit_price: { amount: '1990', currency_code: 'USD' }, billing_cycle: { interval: 'month', frequency: 1 }, trial_period: null };
   const originalFetch = globalThis.fetch;
   globalThis.fetch = async url => Response.json({ data: String(url).includes('/transactions/') ? {
     id: renewal, status: 'completed', subscription_id: subscriptionId, customer_id: 'ctm_1',
     customer: { id: 'ctm_1', email: 'updated@example.test' }, custom_data,
-    billing_period: { starts_at: new Date(Date.now()+30*86400000).toISOString(), ends_at: new Date(Date.now()+60*86400000).toISOString() }, items: [{ quantity: 1, price }], details: { totals: { total: '1500' } }, currency_code: 'USD',
+    billing_period: { starts_at: new Date(Date.now()+30*86400000).toISOString(), ends_at: new Date(Date.now()+60*86400000).toISOString() }, items: [{ quantity: 1, price }], details: { totals: { total: '1990' } }, currency_code: 'USD',
   } : {
     id: subscriptionId, customer_id: 'ctm_1', status: 'active', custom_data,
     items: [{ quantity: 1, price }], current_billing_period: { ends_at: new Date(Date.now() + 60 * 86400000).toISOString() },
@@ -632,7 +632,7 @@ test('retry repairs a payment saved just before access grant failed', async () =
   await claims.markPurchaseCheckout(db, claimId, 'paddle', { subscriptionId: 'sub_retry', paymentId: 'txn_retry' });
   await claims.recordVerifiedPurchase(db, claimId, 'paddle', {
     subscriptionId: 'sub_retry', paymentId: 'txn_retry', email: 'ale@example.test',
-    amountCents: 1500, currency: 'USD', paidAt: Math.floor(Date.now() / 1000),
+    amountCents: 1990, currency: 'USD', paidAt: Math.floor(Date.now() / 1000),
     paidThrough: Math.floor(Date.now() / 1000) + 2592000,
   });
   let failOnce = true;

@@ -27,11 +27,11 @@ export async function generateMetadata(): Promise<Metadata> {
   const checkoutLive = config.paypalEnv === "live" && config.publicCheckoutEnabled && paypalReady(config) && Boolean(legalOperator(env));
   const description = checkoutLive
     ? es
-      ? "Compara SPANISHCUE Gratis y PRO. Prueba diez clases reales o accede a toda la biblioteca interactiva por US$15.50 al mes con el precio fundador."
-      : "Compare SPANISHCUE Free and PRO. Try ten real Spanish lessons or unlock the complete interactive library for US$15.50/month with Founder Price."
+      ? "Compara SPANISHCUE Gratis y PRO. Prueba diez clases reales o accede a toda la biblioteca interactiva por US$19.90 al mes con el precio fundador."
+      : "Compare SPANISHCUE Free and PRO. Try ten real Spanish lessons or unlock the complete interactive library for US$19.90/month with Founder Price."
     : es
-      ? "Compara SPANISHCUE Gratis y el próximo plan PRO. Prueba diez clases reales sin tarjeta y reserva el precio fundador previsto de US$15.50 al mes."
-      : "Compare SPANISHCUE Free with the upcoming PRO plan. Try ten real lessons with no card and reserve the planned US$15.50 monthly Founder Price.";
+      ? "Compara SPANISHCUE Gratis y el próximo plan PRO. Prueba diez clases reales sin tarjeta y reserva el precio fundador previsto de US$19.90 al mes."
+      : "Compare SPANISHCUE Free with the upcoming PRO plan. Try ten real lessons with no card and reserve the planned US$19.90 monthly Founder Price.";
   return {
     title,
     description,
@@ -51,7 +51,7 @@ export default async function PricingPage() {
   const config = billingConfig(env);
   const checkoutLive = config.paypalEnv === "live" && config.publicCheckoutEnabled && paypalReady(config) && Boolean(legalOperator(env));
   const cardCheckoutLive = checkoutLive && paddleReady(paddleConfig(env));
-  const priceLabel = checkoutLive && !cardCheckoutLive ? `US$${config.founderOffer.priceUsd.toFixed(2)}` : "US$15.50";
+  const priceLabel = checkoutLive && !cardCheckoutLive ? `US$${config.founderOffer.priceUsd.toFixed(2)}` : "US$19.90";
   const accountEmail = emailFromHeaders(requestHeaders) || "";
   // Two free doors, one per kind of class: the full Clase inicial (grammar) and the free centre of Noche abierta (3D conversation).
   const grammarCta = { href: "/gramatica/clase-inicial", labelKey: "nav.viewLesson" as const, event: "cta_click" as const, intent: "view_lesson" as const };
@@ -98,7 +98,7 @@ export default async function PricingPage() {
 
     <section className="pricing-faq" aria-labelledby="pricing-faq-title"><span>FAQ</span><h2 id="pricing-faq-title">{es ? "Antes de elegir." : "Before you choose."}</h2><div><details><summary>{es ? "¿Necesito tarjeta para probar?" : "Do I need a card to try it?"}</summary><p>{es ? "No. La cuenta gratuita y las diez clases incluidas no piden tarjeta." : "No. The free account and its ten included lessons do not require a card."}</p></details><details><summary>{es ? "¿Qué significa acceso ilimitado?" : "What does unlimited access mean?"}</summary><p>{es ? "Cuando PRO esté disponible, permitirá abrir cualquier clase mientras la suscripción siga activa." : "When PRO becomes available, it will let you open any lesson while the subscription stays active."}</p></details><details><summary>{es ? "¿Puedo pagar ahora?" : "Can I pay now?"}</summary><p>{checkoutLive
   ? cardCheckoutLive
-    ? (es ? "Sí. Con tarjeta pagas US$15.50/mes o US$129/año (2 meses gratis). PayPal muestra su precio antes de confirmar. Tu primer pago tiene garantía de 30 días." : "Yes. By card you pay US$15.50/month or US$129/year (2 months free). PayPal shows its price before confirmation. Your first payment has a 30-day guarantee.")
+    ? (es ? "Sí. Con tarjeta pagas US$19.90/mes o US$199/año (2 meses gratis). PayPal muestra su precio antes de confirmar. Tu primer pago tiene garantía de 30 días." : "Yes. By card you pay US$19.90/month or US$199/year (2 months free). PayPal shows its price before confirmation. Your first payment has a 30-day guarantee.")
     : (es ? `Sí. Puedes suscribirte mediante PayPal por ${priceLabel}/mes; el importe final se muestra antes de confirmar.` : `Yes. You can subscribe via PayPal for ${priceLabel}/month; the final amount is shown before confirmation.`)
   : (es ? "No todavía. El checkout público está desactivado; reservar no produce ningún cobro." : "Not yet. Public checkout is disabled; reserving does not create a charge.")}</p></details>{checkoutLive && <details><summary>{es ? "¿Y si no me sirve?" : "What if it isn’t right for me?"}</summary><p>{es ? "Tienes 30 días desde tu primer pago: escribe a soporte desde el email de tu cuenta y te devolvemos ese pago completo." : "You have 30 days from your first payment: email support from your account email and we refund that payment in full."}</p></details>}<details><summary>{es ? "¿Cómo funcionará la cancelación?" : "How will cancellation work?"}</summary><p>{checkoutLive ? (es ? "Puedes cancelar online desde Mi cuenta; los términos de renovación se muestran antes del pago." : "You can cancel online in My account; renewal terms are shown before payment.") : (es ? "La integración permite cancelar online desde Mi cuenta cuando las suscripciones estén disponibles." : "Once subscriptions are available, you can cancel online in My account.")}</p></details></div></section>
     <footer className="pricing-footer"><SpanishCueBrand variant="compact" tone="light" /><nav aria-label={es ? "Legal" : "Legal"}><Link href="/privacy">{es ? "Privacidad" : "Privacy"}</Link><Link href="/terms">{es ? "Términos" : "Terms"}</Link><Link href="/contact">{es ? "Contacto" : "Contact"}</Link></nav><p>{es ? "Clases visuales listas para enseñar." : "Visual lessons ready to teach."}</p></footer>

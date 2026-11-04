@@ -34,8 +34,8 @@ test('monthly checkout appears first and PayPal second without a paid trial upse
   const paypal = landing.indexOf('onClick={checkoutPayPal}');
   assert.ok(monthly > 0 && monthly < paypal);
   assert.doesNotMatch(landing, /checkoutPaddle\("trial"\)|US\$2|Try 1 day/);
-  assert.match(landing, /Card: US\$15\.50 now and every month\. Final price, taxes included\./);
-  assert.match(landing, /paypalPriceUsd \?\? 15/);
+  assert.match(landing, /Card: US\$19\.90 now and every month\. Final price, taxes included\./);
+  assert.match(landing, /\(offer\.paypalPriceUsd \?\? 19\.9\)\.toFixed\(2\)/);
   assert.match(landing, /Pay first, then link the purchase to your account for PRO access\./);
   const paid = read('app/marketing-landing/PaidLanding.tsx');
   assert.match(paid, /const freeLesson = '\/demo\/noche-abierta'/);

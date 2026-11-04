@@ -1,6 +1,6 @@
 export const PRO_PRODUCT_CODE = "spanishcue-pro";
 export const FOUNDER_PLAN_CODE = "spanishcue-founder-monthly";
-export const APPROVED_PRICE_CENTS = 1500;
+export const APPROVED_PRICE_CENTS = 1990;
 export const APPROVED_CURRENCY = "USD";
 export const APPROVED_FOUNDER_LIMIT = 1000;
 export const APPROVED_INTERVAL = { unit: "MONTH", count: 1 } as const;
@@ -53,6 +53,12 @@ function bool(value: string | undefined, fallback: boolean) {
   return value.trim().toLowerCase() === "true";
 }
 
+/** A USD amount with at most two decimals (for example `19.90`). */
+function usd(value: string | undefined, fallback: number) {
+  const raw = value?.trim() ?? "";
+  return /^\d{1,6}(?:\.\d{1,2})?$/.test(raw) && Number(raw) >= 1 ? Number(raw) : fallback;
+}
+
 function whole(value: string | undefined, fallback: number, min: number, max: number) {
   const parsed = Number(value);
   return Number.isInteger(parsed) && parsed >= min && parsed <= max ? parsed : fallback;
@@ -82,7 +88,7 @@ export function billingConfig(values: unknown): BillingRuntimeConfig {
       enabled: bool(runtime.FOUNDER_OFFER_ENABLED, true),
       code: runtime.FOUNDER_OFFER_CODE?.trim() || "founder-1000-usd15-monthly",
       limit: whole(runtime.FOUNDER_LIMIT, APPROVED_FOUNDER_LIMIT, 1, APPROVED_FOUNDER_LIMIT),
-      priceUsd: whole(runtime.FOUNDER_PRICE_USD, 15, 1, 100000),
+      priceUsd: usd(runtime.FOUNDER_PRICE_USD, APPROVED_PRICE_CENTS / 100),
     },
   };
 }

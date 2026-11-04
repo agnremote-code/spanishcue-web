@@ -250,7 +250,7 @@ export function trackMarketingEvent(
   }
 
   // `subscription_first_paid` is the entry point for the customer's first
-  // server-verified paid transaction (the US$2 trial or the first US$15.50
+  // server-verified paid transaction (the US$2 trial or the first US$19.90
   // month). It is the only event allowed to reach the Google Ads purchase
   // conversion, which follows marketing consent independently from analytics.
   if (event === "subscription_first_paid") {
