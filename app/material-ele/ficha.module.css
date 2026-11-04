@@ -1,0 +1,18 @@
+.sheet { display: grid; gap: 14px; }
+.items { list-style: decimal; padding-left: 28px; margin: 0; display: grid; gap: 14px; }
+.items > li { padding-left: 4px; line-height: 1.5; }
+.items > li::marker { font-weight: 800; color: var(--g-blue); }
+.options { list-style: none; padding: 6px 0 0 4px; margin: 0; display: grid; gap: 4px; }
+.line { margin: 10px 0 0; height: 26px; max-width: 520px; border-bottom: 1px solid #8a96aa; }
+.tableWrap { overflow-x: auto; }
+.table { width: 100%; border-collapse: collapse; margin: 6px 0 14px; font-size: 15px; background: #fff; }
+.table caption { text-align: left; font-weight: 800; padding: 0 0 8px; }
+.table th, .table td { border: 1px solid #d8e0ec; padding: 8px 10px; text-align: left; vertical-align: top; }
+.table th { background: #eef4ff; }
+.mistakes { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+.mistakes s { color: #b42318; }
+.answers { list-style: decimal; padding-left: 28px; margin: 0; display: grid; gap: 8px; line-height: 1.5; }
+@media print {
+  .items > li, .table { break-inside: avoid; }
+  .answers { break-before: page; }
+}
