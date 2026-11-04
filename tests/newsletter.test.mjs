@@ -29,7 +29,7 @@ async function setup() {
   };
   globalThis.__resendKnown = known;
   // The bundled module is cached across tests: update the env object it captured.
-  globalThis.__NEWSLETTER_TEST_ENV = Object.assign(globalThis.__NEWSLETTER_TEST_ENV ?? {}, { DB: db, AUTOESTUDIO_SHARE_SECRET: SECRET, RESEND_API_KEY: 're_test' });
+  globalThis.__NEWSLETTER_TEST_ENV = Object.assign(globalThis.__NEWSLETTER_TEST_ENV ?? {}, { DB: db, AUTOESTUDIO_SHARE_SECRET: SECRET, RESEND_API_KEY: 're_test\n' });
   const bundle = await build({ stdin: { contents: `export { POST } from './app/api/newsletter/route'; export { GET as leave, POST as oneClick } from './app/api/newsletter/baja/route'; export { GET as admin } from './app/api/admin/newsletter/route'; export * from './app/newsletter/server'; export * from './app/newsletter/gift';`, resolveDir: process.cwd() }, bundle: true, write: false, format: 'esm', platform: 'node', plugins: [{ name: 'env', setup(b) {
     b.onResolve({ filter: /^cloudflare:workers$/ }, () => ({ path: 'env', namespace: 'test-env' }));
     b.onLoad({ filter: /.*/, namespace: 'test-env' }, () => ({ contents: 'export const env = globalThis.__NEWSLETTER_TEST_ENV;' }));
@@ -64,6 +64,8 @@ test('newsletter signup stores consented emails, unlocks only the gift class and
   // Resend: contact into the SpanishCue segment + one welcome email with a List-Unsubscribe header.
   const contact = calls.find(c => c.url === 'https://api.resend.com/contacts');
   assert.deepEqual(JSON.parse(contact.init.body).segments, [{ id: mod.NEWSLETTER_SEGMENT_ID }]);
+  // A secret pasted with a trailing newline still yields a valid header.
+  assert.equal(contact.init.headers.authorization, 'Bearer re_test');
   const mail = calls.filter(c => c.url === 'https://api.resend.com/emails');
   assert.equal(mail.length, 1);
   const sent = JSON.parse(mail[0].init.body);

@@ -2,13 +2,13 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { SpanishCueBrand } from '../SpanishCueBrand';
 import { GrowthFooter } from '../growth/components';
-import { GIFT_LANDING_PATH, GIFT_LESSON_LEVEL, GIFT_LESSON_TITLE, GIFT_PREVIEW_POSTER, GIFT_PREVIEW_VIDEO } from '../newsletter/gift';
+import { GIFT_LANDING_PATH, GIFT_LESSON_TITLE, GIFT_PREVIEW_POSTER, GIFT_PREVIEW_VIDEO } from '../newsletter/gift';
 import { GiftPitch, GiftSignupForm } from '../newsletter/GiftSignup';
 import growth from '../growth/growth.module.css';
 import styles from '../newsletter/newsletter.module.css';
 
-const title = `Clase gratis de subjuntivo para profes de ELE: ${GIFT_LESSON_TITLE} | SPANISHCUE`;
-const description = `Desbloquea con tu email una clase PRO de gramática ${GIFT_LESSON_LEVEL} lista para dar en vivo: ${GIFT_LESSON_TITLE.toLowerCase()}, con explicación, práctica, escucha y conversación.`;
+const title = `Clase gratis de pretérito imperfecto para profes de ELE | SPANISHCUE`;
+const description = 'Desbloquea con tu email una clase PRO de gramática A2 lista para dar en vivo: el pretérito imperfecto (hablaba, comía, vivía) con explicación, audio, práctica y conversación.';
 export const metadata: Metadata = { title, description, alternates: { canonical: GIFT_LANDING_PATH }, openGraph: { title, description, url: GIFT_LANDING_PATH } };
 
 export default function ClaseGratisPage() {

@@ -1,6 +1,6 @@
 'use client';
 import { useState, type FormEvent } from 'react';
-import { GIFT_LESSON_LEVEL, GIFT_LESSON_PATH, GIFT_LESSON_SUMMARY, GIFT_LESSON_TITLE, GIFT_POPUP_STORAGE_KEY } from './gift';
+import { GIFT_LESSON_LEVEL, GIFT_LESSON_PATH, GIFT_LESSON_PITCH, GIFT_LESSON_TITLE, GIFT_POPUP_STORAGE_KEY } from './gift';
 import styles from './newsletter.module.css';
 
 function remember(value: string) {
@@ -53,7 +53,7 @@ export function GiftPitch({ heading = 'h2' }: { heading?: 'h1' | 'h2' }) {
       <p className={styles.kicker}>Regalo para profes de ELE</p>
       <Title className={styles.title}>Desbloquea gratis una clase PRO de gramática</Title>
       <p className={styles.lesson}>«{GIFT_LESSON_TITLE}» · {GIFT_LESSON_LEVEL}</p>
-      <p className={styles.lead}>{GIFT_LESSON_SUMMARY} Una clase completa para dar en vivo, con explicación, práctica, escucha y conversación. Deja tu email y se abre al instante.</p>
+      <p className={styles.lead}>{GIFT_LESSON_PITCH} Una clase completa para dar en vivo, con explicación, audio, práctica y conversación. Deja tu email y se abre al instante.</p>
     </div>
   );
 }
