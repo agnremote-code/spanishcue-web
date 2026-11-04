@@ -147,7 +147,8 @@ export function buildItem(g: THREE.Group, item: Item, anim: Anim) {
     case 'buckets': for (let i = 0; i < 3; i++) { add(h, C(0.16, 0.12, 0.4, 10), std('#7a8a9a', 0.4, 0.5), 0, 0.2, -0.3 + i * 0.3); for (let k = 0; k < 5; k++) add(h, new THREE.SphereGeometry(0.07, 6, 4), std(['#c81e3a', '#f4f0ea', '#f0b8c8'][i], 0.8), Math.sin(k) * 0.08, 0.5 + (k % 2) * 0.06, -0.3 + i * 0.3 + Math.cos(k) * 0.08); } break;
     case 'longtable': {
       add(h, B(w, 0.04, d), LINEN(), 0, 0.74, 0);
-      add(h, B(w + 0.02, 0.32, 0.02), LINEN(), 0, 0.6, d / 2); add(h, B(w + 0.02, 0.32, 0.02), LINEN(), 0, 0.6, -d / 2);
+      // A short skirt, above the knees of whoever sits at the table.
+      add(h, B(w + 0.02, 0.14, 0.02), LINEN(), 0, 0.69, d / 2); add(h, B(w + 0.02, 0.14, 0.02), LINEN(), 0, 0.69, -d / 2);
       for (const sx of [-1, 1]) for (const sz of [-1, 1]) add(h, B(0.06, 0.72, 0.06), WOOD(), sx * (w / 2 - 0.1), 0.36, sz * (d / 2 - 0.1));
       // Plates, glasses, bottles, candles and flowers down the middle.
       const rand = random(Math.round(item.z * 10));
@@ -224,7 +225,7 @@ export function buildItem(g: THREE.Group, item: Item, anim: Anim) {
       const tex = canvas(256, 256, ctx => { for (let r = 0; r < 4; r++) for (let q = 0; q < 4; q++) { ctx.fillStyle = (r + q) % 2 ? '#f2ece0' : '#2a2420'; ctx.fillRect(q * 64, r * 64, 64, 64); } }, true);
       tex.repeat.set(w / 2, d / 2);
       const m = new THREE.MeshStandardMaterial({ map: tex, roughness: 0.25, metalness: 0.1 });
-      add(h, B(w, 0.03, d), m, 0, 0.015, 0);
+      add(h, B(w, 0.012, d), m, 0, 0.006, 0);
       void DANCE;
       break;
     }
@@ -241,7 +242,7 @@ export function buildItem(g: THREE.Group, item: Item, anim: Anim) {
     }
     case 'mic': add(h, C(0.15, 0.15, 0.02, 12), IRON(), 0, 0.01, 0); add(h, C(0.012, 0.012, 1.5, 6), IRON(), 0, 0.75, 0); add(h, new THREE.SphereGeometry(0.04, 8, 6), std('#2a2a2a', 0.4, 0.6), 0, 1.53, 0); break;
     case 'roundtable': {
-      add(h, C(0.8, 0.8, 0.04, 24), LINEN(), 0, 0.74, 0); add(h, C(0.81, 0.81, 0.4, 24, ), LINEN(), 0, 0.53, 0); add(h, C(0.06, 0.06, 0.72, 8), WOOD(), 0, 0.36, 0);
+      add(h, C(0.8, 0.8, 0.04, 24), LINEN(), 0, 0.74, 0); // No skirt: the knees of the six guests go under the top. add(h, C(0.06, 0.06, 0.72, 8), WOOD(), 0, 0.36, 0);
       for (let k = 0; k < 6; k++) { const a = k * Math.PI / 3; chairMesh(h, Math.sin(a) * 1.2, Math.cos(a) * 1.2, a + Math.PI); add(h, C(0.11, 0.11, 0.012, 12), WHITE(), Math.sin(a) * 0.55, 0.765, Math.cos(a) * 0.55); }
       add(h, C(0.08, 0.1, 0.25, 10), std('#d8ecf4', 0.05, 0.1), 0, 0.88, 0); for (let i = 0; i < 6; i++) add(h, new THREE.SphereGeometry(0.06, 6, 4), std(['#f4f0ea', '#e88aa8'][i % 2], 0.8), Math.sin(i) * 0.08, 1.05, Math.cos(i) * 0.08);
       break;

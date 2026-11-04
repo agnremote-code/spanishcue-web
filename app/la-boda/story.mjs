@@ -11,7 +11,7 @@
 // The 18 white circles are listed in the order the evening walks them.
 
 export const CAST = {
-  anselmo: { name: 'Anselmo', full: 'Don Anselmo Benítez', role: 'Casero de la estancia desde hace treinta años', gender: 'm', voice: 'es-PY-MarioNeural', country: 'Paraguay' },
+  anselmo: { name: 'Anselmo', full: 'Don Anselmo Benítez', role: 'Portero de la estancia desde hace cuarenta años', gender: 'm', voice: 'es-PY-MarioNeural', country: 'Paraguay' },
   wilmer: { name: 'Wilmer', full: 'Wilmer Castro', role: 'Valet del estacionamiento', gender: 'm', voice: 'es-HN-CarlosNeural', country: 'Honduras' },
   benito: { name: 'Benito', full: 'Padre Benito Larrea', role: 'Cura de la capilla, casa a toda la familia', gender: 'm', voice: 'es-ES-AlvaroNeural', country: 'España' },
   joaquin: { name: 'Joaquín', full: 'Joaquín Herrera', role: 'El novio', gender: 'm', voice: 'es-MX-JorgeNeural', country: 'México' },

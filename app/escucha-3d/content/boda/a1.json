@@ -36,29 +36,29 @@
         {
           "q": "¿A quién le habla Anselmo?",
           "options": [
-            "A su esposa",
             "A su hija",
-            "A la novia"
+            "A su esposa",
+            "A la novia y a su madre"
           ],
-          "answer": 0
+          "answer": 1
         },
         {
           "q": "¿Hasta qué hora tiene que trabajar?",
           "options": [
             "Hasta las ocho",
-            "Hasta la medianoche",
-            "Hasta la mañana"
+            "Hasta la mañana",
+            "Hasta la medianoche"
           ],
-          "answer": 1
+          "answer": 2
         },
         {
           "q": "¿Cómo es el invitado que no está en la lista?",
           "options": [
+            "Simpático",
             "Antipático",
-            "Muy viejo",
-            "Simpático"
+            "Muy viejo"
           ],
-          "answer": 2
+          "answer": 0
         },
         {
           "q": "¿Qué hay en la heladera?",
@@ -144,37 +144,37 @@
           "q": "¿Qué tiene que buscar Joaquín?",
           "options": [
             "Los anillos",
-            "La corbata y los zapatos",
-            "El auto"
+            "El auto",
+            "La corbata y los zapatos"
           ],
-          "answer": 1
+          "answer": 2
         },
         {
           "q": "¿A qué hora empieza la ceremonia?",
           "options": [
             "A las cinco",
-            "A las siete",
-            "A las seis"
+            "A las seis",
+            "A las siete"
           ],
-          "answer": 2
+          "answer": 1
         },
         {
           "q": "¿A qué hora tiene que llegar Joaquín?",
           "options": [
+            "A las seis y media en punto",
             "A las cinco y media",
-            "A las seis y media",
             "A las cuatro"
           ],
-          "answer": 0
+          "answer": 1
         },
         {
           "q": "¿Qué tiene que decir Joaquín?",
           "options": [
             "Muchas gracias",
-            "Sí, quiero",
-            "Buenas tardes"
+            "Buenas tardes",
+            "Sí, quiero"
           ],
-          "answer": 1
+          "answer": 2
         }
       ],
       "open": [
@@ -254,38 +254,38 @@
         {
           "q": "¿Dónde va a caminar Tadeo?",
           "options": [
+            "Adelante de la novia",
             "Atrás de la novia",
-            "Con el cura",
-            "Adelante de la novia"
-          ],
-          "answer": 2
-        },
-        {
-          "q": "¿Cómo tiene que caminar?",
-          "options": [
-            "Despacio",
-            "Rápido",
-            "Saltando"
+            "Con el cura"
           ],
           "answer": 0
         },
         {
-          "q": "¿Cuándo va a jugar con sus amigos?",
+          "q": "¿Cómo tiene que caminar?",
           "options": [
-            "Antes de la ceremonia",
-            "Después de la ceremonia",
-            "Mañana"
+            "Muy rápido, corriendo",
+            "Despacio",
+            "Saltando"
           ],
           "answer": 1
         },
         {
-          "q": "¿Qué quiere Tadeo?",
+          "q": "¿Cuándo va a jugar con sus amigos?",
           "options": [
-            "Un juguete",
-            "Una torta",
-            "Un helado"
+            "Antes de la ceremonia, en la capilla",
+            "Mañana",
+            "Después de la ceremonia"
           ],
           "answer": 2
+        },
+        {
+          "q": "¿Qué quiere Tadeo?",
+          "options": [
+            "Un helado",
+            "Un juguete",
+            "Una torta"
+          ],
+          "answer": 0
         }
       ],
       "open": [
@@ -352,20 +352,20 @@
         {
           "q": "¿Para quién es el video?",
           "options": [
-            "Para sus amigas de Barcelona",
             "Para Joaquín",
+            "Para sus amigas de Barcelona",
             "Para su abuela"
           ],
-          "answer": 0
+          "answer": 1
         },
         {
           "q": "¿Dónde está Valentina?",
           "options": [
-            "En un hotel",
             "En la casa de su abuela",
+            "En un hotel",
             "En la iglesia"
           ],
-          "answer": 1
+          "answer": 0
         },
         {
           "q": "¿Cómo se siente Valentina?",
@@ -396,8 +396,8 @@
           "model": "Sí, tengo una amiga en Canadá."
         },
         {
-          "q": "¿Qué haces cuando tienes nervios?",
-          "model": "Respiro y escucho música."
+          "q": "¿Qué haces cuando tienes nervios antes de un día importante?",
+          "model": "Salgo a caminar y escucho música."
         }
       ],
       "gaps": "Tengo [nervios], pero estoy [feliz]. Joaquín está en la [otra] [casa], con su mamá.",
@@ -468,20 +468,20 @@
         {
           "q": "¿De qué no tienen que hablar los primos?",
           "options": [
-            "De política",
-            "De fútbol",
-            "De amor"
+            "De fútbol y de caballos",
+            "De amor",
+            "De política"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "q": "Según la abuela, ¿cómo hay que criticar a la familia?",
           "options": [
-            "En voz alta",
             "En voz baja",
+            "En voz alta",
             "Por teléfono"
           ],
-          "answer": 1
+          "answer": 0
         }
       ],
       "open": [
@@ -558,28 +558,28 @@
           "q": "¿Cuántas horas de diferencia hay con Guadalajara?",
           "options": [
             "Dos horas",
-            "Cinco horas",
-            "Tres horas"
+            "Tres horas",
+            "Cinco horas"
           ],
-          "answer": 2
+          "answer": 1
         },
         {
           "q": "¿Qué hora es en Guadalajara?",
           "options": [
-            "Las dos de la tarde",
             "Las cinco",
+            "Las dos de la tarde",
             "Las once"
           ],
-          "answer": 0
+          "answer": 1
         },
         {
           "q": "¿Cómo va a ver la boda la hermana de Lupita?",
           "options": [
-            "En persona",
             "Por videollamada",
+            "En persona",
             "En fotos"
           ],
-          "answer": 1
+          "answer": 0
         },
         {
           "q": "¿A quién no tiene que grabar Ximena?",
@@ -664,38 +664,38 @@
         {
           "q": "¿Qué hay primero?",
           "options": [
-            "Empanadas de carne y de queso",
             "Asado",
-            "Torta"
+            "Torta",
+            "Empanadas de carne y de queso"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "q": "¿Con qué se sirve el asado?",
           "options": [
-            "Con arroz",
             "Con ensalada y papas",
+            "Con arroz",
             "Con pan solo"
           ],
-          "answer": 1
+          "answer": 0
         },
         {
           "q": "¿Qué comen los vegetarianos?",
           "options": [
             "Pescado",
-            "Pollo",
-            "Verduras a la parrilla"
+            "Verduras a la parrilla",
+            "Pollo"
           ],
-          "answer": 2
+          "answer": 1
         },
         {
           "q": "¿A qué hora sirven el café?",
           "options": [
-            "A las diez",
             "A las once",
-            "A las nueve"
+            "A las nueve",
+            "A las diez"
           ],
-          "answer": 0
+          "answer": 2
         }
       ],
       "open": [
@@ -762,38 +762,38 @@
         {
           "q": "¿Cómo tiene que ser el fuego?",
           "options": [
-            "De gas",
             "De leña",
+            "De gas",
             "Eléctrico"
-          ],
-          "answer": 1
-        },
-        {
-          "q": "¿Cuánta sal pone?",
-          "options": [
-            "Mucha",
-            "Nada",
-            "Un poco"
-          ],
-          "answer": 2
-        },
-        {
-          "q": "¿Cuántas horas está la carne en la parrilla?",
-          "options": [
-            "Cuatro horas",
-            "Una hora",
-            "Ocho horas"
           ],
           "answer": 0
         },
         {
-          "q": "¿Cuál es el secreto más importante?",
+          "q": "¿Cuánta sal pone?",
           "options": [
-            "Usar mucha sal",
-            "No hablar de fútbol mientras trabaja",
-            "Cocinar rápido"
+            "Mucha, demasiada",
+            "Un poco",
+            "Nada"
           ],
           "answer": 1
+        },
+        {
+          "q": "¿Cuántas horas está la carne en la parrilla?",
+          "options": [
+            "Una hora",
+            "Ocho horas o más",
+            "Cuatro horas"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cuál es el secreto más importante?",
+          "options": [
+            "No hablar de fútbol mientras trabaja",
+            "Usar mucha sal",
+            "Cocinar rápido"
+          ],
+          "answer": 0
         }
       ],
       "open": [
@@ -874,10 +874,10 @@
           "q": "¿Cuántas mesas hay?",
           "options": [
             "Diez",
-            "Veinte",
-            "Doce"
+            "Doce",
+            "Veinte"
           ],
-          "answer": 2
+          "answer": 1
         },
         {
           "q": "¿Dónde está la familia de la novia?",
@@ -891,20 +891,20 @@
         {
           "q": "¿Dónde están los niños?",
           "options": [
-            "Cerca de la pista",
-            "Cerca de la puerta",
-            "En el jardín"
+            "Cerca de la pista de baile",
+            "En el jardín",
+            "Cerca de la puerta"
           ],
-          "answer": 1
+          "answer": 2
         },
         {
           "q": "¿Dónde está Pepe?",
           "options": [
             "Al lado de Gloria",
-            "En el centro",
-            "Muy lejos"
+            "Muy lejos",
+            "En el centro"
           ],
-          "answer": 2
+          "answer": 1
         }
       ],
       "open": [
@@ -990,25 +990,25 @@
           "q": "¿De qué color es su traje?",
           "options": [
             "Negro",
-            "Gris",
-            "Azul"
+            "Azul",
+            "Gris"
           ],
-          "answer": 1
+          "answer": 2
         },
         {
           "q": "¿Desde cuándo no lo ve Rocío?",
           "options": [
-            "Desde la mañana",
-            "Desde ayer",
-            "Desde las cinco"
+            "Desde la mañana temprano",
+            "Desde las cinco",
+            "Desde ayer"
           ],
-          "answer": 2
+          "answer": 1
         },
         {
           "q": "¿Qué va a hacer Rocío?",
           "options": [
             "Preguntar en la carpa",
-            "Llamar a la policía",
+            "Llamar a la policía del pueblo",
             "Irse a casa"
           ],
           "answer": 0
@@ -1080,7 +1080,7 @@
           "options": [
             "A los novios",
             "A los camareros",
-            "A los músicos"
+            "A los músicos de la banda"
           ],
           "answer": 1
         },
@@ -1096,34 +1096,34 @@
         {
           "q": "¿Cuántas personas necesita en la puerta de la cocina?",
           "options": [
-            "Dos",
             "Una",
-            "Tres"
+            "Tres",
+            "Dos"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "q": "¿Qué no tienen que olvidar?",
           "options": [
-            "Las copas",
             "Las servilletas",
+            "Las copas",
             "Los platos"
           ],
-          "answer": 1
+          "answer": 0
         }
       ],
       "open": [
         {
-          "q": "¿Trabajas en equipo?",
-          "model": "Sí, trabajo con cinco compañeros."
+          "q": "¿Te gusta organizar celebraciones con otras personas?",
+          "model": "Sí, organizo los cumpleaños con mis hermanos."
         },
         {
           "q": "¿Usas grupos de mensajes en el trabajo?",
           "model": "Sí, tenemos un grupo para todo."
         },
         {
-          "q": "¿Sonríes mucho en tu trabajo?",
-          "model": "Sí, porque trabajo con clientes."
+          "q": "¿Sonríes en una celebración aunque tengas sueño?",
+          "model": "Sí, porque quiero ver feliz a mi familia."
         }
       ],
       "gaps": "No [olviden] las [servilletas]. Y, por favor, [sonrían]. Es una boda, no un [funeral].",
@@ -1186,37 +1186,37 @@
           "q": "¿Cuántas canciones van a tocar?",
           "options": [
             "Diez",
-            "Cinco",
-            "Veinte"
+            "Veinte",
+            "Cinco o seis"
           ],
-          "answer": 2
+          "answer": 1
         },
         {
           "q": "¿Cuántas salsas hay?",
           "options": [
-            "Diez",
             "Cinco",
+            "Diez",
             "Veinte"
           ],
-          "answer": 0
+          "answer": 1
         },
         {
           "q": "¿Qué tipo de canción es la de los novios?",
           "options": [
             "Una salsa",
-            "Un bolero",
-            "Una cumbia"
+            "Una cumbia",
+            "Un bolero"
           ],
-          "answer": 1
+          "answer": 2
         },
         {
           "q": "¿Qué tiene que hacer Willy?",
           "options": [
-            "Comer algo",
-            "Dormir",
-            "Tomar agua"
+            "Tomar agua",
+            "Comer algo dulce y salado",
+            "Dormir"
           ],
-          "answer": 2
+          "answer": 0
         }
       ],
       "open": [
@@ -1284,7 +1284,7 @@
           "q": "¿Con quién habla Don Horacio?",
           "options": [
             "Con su médico",
-            "Con su hija",
+            "Con su hija mayor de Rosario",
             "Con su esposa"
           ],
           "answer": 0
@@ -1292,7 +1292,7 @@
         {
           "q": "¿Qué le duele?",
           "options": [
-            "La espalda",
+            "La espalda y los hombros",
             "La rodilla",
             "El pie"
           ],
@@ -1310,11 +1310,11 @@
         {
           "q": "¿Cuántos bailes promete al final?",
           "options": [
-            "Dos",
             "Uno",
+            "Dos",
             "Tres"
           ],
-          "answer": 0
+          "answer": 1
         }
       ],
       "open": [
@@ -1390,11 +1390,11 @@
         {
           "q": "¿Cuántos cócteles especiales hay?",
           "options": [
-            "Dos",
             "Tres",
+            "Dos",
             "Cinco"
           ],
-          "answer": 1
+          "answer": 0
         },
         {
           "q": "¿De qué es el «Valentina»?",
@@ -1497,29 +1497,29 @@
         {
           "q": "¿A quién va a llevar Lucero?",
           "options": [
+            "A los niños de la familia",
             "A los novios",
-            "A los niños",
             "A la abuela"
           ],
-          "answer": 0
+          "answer": 1
         },
         {
           "q": "¿Cómo tiene que caminar?",
           "options": [
             "Rápido",
-            "Despacio",
-            "Saltando"
+            "Saltando en un pie",
+            "Despacio"
           ],
-          "answer": 1
+          "answer": 2
         },
         {
           "q": "¿Dónde va a estar Ceferino?",
           "options": [
+            "Al lado de Lucero",
             "En la carpa",
-            "En su casa",
-            "Al lado de Lucero"
+            "En su casa"
           ],
-          "answer": 2
+          "answer": 0
         }
       ],
       "open": [
@@ -1532,8 +1532,8 @@
           "model": "Mi hermano siempre está a mi lado."
         },
         {
-          "q": "¿Hablas con los animales?",
-          "model": "Sí, hablo con mi perro todos los días."
+          "q": "¿Les hablas a los caballos o a los perros de otras personas?",
+          "model": "Sí, siempre saludo a los perros de mis vecinos."
         }
       ],
       "gaps": "Hay mucha [gente] y mucha [música]. Tú no tienes que [tener] [miedo].",
@@ -1588,14 +1588,14 @@
           "options": [
             "Debajo del ombú",
             "En la capilla",
-            "En la pista"
+            "En la pista, entre la gente"
           ],
           "answer": 0
         },
         {
           "q": "¿Con qué animal son las fotos de las ocho?",
           "options": [
-            "Con un perro",
+            "Con un perro del vecino",
             "Con el caballo",
             "Con unas vacas"
           ],
@@ -1613,16 +1613,16 @@
         {
           "q": "¿Qué no tienen que hacer los novios antes de las fotos?",
           "options": [
-            "Comer",
             "Bailar",
-            "Tomar agua"
+            "Tomar agua",
+            "Comer"
           ],
-          "answer": 0
+          "answer": 2
         }
       ],
       "open": [
         {
-          "q": "¿Te gusta salir en las fotos?",
+          "q": "¿Te gusta salir en las fotos de una celebración?",
           "model": "Sí, pero solo si salgo bien."
         },
         {
@@ -1693,11 +1693,11 @@
         {
           "q": "¿Dónde está Facundo?",
           "options": [
-            "En la carpa",
-            "En el auto",
-            "En el muelle"
+            "En el muelle",
+            "En la carpa grande",
+            "En el auto"
           ],
-          "answer": 2
+          "answer": 0
         },
         {
           "q": "¿Quién tiene los anillos?",
@@ -1805,20 +1805,20 @@
         {
           "q": "¿Quién no está?",
           "options": [
-            "El padrino",
             "La novia",
+            "El padrino",
             "El cura"
           ],
-          "answer": 0
+          "answer": 1
         },
         {
           "q": "¿De quién es amigo el invitado especial?",
           "options": [
-            "De Joaquín",
             "De Facundo",
-            "De Mariela"
+            "De Joaquín",
+            "De Mariela, la organizadora"
           ],
-          "answer": 1
+          "answer": 0
         },
         {
           "q": "¿Qué tienen que tener todos en la mano?",
@@ -1832,8 +1832,8 @@
       ],
       "open": [
         {
-          "q": "¿Te gusta hablar delante de mucha gente?",
-          "model": "No, me pongo muy nervioso."
+          "q": "¿Te da miedo hablar delante de toda tu familia?",
+          "model": "Sí, un poco. Me tiemblan las manos."
         },
         {
           "q": "¿Cuándo aplaudes?",

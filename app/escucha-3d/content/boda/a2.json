@@ -58,7 +58,7 @@
         {
           "q": "¿Dónde dormía el señor?",
           "options": [
-            "En el jardín",
+            "En el jardín de las rosas",
             "Dentro de su auto",
             "En la carpa"
           ],
@@ -67,7 +67,7 @@
         {
           "q": "¿Con quién bailó el señor de la camisa verde?",
           "options": [
-            "Con la novia",
+            "Con la novia y su hermana",
             "Con Wilmer",
             "Con la abuela"
           ],
@@ -77,8 +77,8 @@
           "q": "¿Qué quedó en el camino?",
           "options": [
             "Un zapato rojo",
-            "Un teléfono",
-            "Una corbata"
+            "Un teléfono roto",
+            "Una corbata de seda"
           ],
           "answer": 0
         }
@@ -161,37 +161,37 @@
           "q": "¿Por qué pide perdón Joaquín?",
           "options": [
             "Por llegar tarde",
-            "Por los anillos de gomita",
-            "Por no ir a misa"
-          ],
-          "answer": 1
-        },
-        {
-          "q": "¿Cómo fue la ceremonia para el padre Benito?",
-          "options": [
-            "La más aburrida",
-            "La más larga",
-            "La más divertida"
+            "Por no ir a misa",
+            "Por los anillos de gomita"
           ],
           "answer": 2
         },
         {
+          "q": "¿Cómo fue la ceremonia para el padre Benito?",
+          "options": [
+            "La más aburrida de su vida",
+            "La más divertida",
+            "La más larga"
+          ],
+          "answer": 1
+        },
+        {
           "q": "¿Por qué habló poco el cura?",
           "options": [
+            "Porque estaba enfermo del estómago",
             "Porque hacía mucho calor",
-            "Porque estaba enfermo",
             "Porque no tenía tiempo"
           ],
-          "answer": 0
+          "answer": 1
         },
         {
           "q": "¿Quién se comió las gomitas?",
           "options": [
-            "Joaquín",
             "El padre Benito",
+            "Joaquín",
             "Tadeo"
           ],
-          "answer": 1
+          "answer": 0
         }
       ],
       "open": [
@@ -200,7 +200,7 @@
           "model": "Fue en mi graduación; el director habló casi una hora."
         },
         {
-          "q": "¿Qué dulce comías con el café cuando eras niño?",
+          "q": "¿Qué dulce comías con el café en tu infancia?",
           "model": "Comía galletas de mantequilla con mi abuela."
         },
         {
@@ -280,29 +280,29 @@
         {
           "q": "¿Quién lo encontró?",
           "options": [
+            "Marisol, la florista",
             "Ceferino",
-            "Marisol",
             "Tadeo"
           ],
-          "answer": 0
+          "answer": 1
         },
         {
           "q": "¿Qué pensó Marisol ayer?",
           "options": [
             "Que Tadeo estaba enfermo",
-            "Que la iban a echar de la familia",
-            "Que la boda se cancelaba"
+            "Que la boda se cancelaba",
+            "Que la iban a echar de la familia"
           ],
-          "answer": 1
+          "answer": 2
         },
         {
           "q": "¿Cuántas porciones de torta comió Tadeo?",
           "options": [
-            "Una",
-            "Dos",
-            "Tres"
+            "Tres",
+            "Ninguna",
+            "Dos o tres"
           ],
-          "answer": 2
+          "answer": 0
         }
       ],
       "open": [
@@ -311,7 +311,7 @@
           "model": "Una vez mis llaves aparecieron dentro de la heladera."
         },
         {
-          "q": "¿Cómo te portabas en las fiestas cuando eras niño?",
+          "q": "¿Cómo te portabas en las celebraciones familiares en tu infancia?",
           "model": "Mi hermano y yo corríamos todo el tiempo y comíamos muchos dulces."
         },
         {
@@ -378,25 +378,25 @@
         {
           "q": "¿Qué miran Valentina y Camila?",
           "options": [
-            "Fotos en el teléfono",
             "Un video",
+            "Fotos en el teléfono",
             "Una revista"
-          ],
-          "answer": 0
-        },
-        {
-          "q": "¿Qué bailaba Valentina con los zapatos en la mano?",
-          "options": [
-            "Tango",
-            "Cumbia",
-            "Vals"
           ],
           "answer": 1
         },
         {
+          "q": "¿Qué bailaba Valentina con los zapatos en la mano?",
+          "options": [
+            "Cumbia",
+            "Tango",
+            "Un vals lento"
+          ],
+          "answer": 0
+        },
+        {
           "q": "¿Qué vestido llevaba Valentina?",
           "options": [
-            "Uno nuevo",
+            "Uno nuevo, comprado en Buenos Aires",
             "Uno de Camila",
             "El de su abuela"
           ],
@@ -405,11 +405,11 @@
         {
           "q": "¿Qué le dijo realmente la abuela?",
           "options": [
-            "Que estaba casi tan linda como ella",
             "Que estaba más linda que ella",
+            "Que estaba casi tan linda como ella",
             "Que el vestido era feo"
           ],
-          "answer": 0
+          "answer": 1
         }
       ],
       "open": [
@@ -476,38 +476,38 @@
         {
           "q": "¿Qué opina Chela de la comida?",
           "options": [
-            "Que era mala",
-            "Que era buena",
-            "Que era poca"
-          ],
-          "answer": 1
-        },
-        {
-          "q": "¿Cómo bailó el novio el tango?",
-          "options": [
-            "Muy mal",
-            "Perfecto",
-            "Un poco mejor que en la prueba"
+            "Que estaba fría y sin sal",
+            "Que era poca",
+            "Que era buena"
           ],
           "answer": 2
         },
         {
-          "q": "¿Qué fue lo que más le gustó?",
+          "q": "¿Cómo bailó el novio el tango?",
           "options": [
-            "La canción de la chica cubana",
-            "El vestido de la novia",
-            "La torta"
+            "Un poco mejor que en la prueba",
+            "Muy mal",
+            "Perfecto"
           ],
           "answer": 0
         },
         {
-          "q": "¿Qué fue lo que menos le gustó?",
+          "q": "¿Qué fue lo que más le gustó?",
           "options": [
-            "La música",
-            "El vestido verde de su hermana",
-            "El cura"
+            "El vestido de la novia",
+            "La canción de la chica cubana",
+            "La torta"
           ],
           "answer": 1
+        },
+        {
+          "q": "¿Qué fue lo que menos le gustó?",
+          "options": [
+            "El vestido verde de su hermana",
+            "La música",
+            "El cura"
+          ],
+          "answer": 0
         }
       ],
       "open": [
@@ -583,7 +583,7 @@
         {
           "q": "¿Qué hacen Lupita y Ximena?",
           "options": [
-            "El desayuno",
+            "El desayuno de los invitados",
             "Las camas",
             "Las maletas"
           ],
@@ -610,7 +610,7 @@
         {
           "q": "¿Qué no vio nadie?",
           "options": [
-            "El mariachi",
+            "El mariachi y sus trompetas",
             "Las lágrimas de Lupita",
             "El agujero de la camisa"
           ],
@@ -690,20 +690,20 @@
         {
           "q": "¿Cuántos vasitos de postre sirvieron?",
           "options": [
-            "Ciento ochenta",
             "Cien",
-            "Doscientos"
+            "Ciento ochenta",
+            "Doscientos cincuenta"
           ],
-          "answer": 0
+          "answer": 1
         },
         {
           "q": "¿Para quién faltaron postres?",
           "options": [
-            "Para los niños",
             "Para los mozos",
+            "Para los niños",
             "Para los novios"
           ],
-          "answer": 1
+          "answer": 0
         },
         {
           "q": "¿Qué le dijo Yesenia a la tía Gloria sobre las flores?",
@@ -717,11 +717,11 @@
         {
           "q": "¿Adónde van a llevar la torta?",
           "options": [
-            "A los bomberos del pueblo",
-            "A la iglesia",
-            "A la casa de los novios"
+            "A la iglesia de San Antonio de Areco",
+            "A la casa de los novios",
+            "A los bomberos del pueblo"
           ],
-          "answer": 0
+          "answer": 2
         }
       ],
       "open": [
@@ -788,38 +788,38 @@
         {
           "q": "¿A qué hora terminó Don Beto?",
           "options": [
-            "A la medianoche",
             "A las cuatro de la mañana",
+            "A la medianoche",
             "A las dos"
           ],
-          "answer": 1
+          "answer": 0
         },
         {
           "q": "¿Qué hizo con la carne?",
           "options": [
             "Compró más",
-            "La guardó",
-            "La cortó más fina"
+            "La cortó más fina",
+            "La guardó"
           ],
-          "answer": 2
+          "answer": 1
         },
         {
           "q": "¿De qué hablaron Don Beto y el tío argentino?",
           "options": [
-            "De fútbol",
             "De política",
+            "De fútbol",
             "De vinos"
           ],
-          "answer": 0
+          "answer": 1
         },
         {
           "q": "¿Adónde lo invitó el tío argentino?",
           "options": [
-            "A un partido",
             "A su casa en Rosario",
+            "A un partido",
             "A Chile"
           ],
-          "answer": 1
+          "answer": 0
         }
       ],
       "open": [
@@ -908,11 +908,11 @@
         {
           "q": "¿En qué pensaba Pepe?",
           "options": [
-            "En lo que pasó detrás del establo",
             "En el trabajo",
-            "En el viaje"
+            "En el viaje",
+            "En lo que pasó detrás del establo"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "q": "Según Gloria, ¿qué pasó?",
@@ -926,11 +926,11 @@
         {
           "q": "¿Quién va a pagar la cena?",
           "options": [
+            "Pepe",
             "Gloria",
-            "Los dos",
-            "Pepe"
+            "Los dos"
           ],
-          "answer": 2
+          "answer": 0
         }
       ],
       "open": [
@@ -1007,7 +1007,7 @@
           "q": "¿Dónde estuvo escondida Renata?",
           "options": [
             "Detrás del arco",
-            "En el establo",
+            "En el establo, con los caballos",
             "En el auto"
           ],
           "answer": 0
@@ -1016,28 +1016,28 @@
           "q": "¿A qué hora hablaron con Joaquín?",
           "options": [
             "A la medianoche",
-            "A las dos de la mañana",
-            "A las cinco"
-          ],
-          "answer": 1
-        },
-        {
-          "q": "¿Cómo reaccionó Joaquín al final?",
-          "options": [
-            "Lloró",
-            "Se fue",
-            "Se rió"
+            "A las cinco",
+            "A las dos de la mañana"
           ],
           "answer": 2
         },
         {
+          "q": "¿Cómo reaccionó Joaquín al final?",
+          "options": [
+            "Lloró un poco",
+            "Se rió",
+            "Se fue sin decir nada"
+          ],
+          "answer": 1
+        },
+        {
           "q": "¿Qué hizo Valentina?",
           "options": [
-            "Le dio un abrazo",
             "No le habló",
-            "Le pidió que se fuera"
+            "Le pidió que se fuera",
+            "Le dio un abrazo"
           ],
-          "answer": 0
+          "answer": 2
         }
       ],
       "open": [
@@ -1104,38 +1104,38 @@
         {
           "q": "¿Cómo describe Mariela la boda?",
           "options": [
-            "Un éxito total",
             "Un desastre perfecto",
+            "Un éxito total y absoluto",
             "Un desastre completo"
           ],
-          "answer": 1
+          "answer": 0
         },
         {
           "q": "¿Qué se comió el caballo?",
           "options": [
             "La torta",
-            "Las flores de la mesa",
-            "El ramo"
+            "El ramo",
+            "Las flores de la mesa"
           ],
-          "answer": 2
+          "answer": 1
         },
         {
           "q": "¿Hasta qué hora bailó la gente?",
           "options": [
-            "Hasta las cinco",
             "Hasta las tres",
+            "Hasta las cinco",
             "Hasta la medianoche"
           ],
-          "answer": 0
+          "answer": 1
         },
         {
           "q": "¿Qué quiere Mariela para la próxima boda?",
           "options": [
-            "Otro caballo",
             "Una persona como el invitado en su equipo",
+            "Otro caballo",
             "Más dinero"
           ],
-          "answer": 1
+          "answer": 0
         }
       ],
       "open": [
@@ -1220,7 +1220,7 @@
         {
           "q": "¿Qué busca Don Chuy?",
           "options": [
-            "Su guitarra",
+            "Su guitarra de siempre",
             "Su teléfono",
             "Su sombrero"
           ],
@@ -1229,29 +1229,29 @@
         {
           "q": "¿Quién tiene el sombrero?",
           "options": [
-            "Don Horacio",
             "Willy",
+            "Don Horacio",
             "Yamilé"
-          ],
-          "answer": 0
-        },
-        {
-          "q": "¿Dónde se durmió Don Horacio?",
-          "options": [
-            "En el auto",
-            "En una silla",
-            "En la pista"
           ],
           "answer": 1
         },
         {
-          "q": "¿Dónde tocan el mes que viene?",
+          "q": "¿Dónde se durmió Don Horacio?",
           "options": [
-            "En Guadalajara",
-            "En La Habana",
-            "En Miami"
+            "En el asiento de atrás del auto",
+            "En la pista",
+            "En una silla"
           ],
           "answer": 2
+        },
+        {
+          "q": "¿Dónde tocan el mes que viene?",
+          "options": [
+            "En Miami",
+            "En Guadalajara",
+            "En La Habana"
+          ],
+          "answer": 0
         }
       ],
       "open": [
@@ -1319,7 +1319,7 @@
           "q": "¿Con quién habla Don Horacio?",
           "options": [
             "Con su hermano",
-            "Con su médico",
+            "Con su médico de siempre",
             "Con su hija"
           ],
           "answer": 0
@@ -1327,7 +1327,7 @@
         {
           "q": "¿Qué le enseñó el chico?",
           "options": [
-            "A bailar tango",
+            "A bailar tango con la abuela",
             "A dar pasos cortos",
             "A cantar"
           ],
@@ -1429,38 +1429,38 @@
         {
           "q": "¿Qué busca Ximena?",
           "options": [
-            "Su teléfono",
-            "Un chal azul",
-            "Sus zapatos"
+            "Su teléfono nuevo",
+            "Sus zapatos de baile",
+            "Un chal azul"
           ],
-          "answer": 1
+          "answer": 2
         },
         {
           "q": "¿Cuándo dejó el chal?",
           "options": [
             "Cuando llegó",
-            "Cuando se fue",
-            "Cuando salió a bailar sola"
+            "Cuando salió a bailar sola",
+            "Cuando se fue"
           ],
-          "answer": 2
+          "answer": 1
         },
         {
           "q": "¿Qué no pasó más?",
           "options": [
-            "Nadie le preguntó cuándo se casa",
             "Nadie la invitó a bailar",
+            "Nadie le preguntó cuándo se casa",
             "Nadie habló con ella"
           ],
-          "answer": 0
+          "answer": 1
         },
         {
           "q": "Según Edgardo, ¿qué entendieron las tías?",
           "options": [
-            "Que tenía novio",
             "Que era la persona más feliz de la fiesta",
+            "Que tenía novio",
             "Que estaba cansada"
           ],
-          "answer": 1
+          "answer": 0
         }
       ],
       "open": [
@@ -1528,7 +1528,7 @@
           "q": "¿Con quién habla Ceferino?",
           "options": [
             "Con los novios",
-            "Con Mariela",
+            "Con Mariela, la organizadora",
             "Con la veterinaria"
           ],
           "answer": 2
@@ -1536,11 +1536,11 @@
         {
           "q": "¿Qué hizo Lucero con los fuegos artificiales?",
           "options": [
-            "Levantó las orejas, pero no se movió",
             "Corrió hacia el campo",
-            "Relinchó fuerte"
+            "Relinchó fuerte",
+            "Levantó las orejas, pero no se movió"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "q": "¿Hasta dónde caminó con los novios?",
@@ -1554,11 +1554,11 @@
         {
           "q": "¿Cómo se sentía Ceferino?",
           "options": [
-            "Muy triste",
-            "Muy enojado",
-            "Muy orgulloso"
+            "Muy orgulloso",
+            "Un poco triste",
+            "Muy enojado con todos"
           ],
-          "answer": 2
+          "answer": 0
         }
       ],
       "open": [
@@ -1635,28 +1635,28 @@
           "q": "¿Cómo son las fotos debajo del ombú?",
           "options": [
             "Muy oscuras",
-            "Las mejores de su carrera",
-            "Muy normales"
+            "Muy normales",
+            "Las mejores de su carrera"
           ],
-          "answer": 1
+          "answer": 2
         },
         {
           "q": "¿Qué hay en el centro de la foto de familia?",
           "options": [
             "La abuela",
-            "Un caballo",
-            "Un perro"
+            "Un perro",
+            "Un caballo"
           ],
-          "answer": 2
+          "answer": 1
         },
         {
           "q": "¿Qué tienen que decidir los novios?",
           "options": [
-            "Dónde poner la foto",
-            "Qué fotos borrar",
-            "Cuánto pagar"
+            "Qué fotos borrar del teléfono",
+            "Cuánto pagar",
+            "Dónde poner la foto"
           ],
-          "answer": 0
+          "answer": 2
         }
       ],
       "open": [
@@ -1732,17 +1732,17 @@
         {
           "q": "¿Qué pasó en la carpa durante el brindis?",
           "options": [
-            "Todos se fueron",
-            "Empezó la música",
-            "Se quedó en silencio"
+            "Se quedó en silencio",
+            "Todos se fueron a la pista",
+            "Empezó la música"
           ],
-          "answer": 2
+          "answer": 0
         },
         {
           "q": "¿Dónde estaba Facundo durante el brindis?",
           "options": [
             "Al lado de la barra",
-            "En el escenario",
+            "En el escenario, junto a la banda",
             "En el muelle"
           ],
           "answer": 0
@@ -1752,7 +1752,7 @@
           "options": [
             "El de Renata",
             "El de su papá",
-            "El suyo"
+            "El que escribió él solo"
           ],
           "answer": 1
         }
@@ -1855,7 +1855,7 @@
           "options": [
             "Un minuto",
             "Cinco minutos",
-            "Media hora"
+            "Media hora o más"
           ],
           "answer": 1
         },

@@ -52,48 +52,48 @@
           "q": "¿Cuántos autos hay?",
           "qEn": "How many cars are there?",
           "options": [
-            "Cuarenta",
             "Catorce",
-            "Cuatro"
+            "Cuarenta",
+            "Cuatrocientos"
           ],
-          "answer": 0
+          "answer": 1
         },
         {
           "q": "¿Cuántas combis hay?",
           "qEn": "How many minibuses are there?",
           "options": [
             "Una",
-            "Dos",
-            "Tres"
+            "Tres",
+            "Dos"
           ],
-          "answer": 1
+          "answer": 2
         },
         {
           "q": "¿De quién es el auto azul?",
           "qEn": "Whose is the blue car?",
           "options": [
+            "Del padrino",
             "Del novio",
-            "De Wilmer",
-            "Del padrino"
+            "De Wilmer"
           ],
-          "answer": 2
+          "answer": 0
         },
         {
           "q": "¿Qué toma Anselmo?",
           "qEn": "What does Anselmo have?",
           "options": [
+            "Un mate amargo",
             "Un café",
-            "Un mate",
-            "Un vino"
+            "Un vino tinto"
           ],
-          "answer": 0
+          "answer": 1
         }
       ],
       "open": [
         {
-          "q": "¿Tienes auto?",
-          "qEn": "Do you have a car?",
-          "model": "Sí, tengo un auto rojo."
+          "q": "¿Vas en auto a las celebraciones?",
+          "qEn": "Do you go to celebrations by car?",
+          "model": "Sí, voy en auto con mi hermana."
         },
         {
           "q": "¿Qué tomas por la tarde?",
@@ -101,9 +101,9 @@
           "model": "Tomo un café o un té."
         },
         {
-          "q": "¿Cuántas personas hay en tu familia?",
-          "qEn": "How many people are in your family?",
-          "model": "Hay cinco personas."
+          "q": "¿Cuántas personas hay en una cena de tu familia?",
+          "qEn": "How many people are at a family dinner?",
+          "model": "Hay doce personas."
         }
       ],
       "gaps": "Es del [padrino]. Está [cerca] del [árbol]. Bien. Ahora [tomo] un café.",
@@ -175,11 +175,11 @@
           "q": "¿Qué le gusta a Joaquín?",
           "qEn": "What does Joaquín like?",
           "options": [
-            "Las flores",
             "Las velas",
+            "Las flores",
             "La música"
           ],
-          "answer": 1
+          "answer": 0
         },
         {
           "q": "¿Cómo está la capilla?",
@@ -195,28 +195,28 @@
           "q": "¿Cuántas personas hay?",
           "qEn": "How many people are there?",
           "options": [
-            "Ochenta",
             "Ocho",
+            "Ochenta",
             "Dieciocho"
           ],
-          "answer": 0
+          "answer": 1
         },
         {
           "q": "¿Qué abre Joaquín?",
           "qEn": "What does Joaquín open?",
           "options": [
-            "La ventana",
             "La puerta",
+            "La ventana",
             "La caja"
           ],
-          "answer": 1
+          "answer": 0
         }
       ],
       "open": [
         {
-          "q": "¿Te gusta el calor o el frío?",
-          "qEn": "Do you like heat or cold?",
-          "model": "Me gusta el frío."
+          "q": "¿Prefieres una celebración en verano o en invierno?",
+          "qEn": "Do you prefer a celebration in summer or in winter?",
+          "model": "Prefiero el verano."
         },
         {
           "q": "¿Hay una iglesia cerca de tu casa?",
@@ -224,9 +224,9 @@
           "model": "Sí, hay una iglesia pequeña."
         },
         {
-          "q": "¿Te gustan las velas?",
-          "qEn": "Do you like candles?",
-          "model": "Sí, me gustan mucho."
+          "q": "¿Pones velas en la mesa para una cena especial?",
+          "qEn": "Do you put candles on the table for a special dinner?",
+          "model": "Sí, pongo dos velas blancas."
         }
       ],
       "gaps": "La [capilla] es [pequeña]. Hay [ochenta] [personas].",
@@ -308,21 +308,21 @@
           "q": "¿Qué es primero?",
           "qEn": "What comes first?",
           "options": [
-            "La ceremonia",
             "La torta",
+            "La ceremonia",
             "La música"
           ],
-          "answer": 0
+          "answer": 1
         },
         {
           "q": "¿De qué es la torta?",
           "qEn": "What flavour is the cake?",
           "options": [
-            "De limón",
             "De chocolate",
+            "De limón",
             "De fresa"
           ],
-          "answer": 1
+          "answer": 0
         },
         {
           "q": "¿Quién es Marisol?",
@@ -337,19 +337,19 @@
       ],
       "open": [
         {
-          "q": "¿Te gusta el chocolate?",
-          "qEn": "Do you like chocolate?",
-          "model": "Sí, me gusta mucho."
+          "q": "¿Qué dulce comes en un día feliz?",
+          "qEn": "What sweet do you eat on a happy day?",
+          "model": "Como helado de chocolate."
         },
         {
-          "q": "¿Tienes sobrinos?",
-          "qEn": "Do you have nephews or nieces?",
-          "model": "Sí, tengo dos sobrinos."
+          "q": "¿Hay muchos niños en tu familia?",
+          "qEn": "Are there many children in your family?",
+          "model": "Sí, hay seis niños."
         },
         {
-          "q": "¿Qué comes cuando tienes hambre?",
-          "qEn": "What do you eat when you are hungry?",
-          "model": "Como pan o fruta."
+          "q": "¿Qué comes después de un día largo?",
+          "qEn": "What do you eat after a long day?",
+          "model": "Como una sopa caliente."
         }
       ],
       "gaps": "[Sí], hay [torta] de [chocolate]. ¡Me [gusta] el chocolate!",
@@ -421,21 +421,21 @@
           "q": "¿Cómo es el vestido?",
           "qEn": "What is the dress like?",
           "options": [
-            "Muy largo",
             "Muy corto",
-            "Muy feo"
+            "Muy largo",
+            "Normal, sin cola"
           ],
-          "answer": 0
+          "answer": 1
         },
         {
           "q": "¿Cómo son los zapatos?",
           "qEn": "What are the shoes like?",
           "options": [
-            "Bajos",
             "Altos",
+            "Muy bajos",
             "Rojos"
           ],
-          "answer": 1
+          "answer": 0
         },
         {
           "q": "¿Cómo está el pelo?",
@@ -544,7 +544,7 @@
           "q": "¿Qué toma Chela?",
           "qEn": "What does Chela drink?",
           "options": [
-            "Café",
+            "Café con leche",
             "Vino",
             "Mate"
           ],
@@ -573,9 +573,9 @@
       ],
       "open": [
         {
-          "q": "¿Cuántos años tienen tus abuelos?",
-          "qEn": "How old are your grandparents?",
-          "model": "Mi abuela tiene setenta años."
+          "q": "¿Tus abuelos fueron a tu última celebración?",
+          "qEn": "Did your grandparents go to your last celebration?",
+          "model": "Sí, fue mi abuela."
         },
         {
           "q": "¿Te gustan las bebidas calientes?",
@@ -667,11 +667,11 @@
           "q": "¿Qué dice Lupita de la roja?",
           "qEn": "What does Lupita say about the red one?",
           "options": [
-            "Es de circo",
-            "Es elegante",
-            "Es pequeña"
+            "Es muy elegante",
+            "Es pequeña",
+            "Es de circo"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "q": "¿Qué corbata eligen al final?",
@@ -687,11 +687,11 @@
           "q": "¿De qué color son los ojos del papá?",
           "qEn": "What colour are the dad’s eyes?",
           "options": [
-            "Verdes",
-            "Negros",
-            "Azules"
+            "Azules",
+            "Verdes claros",
+            "Negros"
           ],
-          "answer": 2
+          "answer": 0
         }
       ],
       "open": [
@@ -791,47 +791,47 @@
           "qEn": "How many empanadas are there now?",
           "options": [
             "Quinientas",
-            "Trescientas",
-            "Treinta"
+            "Treinta",
+            "Trescientas"
           ],
-          "answer": 1
+          "answer": 2
         },
         {
           "q": "¿Cuántas necesitan?",
           "qEn": "How many do they need?",
           "options": [
             "Cien",
-            "Trescientas",
-            "Quinientas"
+            "Quinientas",
+            "Trescientas"
           ],
-          "answer": 2
+          "answer": 1
         },
         {
           "q": "¿Qué hace Ramiro?",
           "qEn": "What does Ramiro do?",
           "options": [
-            "Ayuda a Yesenia",
             "Se va a casa",
+            "Ayuda a Yesenia",
             "Duerme"
           ],
-          "answer": 0
+          "answer": 1
         }
       ],
       "open": [
         {
-          "q": "¿Te gusta cocinar?",
-          "qEn": "Do you like cooking?",
-          "model": "Sí, me gusta cocinar pasta."
+          "q": "¿Cocinas para tus amigos en tu cumpleaños?",
+          "qEn": "Do you cook for your friends on your birthday?",
+          "model": "Sí, cocino pizza."
         },
         {
-          "q": "¿Cuál es tu comida favorita?",
-          "qEn": "What is your favourite food?",
-          "model": "Mi comida favorita es el arroz."
+          "q": "¿Qué comida pides en un día especial?",
+          "qEn": "What food do you order on a special day?",
+          "model": "Pido pescado con arroz."
         },
         {
-          "q": "¿Quién cocina en tu casa?",
-          "qEn": "Who cooks at your home?",
-          "model": "Mi papá cocina."
+          "q": "¿Quién hace la torta en tu familia?",
+          "qEn": "Who makes the cake in your family?",
+          "model": "Mi tía hace la torta."
         }
       ],
       "gaps": "¡[Quinientas]! Necesito [otra] [mesa] y más [manos].",
@@ -893,11 +893,11 @@
           "q": "¿Con quién habla Don Beto?",
           "qEn": "Who is Don Beto talking to?",
           "options": [
-            "Con el novio",
             "Con la carne",
-            "Con un perro"
+            "Con el novio",
+            "Con un perro grande"
           ],
-          "answer": 1
+          "answer": 0
         },
         {
           "q": "¿Cómo está el fuego?",
@@ -913,11 +913,11 @@
           "q": "¿Cuántas personas hay?",
           "qEn": "How many people are there?",
           "options": [
-            "Ciento veinte",
             "Ochenta",
-            "Doscientas"
+            "Doscientas",
+            "Ciento veinte"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "q": "¿Para quién es el vino?",
@@ -932,9 +932,9 @@
       ],
       "open": [
         {
-          "q": "¿Comes carne?",
-          "qEn": "Do you eat meat?",
-          "model": "Sí, como carne los domingos."
+          "q": "¿Qué carne prefieres a la parrilla?",
+          "qEn": "What meat do you prefer on the grill?",
+          "model": "Prefiero el pollo."
         },
         {
           "q": "¿Hablas solo a veces?",
@@ -942,9 +942,9 @@
           "model": "Sí, cuando cocino."
         },
         {
-          "q": "¿Te gusta el vino?",
-          "qEn": "Do you like wine?",
-          "model": "No, prefiero el agua."
+          "q": "¿Qué tomas con la carne, vino o agua?",
+          "qEn": "What do you drink with meat, wine or water?",
+          "model": "Tomo agua con gas."
         }
       ],
       "gaps": "El [fuego] está bien. No es [alto]. No es [bajo]. Hay ciento [veinte] personas.",
@@ -1016,31 +1016,31 @@
           "q": "¿Qué número es la mesa?",
           "qEn": "What number is the table?",
           "options": [
-            "Nueve",
-            "Once",
-            "Siete"
+            "Siete",
+            "Diecinueve",
+            "Once"
           ],
-          "answer": 2
+          "answer": 0
         },
         {
           "q": "¿Dónde está la silla de Pepe?",
           "qEn": "Where is Pepe’s chair?",
           "options": [
-            "Al lado de la silla de Gloria",
             "Lejos de la mesa",
+            "Al lado de la silla de Gloria",
             "En la cocina"
           ],
-          "answer": 0
+          "answer": 1
         },
         {
           "q": "¿Dónde se sienta Gloria?",
           "qEn": "Where does Gloria sit?",
           "options": [
-            "Al lado de Pepe",
             "Allá",
+            "Al lado de Pepe",
             "En el suelo"
           ],
-          "answer": 1
+          "answer": 0
         },
         {
           "q": "¿Qué no hace Gloria hoy?",
@@ -1065,9 +1065,9 @@
           "model": "Sí, hablo con todos."
         },
         {
-          "q": "¿Cuál es tu número favorito?",
-          "qEn": "What is your favourite number?",
-          "model": "Mi número favorito es el siete."
+          "q": "¿En qué mesa te sientas en un restaurante, cerca o lejos de la puerta?",
+          "qEn": "Where do you sit in a restaurant, near or far from the door?",
+          "model": "Me siento lejos de la puerta."
         }
       ],
       "gaps": "Mi [silla] está [aquí]. Al [lado] de tu [silla].",
@@ -1139,53 +1139,53 @@
           "q": "¿Qué flor quiere Renata?",
           "qEn": "Which flower does Renata want?",
           "options": [
-            "Una rosa roja",
             "Una rosa blanca",
-            "Un jazmín"
+            "Un jazmín",
+            "Una rosa roja"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "q": "¿Qué colores de rosas tiene Rocío?",
           "qEn": "What colours of roses does Rocío have?",
           "options": [
-            "Amarillas y rosas",
             "Rojas y blancas",
+            "Amarillas y rosas",
             "Solo blancas"
           ],
-          "answer": 1
+          "answer": 0
         },
         {
           "q": "¿Para qué es la flor?",
           "qEn": "What is the flower for?",
           "options": [
             "Para la novia",
-            "Para la mesa",
-            "Para el vestido"
+            "Para el vestido",
+            "Para la mesa"
           ],
-          "answer": 2
+          "answer": 1
         },
         {
           "q": "¿De qué color es el vestido de Renata?",
           "qEn": "What colour is Renata’s dress?",
           "options": [
-            "Rojo",
             "Blanco",
-            "Azul"
+            "Azul",
+            "Rojo"
           ],
-          "answer": 0
+          "answer": 2
         }
       ],
       "open": [
         {
-          "q": "¿Qué flores te gustan?",
-          "qEn": "What flowers do you like?",
-          "model": "Me gustan las rosas."
+          "q": "¿Qué flores hay en tu barrio?",
+          "qEn": "What flowers are there in your neighbourhood?",
+          "model": "Hay jazmines y rosas."
         },
         {
-          "q": "¿Tienes ropa roja?",
-          "qEn": "Do you have red clothes?",
-          "model": "Sí, tengo una camiseta roja."
+          "q": "¿Qué ropa llevas a una celebración elegante?",
+          "qEn": "What clothes do you wear to an elegant celebration?",
+          "model": "Llevo un vestido azul."
         },
         {
           "q": "¿Compras flores a veces?",
@@ -1262,31 +1262,31 @@
           "q": "¿A qué hora es la comida?",
           "qEn": "What time is the food?",
           "options": [
+            "A las siete",
             "A las ocho",
-            "A las seis",
-            "A las siete"
+            "A las seis"
           ],
-          "answer": 2
+          "answer": 0
         },
         {
           "q": "¿Dónde están los baños?",
           "qEn": "Where are the toilets?",
           "options": [
-            "Al lado de la casa",
             "En la carpa",
+            "Al lado de la casa",
             "En la capilla"
           ],
-          "answer": 0
+          "answer": 1
         },
         {
           "q": "¿A qué hora es la música?",
           "qEn": "What time is the music?",
           "options": [
             "A las siete",
-            "A las ocho",
-            "A las nueve"
+            "A las nueve",
+            "A las ocho"
           ],
-          "answer": 1
+          "answer": 2
         }
       ],
       "open": [
@@ -1301,9 +1301,9 @@
           "model": "No, me da vergüenza."
         },
         {
-          "q": "¿Qué música te gusta?",
-          "qEn": "What music do you like?",
-          "model": "Me gusta el pop."
+          "q": "¿Qué canción pones cuando quieres bailar con tus amigos?",
+          "qEn": "What song do you play when you want to dance with your friends?",
+          "model": "Una canción de salsa."
         }
       ],
       "gaps": "Los [baños] están al [lado] de la [casa]. Y la [música] es a las ocho.",
@@ -1380,11 +1380,11 @@
           "q": "¿Qué tiene Yamilé?",
           "qEn": "What does Yamilé have?",
           "options": [
-            "La guitarra",
-            "Una trompeta",
-            "El micrófono"
+            "El micrófono",
+            "La guitarra eléctrica",
+            "Una trompeta"
           ],
-          "answer": 2
+          "answer": 0
         },
         {
           "q": "¿De quién es la guitarra?",
@@ -1419,9 +1419,9 @@
       ],
       "open": [
         {
-          "q": "¿Tocas algún instrumento?",
-          "qEn": "Do you play an instrument?",
-          "model": "Sí, toco el piano."
+          "q": "¿Qué instrumento suena bien en una celebración?",
+          "qEn": "Which instrument sounds good at a celebration?",
+          "model": "La guitarra suena bien."
         },
         {
           "q": "¿Te gusta bailar salsa?",
@@ -1493,58 +1493,58 @@
           "q": "¿Qué baila Don Horacio?",
           "qEn": "What does Don Horacio dance?",
           "options": [
-            "Un vals",
             "Un tango",
-            "Una salsa"
+            "Una salsa",
+            "Un vals"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "q": "¿Quién baila muy bien?",
           "qEn": "Who dances very well?",
           "options": [
-            "Él",
             "Su hija",
+            "Él",
             "Su esposa"
           ],
-          "answer": 1
+          "answer": 0
         },
         {
           "q": "¿A qué hora baila con su hija?",
           "qEn": "What time does he dance with his daughter?",
           "options": [
             "A las nueve",
-            "A las once",
-            "A las diez"
+            "A las diez",
+            "A las once"
           ],
-          "answer": 2
+          "answer": 1
         },
         {
           "q": "¿Qué le duele?",
           "qEn": "What hurts?",
           "options": [
-            "La rodilla",
             "La cabeza",
-            "La espalda"
+            "La rodilla",
+            "La espalda y el cuello"
           ],
-          "answer": 0
+          "answer": 1
         }
       ],
       "open": [
         {
-          "q": "¿Sabes bailar?",
-          "qEn": "Can you dance?",
-          "model": "Sí, sé bailar un poco."
+          "q": "¿Con quién bailas en tu familia?",
+          "qEn": "Who do you dance with in your family?",
+          "model": "Bailo con mi mamá."
         },
         {
-          "q": "¿Cuándo estás nervioso?",
-          "qEn": "When are you nervous?",
-          "model": "Estoy nervioso en los exámenes."
+          "q": "¿Tienes nervios cuando bailas delante de gente?",
+          "qEn": "Do you get nervous when you dance in front of people?",
+          "model": "Sí, un poco."
         },
         {
-          "q": "¿Te duele algo hoy?",
-          "qEn": "Does anything hurt today?",
-          "model": "No, estoy bien."
+          "q": "¿Usas zapatos cómodos para bailar?",
+          "qEn": "Do you wear comfortable shoes to dance?",
+          "model": "Sí, uso zapatillas."
         }
       ],
       "gaps": "A las [diez] bailo con [ella]. Estoy [nervioso]. Y me duele la [rodilla].",
@@ -1617,20 +1617,20 @@
           "qEn": "What does Ximena order?",
           "options": [
             "Un vino",
-            "Una limonada",
-            "Un café"
+            "Un café",
+            "Una limonada"
           ],
-          "answer": 1
+          "answer": 2
         },
         {
           "q": "¿Cómo la quiere?",
           "qEn": "How does she want it?",
           "options": [
+            "Sin azúcar",
             "Con hielo",
-            "Con leche",
-            "Sin azúcar"
+            "Con leche"
           ],
-          "answer": 2
+          "answer": 0
         },
         {
           "q": "¿De qué tamaño?",
@@ -1655,9 +1655,9 @@
       ],
       "open": [
         {
-          "q": "¿Qué tomas en un bar?",
-          "qEn": "What do you drink in a bar?",
-          "model": "Tomo una cerveza."
+          "q": "¿Qué pides en la barra de una celebración?",
+          "qEn": "What do you order at the bar of a celebration?",
+          "model": "Pido un jugo de naranja."
         },
         {
           "q": "¿Tomas café con azúcar?",
@@ -1739,11 +1739,11 @@
           "q": "¿Cuántos años tiene?",
           "qEn": "How old is he?",
           "options": [
-            "Diez",
             "Dos",
-            "Doce"
+            "Doce o trece",
+            "Diez"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "q": "¿Qué come el caballo?",
@@ -1759,23 +1759,23 @@
           "q": "¿De qué color es la cinta?",
           "qEn": "What colour is the ribbon?",
           "options": [
+            "Azul",
             "Roja",
-            "Blanca",
-            "Azul"
+            "Blanca"
           ],
-          "answer": 2
+          "answer": 0
         }
       ],
       "open": [
         {
-          "q": "¿Tienes un animal?",
-          "qEn": "Do you have an animal?",
-          "model": "Sí, tengo un gato."
+          "q": "¿Hay animales en la casa de tus abuelos?",
+          "qEn": "Are there animals at your grandparents' house?",
+          "model": "Sí, hay dos perros."
         },
         {
-          "q": "¿Te gustan los caballos?",
-          "qEn": "Do you like horses?",
-          "model": "Sí, pero me dan miedo."
+          "q": "¿Subes a un caballo o tienes miedo?",
+          "qEn": "Do you get on a horse or are you scared?",
+          "model": "Tengo un poco de miedo."
         },
         {
           "q": "¿Comes manzanas?",
@@ -1842,41 +1842,41 @@
           "q": "¿Quién habla?",
           "qEn": "Who is speaking?",
           "options": [
-            "El fotógrafo",
             "El novio",
-            "El cura"
+            "El cura",
+            "El fotógrafo"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "q": "¿Dónde están los niños?",
           "qEn": "Where are the children?",
           "options": [
-            "Atrás",
             "Adelante",
+            "Atrás",
             "En las sillas"
           ],
-          "answer": 1
+          "answer": 0
         },
         {
           "q": "¿Dónde están los abuelos?",
           "qEn": "Where are the grandparents?",
           "options": [
             "Atrás",
-            "En la pista",
-            "En las sillas"
+            "En las sillas",
+            "En la pista"
           ],
-          "answer": 2
+          "answer": 1
         },
         {
           "q": "¿Dónde están los tíos?",
           "qEn": "Where are the uncles and aunts?",
           "options": [
-            "Atrás",
             "Adelante",
+            "Atrás",
             "En la casa"
           ],
-          "answer": 0
+          "answer": 1
         }
       ],
       "open": [
@@ -1955,11 +1955,11 @@
           "q": "¿Qué hay en el cielo?",
           "qEn": "What is in the sky?",
           "options": [
-            "El sol",
             "La luna",
+            "El sol",
             "Nubes"
           ],
-          "answer": 1
+          "answer": 0
         },
         {
           "q": "¿Cómo está el agua?",
@@ -1975,11 +1975,11 @@
           "q": "¿Qué animales hay?",
           "qEn": "What animals are there?",
           "options": [
-            "Ranas",
-            "Patos",
-            "Peces"
+            "Patos blancos",
+            "Peces",
+            "Ranas"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "q": "¿A quién extraña Facundo?",
@@ -1994,9 +1994,9 @@
       ],
       "open": [
         {
-          "q": "¿Te gusta la noche?",
-          "qEn": "Do you like the night?",
-          "model": "Sí, me gusta mucho."
+          "q": "¿A qué hora termina una celebración en tu país?",
+          "qEn": "What time does a celebration end in your country?",
+          "model": "Termina a las tres o a las cuatro."
         },
         {
           "q": "¿A quién extrañas?",
@@ -2004,9 +2004,9 @@
           "model": "Extraño a mi abuelo."
         },
         {
-          "q": "¿Estás contento hoy?",
-          "qEn": "Are you happy today?",
-          "model": "Sí, estoy contento."
+          "q": "¿Estás de buen humor hoy?",
+          "qEn": "Are you in a good mood today?",
+          "model": "Sí, estoy de buen humor."
         }
       ],
       "gaps": "Mi [amigo] se casa hoy. Estoy [contento]. Pero [también] estoy [triste].",
@@ -2083,21 +2083,21 @@
           "q": "¿Qué hora es?",
           "qEn": "What time is it?",
           "options": [
-            "Las diez",
-            "Las once",
-            "Las doce"
+            "Las doce",
+            "Las diez y media",
+            "Las once"
           ],
-          "answer": 2
+          "answer": 0
         },
         {
           "q": "¿Qué levantan todos?",
           "qEn": "What does everyone raise?",
           "options": [
-            "Las copas",
             "Las manos",
-            "Las sillas"
+            "Las sillas",
+            "Las copas"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "q": "¿A quién da las gracias Joaquín?",
@@ -2113,11 +2113,11 @@
           "q": "¿Qué dice Valentina al final?",
           "qEn": "What does Valentina say at the end?",
           "options": [
-            "¡Adiós!",
-            "¡Hola!",
-            "¡Salud!"
+            "¡Salud!",
+            "¡Buenas noches!",
+            "¡Hola!"
           ],
-          "answer": 2
+          "answer": 0
         }
       ],
       "open": [
@@ -2132,9 +2132,9 @@
           "model": "Doy las gracias a mi familia."
         },
         {
-          "q": "¿Te gustan las fiestas?",
-          "qEn": "Do you like parties?",
-          "model": "Sí, me gustan mucho."
+          "q": "¿Qué celebras con tus amigos?",
+          "qEn": "What do you celebrate with your friends?",
+          "model": "Celebro los cumpleaños."
         }
       ],
       "gaps": "[Gracias] a [todos] por [venir]. Gracias a nuestras [familias].",

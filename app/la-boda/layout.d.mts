@@ -35,6 +35,7 @@ export const TABLES: { x: number; z: number }[];
 export const TABLE_LEN: number;
 export function chairX(i: number): number;
 export const ROUND: { x: number; z: number }[];
+export const SEAT_R: number;
 export function roundSeat(t: { x: number; z: number }, k: number): Placed;
 export const FURNITURE: Furniture[];
 export const SCENES: Scene[];

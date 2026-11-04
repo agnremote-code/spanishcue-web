@@ -49,38 +49,38 @@
         {
           "q": "¿Cómo describe Wilmer la llegada del auto del padrino?",
           "options": [
-            "Como una película de misterio",
             "Como un accidente",
+            "Como una película de misterio",
             "Como una broma"
-          ],
-          "answer": 0
-        },
-        {
-          "q": "¿Qué dice Anselmo del invitado que no estaba en la lista?",
-          "options": [
-            "Que causó problemas",
-            "Que fue el que más ayudó",
-            "Que se fue temprano"
           ],
           "answer": 1
         },
         {
-          "q": "¿Qué traía la tía Carmen?",
+          "q": "¿Qué dice Anselmo del invitado que no estaba en la lista?",
           "options": [
-            "Una torta",
-            "Un perro",
-            "Una lámpara de bronce"
+            "Que causó problemas con los autos de los invitados",
+            "Que se fue temprano",
+            "Que fue el que más ayudó"
           ],
           "answer": 2
         },
         {
-          "q": "¿Qué les desea Anselmo a los novios?",
+          "q": "¿Qué traía la tía Carmen?",
           "options": [
-            "Una boda imperfecta y eterna",
-            "Una boda perfecta",
-            "Mucho dinero"
+            "Una lámpara de bronce",
+            "Una torta",
+            "Un perro"
           ],
           "answer": 0
+        },
+        {
+          "q": "¿Qué les desea Anselmo a los novios?",
+          "options": [
+            "Una boda perfecta",
+            "Mucho dinero",
+            "Una boda imperfecta y eterna"
+          ],
+          "answer": 2
         }
       ],
       "open": [
@@ -160,20 +160,20 @@
         {
           "q": "¿Qué pasó en 1987?",
           "options": [
-            "Se perdieron los anillos para siempre",
             "Un novio se desmayó en el altar",
+            "Se perdieron los anillos para siempre",
             "Se quemó la capilla"
           ],
-          "answer": 1
+          "answer": 0
         },
         {
           "q": "¿Qué fue lo primero que hizo el cura?",
           "options": [
-            "Llamar a la policía",
-            "Rezar",
-            "Mirar las rodillas de Joaquín"
+            "Llamar a la policía del pueblo para pedir ayuda",
+            "Mirar las rodillas de Joaquín",
+            "Rezar"
           ],
-          "answer": 2
+          "answer": 1
         },
         {
           "q": "¿Quién se come la mitad de las gomitas?",
@@ -188,10 +188,10 @@
           "q": "¿Qué importa según el cura?",
           "options": [
             "El oro de los anillos",
-            "Lo que dijo Joaquín",
-            "El vestido de la novia"
+            "El vestido de la novia",
+            "Lo que dijo Joaquín"
           ],
-          "answer": 1
+          "answer": 2
         }
       ],
       "open": [
@@ -279,38 +279,38 @@
         {
           "q": "¿Qué plantaron en el colegio?",
           "options": [
-            "Flores en el jardín",
-            "Árboles en el patio",
-            "Porotos en un frasco"
+            "Flores secas en un libro de la abuela",
+            "Porotos en un frasco",
+            "Árboles en el patio"
           ],
-          "answer": 2
+          "answer": 1
         },
         {
           "q": "¿Para qué quería Tadeo un árbol de anillos?",
           "options": [
-            "Para sacar otros si se pierden",
             "Para venderlos",
-            "Para regalarlos a sus amigos"
+            "Para sacar otros si se pierden",
+            "Para regalarlos a sus amigos del barrio"
           ],
-          "answer": 0
+          "answer": 1
         },
         {
           "q": "¿Por qué cree Tadeo que valió la pena?",
           "options": [
             "Porque no lo castigaron",
-            "Porque todos se rieron con las gomitas",
-            "Porque ganó un premio"
+            "Porque ganó un premio",
+            "Porque todos se rieron con las gomitas"
           ],
-          "answer": 1
+          "answer": 2
         },
         {
           "q": "¿Dónde terminó uno de los anillos?",
           "options": [
+            "En el agua de los caballos",
             "En la torta",
-            "En la laguna",
-            "En el agua de los caballos"
+            "En la laguna"
           ],
-          "answer": 2
+          "answer": 0
         }
       ],
       "open": [
@@ -408,28 +408,28 @@
           "q": "¿Qué pensaba Valentina del vestido de la abuela?",
           "options": [
             "Que era feo",
-            "Que era demasiado importante, como de museo",
-            "Que era pequeño"
-          ],
-          "answer": 1
-        },
-        {
-          "q": "¿Cómo se sintió al ponérselo?",
-          "options": [
-            "Más nerviosa",
-            "Incómoda",
-            "Más tranquila"
+            "Que era pequeño",
+            "Que era demasiado importante, como de museo"
           ],
           "answer": 2
         },
         {
+          "q": "¿Cómo se sintió al ponérselo?",
+          "options": [
+            "Más nerviosa que en toda la semana",
+            "Más tranquila",
+            "Incómoda"
+          ],
+          "answer": 1
+        },
+        {
           "q": "¿Qué va a hacer con el otro vestido?",
           "options": [
+            "Venderlo en una tienda de segunda mano",
             "Guardarlo para su hija",
-            "Venderlo",
             "Regalárselo a Camila"
           ],
-          "answer": 0
+          "answer": 1
         }
       ],
       "open": [
@@ -501,28 +501,28 @@
           "q": "¿Por qué el padre de Chela odiaba a Aurelio?",
           "options": [
             "Porque era extranjero",
-            "Porque era peón y no tenía tierras",
-            "Porque era viejo"
-          ],
-          "answer": 1
-        },
-        {
-          "q": "¿Quién le hizo el vestido a Chela?",
-          "options": [
-            "Su madre",
-            "Una costurera del pueblo",
-            "Su tía, en secreto"
+            "Porque era viejo",
+            "Porque era peón y no tenía tierras"
           ],
           "answer": 2
         },
         {
-          "q": "¿Hasta dónde los persiguió su padre?",
+          "q": "¿Quién le hizo el vestido a Chela?",
           "options": [
-            "Hasta el puente",
-            "Hasta la capilla",
-            "Hasta la ciudad"
+            "Su tía, en secreto",
+            "Su madre",
+            "Una costurera del pueblo"
           ],
           "answer": 0
+        },
+        {
+          "q": "¿Hasta dónde los persiguió su padre?",
+          "options": [
+            "Hasta la capilla",
+            "Hasta la ciudad",
+            "Hasta el puente"
+          ],
+          "answer": 2
         },
         {
           "q": "¿Qué hizo su padre en la boda seis meses después?",
@@ -611,17 +611,17 @@
         {
           "q": "¿Por qué se distrajo Lupita?",
           "options": [
-            "Porque sonó el teléfono",
-            "Porque alguien la llamó",
-            "Porque vio llegar a los mariachis"
+            "Porque vio llegar a los mariachis",
+            "Porque sonó el teléfono de su hija en el bolso",
+            "Porque alguien la llamó"
           ],
-          "answer": 2
+          "answer": 0
         },
         {
           "q": "¿Qué la ayudó a no llorar?",
           "options": [
             "La risa de Ximena",
-            "Un vaso de agua",
+            "Un vaso de agua con hielo y limón",
             "Una llamada"
           ],
           "answer": 0
@@ -630,19 +630,19 @@
           "q": "¿Desde cuándo crio sola a Joaquín?",
           "options": [
             "Desde que nació",
-            "Desde que él tenía diez años",
-            "Desde que fue a la universidad"
+            "Desde que fue a la universidad",
+            "Desde que él tenía diez años"
           ],
-          "answer": 1
+          "answer": 2
         },
         {
           "q": "¿Dónde trabajó Lupita para pagarle los estudios?",
           "options": [
-            "En una oficina",
-            "En un hotel",
-            "En dos restaurantes"
+            "En una oficina del centro de Buenos Aires",
+            "En dos restaurantes",
+            "En un hotel"
           ],
-          "answer": 2
+          "answer": 1
         }
       ],
       "open": [
@@ -726,38 +726,38 @@
         {
           "q": "¿Cuántos años lleva Ramiro en la cocina?",
           "options": [
-            "Veinte",
             "Diez",
-            "Treinta"
+            "Treinta",
+            "Veinte"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "q": "¿Qué pensó Yesenia que iba a pasar?",
           "options": [
-            "Que la novia se iba a enojar",
             "Que el chef la iba a despedir",
+            "Que la novia se iba a enojar delante de todos los invitados",
             "Que la torta se iba a caer"
           ],
-          "answer": 1
+          "answer": 0
         },
         {
           "q": "¿Qué aprendió Ramiro?",
           "options": [
             "Que hay que gritar más",
-            "Que hay que revisar los pedidos dos veces",
-            "Que un jefe tiene que proteger a su equipo"
+            "Que un jefe tiene que proteger a su equipo",
+            "Que hay que revisar los pedidos dos veces antes de cada servicio"
           ],
-          "answer": 2
+          "answer": 1
         },
         {
           "q": "¿Qué le pregunta Yesenia al final?",
           "options": [
+            "Si puede irse a casa antes de la medianoche",
             "Si le va a subir el sueldo",
-            "Si puede irse a casa",
             "Si le gustó la torta"
           ],
-          "answer": 0
+          "answer": 1
         }
       ],
       "open": [
@@ -828,11 +828,11 @@
         {
           "q": "¿Cómo se presenta Don Beto?",
           "options": [
-            "Como un gran orador",
             "Como alguien de pocas palabras",
+            "Como un gran orador que convence a cualquiera",
             "Como un amigo del novio"
           ],
-          "answer": 1
+          "answer": 0
         },
         {
           "q": "¿Qué habría tenido que hacer si no le hubieran aconsejado?",
@@ -846,20 +846,20 @@
         {
           "q": "¿Dónde lo invitó el tío argentino?",
           "options": [
-            "A su casa en Rosario",
             "A un partido de fútbol",
-            "A su restaurante"
+            "A su restaurante",
+            "A su casa en Rosario"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "q": "¿Con qué compara Beto el matrimonio?",
           "options": [
-            "Con un vino",
             "Con un asado",
+            "Con un vino",
             "Con un partido"
           ],
-          "answer": 1
+          "answer": 0
         }
       ],
       "open": [
@@ -952,19 +952,19 @@
           "q": "¿Qué reconoce Pepe sobre el plano de las mesas?",
           "options": [
             "Que fue un error",
-            "Que lo hizo él",
-            "Que sin él no habrían hablado nunca más"
+            "Que sin él no habrían hablado nunca más",
+            "Que lo hizo él"
           ],
-          "answer": 2
+          "answer": 1
         },
         {
           "q": "¿Por qué se pelearon hace doce años?",
           "options": [
-            "Por una herencia y un departamento",
             "Por otra persona",
-            "Por un viaje"
+            "Por un viaje",
+            "Por una herencia y un departamento"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "q": "¿Qué no quiere Gloria que cuente Pepe?",
@@ -978,11 +978,11 @@
         {
           "q": "¿Qué consejo le da Gloria a Valentina?",
           "options": [
-            "Que no se case",
-            "Que no hable con su ex",
-            "Que elija bien las peleas"
+            "Que elija bien las peleas",
+            "Que no se case todavía, que espere unos años",
+            "Que no hable con su ex"
           ],
-          "answer": 2
+          "answer": 0
         }
       ],
       "open": [
@@ -1066,38 +1066,38 @@
         {
           "q": "¿Qué hará Rocío si Renata dice algo horrible?",
           "options": [
-            "Lo borrará",
             "Se lo enviará a todos",
-            "Lo guardará"
-          ],
-          "answer": 0
-        },
-        {
-          "q": "¿Por qué quería devolver la caja?",
-          "options": [
-            "Para molestar a Joaquín",
-            "Para cerrar esa época",
-            "Para pedir dinero"
-          ],
-          "answer": 1
-        },
-        {
-          "q": "¿Qué siente Renata al ver bailar a Joaquín?",
-          "options": [
-            "Rabia",
-            "Celos",
-            "Alegría"
+            "Lo guardará",
+            "Lo borrará"
           ],
           "answer": 2
         },
         {
-          "q": "¿Qué opina Renata del vestido de la abuela?",
+          "q": "¿Por qué quería devolver la caja?",
           "options": [
-            "Que es más bonito que el suyo",
-            "Que es pasado de moda",
-            "Que es demasiado largo"
+            "Para cerrar esa época",
+            "Para molestar a Joaquín",
+            "Para pedir dinero"
           ],
           "answer": 0
+        },
+        {
+          "q": "¿Qué siente Renata al ver bailar a Joaquín?",
+          "options": [
+            "Rabia contenida",
+            "Alegría",
+            "Celos"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué opina Renata del vestido de la abuela?",
+          "options": [
+            "Que es pasado de moda y nadie lo usaría hoy",
+            "Que es más bonito que el suyo",
+            "Que es demasiado largo"
+          ],
+          "answer": 1
         }
       ],
       "open": [
@@ -1168,16 +1168,16 @@
         {
           "q": "¿Por qué las organizadoras normalmente no salen en los videos?",
           "options": [
-            "Porque no quieren",
             "Porque son invisibles",
+            "Porque no quieren hablar con nadie",
             "Porque cobran más"
           ],
-          "answer": 1
+          "answer": 0
         },
         {
           "q": "¿Qué habría hecho Mariela si le hubieran dado a elegir esta mañana?",
           "options": [
-            "Organizar otra boda",
+            "Organizar otra boda en otra estancia",
             "Llamar a su abogado",
             "Cancelar todo y dormir"
           ],
@@ -1187,7 +1187,7 @@
           "q": "¿Qué le recordó la felicidad de los novios?",
           "options": [
             "Por qué hace este trabajo",
-            "Su propia boda",
+            "Su propia boda, que salió fatal",
             "Que necesita vacaciones"
           ],
           "answer": 0
@@ -1196,10 +1196,10 @@
           "q": "¿Qué ofrece si renuevan los votos?",
           "options": [
             "Un caballo nuevo",
-            "Un descuento",
-            "Un fotógrafo gratis"
+            "Un fotógrafo gratis",
+            "Un descuento"
           ],
-          "answer": 1
+          "answer": 2
         }
       ],
       "open": [
@@ -1288,11 +1288,11 @@
         {
           "q": "¿Cómo se llama la orquesta de Willy?",
           "options": [
-            "Boda en la pampa",
-            "Los Charros",
-            "Son de La Habana"
+            "Boda en la pampa, la banda del pueblo",
+            "Son de La Habana",
+            "Los Charros"
           ],
-          "answer": 2
+          "answer": 1
         },
         {
           "q": "Según Yamilé, ¿qué pasa cuando suena un bolero?",
@@ -1307,19 +1307,19 @@
           "q": "¿Quién propuso que tocaran juntos?",
           "options": [
             "Yamilé",
-            "Un invitado",
-            "La novia"
+            "La novia, que se reía",
+            "Un invitado"
           ],
-          "answer": 1
+          "answer": 2
         },
         {
           "q": "¿Qué les van a dedicar a los novios?",
           "options": [
-            "La mitad de las ganancias",
-            "Un concierto privado",
-            "La primera canción del disco"
+            "La mitad de las ganancias de la gira",
+            "La primera canción del disco",
+            "Un concierto privado"
           ],
-          "answer": 2
+          "answer": 1
         }
       ],
       "open": [
@@ -1391,7 +1391,7 @@
           "q": "¿Por qué no pudo decir estas cosas durante la noche?",
           "options": [
             "Porque tenía un nudo en la garganta",
-            "Porque la música estaba alta",
+            "Porque la música estaba alta y nadie lo escuchaba",
             "Porque estaba cansado"
           ],
           "answer": 0
@@ -1401,14 +1401,14 @@
           "options": [
             "A cantar",
             "A dar pasos cortos",
-            "A dar un discurso"
+            "A dar un discurso delante de toda la familia"
           ],
           "answer": 1
         },
         {
           "q": "¿Qué dice de la madre de Valentina?",
           "options": [
-            "Que no le gustaba bailar",
+            "Que no le gustaba bailar ni la música de esa época",
             "Que no vino a la boda",
             "Que bailaba mucho mejor que él"
           ],
@@ -1417,11 +1417,11 @@
         {
           "q": "¿Qué no le va a contar nunca?",
           "options": [
-            "Cuánto le costó la fiesta",
-            "Que le dolía la rodilla",
-            "Que lloró"
+            "Que le dolía la rodilla desde el vals",
+            "Que lloró",
+            "Cuánto le costó la fiesta"
           ],
-          "answer": 0
+          "answer": 2
         }
       ],
       "open": [
@@ -1518,20 +1518,20 @@
         {
           "q": "¿Qué habría hecho Ximena si le hubieran preguntado una vez más?",
           "options": [
-            "Llorar",
-            "Irse a casa",
-            "Tirar una copa"
+            "Tirar una copa",
+            "Llorar en silencio en la barra",
+            "Irse a casa"
           ],
-          "answer": 2
+          "answer": 0
         },
         {
           "q": "Según Ximena, ¿qué es el matrimonio?",
           "options": [
-            "Una decisión que se toma todos los días",
             "Una meta",
-            "Un contrato"
+            "Un contrato",
+            "Una decisión que se toma todos los días"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "q": "¿Por quiénes brinda Edgardo al final?",
@@ -1611,38 +1611,38 @@
         {
           "q": "¿Por qué los novios no vieron lo que pasó?",
           "options": [
-            "Porque se fueron temprano",
-            "Porque estaba oscuro",
-            "Porque estaban arriba del caballo"
-          ],
-          "answer": 2
-        },
-        {
-          "q": "¿Qué habría pasado si Lucero se hubiera asustado?",
-          "options": [
-            "Los habría tirado al suelo",
-            "Se habría escapado solo",
-            "Nada"
+            "Porque estaban arriba del caballo",
+            "Porque se fueron temprano a otra fiesta del pueblo",
+            "Porque estaba oscuro"
           ],
           "answer": 0
         },
         {
+          "q": "¿Qué habría pasado si Lucero se hubiera asustado?",
+          "options": [
+            "Se habría escapado solo hacia el campo",
+            "Nada",
+            "Los habría tirado al suelo"
+          ],
+          "answer": 2
+        },
+        {
           "q": "¿En qué idioma le hablaba Ceferino a Lucero?",
           "options": [
-            "En español",
             "En quechua",
+            "En español, con palabras de su país",
             "En inglés"
           ],
-          "answer": 1
+          "answer": 0
         },
         {
           "q": "¿Qué les desea Ceferino a los novios?",
           "options": [
             "Que compren un caballo",
-            "Que vivan en el campo",
-            "Que alguien les hable bajito cuando haya ruido"
+            "Que alguien les hable bajito cuando haya ruido",
+            "Que vivan en el campo"
           ],
-          "answer": 2
+          "answer": 1
         }
       ],
       "open": [
@@ -1713,29 +1713,29 @@
         {
           "q": "¿Qué fotos se borraron?",
           "options": [
-            "Las de la ceremonia",
-            "Las del baile",
-            "Las de la familia"
+            "Las del baile, con poca luz",
+            "Las de la familia",
+            "Las de la ceremonia"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "q": "¿Qué habría hecho Gonzalo sin el consejo del invitado?",
           "options": [
-            "Irse a casa",
             "Pasar la noche llorando",
+            "Irse a casa sin despedirse de nadie",
             "Llamar a otro fotógrafo"
           ],
-          "answer": 1
+          "answer": 0
         },
         {
           "q": "¿Por qué la foto de familia perdería un concurso?",
           "options": [
             "Porque estaba oscura",
-            "Porque faltaba gente",
-            "Porque salió movida y con un perro en el centro"
+            "Porque salió movida y con un perro en el centro",
+            "Porque faltaba gente"
           ],
-          "answer": 2
+          "answer": 1
         },
         {
           "q": "¿Qué hace Gonzalo con la otra foto?",
@@ -1816,37 +1816,37 @@
           "q": "¿Qué habría dicho Facundo si le hubieran preguntado ayer?",
           "options": [
             "La verdad",
-            "Una mentira sobre el auto o que se sentía mal",
-            "Nada"
+            "Nada",
+            "Una mentira sobre el auto o que se sentía mal"
           ],
-          "answer": 1
+          "answer": 2
         },
         {
           "q": "¿Por qué desapareció realmente?",
           "options": [
             "Estaba enfermo",
-            "Se perdió en el campo",
-            "Tenía miedo de llorar por su papá"
+            "Tenía miedo de llorar por su papá",
+            "Se perdió en el campo"
           ],
-          "answer": 2
+          "answer": 1
         },
         {
           "q": "¿Qué entendió Facundo anoche?",
           "options": [
-            "Que no hace falta ser fuerte para ser buen amigo",
             "Que tenía que irse",
-            "Que Renata no lo quería"
+            "Que Renata no lo quería",
+            "Que no hace falta ser fuerte para ser buen amigo"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "q": "¿Qué le habría dicho su padre a Joaquín?",
           "options": [
-            "Que no se case",
             "Que su asado sigue siendo malo",
+            "Que no se case",
             "Que baila bien"
           ],
-          "answer": 1
+          "answer": 0
         }
       ],
       "open": [
@@ -1935,11 +1935,11 @@
         {
           "q": "¿Qué fue lo mejor de la boda según Valentina?",
           "options": [
-            "La comida",
-            "La música",
-            "Los desastres"
+            "La comida y el vino de la estancia",
+            "Los desastres",
+            "La música"
           ],
-          "answer": 2
+          "answer": 1
         },
         {
           "q": "¿Qué aprendió Joaquín sobre la familia?",
@@ -1954,19 +1954,19 @@
           "q": "¿Qué hizo el invitado en el brindis?",
           "options": [
             "Contó un chiste corto",
-            "Leyó una nota para cada persona",
-            "Cantó una canción"
+            "Cantó una canción",
+            "Leyó una nota para cada persona"
           ],
-          "answer": 1
+          "answer": 2
         },
         {
           "q": "¿Por qué agradece Joaquín a Facundo?",
           "options": [
             "Porque hizo el discurso",
-            "Porque trajo a Renata",
-            "Porque, por su desaparición, conocieron al invitado"
+            "Porque, por su desaparición, conocieron al invitado",
+            "Porque trajo a Renata"
           ],
-          "answer": 2
+          "answer": 1
         }
       ],
       "open": [

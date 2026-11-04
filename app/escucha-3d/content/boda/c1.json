@@ -56,9 +56,10 @@
       "choice": [
         {
           "q": "¿Qué le reprocha Wilmer a Anselmo?",
+          "infer": true,
           "options": [
             "Que hizo una excepción a su propia regla",
-            "Que dejó entrar a muchos sin invitación",
+            "Que dejó entrar a demasiada gente sin invitación y sin preguntar nombres",
             "Que cerró el portón temprano"
           ],
           "answer": 0
@@ -66,7 +67,7 @@
         {
           "q": "Según Anselmo, ¿qué necesita quien aplica una norma?",
           "options": [
-            "Una máquina",
+            "Una lista más detallada",
             "Criterio",
             "Permiso de la organizadora"
           ],
@@ -74,6 +75,7 @@
         },
         {
           "q": "¿Cuál es para Anselmo la diferencia entre obedecer y ser responsable?",
+          "infer": true,
           "options": [
             "El que obedece trabaja más",
             "No hay diferencia",
@@ -84,11 +86,11 @@
         {
           "q": "¿Por qué no le preocupa la platería?",
           "options": [
-            "Porque las cucharas son de acero inoxidable",
-            "Porque está guardada bajo llave",
-            "Porque no hay platería"
+            "Porque la guarda la abuela bajo llave en el ropero de su cuarto",
+            "Porque no hay platería",
+            "Porque las cucharas son de acero inoxidable"
           ],
-          "answer": 0
+          "answer": 2
         }
       ],
       "open": [
@@ -180,7 +182,7 @@
         {
           "q": "¿Qué opinan los amigos de Joaquín sobre casarse?",
           "options": [
-            "Que es imprescindible",
+            "Que es imprescindible para que una pareja dure",
             "Que es una formalidad anticuada",
             "Que es muy caro"
           ],
@@ -189,14 +191,15 @@
         {
           "q": "Según el cura, ¿para qué sirve la ceremonia?",
           "options": [
+            "Para decir en público lo que se dice en voz baja",
             "Para cumplir con la ley",
-            "Para hacer una fiesta",
-            "Para decir en público lo que se dice en voz baja"
+            "Para hacer una fiesta"
           ],
-          "answer": 2
+          "answer": 0
         },
         {
           "q": "¿Por qué la promesa es más difícil de olvidar?",
+          "infer": true,
           "options": [
             "Porque hay testigos",
             "Porque está escrita",
@@ -206,6 +209,7 @@
         },
         {
           "q": "¿Cómo llama el cura a lo que Joaquín considera presión social?",
+          "infer": true,
           "options": [
             "Tradición",
             "Comunidad",
@@ -306,8 +310,9 @@
       "choice": [
         {
           "q": "¿Por qué pide perdón Marisol?",
+          "infer": true,
           "options": [
-            "Por enojarse por el anillo",
+            "Por enojarse por el anillo delante de todos los invitados",
             "Por romper la tele",
             "Porque nadie le explicó la separación a Tadeo"
           ],
@@ -324,21 +329,22 @@
         },
         {
           "q": "Según Marisol, ¿qué provoca a veces el silencio de los adultos?",
+          "infer": true,
           "options": [
-            "Que los niños estén tranquilos",
-            "Que los niños inventen explicaciones peores",
-            "Que los niños olviden"
+            "Que los niños estén tranquilos y no pregunten nada durante la fiesta",
+            "Que los niños olviden",
+            "Que los niños inventen explicaciones peores"
           ],
-          "answer": 1
+          "answer": 2
         },
         {
           "q": "¿Con qué compara Marisol el amor que cambia?",
           "options": [
-            "Con una planta",
-            "Con el fuego",
-            "Con el agua cuando hierve"
+            "Con una planta que crece despacio pero sin parar",
+            "Con el agua cuando hierve",
+            "Con el fuego"
           ],
-          "answer": 2
+          "answer": 1
         }
       ],
       "open": [
@@ -425,24 +431,26 @@
       "choice": [
         {
           "q": "¿Por qué le sorprende a Camila la reacción de Valentina?",
+          "infer": true,
           "options": [
+            "Porque no quiere a su abuela ni sus costumbres antiguas",
             "Porque siempre fue la más moderna de la familia",
-            "Porque no quiere a su abuela",
             "Porque odia los vestidos"
-          ],
-          "answer": 0
-        },
-        {
-          "q": "¿Qué necesita alguien que siempre rompe con lo heredado, según Valentina?",
-          "options": [
-            "Más libertad",
-            "Algo que la ate al suelo",
-            "Un cambio de país"
           ],
           "answer": 1
         },
         {
+          "q": "¿Qué necesita alguien que siempre rompe con lo heredado, según Valentina?",
+          "options": [
+            "Algo que la ate al suelo",
+            "Más libertad para viajar y trabajar donde quiera",
+            "Un cambio de país"
+          ],
+          "answer": 0
+        },
+        {
           "q": "¿Qué significó para Valentina ponerse el vestido?",
+          "infer": true,
           "options": [
             "Obedecer a su familia",
             "Ahorrar dinero",
@@ -453,11 +461,11 @@
         {
           "q": "¿Qué diferencia hay entre los dos vestidos?",
           "options": [
-            "Uno era de la novia que creía que debía ser; el otro, de la que es",
             "Uno era caro y otro barato",
+            "Uno era de la novia que creía que debía ser; el otro, de la que es",
             "Uno era blanco y otro no"
           ],
-          "answer": 0
+          "answer": 1
         }
       ],
       "open": [
@@ -529,22 +537,24 @@
           "q": "Según Chela, ¿qué queda después del sentimiento?",
           "options": [
             "El aburrimiento",
-            "Una decisión que se toma cada mañana",
-            "Los recuerdos"
-          ],
-          "answer": 1
-        },
-        {
-          "q": "¿Cómo describe su felicidad con Aurelio?",
-          "options": [
-            "Como en las películas",
-            "Como una tormenta",
-            "Como dos árboles que crecen torcidos el uno hacia el otro"
+            "Los recuerdos",
+            "Una decisión que se toma cada mañana"
           ],
           "answer": 2
         },
         {
+          "q": "¿Cómo describe su felicidad con Aurelio?",
+          "infer": true,
+          "options": [
+            "Como dos árboles que crecen torcidos el uno hacia el otro",
+            "Como en las películas",
+            "Como una tormenta"
+          ],
+          "answer": 0
+        },
+        {
           "q": "¿Qué diferencia hace entre discutir y faltar el respeto?",
+          "infer": true,
           "options": [
             "Discutir es tomarse en serio al otro",
             "Son lo mismo",
@@ -556,10 +566,10 @@
           "q": "¿Con quién aconseja casarse?",
           "options": [
             "Con alguien rico",
-            "Con alguien que te haga reír cuando estés enfermo y cansado",
-            "Con alguien que nunca discuta"
+            "Con alguien que nunca discuta",
+            "Con alguien que te haga reír cuando estés enfermo y cansado"
           ],
-          "answer": 1
+          "answer": 2
         }
       ],
       "open": [
@@ -646,12 +656,13 @@
       "choice": [
         {
           "q": "¿Qué siente Lupita porque Joaquín vive en Argentina?",
+          "infer": true,
           "options": [
-            "Solo tristeza",
-            "Indiferencia",
-            "Una mezcla de orgullo y duelo"
+            "Solo tristeza, sin ningún consuelo posible",
+            "Una mezcla de orgullo y duelo",
+            "Indiferencia"
           ],
-          "answer": 2
+          "answer": 1
         },
         {
           "q": "¿Qué le cuesta más a Lupita?",
@@ -665,20 +676,21 @@
         {
           "q": "Según Ximena, ¿qué tendrán los nietos?",
           "options": [
-            "Dos pasaportes",
-            "Dos variedades de español",
-            "Dos casas"
+            "Dos pasaportes que nunca usa al mismo tiempo",
+            "Dos casas",
+            "Dos variedades de español"
           ],
-          "answer": 1
+          "answer": 2
         },
         {
           "q": "¿Por qué trajo Lupita al mariachi realmente?",
+          "infer": true,
           "options": [
-            "Para lucirse",
-            "Para molestar a la familia de la novia",
-            "Para que los nietos sepan de dónde viene su familia"
+            "Para lucirse delante de los invitados de la capital",
+            "Para que los nietos sepan de dónde viene su familia",
+            "Para molestar a la familia de la novia"
           ],
-          "answer": 2
+          "answer": 1
         }
       ],
       "open": [
@@ -765,39 +777,41 @@
       "choice": [
         {
           "q": "¿De qué se queja Yesenia?",
+          "infer": true,
           "options": [
+            "De las horas de trabajo, que en las bodas no terminan nunca",
             "De que nadie ve el trabajo de la cocina",
-            "De las horas de trabajo",
             "Del calor"
           ],
-          "answer": 0
+          "answer": 1
         },
         {
           "q": "¿Qué pasaba en el hotel de Buenos Aires?",
           "options": [
             "Pagaban muy bien",
-            "Los cocineros entraban por la puerta de servicio",
-            "Ramiro era el jefe"
-          ],
-          "answer": 1
-        },
-        {
-          "q": "Según Ramiro, ¿qué no puedes controlar?",
-          "options": [
-            "El orgullo del trabajo bien hecho",
-            "La calidad de la comida",
-            "El reconocimiento ajeno"
+            "Ramiro era el jefe",
+            "Los cocineros entraban por la puerta de servicio"
           ],
           "answer": 2
         },
         {
-          "q": "¿Qué va a hacer Ramiro el lunes?",
+          "q": "Según Ramiro, ¿qué no puedes controlar?",
+          "infer": true,
           "options": [
-            "Hablar con el dueño sobre los sueldos",
-            "Renunciar",
-            "Abrir un restaurante"
+            "El reconocimiento ajeno",
+            "El orgullo del trabajo bien hecho",
+            "La calidad de la comida"
           ],
           "answer": 0
+        },
+        {
+          "q": "¿Qué va a hacer Ramiro el lunes?",
+          "options": [
+            "Renunciar y buscar trabajo en otra cocina de la capital",
+            "Abrir un restaurante",
+            "Hablar con el dueño sobre los sueldos"
+          ],
+          "answer": 2
         }
       ],
       "open": [
@@ -871,8 +885,9 @@
       "choice": [
         {
           "q": "¿Cómo describe Beto la relación entre chilenos y argentinos?",
+          "infer": true,
           "options": [
-            "Como enemigos históricos",
+            "Como enemigos históricos que nunca se van a reconciliar",
             "Como hermanos que comparten una cordillera",
             "Como desconocidos"
           ],
@@ -881,17 +896,18 @@
         {
           "q": "¿Qué pasó cuando hubo terremotos en Chile?",
           "options": [
-            "Los argentinos no ayudaron",
-            "Beto se fue a Argentina",
-            "Llegaron camiones con ayuda desde Mendoza"
+            "Llegaron camiones con ayuda desde Mendoza",
+            "Los argentinos no ayudaron y cerraron el paso de la cordillera",
+            "Beto se fue a Argentina"
           ],
-          "answer": 2
+          "answer": 0
         },
         {
           "q": "Según Beto, ¿por qué es cómoda la rivalidad?",
+          "infer": true,
           "options": [
             "Porque da una identidad sin esfuerzo",
-            "Porque es divertida",
+            "Porque es divertida y une a la familia los domingos por la tarde",
             "Porque genera dinero"
           ],
           "answer": 0
@@ -899,7 +915,7 @@
         {
           "q": "¿Qué descubrieron Beto y el tío argentino?",
           "options": [
-            "Que eran primos",
+            "Que eran primos lejanos por parte de madre",
             "Que sus abuelos eran del país del otro",
             "Que trabajaban juntos"
           ],
@@ -990,8 +1006,9 @@
       "choice": [
         {
           "q": "Según Gloria, ¿por qué duró tanto la pelea?",
+          "infer": true,
           "options": [
-            "Por el dinero del departamento",
+            "Por el dinero del departamento que compraron juntos en Santiago",
             "Por otra mujer",
             "Por sentirse sola en el peor momento"
           ],
@@ -1000,14 +1017,15 @@
         {
           "q": "¿Qué creía Pepe?",
           "options": [
-            "Que Gloria estaba enojada por el dinero",
-            "Que Gloria quería volver",
-            "Que Gloria no se acordaba"
+            "Que Gloria quería volver con él después de tantos años separados",
+            "Que Gloria no se acordaba",
+            "Que Gloria estaba enojada por el dinero"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "q": "¿En qué se convierte un malentendido si no se habla?",
+          "infer": true,
           "options": [
             "En una broma",
             "En un muro",
@@ -1018,11 +1036,11 @@
         {
           "q": "¿Qué le pide Gloria a Pepe para empezar?",
           "options": [
+            "Que la invite a cenar sin hablar de metros cuadrados",
             "Que le pida perdón en público",
-            "Que le devuelva el departamento",
-            "Que la invite a cenar sin hablar de metros cuadrados"
+            "Que le devuelva el departamento"
           ],
-          "answer": 2
+          "answer": 0
         }
       ],
       "open": [
@@ -1105,24 +1123,26 @@
       "choice": [
         {
           "q": "¿Qué piensan muchos de la presencia de Renata?",
+          "infer": true,
           "options": [
+            "Que fue un gesto bonito hacia la novia y su familia",
             "Que fue una provocación",
-            "Que fue un gesto bonito",
             "Que era necesaria"
-          ],
-          "answer": 0
-        },
-        {
-          "q": "¿Qué concede Renata?",
-          "options": [
-            "Que no debería haber venido",
-            "Que el vestido rojo fue mala idea",
-            "Que no tenía invitación"
           ],
           "answer": 1
         },
         {
+          "q": "¿Qué concede Renata?",
+          "options": [
+            "Que el vestido rojo fue mala idea",
+            "Que no debería haber venido sin hablar antes con la novia",
+            "Que no tenía invitación"
+          ],
+          "answer": 0
+        },
+        {
           "q": "Según Rocío, ¿qué diferencia hay entre derecho y oportunidad?",
+          "infer": true,
           "options": [
             "No hay diferencia",
             "El derecho es más importante",
@@ -1133,11 +1153,11 @@
         {
           "q": "¿Qué matiz añade Rocío?",
           "options": [
-            "Que la necesidad de Renata no es responsabilidad de la novia",
             "Que Joaquín la sigue queriendo",
-            "Que el padrino no debía invitarla"
+            "Que el padrino no debía invitarla",
+            "Que la necesidad de Renata no es responsabilidad de la novia"
           ],
-          "answer": 0
+          "answer": 2
         }
       ],
       "open": [
@@ -1211,27 +1231,29 @@
       "choice": [
         {
           "q": "¿Para qué entrenan a los trabajadores en este oficio, según Mariela?",
+          "infer": true,
           "options": [
-            "Para trabajar más rápido",
             "Para que nadie note su cansancio",
+            "Para trabajar más rápido cuando el salón está lleno de gente",
             "Para ganar más propinas"
           ],
-          "answer": 1
+          "answer": 0
         },
         {
           "q": "¿De qué se dio cuenta Mariela gracias al invitado?",
+          "infer": true,
           "options": [
             "De que quería cambiar de trabajo",
-            "De que la boda era un éxito",
-            "De que llevaba meses sin que nadie le preguntara cómo estaba"
+            "De que llevaba meses sin que nadie le preguntara cómo estaba",
+            "De que la boda era un éxito"
           ],
-          "answer": 2
+          "answer": 1
         },
         {
           "q": "¿Qué les pide a los camareros?",
           "options": [
             "Que se cuiden entre ellos",
-            "Que trabajen más",
+            "Que trabajen más horas cuando hay eventos grandes",
             "Que sonrían más"
           ],
           "answer": 0
@@ -1240,10 +1262,10 @@
           "q": "¿Qué va a empezar Mariela el lunes?",
           "options": [
             "Unas vacaciones",
-            "Terapia",
-            "Un nuevo negocio"
+            "Un nuevo negocio",
+            "Terapia"
           ],
-          "answer": 1
+          "answer": 2
         }
       ],
       "open": [
@@ -1341,37 +1363,39 @@
           "q": "¿Qué creía Willy antes de esta noche?",
           "options": [
             "Que el mariachi era mejor",
-            "Que la música no importaba",
-            "Que la salsa y el mariachi eran mundos distintos"
-          ],
-          "answer": 2
-        },
-        {
-          "q": "Según Chuy, ¿de dónde viene todo?",
-          "options": [
-            "De España, África y los pueblos originarios",
-            "Solo de Cuba",
-            "De Estados Unidos"
-          ],
-          "answer": 0
-        },
-        {
-          "q": "¿Por qué duda Yamilé de que la música una a todos?",
-          "options": [
-            "Porque no le gusta la música",
-            "Porque también sirve para marcar fronteras",
-            "Porque es muy cara"
+            "Que la salsa y el mariachi eran mundos distintos",
+            "Que la música no importaba"
           ],
           "answer": 1
         },
         {
-          "q": "¿Qué distinción propone Yamilé?",
+          "q": "Según Chuy, ¿de dónde viene todo?",
           "options": [
-            "La música elimina las diferencias",
-            "La música solo sirve para bailar",
-            "La música no elimina las diferencias, pero hace que dejen de importar"
+            "Solo de Cuba",
+            "De España, África y los pueblos originarios",
+            "De Estados Unidos"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Por qué duda Yamilé de que la música una a todos?",
+          "infer": true,
+          "options": [
+            "Porque no le gusta esa música y le parece de otra generación",
+            "Porque es muy cara",
+            "Porque también sirve para marcar fronteras"
           ],
           "answer": 2
+        },
+        {
+          "q": "¿Qué distinción propone Yamilé?",
+          "infer": true,
+          "options": [
+            "La música no elimina las diferencias, pero hace que dejen de importar",
+            "La música elimina las diferencias",
+            "La música solo sirve para bailar"
+          ],
+          "answer": 0
         }
       ],
       "open": [
@@ -1443,15 +1467,16 @@
           "q": "¿Quién piensa que Horacio está loco?",
           "options": [
             "Su hermano y su contador",
-            "Su hija",
+            "Su hija y el novio de su hija, Joaquín",
             "Su esposa"
           ],
           "answer": 0
         },
         {
           "q": "¿Cómo describe su vida con Valentina tras la muerte de su esposa?",
+          "infer": true,
           "options": [
-            "Como una fiesta",
+            "Como una fiesta que nunca termina del todo",
             "Como dos náufragos en una balsa",
             "Como una guerra"
           ],
@@ -1460,7 +1485,7 @@
         {
           "q": "¿Para qué es la fiesta, según Horacio?",
           "options": [
-            "Para impresionar a la familia del novio",
+            "Para impresionar a la familia del novio con su buen gusto",
             "Para olvidar a su esposa",
             "Para decirle a su hija que la ve y está orgulloso"
           ],
@@ -1468,9 +1493,10 @@
         },
         {
           "q": "¿Qué prefiere que piense Valentina?",
+          "infer": true,
           "options": [
             "Que su padre es un descuidado",
-            "Que su padre es generoso",
+            "Que su padre es generoso con todos menos con él mismo",
             "Que su padre es rico"
           ],
           "answer": 0
@@ -1574,7 +1600,7 @@
         {
           "q": "¿De dónde viene también la presión, según Ximena?",
           "options": [
-            "Solo de la familia",
+            "Solo de la familia y de los amigos de toda la vida",
             "Del trabajo",
             "De aplicaciones, series y anuncios"
           ],
@@ -1582,21 +1608,23 @@
         },
         {
           "q": "¿Qué reconoce Ximena?",
+          "infer": true,
           "options": [
+            "Que quiere casarse ahora, antes de que sea tarde",
             "Que quiso casarse a los treinta",
-            "Que quiere casarse ahora",
             "Que nunca quiso casarse"
           ],
-          "answer": 0
+          "answer": 1
         },
         {
           "q": "¿Qué le molesta realmente de la pregunta?",
+          "infer": true,
           "options": [
-            "Que se la hagan en público",
             "Que da a entender que su vida está incompleta",
+            "Que se la hagan en público",
             "Que sea indiscreta"
           ],
-          "answer": 1
+          "answer": 0
         }
       ],
       "open": [
@@ -1667,7 +1695,7 @@
         {
           "q": "¿En qué le da la razón Ceferino a la veterinaria?",
           "options": [
-            "En que los caballos no deben trabajar",
+            "En que los caballos no deben trabajar en las fiestas ni en los desfiles",
             "En todo",
             "En que los fuegos artificiales son un disparate"
           ],
@@ -1675,15 +1703,17 @@
         },
         {
           "q": "¿Por qué no considera a Lucero un objeto decorativo?",
+          "infer": true,
           "options": [
             "Porque trabaja con él todos los días",
-            "Porque es muy caro",
+            "Porque es muy caro y no puede permitirse perderlo",
             "Porque es suyo"
           ],
           "answer": 0
         },
         {
           "q": "¿Qué le preocupa a Ceferino?",
+          "infer": true,
           "options": [
             "Que Lucero se enferme",
             "Que la gente solo se acuerde de los caballos para las fotos",
@@ -1769,23 +1799,24 @@
         {
           "q": "¿Qué quiere la gente según la teoría de Gonzalo?",
           "options": [
+            "Fotos baratas que nadie vuelve a mirar",
             "Pruebas, no recuerdos",
-            "Fotos baratas",
             "Muchas fotos"
-          ],
-          "answer": 0
-        },
-        {
-          "q": "¿Qué hacía Gonzalo durante años?",
-          "options": [
-            "Hacía solo fotos espontáneas",
-            "Retocaba y eliminaba imperfecciones",
-            "No retocaba nada"
           ],
           "answer": 1
         },
         {
+          "q": "¿Qué hacía Gonzalo durante años?",
+          "options": [
+            "Retocaba y eliminaba imperfecciones",
+            "Hacía solo fotos espontáneas, sin pedir a nadie que posara",
+            "No retocaba nada"
+          ],
+          "answer": 0
+        },
+        {
           "q": "¿Cómo describe la foto de la familia?",
+          "infer": true,
           "options": [
             "Perfecta en todo",
             "Aburrida",
@@ -1795,12 +1826,13 @@
         },
         {
           "q": "¿Cuál es el dilema de la foto del beso?",
+          "infer": true,
           "options": [
-            "Una foto verdadera puede ser también indiscreta",
             "Está mal hecha",
-            "No se ve nada"
+            "No se ve nada",
+            "Una foto verdadera puede ser también indiscreta"
           ],
-          "answer": 0
+          "answer": 2
         }
       ],
       "open": [
@@ -1871,34 +1903,36 @@
         {
           "q": "¿De qué estaba convencido Facundo durante semanas?",
           "options": [
-            "De que no lo habían invitado",
             "De que no tenía derecho a estar triste en la boda",
+            "De que no lo habían invitado",
             "De que Joaquín estaba enojado"
-          ],
-          "answer": 1
-        },
-        {
-          "q": "¿Cómo interpreta hoy su desaparición?",
-          "options": [
-            "Como un acto de valentía",
-            "Como un error de organización",
-            "Como egoísmo disfrazado de discreción"
-          ],
-          "answer": 2
-        },
-        {
-          "q": "¿Qué le quitó a Joaquín al esconderse?",
-          "options": [
-            "La posibilidad de recordar a su padre con él",
-            "El discurso",
-            "Los anillos"
           ],
           "answer": 0
         },
         {
+          "q": "¿Cómo interpreta hoy su desaparición?",
+          "infer": true,
+          "options": [
+            "Como un acto de valentía que pocos se atreven a tener",
+            "Como egoísmo disfrazado de discreción",
+            "Como un error de organización"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué le quitó a Joaquín al esconderse?",
+          "infer": true,
+          "options": [
+            "El discurso",
+            "Los anillos",
+            "La posibilidad de recordar a su padre con él"
+          ],
+          "answer": 2
+        },
+        {
           "q": "¿Qué propone Facundo para las fiestas?",
           "options": [
-            "Menos música",
+            "Menos música y más tiempo para conversar en las mesas",
             "Un espacio para los que faltan",
             "Más discursos"
           ],
@@ -1991,25 +2025,26 @@
         {
           "q": "Según Mariela, ¿cómo son casi todos los brindis?",
           "options": [
-            "Muy originales",
-            "Muy largos",
-            "Muy parecidos entre sí"
-          ],
-          "answer": 2
-        },
-        {
-          "q": "¿Qué hizo distinto este brindis?",
-          "options": [
-            "Habló de todos los presentes, no solo de la pareja",
-            "Fue muy gracioso",
-            "Fue en inglés"
+            "Muy parecidos entre sí",
+            "Muy originales, casi de autor",
+            "Demasiado largos para una boda"
           ],
           "answer": 0
         },
         {
+          "q": "¿Qué hizo distinto este brindis?",
+          "infer": true,
+          "options": [
+            "Fue muy gracioso",
+            "Fue en inglés",
+            "Habló de todos los presentes, no solo de la pareja"
+          ],
+          "answer": 2
+        },
+        {
           "q": "¿Por qué se sintieron todos incluidos, según Joaquín?",
           "options": [
-            "Porque era muy largo",
+            "Porque era demasiado largo para la hora que era",
             "Porque no era perfecto",
             "Porque había música"
           ],
@@ -2017,12 +2052,13 @@
         },
         {
           "q": "¿Qué ventaja tenía ser un desconocido?",
+          "infer": true,
           "options": [
+            "No arrastraba historias viejas ni rencores",
             "Conocía a todos",
-            "Hablaba mejor",
-            "No arrastraba historias viejas ni rencores"
+            "Hablaba mejor"
           ],
-          "answer": 2
+          "answer": 0
         }
       ],
       "open": [

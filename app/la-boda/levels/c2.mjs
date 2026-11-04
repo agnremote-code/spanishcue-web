@@ -2,26 +2,26 @@
 export default {
   porton: {
     title: 'Crónica de un padrino anunciado',
-    line: 'Hay bodas a las que uno llega por amor, otras por compromiso y unas pocas, como esta, por pura inercia de la amistad. Facundo te había cazado el martes con una frase que no admitía réplica: «Soy el padrino, voy a estar como un flan y necesito a alguien que no lleve mi apellido». Así que a las cinco en punto, con un traje de alquiler que te tiraba de la sisa y un regalo de última hora, te plantaste ante el portón de la Estancia Los Aromos, en plena pampa de Areco. Te recibió un cuadro digno de crónica policial: el auto azul de Facundo atravesado en la entrada, el motor ronroneando con obstinación, la puerta del conductor abierta de par en par y el saco gris derrumbado sobre el asiento, como si su dueño se hubiera evaporado en mitad de una frase.',
+    line: 'Hay bodas a las que uno llega por amor, otras por compromiso y unas pocas, como esta, por pura inercia de la amistad. Facundo te había cazado el martes con una frase que no admitía réplica: «Soy el padrino, voy a estar hecho un manojo de nervios y necesito a alguien que no lleve mi apellido». Así que a las cinco en punto, con un traje de alquiler que te tiraba de la sisa y un regalo de última hora, te plantaste ante el portón de la Estancia Los Aromos, en plena pampa de Areco. Te recibió un cuadro digno de crónica policial: el auto azul de Facundo atravesado en la entrada, el motor ronroneando con obstinación, la puerta del conductor abierta de par en par y el saco gris derrumbado sobre el asiento, como si su dueño se hubiera evaporado en mitad de una frase.',
     dialogue: [
       ['anselmo', 'No me lo tome a mal, pero la organizadora fue de una claridad meridiana: el que no figura en la lista, se queda del lado de afuera. Aunque venga con mirra e incienso.'],
-      ['wilmer', 'El dueño del auto llegó hace media hora, se peleó con el teléfono como si le debiera plata y se largó campo traviesa. No volvió ni a mirar.'],
+      ['wilmer', 'El dueño del auto llegó hace media hora, se peleó con el teléfono como si le debiera plata y se largó a campo traviesa. No volvió ni a mirar.'],
       ['anselmo', 'Y ese saco, para mayor desgracia, es el del padrino. Me pidió que se lo cuidara si le venía el ataque de nervios. Por lo visto, le vino.'],
     ],
     ask: 'En el horizonte, una polvareda anuncia las combis. ¿Qué haces?',
     options: [
       { say: 'Si el padrino se esfumó, que al menos su saco llegue a la capilla. Allí lo buscará, si es que todavía le queda algo de sensatez.', reply: 'Lléveselo, pero conste en actas que yo no vi nada.', end: 'En los bolsillos había un pañuelo almidonado, una pastilla de menta y una nota doblada en cuatro. Los anillos brillaban, como cabía temer, por su ausencia.', mood: 'worried' },
-      { say: 'Entiendo que las órdenes son órdenes. Pero si el padrino no aparece, quizá yo sea lo único parecido a un padrino que le quede a esta boda.', reply: 'Cuarenta años de portero y nunca me habían colado un sofisma tan elegante. Pase, y que Dios reparta suerte.', end: 'Anselmo te inscribió al pie de la lista con su lápiz de carpintero: «amigo del padrino (en período de prueba)».', mood: 'smile' },
+      { say: 'Entiendo que las órdenes son órdenes. Pero si el padrino no aparece, quizá yo sea lo único parecido a un padrino que le quede a esta boda.', reply: 'Cuarenta años de portero y nunca me habían colado un sofisma tan elegante. Pase, y que Dios reparta suerte.', end: 'Anselmo te inscribió al pie de la lista con su lápiz de carpintero: «de parte del padrino (en período de prueba)».', mood: 'smile' },
       { say: 'Wilmer, antes de que esto se convierta en el primer embotellamiento de la historia de Areco, encontremos esa llave.', reply: 'Usted peina la izquierda, yo la derecha. Y si no aparece, a empujar se ha dicho.', end: 'La llave dormía bajo el asiento. Wilmer apagó el motor y apartó el auto en el preciso instante en que asomaba el morro de la primera combi.', mood: 'laugh' },
     ],
     talk: [
-      '¿Qué te dice de una amistad aquello que estás dispuesto a hacer por compromiso?',
+      '¿Qué te dice de una amistad aquello que harías solo por compromiso?',
       '¿Alguna vez un sofisma bien armado te abrió una puerta que la verdad no habría abierto?',
       '¿Cómo se habita un espacio social en el que eres un completo extraño?',
       '¿Qué revela de alguien la manera en que huye de lo que le desborda?',
       '¿Obedeces las normas por convicción, por pereza o por miedo?',
     ],
-    words: ['estar como un flan', 'la sisa', 'meridiano', 'el sofisma', 'brillar por su ausencia', 'campo traviesa'],
+    words: ['estar hecho un manojo de nervios', 'la sisa', 'meridiano', 'el sofisma', 'brillar por su ausencia', 'a campo traviesa'],
   },
   capilla: {
     title: 'Sacramento con azúcar',
@@ -64,7 +64,7 @@ export default {
     ],
     talk: [
       '¿Qué lógica infantil te parece, mirada de adulto, más sabia que la nuestra?',
-      '¿Cómo se le nombra el desamor a un niño sin mentirle ni herirlo de más?',
+      '¿Cómo se le explica el desamor a un niño sin mentirle ni herirlo de más?',
       '¿Qué silencios de los adultos te marcaron de pequeño?',
       '¿Hasta dónde llegan los niños a hacerse cargo de las grietas familiares?',
       '¿Qué adulto de tu infancia te habló como a un igual?',
@@ -268,7 +268,7 @@ export default {
     ask: 'Los dos directores te miran como al árbitro de una final con prórroga. ¿Qué propones?',
     options: [
       { say: '¿Y si en lugar de disputarse el escenario lo compartieran? Me cuesta creer que no exista un bolero que se sepa de memoria en La Habana y en Guadalajara.', reply: '«Bésame mucho». Allá y acá se canta con el mismo nudo en la garganta.', end: 'La orquesta y el mariachi interpretaron «Bésame mucho» al unísono. La pista se llenó de parejas que no se soltaron hasta el último compás.', mood: 'love' },
-      { say: 'Diez minutos cada uno, alternándose como caballeros. Y para rubricar el armisticio, un tequila.', reply: 'Con tequila se firma mejor que ante notario, compadre.', end: 'Willy y Don Chuy brindaron con tequila y se repartieron la noche. A las tres de la madrugada ya se llamaban «hermano» y planeaban una gira conjunta.', mood: 'laugh' },
+      { say: 'Diez minutos cada uno, alternándose con elegancia. Y para rubricar el armisticio, un tequila.', reply: 'Con tequila se firma mejor que ante notario, se lo garantizo.', end: 'Willy y Don Chuy brindaron con tequila y se repartieron la noche. A las tres de la madrugada ya se llamaban «hermano» y planeaban una gira conjunta.', mood: 'laugh' },
       { say: 'Yamilé, ¿te atreverías a cantar algo antiguo, a capela? Algo que la abuela de la novia reconozca desde la primera nota.', reply: 'Hay un son que me cantaba mi abuela en Santiago de Cuba. Jamás lo he cantado en público.', end: 'Yamilé cantó a capela. En la galería, Doña Chela soltó el mate y lloró como no había llorado desde el entierro de su marido.', mood: 'smile' },
     ],
     talk: [
@@ -397,11 +397,11 @@ export default {
   },
   brindis: {
     title: 'Primera persona del plural',
-    line: 'A medianoche en punto, la orquesta enmudeció y las guirnaldas de la carpa atenuaron su brillo como un teatro en el instante previo a la función. Ciento sesenta personas se volvieron hacia el escenario, copa en mano, con esa mezcla de expectación y alcohol que convierte cualquier silencio en solemnidad. Mariela te depositó el micrófono en la palma con un guiño cómplice. En el bolsillo llevabas las notas que habías ido apuntando a lo largo de la noche, de crisis en crisis: en servilletas, en el dorso de la invitación y hasta, en un arrebato de desesperación, en la palma de la mano.',
+    line: 'A medianoche en punto, la orquesta enmudeció y las guirnaldas de la carpa atenuaron su brillo como un teatro en el instante previo a la función. Ciento sesenta personas se volvieron hacia el escenario, copa en mano, con esa mezcla de expectación y alcohol que convierte cualquier silencio en solemnidad. Mariela te depositó el micrófono entre los dedos con un guiño cómplice. En el bolsillo llevabas las notas que habías ido apuntando a lo largo de la noche, de crisis en crisis: en servilletas, en el dorso de la invitación y hasta, en un arrebato de desesperación, en la palma de la mano.',
     dialogue: [
       ['mariela', 'Tres minutos. Y si mencionas a Renata o la torta, te desenchufo sin contemplaciones ni remordimientos.'],
       ['valentina', 'Esta mañana ni sabía que existías. Ahora te debo, siendo prudente, media boda.'],
-      ['joaquin', 'Tranquilo, hermano. Aquí todos somos familia. Bueno, casi todos, pero esta noche cuenta.'],
+      ['joaquin', 'Tranquilidad, que aquí todos somos familia. Bueno, casi todos, pero esta noche cuenta.'],
     ],
     ask: 'Despliegas tus notas. El silencio es tan denso que se oyen las ranas. ¿Cómo arrancas el brindis?',
     options: [

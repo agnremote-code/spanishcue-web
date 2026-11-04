@@ -178,13 +178,13 @@ test('nobody inside anything: everyone seated sits on a chair, a pew, the rocker
   for (const p of seated) {
     const where = `(${p.x.toFixed(2)}, ${p.z.toFixed(2)})`;
     const row = L.FURNITURE.find(f => f.type === 'chairs' && Math.abs(p.x - f.x) <= f.w / 2 && Math.abs(p.z - f.z) <= f.d / 2 + 0.05);
-    const round = L.ROUND.find(t => Math.abs(Math.hypot(p.x - t.x, p.z - t.z) - 1.08) < 0.05);
-    const pew = L.FURNITURE.find(f => f.type === 'pew' && Math.abs(p.x - f.x) <= f.w / 2 && Math.abs(p.z - f.z) <= f.d / 2);
+    const round = L.ROUND.find(t => Math.abs(Math.hypot(p.x - t.x, p.z - t.z) - L.SEAT_R) < 0.05);
+    const pew = L.FURNITURE.find(f => f.type === 'pew' && Math.abs(p.x - f.x) <= f.w / 2 && Math.abs(p.z - f.z) <= f.d / 2 + 0.05);
     const other = L.FURNITURE.find(f => (f.type === 'rocker' || f.type === 'bench') && Math.hypot(p.x - f.x, p.z - f.z) < 0.6);
     assert.ok(row || round || pew || other, `${where} sits on something`);
-    if (row) { const table = L.TABLES.find(t => Math.abs(t.z - p.z) < 1.2); assert.ok(facing(p, p.x, table.z) > 0.9, `${where} faces the long table`); }
-    if (round) assert.ok(facing(p, round.x, round.z) > 0.9, `${where} faces the round table`);
-    if (pew) assert.ok(facing(p, -26, 9.2) > 0.5, `${where} faces the altar`);
+    if (row) { const table = L.TABLES.find(t => Math.abs(t.z - p.z) < 1.2); assert.ok(facing(p, p.x, table.z) > 0.9, `${where} faces the long table`); assert.ok(Math.abs(row.z - table.z) - Math.abs(p.z - table.z) >= 0.2, `${where} sits on the front half of the chair, shins clear of it`); }
+    if (round) { assert.ok(facing(p, round.x, round.z) > 0.9, `${where} faces the round table`); assert.ok(1.2 - L.SEAT_R >= 0.2, 'round-table guests sit on the front half of the chair'); }
+    if (pew) { assert.ok(facing(p, -26, 9.2) > 0.5, `${where} faces the altar`); assert.ok(pew.z - p.z >= 0.25, `${where} sits at the front of the pew`); }
   }
 });
 

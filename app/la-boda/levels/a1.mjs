@@ -12,7 +12,7 @@ export default {
     ask: '¿Qué vas a hacer primero?',
     options: [
       { say: 'Es el auto de Facundo. Voy a llevar su saco a la capilla.', reply: '¿Y el padrino dónde está? La ceremonia empieza en media hora.', end: 'Tienes el saco del padrino en el brazo. En los bolsillos hay un pañuelo y una nota, pero no hay anillos.', mood: 'worried' },
-      { say: 'Señor, soy amigo del padrino. Mi nombre tiene que estar con el suyo.', reply: 'Bueno, usted tiene cara de buena persona. Pase.', end: 'Anselmo escribe tu nombre al final de la lista, con letra muy pequeña: «amigo del padrino».', mood: 'smile' },
+      { say: 'Señor, el padrino me invitó. Mi nombre tiene que estar con el suyo.', reply: 'Bueno, usted tiene cara de buena persona. Pase.', end: 'Anselmo escribe tu nombre al final de la lista, con letra muy pequeña: «de parte del padrino».', mood: 'smile' },
       { say: 'Wilmer, yo lo ayudo. La llave tiene que estar en el auto.', reply: '¡Aquí está! Debajo del asiento. Gracias, amigo.', end: 'Wilmer apaga el motor. Ahora el auto de Facundo está en el estacionamiento, con los otros.', mood: 'laugh' },
     ],
     talk: [
@@ -39,8 +39,8 @@ export default {
       { say: 'Escribe tus palabras para ella. Aquí tienes una servilleta.', reply: '¿En una servilleta? Bueno, tengo cosas que decir.', end: 'Joaquín escribe tres frases en una servilleta de papel. Es su promesa para Valentina.', mood: 'smile' },
     ],
     talk: [
-      '¿Te pones nervioso antes de un momento importante?',
-      '¿Qué haces para estar tranquilo?',
+      '¿Tienes nervios antes de un momento importante?',
+      '¿Qué haces para calmarte antes de un momento importante?',
       '¿Hay un edificio antiguo que te gusta en tu ciudad?',
       '¿Te gustan los caramelos? ¿Cuáles?',
       '¿Escribes cartas o mensajes largos a veces?',
@@ -80,7 +80,7 @@ export default {
     ],
     ask: 'Valentina te mira en el espejo. ¿Qué propones?',
     options: [
-      { say: 'Soy amigo de Facundo. Tengo hilo de pescar en el bolsillo. Es transparente y muy fuerte.', reply: '¿Hilo de pescar? ¿Para mi vestido? Bueno, sí. ¡Rápido!', end: 'Camila cose el vestido con hilo de pescar. No se ve nada. Valentina respira con cuidado.', mood: 'laugh' },
+      { say: 'Vengo con Facundo. Tengo hilo de pescar en el bolsillo. Es transparente y muy fuerte.', reply: '¿Hilo de pescar? ¿Para mi vestido? Bueno, sí. ¡Rápido!', end: 'Camila cose el vestido con hilo de pescar. No se ve nada. Valentina respira con cuidado.', mood: 'laugh' },
       { say: 'Camila, tú puedes. Yo voy a buscar hilo blanco a la cocina.', reply: 'Gracias. Y trae un vaso de agua para la novia.', end: 'Vuelves con hilo blanco y agua. Camila cose rápido y con las manos firmes.', mood: 'smile' },
       { say: 'Valentina, ¿tu abuela tiene su vestido de novia aquí?', reply: 'Sí, en el armario. Es de 1962. Nunca me lo pruebo.', end: 'El vestido de la abuela es perfecto. Valentina llora un poco y Camila arregla su maquillaje.', mood: 'love' },
     ],
@@ -95,7 +95,7 @@ export default {
   },
   abuela: {
     title: 'El mate de la abuela Chela',
-    line: 'En la galería de la casa, en una mecedora, está Doña Chela, la abuela de la novia. Tiene ochenta y seis años, un vestido negro y un mate en la mano. Mira a todos los invitados con los ojos pequeños.',
+    line: 'En la galería de la casa, en una mecedora, está Doña Chela, la abuela de la novia. Tiene ochenta y seis años, un suéter azul oscuro y un mate en la mano. Mira a todos los invitados con los ojos pequeños.',
     dialogue: [
       ['chela', 'El novio es mexicano. No sabe tomar mate. No sabe bailar tango. ¿Qué sabe hacer?'],
       ['chela', 'Siéntate, siéntate. ¿Tú eres de la familia del novio o de la novia?'],
@@ -105,7 +105,7 @@ export default {
     options: [
       { say: 'Abuela, ¿cómo es su boda? ¿Usted sabe bailar tango?', reply: '¿Mi boda? Yo no tengo boda. Yo me escapo a caballo.', end: 'La abuela se ríe fuerte. En 1962 se escapa de noche con su novio, en un caballo blanco.', mood: 'laugh' },
       { say: 'Joaquín es un buen chico. ¿Por qué no le hace preguntas?', reply: 'Muy bien. Tráelo. Va a tener un examen.', end: 'La abuela le hace diez preguntas a Joaquín. Él aprueba con un seis y toma un mate horrible.', mood: 'smile' },
-      { say: '¿Cuántos años está casada, Doña Chela?', reply: 'Cincuenta y un años. Y cincuenta y un años de peleas.', end: 'La abuela mira una foto de su esposo. Está triste y contenta al mismo tiempo.', mood: 'sad' },
+      { say: '¿Cuántos años estuvo casada, doña Chela?', reply: 'Cincuenta y un años. Y cincuenta y un años de peleas.', end: 'La abuela mira una foto de su esposo. Está triste y contenta al mismo tiempo.', mood: 'sad' },
     ],
     talk: [
       '¿Cómo son tus abuelos?',
@@ -133,7 +133,7 @@ export default {
     talk: [
       '¿Planchas tu ropa o no?',
       '¿Qué sorpresa te gusta preparar para otra persona?',
-      '¿Te gusta la música en vivo?',
+      '¿Prefieres una banda en vivo o un DJ para bailar?',
       '¿Quién en tu familia ríe mucho?',
       '¿Qué ropa vieja de tu padre o tu madre te gusta?',
     ],
@@ -178,10 +178,10 @@ export default {
     ],
     talk: [
       '¿Comes carne o prefieres verduras?',
-      '¿Qué comida es típica de tu país?',
+      '¿Qué comida preparan en tu país para una celebración grande?',
       '¿Quién cocina en las reuniones de tu familia?',
       '¿Qué haces cuando llegan más personas de las que esperas?',
-      '¿Te gusta el fútbol? ¿Qué equipo?',
+      '¿De qué temas se habla en las comidas de tu familia?',
     ],
     words: [w('el asado', 'the barbecue'), w('el asador', 'the grill master'), w('el humo', 'the smoke'), w('alcanzar', 'to be enough'), w('el choripán', 'sausage sandwich')],
   },
@@ -202,7 +202,7 @@ export default {
     talk: [
       '¿Dónde te gusta sentarte en un restaurante?',
       '¿Hablas todavía con tus ex?',
-      '¿Te gusta hablar con desconocidos?',
+      '¿Qué le preguntas a un desconocido sentado a tu lado?',
       '¿Quién organiza las cosas en tu familia?',
       '¿Qué haces cuando dos amigos están enojados?',
     ],
@@ -223,7 +223,7 @@ export default {
       { say: 'Rocío, ¿hay un lugar tranquilo para Renata?', reply: 'Detrás del arco de flores. Nadie mira allí.', end: 'Renata espera detrás del arco de flores, con Rocío. Desde allí ve todo, pero nadie la ve.', mood: 'worried' },
     ],
     talk: [
-      '¿Qué flores te gustan?',
+      '¿Qué flores pones en un ramo para alguien especial?',
       '¿Guardas cartas o mensajes viejos?',
       '¿Qué haces cuando ves a una persona de tu pasado?',
       '¿Tienes ropa roja? ¿Cuándo la llevas?',
@@ -247,7 +247,7 @@ export default {
     ],
     talk: [
       '¿Haces muchas cosas al mismo tiempo?',
-      '¿Cuántas horas usas el teléfono al día?',
+      '¿Miras el teléfono durante una comida con amigos?',
       '¿Sabes contar chistes?',
       '¿Qué haces cuando un plan no funciona?',
       '¿Te gusta organizar eventos?',
@@ -269,8 +269,8 @@ export default {
       { say: 'Yamilé, ¿tú cantas? Una canción para la abuela.', reply: 'Sé una canción vieja. Mi abuela la canta.', end: 'Yamilé canta sola. En la galería, la abuela Chela llora y canta también.', mood: 'smile' },
     ],
     talk: [
-      '¿Qué instrumento te gusta?',
-      '¿Cantas en la ducha?',
+      '¿Qué instrumento quieres aprender a tocar?',
+      '¿Cantas cuando hay karaoke en una celebración?',
       '¿Compartes tus cosas fácilmente?',
       '¿Qué canción te pone feliz?',
       '¿Vas a conciertos? ¿De qué tipo?',
@@ -316,8 +316,8 @@ export default {
     ],
     talk: [
       '¿Qué pregunta no te gusta escuchar?',
-      '¿Qué bebida pides en un bar?',
-      '¿Te gusta estar soltero o en pareja?',
+      '¿Qué bebida pides para brindar?',
+      '¿Prefieres la vida en pareja o sin pareja?',
       '¿Qué haces cuando una persona es muy curiosa?',
       '¿Qué consejo te da tu familia siempre?',
     ],
@@ -340,9 +340,9 @@ export default {
     talk: [
       '¿Te gustan los animales grandes?',
       '¿Montas a caballo o no?',
-      '¿Tienes una mascota?',
+      '¿Qué animal de campo te gusta más?',
       '¿Qué te da miedo a ti?',
-      '¿Hablas con los animales?',
+      '¿Montaste alguna vez a caballo?',
     ],
     words: [w('el establo', 'the stable'), w('el peón', 'the farmhand'), w('el ramo', 'the bouquet'), w('el heno', 'the hay'), w('los fuegos artificiales', 'the fireworks')],
   },
@@ -361,11 +361,11 @@ export default {
       { say: 'Una foto de toda la familia. ¡Todos aquí, rápido!', reply: '¿Todos? ¿Ciento sesenta personas? Bueno, ¡vamos!', end: 'La foto está movida y el perro sale en el centro. Todos ríen. Es la mejor foto de la noche.', mood: 'laugh' },
     ],
     talk: [
-      '¿Te gusta salir en las fotos?',
+      '¿Cuántas fotos sacas en una celebración?',
       '¿Cuántas fotos tienes en tu teléfono?',
       '¿Guardas secretos de otras personas?',
       '¿Qué foto de tu familia te gusta más?',
-      '¿Qué árbol te gusta?',
+      '¿Qué lugar de tu ciudad es bonito para sacar fotos?',
     ],
     words: [w('el fotógrafo', 'the photographer'), w('la tarjeta de memoria', 'the memory card'), w('besarse', 'to kiss'), w('el secreto', 'the secret'), w('movida', 'blurry')],
   },
@@ -384,7 +384,7 @@ export default {
       { say: 'Vamos a la fiesta. Joaquín te necesita.', reply: '¿Y si se enoja? Bueno. Vamos.', end: 'Facundo se levanta. Caminan juntos a la carpa. Él tiene los ojos rojos.', mood: 'love' },
     ],
     talk: [
-      '¿Qué haces cuando estás triste?',
+      '¿Adónde vas cuando necesitas estar un rato a solas?',
       '¿Te gusta estar cerca del agua?',
       '¿Hablas de tus problemas con tus amigos?',
       '¿Tienes miedo de hablar en público?',
@@ -407,11 +407,11 @@ export default {
       { say: 'Valentina, Joaquín: ¡felicidades! Este brindis es de todos.', reply: '¡Salud!', end: 'Lees cada nota. Cada persona escucha su nombre y levanta la copa.', mood: 'smile' },
     ],
     talk: [
-      '¿Te gusta hablar delante de muchas personas?',
+      '¿Cuántas personas te escuchan cuando hablas en tu trabajo o en clase?',
       '¿Cómo dices «felicidades» en tu idioma?',
       '¿Qué palabras usas para celebrar algo bueno?',
       '¿Quién es la persona más importante de tu año?',
-      '¿Qué haces a medianoche normalmente?',
+      '¿Dónde estás a medianoche en Año Nuevo?',
     ],
     words: [w('el brindis', 'the toast'), w('la copa', 'the glass'), w('el micrófono', 'the microphone'), w('¡Felicidades!', 'Congratulations!'), w('¡Salud!', 'Cheers!')],
   },

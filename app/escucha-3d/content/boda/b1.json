@@ -49,29 +49,29 @@
         {
           "q": "¿Qué le ofrecieron a Wilmer?",
           "options": [
-            "Un trabajo de chofer en Buenos Aires",
             "Un puesto de portero",
+            "Un trabajo de chofer en Buenos Aires",
             "Un auto nuevo"
           ],
-          "answer": 0
+          "answer": 1
         },
         {
           "q": "¿Cuánto tiempo vivió Anselmo en la capital?",
           "options": [
             "Diez años",
-            "Veinte años",
-            "Toda su vida"
+            "Toda su vida",
+            "Veinte años"
           ],
-          "answer": 1
+          "answer": 2
         },
         {
           "q": "¿Por qué Wilmer quiere irse?",
           "options": [
-            "Porque no le gusta Anselmo",
-            "Porque está enfermo",
-            "Porque en el campo no pasa nada"
+            "Porque en el campo no pasa nada",
+            "Porque no le gusta nada Anselmo, el casero",
+            "Porque está enfermo"
           ],
-          "answer": 2
+          "answer": 0
         },
         {
           "q": "¿Qué consejo le da Anselmo al final?",
@@ -161,19 +161,19 @@
           "q": "¿Por qué pensó Joaquín que se iba a desmayar?",
           "options": [
             "Por el calor",
-            "Por el miedo",
-            "Por los anillos"
+            "Por los anillos",
+            "Por el miedo"
           ],
-          "answer": 1
+          "answer": 2
         },
         {
           "q": "¿Qué les pasó a los padres de Joaquín?",
           "options": [
             "Se murieron",
-            "Se mudaron",
-            "Se divorciaron"
+            "Se divorciaron",
+            "Se mudaron a otra ciudad"
           ],
-          "answer": 2
+          "answer": 1
         },
         {
           "q": "Según el cura, ¿qué es el matrimonio?",
@@ -187,11 +187,11 @@
         {
           "q": "¿Qué tiene que llevar Joaquín si vuelve a verlo?",
           "options": [
-            "Flores",
-            "Gomitas",
-            "Vino"
+            "Flores secas",
+            "Vino",
+            "Gomitas"
           ],
-          "answer": 1
+          "answer": 2
         }
       ],
       "open": [
@@ -276,28 +276,28 @@
           "q": "¿Qué quiere Marisol que sepa Tadeo?",
           "options": [
             "Que sus papás van a volver",
-            "Que tiene que portarse bien",
-            "Que sus papás lo quieren aunque no vivan juntos"
+            "Que sus papás lo quieren aunque no vivan juntos",
+            "Que tiene que portarse bien"
           ],
-          "answer": 2
+          "answer": 1
         },
         {
           "q": "¿Dónde llora la mamá de Tadeo?",
           "options": [
-            "En la cocina",
             "En la cama",
-            "En el auto"
+            "En la cocina",
+            "En el asiento del auto"
           ],
-          "answer": 0
+          "answer": 1
         },
         {
           "q": "¿Con qué compara Marisol a la gente que cambia?",
           "options": [
-            "Con los animales",
             "Con las plantas",
+            "Con los animales",
             "Con el clima"
           ],
-          "answer": 1
+          "answer": 0
         },
         {
           "q": "¿Qué puede \"regar\" Tadeo según Marisol?",
@@ -386,16 +386,16 @@
         {
           "q": "¿Qué necesita Valentina?",
           "options": [
-            "Cinco minutos sin nadie",
-            "Un vaso de agua",
-            "Otro vestido"
+            "Un vaso de agua fresca",
+            "Otro vestido",
+            "Cinco minutos sin nadie"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "q": "¿Cómo se siente Valentina?",
           "options": [
-            "Muy triste",
+            "Muy triste y cansada",
             "Feliz, pero rara",
             "Enojada"
           ],
@@ -404,20 +404,20 @@
         {
           "q": "¿Qué le aconseja Camila?",
           "options": [
-            "Que vuelva a la fiesta",
-            "Que llame a su abuela",
-            "Que no piense tanto y disfrute"
+            "Que no piense tanto y disfrute",
+            "Que vuelva a la fiesta con su madre",
+            "Que llame a su abuela"
           ],
-          "answer": 2
+          "answer": 0
         },
         {
           "q": "¿Qué hace Felipe según Valentina?",
           "options": [
+            "Baila con todos los invitados",
             "Mira a Camila toda la noche",
-            "Baila con todos",
             "Habla con la abuela"
           ],
-          "answer": 0
+          "answer": 1
         }
       ],
       "open": [
@@ -488,16 +488,16 @@
         {
           "q": "¿Con quién habla Doña Chela?",
           "options": [
-            "Con su nieta",
             "Con la foto de su marido",
+            "Con su nieta",
             "Con su hermana"
           ],
-          "answer": 1
+          "answer": 0
         },
         {
           "q": "¿Cuándo hubo boda después de la fuga?",
           "options": [
-            "Al día siguiente",
+            "Al día siguiente de la boda",
             "Un año después",
             "Seis meses después"
           ],
@@ -506,16 +506,16 @@
         {
           "q": "¿Cómo mira el novio a Valentina?",
           "options": [
-            "Como Aurelio la miraba a ella",
             "Con miedo",
-            "Sin interés"
+            "Sin interés",
+            "Como Aurelio la miraba a ella"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "q": "¿Qué va a hacer la abuela al final?",
           "options": [
-            "Irse a dormir",
+            "Irse a dormir a la habitación",
             "Bailar con el novio",
             "Tomar mate"
           ],
@@ -599,25 +599,25 @@
         {
           "q": "¿Qué hace Lupita sola?",
           "options": [
+            "Come postre a escondidas",
             "Llora",
-            "Habla por teléfono",
-            "Come postre a escondidas"
-          ],
-          "answer": 2
-        },
-        {
-          "q": "¿Qué dijo Joaquín del mariachi?",
-          "options": [
-            "Que fue el mejor regalo de su vida",
-            "Que fue demasiado",
-            "Que no le gustó"
+            "Habla por teléfono con su hija"
           ],
           "answer": 0
         },
         {
+          "q": "¿Qué dijo Joaquín del mariachi?",
+          "options": [
+            "Que fue demasiado",
+            "Que no le gustó",
+            "Que fue el mejor regalo de su vida"
+          ],
+          "answer": 2
+        },
+        {
           "q": "¿Qué sintió Joaquín al escuchar el mariachi?",
           "options": [
-            "Que estaba cansado",
+            "Que estaba cansado de tanto trabajar",
             "Que estaba en su casa",
             "Que era raro"
           ],
@@ -626,11 +626,11 @@
         {
           "q": "¿Qué le pide Lupita a Ximena?",
           "options": [
+            "Que Joaquín no se olvide de Guadalajara",
             "Que baile con ella",
-            "Que guarde el postre",
-            "Que Joaquín no se olvide de Guadalajara"
+            "Que guarde el postre"
           ],
-          "answer": 2
+          "answer": 0
         }
       ],
       "open": [
@@ -710,20 +710,20 @@
         {
           "q": "¿Qué cree Ramiro sobre el nombre de la torta?",
           "options": [
-            "Que no fue un error",
             "Que fue un error de Yesenia",
+            "Que no fue un error",
             "Que fue una broma de los novios"
           ],
-          "answer": 0
+          "answer": 1
         },
         {
           "q": "¿Quién hizo el plano de las mesas?",
           "options": [
-            "La hermana de Gloria",
             "La tía Gloria",
+            "La hermana de Gloria",
             "Mariela"
           ],
-          "answer": 1
+          "answer": 0
         },
         {
           "q": "¿Quién mandó probablemente el pedido?",
@@ -737,11 +737,11 @@
         {
           "q": "¿Qué va a hacer Yesenia?",
           "options": [
-            "No darle postre doble a esa señora",
             "Contárselo a la novia",
-            "Renunciar"
+            "Renunciar",
+            "No darle postre doble a esa señora"
           ],
-          "answer": 0
+          "answer": 2
         }
       ],
       "open": [
@@ -812,43 +812,43 @@
         {
           "q": "¿Cuál es el secreto principal del asado?",
           "options": [
-            "La carne",
             "La paciencia",
+            "La carne de buena calidad",
             "El fuego"
-          ],
-          "answer": 1
-        },
-        {
-          "q": "¿Cuánto tiempo es mejor esperar?",
-          "options": [
-            "Una hora",
-            "Media hora",
-            "Tres horas"
-          ],
-          "answer": 2
-        },
-        {
-          "q": "¿Cómo hay que tratar la carne?",
-          "options": [
-            "Dejarla tranquila",
-            "Moverla todo el tiempo",
-            "Ponerle mucha sal"
           ],
           "answer": 0
         },
         {
-          "q": "¿Para qué sirve la copa de vino según Beto?",
+          "q": "¿Cuánto tiempo es mejor esperar?",
           "options": [
-            "Para emborracharse",
-            "Para pensar",
-            "Para la carne"
+            "Una hora y algo",
+            "Tres horas",
+            "Media hora"
           ],
           "answer": 1
+        },
+        {
+          "q": "¿Cómo hay que tratar la carne?",
+          "options": [
+            "Moverla todo el tiempo",
+            "Ponerle mucha sal",
+            "Dejarla tranquila"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Para qué sirve la copa de vino según Beto?",
+          "options": [
+            "Para pensar",
+            "Para emborracharse",
+            "Para la carne"
+          ],
+          "answer": 0
         }
       ],
       "open": [
         {
-          "q": "¿Eres una persona paciente?",
+          "q": "¿Tienes paciencia cuando una comida tarda mucho en estar lista?",
           "model": "No mucho; cuando cocino, siempre quiero comer antes de que esté listo."
         },
         {
@@ -924,24 +924,24 @@
           "q": "¿Cuánto tiempo le da Gloria a Pepe para hablar?",
           "options": [
             "Dos minutos",
-            "Diez minutos",
-            "Un minuto"
+            "Un minuto",
+            "Diez minutos"
           ],
-          "answer": 2
+          "answer": 1
         },
         {
           "q": "¿Por qué discutieron hace doce años?",
           "options": [
-            "Por la herencia de la madre de Gloria",
             "Por otra mujer",
-            "Por dinero de un viaje"
+            "Por dinero de un viaje",
+            "Por la herencia de la madre de Gloria"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "q": "¿Por qué Pepe no habló antes?",
           "options": [
-            "Porque vivía lejos",
+            "Porque vivía lejos, en otra provincia",
             "Porque no tenía el valor",
             "Porque Gloria no quería"
           ],
@@ -950,11 +950,11 @@
         {
           "q": "¿Qué significa que Gloria le pida el pan?",
           "options": [
+            "Que tiene hambre, no que lo perdone",
             "Que lo perdona",
-            "Que quiere irse",
-            "Que tiene hambre, no que lo perdone"
+            "Que quiere irse"
           ],
-          "answer": 2
+          "answer": 0
         }
       ],
       "open": [
@@ -1039,7 +1039,7 @@
           "q": "¿Qué decía Joaquín cuando estaba con Renata?",
           "options": [
             "Que le daba vergüenza bailar",
-            "Que no le gustaba la música",
+            "Que no le gustaba nada esa música",
             "Que estaba cansado"
           ],
           "answer": 0
@@ -1048,19 +1048,19 @@
           "q": "¿Qué siente Renata al verlo bailar?",
           "options": [
             "Tristeza",
-            "Alegría",
-            "Rabia"
+            "Rabia",
+            "Alegría"
           ],
-          "answer": 1
+          "answer": 2
         },
         {
           "q": "¿Qué le recomienda Rocío?",
           "options": [
             "Que llore",
-            "Que se vaya",
-            "Que se ría"
+            "Que se ría",
+            "Que se vaya"
           ],
-          "answer": 2
+          "answer": 1
         },
         {
           "q": "¿Qué desea Renata?",
@@ -1137,19 +1137,19 @@
           "q": "¿A quién le deja el mensaje Mariela?",
           "options": [
             "A su exmarido",
-            "A su abogado",
-            "A un cliente"
+            "A un cliente",
+            "A su abogado"
           ],
-          "answer": 1
+          "answer": 2
         },
         {
           "q": "¿Con qué se queda Mariela?",
           "options": [
             "Con el auto",
-            "Con la casa",
-            "Con el perro y su empresa"
+            "Con el perro y su empresa",
+            "Con la casa"
           ],
-          "answer": 2
+          "answer": 1
         },
         {
           "q": "¿Qué le preguntó el invitado?",
@@ -1164,10 +1164,10 @@
           "q": "¿Cuándo va a firmar Mariela?",
           "options": [
             "Mañana",
-            "El lunes",
-            "Esta noche"
+            "Esta noche",
+            "El lunes"
           ],
-          "answer": 1
+          "answer": 2
         }
       ],
       "open": [
@@ -1252,38 +1252,38 @@
         {
           "q": "¿Qué propone Yamilé?",
           "options": [
-            "Tocar en otra boda",
-            "Hacer una gira",
-            "Grabar un disco juntos"
-          ],
-          "answer": 2
-        },
-        {
-          "q": "¿Qué duda tiene Willy?",
-          "options": [
-            "Si se puede vender",
-            "Si Yamilé canta bien",
-            "Si hay dinero"
-          ],
-          "answer": 0
-        },
-        {
-          "q": "¿Quién va a escribir las canciones?",
-          "options": [
-            "Willy",
-            "Yamilé",
-            "Don Chuy"
+            "Tocar en otra boda en diciembre",
+            "Grabar un disco juntos",
+            "Hacer una gira"
           ],
           "answer": 1
         },
         {
-          "q": "¿Cómo se va a llamar el disco?",
+          "q": "¿Qué duda tiene Willy?",
           "options": [
-            "«Salsa y mariachi»",
-            "«La abuela»",
-            "«Boda en la pampa»"
+            "Si Yamilé canta bien",
+            "Si hay dinero",
+            "Si se puede vender"
           ],
           "answer": 2
+        },
+        {
+          "q": "¿Quién va a escribir las canciones?",
+          "options": [
+            "Yamilé",
+            "Willy",
+            "Don Chuy"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cómo se va a llamar el disco?",
+          "options": [
+            "«Salsa y mariachi en Areco»",
+            "«Boda en la pampa»",
+            "«La abuela»"
+          ],
+          "answer": 1
         }
       ],
       "open": [
@@ -1354,38 +1354,38 @@
         {
           "q": "¿Qué favor le pide Don Horacio a su hermano?",
           "options": [
-            "Que diga que le robaron el auto",
             "Que le preste dinero",
-            "Que venga a la boda"
+            "Que venga a la boda",
+            "Que diga que le robaron el auto"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "q": "¿Por qué vendió el auto?",
           "options": [
-            "Porque era viejo",
             "Para pagar la fiesta",
+            "Porque era viejo y gastaba mucho",
             "Para comprar otro"
           ],
-          "answer": 1
+          "answer": 0
         },
         {
           "q": "¿Qué está haciendo Valentina?",
           "options": [
             "Habla con la abuela",
-            "Come torta",
-            "Baila con los zapatos en la mano"
+            "Baila con los zapatos en la mano",
+            "Come torta"
           ],
-          "answer": 2
+          "answer": 1
         },
         {
           "q": "¿Qué le toca a Don Horacio ahora?",
           "options": [
-            "El vals",
             "El brindis",
-            "La cena"
+            "La cena",
+            "El vals"
           ],
-          "answer": 0
+          "answer": 2
         }
       ],
       "open": [
@@ -1398,8 +1398,8 @@
           "model": "En algunos casos sí, si la verdad solo le va a hacer daño."
         },
         {
-          "q": "¿Qué cosas no se pueden comprar con dinero?",
-          "model": "El tiempo con la familia y los buenos amigos."
+          "q": "¿Qué regalo de una celebración no se puede comprar con dinero?",
+          "model": "Que todas las personas que quiero estén juntas en la misma mesa."
         }
       ],
       "gaps": "Un auto se [compra] con tiempo y trabajo. Esto no se compra. [Ojalá] tú lo [hubieras] [visto].",
@@ -1467,25 +1467,25 @@
           "options": [
             "Cinco",
             "Quince",
-            "Veinte"
+            "Veinticinco"
           ],
           "answer": 1
         },
         {
           "q": "¿Cuándo le pidió el divorcio su esposa?",
           "options": [
+            "El día que abrió su negocio",
             "En una boda",
-            "En Navidad",
-            "El día que abrió su negocio"
+            "En Navidad"
           ],
-          "answer": 2
+          "answer": 0
         },
         {
           "q": "Según Edgardo, ¿cuál es el problema?",
           "options": [
             "Casarse sin conocerse",
             "Las bodas caras",
-            "La familia"
+            "Las peleas de la familia en las fiestas"
           ],
           "answer": 0
         },
@@ -1576,29 +1576,29 @@
         {
           "q": "¿Cómo tiene que acercarse la veterinaria?",
           "options": [
-            "Despacio y por el costado",
-            "Rápido y por delante",
-            "Por detrás"
+            "Rápido y por delante, sin mirar",
+            "Por detrás",
+            "Despacio y por el costado"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "q": "¿Qué significa que Lucero baje la cabeza?",
           "options": [
             "Que tiene hambre",
             "Que confía en ella",
-            "Que está enfermo"
+            "Que está enfermo y quiere irse"
           ],
           "answer": 1
         },
         {
           "q": "¿Qué le preocupa a Ceferino?",
           "options": [
-            "Las flores del ramo",
-            "La comida",
-            "Los fuegos artificiales"
+            "Los fuegos artificiales",
+            "Las flores del ramo de la novia",
+            "La comida"
           ],
-          "answer": 2
+          "answer": 0
         }
       ],
       "open": [
@@ -1669,29 +1669,29 @@
         {
           "q": "¿A quién le pide consejo Gonzalo?",
           "options": [
-            "A su socia Laura",
             "A los novios",
-            "A su madre"
+            "A su madre, que vive en Lima",
+            "A su socia Laura"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "q": "¿Qué le sugirió un invitado?",
           "options": [
-            "Pedir perdón",
             "Hacer fotos nuevas con los novios",
+            "Pedir perdón",
             "Borrar todo"
           ],
-          "answer": 1
+          "answer": 0
         },
         {
           "q": "¿Qué tiene de especial la foto de los tíos?",
           "options": [
             "Están bailando",
-            "Están peleando",
-            "Están divorciados y se besan"
+            "Están divorciados y se besan",
+            "Están peleando"
           ],
-          "answer": 2
+          "answer": 1
         },
         {
           "q": "¿Qué no quiere hacer Gonzalo con esa foto?",
@@ -1767,7 +1767,7 @@
         {
           "q": "¿Dónde se conocieron Facundo y Joaquín?",
           "options": [
-            "En el colegio",
+            "En el colegio, de muy chicos",
             "En la universidad",
             "En el trabajo"
           ],
@@ -1795,10 +1795,10 @@
           "q": "¿Qué decide Facundo al final?",
           "options": [
             "Que va a leerlo igual",
-            "Que es mejor que no lo lea él",
-            "Que va a cambiarlo"
+            "Que va a cambiarlo",
+            "Que es mejor que no lo lea él"
           ],
-          "answer": 1
+          "answer": 2
         }
       ],
       "open": [
@@ -1884,28 +1884,28 @@
           "q": "¿Qué tienen que decidir?",
           "options": [
             "A qué hora termina la fiesta",
-            "Qué canción tocar",
-            "Quién hace el brindis"
+            "Quién hace el brindis",
+            "Qué canción tocar"
           ],
-          "answer": 2
+          "answer": 1
         },
         {
           "q": "¿En qué ayudó el amigo de Facundo?",
           "options": [
-            "En el vestido, la torta y la abuela",
             "En la música",
+            "En el vestido, la torta y la abuela",
             "En las fotos"
           ],
-          "answer": 0
+          "answer": 1
         },
         {
           "q": "¿Qué ha estado haciendo el invitado toda la noche?",
           "options": [
-            "Bailar con todos",
             "Escribir notas en servilletas",
+            "Bailar con todos",
             "Tomar vino"
           ],
-          "answer": 1
+          "answer": 0
         },
         {
           "q": "¿De qué no quiere Joaquín que hable?",

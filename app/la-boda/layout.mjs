@@ -107,7 +107,8 @@ const CHAIR_ROW = 15.68;
 export const chairX = (i) => -CHAIR_ROW / 2 + 0.28 + i * (CHAIR_ROW / Math.round(CHAIR_ROW / 0.56));
 // Round tables in the tent: the table and six chairs around it.
 export const ROUND = [{ x: 21.6, z: 9 }, { x: 27, z: 9.2 }, { x: 32.4, z: 9.2 }, { x: 37.8, z: 9 }];
-export const roundSeat = (t, k) => ({ x: t.x + Math.sin(k * Math.PI / 3) * 1.08, z: t.z + Math.cos(k * Math.PI / 3) * 1.08, heading: k * Math.PI / 3 + Math.PI });
+export const SEAT_R = 0.98; // chairs stand at 1.2 from the centre; you sit on the front half
+export const roundSeat = (t, k) => ({ x: t.x + Math.sin(k * Math.PI / 3) * SEAT_R, z: t.z + Math.cos(k * Math.PI / 3) * SEAT_R, heading: k * Math.PI / 3 + Math.PI });
 const poles = [];
 for (const x of [16, 21.2, 26.4, 31.6, 36.8, 42]) poles.push(F('pole', x, TENT.z0, 0.18, 0.18), F('pole', x, TENT.z1, 0.18, 0.18));
 for (const z of [-12, -6, 0, 6]) poles.push(F('pole', TENT.x0, z, 0.18, 0.18), F('pole', TENT.x1, z, 0.18, 0.18));
@@ -178,7 +179,7 @@ const PLACES = {
   novia: { spot: { x: -11, z: -25.6 }, npc: { x: -11.0, z: -29.2, heading: 0 }, pose: 'arms', mood: 'worried', look: BRIDE,
     extras: [{ x: -11.0, z: -30.2, heading: 0, pose: 'crouch', mood: 'scared', look: L('#c48f69', 'young', 'f', 'long', '#2a1a12', 'dress', '#b8a0d8', null, null, ['earrings'], { seed: 42 }) }] },
   abuela: { spot: { x: -13.6, z: -17.2 }, npc: { x: -13.6, z: -20.04, heading: 0, seat: true }, pose: 'sit', mood: 'angry', look: L('#f0d6c0', 'elderly', 'f', 'bun', '#f0f0f0', 'sweater', '#3a3a5a', 'pants', '#2a2a30', ['glasses', 'earrings'], { seed: 61 }) },
-  novio: { spot: { x: -1, z: -25.6 }, npc: { x: -2.4, z: -29.2, heading: Math.PI }, pose: 'carry', mood: 'pain', look: L('#c48f69', 'old', 'f', 'bob', '#2a1a12', 'dress', '#c8302a', null, null, ['earrings'], { seed: 71 }),
+  novio: { spot: { x: -1, z: -25.6 }, npc: { x: -2.4, z: -29.2, heading: Math.PI }, pose: 'carry', mood: 'pain', look: L('#c48f69', 'old', 'f', 'bob', '#2a1a12', 'dress', '#d8a030', null, null, ['earrings'], { seed: 71 }),
     extras: [{ x: 0.6, z: -28.4, heading: -2.4, pose: 'arms', mood: 'laugh', look: L('#e8c0a0', 'adult', 'f', 'ponytail', '#3a2416', 'dress', '#2a4a8a', null, null, ['glasses'], { seed: 72 }) }] },
   cocina: { spot: { x: 10, z: -25.6 }, npc: { x: 8.0, z: -28.2, heading: 2.5 }, pose: 'cook', mood: 'terror', look: L('#a8724e', 'adult', 'm', 'short', '#120d0b', 'apron', '#f4f0ea', 'pants', '#2a2a2a', ['mustache'], { seed: 81 }),
     extras: [{ x: 12.2, z: -28.2, heading: -2.4, pose: 'arms', mood: 'worried', look: L('#a8724e', 'young', 'f', 'braids', '#120d0b', 'apron', '#f0c8d8', 'pants', '#2a2a2a', [], { seed: 82 }) }] },
@@ -198,7 +199,7 @@ const PLACES = {
     extras: [{ x: 37.2, z: -2.6, heading: Math.PI / 2, pose: 'stand', mood: 'sad', look: L('#f0d6c0', 'adult', 'f', 'bob', '#3a2416', 'dress', '#1a1a2a', null, null, ['earrings'], { seed: 72 }) }] },
   establo: { spot: { x: 24.4, z: -26.6 }, npc: { x: 23.4, z: -29.4, heading: 1.2 }, pose: 'arms', mood: 'worried', look: L('#a8724e', 'adult', 'm', 'short', '#120d0b', 'shirt', '#3a5a8a', 'pants', '#5a4a3a', ['scarf', 'hat'], { seed: 161 }) },
   fotos: { spot: { x: 13.6, z: 18.6 }, npc: { x: 12.4, z: 16.6, heading: 0.6 }, pose: 'phone', mood: 'terror', look: L('#e8c0a0', 'young', 'm', 'curly', '#2a1a12', 'jacket', '#3a3a3a', 'jeans', '#1f2840', ['backpack', 'glasses'], { seed: 171 }) },
-  muelle: { spot: { x: -28.6, z: -30 }, npc: { x: -32.62, z: -30, heading: -Math.PI / 2, seat: true }, pose: 'sit', mood: 'sad', look: L('#e2b896', 'young', 'm', 'short', '#3a2416', 'shirt', '#f4f0ea', 'pants', '#1e2430', ['beard'], { seed: 181 }) },
+  muelle: { spot: { x: -28.6, z: -30 }, npc: { x: -32.85, z: -30, heading: -Math.PI / 2, seat: true }, pose: 'sit', mood: 'sad', look: L('#e2b896', 'young', 'm', 'short', '#3a2416', 'shirt', '#f4f0ea', 'pants', '#1e2430', ['beard'], { seed: 181 }) },
   brindis: { spot: { x: 29, z: 0.9 }, npc: { x: 28.3, z: 4.2, heading: Math.PI }, pose: 'wave', mood: 'love', look: BRIDE,
     extras: [{ x: 29.7, z: 4.2, heading: Math.PI, pose: 'arms', mood: 'smile', look: GROOM }] },
 };
@@ -212,12 +213,13 @@ export const SPOT_RADIUS = 1.1;
 // Seventeen guests who stay put and talk to you (E): see invitados.mjs.
 // Seated at the long tables, at the round tables of the tent and on a pew;
 // dancing on the floor; at the gate, the galería, the pond, the corral.
-const T = (i, row) => { const t = TABLES[i]; return row < 0 ? { z: t.z - 0.88, heading: 0 } : { z: t.z + 0.88, heading: Math.PI }; };
+// Whoever sits does so at the front of the seat (chair centre ± 1.0; 0.25 nearer the table, past half its depth, so skirts clear the seat).
+const T = (i, row) => { const t = TABLES[i]; return row < 0 ? { z: t.z - 0.75, heading: 0 } : { z: t.z + 0.75, heading: Math.PI }; };
 const atTable = (i, row, chair, mood) => ({ x: chairX(chair), ...T(i, row), pose: 'sit', seat: true, mood });
 const atRound = (t, k, mood) => { const s = roundSeat(ROUND[t], k); return { x: s.x, z: s.z, heading: s.heading, pose: 'sit', seat: true, mood }; };
 export const CROWD = [
   atTable(0, -1, 3, 'tipsy'), atTable(0, 1, 5, 'sad'), atTable(1, -1, 7, 'worried'), atTable(1, 1, 12, 'laugh'),
-  { x: -28.6, z: 14.08, heading: Math.PI, pose: 'sit', seat: true, mood: 'neutral' },
+  { x: -28.6, z: 13.93, heading: Math.PI, pose: 'sit', seat: true, mood: 'neutral' },
   { x: 5.6, z: 41.6, heading: Math.PI, pose: 'phone', mood: 'sleepy' },
   { x: 6.8, z: -20.0, heading: 0.4, pose: 'arms', mood: 'angry' },
   { x: 26.2, z: -7.4, heading: 0.5, pose: 'dance', mood: 'laugh' }, { x: 31.8, z: -3.2, heading: -2.4, pose: 'dance', mood: 'sad' },
@@ -237,7 +239,7 @@ export const FILLERS = [
   { x: 23.8, z: -8.6, heading: 2.2, pose: 'dance', mood: 'laugh' }, { x: 34.8, z: -5.0, heading: -1.6, pose: 'dance', mood: 'smile' },
   { x: 27.4, z: -3.0, heading: -0.6, pose: 'dance', mood: 'tipsy' }, { x: 30.6, z: -7.8, heading: 2.6, pose: 'dance', mood: 'love' },
   { x: 34.8, z: -11.4, heading: -2.8, pose: 'guitar', mood: 'smile', mariachi: true }, { x: 33.4, z: -11.0, heading: -2.4, pose: 'guitar', mood: 'laugh', mariachi: true },
-  { x: -25.0, z: 17.08, heading: Math.PI, pose: 'sit', seat: true, mood: 'sleepy' },
+  { x: -24.4, z: 16.93, heading: Math.PI, pose: 'sit', seat: true, mood: 'sleepy' },
 ];
 
 // Waiters with trays and two children who run up and down the avenue.

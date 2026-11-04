@@ -4,7 +4,7 @@ export default {
     title: 'El motor seguía encendido',
     line: 'Facundo te había dicho por teléfono: «Tú ven, que yo te presento a todos». Por eso aceptaste ir a una boda donde no conocías a nadie. A las cinco en punto llegaste al portón de la Estancia Los Aromos, en San Antonio de Areco, y lo primero que viste fue el auto azul de Facundo: motor encendido, puerta abierta y ni rastro del padrino.',
     dialogue: [
-      ['anselmo', 'Disculpe, pero sin nombre en la lista no puedo dejarlo pasar. Son órdenes de la organizadora.'],
+      ['anselmo', 'Disculpe, pero sin nombre en la lista no puedo dejar pasar a nadie. Son órdenes de la organizadora.'],
       ['wilmer', 'Ese auto llegó hace media hora. El señor bajó, miró el teléfono y salió caminando hacia el campo. Parecía que lo perseguía alguien.'],
       ['anselmo', 'Dejó el saco en el asiento. Si es el padrino, la boda tiene un problema bastante más grande que usted.'],
       ['wilmer', 'Y yo no puedo mover el auto sin la llave. En diez minutos llegan las combis.'],
@@ -35,7 +35,7 @@ export default {
     ],
     ask: 'Joaquín te agarra del brazo. ¿Qué le dices?',
     options: [
-      { say: 'No creo que Valentina se case por los anillos. Es mejor que la mires a ella cuando entre y te olvides del resto.', reply: 'Tienes razón… La miro a ella. Solo a ella.', end: 'Joaquín respiró hondo y se arregló la corbata. Cuando se abrió la puerta, todavía le temblaban las manos, pero sonreía.', mood: 'love' },
+      { say: 'No creo que a Valentina le importen los anillos hoy. Es mejor que la mires a ella cuando entre y te olvides del resto.', reply: 'Tienes razón… La miro a ella. Solo a ella.', end: 'Joaquín respiró hondo y se arregló la corbata. Cuando se abrió la puerta, todavía le temblaban las manos, pero sonreía.', mood: 'love' },
       { say: 'Padre, ¿tiene algo redondo en la sacristía? Lo que sea.', reply: 'Tengo gomitas para los niños del catecismo. Que Dios nos perdone.', end: 'Dos anillos de gomita, uno rojo y otro verde, ocuparon la cajita de terciopelo. El padre Benito tosió para no reírse.', mood: 'laugh' },
       { say: 'Escribe tus votos ahora, aquí, en esta servilleta. Que sean tuyos, no de un manual.', reply: 'Tenía unos votos de internet. Mejor escribo los míos.', end: 'Joaquín escribió tres frases en una servilleta de papel y se la guardó en el bolsillo del pecho, junto al corazón.', mood: 'smile' },
     ],
@@ -269,7 +269,7 @@ export default {
     ask: 'Los dos directores te miran esperando un árbitro. ¿Qué propones?',
     options: [
       { say: '¿Por qué no tocan algo juntos? No creo que haya un bolero que no conozcan los dos.', reply: '«Bésame mucho». En Cuba y en México se canta igual.', end: 'La orquesta y el mariachi tocaron «Bésame mucho» juntos. La pista se llenó de parejas abrazadas.', mood: 'love' },
-      { say: 'Diez minutos cada uno, por turnos. Y antes de empezar, un tequila para los directores.', reply: 'Con tequila se negocia mejor, compadre.', end: 'Willy y Don Chuy brindaron con tequila y se repartieron la noche. A las tres de la mañana se decían «hermano».', mood: 'laugh' },
+      { say: 'Diez minutos cada uno, por turnos. Y antes de empezar, un tequila para los directores.', reply: 'Con tequila se negocia mejor, ¿no?', end: 'Willy y Don Chuy brindaron con tequila y se repartieron la noche. A las tres de la mañana se decían «hermano».', mood: 'laugh' },
       { say: 'Yamilé, ¿cantas tú sola algo antiguo? Algo que conozca la abuela de la novia.', reply: 'Sé un son que cantaba mi abuela en Santiago de Cuba.', end: 'Yamilé cantó sin instrumentos. En la galería, Doña Chela dejó el mate y lloró como no lloraba desde hacía años.', mood: 'smile' },
     ],
     talk: [
@@ -402,7 +402,7 @@ export default {
     dialogue: [
       ['mariela', 'Tres minutos. Te pido que no menciones a Renata ni a la torta.'],
       ['valentina', 'No te conocía esta mañana y ahora te debo media boda.'],
-      ['joaquin', 'Tranquilo, hermano. Aquí todos somos familia. Bueno, casi todos.'],
+      ['joaquin', 'Tranquilidad, que aquí todos somos familia. Bueno, casi todos.'],
     ],
     ask: 'Desdoblas tus notas. ¿Cómo empiezas el brindis?',
     options: [

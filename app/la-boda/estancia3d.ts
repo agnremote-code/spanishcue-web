@@ -9,8 +9,12 @@
 import * as THREE from 'three';
 import { batchStatic, canvas, random } from '../noche-abierta/build3d';
 import { addBlobShadow, animatePerson, createPerson, setMood, setPose, type Look, type Person } from '../noche-abierta/people3d';
-import { BOUNDS, CHAPEL, CHAPEL_H, CHATTER, CROWD, DOORS, FILLERS, FURNITURE, HOUSE, HOUSE_H, JETTY, POND, SCENES, TENT, WALKERS, WALL, WALLS, type Walker, walkerAt } from './layout.mjs';
+import { BOUNDS, CHAPEL, CHAPEL_H, CHATTER, CROWD, DANCE, DOORS, FILLERS, FURNITURE, HOUSE, HOUSE_H, JETTY, POND, SCENES, TENT, WALKERS, WALL, WALLS, type Walker, walkerAt } from './layout.mjs';
 import { B, C, IRON, SEAT_TOP, WOOD, add, buildItem, mapped, std, textTexture, type Anim, type Item } from './estancia-items';
+// Feet on top of the 1 cm dance floor, not inside it.
+const floorAt = (x: number, z: number) => (x > DANCE.x0 && x < DANCE.x1 && z > DANCE.z0 && z < DANCE.z1 ? 0.025 : 0);
+// Sad and sleepy people slump on their seat: lift them so their hips stay on it.
+const seatLift = (seat: unknown, mood?: string) => (seat && (mood === 'sad' || mood === 'sleepy') ? 0.035 : 0);
 
 export type Npc = { person: Person; scene?: string; main?: boolean; x: number; z: number; y: number; heading: number; baseMood: string; seated?: boolean; talk?: string; body?: string; seed: number; angryUntil?: number };
 export type Mover = { walker: Walker; person: Person; offset: number; x: number; z: number; moving?: boolean; body?: string; seed: number; angryUntil?: number; heading?: number };
@@ -334,7 +338,7 @@ export function buildEstancia(scene: THREE.Scene, opts: { low: boolean; shadows:
     for (const p of people) {
       const anyP = p as typeof p & { seat?: boolean; y?: number };
       const person = makePerson(p.look as Look, p.pose, { seat: anyP.seat, mood: p.mood });
-      person.root.position.set(p.x, anyP.y ?? 0, p.z); person.root.rotation.y = p.heading;
+      person.root.position.set(p.x, (anyP.y ?? floorAt(p.x, p.z)) + seatLift(anyP.seat, p.mood), p.z); person.root.rotation.y = p.heading;
       world.add(person.root);
       npcs.push({ person, scene: s.id, main: p.main, x: p.x, z: p.z, y: anyP.y ?? 0, heading: p.heading, baseMood: p.mood ?? 'neutral', seated: anyP.seat || p.pose === 'sit', body: (p.look as Look).body, seed: npcs.length * 31 + 7 });
     }
@@ -345,7 +349,7 @@ export function buildEstancia(scene: THREE.Scene, opts: { low: boolean; shadows:
     const base = any.mariachi ? MARIACHI : GUEST_LOOKS[(i * 4 + (talk ? 0 : 5)) % GUEST_LOOKS.length];
     const look = { ...(c.seat ? seatedLook(base, i) : base), seed: (talk ? 300 : 500) + i * 7 };
     const person = makePerson(look as Look, c.pose, { seat: c.seat, mood: c.mood });
-    person.root.position.set(c.x, 0, c.z); person.root.rotation.y = c.heading;
+    person.root.position.set(c.x, floorAt(c.x, c.z) + seatLift(c.seat, c.mood), c.z); person.root.rotation.y = c.heading;
     if (c.seat && !seatUnder(c.x, c.z)) console.warn('La boda: a seated guest without a seat', c);
     world.add(person.root);
     npcs.push({ person, x: c.x, z: c.z, y: 0, heading: c.heading, baseMood: c.mood ?? 'neutral', seated: Boolean(c.seat), talk: talk ? String(i) : undefined, body: (look as Look).body, seed: (talk ? 300 : 500) + i });

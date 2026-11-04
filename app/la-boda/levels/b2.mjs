@@ -12,7 +12,7 @@ export default {
     ask: 'Ya se ve el polvo de las combis en el camino. ¿Qué haces?',
     options: [
       { say: 'Si yo fuera Facundo, iría a buscar mi saco a la capilla. Lo llevo allí, por si vuelve.', reply: 'Lléveselo, pero si alguien pregunta, usted lo encontró solo.', end: 'Revisaste los bolsillos: un pañuelo planchado, una pastilla de menta y una nota doblada en cuatro. Los anillos, ni soñar.', mood: 'worried' },
-      { say: 'Entiendo las órdenes, pero Facundo me invitó personalmente. Si él no aparece, quizá yo sea útil.', reply: 'Mire, en cuarenta años de portero, nunca escuché un argumento tan raro. Pase.', end: 'Anselmo te anotó al final de la lista con su lápiz de carpintero: «amigo del padrino (provisorio)».', mood: 'smile' },
+      { say: 'Entiendo las órdenes, pero Facundo me invitó personalmente. Si él no aparece, quizá yo sea útil.', reply: 'Mire, en cuarenta años de portero, nunca escuché un argumento tan raro. Pase.', end: 'Anselmo te anotó al final de la lista con su lápiz de carpintero: «de parte del padrino (provisorio)».', mood: 'smile' },
       { say: 'Wilmer, busquemos la llave antes de que llegue la primera combi. Usted por la derecha, yo por la izquierda.', reply: 'Hecho. Si no aparece, lo empujamos entre los dos y que Dios nos ayude.', end: 'La llave estaba debajo del asiento. Wilmer apagó el motor y estacionó el auto justo cuando entraba la primera combi.', mood: 'laugh' },
     ],
     talk: [
@@ -82,7 +82,7 @@ export default {
     ],
     ask: 'Valentina te mira por el espejo, a mitad de camino entre la risa y el llanto. ¿Qué propones?',
     options: [
-      { say: 'Soy amigo de Facundo. Y aunque suene raro, llevo hilo de pescar en la billetera. Es transparente y aguanta un dorado de diez kilos.', reply: 'No voy a preguntar por qué. Dámelo antes de que me arrepienta.', end: 'Camila cosió el vestido con hilo de pescar. No se notaba nada. Valentina dijo que nunca se había sentido tan sujeta a algo en su vida.', mood: 'laugh' },
+      { say: 'Facundo me invitó. Y aunque suene raro, llevo hilo de pescar en la billetera. Es transparente y aguanta un dorado de diez kilos.', reply: 'No voy a preguntar por qué. Dámelo antes de que me arrepienta.', end: 'Camila cosió el vestido con hilo de pescar. No se notaba nada. Valentina dijo que nunca se había sentido tan sujeta a algo en su vida.', mood: 'laugh' },
       { say: 'Camila, tienes el pulso más firme de esta casa. Dame dos minutos y te consigo hilo blanco en la cocina.', reply: 'Y agua, por favor. Si se desmaya, esto deja de tener arreglo.', end: 'Volviste corriendo con hilo blanco y una jarra. Camila cosió con calma de cirujana y Valentina recuperó el color de la cara.', mood: 'smile' },
       { say: '¿Y el vestido de tu abuela? Sería raro que no lo hubiera guardado: las abuelas no tiran nada.', reply: 'Está en el armario del pasillo, en una caja con naftalina. Nunca me atreví a probármelo.', end: 'El vestido de 1962 le quedó como hecho a medida. Valentina lloró, Camila lloró, y tú saliste antes de unirte al coro.', mood: 'love' },
     ],
@@ -269,7 +269,7 @@ export default {
     ask: 'Los dos directores te miran como a un árbitro de final de mundial. ¿Qué propones?',
     options: [
       { say: '¿Y si tocaran juntos? Dudo que exista un bolero que no conozcan en Cuba y en México.', reply: '«Bésame mucho». Allá y acá se canta igual.', end: 'La orquesta y el mariachi tocaron «Bésame mucho» juntos. La pista se llenó de parejas que no se soltaron en toda la canción.', mood: 'love' },
-      { say: 'Diez minutos cada uno, por turnos. Y antes de empezar, un tequila para sellar el acuerdo.', reply: 'Con tequila se firma mejor que con abogados, compadre.', end: 'Willy y Don Chuy brindaron con tequila y se repartieron la noche. A las tres de la mañana ya se llamaban «hermano».', mood: 'laugh' },
+      { say: 'Diez minutos cada uno, por turnos. Y antes de empezar, un tequila para sellar el acuerdo.', reply: 'Con tequila se firma mejor que con abogados, ya lo sabemos.', end: 'Willy y Don Chuy brindaron con tequila y se repartieron la noche. A las tres de la mañana ya se llamaban «hermano».', mood: 'laugh' },
       { say: 'Yamilé, ¿te animarías a cantar sola algo antiguo? Algo que la abuela de la novia reconozca.', reply: 'Hay un son que me cantaba mi abuela en Santiago de Cuba. Nunca lo canté en público.', end: 'Yamilé cantó sin instrumentos. En la galería, Doña Chela dejó el mate y lloró como no lloraba desde el entierro de su marido.', mood: 'smile' },
     ],
     talk: [
@@ -296,7 +296,7 @@ export default {
       { say: 'Usted baila mal, pero baila con el corazón. Dudo que Valentina recuerde los pasos; va a recordar su cara.', reply: '¡Ja! Mi difunta esposa decía exactamente lo mismo.', end: 'Don Horacio bailó peor que nunca y se rió como un niño. Los mozos dejaron las bandejas para aplaudirlo.', mood: 'laugh' },
     ],
     talk: [
-      '¿Qué sacrificio de tus padres entendiste solo cuando fuiste adulto?',
+      '¿Qué sacrificio de tus padres entendiste solo al llegar a la edad adulta?',
       '¿Mentirías para proteger la alegría de alguien que quieres?',
       '¿Qué te da más pudor hacer delante de mucha gente?',
       '¿Cuánto dinero te parece razonable gastar en una celebración?',
@@ -402,7 +402,7 @@ export default {
     dialogue: [
       ['mariela', 'Tres minutos. Y si mencionas a Renata o la torta, te desenchufo.'],
       ['valentina', 'Esta mañana no sabía ni que existías. Ahora te debo media boda.'],
-      ['joaquin', 'Tranquilo, hermano. Aquí todos somos familia. Bueno, casi todos.'],
+      ['joaquin', 'Tranquilidad, que aquí todos somos familia. Bueno, casi todos.'],
     ],
     ask: 'Despliegas tus notas. Se hace un silencio absoluto. ¿Cómo empiezas el brindis?',
     options: [

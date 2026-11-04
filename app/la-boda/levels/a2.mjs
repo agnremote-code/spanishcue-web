@@ -79,7 +79,7 @@ export default {
     ],
     ask: 'Valentina te mira por el espejo. ¿Qué propones?',
     options: [
-      { say: 'Soy amigo de Facundo. Tengo hilo de pescar: es transparente y más fuerte que cualquier hilo.', reply: '¿Por qué llevas hilo de pescar a una boda? No importa. ¡Dámelo!', end: 'Camila cosió el vestido con hilo de pescar. No se veía nada. Valentina dijo que se sentía como una trucha elegante.', mood: 'laugh' },
+      { say: 'Vengo con Facundo. Tengo hilo de pescar: es transparente y más fuerte que cualquier hilo.', reply: '¿Por qué llevas hilo de pescar a una boda? No importa. ¡Dámelo!', end: 'Camila cosió el vestido con hilo de pescar. No se veía nada. Valentina dijo que se sentía como una trucha elegante.', mood: 'laugh' },
       { say: 'Camila, eres la mejor para esto. Yo voy a buscar hilo blanco a la cocina.', reply: 'Gracias. Y trae agua, que la novia no tomó nada desde el desayuno.', end: 'Volviste con hilo blanco y agua. Camila cosió con calma, como una cirujana. Valentina dejó de temblar.', mood: 'smile' },
       { say: '¿Tu abuela guardó su vestido de novia? Las abuelas siempre guardan todo.', reply: 'Está en el armario, en una caja. Nunca me lo probé.', end: 'El vestido de 1962 le quedó perfecto. Valentina lloró, Camila lloró, y tú saliste antes de llorar también.', mood: 'love' },
     ],
@@ -200,7 +200,7 @@ export default {
     talk: [
       '¿Cómo terminaste tu última relación de pareja?',
       '¿Te sentaste alguna vez al lado de alguien incómodo?',
-      '¿Prefieres organizar todo o improvisar?',
+      '¿Planeaste alguna vez dónde se sentaba cada persona en una comida?',
       '¿Qué haces cuando dos personas que quieres no se hablan?',
       '¿Hiciste amigos nuevos en un lugar inesperado?',
     ],
@@ -224,7 +224,7 @@ export default {
       '¿Qué haces con los regalos de una expareja?',
       '¿Alguna vez te encontraste con alguien de tu pasado en una fiesta?',
       '¿Qué flores regalas y en qué ocasiones?',
-      '¿Guardas cartas o mensajes antiguos?',
+      '¿Guardaste algún regalo de una expareja?',
       '¿Eres de los que dicen la verdad aunque duela?',
     ],
     words: ['el rosal', 'la caja de zapatos', 'arruinar', 'el arco de flores', 'esconderse'],
@@ -263,7 +263,7 @@ export default {
     ask: 'Los dos te miran. ¿Qué propones?',
     options: [
       { say: '¿Por qué no tocan algo juntos? Un bolero lo saben en Cuba y en México.', reply: '«Bésame mucho». Todos la sabemos.', end: 'La orquesta y el mariachi tocaron juntos. La pista se llenó de parejas abrazadas.', mood: 'love' },
-      { say: 'Diez minutos cada uno, por turnos. Y para empezar, un tequila para los directores.', reply: 'Con tequila se negocia mejor, compadre.', end: 'Willy y Don Chuy brindaron con tequila y se repartieron el escenario. Al final de la noche eran compadres.', mood: 'laugh' },
+      { say: 'Diez minutos cada uno, por turnos. Y para empezar, un tequila para los directores.', reply: 'Con tequila se negocia mejor, ¿no?', end: 'Willy y Don Chuy brindaron con tequila y se repartieron el escenario. Al final de la noche eran compadres.', mood: 'laugh' },
       { say: 'Yamilé, ¿cantas tú sola una canción antigua? Para la abuela.', reply: 'Sé una que cantaba mi abuela en Santiago de Cuba.', end: 'Yamilé cantó sin instrumentos. En la galería, la abuela Chela dejó el mate y lloró.', mood: 'smile' },
     ],
     talk: [
@@ -409,7 +409,7 @@ export default {
       '¿Qué palabras usas para felicitar a alguien en tu idioma?',
       '¿Cuál fue la mejor celebración de tu vida?',
       '¿Qué le deseas a una persona que empieza algo nuevo?',
-      '¿Qué haces para controlar los nervios?',
+      '¿Cómo te preparaste la última vez que hablaste en público?',
     ],
     words: ['el brindis', 'guiñar un ojo', 'desdoblar', 'felicitar', 'estallar de risa'],
   },

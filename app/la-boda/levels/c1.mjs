@@ -5,13 +5,13 @@ export default {
     line: 'Lo tuyo con esta boda fue, por decirlo suavemente, un accidente diplomático. Facundo te había convencido el martes con un argumento irrebatible: «Soy el padrino, voy a estar hecho un manojo de nervios y necesito a alguien que no sea de la familia». Así que a las cinco en punto te presentaste en el portón de la Estancia Los Aromos, en pleno corazón de Areco, con un traje alquilado y un regalo comprado a las apuradas. Lo que encontraste fue el auto azul de Facundo atravesado en la entrada, el motor ronroneando, la puerta abierta de par en par y su saco gris abandonado en el asiento, como la muda de una serpiente.',
     dialogue: [
       ['anselmo', 'No es que desconfíe de usted, entiéndame, sino que la organizadora me dejó instrucciones tajantes: nombre que no figura, persona que no pasa.'],
-      ['wilmer', 'El dueño del auto llegó hace media hora, discutió por teléfono a los gritos y se fue campo traviesa como alma que lleva el diablo.'],
+      ['wilmer', 'El dueño del auto llegó hace media hora, discutió por teléfono a los gritos y se fue a campo traviesa como alma que lleva el diablo.'],
       ['anselmo', 'Y por si fuera poco, ese saco es el del padrino. Me pidió que se lo guardara si lo veía nervioso. Nunca pensé que el nerviosismo le daría para tanto.'],
     ],
     ask: 'A lo lejos, el polvo anuncia las combis. ¿Qué haces?',
     options: [
       { say: 'Por mucho que me cueste entrar, el saco no puede quedarse aquí. Lo llevo a la capilla: si Facundo reaparece, irá a buscarlo allí.', reply: 'Lléveselo, pero conste que yo no he visto nada.', end: 'En los bolsillos había un pañuelo almidonado, una pastilla de menta y una nota doblada en cuatro. De los anillos, ni la sombra.', mood: 'worried' },
-      { say: 'Comprendo sus órdenes, pero piénselo así: si el padrino no aparece, quizá yo sea lo más parecido a un padrino que le queda a esta boda.', reply: 'Cuarenta años de portero y es el argumento más disparatado que oí. Y el más convincente. Pase.', end: 'Anselmo te anotó al pie de la lista con su lápiz de carpintero: «amigo del padrino (a prueba)».', mood: 'smile' },
+      { say: 'Comprendo sus órdenes, pero piénselo así: si el padrino no aparece, quizá yo sea lo más parecido a un padrino que le queda a esta boda.', reply: 'Cuarenta años de portero y es el argumento más disparatado que oí. Y el más convincente. Pase.', end: 'Anselmo te anotó al pie de la lista con su lápiz de carpintero: «de parte del padrino (a prueba)».', mood: 'smile' },
       { say: 'Wilmer, antes de que lleguen las combis y esto se convierta en un embotellamiento rural, busquemos esa llave.', reply: 'Usted por la izquierda, yo por la derecha. Y si no aparece, a empujar.', end: 'La llave estaba debajo del asiento. Wilmer apagó el motor y apartó el auto justo cuando asomaba la primera combi.', mood: 'laugh' },
     ],
     talk: [
@@ -81,7 +81,7 @@ export default {
     ],
     ask: 'Valentina te mira por el espejo, oscilando entre la risa y el llanto. ¿Qué propones?',
     options: [
-      { say: 'Soy amigo de Facundo y, por inverosímil que suene, llevo hilo de pescar en la billetera. Es invisible y resiste a un dorado de diez kilos.', reply: 'No voy a preguntar por qué un invitado lleva hilo de pescar. Dámelo y no me lo expliques nunca.', end: 'Camila cosió el vestido con hilo de pescar. El arreglo era invisible. Valentina declaró que jamás se había sentido tan bien sujeta a nada.', mood: 'laugh' },
+      { say: 'Vengo de parte de Facundo y, por inverosímil que suene, llevo hilo de pescar en la billetera. Es invisible y resiste a un dorado de diez kilos.', reply: 'No voy a preguntar por qué alguien lleva hilo de pescar. Dámelo y no me lo expliques nunca.', end: 'Camila cosió el vestido con hilo de pescar. El arreglo era invisible. Valentina declaró que jamás se había sentido tan bien sujeta a nada.', mood: 'laugh' },
       { say: 'Camila, tienes el pulso más firme de esta casa; lo único que te falta es material. Dame dos minutos y vuelvo con hilo blanco.', reply: 'Y agua, por favor. Si se nos desmaya, esto ya no tiene arreglo.', end: 'Volviste a la carrera con hilo blanco y una jarra. Camila cosió con calma de cirujana y Valentina recuperó poco a poco el color.', mood: 'smile' },
       { say: 'Me extrañaría que tu abuela no hubiera guardado su vestido de novia. Las abuelas no tiran nada, y menos eso.', reply: 'Está en el armario del pasillo, en una caja con naftalina. Nunca me atreví ni a abrirla.', end: 'El vestido de 1962 le quedó como si lo hubieran cortado para ella. Valentina lloró, Camila lloró, y tú te escabulliste antes de sumarte al coro.', mood: 'love' },
     ],
@@ -221,12 +221,12 @@ export default {
     ask: 'Renata mira hacia la carpa con determinación. ¿Qué haces?',
     options: [
       { say: 'Renata, antes de buscar a nadie: ¿cómo estás tú? Me da la impresión de que estás tan nerviosa como el novio.', reply: 'Facundo no me contesta desde las cinco. Y estoy en una boda donde todos me miran como si trajera la peste.', end: 'Hablaron cinco minutos. Renata dejó la caja en un banco y se fue al estacionamiento a esperar a Facundo, mucho más serena.', mood: 'sad' },
-      { say: '¿Me dejas ver qué contiene? No estoy seguro de que hoy sea el día idóneo para devolvérsela.', reply: 'Cartas. Seis años de cartas. No las quiero en casa, pero tampoco soy capaz de tirarlas.', end: 'Te quedaste con la caja. Contenía veinte cartas de 2015. Una aseguraba «Nunca me voy a casar». Otra, del mismo mes, afirmaba exactamente lo contrario.', mood: 'surprised' },
+      { say: '¿Me dejas ver qué contiene? No tengo claro que hoy sea el día idóneo para devolvérsela.', reply: 'Cartas. Seis años de cartas. No las quiero en casa, pero tampoco soy capaz de tirarlas.', end: 'Te quedaste con la caja. Contenía veinte cartas de 2015. Una aseguraba «Nunca me voy a casar». Otra, del mismo mes, afirmaba exactamente lo contrario.', mood: 'surprised' },
       { say: 'Rocío, ¿habría algún rincón donde Renata pudiera estar tranquila mientras aclaramos todo esto?', reply: 'Detrás del arco de flores. Desde ahí se domina toda la pista y no te ve nadie.', end: 'Renata se quedó tras el arco de flores con Rocío. Presenció la boda entera desde allí, invisible.', mood: 'worried' },
     ],
     talk: [
       '¿Qué haces con los objetos que sobreviven a una relación?',
-      '¿Cuándo es legítimo presentarse donde sabes que no eres bienvenido?',
+      '¿Cuándo es legítimo presentarse donde sabes que tu presencia no es bienvenida?',
       '¿Qué te parece más valiente: dar la cara o quitarse de en medio?',
       '¿Cómo cambia el pasado de una persona cuando empieza una relación con alguien de su entorno?',
       '¿Hay verdades que conviene posponer, o posponerlas es una forma de mentir?',
@@ -268,7 +268,7 @@ export default {
     ask: 'Los dos directores te miran como al árbitro de una final. ¿Qué propones?',
     options: [
       { say: '¿Y si en vez de disputarse el escenario lo compartieran? Me cuesta creer que no haya un bolero que se sepan en La Habana y en Guadalajara.', reply: '«Bésame mucho». Allá y acá se canta igual de bien.', end: 'La orquesta y el mariachi interpretaron «Bésame mucho» al unísono. La pista se llenó de parejas que no se soltaron en toda la canción.', mood: 'love' },
-      { say: 'Diez minutos cada uno, alternándose. Y para sellar el pacto, un tequila entre caballeros.', reply: 'Con tequila se firma mejor que ante notario, compadre.', end: 'Willy y Don Chuy brindaron con tequila y se repartieron la noche. A las tres de la madrugada ya se llamaban «hermano».', mood: 'laugh' },
+      { say: 'Diez minutos cada uno, alternándose. Y para sellar el pacto, un tequila entre colegas.', reply: 'Con tequila se firma mejor que ante notario, se lo aseguro.', end: 'Willy y Don Chuy brindaron con tequila y se repartieron la noche. A las tres de la madrugada ya se llamaban «hermano».', mood: 'laugh' },
       { say: 'Yamilé, ¿te atreverías a cantar algo antiguo, a capela? Algo que la abuela de la novia pueda reconocer.', reply: 'Hay un son que me cantaba mi abuela en Santiago. Nunca lo he cantado en público.', end: 'Yamilé cantó a capela. En la galería, Doña Chela soltó el mate y lloró como no lloraba desde el entierro de su marido.', mood: 'smile' },
     ],
     talk: [
@@ -401,7 +401,7 @@ export default {
     dialogue: [
       ['mariela', 'Tres minutos. Y si mencionas a Renata o la torta, te desenchufo sin contemplaciones.'],
       ['valentina', 'Esta mañana ni sabía que existías. Ahora te debo, como mínimo, media boda.'],
-      ['joaquin', 'Tranquilo, hermano. Aquí todos somos familia. Bueno, casi todos.'],
+      ['joaquin', 'Tranquilidad, que aquí todos somos familia. Bueno, casi todos.'],
     ],
     ask: 'Despliegas tus notas. El silencio es absoluto. ¿Cómo arrancas el brindis?',
     options: [

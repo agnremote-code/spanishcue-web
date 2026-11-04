@@ -60,10 +60,11 @@
       "choice": [
         {
           "q": "¿Cómo describe Wilmer el paso del tiempo en Buenos Aires?",
+          "infer": true,
           "options": [
             "Se escurre",
-            "Se detiene",
-            "Se repite"
+            "Se detiene en seco",
+            "Se repite sin remedio"
           ],
           "answer": 0
         },
@@ -79,7 +80,7 @@
         {
           "q": "Según Anselmo, ¿qué permite el aburrimiento?",
           "options": [
-            "Descansar más",
+            "Descansar más y dormir la siesta",
             "Ahorrar dinero",
             "Tener tiempo para mirar"
           ],
@@ -87,12 +88,13 @@
         },
         {
           "q": "¿Qué diferencia hace Anselmo entre las personas?",
+          "infer": true,
           "options": [
-            "Las que nacen para cruzar portones y las que nacen para cuidarlos",
             "Las ricas y las pobres",
+            "Las que nacen para cruzar portones y las que nacen para cuidarlos",
             "Las del campo y las de la ciudad"
           ],
-          "answer": 0
+          "answer": 1
         }
       ],
       "open": [
@@ -189,37 +191,39 @@
           "q": "¿Cómo describe Joaquín su primer año?",
           "options": [
             "Fue perfecto",
-            "Fue a la vez el más difícil y el más engañoso",
-            "Fue un desastre"
-          ],
-          "answer": 1
-        },
-        {
-          "q": "Según el cura, ¿qué indica discutir por tonterías?",
-          "options": [
-            "Que el matrimonio va mal",
-            "Que hay que ir a terapia",
-            "Que es buena señal"
+            "Fue un desastre",
+            "Fue a la vez el más difícil y el más engañoso"
           ],
           "answer": 2
         },
         {
-          "q": "¿Qué descubrió Joaquín al casarse?",
+          "q": "Según el cura, ¿qué indica discutir por tonterías?",
+          "infer": true,
           "options": [
-            "Que el matrimonio no resolvió sus miedos",
-            "Que ya no tenía miedos",
-            "Que sus padres tenían razón"
+            "Que es buena señal",
+            "Que el matrimonio va mal",
+            "Que hay que ir a terapia"
           ],
           "answer": 0
         },
         {
+          "q": "¿Qué descubrió Joaquín al casarse?",
+          "infer": true,
+          "options": [
+            "Que ya no tenía miedos desde el día de la boda",
+            "Que sus padres tenían razón",
+            "Que el matrimonio no resolvió sus miedos"
+          ],
+          "answer": 2
+        },
+        {
           "q": "¿Por qué no publicaron el libro del cura?",
           "options": [
-            "Era muy largo",
             "Era demasiado frívolo para unos y demasiado católico para otros",
+            "Era muy largo",
             "No lo terminó"
           ],
-          "answer": 1
+          "answer": 0
         }
       ],
       "open": [
@@ -319,11 +323,11 @@
         {
           "q": "¿Qué creció donde Tadeo enterró los anillos?",
           "options": [
-            "Un árbol nuevo",
-            "Nada",
-            "Un jazmín que ya estaba allí"
+            "Un árbol nuevo traído del vivero del pueblo",
+            "Un jazmín que ya estaba allí",
+            "Nada"
           ],
-          "answer": 2
+          "answer": 1
         },
         {
           "q": "¿Quién cuida la planta?",
@@ -336,21 +340,23 @@
         },
         {
           "q": "¿Qué hicieron los padres de Tadeo en el aniversario?",
+          "infer": true,
           "options": [
-            "Volvieron a vivir juntos",
-            "Se sentaron en la misma mesa y se rieron",
-            "No vinieron"
+            "Volvieron a vivir juntos en la casa de siempre",
+            "No vinieron",
+            "Se sentaron en la misma mesa y se rieron"
           ],
-          "answer": 1
+          "answer": 2
         },
         {
           "q": "Según Marisol, ¿qué hicieron los adultos gracias a Tadeo?",
+          "infer": true,
           "options": [
             "Volvieron a casarse",
-            "Plantaron árboles",
-            "Se dieron cuenta de que asustaban a los niños con sus silencios"
+            "Se dieron cuenta de que asustaban a los niños con sus silencios",
+            "Plantaron árboles"
           ],
-          "answer": 2
+          "answer": 1
         }
       ],
       "open": [
@@ -453,17 +459,18 @@
       "choice": [
         {
           "q": "¿Por qué Valentina quiere guardar el vestido ese día?",
+          "infer": true,
           "options": [
-            "Porque si no lo hace en el aniversario, no lo hará nunca",
             "Porque se va de viaje",
-            "Porque Camila lo necesita"
+            "Porque Camila lo necesita",
+            "Porque si no lo hace en el aniversario, no lo hará nunca"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "q": "¿Qué le pidió la abuela a Joaquín antes de morir?",
           "options": [
-            "Que cuidara a Valentina",
+            "Que cuidara a Valentina cuando él ya no estuviera",
             "Que le enseñara a bailar una ranchera",
             "Que aprendiera a tomar mate"
           ],
@@ -472,17 +479,18 @@
         {
           "q": "Según Valentina, ¿qué son las herencias más valiosas?",
           "options": [
-            "Objetos",
-            "Dinero",
-            "Permisos"
+            "Permisos",
+            "Objetos de valor",
+            "Dinero"
           ],
-          "answer": 2
+          "answer": 0
         },
         {
           "q": "¿Qué representa el vestido para Valentina?",
+          "infer": true,
           "options": [
             "Una autorización para desobedecer",
-            "Una obligación familiar",
+            "Una obligación familiar que nadie se atreve a discutir",
             "Un recuerdo triste"
           ],
           "answer": 0
@@ -563,39 +571,41 @@
       "choice": [
         {
           "q": "¿Por qué dejó Chela una grabación?",
+          "infer": true,
           "options": [
             "Porque estaba enferma de la voz",
-            "Porque nunca supo decir las cosas bonitas a la cara",
-            "Porque quería un video"
-          ],
-          "answer": 1
-        },
-        {
-          "q": "¿Qué diferencia hace Chela entre blando y tierno?",
-          "options": [
-            "No hay diferencia",
-            "Los tiernos son más débiles",
-            "Los blandos ceden por miedo; los tiernos, porque eligen"
+            "Porque quería un video",
+            "Porque nunca supo decir las cosas bonitas a la cara"
           ],
           "answer": 2
         },
         {
+          "q": "¿Qué diferencia hace Chela entre blando y tierno?",
+          "infer": true,
+          "options": [
+            "No hay diferencia",
+            "Los blandos ceden por miedo; los tiernos, porque eligen",
+            "Los tiernos son más débiles"
+          ],
+          "answer": 1
+        },
+        {
           "q": "¿Qué le aconseja a Valentina sobre tener razón?",
           "options": [
-            "Que la use poco, porque es un premio caro",
             "Que siempre la defienda",
+            "Que la use poco, porque es un premio caro",
             "Que la busque en todo"
           ],
-          "answer": 0
+          "answer": 1
         },
         {
           "q": "¿Por qué le agradece al invitado del brindis?",
           "options": [
             "Por bailar con ella",
-            "Por nombrarla y recordarle que todavía estaba",
-            "Por traerle mate"
+            "Por traerle mate",
+            "Por nombrarla y recordarle que todavía estaba"
           ],
-          "answer": 1
+          "answer": 2
         }
       ],
       "open": [
@@ -695,32 +705,34 @@
         {
           "q": "¿A qué huele el cuarto según Lupita?",
           "options": [
+            "A jazmín",
             "A camisa quemada",
-            "A perfume",
-            "A jazmín"
-          ],
-          "answer": 2
-        },
-        {
-          "q": "¿Cómo se enteró Joaquín del gasto del mariachi?",
-          "options": [
-            "Porque en esa familia los secretos no duran",
-            "Porque Lupita se lo contó",
-            "Por un extracto bancario"
+            "A perfume"
           ],
           "answer": 0
         },
         {
-          "q": "¿Qué le pidió Lupita a Joaquín para devolvérselo?",
+          "q": "¿Cómo se enteró Joaquín del gasto del mariachi?",
+          "infer": true,
           "options": [
-            "El dinero",
-            "Un nieto que supiera cantar «El Rey»",
-            "Un viaje"
+            "Porque Lupita se lo contó",
+            "Porque en esa familia los secretos no duran",
+            "Por un extracto bancario"
           ],
           "answer": 1
         },
         {
+          "q": "¿Qué le pidió Lupita a Joaquín para devolvérselo?",
+          "options": [
+            "Un nieto que supiera cantar «El Rey»",
+            "El dinero",
+            "Un viaje"
+          ],
+          "answer": 0
+        },
+        {
           "q": "¿Por qué Lupita no le contó a Ximena lo del embarazo?",
+          "infer": true,
           "options": [
             "Porque no lo sabía",
             "Porque era un secreto para siempre",
@@ -825,6 +837,7 @@
       "choice": [
         {
           "q": "Según Ramiro, ¿cuál es el error de los jefes mediocres?",
+          "infer": true,
           "options": [
             "Castigar a quien cumple instrucciones malas",
             "Pagar poco",
@@ -836,28 +849,29 @@
           "q": "¿Por qué se ha hecho famoso el restaurante?",
           "options": [
             "Por sus platos sofisticados",
-            "Por un postre improvisado",
-            "Por su ubicación"
-          ],
-          "answer": 1
-        },
-        {
-          "q": "Según Yesenia, ¿qué busca la gente?",
-          "options": [
-            "Precios bajos",
-            "Comida tradicional",
-            "Historia, no perfección"
+            "Por su ubicación",
+            "Por un postre improvisado"
           ],
           "answer": 2
         },
         {
+          "q": "Según Yesenia, ¿qué busca la gente?",
+          "infer": true,
+          "options": [
+            "Precios bajos y raciones generosas",
+            "Historia, no perfección",
+            "Comida tradicional"
+          ],
+          "answer": 1
+        },
+        {
           "q": "¿Qué quieren hacer con la tía que reservó?",
           "options": [
-            "Prepararle un postre con un nombre equivocado",
             "No atenderla",
-            "Invitarla gratis"
+            "Invitarla gratis",
+            "Prepararle un postre con un nombre equivocado"
           ],
-          "answer": 0
+          "answer": 2
         }
       ],
       "open": [
@@ -936,34 +950,36 @@
         {
           "q": "¿Cómo fue el asado del argentino según Beto?",
           "options": [
-            "Malísimo",
             "Casi tan bueno como el suyo",
-            "Mejor que el suyo"
+            "Malísimo, de principio a fin",
+            "Mucho mejor que el suyo, sin discusión"
           ],
-          "answer": 1
+          "answer": 0
         },
         {
           "q": "¿Qué dijo el argentino del asado chileno?",
           "options": [
             "Que era el mejor",
-            "Que no le gustó",
-            "Que no era asado, pero lo iba a repetir"
+            "Que no era asado, pero lo iba a repetir",
+            "Que no le gustó"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué le impresionó más a Beto?",
+          "infer": true,
+          "options": [
+            "La casa del argentino",
+            "El vino",
+            "Que la nieta no entendía por qué peleaban"
           ],
           "answer": 2
         },
         {
-          "q": "¿Qué le impresionó más a Beto?",
-          "options": [
-            "Que la nieta no entendía por qué peleaban",
-            "La casa del argentino",
-            "El vino"
-          ],
-          "answer": 0
-        },
-        {
           "q": "¿Con qué compara Beto las rivalidades?",
+          "infer": true,
           "options": [
-            "Con el fútbol",
+            "Con el fútbol y sus rivalidades",
             "Con los idiomas",
             "Con el fuego"
           ],
@@ -1074,39 +1090,41 @@
       "choice": [
         {
           "q": "¿Cómo ve la familia la reconciliación de Gloria y Pepe?",
+          "infer": true,
           "options": [
+            "Como un milagro",
             "Como una broma",
-            "Como algo normal",
-            "Como un milagro"
-          ],
-          "answer": 2
-        },
-        {
-          "q": "¿Cómo es ahora su relación?",
-          "options": [
-            "Cada uno en su casa, cenan los jueves",
-            "Viven juntos otra vez",
-            "Se casaron de nuevo"
+            "Como algo normal"
           ],
           "answer": 0
         },
         {
+          "q": "¿Cómo es ahora su relación?",
+          "options": [
+            "Viven juntos otra vez, como antes de separarse",
+            "Se casaron de nuevo",
+            "Cada uno en su casa, cenan los jueves"
+          ],
+          "answer": 2
+        },
+        {
           "q": "¿Qué confesó la hermana de Gloria?",
           "options": [
-            "Que mandó la torta",
             "Que hizo el plano a propósito",
+            "Que mandó la torta desde Buenos Aires sin avisar",
             "Que robó los anillos"
           ],
-          "answer": 1
+          "answer": 0
         },
         {
           "q": "¿Cuál fue la \"venganza\" de Gloria?",
+          "infer": true,
           "options": [
             "No perdonarla nunca",
-            "Quedarse con los alfajores",
-            "Ser feliz donde su hermana quería verla sufrir"
+            "Ser feliz donde su hermana quería verla sufrir",
+            "Quedarse con los alfajores"
           ],
-          "answer": 2
+          "answer": 1
         }
       ],
       "open": [
@@ -1210,35 +1228,37 @@
         {
           "q": "¿Qué color lleva Renata esta vez?",
           "options": [
-            "Verde",
-            "Rojo",
-            "Azul"
-          ],
-          "answer": 0
-        },
-        {
-          "q": "¿Por qué le escribió Valentina?",
-          "options": [
-            "Para pedirle perdón",
-            "Para devolverle la caja de cartas",
-            "Para invitarla a su casa"
-          ],
-          "answer": 1
-        },
-        {
-          "q": "¿Qué hicieron con las cartas?",
-          "options": [
-            "Las leyeron juntas",
-            "Se las dieron a Joaquín",
-            "Las quemaron en una parrilla"
+            "Rojo intenso",
+            "Azul",
+            "Verde"
           ],
           "answer": 2
         },
         {
+          "q": "¿Por qué le escribió Valentina?",
+          "infer": true,
+          "options": [
+            "Para devolverle la caja de cartas",
+            "Para pedirle perdón por lo que dijo en la boda",
+            "Para invitarla a su casa"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué hicieron con las cartas?",
+          "options": [
+            "Las leyeron juntas en voz alta, una por una",
+            "Las quemaron en una parrilla",
+            "Se las dieron a Joaquín"
+          ],
+          "answer": 1
+        },
+        {
           "q": "¿Qué condición puso Renata para casarse con Facundo?",
+          "infer": true,
           "options": [
             "Que el padrino no desaparezca",
-            "Que la boda sea en otro lugar",
+            "Que la boda se celebre en otro lugar, lejos del campo",
             "Que no haya música"
           ],
           "answer": 0
@@ -1319,8 +1339,9 @@
       "choice": [
         {
           "q": "¿Qué pensaba Mariela antes sobre la profesionalidad?",
+          "infer": true,
           "options": [
-            "Que era trabajar más horas",
+            "Que era trabajar más horas que nadie en la empresa",
             "Que consistía en que nadie notara nada",
             "Que era tener éxito"
           ],
@@ -1328,6 +1349,7 @@
         },
         {
           "q": "¿Qué descubrió en terapia?",
+          "infer": true,
           "options": [
             "Que debía cambiar de trabajo",
             "Que no le gustaban las bodas",
@@ -1339,7 +1361,7 @@
           "q": "¿Cuál es una de las nuevas reglas?",
           "options": [
             "Comer juntos al final de cada evento",
-            "Trabajar más rápido",
+            "Trabajar más rápido para irse antes a casa",
             "No hablar con los invitados"
           ],
           "answer": 0
@@ -1347,7 +1369,7 @@
         {
           "q": "¿Qué promete Mariela a su equipo?",
           "options": [
-            "Que no habrá desastres",
+            "Que no habrá desastres si todo se planifica bien",
             "Que no vivirán los desastres solos",
             "Que ganarán más dinero"
           ],
@@ -1456,30 +1478,32 @@
         },
         {
           "q": "¿Sobre qué discutieron seis meses?",
+          "infer": true,
           "options": [
-            "Sobre la posición de la trompeta y el violín",
             "Sobre el dinero",
+            "Sobre la posición de la trompeta y el violín",
             "Sobre el nombre del disco"
-          ],
-          "answer": 0
-        },
-        {
-          "q": "Según Yamilé, ¿en qué consiste la fusión?",
-          "options": [
-            "En mezclarlo todo",
-            "En que cada uno conserve su voz y deje espacio al otro",
-            "En que uno mande"
           ],
           "answer": 1
         },
         {
-          "q": "¿A quién está dedicada la primera canción?",
+          "q": "Según Yamilé, ¿en qué consiste la fusión?",
+          "infer": true,
           "options": [
-            "A los novios",
-            "A Mariela",
-            "A Doña Chela"
+            "En mezclarlo todo",
+            "En que uno mande",
+            "En que cada uno conserve su voz y deje espacio al otro"
           ],
           "answer": 2
+        },
+        {
+          "q": "¿A quién está dedicada la primera canción?",
+          "options": [
+            "A Doña Chela",
+            "A los novios y a sus padres",
+            "A Mariela"
+          ],
+          "answer": 0
         }
       ],
       "open": [
@@ -1558,16 +1582,17 @@
         {
           "q": "¿Cómo se enteró Valentina de la venta del auto?",
           "options": [
-            "Su tío se lo contó en Navidad",
-            "Lo descubrió en unos papeles",
-            "Se lo dijo su padre"
+            "Lo descubrió en unos papeles guardados en el desván",
+            "Se lo dijo su padre",
+            "Su tío se lo contó en Navidad"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "q": "¿Qué dijo Valentina al enterarse?",
+          "infer": true,
           "options": [
-            "Que estaba orgullosa",
+            "Que estaba orgullosa de cada detalle de la fiesta",
             "Que habría preferido una boda sencilla",
             "Que quería otra fiesta"
           ],
@@ -1576,20 +1601,21 @@
         {
           "q": "¿Qué le regalaron a Horacio para su cumpleaños?",
           "options": [
-            "El mismo auto",
-            "Un viaje",
-            "Un auto viejo"
+            "Un auto viejo",
+            "El mismo auto de la boda",
+            "Un viaje"
           ],
-          "answer": 2
+          "answer": 0
         },
         {
           "q": "Según Horacio, ¿cuál es la gracia entre un padre y una hija?",
+          "infer": true,
           "options": [
+            "Que todo se devuelve tarde o temprano",
             "Que nunca se está a mano",
-            "Que todo se devuelve",
             "Que no hay secretos"
           ],
-          "answer": 0
+          "answer": 1
         }
       ],
       "open": [
@@ -1693,16 +1719,16 @@
         {
           "q": "¿Qué preguntan ahora las tías a Ximena?",
           "options": [
-            "Cuándo se casa",
             "Cuándo se va a vivir a Lisboa",
+            "Cuándo piensa casarse y con quién",
             "Si tiene novio"
           ],
-          "answer": 1
+          "answer": 0
         },
         {
           "q": "¿Qué trabajo le ofrecieron?",
           "options": [
-            "Un puesto en una universidad",
+            "Una cátedra en una universidad de Coímbra",
             "Un bar en Lisboa",
             "Un puesto en un tribunal internacional"
           ],
@@ -1710,21 +1736,23 @@
         },
         {
           "q": "Según Ximena, ¿qué inquieta realmente a su familia?",
+          "infer": true,
           "options": [
+            "Su soltería prolongada",
             "Su libertad",
-            "Su soltería",
             "Su trabajo"
           ],
-          "answer": 0
+          "answer": 1
         },
         {
           "q": "¿Qué le confesó la tía Concha a Edgardo?",
+          "infer": true,
           "options": [
-            "Que quiere casarla",
             "Que envidia a Ximena",
+            "Que quiere casarla con alguien de su entorno",
             "Que se va a mudar"
           ],
-          "answer": 1
+          "answer": 0
         }
       ],
       "open": [
@@ -1802,6 +1830,7 @@
       "choice": [
         {
           "q": "¿Por qué se despide Ceferino de Lucero?",
+          "infer": true,
           "options": [
             "Porque vende el caballo",
             "Porque se muda de país",
@@ -1812,29 +1841,30 @@
         {
           "q": "¿Quién va a cuidar a Lucero?",
           "options": [
+            "Los novios, que lo pidieron expresamente",
             "La doctora Julieta",
-            "Los novios",
             "Mariela"
-          ],
-          "answer": 0
-        },
-        {
-          "q": "¿Qué pasó realmente la noche de la boda según Ceferino?",
-          "options": [
-            "Él calmó a Lucero",
-            "Lucero lo calmó a él",
-            "Ninguno se calmó"
           ],
           "answer": 1
         },
         {
-          "q": "¿Qué decía la abuela de Ceferino sobre los animales?",
+          "q": "¿Qué pasó realmente la noche de la boda según Ceferino?",
+          "infer": true,
           "options": [
-            "Que hay que domarlos",
-            "Que son peligrosos",
-            "Que no nos pertenecen, solo nos acompañan un tramo"
+            "Él calmó a Lucero con una canción",
+            "Ninguno se calmó",
+            "Lucero lo calmó a él"
           ],
           "answer": 2
+        },
+        {
+          "q": "¿Qué decía la abuela de Ceferino sobre los animales?",
+          "options": [
+            "Que no nos pertenecen, solo nos acompañan un tramo",
+            "Que hay que domarlos",
+            "Que son peligrosos"
+          ],
+          "answer": 0
         }
       ],
       "open": [
@@ -1913,16 +1943,17 @@
         {
           "q": "¿Qué hay en la primera página del álbum?",
           "options": [
-            "Una página en blanco con una frase",
             "La foto de la ceremonia",
-            "Una foto hecha con inteligencia artificial"
+            "Una foto hecha con inteligencia artificial",
+            "Una página en blanco con una frase"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "q": "¿Por qué ha cambiado el significado de la foto de familia?",
+          "infer": true,
           "options": [
-            "Porque está movida",
+            "Porque está movida y nadie sale bien en ella",
             "Porque Doña Chela ya no está",
             "Porque hay un perro"
           ],
@@ -1931,20 +1962,21 @@
         {
           "q": "¿Qué decidieron Gloria y Pepe sobre su foto?",
           "options": [
+            "Que existiera, pero sellada, para los nietos",
             "Que se borrara",
-            "Que se publicara",
-            "Que existiera, pero sellada, para los nietos"
+            "Que se publicara"
           ],
-          "answer": 2
+          "answer": 0
         },
         {
           "q": "Según Gonzalo, ¿cuál es su oficio realmente?",
+          "infer": true,
           "options": [
+            "Fijar la realidad tal como fue, sin adornos",
             "Administrar la memoria",
-            "Fijar la realidad",
             "Hacer fotos bonitas"
           ],
-          "answer": 0
+          "answer": 1
         }
       ],
       "open": [
@@ -2023,32 +2055,34 @@
         {
           "q": "¿Qué le pidieron Joaquín y Valentina a Facundo?",
           "options": [
-            "Que organizara la fiesta",
-            "Que fuera el padrino de su hijo",
-            "Que diera otro brindis"
-          ],
-          "answer": 1
-        },
-        {
-          "q": "¿Cómo fue la boda de Facundo y Renata?",
-          "options": [
-            "Grande, en la estancia",
-            "En la capilla",
-            "Pequeña, en el registro civil, con empanadas"
+            "Que organizara la fiesta del primer aniversario",
+            "Que diera otro brindis",
+            "Que fuera el padrino de su hijo"
           ],
           "answer": 2
         },
         {
-          "q": "¿Con qué compara Facundo el duelo ahora?",
+          "q": "¿Cómo fue la boda de Facundo y Renata?",
           "options": [
-            "Con una habitación de la casa",
-            "Con un pasillo",
-            "Con una tormenta"
+            "Pequeña, en el registro civil, con empanadas",
+            "Grande, en la estancia",
+            "En la capilla"
           ],
           "answer": 0
         },
         {
+          "q": "¿Con qué compara Facundo el duelo ahora?",
+          "infer": true,
+          "options": [
+            "Con un pasillo largo y sin ventanas",
+            "Con una tormenta de verano",
+            "Con una habitación de la casa"
+          ],
+          "answer": 2
+        },
+        {
           "q": "¿Cómo describió el amigo lo que hizo con el discurso?",
+          "infer": true,
           "options": [
             "Escribió un discurso nuevo",
             "Llevó las palabras como un vaso de agua sin derramarlo",
@@ -2147,23 +2181,25 @@
         {
           "q": "¿Qué quieren hacer los novios este año?",
           "options": [
-            "Repetir la boda",
-            "Despedirse de todos",
-            "Devolver el gesto del brindis"
-          ],
-          "answer": 2
-        },
-        {
-          "q": "¿Qué cambios hubo en el año, según Valentina?",
-          "options": [
-            "Despedidas y llegadas",
-            "Solo despedidas",
-            "Nada importante"
+            "Devolver el gesto del brindis",
+            "Repetir la boda con todos los invitados de entonces",
+            "Despedirse de todos"
           ],
           "answer": 0
         },
         {
+          "q": "¿Qué cambios hubo en el año, según Valentina?",
+          "infer": true,
+          "options": [
+            "Solo despedidas, ninguna llegada",
+            "Nada importante",
+            "Despedidas y llegadas"
+          ],
+          "answer": 2
+        },
+        {
           "q": "Según Joaquín, ¿cómo se define una familia?",
+          "infer": true,
           "options": [
             "Por la sangre",
             "Por quién se queda cuando todo sale mal",
@@ -2174,11 +2210,11 @@
         {
           "q": "¿Dónde está sentado esta vez el invitado del plan B?",
           "options": [
-            "En la barra",
-            "Al fondo de la carpa",
-            "En la mesa uno, primera fila"
+            "En la mesa uno, primera fila",
+            "En la barra, junto a los camareros de siempre",
+            "Al fondo de la carpa"
           ],
-          "answer": 2
+          "answer": 0
         }
       ],
       "open": [
