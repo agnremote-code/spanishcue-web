@@ -792,7 +792,8 @@ export default function Library({
     "Biblioteca",
   );
   const [level, setLevel] = useState("Todos");
-  const [category, setCategory] = useState<"Todas" | Category>("Todas");
+  // The home opens on the Gramática route (Ale, 2026-11-04); visitors can still switch to Conversación.
+  const [category, setCategory] = useState<"Todas" | Category>("Gramática");
   const [conversationMode, setConversationMode] = useState<"all" | "worlds" | "play" | "boards" | "countries" | "worlds3d" | "countries3d" | "classic">("all");
   const [grammarTopic, setGrammarTopic] = useState("all");
   const [query, setQuery] = useState("");
@@ -1008,7 +1009,7 @@ export default function Library({
   const openView = (nextView: "Biblioteca" | "Plan" | "Favoritas") => {
     setView(nextView);
     setLevel("Todos");
-    setCategory("Todas");
+    setCategory("Gramática");
     setConversationMode("all");
     setGrammarTopic("all");
     setQuery("");
@@ -1956,7 +1957,7 @@ export default function Library({
           view === "Plan" ? plannedLessons : visibleLessons,
           view === "Plan",
         )}
-        {view === "Biblioteca" && !fullAccess && category === "Todas" && level === "Todos" && !catalogSearchActive && (
+        {view === "Biblioteca" && !fullAccess && category === "Gramática" && level === "Todos" && !catalogSearchActive && (
           <ProductPreview lessons={lessons} />
         )}
         {view === "Biblioteca" && !fullAccess && (
