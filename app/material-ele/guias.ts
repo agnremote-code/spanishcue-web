@@ -739,6 +739,140 @@ export const guiaPages: GuiaPage[] = [
     ],
     related: ["primera-clase-de-espanol", "preguntas-de-conversacion", "juegos-para-clase-de-espanol", "comprension-auditiva", "a1", "b1"],
   },
+  {
+    slug: "recursos-ele-gratis",
+    path: `${GUIAS_PATH}/recursos-ele-gratis`,
+    title: "Recursos ELE gratis: clases, fichas, ejercicios y audios por nivel",
+    description:
+      "Recursos ELE gratis y sin registro, ordenados por tipo y por nivel: clases completas, fichas, ejercicios con soluciones, preguntas de conversación y audios.",
+    h1: "Recursos ELE gratis: qué hay, dónde está y cómo usarlo en clase",
+    kicker: "Guía para profesores de ELE",
+    intro:
+      "Buscar recursos ELE gratis suele terminar en veinte pestañas abiertas y ninguna clase lista. Esta guía es un mapa: qué recursos gratuitos hay en Material ELE de SpanishCue, dónde está cada uno, para qué nivel sirve y cómo combinarlos para tener una clase completa sin pagar nada. Todo lo que aparece aquí se abre sin registro.",
+    keywords: ["recursos ELE gratis", "material ELE gratis", "recursos para profesores de español gratis", "fichas ELE gratis", "clases de español gratis para profesores", "recursos de español para extranjeros"],
+    published: "2026-11-04",
+    lessonIds: [239, 332, 374, 390, 461, 28],
+    sections: [
+      {
+        id: "mapa",
+        title: "El mapa: seis tipos de recursos ELE gratis",
+        blocks: [
+          { type: "p", text: "Un profesor de ELE necesita, casi siempre, las mismas seis cosas: una **clase completa** para cuando no hay tiempo de preparar, **fichas** para una actividad suelta, **ejercicios con soluciones** para practicar una forma, **preguntas de conversación** para hacer hablar, **audios** para entrenar el oído y **guías** para pensar la clase. Material ELE tiene las seis gratis, organizadas por nivel y por tema." },
+          { type: "ol", items: [
+            `**Clases completas gratis**: ${free} clases interactivas, entre ellas tres de gramática en cada nivel de A1 a C2 y la Clase inicial.`,
+            `**Fichas de actividades**: ${activities} fichas con consigna, pasos y respuesta modelo, en el [banco de actividades](/material-ele/actividades).`,
+            `**Ejercicios con soluciones**: ${exercises} ejercicios por nivel y por tema, cada frase con su solución.`,
+            `**Preguntas de conversación**: ${questions} preguntas ordenadas de A1 a C2.`,
+            "**Audios y comprensión auditiva**: mensajes de voz con preguntas y una clase de escucha gratis.",
+            "**Guías largas**: cómo preparar, dar y corregir una clase, con ejemplos por nivel.",
+          ] },
+          { type: "p", text: "Si quieres verlo todo en una sola lista, el [índice de Material ELE](/material-ele/indice) enumera cada página; si prefieres navegar por categoría, empieza por [gramática](/material-ele/gramatica), [vocabulario](/material-ele/vocabulario), [funciones](/material-ele/funciones), [cultura](/material-ele/cultura) o [formatos](/material-ele/formatos)." },
+        ],
+      },
+      {
+        id: "clases-gratis",
+        title: "Clases completas gratis, nivel por nivel",
+        blocks: [
+          { type: "p", text: "Una clase completa es el recurso que más tiempo ahorra: trae explicación, práctica, audio, conversación y escritura en una secuencia de unos 45 minutos, con un modo profesor que oculta las respuestas en la pantalla del alumno. Estas son las de gramática que se abren gratis:" },
+        ],
+        subsections: [
+          {
+            title: "A1 y A2",
+            blocks: [
+              { type: "ul", items: [
+                "A1: la [Clase inicial](/gramatica/clase-inicial) para la primera hora, [sustantivos](/la-fabrica-de-los-nombres), [adjetivos y concordancia](/el-atelier-de-la-concordancia) y [gustar y encantar](/gramatica/gustar-y-encantar).",
+                "A2: [indefinido e imperfecto](/gramatica/indefinido-e-imperfecto), el imperativo afirmativo y [por y para](/gramatica/por-y-para-motivo-y-destino).",
+              ] },
+            ],
+          },
+          {
+            title: "B1 y B2",
+            blocks: [
+              { type: "ul", items: [
+                "B1: [deseos con «querer que» y «ojalá»](/gramatica/deseos-querer-que-esperar-que-ojala), [recomendaciones](/gramatica/recomendaciones-sugerir-que-aconsejar-que) y [condiciones reales con si](/gramatica/condiciones-reales-si-presente-y-futuro).",
+                "B2: [como si](/gramatica/como-si-imperfecto-pluscuamperfecto-subjuntivo), [temporales con subjuntivo](/gramatica/temporales-con-subjuntivo-para-futuro-incierto) y [futuro y condicional de probabilidad](/gramatica/futuro-y-condicional-de-probabilidad).",
+              ] },
+            ],
+          },
+          {
+            title: "C1 y C2",
+            blocks: [
+              { type: "ul", items: [
+                "C1: [alternancia de indicativo y subjuntivo](/gramatica/alternancia-de-indicativo-y-subjuntivo-segun), [queísmo y dequeísmo](/gramatica/queismo-y-dequeismo-regimen-y-norma) y [pronombres átonos](/gramatica/pronombres-atonos-leismo-laismo-loismo-y).",
+                "C2: [selección fina de indicativo y subjuntivo](/gramatica/seleccion-fina-de-indicativo-y-subjuntivo), una clase de registro y tratamiento, e [ironía, litotes y negación pragmática](/gramatica/ironia-litotes-y-negacion-pragmatica).",
+              ] },
+              { type: "p", text: "Todas siguen el mismo formato de siete pasos, descrito en [clases de gramática en vivo](/material-ele/formatos/clases-de-gramatica-en-vivo). Probar una del nivel de tu alumno es la forma más rápida de saber si el formato te sirve." },
+            ],
+          },
+        ],
+      },
+      {
+        id: "fichas-ejercicios",
+        title: "Fichas y ejercicios gratis para una actividad suelta",
+        blocks: [
+          { type: "p", text: "Cuando ya tienes la clase y te falta una pieza, lo que necesitas es una ficha o un ejercicio. El [banco de actividades](/material-ele/actividades) tiene las dos cosas separadas por nivel." },
+          { type: "ul", items: [
+            "**Fichas de actividades**: cada una con objetivo, consigna, pasos y respuesta modelo. Se imprimen con el botón de PDF o se proyectan en pantalla compartida. La guía [fichas ELE para imprimir y proyectar](/material-ele/guia/fichas-ele-para-imprimir-y-proyectar) explica cuándo conviene cada formato.",
+            "**Ejercicios con soluciones**: entre seis y diez frases sobre un solo punto, con la solución oculta hasta que el alumno la abre. Hay uno por nivel, como el de [ser, estar o hay en A1](/material-ele/ejercicio/a1), y uno por tema, como [ser y estar](/material-ele/ejercicio/ser-y-estar). La guía [ejercicios ELE con soluciones](/material-ele/guia/ejercicios-ele-con-soluciones) los lista todos con tres formas de corregirlos.",
+          ] },
+          { type: "p", text: "Cada tema de gramática tiene además su propia página con explicación, actividades y la clase recomendada: por ejemplo [ser y estar](/material-ele/ser-y-estar), [subjuntivo](/material-ele/subjuntivo) o [por y para](/material-ele/por-y-para)." },
+        ],
+      },
+      {
+        id: "conversacion",
+        title: "Recursos gratis para hacer hablar al alumno",
+        blocks: [
+          { type: "p", text: "La conversación es la parte de la clase que más improvisamos y la que más se nota cuando falla. Tres recursos gratuitos para que no dependa de la inspiración del día:" },
+          { type: "ol", items: [
+            "**Preguntas de conversación por nivel.** Preguntas personales y de actualidad, de [A1](/material-ele/preguntas/a1) a [C2](/material-ele/preguntas/c2), que obligan a usar la gramática del nivel. Todas juntas en [preguntas de conversación](/material-ele/preguntas-de-conversacion).",
+            "**Juegos de conversación.** Dinámicas con un motivo para hablar, explicadas en [juegos para la clase de español](/material-ele/juegos-para-clase-de-espanol) y en la guía [actividades de conversación para adultos](/material-ele/guia/actividades-de-conversacion-en-espanol-para-adultos).",
+            "**Escenarios para recorrer.** La [demo gratis de Noche abierta](/demo/noche-abierta) es una ciudad 3D donde el alumno camina hasta cada local y conversa según su nivel; la clase de [Estados Unidos](/estados-unidos-a2-b1) también es gratis.",
+          ] },
+        ],
+      },
+      {
+        id: "audio",
+        title: "Audios y comprensión auditiva gratis",
+        blocks: [
+          { type: "p", text: "El audio es el recurso más difícil de encontrar gratis con calidad y con preguntas preparadas. En Material ELE hay dos entradas:" },
+          { type: "ul", items: [
+            "**Clase de escucha gratis**: [Latinoamérica al Oído](/latinoamerica-al-oido), una clase de escucha gratis con acentos de distintos países, pensada para A2.",
+            "**Ejercicio de comprensión auditiva**: el [ejercicio de escucha](/material-ele/ejercicio/comprension-auditiva) es un mensaje de voz con seis preguntas y sus soluciones, más la página del tema [comprensión auditiva](/material-ele/comprension-auditiva) con actividades por nivel.",
+          ] },
+          { type: "p", text: "Las clases de gramática gratis también traen su propio audio en el paso «Escuchar», así que cada una sirve como recurso de escucha para su tema." },
+        ],
+      },
+      {
+        id: "combinar",
+        title: "Cómo armar una clase completa solo con recursos gratis",
+        blocks: [
+          { type: "p", text: "Con lo anterior se puede dar una clase de 45 minutos sin pagar nada. Un ejemplo para B1, sobre recomendaciones:" },
+          { type: "ol", items: [
+            "**Entrada (5 minutos):** dos [preguntas de conversación B1](/material-ele/preguntas/b1) sobre un problema real del alumno.",
+            "**Clase (30 minutos):** la clase gratis de [recomendaciones](/gramatica/recomendaciones-sugerir-que-aconsejar-que), en pantalla compartida y con el modo profesor.",
+            "**Práctica extra (5 minutos):** el [ejercicio de subjuntivo](/material-ele/ejercicio/subjuntivo) con corrección en voz alta.",
+            "**Cierre (5 minutos):** el alumno escribe en el chat tres consejos para un amigo que se muda a otro país.",
+          ] },
+          { type: "p", text: "La misma estructura funciona en cualquier nivel cambiando la clase y las preguntas. Si quieres el paso a paso para prepararla en poco tiempo, está en [cómo preparar una clase de español en 10 minutos](/material-ele/guia/preparar-una-clase-de-espanol-rapido); si la clase es por videollamada, en [cómo dar clases de español online](/material-ele/guia/como-dar-clases-de-espanol-online)." },
+        ],
+      },
+      {
+        id: "gratis-y-pro",
+        title: "Qué es gratis y qué no",
+        blocks: [
+          { type: "p", text: "Para que no haya sorpresas: son gratis y sin registro todas las fichas, todos los ejercicios, todas las preguntas, las guías, las tres clases de gramática por nivel, la Clase inicial y las clases y demos marcadas como gratis. El resto de las clases interactivas, incluidos la mayoría de los mundos 3D y el resto de la gramática, son de la suscripción de SpanishCue, cuyos detalles están en [precios](/pricing)." },
+          { type: "p", text: "Si estás comparando sitios de material ELE, la guía [materiales para enseñar español](/material-ele/guia/materiales-para-ensenar-espanol) repasa los principales y qué ofrece gratis cada uno." },
+        ],
+      },
+    ],
+    faq: [
+      { question: "¿Dónde encuentro recursos ELE gratis?", answer: `En Material ELE de SpanishCue hay ${activities} fichas, ${exercises} ejercicios con soluciones, ${questions} preguntas de conversación, guías y ${free} clases interactivas gratis, todo sin registro y ordenado por nivel y tema.` },
+      { question: "¿Hay clases de español completas gratis para profesores?", answer: "Sí. Tres clases de gramática por nivel, de A1 a C2, y la Clase inicial se abren gratis, con explicación, práctica, audio, conversación y escritura, y un modo profesor que oculta las respuestas." },
+      { question: "¿Los recursos gratis se pueden imprimir?", answer: "Las fichas y los ejercicios tienen un botón para descargarlos en PDF. Las clases interactivas están pensadas para proyectar o compartir en pantalla." },
+      { question: "¿Necesito registrarme para usar los recursos?", answer: "No. Todos los recursos gratis de Material ELE se abren sin cuenta. La cuenta solo hace falta para la suscripción y para guardar el progreso de tus alumnos." },
+    ],
+    related: ["preguntas-de-conversacion", "ser-y-estar", "subjuntivo", "comprension-auditiva", "a1", "b1"],
+  },
 ];
 
 export const guiaBySlug = new Map(guiaPages.map((page) => [page.slug, page]));
