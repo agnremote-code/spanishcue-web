@@ -2,7 +2,7 @@
 
 - Scheduled cloud run, branch `claude/board-wed-3d-20261104`. Subscription usage: **UNKNOWN**.
 - **Board convened proportionately, as a subagent of the facilitator.** The facilitator built the repair. A fresh agent acting as **Alejandro** did the independent code review and the delta review. **Sofia and Martin were not convened**: no content changed, and the code reviewer had to be someone other than the author. No executive messaged another; every exchange was facilitator → Alejandro → facilitator.
-- Times are UTC on 2026-11-04. Exact send times were not recorded. Message 1 was sent at about 02:00Z; messages 2–5 came between then and about 02:40Z (the facilitator read the clock at 02:25:11Z, between messages 2 and 3).
+- Times are UTC on 2026-11-04. Exact send times were not recorded. Message 1 was sent at about 02:00Z; messages 2–5 came between then and about 02:28Z, and messages 6–7 after the 02:56Z production smoke (the facilitator read the clock at 02:25:11Z, between messages 2 and 3).
 - The messages are reproduced verbatim below. The facilitator's local scratchpad paths are kept as sent.
 
 ## 1. Facilitator → Alejandro (code review request)
@@ -85,6 +85,24 @@
 >
 > So it can be re-added once #360 lands.
 
+## 6. Facilitator → Alejandro (records review request, after the release)
+
+> Records review request: branch claude/board-wed-3d-records-20261104 (commit on top of main e91e2c72), docs only: `git diff origin/main..origin/claude/board-wed-3d-records-20261104`. Please check every SHA, run id, job id and claim in it against git and the Actions API (`gh api repos/agnremote-code/spanishcue-web/actions/runs/<id>` and `.../actions/jobs/126356428367/logs`, grep for "passed"). Read-only; do not modify or push. Reply APPROVE or REQUEST CHANGES with exact corrections, under 150 words.
+
+## 7. Alejandro → Facilitator (records review)
+
+> **APPROVE.** I found nothing to correct in commit 1065d781 on `claude/board-wed-3d-records-20261104`. I checked it read-only against git and the REST API.
+>
+> - **PR and SHA:** PR #365 is merged as `e91e2c7240614017a606226ef066ffcdecddd5e6`. That is the current origin/main.
+> - **CI + Auto Merge run 41760989986:** success, on the PR head `c4a7316a`.
+> - **Deploy Staging run 41763193244:** success, on `e91e2c72`.
+> - **Deploy Production run 41763514434:** "Deploy Production (Cloudflare, owner-authorized)", success, on `e91e2c72`. It is the latest production run, so "main = production = `e91e2c72`" holds.
+> - **Job 126356428367:** belongs to run 41763514434 and completed at 02:56:07Z. Its log has `"passed": true` with `"origin": "https://spanishcue.com"` (log line 2727–2728). The "Production smoke" step succeeded. "Roll back after failed smoke" and "Manual production rollback" were both skipped.
+> - **Other claims:** the LQG file path exists. The two APPROVE verdicts, the withdrawn smoke row and the limitations all match my reviews.
+>
+> **Optional:** PUBLISHED.md could note that the CI run is on the PR head (`c4a7316a`) rather than `e91e2c72`.
+
 ## Facilitator's resolution (not a message)
 - The three doc notes from message 5 were applied to the LQG file in the commit that adds this transcript.
+- The optional note from message 7 was applied to PUBLISHED.md in the records PR.
 - The withdrawn smoke row is a follow-up for after #360 merges or closes (STATUS.md next action).

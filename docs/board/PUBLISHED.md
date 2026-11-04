@@ -36,7 +36,7 @@ Entry format:
 ## 2026-11-04 — «El bosque de los hongos gigantes»: the 3D world frees the GPU on unmount (repair)
 - URL(s): https://spanishcue.com/bosque-de-los-hongos-gigantes (PRO; anonymous users → /acceso).
 - Level(s) / objectives: unchanged. No lesson content changed.
-- PR / merged SHA / production deploy run: PR #365 → `e91e2c7240614017a606226ef066ffcdecddd5e6`; CI + Auto Merge 41760989986, Deploy Staging 41763193244, Deploy Production 41763514434, all successful.
+- PR / merged SHA / production deploy run: PR #365 → `e91e2c7240614017a606226ef066ffcdecddd5e6`; CI + Auto Merge 41760989986 (on PR head `c4a7316a`), Deploy Staging 41763193244, Deploy Production 41763514434, all successful.
 - Production smoke evidence: the production workflow's smoke against https://spanishcue.com (job 126356428367, 2026-11-04T02:56Z) returned `"passed": true`, and the rollback was skipped. This repair has no anonymous surface: the smoke shows that the release is healthy, not the unmount behaviour itself. The evidence for the fix is the SwiftShader count and the regression test (LQG file).
 - Concept file / LQG review file: `docs/audits/bosque-de-los-hongos-gigantes-repair-gpu-20261104.md`.
 - Built by / reviewed by: facilitator / Alejandro (code review APPROVE, delta APPROVE).
