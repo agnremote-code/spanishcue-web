@@ -17,15 +17,6 @@ Entry format:
 
 ## Pending verification
 
-## 2026-11-04 — «El bosque de los hongos gigantes»: the 3D world frees the GPU on unmount (repair)
-- URL(s): https://spanishcue.com/bosque-de-los-hongos-gigantes (PRO; anonymous users → /acceso).
-- Level(s) / objectives: unchanged. No lesson content changed.
-- PR / merged SHA / production deploy run: branch `claude/board-wed-3d-20261104`; merge and runs to be recorded after the release.
-- Production smoke evidence: pending.
-- Concept file / LQG review file: `docs/audits/bosque-de-los-hongos-gigantes-repair-gpu-20261104.md`.
-- Built by / reviewed by: facilitator / Alejandro (code review APPROVE, delta APPROVE).
-- Known limitations: SwiftShader counts only, no real-device memory check. The production smoke does not assert this world yet (row withdrawn because of #360's overlap).
-
 ## 2026-11-03 — Material ELE: template Spanish, activity levels, video sitemap, grammar topic relevance (SEO/page)
 - URL(s):
   - every `https://spanishcue.com/material-ele/<grupo>/<tema>` and `…/<nivel>` page;
@@ -41,6 +32,15 @@ Entry format:
 - Known limitations: the generated `/material-ele` families still fail the Indexable Teacher Page standard (§3.2), and a board decision is pending. SEO defects 4 (lesson 26 A1 link) and 5 (long resource titles) are open.
 
 ## Published
+
+## 2026-11-04 — «El bosque de los hongos gigantes»: the 3D world frees the GPU on unmount (repair)
+- URL(s): https://spanishcue.com/bosque-de-los-hongos-gigantes (PRO; anonymous users → /acceso).
+- Level(s) / objectives: unchanged. No lesson content changed.
+- PR / merged SHA / production deploy run: PR #365 → `e91e2c7240614017a606226ef066ffcdecddd5e6`; CI + Auto Merge 41760989986 (on PR head `c4a7316a`), Deploy Staging 41763193244, Deploy Production 41763514434, all successful.
+- Production smoke evidence: the production workflow's smoke against https://spanishcue.com (job 126356428367, 2026-11-04T02:56Z) returned `"passed": true`, and the rollback was skipped. This repair has no anonymous surface: the smoke shows that the release is healthy, not the unmount behaviour itself. The evidence for the fix is the SwiftShader count and the regression test (LQG file).
+- Concept file / LQG review file: `docs/audits/bosque-de-los-hongos-gigantes-repair-gpu-20261104.md`.
+- Built by / reviewed by: facilitator / Alejandro (code review APPROVE, delta APPROVE).
+- Known limitations: SwiftShader counts only, no real-device memory check. The production smoke does not assert this world yet (row withdrawn because of #360's overlap).
 
 ## 2026-10-30 — «Hospital San Casi Vivo»: the 3D world frees the GPU on unmount (repair)
 - URL(s): https://spanishcue.com/hospital-san-casi-vivo (PRO; anonymous users → /acceso).
