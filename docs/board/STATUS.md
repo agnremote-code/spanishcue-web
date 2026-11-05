@@ -105,9 +105,19 @@ All five run on `claude-opus-5-5`, follow [ROUTINES.md](ROUTINES.md), and each i
     - **Draft #360** (`claude/price-19-90`, «US$199/year») looks superseded by merged #370 (US$150/year). That is a HYPOTHESIS: its author should close or rebase it.
     - **`paddle_api_403`:** still reported by `/api/billing/paddle/webhook-status`. The route's own comment attributes it to the API key lacking notification-settings read permission. Webhooks are arriving: `lastEventAt` 1793797447 is about 11-04 13:04Z. Changing the key's permissions is an owner action in Paddle.
     - **Referrals (HYPOTHESIS, low):** reward application is limited to `PADDLE_MONTHLY_PRICE_ID` (the new US$19.90 price), so referrers on a legacy monthly price never get their free month applied. This needs a product decision.
-  - **Checks:** see the PR body. `npm test` is the full suite.
+  - **Checks (local, at `d6f8538c`):**
+    - `npm test`: exit 0, 1,571 pass, 0 fail, run with `SPANISHCUE_TEST_WORKER_TIMEOUT_MS=180000`. The shallow clone first needed the 13 pinned baseline commits fetched with `git fetch --depth=1 origin <sha>`.
+    - `validate:artifact`: OK.
+    - `tsc`: only the 3 errors already on main.
+    - eslint on the changed files: clean.
+    - `git diff --check`: clean.
+  - **Release (VERIFIED):** #387 merged as `8dff4873`.
+    - CI + Auto Merge [41955257120](https://github.com/agnremote-code/spanishcue-web/actions/runs/41955257120). The first `merge` attempt failed outside this diff: in `tests/clasicas-routes.test.mjs`, a `fetch` to the local wrangler dev Worker hung for 300 s ("fetch failed"). The `verify` job had passed on the same tree. The one allowed re-run passed. Cause not found (HYPOTHESIS: a wrangler dev hang, like the 10-28 restart 503).
+    - Staging [41958801464](https://github.com/agnremote-code/spanishcue-web/actions/runs/41958801464) and production [41959265988](https://github.com/agnremote-code/spanishcue-web/actions/runs/41959265988) both succeeded.
+    - The production smoke on https://spanishcue.com returned `"passed": true` (job 127021470581, 03:08Z), and the rollback was skipped. main = production = `8dff4873`.
+    - The fixes have no anonymous surface, so they were not smoke-tested in production. Their evidence is the regression tests and the deploy.
   - **Next action:**
-    1. After #387 merges, verify the merged SHA and the staging and production runs. The fixes have no anonymous surface, so their evidence is the regression tests and the deploy.
+    1. Done this run: merge, deploy and smoke verified (above). If the `clasicas-routes` hang recurs, add a per-request timeout naming the slug in that test.
     2. Next Thursday: test-worker 503 tolerance only if it recurs; Sofia's L2 and L3 from 10-29 (malformed owner body gives 503, concurrent create gives 503) if there is capacity.
     3. Owner or board: the newsletter double opt-in decision, the referral legacy-price scope, and the Paddle key permission.
 
