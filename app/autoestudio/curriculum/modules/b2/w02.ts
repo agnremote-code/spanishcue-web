@@ -1,161 +1,388 @@
 import type { Module } from "../../types";
 
-/** Original B2 material; see docs/autoestudio/b2-audit.md. */
+/**
+ * B2 · semana 2 · Autoestudio espejo de G130 (correlación temporal: presente, pasado y futuro) y
+ * G131 (si + imperfecto de subjuntivo + condicional). Repaso autónomo con un proyecto vecinal
+ * ficticio de presupuesto participativo en Rosario. Audio mediante síntesis; sin acreditación regional.
+ */
 export const b2w02: Module = {
   "id": "b2-02",
   "level": "b2",
   "week": 2,
   "kind": "core",
-  "title": "Lo que esperaban de nosotros",
-  "subtitle": "Contrastar expectativas entre generaciones.",
+  "title": "Si ganáramos la votación: un proyecto para la costanera",
+  "subtitle": "Repaso de la correlación de tiempos con subjuntivo y de las condiciones posibles e imaginadas con «si»",
   "stop": {
     "place": "Rosario",
     "country": "Argentina"
   },
   "minutes": 120,
   "newObjectives": [
-    "b2.gram.subjuntivo-imperfecto-usos",
-    "b2.gram.como-si",
-    "b2.voc.familia-generaciones",
-    "b2.pron.acento-ra-ra",
-    "b2.fun.recordar-expectativas",
-    "b2.lis.entrevista-generaciones"
+    "b2.gram.g130",
+    "b2.gram.g131",
+    "b2.voc.w02-participacion-vecinal",
+    "b2.pron.w02-presente-imperfecto-subj",
+    "b2.lis.w02-entrevista-radio",
+    "b2.read.w02-boletin-vecinal",
+    "b2.wri.w02-propuesta-municipio",
+    "b2.spk.w02-defender-proyecto",
+    "b2.fun.w02-plantear-hipotesis",
+    "b2.disc.w02-marco-temporal"
   ],
-  "reviewObjectives": [
-    "b2.gram.sustantivas-sistema",
-    "b2.gram.decir-doble-valor",
-    "b2.voc.trabajo-equipo",
-    "b2.pron.influencia-mitigada",
-    "b2.fun.pedir-exigir",
-    "b2.read.correo-equipo"
-  ],
-  "prerequisites": [
-    "b2-01"
-  ],
+  "reviewObjectives": [],
+  "prerequisites": [],
   "goal": {
-    "canDo": "Puedo contrastar expectativas entre generaciones con razones, matices y condiciones claras.",
+    "canDo": "Puedo ajustar el tiempo del subjuntivo al verbo principal y al momento de la acción, y presentar un plan como posible o como hipótesis según lo vea.",
     "steps": [
-      "Recupera decisiones lingüísticas anteriores y contrástalas con este caso.",
-      "Escucha sin transcripción y reconstruye las posiciones: comprender expectativas familiares sin decidir por otra persona.",
-      "Lee las fuentes, identifica límites de la evidencia y prepara tu respuesta.",
-      "Escribe, revisa y ensaya una interacción que continuarás con tu docente."
+      "Repasa los dos marcos temporales del subjuntivo y el perfecto de subjuntivo visto desde ahora.",
+      "Compara «si + presente» con «si + imperfecto de subjuntivo» y practica las dos estructuras.",
+      "Escucha una entrevista en una radio de Rosario y lee el boletín de una vecinal.",
+      "Redacta una propuesta para el municipio, revísala y defiéndela en una conversación."
     ]
   },
   "theory": {
-    "intro": "La mascota te propone una misión: contrastar expectativas entre generaciones. Decide qué quieres comunicar antes de elegir una forma.",
+    "intro": "En clase viste cómo el verbo principal decide el tiempo del subjuntivo y cómo «si» puede presentar un plan o un sueño. Aquí lo repasas con un proyecto vecinal de Rosario: lo que el municipio pide, lo que pidió, lo que el barrio espera y lo que haría si las cosas fueran de otra manera.",
     "parts": [
       {
-        "heading": "Contrastar expectativas entre generaciones",
+        "heading": "Dos marcos: el verbo principal marca el tiempo",
         "body": [
-          "Un verbo principal en pasado suele situar la subordinada simultánea o posterior en imperfecto de subjuntivo: esperaban que estudiara. Las terminaciones -ra y -se son equivalentes en estos usos. El momento de la expectativa no demuestra que la acción se cumpliera; hay que comprobarlo en el resto del relato."
+          "Si el verbo que pide, desea, valora o necesita está en presente, futuro, imperativo o pretérito perfecto, el subjuntivo va en presente. Si está en un pasado (pretérito, imperfecto, pluscuamperfecto) o en condicional, el subjuntivo va en imperfecto. Lo mismo pasa detrás de «para que», «antes de que» y «cuando» con valor futuro.",
+          "Ojo con el condicional: aunque hable del futuro, pertenece al marco pasado. «Me gustaría que vinieras», no «me gustaría que vengas», en la norma más extendida."
         ],
+        "table": {
+          "caption": "La misma petición en distintos marcos",
+          "head": [
+            "Verbo principal",
+            "Marco",
+            "Subordinada"
+          ],
+          "rows": [
+            [
+              "El municipio pide…",
+              "presente",
+              "que presentemos el proyecto."
+            ],
+            [
+              "El municipio pedirá…",
+              "futuro",
+              "que presentemos el proyecto."
+            ],
+            [
+              "Pidan…",
+              "imperativo",
+              "que lo presentemos pronto."
+            ],
+            [
+              "El municipio ha pedido…",
+              "pretérito perfecto",
+              "que presentemos el proyecto."
+            ],
+            [
+              "El municipio pidió / pedía…",
+              "pasado",
+              "que presentáramos el proyecto."
+            ],
+            [
+              "El municipio había pedido…",
+              "pluscuamperfecto",
+              "que presentáramos el proyecto."
+            ],
+            [
+              "El municipio preferiría…",
+              "condicional",
+              "que presentáramos el proyecto."
+            ]
+          ]
+        },
         "examples": [
           {
-            "es": "Mi abuela esperaba que yo viviera cerca.",
-            "note": "Expectativa pasada."
+            "es": "Necesitamos que cada vecino firme antes del viernes.",
+            "note": "Marco presente."
           },
           {
-            "es": "Hablaba como si supiera todas las respuestas.",
-            "note": "Comparación irreal simultánea."
+            "es": "Necesitábamos que cada vecino firmara antes del viernes.",
+            "note": "Marco pasado."
           },
           {
-            "es": "Les pidió que respetaran su decisión.",
-            "note": "Petición pasada dirigida a varias personas."
+            "es": "Repartimos volantes para que la gente votara.",
+            "note": "«Para que» sigue al verbo pasado."
           }
         ],
         "mistakes": [
           {
-            "wrong": "Mi familia quería que estudio cerca.",
-            "right": "Mi familia quería que estudiara cerca.",
-            "why": "Expectativa pasada con imperfecto de subjuntivo."
+            "wrong": "Nos gustaría que el municipio arregle la costanera.",
+            "right": "Nos gustaría que el municipio arreglara la costanera.",
+            "why": "El condicional pertenece al marco pasado: imperfecto de subjuntivo."
           }
         ]
       },
       {
-        "heading": "Interpretación, registro y efecto",
+        "heading": "Mirar atrás desde ahora: perfecto e imperfecto",
         "body": [
-          "Como si introduce una comparación presentada como irreal: habla como si conociera todo. Usa imperfecto para la situación simultánea y pluscuamperfecto para una anterior. Al mediar entre generaciones, separa lo que alguien deseaba de lo que realmente prohibió y evita atribuir intenciones sin pruebas."
+          "Desde un verbo principal en presente también puedes hablar de algo anterior. Si esa acción está cerca del presente o su resultado sigue vivo, usa el perfecto de subjuntivo: «me alegra que hayan votado tantas personas». Si es un pasado cerrado, con un marcador como «ayer» o «el año pasado», usa el imperfecto: «me alegra que votaran tantas personas el año pasado».",
+          "La regla de los dos marcos tiene una excepción útil: si alguien pidió algo en el pasado y ese contenido todavía está pendiente, se acepta también el presente: «la concejala pidió que mandemos el plano esta semana»."
         ],
         "examples": [
           {
-            "es": "Mi abuela esperaba que yo viviera cerca.",
-            "note": "Explica qué información afirma y cuál deja abierta."
+            "es": "Espero que hayas recibido el formulario.",
+            "note": "Acción anterior al ahora, resultado vigente."
           },
           {
-            "es": "Les pidió que respetaran su decisión.",
-            "note": "Reformula sin cambiar participantes ni tiempo."
+            "es": "Es una lástima que el proyecto no ganara en 2023.",
+            "note": "Pasado cerrado visto desde hoy."
+          },
+          {
+            "es": "Dudo que el plazo se amplíe.",
+            "note": "Acción posterior: presente de subjuntivo."
+          }
+        ],
+        "mistakes": [
+          {
+            "wrong": "Me alegra que ayer hayan venido tantos vecinos a la asamblea.",
+            "right": "Me alegra que ayer vinieran tantos vecinos a la asamblea.",
+            "why": "En la norma más general, con «ayer» el pasado está cerrado: imperfecto. En algunas zonas también se oye el perfecto."
+          }
+        ],
+        "tip": "Antes de elegir, pregúntate dos cosas: ¿en qué tiempo está el verbo principal? y ¿la acción es anterior, simultánea o posterior?"
+      },
+      {
+        "heading": "«Si»: un plan posible o un mundo imaginado",
+        "body": [
+          "Con «si + presente de indicativo» presentas una condición abierta: crees que puede cumplirse y organizas una consecuencia real en presente, futuro o imperativo. Con «si + imperfecto de subjuntivo» alejas la condición de la realidad actual, y la consecuencia va en condicional simple. La elección no depende solo de los hechos, sino de cómo los ve quien habla.",
+          "Aunque se llame «imperfecto», en estas frases el subjuntivo no habla del pasado: habla de ahora o del futuro. Y el orden es libre: puedes empezar por la consecuencia sin cambiar los tiempos. Cuando «si» va primero, separa las dos partes con una coma."
+        ],
+        "table": {
+          "caption": "Dos actitudes ante la misma votación",
+          "head": [
+            "Condición",
+            "Consecuencia",
+            "Cómo lo ve quien habla"
+          ],
+          "rows": [
+            [
+              "Si ganamos la votación,",
+              "empezaremos la obra en mayo.",
+              "posible, probable"
+            ],
+            [
+              "Si ganáramos la votación,",
+              "empezaríamos la obra en mayo.",
+              "lejano, imaginado"
+            ],
+            [
+              "Si llueve el sábado,",
+              "trasladen la asamblea al club.",
+              "posible: consecuencia en imperativo"
+            ],
+            [
+              "Si tuviéramos un local propio,",
+              "no dependeríamos del club.",
+              "contrario a la realidad actual"
+            ]
+          ]
+        },
+        "examples": [
+          {
+            "es": "Si la costanera tuviera más luz, la usarían más familias de noche.",
+            "note": "Hoy no tiene esa luz: hipótesis."
+          },
+          {
+            "es": "La usarían más familias si tuviera más luz.",
+            "note": "Mismo contenido, otro orden, sin coma."
+          }
+        ],
+        "mistakes": [
+          {
+            "wrong": "Si tendríamos más presupuesto, compraríamos más bicicletas.",
+            "right": "Si tuviéramos más presupuesto, compraríamos más bicicletas.",
+            "why": "Después de «si» nunca va el condicional."
+          },
+          {
+            "wrong": "Si ganaremos, pintaremos el muelle.",
+            "right": "Si ganamos, pintaremos el muelle.",
+            "why": "Después de «si» condicional tampoco va el futuro."
+          }
+        ]
+      },
+      {
+        "heading": "Negociar con hipótesis sin mezclar los mundos",
+        "body": [
+          "Las hipótesis son muy útiles para proponer con prudencia: «si pusiéramos el taller junto al muelle, ¿no sería más visible?». Suenan menos impositivas que «pongamos el taller junto al muelle». Pero cada frase debe quedarse en un solo mundo: si la condición es posible, la consecuencia es real; si es imaginada, la consecuencia también.",
+          "Para ofrecer alternativas en una negociación, combina las dos actitudes: «si nos dan el permiso, empezamos en mayo; si no nos lo dieran, buscaríamos otro terreno». Así muestras qué esperas y qué ves menos probable."
+        ],
+        "examples": [
+          {
+            "es": "¿Y si hiciéramos la votación por internet?",
+            "note": "Propuesta suave con «¿y si…?»."
+          },
+          {
+            "es": "Si el club nos presta el salón, la asamblea será el jueves.",
+            "note": "Plan posible: indicativo en las dos partes."
+          }
+        ],
+        "mistakes": [
+          {
+            "wrong": "Si nos dieran el permiso, empezaremos en mayo.",
+            "right": "Si nos dieran el permiso, empezaríamos en mayo.",
+            "why": "Una condición imaginada pide una consecuencia en condicional."
           }
         ]
       }
     ]
   },
   "grammar": {
-    "intro": "Elige formas por su función y por el momento desde el que se habla.",
+    "intro": "Decide primero el marco del verbo principal; después, si la condición es posible o imaginada.",
     "exercises": [
       {
-        "id": "g-contexto",
+        "id": "b2-02-g-marco",
         "type": "gap",
-        "prompt": "Completa estas decisiones lingüísticas de lo que esperaban de nosotros; justifica el modo, la forma o la combinación.",
+        "prompt": "Completa con el subjuntivo adecuado del verbo entre paréntesis: presente, imperfecto o perfecto.",
         "items": [
           {
-            "q": "Mi abuela esperaba que yo ___ cerca.",
+            "q": "La junta vecinal nos ha pedido que ___ (llevar) el DNI a la votación.",
             "answers": [
               [
-                "viviera"
+                "llevemos"
               ]
             ],
-            "why": "Expectativa pasada."
+            "why": "Pretérito perfecto: marco presente."
           },
           {
-            "q": "Hablaba como si ___ todas las respuestas.",
+            "q": "En 2022 el municipio exigió que cada proyecto ___ (tener) cien firmas.",
             "answers": [
               [
-                "supiera"
+                "tuviera",
+                "tuviese"
               ]
             ],
-            "why": "Comparación irreal simultánea."
+            "why": "Pretérito: marco pasado."
           },
           {
-            "q": "Les pidió que ___ su decisión.",
+            "q": "Preferiría que la obra no ___ (empezar) en pleno verano.",
             "answers": [
               [
-                "respetaran"
+                "empezara",
+                "empezase"
               ]
             ],
-            "why": "Petición pasada dirigida a varias personas."
+            "why": "El condicional pertenece al marco pasado."
+          },
+          {
+            "q": "Ojalá ya ___ (llegar) los resultados cuando abramos el correo.",
+            "answers": [
+              [
+                "hayan llegado"
+              ]
+            ],
+            "why": "Acción terminada antes de un momento futuro: perfecto de subjuntivo."
+          },
+          {
+            "q": "Me molesta que el año pasado nadie nos ___ (avisar) del cambio de fecha.",
+            "answers": [
+              [
+                "avisara",
+                "avisase"
+              ]
+            ],
+            "why": "Pasado cerrado visto desde hoy: imperfecto."
+          },
+          {
+            "q": "Avísenme cuando ___ (terminar) el recuento de votos.",
+            "answers": [
+              [
+                "termine"
+              ]
+            ],
+            "why": "Imperativo + «cuando» futuro: presente de subjuntivo."
           }
         ]
       },
       {
-        "id": "g-reconstruir",
-        "type": "open",
-        "prompt": "Reformula con autonomía. Lee el texto de partida y la consigna de cada ítem; después contrasta tu respuesta con el modelo orientativo y la lista de revisión. Otras soluciones pueden ser válidas.",
+        "id": "b2-02-g-si",
+        "type": "choice",
+        "prompt": "Elige la forma que completa la frase.",
         "items": [
           {
-            "prompt": "Texto de partida: «Mi padre: «Necesito que elabores un plan».» Cuenta aquella petición con necesitaba.",
-            "model": "Mi padre necesitaba que elaborara un plan.",
+            "q": "Si el municipio ___ más fondos, haríamos también una plaza.",
+            "options": [
+              "diera",
+              "daría",
+              "da"
+            ],
+            "answer": 0,
+            "why": "Consecuencia en condicional: condición en imperfecto de subjuntivo."
+          },
+          {
+            "q": "Si mañana no llueve, ___ los carteles en la costanera.",
+            "options": [
+              "colgaríamos",
+              "colgaremos",
+              "colgáramos"
+            ],
+            "answer": 1,
+            "why": "Condición posible: consecuencia en futuro."
+          },
+          {
+            "q": "Si yo ___ la concejala, pondría bancos a la sombra.",
+            "options": [
+              "sería",
+              "soy",
+              "fuera"
+            ],
+            "answer": 2,
+            "why": "Situación irreal: «si fuera»."
+          },
+          {
+            "q": "Si ___ firmas suficientes antes del lunes, presentamos el proyecto.",
+            "options": [
+              "juntáramos",
+              "juntamos",
+              "juntaríamos"
+            ],
+            "answer": 1,
+            "why": "Consecuencia en presente con valor futuro: condición abierta."
+          }
+        ]
+      },
+      {
+        "id": "b2-02-g-reformular",
+        "type": "open",
+        "prompt": "Reformula cada texto de partida según la consigna. Después compara con el modelo: hay más de una versión correcta.",
+        "items": [
+          {
+            "prompt": "Texto de partida: «La concejala quiere que el barrio elija entre dos proyectos». Pásalo a un relato del año pasado con «El año pasado…».",
+            "model": "El año pasado la concejala quería que el barrio eligiera entre dos proyectos.",
             "checklist": [
-              "Conservo participantes, referencia temporal y contenido pertinente.",
-              "Aplico la construcción o función solicitada; puedo elegir otro orden o una variante igualmente válida.",
-              "Comparo el significado y la forma con el modelo orientativo; no es una respuesta única ni se califica por coincidencia literal."
+              "Cambio los dos verbos al marco pasado.",
+              "Conservo quién quiere y quién elige.",
+              "Comparo con el modelo orientativo: no es una respuesta única y otras formulaciones correctas también valen."
             ]
           },
           {
-            "prompt": "Texto de partida: «No lo sabe todo, pero habla con esa seguridad.» Reformula con como si.",
-            "model": "Habla como si lo supiera todo.",
+            "prompt": "Texto de partida: «No tenemos un local propio, así que dependemos del club». Conviértelo en una hipótesis con «si».",
+            "model": "Si tuviéramos un local propio, no dependeríamos del club.",
             "checklist": [
-              "Conservo participantes, referencia temporal y contenido pertinente.",
-              "Aplico la construcción o función solicitada; puedo elegir otro orden o una variante igualmente válida.",
-              "Comparo el significado y la forma con el modelo orientativo; no es una respuesta única ni se califica por coincidencia literal."
+              "Invierto la realidad: tener / no depender.",
+              "Uso imperfecto de subjuntivo tras «si» y condicional en la consecuencia.",
+              "Comparo con el modelo orientativo: no es una respuesta única y otras formulaciones correctas también valen."
             ]
           },
           {
-            "prompt": "Texto de partida: «La tía pidió: «Resuman primero la preocupación del otro».» Pasa a estilo indirecto pasado.",
-            "model": "La tía pidió que resumieran primero la preocupación del otro.",
+            "prompt": "Texto de partida: «Pongamos el taller de bicicletas junto al muelle». Reformúlalo como una propuesta prudente con «¿y si…?» y una consecuencia.",
+            "model": "¿Y si pusiéramos el taller de bicicletas junto al muelle? Sería más visible para quien pasea.",
             "checklist": [
-              "Conservo participantes, referencia temporal y contenido pertinente.",
-              "Aplico la construcción o función solicitada; puedo elegir otro orden o una variante igualmente válida.",
-              "Comparo el significado y la forma con el modelo orientativo; no es una respuesta única ni se califica por coincidencia literal."
+              "Suavizo la propuesta con una hipótesis.",
+              "Añado una consecuencia en condicional.",
+              "Comparo con el modelo orientativo: no es una respuesta única y otras formulaciones correctas también valen."
+            ]
+          },
+          {
+            "prompt": "Texto de partida: «Si nos aprueban el proyecto, compraremos veinte bicicletas». Escribe la versión que usaría alguien que ve la aprobación muy difícil.",
+            "model": "Si nos aprobaran el proyecto, compraríamos veinte bicicletas.",
+            "checklist": [
+              "Cambio la condición abierta por una hipótesis.",
+              "Ajusto también la consecuencia.",
+              "Comparo con el modelo orientativo: no es una respuesta única y otras formulaciones correctas también valen."
             ]
           }
         ]
@@ -163,281 +390,328 @@ export const b2w02: Module = {
     ]
   },
   "vocabulary": {
-    "intro": "Aprende combinaciones en contexto y comprueba qué matiz aportan al caso.",
+    "intro": "Expresiones para participar en un proyecto de barrio. Apréndelas como bloques: verbo y sustantivo juntos.",
     "groups": [
       {
-        "title": "Contrastar expectativas entre generaciones",
+        "title": "El proceso",
         "items": [
           {
-            "es": "abrirse camino",
-            "note": "construir una trayectoria"
+            "es": "el presupuesto participativo",
+            "note": "parte del dinero público que deciden los vecinos"
           },
           {
-            "es": "dar por sentado",
-            "note": "considerar algo evidente"
+            "es": "presentar una propuesta",
+            "note": "entregarla por la vía oficial"
           },
           {
-            "es": "poner límites",
-            "note": "establecer lo aceptable"
+            "es": "reunir firmas",
+            "note": "conseguir apoyos por escrito"
           },
           {
-            "es": "heredar expectativas",
-            "note": "recibir proyectos familiares"
+            "es": "someter a votación",
+            "note": "dejar que decida la mayoría"
           },
           {
-            "es": "romper un patrón",
-            "note": "cambiar una conducta repetida"
+            "es": "ejecutar una obra",
+            "note": "construir lo que se aprobó"
+          }
+        ]
+      },
+      {
+        "title": "El barrio y la ciudad",
+        "items": [
+          {
+            "es": "la costanera",
+            "note": "paseo junto al río; en Rosario, a orillas del Paraná"
           },
           {
-            "es": "ganarse la vida",
-            "note": "obtener ingresos"
+            "es": "la vecinal",
+            "note": "en Argentina, asociación de vecinos de un barrio"
           },
           {
-            "es": "tener voz",
-            "note": "participar en decisiones"
+            "es": "el espacio verde",
+            "note": "plaza, parque o terreno con árboles"
           },
           {
-            "es": "ceder terreno",
-            "note": "flexibilizar una postura"
+            "es": "la concejala",
+            "note": "miembro del concejo municipal"
+          },
+          {
+            "es": "priorizar una necesidad",
+            "note": "decidir qué es más urgente"
           }
         ]
       }
     ],
     "exercises": [
       {
-        "id": "v-relaciones",
+        "id": "b2-02-v-proceso",
         "type": "match",
-        "prompt": "Relaciona las expresiones útiles para contrastar expectativas entre generaciones con su significado.",
+        "prompt": "Relaciona cada paso del proyecto con lo que hacen los vecinos.",
         "pairs": [
           {
-            "left": "abrirse camino",
-            "right": "construir una trayectoria"
+            "left": "reunir firmas",
+            "right": "Recorren el barrio con una planilla durante dos semanas."
           },
           {
-            "left": "dar por sentado",
-            "right": "considerar algo evidente"
+            "left": "presentar una propuesta",
+            "right": "Entregan el formulario en la oficina del distrito."
           },
           {
-            "left": "poner límites",
-            "right": "establecer lo aceptable"
+            "left": "someter a votación",
+            "right": "Cada vecino elige un proyecto en la urna del club."
           },
           {
-            "left": "heredar expectativas",
-            "right": "recibir proyectos familiares"
+            "left": "ejecutar una obra",
+            "right": "Una empresa construye el taller en la costanera."
           },
           {
-            "left": "romper un patrón",
-            "right": "cambiar una conducta repetida"
-          },
-          {
-            "left": "ganarse la vida",
-            "right": "obtener ingresos"
-          },
-          {
-            "left": "tener voz",
-            "right": "participar en decisiones"
-          },
-          {
-            "left": "ceder terreno",
-            "right": "flexibilizar una postura"
+            "left": "priorizar una necesidad",
+            "right": "Deciden que la iluminación va antes que los juegos."
           }
-        ]
+        ],
+        "why": "Cada expresión nombra una etapa distinta del presupuesto participativo."
       }
     ]
   },
   "pronunciation": {
-    "focus": "Contrasta hablara, hablará y hablaría: localiza la sílaba tónica antes de usar la palabra dentro de una frase.",
+    "focus": "Oír el tiempo del subjuntivo y entonar las frases con «si».",
     "explanation": [
-      "Contrasta hablara, hablará y hablaría: localiza la sílaba tónica antes de usar la palabra dentro de una frase.",
-      "Escucha primero la secuencia verbal. Después lee la misma frase con una intención distinta, grábate localmente y compara con tu docente. La voz sintética es apoyo de escucha: no certifica variedad regional, ironía ni evaluación automática de tu pronunciación."
+      "En la correlación, muchas veces la única pista es la terminación: «presentemos» (presente) frente a «presentáramos» (imperfecto). La segunda tiene una sílaba más y la fuerza cae en «tá». Escucha el final del verbo antes de decidir el marco.",
+      "En una oración que empieza con «si», la voz sube un poco antes de la coma, como si dejara algo abierto, y baja en la consecuencia. Si empiezas por la consecuencia, la voz baja solo al final. Grábate en tu dispositivo y compara; la voz sintética es solo una referencia."
     ],
     "examples": [
       {
-        "es": "Mi abuela esperaba que yo viviera cerca."
+        "es": "Nos piden que presentemos el plano.",
+        "note": "pre-sen-TE-mos: marco presente."
       },
       {
-        "es": "Hablaba como si supiera todas las respuestas."
+        "es": "Nos pidieron que presentáramos el plano.",
+        "note": "pre-sen-TÁ-ra-mos: marco pasado."
       },
       {
-        "es": "Les pidió que respetaran su decisión."
+        "es": "Si ganáramos ↗, haríamos un muelle nuevo ↘.",
+        "note": "Subida antes de la coma, bajada al final."
       }
     ],
     "perceive": {
-      "id": "p-percepcion",
+      "id": "b2-02-p-oido",
       "type": "listen",
-      "prompt": "Escucha sin leer el ejemplo previo si quieres comprobar tu percepción; identifica el fragmento verbal y después marca su sílaba tónica.",
+      "prompt": "Escucha y elige la forma que oyes. Después decide si el marco es presente o pasado.",
       "items": [
         {
-          "q": "En la muestra 1 de lo que esperaban de nosotros, ¿qué fragmento se oye?",
+          "q": "¿Qué oyes en la frase sobre el formulario?",
           "options": [
-            "vivía",
-            "viviera",
-            "vivirá"
+            "completemos",
+            "completáramos"
           ],
           "answer": 1,
-          "why": "Expectativa pasada.",
-          "audio": "Mi abuela esperaba que yo viviera cerca.",
-          "voice": "es-ES-f"
+          "audio": "La oficina nos pidió que completáramos el formulario en papel.",
+          "voice": "es-AR-f",
+          "why": "«Pidió»: marco pasado, «completáramos»."
         },
         {
-          "q": "En la muestra 2 de lo que esperaban de nosotros, ¿qué fragmento se oye?",
+          "q": "¿Qué oyes en la frase sobre la urna?",
           "options": [
-            "supiera",
-            "sabrá",
-            "sabría"
+            "llevemos",
+            "lleváramos"
           ],
           "answer": 0,
-          "why": "Comparación irreal simultánea.",
-          "audio": "Hablaba como si supiera todas las respuestas.",
-          "voice": "es-ES-f"
+          "audio": "La vecinal quiere que llevemos la urna al club el domingo.",
+          "voice": "es-AR-m",
+          "why": "«Quiere»: marco presente, «llevemos»."
+        },
+        {
+          "q": "¿Qué oyes en la frase sobre el muelle?",
+          "options": [
+            "arreglan",
+            "arreglaran",
+            "arreglarán"
+          ],
+          "answer": 1,
+          "audio": "Si arreglaran el muelle, volverían los pescadores.",
+          "voice": "es-AR-f",
+          "why": "Hipótesis: «arreglaran», con fuerza en «gla»."
+        },
+        {
+          "q": "¿Qué oyes en la frase sobre los árboles?",
+          "options": [
+            "plantemos",
+            "plantáramos",
+            "plantaremos"
+          ],
+          "answer": 2,
+          "audio": "Si nos dan permiso, plantaremos árboles en la esquina.",
+          "voice": "es-AR-m",
+          "why": "Condición abierta: consecuencia en futuro."
         }
       ]
     },
     "produce": [
       {
-        "text": "Mi abuela esperaba que yo viviera cerca.",
-        "tip": "Contrasta hablara, hablará y hablaría: localiza la sílaba tónica antes de usar la palabra dentro de una frase.",
-        "voice": "es-ES-f"
+        "text": "Si tuviéramos más voluntarios, abriríamos también los sábados.",
+        "tip": "Sube en «voluntarios», baja en «sábados».",
+        "voice": "es-AR-f"
       },
       {
-        "text": "Hablaba como si supiera todas las respuestas.",
-        "tip": "Contrasta hablara, hablará y hablaría: localiza la sílaba tónica antes de usar la palabra dentro de una frase.",
-        "voice": "es-ES-f"
+        "text": "El municipio nos pidió que presentáramos tres presupuestos.",
+        "tip": "Marca la fuerza en «tá» de «presentáramos».",
+        "voice": "es-AR-m"
       },
       {
-        "text": "Les pidió que respetaran su decisión.",
-        "tip": "Contrasta hablara, hablará y hablaría: localiza la sílaba tónica antes de usar la palabra dentro de una frase.",
-        "voice": "es-ES-f"
+        "text": "Abriríamos también los sábados si tuviéramos más voluntarios.",
+        "tip": "Sin subida en el medio: la voz baja al final.",
+        "voice": "es-AR-f"
+      },
+      {
+        "text": "Espero que hayan recibido nuestra propuesta.",
+        "tip": "Une «hayan recibido» sin pausa.",
+        "voice": "es-AR-m"
       }
     ]
   },
   "listening": {
-    "title": "Voces y decisiones: Lo que esperaban de nosotros",
-    "context": "Guion original de interacción. Primera escucha sin transcripción: identifica propósito y posiciones; segunda: datos y condiciones; tercera: inferencias. Reproducción sintética, sin verificación de acento regional.",
+    "title": "«Barrio Abierto», la radio de la costanera",
+    "context": "Un programa de una radio comunitaria de Rosario entrevista a Lucía Benítez, de la vecinal del barrio Refinería, sobre el proyecto que presentaron al presupuesto participativo. Escucha primero sin leer. Las voces son sintéticas y no representan una variedad regional verificada.",
     "speakers": [
       {
-        "id": "s1",
-        "name": "Periodista",
-        "voice": "es-ES-f",
-        "role": "Interlocutor del guion original; voz sintética disponible"
+        "id": "co",
+        "name": "Gabriel",
+        "voice": "es-AR-m",
+        "role": "Conductor del programa"
       },
       {
-        "id": "s2",
-        "name": "Elena",
-        "voice": "es-MX-m",
-        "role": "Interlocutor del guion original; voz sintética disponible"
-      },
-      {
-        "id": "s3",
-        "name": "Iván",
-        "voice": "es-ES-f",
-        "role": "Interlocutor del guion original; voz sintética disponible"
+        "id": "lu",
+        "name": "Lucía",
+        "voice": "es-AR-f",
+        "role": "Integrante de la vecinal"
       }
     ],
     "script": [
       {
-        "speaker": "s1",
-        "text": "Hoy conversamos con Elena y su nieto Iván sobre las decisiones educativas. Elena, ¿qué esperaba su familia cuando usted terminó la escuela? Me interesa distinguir lo que deseaban de lo que le exigían expresamente."
+        "speaker": "co",
+        "text": "Buenas tardes, Lucía. Cuéntanos qué propone la vecinal este año y en qué punto está el proyecto."
       },
       {
-        "speaker": "s2",
-        "text": "Querían que empezara a trabajar enseguida. Mi padre no me prohibió estudiar, pero hablaba como si continuar fuera un lujo. Yo necesitaba que alguien me explicara las becas disponibles. Al final, una profesora me ayudó y pude combinar ambas cosas."
+        "speaker": "lu",
+        "text": "Buenas tardes. Proponemos un taller de bicicletas gratuito en la costanera, con préstamo para chicos que no tienen bici. El año pasado presentamos una idea parecida, pero el municipio pidió que la redujéramos porque era demasiado cara. Este año nos pide que presentemos tres presupuestos distintos antes del día treinta, y ya tenemos dos."
       },
       {
-        "speaker": "s3",
-        "text": "En mi caso ocurre casi lo contrario. Mi familia esperaba que fuera a la universidad y se sorprendió cuando elegí una formación técnica. A veces hablan como si trabajar con las manos significara renunciar a pensar. Sé que no lo hacen para ofenderme, pero me pesa."
+        "speaker": "co",
+        "text": "¿Y qué esperan que pase en la votación?"
       },
       {
-        "speaker": "s1",
-        "text": "Elena, ¿diría que esa comparación describe su postura? Iván no está diciendo que usted le haya prohibido nada. Está explicando cómo interpreta algunas preguntas sobre su futuro y qué efecto tienen en él."
+        "speaker": "lu",
+        "text": "Somos optimistas. Si conseguimos el tercer presupuesto esta semana, el proyecto entra en la votación de octubre. Me alegra mucho que se hayan sumado los clubes de remo; el año pasado fue una pena que no nos apoyaran, porque no conocían la propuesta."
       },
       {
-        "speaker": "s2",
-        "text": "Entiendo la diferencia. Yo quería que tuviera opciones que a mí me faltaron. Tal vez confundí ampliar sus posibilidades con elegirlas por él. Le pediría que me enseñara qué se estudia y qué salidas tiene, para no hablar desde mis suposiciones."
+        "speaker": "co",
+        "text": "Imaginemos que ganan. ¿Qué cambiaría en el barrio?"
       },
       {
-        "speaker": "s3",
-        "text": "Eso sí me ayudaría. También admito que respondí a la defensiva antes de explicar el programa. Podemos visitar el centro el sábado. No necesito que te entusiasme todo; me basta con que escuches mis razones antes de imaginar un fracaso."
+        "speaker": "lu",
+        "text": "Si ganáramos, abriríamos el taller los fines de semana y los chicos aprenderían a arreglar su propia bici. Y si tuviéramos un poco más de dinero, que no es el caso, pondríamos luces en el sendero, porque de noche casi nadie lo usa. Pero vamos paso a paso: primero queremos que la gente vote."
+      },
+      {
+        "speaker": "co",
+        "text": "Hay oyentes que nos escriben que preferirían que el dinero fuera a las calles internas. ¿Qué les dices? Y después, un mensaje para quienes nos escuchan."
+      },
+      {
+        "speaker": "lu",
+        "text": "Que tienen derecho a pedirlo y que lo presenten. No queremos que sea una pelea entre vecinos: la votación existe para eso."
+      },
+      {
+        "speaker": "lu",
+        "text": "Que se acerquen a la vecinal el jueves, que traigan el DNI y que nos cuenten qué necesitan. Nos gustaría que el proyecto fuera de todos, no solo de quienes lo escribimos."
       }
     ],
     "stages": [
       {
         "stage": "gist",
-        "prompt": "Escucha la conversación completa; identifica el problema y la intención antes de buscar palabras aisladas.",
+        "prompt": "Escucha la entrevista completa sin pausas.",
         "exercise": {
-          "id": "l-global",
+          "id": "b2-02-l-global",
           "type": "choice",
-          "prompt": "¿Qué organiza la conversación situada en Rosario?",
+          "prompt": "Elige la respuesta que mejor resume la entrevista.",
           "items": [
             {
-              "q": "¿Cuál es el propósito global de esta conversación: Lo que esperaban de nosotros?",
+              "q": "¿Cuál es el tema principal?",
               "options": [
-                "Contar una única versión sin permitir preguntas.",
-                "Comprender expectativas familiares sin decidir por otra persona",
-                "Leer una lista de instrucciones sin responder a nadie."
+                "Una protesta contra el municipio.",
+                "Un proyecto vecinal que se votará en octubre.",
+                "La historia de los clubes de remo."
               ],
               "answer": 1,
-              "why": "Las intervenciones se responden y matizan sus posiciones."
+              "why": "Lucía presenta el taller y explica el proceso de votación."
             },
             {
-              "q": "¿Qué relación predomina entre las voces en «Lo que esperaban de nosotros»?",
+              "q": "¿Qué actitud tiene Lucía?",
               "options": [
-                "Las personas aclaran interpretaciones y conservan algunos límites.",
-                "Todas repiten exactamente la misma opinión desde el inicio.",
-                "Ninguna intervención tiene relación con la anterior."
+                "Optimista, pero prudente con lo que no depende de ellos.",
+                "Pesimista: cree que perderán.",
+                "Indiferente al resultado."
               ],
               "answer": 0,
-              "why": "Identifica un turno que responda al anterior."
+              "why": "Dice «somos optimistas» y «vamos paso a paso»."
             }
           ]
         }
       },
       {
         "stage": "detail",
-        "prompt": "Escucha otra vez y anota quién sostiene cada afirmación.",
+        "prompt": "Escucha otra vez y anota datos concretos.",
         "exercise": {
-          "id": "l-detalle",
+          "id": "b2-02-l-detalle",
           "type": "choice",
-          "prompt": "Localiza una intervención concreta en «Lo que esperaban de nosotros».",
+          "prompt": "Responde con la información del audio.",
           "items": [
             {
-              "q": "¿Qué pide Elena al final?",
+              "q": "¿Qué les pidió el municipio el año pasado?",
               "options": [
-                "Conocer el programa y sus salidas.",
-                "Que Iván abandone el centro.",
-                "Que la periodista elija por ellos."
-              ],
-              "answer": 0,
-              "why": "La respuesta conserva la condición o información expresada por esa persona."
-            },
-            {
-              "q": "¿Qué frase aparece en la intervención inicial de «Lo que esperaban de nosotros»?",
-              "options": [
-                "Ya está todo decidido y no necesitamos escuchar a ninguna parte.",
-                "No hay información que podamos discutir en esta reunión.",
-                "Hoy conversamos con Elena y su nieto Iván sobre las decisiones educativas."
+                "Que reunieran más firmas.",
+                "Que cambiaran el lugar del taller.",
+                "Que redujeran el proyecto."
               ],
               "answer": 2,
-              "why": "Vuelve al inicio y comprueba la formulación exacta."
+              "why": "«Pidió que la redujéramos porque era demasiado cara»."
+            },
+            {
+              "q": "¿Qué les falta para entrar en la votación?",
+              "options": [
+                "Un tercer presupuesto.",
+                "El apoyo de los clubes.",
+                "Un local propio."
+              ],
+              "answer": 0,
+              "why": "Ya tienen dos de los tres presupuestos."
+            },
+            {
+              "q": "¿Qué harían solo con más dinero?",
+              "options": [
+                "Abrir los fines de semana.",
+                "Iluminar el sendero.",
+                "Prestar bicicletas."
+              ],
+              "answer": 1,
+              "why": "«Si tuviéramos un poco más de dinero, que no es el caso, pondríamos luces»."
             }
           ]
         }
       },
       {
         "stage": "notice",
-        "prompt": "Distingue lo dicho de lo inferido; consulta la transcripción solo después de responder.",
+        "prompt": "Fíjate en cómo Lucía separa lo real de lo imaginado. Puedes leer la transcripción después.",
         "exercise": {
-          "id": "l-inferencia",
+          "id": "b2-02-l-forma",
           "type": "open",
-          "prompt": "Interpreta postura, reserva y efecto sobre la otra persona.",
+          "prompt": "Explica la diferencia con tus palabras.",
           "items": [
             {
-              "prompt": "En «Lo que esperaban de nosotros», cita una reserva o una reformulación del diálogo, explica qué interpretación evita y qué quedaría sin resolver si se omitiera.",
-              "model": "Eso sí me ayudaría. También admito que respondí a la defensiva antes de explicar el programa. Podemos visitar el centro el sábado. No necesito que te entusiasme todo; me basta con que escuches mis razones antes de imaginar un fracaso.",
+              "prompt": "Lucía dice «si conseguimos el tercer presupuesto» y después «si ganáramos». ¿Por qué cambia de forma? Añade qué indica «que no es el caso».",
+              "model": "Conseguir el presupuesto le parece probable y cercano, por eso usa el presente. Ganar depende de la votación y lo imagina, así que usa el imperfecto de subjuntivo y el condicional. «Que no es el caso» confirma que tener más dinero es contrario a la realidad.",
               "checklist": [
-                "Atribuyo la intervención a su hablante.",
-                "Distingo palabras explícitas e inferencia.",
-                "Conservo una condición o un límite de la conversación."
+                "Relaciono cada forma con cómo ve Lucía la condición.",
+                "Explico el valor de «que no es el caso»."
               ]
             }
           ]
@@ -446,196 +720,258 @@ export const b2w02: Module = {
     ]
   },
   "reading": {
-    "title": "Lo que esperaban de nosotros: texto para interpretar",
-    "genre": "Artículo, correspondencia o relato original",
-    "frame": "Material original de SpanishCue; las situaciones y los datos son didácticos, no noticias reales ni textos oficiales de examen.",
+    "title": "Boletín de la vecinal Refinería: lo que nos piden y lo que soñamos",
+    "genre": "Boletín informativo de una asociación vecinal",
+    "frame": "Texto original de SpanishCue con forma de boletín de una vecinal ficticia de Rosario. Los datos y las personas son inventados.",
     "text": [
-      "Cuando su hija anunció que quería dedicarse a restaurar instrumentos musicales, Ernesto reaccionó con una pregunta: «¿Y de qué vas a vivir?». Clara escuchó una prohibición, aunque su padre nunca le dijo que renunciara. Durante meses discutieron sobre una frase cuyo significado ambos creían evidente. Él esperaba que ella elaborara un plan; ella necesitaba que él reconociera la seriedad de una elección que llevaba años preparando. La conversación no avanzó hasta que dejaron de defender palabras y empezaron a explicar preocupaciones.",
-      "Ernesto había crecido en una familia para la que tener un empleo estable era una conquista reciente. Sus padres querían que estudiara una carrera que le permitiera independizarse pronto. No le exigieron que fuera abogado, pero celebraron su elección como si hubiera resuelto para siempre todos los problemas de la familia. Ahora comprende que transmitió esa misma presión a su hija, aunque utilizara un lenguaje aparentemente más abierto. Asegurar que cada cual puede hacer lo que quiera no elimina las expectativas que se comunican mediante silencios, bromas o comparaciones.",
-      "Clara, por su parte, reconoce que interpretó cualquier duda como una descalificación. Había investigado escuelas y talleres, pero no había calculado cuánto costaría mantenerse durante la formación. Le molestaba que la trataran como si siguiera siendo una niña; sin embargo, cuando le pedían datos concretos, respondía que nadie confiaba en ella. Una tía intervino sin decidir quién tenía razón. Pidió a cada uno que resumiera la preocupación del otro antes de formular una respuesta.",
-      "No llegaron a pensar lo mismo. Ernesto sigue considerando arriesgada la profesión y Clara conserva su proyecto. Acordaron revisar juntos un presupuesto y limitar la ayuda familiar a un periodo definido. El cambio fue más modesto que una reconciliación de película: aprendieron a discrepar sin convertir cada desacuerdo en una prueba de afecto. Para ambos, esa fue una forma bastante concreta de respeto."
+      "Queridos vecinos: como cada septiembre, la Municipalidad abrió la convocatoria del presupuesto participativo. Este año las reglas cambiaron un poco. Hasta 2024 pedían que cada propuesta tuviera cincuenta firmas; ahora exigen que reunamos cien y que presentemos tres presupuestos de empresas diferentes. La comisión nos pidió también que el proyecto no superara el diez por ciento del fondo del distrito. Nos parece razonable, aunque nos obliga a trabajar más rápido.",
+      "Nuestra propuesta es un taller de bicicletas en la costanera. Si conseguimos las firmas antes del día veinte, la comisión revisará el proyecto en octubre y, si lo aprueba, el barrio podrá votarlo en noviembre. Queremos que todos los vecinos lo conozcan antes de esa fecha, por eso organizamos una charla en el club el jueves. Es importante que vengan quienes no usan bicicleta: también necesitamos su opinión.",
+      "Nos permitimos soñar un poco. Si el taller funcionara bien un año, podríamos pedir que el municipio lo incluyera en su programa permanente. Si además consiguiéramos voluntarios con experiencia, daríamos cursos de mecánica para adultos mayores. Y si el río no creciera tanto cada otoño, que es mucho pedir, dejaríamos las bicicletas guardadas junto al agua en lugar de llevarlas al galpón del club.",
+      "No todos están de acuerdo, y está bien que sea así. En la última asamblea, algunos vecinos preferían que el dinero se destinara a iluminar las calles internas del barrio. Nos alegra que lo plantearan abiertamente. Proponemos que las dos ideas se presenten y que decida la votación. Lo que no queremos es que el barrio se quede sin proyecto por no ponernos de acuerdo a tiempo.",
+      "Un último pedido práctico. La comisión nos ha recordado que las planillas de firmas deben estar completas, sin tachaduras y con el número de documento de cada vecino. El año pasado varias firmas no se contaron porque alguien escribió la dirección en lugar del documento. Les rogamos que revisen sus datos antes de firmar, para que este año no perdamos ni un solo apoyo."
     ],
     "glossary": [
       {
-        "es": "abrirse camino",
-        "note": "construir una trayectoria"
+        "es": "la convocatoria",
+        "note": "anuncio oficial que abre un plazo para participar"
       },
       {
-        "es": "dar por sentado",
-        "note": "considerar algo evidente"
+        "es": "el galpón",
+        "note": "en Argentina y otras zonas, nave o cobertizo grande"
       },
       {
-        "es": "poner límites",
-        "note": "establecer lo aceptable"
+        "es": "crecer (un río)",
+        "note": "subir el nivel del agua"
       }
     ],
     "tasks": [
       {
-        "id": "r-comprender",
+        "id": "b2-02-r-comprension",
         "type": "choice",
-        "prompt": "Interpreta tesis y alcance; descarta respuestas que exageren la conclusión.",
+        "prompt": "Responde según el boletín.",
         "items": [
           {
-            "q": "¿Qué permite avanzar en el texto?",
+            "q": "¿Qué cambió en las reglas este año?",
             "options": [
-              "Cambiar obligatoriamente de profesión.",
-              "Reformular las preocupaciones de ambas partes.",
-              "Eliminar toda ayuda familiar."
-            ],
-            "answer": 1,
-            "why": "Comprueba esta interpretación con el texto completo y no solo con una palabra aislada."
-          },
-          {
-            "q": "¿Qué implica como si fuera un lujo?",
-            "options": [
-              "Así se presentaba estudiar, sin afirmar que lo fuera.",
-              "Estudiar estaba legalmente prohibido.",
-              "La familia tenía abundantes recursos."
+              "Ahora se necesitan más firmas y tres presupuestos.",
+              "Ya no se pueden presentar proyectos en la costanera.",
+              "Solo pueden votar los socios del club."
             ],
             "answer": 0,
-            "why": "Comprueba esta interpretación con el texto completo y no solo con una palabra aislada."
+            "why": "Antes pedían cincuenta firmas; ahora exigen cien y tres presupuestos."
+          },
+          {
+            "q": "¿Qué presenta la vecinal como algo poco probable?",
+            "options": [
+              "Que la comisión revise el proyecto.",
+              "Que el río no crezca cada otoño.",
+              "Que haya una charla el jueves."
+            ],
+            "answer": 1,
+            "why": "Lo dicen con «si el río no creciera…, que es mucho pedir»."
+          },
+          {
+            "q": "¿Qué propone la vecinal ante el desacuerdo?",
+            "options": [
+              "Retirar su proyecto.",
+              "Unir los dos proyectos en uno.",
+              "Presentar las dos ideas y dejar que decida la votación."
+            ],
+            "answer": 2,
+            "why": "Último párrafo."
           }
         ]
       },
       {
-        "id": "r-evidencia",
+        "id": "b2-02-r-interpretar",
         "type": "open",
-        "prompt": "Apoya tu lectura con evidencia y distingue la postura de la fuente de la tuya.",
+        "prompt": "Interpreta el texto y apóyate en sus formas verbales.",
         "items": [
           {
-            "prompt": "En «Lo que esperaban de nosotros», resume dos posiciones en 60–80 palabras, cita una evidencia y explica un límite que el texto no permite resolver.",
-            "model": "Mi familia esperaba que eligiera una profesión conocida. Durante mucho tiempo entendí sus preguntas como si fueran órdenes, aunque nunca me prohibieron buscar otra salida. Ahora veo que necesitaban información y que yo necesitaba reconocimiento. Propongo que cada uno exponga primero qué le preocupa y después repita la preocupación del otro. No se trata de aceptar cualquier argumento, sino de comprobar que estamos discutiendo sobre la misma cuestión.",
+            "prompt": "En 60–80 palabras, explica qué partes del boletín son requisitos, cuáles son planes posibles y cuáles son sueños. Cita una forma verbal de cada tipo.",
+            "model": "Los requisitos aparecen con verbos de influencia: el municipio exige «que reunamos cien» firmas y antes pedía «que cada propuesta tuviera cincuenta». Los planes posibles van con «si + presente»: «si conseguimos las firmas…, la comisión revisará». Los sueños, en cambio, usan imperfecto de subjuntivo y condicional: «si el taller funcionara bien un año, podríamos pedir…». Así el lector sabe qué es seguro y qué es deseo.",
             "checklist": [
-              "Identifico las dos posiciones sin inventar consenso.",
-              "Utilizo una evidencia concreta.",
-              "Marco una inferencia como tal."
+              "Distingo los tres tipos de información.",
+              "Cito una forma verbal de cada tipo.",
+              "Explico qué efecto tiene en el lector."
             ]
           }
         ]
       }
     ],
     "noticing": {
-      "prompt": "Observa cómo la forma lingüística limita o precisa el mensaje.",
+      "prompt": "Observa cómo cambia el tiempo del subjuntivo con el marco.",
       "items": [
         {
-          "quote": "Cuando su hija anunció que quería dedicarse a restaurar instrumentos musicales, Ernesto reaccionó con una pregunta: «¿Y de qué vas a vivir?».",
-          "note": "Identifica qué establece el inicio y cómo prepara la interpretación posterior."
+          "quote": "Hasta 2024 pedían que cada propuesta tuviera cincuenta firmas; ahora exigen que reunamos cien",
+          "note": "En la misma frase, «pedían» (pasado) lleva imperfecto y «exigen» (presente) lleva presente."
         },
         {
-          "quote": "Para ambos, esa fue una forma bastante concreta de respeto.",
-          "note": "Relaciona el cierre con la tesis o con el giro narrativo; explica qué no afirma."
+          "quote": "Nos alegra que lo plantearan abiertamente.",
+          "note": "Verbo principal en presente, pero la asamblea ya terminó: imperfecto de subjuntivo."
+        },
+        {
+          "quote": "Y si el río no creciera tanto cada otoño, que es mucho pedir",
+          "note": "La autora marca la hipótesis como poco realista con un comentario."
         }
       ]
     }
   },
   "practice": {
-    "intro": "Sin mirar la semana 1, transforma dos órdenes familiares en peticiones y distingue qué se afirmó de qué se esperaba.",
+    "intro": "Integra las dos clases: el marco temporal y la distancia de la condición.",
     "exercises": [
       {
-        "id": "x-orden",
+        "id": "b2-02-x-orden",
         "type": "order",
-        "prompt": "Reconstruye los mensajes del caso de Rosario y conserva sus relaciones.",
+        "prompt": "Ordena las palabras. Hay más de un orden posible en una de ellas.",
         "items": [
           {
             "words": [
-              "En",
-              "«Lo que esperaban de nosotros»,",
-              "Mi",
-              "abuela",
-              "esperaba",
-              "que",
-              "yo",
-              "viviera",
-              "cerca."
+              "Si",
+              "hubiera",
+              "más",
+              "bancos,",
+              "los",
+              "abuelos",
+              "vendrían",
+              "a",
+              "la",
+              "costanera."
             ],
-            "why": "Expectativa pasada."
+            "why": "Hipótesis con «si» al principio y coma.",
+            "alt": [
+              "Los abuelos vendrían a la costanera si hubiera más bancos."
+            ]
           },
           {
             "words": [
-              "En",
-              "«Lo que esperaban de nosotros»,",
-              "Les",
+              "La",
+              "vecinal",
+              "nos",
               "pidió",
               "que",
-              "respetaran",
-              "su",
-              "decisión."
+              "trajéramos",
+              "sillas",
+              "para",
+              "la",
+              "asamblea."
             ],
-            "why": "Petición pasada dirigida a varias personas."
+            "why": "Marco pasado: «pidió» + imperfecto."
+          },
+          {
+            "words": [
+              "Esperamos",
+              "que",
+              "la",
+              "comisión",
+              "haya",
+              "leído",
+              "nuestra",
+              "propuesta."
+            ],
+            "why": "Acción anterior al ahora: perfecto de subjuntivo."
           }
         ]
       },
       {
-        "id": "x-edicion",
+        "id": "b2-02-x-error",
         "type": "error",
-        "prompt": "Revisa tres borradores de lo que esperaban de nosotros; cada uno tiene un único error deliberado.",
+        "prompt": "Corrige el error de cada frase.",
         "items": [
           {
-            "sentence": "Mi familia quería que estudio cerca.",
+            "sentence": "El año pasado la comisión quería que presentemos los papeles en mano.",
             "answers": [
-              "Mi familia quería que estudiara cerca."
+              "El año pasado la comisión quería que presentáramos los papeles en mano.",
+              "El año pasado la comisión quería que presentásemos los papeles en mano."
             ],
-            "why": "Expectativa pasada con imperfecto de subjuntivo."
+            "why": "«Quería» y «el año pasado»: marco pasado."
           },
           {
-            "sentence": "Actuaba como si sabe todo.",
+            "sentence": "Si el concejo aprobaría la obra, la empresa empezaría en marzo.",
             "answers": [
-              "Actuaba como si supiera todo."
+              "Si el concejo aprobara la obra, la empresa empezaría en marzo.",
+              "Si el concejo aprobase la obra, la empresa empezaría en marzo."
             ],
-            "why": "Como si introduce una comparación irreal con subjuntivo."
+            "why": "Nunca condicional después de «si»."
           },
           {
-            "sentence": "Esperaba que mis padres comprenden la decisión.",
+            "sentence": "Si mañana hace buen tiempo, haríamos la reunión en la plaza.",
             "answers": [
-              "Esperaba que mis padres comprendieran la decisión."
+              "Si mañana hace buen tiempo, haremos la reunión en la plaza.",
+              "Si mañana hace buen tiempo, hacemos la reunión en la plaza."
             ],
-            "why": "Correlación de expectativa pasada."
+            "why": "Condición abierta: consecuencia en futuro o presente, no en condicional."
+          },
+          {
+            "sentence": "Me encantaría que el barrio participe más en estas votaciones.",
+            "answers": [
+              "Me encantaría que el barrio participara más en estas votaciones.",
+              "Me encantaría que el barrio participase más en estas votaciones."
+            ],
+            "why": "El condicional pide imperfecto de subjuntivo en la norma más extendida."
           }
         ]
       },
       {
-        "id": "x-produccion",
-        "type": "open",
-        "prompt": "Prepara dos fragmentos antes de tu entrega independiente; el modelo es una posibilidad, no una respuesta única.",
+        "id": "b2-02-x-condicion",
+        "type": "classify",
+        "prompt": "¿Cómo ve quien habla la condición? Clasifica cada frase.",
+        "categories": [
+          "Posible o probable",
+          "Imaginada o contraria a la realidad"
+        ],
         "items": [
           {
-            "prompt": "Abre tu respuesta sobre contrastar expectativas entre generaciones con una postura y una razón; adapta el destinatario.",
-            "model": "Mi familia esperaba que eligiera una profesión conocida.",
-            "checklist": [
-              "Presento una postura concreta.",
-              "Ajusto el registro a quien recibirá el mensaje."
-            ]
+            "text": "Si votan más de mil personas, el proyecto será válido.",
+            "cat": 0,
+            "why": "«Si + presente», consecuencia en futuro."
           },
           {
-            "prompt": "Reformula una objeción o una reserva de «Lo que esperaban de nosotros» sin debilitarla, y responde con una condición verificable.",
-            "model": "Mi familia esperaba que eligiera una profesión conocida. Durante mucho tiempo entendí sus preguntas como si fueran órdenes, aunque nunca me prohibieron buscar otra salida. Ahora veo que necesitaban información y que yo necesitaba reconocimiento. Propongo que cada uno exponga primero qué le preocupa y después repita la preocupación del otro. No se trata de aceptar cualquier argumento, sino de comprobar que estamos discutiendo sobre la misma cuestión.",
-            "checklist": [
-              "La objeción conserva su sentido.",
-              "Mi respuesta no promete lo que no controlo."
-            ]
+            "text": "Si el río estuviera limpio, nadaríamos en verano.",
+            "cat": 1,
+            "why": "Hoy el río no está limpio."
+          },
+          {
+            "text": "Si te sobra tiempo, pasa por la vecinal.",
+            "cat": 0,
+            "why": "Consecuencia en imperativo: posible."
+          },
+          {
+            "text": "Si yo viviera frente al río, saldría a remar cada día.",
+            "cat": 1,
+            "why": "Situación personal imaginada."
+          },
+          {
+            "text": "Si la empresa cumple los plazos, inauguramos en diciembre.",
+            "cat": 0,
+            "why": "Presente con valor futuro: plan."
+          },
+          {
+            "text": "Si tuviéramos un millón de pesos más, construiríamos un muelle.",
+            "cat": 1,
+            "why": "Hipótesis lejana."
           }
         ]
       },
       {
-        "id": "x-recuperacion",
+        "id": "b2-02-x-guiada",
         "type": "open",
-        "prompt": "Recuperación espaciada: selecciona y produce los recursos señalados sin mirar sus explicaciones. En el checkpoint distribúyelos entre informe y ensayo oral.",
+        "prompt": "Prepara frases para la tarea de escritura. El modelo es una posibilidad entre varias.",
         "items": [
           {
-            "prompt": "Recupera la semana 1 sin abrir su explicación y aplica sus recursos a «Lo que esperaban de nosotros»: Subjuntivo en oraciones sustantivas; Decir, insistir, recordar: informar o pedir; Trabajo en equipo y liderazgo; Entonación de peticiones indirectas; Pedir, exigir y negociar tareas; Leer un correo de coordinación. Integra los recursos en un párrafo o un turno de 60–90 segundos; señala las decisiones lingüísticas en tus notas.",
-            "model": "Guía de revisión, no texto para copiar: Puedo elegir el modo según el verbo principal: influencia, valoración, emoción, percepción o comunicación. Puedo distinguir me dice que viene (información) de me dice que venga (orden). Puedo hablar de delegar, coordinar, exigir, plazos y responsabilidades. Puedo pedir algo de forma indirecta sin sonar autoritario. Puedo transmitir peticiones y negociar responsabilidades en un equipo. Puedo distinguir información, peticiones y obligaciones en un correo de trabajo.",
+            "prompt": "Escribe un requisito actual de una institución de tu ciudad y cómo era ese requisito antes. Usa un verbo de influencia en presente y otro en pasado.",
+            "model": "Ahora la biblioteca pide que reservemos los libros por internet. Antes pedía que fuéramos en persona y que firmáramos una ficha.",
             "checklist": [
-              "Integro los recursos indicados en una respuesta al caso actual.",
-              "Conservo personas, tiempo, postura y límites de las fuentes.",
-              "Marco una elección que tuve que corregir después de comprobarla."
+              "Uso presente de subjuntivo en el marco actual.",
+              "Uso imperfecto de subjuntivo en el marco pasado."
             ]
           },
           {
-            "prompt": "Contrasta tu recuperación de la semana 1 con otra posible formulación en «Lo que esperaban de nosotros»: cambia una forma y explica qué efecto produce para el destinatario.",
-            "model": "Mi familia esperaba que eligiera una profesión conocida. Durante mucho tiempo entendí sus preguntas como si fueran órdenes, aunque nunca me prohibieron buscar otra salida. Ahora veo que necesitaban información y que yo necesitaba reconocimiento. Propongo que cada uno exponga primero qué le preocupa y después repita la preocupación del otro. No se trata de aceptar cualquier argumento, sino de comprobar que estamos discutiendo sobre la misma cuestión.",
+            "prompt": "Propón una mejora para tu barrio con dos escenarios: uno que ves posible y otro que ves lejano.",
+            "model": "Si el ayuntamiento aprueba el carril bici, iré al trabajo en bicicleta. Si además cerraran la calle al tráfico los domingos, organizaríamos un mercado de vecinos.",
             "checklist": [
-              "Comparo dos formas con intención distinta.",
-              "Explico si cambia información, registro o grado de certeza."
+              "Uso «si + presente» para lo posible.",
+              "Uso «si + imperfecto de subjuntivo» + condicional para lo lejano."
             ]
           }
         ]
@@ -643,196 +979,236 @@ export const b2w02: Module = {
     ]
   },
   "writing": {
-    "task": "Redacta una entrada para un foro familiar sobre una expectativa pasada. Reconstruye dos interpretaciones, utiliza comparaciones irreales y propone una conversación que no obligue a ninguna parte a renunciar a su postura.",
-    "context": "Destinatario, propósito y límites de la información forman parte de la evaluación. El modelo muestra una respuesta completa posible: analiza su organización y escribe después tu propio texto.",
+    "task": "Escribe una propuesta formal (200–260 palabras) a la oficina del presupuesto participativo de tu ciudad. Presenta un proyecto para tu barrio, recuerda qué pidió la oficina en la convocatoria y explica qué harías en dos escenarios: si se aprueba y si hubiera más fondos.",
+    "context": "Escribes a una administración: usa «ustedes», un saludo y una despedida formales y frases claras. Puedes partir del taller de bicicletas de Rosario o proponer otro proyecto real o inventado.",
     "steps": [
-      "Extrae dos datos y dos posiciones de las fuentes; marca lo que no está confirmado.",
-      "Planifica apertura, desarrollo, objeción o complicación y cierre antes de redactar.",
-      "Escribe sin copiar el modelo; integra recursos nuevos y los recuperados.",
-      "Revisa referentes, modo, tiempo, colocaciones y registro; reescribe un párrafo y explica el cambio."
+      "Anota los requisitos de la convocatoria y decide en qué marco temporal los vas a contar.",
+      "Planifica cuatro párrafos: presentación, requisitos cumplidos, plan si se aprueba y escenario con más fondos.",
+      "Redacta sin copiar el modelo y alterna «si + presente» y «si + imperfecto de subjuntivo» con intención.",
+      "Revisa la correlación de cada subjuntivo con su verbo principal y corrige cualquier condicional después de «si»."
     ],
     "useLanguage": [
-      "Un verbo principal en pasado suele situar la subordinada simultánea o posterior en imperfecto de subjuntivo: esperaban que estudiara. Las terminaciones -ra y -se son equivalentes en estos usos. El momento de la expectativa no demuestra que la acción se cumpliera; hay que comprobarlo en el resto del relato.",
-      "Como si introduce una comparación presentada como irreal: habla como si conociera todo. Usa imperfecto para la situación simultánea y pluscuamperfecto para una anterior. Al mediar entre generaciones, separa lo que alguien deseaba de lo que realmente prohibió y evita atribuir intenciones sin pruebas.",
-      "Sin mirar la semana 1, transforma dos órdenes familiares en peticiones y distingue qué se afirmó de qué se esperaba."
+      "La convocatoria pedía / pide que…",
+      "Nos gustaría que…",
+      "Si el proyecto resulta elegido, …",
+      "Si contáramos con más fondos, …",
+      "Esperamos que hayan recibido…"
     ],
     "model": [
-      "Durante años, mi familia esperaba que eligiera una profesión conocida. Cuando anuncié que quería formarme en restauración musical, mi padre preguntó de qué iba a vivir. Yo escuché una prohibición, aunque él nunca me dijo que abandonara el proyecto. Respondí como si aquella pregunta demostrara que no confiaba en mí y dejamos de hablar de los aspectos concretos de la decisión.",
-      "Ahora entiendo mejor las dos interpretaciones. Mi padre había crecido en una época de mucha inseguridad laboral y quería que tuviera estabilidad. Yo necesitaba que reconociera la preparación que había realizado antes de contarle mi idea. Ninguno expresó esa necesidad directamente. Él insistía en que presentara un presupuesto y yo repetía que tenía derecho a decidir, como si una afirmación excluyera necesariamente la otra.",
-      "Propongo retomar la conversación con una regla: antes de responder, cada persona resumirá la preocupación de la otra y preguntará si la ha entendido. Después podremos revisar los costes de formación y las posibilidades de trabajo. Eso no obliga a mi padre a entusiasmarse con la profesión ni me obliga a elegir otra. Sí nos permite distinguir una advertencia razonable de una expectativa que quizá deba revisar.",
-      "También quisiera reconocer mi parte: investigué escuelas, pero evité calcular algunos gastos porque temía que debilitaran mi argumento. Presentarlos con claridad no significa renunciar al proyecto. Significa defenderlo con información y aceptar que la autonomía incluye hacerse cargo de sus dificultades."
+      "Estimados miembros de la comisión: les escribimos en nombre de la vecinal Refinería para presentar el proyecto «Ruedas en la costanera», un taller gratuito de reparación y préstamo de bicicletas. Esperamos que hayan recibido la documentación que enviamos el lunes.",
+      "La convocatoria pedía que cada propuesta tuviera cien firmas y que incluyera tres presupuestos. Hemos reunido ciento veinte firmas y adjuntamos los presupuestos de tres empresas del distrito. Además, la comisión nos sugirió en marzo que redujéramos el costo inicial, de modo que ahora el proyecto representa el ocho por ciento del fondo. También nos pidió que consultáramos a los clubes de remo de la zona, y tres de ellos han firmado una carta de apoyo que adjuntamos.",
+      "Si el proyecto resulta elegido, abriremos el taller en enero los sábados y domingos, con dos mecánicos voluntarios. Nos gustaría que la Municipalidad nos cediera el uso del antiguo puesto de guardavidas, que hoy está vacío, para que las bicicletas no tengan que trasladarse cada día. Nos comprometemos a cuidar el edificio y a abrirlo también para otras actividades del barrio.",
+      "Si en el futuro contáramos con más fondos, ampliaríamos el horario a los días de semana y ofreceríamos cursos para adultos mayores. Quedamos a su disposición para cualquier consulta. Atentamente, Lucía Benítez, vecinal Refinería."
     ],
     "checklist": [
-      "Respondo al propósito y al destinatario concreto.",
-      "Organizo párrafos con relaciones claras, no conectores decorativos.",
-      "Distingo datos, opiniones, hipótesis y compromisos.",
-      "Integro una perspectiva distinta sin deformarla.",
-      "Reviso concordancia, modo, tiempos y léxico.",
-      "Explico una mejora entre borrador y versión final."
+      "Cada subjuntivo concuerda con el tiempo de su verbo principal.",
+      "Distingo con claridad el plan posible del escenario imaginado.",
+      "No hay futuro ni condicional después de «si».",
+      "El registro es formal y el texto tiene cuatro párrafos con funciones claras.",
+      "El destinatario sabe qué se le pide y qué se ofrece."
     ],
     "words": [
-      220,
-      280
+      200,
+      260
     ]
   },
   "speaking": {
-    "intro": "Prepara notas breves, no un texto para leer. Puedes grabarte localmente; la aplicación no califica automáticamente pronunciación ni calidad oral.",
+    "intro": "Habla a partir de notas breves. Si te grabas, la grabación queda en tu dispositivo y nadie la evalúa automáticamente.",
     "tasks": [
       {
-        "title": "Exposición con evidencia",
-        "prompt": "Presenta el caso de «Lo que esperaban de nosotros» a alguien que no conoce las fuentes. Defiende una interpretación, menciona una evidencia y una reserva, y termina con una pregunta que permita continuar.",
+        "title": "Tres minutos en la radio",
+        "prompt": "Te entrevistan en una radio local sobre un proyecto para tu barrio. Explica qué proponen, qué les pidió la administración, qué pasará si sale elegido y qué harían si tuvieran el doble de recursos.",
         "prep": [
-          "Anota tesis, evidencia y límite en cinco palabras clave.",
-          "Ensaya una transición y una reformulación."
+          "Escribe una frase con marco pasado y otra con marco presente.",
+          "Prepara un «si + presente» y un «si + imperfecto de subjuntivo»."
         ],
         "seconds": 180,
-        "model": "Mi familia esperaba que eligiera una profesión conocida. Durante mucho tiempo entendí sus preguntas como si fueran órdenes, aunque nunca me prohibieron buscar otra salida. Ahora veo que necesitaban información y que yo necesitaba reconocimiento. Propongo que cada uno exponga primero qué le preocupa y después repita la preocupación del otro. No se trata de aceptar cualquier argumento, sino de comprobar que estamos discutiendo sobre la misma cuestión.",
+        "model": "Proponemos convertir el terreno de la estación en una huerta comunitaria. La oficina nos pidió que demostráramos que el suelo no estaba contaminado, y ya lo hicimos. Si el proyecto gana, empezaremos a plantar en primavera. Y si tuviéramos el doble de dinero, construiríamos un invernadero para que las escuelas pudieran usarlo en invierno.",
         "selfCheck": [
-          "Se entiende mi postura sin leer un guion.",
-          "No convierto una conjetura en hecho.",
-          "Uso pausas para organizar el mensaje."
+          "Uso los dos marcos temporales sin mezclarlos.",
+          "Entono las frases con «si» con subida y bajada.",
+          "Termino con una invitación concreta a participar."
         ]
       },
       {
-        "title": "Interacción y mediación",
-        "prompt": "Tu docente representa a una persona que cuestiona tu interpretación de contrastar expectativas entre generaciones. Resume su postura antes de responder. Pregunta qué condición cambiaría su opinión; negocia un acuerdo parcial o explica respetuosamente por qué no lo hay.",
+        "title": "La asamblea: ¿bicicletas o luces?",
+        "prompt": "Tu docente es un vecino que prefiere gastar el dinero en iluminar las calles. Escucha sus razones, pregúntale qué pasaría si se hiciera primero tu proyecto, plantea hipótesis y negocia una solución que los dos puedan aceptar.",
         "prep": [
-          "Prepara una objeción probable y una pregunta de aclaración.",
-          "Incorpora una pregunta inesperada: ¿qué evidencia haría cambiar tu conclusión?",
-          "Al terminar, reformula en un minuto el resultado para una persona nueva."
+          "Prepara dos preguntas con «¿y si…?».",
+          "Prepara una concesión: «Entiendo que prefieras…».",
+          "Ten pensada una propuesta intermedia."
         ],
-        "seconds": 240,
+        "seconds": 180,
         "selfCheck": [
-          "Respondo a la objeción real.",
-          "Pido y cedo el turno.",
-          "Adapto una explicación sin inventar consenso."
+          "Pregunto y reacciono a lo que dice mi interlocutor.",
+          "Uso hipótesis para proponer sin imponer.",
+          "Llegamos a un acuerdo o explico por qué no."
         ]
       }
     ]
   },
   "useInClass": {
-    "intro": "La mascota te acompaña al siguiente paso: convierte tu trabajo independiente en una conversación con consecuencias claras.",
+    "intro": "Lleva a clase lo que preparaste y úsalo en una conversación real con tu profesor.",
     "cards": [
       {
-        "move": "Defiende",
-        "task": "Presenta tu entrega de «Lo que esperaban de nosotros» en tres minutos y responde a una objeción inesperada.",
+        "move": "Propón",
+        "task": "Propón a tu profesor un cambio para la clase o la escuela con «¿y si…?» y defiende la consecuencia.",
         "phrases": [
-          "Mi interpretación se apoya en…",
-          "La reserva que mantengo es…"
+          "¿Y si…?",
+          "Así podríamos…"
         ]
       },
       {
-        "move": "Reformula",
-        "task": "Explica a otra persona lo que sostiene una voz del caso de Rosario; pídele a tu docente que compruebe si has conservado el matiz.",
+        "move": "Compara",
+        "task": "Explica qué pedían antes y qué piden ahora en un trámite que conoces (visado, matrícula, alquiler).",
         "phrases": [
-          "Si te he entendido bien…",
-          "No afirma que…; lo que plantea es…"
+          "Antes pedían que…",
+          "Ahora piden que…"
         ]
       },
       {
-        "move": "Negocia",
-        "task": "Acuerda un criterio para valorar tu propuesta sobre contrastar expectativas entre generaciones; identifica una condición que todavía necesita confirmación.",
+        "move": "Imagina",
+        "task": "Pregúntale a tu profesor qué haría si fuera alcalde o alcaldesa de tu ciudad durante un año, y responde tú también.",
         "phrases": [
-          "Lo aceptaría siempre que…",
-          "Queda pendiente comprobar…"
+          "Si fueras…, ¿qué…?",
+          "Yo, en tu lugar, …"
         ]
       }
     ],
-    "bring": "Lleva borrador y versión revisada, cinco palabras clave para hablar y una duda de comprensión o prosodia."
+    "bring": "Trae tu propuesta con los verbos principales en un color y los subjuntivos en otro."
   },
   "quiz": {
     "items": [
       {
-        "q": "En la evaluación final de «Lo que esperaban de nosotros», ¿qué resume mejor el propósito?",
-        "options": [
-          "Evitar cualquier intercambio entre personas.",
-          "Comprender expectativas familiares sin decidir por otra persona",
-          "Sustituir toda evidencia por una opinión rotunda."
+        "type": "gap",
+        "q": "Cuando era chica, mis padres no dejaban que ___ (salir) sola de noche.",
+        "answers": [
+          [
+            "saliera",
+            "saliese"
+          ]
         ],
-        "answer": 1,
-        "why": "Relaciona comprensión y propósito.",
-        "type": "choice"
-      },
-      {
-        "type": "listen",
-        "audio": "Querían que empezara a trabajar enseguida. Mi padre no me prohibió estudiar, pero hablaba como si continuar fuera un lujo. Yo necesitaba que alguien me explicara las becas disponibles. Al final, una profesora me ayudó y pude combinar ambas cosas.",
-        "voice": "es-MX-m",
-        "q": "Al escuchar de nuevo a Elena en «Lo que esperaban de nosotros», ¿qué intervención reconoces?",
-        "options": [
-          "Me niego a explicar mi punto de vista sobre este asunto.",
-          "Querían que empezara a trabajar enseguida",
-          "No hay ninguna condición pendiente y todas las partes aceptaron."
-        ],
-        "answer": 1,
-        "why": "Atiende a la formulación y a la posición, no solo al tema."
+        "why": "Marco pasado."
       },
       {
         "type": "gap",
-        "q": "Mi profesor me animó a que ___ la beca.",
+        "q": "Te aconsejo que ___ (revisar) el formulario antes de enviarlo.",
         "answers": [
           [
-            "solicitara"
+            "revises"
           ]
         ],
-        "why": "Influencia pasada."
+        "why": "Marco presente."
       },
       {
-        "type": "open",
-        "prompt": "Texto de partida: «Respondía con la seguridad de alguien que conocía mi futuro, pero no lo conocía.» Usa como si con conocer.",
-        "model": "Respondía como si conociera mi futuro.",
-        "checklist": [
-          "Conservo participantes, referencia temporal y contenido pertinente.",
-          "Aplico la construcción o función solicitada; puedo elegir otro orden o una variante igualmente válida.",
-          "Comparo el significado y la forma con el modelo orientativo; no es una respuesta única ni se califica por coincidencia literal."
-        ]
+        "type": "gap",
+        "q": "Si ___ (vivir, yo) más cerca del río, iría a remar los domingos.",
+        "answers": [
+          [
+            "viviera",
+            "viviese"
+          ]
+        ],
+        "why": "Hipótesis: imperfecto de subjuntivo."
+      },
+      {
+        "type": "choice",
+        "q": "«Me alegra que ___ el premio el mes pasado.» ¿Qué forma encaja mejor?",
+        "options": [
+          "ganen",
+          "ganaran",
+          "ganarían"
+        ],
+        "answer": 1,
+        "why": "Pasado cerrado visto desde un presente."
+      },
+      {
+        "type": "choice",
+        "q": "¿Qué frase presenta la condición como probable?",
+        "options": [
+          "Si me llamaran, iría.",
+          "Si me llamaran, habría ido.",
+          "Si me llaman, voy."
+        ],
+        "answer": 2,
+        "why": "«Si + presente» con consecuencia real."
+      },
+      {
+        "type": "listen",
+        "q": "¿Qué ve la hablante como poco probable?",
+        "audio": "Si el puerto abriera de noche, pondríamos un puesto de comida.",
+        "voice": "es-AR-f",
+        "options": [
+          "Que el puerto abra de noche.",
+          "Que haya puestos de comida.",
+          "Que el puerto cierre."
+        ],
+        "answer": 0,
+        "why": "«Si abriera» aleja la condición."
       },
       {
         "type": "error",
-        "sentence": "Mis abuelos deseaban que seríamos independientes.",
+        "sentence": "Si tendría tiempo, te ayudaría con la mudanza.",
         "answers": [
-          "Mis abuelos deseaban que fuéramos independientes."
+          "Si tuviera tiempo, te ayudaría con la mudanza.",
+          "Si tuviese tiempo, te ayudaría con la mudanza."
         ],
-        "why": "Revisa la función, la construcción y la coherencia con el contexto; compara con el modelo de corrección."
+        "why": "Después de «si», imperfecto de subjuntivo, no condicional."
+      },
+      {
+        "type": "error",
+        "sentence": "El médico me recomendó que camine más el año pasado.",
+        "answers": [
+          "El médico me recomendó que caminara más el año pasado.",
+          "El médico me recomendó que caminase más el año pasado."
+        ],
+        "why": "El consejo y su contenido quedaron en el pasado."
+      },
+      {
+        "type": "order",
+        "words": [
+          "Preferiríamos",
+          "que",
+          "el",
+          "taller",
+          "abriera",
+          "también",
+          "en",
+          "invierno."
+        ],
+        "why": "Condicional + imperfecto de subjuntivo."
       },
       {
         "type": "open",
-        "prompt": "Sintetiza en 50 palabras lo que sabes y lo que no puedes concluir sobre «Lo que esperaban de nosotros».",
-        "model": "Mi familia esperaba que eligiera una profesión conocida. Durante mucho tiempo entendí sus preguntas como si fueran órdenes, aunque nunca me prohibieron buscar otra salida. Ahora veo que necesitaban información y que yo necesitaba reconocimiento. Propongo que cada uno exponga primero qué le preocupa y después repita la preocupación del otro. No se trata de aceptar cualquier argumento, sino de comprobar que estamos discutiendo sobre la misma cuestión.",
+        "prompt": "Escribe dos frases sobre tu ciudad: una petición que hicieron las autoridades el año pasado y lo que harías tú si pudieras decidir.",
+        "model": "El año pasado el gobierno pidió que ahorráramos agua. Si yo pudiera decidir, arreglaría primero las cañerías viejas.",
         "checklist": [
-          "Atribuyo una fuente.",
-          "Explicito una reserva."
-        ]
-      },
-      {
-        "type": "open",
-        "prompt": "Contesta a quien sostiene lo contrario de tu postura sobre contrastar expectativas entre generaciones; concede una razón y conserva tu argumento.",
-        "model": "Mi familia esperaba que eligiera una profesión conocida. Durante mucho tiempo entendí sus preguntas como si fueran órdenes, aunque nunca me prohibieron buscar otra salida. Ahora veo que necesitaban información y que yo necesitaba reconocimiento. Propongo que cada uno exponga primero qué le preocupa y después repita la preocupación del otro. No se trata de aceptar cualquier argumento, sino de comprobar que estamos discutiendo sobre la misma cuestión.",
-        "checklist": [
-          "Conservo la postura contraria sin exagerarla.",
-          "Respondo con una razón o condición."
-        ]
-      },
-      {
-        "type": "open",
-        "prompt": "Explica dos cambios que harías para adaptar tu entrega de la semana 2 a un mensaje cercano y a un informe formal.",
-        "model": "Cambiaría el tratamiento y algunas fórmulas, pero conservaría las fuentes, los límites y las condiciones acordadas.",
-        "checklist": [
-          "Cambio recursos de registro.",
-          "No cambio el contenido del compromiso."
+          "Uso marco pasado en la primera frase.",
+          "Uso «si + imperfecto de subjuntivo» + condicional en la segunda."
         ]
       }
     ]
   },
   "complete": {
     "canNow": [
-      "Puedo contrastar expectativas entre generaciones.",
-      "Puedo sostener una interpretación con evidencia y una reserva.",
-      "Puedo revisar mi producción y continuarla mediante interacción."
+      "Puedo elegir el tiempo del subjuntivo según el verbo principal y el momento de la acción.",
+      "Puedo usar el perfecto y el imperfecto de subjuntivo para mirar atrás desde el presente.",
+      "Puedo presentar una condición como posible o como imaginada y negociar con hipótesis."
     ],
     "review": [
-      "Sin mirar la semana 1, transforma dos órdenes familiares en peticiones y distingue qué se afirmó de qué se esperaba.",
-      "Dentro de 48 horas, sin consultar el texto, reconstruye dos posiciones y un recurso lingüístico; comprueba después qué omitiste.",
-      "Una semana después, adapta tu respuesta a otro destinatario y recupera los objetivos marcados en la práctica."
+      "Mañana, cambia cinco frases de tu propuesta del marco presente al pasado sin mirar la tabla.",
+      "En tres días, di en voz alta tres cosas que harías si tuvieras un mes libre y tres que harás si este fin de semana hace buen tiempo.",
+      "Antes de la semana 3, recupera tu correo de la semana 1 y comprueba la correlación de cada subjuntivo."
     ]
-  }
+  },
+  "related": [
+    {
+      "path": "/gramatica/correlacion-temporal-presente-pasado-y-futuro",
+      "label": "Clase: Correlación temporal: presente, pasado y futuro"
+    },
+    {
+      "path": "/si-fuera-distinto",
+      "label": "Clase: Si + imperfecto de subjuntivo + condicional"
+    }
+  ]
 };
