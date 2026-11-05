@@ -81,7 +81,7 @@ test("marketing surfaces stay reusable and the free lesson close is global", asy
     assert.match(sections, new RegExp(`export function ${component}`));
   assert.match(library, /SpanishCueHero/);
   assert.match(brand, /PROBAR UNA CLASE GRATIS/);
-  assert.match(brand, /FREE_DEMO_PATH = "\/demo\/noche-abierta"/);
+  assert.match(brand, /FREE_DEMO_PATH = "\/gramatica\/indefinido-e-imperfecto"/);
   assert.match(brand, /href=\{FREE_DEMO_PATH\}/);
   // Ale 2026-11-04: the home hero also sells: a PRO plans button, monthly + annual price, more free lessons.
   assert.match(brand, /placement: "hero_secondary", cta_type: "buy", destination: "\/pricing"/);

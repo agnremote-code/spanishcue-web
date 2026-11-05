@@ -7,8 +7,8 @@ import { trackMarketingEvent } from "./marketing/analytics";
 import { CookieSettingsButton } from "./privacy/CookieConsent";
 import ArsPrice from "./marketing/ArsPrice";
 
-/** Where «Probar una clase gratis» goes; a PRO visitor is sent on to the full game. */
-const FREE_DEMO_PATH = "/demo/noche-abierta";
+/** Where «Probar una clase gratis» goes: a free grammar class (ID 350), which asks for a free account after 30 s. The 3D demos stay one tap away. */
+const FREE_DEMO_PATH = "/gramatica/indefinido-e-imperfecto";
 
 const countries: ReadonlyArray<readonly [string, MessageKey]> = [
   ["🇦🇷", "country.argentina"],
@@ -132,7 +132,7 @@ export function SpanishCueHero({ kicker, kickerInHeading = false, pricing = fals
             {locale === "es" ? "Prueba también gratis:" : "Also free to try:"}{" "}
             <a href="/demo/hospital-san-casi-vivo" onClick={() => trackMarketingEvent("cta_click", { placement: "hero_more_hospital", cta_type: "view_lesson", destination: "/demo/hospital-san-casi-vivo" })}>Hospital San Casi Vivo (3D)</a>
             {" · "}
-            <Link href="/gramatica/clase-inicial" onClick={() => trackMarketingEvent("cta_click", { placement: "hero_more_grammar", cta_type: "view_lesson", destination: "/gramatica/clase-inicial" })}>{locale === "es" ? "Clase inicial de gramática" : "First grammar lesson"}</Link>
+            <a href="/demo/noche-abierta" onClick={() => trackMarketingEvent("cta_click", { placement: "hero_more_noche", cta_type: "view_lesson", destination: "/demo/noche-abierta" })}>Noche abierta (3D)</a>
           </p>
         )}
       </div>
