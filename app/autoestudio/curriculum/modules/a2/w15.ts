@@ -1,887 +1,624 @@
 import type { Module } from "../../types";
 
-/** Original A2 week: authored scenario, skills and retrieval. */
 export const a2w15: Module = {
-  "id": "a2-15",
-  "level": "a2",
-  "week": 15,
-  "kind": "checkpoint",
-  "title": "Checkpoint: viaje con cambios",
-  "subtitle": "Reorganizar un viaje, cambiar una reserva y resolver una cita sin perder la información importante.",
-  "stop": {
-    "place": "La Ceiba",
-    "country": "Honduras"
-  },
-  "minutes": 140,
-  "newObjectives": [
-    "a2.rev.checkpoint-3",
-    "a2.spk.resolver-problema",
-    "a2.fun.transmitir-acuerdo"
+  id: "a2-15",
+  level: "a2",
+  week: 15,
+  kind: "checkpoint",
+  title: "Checkpoint: por el malecón, para Utila, y lleva barba",
+  subtitle: "Repaso de las preposiciones de movimiento y ubicación, de por y para, y de ser, estar y llevar para describir, integrado con las relativas, los comparativos, los diminutivos y la negación de las semanas 11 a 14.",
+  stop: { place: "La Ceiba", country: "Honduras" },
+  minutes: 140,
+  newObjectives: [
+    "a2.gram.g073",
+    "a2.gram.g074",
+    "a2.gram.g075",
+    "a2.voc.w15-viaje-costa",
+    "a2.pron.w15-enlace-preposiciones",
+    "a2.lis.w15-llegada-terminal",
+    "a2.read.w15-diario-viaje",
+    "a2.wri.w15-mensaje-encuentro",
+    "a2.spk.w15-describir-ruta",
+    "a2.fun.w15-reconocerse-encuentro",
+    "a2.disc.w15-ordenar-ruta",
+    "a2.rev.w15-semanas-11-15",
   ],
-  "reviewObjectives": [
-    "a2.gram.estar-gerundio",
-    "a2.gram.perifrasis-fase",
-    "a2.voc.cambios-habitos",
-    "a2.pron.asimilacion-nasal",
-    "a2.fun.describir-cambios",
-    "a2.spk.videollamada",
-    "a2.gram.futuro-simple",
-    "a2.gram.si-presente",
-    "a2.voc.tecnologia-futuro",
-    "a2.pron.vocales-atonas",
-    "a2.fun.predecir-prometer",
-    "a2.read.horoscopo-predicciones",
-    "a2.gram.doler",
-    "a2.gram.consejos-deberias",
-    "a2.voc.cuerpo-salud",
-    "a2.pron.letra-x",
-    "a2.fun.medico",
-    "a2.lis.consulta",
-    "a2.gram.condicional-cortesia",
-    "a2.voc.hotel-transporte",
-    "a2.pron.cortesia-entonacion",
-    "a2.fun.reclamar",
-    "a2.wri.correo-reserva",
-    "a2.read.condiciones"
-  ],
-  "prerequisites": [
-    "a2-14"
-  ],
-  "goal": {
-    "canDo": "Puedo reorganizar un viaje, cambiar una reserva y resolver una cita sin perder la información importante.",
-    "steps": [
-      "Prepara la misión y recupera lo que ya sabes.",
-      "Escucha primero; localiza después los datos de la lectura.",
-      "Ensaya, escribe, revisa y lleva una intervención a clase."
-    ]
-  },
-  "theory": {
-    "intro": "Trabaja las formas como herramientas para resolver esta misión. Las escenas y los textos son originales y ficticios.",
-    "parts": [
-      {
-        "heading": "Checkpoint: viaje con cambios · formas que necesitas",
-        "body": [
-          "Recupera acciones en curso, fases, futuro y cortesía dentro de un mismo problema. Estamos esperando describe el presente; acabamos de llegar sitúa algo muy reciente; si sale otro autobús, llegaremos hoy expresa una alternativa; ¿podría cambiar la reserva? pide una solución."
-        ],
-        "support": [
-          "Keep confirmed information separate from an option still being discussed. On the phone, repeat times and agreements before ending the call."
-        ],
-        "examples": [
-          {
-            "es": "Estamos esperando y acabamos de recibir otro aviso."
-          },
-          {
-            "es": "Si el autobús sale a las dos, llegaremos a las seis."
-          }
-        ],
-        "mistakes": [
-          {
-            "wrong": "Si el autobús saldrá, llegaremos hoy.",
-            "right": "Si el autobús sale, llegaremos hoy.",
-            "why": "La condición real después de si lleva presente."
-          }
-        ]
-      },
-      {
-        "heading": "Del sistema al mensaje",
-        "body": [
-          "Por teléfono el interlocutor no ve tus documentos. Presenta el motivo, da una referencia breve, explica el cambio y confirma el acuerdo. Anota únicamente los datos necesarios para el plan: hora, lugar, precio y acción pendiente. No confundas la hora de llegada a recepción con la de la cita."
-        ],
-        "examples": [
-          {
-            "es": "¿Podría mantener la reserva hasta esta noche?"
-          },
-          {
-            "es": "Me duele un pie; tendré que cambiar la excursión."
-          }
-        ]
-      }
-    ]
-  },
-  "grammar": {
-    "exercises": [
-      {
-        "id": "grammar-gap",
-        "type": "gap",
-        "prompt": "Completa según la forma y el contexto indicados.",
-        "items": [
-          {
-            "q": "Ahora ___ esperando en la estación. (estar, nosotros)",
-            "answers": [
-              [
-                "estamos"
-              ]
-            ]
-          },
-          {
-            "q": "Si llegamos tarde, ___ al hotel. (llamar, nosotros, futuro)",
-            "answers": [
-              [
-                "llamaremos"
-              ]
-            ]
-          },
-          {
-            "q": "A Lara le ___ un pie. (doler)",
-            "answers": [
-              [
-                "duele"
-              ]
-            ]
-          }
-        ]
-      },
-      {
-        "id": "grammar-transform",
-        "type": "transform",
-        "prompt": "Reformulación controlada: respeta las palabras y el orden indicados. En las tareas abiertas posteriores puedes elegir otras formulaciones.",
-        "items": [
-          {
-            "source": "Quiero cambiar la visita.",
-            "instruction": "Empieza la pregunta con ¿Podría y conserva cambiar la visita; no añadas sujeto ni otra fórmula de cortesía.",
-            "answers": [
-              "¿Podría cambiar la visita?"
-            ],
-            "why": "Esta actividad controla una forma concreta. La respuesta conserva los datos y sigue las palabras y el orden indicados; otras formulaciones se practican en producción abierta."
-          },
-          {
-            "source": "Hemos recibido un aviso hace un minuto.",
-            "instruction": "Sustituye Hemos recibido por acabar de + infinitivo en primera persona plural y elimina hace un minuto. Conserva un aviso al final.",
-            "answers": [
-              "Acabamos de recibir un aviso."
-            ],
-            "why": "Esta actividad controla una forma concreta. La respuesta conserva los datos y sigue las palabras y el orden indicados; otras formulaciones se practican en producción abierta."
-          },
-          {
-            "source": "Llegamos mañana. Avisamos hoy.",
-            "instruction": "Empieza con Si llegamos mañana y expresa avisamos hoy en futuro después de una coma; no añadas sujetos.",
-            "answers": [
-              "Si llegamos mañana, avisaremos hoy."
-            ],
-            "why": "Esta actividad controla una forma concreta. La respuesta conserva los datos y sigue las palabras y el orden indicados; otras formulaciones se practican en producción abierta."
-          }
-        ]
-      }
-    ]
-  },
-  "vocabulary": {
-    "intro": "Aprende cada expresión como un bloque y úsala después con un dato propio.",
-    "groups": [
-      {
-        "title": "Acciones y relaciones",
-        "items": [
-          {
-            "es": "un retraso anunciado",
-            "en": "an announced delay"
-          },
-          {
-            "es": "mantener una reserva",
-            "en": "hold a booking"
-          },
-          {
-            "es": "avisar al alojamiento",
-            "en": "notify accommodation"
-          },
-          {
-            "es": "cambiar el recorrido",
-            "en": "change the route"
-          }
-        ]
-      },
-      {
-        "title": "Datos para resolver la misión",
-        "items": [
-          {
-            "es": "la salida alternativa",
-            "en": "alternative departure"
-          },
-          {
-            "es": "confirmar por teléfono",
-            "en": "confirm by phone"
-          },
-          {
-            "es": "anotar el acuerdo",
-            "en": "note the agreement"
-          },
-          {
-            "es": "una gestión pendiente",
-            "en": "an unfinished arrangement"
-          }
-        ]
-      }
+  reviewObjectives: [],
+  prerequisites: [],
+  goal: {
+    canDo: "Al final de esta semana puedes explicar una ruta (desde la terminal hasta el muelle, por el malecón, hacia el este) y dónde está cada cosa, decir por qué, para qué, para quién y por cuánto, y describir a una persona como es, como está y qué lleva, combinándolo con las relativas, las comparaciones, los diminutivos y la negación de las semanas 11 a 14.",
+    steps: [
+      "Repasa el movimiento: `desde… hasta`, `de… a`, `hacia`, `por` y `en + transporte`.",
+      "Sitúa las cosas: `delante de`, `enfrente de`, `al lado de`, `entre… y…`.",
+      "Elige `para` (finalidad, destino, persona, plazo) o `por` (causa, ruta, momento, precio).",
+      "Describe con `ser` (cómo es), `estar` (cómo está) y `llevar` (qué lleva puesto).",
+      "Integra las semanas 11 a 14: relativas, comparaciones, diminutivos, algo y nadie, negación.",
+      "Escucha una llegada a La Ceiba y escribe un mensaje para que alguien te reconozca.",
     ],
-    "exercises": [
-      {
-        "id": "vocabulary-match",
-        "type": "match",
-        "prompt": "Relaciona cada expresión con su significado; después úsala oralmente en una situación nueva.",
-        "pairs": [
-          {
-            "left": "un retraso anunciado",
-            "right": "an announced delay"
-          },
-          {
-            "left": "mantener una reserva",
-            "right": "hold a booking"
-          },
-          {
-            "left": "avisar al alojamiento",
-            "right": "notify accommodation"
-          },
-          {
-            "left": "cambiar el recorrido",
-            "right": "change the route"
-          },
-          {
-            "left": "la salida alternativa",
-            "right": "alternative departure"
-          },
-          {
-            "left": "confirmar por teléfono",
-            "right": "confirm by phone"
-          },
-          {
-            "left": "anotar el acuerdo",
-            "right": "note the agreement"
-          },
-          {
-            "left": "una gestión pendiente",
-            "right": "an unfinished arrangement"
-          }
-        ]
-      }
-    ]
   },
-  "pronunciation": {
-    "focus": "Confirmar horas parecidas",
-    "explanation": [
-      "En una llamada, catorce y dieciséis o seis y siete pueden confundirse si el sonido falla. Repite la hora con otra forma: a las catorce, es decir, a las dos. No es necesario imitar una voz; busca claridad y comprueba que tu interlocutor entiende."
-    ],
-    "perceive": {
-      "id": "pronunciation-perceive",
-      "type": "listen",
-      "prompt": "Escucha primero y decide; usa también el contexto.",
-      "items": [
-        {
-          "audio": "El autobús sale a las catorce.",
-          "q": "¿A qué hora sale?",
-          "options": [
-            "A las dos de la tarde",
-            "A las cuatro de la tarde"
+  theory: {
+    intro: "Esta semana es un **checkpoint**: repasas tus tres últimas clases, **preposiciones de movimiento y ubicación**, **por y para** y **ser, estar y llevar** para describir, y las unes con todo lo de las semanas 11 a 14. La situación: Valeria viaja de Tegucigalpa a La Ceiba para encontrarse con su primo Nico, al que no ve desde hace ocho años, y juntos toman el ferry a la isla de Utila.",
+    parts: [
+      {
+        heading: "Moverse y situar: desde, hasta, hacia, por",
+        body: [
+          "Para una **ruta** completa usa **desde… hasta** o **de… a**: _Fuimos **desde** la terminal **hasta** el muelle_, _**de** Tegucigalpa **a** La Ceiba_. **A** marca el destino al que llegas; **hacia**, solo la dirección: _El barco va **hacia** el norte_. **Hasta** marca el final: _Caminamos **hasta** la playa_.",
+          "**Por** dice el **camino** o el lugar por donde pasas: _Pasamos **por** el malecón_, _El bus va **por** la costa_. El transporte va con **en** (_en bus, en ferry, en taxi_), pero se dice **a pie**.",
+          "Para **situar** usa estas expresiones con **de**: _delante de, detrás de, enfrente de, al lado de, encima de, debajo de, dentro de, fuera de, cerca de, lejos de_. Y para dos referencias, **entre… y…**: _La taquilla está **entre** la cafetería **y** la puerta tres_.",
+        ],
+        support: [
+          "_desde… hasta / de… a_ = from… to; _hacia_ = towards; _hasta_ = as far as; _por_ = through, along, via. Transport: _en bus_, but _a pie_. Location phrases take _de_: _delante de, enfrente de, al lado de_.",
+        ],
+        table: {
+          caption: "Ruta y ubicación",
+          head: ["Preposición", "Idea", "Ejemplo"],
+          rows: [
+            ["desde… hasta", "principio y final", "desde la terminal hasta el muelle"],
+            ["a", "destino", "Llegamos a La Ceiba a las doce."],
+            ["hacia", "dirección", "Caminamos hacia el faro."],
+            ["por", "camino, lugar por donde pasas", "Pasamos por el puente."],
+            ["enfrente de", "al otro lado, cara a cara", "un puesto enfrente del mar"],
+            ["entre… y…", "en medio de dos cosas", "entre el banco y la farmacia"],
           ],
-          "answer": 0,
-          "why": "Escucha de nuevo la frase completa y compara el dato con su forma escrita."
         },
-        {
-          "audio": "La recepción cierra a las diecinueve.",
-          "q": "¿Cuál es la hora?",
-          "options": [
-            "Las siete de la tarde",
-            "Las nueve de la noche"
+        examples: [
+          { es: "Desde el hotel hasta la playa se tarda diez minutos a pie.", en: "From the hotel to the beach it takes ten minutes on foot." },
+          { es: "La parada está detrás de la iglesia, al lado de un árbol enorme.", en: "The stop is behind the church, next to a huge tree." },
+        ],
+        mistakes: [
+          { wrong: "Llegamos en La Ceiba a las doce.", right: "Llegamos a La Ceiba a las doce.", why: "Con **llegar**, el destino va con **a**." },
+          { wrong: "Para ir al muelle pasamos para el centro.", right: "Para ir al muelle pasamos por el centro.", why: "El camino por donde pasas va con **por**." },
+          { wrong: "El taxi está detrás la terminal.", right: "El taxi está detrás de la terminal.", why: "_Detrás, delante, enfrente_… necesitan **de**." },
+        ],
+      },
+      {
+        heading: "Por y para: ¿por qué o para qué?",
+        body: [
+          "**Para** mira **hacia delante**: la **finalidad** (_Ahorro **para** viajar_), el **destino** (_El ferry sale **para** Utila_), la persona que **recibe** algo (_Este regalo es **para** ti_) y el **plazo** (_Necesito los boletos **para** el viernes_).",
+          "**Por** mira **hacia atrás o alrededor**: la **causa** (_No dormí **por** el calor_, _Gracias **por** todo_), el **camino** (_**por** el malecón_), una zona sin precisar (_¿Hay un cajero **por** aquí?_), la **parte del día** (_**por** la mañana_) y el **precio** o el cambio (_Lo compré **por** seiscientos lempiras_).",
+          "Para la causa: **por** + nombre, **porque** + verbo conjugado. _Llegué tarde **por** el tráfico_ = _Llegué tarde **porque** había tráfico_.",
+        ],
+        support: [
+          "_para_ = purpose, destination, recipient, deadline. _por_ = cause, route, approximate place, part of the day, price. _por_ + noun, _porque_ + conjugated verb.",
+        ],
+        table: {
+          caption: "¿Qué pregunta responde?",
+          head: ["Pregunta", "Respuesta", "Ejemplo"],
+          rows: [
+            ["¿Para qué?", "para + infinitivo", "Vine para conocer la isla."],
+            ["¿Para dónde? ¿Para quién? ¿Para cuándo?", "para + lugar / persona / fecha", "Sale para Utila. Es para ti. Para el lunes."],
+            ["¿Por qué?", "por + nombre / porque + verbo", "Por la lluvia. / Porque llovía."],
+            ["¿Por dónde? ¿Cuándo?", "por + lugar / parte del día", "Por la playa. Por la tarde."],
+            ["¿Por cuánto?", "por + precio", "Por veinte dólares."],
           ],
-          "answer": 0,
-          "why": "Escucha de nuevo la frase completa y compara el dato con su forma escrita."
-        }
-      ]
+        },
+        examples: [
+          { es: "Gracias por recogerme; esta piña es para tu madre.", en: "Thanks for picking me up; this pineapple is for your mother." },
+          { es: "Por la tarde paseamos por la playa para ver el atardecer.", en: "In the afternoon we walked along the beach to watch the sunset." },
+        ],
+        mistakes: [
+          { wrong: "Muchas gracias para la invitación.", right: "Muchas gracias por la invitación.", why: "Agradecer es una **causa**: **gracias por**." },
+          { wrong: "Estudio español por viajar por Centroamérica.", right: "Estudio español para viajar por Centroamérica.", why: "Finalidad (¿para qué?): **para** + infinitivo." },
+          { wrong: "No fuimos a la playa por llovía.", right: "No fuimos a la playa porque llovía.", why: "Con verbo conjugado: **porque**." },
+        ],
+        tip: "Pregúntate: ¿miro hacia el **objetivo** (para) o hacia la **razón** o el **camino** (por)?",
+      },
+      {
+        heading: "Ser, estar y llevar para describir a alguien",
+        body: [
+          "Con **ser** dices cómo **es** una persona: características que la identifican. _Nico **es** alto y moreno_, _**es** muy simpático_. Con **tener** describes partes del cuerpo: _**tiene** los ojos verdes_, _**tiene** el pelo rizado_.",
+          "Con **estar** dices cómo **está** ahora o qué **cambio** notas: _**Está** cansada por el viaje_, _**Estás** más delgado_, _¡**Está** muy cambiado!_. El mismo adjetivo puede ir con los dos verbos: _Es moreno_ (de piel) / _Está moreno_ (por el sol).",
+          "Con **llevar** dices qué tiene **puesto** o cómo tiene el pelo: _**Lleva** gafas de sol_, _**lleva** barba_, _**lleva** una mochila roja_, _**lleva** el pelo largo_. **Ponerse** es la acción; **llevar**, el resultado: _Me puse la chaqueta; ahora la llevo_.",
+        ],
+        support: [
+          "_ser_ = what someone is like (identity, character); _estar_ = how they are now or a change you notice; _llevar_ = what they're wearing (clothes, glasses, beard, hairstyle); _tener_ = body features (_tiene los ojos verdes_).",
+        ],
+        table: {
+          caption: "Cuatro verbos para describir",
+          head: ["Verbo", "Para", "Ejemplo"],
+          rows: [
+            ["ser", "cómo es (característica)", "Es alta y muy alegre."],
+            ["estar", "cómo está (estado, cambio)", "Está nerviosa. Está más delgada."],
+            ["llevar", "ropa, gafas, barba, peinado", "Lleva una gorra y el pelo corto."],
+            ["tener", "partes del cuerpo", "Tiene los ojos negros."],
+          ],
+        },
+        examples: [
+          { es: "Mi tía es bajita y muy habladora; hoy lleva un vestido de flores.", en: "My aunt is short and very chatty; today she's wearing a flowery dress." },
+          { es: "¡Qué moreno estás! ¿Fuiste a la playa?", en: "You're so tanned! Did you go to the beach?" },
+        ],
+        mistakes: [
+          { wrong: "Valeria es cansada después del viaje.", right: "Valeria está cansada después del viaje.", why: "Un estado de ahora: **estar**." },
+          { wrong: "Mi primo es con barba.", right: "Mi primo lleva barba.", why: "Para la barba, las gafas o la ropa: **llevar**." },
+          { wrong: "Mi hermana lleva los ojos azules.", right: "Mi hermana tiene los ojos azules.", why: "Partes del cuerpo: **tener**." },
+        ],
+      },
+      {
+        heading: "Checkpoint: lo que ya sabes de las semanas 11 a 14",
+        body: [
+          "En este checkpoint juntas todo. **Semana 11**: relativas para decir qué persona, cosa o lugar (_el chico **que** lleva barba, el muelle **donde** sale el ferry, **lo que** más me gusta_). **Semana 12**: comparar y destacar (_**más** alto **que** antes, la **mejor** playa **de** la isla, cansadísima_).",
+          "**Semana 13**: diminutivos y aumentativos (_un **ratito**, un **puestito**, un **problemón**_) y _algo, nada, alguien, nadie_ (_No reconocí **a nadie**_). **Semana 14**: _algún, ningún, mucho, demasiado, cada, otro_ y la negación (_No llevo **ninguna** chaqueta_, _**Ni** él **ni** yo dormimos_).",
+          "Las clases de esta semana aparecen con todas ellas: _el muelle **donde** sale el ferry **para** Utila_, _el camino **más** bonito pasa **por** el malecón_, _**nadie** lleva gafas_, _**está** cambiadísimo_. Para el examen, revisa siempre: la preposición, por o para, y el verbo para describir.",
+        ],
+        table: {
+          caption: "Semanas 11 a 14 con las clases de hoy",
+          head: ["Semana", "Clase", "Con esta semana"],
+          rows: [
+            ["11", "relativas con que, donde, cuando, lo que", "Es el chico que lleva la camiseta amarilla."],
+            ["12", "comparativos y superlativos", "Está más delgada que antes; es el ferry más rápido de la costa."],
+            ["13", "diminutivos y algo, alguien, nadie", "Te espero en el puestito de enfrente; no vino nadie por aquí."],
+            ["14", "alguno, ninguno, mucho, negación", "No hay ningún taxi por la terminal; tampoco hay buses."],
+          ],
+        },
+        mistakes: [
+          { wrong: "Es el muelle que sale el ferry para Utila.", right: "Es el muelle donde sale el ferry para Utila.", why: "Semana 11: el ferry sale **desde** ese lugar: **donde**." },
+          { wrong: "Nico está más alto como antes.", right: "Nico es tan alto como antes.", why: "Semana 12: igualdad con **tan… como**; la altura es una característica: **es**." },
+        ],
+      },
+    ],
+  },
+  grammar: {
+    intro: "Primero la ruta y la ubicación; después por y para; al final, ser, estar, llevar y tener para describir.",
+    exercises: [
+      {
+        id: "g1",
+        type: "gap",
+        title: "La ruta",
+        prompt: "Completa con **desde, hasta, a, hacia, por** o **en**.",
+        items: [
+          { q: "El bus va ___ San Pedro Sula ___ La Ceiba sin parar.", answers: [["desde", "de"], ["hasta", "a"]], why: "Principio y final: **desde… hasta** o **de… a**." },
+          { q: "Para llegar al parque, cruza el puente y camina ___ el río unos cinco minutos.", answers: [["por"]], why: "El camino por donde pasas: **por**." },
+          { q: "Mi tío siempre va al trabajo ___ bicicleta.", answers: [["en"]], why: "Transporte: **en** bicicleta." },
+          { q: "Cuando salimos del puerto, el barco giró ___ el este.", answers: [["hacia"]], why: "Solo la dirección: **hacia**." },
+          { q: "Llegamos ___ Utila justo antes de la puesta de sol.", answers: [["a"]], why: "Destino con **llegar**: **a**." },
+        ],
+      },
+      {
+        id: "g2",
+        type: "choice",
+        title: "¿Por o para?",
+        prompt: "Elige **por** o **para**.",
+        items: [
+          { q: "El ferry de las cuatro sale ___ Roatán.", options: ["por", "para"], answer: 1, why: "Destino: **para**." },
+          { q: "Te cambio mi gorra ___ tus gafas de sol.", options: ["por", "para"], answer: 0, why: "Intercambio: **por**." },
+          { q: "Necesito el informe ___ el lunes a primera hora.", options: ["para", "por"], answer: 0, why: "Plazo: **para**." },
+          { q: "Cancelaron la excursión ___ la tormenta.", options: ["para", "por"], answer: 1, why: "Causa + nombre: **por**." },
+          { q: "¿Hay alguna farmacia ___ aquí?", options: ["para", "por"], answer: 1, why: "Zona sin precisar: **por** aquí." },
+          { q: "Ahorro todos los meses ___ hacer un curso de buceo.", options: ["por", "para"], answer: 1, why: "Finalidad + infinitivo: **para**." },
+        ],
+      },
+      {
+        id: "g3",
+        type: "transform",
+        title: "Porque o por",
+        prompt: "Cambia **porque + verbo** por **por + nombre**. Usa el nombre entre paréntesis.",
+        items: [
+          { source: "No dormimos porque hacía calor. (el calor)", answers: ["No dormimos por el calor."], why: "**Por** + nombre: _por el calor_." },
+          { source: "El vuelo salió tarde porque había niebla. (la niebla)", answers: ["El vuelo salió tarde por la niebla."], why: "Causa con nombre: **por la niebla**." },
+          { source: "Te doy las gracias porque me ayudaste. (tu ayuda)", answers: ["Te doy las gracias por tu ayuda.", "Gracias por tu ayuda."], why: "**Gracias por** + nombre." },
+          { source: "Cerraron la playa porque había tiburones. (los tiburones)", answers: ["Cerraron la playa por los tiburones."], why: "**Por los tiburones**." },
+        ],
+      },
+      {
+        id: "g4",
+        type: "gap",
+        title: "Ser, estar, llevar, tener",
+        prompt: "Completa con **ser, estar, llevar** o **tener** en presente.",
+        items: [
+          { q: "Mi primo ___ muy alto y ___ los ojos verdes.", answers: [["es"], ["tiene"]], why: "Característica: **es**; parte del cuerpo: **tiene**." },
+          { q: "Hoy ___ una camisa blanca y unas sandalias.", answers: [["lleva", "llevo", "llevas", "llevamos", "llevan"]], why: "Ropa: **llevar**." },
+          { q: "¡Ay, qué rojo ___! ¿No te pusiste crema? (tú)", answers: [["estás"]], why: "Un cambio que notas ahora: **estás** rojo." },
+          { q: "Mi abuela ___ el pelo blanco y siempre ___ un collar de perlas.", answers: [["tiene", "lleva"], ["lleva"]], why: "El pelo se describe con **tener** o **llevar**; el collar puesto, con **llevar**." },
+          { q: "Después de siete horas de bus, Valeria ___ agotada.", answers: [["está"]], why: "Estado de ahora: **está**." },
+        ],
+      },
+    ],
+  },
+  vocabulary: {
+    intro: "Palabras para un viaje a la costa: el transporte, la ruta y la ropa y el aspecto para reconocer a alguien.",
+    groups: [
+      {
+        title: "Transporte y ruta",
+        items: [
+          { es: "la terminal de buses", en: "the bus station" },
+          { es: "el muelle", en: "the pier / dock" },
+          { es: "el ferry", en: "the ferry" },
+          { es: "el malecón", en: "the seafront promenade" },
+          { es: "el faro", en: "the lighthouse" },
+          { es: "la taquilla", en: "the ticket office" },
+        ],
+      },
+      {
+        title: "Aspecto y ropa",
+        items: [
+          { es: "llevar barba / bigote", en: "to have a beard / a moustache" },
+          { es: "llevar el pelo largo / corto / recogido", en: "to wear one's hair long / short / tied back" },
+          { es: "estar moreno / moreno de piel", en: "to be tanned / to have dark skin" },
+          { es: "la sudadera", en: "the sweatshirt / hoodie" },
+          { es: "las sandalias", en: "the sandals" },
+        ],
+      },
+      {
+        title: "Para encontrarse",
+        items: [
+          { es: "¿Cómo te reconozco?", en: "How will I recognise you?" },
+          { es: "Te espero delante de…", en: "I'll wait for you in front of…" },
+          { es: "¿Por dónde vas?", en: "Where are you now? (on the way)" },
+          { es: "Estás cambiadísimo.", en: "You've changed so much." },
+          { es: "Gracias por venir a buscarme.", en: "Thanks for coming to pick me up." },
+        ],
+      },
+    ],
+    exercises: [
+      {
+        id: "v1",
+        type: "match",
+        title: "¿Qué es?",
+        prompt: "Une cada descripción con la palabra.",
+        pairs: [
+          { left: "Es el paseo al lado del mar donde la gente camina por la tarde.", right: "el malecón" },
+          { left: "Es el lugar donde suben los pasajeros al barco.", right: "el muelle" },
+          { left: "Es la torre con una luz que ayuda a los barcos de noche.", right: "el faro" },
+          { left: "Es la ventanilla donde compras los boletos.", right: "la taquilla" },
+          { left: "Es la ropa de algodón con mangas largas que llevas cuando hace fresco.", right: "la sudadera" },
+        ],
+        why: "Definiciones con **que** y **donde**, como en la semana 11.",
+      },
+      {
+        id: "v2",
+        type: "context",
+        title: "Para encontrarse",
+        prompt: "Lee la situación y elige la frase más natural.",
+        items: [
+          { context: "Una amiga va a buscarte al aeropuerto y no sabe en qué parte estás.", q: "Le escribes:", options: ["Te espero delante de la puerta dos, al lado de la cafetería.", "Te espero por la puerta dos para la cafetería.", "Te espero hacia la puerta dos."], answer: 0, why: "Ubicación precisa: **delante de**, **al lado de**." },
+          { context: "Tu primo te recoge en la estación después de un viaje larguísimo.", q: "Le dices:", options: ["Gracias para venir a buscarme.", "Gracias por venir a buscarme.", "Gracias porque venir a buscarme."], answer: 1, why: "**Gracias por** + infinitivo." },
+        ],
+      },
+    ],
+  },
+  pronunciation: {
+    focus: "Las preposiciones se pegan: desde‿el, por‿el, para‿el",
+    explanation: [
+      "Las preposiciones casi nunca llevan fuerza: se **pegan** a la palabra siguiente. Si una termina en vocal y la otra empieza por vocal, las dos vocales se unen en una sola sílaba: _de‿a-QUÍ_, _pa-ra‿el-MUE-lle_, _has-ta‿el-FA-ro_.",
+      "Si la preposición termina en consonante, la consonante pasa a la palabra siguiente: _por el_ suena _po-rel_; _desde el_ suena _des-de‿el_. Así la frase suena seguida, sin cortes.",
+      "En el habla rápida de muchos países, **para** se reduce a **pa** (_pa'l muelle_). Entiéndelo cuando lo oigas, pero en la escritura usa siempre **para**.",
+    ],
+    support: [
+      "Prepositions are unstressed and link to the next word: _para_el_, _hasta_el_; a final consonant moves to the next vowel: _por_el_ sounds like _po-rel_. In fast speech _para_ is often _pa_, but always write _para_.",
+    ],
+    table: {
+      caption: "Unir sin cortar",
+      head: ["Escrito", "Suena"],
+      rows: [
+        ["por el malecón", "po-rel-ma-le-CÓN"],
+        ["para el ferry", "pa-rael-FE-rry"],
+        ["hasta el faro", "has-tael-FA-ro"],
+        ["desde aquí", "des-dea-QUÍ"],
+      ],
     },
-    "produce": [
-      {
-        "text": "Sale a las catorce / a las dos de la tarde.",
-        "tip": "Graba, escucha y repite. Pide a una persona que confirme lo que entendió; no hay evaluación automática de calidad oral."
-      },
-      {
-        "text": "Llegaremos a las dieciocho / a las seis.",
-        "tip": "Graba, escucha y repite. Pide a una persona que confirme lo que entendió; no hay evaluación automática de calidad oral."
-      },
-      {
-        "text": "El recorrido empieza a las once / mañana.",
-        "tip": "Graba, escucha y repite. Pide a una persona que confirme lo que entendió; no hay evaluación automática de calidad oral."
-      }
-    ]
+    perceive: {
+      id: "p1",
+      type: "listen",
+      title: "¿Por o para?",
+      prompt: "Escucha la frase y elige la preposición que oyes.",
+      items: [
+        { q: "¿Qué preposición oyes en la frase del malecón?", audio: "Vamos por el malecón.", options: ["por", "para", "hasta"], answer: 0 },
+        { q: "¿Qué preposición oyes en la frase del barco?", audio: "Este barco sale para Utila.", options: ["por", "desde", "para"], answer: 2 },
+        { q: "¿Qué preposición oyes en la frase del faro?", audio: "Caminamos hasta el faro.", options: ["hacia", "hasta", "desde"], answer: 1 },
+        { q: "¿Qué oyes en la frase de la isla?", audio: "Desde aquí se ve la isla.", options: ["De aquí", "Hasta aquí", "Desde aquí"], answer: 2 },
+        { q: "¿Qué preposición oyes en la frase del viento?", audio: "El barco va hacia el norte.", options: ["hacia", "hasta", "para"], answer: 0 },
+      ],
+    },
+    produce: [
+      { text: "Pasamos por el malecón.", tip: "_po-rel_: la _r_ se une a _el_." },
+      { text: "Desde la terminal hasta el muelle.", tip: "_has-tael_: dos vocales en una sílaba." },
+      { text: "El ferry sale para Utila a las cuatro.", tip: "_pa-ra-U-ti-la_ sin pausa." },
+      { text: "Te espero enfrente de la taquilla.", tip: "_en-fren-te-de-la_ ligero; fuerza en _TA-qui-lla_." },
+      { text: "Es alto, está moreno y lleva barba.", tip: "Tres golpes claros: _AL-to_, _mo-RE-no_, _BAR-ba_." },
+    ],
+    spelling: "Se escribe siempre **para** y **por el** (sin apóstrofo). _Pa'l_ es solo oral. **Al** y **del** son las únicas contracciones: _vamos al muelle, salimos del puerto_.",
   },
-  "listening": {
-    "title": "Llamada desde la estación",
-    "context": "Escena original de comunicación cotidiana. Escucha antes de abrir la transcripción. La reproducción disponible puede usar síntesis del navegador; no acredita una variedad regional ni una grabación humana.",
-    "speakers": [
-      {
-        "id": "a",
-        "name": "Persona A",
-        "voice": "es-ES-f"
-      },
-      {
-        "id": "b",
-        "name": "Persona B",
-        "voice": "es-ES-m"
-      }
+  listening: {
+    title: "¿Cómo te reconozco?",
+    context: "Valeria viaja en bus de Tegucigalpa a La Ceiba. Su primo Nico la espera en la terminal y hablan por teléfono. Hace ocho años que no se ven.",
+    speakers: [
+      { id: "nico", name: "Nico", voice: "es-MX-m", role: "primo de Valeria, vive en La Ceiba" },
+      { id: "valeria", name: "Valeria", voice: "es-VE-f", role: "viaja desde Tegucigalpa" },
     ],
-    "script": [
-      {
-        "speaker": "a",
-        "text": "Buenas tardes. Tengo una reserva a nombre de Lara para esta noche. Estamos en la estación y nuestro autobús se ha cancelado. Quería avisar de que llegaremos más tarde de lo previsto."
-      },
-      {
-        "speaker": "b",
-        "text": "Gracias por llamar. ¿A qué hora sale el siguiente autobús? La recepción cierra a las siete, pero podemos organizar la llave si llegan después. ¿Siguen siendo dos personas?"
-      },
-      {
-        "speaker": "a",
-        "text": "Sí, dos. El autobús sale a las dos y el viaje dura cuatro horas. Si no hay más retrasos, llegaremos antes de las siete. ¿Podría mantener la reserva? También quería cambiar la visita guiada de esta tarde."
-      },
-      {
-        "speaker": "b",
-        "text": "Mantendremos la habitación. La visita puede cambiarse a mañana a las diez. Si prefieren algo más tranquilo, tenemos un recorrido corto por el centro a las once. Pueden decidir al llegar."
-      },
-      {
-        "speaker": "a",
-        "text": "Muchas gracias. Me duele un pie y creo que el recorrido corto será mejor. Confirmaremos al llegar."
-      },
-      {
-        "speaker": "a",
-        "text": "Una pregunta más: mi compañero tiene que enviar un documento de su curso antes de las ocho. ¿Hay conexión en la habitación o tenemos que usar el salón? Nos preocupa llegar con poco tiempo."
-      },
-      {
-        "speaker": "b",
-        "text": "En el salón suele funcionar mejor. Puede usar una mesa cuando llegue. Si el autobús vuelve a retrasarse, quizá le convenga enviar el documento desde la estación. Así termina la gestión antes de venir al alojamiento."
-      },
-      {
-        "speaker": "a",
-        "text": "De acuerdo. Voy a explicarle las dos opciones. Ahora confirmaremos el billete y llamaremos al parque antes de las tres para cambiar la visita. Después le enviaré un mensaje con la hora aproximada de llegada. ¿Es suficiente?"
-      },
-      {
-        "speaker": "b",
-        "text": "Sí. Con ese mensaje podremos preparar la llave si hace falta. Recuerde que el desayuno empieza a las siete, pero no es necesario venir a esa hora: pueden descansar y bajar un poco más tarde."
-      }
+    script: [
+      { speaker: "nico", text: "¿Vale? Soy Nico. ¿Por dónde vas? Yo ya estoy en la terminal, delante de la cafetería." },
+      { speaker: "valeria", text: "Hola, primo. Acabamos de pasar por Tela, así que llego en una hora. Oye, hace ocho años que no nos vemos. ¿Cómo te reconozco?" },
+      { speaker: "nico", text: "Fácil: soy tan alto como antes, pero ahora llevo barba y el pelo largo. Y hoy llevo una camiseta amarilla del equipo de la ciudad." },
+      { speaker: "valeria", text: "¡Qué cambio! Yo estoy más delgada que antes. Llevo gafas de sol y una mochila roja enorme. Y estoy cansadísima: el bus salió a las cinco de la mañana." },
+      { speaker: "nico", text: "Pobrecita. Mira, el plan: desde la terminal vamos en taxi hasta el muelle. Pasamos por el malecón, que es el camino más bonito de la ciudad, y comemos algo en un puestito enfrente del mar." },
+      { speaker: "valeria", text: "Perfecto. ¿Y los boletos del ferry para Utila? ¿Ya los compraste?" },
+      { speaker: "nico", text: "Todavía no. No contesta nadie en la oficina, pero no hay ningún problema: los compramos allí, en la taquilla del muelle. Cuestan unos seiscientos lempiras por persona." },
+      { speaker: "valeria", text: "Te los pago yo. Es mi regalo, para darte las gracias por la invitación." },
+      { speaker: "nico", text: "Gracias, prima. Ah, y dentro del barco hace demasiado frío por el aire acondicionado. ¿Traes alguna chaqueta?" },
+      { speaker: "valeria", text: "No, no traje ninguna. ¿Me prestas una sudadera?" },
+      { speaker: "nico", text: "Claro. Te espero aquí, entre la cafetería y la puerta número tres." },
     ],
-    "stages": [
+    stages: [
       {
-        "stage": "gist",
-        "prompt": "Primera escucha: busca la situación general sin abrir la transcripción.",
-        "exercise": {
-          "id": "listen-gist",
-          "type": "choice",
-          "prompt": "Escucha «Llamada desde la estación» y reconoce la intención.",
-          "items": [
-            {
-              "q": "¿Qué gestiona Lara?",
-              "options": [
-                "La llegada tardía y un cambio de actividad",
-                "Una compra de zapatos",
-                "La devolución del desayuno"
-              ],
-              "answer": 0,
-              "why": "La información de la situación corresponde a «La llegada tardía y un cambio de actividad»; comprueba la frase completa antes de volver a responder."
-            },
-            {
-              "q": "¿Qué información aporta el alojamiento?",
-              "options": [
-                "Opciones para mantener la estancia y adaptar la actividad",
-                "Un nuevo horario de autobuses",
-                "Un diagnóstico para el pie"
-              ],
-              "answer": 0,
-              "why": "Comprueba el contexto y los datos de la escena: Opciones para mantener la estancia y adaptar la actividad."
-            }
-          ]
-        }
-      },
-      {
-        "stage": "detail",
-        "prompt": "Segunda escucha: anota los datos necesarios; después comprueba tus respuestas.",
-        "exercise": {
-          "id": "listen-detail",
-          "type": "choice",
-          "prompt": "Localiza dos datos concretos en «Llamada desde la estación».",
-          "items": [
-            {
-              "q": "¿Qué mantiene el alojamiento?",
-              "options": [
-                "La visita de hoy obligatoriamente",
-                "El autobús de las diez",
-                "La habitación"
-              ],
-              "answer": 2,
-              "why": "La información de la situación corresponde a «La habitación»; comprueba la frase completa antes de volver a responder."
-            },
-            {
-              "q": "¿Qué opción parece mejor para Lara?",
-              "options": [
-                "La visita de hoy",
-                "El recorrido corto de las once",
-                "Una caminata larga"
-              ],
-              "answer": 1,
-              "why": "La información de la situación corresponde a «El recorrido corto de las once»; comprueba la frase completa antes de volver a responder."
-            }
-          ]
-        }
-      },
-      {
-        "stage": "notice",
-        "prompt": "Tercera escucha: atiende a las formas y a cómo se comprueba la información. La transcripción es opcional después de escuchar.",
-        "exercise": {
-          "id": "listen-notice",
-          "type": "choice",
-          "prompt": "Interpreta las palabras clave de «Llamada desde la estación».",
-          "items": [
-            {
-              "q": "¿Qué decisión queda abierta?",
-              "options": [
-                "La reserva de la habitación",
-                "La actividad de mañana",
-                "El número de personas"
-              ],
-              "answer": 1,
-              "why": "La información de la situación corresponde a «La actividad de mañana»; comprueba la frase completa antes de volver a responder."
-            },
-            {
-              "q": "¿Qué expresa creo que el recorrido corto será mejor?",
-              "options": [
-                "Una reserva ya confirmada",
-                "Una queja por el precio",
-                "Una valoración provisional"
-              ],
-              "answer": 2,
-              "why": "Comprueba el contexto y los datos de la escena: Una valoración provisional."
-            }
-          ]
-        }
-      }
-    ]
-  },
-  "reading": {
-    "title": "Dos avisos antes de salir",
-    "genre": "Avisos de transporte y alojamiento",
-    "frame": "Texto original de práctica en una situación ficticia.",
-    "text": [
-      "Transporte Sierra: el servicio de las diez entre Valle y Costa no sale hoy por una avería. Las personas con billete pueden viajar en el servicio de las dos sin pagar una diferencia. El recorrido dura cuatro horas. Si no desean viajar hoy, pueden cambiar el billete para mañana. Deben elegir una opción en el mostrador antes de la una.",
-      "Alojamiento La Fuente: su reserva comienza hoy. La recepción cierra a las siete. Si va a llegar más tarde, llame antes de las seis para organizar la entrega de la llave. Las habitaciones se mantienen hasta las ocho si no recibimos ningún aviso. El desayuno de mañana está incluido y se sirve de siete a nueve.",
-      "Nota de Lara: estamos esperando en la estación. Mi compañero acaba de volver del mostrador. Podemos tomar el autobús de las dos, pero necesito cancelar la visita del parque de esta tarde. Además, me duele un pie desde ayer. Voy a pedir una actividad más tranquila para mañana. Antes de decidir, tenemos que avisar al alojamiento y confirmar la hora de llegada.",
-      "La visita del parque empieza a las cuatro y dura dos horas. El centro permite cambiarla una vez si avisas antes de las tres del mismo día. Puedes elegir otra fecha o un recorrido corto por el centro, que dura cuarenta minutos y tiene varias paradas para sentarse. La diferencia de precio se devuelve en el mostrador; no se entrega dinero al conductor del autobús.",
-      "El compañero de Lara también tiene una gestión pendiente: debe enviar un documento de su curso antes de las ocho. El alojamiento ofrece conexión en el salón, pero no garantiza que funcione en todas las habitaciones. Si el autobús llega con retraso, puede utilizar la conexión de la estación antes de ir al alojamiento. Lara propone anotar las tres gestiones en orden: elegir el billete, cambiar la visita y avisar de la llegada. Así no olvidarán ningún plazo mientras esperan."
-    ],
-    "glossary": [
-      {
-        "es": "un retraso anunciado",
-        "en": "an announced delay"
-      },
-      {
-        "es": "mantener una reserva",
-        "en": "hold a booking"
-      },
-      {
-        "es": "avisar al alojamiento",
-        "en": "notify accommodation"
-      }
-    ],
-    "tasks": [
-      {
-        "id": "reading-choice",
-        "type": "choice",
-        "prompt": "Lee «Dos avisos antes de salir» y localiza la evidencia para cada respuesta.",
-        "items": [
-          {
-            "q": "¿A qué hora está previsto llegar con el segundo autobús?",
-            "options": [
-              "A las seis",
-              "A las dos",
-              "A las ocho"
-            ],
-            "answer": 0,
-            "why": "La información de la situación corresponde a «A las seis»; comprueba la frase completa antes de volver a responder."
-          },
-          {
-            "q": "¿Qué debe hacerse antes de la una?",
-            "options": [
-              "Entrar en la habitación",
-              "Tomar el desayuno",
-              "Elegir una opción en el mostrador"
-            ],
-            "answer": 2,
-            "why": "La información de la situación corresponde a «Elegir una opción en el mostrador»; comprueba la frase completa antes de volver a responder."
-          }
-        ]
-      },
-      {
-        "id": "reading-transfer",
-        "type": "open",
-        "prompt": "Usa la información de «Dos avisos antes de salir» para otra persona.",
-        "items": [
-          {
-            "prompt": "Resume el dato más útil del texto para esta misión: Reorganizar un viaje, cambiar una reserva y resolver una cita sin perder la información importante. Explica qué frase lo demuestra y qué pregunta harías después.",
-            "model": "Primero selecciono la información que necesita mi interlocutor. Después explico el dato con mis palabras y señalo dónde aparece; si falta información, la pregunto sin inventarla.",
-            "checklist": [
-              "Seleccionas información que aparece en el texto.",
-              "Separas un dato confirmado de una pregunta o una opinión."
-            ]
-          }
-        ]
-      }
-    ],
-    "noticing": {
-      "prompt": "Vuelve al texto: interpreta estas dos frases y relaciona sus formas con el propósito del mensaje.",
-      "items": [
-        {
-          "quote": "Transporte Sierra: el servicio de las diez entre Valle y Costa no sale hoy por una avería.",
-          "note": "Explica qué información aporta esta frase y cómo prepara los datos siguientes. Después localiza una forma de la semana en este párrafo."
+        stage: "gist",
+        prompt: "Primera escucha: escucha todo una vez y busca la idea general.",
+        exercise: {
+          id: "l1",
+          type: "choice",
+          prompt: "Responde con la idea general.",
+          items: [
+            { q: "¿Por qué hablan Nico y Valeria?", options: ["para organizar el encuentro y el viaje a la isla", "para cancelar el viaje", "porque Valeria perdió el bus"], answer: 0 },
+            { q: "¿Qué relación tienen?", options: ["Son compañeros de trabajo.", "Son primos.", "Son vecinos."], answer: 1 },
+            { q: "¿Adónde van a ir juntos?", options: ["a Tegucigalpa", "a Tela", "a la isla de Utila"], answer: 2 },
+          ],
         },
-        {
-          "quote": "Alojamiento La Fuente: su reserva comienza hoy.",
-          "note": "Explica qué información aporta esta frase y cómo prepara los datos siguientes. Después localiza una forma de la semana en este párrafo."
-        }
-      ]
-    }
+      },
+      {
+        stage: "detail",
+        prompt: "Segunda escucha: atención a las descripciones, la ruta y los precios.",
+        exercise: {
+          id: "l2",
+          type: "choice",
+          prompt: "Elige la respuesta correcta.",
+          items: [
+            { q: "¿Qué lleva Nico hoy?", options: ["gafas de sol y una mochila roja", "una camiseta amarilla, barba y el pelo largo", "una sudadera azul"], answer: 1 },
+            { q: "¿Cómo está Valeria?", options: ["cansadísima", "enfadada", "aburrida"], answer: 0 },
+            { q: "¿Por dónde pasan para ir al muelle?", options: ["por el centro", "por la terminal", "por el malecón"], answer: 2 },
+            { q: "¿Por qué Valeria paga los boletos?", options: ["porque Nico no tiene dinero", "para darle las gracias por la invitación", "porque son baratísimos"], answer: 1 },
+            { q: "¿Dónde la va a esperar Nico?", options: ["entre la cafetería y la puerta tres", "en la taquilla del muelle", "detrás de la terminal"], answer: 0 },
+          ],
+        },
+      },
+      {
+        stage: "notice",
+        prompt: "Tercera escucha: fíjate en la gramática de esta semana y de las semanas anteriores.",
+        exercise: {
+          id: "l3",
+          type: "classify",
+          prompt: "¿Qué clase repasa cada frase?",
+          categories: ["preposiciones y por / para (semana 15)", "ser, estar, llevar (semana 15)", "semanas 11 a 14"],
+          items: [
+            { text: "desde la terminal vamos en taxi hasta el muelle", cat: 0, why: "Ruta: **desde… hasta**, transporte con **en**." },
+            { text: "para darte las gracias por la invitación", cat: 0, why: "**Para** finalidad; **gracias por**." },
+            { text: "ahora llevo barba y el pelo largo", cat: 1, why: "Aspecto con **llevar**." },
+            { text: "Yo estoy más delgada que antes.", cat: 1, why: "Un cambio con **estar** (y comparativo, semana 12)." },
+            { text: "el camino más bonito de la ciudad", cat: 2, why: "Semana 12: superlativo con **de**." },
+            { text: "No contesta nadie en la oficina", cat: 2, why: "Semanas 13 y 14: **no** + verbo + **nadie**." },
+            { text: "comemos algo en un puestito enfrente del mar", cat: 2, why: "Semana 13: **algo** y el diminutivo **puestito**." },
+          ],
+        },
+      },
+    ],
   },
-  "practice": {
-    "intro": "La práctica combina reconstrucción, decisiones y producción breve. Haz la recuperación antes de volver a los apuntes. Para un reto con pareja, usa el modelo y las condiciones escritas como apoyo. Si estudias a solas, interpreta los dos papeles y graba primero las preguntas; después responde sin leer el modelo. Las voces sintéticas no verifican acentos regionales ni matices expresivos.",
-    "exercises": [
-      {
-        "id": "transfer-order",
-        "type": "order",
-        "prompt": "Reconstruye estas intervenciones de la misión; después explica cuándo las usarías.",
-        "items": [
-          {
-            "words": [
-              "Estamos",
-              "esperando",
-              "y",
-              "acabamos",
-              "de",
-              "recibir",
-              "otro",
-              "aviso."
-            ]
-          },
-          {
-            "words": [
-              "¿Podría",
-              "mantener",
-              "la",
-              "reserva",
-              "hasta",
-              "esta",
-              "noche?"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "transfer-context",
-        "type": "context",
-        "prompt": "Elige una respuesta que haga avanzar la gestión, no solo una frase correcta.",
-        "items": [
-          {
-            "options": [
-              "Perfecto, ya está pagada aunque no lo han dicho.",
-              "No hace falta avisar de ningún cambio.",
-              "Gracias; la confirmaremos al llegar."
-            ],
-            "answer": 2,
-            "why": "Comprueba el contexto y los datos de la escena: Gracias; la confirmaremos al llegar..",
-            "context": "El alojamiento ofrece una visita mañana que aún no has aceptado.",
-            "q": "¿Qué respuesta resuelve esta dificultad?"
-          },
-          {
-            "context": "El empleado ofrece dos actividades y tu compañero prefiere otra. Compara las opciones, explica la dificultad y negocia una decisión provisional.",
-            "q": "En esta interacción de «Checkpoint: viaje con cambios», ¿cómo compruebas que puedes continuar?",
-            "options": [
-              "Resumir el acuerdo o la información y pedir confirmación.",
-              "Dar por supuesto que la otra persona ha entendido todos los detalles."
-            ],
-            "answer": 0,
-            "why": "Confirmar evita que una diferencia de interpretación quede sin resolver."
-          }
-        ]
-      },
-      {
-        "id": "guided-production",
-        "type": "open",
-        "prompt": "Ensaya dos partes breves antes de producir tu texto completo.",
-        "items": [
-          {
-            "prompt": "Para «Checkpoint: viaje con cambios», escribe una apertura que sitúe a tu destinatario. Añade un dato nuevo elegido por ti.",
-            "model": "Buenas tardes.",
-            "checklist": [
-              "Se entiende quién habla y por qué.",
-              "Incluyes un dato concreto que no contradice la situación."
-            ]
-          },
-          {
-            "prompt": "Prepara una pregunta de seguimiento para esta interacción: El empleado ofrece dos actividades y tu compañero prefiere otra. Compara las opciones, explica la dificultad y negocia una decisión provisional.",
-            "model": "¿Puedes confirmar ese dato? Quiero comprobar que he entendido bien antes de continuar.",
-            "checklist": [
-              "La pregunta pide un dato útil para esta situación.",
-              "Mantienes el mismo trato y respondes después a la información recibida."
-            ]
-          }
-        ]
-      },
-      {
-        "id": "retrieval-week-11",
-        "type": "open",
-        "prompt": "Recuperación sin mirar · semana 11. Usa un caso diferente de los textos anteriores.",
-        "items": [
-          {
-            "prompt": "Reto de recuperación en la semana 15: Describe una videollamada en directo y después tus hábitos: qué estás haciendo, qué acabas de terminar, qué has empezado a hacer, qué has dejado de hacer, qué vuelves a intentar y qué sigues practicando. Usa leyendo o durmiendo. Enlaza con Pablo y un bolígrafo manteniendo su ortografía.",
-            "model": "Estoy leyendo un mensaje. Acabo de terminar una actividad. He empezado a estudiar temprano y he dejado de usar el móvil de noche. Vuelvo a escribir a mano y sigo practicando con Pablo. Tengo un bolígrafo nuevo.",
-            "checklist": [
-              "Resuelves todas las partes del reto con ejemplos propios.",
-              "Después comparas con tus apuntes y corriges una forma o un dato."
-            ]
-          },
-          {
-            "prompt": "Comprueba la recuperación 11→15: cambia un dato de tu respuesta y reformula la parte afectada. Explica qué cambió a tu compañero.",
-            "model": "En mi nueva versión cambia el lugar o la persona: Estoy leyendo un mensaje. Debo revisar también las referencias para que mi oyente entienda el cambio.",
-            "checklist": [
-              "El nuevo dato es coherente con el resto de la situación.",
-              "Repites la parte necesaria y compruebas que el oyente lo entiende."
-            ]
-          }
-        ]
-      },
-      {
-        "id": "retrieval-week-12",
-        "type": "open",
-        "prompt": "Recuperación sin mirar · semana 12. Usa un caso diferente de los textos anteriores.",
-        "items": [
-          {
-            "prompt": "Reto de recuperación en la semana 15: Planifica una reunión por videollamada: diferencia intención, predicción y promesa. Incluye haré, tendré y podremos. Prepara dos condiciones reales con si + presente. Tu pareja identifica qué está decidido y qué es solo una predicción. Pronuncia comunicación y universidad con todas sus vocales.",
-            "model": "Voy a preparar la reunión. Creo que tendremos diez participantes. Haré una prueba y te enviaré el enlace. Si falla la comunicación, podremos llamar por teléfono. La universidad confirmará el horario.",
-            "checklist": [
-              "Resuelves todas las partes del reto con ejemplos propios.",
-              "Después comparas con tus apuntes y corriges una forma o un dato."
-            ]
-          },
-          {
-            "prompt": "Comprueba la recuperación 12→15: cambia un dato de tu respuesta y reformula la parte afectada. Explica qué cambió a tu compañero.",
-            "model": "En mi nueva versión cambia el lugar o la persona: Voy a preparar la reunión. Debo revisar también las referencias para que mi oyente entienda el cambio.",
-            "checklist": [
-              "El nuevo dato es coherente con el resto de la situación.",
-              "Repites la parte necesaria y compruebas que el oyente lo entiende."
-            ]
-          }
-        ]
-      },
-      {
-        "id": "retrieval-week-13",
-        "type": "open",
-        "prompt": "Recuperación sin mirar · semana 13. Usa un caso diferente de los textos anteriores.",
-        "items": [
-          {
-            "prompt": "Reto de recuperación en la semana 15: Representa una cita ficticia: describe dos síntomas, duración y una dificultad con me duele/me duelen, tengo y estoy. La otra persona propone una gestión con deberías, tendrías que o es mejor. Escucha, anota y confirma horario y documento sin dar tratamientos. Compara la x de taxi, México y Xochimilco.",
-            "model": "Me duele un pie y me duelen las rodillas desde ayer. Estoy cansado. Quería una cita por la tarde. Deberías confirmar la hora. Entonces llego a las cuatro menos diez y llevo el documento.",
-            "checklist": [
-              "Resuelves todas las partes del reto con ejemplos propios.",
-              "Después comparas con tus apuntes y corriges una forma o un dato."
-            ]
-          },
-          {
-            "prompt": "Comprueba la recuperación 13→15: cambia un dato de tu respuesta y reformula la parte afectada. Explica qué cambió a tu compañero.",
-            "model": "En mi nueva versión cambia el lugar o la persona: Me duele un pie y me duelen las rodillas desde ayer. Debo revisar también las referencias para que mi oyente entienda el cambio.",
-            "checklist": [
-              "El nuevo dato es coherente con el resto de la situación.",
-              "Repites la parte necesaria y compruebas que el oyente lo entiende."
-            ]
-          }
-        ]
-      },
-      {
-        "id": "retrieval-week-14",
-        "type": "open",
-        "prompt": "Recuperación sin mirar · semana 14. Usa un caso diferente de los textos anteriores.",
-        "items": [
-          {
-            "prompt": "Reto de recuperación en la semana 15: En otro alojamiento, la reserva incluye desayuno pero te lo cobran aparte. Lee esos dos datos en voz alta, escribe un correo breve y reclama con podría, me gustaría y quería. Propón una solución y comprueba el precio final. Mantén un trato coherente y una entonación amable.",
-            "model": "Quería consultar la cuenta. Mi reserva incluye desayuno, pero aparecen doce euros más. ¿Podría comprobarlo? Me gustaría recibir una cuenta corregida por escrito. Gracias por su ayuda.",
-            "checklist": [
-              "Resuelves todas las partes del reto con ejemplos propios.",
-              "Después comparas con tus apuntes y corriges una forma o un dato."
-            ]
-          },
-          {
-            "prompt": "Comprueba la recuperación 14→15: cambia un dato de tu respuesta y reformula la parte afectada. Explica qué cambió a tu compañero.",
-            "model": "En mi nueva versión cambia el lugar o la persona: Quería consultar la cuenta. Debo revisar también las referencias para que mi oyente entienda el cambio.",
-            "checklist": [
-              "El nuevo dato es coherente con el resto de la situación.",
-              "Repites la parte necesaria y compruebas que el oyente lo entiende."
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  "writing": {
-    "task": "Envía al alojamiento un resumen del cambio de viaje. Explica qué está pasando, qué acabáis de decidir y qué haréis si hay otro retraso. Solicita una actividad compatible con una dificultad física ficticia.",
-    "context": "Escribe una primera versión propia; el modelo es una posibilidad, no un texto para copiar. Puedes usar datos ficticios.",
-    "steps": [
-      "Anota destinatario, propósito y tres datos necesarios.",
-      "Organiza los datos en un orden que ayude a la otra persona.",
-      "Escribe el borrador con apoyo de las expresiones útiles.",
-      "Revisa si has respondido a todas las partes, corrige las formas y escribe una segunda versión."
+  reading: {
+    title: "De la montaña al mar",
+    genre: "Diario de viaje",
+    frame: "Valeria escribe en su diario la primera noche en Utila.",
+    text: [
+      "Salí de Tegucigalpa el viernes a las cinco de la mañana en el bus para La Ceiba. El viaje fue larguísimo: siete horas por la carretera del norte, entre pueblos pequeños y montañas verdes. Yo estaba nerviosa porque hacía ocho años que no veía a mi primo Nico, el chico que me enseñó a nadar cuando éramos niños.",
+      "En la terminal lo busqué entre la gente, pero no reconocí a nadie hasta que alguien gritó: «¡Vale!». Nico está cambiadísimo. Es tan alto como antes, pero ahora lleva barba y el pelo largo, y está muy moreno por el sol. Llevaba la camiseta amarilla del equipo local, como me prometió. Él dice que yo no estoy nada cambiada; para mí, eso es un piropo. Nos abrazamos un ratito y nos reímos mucho: ninguno de los dos podía creer que ya teníamos veintiséis años.",
+      "Desde la terminal fuimos en taxi hasta el muelle. Pasamos por el malecón, donde la gente camina por la tarde y los vendedores ofrecen coco frío. Comimos unas baleadas en un puestito enfrente del mar: las mejores de mi vida, mucho mejores que las de la capital. Compramos los boletos para Utila en la taquilla por seiscientos lempiras cada uno. Los pagué yo, para agradecerle a Nico la invitación.",
+      "El ferry salió hacia la isla a las cuatro. Hacía viento y el mar estaba un poco agitado. Dentro hacía demasiado frío y yo no llevaba ninguna chaqueta, así que me puse la sudadera de mi primo, que me queda enorme. Ni él ni yo dormimos: hablamos de todo lo que pasó en estos ocho años.",
+      "Ahora escribo desde una hamaca en la casita donde nos quedamos, al lado de la playa. Lo que más me gusta de este viaje no es el mar ni la comida: es estar otra vez con mi primo. Mañana vamos a bucear por primera vez. ¡Qué nervios!",
     ],
-    "useLanguage": [
-      "Estamos esperando y acabamos de recibir otro aviso.",
-      "Si el autobús sale a las dos, llegaremos a las seis.",
-      "¿Podría mantener la reserva hasta esta noche?",
-      "Me duele un pie; tendré que cambiar la excursión."
+    glossary: [
+      { es: "un piropo", en: "a compliment" },
+      { es: "el coco frío", en: "chilled coconut (to drink)" },
+      { es: "me queda enorme", en: "it's huge on me" },
+      { es: "bucear", en: "to dive / to snorkel" },
     ],
-    "model": [
-      "Buenas tardes. Nuestro autobús de las diez se ha cancelado y estamos esperando el siguiente. Acabamos de cambiar los billetes para salir a las dos. Llegaremos a Costa a las seis si no hay otro retraso. ¿Podrían mantener la habitación para dos personas? Si llegamos después de las siete, llamaremos antes de las seis para organizar la llave. También me gustaría cambiar la visita de hoy por el recorrido corto de mañana. Me duele un pie y prefiero caminar menos. Gracias por confirmar estos cambios. Si hay algún coste por el cambio de actividad, les agradecería que me lo indiquen antes de confirmar la nueva reserva."
-    ],
-    "checklist": [
-      "El destinatario puede entender el propósito sin preguntar de qué hablas.",
-      "Incluyes todos los datos pedidos y no inventas confirmaciones.",
-      "Los verbos y pronombres se refieren a las personas y tiempos correctos.",
-      "Relacionas las ideas y mantienes un trato coherente.",
-      "Relees y corriges al menos una frase después de comparar con el modelo."
-    ],
-    "words": [
-      100,
-      140
-    ]
-  },
-  "speaking": {
-    "intro": "Planifica con palabras clave, no con un texto completo. Habla, escucha tu grabación local si quieres y repite una parte más claramente.",
-    "tasks": [
+    tasks: [
       {
-        "title": "Tu intervención con un propósito",
-        "prompt": "Explica al teléfono el cambio de viaje con horarios y condiciones. Pide una solución y repite el acuerdo final.",
-        "prep": [
-          "Elige tres datos y ordénalos.",
-          "Prepara una frase inicial y un cierre que invite a responder."
+        id: "r1",
+        type: "choice",
+        prompt: "Lee el diario y responde.",
+        items: [
+          { q: "¿Por qué estaba nerviosa Valeria en el bus?", options: ["porque tenía miedo del mar", "porque no veía a su primo desde hacía ocho años", "porque el bus iba muy rápido"], answer: 1 },
+          { q: "¿Qué cambió en el aspecto de Nico?", options: ["Ahora lleva barba y el pelo largo.", "Ahora es más bajo.", "Ahora lleva gafas."], answer: 0 },
+          { q: "¿Qué opina Valeria de las baleadas del puestito?", options: ["Son peores que las de la capital.", "Son tan buenas como las de la capital.", "Son las mejores de su vida."], answer: 2 },
+          { q: "¿Por qué se puso Valeria la sudadera de Nico?", options: ["porque era bonita", "porque hacía frío en el barco y no llevaba chaqueta", "porque se la regaló"], answer: 1 },
+          { q: "¿Qué es lo que más le gusta del viaje?", options: ["el mar", "la comida", "estar otra vez con su primo"], answer: 2 },
         ],
-        "seconds": 120,
-        "selfCheck": [
-          "Se entiende la situación y el orden de las ideas.",
-          "Mantengo claras las palabras clave y reformulo si hace falta."
-        ]
       },
       {
-        "title": "Interacción con un cambio",
-        "prompt": "El empleado ofrece dos actividades y tu compañero prefiere otra. Compara las opciones, explica la dificultad y negocia una decisión provisional.",
-        "prep": [
-          "Prepara una pregunta de seguimiento.",
-          "Imagina una respuesta inesperada y una alternativa."
+        id: "r2",
+        type: "classify",
+        prompt: "¿Qué expresa **por** o **para** en cada frase?",
+        categories: ["destino o finalidad (para)", "camino, causa, momento o precio (por)"],
+        items: [
+          { text: "el bus **para** La Ceiba", cat: 0 },
+          { text: "siete horas **por** la carretera del norte", cat: 1 },
+          { text: "está muy moreno **por** el sol", cat: 1 },
+          { text: "la gente camina **por** la tarde", cat: 1 },
+          { text: "los boletos **para** Utila", cat: 0 },
+          { text: "**por** seiscientos lempiras cada uno", cat: 1 },
+          { text: "**para** agradecerle a Nico la invitación", cat: 0 },
         ],
-        "seconds": 120,
-        "selfCheck": [
-          "Escucho y respondo a la necesidad del otro.",
-          "Confirmo un dato o acuerdo y cedo el turno."
-        ]
-      }
-    ]
-  },
-  "useInClass": {
-    "intro": "La clase continúa el trabajo: lleva tu versión revisada y una duda concreta, no una lista de respuestas.",
-    "cards": [
-      {
-        "move": "Presenta",
-        "task": "Explica al teléfono el cambio de viaje con horarios y condiciones. Pide una solución y repite el acuerdo final."
       },
-      {
-        "move": "Negocia",
-        "task": "El empleado ofrece dos actividades y tu compañero prefiere otra. Compara las opciones, explica la dificultad y negocia una decisión provisional."
-      },
-      {
-        "move": "Reformula",
-        "task": "Pide al profesor que cambie un dato de la situación. Adapta tu respuesta sin leer el modelo y comprueba que el mensaje sigue siendo claro."
-      },
-      {
-        "move": "Comprueba",
-        "task": "El profesor resume lo que entendió. Corrige una diferencia de información y repite una frase cuyo sonido o ritmo quieras mejorar."
-      }
     ],
-    "bring": "Tu borrador revisado, tres palabras clave para hablar y una pregunta sobre la misión."
+    noticing: {
+      prompt: "Toca cada frase del diario para ver qué gramática hay dentro.",
+      items: [
+        { quote: "Es tan alto como antes, pero ahora lleva barba", note: "**Ser** para una característica y **llevar** para el aspecto; semana 12: **tan… como**." },
+        { quote: "está muy moreno por el sol", note: "**Estar** para un cambio que se nota; **por** + causa." },
+        { quote: "Desde la terminal fuimos en taxi hasta el muelle", note: "Ruta con **desde… hasta**; transporte con **en**." },
+        { quote: "un puestito enfrente del mar", note: "Semana 13: diminutivo **puestito**; ubicación con **enfrente de** (+ el = **del**)." },
+        { quote: "no reconocí a nadie hasta que alguien gritó", note: "Semana 13: **a nadie** y **alguien**." },
+        { quote: "yo no llevaba ninguna chaqueta", note: "Semana 14: **no** + verbo + **ninguna**; **llevar** para la ropa." },
+        { quote: "la casita donde nos quedamos", note: "Semana 11: **donde** después de un lugar." },
+      ],
+    },
   },
-  "quiz": {
-    "items": [
+  practice: {
+    intro: "Checkpoint: mezcla esta semana con las semanas 11 a 14. Cada ejercicio integra varias clases.",
+    exercises: [
       {
-        "type": "gap",
-        "q": "Acabamos ___ cambiar los billetes.",
-        "answers": [
-          [
-            "de"
-          ]
-        ]
-      },
-      {
-        "type": "gap",
-        "q": "Si hay otro retraso, ___ antes de las seis. (avisar, yo, futuro)",
-        "answers": [
-          [
-            "avisaré"
-          ]
-        ]
-      },
-      {
-        "type": "error",
-        "sentence": "Me duelen un pie desde ayer.",
-        "answers": [
-          "Me duele un pie desde ayer."
+        id: "x1",
+        type: "gap",
+        title: "Todo junto",
+        prompt: "Completa con la forma correcta. Entre paréntesis tienes la pista y la semana que repasas.",
+        items: [
+          { q: "Te presento a Lucía, la amiga ___ vive en la isla. (relativo · semana 11)", answers: [["que"]], why: "Semana 11: persona que hace la acción, **que**." },
+          { q: "Este hostal es ___ barato ___ el de anoche: cuesta la mitad. (comparativo · semana 12)", answers: [["más"], ["que"]], why: "Semana 12: **más… que**." },
+          { q: "Llamé a la recepción, pero no contestó ___. (persona · semana 13)", answers: [["nadie"]], why: "Semana 13: **no** + verbo + **nadie**." },
+          { q: "No queda ___ asiento libre en el ferry de las nueve. (alguno / ninguno · semana 14)", answers: [["ningún"]], why: "Semana 14: delante de nombre masculino singular, **ningún**." },
+          { q: "El barco ___ Roatán sale del muelle ___ la mañana. (por / para · semana 15)", answers: [["para"], ["por"]], why: "Destino: **para**; parte del día: **por**." },
+          { q: "Mi hermano ___ gafas y ___ muy contento con su trabajo nuevo. (llevar / estar · semana 15)", answers: [["lleva"], ["está"]], why: "Aspecto: **lleva**; estado: **está**." },
         ],
-        "why": "Un pie es singular y requiere duele."
       },
       {
-        "type": "order",
-        "words": [
-          "Estamos",
-          "buscando",
-          "una",
-          "actividad",
-          "más",
-          "tranquila."
-        ]
-      },
-      {
-        "type": "choice",
-        "q": "¿Qué debe confirmar Lara en la llamada?",
-        "options": [
-          "Que el autobús ya ha llegado",
-          "Que mantienen la habitación"
+        id: "x2",
+        type: "error",
+        title: "Corrige los mensajes del viaje",
+        prompt: "Cada frase tiene un error. Escríbela bien.",
+        items: [
+          { sentence: "Llegamos en Utila a las seis de la tarde.", answers: ["Llegamos a Utila a las seis de la tarde."], why: "Semana 15: **llegar a**." },
+          { sentence: "Muchas gracias para los boletos, prima.", answers: ["Muchas gracias por los boletos, prima."], why: "Semana 15: **gracias por**." },
+          { sentence: "Mi primo es con barba y el pelo largo.", answers: ["Mi primo lleva barba y el pelo largo."], why: "Semana 15: aspecto con **llevar**." },
+          { sentence: "Es la playa que buceamos ayer.", answers: ["Es la playa donde buceamos ayer.", "Es la playa en la que buceamos ayer."], why: "Semana 11: buceamos **en** la playa, **donde**." },
+          { sentence: "Fue el día más feliz que el viaje.", answers: ["Fue el día más feliz del viaje."], why: "Semana 12: superlativo con **de**." },
+          { sentence: "Nadie no sabía dónde estaba el muelle.", answers: ["Nadie sabía dónde estaba el muelle.", "No sabía nadie dónde estaba el muelle."], why: "Semanas 13 y 14: con **nadie** delante, sin _no_." },
         ],
-        "answer": 1,
-        "why": "La opción elegida cumple la función comunicativa indicada."
       },
       {
-        "q": "¿Qué harán si no llegan a tiempo?",
-        "options": [
-          "Esperar hasta mañana sin contactar",
-          "Llamar desde la estación",
-          "Cancelar sin avisar"
+        id: "x3",
+        type: "order",
+        title: "Frases del viaje",
+        prompt: "Toca las palabras en orden.",
+        items: [
+          { words: ["Te", "espero", "enfrente", "de", "la", "taquilla", "del", "muelle."], en: "I'll wait for you opposite the ticket office at the pier." },
+          { words: ["Es", "la", "chica", "que", "lleva", "una", "mochila", "roja."], en: "She's the girl who's carrying a red backpack." },
+          { words: ["Compramos", "los", "boletos", "por", "seiscientos", "lempiras."], en: "We bought the tickets for six hundred lempiras." },
         ],
-        "answer": 1,
-        "why": "Comprueba el contexto y los datos de la escena: Llamar desde la estación.",
-        "type": "listen",
-        "audio": "Si no llegamos a tiempo, llamaremos desde la estación."
       },
       {
-        "type": "open",
-        "prompt": "Evaluación de transferencia 15: Explica al teléfono el cambio de viaje con horarios y condiciones. Pide una solución y repite el acuerdo final.",
-        "model": "Buenas tardes. Nuestro autobús de las diez se ha cancelado y estamos esperando el siguiente. Acabamos de cambiar los billetes para salir a las dos. Llegaremos a Costa a las seis si no hay otro retraso. ¿Podrían mantener la habitación para dos personas? Si llegamos después de las siete, llamaremos antes de las seis para organizar la llave. También me gustaría cambiar la visita de hoy por el recorrido corto de mañana. Me duele un pie y prefiero caminar menos. Gracias por confirmar estos cambios. Si hay algún coste por el cambio de actividad, les agradecería que me lo indiquen antes de confirmar la nueva reserva.",
-        "checklist": [
-          "Cumples el propósito con datos comprensibles.",
-          "Usas las formas de la semana y revisas una duda."
-        ]
+        id: "x4",
+        type: "context",
+        title: "¿Qué dices?",
+        prompt: "Lee la situación y elige la mejor respuesta.",
+        items: [
+          { context: "Un turista te pregunta cómo llegar al faro desde el centro.", q: "Le explicas:", options: ["Camine hacia el mar y pase por el malecón hasta el final.", "Camine para el mar y pase para el malecón.", "Camine hasta el mar por el final del malecón para."], answer: 0, why: "**Hacia** (dirección), **por** (camino), **hasta** (final)." },
+          { context: "Tu amiga vuelve de la playa con la piel muy roja.", q: "Le dices:", options: ["¡Qué roja eres!", "¡Qué roja estás! ¿No llevabas crema?", "¡Qué roja llevas!"], answer: 1, why: "Un cambio que notas: **estás**." },
+          { context: "Te preguntan para quién es el regalo que compraste en la isla.", q: "Respondes:", options: ["Es por mi abuela, que le encantan los collares.", "Es para mi abuela: le encantan los collares.", "Es para mi abuela, que la encanta los collares."], answer: 1, why: "Persona que recibe: **para**; semana 9: _le encantan_." },
+        ],
       },
       {
-        "type": "open",
-        "prompt": "Resolución final 15: El empleado ofrece dos actividades y tu compañero prefiere otra. Compara las opciones, explica la dificultad y negocia una decisión provisional. Añade una pregunta para comprobar la respuesta.",
-        "checklist": [
-          "Reaccionas a lo que dice tu interlocutor.",
-          "Confirmas el dato o el acuerdo antes de terminar."
-        ]
-      }
-    ]
-  },
-  "complete": {
-    "canNow": [
-      "Reorganizar un viaje, cambiar una reserva y resolver una cita sin perder la información importante.",
-      "Seleccionar datos de una conversación y de un texto práctico.",
-      "Producir un mensaje propio, revisarlo y responder a otra persona."
+        id: "x5",
+        type: "open",
+        title: "Escribe tú: integra las semanas 11 a 15",
+        prompt: "Escribe frases completas. Después compara con el modelo.",
+        items: [
+          {
+            prompt: "Explica a un amigo cómo llegar desde la estación de tu ciudad hasta tu casa: transporte, por dónde pasa y dónde está exactamente tu puerta.",
+            model: "Desde la estación toma el bus 12 hasta la plaza mayor. Después camina hacia el río y pasa por el puente. Mi casa está enfrente del parque, entre una panadería y una farmacia: es la puerta verde que tiene un buzón rojo.",
+            checklist: ["Usas **desde… hasta** o **de… a**", "Usas **por** para el camino y **hacia** para la dirección", "Sitúas la casa con **enfrente de, al lado de** o **entre… y…**", "Usas una relativa con **que** o **donde** (semana 11)"],
+          },
+          {
+            prompt: "Describe a una persona que vas a recoger en el aeropuerto y que no ves hace años: cómo es, cómo crees que está ahora y qué te dijo que va a llevar.",
+            model: "Mi tío Raúl es bajito y muy simpático, y tiene los ojos azules. Seguro que ahora está más mayor y un poco más gordo. Me dijo que va a llevar un sombrero blanco y una maleta enorme. Nadie más lleva sombrero en el vuelo, así que es facilísimo.",
+            checklist: ["**Ser** y **tener** para las características", "**Estar** para cómo está ahora", "**Llevar** para la ropa y los objetos", "Una comparación, un diminutivo o un -ísimo (semanas 12 y 13)"],
+          },
+          {
+            prompt: "Cuenta un viaje con por y para: para qué fuiste, por dónde pasaste, por cuánto compraste algo y para quién era.",
+            model: "El año pasado fui a la costa para descansar. Fuimos por una carretera preciosa al lado del mar. En un mercado compré una hamaca por quince dólares para mi hermana. No había ningún hotel libre, así que dormimos en una casita de unos pescadores.",
+            checklist: ["**Para** finalidad, destino o persona", "**Por** camino, causa o precio", "Una negación con **ningún, nada** o **nadie** (semanas 13 y 14)"],
+          },
+        ],
+      },
     ],
-    "review": [
-      "En dos días, repite la misión «Checkpoint: viaje con cambios» con personas y datos diferentes.",
-      "Antes de la próxima clase, recupera las expresiones sin mirar y comprueba después una duda.",
-      "Compara tu primera versión con la revisada: ¿qué entiende mejor ahora tu interlocutor?"
-    ]
-  }
+  },
+  writing: {
+    task: "Escribe un mensaje a alguien que no te conoce y va a recogerte: cómo eres, cómo estás y qué vas a llevar, dónde te espera y qué plan proponen para ese día.",
+    context: "Vas a visitar a la familia de un amigo en otra ciudad. Su hermana, a la que no conoces, va a buscarte a la estación de autobuses. Escríbele antes de salir.",
+    steps: [
+      "Saluda y da las gracias **por** la ayuda.",
+      "Explica cómo llegas: **desde** dónde, **en** qué transporte, **por** dónde pasa y a qué hora llegas **a** la estación.",
+      "Descríbete con **ser** y **tener**, di cómo vas a **estar** y qué vas a **llevar**.",
+      "Propón un lugar exacto para encontrarse (**delante de, al lado de, entre… y…**) con una relativa (_la cafetería que…_).",
+      "Añade un plan con **para** y una comparación o un superlativo (_el mejor sitio para…_).",
+      "Revisa: ¿usaste **por** y **para** bien? ¿**Llevar** para la ropa y **estar** para el estado? ¿Las preposiciones de lugar tienen **de**?",
+    ],
+    useLanguage: ["Gracias por…", "Salgo desde… en bus", "Paso por…", "Llego a…", "Soy… / Tengo…", "Voy a estar…", "Voy a llevar…", "Te espero delante de… / entre… y…", "el mejor sitio para…"],
+    model: [
+      "¡Hola, Marta! Muchas gracias por venir a buscarme. Salgo desde Tegucigalpa en el bus de las siete y paso por Siguatepeque, así que llego a la terminal de San Pedro Sula a las once. Soy bajita y morena, y tengo el pelo rizado. Seguro que voy a estar cansadísima, pero muy contenta. Voy a llevar una sudadera azul y una maleta pequeña con flores. Te espero delante de la cafetería que está al lado de la puerta principal. Si quieres, después vamos a comer: tu hermano dice que conoces el mejor sitio para comer sopa de caracol. ¡Hasta el sábado!",
+    ],
+    checklist: [
+      "Usas preposiciones de ruta (**desde, por, a**) y de lugar con **de**.",
+      "Usas **por** y **para** con su sentido correcto.",
+      "Usas **ser, estar, llevar** y **tener** para describirte.",
+      "Usas una relativa con **que** o **donde** (semana 11).",
+      "Usas una comparación, un superlativo o un -ísimo (semana 12).",
+    ],
+    words: [80, 130],
+  },
+  speaking: {
+    intro: "Checkpoint oral: habla en voz alta y grábate. Repite cada tarea hasta que salga sin leer.",
+    tasks: [
+      {
+        title: "La ruta",
+        prompt: "Explica a un visitante cómo ir desde la estación o el aeropuerto de tu ciudad hasta el lugar más bonito de la ciudad. Di por dónde pasa, qué transporte usa y qué hay al lado.",
+        prep: ["Desde… toma… hasta…", "Pasa por…", "Camina hacia…", "Está enfrente de / al lado de…", "Es el sitio más… de la ciudad"],
+        seconds: 80,
+        model: "Desde el aeropuerto toma el autobús rojo hasta el centro. El autobús pasa por la avenida principal y por el puerto. Bájate en la plaza y camina hacia el castillo, unos diez minutos. El mirador está detrás del castillo, al lado de una iglesia pequeña. Es el sitio más bonito de la ciudad, sobre todo por la tarde, cuando se pone el sol.",
+        selfCheck: ["Uso **desde… hasta**, **por** y **hacia** correctamente.", "Pego las preposiciones a la palabra siguiente: _po-rel_, _has-tael_."],
+      },
+      {
+        title: "¿Cómo te reconozco?",
+        prompt: "Vas a encontrarte con alguien que no te conoce. Descríbete: cómo eres, cómo estás estos días y qué vas a llevar. Después describe a una persona de tu familia que cambió mucho.",
+        prep: ["Soy… y tengo…", "Estos días estoy…", "Voy a llevar…", "Mi… está cambiadísimo / cambiadísima: ahora lleva…"],
+        seconds: 60,
+        model: "Soy alto y delgado, y tengo el pelo castaño. Estos días estoy un poco más moreno porque estuve en la playa. Voy a llevar una camisa blanca y una mochila negra. Mi hermana pequeña está cambiadísima: antes llevaba el pelo largo y ahora lo lleva cortísimo.",
+        selfCheck: ["**Ser / tener** para características, **estar** para el estado, **llevar** para la ropa.", "Uso un comparativo o un -ísimo (semana 12)."],
+      },
+      {
+        title: "Un regalo y un favor",
+        prompt: "Cuenta qué regalos traes de un viaje: para quién es cada uno, por cuánto lo compraste y por qué lo elegiste. Termina dando las gracias a alguien por algo.",
+        prep: ["Este collar es para…, porque le encantan…", "Lo compré por…", "Lo elegí por…", "Gracias por…"],
+        seconds: 60,
+        selfCheck: ["**Para** la persona; **por** el precio y la causa.", "No hay ningún _gracias para_."],
+      },
+    ],
+  },
+  useInClass: {
+    intro: "Checkpoint: lleva a tu próxima clase lo que repasaste en las semanas 11 a 15 y úsalo con tu profesor o profesora.",
+    cards: [
+      { move: "Dibuja una ruta", task: "Explica a tu profesor el camino desde tu casa hasta tu lugar favorito; tu profesor lo dibuja mientras hablas.", phrases: ["Desde mi casa voy hasta…", "Paso por…"] },
+      { move: "Adivina quién es", task: "Describe a una persona famosa con ser, estar, tener y llevar. Tu profesor adivina quién es.", phrases: ["Es…, tiene…", "En esta foto lleva…"] },
+      { move: "Por o para", task: "Cuenta tres cosas que haces para aprender español y tres cosas por las que estás agradecido.", phrases: ["Veo series para…", "Gracias por…"] },
+      { move: "Repasa en voz alta", task: "Di una frase de cada semana (11, 12, 13 y 14) sobre tu ciudad y pide a tu profesor que te corrija.", phrases: ["Es la plaza donde…", "Es el mejor…", "No hay nadie…", "Hay demasiado…"] },
+    ],
+    bring: "Trae un mapa (en papel o en el móvil) de un lugar que conoces bien para explicar en clase una ruta y dónde está cada cosa.",
+  },
+  quiz: {
+    items: [
+      { type: "gap", q: "Fuimos en bici ___ el hotel ___ la cascada: veinte kilómetros.", answers: [["desde", "de"], ["hasta", "a"]], why: "Principio y final: **desde… hasta** o **de… a**." },
+      { type: "choice", q: "¿Qué frase sobre el tren nocturno es correcta?", options: ["El tren sale por Madrid a las diez.", "El tren sale para Madrid a las diez.", "El tren sale hasta Madrid para las diez."], answer: 1, why: "Destino: **para**." },
+      { type: "transform", source: "Cerraron el museo porque había obras.", instruction: "Cambia porque + verbo por por + nombre (las obras).", answers: ["Cerraron el museo por las obras."], why: "**Por** + nombre." },
+      { type: "error", sentence: "Mi novia es muy cansada hoy.", answers: ["Mi novia está muy cansada hoy."], why: "Estado de hoy: **está**." },
+      { type: "error", sentence: "El banco está enfrente la escuela.", answers: ["El banco está enfrente de la escuela."], why: "**Enfrente de**." },
+      { type: "gap", q: "El hombre ___ ___ un sombrero negro es mi abuelo. (relativo + llevar)", answers: [["que"], ["lleva"]], why: "Semana 11: **que**; semana 15: **lleva** para la ropa." },
+      { type: "gap", q: "Este es el ___ restaurante ___ la playa: todo está riquísimo. (bueno, superlativo)", answers: [["mejor"], ["de"]], why: "Semana 12: **el mejor… de**." },
+      { type: "choice", q: "Tu amigo no llevaba paraguas y tú tampoco. ¿Cómo lo cuentas?", options: ["Ni él ni yo llevábamos paraguas.", "Ni él ni yo no llevábamos paraguas.", "Él y yo llevábamos ningún paraguas."], answer: 0, why: "Semana 14: **ni… ni** delante del verbo, sin _no_." },
+      { type: "listen", q: "¿Qué preposición oyes en la frase de la playa?", audio: "Paseamos por la playa al atardecer.", options: ["para", "por", "hasta"], answer: 1 },
+      { type: "order", words: ["Gracias", "por", "el", "regalo:", "es", "precioso."] },
+      { type: "error", sentence: "Llegamos en la isla con un problemón: no había ningún taxi.", answers: ["Llegamos a la isla con un problemón: no había ningún taxi."], why: "**Llegar a** + destino; el resto (semanas 13 y 14) está bien." },
+      { type: "open", prompt: "Escribe cuatro frases, una por clase: una ruta con desde… hasta o por, una frase con para, una descripción con llevar o estar, y una frase que use algo de las semanas 11 a 14.", model: "Fuimos desde el puerto hasta el faro por la playa. Compré esta camiseta para mi hermano. Hoy llevo una gorra porque estoy muy rojo. Es el pueblo más tranquilo que conozco: no hay nadie por la calle.", checklist: ["Preposiciones de ruta correctas", "Por o para con su sentido", "Ser, estar o llevar bien elegidos", "Una estructura de las semanas 11 a 14"] },
+    ],
+  },
+  complete: {
+    canNow: [
+      "Explicar una ruta con **desde… hasta, de… a, hacia, por** y **en / a pie**.",
+      "Situar cosas con **delante de, enfrente de, al lado de, entre… y…**.",
+      "Elegir **para** (finalidad, destino, persona, plazo) o **por** (causa, camino, momento, precio), y **por** o **porque**.",
+      "Describir a alguien con **ser, tener, estar** y **llevar**.",
+      "Combinar relativas, comparaciones, diminutivos, algo / nadie y negación de las semanas 11 a 14.",
+      "Organizar un encuentro por escrito y en voz alta para que alguien me reconozca.",
+    ],
+    review: ["Desde la terminal hasta el muelle, por el malecón; llegar a; enfrente de.", "Sale para Utila; gracias por todo; por la mañana; por 600 lempiras.", "Es alto, tiene los ojos verdes, está moreno, lleva barba.", "Semanas 11-14: el muelle donde…; el mejor de…; no vino nadie; ni él ni yo."],
+  },
+  related: [
+    { path: "/gramatica/preposiciones-de-movimiento-y-ubicacion", label: "Clase: Preposiciones de movimiento y ubicación" },
+    { path: "/gramatica/por-y-para-motivo-y-destino", label: "Clase: Por y para: motivo y destino inicial" },
+    { path: "/gramatica/ser-estar-y-llevar-para-descripciones", label: "Clase: Ser, estar y llevar para descripciones cambiantes" },
+  ],
 };
