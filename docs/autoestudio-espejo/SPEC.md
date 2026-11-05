@@ -134,3 +134,18 @@ node scripts/autoestudio-espejo/check.mjs <nivel> <semana>
 
 Tiene que decir `OK`. No toques ningún otro archivo del repo, no hagas
 operaciones de git.
+
+## Aprendido en el piloto (A1 1–2, C2 1)
+
+- Si una clase se solapa con la de otra semana (ej. G002 ya toca género y
+  artículos, que G003 y G004 desarrollan), cada semana se queda con lo que es
+  propio de su clase y no repite lo de la vecina.
+- Tablas de paradigma completo (con vosotros/ustedes) solo cuando la semana
+  conjuga verbos; no hace falta inventar formas que la clase no tocó.
+- El validador compara opciones en minúscula: dos opciones que solo difieren en
+  mayúsculas cuentan como duplicadas (usa la sílaba sola, etc.).
+- Claves con o sin comillas sirven (el ensamblador acepta ambas).
+- A2 checkpoints, para que crezcan aunque los escriban personas distintas:
+  lectura 5: 150–200, 10: 220–290, 15: 300–360, 20: 380–460 palabras;
+  escucha 5: 120–150, 10: 160–190, 15: 195–220, 20: 230–280 palabras.
+- C2 checkpoint: `…-recuperacion` con ≥ 8 ítems; C2 normal: con ≥ 4.

@@ -45,8 +45,8 @@ export const ${names[level]} = defineObjectives("${level}", ${JSON.stringify(row
       prereq = [`${level}-${String(week - 1).padStart(2, '0')}`];
     }
     const before = src;
-    src = src.replace(/reviewObjectives:\s*\[[^\]]*\]/, `reviewObjectives: ${JSON.stringify(review)}`);
-    src = src.replace(/(\n  )prerequisites:\s*\[[^\]]*\]/, `$1prerequisites: ${JSON.stringify(prereq)}`);
+    src = src.replace(/"?reviewObjectives"?:\s*\[[^\]]*\]/, `reviewObjectives: ${JSON.stringify(review)}`);
+    src = src.replace(/(\n  )"?prerequisites"?:\s*\[[^\]]*\]/, `$1prerequisites: ${JSON.stringify(prereq)}`);
     if (src === before && (review.length || prereq.length)) console.warn(`${file}: nothing replaced`);
     writeFileSync(file, src);
   }
