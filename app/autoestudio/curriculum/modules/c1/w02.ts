@@ -1,855 +1,893 @@
 import type { Module } from "../../types";
 
+/**
+ * C1 · semana 2 · Autoestudio espejo de G169 (subjuntivo en relativas no
+ * específicas y genéricas) y G170 (alternancias en concesivas con valor
+ * pragmático). Repaso autónomo con una cooperativa de vivienda ficticia de
+ * Montevideo. Audio mediante síntesis; sin acreditación regional.
+ */
 export const c1w02: Module = {
-  "id": "c1-02",
-  "level": "c1",
-  "week": 2,
-  "kind": "core",
-  "title": "La economía de un párrafo",
-  "subtitle": "Nominalización con agentes visibles",
-  "stop": {
-    "place": "Montevideo",
-    "country": "Uruguay"
+  id: "c1-02",
+  level: "c1",
+  week: 2,
+  kind: "core",
+  title: "Quien se sume, aunque cueste: la cooperativa decide",
+  subtitle: "Repaso del modo en relativas con antecedente desconocido o genérico y de las concesivas que informan, restan peso o imaginan",
+  stop: {
+    place: "Montevideo",
+    country: "Uruguay",
   },
-  "minutes": 120,
-  "newObjectives": [
-    "c1.gram.nominalizacion-avanzada",
-    "c1.voc.economia-sociedad",
-    "c1.pron.incisos",
-    "c1.read.informe",
-    "c1.wri.resumen-tecnico"
+  minutes: 135,
+  newObjectives: [
+    "c1.gram.g169",
+    "c1.gram.g170",
+    "c1.voc.w02-cooperativa-vivienda",
+    "c1.pron.w02-vocal-final-modo",
+    "c1.lis.w02-radio-cooperativa",
+    "c1.read.w02-cronica-asamblea",
+    "c1.wri.w02-opinion-boletin",
+    "c1.spk.w02-defensa-asamblea",
+    "c1.fun.w02-conceder-sin-ceder",
+    "c1.disc.w02-conceder-rebatir",
   ],
-  "reviewObjectives": [
-    "c1.gram.sustantivas-matices",
-    "c1.disc.registro-academico",
-    "c1.voc.ciencia-divulgacion",
-    "c1.pron.lectura-academica",
-    "c1.lis.conferencia",
-    "c1.fun.matizar-interpretacion"
-  ],
-  "prerequisites": [
-    "c1-01"
-  ],
-  "goal": {
-    "canDo": "Puedo escribir un resumen ejecutivo para responsables de transporte: conserva la tendencia, el alcance de la muestra y dos medidas justificadas; añade un párrafo accesible para quienes no conocen estadística.",
-    "steps": [
-      "Examina nominalización con agentes visibles en un caso con intereses distintos.",
-      "Escucha antes de leer la transcripción y distingue tesis, reservas y compromisos.",
-      "Contrasta la lectura y el audio; prepara una producción independiente y revísala.",
-      "Lleva a clase una objeción y una reformulación justificadas."
-    ]
-  },
-  "theory": {
-    "intro": "Trabaja con material original. Las situaciones y los datos del dossier son ficticios y se utilizan para analizar decisiones comunicativas.",
-    "parts": [
-      {
-        "heading": "Nominalización con agentes visibles",
-        "body": [
-          "Transformar verbos en nombres permite jerarquizar procesos: ampliar → ampliación. Los complementos del nombre deben conservar agente, objeto y alcance cuando sean relevantes. Una cadena de sustantivos sin relaciones claras produce opacidad; alterna condensación técnica con una paráfrasis verbal que permita comprobar quién hace qué.",
-          "En «La economía de un párrafo», observa la diferencia entre estas formulaciones: La ampliación del teletrabajo redujo algunos desplazamientos. / Las empresas ampliaron el teletrabajo para el personal administrativo. Explica qué relación cambia y qué decisión permite tomar al destinatario."
-        ],
-        "examples": [
-          {
-            "es": "La ampliación del teletrabajo redujo algunos desplazamientos."
-          },
-          {
-            "es": "Las empresas ampliaron el teletrabajo para el personal administrativo."
-          },
-          {
-            "es": "La supresión de conexiones perjudicó a las cuidadoras."
-          },
-          {
-            "es": "La infrarrepresentación del empleo precario limita la extrapolación."
-          }
-        ],
-        "mistakes": [
-          {
-            "wrong": "La reducción de los tiempos fueron desigual.",
-            "right": "La reducción de los tiempos fue desigual.",
-            "why": "El núcleo singular reducción exige fue."
-          }
-        ]
-      },
-      {
-        "heading": "Del análisis a la intervención",
-        "body": [
-          "El resumen ejecutivo debería preservar esta distinción. Podría afirmar que la reducción observada se concentra en ocupaciones compatibles con el trabajo remoto, advertir sobre la infrarrepresentación del empleo precario y recomendar una evaluación de itinerarios esenciales. Una conclusión así es menos vistosa que anunciar que la ciudad ha ganado tiempo. También permite decidir mejor. Cuando una cifra afecta a la distribución de recursos, la economía verbal solo constituye una virtud si no se consigue a costa de borrar a quienes quedan fuera del promedio.",
-          "La producción de esta semana exige una elección concreta: Escribe un resumen ejecutivo para responsables de transporte: conserva la tendencia, el alcance de la muestra y dos medidas justificadas; añade un párrafo accesible para quienes no conocen estadística. Antes de escribir, separa la información atribuible a las fuentes de tu propuesta; después comprueba que la forma elegida conserva esa distinción."
-        ],
-        "examples": [
-          {
-            "es": "La ampliación del teletrabajo por las empresas redujo los viajes.",
-            "note": "Condensa mediante ampliación."
-          },
-          {
-            "es": "La infrarrepresentación del empleo precario limita la extrapolación.",
-            "note": "Condensa con infrarrepresentación."
-          }
-        ]
-      }
-    ]
-  },
-  "grammar": {
-    "intro": "Transformar verbos en nombres permite jerarquizar procesos: ampliar → ampliación. Los complementos del nombre deben conservar agente, objeto y alcance cuando sean relevantes. Una cadena de sustantivos sin relaciones claras produce opacidad; alterna condensación técnica con una paráfrasis verbal que permita comprobar quién hace qué.",
-    "exercises": [
-      {
-        "id": "g-lagunas",
-        "type": "gap",
-        "prompt": "Completa formas decisivas en «La economía de un párrafo»; explica qué relación mantienen. Utiliza únicamente el banco; una forma puede reutilizarse.",
-        "items": [
-          {
-            "q": "La ___ del teletrabajo redujo algunos desplazamientos.",
-            "answers": [
-              [
-                "ampliación"
-              ]
-            ],
-            "why": "Transformar verbos en nombres permite jerarquizar procesos: ampliar → ampliación. Los complementos del nombre deben conservar agente, objeto y alcance cuando sean relevantes. Una cadena de sustantivos sin relaciones claras produce opacidad; alterna condensación técnica con una paráfrasis verbal que permita comprobar quién hace qué."
-          },
-          {
-            "q": "Las empresas ___ el teletrabajo para el personal administrativo.",
-            "answers": [
-              [
-                "ampliaron"
-              ]
-            ],
-            "why": "Transformar verbos en nombres permite jerarquizar procesos: ampliar → ampliación. Los complementos del nombre deben conservar agente, objeto y alcance cuando sean relevantes. Una cadena de sustantivos sin relaciones claras produce opacidad; alterna condensación técnica con una paráfrasis verbal que permita comprobar quién hace qué."
-          },
-          {
-            "q": "La supresión de conexiones ___ a las cuidadoras.",
-            "answers": [
-              [
-                "perjudicó"
-              ]
-            ],
-            "why": "Transformar verbos en nombres permite jerarquizar procesos: ampliar → ampliación. Los complementos del nombre deben conservar agente, objeto y alcance cuando sean relevantes. Una cadena de sustantivos sin relaciones claras produce opacidad; alterna condensación técnica con una paráfrasis verbal que permita comprobar quién hace qué."
-          }
-        ],
-        "bank": [
-          "ampliación",
-          "ampliaron",
-          "perjudicó"
-        ]
-      },
-      {
-        "id": "g-transformacion",
-        "type": "open",
-        "prompt": "Reformula sin perder alcance: Nominalización con agentes visibles. Esta reformulación se revisa por sentido y forma, no por coincidencia literal con el modelo.",
-        "items": [
-          {
-            "prompt": "Condensa mediante ampliación. Texto de partida: «Las empresas ampliaron el teletrabajo y redujeron los viajes.»",
-            "model": "La ampliación del teletrabajo por las empresas redujo los viajes.",
-            "checklist": [
-              "Cumplo la construcción o el movimiento comunicativo solicitado.",
-              "Conservo el alcance, las personas y la relación temporal pertinentes.",
-              "Comparo mi versión con el modelo: una variante natural no es un error por tener otras palabras."
-            ]
-          },
-          {
-            "prompt": "Nominaliza la primera acción. Texto de partida: «Se suprimieron conexiones y eso perjudicó a las cuidadoras.»",
-            "model": "La supresión de conexiones perjudicó a las cuidadoras.",
-            "checklist": [
-              "Cumplo la construcción o el movimiento comunicativo solicitado.",
-              "Conservo el alcance, las personas y la relación temporal pertinentes.",
-              "Comparo mi versión con el modelo: una variante natural no es un error por tener otras palabras."
-            ]
-          },
-          {
-            "prompt": "Condensa con infrarrepresentación. Texto de partida: «La muestra representa poco el empleo precario. Esto limita la extrapolación.»",
-            "model": "La infrarrepresentación del empleo precario limita la extrapolación.",
-            "checklist": [
-              "Cumplo la construcción o el movimiento comunicativo solicitado.",
-              "Conservo el alcance, las personas y la relación temporal pertinentes.",
-              "Comparo mi versión con el modelo: una variante natural no es un error por tener otras palabras."
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  "vocabulary": {
-    "intro": "Aprende combinaciones y connotaciones; reutiliza al menos cuatro en tu producción sin forzarlas.",
-    "groups": [
-      {
-        "title": "Nominalización con agentes visibles",
-        "items": [
-          {
-            "es": "desagregar resultados",
-            "note": "separar datos por grupos"
-          },
-          {
-            "es": "ponderar una muestra",
-            "note": "ajustar el peso de respuestas"
-          },
-          {
-            "es": "movilidad obligada",
-            "note": "viajes impuestos por actividades necesarias"
-          },
-          {
-            "es": "conciliación laboral",
-            "note": "compatibilidad entre empleo y vida personal"
-          },
-          {
-            "es": "empleo precario",
-            "note": "trabajo con inseguridad de condiciones"
-          },
-          {
-            "es": "promedio agregado",
-            "note": "media del conjunto"
-          },
-          {
-            "es": "trayectos encadenados",
-            "note": "recorridos sucesivos en una jornada"
-          },
-          {
-            "es": "infrarrepresentación",
-            "note": "presencia menor de la que corresponde"
-          },
-          {
-            "es": "resumen ejecutivo",
-            "note": "síntesis orientada a decisiones"
-          },
-          {
-            "es": "atribuir responsabilidades",
-            "note": "identificar quién decide y responde"
-          }
-        ]
-      }
+  reviewObjectives: [],
+  prerequisites: [],
+  goal: {
+    canDo: "Puedo describir a quién busca una comunidad sin confundir perfiles con personas concretas y defender una decisión concediendo los argumentos contrarios sin renunciar a lo esencial.",
+    steps: [
+      "Repasa en la teoría cuándo una relativa identifica a alguien y cuándo habla de quien sea, y qué hace cada concesiva en una discusión.",
+      "Practica con frases de una cooperativa de vivienda de Montevideo que busca familias nuevas y discute un proyecto caro.",
+      "Escucha la entrevista de radio y lee la crónica de la asamblea.",
+      "Escribe un texto de opinión para el boletín, revísalo y defiéndelo en voz alta.",
     ],
-    "exercises": [
-      {
-        "id": "v-relaciones",
-        "type": "match",
-        "prompt": "Relaciona las expresiones de «La economía de un párrafo» con su sentido contextual.",
-        "pairs": [
-          {
-            "left": "desagregar resultados",
-            "right": "separar datos por grupos"
-          },
-          {
-            "left": "ponderar una muestra",
-            "right": "ajustar el peso de respuestas"
-          },
-          {
-            "left": "movilidad obligada",
-            "right": "viajes impuestos por actividades necesarias"
-          },
-          {
-            "left": "conciliación laboral",
-            "right": "compatibilidad entre empleo y vida personal"
-          },
-          {
-            "left": "empleo precario",
-            "right": "trabajo con inseguridad de condiciones"
-          },
-          {
-            "left": "promedio agregado",
-            "right": "media del conjunto"
-          },
-          {
-            "left": "trayectos encadenados",
-            "right": "recorridos sucesivos en una jornada"
-          },
-          {
-            "left": "infrarrepresentación",
-            "right": "presencia menor de la que corresponde"
-          },
-          {
-            "left": "resumen ejecutivo",
-            "right": "síntesis orientada a decisiones"
-          },
-          {
-            "left": "atribuir responsabilidades",
-            "right": "identificar quién decide y responde"
-          }
-        ]
-      }
-    ]
   },
-  "pronunciation": {
-    "focus": "Incisos y enumeraciones densas",
-    "explanation": [
-      "Pronuncia los incisos con una breve delimitación y un rango tonal algo menor; recupera después la línea principal. En la enumeración conserva continuidad hasta el último miembro, sin convertir cada elemento en una conclusión.",
-      "La reproducción disponible utiliza síntesis de voz. La percepción combina forma y contexto; compara tu grabación por inteligibilidad y efecto comunicativo, sin esperar una calificación automática del acento."
-    ],
-    "examples": [
+  theory: {
+    intro: "En clase viste estas estructuras con tu profesor. Aquí las repasas con otra historia: una cooperativa de vivienda por ayuda mutua de Montevideo necesita incorporar familias y tiene que decidir si acepta un proyecto de obra más caro. Fíjate en que el modo no lo decide una palabra aislada, sino lo que sabe y lo que hace quien habla.",
+    parts: [
       {
-        "es": "La encuesta, voluntaria y limitada, describe viajes, horarios y ocupaciones."
-      }
-    ],
-    "perceive": {
-      "id": "f-percepcion",
-      "type": "listen",
-      "prompt": "Escucha la formulación exacta en incisos y enumeraciones densas; identifica qué relación conserva antes de ensayar otra lectura.",
-      "items": [
-        {
-          "audio": "La ampliación del teletrabajo redujo algunos desplazamientos.",
-          "voice": "es-ES-f",
-          "q": "¿Qué formulación abre el contraste oral de «La economía de un párrafo»?",
-          "options": [
-            "Las empresas ampliaron el teletrabajo para el personal administrativo.",
-            "La supresión de conexiones perjudicó a las cuidadoras.",
-            "La ampliación del teletrabajo redujo algunos desplazamientos."
+        heading: "¿Sabes de quién hablas? El antecedente decide el modo",
+        body: [
+          "En una relativa, el indicativo indica que el hablante se refiere a alguien o algo identificado, que existe y conoce: «las familias que se anotaron en marzo». El subjuntivo indica que habla de cualquiera que cumpla la condición, conocido o no, o de alguien que todavía no existe para él: «las familias que se anoten en marzo». El artículo, el pronombre o el cuantificador no deciden nada por sí solos: «el que», «quien», «los que», «todo el que» y «cualquiera que» admiten los dos modos según la mirada del hablante.",
+          "Por eso la misma estructura cambia de sentido con el modo. «Busco al electricista que instaló los paneles» se refiere a una persona concreta; «busco un electricista que sepa instalar paneles» describe un perfil. «Haz lo que quieres» supone que sé lo que quieres; «haz lo que quieras» deja la elección abierta. En registro formal, «cuanto» y «cuantos» con subjuntivo equivalen a «todo lo que» o «todos los que»: «cuantos deseen participar».",
+        ],
+        table: {
+          caption: "Misma estructura, dos miradas",
+          head: ["Indicativo: referente identificado", "Subjuntivo: cualquiera que cumpla la condición"],
+          rows: [
+            ["Los socios que trabajaron el sábado cobran horas extra.", "Los socios que trabajen el sábado cobrarán horas extra."],
+            ["Quien llamó ayer dejó su número.", "Quien llame mañana, que deje su número."],
+            ["Elegimos la propuesta que menos cuesta.", "Elegiremos la propuesta que menos cueste."],
+            ["Hay una vecina que sabe de electricidad.", "¿Hay alguna vecina que sepa de electricidad?"],
           ],
-          "answer": 2,
-          "why": "La ampliación del teletrabajo redujo algunos desplazamientos."
         },
-        {
-          "audio": "La infrarrepresentación del empleo precario limita la extrapolación.",
-          "voice": "es-MX-m",
-          "q": "¿Qué formulación cierra el contraste oral de «La economía de un párrafo»?",
-          "options": [
-            "Las empresas ampliaron el teletrabajo para el personal administrativo.",
-            "La infrarrepresentación del empleo precario limita la extrapolación.",
-            "La ampliación del teletrabajo redujo algunos desplazamientos."
+        mistakes: [
+          {
+            wrong: "Necesitamos una arquitecta que conoce la normativa municipal de Montevideo.",
+            right: "Necesitamos una arquitecta que conozca la normativa municipal de Montevideo.",
+            why: "Todavía no la tienen: describen un perfil. Con indicativo se referirían a una arquitecta concreta que ya conocen.",
+          },
+          {
+            wrong: "Los aspirantes que se presenten el lunes ya firmaron el acta.",
+            right: "Los aspirantes que se presentaron el lunes ya firmaron el acta.",
+            why: "Si ya firmaron, son personas identificadas: indicativo.",
+          },
+        ],
+      },
+      {
+        heading: "Genéricos, superlativos, «único» y existencia negada",
+        body: [
+          "En las afirmaciones genéricas en presente, «quien» y «el que» admiten los dos modos con poca diferencia: «quien conoce / conozca el barrio sabe que el terreno se inunda». Pero los refranes mantienen el indicativo fijo («quien mucho abarca poco aprieta», «el que avisa no es traidor»), y cuando la oración principal mira al futuro o da una instrucción, la relativa va en subjuntivo: «quien quiera opinar, que pida la palabra».",
+          "Con superlativos y ordinales los dos modos son correctos pero dicen cosas distintas: «es la mejor obra que hemos hecho» presenta un dato; «es la mejor obra que hayamos hecho nunca» lo enfatiza como valoración. Con «único», el indicativo señala a alguien concreto («Rosa es la única que ha leído el contrato») y el subjuntivo, a quien sea que resulte («el único presupuesto que aprobemos será el que respete el plazo»). Y si niegas que algo exista, la relativa va en subjuntivo: «no hay ningún socio que se oponga». Ojo: no basta con un «no»; si el antecedente es conocido, sigue el indicativo: «no he visto los planos que mandó la arquitecta».",
+        ],
+        examples: [
+          { es: "No conocemos a ningún albañil que trabaje los domingos por ese precio.", note: "Existencia negada: subjuntivo." },
+          { es: "No encontramos el presupuesto que nos mandaron en abril.", note: "Antecedente conocido, aunque haya negación: indicativo." },
+          { es: "Es la primera vez que la cooperativa pide un préstamo tan grande.", note: "«La primera vez que» va con indicativo." },
+        ],
+        mistakes: [
+          {
+            wrong: "No hay nadie en la comisión que sabe leer un plano de estructura.",
+            right: "No hay nadie en la comisión que sepa leer un plano de estructura.",
+            why: "Se niega la existencia del antecedente: subjuntivo.",
+          },
+        ],
+        tip: "Antes de conjugar, hazte una pregunta: ¿podría señalar con el dedo a esa persona o a esa cosa? Si puedes, indicativo; si no, subjuntivo.",
+      },
+      {
+        heading: "Qué hace tu «aunque» en la discusión",
+        body: [
+          "Una concesiva presenta un obstáculo que no impide lo que dices. Con indicativo, el obstáculo es información nueva o un dato que afirmas: «aunque el proyecto es más caro, lo vamos a votar». Con subjuntivo y un hecho que todos conocen, haces un gesto polémico: concedes el dato para quitarle importancia, sin discutirlo: «aunque sea más caro, es el único que cumple la norma». Las dos frases hablan de un precio real; cambia lo que haces con él.",
+          "El subjuntivo concesivo tiene además su propia escalera temporal. Presente: algo posible o conocido («aunque llueva, seguimos con la obra»). Imperfecto: algo poco probable o irreal en el presente («aunque nos dieran el doble de plazo, no llegaríamos»). Pluscuamperfecto: un pasado que no fue («aunque hubiéramos ahorrado más, el préstamo habría sido necesario»). «Incluso si» y «aun si» siguen los tiempos de «si» y nunca llevan presente de subjuntivo: «incluso si llueve», no «incluso si llueva».",
+        ],
+        table: {
+          caption: "Un mismo obstáculo, cuatro gestos",
+          head: ["Gesto", "Frase", "Modo y tiempo"],
+          rows: [
+            ["Informo del obstáculo", "Aunque el préstamo vence en diez años, la cuota es baja.", "indicativo"],
+            ["Concedo un dato conocido y le resto peso", "Aunque el préstamo venza en diez años, no es eso lo que importa.", "presente de subjuntivo"],
+            ["Imagino algo improbable", "Aunque el banco nos perdonara los intereses, la cuota seguiría siendo alta.", "imperfecto de subjuntivo"],
+            ["Rehago un pasado que no fue", "Aunque hubiéramos pedido otro préstamo, la obra se habría retrasado.", "pluscuamperfecto de subjuntivo"],
           ],
-          "answer": 1,
-          "why": "La infrarrepresentación del empleo precario limita la extrapolación."
-        }
-      ]
+        },
+        mistakes: [
+          {
+            wrong: "Incluso si el banco tarde en responder, empezamos en julio.",
+            right: "Incluso si el banco tarda en responder, empezamos en julio.",
+            why: "«Incluso si» sigue los tiempos de «si»: nunca presente de subjuntivo.",
+          },
+          {
+            wrong: "Aunque hubiéramos tenido más socios, terminaremos antes.",
+            right: "Aunque hubiéramos tenido más socios, habríamos terminado antes.",
+            why: "Un pasado contrafactual pide una consecuencia también contrafactual: condicional compuesto.",
+          },
+        ],
+      },
+      {
+        heading: "Fórmulas compactas: reduplicadas, «por… que», «así» y «y eso que»",
+        body: [
+          "Las concesivas reduplicadas repiten el verbo para decir «da igual qué, quién o cómo»: «digan lo que digan», «pase lo que pase», «quieras o no», «sea como sea», «hagan lo que hagan». En pasado se conjugan en imperfecto: «dijeran lo que dijeran, siguieron adelante». «Por + adjetivo o adverbio + que» y «por mucho / más que» conceden en grado: «por cansados que estemos», «por más que insistan». Con «por más que» + indicativo concedes un hecho real del pasado: «por más que insistimos, el banco no cedió».",
+          "Otras formas tienen marca de registro. «Aun + gerundio» es compacta y algo formal: «aun sabiendo que costaba más, lo eligieron». «Así + subjuntivo» es enfática, muy frecuente en el habla de buena parte de América y literaria en España: «no vendo mi parte así me paguen el doble». «Si bien» es propia de textos cuidados y va con indicativo; «y eso que», coloquial, añade al final un dato que hacía esperar lo contrario.",
+        ],
+        examples: [
+          { es: "Pase lo que pase con el préstamo, el sábado se trabaja en la obra.", note: "Reduplicada: da igual lo que ocurra." },
+          { es: "Por más que revisamos las cuentas, no encontramos el error.", note: "Hecho real del pasado: indicativo." },
+          { es: "Terminamos la losa en dos semanas, y eso que llovió casi todos los días.", note: "«Y eso que» añade el obstáculo al final, con tono coloquial." },
+        ],
+        tip: "Para no confundir las concesivas reduplicadas, piensa que el verbo se repite con el mismo tiempo y que entre las dos formas va casi siempre «lo que», «como», «donde» o «o no».",
+      },
+    ],
+  },
+  grammar: {
+    intro: "Para cada relativa, pregúntate si puedes señalar al antecedente. Para cada concesiva, pregúntate qué hace el hablante con el obstáculo.",
+    exercises: [
+      {
+        id: "c1-02-gramatica-antecedente",
+        type: "context",
+        prompt: "Lee la situación y elige la frase que corresponde a lo que sabe el hablante.",
+        items: [
+          {
+            context: "La comisión de admisión todavía no ha recibido ninguna solicitud y redacta el anuncio.",
+            q: "¿Qué frase aparece en el anuncio?",
+            options: [
+              "Buscamos familias que pueden comprometer veinte horas semanales de trabajo.",
+              "Buscamos familias que puedan comprometer veinte horas semanales de trabajo.",
+              "Buscamos a las familias que pudieron comprometer veinte horas semanales de trabajo.",
+            ],
+            answer: 1,
+            why: "Describen un perfil, no a familias concretas: subjuntivo.",
+          },
+          {
+            context: "Ya terminó la jornada de trabajo del sábado. El tesorero habla de quienes fueron.",
+            q: "¿Qué dice?",
+            options: [
+              "Los que vinieron el sábado ya tienen sus horas anotadas.",
+              "Los que vengan el sábado ya tienen sus horas anotadas.",
+              "Los que vinieran el sábado ya tienen sus horas anotadas.",
+            ],
+            answer: 0,
+            why: "Son personas identificadas que ya fueron: indicativo.",
+          },
+          {
+            context: "Ninguno de los cuatro presupuestos cumple el plazo. La presidenta lo resume.",
+            q: "¿Qué frase es correcta?",
+            options: [
+              "No recibimos ningún presupuesto que cumple el plazo de entrega.",
+              "No recibimos el presupuesto que cumpla el plazo de entrega.",
+              "No recibimos ningún presupuesto que cumpla el plazo de entrega.",
+            ],
+            answer: 2,
+            why: "Se niega la existencia: «ningún… que» + subjuntivo.",
+          },
+          {
+            context: "Rosa es, de hecho, la única socia que leyó entero el contrato con el banco.",
+            q: "¿Cómo lo dice la presidenta?",
+            options: [
+              "Rosa es la única que leyó entero el contrato.",
+              "Rosa es la única que leyera entero el contrato.",
+              "Rosa es la única que lea entero el contrato.",
+            ],
+            answer: 0,
+            why: "«Única» con una persona identificada y un hecho real: indicativo.",
+          },
+        ],
+      },
+      {
+        id: "c1-02-gramatica-concesivas",
+        type: "gap",
+        prompt: "Completa con la forma adecuada del verbo entre paréntesis. Fíjate en el gesto que se describe al final de cada frase.",
+        items: [
+          { q: "Aunque el terreno ___ (estar) lejos del centro, tiene ómnibus cada diez minutos. (informas de un dato que el oyente no sabía)", answers: [["está"]], why: "Concesiva informativa: indicativo." },
+          { q: "Sí, ya sé que el terreno está lejos, pero aunque ___ (estar) lejos, es el único que podemos pagar. (restas peso a un dato que todos conocen)", answers: [["esté"]], why: "Concesiva polémica con un hecho conocido: presente de subjuntivo." },
+          { q: "Aunque el banco nos ___ (bajar) los intereses, la cuota seguiría siendo alta para algunas familias. (algo improbable)", answers: [["bajara", "bajase"]], why: "Hipótesis improbable en el presente: imperfecto de subjuntivo." },
+          { q: "Aunque ___ (empezar) la obra en enero, no habríamos terminado antes del invierno. (un pasado que no ocurrió)", answers: [["hubiéramos empezado", "hubiésemos empezado"]], why: "Contrafactual pasado: pluscuamperfecto." },
+          { q: "Por más que ___ (insistir) en la reunión de marzo, la intendencia no cambió el plazo. (un hecho real del pasado)", answers: [["insistimos"]], why: "«Por más que» con un hecho real: indicativo." },
+          { q: "Por complicado que ___ (parecer) el trámite, en dos semanas lo resolvemos. (da igual el grado)", answers: [["parezca"]], why: "«Por + adjetivo + que» pide subjuntivo." },
+        ],
+      },
+      {
+        id: "c1-02-gramatica-gesto",
+        type: "classify",
+        prompt: "Clasifica cada concesiva según lo que hace el hablante con el obstáculo.",
+        categories: ["Informa de un obstáculo real", "Resta peso a un dato conocido o a cualquier circunstancia", "Imagina algo improbable o un pasado que no fue"],
+        items: [
+          { text: "Aunque la cuota sube en mayo, nadie se ha quejado.", cat: 0, why: "Indicativo: da la subida como información." },
+          { text: "Aunque la cuota suba, ¿qué quieres?, no hay otra forma de pagar el préstamo.", cat: 1, why: "Concede un dato conocido para quitarle importancia." },
+          { text: "Aunque nos regalaran los materiales, faltarían manos.", cat: 2, why: "Imperfecto de subjuntivo: hipótesis improbable." },
+          { text: "Digan lo que digan en el barrio, la cooperativa sigue adelante.", cat: 1, why: "Reduplicada: da igual lo que se diga." },
+          { text: "Si bien el plazo es corto, la comisión lo considera viable.", cat: 0, why: "«Si bien» + indicativo informa del obstáculo." },
+          { text: "Aunque hubiéramos tenido otro terreno, el costo habría sido parecido.", cat: 2, why: "Pluscuamperfecto: pasado contrafactual." },
+          { text: "Por mucho que se quejen, el reglamento se aplica a todos.", cat: 1, why: "Concesión de grado: no importa cuánto se quejen." },
+        ],
+      },
+      {
+        id: "c1-02-gramatica-errores",
+        type: "error",
+        prompt: "Cada frase tiene un error de modo o de tiempo. Corrígela cambiando solo lo necesario.",
+        items: [
+          {
+            sentence: "Quien quiere participar en la comisión de obra, que se anote antes del viernes.",
+            answers: ["Quien quiera participar en la comisión de obra, que se anote antes del viernes."],
+            why: "La principal es una instrucción con «que»: la relativa genérica va en subjuntivo.",
+          },
+          {
+            sentence: "Aun si nos falte un socio, empezamos la losa el lunes.",
+            answers: ["Aun si nos falta un socio, empezamos la losa el lunes."],
+            why: "«Aun si» sigue los tiempos de «si»: nunca presente de subjuntivo.",
+          },
+          {
+            sentence: "Dijeran lo que digan los vecinos, la cooperativa terminó la obra a tiempo.",
+            answers: ["Dijeran lo que dijeran los vecinos, la cooperativa terminó la obra a tiempo."],
+            why: "En la reduplicada se repite el mismo tiempo; en un relato pasado, imperfecto.",
+          },
+          {
+            sentence: "No he leído ningún informe que explique el retraso, ni siquiera el que mande la constructora.",
+            answers: ["No he leído ningún informe que explique el retraso, ni siquiera el que mandó la constructora."],
+            why: "El informe de la constructora es un antecedente conocido: indicativo, aunque haya negación.",
+          },
+        ],
+      },
+      {
+        id: "c1-02-gramatica-reescritura",
+        type: "open",
+        prompt: "Reescribe cada intervención según la instrucción. No hay una única respuesta: compara con el modelo y con la lista.",
+        items: [
+          {
+            prompt: "Un socio dice: «Los arquitectos que conocemos son todos carísimos». Reescribe la idea como un anuncio que describa el profesional que busca la cooperativa, con al menos dos relativas en subjuntivo.",
+            model: "La cooperativa busca un arquitecto o una arquitecta que tenga experiencia en vivienda por ayuda mutua, que pueda acompañar la obra los sábados y cuyos honorarios se ajusten al presupuesto aprobado en asamblea.",
+            checklist: [
+              "Las relativas describen un perfil, no a personas concretas.",
+              "Uso al menos dos verbos en subjuntivo dentro de relativas.",
+            ],
+          },
+          {
+            prompt: "Una vecina objeta: «El proyecto nuevo cuesta un treinta por ciento más». Respóndele en dos frases: primero concede el dato y réstale peso; después añade una hipótesis improbable para reforzar tu postura.",
+            model: "Aunque cueste un treinta por ciento más, es el único que respeta la normativa de accesibilidad. Y aunque nos ofrecieran otro más barato mañana, tendríamos que volver a pedir todos los permisos.",
+            checklist: [
+              "La primera concesiva usa presente de subjuntivo con un dato conocido.",
+              "La hipótesis improbable usa imperfecto de subjuntivo y condicional.",
+              "No niego el dato de la vecina: le quito importancia.",
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  vocabulary: {
+    intro: "Palabras para hablar de una cooperativa de vivienda y de cómo se discute en una asamblea.",
+    groups: [
+      {
+        title: "La cooperativa y la obra",
+        items: [
+          { es: "la ayuda mutua", note: "sistema en el que los socios construyen sus viviendas con su propio trabajo" },
+          { es: "las horas comprometidas", note: "tiempo de trabajo que cada familia se obliga a aportar a la obra" },
+          { es: "el núcleo familiar", note: "las personas que vivirán juntas en una misma vivienda" },
+          { es: "el aspirante", note: "persona o familia que solicita entrar en la cooperativa" },
+          { es: "la comisión de obra", note: "grupo de socios que organiza y controla la construcción" },
+          { es: "el presupuesto", note: "cálculo anticipado de lo que costará una obra" },
+          { es: "la losa", note: "estructura de hormigón que forma un techo o un piso" },
+          { es: "adjudicar las viviendas", note: "asignar a cada familia la suya según un criterio acordado" },
+        ],
+      },
+      {
+        title: "Discutir en una asamblea",
+        items: [
+          { es: "pedir la palabra", note: "solicitar el turno para hablar" },
+          { es: "restar importancia", note: "presentar algo como menos grave de lo que parece" },
+          { es: "dar el brazo a torcer", note: "aceptar finalmente la postura contraria" },
+          { es: "mantenerse en sus trece", note: "no cambiar de opinión pese a los argumentos" },
+          { es: "a regañadientes", note: "aceptando algo de mala gana" },
+          { es: "someter a votación", note: "hacer que una propuesta se decida votando" },
+          { es: "salir adelante", note: "ser aprobado o llevarse a cabo pese a las dificultades" },
+        ],
+      },
+    ],
+    exercises: [
+      {
+        id: "c1-02-lexico-relacion",
+        type: "match",
+        prompt: "Relaciona cada expresión con su definición.",
+        pairs: [
+          { left: "la ayuda mutua", right: "sistema en el que los socios construyen sus viviendas con su propio trabajo" },
+          { left: "el aspirante", right: "persona o familia que solicita entrar en la cooperativa" },
+          { left: "adjudicar las viviendas", right: "asignar a cada familia la suya según un criterio acordado" },
+          { left: "dar el brazo a torcer", right: "aceptar finalmente la postura contraria" },
+          { left: "mantenerse en sus trece", right: "no cambiar de opinión pese a los argumentos" },
+          { left: "a regañadientes", right: "aceptando algo de mala gana" },
+          { left: "restar importancia", right: "presentar algo como menos grave de lo que parece" },
+        ],
+      },
+      {
+        id: "c1-02-lexico-uso",
+        type: "gap",
+        prompt: "Completa con la expresión adecuada del banco.",
+        bank: ["horas comprometidas", "pidió la palabra", "salió adelante", "comisión de obra", "sometió a votación"],
+        items: [
+          { q: "Cada familia aspirante debe cumplir veintiuna ___ por semana, la trabaje quien la trabaje.", answers: [["horas comprometidas"]] },
+          { q: "Aunque la discusión fue larga, la propuesta ___ por cuarenta votos contra doce.", answers: [["salió adelante"]] },
+          { q: "La ___ revisará los presupuestos que lleguen antes del día quince.", answers: [["comisión de obra"]] },
+          { q: "Cuando la presidenta ___ el cambio de arquitecta, varios socios se abstuvieron.", answers: [["sometió a votación"]] },
+          { q: "Don Washington ___ y, por más que lo interrumpieron, terminó su argumento.", answers: [["pidió la palabra"]] },
+        ],
+      },
+    ],
+  },
+  pronunciation: {
+    focus: "La vocal final que cambia el modo y el grupo fónico de las concesivas",
+    explanation: [
+      "Muchas oposiciones de modo dependen de una sola vocal átona al final de la palabra: cuesta / cueste, llueve / llueva, sube / suba, hay / haya. En el habla rápida esa vocal se debilita y, si no la pronuncias con claridad, tu oyente no sabrá si informas de un dato o le restas peso. Mantén la vocal final abierta y completa, sin alargarla, sobre todo antes de una pausa.",
+      "Las concesivas antepuestas terminan con el tono suspendido o ligeramente ascendente, seguido de una pausa breve, y la oración principal cae al final. Las reduplicadas («digan lo que digan», «pase lo que pase») se dicen como un solo grupo fónico, sin pausa interna, y la pausa llega después.",
+      "El audio utiliza la síntesis disponible en el navegador: no certifica un acento regional ni evalúa tu pronunciación. Úsalo para afinar el oído y compara tu grabación con la de una persona.",
+    ],
+    table: {
+      caption: "Indicativo y subjuntivo separados por una vocal",
+      head: ["Indicativo", "Subjuntivo", "Frase de práctica"],
+      rows: [
+        ["cuesta", "cueste", "Aunque cueste más, lo votamos."],
+        ["llueve", "llueva", "Aunque llueva, se trabaja."],
+        ["sube", "suba", "Aunque la cuota sube, nadie protesta."],
+        ["hay", "haya", "Aunque haya quejas, seguimos."],
+      ],
     },
-    "produce": [
-      {
-        "text": "La encuesta, voluntaria y limitada, describe viajes, horarios y ocupaciones.",
-        "tip": "Pronuncia los incisos con una breve delimitación y un rango tonal algo menor; recupera después la línea principal. En la enumeración conserva continuidad hasta el último miembro, sin convertir cada elemento en una conclusión."
-      },
-      {
-        "text": "La ampliación del teletrabajo redujo algunos desplazamientos.",
-        "tip": "Graba dos versiones cambiando foco o pausas; explica qué interpretación favorece cada una."
-      },
-      {
-        "text": "La infrarrepresentación del empleo precario limita la extrapolación.",
-        "tip": "Integra esta formulación en una respuesta espontánea de treinta segundos, sin leer el resto."
-      }
-    ]
-  },
-  "listening": {
-    "title": "Voces y decisiones: La economía de un párrafo",
-    "context": "Escucha sin abrir la transcripción. La situación es una intervención o reunión original vinculada al dossier. Las etiquetas de voz orientan la síntesis y no acreditan muestras dialectales verificadas.",
-    "speakers": [
-      {
-        "id": "a",
-        "name": "Intervención 1",
-        "voice": "es-ES-f",
-        "role": "presentación del problema"
-      },
-      {
-        "id": "b",
-        "name": "Intervención 2",
-        "voice": "es-MX-m",
-        "role": "contraste o desarrollo"
-      }
-    ],
-    "script": [
-      {
-        "speaker": "a",
-        "text": "Voy a presentar el informe por capas, para que los detalles no oculten el resultado. La primera conclusión es una reducción del tiempo medio declarado de desplazamiento. La segunda, que esa reducción se concentra en actividades compatibles con trabajo remoto. La tercera es una limitación: nuestra encuesta no representa con la misma solidez todas las modalidades de empleo. Si retienen únicamente la primera, el resumen será breve, pero no será fiel."
-      },
-      {
-        "speaker": "a",
-        "text": "La incorporación de nuevas empresas a la muestra mejoró la cobertura del empleo administrativo. Esa mejora, que no debe confundirse con una representación completa del mercado laboral, también alteró la composición de las respuestas. Hemos aplicado ponderaciones; aun así, no podemos reconstruir con precisión experiencias que apenas se registraron. El personal que presta servicios en varios domicilios constituye un ejemplo. Una persona con tres trayectos cortos puede dedicar más tiempo total al transporte que otra con un único recorrido largo."
-      },
-      {
-        "speaker": "a",
-        "text": "Desde la asociación empresarial nos preguntan si cabe hablar de un aumento de productividad. No directamente. El cuestionario recoge duración declarada de viajes y frecuencia de trabajo remoto, no producción por hora. La reducción del desplazamiento podría liberar tiempo, pero no sabemos a qué se destina ni si coincide con jornadas más extensas. Incorporar esa conclusión sería añadir una relación que nuestros datos no han medido. Prefiero que el informe parezca menos ambicioso y resulte utilizable."
-      },
-      {
-        "speaker": "a",
-        "text": "La recomendación operativa es desagregar los resultados por ocupación, estudiar los trayectos encadenados y mantener una serie comparable. Para comunicarlo a la prensa usaría dos frases: parte de la población empleada viaja menos; otra parte continúa soportando desplazamientos que el promedio oculta. En el documento técnico podemos condensarlo mediante nominalizaciones. En la explicación pública conviene recuperar sujetos y verbos, porque alguien toma las decisiones y alguien experimenta sus efectos. La claridad no consiste siempre en reducir el número de palabras, sino en conservar las relaciones que permiten entenderlas."
-      }
-    ],
-    "stages": [
-      {
-        "stage": "gist",
-        "prompt": "Escucha una vez sin abrir la transcripción. Identifica el problema y el propósito general; no intentes copiar todas las palabras.",
-        "exercise": {
-          "id": "l-global",
-          "type": "choice",
-          "prompt": "Primera escucha: La economía de un párrafo.",
-          "items": [
-            {
-              "q": "¿Qué problema organiza la intervención de «La economía de un párrafo»?",
-              "options": [
-                "Los testimonios individuales invalidan cualquier cálculo.",
-                "La composición de la muestra y el teletrabajo afectan de forma desigual a los grupos.",
-                "Toda reducción estadística implica una manipulación deliberada."
-              ],
-              "answer": 1,
-              "why": "La composición de la muestra y el teletrabajo afectan de forma desigual a los grupos."
-            },
-            {
-              "q": "¿Qué lectura del cierre de «La economía de un párrafo» conservaría sus reservas?",
-              "options": [
-                "Una solución total e inmediata sin condiciones.",
-                "Que haya aumentado la productividad por hora.",
-                "Que algunas personas declaren menos tiempo de viaje."
-              ],
-              "answer": 1,
-              "why": "Que haya aumentado la productividad por hora."
-            }
-          ]
-        }
-      },
-      {
-        "stage": "detail",
-        "prompt": "Escucha de nuevo y toma notas de compromisos, límites y correcciones. Comprueba quién aporta cada dato.",
-        "exercise": {
-          "id": "l-detalle",
-          "type": "open",
-          "prompt": "Reconstruye lo que se dijo sobre desagregar resultados.",
-          "items": [
-            {
-              "prompt": "¿Qué no puede concluir la presentación a partir de los trayectos?",
-              "model": "Que haya aumentado la productividad por hora.",
-              "checklist": [
-                "Conservo el alcance y la atribución de la información.",
-                "Justifico la decisión con un indicio concreto."
-              ]
-            },
-            {
-              "prompt": "En el audio de «La economía de un párrafo», identifica una corrección o una reserva y explica qué interpretación evita.",
-              "model": "La recomendación operativa es desagregar los resultados por ocupación, estudiar los trayectos encadenados y mantener una serie comparable. Para comunicarlo a la prensa usaría dos frases: parte de la población empleada viaja menos; otra parte continúa soportando desplazamientos que el promedio oculta. En el documento técnico podemos condensarlo mediante nominalizaciones. En la explicación pública conviene recuperar sujetos y verbos, porque alguien toma las decisiones y alguien experimenta sus efectos. La claridad no consiste siempre en reducir el número de palabras, sino en conservar las relaciones que permiten entenderlas.",
-              "checklist": [
-                "Conservo el alcance y la atribución de la información.",
-                "Justifico la decisión con un indicio concreto."
-              ]
-            }
-          ]
-        }
-      },
-      {
-        "stage": "notice",
-        "prompt": "Antes de consultar la transcripción, explica una intención y justifícala con un marcador o una oposición que hayas oído.",
-        "exercise": {
-          "id": "l-inferencia",
-          "type": "open",
-          "prompt": "Escucha la organización y la postura en La economía de un párrafo.",
-          "items": [
-            {
-              "prompt": "¿Qué diferencia perdería un resumen del audio de «La economía de un párrafo» que eliminara sus condiciones?",
-              "model": "Que haya aumentado la productividad por hora.",
-              "checklist": [
-                "Conservo el alcance y la atribución de la información.",
-                "Justifico la decisión con un indicio concreto."
-              ]
-            },
-            {
-              "prompt": "Reformula el cierre de «La economía de un párrafo» para una persona que no asistió; conserva una reserva y un compromiso.",
-              "model": "La reducción media del desplazamiento se concentra en ocupaciones compatibles con trabajo remoto y no acredita una mejora general de la conciliación. La exposición añade que el estudio tampoco mide productividad. Recomiendo desagregar resultados y analizar trayectos encadenados, especialmente en cuidados. Para el público general, la conclusión puede formularse así: algunas personas viajan menos, pero otras siguen soportando recorridos difíciles que el promedio oculta. La limitación de la muestra debe figurar junto al resultado, no escondida en un anexo.",
-              "checklist": [
-                "Conservo el alcance y la atribución de la información.",
-                "Justifico la decisión con un indicio concreto."
-              ]
-            }
-          ]
-        }
-      }
-    ]
-  },
-  "reading": {
-    "title": "Quién aparece en el promedio",
-    "genre": "Informe comentado",
-    "frame": "Texto original situado en Montevideo; léelo después de la primera escucha y contrasta sus decisiones discursivas.",
-    "text": [
-      "El informe del Observatorio del Trabajo anuncia una reducción del tiempo medio de desplazamiento de las personas empleadas. La cifra ocupa el título; las condiciones de cálculo, una nota al final. Entre ambas se abre el espacio donde suele instalarse una lectura apresurada. El descenso no significa que todos los trabajadores viajen menos. Puede indicar que determinados grupos han dejado de viajar, que otros han abandonado el empleo o que la muestra representa ahora a una población distinta. La aparente neutralidad del dato depende de decisiones que conviene hacer visibles antes de convertirlo en una historia de éxito.",
-      "Durante el periodo estudiado creció el trabajo a distancia entre profesionales con estudios superiores. Su retirada parcial de los desplazamientos diarios redujo el promedio general. En cambio, el personal de limpieza, reparto y cuidados siguió acudiendo presencialmente; algunos recorridos incluso se alargaron por la supresión de conexiones de transporte. La disminución agregada de los tiempos de viaje coexistió, por tanto, con un empeoramiento localizado. No hay contradicción matemática. Sí existe una tensión social que desaparece cuando la redacción del resumen transforma una tendencia parcial en una mejora compartida.",
-      "La nominalización permite condensar este proceso: la ampliación del teletrabajo y la reordenación de las líneas favorecieron una reducción desigual de la movilidad obligada. La frase reúne varias acciones, pero oculta sus agentes. ¿Quién amplió las posibilidades de teletrabajo? ¿Quién decidió reordenar las líneas? ¿A quién favoreció exactamente la reducción? Un estilo técnico resulta preciso cuando conserva relaciones relevantes, no cuando acumula sustantivos abstractos. La condensación del discurso puede facilitar la lectura experta y, al mismo tiempo, dificultar la atribución de responsabilidades.",
-      "El anexo ofrece otra información decisiva. Las respuestas proceden de una encuesta voluntaria distribuida por empresas colaboradoras. Quienes trabajan sin contrato estable aparecen en menor proporción. La comparación entre años utilizó ponderaciones para corregir desequilibrios, pero el informe reconoce que no puede estimar adecuadamente a quienes nunca respondieron. Esta limitación no vuelve inútil el estudio. Obliga a formular sus conclusiones en términos de la población efectivamente observada y a proponer investigaciones complementarias antes de extrapolar resultados a todo el mercado laboral.",
-      "En una reunión pública, un representante empresarial celebró la mejora de la conciliación. Una cuidadora contestó que su jornada seguía fragmentada y que esperaba más tiempo en las paradas. Ambos podían describir experiencias verdaderas, aunque solo una estuviera bien representada en el indicador principal. La mediadora no trató de promediar sus testimonios. Señaló que el informe medía duración de trayectos, mientras ellos hablaban también de disponibilidad del tiempo, estabilidad horaria y capacidad para organizar la vida familiar. Esas dimensiones requerían indicadores diferentes.",
-      "El resumen ejecutivo debería preservar esta distinción. Podría afirmar que la reducción observada se concentra en ocupaciones compatibles con el trabajo remoto, advertir sobre la infrarrepresentación del empleo precario y recomendar una evaluación de itinerarios esenciales. Una conclusión así es menos vistosa que anunciar que la ciudad ha ganado tiempo. También permite decidir mejor. Cuando una cifra afecta a la distribución de recursos, la economía verbal solo constituye una virtud si no se consigue a costa de borrar a quienes quedan fuera del promedio."
-    ],
-    "tasks": [
-      {
-        "id": "r-inferencia",
-        "type": "choice",
-        "prompt": "Interpreta la postura de «Quién aparece en el promedio» sin atribuir intenciones que el texto no demuestra.",
-        "items": [
-          {
-            "q": "¿Por qué puede bajar el promedio sin que mejore la situación de todos?",
-            "options": [
-              "Los testimonios individuales invalidan cualquier cálculo.",
-              "La composición de la muestra y el teletrabajo afectan de forma desigual a los grupos.",
-              "Toda reducción estadística implica una manipulación deliberada."
-            ],
-            "answer": 1,
-            "why": "La composición de la muestra y el teletrabajo afectan de forma desigual a los grupos."
-          },
-          {
-            "q": "¿Qué conclusión excede lo que permite afirmar «Quién aparece en el promedio»?",
-            "options": [
-              "La composición de la muestra y el teletrabajo afectan de forma desigual a los grupos.",
-              "La decisión exige conservar límites y atribuir las voces.",
-              "Toda reducción estadística implica una manipulación deliberada."
-            ],
-            "answer": 2,
-            "why": "Toda reducción estadística implica una manipulación deliberada."
-          }
-        ]
-      },
-      {
-        "id": "r-argumento",
-        "type": "open",
-        "prompt": "Reconstruye cómo avanza «Quién aparece en el promedio».",
-        "items": [
-          {
-            "prompt": "Localiza una transición decisiva en «Quién aparece en el promedio» y explica qué interpretación modifica.",
-            "model": "El resumen ejecutivo debería preservar esta distinción. Podría afirmar que la reducción observada se concentra en ocupaciones compatibles con el trabajo remoto, advertir sobre la infrarrepresentación del empleo precario y recomendar una evaluación de itinerarios esenciales. Una conclusión así es menos vistosa que anunciar que la ciudad ha ganado tiempo. También permite decidir mejor. Cuando una cifra afecta a la distribución de recursos, la economía verbal solo constituye una virtud si no se consigue a costa de borrar a quienes quedan fuera del promedio.",
-            "checklist": [
-              "Conservo el alcance y la atribución de la información.",
-              "Justifico la decisión con un indicio concreto."
-            ]
-          },
-          {
-            "prompt": "Compara el problema central de «Quién aparece en el promedio» con el audio: identifica una coincidencia y una aportación que no deba confundirse.",
-            "model": "La reducción media del desplazamiento se concentra en ocupaciones compatibles con trabajo remoto y no acredita una mejora general de la conciliación. La exposición añade que el estudio tampoco mide productividad. Recomiendo desagregar resultados y analizar trayectos encadenados, especialmente en cuidados. Para el público general, la conclusión puede formularse así: algunas personas viajan menos, pero otras siguen soportando recorridos difíciles que el promedio oculta. La limitación de la muestra debe figurar junto al resultado, no escondida en un anexo.",
-            "checklist": [
-              "Conservo el alcance y la atribución de la información.",
-              "Justifico la decisión con un indicio concreto."
-            ]
-          }
-        ]
-      }
-    ],
-    "noticing": {
-      "prompt": "Observa cómo las formas elegidas construyen el argumento; justifica qué cambiaría con otra redacción.",
-      "items": [
+    perceive: {
+      id: "c1-02-percepcion",
+      type: "listen",
+      prompt: "Escucha cada frase sin leer las opciones y decide qué forma verbal oyes por la vocal final.",
+      items: [
         {
-          "quote": "La disminución agregada de los tiempos de viaje coexistió, por tanto, con un empeoramiento localizado.",
-          "note": "Transformar verbos en nombres permite jerarquizar procesos: ampliar → ampliación. Los complementos del nombre deben conservar agente, objeto y alcance cuando sean relevantes. Una cadena de sustantivos sin relaciones claras produce opacidad; alterna condensación técnica con una paráfrasis verbal que permita comprobar quién hace qué."
+          q: "¿Qué forma de «costar» oyes?",
+          options: ["cuesta: indicativo, informa", "cueste: subjuntivo, resta peso"],
+          answer: 1,
+          why: "Se oye «cueste», con -e final: subjuntivo polémico.",
+          audio: "Aunque cueste un poco más, es el único proyecto accesible.",
+          voice: "es-UY-m",
         },
         {
-          "quote": "¿Quién decidió reordenar las líneas?",
-          "note": "Pronuncia los incisos con una breve delimitación y un rango tonal algo menor; recupera después la línea principal. En la enumeración conserva continuidad hasta el último miembro, sin convertir cada elemento en una conclusión."
-        }
-      ]
-    }
+          q: "¿Qué forma de «llover» oyes?",
+          options: ["llueva: subjuntivo", "llueve: indicativo"],
+          answer: 1,
+          why: "Se oye «llueve»: la frase informa de que está lloviendo.",
+          audio: "Aunque llueve desde el martes, la cuadrilla terminó el muro.",
+          voice: "es-UY-f",
+        },
+        {
+          q: "¿Qué forma oyes al principio?",
+          options: ["haya: subjuntivo", "hay: indicativo"],
+          answer: 0,
+          why: "Se oye la sílaba final -ya: «haya».",
+          audio: "Aunque haya socios en contra, la asamblea ya decidió.",
+          voice: "es-AR-m",
+        },
+        {
+          q: "¿Cómo se agrupa la concesiva que oyes?",
+          options: ["Con una pausa entre «digan» y «lo que»", "Como un solo grupo, con la pausa después de «digan lo que digan»", "Sin ninguna pausa en toda la frase"],
+          answer: 1,
+          why: "La reduplicada forma un solo grupo fónico; la pausa llega antes de la principal.",
+          audio: "Digan lo que digan, la cooperativa no vende el terreno.",
+          voice: "es-UY-f",
+        },
+      ],
+    },
+    produce: [
+      { text: "Aunque cueste más, es el único proyecto que cumple la norma.", tip: "Pronuncia completa la -e de «cueste» y haz la pausa después de «más».", voice: "es-UY-m" },
+      { text: "Aunque la cuota sube en mayo, nadie se ha quejado.", tip: "Aquí informas: «sube», con -e clara y tono neutro.", voice: "es-UY-f" },
+      { text: "Pase lo que pase con el banco, el sábado trabajamos.", tip: "Di «pase lo que pase» de un tirón y sube un poco el tono antes de la pausa.", voice: "es-AR-m" },
+      { text: "Por más que insistimos, la intendencia no cambió el plazo.", tip: "Acentúa «más» y deja caer el tono al final.", voice: "es-UY-f" },
+    ],
+    spelling: "Por escrito, la diferencia es una letra: revisa siempre la vocal final de los verbos detrás de «aunque», «por más que» y «que» en relativas.",
   },
-  "practice": {
-    "exercises": [
+  listening: {
+    title: "Radio barrial: la cooperativa que busca vecinos",
+    context: "En una radio comunitaria de Montevideo, la periodista Lucía entrevista a Gonzalo, presidente de una cooperativa de vivienda que busca familias nuevas, y a la arquitecta Andrea, que defiende un proyecto más caro de lo previsto. Escucha primero sin transcripción. Las voces son sintéticas y no se presentan como variedades regionales verificadas.",
+    speakers: [
+      { id: "l", name: "Lucía", voice: "es-UY-f", role: "Periodista de la radio" },
+      { id: "g", name: "Gonzalo", voice: "es-UY-m", role: "Presidente de la cooperativa" },
+      { id: "a", name: "Andrea", voice: "es-AR-f", role: "Arquitecta del proyecto" },
+    ],
+    script: [
+      { speaker: "l", text: "Buenas tardes. Hoy tenemos en el estudio a Gonzalo, presidente de la cooperativa Nuevo Horizonte, y a Andrea, la arquitecta que dirige la obra. Gonzalo, ustedes buscan familias nuevas. ¿A quién buscan exactamente?" },
+      { speaker: "g", text: "Buscamos núcleos familiares que vivan o trabajen en el barrio y que puedan comprometer veintiuna horas de trabajo por semana. No pedimos que sepan de construcción. Las familias que entraron el año pasado tampoco sabían nada, y hoy levantan muros mejor que yo." },
+      { speaker: "l", text: "¿Y quien no tenga tiempo entre semana?" },
+      { speaker: "g", text: "Quien no pueda venir entre semana, que venga el sábado y el domingo. Lo que importa es cumplir las horas, las haga quien las haga dentro de la familia." },
+      { speaker: "l", text: "Andrea, hay vecinos que dicen que el proyecto nuevo es un treinta por ciento más caro." },
+      { speaker: "a", text: "Y es verdad, no lo voy a negar. Pero aunque sea más caro, es el único que cumple la normativa de accesibilidad. Por más que revisamos el proyecto anterior, no encontramos ninguna forma de meter un ascensor sin rehacer los planos." },
+      { speaker: "l", text: "Hay quien piensa que podrían haber ahorrado en materiales." },
+      { speaker: "a", text: "Mire, aunque hubiéramos comprado los materiales más baratos del mercado, el costo final habría sido casi el mismo, porque lo que encarece la obra es la estructura. Y aunque mañana nos ofrecieran un proyecto más barato, tendríamos que pedir otra vez todos los permisos." },
+      { speaker: "g", text: "Yo quiero agregar algo. Por complicado que parezca, la asamblea votó con información. Hubo socios que se mantuvieron en sus trece hasta el final, y está bien. Pero la propuesta salió adelante, y eso que la discusión duró casi cuatro horas." },
+      { speaker: "l", text: "Última pregunta: ¿qué le dirían a una familia que esté dudando?" },
+      { speaker: "g", text: "Que venga a una jornada de trabajo antes de decidir. Pase lo que pase después, va a conocer a sus futuros vecinos." },
+    ],
+    stages: [
       {
-        "id": "p-orden",
-        "type": "order",
-        "prompt": "Reconstruye dos decisiones lingüísticas de «La economía de un párrafo»; léelas después con una pausa justificada. Recupera el orden de las formulaciones de los ejemplos; la paráfrasis libre se trabaja en las actividades abiertas.",
-        "items": [
+        stage: "gist",
+        prompt: "Escucha la entrevista completa sin abrir la transcripción. ¿Qué dos temas trata?",
+        exercise: {
+          id: "c1-02-escucha-gist",
+          type: "choice",
+          prompt: "Reconstruye los temas principales.",
+          items: [
+            {
+              q: "¿Qué busca la cooperativa?",
+              options: [
+                "Una constructora que termine la obra.",
+                "Familias del barrio que puedan aportar horas de trabajo.",
+                "Un banco que les preste dinero sin intereses.",
+              ],
+              answer: 1,
+              why: "Gonzalo describe a los núcleos familiares que buscan.",
+            },
+            {
+              q: "¿Qué hace Andrea con la crítica sobre el costo?",
+              options: [
+                "Niega que el proyecto sea más caro.",
+                "Promete buscar un proyecto más barato.",
+                "Acepta el dato y explica por qué no cambia la decisión.",
+              ],
+              answer: 2,
+              why: "«Es verdad, no lo voy a negar. Pero aunque sea más caro…»",
+            },
+          ],
+        },
+      },
+      {
+        stage: "detail",
+        prompt: "Escucha otra vez y anota las condiciones y los argumentos concretos.",
+        exercise: {
+          id: "c1-02-escucha-detail",
+          type: "choice",
+          prompt: "Comprueba los detalles.",
+          items: [
+            {
+              q: "¿Qué pasa con las familias que no pueden ir entre semana?",
+              options: [
+                "Pueden cumplir las horas el fin de semana.",
+                "Quedan excluidas de la cooperativa.",
+                "Pagan una cuota extra en lugar de trabajar.",
+              ],
+              answer: 0,
+              why: "«Quien no pueda venir entre semana, que venga el sábado y el domingo.»",
+            },
+            {
+              q: "Según Andrea, ¿qué encarece de verdad la obra?",
+              options: [
+                "Los materiales de terminación.",
+                "Los permisos municipales.",
+                "La estructura necesaria para el ascensor y la accesibilidad.",
+              ],
+              answer: 2,
+              why: "Dice que lo que encarece la obra es la estructura.",
+            },
+            {
+              q: "¿Cuánto duró la discusión en la asamblea?",
+              options: [
+                "Casi cuatro horas.",
+                "Una tarde entera, en dos sesiones.",
+                "Menos de una hora.",
+              ],
+              answer: 0,
+              why: "«Y eso que la discusión duró casi cuatro horas.»",
+            },
+          ],
+        },
+      },
+      {
+        stage: "notice",
+        prompt: "Fíjate en qué hace cada frase. Relaciona y consulta la transcripción solo después.",
+        exercise: {
+          id: "c1-02-escucha-notice",
+          type: "match",
+          prompt: "Relaciona cada frase de la entrevista con su función.",
+          pairs: [
+            { left: "núcleos familiares que vivan o trabajen en el barrio", right: "describe un perfil, no a familias concretas" },
+            { left: "las familias que entraron el año pasado", right: "se refiere a personas identificadas" },
+            { left: "aunque sea más caro, es el único que cumple", right: "concede un dato conocido y le resta peso" },
+            { left: "aunque hubiéramos comprado los materiales más baratos", right: "rehace un pasado que no ocurrió" },
+            { left: "por más que revisamos el proyecto anterior", right: "concede un hecho real del pasado" },
+            { left: "y eso que la discusión duró casi cuatro horas", right: "añade al final un obstáculo, en tono coloquial" },
+          ],
+          why: "El modo de la relativa depende de si el referente está identificado; el de la concesiva, de lo que hace el hablante con el obstáculo.",
+        },
+      },
+    ],
+  },
+  reading: {
+    title: "Cuatro horas para un ascensor",
+    genre: "Crónica del boletín de una cooperativa",
+    frame: "Crónica publicada en el boletín mensual de la cooperativa Nuevo Horizonte, en un barrio de Montevideo. La cooperativa, las personas y las cifras son ficticias.",
+    text: [
+      "La asamblea del sábado empezó a las tres de la tarde y terminó pasadas las siete, cuando ya no quedaba mate en ningún termo. Había un solo punto en el orden del día, pero era de los que dividen: aprobar o rechazar el proyecto de la arquitecta Andrea Benítez, que incorpora un ascensor y rampas en los tres bloques y cuesta un treinta por ciento más que el proyecto original. Asistieron cincuenta y dos de las sesenta familias socias, una participación que nadie recordaba desde la compra del terreno.",
+      "Abrió el debate Washington Pereira, uno de los fundadores, con una pregunta que muchos tenían en la cabeza: «¿Quién nos va a prestar la diferencia?». Pereira recordó que, por más que la comisión había negociado con el banco, la cuota mensual subiría para todos, y que hay familias que ya llegan justas a fin de mes. Nadie le discutió el dato. Lo que se discutió fue qué hacer con él.",
+      "La arquitecta respondió sin rodeos. Reconoció que el proyecto es más caro y que, aunque lo sea, es el único que cumple la normativa de accesibilidad vigente. Explicó que, aunque la cooperativa hubiera elegido los materiales más baratos, el costo apenas habría bajado, porque el aumento se debe a la estructura que necesita el ascensor. Y añadió una frase que se repitió después en los pasillos: «Una vivienda que no pueda habitar quien envejezca en ella es una vivienda a plazo».",
+      "A partir de ahí la discusión cambió de tono. Marta Silveira, que vive con su madre de ochenta y un años, pidió la palabra para recordar que la cooperativa existe para que vivan en ella quienes la construyen, tengan la edad que tengan. Otros socios insistieron en que no hay ninguna familia que pueda asumir una cuota mucho más alta sin dejar de cumplir sus horas de obra. Pereira, por su parte, se mantuvo en sus trece hasta el final, aunque reconoció que no tenía una alternativa que resolviera la accesibilidad.",
+      "La comisión de obra propuso entonces una solución intermedia: quienes tengan ingresos más bajos podrán compensar parte del aumento con horas extra de trabajo, y la diferencia se repartirá entre todas las familias que entren a partir de este año. La propuesta no convenció a todos, pero recogió buena parte de las objeciones. Por complicado que resulte el cálculo, la tesorería se comprometió a presentarlo por escrito antes de fin de mes, con un ejemplo para cada tipo de núcleo familiar.",
+      "A las siete y diez, la presidenta sometió el proyecto a votación. Salió adelante con treinta y ocho votos a favor, nueve en contra y cinco abstenciones, y eso que, al empezar la tarde, casi nadie apostaba por él. Varios de los que votaron en contra se acercaron después a la arquitecta para preguntarle por el calendario de la obra. Dijeran lo que dijeran durante la asamblea, todos se quedaron a ayudar a guardar las sillas.",
+      "Queda ahora la tarea más urgente: encontrar doce familias nuevas que vivan o trabajen en el barrio y que estén dispuestas a sumarse a la obra. Quien conozca a alguien que cumpla esas condiciones, que le pase el contacto de la comisión de admisión. La primera jornada de puertas abiertas será el último sábado del mes, llueva o no llueva.",
+    ],
+    glossary: [
+      { es: "termo", note: "recipiente que conserva caliente el agua del mate" },
+      { es: "llegar justo a fin de mes", note: "tener apenas el dinero necesario para cubrir los gastos del mes" },
+      { es: "vivienda a plazo", note: "aquí, vivienda que solo sirve durante un tiempo limitado" },
+    ],
+    tasks: [
+      {
+        id: "c1-02-lectura-comprension",
+        type: "choice",
+        prompt: "Comprueba que has entendido la crónica.",
+        items: [
           {
-            "words": [
-              "La",
-              "supresión",
-              "de",
-              "conexiones",
-              "perjudicó",
-              "a",
-              "las",
-              "cuidadoras."
+            q: "¿Qué discutieron realmente los socios sobre el dato de Pereira?",
+            options: [
+              "Si el aumento de la cuota era real o exagerado.",
+              "Qué hacer con un aumento que nadie negaba.",
+              "Si el banco había mentido en la negociación.",
             ],
-            "why": "Transformar verbos en nombres permite jerarquizar procesos: ampliar → ampliación. Los complementos del nombre deben conservar agente, objeto y alcance cuando sean relevantes. Una cadena de sustantivos sin relaciones claras produce opacidad; alterna condensación técnica con una paráfrasis verbal que permita comprobar quién hace qué."
+            answer: 1,
+            why: "«Nadie le discutió el dato. Lo que se discutió fue qué hacer con él.»",
           },
           {
-            "words": [
-              "La",
-              "infrarrepresentación",
-              "del",
-              "empleo",
-              "precario",
-              "limita",
-              "la",
-              "extrapolación."
+            q: "¿Cuál fue la solución intermedia de la comisión de obra?",
+            options: [
+              "Compensar parte del aumento con horas de trabajo y repartir la diferencia entre las familias nuevas.",
+              "Quitar el ascensor de uno de los tres bloques.",
+              "Pedir un segundo préstamo a otro banco.",
             ],
-            "why": "Transformar verbos en nombres permite jerarquizar procesos: ampliar → ampliación. Los complementos del nombre deben conservar agente, objeto y alcance cuando sean relevantes. Una cadena de sustantivos sin relaciones claras produce opacidad; alterna condensación técnica con una paráfrasis verbal que permita comprobar quién hace qué."
-          }
-        ]
-      },
-      {
-        "id": "p-contexto",
-        "type": "context",
-        "prompt": "Elige intervenciones fieles al caso de Montevideo.",
-        "items": [
+            answer: 0,
+            why: "Lo explica el quinto párrafo.",
+          },
           {
-            "context": "Debes explicar desagregar resultados a alguien que no leyó el dossier.",
-            "q": "¿Qué definición de desagregar resultados conserva el sentido del caso?",
-            "options": [
-              "separar datos por grupos",
-              "ajustar el peso de respuestas",
-              "viajes impuestos por actividades necesarias"
+            q: "¿Qué muestra el final de la crónica sobre los que votaron en contra?",
+            options: [
+              "Que pidieron repetir la votación.",
+              "Que se fueron de la cooperativa.",
+              "Que, pese al desacuerdo, siguieron implicados en la obra.",
             ],
-            "answer": 0,
-            "why": "separar datos por grupos"
+            answer: 2,
+            why: "Preguntaron por el calendario y ayudaron a guardar las sillas.",
           },
+        ],
+      },
+      {
+        id: "c1-02-lectura-funcion",
+        type: "match",
+        prompt: "Relaciona cada fragmento de la crónica con lo que hace su relativa o su concesiva.",
+        pairs: [
+          { left: "aunque lo sea, es el único que cumple la normativa", right: "concede un dato conocido para quitarle peso" },
+          { left: "no hay ninguna familia que pueda asumir una cuota mucho más alta", right: "niega la existencia de un referente" },
+          { left: "tengan la edad que tengan", right: "concesiva reduplicada: da igual la edad" },
+          { left: "doce familias nuevas que vivan o trabajen en el barrio", right: "describe un perfil que todavía no se conoce" },
+        ],
+      },
+      {
+        id: "c1-02-lectura-evaluacion",
+        type: "open",
+        prompt: "Valora una frase de la crónica con argumentos propios.",
+        items: [
           {
-            "context": "Un interlocutor propone eliminar del resumen la principal reserva para hacerlo más convincente.",
-            "q": "¿Qué respuesta mantiene la fidelidad en «La economía de un párrafo»?",
-            "options": [
-              "Que algunas personas declaren menos tiempo de viaje.",
-              "Toda reducción estadística implica una manipulación deliberada.",
-              "Que haya aumentado la productividad por hora."
+            prompt: "La arquitecta dice: «Una vivienda que no pueda habitar quien envejezca en ella es una vivienda a plazo». Explica en 70–90 palabras por qué las dos relativas van en subjuntivo y si te parece un buen argumento para convencer a quien se opone por motivos económicos.",
+            model: "Las dos relativas describen casos posibles, no personas ni casas concretas: cualquier vivienda que tenga ese defecto y cualquiera que envejezca allí. Por eso van en subjuntivo. Me parece un buen argumento porque no discute el costo, sino que cambia el plazo de la comparación: lo barato hoy puede obligar a mudarse dentro de veinte años. Aun así, a una familia que llega justa a fin de mes le haría falta, además, una solución concreta para pagar.",
+            checklist: [
+              "Explico que las relativas no identifican referentes concretos.",
+              "Tomo posición sobre el argumento y la justifico.",
+              "Uso al menos una concesiva propia.",
             ],
-            "answer": 2,
-            "why": "Que haya aumentado la productividad por hora."
-          }
-        ]
+          },
+        ],
       },
-      {
-        "id": "p-redaccion",
-        "type": "open",
-        "prompt": "Ensaya dos movimientos antes de redactar tu texto sobre «La economía de un párrafo».",
-        "items": [
-          {
-            "prompt": "Escribe una apertura de 60–80 palabras para esta tarea: Escribe un resumen ejecutivo para responsables de transporte: conserva la tendencia, el alcance de la muestra y dos medidas justificadas; añade un párrafo accesible para quienes no conocen estadística.",
-            "model": "La reducción media del desplazamiento se concentra en ocupaciones compatibles con trabajo remoto y no acredita una mejora general de la conciliación. La exposición añade que el estudio tampoco mide productividad. Recomiendo desagregar resultados y analizar trayectos encadenados, especialmente en cuidados. Para el público general, la conclusión puede formularse así: algunas personas viajan menos, pero otras siguen soportando recorridos difíciles que el promedio oculta. La limitación de la muestra debe figurar junto al resultado, no escondida en un anexo.",
-            "checklist": [
-              "Conservo el alcance y la atribución de la información.",
-              "Justifico la decisión con un indicio concreto."
-            ]
-          },
-          {
-            "prompt": "Formula una objeción razonable a la propuesta de «La economía de un párrafo» y respóndela sin atribuir intenciones no demostradas. Basa la objeción en una limitación expresada en la lectura o en el audio; no añadas cifras, hechos ni intenciones no documentados.",
-            "model": "Una reserva que debe conservarse: Que haya aumentado la productividad por hora. La respuesta debe delimitar el compromiso: La infrarrepresentación del empleo precario limita la extrapolación.",
-            "checklist": [
-              "Conservo el alcance y la atribución de la información.",
-              "Justifico la decisión con un indicio concreto."
-            ]
-          }
-        ]
-      },
-      {
-        "id": "p-recuperacion",
-        "type": "open",
-        "prompt": "Recupera sin consultar: compara los casos y comprueba después tus decisiones. En el balance final, reparte esta recuperación entre dos sesiones.",
-        "items": [
-          {
-            "prompt": "Recuperación de la semana 1 · Modo en sustantivas: matices. Recupera una construcción y explica su efecto antes de emplearla en dos frases. Contrasta el caso «Lo que permite afirmar un hallazgo» con «La economía de un párrafo».",
-            "model": "Punto de contraste: Siento que el titular exagera el hallazgo. En el caso actual: La ampliación del teletrabajo redujo algunos desplazamientos. La transferencia debe conservar el sentido pertinente y justificar cualquier cambio de registro.",
-            "checklist": [
-              "Recupero el recurso antes de consultar la semana anterior.",
-              "Distingo lo que puede transferirse de lo que cambia por el contexto."
-            ]
-          },
-          {
-            "prompt": "Recuperación de la semana 1 · Registro académico. Recupera el recurso discursivo y explica cómo cambia la interpretación. Contrasta el caso «Lo que permite afirmar un hallazgo» con «La economía de un párrafo».",
-            "model": "Punto de contraste: Siento que el titular exagera el hallazgo. En el caso actual: La ampliación del teletrabajo redujo algunos desplazamientos. La transferencia debe conservar el sentido pertinente y justificar cualquier cambio de registro.",
-            "checklist": [
-              "Recupero el recurso antes de consultar la semana anterior.",
-              "Distingo lo que puede transferirse de lo que cambia por el contexto."
-            ]
-          },
-          {
-            "prompt": "Recuperación de la semana 1 · Ciencia y divulgación. Recupera dos expresiones, explica su combinación habitual y utilízalas en una comparación. Contrasta el caso «Lo que permite afirmar un hallazgo» con «La economía de un párrafo».",
-            "model": "Punto de contraste: Siento que el titular exagera el hallazgo. En el caso actual: La ampliación del teletrabajo redujo algunos desplazamientos. La transferencia debe conservar el sentido pertinente y justificar cualquier cambio de registro.",
-            "checklist": [
-              "Recupero el recurso antes de consultar la semana anterior.",
-              "Distingo lo que puede transferirse de lo que cambia por el contexto."
-            ]
-          },
-          {
-            "prompt": "Recuperación de la semana 1 · Lectura académica en voz alta. Recupera el patrón de pausas o foco, graba dos versiones y justifica la más clara. Contrasta el caso «Lo que permite afirmar un hallazgo» con «La economía de un párrafo».",
-            "model": "Punto de contraste: Siento que el titular exagera el hallazgo. En el caso actual: La ampliación del teletrabajo redujo algunos desplazamientos. La transferencia debe conservar el sentido pertinente y justificar cualquier cambio de registro.",
-            "checklist": [
-              "Recupero el recurso antes de consultar la semana anterior.",
-              "Distingo lo que puede transferirse de lo que cambia por el contexto."
-            ]
-          },
-          {
-            "prompt": "Recuperación de la semana 1 · Escuchar una conferencia breve. Recupera la estrategia de escucha y reconstruye una reserva sin mirar la transcripción. Contrasta el caso «Lo que permite afirmar un hallazgo» con «La economía de un párrafo».",
-            "model": "Punto de contraste: Siento que el titular exagera el hallazgo. En el caso actual: La ampliación del teletrabajo redujo algunos desplazamientos. La transferencia debe conservar el sentido pertinente y justificar cualquier cambio de registro.",
-            "checklist": [
-              "Recupero el recurso antes de consultar la semana anterior.",
-              "Distingo lo que puede transferirse de lo que cambia por el contexto."
-            ]
-          },
-          {
-            "prompt": "Recuperación de la semana 1 · Matizar una interpretación. Recupera el movimiento comunicativo y úsalo ante una objeción concreta. Contrasta el caso «Lo que permite afirmar un hallazgo» con «La economía de un párrafo».",
-            "model": "Punto de contraste: Siento que el titular exagera el hallazgo. En el caso actual: La ampliación del teletrabajo redujo algunos desplazamientos. La transferencia debe conservar el sentido pertinente y justificar cualquier cambio de registro.",
-            "checklist": [
-              "Recupero el recurso antes de consultar la semana anterior.",
-              "Distingo lo que puede transferirse de lo que cambia por el contexto."
-            ]
-          }
-        ]
-      }
-    ]
+    ],
+    noticing: {
+      prompt: "Observa cómo la crónica combina relativas y concesivas para contar posturas enfrentadas.",
+      items: [
+        { quote: "por más que la comisión había negociado con el banco, la cuota mensual subiría para todos", note: "«Por más que» + indicativo: concede un hecho real del pasado." },
+        { quote: "aunque la cooperativa hubiera elegido los materiales más baratos, el costo apenas habría bajado", note: "Pasado contrafactual: pluscuamperfecto de subjuntivo y condicional compuesto." },
+        { quote: "Pereira, por su parte, se mantuvo en sus trece hasta el final, aunque reconoció que no tenía una alternativa que resolviera la accesibilidad", note: "Concesiva informativa en indicativo y relativa en subjuntivo: la alternativa no existe." },
+        { quote: "Quien conozca a alguien que cumpla esas condiciones, que le pase el contacto", note: "Relativas genéricas en subjuntivo con una principal que da una instrucción." },
+      ],
+    },
   },
-  "writing": {
-    "task": "Escribe un resumen ejecutivo para responsables de transporte: conserva la tendencia, el alcance de la muestra y dos medidas justificadas; añade un párrafo accesible para quienes no conocen estadística.",
-    "context": "Produce primero tu versión sin consultar el modelo. Después compara organización, atribución, registro y alcance; el modelo ofrece una realización posible, no la única respuesta válida.",
-    "steps": [
-      "Selecciona las afirmaciones que cada fuente permite sostener y anota sus límites.",
-      "Organiza por problemas y decisiones; redacta sin copiar frases extensas del dossier.",
-      "Revisa atribución, registro, cohesión y alcance de los compromisos; justifica dos cambios."
+  practice: {
+    intro: "Combina orden, elección según la intención y escritura guiada.",
+    exercises: [
+      {
+        id: "c1-02-orden",
+        type: "order",
+        prompt: "Ordena las palabras para formar frases de la asamblea.",
+        items: [
+          {
+            words: ["Quien", "no", "esté", "de", "acuerdo,", "que", "pida", "la", "palabra."],
+            why: "Relativa genérica en subjuntivo con una principal que da una instrucción.",
+          },
+          {
+            words: ["Por", "caro", "que", "sea,", "el", "ascensor", "es", "imprescindible."],
+            why: "«Por + adjetivo + que» con subjuntivo.",
+          },
+          {
+            words: ["No", "conozco", "a", "nadie", "que", "pueda", "pagar", "esa", "cuota."],
+            why: "Existencia negada: subjuntivo.",
+          },
+        ],
+      },
+      {
+        id: "c1-02-intencion",
+        type: "context",
+        prompt: "Elige la frase que corresponde a la intención descrita.",
+        items: [
+          {
+            context: "Quieres dejar claro que aceptarás la decisión, cualquiera que sea.",
+            q: "¿Qué dices al final de la asamblea?",
+            options: [
+              "Decidan lo que decidan, voy a respetar el resultado.",
+              "Decidan lo que decidieron, voy a respetar el resultado.",
+              "Aunque decidieron, voy a respetar el resultado.",
+            ],
+            answer: 0,
+            why: "Reduplicada con el mismo tiempo: da igual lo que decidan.",
+          },
+          {
+            context: "Le cuentas a un amigo un dato que él no conocía: la obra está atrasada, pero las familias están contentas.",
+            q: "¿Qué frase informa del obstáculo?",
+            options: [
+              "Aunque la obra vaya atrasada, las familias están contentas.",
+              "Aunque la obra fuera atrasada, las familias estarían contentas.",
+              "Aunque la obra va atrasada, las familias están contentas.",
+            ],
+            answer: 2,
+            why: "Para informar de un dato nuevo, indicativo.",
+          },
+          {
+            context: "Hablas de la persona concreta que la comisión ya contrató para la instalación eléctrica.",
+            q: "¿Qué frase es la adecuada?",
+            options: [
+              "Llama al electricista que sepa de paneles solares; ya está contratado.",
+              "Llama al electricista que sabe de paneles solares; ya está contratado.",
+              "Llama a un electricista que sepa de paneles solares; ya está contratado.",
+            ],
+            answer: 1,
+            why: "Persona identificada: artículo definido e indicativo. Con subjuntivo, la relativa describiría un perfil que todavía buscas.",
+          },
+        ],
+      },
+      {
+        id: "c1-02-reduplicadas",
+        type: "match",
+        prompt: "Relaciona cada concesiva reduplicada con su paráfrasis.",
+        pairs: [
+          { left: "pase lo que pase", right: "ocurra cualquier cosa" },
+          { left: "quieras o no", right: "tanto si estás de acuerdo como si no" },
+          { left: "sea como sea", right: "de cualquier manera" },
+          { left: "vayas donde vayas", right: "en cualquier lugar al que vayas" },
+          { left: "dijeran lo que dijeran", right: "independientemente de lo que decían" },
+        ],
+      },
+      {
+        id: "c1-02-microescritura",
+        type: "open",
+        prompt: "Escribe dos piezas breves antes de la tarea de escritura.",
+        items: [
+          {
+            prompt: "Escribe el anuncio (50–70 palabras) de una comunidad que conozcas (un club, un huerto urbano, un coro) que busca nuevos miembros. Describe el perfil con al menos tres relativas en subjuntivo y añade una instrucción para quien esté interesado.",
+            model: "El huerto comunitario de la calle Durazno busca vecinos que tengan dos horas libres por semana, que no se asusten de la tierra y que quieran aprender a compostar. No hace falta experiencia: quien nunca haya plantado nada aprenderá con los demás. Quien quiera conocernos, que venga el sábado a las diez con guantes y ganas.",
+            checklist: [
+              "Uso al menos tres relativas en subjuntivo para describir el perfil.",
+              "Incluyo una relativa genérica con una instrucción («quien…, que…»).",
+              "El anuncio no describe a personas concretas.",
+            ],
+          },
+          {
+            prompt: "Alguien te dice: «Tu propuesta es buena, pero exige mucho trabajo». Respóndele en 40–60 palabras con tres movimientos: concede, resta peso y reafirma. Usa dos concesivas distintas.",
+            model: "Es verdad, exige trabajo, no lo voy a negar. Pero por mucho trabajo que exija, el resultado nos ahorra problemas durante años. Y aunque nos llevara el doble de tiempo, seguiría valiendo la pena, porque no hay otra opción que resuelva lo esencial.",
+            checklist: [
+              "Concedo el argumento sin negarlo.",
+              "Uso dos estructuras concesivas diferentes con el modo adecuado.",
+              "Termino reafirmando mi postura.",
+            ],
+          },
+        ],
+      },
     ],
-    "useLanguage": [
-      "Nominalización con agentes visibles",
-      "desagregar resultados",
-      "ponderar una muestra",
-      "movilidad obligada",
-      "conciliación laboral"
-    ],
-    "model": [
-      "La reducción media del desplazamiento se concentra en ocupaciones compatibles con trabajo remoto y no acredita una mejora general de la conciliación. La exposición añade que el estudio tampoco mide productividad. Recomiendo desagregar resultados y analizar trayectos encadenados, especialmente en cuidados. Para el público general, la conclusión puede formularse así: algunas personas viajan menos, pero otras siguen soportando recorridos difíciles que el promedio oculta. La limitación de la muestra debe figurar junto al resultado, no escondida en un anexo.",
-      "La encuesta voluntaria incorpora principalmente respuestas de empresas colaboradoras y representa con menor solidez el empleo precario. Las ponderaciones corrigen parte del desequilibrio, pero no reconstruyen experiencias apenas registradas. Por tanto, el descenso agregado no debe extrapolarse sin reservas a toda la población trabajadora. Tampoco equivale a una reducción de la jornada: el estudio no establece cómo se utiliza el tiempo liberado ni si el trabajo remoto coincide con una disponibilidad más extensa. Esas cuestiones exigirían preguntas e indicadores que el instrumento actual no contiene.",
-      "La planificación del transporte debería prestar atención a quienes continúan viajando presencialmente y a los cambios de conexiones que afectan sus itinerarios. Una persona que visita varios domicilios puede realizar trayectos breves y, sin embargo, acumular una carga considerable durante el día. Conviene estudiar esa experiencia antes de interpretar la menor movilidad media como razón suficiente para reducir servicios. La decisión propuesta no cuestiona la utilidad del informe; delimita qué decisiones puede orientar y qué información adicional hace falta para evitar que el ahorro de tiempo de unos grupos oculte el coste soportado por otros."
-    ],
-    "checklist": [
-      "Cumplo el género, la finalidad y el destinatario de la consigna.",
-      "Integro lectura y escucha con atribución clara, sin yuxtaponer resúmenes.",
-      "Conservo condiciones e incertidumbres y distingo mi propuesta de las fuentes.",
-      "Uso léxico preciso y estructuras complejas con control.",
-      "Reviso cohesión, puntuación y adecuación antes de la versión final."
-    ],
-    "words": [
-      240,
-      320
-    ]
   },
-  "speaking": {
-    "intro": "Planifica con palabras clave, graba una primera versión y escucha dónde pierdes precisión. La calidad oral se revisa mediante autoevaluación y trabajo con tu docente.",
-    "tasks": [
-      {
-        "title": "Exposición razonada",
-        "prompt": "Explica el mismo informe primero a especialistas y después a personal de cuidados; conserva límites e incorpora la objeción del audio.",
-        "prep": [
-          "Formula una tesis, dos apoyos y una reserva.",
-          "Decide qué detalle del audio añadirás sin leer la transcripción.",
-          "Prepara una pregunta que permita comprobar comprensión."
-        ],
-        "seconds": 240,
-        "model": "La reducción media del desplazamiento se concentra en ocupaciones compatibles con trabajo remoto y no acredita una mejora general de la conciliación. La exposición añade que el estudio tampoco mide productividad. Recomiendo desagregar resultados y analizar trayectos encadenados, especialmente en cuidados. Para el público general, la conclusión puede formularse así: algunas personas viajan menos, pero otras siguen soportando recorridos difíciles que el promedio oculta. La limitación de la muestra debe figurar junto al resultado, no escondida en un anexo.",
-        "selfCheck": [
-          "Mantengo un hilo claro sin leer un texto completo.",
-          "Diferencio voces y calibro certeza.",
-          "Las pausas y el foco ayudan a comprender."
-        ]
-      },
-      {
-        "title": "Interacción y reparación",
-        "prompt": "Tu interlocutor sostiene: «Toda reducción estadística implica una manipulación deliberada.» Pídele que precise su razón, concede lo defendible y responde con evidencia del dossier. Después cambia de papel y plantea esta reserva: «Que algunas personas declaren menos tiempo de viaje.»; corrígela sin humillar y negocia una formulación común.",
-        "prep": [
-          "Prepara una reformulación fiel de la postura ajena.",
-          "Decide qué condición no puedes aceptar y qué alternativa ofrecerás."
-        ],
-        "seconds": 240,
-        "selfCheck": [
-          "Respondo a la objeción real y pido aclaración cuando hace falta.",
-          "Reformulo una interpretación excesiva.",
-          "Cierro con acuerdo o desacuerdo delimitado."
-        ]
-      }
-    ]
-  },
-  "useInClass": {
-    "intro": "Lleva tu texto y tu grabación sobre «La economía de un párrafo». Pide que se examine una decisión lingüística concreta, no solo errores aislados.",
-    "cards": [
-      {
-        "move": "Defiende",
-        "task": "Explica el mismo informe primero a especialistas y después a personal de cuidados; conserva límites e incorpora la objeción del audio.",
-        "phrases": [
-          "La ampliación del teletrabajo redujo algunos desplazamientos.",
-          "La infrarrepresentación del empleo precario limita la extrapolación."
-        ]
-      },
-      {
-        "move": "Contrasta",
-        "task": "Compara con tu docente estas dos interpretaciones: La composición de la muestra y el teletrabajo afectan de forma desigual a los grupos. / Toda reducción estadística implica una manipulación deliberada. Señala un indicio y una condición que podrían cambiar tu lectura."
-      },
-      {
-        "move": "Reformula",
-        "task": "Tu docente cambia el destinatario de tu texto sobre desagregar resultados. Reorganiza oralmente el mensaje y explica qué términos mantienes, cuáles aclaras y qué reservas no puedes omitir."
-      }
+  writing: {
+    task: "Escribe un texto de opinión (230–320 palabras) para el boletín de una comunidad (una cooperativa, un club, una asociación vecinal) que tiene que incorporar miembros nuevos y tomar una decisión discutida. Describe el perfil de las personas que se buscan y defiende tu postura sobre la decisión concediendo los argumentos contrarios sin renunciar a lo esencial.",
+    context: "El boletín lo leen todos los miembros, incluidos los que votaron en contra. Tu objetivo no es ganar una discusión pasada, sino que la comunidad avance unida: reconoce los datos ajenos y explica por qué no cambian tu postura.",
+    steps: [
+      "Anota el perfil que busca la comunidad con tres relativas en subjuntivo y, al lado, a dos personas concretas que ya forman parte de ella, con relativas en indicativo.",
+      "Haz una lista de tres objeciones reales y decide para cada una si vas a informar de un obstáculo, restarle peso o imaginar un caso improbable.",
+      "Redacta al menos tres párrafos: la situación, el perfil buscado y la defensa con concesiones.",
+      "Revisa el texto con la lista de control: corrige cualquier relativa cuyo modo no coincida con lo que sabes del referente y comprueba los tiempos de cada concesiva.",
     ],
-    "bring": "Borrador y versión revisada, esquema oral y una pregunta sobre alcance o registro."
-  },
-  "quiz": {
-    "items": [
-      {
-        "type": "choice",
-        "q": "En una explicación de «La economía de un párrafo», ¿qué significa empleo precario?",
-        "options": [
-          "recorridos sucesivos en una jornada",
-          "trabajo con inseguridad de condiciones",
-          "media del conjunto"
-        ],
-        "answer": 1,
-        "why": "trabajo con inseguridad de condiciones"
-      },
-      {
-        "type": "listen",
-        "audio": "La recomendación operativa es desagregar los resultados por ocupación, estudiar los trayectos encadenados y mantener una serie comparable. Para comunicarlo a la prensa usaría dos frases: parte de la población empleada viaja menos; otra parte continúa soportando desplazamientos que el promedio oculta. En el documento técnico podemos condensarlo mediante nominalizaciones. En la explicación pública conviene recuperar sujetos y verbos, porque alguien toma las decisiones y alguien experimenta sus efectos. La claridad no consiste siempre en reducir el número de palabras, sino en conservar las relaciones que permiten entenderlas.",
-        "voice": "es-ES-f",
-        "q": "Escucha el cierre otra vez: ¿qué límite debes conservar al transmitir «La economía de un párrafo»?",
-        "options": [
-          "Los testimonios individuales invalidan cualquier cálculo.",
-          "Que haya aumentado la productividad por hora.",
-          "Que algunas personas declaren menos tiempo de viaje."
-        ],
-        "answer": 1,
-        "why": "Que haya aumentado la productividad por hora."
-      },
-      {
-        "type": "gap",
-        "q": "La reducción de los tiempos ___ desigual.",
-        "answers": [
-          [
-            "fue"
-          ]
-        ],
-        "hint": "Conjuga ser en pretérito perfecto simple, tercera persona singular.",
-        "why": "El núcleo singular reducción exige fue."
-      },
-      {
-        "type": "open",
-        "prompt": "Nominaliza la primera acción. Escribe solo la reformulación. En una intervención sobre «La economía de un párrafo» lees: «Se suprimieron conexiones y eso perjudicó a las cuidadoras.» Se evalúa el sentido y el recurso solicitado, no la coincidencia literal.",
-        "model": "La supresión de conexiones perjudicó a las cuidadoras.",
-        "checklist": [
-          "Cumplo el recurso solicitado y conservo el sentido relevante.",
-          "Acepto alternativas naturales que mantengan tiempo, referencia y alcance."
-        ]
-      },
-      {
-        "type": "error",
-        "sentence": "La reducción de los tiempos fueron desigual.",
-        "answers": [
-          "La reducción de los tiempos fue desigual."
-        ],
-        "why": "El núcleo singular reducción exige fue."
-      },
-      {
-        "type": "open",
-        "prompt": "Prueba de transferencia de «La economía de un párrafo»: explica en 80–100 palabras por qué esta conclusión requiere matices: Toda reducción estadística implica una manipulación deliberada.",
-        "model": "La reducción media del desplazamiento se concentra en ocupaciones compatibles con trabajo remoto y no acredita una mejora general de la conciliación. La exposición añade que el estudio tampoco mide productividad. Recomiendo desagregar resultados y analizar trayectos encadenados, especialmente en cuidados. Para el público general, la conclusión puede formularse así: algunas personas viajan menos, pero otras siguen soportando recorridos difíciles que el promedio oculta. La limitación de la muestra debe figurar junto al resultado, no escondida en un anexo.",
-        "checklist": [
-          "Identifico el exceso de la afirmación.",
-          "Cito una evidencia y conservo una reserva."
-        ]
-      },
-      {
-        "type": "open",
-        "prompt": "Graba una respuesta de 90 segundos a esta demanda sobre «La economía de un párrafo»: «Dinos una solución definitiva y sin condiciones». Justifica por qué tu respuesta necesita límites.",
-        "model": "La conclusión debe conservar este límite: Que haya aumentado la productividad por hora.",
-        "checklist": [
-          "Respondo de manera directa.",
-          "Distingo decisión, condición e incertidumbre."
-        ]
-      },
-      {
-        "type": "open",
-        "prompt": "Audita tu producción de «La economía de un párrafo»: señala una elección de nominalización con agentes visibles y reescribe un pasaje para otro destinatario.",
-        "model": "Decisión que puedes explicar: La ampliación del teletrabajo redujo algunos desplazamientos. Reformulación para contrastar: Las empresas ampliaron el teletrabajo para el personal administrativo.",
-        "checklist": [
-          "Explico un cambio de sentido o registro.",
-          "Conservo hechos y atribuciones."
-        ]
-      }
-    ]
-  },
-  "complete": {
-    "canNow": [
-      "Puedo usar nominalización con agentes visibles para intervenir con precisión.",
-      "Puedo explicar el caso de Montevideo integrando fuentes y reservas.",
-      "Puedo sostener una exposición y responder a objeciones sin perder el hilo."
+    useLanguage: [
+      "buscamos personas que + subjuntivo",
+      "quien quiera…, que…",
+      "no hay nadie que + subjuntivo",
+      "aunque sea así / aunque + indicativo",
+      "por más que, por + adjetivo + que",
+      "pase lo que pase, digan lo que digan, y eso que",
     ],
-    "review": [
-      "Dentro de dos días, reconstruye de memoria la diferencia central: Que haya aumentado la productividad por hora.",
-      "Dentro de una semana, reutiliza desagregar resultados y empleo precario en otro caso; comprueba su colocación.",
-      "Reescucha tu grabación y revisa este recurso: Incisos y enumeraciones densas."
-    ]
-  }
+    model: [
+      "El coro del barrio cumple diez años con una buena noticia y un problema. La buena noticia es que el ayuntamiento nos ha cedido el salón de la antigua biblioteca, que tiene una acústica estupenda. El problema es que, para llenar sus noventa sillas, necesitamos más voces, sobre todo graves, y que la junta propone subir la cuota para pagar a una directora profesional.",
+      "Buscamos personas que tengan ganas de cantar, que puedan venir los martes por la tarde y que no se asusten de una partitura, aunque no la sepan leer todavía. No pedimos experiencia: Carmen y Julio, que entraron el año pasado sin haber cantado nunca, hoy hacen solos en el concierto de Navidad. Quien quiera probar, que venga a un ensayo abierto antes de decidir. Y quien conozca a algún vecino que cante en la ducha, que lo traiga: no hay voz que no sirva para algo en un coro.",
+      "Sobre la cuota, sé que la propuesta no gusta a todos, y entiendo por qué. Es verdad que subirá ocho euros al mes. Pero aunque suba, sigue siendo la más baja de todos los coros de la ciudad, y no hay ninguna directora que trabaje gratis tres horas semanales. Por más que algunos insistieron en la asamblea en buscar voluntarios, nadie encontró a nadie. Y aunque mañana apareciera alguien dispuesto, dependeríamos de su buena voluntad. Pase lo que pase en la votación del mes que viene, este coro seguirá abierto a quien quiera cantar.",
+    ],
+    checklist: [
+      "Las relativas que describen perfiles van en subjuntivo; las que nombran a personas concretas, en indicativo.",
+      "Cada concesiva hace un gesto claro: informar, restar peso o imaginar.",
+      "Concedo al menos una objeción real sin negarla.",
+      "Uso al menos una concesiva reduplicada o con «por… que».",
+      "El texto tiene tres párrafos como mínimo y un cierre que reafirma la postura.",
+    ],
+    words: [230, 320],
+  },
+  speaking: {
+    intro: "Prepárate con palabras clave, no con un texto leído. Si te grabas, la grabación queda en tu dispositivo; el navegador no evalúa tu pronunciación.",
+    tasks: [
+      {
+        title: "Defensa ante la asamblea",
+        prompt: "Eres socio o socia de una comunidad que debe votar una propuesta cara pero necesaria (un ascensor, una reforma, un cambio de local). Defiéndela durante cuatro minutos: describe a quién beneficia con relativas genéricas, recoge al menos tres objeciones y responde a cada una concediendo sin ceder.",
+        prep: [
+          "Escribe tres objeciones en una columna y, al lado, el gesto con que vas a responder a cada una.",
+          "Prepara una relativa genérica potente para abrir («una casa que no pueda…»).",
+          "Termina con una reduplicada que muestre tu compromiso: «pase lo que pase…».",
+        ],
+        seconds: 240,
+        model: "Compañeros, sé que esta propuesta cuesta más, y no lo voy a negar. Pero pensemos en quienes vivan aquí dentro de veinte años. Una casa que no pueda habitar quien tenga dificultades para caminar no es la casa que queremos. Aunque sea más cara, es la única que cumple la norma. Y aunque encontráramos otra más barata, perderíamos un año entero en permisos.",
+        selfCheck: [
+          "Concedo cada objeción antes de responderla.",
+          "Pronuncio con claridad la vocal final de los verbos en subjuntivo.",
+          "Uso al menos dos tiempos distintos en las concesivas.",
+        ],
+      },
+      {
+        title: "Negociar con un socio escéptico",
+        prompt: "Después de la asamblea, un socio que votó en contra te dice: «Ustedes ganaron, pero yo no voy a poder pagar». Escúchalo, hazle dos preguntas sobre su situación, reconoce lo que tiene razón y negocia con él una solución concreta.",
+        prep: [
+          "Prepara dos preguntas abiertas sobre sus ingresos y sus horas disponibles.",
+          "Ten a mano «entiendo que…», «aunque sea así…» y «quien no pueda…, que…».",
+        ],
+        seconds: 150,
+        model: "Entiendo que te preocupe, de verdad. ¿Cuánto te subiría la cuota exactamente? ¿Podrías aportar horas extra los sábados? La comisión aprobó que quien no pueda pagar la diferencia la compense con trabajo. Aunque no sea la solución perfecta, te permitiría quedarte. ¿Lo hablamos con la tesorera esta semana?",
+        selfCheck: [
+          "Hago al menos dos preguntas reales.",
+          "Reconozco lo que mi interlocutor tiene de razón.",
+          "Propongo una solución concreta y un paso siguiente.",
+        ],
+      },
+    ],
+  },
+  useInClass: {
+    intro: "Lleva a la próxima clase tu lista de objeciones con sus respuestas y una relativa en la que hayas dudado entre los dos modos.",
+    cards: [
+      {
+        move: "Describe",
+        task: "Describe a tu profesor a la persona ideal para un trabajo o un piso compartido, con al menos cuatro relativas en subjuntivo, y después a alguien real que conozcas, con indicativo.",
+        phrases: ["Busco a alguien que…", "Conozco a una persona que…"],
+      },
+      {
+        move: "Rebate",
+        task: "Pide a tu profesor tres objeciones a una idea tuya y respóndelas con tres gestos concesivos distintos.",
+        phrases: ["Aunque sea así…", "Por más que…", "Aunque tuvieras razón…"],
+      },
+      {
+        move: "Pregunta",
+        task: "Pregúntale por un caso de superlativo o de «único» en el que los dos modos sean correctos y pídele que explique la diferencia de sentido.",
+        phrases: ["¿Qué cambia si digo «haya visto» en vez de «he visto»?"],
+      },
+      {
+        move: "Compara",
+        task: "Compara con tu profesor el uso de «así + subjuntivo» en el español de su país y en el de otros países que conozcas.",
+        phrases: ["¿En tu país se dice «así me paguen»?", "¿Suena literario o coloquial?"],
+      },
+    ],
+    bring: "Tu lista de objeciones, el texto de opinión revisado y, si quieres, la grabación de tu defensa.",
+  },
+  quiz: {
+    items: [
+      {
+        type: "choice",
+        q: "«Los vecinos que ___ a la jornada del sábado recibirán una camiseta.» La jornada todavía no se ha hecho. ¿Qué forma completa la frase?",
+        options: ["vinieron", "vengan", "vienen"],
+        answer: 1,
+        why: "Se habla de cualquiera que venga en el futuro: subjuntivo.",
+      },
+      {
+        type: "choice",
+        q: "¿Qué frase concede un dato que todos conocen para restarle importancia?",
+        options: [
+          "Aunque el terreno es pequeño, caben tres bloques.",
+          "Aunque el terreno fuera más grande, no podríamos construir más.",
+          "Sí, es pequeño, pero aunque el terreno sea pequeño, caben tres bloques.",
+        ],
+        answer: 2,
+        why: "Presente de subjuntivo con un hecho conocido: gesto polémico.",
+      },
+      {
+        type: "listen",
+        q: "Escucha la frase. ¿Qué dice el hablante sobre la arquitecta?",
+        options: [
+          "Que todavía no han encontrado a ninguna con ese perfil.",
+          "Que ya han contratado a una arquitecta concreta con ese perfil.",
+          "Que la arquitecta no quiere trabajar con cooperativas.",
+        ],
+        answer: 0,
+        why: "«Una arquitecta que conozca…» con subjuntivo describe un perfil que aún buscan.",
+        audio: "Todavía buscamos una arquitecta que conozca bien la vivienda por ayuda mutua.",
+        voice: "es-UY-m",
+      },
+      {
+        type: "gap",
+        q: "Incluso si el banco ___ (rechazar) la solicitud, la cooperativa empezará la obra con sus ahorros.",
+        answers: [["rechaza"]],
+        hint: "«Incluso si» sigue los tiempos de «si»: nunca presente de subjuntivo.",
+        why: "Con una condición abierta, presente de indicativo.",
+      },
+      {
+        type: "gap",
+        q: "No hay ningún socio que ___ (querer) vender su parte antes de terminar la obra.",
+        answers: [["quiera"]],
+        hint: "Se niega la existencia del antecedente: el verbo de la relativa va en subjuntivo.",
+        why: "«No hay ningún… que» + subjuntivo.",
+      },
+      {
+        type: "error",
+        sentence: "Aunque hubiéramos tenido más voluntarios, la obra terminará en marzo.",
+        answers: ["Aunque hubiéramos tenido más voluntarios, la obra habría terminado en marzo.", "Aunque hubiésemos tenido más voluntarios, la obra habría terminado en marzo."],
+        why: "Un pasado contrafactual pide una consecuencia contrafactual: condicional compuesto.",
+      },
+      {
+        type: "error",
+        sentence: "Pasara lo que pase, la asamblea mantuvo la votación.",
+        answers: ["Pasara lo que pasara, la asamblea mantuvo la votación.", "Pasase lo que pasase, la asamblea mantuvo la votación."],
+        why: "En la reduplicada se repite el mismo tiempo; en un relato pasado, imperfecto de subjuntivo.",
+      },
+      {
+        type: "order",
+        words: ["Quien", "conozca", "a", "una", "familia", "interesada,", "que", "nos", "escriba."],
+        why: "Relativa genérica en subjuntivo y principal con «que» + subjuntivo.",
+      },
+      {
+        type: "open",
+        prompt: "Explica en 70–90 palabras la diferencia entre «Es el mejor proyecto que hemos visto» y «Es el mejor proyecto que hayamos visto nunca», y entre «Rosa es la única que firmó» y «La única que firme tendrá voto doble». Inventa un contexto para cada frase.",
+        model: "«Es el mejor proyecto que hemos visto» presenta el dato: entre los proyectos que conocemos, este es el mejor. Con «hayamos visto nunca» enfatizo la valoración, por ejemplo al felicitar a la arquitecta. «Rosa es la única que firmó» señala a una persona concreta que ya firmó el acta. «La única que firme tendrá voto doble» habla de quien resulte, que todavía no sabemos, por ejemplo en una regla para la próxima asamblea.",
+        checklist: [
+          "Explico que con superlativos los dos modos son correctos con matices distintos.",
+          "Distingo «único» con referente identificado y no identificado.",
+          "Doy un contexto realista para cada frase.",
+        ],
+      },
+    ],
+  },
+  complete: {
+    canNow: [
+      "Elijo el modo de una relativa según si identifico al referente o hablo de cualquiera que cumpla la condición.",
+      "Manejo los casos de refranes, superlativos, «único» y existencia negada.",
+      "Uso concesivas para informar, restar peso a un dato conocido, imaginar lo improbable o rehacer el pasado.",
+      "Defiendo una postura con fórmulas compactas: reduplicadas, «por… que», «aun + gerundio», «y eso que».",
+    ],
+    review: [
+      "Dentro de dos días, tapa la tabla «Un mismo obstáculo, cuatro gestos» y reconstrúyela con el obstáculo «el viaje es largo».",
+      "Dentro de una semana, busca un anuncio de empleo real y subraya las relativas: ¿describen un perfil o a alguien concreto?",
+      "En la próxima clase, defiende en voz alta tu texto de opinión y pide a tu profesor que te lance una objeción inesperada.",
+    ],
+  },
+  related: [
+    { path: "/gramatica/subjuntivo-en-relativas-no-especificas-y", label: "Clase: Subjuntivo en relativas no específicas y genéricas" },
+    { path: "/gramatica/alternancias-en-concesivas-con-valor-pragmatico", label: "Clase: Alternancias en concesivas con valor pragmático" },
+  ],
 };

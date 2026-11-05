@@ -1,989 +1,963 @@
 import type { Module } from "../../types";
 
+/**
+ * C1 · semana 5 · checkpoint · Autoestudio espejo de G175 (aspecto y
+ * perífrasis) y G176 (valores interpretativos del gerundio y participio), con
+ * integración de G167–G174. Repaso autónomo con el taller ficticio de un artista
+ * fallero de Valencia en las semanas previas a la plantà. Audio mediante
+ * síntesis; sin acreditación regional.
+ */
 export const c1w05: Module = {
-  "id": "c1-05",
-  "level": "c1",
-  "week": 5,
-  "kind": "checkpoint",
-  "title": "Balance 1: decidir sin simplificar",
-  "subtitle": "Integración: evidencia, condensación, foco y condiciones",
-  "stop": {
-    "place": "Valencia",
-    "country": "España"
+  id: "c1-05",
+  level: "c1",
+  week: 5,
+  kind: "checkpoint",
+  title: "Contrarreloj en el taller: la acción vista por dentro",
+  subtitle: "Checkpoint de las semanas 1 a 5: perífrasis aspectuales, valores del gerundio y del participio, y todo lo repasado desde la semana 1",
+  stop: {
+    place: "Valencia",
+    country: "España",
   },
-  "minutes": 150,
-  "newObjectives": [
-    "c1.rev.checkpoint-1",
-    "c1.lis.debate-academico"
+  minutes: 150,
+  newObjectives: [
+    "c1.gram.g175",
+    "c1.gram.g176",
+    "c1.voc.w05-taller-fallero",
+    "c1.pron.w05-gerundio-encliticos",
+    "c1.lis.w05-taller-fallas",
+    "c1.read.w05-reportaje-taller",
+    "c1.wri.w05-cronica-proceso",
+    "c1.spk.w05-balance-proyecto",
+    "c1.fun.w05-informar-progreso",
+    "c1.disc.w05-integrar-perspectivas",
+    "c1.rev.w05-semanas-1-4",
   ],
-  "reviewObjectives": [
-    "c1.gram.sustantivas-matices",
-    "c1.disc.registro-academico",
-    "c1.voc.ciencia-divulgacion",
-    "c1.pron.lectura-academica",
-    "c1.lis.conferencia",
-    "c1.fun.matizar-interpretacion",
-    "c1.gram.nominalizacion-avanzada",
-    "c1.voc.economia-sociedad",
-    "c1.pron.incisos",
-    "c1.read.informe",
-    "c1.wri.resumen-tecnico",
-    "c1.gram.perifrasis-relativo",
-    "c1.disc.estructura-informativa",
-    "c1.voc.comunicacion-medios",
-    "c1.pron.foco-prosodico",
-    "c1.spk.presentacion-foco",
-    "c1.gram.conectores-matices",
-    "c1.voc.derecho-normas",
-    "c1.pron.peninsular",
-    "c1.fun.advertir-condicionar",
-    "c1.read.normativa"
-  ],
-  "prerequisites": [
-    "c1-04"
-  ],
-  "goal": {
-    "canDo": "Puedo elaborar un dictamen para la comisión que integre las tres fuentes, distinga observaciones e inferencias y formule un acuerdo condicionado con indicadores de revisión.",
-    "steps": [
-      "Examina integración: evidencia, condensación, foco y condiciones en un caso con intereses distintos.",
-      "Escucha antes de leer la transcripción y distingue tesis, reservas y compromisos.",
-      "Contrasta la lectura y el audio; prepara una producción independiente y revísala.",
-      "Lleva a clase una objeción y una reformulación justificadas."
-    ]
-  },
-  "theory": {
-    "intro": "Trabaja con material original. Las situaciones y los datos del dossier son ficticios y se utilizan para analizar decisiones comunicativas.",
-    "parts": [
-      {
-        "heading": "Integración: evidencia, condensación, foco y condiciones",
-        "body": [
-          "En una recomendación integrada, cada recurso cumple una función: el modo distingue constatación y valoración; la nominalización agrupa procesos; la focalización destaca la prioridad; las construcciones condicionales delimitan el compromiso. Revisa que condensar no borre agentes y que una concesión no se interprete como renuncia.",
-          "En «Balance 1: decidir sin simplificar», observa la diferencia entre estas formulaciones: Comprendo que los comerciantes necesitan descargar. / Comprendo que los comerciantes pidan más tiempo. Explica qué relación cambia y qué decisión permite tomar al destinatario."
-        ],
-        "examples": [
-          {
-            "es": "Comprendo que los comerciantes necesitan descargar."
-          },
-          {
-            "es": "Comprendo que los comerciantes pidan más tiempo."
-          },
-          {
-            "es": "Lo que facilita el acuerdo es ajustar la descarga."
-          },
-          {
-            "es": "De mantenerse la prueba, se ampliará la evaluación."
-          }
-        ],
-        "mistakes": [
-          {
-            "wrong": "De manteniéndose la prueba, se medirán otros accesos.",
-            "right": "De mantenerse la prueba, se medirán otros accesos.",
-            "why": "La construcción condicional lleva infinitivo."
-          }
-        ]
-      },
-      {
-        "heading": "Del análisis a la intervención",
-        "body": [
-          "La formulación final importa. Decir que la plaza ha sido un éxito clausura preguntas todavía abiertas; decir que no sabemos nada desprecia información ya disponible. Entre ambos extremos cabe una conclusión operativa: la prueba ofrece beneficios observables y dificultades específicas que justifican ajustes y seguimiento. Fue la identificación de esas dificultades, y no la eliminación del desacuerdo, lo que permitió avanzar. La calidad del acuerdo dependerá de que sus condiciones puedan comprobarse y de que quienes soportan los costes encuentren un procedimiento real para solicitar correcciones.",
-          "La producción de esta semana exige una elección concreta: Elabora un dictamen para la comisión que integre las tres fuentes, distinga observaciones e inferencias y formule un acuerdo condicionado con indicadores de revisión. Antes de escribir, separa la información atribuible a las fuentes de tu propuesta; después comprueba que la forma elegida conserva esa distinción."
-        ],
-        "examples": [
-          {
-            "es": "Lo que facilita el acuerdo es ajustar la descarga.",
-            "note": "Focaliza la condición con lo que."
-          },
-          {
-            "es": "De continuar la prueba, se medirá la calle lateral.",
-            "note": "Usa de + infinitivo."
-          }
-        ]
-      }
-    ]
-  },
-  "grammar": {
-    "intro": "En una recomendación integrada, cada recurso cumple una función: el modo distingue constatación y valoración; la nominalización agrupa procesos; la focalización destaca la prioridad; las construcciones condicionales delimitan el compromiso. Revisa que condensar no borre agentes y que una concesión no se interprete como renuncia.",
-    "exercises": [
-      {
-        "id": "g-lagunas",
-        "type": "gap",
-        "prompt": "Completa formas decisivas en «Balance 1: decidir sin simplificar»; explica qué relación mantienen. Utiliza únicamente el banco; una forma puede reutilizarse.",
-        "items": [
-          {
-            "q": "Comprendo que los comerciantes ___ descargar.",
-            "answers": [
-              [
-                "necesitan"
-              ]
-            ],
-            "why": "En una recomendación integrada, cada recurso cumple una función: el modo distingue constatación y valoración; la nominalización agrupa procesos; la focalización destaca la prioridad; las construcciones condicionales delimitan el compromiso. Revisa que condensar no borre agentes y que una concesión no se interprete como renuncia."
-          },
-          {
-            "q": "Comprendo que los comerciantes ___ más tiempo.",
-            "answers": [
-              [
-                "pidan"
-              ]
-            ],
-            "why": "En una recomendación integrada, cada recurso cumple una función: el modo distingue constatación y valoración; la nominalización agrupa procesos; la focalización destaca la prioridad; las construcciones condicionales delimitan el compromiso. Revisa que condensar no borre agentes y que una concesión no se interprete como renuncia."
-          },
-          {
-            "q": "Lo que ___ el acuerdo es ajustar la descarga.",
-            "answers": [
-              [
-                "facilita"
-              ]
-            ],
-            "why": "En una recomendación integrada, cada recurso cumple una función: el modo distingue constatación y valoración; la nominalización agrupa procesos; la focalización destaca la prioridad; las construcciones condicionales delimitan el compromiso. Revisa que condensar no borre agentes y que una concesión no se interprete como renuncia."
-          }
-        ],
-        "bank": [
-          "necesitan",
-          "pidan",
-          "facilita"
-        ]
-      },
-      {
-        "id": "g-transformacion",
-        "type": "open",
-        "prompt": "Reformula sin perder alcance: Integración: evidencia, condensación, foco y condiciones. Esta reformulación se revisa por sentido y forma, no por coincidencia literal con el modelo.",
-        "items": [
-          {
-            "prompt": "Focaliza la condición con lo que. Texto de partida: «Ajustar la descarga facilita el acuerdo.»",
-            "model": "Lo que facilita el acuerdo es ajustar la descarga.",
-            "checklist": [
-              "Cumplo la construcción o el movimiento comunicativo solicitado.",
-              "Conservo el alcance, las personas y la relación temporal pertinentes.",
-              "Comparo mi versión con el modelo: una variante natural no es un error por tener otras palabras."
-            ]
-          },
-          {
-            "prompt": "Condensa con ampliación. Texto de partida: «Se amplió la franja y mejoró el reparto.»",
-            "model": "La ampliación de la franja mejoró el reparto.",
-            "checklist": [
-              "Cumplo la construcción o el movimiento comunicativo solicitado.",
-              "Conservo el alcance, las personas y la relación temporal pertinentes.",
-              "Comparo mi versión con el modelo: una variante natural no es un error por tener otras palabras."
-            ]
-          },
-          {
-            "prompt": "Usa de + infinitivo. Texto de partida: «Si continúa la prueba, se medirá la calle lateral.»",
-            "model": "De continuar la prueba, se medirá la calle lateral.",
-            "checklist": [
-              "Cumplo la construcción o el movimiento comunicativo solicitado.",
-              "Conservo el alcance, las personas y la relación temporal pertinentes.",
-              "Comparo mi versión con el modelo: una variante natural no es un error por tener otras palabras."
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  "vocabulary": {
-    "intro": "Aprende combinaciones y connotaciones; reutiliza al menos cuatro en tu producción sin forzarlas.",
-    "groups": [
-      {
-        "title": "Integración: evidencia, condensación, foco y condiciones",
-        "items": [
-          {
-            "es": "desplazamiento del tráfico",
-            "note": "traslado de circulación a otro lugar"
-          },
-          {
-            "es": "franja de descarga",
-            "note": "periodo autorizado para entregar mercancía"
-          },
-          {
-            "es": "reversión de una medida",
-            "note": "retorno a una situación anterior"
-          },
-          {
-            "es": "evaluación publicada",
-            "note": "valoración accesible a la comunidad"
-          },
-          {
-            "es": "condición verificable",
-            "note": "requisito que puede comprobarse"
-          },
-          {
-            "es": "acceso excepcional",
-            "note": "entrada permitida en casos justificados"
-          },
-          {
-            "es": "perjuicio atribuible",
-            "note": "daño vinculado con evidencia a una causa"
-          },
-          {
-            "es": "acuerdo provisional",
-            "note": "compromiso sujeto a seguimiento"
-          },
-          {
-            "es": "indicador social",
-            "note": "medida de efectos sobre personas"
-          },
-          {
-            "es": "coste distribuido",
-            "note": "carga repartida entre grupos"
-          }
-        ]
-      }
+  reviewObjectives: [],
+  prerequisites: [],
+  goal: {
+    canDo: "Puedo contar un proyecto largo mostrando cada acción por dentro (en avance, en una fase, repetida o ya disponible), interpretar y usar bien el gerundio y el participio, e integrar lo repasado en las semanas 1 a 4.",
+    steps: [
+      "Repasa en la teoría las perífrasis por perspectivas, los valores del gerundio y del participio y la tabla de integración de las semanas 1 a 4.",
+      "Practica con las frases de un taller fallero de Valencia que va contrarreloj hacia la plantà.",
+      "Escucha la conversación del equipo y lee el reportaje sobre el taller.",
+      "Escribe una crónica del proceso, revísala y presenta en voz alta el balance de un proyecto tuyo.",
     ],
-    "exercises": [
-      {
-        "id": "v-relaciones",
-        "type": "match",
-        "prompt": "Relaciona las expresiones de «Balance 1: decidir sin simplificar» con su sentido contextual.",
-        "pairs": [
-          {
-            "left": "desplazamiento del tráfico",
-            "right": "traslado de circulación a otro lugar"
-          },
-          {
-            "left": "franja de descarga",
-            "right": "periodo autorizado para entregar mercancía"
-          },
-          {
-            "left": "reversión de una medida",
-            "right": "retorno a una situación anterior"
-          },
-          {
-            "left": "evaluación publicada",
-            "right": "valoración accesible a la comunidad"
-          },
-          {
-            "left": "condición verificable",
-            "right": "requisito que puede comprobarse"
-          },
-          {
-            "left": "acceso excepcional",
-            "right": "entrada permitida en casos justificados"
-          },
-          {
-            "left": "perjuicio atribuible",
-            "right": "daño vinculado con evidencia a una causa"
-          },
-          {
-            "left": "acuerdo provisional",
-            "right": "compromiso sujeto a seguimiento"
-          },
-          {
-            "left": "indicador social",
-            "right": "medida de efectos sobre personas"
-          },
-          {
-            "left": "coste distribuido",
-            "right": "carga repartida entre grupos"
-          }
-        ]
-      }
-    ]
   },
-  "pronunciation": {
-    "focus": "Jerarquía oral de un dictamen",
-    "explanation": [
-      "Marca con pausas el paso de evidencia a recomendación. En una condición larga conserva el grupo hasta cerrar su sentido; evita que el oyente tome una hipótesis por la decisión final.",
-      "La reproducción disponible utiliza síntesis de voz. La percepción combina forma y contexto; compara tu grabación por inteligibilidad y efecto comunicativo, sin esperar una calificación automática del acento."
-    ],
-    "examples": [
+  theory: {
+    intro: "Esta semana cierra el primer bloque de C1. Repasas las dos clases nuevas, sobre cómo se muestra una acción por dentro y qué significan el gerundio y el participio según el contexto, y las combinas con lo que viste en las semanas 1 a 4: concordancia y modo según la postura (G167, G168), relativas y concesivas (G169, G170), condiciones graduadas y reducidas (G171, G172) y certeza, fuente y conjetura (G173, G174). La historia es la de un taller fallero de Valencia a tres semanas de la plantà.",
+    parts: [
       {
-        "es": "La prueba aporta beneficios; de mantenerse, habrá que medir las calles laterales."
-      }
-    ],
-    "perceive": {
-      "id": "f-percepcion",
-      "type": "listen",
-      "prompt": "Escucha la formulación exacta en jerarquía oral de un dictamen; identifica qué relación conserva antes de ensayar otra lectura.",
-      "items": [
-        {
-          "audio": "Comprendo que los comerciantes necesitan descargar.",
-          "voice": "es-ES-f",
-          "q": "¿Qué formulación abre el contraste oral de «Balance 1: decidir sin simplificar»?",
-          "options": [
-            "Lo que facilita el acuerdo es ajustar la descarga.",
-            "Comprendo que los comerciantes necesitan descargar.",
-            "Comprendo que los comerciantes pidan más tiempo."
+        heading: "Duración por dentro: avanzar, venir de antes, llevar tiempo",
+        body: [
+          "Las perífrasis de gerundio muestran una acción en curso desde una perspectiva concreta. «Ir + gerundio» mira hacia delante: el proceso avanza por etapas, todavía incompleto («la falla va tomando forma»). «Venir + gerundio» mira hacia atrás: el proceso empezó antes y llega hasta el momento de referencia, a veces con matiz de insistencia («venimos trabajando de noche desde enero»; «te vengo diciendo que no llegamos»). «Andar + gerundio» presenta una actividad dispersa o insistente, a menudo con valor coloquial o crítico («anda buscando un escultor»). «Llevar + gerundio» mide el tiempo transcurrido: «llevamos tres semanas pintando».",
+          "No confundas «ir + gerundio» con «ir a + infinitivo», que es un futuro: «vamos terminando» (estamos en ello) no es «vamos a terminar» (lo haremos). Y recuerda los gerundios irregulares más frecuentes: yendo, leyendo, diciendo, durmiendo, pidiendo, viniendo, pudiendo.",
+        ],
+        table: {
+          caption: "Cuatro maneras de mirar un mismo trabajo",
+          head: ["Perífrasis", "Perspectiva", "Ejemplo"],
+          rows: [
+            ["ir + gerundio", "avance gradual, hacia delante", "Los ninots van quedando cada vez más expresivos."],
+            ["venir + gerundio", "desde antes hasta ahora", "Venimos lijando las piezas desde noviembre."],
+            ["andar + gerundio", "actividad dispersa o insistente", "Vicent anda diciendo que no llegamos."],
+            ["llevar + gerundio", "tiempo transcurrido", "Lorena lleva dos días modelando la cara."],
           ],
-          "answer": 1,
-          "why": "Comprendo que los comerciantes necesitan descargar."
         },
-        {
-          "audio": "De mantenerse la prueba, se ampliará la evaluación.",
-          "voice": "es-MX-m",
-          "q": "¿Qué formulación cierra el contraste oral de «Balance 1: decidir sin simplificar»?",
-          "options": [
-            "De mantenerse la prueba, se ampliará la evaluación.",
-            "Comprendo que los comerciantes necesitan descargar.",
-            "Comprendo que los comerciantes pidan más tiempo."
+        examples: [
+          { es: "Llevamos dos meses viniendo al taller todos los sábados.", note: "Tiempo transcurrido de una actividad que continúa." },
+          { es: "Poco a poco, el barrio va entendiendo la crítica de la falla.", note: "Avance gradual, todavía incompleto." },
+        ],
+        mistakes: [
+          {
+            wrong: "La figura central va a quedando muy bien.",
+            right: "La figura central va quedando muy bien.",
+            why: "«Ir + gerundio» no lleva «a». «Ir a + infinitivo» es otra perífrasis, de futuro.",
+          },
+        ],
+      },
+      {
+        heading: "Fase, reiteración y resultado: empezar, volver a, tener listo",
+        body: [
+          "Otras perífrasis señalan la fase de la acción. Antes de empezar: «estar a punto de», «estar por» (más frecuente en América). Al comienzo: «empezar a», «ponerse a», «echarse a» (súbito, con llorar, reír, correr). Al final: «terminar de», «acabar de» (final reciente), «dejar de» (interrupción). La reiteración se expresa con «volver a + infinitivo» («volvimos a pintar el fondo») y la costumbre con «soler + infinitivo».",
+          "Las perífrasis de participio presentan el resultado. «Estar + participio» describe un estado («la cabeza está pintada»). «Tener + participio» presenta un resultado disponible, ya conseguido («tengo pintadas las manos»). «Llevar + participio» cuantifica el progreso de algo que sigue («llevamos pintados doce ninots» implica que seguimos). «Dejar + participio» indica el estado en que una acción deja algo («la lluvia dejó estropeada la peana»). Con todas ellas el participio concuerda con el objeto; con «haber», en cambio, es invariable: «hemos pintado doce ninots».",
+        ],
+        table: {
+          caption: "Lo hecho, lo que sigue y lo disponible",
+          head: ["Forma", "Qué informa", "Ejemplo"],
+          rows: [
+            ["he + participio", "lo hecho, sin más", "He pintado doce ninots."],
+            ["llevo + participio concordado", "progreso parcial: sigo", "Llevo pintados doce ninots."],
+            ["tengo + participio concordado", "resultado disponible", "Tengo pintados los doce ninots del lateral."],
+            ["está(n) + participio concordado", "estado resultante", "Los ninots del lateral están pintados."],
+            ["dejar + participio concordado", "estado en que queda algo", "El barniz dejó brillantes las caras."],
           ],
-          "answer": 0,
-          "why": "De mantenerse la prueba, se ampliará la evaluación."
-        }
-      ]
+        },
+        mistakes: [
+          {
+            wrong: "Llevamos pintado las tres figuras del fondo.",
+            right: "Llevamos pintadas las tres figuras del fondo.",
+            why: "Con «llevar», el participio concuerda con el objeto (las figuras).",
+          },
+          {
+            wrong: "Hemos pintadas las tres figuras del fondo.",
+            right: "Hemos pintado las tres figuras del fondo.",
+            why: "Con «haber», el participio es invariable.",
+          },
+        ],
+        tip: "En un informe de progreso, cada perífrasis responde a una pregunta distinta del lector: ¿cuánto llevas? (llevar + participio), ¿qué tienes listo? (tener + participio), ¿qué está terminado? (estar + participio), ¿qué va avanzando? (ir + gerundio). No las mezcles para sonar más técnico.",
+      },
+      {
+        heading: "Gerundio: la posición y la oración principal deciden",
+        body: [
+          "El gerundio pegado al verbo, sin coma, suele expresar el modo o el medio: «entraron cantando», «aprendió el oficio mirando a su padre». El gerundio periférico, con coma y a menudo delante, admite varias lecturas, y la oración principal decide cuál. Con un hecho pasado puede ser tiempo («bajando del andamio, vio la grieta» = mientras bajaba) o causa («siendo festivo, el taller estaba cerrado» = como era festivo). Con un resultado futuro, hipotético o general, es condición («trabajando de noche, llegaremos» = si trabajamos). Con «aun» o «incluso» delante, es concesión («aun trabajando de noche, no llegamos»).",
+          "El gerundio simple indica simultaneidad o anterioridad inmediata; para algo claramente anterior, usa el compuesto: «habiendo terminado la cabeza, pasaron al cuerpo». El sujeto del gerundio es el de la oración principal; si es otro, va detrás del gerundio: «estando el jurado en el taller, se cayó un brazo». Los pronombres se pegan al gerundio, que entonces lleva tilde: «diciéndoselo», «terminándola».",
+          "Dos usos se consideran incorrectos en la lengua cuidada. El gerundio de posterioridad: «la falla se quemó a medianoche, quedando solo cenizas» debe ser «y solo quedaron cenizas». Y el gerundio especificativo, que clasifica un sustantivo: «una caja conteniendo pinceles» debe ser «una caja que contiene pinceles». Se aceptan, en cambio, «agua hirviendo», «un clavo ardiendo» y los pies de foto o títulos descriptivos: «Lorena modelando el ninot».",
+        ],
+        table: {
+          caption: "Un gerundio, cinco lecturas",
+          head: ["Frase", "Lectura", "Equivale a"],
+          rows: [
+            ["Pintaba silbando.", "modo", "pintaba así, silbando"],
+            ["Saliendo del taller, oí los petardos.", "tiempo", "cuando salía del taller"],
+            ["Siendo la última semana, nadie libra.", "causa", "como es la última semana"],
+            ["Trabajando por turnos, terminaríamos antes.", "condición", "si trabajáramos por turnos"],
+            ["Aun trabajando por turnos, no terminaremos.", "concesión", "aunque trabajemos por turnos"],
+          ],
+        },
+        mistakes: [
+          {
+            wrong: "El taller cerró en marzo, reabriendo en septiembre con otro equipo.",
+            right: "El taller cerró en marzo y reabrió en septiembre con otro equipo.",
+            why: "Gerundio de posterioridad: la reapertura no es simultánea al cierre.",
+          },
+          {
+            wrong: "Nos llegó un pedido conteniendo veinte kilos de corcho.",
+            right: "Nos llegó un pedido que contenía veinte kilos de corcho.",
+            why: "Gerundio especificativo: para clasificar un sustantivo se usa una relativa.",
+          },
+        ],
+      },
+      {
+        heading: "Participio predicativo e integración de las semanas 1 a 4",
+        body: [
+          "El participio también puede funcionar como predicativo, concordando con el sujeto, y recibir una lectura de estado o causa («cansada, Amparo se fue a dormir» = como estaba cansada), de condición («bien pintado, este ninot sería indultado» = si estuviera bien pintado) o de concesión con «aun» («aun terminados, los ninots necesitan barniz»). Las construcciones absolutas con sujeto propio («terminada la plantà, …») las verás en la próxima clase; por ahora basta con reconocerlas.",
+          "Un relato de proceso como el de esta semana pone en juego todo lo que has repasado desde la semana 1. Las perífrasis y los gerundios se combinan con las expectativas del pasado (G167), la postura ante un rumor (G168), el perfil de lo que se busca (G169), las concesiones que no frenan el trabajo (G170), los escenarios posibles y las quejas retóricas (G171), las condiciones reducidas (G172) y la distinción entre lo que se ve, se deduce o se dice, con conjeturas sobre el pasado (G173, G174). La tabla te sirve de mapa para la práctica integrada.",
+        ],
+        table: {
+          caption: "Integración: lo que vuelve de las semanas 1 a 4",
+          head: ["Clase", "Recurso", "En el taller"],
+          rows: [
+            ["G167", "concordancia del subjuntivo", "En enero temíamos que el corcho no llegara a tiempo."],
+            ["G168", "modo según la postura", "Que lo digan en el casal no significa que vayamos tarde."],
+            ["G169", "relativa no específica", "Buscamos un ayudante que sepa manejar la fresadora."],
+            ["G170", "concesiva polémica", "Aunque llueva toda la semana, la plantà es el día 15."],
+            ["G171", "contrafactual retórico", "Si lo sé, encargo el corcho en octubre."],
+            ["G172", "condición reducida", "De haber tenido otra nave, habríamos montado antes."],
+            ["G173", "marca de fuente", "Por lo visto, el jurado vendrá el jueves."],
+            ["G174", "conjetura retrospectiva", "Cuando llegamos, ya habrían descargado el camión."],
+          ],
+        },
+        examples: [
+          { es: "Agotados, los ayudantes siguieron lijando hasta las tres.", note: "Participio predicativo de estado o causa, concordado." },
+          { es: "Bien terminada, esta figura habría ganado el premio de ingenio.", note: "Participio con lectura de condición." },
+        ],
+      },
+    ],
+  },
+  grammar: {
+    intro: "En cada frase, decide primero qué perspectiva de la acción quieres mostrar o qué lectura tiene el gerundio; después elige la forma.",
+    exercises: [
+      {
+        id: "c1-05-gramatica-perspectiva",
+        type: "context",
+        prompt: "Lee la situación y elige la perífrasis que corresponde a la perspectiva descrita.",
+        items: [
+          {
+            context: "El equipo empezó a modelar las figuras en noviembre y sigue haciéndolo hoy.",
+            q: "¿Qué dice el maestro fallero?",
+            options: [
+              "Vamos a modelar las figuras desde noviembre.",
+              "Venimos modelando las figuras desde noviembre.",
+              "Acabamos de modelar las figuras desde noviembre.",
+            ],
+            answer: 1,
+            why: "Proceso que viene de antes y llega hasta ahora: «venir + gerundio».",
+          },
+          {
+            context: "De los veinte ninots, han pintado doce y siguen con los demás.",
+            q: "¿Qué frase informa con precisión del progreso?",
+            options: [
+              "Tenemos pintados los veinte ninots.",
+              "Los veinte ninots están pintados.",
+              "Llevamos pintados doce ninots.",
+            ],
+            answer: 2,
+            why: "«Llevar + participio» cuantifica un progreso parcial que continúa.",
+          },
+          {
+            context: "La pintora terminó la cara del ninot central hace cinco minutos.",
+            q: "¿Qué dice?",
+            options: [
+              "Acabo de terminar la cara del ninot central.",
+              "Dejo de terminar la cara del ninot central.",
+              "Vuelvo a terminar la cara del ninot central.",
+            ],
+            answer: 0,
+            why: "«Acabar de + infinitivo»: final reciente.",
+          },
+          {
+            context: "La lluvia de anoche estropeó la base de una figura y hay que pintarla de nuevo.",
+            q: "¿Qué frase lo cuenta?",
+            options: [
+              "La lluvia dejó estropeada la base y tenemos que volver a pintarla.",
+              "La lluvia dejó estropeado la base y tenemos que dejar de pintarla.",
+              "La lluvia va estropeando la base y tenemos que acabar de pintarla.",
+            ],
+            answer: 0,
+            why: "«Dejar + participio» concordado para el estado resultante y «volver a» para la repetición.",
+          },
+        ],
+      },
+      {
+        id: "c1-05-gramatica-formas",
+        type: "gap",
+        prompt: "Completa con la forma adecuada del verbo entre paréntesis. Cuida la concordancia del participio.",
+        items: [
+          { q: "Ya tenemos ___ (lijar) todas las piezas del brazo derecho.", answers: [["lijadas"]], why: "«Tener + participio» concuerda con el objeto: las piezas." },
+          { q: "Hemos ___ (montar) la cabeza esta mañana con la grúa.", answers: [["montado"]], why: "Con «haber», el participio es invariable." },
+          { q: "El barrio va ___ (acostumbrarse) a ver la grúa en la plaza.", answers: [["acostumbrándose"]], why: "Pronombre pegado al gerundio, que lleva tilde." },
+          { q: "___ (terminar) el boceto en junio, el artista empezó a buscar patrocinadores.", answers: [["Habiendo terminado"]], why: "Acción claramente anterior: gerundio compuesto." },
+          { q: "Lorena lleva tres noches ___ (dormir) en el taller.", answers: [["durmiendo"]], why: "Gerundio irregular de «dormir»." },
+          { q: "___ (cansar), los voluntarios se sentaron en las cajas de corcho.", answers: [["Cansados"]], why: "Participio predicativo concordado con el sujeto: los voluntarios." },
+        ],
+      },
+      {
+        id: "c1-05-gramatica-gerundio",
+        type: "classify",
+        prompt: "Clasifica cada gerundio según su lectura en la frase.",
+        categories: ["Modo o medio", "Tiempo o causa (hecho real)", "Condición o concesión"],
+        items: [
+          { text: "Aprendió a modelar mirando trabajar a su abuelo.", cat: 0, why: "Medio: así aprendió." },
+          { text: "Bajando del andamio, Vicent vio la grieta del cuello.", cat: 1, why: "Hecho pasado: mientras bajaba." },
+          { text: "Siendo la última semana, nadie se tomó el día libre.", cat: 1, why: "Causa: como era la última semana." },
+          { text: "Trabajando por turnos, terminaríamos el jueves.", cat: 2, why: "Resultado hipotético: si trabajáramos por turnos." },
+          { text: "Aun pintando de noche, no llegaremos al día 14.", cat: 2, why: "«Aun» + gerundio: concesión." },
+          { text: "Los ayudantes entraron cantando el himno regional.", cat: 0, why: "Modo, pegado al verbo y sin coma." },
+        ],
+      },
+      {
+        id: "c1-05-gramatica-errores",
+        type: "error",
+        prompt: "Cada frase tiene un error de perífrasis, de gerundio o de concordancia. Corrígela cambiando solo lo necesario.",
+        items: [
+          {
+            sentence: "La comisión presentó la falla en febrero, ganando el primer premio en marzo.",
+            answers: ["La comisión presentó la falla en febrero y ganó el primer premio en marzo."],
+            why: "Gerundio de posterioridad: se sustituye por «y» + verbo conjugado.",
+          },
+          {
+            sentence: "Recibimos una carta anunciando la visita del jurado para el jueves.",
+            answers: ["Recibimos una carta que anunciaba la visita del jurado para el jueves.", "Recibimos una carta que anuncia la visita del jurado para el jueves."],
+            why: "Gerundio especificativo: para describir el sustantivo, relativa.",
+          },
+          {
+            sentence: "Llevamos montado los cuatro ninots del lateral.",
+            answers: ["Llevamos montados los cuatro ninots del lateral."],
+            why: "Con «llevar», el participio concuerda con el objeto.",
+          },
+          {
+            sentence: "Estando yo en el taller, se rompió la escalera, llegando la ambulancia diez minutos después.",
+            answers: ["Estando yo en el taller, se rompió la escalera y la ambulancia llegó diez minutos después.", "Estando yo en el taller, se rompió la escalera; la ambulancia llegó diez minutos después."],
+            why: "El primer gerundio es correcto (sujeto propio detrás); el segundo es de posterioridad: «y la ambulancia llegó».",
+          },
+        ],
+      },
+      {
+        id: "c1-05-gramatica-integracion",
+        type: "open",
+        prompt: "Reescribe cada borrador del diario del taller según la instrucción. Hay varias respuestas posibles: compara con el modelo y con la lista.",
+        items: [
+          {
+            prompt: "Borrador: «Pintamos doce ninots. Seguimos pintando. Las caras ya están. Esperamos que el jurado venga el jueves». Reescríbelo en dos frases con «llevar + participio», «tener + participio» y la expectativa contada desde el pasado (G167).",
+            model: "Llevamos pintados doce ninots y tenemos terminadas todas las caras. Al principio de la semana esperábamos que el jurado viniera el jueves, pero aún no ha confirmado la visita.",
+            checklist: [
+              "Uso «llevar» y «tener» + participio concordado.",
+              "Cuento la expectativa con marco pasado e imperfecto de subjuntivo.",
+            ],
+          },
+          {
+            prompt: "Borrador: «Si trabajamos de noche, terminamos. Aunque trabajamos de noche, a lo mejor no terminamos. La falla se plantó el día 15 y ganó el premio». Reescríbelo usando un gerundio condicional, un gerundio concesivo y un condicional compuesto de conjetura (G174), sin gerundio de posterioridad.",
+            model: "Trabajando de noche, terminaremos a tiempo; aun trabajando de noche, puede que no lleguemos a pintar los detalles. El día 15 se plantó la falla y ganó el premio: el jurado ya habría visto los bocetos antes de la visita.",
+            checklist: [
+              "El gerundio condicional va con un resultado futuro.",
+              "El concesivo lleva «aun» delante.",
+              "No uso gerundio de posterioridad y la conjetura usa «habría + participio».",
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  vocabulary: {
+    intro: "Palabras para hablar del taller de un artista fallero y de cualquier proyecto que avanza contrarreloj.",
+    groups: [
+      {
+        title: "El taller fallero",
+        items: [
+          { es: "el artista fallero", note: "profesional que diseña y construye las fallas" },
+          { es: "el boceto", note: "dibujo previo que muestra cómo será el monumento" },
+          { es: "el ninot", note: "cada una de las figuras que forman una falla" },
+          { es: "modelar", note: "dar forma a un material blando o al corcho con herramientas" },
+          { es: "la nave", note: "local amplio donde se construyen las piezas" },
+          { es: "la plantà", note: "montaje del monumento en la calle antes de las fiestas" },
+          { es: "la cremà", note: "quema final del monumento" },
+          { es: "indultar un ninot", note: "salvarlo del fuego por votación popular" },
+        ],
+      },
+      {
+        title: "Ir contrarreloj",
+        items: [
+          { es: "ir contrarreloj", note: "trabajar con muy poco tiempo hasta el plazo" },
+          { es: "echar horas", note: "trabajar mucho tiempo, más de lo habitual" },
+          { es: "quedar listo", note: "terminar en condiciones de usarse" },
+          { es: "ir a buen ritmo", note: "avanzar con la velocidad adecuada" },
+          { es: "atascarse", note: "detenerse en una tarea por una dificultad" },
+          { es: "rematar", note: "dar los últimos toques a un trabajo" },
+          { es: "a última hora", note: "en el último momento posible" },
+        ],
+      },
+    ],
+    exercises: [
+      {
+        id: "c1-05-lexico-relacion",
+        type: "match",
+        prompt: "Relaciona cada expresión con su definición.",
+        pairs: [
+          { left: "la plantà", right: "montaje del monumento en la calle antes de las fiestas" },
+          { left: "indultar un ninot", right: "salvarlo del fuego por votación popular" },
+          { left: "el boceto", right: "dibujo previo que muestra cómo será el monumento" },
+          { left: "echar horas", right: "trabajar mucho tiempo, más de lo habitual" },
+          { left: "atascarse", right: "detenerse en una tarea por una dificultad" },
+          { left: "rematar", right: "dar los últimos toques a un trabajo" },
+          { left: "ir contrarreloj", right: "trabajar con muy poco tiempo hasta el plazo" },
+        ],
+      },
+      {
+        id: "c1-05-lexico-uso",
+        type: "gap",
+        prompt: "Completa con la expresión adecuada del banco.",
+        bank: ["nave", "a buen ritmo", "quedó lista", "a última hora", "modelando"],
+        items: [
+          { q: "Este año la comisión alquiló una ___ más grande en el polígono de Benicalap.", answers: [["nave"]] },
+          { q: "Si seguimos ___, el jueves podremos empezar a barnizar.", answers: [["a buen ritmo"]] },
+          { q: "La figura central ___ dos días antes de la plantà.", answers: [["quedó lista"]] },
+          { q: "Siempre hay algo que se rompe ___, por eso guardamos corcho de reserva.", answers: [["a última hora"]] },
+          { q: "Lorena lleva toda la mañana ___ las manos del ninot de la abuela.", answers: [["modelando"]] },
+        ],
+      },
+    ],
+  },
+  pronunciation: {
+    focus: "Gerundios con pronombres y perífrasis encadenadas",
+    explanation: [
+      "Cuando pegas pronombres a un gerundio, el acento se queda en la misma sílaba y la palabra se alarga por detrás: ter-mi-NAN-do, ter-mi-NÁN-do-la, ter-mi-NÁN-do-se-la. No desplaces el acento hacia los pronombres: son átonos. Por eso estas formas llevan tilde al escribirse, porque se convierten en esdrújulas o sobresdrújulas.",
+      "Las perífrasis se pronuncian como una sola unidad, sin pausa entre el auxiliar y el verbo principal, y con sinalefa cuando se encuentran dos vocales: «va‿a‿empezar», «vuelve‿a‿abrir», «lleva‿esperando». Si cortas entre las dos piezas, el oyente puede pensar que son dos acciones separadas.",
+      "El audio utiliza la síntesis disponible en el navegador: no certifica un acento regional ni evalúa tu pronunciación. Úsalo para percibir el ritmo y compara tu grabación con la de una persona.",
+    ],
+    table: {
+      caption: "El acento no se mueve aunque la palabra crezca",
+      head: ["Gerundio", "Con un pronombre", "Con dos pronombres"],
+      rows: [
+        ["diciendo", "diciéndolo", "diciéndoselo"],
+        ["terminando", "terminándola", "terminándosela"],
+        ["explicando", "explicándolo", "explicándoselo"],
+        ["pintando", "pintándola", "pintándosela"],
+      ],
     },
-    "produce": [
-      {
-        "text": "La prueba aporta beneficios; de mantenerse, habrá que medir las calles laterales.",
-        "tip": "Marca con pausas el paso de evidencia a recomendación. En una condición larga conserva el grupo hasta cerrar su sentido; evita que el oyente tome una hipótesis por la decisión final."
-      },
-      {
-        "text": "Comprendo que los comerciantes necesitan descargar.",
-        "tip": "Graba dos versiones cambiando foco o pausas; explica qué interpretación favorece cada una."
-      },
-      {
-        "text": "De mantenerse la prueba, se ampliará la evaluación.",
-        "tip": "Integra esta formulación en una respuesta espontánea de treinta segundos, sin leer el resto."
-      }
-    ]
-  },
-  "listening": {
-    "title": "Voces y decisiones: Balance 1: decidir sin simplificar",
-    "context": "Escucha sin abrir la transcripción. La situación es una intervención o reunión original vinculada al dossier. Las etiquetas de voz orientan la síntesis y no acreditan muestras dialectales verificadas.",
-    "speakers": [
-      {
-        "id": "a",
-        "name": "Intervención 1",
-        "voice": "es-ES-f",
-        "role": "presentación del problema"
-      },
-      {
-        "id": "b",
-        "name": "Intervención 2",
-        "voice": "es-MX-m",
-        "role": "contraste o desarrollo"
-      }
-    ],
-    "script": [
-      {
-        "speaker": "a",
-        "text": "Como coordinadora, les pido que no votemos todavía una etiqueta, éxito o fracaso. Tenemos datos suficientes para proponer ajustes, pero no para atribuir todos los cambios a la peatonalización. El informe registra menos tráfico en la plaza y más en una calle lateral. La cuestión no es solo cuánto disminuye la circulación, sino dónde se desplaza. Necesitamos que el próximo periodo incluya ese entorno, porque el perímetro administrativo no coincide con la experiencia de los vecinos."
-      },
-      {
-        "speaker": "b",
-        "text": "Desde los comercios, lo que venimos solicitando es una franja de descarga más amplia. Algunos titulares nos presentan como contrarios a cualquier restricción y no es así. Hemos notado más personas caminando; ciertos negocios se benefician. El problema aparece cuando llega un proveedor fuera del horario y no puede esperar. Si se permite una hora adicional y un sistema claro para entregas excepcionales, varios firmantes de la carta apoyarían continuar la prueba."
-      },
-      {
-        "speaker": "a",
-        "text": "Yo añadiría las condiciones de estancia. Se habla mucho de recuperar espacio, pero una plaza sin respaldo en los bancos puede resultar poco hospitalaria para alguien con dolor de espalda. Comprendo que quieran evitar obstáculos, aunque no todos los muebles urbanos son obstáculos. Lo que necesitamos es que el diseño considere usos diferentes. Podríamos probar dos ubicaciones y recoger observaciones antes de comprar el equipamiento definitivo. Eso permitiría intervenir sin convertir cada decisión en irreversible."
-      },
-      {
-        "speaker": "b",
-        "text": "Recojo tres acuerdos provisionales: ampliar la medición a las calles laterales, ajustar la descarga y ensayar bancos accesibles. La continuidad quedaría condicionada a una evaluación publicada, con indicadores que hoy debemos definir. Nadie está prometiendo que todos los negocios ganen ventas ni que desaparezcan los conflictos. Sí podemos comprometernos a distinguir efectos, responder a solicitudes y explicar cada ajuste. Para la próxima reunión, cada grupo traerá una condición mínima y una concesión posible. Así negociaremos sobre propuestas que puedan cumplirse, no sobre declaraciones generales de apoyo o rechazo."
-      }
-    ],
-    "stages": [
-      {
-        "stage": "gist",
-        "prompt": "Escucha una vez sin abrir la transcripción. Identifica el problema y el propósito general; no intentes copiar todas las palabras.",
-        "exercise": {
-          "id": "l-global",
-          "type": "choice",
-          "prompt": "Primera escucha: Balance 1: decidir sin simplificar.",
-          "items": [
-            {
-              "q": "¿Qué problema organiza la intervención de «Balance 1: decidir sin simplificar»?",
-              "options": [
-                "Descompone las objeciones en condiciones y ajustes comprobables.",
-                "Declara irrelevantes las pérdidas de cualquier comercio.",
-                "Promete eliminar todos los conflictos de uso."
-              ],
-              "answer": 0,
-              "why": "Descompone las objeciones en condiciones y ajustes comprobables."
-            },
-            {
-              "q": "¿Qué lectura del cierre de «Balance 1: decidir sin simplificar» conservaría sus reservas?",
-              "options": [
-                "Una condición mínima y una concesión posible.",
-                "Una declaración de apoyo sin reservas.",
-                "Una solución total e inmediata sin condiciones."
-              ],
-              "answer": 0,
-              "why": "Una condición mínima y una concesión posible."
-            }
-          ]
-        }
-      },
-      {
-        "stage": "detail",
-        "prompt": "Escucha de nuevo y toma notas de compromisos, límites y correcciones. Comprueba quién aporta cada dato.",
-        "exercise": {
-          "id": "l-detalle",
-          "type": "open",
-          "prompt": "Reconstruye lo que se dijo sobre desplazamiento del tráfico.",
-          "items": [
-            {
-              "prompt": "¿Qué deben aportar los grupos en la siguiente reunión sobre la plaza?",
-              "model": "Una condición mínima y una concesión posible.",
-              "checklist": [
-                "Conservo el alcance y la atribución de la información.",
-                "Justifico la decisión con un indicio concreto."
-              ]
-            },
-            {
-              "prompt": "En el audio de «Balance 1: decidir sin simplificar», identifica una corrección o una reserva y explica qué interpretación evita.",
-              "model": "Recojo tres acuerdos provisionales: ampliar la medición a las calles laterales, ajustar la descarga y ensayar bancos accesibles. La continuidad quedaría condicionada a una evaluación publicada, con indicadores que hoy debemos definir. Nadie está prometiendo que todos los negocios ganen ventas ni que desaparezcan los conflictos. Sí podemos comprometernos a distinguir efectos, responder a solicitudes y explicar cada ajuste. Para la próxima reunión, cada grupo traerá una condición mínima y una concesión posible. Así negociaremos sobre propuestas que puedan cumplirse, no sobre declaraciones generales de apoyo o rechazo.",
-              "checklist": [
-                "Conservo el alcance y la atribución de la información.",
-                "Justifico la decisión con un indicio concreto."
-              ]
-            }
-          ]
-        }
-      },
-      {
-        "stage": "notice",
-        "prompt": "Antes de consultar la transcripción, explica una intención y justifícala con un marcador o una oposición que hayas oído.",
-        "exercise": {
-          "id": "l-inferencia",
-          "type": "open",
-          "prompt": "Escucha la organización y la postura en Balance 1: decidir sin simplificar.",
-          "items": [
-            {
-              "prompt": "¿Qué diferencia perdería un resumen del audio de «Balance 1: decidir sin simplificar» que eliminara sus condiciones?",
-              "model": "Una condición mínima y una concesión posible.",
-              "checklist": [
-                "Conservo el alcance y la atribución de la información.",
-                "Justifico la decisión con un indicio concreto."
-              ]
-            },
-            {
-              "prompt": "Reformula el cierre de «Balance 1: decidir sin simplificar» para una persona que no asistió; conserva una reserva y un compromiso.",
-              "model": "La continuidad provisional de la peatonalización parece defendible si incorpora ajustes y evaluación. Los datos muestran beneficios, pero no aíslan por completo el efecto de la medida; la reunión identifica dificultades concretas de descarga y estancia. Propongo ampliar la franja de reparto, ensayar bancos accesibles y medir las calles laterales. El permiso excepcional deberá responder a necesidades justificadas. La revisión distinguirá perjuicios atribuibles al proyecto de otros cambios económicos y publicará las razones de cada decisión.",
-              "checklist": [
-                "Conservo el alcance y la atribución de la información.",
-                "Justifico la decisión con un indicio concreto."
-              ]
-            }
-          ]
-        }
-      }
-    ]
-  },
-  "reading": {
-    "title": "La prueba de la plaza",
-    "genre": "Expediente de decisión pública",
-    "frame": "Texto original situado en Valencia; léelo después de la primera escucha y contrasta sus decisiones discursivas.",
-    "text": [
-      "La comisión de espacio público debe decidir si convierte en permanente la peatonalización temporal de una plaza. El expediente incluye un informe de movilidad, una carta de comerciantes y el acta de una reunión vecinal. Los tres documentos hablan del mismo lugar, pero no miden el mismo problema. El informe registra menos vehículos; la carta describe dificultades de reparto; el acta insiste en el uso del espacio por personas que antes apenas podían permanecer allí. Una síntesis responsable no puede reducir ese conjunto a dos bandos, partidarios y detractores, sin perder las condiciones que hacen negociables sus posturas.",
-      "Durante ocho semanas, el tráfico motorizado descendió dentro del perímetro y aumentó en una calle lateral. La calidad del aire mejoró en dos puntos de medición, aunque el periodo coincidió con un cambio meteorológico. El equipo técnico considera probable que la restricción contribuyera a la mejora, pero no cuantifica su efecto independiente. El hecho de que se observe una asociación no permite afirmar una causa única. La recomendación es mantener la prueba durante otra estación y comparar los resultados con un sector semejante. Aplazar la decisión definitiva no equivale aquí a suspender toda intervención.",
-      "La carta comercial utiliza una formulación más rotunda: la supresión del acceso está provocando pérdidas irreparables. Al examinar el anexo, la comisión descubre que algunos negocios han reducido ventas y otros las han aumentado. La mayor dificultad común consiste en recibir mercancías voluminosas durante una franja de descarga demasiado breve. La nominalización supresión del acceso reúne situaciones distintas: prohibición total, autorización horaria y acceso excepcional. Descomponerla en acciones concretas permite identificar un problema que podría resolverse sin restablecer el tráfico general.",
-      "Por su parte, el acta vecinal recoge una observación menos visible en los indicadores. Las familias permanecen más tiempo en la plaza porque pueden conversar mientras los niños juegan. Una vecina mayor, sin embargo, señala que los bancos disponibles no ofrecen respaldo y quedan expuestos al sol. Lo que ha aumentado es la posibilidad de estancia; lo que falta es una distribución más cuidadosa de sus condiciones. La mejora del espacio no beneficia de la misma manera a quienes necesitan sentarse, cruzarlo con rapidez o acceder en un vehículo adaptado.",
-      "La propuesta de acuerdo conserva la peatonalización de forma provisional, amplía una hora la descarga y crea un permiso de acceso para necesidades justificadas. Este último se concedería siempre y cuando no hubiera alternativa razonable y se mantuviera una velocidad reducida. Aun cuando la evaluación comercial resultara desfavorable, la reversión no sería automática: habría que distinguir el efecto de la medida de otros cambios económicos. De detectarse un perjuicio grave atribuible al proyecto, la comisión revisaría el diseño y publicaría las razones de su decisión.",
-      "La formulación final importa. Decir que la plaza ha sido un éxito clausura preguntas todavía abiertas; decir que no sabemos nada desprecia información ya disponible. Entre ambos extremos cabe una conclusión operativa: la prueba ofrece beneficios observables y dificultades específicas que justifican ajustes y seguimiento. Fue la identificación de esas dificultades, y no la eliminación del desacuerdo, lo que permitió avanzar. La calidad del acuerdo dependerá de que sus condiciones puedan comprobarse y de que quienes soportan los costes encuentren un procedimiento real para solicitar correcciones."
-    ],
-    "tasks": [
-      {
-        "id": "r-inferencia",
-        "type": "choice",
-        "prompt": "Interpreta la postura de «La prueba de la plaza» sin atribuir intenciones que el texto no demuestra.",
-        "items": [
-          {
-            "q": "¿Qué hace viable la propuesta de acuerdo?",
-            "options": [
-              "Declara irrelevantes las pérdidas de cualquier comercio.",
-              "Promete eliminar todos los conflictos de uso.",
-              "Descompone las objeciones en condiciones y ajustes comprobables."
-            ],
-            "answer": 2,
-            "why": "Descompone las objeciones en condiciones y ajustes comprobables."
-          },
-          {
-            "q": "¿Qué conclusión excede lo que permite afirmar «La prueba de la plaza»?",
-            "options": [
-              "La decisión exige conservar límites y atribuir las voces.",
-              "Declara irrelevantes las pérdidas de cualquier comercio.",
-              "Descompone las objeciones en condiciones y ajustes comprobables."
-            ],
-            "answer": 1,
-            "why": "Declara irrelevantes las pérdidas de cualquier comercio."
-          }
-        ]
-      },
-      {
-        "id": "r-argumento",
-        "type": "open",
-        "prompt": "Reconstruye cómo avanza «La prueba de la plaza».",
-        "items": [
-          {
-            "prompt": "Localiza una transición decisiva en «La prueba de la plaza» y explica qué interpretación modifica.",
-            "model": "La formulación final importa. Decir que la plaza ha sido un éxito clausura preguntas todavía abiertas; decir que no sabemos nada desprecia información ya disponible. Entre ambos extremos cabe una conclusión operativa: la prueba ofrece beneficios observables y dificultades específicas que justifican ajustes y seguimiento. Fue la identificación de esas dificultades, y no la eliminación del desacuerdo, lo que permitió avanzar. La calidad del acuerdo dependerá de que sus condiciones puedan comprobarse y de que quienes soportan los costes encuentren un procedimiento real para solicitar correcciones.",
-            "checklist": [
-              "Conservo el alcance y la atribución de la información.",
-              "Justifico la decisión con un indicio concreto."
-            ]
-          },
-          {
-            "prompt": "Compara el problema central de «La prueba de la plaza» con el audio: identifica una coincidencia y una aportación que no deba confundirse.",
-            "model": "La continuidad provisional de la peatonalización parece defendible si incorpora ajustes y evaluación. Los datos muestran beneficios, pero no aíslan por completo el efecto de la medida; la reunión identifica dificultades concretas de descarga y estancia. Propongo ampliar la franja de reparto, ensayar bancos accesibles y medir las calles laterales. El permiso excepcional deberá responder a necesidades justificadas. La revisión distinguirá perjuicios atribuibles al proyecto de otros cambios económicos y publicará las razones de cada decisión.",
-            "checklist": [
-              "Conservo el alcance y la atribución de la información.",
-              "Justifico la decisión con un indicio concreto."
-            ]
-          }
-        ]
-      }
-    ],
-    "noticing": {
-      "prompt": "Observa cómo las formas elegidas construyen el argumento; justifica qué cambiaría con otra redacción.",
-      "items": [
+    perceive: {
+      id: "c1-05-percepcion",
+      type: "listen",
+      prompt: "Escucha cada frase sin leer las opciones y decide qué oyes.",
+      items: [
         {
-          "quote": "El hecho de que se observe una asociación no permite afirmar una causa única.",
-          "note": "En una recomendación integrada, cada recurso cumple una función: el modo distingue constatación y valoración; la nominalización agrupa procesos; la focalización destaca la prioridad; las construcciones condicionales delimitan el compromiso. Revisa que condensar no borre agentes y que una concesión no se interprete como renuncia."
+          q: "¿Qué perífrasis oyes?",
+          options: ["va terminando: avance en curso", "va a terminar: futuro"],
+          answer: 0,
+          why: "No se oye la «a» entre «va» y el verbo, que además está en gerundio.",
+          audio: "Lorena va terminando las manos del ninot.",
+          voice: "es-VE-f",
         },
         {
-          "quote": "Lo que ha aumentado es la posibilidad de estancia",
-          "note": "Marca con pausas el paso de evidencia a recomendación. En una condición larga conserva el grupo hasta cerrar su sentido; evita que el oyente tome una hipótesis por la decisión final."
-        }
-      ]
-    }
+          q: "¿Qué perífrasis oyes?",
+          options: ["va terminando", "va a terminar"],
+          answer: 1,
+          why: "Se oye la sinalefa «va‿a» y un infinitivo.",
+          audio: "Lorena va a terminar las manos esta tarde.",
+          voice: "es-VE-f",
+        },
+        {
+          q: "¿Dónde cae el acento de la forma con pronombres?",
+          options: ["En la sílaba «se»", "En la sílaba «cien»", "En la última sílaba"],
+          answer: 1,
+          why: "di-CIÉN-do-se-lo: el acento se mantiene en la sílaba del gerundio.",
+          audio: "Llevo una semana diciéndoselo y no me hace caso.",
+          voice: "es-ES-m",
+        },
+        {
+          q: "¿Qué forma oyes?",
+          options: ["Llevamos pintadas doce figuras", "Hemos pintado doce figuras"],
+          answer: 0,
+          why: "Se oye «llevamos» y el participio en femenino plural.",
+          audio: "Llevamos pintadas doce figuras del lateral.",
+          voice: "es-ES-f",
+        },
+      ],
+    },
+    produce: [
+      { text: "La falla va tomando forma y el barrio va acostumbrándose a la grúa.", tip: "Sin pausa entre «va» y el gerundio; acento en «brán»: a-cos-tum-BRÁN-do-se.", voice: "es-ES-m" },
+      { text: "Llevo una semana diciéndoselo, pero no me escucha.", tip: "di-CIÉN-do-se-lo: los pronombres son átonos.", voice: "es-ES-f" },
+      { text: "El taller vuelve a abrir mañana a las ocho.", tip: "Sinalefa en «vuelve‿a‿abrir», como una sola palabra.", voice: "es-VE-f" },
+      { text: "Aun trabajando de noche, no llegaremos al jueves.", tip: "Haz la pausa después de «noche» y deja caer el tono al final.", voice: "es-ES-m" },
+    ],
+    spelling: "Los gerundios con uno o dos pronombres llevan siempre tilde: diciéndolo, terminándosela. Los gerundios solos no la llevan: diciendo, terminando.",
   },
-  "practice": {
-    "exercises": [
+  listening: {
+    title: "Tres semanas para la plantà",
+    context: "En una nave del norte de Valencia, el artista fallero Vicent, la pintora Amparo y la escultora Lorena, que es venezolana, hacen balance a tres semanas de la plantà. Revisan qué tienen listo, qué va avanzando, qué se ha torcido y qué harán si las cosas empeoran. Escucha primero sin transcripción. Las voces son sintéticas y no se presentan como variedades regionales verificadas.",
+    speakers: [
+      { id: "v", name: "Vicent", voice: "es-ES-m", role: "Artista fallero, dirige el taller" },
+      { id: "a", name: "Amparo", voice: "es-ES-f", role: "Pintora" },
+      { id: "l", name: "Lorena", voice: "es-VE-f", role: "Escultora" },
+    ],
+    script: [
+      { speaker: "v", text: "A ver, hagamos números. Faltan tres semanas para la plantà. Amparo, ¿cómo vamos con la pintura?" },
+      { speaker: "a", text: "Llevo pintados catorce ninots de los veintidós, y tengo terminadas todas las caras, que era lo más delicado. Vengo echando horas desde enero, pero esta semana he ido más lenta, porque la humedad no deja secar el fondo." },
+      { speaker: "v", text: "En enero esperaba que a estas alturas tuviéramos la figura central montada. Lorena, ¿qué ha pasado con la cabeza?" },
+      { speaker: "l", text: "Pues que el corcho llegó tarde. Si lo sé, lo pido en octubre. Además, cuando lo descargaron, alguien ya habría roto dos bloques, porque venían partidos. Aun así, la cabeza va tomando forma: acabo de terminar los ojos y mañana vuelvo a ponerme con la boca." },
+      { speaker: "v", text: "Por lo visto, en el casal anda diciendo la gente que no llegamos. Que lo digan no significa que sea verdad, pero necesitamos un ayudante que sepa manejar la fresadora, aunque sea solo por las noches." },
+      { speaker: "a", text: "Mi sobrino estudia Bellas Artes. No digo que sea un experto, pero trabajando con él dos noches por semana, recuperaríamos el retraso de la cabeza." },
+      { speaker: "l", text: "Yo lo veo bien. Eso sí, de haber tenido una nave más grande, habríamos podido montar la figura entera aquí dentro y ver el conjunto. Así vamos un poco a ciegas." },
+      { speaker: "v", text: "Ya, pero aunque tuviéramos la nave más grande del polígono, el problema sería el mismo: el tiempo. Hagamos así: en caso de que siga lloviendo, Amparo pinta dentro y Lorena y el sobrino rematan la cabeza. Y como alguien vuelva a pedir corcho a última hora el año que viene, lo mando a la cremà con los ninots." },
+      { speaker: "a", text: "Trato hecho. Y, bien terminada, esa cabeza puede ganar el premio de ingenio, digan lo que digan en el casal." },
+    ],
+    stages: [
       {
-        "id": "p-orden",
-        "type": "order",
-        "prompt": "Reconstruye dos decisiones lingüísticas de «Balance 1: decidir sin simplificar»; léelas después con una pausa justificada. Recupera el orden de las formulaciones de los ejemplos; la paráfrasis libre se trabaja en las actividades abiertas.",
-        "items": [
+        stage: "gist",
+        prompt: "Escucha la conversación completa sin abrir la transcripción. ¿Cuál es la situación del taller y qué deciden?",
+        exercise: {
+          id: "c1-05-escucha-gist",
+          type: "choice",
+          prompt: "Reconstruye la situación general.",
+          items: [
+            {
+              q: "¿Cómo va el trabajo del taller?",
+              options: [
+                "Está terminado y solo falta transportarlo.",
+                "Va avanzando, pero con retraso en la figura central.",
+                "Está parado por falta de dinero.",
+              ],
+              answer: 1,
+              why: "La pintura avanza, pero la cabeza central va retrasada por el corcho.",
+            },
+            {
+              q: "¿Qué deciden para recuperar el retraso?",
+              options: [
+                "Cambiar el diseño de la figura central.",
+                "Retrasar la plantà una semana.",
+                "Incorporar un ayudante por las noches y repartir las tareas si llueve.",
+              ],
+              answer: 2,
+              why: "El sobrino de Amparo ayudará y Vicent organiza un plan para la lluvia.",
+            },
+          ],
+        },
+      },
+      {
+        stage: "detail",
+        prompt: "Escucha otra vez y anota cada dato de progreso y cada condición.",
+        exercise: {
+          id: "c1-05-escucha-detail",
+          type: "choice",
+          prompt: "Comprueba los detalles.",
+          items: [
+            {
+              q: "¿Cuántos ninots lleva pintados Amparo?",
+              options: ["Veintidós, todos.", "Catorce de veintidós.", "Solo las caras de ocho."],
+              answer: 1,
+              why: "«Llevo pintados catorce ninots de los veintidós.»",
+            },
+            {
+              q: "¿Qué cree Lorena que pasó con los bloques de corcho?",
+              options: [
+                "Que alguien los rompió antes de que llegaran al taller.",
+                "Que ella misma los rompió al modelar.",
+                "Que la humedad los deshizo.",
+              ],
+              answer: 0,
+              why: "«Alguien ya habría roto dos bloques, porque venían partidos»: conjetura.",
+            },
+            {
+              q: "¿Qué pasará si sigue lloviendo?",
+              options: [
+                "Suspenderán el trabajo hasta que pare.",
+                "Amparo pintará dentro y los demás rematarán la cabeza.",
+                "Montarán la figura en la calle.",
+              ],
+              answer: 1,
+              why: "«En caso de que siga lloviendo, Amparo pinta dentro…»",
+            },
+          ],
+        },
+      },
+      {
+        stage: "notice",
+        prompt: "Fíjate en qué recurso usa cada frase. Relaciona y consulta la transcripción solo después.",
+        exercise: {
+          id: "c1-05-escucha-notice",
+          type: "match",
+          prompt: "Relaciona cada frase de la conversación con el recurso que pone en juego.",
+          pairs: [
+            { left: "llevo pintados catorce ninots", right: "progreso parcial con participio concordado" },
+            { left: "vengo echando horas desde enero", right: "proceso que viene de antes hasta ahora" },
+            { left: "trabajando con él dos noches por semana, recuperaríamos el retraso", right: "gerundio con valor de condición" },
+            { left: "en enero esperaba que tuviéramos la figura montada", right: "expectativa con marco pasado" },
+            { left: "alguien ya habría roto dos bloques", right: "conjetura sobre un pasado anterior" },
+            { left: "bien terminada, esa cabeza puede ganar el premio", right: "participio predicativo con valor de condición" },
+          ],
+          why: "La conversación integra las perífrasis y las formas no personales con recursos de las semanas 1 a 4.",
+        },
+      },
+    ],
+  },
+  reading: {
+    title: "Seis meses dentro de una falla",
+    genre: "Reportaje de revista cultural",
+    frame: "Reportaje publicado en una revista cultural valenciana. El taller, el artista, su equipo y la falla son ficticios.",
+    text: [
+      "La nave de Vicent Ferrer está en un polígono del norte de Valencia, entre un almacén de naranjas y un taller de neumáticos. Por fuera no se distingue de las demás. Por dentro, desde septiembre, va creciendo una ciudad de figuras sin terminar: brazos de corcho colgados del techo, cabezas sin ojos sobre las mesas, una abuela gigante que todavía no tiene manos. Vicent lleva treinta y dos años haciendo fallas, y asegura que nunca ha empezado una sin pensar que esta vez no llegaría.",
+      "El proceso empezó, como siempre, con un boceto. En junio, habiendo ganado el concurso de su comisión, Vicent se puso a dibujar la idea definitiva: una crítica a la prisa, con una familia que corre detrás de un reloj enorme. En octubre empezaron a llegar los bloques de corcho y el equipo comenzó a modelar. Desde entonces vienen trabajando seis días por semana, y en enero se sumaron los turnos de noche. «Aquí no se trabaja por horas, se trabaja por piezas», explica Amparo Soler, la pintora, mientras repasa con un pincel finísimo las pestañas de un ninot.",
+      "El calendario no siempre ha acompañado. La escultora Lorena Rangel, que llegó de Caracas hace cuatro años, cuenta que el corcho de la figura central llegó con tres semanas de retraso y con dos bloques partidos. «Alguien los habría roto al cargar el camión», supone, «porque el proveedor jura que salieron enteros». Aun trabajando por las noches, la cabeza va con retraso. Lorena acaba de terminar los ojos y esta semana vuelve a ponerse con la boca, que ya ha rehecho dos veces porque no le convencía la expresión.",
+      "Mientras tanto, la pintura avanza a buen ritmo. Amparo lleva pintados catorce de los veintidós ninots y tiene terminadas todas las caras, que considera la parte más delicada. La humedad de febrero la obliga a esperar entre capa y capa, y eso la desespera. Cansada después de once horas, se sienta un momento sobre una caja de corcho, pero enseguida se levanta, porque, siendo la última semana de secado, cada hora cuenta.",
+      "En el barrio corre el rumor de que esta vez no llegan. Vicent se encoge de hombros. «Que lo digan no significa que sea verdad. Lo que sí necesitamos es un ayudante que sepa manejar la fresadora, aunque sea solo por las noches». Al parecer, el sobrino de Amparo, estudiante de Bellas Artes, empezará la semana que viene. Trabajando dos noches por semana con él, calculan, recuperarían buena parte del retraso. De haber tenido una nave más grande, habrían podido montar la figura entera en el interior; así, el conjunto solo se verá completo en la calle, la noche de la plantà.",
+      "Al terminar la jornada, Vicent apaga las luces del fondo y deja encendida solo la lámpara de la mesa de dibujo. Le pregunto si no le duele trabajar seis meses en algo que se quemará en una noche. Se ríe. «Si lo pensara así, no habría hecho ni una falla. Lo que queda no es el monumento, es el oficio». Y recuerda que, bien terminado, un ninot puede salvarse del fuego por votación popular. Este año, digan lo que digan en el casal, él ya tiene un candidato: la abuela que todavía no tiene manos.",
+    ],
+    glossary: [
+      { es: "comisión", note: "asociación vecinal que encarga y paga una falla" },
+      { es: "casal", note: "local social de una comisión fallera" },
+      { es: "fresadora", note: "máquina que corta y da forma a materiales como el corcho o la madera" },
+    ],
+    tasks: [
+      {
+        id: "c1-05-lectura-comprension",
+        type: "choice",
+        prompt: "Comprueba que has entendido el reportaje.",
+        items: [
           {
-            "words": [
-              "Lo",
-              "que",
-              "facilita",
-              "el",
-              "acuerdo",
-              "es",
-              "ajustar",
-              "la",
-              "descarga."
+            q: "¿Qué crítica representa la falla de Vicent?",
+            options: [
+              "La crítica a la prisa, con una familia que persigue un reloj.",
+              "La crítica a la construcción de naves industriales.",
+              "La crítica a los concursos de las comisiones.",
             ],
-            "why": "En una recomendación integrada, cada recurso cumple una función: el modo distingue constatación y valoración; la nominalización agrupa procesos; la focalización destaca la prioridad; las construcciones condicionales delimitan el compromiso. Revisa que condensar no borre agentes y que una concesión no se interprete como renuncia."
+            answer: 0,
+            why: "Lo dice el segundo párrafo.",
           },
           {
-            "words": [
-              "De",
-              "mantenerse",
-              "la",
-              "prueba,",
-              "se",
-              "ampliará",
-              "la",
-              "evaluación."
+            q: "¿Por qué va con retraso la figura central?",
+            options: [
+              "Porque Lorena llegó tarde de Caracas.",
+              "Porque el corcho llegó tarde y con bloques partidos.",
+              "Porque Vicent cambió el boceto en enero.",
             ],
-            "why": "En una recomendación integrada, cada recurso cumple una función: el modo distingue constatación y valoración; la nominalización agrupa procesos; la focalización destaca la prioridad; las construcciones condicionales delimitan el compromiso. Revisa que condensar no borre agentes y que una concesión no se interprete como renuncia."
-          }
-        ]
-      },
-      {
-        "id": "p-contexto",
-        "type": "context",
-        "prompt": "Elige intervenciones fieles al caso de Valencia.",
-        "items": [
+            answer: 1,
+            why: "El tercer párrafo explica el retraso del corcho.",
+          },
           {
-            "context": "Debes explicar desplazamiento del tráfico a alguien que no leyó el dossier.",
-            "q": "¿Qué definición de desplazamiento del tráfico conserva el sentido del caso?",
-            "options": [
-              "retorno a una situación anterior",
-              "traslado de circulación a otro lugar",
-              "periodo autorizado para entregar mercancía"
+            q: "¿Qué piensa Vicent del carácter efímero de su trabajo?",
+            options: [
+              "Que es injusto y le duele cada año.",
+              "Que pronto dejará el oficio por ese motivo.",
+              "Que lo que perdura no es el monumento, sino el oficio.",
             ],
-            "answer": 1,
-            "why": "traslado de circulación a otro lugar"
+            answer: 2,
+            why: "«Lo que queda no es el monumento, es el oficio.»",
           },
+        ],
+      },
+      {
+        id: "c1-05-lectura-valores",
+        type: "match",
+        prompt: "Relaciona cada fragmento del reportaje con el valor de su perífrasis o de su forma no personal.",
+        pairs: [
+          { left: "va creciendo una ciudad de figuras sin terminar", right: "avance gradual todavía incompleto" },
+          { left: "habiendo ganado el concurso de su comisión", right: "acción anterior con gerundio compuesto" },
+          { left: "Aun trabajando por las noches, la cabeza va con retraso", right: "gerundio con valor de concesión" },
+          { left: "siendo la última semana de secado, cada hora cuenta", right: "gerundio con valor de causa" },
+          { left: "Cansada después de once horas", right: "participio predicativo de estado" },
+        ],
+      },
+      {
+        id: "c1-05-lectura-evaluacion",
+        type: "open",
+        prompt: "Analiza el reportaje como texto integrado.",
+        items: [
           {
-            "context": "Un interlocutor propone eliminar del resumen la principal reserva para hacerlo más convincente.",
-            "q": "¿Qué respuesta mantiene la fidelidad en «Balance 1: decidir sin simplificar»?",
-            "options": [
-              "Declara irrelevantes las pérdidas de cualquier comercio.",
-              "Una condición mínima y una concesión posible.",
-              "Una declaración de apoyo sin reservas."
+            prompt: "Busca en el quinto párrafo tres recursos de las semanas 1 a 4 (postura ante un rumor, relativa no específica, concesión, marca de fuente, condición reducida) y explica en 80–100 palabras qué aporta cada uno al relato.",
+            model: "«Que lo digan no significa que sea verdad» toma distancia del rumor del barrio con dos subjuntivos (G168), lo que muestra la seguridad de Vicent. «Un ayudante que sepa manejar la fresadora» describe un perfil que aún buscan, por eso va en subjuntivo (G169). «Al parecer» marca que el dato del sobrino viene de terceros (G173), y «de haber tenido una nave más grande, habrían podido montar…» plantea una condición pasada no cumplida sin «si» (G172). Juntos, estos recursos permiten al lector distinguir lo seguro, lo buscado y lo que no fue posible.",
+            checklist: [
+              "Identifico tres recursos y la clase a la que pertenecen.",
+              "Explico qué aporta cada uno al relato, no solo la regla.",
+              "Cito literalmente los fragmentos.",
             ],
-            "answer": 1,
-            "why": "Una condición mínima y una concesión posible."
-          }
-        ]
+          },
+        ],
       },
-      {
-        "id": "p-redaccion",
-        "type": "open",
-        "prompt": "Ensaya dos movimientos antes de redactar tu texto sobre «Balance 1: decidir sin simplificar».",
-        "items": [
-          {
-            "prompt": "Escribe una apertura de 60–80 palabras para esta tarea: Elabora un dictamen para la comisión que integre las tres fuentes, distinga observaciones e inferencias y formule un acuerdo condicionado con indicadores de revisión.",
-            "model": "La continuidad provisional de la peatonalización parece defendible si incorpora ajustes y evaluación. Los datos muestran beneficios, pero no aíslan por completo el efecto de la medida; la reunión identifica dificultades concretas de descarga y estancia. Propongo ampliar la franja de reparto, ensayar bancos accesibles y medir las calles laterales. El permiso excepcional deberá responder a necesidades justificadas. La revisión distinguirá perjuicios atribuibles al proyecto de otros cambios económicos y publicará las razones de cada decisión.",
-            "checklist": [
-              "Conservo el alcance y la atribución de la información.",
-              "Justifico la decisión con un indicio concreto."
-            ]
-          },
-          {
-            "prompt": "Formula una objeción razonable a la propuesta de «Balance 1: decidir sin simplificar» y respóndela sin atribuir intenciones no demostradas. Basa la objeción en una limitación expresada en la lectura o en el audio; no añadas cifras, hechos ni intenciones no documentados.",
-            "model": "Una reserva que debe conservarse: Una condición mínima y una concesión posible. La respuesta debe delimitar el compromiso: De mantenerse la prueba, se ampliará la evaluación.",
-            "checklist": [
-              "Conservo el alcance y la atribución de la información.",
-              "Justifico la decisión con un indicio concreto."
-            ]
-          }
-        ]
-      },
-      {
-        "id": "p-recuperacion",
-        "type": "open",
-        "prompt": "Recupera sin consultar: compara los casos y comprueba después tus decisiones. En el balance final, reparte esta recuperación entre dos sesiones.",
-        "items": [
-          {
-            "prompt": "Recuperación de la semana 1 · Modo en sustantivas: matices. Recupera una construcción y explica su efecto antes de emplearla en dos frases. Contrasta el caso «Lo que permite afirmar un hallazgo» con «Balance 1: decidir sin simplificar».",
-            "model": "Punto de contraste: Siento que el titular exagera el hallazgo. En el caso actual: Comprendo que los comerciantes necesitan descargar. La transferencia debe conservar el sentido pertinente y justificar cualquier cambio de registro.",
-            "checklist": [
-              "Recupero el recurso antes de consultar la semana anterior.",
-              "Distingo lo que puede transferirse de lo que cambia por el contexto."
-            ]
-          },
-          {
-            "prompt": "Recuperación de la semana 1 · Registro académico. Recupera el recurso discursivo y explica cómo cambia la interpretación. Contrasta el caso «Lo que permite afirmar un hallazgo» con «Balance 1: decidir sin simplificar».",
-            "model": "Punto de contraste: Siento que el titular exagera el hallazgo. En el caso actual: Comprendo que los comerciantes necesitan descargar. La transferencia debe conservar el sentido pertinente y justificar cualquier cambio de registro.",
-            "checklist": [
-              "Recupero el recurso antes de consultar la semana anterior.",
-              "Distingo lo que puede transferirse de lo que cambia por el contexto."
-            ]
-          },
-          {
-            "prompt": "Recuperación de la semana 1 · Ciencia y divulgación. Recupera dos expresiones, explica su combinación habitual y utilízalas en una comparación. Contrasta el caso «Lo que permite afirmar un hallazgo» con «Balance 1: decidir sin simplificar».",
-            "model": "Punto de contraste: Siento que el titular exagera el hallazgo. En el caso actual: Comprendo que los comerciantes necesitan descargar. La transferencia debe conservar el sentido pertinente y justificar cualquier cambio de registro.",
-            "checklist": [
-              "Recupero el recurso antes de consultar la semana anterior.",
-              "Distingo lo que puede transferirse de lo que cambia por el contexto."
-            ]
-          },
-          {
-            "prompt": "Recuperación de la semana 1 · Lectura académica en voz alta. Recupera el patrón de pausas o foco, graba dos versiones y justifica la más clara. Contrasta el caso «Lo que permite afirmar un hallazgo» con «Balance 1: decidir sin simplificar».",
-            "model": "Punto de contraste: Siento que el titular exagera el hallazgo. En el caso actual: Comprendo que los comerciantes necesitan descargar. La transferencia debe conservar el sentido pertinente y justificar cualquier cambio de registro.",
-            "checklist": [
-              "Recupero el recurso antes de consultar la semana anterior.",
-              "Distingo lo que puede transferirse de lo que cambia por el contexto."
-            ]
-          },
-          {
-            "prompt": "Recuperación de la semana 1 · Escuchar una conferencia breve. Recupera la estrategia de escucha y reconstruye una reserva sin mirar la transcripción. Contrasta el caso «Lo que permite afirmar un hallazgo» con «Balance 1: decidir sin simplificar».",
-            "model": "Punto de contraste: Siento que el titular exagera el hallazgo. En el caso actual: Comprendo que los comerciantes necesitan descargar. La transferencia debe conservar el sentido pertinente y justificar cualquier cambio de registro.",
-            "checklist": [
-              "Recupero el recurso antes de consultar la semana anterior.",
-              "Distingo lo que puede transferirse de lo que cambia por el contexto."
-            ]
-          },
-          {
-            "prompt": "Recuperación de la semana 1 · Matizar una interpretación. Recupera el movimiento comunicativo y úsalo ante una objeción concreta. Contrasta el caso «Lo que permite afirmar un hallazgo» con «Balance 1: decidir sin simplificar».",
-            "model": "Punto de contraste: Siento que el titular exagera el hallazgo. En el caso actual: Comprendo que los comerciantes necesitan descargar. La transferencia debe conservar el sentido pertinente y justificar cualquier cambio de registro.",
-            "checklist": [
-              "Recupero el recurso antes de consultar la semana anterior.",
-              "Distingo lo que puede transferirse de lo que cambia por el contexto."
-            ]
-          },
-          {
-            "prompt": "Recuperación de la semana 2 · Nominalización y condensación. Recupera una construcción y explica su efecto antes de emplearla en dos frases. Contrasta el caso «La economía de un párrafo» con «Balance 1: decidir sin simplificar».",
-            "model": "Punto de contraste: La ampliación del teletrabajo redujo algunos desplazamientos. En el caso actual: Comprendo que los comerciantes necesitan descargar. La transferencia debe conservar el sentido pertinente y justificar cualquier cambio de registro.",
-            "checklist": [
-              "Recupero el recurso antes de consultar la semana anterior.",
-              "Distingo lo que puede transferirse de lo que cambia por el contexto."
-            ]
-          },
-          {
-            "prompt": "Recuperación de la semana 2 · Economía y sociedad. Recupera dos expresiones, explica su combinación habitual y utilízalas en una comparación. Contrasta el caso «La economía de un párrafo» con «Balance 1: decidir sin simplificar».",
-            "model": "Punto de contraste: La ampliación del teletrabajo redujo algunos desplazamientos. En el caso actual: Comprendo que los comerciantes necesitan descargar. La transferencia debe conservar el sentido pertinente y justificar cualquier cambio de registro.",
-            "checklist": [
-              "Recupero el recurso antes de consultar la semana anterior.",
-              "Distingo lo que puede transferirse de lo que cambia por el contexto."
-            ]
-          },
-          {
-            "prompt": "Recuperación de la semana 2 · Incisos y enumeraciones. Recupera el patrón de pausas o foco, graba dos versiones y justifica la más clara. Contrasta el caso «La economía de un párrafo» con «Balance 1: decidir sin simplificar».",
-            "model": "Punto de contraste: La ampliación del teletrabajo redujo algunos desplazamientos. En el caso actual: Comprendo que los comerciantes necesitan descargar. La transferencia debe conservar el sentido pertinente y justificar cualquier cambio de registro.",
-            "checklist": [
-              "Recupero el recurso antes de consultar la semana anterior.",
-              "Distingo lo que puede transferirse de lo que cambia por el contexto."
-            ]
-          },
-          {
-            "prompt": "Recuperación de la semana 2 · Leer un informe. Recupera la estrategia de lectura y localiza una inferencia apoyada y otra excesiva. Contrasta el caso «La economía de un párrafo» con «Balance 1: decidir sin simplificar».",
-            "model": "Punto de contraste: La ampliación del teletrabajo redujo algunos desplazamientos. En el caso actual: Comprendo que los comerciantes necesitan descargar. La transferencia debe conservar el sentido pertinente y justificar cualquier cambio de registro.",
-            "checklist": [
-              "Recupero el recurso antes de consultar la semana anterior.",
-              "Distingo lo que puede transferirse de lo que cambia por el contexto."
-            ]
-          },
-          {
-            "prompt": "Recuperación de la semana 2 · Resumen técnico. Recupera el criterio de revisión y aplícalo a un párrafo propio. Contrasta el caso «La economía de un párrafo» con «Balance 1: decidir sin simplificar».",
-            "model": "Punto de contraste: La ampliación del teletrabajo redujo algunos desplazamientos. En el caso actual: Comprendo que los comerciantes necesitan descargar. La transferencia debe conservar el sentido pertinente y justificar cualquier cambio de registro.",
-            "checklist": [
-              "Recupero el recurso antes de consultar la semana anterior.",
-              "Distingo lo que puede transferirse de lo que cambia por el contexto."
-            ]
-          },
-          {
-            "prompt": "Recuperación de la semana 3 · Oraciones hendidas y pseudohendidas. Recupera una construcción y explica su efecto antes de emplearla en dos frases. Contrasta el caso «Lo que un titular pone en primer plano» con «Balance 1: decidir sin simplificar».",
-            "model": "Punto de contraste: Fue la bibliotecaria quien cuestionó el marco. En el caso actual: Comprendo que los comerciantes necesitan descargar. La transferencia debe conservar el sentido pertinente y justificar cualquier cambio de registro.",
-            "checklist": [
-              "Recupero el recurso antes de consultar la semana anterior.",
-              "Distingo lo que puede transferirse de lo que cambia por el contexto."
-            ]
-          },
-          {
-            "prompt": "Recuperación de la semana 3 · Tema y foco. Recupera el recurso discursivo y explica cómo cambia la interpretación. Contrasta el caso «Lo que un titular pone en primer plano» con «Balance 1: decidir sin simplificar».",
-            "model": "Punto de contraste: Fue la bibliotecaria quien cuestionó el marco. En el caso actual: Comprendo que los comerciantes necesitan descargar. La transferencia debe conservar el sentido pertinente y justificar cualquier cambio de registro.",
-            "checklist": [
-              "Recupero el recurso antes de consultar la semana anterior.",
-              "Distingo lo que puede transferirse de lo que cambia por el contexto."
-            ]
-          },
-          {
-            "prompt": "Recuperación de la semana 3 · Comunicación y discurso público. Recupera dos expresiones, explica su combinación habitual y utilízalas en una comparación. Contrasta el caso «Lo que un titular pone en primer plano» con «Balance 1: decidir sin simplificar».",
-            "model": "Punto de contraste: Fue la bibliotecaria quien cuestionó el marco. En el caso actual: Comprendo que los comerciantes necesitan descargar. La transferencia debe conservar el sentido pertinente y justificar cualquier cambio de registro.",
-            "checklist": [
-              "Recupero el recurso antes de consultar la semana anterior.",
-              "Distingo lo que puede transferirse de lo que cambia por el contexto."
-            ]
-          },
-          {
-            "prompt": "Recuperación de la semana 3 · Foco prosódico. Recupera el patrón de pausas o foco, graba dos versiones y justifica la más clara. Contrasta el caso «Lo que un titular pone en primer plano» con «Balance 1: decidir sin simplificar».",
-            "model": "Punto de contraste: Fue la bibliotecaria quien cuestionó el marco. En el caso actual: Comprendo que los comerciantes necesitan descargar. La transferencia debe conservar el sentido pertinente y justificar cualquier cambio de registro.",
-            "checklist": [
-              "Recupero el recurso antes de consultar la semana anterior.",
-              "Distingo lo que puede transferirse de lo que cambia por el contexto."
-            ]
-          },
-          {
-            "prompt": "Recuperación de la semana 3 · Presentación con énfasis. Recupera la organización oral y produce un minuto sin leer. Contrasta el caso «Lo que un titular pone en primer plano» con «Balance 1: decidir sin simplificar».",
-            "model": "Punto de contraste: Fue la bibliotecaria quien cuestionó el marco. En el caso actual: Comprendo que los comerciantes necesitan descargar. La transferencia debe conservar el sentido pertinente y justificar cualquier cambio de registro.",
-            "checklist": [
-              "Recupero el recurso antes de consultar la semana anterior.",
-              "Distingo lo que puede transferirse de lo que cambia por el contexto."
-            ]
-          },
-          {
-            "prompt": "Recuperación de la semana 4 · Conectores con matices. Recupera una construcción y explica su efecto antes de emplearla en dos frases. Contrasta el caso «Las condiciones de una excepción» con «Balance 1: decidir sin simplificar».",
-            "model": "Punto de contraste: Aun cuando la actividad sea gratuita, necesita cobertura. En el caso actual: Comprendo que los comerciantes necesitan descargar. La transferencia debe conservar el sentido pertinente y justificar cualquier cambio de registro.",
-            "checklist": [
-              "Recupero el recurso antes de consultar la semana anterior.",
-              "Distingo lo que puede transferirse de lo que cambia por el contexto."
-            ]
-          },
-          {
-            "prompt": "Recuperación de la semana 4 · Normas, derechos y obligaciones. Recupera dos expresiones, explica su combinación habitual y utilízalas en una comparación. Contrasta el caso «Las condiciones de una excepción» con «Balance 1: decidir sin simplificar».",
-            "model": "Punto de contraste: Aun cuando la actividad sea gratuita, necesita cobertura. En el caso actual: Comprendo que los comerciantes necesitan descargar. La transferencia debe conservar el sentido pertinente y justificar cualquier cambio de registro.",
-            "checklist": [
-              "Recupero el recurso antes de consultar la semana anterior.",
-              "Distingo lo que puede transferirse de lo que cambia por el contexto."
-            ]
-          },
-          {
-            "prompt": "Recuperación de la semana 4 · Variación peninsular. Recupera la explicación sobre variación y distingue los rasgos fonéticos de las diferencias de tratamiento o léxico. No identifiques acentos a partir de las voces sintéticas; para la comparación acústica utiliza únicamente muestras verificadas aportadas por tu docente. Contrasta el caso «Las condiciones de una excepción» con «Balance 1: decidir sin simplificar».",
-            "model": "La distinción diferencia /s/ y /θ/; el seseo no establece esa oposición. Tú, vos y usted son formas de tratamiento, no pruebas acústicas de procedencia. Una etiqueta regional del sintetizador no acredita ninguno de estos rasgos.",
-            "checklist": [
-              "Distingo descripción lingüística de evidencia acústica.",
-              "No atribuyo una procedencia por un solo rasgo ni afirmo oír un acento que la muestra no garantiza."
-            ]
-          },
-          {
-            "prompt": "Recuperación de la semana 4 · Condicionar y advertir. Recupera el movimiento comunicativo y úsalo ante una objeción concreta. Contrasta el caso «Las condiciones de una excepción» con «Balance 1: decidir sin simplificar».",
-            "model": "Punto de contraste: Aun cuando la actividad sea gratuita, necesita cobertura. En el caso actual: Comprendo que los comerciantes necesitan descargar. La transferencia debe conservar el sentido pertinente y justificar cualquier cambio de registro.",
-            "checklist": [
-              "Recupero el recurso antes de consultar la semana anterior.",
-              "Distingo lo que puede transferirse de lo que cambia por el contexto."
-            ]
-          },
-          {
-            "prompt": "Recuperación de la semana 4 · Leer un texto normativo. Recupera la estrategia de lectura y localiza una inferencia apoyada y otra excesiva. Contrasta el caso «Las condiciones de una excepción» con «Balance 1: decidir sin simplificar».",
-            "model": "Punto de contraste: Aun cuando la actividad sea gratuita, necesita cobertura. En el caso actual: Comprendo que los comerciantes necesitan descargar. La transferencia debe conservar el sentido pertinente y justificar cualquier cambio de registro.",
-            "checklist": [
-              "Recupero el recurso antes de consultar la semana anterior.",
-              "Distingo lo que puede transferirse de lo que cambia por el contexto."
-            ]
-          }
-        ]
-      }
-    ]
+    ],
+    noticing: {
+      prompt: "Observa cómo el reportaje combina perífrasis, gerundios y participios con los recursos de las semanas anteriores.",
+      items: [
+        { quote: "Vicent lleva treinta y dos años haciendo fallas", note: "«Llevar + gerundio»: tiempo transcurrido de una actividad que continúa." },
+        { quote: "Desde entonces vienen trabajando seis días por semana", note: "«Venir + gerundio»: proceso que llega desde antes hasta ahora." },
+        { quote: "Lorena acaba de terminar los ojos y esta semana vuelve a ponerse con la boca", note: "Fase final reciente y reiteración en una misma frase." },
+        { quote: "Amparo lleva pintados catorce de los veintidós ninots y tiene terminadas todas las caras", note: "Progreso parcial y resultado disponible, con participios concordados." },
+        { quote: "Trabajando dos noches por semana con él, calculan, recuperarían buena parte del retraso.", note: "Gerundio condicional con resultado hipotético." },
+        { quote: "Alguien los habría roto al cargar el camión", note: "Conjetura sobre el pasado (G174) en boca de un personaje." },
+      ],
+    },
   },
-  "writing": {
-    "task": "Elabora un dictamen para la comisión que integre las tres fuentes, distinga observaciones e inferencias y formule un acuerdo condicionado con indicadores de revisión.",
-    "context": "Produce primero tu versión sin consultar el modelo. Después compara organización, atribución, registro y alcance; el modelo ofrece una realización posible, no la única respuesta válida.",
-    "steps": [
-      "Selecciona las afirmaciones que cada fuente permite sostener y anota sus límites.",
-      "Organiza por problemas y decisiones; redacta sin copiar frases extensas del dossier.",
-      "Revisa atribución, registro, cohesión y alcance de los compromisos; justifica dos cambios."
+  practice: {
+    intro: "Combina orden, elección según la intención, relación de formas y escritura guiada. Termina recuperando cada una de las clases de las semanas 1 a 4.",
+    exercises: [
+      {
+        id: "c1-05-orden",
+        type: "order",
+        prompt: "Ordena las palabras para formar frases del diario del taller.",
+        items: [
+          {
+            words: ["Llevamos", "montadas", "tres", "de", "las", "cinco", "piezas", "del", "reloj."],
+            why: "«Llevar + participio» concordado: progreso parcial.",
+          },
+          {
+            words: ["Aun", "lloviendo", "toda", "la", "semana,", "la", "plantà", "será", "el", "día", "15."],
+            why: "Gerundio concesivo con «aun».",
+          },
+          {
+            words: ["Habiendo", "terminado", "el", "boceto,", "Vicent", "empezó", "a", "buscar", "corcho."],
+            why: "Gerundio compuesto para una acción anterior.",
+          },
+        ],
+      },
+      {
+        id: "c1-05-intencion",
+        type: "context",
+        prompt: "Elige la frase que corresponde a la intención descrita.",
+        items: [
+          {
+            context: "Quieres informar al presidente de la comisión de que el trabajo avanza, aunque no esté terminado.",
+            q: "¿Qué frase eliges?",
+            options: [
+              "La falla está terminada.",
+              "La falla va quedando como esperábamos.",
+              "La falla acaba de quedar como esperábamos.",
+            ],
+            answer: 1,
+            why: "«Ir + gerundio» muestra el avance sin presentarlo como terminado.",
+          },
+          {
+            context: "Quieres quejarte con suavidad de que el proveedor no avisó del retraso.",
+            q: "¿Qué frase usa un recurso de la semana 4 para atenuar la queja?",
+            options: [
+              "Habríamos preferido que el proveedor nos avisara del retraso.",
+              "Como el proveedor no avise, no le compramos más.",
+              "El proveedor no avisando del retraso.",
+            ],
+            answer: 0,
+            why: "Condicional compuesto de queja atenuada con imperfecto de subjuntivo (G174).",
+          },
+          {
+            context: "Escribes el pie de foto de una imagen en la que Lorena trabaja en la cabeza.",
+            q: "¿Qué pie de foto es aceptable en la lengua cuidada?",
+            options: [
+              "Foto mostrando a Lorena que modela la cabeza.",
+              "Lorena, modelando la cabeza del ninot central.",
+              "Una escultora modelando y terminando después la cabeza el jueves.",
+            ],
+            answer: 1,
+            why: "Los pies de foto descriptivos admiten el gerundio; «foto mostrando» es especificativo y la tercera mezcla posterioridad.",
+          },
+        ],
+      },
+      {
+        id: "c1-05-perifrasis",
+        type: "match",
+        prompt: "Relaciona cada perífrasis con lo que informa.",
+        pairs: [
+          { left: "estar a punto de + infinitivo", right: "la acción va a empezar de inmediato" },
+          { left: "ponerse a + infinitivo", right: "comienzo de una actividad" },
+          { left: "dejar de + infinitivo", right: "interrupción de una actividad" },
+          { left: "volver a + infinitivo", right: "repetición de una acción" },
+          { left: "tener + participio", right: "resultado ya disponible" },
+          { left: "andar + gerundio", right: "actividad dispersa o insistente" },
+        ],
+      },
+      {
+        id: "c1-05-microescritura",
+        type: "open",
+        prompt: "Escribe dos piezas breves antes de la tarea de escritura.",
+        items: [
+          {
+            prompt: "Piensa en un proyecto tuyo en marcha (una mudanza, un curso, una reforma, un trabajo). Escribe 60–80 palabras con al menos cuatro perífrasis distintas: algo que va avanzando, algo que vienes haciendo, algo que tienes listo y cuánto llevas hecho.",
+            model: "Llevo dos meses preparando la mudanza y ya tengo embaladas casi todas las cajas de libros. Vengo regalando ropa desde enero, aunque cuesta desprenderse de algunas cosas. La casa nueva va quedando bonita: los pintores acaban de terminar el salón y la semana que viene vuelven a venir para la cocina. Llevo vaciados cuatro armarios de seis.",
+            checklist: [
+              "Uso al menos cuatro perífrasis con perspectivas distintas.",
+              "Los participios con «tener» y «llevar» concuerdan con el objeto.",
+              "No presento como terminado lo que está en curso.",
+            ],
+          },
+          {
+            prompt: "Escribe tres frases (40–60 palabras) sobre el mismo proyecto con tres gerundios de lecturas diferentes: tiempo, condición y concesión. Comprueba que ninguno es de posterioridad.",
+            model: "Vaciando el altillo, encontré las cartas de mi abuela. Contratando una empresa, terminaríamos la mudanza en un día, pero es caro. Aun trabajando todo el fin de semana, no conseguimos montar los muebles de la cocina, así que el lunes cenamos de pie.",
+            checklist: [
+              "Cada gerundio tiene una lectura distinta y clara.",
+              "La oración principal es coherente con la lectura (pasado, hipotético).",
+              "No hay gerundios de posterioridad ni especificativos.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "c1-05-recuperacion",
+        type: "open",
+        prompt: "Recupera las clases de las semanas 1 a 4 con los estímulos del taller. No hace falta volver a las lecciones: trabaja con el material de cada ítem.",
+        items: [
+          {
+            prompt: "Recuperación de G167 (concordancia temporal). Estímulo de enero: «Queremos que el corcho llegue en febrero y nos alegra que el boceto haya gustado». Cuéntalo hoy, en marzo, desde el pasado.",
+            model: "En enero queríamos que el corcho llegara en febrero y nos alegraba que el boceto hubiera gustado a la comisión.",
+            checklist: [
+              "Paso el deseo a imperfecto de subjuntivo.",
+              "Paso la valoración de un hecho anterior a pluscuamperfecto.",
+            ],
+          },
+          {
+            prompt: "Recuperación de G168 (modo según la postura). Estímulo: en el casal dicen que la falla no estará lista. Responde distinguiendo lo que se dice de lo que tú sabes.",
+            model: "Dicen que no llegamos, pero que lo digan no significa que sea cierto. Que yo sepa, la pintura va a buen ritmo y la cabeza estará lista el jueves.",
+            checklist: [
+              "Transmito el rumor con indicativo.",
+              "Tomo distancia con subjuntivo y limito mi compromiso con «que yo sepa».",
+            ],
+          },
+          {
+            prompt: "Recuperación de G169 y G170 (relativas y concesivas). Estímulo: el taller necesita un ayudante, pero no hay mucho dinero. Escribe el anuncio en dos frases con una relativa no específica y una concesiva polémica.",
+            model: "Buscamos un ayudante que sepa manejar la fresadora y que pueda venir por las noches. Aunque el sueldo sea modesto, aprenderá el oficio con un equipo que lleva treinta años haciendo fallas.",
+            checklist: [
+              "La relativa describe un perfil con subjuntivo.",
+              "La concesiva concede un dato conocido para restarle peso.",
+            ],
+          },
+          {
+            prompt: "Recuperación de G171 y G172 (condiciones). Estímulo: el corcho llegó tarde porque lo pidieron en diciembre. Escribe una queja coloquial y su versión formal sin «si».",
+            model: "Coloquial: «Si lo sé, pido el corcho en octubre». Formal: «De haber encargado el corcho en octubre, habríamos evitado el retraso de la figura central».",
+            checklist: [
+              "La queja coloquial usa presente con valor de pasado irreal.",
+              "La versión formal usa de + infinitivo compuesto y condicional compuesto.",
+            ],
+          },
+          {
+            prompt: "Recuperación de G173 y G174 (certeza y conjetura). Estímulo: dos bloques de corcho llegaron partidos y nadie sabe cuándo se rompieron. Escribe tres frases: lo que ves, lo que deduces y una conjetura sobre el pasado.",
+            model: "Dos bloques han llegado partidos. A juzgar por las marcas de las correas, tuvieron que romperse durante la carga. Cuando salieron del almacén, probablemente estaban enteros, así que alguien los habría golpeado al subirlos al camión.",
+            checklist: [
+              "Afirmo sin marcas lo que veo.",
+              "Uso un marcador de deducción con el modo correcto.",
+              "La conjetura usa «habría + participio» con un punto de referencia pasado.",
+            ],
+          },
+        ],
+      },
     ],
-    "useLanguage": [
-      "Integración: evidencia, condensación, foco y condiciones",
-      "desplazamiento del tráfico",
-      "franja de descarga",
-      "reversión de una medida",
-      "evaluación publicada"
-    ],
-    "model": [
-      "La continuidad provisional de la peatonalización parece defendible si incorpora ajustes y evaluación. Los datos muestran beneficios, pero no aíslan por completo el efecto de la medida; la reunión identifica dificultades concretas de descarga y estancia. Propongo ampliar la franja de reparto, ensayar bancos accesibles y medir las calles laterales. El permiso excepcional deberá responder a necesidades justificadas. La revisión distinguirá perjuicios atribuibles al proyecto de otros cambios económicos y publicará las razones de cada decisión.",
-      "El informe de movilidad permite afirmar que descendió el tráfico dentro del perímetro y aumentó en una calle lateral. La mejora de la calidad del aire coincide, además, con un cambio meteorológico. No conviene presentar estos datos como prueba de una causa exclusiva ni utilizarlos para declarar que no sabemos nada. Justifican continuar una evaluación que incluya el entorno y permita comparar periodos distintos. La próxima comunicación debe distinguir qué beneficio se ha observado y qué explicación sigue pendiente de contraste, para que la provisionalidad no se confunda con falta de actuación.",
-      "La carta comercial requiere una lectura igualmente diferenciada. La referencia a pérdidas irreparables no describe de forma uniforme a todos los negocios. La reunión aclara que varios firmantes apoyarían la continuidad si mejora la descarga. Ese problema puede abordarse sin restablecer el tráfico general. Los bancos, por otra parte, deben probarse con quienes necesitan respaldo y sombra. No basta con aumentar el tiempo de estancia si las condiciones excluyen a parte de la población. Cada ajuste tendrá que vincularse con una dificultad concreta y una forma de comprobar su efecto.",
-      "Propongo que la comisión publique antes del siguiente periodo los indicadores y el procedimiento de revisión. Los grupos aportarán una condición mínima y una concesión posible. De detectarse un perjuicio grave atribuible al diseño, se revisará la medida y se explicarán las razones. El objetivo no es obtener unanimidad inmediata, sino un acuerdo cuyo cumplimiento pueda examinarse."
-    ],
-    "checklist": [
-      "Cumplo el género, la finalidad y el destinatario de la consigna.",
-      "Integro lectura y escucha con atribución clara, sin yuxtaponer resúmenes.",
-      "Conservo condiciones e incertidumbres y distingo mi propuesta de las fuentes.",
-      "Uso léxico preciso y estructuras complejas con control.",
-      "Reviso cohesión, puntuación y adecuación antes de la versión final."
-    ],
-    "words": [
-      300,
-      360
-    ]
   },
-  "speaking": {
-    "intro": "Planifica con palabras clave, graba una primera versión y escucha dónde pierdes precisión. La calidad oral se revisa mediante autoevaluación y trabajo con tu docente.",
-    "tasks": [
-      {
-        "title": "Exposición razonada",
-        "prompt": "Preside una reunión simulada: resume las posiciones, solicita una concesión a cada parte y presenta un acuerdo provisional con límites explícitos.",
-        "prep": [
-          "Formula una tesis, dos apoyos y una reserva.",
-          "Decide qué detalle del audio añadirás sin leer la transcripción.",
-          "Prepara una pregunta que permita comprobar comprensión."
-        ],
-        "seconds": 240,
-        "model": "La continuidad provisional de la peatonalización parece defendible si incorpora ajustes y evaluación. Los datos muestran beneficios, pero no aíslan por completo el efecto de la medida; la reunión identifica dificultades concretas de descarga y estancia. Propongo ampliar la franja de reparto, ensayar bancos accesibles y medir las calles laterales. El permiso excepcional deberá responder a necesidades justificadas. La revisión distinguirá perjuicios atribuibles al proyecto de otros cambios económicos y publicará las razones de cada decisión.",
-        "selfCheck": [
-          "Mantengo un hilo claro sin leer un texto completo.",
-          "Diferencio voces y calibro certeza.",
-          "Las pausas y el foco ayudan a comprender."
-        ]
-      },
-      {
-        "title": "Interacción y reparación",
-        "prompt": "Tu interlocutor sostiene: «Declara irrelevantes las pérdidas de cualquier comercio.» Pídele que precise su razón, concede lo defendible y responde con evidencia del dossier. Después cambia de papel y plantea esta reserva: «Una declaración de apoyo sin reservas.»; corrígela sin humillar y negocia una formulación común.",
-        "prep": [
-          "Prepara una reformulación fiel de la postura ajena.",
-          "Decide qué condición no puedes aceptar y qué alternativa ofrecerás."
-        ],
-        "seconds": 240,
-        "selfCheck": [
-          "Respondo a la objeción real y pido aclaración cuando hace falta.",
-          "Reformulo una interpretación excesiva.",
-          "Cierro con acuerdo o desacuerdo delimitado."
-        ]
-      }
-    ]
-  },
-  "useInClass": {
-    "intro": "Lleva tu texto y tu grabación sobre «Balance 1: decidir sin simplificar». Pide que se examine una decisión lingüística concreta, no solo errores aislados.",
-    "cards": [
-      {
-        "move": "Defiende",
-        "task": "Preside una reunión simulada: resume las posiciones, solicita una concesión a cada parte y presenta un acuerdo provisional con límites explícitos.",
-        "phrases": [
-          "Comprendo que los comerciantes necesitan descargar.",
-          "De mantenerse la prueba, se ampliará la evaluación."
-        ]
-      },
-      {
-        "move": "Contrasta",
-        "task": "Compara con tu docente estas dos interpretaciones: Descompone las objeciones en condiciones y ajustes comprobables. / Declara irrelevantes las pérdidas de cualquier comercio. Señala un indicio y una condición que podrían cambiar tu lectura."
-      },
-      {
-        "move": "Reformula",
-        "task": "Tu docente cambia el destinatario de tu texto sobre desplazamiento del tráfico. Reorganiza oralmente el mensaje y explica qué términos mantienes, cuáles aclaras y qué reservas no puedes omitir."
-      }
+  writing: {
+    task: "Redacta una crónica (240–340 palabras) sobre un proyecto largo que conozcas bien: la preparación de una fiesta, una reforma, un montaje teatral, un viaje organizado en grupo. Cuenta cómo empezó, cómo fue avanzando, qué se torció y en qué estado está hoy, e integra al menos cuatro recursos de las semanas 1 a 4.",
+    context: "La crónica se publicará en el boletín de la asociación o del grupo que hizo el proyecto. La leerán quienes participaron y quienes no: necesitan entender el proceso, no solo el resultado, y distinguir lo que está terminado de lo que sigue en marcha.",
+    steps: [
+      "Haz una línea temporal con cinco momentos del proyecto y escribe al lado la perífrasis que mejor muestra cada uno (empezar a, ir + gerundio, volver a, llevar + participio, tener + participio).",
+      "Elige cuatro recursos de las semanas 1 a 4 (una expectativa pasada, un rumor matizado, un perfil buscado, una concesión, una condición reducida, una conjetura) y decide dónde encajan.",
+      "Redacta al menos tres párrafos: el comienzo, el avance con sus problemas y el estado actual.",
+      "Revisa la crónica con la lista de control: corrige los gerundios de posterioridad o especificativos y comprueba la concordancia de los participios.",
     ],
-    "bring": "Borrador y versión revisada, esquema oral y una pregunta sobre alcance o registro."
-  },
-  "quiz": {
-    "items": [
-      {
-        "type": "choice",
-        "q": "En una explicación de «Balance 1: decidir sin simplificar», ¿qué significa condición verificable?",
-        "options": [
-          "requisito que puede comprobarse",
-          "entrada permitida en casos justificados",
-          "daño vinculado con evidencia a una causa"
-        ],
-        "answer": 0,
-        "why": "requisito que puede comprobarse"
-      },
-      {
-        "type": "listen",
-        "audio": "Recojo tres acuerdos provisionales: ampliar la medición a las calles laterales, ajustar la descarga y ensayar bancos accesibles. La continuidad quedaría condicionada a una evaluación publicada, con indicadores que hoy debemos definir. Nadie está prometiendo que todos los negocios ganen ventas ni que desaparezcan los conflictos. Sí podemos comprometernos a distinguir efectos, responder a solicitudes y explicar cada ajuste. Para la próxima reunión, cada grupo traerá una condición mínima y una concesión posible. Así negociaremos sobre propuestas que puedan cumplirse, no sobre declaraciones generales de apoyo o rechazo.",
-        "voice": "es-ES-f",
-        "q": "Escucha el cierre otra vez: ¿qué límite debes conservar al transmitir «Balance 1: decidir sin simplificar»?",
-        "options": [
-          "Una condición mínima y una concesión posible.",
-          "Una declaración de apoyo sin reservas.",
-          "Promete eliminar todos los conflictos de uso."
-        ],
-        "answer": 0,
-        "why": "Una condición mínima y una concesión posible."
-      },
-      {
-        "type": "gap",
-        "q": "De ___ la prueba, se medirán otros accesos.",
-        "answers": [
-          [
-            "mantenerse"
-          ]
-        ],
-        "hint": "Usa el infinitivo pronominal de mantener.",
-        "why": "La construcción condicional lleva infinitivo."
-      },
-      {
-        "type": "open",
-        "prompt": "Condensa con ampliación. Escribe solo la reformulación. En una intervención sobre «Balance 1: decidir sin simplificar» lees: «Se amplió la franja y mejoró el reparto.» Se evalúa el sentido y el recurso solicitado, no la coincidencia literal.",
-        "model": "La ampliación de la franja mejoró el reparto.",
-        "checklist": [
-          "Cumplo el recurso solicitado y conservo el sentido relevante.",
-          "Acepto alternativas naturales que mantengan tiempo, referencia y alcance."
-        ]
-      },
-      {
-        "type": "error",
-        "sentence": "De manteniéndose la prueba, se medirán otros accesos.",
-        "answers": [
-          "De mantenerse la prueba, se medirán otros accesos."
-        ],
-        "why": "La construcción condicional lleva infinitivo."
-      },
-      {
-        "type": "open",
-        "prompt": "Prueba de transferencia de «Balance 1: decidir sin simplificar»: explica en 80–100 palabras por qué esta conclusión requiere matices: Declara irrelevantes las pérdidas de cualquier comercio.",
-        "model": "La continuidad provisional de la peatonalización parece defendible si incorpora ajustes y evaluación. Los datos muestran beneficios, pero no aíslan por completo el efecto de la medida; la reunión identifica dificultades concretas de descarga y estancia. Propongo ampliar la franja de reparto, ensayar bancos accesibles y medir las calles laterales. El permiso excepcional deberá responder a necesidades justificadas. La revisión distinguirá perjuicios atribuibles al proyecto de otros cambios económicos y publicará las razones de cada decisión.",
-        "checklist": [
-          "Identifico el exceso de la afirmación.",
-          "Cito una evidencia y conservo una reserva."
-        ]
-      },
-      {
-        "type": "open",
-        "prompt": "Graba una respuesta de 90 segundos a esta demanda sobre «Balance 1: decidir sin simplificar»: «Dinos una solución definitiva y sin condiciones». Justifica por qué tu respuesta necesita límites.",
-        "model": "La conclusión debe conservar este límite: Una condición mínima y una concesión posible.",
-        "checklist": [
-          "Respondo de manera directa.",
-          "Distingo decisión, condición e incertidumbre."
-        ]
-      },
-      {
-        "type": "open",
-        "prompt": "Audita tu producción de «Balance 1: decidir sin simplificar»: señala una elección de integración: evidencia, condensación, foco y condiciones y reescribe un pasaje para otro destinatario.",
-        "model": "Decisión que puedes explicar: Comprendo que los comerciantes necesitan descargar. Reformulación para contrastar: Comprendo que los comerciantes pidan más tiempo.",
-        "checklist": [
-          "Explico un cambio de sentido o registro.",
-          "Conservo hechos y atribuciones."
-        ]
-      }
-    ]
-  },
-  "complete": {
-    "canNow": [
-      "Puedo usar integración: evidencia, condensación, foco y condiciones para intervenir con precisión.",
-      "Puedo explicar el caso de Valencia integrando fuentes y reservas.",
-      "Puedo sostener una exposición y responder a objeciones sin perder el hilo."
+    useLanguage: [
+      "empezar a, ponerse a, volver a, acabar de + infinitivo",
+      "ir / venir / llevar + gerundio",
+      "llevar / tener / dejar + participio concordado",
+      "gerundio de modo, tiempo, causa, condición o concesión (aun + gerundio)",
+      "participio predicativo: cansados, bien hecho…",
+      "esperábamos que…, que lo digan no significa que…, de haber + participio…",
     ],
-    "review": [
-      "Dentro de dos días, reconstruye de memoria la diferencia central: Una condición mínima y una concesión posible.",
-      "Dentro de una semana, reutiliza desplazamiento del tráfico y condición verificable en otro caso; comprueba su colocación.",
-      "Reescucha tu grabación y revisa este recurso: Jerarquía oral de un dictamen."
-    ]
-  }
+    model: [
+      "Cuando en septiembre la asociación decidió recuperar el antiguo lavadero del barrio, casi nadie creía que lo veríamos abierto en primavera. Esperábamos que el ayuntamiento cediera el edificio en un mes y tardó tres. Habiendo firmado por fin el convenio en diciembre, nos pusimos a limpiar los fines de semana con una veintena de voluntarios, y en enero empezamos a reparar el tejado con la ayuda de un albañil jubilado que vive en la calle de al lado.",
+      "Desde entonces venimos trabajando todos los sábados. El tejado está terminado y tenemos pintadas las paredes de la sala grande, pero las pilas de piedra van quedando más despacio de lo previsto: la restauradora acaba de terminar la tercera y la semana que viene vuelve a ponerse con la cuarta. Por lo visto, alguien las habría tapado con cemento en los años setenta, y quitarlo sin dañar la piedra exige paciencia. Aun trabajando por turnos, no llegaremos a abrir en marzo.",
+      "En el barrio se dice que el proyecto está parado. Que se diga no significa que sea verdad: llevamos restauradas tres pilas de seis y el resto del edificio estará listo en abril. Lo que sí necesitamos son voluntarios que puedan venir entre semana, aunque sea una hora. De haber tenido más manos en otoño, habríamos ganado un mes entero. Quien quiera sumarse, que pase cualquier sábado por la mañana. Cansados pero contentos, seguimos adelante: bien terminado, el lavadero será la sala de actividades que el barrio lleva años pidiendo.",
+    ],
+    checklist: [
+      "Cada perífrasis muestra la perspectiva adecuada y no presento como terminado lo que sigue en curso.",
+      "Los participios con «tener», «llevar», «dejar» y «estar» concuerdan; con «haber», son invariables.",
+      "Ningún gerundio es de posterioridad ni especificativo, y cada uno tiene una lectura clara.",
+      "Integro al menos cuatro recursos de las semanas 1 a 4 con el modo y el tiempo correctos.",
+      "La crónica tiene al menos tres párrafos ordenados en el tiempo.",
+    ],
+    words: [240, 340],
+  },
+  speaking: {
+    intro: "Prepárate con palabras clave, no con un texto leído. Si te grabas, la grabación queda en tu dispositivo; el navegador no evalúa tu pronunciación.",
+    tasks: [
+      {
+        title: "Balance de un proyecto en marcha",
+        prompt: "Presenta durante cuatro minutos el estado de un proyecto en marcha (tuyo o el taller de esta semana) ante el grupo que lo financia. Explica qué está terminado, qué va avanzando, qué ha habido que repetir y cuánto falta. Incluye una expectativa del principio, un problema con su conjetura y un plan para dos escenarios.",
+        prep: [
+          "Divide una hoja en tres columnas: hecho, en curso, pendiente. Escribe al menos dos perífrasis en cada una.",
+          "Prepara una frase con «esperábamos que…» y una conjetura con «habría + participio».",
+          "Anota un plan con «en caso de que…» y otro con un gerundio condicional.",
+        ],
+        seconds: 240,
+        model: "Empiezo por lo que está terminado: tenemos pintadas todas las caras y el tejado está listo. Lo que va más despacio es la figura central. En enero esperábamos que el corcho llegara a tiempo, pero llegó tarde y con dos bloques rotos; alguien los habría golpeado al cargarlos. Lorena acaba de terminar los ojos y vuelve a ponerse con la boca. En caso de que siga lloviendo, pintaremos dentro. Y trabajando dos noches más por semana, recuperaríamos el retraso.",
+        selfCheck: [
+          "Distingo con perífrasis lo hecho, lo que está en curso y lo pendiente.",
+          "Integro al menos tres recursos de las semanas 1 a 4.",
+          "Pronuncio las perífrasis sin pausa interna y los gerundios con pronombres con el acento en su sitio.",
+        ],
+      },
+      {
+        title: "Negociar un plazo",
+        prompt: "El presidente de la comisión te llama preocupado: «Me han dicho que no llegáis y quiero la falla montada el día 13». Escúchalo, pregúntale de dónde ha sacado la información, explica el estado real con datos y negocia un plazo realista con una condición.",
+        prep: [
+          "Prepara dos preguntas sobre su fuente y sus prioridades.",
+          "Ten a mano «llevamos + participio», «que lo digan no significa que…» y «siempre que…».",
+        ],
+        seconds: 180,
+        model: "Entiendo tu preocupación. ¿Quién te ha dicho que no llegamos? ¿Lo has hablado con alguien del taller? Que lo digan en el casal no significa que sea así: llevamos pintados catorce ninots y tenemos lista la estructura. El día 13 es muy justo, pero el 14 por la mañana es posible, siempre que la comisión nos pague dos noches de grúa. ¿Lo cerramos así?",
+        selfCheck: [
+          "Hago al menos dos preguntas reales.",
+          "Doy datos de progreso precisos con perífrasis.",
+          "Propongo un plazo con una condición en subjuntivo.",
+        ],
+      },
+    ],
+  },
+  useInClass: {
+    intro: "Lleva a la próxima clase tu línea temporal del proyecto y una frase con gerundio de la que no estés seguro.",
+    cards: [
+      {
+        move: "Informa",
+        task: "Informa a tu profesor del estado de un proyecto real con cuatro perífrasis distintas y pídele que te pregunte por los detalles.",
+        phrases: ["Llevo… y tengo…", "Va quedando…, pero vuelvo a…"],
+      },
+      {
+        move: "Corrige",
+        task: "Lleva tres frases de periódico o de internet con gerundio y discute con tu profesor si alguna es de posterioridad o especificativa.",
+        phrases: ["¿Este gerundio es posterior?", "¿Sería mejor una relativa?"],
+      },
+      {
+        move: "Integra",
+        task: "Cuenta en dos minutos un problema de tu proyecto usando una expectativa pasada, una concesión y una conjetura; tu profesor marca cada recurso.",
+        phrases: ["Esperaba que…", "Aunque…", "Alguien habría…"],
+      },
+      {
+        move: "Pregunta",
+        task: "Pregúntale si «estar por + infinitivo» o «andar + gerundio» se usan igual en su variedad y en otras que conozca.",
+        phrases: ["¿En tu país se dice «está por llover»?", "¿«Anda diciendo» suena crítico?"],
+      },
+    ],
+    bring: "Tu línea temporal, la crónica revisada y, si quieres, la grabación del balance.",
+  },
+  quiz: {
+    items: [
+      {
+        type: "choice",
+        q: "¿Qué frase informa de un progreso parcial que continúa?",
+        options: [
+          "Hemos restaurado tres pilas.",
+          "Las tres pilas están restauradas.",
+          "Llevamos restauradas tres pilas de seis.",
+        ],
+        answer: 2,
+        why: "«Llevar + participio» implica que el trabajo sigue.",
+      },
+      {
+        type: "choice",
+        q: "«Saliendo del taller, Amparo vio que llovía.» ¿Qué lectura tiene el gerundio?",
+        options: ["tiempo: cuando salía", "condición: si salía", "concesión: aunque salía"],
+        answer: 0,
+        why: "Con un hecho pasado, el gerundio periférico indica aquí simultaneidad.",
+      },
+      {
+        type: "listen",
+        q: "Escucha la frase. ¿Qué perspectiva de la acción expresa?",
+        options: [
+          "Una acción que va a empezar de inmediato.",
+          "Un proceso que empezó antes y continúa hasta ahora.",
+          "Una acción que acaba de terminar.",
+        ],
+        answer: 1,
+        why: "«Venir + gerundio» conecta un proceso iniciado antes con el presente.",
+        audio: "Venimos ensayando el espectáculo desde octubre, y todavía nos falta el final.",
+        voice: "es-VE-f",
+      },
+      {
+        type: "gap",
+        q: "Ya tengo ___ (escribir) las invitaciones; mañana las mando.",
+        answers: [["escritas"]],
+        hint: "«Tener + participio» concuerda con el objeto, que es femenino plural.",
+        why: "Participio irregular de «escribir», concordado con «invitaciones».",
+      },
+      {
+        type: "gap",
+        q: "En enero esperábamos que el ayuntamiento nos ___ (ceder) el local antes de marzo.",
+        answers: [["cediera", "cediese"]],
+        hint: "Recuperación de G167: marco pasado y relación posterior.",
+        why: "Imperfecto de subjuntivo tras «esperábamos que».",
+      },
+      {
+        type: "error",
+        sentence: "El incendio empezó a las diez, siendo controlado por los bomberos a medianoche.",
+        answers: ["El incendio empezó a las diez y fue controlado por los bomberos a medianoche.", "El incendio empezó a las diez y los bomberos lo controlaron a medianoche."],
+        why: "Gerundio de posterioridad: se sustituye por «y» + verbo conjugado.",
+      },
+      {
+        type: "error",
+        sentence: "Aunque llueva ayer, la cabalgata salió a su hora.",
+        answers: ["Aunque llovió ayer, la cabalgata salió a su hora.", "Aunque ayer llovió, la cabalgata salió a su hora."],
+        why: "Recuperación de G170: un hecho pasado real que se informa va en indicativo; el presente de subjuntivo no encaja con «ayer».",
+      },
+      {
+        type: "order",
+        words: ["Aun", "terminados,", "los", "ninots", "necesitan", "una", "capa", "de", "barniz."],
+        why: "Participio predicativo concordado con valor concesivo.",
+      },
+      {
+        type: "open",
+        prompt: "Escribe en 80–100 palabras el parte de un día de trabajo en un proyecto (real o inventado) con dos perífrasis de gerundio, dos de participio, un gerundio condicional y un recurso de las semanas 1 a 4. Subraya mentalmente cada recurso al revisarlo.",
+        model: "Hoy hemos avanzado bastante. Llevamos montadas cuatro de las seis estanterías de la biblioteca y tenemos clasificados los libros infantiles. La sala va quedando acogedora, aunque la luz de la entrada sigue fallando. Lucía viene diciendo desde el lunes que el electricista no vendrá, y por lo visto tiene razón: no contesta. Llamando a otro mañana temprano, terminaríamos la instalación el viernes. Cansados, cerramos a las nueve con la sensación de que, esta vez, sí llegamos.",
+        checklist: [
+          "Incluyo dos perífrasis de gerundio y dos de participio con la concordancia correcta.",
+          "El gerundio condicional va con un resultado futuro o hipotético.",
+          "Integro al menos un recurso de las semanas 1 a 4.",
+        ],
+      },
+    ],
+  },
+  complete: {
+    canNow: [
+      "Muestro una acción por dentro con perífrasis de duración, fase, reiteración y resultado.",
+      "Distingo lo hecho, lo que está en curso y lo disponible, con participios bien concordados.",
+      "Interpreto y uso el gerundio de modo, tiempo, causa, condición y concesión, y evito el de posterioridad y el especificativo.",
+      "Integro en un relato la concordancia y el modo, las relativas y concesivas, las condiciones y la certeza de las semanas 1 a 4.",
+    ],
+    review: [
+      "Dentro de dos días, tapa la tabla «Lo hecho, lo que sigue y lo disponible» y reconstrúyela con el verbo «revisar».",
+      "Dentro de una semana, busca en la prensa dos gerundios dudosos y reescríbelos si son de posterioridad o especificativos.",
+      "En la próxima clase, lee tu crónica y pide a tu profesor que marque los recursos de las semanas 1 a 4 que reconozca.",
+    ],
+  },
+  related: [
+    { path: "/la-accion-vista-desde-dentro", label: "Clase: Aspecto y perífrasis: duración, fase, reiteración" },
+    { path: "/gramatica/valores-interpretativos-del-gerundio-y-participio", label: "Clase: Valores interpretativos del gerundio y participio" },
+  ],
 };
