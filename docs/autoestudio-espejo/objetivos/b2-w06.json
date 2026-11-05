@@ -1,0 +1,12 @@
+[
+  [6, "gram", "g137", "Concesión: aunque + indicativo / subjuntivo", "Puedo elegir indicativo o subjuntivo después de «aunque» según presente un dato nuevo, una objeción que ya se conoce o una posibilidad abierta, y mantener mi postura sin cambiar de idea.", [], { "related": ["/aunque-cambie-el-dato"] }],
+  [6, "gram", "g138", "A pesar de que, por mucho que, por más que", "Puedo conceder con más fuerza con «a pesar de que», «por mucho que», «por más que», «por muy… que», «si bien» y «aun cuando», eligiendo modo, intensidad y registro.", ["b2.gram.g137"], { "related": ["/gramatica/a-pesar-de-que-por-mucho"] }],
+  [6, "voc", "w06-agua-vinedo", "Agua, riego y viñedo", "Puedo hablar con precisión de la escasez de agua y de la gestión de una finca: turno de riego, riego por goteo, cupo, cosecha, rinde, poner en marcha una inversión.", ["b2.gram.g137"]],
+  [6, "pron", "w06-modo-al-oido", "Oír el modo y la pausa concesiva", "Puedo distinguir de oído «aunque sube» y «aunque suba» por la vocal final y marcar con la voz la pausa entre la concesión y la decisión.", ["b2.gram.g137"]],
+  [6, "lis", "w06-reunion-finca", "Reunión familiar en una finca", "Puedo seguir una reunión en la que una familia discute una inversión y reconstruir qué objeciones aceptan y qué decisión mantienen.", ["b2.gram.g137", "b2.gram.g138"]],
+  [6, "read", "w06-columna-agua", "Columna de opinión sobre el agua", "Puedo leer una columna de opinión que concede argumentos contrarios y separar lo que el autor admite de lo que sostiene.", ["b2.gram.g138"]],
+  [6, "wri", "w06-carta-asamblea", "Carta a la asamblea de una cooperativa", "Puedo escribir una carta de más de 200 palabras que reconozca las objeciones de otros socios y defienda una propuesta con conectores concesivos variados.", ["b2.gram.g138", "b2.disc.w06-orden-registro"]],
+  [6, "spk", "w06-sostener-postura", "Sostener una postura ante objeciones", "Puedo responder oralmente a objeciones insistentes, concediendo lo razonable y manteniendo mi decisión con argumentos.", ["b2.fun.w06-conceder-mantener"]],
+  [6, "fun", "w06-conceder-mantener", "Conceder y mantener una decisión", "Puedo aceptar una objeción, ponerle un límite y mantener mi plan sin sonar cerrado ni agresivo.", ["b2.gram.g137"]],
+  [6, "disc", "w06-orden-registro", "Posición y registro de la concesión", "Puedo colocar la concesión delante o detrás según quiera preparar o matizar mi conclusión, y elegir entre «aunque», «si bien» o «aun cuando» según el registro.", ["b2.gram.g138"]]
+]

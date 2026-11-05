@@ -1,846 +1,865 @@
 import type { Module } from "../../types";
 
-/** Original B2 material; see docs/autoestudio/b2-audit.md. */
+/**
+ * B2 · semana 7 · Autoestudio espejo de G139 (temporales con subjuntivo para
+ * futuro incierto) y G140 (finales con subjuntivo). Repaso autónomo con la
+ * preparación de un simulacro de sismo en una escuela de San Juan.
+ * Personas y escuela son ficticias. Audio mediante síntesis.
+ */
 export const b2w07: Module = {
-  "id": "b2-07",
-  "level": "b2",
-  "week": 7,
-  "kind": "core",
-  "title": "Una exposición que también se discute",
-  "subtitle": "Describir y valorar patrimonio con precisión.",
-  "stop": {
-    "place": "San Juan",
-    "country": "Argentina"
-  },
-  "minutes": 120,
-  "newObjectives": [
-    "b2.gram.relativas-avanzadas",
-    "b2.gram.explicativas-especificativas",
-    "b2.voc.arte-cultura",
-    "b2.pron.jerarquia-pausas",
-    "b2.fun.describir-precision",
-    "b2.wri.resena-exposicion"
+  id: "b2-07",
+  level: "b2",
+  week: 7,
+  kind: "core",
+  title: "Cuando suene la alarma: planes inciertos y medidas con propósito",
+  subtitle: "Repaso de las temporales con subjuntivo para hablar de un futuro incierto y de las finales con «para que», «con el fin de que», «sin que» y «no vaya a ser que»",
+  stop: { place: "San Juan", country: "Argentina" },
+  minutes: 120,
+  newObjectives: [
+    "b2.gram.g139",
+    "b2.gram.g140",
+    "b2.voc.w07-sismo-simulacro",
+    "b2.pron.w07-bloques-conectores",
+    "b2.lis.w07-reunion-simulacro",
+    "b2.read.w07-boletin-escuela",
+    "b2.wri.w07-correo-familias",
+    "b2.spk.w07-explicar-protocolo",
+    "b2.fun.w07-planificar-prevenir",
+    "b2.disc.w07-secuencia-finalidad",
   ],
-  "reviewObjectives": [
-    "b2.gram.condicionales-irreales",
-    "b2.gram.condicional-compuesto",
-    "b2.voc.decisiones-consecuencias",
-    "b2.pron.reproche",
-    "b2.fun.lamentar-reprochar",
-    "b2.spk.historia-alternativa",
-    "b2.gram.concesivas",
-    "b2.voc.tecnologia-etica",
-    "b2.pron.concesion",
-    "b2.fun.conceder-objetar",
-    "b2.read.columna"
-  ],
-  "prerequisites": [
-    "b2-06"
-  ],
-  "goal": {
-    "canDo": "Puedo describir y valorar patrimonio con precisión con razones, matices y condiciones claras.",
-    "steps": [
-      "Recupera decisiones lingüísticas anteriores y contrástalas con este caso.",
-      "Escucha sin transcripción y reconstruye las posiciones: explicar cómo una etiqueta modifica el relato histórico.",
-      "Lee las fuentes, identifica límites de la evidencia y prepara tu respuesta.",
-      "Escribe, revisa y ensaya una interacción que continuarás con tu docente."
-    ]
-  },
-  "theory": {
-    "intro": "La mascota te propone una misión: describir y valorar patrimonio con precisión. Decide qué quieres comunicar antes de elegir una forma.",
-    "parts": [
-      {
-        "heading": "Describir y valorar patrimonio con precisión",
-        "body": [
-          "Las relativas especificativas seleccionan un subconjunto y no llevan comas; las explicativas añaden información sobre un referente ya identificado. El contraste puede cambiar a quién afecta una afirmación. Con preposición usa con el que, a la cual o de quien según la función; no elimines una preposición que exige el verbo."
-        ],
-        "examples": [
-          {
-            "es": "Es una colección cuyas piezas fueron donadas.",
-            "note": "Concuerda con piezas."
-          },
-          {
-            "es": "El barrio del que procede la obra cambió mucho.",
-            "note": "Proceder de mantiene su preposición."
-          },
-          {
-            "es": "Faltan fechas, lo cual dificulta seguir el recorrido.",
-            "note": "Recoge la afirmación anterior."
-          }
-        ],
-        "mistakes": [
-          {
-            "wrong": "La artista cuyo obras vemos nació aquí.",
-            "right": "La artista cuyas obras vemos nació aquí.",
-            "why": "Cuyo concuerda con lo poseído: obras."
-          }
-        ]
-      },
-      {
-        "heading": "Interpretación, registro y efecto",
-        "body": [
-          "Cuyo expresa posesión y concuerda con lo poseído: una artista cuyas obras viajaron. Lo cual puede recoger una idea anterior completa. En una reseña combina descripción verificable, interpretación y valoración; el lector debe poder distinguir qué muestra la exposición de lo que tú deduces o recomiendas."
-        ],
-        "examples": [
-          {
-            "es": "Es una colección cuyas piezas fueron donadas.",
-            "note": "Explica qué información afirma y cuál deja abierta."
-          },
-          {
-            "es": "Faltan fechas, lo cual dificulta seguir el recorrido.",
-            "note": "Reformula sin cambiar participantes ni tiempo."
-          }
-        ]
-      }
-    ]
-  },
-  "grammar": {
-    "intro": "Elige formas por su función y por el momento desde el que se habla.",
-    "exercises": [
-      {
-        "id": "g-contexto",
-        "type": "gap",
-        "prompt": "Completa estas decisiones lingüísticas de una exposición que también se discute; justifica el modo, la forma o la combinación.",
-        "items": [
-          {
-            "q": "Es una colección ___ piezas fueron donadas.",
-            "answers": [
-              [
-                "cuyas"
-              ]
-            ],
-            "why": "Concuerda con piezas."
-          },
-          {
-            "q": "El barrio del ___ procede la obra cambió mucho.",
-            "answers": [
-              [
-                "que"
-              ]
-            ],
-            "why": "Proceder de mantiene su preposición."
-          },
-          {
-            "q": "Faltan fechas, lo ___ dificulta seguir el recorrido.",
-            "answers": [
-              [
-                "cual"
-              ]
-            ],
-            "why": "Recoge la afirmación anterior."
-          }
-        ]
-      },
-      {
-        "id": "g-reconstruir",
-        "type": "open",
-        "prompt": "Reformula con autonomía. Lee el texto de partida y la consigna de cada ítem; después contrasta tu respuesta con el modelo orientativo y la lista de revisión. Otras soluciones pueden ser válidas.",
-        "items": [
-          {
-            "prompt": "Texto de partida: «La artista donó una colección. Sus piezas se exponen aquí.» Une usando cuyas.",
-            "model": "La artista cuyas piezas se exponen aquí donó una colección.",
-            "checklist": [
-              "Conservo participantes, referencia temporal y contenido pertinente.",
-              "Aplico la construcción o función solicitada; puedo elegir otro orden o una variante igualmente válida.",
-              "Comparo el significado y la forma con el modelo orientativo; no es una respuesta única ni se califica por coincidencia literal."
-            ]
-          },
-          {
-            "prompt": "Texto de partida: «Este documento pertenece a la comerciante. Hablamos de ella.» Identifica a la comerciante con una relativa con preposición.",
-            "model": "Este documento pertenece a la comerciante de la que hablamos.",
-            "checklist": [
-              "Conservo participantes, referencia temporal y contenido pertinente.",
-              "Aplico la construcción o función solicitada; puedo elegir otro orden o una variante igualmente válida.",
-              "Comparo el significado y la forma con el modelo orientativo; no es una respuesta única ni se califica por coincidencia literal."
-            ]
-          },
-          {
-            "prompt": "Texto de partida: «Faltan fechas. Eso dificulta seguir el recorrido.» Une con lo cual.",
-            "model": "Faltan fechas, lo cual dificulta seguir el recorrido.",
-            "checklist": [
-              "Conservo participantes, referencia temporal y contenido pertinente.",
-              "Aplico la construcción o función solicitada; puedo elegir otro orden o una variante igualmente válida.",
-              "Comparo el significado y la forma con el modelo orientativo; no es una respuesta única ni se califica por coincidencia literal."
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  "vocabulary": {
-    "intro": "Aprende combinaciones en contexto y comprueba qué matiz aportan al caso.",
-    "groups": [
-      {
-        "title": "Describir y valorar patrimonio con precisión",
-        "items": [
-          {
-            "es": "conservar el patrimonio",
-            "note": "proteger bienes culturales"
-          },
-          {
-            "es": "ceder una pieza",
-            "note": "prestar un objeto"
-          },
-          {
-            "es": "atribuir una obra",
-            "note": "identificar su autoría"
-          },
-          {
-            "es": "contextualizar un objeto",
-            "note": "explicar su entorno"
-          },
-          {
-            "es": "recorrer una muestra",
-            "note": "visitar una exposición"
-          },
-          {
-            "es": "cuestionar un relato",
-            "note": "discutir una interpretación"
-          },
-          {
-            "es": "restaurar un edificio",
-            "note": "reparar conservando su valor"
-          },
-          {
-            "es": "dar visibilidad",
-            "note": "hacer presente algo poco reconocido"
-          }
-        ]
-      }
+  reviewObjectives: [],
+  prerequisites: [],
+  goal: {
+    canDo: "Puedo explicar qué pasará cuando ocurra algo que todavía no es seguro y para qué sirve cada medida de un plan, eligiendo entre subjuntivo e infinitivo según el sujeto y el momento.",
+    steps: [
+      "Repasa en la teoría cuándo un conector temporal pide subjuntivo y cómo cambia el tiempo cuando hablas desde el pasado.",
+      "Repasa las finales: «para que», «con el fin de que», «sin que», «no vaya a ser que» y cuándo basta el infinitivo.",
+      "Escucha la reunión que prepara un simulacro de sismo y lee el boletín de la escuela.",
+      "Escribe un correo a las familias, revísalo y explica el protocolo en voz alta.",
     ],
-    "exercises": [
-      {
-        "id": "v-relaciones",
-        "type": "match",
-        "prompt": "Relaciona las expresiones útiles para describir y valorar patrimonio con precisión con su significado.",
-        "pairs": [
-          {
-            "left": "conservar el patrimonio",
-            "right": "proteger bienes culturales"
-          },
-          {
-            "left": "ceder una pieza",
-            "right": "prestar un objeto"
-          },
-          {
-            "left": "atribuir una obra",
-            "right": "identificar su autoría"
-          },
-          {
-            "left": "contextualizar un objeto",
-            "right": "explicar su entorno"
-          },
-          {
-            "left": "recorrer una muestra",
-            "right": "visitar una exposición"
-          },
-          {
-            "left": "cuestionar un relato",
-            "right": "discutir una interpretación"
-          },
-          {
-            "left": "restaurar un edificio",
-            "right": "reparar conservando su valor"
-          },
-          {
-            "left": "dar visibilidad",
-            "right": "hacer presente algo poco reconocido"
-          }
-        ]
-      }
-    ]
   },
-  "pronunciation": {
-    "focus": "Escucha y produce relativas con y sin pausa: el grupo entonativo debe reflejar si seleccionas personas o añades información.",
-    "explanation": [
-      "Escucha y produce relativas con y sin pausa: el grupo entonativo debe reflejar si seleccionas personas o añades información.",
-      "Escucha primero la secuencia verbal. Después lee la misma frase con una intención distinta, grábate localmente y compara con tu docente. La voz sintética es apoyo de escucha: no certifica variedad regional, ironía ni evaluación automática de tu pronunciación."
-    ],
-    "examples": [
+  theory: {
+    intro: "En clase viste cómo hablar de lo que pasará cuando ocurra algo incierto y cómo explicar para qué se hace algo. Aquí lo repasas en San Juan, una ciudad que se reconstruyó después del terremoto de 1944 y donde los simulacros forman parte de la vida escolar. La pregunta clave es doble: ¿ya pasó o todavía no?, ¿quién hace la acción?",
+    parts: [
       {
-        "es": "Es una colección cuyas piezas fueron donadas."
-      },
-      {
-        "es": "El barrio del que procede la obra cambió mucho."
-      },
-      {
-        "es": "Faltan fechas, lo cual dificulta seguir el recorrido."
-      }
-    ],
-    "perceive": {
-      "id": "p-percepcion",
-      "type": "listen",
-      "prompt": "Escucha sin leer el ejemplo previo si quieres comprobar tu percepción; identifica el fragmento verbal y después marca su sílaba tónica.",
-      "items": [
-        {
-          "q": "En la muestra 1 de una exposición que también se discute, ¿qué fragmento se oye?",
-          "options": [
-            "cuyos",
-            "cuya",
-            "cuyas"
+        heading: "¿Ya pasó, pasa siempre o todavía no?",
+        body: [
+          "Los conectores temporales («cuando», «en cuanto», «tan pronto como», «apenas», «una vez que», «hasta que», «después de que», «cada vez que») no deciden el modo por sí solos. Decide el momento. Si cuentas algo que ya ocurrió o algo que pasa siempre, usas indicativo. Si hablas de algo futuro que todavía no ha ocurrido, usas subjuntivo, aunque estés casi seguro de que pasará.",
+          "Lo mismo vale para «siempre que» y «mientras»: con indicativo hablan de tiempo («cada vez que», «durante»); con subjuntivo pueden expresar una condición («con tal de que»). «Siempre que nos den el permiso» no significa «cada vez», sino «si nos lo dan».",
+        ],
+        table: {
+          caption: "El mismo conector en tres momentos",
+          head: ["Momento", "Modo", "Ejemplo"],
+          rows: [
+            ["Hecho pasado", "indicativo", "En cuanto sonó la sirena, los chicos salieron al patio."],
+            ["Costumbre", "indicativo", "Cada vez que tiembla, la perra se esconde debajo de la mesa."],
+            ["Futuro todavía no ocurrido", "subjuntivo", "En cuanto suene la sirena, salimos al patio."],
           ],
-          "answer": 2,
-          "why": "Concuerda con piezas.",
-          "audio": "Es una colección cuyas piezas fueron donadas.",
-          "voice": "es-ES-f"
         },
-        {
-          "q": "En la muestra 2 de una exposición que también se discute, ¿qué fragmento se oye?",
-          "options": [
-            "quien",
-            "que",
-            "cuyo"
+        examples: [
+          { es: "Una vez que estemos en el patio, la preceptora pasará lista.", note: "Futuro: «una vez que» + presente de subjuntivo." },
+          { es: "No volvemos a las aulas hasta que la directora dé la señal.", note: "«Hasta que» con futuro: subjuntivo." },
+          { es: "Mientras dure el simulacro, nadie usa el ascensor.", note: "«Mientras» temporal con futuro: subjuntivo." },
+        ],
+        mistakes: [
+          {
+            wrong: "Cuando terminará el simulacro, volveremos a clase.",
+            right: "Cuando termine el simulacro, volveremos a clase.",
+            why: "Después de un conector temporal, el futuro no se expresa con futuro de indicativo, sino con presente de subjuntivo.",
+          },
+        ],
+        tip: "Pregúntate: ¿esto ya ocurrió o es una costumbre? Si la respuesta es no, subjuntivo.",
+      },
+      {
+        heading: "El futuro visto desde el pasado y el infinitivo",
+        body: [
+          "Cuando cuentas lo que alguien prometió o planeó en el pasado, el futuro de aquel momento pasa al imperfecto de subjuntivo: «Nos dijeron que nos avisarían en cuanto llegaran los cascos». No importa si después ocurrió o no: desde el momento de la promesa, todavía era futuro.",
+          "«Antes de que» va siempre con subjuntivo, también con hechos pasados, porque lo que viene después todavía no había ocurrido: «Salimos antes de que empezara la réplica». Si el sujeto es el mismo, usa infinitivo: «antes de salir», «después de revisar», «al llegar», «nada más sonar». En «no salimos hasta que no nos avisen», el segundo «no» no niega nada: equivale a «hasta que nos avisen».",
+        ],
+        table: {
+          caption: "Desde hoy y desde el pasado",
+          head: ["Desde hoy", "Desde el pasado"],
+          rows: [
+            ["Te llamo en cuanto lleguen los cascos.", "Me dijo que me llamaría en cuanto llegaran los cascos."],
+            ["Revisaremos la escalera antes de que entren los chicos.", "Revisamos la escalera antes de que entraran los chicos."],
+            ["No abrimos el portón hasta que la policía corte la calle.", "No abrieron el portón hasta que la policía cortó la calle."],
           ],
-          "answer": 1,
-          "why": "Proceder de mantiene su preposición.",
-          "audio": "El barrio del que procede la obra cambió mucho.",
-          "voice": "es-ES-f"
-        }
-      ]
+        },
+        mistakes: [
+          {
+            wrong: "Antes de que salgamos, nosotros apagamos las luces.",
+            right: "Antes de salir, apagamos las luces.",
+            why: "Con el mismo sujeto, lo natural es el infinitivo: «antes de salir».",
+          },
+          {
+            wrong: "Prometió que nos escribiría cuando tenga los resultados.",
+            right: "Prometió que nos escribiría cuando tuviera los resultados.",
+            why: "Desde el pasado, el futuro de aquel momento va en imperfecto de subjuntivo.",
+          },
+        ],
+      },
+      {
+        heading: "Para qué: «para que», «con el fin de que», «a fin de que»",
+        body: [
+          "Para explicar una finalidad, mira quién hace cada acción. Si el sujeto es el mismo, usa infinitivo: «Practicamos para salir rápido». Si cambia, usa «que» + subjuntivo: «Practicamos para que los chicos salgan rápido».",
+          "El tiempo del subjuntivo sigue al verbo principal. Con presente, futuro o imperativo, presente de subjuntivo. Con un pasado, imperfecto de subjuntivo: «Pintaron flechas en el piso para que nadie se perdiera». En textos formales encontrarás «con el fin de que», «a fin de que» y «con vistas a» + infinitivo. «De manera que» y «de modo que» con subjuntivo expresan finalidad; con indicativo, consecuencia.",
+        ],
+        table: {
+          caption: "Finalidad según el sujeto y el registro",
+          head: ["Estructura", "Cuándo", "Ejemplo"],
+          rows: [
+            ["para + infinitivo", "mismo sujeto", "Llegamos temprano para preparar el botiquín."],
+            ["para que + subjuntivo", "sujetos distintos", "Dejamos la puerta abierta para que entre la brigada."],
+            ["con el fin de que / a fin de que + subjuntivo", "registro formal", "Se enviará un aviso a fin de que las familias no se alarmen."],
+            ["de manera que + subjuntivo", "finalidad sobre el resultado", "Pongan los bancos de manera que el pasillo quede libre."],
+          ],
+        },
+        examples: [
+          { es: "La escuela compró radios para que los preceptores se comuniquen sin celular.", note: "Sujetos distintos: subjuntivo." },
+          { es: "El año pasado marcaron la salida con cinta verde para que los de primer grado la vieran.", note: "Verbo principal en pasado: imperfecto de subjuntivo." },
+        ],
+        mistakes: [
+          {
+            wrong: "Vine temprano para que yo abra el portón.",
+            right: "Vine temprano para abrir el portón.",
+            why: "El sujeto es el mismo: «para» + infinitivo.",
+          },
+        ],
+      },
+      {
+        heading: "Lo que no pasa y lo que se evita: «sin que», «no vaya a ser que»",
+        body: [
+          "«Sin que» + subjuntivo dice que algo ocurre y otra cosa no: «Evacuamos el edificio sin que nadie se lastimara». Como «sin» ya niega, se combina con «nadie», «nada» o «ningún», no con «alguien» o «algo». Con el mismo sujeto, otra vez infinitivo: «salieron sin correr».",
+          "«No vaya a ser que» (y, en pasado, «no fuera a ser que») presenta una precaución: haces algo por si acaso ocurre lo que temes. En la conversación también aparece «que» + subjuntivo después de una orden: «Habla más alto, que te oigan los de atrás».",
+        ],
+        examples: [
+          { es: "Lleven una linterna, no vaya a ser que se corte la luz.", note: "Precaución: «no vaya a ser que» + presente de subjuntivo." },
+          { es: "Cerramos el gas sin que ningún alumno tuviera que acercarse a la cocina.", note: "«Sin que» + «ningún»: nadie se acercó." },
+          { es: "Bajen por la escalera de la derecha, que no se junten los dos grupos.", note: "«Que» final tras una orden: registro oral." },
+        ],
+        mistakes: [
+          {
+            wrong: "Salimos sin que alguien se diera cuenta.",
+            right: "Salimos sin que nadie se diera cuenta.",
+            why: "La negación ya está en «sin»: se usa «nadie».",
+          },
+        ],
+        tip: "Si puedes añadir «por si acaso» delante, «no vaya a ser que» encaja.",
+      },
+    ],
+  },
+  grammar: {
+    intro: "Decide primero el momento (¿ya pasó o no?) y después el sujeto (¿es el mismo?). Al final, reformula con libertad.",
+    exercises: [
+      {
+        id: "b2-07-gramatica-momento",
+        type: "context",
+        prompt: "Lee la situación y elige la frase adecuada.",
+        items: [
+          {
+            context: "La directora explica qué pasará el jueves, durante el simulacro.",
+            q: "¿Qué dice?",
+            options: [
+              "Apenas suena el timbre largo, los grupos bajan por la escalera.",
+              "Apenas suene el timbre largo, los grupos bajarán por la escalera.",
+              "Apenas sonará el timbre largo, los grupos bajarán por la escalera.",
+            ],
+            answer: 1,
+            why: "Hecho futuro que todavía no ha ocurrido: «apenas» + subjuntivo.",
+          },
+          {
+            context: "Un abuelo recuerda cómo reaccionaba su familia en los años setenta.",
+            q: "¿Qué frase describe una costumbre?",
+            options: [
+              "Cada vez que temblaba, mi madre abría la puerta de la calle.",
+              "Cada vez que temblara, mi madre abría la puerta de la calle.",
+              "Cada vez que temblará, mi madre abría la puerta de la calle.",
+            ],
+            answer: 0,
+            why: "Costumbre del pasado: indicativo.",
+          },
+          {
+            context: "En marzo, el municipio prometió mandar a un técnico. Ahora lo cuentas.",
+            q: "¿Cómo lo cuentas?",
+            options: [
+              "Nos aseguraron que el técnico vendría en cuanto terminará la obra.",
+              "Nos aseguraron que el técnico vendría en cuanto termina la obra.",
+              "Nos aseguraron que el técnico vendría en cuanto terminara la obra.",
+            ],
+            answer: 2,
+            why: "Futuro visto desde el pasado: imperfecto de subjuntivo.",
+          },
+          {
+            context: "El portero quiere que la brigada pueda entrar sin problemas.",
+            q: "¿Qué frase expresa bien la finalidad?",
+            options: [
+              "Dejo el portón sin llave para entrar la brigada.",
+              "Dejo el portón sin llave para que entre la brigada.",
+              "Dejo el portón sin llave para que entra la brigada.",
+            ],
+            answer: 1,
+            why: "Sujetos distintos (yo / la brigada): «para que» + subjuntivo.",
+          },
+        ],
+      },
+      {
+        id: "b2-07-gramatica-formas",
+        type: "gap",
+        prompt: "Completa con la forma adecuada del verbo entre paréntesis: subjuntivo, indicativo o infinitivo.",
+        items: [
+          { q: "Tan pronto como ___ (llegar) los bomberos, les daremos el plano de la escuela.", answers: [["lleguen"]], why: "Futuro: «tan pronto como» + subjuntivo." },
+          { q: "El año pasado, nada más ___ (sonar) la alarma, todos se agacharon.", answers: [["sonar"]], why: "«Nada más» + infinitivo." },
+          { q: "La profesora nos pidió que esperáramos en fila hasta que ella ___ (volver).", answers: [["volviera", "volviese"]], why: "Desde el pasado, el futuro de aquel momento: imperfecto de subjuntivo." },
+          { q: "Colgamos los carteles bien altos a fin de que todos los ___ (ver).", answers: [["vean"]], why: "Finalidad con sujeto distinto y verbo principal en presente." },
+          { q: "Ensayamos tres veces para ___ (salir) en menos de dos minutos.", answers: [["salir"]], why: "Mismo sujeto: «para» + infinitivo." },
+          { q: "Desconectaron la estufa, no fuera a ser que ___ (caerse) con el temblor.", answers: [["se cayera", "se cayese"]], why: "Precaución en pasado: «no fuera a ser que» + imperfecto de subjuntivo." },
+        ],
+      },
+      {
+        id: "b2-07-gramatica-tipo",
+        type: "classify",
+        prompt: "Clasifica cada frase: ¿expresa un momento o una finalidad?",
+        categories: ["Momento (temporal)", "Finalidad o precaución"],
+        items: [
+          { text: "Una vez que estén todos en el patio, cerramos el edificio.", cat: 0, why: "«Una vez que» sitúa una acción en el tiempo." },
+          { text: "Repartimos silbatos para que los chicos puedan pedir ayuda.", cat: 1, why: "«Para que» indica el objetivo." },
+          { text: "Lleven agua, no vaya a ser que haga mucho calor en el patio.", cat: 1, why: "Precaución ante un riesgo." },
+          { text: "Antes de que empiece el simulacro, revisaremos las salidas.", cat: 0, why: "«Antes de que» ordena las acciones." },
+          { text: "Movimos los armarios de manera que no bloqueen la puerta.", cat: 1, why: "«De manera que» + subjuntivo: finalidad." },
+          { text: "Mientras dure la alerta, nadie sale del patio.", cat: 0, why: "«Mientras» indica duración." },
+        ],
+      },
+      {
+        id: "b2-07-gramatica-errores",
+        type: "error",
+        prompt: "Cada frase tiene un error. Corrígelo.",
+        items: [
+          {
+            sentence: "En cuanto tendremos los cascos nuevos, los repartiremos por aula.",
+            answers: ["En cuanto tengamos los cascos nuevos, los repartiremos por aula."],
+            why: "Futuro tras «en cuanto»: presente de subjuntivo.",
+          },
+          {
+            sentence: "La brigada revisó el techo para que los alumnos entraban sin peligro.",
+            answers: ["La brigada revisó el techo para que los alumnos entraran sin peligro.", "La brigada revisó el techo para que los alumnos entrasen sin peligro."],
+            why: "Finalidad: siempre subjuntivo; con verbo principal en pasado, imperfecto.",
+          },
+          {
+            sentence: "Antes de que salimos del aula, apagamos las computadoras.",
+            answers: ["Antes de salir del aula, apagamos las computadoras."],
+            why: "«Antes de que» nunca lleva indicativo; con el mismo sujeto, mejor el infinitivo.",
+          },
+          {
+            sentence: "Bajamos la escalera sin que algo se cayera.",
+            answers: ["Bajamos la escalera sin que nada se cayera.", "Bajamos la escalera sin que se cayera nada."],
+            why: "Con «sin que» se usa «nada», no «algo».",
+          },
+        ],
+      },
+      {
+        id: "b2-07-gramatica-reformular",
+        type: "open",
+        prompt: "Reformula cada texto con la estructura indicada. Compara con el modelo y revisa la lista: puede haber otras soluciones correctas.",
+        items: [
+          {
+            prompt: "Texto de partida: «Primero llegan los cascos. Después los repartimos.» Reformúlalo como un plan futuro en una sola frase con «en cuanto» o «tan pronto como».",
+            model: "En cuanto lleguen los cascos, los repartiremos.",
+            checklist: [
+              "El conector temporal va con presente de subjuntivo.",
+              "La acción principal está en futuro o en presente con valor futuro.",
+              "Otro conector de inmediatez también vale: no es una respuesta única.",
+            ],
+          },
+          {
+            prompt: "Texto de partida: «La vicedirectora nos dijo: “Les mando el plano cuando esté listo”.» Cuéntalo hoy, desde el pasado.",
+            model: "La vicedirectora nos dijo que nos mandaría el plano cuando estuviera listo.",
+            checklist: [
+              "Uso condicional para la promesa.",
+              "El verbo tras «cuando» va en imperfecto de subjuntivo.",
+              "Puedo usar «prometió» u otro verbo de lengua: no es una respuesta única.",
+            ],
+          },
+          {
+            prompt: "Texto de partida: «Pusimos una cinta en el piso. Así los chicos de primer grado no se perdieron y nadie los tuvo que buscar.» Reformúlalo en una frase con «para que» y otra con «sin que».",
+            model: "Pusimos una cinta en el piso para que los chicos de primer grado no se perdieran. Así salieron sin que nadie los tuviera que buscar.",
+            checklist: [
+              "Uso imperfecto de subjuntivo porque el verbo principal está en pasado.",
+              "Combino «sin que» con «nadie».",
+              "Puedo reorganizar las dos frases de otra forma: no es una respuesta única.",
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  vocabulary: {
+    intro: "Palabras para hablar de sismos, de evacuación y de un simulacro en una escuela.",
+    groups: [
+      {
+        title: "El sismo y sus efectos",
+        items: [
+          { es: "el sismo", note: "movimiento de la tierra; en Argentina también «temblor» si es leve" },
+          { es: "la réplica", note: "temblor más débil que sigue a uno fuerte" },
+          { es: "el epicentro", note: "punto de la superficie que está sobre el origen del sismo" },
+          { es: "la construcción antisísmica", note: "edificio diseñado para resistir terremotos" },
+          { es: "agacharse, cubrirse y sujetarse", note: "las tres acciones básicas durante un sismo" },
+          { es: "la alerta temprana", note: "aviso que llega unos segundos antes de las ondas fuertes" },
+        ],
+      },
+      {
+        title: "Evacuación y organización",
+        items: [
+          { es: "el simulacro", note: "ensayo de lo que se hace en una emergencia" },
+          { es: "el punto de encuentro", note: "lugar seguro donde se reúne cada grupo" },
+          { es: "la vía de evacuación", note: "camino marcado para salir del edificio" },
+          { es: "pasar lista", note: "nombrar a cada persona para comprobar que está" },
+          { es: "la brigada escolar", note: "grupo de adultos o alumnos con tareas en la emergencia" },
+          { es: "la mochila de emergencia", note: "bolso con agua, linterna, botiquín y documentos" },
+          { es: "el botiquín", note: "caja con material de primeros auxilios" },
+          { es: "cundir el pánico", note: "extenderse el miedo descontrolado en un grupo" },
+        ],
+      },
+    ],
+    exercises: [
+      {
+        id: "b2-07-lexico-relacion",
+        type: "match",
+        prompt: "Relaciona cada expresión con su definición.",
+        pairs: [
+          { left: "la réplica", right: "temblor más débil que sigue a uno fuerte" },
+          { left: "el punto de encuentro", right: "lugar seguro donde se reúne cada grupo" },
+          { left: "pasar lista", right: "comprobar que está cada persona" },
+          { left: "la vía de evacuación", right: "camino marcado para salir del edificio" },
+          { left: "cundir el pánico", right: "extenderse el miedo descontrolado" },
+          { left: "la alerta temprana", right: "aviso que llega segundos antes de las ondas fuertes" },
+        ],
+      },
+      {
+        id: "b2-07-lexico-uso",
+        type: "gap",
+        prompt: "Completa con la palabra adecuada.",
+        bank: ["mochila de emergencia", "simulacro", "botiquín", "réplica"],
+        items: [
+          { q: "El ___ de este jueves empezará sin aviso previo para los alumnos.", answers: [["simulacro"]] },
+          { q: "Después del sismo fuerte, nadie volvió a entrar, no fuera a ser que hubiera una ___.", answers: [["réplica"]] },
+          { q: "Cada aula tendrá un ___ para que los preceptores puedan atender heridas leves.", answers: [["botiquín"]] },
+          { q: "En casa preparamos la ___ con agua, linterna y fotocopias de los documentos.", answers: [["mochila de emergencia"]] },
+        ],
+      },
+    ],
+  },
+  pronunciation: {
+    focus: "Los conectores como un solo bloque",
+    explanation: [
+      "Los conectores de varias palabras se pronuncian como una sola unidad, sin pausas en medio: «en-cuan-to», «tan-pron-to-co-mo», «a-fin-de-que», «no-va-ya-a-ser-que». Si haces una pausa dentro del conector, quien escucha pierde el hilo y la frase suena leída.",
+      "Además, las vocales iguales o parecidas se enlazan: en «no vaya a ser que» se oye casi «no-va-ya-ser-que», y en «una vez que estemos» se une la «e» de «que» con la de «estemos». La pausa natural llega al final de la subordinada, antes de la acción principal: «En cuanto suene la sirena | salimos».",
+      "El audio usa la síntesis del navegador: sirve para percibir el ritmo, no certifica un acento regional ni evalúa tu pronunciación.",
+    ],
+    table: {
+      caption: "Dónde no hay pausa y dónde sí",
+      head: ["Sin pausa interna", "Pausa natural"],
+      rows: [
+        ["en cuanto suene", "En cuanto suene la sirena | salimos."],
+        ["tan pronto como lleguen", "Tan pronto como lleguen | empezamos."],
+        ["a fin de que no se asusten", "Avisamos antes | a fin de que no se asusten."],
+        ["no vaya a ser que llueva", "Lleven paraguas | no vaya a ser que llueva."],
+      ],
     },
-    "produce": [
-      {
-        "text": "Es una colección cuyas piezas fueron donadas.",
-        "tip": "Escucha y produce relativas con y sin pausa: el grupo entonativo debe reflejar si seleccionas personas o añades información.",
-        "voice": "es-ES-f"
-      },
-      {
-        "text": "El barrio del que procede la obra cambió mucho.",
-        "tip": "Escucha y produce relativas con y sin pausa: el grupo entonativo debe reflejar si seleccionas personas o añades información.",
-        "voice": "es-ES-f"
-      },
-      {
-        "text": "Faltan fechas, lo cual dificulta seguir el recorrido.",
-        "tip": "Escucha y produce relativas con y sin pausa: el grupo entonativo debe reflejar si seleccionas personas o añades información.",
-        "voice": "es-ES-f"
-      }
-    ]
-  },
-  "listening": {
-    "title": "Voces y decisiones: Una exposición que también se discute",
-    "context": "Guion original de interacción. Primera escucha sin transcripción: identifica propósito y posiciones; segunda: datos y condiciones; tercera: inferencias. Reproducción sintética, sin verificación de acento regional.",
-    "speakers": [
-      {
-        "id": "s1",
-        "name": "Guía",
-        "voice": "es-ES-f",
-        "role": "Interlocutor del guion original; voz sintética disponible"
-      },
-      {
-        "id": "s2",
-        "name": "Visitante",
-        "voice": "es-MX-m",
-        "role": "Interlocutor del guion original; voz sintética disponible"
-      },
-      {
-        "id": "s3",
-        "name": "Conservadora",
-        "voice": "es-ES-f",
-        "role": "Interlocutor del guion original; voz sintética disponible"
-      }
-    ],
-    "script": [
-      {
-        "speaker": "s1",
-        "text": "Antes de entrar, les propongo mirar estas dos etiquetas. La primera dice que las familias que llegaron en los años cuarenta trabajaban en el ferrocarril. La segunda añade una pausa: las familias, que llegaron en los años cuarenta, trabajaban allí. No afirman exactamente lo mismo."
-      },
-      {
-        "speaker": "s2",
-        "text": "En la primera entiendo que se habla de un grupo concreto de familias. En la segunda parece que todas llegaron entonces. ¿El museo cambió la etiqueta porque había información incorrecta o porque la redacción permitía una interpretación demasiado amplia?"
-      },
-      {
-        "speaker": "s3",
-        "text": "Por lo segundo. Conocemos familias cuya llegada fue anterior. La frase no pretendía borrarlas, pero podía hacerlo. A veces una coma parece un detalle menor y termina modificando la historia que contamos. Por eso contrastamos los textos con documentación y testimonios."
-      },
-      {
-        "speaker": "s2",
-        "text": "También me llamó la atención esta libreta. No parece una pieza espectacular, pero cuenta mucho. ¿La comerciante a la que perteneció dejó alguna explicación sobre las personas que le debían dinero? Sería interesante saber si se trataba de clientes habituales."
-      },
-      {
-        "speaker": "s3",
-        "text": "No dejó una explicación escrita. Tenemos el testimonio de su nieta, que recuerda compras a crédito durante las huelgas. Lo presentamos como recuerdo familiar, no como dato comprobado para todos los casos. Esa diferencia debe quedar clara en la cartela."
-      },
-      {
-        "speaker": "s1",
-        "text": "Al salir, pueden escribir una etiqueta alternativa para un objeto. Les pedimos que no inventen datos para completar los huecos. Una buena descripción puede ser precisa y, al mismo tiempo, reconocer lo que todavía no sabemos sobre la pieza y sus usos."
-      }
-    ],
-    "stages": [
-      {
-        "stage": "gist",
-        "prompt": "Escucha la conversación completa; identifica el problema y la intención antes de buscar palabras aisladas.",
-        "exercise": {
-          "id": "l-global",
-          "type": "choice",
-          "prompt": "¿Qué organiza la conversación situada en San Juan?",
-          "items": [
-            {
-              "q": "¿Cuál es el propósito global de esta conversación: Una exposición que también se discute?",
-              "options": [
-                "Leer una lista de instrucciones sin responder a nadie.",
-                "Contar una única versión sin permitir preguntas.",
-                "Explicar cómo una etiqueta modifica el relato histórico"
-              ],
-              "answer": 2,
-              "why": "Las intervenciones se responden y matizan sus posiciones."
-            },
-            {
-              "q": "¿Qué relación predomina entre las voces en «Una exposición que también se discute»?",
-              "options": [
-                "Ninguna intervención tiene relación con la anterior.",
-                "Las personas aclaran interpretaciones y conservan algunos límites.",
-                "Todas repiten exactamente la misma opinión desde el inicio."
-              ],
-              "answer": 1,
-              "why": "Identifica un turno que responda al anterior."
-            }
-          ]
-        }
-      },
-      {
-        "stage": "detail",
-        "prompt": "Escucha otra vez y anota quién sostiene cada afirmación.",
-        "exercise": {
-          "id": "l-detalle",
-          "type": "choice",
-          "prompt": "Localiza una intervención concreta en «Una exposición que también se discute».",
-          "items": [
-            {
-              "q": "¿Por qué se revisó una etiqueta?",
-              "options": [
-                "No existían testimonios familiares.",
-                "Podía incluir a todas las familias indebidamente.",
-                "La libreta era falsa."
-              ],
-              "answer": 1,
-              "why": "La respuesta conserva la condición o información expresada por esa persona."
-            },
-            {
-              "q": "¿Qué frase aparece en la intervención inicial de «Una exposición que también se discute»?",
-              "options": [
-                "Antes de entrar, les propongo mirar estas dos etiquetas.",
-                "Ya está todo decidido y no necesitamos escuchar a ninguna parte.",
-                "No hay información que podamos discutir en esta reunión."
-              ],
-              "answer": 0,
-              "why": "Vuelve al inicio y comprueba la formulación exacta."
-            }
-          ]
-        }
-      },
-      {
-        "stage": "notice",
-        "prompt": "Distingue lo dicho de lo inferido; consulta la transcripción solo después de responder.",
-        "exercise": {
-          "id": "l-inferencia",
-          "type": "open",
-          "prompt": "Interpreta postura, reserva y efecto sobre la otra persona.",
-          "items": [
-            {
-              "prompt": "En «Una exposición que también se discute», cita una reserva o una reformulación del diálogo, explica qué interpretación evita y qué quedaría sin resolver si se omitiera.",
-              "model": "Al salir, pueden escribir una etiqueta alternativa para un objeto. Les pedimos que no inventen datos para completar los huecos. Una buena descripción puede ser precisa y, al mismo tiempo, reconocer lo que todavía no sabemos sobre la pieza y sus usos.",
-              "checklist": [
-                "Atribuyo la intervención a su hablante.",
-                "Distingo palabras explícitas e inferencia.",
-                "Conservo una condición o un límite de la conversación."
-              ]
-            }
-          ]
-        }
-      }
-    ]
-  },
-  "reading": {
-    "title": "Una exposición que también se discute: texto para interpretar",
-    "genre": "Artículo, correspondencia o relato original",
-    "frame": "Material original de SpanishCue; las situaciones y los datos son didácticos, no noticias reales ni textos oficiales de examen.",
-    "text": [
-      "La exposición «Objetos que vuelven» reúne herramientas, fotografías y prendas cedidas por familias del antiguo barrio ferroviario. El museo, cuyo edificio fue una estación de carga, parece un lugar apropiado para contar esa historia. Sin embargo, la coincidencia entre continente y contenido no garantiza por sí sola un relato convincente. Las primeras salas presentan los objetos con cuidado, pero apenas explican las condiciones en las que trabajaban las personas a quienes pertenecieron. El visitante encuentra nombres y fechas; le cuesta encontrar conflictos.",
-      "La segunda parte corrige en buena medida esa limitación. Las fotografías que muestran reuniones sindicales aparecen junto a testimonios de familias que vivían del comercio alrededor de la estación. Ya no se describe una comunidad uniforme, sino una red de intereses que a veces coincidían y a veces chocaban. Una vitrina contiene la libreta de una comerciante cuyas deudas tardaban meses en cobrarse. A su lado, un mapa permite seguir los desplazamientos de los trabajadores, lo cual convierte un documento aparentemente privado en una ventana a la economía del barrio.",
-      "El montaje también invita a discutir quién tiene autoridad para contar el pasado. Algunos objetos, que fueron prestados con la condición de no cambiar sus etiquetas familiares, conservan descripciones poco claras. El museo explica esa decisión en un panel y ofrece otra lectura mediante códigos de consulta opcionales. La solución no elimina la tensión entre precisión histórica y respeto a quienes prestan las piezas, pero la hace visible. Es uno de los momentos más interesantes del recorrido, porque muestra que conservar también implica negociar.",
-      "Recomendaría visitar la muestra con tiempo y comparar las etiquetas de las dos primeras salas. Quien busque una celebración nostálgica quizá se sienta incómodo; quien quiera entender cómo se construye una memoria compartida encontrará preguntas fértiles. La exposición funciona mejor cuando reconoce las lagunas de su propio relato que cuando intenta hablar en nombre de todo un barrio."
-    ],
-    "glossary": [
-      {
-        "es": "conservar el patrimonio",
-        "note": "proteger bienes culturales"
-      },
-      {
-        "es": "ceder una pieza",
-        "note": "prestar un objeto"
-      },
-      {
-        "es": "atribuir una obra",
-        "note": "identificar su autoría"
-      }
-    ],
-    "tasks": [
-      {
-        "id": "r-comprender",
-        "type": "choice",
-        "prompt": "Interpreta tesis y alcance; descarta respuestas que exageren la conclusión.",
-        "items": [
-          {
-            "q": "¿Qué valora especialmente la reseña?",
-            "options": [
-              "Que todas las etiquetas sean definitivas.",
-              "Que se evite cualquier conflicto histórico.",
-              "Que el montaje haga visibles sus límites y negociaciones."
-            ],
-            "answer": 2,
-            "why": "Comprueba esta interpretación con el texto completo y no solo con una palabra aislada."
-          },
-          {
-            "q": "¿Qué significa cuyas deudas?",
-            "options": [
-              "Una comparación entre dos edificios.",
-              "Las deudas relacionadas con la comerciante.",
-              "Las deudas del museo necesariamente."
-            ],
-            "answer": 1,
-            "why": "Comprueba esta interpretación con el texto completo y no solo con una palabra aislada."
-          }
-        ]
-      },
-      {
-        "id": "r-evidencia",
-        "type": "open",
-        "prompt": "Apoya tu lectura con evidencia y distingue la postura de la fuente de la tuya.",
-        "items": [
-          {
-            "prompt": "En «Una exposición que también se discute», resume dos posiciones en 60–80 palabras, cita una evidencia y explica un límite que el texto no permite resolver.",
-            "model": "La muestra ocupa una estación cuyo pasado forma parte del recorrido. Destaca una libreta comercial a partir de la cual se explican relaciones económicas del barrio. Algunas etiquetas omiten el contexto de los conflictos, lo cual reduce la fuerza de las primeras salas. Aun así, el montaje mejora cuando distingue documentos y recuerdos familiares. Recomendaría ampliar esa distinción y conservar las preguntas abiertas: reconocer una laguna puede resultar más informativo que llenarla con una certeza aparente.",
-            "checklist": [
-              "Identifico las dos posiciones sin inventar consenso.",
-              "Utilizo una evidencia concreta.",
-              "Marco una inferencia como tal."
-            ]
-          }
-        ]
-      }
-    ],
-    "noticing": {
-      "prompt": "Observa cómo la forma lingüística limita o precisa el mensaje.",
-      "items": [
+    perceive: {
+      id: "b2-07-percepcion",
+      type: "listen",
+      prompt: "Escucha cada frase y decide qué forma verbal oyes. Fíjate en la terminación.",
+      items: [
         {
-          "quote": "La exposición «Objetos que vuelven» reúne herramientas, fotografías y prendas cedidas por familias del antiguo barrio ferroviario.",
-          "note": "Identifica qué establece el inicio y cómo prepara la interpretación posterior."
+          q: "¿Qué oyes después de «en cuanto»?",
+          options: ["en cuanto suena: costumbre", "en cuanto suene: futuro"],
+          answer: 1,
+          why: "Se oye «suene», con «e» final: subjuntivo de futuro.",
+          audio: "En cuanto suene la sirena, salimos al patio.",
+          voice: "es-AR-f",
         },
         {
-          "quote": "La exposición funciona mejor cuando reconoce las lagunas de su propio relato que cuando intenta hablar en nombre de todo un barrio.",
-          "note": "Relaciona el cierre con la tesis o con el giro narrativo; explica qué no afirma."
-        }
-      ]
-    }
+          q: "¿Qué oyes después de «cada vez que»?",
+          options: ["cada vez que tiembla", "cada vez que tiemble"],
+          answer: 0,
+          why: "«Tiembla», con «a» final: costumbre en indicativo.",
+          audio: "Cada vez que tiembla, el perro se esconde debajo de la cama.",
+          voice: "es-AR-m",
+        },
+        {
+          q: "¿Qué forma oyes?",
+          options: ["para que lleguen", "para que llegaran"],
+          answer: 1,
+          why: "Se oye «llegaran», más larga: imperfecto de subjuntivo tras un verbo en pasado.",
+          audio: "Abrimos los dos portones para que llegaran antes al punto de encuentro.",
+          voice: "es-MX-f",
+        },
+        {
+          q: "¿Qué conector oyes?",
+          options: ["no vaya a ser que", "no fuera a ser que"],
+          answer: 0,
+          why: "«Vaya»: precaución en presente, con las vocales enlazadas.",
+          audio: "Lleven una linterna, no vaya a ser que se corte la luz.",
+          voice: "es-AR-f",
+        },
+      ],
+    },
+    produce: [
+      { text: "En cuanto suene la sirena, nos agachamos debajo del banco.", tip: "Di «en cuanto suene la sirena» de un tirón y haz la pausa antes de «nos agachamos».", voice: "es-AR-f" },
+      { text: "Tan pronto como estemos en el patio, la preceptora pasa lista.", tip: "«Tan pronto como» sin pausas; enlaza «como estemos».", voice: "es-AR-m" },
+      { text: "Les mandamos este aviso a fin de que ningún chico se asuste.", tip: "Une «a fin de que» en un solo bloque.", voice: "es-MX-f" },
+      { text: "Cierren la llave del gas, no vaya a ser que haya una pérdida.", tip: "Enlaza «vaya a»: casi «vaya ser».", voice: "es-AR-f" },
+    ],
+    spelling: "En el subjuntivo, algunos verbos cambian la grafía para mantener el sonido: «llegar» → «lleguen», «sacar» → «saquen», «empezar» → «empiecen».",
   },
-  "practice": {
-    "intro": "Describe a una persona del conflicto generacional con dos relativas; después concede un mérito de la exposición sin perder tu crítica.",
-    "exercises": [
+  listening: {
+    title: "Reunión de preparación del simulacro",
+    context: "En una escuela primaria de San Juan, la directora Silvia Ortiz se reúne con Hugo, voluntario de Defensa Civil, y con Mariana, maestra nueva que llegó de Ciudad de México. Preparan el simulacro del jueves. Escucha primero sin transcripción. Las voces son sintéticas.",
+    speakers: [
+      { id: "s", name: "Silvia", voice: "es-AR-f", role: "Directora de la escuela" },
+      { id: "h", name: "Hugo", voice: "es-AR-m", role: "Voluntario de Defensa Civil" },
+      { id: "m", name: "Mariana", voice: "es-MX-f", role: "Maestra de tercer grado" },
+    ],
+    script: [
+      { speaker: "s", text: "Gracias por venir. El simulacro es el jueves y quiero que esta vez salga mejor que en abril. Hugo, ¿cómo lo organizamos?" },
+      { speaker: "h", text: "Igual que siempre, con dos cambios. En cuanto suene la sirena larga, los chicos se agachan, se cubren y se sujetan. No salen hasta que deje de sonar, aunque tarde un minuto. Una vez que esté todo en silencio, cada maestra abre la puerta y sale con su grupo." },
+      { speaker: "m", text: "En México hacíamos casi lo mismo. Lo que me preocupa son los de primer grado: en mi otra escuela, el año pasado, se pusieron a llorar antes de que empezara la sirena, solo por los nervios." },
+      { speaker: "s", text: "Por eso este año vamos a avisar a las familias con tiempo, para que hablen con los chicos en casa. Y la maestra de primero va a contar un cuento sobre los sismos, a fin de que nadie se asuste." },
+      { speaker: "h", text: "Muy bien. El otro cambio es el punto de encuentro. En abril los grupos se juntaron en el centro del patio, y eso es un error: si cayera algo del techo del gimnasio, quedarían demasiado cerca. Pinté un rectángulo verde junto a la cancha para que cada grupo sepa dónde ponerse." },
+      { speaker: "m", text: "¿Y si un chico está en el baño cuando suene la sirena?" },
+      { speaker: "h", text: "Se queda donde está, se agacha junto a la pared y espera. El preceptor revisa los baños antes de salir, sin que eso retrase a los demás grupos." },
+      { speaker: "s", text: "Perfecto. Mariana, ¿podrías llevar el botiquín de tu piso? No vaya a ser que alguien se tropiece en la escalera." },
+      { speaker: "m", text: "Claro. Lo dejo en la puerta del aula, de manera que lo pueda agarrar al salir." },
+      { speaker: "h", text: "Y apenas estén todos en el rectángulo, pasan lista y me levantan el cartel verde. Tan pronto como tenga los once carteles, damos por terminado el simulacro." },
+    ],
+    stages: [
       {
-        "id": "x-orden",
-        "type": "order",
-        "prompt": "Reconstruye los mensajes del caso de San Juan y conserva sus relaciones.",
-        "items": [
+        stage: "gist",
+        prompt: "Escucha la reunión completa sin transcripción. ¿De qué hablan y qué cambia este año?",
+        exercise: {
+          id: "b2-07-escucha-gist",
+          type: "choice",
+          prompt: "Reconstruye el sentido general.",
+          items: [
+            {
+              q: "¿Cuál es el objetivo de la reunión?",
+              options: [
+                "Evaluar los daños de un sismo reciente.",
+                "Preparar el simulacro del jueves y corregir lo que falló en abril.",
+                "Presentar a la nueva maestra a las familias.",
+              ],
+              answer: 1,
+              why: "Silvia lo dice al principio: quiere que esta vez salga mejor que en abril.",
+            },
+            {
+              q: "¿Qué dos cambios propone Hugo?",
+              options: [
+                "Suprimir la sirena y salir por las ventanas.",
+                "Hacer el simulacro sin avisar a las maestras.",
+                "Preparar mejor a los más chicos y mover el punto de encuentro.",
+              ],
+              answer: 2,
+              why: "Se habla de avisar a las familias y del nuevo rectángulo verde junto a la cancha.",
+            },
+          ],
+        },
+      },
+      {
+        stage: "detail",
+        prompt: "Escucha otra vez y responde sin mirar la transcripción.",
+        exercise: {
+          id: "b2-07-escucha-detail",
+          type: "choice",
+          prompt: "Comprueba los detalles del protocolo.",
+          items: [
+            {
+              q: "¿Cuándo pueden salir los grupos del aula?",
+              options: [
+                "Una vez que la sirena deja de sonar y hay silencio.",
+                "En cuanto empieza a sonar la sirena.",
+                "Cuando llega Hugo a cada aula.",
+              ],
+              answer: 0,
+              why: "«No salen hasta que deje de sonar… Una vez que esté todo en silencio…».",
+            },
+            {
+              q: "¿Por qué el centro del patio no es un buen punto de encuentro?",
+              options: [
+                "Porque allí no se oye la sirena.",
+                "Porque está lejos de las aulas.",
+                "Porque queda cerca del techo del gimnasio.",
+              ],
+              answer: 2,
+              why: "Si cayera algo del techo del gimnasio, los grupos quedarían demasiado cerca.",
+            },
+            {
+              q: "¿Qué tiene que hacer un chico que está en el baño?",
+              options: [
+                "Correr al patio lo antes posible.",
+                "Quedarse agachado junto a la pared y esperar.",
+                "Volver al aula a buscar a su maestra.",
+              ],
+              answer: 1,
+              why: "Hugo explica que se queda donde está y el preceptor revisa los baños.",
+            },
+          ],
+        },
+      },
+      {
+        stage: "notice",
+        prompt: "Fíjate en lo que expresa cada conector de la reunión. Responde y consulta la transcripción después.",
+        exercise: {
+          id: "b2-07-escucha-notice",
+          type: "match",
+          prompt: "Relaciona cada fragmento con lo que expresa.",
+          pairs: [
+            { left: "en cuanto suene la sirena larga", right: "momento futuro inmediato: subjuntivo" },
+            { left: "antes de que empezara la sirena", right: "anterioridad en un relato pasado" },
+            { left: "a fin de que nadie se asuste", right: "finalidad en registro cuidado" },
+            { left: "sin que eso retrase a los demás grupos", right: "algo que no debe ocurrir" },
+            { left: "no vaya a ser que alguien se tropiece", right: "precaución por si acaso" },
+          ],
+          why: "Los temporales con futuro y todos los finales con sujeto distinto llevan subjuntivo.",
+        },
+      },
+    ],
+  },
+  reading: {
+    title: "Cuando la tierra se mueva, ya sabremos qué hacer",
+    genre: "Artículo de boletín escolar",
+    frame: "Artículo de la vicedirectora Laura Quiroga en el boletín mensual de una escuela primaria de San Juan. Escuela y personas son ficticias.",
+    text: [
+      "En San Juan, los abuelos todavía cuentan dónde estaban sus padres la noche del terremoto de 1944, y casi todas las familias tienen un recuerdo de algún temblor más reciente. Vivimos en una zona sísmica y no tiene sentido negarlo. Lo que sí podemos hacer es prepararnos, de manera que el miedo no decida por nosotros cuando llegue el momento.",
+      "Con ese objetivo, el jueves 14 haremos el segundo simulacro del año. No anunciaremos la hora a los alumnos, porque un sismo tampoco avisa. Sí queremos avisarles a ustedes, las familias, para que conversen en casa con sus hijos y les expliquen que se trata de un ensayo. La experiencia nos dice que los chicos que han hablado del simulacro antes de vivirlo lo atraviesan con mucha más calma.",
+      "El protocolo es sencillo. En cuanto suene la sirena larga, cada alumno se agachará junto a su banco, se cubrirá la cabeza y se sujetará a la pata. Nadie saldrá del aula hasta que la sirena deje de sonar. Una vez que haya silencio, la maestra abrirá la puerta y el grupo bajará por la vía de evacuación marcada con flechas, sin correr y sin hablar, a fin de que todos puedan oír las indicaciones.",
+      "Este año hemos cambiado el punto de encuentro. En abril los grupos se reunieron en el centro del patio, demasiado cerca del gimnasio. Ahora cada grado tendrá su lugar en un rectángulo verde pintado junto a la cancha. Apenas esté allí, la maestra pasará lista y levantará un cartel verde si están todos o uno rojo si falta alguien, para que la brigada sepa al instante dónde buscar.",
+      "Les pedimos también un pequeño esfuerzo en casa. Preparen una mochila de emergencia y acuerden con sus hijos un lugar de reunión, no vaya a ser que un sismo los sorprenda separados. Y si el jueves alguno vuelve un poco nervioso, escúchenlo antes de que se vaya a dormir.",
+      "Ningún simulacro es perfecto, pero cada uno nos acerca a una respuesta rápida y tranquila. Cuando la tierra vuelva a moverse, y en San Juan sabemos que volverá a moverse, queremos que nuestros alumnos sepan exactamente qué hacer sin que el miedo los paralice.",
+    ],
+    glossary: [
+      { es: "zona sísmica", note: "región donde los terremotos son frecuentes" },
+      { es: "atravesar algo", note: "pasar por una situación, en especial difícil" },
+      { es: "la pata", note: "cada una de las piezas en las que se apoya un mueble" },
+    ],
+    tasks: [
+      {
+        id: "b2-07-lectura-comprension",
+        type: "choice",
+        prompt: "Comprueba que has entendido el protocolo.",
+        items: [
           {
-            "words": [
-              "En",
-              "«Una exposición que también se discute»,",
-              "Es",
-              "una",
-              "colección",
-              "cuyas",
-              "piezas",
-              "fueron",
-              "donadas."
+            q: "¿Por qué no se anuncia la hora del simulacro a los alumnos?",
+            options: [
+              "Porque las maestras tampoco la conocen.",
+              "Porque un sismo real no avisa.",
+              "Porque la hora todavía no está decidida.",
             ],
-            "why": "Concuerda con piezas."
+            answer: 1,
+            why: "Segundo párrafo: «un sismo tampoco avisa».",
           },
           {
-            "words": [
-              "En",
-              "«Una exposición que también se discute»,",
-              "Faltan",
-              "fechas,",
-              "lo",
-              "cual",
-              "dificulta",
-              "seguir",
-              "el",
-              "recorrido."
+            q: "¿Para qué sirven los carteles verde y rojo?",
+            options: [
+              "Para que la brigada sepa enseguida si falta algún alumno.",
+              "Para indicar el camino de salida.",
+              "Para separar a los grados por edades.",
             ],
-            "why": "Recoge la afirmación anterior."
-          }
-        ]
-      },
-      {
-        "id": "x-edicion",
-        "type": "error",
-        "prompt": "Revisa tres borradores de una exposición que también se discute; cada uno tiene un único error deliberado.",
-        "items": [
-          {
-            "sentence": "La artista cuyo obras vemos nació aquí.",
-            "answers": [
-              "La artista cuyas obras vemos nació aquí."
-            ],
-            "why": "Cuyo concuerda con lo poseído: obras."
+            answer: 0,
+            why: "Cuarto párrafo: «para que la brigada sepa al instante dónde buscar».",
           },
           {
-            "sentence": "La persona de la hablamos llegó ayer.",
-            "answers": [
-              "La persona de la que hablamos llegó ayer."
+            q: "¿Qué piden a las familias?",
+            options: [
+              "Que retiren a sus hijos antes del simulacro.",
+              "Que acompañen a los grupos en el patio.",
+              "Que preparen una mochila y acuerden un lugar de reunión.",
             ],
-            "why": "La relativa necesita que."
+            answer: 2,
+            why: "Quinto párrafo.",
+          },
+        ],
+      },
+      {
+        id: "b2-07-lectura-orden",
+        type: "order",
+        prompt: "Ordena los pasos del protocolo tal como los describe el boletín.",
+        items: [
+          {
+            words: ["Suena", "la", "sirena,", "se", "agachan,", "esperan", "el", "silencio", "y", "bajan."],
+            why: "Primero la sirena, después agacharse; solo con silencio se sale.",
           },
           {
-            "sentence": "Faltan fechas, la cual dificulta el recorrido.",
-            "answers": [
-              "Faltan fechas, lo cual dificulta el recorrido."
+            words: ["Llegan", "al", "rectángulo,", "pasan", "lista", "y", "levantan", "el", "cartel."],
+            why: "El cartel se levanta después de pasar lista en el punto de encuentro.",
+          },
+        ],
+      },
+      {
+        id: "b2-07-lectura-interpretacion",
+        type: "open",
+        prompt: "Interpreta el texto con tus propias palabras.",
+        items: [
+          {
+            prompt: "La vicedirectora escribe: «no tiene sentido negarlo». En 70–90 palabras, explica qué actitud propone ante el riesgo sísmico y si te parece adecuada para un boletín dirigido a familias. Usa al menos una temporal con subjuntivo y una final.",
+            model: "Propone aceptar el riesgo sin dramatizarlo y convertir el miedo en preparación. Me parece adecuada, porque las familias de San Juan conocen los sismos y un tono alarmista no ayudaría. Además, da tareas concretas para que los padres se sientan útiles: hablar con los chicos, preparar una mochila. Cuando llegue el próximo temblor, esos chicos sabrán qué hacer, y eso tranquiliza más que cualquier promesa.",
+            checklist: [
+              "Explico la actitud que propone el texto.",
+              "Doy mi valoración con una razón.",
+              "Uso una temporal con subjuntivo y una final con «para que».",
             ],
-            "why": "Lo cual recoge una proposición completa."
-          }
-        ]
+          },
+        ],
+      },
+    ],
+    noticing: {
+      prompt: "Observa cómo el boletín une el momento de cada acción con su finalidad.",
+      items: [
+        { quote: "de manera que el miedo no decida por nosotros cuando llegue el momento", note: "«De manera que» + subjuntivo (finalidad) y «cuando» + subjuntivo (futuro)." },
+        { quote: "Nadie saldrá del aula hasta que la sirena deje de sonar.", note: "«Hasta que» + subjuntivo marca el límite de una espera futura." },
+        { quote: "a fin de que todos puedan oír las indicaciones", note: "Finalidad formal con sujeto distinto." },
+        { quote: "no vaya a ser que un sismo los sorprenda separados", note: "Precaución: la medida se toma por si acaso." },
+      ],
+    },
+  },
+  practice: {
+    intro: "Combina orden, relación, una recuperación de la semana anterior y escritura breve.",
+    exercises: [
+      {
+        id: "b2-07-orden",
+        type: "order",
+        prompt: "Ordena las palabras para formar la frase completa.",
+        items: [
+          { words: ["Te", "escribo", "en", "cuanto", "sepa", "la", "fecha."], why: "Futuro: «en cuanto» + subjuntivo." },
+          { words: ["Salieron", "del", "edificio", "sin", "que", "nadie", "se", "lastimara."], why: "«Sin que» + «nadie» + imperfecto de subjuntivo." },
+          { words: ["No", "volvemos", "a", "clase", "hasta", "que", "no", "llegue", "la", "brigada."], why: "«Hasta que no»: el segundo «no» es expletivo." },
+        ],
       },
       {
-        "id": "x-produccion",
-        "type": "open",
-        "prompt": "Prepara dos fragmentos antes de tu entrega independiente; el modelo es una posibilidad, no una respuesta única.",
-        "items": [
+        id: "b2-07-finalidades",
+        type: "match",
+        prompt: "Relaciona cada medida con su finalidad.",
+        pairs: [
+          { left: "Pintaron flechas en el pasillo", right: "para que nadie se equivocara de salida." },
+          { left: "Revisaremos los baños antes de salir", right: "no vaya a ser que quede algún chico." },
+          { left: "Enviamos el aviso con una semana de antelación", right: "a fin de que las familias lo comenten en casa." },
+          { left: "Fijamos los armarios a la pared", right: "de manera que no se caigan con un temblor." },
+        ],
+      },
+      {
+        id: "b2-07-recuperacion",
+        type: "gap",
+        prompt: "Recupera la semana anterior: combina concesión, momento y finalidad.",
+        items: [
+          { q: "Aunque ___ (llover) el jueves, el simulacro se hará igual.", answers: [["llueva"]], why: "Posibilidad futura con «aunque»: subjuntivo (semana 6)." },
+          { q: "Por muy tranquilos que ___ (estar) los chicos, conviene repasar el protocolo.", answers: [["estén"]], why: "«Por muy… que» + subjuntivo (semana 6)." },
+          { q: "Si bien el edificio ___ (ser) antisísmico, siempre hay riesgos.", answers: [["es"]], why: "«Si bien» + indicativo (semana 6)." },
+          { q: "Lo repetiremos en noviembre, a fin de que los nuevos alumnos ___ (aprender) el recorrido.", answers: [["aprendan"]], why: "Finalidad con sujeto distinto: subjuntivo." },
+        ],
+      },
+      {
+        id: "b2-07-microescritura",
+        type: "open",
+        prompt: "Escribe dos piezas breves antes de la tarea de escritura.",
+        items: [
           {
-            "prompt": "Abre tu respuesta sobre describir y valorar patrimonio con precisión con una postura y una razón; adapta el destinatario.",
-            "model": "La muestra ocupa una estación cuyo pasado forma parte del recorrido.",
-            "checklist": [
-              "Presento una postura concreta.",
-              "Ajusto el registro a quien recibirá el mensaje."
-            ]
+            prompt: "Escribe un mensaje de 40–60 palabras a tu familia con el plan para el caso de que un sismo los sorprenda separados. Usa dos conectores temporales con subjuntivo.",
+            model: "Si hay un sismo y no estamos juntos, nos agachamos donde estemos. En cuanto pase el temblor, nos mandamos un mensaje corto, porque las llamadas saturan la red. Una vez que estemos todos bien, nos encontramos en la plaza de la esquina. Nadie vuelve a casa hasta que revisemos el edificio.",
+            checklist: [
+              "Uso al menos dos conectores temporales con subjuntivo.",
+              "Las acciones siguen un orden claro.",
+              "El mensaje es breve y práctico.",
+            ],
           },
           {
-            "prompt": "Reformula una objeción o una reserva de «Una exposición que también se discute» sin debilitarla, y responde con una condición verificable.",
-            "model": "La muestra ocupa una estación cuyo pasado forma parte del recorrido. Destaca una libreta comercial a partir de la cual se explican relaciones económicas del barrio. Algunas etiquetas omiten el contexto de los conflictos, lo cual reduce la fuerza de las primeras salas. Aun así, el montaje mejora cuando distingue documentos y recuerdos familiares. Recomendaría ampliar esa distinción y conservar las preguntas abiertas: reconocer una laguna puede resultar más informativo que llenarla con una certeza aparente.",
-            "checklist": [
-              "La objeción conserva su sentido.",
-              "Mi respuesta no promete lo que no controlo."
-            ]
-          }
-        ]
-      },
-      {
-        "id": "x-recuperacion",
-        "type": "open",
-        "prompt": "Recuperación espaciada: selecciona y produce los recursos señalados sin mirar sus explicaciones. En el checkpoint distribúyelos entre informe y ensayo oral.",
-        "items": [
-          {
-            "prompt": "Recupera la semana 4 sin abrir su explicación y aplica sus recursos a «Una exposición que también se discute»: Condicionales irreales y mixtas; Condicional compuesto; Decisiones y consecuencias; Entonación del reproche; Lamentar y reprochar; Historia alternativa. Integra los recursos en un párrafo o un turno de 60–90 segundos; señala las decisiones lingüísticas en tus notas.",
-            "model": "Guía de revisión, no texto para copiar: Puedo expresar condiciones irreales en presente, en pasado y mixtas. Puedo hablar de lo que habría pasado y reprochar con habrías podido. Puedo hablar de arrepentimiento, oportunidades perdidas y alternativas. Puedo distinguir un reproche de una hipótesis neutra por la entonación. Puedo expresar arrepentimiento, reprochar con tacto y responder a un reproche. Puedo contar cómo habría sido mi vida si una decisión hubiera sido distinta.",
-            "checklist": [
-              "Integro los recursos indicados en una respuesta al caso actual.",
-              "Conservo personas, tiempo, postura y límites de las fuentes.",
-              "Marco una elección que tuve que corregir después de comprobarla."
-            ]
+            prompt: "Explica en tres frases para qué sirven tres objetos de una mochila de emergencia. Usa «para + infinitivo», «para que + subjuntivo» y «no vaya a ser que».",
+            model: "La linterna sirve para ver si se corta la luz. El silbato es para que los rescatistas nos encuentren. Llevamos fotocopias de los documentos, no vaya a ser que perdamos los originales.",
+            checklist: [
+              "Uso infinitivo cuando el sujeto es el mismo.",
+              "Uso subjuntivo cuando el sujeto cambia.",
+              "«No vaya a ser que» expresa una precaución.",
+            ],
           },
-          {
-            "prompt": "Recupera la semana 6 sin abrir su explicación y aplica sus recursos a «Una exposición que también se discute»: Oraciones concesivas; Tecnología y ética; Prosodia de la concesión; Conceder y objetar; Leer una columna de opinión. Integra los recursos en un párrafo o un turno de 60–90 segundos; señala las decisiones lingüísticas en tus notas.",
-            "model": "Guía de revisión, no texto para copiar: Puedo usar aunque + indicativo o subjuntivo según la información, a pesar de (que), por mucho que y si bien. Puedo hablar de inteligencia artificial, privacidad, vigilancia y responsabilidad. Puedo marcar con la voz la parte concedida y la parte que defiendo. Puedo conceder una parte del argumento contrario y mantener mi postura. Puedo identificar concesiones, objeciones y la tesis del autor.",
-            "checklist": [
-              "Integro los recursos indicados en una respuesta al caso actual.",
-              "Conservo personas, tiempo, postura y límites de las fuentes.",
-              "Marco una elección que tuve que corregir después de comprobarla."
-            ]
-          }
-        ]
-      }
-    ]
+        ],
+      },
+    ],
   },
-  "writing": {
-    "task": "Escribe una reseña para lectores que no conocen la exposición. Describe dos recursos, interpreta su efecto y recomienda mejoras sin inventar datos; incluye relativas con preposición, cuyo y lo cual.",
-    "context": "Destinatario, propósito y límites de la información forman parte de la evaluación. El modelo muestra una respuesta completa posible: analiza su organización y escribe después tu propio texto.",
-    "steps": [
-      "Extrae dos datos y dos posiciones de las fuentes; marca lo que no está confirmado.",
-      "Planifica apertura, desarrollo, objeción o complicación y cierre antes de redactar.",
-      "Escribe sin copiar el modelo; integra recursos nuevos y los recuperados.",
-      "Revisa referentes, modo, tiempo, colocaciones y registro; reescribe un párrafo y explica el cambio."
+  writing: {
+    task: "Escribe un correo a las familias de una escuela para informar de un simulacro (200–280 palabras). Explica qué pasará en cada momento, para qué sirve cada medida y qué pueden hacer en casa.",
+    context: "Eres coordinador o coordinadora de seguridad de la escuela. Algunas familias se alarmaron con el último simulacro y otras no sabían que se iba a hacer. Tu correo debe ser claro, tranquilo y práctico.",
+    steps: [
+      "Anota los pasos del simulacro en orden y, al lado de cada uno, su finalidad.",
+      "Organiza el correo en tres párrafos: motivo y fecha, protocolo paso a paso, qué pueden hacer las familias.",
+      "Usa al menos tres conectores temporales con subjuntivo y tres finales distintas.",
+      "Revisa el correo: corrige cualquier futuro después de un conector temporal y comprueba el sujeto en cada «para».",
     ],
-    "useLanguage": [
-      "Las relativas especificativas seleccionan un subconjunto y no llevan comas; las explicativas añaden información sobre un referente ya identificado. El contraste puede cambiar a quién afecta una afirmación. Con preposición usa con el que, a la cual o de quien según la función; no elimines una preposición que exige el verbo.",
-      "Cuyo expresa posesión y concuerda con lo poseído: una artista cuyas obras viajaron. Lo cual puede recoger una idea anterior completa. En una reseña combina descripción verificable, interpretación y valoración; el lector debe poder distinguir qué muestra la exposición de lo que tú deduces o recomiendas.",
-      "Describe a una persona del conflicto generacional con dos relativas; después concede un mérito de la exposición sin perder tu crítica."
+    useLanguage: [
+      "en cuanto / tan pronto como / una vez que + subjuntivo",
+      "hasta que / antes de que + subjuntivo",
+      "para que / a fin de que + subjuntivo",
+      "sin que + nadie, nada",
+      "no vaya a ser que + subjuntivo",
+      "el punto de encuentro, la vía de evacuación, pasar lista",
     ],
-    "model": [
-      "La exposición «Objetos que vuelven» ocupa una antigua estación cuya historia forma parte del recorrido. Herramientas, fotografías y prendas permiten acercarse al barrio ferroviario desde experiencias concretas. La presentación resulta cuidada, aunque las primeras salas ofrecen más nombres y fechas que explicaciones sobre las condiciones de trabajo. Esa falta de contexto limita inicialmente la interpretación de las piezas.",
-      "El recorrido gana interés cuando reúne documentos y testimonios que no cuentan exactamente la misma historia. Destaca la libreta de una comerciante a partir de la cual se explican relaciones económicas del barrio. El mapa cercano permite vincular compras, desplazamientos y actividades laborales, lo cual ayuda a comprender por qué un objeto privado puede tener valor colectivo. No se trata solo de mirar una antigüedad, sino de reconstruir sus usos.",
-      "La decisión de conservar algunas etiquetas familiares plantea una dificultad real. Respeta las condiciones de quienes prestaron los objetos, pero puede mantener expresiones poco precisas. Me parece acertado que el museo explique esa tensión en lugar de disimularla. Recomendaría añadir una distinción más visible entre información documentada y recuerdos personales, especialmente para visitantes que recorren la muestra sin guía.",
-      "La exposición merece una visita pausada. Quien espere una celebración uniforme del pasado encontrará desacuerdos y lagunas; precisamente ahí reside parte de su valor. El museo no puede representar todas las experiencias con una sola voz. Sí puede mostrar de dónde procede cada afirmación y permitir que el público compare interpretaciones. Ampliar ese criterio a las primeras salas haría el conjunto más coherente y convincente."
+    model: [
+      "Estimadas familias: el próximo martes 22 haremos un simulacro de sismo en toda la escuela. Les escribimos con tiempo para que puedan hablar del tema en casa y para que nadie se sorprenda si su hijo vuelve contando que «hubo un terremoto».",
+      "El protocolo será el mismo que practicamos en las aulas. En cuanto suene la sirena larga, los chicos se agacharán junto al banco y se cubrirán la cabeza. Nadie se moverá hasta que la sirena se apague. Una vez que haya silencio, cada grupo saldrá con su maestra por la vía de evacuación marcada en el piso, sin correr, a fin de que todos oigan las indicaciones. Tan pronto como lleguen al punto de encuentro, junto a la cancha, la maestra pasará lista. Los preceptores revisarán los baños y la biblioteca, no vaya a ser que algún alumno se haya quedado adentro.",
+      "Les pedimos dos cosas. Primero, que conversen con sus hijos antes del martes, de manera que vivan el simulacro como un ensayo y no como una amenaza. Segundo, que no vengan a buscarlos durante la mañana: el simulacro dura veinte minutos y las clases seguirán con normalidad. Cuando tengamos el informe final, se lo enviaremos por este mismo medio. Muchas gracias por su colaboración. Ana Bustos, coordinadora de seguridad.",
     ],
-    "checklist": [
-      "Respondo al propósito y al destinatario concreto.",
-      "Organizo párrafos con relaciones claras, no conectores decorativos.",
-      "Distingo datos, opiniones, hipótesis y compromisos.",
-      "Integro una perspectiva distinta sin deformarla.",
-      "Reviso concordancia, modo, tiempos y léxico.",
-      "Explico una mejora entre borrador y versión final."
+    checklist: [
+      "Cada paso del protocolo tiene un momento claro.",
+      "Uso subjuntivo tras los conectores temporales con valor futuro.",
+      "Explico la finalidad de al menos tres medidas con estructuras distintas.",
+      "Uso infinitivo cuando el sujeto de la finalidad es el mismo.",
+      "El tono es tranquilo y la petición a las familias es concreta.",
     ],
-    "words": [
-      220,
-      280
-    ]
+    words: [200, 280],
   },
-  "speaking": {
-    "intro": "Prepara notas breves, no un texto para leer. Puedes grabarte localmente; la aplicación no califica automáticamente pronunciación ni calidad oral.",
-    "tasks": [
+  speaking: {
+    intro: "Prepárate con palabras clave, no con un texto leído. Si te grabas, la grabación queda en tu dispositivo; el navegador no evalúa tu pronunciación.",
+    tasks: [
       {
-        "title": "Exposición con evidencia",
-        "prompt": "Presenta el caso de «Una exposición que también se discute» a alguien que no conoce las fuentes. Defiende una interpretación, menciona una evidencia y una reserva, y termina con una pregunta que permita continuar.",
-        "prep": [
-          "Anota tesis, evidencia y límite en cinco palabras clave.",
-          "Ensaya una transición y una reformulación."
+        title: "Explicar el protocolo a un grupo nuevo",
+        prompt: "Llegan a la escuela tres alumnos nuevos de otra provincia. Explícales qué tienen que hacer cuando suene la sirena, paso a paso, y para qué sirve cada paso.",
+        prep: [
+          "Ordena cinco pasos y anota un conector temporal para cada uno.",
+          "Añade una finalidad a tres de los pasos.",
         ],
-        "seconds": 180,
-        "model": "La muestra ocupa una estación cuyo pasado forma parte del recorrido. Destaca una libreta comercial a partir de la cual se explican relaciones económicas del barrio. Algunas etiquetas omiten el contexto de los conflictos, lo cual reduce la fuerza de las primeras salas. Aun así, el montaje mejora cuando distingue documentos y recuerdos familiares. Recomendaría ampliar esa distinción y conservar las preguntas abiertas: reconocer una laguna puede resultar más informativo que llenarla con una certeza aparente.",
-        "selfCheck": [
-          "Se entiende mi postura sin leer un guion.",
-          "No convierto una conjetura en hecho.",
-          "Uso pausas para organizar el mensaje."
-        ]
-      },
-      {
-        "title": "Interacción y mediación",
-        "prompt": "Tu docente representa a una persona que cuestiona tu interpretación de describir y valorar patrimonio con precisión. Resume su postura antes de responder. Pregunta qué condición cambiaría su opinión; negocia un acuerdo parcial o explica respetuosamente por qué no lo hay.",
-        "prep": [
-          "Prepara una objeción probable y una pregunta de aclaración.",
-          "Incorpora una pregunta inesperada: ¿qué evidencia haría cambiar tu conclusión?",
-          "Al terminar, reformula en un minuto el resultado para una persona nueva."
+        seconds: 150,
+        model: "Les cuento cómo es acá. En cuanto suene la sirena, se agachan junto al banco y se cubren la cabeza, para que no les caiga nada encima. No se levantan hasta que la sirena se apague. Una vez que haya silencio, salimos en fila, sin correr, a fin de que todos oigan a la maestra.",
+        selfCheck: [
+          "Uso subjuntivo después de cada conector temporal con valor futuro.",
+          "Cada finalidad tiene el modo adecuado.",
+          "Pronuncio los conectores como un solo bloque.",
         ],
-        "seconds": 240,
-        "selfCheck": [
-          "Respondo a la objeción real.",
-          "Pido y cedo el turno.",
-          "Adapto una explicación sin inventar consenso."
-        ]
-      }
-    ]
-  },
-  "useInClass": {
-    "intro": "La mascota te acompaña al siguiente paso: convierte tu trabajo independiente en una conversación con consecuencias claras.",
-    "cards": [
-      {
-        "move": "Defiende",
-        "task": "Presenta tu entrega de «Una exposición que también se discute» en tres minutos y responde a una objeción inesperada.",
-        "phrases": [
-          "Mi interpretación se apoya en…",
-          "La reserva que mantengo es…"
-        ]
       },
       {
-        "move": "Reformula",
-        "task": "Explica a otra persona lo que sostiene una voz del caso de San Juan; pídele a tu docente que compruebe si has conservado el matiz.",
-        "phrases": [
-          "Si te he entendido bien…",
-          "No afirma que…; lo que plantea es…"
-        ]
+        title: "Tranquilizar a una madre preocupada",
+        prompt: "Una madre llama a la escuela: su hijo no quiere ir el día del simulacro. Escucha su preocupación, hazle dos preguntas para entender qué le pasa al niño y explícale qué hará la escuela para que el chico se sienta seguro.",
+        prep: [
+          "Prepara dos preguntas abiertas («¿Qué le dijo exactamente…?», «¿Le pasó algo parecido…?»).",
+          "Prepara dos medidas con «para que» o «sin que».",
+        ],
+        seconds: 180,
+        model: "Entiendo su preocupación. ¿Qué le dijo exactamente su hijo? ¿Vivió algún temblor fuerte? Le propongo esto: antes de que empiece el simulacro, la maestra le explicará qué va a pasar, para que no lo tome por sorpresa. Y si se pone nervioso, la preceptora lo acompañará sin que tenga que separarse de su grupo.",
+        selfCheck: [
+          "Hago al menos dos preguntas reales.",
+          "Propongo medidas concretas con finalidad.",
+          "Mantengo un tono tranquilo.",
+        ],
       },
-      {
-        "move": "Negocia",
-        "task": "Acuerda un criterio para valorar tu propuesta sobre describir y valorar patrimonio con precisión; identifica una condición que todavía necesita confirmación.",
-        "phrases": [
-          "Lo aceptaría siempre que…",
-          "Queda pendiente comprobar…"
-        ]
-      }
     ],
-    "bring": "Lleva borrador y versión revisada, cinco palabras clave para hablar y una duda de comprensión o prosodia."
   },
-  "quiz": {
-    "items": [
+  useInClass: {
+    intro: "Lleva estas tarjetas a tu próxima clase para practicar planes y finalidades con tu profesor.",
+    cards: [
       {
-        "q": "En la evaluación final de «Una exposición que también se discute», ¿qué resume mejor el propósito?",
-        "options": [
-          "Sustituir toda evidencia por una opinión rotunda.",
-          "Evitar cualquier intercambio entre personas.",
-          "Explicar cómo una etiqueta modifica el relato histórico"
-        ],
-        "answer": 2,
-        "why": "Relaciona comprensión y propósito.",
-        "type": "choice"
+        move: "Cuéntale",
+        task: "Cuéntale a tu profesor un plan personal que depende de algo incierto (un resultado, un permiso, un viaje) y qué harás en cuanto se resuelva.",
+        phrases: ["En cuanto me confirmen…", "Una vez que tenga…"],
       },
       {
-        "type": "listen",
-        "audio": "En la primera entiendo que se habla de un grupo concreto de familias. En la segunda parece que todas llegaron entonces. ¿El museo cambió la etiqueta porque había información incorrecta o porque la redacción permitía una interpretación demasiado amplia?",
-        "voice": "es-MX-m",
-        "q": "Al escuchar de nuevo a Visitante en «Una exposición que también se discute», ¿qué intervención reconoces?",
-        "options": [
-          "No hay ninguna condición pendiente y todas las partes aceptaron.",
-          "Me niego a explicar mi punto de vista sobre este asunto.",
-          "En la primera entiendo que se habla de un grupo concreto de familias"
-        ],
-        "answer": 2,
-        "why": "Atiende a la formulación y a la posición, no solo al tema."
+        move: "Pregúntale",
+        task: "Pregúntale qué promesa le hicieron alguna vez «para cuando pasara algo» y si se cumplió.",
+        phrases: ["¿Alguien te prometió algo para cuando…?", "¿Qué te dijo que haría en cuanto…?"],
       },
       {
-        "type": "gap",
-        "q": "El archivo, ___ documentos se digitalizaron, sigue abierto.",
-        "answers": [
-          [
-            "cuyos"
-          ]
-        ],
-        "why": "Posesión y concordancia."
+        move: "Explica",
+        task: "Explica tres medidas de seguridad de tu casa o tu trabajo y para qué sirven, una con «sin que».",
+        phrases: ["Lo hacemos para que…", "…sin que nadie tenga que…"],
       },
-      {
-        "type": "open",
-        "prompt": "Texto de partida: «Se retiraron dos paneles. Eso cambió el recorrido.» Une con lo cual.",
-        "model": "Se retiraron dos paneles, lo cual cambió el recorrido.",
-        "checklist": [
-          "Conservo participantes, referencia temporal y contenido pertinente.",
-          "Aplico la construcción o función solicitada; puedo elegir otro orden o una variante igualmente válida.",
-          "Comparo el significado y la forma con el modelo orientativo; no es una respuesta única ni se califica por coincidencia literal."
-        ]
-      },
-      {
-        "type": "error",
-        "sentence": "La obra de la hablamos pertenece al barrio.",
-        "answers": [
-          "La obra de la que hablamos pertenece al barrio."
-        ],
-        "why": "La relativa de la que conserva la preposición y requiere que."
-      },
-      {
-        "type": "open",
-        "prompt": "Sintetiza en 50 palabras lo que sabes y lo que no puedes concluir sobre «Una exposición que también se discute».",
-        "model": "La muestra ocupa una estación cuyo pasado forma parte del recorrido. Destaca una libreta comercial a partir de la cual se explican relaciones económicas del barrio. Algunas etiquetas omiten el contexto de los conflictos, lo cual reduce la fuerza de las primeras salas. Aun así, el montaje mejora cuando distingue documentos y recuerdos familiares. Recomendaría ampliar esa distinción y conservar las preguntas abiertas: reconocer una laguna puede resultar más informativo que llenarla con una certeza aparente.",
-        "checklist": [
-          "Atribuyo una fuente.",
-          "Explicito una reserva."
-        ]
-      },
-      {
-        "type": "open",
-        "prompt": "Contesta a quien sostiene lo contrario de tu postura sobre describir y valorar patrimonio con precisión; concede una razón y conserva tu argumento.",
-        "model": "La muestra ocupa una estación cuyo pasado forma parte del recorrido. Destaca una libreta comercial a partir de la cual se explican relaciones económicas del barrio. Algunas etiquetas omiten el contexto de los conflictos, lo cual reduce la fuerza de las primeras salas. Aun así, el montaje mejora cuando distingue documentos y recuerdos familiares. Recomendaría ampliar esa distinción y conservar las preguntas abiertas: reconocer una laguna puede resultar más informativo que llenarla con una certeza aparente.",
-        "checklist": [
-          "Conservo la postura contraria sin exagerarla.",
-          "Respondo con una razón o condición."
-        ]
-      },
-      {
-        "type": "open",
-        "prompt": "Explica dos cambios que harías para adaptar tu entrega de la semana 7 a un mensaje cercano y a un informe formal.",
-        "model": "Cambiaría el tratamiento y algunas fórmulas, pero conservaría las fuentes, los límites y las condiciones acordadas.",
-        "checklist": [
-          "Cambio recursos de registro.",
-          "No cambio el contenido del compromiso."
-        ]
-      }
-    ]
-  },
-  "complete": {
-    "canNow": [
-      "Puedo describir y valorar patrimonio con precisión.",
-      "Puedo sostener una interpretación con evidencia y una reserva.",
-      "Puedo revisar mi producción y continuarla mediante interacción."
     ],
-    "review": [
-      "Describe a una persona del conflicto generacional con dos relativas; después concede un mérito de la exposición sin perder tu crítica.",
-      "Dentro de 48 horas, sin consultar el texto, reconstruye dos posiciones y un recurso lingüístico; comprueba después qué omitiste.",
-      "Una semana después, adapta tu respuesta a otro destinatario y recupera los objetivos marcados en la práctica."
-    ]
-  }
+    bring: "Tu correo revisado a las familias y una lista de tres planes que dependen de algo que todavía no sabes.",
+  },
+  quiz: {
+    items: [
+      {
+        type: "choice",
+        q: "¿Qué frase habla de un futuro que todavía no ha ocurrido?",
+        options: [
+          "Cuando llega el inspector, todos se ponen nerviosos.",
+          "Cuando llegó el inspector, todos se pusieron nerviosos.",
+          "Cuando llegue el inspector, le mostraremos el plan de evacuación.",
+        ],
+        answer: 2,
+        why: "«Cuando» + subjuntivo con valor futuro.",
+      },
+      {
+        type: "choice",
+        q: "Completa con la forma adecuada: «La directora repartió linternas para que los preceptores ___ revisar los sótanos».",
+        options: ["pueden", "pudieran", "podrán"],
+        answer: 1,
+        why: "Finalidad con verbo principal en pasado: imperfecto de subjuntivo.",
+      },
+      {
+        type: "listen",
+        q: "Escucha. ¿Qué expresa la frase?",
+        options: [
+          "Una costumbre que se repite cada vez que tiembla.",
+          "Una promesa del pasado sobre un momento futuro.",
+        ],
+        answer: 1,
+        why: "«Nos dijeron que… en cuanto terminaran»: futuro visto desde el pasado.",
+        audio: "Nos dijeron que nos devolverían el gimnasio en cuanto terminaran la obra.",
+        voice: "es-AR-f",
+      },
+      {
+        type: "gap",
+        q: "Nadie se mueve hasta que la sirena ___ (apagarse).",
+        answers: [["se apague"]],
+        hint: "Límite de una espera futura",
+        why: "«Hasta que» con futuro: presente de subjuntivo.",
+      },
+      {
+        type: "gap",
+        q: "Guardamos los cascos en el pasillo, de manera que cada grupo los ___ (tener) a mano.",
+        answers: [["tenga"]],
+        hint: "«De manera que» con valor de finalidad",
+        why: "Finalidad: subjuntivo.",
+      },
+      {
+        type: "error",
+        sentence: "Una vez que estaremos en el patio, la maestra pasará lista.",
+        answers: ["Una vez que estemos en el patio, la maestra pasará lista."],
+        why: "Futuro tras «una vez que»: presente de subjuntivo.",
+      },
+      {
+        type: "error",
+        sentence: "Me levanté temprano para que yo llegara antes que los chicos.",
+        answers: ["Me levanté temprano para llegar antes que los chicos."],
+        why: "Mismo sujeto: «para» + infinitivo.",
+      },
+      {
+        type: "order",
+        words: ["Cierren", "las", "ventanas,", "no", "vaya", "a", "ser", "que", "se", "rompan", "los", "vidrios."],
+        why: "Precaución: «no vaya a ser que» + presente de subjuntivo.",
+      },
+      {
+        type: "open",
+        prompt: "Explica en 60–80 palabras a otro estudiante por qué decimos «cuando llegue» pero «cuando llegó», y añade un ejemplo de «para + infinitivo» frente a «para que + subjuntivo».",
+        model: "El conector temporal no decide el modo: decide el momento. «Cuando llegó» cuenta algo que ya pasó, por eso va en indicativo. «Cuando llegue» habla de un futuro que todavía no ha ocurrido, y por eso usa subjuntivo. Con la finalidad miramos el sujeto: «Estudio para aprobar» tiene un solo sujeto; «Te explico para que apruebes» tiene dos, y entonces usamos subjuntivo.",
+        checklist: [
+          "Explico que el momento decide el modo.",
+          "Doy un ejemplo con «para» + infinitivo.",
+          "Doy un ejemplo con «para que» + subjuntivo y sujetos distintos.",
+        ],
+      },
+    ],
+  },
+  complete: {
+    canNow: [
+      "Uso subjuntivo tras «cuando», «en cuanto», «una vez que» o «hasta que» si hablo de un futuro que todavía no ha ocurrido.",
+      "Cuento promesas y planes del pasado con «en cuanto llegara», «antes de que empezara».",
+      "Explico la finalidad con «para que», «a fin de que» o «de manera que», y uso infinitivo cuando el sujeto es el mismo.",
+      "Expreso lo que no ocurre con «sin que» y una precaución con «no vaya a ser que».",
+    ],
+    review: [
+      "Dentro de dos días, tapa la columna «Desde el pasado» de la tabla y reconstrúyela.",
+      "Dentro de una semana, escribe cinco planes tuyos con un conector temporal distinto cada uno.",
+      "En la próxima clase, lee tu correo a las familias y pide a tu profesor que señale una finalidad que podría expresarse de forma más formal.",
+    ],
+  },
+  related: [
+    { path: "/gramatica/temporales-con-subjuntivo-para-futuro-incierto", label: "Clase: Temporales con subjuntivo para futuro incierto" },
+    { path: "/gramatica/finales-con-subjuntivo-con-el-fin", label: "Clase: Finales con subjuntivo: con el fin de que, sin que" },
+  ],
 };
