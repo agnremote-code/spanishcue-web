@@ -1,0 +1,11 @@
+[
+  [11, "gram", "g023", "Interrogativos con tilde: qué, quién, cuál, cuánto", "Puedo pedir información concreta con qué, quién, cuál, dónde, cuándo, cómo y cuánto, con tilde, con la preposición delante y con cuánto concordado.", ["a1.gram.g022"], { "related": ["/gramatica/interrogativos-con-tilde"] }],
+  [11, "gram", "g024", "Oraciones negativas y posición de no", "Puedo negar con no delante del verbo, también con hay y con poder o querer + infinitivo, y responder con un no corto o completo.", ["a1.gram.g020"], { "related": ["/gramatica/oraciones-negativas"] }],
+  [11, "voc", "w11-pupuseria", "Comida y preguntas en una pupusería", "Puedo nombrar comida y bebidas típicas de El Salvador y preguntar qué lleva un plato, cuánto cuesta y cuál me recomiendan.", ["a1.gram.g023"]],
+  [11, "pron", "w11-entonacion-preguntas", "La melodía de las preguntas", "Puedo distinguir la pregunta de sí o no, que sube, de la pregunta con palabra interrogativa, que baja, y unir no con el verbo sin pausa.", []],
+  [11, "lis", "w11-pedido-pupuseria", "Escuchar un pedido en un restaurante", "Puedo entender qué pide cada persona, los precios, las cantidades y lo que no quieren en una conversación breve en una pupusería.", ["a1.gram.g023", "a1.gram.g024"]],
+  [11, "read", "w11-preguntas-frecuentes", "Leer una página de preguntas frecuentes", "Puedo encontrar el día, el lugar, el precio y las condiciones de un tour en una página breve de preguntas frecuentes.", ["a1.gram.g023", "a1.gram.g024"]],
+  [11, "wri", "w11-mensaje-anfitriona", "Escribir preguntas a una anfitriona", "Puedo escribir un mensaje breve con tres preguntas concretas y dos informaciones en negativo.", ["a1.gram.g023", "a1.gram.g024", "a1.voc.w11-pupuseria"]],
+  [11, "spk", "w11-preguntar-negar", "Preguntar por teléfono y decir que no", "Puedo hacer cinco preguntas por teléfono durante unos 40 segundos y rechazar planes con respuestas negativas completas.", ["a1.fun.w11-pedir-informacion"]],
+  [11, "fun", "w11-pedir-informacion", "Pedir información y rechazar", "Puedo pedir información sobre precio, hora, lugar y personas y decir lo que no quiero, no tengo o no puedo hacer.", ["a1.gram.g023", "a1.gram.g024"]]
+]
