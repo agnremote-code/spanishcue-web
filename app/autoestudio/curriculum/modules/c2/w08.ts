@@ -1,876 +1,941 @@
 import type { Module } from "../../types";
 
-/** Material original C2. Audio mediante síntesis; sin acreditación regional. */
+/**
+ * C2 · semana 8 · Autoestudio espejo de G216 (variación regional del pasado
+ * perfecto y evidencialidad) y G217 (leísmo y régimen pronominal en variedades
+ * cultas). Repaso autónomo con los diarios y la correspondencia ficticios de
+ * una asociación de acogida a peregrinos en León.
+ * Audio mediante síntesis; sin acreditación regional.
+ */
 export const c2w08: Module = {
-  "id": "c2-08",
-  "level": "c2",
-  "week": 8,
-  "kind": "core",
-  "title": "La palabra que inclina la balanza",
-  "subtitle": "Casi sinónimos, connotación y alusiones",
-  "stop": {
-    "place": "León",
-    "country": "España"
+  id: "c2-08",
+  level: "c2",
+  week: 8,
+  kind: "core",
+  title: "Hoy caminé, hoy he caminado: pasados y pronombres con mapa",
+  subtitle: "Repaso del reparto regional entre «he caminado» y «caminé», del pluscuamperfecto de sorpresa y de la norma culta en «le», «lo», «les» y «se lo»",
+  stop: {
+    place: "León",
+    country: "España",
   },
-  "minutes": 135,
-  "newObjectives": [
-    "c2.voc.casi-sinonimos",
-    "c2.voc.refranes-intertextualidad",
-    "c2.pron.matiz-lexico-voz",
-    "c2.wri.precision-lexica",
-    "c2.read.columna-literaria"
+  minutes: 135,
+  newObjectives: [
+    "c2.gram.g216",
+    "c2.gram.g217",
+    "c2.voc.w08-camino-correspondencia",
+    "c2.pron.w08-s-final-pronombres",
+    "c2.lis.w08-reunion-antologia",
+    "c2.read.w08-presentacion-antologia",
+    "c2.wri.w08-guia-correspondencia",
+    "c2.spk.w08-explicar-variedades",
+    "c2.fun.w08-adaptar-sin-borrar",
+    "c2.disc.w08-cita-y-norma",
   ],
-  "reviewObjectives": [
-    "c2.disc.subtexto",
-    "c2.voc.verbos-dicendi-matices",
-    "c2.pron.intencion-pragmatica",
-    "c2.read.relato-subtexto",
-    "c2.wri.dialogo-subtexto",
-    "c2.read.prosa-densa",
-    "c2.gram.sintaxis-compleja",
-    "c2.voc.conectores-cultos",
-    "c2.pron.lectura-densa",
-    "c2.wri.abstract"
-  ],
-  "prerequisites": [
-    "c2-07"
-  ],
-  "goal": {
-    "canDo": "Puedo elegir casi sinónimos y alusiones controlando connotación, fuente y alcance.",
-    "steps": [
-      "Lee las fuentes y distingue dato, inferencia y evaluación.",
-      "Escucha el intercambio antes de consultar su transcripción.",
-      "Aplica casi sinónimos, connotación y alusiones a una decisión comunicativa concreta.",
-      "Produce el dossier escrito, revisa una elección y defiéndela oralmente."
-    ]
-  },
-  "theory": {
-    "intro": "Los casos, documentos y voces de esta semana son originales y ficticios. La dificultad está en controlar relaciones de significado, no en acumular palabras raras.",
-    "parts": [
-      {
-        "heading": "Casi sinónimos, connotación y alusiones",
-        "body": [
-          "Afirmar, sostener, admitir y conceder no atribuyen la misma relación con una idea. Admitir suele presentar el contenido como reconocimiento; conceder puede limitarlo al argumento en curso. Obstinado y perseverante evalúan de modo distinto una persistencia similar. La prosodia semántica es una tendencia contextual, no una prohibición absoluta. Las alusiones y refranes pueden alterarse para cuestionar su moraleja; la interpretación debe explicitar qué expectativa se activa y qué se cambia.",
-          "En este caso, La precisión consiste en controlar las inferencias de la elección léxica. La formulación elegida debe permitir al destinatario reconstruir la diferencia relevante y reconocer qué no se ha demostrado."
-        ],
-        "examples": [
-          {
-            "es": "La investigadora sostuvo que faltaban datos."
-          },
-          {
-            "es": "La investigadora admitió que faltaban datos."
-          },
-          {
-            "es": "No por mucho madrugar aparece antes una respuesta fiable."
-          }
-        ],
-        "mistakes": [
-          {
-            "wrong": "El comunicado calificó el resultado como de concluyente.",
-            "right": "El comunicado calificó el resultado de concluyente.",
-            "why": "Calificar de admite ese complemento; no se acumulan como y de en esta construcción."
-          }
-        ]
-      },
-      {
-        "heading": "Interpretar, atribuir y revisar en este caso",
-        "body": [
-          "El desenlace favorable puede sesgar retrospectivamente la valoración de la persistencia. Para defender esa lectura, identifica una formulación y el detalle que la sostiene. Prueba después una explicación rival y señala qué dato necesitarías para preferirla.",
-          "La versión para un público nuevo puede cambiar léxico, orden y longitud, pero debe conservar esta condición: Los restos originales se confirmaron solo en una franja de veinte centímetros. Un cambio de registro que la elimina cambia también el contenido."
-        ],
-        "examples": [
-          {
-            "es": "La precisión consiste en controlar las inferencias de la elección léxica.",
-            "note": "Síntesis con alcance delimitado."
-          },
-          {
-            "es": "Concluyente garantiza una restauración integral.",
-            "note": "Lectura excesiva que el dossier no respalda."
-          }
-        ],
-        "tip": "La mascota te invita a conservar una duda productiva: llévala a clase junto con una prueba, no con una impresión aislada."
-      }
-    ]
-  },
-  "grammar": {
-    "intro": "Relaciona forma y efecto comunicativo en el expediente; la explicación importa tanto como la respuesta.",
-    "exercises": [
-      {
-        "id": "c2-08-gramatica-alcance",
-        "type": "choice",
-        "prompt": "Selecciona la interpretación defendible de La palabra que inclina la balanza.",
-        "items": [
-          {
-            "q": "En el caso de La palabra que inclina la balanza, ¿qué formulación preserva el alcance?",
-            "options": [
-              "La investigadora admitió que faltaban datos.",
-              "Admitir y sostener atribuyen siempre la misma actitud."
-            ],
-            "answer": 0,
-            "why": "Afirmar, sostener, admitir y conceder no atribuyen la misma relación con una idea. Admitir suele presentar el contenido como reconocimiento; conceder puede limitarlo al argumento en curso. Obstinado y perseverante evalúan de modo distinto una persistencia similar. La prosodia semántica es una tendencia contextual, no una prohibición absoluta. Las alusiones y refranes pueden alterarse para cuestionar su moraleja; la interpretación debe explicitar qué expectativa se activa y qué se cambia."
-          },
-          {
-            "q": "¿Qué cautela lingüística resulta necesaria al explicar La palabra que inclina la balanza?",
-            "options": [
-              "El desenlace favorable puede sesgar retrospectivamente la valoración de la persistencia.",
-              "Concluyente garantiza una restauración integral."
-            ],
-            "answer": 0,
-            "why": "Relaciona forma, contexto y efecto; evita ampliar una conclusión más allá de su base."
-          }
-        ]
-      },
-      {
-        "id": "c2-08-gramatica-forma",
-        "type": "gap",
-        "prompt": "Completa las relaciones gramaticales del caso La palabra que inclina la balanza.",
-        "items": [
-          {
-            "q": "El hallazgo es concluyente ___ la presencia de esa franja.",
-            "answers": [
-              [
-                "sobre",
-                "respecto a",
-                "en cuanto a"
-              ]
-            ],
-            "why": "Afirmar, sostener, admitir y conceder no atribuyen la misma relación con una idea. Admitir suele presentar el contenido como reconocimiento; conceder puede limitarlo al argumento en curso. Obstinado y perseverante evalúan de modo distinto una persistencia similar. La prosodia semántica es una tendencia contextual, no una prohibición absoluta. Las alusiones y refranes pueden alterarse para cuestionar su moraleja; la interpretación debe explicitar qué expectativa se activa y qué se cambia."
-          },
-          {
-            "q": "La dirección sostuvo ___ faltaba financiación.",
-            "answers": [
-              [
-                "que"
-              ]
-            ],
-            "why": "Afirmar, sostener, admitir y conceder no atribuyen la misma relación con una idea. Admitir suele presentar el contenido como reconocimiento; conceder puede limitarlo al argumento en curso. Obstinado y perseverante evalúan de modo distinto una persistencia similar. La prosodia semántica es una tendencia contextual, no una prohibición absoluta. Las alusiones y refranes pueden alterarse para cuestionar su moraleja; la interpretación debe explicitar qué expectativa se activa y qué se cambia."
-          },
-          {
-            "q": "No por mucho madrugar se seca ___ el pigmento.",
-            "answers": [
-              [
-                "antes"
-              ]
-            ],
-            "why": "Afirmar, sostener, admitir y conceder no atribuyen la misma relación con una idea. Admitir suele presentar el contenido como reconocimiento; conceder puede limitarlo al argumento en curso. Obstinado y perseverante evalúan de modo distinto una persistencia similar. La prosodia semántica es una tendencia contextual, no una prohibición absoluta. Las alusiones y refranes pueden alterarse para cuestionar su moraleja; la interpretación debe explicitar qué expectativa se activa y qué se cambia."
-          }
-        ]
-      }
-    ]
-  },
-  "vocabulary": {
-    "intro": "Usa estas unidades para describir diferencias que el caso exige. La definición orienta el uso; contrástala con la frase completa.",
-    "groups": [
-      {
-        "title": "Precisión para La palabra que inclina la balanza",
-        "items": [
-          {
-            "es": "perseverante",
-            "note": "persistente con valoración favorable"
-          },
-          {
-            "es": "obstinado",
-            "note": "persistente pese a razones para cambiar"
-          },
-          {
-            "es": "austero",
-            "note": "sobrio en recursos o adornos"
-          },
-          {
-            "es": "precario",
-            "note": "insuficiente o inestable"
-          },
-          {
-            "es": "admitir",
-            "note": "reconocer algo que puede resultar incómodo"
-          },
-          {
-            "es": "sostener",
-            "note": "defender una afirmación"
-          },
-          {
-            "es": "conceder",
-            "note": "aceptar una premisa de manera delimitada"
-          },
-          {
-            "es": "cundir",
-            "note": "extenderse o producir rendimiento según el contexto"
-          }
-        ]
-      }
+  reviewObjectives: [],
+  prerequisites: [],
+  goal: {
+    canDo: "Puedo reconocer cómo se reparten el pretérito perfecto y el indefinido según la zona, interpretar el pluscuamperfecto de sorpresa o de información no presenciada, y elegir «le», «lo», «les» y «se lo» según la norma culta panhispánica.",
+    steps: [
+      "Repasa en la teoría el antepresente y sus fronteras regionales, los usos evidenciales andinos y la escala de la norma para los pronombres átonos.",
+      "Practica con diarios de peregrinos y cartas de una asociación de acogida en León.",
+      "Escucha la reunión del equipo de la antología y lee la presentación del libro.",
+      "Redacta una entrada de la guía de correspondencia, revísala con la lista de control y explica tus criterios en voz alta.",
     ],
-    "exercises": [
-      {
-        "id": "c2-08-lexico",
-        "type": "match",
-        "prompt": "Relaciona cada unidad con la distinción que aporta al expediente de La palabra que inclina la balanza.",
-        "pairs": [
-          {
-            "left": "perseverante",
-            "right": "persistente con valoración favorable"
-          },
-          {
-            "left": "obstinado",
-            "right": "persistente pese a razones para cambiar"
-          },
-          {
-            "left": "austero",
-            "right": "sobrio en recursos o adornos"
-          },
-          {
-            "left": "precario",
-            "right": "insuficiente o inestable"
-          },
-          {
-            "left": "admitir",
-            "right": "reconocer algo que puede resultar incómodo"
-          },
-          {
-            "left": "sostener",
-            "right": "defender una afirmación"
-          },
-          {
-            "left": "conceder",
-            "right": "aceptar una premisa de manera delimitada"
-          },
-          {
-            "left": "cundir",
-            "right": "extenderse o producir rendimiento según el contexto"
-          }
-        ]
-      }
-    ]
   },
-  "pronunciation": {
-    "focus": "Foco sobre el alcance de un adjetivo",
-    "explanation": [
-      "Resalta sobre esa franja al decir concluyente. Contrasta el adjetivo aislado y el adjetivo delimitado; una voz enfática no vuelve más amplia la evidencia disponible.",
-      "El audio utiliza síntesis disponible en el navegador: no certifica acento regional, ironía natural ni calidad de pronunciación. Escucha el contenido, ensaya contrastes y comprueba el efecto con una persona. El objetivo es inteligibilidad y control expresivo, no eliminar tu acento."
-    ],
-    "examples": [
+  theory: {
+    intro: "En clase viste estos dos temas con tu profesor. Aquí los repasas con otra situación: una asociación de León que acoge a peregrinos del Camino de Santiago prepara una antología con sus diarios, escritos por personas de España y de América, y revisa las cartas que envía a los peregrinos de todo el mundo. En los dos casos, la pregunta es la misma: ¿qué variedad es la de este texto y qué norma pide su lector?",
+    parts: [
       {
-        "es": "El resultado es concluyente sobre esa franja."
-      },
-      {
-        "es": "El resultado parece prometedor para nuevas pruebas."
-      }
-    ],
-    "perceive": {
-      "id": "c2-08-percepcion",
-      "type": "listen",
-      "prompt": "Escucha el contraste antes de leer las opciones en «La palabra que inclina la balanza».",
-      "items": [
-        {
-          "q": "Escucha la primera formulación sobre La palabra que inclina la balanza. ¿Qué contenido permite recuperar?",
-          "options": [
-            "El resultado parece prometedor para nuevas pruebas.",
-            "El resultado es concluyente sobre esa franja."
+        heading: "El pretérito perfecto y sus fronteras regionales",
+        body: [
+          "El pretérito perfecto compuesto («he caminado») presenta un hecho pasado dentro de un periodo que llega hasta el momento en que se habla. Tiene cuatro usos principales: hechos de hoy, hechos de un periodo que incluye el presente («este año»), experiencias («¿has estado alguna vez en Astorga?») y situaciones que continúan («siempre he vivido en León»).",
+          "La frontera con el indefinido («caminé») no está en el mismo sitio en todas partes. En gran parte de España, sobre todo en el centro y el norte, lo ocurrido hoy se cuenta con el compuesto: «Hoy he caminado veinte kilómetros». En gran parte de América, y también en Canarias, Galicia y Asturias, el indefinido cubre también el día de hoy: «Hoy caminé veinte kilómetros». En esas variedades, el compuesto se concentra en la continuidad, la repetición y la experiencia: «Últimamente he dormido mal».",
+          "Ninguna de las dos opciones es más correcta. La elección depende de la variedad del hablante y, cuando se edita, del público del texto. Lo que conviene evitar es la mezcla sin motivo en una misma voz.",
+        ],
+        table: {
+          caption: "El mismo día contado desde dos variedades",
+          head: ["Uso", "Centro y norte de España", "Gran parte de América, Canarias, Galicia y Asturias"],
+          rows: [
+            ["hecho de hoy", "Esta mañana he salido de Mansilla.", "Esta mañana salí de Mansilla."],
+            ["periodo que incluye el presente", "Esta semana he dormido en cuatro albergues.", "Esta semana dormí en cuatro albergues."],
+            ["experiencia", "¿Has hecho el Camino alguna vez?", "¿Has hecho el Camino alguna vez? / ¿Hiciste el Camino alguna vez?"],
+            ["continuidad hasta hoy", "Siempre he querido venir.", "Siempre he querido venir."],
+            ["hecho que aún no ocurre", "Todavía no ha llegado mi mochila.", "Todavía no llega mi mochila. / Todavía no llegó."],
           ],
-          "answer": 1,
-          "why": "La respuesta depende de las palabras y de su agrupación; no atribuyas a la síntesis una intención o variedad verificada.",
-          "audio": "El resultado es concluyente sobre esa franja.",
-          "voice": "es-ES-f"
         },
-        {
-          "q": "Escucha ahora el contraste de La palabra que inclina la balanza. ¿Qué formulación aparece?",
-          "options": [
-            "El resultado parece prometedor para nuevas pruebas.",
-            "El resultado es concluyente sobre esa franja."
+        tip: "Antes de «corregir» un indefinido referido a hoy, mira de dónde es quien escribe. Si es su variedad, no hay nada que corregir.",
+      },
+      {
+        heading: "Evidencialidad: cómo sabe quien habla lo que cuenta",
+        body: [
+          "En zonas andinas (partes de Bolivia, Perú y Ecuador) se describen usos del pluscuamperfecto que no expresan anterioridad, sino la fuente de la información. El primero es el de descubrimiento o sorpresa: «¡Había sido tarde!» equivale a «resulta que es tarde, y me acabo de dar cuenta». El segundo es el de información no presenciada: «Mi abuelo había sido arriero» puede significar que quien habla no lo vio, sino que se lo contaron.",
+          "Son tendencias descritas en esas zonas, no reglas generales, y el objetivo es reconocerlas para no malinterpretarlas. Un lector peninsular que lea «¡La catedral había sido enorme!» puede pensar que la catedral ya no es enorme; un lector andino entiende que la peregrina acaba de comprobarlo con sus ojos. Si un testimonio lo usa, se respeta en la cita; si el editor necesita aclararlo, lo hace en una nota o en su propia voz, no cambiando las palabras de quien habla.",
+        ],
+        examples: [
+          { es: "«¡Había sido muy alta la catedral de León!»", note: "Sorpresa al descubrirlo: ≈ resulta que es muy alta." },
+          { es: "«Mi bisabuela había sido de un pueblo cerca de Astorga.»", note: "Información no presenciada: ≈ según me contaron." },
+          { es: "Nota del editor: «La autora, de Cochabamba, usa el pluscuamperfecto para expresar sorpresa ante lo que descubre».", note: "La aclaración va en la voz del editor; la cita no se toca." },
+        ],
+        mistakes: [
+          {
+            wrong: "Corrección en el diario de una peregrina de Cusco: «¡Había sido muy alta la catedral!» → «¡Ha sido muy alta la catedral!».",
+            right: "Se mantiene la cita y, si hace falta, se añade una nota del editor sobre su valor de sorpresa.",
+            why: "La forma no es un error: expresa descubrimiento en su variedad. Cambiarla borra la voz de la autora y no aclara nada.",
+          },
+          {
+            wrong: "Editor: «Esta mañana salí de León y hoy he llegado a Hospital de Órbigo». (Voz del editor, para una edición peninsular.)",
+            right: "Editor: «Esta mañana he salido de León y hoy he llegado a Hospital de Órbigo».",
+            why: "En una misma voz, la elección debe ser coherente con la variedad elegida para la edición.",
+          },
+        ],
+      },
+      {
+        heading: "La escala de la norma para «le», «lo» y «la»",
+        body: [
+          "La norma culta panhispánica no trata igual todos los usos de «le» por «lo». «A Juan le vi ayer» (leísmo de persona, masculino singular) está admitido, por su extensión en el centro y el norte de España y en autores de prestigio. «A ellos les vi» (el mismo uso en plural) se desaconseja. «El libro le tengo» (leísmo de cosa) no se acepta. Tampoco se aceptan el laísmo («la dije que viniera») ni el loísmo («lo dije la verdad»).",
+          "El leísmo se oye sobre todo en el centro y el norte de España; en la mayor parte de América es raro, y allí se usa «lo» y «la» según el sistema etimológico. Un caso aparte es el «le» de cortesía con usted, muy frecuente en fórmulas: «Le saludamos atentamente», «Le esperamos en el albergue». Está aceptado también en América.",
+        ],
+        table: {
+          caption: "De más aceptado a no aceptado",
+          head: ["Ejemplo", "Fenómeno", "Juicio de la norma culta"],
+          rows: [
+            ["Al peregrino lo vi en Sahagún.", "sistema etimológico", "recomendado en todas partes"],
+            ["Al peregrino le vi en Sahagún.", "leísmo de persona, masculino singular", "admitido"],
+            ["Le esperamos en el albergue (a usted).", "«le» de cortesía", "aceptado"],
+            ["A los peregrinos les vi en Sahagún.", "leísmo de persona en plural", "desaconsejado"],
+            ["El sello de la credencial le tengo aquí.", "leísmo de cosa", "no aceptado"],
+            ["A la hospitalera la di las llaves.", "laísmo", "no aceptado"],
           ],
-          "answer": 0,
-          "why": "Compara después tus dos lecturas con una persona: una pausa puede favorecer una lectura sin demostrarla.",
-          "audio": "El resultado parece prometedor para nuevas pruebas.",
-          "voice": "es-ES-m"
-        }
-      ]
+        },
+      },
+      {
+        heading: "Número y régimen: «les», «se lo», «informar», «ayudar», «llamar»",
+        body: [
+          "Cuando el complemento indirecto es plural, la norma escrita pide «les»: «Diles a tus compañeros que el albergue abre a las doce». «Dile a tus compañeros» es muy frecuente en la lengua oral de todas partes, pero se evita en la escritura cuidada. Con «se lo», en cambio, el plural del destinatario no se marca en el pronombre: «La credencial se la dimos a los peregrinos». En el habla de gran parte de América es muy común pasar ese plural al segundo pronombre («se las dimos»), pero la escritura cuidada lo evita.",
+          "Algunos verbos admiten dos construcciones. «Informar»: «La informamos de que el albergue está completo» (complemento directo de persona y «de que») o «Le informamos que el albergue está completo» (la información como complemento directo y la persona como indirecto). Lo que no se recomienda es mezclar: «la informamos que». «Ayudar»: lo normal es «lo» o «la» («la ayudamos con la mochila»), aunque «le ayudamos» está muy extendido. «Llamar» por teléfono lleva complemento directo («la llamé anoche»), pero «llamar la atención a alguien» lleva indirecto («le llamaron la atención por el ruido»).",
+          "Si dudas, prueba la pasiva: si la persona puede ser sujeto de una pasiva («la peregrina fue ayudada»), es complemento directo y le corresponde «lo» o «la».",
+        ],
+        examples: [
+          { es: "Diles a los peregrinos que el desayuno es a las siete.", note: "Plural en la escritura cuidada: «les»." },
+          { es: "Los mapas se los enviamos ayer a los peregrinos.", note: "Aquí «los» es correcto porque concuerda con «los mapas», que es plural; no con los destinatarios." },
+          { es: "La carta se la mandamos a los socios de Lima.", note: "«La» es la carta; el plural de los socios no se marca en «se»." },
+          { es: "A la peregrina la llamamos por teléfono, y luego le llamamos la atención por fumar en el patio.", note: "Dos sentidos de «llamar», dos regímenes." },
+        ],
+        mistakes: [
+          {
+            wrong: "La informamos que su reserva está confirmada.",
+            right: "La informamos de que su reserva está confirmada. / Le informamos que su reserva está confirmada.",
+            why: "Hay que elegir una de las dos construcciones de «informar»; mezclarlas no se recomienda.",
+          },
+          {
+            wrong: "Carta formal: «A los peregrinos de Rosario se los explicamos por correo».",
+            right: "Carta formal: «A los peregrinos de Rosario se lo explicamos por correo».",
+            why: "Lo explicado es singular («lo»); el plural de los destinatarios no se marca en la escritura cuidada.",
+          },
+          {
+            wrong: "El sello le tienes en la última página de la credencial.",
+            right: "El sello lo tienes en la última página de la credencial.",
+            why: "Leísmo de cosa: no aceptado en la norma culta.",
+          },
+        ],
+      },
+    ],
+  },
+  grammar: {
+    intro: "Decide primero qué variedad o qué norma pide el texto; después elige la forma.",
+    exercises: [
+      {
+        id: "c2-08-gramatica-variedad",
+        type: "context",
+        prompt: "Lee cada fragmento y decide qué hacer con el tiempo verbal.",
+        items: [
+          {
+            context: "Diario de un peregrino de Guadalajara (México) para la antología: «Hoy salí de Sahagún con lluvia y llegué empapado a El Burgo Ranero».",
+            q: "Para la edición mexicana del libro, ¿qué haces?",
+            options: [
+              "Lo cambio a «hoy he salido… he llegado».",
+              "Lo mantengo: el indefinido para hechos de hoy es normal en su variedad.",
+              "Lo cambio a pluscuamperfecto.",
+            ],
+            answer: 1,
+            why: "En gran parte de América el indefinido cubre el día de hoy. Es la voz del autor.",
+          },
+          {
+            context: "Nota del editor en la edición peninsular: «Esta mañana ___ la credencial número diez mil del año».",
+            q: "¿Qué forma encaja mejor en la voz del editor peninsular?",
+            options: ["sellamos", "habíamos sellado", "hemos sellado"],
+            answer: 2,
+            why: "En el centro y el norte de España, un hecho de hoy se cuenta con el compuesto.",
+          },
+          {
+            context: "Diario de una peregrina de La Paz: «Llegando a la plaza, ¡la catedral había sido toda de vidrieras!».",
+            q: "¿Qué expresa el pluscuamperfecto?",
+            options: [
+              "Que la catedral tenía vidrieras antes y ahora no.",
+              "La sorpresa de descubrirlo en ese momento.",
+              "Una acción anterior a otra acción pasada.",
+            ],
+            answer: 1,
+            why: "Uso andino de descubrimiento: ≈ resulta que es toda de vidrieras.",
+          },
+          {
+            context: "Testimonio de un hospitalero de Arequipa: «Mi abuelo había trabajado en las minas de Puno, eso me decía mi mamá».",
+            q: "¿Qué añade el pluscuamperfecto, además del tiempo?",
+            options: [
+              "Que el hablante conoce el dato porque se lo contaron.",
+              "Que el abuelo todavía trabaja en las minas.",
+              "Que el hablante estuvo presente.",
+            ],
+            answer: 0,
+            why: "Uso de información no presenciada; «eso me decía mi mamá» lo confirma.",
+          },
+        ],
+      },
+      {
+        id: "c2-08-gramatica-pronombres",
+        type: "gap",
+        prompt: "Completa las cartas de la asociación con el pronombre que pide la norma culta escrita.",
+        items: [
+          { q: "A los peregrinos de Bogotá ___ enviamos ayer el mapa de etapas.", answers: [["les"]], why: "Complemento indirecto plural: «les»." },
+          { q: "El mapa de etapas se ___ enviamos ayer a los peregrinos de Bogotá.", answers: [["lo"]], why: "«Lo» concuerda con «el mapa»; el plural del destinatario no se marca." },
+          { q: "La hospitalera perdió las llaves y ___ ayudamos a buscarlas.", answers: [["la"]], why: "«Ayudar» lleva complemento directo: «la ayudamos»." },
+          { q: "A la señora Quispe ___ llamamos por teléfono para confirmar la cama.", answers: [["la"]], why: "«Llamar» por teléfono: complemento directo femenino." },
+          { q: "Al peregrino que gritaba en el dormitorio ___ llamaron la atención.", answers: [["le"]], why: "«Llamar la atención a alguien»: complemento indirecto." },
+          { q: "Estimada señora: ___ informamos de que su reserva ha sido confirmada.", answers: [["la"]], why: "Con «de que», la persona es complemento directo: «la informamos de que»." },
+        ],
+      },
+      {
+        id: "c2-08-gramatica-escala",
+        type: "classify",
+        prompt: "Clasifica cada frase según el juicio de la norma culta.",
+        categories: ["Recomendado o admitido", "Desaconsejado en la escritura cuidada", "No aceptado"],
+        items: [
+          { text: "Al hospitalero le conocí en Astorga.", cat: 0, why: "Leísmo de persona masculino singular: admitido." },
+          { text: "Le esperamos en el albergue, señor Ruiz.", cat: 0, why: "«Le» de cortesía con usted: aceptado." },
+          { text: "A los voluntarios les vi muy cansados.", cat: 1, why: "Leísmo de persona en plural: desaconsejado." },
+          { text: "Dile a tus amigos que guarden sitio.", cat: 1, why: "«Le» por «les»: frecuente, pero se evita en la escritura cuidada." },
+          { text: "El bastón le dejé en la entrada.", cat: 2, why: "Leísmo de cosa: no aceptado." },
+          { text: "A mi hermana la regalé una concha.", cat: 2, why: "Laísmo: no aceptado." },
+          { text: "A la peregrina la ayudamos con la mochila.", cat: 0, why: "«Ayudar» con complemento directo: recomendado." },
+          { text: "El mapa se los mandé a los chicos.", cat: 1, why: "Plural del destinatario pasado a «los»: frecuente en América, evitado en lo escrito." },
+        ],
+      },
+      {
+        id: "c2-08-gramatica-errores",
+        type: "error",
+        prompt: "Corrige cada frase de la correspondencia oficial según la norma culta escrita.",
+        items: [
+          {
+            sentence: "Le informamos de que la recogeremos en la estación. (A una peregrina, con la construcción «de que».)",
+            answers: ["La informamos de que la recogeremos en la estación."],
+            why: "Con «de que», la persona informada es complemento directo: «la».",
+          },
+          {
+            sentence: "A las peregrinas de Quito las dimos la bienvenida en la puerta.",
+            answers: ["A las peregrinas de Quito les dimos la bienvenida en la puerta."],
+            why: "«Dar la bienvenida a alguien»: complemento indirecto. «Las» es laísmo.",
+          },
+          {
+            sentence: "Las credenciales se las entregamos a los peregrinos, y el sello también se los pusimos.",
+            answers: ["Las credenciales se las entregamos a los peregrinos, y el sello también se lo pusimos."],
+            why: "«El sello» es singular: «se lo». No se marca el plural de los destinatarios.",
+          },
+          {
+            sentence: "El recibo le encontrará en el sobre adjunto.",
+            answers: ["El recibo lo encontrará en el sobre adjunto."],
+            why: "Leísmo de cosa: la norma pide «lo».",
+          },
+        ],
+      },
+    ],
+  },
+  vocabulary: {
+    intro: "Léxico del Camino y de la correspondencia institucional, para hablar de los textos que se editan esta semana.",
+    groups: [
+      {
+        title: "El Camino y la acogida",
+        items: [
+          { es: "la credencial", note: "documento del peregrino donde se acumulan los sellos de cada etapa" },
+          { es: "el albergue de donativo", note: "alojamiento donde cada peregrino paga lo que puede" },
+          { es: "el hospitalero / la hospitalera", note: "voluntario que atiende un albergue" },
+          { es: "la etapa", note: "tramo que se recorre en una jornada" },
+          { es: "sellar", note: "estampar el sello del lugar en la credencial" },
+          { es: "la ampolla", note: "herida llena de líquido que sale en los pies al caminar" },
+        ],
+      },
+      {
+        title: "Editar y escribir cartas",
+        items: [
+          { es: "la antología", note: "selección de textos de varios autores" },
+          { es: "respetar la voz", note: "no cambiar la manera de hablar de quien escribe" },
+          { es: "la nota del editor", note: "aclaración breve de quien edita el texto" },
+          { es: "la fórmula de cortesía", note: "expresión fija para saludar o despedirse en una carta" },
+          { es: "la edición peninsular / americana", note: "versión de un libro preparada para lectores de España o de América" },
+          { es: "acusar recibo", note: "confirmar que se ha recibido algo" },
+        ],
+      },
+    ],
+    exercises: [
+      {
+        id: "c2-08-lexico-relacion",
+        type: "match",
+        prompt: "Relaciona cada expresión con su definición.",
+        pairs: [
+          { left: "la credencial", right: "documento del peregrino donde se acumulan los sellos de cada etapa" },
+          { left: "el albergue de donativo", right: "alojamiento donde cada peregrino paga lo que puede" },
+          { left: "respetar la voz", right: "no cambiar la manera de hablar de quien escribe" },
+          { left: "la nota del editor", right: "aclaración breve de quien edita el texto" },
+          { left: "acusar recibo", right: "confirmar que se ha recibido algo" },
+          { left: "la fórmula de cortesía", right: "expresión fija para saludar o despedirse en una carta" },
+        ],
+      },
+      {
+        id: "c2-08-lexico-uso",
+        type: "gap",
+        prompt: "Completa con la expresión adecuada del vocabulario.",
+        bank: ["hospitalera", "etapa", "acusamos recibo", "edición americana"],
+        items: [
+          { q: "La ___ del albergue de Mansilla nos curó las ampollas con agua y sal.", answers: [["hospitalera"]] },
+          { q: "La ___ entre León y San Martín del Camino es larga y muy llana.", answers: [["etapa"]] },
+          { q: "Estimado señor: ___ de su carta del 3 de mayo.", answers: [["acusamos recibo"]] },
+          { q: "En la ___ los textos de la asociación usarán «lo» y «la» en todos los casos.", answers: [["edición americana"]] },
+        ],
+      },
+    ],
+  },
+  pronunciation: {
+    focus: "La -s final que distingue «le» de «les» y «lo» de «los»",
+    explanation: [
+      "En la escritura, la diferencia entre «le» y «les» o entre «se lo» y «se los» es una sola letra. En la lengua oral, esa -s final puede pronunciarse plena, aspirarse o perderse según la variedad. En muchas zonas de Andalucía, Canarias y gran parte de América, «les dije» puede sonar casi como «le dije», y por eso el contexto pesa más que el sonido.",
+      "Al leer en voz alta una carta formal, pronuncia la -s con claridad, sobre todo ante consonante: «les-di-mos», «se-los-man-da-mos». También conviene ligar sin pausa el auxiliar y el participio del pretérito perfecto: «he-ca-mi-na-do» forma un solo grupo, y «hoy-he» se une en sinalefa.",
+      "El audio utiliza la síntesis disponible en el navegador: no certifica un acento regional ni evalúa tu pronunciación. Úsalo para percibir el contraste.",
+    ],
+    table: {
+      caption: "Pares que se distinguen por la -s final",
+      head: ["Singular", "Plural"],
+      rows: [
+        ["le dimos la llave", "les dimos la llave"],
+        ["se lo mandamos", "se los mandamos"],
+        ["lo llamamos", "los llamamos"],
+        ["le escribimos ayer", "les escribimos ayer"],
+      ],
     },
-    "produce": [
-      {
-        "text": "El resultado es concluyente sobre esa franja.",
-        "tip": "Marca grupos fónicos y explica qué interpretación favoreces.",
-        "voice": "es-ES-f"
-      },
-      {
-        "text": "El resultado parece prometedor para nuevas pruebas.",
-        "tip": "Cambia el foco sin cambiar las palabras; pide una interpretación a tu interlocutor.",
-        "voice": "es-ES-m"
-      },
-      {
-        "text": "La precisión consiste en controlar las inferencias de la elección léxica.",
-        "tip": "Lee a velocidad cómoda, conserva la reserva y compara tu grabación local con tu intención.",
-        "voice": "es-ES-f"
-      }
-    ]
-  },
-  "listening": {
-    "title": "Mesa de trabajo: La palabra que inclina la balanza",
-    "context": "Dos participantes preparan una intervención sobre el caso. Escucha primero sin transcripción. Las voces son sintéticas y no se presentan como variedades regionales verificadas.",
-    "speakers": [
-      {
-        "id": "a",
-        "name": "Lola",
-        "voice": "es-ES-f",
-        "role": "Primera perspectiva"
-      },
-      {
-        "id": "b",
-        "name": "Marcos",
-        "voice": "es-ES-m",
-        "role": "Contraste y reformulación"
-      }
-    ],
-    "script": [
-      {
-        "speaker": "a",
-        "text": "Si llamo austero al taller, el lector imagina una sobriedad elegida. Si digo precario, entiende falta de medios. En realidad, algunas herramientas son antiguas porque funcionan bien y otras no se sustituyen porque no hay presupuesto. Necesito una descripción que no convierta toda carencia en virtud ni toda sencillez en abandono."
-      },
-      {
-        "speaker": "b",
-        "text": "Lo mismo ocurre con admitió. En tu perfil parece que la dirección cedió ante una verdad que llevaba años negando. Las actas muestran una discusión sobre financiación. Podrías escribir reconoció el valor del hallazgo, si eso dijo, pero no atribuir una resistencia anterior solo porque el relato necesita un antagonista. El conflicto real ya es interesante sin añadirle otro."
-      },
-      {
-        "speaker": "a",
-        "text": "También cambiaré concluyente. El hallazgo es concluyente respecto a la presencia de restos en esa franja, pero no respecto a la restauración completa. Quizá conserve la palabra si añado el complemento preciso. No quiero que revisar consista siempre en sustituir términos fuertes por términos vagos. A veces la mejor corrección consiste en decir exactamente sobre qué se sostiene la certeza."
-      },
-      {
-        "speaker": "b",
-        "text": "Y el refrán puede quedarse si introduces la objeción del lector. El tiempo de secado no explica los años sin financiación. Una coda podría distinguir la lentitud necesaria de la demora evitable. En la lectura oral, subraya esa oposición con dos grupos breves, sin teatralizarla demasiado. Así la voz ayuda a oír una distinción que el adjetivo por sí solo había borrado y el cierre deja de absolver todas las esperas. El lector puede aceptar una imagen y seguir pidiendo cuentas por sus límites."
-      },
-      {
-        "speaker": "a",
-        "text": "El restaurador me ha escrito que dos análisis negativos le hicieron cambiar de hipótesis. Voy a incluirlo porque evita que el desenlace convierta quince años de trabajo en una marcha inevitable hacia la verdad. Puedo conservar obstinación en su propia cita, pero necesito dejar claro que es una autovaloración y no una etiqueta indiscutible del narrador."
-      },
-      {
-        "speaker": "b",
-        "text": "Ese cambio afecta a la atribución, no solo al tono. También puedes usar concluyente y prometedor en el mismo párrafo si cada adjetivo tiene un objeto explícito. El resultado cierra una pregunta sobre la franja y abre otras sobre conservación. En la defensa oral, pediría a la columnista que señale dónde una valoración pasa de describir un dato a organizar toda una biografía. Para el cierre, conservaré esta distinción: La precisión consiste en controlar las inferencias de la elección léxica."
-      }
-    ],
-    "stages": [
-      {
-        "stage": "gist",
-        "prompt": "Escucha el intercambio completo sin abrir la transcripción. Reconstruye el desacuerdo central.",
-        "exercise": {
-          "id": "c2-08-escucha-gist",
-          "type": "choice",
-          "prompt": "Interpreta el diálogo: La palabra que inclina la balanza",
-          "items": [
-            {
-              "q": "¿Qué problema organiza la conversación de La palabra que inclina la balanza?",
-              "options": [
-                "Concluyente garantiza una restauración integral.",
-                "La precisión consiste en controlar las inferencias de la elección léxica."
-              ],
-              "answer": 1,
-              "why": "Reconstruye el propósito común antes de buscar detalles."
-            },
-            {
-              "q": "En esta fase, ¿qué conclusión sería excesiva sobre La palabra que inclina la balanza?",
-              "options": [
-                "La precisión consiste en controlar las inferencias de la elección léxica.",
-                "Admitir y sostener atribuyen siempre la misma actitud."
-              ],
-              "answer": 1,
-              "why": "La primera opción amplía o deforma lo que permite el intercambio."
-            }
-          ]
-        }
-      },
-      {
-        "stage": "detail",
-        "prompt": "Escucha otra vez y anota afirmación, condición y fuente. No copies frases todavía.",
-        "exercise": {
-          "id": "c2-08-escucha-detail",
-          "type": "choice",
-          "prompt": "Interpreta el diálogo: La palabra que inclina la balanza",
-          "items": [
-            {
-              "q": "¿Qué límite deben conservar los interlocutores de La palabra que inclina la balanza?",
-              "options": [
-                "Los restos originales se confirmaron solo en una franja de veinte centímetros.",
-                "Se hallaron restos en toda la superficie."
-              ],
-              "answer": 0,
-              "why": "La conversación vuelve sobre el límite que evita una promesa o inferencia excesiva."
-            },
-            {
-              "q": "En esta fase, ¿qué conclusión sería excesiva sobre La palabra que inclina la balanza?",
-              "options": [
-                "Los restos originales se confirmaron solo en una franja de veinte centímetros.",
-                "Admitir y sostener atribuyen siempre la misma actitud."
-              ],
-              "answer": 1,
-              "why": "La primera opción amplía o deforma lo que permite el intercambio."
-            }
-          ]
-        }
-      },
-      {
-        "stage": "notice",
-        "prompt": "Localiza una reformulación y explica qué inferencia repara. Consulta la transcripción solo después de responder.",
-        "exercise": {
-          "id": "c2-08-escucha-notice",
-          "type": "choice",
-          "prompt": "Interpreta el diálogo: La palabra que inclina la balanza",
-          "items": [
-            {
-              "q": "¿Qué inferencia pragmática permite el diálogo de La palabra que inclina la balanza?",
-              "options": [
-                "El desenlace favorable puede sesgar retrospectivamente la valoración de la persistencia.",
-                "Admitir y sostener atribuyen siempre la misma actitud."
-              ],
-              "answer": 0,
-              "why": "La inferencia se apoya en una reformulación y su contexto; no es una lectura literal de una palabra."
-            },
-            {
-              "q": "En esta fase, ¿qué conclusión sería excesiva sobre La palabra que inclina la balanza?",
-              "options": [
-                "El desenlace favorable puede sesgar retrospectivamente la valoración de la persistencia.",
-                "Admitir y sostener atribuyen siempre la misma actitud."
-              ],
-              "answer": 1,
-              "why": "La primera opción amplía o deforma lo que permite el intercambio."
-            }
-          ]
-        }
-      }
-    ]
-  },
-  "reading": {
-    "title": "La palabra que inclina la balanza · expediente de lectura",
-    "genre": "Dossier original: texto principal y documento de contraste",
-    "frame": "Situación ficticia para lectura crítica y mediación. Identifica qué voz afirma cada cosa antes de integrar las fuentes.",
-    "text": [
-      "El perfil del restaurador empezó con un adjetivo: obstinado. Durante quince años había defendido que el mural del vestíbulo conservaba una capa original bajo tres repintes. El artículo narraba sus intentos fallidos, sus cartas y la paciencia del equipo que trabajó con él. Al final, cuando una prueba confirmó parte de su hipótesis, el mismo comportamiento recibió otro nombre: perseverancia. El hallazgo parecía haber cambiado retrospectivamente el valor moral de los años anteriores.",
-      "La elección no era enteramente arbitraria. Persistir contra una evidencia sólida puede ser obstinación; mantener una hipótesis sometiéndola a nuevas pruebas puede ser perseverancia. Pero el texto no había explicado qué hacía el restaurador cuando aparecía un resultado contrario. Sin ese dato, los adjetivos distribuían simpatía según el desenlace. Una revisión más precisa sustituyó el primer juicio por una descripción: solicitó tres análisis, aceptó dos resultados negativos y limitó su hipótesis a un sector del mural.",
-      "Otro párrafo decía que la dirección había admitido la necesidad de estudiar la obra. El verbo sugería una resistencia previa o el reconocimiento tardío de algo evidente. Las actas mostraban, sin embargo, que la dirección había propuesto el estudio años antes y discrepaba sobre su financiación. Cambiar admitió por sostuvo no borraba el conflicto; evitaba inventarle una historia. La precisión léxica no es una competición por encontrar la palabra más rara, sino una forma de responsabilizarse de la inferencia que se introduce.",
-      "La columnista cerraba con una variación del refrán: no por mucho madrugar se seca antes el pigmento. La frase defendía el tiempo del oficio frente a la prisa administrativa. Un lector observó que la restauración había sufrido también periodos de abandono, no solo de prudencia. La alusión convertía todas las demoras en paciencia sabia. Una imagen puede iluminar un aspecto y proteger otro de la crítica; su elegancia no la exime de justificar esa selección.",
-      "Nota del museo. El estudio confirmó restos originales en una franja de veinte centímetros, no en la totalidad del mural. La intervención futura dependerá del estado de conservación y de pruebas adicionales. El director calificó el resultado de prometedor; el comunicado inicial lo llamó concluyente. El comité pidió distinguir una evidencia que cierra una pregunta de otra que permite abrir una investigación más delimitada. La corrección del adjetivo cambiaba también el compromiso público: ya no se anunciaba una restauración integral como consecuencia inevitable del hallazgo. El comité no exigió retirar el entusiasmo del comunicado. Exigió que el entusiasmo no decidiera por adelantado una intervención cuya conveniencia técnica aún debía discutirse.",
-      "Carta del restaurador. No me molesta que me llamen obstinado, escribió, si se explica cuándo insistí sin tener todavía una prueba suficiente. Me molesta que el hallazgo convierta todos mis intentos anteriores en aciertos. Dos análisis negativos me obligaron a cambiar de zona y uno de mis argumentos iniciales resultó equivocado. El testimonio complicaba la oposición entre héroe perseverante e institución resistente. También mostraba que una trayectoria puede contener persistencia valiosa y errores reales sin que un adjetivo único tenga que resolverla.",
-      "La columnista decidió conservar la palabra obstinación en una cita atribuida al propio restaurador y retirarla de la voz narrativa. El cambio no declaraba falsa la valoración; cambiaba quién asumía su responsabilidad. Después revisó prometedor y concluyente en el cierre. La primera palabra proyectaba una posibilidad; la segunda cerraba una cuestión delimitada. Podían coexistir si se referían a objetos distintos: conclusión sobre la presencia de pigmento y promesa de nuevas preguntas de conservación. El ejercicio léxico culmina así en una decisión de arquitectura textual. No basta escoger la palabra exacta en una oración aislada; hay que mantener estable aquello sobre lo que se predica y evitar que el lector traslade una certeza local a una conclusión general."
-    ],
-    "tasks": [
-      {
-        "id": "c2-08-lectura",
-        "type": "choice",
-        "prompt": "Reconstruye la tesis y su límite en La palabra que inclina la balanza.",
-        "items": [
-          {
-            "q": "¿Qué tesis sostiene el dossier «La palabra que inclina la balanza»?",
-            "options": [
-              "La precisión consiste en controlar las inferencias de la elección léxica.",
-              "Concluyente garantiza una restauración integral."
-            ],
-            "answer": 0,
-            "why": "La tesis integra el contraste entre las fuentes, no solo una frase aislada."
-          },
-          {
-            "q": "¿Qué detalle limita la interpretación en «La palabra que inclina la balanza»?",
-            "options": [
-              "Los restos originales se confirmaron solo en una franja de veinte centímetros.",
-              "Se hallaron restos en toda la superficie."
-            ],
-            "answer": 0,
-            "why": "El documento complementario delimita qué está confirmado."
-          }
-        ]
-      },
-      {
-        "id": "c2-08-lectura-evidencia",
-        "type": "open",
-        "prompt": "Defiende una interpretación de La palabra que inclina la balanza con pruebas y contraejemplos.",
-        "items": [
-          {
-            "prompt": "Contrasta «La precisión consiste en controlar las inferencias de la elección léxica.» con «Concluyente garantiza una restauración integral.». Cita dos fragmentos breves, atribuye sus voces y explica qué detalle impide sostener la segunda lectura.",
-            "model": "La precisión consiste en controlar las inferencias de la elección léxica. Los restos originales se confirmaron solo en una franja de veinte centímetros.",
-            "checklist": [
-              "Distingo cita e interpretación.",
-              "Incluyo una lectura rival y un límite."
-            ]
-          }
-        ]
-      }
-    ],
-    "noticing": {
-      "prompt": "Observa cómo las formas del expediente distribuyen certeza, responsabilidad y voz.",
-      "items": [
+    perceive: {
+      id: "c2-08-percepcion",
+      type: "listen",
+      prompt: "Escucha cada frase y decide qué forma oyes.",
+      items: [
         {
-          "quote": "El perfil del restaurador empezó con un adjetivo: obstinado.",
-          "note": "Examina el encuadre inicial y qué información necesitarás para revisarlo."
+          q: "¿Qué pronombre oyes?",
+          options: ["le", "les"],
+          answer: 1,
+          why: "Se oye la -s final antes de «dimos».",
+          audio: "A los peregrinos de Burgos les dimos dos mantas más.",
+          voice: "es-ES-m",
         },
         {
-          "quote": "Nota del museo.",
-          "note": "El documento final introduce otra perspectiva; identifica qué interpretación limita y qué deja abierto."
-        }
-      ]
-    }
+          q: "¿Qué combinación oyes?",
+          options: ["se lo", "se los", "se las"],
+          answer: 0,
+          why: "Sin -s final: «se lo» (el mapa).",
+          audio: "El mapa se lo mandamos ayer a la familia Ortega.",
+          voice: "es-ES-f",
+        },
+        {
+          q: "¿Qué tiempo verbal oyes para el hecho de hoy?",
+          options: ["pretérito perfecto: he llegado", "indefinido: llegué"],
+          answer: 0,
+          why: "Se oye el auxiliar «he» unido a «llegado».",
+          audio: "Hoy he llegado a Hospital de Órbigo antes del mediodía.",
+          voice: "es-ES-f",
+        },
+        {
+          q: "¿Qué tiempo verbal oyes para el hecho de hoy?",
+          options: ["pretérito perfecto: he llegado", "indefinido: llegué"],
+          answer: 1,
+          why: "«Llegué»: indefinido para un hecho de hoy, normal en gran parte de América.",
+          audio: "Hoy llegué a Hospital de Órbigo antes del mediodía.",
+          voice: "es-MX-m",
+        },
+      ],
+    },
+    produce: [
+      { text: "A los peregrinos les dimos la llave y se la devolvieron a la hospitalera.", tip: "Marca la -s de «les» y no la pongas en «se la».", voice: "es-ES-f" },
+      { text: "Hoy he caminado veinticinco kilómetros y me he quedado sin fuerzas.", tip: "Une «hoy he» y «me he» sin pausa.", voice: "es-ES-m" },
+      { text: "Hoy caminé veinticinco kilómetros y me quedé sin fuerzas.", tip: "Misma información en la variedad que usa el indefinido para hoy.", voice: "es-PE-f" },
+      { text: "¡Había sido enorme la catedral!", tip: "Entonación exclamativa de descubrimiento: sube en «enorme».", voice: "es-PE-m" },
+    ],
+    spelling: "Si en tu variedad la -s final se aspira, revisa con especial cuidado «le» y «les» al escribir: el oído no te avisará del error.",
   },
-  "practice": {
-    "intro": "Combina orden, clasificación, producción y recuperación espaciada. Las respuestas abiertas se contrastan con criterios y con tu docente.",
-    "exercises": [
+  listening: {
+    title: "Reunión: la antología y las cartas",
+    context: "Lucía, presidenta de una asociación leonesa de acogida a peregrinos, revisa con Rodrigo, voluntario peruano que coordina la edición americana, y con Ximena, voluntaria mexicana, la antología «Diarios del Camino» y la plantilla de cartas de la asociación. Escucha primero sin transcripción. Las voces son sintéticas y no se presentan como variedades regionales verificadas.",
+    speakers: [
+      { id: "l", name: "Lucía", voice: "es-ES-f", role: "Presidenta de la asociación, en León" },
+      { id: "r", name: "Rodrigo", voice: "es-PE-m", role: "Coordinador de la edición americana" },
+      { id: "x", name: "Ximena", voice: "es-MX-f", role: "Voluntaria y correctora" },
+    ],
+    script: [
+      { speaker: "l", text: "Bueno, empecemos, que esta tarde llegan treinta peregrinos y quiero tenerlo cerrado. Rodrigo, ¿has podido revisar los diarios de la segunda parte?" },
+      { speaker: "r", text: "Sí, los terminé anoche. Hay uno que quería comentarles: el de la señora de Cochabamba. Escribe «llegando a León, ¡la catedral había sido toda de luz!». La correctora de la edición peninsular lo ha marcado y propone «la catedral era toda de luz»." },
+      { speaker: "l", text: "Yo, la verdad, al leerlo pensé que se había equivocado de tiempo. ¿No es así?" },
+      { speaker: "r", text: "No, para nada. En Bolivia, y también en Perú, ese pluscuamperfecto expresa sorpresa: la señora acaba de descubrirlo. Es como decir «resulta que la catedral es toda de luz». Si lo cambiamos, la frase pierde justo eso, el asombro." },
+      { speaker: "x", text: "Estoy de acuerdo con Rodrigo. Además, la regla que acordamos fue respetar la voz de cada peregrino. Si el lector español no lo entiende, ponemos una nota del editor al pie, en nuestra voz, y la cita queda como está." },
+      { speaker: "l", text: "Vale, me convencéis. ¿Y con los tiempos de hoy? Porque en el diario del chico de Guadalajara pone «hoy salí de Sahagún» y en la edición peninsular yo habría puesto «hoy he salido»." },
+      { speaker: "x", text: "Ahí lo mismo: en México contamos lo de hoy con el indefinido. Es su manera de escribir. Lo que sí tenemos que cuidar es la voz del editor: en la introducción de la edición peninsular, Lucía, tú escribes «esta mañana hemos sellado», y en la americana, «esta mañana sellamos». Cada edición con su variedad, pero sin mezclar dentro de una misma voz." },
+      { speaker: "l", text: "Perfecto. Pasemos a las cartas, que ahí sí me preocupa más la norma. Nuestra plantilla dice «Le esperamos en el albergue» y «Al peregrino le recibiremos en la puerta». ¿Eso se entiende bien en América?" },
+      { speaker: "r", text: "«Le esperamos», sí, sin problema: ese le de cortesía con usted es muy común en cartas en todas partes. Lo otro, «al peregrino le recibiremos», se entiende, pero en Perú diríamos «lo recibiremos». Como la carta va a todos los países, yo usaría lo, que es lo que recomienda la norma para cualquier lector." },
+      { speaker: "x", text: "Y hay otra cosa. La plantilla dice «la informamos que su cama está reservada». Eso mezcla dos construcciones. O ponemos «la informamos de que», o «le informamos que». En México usaríamos la segunda, pero cualquiera de las dos está bien, siempre que no se mezclen." },
+      { speaker: "l", text: "Buena observación. Y una última: en el correo de grupo escribimos «dile a tus compañeros que traigan saco de dormir». ¿Lo dejamos?" },
+      { speaker: "x", text: "En una conversación, sí, es lo que dice casi todo el mundo. En un correo de la asociación, mejor «diles a tus compañeros». Y cuando mandemos el mapa a un grupo, «se lo mandamos», aunque en México muchos digamos «se los mandamos» al hablar." },
+      { speaker: "l", text: "Pues entonces queda así: en los diarios, la voz de cada peregrino, con notas si hace falta; en nuestras cartas, la norma culta que sirva para todos, con lo y la, les para el plural y la construcción de informar bien elegida." },
+    ],
+    stages: [
       {
-        "id": "c2-08-orden",
-        "type": "order",
-        "prompt": "Reconstruye dos relaciones centrales del caso La palabra que inclina la balanza.",
-        "items": [
+        stage: "gist",
+        prompt: "Escucha la reunión completa sin abrir la transcripción. ¿Qué dos tipos de textos revisan y con qué criterio general?",
+        exercise: {
+          id: "c2-08-escucha-gist",
+          type: "choice",
+          prompt: "Reconstruye la situación y el criterio general.",
+          items: [
+            {
+              q: "¿Qué revisan Lucía, Rodrigo y Ximena?",
+              options: [
+                "Los diarios de una antología y la plantilla de cartas de la asociación.",
+                "Las normas del albergue y los horarios de las etapas.",
+                "El presupuesto de la asociación para el próximo año.",
+              ],
+              answer: 0,
+              why: "Primero comentan los diarios y después la plantilla de cartas.",
+            },
+            {
+              q: "¿Qué criterio general adoptan?",
+              options: [
+                "Corregir todos los textos según la norma peninsular.",
+                "Respetar la voz de los peregrinos y aplicar una norma culta común en las cartas de la asociación.",
+                "Publicar solo diarios escritos en España.",
+              ],
+              answer: 1,
+              why: "Lucía lo resume al final: voz de cada peregrino en los diarios, norma culta común en las cartas.",
+            },
+          ],
+        },
+      },
+      {
+        stage: "detail",
+        prompt: "Escucha otra vez y anota cada caso. Responde sin mirar la transcripción.",
+        exercise: {
+          id: "c2-08-escucha-detail",
+          type: "choice",
+          prompt: "Comprueba los detalles.",
+          items: [
+            {
+              q: "¿Por qué Rodrigo rechaza cambiar «había sido toda de luz»?",
+              options: [
+                "Porque la autora no quiere cambios.",
+                "Porque el pluscuamperfecto expresa la sorpresa del descubrimiento.",
+                "Porque es la forma más antigua.",
+              ],
+              answer: 1,
+              why: "Explica que equivale a «resulta que la catedral es toda de luz».",
+            },
+            {
+              q: "¿Qué cambia Rodrigo en la plantilla de cartas?",
+              options: [
+                "«Le esperamos» por «lo esperamos».",
+                "Nada, porque todo se entiende.",
+                "«Al peregrino le recibiremos» por «lo recibiremos».",
+              ],
+              answer: 2,
+              why: "Mantiene el «le» de cortesía y usa «lo» para el complemento directo de persona.",
+            },
+            {
+              q: "¿Qué problema ve Ximena en «la informamos que»?",
+              options: [
+                "Que mezcla dos construcciones de «informar».",
+                "Que es demasiado informal.",
+                "Que en México no se usa «informar».",
+              ],
+              answer: 0,
+              why: "Propone «la informamos de que» o «le informamos que».",
+            },
+          ],
+        },
+      },
+      {
+        stage: "notice",
+        prompt: "Fíjate en cómo se juzga cada forma en la reunión. Relaciona y consulta la transcripción solo después de responder.",
+        exercise: {
+          id: "c2-08-escucha-notice",
+          type: "match",
+          prompt: "Relaciona cada forma citada con la decisión del equipo.",
+          pairs: [
+            { left: "la catedral había sido toda de luz", right: "se respeta y se explica en nota" },
+            { left: "hoy salí de Sahagún", right: "se mantiene en el diario mexicano" },
+            { left: "Le esperamos en el albergue", right: "le de cortesía: se mantiene" },
+            { left: "al peregrino le recibiremos", right: "se cambia por «lo» en la carta común" },
+            { left: "dile a tus compañeros", right: "en un correo oficial, «diles»" },
+          ],
+          why: "En los diarios manda la voz de quien escribe; en las cartas, la norma culta común.",
+        },
+      },
+    ],
+  },
+  reading: {
+    title: "Diarios del Camino: una nota sobre cómo hemos editado",
+    genre: "Presentación editorial de una antología",
+    frame: "Presentación de Lucía Álvarez para la antología «Diarios del Camino», publicada por una asociación de acogida a peregrinos de León. Personas, entidad y diarios son ficticios.",
+    text: [
+      "Cada año pasan por nuestro albergue de León miles de peregrinos, y muchos dejan algo escrito: una frase en el libro de visitas, una carta de agradecimiento, a veces un cuaderno entero que nos envían meses después desde su casa. Esta antología reúne cuarenta de esos textos, escritos por personas de once países. Antes de publicarlos tuvimos que tomar decisiones que al principio parecían menores y que acabaron definiendo el libro: qué hacer con un tiempo verbal que en León suena raro, cuándo cambiar un pronombre y cuándo dejarlo.",
+      "La primera decisión fue la más importante: respetar la voz de quien escribe. Un diario no es un formulario, y su valor está precisamente en que cada peregrino cuenta el Camino a su manera. Por eso, cuando Javier, un estudiante de Guadalajara, escribe «hoy salí de Sahagún con lluvia y llegué empapado a El Burgo Ranero», no hemos cambiado nada. En gran parte de América, como en Canarias, Galicia o Asturias, lo que pasó hoy se cuenta con el indefinido. Un lector de León habría escrito «hoy he salido», pero ninguna de las dos formas es mejor que la otra; son variedades distintas del mismo idioma.",
+      "Más debate nos costó el diario de Elena Choque, una maestra de Cochabamba. Al llegar a la plaza de la catedral, escribe: «¡La catedral había sido toda de luz!». Nuestra primera correctora, de Valladolid, lo marcó como error de tiempo, y es comprensible: en el español de España, el pluscuamperfecto sitúa un hecho antes de otro hecho pasado, y la frase parece decir que la catedral ya no es luminosa. Pero en zonas andinas de Bolivia, Perú y Ecuador ese mismo tiempo puede expresar la sorpresa de quien descubre algo en ese instante. Elena no se equivocó: se asombró. Mantuvimos la frase tal cual y añadimos una nota del editor que lo explica a los lectores que no conocen ese uso.",
+      "Algo parecido ocurre con el testimonio de Rodrigo Mamani, hospitalero voluntario de Arequipa, que cuenta que su abuelo «había trabajado en las minas de Puno, eso decía mi mamá». Ahí el pluscuamperfecto señala, además, que Rodrigo no lo vio con sus propios ojos: lo sabe porque se lo contaron. Ese matiz, que en otras variedades necesitaría un «según parece» o un «dicen que», está ya dentro del verbo. Corregirlo habría sido quitarle información al texto.",
+      "Cada diario, por tanto, conserva su variedad. Lo que sí hemos unificado es nuestra propia voz. El libro tiene dos ediciones: una para lectores de España y otra para lectores de América. En la introducción y en las notas de la edición peninsular escribimos «esta mañana hemos sellado la credencial diez mil»; en la americana, «esta mañana sellamos». Lo que no hacemos nunca es mezclar las dos opciones dentro de una misma voz, porque esa mezcla sí parece un descuido.",
+      "La segunda parte del trabajo fue revisar las cartas que la asociación envía a los peregrinos antes y después del viaje. Aquí la situación es la contraria: no hay una voz ajena que respetar, sino una sola carta que van a leer personas de todo el mundo. Necesitábamos, por tanto, una norma culta común. Mantuvimos el «le» de cortesía en fórmulas como «Le esperamos en el albergue», que se usa y se acepta en todas partes. En cambio, sustituimos «al peregrino le recibiremos en la puerta» por «lo recibiremos», porque, aunque en León el leísmo de persona masculino está admitido y lo usamos al hablar, en la mayor parte de América resulta extraño, y la norma recomienda el uso de «lo» para cualquier lector.",
+      "Revisamos también los plurales. En los correos de grupo decíamos «dile a tus compañeros que traigan saco de dormir», que es lo que casi todos decimos en una conversación, pero que la escritura cuidada evita: ahora escribimos «diles». Y en «el mapa se lo mandamos a los peregrinos» resistimos la tentación de escribir «se los», muy frecuente en el habla de buena parte de América, porque en la escritura cuidada el plural de los destinatarios no se marca en el pronombre.",
+      "Por último, encontramos en la plantilla una frase que llevaba años sin que nadie la cuestionara: «la informamos que su cama está reservada». El verbo «informar» admite dos construcciones, «la informamos de que» y «le informamos que», y las dos son correctas; lo que no se recomienda es mezclarlas. Elegimos la primera para la edición peninsular y la segunda para la americana, que es la más habitual allí. Ninguna de estas decisiones convierte una variedad en la buena. Solo intentan que cada texto le hable a su lector como ese lector espera, y que la voz de los peregrinos llegue intacta.",
+    ],
+    glossary: [
+      { es: "el libro de visitas", note: "cuaderno donde los visitantes dejan sus comentarios" },
+      { es: "empapado", note: "completamente mojado" },
+      { es: "intacto", note: "sin cambios ni daños" },
+    ],
+    tasks: [
+      {
+        id: "c2-08-lectura-comprension",
+        type: "choice",
+        prompt: "Comprueba que has entendido la presentación.",
+        items: [
           {
-            "words": [
-              "El",
-              "adjetivo",
-              "necesita",
-              "un",
-              "alcance",
-              "explícito."
+            q: "¿Por qué la primera correctora marcó la frase de Elena Choque?",
+            options: [
+              "Porque en el español de España ese pluscuamperfecto parece situar un hecho antes de otro pasado.",
+              "Porque Elena escribió mal el nombre de la catedral.",
+              "Porque la frase era demasiado larga.",
             ],
-            "why": "La secuencia mantiene el alcance y las relaciones del caso."
+            answer: 0,
+            why: "El tercer párrafo explica la lectura peninsular del pluscuamperfecto.",
           },
           {
-            "words": [
-              "La",
-              "demora",
-              "evitable",
-              "no",
-              "es",
-              "paciencia",
-              "técnica."
+            q: "¿Qué añade el pluscuamperfecto en el testimonio de Rodrigo Mamani?",
+            options: [
+              "Que el abuelo sigue trabajando.",
+              "Que la información no fue presenciada por Rodrigo.",
+              "Que Rodrigo se sorprende.",
             ],
-            "why": "La secuencia mantiene el alcance y las relaciones del caso."
-          }
-        ]
-      },
-      {
-        "id": "c2-08-estatuto",
-        "type": "classify",
-        "prompt": "Clasifica el estatuto de estas formulaciones en «La palabra que inclina la balanza».",
-        "categories": [
-          "Conclusión respaldada o delimitada",
-          "Generalización no autorizada"
+            answer: 1,
+            why: "Lo sabe porque se lo contaron; el matiz está en el verbo.",
+          },
+          {
+            q: "¿Por qué el criterio de las cartas es distinto del de los diarios?",
+            options: [
+              "Porque las cartas son más largas.",
+              "Porque las cartas las escriben voluntarios.",
+              "Porque en las cartas no hay voz ajena que respetar y las leen personas de todo el mundo.",
+            ],
+            answer: 2,
+            why: "El sexto párrafo justifica una norma culta común.",
+          },
         ],
-        "items": [
-          {
-            "text": "La precisión consiste en controlar las inferencias de la elección léxica.",
-            "cat": 0,
-            "why": "Resume el razonamiento con sus límites."
-          },
-          {
-            "text": "Concluyente garantiza una restauración integral.",
-            "cat": 1,
-            "why": "Amplía o invierte el alcance de las fuentes."
-          },
-          {
-            "text": "Los restos originales se confirmaron solo en una franja de veinte centímetros.",
-            "cat": 0,
-            "why": "Conserva un detalle explícito del expediente."
-          },
-          {
-            "text": "Se hallaron restos en toda la superficie.",
-            "cat": 1,
-            "why": "Contradice la condición documentada."
-          }
-        ]
       },
       {
-        "id": "c2-08-microescritura",
-        "type": "open",
-        "prompt": "Produce dos versiones breves antes del dossier de La palabra que inclina la balanza.",
-        "items": [
-          {
-            "prompt": "Redacta una apertura de 80–100 palabras para el destinatario de «La palabra que inclina la balanza». Conserva la tesis y una reserva.",
-            "model": "El hallazgo confirma restos originales en una franja del mural. Es concluyente respecto a esa presencia, no respecto a la conveniencia de restaurar toda la obra. La perseverancia del restaurador merece describirse mediante sus decisiones ante pruebas contrarias, no deducirse retrospectivamente del éxito. La dirección sostuvo que faltaba financiación; escribir admitió habría introducido una resistencia que las actas no documentan. El refrán sobre el pigmento puede defender el tiempo necesario del oficio, siempre que no absuelva años de demora evitable. La precisión no apaga el entusiasmo: le asigna un objeto que puede sostener.",
-            "checklist": [
-              "Identifico quién necesita decidir y con qué información.",
-              "Separo afirmación, atribución e inferencia."
-            ]
-          },
-          {
-            "prompt": "Reformula para una persona ajena al debate de «La palabra que inclina la balanza» la condición que más fácilmente se perdería al resumir. Explica el coste de omitirla.",
-            "model": "Los restos originales se confirmaron solo en una franja de veinte centímetros. La precisión consiste en controlar las inferencias de la elección léxica.",
-            "checklist": [
-              "No convierto la condición en un dato accesorio.",
-              "Mantengo el alcance aunque simplifique el léxico."
-            ]
-          }
-        ]
+        id: "c2-08-lectura-decisiones",
+        type: "match",
+        prompt: "Relaciona cada forma con la decisión que explica la autora.",
+        pairs: [
+          { left: "hoy salí de Sahagún", right: "se respeta: indefinido para hoy en su variedad" },
+          { left: "la catedral había sido toda de luz", right: "se respeta con nota del editor" },
+          { left: "al peregrino le recibiremos", right: "se cambia a «lo» en la carta común" },
+          { left: "dile a tus compañeros", right: "se cambia a «diles» en el correo" },
+          { left: "la informamos que", right: "se elige una de las dos construcciones" },
+        ],
       },
       {
-        "id": "c2-08-recuperacion",
-        "type": "open",
-        "prompt": "Recupera recursos con materiales suministrados de semanas anteriores. No busques rasgos ausentes en el dossier actual. Contrasta después qué recurso sería pertinente transferir al nuevo caso.",
-        "items": [
+        id: "c2-08-lectura-evaluacion",
+        type: "open",
+        prompt: "Evalúa una decisión de la presentación con argumentos propios.",
+        items: [
           {
-            "prompt": "Recuperación c2.disc.subtexto. Recupera la semana 4, «Una silla que nadie ocupa». Material de contraste: Cuando volvieron a abrir el taller, Clara había dejado una silla junto a la ventana. Su hermano la apartó para pasar una caja. «Ahí estorba», dijo. Clara contestó que antes no estorbaba. Ninguno precisó antes de qué. El narrador podría habernos ayudado con una fecha o un recuerdo, pero siguió describiendo las manchas que las patas habían dejado sobre el suelo. Esa demora obliga al lector a percibir la importancia de un objeto cuya historia todavía desconoce. Formulación de trabajo: Clara zanjó que la silla sobraba.\n\nRecupera «Subtexto e inferencia» a partir del material suministrado. Produce una versión de 80–100 palabras que haga visible una relación implícita, mantenga una reserva y responda a una objeción. Explica cuál es tu aportación y cuál procede de la fuente. Contraste nuevo suministrado de «La palabra que inclina la balanza»: «La investigadora admitió que faltaban datos.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "La silla vuelve a la ventana, pero la etiqueta de precio permanece. Ese contraste permite leer el final como una tregua más que como reconciliación completa. Clara acepta la presencia del objeto sin retirar su incomodidad. Otra lectura puede ver en el gesto del hermano un reconocimiento afectivo; deberá explicar, sin embargo, por qué el conflicto material sigue visible. El relato no confirma qué ocurrió con el padre. Atribuirle una muerte cerraría una incertidumbre que organiza la escena. Prefiero conservar dos hipótesis y distinguir lo que muestran las acciones de la emoción que yo les atribuyo. En el nuevo contraste, «La investigadora admitió que faltaban datos.» debe interpretarse dentro de esta cuestión: Casi sinónimos, connotación y alusiones. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
+            prompt: "La asociación cambia «al peregrino le recibiremos» por «lo recibiremos», aunque en León el leísmo de persona masculino está admitido. Explica en 70–90 palabras por qué lo hace y si te parece una decisión acertada o excesiva.",
+            model: "Lo hace porque la carta no tiene un único público: la leen personas de once países, y en la mayor parte de América el leísmo resulta extraño. «Lo» es la forma que la norma recomienda en todas partes, mientras que «le» solo está admitido. Me parece acertada: no condena el uso leonés, que sigue vivo en la conversación, sino que elige la opción menos marcada para un texto común. Sería excesiva si se corrigieran también los diarios de peregrinos leoneses.",
+            checklist: [
+              "Explico el motivo de la decisión.",
+              "Distingo «admitido» de «recomendado».",
+              "Tomo posición y la justifico.",
+            ],
           },
-          {
-            "prompt": "Recuperación c2.voc.verbos-dicendi-matices. Recupera la semana 4, «Una silla que nadie ocupa». Unidades disponibles: espetar (decir con brusquedad); deslizar (introducir de manera indirecta); zanjar (dar por cerrado un asunto); eludir (evitar abordar algo); reticencia (reserva al decir o actuar); indicio (señal compatible con una hipótesis); atribuir (introducir una responsabilidad o intención); quedar en el aire (permanecer sin respuesta). Pasaje: Cuando volvieron a abrir el taller, Clara había dejado una silla junto a la ventana. Su hermano la apartó para pasar una caja. «Ahí estorba», dijo. Clara contestó que antes no estorbaba. Ninguno precisó antes de qué. El narrador podría habernos ayudado con una fecha o un recuerdo, pero siguió describiendo las manchas que las patas habían dejado sobre el suelo. Esa demora obliga al lector a percibir la importancia de un objeto cuya historia todavía desconoce.\n\nRecupera «Verbos introductores con matiz»: selecciona dos unidades del material, explica por qué no son intercambiables y redacta una frase sobre el caso con cada una. Contrasta una elección precisa con otra que introduciría una evaluación o un alcance distintos. Contraste nuevo suministrado de «La palabra que inclina la balanza»: «La investigadora admitió que faltaban datos.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "La silla vuelve a la ventana, pero la etiqueta de precio permanece. Ese contraste permite leer el final como una tregua más que como reconciliación completa. Clara acepta la presencia del objeto sin retirar su incomodidad. Otra lectura puede ver en el gesto del hermano un reconocimiento afectivo; deberá explicar, sin embargo, por qué el conflicto material sigue visible. El relato no confirma qué ocurrió con el padre. Atribuirle una muerte cerraría una incertidumbre que organiza la escena. Prefiero conservar dos hipótesis y distinguir lo que muestran las acciones de la emoción que yo les atribuyo. En este contraste, «espetar» nombra decir con brusquedad; «deslizar», introducir de manera indirecta. La elección debe conservar esa diferencia. En el nuevo contraste, «La investigadora admitió que faltaban datos.» debe interpretarse dentro de esta cuestión: Casi sinónimos, connotación y alusiones. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
-          },
-          {
-            "prompt": "Recuperación c2.pron.intencion-pragmatica. Recupera la semana 4, «Una silla que nadie ocupa». Textos para ensayo oral: «Molesta un poco, pero puede quedarse.» / «Molesta un poco; prefiero que la muevas.».\n\nMarca grupos fónicos, un foco y una pausa en cada texto. Produce dos lecturas propias y pide a tu interlocutor que explique el efecto. Recupera «Entonación e intención contextual» sin atribuir una intención segura ni una variedad a la síntesis. Si trabajas a solas, describe la intención y deja su comprobación perceptiva para clase. Contraste nuevo suministrado de «La palabra que inclina la balanza»: «La investigadora admitió que faltaban datos.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "Ensaya un poco como aceptación incómoda y como objeción suave. No asignes una emoción única a una pausa: compara qué lectura permite el conjunto de la escena. Un ensayo defendible conserva esta distinción del caso: El relato sostiene hipótesis de reconciliación y tregua sin resolverlas por completo. El resultado perceptivo debe contrastarse con un oyente; no queda acreditado por escribir una marca de pausa. En el nuevo contraste, «La investigadora admitió que faltaban datos.» debe interpretarse dentro de esta cuestión: Casi sinónimos, connotación y alusiones. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
-          },
-          {
-            "prompt": "Recuperación c2.read.relato-subtexto. Recupera la semana 4, «Una silla que nadie ocupa». Pasajes que debes contrastar: Cuando volvieron a abrir el taller, Clara había dejado una silla junto a la ventana. Su hermano la apartó para pasar una caja. «Ahí estorba», dijo. Clara contestó que antes no estorbaba. Ninguno precisó antes de qué. El narrador podría habernos ayudado con una fecha o un recuerdo, pero siguió describiendo las manchas que las patas habían dejado sobre el suelo. Esa demora obliga al lector a percibir la importancia de un objeto cuya historia todavía desconoce.\n\nLa autora descartó añadir una explicación al final, pero aceptó revisar un pronombre en el segundo párrafo. Algunos lectores atribuían la propuesta de venta a la vecina, que aún no había entrado. Esa confusión no contribuía al subtexto: impedía reconstruir quién estaba presente. La distinción entre ambigüedad deliberada y referencia defectuosa no puede decidirse solo por la intención del escritor. Debe examinarse qué trabajo interpretativo permite cada dificultad. La incertidumbre sobre el padre abre lecturas pertinentes; la incertidumbre accidental sobre quién habla puede cerrar la posibilidad de seguir el diálogo. El control estilístico consiste en conservar la primera y reparar la segunda, sin convertir el relato en una explicación de sí mismo.\n\nRelee estos pasajes y recupera «Leer un relato con subtexto». Formula una interpretación, un detalle que la apoye y una lectura rival. Señala qué dato del expediente completo necesitarías para reforzar o limitar tu conclusión. Contraste nuevo suministrado de «La palabra que inclina la balanza»: «La investigadora admitió que faltaban datos.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "La silla vuelve a la ventana, pero la etiqueta de precio permanece. Ese contraste permite leer el final como una tregua más que como reconciliación completa. Clara acepta la presencia del objeto sin retirar su incomodidad. Otra lectura puede ver en el gesto del hermano un reconocimiento afectivo; deberá explicar, sin embargo, por qué el conflicto material sigue visible. El relato no confirma qué ocurrió con el padre. Atribuirle una muerte cerraría una incertidumbre que organiza la escena. Prefiero conservar dos hipótesis y distinguir lo que muestran las acciones de la emoción que yo les atribuyo. En el nuevo contraste, «La investigadora admitió que faltaban datos.» debe interpretarse dentro de esta cuestión: Casi sinónimos, connotación y alusiones. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
-          },
-          {
-            "prompt": "Recuperación c2.wri.dialogo-subtexto. Recupera la semana 4, «Una silla que nadie ocupa». Modelo parcial que puedes transformar: La silla vuelve a la ventana, pero la etiqueta de precio permanece. Ese contraste permite leer el final como una tregua más que como reconciliación completa. Clara acepta la presencia del objeto sin retirar su incomodidad. Otra lectura puede ver en el gesto del hermano un reconocimiento afectivo; deberá explicar, sin embargo, por qué el conflicto material sigue visible. El relato no confirma qué ocurrió con el padre. Atribuirle una muerte cerraría una incertidumbre que organiza la escena. Prefiero conservar dos hipótesis y distinguir lo que muestran las acciones de la emoción que yo les atribuyo.\n\nRecupera «Escribir un diálogo con subtexto» mediante una nueva versión de 120–160 palabras de este fragmento para otro destinatario. Mantén la reserva principal, cambia el orden de la información y justifica dos decisiones. Si el objetivo exige un texto completo, retoma además tu entrega original de esa semana y revisa su conjunto. Contraste nuevo suministrado de «La palabra que inclina la balanza»: «La investigadora admitió que faltaban datos.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "La silla vuelve a la ventana, pero la etiqueta de precio permanece. Ese contraste permite leer el final como una tregua más que como reconciliación completa. Clara acepta la presencia del objeto sin retirar su incomodidad. Otra lectura puede ver en el gesto del hermano un reconocimiento afectivo; deberá explicar, sin embargo, por qué el conflicto material sigue visible. El relato no confirma qué ocurrió con el padre. Atribuirle una muerte cerraría una incertidumbre que organiza la escena. Prefiero conservar dos hipótesis y distinguir lo que muestran las acciones de la emoción que yo les atribuyo. Para una persona ajena al expediente, la información decisiva que debe seguir visible es: El relato sostiene hipótesis de reconciliación y tregua sin resolverlas por completo. En el nuevo contraste, «La investigadora admitió que faltaban datos.» debe interpretarse dentro de esta cuestión: Casi sinónimos, connotación y alusiones. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
-          },
-          {
-            "prompt": "Recuperación c2.read.prosa-densa. Recupera la semana 7, «Descomprimir una idea». Pasajes que debes contrastar: La evaluación de la ampliación de los horarios del archivo municipal concluye que aumentaron las consultas durante el primer semestre. La formulación parece transparente hasta que se pregunta qué se contó como consulta. El informe agrupa visitas presenciales, solicitudes de reproducción y accesos al catálogo digital. Que el total crezca no implica que cada modalidad lo haga, ni que el incremento pueda atribuirse a la ampliación horaria. La unidad de medida es parte del argumento, aunque figure en una nota metodológica.\n\nEsta reserva añadía complejidad al resumen, pero no obligaba a enumerar todos los problemas con idéntico peso. Para una decisión sobre horarios, la comparabilidad de visitas presenciales resultaba especialmente pertinente. Para una decisión sobre el catálogo, importaba distinguir consultas, descargas y personas usuarias sin identificarlas innecesariamente. El mismo informe podía sostener varias preguntas, siempre que no se supusiera que una cifra agregada respondía a todas. La bibliotecaria reformuló el cierre: disponemos de señales de mayor actividad y necesitamos medidas compatibles para valorar qué cambió. Esa frase conserva información positiva y una limitación metodológica sin convertir ninguna de las dos en el comentario secundario de la otra. La densidad no se resuelve eliminando relaciones, sino haciendo visibles las que organizan la interpretación.\n\nRelee estos pasajes y recupera «Prosa académica y ensayística densa». Formula una interpretación, un detalle que la apoye y una lectura rival. Señala qué dato del expediente completo necesitarías para reforzar o limitar tu conclusión. Contraste nuevo suministrado de «La palabra que inclina la balanza»: «La investigadora admitió que faltaban datos.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "El uso registrado del archivo aumentó después de la ampliación horaria, la digitalización y una exposición vinculada al catálogo. El diseño no permite aislar el efecto de cada intervención. Además, el indicador agrega modalidades distintas y la encuesta recoge sesenta respuestas de doscientas invitaciones. Estos límites no vuelven inútil el estudio: orientan una evaluación posterior más precisa. Para el público general, conviene explicar que abrir una puerta y hacer visible una colección al mismo tiempo dificulta atribuir el cambio a una sola causa. La analogía aclara el problema, pero no sustituye la definición de las medidas. En el nuevo contraste, «La investigadora admitió que faltaban datos.» debe interpretarse dentro de esta cuestión: Casi sinónimos, connotación y alusiones. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
-          },
-          {
-            "prompt": "Recuperación c2.gram.sintaxis-compleja. Recupera la semana 7, «Descomprimir una idea». Contrastes suministrados: La mejora observada no permite atribuir el cambio al programa. / Aunque la muestra sea pequeña, el contraste aporta información. / La evaluación de la aplicación exige identificar quién aplicó cada medida.\n\nExplica la estructura y el cambio de interpretación pertinentes para «Sintaxis compleja». Produce una cuarta formulación y señala expresamente qué referente, condición o perspectiva temporal conserva. Contraste nuevo suministrado de «La palabra que inclina la balanza»: «La investigadora admitió que faltaban datos.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "Una nominalización condensa un proceso, pero puede ocultar agente, tiempo o modalidad. La evaluación de la aplicación del programa exige reconstruir quién evalúa qué y con qué criterio. Las subordinadas encajadas necesitan referentes estables; al reformular, no conviertas una condición metodológica en conclusión. Con todo marca un límite argumentativo; no en vano aporta una justificación que el hablante considera pertinente. Un resumen académico conserva alcance y reservas, no solo resultados. Aplicación al caso: El uso registrado del archivo aumentó después de la ampliación horaria, la digitalización y una exposición vinculada al catálogo. El diseño no permite aislar el efecto de cada intervención. Además, el indicador agrega modalidades distintas y la encuesta recoge sesenta respuestas de doscientas invitaciones. Estos límites no vuelven inútil el estudio: orientan una evaluación posterior más precisa. Para el público general, conviene explicar que abrir una puerta y hacer visible una colección al mismo tiempo dificulta atribuir el cambio a una sola causa. La analogía aclara el problema, pero no sustituye la definición de las medidas. En el nuevo contraste, «La investigadora admitió que faltaban datos.» debe interpretarse dentro de esta cuestión: Casi sinónimos, connotación y alusiones. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
-          },
-          {
-            "prompt": "Recuperación c2.voc.conectores-cultos. Pasaje: «A la sazón no había catálogo. El archivo recibía consultas; empero, carecía de un registro comparable. Así las cosas, el equipo decidió separar modalidades. No en vano habían cambiado las unidades de medida».\n\nExplica la función temporal, adversativa, comentadora y justificativa de las expresiones destacadas por su posición. Reescribe para un boletín claro sin convertir a la sazón en causa ni empero en consecuencia. Contraste nuevo suministrado de «La palabra que inclina la balanza»: «La investigadora admitió que faltaban datos.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "A la sazón equivale aquí a en aquel momento; empero introduce contraste; así las cosas permite avanzar una decisión a partir de la situación; no en vano aporta justificación. Versión clara: entonces no había catálogo. Se recibían consultas, pero no existía un registro comparable. Por ello se separaron modalidades, porque las unidades habían cambiado. En el nuevo contraste, «La investigadora admitió que faltaban datos.» debe interpretarse dentro de esta cuestión: Casi sinónimos, connotación y alusiones. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
-          },
-          {
-            "prompt": "Recuperación c2.pron.lectura-densa. Recupera la semana 7, «Descomprimir una idea». Textos para ensayo oral: «Aumentaron las consultas, aunque no sabemos qué cambio explica cuánto.» / «Aumentaron las consultas porque el horario lo explica todo.».\n\nMarca grupos fónicos, un foco y una pausa en cada texto. Produce dos lecturas propias y pide a tu interlocutor que explique el efecto. Recupera «Leer prosa densa en voz alta» sin atribuir una intención segura ni una variedad a la síntesis. Si trabajas a solas, describe la intención y deja su comprobación perceptiva para clase. Contraste nuevo suministrado de «La palabra que inclina la balanza»: «La investigadora admitió que faltaban datos.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "Localiza el verbo principal antes de leer. Reduce la velocidad en un inciso técnico y recupera después la curva principal; no acumules pausas que separen un nombre de su complemento. Un ensayo defendible conserva esta distinción del caso: El informe describe un aumento sin demostrar que el horario sea su causa exclusiva. El resultado perceptivo debe contrastarse con un oyente; no queda acreditado por escribir una marca de pausa. En el nuevo contraste, «La investigadora admitió que faltaban datos.» debe interpretarse dentro de esta cuestión: Casi sinónimos, connotación y alusiones. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
-          },
-          {
-            "prompt": "Recuperación c2.wri.abstract. Recupera la semana 7, «Descomprimir una idea». Modelo parcial que puedes transformar: El uso registrado del archivo aumentó después de la ampliación horaria, la digitalización y una exposición vinculada al catálogo. El diseño no permite aislar el efecto de cada intervención. Además, el indicador agrega modalidades distintas y la encuesta recoge sesenta respuestas de doscientas invitaciones. Estos límites no vuelven inútil el estudio: orientan una evaluación posterior más precisa. Para el público general, conviene explicar que abrir una puerta y hacer visible una colección al mismo tiempo dificulta atribuir el cambio a una sola causa. La analogía aclara el problema, pero no sustituye la definición de las medidas.\n\nRecupera «Resumen académico» mediante una nueva versión de 120–160 palabras de este fragmento para otro destinatario. Mantén la reserva principal, cambia el orden de la información y justifica dos decisiones. Si el objetivo exige un texto completo, retoma además tu entrega original de esa semana y revisa su conjunto. Contraste nuevo suministrado de «La palabra que inclina la balanza»: «La investigadora admitió que faltaban datos.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "El uso registrado del archivo aumentó después de la ampliación horaria, la digitalización y una exposición vinculada al catálogo. El diseño no permite aislar el efecto de cada intervención. Además, el indicador agrega modalidades distintas y la encuesta recoge sesenta respuestas de doscientas invitaciones. Estos límites no vuelven inútil el estudio: orientan una evaluación posterior más precisa. Para el público general, conviene explicar que abrir una puerta y hacer visible una colección al mismo tiempo dificulta atribuir el cambio a una sola causa. La analogía aclara el problema, pero no sustituye la definición de las medidas. Para una persona ajena al expediente, la información decisiva que debe seguir visible es: El informe describe un aumento sin demostrar que el horario sea su causa exclusiva. En el nuevo contraste, «La investigadora admitió que faltaban datos.» debe interpretarse dentro de esta cuestión: Casi sinónimos, connotación y alusiones. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
-          }
-        ]
-      }
-    ]
+        ],
+      },
+    ],
+    noticing: {
+      prompt: "Observa cómo el texto describe las variedades sin jerarquizarlas y separa la voz de los peregrinos de la de la asociación.",
+      items: [
+        { quote: "ninguna de las dos formas es mejor que la otra; son variedades distintas del mismo idioma", note: "Descripción sin jerarquía." },
+        { quote: "Elena no se equivocó: se asombró.", note: "Interpretación evidencial del pluscuamperfecto." },
+        { quote: "Lo que no hacemos nunca es mezclar las dos opciones dentro de una misma voz", note: "Coherencia de la voz del editor." },
+        { quote: "en la escritura cuidada el plural de los destinatarios no se marca en el pronombre", note: "Norma escrita para «se lo»." },
+      ],
+    },
   },
-  "writing": {
-    "task": "Reescribe el perfil en 450–550 palabras. Incluye seis decisiones léxicas justificadas en notas breves, delimita el alcance de concluyente y conserva una alusión que no excuse las demoras evitables.",
-    "context": "Entrega un texto independiente y conserva una segunda versión con cambios comentados. El modelo muestra una apertura posible; no sustituye el dossier completo.",
-    "steps": [
-      "Traza un mapa de fuentes: afirmación, prueba, límite y destinatario.",
-      "Decide el orden según la acción que necesita realizar tu lector; reserva espacio para una objeción fuerte.",
-      "Redacta sin copiar el modelo. Integra al menos dos fuentes y atribuye sus diferencias.",
-      "Revisa el alcance de tres formulaciones, lee un párrafo en voz alta y explica dos cambios de estilo."
+  practice: {
+    intro: "Combina orden, elección según el texto, adaptación entre variedades y escritura breve. Termina recuperando las clases de las semanas anteriores de C2.",
+    exercises: [
+      {
+        id: "c2-08-orden",
+        type: "order",
+        prompt: "Ordena las palabras para formar frases de la correspondencia según la norma culta escrita.",
+        items: [
+          {
+            words: ["La", "informamos", "de", "que", "su", "cama", "está", "reservada."],
+            why: "«Informar a alguien de algo»: complemento directo de persona y «de que».",
+          },
+          {
+            words: ["Diles", "a", "tus", "compañeros", "que", "traigan", "la", "credencial."],
+            why: "Complemento indirecto plural: «diles».",
+          },
+          {
+            words: ["El", "horario", "se", "lo", "enviamos", "a", "todos", "los", "grupos."],
+            why: "«Lo» concuerda con «el horario»; el plural de los grupos no se marca.",
+          },
+        ],
+      },
+      {
+        id: "c2-08-edicion",
+        type: "context",
+        prompt: "Elige la versión adecuada para cada edición o voz.",
+        items: [
+          {
+            context: "Introducción de la edición americana, en la voz de la asociación.",
+            q: "¿Qué versión eliges?",
+            options: [
+              "Esta mañana hemos recibido el diario número cuarenta.",
+              "Esta mañana recibimos el diario número cuarenta.",
+              "Esta mañana habíamos recibido el diario número cuarenta.",
+            ],
+            answer: 1,
+            why: "En la edición americana, el indefinido cubre lo ocurrido hoy.",
+          },
+          {
+            context: "Carta de bienvenida para un peregrino de cualquier país, al que se trata de usted.",
+            q: "¿Qué fórmula eliges?",
+            options: [
+              "Te esperamos con los brazos abiertos en el albergue.",
+              "Os esperamos con los brazos abiertos en el albergue.",
+              "Le esperamos con los brazos abiertos en el albergue.",
+            ],
+            answer: 2,
+            why: "El «le» de cortesía con usted es aceptado en todas partes; «te» rompe el trato de usted y «os» es plural peninsular.",
+          },
+          {
+            context: "Testimonio de una peregrina de Potosí: «¡El Camino había sido duro, pero lindo!». La edición es peninsular.",
+            q: "¿Qué haces?",
+            options: [
+              "Lo cambio a «el Camino ha sido duro, pero lindo».",
+              "Lo elimino porque confunde.",
+              "Lo mantengo y, si hace falta, explico su valor de sorpresa en una nota.",
+            ],
+            answer: 2,
+            why: "Es la voz de la autora; la aclaración va en la voz del editor.",
+          },
+        ],
+      },
+      {
+        id: "c2-08-adaptar",
+        type: "transform",
+        prompt: "Reescribe cada frase según la instrucción, sin cambiar nada más.",
+        items: [
+          {
+            source: "Hoy hemos acogido a cuarenta peregrinos y les hemos dado la cena.",
+            instruction: "Pásala a la variedad que usa el indefinido para los hechos de hoy.",
+            answers: ["Hoy acogimos a cuarenta peregrinos y les dimos la cena."],
+            why: "El indefinido cubre el día de hoy en gran parte de América.",
+          },
+          {
+            source: "A los peregrinos les vimos llegar muy cansados.",
+            instruction: "Ajústala a la norma culta escrita cambiando solo el pronombre.",
+            answers: ["A los peregrinos los vimos llegar muy cansados."],
+            why: "Leísmo de persona en plural: desaconsejado. Complemento directo: «los».",
+          },
+          {
+            source: "Las llaves se las dimos a los hospitaleros y el recibo también se los firmamos.",
+            instruction: "Corrige solo el pronombre que no concuerda con su referente.",
+            answers: ["Las llaves se las dimos a los hospitaleros y el recibo también se lo firmamos."],
+            why: "«El recibo» es singular: «se lo».",
+          },
+        ],
+      },
+      {
+        id: "c2-08-microescritura",
+        type: "open",
+        prompt: "Escribe dos piezas breves antes de la tarea de escritura.",
+        items: [
+          {
+            prompt: "Escribe la nota del editor (40–60 palabras) que acompañará en la edición peninsular la frase «¡La catedral había sido toda de luz!». Debe explicar el uso sin presentarlo como error.",
+            model: "Nota del editor: En zonas andinas de Bolivia, Perú y Ecuador, el pluscuamperfecto puede expresar la sorpresa de quien descubre algo en ese momento. La autora no habla de un pasado anterior: cuenta que, al llegar a la plaza, comprobó con asombro que la catedral era toda de luz. Hemos respetado su forma de escribir.",
+            checklist: [
+              "Explico el valor de sorpresa.",
+              "No califico la forma como error.",
+              "La nota está en la voz del editor y la cita no cambia.",
+            ],
+          },
+          {
+            prompt: "Reescribe este correo de grupo según la norma culta escrita y explica en una frase cada cambio: «Hola a todos: la informamos que mañana el albergue abre a las once. Dile a tus compañeros que el desayuno se los dejamos preparado».",
+            model: "«Hola a todos: les informamos que mañana el albergue abre a las once. Diles a tus compañeros que el desayuno se lo dejamos preparado». Cambios: «les informamos que», porque los destinatarios son varios y elijo la construcción sin «de»; «diles», porque el indirecto es plural; «se lo», porque «el desayuno» es singular.",
+            checklist: [
+              "Elijo una sola construcción de «informar».",
+              "Uso «les» para el plural.",
+              "Hago concordar «lo» con su referente.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "c2-08-recuperacion",
+        type: "open",
+        prompt: "Recupera lo que viste en las semanas anteriores de C2 con los estímulos que se te dan. No hace falta volver a esas lecciones: trabaja con el material de cada ítem.",
+        items: [
+          {
+            prompt: "Recuperación de la clase G209 (correlaciones temporales y cambios de plano). Estímulo, del diario de un peregrino: «Me dijo la hospitalera que el albergue cerraba a las diez y que ya ha cerrado». Explica qué falla en la correlación y reescribe la frase.",
+            model: "La frase empieza en un plano pasado («me dijo», «cerraba») y salta sin motivo al presente con «ha cerrado». Si el cierre ya había ocurrido cuando ella habló: «me dijo que el albergue cerraba a las diez y que ya había cerrado». Si se quiere actualizar la información, hay que marcar el cambio de plano: «…y ahora, de hecho, ya ha cerrado».",
+            checklist: [
+              "Identifico el salto de plano sin marca.",
+              "Propongo una correlación coherente.",
+            ],
+          },
+          {
+            prompt: "Recuperación de la clase G214 (gramaticalidad y norma). Estímulo: un corrector marca «A Juan le vi en la plaza» como «agramatical». Corrige el juicio del corrector.",
+            model: "No es agramatical, porque es una forma que producen con naturalidad muchos hablantes nativos, sobre todo del centro y el norte de España. Además, la norma la admite: es leísmo de persona masculino singular. Se puede preferir «lo vi» en un texto para todo el mundo hispánico, pero no hay error que marcar.",
+            checklist: [
+              "Distingo gramaticalidad y norma.",
+              "Doy el juicio normativo correcto.",
+            ],
+          },
+          {
+            prompt: "Recuperación de la clase G215 (tratamientos). Estímulo, carta para peregrinos argentinos: «Os esperamos en el albergue; si tenéis dudas, escribidnos». Reescríbela para ese público y explica qué cambias.",
+            model: "«Los esperamos en el albergue; si tienen dudas, escríbannos». En América el plural es «ustedes», tanto de confianza como de respeto, así que cambio «os» por «los», «tenéis» por «tienen» y «escribidnos» por «escríbannos». No uso voseo porque es una carta para un grupo.",
+            checklist: [
+              "Uso ustedes de forma coherente.",
+              "Explico por qué no sirve vosotros.",
+            ],
+          },
+          {
+            prompt: "Recuperación de la clase G213 (ambigüedad accidental). Estímulo: «La hospitalera le dijo a la peregrina que había perdido su credencial». Explica las dos lecturas y reescribe la frase para cada una.",
+            model: "No sabemos quién perdió la credencial ni de quién es: puede ser la hospitalera o la peregrina. Si la perdió la peregrina: «La hospitalera le dijo a la peregrina: “Has perdido tu credencial”», o «…que esta había perdido la credencial». Si la perdió la hospitalera: «La hospitalera le contó a la peregrina que ella misma había perdido la credencial de esta».",
+            checklist: [
+              "Identifico el sujeto y el posesivo ambiguos.",
+              "Escribo una versión para cada lectura.",
+            ],
+          },
+        ],
+      },
     ],
-    "useLanguage": [
-      "La investigadora sostuvo que faltaban datos.",
-      "La investigadora admitió que faltaban datos.",
-      "No por mucho madrugar aparece antes una respuesta fiable.",
-      "perseverante",
-      "obstinado",
-      "austero"
-    ],
-    "model": [
-      "Modelo parcial de apertura (no es una entrega completa): El hallazgo confirma restos originales en una franja del mural. Es concluyente respecto a esa presencia, no respecto a la conveniencia de restaurar toda la obra. La perseverancia del restaurador merece describirse mediante sus decisiones ante pruebas contrarias, no deducirse retrospectivamente del éxito. La dirección sostuvo que faltaba financiación; escribir admitió habría introducido una resistencia que las actas no documentan. El refrán sobre el pigmento puede defender el tiempo necesario del oficio, siempre que no absuelva años de demora evitable. La precisión no apaga el entusiasmo: le asigna un objeto que puede sostener."
-    ],
-    "checklist": [
-      "La tesis tiene alcance preciso y pruebas identificables.",
-      "No convierto una propuesta en decisión ni una inferencia en dato.",
-      "El registro responde al destinatario y no borra condiciones.",
-      "La cohesión conserva referentes y voces sin repeticiones inútiles.",
-      "La revisión explica qué cambia para quien lee."
-    ],
-    "words": [
-      450,
-      550
-    ]
   },
-  "speaking": {
-    "intro": "Planifica con palabras clave, no un guion leído. La grabación, si la usas, permanece local; el navegador no califica pronunciación ni calidad oral.",
-    "tasks": [
-      {
-        "title": "Exposición situada",
-        "prompt": "Defiende tu edición ante una columnista que considera que has apagado su estilo. Distingue cambios necesarios por exactitud de preferencias estilísticas negociables.",
-        "prep": [
-          "Anota tesis, dos pruebas, una objeción y una reserva.",
-          "Marca dos focos prosódicos y un punto donde cambiarás de registro."
-        ],
-        "seconds": 240,
-        "model": "El hallazgo confirma restos originales en una franja del mural. Es concluyente respecto a esa presencia, no respecto a la conveniencia de restaurar toda la obra. La perseverancia del restaurador merece describirse mediante sus decisiones ante pruebas contrarias, no deducirse retrospectivamente del éxito. La dirección sostuvo que faltaba financiación; escribir admitió habría introducido una resistencia que las actas no documentan. El refrán sobre el pigmento puede defender el tiempo necesario del oficio, siempre que no absuelva años de demora evitable. La precisión no apaga el entusiasmo: le asigna un objeto que puede sostener.",
-        "selfCheck": [
-          "La condición principal se oye con claridad.",
-          "Distingo mi interpretación de las voces citadas.",
-          "Puedo reparar una frase sin abandonar el argumento."
-        ]
-      },
-      {
-        "title": "Interacción y reformulación",
-        "prompt": "Tu interlocutor sostiene: «Concluyente garantiza una restauración integral.». Responde sin caricaturizarlo, formula dos preguntas de seguimiento y pide que reformule tu condición principal. Después resume para una persona que no conoce el expediente de La palabra que inclina la balanza.",
-        "prep": [
-          "Prepara una concesión real y una corrección de alcance.",
-          "Anticipa qué término deberás explicar sin jerga."
-        ],
-        "seconds": 240,
-        "model": "La precisión consiste en controlar las inferencias de la elección léxica. Los restos originales se confirmaron solo en una franja de veinte centímetros.",
-        "selfCheck": [
-          "La respuesta atiende la preocupación, no solo corrige la forma.",
-          "La versión breve conserva el límite decisivo.",
-          "Adapto el ritmo después de la interrupción."
-        ]
-      }
-    ]
-  },
-  "useInClass": {
-    "intro": "La mascota te espera con una tarjeta de contraste: lleva tu dossier y una decisión lingüística que quieras poner a prueba con tu docente.",
-    "cards": [
-      {
-        "move": "Defiende",
-        "task": "Presenta tu decisión más discutible sobre La palabra que inclina la balanza y pide un contraejemplo que la ponga a prueba.",
-        "phrases": [
-          "Mi lectura se apoya en…",
-          "Cambiaría de interpretación si…"
-        ]
-      },
-      {
-        "move": "Reformula",
-        "task": "Explica el límite «Los restos originales se confirmaron solo en una franja de veinte centímetros.» a otro público sin rebajar su importancia.",
-        "phrases": [
-          "En otros términos…",
-          "Esta versión conserva…"
-        ]
-      },
-      {
-        "move": "Negocia",
-        "task": "Responde a la objeción «Admitir y sostener atribuyen siempre la misma actitud.» y acuerda una formulación que ambos puedan defender.",
-        "phrases": [
-          "Reconozco ese punto; mi reserva es…",
-          "Podemos dejar constancia de…"
-        ]
-      }
+  writing: {
+    task: "Redacta la entrada «Tiempos y pronombres» de la guía de correspondencia y edición de la asociación (400–520 palabras). Explica a los voluntarios qué hacer con el indefinido de hoy y con el pluscuamperfecto andino en los diarios, cómo escribir la voz de la asociación en cada edición y qué pronombres usar en las cartas comunes.",
+    context: "La leerán voluntarios de España y de América sin formación lingüística. Puedes nombrar fenómenos, pero explícalos con ejemplos del Camino. Usa los casos de esta semana o invéntalos con la misma lógica.",
+    steps: [
+      "Haz una tabla con tres columnas: caso, decisión y ejemplo. Incluye un indefinido de hoy, un pluscuamperfecto de sorpresa, un «le» de cortesía, un leísmo que se cambia y una construcción de «informar».",
+      "Decide el orden: principio general (voz ajena y voz propia), diarios, voz de la asociación por edición y cartas comunes.",
+      "Redacta sin copiar el modelo. Cita cada ejemplo entre comillas y explica la decisión justo después.",
+      "Revisa la entrada con la lista de control: corrige cualquier «les» o «se los» mal concordado y comprueba que tu propia voz no mezcla «he salido» y «salí» para hoy.",
     ],
-    "bring": "El dossier, una versión revisada, notas de escucha y una grabación local opcional; no se necesita subir audio."
-  },
-  "quiz": {
-    "items": [
-      {
-        "type": "choice",
-        "q": "Balance de La palabra que inclina la balanza: ¿qué conclusión conserva el alcance?",
-        "options": [
-          "Concluyente garantiza una restauración integral.",
-          "La precisión consiste en controlar las inferencias de la elección léxica."
-        ],
-        "answer": 1,
-        "why": "Relaciona el texto principal con el documento complementario."
-      },
-      {
-        "type": "choice",
-        "q": "En una revisión final de La palabra que inclina la balanza, ¿qué afirmación debe rechazarse?",
-        "options": [
-          "Se hallaron restos en toda la superficie.",
-          "Los restos originales se confirmaron solo en una franja de veinte centímetros."
-        ],
-        "answer": 0,
-        "why": "La primera opción contradice la condición explícita."
-      },
-      {
-        "type": "listen",
-        "q": "Escucha esta síntesis de La palabra que inclina la balanza. ¿Qué interpretación mantiene?",
-        "options": [
-          "El desenlace favorable puede sesgar retrospectivamente la valoración de la persistencia.",
-          "Admitir y sostener atribuyen siempre la misma actitud."
-        ],
-        "answer": 0,
-        "why": "La relación expresada limita una generalización.",
-        "audio": "El desenlace favorable puede sesgar retrospectivamente la valoración de la persistencia.",
-        "voice": "es-ES-f"
-      },
-      {
-        "type": "gap",
-        "q": "En «La palabra que inclina la balanza», ¿qué unidad expresa «persistente con valoración favorable»? ___ .",
-        "answers": [
-          [
-            "perseverante"
-          ]
-        ],
-        "hint": "persistente con valoración favorable",
-        "why": "Recupera la unidad a partir de su función, no de una traducción."
-      },
-      {
-        "type": "gap",
-        "q": "Para nombrar «persistente pese a razones para cambiar» en este expediente usamos ___ .",
-        "answers": [
-          [
-            "obstinado"
-          ]
-        ],
-        "why": "La distinción léxica debe conservarse al mediar."
-      },
-      {
-        "type": "error",
-        "sentence": "El comunicado calificó el resultado como de concluyente.",
-        "answers": [
-          "El comunicado calificó el resultado de concluyente."
-        ],
-        "why": "Calificar de admite ese complemento; no se acumulan como y de en esta construcción."
-      },
-      {
-        "type": "transform",
-        "source": "El hallazgo es concluyente. Solo se ha examinado la franja inferior.",
-        "instruction": "Integra el alcance con «El hallazgo es concluyente respecto a…». Conserva «la franja inferior».",
-        "answers": [
-          "El hallazgo es concluyente respecto a la franja inferior."
-        ],
-        "why": "Delimitar la certeza: conserva la relación solicitada y compara qué se hace explícito."
-      },
-      {
-        "type": "open",
-        "prompt": "Cierre de «La palabra que inclina la balanza»: escribe 90–120 palabras para una audiencia nueva. Incluye tesis, condición y una pregunta pendiente; justifica una elección de registro.",
-        "model": "El hallazgo confirma restos originales en una franja del mural. Es concluyente respecto a esa presencia, no respecto a la conveniencia de restaurar toda la obra. La perseverancia del restaurador merece describirse mediante sus decisiones ante pruebas contrarias, no deducirse retrospectivamente del éxito. La dirección sostuvo que faltaba financiación; escribir admitió habría introducido una resistencia que las actas no documentan. El refrán sobre el pigmento puede defender el tiempo necesario del oficio, siempre que no absuelva años de demora evitable. La precisión no apaga el entusiasmo: le asigna un objeto que puede sostener.",
-        "checklist": [
-          "Conservo la reserva decisiva.",
-          "Atribuyo una fuente y delimito mi inferencia.",
-          "El destinatario puede identificar el siguiente paso."
-        ]
-      }
-    ]
-  },
-  "complete": {
-    "canNow": [
-      "Interpreto casi sinónimos, connotación y alusiones en fuentes originales.",
-      "Puedo explicar por qué «Concluyente garantiza una restauración integral.» excede la evidencia.",
-      "Defiendo y reviso un dossier escrito y oral con destinatario concreto."
+    useLanguage: [
+      "en su variedad, lo ocurrido hoy se cuenta con…",
+      "el pluscuamperfecto expresa aquí sorpresa / información no presenciada",
+      "está admitido / se desaconseja / no se acepta",
+      "la informamos de que… / le informamos que…",
+      "diles a…; se lo enviamos a…",
+      "respetar la voz; nota del editor",
     ],
-    "review": [
-      "Dentro de dos días, reconstruye sin mirar el límite: Los restos originales se confirmaron solo en una franja de veinte centímetros.",
-      "Dentro de una semana, reescribe el cierre para otro público y contrástalo con tu versión inicial.",
-      "En clase, pide una objeción a «La precisión consiste en controlar las inferencias de la elección léxica.» y registra qué cambiarías."
-    ]
-  }
+    model: [
+      "Modelo parcial de apertura (no es una entrega completa): Esta entrada responde a las dudas que más se repiten cuando editamos diarios o escribimos a los peregrinos. El principio es doble. En los diarios manda la voz de quien escribe: no cambiamos un tiempo ni un pronombre porque en León se diga de otra manera. En los textos de la asociación, en cambio, escribimos con una norma culta que sirva a cualquier lector. Un ejemplo lo aclara. Si un peregrino de Puebla escribe «hoy llegué a Astorga», lo dejamos así, porque en su variedad lo ocurrido hoy se cuenta con el indefinido; si lo escribimos nosotros en la edición peninsular, ponemos «hoy hemos llegado».",
+    ],
+    checklist: [
+      "Distingo la voz de los peregrinos de la voz de la asociación.",
+      "Explico el reparto regional entre «he salido» y «salí» sin jerarquizarlo.",
+      "Explico el pluscuamperfecto de sorpresa o de información no presenciada con un ejemplo.",
+      "Uso con precisión «admitido», «desaconsejado» y «no aceptado».",
+      "Mis ejemplos de cartas usan «les», «se lo» e «informar» según la norma escrita.",
+    ],
+    words: [400, 520],
+  },
+  speaking: {
+    intro: "Prepárate con palabras clave, no con un guion leído. Si te grabas, la grabación queda en tu dispositivo; el navegador no evalúa tu pronunciación.",
+    tasks: [
+      {
+        title: "Explicar las variedades a los voluntarios",
+        prompt: "Eres Lucía. En unos cuatro minutos, explica a los voluntarios nuevos por qué la antología respeta «hoy salí» y «había sido toda de luz» y por qué, en cambio, las cartas de la asociación siguen una norma común con «lo», «les» y «se lo».",
+        prep: [
+          "Anota dos ejemplos de diarios y dos de cartas.",
+          "Prepara una frase que resuma la diferencia entre voz ajena y voz propia.",
+        ],
+        seconds: 240,
+        model: "Os cuento cómo hemos trabajado. En los diarios, cada peregrino escribe como habla. Javier, de Guadalajara, pone «hoy salí de Sahagún», y en México eso es lo normal para lo que pasó hoy. Elena, de Cochabamba, escribe «¡la catedral había sido toda de luz!», y con eso nos cuenta su sorpresa. No lo tocamos. Pero cuando escribimos nosotros…",
+        selfCheck: [
+          "Pronuncio con claridad la -s de «les» y «los».",
+          "No presento ninguna variedad como incorrecta.",
+          "Explico la diferencia entre la voz ajena y la propia.",
+        ],
+      },
+      {
+        title: "Mediar con una correctora",
+        prompt: "La correctora de Valladolid insiste: «Si no corregimos “había sido”, los lectores pensarán que el libro tiene errores». Respóndele con respeto, hazle dos preguntas para entender su preocupación, explica el uso andino y propón una solución.",
+        prep: [
+          "Prepara una frase que reconozca su preocupación.",
+          "Ten a mano la explicación del valor de sorpresa y la idea de la nota del editor.",
+        ],
+        seconds: 150,
+        model: "Te entiendo, y es verdad que a un lector de aquí le puede chocar. ¿Te preocupa la imagen de la asociación o que el lector no entienda la frase? ¿Has visto alguna vez ese uso en textos bolivianos? Allí el pluscuamperfecto expresa sorpresa: Elena descubre que la catedral es toda de luz. Si lo cambiamos, perdemos su asombro. Pongamos una nota al pie que lo explique.",
+        selfCheck: [
+          "Hago al menos dos preguntas reales.",
+          "Explico el uso con un ejemplo.",
+          "Propongo una solución concreta.",
+        ],
+      },
+      {
+        title: "Leer y adaptar una carta",
+        prompt: "Lee en voz alta esta carta y después adáptala oralmente a la norma común: «Estimada señora: la informamos que hoy le hemos reservado cama. A sus compañeras les esperamos mañana; el mapa se los mandamos por correo».",
+        prep: [
+          "Marca los tres puntos que vas a cambiar.",
+          "Practica la -s final de «les» y «los».",
+        ],
+        seconds: 100,
+        selfCheck: [
+          "Cambio «la informamos que» por una construcción coherente.",
+          "Cambio «les esperamos» y «se los» según la norma escrita.",
+        ],
+      },
+    ],
+  },
+  useInClass: {
+    intro: "Lleva a la próxima clase tu tabla de casos y una duda concreta. Estas tarjetas te ayudan a aprovechar el tiempo con tu profesor.",
+    cards: [
+      {
+        move: "Pregunta",
+        task: "Pregúntale a tu profesor cómo cuenta lo que hizo esta mañana: ¿«he desayunado» o «desayuné»? Pídele que te diga si en su variedad hay diferencia entre «hoy» y «este año».",
+        phrases: ["¿Tú dirías «hoy he…» o «hoy…»?", "¿Y para algo de este año?"],
+      },
+      {
+        move: "Interpreta",
+        task: "Lee a tu profesor dos frases con pluscuamperfecto, una de anterioridad y otra de sorpresa, y explica la diferencia.",
+        phrases: ["En la primera, el hecho es anterior a…", "En la segunda, quien habla acaba de descubrir…"],
+      },
+      {
+        move: "Corrige",
+        task: "Lleva tres frases de cartas con «le», «les» o «se lo» y pide a tu profesor que juzgue tus correcciones.",
+        phrases: ["Aquí cambié «le» por «les» porque…", "¿Esto está admitido o solo se tolera?"],
+      },
+      {
+        move: "Compara",
+        task: "Compara con tu profesor cómo se dice «todavía no ha llegado» en tu variedad y en la suya.",
+        phrases: ["Donde yo vivo se dice…", "¿Te suena raro…?"],
+      },
+    ],
+    bring: "Tu entrada de la guía revisada, la tabla de casos y, si quieres, la grabación de tu explicación a los voluntarios.",
+  },
+  quiz: {
+    items: [
+      {
+        type: "choice",
+        q: "Un peregrino de Bogotá escribe en su diario: «Esta mañana crucé el puente de Hospital de Órbigo». ¿Qué juicio es correcto?",
+        options: [
+          "Es un error: con «esta mañana» hay que usar el compuesto.",
+          "Es normal en su variedad: el indefinido cubre también el día de hoy.",
+          "Solo es correcto en textos literarios.",
+        ],
+        answer: 1,
+        why: "En gran parte de América el indefinido se usa para hechos de hoy.",
+      },
+      {
+        type: "choice",
+        q: "¿Cuál de estas frases no acepta la norma culta?",
+        options: [
+          "Al hospitalero le encontramos en la cocina.",
+          "Le saludamos atentamente.",
+          "El bastón le olvidé en el tren.",
+        ],
+        answer: 2,
+        why: "Leísmo de cosa: no aceptado. Las otras son admitidas.",
+      },
+      {
+        type: "listen",
+        q: "Escucha a la peregrina. ¿Qué expresa el pluscuamperfecto?",
+        options: [
+          "La sorpresa de descubrir algo en ese momento.",
+          "Un hecho anterior a otro hecho pasado.",
+          "Un deseo que no se cumplió.",
+        ],
+        answer: 0,
+        why: "Uso andino de descubrimiento: ≈ resulta que está muy cerca.",
+        audio: "¡Ay, la plaza mayor había estado aquí nomás, al lado del albergue!",
+        voice: "es-PE-f",
+      },
+      {
+        type: "gap",
+        q: "A los voluntarios de Lima ___ enviamos ayer el calendario de turnos.",
+        answers: [["les"]],
+        hint: "Complemento indirecto plural en la escritura cuidada.",
+        why: "Complemento indirecto plural: «les».",
+      },
+      {
+        type: "gap",
+        q: "El calendario de turnos se ___ enviamos ayer a los voluntarios de Lima.",
+        answers: [["lo"]],
+        hint: "Concuerda con «el calendario», no con los voluntarios.",
+        why: "El plural de los destinatarios no se marca en el pronombre.",
+      },
+      {
+        type: "transform",
+        source: "La informamos que la recogeremos en la estación de autobuses.",
+        instruction: "Corrige la construcción de «informar» manteniendo «la» como pronombre de la persona informada.",
+        answers: ["La informamos de que la recogeremos en la estación de autobuses."],
+        why: "Con complemento directo de persona, «informar» lleva «de que».",
+      },
+      {
+        type: "error",
+        sentence: "A la hospitalera la pedimos más mantas para el dormitorio.",
+        answers: ["A la hospitalera le pedimos más mantas para el dormitorio."],
+        why: "«Pedir algo a alguien»: complemento indirecto. «La» es laísmo.",
+      },
+      {
+        type: "error",
+        sentence: "Nota del editor (edición peninsular): Esta mañana he recibido el último diario y lo leí antes de comer.",
+        answers: ["Nota del editor (edición peninsular): Esta mañana he recibido el último diario y lo he leído antes de comer."],
+        why: "En una misma voz peninsular, los hechos de hoy van con el compuesto; no se mezcla.",
+      },
+      {
+        type: "order",
+        words: ["Al", "peregrino", "lo", "llamamos", "por", "teléfono", "anoche."],
+        why: "«Llamar» por teléfono: complemento directo, «lo».",
+      },
+      {
+        type: "open",
+        prompt: "Explica en 80–100 palabras a un voluntario por qué la asociación respeta «¡había sido enorme la catedral!» en el diario de una peregrina de Oruro, pero cambia «al peregrino le recibiremos» en sus propias cartas.",
+        model: "Son dos situaciones distintas. El diario es la voz de la peregrina: en zonas andinas, ese pluscuamperfecto expresa la sorpresa de quien descubre algo, y cambiarlo borraría su asombro. Por eso se respeta y, si hace falta, se explica en una nota. La carta, en cambio, es la voz de la asociación y la leen personas de muchos países. Aunque el leísmo de persona masculino está admitido, en América resulta extraño, así que usamos «lo», que la norma recomienda para cualquier lector.",
+        checklist: [
+          "Distingo voz ajena y voz propia.",
+          "Explico el valor de sorpresa del pluscuamperfecto.",
+          "Explico por qué se prefiere «lo» en la carta común.",
+        ],
+      },
+    ],
+  },
+  complete: {
+    canNow: [
+      "Reconozco el reparto regional entre «he caminado» y «caminé» para los hechos de hoy y mantengo coherente mi propia voz.",
+      "Interpreto el pluscuamperfecto andino de sorpresa o de información no presenciada y lo respeto en la cita.",
+      "Sitúo «le», «lo» y «la» en la escala de la norma culta: admitido, desaconsejado o no aceptado.",
+      "Uso «les», «se lo», «informar», «ayudar» y «llamar» según la norma culta escrita.",
+    ],
+    review: [
+      "Dentro de dos días, tapa la columna derecha de la tabla «De más aceptado a no aceptado» y reconstruye el juicio de cada ejemplo.",
+      "Dentro de una semana, escribe cinco frases sobre lo que hiciste hoy en tu variedad y en la otra.",
+      "En la próxima clase, pide a tu profesor que revise los ejemplos de cartas de tu guía.",
+    ],
+  },
+  related: [
+    { path: "/gramatica/variacion-regional-del-pasado-perfecto-y", label: "Clase: Variación regional del pasado perfecto y evidencialidad" },
+    { path: "/gramatica/leismo-y-regimen-pronominal-en-variedades", label: "Clase: Leísmo y régimen pronominal en variedades cultas" },
+  ],
 };

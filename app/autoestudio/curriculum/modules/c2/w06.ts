@@ -1,849 +1,968 @@
 import type { Module } from "../../types";
 
-/** Material original C2. Audio mediante síntesis; sin acreditación regional. */
+/**
+ * C2 · semana 6 · Autoestudio espejo de G213 (ambigüedad intencional y
+ * accidental) y G214 (gramaticalidad, aceptabilidad y variación real).
+ * Repaso autónomo con los textos ficticios de una red de bibliotecas
+ * comunitarias de Bogotá. Audio mediante síntesis; sin acreditación regional.
+ */
 export const c2w06: Module = {
-  "id": "c2-06",
-  "level": "c2",
-  "week": 6,
-  "kind": "core",
-  "title": "Convencer sin esconder el coste",
-  "subtitle": "Anáfora, concesión táctica y encuadre",
-  "stop": {
-    "place": "Bogotá",
-    "country": "Colombia"
+  id: "c2-06",
+  level: "c2",
+  week: 6,
+  kind: "core",
+  title: "Una frase, dos lecturas; una forma, cuatro juicios",
+  subtitle: "Repaso de cómo detectar, reparar o aprovechar la ambigüedad y de cómo juzgar una forma sin confundir error, norma y variación",
+  stop: {
+    place: "Bogotá",
+    country: "Colombia",
   },
-  "minutes": 135,
-  "newObjectives": [
-    "c2.disc.recursos-retoricos",
-    "c2.voc.lexico-persuasivo",
-    "c2.pron.oratoria",
-    "c2.lis.discurso-politico",
-    "c2.spk.discurso-breve"
+  minutes: 135,
+  newObjectives: [
+    "c2.gram.g213",
+    "c2.gram.g214",
+    "c2.voc.w06-revision-textos",
+    "c2.pron.w06-pausa-desambigua",
+    "c2.lis.w06-reunion-biblioteca",
+    "c2.read.w06-columna-boletin",
+    "c2.wri.w06-informe-revision",
+    "c2.spk.w06-defender-criterio",
+    "c2.fun.w06-justificar-correccion",
+    "c2.disc.w06-voz-ajena-voz-propia",
   ],
-  "reviewObjectives": [
-    "c2.disc.ironia-productiva",
-    "c2.voc.evaluacion-implicita",
-    "c2.pron.ironia-variedades",
-    "c2.lis.humor-ironico",
-    "c2.spk.comentario-ironico",
-    "c2.rev.checkpoint-1",
-    "c2.read.contrato-cronica"
-  ],
-  "prerequisites": [
-    "c2-05"
-  ],
-  "goal": {
-    "canDo": "Puedo persuadir mediante recursos retóricos que hagan visibles costes, condiciones y alternativas.",
-    "steps": [
-      "Lee las fuentes y distingue dato, inferencia y evaluación.",
-      "Escucha el intercambio antes de consultar su transcripción.",
-      "Aplica anáfora, concesión táctica y encuadre a una decisión comunicativa concreta.",
-      "Produce el dossier escrito, revisa una elección y defiéndela oralmente."
-    ]
-  },
-  "theory": {
-    "intro": "Los casos, documentos y voces de esta semana son originales y ficticios. La dificultad está en controlar relaciones de significado, no en acumular palabras raras.",
-    "parts": [
-      {
-        "heading": "Anáfora, concesión táctica y encuadre",
-        "body": [
-          "Una concesión eficaz reconoce una objeción real antes de limitar su alcance. No es equivalente conceder que algo cuesta y conceder que es inviable. La anáfora repite el comienzo para organizar la atención; la gradación aumenta la intensidad; la pregunta retórica orienta una respuesta sin solicitarla. Antes bien corrige una orientación previa y no funciona como simple sinónimo de además. Comprueba qué razonamiento queda si suprimes los recursos retóricos.",
-          "En este caso, La retórica resulta más responsable cuando explicita costes y admite respuestas no previstas. La formulación elegida debe permitir al destinatario reconstruir la diferencia relevante y reconocer qué no se ha demostrado.",
-          "Una misma suspensión puede presentarse como pausa técnica o como parálisis: el primer encuadre atenúa y el segundo intensifica. Ninguno aporta por sí solo una medida de duración. La gradación «un puesto, una sala, una red de espacios» organiza amplitud creciente; la antítesis «renovar el edificio sin interrumpir el acceso» exhibe una tensión que luego debe resolverse con medidas."
-        ],
-        "examples": [
-          {
-            "es": "No pedimos una promesa, pedimos un calendario."
-          },
-          {
-            "es": "Es una inversión costosa; de ahí no se sigue que sea prescindible."
-          },
-          {
-            "es": "El mantenimiento no frena el proyecto; antes bien, lo hace sostenible."
-          }
-        ],
-        "mistakes": [
-          {
-            "wrong": "La directora pidió que se financian los horarios.",
-            "right": "La directora pidió que se financiaran los horarios.",
-            "why": "La petición referida desde el pasado selecciona aquí imperfecto de subjuntivo."
-          }
-        ]
-      },
-      {
-        "heading": "Interpretar, atribuir y revisar en este caso",
-        "body": [
-          "El lema de apertura puede deslegitimar objeciones presupuestarias sin refutarlas. Para defender esa lectura, identifica una formulación y el detalle que la sostiene. Prueba después una explicación rival y señala qué dato necesitarías para preferirla.",
-          "La versión para un público nuevo puede cambiar léxico, orden y longitud, pero debe conservar esta condición: Los horarios ampliados carecen todavía de financiación confirmada. Un cambio de registro que la elimina cambia también el contenido."
-        ],
-        "examples": [
-          {
-            "es": "La retórica resulta más responsable cuando explicita costes y admite respuestas no previstas.",
-            "note": "Síntesis con alcance delimitado."
-          },
-          {
-            "es": "Toda objeción al presupuesto rechaza el acceso cultural.",
-            "note": "Lectura excesiva que el dossier no respalda."
-          }
-        ],
-        "tip": "La mascota te invita a conservar una duda productiva: llévala a clase junto con una prueba, no con una impresión aislada."
-      }
-    ]
-  },
-  "grammar": {
-    "intro": "Relaciona forma y efecto comunicativo en el expediente; la explicación importa tanto como la respuesta.",
-    "exercises": [
-      {
-        "id": "c2-06-gramatica-alcance",
-        "type": "choice",
-        "prompt": "Selecciona la interpretación defendible de Convencer sin esconder el coste.",
-        "items": [
-          {
-            "q": "En el caso de Convencer sin esconder el coste, ¿qué formulación preserva el alcance?",
-            "options": [
-              "Es una inversión costosa; de ahí no se sigue que sea prescindible.",
-              "Un término técnico carece siempre de carga valorativa."
-            ],
-            "answer": 0,
-            "why": "Una concesión eficaz reconoce una objeción real antes de limitar su alcance. No es equivalente conceder que algo cuesta y conceder que es inviable. La anáfora repite el comienzo para organizar la atención; la gradación aumenta la intensidad; la pregunta retórica orienta una respuesta sin solicitarla. Antes bien corrige una orientación previa y no funciona como simple sinónimo de además. Comprueba qué razonamiento queda si suprimes los recursos retóricos."
-          },
-          {
-            "q": "¿Qué cautela lingüística resulta necesaria al explicar Convencer sin esconder el coste?",
-            "options": [
-              "El lema de apertura puede deslegitimar objeciones presupuestarias sin refutarlas.",
-              "Toda objeción al presupuesto rechaza el acceso cultural."
-            ],
-            "answer": 0,
-            "why": "Relaciona forma, contexto y efecto; evita ampliar una conclusión más allá de su base."
-          }
-        ]
-      },
-      {
-        "id": "c2-06-gramatica-forma",
-        "type": "gap",
-        "prompt": "Completa las relaciones gramaticales del caso Convencer sin esconder el coste.",
-        "items": [
-          {
-            "q": "El mantenimiento no frena el proyecto; antes ___, lo sostiene.",
-            "answers": [
-              [
-                "bien"
-              ]
-            ],
-            "why": "Una concesión eficaz reconoce una objeción real antes de limitar su alcance. No es equivalente conceder que algo cuesta y conceder que es inviable. La anáfora repite el comienzo para organizar la atención; la gradación aumenta la intensidad; la pregunta retórica orienta una respuesta sin solicitarla. Antes bien corrige una orientación previa y no funciona como simple sinónimo de además. Comprueba qué razonamiento queda si suprimes los recursos retóricos."
-          },
-          {
-            "q": "La concesión no equivale ___ una renuncia.",
-            "answers": [
-              [
-                "a"
-              ]
-            ],
-            "why": "Una concesión eficaz reconoce una objeción real antes de limitar su alcance. No es equivalente conceder que algo cuesta y conceder que es inviable. La anáfora repite el comienzo para organizar la atención; la gradación aumenta la intensidad; la pregunta retórica orienta una respuesta sin solicitarla. Antes bien corrige una orientación previa y no funciona como simple sinónimo de además. Comprueba qué razonamiento queda si suprimes los recursos retóricos."
-          },
-          {
-            "q": "Se solicita financiación para que se ___ los horarios.",
-            "answers": [
-              [
-                "amplíen"
-              ]
-            ],
-            "why": "Una concesión eficaz reconoce una objeción real antes de limitar su alcance. No es equivalente conceder que algo cuesta y conceder que es inviable. La anáfora repite el comienzo para organizar la atención; la gradación aumenta la intensidad; la pregunta retórica orienta una respuesta sin solicitarla. Antes bien corrige una orientación previa y no funciona como simple sinónimo de además. Comprueba qué razonamiento queda si suprimes los recursos retóricos."
-          }
-        ]
-      }
-    ]
-  },
-  "vocabulary": {
-    "intro": "Usa estas unidades para describir diferencias que el caso exige. La definición orienta el uso; contrástala con la frase completa.",
-    "groups": [
-      {
-        "title": "Precisión para Convencer sin esconder el coste",
-        "items": [
-          {
-            "es": "concesión táctica",
-            "note": "reconocimiento limitado de una objeción"
-          },
-          {
-            "es": "encuadre",
-            "note": "perspectiva que organiza un problema"
-          },
-          {
-            "es": "carga valorativa",
-            "note": "evaluación asociada a una expresión"
-          },
-          {
-            "es": "contrapartida",
-            "note": "coste o compromiso a cambio de otro"
-          },
-          {
-            "es": "eufemismo",
-            "note": "expresión que suaviza un contenido"
-          },
-          {
-            "es": "disfemismo",
-            "note": "expresión que lo presenta de forma peyorativa"
-          },
-          {
-            "es": "gradación",
-            "note": "orden de intensidad creciente"
-          },
-          {
-            "es": "apelación",
-            "note": "llamada a una creencia o valor compartido"
-          }
-        ]
-      }
+  reviewObjectives: [],
+  prerequisites: [],
+  goal: {
+    canDo: "Puedo decidir si una doble lectura es un defecto que hay que reparar o un recurso buscado, repararla con el cambio mínimo y juzgar una forma discutida separando gramaticalidad, aceptabilidad, norma y variación.",
+    steps: [
+      "Repasa en la teoría las fuentes de ambigüedad accidental, las herramientas de reparación y los cuatro juicios sobre una forma.",
+      "Practica con avisos, reglamentos, eslóganes y transcripciones de una red de bibliotecas de Bogotá.",
+      "Escucha la reunión de Juliana y Andrés y lee la columna del boletín de la red.",
+      "Redacta un informe de revisión, revísalo con la lista de control y defiende tus criterios en voz alta.",
     ],
-    "exercises": [
-      {
-        "id": "c2-06-lexico",
-        "type": "match",
-        "prompt": "Relaciona cada unidad con la distinción que aporta al expediente de Convencer sin esconder el coste.",
-        "pairs": [
-          {
-            "left": "concesión táctica",
-            "right": "reconocimiento limitado de una objeción"
-          },
-          {
-            "left": "encuadre",
-            "right": "perspectiva que organiza un problema"
-          },
-          {
-            "left": "carga valorativa",
-            "right": "evaluación asociada a una expresión"
-          },
-          {
-            "left": "contrapartida",
-            "right": "coste o compromiso a cambio de otro"
-          },
-          {
-            "left": "eufemismo",
-            "right": "expresión que suaviza un contenido"
-          },
-          {
-            "left": "disfemismo",
-            "right": "expresión que lo presenta de forma peyorativa"
-          },
-          {
-            "left": "gradación",
-            "right": "orden de intensidad creciente"
-          },
-          {
-            "left": "apelación",
-            "right": "llamada a una creencia o valor compartido"
-          }
-        ]
-      }
-    ]
   },
-  "pronunciation": {
-    "focus": "Anáfora y clímax sin gritar",
-    "explanation": [
-      "Distribuye tres grupos paralelos con un foco distinto en cada uno. La concesión posterior necesita espacio propio: bajar demasiado el volumen podría ocultar el coste reconocido.",
-      "El audio utiliza síntesis disponible en el navegador: no certifica acento regional, ironía natural ni calidad de pronunciación. Escucha el contenido, ensaya contrastes y comprueba el efecto con una persona. El objetivo es inteligibilidad y control expresivo, no eliminar tu acento."
-    ],
-    "examples": [
+  theory: {
+    intro: "En clase trabajaste estos dos temas con tu profesor. Aquí los repasas con otros textos: los de una red de bibliotecas comunitarias de Bogotá que revisa su reglamento, prepara una campaña y edita un libro de testimonios orales. La pregunta de fondo es la misma en las dos clases: antes de corregir, decide qué tipo de problema tienes delante.",
+    parts: [
       {
-        "es": "Queremos estudiar, encontrarnos y abrir oportunidades."
-      },
-      {
-        "es": "Queremos renovar; durante las obras faltarán puestos."
-      }
-    ],
-    "perceive": {
-      "id": "c2-06-percepcion",
-      "type": "listen",
-      "prompt": "Escucha el contraste antes de leer las opciones en «Convencer sin esconder el coste».",
-      "items": [
-        {
-          "q": "Escucha la primera formulación sobre Convencer sin esconder el coste. ¿Qué contenido permite recuperar?",
-          "options": [
-            "Queremos renovar; durante las obras faltarán puestos.",
-            "Queremos estudiar, encontrarnos y abrir oportunidades."
+        heading: "¿Defecto o recurso? Dónde nace la doble lectura",
+        body: [
+          "Una frase es ambigua cuando admite dos interpretaciones razonables. Eso, por sí solo, no la hace mala: lo que importa es si alguien quería esa segunda lectura. En un reglamento, una factura o unas instrucciones, nadie la quería y cualquier lector puede elegir la que le convenga; es un defecto. En un eslogan, un chiste o un poema, la segunda lectura puede ser precisamente el mensaje.",
+          "Para repararla, primero localiza su origen. Las fuentes más frecuentes son sintácticas: un complemento que puede engancharse a dos palabras, un adjetivo que puede afectar a uno o a dos sustantivos coordinados, el alcance de «todos… no» o de «solo», el posesivo «su» con dos poseedores posibles, una relativa con o sin comas, un sujeto implícito que puede ser dos personas. Otras son léxicas (una palabra con dos sentidos) y otras no son ambigüedad, sino vaguedad: la frase no tiene dos lecturas, sino un contorno borroso.",
+        ],
+        table: {
+          caption: "Fuentes de ambigüedad accidental",
+          head: ["Fuente", "Frase ambigua", "Las dos lecturas"],
+          rows: [
+            ["complemento mal enganchado", "Se prestan lectores de libros electrónicos con funda.", "la funda va con el lector / con los libros"],
+            ["adjetivo y coordinación", "Pueden inscribirse estudiantes y jubilados residentes.", "solo los jubilados residen / residen todos"],
+            ["«todos… no»", "Todos los títulos no se pueden renovar.", "ninguno se renueva / no todos se renuevan"],
+            ["alcance de «solo»", "Solo se atiende por teléfono los sábados.", "el sábado solo hay teléfono / el teléfono solo funciona el sábado"],
+            ["posesivo «su»", "La bibliotecaria avisó a la usuaria de que su carné había caducado.", "el carné de la bibliotecaria / el de la usuaria"],
+            ["sujeto implícito", "El coordinador saludó al alcalde cuando entraba.", "entraba el coordinador / entraba el alcalde"],
           ],
-          "answer": 1,
-          "why": "La respuesta depende de las palabras y de su agrupación; no atribuyas a la síntesis una intención o variedad verificada.",
-          "audio": "Queremos estudiar, encontrarnos y abrir oportunidades.",
-          "voice": "es-ES-f"
         },
-        {
-          "q": "Escucha ahora el contraste de Convencer sin esconder el coste. ¿Qué formulación aparece?",
-          "options": [
-            "Queremos renovar; durante las obras faltarán puestos.",
-            "Queremos estudiar, encontrarnos y abrir oportunidades."
+        tip: "Lee la frase como la leería alguien con interés en entenderla al revés. Si esa lectura es razonable, el texto tiene un problema.",
+      },
+      {
+        heading: "Reparar con el cambio mínimo y no tocar lo que el contexto resuelve",
+        body: [
+          "Cada fuente tiene su herramienta. Un complemento mal colocado se arregla cambiando el orden. «Todos… no» se sustituye por «no todos» o por «ningún», según lo que se quiera decir. El alcance de «solo» se fija poniéndolo junto a lo que limita. El posesivo se aclara con un referente explícito («la de esta», «el carné de la usuaria»). La relativa decide su alcance con las comas. El sujeto implícito se recupera con un demostrativo o un nombre. En las causales negadas, el modo también desambigua: con subjuntivo se niega la causa, no el hecho.",
+          "La segunda regla es tan importante como la primera: si el contexto ya selecciona una sola lectura, no repares. «El usuario devolverá su libro en el mostrador» no necesita «el libro del usuario»: nadie piensa que el libro sea del mostrador. Una corrección innecesaria hace el texto más pesado y transmite desconfianza en el lector.",
+        ],
+        examples: [
+          { es: "No todos los títulos se pueden renovar. / Ningún título se puede renovar.", note: "Dos reparaciones para «todos los títulos no se pueden renovar»: elige la que corresponde al sentido." },
+          { es: "Los sábados solo se atiende por teléfono.", note: "«Solo» junto a «por teléfono»: el sábado no hay atención presencial." },
+          { es: "No cerraron la sala porque hubiera goteras.", note: "Subjuntivo: la sala se cerró, pero no por las goteras. Con indicativo («porque había goteras») la sala sigue abierta y la causa es la que se da." },
+          { es: "El coordinador saludó al alcalde cuando este entraba.", note: "«Este» remite al último mencionado: entraba el alcalde." },
+        ],
+        mistakes: [
+          {
+            wrong: "Todos los usuarios no podrán usar la sala de cómputo el lunes. (Quiere decir: nadie podrá.)",
+            right: "Ningún usuario podrá usar la sala de cómputo el lunes.",
+            why: "«Todos… no» admite la lectura «no todos». Si nadie puede, «ningún» deja una sola lectura.",
+          },
+          {
+            wrong: "El usuario devolverá el libro del usuario en el mostrador.",
+            right: "El usuario devolverá su libro en el mostrador.",
+            why: "Aquí «su» solo tiene un poseedor plausible. Repetir el nombre es una reparación que no hacía falta.",
+          },
+        ],
+      },
+      {
+        heading: "La segunda lectura buscada: doble sentido y vaguedad calculada",
+        body: [
+          "En la ambigüedad intencional, quien escribe quiere que el lector active los dos sentidos a la vez. El eslogan funciona solo si se ven los dos; explicarlo o repararlo lo mata. Para crearlo, busca una palabra con dos sentidos que encajen en la situación («Préstate a leer», «Libros que te llevan lejos») o una construcción que admita dos análisis.",
+          "La vaguedad calculada es otra cosa: no hay dos lecturas, sino una sola, poco precisa a propósito. «Se estudiarán medidas» o «la red evaluará la situación» suenan firmes y comprometen poco. Es habitual en la comunicación institucional y en la diplomacia. Un buen lector la reconoce y, si le hace falta precisión, pregunta: ¿qué medidas?, ¿cuándo?, ¿quién decide?",
+          "Dos recursos útiles para leer y escribir con precisión: la posición del adjetivo («una vieja usuaria», que lleva muchos años yendo, frente a «una usuaria vieja», de edad avanzada) y «sendos», que reparte un elemento por cabeza: «Las dos ganadoras recibieron sendos lotes de libros» (uno cada una).",
+        ],
+        examples: [
+          { es: "Biblioteca La Esquina: aquí todo el mundo tiene historia.", note: "Doble sentido buscado: cada vecino tiene su historia y la biblioteca tiene libros de historia." },
+          { es: "La dirección tomará las decisiones que considere pertinentes.", note: "Vaguedad calculada: no sabemos qué decisiones ni cuándo." },
+          { es: "Las dos autoras firmaron sendos ejemplares para la biblioteca.", note: "«Sendos»: un ejemplar cada una, no dos cada una." },
+        ],
+      },
+      {
+        heading: "Cuatro juicios distintos sobre una misma forma",
+        body: [
+          "Cuando una forma «suena mal», conviene separar cuatro preguntas. Gramaticalidad: ¿la produce de forma natural algún grupo de hablantes nativos? «Los libro está prestado» no la produce nadie: es agramatical. Aceptabilidad: es gramatical, pero ¿funciona en este contexto? Una frase con tres relativas encajadas puede ser gramatical y casi ilegible. Norma: ¿qué recomiendan las obras de referencia (Diccionario panhispánico de dudas, Nueva gramática, Libro de estilo), y con qué etiqueta? Variación: ¿de qué zona, grupo social o situación es propia?",
+          "Las etiquetas de la norma tienen grados: «se admite», «se prefiere», «se desaconseja en el uso culto», «no se considera correcto». «Se prefiere» no significa «está mal». Por eso un corrector no marca igual «había muchas personas» frente a «habían muchas personas» que «detrás de mí» frente a «detrás mío».",
+        ],
+        table: {
+          caption: "Casos bien documentados y su juicio",
+          head: ["Forma", "Juicio", "En un texto formal"],
+          rows: [
+            ["habían muchas personas", "real y extendida; no normativa", "había muchas personas"],
+            ["me se cayó", "real; no normativa", "se me cayó"],
+            ["pienso de que (dequeísmo)", "real; no normativa", "pienso que"],
+            ["me acuerdo que (queísmo)", "frecuente en lo oral; se evita en lo cuidado", "me acuerdo de que"],
+            ["dudo (de) que", "las dos son válidas", "cualquiera de las dos"],
+            ["detrás mío", "frecuente en muchas zonas; el uso cuidado prefiere la otra", "detrás de mí"],
+            ["a Juan le vi (leísmo de persona, masculino singular)", "admitido", "le vi o lo vi"],
+            ["la dije que viniera (laísmo)", "no admitido", "le dije que viniera"],
+            ["¿qué dijistes?", "real; no normativa", "¿qué dijiste?"],
+            ["está más mayor", "válido solo si se refiere a la edad", "se mantiene con ese sentido"],
+            ["la calor / andé", "popular o regional; no normativas", "el calor / anduve"],
           ],
-          "answer": 0,
-          "why": "Compara después tus dos lecturas con una persona: una pausa puede favorecer una lectura sin demostrarla.",
-          "audio": "Queremos renovar; durante las obras faltarán puestos.",
-          "voice": "es-ES-m"
-        }
-      ]
+        },
+      },
+      {
+        heading: "La voz ajena y la voz propia",
+        body: [
+          "Una forma no normativa no se corrige igual en todos los lugares del texto. En la voz del autor, la del narrador o la de la institución, se sigue la norma culta. En la voz de otra persona (un testimonio, un diálogo de novela, una cita textual), la forma puede mantenerse porque forma parte de cómo habla esa persona. Corregir a una vecina que dice «habían muchas carretas en la plaza» en su testimonio es borrarla.",
+          "Dos errores de juicio son frecuentes. El primero es llamar «agramatical» a todo lo que no es normativo: «me se cayó» lo dicen muchos hablantes nativos con total regularidad. El segundo es la ultracorrección: por miedo a un rasgo estigmatizado, se «corrige» lo que ya estaba bien, como quien dice «bacalado» por evitar el «-ao» o «Me alegra de que» por evitar el queísmo.",
+        ],
+        examples: [
+          { es: "Testimonio: «Habían muchas carretas en la plaza los domingos». Narrador: «Doña Carmenza recuerda que había muchas carretas en la plaza».", note: "Se respeta la voz de la vecina; el narrador usa la norma culta." },
+          { es: "«Me alegra que vengas» y «Me alegro de que vengas».", note: "Las dos son normativas; «me alegra de que» es una ultracorrección." },
+        ],
+        mistakes: [
+          {
+            wrong: "Corrector: «“Me se olvidó” es agramatical».",
+            right: "Corrector: «“Me se olvidó” es una forma real pero no normativa; en un texto formal, “se me olvidó”».",
+            why: "La produce un número grande de hablantes nativos: el juicio correcto es de norma, no de gramaticalidad.",
+          },
+          {
+            wrong: "Nota del editor: «Habían cuarenta participantes en el taller».",
+            right: "Nota del editor: «Había cuarenta participantes en el taller».",
+            why: "La nota es voz de la institución: «haber» impersonal va en singular.",
+          },
+        ],
+        tip: "Antes de escribir «incorrecto» en un margen, pregúntate: ¿según qué obra?, ¿con qué etiqueta?, ¿en la voz de quién?",
+      },
+    ],
+  },
+  grammar: {
+    intro: "Primero diagnostica, luego decide. No todos los ítems piden corregir.",
+    exercises: [
+      {
+        id: "c2-06-gramatica-diagnostico",
+        type: "context",
+        prompt: "Lee el texto y decide qué hacer con la doble lectura.",
+        items: [
+          {
+            context: "Reglamento de préstamo: «Los usuarios que tengan multas pendientes y los menores no acompañados no podrán retirar más de dos libros».",
+            q: "¿Hay una ambigüedad que haya que reparar?",
+            options: [
+              "No: la frase tiene una sola lectura razonable.",
+              "Sí: «no acompañados» puede afectar solo a los menores o también a los usuarios con multas.",
+              "Sí, pero solo porque la frase es larga.",
+            ],
+            answer: 0,
+            why: "«No acompañados» va con «menores», y la relativa ya delimita al primer grupo; no hay una segunda lectura razonable. No toda frase larga es ambigua.",
+          },
+          {
+            context: "Campaña del festival de lectura: «Préstate a leer: tu biblioteca te espera».",
+            q: "¿Qué tipo de doble sentido es?",
+            options: [
+              "Vaguedad calculada para no comprometerse.",
+              "Ambigüedad accidental que hay que reparar antes de imprimir.",
+              "Doble sentido buscado: «prestarse a» (ofrecerse) y el préstamo de libros.",
+            ],
+            answer: 2,
+            why: "El eslogan funciona solo si el lector activa los dos sentidos; repararlo lo anularía.",
+          },
+          {
+            context: "Comunicado de la red tras una queja: «La dirección analizará el caso y tomará las medidas que estime convenientes».",
+            q: "¿Qué describe mejor la frase?",
+            options: [
+              "Una frase con dos lecturas sintácticas.",
+              "Vaguedad calculada: suena firme y no concreta medidas ni plazos.",
+              "Un error de concordancia.",
+            ],
+            answer: 1,
+            why: "No hay dos interpretaciones, sino una sola deliberadamente imprecisa.",
+          },
+          {
+            context: "Correo interno: «La coordinadora habló con la tallerista de su contrato».",
+            q: "La tallerista es quien tiene contrato con la red. ¿Qué haces?",
+            options: [
+              "Lo dejo: «su» nunca es ambiguo.",
+              "Escribo «de su propio contrato».",
+              "Escribo «habló con la tallerista del contrato de esta».",
+            ],
+            answer: 2,
+            why: "Hay dos poseedoras posibles; «de esta» remite a la última mencionada, la tallerista. «Su propio» no deshace la ambigüedad.",
+          },
+        ],
+      },
+      {
+        id: "c2-06-gramatica-reparar",
+        type: "error",
+        prompt: "Cada aviso tiene una ambigüedad accidental. Reescríbelo con el cambio mínimo para que diga lo que se indica entre paréntesis.",
+        items: [
+          {
+            sentence: "Se donan enciclopedias para colegios en buen estado. (Las enciclopedias están en buen estado.)",
+            answers: ["Se donan enciclopedias en buen estado para colegios."],
+            why: "Al acercar «en buen estado» a «enciclopedias», ya no puede referirse a los colegios.",
+          },
+          {
+            sentence: "Todos los préstamos no se pueden renovar por internet. (Algunos sí se pueden.)",
+            answers: ["No todos los préstamos se pueden renovar por internet."],
+            why: "«No todos» niega la totalidad y deja una sola lectura.",
+          },
+          {
+            sentence: "El vigilante vio a la directora cuando salía del parqueadero. (Salía la directora.)",
+            answers: ["El vigilante vio a la directora cuando esta salía del parqueadero."],
+            why: "El demostrativo «esta» recupera el último referente femenino mencionado.",
+          },
+          {
+            sentence: "No suspendieron el club de lectura porque llovía. (Lo suspendieron, pero no por la lluvia.)",
+            answers: ["No suspendieron el club de lectura porque lloviera."],
+            why: "Con subjuntivo se niega la causa, no el hecho: el club sí se suspendió.",
+          },
+          {
+            sentence: "Los socios, que han pagado la cuota, recibirán el boletín. (Solo lo reciben los que han pagado.)",
+            answers: ["Los socios que han pagado la cuota recibirán el boletín."],
+            why: "Sin comas, la relativa es especificativa: selecciona un subgrupo.",
+          },
+        ],
+      },
+      {
+        id: "c2-06-gramatica-juicio",
+        type: "classify",
+        prompt: "Clasifica cada forma según el juicio que merece.",
+        categories: [
+          "Agramatical: ningún grupo de hablantes nativos la produce",
+          "Real pero no normativa: se revisa en un texto formal",
+          "Admitida o válida en la norma culta",
+        ],
+        items: [
+          { text: "Las niña juega en el parque.", cat: 0, why: "Rompe la concordancia del artículo con el nombre." },
+          { text: "Habían tres sillas libres.", cat: 1, why: "«Haber» impersonal pluralizado: muy extendido, no normativo." },
+          { text: "Dudo de que llegue a tiempo.", cat: 2, why: "Con «dudar», la preposición es opcional: las dos variantes son válidas." },
+          { text: "Me se perdió el carné.", cat: 1, why: "Forma real; la norma pide «se me perdió»." },
+          { text: "A Julián le vi ayer en la sala.", cat: 2, why: "Leísmo de persona masculino singular: admitido." },
+          { text: "Libro el de prestó me ella.", cat: 0, why: "Orden imposible en cualquier variedad." },
+          { text: "La dije que trajera el libro.", cat: 1, why: "Laísmo: real en algunas zonas, no admitido en la norma culta." },
+          { text: "Mi abuela está más mayor.", cat: 2, why: "Con el sentido de edad, «más mayor» es válido." },
+        ],
+      },
+      {
+        id: "c2-06-gramatica-voz",
+        type: "gap",
+        prompt: "Escribe la forma adecuada para la voz indicada. Entre corchetes tienes la forma del testimonio oral.",
+        items: [
+          { q: "Narrador: Don Efraín cuenta que en la plaza ___ muchos vendedores de fruta. [habían]", answers: [["había"]], why: "Voz del narrador: «haber» impersonal en singular." },
+          { q: "Narradora: La señora Inés recuerda que aquel día ___ hasta Chapinero a pie. [andé]", answers: [["anduvo"]], why: "La narradora pasa a tercera persona y usa la forma normativa del indefinido." },
+          { q: "Testimonio transcrito: «Yo ___ que el tranvía pasaba por aquí». [me acuerdo]", answers: [["me acuerdo"]], why: "En la voz de la hablante se respeta su forma; el testimonio no se normaliza." },
+          { q: "Nota de la editora: Durante la grabación, el nieto de doña Carmenza se sentó ___. [detrás mío, dicho por ella]", answers: [["detrás de ella"]], why: "Voz institucional y tercera persona: el uso cuidado prefiere «detrás de» + pronombre." },
+          { q: "Narrador: Doña Rosa dice que ___ cayó el canasto en la calle. [me se]", answers: [["se le"]], why: "En tercera persona y con la norma culta: «se le cayó»." },
+        ],
+      },
+    ],
+  },
+  vocabulary: {
+    intro: "Léxico para hablar de revisión de textos, de norma y de variación sin confundir los planos.",
+    groups: [
+      {
+        title: "Revisar un texto",
+        items: [
+          { es: "la doble lectura", note: "segunda interpretación posible de una frase" },
+          { es: "deshacer la ambigüedad", note: "dejar una sola interpretación posible" },
+          { es: "el alcance", note: "parte de la frase a la que afecta una palabra como «solo» o «no»" },
+          { es: "el referente", note: "persona o cosa a la que remite un pronombre o un posesivo" },
+          { es: "la vaguedad calculada", note: "imprecisión elegida a propósito para no comprometerse" },
+          { es: "el juego de palabras", note: "uso de una palabra con dos sentidos para lograr un efecto" },
+          { es: "la letra menuda", note: "condiciones que pasan inadvertidas en un texto" },
+        ],
+      },
+      {
+        title: "Norma y variación",
+        items: [
+          { es: "la norma culta", note: "uso que las obras de referencia recomiendan para textos formales" },
+          { es: "estar desaconsejado", note: "no recomendado en el uso cuidado, aunque sea frecuente" },
+          { es: "estar admitido", note: "aceptado por la norma, aunque haya una variante preferida" },
+          { es: "la forma estigmatizada", note: "uso real que una parte de la comunidad juzga negativamente" },
+          { es: "la ultracorrección", note: "error que nace de querer evitar otro" },
+          { es: "la transcripción fiel", note: "versión escrita que respeta cómo habló la persona" },
+          { es: "la marca de uso", note: "indicación del diccionario como «coloquial» o «popular»" },
+        ],
+      },
+    ],
+    exercises: [
+      {
+        id: "c2-06-lexico-relacion",
+        type: "match",
+        prompt: "Relaciona cada expresión con su definición.",
+        pairs: [
+          { left: "el alcance", right: "parte de la frase a la que afecta una palabra como «solo» o «no»" },
+          { left: "el referente", right: "persona o cosa a la que remite un pronombre o un posesivo" },
+          { left: "la vaguedad calculada", right: "imprecisión elegida a propósito para no comprometerse" },
+          { left: "la ultracorrección", right: "error que nace de querer evitar otro" },
+          { left: "estar desaconsejado", right: "no recomendado en el uso cuidado, aunque sea frecuente" },
+          { left: "la transcripción fiel", right: "versión escrita que respeta cómo habló la persona" },
+          { left: "la marca de uso", right: "indicación del diccionario como «coloquial» o «popular»" },
+        ],
+      },
+      {
+        id: "c2-06-lexico-uso",
+        type: "gap",
+        prompt: "Completa con la expresión adecuada del vocabulario.",
+        bank: ["doble lectura", "norma culta", "forma estigmatizada", "juego de palabras"],
+        items: [
+          { q: "En el contrato con la imprenta, esa ___ podía costarle dinero a la red.", answers: [["doble lectura"]] },
+          { q: "El eslogan es un ___ que solo funciona si el lector ve los dos sentidos.", answers: [["juego de palabras"]] },
+          { q: "La nota de la editora sigue la ___; los testimonios, no necesariamente.", answers: [["norma culta"]] },
+          { q: "Algunos vecinos evitaban decir «andé» en la grabación porque sabían que es una ___.", answers: [["forma estigmatizada"]] },
+        ],
+      },
+    ],
+  },
+  pronunciation: {
+    focus: "La pausa y el grupo fónico como desambiguadores",
+    explanation: [
+      "En la lengua oral muchas ambigüedades escritas desaparecen gracias a la entonación. La pausa marca dónde termina un grupo de palabras y, con él, a qué se engancha un complemento. «Se venden lámparas para mesas | de bronce» agrupa «de bronce» con las mesas; «Se venden lámparas | para mesas, | de bronce» lo deja suelto y más cerca de las lámparas.",
+      "Las relativas explicativas se dicen entre pausas y con un tono más bajo, como un paréntesis: «Los socios, | que han pagado, | votarán». Las especificativas van en un solo grupo: «Los socios que han pagado votarán». La pausa equivale a las comas.",
+      "Por eso, al leer en voz alta un texto con una ambigüedad accidental, tu entonación elige una lectura, pero el papel no: la reparación tiene que estar en la escritura. El audio utiliza la síntesis disponible en el navegador; no certifica un acento regional ni evalúa tu pronunciación.",
+    ],
+    table: {
+      caption: "Misma secuencia, dos agrupaciones",
+      head: ["Un solo grupo (sin pausa)", "Con pausas"],
+      rows: [
+        ["Los usuarios que viven en el barrio pagan menos.", "Los usuarios, | que viven en el barrio, | pagan menos."],
+        ["Ella no vino porque llovía.", "Ella no vino, | porque llovía."],
+        ["Habló con el alcalde de Usme.", "Habló con el alcalde | de Usme."],
+      ],
     },
-    "produce": [
-      {
-        "text": "Queremos estudiar, encontrarnos y abrir oportunidades.",
-        "tip": "Marca grupos fónicos y explica qué interpretación favoreces.",
-        "voice": "es-ES-f"
-      },
-      {
-        "text": "Queremos renovar; durante las obras faltarán puestos.",
-        "tip": "Cambia el foco sin cambiar las palabras; pide una interpretación a tu interlocutor.",
-        "voice": "es-ES-m"
-      },
-      {
-        "text": "La retórica resulta más responsable cuando explicita costes y admite respuestas no previstas.",
-        "tip": "Lee a velocidad cómoda, conserva la reserva y compara tu grabación local con tu intención.",
-        "voice": "es-ES-f"
-      }
-    ]
-  },
-  "listening": {
-    "title": "Mesa de trabajo: Convencer sin esconder el coste",
-    "context": "Dos participantes preparan una intervención sobre el caso. Escucha primero sin transcripción. Las voces son sintéticas y no se presentan como variedades regionales verificadas.",
-    "speakers": [
-      {
-        "id": "a",
-        "name": "Patricia",
-        "voice": "es-ES-f",
-        "role": "Primera perspectiva"
-      },
-      {
-        "id": "b",
-        "name": "Sergio",
-        "voice": "es-ES-m",
-        "role": "Contraste y reformulación"
-      }
-    ],
-    "script": [
-      {
-        "speaker": "a",
-        "text": "Mi discurso empieza con abrir puertas, y no pienso renunciar a esa imagen. Pero acepto que convierte cualquier objeción presupuestaria en una sospecha moral. Voy a introducir antes una concesión: podemos compartir el fin y discrepar sobre el calendario. Así no obligo a la representante del personal a demostrar que también quiere una biblioteca mejor."
-      },
-      {
-        "speaker": "b",
-        "text": "Mantener la imagen me parece bien si después dices qué puerta estará cerrada durante ocho meses. Pausa técnica no explica el coste para quien estudia allí cada tarde. Y los horarios ampliados todavía no tienen financiación. Si los anuncias como compromiso firme, la belleza del cierre del discurso nos dejará un problema práctico al día siguiente."
-      },
-      {
-        "speaker": "a",
-        "text": "Puedo distinguir compromiso y propuesta: nos comprometemos a publicar la demanda semanal; solicitamos recursos para ampliar horarios. La diferencia verbal importa. Tampoco diré que las obras son gratuitas porque ya están presupuestadas. Que no haya un pago directo de los usuarios no elimina el coste público ni el tiempo que tendrán que dedicar a desplazarse."
-      },
-      {
-        "speaker": "b",
-        "text": "Entonces la pregunta final no debería ser quién quiere quedarse atrás. Eso fabrica dos bandos que no existen. Pregunta qué combinación de continuidad y rapidez estamos dispuestos a sostener. Tendrás una intervención menos redonda, quizá, pero dejarás espacio a respuestas que no controlas. Esa es una diferencia entre movilizar a una audiencia para aplaudir y convocarla a decidir. Podemos ensayar el cierre con una pausa antes de la pregunta y sin elevar la voz para convertirla en una consigna. No es un detalle menor: la audiencia debe poder disentir sin quedar moralmente descalificada."
-      },
-      {
-        "speaker": "a",
-        "text": "El personal ha señalado un coste que mi intervención omitía: abrir más horas puede desplazar tareas de catalogación y visitas escolares. Decir que aprovechamos recursos no responde a esa objeción. Voy a nombrar el intercambio y a pedir que el plan de continuidad se apruebe antes de fijar las obras. Si el plan no alcanza, el calendario deberá revisarse."
-      },
-      {
-        "speaker": "b",
-        "text": "Eso convierte la concesión en una condición operativa. La audiencia podrá comprobar si tu discurso admite consecuencias o si solo reconoce objeciones para seguir igual. Puedes conservar la anáfora, pero cada queremos necesita después un quién, un cómo y un criterio de revisión. El cierre ganará fuerza si muestra qué estás dispuesta a cambiar cuando los recursos no permitan cumplir la promesa."
-      }
-    ],
-    "stages": [
-      {
-        "stage": "gist",
-        "prompt": "Escucha el intercambio completo sin abrir la transcripción. Reconstruye el desacuerdo central.",
-        "exercise": {
-          "id": "c2-06-escucha-gist",
-          "type": "choice",
-          "prompt": "Interpreta el diálogo: Convencer sin esconder el coste",
-          "items": [
-            {
-              "q": "¿Qué problema organiza la conversación de Convencer sin esconder el coste?",
-              "options": [
-                "Toda objeción al presupuesto rechaza el acceso cultural.",
-                "La retórica resulta más responsable cuando explicita costes y admite respuestas no previstas."
-              ],
-              "answer": 1,
-              "why": "Reconstruye el propósito común antes de buscar detalles."
-            },
-            {
-              "q": "En esta fase, ¿qué conclusión sería excesiva sobre Convencer sin esconder el coste?",
-              "options": [
-                "La retórica resulta más responsable cuando explicita costes y admite respuestas no previstas.",
-                "Un término técnico carece siempre de carga valorativa."
-              ],
-              "answer": 1,
-              "why": "La primera opción amplía o deforma lo que permite el intercambio."
-            }
-          ]
-        }
-      },
-      {
-        "stage": "detail",
-        "prompt": "Escucha otra vez y anota afirmación, condición y fuente. No copies frases todavía.",
-        "exercise": {
-          "id": "c2-06-escucha-detail",
-          "type": "choice",
-          "prompt": "Interpreta el diálogo: Convencer sin esconder el coste",
-          "items": [
-            {
-              "q": "¿Qué límite deben conservar los interlocutores de Convencer sin esconder el coste?",
-              "options": [
-                "Los horarios ampliados carecen todavía de financiación confirmada.",
-                "Los horarios ampliados ya están financiados."
-              ],
-              "answer": 0,
-              "why": "La conversación vuelve sobre el límite que evita una promesa o inferencia excesiva."
-            },
-            {
-              "q": "En esta fase, ¿qué conclusión sería excesiva sobre Convencer sin esconder el coste?",
-              "options": [
-                "Los horarios ampliados carecen todavía de financiación confirmada.",
-                "Un término técnico carece siempre de carga valorativa."
-              ],
-              "answer": 1,
-              "why": "La primera opción amplía o deforma lo que permite el intercambio."
-            }
-          ]
-        }
-      },
-      {
-        "stage": "notice",
-        "prompt": "Localiza una reformulación y explica qué inferencia repara. Consulta la transcripción solo después de responder.",
-        "exercise": {
-          "id": "c2-06-escucha-notice",
-          "type": "choice",
-          "prompt": "Interpreta el diálogo: Convencer sin esconder el coste",
-          "items": [
-            {
-              "q": "¿Qué inferencia pragmática permite el diálogo de Convencer sin esconder el coste?",
-              "options": [
-                "El lema de apertura puede deslegitimar objeciones presupuestarias sin refutarlas.",
-                "Un término técnico carece siempre de carga valorativa."
-              ],
-              "answer": 0,
-              "why": "La inferencia se apoya en una reformulación y su contexto; no es una lectura literal de una palabra."
-            },
-            {
-              "q": "En esta fase, ¿qué conclusión sería excesiva sobre Convencer sin esconder el coste?",
-              "options": [
-                "El lema de apertura puede deslegitimar objeciones presupuestarias sin refutarlas.",
-                "Un término técnico carece siempre de carga valorativa."
-              ],
-              "answer": 1,
-              "why": "La primera opción amplía o deforma lo que permite el intercambio."
-            }
-          ]
-        }
-      }
-    ]
-  },
-  "reading": {
-    "title": "Convencer sin esconder el coste · expediente de lectura",
-    "genre": "Dossier original: texto principal y documento de contraste",
-    "frame": "Situación ficticia para lectura crítica y mediación. Identifica qué voz afirma cada cosa antes de integrar las fuentes.",
-    "text": [
-      "La propuesta de renovar la biblioteca se presentó bajo un lema difícil de rechazar: «Abrir puertas». Quienes preguntaron por el presupuesto quedaron, durante unos minutos, en el papel incómodo de quienes preferían cerrarlas. El discurso no había refutado sus objeciones; había elegido una imagen en la que resultaba ingrato formularlas. Esa eficacia explica tanto el valor de la retórica como la necesidad de examinarla. Ninguna decisión pública cabe entera en la oposición entre apertura y cierre.",
-      "La directora articuló su intervención mediante una anáfora: «Queremos un lugar para estudiar, queremos un lugar para encontrarnos, queremos un lugar para quienes no tienen otro lugar». La serie ampliaba progresivamente el destinatario y convertía el edificio en una respuesta social. Después reconoció que las obras interrumpirían el servicio. La concesión fue precisa hasta que llamó pausa técnica a los ocho meses de cierre. La expresión no era falsa, pero reducía a un procedimiento lo que para ciertos usuarios suponía perder calefacción, conexión y acompañamiento.",
-      "Una representante del personal respondió con una retórica menos visible: habló de optimizar recursos y racionalizar horarios. Sus términos parecían técnicos, aunque también seleccionaban una perspectiva. Optimizar exige decir según qué criterio; racionalizar puede significar ampliar un servicio o recortarlo. La neutralidad no se obtiene cambiando metáforas por nominalizaciones. Se obtiene, en parte, explicitando los criterios y permitiendo que otras personas discutan su pertinencia.",
-      "El momento decisivo llegó cuando una estudiante preguntó dónde estudiarían durante las obras. La directora abandonó el lema y reconoció que el plan provisional solo cubría la mitad de los puestos. Ese dato no refutaba la renovación, pero impedía presentarla como una ganancia sin transición ni pérdidas. Una nueva versión del discurso mantuvo la anáfora y añadió tres compromisos: convenio con dos centros cercanos, horarios ampliados y revisión mensual de la demanda. La persuasión ganaba credibilidad al hacerse vulnerable a una comprobación.",
-      "Informe de contraste. El presupuesto de renovación reservaba una partida para equipamiento y otra para mantenimiento durante dos años. No había financiación confirmada para los horarios ampliados del servicio provisional. La asociación estudiantil apoyaba las obras si se garantizaba primero una alternativa; una agrupación de usuarios mayores prefería escalonarlas, aunque duraran más. Ambas defendían el acceso, pero daban distinto peso a la duración y a la continuidad. Presentarlas como favorables y contrarias al progreso borraría justamente el conflicto que el discurso debía ayudar a deliberar. El personal pidió además que la revisión mensual se publicara aunque sus resultados contradijeran el discurso inaugural. Sin esa condición, la comprobación podía convertirse en otro recurso promocional.",
-      "Respuesta del personal de atención. La anáfora de la directora nos incluye como destinatarios del proyecto, pero no como quienes tendrán que sostener el servicio provisional. El documento de turnos reveló que ampliar horarios sin contratar suponía desplazar horas de otras tareas. El coste no desaparecía por no figurar como gasto nuevo: se trasladaba a la catalogación, a las actividades escolares o a la carga del equipo. La retórica de aprovechar recursos necesitaba, por tanto, nombrar qué usos se abandonaban al priorizar otros.",
-      "La directora incorporó esa observación mediante una concesión más exigente. Reconoció que el convenio de espacios no equivalía a disponer del personal necesario para abrirlos. La frase hacía menos triunfal la intervención, pero mejoraba su estructura argumentativa: permitía localizar una condición cuyo incumplimiento obligaría a modificar el calendario. Una promesa que no establece qué ocurrirá si falla su presupuesto puede funcionar como deseo enfático. Un compromiso responsable necesita un criterio de revisión. El discurso terminó proponiendo que la comisión aprobara primero un plan de continuidad y después fijara el inicio de las obras. La secuencia cambiaba: no se trataba de encontrar palabras más amables para el mismo anuncio, sino de dejar que una objeción bien formulada modificara la decisión defendida."
-    ],
-    "tasks": [
-      {
-        "id": "c2-06-lectura",
-        "type": "choice",
-        "prompt": "Reconstruye la tesis y su límite en Convencer sin esconder el coste.",
-        "items": [
-          {
-            "q": "¿Qué tesis sostiene el dossier «Convencer sin esconder el coste»?",
-            "options": [
-              "La retórica resulta más responsable cuando explicita costes y admite respuestas no previstas.",
-              "Toda objeción al presupuesto rechaza el acceso cultural."
-            ],
-            "answer": 0,
-            "why": "La tesis integra el contraste entre las fuentes, no solo una frase aislada."
-          },
-          {
-            "q": "¿Qué detalle limita la interpretación en «Convencer sin esconder el coste»?",
-            "options": [
-              "Los horarios ampliados carecen todavía de financiación confirmada.",
-              "Los horarios ampliados ya están financiados."
-            ],
-            "answer": 0,
-            "why": "El documento complementario delimita qué está confirmado."
-          }
-        ]
-      },
-      {
-        "id": "c2-06-lectura-evidencia",
-        "type": "open",
-        "prompt": "Defiende una interpretación de Convencer sin esconder el coste con pruebas y contraejemplos.",
-        "items": [
-          {
-            "prompt": "Contrasta «La retórica resulta más responsable cuando explicita costes y admite respuestas no previstas.» con «Toda objeción al presupuesto rechaza el acceso cultural.». Cita dos fragmentos breves, atribuye sus voces y explica qué detalle impide sostener la segunda lectura.",
-            "model": "La retórica resulta más responsable cuando explicita costes y admite respuestas no previstas. Los horarios ampliados carecen todavía de financiación confirmada.",
-            "checklist": [
-              "Distingo cita e interpretación.",
-              "Incluyo una lectura rival y un límite."
-            ]
-          }
-        ]
-      }
-    ],
-    "noticing": {
-      "prompt": "Observa cómo las formas del expediente distribuyen certeza, responsabilidad y voz.",
-      "items": [
+    perceive: {
+      id: "c2-06-percepcion",
+      type: "listen",
+      prompt: "Escucha cada frase y decide qué lectura selecciona la entonación.",
+      items: [
         {
-          "quote": "La propuesta de renovar la biblioteca se presentó bajo un lema difícil de rechazar: «Abrir puertas».",
-          "note": "Examina el encuadre inicial y qué información necesitarás para revisarlo."
+          q: "¿Quiénes pagan menos?",
+          options: ["Todos los usuarios, que además viven en el barrio.", "Solo los usuarios que viven en el barrio."],
+          answer: 1,
+          why: "Un solo grupo fónico, sin pausas: relativa especificativa.",
+          audio: "Los usuarios que viven en el barrio pagan menos por el carné.",
+          voice: "es-CO-f",
         },
         {
-          "quote": "Informe de contraste.",
-          "note": "El documento final introduce otra perspectiva; identifica qué interpretación limita y qué deja abierto."
-        }
-      ]
-    }
+          q: "¿Quiénes reciben el boletín?",
+          options: ["Todos los socios, porque todos han pagado.", "Solo una parte de los socios."],
+          answer: 0,
+          why: "Las pausas convierten la relativa en un paréntesis explicativo.",
+          audio: "Los socios, que ya han pagado, recibirán el boletín.",
+          voice: "es-CO-m",
+        },
+        {
+          q: "¿Qué dice la frase sobre la clausura?",
+          options: [
+            "Que cerraron la sala y la causa fue la humedad.",
+            "Que no se sabe si cerraron la sala.",
+            "Que cerraron la sala, pero no por la humedad.",
+          ],
+          answer: 2,
+          why: "El subjuntivo «hubiera» niega la causa; el cierre sí ocurrió.",
+          audio: "No cerraron la sala porque hubiera humedad, sino por la obra del techo.",
+          voice: "es-ES-f",
+        },
+        {
+          q: "¿A qué se refiere «con funda»?",
+          options: ["A los lectores electrónicos.", "A los libros."],
+          answer: 0,
+          why: "La pausa tras «libros» separa «con funda» y lo devuelve a «lectores».",
+          audio: "Prestamos lectores de libros, con funda incluida.",
+          voice: "es-MX-m",
+        },
+      ],
+    },
+    produce: [
+      { text: "Los vecinos, que llegaron temprano, consiguieron sitio.", tip: "Haz las dos pausas y baja el tono en la relativa: todos llegaron temprano.", voice: "es-CO-f" },
+      { text: "Los vecinos que llegaron temprano consiguieron sitio.", tip: "Un solo grupo fónico: solo algunos consiguieron sitio.", voice: "es-CO-m" },
+      { text: "No la eligieron porque fuera la más barata.", tip: "Sin pausa antes de «porque»: se niega la causa, no la elección.", voice: "es-ES-m" },
+      { text: "Préstate a leer: tu biblioteca te espera.", tip: "Subraya «préstate» con un ligero alargamiento para que se oigan los dos sentidos.", voice: "es-CO-f" },
+    ],
+    spelling: "Las comas de una relativa no son decorativas: cambian quién queda incluido. Si al leer en voz alta haces pausas que no están en el texto, revisa si faltan comas o si sobran.",
   },
-  "practice": {
-    "intro": "Combina orden, clasificación, producción y recuperación espaciada. Las respuestas abiertas se contrastan con criterios y con tu docente.",
-    "exercises": [
+  listening: {
+    title: "Reunión de revisión en la biblioteca",
+    context: "Juliana, coordinadora editorial de una red de bibliotecas comunitarias de Bogotá, y Andrés, corrector recién incorporado, revisan tres textos: el reglamento de préstamo, el eslogan del festival y un testimonio para el libro «Memorias de la plaza». Escucha primero sin transcripción. Las voces son sintéticas y no se presentan como variedades regionales verificadas.",
+    speakers: [
+      { id: "j", name: "Juliana", voice: "es-CO-f", role: "Coordinadora editorial de la red" },
+      { id: "a", name: "Andrés", voice: "es-CO-m", role: "Corrector" },
+    ],
+    script: [
+      { speaker: "j", text: "Andrés, gracias por la revisión. Veo que marcaste en rojo casi todo, así que vamos por partes. Empecemos por el reglamento, que es lo más urgente porque se publica el lunes." },
+      { speaker: "a", text: "Sí, ahí encontré dos problemas serios. El artículo cuatro dice: «Todos los materiales audiovisuales no se prestan a domicilio». Yo entiendo que ninguno sale de la biblioteca, pero una usuaria me preguntó ayer si algunos sí se podían llevar. Y tenía razón en preguntar." },
+      { speaker: "j", text: "Claro, porque «todos… no» deja abierta la lectura de «no todos». ¿Qué quería decir la junta? Que ninguno sale. Entonces pongamos «ningún material audiovisual se presta a domicilio» y se acabó la discusión." },
+      { speaker: "a", text: "El otro es el artículo siete: «La bibliotecaria informará al usuario de que su préstamo ha vencido». Lo marqué porque «su» podría ser de la bibliotecaria." },
+      { speaker: "j", text: "Ahí no estoy de acuerdo. ¿Quién tiene préstamos? El usuario. Nadie va a pensar que la bibliotecaria se presta libros a sí misma. Si cambiamos «su» por «el préstamo del usuario», el artículo queda pesadísimo y no gana nada. Ese lo dejamos." },
+      { speaker: "a", text: "Vale, tiene sentido. Pasemos al eslogan, entonces. «Préstate a leer». Lo marqué como ambiguo porque «prestarse a» significa ofrecerse para algo, y no tiene que ver con el préstamo." },
+      { speaker: "j", text: "Justamente por eso lo elegimos. Si la gente solo ve un sentido, el eslogan no funciona. Ahí la doble lectura es el mensaje. Lo que sí revisaría es el texto de abajo, que dice que «la red tomará las medidas necesarias para mejorar el servicio». Eso no es ambiguo, es vago, y en una campaña sobre lectura queda raro. Prefiero algo concreto: «abriremos los domingos desde marzo»." },
+      { speaker: "a", text: "De acuerdo. Y ahora viene lo que más me costó: el testimonio de doña Carmenza. Dice «habían muchas carretas en la plaza» y «me se cayó el mercado en el barro». Lo corregí todo porque es agramatical." },
+      { speaker: "j", text: "Aquí hay que tener cuidado con las palabras. Agramatical sería algo que ningún hablante nativo produce, como «las carreta estaba». Lo que dice doña Carmenza lo dicen millones de personas con toda regularidad; lo que pasa es que la norma culta no lo recomienda. Son formas no normativas, que es otro juicio." },
+      { speaker: "a", text: "Pero si el libro va a estar en las bibliotecas, ¿no debería dar buen ejemplo?" },
+      { speaker: "j", text: "Da buen ejemplo en la voz de la red: la introducción, las notas, los pies de foto. Ahí escribimos «había muchas carretas» y «se le cayó el mercado». Pero el testimonio es la voz de doña Carmenza. Si la corregimos, el libro deja de ser un libro de memorias y se convierte en un libro sobre cómo debería haber hablado. Lo que sí podemos hacer es añadir una nota que explique el criterio, para que nadie piense que se nos pasó." },
+      { speaker: "a", text: "Entendido. Entonces separo: en la voz de la institución, norma culta; en la voz de los vecinos, transcripción fiel. Y en el reglamento, reparo solo lo que el contexto no resuelve." },
+    ],
+    stages: [
       {
-        "id": "c2-06-orden",
-        "type": "order",
-        "prompt": "Reconstruye dos relaciones centrales del caso Convencer sin esconder el coste.",
-        "items": [
+        stage: "gist",
+        prompt: "Escucha la reunión completa sin abrir la transcripción. ¿De qué tratan y cuál es el criterio general de Juliana?",
+        exercise: {
+          id: "c2-06-escucha-gist",
+          type: "choice",
+          prompt: "Reconstruye la situación y el criterio general.",
+          items: [
+            {
+              q: "¿Qué hacen Juliana y Andrés?",
+              options: [
+                "Discuten la revisión que Andrés ha hecho de varios textos de la red.",
+                "Preparan una entrevista con doña Carmenza.",
+                "Redactan un reglamento nuevo desde cero.",
+              ],
+              answer: 0,
+              why: "Repasan las marcas en rojo de Andrés en el reglamento, el eslogan y un testimonio.",
+            },
+            {
+              q: "¿Qué actitud resume mejor la de Juliana?",
+              options: [
+                "Hay que corregir todo lo que no siga la norma culta.",
+                "No hay que corregir nada, porque toda variación es válida.",
+                "Antes de corregir, hay que decidir qué tipo de problema es y en qué voz aparece.",
+              ],
+              answer: 2,
+              why: "Acepta unas correcciones, rechaza otras y distingue la voz de la red de la de los vecinos.",
+            },
+          ],
+        },
+      },
+      {
+        stage: "detail",
+        prompt: "Escucha otra vez y anota cada decisión con su motivo. Responde sin mirar la transcripción.",
+        exercise: {
+          id: "c2-06-escucha-detail",
+          type: "choice",
+          prompt: "Comprueba los detalles de cada decisión.",
+          items: [
+            {
+              q: "¿Por qué Juliana no acepta la corrección del artículo siete?",
+              options: [
+                "Porque el artículo ya estaba aprobado por la junta.",
+                "Porque solo el usuario tiene préstamos y el contexto ya decide el referente de «su».",
+                "Porque prefiere usar «suyo».",
+              ],
+              answer: 1,
+              why: "Repararlo haría el artículo más pesado sin ganar claridad.",
+            },
+            {
+              q: "¿Qué cambia Juliana en el texto de la campaña?",
+              options: [
+                "El eslogan, porque es ambiguo.",
+                "Nada: todo le parece bien.",
+                "La frase vaga sobre «las medidas necesarias», por un compromiso concreto.",
+              ],
+              answer: 2,
+              why: "Propone «abriremos los domingos desde marzo».",
+            },
+            {
+              q: "¿Qué propone Juliana para el testimonio?",
+              options: [
+                "Mantener las formas de doña Carmenza y explicar el criterio en una nota.",
+                "Pedir a doña Carmenza que repita la grabación.",
+                "Corregir solo «me se cayó» y dejar «habían».",
+              ],
+              answer: 0,
+              why: "La voz de la vecina se transcribe con fidelidad; la de la red sigue la norma culta.",
+            },
+          ],
+        },
+      },
+      {
+        stage: "notice",
+        prompt: "Fíjate en el juicio que recibe cada forma en la reunión. Relaciona y consulta la transcripción solo después de responder.",
+        exercise: {
+          id: "c2-06-escucha-notice",
+          type: "match",
+          prompt: "Relaciona cada fragmento de la reunión con la decisión que toman.",
+          pairs: [
+            { left: "todos los materiales audiovisuales no se prestan", right: "se repara con «ningún»" },
+            { left: "informará al usuario de que su préstamo ha vencido", right: "se deja: el contexto decide" },
+            { left: "préstate a leer", right: "se conserva: doble sentido buscado" },
+            { left: "tomará las medidas necesarias", right: "se concreta: era vaguedad" },
+            { left: "habían muchas carretas en la plaza", right: "se mantiene en la voz de la vecina" },
+          ],
+          why: "Cada decisión depende del tipo de problema y de la voz en que aparece.",
+        },
+      },
+    ],
+  },
+  reading: {
+    title: "Antes del lápiz rojo",
+    genre: "Columna de opinión en un boletín institucional",
+    frame: "Columna de Juliana Rincón para el boletín mensual de una red de bibliotecas comunitarias de Bogotá. Personas, entidad y textos citados son ficticios.",
+    text: [
+      "Cada vez que llega a la red un corrector nuevo, ocurre lo mismo: el primer texto que revisa vuelve lleno de rojo. Es una señal de entusiasmo, y lo agradezco. Pero con los años he aprendido que el lápiz rojo es la última herramienta, no la primera. Antes de tachar hay que hacerse una pregunta muy simple, que casi nunca se hace: ¿qué clase de problema tengo delante? Porque no es lo mismo una frase que dice dos cosas sin querer, una que las dice a propósito, una que nadie diría y una que muchos dicen aunque los manuales no la recomienden.",
+      "Empiezo por las frases con dos lecturas. Nuestro reglamento de préstamo decía hasta hace poco que «todos los materiales audiovisuales no se prestan a domicilio». Quienes lo redactaron querían decir que ninguno sale de la biblioteca, pero la frase permite entender que algunos sí. Durante meses, unos usuarios se llevaron películas y otros no, y cada uno tenía su parte de razón. Ese es el sello de la ambigüedad accidental: nadie la buscaba y cualquiera puede elegir la lectura que le conviene. La reparamos con una palabra: «ningún material audiovisual se presta a domicilio».",
+      "Ahora bien, no toda frase que admite en teoría dos lecturas tiene que repararse. En el mismo reglamento, el artículo que dice que «la bibliotecaria informará al usuario de que su préstamo ha vencido» fue marcado por un corrector entusiasta. En teoría, «su» podría remitir a la bibliotecaria. En la práctica, solo los usuarios tienen préstamos, y ningún lector sensato duda. Reparar lo que el contexto ya resuelve no aclara nada: alarga el texto y sugiere que el lector es incapaz de entender lo evidente. La regla que seguimos es la del cambio mínimo, y a veces el cambio mínimo es ninguno.",
+      "El caso opuesto es el de nuestra campaña para el festival de lectura. El eslogan, «Préstate a leer», también tiene dos lecturas: «prestarse a algo», es decir, ofrecerse a hacerlo, y la idea del préstamo bibliotecario. Aquí, en cambio, quien escribió quería que el lector activara las dos a la vez. Si alguien solo percibe un sentido, el eslogan pierde la gracia. La segunda lectura no es un defecto que se esconde, es el mensaje que se busca. Distinto es lo que aparecía debajo: «la red tomará las medidas necesarias para mejorar el servicio». Esa frase no tiene dos lecturas, tiene una sola y muy difusa. Es vaguedad calculada, propia de los comunicados que prefieren no comprometerse, y en una campaña dirigida a los vecinos la cambiamos por una promesa verificable.",
+      "El segundo grupo de problemas es más delicado, porque toca la manera de hablar de las personas. Estamos editando «Memorias de la plaza», un libro con testimonios de vecinos mayores sobre el mercado de antes. Doña Carmenza recuerda que «habían muchas carretas en la plaza» y que una mañana de lluvia «me se cayó el mercado en el barro». El borrador volvió con una nota en el margen: «agramatical». No lo es. Agramatical es lo que ningún grupo de hablantes nativos produce, como «las carreta llegaba». Lo que dice doña Carmenza lo dicen millones de personas con perfecta regularidad; lo que ocurre es que las obras normativas no lo recomiendan en los textos formales. Son dos juicios distintos, y confundirlos tiene consecuencias.",
+      "Conviene, además, leer bien las etiquetas de la norma. No es lo mismo «no se considera correcto» que «se prefiere». El Diccionario panhispánico de dudas no condena «dudo que» frente a «dudo de que»: admite las dos. Con «detrás mío» señala que es frecuente en muchas zonas y que el uso cuidado prefiere «detrás de mí». Y admite «a Juan le vi» para un hombre, mientras rechaza «la dije que viniera». Un corrector que marca todo con la misma tinta no está siendo riguroso; está borrando matices que las propias obras de referencia se toman el trabajo de establecer.",
+      "La solución que hemos adoptado en el libro es sencilla de explicar. En la voz de la red, es decir, en la introducción, las notas y los pies de foto, escribimos según la norma culta: «doña Carmenza recuerda que había muchas carretas en la plaza». En la voz de los vecinos, transcribimos lo que dijeron. Una nota editorial al comienzo explica el criterio para que nadie piense que se nos pasó. Así el libro conserva lo que lo hace valioso, que es oír a las personas como hablan, y la institución cumple con lo que le corresponde, que es escribir con cuidado.",
+      "Hay un último riesgo que quiero mencionar, porque lo he visto en correctores muy buenos: la ultracorrección. Por miedo a un rasgo estigmatizado se corrige lo que estaba bien. Alguien que teme el queísmo escribe «me alegra de que vengas», y alguien que huye de las terminaciones en «-ao» acaba escribiendo «bacalado». El exceso de celo también produce errores. Por eso insisto: antes del lápiz rojo, el diagnóstico. ¿Dos lecturas o una? ¿Buscada o accidental? ¿Agramatical, no normativa o simplemente distinta? ¿En la voz de quién? Con esas cuatro preguntas, el rojo se usa menos y se usa mejor.",
+    ],
+    glossary: [
+      { es: "el sello", note: "rasgo que identifica algo" },
+      { es: "difuso", note: "poco preciso, sin contornos claros" },
+      { es: "el exceso de celo", note: "cuidado excesivo que termina causando problemas" },
+    ],
+    tasks: [
+      {
+        id: "c2-06-lectura-comprension",
+        type: "choice",
+        prompt: "Comprueba que has entendido el argumento de la columna.",
+        items: [
           {
-            "words": [
-              "La",
-              "pregunta",
-              "final",
-              "deja",
-              "espacio",
-              "para",
-              "disentir."
+            q: "¿Por qué la autora no repara el artículo sobre el préstamo vencido?",
+            options: [
+              "Porque la junta no le dio permiso para cambiarlo.",
+              "Porque prefiere que el reglamento suene antiguo.",
+              "Porque el contexto ya elimina la segunda lectura de «su».",
             ],
-            "why": "La secuencia mantiene el alcance y las relaciones del caso."
+            answer: 2,
+            why: "Solo los usuarios tienen préstamos: la lectura alternativa no es razonable.",
           },
           {
-            "words": [
-              "El",
-              "discurso",
-              "reconoce",
-              "un",
-              "coste",
-              "de",
-              "transición."
+            q: "¿Qué diferencia establece entre el eslogan y la frase de debajo?",
+            options: [
+              "El eslogan tiene un doble sentido buscado; la otra frase es vaga, no ambigua.",
+              "Las dos son ambigüedades accidentales.",
+              "Las dos son ejemplos de vaguedad calculada.",
             ],
-            "why": "La secuencia mantiene el alcance y las relaciones del caso."
-          }
-        ]
-      },
-      {
-        "id": "c2-06-estatuto",
-        "type": "classify",
-        "prompt": "Clasifica el estatuto de estas formulaciones en «Convencer sin esconder el coste».",
-        "categories": [
-          "Conclusión respaldada o delimitada",
-          "Generalización no autorizada"
+            answer: 0,
+            why: "El cuarto párrafo separa doble sentido intencional y vaguedad.",
+          },
+          {
+            q: "Según la autora, ¿por qué es un error llamar «agramatical» a «me se cayó»?",
+            options: [
+              "Porque es la forma recomendada por la norma.",
+              "Porque es una forma real y regular entre hablantes nativos; el juicio es de norma.",
+              "Porque solo aparece en la lengua escrita.",
+            ],
+            answer: 1,
+            why: "Agramatical es lo que ningún grupo de hablantes nativos produce.",
+          },
         ],
-        "items": [
-          {
-            "text": "La retórica resulta más responsable cuando explicita costes y admite respuestas no previstas.",
-            "cat": 0,
-            "why": "Resume el razonamiento con sus límites."
-          },
-          {
-            "text": "Toda objeción al presupuesto rechaza el acceso cultural.",
-            "cat": 1,
-            "why": "Amplía o invierte el alcance de las fuentes."
-          },
-          {
-            "text": "Los horarios ampliados carecen todavía de financiación confirmada.",
-            "cat": 0,
-            "why": "Conserva un detalle explícito del expediente."
-          },
-          {
-            "text": "Los horarios ampliados ya están financiados.",
-            "cat": 1,
-            "why": "Contradice la condición documentada."
-          }
-        ]
       },
       {
-        "id": "c2-06-microescritura",
-        "type": "open",
-        "prompt": "Produce dos versiones breves antes del dossier de Convencer sin esconder el coste.",
-        "items": [
-          {
-            "prompt": "Redacta una apertura de 80–100 palabras para el destinatario de «Convencer sin esconder el coste». Conserva la tesis y una reserva.",
-            "model": "Queremos una biblioteca para estudiar, para encontrarnos y para quienes no disponen de otro lugar. Ese propósito no elimina el coste de cerrar ocho meses. La alternativa provisional ofrece menos puestos y sus horarios ampliados todavía necesitan financiación. Por eso defendemos la renovación junto con un convenio de espacios, una medición pública de la demanda y una decisión presupuestaria explícita. Reconocer esas condiciones no equivale a renunciar al proyecto. Permite que quienes discrepan del calendario participen sin ser presentados como enemigos del acceso. La pregunta final debe abrir opciones reales, no repartir certificados de compromiso cultural.",
-            "checklist": [
-              "Identifico quién necesita decidir y con qué información.",
-              "Separo afirmación, atribución e inferencia."
-            ]
-          },
-          {
-            "prompt": "Reformula para una persona ajena al debate de «Convencer sin esconder el coste» la condición que más fácilmente se perdería al resumir. Explica el coste de omitirla.",
-            "model": "Los horarios ampliados carecen todavía de financiación confirmada. La retórica resulta más responsable cuando explicita costes y admite respuestas no previstas.",
-            "checklist": [
-              "No convierto la condición en un dato accesorio.",
-              "Mantengo el alcance aunque simplifique el léxico."
-            ]
-          }
-        ]
+        id: "c2-06-lectura-juicio",
+        type: "match",
+        prompt: "Relaciona cada forma citada en la columna con el juicio que le atribuye la autora.",
+        pairs: [
+          { left: "las carreta llegaba", right: "agramatical" },
+          { left: "habían muchas carretas", right: "real, no normativa; se respeta en el testimonio" },
+          { left: "dudo que / dudo de que", right: "las dos variantes admitidas" },
+          { left: "me alegra de que vengas", right: "ultracorrección" },
+          { left: "la dije que viniera", right: "rechazada por la norma culta" },
+        ],
       },
       {
-        "id": "c2-06-recuperacion",
-        "type": "open",
-        "prompt": "Recupera recursos con materiales suministrados de semanas anteriores. No busques rasgos ausentes en el dossier actual. Contrasta después qué recurso sería pertinente transferir al nuevo caso.",
-        "items": [
+        id: "c2-06-lectura-evaluacion",
+        type: "open",
+        prompt: "Evalúa el criterio de la columna con argumentos propios.",
+        items: [
           {
-            "prompt": "Recuperación c2.disc.ironia-productiva. Recupera la semana 2, «La cortesía de decir lo contrario». Material de contraste: La inauguración del centro cultural empezó con una disculpa por el retraso y continuó con una celebración de la puntualidad institucional. «Nunca llegamos tarde a lo importante», afirmó la directora, mientras un técnico intentaba abrir la puerta todavía sin terminar. La frase provocó risas. No era necesariamente una burla cruel: algunas personas parecían agradecer que el discurso oficial hubiera ofrecido, por accidente, una descripción suficientemente exacta de la tarde. Otras no rieron; llevaban meses sin un lugar donde ensayar. Formulación de trabajo: La explicación no fue precisamente exhaustiva.\n\nRecupera «Ironía, litote e hipérbole» a partir del material suministrado. Produce una versión de 80–100 palabras que haga visible una relación implícita, mantenga una reserva y responda a una objeción. Explica cuál es tu aportación y cuál procede de la fuente. Contraste nuevo suministrado de «Convencer sin esconder el coste»: «Es una inversión costosa; de ahí no se sigue que sea prescindible.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "La sala resulta tan abierta que todavía deja pasar la lluvia. La imagen sería solo un chiste si no hubiera talleres pagando otro alquiler mientras esperan. La inauguración no fue precisamente una demostración de previsión; tampoco basta decirlo para recuperar las actividades perdidas. Pedimos un calendario verificable, un espacio provisional y una explicación de los cambios presupuestarios. El humor se dirige a la distancia entre anuncio y realidad, no a quienes soportan esa distancia. En el boletín municipal, esa misma crítica necesita una formulación literal: la apertura anunciada no garantiza todavía el uso del centro. En el nuevo contraste, «Es una inversión costosa; de ahí no se sigue que sea prescindible.» debe interpretarse dentro de esta cuestión: Anáfora, concesión táctica y encuadre. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
+            prompt: "La autora decide transcribir los testimonios tal como se dijeron y aplicar la norma culta solo a la voz de la red. Explica en 80–100 palabras qué gana y qué riesgo corre esa decisión, y propón una frase para la nota editorial.",
+            model: "La decisión gana fidelidad: el libro deja oír a los vecinos como hablan, que es su valor principal. El riesgo es que algún lector interprete las formas no normativas como descuidos de la edición o, peor, como modelos. Por eso la nota editorial es imprescindible. Yo escribiría: «Los testimonios se transcriben tal como se grabaron; las formas propias del habla de cada persona se han respetado. Las secciones redactadas por la red siguen la norma culta».",
+            checklist: [
+              "Señalo una ganancia y un riesgo concretos.",
+              "Distingo la voz de los vecinos y la de la institución.",
+              "La frase propuesta para la nota es formal y no juzga a los hablantes.",
+            ],
           },
-          {
-            "prompt": "Recuperación c2.voc.evaluacion-implicita. Recupera la semana 2, «La cortesía de decir lo contrario». Unidades disponibles: elogio envenenado (aprobación aparente que descalifica); litote (atenuación mediante negación del contrario); hipérbole (exageración reconocible); sobrentendido (contenido inferido y no formulado); condescendencia (superioridad disfrazada de amabilidad); a todas luces (de manera evidente para quien habla); tener su mérito (reconocer un valor, a veces irónicamente); quedarse corto (no alcanzar la intensidad necesaria). Pasaje: La inauguración del centro cultural empezó con una disculpa por el retraso y continuó con una celebración de la puntualidad institucional. «Nunca llegamos tarde a lo importante», afirmó la directora, mientras un técnico intentaba abrir la puerta todavía sin terminar. La frase provocó risas. No era necesariamente una burla cruel: algunas personas parecían agradecer que el discurso oficial hubiera ofrecido, por accidente, una descripción suficientemente exacta de la tarde. Otras no rieron; llevaban meses sin un lugar donde ensayar.\n\nRecupera «Léxico evaluativo implícito»: selecciona dos unidades del material, explica por qué no son intercambiables y redacta una frase sobre el caso con cada una. Contrasta una elección precisa con otra que introduciría una evaluación o un alcance distintos. Contraste nuevo suministrado de «Convencer sin esconder el coste»: «Es una inversión costosa; de ahí no se sigue que sea prescindible.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "La sala resulta tan abierta que todavía deja pasar la lluvia. La imagen sería solo un chiste si no hubiera talleres pagando otro alquiler mientras esperan. La inauguración no fue precisamente una demostración de previsión; tampoco basta decirlo para recuperar las actividades perdidas. Pedimos un calendario verificable, un espacio provisional y una explicación de los cambios presupuestarios. El humor se dirige a la distancia entre anuncio y realidad, no a quienes soportan esa distancia. En el boletín municipal, esa misma crítica necesita una formulación literal: la apertura anunciada no garantiza todavía el uso del centro. En este contraste, «elogio envenenado» nombra aprobación aparente que descalifica; «litote», atenuación mediante negación del contrario. La elección debe conservar esa diferencia. En el nuevo contraste, «Es una inversión costosa; de ahí no se sigue que sea prescindible.» debe interpretarse dentro de esta cuestión: Anáfora, concesión táctica y encuadre. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
-          },
-          {
-            "prompt": "Recuperación c2.pron.ironia-variedades. Recupera la semana 2, «La cortesía de decir lo contrario». Textos para ensayo oral: «Una puntualidad admirable: llegaron antes de abrir.» / «Una puntualidad admirable: llegaron después de cerrar.».\n\nMarca grupos fónicos, un foco y una pausa en cada texto. Produce dos lecturas propias y pide a tu interlocutor que explique el efecto. Recupera «Prosodia e ironía contextual» sin atribuir una intención segura ni una variedad a la síntesis. Si trabajas a solas, describe la intención y deja su comprobación perceptiva para clase. Contraste nuevo suministrado de «Convencer sin esconder el coste»: «Es una inversión costosa; de ahí no se sigue que sea prescindible.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "Ensaya primero una valoración literal y después una irónica; observa duración, foco y descenso final. El contexto sostiene la inferencia: la síntesis no garantiza interpretar la ironía por la voz. Un ensayo defendible conserva esta distinción del caso: La columna gana precisión al convertir la ironía en demandas verificables. El resultado perceptivo debe contrastarse con un oyente; no queda acreditado por escribir una marca de pausa. En el nuevo contraste, «Es una inversión costosa; de ahí no se sigue que sea prescindible.» debe interpretarse dentro de esta cuestión: Anáfora, concesión táctica y encuadre. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
-          },
-          {
-            "prompt": "Recuperación c2.lis.humor-ironico. Recupera la semana 2, «La cortesía de decir lo contrario». Recuperación del contenido escuchado: vuelve al audio de esa semana sin abrir su transcripción. Como pista de contraste, conserva estas dos posiciones: La columna gana precisión al convertir la ironía en demandas verificables. / La tallerista exige prohibir toda ironía.\n\nToma notas de quién sostiene cada posición y de una reserva expresada. Después contrasta tus notas con la transcripción. No deduzcas rasgos regionales ni solapamientos que el audio sintético no acredita. Contraste nuevo suministrado de «Convencer sin esconder el coste»: «Es una inversión costosa; de ahí no se sigue que sea prescindible.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "La sala resulta tan abierta que todavía deja pasar la lluvia. La imagen sería solo un chiste si no hubiera talleres pagando otro alquiler mientras esperan. La inauguración no fue precisamente una demostración de previsión; tampoco basta decirlo para recuperar las actividades perdidas. Pedimos un calendario verificable, un espacio provisional y una explicación de los cambios presupuestarios. El humor se dirige a la distancia entre anuncio y realidad, no a quienes soportan esa distancia. En el boletín municipal, esa misma crítica necesita una formulación literal: la apertura anunciada no garantiza todavía el uso del centro. La primera posición sintetiza el límite defendido; la segunda es la conclusión excesiva que el diálogo obliga a rechazar. En el nuevo contraste, «Es una inversión costosa; de ahí no se sigue que sea prescindible.» debe interpretarse dentro de esta cuestión: Anáfora, concesión táctica y encuadre. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
-          },
-          {
-            "prompt": "Recuperación c2.spk.comentario-ironico. Recupera la semana 2, «La cortesía de decir lo contrario». Situación para retomar: Presenta la columna ante una tallerista y después ante una responsable municipal. Conserva la crítica, modifica el humor y explica qué inferencia no quieres provocar. Objeción suministrada: La tallerista exige prohibir toda ironía.\n\nRecupera «Comentario con ironía controlada». Haz una intervención de dos minutos con tesis y reserva; responde durante un minuto a la objeción. Pide una reformulación de tu idea al interlocutor antes de evaluar si fuiste claro. Contraste nuevo suministrado de «Convencer sin esconder el coste»: «Es una inversión costosa; de ahí no se sigue que sea prescindible.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "La sala resulta tan abierta que todavía deja pasar la lluvia. La imagen sería solo un chiste si no hubiera talleres pagando otro alquiler mientras esperan. La inauguración no fue precisamente una demostración de previsión; tampoco basta decirlo para recuperar las actividades perdidas. Pedimos un calendario verificable, un espacio provisional y una explicación de los cambios presupuestarios. El humor se dirige a la distancia entre anuncio y realidad, no a quienes soportan esa distancia. En el boletín municipal, esa misma crítica necesita una formulación literal: la apertura anunciada no garantiza todavía el uso del centro. En el nuevo contraste, «Es una inversión costosa; de ahí no se sigue que sea prescindible.» debe interpretarse dentro de esta cuestión: Anáfora, concesión táctica y encuadre. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
-          },
-          {
-            "prompt": "Recuperación c2.rev.checkpoint-1. Recupera la semana 5, «Checkpoint: una plaza, tres versiones». Material de contraste: El acta del consejo de barrio anunciaba que «se mantendrán las terrazas de los locales que permitan el paso accesible». La asociación de comerciantes leyó una condición que podía cumplir reorganizando las mesas. La asociación vecinal entendió que se retirarían las terrazas de todos los locales que hoy obstaculizaban el paso, sin posibilidad de adaptación. La diferencia no se resolvía mirando una fotografía: afectaba al momento en que debía comprobarse la condición y al procedimiento para subsanar un incumplimiento. Formulación de trabajo: Aunque sea útil limitar el tráfico, falta explicar el reparto.\n\nRecupera «Checkpoint 1: alcance, ironía, registro y subtexto» a partir del material suministrado. Produce una versión de 80–100 palabras que haga visible una relación implícita, mantenga una reserva y responda a una objeción. Explica cuál es tu aportación y cuál procede de la fuente. Contraste nuevo suministrado de «Convencer sin esconder el coste»: «Es una inversión costosa; de ahí no se sigue que sea prescindible.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "Existe acuerdo sobre mantener un paso accesible, pero no sobre su aplicación ni sobre los horarios de carga. La crónica interpreta el silencio comercial como entusiasmo; el acta no permite esa atribución. El plano requiere todavía una comprobación de acceso de emergencias y no constituye una solución aprobada. Proponemos publicar el criterio de adaptación, el responsable de comprobarlo y un mecanismo de respuesta a las observaciones. La consulta ganará credibilidad si explica cómo puede modificar la propuesta. La ironía sobre una plaza donde caben todos expresa una crítica pertinente, pero no sustituye la discusión de una distribución concreta. En el nuevo contraste, «Es una inversión costosa; de ahí no se sigue que sea prescindible.» debe interpretarse dentro de esta cuestión: Anáfora, concesión táctica y encuadre. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
-          },
-          {
-            "prompt": "Recuperación c2.read.contrato-cronica. Recupera la semana 5, «Checkpoint: una plaza, tres versiones». Pasajes que debes contrastar: El acta del consejo de barrio anunciaba que «se mantendrán las terrazas de los locales que permitan el paso accesible». La asociación de comerciantes leyó una condición que podía cumplir reorganizando las mesas. La asociación vecinal entendió que se retirarían las terrazas de todos los locales que hoy obstaculizaban el paso, sin posibilidad de adaptación. La diferencia no se resolvía mirando una fotografía: afectaba al momento en que debía comprobarse la condición y al procedimiento para subsanar un incumplimiento.\n\nLa mediadora incorporó esta objeción al informe sin convertirla en una solución técnica. No podía certificar anchuras ni maniobras; podía explicar qué información debía producir el equipo competente y cómo afectaría a la decisión. También corrigió el título provisional, La plaza alcanza un acuerdo, por uno que identificaba el alcance real: Acuerdo sobre accesibilidad y consulta sobre distribución. El cambio renunciaba a una noticia más redonda, pero impedía que la presentación del proceso redujera el espacio para discrepar. La integración final exige aquí una doble fidelidad: a lo que las fuentes permiten afirmar y a lo que las personas todavía tienen derecho a discutir sin aparecer como incumplidoras de un consenso que no existe.\n\nRelee estos pasajes y recupera «Leer textos de registros opuestos». Formula una interpretación, un detalle que la apoye y una lectura rival. Señala qué dato del expediente completo necesitarías para reforzar o limitar tu conclusión. Contraste nuevo suministrado de «Convencer sin esconder el coste»: «Es una inversión costosa; de ahí no se sigue que sea prescindible.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "Existe acuerdo sobre mantener un paso accesible, pero no sobre su aplicación ni sobre los horarios de carga. La crónica interpreta el silencio comercial como entusiasmo; el acta no permite esa atribución. El plano requiere todavía una comprobación de acceso de emergencias y no constituye una solución aprobada. Proponemos publicar el criterio de adaptación, el responsable de comprobarlo y un mecanismo de respuesta a las observaciones. La consulta ganará credibilidad si explica cómo puede modificar la propuesta. La ironía sobre una plaza donde caben todos expresa una crítica pertinente, pero no sustituye la discusión de una distribución concreta. En el nuevo contraste, «Es una inversión costosa; de ahí no se sigue que sea prescindible.» debe interpretarse dentro de esta cuestión: Anáfora, concesión táctica y encuadre. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
-          }
-        ]
-      }
-    ]
+        ],
+      },
+    ],
+    noticing: {
+      prompt: "Observa cómo la columna nombra el tipo de problema antes de decidir qué hacer con él.",
+      items: [
+        { quote: "Ese es el sello de la ambigüedad accidental: nadie la buscaba y cualquiera puede elegir la lectura que le conviene.", note: "Definición funcional: intención y efecto en el lector." },
+        { quote: "La regla que seguimos es la del cambio mínimo, y a veces el cambio mínimo es ninguno.", note: "No se repara lo que el contexto resuelve." },
+        { quote: "Esa frase no tiene dos lecturas, tiene una sola y muy difusa.", note: "Vaguedad frente a ambigüedad." },
+        { quote: "Son dos juicios distintos, y confundirlos tiene consecuencias.", note: "Gramaticalidad y norma no son lo mismo." },
+      ],
+    },
   },
-  "writing": {
-    "task": "Escribe un discurso de 450–550 palabras que defienda la renovación y reconozca dos costes. Añade una nota de 60 palabras dentro del límite donde expliques una anáfora y una concesión; distingue compromisos de solicitudes.",
-    "context": "Entrega un texto independiente y conserva una segunda versión con cambios comentados. El modelo muestra una apertura posible; no sustituye el dossier completo.",
-    "steps": [
-      "Traza un mapa de fuentes: afirmación, prueba, límite y destinatario.",
-      "Decide el orden según la acción que necesita realizar tu lector; reserva espacio para una objeción fuerte.",
-      "Redacta sin copiar el modelo. Integra al menos dos fuentes y atribuye sus diferencias.",
-      "Revisa el alcance de tres formulaciones, lee un párrafo en voz alta y explica dos cambios de estilo."
+  practice: {
+    intro: "Combina orden, elección según el texto, reparación guiada y escritura breve. Termina recuperando las clases de las semanas anteriores de C2.",
+    exercises: [
+      {
+        id: "c2-06-orden",
+        type: "order",
+        prompt: "Ordena las palabras para obtener la versión sin ambigüedad.",
+        items: [
+          {
+            words: ["Se", "regalan", "estantes", "de", "madera", "para", "bibliotecas", "escolares."],
+            why: "«De madera» junto a «estantes»: ya no puede referirse a las bibliotecas.",
+          },
+          {
+            words: ["No", "todos", "los", "talleres", "son", "gratuitos."],
+            why: "«No todos» niega la totalidad: algunos talleres se pagan.",
+          },
+          {
+            words: ["Los", "martes", "solo", "abrimos", "por", "la", "tarde."],
+            why: "«Solo» junto a «por la tarde»: el martes no se abre por la mañana.",
+          },
+        ],
+      },
+      {
+        id: "c2-06-decision",
+        type: "context",
+        prompt: "Elige la decisión más adecuada para cada texto.",
+        items: [
+          {
+            context: "Novela juvenil que publica la red. Un personaje de catorce años le dice a su amigo: «¿Viste lo que me dijistes ayer?». La narración está en tercera persona.",
+            q: "¿Qué haces con «dijistes»?",
+            options: [
+              "Lo corrijo a «dijisteis».",
+              "Lo mantengo si caracteriza al personaje; en la narración uso «dijiste».",
+              "Lo marco como agramatical.",
+            ],
+            answer: 1,
+            why: "Forma real y no normativa: puede caracterizar a un personaje en su diálogo.",
+          },
+          {
+            context: "Acta oficial de la junta de la red: «En la asamblea habían sesenta socios».",
+            q: "¿Qué decides?",
+            options: [
+              "Lo mantengo: el acta transcribe lo que se dijo.",
+              "Escribo «hubieron sesenta socios».",
+              "Escribo «había sesenta socios».",
+            ],
+            answer: 2,
+            why: "El acta es voz institucional: «haber» impersonal va en singular.",
+          },
+          {
+            context: "Bases de un concurso: «Los dos finalistas recibirán un lote de libros».",
+            q: "El jurado quiere dejar claro que cada finalista recibe uno. ¿Qué versión eliges?",
+            options: [
+              "Los dos finalistas recibirán sendos lotes de libros.",
+              "Los dos finalistas recibirán varios lotes de libros.",
+              "Los dos finalistas recibirán el lote de libros.",
+            ],
+            answer: 0,
+            why: "«Sendos» reparte un lote por cabeza.",
+          },
+        ],
+      },
+      {
+        id: "c2-06-reparacion",
+        type: "transform",
+        prompt: "Repara cada frase con la herramienta que se indica y sin cambiar nada más.",
+        items: [
+          {
+            source: "La directora llamó a la tesorera para hablar de su renuncia.",
+            instruction: "La renuncia es de la tesorera: sustituye «su renuncia» por «la renuncia de esta».",
+            answers: ["La directora llamó a la tesorera para hablar de la renuncia de esta."],
+            why: "«Esta» remite a la última mencionada.",
+          },
+          {
+            source: "Se buscan voluntarios para leer a niños con experiencia.",
+            instruction: "Cambia el orden para que «con experiencia» vaya con «voluntarios».",
+            answers: ["Se buscan voluntarios con experiencia para leer a niños."],
+            why: "El complemento queda junto al sustantivo al que modifica.",
+          },
+          {
+            source: "No cancelaron la feria porque había paro de transporte.",
+            instruction: "La feria se canceló, pero no por el paro: cambia solo el modo del verbo.",
+            answers: ["No cancelaron la feria porque hubiera paro de transporte."],
+            why: "Con subjuntivo se niega la causa, no el hecho.",
+          },
+        ],
+      },
+      {
+        id: "c2-06-microescritura",
+        type: "open",
+        prompt: "Escribe dos piezas breves antes de la tarea de escritura.",
+        items: [
+          {
+            prompt: "Inventa un eslogan con doble sentido buscado para el club de lectura de adultos mayores de la red y explica en 40–60 palabras qué dos sentidos activa y por qué no debe repararse.",
+            model: "Eslogan: «Aquí los años pasan volando… las páginas». Activa dos sentidos: el tiempo que se va rápido cuando uno disfruta y las páginas que pasan al leer. No debe repararse porque la sorpresa del final es el efecto buscado: si explicamos o aclaramos, el lector deja de descubrir la segunda lectura por sí mismo.",
+            checklist: [
+              "El eslogan tiene dos sentidos reconocibles.",
+              "Explico cuáles son.",
+              "Justifico por qué no se repara.",
+            ],
+          },
+          {
+            prompt: "Escribe una nota de margen (40–60 palabras) para un corrector que ha marcado como «agramatical» la frase «me acuerdo que mi papá vendía papa criolla» en un testimonio. Corrige su juicio con respeto.",
+            model: "Gracias por la marca, pero no la llamaría agramatical: «me acuerdo que» es un queísmo muy frecuente en la lengua oral, y en el uso cuidado se prefiere «me acuerdo de que». Como es la voz del testimonio, lo mantendría. Si la frase apareciera en la introducción, sí la corregiría.",
+            checklist: [
+              "Reformulo el juicio como cuestión de norma, no de gramaticalidad.",
+              "Distingo la voz del testimonio de la voz institucional.",
+              "El tono es respetuoso y concreto.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "c2-06-recuperacion",
+        type: "open",
+        prompt: "Recupera lo que viste en las semanas anteriores de C2 con los estímulos que se te dan. No hace falta volver a esas lecciones: trabaja con el material de cada ítem.",
+        items: [
+          {
+            prompt: "Recuperación de la clase G207 (indicativo y subjuntivo según perspectiva). Estímulo: «No digo que el reglamento es malo» frente a «No digo que el reglamento sea malo». Explica qué perspectiva adopta quien habla en cada versión.",
+            model: "Con «sea», quien habla no asume que el reglamento es malo: simplemente no lo afirma. Con «es», presenta como dado que el reglamento es malo, aunque diga que no es eso lo que quiere señalar; suele ir seguido de «pero…». El modo muestra si la información se asume o queda en suspenso.",
+            checklist: [
+              "Relaciono el subjuntivo con no asumir la verdad del contenido.",
+              "Explico el valor del indicativo como información asumida.",
+            ],
+          },
+          {
+            prompt: "Recuperación de la clase G208 (condicional de rumor). Estímulo, titular de un periódico local: «La red cerraría dos bibliotecas en 2027». Explica qué responsabilidad asume el periódico y reescríbelo para un comunicado oficial de la red que confirma el cierre.",
+            model: "El condicional presenta la información como no confirmada: el periódico la transmite sin hacerse responsable de su verdad. En un comunicado oficial que confirma el cierre, el condicional sería impropio: «La red cerrará dos bibliotecas en 2027» o «La red ha decidido cerrar dos bibliotecas en 2027».",
+            checklist: [
+              "Explico el distanciamiento del condicional de rumor.",
+              "Uso futuro o una forma asertiva en la versión oficial.",
+            ],
+          },
+          {
+            prompt: "Recuperación de la clase G210 (subordinación múltiple sin pérdida de referentes). Estímulo: «La bibliotecaria le dijo a la usuaria que su hermana, que trabajaba en la biblioteca que la red había abierto, le guardaría el libro». Señala dos referentes dudosos y reescribe la frase con una sola lectura.",
+            model: "Son dudosos «su hermana» (¿de la bibliotecaria o de la usuaria?) y «le guardaría» (¿a quién?). Versión: «La bibliotecaria le dijo a la usuaria que la hermana de esta, empleada de la nueva biblioteca de la red, le guardaría el libro a ella». También podría dividirse en dos oraciones.",
+            checklist: [
+              "Identifico al menos dos referentes ambiguos.",
+              "La reescritura reduce la subordinación o explicita los referentes.",
+            ],
+          },
+          {
+            prompt: "Recuperación de la clase G212 (elipsis compleja). Estímulo: «Juliana prefiere el reglamento nuevo más que Andrés». Explica las dos lecturas que permite la elipsis y escribe una versión para cada una.",
+            model: "Puede significar que Juliana prefiere el reglamento nuevo más de lo que lo prefiere Andrés, o que lo prefiere a él, a Andrés. Versiones: «Juliana prefiere el reglamento nuevo más de lo que lo prefiere Andrés» y «Juliana prefiere el reglamento nuevo antes que a Andrés». Recuperar el verbo omitido deshace la ambigüedad.",
+            checklist: [
+              "Identifico qué material falta en la elipsis.",
+              "Escribo una versión explícita para cada lectura.",
+            ],
+          },
+        ],
+      },
     ],
-    "useLanguage": [
-      "No pedimos una promesa, pedimos un calendario.",
-      "Es una inversión costosa; de ahí no se sigue que sea prescindible.",
-      "El mantenimiento no frena el proyecto; antes bien, lo hace sostenible.",
-      "concesión táctica",
-      "encuadre",
-      "carga valorativa"
-    ],
-    "model": [
-      "Modelo parcial de apertura (no es una entrega completa): Queremos una biblioteca para estudiar, para encontrarnos y para quienes no disponen de otro lugar. Ese propósito no elimina el coste de cerrar ocho meses. La alternativa provisional ofrece menos puestos y sus horarios ampliados todavía necesitan financiación. Por eso defendemos la renovación junto con un convenio de espacios, una medición pública de la demanda y una decisión presupuestaria explícita. Reconocer esas condiciones no equivale a renunciar al proyecto. Permite que quienes discrepan del calendario participen sin ser presentados como enemigos del acceso. La pregunta final debe abrir opciones reales, no repartir certificados de compromiso cultural."
-    ],
-    "checklist": [
-      "La tesis tiene alcance preciso y pruebas identificables.",
-      "No convierto una propuesta en decisión ni una inferencia en dato.",
-      "El registro responde al destinatario y no borra condiciones.",
-      "La cohesión conserva referentes y voces sin repeticiones inútiles.",
-      "La revisión explica qué cambia para quien lee."
-    ],
-    "words": [
-      450,
-      550
-    ]
   },
-  "speaking": {
-    "intro": "Planifica con palabras clave, no un guion leído. La grabación, si la usas, permanece local; el navegador no califica pronunciación ni calidad oral.",
-    "tasks": [
-      {
-        "title": "Exposición situada",
-        "prompt": "Pronuncia el discurso ante usuarios y personal. Recibe una objeción sobre los horarios, responde sin falso dilema y reformula el cierre como pregunta deliberativa.",
-        "prep": [
-          "Anota tesis, dos pruebas, una objeción y una reserva.",
-          "Marca dos focos prosódicos y un punto donde cambiarás de registro."
-        ],
-        "seconds": 240,
-        "model": "Queremos una biblioteca para estudiar, para encontrarnos y para quienes no disponen de otro lugar. Ese propósito no elimina el coste de cerrar ocho meses. La alternativa provisional ofrece menos puestos y sus horarios ampliados todavía necesitan financiación. Por eso defendemos la renovación junto con un convenio de espacios, una medición pública de la demanda y una decisión presupuestaria explícita. Reconocer esas condiciones no equivale a renunciar al proyecto. Permite que quienes discrepan del calendario participen sin ser presentados como enemigos del acceso. La pregunta final debe abrir opciones reales, no repartir certificados de compromiso cultural.",
-        "selfCheck": [
-          "La condición principal se oye con claridad.",
-          "Distingo mi interpretación de las voces citadas.",
-          "Puedo reparar una frase sin abandonar el argumento."
-        ]
-      },
-      {
-        "title": "Interacción y reformulación",
-        "prompt": "Tu interlocutor sostiene: «Toda objeción al presupuesto rechaza el acceso cultural.». Responde sin caricaturizarlo, formula dos preguntas de seguimiento y pide que reformule tu condición principal. Después resume para una persona que no conoce el expediente de Convencer sin esconder el coste.",
-        "prep": [
-          "Prepara una concesión real y una corrección de alcance.",
-          "Anticipa qué término deberás explicar sin jerga."
-        ],
-        "seconds": 240,
-        "model": "La retórica resulta más responsable cuando explicita costes y admite respuestas no previstas. Los horarios ampliados carecen todavía de financiación confirmada.",
-        "selfCheck": [
-          "La respuesta atiende la preocupación, no solo corrige la forma.",
-          "La versión breve conserva el límite decisivo.",
-          "Adapto el ritmo después de la interrupción."
-        ]
-      }
-    ]
-  },
-  "useInClass": {
-    "intro": "La mascota te espera con una tarjeta de contraste: lleva tu dossier y una decisión lingüística que quieras poner a prueba con tu docente.",
-    "cards": [
-      {
-        "move": "Defiende",
-        "task": "Presenta tu decisión más discutible sobre Convencer sin esconder el coste y pide un contraejemplo que la ponga a prueba.",
-        "phrases": [
-          "Mi lectura se apoya en…",
-          "Cambiaría de interpretación si…"
-        ]
-      },
-      {
-        "move": "Reformula",
-        "task": "Explica el límite «Los horarios ampliados carecen todavía de financiación confirmada.» a otro público sin rebajar su importancia.",
-        "phrases": [
-          "En otros términos…",
-          "Esta versión conserva…"
-        ]
-      },
-      {
-        "move": "Negocia",
-        "task": "Responde a la objeción «Un término técnico carece siempre de carga valorativa.» y acuerda una formulación que ambos puedan defender.",
-        "phrases": [
-          "Reconozco ese punto; mi reserva es…",
-          "Podemos dejar constancia de…"
-        ]
-      }
+  writing: {
+    task: "Redacta el informe de revisión que Juliana entregará a la junta de la red (400–520 palabras). Explica qué se cambió en el reglamento y en la campaña y por qué, qué se dejó igual y por qué, y qué criterio se sigue con las formas no normativas en «Memorias de la plaza».",
+    context: "La junta está formada por vecinos sin formación lingüística. Puedes nombrar fenómenos, pero explícalos con ejemplos del propio texto. Usa los casos de esta semana o inventa otros artículos y testimonios con la misma lógica.",
+    steps: [
+      "Haz una tabla con cuatro columnas: frase original, tipo de problema, decisión y motivo. Incluye al menos un caso que se repara, uno que se deja por el contexto, uno buscado y una forma no normativa.",
+      "Decide el orden del informe: criterio general, reglamento, campaña, libro de testimonios y recomendación final.",
+      "Redacta sin copiar el modelo. Cita cada frase original entre comillas y da la versión nueva justo después.",
+      "Revisa el informe con la lista de control: corrige cualquier «agramatical» mal usado y comprueba que tus propias frases no tienen dobles lecturas accidentales.",
     ],
-    "bring": "El dossier, una versión revisada, notas de escucha y una grabación local opcional; no se necesita subir audio."
-  },
-  "quiz": {
-    "items": [
-      {
-        "type": "choice",
-        "q": "Balance de Convencer sin esconder el coste: ¿qué conclusión conserva el alcance?",
-        "options": [
-          "Toda objeción al presupuesto rechaza el acceso cultural.",
-          "La retórica resulta más responsable cuando explicita costes y admite respuestas no previstas."
-        ],
-        "answer": 1,
-        "why": "Relaciona el texto principal con el documento complementario."
-      },
-      {
-        "type": "choice",
-        "q": "En una revisión final de Convencer sin esconder el coste, ¿qué afirmación debe rechazarse?",
-        "options": [
-          "Los horarios ampliados ya están financiados.",
-          "Los horarios ampliados carecen todavía de financiación confirmada."
-        ],
-        "answer": 0,
-        "why": "La primera opción contradice la condición explícita."
-      },
-      {
-        "type": "listen",
-        "q": "Escucha esta síntesis de Convencer sin esconder el coste. ¿Qué interpretación mantiene?",
-        "options": [
-          "El lema de apertura puede deslegitimar objeciones presupuestarias sin refutarlas.",
-          "Un término técnico carece siempre de carga valorativa."
-        ],
-        "answer": 0,
-        "why": "La relación expresada limita una generalización.",
-        "audio": "El lema de apertura puede deslegitimar objeciones presupuestarias sin refutarlas.",
-        "voice": "es-ES-f"
-      },
-      {
-        "type": "gap",
-        "q": "En «Convencer sin esconder el coste», ¿qué unidad expresa «reconocimiento limitado de una objeción»? ___ .",
-        "answers": [
-          [
-            "concesión táctica"
-          ]
-        ],
-        "hint": "reconocimiento limitado de una objeción",
-        "why": "Recupera la unidad a partir de su función, no de una traducción."
-      },
-      {
-        "type": "gap",
-        "q": "Para nombrar «perspectiva que organiza un problema» en este expediente usamos ___ .",
-        "answers": [
-          [
-            "encuadre"
-          ]
-        ],
-        "why": "La distinción léxica debe conservarse al mediar."
-      },
-      {
-        "type": "error",
-        "sentence": "La directora pidió que se financian los horarios.",
-        "answers": [
-          "La directora pidió que se financiaran los horarios."
-        ],
-        "why": "La petición referida desde el pasado selecciona aquí imperfecto de subjuntivo."
-      },
-      {
-        "type": "transform",
-        "source": "La reforma cuesta mucho. Eso no demuestra que sea prescindible.",
-        "instruction": "Une mediante «Aunque» y conserva el coste como dato asumido en indicativo.",
-        "answers": [
-          "Aunque la reforma cuesta mucho, eso no demuestra que sea prescindible."
-        ],
-        "why": "Concesión y límite: conserva la relación solicitada y compara qué se hace explícito."
-      },
-      {
-        "type": "open",
-        "prompt": "Cierre de «Convencer sin esconder el coste»: escribe 90–120 palabras para una audiencia nueva. Incluye tesis, condición y una pregunta pendiente; justifica una elección de registro.",
-        "model": "Queremos una biblioteca para estudiar, para encontrarnos y para quienes no disponen de otro lugar. Ese propósito no elimina el coste de cerrar ocho meses. La alternativa provisional ofrece menos puestos y sus horarios ampliados todavía necesitan financiación. Por eso defendemos la renovación junto con un convenio de espacios, una medición pública de la demanda y una decisión presupuestaria explícita. Reconocer esas condiciones no equivale a renunciar al proyecto. Permite que quienes discrepan del calendario participen sin ser presentados como enemigos del acceso. La pregunta final debe abrir opciones reales, no repartir certificados de compromiso cultural.",
-        "checklist": [
-          "Conservo la reserva decisiva.",
-          "Atribuyo una fuente y delimito mi inferencia.",
-          "El destinatario puede identificar el siguiente paso."
-        ]
-      }
-    ]
-  },
-  "complete": {
-    "canNow": [
-      "Interpreto anáfora, concesión táctica y encuadre en fuentes originales.",
-      "Puedo explicar por qué «Toda objeción al presupuesto rechaza el acceso cultural.» excede la evidencia.",
-      "Defiendo y reviso un dossier escrito y oral con destinatario concreto."
+    useLanguage: [
+      "admite dos lecturas / deja una sola lectura",
+      "el contexto ya resuelve…",
+      "es un doble sentido buscado / es vaguedad, no ambigüedad",
+      "es una forma real, pero no normativa",
+      "en la voz de la institución… / en la voz de los vecinos…",
+      "no todos / ningún; «esta» como referente explícito",
     ],
-    "review": [
-      "Dentro de dos días, reconstruye sin mirar el límite: Los horarios ampliados carecen todavía de financiación confirmada.",
-      "Dentro de una semana, reescribe el cierre para otro público y contrástalo con tu versión inicial.",
-      "En clase, pide una objeción a «La retórica resulta más responsable cuando explicita costes y admite respuestas no previstas.» y registra qué cambiarías."
-    ]
-  }
+    model: [
+      "Modelo parcial de apertura (no es una entrega completa): Este informe resume la revisión del reglamento de préstamo, de la campaña del festival y del libro «Memorias de la plaza». Antes de cambiar una frase, nos preguntamos qué tipo de problema tenía. No es lo mismo una frase que dice dos cosas sin querer que una que lo hace a propósito, ni una forma que nadie usa que otra que usan muchos aunque la norma no la recomiende. En el reglamento, el artículo cuatro decía que «todos los materiales audiovisuales no se prestan»; como la junta quería decir que ninguno sale de la biblioteca, ahora dice «ningún material audiovisual se presta a domicilio».",
+    ],
+    checklist: [
+      "Cada reparación elimina la segunda lectura con el cambio mínimo.",
+      "Explico al menos un caso que no se repara porque el contexto ya decide.",
+      "Distingo doble sentido buscado y vaguedad calculada.",
+      "Uso «agramatical» y «no normativo» con precisión.",
+      "Justifico el criterio de voz ajena y voz propia para el libro.",
+    ],
+    words: [400, 520],
+  },
+  speaking: {
+    intro: "Prepárate con palabras clave, no con un guion leído. Si te grabas, la grabación queda en tu dispositivo; el navegador no evalúa tu pronunciación.",
+    tasks: [
+      {
+        title: "Defender los criterios ante la junta",
+        prompt: "Eres Juliana. Presenta a la junta, en unos cuatro minutos, los criterios de revisión: un caso reparado, uno que se deja igual, el eslogan y el criterio para los testimonios. Lee cada frase original y explica la decisión.",
+        prep: [
+          "Elige cuatro ejemplos y anota para cada uno: tipo de problema, decisión y motivo.",
+          "Prepara una frase de cierre que resuma el criterio en una línea.",
+        ],
+        seconds: 240,
+        model: "Les cuento cómo trabajamos. Primero, el reglamento: decía «todos los materiales audiovisuales no se prestan», y había usuarios que entendían que algunos sí. Ahora dice «ningún material». En cambio, el artículo siete lo dejamos igual, porque ahí «su préstamo» solo puede ser del usuario. El eslogan, «Préstate a leer», tiene dos sentidos, y eso es lo que queremos…",
+        selfCheck: [
+          "Hago pausas que separan la cita de la explicación.",
+          "No llamo «agramatical» a una forma no normativa.",
+          "Cada decisión tiene un motivo claro.",
+        ],
+      },
+      {
+        title: "Mediación con un vecino molesto",
+        prompt: "Un miembro de la junta protesta: «Si el libro va a estar en la biblioteca, no puede tener errores como “habían” o “me se cayó”; da mal ejemplo». Respóndele con respeto, hazle al menos dos preguntas para entender su preocupación, explica el criterio y propón una solución concreta.",
+        prep: [
+          "Prepara una frase que reconozca su preocupación.",
+          "Ten a mano la diferencia entre la voz de la red y la voz de los vecinos, y la idea de la nota editorial.",
+        ],
+        seconds: 180,
+        model: "Entiendo la preocupación, don Hernán. ¿Le preocupa que los niños aprendan esas formas? ¿O que parezca que no revisamos? Le cuento: en todo lo que escribe la red seguimos la norma culta. Pero el testimonio es la voz de doña Carmenza, y si la corregimos, deja de ser su recuerdo. Podemos poner una nota al comienzo que lo explique.",
+        selfCheck: [
+          "Hago al menos dos preguntas reales.",
+          "Explico el criterio sin juzgar a los hablantes.",
+          "Propongo una solución concreta.",
+        ],
+      },
+      {
+        title: "Leer con la entonación que desambigua",
+        prompt: "Lee en voz alta cada par de frases marcando la diferencia con las pausas: «Los socios que pagaron votarán» / «Los socios, que pagaron, votarán»; «No vino porque llovía» / «No vino porque lloviera, sino por cansancio». Después explica en una frase qué cambia en cada par.",
+        prep: [
+          "Marca con una barra dónde harás cada pausa.",
+          "Decide qué tono usarás en las relativas explicativas.",
+        ],
+        seconds: 90,
+        selfCheck: [
+          "Las pausas coinciden con las comas.",
+          "Explico la diferencia de significado, no solo de sonido.",
+        ],
+      },
+    ],
+  },
+  useInClass: {
+    intro: "Lleva a la próxima clase tu tabla de diagnósticos y una duda concreta. Estas tarjetas te ayudan a aprovechar el tiempo con tu profesor.",
+    cards: [
+      {
+        move: "Diagnostica",
+        task: "Lleva una frase ambigua real (de un aviso, un contrato o una noticia) y pide a tu profesor que encuentre las dos lecturas antes de explicarle tú cuál es la fuente.",
+        phrases: ["Esta frase admite dos lecturas: …", "La ambigüedad nace de…"],
+      },
+      {
+        move: "Pregunta",
+        task: "Pregúntale qué juicio daría a una forma que oyes a menudo y que no sabes clasificar: ¿agramatical, no normativa o propia de una zona?",
+        phrases: ["¿Esto lo dice mucha gente o es un error de aprendiz?", "¿En qué registro lo evitarías?"],
+      },
+      {
+        move: "Defiende",
+        task: "Presenta tu decisión más discutible del informe (por ejemplo, no reparar un «su») y pide un contraargumento.",
+        phrases: ["Lo dejé así porque el contexto…", "Cambiaría de opinión si…"],
+      },
+      {
+        move: "Crea",
+        task: "Propón un eslogan con doble sentido para algo de tu ciudad y pide a tu profesor que diga si se ven los dos sentidos.",
+        phrases: ["La gracia está en que…", "¿Se ve la segunda lectura sin explicarla?"],
+      },
+    ],
+    bring: "Tu tabla de diagnósticos, el informe revisado y, si quieres, la grabación de tu presentación ante la junta.",
+  },
+  quiz: {
+    items: [
+      {
+        type: "choice",
+        q: "«Todos los asistentes no recibieron certificado.» Quieres decir que algunos sí lo recibieron. ¿Qué versión lo dice sin ambigüedad?",
+        options: [
+          "Ningún asistente recibió certificado.",
+          "No todos los asistentes recibieron certificado.",
+          "Todos los asistentes recibieron certificado, no.",
+        ],
+        answer: 1,
+        why: "«No todos» niega la totalidad; «ningún» dice otra cosa.",
+      },
+      {
+        type: "choice",
+        q: "¿Qué frase es agramatical, y no solo no normativa?",
+        options: [
+          "Me se rompió el lápiz.",
+          "Habían dos lápices en la mesa.",
+          "Los lápiz está rota.",
+        ],
+        answer: 2,
+        why: "Rompe la concordancia nominal: ningún grupo de hablantes nativos la produce.",
+      },
+      {
+        type: "listen",
+        q: "Escucha el aviso. ¿Qué entiendes?",
+        options: [
+          "Que solo los vecinos inscritos pueden entrar.",
+          "Que todos los vecinos están inscritos y pueden entrar.",
+          "Que nadie puede entrar sin entrada.",
+        ],
+        answer: 0,
+        why: "Sin pausas, la relativa es especificativa: selecciona a los inscritos.",
+        audio: "Los vecinos que se inscribieron pueden entrar al auditorio.",
+        voice: "es-CO-f",
+      },
+      {
+        type: "gap",
+        q: "Nota institucional: Ayer ___ dos talleres simultáneos en la sede de Teusaquillo.",
+        answers: [["hubo"]],
+        hint: "«Haber» impersonal en un texto formal.",
+        why: "En la voz institucional, «haber» impersonal va en singular.",
+      },
+      {
+        type: "gap",
+        q: "El coordinador se reunió con el donante cuando ___ llegaba al aeropuerto. (Llegaba el donante.)",
+        answers: [["este"]],
+        hint: "Un demostrativo que recupera al último mencionado.",
+        why: "«Este» remite al donante y elimina la ambigüedad del sujeto implícito.",
+      },
+      {
+        type: "transform",
+        source: "Se venden mesas para salones de roble.",
+        instruction: "Las mesas son de roble: reordena la frase para que el complemento solo pueda ir con «mesas».",
+        answers: ["Se venden mesas de roble para salones."],
+        why: "El complemento queda junto al sustantivo que modifica.",
+      },
+      {
+        type: "error",
+        sentence: "Informe de la editora: «En el taller habían treinta participantes».",
+        answers: ["Informe de la editora: «En el taller había treinta participantes»."],
+        why: "Voz institucional: «haber» impersonal en singular.",
+      },
+      {
+        type: "error",
+        sentence: "Me alegra de que hayas venido al festival.",
+        answers: ["Me alegra que hayas venido al festival.", "Me alegro de que hayas venido al festival."],
+        why: "Ultracorrección: «alegrar» sin pronombre reflexivo no lleva «de»; «alegrarse» sí.",
+      },
+      {
+        type: "order",
+        words: ["Las", "dos", "autoras", "recibieron", "sendos", "diplomas."],
+        why: "«Sendos»: un diploma para cada autora.",
+      },
+      {
+        type: "open",
+        prompt: "Explica en 80–100 palabras a un corrector principiante la diferencia entre «agramatical» y «no normativo», con un ejemplo de cada uno, y di qué haría con cada forma en un testimonio y en una nota editorial.",
+        model: "«Agramatical» describe algo que ningún grupo de hablantes nativos produce, como «las niño juega». «No normativo» describe una forma real, que muchos dicen con regularidad, pero que las obras de referencia no recomiendan en textos formales, como «habían muchas personas». Lo agramatical se corrige siempre, también en un testimonio, porque suele ser un error de transcripción. Lo no normativo se respeta en la voz de quien habla y se corrige en la nota editorial, que sigue la norma culta.",
+        checklist: [
+          "Defino los dos términos con precisión.",
+          "Doy un ejemplo de cada uno.",
+          "Distingo testimonio y nota editorial.",
+        ],
+      },
+    ],
+  },
+  complete: {
+    canNow: [
+      "Distingo una ambigüedad accidental de un doble sentido buscado y de la vaguedad calculada.",
+      "Reparo dobles lecturas con el cambio mínimo: orden, «no todos» o «ningún», posición de «solo», referente explícito, comas o modo.",
+      "Dejo sin tocar lo que el contexto ya resuelve.",
+      "Juzgo una forma separando gramaticalidad, aceptabilidad, norma y variación, y respeto la voz ajena sin renunciar a la norma culta en la propia.",
+    ],
+    review: [
+      "Dentro de dos días, tapa la columna derecha de la tabla «Fuentes de ambigüedad accidental» y reconstruye las dos lecturas de cada frase.",
+      "Dentro de una semana, busca un aviso público con una doble lectura y escribe su reparación mínima.",
+      "En la próxima clase, lee tu informe de revisión y pide a tu profesor que discuta una de tus decisiones.",
+    ],
+  },
+  related: [
+    { path: "/gramatica/ambiguedad-intencional-y-ambiguedad-accidental", label: "Clase: Ambigüedad intencional y ambigüedad accidental" },
+    { path: "/gramatica/gramaticalidad-aceptabilidad-y-variacion-real", label: "Clase: Gramaticalidad, aceptabilidad y variación real" },
+  ],
 };
