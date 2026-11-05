@@ -7,7 +7,7 @@
  * class mapping in ./catalog.ts.
  */
 import type { SectionKey } from "../curriculum/types";
-import { classSlugs } from "./class-slugs";
+import { classSlugs } from "../curriculum/class-slugs";
 
 export type CategoryId =
   | "ser-estar" | "por-para" | "desde-hace" | "pasados" | "pluscuamperfecto" | "subjuntivo"
