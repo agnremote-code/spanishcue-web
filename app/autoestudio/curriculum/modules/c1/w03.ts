@@ -31,8 +31,8 @@ export const c1w03: Module = {
     "c1.fun.w03-plantear-escenarios",
     "c1.disc.w03-hechos-condiciones",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["c1.gram.g169","c1.gram.g170","c1.voc.w02-cooperativa-vivienda","c1.pron.w02-vocal-final-modo","c1.lis.w02-radio-cooperativa","c1.read.w02-cronica-asamblea","c1.wri.w02-opinion-boletin","c1.spk.w02-defensa-asamblea","c1.fun.w02-conceder-sin-ceder","c1.disc.w02-conceder-rebatir"],
+  prerequisites: ["c1-02"],
   goal: {
     canDo: "Puedo plantear condiciones probables, remotas y contrafactuales, quejarme o advertir con fórmulas coloquiales y expresar condiciones sin «si» en un texto formal.",
     steps: [

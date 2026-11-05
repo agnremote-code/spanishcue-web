@@ -27,8 +27,8 @@ export const b2w06: Module = {
     "b2.fun.w06-conceder-mantener",
     "b2.disc.w06-orden-registro",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["b2.gram.g239","b2.gram.g136","b2.voc.w05-alquiler-convivencia","b2.pron.w05-nexos-pausa","b2.lis.w05-reunion-convivencia","b2.read.w05-guia-convivencia","b2.wri.w05-acuerdo-convivencia","b2.spk.w05-negociar-condiciones","b2.fun.w05-poner-condiciones","b2.disc.w05-normas-condiciones","b2.rev.w05-integrar-semanas-1-4"],
+  prerequisites: ["b2-05"],
   goal: {
     canDo: "Puedo aceptar objeciones con «aunque» y con conectores concesivos más fuertes, elegir el modo según lo que hago con el dato y mantener una decisión con argumentos.",
     steps: [

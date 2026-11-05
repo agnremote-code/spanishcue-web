@@ -29,8 +29,8 @@ export const b2w02: Module = {
     "b2.fun.w02-plantear-hipotesis",
     "b2.disc.w02-marco-temporal"
   ],
-  "reviewObjectives": [],
-  "prerequisites": [],
+  reviewObjectives: ["b2.gram.g128","b2.gram.g129","b2.voc.w01-negocio-familiar","b2.pron.w01-acento-ra","b2.lis.w01-reunion-familiar","b2.read.w01-cronica-reapertura","b2.wri.w01-correo-decisiones","b2.spk.w01-relatar-encargos","b2.fun.w01-transmitir-peticiones","b2.disc.w01-relato-encargos"],
+  prerequisites: ["b2-01"],
   "goal": {
     "canDo": "Puedo ajustar el tiempo del subjuntivo al verbo principal y al momento de la acción, y presentar un plan como posible o como hipótesis según lo vea.",
     "steps": [

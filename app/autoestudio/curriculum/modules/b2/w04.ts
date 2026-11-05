@@ -29,8 +29,8 @@ export const b2w04: Module = {
     "b2.fun.w04-reprochar-atenuar",
     "b2.disc.w04-pasado-presente"
   ],
-  "reviewObjectives": [],
-  "prerequisites": [],
+  reviewObjectives: ["b2.gram.g132","b2.gram.g133","b2.voc.w03-competicion-remo","b2.pron.w03-habia-habria","b2.lis.w03-analisis-regata","b2.read.w03-carta-entrenadora","b2.wri.w03-informe-lecciones","b2.spk.w03-revisar-decision","b2.fun.w03-analizar-decisiones","b2.disc.w03-hecho-alternativa"],
+  prerequisites: ["b2-03"],
   "goal": {
     "canDo": "Puedo usar el condicional compuesto para resultados no ocurridos, plazos vistos desde el pasado y reproches suaves, y relacionar decisiones pasadas con mi presente.",
     "steps": [

@@ -30,8 +30,8 @@ export const b1w08: Module = {
     "b1.fun.w08-animar-aconsejar",
     "b1.disc.w08-obstaculo-decision"
   ],
-  "reviewObjectives": [],
-  "prerequisites": [],
+  reviewObjectives: ["b1.gram.g099","b1.gram.g100","b1.voc.w07-vivienda-alquiler","b1.pron.w07-pausa-relativa","b1.lis.w07-llamada-inmobiliaria","b1.read.w07-foro-recien-llegados","b1.wri.w07-anuncio-busqueda","b1.spk.w07-describir-busqueda","b1.fun.w07-pedir-requisitos","b1.disc.w07-requisito-finalidad"],
+  prerequisites: ["b1-07"],
   "goal": {
     "canDo": "Al final de esta semana puedes reconocer las dificultades de un reto («aunque no tengo experiencia…»), plantear qué pasará en cada caso («si llueve, correremos igual») y dar consejos con cortesía («yo que tú, empezaría despacio»).",
     "steps": [

@@ -31,8 +31,8 @@ export const c1w04: Module = {
     "c1.fun.w04-graduar-compromiso",
     "c1.disc.w04-certeza-fuente",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["c1.gram.g171","c1.gram.g172","c1.voc.w03-seguro-viaje","c1.pron.w03-como-aviso-causa","c1.lis.w03-maleta-perdida","c1.read.w03-letra-pequena","c1.wri.w03-reclamacion-formal","c1.spk.w03-consejos-viajero","c1.fun.w03-plantear-escenarios","c1.disc.w03-hechos-condiciones"],
+  prerequisites: ["c1-03"],
   goal: {
     canDo: "Puedo decir cuánto sé y de dónde lo sé, formular conjeturas sobre un pasado anterior a otro y distinguir por el contexto los valores del condicional compuesto.",
     steps: [

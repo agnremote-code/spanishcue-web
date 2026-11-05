@@ -30,8 +30,8 @@ export const c2w19: Module = {
     "c2.fun.w19-desmontar-titular",
     "c2.disc.w19-analizar-sin-militar",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["c2.gram.g232","c2.gram.g233","c2.voc.w18-textil-informe","c2.pron.w18-tilde-y-acento","c2.lis.w18-pruebas-informe","c2.read.w18-capitulo-cooperativa","c2.wri.w18-apertura-capitulo","c2.spk.w18-presentar-informe","c2.fun.w18-aclarar-referente","c2.disc.w18-cadena-referencia"],
+  prerequisites: ["c2-18"],
   goal: {
     canDo: "Puedo leer dos textos sobre el mismo hecho y explicar cómo cada uno reparte la responsabilidad con la sintaxis, los presupuestos y el léxico, y puedo proponer una versión neutra que no esconda a nadie ni invente culpables.",
     steps: [

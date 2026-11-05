@@ -20,8 +20,8 @@ export const a1w17: Module = {
     "a1.spk.w17-describir-comparar",
     "a1.fun.w17-identificar-comparar",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["a1.gram.g034","a1.gram.g035","a1.voc.w16-compras-ropa-cuerpo","a1.pron.w16-z-c-seseo","a1.lis.w16-pulperia-caminata","a1.read.w16-consejos-reserva","a1.wri.w16-mensaje-excursion","a1.spk.w16-lista-molestias","a1.fun.w16-organizar-compra-malestar"],
+  prerequisites: ["a1-16"],
   goal: {
     canDo: "Al final de esta semana puedes describir un objeto con varias pistas hasta que la otra persona sabe cuál es, y comparar dos cosas por su tamaño, su precio o su peso.",
     canDoEn: "By the end of this week, you can describe an object with several clues until the other person knows which one it is, and compare two things by size, price or weight.",

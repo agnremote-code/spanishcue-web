@@ -21,8 +21,8 @@ export const a2w07: Module = {
     "a2.fun.w07-indicar-camino",
     "a2.disc.w07-instruccion-razon",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["a2.gram.g056","a2.gram.g057","a2.voc.w06-excursion-clima","a2.pron.w06-acento-final-futuro","a2.lis.w06-reunion-volcan","a2.read.w06-correo-agencia","a2.wri.w06-mensaje-visita","a2.spk.w06-planes-promesas","a2.fun.w06-prometer-ofrecer","a2.disc.w06-pasos-del-plan"],
+  prerequisites: ["a2-06"],
   goal: {
     canDo: "Al final de esta semana puedes dar indicaciones e instrucciones con tú y con usted, decir lo que alguien no debe hacer con el imperativo negativo y entender el imperativo de vos cuando lo oyes en Guatemala o en Argentina.",
     steps: [

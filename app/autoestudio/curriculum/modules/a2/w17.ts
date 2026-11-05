@@ -21,8 +21,8 @@ export const a2w17: Module = {
     "a2.fun.w17-pedir-favores",
     "a2.disc.w17-aceptar-rechazar",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["a2.gram.g076","a2.gram.g077","a2.voc.w16-cocina-receta","a2.pron.w16-pausa-conectores","a2.lis.w16-taller-gallo-pinto","a2.read.w16-blog-curso-cocina","a2.wri.w16-receta-con-historia","a2.spk.w16-explicar-receta","a2.fun.w16-dar-instrucciones","a2.disc.w16-ordenar-explicar"],
+  prerequisites: ["a2-16"],
   goal: {
     canDo: "Al final de esta semana puedes hacer planes con alternativas (si llueve, vamos al museo), pedir favores con suavidad a amigos y a desconocidos (¿podrías…?, ¿le importaría…?) y aceptar o rechazar una petición con cortesía.",
     steps: [

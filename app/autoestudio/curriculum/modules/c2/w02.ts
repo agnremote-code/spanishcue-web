@@ -29,8 +29,8 @@ export const c2w02: Module = {
     "c2.fun.w02-matizar-postura",
     "c2.disc.w02-fondo-novedad",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["c2.gram.g205","c2.gram.g206","c2.voc.w01-archivo-legado","c2.pron.w01-acento-re-ra","c2.lis.w01-revision-versiones","c2.read.w01-catalogo-documentos","c2.wri.w01-nota-editorial","c2.spk.w01-visita-guiada","c2.fun.w01-glosar-documento","c2.disc.w01-transcripcion-version"],
+  prerequisites: ["c2-01"],
   goal: {
     canDo: "Puedo elegir entre indicativo y subjuntivo cuando los dos son gramaticales para mostrar qué afirmo como información nueva y qué doy por sabido, valoro, imagino o pido.",
     steps: [

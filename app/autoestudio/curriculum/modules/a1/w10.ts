@@ -21,8 +21,8 @@ export const a1w10: Module = {
     "a1.spk.w10-preguntar-tratamiento",
     "a1.fun.w10-elegir-tratamiento",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["a1.gram.g012","a1.gram.g013","a1.voc.w06-estados-centro","a1.pron.w06-hay-ahi-esta","a1.lis.w06-hostal-videollamada","a1.read.w06-guia-hostal","a1.wri.w06-mensaje-viaje","a1.spk.w06-donde-estoy","a1.fun.w06-preguntar-servicios","a1.gram.g014","a1.gram.g015","a1.voc.w07-fiesta-materiales","a1.pron.w07-g-y-j","a1.lis.w07-tienda-talavera","a1.read.w07-mensaje-cumpleanos","a1.wri.w07-describir-regalo","a1.spk.w07-edades-regalos","a1.fun.w07-describir-objeto","a1.gram.g016","a1.gram.g017","a1.gram.g018","a1.voc.w08-trabajo-semana","a1.pron.w08-silaba-presente","a1.lis.w08-primer-dia-radio","a1.read.w08-perfil-locutora","a1.wri.w08-mi-semana","a1.spk.w08-agenda-semanal","a1.fun.w08-hablar-rutina-trabajo","a1.gram.g019","a1.gram.g020","a1.voc.w09-fin-de-semana-cafe","a1.pron.w09-diptongos-ie-ue","a1.lis.w09-desayuno-planes","a1.read.w09-blog-sabado","a1.wri.w09-plan-fin-de-semana","a1.spk.w09-proponer-pedir","a1.fun.w09-planear-pedir"],
+  prerequisites: ["a1-09"],
   goal: {
     canDo: "Al final de esta semana puedes elegir entre tú, usted, ustedes y vosotros, reconocer el vos, hacer preguntas de sí o no bien escritas y bien entonadas, y usar todo lo de las semanas 6 a 9 en un viaje.",
     canDoEn: "By the end of this week, you can choose between tú, usted, ustedes and vosotros, recognise vos, ask well-written, well-intoned yes/no questions, and use everything from weeks 6 to 9 on a trip.",

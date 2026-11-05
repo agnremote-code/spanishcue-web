@@ -21,8 +21,8 @@ export const a1w18: Module = {
     "a1.spk.w18-horario-planes",
     "a1.fun.w18-organizar-planes",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["a1.gram.g036","a1.gram.g037","a1.voc.w17-objetos-comparar","a1.pron.w17-vocal-final","a1.lis.w17-objetos-perdidos-metro","a1.read.w17-comparar-mochilas","a1.wri.w17-mensaje-objeto-perdido","a1.spk.w17-describir-comparar","a1.fun.w17-identificar-comparar"],
+  prerequisites: ["a1-17"],
   goal: {
     canDo: "Al final de esta semana puedes decir y preguntar la hora, el día y la fecha, contar tus planes con voy a y explicar qué quieres, qué puedes y qué tienes que hacer.",
     canDoEn: "By the end of this week, you can say and ask the time, the day and the date, talk about your plans with voy a and explain what you want, what you can and what you have to do.",

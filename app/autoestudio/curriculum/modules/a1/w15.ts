@@ -21,8 +21,8 @@ export const a1w15: Module = {
     "a1.fun.w15-gustos-invitar",
     "a1.rev.w15-semanas-11-14",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["a1.gram.g023","a1.gram.g024","a1.voc.w11-pupuseria","a1.pron.w11-entonacion-preguntas","a1.lis.w11-pedido-pupuseria","a1.read.w11-preguntas-frecuentes","a1.wri.w11-mensaje-anfitriona","a1.spk.w11-preguntar-negar","a1.fun.w11-pedir-informacion","a1.gram.g025","a1.gram.g026","a1.voc.w12-voluntariado","a1.pron.w12-porque-por-que","a1.lis.w12-entrevista-biblioteca","a1.read.w12-perfiles-voluntarios","a1.wri.w12-solicitud-voluntario","a1.spk.w12-razones-objetivos","a1.fun.w12-explicar-razones","a1.gram.g027","a1.gram.g028","a1.gram.g029","a1.voc.w13-paseo-ciudad","a1.pron.w13-al-del-d-suave","a1.lis.w13-llamada-encuentro","a1.read.w13-indicaciones-anfitrion","a1.wri.w13-indicaciones-amigo","a1.spk.w13-explicar-recorrido","a1.fun.w13-dar-indicaciones","a1.gram.g030","a1.gram.g031","a1.voc.w14-rutina-diaria","a1.pron.w14-pronombre-verbo","a1.lis.w14-turnos-bano","a1.read.w14-dia-panadera","a1.wri.w14-semana-intercambio","a1.spk.w14-contar-rutina","a1.fun.w14-hablar-habitos"],
+  prerequisites: ["a1-14"],
   goal: {
     canDo: "Al final de esta semana puedes decir qué te gusta y qué te encanta, preguntar y reaccionar a los gustos de otras personas, usar para mí, contigo o conmigo, y presentarte como compañero de piso con todo lo de las semanas 11 a 15.",
     canDoEn: "By the end of this week, you can say what you like and love, ask about and react to other people's tastes, use para mí, contigo or conmigo, and present yourself as a flatmate using everything from weeks 11 to 15.",

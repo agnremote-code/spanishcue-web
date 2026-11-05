@@ -29,8 +29,8 @@ export const b2w14: Module = {
     "b2.fun.w14-rechazar-interpretaciones",
     "b2.disc.w14-causa-consecuencia"
   ],
-  "reviewObjectives": [],
-  "prerequisites": [],
+  reviewObjectives: ["b2.gram.g151","b2.gram.g152","b2.voc.w13-trabajo-hibrido","b2.pron.w13-de-que-atono","b2.lis.w13-anuncio-oficina","b2.read.w13-columna-presencialidad","b2.wri.w13-correo-postura","b2.spk.w13-negociar-condiciones","b2.fun.w13-plantear-inquietudes","b2.disc.w13-comentar-hechos"],
+  prerequisites: ["b2-13"],
   "goal": {
     "canDo": "Puedo desmentir una causa que me atribuyen y dar la verdadera con «no porque…, sino porque…» o «no es que…, es que…», y contar las consecuencias de una situación intensa con «tan», «tanto» y «tal… que».",
     "steps": [

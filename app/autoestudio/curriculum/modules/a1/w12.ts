@@ -20,8 +20,8 @@ export const a1w12: Module = {
     "a1.spk.w12-razones-objetivos",
     "a1.fun.w12-explicar-razones",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["a1.gram.g023","a1.gram.g024","a1.voc.w11-pupuseria","a1.pron.w11-entonacion-preguntas","a1.lis.w11-pedido-pupuseria","a1.read.w11-preguntas-frecuentes","a1.wri.w11-mensaje-anfitriona","a1.spk.w11-preguntar-negar","a1.fun.w11-pedir-informacion"],
+  prerequisites: ["a1-11"],
   goal: {
     canDo: "Al final de esta semana puedes unir dos ideas para sumar, elegir, contrastar o negar dos cosas, y explicar por qué haces algo y para qué lo haces.",
     canDoEn: "By the end of this week, you can join two ideas to add, choose, contrast or say no to two things, and explain why you do something and what you do it for.",

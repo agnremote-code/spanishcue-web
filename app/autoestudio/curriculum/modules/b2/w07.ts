@@ -27,8 +27,8 @@ export const b2w07: Module = {
     "b2.fun.w07-planificar-prevenir",
     "b2.disc.w07-secuencia-finalidad",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["b2.gram.g137","b2.gram.g138","b2.voc.w06-agua-vinedo","b2.pron.w06-modo-al-oido","b2.lis.w06-reunion-finca","b2.read.w06-columna-agua","b2.wri.w06-carta-asamblea","b2.spk.w06-sostener-postura","b2.fun.w06-conceder-mantener","b2.disc.w06-orden-registro"],
+  prerequisites: ["b2-06"],
   goal: {
     canDo: "Puedo explicar qué pasará cuando ocurra algo que todavía no es seguro y para qué sirve cada medida de un plan, eligiendo entre subjuntivo e infinitivo según el sujeto y el momento.",
     steps: [

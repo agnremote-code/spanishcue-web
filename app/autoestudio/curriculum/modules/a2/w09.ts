@@ -21,8 +21,8 @@ export const a2w09: Module = {
     "a2.fun.w09-elegir-regalos",
     "a2.disc.w09-reaccionar-gustos",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["a2.gram.g060","a2.gram.g061","a2.voc.w08-emociones-viaje","a2.pron.w08-enlace-pronombre","a2.lis.w08-lunes-fuentes","a2.read.w08-blog-familia","a2.wri.w08-dia-dificil","a2.spk.w08-reacciones","a2.fun.w08-contar-reacciones","a2.disc.w08-relato-reacciones"],
+  prerequisites: ["a2-08"],
   goal: {
     canDo: "Al final de esta semana puedes decir qué te gusta, te interesa, te duele o te falta con la concordancia correcta, hablar de los gustos de otras personas y decir a quién das, mandas o explicas algo con me, te, le, nos y les.",
     steps: [

@@ -29,8 +29,8 @@ export const b2w03: Module = {
     "b2.fun.w03-analizar-decisiones",
     "b2.disc.w03-hecho-alternativa"
   ],
-  "reviewObjectives": [],
-  "prerequisites": [],
+  reviewObjectives: ["b2.gram.g130","b2.gram.g131","b2.voc.w02-participacion-vecinal","b2.pron.w02-presente-imperfecto-subj","b2.lis.w02-entrevista-radio","b2.read.w02-boletin-vecinal","b2.wri.w02-propuesta-municipio","b2.spk.w02-defender-proyecto","b2.fun.w02-plantear-hipotesis","b2.disc.w02-marco-temporal"],
+  prerequisites: ["b2-02"],
   "goal": {
     "canDo": "Puedo analizar un hecho pasado, imaginar qué habría pasado con otra decisión, reaccionar a lo que otros habían hecho antes y lamentar sin dramatizar.",
     "steps": [

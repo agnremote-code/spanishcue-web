@@ -31,8 +31,8 @@ export const b2w20: Module = {
     "b2.disc.w20-argumentacion-completa",
     "b2.rev.w20-semanas-16-20"
   ],
-  "reviewObjectives": [],
-  "prerequisites": [],
+  reviewObjectives: ["b2.gram.g157","b2.gram.g158","b2.voc.w16-mudanza-biblioteca","b2.pron.w16-terminaciones-y-de","b2.lis.w16-dia-de-mudanza","b2.read.w16-diario-mudanza","b2.wri.w16-informe-estado","b2.spk.w16-balance-y-deduccion","b2.fun.w16-balance-obligacion-deduccion","b2.disc.w16-informe-hecho-pendiente","b2.gram.g159","b2.gram.g160","b2.voc.w17-astillero","b2.pron.w17-ha-habra","b2.lis.w17-astillero-sabado","b2.read.w17-cronica-lancha","b2.wri.w17-informe-avance","b2.spk.w17-proyecto-largo","b2.fun.w17-duracion-y-plazos","b2.disc.w17-cronologia-proyecto","b2.gram.g161","b2.gram.g162","b2.voc.w18-archivo-museo","b2.pron.w18-comas-relativas","b2.lis.w18-baul-archivo","b2.read.w18-ficha-exposicion","b2.wri.w18-cartela-y-consulta","b2.spk.w18-suponer-historia","b2.fun.w18-conjeturar-precisar","b2.disc.w18-texto-expositivo-preciso","b2.gram.g163","b2.gram.g164","b2.voc.w19-tablado-barrio","b2.pron.w19-foco-y-tono","b2.lis.w19-llamada-vecina","b2.read.w19-columna-club","b2.wri.w19-aviso-dos-registros","b2.spk.w19-pedir-con-distancia","b2.fun.w19-pedir-mandar-registro","b2.disc.w19-adaptar-registro"],
+  prerequisites: ["b2-19"],
   "goal": {
     "canDo": "Puedo exponer una postura de forma ordenada, refutar la contraria con conectores precisos y elegir en cada momento la estructura B2 que necesito: conceder, imaginar, citar, suponer, hacer balance o pedir con la distancia justa.",
     "steps": [

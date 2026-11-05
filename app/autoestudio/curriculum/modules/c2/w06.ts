@@ -30,8 +30,8 @@ export const c2w06: Module = {
     "c2.fun.w06-justificar-correccion",
     "c2.disc.w06-voz-ajena-voz-propia",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["c2.gram.g211","c2.gram.g212","c2.voc.w05-asociacion-vecinal","c2.pron.w05-tono-inciso","c2.lis.w05-audio-asamblea","c2.read.w05-del-audio-al-acta","c2.wri.w05-resumen-asamblea","c2.spk.w05-informe-mediacion","c2.fun.w05-recuperar-elidido","c2.disc.w05-cita-reparacion","c2.rev.w05-semanas-1-5"],
+  prerequisites: ["c2-05"],
   goal: {
     canDo: "Puedo decidir si una doble lectura es un defecto que hay que reparar o un recurso buscado, repararla con el cambio mínimo y juzgar una forma discutida separando gramaticalidad, aceptabilidad, norma y variación.",
     steps: [

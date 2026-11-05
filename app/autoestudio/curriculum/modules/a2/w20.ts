@@ -22,8 +22,8 @@ export const a2w20: Module = {
     "a2.disc.w20-relato-mensaje",
     "a2.rev.w20-semanas-16-20",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["a2.gram.g076","a2.gram.g077","a2.voc.w16-cocina-receta","a2.pron.w16-pausa-conectores","a2.lis.w16-taller-gallo-pinto","a2.read.w16-blog-curso-cocina","a2.wri.w16-receta-con-historia","a2.spk.w16-explicar-receta","a2.fun.w16-dar-instrucciones","a2.disc.w16-ordenar-explicar","a2.gram.g078","a2.gram.g079","a2.voc.w17-excursion-favores","a2.pron.w17-entonacion-peticion","a2.lis.w17-mensaje-vecina","a2.read.w17-plan-irazu","a2.wri.w17-mensaje-favores","a2.spk.w17-planes-favores","a2.fun.w17-pedir-favores","a2.disc.w17-aceptar-rechazar","a2.gram.g080","a2.gram.g081","a2.voc.w18-finca-cafe","a2.pron.w18-pregunta-alternativa","a2.lis.w18-bienvenida-finca","a2.read.w18-correo-voluntarios","a2.wri.w18-normas-voluntariado","a2.spk.w18-explicar-normas","a2.fun.w18-normas-consejos","a2.disc.w18-ordenar-informacion","a2.gram.g082","a2.gram.g083","a2.voc.w19-muelle-ferry","a2.pron.w19-tilde-interrogativos","a2.lis.w19-muelle-paquera","a2.read.w19-mensaje-ferry","a2.wri.w19-correo-informacion","a2.spk.w19-pedir-informacion","a2.fun.w19-preguntar-cortes","a2.disc.w19-estado-proceso"],
+  prerequisites: ["a2-19"],
   goal: {
     canDo: "Al final de esta semana, y de A2, puedes contar tu experiencia (cuánto tiempo, cuántas veces, qué hacías normalmente, hace cuánto), narrar un día que salió mal con escena, hechos y causas, y escribir mensajes prácticos que piden, organizan y agradecen, usando todo lo de las semanas 16 a 19.",
     steps: [

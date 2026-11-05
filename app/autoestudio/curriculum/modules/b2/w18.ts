@@ -29,8 +29,8 @@ export const b2w18: Module = {
     "b2.fun.w18-conjeturar-precisar",
     "b2.disc.w18-texto-expositivo-preciso"
   ],
-  "reviewObjectives": [],
-  "prerequisites": [],
+  reviewObjectives: ["b2.gram.g159","b2.gram.g160","b2.voc.w17-astillero","b2.pron.w17-ha-habra","b2.lis.w17-astillero-sabado","b2.read.w17-cronica-lancha","b2.wri.w17-informe-avance","b2.spk.w17-proyecto-largo","b2.fun.w17-duracion-y-plazos","b2.disc.w17-cronologia-proyecto"],
+  prerequisites: ["b2-17"],
   "goal": {
     "canDo": "Puedo hacer suposiciones sobre el presente y el pasado moviendo el verbo un tiempo hacia adelante (serán, serían, habrá salido), conceder con «será…, pero» y escribir grupos nominales precisos, sin elipsis ambiguas ni relativas mal puntuadas.",
     "steps": [

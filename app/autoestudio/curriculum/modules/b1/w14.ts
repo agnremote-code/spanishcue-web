@@ -29,8 +29,8 @@ export const b1w14: Module = {
     "b1.fun.w14-valorar-con-matices",
     "b1.disc.w14-equilibrio-opinion"
   ],
-  "reviewObjectives": [],
-  "prerequisites": [],
+  reviewObjectives: ["b1.gram.g111","b1.gram.g112","b1.gram.g113","b1.voc.w13-cocina-feria","b1.pron.w13-comas-pausas","b1.lis.w13-reunion-cocina","b1.read.w13-cronica-feria","b1.wri.w13-informe-equipo","b1.spk.w13-poner-al-dia-oral","b1.fun.w13-poner-al-dia","b1.disc.w13-temas-ordenados"],
+  prerequisites: ["b1-13"],
   "goal": {
     "canDo": "Al final de esta semana puedes valorar un viaje o un servicio con matices («No fue ni barato ni cómodo; sin embargo, las vistas valieron la pena») y explicar por qué pasó algo con el conector adecuado («Como nevó, cerraron la carretera»).",
     "steps": [

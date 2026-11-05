@@ -20,8 +20,8 @@ export const a1w11: Module = {
     "a1.spk.w11-preguntar-negar",
     "a1.fun.w11-pedir-informacion",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["a1.gram.g021","a1.gram.g022","a1.rev.w10-repaso-semanas-6-9","a1.voc.w10-lago-preguntas","a1.pron.w10-entonacion-pregunta","a1.lis.w10-lancha-viajeros","a1.read.w10-preguntas-posada","a1.wri.w10-correo-reserva","a1.spk.w10-preguntar-tratamiento","a1.fun.w10-elegir-tratamiento"],
+  prerequisites: ["a1-10"],
   goal: {
     canDo: "Al final de esta semana puedes pedir información concreta con la palabra interrogativa correcta (precio, lugar, hora, personas) y decir lo que no quieres, no tienes o no puedes hacer.",
     canDoEn: "By the end of this week, you can ask for specific information with the right question word (price, place, time, people) and say what you don't want, don't have or can't do.",

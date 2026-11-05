@@ -29,8 +29,8 @@ export const b2w19: Module = {
     "b2.fun.w19-pedir-mandar-registro",
     "b2.disc.w19-adaptar-registro"
   ],
-  "reviewObjectives": [],
-  "prerequisites": [],
+  reviewObjectives: ["b2.gram.g161","b2.gram.g162","b2.voc.w18-archivo-museo","b2.pron.w18-comas-relativas","b2.lis.w18-baul-archivo","b2.read.w18-ficha-exposicion","b2.wri.w18-cartela-y-consulta","b2.spk.w18-suponer-historia","b2.fun.w18-conjeturar-precisar","b2.disc.w18-texto-expositivo-preciso"],
+  prerequisites: ["b2-18"],
   "goal": {
     "canDo": "Puedo decidir cuándo repetir un pronombre («a los vecinos los avisamos», «me lo dijo a mí») y cuándo no («eso te dije yo»), y pedir o mandar con el grado de cortesía que pide cada persona y cada texto.",
     "steps": [

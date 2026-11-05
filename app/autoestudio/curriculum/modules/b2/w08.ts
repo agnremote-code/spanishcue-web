@@ -27,8 +27,8 @@ export const b2w08: Module = {
     "b2.fun.w08-describir-proceso",
     "b2.disc.w08-precisar-referentes",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["b2.gram.g139","b2.gram.g140","b2.voc.w07-sismo-simulacro","b2.pron.w07-bloques-conectores","b2.lis.w07-reunion-simulacro","b2.read.w07-boletin-escuela","b2.wri.w07-correo-familias","b2.spk.w07-explicar-protocolo","b2.fun.w07-planificar-prevenir","b2.disc.w07-secuencia-finalidad"],
+  prerequisites: ["b2-07"],
   goal: {
     canDo: "Puedo explicar cómo se hace algo y comparar el resultado con lo esperado o con lo imaginado, e identificar con precisión personas, lugares y objetos con relativos precedidos de preposición.",
     steps: [

@@ -29,8 +29,8 @@ export const b2w16: Module = {
     "b2.fun.w16-balance-obligacion-deduccion",
     "b2.disc.w16-informe-hecho-pendiente"
   ],
-  "reviewObjectives": [],
-  "prerequisites": [],
+  reviewObjectives: ["b2.gram.g155","b2.gram.g156","b2.voc.w15-ciudad-rio","b2.pron.w15-conectores-entonacion","b2.lis.w15-debate-radio","b2.read.w15-reportaje-costanera","b2.wri.w15-observacion-consulta","b2.spk.w15-debatir-propuesta","b2.fun.w15-conceder-matizar","b2.disc.w15-conceder-objetar","b2.rev.w15-semanas-11-15"],
+  prerequisites: ["b2-15"],
   "goal": {
     "canDo": "Puedo presentar el estado de un proyecto con participios que concuerdan (tengo revisadas, llevamos embaladas, quedó cerrada), decir qué hay que hacer y deducir lo que no veo distinguiendo «debe» de «debe de».",
     "steps": [

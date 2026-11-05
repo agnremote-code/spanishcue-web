@@ -21,8 +21,8 @@ export const a1w08: Module = {
     "a1.spk.w08-agenda-semanal",
     "a1.fun.w08-hablar-rutina-trabajo",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["a1.gram.g014","a1.gram.g015","a1.voc.w07-fiesta-materiales","a1.pron.w07-g-y-j","a1.lis.w07-tienda-talavera","a1.read.w07-mensaje-cumpleanos","a1.wri.w07-describir-regalo","a1.spk.w07-edades-regalos","a1.fun.w07-describir-objeto"],
+  prerequisites: ["a1-07"],
   goal: {
     canDo: "Al final de esta semana puedes reconocer en un verbo quién hace la acción y cuándo, contar tu semana con verbos regulares en presente y decir quién eres, dónde estás, adónde vas y qué tienes.",
     canDoEn: "By the end of this week, you can tell from a verb who does the action and when, describe your week with regular present-tense verbs and say who you are, where you are, where you're going and what you have.",

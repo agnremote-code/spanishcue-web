@@ -29,8 +29,8 @@ export const b2w01: Module = {
     "b2.fun.w01-transmitir-peticiones",
     "b2.disc.w01-relato-encargos"
   ],
-  "reviewObjectives": [],
-  "prerequisites": [],
+  reviewObjectives: ["b1.gram.g126","b1.gram.g127","b1.voc.w20-teatro-decisiones","b1.pron.w20-enfasis-argumentar","b1.lis.w20-reunion-compania","b1.read.w20-columna-opinion","b1.wri.w20-propuesta-razonada","b1.spk.w20-defender-propuesta","b1.fun.w20-decidir-en-grupo","b1.disc.w20-argumento-completo","b1.rev.w20-semanas-16-20"],
+  prerequisites: ["b1-20"],
   "goal": {
     "canDo": "Puedo formar el imperfecto de subjuntivo y contar con él lo que otras personas pidieron, quisieron o lamentaron, aclarando si el encargo ya se cumplió.",
     "steps": [

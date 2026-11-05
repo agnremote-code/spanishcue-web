@@ -27,8 +27,8 @@ export const b1w02: Module = {
     "b1.fun.w02-expresar-deseos",
     "b1.disc.w02-mensaje-ocasion",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["b1.gram.g086","b1.gram.g087","b1.voc.w01-mudanza-piso","b1.pron.w01-acento-pasado","b1.lis.w01-dia-mudanza","b1.read.w01-blog-primer-mes","b1.wri.w01-correo-llegada","b1.spk.w01-dia-al-reves","b1.fun.w01-explicar-lo-ocurrido","b1.disc.w01-orden-relato"],
+  prerequisites: ["b1-01"],
   goal: {
     canDo: "Al final de esta semana puedes formar el presente de subjuntivo de verbos regulares e irregulares y expresar deseos para ti y para otras personas con querer, esperar, desear, ojalá y ¡que…!",
     steps: [

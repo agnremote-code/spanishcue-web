@@ -30,8 +30,8 @@ export const c2w01: Module = {
     "c2.fun.w01-glosar-documento",
     "c2.disc.w01-transcripcion-version",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["c1.gram.g203","c1.gram.g204","c1.voc.w20-biblioteca-universidad","c1.pron.w20-relativa-pausa","c1.lis.w20-revision-columna","c1.read.w20-columna-biblioteca","c1.wri.w20-columna-revisada","c1.spk.w20-debate-radio","c1.fun.w20-defender-con-matiz","c1.disc.w20-cohesion-referencial","c1.rev.w20-semanas-16-20"],
+  prerequisites: ["c1-20"],
   goal: {
     canDo: "Puedo interpretar «hubiere + participio» y otras formas verbales históricas en documentos antiguos y reformularlas con fidelidad en el español actual de España y América.",
     steps: [

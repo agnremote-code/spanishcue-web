@@ -32,8 +32,8 @@ export const c2w10: Module = {
     "c2.disc.w10-progresion-tematica",
     "c2.rev.w10-integracion-semanas-6-9",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["c2.gram.g213","c2.gram.g214","c2.voc.w06-revision-textos","c2.pron.w06-pausa-desambigua","c2.lis.w06-reunion-biblioteca","c2.read.w06-columna-boletin","c2.wri.w06-informe-revision","c2.spk.w06-defender-criterio","c2.fun.w06-justificar-correccion","c2.disc.w06-voz-ajena-voz-propia","c2.gram.g215","c2.voc.w07-trato-cortesia","c2.pron.w07-agudas-voseo","c2.lis.w07-llamada-cambio-trato","c2.read.w07-guia-trato","c2.wri.w07-protocolo-mensajes","c2.spk.w07-negociar-trato","c2.fun.w07-proponer-rechazar-tuteo","c2.disc.w07-coherencia-trato","c2.gram.g216","c2.gram.g217","c2.voc.w08-camino-correspondencia","c2.pron.w08-s-final-pronombres","c2.lis.w08-reunion-antologia","c2.read.w08-presentacion-antologia","c2.wri.w08-guia-correspondencia","c2.spk.w08-explicar-variedades","c2.fun.w08-adaptar-sin-borrar","c2.disc.w08-cita-y-norma","c2.gram.g218","c2.voc.w09-critica-teatral","c2.pron.w09-acento-ironico","c2.lis.w09-columna-y-nota","c2.read.w09-critica-reapertura","c2.wri.w09-cronica-ironica","c2.spk.w09-anecdota-valorada","c2.fun.w09-quitar-poner-valoracion","c2.disc.w09-ironia-sin-mentir"],
+  prerequisites: ["c2-09"],
   goal: {
     canDo: "Puedo detectar y desmontar lo que un enunciado da por hecho, corregir un foco con los recursos adecuados y ordenar un texto complejo para que avance de lo conocido a lo nuevo, integrando lo repasado sobre ambigüedad, norma, trato, variación regional e ironía.",
     steps: [

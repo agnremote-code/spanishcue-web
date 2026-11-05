@@ -29,8 +29,8 @@ export const c2w07: Module = {
     "c2.fun.w07-proponer-rechazar-tuteo",
     "c2.disc.w07-coherencia-trato",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["c2.gram.g213","c2.gram.g214","c2.voc.w06-revision-textos","c2.pron.w06-pausa-desambigua","c2.lis.w06-reunion-biblioteca","c2.read.w06-columna-boletin","c2.wri.w06-informe-revision","c2.spk.w06-defender-criterio","c2.fun.w06-justificar-correccion","c2.disc.w06-voz-ajena-voz-propia"],
+  prerequisites: ["c2-06"],
   goal: {
     canDo: "Puedo reconocer y usar con coherencia las formas del voseo, elegir entre tú, vos, usted, ustedes y vosotros según la zona y la relación, e interpretar qué comunica un cambio de trato dentro de una conversación.",
     steps: [

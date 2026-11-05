@@ -21,8 +21,8 @@ export const a1w05: Module = {
     "a1.fun.w05-presentar-personas",
     "a1.rev.w05-semanas-1-4",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["a1.gram.g001","a1.gram.g002","a1.voc.w01-objetos-habitacion","a1.pron.w01-deletrear","a1.lis.w01-llegada-residencia","a1.read.w01-nota-presentacion","a1.wri.w01-mensaje-grupo","a1.spk.w01-presentacion-cosas","a1.fun.w01-presentarse-pedir","a1.gram.g003","a1.gram.g004","a1.voc.w02-barrio-mercado","a1.pron.w02-silaba-fuerte","a1.lis.w02-preguntar-mercado","a1.read.w02-mensaje-anfitriona","a1.wri.w02-describir-calle","a1.spk.w02-mi-barrio","a1.fun.w02-preguntar-hay","a1.gram.g005","a1.gram.g006","a1.gram.g007","a1.voc.w03-colores-artesania","a1.pron.w03-r-suave-fuerte","a1.lis.w03-puesto-artesanias","a1.read.w03-blog-regalos","a1.wri.w03-describir-regalos","a1.spk.w03-describir-objetos","a1.fun.w03-describir-opinar","a1.gram.g008","a1.gram.g009","a1.voc.w04-mudanza-casa","a1.pron.w04-enlace-s","a1.lis.w04-dia-mudanza","a1.read.w04-objetos-perdidos","a1.wri.w04-mensaje-vecinos","a1.spk.w04-senalar-cosas","a1.fun.w04-senalar-pertenencia"],
+  prerequisites: ["a1-04"],
   goal: {
     canDo: "Al final de esta semana puedes presentarte y presentar a otras personas: quiénes son, qué hacen, de dónde son y cómo son, con el pronombre solo cuando hace falta, y con todo lo que aprendiste en las semanas 1 a 4.",
     canDoEn: "By the end of this week, you can introduce yourself and other people: who they are, what they do, where they are from and what they are like, using the subject pronoun only when it is needed, together with everything you learned in weeks 1 to 4.",

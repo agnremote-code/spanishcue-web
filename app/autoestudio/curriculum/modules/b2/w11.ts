@@ -29,8 +29,8 @@ export const b2w11: Module = {
     "b2.fun.w11-aclarar-referencias",
     "b2.disc.w11-situar-declaraciones"
   ],
-  "reviewObjectives": [],
-  "prerequisites": [],
+  reviewObjectives: ["b2.gram.g145","b2.gram.g146","b2.voc.w10-playa-voluntariado","b2.pron.w10-voz-cita","b2.lis.w10-llamada-reunion","b2.read.w10-cronica-temporada","b2.wri.w10-acta-reunion","b2.spk.w10-transmitir-negociar","b2.fun.w10-transmitir-mensajes","b2.disc.w10-transmitir-con-precision","b2.rev.w10-integracion"],
+  prerequisites: ["b2-10"],
   "goal": {
     "canDo": "Puedo transmitir lo que alguien dijo en otro día y en otro lugar recalculando hoy, aquí, este, venir y traer, y contar en un registro informativo qué fue hecho y por quién con la pasiva con «ser».",
     "steps": [

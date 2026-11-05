@@ -29,8 +29,8 @@ export const c2w09: Module = {
     "c2.fun.w09-quitar-poner-valoracion",
     "c2.disc.w09-ironia-sin-mentir",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["c2.gram.g216","c2.gram.g217","c2.voc.w08-camino-correspondencia","c2.pron.w08-s-final-pronombres","c2.lis.w08-reunion-antologia","c2.read.w08-presentacion-antologia","c2.wri.w08-guia-correspondencia","c2.spk.w08-explicar-variedades","c2.fun.w08-adaptar-sin-borrar","c2.disc.w08-cita-y-norma"],
+  prerequisites: ["c2-08"],
   goal: {
     canDo: "Puedo interpretar y usar perífrasis que expresan sorpresa, insistencia crítica, distancia o ironía (ir y + verbo, llegar a, no hacer más que, andar + gerundio, venir a decir, hacer como que, iba a, será… pero) y pasar un texto valorativo a uno neutro, y al revés.",
     steps: [

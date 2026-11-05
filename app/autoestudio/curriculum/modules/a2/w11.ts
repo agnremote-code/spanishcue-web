@@ -21,8 +21,8 @@ export const a2w11: Module = {
     "a2.fun.w11-definir-sin-palabra",
     "a2.disc.w11-unir-ideas",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["a2.gram.g064","a2.gram.g065","a2.voc.w10-mudanza-objetos","a2.pron.w10-acento-pronombres-pegados","a2.lis.w10-dia-mudanza","a2.read.w10-mensaje-reparto","a2.wri.w10-mensaje-devolver","a2.spk.w10-organizar-mudanza","a2.fun.w10-prestar-devolver","a2.disc.w10-evitar-repetir","a2.rev.w10-repaso-semanas-6-9"],
+  prerequisites: ["a2-10"],
   goal: {
     canDo: "Al final de esta semana puedes decir de qué persona, cosa o lugar hablas en una sola frase (la vecina que vive enfrente, el pan que compro, la plaza donde nos vemos), situar un momento con cuando o el día que, y hablar de ideas con lo que (lo que más me gusta es…).",
     steps: [

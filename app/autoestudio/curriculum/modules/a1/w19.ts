@@ -20,8 +20,8 @@ export const a1w19: Module = {
     "a1.spk.w19-que-estas-haciendo",
     "a1.fun.w19-contar-ahora",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["a1.gram.g038","a1.gram.g039","a1.gram.g040","a1.voc.w18-tiempo-planes","a1.pron.w18-fuerza-dias-meses","a1.lis.w18-reserva-tour-cafe","a1.read.w18-programa-fin-de-semana","a1.wri.w18-plan-visita","a1.spk.w18-horario-planes","a1.fun.w18-organizar-planes"],
+  prerequisites: ["a1-18"],
   goal: {
     canDo: "Al final de esta semana puedes contar qué están haciendo tú y otras personas en este momento y hablar de cosas y personas sin repetir su nombre con lo, la, los, las.",
     canDoEn: "By the end of this week, you can say what you and other people are doing right now and talk about things and people without repeating their names, using lo, la, los, las.",

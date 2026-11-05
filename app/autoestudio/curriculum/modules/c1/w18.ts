@@ -30,8 +30,8 @@ export const c1w18: Module = {
     "c1.fun.w18-contar-y-reaccionar",
     "c1.disc.w18-ritmo-narrativo",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["c1.gram.g197","c1.gram.g198","c1.voc.w17-proyecto-cultural","c1.pron.w17-inciso-tono-bajo","c1.lis.w17-revision-memoria","c1.read.w17-memoria-escuela","c1.wri.w17-solicitud-sala","c1.spk.w17-presentacion-comite","c1.fun.w17-solicitar-con-cortesia","c1.disc.w17-voz-institucional"],
+  prerequisites: ["c1-17"],
   goal: {
     canDo: "Puedo contar y reaccionar como en una conversación real con estructuras expresivas y frases suspendidas, reconocer cuándo un tiempo verbal expresa cortesía, juego, sueño, cita, viveza, mandato o sorpresa, y saber cuándo nada de esto cabe en un texto formal.",
     steps: [

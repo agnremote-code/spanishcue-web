@@ -31,8 +31,8 @@ export const c1w12: Module = {
     "c1.fun.w12-volver-sobre-lo-dicho",
     "c1.disc.w12-densidad-registro",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["c1.gram.g186","c1.gram.g187","c1.voc.w11-reglamento-liga","c1.pron.w11-pausa-desambigua","c1.lis.w11-comite-competicion","c1.read.w11-columna-reglamento","c1.wri.w11-propuesta-reforma","c1.spk.w11-explicar-norma","c1.fun.w11-aclarar-lectura","c1.disc.w11-retomar-sin-dudas"],
+  prerequisites: ["c1-11"],
   goal: {
     canDo: "Puedo convertir oraciones en grupos nominales densos y precisos, valorar un hecho con un sustantivo que opina cuando el texto lo permite, y explicar, corregir, relativizar o resumir lo que acabo de decir con el conector adecuado.",
     steps: [

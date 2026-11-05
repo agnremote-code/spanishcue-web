@@ -23,8 +23,8 @@ export const a2w05: Module = {
     "a2.disc.w05-ordenar-con-tiempo",
     "a2.rev.w05-pasado-y-tiempo",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["a2.gram.g045","a2.gram.g046","a2.voc.w01-feria-voluntariado","a2.pron.w01-he-ha-han-enlazados","a2.lis.w01-manana-feria","a2.read.w01-ficha-voluntaria","a2.wri.w01-correo-voluntariado","a2.spk.w01-balance-experiencias","a2.fun.w01-novedades-experiencias","a2.disc.w01-sumar-experiencias","a2.gram.g047","a2.gram.g048","a2.voc.w02-excursion-volcan","a2.pron.w02-tilde-presente-pasado","a2.lis.w02-lunes-oficina","a2.read.w02-blog-poas","a2.wri.w02-relato-excursion","a2.spk.w02-contar-fin-de-semana","a2.fun.w02-contar-hechos-pasados","a2.disc.w02-ordenar-relato","a2.gram.g049","a2.gram.g050","a2.voc.w03-ciudad-antigua","a2.pron.w03-hiato-ia","a2.lis.w03-recuerdos-abuela","a2.read.w03-cronica-murcielago","a2.wri.w03-recuerdo-lugar","a2.spk.w03-anecdota-infancia","a2.fun.w03-describir-pasado","a2.disc.w03-escena-y-hechos","a2.gram.g051","a2.gram.g052","a2.voc.w04-vida-universitaria","a2.pron.w04-entonacion-preguntas","a2.lis.w04-sala-profesores","a2.read.w04-exposicion-fotos","a2.wri.w04-mensaje-antes-ahora","a2.spk.w04-costumbres-de-otra-epoca","a2.fun.w04-comparar-epocas","a2.disc.w04-contraste-antes-ahora"],
+  prerequisites: ["a2-04"],
   goal: {
     canDo: "Al final de esta semana puedes decir qué ya ha pasado y qué todavía no, ordenar acciones con antes de, después de y cuando, decir desde cuándo y cuánto tiempo haces algo, y combinar todos los tiempos del pasado de las semanas 1 a 4 en una misma historia.",
     steps: [

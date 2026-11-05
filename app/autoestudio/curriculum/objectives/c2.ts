@@ -1,936 +1,2256 @@
-import type { Objective } from "../types";
+import { defineObjectives } from "../define";
 
-/** C2: veinte semanas; puntos de integración 5, 10, 15 y 20.
- * Textos originales. La variación fonética requiere muestras verificables en clase. */
-export const c2Objectives: Objective[] = [
-  {
-    "id": "c2.gram.ambiguedad-sintactica",
-    "level": "c2",
-    "domain": "grammar",
-    "topic": "Ambigüedad sintáctica",
-    "outcome": "Puedo detectar y deshacer ambigüedades estructurales: vi a la hija del vecino que trabaja en el banco.",
-    "prerequisites": [
-      "c1.gram.nominalizacion-avanzada"
-    ],
-    "week": 1,
-    "pcic": "Gramática 10–15",
-    "related": [
-      "/cuando-una-frase-puede-significar-dos-cosas"
-    ]
-  },
-  {
-    "id": "c2.disc.desambiguar",
-    "level": "c2",
-    "domain": "discourse",
-    "topic": "Desambiguar en la escritura",
-    "outcome": "Puedo reescribir un texto para eliminar lecturas no deseadas o mantenerlas a propósito.",
-    "prerequisites": [
-      "c2.gram.ambiguedad-sintactica"
-    ],
-    "week": 1
-  },
-  {
-    "id": "c2.voc.polisemia-avanzada",
-    "level": "c2",
-    "domain": "vocabulary",
-    "topic": "Polisemia y homonimia",
-    "outcome": "Puedo explotar y controlar los significados múltiples de palabras frecuentes.",
-    "prerequisites": [
-      "b2.voc.colocaciones"
-    ],
-    "week": 1
-  },
-  {
-    "id": "c2.pron.prosodia-desambiguadora",
-    "level": "c2",
-    "domain": "pronunciation",
-    "topic": "Prosodia que desambigua",
-    "outcome": "Puedo deshacer una ambigüedad oral con pausas y acentos.",
-    "prerequisites": [
-      "c1.pron.incisos"
-    ],
-    "week": 1
-  },
-  {
-    "id": "c2.read.textos-ambiguos",
-    "level": "c2",
-    "domain": "reading",
-    "topic": "Leer titulares y cláusulas ambiguas",
-    "outcome": "Puedo identificar qué lecturas permite un titular o una cláusula.",
-    "prerequisites": [],
-    "week": 1
-  },
-  {
-    "id": "c2.disc.ironia-productiva",
-    "level": "c2",
-    "domain": "discourse",
-    "topic": "Ironía, litote e hipérbole",
-    "outcome": "Puedo producir y reconocer ironía, litote (no es precisamente barato) e hipérbole según el efecto buscado.",
-    "prerequisites": [
-      "c1.disc.ironia-receptiva"
-    ],
-    "week": 2
-  },
-  {
-    "id": "c2.voc.evaluacion-implicita",
-    "level": "c2",
-    "domain": "vocabulary",
-    "topic": "Léxico evaluativo implícito",
-    "outcome": "Puedo detectar valoraciones escondidas en adjetivos, diminutivos y verbos.",
-    "prerequisites": [],
-    "week": 2
-  },
-  {
-    "id": "c2.pron.ironia-variedades",
-    "level": "c2",
-    "domain": "pronunciation",
-    "topic": "Prosodia e ironía contextual",
-    "outcome": "Puedo ensayar e interpretar contrastes de intención con contexto y prosodia, sin atribuir una variedad a una voz sintética.",
-    "prerequisites": [
-      "c1.pron.ironia"
-    ],
-    "week": 2
-  },
-  {
-    "id": "c2.lis.humor-ironico",
-    "level": "c2",
-    "domain": "listening",
-    "topic": "Escuchar una tertulia irónica",
-    "outcome": "Puedo separar lo que se dice de lo que se quiere decir en una tertulia.",
-    "prerequisites": [],
-    "week": 2
-  },
-  {
-    "id": "c2.spk.comentario-ironico",
-    "level": "c2",
-    "domain": "speaking",
-    "topic": "Comentario con ironía controlada",
-    "outcome": "Puedo comentar una situación con ironía sin perder la cortesía.",
-    "prerequisites": [],
-    "week": 2
-  },
-  {
-    "id": "c2.disc.cambio-registro",
-    "level": "c2",
-    "domain": "discourse",
-    "topic": "Alternancia de registros",
-    "outcome": "Puedo pasar con control de un registro jurídico o administrativo a uno coloquial y al revés.",
-    "prerequisites": [
-      "c1.fun.adecuar-registro"
-    ],
-    "week": 3
-  },
-  {
-    "id": "c2.voc.lenguaje-juridico",
-    "level": "c2",
-    "domain": "vocabulary",
-    "topic": "Lenguaje jurídico-administrativo",
-    "outcome": "Puedo entender fórmulas como por la presente, en virtud de, sin perjuicio de y a tenor de.",
-    "prerequisites": [
-      "c1.voc.derecho-normas"
-    ],
-    "week": 3
-  },
-  {
-    "id": "c2.gram.futuro-subjuntivo-juridico",
-    "level": "c2",
-    "domain": "grammar",
-    "topic": "Futuro de subjuntivo y fórmulas arcaizantes",
-    "outcome": "Puedo interpretar el futuro de subjuntivo en textos legales: el que infringiere….",
-    "prerequisites": [
-      "c1.gram.tiempos-literarios"
-    ],
-    "week": 3,
-    "pcic": "Gramática 9.1",
-    "related": [
-      "/sistema-verbal/futuro-perfecto-subjuntivo"
-    ]
-  },
-  {
-    "id": "c2.pron.registro-voz",
-    "level": "c2",
-    "domain": "pronunciation",
-    "topic": "Registro y voz",
-    "outcome": "Puedo adaptar velocidad, articulación y entonación al registro.",
-    "prerequisites": [
-      "c1.pron.debate-prosodia"
-    ],
-    "week": 3
-  },
-  {
-    "id": "c2.wri.traduccion-registro",
-    "level": "c2",
-    "domain": "writing",
-    "topic": "Traducción intralingüística",
-    "outcome": "Puedo convertir un texto legal en una explicación clara para el público general.",
-    "prerequisites": [
-      "c1.wri.revision-registro"
-    ],
-    "week": 3
-  },
-  {
-    "id": "c2.disc.subtexto",
-    "level": "c2",
-    "domain": "discourse",
-    "topic": "Subtexto e inferencia",
-    "outcome": "Puedo reconstruir intenciones, tensiones y omisiones en diálogos y textos literarios.",
-    "prerequisites": [
-      "c1.disc.implicaturas"
-    ],
-    "week": 4
-  },
-  {
-    "id": "c2.voc.verbos-dicendi-matices",
-    "level": "c2",
-    "domain": "vocabulary",
-    "topic": "Verbos introductores con matiz",
-    "outcome": "Puedo elegir entre murmurar, espetar, deslizar, zanjar, rezongar y otros verbos de habla.",
-    "prerequisites": [
-      "b2.voc.verbos-lengua"
-    ],
-    "week": 4
-  },
-  {
-    "id": "c2.pron.intencion-pragmatica",
-    "level": "c2",
-    "domain": "pronunciation",
-    "topic": "Entonación e intención contextual",
-    "outcome": "Puedo contrastar interpretaciones de una frase mediante contexto, pausas y foco, sin tratar la entonación como prueba única.",
-    "prerequisites": [
-      "c2.pron.ironia-variedades"
-    ],
-    "week": 4
-  },
-  {
-    "id": "c2.read.relato-subtexto",
-    "level": "c2",
-    "domain": "reading",
-    "topic": "Leer un relato con subtexto",
-    "outcome": "Puedo justificar con pruebas textuales lo que no se dice en un relato.",
-    "prerequisites": [],
-    "week": 4
-  },
-  {
-    "id": "c2.wri.dialogo-subtexto",
-    "level": "c2",
-    "domain": "writing",
-    "topic": "Escribir un diálogo con subtexto",
-    "outcome": "Puedo escribir un diálogo en el que el conflicto no se nombra.",
-    "prerequisites": [
-      "c1.wri.relato-estilo"
-    ],
-    "week": 4
-  },
-  {
-    "id": "c2.rev.checkpoint-1",
-    "level": "c2",
-    "domain": "review",
-    "topic": "Checkpoint 1: alcance, ironía, registro y subtexto",
-    "outcome": "Puedo mediar entre un acta, una crónica, un mensaje y una discusión sin confundir hechos e inferencias.",
-    "prerequisites": [
-      "c2.gram.ambiguedad-sintactica",
-      "c2.disc.ironia-productiva",
-      "c2.disc.cambio-registro"
-    ],
-    "week": 5
-  },
-  {
-    "id": "c2.read.contrato-cronica",
-    "level": "c2",
-    "domain": "reading",
-    "topic": "Leer textos de registros opuestos",
-    "outcome": "Puedo comparar una cláusula, una crónica y un mensaje sobre el mismo hecho.",
-    "prerequisites": [],
-    "week": 5
-  },
-  {
-    "id": "c2.disc.recursos-retoricos",
-    "level": "c2",
-    "domain": "discourse",
-    "topic": "Recursos retóricos",
-    "outcome": "Puedo analizar y usar antítesis, anáfora, pregunta retórica, gradación y concesión táctica.",
-    "prerequisites": [
-      "c1.disc.contraargumentacion"
-    ],
-    "week": 6
-  },
-  {
-    "id": "c2.voc.lexico-persuasivo",
-    "level": "c2",
-    "domain": "vocabulary",
-    "topic": "Léxico persuasivo",
-    "outcome": "Puedo reconocer eufemismos, disfemismos y palabras cargadas.",
-    "prerequisites": [],
-    "week": 6
-  },
-  {
-    "id": "c2.pron.oratoria",
-    "level": "c2",
-    "domain": "pronunciation",
-    "topic": "Oratoria",
-    "outcome": "Puedo usar pausas, ritmo ternario y clímax en un discurso.",
-    "prerequisites": [
-      "c1.pron.debate-prosodia"
-    ],
-    "week": 6
-  },
-  {
-    "id": "c2.lis.discurso-politico",
-    "level": "c2",
-    "domain": "listening",
-    "topic": "Escuchar un discurso",
-    "outcome": "Puedo identificar las estrategias retóricas de un discurso.",
-    "prerequisites": [],
-    "week": 6
-  },
-  {
-    "id": "c2.spk.discurso-breve",
-    "level": "c2",
-    "domain": "speaking",
-    "topic": "Discurso persuasivo",
-    "outcome": "Puedo pronunciar un discurso de tres minutos con recursos retóricos conscientes.",
-    "prerequisites": [],
-    "week": 6
-  },
-  {
-    "id": "c2.read.prosa-densa",
-    "level": "c2",
-    "domain": "reading",
-    "topic": "Prosa académica y ensayística densa",
-    "outcome": "Puedo procesar textos con alta densidad informativa, incisos y nominalizaciones.",
-    "prerequisites": [
-      "c1.read.ensayo"
-    ],
-    "week": 7
-  },
-  {
-    "id": "c2.gram.sintaxis-compleja",
-    "level": "c2",
-    "domain": "grammar",
-    "topic": "Sintaxis compleja",
-    "outcome": "Puedo analizar y producir oraciones con varios niveles de subordinación sin perder claridad.",
-    "prerequisites": [
-      "c2.gram.ambiguedad-sintactica"
-    ],
-    "week": 7,
-    "pcic": "Gramática 15"
-  },
-  {
-    "id": "c2.voc.conectores-cultos",
-    "level": "c2",
-    "domain": "vocabulary",
-    "topic": "Conectores cultos",
-    "outcome": "Puedo usar empero, con todo, así las cosas, a la sazón y no en vano con precisión.",
-    "prerequisites": [
-      "c1.disc.atenuar-intensificar"
-    ],
-    "week": 7
-  },
-  {
-    "id": "c2.pron.lectura-densa",
-    "level": "c2",
-    "domain": "pronunciation",
-    "topic": "Leer prosa densa en voz alta",
-    "outcome": "Puedo leer un texto denso de forma comprensible para quien escucha.",
-    "prerequisites": [
-      "c1.pron.lectura-academica"
-    ],
-    "week": 7
-  },
-  {
-    "id": "c2.wri.abstract",
-    "level": "c2",
-    "domain": "writing",
-    "topic": "Resumen académico",
-    "outcome": "Puedo escribir un resumen académico de 150 palabras sin perder matices.",
-    "prerequisites": [
-      "c1.wri.sintesis-fuentes"
-    ],
-    "week": 7
-  },
-  {
-    "id": "c2.voc.casi-sinonimos",
-    "level": "c2",
-    "domain": "vocabulary",
-    "topic": "Casi sinónimos y connotación",
-    "outcome": "Puedo elegir entre casi sinónimos según connotación, registro y prosodia semántica.",
-    "prerequisites": [
-      "c1.voc.verbos-precisos"
-    ],
-    "week": 8
-  },
-  {
-    "id": "c2.voc.refranes-intertextualidad",
-    "level": "c2",
-    "domain": "vocabulary",
-    "topic": "Refranes, citas e intertextualidad",
-    "outcome": "Puedo reconocer y adaptar refranes, citas y alusiones culturales.",
-    "prerequisites": [],
-    "week": 8
-  },
-  {
-    "id": "c2.pron.matiz-lexico-voz",
-    "level": "c2",
-    "domain": "pronunciation",
-    "topic": "Matiz léxico y voz",
-    "outcome": "Puedo marcar con la voz la elección deliberada de una palabra.",
-    "prerequisites": [
-      "c2.pron.intencion-pragmatica"
-    ],
-    "week": 8
-  },
-  {
-    "id": "c2.wri.precision-lexica",
-    "level": "c2",
-    "domain": "writing",
-    "topic": "Precisión léxica",
-    "outcome": "Puedo revisar un texto propio cambiando palabras imprecisas por otras exactas.",
-    "prerequisites": [],
-    "week": 8
-  },
-  {
-    "id": "c2.read.columna-literaria",
-    "level": "c2",
-    "domain": "reading",
-    "topic": "Leer una columna literaria",
-    "outcome": "Puedo explicar las alusiones y los juegos léxicos de una columna.",
-    "prerequisites": [],
-    "week": 8
-  },
-  {
-    "id": "c2.pron.variacion-avanzada",
-    "level": "c2",
-    "domain": "pronunciation",
-    "topic": "Variación fonética y selección de muestras",
-    "outcome": "Puedo explicar aspiración, debilitamiento, lateralización y asibilación como fenómenos variables y seleccionar con mi docente muestras verificables para entrenar su percepción.",
-    "prerequisites": [
-      "c1.pron.variedades-hispanas"
-    ],
-    "week": 9
-  },
-  {
-    "id": "c2.voc.variacion-lexica-pragmatica",
-    "level": "c2",
-    "domain": "vocabulary",
-    "topic": "Variación léxica y pragmática",
-    "outcome": "Puedo interpretar diferencias de cortesía, tratamiento y léxico entre variedades.",
-    "prerequisites": [
-      "b2.voc.lexico-regional"
-    ],
-    "week": 9
-  },
-  {
-    "id": "c2.gram.variacion-gramatical",
-    "level": "c2",
-    "domain": "grammar",
-    "topic": "Variación gramatical",
-    "outcome": "Puedo reconocer leísmo, voseo de distintas zonas, el queísmo dialectal y el uso de los tiempos del pasado.",
-    "prerequisites": [
-      "b2.gram.voseo"
-    ],
-    "week": 9,
-    "pcic": "Gramática 7.1"
-  },
-  {
-    "id": "c2.lis.voces-mundo",
-    "level": "c2",
-    "domain": "listening",
-    "topic": "Escucha flexible y reparación",
-    "outcome": "Puedo seguir una discusión sobre usos diversos, pedir una paráfrasis y delimitar qué rasgos no acredita una voz sintética.",
-    "prerequisites": [],
-    "week": 9
-  },
-  {
-    "id": "c2.fun.mediacion-variedades",
-    "level": "c2",
-    "domain": "functional",
-    "topic": "Mediar entre variedades",
-    "outcome": "Puedo explicar a otra persona una diferencia de uso entre variedades.",
-    "prerequisites": [],
-    "week": 9
-  },
-  {
-    "id": "c2.rev.checkpoint-2",
-    "level": "c2",
-    "domain": "review",
-    "topic": "Checkpoint 2: retórica, densidad, precisión y variación",
-    "outcome": "Puedo evaluar un balance público, explicar límites de los datos y negociar una formulación precisa.",
-    "prerequisites": [
-      "c2.disc.recursos-retoricos",
-      "c2.read.prosa-densa",
-      "c2.voc.casi-sinonimos",
-      "c2.fun.mediacion-variedades"
-    ],
-    "week": 10
-  },
-  {
-    "id": "c2.lis.mesa-redonda",
-    "level": "c2",
-    "domain": "listening",
-    "topic": "Escuchar una mesa de evaluación",
-    "outcome": "Puedo reconstruir posturas y reservas de una mesa de evaluación sintetizada, sin atribuirle solapamientos ni variedades verificadas.",
-    "prerequisites": [
-      "c1.lis.notas-jerarquia"
-    ],
-    "week": 10
-  },
-  {
-    "id": "c2.disc.humor-juegos",
-    "level": "c2",
-    "domain": "discourse",
-    "topic": "Humor y juegos de palabras",
-    "outcome": "Puedo entender y crear dobles sentidos, calambures y chistes basados en la lengua.",
-    "prerequisites": [
-      "c2.voc.polisemia-avanzada"
-    ],
-    "week": 11
-  },
-  {
-    "id": "c2.voc.expresiones-idiomaticas",
-    "level": "c2",
-    "domain": "vocabulary",
-    "topic": "Expresiones idiomáticas con matiz",
-    "outcome": "Puedo usar locuciones idiomáticas con el registro y la variedad adecuados.",
-    "prerequisites": [
-      "c1.voc.habla-coloquial"
-    ],
-    "week": 11
-  },
-  {
-    "id": "c2.pron.ritmo-humor",
-    "level": "c2",
-    "domain": "pronunciation",
-    "topic": "Ritmo del humor",
-    "outcome": "Puedo usar la pausa y el ritmo para que un chiste funcione.",
-    "prerequisites": [
-      "c2.pron.oratoria"
-    ],
-    "week": 11
-  },
-  {
-    "id": "c2.read.humor-escrito",
-    "level": "c2",
-    "domain": "reading",
-    "topic": "Leer humor escrito",
-    "outcome": "Puedo explicar por qué funciona un texto humorístico.",
-    "prerequisites": [],
-    "week": 11
-  },
-  {
-    "id": "c2.spk.anecdota-humor",
-    "level": "c2",
-    "domain": "speaking",
-    "topic": "Anécdota con humor",
-    "outcome": "Puedo contar una anécdota con humor verbal y control del ritmo.",
-    "prerequisites": [],
-    "week": 11
-  },
-  {
-    "id": "c2.disc.mediacion",
-    "level": "c2",
-    "domain": "discourse",
-    "topic": "Mediación de textos",
-    "outcome": "Puedo sintetizar fuentes contradictorias para un destinatario concreto.",
-    "prerequisites": [
-      "c1.disc.sintesis"
-    ],
-    "week": 12
-  },
-  {
-    "id": "c2.voc.lexico-tecnico-divulgativo",
-    "level": "c2",
-    "domain": "vocabulary",
-    "topic": "De lo técnico a lo divulgativo",
-    "outcome": "Puedo traducir léxico técnico a explicaciones accesibles sin perder exactitud.",
-    "prerequisites": [],
-    "week": 12
-  },
-  {
-    "id": "c2.pron.claridad-mediacion",
-    "level": "c2",
-    "domain": "pronunciation",
-    "topic": "Claridad al mediar",
-    "outcome": "Puedo explicar oralmente un contenido complejo con ritmo pausado y claro.",
-    "prerequisites": [
-      "c1.pron.resumen-oral"
-    ],
-    "week": 12
-  },
-  {
-    "id": "c2.wri.informe-mediacion",
-    "level": "c2",
-    "domain": "writing",
-    "topic": "Informe de mediación",
-    "outcome": "Puedo redactar un informe que presenta posturas enfrentadas con equilibrio.",
-    "prerequisites": [],
-    "week": 12
-  },
-  {
-    "id": "c2.lis.fuentes-contradictorias",
-    "level": "c2",
-    "domain": "listening",
-    "topic": "Escuchar fuentes contradictorias",
-    "outcome": "Puedo detectar contradicciones entre dos audios y un texto.",
-    "prerequisites": [],
-    "week": 12
-  },
-  {
-    "id": "c2.disc.control-estilistico",
-    "level": "c2",
-    "domain": "discourse",
-    "topic": "Control estilístico",
-    "outcome": "Puedo variar la longitud de las frases, el ritmo, la cohesión y la voz para lograr un efecto.",
-    "prerequisites": [
-      "c1.wri.relato-estilo"
-    ],
-    "week": 13
-  },
-  {
-    "id": "c2.gram.recursos-cohesion",
-    "level": "c2",
-    "domain": "grammar",
-    "topic": "Recursos de cohesión",
-    "outcome": "Puedo usar anáforas, catáforas, elipsis y sustituciones para evitar repeticiones.",
-    "prerequisites": [
-      "b1.disc.estructura-texto"
-    ],
-    "week": 13,
-    "pcic": "Gramática 14"
-  },
-  {
-    "id": "c2.voc.estilo-lexico",
-    "level": "c2",
-    "domain": "vocabulary",
-    "topic": "Elecciones léxicas de estilo",
-    "outcome": "Puedo elegir entre términos patrimoniales, cultismos y coloquialismos según el efecto.",
-    "prerequisites": [],
-    "week": 13
-  },
-  {
-    "id": "c2.pron.ritmo-prosa",
-    "level": "c2",
-    "domain": "pronunciation",
-    "topic": "El ritmo de la prosa",
-    "outcome": "Puedo leer en voz alta para revisar el ritmo de mi propia prosa.",
-    "prerequisites": [
-      "c2.pron.lectura-densa"
-    ],
-    "week": 13
-  },
-  {
-    "id": "c2.wri.edicion-estilo",
-    "level": "c2",
-    "domain": "writing",
-    "topic": "Editar un texto",
-    "outcome": "Puedo editar el texto de otra persona y justificar cada cambio.",
-    "prerequisites": [
-      "c2.wri.precision-lexica"
-    ],
-    "week": 13
-  },
-  {
-    "id": "c2.disc.debate-hostil",
-    "level": "c2",
-    "domain": "discourse",
-    "topic": "Debate bajo presión",
-    "outcome": "Puedo responder a preguntas hostiles, reencuadrar y desactivar falacias.",
-    "prerequisites": [
-      "c2.disc.recursos-retoricos"
-    ],
-    "week": 14
-  },
-  {
-    "id": "c2.disc.falacias",
-    "level": "c2",
-    "domain": "discourse",
-    "topic": "Falacias argumentativas",
-    "outcome": "Puedo identificar y nombrar falacias frecuentes: hombre de paja, falso dilema, pendiente resbaladiza.",
-    "prerequisites": [
-      "c1.disc.contraargumentacion"
-    ],
-    "week": 14
-  },
-  {
-    "id": "c2.voc.negociacion-alto-nivel",
-    "level": "c2",
-    "domain": "vocabulary",
-    "topic": "Negociación de alto nivel",
-    "outcome": "Puedo usar el léxico de la negociación: margen, contrapartida, línea roja, punto de encuentro.",
-    "prerequisites": [
-      "b2.voc.acuerdos-contratos"
-    ],
-    "week": 14
-  },
-  {
-    "id": "c2.pron.control-presion",
-    "level": "c2",
-    "domain": "pronunciation",
-    "topic": "Control prosódico bajo presión",
-    "outcome": "Puedo mantener un tono sereno y firme ante una pregunta agresiva.",
-    "prerequisites": [
-      "c2.pron.oratoria"
-    ],
-    "week": 14
-  },
-  {
-    "id": "c2.spk.entrevista-hostil",
-    "level": "c2",
-    "domain": "speaking",
-    "topic": "Entrevista difícil",
-    "outcome": "Puedo responder a cinco preguntas hostiles sin perder el hilo ni la cortesía.",
-    "prerequisites": [],
-    "week": 14
-  },
-  {
-    "id": "c2.rev.checkpoint-3",
-    "level": "c2",
-    "domain": "review",
-    "topic": "Checkpoint 3: humor, mediación, estilo y presión",
-    "outcome": "Puedo integrar voces enfrentadas en una crónica y un acuerdo con condiciones verificables.",
-    "prerequisites": [
-      "c2.disc.humor-juegos",
-      "c2.disc.mediacion",
-      "c2.disc.control-estilistico",
-      "c2.disc.debate-hostil"
-    ],
-    "week": 15
-  },
-  {
-    "id": "c2.wri.cronica-personal",
-    "level": "c2",
-    "domain": "writing",
-    "topic": "Crónica personal",
-    "outcome": "Puedo escribir una crónica de 300 palabras con voz propia.",
-    "prerequisites": [],
-    "week": 15
-  },
-  {
-    "id": "c2.gram.modalidad-evidencial",
-    "level": "c2",
-    "domain": "grammar",
-    "topic": "Modalidad y fuente",
-    "outcome": "Puedo distinguir condicional de información no confirmada, inferencia y afirmación documentada.",
-    "prerequisites": [
-      "c2.gram.sintaxis-compleja"
-    ],
-    "week": 16,
-    "pcic": "Tácticas y estrategias pragmáticas C1–C2; Gramática C1–C2; Géneros discursivos C1–C2"
-  },
-  {
-    "id": "c2.disc.responsabilidad-fuentes",
-    "level": "c2",
-    "domain": "discourse",
-    "topic": "Responsabilidad de atribución",
-    "outcome": "Puedo conservar fuente, cronología de comprobación y alcance al actualizar una noticia.",
-    "prerequisites": [
-      "c2.disc.mediacion"
-    ],
-    "week": 16,
-    "pcic": "Tácticas y estrategias pragmáticas C1–C2; Gramática C1–C2; Géneros discursivos C1–C2"
-  },
-  {
-    "id": "c2.voc.certeza-documental",
-    "level": "c2",
-    "domain": "vocabulary",
-    "topic": "Léxico de la prueba",
-    "outcome": "Puedo diferenciar corroborar, conjeturar, desmentir y rectificar sin exagerar su alcance.",
-    "prerequisites": [
-      "c2.voc.casi-sinonimos"
-    ],
-    "week": 16,
-    "pcic": "Tácticas y estrategias pragmáticas C1–C2; Gramática C1–C2; Géneros discursivos C1–C2"
-  },
-  {
-    "id": "c2.pron.reserva-epistemica",
-    "level": "c2",
-    "domain": "pronunciation",
-    "topic": "Prosodia de la reserva",
-    "outcome": "Puedo hacer audibles una atribución y una reserva sin convertirlas en un inciso inaudible.",
-    "prerequisites": [
-      "c2.pron.claridad-mediacion"
-    ],
-    "week": 16,
-    "pcic": "Tácticas y estrategias pragmáticas C1–C2; Gramática C1–C2; Géneros discursivos C1–C2"
-  },
-  {
-    "id": "c2.wri.rectificacion",
-    "level": "c2",
-    "domain": "writing",
-    "topic": "Rectificación periodística",
-    "outcome": "Puedo corregir públicamente un salto inferencial y explicar cómo cambió la evidencia.",
-    "prerequisites": [
-      "c2.wri.informe-mediacion"
-    ],
-    "week": 16,
-    "pcic": "Tácticas y estrategias pragmáticas C1–C2; Gramática C1–C2; Géneros discursivos C1–C2"
-  },
-  {
-    "id": "c2.gram.agencia-reparacion",
-    "level": "c2",
-    "domain": "grammar",
-    "topic": "Agencia y reconocimiento",
-    "outcome": "Puedo comparar pasivas, impersonales y primera persona según la responsabilidad que hacen visible.",
-    "prerequisites": [
-      "c2.gram.recursos-cohesion"
-    ],
-    "week": 17,
-    "pcic": "Tácticas y estrategias pragmáticas C1–C2; Gramática C1–C2; Géneros discursivos C1–C2"
-  },
-  {
-    "id": "c2.fun.disculpa-reparacion",
-    "level": "c2",
-    "domain": "functional",
-    "topic": "Disculpa y reparación",
-    "outcome": "Puedo reconocer una omisión, proponer reparación y escuchar desacuerdo sin exigir perdón.",
-    "prerequisites": [
-      "c2.disc.debate-hostil"
-    ],
-    "week": 17,
-    "pcic": "Tácticas y estrategias pragmáticas C1–C2; Gramática C1–C2; Géneros discursivos C1–C2"
-  },
-  {
-    "id": "c2.pron.serenidad-no-condescendiente",
-    "level": "c2",
-    "domain": "pronunciation",
-    "topic": "Serenidad y cortesía",
-    "outcome": "Puedo mantener firmeza y atención sin usar pausas o énfasis que rebajen al interlocutor.",
-    "prerequisites": [
-      "c2.pron.control-presion"
-    ],
-    "week": 17,
-    "pcic": "Tácticas y estrategias pragmáticas C1–C2; Gramática C1–C2; Géneros discursivos C1–C2"
-  },
-  {
-    "id": "c2.wri.comunicado-reparacion",
-    "level": "c2",
-    "domain": "writing",
-    "topic": "Comunicado de reparación",
-    "outcome": "Puedo separar reconocimiento, explicación, medidas aprobadas y reclamaciones pendientes.",
-    "prerequisites": [
-      "c2.wri.rectificacion"
-    ],
-    "week": 17,
-    "pcic": "Tácticas y estrategias pragmáticas C1–C2; Gramática C1–C2; Géneros discursivos C1–C2"
-  },
-  {
-    "id": "c2.gram.temporalidad-perspectiva",
-    "level": "c2",
-    "domain": "grammar",
-    "topic": "Temporalidad y perspectiva",
-    "outcome": "Puedo articular anterioridad, hipótesis retrospectiva y estilo indirecto libre.",
-    "prerequisites": [
-      "c2.gram.sintaxis-compleja"
-    ],
-    "week": 18,
-    "pcic": "Tácticas y estrategias pragmáticas C1–C2; Gramática C1–C2; Géneros discursivos C1–C2"
-  },
-  {
-    "id": "c2.disc.fiabilidad-narrativa",
-    "level": "c2",
-    "domain": "discourse",
-    "topic": "Fiabilidad narrativa",
-    "outcome": "Puedo evaluar una voz mediante documentos, omisiones y contradicciones sin confundir interpretación con diagnóstico.",
-    "prerequisites": [
-      "c2.disc.subtexto"
-    ],
-    "week": 18,
-    "pcic": "Tácticas y estrategias pragmáticas C1–C2; Gramática C1–C2; Géneros discursivos C1–C2"
-  },
-  {
-    "id": "c2.read.lectura-contrapunto",
-    "level": "c2",
-    "domain": "reading",
-    "topic": "Lectura en contrapunto",
-    "outcome": "Puedo comparar versiones de una escena y explicar cómo cambia el orden de revelación.",
-    "prerequisites": [
-      "c2.read.relato-subtexto"
-    ],
-    "week": 18,
-    "pcic": "Tácticas y estrategias pragmáticas C1–C2; Gramática C1–C2; Géneros discursivos C1–C2"
-  },
-  {
-    "id": "c2.spk.defensa-interpretacion",
-    "level": "c2",
-    "domain": "speaking",
-    "topic": "Defensa de una interpretación",
-    "outcome": "Puedo sostener hipótesis literarias rivales y revisar una de ellas ante un contraejemplo.",
-    "prerequisites": [
-      "c2.spk.entrevista-hostil"
-    ],
-    "week": 18,
-    "pcic": "Tácticas y estrategias pragmáticas C1–C2; Gramática C1–C2; Géneros discursivos C1–C2"
-  },
-  {
-    "id": "c2.disc.compresion-jerarquica",
-    "level": "c2",
-    "domain": "discourse",
-    "topic": "Compresión con jerarquía",
-    "outcome": "Puedo reducir una exposición conservando tesis, alcance, reserva y decisión.",
-    "prerequisites": [
-      "c2.disc.mediacion"
-    ],
-    "week": 19,
-    "pcic": "Tácticas y estrategias pragmáticas C1–C2; Gramática C1–C2; Géneros discursivos C1–C2"
-  },
-  {
-    "id": "c2.pron.foco-compresion",
-    "level": "c2",
-    "domain": "pronunciation",
-    "topic": "Foco en la síntesis oral",
-    "outcome": "Puedo redistribuir pausas y prominencia al pasar de cuatro minutos a treinta segundos sin acelerar de manera ininteligible.",
-    "prerequisites": [
-      "c2.pron.oratoria"
-    ],
-    "week": 19,
-    "pcic": "Tácticas y estrategias pragmáticas C1–C2; Gramática C1–C2; Géneros discursivos C1–C2"
-  },
-  {
-    "id": "c2.fun.adaptacion-inmediata",
-    "level": "c2",
-    "domain": "functional",
-    "topic": "Adaptación durante la interacción",
-    "outcome": "Puedo integrar una pregunta no prevista y cambiar de audiencia sin perder la condición principal.",
-    "prerequisites": [
-      "c2.fun.mediacion-variedades"
-    ],
-    "week": 19,
-    "pcic": "Tácticas y estrategias pragmáticas C1–C2; Gramática C1–C2; Géneros discursivos C1–C2"
-  },
-  {
-    "id": "c2.spk.sintesis-tiempo",
-    "level": "c2",
-    "domain": "speaking",
-    "topic": "Síntesis con tiempo limitado",
-    "outcome": "Puedo presentar una recomendación, acortarla y defender su alcance ante preguntas.",
-    "prerequisites": [
-      "c2.spk.discurso-breve"
-    ],
-    "week": 19,
-    "pcic": "Tácticas y estrategias pragmáticas C1–C2; Gramática C1–C2; Géneros discursivos C1–C2"
-  },
-  {
-    "id": "c2.rev.checkpoint-final",
-    "level": "c2",
-    "domain": "review",
-    "topic": "Checkpoint final C2",
-    "outcome": "Puedo sintetizar fuentes densas, sostener incertidumbres y adaptar una defensa oral y escrita a públicos distintos con precisión.",
-    "prerequisites": [
-      "c2.rev.checkpoint-3",
-      "c2.disc.mediacion",
-      "c2.disc.control-estilistico",
-      "c2.disc.debate-hostil"
-    ],
-    "week": 20
-  },
-  {
-    "id": "c2.wri.ensayo-final-c2",
-    "level": "c2",
-    "domain": "writing",
-    "topic": "Dossier final C2",
-    "outcome": "Puedo producir un dossier de 650–800 palabras que integre ensayo crítico, comunicado y propuesta, con control de estilo y fuentes.",
-    "prerequisites": [
-      "c2.wri.abstract"
-    ],
-    "week": 20
+/**
+ * C2 — Autoestudio espejo: each week reviews the grammar classes of
+ * docs/autoestudio-espejo/mapa.json. Generated by scripts/autoestudio-espejo/ensamblar.mjs
+ * from docs/autoestudio-espejo/objetivos/c2-wNN.json. Do not edit by hand.
+ */
+export const c2Objectives = defineObjectives("c2", [
+ [
+  1,
+  "gram",
+  "g205",
+  "Futuro perfecto de subjuntivo: reconocimiento histórico",
+  "Puedo reconocer «hubiere + participio» en documentos antiguos, explicar que expresa una condición eventual cumplida antes de su consecuencia y distinguirlo de «habrá», «habría» y «hubiera».",
+  [
+   "c1.gram.g202"
+  ],
+  {
+   "related": [
+    "/sistema-verbal/futuro-perfecto-subjuntivo"
+   ]
   }
-];
+ ],
+ [
+  1,
+  "gram",
+  "g206",
+  "Reformulación moderna de tiempos históricos",
+  "Puedo reformular en español actual formas en -re, el pretérito anterior, la forma en -ra narrativa y los pronombres pospuestos según su función, y decidir qué fórmulas vivas conservar.",
+  [
+   "c2.gram.g205",
+   "c1.gram.g201",
+   "c1.gram.g202"
+  ],
+  {
+   "related": [
+    "/gramatica/reformulacion-moderna-de-tiempos-historicos"
+   ]
+  }
+ ],
+ [
+  1,
+  "voc",
+  "w01-archivo-legado",
+  "Archivo, edición y legado",
+  "Puedo usar con precisión el léxico de documentos antiguos, ediciones y herencias: cláusula, transcripción literal, paráfrasis, albacea, estar al corriente de las cuotas.",
+  [
+   "c2.gram.g205"
+  ]
+ ],
+ [
+  1,
+  "pron",
+  "w01-acento-re-ra",
+  "Acento en formas en -re y en -rá",
+  "Puedo distinguir de oído y pronunciar con su acento formas llanas en -re y agudas en -rá al leer en voz alta un documento antiguo.",
+  [
+   "c2.gram.g205"
+  ]
+ ],
+ [
+  1,
+  "lis",
+  "w01-revision-versiones",
+  "Revisión oral de versiones modernas",
+  "Puedo seguir una conversación entre hablantes de España y Uruguay que revisan versiones actuales de textos históricos y reconstruir cada decisión y su motivo.",
+  [
+   "c2.gram.g206"
+  ]
+ ],
+ [
+  1,
+  "read",
+  "w01-catalogo-documentos",
+  "Texto de catálogo sobre documentos históricos",
+  "Puedo leer un texto de catálogo que cita documentos antiguos y relacionar cada forma histórica con la función que el autor le atribuye.",
+  [
+   "c2.gram.g206"
+  ]
+ ],
+ [
+  1,
+  "wri",
+  "w01-nota-editorial",
+  "Nota editorial de una exposición",
+  "Puedo redactar una nota editorial de más de 400 palabras que explique a un público general cómo se han modernizado unos documentos y qué alcance tienen hoy.",
+  [
+   "c2.gram.g206",
+   "c2.disc.w01-transcripcion-version"
+  ]
+ ],
+ [
+  1,
+  "spk",
+  "w01-visita-guiada",
+  "Visita guiada y mediación",
+  "Puedo guiar una visita leyendo originales y glosándolos en español actual, y mediar con alguien que quiere dar a un documento antiguo un alcance que no tiene.",
+  [
+   "c2.fun.w01-glosar-documento"
+  ]
+ ],
+ [
+  1,
+  "fun",
+  "w01-glosar-documento",
+  "Glosar un documento antiguo",
+  "Puedo citar un fragmento antiguo y glosarlo para un destinatario concreto, eligiendo entre «vosotros» y «ustedes» según el público.",
+  [
+   "c2.gram.g206"
+  ]
+ ],
+ [
+  1,
+  "disc",
+  "w01-transcripcion-version",
+  "Transcripción, versión y línea de contexto",
+  "Puedo organizar un texto que presente transcripción literal, versión actual y una línea de contexto que sitúe el documento en su época sin atribuirle vigencia.",
+  [
+   "c2.gram.g205",
+   "c2.gram.g206"
+  ]
+ ],
+ [
+  2,
+  "gram",
+  "g207",
+  "Selección fina de indicativo y subjuntivo según perspectiva",
+  "Puedo elegir entre indicativo y subjuntivo cuando los dos son gramaticales para mostrar si afirmo un contenido como información nueva o lo doy por sabido, lo valoro, lo imagino o lo pido.",
+  [
+   "c1.gram.g168",
+   "c1.gram.g169",
+   "c1.gram.g170"
+  ],
+  {
+   "related": [
+    "/gramatica/seleccion-fina-de-indicativo-y-subjuntivo"
+   ]
+  }
+ ],
+ [
+  2,
+  "voc",
+  "w02-cooperativa-asamblea",
+  "Cooperativa de vivienda y asamblea",
+  "Puedo usar con precisión el léxico de una cooperativa de vivienda: quórum, constar en acta, ayuda mutua, fondo de reserva, cuota extraordinaria, recargo.",
+  [
+   "c2.gram.g207"
+  ]
+ ],
+ [
+  2,
+  "pron",
+  "w02-vocal-modo",
+  "La vocal que distingue el modo",
+  "Puedo oír y pronunciar con claridad la vocal que separa indicativo y subjuntivo en parejas como «pagan / paguen» o «está / esté» al leer un acta en voz alta.",
+  [
+   "c2.gram.g207"
+  ]
+ ],
+ [
+  2,
+  "lis",
+  "w02-revision-acta",
+  "Revisión oral de un acta",
+  "Puedo seguir una conversación en la que dos personas revisan un acta y reconstruir qué perspectiva atribuye cada versión a cada hablante.",
+  [
+   "c2.gram.g207"
+  ]
+ ],
+ [
+  2,
+  "read",
+  "w02-boletin-cooperativa",
+  "Columna de boletín vecinal",
+  "Puedo leer una columna que explica malentendidos causados por la elección de modo y relacionar cada forma con la intención que el autor le atribuye.",
+  [
+   "c2.gram.g207"
+  ]
+ ],
+ [
+  2,
+  "wri",
+  "w02-comunicado-comision",
+  "Comunicado de una comisión directiva",
+  "Puedo redactar un comunicado de más de 400 palabras que distinga datos nuevos, temas conocidos, exigencias y decisiones abiertas mediante la elección de modo.",
+  [
+   "c2.gram.g207",
+   "c2.disc.w02-fondo-novedad"
+  ]
+ ],
+ [
+  2,
+  "spk",
+  "w02-asamblea-mediacion",
+  "Presentación en asamblea y mediación",
+  "Puedo presentar un asunto en una asamblea distinguiendo lo sabido de lo abierto, y mediar con alguien que se siente mal citado.",
+  [
+   "c2.fun.w02-matizar-postura"
+  ]
+ ],
+ [
+  2,
+  "fun",
+  "w02-matizar-postura",
+  "Matizar el propio compromiso",
+  "Puedo graduar mi compromiso con «no digo que…», «no es que…, es que…», «entiendo que…» y adverbios de duda según su modo y posición.",
+  [
+   "c2.gram.g207"
+  ]
+ ],
+ [
+  2,
+  "disc",
+  "w02-fondo-novedad",
+  "Tema conocido e información nueva",
+  "Puedo organizar un párrafo que presente primero un dato conocido como tema, con «que» o «el hecho de que», y después la información nueva que aporto.",
+  [
+   "c2.gram.g207"
+  ]
+ ],
+ [
+  3,
+  "gram",
+  "g208",
+  "Valores discursivos del condicional de rumor",
+  "Puedo reconocer el condicional de rumor, elegir el simple o el compuesto según la referencia temporal, distinguirlo de la conjetura, la cortesía y la hipótesis, y reformularlo con atribución explícita.",
+  [
+   "c1.gram.g173",
+   "c1.gram.g174",
+   "c1.gram.g193"
+  ],
+  {
+   "related": [
+    "/gramatica/valores-discursivos-del-condicional-de-rumor"
+   ]
+  }
+ ],
+ [
+  3,
+  "gram",
+  "g209",
+  "Correlaciones temporales complejas y cambios de plano",
+  "Puedo medir el tiempo de una subordinada desde el hecho contado o desde el presente, encadenar subordinadas coherentes y cambiar de plano en un relato solo de forma deliberada.",
+  [
+   "b2.gram.g130",
+   "c1.gram.g194",
+   "c2.gram.g206"
+  ],
+  {
+   "related": [
+    "/gramatica/correlaciones-temporales-complejas-y-cambios-de"
+   ]
+  }
+ ],
+ [
+  3,
+  "voc",
+  "w03-redaccion-verificacion",
+  "Verificación periodística y comercio del libro",
+  "Puedo usar con precisión el léxico de la verificación y del comercio del libro: contrastar, fuente oficiosa, desmentir, fe de errores, derecho de réplica, traspaso, fondos.",
+  [
+   "c2.gram.g208"
+  ]
+ ],
+ [
+  3,
+  "pron",
+  "w03-ria-ra",
+  "Hiato en -ría y aguda en -rá",
+  "Puedo distinguir de oído y pronunciar con claridad el condicional con hiato y el futuro agudo, y marcar con la entonación los incisos de atribución.",
+  [
+   "c2.gram.g208"
+  ]
+ ],
+ [
+  3,
+  "lis",
+  "w03-reunion-redaccion",
+  "Reunión de cierre de una redacción",
+  "Puedo seguir la revisión oral de una noticia y reconstruir qué cambio se hace en cada titular, cita o párrafo y por qué.",
+  [
+   "c2.gram.g208",
+   "c2.gram.g209"
+  ]
+ ],
+ [
+  3,
+  "read",
+  "w03-carta-directora",
+  "Carta de la dirección a los lectores",
+  "Puedo leer una carta editorial que justifica decisiones sobre atribución y tiempos verbales y relacionar cada forma con su función.",
+  [
+   "c2.gram.g208",
+   "c2.gram.g209"
+  ]
+ ],
+ [
+  3,
+  "wri",
+  "w03-cronica-seguimiento",
+  "Crónica de seguimiento",
+  "Puedo redactar una crónica de más de 400 palabras que separe lo confirmado de lo atribuido y mantenga correlaciones temporales coherentes.",
+  [
+   "c2.fun.w03-atribuir-fuente",
+   "c2.disc.w03-cambio-plano"
+  ]
+ ],
+ [
+  3,
+  "spk",
+  "w03-boletin-replica",
+  "Boletín oral y gestión de una réplica",
+  "Puedo presentar una noticia en un boletín oral marcando la atribución con la voz y atender a una persona aludida que quiere ejercer su derecho de réplica.",
+  [
+   "c2.fun.w03-atribuir-fuente"
+  ]
+ ],
+ [
+  3,
+  "fun",
+  "w03-atribuir-fuente",
+  "Atribuir la información a su fuente",
+  "Puedo atribuir un dato a su fuente con «según», «fuentes de… aseguran», «al parecer» o «investiga si», sin acumular marcas y respetando la presunción de inocencia.",
+  [
+   "c2.gram.g208"
+  ]
+ ],
+ [
+  3,
+  "disc",
+  "w03-cambio-plano",
+  "Cambio de plano en el relato",
+  "Puedo organizar un texto que pase de la actualidad a un bloque biográfico en presente o futuro histórico y vuelva de forma visible, sin cambios involuntarios.",
+  [
+   "c2.gram.g209"
+  ]
+ ],
+ [
+  4,
+  "gram",
+  "g210",
+  "Subordinación múltiple sin pérdida de referentes",
+  "Puedo escribir y revisar oraciones con varios niveles de subordinación manteniendo visibles el sujeto y el verbo principal, resolviendo referentes ambiguos, aligerando cadenas de «que» y evitando el queísmo y el dequeísmo.",
+  [
+   "c1.gram.g187",
+   "c1.gram.g195",
+   "c1.gram.g203"
+  ],
+  {
+   "related": [
+    "/gramatica/subordinacion-multiple-sin-perdida-de-referentes"
+   ]
+  }
+ ],
+ [
+  4,
+  "voc",
+  "w04-lenguaje-claro-feria",
+  "Escritura administrativa y feria artesanal",
+  "Puedo usar con precisión el léxico de la escritura administrativa y del espacio público: considerandos, parte dispositiva, dejar sin efecto, permiso de uso, concesionario, reubicación.",
+  [
+   "c2.gram.g210"
+  ]
+ ],
+ [
+  4,
+  "pron",
+  "w04-pausas-referentes",
+  "Pausas y tonos en oraciones largas",
+  "Puedo leer en voz alta una oración con varias capas dejando el tono suspendido hasta el final del esqueleto y distinguir con pausas una relativa explicativa de una especificativa.",
+  [
+   "c2.gram.g210"
+  ]
+ ],
+ [
+  4,
+  "lis",
+  "w04-revision-aviso",
+  "Revisión oral de un aviso municipal",
+  "Puedo seguir la revisión oral de un texto administrativo y reconstruir qué problema de estructura o de referente se corrige en cada fragmento y cómo.",
+  [
+   "c2.gram.g210"
+  ]
+ ],
+ [
+  4,
+  "read",
+  "w04-columna-lenguaje-claro",
+  "Columna sobre lenguaje claro",
+  "Puedo leer una columna institucional que analiza la reescritura de una resolución y relacionar cada problema con la solución adoptada.",
+  [
+   "c2.gram.g210"
+  ]
+ ],
+ [
+  4,
+  "wri",
+  "w04-aviso-reescrito",
+  "Aviso reescrito en lenguaje claro",
+  "Puedo reescribir un texto administrativo de más de 400 palabras conservando toda su información en oraciones complejas que se entienden a la primera lectura.",
+  [
+   "c2.fun.w04-desambiguar",
+   "c2.disc.w04-encapsular"
+  ]
+ ],
+ [
+  4,
+  "spk",
+  "w04-explicar-negociar",
+  "Explicar una norma y negociar su redacción",
+  "Puedo explicar oralmente una resolución con oraciones largas bien estructuradas y negociar con un especialista una redacción que sea precisa y clara.",
+  [
+   "c2.fun.w04-desambiguar"
+  ]
+ ],
+ [
+  4,
+  "fun",
+  "w04-desambiguar",
+  "Desambiguar referentes",
+  "Puedo resolver un referente ambiguo repitiendo el nombre, usando «de + nombre», «este último», «el cual / la cual», «dicho» o el estilo directo según el registro.",
+  [
+   "c2.gram.g210"
+  ]
+ ],
+ [
+  4,
+  "disc",
+  "w04-encapsular",
+  "Encapsular y decidir cuándo cortar",
+  "Puedo retomar lo dicho con encapsuladores nominales y decidir con criterio si una oración larga se mantiene o se divide.",
+  [
+   "c2.gram.g210"
+  ]
+ ],
+ [
+  5,
+  "gram",
+  "g211",
+  "Construcciones parentéticas y anacolutos controlados",
+  "Puedo usar incisos de comentario con su forma fija, su posición y su puntuación, distinguir dislocación, tema colgante y ruptura, y conservar el anacoluto en una cita literal o repararlo en mi propio texto.",
+  [
+   "c1.gram.g185",
+   "c1.gram.g191",
+   "c1.gram.g197",
+   "c1.gram.g199"
+  ],
+  {
+   "related": [
+    "/gramatica/construcciones-parenteticas-y-anacolutos-controlados"
+   ]
+  }
+ ],
+ [
+  5,
+  "gram",
+  "g212",
+  "Elipsis compleja y recuperación inferencial",
+  "Puedo usar y reconocer la elipsis en coordinación, las interrogativas reducidas, las respuestas fragmentarias y el estilo de titular respetando sus límites, y distinguir lo que se recupera de lo que solo se infiere.",
+  [
+   "b1.gram.g124",
+   "c1.gram.g186",
+   "c1.gram.g187"
+  ],
+  {
+   "related": [
+    "/gramatica/elipsis-compleja-y-recuperacion-inferencial"
+   ]
+  }
+ ],
+ [
+  5,
+  "voc",
+  "w05-asociacion-vecinal",
+  "Asociación vecinal y actas",
+  "Puedo usar con precisión el léxico de una asociación vecinal y de la redacción de actas: derrama, cesión de uso, derribo, pasar a limpio, intervención, estilo indirecto, ruegos y preguntas.",
+  [
+   "c2.gram.g211"
+  ]
+ ],
+ [
+  5,
+  "pron",
+  "w05-tono-inciso",
+  "El tono del inciso y del adverbio del enunciado",
+  "Puedo marcar con tono y pausas un inciso de comentario, distinguir de oído un adverbio del enunciado de uno de modo y hacer oír la pausa de la elipsis.",
+  [
+   "c2.gram.g211",
+   "c2.gram.g212"
+  ]
+ ],
+ [
+  5,
+  "lis",
+  "w05-audio-asamblea",
+  "Revisión del audio de una asamblea",
+  "Puedo seguir la revisión de una intervención grabada y reconstruir qué se cita, qué se reformula, qué se atribuye y qué no se registra.",
+  [
+   "c2.gram.g211",
+   "c2.gram.g212"
+  ]
+ ],
+ [
+  5,
+  "read",
+  "w05-del-audio-al-acta",
+  "Artículo sobre cómo se redacta un acta",
+  "Puedo leer un artículo que explica decisiones de redacción de un acta y relacionar cada una con la clase del mes que aplica.",
+  [
+   "c2.gram.g211",
+   "c2.gram.g212"
+  ]
+ ],
+ [
+  5,
+  "wri",
+  "w05-resumen-asamblea",
+  "Resumen de una asamblea para el boletín",
+  "Puedo redactar un resumen de más de 400 palabras que combine cita literal y estilo indirecto, atribuya los rumores, recupere solo lo recuperable e integre lo repasado en el mes.",
+  [
+   "c2.disc.w05-cita-reparacion",
+   "c2.fun.w05-recuperar-elidido"
+  ]
+ ],
+ [
+  5,
+  "spk",
+  "w05-informe-mediacion",
+  "Informe oral y mediación sobre un acta",
+  "Puedo explicar oralmente las decisiones de redacción de un acta y negociar con un socio que quiere que conste su intervención literal.",
+  [
+   "c2.disc.w05-cita-reparacion"
+  ]
+ ],
+ [
+  5,
+  "fun",
+  "w05-recuperar-elidido",
+  "Recuperar lo elidido sin inventar",
+  "Puedo interpretar mensajes, notas y respuestas elípticas, decir qué se recupera con seguridad y preguntar por lo que solo podría suponer.",
+  [
+   "c2.gram.g212"
+  ]
+ ],
+ [
+  5,
+  "disc",
+  "w05-cita-reparacion",
+  "Cita literal y texto propio",
+  "Puedo organizar un texto que alterne citas literales, con sus rupturas, y estilo indirecto reparado, sin mezclar los dos planos.",
+  [
+   "c2.gram.g211",
+   "c2.gram.g209"
+  ]
+ ],
+ [
+  5,
+  "rev",
+  "w05-semanas-1-5",
+  "Checkpoint 1: semanas 1 a 5",
+  "Puedo pasar a limpio una reunión integrando la modernización de formas históricas, la elección de modo según la perspectiva, la atribución y las correlaciones temporales, los referentes claros y el control de incisos, anacolutos y elipsis.",
+  [
+   "c2.gram.g205",
+   "c2.gram.g206",
+   "c2.gram.g207",
+   "c2.gram.g208",
+   "c2.gram.g209",
+   "c2.gram.g210",
+   "c2.gram.g211",
+   "c2.gram.g212"
+  ]
+ ],
+ [
+  6,
+  "gram",
+  "g213",
+  "Ambigüedad intencional y ambigüedad accidental",
+  "Puedo localizar la fuente de una ambigüedad accidental, repararla con el cambio mínimo sin tocar lo que el contexto resuelve y reconocer o crear un doble sentido buscado y una vaguedad calculada.",
+  [
+   "c2.gram.g210",
+   "c2.gram.g212"
+  ],
+  {
+   "related": [
+    "/gramatica/ambiguedad-intencional-y-ambiguedad-accidental"
+   ]
+  }
+ ],
+ [
+  6,
+  "gram",
+  "g214",
+  "Gramaticalidad, aceptabilidad y variación real",
+  "Puedo juzgar una forma discutida separando gramaticalidad, aceptabilidad, norma y variación, leer con precisión las etiquetas de las obras de referencia y decidir qué hacer con ella según la voz del texto.",
+  [
+   "c2.gram.g213"
+  ],
+  {
+   "related": [
+    "/gramatica/gramaticalidad-aceptabilidad-y-variacion-real"
+   ]
+  }
+ ],
+ [
+  6,
+  "voc",
+  "w06-revision-textos",
+  "Revisión de textos, norma y variación",
+  "Puedo usar con precisión el léxico de la revisión y de la norma: doble lectura, alcance, referente, vaguedad calculada, estar desaconsejado, ultracorrección, transcripción fiel.",
+  [
+   "c2.gram.g213",
+   "c2.gram.g214"
+  ]
+ ],
+ [
+  6,
+  "pron",
+  "w06-pausa-desambigua",
+  "La pausa como desambiguador",
+  "Puedo percibir y producir las pausas y los grupos fónicos que separan relativas especificativas y explicativas y que eligen una lectura de una frase ambigua.",
+  [
+   "c2.gram.g213"
+  ]
+ ],
+ [
+  6,
+  "lis",
+  "w06-reunion-biblioteca",
+  "Reunión de revisión editorial",
+  "Puedo seguir una reunión en la que se discuten correcciones y reconstruir qué se repara, qué se conserva y con qué argumento.",
+  [
+   "c2.gram.g213",
+   "c2.gram.g214"
+  ]
+ ],
+ [
+  6,
+  "read",
+  "w06-columna-boletin",
+  "Columna de opinión sobre criterios de corrección",
+  "Puedo leer una columna argumentativa sobre criterios de corrección y relacionar cada forma citada con el juicio que le atribuye la autora.",
+  [
+   "c2.gram.g214"
+  ]
+ ],
+ [
+  6,
+  "wri",
+  "w06-informe-revision",
+  "Informe de revisión para una junta",
+  "Puedo redactar un informe de más de 400 palabras que explique a un público no especialista qué se corrigió en unos textos, qué se dejó igual y por qué.",
+  [
+   "c2.gram.g213",
+   "c2.gram.g214",
+   "c2.disc.w06-voz-ajena-voz-propia"
+  ]
+ ],
+ [
+  6,
+  "spk",
+  "w06-defender-criterio",
+  "Defender criterios de corrección",
+  "Puedo presentar oralmente criterios de revisión con ejemplos y mediar con alguien que exige corregir formas no normativas en un testimonio.",
+  [
+   "c2.fun.w06-justificar-correccion"
+  ]
+ ],
+ [
+  6,
+  "fun",
+  "w06-justificar-correccion",
+  "Justificar o rechazar una corrección",
+  "Puedo justificar o rechazar con respeto una corrección ajena nombrando con precisión el tipo de problema.",
+  [
+   "c2.gram.g214"
+  ]
+ ],
+ [
+  6,
+  "disc",
+  "w06-voz-ajena-voz-propia",
+  "Voz ajena y voz propia en un texto",
+  "Puedo organizar un texto que distinga la voz de la institución, que sigue la norma culta, de la voz citada de otras personas, que se transcribe con fidelidad, y explicar el criterio en una nota.",
+  [
+   "c2.gram.g214"
+  ]
+ ],
+ [
+  7,
+  "gram",
+  "g215",
+  "Voseo, tuteo y ustedeo: cambios pragmáticos de registro",
+  "Puedo reconocer y usar con coherencia las formas del voseo, elegir entre tú, vos, usted, ustedes y vosotros según la zona y la relación, e interpretar qué comunica un cambio de trato frente al trato habitual de cada persona.",
+  [
+   "c2.gram.g214"
+  ],
+  {
+   "related": [
+    "/gramatica/voseo-tuteo-y-ustedeo-cambios-pragmaticos"
+   ]
+  }
+ ],
+ [
+  7,
+  "voc",
+  "w07-trato-cortesia",
+  "Tratamientos y negociación de la relación",
+  "Puedo usar con precisión el léxico del trato y la cortesía: tratar de usted, usted afectivo, romper el trato, marcar distancia, tomarse confianzas, declinar con cortesía.",
+  [
+   "c2.gram.g215"
+  ]
+ ],
+ [
+  7,
+  "pron",
+  "w07-agudas-voseo",
+  "Acento de las formas de vos",
+  "Puedo distinguir de oído y pronunciar las formas agudas del voseo y los imperativos de vos con pronombre, y escribirlos con la tilde que corresponde.",
+  [
+   "c2.gram.g215"
+  ]
+ ],
+ [
+  7,
+  "lis",
+  "w07-llamada-cambio-trato",
+  "Reunión sobre trato con clientes de varios países",
+  "Puedo seguir una conversación entre hablantes de tres países que analizan un cambio de trato y adaptan mensajes, y reconstruir cada decisión y su motivo.",
+  [
+   "c2.gram.g215"
+  ]
+ ],
+ [
+  7,
+  "read",
+  "w07-guia-trato",
+  "Guía interna de estilo sobre el trato",
+  "Puedo leer una guía de estilo sobre sistemas de trato y relacionar cada destinatario con el trato que se recomienda y su justificación.",
+  [
+   "c2.gram.g215"
+  ]
+ ],
+ [
+  7,
+  "wri",
+  "w07-protocolo-mensajes",
+  "Protocolo de trato para agentes",
+  "Puedo redactar un protocolo de más de 400 palabras con ejemplos coherentes en tuteo, voseo, usted, ustedes y vosotros, e instrucciones para interpretar los cambios de trato.",
+  [
+   "c2.gram.g215",
+   "c2.disc.w07-coherencia-trato"
+  ]
+ ],
+ [
+  7,
+  "spk",
+  "w07-negociar-trato",
+  "Explicar y negociar el trato",
+  "Puedo explicar oralmente los sistemas de trato a un grupo, atender a alguien que vuelve al usted y negociar con un colega el trato que vamos a usar.",
+  [
+   "c2.fun.w07-proponer-rechazar-tuteo"
+  ]
+ ],
+ [
+  7,
+  "fun",
+  "w07-proponer-rechazar-tuteo",
+  "Proponer, aceptar o declinar un cambio de trato",
+  "Puedo proponer, aceptar o declinar con cortesía el paso al tú o al vos y mantener después el trato elegido.",
+  [
+   "c2.gram.g215"
+  ]
+ ],
+ [
+  7,
+  "disc",
+  "w07-coherencia-trato",
+  "Coherencia del trato en un texto",
+  "Puedo mantener un mismo sistema de trato en verbos, pronombres, posesivos y términos de preposición a lo largo de un texto, y cambiarlo solo cuando el cambio comunica algo.",
+  [
+   "c2.gram.g215"
+  ]
+ ],
+ [
+  8,
+  "gram",
+  "g216",
+  "Variación regional del pasado perfecto y evidencialidad",
+  "Puedo reconocer el reparto regional entre el pretérito perfecto y el indefinido para los hechos de hoy, interpretar el pluscuamperfecto andino de sorpresa o de información no presenciada y elegir la forma adecuada para cada público sin alterar las citas.",
+  [
+   "c2.gram.g209",
+   "c2.gram.g214"
+  ],
+  {
+   "related": [
+    "/gramatica/variacion-regional-del-pasado-perfecto-y"
+   ]
+  }
+ ],
+ [
+  8,
+  "gram",
+  "g217",
+  "Leísmo y régimen pronominal en variedades cultas",
+  "Puedo situar los usos de «le», «lo» y «la» en la escala de la norma culta y usar «les», «se lo», el «le» de cortesía e «informar», «ayudar» y «llamar» según la norma escrita panhispánica.",
+  [
+   "c2.gram.g214"
+  ],
+  {
+   "related": [
+    "/gramatica/leismo-y-regimen-pronominal-en-variedades"
+   ]
+  }
+ ],
+ [
+  8,
+  "voc",
+  "w08-camino-correspondencia",
+  "El Camino y la correspondencia institucional",
+  "Puedo usar con precisión el léxico de la acogida a peregrinos y de la edición: credencial, hospitalero, etapa, respetar la voz, nota del editor, acusar recibo.",
+  [
+   "c2.gram.g216"
+  ]
+ ],
+ [
+  8,
+  "pron",
+  "w08-s-final-pronombres",
+  "La -s final en le/les y lo/los",
+  "Puedo percibir y pronunciar con claridad la -s final que distingue «le» de «les» y «se lo» de «se los», y ligar el auxiliar con el participio.",
+  [
+   "c2.gram.g217"
+  ]
+ ],
+ [
+  8,
+  "lis",
+  "w08-reunion-antologia",
+  "Reunión editorial con hablantes de tres países",
+  "Puedo seguir una reunión entre hablantes de España, Perú y México que deciden qué respetar y qué normalizar, y reconstruir cada decisión y su argumento.",
+  [
+   "c2.gram.g216",
+   "c2.gram.g217"
+  ]
+ ],
+ [
+  8,
+  "read",
+  "w08-presentacion-antologia",
+  "Presentación editorial de una antología",
+  "Puedo leer una presentación editorial que justifica decisiones sobre variedades y pronombres y relacionar cada forma con la decisión tomada.",
+  [
+   "c2.gram.g216",
+   "c2.gram.g217"
+  ]
+ ],
+ [
+  8,
+  "wri",
+  "w08-guia-correspondencia",
+  "Entrada de una guía de edición y correspondencia",
+  "Puedo redactar una entrada de guía de más de 400 palabras que explique a no especialistas cómo tratar tiempos y pronombres en citas y en textos institucionales.",
+  [
+   "c2.gram.g216",
+   "c2.gram.g217",
+   "c2.disc.w08-cita-y-norma"
+  ]
+ ],
+ [
+  8,
+  "spk",
+  "w08-explicar-variedades",
+  "Explicar variedades y mediar sobre una corrección",
+  "Puedo explicar oralmente usos regionales del pasado y de los pronombres y mediar con alguien que quiere corregir una forma regional legítima.",
+  [
+   "c2.fun.w08-adaptar-sin-borrar"
+  ]
+ ],
+ [
+  8,
+  "fun",
+  "w08-adaptar-sin-borrar",
+  "Adaptar un texto sin borrar la voz",
+  "Puedo adaptar un texto propio a la variedad de su público y aclarar una forma ajena con una nota sin cambiar la cita.",
+  [
+   "c2.gram.g216"
+  ]
+ ],
+ [
+  8,
+  "disc",
+  "w08-cita-y-norma",
+  "Cita respetada y voz institucional coherente",
+  "Puedo organizar un texto que mantenga las citas en su variedad, explique en notas lo que pueda malinterpretarse y conserve una sola variedad coherente en la voz propia.",
+  [
+   "c2.gram.g216",
+   "c2.gram.g217"
+  ]
+ ],
+ [
+  9,
+  "gram",
+  "g218",
+  "Perífrasis discursivas de ironía y distanciamiento",
+  "Puedo interpretar y usar perífrasis de sorpresa, insistencia crítica, distancia e ironía (ir y / agarrar y + verbo, llegar a, acabar + gerundio, no hacer más que, andar + gerundio, venir a decir, dar por, hacer como que, iba a, será… pero, no vaya a ser que) y neutralizar un texto valorativo.",
+  [
+   "c2.gram.g208",
+   "c2.gram.g213"
+  ],
+  {
+   "related": [
+    "/gramatica/perifrasis-discursivas-de-ironia-y-distanciamiento"
+   ]
+  }
+ ],
+ [
+  9,
+  "voc",
+  "w09-critica-teatral",
+  "Crítica teatral y obras públicas",
+  "Puedo usar con precisión el léxico de la crítica teatral y de las obras públicas: butaca, telón, acústica, reseña, prórroga, sobrecosto, echar balones fuera.",
+  [
+   "c2.gram.g218"
+  ]
+ ],
+ [
+  9,
+  "pron",
+  "w09-acento-ironico",
+  "Acento enfático y suspensión irónica",
+  "Puedo agrupar las perífrasis en un solo grupo fónico y marcar la ironía con el acento enfático y la suspensión antes de «pero».",
+  [
+   "c2.gram.g218"
+  ]
+ ],
+ [
+  9,
+  "lis",
+  "w09-columna-y-nota",
+  "Conversación entre crítica y editor",
+  "Puedo seguir una conversación editorial que corrige perífrasis y separa la crónica valorativa de la nota neutra, y reconstruir cada corrección.",
+  [
+   "c2.gram.g218"
+  ]
+ ],
+ [
+  9,
+  "read",
+  "w09-critica-reapertura",
+  "Crónica cultural irónica",
+  "Puedo leer una crónica irónica larga, identificar qué perífrasis construyen la ironía y distinguir los hechos de la valoración.",
+  [
+   "c2.gram.g218"
+  ]
+ ],
+ [
+  9,
+  "wri",
+  "w09-cronica-ironica",
+  "Crónica con ironía y cierre neutro",
+  "Puedo redactar una crónica de más de 400 palabras con ironía apoyada en hechos, perífrasis de las cuatro familias y un párrafo final neutro.",
+  [
+   "c2.gram.g218",
+   "c2.disc.w09-ironia-sin-mentir"
+  ]
+ ],
+ [
+  9,
+  "spk",
+  "w09-anecdota-valorada",
+  "Contar una anécdota con valoración y negociarla",
+  "Puedo contar oralmente una anécdota con perífrasis valorativas y negociar con un editor una frase que puede parecer acusatoria.",
+  [
+   "c2.fun.w09-quitar-poner-valoracion"
+  ]
+ ],
+ [
+  9,
+  "fun",
+  "w09-quitar-poner-valoracion",
+  "Añadir o quitar valoración",
+  "Puedo convertir un enunciado valorativo en uno neutro, y al revés, sin alterar los datos comprobables.",
+  [
+   "c2.gram.g218"
+  ]
+ ],
+ [
+  9,
+  "disc",
+  "w09-ironia-sin-mentir",
+  "Ironía apoyada en hechos",
+  "Puedo organizar un texto en el que la ironía nace del contraste entre lo anunciado y lo ocurrido, sin afirmar nada que no sea comprobable.",
+  [
+   "c2.gram.g218"
+  ]
+ ],
+ [
+  10,
+  "gram",
+  "g219",
+  "Foco, presuposición y estructura informativa",
+  "Puedo separar lo afirmado de lo presupuesto, reconocer sus activadores (factivos, cambio de estado, nominalizaciones, preguntas cargadas, partículas de foco, escindidas) y corregir un foco con acento, anteposición, escindida o «no…, sino…» según la norma.",
+  [
+   "c2.gram.g213",
+   "c2.gram.g218"
+  ],
+  {
+   "related": [
+    "/gramatica/foco-presuposicion-y-estructura-informativa"
+   ]
+  }
+ ],
+ [
+  10,
+  "gram",
+  "g220",
+  "Tema, rema y orden marcado en textos complejos",
+  "Puedo ordenar un texto complejo con progresión temática, sujetos pospuestos, peso final y órdenes marcados (atributo antepuesto, anteposición anafórica, tema retomado con pronombre) y marcar solo los cambios de tema reales.",
+  [
+   "c2.gram.g219",
+   "c2.gram.g210"
+  ],
+  {
+   "related": [
+    "/gramatica/tema-rema-y-orden-marcado-en"
+   ]
+  }
+ ],
+ [
+  10,
+  "voc",
+  "w10-patrimonio-debate",
+  "Patrimonio, urbanismo y debate público",
+  "Puedo usar con precisión el léxico del patrimonio y del debate público: huaca, zona intangible, estudio de impacto, puesta en valor, pregunta capciosa, dar por sentado, rebatir.",
+  [
+   "c2.gram.g219"
+  ]
+ ],
+ [
+  10,
+  "pron",
+  "w10-foco-contrastivo",
+  "Acento contrastivo y entonación de la escindida",
+  "Puedo marcar con la voz el foco contrastivo y la entonación descendente de la parte presupuesta de una escindida.",
+  [
+   "c2.gram.g219"
+  ]
+ ],
+ [
+  10,
+  "lis",
+  "w10-entrevista-radio",
+  "Entrevista radial con preguntas cargadas",
+  "Puedo seguir una entrevista radial con posiciones enfrentadas y reconocer preguntas cargadas, verbos factivos, focos correctivos, órdenes marcados y cambios de trato.",
+  [
+   "c2.gram.g219",
+   "c2.gram.g220"
+  ]
+ ],
+ [
+  10,
+  "read",
+  "w10-articulo-huaca",
+  "Artículo de opinión sobre patrimonio",
+  "Puedo leer un artículo de opinión que desmonta presuposiciones y relacionar sus recursos de foco y orden con su estrategia argumentativa.",
+  [
+   "c2.gram.g219",
+   "c2.gram.g220"
+  ]
+ ],
+ [
+  10,
+  "wri",
+  "w10-articulo-opinion",
+  "Artículo de opinión completo",
+  "Puedo redactar un artículo de opinión completo de más de 420 palabras que desmonte una pregunta cargada, avance con progresión temática y use órdenes marcados y foco correctivo.",
+  [
+   "c2.gram.g219",
+   "c2.gram.g220",
+   "c2.disc.w10-progresion-tematica"
+  ]
+ ],
+ [
+  10,
+  "spk",
+  "w10-intervencion-audiencia",
+  "Intervención en una audiencia pública",
+  "Puedo intervenir en una audiencia pública rechazando presuposiciones, corrigiendo focos y respondiendo en directo a una pregunta capciosa.",
+  [
+   "c2.fun.w10-desmontar-presuposicion"
+  ]
+ ],
+ [
+  10,
+  "fun",
+  "w10-desmontar-presuposicion",
+  "Desmontar una presuposición",
+  "Puedo rechazar lo que una pregunta o afirmación da por hecho antes de responder a su contenido.",
+  [
+   "c2.gram.g219"
+  ]
+ ],
+ [
+  10,
+  "disc",
+  "w10-progresion-tematica",
+  "Progresión temática en un texto argumentativo",
+  "Puedo organizar párrafos que avancen de lo conocido a lo nuevo con tema constante, progresión lineal o hipertema.",
+  [
+   "c2.gram.g220"
+  ]
+ ],
+ [
+  10,
+  "rev",
+  "w10-integracion-semanas-6-9",
+  "Integración de las semanas 6 a 9",
+  "Puedo combinar en un mismo texto o intervención lo repasado sobre ambigüedad, norma y variación, trato, pasado regional, pronombres e ironía junto con la presuposición y el orden informativo.",
+  [
+   "c2.gram.g213",
+   "c2.gram.g214",
+   "c2.gram.g215",
+   "c2.gram.g216",
+   "c2.gram.g217",
+   "c2.gram.g218"
+  ]
+ ],
+ [
+  11,
+  "gram",
+  "g221",
+  "Modalización sutil: certeza, reserva e insinuación",
+  "Puedo graduar mi compromiso con una afirmación con la fórmula y el modo adecuados, acotarla con «que yo sepa», «en principio», «presumiblemente» o «deber de», e insinuar o usar la preterición sabiendo qué conservo y qué arriesgo.",
+  [
+   "c1.gram.g173",
+   "c1.gram.g191",
+   "b2.gram.g158",
+   "c2.gram.g218"
+  ],
+  {
+   "related": [
+    "/gramatica/modalizacion-sutil-certeza-reserva-e-insinuacion"
+   ]
+  }
+ ],
+ [
+  11,
+  "gram",
+  "g222",
+  "Cortesía estratégica y amenaza a la imagen",
+  "Puedo valorar el peso de una petición, un rechazo, un desacuerdo o una crítica según la distancia, el poder y la imposición, y dosificar las herramientas de cortesía para proteger la imagen del otro sin caer en la hiperformalidad.",
+  [
+   "b2.gram.g164",
+   "c1.gram.g191",
+   "c1.gram.g198"
+  ],
+  {
+   "related": [
+    "/gramatica/cortesia-estrategica-y-amenaza-a-la"
+   ]
+  }
+ ],
+ [
+  11,
+  "voc",
+  "w11-oferta-local",
+  "Oferta, local y respuesta con tacto",
+  "Puedo usar con precisión el léxico de un comercio que recibe una oferta y de las respuestas con tacto: traspaso, fondo de comercio, arrendador, oferta vinculante, declinar una oferta, dejar la puerta abierta, guardar las formas.",
+  [
+   "c2.gram.g222"
+  ]
+ ],
+ [
+  11,
+  "pron",
+  "w11-reserva-oido",
+  "Oír la reserva y la insinuación",
+  "Puedo distinguir de oído «en principio» y «en un principio», «presumiblemente» y «presuntamente», «deber» y «deber de», y producir el final suspendido de una insinuación y el ascenso suave de una petición.",
+  [
+   "c2.gram.g221"
+  ]
+ ],
+ [
+  11,
+  "lis",
+  "w11-borradores-respuesta",
+  "Revisión oral de mensajes delicados",
+  "Puedo seguir una conversación en la que se corrigen mensajes delicados y reconstruir qué afirmación se rebaja, qué petición se suaviza y por qué.",
+  [
+   "c2.gram.g221",
+   "c2.gram.g222"
+  ]
+ ],
+ [
+  11,
+  "read",
+  "w11-columna-libreria",
+  "Columna sobre un rechazo bien hecho",
+  "Puedo leer una columna de opinión que narra decisiones de cortesía y modalización y relacionar cada fragmento con la estrategia que aplica.",
+  [
+   "c2.gram.g221",
+   "c2.gram.g222"
+  ]
+ ],
+ [
+  11,
+  "wri",
+  "w11-carta-rechazo",
+  "Carta que declina una oferta",
+  "Puedo redactar una carta de más de 400 palabras que decline una oferta, deje la puerta abierta y desmienta un rumor sin acusar a nadie.",
+  [
+   "c2.fun.w11-rechazar-sin-romper",
+   "c2.disc.w11-hecho-sospecha-rumor"
+  ]
+ ],
+ [
+  11,
+  "spk",
+  "w11-reunion-propietario",
+  "Petición difícil cara a cara",
+  "Puedo pedir en persona algo de mucho peso, preguntar por un rumor sin acusar y dar feedback a una compañera hablando del hecho y no de la persona.",
+  [
+   "c2.fun.w11-rechazar-sin-romper"
+  ]
+ ],
+ [
+  11,
+  "fun",
+  "w11-rechazar-sin-romper",
+  "Rechazar y criticar sin romper",
+  "Puedo rechazar con agradecimiento, razón y alternativa, discrepar con un prefacio de acuerdo parcial y criticar un hecho con una propuesta.",
+  [
+   "c2.gram.g222"
+  ]
+ ],
+ [
+  11,
+  "disc",
+  "w11-hecho-sospecha-rumor",
+  "Dato, inferencia y rumor en un mismo texto",
+  "Puedo organizar un texto que distinga con fórmulas distintas lo que consta, lo que se deduce y lo que solo se ha dicho, sin que un escalón contamine a otro.",
+  [
+   "c2.gram.g221",
+   "c2.gram.g208"
+  ]
+ ],
+ [
+  12,
+  "gram",
+  "g223",
+  "Ironía, litotes y negación pragmática",
+  "Puedo interpretar y usar lítotes de elogio, de crítica atenuada e irónicas, distinguir la negación expletiva de la plena, controlar el alcance de la negación y reconocer la ironía verbal y decidir cuándo evitarla.",
+  [
+   "a2.gram.g072",
+   "c1.gram.g191",
+   "c1.gram.g196",
+   "c2.gram.g218"
+  ],
+  {
+   "related": [
+    "/gramatica/ironia-litotes-y-negacion-pragmatica"
+   ]
+  }
+ ],
+ [
+  12,
+  "voc",
+  "w12-mesa-y-critica",
+  "La mesa y la crítica gastronómica",
+  "Puedo usar con precisión el léxico de un restaurante y de su crítica: la sazón, el punto de la carne, la relación calidad-precio, dejar mucho que desear, leer entre líneas, tomar al pie de la letra, el derecho de réplica.",
+  [
+   "c2.gram.g223"
+  ]
+ ],
+ [
+  12,
+  "pron",
+  "w12-tono-ironico",
+  "Lítotes que se oyen y tono irónico",
+  "Puedo distinguir de oído una lítote de elogio de una de crítica por la palabra clave y producir con entonación reconocible una queja irónica y una lítote contenida.",
+  [
+   "c2.gram.g223"
+  ]
+ ],
+ [
+  12,
+  "lis",
+  "w12-podcast-resena",
+  "Pódcast de crítica gastronómica",
+  "Puedo seguir un pódcast en el que dos críticos combinan lítotes, ironía y negaciones de alcance limitado, y reconstruir su valoración real y sus decisiones sobre el tono.",
+  [
+   "c2.gram.g223"
+  ]
+ ],
+ [
+  12,
+  "read",
+  "w12-critica-gastronomica",
+  "Reseña de un restaurante",
+  "Puedo leer una crítica gastronómica que gradúa elogios y críticas con negaciones y relacionar cada negación con su función.",
+  [
+   "c2.gram.g223"
+  ]
+ ],
+ [
+  12,
+  "wri",
+  "w12-resena-equilibrada",
+  "Reseña equilibrada para una revista",
+  "Puedo redactar una reseña de más de 400 palabras que gradúe elogios y críticas con lítotes, controle el alcance de las negaciones y use la ironía solo cuando se entienda sin la voz.",
+  [
+   "c2.disc.w12-alcance-negacion",
+   "c2.fun.w12-leer-ironia"
+  ]
+ ],
+ [
+  12,
+  "spk",
+  "w12-respuesta-propietaria",
+  "Responder a una crítica sin ironía",
+  "Puedo responder oralmente a una crítica reconociendo el problema, matizando un dato con una negación precisa y explicando una lítote a otra persona.",
+  [
+   "c2.fun.w12-leer-ironia"
+  ]
+ ],
+ [
+  12,
+  "fun",
+  "w12-leer-ironia",
+  "Reconocer la ironía y desactivarla",
+  "Puedo reconocer la ironía por el contexto, la exageración y la entonación, y reformularla como dato y valoración explícita cuando el canal lo exige.",
+  [
+   "c2.gram.g223"
+  ]
+ ],
+ [
+  12,
+  "disc",
+  "w12-alcance-negacion",
+  "El alcance de la negación en un texto valorativo",
+  "Puedo organizar un texto valorativo en el que cada negación tenga el alcance que pretendo y en el que «no… sino» y «no… pero» ordenen la corrección y el contraste.",
+  [
+   "c2.gram.g223"
+  ]
+ ],
+ [
+  13,
+  "gram",
+  "g224",
+  "Marcadores conversacionales de negociación fina",
+  "Puedo aceptar en parte, objetar, condicionar un acuerdo, reformular al otro de forma cooperativa y tomar o defender el turno con marcadores como «bueno», «ya, pero», «pues», «eso sí», «o sea» o «déjame terminar», teniendo en cuenta su variación regional.",
+  [
+   "c1.gram.g189",
+   "c1.gram.g190",
+   "c1.gram.g191",
+   "c1.gram.g199"
+  ],
+  {
+   "related": [
+    "/gramatica/marcadores-conversacionales-de-negociacion-fina"
+   ]
+  }
+ ],
+ [
+  13,
+  "gram",
+  "g225",
+  "Discursos académicos: cautela metodológica",
+  "Puedo redactar un texto académico que afirme lo que permiten los datos: gestionar la presencia del autor, atenuar sin vaciar, distinguir asociación y causa, escribir limitaciones, citar con el verbo que corresponde a mi postura y evitar calcos frecuentes.",
+  [
+   "c1.gram.g198",
+   "c1.gram.g173",
+   "c1.gram.g194",
+   "c1.gram.g188",
+   "c2.gram.g221"
+  ],
+  {
+   "related": [
+    "/gramatica/discursos-academicos-cautela-metodologica"
+   ]
+  }
+ ],
+ [
+  13,
+  "voc",
+  "w13-estudio-ruido",
+  "Estudio, muestra y reunión de equipo",
+  "Puedo usar con precisión el léxico de un estudio y de la reunión en que se discute: la muestra, el sesgo, la correlación, el sueño declarado, generalizar los resultados, ceder en algo, irse por las ramas, a regañadientes.",
+  [
+   "c2.gram.g225"
+  ]
+ ],
+ [
+  13,
+  "pron",
+  "w13-tono-marcadores",
+  "La entonación de los marcadores",
+  "Puedo reconocer la función de «bueno», «eso sí» o «pues» por lo que sigue y por la entonación, y leer un texto académico con un ritmo regular que no subraye los atenuadores.",
+  [
+   "c2.gram.g224"
+  ]
+ ],
+ [
+  13,
+  "lis",
+  "w13-reunion-titulo",
+  "Negociación en una videollamada",
+  "Puedo seguir una videollamada entre hablantes de Argentina y España que negocian una decisión y reconstruir quién cede en qué, con qué condiciones y con qué marcadores.",
+  [
+   "c2.gram.g224",
+   "c2.gram.g225"
+  ]
+ ],
+ [
+  13,
+  "read",
+  "w13-articulo-exploratorio",
+  "Discusión y limitaciones de un artículo",
+  "Puedo leer la discusión y las limitaciones de un artículo académico y distinguir qué afirma, qué atenúa, qué cita con adhesión y qué cita sin ella.",
+  [
+   "c2.gram.g225"
+  ]
+ ],
+ [
+  13,
+  "wri",
+  "w13-seccion-discusion",
+  "Sección de discusión de un estudio",
+  "Puedo redactar una sección de discusión de más de 400 palabras con cautela ajustada, explicaciones alternativas, citas con postura y limitaciones.",
+  [
+   "c2.disc.w13-asociacion-causa",
+   "c2.gram.g225"
+  ]
+ ],
+ [
+  13,
+  "spk",
+  "w13-defender-turno",
+  "Intervenir y defender el turno",
+  "Puedo intervenir en una reunión de trabajo para defender una postura, reformular la contraria, aceptar con condiciones y mantener el turno, y presentar oralmente un resultado con prudencia.",
+  [
+   "c2.fun.w13-aceptar-con-condiciones"
+  ]
+ ],
+ [
+  13,
+  "fun",
+  "w13-aceptar-con-condiciones",
+  "Aceptar con condiciones y buscar consenso",
+  "Puedo aceptar una propuesta en parte, añadir una condición y buscar consenso sin ceder en lo esencial.",
+  [
+   "c2.gram.g224"
+  ]
+ ],
+ [
+  13,
+  "disc",
+  "w13-asociacion-causa",
+  "Asociación, causa y explicaciones alternativas",
+  "Puedo organizar un texto que presente un resultado como asociación, ofrezca explicaciones alternativas y termine con una conclusión prudente y sus límites.",
+  [
+   "c2.gram.g225",
+   "c2.gram.g221"
+  ]
+ ],
+ [
+  14,
+  "gram",
+  "g226",
+  "Discursos jurídicos y administrativos: sintaxis densa",
+  "Puedo leer una frase jurídica o administrativa densa localizando verbo principal, sujeto, condiciones, excepciones, plazos y reservas, reconocer sus fórmulas, gerundios y anafóricos, y reescribirla en lenguaje claro sin alterar su efecto.",
+  [
+   "c1.gram.g176",
+   "c1.gram.g198",
+   "c2.gram.g206",
+   "c2.gram.g210"
+  ],
+  {
+   "related": [
+    "/gramatica/discursos-juridicos-y-administrativos-sintaxis-densa"
+   ]
+  }
+ ],
+ [
+  14,
+  "voc",
+  "w14-copropiedad",
+  "Copropiedad, normas y trámites",
+  "Puedo usar con precisión el léxico de una comunidad de copropietarios y de los trámites administrativos: gastos comunes, porcentaje de dominio, quórum, subsanar, desistir, renunciar, días hábiles, interponer un recurso.",
+  [
+   "c2.gram.g226"
+  ]
+ ],
+ [
+  14,
+  "pron",
+  "w14-lectura-clausula",
+  "Leer en voz alta una cláusula larga",
+  "Puedo leer en voz alta una cláusula larga agrupando sus piezas en grupos fónicos y marcando con la voz el sujeto, el verbo principal, los plazos y las reservas.",
+  [
+   "c2.gram.g226"
+  ]
+ ],
+ [
+  14,
+  "lis",
+  "w14-consulta-administradora",
+  "Consulta sobre textos jurídicos",
+  "Puedo seguir una consulta en la que se desmonta una cláusula y una notificación y reconstruir qué significa cada pieza y qué no puede cambiarse al explicarla.",
+  [
+   "c2.gram.g226"
+  ]
+ ],
+ [
+  14,
+  "read",
+  "w14-boletin-clausula",
+  "Artículo que explica una cláusula",
+  "Puedo leer un artículo divulgativo que explica una norma pieza por pieza y relacionar cada fragmento citado con su función y su efecto.",
+  [
+   "c2.gram.g226"
+  ]
+ ],
+ [
+  14,
+  "wri",
+  "w14-circular-clara",
+  "Circular en lenguaje claro",
+  "Puedo redactar una circular de más de 400 palabras que explique normas densas en lenguaje claro, citando los fragmentos clave y conservando lo que obligan, permiten y excluyen.",
+  [
+   "c2.disc.w14-version-fiel",
+   "c2.fun.w14-descifrar-norma"
+  ]
+ ],
+ [
+  14,
+  "spk",
+  "w14-explicar-asamblea",
+  "Explicar una norma en una asamblea",
+  "Puedo leer y explicar oralmente una norma ante un grupo, responder a preguntas preocupadas con exactitud y distinguir lo que dice el texto de lo que no sé.",
+  [
+   "c2.fun.w14-descifrar-norma"
+  ]
+ ],
+ [
+  14,
+  "fun",
+  "w14-descifrar-norma",
+  "Descifrar una norma para otra persona",
+  "Puedo desmontar una norma en sus piezas y explicar a otra persona qué la obliga, qué le permite y qué consecuencias tiene.",
+  [
+   "c2.gram.g226"
+  ]
+ ],
+ [
+  14,
+  "disc",
+  "w14-version-fiel",
+  "Versión clara fiel al original",
+  "Puedo organizar un texto que alterne cita literal y explicación clara pieza por pieza, sin resumir lo que cambia el efecto de la norma.",
+  [
+   "c2.gram.g226",
+   "c2.gram.g210"
+  ]
+ ],
+ [
+  15,
+  "gram",
+  "g227",
+  "Discursos periodísticos: atribución y precisión",
+  "Puedo redactar una noticia neutral y exacta: titular y entradilla con su gramática, citas bien puntuadas, verbos de atribución sin carga injustificada, fuentes identificadas y cifras, porcentajes y fechas precisos.",
+  [
+   "c1.gram.g193",
+   "c1.gram.g194",
+   "c2.gram.g208"
+  ],
+  {
+   "related": [
+    "/gramatica/discursos-periodisticos-atribucion-y-precision"
+   ]
+  }
+ ],
+ [
+  15,
+  "gram",
+  "g228",
+  "Reformulación entre registro técnico y cotidiano",
+  "Puedo pasar un contenido técnico a lenguaje cotidiano, y un relato informal a un informe, sustituyendo términos, deshaciendo nominalizaciones y simplificando la sintaxis sin perder cautelas, condiciones, frecuencias ni agentes, y sin inventar precisión.",
+  [
+   "c1.gram.g189",
+   "c1.gram.g198",
+   "c1.gram.g199"
+  ],
+  {
+   "related": [
+    "/gramatica/reformulacion-entre-registro-tecnico-y-cotidiano"
+   ]
+  }
+ ],
+ [
+  15,
+  "voc",
+  "w15-arrecife-redaccion",
+  "Arrecife y redacción",
+  "Puedo usar con precisión el léxico de un problema ambiental marino y del trabajo periodístico: blanqueamiento, anomalía térmica, fondear, muestreo, entradilla, contrastar una fuente, sacar de contexto, fe de erratas.",
+  [
+   "c2.gram.g227"
+  ]
+ ],
+ [
+  15,
+  "pron",
+  "w15-cifras-en-voz-alta",
+  "Cifras y citas en voz alta",
+  "Puedo leer en voz alta cifras, porcentajes y puntos porcentuales sin ambigüedad y marcar con la voz dónde empieza y termina una cita y quién la dice.",
+  [
+   "c2.gram.g227"
+  ]
+ ],
+ [
+  15,
+  "lis",
+  "w15-mesa-de-redaccion",
+  "Revisión de una noticia en la redacción",
+  "Puedo seguir una reunión de redacción con una llamada a una fuente y reconstruir qué se corrige en el titular, en los verbos, en las cifras y en la explicación de una norma, y por qué.",
+  [
+   "c2.gram.g227",
+   "c2.gram.g228"
+  ]
+ ],
+ [
+  15,
+  "read",
+  "w15-noticia-corales",
+  "Noticia sobre un informe científico",
+  "Puedo leer una noticia sobre un informe técnico y distinguir qué dato pertenece a qué fuente, qué se afirma, qué se asocia y qué solo es posible.",
+  [
+   "c2.gram.g227",
+   "c2.gram.g228"
+  ]
+ ],
+ [
+  15,
+  "wri",
+  "w15-noticia-precisa",
+  "Noticia neutral y exacta",
+  "Puedo redactar una noticia de más de 400 palabras que traslade un informe técnico con atribución, precisión y explicaciones cotidianas fieles, integrando lo repasado en las semanas 11 a 14.",
+  [
+   "c2.disc.w15-fuente-y-dato",
+   "c2.fun.w15-traducir-sin-traicionar"
+  ]
+ ],
+ [
+  15,
+  "spk",
+  "w15-explicar-en-radio",
+  "Explicar un informe en la radio y negociar un titular",
+  "Puedo explicar oralmente un informe técnico a un público general sin exagerar ni minimizar, negociar un titular con marcadores y pedir con cortesía una revisión a una fuente.",
+  [
+   "c2.fun.w15-traducir-sin-traicionar",
+   "c2.gram.g224"
+  ]
+ ],
+ [
+  15,
+  "fun",
+  "w15-traducir-sin-traicionar",
+  "Traducir lo técnico sin traicionarlo",
+  "Puedo explicar un contenido técnico a un no especialista conservando la cautela, las condiciones y las frecuencias, y subir de registro un relato informal sin inventar datos.",
+  [
+   "c2.gram.g228"
+  ]
+ ],
+ [
+  15,
+  "disc",
+  "w15-fuente-y-dato",
+  "Cada dato con su fuente",
+  "Puedo organizar un texto informativo en orden de importancia en el que cada dato lleve su fuente y su grado de certeza, sin mezclar dato, asociación, posibilidad y opinión.",
+  [
+   "c2.gram.g227",
+   "c2.gram.g221",
+   "c2.gram.g225"
+  ]
+ ],
+ [
+  15,
+  "rev",
+  "w15-semanas-11-15",
+  "Checkpoint 3: semanas 11 a 15",
+  "Puedo convertir un informe técnico en una noticia y en una explicación oral integrando la modalización y la cortesía, la negación pragmática, los marcadores de negociación, la cautela académica, la lectura de textos jurídicos, la atribución periodística y la reformulación entre registros.",
+  [
+   "c2.gram.g221",
+   "c2.gram.g222",
+   "c2.gram.g223",
+   "c2.gram.g224",
+   "c2.gram.g225",
+   "c2.gram.g226",
+   "c2.gram.g227",
+   "c2.gram.g228"
+  ]
+ ],
+ [
+  16,
+  "gram",
+  "g229",
+  "Paráfrasis avanzada preservando compromiso epistémico",
+  "Puedo parafrasear y resumir lo que afirma otra persona conservando exactamente su grado de certeza, el verbo de atribución adecuado y el alcance de la afirmación (cuantificadores, condiciones, concesiones y negación), sin subir ni bajar el compromiso.",
+  [
+   "c2.gram.g221",
+   "c2.gram.g228"
+  ],
+  {
+   "related": [
+    "/gramatica/parafrasis-avanzada-preservando-compromiso-epistemico"
+   ]
+  }
+ ],
+ [
+  16,
+  "gram",
+  "g230",
+  "Conectores raros y valores específicos",
+  "Puedo interpretar y usar con su valor exacto conectores poco frecuentes (empero, mas, no bien, a la sazón, así las cosas, habida cuenta de que, toda vez que, máxime cuando, amén de, so pena de, siquiera sea, por ende, sea como fuere, dicho lo cual) y evitar los falsos amigos y la pedantería.",
+  [
+   "c2.gram.g228"
+  ],
+  {
+   "related": [
+    "/gramatica/conectores-raros-y-valores-especificos"
+   ]
+  }
+ ],
+ [
+  16,
+  "voc",
+  "w16-ciencia-agua",
+  "Divulgación científica y patrimonio del agua",
+  "Puedo usar con precisión el léxico de la divulgación científica y del patrimonio hidráulico granadino: indicio, correlación, muestra, matizar, aljibe, tapial, carmen, acequia, cegar.",
+  [
+   "c2.gram.g229"
+  ]
+ ],
+ [
+  16,
+  "pron",
+  "w16-incisos-cautela",
+  "Conectores entre pausas y modalizadores sin énfasis",
+  "Puedo leer en voz alta un conector parentético entre pausas y con tono más bajo, y conservar oralmente los modalizadores de cautela sin borrarlos ni exagerarlos.",
+  [
+   "c2.gram.g229",
+   "c2.gram.g230"
+  ]
+ ],
+ [
+  16,
+  "lis",
+  "w16-resumen-boletin",
+  "Revisión editorial de un resumen científico",
+  "Puedo seguir una conversación en la que dos periodistas corrigen un resumen que exagera o rebaja un estudio y reconstruir cada corrección de certeza, atribución y alcance.",
+  [
+   "c2.gram.g229"
+  ]
+ ],
+ [
+  16,
+  "read",
+  "w16-columna-titulares",
+  "Columna sobre cómo se resumió un estudio",
+  "Puedo leer una columna larga que compara titulares con el estudio original, distinguir las paráfrasis fieles de las que distorsionan e interpretar los conectores poco frecuentes del texto.",
+  [
+   "c2.gram.g229",
+   "c2.gram.g230"
+  ]
+ ],
+ [
+  16,
+  "wri",
+  "w16-resena-divulgativa",
+  "Reseña divulgativa de un estudio",
+  "Puedo redactar una reseña divulgativa de más de 400 palabras que resuma un estudio con su compromiso exacto, atribuya cada afirmación y enlace las ideas con conectores poco frecuentes bien elegidos.",
+  [
+   "c2.gram.g229",
+   "c2.gram.g230",
+   "c2.disc.w16-registro-conectores"
+  ]
+ ],
+ [
+  16,
+  "spk",
+  "w16-explicar-estudio",
+  "Explicar un estudio a un público no experto",
+  "Puedo explicar oralmente un estudio a vecinos no especialistas sin exagerar sus conclusiones y responder a quien intenta convertir un indicio en una prueba.",
+  [
+   "c2.fun.w16-corregir-exageracion"
+  ]
+ ],
+ [
+  16,
+  "fun",
+  "w16-corregir-exageracion",
+  "Corregir una exageración o una rebaja",
+  "Puedo señalar con cortesía que una paráfrasis sube o baja el compromiso de la fuente y proponer una versión fiel.",
+  [
+   "c2.gram.g229"
+  ]
+ ],
+ [
+  16,
+  "disc",
+  "w16-registro-conectores",
+  "Conectores raros sin pedantería",
+  "Puedo dosificar los conectores de registro alto según el género y el público, y sustituirlos por equivalentes comunes cuando suenan afectados.",
+  [
+   "c2.gram.g230"
+  ]
+ ],
+ [
+  17,
+  "gram",
+  "g231",
+  "Puntuación avanzada: punto y coma, dos puntos e incisos",
+  "Puedo puntuar según la Ortografía académica textos complejos: punto y coma entre oraciones relacionadas, en enumeraciones complejas y ante conectores; dos puntos para anunciar, cerrar, explicar, citar y saludar; incisos anidados con paréntesis, rayas y corchetes; comillas en tres niveles, puntos suspensivos y signos de interrogación en serie.",
+  [
+   "c1.gram.g197",
+   "c2.gram.g226"
+  ],
+  {
+   "related": [
+    "/gramatica/puntuacion-avanzada-punto-y-coma-dos"
+   ]
+  }
+ ],
+ [
+  17,
+  "voc",
+  "w17-puerto-catalogo",
+  "Puerto fluvial y edición de catálogos",
+  "Puedo usar con precisión el léxico del comercio fluvial y de la edición de un catálogo de exposición: muelle, aduana, vapor, estibador, jangada, cartela, pie de foto, galeradas, errata.",
+  [
+   "c2.gram.g231"
+  ]
+ ],
+ [
+  17,
+  "pron",
+  "w17-leer-signos",
+  "Leer la puntuación en voz alta",
+  "Puedo hacer oír en la lectura en voz alta la diferencia entre coma, punto y coma y punto, el tono suspendido de los dos puntos, el tono bajo de los incisos y el cambio de voz de las citas.",
+  [
+   "c2.gram.g231"
+  ]
+ ],
+ [
+  17,
+  "lis",
+  "w17-revision-catalogo",
+  "Revisión de puntuación entre editora y autor",
+  "Puedo seguir una conversación en la que una editora y un historiador discuten la puntuación de un catálogo y reconstruir cada decisión con su justificación.",
+  [
+   "c2.gram.g231"
+  ]
+ ],
+ [
+  17,
+  "read",
+  "w17-ensayo-puerto",
+  "Ensayo de catálogo con puntuación compleja",
+  "Puedo leer un ensayo largo de catálogo con enumeraciones complejas, incisos anidados y citas en varios niveles, y explicar qué función cumple cada signo.",
+  [
+   "c2.gram.g231"
+  ]
+ ],
+ [
+  17,
+  "wri",
+  "w17-texto-presentacion",
+  "Texto de presentación de una exposición",
+  "Puedo redactar un texto de presentación de más de 400 palabras con enumeraciones complejas, dos puntos con funciones distintas, incisos anidados y citas bien jerarquizadas, y revisarlo signo por signo.",
+  [
+   "c2.gram.g231",
+   "c2.disc.w17-jerarquia-fronteras"
+  ]
+ ],
+ [
+  17,
+  "spk",
+  "w17-justificar-signos",
+  "Justificar decisiones de puntuación",
+  "Puedo leer en voz alta un párrafo complejo haciendo oír su puntuación y defender ante un autor por qué conviene cambiar un signo.",
+  [
+   "c2.fun.w17-negociar-correccion"
+  ]
+ ],
+ [
+  17,
+  "fun",
+  "w17-negociar-correccion",
+  "Proponer una corrección a un autor",
+  "Puedo proponer a un autor una corrección de puntuación justificándola con la norma y distinguiendo lo obligatorio de lo opcional.",
+  [
+   "c2.gram.g231"
+  ]
+ ],
+ [
+  17,
+  "disc",
+  "w17-jerarquia-fronteras",
+  "Jerarquía de fronteras en el párrafo",
+  "Puedo organizar un párrafo largo de modo que la frontera principal quede marcada por el signo más fuerte y las secundarias por signos menores.",
+  [
+   "c2.gram.g231"
+  ]
+ ],
+ [
+  18,
+  "gram",
+  "g232",
+  "Ortografía académica y variación admisible",
+  "Puedo aplicar la ortografía académica en textos formales (tildes diacríticas, «solo» y demostrativos, monosílabos sin tilde, interrogativos indirectos, «porque / por qué / porqué / por que», prefijos, mayúsculas, cifras, «e / u») y elegir con coherencia entre variantes admisibles, distinguiendo norma, variante y libro de estilo.",
+  [
+   "c2.gram.g231"
+  ],
+  {
+   "related": [
+    "/gramatica/ortografia-academica-y-variacion-admisible"
+   ]
+  }
+ ],
+ [
+  18,
+  "gram",
+  "g233",
+  "Sintaxis textual: cohesión anafórica de largo alcance",
+  "Puedo mantener la referencia a lo largo de párrafos y capítulos con cadenas anafóricas (nombre, pronombre, sinónimo o hiperónimo, encapsulador), catáforas, demostrativos de distancia y metadiscurso, y reintroducir con claridad un referente lejano o en competencia con otros.",
+  [
+   "c2.gram.g210",
+   "c2.gram.g220"
+  ],
+  {
+   "related": [
+    "/gramatica/sintaxis-textual-cohesion-anaforica-de-largo"
+   ]
+  }
+ ],
+ [
+  18,
+  "voc",
+  "w18-textil-informe",
+  "Textil artesanal e informes de evaluación",
+  "Puedo usar con precisión el léxico del tejido artesanal y de los informes de evaluación: telar de pedal, urdimbre, grana cochinilla, tinte natural, cooperativa, comercio justo, línea de base, indicador.",
+  [
+   "c2.gram.g233"
+  ]
+ ],
+ [
+  18,
+  "pron",
+  "w18-tilde-y-acento",
+  "Acento prosódico y tilde diacrítica",
+  "Puedo distinguir oralmente pares como «tu / tú», «mas / más» o «solo / sólo» por el acento de la frase y relacionar lo que oigo con la tilde que corresponde.",
+  [
+   "c2.gram.g232"
+  ]
+ ],
+ [
+  18,
+  "lis",
+  "w18-pruebas-informe",
+  "Revisión de pruebas de un informe",
+  "Puedo seguir una conversación en la que una editora y un autor revisan la ortografía y las referencias de un informe largo y reconstruir cada decisión.",
+  [
+   "c2.gram.g232",
+   "c2.gram.g233"
+  ]
+ ],
+ [
+  18,
+  "read",
+  "w18-capitulo-cooperativa",
+  "Capítulo de un informe de evaluación",
+  "Puedo leer un capítulo largo de un informe y seguir sus cadenas de referencia, sus encapsuladores y su metadiscurso, y reconocer sus decisiones ortográficas.",
+  [
+   "c2.gram.g232",
+   "c2.gram.g233"
+  ]
+ ],
+ [
+  18,
+  "wri",
+  "w18-apertura-capitulo",
+  "Apertura de capítulo con referencias claras",
+  "Puedo redactar una sección de informe de más de 400 palabras con cadenas anafóricas claras, referentes reintroducidos sin ambigüedad, metadiscurso y una ortografía académica coherente.",
+  [
+   "c2.gram.g232",
+   "c2.gram.g233",
+   "c2.disc.w18-cadena-referencia"
+  ]
+ ],
+ [
+  18,
+  "spk",
+  "w18-presentar-informe",
+  "Presentar oralmente un informe",
+  "Puedo presentar oralmente los resultados de un informe manteniendo la referencia a personas y conceptos sin confundir al oyente, y responder a una pregunta sobre quién hizo qué.",
+  [
+   "c2.fun.w18-aclarar-referente"
+  ]
+ ],
+ [
+  18,
+  "fun",
+  "w18-aclarar-referente",
+  "Aclarar a quién o a qué se refiere algo",
+  "Puedo detectar una referencia ambigua en un texto o una intervención y reformularla con el nombre, un rasgo distintivo o un encapsulador.",
+  [
+   "c2.gram.g233"
+  ]
+ ],
+ [
+  18,
+  "disc",
+  "w18-cadena-referencia",
+  "Cadenas de referencia en textos largos",
+  "Puedo planificar cómo nombrar a cada referente a lo largo de un texto largo: cuándo repetir, cuándo variar y cuándo recordar quién es.",
+  [
+   "c2.gram.g233"
+  ]
+ ],
+ [
+  19,
+  "gram",
+  "g234",
+  "Análisis crítico de sesgos sintácticos y presuposiciones",
+  "Puedo analizar cómo la sintaxis reparte la responsabilidad en un texto (agente borrado o visible, nominalizaciones, orden y tema del titular, presuposiciones, adjetivos valorativos, cuantificación vaga, modalidad, eufemismos y «nosotros») y reescribirlo de forma neutra sin inventar responsables.",
+  [
+   "c2.gram.g219",
+   "c2.gram.g227"
+  ],
+  {
+   "related": [
+    "/gramatica/analisis-critico-de-sesgos-sintacticos-y"
+   ]
+  }
+ ],
+ [
+  19,
+  "voc",
+  "w19-tianguis-prensa",
+  "Comercio en la vía pública y lenguaje de prensa",
+  "Puedo usar con precisión el léxico del comercio en la vía pública y del análisis de prensa: tianguis, puesto, reubicación, desalojo, alcaldía, encuadre, eufemismo, titular, sesgo.",
+  [
+   "c2.gram.g234"
+  ]
+ ],
+ [
+  19,
+  "pron",
+  "w19-foco-agente",
+  "Foco en el agente y lectura neutra",
+  "Puedo leer en voz alta un titular marcando con el acento quién hizo qué y leer la versión neutra sin énfasis valorativos.",
+  [
+   "c2.gram.g234"
+  ]
+ ],
+ [
+  19,
+  "lis",
+  "w19-taller-lectura",
+  "Sesión de un taller de lectura crítica",
+  "Puedo seguir una conversación de taller en la que se comparan dos coberturas del mismo hecho y reconstruir qué recurso sintáctico señala cada participante y qué límites tiene el análisis.",
+  [
+   "c2.gram.g234"
+  ]
+ ],
+ [
+  19,
+  "read",
+  "w19-nota-coberturas",
+  "Nota de lectura crítica sobre dos coberturas",
+  "Puedo leer un análisis largo de dos noticias sobre el mismo hecho y distinguir los recursos que reparten responsabilidad de los datos comprobables.",
+  [
+   "c2.gram.g234"
+  ]
+ ],
+ [
+  19,
+  "wri",
+  "w19-nota-critica",
+  "Nota de lectura crítica",
+  "Puedo redactar una nota de más de 400 palabras que compare dos coberturas de un mismo hecho, identifique sus recursos sintácticos y léxicos y proponga una versión neutra sin inventar responsables.",
+  [
+   "c2.gram.g234",
+   "c2.disc.w19-analizar-sin-militar"
+  ]
+ ],
+ [
+  19,
+  "spk",
+  "w19-moderar-analisis",
+  "Analizar un titular en grupo",
+  "Puedo analizar oralmente un titular ante un grupo, señalar qué responsabilidad borra o atribuye y responder a quien acusa al análisis de partidista.",
+  [
+   "c2.fun.w19-desmontar-titular"
+  ]
+ ],
+ [
+  19,
+  "fun",
+  "w19-desmontar-titular",
+  "Desmontar un titular",
+  "Puedo explicar qué da por hecho un titular, a quién presenta como responsable y cómo diría lo mismo una versión neutra.",
+  [
+   "c2.gram.g234"
+  ]
+ ],
+ [
+  19,
+  "disc",
+  "w19-analizar-sin-militar",
+  "Análisis crítico sin partidismo",
+  "Puedo organizar un análisis crítico que trate por igual a las dos fuentes, separe hechos de recursos y reconozca cuándo una construcción sin agente es legítima.",
+  [
+   "c2.gram.g234"
+  ]
+ ],
+ [
+  20,
+  "gram",
+  "g235",
+  "Producción y revisión de ensayo argumentativo C2",
+  "Puedo producir y revisar un ensayo argumentativo completo con tesis matizada, contraargumento justo («Es cierto que…; no obstante…; de ahí que» + subjuntivo), fuentes integradas con su compromiso, recursos retóricos dosificados, registro coherente y una conclusión que sintetiza.",
+  [
+   "c2.gram.g229",
+   "c2.gram.g233"
+  ],
+  {
+   "related": [
+    "/gramatica/produccion-y-revision-de-ensayo-argumentativo"
+   ]
+  }
+ ],
+ [
+  20,
+  "gram",
+  "g236",
+  "Proyecto C2: mediación, síntesis y defensa de posturas",
+  "Puedo mediar varias fuentes con posturas distintas para un público no experto, sintetizarlas por ejes conservando el compromiso de cada una y defender después una postura propia con mitigación y cortesía estratégica.",
+  [
+   "c2.gram.g229",
+   "c2.gram.g222"
+  ],
+  {
+   "related": [
+    "/gramatica/proyecto-c2-mediacion-sintesis-y-defensa"
+   ]
+  }
+ ],
+ [
+  20,
+  "voc",
+  "w20-ciudad-deliberacion",
+  "Urbanismo y deliberación ciudadana",
+  "Puedo usar con precisión el léxico del urbanismo y de la deliberación pública: uso dotacional, vivienda asequible, licitación, recalificación, panel ciudadano, sorteo, hombre de paja, tesis matizada.",
+  [
+   "c2.gram.g236"
+  ]
+ ],
+ [
+  20,
+  "pron",
+  "w20-defensa-oral",
+  "Ritmo y mitigación en una defensa oral",
+  "Puedo sostener una intervención argumentativa larga con pausas que separan tesis, objeción y respuesta, y con una entonación que mitiga sin restar firmeza.",
+  [
+   "c2.gram.g236"
+  ]
+ ],
+ [
+  20,
+  "lis",
+  "w20-panel-ciudadano",
+  "Sesión de un panel ciudadano",
+  "Puedo seguir una sesión deliberativa con varias posturas, reconstruir qué propone cada participante, con qué grado de compromiso y cómo media la facilitadora.",
+  [
+   "c2.gram.g236"
+  ]
+ ],
+ [
+  20,
+  "read",
+  "w20-nota-sintesis",
+  "Nota de síntesis para un panel ciudadano",
+  "Puedo leer una nota de síntesis que media tres fuentes por ejes y reconocer cómo conserva el compromiso, la atribución y el alcance de cada una.",
+  [
+   "c2.gram.g235",
+   "c2.gram.g236"
+  ]
+ ],
+ [
+  20,
+  "wri",
+  "w20-ensayo-final",
+  "Ensayo argumentativo final",
+  "Puedo redactar y revisar un ensayo argumentativo completo de más de 420 palabras que integre fuentes con fidelidad, refute con justicia la mejor objeción y aplique todo lo repasado sobre cohesión, conectores, puntuación, ortografía y lectura crítica.",
+  [
+   "c2.gram.g235",
+   "c2.disc.w20-contraargumento-justo"
+  ]
+ ],
+ [
+  20,
+  "spk",
+  "w20-defender-postura",
+  "Defender una postura ante un panel",
+  "Puedo presentar ante un panel una síntesis fiel de las fuentes y defender después mi postura, responder a objeciones con cortesía estratégica y reflexionar sobre mi propio aprendizaje.",
+  [
+   "c2.fun.w20-mediar-fuentes"
+  ]
+ ],
+ [
+  20,
+  "fun",
+  "w20-mediar-fuentes",
+  "Mediar entre fuentes y público",
+  "Puedo trasladar a un público no experto lo que dicen varias fuentes, con equivalencias claras para las cifras y sin subir ni bajar el compromiso de ninguna.",
+  [
+   "c2.gram.g236"
+  ]
+ ],
+ [
+  20,
+  "disc",
+  "w20-contraargumento-justo",
+  "Contraargumento justo",
+  "Puedo presentar la versión más fuerte de la objeción contraria, sin hombre de paja ni ataque personal, y responderla con datos y una consecuencia formal.",
+  [
+   "c2.gram.g235"
+  ]
+ ],
+ [
+  20,
+  "rev",
+  "w20-integracion-semanas-16-19",
+  "Integración final de las semanas 16 a 19",
+  "Puedo combinar en un mismo ensayo o intervención la paráfrasis fiel, los conectores precisos, la puntuación y la ortografía académicas, la cohesión de largo alcance y la lectura crítica de sesgos.",
+  [
+   "c2.gram.g229",
+   "c2.gram.g230",
+   "c2.gram.g231",
+   "c2.gram.g232",
+   "c2.gram.g233",
+   "c2.gram.g234"
+  ]
+ ]
+]);

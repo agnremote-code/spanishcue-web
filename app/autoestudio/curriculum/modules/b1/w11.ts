@@ -29,8 +29,8 @@ export const b1w11: Module = {
     "b1.fun.w11-contar-cambios",
     "b1.disc.w11-antes-despues"
   ],
-  "reviewObjectives": [],
-  "prerequisites": [],
+  reviewObjectives: ["b1.gram.g106","b1.gram.g107","b1.voc.w10-emprender-barrio","b1.pron.w10-gerundio-vocal","b1.lis.w10-podcast-libreria","b1.read.w10-perfil-diario","b1.wri.w10-correo-un-ano-despues","b1.spk.w10-contar-proyecto","b1.fun.w10-contar-trayectoria","b1.disc.w10-linea-temporal","b1.rev.w10-repaso-semanas-6-9"],
+  prerequisites: ["b1-10"],
   "goal": {
     "canDo": "Al final de esta semana puedes contar un cambio de hábito: lo que acabas de conseguir («acabo de cumplir un mes»), lo que dejaste de hacer, lo que volviste a hacer y lo que no quieres volver a hacer.",
     "steps": [

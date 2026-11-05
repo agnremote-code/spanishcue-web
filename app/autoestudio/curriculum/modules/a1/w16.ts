@@ -20,8 +20,8 @@ export const a1w16: Module = {
     "a1.spk.w16-lista-molestias",
     "a1.fun.w16-organizar-compra-malestar",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["a1.gram.g032","a1.gram.g033","a1.voc.w15-gustos-convivencia","a1.pron.w15-gusta-gustan","a1.lis.w15-plan-fin-de-semana","a1.read.w15-anuncio-companera","a1.wri.w15-perfil-convivencia","a1.spk.w15-gustos-y-rutina","a1.fun.w15-gustos-invitar","a1.rev.w15-semanas-11-14"],
+  prerequisites: ["a1-15"],
   goal: {
     canDo: "Al final de esta semana puedes organizar una compra con cantidades exactas y aproximadas, decir qué te pones para salir y explicar qué te duele después de una caminata.",
     canDoEn: "By the end of this week, you can organise a shopping trip with exact and approximate quantities, say what you put on to go out and explain what hurts after a hike.",

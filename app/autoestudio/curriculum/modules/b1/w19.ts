@@ -26,8 +26,8 @@ export const b1w19: Module = {
     "b1.fun.w19-reaccionar-relato",
     "b1.disc.w19-estructura-anecdota"
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["b1.gram.g237","b1.gram.g122","b1.gram.g123","b1.voc.w18-fiesta-familiar","b1.pron.w18-pronombres-pegados","b1.lis.w18-plan-sorpresa","b1.read.w18-cronica-cumpleanos","b1.wri.w18-cronica-fiesta","b1.spk.w18-organizar-celebracion","b1.fun.w18-organizar-en-grupo","b1.disc.w18-informar-decisiones"],
+  prerequisites: ["b1-18"],
   goal: {
     canDo: "Al final de esta semana puedes hablar de cosas y personas sin repetir sus nombres («no es la mía, es la de Tomás»), explicar quién es alguien o distinguirlo entre varios, y contar una anécdota con marcadores («resulta que…», «de repente…», «menos mal que…») y reaccionar a la de otra persona.",
     steps: [

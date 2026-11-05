@@ -21,8 +21,8 @@ export const a2w13: Module = {
     "a2.fun.w13-preguntar-cosas-personas",
     "a2.disc.w13-suavizar-peticiones",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["a2.gram.g068","a2.gram.g069","a2.voc.w12-vivienda-alquiler","a2.pron.w12-isimo-exclamaciones","a2.lis.w12-visita-apartamento","a2.read.w12-mensaje-eleccion","a2.wri.w12-comparar-opciones","a2.spk.w12-comparar-elegir","a2.fun.w12-elegir-entre-opciones","a2.disc.w12-justificar-eleccion"],
+  prerequisites: ["a2-12"],
   goal: {
     canDo: "Al final de esta semana puedes hablar con cariño, con cortesía y exagerando con gracia (un cafecito, un momentito, un problemón), y preguntar y responder si hay algo o alguien con algo, nada, alguien y nadie (¿Alguien vio mis llaves? —No, no vi nada).",
     steps: [

@@ -27,8 +27,8 @@ export const b1w04: Module = {
     "b1.fun.w04-opinar-matizar",
     "b1.disc.w04-argumentar-postura",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["b1.gram.g090","b1.gram.g091","b1.gram.g092","b1.voc.w03-huerto-vecinal","b1.pron.w03-g-suave-fuerte","b1.lis.w03-asamblea-huerto","b1.read.w03-carta-socios","b1.wri.w03-correo-asociacion","b1.spk.w03-propuesta-vecinal","b1.fun.w03-aconsejar-reaccionar","b1.disc.w03-queja-constructiva"],
+  prerequisites: ["b1-03"],
   goal: {
     canDo: "Al final de esta semana puedes dar tu opinión con creo que y negarla con no creo que, preguntar la opinión de otros, corregir una interpretación y graduar lo que dices entre la certeza, la posibilidad y la duda.",
     steps: [

@@ -21,8 +21,8 @@ export const a2w08: Module = {
     "a2.fun.w08-contar-reacciones",
     "a2.disc.w08-relato-reacciones",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["a2.gram.g058","a2.gram.g059","a2.voc.w07-ciudad-transporte","a2.pron.w07-acento-tu-vos-usted","a2.lis.w07-camino-mercado","a2.read.w07-guia-ciudad","a2.wri.w07-instrucciones-llegada","a2.spk.w07-indicaciones","a2.fun.w07-indicar-camino","a2.disc.w07-instruccion-razon"],
+  prerequisites: ["a2-07"],
   goal: {
     canDo: "Al final de esta semana puedes contar tu rutina y un día difícil en pasado con verbos reflexivos (me desperté, me vestía), decir cómo te sentiste (me preocupé, me tranquilicé) y cómo reaccionó la gente con ponerse y quedarse.",
     steps: [

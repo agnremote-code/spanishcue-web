@@ -21,8 +21,8 @@ export const a1w13: Module = {
     "a1.spk.w13-explicar-recorrido",
     "a1.fun.w13-dar-indicaciones",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["a1.gram.g025","a1.gram.g026","a1.voc.w12-voluntariado","a1.pron.w12-porque-por-que","a1.lis.w12-entrevista-biblioteca","a1.read.w12-perfiles-voluntarios","a1.wri.w12-solicitud-voluntario","a1.spk.w12-razones-objetivos","a1.fun.w12-explicar-razones"],
+  prerequisites: ["a1-12"],
   goal: {
     canDo: "Al final de esta semana puedes decir a dónde vas, de dónde vienes, dónde estás, con quién vas y qué no llevas, explicar un recorrido con del… al… y decir cuándo y cómo haces las cosas.",
     canDoEn: "By the end of this week, you can say where you are going, where you are coming from, where you are, who you are going with and what you don't have, explain a route with del… al… and say when and how you do things.",

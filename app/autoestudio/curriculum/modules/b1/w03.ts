@@ -28,8 +28,8 @@ export const b1w03: Module = {
     "b1.fun.w03-aconsejar-reaccionar",
     "b1.disc.w03-queja-constructiva",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["b1.gram.g088","b1.gram.g089","b1.voc.w02-abrir-negocio","b1.pron.w02-vocal-modo","b1.lis.w02-preparar-apertura","b1.read.w02-noticia-barrio","b1.wri.w02-mensaje-deseos","b1.spk.w02-brindis","b1.fun.w02-expresar-deseos","b1.disc.w02-mensaje-ocasion"],
+  prerequisites: ["b1-02"],
   goal: {
     canDo: "Al final de esta semana puedes dar consejos con recomendar, aconsejar y sugerir que, valorar situaciones con es importante que o es una pena que, distinguirlas de lo que afirmas como cierto, y reaccionar con emociones como me alegra que o estoy harto de que.",
     steps: [

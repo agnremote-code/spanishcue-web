@@ -29,8 +29,8 @@ export const b1w06: Module = {
     "b1.fun.w06-valorar-coordinar",
     "b1.disc.w06-secuencia-pasos"
   ],
-  "reviewObjectives": [],
-  "prerequisites": [],
+  reviewObjectives: ["b1.gram.g095","b1.gram.g096","b1.voc.w05-voluntariado-acogida","b1.pron.w05-acento-imperativo","b1.lis.w05-recados-familia","b1.read.w05-blog-voluntaria","b1.wri.w05-correo-consejos","b1.spk.w05-pasar-recados","b1.fun.w05-dar-transmitir-ordenes","b1.disc.w05-correo-experiencia","b1.rev.w05-semanas-1-5"],
+  prerequisites: ["b1-05"],
   "goal": {
     "canDo": "Al final de esta semana puedes reaccionar a lo que tu equipo ya ha hecho («me alegra que hayan…», «dudo que haya…») y organizar lo que pasará después con «cuando», «en cuanto», «hasta que» y «antes de que».",
     "steps": [

@@ -29,8 +29,8 @@ export const b1w12: Module = {
     "b1.fun.w12-describir-cambios",
     "b1.disc.w12-antes-ahora"
   ],
-  "reviewObjectives": [],
-  "prerequisites": [],
+  reviewObjectives: ["b1.gram.g108","b1.gram.g109","b1.voc.w11-habitos-digitales","b1.pron.w11-acento-presente-pasado","b1.lis.w11-charla-teteria","b1.read.w11-blog-dia-31","b1.wri.w11-balance-cambio","b1.spk.w11-contar-reto","b1.fun.w11-contar-cambios","b1.disc.w11-antes-despues"],
+  prerequisites: ["b1-11"],
   "goal": {
     "canDo": "Al final de esta semana puedes contar un cambio de vida: a qué te acostumbraste, de qué te diste cuenta, con qué sueñas, y si te hiciste, te volviste o te convertiste en otra persona.",
     "steps": [

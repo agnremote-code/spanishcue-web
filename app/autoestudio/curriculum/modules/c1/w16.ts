@@ -29,8 +29,8 @@ export const c1w16: Module = {
     "c1.fun.w16-persuadir-preguntando",
     "c1.disc.w16-cierre-retorico",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["c1.gram.g194","c1.gram.g195","c1.voc.w15-cabildo-barrio","c1.pron.w15-cita-en-voz-alta","c1.lis.w15-radio-comunitaria","c1.read.w15-cronica-cabildo","c1.wri.w15-relatoria-reunion","c1.spk.w15-informe-asamblea","c1.fun.w15-transmitir-palabras","c1.disc.w15-integrar-voces","c1.rev.w15-semanas-11-15"],
+  prerequisites: ["c1-15"],
   goal: {
     canDo: "Puedo usar preguntas retóricas para afirmar lo contrario de lo que preguntan, distinguirlas de las preguntas reales y expresar asombro, deseo o valoración con exclamativas complejas bien acentuadas y bien puntuadas.",
     steps: [

@@ -22,8 +22,8 @@ export const a2w10: Module = {
     "a2.disc.w10-evitar-repetir",
     "a2.rev.w10-repaso-semanas-6-9",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["a2.gram.g056","a2.gram.g057","a2.voc.w06-excursion-clima","a2.pron.w06-acento-final-futuro","a2.lis.w06-reunion-volcan","a2.read.w06-correo-agencia","a2.wri.w06-mensaje-visita","a2.spk.w06-planes-promesas","a2.fun.w06-prometer-ofrecer","a2.disc.w06-pasos-del-plan","a2.gram.g058","a2.gram.g059","a2.voc.w07-ciudad-transporte","a2.pron.w07-acento-tu-vos-usted","a2.lis.w07-camino-mercado","a2.read.w07-guia-ciudad","a2.wri.w07-instrucciones-llegada","a2.spk.w07-indicaciones","a2.fun.w07-indicar-camino","a2.disc.w07-instruccion-razon","a2.gram.g060","a2.gram.g061","a2.voc.w08-emociones-viaje","a2.pron.w08-enlace-pronombre","a2.lis.w08-lunes-fuentes","a2.read.w08-blog-familia","a2.wri.w08-dia-dificil","a2.spk.w08-reacciones","a2.fun.w08-contar-reacciones","a2.disc.w08-relato-reacciones","a2.gram.g062","a2.gram.g063","a2.voc.w09-artesania-cuerpo","a2.pron.w09-n-final-plural","a2.lis.w09-taller-anil","a2.read.w09-mensaje-familia","a2.wri.w09-correo-regalos","a2.spk.w09-gustos-regalos","a2.fun.w09-elegir-regalos","a2.disc.w09-reaccionar-gustos"],
+  prerequisites: ["a2-09"],
   goal: {
     canDo: "Al final de esta semana puedes decir quién da qué a quién sin repetir nada (se lo di, te la presto), colocar los pronombres con infinitivo, gerundio e imperativo (dámelo, no se lo des, voy a llevártela) y combinarlo con el futuro, el imperativo, los reflexivos y los verbos como gustar de las semanas anteriores.",
     steps: [

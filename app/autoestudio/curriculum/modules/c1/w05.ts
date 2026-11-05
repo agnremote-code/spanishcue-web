@@ -32,8 +32,8 @@ export const c1w05: Module = {
     "c1.disc.w05-integrar-perspectivas",
     "c1.rev.w05-semanas-1-4",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["c1.gram.g167","c1.gram.g168","c1.voc.w01-convivencia-postura","c1.pron.w01-acento-ara-ara","c1.lis.w01-junta-residencia","c1.read.w01-memoria-curso","c1.wri.w01-carta-balance","c1.spk.w01-balance-junta","c1.fun.w01-matizar-postura","c1.disc.w01-antes-ahora","c1.gram.g169","c1.gram.g170","c1.voc.w02-cooperativa-vivienda","c1.pron.w02-vocal-final-modo","c1.lis.w02-radio-cooperativa","c1.read.w02-cronica-asamblea","c1.wri.w02-opinion-boletin","c1.spk.w02-defensa-asamblea","c1.fun.w02-conceder-sin-ceder","c1.disc.w02-conceder-rebatir","c1.gram.g171","c1.gram.g172","c1.voc.w03-seguro-viaje","c1.pron.w03-como-aviso-causa","c1.lis.w03-maleta-perdida","c1.read.w03-letra-pequena","c1.wri.w03-reclamacion-formal","c1.spk.w03-consejos-viajero","c1.fun.w03-plantear-escenarios","c1.disc.w03-hechos-condiciones","c1.gram.g173","c1.gram.g174","c1.voc.w04-restauracion-atribucion","c1.pron.w04-habra-habria","c1.lis.w04-taller-restauracion","c1.read.w04-articulo-atribucion","c1.wri.w04-informe-hipotesis","c1.spk.w04-presentar-hipotesis","c1.fun.w04-graduar-compromiso","c1.disc.w04-certeza-fuente"],
+  prerequisites: ["c1-04"],
   goal: {
     canDo: "Puedo contar un proyecto largo mostrando cada acción por dentro (en avance, en una fase, repetida o ya disponible), interpretar y usar bien el gerundio y el participio, e integrar lo repasado en las semanas 1 a 4.",
     steps: [

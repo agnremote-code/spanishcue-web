@@ -32,8 +32,8 @@ export const c1w15: Module = {
     "c1.disc.w15-integrar-voces",
     "c1.rev.w15-semanas-11-15",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["c1.gram.g186","c1.gram.g187","c1.voc.w11-reglamento-liga","c1.pron.w11-pausa-desambigua","c1.lis.w11-comite-competicion","c1.read.w11-columna-reglamento","c1.wri.w11-propuesta-reforma","c1.spk.w11-explicar-norma","c1.fun.w11-aclarar-lectura","c1.disc.w11-retomar-sin-dudas","c1.gram.g188","c1.gram.g189","c1.voc.w12-bibliotecas-barrio","c1.pron.w12-inciso-reformulador","c1.lis.w12-entrevista-radio","c1.read.w12-tribuna-bibliotecas","c1.wri.w12-resumen-ejecutivo","c1.spk.w12-explicar-informe","c1.fun.w12-volver-sobre-lo-dicho","c1.disc.w12-densidad-registro","c1.gram.g190","c1.gram.g191","c1.voc.w13-bar-tapas","c1.pron.w13-sino-si-no","c1.lis.w13-reunion-familiar","c1.read.w13-resena-gastronomica","c1.wri.w13-informe-critico","c1.spk.w13-critica-constructiva","c1.fun.w13-discrepar-con-tacto","c1.disc.w13-matizar-argumento","c1.gram.g192","c1.gram.g193","c1.voc.w14-textil-autoria","c1.pron.w14-enfasis-escala","c1.lis.w14-taller-tejedoras","c1.read.w14-cronica-polemica","c1.wri.w14-cronica-equilibrada","c1.spk.w14-informar-polemica","c1.fun.w14-atribuir-y-enfatizar","c1.disc.w14-voces-en-el-texto"],
+  prerequisites: ["c1-14"],
   goal: {
     canDo: "Puedo incorporar a un texto las palabras de otros con citas bien puntuadas, estilo indirecto y resúmenes que interpretan, mantener la concordancia cuando el sujeto es colectivo, compuesto o va detrás del verbo, e integrar lo repasado en las semanas 11 a 14.",
     steps: [

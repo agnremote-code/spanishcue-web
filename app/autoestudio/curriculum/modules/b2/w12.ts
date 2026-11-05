@@ -29,8 +29,8 @@ export const b2w12: Module = {
     "b2.fun.w12-disculparse-matizando",
     "b2.disc.w12-informar-y-asumir"
   ],
-  "reviewObjectives": [],
-  "prerequisites": [],
+  reviewObjectives: ["b2.gram.g147","b2.gram.g148","b2.voc.w11-patrimonio-ferroviario","b2.pron.w11-terminaciones-participio","b2.lis.w11-redaccion-reconstruye","b2.read.w11-noticia-reapertura","b2.wri.w11-nota-boletin","b2.spk.w11-transmitir-mensaje","b2.fun.w11-aclarar-referencias","b2.disc.w11-situar-declaraciones"],
+  prerequisites: ["b2-11"],
   "goal": {
     "canDo": "Puedo elegir entre activa, pasiva con «ser», «se» pasivo y «se» impersonal según el texto, y contar percances con el «se» accidental sin esconder la responsabilidad cuando es mía.",
     "steps": [

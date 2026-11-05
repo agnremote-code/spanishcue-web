@@ -29,8 +29,8 @@ export const b1w07: Module = {
     "b1.fun.w07-pedir-requisitos",
     "b1.disc.w07-requisito-finalidad"
   ],
-  "reviewObjectives": [],
-  "prerequisites": [],
+  reviewObjectives: ["b1.gram.g097","b1.gram.g098","b1.voc.w06-teatro-estreno","b1.pron.w06-h-muda-enlace","b1.lis.w06-ensayo-general","b1.read.w06-bitacora-compania","b1.wri.w06-mensaje-elenco","b1.spk.w06-arenga-preguntas","b1.fun.w06-valorar-coordinar","b1.disc.w06-secuencia-pasos"],
+  prerequisites: ["b1-06"],
   "goal": {
     "canDo": "Al final de esta semana puedes describir la casa, la persona o el servicio que buscas («busco un apartamento que tenga…») y explicar para qué lo necesitas («para que los chicos puedan…»).",
     "steps": [

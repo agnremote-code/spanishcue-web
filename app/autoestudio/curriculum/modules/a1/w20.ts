@@ -21,8 +21,8 @@ export const a1w20: Module = {
     "a1.spk.w20-describir-preguntar",
     "a1.fun.w20-describir-pedir-informacion",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["a1.gram.g034","a1.gram.g035","a1.voc.w16-compras-ropa-cuerpo","a1.pron.w16-z-c-seseo","a1.lis.w16-pulperia-caminata","a1.read.w16-consejos-reserva","a1.wri.w16-mensaje-excursion","a1.spk.w16-lista-molestias","a1.fun.w16-organizar-compra-malestar","a1.gram.g036","a1.gram.g037","a1.voc.w17-objetos-comparar","a1.pron.w17-vocal-final","a1.lis.w17-objetos-perdidos-metro","a1.read.w17-comparar-mochilas","a1.wri.w17-mensaje-objeto-perdido","a1.spk.w17-describir-comparar","a1.fun.w17-identificar-comparar","a1.gram.g038","a1.gram.g039","a1.gram.g040","a1.voc.w18-tiempo-planes","a1.pron.w18-fuerza-dias-meses","a1.lis.w18-reserva-tour-cafe","a1.read.w18-programa-fin-de-semana","a1.wri.w18-plan-visita","a1.spk.w18-horario-planes","a1.fun.w18-organizar-planes","a1.gram.g041","a1.gram.g042","a1.voc.w19-fiesta-preparativos","a1.pron.w19-pronombres-sin-fuerza","a1.lis.w19-videollamada-fiesta","a1.read.w19-directo-festival","a1.wri.w19-mensaje-en-directo","a1.spk.w19-que-estas-haciendo","a1.fun.w19-contar-ahora"],
+  prerequisites: ["a1-19"],
   goal: {
     canDo: "Al final de esta semana puedes construir frases claras para afirmar, preguntar y negar, describir un lugar con ser, hay y estar, pedir la información que necesitas y usar juntas las clases de las semanas 16 a 19. Es el cierre del A1.",
     canDoEn: "By the end of this week, you can build clear sentences to state, ask and deny, describe a place with ser, hay and estar, ask for the information you need and use the classes from weeks 16 to 19 together. It's the end of A1.",

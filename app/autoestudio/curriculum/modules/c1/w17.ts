@@ -30,8 +30,8 @@ export const c1w17: Module = {
     "c1.fun.w17-solicitar-con-cortesia",
     "c1.disc.w17-voz-institucional",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["c1.gram.g196","c1.voc.w16-mercado-barrio","c1.pron.w16-melodia-retorica","c1.lis.w16-radio-comunitaria","c1.read.w16-columna-mercado","c1.wri.w16-columna-vecinal","c1.spk.w16-alegato-asamblea","c1.fun.w16-persuadir-preguntando","c1.disc.w16-cierre-retorico"],
+  prerequisites: ["c1-16"],
   goal: {
     canDo: "Puedo puntuar con seguridad incisos, vocativos y conectores en un texto formal y redactar como institución: con impersonales en el modo adecuado, un trato de usted coherente y palabras exactas.",
     steps: [

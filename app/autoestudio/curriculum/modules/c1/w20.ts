@@ -33,8 +33,8 @@ export const c1w20: Module = {
     "c1.disc.w20-cohesion-referencial",
     "c1.rev.w20-semanas-16-20",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["c1.gram.g196","c1.voc.w16-mercado-barrio","c1.pron.w16-melodia-retorica","c1.lis.w16-radio-comunitaria","c1.read.w16-columna-mercado","c1.wri.w16-columna-vecinal","c1.spk.w16-alegato-asamblea","c1.fun.w16-persuadir-preguntando","c1.disc.w16-cierre-retorico","c1.gram.g197","c1.gram.g198","c1.voc.w17-proyecto-cultural","c1.pron.w17-inciso-tono-bajo","c1.lis.w17-revision-memoria","c1.read.w17-memoria-escuela","c1.wri.w17-solicitud-sala","c1.spk.w17-presentacion-comite","c1.fun.w17-solicitar-con-cortesia","c1.disc.w17-voz-institucional","c1.gram.g199","c1.gram.g200","c1.voc.w18-cuadrilla-txoko","c1.pron.w18-frase-suspendida","c1.lis.w18-anecdota-cena","c1.read.w18-relato-sobremesa","c1.wri.w18-blog-anecdota","c1.spk.w18-contar-anecdota","c1.fun.w18-contar-y-reaccionar","c1.disc.w18-ritmo-narrativo","c1.gram.g201","c1.gram.g202","c1.voc.w19-archivo-sociedad","c1.pron.w19-acento-re-ra","c1.lis.w19-archiveras","c1.read.w19-papeles-camelia","c1.wri.w19-panel-exposicion","c1.spk.w19-visita-archivo","c1.fun.w19-explicar-fuente","c1.disc.w19-citar-y-glosar"],
+  prerequisites: ["c1-19"],
   goal: {
     canDo: "Puedo puntuar y elegir el relativo de un texto cuidado sin ambigüedad, revisar un texto argumentativo completo para que tenga tesis clara, cohesión y afirmaciones bien medidas, e integrar en él lo repasado en las semanas 16 a 19.",
     steps: [

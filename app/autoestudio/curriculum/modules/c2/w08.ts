@@ -31,8 +31,8 @@ export const c2w08: Module = {
     "c2.fun.w08-adaptar-sin-borrar",
     "c2.disc.w08-cita-y-norma",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["c2.gram.g215","c2.voc.w07-trato-cortesia","c2.pron.w07-agudas-voseo","c2.lis.w07-llamada-cambio-trato","c2.read.w07-guia-trato","c2.wri.w07-protocolo-mensajes","c2.spk.w07-negociar-trato","c2.fun.w07-proponer-rechazar-tuteo","c2.disc.w07-coherencia-trato"],
+  prerequisites: ["c2-07"],
   goal: {
     canDo: "Puedo reconocer cómo se reparten el pretérito perfecto y el indefinido según la zona, interpretar el pluscuamperfecto de sorpresa o de información no presenciada, y elegir «le», «lo», «les» y «se lo» según la norma culta panhispánica.",
     steps: [

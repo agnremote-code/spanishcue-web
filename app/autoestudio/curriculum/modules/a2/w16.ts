@@ -21,8 +21,8 @@ export const a2w16: Module = {
     "a2.fun.w16-dar-instrucciones",
     "a2.disc.w16-ordenar-explicar",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["a2.gram.g073","a2.gram.g074","a2.gram.g075","a2.voc.w15-viaje-costa","a2.pron.w15-enlace-preposiciones","a2.lis.w15-llegada-terminal","a2.read.w15-diario-viaje","a2.wri.w15-mensaje-encuentro","a2.spk.w15-describir-ruta","a2.fun.w15-reconocerse-encuentro","a2.disc.w15-ordenar-ruta","a2.rev.w15-semanas-11-15"],
+  prerequisites: ["a2-15"],
   goal: {
     canDo: "Al final de esta semana puedes explicar cómo se prepara un plato o qué no se puede hacer en un lugar sin decir quién lo hace, y contar en orden lo que pasó un día, con sus causas y sus consecuencias.",
     steps: [

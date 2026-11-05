@@ -33,8 +33,8 @@ export const c2w05: Module = {
     "c2.disc.w05-cita-reparacion",
     "c2.rev.w05-semanas-1-5",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["c2.gram.g205","c2.gram.g206","c2.voc.w01-archivo-legado","c2.pron.w01-acento-re-ra","c2.lis.w01-revision-versiones","c2.read.w01-catalogo-documentos","c2.wri.w01-nota-editorial","c2.spk.w01-visita-guiada","c2.fun.w01-glosar-documento","c2.disc.w01-transcripcion-version","c2.gram.g207","c2.voc.w02-cooperativa-asamblea","c2.pron.w02-vocal-modo","c2.lis.w02-revision-acta","c2.read.w02-boletin-cooperativa","c2.wri.w02-comunicado-comision","c2.spk.w02-asamblea-mediacion","c2.fun.w02-matizar-postura","c2.disc.w02-fondo-novedad","c2.gram.g208","c2.gram.g209","c2.voc.w03-redaccion-verificacion","c2.pron.w03-ria-ra","c2.lis.w03-reunion-redaccion","c2.read.w03-carta-directora","c2.wri.w03-cronica-seguimiento","c2.spk.w03-boletin-replica","c2.fun.w03-atribuir-fuente","c2.disc.w03-cambio-plano","c2.gram.g210","c2.voc.w04-lenguaje-claro-feria","c2.pron.w04-pausas-referentes","c2.lis.w04-revision-aviso","c2.read.w04-columna-lenguaje-claro","c2.wri.w04-aviso-reescrito","c2.spk.w04-explicar-negociar","c2.fun.w04-desambiguar","c2.disc.w04-encapsular"],
+  prerequisites: ["c2-04"],
   goal: {
     canDo: "Puedo pasar a limpio lo que se dijo en una reunión: colocar y puntuar incisos, conservar o reparar anacolutos según el texto, recuperar lo elidido sin inventar e integrar lo repasado en las semanas 1 a 4.",
     steps: [

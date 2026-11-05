@@ -30,8 +30,8 @@ export const b1w10: Module = {
     "b1.disc.w10-linea-temporal",
     "b1.rev.w10-repaso-semanas-6-9"
   ],
-  "reviewObjectives": [],
-  "prerequisites": [],
+  reviewObjectives: ["b1.gram.g097","b1.gram.g098","b1.voc.w06-teatro-estreno","b1.pron.w06-h-muda-enlace","b1.lis.w06-ensayo-general","b1.read.w06-bitacora-compania","b1.wri.w06-mensaje-elenco","b1.spk.w06-arenga-preguntas","b1.fun.w06-valorar-coordinar","b1.disc.w06-secuencia-pasos","b1.gram.g099","b1.gram.g100","b1.voc.w07-vivienda-alquiler","b1.pron.w07-pausa-relativa","b1.lis.w07-llamada-inmobiliaria","b1.read.w07-foro-recien-llegados","b1.wri.w07-anuncio-busqueda","b1.spk.w07-describir-busqueda","b1.fun.w07-pedir-requisitos","b1.disc.w07-requisito-finalidad","b1.gram.g101","b1.gram.g102","b1.gram.g103","b1.voc.w08-correr-entrenar","b1.pron.w08-ria-ia","b1.lis.w08-consejos-entrenadora","b1.read.w08-guia-primera-carrera","b1.wri.w08-correo-consejos","b1.spk.w08-plan-negociado","b1.fun.w08-animar-aconsejar","b1.disc.w08-obstaculo-decision","b1.gram.g104","b1.gram.g105","b1.voc.w09-naturaleza-voluntariado","b1.pron.w09-por-para-rapido","b1.lis.w09-reunion-voluntarios","b1.read.w09-normas-proyecto","b1.wri.w09-plan-alternativas","b1.spk.w09-resolver-problema","b1.fun.w09-resolver-imprevistos","b1.disc.w09-plan-alternativo"],
+  prerequisites: ["b1-09"],
   "goal": {
     "canDo": "Al final de esta semana puedes contar cómo empezaste algo («empecé a…», «me puse a…»), qué sigues haciendo («sigo trabajando…») y combinarlo con todo lo que repasaste desde la semana 6 para valorar, planear, pedir y aconsejar.",
     "steps": [

@@ -30,8 +30,8 @@ export const c1w09: Module = {
     "c1.fun.w09-informar-sin-agente",
     "c1.disc.w09-continuidad-tema",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["c1.gram.g180","c1.gram.g181","c1.voc.w08-atencion-socios","c1.pron.w08-atonos-de-que","c1.lis.w08-revision-plantillas","c1.read.w08-guia-estilo","c1.wri.w08-informe-correccion","c1.spk.w08-presentar-criterios","c1.fun.w08-justificar-norma","c1.disc.w08-voz-institucional"],
+  prerequisites: ["c1-08"],
   goal: {
     canDo: "Puedo identificar qué aporta cada «se» (reflexivo, recíproco, medio, pronominal, aspectual, ético o de interés) y elegir entre activa, pasiva con «ser», «se» u otra estructura impersonal según qué es tema y qué es información nueva.",
     steps: [

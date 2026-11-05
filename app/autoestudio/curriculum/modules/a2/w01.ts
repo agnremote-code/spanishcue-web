@@ -21,8 +21,8 @@ export const a2w01: Module = {
     "a2.fun.w01-novedades-experiencias",
     "a2.disc.w01-sumar-experiencias",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["a1.gram.g043","a1.gram.g044","a1.rev.w20-semanas-16-20","a1.voc.w20-canal-informacion","a1.pron.w20-tres-tipos-de-frase","a1.lis.w20-centro-visitantes","a1.read.w20-guia-miraflores","a1.wri.w20-correo-presentacion","a1.spk.w20-describir-preguntar","a1.fun.w20-describir-pedir-informacion"],
+  prerequisites: ["a1-20"],
   goal: {
     canDo: "Al final de esta semana puedes contar qué has hecho hoy o esta semana, hablar de lo que has vivido (o nunca has vivido) y formar los participios más frecuentes sin dudar.",
     steps: [

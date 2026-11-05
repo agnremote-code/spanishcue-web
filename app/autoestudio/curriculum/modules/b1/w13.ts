@@ -30,8 +30,8 @@ export const b1w13: Module = {
     "b1.fun.w13-poner-al-dia",
     "b1.disc.w13-temas-ordenados"
   ],
-  "reviewObjectives": [],
-  "prerequisites": [],
+  reviewObjectives: ["b1.gram.g110","b1.gram.g238","b1.voc.w12-artesania-cambio-vida","b1.pron.w12-preposicion-enlazada","b1.lis.w12-visita-taller","b1.read.w12-perfil-revista","b1.wri.w12-cambio-persona-lugar","b1.spk.w12-mi-cambio","b1.fun.w12-describir-cambios","b1.disc.w12-antes-ahora"],
+  prerequisites: ["b1-12"],
   "goal": {
     "canDo": "Al final de esta semana puedes poner al día a un equipo: decir qué está hecho («Los pedidos los confirmé ayer»), quién se encarga («La que lleva las cuentas es Rosa») y qué te preocupa («Lo que me preocupa es lo del transporte»).",
     "steps": [

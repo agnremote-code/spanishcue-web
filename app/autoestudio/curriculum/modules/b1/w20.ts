@@ -28,8 +28,8 @@ export const b1w20: Module = {
     "b1.disc.w20-argumento-completo",
     "b1.rev.w20-semanas-16-20"
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["b1.gram.g118","b1.gram.g119","b1.voc.w16-taller-artesania","b1.pron.w16-pregunta-referida","b1.lis.w16-encargo-taller","b1.read.w16-como-se-hace","b1.wri.w16-correo-reunion","b1.spk.w16-contar-conversacion","b1.fun.w16-transmitir-mensajes","b1.disc.w16-voces-y-procesos","b1.gram.g120","b1.gram.g121","b1.voc.w17-alojamiento-edificio","b1.pron.w17-participio-ado","b1.lis.w17-entrada-residencia","b1.read.w17-historia-edificio","b1.wri.w17-correo-estado-habitacion","b1.spk.w17-describir-estado","b1.fun.w17-revisar-estado","b1.disc.w17-antes-y-ahora","b1.gram.g237","b1.gram.g122","b1.gram.g123","b1.voc.w18-fiesta-familiar","b1.pron.w18-pronombres-pegados","b1.lis.w18-plan-sorpresa","b1.read.w18-cronica-cumpleanos","b1.wri.w18-cronica-fiesta","b1.spk.w18-organizar-celebracion","b1.fun.w18-organizar-en-grupo","b1.disc.w18-informar-decisiones","b1.gram.g124","b1.gram.g125","b1.voc.w19-viaje-imprevistos","b1.pron.w19-entonacion-relato","b1.lis.w19-anecdota-aeropuerto","b1.read.w19-blog-anecdota","b1.wri.w19-contar-anecdota","b1.spk.w19-anecdota-oral","b1.fun.w19-reaccionar-relato","b1.disc.w19-estructura-anecdota"],
+  prerequisites: ["b1-19"],
   goal: {
     canDo: "Al final de esta semana, y de B1, puedes comparar dos opciones antes de decidir («si nos quedamos, ganamos menos; en el interior llegaríamos a más gente»), decir qué es probable, aconsejar poniéndote en el lugar del otro, defender una propuesta con argumentos y una concesión, y usar en el mismo texto la gramática de las semanas 16 a 19.",
     steps: [

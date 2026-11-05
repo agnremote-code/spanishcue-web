@@ -31,8 +31,8 @@ export const c2w03: Module = {
     "c2.fun.w03-atribuir-fuente",
     "c2.disc.w03-cambio-plano",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["c2.gram.g207","c2.voc.w02-cooperativa-asamblea","c2.pron.w02-vocal-modo","c2.lis.w02-revision-acta","c2.read.w02-boletin-cooperativa","c2.wri.w02-comunicado-comision","c2.spk.w02-asamblea-mediacion","c2.fun.w02-matizar-postura","c2.disc.w02-fondo-novedad"],
+  prerequisites: ["c2-02"],
   goal: {
     canDo: "Puedo reconocer y evaluar el condicional de rumor, atribuir la información a su fuente y encadenar tiempos verbales coherentes cuando relato lo que alguien dijo o cambio de plano en una narración.",
     steps: [

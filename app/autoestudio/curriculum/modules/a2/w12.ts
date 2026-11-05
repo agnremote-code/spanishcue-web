@@ -21,8 +21,8 @@ export const a2w12: Module = {
     "a2.fun.w12-elegir-entre-opciones",
     "a2.disc.w12-justificar-eleccion",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["a2.gram.g066","a2.gram.g067","a2.voc.w11-barrio-vecinos","a2.pron.w11-que-sin-fuerza","a2.lis.w11-paseo-barrio","a2.read.w11-correo-barrio","a2.wri.w11-guia-barrio","a2.spk.w11-presentar-barrio","a2.fun.w11-definir-sin-palabra","a2.disc.w11-unir-ideas"],
+  prerequisites: ["a2-11"],
   goal: {
     canDo: "Al final de esta semana puedes comparar dos cosas (más caro que, tan grande como, mejor que), describir su estado (la cocina está reformada), destacar una entre varias (el más barato de los tres, la mejor vista de la ciudad) e intensificar con -ísimo y ¡qué…! para elegir y justificar tu elección.",
     steps: [

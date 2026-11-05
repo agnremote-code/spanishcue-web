@@ -31,8 +31,8 @@ export const c2w14: Module = {
     "c2.fun.w14-descifrar-norma",
     "c2.disc.w14-version-fiel",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["c2.gram.g224","c2.gram.g225","c2.voc.w13-estudio-ruido","c2.pron.w13-tono-marcadores","c2.lis.w13-reunion-titulo","c2.read.w13-articulo-exploratorio","c2.wri.w13-seccion-discusion","c2.spk.w13-defender-turno","c2.fun.w13-aceptar-con-condiciones","c2.disc.w13-asociacion-causa"],
+  prerequisites: ["c2-13"],
   goal: {
     canDo: "Puedo localizar en una frase jurídica o administrativa densa el verbo principal, el sujeto, las condiciones, las excepciones, los plazos y las reservas, y reescribirla en lenguaje claro sin alterar lo que obliga, permite o excluye.",
     steps: [

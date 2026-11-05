@@ -20,8 +20,8 @@ export const a1w04: Module = {
     "a1.spk.w04-senalar-cosas",
     "a1.fun.w04-senalar-pertenencia",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["a1.gram.g005","a1.gram.g006","a1.gram.g007","a1.voc.w03-colores-artesania","a1.pron.w03-r-suave-fuerte","a1.lis.w03-puesto-artesanias","a1.read.w03-blog-regalos","a1.wri.w03-describir-regalos","a1.spk.w03-describir-objetos","a1.fun.w03-describir-opinar"],
+  prerequisites: ["a1-03"],
   goal: {
     canDo: "Al final de esta semana puedes señalar cosas cerca, un poco lejos o muy lejos, preguntar qué es algo que no conoces y decir de quién es cada cosa.",
     canDoEn: "By the end of this week, you can point to things that are near, a bit further away or far away, ask what something you don't know is, and say who each thing belongs to.",

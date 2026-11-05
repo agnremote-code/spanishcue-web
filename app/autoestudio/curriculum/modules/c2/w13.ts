@@ -32,8 +32,8 @@ export const c2w13: Module = {
     "c2.fun.w13-aceptar-con-condiciones",
     "c2.disc.w13-asociacion-causa",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["c2.gram.g223","c2.voc.w12-mesa-y-critica","c2.pron.w12-tono-ironico","c2.lis.w12-podcast-resena","c2.read.w12-critica-gastronomica","c2.wri.w12-resena-equilibrada","c2.spk.w12-respuesta-propietaria","c2.fun.w12-leer-ironia","c2.disc.w12-alcance-negacion"],
+  prerequisites: ["c2-12"],
   goal: {
     canDo: "Puedo discrepar, aceptar con condiciones y defender mi turno en una reunión con marcadores conversacionales precisos, y redactar un texto académico que afirme exactamente lo que los datos permiten.",
     steps: [

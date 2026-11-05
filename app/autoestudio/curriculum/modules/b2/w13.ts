@@ -29,8 +29,8 @@ export const b2w13: Module = {
     "b2.fun.w13-plantear-inquietudes",
     "b2.disc.w13-comentar-hechos"
   ],
-  "reviewObjectives": [],
-  "prerequisites": [],
+  reviewObjectives: ["b2.gram.g149","b2.gram.g150","b2.voc.w12-excursion-yacimiento","b2.pron.w12-clitico-agrupado","b2.lis.w12-informe-excursion","b2.read.w12-diario-campana","b2.wri.w12-correo-disculpa","b2.spk.w12-explicar-percances","b2.fun.w12-disculparse-matizando","b2.disc.w12-informar-y-asumir"],
+  prerequisites: ["b2-12"],
   "goal": {
     "canDo": "Puedo usar verbos con preposición sin perderla delante de «que», comentar un hecho con «el hecho de que» y elegir el modo después de sustantivos como «la posibilidad de que» o «la noticia de que».",
     "steps": [

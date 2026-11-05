@@ -29,8 +29,8 @@ export const c2w04: Module = {
     "c2.fun.w04-desambiguar",
     "c2.disc.w04-encapsular",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["c2.gram.g208","c2.gram.g209","c2.voc.w03-redaccion-verificacion","c2.pron.w03-ria-ra","c2.lis.w03-reunion-redaccion","c2.read.w03-carta-directora","c2.wri.w03-cronica-seguimiento","c2.spk.w03-boletin-replica","c2.fun.w03-atribuir-fuente","c2.disc.w03-cambio-plano"],
+  prerequisites: ["c2-03"],
   goal: {
     canDo: "Puedo escribir y revisar oraciones largas con varios niveles de subordinación sin que el lector pierda el sujeto, el verbo principal ni el referente de cada pronombre.",
     steps: [

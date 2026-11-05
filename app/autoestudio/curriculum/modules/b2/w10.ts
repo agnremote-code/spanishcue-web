@@ -29,8 +29,8 @@ export const b2w10: Module = {
     "b2.disc.w10-transmitir-con-precision",
     "b2.rev.w10-integracion",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["b2.gram.g137","b2.gram.g138","b2.voc.w06-agua-vinedo","b2.pron.w06-modo-al-oido","b2.lis.w06-reunion-finca","b2.read.w06-columna-agua","b2.wri.w06-carta-asamblea","b2.spk.w06-sostener-postura","b2.fun.w06-conceder-mantener","b2.disc.w06-orden-registro","b2.gram.g139","b2.gram.g140","b2.voc.w07-sismo-simulacro","b2.pron.w07-bloques-conectores","b2.lis.w07-reunion-simulacro","b2.read.w07-boletin-escuela","b2.wri.w07-correo-familias","b2.spk.w07-explicar-protocolo","b2.fun.w07-planificar-prevenir","b2.disc.w07-secuencia-finalidad","b2.gram.g141","b2.gram.g142","b2.voc.w08-telar-oficio","b2.pron.w08-grupo-relativo","b2.lis.w08-taller-telar","b2.read.w08-reportaje-tejedoras","b2.wri.w08-quienes-somos","b2.spk.w08-presentar-oficio","b2.fun.w08-describir-proceso","b2.disc.w08-precisar-referentes","b2.gram.g143","b2.gram.g144","b2.voc.w09-patrimonio-urbano","b2.pron.w09-pausa-comentario","b2.lis.w09-grabacion-audioguia","b2.read.w09-guion-recorrido","b2.wri.w09-ficha-patrimonio","b2.spk.w09-guiar-recorrido","b2.fun.w09-presentar-comentar","b2.disc.w09-encadenar-comentarios"],
+  prerequisites: ["b2-09"],
   goal: {
     canDo: "Puedo transmitir lo que otras personas dijeron, preguntaron o pidieron, hablar de personas y lugares sin identificar y combinar en un mismo texto todas las estructuras de las semanas 6 a 10.",
     steps: [

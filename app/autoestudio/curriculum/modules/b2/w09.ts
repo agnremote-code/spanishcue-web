@@ -27,8 +27,8 @@ export const b2w09: Module = {
     "b2.fun.w09-presentar-comentar",
     "b2.disc.w09-encadenar-comentarios",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["b2.gram.g141","b2.gram.g142","b2.voc.w08-telar-oficio","b2.pron.w08-grupo-relativo","b2.lis.w08-taller-telar","b2.read.w08-reportaje-tejedoras","b2.wri.w08-quienes-somos","b2.spk.w08-presentar-oficio","b2.fun.w08-describir-proceso","b2.disc.w08-precisar-referentes"],
+  prerequisites: ["b2-08"],
   goal: {
     canDo: "Puedo presentar personas y lugares por lo que les pertenece con «cuyo» o con alternativas naturales, y comentar hechos completos o encadenar sus consecuencias con «lo cual», «lo que» y «por lo que».",
     steps: [

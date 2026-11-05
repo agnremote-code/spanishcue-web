@@ -20,8 +20,8 @@ export const a1w09: Module = {
     "a1.spk.w09-proponer-pedir",
     "a1.fun.w09-planear-pedir",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["a1.gram.g016","a1.gram.g017","a1.gram.g018","a1.voc.w08-trabajo-semana","a1.pron.w08-silaba-presente","a1.lis.w08-primer-dia-radio","a1.read.w08-perfil-locutora","a1.wri.w08-mi-semana","a1.spk.w08-agenda-semanal","a1.fun.w08-hablar-rutina-trabajo"],
+  prerequisites: ["a1-08"],
   goal: {
     canDo: "Al final de esta semana puedes decir qué haces, qué pones, a qué hora sales y de dónde vienes, y decir qué quieres, qué puedes hacer y qué pides en una cafetería.",
     canDoEn: "By the end of this week, you can say what you do, what you put, what time you leave and where you're coming from, and say what you want, what you can do and what you order in a café.",

@@ -33,8 +33,8 @@ export const c2w20: Module = {
     "c2.disc.w20-contraargumento-justo",
     "c2.rev.w20-integracion-semanas-16-19",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["c2.gram.g229","c2.gram.g230","c2.voc.w16-ciencia-agua","c2.pron.w16-incisos-cautela","c2.lis.w16-resumen-boletin","c2.read.w16-columna-titulares","c2.wri.w16-resena-divulgativa","c2.spk.w16-explicar-estudio","c2.fun.w16-corregir-exageracion","c2.disc.w16-registro-conectores","c2.gram.g231","c2.voc.w17-puerto-catalogo","c2.pron.w17-leer-signos","c2.lis.w17-revision-catalogo","c2.read.w17-ensayo-puerto","c2.wri.w17-texto-presentacion","c2.spk.w17-justificar-signos","c2.fun.w17-negociar-correccion","c2.disc.w17-jerarquia-fronteras","c2.gram.g232","c2.gram.g233","c2.voc.w18-textil-informe","c2.pron.w18-tilde-y-acento","c2.lis.w18-pruebas-informe","c2.read.w18-capitulo-cooperativa","c2.wri.w18-apertura-capitulo","c2.spk.w18-presentar-informe","c2.fun.w18-aclarar-referente","c2.disc.w18-cadena-referencia","c2.gram.g234","c2.voc.w19-tianguis-prensa","c2.pron.w19-foco-agente","c2.lis.w19-taller-lectura","c2.read.w19-nota-coberturas","c2.wri.w19-nota-critica","c2.spk.w19-moderar-analisis","c2.fun.w19-desmontar-titular","c2.disc.w19-analizar-sin-militar"],
+  prerequisites: ["c2-19"],
   goal: {
     canDo: "Puedo leer varias fuentes enfrentadas sobre un asunto público, mediarlas para un público no experto sin alterar su compromiso, escribir y revisar un ensayo argumentativo completo y defender mi postura oralmente con firmeza y cortesía, integrando todo lo repasado en el último bloque del curso.",
     steps: [

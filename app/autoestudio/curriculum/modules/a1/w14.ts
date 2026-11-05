@@ -20,8 +20,8 @@ export const a1w14: Module = {
     "a1.spk.w14-contar-rutina",
     "a1.fun.w14-hablar-habitos",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["a1.gram.g027","a1.gram.g028","a1.gram.g029","a1.voc.w13-paseo-ciudad","a1.pron.w13-al-del-d-suave","a1.lis.w13-llamada-encuentro","a1.read.w13-indicaciones-anfitrion","a1.wri.w13-indicaciones-amigo","a1.spk.w13-explicar-recorrido","a1.fun.w13-dar-indicaciones"],
+  prerequisites: ["a1-13"],
   goal: {
     canDo: "Al final de esta semana puedes contar tu rutina diaria con verbos como levantarse, ducharse o acostarse, y decir con qué frecuencia haces cada cosa.",
     canDoEn: "By the end of this week, you can describe your daily routine with verbs like levantarse, ducharse or acostarse, and say how often you do each thing.",

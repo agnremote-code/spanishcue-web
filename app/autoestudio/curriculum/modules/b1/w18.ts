@@ -28,8 +28,8 @@ export const b1w18: Module = {
     "b1.fun.w18-organizar-en-grupo",
     "b1.disc.w18-informar-decisiones"
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["b1.gram.g120","b1.gram.g121","b1.voc.w17-alojamiento-edificio","b1.pron.w17-participio-ado","b1.lis.w17-entrada-residencia","b1.read.w17-historia-edificio","b1.wri.w17-correo-estado-habitacion","b1.spk.w17-describir-estado","b1.fun.w17-revisar-estado","b1.disc.w17-antes-y-ahora"],
+  prerequisites: ["b1-17"],
   goal: {
     canDo: "Al final de esta semana puedes elegir el verbo que dice lo que quieres decir («es listo» o «está listo»), combinar dos pronombres en su orden y en su sitio («se lo damos», «no se lo digan», «vamos a dárselo») e informar de lo que decidió un grupo con la concordancia correcta («la mayoría votó», «había cuarenta personas»).",
     steps: [

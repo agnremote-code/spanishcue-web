@@ -31,8 +31,8 @@ export const c2w11: Module = {
     "c2.fun.w11-rechazar-sin-romper",
     "c2.disc.w11-hecho-sospecha-rumor",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["c2.gram.g219","c2.gram.g220","c2.voc.w10-patrimonio-debate","c2.pron.w10-foco-contrastivo","c2.lis.w10-entrevista-radio","c2.read.w10-articulo-huaca","c2.wri.w10-articulo-opinion","c2.spk.w10-intervencion-audiencia","c2.fun.w10-desmontar-presuposicion","c2.disc.w10-progresion-tematica","c2.rev.w10-integracion-semanas-6-9"],
+  prerequisites: ["c2-10"],
   goal: {
     canDo: "Puedo ajustar con precisión cuánto me comprometo con lo que digo, insinuar sin afirmar cuando conviene y elegir la dosis de cortesía adecuada para pedir, rechazar, discrepar o criticar sin dañar una relación.",
     steps: [

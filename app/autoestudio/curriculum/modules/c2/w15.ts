@@ -34,8 +34,8 @@ export const c2w15: Module = {
     "c2.disc.w15-fuente-y-dato",
     "c2.rev.w15-semanas-11-15",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["c2.gram.g221","c2.gram.g222","c2.voc.w11-oferta-local","c2.pron.w11-reserva-oido","c2.lis.w11-borradores-respuesta","c2.read.w11-columna-libreria","c2.wri.w11-carta-rechazo","c2.spk.w11-reunion-propietario","c2.fun.w11-rechazar-sin-romper","c2.disc.w11-hecho-sospecha-rumor","c2.gram.g223","c2.voc.w12-mesa-y-critica","c2.pron.w12-tono-ironico","c2.lis.w12-podcast-resena","c2.read.w12-critica-gastronomica","c2.wri.w12-resena-equilibrada","c2.spk.w12-respuesta-propietaria","c2.fun.w12-leer-ironia","c2.disc.w12-alcance-negacion","c2.gram.g224","c2.gram.g225","c2.voc.w13-estudio-ruido","c2.pron.w13-tono-marcadores","c2.lis.w13-reunion-titulo","c2.read.w13-articulo-exploratorio","c2.wri.w13-seccion-discusion","c2.spk.w13-defender-turno","c2.fun.w13-aceptar-con-condiciones","c2.disc.w13-asociacion-causa","c2.gram.g226","c2.voc.w14-copropiedad","c2.pron.w14-lectura-clausula","c2.lis.w14-consulta-administradora","c2.read.w14-boletin-clausula","c2.wri.w14-circular-clara","c2.spk.w14-explicar-asamblea","c2.fun.w14-descifrar-norma","c2.disc.w14-version-fiel"],
+  prerequisites: ["c2-14"],
   goal: {
     canDo: "Puedo convertir un informe técnico en una noticia neutral y exacta, con titular, entradilla, citas bien puntuadas, verbos de atribución justos y cifras precisas, explicar su contenido en lenguaje cotidiano sin perder ni inventar información e integrar lo repasado en las semanas 11 a 14.",
     steps: [

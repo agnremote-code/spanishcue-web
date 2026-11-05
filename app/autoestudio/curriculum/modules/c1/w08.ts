@@ -31,8 +31,8 @@ export const c1w08: Module = {
     "c1.fun.w08-justificar-norma",
     "c1.disc.w08-voz-institucional",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["c1.gram.g178","c1.gram.g179","c1.voc.w07-cine-patrimonio","c1.pron.w07-pausa-explicativa","c1.lis.w07-entrevista-memoria","c1.read.w07-tribuna-cine","c1.wri.w07-solicitud-proteccion","c1.spk.w07-defensa-publica","c1.fun.w07-atribuir-testimonios","c1.disc.w07-cohesion-relativos"],
+  prerequisites: ["c1-07"],
   goal: {
     canDo: "Puedo decidir con criterio si una subordinada con «que» lleva preposición, elegir entre lo, la y le según la función y el verbo, y distinguir los usos admitidos por la norma de los que conviene corregir en un texto institucional.",
     steps: [

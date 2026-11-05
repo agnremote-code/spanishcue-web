@@ -29,8 +29,8 @@ export const b1w09: Module = {
     "b1.fun.w09-resolver-imprevistos",
     "b1.disc.w09-plan-alternativo"
   ],
-  "reviewObjectives": [],
-  "prerequisites": [],
+  reviewObjectives: ["b1.gram.g101","b1.gram.g102","b1.gram.g103","b1.voc.w08-correr-entrenar","b1.pron.w08-ria-ia","b1.lis.w08-consejos-entrenadora","b1.read.w08-guia-primera-carrera","b1.wri.w08-correo-consejos","b1.spk.w08-plan-negociado","b1.fun.w08-animar-aconsejar","b1.disc.w08-obstaculo-decision"],
+  prerequisites: ["b1-08"],
   "goal": {
     "canDo": "Al final de esta semana puedes organizar un viaje o un proyecto con alternativas («si llueve, salimos por la tarde; si no, a las seis»), aconsejar sin dar órdenes («yo llevaría botas») y elegir bien entre «por» y «para».",
     "steps": [

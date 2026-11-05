@@ -31,8 +31,8 @@ export const c2w16: Module = {
     "c2.fun.w16-corregir-exageracion",
     "c2.disc.w16-registro-conectores",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["c2.gram.g227","c2.gram.g228","c2.voc.w15-arrecife-redaccion","c2.pron.w15-cifras-en-voz-alta","c2.lis.w15-mesa-de-redaccion","c2.read.w15-noticia-corales","c2.wri.w15-noticia-precisa","c2.spk.w15-explicar-en-radio","c2.fun.w15-traducir-sin-traicionar","c2.disc.w15-fuente-y-dato","c2.rev.w15-semanas-11-15"],
+  prerequisites: ["c2-15"],
   goal: {
     canDo: "Puedo resumir lo que afirma otra persona con exactamente su grado de certeza, su atribución y su alcance, y enlazar mis propios textos con conectores poco frecuentes usados con su valor preciso y sin pedantería.",
     steps: [

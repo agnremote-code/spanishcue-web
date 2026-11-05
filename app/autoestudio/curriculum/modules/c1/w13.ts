@@ -30,8 +30,8 @@ export const c1w13: Module = {
     "c1.fun.w13-discrepar-con-tacto",
     "c1.disc.w13-matizar-argumento",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["c1.gram.g188","c1.gram.g189","c1.voc.w12-bibliotecas-barrio","c1.pron.w12-inciso-reformulador","c1.lis.w12-entrevista-radio","c1.read.w12-tribuna-bibliotecas","c1.wri.w12-resumen-ejecutivo","c1.spk.w12-explicar-informe","c1.fun.w12-volver-sobre-lo-dicho","c1.disc.w12-densidad-registro"],
+  prerequisites: ["c1-12"],
   goal: {
     canDo: "Puedo corregir, contraponer y limitar una idea con el conector preciso y el modo adecuado, y dar una opinión crítica rebajando su fuerza lo justo para que el mensaje llegue y la relación no se resienta.",
     steps: [

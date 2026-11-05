@@ -20,8 +20,8 @@ export const a1w07: Module = {
     "a1.spk.w07-edades-regalos",
     "a1.fun.w07-describir-objeto",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["a1.gram.g012","a1.gram.g013","a1.voc.w06-estados-centro","a1.pron.w06-hay-ahi-esta","a1.lis.w06-hostal-videollamada","a1.read.w06-guia-hostal","a1.wri.w06-mensaje-viaje","a1.spk.w06-donde-estoy","a1.fun.w06-preguntar-servicios"],
+  prerequisites: ["a1-06"],
   goal: {
     canDo: "Al final de esta semana puedes decir tu edad y la de otras personas, decir si tienes hambre, sed, frío o sueño, y describir un objeto con precisión: una taza grande de talavera para el café.",
     canDoEn: "By the end of this week, you can say your age and other people's, say if you are hungry, thirsty, cold or sleepy, and describe an object precisely: a big talavera mug for coffee.",

@@ -29,8 +29,8 @@ export const c2w17: Module = {
     "c2.fun.w17-negociar-correccion",
     "c2.disc.w17-jerarquia-fronteras",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["c2.gram.g229","c2.gram.g230","c2.voc.w16-ciencia-agua","c2.pron.w16-incisos-cautela","c2.lis.w16-resumen-boletin","c2.read.w16-columna-titulares","c2.wri.w16-resena-divulgativa","c2.spk.w16-explicar-estudio","c2.fun.w16-corregir-exageracion","c2.disc.w16-registro-conectores"],
+  prerequisites: ["c2-16"],
   goal: {
     canDo: "Puedo puntuar textos complejos según la Ortografía académica: decidir entre coma, punto y coma y punto, usar los dos puntos con cada una de sus funciones, anidar incisos y citas sin confundir al lector y leer en voz alta haciendo oír esa puntuación.",
     steps: [

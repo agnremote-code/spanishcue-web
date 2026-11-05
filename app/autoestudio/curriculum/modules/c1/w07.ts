@@ -30,8 +30,8 @@ export const c1w07: Module = {
     "c1.fun.w07-atribuir-testimonios",
     "c1.disc.w07-cohesion-relativos",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["c1.gram.g177","c1.voc.w06-consorcio-actas","c1.pron.w06-pausa-absoluta","c1.lis.w06-redaccion-acta","c1.read.w06-actas-edificio","c1.wri.w06-circular-vecinos","c1.spk.w06-relato-asamblea","c1.fun.w06-resumir-decisiones","c1.disc.w06-registro-condensado"],
+  prerequisites: ["c1-06"],
   goal: {
     canDo: "Puedo decidir si un infinitivo basta o hace falta «que» + verbo conjugado según quién realiza la acción, situar hechos anteriores con «haber» + participio, y enlazar información con «el cual», «cuyo», «lo cual» y perífrasis de relativo en un texto cuidado.",
     steps: [

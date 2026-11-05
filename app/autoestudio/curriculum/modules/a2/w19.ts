@@ -21,8 +21,8 @@ export const a2w19: Module = {
     "a2.fun.w19-preguntar-cortes",
     "a2.disc.w19-estado-proceso",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["a2.gram.g080","a2.gram.g081","a2.voc.w18-finca-cafe","a2.pron.w18-pregunta-alternativa","a2.lis.w18-bienvenida-finca","a2.read.w18-correo-voluntarios","a2.wri.w18-normas-voluntariado","a2.spk.w18-explicar-normas","a2.fun.w18-normas-consejos","a2.disc.w18-ordenar-informacion"],
+  prerequisites: ["a2-18"],
   goal: {
     canDo: "Al final de esta semana puedes contar qué acabas de hacer, qué sigue pasando y cómo están las cosas ahora, y pedir información a un desconocido o decir lo que no sabes con preguntas dentro de la frase.",
     steps: [

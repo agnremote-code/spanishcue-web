@@ -21,8 +21,8 @@ export const a1w03: Module = {
     "a1.spk.w03-describir-objetos",
     "a1.fun.w03-describir-opinar",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["a1.gram.g003","a1.gram.g004","a1.voc.w02-barrio-mercado","a1.pron.w02-silaba-fuerte","a1.lis.w02-preguntar-mercado","a1.read.w02-mensaje-anfitriona","a1.wri.w02-describir-calle","a1.spk.w02-mi-barrio","a1.fun.w02-preguntar-hay"],
+  prerequisites: ["a1-02"],
   goal: {
     canDo: "Al final de esta semana puedes describir varias cosas con su color, su tamaño y su origen, poner el adjetivo en su sitio y dar tu opinión con gran, buen o mal.",
     canDoEn: "By the end of this week, you can describe several things by their colour, size and origin, put the adjective in the right place and give your opinion with gran, buen or mal.",

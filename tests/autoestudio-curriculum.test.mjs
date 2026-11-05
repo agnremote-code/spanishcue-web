@@ -115,7 +115,9 @@ test('coverage matrix: every taught grammar, vocabulary, pronunciation and funct
   const rows = course.coverageMatrix(modulesByLevel, course.allObjectives).filter((row) => published.includes(row.level));
   for (const row of rows) {
     assert.equal(row.introducedIn.length, 1, `${row.id} introduced once`);
-    if (['grammar', 'vocabulary', 'pronunciation', 'functional', 'discourse'].includes(row.domain)) assert.ok(row.reviewedIn.length >= 1, `${row.id} reviewed`);
+    // The last week of the whole course has no later week to come back in.
+    const last = row.level === published.at(-1) && row.introducedIn[0] === `${row.level}-20`;
+    if (!last && ['grammar', 'vocabulary', 'pronunciation', 'functional', 'discourse'].includes(row.domain)) assert.ok(row.reviewedIn.length >= 1, `${row.id} reviewed`);
   }
 });
 

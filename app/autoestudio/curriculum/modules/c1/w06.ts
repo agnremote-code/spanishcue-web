@@ -28,8 +28,8 @@ export const c1w06: Module = {
     "c1.fun.w06-resumir-decisiones",
     "c1.disc.w06-registro-condensado",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["c1.gram.g175","c1.gram.g176","c1.voc.w05-taller-fallero","c1.pron.w05-gerundio-encliticos","c1.lis.w05-taller-fallas","c1.read.w05-reportaje-taller","c1.wri.w05-cronica-proceso","c1.spk.w05-balance-proyecto","c1.fun.w05-informar-progreso","c1.disc.w05-integrar-perspectivas","c1.rev.w05-semanas-1-4"],
+  prerequisites: ["c1-05"],
   goal: {
     canDo: "Puedo condensar subordinadas temporales, causales y condicionales con absolutas de participio, con «tras» o «al» + infinitivo o con un grupo nominal, y deshacer la reducción cuando el texto pide claridad.",
     steps: [

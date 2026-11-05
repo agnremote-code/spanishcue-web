@@ -31,8 +31,8 @@ export const c1w14: Module = {
     "c1.fun.w14-atribuir-y-enfatizar",
     "c1.disc.w14-voces-en-el-texto",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["c1.gram.g190","c1.gram.g191","c1.voc.w13-bar-tapas","c1.pron.w13-sino-si-no","c1.lis.w13-reunion-familiar","c1.read.w13-resena-gastronomica","c1.wri.w13-informe-critico","c1.spk.w13-critica-constructiva","c1.fun.w13-discrepar-con-tacto","c1.disc.w13-matizar-argumento"],
+  prerequisites: ["c1-13"],
   goal: {
     canDo: "Puedo intensificar con el recurso y el registro adecuados (incluso, ni siquiera, lo… que, vaya si, de lo más) y atribuir cada dato a su fuente mostrando si lo transmito, lo doy por cierto o me distancio de él.",
     steps: [

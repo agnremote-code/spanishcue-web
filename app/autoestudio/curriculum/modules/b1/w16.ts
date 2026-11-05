@@ -27,8 +27,8 @@ export const b1w16: Module = {
     "b1.fun.w16-transmitir-mensajes",
     "b1.disc.w16-voces-y-procesos",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["b1.gram.g116","b1.gram.g117","b1.voc.w15-mudanza-ciudad","b1.pron.w15-asi-que-sino","b1.lis.w15-debate-familiar","b1.read.w15-columna-quedarse","b1.wri.w15-texto-argumentativo","b1.spk.w15-defender-decision","b1.fun.w15-argumentar-decidir","b1.disc.w15-argumento-ordenado","b1.rev.w15-semanas-11-15"],
+  prerequisites: ["b1-15"],
   goal: {
     canDo: "Al final de esta semana puedes contar a otra persona lo que alguien te dijo, te preguntó o te pidió («dijo que estaba lista», «me pidió que la llamara») y explicar cómo se hace algo o cómo se vive en un lugar sin nombrar a nadie («se pinta a mano», «aquí se trabaja despacio»).",
     steps: [

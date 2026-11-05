@@ -31,8 +31,8 @@ export const b2w05: Module = {
     "b2.disc.w05-normas-condiciones",
     "b2.rev.w05-integrar-semanas-1-4"
   ],
-  "reviewObjectives": [],
-  "prerequisites": [],
+  reviewObjectives: ["b2.gram.g128","b2.gram.g129","b2.voc.w01-negocio-familiar","b2.pron.w01-acento-ra","b2.lis.w01-reunion-familiar","b2.read.w01-cronica-reapertura","b2.wri.w01-correo-decisiones","b2.spk.w01-relatar-encargos","b2.fun.w01-transmitir-peticiones","b2.disc.w01-relato-encargos","b2.gram.g130","b2.gram.g131","b2.voc.w02-participacion-vecinal","b2.pron.w02-presente-imperfecto-subj","b2.lis.w02-entrevista-radio","b2.read.w02-boletin-vecinal","b2.wri.w02-propuesta-municipio","b2.spk.w02-defender-proyecto","b2.fun.w02-plantear-hipotesis","b2.disc.w02-marco-temporal","b2.gram.g132","b2.gram.g133","b2.voc.w03-competicion-remo","b2.pron.w03-habia-habria","b2.lis.w03-analisis-regata","b2.read.w03-carta-entrenadora","b2.wri.w03-informe-lecciones","b2.spk.w03-revisar-decision","b2.fun.w03-analizar-decisiones","b2.disc.w03-hecho-alternativa","b2.gram.g134","b2.gram.g135","b2.voc.w04-mudanza-obra","b2.pron.w04-reproche-suave","b2.lis.w04-podcast-decisiones","b2.read.w04-blog-regreso","b2.wri.w04-reclamo-cortes","b2.spk.w04-otra-vida","b2.fun.w04-reprochar-atenuar","b2.disc.w04-pasado-presente"],
+  prerequisites: ["b2-04"],
   "goal": {
     "canDo": "Puedo poner condiciones con distintos nexos, describir comportamientos con «como si» y combinar todas las formas de subjuntivo y de hipótesis de las semanas 1 a 4 en una negociación real.",
     "steps": [

@@ -31,8 +31,8 @@ export const c1w11: Module = {
     "c1.fun.w11-aclarar-lectura",
     "c1.disc.w11-retomar-sin-dudas",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["c1.gram.g184","c1.gram.g185","c1.voc.w10-casona-cultura","c1.pron.w10-foco-dislocacion","c1.lis.w10-guion-podcast","c1.read.w10-cronica-casona","c1.wri.w10-cronica-inauguracion","c1.spk.w10-visita-casona","c1.fun.w10-destacar-contrastar","c1.disc.w10-progresion-tematica","c1.rev.w10-repaso-semanas-6-10"],
+  prerequisites: ["c1-10"],
   goal: {
     canDo: "Puedo reconocer cuándo una frase admite dos lecturas plausibles, reformularla para que solo quede la que quiero, y omitir o retomar elementos con elipsis, proformas y anáforas sin perder al lector.",
     steps: [

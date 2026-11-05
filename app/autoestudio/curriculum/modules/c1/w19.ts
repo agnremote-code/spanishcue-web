@@ -31,8 +31,8 @@ export const c1w19: Module = {
     "c1.fun.w19-explicar-fuente",
     "c1.disc.w19-citar-y-glosar",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["c1.gram.g199","c1.gram.g200","c1.voc.w18-cuadrilla-txoko","c1.pron.w18-frase-suspendida","c1.lis.w18-anecdota-cena","c1.read.w18-relato-sobremesa","c1.wri.w18-blog-anecdota","c1.spk.w18-contar-anecdota","c1.fun.w18-contar-y-reaccionar","c1.disc.w18-ritmo-narrativo"],
+  prerequisites: ["c1-18"],
   goal: {
     canDo: "Puedo reconocer el pretérito anterior y el futuro de subjuntivo en textos históricos, jurídicos y literarios, interpretar lo que expresan y reformularlos en español actual conservando el orden de los hechos y el carácter eventual de la norma.",
     steps: [

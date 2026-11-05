@@ -30,8 +30,8 @@ export const c1w01: Module = {
     "c1.fun.w01-matizar-postura",
     "c1.disc.w01-antes-ahora",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["b2.gram.g165","b2.gram.g166","b2.voc.w20-ciudad-debate","b2.pron.w20-conectores-pausas","b2.lis.w20-debate-radio","b2.read.w20-columna-opinion","b2.wri.w20-carta-lectores","b2.spk.w20-debate-vecinal","b2.fun.w20-exponer-refutar","b2.disc.w20-argumentacion-completa","b2.rev.w20-semanas-16-20"],
+  prerequisites: ["b2-20"],
   goal: {
     canDo: "Puedo contar lo que se esperaba en un momento pasado y lo que se valora hoy con el tiempo de subjuntivo adecuado, y mostrar con el modo si afirmo, dudo, transmito o valoro cada dato.",
     steps: [

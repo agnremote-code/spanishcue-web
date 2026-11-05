@@ -31,8 +31,8 @@ export const b2w15: Module = {
     "b2.disc.w15-conceder-objetar",
     "b2.rev.w15-semanas-11-15"
   ],
-  "reviewObjectives": [],
-  "prerequisites": [],
+  reviewObjectives: ["b2.gram.g147","b2.gram.g148","b2.voc.w11-patrimonio-ferroviario","b2.pron.w11-terminaciones-participio","b2.lis.w11-redaccion-reconstruye","b2.read.w11-noticia-reapertura","b2.wri.w11-nota-boletin","b2.spk.w11-transmitir-mensaje","b2.fun.w11-aclarar-referencias","b2.disc.w11-situar-declaraciones","b2.gram.g149","b2.gram.g150","b2.voc.w12-excursion-yacimiento","b2.pron.w12-clitico-agrupado","b2.lis.w12-informe-excursion","b2.read.w12-diario-campana","b2.wri.w12-correo-disculpa","b2.spk.w12-explicar-percances","b2.fun.w12-disculparse-matizando","b2.disc.w12-informar-y-asumir","b2.gram.g151","b2.gram.g152","b2.voc.w13-trabajo-hibrido","b2.pron.w13-de-que-atono","b2.lis.w13-anuncio-oficina","b2.read.w13-columna-presencialidad","b2.wri.w13-correo-postura","b2.spk.w13-negociar-condiciones","b2.fun.w13-plantear-inquietudes","b2.disc.w13-comentar-hechos","b2.gram.g153","b2.gram.g154","b2.voc.w14-cerros-turismo","b2.pron.w14-pausa-causa","b2.lis.w14-explicar-cierre","b2.read.w14-cronica-cerro","b2.wri.w14-carta-aclaracion","b2.spk.w14-desmentir-explicar","b2.fun.w14-rechazar-interpretaciones","b2.disc.w14-causa-consecuencia"],
+  prerequisites: ["b2-14"],
   "goal": {
     "canDo": "Puedo relacionar dos cambios con «cuanto más…, más…», conceder y objetar con conectores variados y combinarlo todo con lo que repasé en las semanas 11 a 14 en un texto argumentativo sobre un proyecto de mi ciudad.",
     "steps": [

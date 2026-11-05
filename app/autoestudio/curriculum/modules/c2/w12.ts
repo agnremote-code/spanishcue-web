@@ -30,8 +30,8 @@ export const c2w12: Module = {
     "c2.fun.w12-leer-ironia",
     "c2.disc.w12-alcance-negacion",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["c2.gram.g221","c2.gram.g222","c2.voc.w11-oferta-local","c2.pron.w11-reserva-oido","c2.lis.w11-borradores-respuesta","c2.read.w11-columna-libreria","c2.wri.w11-carta-rechazo","c2.spk.w11-reunion-propietario","c2.fun.w11-rechazar-sin-romper","c2.disc.w11-hecho-sospecha-rumor"],
+  prerequisites: ["c2-11"],
   goal: {
     canDo: "Puedo interpretar y usar lítotes, negaciones expletivas, términos de polaridad negativa e ironía verbal, controlar el alcance de una negación y decidir cuándo la ironía funciona y cuándo conviene evitarla.",
     steps: [

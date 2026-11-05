@@ -31,8 +31,8 @@ export const c2w18: Module = {
     "c2.fun.w18-aclarar-referente",
     "c2.disc.w18-cadena-referencia",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["c2.gram.g231","c2.voc.w17-puerto-catalogo","c2.pron.w17-leer-signos","c2.lis.w17-revision-catalogo","c2.read.w17-ensayo-puerto","c2.wri.w17-texto-presentacion","c2.spk.w17-justificar-signos","c2.fun.w17-negociar-correccion","c2.disc.w17-jerarquia-fronteras"],
+  prerequisites: ["c2-17"],
   goal: {
     canDo: "Puedo revisar un texto largo para que su ortografía siga la norma académica con variantes elegidas de forma coherente y para que el lector sepa siempre a quién o a qué se refiere cada pronombre, sinónimo o encapsulador, aunque el antecedente esté varios párrafos atrás.",
     steps: [

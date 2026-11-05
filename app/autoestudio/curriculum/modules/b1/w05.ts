@@ -29,8 +29,8 @@ export const b1w05: Module = {
     "b1.disc.w05-correo-experiencia",
     "b1.rev.w05-semanas-1-5",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["b1.gram.g086","b1.gram.g087","b1.voc.w01-mudanza-piso","b1.pron.w01-acento-pasado","b1.lis.w01-dia-mudanza","b1.read.w01-blog-primer-mes","b1.wri.w01-correo-llegada","b1.spk.w01-dia-al-reves","b1.fun.w01-explicar-lo-ocurrido","b1.disc.w01-orden-relato","b1.gram.g088","b1.gram.g089","b1.voc.w02-abrir-negocio","b1.pron.w02-vocal-modo","b1.lis.w02-preparar-apertura","b1.read.w02-noticia-barrio","b1.wri.w02-mensaje-deseos","b1.spk.w02-brindis","b1.fun.w02-expresar-deseos","b1.disc.w02-mensaje-ocasion","b1.gram.g090","b1.gram.g091","b1.gram.g092","b1.voc.w03-huerto-vecinal","b1.pron.w03-g-suave-fuerte","b1.lis.w03-asamblea-huerto","b1.read.w03-carta-socios","b1.wri.w03-correo-asociacion","b1.spk.w03-propuesta-vecinal","b1.fun.w03-aconsejar-reaccionar","b1.disc.w03-queja-constructiva","b1.gram.g093","b1.gram.g094","b1.voc.w04-organizacion-trabajo","b1.pron.w04-pregunta-afirmacion","b1.lis.w04-reunion-equipo","b1.read.w04-columna-opinion","b1.wri.w04-comentario-foro","b1.spk.w04-debate-propuesta","b1.fun.w04-opinar-matizar","b1.disc.w04-argumentar-postura"],
+  prerequisites: ["b1-04"],
   goal: {
     canDo: "Al final de esta semana puedes elegir entre infinitivo y que + subjuntivo según quién hace la acción, dar órdenes con el imperativo y pasarlas a otra persona con dile que…, y combinar todo con lo que repasaste en las semanas 1 a 4: contar el pasado, desear, aconsejar, valorar, reaccionar y opinar.",
     steps: [

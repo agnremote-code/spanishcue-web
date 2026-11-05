@@ -32,8 +32,8 @@ export const c1w10: Module = {
     "c1.disc.w10-progresion-tematica",
     "c1.rev.w10-repaso-semanas-6-10",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["c1.gram.g177","c1.voc.w06-consorcio-actas","c1.pron.w06-pausa-absoluta","c1.lis.w06-redaccion-acta","c1.read.w06-actas-edificio","c1.wri.w06-circular-vecinos","c1.spk.w06-relato-asamblea","c1.fun.w06-resumir-decisiones","c1.disc.w06-registro-condensado","c1.gram.g178","c1.gram.g179","c1.voc.w07-cine-patrimonio","c1.pron.w07-pausa-explicativa","c1.lis.w07-entrevista-memoria","c1.read.w07-tribuna-cine","c1.wri.w07-solicitud-proteccion","c1.spk.w07-defensa-publica","c1.fun.w07-atribuir-testimonios","c1.disc.w07-cohesion-relativos","c1.gram.g180","c1.gram.g181","c1.voc.w08-atencion-socios","c1.pron.w08-atonos-de-que","c1.lis.w08-revision-plantillas","c1.read.w08-guia-estilo","c1.wri.w08-informe-correccion","c1.spk.w08-presentar-criterios","c1.fun.w08-justificar-norma","c1.disc.w08-voz-institucional","c1.gram.g182","c1.gram.g183","c1.voc.w09-rescate-fauna","c1.pron.w09-foco-final","c1.lis.w09-preparar-comunicado","c1.read.w09-reportaje-rescate","c1.wri.w09-comunicado-prensa","c1.spk.w09-entrevista-radio","c1.fun.w09-informar-sin-agente","c1.disc.w09-continuidad-tema"],
+  prerequisites: ["c1-09"],
   goal: {
     canDo: "Puedo ordenar la información de lo conocido a lo nuevo, destacar un elemento con foco contrastivo o perífrasis de relativo, presentar un tema dislocado con el clítico justo, y combinar todo ello con las estructuras de las semanas 6 a 9 en un texto coherente.",
     steps: [

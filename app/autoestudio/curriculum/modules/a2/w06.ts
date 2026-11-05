@@ -21,8 +21,8 @@ export const a2w06: Module = {
     "a2.fun.w06-prometer-ofrecer",
     "a2.disc.w06-pasos-del-plan",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["a2.gram.g053","a2.gram.g054","a2.gram.g055","a2.voc.w05-mercado-artesanias","a2.pron.w05-fuerza-palabras-tiempo","a2.lis.w05-entrevista-artesana","a2.read.w05-perfil-guia-volcan","a2.wri.w05-perfil-vecino","a2.spk.w05-mi-historia-en-el-tiempo","a2.fun.w05-situar-en-el-tiempo","a2.disc.w05-ordenar-con-tiempo","a2.rev.w05-pasado-y-tiempo"],
+  prerequisites: ["a2-05"],
   goal: {
     canDo: "Al final de esta semana puedes contar planes ya decididos con ir a + infinitivo, y prometer, ofrecer ayuda o hacer pronósticos con el futuro simple, también con verbos irregulares como tendré, saldré o habrá.",
     steps: [

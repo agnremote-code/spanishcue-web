@@ -21,8 +21,8 @@ export const a2w18: Module = {
     "a2.fun.w18-normas-consejos",
     "a2.disc.w18-ordenar-informacion",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["a2.gram.g078","a2.gram.g079","a2.voc.w17-excursion-favores","a2.pron.w17-entonacion-peticion","a2.lis.w17-mensaje-vecina","a2.read.w17-plan-irazu","a2.wri.w17-mensaje-favores","a2.spk.w17-planes-favores","a2.fun.w17-pedir-favores","a2.disc.w17-aceptar-rechazar"],
+  prerequisites: ["a2-17"],
   goal: {
     canDo: "Al final de esta semana puedes explicar qué es obligatorio, qué no es necesario y qué no se debe hacer en un lugar, y ordenar tus frases para que se entienda bien cuándo, dónde y cómo pasa cada cosa.",
     steps: [

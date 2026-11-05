@@ -21,8 +21,8 @@ export const a2w14: Module = {
     "a2.fun.w14-quejarse-cantidad",
     "a2.disc.w14-coincidir-discrepar",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["a2.gram.g240","a2.gram.g070","a2.voc.w13-fiesta-calle","a2.pron.w13-fuerza-ito-on","a2.lis.w13-noche-alfombras","a2.read.w13-cronica-visitante","a2.wri.w13-mensaje-grupo-vecinos","a2.spk.w13-pedir-ayuda-suave","a2.fun.w13-preguntar-cosas-personas","a2.disc.w13-suavizar-peticiones"],
+  prerequisites: ["a2-13"],
   goal: {
     canDo: "Al final de esta semana puedes decir si hay algún o ningún sitio, si hay mucha, poca o demasiada gente, usar cada, otro y todo el, negar con nunca, tampoco y ni… ni (No vino nadie; Nunca voy; Yo tampoco) y reaccionar a lo que dicen otros.",
     steps: [

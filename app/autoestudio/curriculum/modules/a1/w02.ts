@@ -20,8 +20,8 @@ export const a1w02: Module = {
     "a1.spk.w02-mi-barrio",
     "a1.fun.w02-preguntar-hay",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["a1.gram.g001","a1.gram.g002","a1.voc.w01-objetos-habitacion","a1.pron.w01-deletrear","a1.lis.w01-llegada-residencia","a1.read.w01-nota-presentacion","a1.wri.w01-mensaje-grupo","a1.spk.w01-presentacion-cosas","a1.fun.w01-presentarse-pedir"],
+  prerequisites: ["a1-01"],
   goal: {
     canDo: "Al final de esta semana puedes elegir el artículo correcto por la terminación del sustantivo, presentar lugares y cosas nuevas con un o una y volver a ellos con el o la.",
     canDoEn: "By the end of this week, you can choose the right article from a noun's ending, introduce new places and things with un or una, and refer back to them with el or la.",

@@ -20,8 +20,8 @@ export const a1w06: Module = {
     "a1.spk.w06-donde-estoy",
     "a1.fun.w06-preguntar-servicios",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["a1.gram.g010","a1.gram.g011","a1.voc.w05-profesiones-nacionalidades","a1.pron.w05-jota-ge","a1.lis.w05-taller-cocina","a1.read.w05-equipo-hostal","a1.wri.w05-ficha-equipo","a1.spk.w05-presentar-otros","a1.fun.w05-presentar-personas","a1.rev.w05-semanas-1-4"],
+  prerequisites: ["a1-05"],
   goal: {
     canDo: "Al final de esta semana puedes decir cómo estás tú y cómo están otras personas, decir dónde están las personas y las cosas, y preguntar qué hay cerca.",
     canDoEn: "By the end of this week, you can say how you and other people feel, say where people and things are, and ask what there is nearby.",

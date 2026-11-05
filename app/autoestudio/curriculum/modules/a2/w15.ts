@@ -23,8 +23,8 @@ export const a2w15: Module = {
     "a2.disc.w15-ordenar-ruta",
     "a2.rev.w15-semanas-11-15",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["a2.gram.g066","a2.gram.g067","a2.voc.w11-barrio-vecinos","a2.pron.w11-que-sin-fuerza","a2.lis.w11-paseo-barrio","a2.read.w11-correo-barrio","a2.wri.w11-guia-barrio","a2.spk.w11-presentar-barrio","a2.fun.w11-definir-sin-palabra","a2.disc.w11-unir-ideas","a2.gram.g068","a2.gram.g069","a2.voc.w12-vivienda-alquiler","a2.pron.w12-isimo-exclamaciones","a2.lis.w12-visita-apartamento","a2.read.w12-mensaje-eleccion","a2.wri.w12-comparar-opciones","a2.spk.w12-comparar-elegir","a2.fun.w12-elegir-entre-opciones","a2.disc.w12-justificar-eleccion","a2.gram.g240","a2.gram.g070","a2.voc.w13-fiesta-calle","a2.pron.w13-fuerza-ito-on","a2.lis.w13-noche-alfombras","a2.read.w13-cronica-visitante","a2.wri.w13-mensaje-grupo-vecinos","a2.spk.w13-pedir-ayuda-suave","a2.fun.w13-preguntar-cosas-personas","a2.disc.w13-suavizar-peticiones","a2.gram.g071","a2.gram.g072","a2.voc.w14-excursion-ruinas","a2.pron.w14-fuerza-negacion","a2.lis.w14-entrada-parque","a2.read.w14-resena-excursion","a2.wri.w14-resena-lugar","a2.spk.w14-opinar-cantidad","a2.fun.w14-quejarse-cantidad","a2.disc.w14-coincidir-discrepar"],
+  prerequisites: ["a2-14"],
   goal: {
     canDo: "Al final de esta semana puedes explicar una ruta (desde la terminal hasta el muelle, por el malecón, hacia el este) y dónde está cada cosa, decir por qué, para qué, para quién y por cuánto, y describir a una persona como es, como está y qué lleva, combinándolo con las relativas, las comparaciones, los diminutivos y la negación de las semanas 11 a 14.",
     steps: [

@@ -26,8 +26,8 @@ export const b1w01: Module = {
     "b1.fun.w01-explicar-lo-ocurrido",
     "b1.disc.w01-orden-relato",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["a2.gram.g084","a2.gram.g085","a2.voc.w20-radio-experiencia","a2.pron.w20-tilde-final-pasado","a2.lis.w20-entrevista-radio","a2.read.w20-correo-primer-mes","a2.wri.w20-relato-y-mensaje","a2.spk.w20-contar-experiencia","a2.fun.w20-presentar-experiencia","a2.disc.w20-relato-mensaje","a2.rev.w20-semanas-16-20"],
+  prerequisites: ["a2-20"],
   goal: {
     canDo: "Al final de esta semana puedes contar una experiencia pasada con escena, hechos y balance, y explicar con el pluscuamperfecto qué había pasado antes, por qué ocurrió algo o qué descubriste.",
     steps: [

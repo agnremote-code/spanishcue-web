@@ -29,8 +29,8 @@ export const b2w17: Module = {
     "b2.fun.w17-duracion-y-plazos",
     "b2.disc.w17-cronologia-proyecto"
   ],
-  "reviewObjectives": [],
-  "prerequisites": [],
+  reviewObjectives: ["b2.gram.g157","b2.gram.g158","b2.voc.w16-mudanza-biblioteca","b2.pron.w16-terminaciones-y-de","b2.lis.w16-dia-de-mudanza","b2.read.w16-diario-mudanza","b2.wri.w16-informe-estado","b2.spk.w16-balance-y-deduccion","b2.fun.w16-balance-obligacion-deduccion","b2.disc.w16-informe-hecho-pendiente"],
+  prerequisites: ["b2-16"],
   "goal": {
     "canDo": "Puedo contar un proyecto largo diciendo cuánto tiempo llevo con él, cómo va avanzando y qué viene pasando, y anticipar con el futuro compuesto qué estará terminado antes de una fecha o suponer qué ha pasado.",
     "steps": [

@@ -31,8 +31,8 @@ export const b1w15: Module = {
     "b1.disc.w15-argumento-ordenado",
     "b1.rev.w15-semanas-11-15"
   ],
-  "reviewObjectives": [],
-  "prerequisites": [],
+  reviewObjectives: ["b1.gram.g108","b1.gram.g109","b1.voc.w11-habitos-digitales","b1.pron.w11-acento-presente-pasado","b1.lis.w11-charla-teteria","b1.read.w11-blog-dia-31","b1.wri.w11-balance-cambio","b1.spk.w11-contar-reto","b1.fun.w11-contar-cambios","b1.disc.w11-antes-despues","b1.gram.g110","b1.gram.g238","b1.voc.w12-artesania-cambio-vida","b1.pron.w12-preposicion-enlazada","b1.lis.w12-visita-taller","b1.read.w12-perfil-revista","b1.wri.w12-cambio-persona-lugar","b1.spk.w12-mi-cambio","b1.fun.w12-describir-cambios","b1.disc.w12-antes-ahora","b1.gram.g111","b1.gram.g112","b1.gram.g113","b1.voc.w13-cocina-feria","b1.pron.w13-comas-pausas","b1.lis.w13-reunion-cocina","b1.read.w13-cronica-feria","b1.wri.w13-informe-equipo","b1.spk.w13-poner-al-dia-oral","b1.fun.w13-poner-al-dia","b1.disc.w13-temas-ordenados","b1.gram.g114","b1.gram.g115","b1.voc.w14-viajes-resenas","b1.pron.w14-como-porque-tilde","b1.lis.w14-llamada-agencia","b1.read.w14-resena-colca","b1.wri.w14-resena-matizada","b1.spk.w14-reclamar-explicar","b1.fun.w14-valorar-con-matices","b1.disc.w14-equilibrio-opinion"],
+  prerequisites: ["b1-14"],
   "goal": {
     "canDo": "Al final de esta semana puedes defender una decisión importante con argumentos ordenados («Además…», «Incluso…», «En cambio…»), sacar consecuencias («así que», «por lo tanto») y combinarlo con todo lo que repasaste desde la semana 11.",
     "steps": [

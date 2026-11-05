@@ -30,8 +30,8 @@ export const c1w02: Module = {
     "c1.fun.w02-conceder-sin-ceder",
     "c1.disc.w02-conceder-rebatir",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["c1.gram.g167","c1.gram.g168","c1.voc.w01-convivencia-postura","c1.pron.w01-acento-ara-ara","c1.lis.w01-junta-residencia","c1.read.w01-memoria-curso","c1.wri.w01-carta-balance","c1.spk.w01-balance-junta","c1.fun.w01-matizar-postura","c1.disc.w01-antes-ahora"],
+  prerequisites: ["c1-01"],
   goal: {
     canDo: "Puedo describir a quién busca una comunidad sin confundir perfiles con personas concretas y defender una decisión concediendo los argumentos contrarios sin renunciar a lo esencial.",
     steps: [

@@ -21,8 +21,8 @@ export const a2w03: Module = {
     "a2.fun.w03-describir-pasado",
     "a2.disc.w03-escena-y-hechos",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["a2.gram.g047","a2.gram.g048","a2.voc.w02-excursion-volcan","a2.pron.w02-tilde-presente-pasado","a2.lis.w02-lunes-oficina","a2.read.w02-blog-poas","a2.wri.w02-relato-excursion","a2.spk.w02-contar-fin-de-semana","a2.fun.w02-contar-hechos-pasados","a2.disc.w02-ordenar-relato"],
+  prerequisites: ["a2-02"],
   goal: {
     canDo: "Al final de esta semana puedes describir cómo era un lugar o una persona, contar qué hacías antes y narrar una anécdota con su escena y sus hechos.",
     steps: [

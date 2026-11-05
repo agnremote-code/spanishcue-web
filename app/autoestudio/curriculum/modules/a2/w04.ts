@@ -21,8 +21,8 @@ export const a2w04: Module = {
     "a2.fun.w04-comparar-epocas",
     "a2.disc.w04-contraste-antes-ahora",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["a2.gram.g049","a2.gram.g050","a2.voc.w03-ciudad-antigua","a2.pron.w03-hiato-ia","a2.lis.w03-recuerdos-abuela","a2.read.w03-cronica-murcielago","a2.wri.w03-recuerdo-lugar","a2.spk.w03-anecdota-infancia","a2.fun.w03-describir-pasado","a2.disc.w03-escena-y-hechos"],
+  prerequisites: ["a2-03"],
   goal: {
     canDo: "Al final de esta semana puedes entender y usar las dos maneras de contar tu día (he hablado / hablé), saber cuándo una forma es un error, y contar las costumbres de otra época con solía.",
     steps: [

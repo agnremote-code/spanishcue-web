@@ -27,8 +27,8 @@ export const b1w17: Module = {
     "b1.fun.w17-revisar-estado",
     "b1.disc.w17-antes-y-ahora",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["b1.gram.g118","b1.gram.g119","b1.voc.w16-taller-artesania","b1.pron.w16-pregunta-referida","b1.lis.w16-encargo-taller","b1.read.w16-como-se-hace","b1.wri.w16-correo-reunion","b1.spk.w16-contar-conversacion","b1.fun.w16-transmitir-mensajes","b1.disc.w16-voces-y-procesos"],
+  prerequisites: ["b1-16"],
   goal: {
     canDo: "Al final de esta semana puedes describir cómo está un lugar después de lo que pasó («la cama ya está hecha», «la persiana se quedó atascada»), contar lo que llevas hecho («tengo dos cajas deshechas») y entender textos que dicen cuándo y por quién se hizo algo («fue construido en 1611»).",
     steps: [

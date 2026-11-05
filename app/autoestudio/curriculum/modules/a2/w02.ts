@@ -21,8 +21,8 @@ export const a2w02: Module = {
     "a2.fun.w02-contar-hechos-pasados",
     "a2.disc.w02-ordenar-relato",
   ],
-  reviewObjectives: [],
-  prerequisites: [],
+  reviewObjectives: ["a2.gram.g045","a2.gram.g046","a2.voc.w01-feria-voluntariado","a2.pron.w01-he-ha-han-enlazados","a2.lis.w01-manana-feria","a2.read.w01-ficha-voluntaria","a2.wri.w01-correo-voluntariado","a2.spk.w01-balance-experiencias","a2.fun.w01-novedades-experiencias","a2.disc.w01-sumar-experiencias"],
+  prerequisites: ["a2-01"],
   goal: {
     canDo: "Al final de esta semana puedes contar qué pasó en un día terminado (ayer, el sábado, el año pasado), en orden y con los verbos irregulares más frecuentes.",
     steps: [
