@@ -1,0 +1,12 @@
+[
+  [1, "gram", "g086", "Pasados del relato: escena, hechos y balance", "Puedo contar una experiencia eligiendo el imperfecto para la escena y las costumbres, el indefinido para los hechos cerrados y el perfecto compuesto para el balance que llega hasta hoy.", ["a2.gram.g045", "a2.gram.g049", "a2.gram.g050"], { "related": ["/past-b1"] }],
+  [1, "gram", "g087", "Pluscuamperfecto: lo anterior a otro pasado", "Puedo formar el pluscuamperfecto y usarlo para presentar un hecho anterior a otro momento pasado, una causa anterior o algo que descubrí.", ["b1.gram.g086", "a2.gram.g046"], { "related": ["/sistema-verbal/preterito-pluscuamperfecto-indicativo"] }],
+  [1, "voc", "w01-mudanza-piso", "Mudanza y piso compartido", "Puedo hablar de una mudanza y de la vida en un piso compartido: fianza, empaquetar, alquilar una furgoneta, echar una mano, instalarse, repartir las tareas.", ["b1.gram.g086"]],
+  [1, "pron", "w01-acento-pasado", "Acento que distingue presente e indefinido", "Puedo distinguir de oído y pronunciar pares como «compro / compró» y decir «había» con sus tres sílabas.", ["b1.gram.g086"]],
+  [1, "lis", "w01-dia-mudanza", "Escuchar el relato de una mudanza", "Puedo seguir una conversación en la que alguien cuenta los retrasos de una mudanza y reconocer sus causas y lo que había pasado antes.", ["b1.gram.g087"]],
+  [1, "read", "w01-blog-primer-mes", "Leer un blog sobre el primer mes en una ciudad", "Puedo entender una entrada de blog sobre la llegada a una ciudad nueva y situar cada dato antes, durante o después del primer mes.", ["b1.gram.g086", "b1.gram.g087"]],
+  [1, "wri", "w01-correo-llegada", "Correo sobre una mudanza o una llegada", "Puedo escribir un correo de 140 a 180 palabras que cuente una mudanza con escena, hechos, antecedentes y balance.", ["b1.gram.g087", "b1.disc.w01-orden-relato", "b1.voc.w01-mudanza-piso"]],
+  [1, "spk", "w01-dia-al-reves", "Contar un día que salió al revés", "Puedo contar durante dos minutos un día complicado y responder a preguntas aclarando qué había pasado antes.", ["b1.fun.w01-explicar-lo-ocurrido"]],
+  [1, "fun", "w01-explicar-lo-ocurrido", "Explicar y justificar lo ocurrido", "Puedo explicar por qué pasó algo, disculparme o justificarme con una causa anterior y proponer una solución.", ["b1.gram.g087"]],
+  [1, "disc", "w01-orden-relato", "Ordenar un relato: escena, giro, antecedente y balance", "Puedo organizar un relato en escena, giro, antecedente y balance, y marcar las partes con mientras, de repente, cuando y desde entonces.", ["b1.gram.g086", "b1.gram.g087"]]
+]

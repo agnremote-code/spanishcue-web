@@ -1,0 +1,12 @@
+[
+  [2, "gram", "g088", "Presente de subjuntivo: formación y usos esenciales", "Puedo formar el presente de subjuntivo de verbos regulares e irregulares (incluidos sea, esté, vaya, haya, sepa y dé) y usarlo para algo que todavía no es un hecho, como un deseo o un objetivo con para que.", ["a2.gram.g058", "a2.gram.g059"], { "related": ["/sistema-verbal/presente-de-subjuntivo"] }],
+  [2, "gram", "g089", "Deseos: querer que, esperar que, ojalá", "Puedo expresar deseos para mí con infinitivo y para otras personas con que + subjuntivo, usar ojalá y despedirme con ¡que + subjuntivo!", ["b1.gram.g088"], { "related": ["/gramatica/deseos-querer-que-esperar-que-ojala"] }],
+  [2, "voc", "w02-abrir-negocio", "Abrir un negocio y desear suerte", "Puedo hablar de la apertura de un negocio pequeño (local, letrero, vitrina, inauguración, socio) y usar fórmulas para desear suerte.", ["b1.gram.g089"]],
+  [2, "pron", "w02-vocal-modo", "La vocal final que cambia el modo", "Puedo oír y pronunciar con claridad la vocal final que distingue indicativo y subjuntivo (habla / hable) y el acento de esté.", ["b1.gram.g088"]],
+  [2, "lis", "w02-preparar-apertura", "Escuchar cómo se reparten tareas antes de una apertura", "Puedo seguir una conversación en la que dos personas reparten tareas y expresan deseos, e identificar quién tiene que hacer cada cosa.", ["b1.gram.g089"]],
+  [2, "read", "w02-noticia-barrio", "Leer una noticia de un boletín de barrio", "Puedo entender una noticia breve sobre un negocio nuevo y relacionar a cada persona con su deseo.", ["b1.gram.g088", "b1.gram.g089"]],
+  [2, "wri", "w02-mensaje-deseos", "Mensaje de buenos deseos", "Puedo escribir un mensaje de 130 a 170 palabras para alguien que empieza algo nuevo, con un recuerdo y al menos cuatro deseos con formas distintas.", ["b1.gram.g089", "b1.disc.w02-mensaje-ocasion"]],
+  [2, "spk", "w02-brindis", "Un brindis por un comienzo", "Puedo hacer un brindis de dos minutos con un recuerdo y varios deseos, y repartir tareas por teléfono negociando quién hace qué.", ["b1.fun.w02-expresar-deseos"]],
+  [2, "fun", "w02-expresar-deseos", "Expresar deseos y pedir cosas", "Puedo expresar deseos para mí y para otras personas, pedir que alguien haga algo y responder con un deseo corto adecuado a la situación.", ["b1.gram.g089"]],
+  [2, "disc", "w02-mensaje-ocasion", "Organizar un mensaje para una ocasión especial", "Puedo organizar un mensaje de ocasión en saludo, recuerdo compartido, deseos variados y despedida.", ["b1.gram.g089"]]
+]
