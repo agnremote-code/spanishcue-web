@@ -1,6 +1,7 @@
 import "./landing-offer.test.mjs";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
+import { readFileSync } from "node:fs";
 import test from "node:test";
 import { build } from "esbuild";
 import {
@@ -80,7 +81,7 @@ test("marketing surfaces stay reusable and the free lesson close is global", asy
     assert.match(sections, new RegExp(`export function ${component}`));
   assert.match(library, /SpanishCueHero/);
   assert.match(brand, /PROBAR UNA CLASE GRATIS/);
-  assert.match(brand, /FREE_DEMO_PATH = "\/demo\/noche-abierta"/);
+  assert.match(brand, /FREE_DEMO_PATH = "\/gramatica\/indefinido-e-imperfecto"/);
   assert.match(brand, /href=\{FREE_DEMO_PATH\}/);
   // Ale 2026-11-04: the home hero also sells: a PRO plans button, monthly + annual price, more free lessons.
   assert.match(brand, /placement: "hero_secondary", cta_type: "buy", destination: "\/pricing"/);
@@ -183,4 +184,12 @@ test("public conversion routes keep every required client entry public", async (
     "app/privacy/GoogleConsentMode.tsx",
     "app/verbal-system/SystemHub.tsx",
   ]) assert.match(protection, new RegExp(`['\"]${entry.replaceAll("/", "\\/")}['\"]`));
+});
+
+test("free 3D demos ask for a free account after the sample, like free lessons", () => {
+  const layout = readFileSync("app/layout.tsx", "utf8");
+  const gate = readFileSync("app/marketing/demo-gate.ts", "utf8");
+  assert.match(layout, /!currentLesson && !signedIn && !fullAccess && demoGateLesson\(pathname\)/);
+  assert.match(gate, /"\/demo\/noche-abierta": \{ lessonId: 223/);
+  assert.match(gate, /"\/demo\/hospital-san-casi-vivo": \{ lessonId: 240/);
 });
