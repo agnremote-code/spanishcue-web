@@ -14,11 +14,15 @@ function d1() {
     db.exec(sql);
     db.exec("CREATE TABLE users (id TEXT PRIMARY KEY, email TEXT NOT NULL)");
     const statement = (sql) => ({
-      bind: (...values) => ({
+      bind: (...values) => {
+        // Cloudflare D1 limit: at most 100 bound parameters per query.
+        if (values.length > 100) throw new Error("D1_ERROR: too many SQL variables");
+        return {
         sql,
         async all() { return { results: db.prepare(sql).all(...values) }; },
         async run() { db.prepare(sql).run(...values); return { meta: {} }; },
-      }),
+        };
+      },
     });
     return {
       raw: db,
@@ -74,6 +78,20 @@ test("opens are counted per account and day; only accounts over the limits are l
 
   const later = new Date("2026-12-20T12:00:00Z");
   assert.deepEqual(await listSharingAlerts(db, later), [], "old devices and days fall out of the windows");
+});
+
+test("the alert list works when more than 100 accounts alert (D1 bound-parameter limit)", async () => {
+  const db = await d1();
+  const now = new Date("2026-11-02T12:00:00Z");
+  for (let n = 0; n < 120; n++) {
+    db.raw.prepare("INSERT INTO users VALUES (?, ?)").run(`acct${n}`, `profe${n}@example.com`);
+    for (let i = 0; i < 4; i++) await recordPremiumOpen(db, `acct${n}`, await deviceHash(newDeviceId()), "Chrome · Windows", now);
+  }
+  db.raw.exec("INSERT INTO users VALUES ('quiet','tranquila@example.com')");
+  await recordPremiumOpen(db, "quiet", await deviceHash(newDeviceId()), "Safari · macOS", now);
+  const alerts = await listSharingAlerts(db, now);
+  assert.equal(alerts.length, 120);
+  assert.ok(alerts.every((a) => a.email === `profe${a.accountId.slice(4)}@example.com`), "every alert keeps its own email");
 });
 
 test("the worker records opens only for PRO documents of non-owner full-access accounts and the release prepares the tables", async () => {
