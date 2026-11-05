@@ -1,6 +1,6 @@
 # Board STATUS: the single source of truth for the next run
 
-_Last updated: 2026-11-04 by the Wednesday 3D routine (scheduled cloud run; Alejandro convened as a subagent of the facilitator for review, see "Current work")._
+_Last updated: 2026-11-05 by the Thursday reliability routine (scheduled cloud run; Alejandro convened as a subagent of the facilitator for review, see "Current work")._
 
 ## Owner decisions in force
 | Date | Decision |
@@ -78,6 +78,39 @@ All five run on `claude-opus-5-5`, follow [ROUTINES.md](ROUTINES.md), and each i
 - Session 0 (lesson test) took 55 messages, about 15 of them caused by crossed messages over circle 6. That led to the lock rule.
 
 ## Current work and next action
+- **2026-11-05 (Thursday reliability routine): PR #387** (branch `claude/thursday-review-20261105`, base main `27f896e9`). Subscription usage: **UNKNOWN**.
+  - **Board:** convened proportionately. The facilitator did the audit and wrote the fixes. A fresh agent acting as Alejandro did the code review: **APPROVE**, 0 blockers, 4 non-blocking notes, none needing a change. Sofia and Martin were not needed. Verbatim: [transcripts/2026-11-05-thursday-reliability.md](transcripts/2026-11-05-thursday-reliability.md).
+  - **CI and deploy health (VERIFIED, Actions runs API):**
+    - Before this PR, main = production = `27f896e9` (#385). Production run [41894418748](https://github.com/agnremote-code/spanishcue-web/actions/runs/41894418748) succeeded. The latest scheduled smoke, [41935166682](https://github.com/agnremote-code/spanishcue-web/actions/runs/41935166682) (11-04 23:37Z), passed.
+    - About 20 non-board PRs merged on 11-03 and 11-04 (#366–#386).
+    - Red runs since 10-29:
+      - `80ba20b9` (11-04): staging run 41881277540 failed its smoke and rolled staging back; the next staging attempt and the production run then refused safely. It was followed by #386 (staging smoke diagnostics) and #385, and `f1b3c5b1` and `27f896e9` both deployed.
+      - `f72bde02` and `41caec68`: "Promote" or "Require SHA on main and CI-verified" refusals, the same safe overlap refusal seen before; a later SHA deployed each time.
+      - The remaining failures were lint or regression failures on other agents' PR branches, which were fixed before those branches merged.
+      - The 10-28 intermittent `DELETE /api/live-class` 503 did **not** recur in any failed run inspected, so the test-worker tolerance is still not applied.
+  - **Audit of the surfaces added since `3fa53e0a` (read-only):** newsletter (public, unsubscribe, owner list), the gift cookie on the request path, referrals, account-security, `/api/fx/ars`, the bounded ISR cache and `worker/index.ts`.
+    - **Clean:**
+      - The gift cookie is HMAC-signed, domain-separated and constant-time compared, and covers only the gift lesson and its audio.
+      - Gifted renders never reach the edge cache, because `edgeKey` excludes lessons.
+      - The owner newsletter list is owner-gated, `no-store` and CSV-injection-safe.
+      - `/api/newsletter` has an Origin check, a size cap and is rate-limited.
+      - Referrals block self-referral and qualify only on a settled Paddle payment of at least 1500.
+  - **Fixed in #387 (each with a regression test that fails on main):**
+    1. **Low/medium, access (audit M2 from 10-29):** a `syncSeats` that read the seat limit before a reduction could re-grant the removed seats. The ranking and the limit are now evaluated in the batch SQL. The reviewer checked 300 random non-race cases against main: identical.
+    2. **Low, access (audit L1):** accepting an invitation claimed it before inserting the member. A join to another academy in between burnt the link and returned the *other* academy as success. Now one batch: insert while the invitation is open, claim only if the member exists; otherwise 409 or 410.
+    3. **Low, admin:** Admin → Seguridad bound one parameter per alerting account. D1 refuses more than 100 bound parameters, so the list would fail past 100 alerts. The lookup now uses a subquery with 4 fixed parameters.
+  - **Found, not fixed (needs a product decision or another agent's area):**
+    - **Newsletter consent:** anyone can re-subscribe an address that unsubscribed by submitting it again. There is no double opt-in, and Resend is patched to `unsubscribed:false`. This is a compliance and product decision, so the code was not changed.
+    - **Price-figure check (11-03 item):** the code is at US$19.90 (`app/paddle-config.ts:7`, `PADDLE_MONTHLY_CENTS = 1990`). `docs/billing-contract.md:58` still says the Paddle check validates `1500` USD, which is stale. It was not edited, because open PRs #360 and #283 both edit that file (AGENTS.md rule 5).
+    - **Draft #360** (`claude/price-19-90`, «US$199/year») looks superseded by merged #370 (US$150/year). That is a HYPOTHESIS: its author should close or rebase it.
+    - **`paddle_api_403`:** still reported by `/api/billing/paddle/webhook-status`. The route's own comment attributes it to the API key lacking notification-settings read permission. Webhooks are arriving: `lastEventAt` 1793797447 is about 11-04 13:04Z. Changing the key's permissions is an owner action in Paddle.
+    - **Referrals (HYPOTHESIS, low):** reward application is limited to `PADDLE_MONTHLY_PRICE_ID` (the new US$19.90 price), so referrers on a legacy monthly price never get their free month applied. This needs a product decision.
+  - **Checks:** see the PR body. `npm test` is the full suite.
+  - **Next action:**
+    1. After #387 merges, verify the merged SHA and the staging and production runs. The fixes have no anonymous surface, so their evidence is the regression tests and the deploy.
+    2. Next Thursday: test-worker 503 tolerance only if it recurs; Sofia's L2 and L3 from 10-29 (malformed owner body gives 503, concurrent create gives 503) if there is capacity.
+    3. Owner or board: the newsletter double opt-in decision, the referral legacy-price scope, and the Paddle key permission.
+
 - **2026-11-04 (Wednesday 3D routine): gated repair of the Bosque unmount GPU leak** (branch `claude/board-wed-3d-20261104`, base main `5eed8ab4`). Subscription usage: **UNKNOWN**.
   - **Monday's unit is still held.** R4 is unanswered: #282 has no new comment since 11-02, so it was **not touched**. A new world would hit the same §9.2 listening blocker. Rank 3 still needs Martin's duplicate check. The run therefore took the W45 fallback, the next leak repair (bosque), as a **gated repair**, reported as a repair.
   - **Board:** convened proportionately. The facilitator built the fix. A fresh agent acting as Alejandro did the code review (**APPROVE** on `cb995389`, 0 blockers, 5 notes; NB1 and NB2 applied) and the delta review (**DELTA APPROVE** on `cb995389..71a0f05c`, 3 wording notes applied). Sofia and Martin were not needed: no content changed. Verbatim: [transcripts/2026-11-04-wednesday-3d-bosque-repair.md](transcripts/2026-11-04-wednesday-3d-bosque-repair.md).

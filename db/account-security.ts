@@ -119,10 +119,15 @@ export async function listSharingAlerts(db: D1Database, now: Date): Promise<Shar
     alert.peakDay = row.day ?? null;
   }
   if (alerts.size) {
-    const ids = [...alerts.keys()];
+    // The same windows as above, as a subquery: a fixed 4 parameters however many accounts
+    // alert (D1 refuses a query with more than 100 bound parameters).
     const emails = await db
-      .prepare(`SELECT id, email FROM users WHERE id IN (${ids.map(() => "?").join(",")})`)
-      .bind(...ids)
+      .prepare(
+        `SELECT id, email FROM users WHERE id IN (
+          SELECT account_id FROM account_devices WHERE last_seen >= ? GROUP BY account_id HAVING COUNT(*) > ?
+          UNION SELECT account_id FROM account_daily_usage WHERE day >= ? AND premium_opens > ?)`,
+      )
+      .bind(since, DEVICE_ALERT_THRESHOLD, fromDay, DAILY_OPENS_ALERT_THRESHOLD)
       .all<{ id: string; email: string }>();
     for (const row of emails.results ?? []) {
       const alert = alerts.get(row.id);
