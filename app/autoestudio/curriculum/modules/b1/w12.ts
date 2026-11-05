@@ -1,449 +1,856 @@
 import type { Module } from "../../types";
 
+/**
+ * B1 · semana 12 · Autoestudio espejo de G110 (verbos con preposición fija: acostumbrarse a,
+ * tratar de, pensar en) y G238 (verbos de cambio). Repaso autónomo con Carmen, una ingeniera
+ * de Quito que se mudó a Cuenca y se hizo tejedora de sombreros de paja toquilla.
+ */
 export const b1w12: Module = {
   "id": "b1-12",
   "level": "b1",
   "week": 12,
   "kind": "core",
-  "title": "Una propuesta con propósito",
-  "subtitle": "Justificar una iniciativa ambiental con causas y finalidades comprensibles.",
+  "title": "De ingeniera a tejedora en Cuenca: preposiciones fijas y verbos de cambio",
+  "subtitle": "Repaso de los verbos que siempre van con la misma preposición (acostumbrarse a, darse cuenta de, pensar en, contar con) y de los verbos que cuentan cómo cambian las personas y los lugares.",
   "stop": {
     "place": "Cuenca",
     "country": "Ecuador"
   },
   "minutes": 95,
   "newObjectives": [
-    "b1.gram.finales",
-    "b1.disc.causales",
-    "b1.voc.medio-ambiente",
-    "b1.pron.enfasis-contraste",
-    "b1.fun.justificar",
-    "b1.read.campana",
-    "b1.gram.por-para-ampliacion"
+    "b1.gram.g110",
+    "b1.gram.g238",
+    "b1.voc.w12-artesania-cambio-vida",
+    "b1.pron.w12-preposicion-enlazada",
+    "b1.lis.w12-visita-taller",
+    "b1.read.w12-perfil-revista",
+    "b1.wri.w12-cambio-persona-lugar",
+    "b1.spk.w12-mi-cambio",
+    "b1.fun.w12-describir-cambios",
+    "b1.disc.w12-antes-ahora"
   ],
-  "reviewObjectives": [
-    "b1.gram.temporales-subjuntivo",
-    "b1.voc.proyectos-metas",
-    "b1.pron.enlaces-rapidos",
-    "b1.fun.planificar-condiciones",
-    "b1.lis.mensaje-planes",
-    "b1.gram.cliticos-combinados"
-  ],
-  "prerequisites": [
-    "b1-11"
-  ],
+  "reviewObjectives": [],
+  "prerequisites": [],
   "goal": {
-    "canDo": "Puedo justificar una iniciativa ambiental con causas y finalidades comprensibles.",
+    "canDo": "Al final de esta semana puedes contar un cambio de vida: a qué te acostumbraste, de qué te diste cuenta, con qué sueñas, y si te hiciste, te volviste o te convertiste en otra persona.",
     "steps": [
-      "Reconstruye la situación a partir del audio y la lectura.",
-      "Relaciona las formas con una intención y comprueba tus elecciones.",
-      "Prepara un texto revisado y una intervención con preguntas.",
-      "Lleva a clase una propuesta propia y una duda concreta."
+      "Repasa los verbos con preposición fija, agrupados por «a», «de», «en» y «con», y cómo se comportan delante de «que» y en las preguntas.",
+      "Repasa la diferencia entre hacerse, volverse, convertirse en, llegar a ser y pasar a ser.",
+      "Escucha la visita de un estudiante al taller de sombreros de Carmen en Cuenca.",
+      "Lee el perfil de Carmen en una revista de viajes.",
+      "Escribe cómo ha cambiado una persona o un lugar, revísalo y cuéntalo en voz alta."
     ]
   },
   "theory": {
-    "intro": "La misión de esta semana: Justificar una iniciativa ambiental con causas y finalidades comprensibles.",
+    "intro": "Esta semana repasas dos clases que se ayudan mucho. La primera trata de verbos que siempre van con la misma preposición: si cambias la preposición, la frase suena mal o cambia de sentido. La segunda, de los verbos que en español traducen la idea de «cambiar y llegar a ser otra cosa». Te acompaña Carmen, una ingeniera de Quito que hace diez años se mudó a Cuenca y hoy teje sombreros de paja toquilla.",
     "parts": [
       {
-        "heading": "Forma y significado",
+        "heading": "Cada verbo con su preposición",
         "body": [
-          "Para más infinitivo expresa finalidad cuando la acción se presenta sin otro sujeto: llevo una botella para ahorrar envases. Para que más subjuntivo desarrolla otra acción: ponemos una fuente para que todos rellenen sus botellas. Por suele introducir una causa; para indica aquí el objetivo."
+          "Algunos verbos llevan siempre la misma preposición antes de un nombre o de un infinitivo. Lo más práctico es aprenderlos en bloque, como una sola palabra: «acostumbrarse a», «tratar de», «pensar en», «soñar con». Si cambias la preposición, el oyente nota el error enseguida.",
+          "Agruparlos por preposición te ayuda a recordarlos. Con «a» suelen ir verbos de empezar o atreverse (aprender a, atreverse a, negarse a). Con «de» hay muchos de memoria y emociones (acordarse de, olvidarse de, quejarse de). Con «en», verbos de mente y confianza (pensar en, confiar en, fijarse en). Con «con», verbos de deseo y compañía (soñar con, contar con, casarse con)."
+        ],
+        "table": {
+          "caption": "Verbos frecuentes agrupados por preposición",
+          "head": [
+            "Preposición",
+            "Verbos",
+            "Ejemplo"
+          ],
+          "rows": [
+            [
+              "a",
+              "acostumbrarse a, aprender a, atreverse a, ayudar a, negarse a",
+              "Me costó acostumbrarme a la altura."
+            ],
+            [
+              "de",
+              "tratar de, acordarse de, olvidarse de, quejarse de, darse cuenta de",
+              "Trato de hablar más despacio."
+            ],
+            [
+              "en",
+              "pensar en, confiar en, fijarse en, tardar en, quedar en",
+              "Tardé un año en aprender el oficio."
+            ],
+            [
+              "con",
+              "soñar con, contar con, casarse con",
+              "Puedes contar con nosotros para la mudanza."
+            ]
+          ]
+        },
+        "mistakes": [
+          {
+            "wrong": "Todavía no me acostumbro el frío de la mañana.",
+            "right": "Todavía no me acostumbro al frío de la mañana.",
+            "why": "«Acostumbrarse» siempre lleva «a» (a + el = al)."
+          },
+          {
+            "wrong": "Siempre sueño en volver a la costa.",
+            "right": "Siempre sueño con volver a la costa.",
+            "why": "Se dice «soñar con»."
+          }
+        ]
+      },
+      {
+        "heading": "La preposición no desaparece: delante de «que» y en las preguntas",
+        "body": [
+          "Cuando detrás del verbo viene una frase con «que», la preposición se queda: «Me di cuenta de que el taller era pequeño», «Confío en que lo terminemos a tiempo». Quitarla es un error frecuente (queísmo). El error contrario es añadir «de» donde no hace falta (dequeísmo): «Pienso que…», no «Pienso de que…». Un truco: cambia la frase por «eso». Si dices «me di cuenta de eso», necesitas «de que»; si dices «pienso eso», solo «que».",
+          "En las preguntas, la preposición va delante: «¿En qué piensas?», «¿Con quién cuentas?», «¿De qué te quejas?». Y ojo con «pensar»: «pensar en» es tener a alguien o algo en la mente; «¿qué piensas de…?» pide una opinión; «pensar + infinitivo» es tener la intención."
         ],
         "examples": [
           {
-            "es": "Instalamos recipientes para separar los residuos."
+            "es": "Me acordé de que tenía una cita con el dentista.",
+            "note": "«Acordarse de» + «que»: la preposición se queda."
           },
           {
-            "es": "Ponemos carteles para que nadie confunda los envases."
+            "es": "Recuerdo que llovía mucho aquel invierno.",
+            "note": "«Recordar» no lleva preposición."
           },
           {
-            "es": "Como faltaba información, hicimos una reunión."
+            "es": "¿Con quién te casaste al final?",
+            "note": "Pregunta: la preposición va delante."
+          },
+          {
+            "es": "Pienso en mi abuela cuando veo estos sombreros.",
+            "note": "«Pensar en»: tener en la mente."
+          },
+          {
+            "es": "Pienso abrir una tienda el año que viene.",
+            "note": "«Pensar + infinitivo»: intención."
           }
         ],
         "mistakes": [
           {
-            "wrong": "Lo explicamos para que todos entienden.",
-            "right": "Lo explicamos para que todos entiendan.",
-            "why": "Finalidad con para que usa subjuntivo."
+            "wrong": "Creo de que el taller cierra a las seis.",
+            "right": "Creo que el taller cierra a las seis.",
+            "why": "Dequeísmo: «creo eso», no «creo de eso». Sin preposición."
+          },
+          {
+            "wrong": "No me di cuenta que era tan tarde.",
+            "right": "No me di cuenta de que era tan tarde.",
+            "why": "Queísmo: «me di cuenta de eso», así que «de que»."
+          }
+        ],
+        "tip": "Antes de escribir «de que», prueba con «eso»: si la frase pide «de eso», deja la preposición; si no, quítala."
+      },
+      {
+        "heading": "Hacerse, volverse y convertirse en",
+        "body": [
+          "En español no hay un solo verbo para «cambiar y llegar a ser». «Hacerse» + adjetivo o nombre sin artículo cuenta un cambio que depende de una decisión o de un proceso largo: profesión, creencias, ideas, edad, dinero («Se hizo artesana», «Se hizo vegetariano», «Nos hacemos mayores»).",
+          "«Volverse» + adjetivo cuenta un cambio de carácter o de forma de ser que la persona no controla del todo: «Con los años se volvió más paciente». «Convertirse en» + nombre cuenta una transformación completa, de personas, cosas o lugares: «La casa de mi abuelo se convirtió en un taller». Fíjate: «convertirse» siempre lleva «en», y «volverse» nunca."
+        ],
+        "table": {
+          "caption": "Tres verbos, tres tipos de cambio",
+          "head": [
+            "Verbo",
+            "Qué cambio cuenta",
+            "Ejemplo"
+          ],
+          "rows": [
+            [
+              "hacerse + adjetivo / nombre",
+              "decisión, profesión, ideas, proceso largo",
+              "Mi prima se hizo enfermera."
+            ],
+            [
+              "volverse + adjetivo",
+              "carácter o cualidad, sin control",
+              "Desde la mudanza, se ha vuelto muy tranquilo."
+            ],
+            [
+              "convertirse en + nombre",
+              "transformación de personas, cosas o lugares",
+              "El mercado se convirtió en un centro cultural."
+            ],
+            [
+              "ponerse / quedarse (A2)",
+              "reacción rápida / resultado de un hecho",
+              "Se puso rojo. Se quedó sin trabajo."
+            ]
+          ]
+        },
+        "mistakes": [
+          {
+            "wrong": "La fábrica se convirtió un museo.",
+            "right": "La fábrica se convirtió en un museo.",
+            "why": "«Convertirse» siempre lleva «en»."
+          },
+          {
+            "wrong": "Se volvió en una persona muy seria.",
+            "right": "Se volvió una persona muy seria.",
+            "why": "«Volverse» no lleva «en»; con un nombre, lleva «un» o «una»."
           }
         ]
       },
       {
-        "heading": "Organizar la comunicación",
+        "heading": "Llegar a ser, pasar a ser y volverse frente a volver a",
         "body": [
-          "Porque explica la causa después de la idea principal; como suele anticiparla: como falta sombra, plantaremos árboles. Ya que presenta una razón compartida y es que puede justificar una respuesta oral. No prometas resultados absolutos: explica qué cambiará, para quién y cómo se comprobará.",
-          "Por fin expresa que algo esperado llega; para nada refuerza una negación; por si acaso prepara una posibilidad. Estoy por llamar expresa aquí inclinación a hacerlo. No traduzcas por y para como una sola relación: interpreta la expresión completa."
+          "«Llegar a ser» cuenta la meta de un camino largo, casi siempre con esfuerzo: «Llegó a ser la mejor tejedora del barrio». «Pasar a ser» es más neutro: un cambio de categoría, de cargo o de estado, frecuente en las noticias («El pueblo pasó a ser parte del municipio»).",
+          "No confundas «volverse» con «volver a», que repasaste la semana 11. «Se volvió desconfiado» es un cambio de carácter; «volvió a confiar» significa que confió otra vez; y «volvió serio» quiere decir que regresó de algún sitio con cara seria."
         ],
         "examples": [
           {
-            "es": "Ya que usamos el patio, cuidemos también sus plantas."
+            "es": "Empezó como aprendiz y llegó a ser maestra del oficio.",
+            "note": "Meta alcanzada con esfuerzo."
           },
           {
-            "es": "Llevo una bolsa por si acaso hace falta."
+            "es": "En 2020 la ruta pasó a ser gratuita.",
+            "note": "Cambio neutro de categoría."
           },
           {
-            "es": "Por fin encontramos una solución; no fue para nada fácil."
+            "es": "Después del robo se volvió desconfiada.",
+            "note": "Cambio de carácter."
+          },
+          {
+            "es": "Después del robo tardó en volver a confiar en la gente.",
+            "note": "«Volver a» = otra vez."
           }
-        ]
+        ],
+        "mistakes": [
+          {
+            "wrong": "Se puso abogada después de cinco años de estudio.",
+            "right": "Se hizo abogada después de cinco años de estudio.",
+            "why": "Una profesión se consigue con «hacerse» o «llegar a ser», no con «ponerse»."
+          }
+        ],
+        "tip": "Hazte tres preguntas: ¿lo decidió o lo buscó? (hacerse), ¿le cambió el carácter sin querer? (volverse), ¿es ahora otra cosa? (convertirse en)."
       }
     ]
   },
   "grammar": {
+    "intro": "Primero practicas las preposiciones fijas; después, los verbos de cambio.",
     "exercises": [
       {
-        "id": "b1-12-forms",
+        "id": "b1-12-gramatica-preposiciones",
         "type": "gap",
-        "prompt": "Completa estas situaciones de «Una propuesta con propósito» con la forma que expresa la relación indicada.",
+        "title": "¿Qué preposición lleva?",
+        "prompt": "Completa con «a», «de», «en» o «con» (o con «al» o «del» si hace falta).",
         "items": [
           {
-            "q": "Abrimos la fuente para que la gente ___ sus botellas.",
+            "q": "Al principio no me atrevía ___ hablar con los clientes.",
             "answers": [
               [
-                "rellene"
+                "a"
               ]
             ],
-            "why": "Relaciona la forma con la intención y el contexto temporal de la oración."
+            "why": "«Atreverse a»."
           },
           {
-            "q": "___ no había sombra, cambiamos el lugar de descanso.",
+            "q": "Mi madre siempre se queja ___ ruido de la calle.",
             "answers": [
               [
-                "Como"
+                "del"
               ]
             ],
-            "why": "Relaciona la forma con la intención y el contexto temporal de la oración."
+            "why": "«Quejarse de» + el = del."
           },
           {
-            "q": "Traigo recipientes para ___ las sobras.",
+            "q": "¿Puedo contar ___ tu ayuda el sábado?",
             "answers": [
               [
-                "guardar"
+                "con"
               ]
             ],
-            "why": "Relaciona la forma con la intención y el contexto temporal de la oración."
+            "why": "«Contar con»."
+          },
+          {
+            "q": "Fíjate ___ cómo dobla la paja antes de tejer.",
+            "answers": [
+              [
+                "en"
+              ]
+            ],
+            "why": "«Fijarse en»."
+          },
+          {
+            "q": "Tardamos tres horas ___ llegar al mirador de Turi.",
+            "answers": [
+              [
+                "en"
+              ]
+            ],
+            "why": "«Tardar en» + tiempo."
+          },
+          {
+            "q": "Mi hermano se negó ___ vender la casa familiar.",
+            "answers": [
+              [
+                "a"
+              ]
+            ],
+            "why": "«Negarse a»."
           }
-        ],
-        "bank": [
-          "rellene",
-          "Como",
-          "guardar"
         ]
       },
       {
-        "id": "b1-12-repair",
-        "type": "error",
-        "prompt": "Revisa la coherencia y la forma en estas frases del caso de la semana.",
+        "id": "b1-12-gramatica-que-preguntas",
+        "type": "choice",
+        "title": "¿Con preposición o sin ella?",
+        "prompt": "Elige la opción correcta.",
         "items": [
           {
-            "sentence": "Lo explicamos para que todos entienden.",
-            "answers": [
-              "Lo explicamos para que todos entiendan."
+            "q": "___ que había dejado las llaves dentro.",
+            "options": [
+              "Me di cuenta",
+              "Me di cuenta de",
+              "Me di de cuenta"
             ],
-            "why": "Finalidad con para que usa subjuntivo."
+            "answer": 1,
+            "why": "«Darse cuenta de eso» → «de que»."
           },
           {
-            "sentence": "Uso una taza para no comprar de vasos.",
-            "answers": [
-              "Uso una taza para no comprar vasos."
+            "q": "Te prometo ___ lo termino antes del viernes.",
+            "options": [
+              "de que",
+              "en que",
+              "que"
             ],
-            "why": "Comprar lleva aquí objeto directo sin de."
+            "answer": 2,
+            "why": "«Prometer eso»: sin preposición."
           },
           {
-            "sentence": "Como había basura, porque organizamos una limpieza.",
-            "answers": [
-              "Como había basura, organizamos una limpieza."
+            "q": "¿___ estás pensando? Te veo muy callada.",
+            "options": [
+              "En qué",
+              "Qué",
+              "De qué"
             ],
-            "why": "Como ya introduce la causa; no se añade porque delante del resultado."
+            "answer": 0,
+            "why": "«Pensar en» → «¿En qué piensas?»."
+          },
+          {
+            "q": "¿Qué piensas ___ nuevo tranvía de Cuenca?",
+            "options": [
+              "en el",
+              "del",
+              "con el"
+            ],
+            "answer": 1,
+            "why": "Pedir opinión: «¿Qué piensas de…?»."
+          },
+          {
+            "q": "Mi socio y yo quedamos ___ abrir los domingos.",
+            "options": [
+              "de que",
+              "a",
+              "en"
+            ],
+            "answer": 2,
+            "why": "«Quedar en»: ponerse de acuerdo."
+          }
+        ]
+      },
+      {
+        "id": "b1-12-gramatica-tipo-cambio",
+        "type": "classify",
+        "title": "¿Qué verbo de cambio?",
+        "prompt": "Clasifica cada frase según el verbo de cambio que necesita.",
+        "categories": [
+          "hacerse",
+          "volverse",
+          "convertirse en",
+          "llegar a ser"
+        ],
+        "items": [
+          {
+            "text": "Estudió muchos años y al final ___ jueza del Tribunal Supremo.",
+            "cat": 3
+          },
+          {
+            "text": "A los veinte años decidió ___ budista.",
+            "cat": 0
+          },
+          {
+            "text": "Con la fama, el cantante ___ muy arrogante.",
+            "cat": 1
+          },
+          {
+            "text": "La antigua estación ___ una biblioteca pública.",
+            "cat": 2
+          },
+          {
+            "text": "Mi vecino ___ rico vendiendo artesanías por internet.",
+            "cat": 0
+          },
+          {
+            "text": "Después del accidente, mi padre ___ más prudente.",
+            "cat": 1
+          },
+          {
+            "text": "Esa pequeña tienda ___ la empresa más grande de la ciudad.",
+            "cat": 2
+          },
+          {
+            "text": "Empezó limpiando la cocina y ___ chef del mejor restaurante de Quito.",
+            "cat": 3
+          }
+        ]
+      },
+      {
+        "id": "b1-12-gramatica-errores",
+        "type": "error",
+        "title": "Corrige el error",
+        "prompt": "Cada frase tiene un error de las dos clases. Escríbela bien.",
+        "items": [
+          {
+            "sentence": "El convento se convirtió un hotel de lujo.",
+            "answers": [
+              "El convento se convirtió en un hotel de lujo."
+            ],
+            "why": "«Convertirse» siempre lleva «en»."
+          },
+          {
+            "sentence": "Nunca me olvido que me ayudaste con la mudanza.",
+            "answers": [
+              "Nunca me olvido de que me ayudaste con la mudanza.",
+              "Nunca olvido que me ayudaste con la mudanza."
+            ],
+            "why": "«Olvidarse de que»; o bien «olvidar que», sin «me»."
+          },
+          {
+            "sentence": "Mis padres se casaron en la catedral y soñaron en un viaje a Galápagos.",
+            "answers": [
+              "Mis padres se casaron en la catedral y soñaron con un viaje a Galápagos."
+            ],
+            "why": "Se dice «soñar con»."
+          },
+          {
+            "sentence": "Desde que trabaja de noche, se ha puesto una persona muy seria.",
+            "answers": [
+              "Desde que trabaja de noche, se ha vuelto una persona muy seria."
+            ],
+            "why": "Un cambio de carácter duradero: «volverse»."
           }
         ]
       }
     ]
   },
   "vocabulary": {
-    "intro": "Aprende cada expresión junto a su situación de uso; reutiliza al menos cuatro en tu producción.",
+    "intro": "Palabras para hablar de un oficio artesanal y de un cambio de vida. Algunas son muy de Ecuador: te lo indicamos.",
     "groups": [
       {
-        "title": "Una propuesta con propósito · acciones y recursos",
+        "title": "El oficio",
         "items": [
           {
-            "es": "reducir el consumo",
-            "note": "usar menos recursos"
+            "es": "la paja toquilla",
+            "note": "Fibra vegetal con la que se tejen los sombreros en Ecuador."
           },
           {
-            "es": "reutilizar un envase",
-            "note": "volver a usar un recipiente"
+            "es": "tejer"
           },
           {
-            "es": "separar los residuos",
-            "note": "clasificar lo que se desecha"
+            "es": "el taller"
           },
           {
-            "es": "ahorrar energía",
-            "note": "necesitar menos electricidad u otro recurso"
+            "es": "el aprendiz, la aprendiz"
+          },
+          {
+            "es": "el oficio"
+          },
+          {
+            "es": "la artesana, el artesano"
+          },
+          {
+            "es": "el ala del sombrero"
           }
         ]
       },
       {
-        "title": "Matices para esta misión",
+        "title": "Cambiar de vida",
         "items": [
           {
-            "es": "evitar el desperdicio",
-            "note": "no tirar algo aprovechable"
+            "es": "dar un giro a la vida"
           },
           {
-            "es": "una campaña",
-            "note": "acciones coordinadas para un objetivo"
+            "es": "dejar un empleo fijo"
           },
           {
-            "es": "medir el resultado",
-            "note": "comprobar qué cambió"
+            "es": "ganarse la vida"
           },
           {
-            "es": "asumir un compromiso",
-            "note": "aceptar una responsabilidad"
+            "es": "empezar de cero"
           },
           {
-            "es": "reciclar materiales",
-            "note": "transformar residuos para volver a aprovecharlos"
+            "es": "la vocación"
           },
           {
-            "es": "cambio climático",
-            "note": "cambio de patrones climáticos a largo plazo; distingue una campaña local de una solución global"
+            "es": "adaptarse"
+          }
+        ]
+      },
+      {
+        "title": "Expresiones útiles",
+        "items": [
+          {
+            "es": "tener buena mano para algo"
+          },
+          {
+            "es": "a mano",
+            "note": "Hecho por una persona, sin máquinas."
+          },
+          {
+            "es": "ahorita",
+            "note": "Muy usado en Ecuador: «ahora», «enseguida»."
           }
         ]
       }
     ],
     "exercises": [
       {
-        "id": "b1-12-lexis",
+        "id": "b1-12-vocabulario-definiciones",
         "type": "match",
-        "prompt": "Relaciona expresiones de «Una propuesta con propósito» con su significado en este contexto.",
+        "title": "Cada expresión con su definición",
+        "prompt": "Une cada expresión con su explicación.",
         "pairs": [
           {
-            "left": "reducir el consumo",
-            "right": "usar menos recursos"
+            "left": "dar un giro a la vida",
+            "right": "cambiar de forma importante tu manera de vivir"
           },
           {
-            "left": "reutilizar un envase",
-            "right": "volver a usar un recipiente"
+            "left": "el aprendiz",
+            "right": "la persona que aprende un oficio trabajando con alguien"
           },
           {
-            "left": "separar los residuos",
-            "right": "clasificar lo que se desecha"
+            "left": "ganarse la vida",
+            "right": "conseguir el dinero necesario para vivir"
           },
           {
-            "left": "ahorrar energía",
-            "right": "necesitar menos electricidad u otro recurso"
+            "left": "tener buena mano",
+            "right": "hacer algo con habilidad natural"
           },
           {
-            "left": "evitar el desperdicio",
-            "right": "no tirar algo aprovechable"
+            "left": "empezar de cero",
+            "right": "comenzar algo nuevo sin experiencia previa"
+          }
+        ],
+        "why": "Fíjate en si la expresión habla de una persona, de un cambio, de dinero o de una habilidad."
+      },
+      {
+        "id": "b1-12-vocabulario-huecos",
+        "type": "gap",
+        "title": "El cuaderno de Carmen",
+        "prompt": "Completa con una palabra del banco.",
+        "bank": [
+          "taller",
+          "tejer",
+          "oficio",
+          "mano",
+          "ala"
+        ],
+        "items": [
+          {
+            "q": "Un buen sombrero se teje a ___, fibra por fibra.",
+            "answers": [
+              [
+                "mano"
+              ]
+            ],
+            "why": "Sin máquinas."
           },
           {
-            "left": "una campaña",
-            "right": "acciones coordinadas para un objetivo"
+            "q": "Mi abuela me enseñó a ___ cuando tenía ocho años.",
+            "answers": [
+              [
+                "tejer"
+              ]
+            ],
+            "why": "El verbo de la artesanía con fibras."
           },
           {
-            "left": "medir el resultado",
-            "right": "comprobar qué cambió"
+            "q": "Alquilamos un pequeño ___ cerca del río Tomebamba.",
+            "answers": [
+              [
+                "taller"
+              ]
+            ],
+            "why": "El lugar de trabajo del artesano."
           },
           {
-            "left": "asumir un compromiso",
-            "right": "aceptar una responsabilidad"
+            "q": "Es un ___ que se aprende con paciencia, no con prisas.",
+            "answers": [
+              [
+                "oficio"
+              ]
+            ],
+            "why": "Un trabajo manual con técnica propia."
+          },
+          {
+            "q": "Este modelo tiene el ___ más ancha para proteger del sol.",
+            "answers": [
+              [
+                "ala"
+              ]
+            ],
+            "why": "«El ala», pero «ancha»: es femenino."
           }
         ]
       }
     ]
   },
   "pronunciation": {
-    "focus": "Énfasis que distingue causa y finalidad",
+    "focus": "La preposición que se esconde al enlazar: «me acostumbré‿a», «pienso‿en‿ti»",
     "explanation": [
-      "Destaca POR al explicar una causa y PARA al indicar una finalidad en ejemplos contrastados. El énfasis ayuda al oyente, pero no sustituye la preposición correcta.",
-      "Escucha la síntesis como apoyo para percibir palabras y grupos. Compara después tu producción con la comprensión de otra persona; no hay evaluación automática ni demostración regional verificada."
+      "Muchas preposiciones de esta semana son una sola vocal o empiezan por vocal: «a», «en». Al hablar se unen a la palabra anterior y a la siguiente, y casi desaparecen: «me acostumbré‿a‿esto» suena como una sola palabra. Por eso muchos estudiantes no las oyen y luego no las escriben.",
+      "Para no perderlas, pronuncia la unión sin pausa pero sin borrar la vocal: «pienso‿en‿ella», «se convirtió‿en‿un taller», «me atreví‿a‿hablar». Cuando dos vocales iguales se juntan («voy‿a‿aprender»), alarga un poco el sonido en lugar de decirlo dos veces."
     ],
     "examples": [
       {
-        "es": "Instalamos recipientes para separar los residuos."
+        "es": "Me acostumbré a la altura. → me-a-cos-tum-bréa-la-al-tu-ra",
+        "note": "La «a» se une a la «é» anterior."
       },
       {
-        "es": "Ponemos carteles para que nadie confunda los envases."
-      },
-      {
-        "es": "Como faltaba información, hicimos una reunión."
+        "es": "Se convirtió en un taller. → se-con-vir-tióen-un-ta-ller",
+        "note": "«En» se apoya en la vocal anterior y en la siguiente."
       }
     ],
     "perceive": {
-      "id": "b1-12-perception",
+      "id": "b1-12-pronunciacion-preposicion",
       "type": "listen",
-      "prompt": "Escucha antes de elegir qué secuencia reconoces; después repítela agrupando el sentido.",
+      "title": "¿Hay preposición?",
+      "prompt": "Escucha cada frase y decide qué oyes después del verbo.",
       "items": [
         {
-          "q": "Percepción 1: ¿qué reconoces al escuchar el fragmento de «Una propuesta con propósito»?",
+          "q": "¿Qué oyes después de «me acostumbré»?",
           "options": [
-            "Se contrastan por y para",
-            "Las dos partes usan solo por"
-          ],
-          "answer": 0,
-          "audio": "No lo hacemos por imagen; lo hacemos para reducir residuos.",
-          "voice": "es-ES-f",
-          "why": "Escucha la secuencia completa y compara el grupo indicado. La síntesis sirve como apoyo, no como evaluación de acento."
-        },
-        {
-          "q": "Percepción 2: ¿qué reconoces al escuchar el fragmento de «Una propuesta con propósito»?",
-          "options": [
-            "La causa aparece únicamente al final",
-            "La causa aparece antes de la acción principal"
+            "nada",
+            "a"
           ],
           "answer": 1,
-          "audio": "Como faltaba sombra, cambiamos el lugar.",
-          "voice": "es-ES-f",
-          "why": "Escucha la secuencia completa y compara el grupo indicado. La síntesis sirve como apoyo, no como evaluación de acento."
+          "why": "Se oye «acostumbréa»: hay «a».",
+          "audio": "Me acostumbré a la comida de la sierra en un mes.",
+          "voice": "es-PE-f"
+        },
+        {
+          "q": "¿Qué oyes después de «pienso»?",
+          "options": [
+            "en",
+            "nada"
+          ],
+          "answer": 0,
+          "why": "«Piensoen»: la «e» se une a la «o».",
+          "audio": "Pienso en mis padres cada vez que veo el río.",
+          "voice": "es-CO-m"
+        },
+        {
+          "q": "¿Y después de «recuerdo»?",
+          "options": [
+            "de",
+            "nada"
+          ],
+          "answer": 1,
+          "why": "«Recordar» no lleva preposición: «recuerdo que».",
+          "audio": "Recuerdo que el taller olía a paja mojada.",
+          "voice": "es-PE-m"
+        },
+        {
+          "q": "¿Qué oyes después de «se convirtió»?",
+          "options": [
+            "nada",
+            "en"
+          ],
+          "answer": 1,
+          "why": "«Convirtióen»: «convertirse en».",
+          "audio": "La casa se convirtió en un museo del sombrero.",
+          "voice": "es-CO-f"
         }
       ]
     },
     "produce": [
       {
-        "text": "Instalamos recipientes para separar los residuos.",
-        "tip": "Destaca POR al explicar una causa y PARA al indicar una finalidad en ejemplos contrastados. El énfasis ayuda al oyente, pero no sustituye la preposición correcta.",
-        "voice": "es-ES-f"
+        "text": "Me acostumbré a vivir a dos mil quinientos metros.",
+        "tip": "Une «acostumbré‿a» sin borrar la «a».",
+        "voice": "es-PE-f"
       },
       {
-        "text": "Ponemos carteles para que nadie confunda los envases.",
-        "tip": "Destaca POR al explicar una causa y PARA al indicar una finalidad en ejemplos contrastados. El énfasis ayuda al oyente, pero no sustituye la preposición correcta.",
-        "voice": "es-ES-f"
+        "text": "Confío en ella y cuento con su ayuda.",
+        "tip": "Liga «confío‿en‿ella» en un solo grupo.",
+        "voice": "es-CO-m"
       },
       {
-        "text": "Como faltaba información, hicimos una reunión.",
-        "tip": "Destaca POR al explicar una causa y PARA al indicar una finalidad en ejemplos contrastados. El énfasis ayuda al oyente, pero no sustituye la preposición correcta.",
-        "voice": "es-ES-f"
+        "text": "La tienda se convirtió en un taller de sombreros.",
+        "tip": "Que se oiga la «e» de «en».",
+        "voice": "es-PE-m"
       }
-    ]
+    ],
+    "spelling": "Aunque al hablar la preposición casi no se oiga, por escrito siempre aparece: «me acostumbré a», «pienso en», «se convirtió en». Recuerda también las contracciones: «a + el = al», «de + el = del»."
   },
   "listening": {
-    "title": "Una propuesta con propósito · voces en conversación",
-    "context": "Una propuesta para reducir envases necesita razones y un plan viable. Escucha primero sin transcripción. Las voces son sintéticas; no se presentan como modelos regionales verificados. Anota quién necesita qué y qué queda por confirmar.",
+    "title": "Una tarde en el taller de Carmen",
+    "context": "Es miércoles por la tarde en un taller de sombreros de paja toquilla del centro de Cuenca. Julián, un estudiante colombiano que prepara un documental sobre oficios, entrevista a Carmen, que dejó la ingeniería hace diez años.",
     "speakers": [
       {
-        "id": "a",
-        "name": "Promotora",
-        "voice": "es-ES-f"
+        "id": "car",
+        "name": "Carmen",
+        "voice": "es-PE-f",
+        "role": "artesana"
       },
       {
-        "id": "b",
-        "name": "Responsable del centro",
-        "voice": "es-ES-m"
+        "id": "jul",
+        "name": "Julián",
+        "voice": "es-CO-m",
+        "role": "estudiante de cine"
       }
     ],
     "script": [
       {
-        "speaker": "a",
-        "text": "Queremos proponer una fuente en el centro deportivo para que la gente pueda rellenar sus botellas. Ahora muchas personas compran una bebida cada vez que vienen, y luego quedan envases en las papeleras del patio."
+        "speaker": "jul",
+        "text": "Gracias por recibirme, Carmen. Me dijeron que usted era ingeniera antes de dedicarse a esto. ¿Es verdad?"
       },
       {
-        "speaker": "b",
-        "text": "La idea me parece interesante, pero quisiera entender el coste. Como el presupuesto es pequeño, tenemos que explicar por qué esta medida tendría prioridad sobre otras. ¿Habéis preguntado cuántas personas usarían la fuente?"
+        "speaker": "car",
+        "text": "Sí, trabajé doce años en una constructora de Quito. Ganaba bien, pero un día me di cuenta de que no pensaba en otra cosa que en el trabajo. Me había vuelto una persona muy nerviosa."
       },
       {
-        "speaker": "a",
-        "text": "Hicimos una consulta durante tres tardes. Bastantes usuarios dijeron que traerían una botella si pudieran llenarla aquí. No podemos asegurar que todos cambien de hábito, pero sí ofrecer una opción que ahora no existe."
+        "speaker": "jul",
+        "text": "¿Y por qué eligió precisamente los sombreros?"
       },
       {
-        "speaker": "b",
-        "text": "Entonces convendría añadir un cartel claro y revisar el mantenimiento. No sirve instalar algo para que después nadie sepa si el agua está disponible. También necesitamos decidir quién avisará cuando haya un problema."
+        "speaker": "car",
+        "text": "Por mi abuela. Ella tejía aquí en Cuenca y yo soñaba con aprender desde niña. Así que me atreví a dejar el empleo fijo y me vine con una maleta y muchos miedos."
       },
       {
-        "speaker": "a",
-        "text": "La recepción puede registrar los avisos y el equipo de mantenimiento revisarla con el resto de instalaciones. Proponemos observar el uso durante dos meses, para comprobar si baja la cantidad de envases y si aparecen dificultades."
+        "speaker": "jul",
+        "text": "¿Le costó acostumbrarse a la vida de aquí?"
       },
       {
-        "speaker": "b",
-        "text": "Con esa información puedo presentar la propuesta. Llevaré también el cálculo de mantenimiento por si acaso lo preguntan. Me convence más un plan con responsables y revisión que una promesa de eliminar todos los residuos de una vez."
+        "speaker": "car",
+        "text": "Al principio, sí. Tardé casi dos años en tejer un sombrero que se pudiera vender. Me quejaba de todo: del frío, de las manos cansadas… Pero conté con la ayuda de doña Rosa, una maestra del barrio, que tuvo mucha paciencia conmigo."
+      },
+      {
+        "speaker": "jul",
+        "text": "Y ahora mire: esta casa se ha convertido en un taller con cuatro aprendices."
+      },
+      {
+        "speaker": "car",
+        "text": "Sí, la casa de mi abuela pasó a ser la sede de una pequeña cooperativa. No sé si llegaré a ser tan buena como ella, pero me he hecho artesana de verdad. Y me he vuelto mucho más tranquila, eso seguro."
+      },
+      {
+        "speaker": "jul",
+        "text": "¿Qué le diría a alguien que piensa en cambiar de vida?"
+      },
+      {
+        "speaker": "car",
+        "text": "Que no trate de hacerlo todo en un mes. Y que confíe en las personas que saben más que uno."
       }
     ],
     "stages": [
       {
         "stage": "gist",
-        "prompt": "Escucha sin abrir el texto. Identifica la situación y la intención principal.",
+        "prompt": "Escucha una vez sin leer. ¿De qué trata la conversación?",
         "exercise": {
-          "id": "b1-12-audio-0",
+          "id": "b1-12-escucha-global",
           "type": "choice",
-          "prompt": "Una propuesta con propósito: Escucha sin abrir el texto. Identifica la situación y la intención principal.",
+          "prompt": "Elige la mejor respuesta.",
           "items": [
             {
-              "q": "¿Cuál es el objetivo principal?",
+              "q": "¿Qué cuenta Carmen?",
               "options": [
-                "Vender una marca de bebidas",
-                "Facilitar la reutilización de botellas"
-              ],
-              "answer": 1,
-              "why": "La respuesta se apoya en la información y la intención del texto; vuelve a localizar la evidencia."
-            },
-            {
-              "q": "¿Qué hace viable discutir la propuesta?",
-              "options": [
-                "Un plan de uso, mantenimiento y evaluación",
-                "Una promesa de éxito total"
+                "Cómo pasó de la ingeniería a tejer sombreros.",
+                "Cómo abrió una constructora en Cuenca.",
+                "Por qué quiere volver a Quito."
               ],
               "answer": 0,
-              "why": "Comprueba la información concreta del fragmento antes de elegir."
+              "why": "Explica su cambio de vida: de ingeniera a artesana."
+            },
+            {
+              "q": "¿Cómo se siente Carmen hoy?",
+              "options": [
+                "Arrepentida de su decisión.",
+                "Agotada y nerviosa.",
+                "Tranquila y satisfecha, aunque sigue aprendiendo."
+              ],
+              "answer": 2,
+              "why": "«Me he vuelto mucho más tranquila», pero no sabe si llegará a ser tan buena como su abuela."
             }
           ]
         }
       },
       {
         "stage": "detail",
-        "prompt": "Vuelve a escuchar y anota el dato que cambia la decisión.",
+        "prompt": "Escucha otra vez y anota los detalles.",
         "exercise": {
-          "id": "b1-12-audio-1",
+          "id": "b1-12-escucha-detalle",
           "type": "choice",
-          "prompt": "Una propuesta con propósito: Vuelve a escuchar y anota el dato que cambia la decisión.",
+          "prompt": "Responde según la conversación.",
           "items": [
             {
-              "q": "¿Qué quieren comprobar durante dos meses?",
+              "q": "¿De qué se dio cuenta Carmen en Quito?",
               "options": [
-                "Uso, residuos y dificultades",
-                "Solo el color de la fuente"
-              ],
-              "answer": 0,
-              "why": "La respuesta se apoya en la información y la intención del texto; vuelve a localizar la evidencia."
-            },
-            {
-              "q": "¿Durante cuánto tiempo observarán el uso?",
-              "options": [
-                "Tres tardes solamente",
-                "Dos meses"
+                "De que ganaba poco.",
+                "De que solo pensaba en el trabajo.",
+                "De que su abuela estaba enferma."
               ],
               "answer": 1,
-              "why": "Comprueba la información concreta del fragmento antes de elegir."
+              "why": "«Me di cuenta de que no pensaba en otra cosa que en el trabajo.»"
+            },
+            {
+              "q": "¿Cuánto tardó en tejer un sombrero para vender?",
+              "options": [
+                "Casi dos años.",
+                "Un mes.",
+                "Doce años."
+              ],
+              "answer": 0,
+              "why": "«Tardé casi dos años en tejer un sombrero que se pudiera vender.»"
+            },
+            {
+              "q": "¿En qué se convirtió la casa de su abuela?",
+              "options": [
+                "En una tienda de recuerdos.",
+                "En un hostal.",
+                "En la sede de una cooperativa."
+              ],
+              "answer": 2,
+              "why": "«La casa de mi abuela pasó a ser la sede de una pequeña cooperativa.»"
             }
           ]
         }
       },
       {
         "stage": "notice",
-        "prompt": "Escucha una tercera vez: relaciona la formulación con su función. Después puedes consultar la transcripción.",
+        "prompt": "Fíjate en la gramática. Completa lo que dicen exactamente.",
         "exercise": {
-          "id": "b1-12-audio-2",
-          "type": "choice",
-          "prompt": "Una propuesta con propósito: Escucha una tercera vez: relaciona la formulación con su función. Después puedes consultar la transcripción.",
+          "id": "b1-12-escucha-formas",
+          "type": "gap",
+          "prompt": "Escribe la palabra o la forma que usan.",
           "items": [
             {
-              "q": "¿Qué expresa «por si acaso lo preguntan»?",
-              "options": [
-                "Una causa ya confirmada",
-                "Preparación ante una posibilidad"
+              "q": "Un día me di cuenta ___ que no pensaba en otra cosa que en el trabajo.",
+              "answers": [
+                [
+                  "de"
+                ]
               ],
-              "answer": 1,
-              "why": "La respuesta se apoya en la información y la intención del texto; vuelve a localizar la evidencia."
+              "why": "Queísmo evitado: «darse cuenta de que»."
             },
             {
-              "q": "¿Qué reconoce «no podemos asegurar que todos cambien»?",
-              "options": [
-                "Un límite de la previsión",
-                "La inutilidad de cualquier fuente"
+              "q": "Ella tejía aquí en Cuenca y yo soñaba ___ aprender desde niña.",
+              "answers": [
+                [
+                  "con"
+                ]
               ],
-              "answer": 0,
-              "why": "Comprueba la información concreta del fragmento antes de elegir."
+              "why": "«Soñar con»."
+            },
+            {
+              "q": "Me había ___ una persona muy nerviosa.",
+              "answers": [
+                [
+                  "vuelto"
+                ]
+              ],
+              "why": "Cambio de carácter: «volverse»."
+            },
+            {
+              "q": "Pero me he ___ artesana de verdad.",
+              "answers": [
+                [
+                  "hecho"
+                ]
+              ],
+              "why": "Profesión alcanzada con decisión: «hacerse»."
             }
           ]
         }
@@ -451,192 +858,299 @@ export const b1w12: Module = {
     ]
   },
   "reading": {
-    "title": "Una propuesta con propósito · otra perspectiva",
-    "genre": "Artículo y experiencia de comunidad",
-    "frame": "Texto original de SpanishCue. Lee para comprender la experiencia y la decisión; después vuelve a los detalles.",
+    "title": "Carmen Ordóñez: la ingeniera que aprendió a tejer",
+    "genre": "Perfil en una revista de viajes",
+    "frame": "Una revista ecuatoriana de viajes publica cada mes el perfil de una persona que cambió de vida. Este mes le toca a Carmen.",
     "text": [
-      "En el mercado del barrio se tiraban muchas bolsas pequeñas al terminar la mañana. Una asociación propuso prohibirlas inmediatamente, pero varios comerciantes señalaron que algunas personas necesitaban separar productos húmedos. Como no querían sustituir un problema por otro, empezaron por observar cuándo se utilizaban las bolsas y qué alternativas eran posibles.",
-      "La campaña final combinó tres medidas. Colocaron un cartel para que los clientes recordaran traer recipientes, ofrecieron cajas reutilizadas para compras grandes y reservaron bolsas para los productos que realmente las necesitaban. Una semana antes del inicio, explicaron los cambios en cada puesto. No lo hicieron para dar una imagen perfecta del mercado, sino para reducir un residuo concreto sin dificultar las compras de quienes tenían menos opciones.",
-      "Al cabo de un mes contaron cuántas bolsas se habían repartido y preguntaron a comerciantes y clientes qué había funcionado. El consumo había bajado, aunque algunos carteles no se entendían bien. Decidieron añadir dibujos y situarlos antes de la zona de pago. La campaña no resolvía todos los problemas ambientales del barrio; permitía comprobar un cambio pequeño y mejorarlo. Para sus organizadores, ese resultado era más útil que anunciar una gran transformación sin explicar qué debía hacer cada persona al llegar al mercado."
+      "Hace diez años, Carmen Ordóñez calculaba la resistencia de puentes en una oficina de Quito. Hoy pasa ocho horas al día sentada junto a una ventana del barrio de San Sebastián, en Cuenca, tejiendo sombreros de paja toquilla. «La gente piensa que me volví loca», cuenta entre risas. «Yo creo que me volví más sensata».",
+      "El cambio no fue repentino. Carmen se acuerda de la tarde exacta en que lo decidió: estaba atrapada en un atasco, pensando en un informe, y se dio cuenta de que llevaba meses sin pensar en nada más. Ese fin de semana viajó a Cuenca, visitó la casa vacía de su abuela y se atrevió a hacer una pregunta que no se había hecho nunca: ¿y si me quedo?",
+      "Acostumbrarse a la nueva vida le costó. Tuvo que aprender a trabajar con las manos, a ganarse la vida con mucho menos dinero y a confiar en una maestra que solo le hablaba cuando cometía un error. Durante meses se quejó de dolores en los dedos. Pero poco a poco se hizo artesana, y la casa de la abuela se convirtió en un taller abierto a los visitantes.",
+      "Hoy cuenta con cuatro aprendices y sueña con una escuela de tejido para jóvenes del barrio. ¿Llegará a ser una de las grandes maestras de Cuenca? «Eso no depende de mí», responde. «Yo solo trato de tejer cada sombrero mejor que el anterior»."
+    ],
+    "glossary": [
+      {
+        "es": "la resistencia de un puente"
+      },
+      {
+        "es": "el atasco"
+      },
+      {
+        "es": "sensato, sensata"
+      }
     ],
     "tasks": [
       {
-        "id": "b1-12-read-evidence",
+        "id": "b1-12-lectura-comprension",
         "type": "choice",
-        "prompt": "En la lectura «Una propuesta con propósito», elige la respuesta respaldada por el texto.",
+        "title": "Comprensión",
+        "prompt": "Responde según el perfil.",
         "items": [
           {
-            "q": "¿Por qué no prohíben todas las bolsas?",
+            "q": "¿Qué opina Carmen de su cambio de carácter?",
             "options": [
-              "Algunos usos requieren alternativas viables",
-              "Nadie quería reducir residuos"
+              "Que se ha vuelto más sensata.",
+              "Que se ha vuelto loca.",
+              "Que no ha cambiado nada."
             ],
             "answer": 0,
-            "why": "La respuesta se apoya en la información y la intención del texto; vuelve a localizar la evidencia."
+            "why": "«Yo creo que me volví más sensata.»"
           },
           {
-            "q": "¿Qué cambio hacen tras evaluar?",
+            "q": "¿Dónde tomó la decisión de cambiar?",
             "options": [
-              "Eliminan la consulta a clientes",
-              "Mejoran los carteles"
+              "En casa de su abuela.",
+              "En un atasco en Quito.",
+              "En el taller de la maestra."
             ],
             "answer": 1,
-            "why": "La respuesta se apoya en la información y la intención del texto; vuelve a localizar la evidencia."
+            "why": "«Estaba atrapada en un atasco… y se dio cuenta.»"
+          },
+          {
+            "q": "¿Con qué sueña ahora?",
+            "options": [
+              "Con volver a la ingeniería.",
+              "Con vender sombreros en Europa.",
+              "Con una escuela de tejido para jóvenes."
+            ],
+            "answer": 2,
+            "why": "«Sueña con una escuela de tejido para jóvenes del barrio.»"
           }
         ]
       },
       {
-        "id": "b1-12-read-mediation",
-        "type": "open",
-        "prompt": "Reformula para una persona que no ha leído «Una propuesta con propósito».",
+        "id": "b1-12-lectura-cambios",
+        "type": "classify",
+        "title": "¿Qué tipo de cambio?",
+        "prompt": "Clasifica cada cambio según el texto.",
+        "categories": [
+          "Cambio de carácter",
+          "Profesión o decisión",
+          "Transformación de un lugar"
+        ],
         "items": [
           {
-            "prompt": "Explica en 50–70 palabras qué problema aparece en «Una propuesta con propósito», qué cambia y qué dato no debe perder quien recibe tu resumen. Cita un detalle del texto.",
-            "model": "En el mercado del barrio se tiraban muchas bolsas pequeñas al terminar la mañana.",
-            "checklist": [
-              "Distingo información e interpretación.",
-              "Adapto el resumen a alguien sin contexto."
-            ]
+            "text": "Carmen se volvió más sensata.",
+            "cat": 0
+          },
+          {
+            "text": "Carmen se hizo artesana.",
+            "cat": 1
+          },
+          {
+            "text": "La casa de la abuela se convirtió en un taller.",
+            "cat": 2
+          },
+          {
+            "text": "La gente cree que Carmen se volvió loca.",
+            "cat": 0
+          },
+          {
+            "text": "Dejó la ingeniería y se quedó en Cuenca.",
+            "cat": 1
+          },
+          {
+            "text": "Una casa vacía pasó a ser un lugar abierto a visitantes.",
+            "cat": 2
           }
         ]
       }
     ],
     "noticing": {
-      "prompt": "Busca dos expresiones del texto y explica cómo ayudan a seguir la información.",
+      "prompt": "Fíjate en las preposiciones fijas y en los verbos de cambio del perfil.",
       "items": [
         {
-          "quote": "En el mercado del barrio se tiraban muchas bolsas pequeñas al terminar la mañana.",
-          "note": "Localiza quién actúa y qué perspectiva temporal o comunicativa establece esta apertura."
+          "quote": "se dio cuenta de que llevaba meses sin pensar en nada más",
+          "note": "«Darse cuenta de que» y «pensar en»: la preposición se mantiene."
         },
         {
-          "quote": "Para sus organizadores, ese resultado era más útil que anunciar una gran transformación sin explicar qué debía hacer cada persona al llegar al mercado.",
-          "note": "Explica qué aporta el cierre al propósito del texto; compáralo con la apertura."
+          "quote": "se atrevió a hacer una pregunta",
+          "note": "«Atreverse a» + infinitivo."
+        },
+        {
+          "quote": "poco a poco se hizo artesana",
+          "note": "«Hacerse» + profesión: un proceso que ella eligió."
+        },
+        {
+          "quote": "la casa de la abuela se convirtió en un taller",
+          "note": "«Convertirse en» + nombre: transformación de un lugar."
         }
       ]
     }
   },
   "practice": {
+    "intro": "Combinas las dos clases y recuperas lo de las semanas 10 y 11.",
     "exercises": [
       {
-        "id": "b1-12-order",
+        "id": "b1-12-practica-orden",
         "type": "order",
-        "prompt": "Reconstruye dos mensajes útiles para «Una propuesta con propósito» y léelos con grupos de sentido.",
+        "title": "Frases de cambio",
+        "prompt": "Ordena las palabras para formar frases completas.",
         "items": [
           {
             "words": [
-              "Ya",
-              "que",
-              "usamos",
-              "el",
-              "patio,",
-              "cuidemos",
-              "también",
-              "sus",
-              "plantas."
+              "Me",
+              "costó",
+              "mucho",
+              "acostumbrarme",
+              "al",
+              "frío",
+              "de",
+              "la",
+              "sierra."
             ]
           },
           {
             "words": [
-              "Llevo",
-              "una",
-              "bolsa",
-              "por",
-              "si",
-              "acaso",
-              "hace",
-              "falta."
+              "El",
+              "viejo",
+              "molino",
+              "se",
+              "convirtió",
+              "en",
+              "un",
+              "restaurante",
+              "famoso."
+            ]
+          },
+          {
+            "words": [
+              "¿En",
+              "qué",
+              "piensas",
+              "cuando",
+              "tejes",
+              "durante",
+              "horas?"
+            ]
+          },
+          {
+            "words": [
+              "Con",
+              "los",
+              "años",
+              "mi",
+              "abuelo",
+              "se",
+              "volvió",
+              "muy",
+              "cariñoso."
             ]
           }
         ]
       },
       {
-        "id": "b1-12-classify",
-        "type": "classify",
-        "prompt": "Clasifica estas formulaciones según su función en «Una propuesta con propósito».",
-        "categories": [
-          "Causa",
-          "Finalidad"
-        ],
+        "id": "b1-12-practica-retrieval",
+        "type": "context",
+        "title": "Recuperación: semanas 10 y 11",
+        "prompt": "Recuperación de semanas anteriores en el contexto del taller. Elige la forma correcta.",
         "items": [
           {
-            "text": "Como faltaba información, preguntamos.",
-            "cat": 0
+            "context": "Semana 11, pasado reciente. Un cliente entra y Carmen tiene en la mano un sombrero terminado hace un minuto.",
+            "q": "«___ terminar este modelo, ¿quiere verlo?»",
+            "options": [
+              "Acabé de",
+              "Acabo de",
+              "Dejo de"
+            ],
+            "answer": 1,
+            "why": "«Acabo de»: hace un momento."
           },
           {
-            "text": "Cambiamos el cartel porque no se entendía.",
-            "cat": 0
+            "context": "Semana 11, repetición. Carmen deshizo un sombrero porque tenía un error y lo tejió otra vez.",
+            "q": "¿Cómo lo cuenta?",
+            "options": [
+              "Lo volví a tejer desde el principio.",
+              "Lo volví a tejerlo desde el principio.",
+              "Lo repetí a tejer desde el principio."
+            ],
+            "answer": 0,
+            "why": "Pronombre en un solo sitio y «volver a»."
           },
           {
-            "text": "Traigo un recipiente para guardar comida.",
-            "cat": 1
+            "context": "Semana 10, costumbre. Carmen describe sus mañanas.",
+            "q": "«___ empezar a tejer a las siete, con la luz de la ventana.»",
+            "options": [
+              "Sigo",
+              "Me pongo",
+              "Suelo"
+            ],
+            "answer": 2,
+            "why": "«Soler + infinitivo»: costumbre."
           },
           {
-            "text": "Ponemos una fuente para que rellenen botellas.",
-            "cat": 1
+            "context": "Semana 10, inicio repentino. Un aprendiz se rio sin poder parar al ver su primer sombrero torcido.",
+            "q": "¿Cómo lo cuentas?",
+            "options": [
+              "Empezó a reírse poco a poco.",
+              "Se echó a reír.",
+              "Siguió sin reírse."
+            ],
+            "answer": 1,
+            "why": "«Echarse a reír»: inicio repentino."
           }
         ]
       },
       {
-        "id": "b1-12-draft",
+        "id": "b1-12-practica-transformar",
+        "type": "transform",
+        "title": "Dilo con un verbo de cambio",
+        "prompt": "Reescribe cada frase con el verbo indicado.",
+        "items": [
+          {
+            "source": "Antes era un cine; ahora es un supermercado.",
+            "instruction": "Usa «convertirse en» en indefinido: «El cine…».",
+            "answers": [
+              "El cine se convirtió en un supermercado."
+            ],
+            "why": "Transformación de un lugar: «convertirse en» + nombre."
+          },
+          {
+            "source": "Antes comía carne; desde 2019 es vegetariano por decisión propia.",
+            "instruction": "Usa «hacerse» en indefinido: «En 2019…».",
+            "answers": [
+              "En 2019 se hizo vegetariano."
+            ],
+            "why": "Cambio por decisión: «hacerse»."
+          },
+          {
+            "source": "Antes era alegre; con la enfermedad es una persona triste.",
+            "instruction": "Usa «volverse» en indefinido: «Con la enfermedad…».",
+            "answers": [
+              "Con la enfermedad se volvió una persona triste.",
+              "Con la enfermedad se volvió triste."
+            ],
+            "why": "Cambio de carácter no controlado: «volverse»."
+          }
+        ]
+      },
+      {
+        "id": "b1-12-practica-escritura-guiada",
         "type": "open",
-        "prompt": "Ensaya partes de tu texto antes de producirlo completo.",
+        "title": "Mensajes sobre cambios",
+        "prompt": "Escribe cada mensaje en dos o tres frases.",
         "items": [
           {
-            "prompt": "Una propuesta con propósito: escribe una apertura de 35–45 palabras para la tarea «Escribe 150–190 palabras proponiendo una mejora ambiental para un espacio compartido: problema observado, finalidad, acciones, responsable y evaluación realista.» sin copiar el modelo.",
-            "model": "Propongo colocar una mesa de intercambio de materiales en el centro de estudio.",
+            "prompt": "Escribe a un amigo que se acaba de mudar a otro país. Pregúntale a qué se ha acostumbrado y de qué se queja.",
+            "model": "¿Qué tal en Lisboa? ¿Ya te acostumbraste a cenar tan tarde? Seguro que te quejas del precio de los alquileres, como todos.",
             "checklist": [
-              "Presento destinatario y propósito.",
-              "Incluyo un dato pertinente del caso."
+              "Usas «acostumbrarse a» y «quejarse de».",
+              "Las preguntas tienen la preposición en el lugar correcto."
             ]
           },
           {
-            "prompt": "Una propuesta con propósito: redacta un cierre de 30–40 palabras que permita al destinatario responder o actuar.",
-            "model": "Pondríamos instrucciones breves para evitar que se convierta en un lugar donde dejar cualquier cosa. Después de un mes preguntaríamos a los usuarios si la propuesta les resulta útil. No esperamos eliminar todos los gastos del centro; queremos reducir un desperdicio concreto y facilitar el acceso a materiales que ya tenemos.",
+            "prompt": "Describe cómo ha cambiado un lugar de tu ciudad.",
+            "model": "La antigua cárcel de mi ciudad se convirtió en un hotel. Pasó a ser propiedad privada en 2015 y hoy es uno de los lugares más caros para dormir.",
             "checklist": [
-              "El cierre corresponde a esta situación.",
-              "La acción siguiente se entiende sin adivinar."
-            ]
-          }
-        ]
-      },
-      {
-        "id": "b1-12-retrieval",
-        "type": "open",
-        "prompt": "Recupera los recursos lingüísticos sin consultar la explicación. Para los casos con fuentes, usa los datos suministrados y comprueba después los criterios.",
-        "items": [
-          {
-            "prompt": "En el contexto de «Una propuesta con propósito», recupera la semana 11: Explica un proyecto con plazos: distingue un hábito de un paso futuro, incluye cuando, en cuanto y hasta que, y enlaza voy a ir sin perder claridad. Confirma quién hace cada tarea.",
-            "model": "Cuando recibamos la respuesta, reservaremos la sala. Cuando recibimos una solicitud, enviamos un aviso.",
-            "checklist": [
-              "Puedo distinguir cuando llego (habitual) de cuando llegue (futuro) y usar hasta que, en cuanto y antes de que.",
-              "Puedo hablar de metas, plazos, logros y planes a medio plazo.",
-              "Puedo entender y producir voy a ir o lo he hecho con enlaces naturales.",
-              "Puedo explicar planes que dependen de cuándo pase algo.",
-              "Puedo reconstruir la secuencia de un plan a partir de un mensaje de voz."
+              "Usas «convertirse en» con un nombre.",
+              "Usas otro verbo de cambio: «pasar a ser» o «llegar a ser»."
             ]
           },
           {
-            "prompt": "Tras recuperar el caso anterior en «Una propuesta con propósito», escribe 40–60 palabras para explicar qué elección lingüística fue más difícil y ofrece dos versiones que cambien la intención o el tiempo. Comprueba tus ejemplos con la teoría de la semana recuperada.",
-            "model": "Antes presenté un hecho como seguro. Ahora lo reformulo como una duda: Instalamos recipientes para separar los residuos.",
+            "prompt": "Cuenta cómo cambió el carácter de alguien que conoces y por qué.",
+            "model": "Mi hermano se volvió más responsable cuando nació su hija. Ahora piensa en ella antes de tomar cualquier decisión y se ha hecho un experto en canciones infantiles.",
             "checklist": [
-              "Comparo dos formulaciones concretas.",
-              "Explico el cambio de intención o referencia."
-            ]
-          },
-          {
-            "prompt": "Aplicación diferida en «Una propuesta con propósito»: Transmite un plan usando se lo o se la con referente claro. Da dos versiones de voy a enviárselo y una instrucción afirmativa y negativa con los pronombres juntos. Datos del plan: Ana redacta la lista; tú la enviarás a Laura cuando esté revisada. No la publiques antes de confirmar el lugar.",
-            "model": "La lista se la enviaré a la coordinadora. Voy a mandárselo / se lo voy a mandar.",
-            "checklist": [
-              "Puedo combinar OI y OD con se lo y mantenerlos juntos con infinitivos, gerundios e imperativos.",
-              "Explico cómo cambia el sentido si sustituyo una forma."
-            ]
-          },
-          {
-            "prompt": "Antes de presentar la campaña, escribe dos límites de su alcance: usa reciclaje y cambio climático sin afirmar que una sola medida resuelve todo. Añade por si acaso y estar por en un intercambio sobre la organización.",
-            "model": "Estoy por llamar al centro por si acaso no han recibido la propuesta. El reciclaje local ayuda a reducir residuos, pero no resuelve por sí solo el cambio climático.",
-            "checklist": [
-              "Distingo alcance local y problema global.",
-              "Uso las expresiones completas en una situación."
+              "Usas «volverse» para el carácter.",
+              "Usas un verbo con preposición fija, como «pensar en»."
             ]
           }
         ]
@@ -644,183 +1158,244 @@ export const b1w12: Module = {
     ]
   },
   "writing": {
-    "task": "Escribe 150–190 palabras proponiendo una mejora ambiental para un espacio compartido: problema observado, finalidad, acciones, responsable y evaluación realista.",
-    "context": "Destinatario, propósito y datos deben mantenerse claros. El modelo muestra una posibilidad, no una respuesta que debas copiar.",
+    "task": "Escribe un texto para el blog de tu clase sobre cómo ha cambiado una persona que conoces o un lugar importante para ti: cómo era antes, en qué se ha convertido, qué cambios fueron voluntarios y cuáles no.",
+    "context": "El blog publica una serie llamada «Antes y ahora». Los lectores son estudiantes de español de distintos países.",
     "steps": [
-      "Planifica destinatario, dos ideas centrales y un dato de apoyo de esta semana.",
-      "Escribe una primera versión sin consultar el modelo.",
-      "Compara después organización y lenguaje; cambia al menos una frase para mejorar claridad."
+      "Elige la persona o el lugar y anota tres cambios: uno de carácter o de aspecto, uno por decisión y una transformación.",
+      "Primer párrafo: cómo era antes y qué pasó, con verbos con preposición (darse cuenta de, atreverse a, soñar con).",
+      "Segundo párrafo: en qué se ha convertido, qué llegó a ser o qué pasó a ser, y qué opinas tú del cambio.",
+      "Revisa cada verbo de cambio: ¿«convertirse» lleva «en»? ¿«volverse» va sin «en»? Corrige también cada «de que»: haz la prueba de «eso»."
     ],
     "useLanguage": [
-      "Instalamos recipientes para separar los residuos.",
-      "Ponemos carteles para que nadie confunda los envases.",
-      "Como faltaba información, hicimos una reunión.",
-      "Ya que usamos el patio, cuidemos también sus plantas."
+      "hacerse + adjetivo / nombre",
+      "volverse + adjetivo",
+      "convertirse en + nombre",
+      "llegar a ser / pasar a ser",
+      "darse cuenta de que",
+      "acostumbrarse a, soñar con, contar con"
     ],
     "model": [
-      "Propongo colocar una mesa de intercambio de materiales en el centro de estudio. Como muchas personas terminan los cursos con cuadernos sin usar, podríamos aprovecharlos antes de comprar otros.",
-      "Para empezar bastaría una mesa cerca de recepción, sin comprar muebles nuevos. Cada persona podría dejar como máximo tres objetos por visita. Si se acumula demasiado material, interrumpiríamos temporalmente las entregas y revisaríamos las instrucciones antes de ampliar la propuesta.",
-      "La mesa serviría para que cualquiera dejara material en buen estado y recogiera lo que necesitara. No aceptaríamos objetos rotos ni documentos con datos personales. Dos voluntarios revisarían el espacio los viernes y anotarían cuántos objetos se reutilizan. Pondríamos instrucciones breves para evitar que se convierta en un lugar donde dejar cualquier cosa. Después de un mes preguntaríamos a los usuarios si la propuesta les resulta útil. No esperamos eliminar todos los gastos del centro; queremos reducir un desperdicio concreto y facilitar el acceso a materiales que ya tenemos."
+      "Cuando yo era niña, la plaza de mi barrio era un aparcamiento gris donde nadie se atrevía a pasear de noche. Mis padres se quejaban de los coches y del ruido, pero nadie pensaba en cambiarlo. Un día, un grupo de vecinas se dio cuenta de que el ayuntamiento tenía un presupuesto para proyectos de barrio y decidió presentar una propuesta.",
+      "Tardaron tres años en conseguirlo, pero hoy la plaza se ha convertido en un jardín con bancos, árboles y un pequeño escenario. Los vecinos nos hemos acostumbrado a tomar café allí los domingos, y el barrio se ha vuelto más tranquilo y más amable. Una de aquellas vecinas, Lola, llegó a ser concejala gracias a ese proyecto. Yo todavía sueño con ver más plazas así en mi ciudad, y confío en que otros barrios se atrevan a copiar la idea."
     ],
     "checklist": [
-      "Cumplo el propósito y el registro de la consigna.",
-      "Organizo el texto en partes conectadas y doy razones o detalles.",
-      "Reutilizo cuatro expresiones de vocabulario de la semana.",
-      "Compruebo tiempos, referencias, concordancia y lo que está confirmado.",
-      "Reviso una frase y puedo explicar por qué la cambié."
+      "Uso al menos tres verbos de cambio distintos y elijo bien cada uno.",
+      "«Convertirse» siempre lleva «en»; «volverse» nunca.",
+      "Uso al menos cuatro verbos con preposición fija y no hay dequeísmo ni queísmo.",
+      "El texto tiene dos párrafos: antes y ahora."
     ],
     "words": [
-      150,
-      190
+      130,
+      180
     ]
   },
   "speaking": {
-    "intro": "Prepara ideas, no un guion completo. Puedes grabarte localmente; el curso no puntúa tu pronunciación ni sube tu audio.",
+    "intro": "Graba tus respuestas y escúchate: comprueba que no te comes las preposiciones al enlazar («me acostumbré‿a», «pienso‿en»).",
     "tasks": [
       {
-        "title": "Intervención organizada",
-        "prompt": "Presenta una campaña en dos minutos. Tu interlocutor objeta que será demasiado cara: pregunta qué coste preocupa, explica causa y finalidad y negocia una prueba limitada.",
+        "title": "Cómo he cambiado yo",
+        "prompt": "Habla durante dos minutos de cómo has cambiado en los últimos diez años: qué decidiste (te hiciste…), cómo cambió tu carácter (te volviste…), a qué te acostumbraste, de qué te diste cuenta y con qué sueñas ahora.",
         "prep": [
-          "Anota una apertura, dos detalles y una conclusión.",
-          "Elige una expresión para pedir o dar aclaración."
+          "Tres verbos de cambio distintos.",
+          "Cuatro verbos con preposición fija.",
+          "Un final con algo que sueñas o piensas hacer."
         ],
         "seconds": 120,
+        "model": "Hace diez años yo era estudiante y vivía con mis padres. Luego me mudé a otra ciudad y tuve que acostumbrarme a vivir sola. Me di cuenta de que me gustaba cocinar y, poco a poco, me hice vegetariana. Creo que también me he vuelto más paciente, porque trabajo con niños. Mi piso pequeño se ha convertido en mi lugar favorito…",
         "selfCheck": [
-          "El oyente puede reconstruir mi idea.",
-          "Doy razones o ejemplos y marco pausas útiles."
+          "¿He hablado al menos dos minutos?",
+          "¿He elegido bien entre hacerse, volverse y convertirse en?",
+          "¿He mantenido las preposiciones delante de «que»?"
         ]
       },
       {
-        "title": "Interacción y reformulación",
-        "prompt": "En la situación «Una propuesta con propósito», tu interlocutor no comparte tu primera interpretación. Pregunta qué ha entendido, responde a su objeción y reformula tu idea con un ejemplo distinto; confirma qué acordáis y qué queda pendiente.",
+        "title": "Preguntas sobre tu cambio",
+        "prompt": "Un interlocutor quiere saber más sobre tu cambio y te hace preguntas: ¿qué fue lo que más te costó?, ¿con quién contaste?, ¿te arrepientes? Responde, aclara los detalles y hazle tú también una pregunta con preposición. Practica con alguien o graba las dos voces.",
         "prep": [
-          "Reserva una pregunta abierta.",
-          "Piensa una alternativa que puedas aceptar."
+          "Prepara respuestas con «tardé… en», «conté con» y «me costó acostumbrarme a».",
+          "Haz una pregunta con «¿En qué…?» o «¿Con quién…?»."
         ],
-        "seconds": 120,
+        "seconds": 90,
+        "model": "Lo que más me costó fue acostumbrarme a cocinar para mí sola. Conté con la ayuda de una vecina que me enseñó recetas fáciles. ¿Arrepentirme? No, nunca. Y tú, ¿en qué piensas cuando imaginas tu vida dentro de diez años?",
         "selfCheck": [
-          "Escucho antes de responder.",
-          "Adapto mi respuesta a la información nueva."
+          "¿He respondido a todas sus preguntas?",
+          "¿He hecho una pregunta con la preposición delante?"
         ]
       }
     ]
   },
   "useInClass": {
-    "intro": "Lleva tu texto revisado y una intervención breve: tu profe continuará la situación con un cambio que no conoces.",
+    "intro": "Lleva tu texto de «Antes y ahora» y estas tarjetas a la próxima clase con tu profesor.",
     "cards": [
       {
-        "move": "Presenta",
-        "task": "Presenta una campaña en dos minutos. Tu interlocutor objeta que será demasiado cara: pregunta qué coste preocupa, explica causa y finalidad y negocia una prueba limitada."
-      },
-      {
         "move": "Pregunta",
-        "task": "Pide a tu profe un dato adicional sobre «Una propuesta con propósito» que pueda cambiar tu propuesta; explica por qué lo necesitas.",
+        "task": "Hazle a tu profesor tres preguntas con preposición delante sobre su vida («¿Con qué soñabas de niño?», «¿En qué piensas al despertarte?»).",
         "phrases": [
-          "¿He entendido bien que…?",
-          "¿Qué cambiaría si…?"
+          "¿Con qué…?",
+          "¿En qué…?",
+          "¿De qué te quejas…?"
         ]
       },
       {
-        "move": "Reformula",
-        "task": "Resume la postura de tu profe sobre «Una propuesta con propósito» para una tercera persona y comprueba si tu versión conserva las condiciones."
+        "move": "Describe",
+        "task": "Describe a tu profesor cómo ha cambiado tu ciudad y pídele que te corrija los verbos de cambio.",
+        "phrases": [
+          "Se ha convertido en…",
+          "Pasó a ser…"
+        ]
+      },
+      {
+        "move": "Comprueba",
+        "task": "Di cinco frases con «que» y pide a tu profesor que te diga si necesitan «de» o no («Me di cuenta de que…», «Creo que…»).",
+        "phrases": [
+          "Me di cuenta de que…",
+          "Pienso que…"
+        ]
+      },
+      {
+        "move": "Compara",
+        "task": "Compara con tu profesor una persona famosa de tu país y una del suyo: ¿qué llegaron a ser y cómo se volvieron con la fama?",
+        "phrases": [
+          "Llegó a ser…",
+          "Se volvió…"
+        ]
       }
     ],
-    "bring": "Tu borrador y versión revisada, una grabación local si la hiciste y una pregunta sobre una elección lingüística."
+    "bring": "Tu texto de «Antes y ahora» revisado y la grabación sobre tu cambio personal."
   },
   "quiz": {
     "items": [
       {
         "type": "choice",
-        "q": "Tras trabajar ambas fuentes: ¿Qué cambio hacen tras evaluar? Relaciona tu respuesta con «Una propuesta con propósito».",
+        "q": "«Después de tres años, por fin me acostumbré ___ hablar en público.»",
         "options": [
-          "Eliminan la consulta a clientes",
-          "Mejoran los carteles"
+          "de",
+          "en",
+          "a"
         ],
-        "answer": 0,
-        "why": "La respuesta se apoya en la información y la intención del texto; vuelve a localizar la evidencia."
+        "answer": 2,
+        "why": "«Acostumbrarse a»."
+      },
+      {
+        "type": "choice",
+        "q": "¿Qué frase describe un cambio de carácter?",
+        "options": [
+          "Se hizo médica.",
+          "Se volvió muy desconfiada.",
+          "El hotel se convirtió en un hospital."
+        ],
+        "answer": 1,
+        "why": "«Volverse» + adjetivo: carácter."
       },
       {
         "type": "listen",
-        "q": "Escucha el fragmento final de evaluación de «Una propuesta con propósito»: ¿qué formulación se oye?",
+        "q": "Escucha. ¿Qué expresa la persona?",
         "options": [
-          "Como faltaba información, hicimos una reunión.",
-          "Por fin encontramos una solución; no fue para nada fácil."
+          "Una opinión sobre el centro.",
+          "Que ha pensado en irse.",
+          "La intención de mudarse."
         ],
-        "answer": 1,
-        "why": "La respuesta se apoya en la información y la intención del texto; vuelve a localizar la evidencia.",
-        "audio": "Por fin encontramos una solución; no fue para nada fácil.",
-        "voice": "es-ES-f"
+        "answer": 0,
+        "why": "«¿Qué piensas de…?» y «pienso que…»: opinión.",
+        "audio": "¿Que qué pienso del centro histórico? Pienso que es precioso, pero hay demasiados coches.",
+        "voice": "es-PE-m"
       },
       {
         "type": "gap",
-        "q": "Revisión breve de «Una propuesta con propósito». Abrimos la fuente para que la gente ___ sus botellas.",
+        "q": "La antigua fábrica de sombreros se convirtió ___ un hotel boutique.",
         "answers": [
           [
-            "rellene"
+            "en"
           ]
-        ]
-      },
-      {
-        "type": "open",
-        "prompt": "Reformulación de «Una propuesta con propósito». Texto de partida: Colocamos mapas. Queremos que los visitantes encuentren las salas. Consigna: Une con para que sin repetir queremos. Compara el sentido y la forma con el modelo; puede haber más de una respuesta válida.",
-        "model": "Colocamos mapas para que los visitantes encuentren las salas.",
-        "checklist": [
-          "Mantengo los datos y la intención del texto de partida.",
-          "Uso la estructura pedida con concordancia y referencias coherentes.",
-          "Acepto otro orden o una formulación equivalente si conserva el sentido; consulto la duda en clase."
-        ]
-      },
-      {
-        "type": "error",
-        "sentence": "Pusimos un aviso para que los clientes recuerdan traer bolsas.",
-        "answers": [
-          "Pusimos un aviso para que los clientes recuerden traer bolsas."
         ],
-        "why": "La finalidad pendiente con para que lleva subjuntivo."
+        "why": "«Convertirse en»."
+      },
+      {
+        "type": "gap",
+        "q": "No me di cuenta ___ que la tienda ya estaba cerrada.",
+        "answers": [
+          [
+            "de"
+          ]
+        ],
+        "why": "«Darse cuenta de que»."
+      },
+      {
+        "type": "gap",
+        "q": "Empezó vendiendo empanadas y llegó ___ ser dueña de una cadena de cafeterías.",
+        "answers": [
+          [
+            "a"
+          ]
+        ],
+        "why": "«Llegar a ser»: meta con esfuerzo."
       },
       {
         "type": "order",
         "words": [
-          "Por",
-          "fin",
-          "encontramos",
-          "una",
-          "solución;",
-          "no",
-          "fue",
-          "para",
-          "nada",
-          "fácil."
-        ]
+          "¿Con",
+          "quién",
+          "te",
+          "casaste",
+          "al",
+          "final,",
+          "con",
+          "Diego",
+          "o",
+          "con",
+          "Andrés?"
+        ],
+        "why": "La preposición va delante en la pregunta."
+      },
+      {
+        "type": "error",
+        "sentence": "Me olvidé que hoy era el cumpleaños de mi madre.",
+        "answers": [
+          "Me olvidé de que hoy era el cumpleaños de mi madre."
+        ],
+        "why": "«Olvidarse de que»: la preposición se queda."
+      },
+      {
+        "type": "error",
+        "sentence": "Pienso de que deberías pedir un aumento de sueldo.",
+        "answers": [
+          "Pienso que deberías pedir un aumento de sueldo."
+        ],
+        "why": "Dequeísmo: «pienso eso», sin «de»."
       },
       {
         "type": "open",
-        "prompt": "Evaluación escrita de «Una propuesta con propósito»: responde en 50–70 palabras a una persona que ha entendido solo la mitad de tu propuesta. Conserva el dato decisivo y solicita confirmación.",
+        "prompt": "Reformulación: cuenta esta biografía con verbos de cambio y con preposiciones fijas. «Antes: tímido, sin trabajo. Decisión: estudiar cocina. Resultado: chef famoso. Su casa: ahora un restaurante.»",
+        "model": "Antes era tímido y no tenía trabajo, pero se atrevió a estudiar cocina. Se hizo cocinero y, con los años, llegó a ser un chef famoso. Su casa se convirtió en un restaurante.",
         "checklist": [
-          "Reformulo en lugar de copiar.",
-          "Mantengo la intención y los datos."
-        ]
-      },
-      {
-        "type": "open",
-        "prompt": "Evaluación oral de «Una propuesta con propósito»: durante un minuto explica qué cambiarías tras recibir una objeción y por qué; añade una pregunta para continuar.",
-        "checklist": [
-          "Justifico el cambio.",
-          "Abro un turno real para el interlocutor."
+          "Usas «hacerse» o «llegar a ser» para la profesión.",
+          "Usas «convertirse en» para la transformación de la casa.",
+          "Usas al menos un verbo con preposición fija (atreverse a, decidirse a…)."
         ]
       }
     ]
   },
   "complete": {
     "canNow": [
-      "Justificar una iniciativa ambiental con causas y finalidades comprensibles.",
-      "Puedo producir y revisar un texto conectado para esta situación.",
-      "Puedo explicar mi propuesta, pedir aclaración y responder a una objeción."
+      "Usar verbos con preposición fija (acostumbrarse a, tratar de, pensar en, contar con, soñar con).",
+      "Mantener la preposición delante de «que» y en las preguntas, sin dequeísmo ni queísmo.",
+      "Elegir entre hacerse, volverse y convertirse en según el tipo de cambio.",
+      "Contar una meta alcanzada con «llegar a ser» y un cambio de categoría con «pasar a ser»."
     ],
     "review": [
-      "Mañana recupera tres expresiones sin mirar y úsalas en otro contexto.",
-      "Dentro de una semana vuelve a contar el caso con un dato cambiado y compara tu nueva respuesta.",
-      "Revisa con tu profe los criterios de recuperación; un cuestionario no evalúa por sí solo tu nivel oral."
+      "Pensar en (en la mente), pensar de (opinión) y pensar + infinitivo (intención).",
+      "«Volverse» (cambio de carácter) frente a «volver a» (otra vez) de la semana 11.",
+      "«Ponerse» y «quedarse» + adjetivo, de A2."
     ]
-  }
+  },
+  "related": [
+    {
+      "path": "/gramatica/acostumbrarse-a-tratar-de-pensar-en",
+      "label": "Clase: Acostumbrarse a, tratar de, pensar en"
+    },
+    {
+      "path": "/gramatica/verbos-de-cambio-hacerse-volverse-convertirse-en",
+      "label": "Clase: Verbos de cambio: hacerse, volverse, convertirse en, llegar a ser"
+    }
+  ]
 };

@@ -1,166 +1,376 @@
 import type { Module } from "../../types";
 
-/** Original B2 material; see docs/autoestudio/b2-audit.md. */
+/**
+ * B2 · semana 14 · Autoestudio espejo de G153 (oraciones causales avanzadas: no porque + subjuntivo)
+ * y G154 (consecutivas de intensidad: tan, tanto, tal… que). Repaso autónomo con una librería ficticia
+ * de un cerro de Valparaíso que cambia sus horarios. Audio mediante síntesis; sin acreditación regional.
+ */
 export const b2w14: Module = {
   "id": "b2-14",
   "level": "b2",
   "week": 14,
   "kind": "core",
-  "title": "Se nos pasó: responder por un error",
-  "subtitle": "Disculparse y acordar una reparación proporcionada.",
+  "title": "No es que no queramos abrir: es que suben tantos turistas que no damos abasto",
+  "subtitle": "Repaso de las causas desmentidas con «no porque» y «no es que», y de las consecuencias con «tan», «tanto» y «tal… que»",
   "stop": {
     "place": "Valparaíso",
     "country": "Chile"
   },
   "minutes": 120,
   "newObjectives": [
-    "b2.gram.valores-se",
-    "b2.voc.accidentes-cotidianos",
-    "b2.pron.cliticos-cadena",
-    "b2.fun.disculparse-responsabilidad",
-    "b2.spk.disculpa"
+    "b2.gram.g153",
+    "b2.gram.g154",
+    "b2.voc.w14-cerros-turismo",
+    "b2.pron.w14-pausa-causa",
+    "b2.lis.w14-explicar-cierre",
+    "b2.read.w14-cronica-cerro",
+    "b2.wri.w14-carta-aclaracion",
+    "b2.spk.w14-desmentir-explicar",
+    "b2.fun.w14-rechazar-interpretaciones",
+    "b2.disc.w14-causa-consecuencia"
   ],
-  "reviewObjectives": [
-    "b2.disc.argumentacion",
-    "b2.disc.posicionamiento",
-    "b2.voc.ciudad-sostenible",
-    "b2.pron.exposicion-oral",
-    "b2.wri.ensayo-argumentativo",
-    "b2.spk.exposicion",
-    "b2.gram.verbos-cambio-sistema",
-    "b2.gram.ser-estar-matices",
-    "b2.voc.personalidad",
-    "b2.pron.chile",
-    "b2.fun.describir-transformacion",
-    "b2.lis.voces-chile"
-  ],
-  "prerequisites": [
-    "b2-13"
-  ],
+  "reviewObjectives": [],
+  "prerequisites": [],
   "goal": {
-    "canDo": "Puedo disculparse y acordar una reparación proporcionada con razones, matices y condiciones claras.",
+    "canDo": "Puedo desmentir una causa que me atribuyen y dar la verdadera con «no porque…, sino porque…» o «no es que…, es que…», y contar las consecuencias de una situación intensa con «tan», «tanto» y «tal… que».",
     "steps": [
-      "Recupera decisiones lingüísticas anteriores y contrástalas con este caso.",
-      "Escucha sin transcripción y reconstruye las posiciones: reconocer un perjuicio y ofrecer reparación con seguimiento.",
-      "Lee las fuentes, identifica límites de la evidencia y prepara tu respuesta.",
-      "Escribe, revisa y ensaya una interacción que continuarás con tu docente."
+      "Repasa cómo se niega una causa sin negar la acción y qué modo pide cada parte.",
+      "Repasa las consecutivas de intensidad y la diferencia con «así que».",
+      "Escucha a una librera de Valparaíso y lee una crónica sobre la vida en los cerros.",
+      "Escribe una carta que aclare una decisión, revísala y desmiente oralmente un rumor."
     ]
   },
   "theory": {
-    "intro": "La mascota te propone una misión: disculparse y acordar una reparación proporcionada. Decide qué quieres comunicar antes de elegir una forma.",
+    "intro": "En clase viste con tu profesor cómo rechazar una causa y dar la verdadera, y cómo unir una intensidad con su consecuencia. Aquí lo repasas con una librería de un cerro de Valparaíso que deja de abrir los domingos y con todo lo que se dice en el barrio sobre esa decisión.",
     "parts": [
       {
-        "heading": "Disculparse y acordar una reparación proporcionada",
+        "heading": "No porque…, sino porque…: la acción ocurre, la causa es otra",
         "body": [
-          "Se puede ser reflexivo, recíproco, parte de un verbo pronominal o marca de pasiva e impersonalidad. En se me perdió el documento, el documento es sujeto y me identifica a la persona afectada. El plural cambia el verbo: se me perdieron las llaves. La construcción no demuestra que no hubiera responsabilidad."
+          "Cuando alguien atribuye una causa equivocada a algo que sí pasó, la rechazas con «no porque» + subjuntivo y das la causa real con «sino porque» + indicativo. La acción es real; lo que niegas es el motivo. El subjuntivo marca que esa causa no se acepta. El tiempo sigue el marco: presente («no porque falten clientes»), perfecto («no porque haya bajado la venta») o imperfecto si hablas del pasado («no porque estuviera cansada»).",
+          "Fíjate en el alcance de la negación. «No abrió porque estaba enferma» dice que no abrió, y por qué. «Abrió, pero no porque quisiera, sino porque se lo pidieron» dice que abrió y niega el motivo. Con un nombre o un infinitivo funciona igual con «por»: «no por dinero, sino por cansancio»; «no por ser turista, sino por no avisar»."
         ],
+        "table": {
+          "caption": "¿Qué niegas: la acción o la causa?",
+          "head": [
+            "Estructura",
+            "Ejemplo",
+            "¿Ocurre la acción?"
+          ],
+          "rows": [
+            [
+              "no + verbo + porque + indicativo",
+              "No abre el domingo porque necesita descansar.",
+              "No: no abre."
+            ],
+            [
+              "verbo + porque no + indicativo",
+              "Cierra el domingo porque no tiene personal.",
+              "Sí: cierra; la causa es negativa."
+            ],
+            [
+              "verbo, pero no porque + subjuntivo, sino porque + indicativo",
+              "Cierra el domingo, pero no porque venda poco, sino porque está agotada.",
+              "Sí: cierra; se rechaza un motivo."
+            ]
+          ]
+        },
         "examples": [
           {
-            "es": "Se nos olvidaron las reservas del sábado.",
-            "note": "Sujeto plural: las reservas."
+            "es": "Rosa se cambió de casa, pero no porque le molestaran los turistas, sino porque no podía con las escaleras.",
+            "note": "Marco pasado: «molestaran» en imperfecto de subjuntivo."
           },
           {
-            "es": "Me acuerdo de tu petición.",
-            "note": "Acordarse requiere de."
-          },
-          {
-            "es": "Las dos responsables se disculparon por teléfono.",
-            "note": "Reciprocidad o acción de ambas, según contexto."
+            "es": "Le dieron el premio no por su fama, sino por veinte años de trabajo en el barrio.",
+            "note": "«No por + nombre, sino por + nombre»."
           }
         ],
         "mistakes": [
           {
-            "wrong": "Se nos olvidó las dos inscripciones.",
-            "right": "Se nos olvidaron las dos inscripciones.",
-            "why": "El verbo concuerda con las dos inscripciones."
+            "wrong": "Cerramos los domingos no porque no hay clientes, sino porque necesitamos descansar.",
+            "right": "Cerramos los domingos no porque no haya clientes, sino porque necesitamos descansar.",
+            "why": "La causa rechazada va en subjuntivo."
+          },
+          {
+            "wrong": "No porque llueva, sino porque hace viento, no salgo.",
+            "right": "No salgo porque hace viento, no porque llueva.",
+            "why": "Si la acción no ocurre, primero la dices negada y después ordenas las causas; empezar por «no porque» confunde el alcance."
+          }
+        ],
+        "tip": "Antes de escribir, pregúntate: ¿la acción pasó? Si pasó y solo niegas el motivo, «no porque» + subjuntivo."
+      },
+      {
+        "heading": "«No es que…, es que…» y los conectores según su sitio",
+        "body": [
+          "«No es que» + subjuntivo rechaza una interpretación posible; «es que» o «sino que» + indicativo dan la explicación real. Es muy frecuente para suavizar una negativa: «No es que no quiera ayudarte, es que el sábado trabajo». También puedes usarlo para corregir una exageración: «No es que el barrio esté mal; es que ha cambiado muy rápido».",
+          "Los conectores causales tienen posición y registro. «Como» va siempre al principio: «Como suben tantos turistas, abrimos antes». «Porque» suele ir después de la idea principal. «Ya que», «puesto que» y «dado que» presentan una causa conocida y son más formales; «debido a» + nombre y «a causa de» son propios de textos informativos. En la conversación, tras una orden, «que» introduce la causa: «Abrígate, que en el cerro corre viento»."
+        ],
+        "examples": [
+          {
+            "es": "No es que me moleste la música en la calle; es que a las tres de la mañana no puedo dormir.",
+            "note": "Rechaza una interpretación y da la real."
+          },
+          {
+            "es": "Dado que el ascensor estará en reparación, la feria se trasladará a la plaza.",
+            "note": "Causa conocida, registro formal."
+          },
+          {
+            "es": "Debido al temporal, el puerto suspendió las salidas de los botes.",
+            "note": "«Debido a» + nombre: texto informativo."
+          }
+        ],
+        "mistakes": [
+          {
+            "wrong": "Abrimos más tarde como el ascensor no funciona.",
+            "right": "Como el ascensor no funciona, abrimos más tarde.",
+            "why": "«Como» causal va al principio de la frase."
+          },
+          {
+            "wrong": "No es que no me gusta el turismo, es que hay demasiado.",
+            "right": "No es que no me guste el turismo, es que hay demasiado.",
+            "why": "«No es que» pide subjuntivo."
           }
         ]
       },
       {
-        "heading": "Interpretación, registro y efecto",
+        "heading": "Tan, tanto, tal: la intensidad tiene consecuencias",
         "body": [
-          "Ir e irse, quedar y quedarse, acordar y acordarse de muestran cambios de significado con el pronombre. Una disculpa eficaz identifica el daño, asume lo que depende de ti y ofrece una reparación verificable. Explicar un accidente ayuda a entenderlo; repetir que fue involuntario puede sonar a excusa si evita responder a sus consecuencias."
+          "Cuando una consecuencia nace de una intensidad, la intensidad se marca en la primera parte y la consecuencia llega con «que». «Tan» va delante de un adjetivo o un adverbio: «la calle es tan empinada que…», «subían tan despacio que…». «Tanto» concuerda con el nombre: «tanta gente», «tantos cruceros», «tantas mochilas». Detrás de un verbo, «tanto» no cambia: «llovió tanto que…».",
+          "«Tal» + nombre resalta la clase o el grado de algo: «había tal ruido que no oíamos el timbre», «dijeron tales cosas que nadie volvió». «De tal manera que» o «de tal modo que» se refieren a la manera: «lo explicó de tal manera que todos lo entendieron». La consecuencia va en indicativo porque es un hecho."
+        ],
+        "table": {
+          "caption": "La intensidad y su consecuencia",
+          "head": [
+            "Forma",
+            "Delante de",
+            "Ejemplo"
+          ],
+          "rows": [
+            [
+              "tan",
+              "adjetivo o adverbio",
+              "La escalera es tan larga que la llaman «la eterna»."
+            ],
+            [
+              "tanto / tanta / tantos / tantas",
+              "sustantivo",
+              "Llegaron tantos visitantes que se acabaron los mapas."
+            ],
+            [
+              "verbo + tanto",
+              "después del verbo",
+              "Rosa trabajó tanto que enfermó."
+            ],
+            [
+              "tal / tales",
+              "sustantivo",
+              "Había tal cola en el ascensor que subimos a pie."
+            ]
+          ]
+        },
+        "examples": [
+          {
+            "es": "La vista desde el mirador es tan amplia que se ven los barcos de Viña.",
+            "note": "«Tan» + adjetivo."
+          },
+          {
+            "es": "Vendieron tantas postales que tuvieron que pedir más a la imprenta.",
+            "note": "«Tantas» concuerda con «postales»."
+          }
+        ],
+        "mistakes": [
+          {
+            "wrong": "Había tanto turistas que no se podía caminar.",
+            "right": "Había tantos turistas que no se podía caminar.",
+            "why": "Delante de un nombre, «tanto» concuerda: «tantos turistas»."
+          },
+          {
+            "wrong": "El cerro es tanto bonito que todos quieren vivir allí.",
+            "right": "El cerro es tan bonito que todos quieren vivir allí.",
+            "why": "Delante de un adjetivo se usa «tan»."
+          }
+        ],
+        "tip": "Mira la palabra que sigue: adjetivo o adverbio → «tan»; nombre → «tanto» con concordancia; nada (después del verbo) → «tanto»."
+      },
+      {
+        "heading": "«Así que»: consecuencia sin intensidad",
+        "body": [
+          "Si la consecuencia no depende de una intensidad, sino de un hecho, basta «así que», que va después de una coma: «El ascensor estaba cerrado, así que subimos por la escalera». No confundas la consecuencia con la causa ni con la finalidad: «porque» explica lo anterior, «para que» dice el objetivo y «así que» cuenta lo que resultó.",
+          "En textos más formales encontrarás «por lo tanto», «por consiguiente» o «de modo que», con el mismo valor. Y cuando la frase principal está negada, la consecuencia imaginada puede ir en subjuntivo: «No es tan caro que no puedas pagarlo». Para tu propia escritura, recuerda la regla básica: consecuencia real, indicativo."
         ],
         "examples": [
           {
-            "es": "Se nos olvidaron las reservas del sábado.",
-            "note": "Explica qué información afirma y cuál deja abierta."
+            "es": "Se cortó la luz en el cerro, así que cerramos temprano.",
+            "note": "Consecuencia de un hecho: «así que»."
           },
           {
-            "es": "Las dos responsables se disculparon por teléfono.",
-            "note": "Reformula sin cambiar participantes ni tiempo."
+            "es": "Cerramos temprano porque se cortó la luz.",
+            "note": "La misma relación vista desde la causa."
+          }
+        ],
+        "mistakes": [
+          {
+            "wrong": "Hacía mucho viento así que no salimos al mirador porque.",
+            "right": "Hacía mucho viento, así que no salimos al mirador.",
+            "why": "«Así que» ya expresa la consecuencia; no se suma «porque», y va después de una coma."
           }
         ]
       }
     ]
   },
   "grammar": {
-    "intro": "Elige formas por su función y por el momento desde el que se habla.",
+    "intro": "Primero decide qué niegas y qué causa das; después, si hay intensidad, elige entre «tan», «tanto» y «tal».",
     "exercises": [
       {
-        "id": "g-contexto",
+        "id": "b2-14-g-causa",
         "type": "gap",
-        "prompt": "Completa estas decisiones lingüísticas de se nos pasó: responder por un error; justifica el modo, la forma o la combinación.",
+        "prompt": "Completa con la forma correcta del verbo entre paréntesis. Piensa si la causa se acepta o se rechaza.",
         "items": [
           {
-            "q": "Se nos ___ las reservas del sábado.",
+            "q": "Rosa vende libros de segunda mano, no porque ___ (ser) más baratos, sino porque le gusta su historia.",
             "answers": [
               [
-                "olvidaron"
+                "sean"
               ]
             ],
-            "why": "Sujeto plural: las reservas."
+            "why": "Causa rechazada en presente: subjuntivo."
           },
           {
-            "q": "Me acuerdo ___ tu petición.",
+            "q": "Se mudó a Viña el año pasado, pero no porque ___ (odiar) el cerro.",
             "answers": [
               [
-                "de"
+                "odiara",
+                "odiase"
               ]
             ],
-            "why": "Acordarse requiere de."
+            "why": "Marco pasado: imperfecto de subjuntivo."
           },
           {
-            "q": "Las dos responsables se ___ por teléfono.",
+            "q": "No es que no me ___ (interesar) tu propuesta, es que ahora no tengo tiempo.",
             "answers": [
               [
-                "disculparon"
+                "interese"
               ]
             ],
-            "why": "Reciprocidad o acción de ambas, según contexto."
+            "why": "«No es que» + subjuntivo."
+          },
+          {
+            "q": "No cerramos el lunes porque ___ (venir) un grupo de estudiantes.",
+            "answers": [
+              [
+                "viene",
+                "vendrá",
+                "va a venir"
+              ]
+            ],
+            "why": "Aquí se niega la acción y la causa es real: indicativo."
+          },
+          {
+            "q": "Abrígate, ___ arriba en el mirador hace frío.",
+            "answers": [
+              [
+                "que"
+              ]
+            ],
+            "why": "Tras una orden, «que» introduce la causa en la conversación."
+          },
+          {
+            "q": "___ el ascensor Reina Victoria estaba cerrado, subimos por la escalera.",
+            "answers": [
+              [
+                "Como",
+                "como"
+              ]
+            ],
+            "why": "Causa al principio de la frase: «como»."
           }
         ]
       },
       {
-        "id": "g-reconstruir",
-        "type": "open",
-        "prompt": "Reformula con autonomía. Lee el texto de partida y la consigna de cada ítem; después contrasta tu respuesta con el modelo orientativo y la lista de revisión. Otras soluciones pueden ser válidas.",
+        "id": "b2-14-g-intensidad",
+        "type": "choice",
+        "prompt": "Elige la forma que completa la consecutiva.",
         "items": [
           {
-            "prompt": "Texto de partida: «Olvidamos las inscripciones sin querer.» Reformula con se y nos; conserva el plural.",
-            "model": "Se nos olvidaron las inscripciones.",
+            "q": "«Había ___ gente en la escalera que tardamos media hora en bajar».",
+            "options": [
+              "tan",
+              "tanta",
+              "tanto"
+            ],
+            "answer": 1,
+            "why": "Delante de «gente», femenino singular: «tanta»."
+          },
+          {
+            "q": "«El café de la esquina es ___ pequeño que solo caben cuatro mesas».",
+            "options": [
+              "tanto",
+              "tal",
+              "tan"
+            ],
+            "answer": 2,
+            "why": "Delante de un adjetivo: «tan»."
+          },
+          {
+            "q": "«Esa noche hubo ___ tormenta que se suspendieron los fuegos».",
+            "options": [
+              "tal",
+              "tan",
+              "tantas"
+            ],
+            "answer": 0,
+            "why": "«Tal» + nombre en singular."
+          },
+          {
+            "q": "«El ascensor estaba en mantención, ___ subimos caminando».",
+            "options": [
+              "porque",
+              "así que",
+              "para que"
+            ],
+            "answer": 1,
+            "why": "Consecuencia de un hecho, sin intensidad."
+          }
+        ]
+      },
+      {
+        "id": "b2-14-g-reformular",
+        "type": "open",
+        "prompt": "Reformula cada texto de partida según la consigna. Después compara con el modelo y la lista: hay más de una versión correcta.",
+        "items": [
+          {
+            "prompt": "Texto de partida: «Dicen que cerramos los domingos porque perdemos dinero. Es falso: cerramos porque mi madre necesita descansar». Únelo en una sola frase con «no porque…, sino porque…».",
+            "model": "Cerramos los domingos, pero no porque perdamos dinero, sino porque mi madre necesita descansar.",
             "checklist": [
-              "Conservo participantes, referencia temporal y contenido pertinente.",
-              "Aplico la construcción o función solicitada; puedo elegir otro orden o una variante igualmente válida.",
-              "Comparo el significado y la forma con el modelo orientativo; no es una respuesta única ni se califica por coincidencia literal."
+              "Mantengo la acción afirmada y niego solo el motivo.",
+              "Uso subjuntivo en la causa rechazada e indicativo en la real.",
+              "Comparo con el modelo orientativo: no es una respuesta única y otras formulaciones correctas también valen."
             ]
           },
           {
-            "prompt": "Texto de partida: «Recuerdo tu reclamación.» Usa acordarse y su preposición.",
-            "model": "Me acuerdo de tu reclamación.",
+            "prompt": "Texto de partida: «No te ayudo con la mudanza el sábado. Trabajo todo el día. No estoy enojado contigo». Suaviza la negativa con «no es que…, es que…».",
+            "model": "No es que esté enojado contigo, es que el sábado trabajo todo el día y no puedo ayudarte con la mudanza.",
             "checklist": [
-              "Conservo participantes, referencia temporal y contenido pertinente.",
-              "Aplico la construcción o función solicitada; puedo elegir otro orden o una variante igualmente válida.",
-              "Comparo el significado y la forma con el modelo orientativo; no es una respuesta única ni se califica por coincidencia literal."
+              "Rechazo la interpretación con «no es que» + subjuntivo.",
+              "Doy la causa real con indicativo.",
+              "Comparo con el modelo orientativo: no es una respuesta única y otras formulaciones correctas también valen."
             ]
           },
           {
-            "prompt": "Texto de partida: «No avisamos a tiempo y reconocemos nuestra responsabilidad.» Comienza por asumimos sin borrar el agente de avisar.",
-            "model": "Asumimos la responsabilidad de no haber avisado a tiempo.",
+            "prompt": "Texto de partida: «El crucero trajo tres mil pasajeros. Los cafés del cerro se quedaron sin pan antes del mediodía». Une las dos ideas con una consecutiva de intensidad.",
+            "model": "El crucero trajo tantos pasajeros que los cafés del cerro se quedaron sin pan antes del mediodía.",
             "checklist": [
-              "Conservo participantes, referencia temporal y contenido pertinente.",
-              "Aplico la construcción o función solicitada; puedo elegir otro orden o una variante igualmente válida.",
-              "Comparo el significado y la forma con el modelo orientativo; no es una respuesta única ni se califica por coincidencia literal."
+              "Uso «tantos» en concordancia con «pasajeros».",
+              "La consecuencia va en indicativo.",
+              "Comparo con el modelo orientativo: no es una respuesta única y otras formulaciones correctas también valen."
+            ]
+          },
+          {
+            "prompt": "Texto de partida: «Hubo un ruido enorme en la fiesta del barrio. Los vecinos llamaron a carabineros». Reescríbelo con «tal… que» en un registro de crónica.",
+            "model": "Durante la fiesta del barrio se armó tal ruido que los vecinos terminaron llamando a carabineros.",
+            "checklist": [
+              "Uso «tal» + nombre sin adjetivo intermedio.",
+              "Encadeno la consecuencia con «que».",
+              "Comparo con el modelo orientativo: no es una respuesta única y otras formulaciones correctas también valen."
             ]
           }
         ]
@@ -168,282 +378,358 @@ export const b2w14: Module = {
     ]
   },
   "vocabulary": {
-    "intro": "Aprende combinaciones en contexto y comprueba qué matiz aportan al caso.",
+    "intro": "Palabras para hablar de un barrio que vive del turismo y de quienes viven en él.",
     "groups": [
       {
-        "title": "Disculparse y acordar una reparación proporcionada",
+        "title": "El cerro y sus visitantes",
         "items": [
           {
-            "es": "asumir responsabilidad",
-            "note": "reconocer la propia obligación"
+            "es": "subir en ascensor",
+            "note": "en Valparaíso, los funiculares que suben los cerros se llaman ascensores"
           },
           {
-            "es": "presentar una disculpa",
-            "note": "expresar pesar por un daño"
+            "es": "el flujo de turistas",
+            "note": "cantidad de visitantes que llega y circula"
           },
           {
-            "es": "ofrecer una reparación",
-            "note": "proponer compensar consecuencias"
+            "es": "la recalada de un crucero",
+            "note": "llegada de un barco de pasajeros al puerto"
           },
           {
-            "es": "cometer un descuido",
-            "note": "omitir una atención necesaria"
+            "es": "no dar abasto",
+            "note": "no poder atender toda la demanda"
           },
           {
-            "es": "hacer seguimiento",
-            "note": "comprobar el avance posterior"
+            "es": "perder la tranquilidad",
+            "note": "dejar de vivir en calma"
+          }
+        ]
+      },
+      {
+        "title": "Vivir y trabajar en el barrio",
+        "items": [
+          {
+            "es": "encarecerse el arriendo",
+            "note": "subir el precio del alquiler; «arriendo» es frecuente en Chile"
           },
           {
-            "es": "reconocer el perjuicio",
-            "note": "admitir el daño ocasionado"
+            "es": "el comercio de barrio",
+            "note": "tiendas pequeñas que atienden a los vecinos"
           },
           {
-            "es": "dar una explicación",
-            "note": "aclarar qué ocurrió"
+            "es": "el local",
+            "note": "espacio donde funciona un negocio"
           },
           {
-            "es": "cumplir lo prometido",
-            "note": "realizar el compromiso adquirido"
+            "es": "estar agotado",
+            "note": "muy cansado; también, sin existencias"
+          },
+          {
+            "es": "desmentir un rumor",
+            "note": "decir públicamente que no es cierto"
           }
         ]
       }
     ],
     "exercises": [
       {
-        "id": "v-relaciones",
+        "id": "b2-14-v-relacion",
         "type": "match",
-        "prompt": "Relaciona las expresiones útiles para disculparse y acordar una reparación proporcionada con su significado.",
+        "prompt": "Relaciona cada expresión con la situación del cerro en la que encaja.",
         "pairs": [
           {
-            "left": "asumir responsabilidad",
-            "right": "reconocer la propia obligación"
+            "left": "no dar abasto",
+            "right": "Rosa atiende sola y hay doce personas esperando para pagar."
           },
           {
-            "left": "presentar una disculpa",
-            "right": "expresar pesar por un daño"
+            "left": "la recalada de un crucero",
+            "right": "El martes atraca un barco con tres mil pasajeros."
           },
           {
-            "left": "ofrecer una reparación",
-            "right": "proponer compensar consecuencias"
+            "left": "encarecerse el arriendo",
+            "right": "El dueño del local pide un cuarenta por ciento más desde marzo."
           },
           {
-            "left": "cometer un descuido",
-            "right": "omitir una atención necesaria"
+            "left": "desmentir un rumor",
+            "right": "La librera publica una carta para aclarar por qué cierra los domingos."
           },
           {
-            "left": "hacer seguimiento",
-            "right": "comprobar el avance posterior"
+            "left": "el comercio de barrio",
+            "right": "La panadería, el almacén y la ferretería de la calle Templeman."
           },
           {
-            "left": "reconocer el perjuicio",
-            "right": "admitir el daño ocasionado"
-          },
-          {
-            "left": "dar una explicación",
-            "right": "aclarar qué ocurrió"
-          },
-          {
-            "left": "cumplir lo prometido",
-            "right": "realizar el compromiso adquirido"
+            "left": "perder la tranquilidad",
+            "right": "Los vecinos ya no pueden dormir la siesta por las visitas guiadas."
           }
-        ]
+        ],
+        "why": "Cada expresión corresponde a una situación concreta del caso."
       }
     ]
   },
   "pronunciation": {
-    "focus": "Une se nos olvidó y se me quedaron en un grupo fluido; después haz una pausa que dé espacio al reconocimiento del daño.",
+    "focus": "Pausas y foco: cuándo la voz separa la causa y cuándo la une a la negación.",
     "explanation": [
-      "Une se nos olvidó y se me quedaron en un grupo fluido; después haz una pausa que dé espacio al reconocimiento del daño.",
-      "Escucha primero la secuencia verbal. Después lee la misma frase con una intención distinta, grábate localmente y compara con tu docente. La voz sintética es apoyo de escucha: no certifica variedad regional, ironía ni evaluación automática de tu pronunciación."
+      "La entonación ayuda a entender qué se niega. En «No abrió, porque llovía», hay una pausa después de «abrió»: se niega la acción y después se da la causa. En «No abrió porque lloviera, sino porque estaba enferma», no hay pausa entre «abrió» y «porque»: la negación alcanza a la causa, y la voz sube en «lloviera» y marca el contraste en «sino».",
+      "En las consecutivas, la palabra de intensidad («tan», «tanto», «tal») lleva un acento enfático y la voz sube hasta ella; después, una pausa breve antes de «que» anuncia la consecuencia. Escucha, repite y grábate en tu dispositivo; la voz sintética es un apoyo y no evalúa tu pronunciación."
     ],
     "examples": [
       {
-        "es": "Se nos olvidaron las reservas del sábado."
+        "es": "No cerró, porque había clientes.",
+        "note": "Pausa tras «cerró»: se niega la acción."
       },
       {
-        "es": "Me acuerdo de tu petición."
+        "es": "No cerró porque hubiera pocos clientes, sino porque estaba agotada.",
+        "note": "Sin pausa: se niega la causa; contraste en «sino»."
       },
       {
-        "es": "Las dos responsables se disculparon por teléfono."
+        "es": "Subía TANTA gente que no cabíamos.",
+        "note": "Énfasis en «tanta» y pausa breve antes de «que»."
       }
     ],
     "perceive": {
-      "id": "p-percepcion",
+      "id": "b2-14-p-oido",
       "type": "listen",
-      "prompt": "Escucha sin leer el ejemplo previo si quieres comprobar tu percepción; identifica el fragmento verbal y después marca su sílaba tónica.",
+      "prompt": "Escucha cada frase y decide si la persona hizo o no hizo la acción. Fíjate en la pausa y en el contraste.",
       "items": [
         {
-          "q": "En la muestra 1 de se nos pasó: responder por un error, ¿qué fragmento se oye?",
+          "q": "En la frase sobre la librería, ¿abrió Rosa?",
           "options": [
-            "olvidaran",
-            "olvidaron",
-            "olvidó"
+            "Sí, abrió; se niega solo un motivo.",
+            "No, no abrió."
           ],
           "answer": 1,
-          "why": "Sujeto plural: las reservas.",
-          "audio": "Se nos olvidaron las reservas del sábado.",
-          "voice": "es-ES-f"
+          "audio": "No abrió la librería, porque estaba con fiebre.",
+          "voice": "es-CL-f",
+          "why": "Pausa e indicativo: se niega la acción."
         },
         {
-          "q": "En la muestra 2 de se nos pasó: responder por un error, ¿qué fragmento se oye?",
+          "q": "En la frase sobre la mudanza, ¿se mudó Andrés?",
           "options": [
-            "de",
-            "a",
-            "en"
+            "No, no se mudó.",
+            "Sí, se mudó; se niega solo un motivo."
+          ],
+          "answer": 1,
+          "audio": "Andrés se mudó, pero no porque le subieran el arriendo, sino porque consiguió trabajo en Santiago.",
+          "voice": "es-CL-m",
+          "why": "«No porque» + subjuntivo y «sino porque»: la acción ocurrió."
+        },
+        {
+          "q": "En la frase sobre el ascensor, ¿subieron en ascensor?",
+          "options": [
+            "No, no subieron en ascensor.",
+            "Sí, subieron en ascensor."
           ],
           "answer": 0,
-          "why": "Acordarse requiere de.",
-          "audio": "Me acuerdo de tu petición.",
-          "voice": "es-ES-f"
+          "audio": "No subimos en ascensor, porque la fila era enorme.",
+          "voice": "es-CL-f",
+          "why": "Pausa antes de «porque»: no subieron en ascensor."
+        },
+        {
+          "q": "En la frase sobre la feria, ¿vendieron los artesanos?",
+          "options": [
+            "No, no vendieron.",
+            "Sí, vendieron; se niega solo un motivo."
+          ],
+          "answer": 1,
+          "audio": "Los artesanos vendieron mucho, no porque hubiera crucero, sino porque era feriado.",
+          "voice": "es-CL-m",
+          "why": "Venta real; se rechaza la causa del crucero."
         }
       ]
     },
     "produce": [
       {
-        "text": "Se nos olvidaron las reservas del sábado.",
-        "tip": "Une se nos olvidó y se me quedaron en un grupo fluido; después haz una pausa que dé espacio al reconocimiento del daño.",
-        "voice": "es-ES-f"
+        "text": "No es que no queramos abrir, es que no damos abasto.",
+        "tip": "Sube en «queramos» y marca el contraste en «es que».",
+        "voice": "es-CL-f"
       },
       {
-        "text": "Me acuerdo de tu petición.",
-        "tip": "Une se nos olvidó y se me quedaron en un grupo fluido; después haz una pausa que dé espacio al reconocimiento del daño.",
-        "voice": "es-ES-f"
+        "text": "Cerramos, pero no porque falten clientes.",
+        "tip": "Sin pausa entre «no» y «porque»: la negación va con la causa.",
+        "voice": "es-CL-m"
       },
       {
-        "text": "Las dos responsables se disculparon por teléfono.",
-        "tip": "Une se nos olvidó y se me quedaron en un grupo fluido; después haz una pausa que dé espacio al reconocimiento del daño.",
-        "voice": "es-ES-f"
+        "text": "La escalera es tan empinada que da vértigo.",
+        "tip": "Énfasis en «tan» y pausa mínima antes de «que».",
+        "voice": "es-CL-f"
+      },
+      {
+        "text": "Había tal cola en el ascensor que subimos a pie.",
+        "tip": "Destaca «tal» y deja caer la voz al final.",
+        "voice": "es-CL-m"
       }
     ]
   },
   "listening": {
-    "title": "Voces y decisiones: Se nos pasó: responder por un error",
-    "context": "Guion original de interacción. Primera escucha sin transcripción: identifica propósito y posiciones; segunda: datos y condiciones; tercera: inferencias. Reproducción sintética, sin verificación de acento regional.",
+    "title": "Lo que se dice en el cerro",
+    "context": "Es sábado por la mañana en una pequeña librería del cerro Alegre, en Valparaíso. Andrés, un vecino, entra a preguntar si es verdad que desde el mes que viene la librería no abre los domingos. Le contestan Rosa, la dueña, y su hijo Matías, que la ayuda los fines de semana. Escucha primero sin transcripción. Las voces son sintéticas y no representan una variedad regional verificada.",
     "speakers": [
       {
-        "id": "s1",
-        "name": "Coordinadora",
-        "voice": "es-ES-f",
-        "role": "Interlocutor del guion original; voz sintética disponible"
+        "id": "an",
+        "name": "Andrés",
+        "voice": "es-CL-m",
+        "role": "Vecino y cliente de la librería"
       },
       {
-        "id": "s2",
-        "name": "Participante",
-        "voice": "es-MX-m",
-        "role": "Interlocutor del guion original; voz sintética disponible"
+        "id": "ro",
+        "name": "Rosa",
+        "voice": "es-CL-f",
+        "role": "Dueña de la librería"
       },
       {
-        "id": "s3",
-        "name": "Administrativo",
-        "voice": "es-ES-f",
-        "role": "Interlocutor del guion original; voz sintética disponible"
+        "id": "ma",
+        "name": "Matías",
+        "voice": "es-CL-m",
+        "role": "Hijo de Rosa, la ayuda los fines de semana"
       }
     ],
     "script": [
       {
-        "speaker": "s1",
-        "text": "Gracias por hablar conmigo. Se nos olvidó incluir dos inscripciones en la lista de avisos y ustedes llegaron al edificio equivocado. Quiero reconocer el tiempo que perdieron y explicar qué podemos ofrecer, antes de entrar en cómo ocurrió el fallo."
+        "speaker": "an",
+        "text": "Rosa, me dijeron en la panadería que dejan de abrir los domingos porque la librería va mal. ¿Es cierto?"
       },
       {
-        "speaker": "s2",
-        "text": "Agradezco que lo diga así. En el primer mensaje parecía que yo debía entenderlo porque esas cosas pasan. No estaba pidiendo que nadie fuera perfecto, sino que se reconociera que tuve que cambiar mi turno y pagar un desplazamiento que no sirvió de nada."
+        "speaker": "ro",
+        "text": "Lo de los domingos es verdad, pero no porque nos vaya mal. Al contrario: este verano vendimos más que nunca. Cerramos porque estamos agotados."
       },
       {
-        "speaker": "s3",
-        "text": "Yo registré su inscripción en papel y no comprobé que pasara al sistema. Me hago cargo de esa parte. También hemos visto que el procedimiento no incluía una segunda revisión. No lo menciono para quitarme responsabilidad, sino para que el mismo error no dependa de quién esté trabajando."
+        "speaker": "ma",
+        "text": "Es que los domingos sube tanta gente que no damos abasto. Cuando hay crucero, la calle se llena de tal manera que hay que pedir permiso para entrar al local."
       },
       {
-        "speaker": "s1",
-        "text": "Podemos ofrecerle una recuperación el viernes o devolverle la parte correspondiente. Si ninguna opción responde al perjuicio que describe, la escuchamos. Además, el próximo cambio de sede se confirmará por dos vías y comprobaremos que todas las personas lo hayan recibido."
+        "speaker": "an",
+        "text": "Pero eso es bueno para el negocio, ¿no? Yo pensé que se iban porque les habían subido el arriendo."
       },
       {
-        "speaker": "s2",
-        "text": "Prefiero la devolución. El viernes no puedo y no quiero reorganizar otra semana para corregir un fallo que no provoqué. Sí les pediría que me confirmen por escrito cuándo se realizará, porque ya he dedicado bastante tiempo a esta gestión."
+        "speaker": "ro",
+        "text": "No, no nos vamos a ninguna parte. El arriendo subió, eso sí, pero no tanto que no podamos pagarlo. No es que no nos gusten los turistas; es que muchos entran, sacan fotos de los estantes y se van sin comprar nada. Y los vecinos, que son los que compran todo el año, ya no encuentran sitio."
       },
       {
-        "speaker": "s3",
-        "text": "Lo haré hoy y fijaré una fecha concreta. También revisaremos dentro de un mes si funciona el nuevo registro. No podemos recuperar su tarde, pero podemos cumplir la reparación acordada y evitar que nuestra explicación termine siendo otra promesa sin seguimiento."
+        "speaker": "ma",
+        "text": "El domingo pasado hubo tal cola en la caja que una señora se fue con un libro sin pagar, y no porque quisiera robarlo: se cansó de esperar y nos dejó el dinero el lunes con una nota."
+      },
+      {
+        "speaker": "an",
+        "text": "¡Qué historia! Entonces, ¿qué van a hacer los domingos?"
+      },
+      {
+        "speaker": "ro",
+        "text": "Descansar, que buena falta nos hace. Como el sábado es el día de los vecinos, vamos a abrir más temprano, a las nueve, así que podrás venir antes de que suban los grupos."
+      },
+      {
+        "speaker": "an",
+        "text": "Me parece muy bien. Y voy a desmentir lo de la panadería, porque ya lo sabe medio cerro."
       }
     ],
     "stages": [
       {
         "stage": "gist",
-        "prompt": "Escucha la conversación completa; identifica el problema y la intención antes de buscar palabras aisladas.",
+        "prompt": "Escucha la conversación entera. ¿Qué rumor circula y qué responde Rosa?",
         "exercise": {
-          "id": "l-global",
+          "id": "b2-14-l-global",
           "type": "choice",
-          "prompt": "¿Qué organiza la conversación situada en Valparaíso?",
+          "prompt": "Elige la respuesta que resume la conversación.",
           "items": [
             {
-              "q": "¿Cuál es el propósito global de esta conversación: Se nos pasó: responder por un error?",
+              "q": "¿Qué rumor desmiente Rosa?",
               "options": [
-                "Contar una única versión sin permitir preguntas.",
-                "Reconocer un perjuicio y ofrecer reparación con seguimiento",
-                "Leer una lista de instrucciones sin responder a nadie."
-              ],
-              "answer": 1,
-              "why": "Las intervenciones se responden y matizan sus posiciones."
-            },
-            {
-              "q": "¿Qué relación predomina entre las voces en «Se nos pasó: responder por un error»?",
-              "options": [
-                "Las personas aclaran interpretaciones y conservan algunos límites.",
-                "Todas repiten exactamente la misma opinión desde el inicio.",
-                "Ninguna intervención tiene relación con la anterior."
+                "Que la librería cierra los domingos porque va mal.",
+                "Que la librería se muda a Santiago.",
+                "Que van a vender la librería."
               ],
               "answer": 0,
-              "why": "Identifica un turno que responda al anterior."
+              "why": "Confirma que cierra, pero no por ese motivo."
+            },
+            {
+              "q": "¿Cuál es la verdadera causa del cambio?",
+              "options": [
+                "La subida del arriendo.",
+                "El cansancio por la cantidad de gente de los domingos.",
+                "Un robo en la librería."
+              ],
+              "answer": 1,
+              "why": "«Cerramos porque estamos agotados»."
             }
           ]
         }
       },
       {
         "stage": "detail",
-        "prompt": "Escucha otra vez y anota quién sostiene cada afirmación.",
+        "prompt": "Escucha otra vez y localiza los datos concretos.",
         "exercise": {
-          "id": "l-detalle",
+          "id": "b2-14-l-detalle",
           "type": "choice",
-          "prompt": "Localiza una intervención concreta en «Se nos pasó: responder por un error».",
+          "prompt": "Responde con la información exacta del audio.",
           "items": [
             {
-              "q": "¿Por qué el administrativo menciona el procedimiento?",
+              "q": "¿Qué pasó con el arriendo?",
               "options": [
-                "Para prevenir la repetición sin negar su parte.",
-                "Para demostrar que nadie debe responder.",
-                "Para culpar a la participante."
-              ],
-              "answer": 0,
-              "why": "La respuesta conserva la condición o información expresada por esa persona."
-            },
-            {
-              "q": "¿Qué frase aparece en la intervención inicial de «Se nos pasó: responder por un error»?",
-              "options": [
-                "Ya está todo decidido y no necesitamos escuchar a ninguna parte.",
-                "No hay información que podamos discutir en esta reunión.",
-                "Gracias por hablar conmigo."
+                "Bajó.",
+                "Subió tanto que no pueden pagarlo.",
+                "Subió, pero pueden pagarlo."
               ],
               "answer": 2,
-              "why": "Vuelve al inicio y comprueba la formulación exacta."
+              "why": "«No tanto que no podamos pagarlo»."
+            },
+            {
+              "q": "¿Por qué se fue una señora sin pagar?",
+              "options": [
+                "Porque se cansó de esperar en la cola.",
+                "Porque quería robar el libro.",
+                "Porque no tenía dinero."
+              ],
+              "answer": 0,
+              "why": "«Se cansó de esperar y nos dejó el dinero el lunes»."
+            },
+            {
+              "q": "¿Qué cambia los sábados?",
+              "options": [
+                "La librería cierra al mediodía.",
+                "La librería abre a las nueve.",
+                "Solo atienden a turistas."
+              ],
+              "answer": 1,
+              "why": "«Vamos a abrir más temprano, a las nueve»."
             }
           ]
         }
       },
       {
         "stage": "notice",
-        "prompt": "Distingue lo dicho de lo inferido; consulta la transcripción solo después de responder.",
+        "prompt": "Ahora fíjate en la forma. Puedes leer la transcripción después de responder.",
         "exercise": {
-          "id": "l-inferencia",
-          "type": "open",
-          "prompt": "Interpreta postura, reserva y efecto sobre la otra persona.",
+          "id": "b2-14-l-forma",
+          "type": "classify",
+          "prompt": "Clasifica cada fragmento según lo que expresa.",
+          "categories": [
+            "Causa rechazada o interpretación corregida",
+            "Consecuencia de una intensidad"
+          ],
           "items": [
             {
-              "prompt": "En «Se nos pasó: responder por un error», cita una reserva o una reformulación del diálogo, explica qué interpretación evita y qué quedaría sin resolver si se omitiera.",
-              "model": "Lo haré hoy y fijaré una fecha concreta. También revisaremos dentro de un mes si funciona el nuevo registro. No podemos recuperar su tarde, pero podemos cumplir la reparación acordada y evitar que nuestra explicación termine siendo otra promesa sin seguimiento.",
-              "checklist": [
-                "Atribuyo la intervención a su hablante.",
-                "Distingo palabras explícitas e inferencia.",
-                "Conservo una condición o un límite de la conversación."
-              ]
+              "text": "pero no porque nos vaya mal",
+              "cat": 0,
+              "why": "«No porque» + subjuntivo."
+            },
+            {
+              "text": "sube tanta gente que no damos abasto",
+              "cat": 1,
+              "why": "«Tanta» + nombre + «que»."
+            },
+            {
+              "text": "No es que no nos gusten los turistas",
+              "cat": 0,
+              "why": "«No es que» + subjuntivo."
+            },
+            {
+              "text": "hubo tal cola en la caja que una señora se fue",
+              "cat": 1,
+              "why": "«Tal» + nombre + «que»."
+            },
+            {
+              "text": "la calle se llena de tal manera que hay que pedir permiso",
+              "cat": 1,
+              "why": "«De tal manera que»: consecuencia de la manera."
             }
           ]
         }
@@ -451,198 +737,262 @@ export const b2w14: Module = {
     ]
   },
   "reading": {
-    "title": "Se nos pasó: responder por un error: texto para interpretar",
-    "genre": "Artículo, correspondencia o relato original",
-    "frame": "Material original de SpanishCue; las situaciones y los datos son didácticos, no noticias reales ni textos oficiales de examen.",
+    "title": "Tan bonito que cansa: un domingo en el cerro Alegre",
+    "genre": "Crónica en una revista cultural",
+    "frame": "Texto original de SpanishCue escrito como crónica de la revista ficticia «Puerto Escrito». Las personas citadas son inventadas.",
     "text": [
-      "La academia cambió de aula un taller y olvidó avisar a dos participantes. Cuando llegaron al edificio anterior, encontraron la puerta cerrada. Una de ellas había pedido salir antes del trabajo; la otra había viajado desde una localidad cercana. El mensaje de disculpa llegó al día siguiente: «Se nos pasó avisarles. Estas cosas ocurren cuando hay mucho movimiento». La frase reconocía el olvido, pero el comentario posterior parecía reducir la experiencia de las afectadas a un inconveniente inevitable.",
-      "La coordinadora revisó el caso después de recibir una reclamación. Se habían actualizado los correos de la lista general, pero dos inscripciones realizadas en persona no aparecían en ella. El problema no era únicamente que alguien hubiera olvidado pulsar un botón. Existían dos registros que no se comprobaban entre sí. Presentarlo como un accidente individual habría permitido cerrar la conversación rápidamente, aunque habría dejado intacta la posibilidad de repetirlo con otras personas.",
-      "En un segundo mensaje, la academia explicó el fallo y asumió sus consecuencias. Ofreció recuperar la sesión sin coste y devolver el importe proporcional a quienes no pudieran asistir. También se comprometió a confirmar por dos vías los próximos cambios de sede y a unificar los registros. Una participante aceptó recuperar la clase; la otra solicitó la devolución porque el nuevo horario tampoco le servía. La coordinadora no interpretó esa elección como falta de comprensión: una reparación no obliga a continuar una relación.",
-      "El equipo acordó comprobar al mes si el procedimiento se cumplía. La disculpa dejó de ser una frase destinada a obtener perdón inmediato y se convirtió en una secuencia de acciones. Decir se nos olvidó puede describir con naturalidad un error involuntario. Su efecto depende de lo que venga después: una excusa que diluya el daño o un compromiso que permita a la otra persona decidir qué solución considera aceptable."
+      "A las once de la mañana de un domingo de febrero, la calle Templeman está tan llena que hay que caminar de lado. Llegan grupos desde el muelle, parejas con mapas de papel y estudiantes que suben desde el plan con la camiseta empapada. Como el ascensor más cercano lleva meses en reparación, casi todos suben a pie, así que el último tramo se convierte en una pequeña procesión de gente sin aliento.",
+      "Los vecinos lo cuentan sin rencor. «No es que estemos en contra del turismo», explica Ester Valdés, que vive en el cerro desde hace cuarenta años. «Es que el barrio cambió tan rápido que no tuvimos tiempo de acostumbrarnos». En una década, la mitad de las casas de su cuadra se convirtieron en hostales o en tiendas de recuerdos, y los arriendos subieron tanto que varias familias se fueron a otros cerros.",
+      "Sería fácil culpar a los cruceros, pero la explicación es más compleja. Los barcos no traen tantos pasajeros que el cerro no pueda recibirlos; el problema es que casi todos llegan a la misma hora y recorren las mismas cuatro calles. Dado que los recorridos guiados siguen siempre el mismo trazado, hay rincones del cerro que se saturan y otros, a doscientos metros, donde no entra nadie en todo el día.",
+      "El comercio de barrio busca su manera de resistir. Una librería de la calle Almirante Montt dejó de abrir los domingos, no porque vendiera poco, sino porque sus dueños estaban agotados. Una panadería hace lo contrario: abre a las seis para atender a los vecinos antes de que suban los grupos. «Hay días con tal cantidad de gente que no podemos ni barrer», cuenta su dueña, «pero en invierno, cuando no viene nadie, son los vecinos los que nos salvan».",
+      "A las siete de la tarde, cuando el último grupo baja hacia el puerto, el cerro recupera algo de su silencio. Se oyen otra vez las gaviotas y los perros. Es tan bonito a esa hora que uno entiende por qué tanta gente quiere verlo, y también por qué quienes viven aquí piden, sin gritar, que alguien piense en ellos cuando se diseñan los recorridos."
     ],
     "glossary": [
       {
-        "es": "asumir responsabilidad",
-        "note": "reconocer la propia obligación"
+        "es": "el plan",
+        "note": "en Valparaíso, la zona baja y llana junto al mar"
       },
       {
-        "es": "presentar una disculpa",
-        "note": "expresar pesar por un daño"
+        "es": "sin aliento",
+        "note": "respirando con dificultad por el esfuerzo"
       },
       {
-        "es": "ofrecer una reparación",
-        "note": "proponer compensar consecuencias"
+        "es": "saturarse",
+        "note": "llenarse por completo, sin espacio para más"
       }
     ],
     "tasks": [
       {
-        "id": "r-comprender",
+        "id": "b2-14-r-comprension",
         "type": "choice",
-        "prompt": "Interpreta tesis y alcance; descarta respuestas que exageren la conclusión.",
+        "prompt": "Responde según la crónica.",
         "items": [
           {
-            "q": "¿Qué cambia entre las dos disculpas?",
+            "q": "¿Por qué casi todos suben a pie?",
             "options": [
-              "La primera ya incluía una devolución con fecha.",
-              "La segunda reconoce daños y ofrece opciones verificables.",
-              "La segunda exige aceptar otra clase."
-            ],
-            "answer": 1,
-            "why": "Comprueba esta interpretación con el texto completo y no solo con una palabra aislada."
-          },
-          {
-            "q": "¿Qué revela la elección de devolución?",
-            "options": [
-              "Aceptar una reparación no obliga a continuar el servicio.",
-              "La participante no entendió la explicación.",
-              "La academia no ofreció ninguna alternativa."
+              "Porque el ascensor más cercano está en reparación.",
+              "Porque prefieren hacer ejercicio.",
+              "Porque el ascensor es muy caro."
             ],
             "answer": 0,
-            "why": "Comprueba esta interpretación con el texto completo y no solo con una palabra aislada."
+            "why": "«Como el ascensor más cercano lleva meses en reparación…»."
+          },
+          {
+            "q": "Según el autor, ¿cuál es el problema real de los cruceros?",
+            "options": [
+              "Que traen demasiados pasajeros.",
+              "Que los pasajeros no compran nada.",
+              "Que todos llegan a la misma hora y recorren las mismas calles."
+            ],
+            "answer": 2,
+            "why": "El tercer párrafo descarta el número y señala la concentración."
+          },
+          {
+            "q": "¿Qué hace la panadería?",
+            "options": [
+              "Cierra los domingos.",
+              "Abre a las seis para los vecinos.",
+              "Solo vende a los grupos."
+            ],
+            "answer": 1,
+            "why": "«Abre a las seis para atender a los vecinos»."
           }
         ]
       },
       {
-        "id": "r-evidencia",
+        "id": "b2-14-r-interpretar",
         "type": "open",
-        "prompt": "Apoya tu lectura con evidencia y distingue la postura de la fuente de la tuya.",
+        "prompt": "Interpreta el texto con tus palabras y apóyate en citas.",
         "items": [
           {
-            "prompt": "En «Se nos pasó: responder por un error», resume dos posiciones en 60–80 palabras, cita una evidencia y explica un límite que el texto no permite resolver.",
-            "model": "Lamento que el cambio de sede no le fuera comunicado. Se nos quedaron dos inscripciones fuera de la lista y no realizamos la comprobación necesaria. Reconozco que esto le ocasionó un desplazamiento inútil y una modificación de su jornada. Podemos ofrecerle recuperar la sesión o devolverle el importe correspondiente. Si elige la devolución, la tramitaremos antes del jueves. Hemos añadido una revisión de los registros y comprobaremos su cumplimiento dentro de un mes.",
+            "prompt": "En 60–80 palabras, explica qué causa descarta el autor en el tercer párrafo y cuál propone en su lugar. Cita una frase con una consecutiva de intensidad y comenta su consecuencia.",
+            "model": "El autor descarta que el problema sea la cantidad de pasajeros: «Los barcos no traen tantos pasajeros que el cerro no pueda recibirlos». Propone otra causa: la concentración de todos en las mismas horas y calles. Como consecutiva, Ester dice que «el barrio cambió tan rápido que no tuvimos tiempo de acostumbrarnos»; la consecuencia es la sensación de pérdida de los vecinos, no un rechazo al turismo.",
             "checklist": [
-              "Identifico las dos posiciones sin inventar consenso.",
-              "Utilizo una evidencia concreta.",
-              "Marco una inferencia como tal."
+              "Distingo la causa descartada de la causa propuesta.",
+              "Cito una consecutiva literal del texto.",
+              "Explico la consecuencia con mis palabras."
             ]
           }
         ]
       }
     ],
     "noticing": {
-      "prompt": "Observa cómo la forma lingüística limita o precisa el mensaje.",
+      "prompt": "Observa cómo la crónica combina causas, desmentidos y consecuencias.",
       "items": [
         {
-          "quote": "La academia cambió de aula un taller y olvidó avisar a dos participantes.",
-          "note": "Identifica qué establece el inicio y cómo prepara la interpretación posterior."
+          "quote": "Los barcos no traen tantos pasajeros que el cerro no pueda recibirlos",
+          "note": "Consecutiva con la principal negada: la consecuencia imaginada va en subjuntivo."
         },
         {
-          "quote": "Su efecto depende de lo que venga después: una excusa que diluya el daño o un compromiso que permita a la otra persona decidir qué solución considera aceptable.",
-          "note": "Relaciona el cierre con la tesis o con el giro narrativo; explica qué no afirma."
+          "quote": "no porque vendiera poco, sino porque sus dueños estaban agotados",
+          "note": "Marco pasado: imperfecto de subjuntivo en la causa rechazada e indicativo en la real."
+        },
+        {
+          "quote": "Dado que los recorridos guiados siguen siempre el mismo trazado",
+          "note": "«Dado que» presenta una causa conocida en un registro más formal que «porque»."
         }
       ]
     }
   },
   "practice": {
-    "intro": "Retoma la disculpa del comedor y las condiciones del local: ofrece una reparación que respete daños, responsables y límites.",
+    "intro": "Combina las dos clases: niega la causa justa y une cada intensidad con su consecuencia.",
     "exercises": [
       {
-        "id": "x-orden",
+        "id": "b2-14-x-orden",
         "type": "order",
-        "prompt": "Reconstruye los mensajes del caso de Valparaíso y conserva sus relaciones.",
+        "prompt": "Ordena las palabras para reconstruir frases sobre el cerro.",
         "items": [
           {
             "words": [
-              "En",
-              "«Se nos pasó: responder por un error»,",
+              "No",
+              "es",
+              "que",
+              "el",
+              "barrio",
+              "esté",
+              "peor,",
+              "es",
+              "que",
+              "está",
+              "distinto."
+            ],
+            "why": "«No es que» + subjuntivo; «es que» + indicativo."
+          },
+          {
+            "words": [
+              "Llovió",
+              "tanto",
+              "que",
+              "el",
+              "ascensor",
+              "dejó",
+              "de",
+              "funcionar."
+            ],
+            "why": "«Tanto» después del verbo, invariable."
+          },
+          {
+            "words": [
               "Se",
-              "nos",
-              "olvidaron",
-              "las",
-              "reservas",
+              "fue",
               "del",
-              "sábado."
+              "cerro,",
+              "pero",
+              "no",
+              "porque",
+              "quisiera",
+              "irse."
             ],
-            "why": "Sujeto plural: las reservas."
-          },
-          {
-            "words": [
-              "En",
-              "«Se nos pasó: responder por un error»,",
-              "Las",
-              "dos",
-              "responsables",
-              "se",
-              "disculparon",
-              "por",
-              "teléfono."
-            ],
-            "why": "Reciprocidad o acción de ambas, según contexto."
+            "why": "Acción real y causa rechazada en imperfecto de subjuntivo."
           }
         ]
       },
       {
-        "id": "x-edicion",
+        "id": "b2-14-x-error",
         "type": "error",
-        "prompt": "Revisa tres borradores de se nos pasó: responder por un error; cada uno tiene un único error deliberado.",
+        "prompt": "Cada frase tiene un error. Escríbela corregida.",
         "items": [
           {
-            "sentence": "Se nos olvidó las dos inscripciones.",
+            "sentence": "Cambiaron el recorrido, pero no porque los vecinos se quejaron.",
             "answers": [
-              "Se nos olvidaron las dos inscripciones."
+              "Cambiaron el recorrido, pero no porque los vecinos se quejaran.",
+              "Cambiaron el recorrido, pero no porque los vecinos se quejasen."
             ],
-            "why": "El verbo concuerda con las dos inscripciones."
+            "why": "La causa rechazada va en subjuntivo."
           },
           {
-            "sentence": "Me acuerdo tu reclamación.",
+            "sentence": "Había tantas ruido en la plaza que nadie oía al guía.",
             "answers": [
-              "Me acuerdo de tu reclamación."
+              "Había tanto ruido en la plaza que nadie oía al guía."
             ],
-            "why": "Acordarse de mantiene su régimen."
+            "why": "«Ruido» es masculino singular: «tanto ruido»."
           },
           {
-            "sentence": "Se me quedaron la ficha en el edificio anterior.",
+            "sentence": "La subida es tanto difícil que muchos turistas se rinden.",
             "answers": [
-              "Se me quedó la ficha en el edificio anterior."
+              "La subida es tan difícil que muchos turistas se rinden."
             ],
-            "why": "La ficha es sujeto singular."
+            "why": "Delante de un adjetivo: «tan»."
+          },
+          {
+            "sentence": "Llegamos tarde al mirador como el bus se retrasó.",
+            "answers": [
+              "Como el bus se retrasó, llegamos tarde al mirador.",
+              "Llegamos tarde al mirador porque el bus se retrasó."
+            ],
+            "why": "«Como» causal va al principio; detrás de la idea principal, «porque»."
           }
         ]
       },
       {
-        "id": "x-produccion",
-        "type": "open",
-        "prompt": "Prepara dos fragmentos antes de tu entrega independiente; el modelo es una posibilidad, no una respuesta única.",
+        "id": "b2-14-x-relacion",
+        "type": "classify",
+        "prompt": "¿Qué expresa cada frase? Clasifícala.",
+        "categories": [
+          "Causa",
+          "Consecuencia",
+          "Finalidad"
+        ],
         "items": [
           {
-            "prompt": "Abre tu respuesta sobre disculparse y acordar una reparación proporcionada con una postura y una razón; adapta el destinatario.",
-            "model": "Lamento que el cambio de sede no le fuera comunicado.",
-            "checklist": [
-              "Presento una postura concreta.",
-              "Ajusto el registro a quien recibirá el mensaje."
-            ]
+            "text": "Abrimos a las nueve para que los vecinos compren tranquilos.",
+            "cat": 2,
+            "why": "«Para que» expresa el objetivo."
           },
           {
-            "prompt": "Reformula una objeción o una reserva de «Se nos pasó: responder por un error» sin debilitarla, y responde con una condición verificable.",
-            "model": "Lamento que el cambio de sede no le fuera comunicado. Se nos quedaron dos inscripciones fuera de la lista y no realizamos la comprobación necesaria. Reconozco que esto le ocasionó un desplazamiento inútil y una modificación de su jornada. Podemos ofrecerle recuperar la sesión o devolverle el importe correspondiente. Si elige la devolución, la tramitaremos antes del jueves. Hemos añadido una revisión de los registros y comprobaremos su cumplimiento dentro de un mes.",
-            "checklist": [
-              "La objeción conserva su sentido.",
-              "Mi respuesta no promete lo que no controlo."
-            ]
+            "text": "Había tantos grupos que cerramos la puerta un rato.",
+            "cat": 1,
+            "why": "Consecuencia de una intensidad."
+          },
+          {
+            "text": "Puesto que el ascensor está cerrado, la feria se traslada.",
+            "cat": 0,
+            "why": "«Puesto que» presenta la causa."
+          },
+          {
+            "text": "El local estaba vacío, así que bajamos al plan.",
+            "cat": 1,
+            "why": "«Así que» introduce lo que resultó."
+          },
+          {
+            "text": "Lleva agua, que la subida es larga.",
+            "cat": 0,
+            "why": "«Que» tras una orden introduce la causa."
+          },
+          {
+            "text": "Pusieron carteles con el fin de que nadie se pierda.",
+            "cat": 2,
+            "why": "«Con el fin de que»: finalidad."
           }
         ]
       },
       {
-        "id": "x-recuperacion",
+        "id": "b2-14-x-guiada",
         "type": "open",
-        "prompt": "Recuperación espaciada: selecciona y produce los recursos señalados sin mirar sus explicaciones. En el checkpoint distribúyelos entre informe y ensayo oral.",
+        "prompt": "Escribe frases breves antes de la tarea de escritura. El modelo es una posibilidad, no la única.",
         "items": [
           {
-            "prompt": "Recupera la semana 11 sin abrir su explicación y aplica sus recursos a «Se nos pasó: responder por un error»: Estructura argumentativa; Marcar la postura; Urbanismo y movilidad; Ritmo de una exposición oral; Ensayo argumentativo; Exposición de dos minutos. Integra los recursos en un párrafo o un turno de 60–90 segundos; señala las decisiones lingüísticas en tus notas.",
-            "model": "Guía de revisión, no texto para copiar: Puedo organizar tesis, argumentos, contraargumentos y conclusión con conectores variados. Puedo marcar mi postura y el grado de certeza: es indudable que, cabe pensar que, no está tan claro que. Puedo debatir sobre transporte, vivienda, gentrificación y espacio público. Puedo usar pausas estratégicas y énfasis para hacer clara una exposición. Puedo escribir un ensayo de 220 palabras con contraargumento. Puedo defender una propuesta en dos minutos con estructura clara.",
+            "prompt": "Piensa en una decisión tuya que otras personas interpretaron mal. Escribe la interpretación equivocada y desmiéntela con «no porque…, sino porque…».",
+            "model": "Mis amigos pensaban que había dejado el fútbol porque estaba enojado con el entrenador. Lo dejé, pero no porque estuviera enojado, sino porque empecé a trabajar los sábados.",
             "checklist": [
-              "Integro los recursos indicados en una respuesta al caso actual.",
-              "Conservo personas, tiempo, postura y límites de las fuentes.",
-              "Marco una elección que tuve que corregir después de comprobarla."
+              "Uso imperfecto de subjuntivo en la causa rechazada.",
+              "Doy la causa real en indicativo."
             ]
           },
           {
-            "prompt": "Recupera la semana 13 sin abrir su explicación y aplica sus recursos a «Se nos pasó: responder por un error»: El sistema de los verbos de cambio; Ser y estar: matices de percepción; Personalidad y transformaciones; Rasgos del español de Chile; Describir una transformación; Comprender una conversación sobre cambio y variación chilena. Integra los recursos en un párrafo o un turno de 60–90 segundos; señala las decisiones lingüísticas en tus notas.",
-            "model": "Guía de revisión, no texto para copiar: Puedo elegir entre ponerse, volverse, hacerse, convertirse en, llegar a ser y quedarse. Puedo usar estar para percepciones y cambios: está muy joven, está carísimo. Puedo describir rasgos de carácter con matices. Puedo describir rasgos variables del habla chilena y contrastarlos con una muestra real en clase, sin atribuirlos a una voz sintética. Puedo contar cómo cambió una persona o un lugar y valorarlo. Puedo seguir posiciones sobre cambios sociales y explicar marcadores locales; contrasto la fonética chilena con una muestra real en clase.",
+            "prompt": "Describe un lugar muy concurrido de tu ciudad con tres consecutivas: una con «tan», una con «tanto/a/os/as» + nombre y una con «tal».",
+            "model": "El mercado del sábado es tan popular que hay que llegar antes de las ocho. Venden tantas frutas que no sabes por dónde empezar. Y hay tal ruido que tienes que gritar para pedir.",
             "checklist": [
-              "Integro los recursos indicados en una respuesta al caso actual.",
-              "Conservo personas, tiempo, postura y límites de las fuentes.",
-              "Marco una elección que tuve que corregir después de comprobarla."
+              "Elijo «tan», «tanto» o «tal» según la palabra que sigue.",
+              "«Tanto» concuerda con el nombre."
+            ]
+          },
+          {
+            "prompt": "Rechaza con tacto una invitación usando «no es que…, es que…» y propone otra fecha.",
+            "model": "No es que no me apetezca ir al concierto, es que el viernes tengo un examen. ¿Te parece si vamos juntos al próximo?",
+            "checklist": [
+              "Uso «no es que» + subjuntivo.",
+              "Ofrezco una alternativa concreta."
             ]
           }
         ]
@@ -650,196 +1000,236 @@ export const b2w14: Module = {
     ]
   },
   "writing": {
-    "task": "Escribe una respuesta a una reclamación por un aviso omitido. Explica el error sin diluir tu responsabilidad, ofrece dos reparaciones y concreta plazo y seguimiento; evita exigir perdón.",
-    "context": "Destinatario, propósito y límites de la información forman parte de la evaluación. El modelo muestra una respuesta completa posible: analiza su organización y escribe después tu propio texto.",
+    "task": "Tomaste una decisión pública (cambiar el horario de tu negocio, dejar un cargo en una asociación, mudarte de barrio) y circula una explicación falsa. Escribe una carta abierta (220–300 palabras) para la revista o el grupo del barrio: desmiente la interpretación, da la causa verdadera, explica las consecuencias que te llevaron a decidir y cuenta qué cambia ahora.",
+    "context": "La leen vecinos que te conocen y que escucharon el rumor. Quieres aclararlo sin pelear con nadie y con un tono cercano pero cuidado. Puedes usar la librería de Rosa o una situación tuya.",
     "steps": [
-      "Extrae dos datos y dos posiciones de las fuentes; marca lo que no está confirmado.",
-      "Planifica apertura, desarrollo, objeción o complicación y cierre antes de redactar.",
-      "Escribe sin copiar el modelo; integra recursos nuevos y los recuperados.",
-      "Revisa referentes, modo, tiempo, colocaciones y registro; reescribe un párrafo y explica el cambio."
+      "Anota el rumor, la causa verdadera y tres consecuencias de una situación intensa (mucha gente, mucho trabajo, mucho ruido).",
+      "Organiza la carta: el motivo de escribir, el desmentido, la causa y sus consecuencias, y lo que cambia ahora.",
+      "Escribe usando «no porque…, sino porque…», «no es que…, es que…», dos consecutivas de intensidad y al menos dos conectores causales distintos.",
+      "Revisa el modo de cada causa rechazada, la concordancia de «tanto» y corrige la posición de «como»."
     ],
     "useLanguage": [
-      "Se puede ser reflexivo, recíproco, parte de un verbo pronominal o marca de pasiva e impersonalidad. En se me perdió el documento, el documento es sujeto y me identifica a la persona afectada. El plural cambia el verbo: se me perdieron las llaves. La construcción no demuestra que no hubiera responsabilidad.",
-      "Ir e irse, quedar y quedarse, acordar y acordarse de muestran cambios de significado con el pronombre. Una disculpa eficaz identifica el daño, asume lo que depende de ti y ofrece una reparación verificable. Explicar un accidente ayuda a entenderlo; repetir que fue involuntario puede sonar a excusa si evita responder a sus consecuencias.",
-      "Retoma la disculpa del comedor y las condiciones del local: ofrece una reparación que respete daños, responsables y límites."
+      "no porque + subjuntivo, sino porque + indicativo",
+      "no es que + subjuntivo, es que…",
+      "como / ya que / dado que…",
+      "tan… que / tanto(s)… que / tal… que",
+      "así que…",
+      "no por + infinitivo, sino por…"
     ],
     "model": [
-      "Estimada participante: lamento que el cambio de sede no le fuera comunicado y que encontrara cerrado el edificio al llegar. Reconozco que esto le ocasionó un desplazamiento inútil y la necesidad de modificar su jornada laboral. Nuestra primera respuesta no reflejó adecuadamente ese perjuicio. Explicar que había mucho trabajo no justificaba que usted tuviera que asumir las consecuencias del fallo.",
-      "Al revisar los registros, comprobamos que se nos habían quedado dos inscripciones fuera de la lista de avisos. Yo registré esas solicitudes en papel y no verifiqué su incorporación al sistema. Asumo esa omisión. Además, el procedimiento no incluía una comprobación entre ambas listas; señalarlo es necesario para prevenir otros casos, pero no elimina nuestra responsabilidad por lo ocurrido.",
-      "Podemos ofrecerle recuperar la sesión sin coste o devolverle el importe correspondiente. La recuperación sería el viernes por la tarde. Si ese horario no le conviene, no necesita reorganizar otra jornada para resolver un error que no provocó. Si elige la devolución, la tramitaremos antes del jueves y le enviaremos confirmación escrita. Le agradecería que indicara cuál de las dos opciones prefiere.",
-      "También hemos unificado los registros y añadido una segunda revisión para los cambios de sede. Dentro de un mes comprobaremos si el nuevo procedimiento se ha aplicado en todos los avisos. No podemos recuperar el tiempo que perdió, pero sí cumplir la reparación elegida y explicar las medidas adoptadas. Gracias por comunicar el problema; su reclamación nos permite corregir un fallo que nuestra respuesta inicial había minimizado."
+      "Queridos vecinos del cerro Alegre: les escribo porque en las últimas semanas me han preguntado muchas veces si la librería está a punto de cerrar. Quiero aclararlo: desde el próximo mes no abriremos los domingos, pero no porque nos vaya mal, sino porque mi hijo y yo necesitamos un día de descanso.",
+      "No es que nos molesten los visitantes; muchos compran y nos recomiendan. El problema es que los domingos sube tanta gente que no podemos atender a nadie con calma. El último domingo de enero hubo tal cola en la caja que varios vecinos se fueron sin comprar, y otros ni siquiera pudieron entrar. Como trabajamos siete días por semana desde diciembre, llegamos al lunes tan cansados que ya no disfrutábamos de lo que más nos gusta: conversar sobre libros.",
+      "Dado que el sábado es el día en que más nos visitan ustedes, desde el 1 de marzo abriremos a las nueve, así que podrán venir antes de que lleguen los grupos. Además, seguiremos guardando pedidos para quien no pueda venir el fin de semana.",
+      "Gracias por preocuparse y por seguir eligiendo el comercio del barrio. Nos vemos el sábado. Rosa Lagos."
     ],
     "checklist": [
-      "Respondo al propósito y al destinatario concreto.",
-      "Organizo párrafos con relaciones claras, no conectores decorativos.",
-      "Distingo datos, opiniones, hipótesis y compromisos.",
-      "Integro una perspectiva distinta sin deformarla.",
-      "Reviso concordancia, modo, tiempos y léxico.",
-      "Explico una mejora entre borrador y versión final."
+      "Desmiento la interpretación con «no porque» + subjuntivo o «no es que» + subjuntivo.",
+      "Doy la causa real en indicativo.",
+      "Uso «tan», «tanto» y «tal» según la palabra que sigue, con concordancia.",
+      "Varío los conectores causales y coloco «como» al principio.",
+      "El tono es cercano y cuidado, sin reproches."
     ],
     "words": [
       220,
-      280
+      300
     ]
   },
   "speaking": {
-    "intro": "Prepara notas breves, no un texto para leer. Puedes grabarte localmente; la aplicación no califica automáticamente pronunciación ni calidad oral.",
+    "intro": "Prepara palabras clave, no un texto para leer. Si te grabas, la grabación queda en tu dispositivo; la aplicación no evalúa tu pronunciación.",
     "tasks": [
       {
-        "title": "Exposición con evidencia",
-        "prompt": "Presenta el caso de «Se nos pasó: responder por un error» a alguien que no conoce las fuentes. Defiende una interpretación, menciona una evidencia y una reserva, y termina con una pregunta que permita continuar.",
+        "title": "Un lugar que cambió demasiado",
+        "prompt": "Habla durante unos dos minutos y medio de un lugar que conoces bien y que cambió mucho (un barrio, una playa, tu escuela). Explica qué cambió, qué consecuencias tuvo la intensidad del cambio y descarta al menos una causa que la gente suele dar.",
         "prep": [
-          "Anota tesis, evidencia y límite en cinco palabras clave.",
-          "Ensaya una transición y una reformulación."
+          "Prepara tres consecutivas con «tan», «tanto» y «tal».",
+          "Prepara un desmentido con «no porque…, sino porque…»."
         ],
-        "seconds": 180,
-        "model": "Lamento que el cambio de sede no le fuera comunicado. Se nos quedaron dos inscripciones fuera de la lista y no realizamos la comprobación necesaria. Reconozco que esto le ocasionó un desplazamiento inútil y una modificación de su jornada. Podemos ofrecerle recuperar la sesión o devolverle el importe correspondiente. Si elige la devolución, la tramitaremos antes del jueves. Hemos añadido una revisión de los registros y comprobaremos su cumplimiento dentro de un mes.",
+        "seconds": 150,
+        "model": "La playa donde veraneaba de chica cambió tanto que ya no la reconozco. Construyeron tantos edificios que el sol se va a las cuatro de la tarde. Mucha gente dice que la arruinaron los turistas, pero no es que los turistas sean el problema: es que nadie planificó nada. Mis abuelos vendieron su casa, no porque necesitaran el dinero, sino porque había tal ruido en verano que no podían dormir.",
         "selfCheck": [
-          "Se entiende mi postura sin leer un guion.",
-          "No convierto una conjetura en hecho.",
-          "Uso pausas para organizar el mensaje."
+          "Uso al menos tres consecutivas de intensidad distintas.",
+          "Rechazo una causa con subjuntivo.",
+          "Marco con la voz el contraste en «sino» y en «es que»."
         ]
       },
       {
-        "title": "Interacción y mediación",
-        "prompt": "Tu docente representa a una persona que cuestiona tu interpretación de disculparse y acordar una reparación proporcionada. Resume su postura antes de responder. Pregunta qué condición cambiaría su opinión; negocia un acuerdo parcial o explica respetuosamente por qué no lo hay.",
+        "title": "El rumor de la panadería",
+        "prompt": "Tu interlocutor es un vecino que escuchó un rumor sobre una decisión tuya y te pregunta con desconfianza. Escucha lo que oyó, aclara qué parte es verdad, desmiente la causa falsa con tacto, da la verdadera y responde a sus preguntas sobre lo que cambiará.",
         "prep": [
-          "Prepara una objeción probable y una pregunta de aclaración.",
-          "Incorpora una pregunta inesperada: ¿qué evidencia haría cambiar tu conclusión?",
-          "Al terminar, reformula en un minuto el resultado para una persona nueva."
+          "Decide tu decisión y el rumor que circula.",
+          "Prepara un «no es que…, es que…» y un «no porque…, sino porque…».",
+          "Prepara una consecuencia con «así que» para lo que cambia."
         ],
-        "seconds": 240,
+        "seconds": 180,
         "selfCheck": [
-          "Respondo a la objeción real.",
-          "Pido y cedo el turno.",
-          "Adapto una explicación sin inventar consenso."
+          "Hago preguntas para saber qué escuchó exactamente.",
+          "Distingo lo que es verdad de lo que no.",
+          "Respondo a sus objeciones sin perder el tono amable."
         ]
       }
     ]
   },
   "useInClass": {
-    "intro": "La mascota te acompaña al siguiente paso: convierte tu trabajo independiente en una conversación con consecuencias claras.",
+    "intro": "Lleva a la próxima clase lo que preparaste esta semana y úsalo con tu profesor.",
     "cards": [
       {
-        "move": "Defiende",
-        "task": "Presenta tu entrega de «Se nos pasó: responder por un error» en tres minutos y responde a una objeción inesperada.",
+        "move": "Desmiente",
+        "task": "Cuéntale a tu profesor algo que la gente piensa de tu país o de tu ciudad y desmiéntelo con la causa verdadera.",
         "phrases": [
-          "Mi interpretación se apoya en…",
-          "La reserva que mantengo es…"
+          "No es que…, es que…",
+          "No porque…, sino porque…"
         ]
       },
       {
-        "move": "Reformula",
-        "task": "Explica a otra persona lo que sostiene una voz del caso de Valparaíso; pídele a tu docente que compruebe si has conservado el matiz.",
+        "move": "Pregúntale",
+        "task": "Pregúntale por un lugar turístico de su país y por las consecuencias del turismo allí.",
         "phrases": [
-          "Si te he entendido bien…",
-          "No afirma que…; lo que plantea es…"
+          "¿Va tanta gente que…?",
+          "¿Es tan caro que…?"
         ]
       },
       {
-        "move": "Negocia",
-        "task": "Acuerda un criterio para valorar tu propuesta sobre disculparse y acordar una reparación proporcionada; identifica una condición que todavía necesita confirmación.",
+        "move": "Comprueba",
+        "task": "Lee dos frases de tu carta con «tan» o «tanto» y pídele que confirme la concordancia.",
         "phrases": [
-          "Lo aceptaría siempre que…",
-          "Queda pendiente comprobar…"
+          "¿Aquí es «tanta» o «tanto»?",
+          "¿Suena natural con «tal»?"
         ]
       }
     ],
-    "bring": "Lleva borrador y versión revisada, cinco palabras clave para hablar y una duda de comprensión o prosodia."
+    "bring": "Trae tu carta con las causas rechazadas subrayadas y las consecutivas marcadas en otro color."
   },
   "quiz": {
     "items": [
       {
-        "q": "En la evaluación final de «Se nos pasó: responder por un error», ¿qué resume mejor el propósito?",
-        "options": [
-          "Evitar cualquier intercambio entre personas.",
-          "Reconocer un perjuicio y ofrecer reparación con seguimiento",
-          "Sustituir toda evidencia por una opinión rotunda."
+        "type": "gap",
+        "q": "Aceptó el trabajo, pero no porque le ___ (pagar) más, sino porque estaba cerca de casa.",
+        "answers": [
+          [
+            "pagaran",
+            "pagasen"
+          ]
         ],
-        "answer": 1,
-        "why": "Relaciona comprensión y propósito.",
-        "type": "choice"
-      },
-      {
-        "type": "listen",
-        "audio": "Agradezco que lo diga así. En el primer mensaje parecía que yo debía entenderlo porque esas cosas pasan. No estaba pidiendo que nadie fuera perfecto, sino que se reconociera que tuve que cambiar mi turno y pagar un desplazamiento que no sirvió de nada.",
-        "voice": "es-MX-m",
-        "q": "Al escuchar de nuevo a Participante en «Se nos pasó: responder por un error», ¿qué intervención reconoces?",
-        "options": [
-          "Me niego a explicar mi punto de vista sobre este asunto.",
-          "Agradezco que lo diga así",
-          "No hay ninguna condición pendiente y todas las partes aceptaron."
-        ],
-        "answer": 1,
-        "why": "Atiende a la formulación y a la posición, no solo al tema."
+        "why": "Causa rechazada en un marco pasado."
       },
       {
         "type": "gap",
-        "q": "Se le ___ el recibo a la coordinadora.",
+        "q": "Había ___ (tanto) bicicletas en la entrada que no se podía pasar.",
         "answers": [
           [
-            "perdió"
+            "tantas"
           ]
         ],
-        "why": "Sujeto singular: el recibo."
+        "why": "Concuerda con «bicicletas»: femenino plural."
       },
       {
-        "type": "open",
-        "prompt": "Texto de partida: «Olvidé sin querer los dos números de reserva.» Usa se me.",
-        "model": "Se me olvidaron los dos números de reserva.",
-        "checklist": [
-          "Conservo participantes, referencia temporal y contenido pertinente.",
-          "Aplico la construcción o función solicitada; puedo elegir otro orden o una variante igualmente válida.",
-          "Comparo el significado y la forma con el modelo orientativo; no es una respuesta única ni se califica por coincidencia literal."
-        ]
+        "type": "gap",
+        "q": "No es que el hotel ___ (estar) mal, es que está muy lejos del centro.",
+        "answers": [
+          [
+            "esté"
+          ]
+        ],
+        "why": "«No es que» + subjuntivo."
+      },
+      {
+        "type": "choice",
+        "q": "¿Qué frase dice que Marta sí viajó?",
+        "options": [
+          "Marta no viajó porque tenía miedo.",
+          "Marta viajó, pero no porque quisiera.",
+          "Marta no viajó, porque se enfermó."
+        ],
+        "answer": 1,
+        "why": "La acción se afirma y se rechaza un motivo."
+      },
+      {
+        "type": "choice",
+        "q": "¿Qué conector va siempre al principio de la frase?",
+        "options": [
+          "porque",
+          "así que",
+          "como"
+        ],
+        "answer": 2,
+        "why": "«Como» causal se coloca al principio."
+      },
+      {
+        "type": "listen",
+        "q": "Según el audio, ¿por qué cancelaron el paseo en lancha?",
+        "audio": "Cancelaron el paseo en lancha, pero no porque hubiera poca gente, sino porque el mar estaba muy picado.",
+        "voice": "es-CL-f",
+        "options": [
+          "Porque había poca gente.",
+          "Porque el mar estaba muy picado.",
+          "Porque la lancha se rompió."
+        ],
+        "answer": 1,
+        "why": "La causa de «poca gente» se rechaza."
       },
       {
         "type": "error",
-        "sentence": "No me acuerdo cuál era el plazo.",
+        "sentence": "La película fue tanto larga que me dormí.",
         "answers": [
-          "No me acuerdo de cuál era el plazo."
+          "La película fue tan larga que me dormí."
         ],
-        "why": "Revisa la función, la construcción y la coherencia con el contexto; compara con el modelo de corrección."
+        "why": "Delante de un adjetivo: «tan»."
+      },
+      {
+        "type": "error",
+        "sentence": "Dejó la orquesta no porque no le gustaba la música, sino porque se mudó.",
+        "answers": [
+          "Dejó la orquesta no porque no le gustara la música, sino porque se mudó.",
+          "Dejó la orquesta no porque no le gustase la música, sino porque se mudó."
+        ],
+        "why": "La causa rechazada va en subjuntivo."
+      },
+      {
+        "type": "order",
+        "words": [
+          "Hacía",
+          "tal",
+          "calor",
+          "que",
+          "cerramos",
+          "la",
+          "tienda",
+          "a",
+          "mediodía."
+        ],
+        "why": "«Tal» + nombre + «que»."
       },
       {
         "type": "open",
-        "prompt": "Sintetiza en 50 palabras lo que sabes y lo que no puedes concluir sobre «Se nos pasó: responder por un error».",
-        "model": "Lamento que el cambio de sede no le fuera comunicado. Se nos quedaron dos inscripciones fuera de la lista y no realizamos la comprobación necesaria. Reconozco que esto le ocasionó un desplazamiento inútil y una modificación de su jornada. Podemos ofrecerle recuperar la sesión o devolverle el importe correspondiente. Si elige la devolución, la tramitaremos antes del jueves. Hemos añadido una revisión de los registros y comprobaremos su cumplimiento dentro de un mes.",
+        "prompt": "Escribe dos frases sobre tu última semana: una consecuencia de una intensidad y una causa que alguien pensó y que tú desmientes.",
+        "model": "El martes tuve tantas reuniones que no almorcé. Mi compañera pensó que estaba enojada, pero no le contesté no porque estuviera enojada, sino porque no tuve ni un minuto.",
         "checklist": [
-          "Atribuyo una fuente.",
-          "Explicito una reserva."
-        ]
-      },
-      {
-        "type": "open",
-        "prompt": "Contesta a quien sostiene lo contrario de tu postura sobre disculparse y acordar una reparación proporcionada; concede una razón y conserva tu argumento.",
-        "model": "Lamento que el cambio de sede no le fuera comunicado. Se nos quedaron dos inscripciones fuera de la lista y no realizamos la comprobación necesaria. Reconozco que esto le ocasionó un desplazamiento inútil y una modificación de su jornada. Podemos ofrecerle recuperar la sesión o devolverle el importe correspondiente. Si elige la devolución, la tramitaremos antes del jueves. Hemos añadido una revisión de los registros y comprobaremos su cumplimiento dentro de un mes.",
-        "checklist": [
-          "Conservo la postura contraria sin exagerarla.",
-          "Respondo con una razón o condición."
-        ]
-      },
-      {
-        "type": "open",
-        "prompt": "Explica dos cambios que harías para adaptar tu entrega de la semana 14 a un mensaje cercano y a un informe formal.",
-        "model": "Cambiaría el tratamiento y algunas fórmulas, pero conservaría las fuentes, los límites y las condiciones acordadas.",
-        "checklist": [
-          "Cambio recursos de registro.",
-          "No cambio el contenido del compromiso."
+          "Uso una consecutiva de intensidad con concordancia.",
+          "Desmiento una causa con subjuntivo."
         ]
       }
     ]
   },
   "complete": {
     "canNow": [
-      "Puedo disculparse y acordar una reparación proporcionada.",
-      "Puedo sostener una interpretación con evidencia y una reserva.",
-      "Puedo revisar mi producción y continuarla mediante interacción."
+      "Puedo rechazar una causa equivocada con «no porque» + subjuntivo y dar la verdadera con «sino porque» + indicativo.",
+      "Puedo suavizar una negativa con «no es que…, es que…» y elegir el conector causal según su posición y su registro.",
+      "Puedo unir una intensidad con su consecuencia usando «tan», «tanto» y «tal», y distinguirla de «así que»."
     ],
     "review": [
-      "Retoma la disculpa del comedor y las condiciones del local: ofrece una reparación que respete daños, responsables y límites.",
-      "Dentro de 48 horas, sin consultar el texto, reconstruye dos posiciones y un recurso lingüístico; comprueba después qué omitiste.",
-      "Una semana después, adapta tu respuesta a otro destinatario y recupera los objetivos marcados en la práctica."
+      "Mañana, escribe tres excusas reales de tu semana con «no es que…, es que…».",
+      "En tres días, describe en voz alta un lugar muy concurrido con «tan», «tanto» y «tal».",
+      "Antes de la semana 15, relee tu carta y cambia un «porque» por «como», «ya que» o «dado que» en el lugar adecuado."
     ]
-  }
+  },
+  "related": [
+    {
+      "path": "/gramatica/oraciones-causales-avanzadas-no-porque-subjuntivo",
+      "label": "Clase: Oraciones causales avanzadas: no porque + subjuntivo"
+    },
+    {
+      "path": "/gramatica/consecuencias-tan-tanto",
+      "label": "Clase: Consecutivas de intensidad: tan, tanto, tal… que"
+    }
+  ]
 };

@@ -1,167 +1,386 @@
 import type { Module } from "../../types";
 
-/** Original B2 material; see docs/autoestudio/b2-audit.md. */
+/**
+ * B2 · semana 13 · Autoestudio espejo de G151 (verbos que rigen preposición: confiar en, depender de)
+ * y G152 (oraciones sustantivas complejas: el hecho de que). Repaso autónomo con una empresa ficticia
+ * de Santiago que anuncia la vuelta a la oficina. Audio mediante síntesis; sin acreditación regional.
+ */
 export const b2w13: Module = {
   "id": "b2-13",
   "level": "b2",
   "week": 13,
   "kind": "core",
-  "title": "Cambiar sin volverse irreconocible",
-  "subtitle": "Describir transformaciones personales y sociales.",
+  "title": "El hecho de que vuelvan a la oficina depende de muchas cosas",
+  "subtitle": "Repaso de los verbos con preposición fija y de «el hecho de que», «la noticia de que» y otras oraciones con «que»",
   "stop": {
     "place": "Santiago",
     "country": "Chile"
   },
   "minutes": 120,
   "newObjectives": [
-    "b2.gram.verbos-cambio-sistema",
-    "b2.gram.ser-estar-matices",
-    "b2.voc.personalidad",
-    "b2.pron.chile",
-    "b2.fun.describir-transformacion",
-    "b2.lis.voces-chile"
+    "b2.gram.g151",
+    "b2.gram.g152",
+    "b2.voc.w13-trabajo-hibrido",
+    "b2.pron.w13-de-que-atono",
+    "b2.lis.w13-anuncio-oficina",
+    "b2.read.w13-columna-presencialidad",
+    "b2.wri.w13-correo-postura",
+    "b2.spk.w13-negociar-condiciones",
+    "b2.fun.w13-plantear-inquietudes",
+    "b2.disc.w13-comentar-hechos"
   ],
-  "reviewObjectives": [
-    "b2.gram.estilo-indirecto-avanzado",
-    "b2.voc.verbos-lengua",
-    "b2.pron.cita-ironia",
-    "b2.fun.resumir-declaraciones",
-    "b2.lis.rueda-prensa",
-    "b2.rev.checkpoint-2",
-    "b2.wri.informe-breve",
-    "b2.gram.probabilidad-pasado",
-    "b2.voc.investigacion",
-    "b2.pron.conjetura",
-    "b2.fun.especular-pasado",
-    "b2.read.caso"
-  ],
-  "prerequisites": [
-    "b2-12"
-  ],
+  "reviewObjectives": [],
+  "prerequisites": [],
   "goal": {
-    "canDo": "Puedo describir transformaciones personales y sociales con razones, matices y condiciones claras.",
+    "canDo": "Puedo usar verbos con preposición sin perderla delante de «que», comentar un hecho con «el hecho de que» y elegir el modo después de sustantivos como «la posibilidad de que» o «la noticia de que».",
     "steps": [
-      "Recupera decisiones lingüísticas anteriores y contrástalas con este caso.",
-      "Escucha sin transcripción y reconstruye las posiciones: describir cambios y evitar estereotipos regionales.",
-      "Lee las fuentes, identifica límites de la evidencia y prepara tu respuesta.",
-      "Escribe, revisa y ensaya una interacción que continuarás con tu docente."
+      "Repasa qué verbos llevan preposición fija y cómo se mantiene con un nombre, un infinitivo o una oración.",
+      "Repasa cómo poner un hecho al principio con «el hecho de que» y qué modo pide cada sustantivo + «de que».",
+      "Escucha a dos compañeros de trabajo de Santiago y lee una columna sobre la vuelta a la oficina.",
+      "Escribe un correo con tu postura, revísalo y negocia oralmente unas condiciones."
     ]
   },
   "theory": {
-    "intro": "La mascota te propone una misión: describir transformaciones personales y sociales. Decide qué quieres comunicar antes de elegir una forma.",
+    "intro": "En clase trabajaste con tu profesor los verbos que llevan una preposición fija y las oraciones que empiezan por un hecho. Aquí lo repasas con una oficina de Santiago donde acaban de anunciar que todos vuelven a trabajar en persona tres días por semana.",
     "parts": [
       {
-        "heading": "Describir transformaciones personales y sociales",
+        "heading": "La preposición viaja con el verbo",
         "body": [
-          "Ponerse suele expresar un estado transitorio; volverse, un cambio de cualidad; hacerse puede destacar voluntad, profesión o proceso; convertirse en presenta una transformación de categoría; llegar a ser señala un resultado alcanzado; quedarse enfatiza el estado resultante. Las combinaciones léxicas importan tanto como la duración."
+          "Muchos verbos llevan una preposición que no se elige: viene con ellos. «Depender de», «darse cuenta de», «acordarse de», «quejarse de», «arrepentirse de», «confiar en», «insistir en», «pensar en», «contar con», «soñar con». Esa preposición se mantiene sea cual sea el complemento: un nombre, un pronombre, un infinitivo o una oración con «que».",
+          "En las preguntas, la preposición va delante de la palabra interrogativa: «¿De qué depende?», «¿Con quién cuentas?», «¿En qué piensas?». Y con pronombres, se usa la forma tónica: «confío en ella», «cuento contigo», «depende de ti»."
         ],
+        "table": {
+          "caption": "Un verbo, tres complementos",
+          "head": [
+            "Verbo",
+            "+ nombre",
+            "+ infinitivo",
+            "+ que"
+          ],
+          "rows": [
+            [
+              "depender de",
+              "depende del metro",
+              "depende de salir temprano",
+              "depende de que haya metro"
+            ],
+            [
+              "contar con",
+              "cuento con tu ayuda",
+              "cuento con terminar el viernes",
+              "cuento con que me ayudes"
+            ],
+            [
+              "confiar en",
+              "confío en el equipo",
+              "confío en llegar a tiempo",
+              "confío en que lleguen a tiempo"
+            ],
+            [
+              "darse cuenta de",
+              "me di cuenta del error",
+              "me di cuenta de haberlo olvidado",
+              "me di cuenta de que faltaba un dato"
+            ]
+          ]
+        },
         "examples": [
           {
-            "es": "Tras la noticia se puso nerviosa.",
-            "note": "Cambio de estado transitorio."
+            "es": "¿Con quién cuentas para la mudanza de escritorio?",
+            "note": "La preposición va delante de «quién»."
           },
           {
-            "es": "Con los años llegó a ser una referente del barrio.",
-            "note": "Resultado de un proceso."
-          },
-          {
-            "es": "El almacén se convirtió en un centro cultural.",
-            "note": "Convertirse exige en ante la nueva categoría."
+            "es": "Tu traslado depende de ti, no de mí.",
+            "note": "Pronombres tónicos detrás de la preposición: «ti», «mí»."
           }
         ],
         "mistakes": [
           {
-            "wrong": "El almacén se convirtió a un centro cultural.",
-            "right": "El almacén se convirtió en un centro cultural.",
-            "why": "Convertirse en expresa transformación."
+            "wrong": "¿Qué depende tu decisión?",
+            "right": "¿De qué depende tu decisión?",
+            "why": "La preposición no desaparece en la pregunta: va delante de «qué»."
+          }
+        ],
+        "tip": "Aprende estos verbos siempre con su preposición, como una sola pieza: «contar con», nunca «contar» solo."
+      },
+      {
+        "heading": "Delante de «que», la preposición sigue ahí",
+        "body": [
+          "Si el sujeto es el mismo, lo normal es el infinitivo: «Insisto en ir el lunes» (yo insisto, yo voy). Si cambia, aparece «que»: «Insisto en que vayas el lunes». En los dos casos la preposición se mantiene. Quitarla delante de «que» («me di cuenta que») se llama queísmo y se evita en la lengua cuidada. El error contrario, añadir «de» donde no va («pienso de que»), es el dequeísmo.",
+          "La prueba más útil es cambiar la oración por «eso»: «me di cuenta de eso» → «me di cuenta de que»; «creo eso» → «creo que». Ojo también con los verbos que cambian de sentido según la preposición: «pensar en» (tener en la mente) y «pensar de» (opinar, en preguntas); «quedar en» (acordar) y «quedar con» (citarse); «acabar de» (hace poco) y «acabar con» (terminar algo, eliminarlo)."
+        ],
+        "examples": [
+          {
+            "es": "Me acordé de que el jueves no hay estacionamiento.",
+            "note": "Prueba: «me acordé de eso»."
+          },
+          {
+            "es": "Quedamos en que cada equipo elige sus días presenciales.",
+            "note": "«Quedar en» = acordar."
+          },
+          {
+            "es": "Quedé con Diego a las nueve en la cafetería del edificio.",
+            "note": "«Quedar con» = citarse con alguien."
+          }
+        ],
+        "mistakes": [
+          {
+            "wrong": "Nos dimos cuenta que el correo era de la gerencia.",
+            "right": "Nos dimos cuenta de que el correo era de la gerencia.",
+            "why": "«Darse cuenta de eso»: la preposición se mantiene delante de «que»."
+          },
+          {
+            "wrong": "Pienso de que tres días son demasiados.",
+            "right": "Pienso que tres días son demasiados.",
+            "why": "«Pienso eso», no «pienso de eso»: aquí sobra el «de»."
           }
         ]
       },
       {
-        "heading": "Interpretación, registro y efecto",
+        "heading": "Primero el hecho, después el comentario",
         "body": [
-          "Ser caracteriza; estar puede presentar una percepción situada: es caro clasifica, está caro compara con una expectativa. En el habla chilena existen rasgos variables, como aspiración de s o realizaciones de ch y marcadores como po; no caracterizan a todos los hablantes. El audio sintético practica comprensión del guion, no acredita esos rasgos regionales: contrástalos con una muestra real elegida en clase."
+          "Ya sabes decir «me molesta que lo anunciaran por correo». Si quieres que el hecho sea el tema de tu frase, puedes ponerlo al principio: «Que lo anunciaran por correo me molesta» o, más formal y más claro, «El hecho de que lo anunciaran por correo me molesta». El hecho funciona como sujeto, así que el verbo principal va en singular, aunque dentro haya plurales.",
+          "Lo normal en esta posición es el subjuntivo, incluso cuando el hecho es real y conocido, porque lo que importa es el comentario: «El hecho de que la sede esté lejos explica muchas quejas». Con verbos como «demostrar», «significar» o «explicar» también es lo habitual. En textos que afirman el hecho como información nueva puede aparecer el indicativo, pero para tu propia escritura el subjuntivo es la opción segura."
         ],
         "examples": [
           {
-            "es": "Tras la noticia se puso nerviosa.",
-            "note": "Explica qué información afirma y cuál deja abierta."
+            "es": "El hecho de que nadie nos preguntara antes demuestra poca confianza.",
+            "note": "Hecho real, pero comentado: subjuntivo."
           },
           {
-            "es": "El almacén se convirtió en un centro cultural.",
-            "note": "Reformula sin cambiar participantes ni tiempo."
+            "es": "Que tengas que cruzar toda la ciudad es un problema serio.",
+            "note": "«Que» solo, al principio, más frecuente en la conversación."
+          },
+          {
+            "es": "Que la oficina abre a las ocho, lo sabe todo el mundo.",
+            "note": "Si el hecho se presenta como sabido y se retoma con «lo», puede ir en indicativo."
+          }
+        ],
+        "mistakes": [
+          {
+            "wrong": "El hecho de que los jefes no vengan nunca molestan a todos.",
+            "right": "El hecho de que los jefes no vengan nunca molesta a todos.",
+            "why": "El sujeto es «el hecho»: el verbo principal va en singular."
+          }
+        ],
+        "tip": "Si tu frase empieza con «el hecho de que», busca enseguida el verbo del comentario y comprueba que esté en singular."
+      },
+      {
+        "heading": "Sustantivo + de que: ¿dato o posibilidad?",
+        "body": [
+          "Muchos sustantivos llevan «de que» + una oración que explica su contenido. El modo depende del sustantivo. Los que presentan algo posible, temido, deseado o necesario piden subjuntivo: «la posibilidad de que», «el riesgo de que», «el miedo de que», «la esperanza de que», «la necesidad de que». Los que presentan información o certeza piden indicativo: «la noticia de que», «el rumor de que», «la certeza de que», «la impresión de que».",
+          "No confundas el contenido con una relativa: en «la noticia que leí», «que» es relativo (leí la noticia) y no lleva «de»; en «la noticia de que cierran la sede», la oración dice qué dice la noticia. En la conversación, «lo de que» retoma algo que se dijo: «Lo de que nos cambian de piso, ¿es seguro?»."
+        ],
+        "table": {
+          "caption": "El sustantivo decide el modo",
+          "head": [
+            "Sustantivo",
+            "Modo",
+            "Ejemplo"
+          ],
+          "rows": [
+            [
+              "la posibilidad de que",
+              "subjuntivo",
+              "Existe la posibilidad de que trasladen la sede a Providencia."
+            ],
+            [
+              "el riesgo de que",
+              "subjuntivo",
+              "Hay riesgo de que se vaya gente con experiencia."
+            ],
+            [
+              "la noticia de que",
+              "indicativo",
+              "Nos llegó la noticia de que la sede se traslada."
+            ],
+            [
+              "el rumor de que",
+              "indicativo",
+              "Corre el rumor de que habrá bonos de transporte."
+            ],
+            [
+              "la idea de que",
+              "los dos",
+              "Me gusta la idea de que elijamos los días. / Defiende la idea de que la oficina une al equipo."
+            ]
+          ]
+        },
+        "examples": [
+          {
+            "es": "Tengo la impresión de que nadie leyó la encuesta.",
+            "note": "Información que el hablante cree: indicativo."
+          },
+          {
+            "es": "El informe que mandaron ayer no menciona el transporte.",
+            "note": "Relativa: «mandaron el informe». Sin «de»."
+          }
+        ],
+        "mistakes": [
+          {
+            "wrong": "Existe la posibilidad que cambien el horario.",
+            "right": "Existe la posibilidad de que cambien el horario.",
+            "why": "«La posibilidad de eso»: el sustantivo pide «de» delante de «que»."
+          },
+          {
+            "wrong": "Nos llegó la noticia de que la sede se traslade.",
+            "right": "Nos llegó la noticia de que la sede se traslada.",
+            "why": "«Noticia» presenta información: indicativo."
           }
         ]
       }
     ]
   },
   "grammar": {
-    "intro": "Elige formas por su función y por el momento desde el que se habla.",
+    "intro": "Primero recupera la preposición de cada verbo; después decide qué modo pide cada hecho o cada sustantivo.",
     "exercises": [
       {
-        "id": "g-contexto",
+        "id": "b2-13-g-preposicion",
         "type": "gap",
-        "prompt": "Completa estas decisiones lingüísticas de cambiar sin volverse irreconocible; justifica el modo, la forma o la combinación.",
+        "prompt": "Completa con la preposición que exige el verbo (con artículo contracto si hace falta). Si no hace falta ninguna, escribe «x».",
         "items": [
           {
-            "q": "Tras la noticia se ___ nerviosa.",
+            "q": "Al final todo depende ___ que el metro funcione bien.",
             "answers": [
               [
-                "puso"
+                "de"
               ]
             ],
-            "why": "Cambio de estado transitorio."
+            "why": "«Depender de»: se mantiene delante de «que»."
           },
           {
-            "q": "Con los años llegó a ___ una referente del barrio.",
+            "q": "No me acordé ___ traer el carné para entrar al edificio.",
             "answers": [
               [
-                "ser"
+                "de"
               ]
             ],
-            "why": "Resultado de un proceso."
+            "why": "«Acordarse de» + infinitivo."
           },
           {
-            "q": "El almacén se convirtió ___ un centro cultural.",
+            "q": "La gerente insiste ___ que todos estemos el martes.",
             "answers": [
               [
                 "en"
               ]
             ],
-            "why": "Convertirse exige en ante la nueva categoría."
+            "why": "«Insistir en que» + subjuntivo cuando pide algo."
+          },
+          {
+            "q": "Creo ___ que la medida se puede negociar.",
+            "answers": [
+              [
+                "x"
+              ]
+            ],
+            "why": "«Creo eso»: no lleva preposición."
+          },
+          {
+            "q": "Podemos contar ___ Diego para preparar la encuesta.",
+            "answers": [
+              [
+                "con"
+              ]
+            ],
+            "why": "«Contar con» alguien."
+          },
+          {
+            "q": "Se quejaron ___ ruido del nuevo espacio abierto.",
+            "answers": [
+              [
+                "del"
+              ]
+            ],
+            "why": "«Quejarse de» + «el ruido» = «del ruido»."
           }
         ]
       },
       {
-        "id": "g-reconstruir",
-        "type": "open",
-        "prompt": "Reformula con autonomía. Lee el texto de partida y la consigna de cada ítem; después contrasta tu respuesta con el modelo orientativo y la lista de revisión. Otras soluciones pueden ser válidas.",
+        "id": "b2-13-g-modo",
+        "type": "choice",
+        "prompt": "Elige la forma correcta según el sustantivo o la posición del hecho.",
         "items": [
           {
-            "prompt": "Texto de partida: «El almacén pasó a ser un centro cultural.» Usa convertirse.",
-            "model": "El almacén se convirtió en un centro cultural.",
+            "q": "«Corre el rumor de que la empresa ___ la sede de Ñuñoa».",
+            "options": [
+              "cierre",
+              "cierra",
+              "cerrara"
+            ],
+            "answer": 1,
+            "why": "«Rumor» presenta información: indicativo."
+          },
+          {
+            "q": "«Me preocupa el riesgo de que ___ los mejores programadores».",
+            "options": [
+              "se van",
+              "se fueron",
+              "se vayan"
+            ],
+            "answer": 2,
+            "why": "«Riesgo» presenta algo posible y temido: subjuntivo."
+          },
+          {
+            "q": "«El hecho de que nos ___ la decisión por correo no ayudó».",
+            "options": [
+              "comunicaran",
+              "comunicaron",
+              "comunicarán"
+            ],
+            "answer": 0,
+            "why": "Hecho al principio y comentado: subjuntivo."
+          },
+          {
+            "q": "«Que los jefes también vengan tres días ___ justo».",
+            "options": [
+              "me parecen",
+              "me parece",
+              "me parecieron"
+            ],
+            "answer": 1,
+            "why": "El sujeto es toda la oración con «que»: singular."
+          }
+        ]
+      },
+      {
+        "id": "b2-13-g-reformular",
+        "type": "open",
+        "prompt": "Reformula cada texto de partida según la consigna. Después compara con el modelo y la lista: hay más de una versión correcta.",
+        "items": [
+          {
+            "prompt": "Texto de partida: «Me molesta mucho que no nos hayan consultado». Empieza la frase con «El hecho de que…».",
+            "model": "El hecho de que no nos hayan consultado me molesta mucho.",
             "checklist": [
-              "Conservo participantes, referencia temporal y contenido pertinente.",
-              "Aplico la construcción o función solicitada; puedo elegir otro orden o una variante igualmente válida.",
-              "Comparo el significado y la forma con el modelo orientativo; no es una respuesta única ni se califica por coincidencia literal."
+              "Pongo el hecho al principio y mantengo el subjuntivo.",
+              "El verbo principal concuerda en singular.",
+              "Comparo con el modelo orientativo: no es una respuesta única y otras formulaciones correctas también valen."
             ]
           },
           {
-            "prompt": "Texto de partida: «Isabel adquirió nerviosismo al escuchar la crítica.» Usa ponerse y un adjetivo.",
-            "model": "Isabel se puso nerviosa al escuchar la crítica.",
+            "prompt": "Texto de partida: «Yo voy a pedir el traslado. Tú también lo pides, ¿verdad? Insisto». Une las ideas en una frase con «insistir en», primero con el mismo sujeto y después con otro.",
+            "model": "Insisto en pedir el traslado, e insisto en que tú también lo pidas.",
             "checklist": [
-              "Conservo participantes, referencia temporal y contenido pertinente.",
-              "Aplico la construcción o función solicitada; puedo elegir otro orden o una variante igualmente válida.",
-              "Comparo el significado y la forma con el modelo orientativo; no es una respuesta única ni se califica por coincidencia literal."
+              "Uso infinitivo con el mismo sujeto y «que» + subjuntivo con otro.",
+              "Mantengo «en» en los dos casos.",
+              "Comparo con el modelo orientativo: no es una respuesta única y otras formulaciones correctas también valen."
             ]
           },
           {
-            "prompt": "Texto de partida: «Después de años de trabajo alcanzó la condición de referente.» Usa llegar a ser.",
-            "model": "Después de años de trabajo llegó a ser una referente.",
+            "prompt": "Texto de partida: «Dicen que van a dar un bono de transporte. Puede ser que lo den solo a quien viva lejos». Reescríbelo con «el rumor de que» y «la posibilidad de que».",
+            "model": "Circula el rumor de que van a dar un bono de transporte, y existe la posibilidad de que solo lo reciba quien viva lejos.",
             "checklist": [
-              "Conservo participantes, referencia temporal y contenido pertinente.",
-              "Aplico la construcción o función solicitada; puedo elegir otro orden o una variante igualmente válida.",
-              "Comparo el significado y la forma con el modelo orientativo; no es una respuesta única ni se califica por coincidencia literal."
+              "Uso indicativo después de «rumor» y subjuntivo después de «posibilidad».",
+              "No olvido el «de» delante de «que».",
+              "Comparo con el modelo orientativo: no es una respuesta única y otras formulaciones correctas también valen."
+            ]
+          },
+          {
+            "prompt": "Texto de partida: «Ayer vi un problema: en la sala nueva no hay enchufes suficientes». Cuéntalo con «darse cuenta de» y sin perder la preposición.",
+            "model": "Ayer me di cuenta de que en la sala nueva no hay enchufes suficientes.",
+            "checklist": [
+              "Mantengo «de que» y el indicativo para un hecho que descubrí.",
+              "Conservo el sentido del texto de partida.",
+              "Comparo con el modelo orientativo: no es una respuesta única y otras formulaciones correctas también valen."
             ]
           }
         ]
@@ -169,282 +388,361 @@ export const b2w13: Module = {
     ]
   },
   "vocabulary": {
-    "intro": "Aprende combinaciones en contexto y comprueba qué matiz aportan al caso.",
+    "intro": "Palabras para hablar de cambios en la organización del trabajo. Apréndelas con sus verbos y preposiciones.",
     "groups": [
       {
-        "title": "Describir transformaciones personales y sociales",
+        "title": "Cómo y dónde se trabaja",
         "items": [
           {
-            "es": "cambiar de rumbo",
-            "note": "modificar una trayectoria"
+            "es": "la jornada presencial",
+            "note": "día en que se trabaja en la oficina"
           },
           {
-            "es": "ganar confianza",
-            "note": "sentirse más capaz"
+            "es": "trabajar en remoto",
+            "note": "trabajar desde casa o desde otro lugar"
           },
           {
-            "es": "quedarse sin apoyo",
-            "note": "perder ayuda disponible"
+            "es": "el traslado",
+            "note": "cambio de sede o de puesto"
           },
           {
-            "es": "volverse desconfiado",
-            "note": "adquirir desconfianza"
+            "es": "el trayecto",
+            "note": "el recorrido entre casa y trabajo"
           },
           {
-            "es": "hacerse cargo",
-            "note": "asumir responsabilidad"
+            "es": "el puesto rotativo",
+            "note": "escritorio sin dueño fijo"
+          }
+        ]
+      },
+      {
+        "title": "Hablar de un cambio con la empresa",
+        "items": [
+          {
+            "es": "plantear una inquietud",
+            "note": "decir con respeto algo que preocupa"
           },
           {
-            "es": "llegar a ser referente",
-            "note": "alcanzar reconocimiento"
+            "es": "entrar en vigor",
+            "note": "empezar a aplicarse una norma"
           },
           {
-            "es": "transformar un entorno",
-            "note": "cambiar un espacio social"
+            "es": "estar dispuesto a",
+            "note": "aceptar hacer algo"
           },
           {
-            "es": "mantener un vínculo",
-            "note": "conservar una relación"
+            "es": "llegar a un acuerdo",
+            "note": "resolver una diferencia hablando"
+          },
+          {
+            "es": "la medida",
+            "note": "decisión que se toma para resolver algo"
           }
         ]
       }
     ],
     "exercises": [
       {
-        "id": "v-relaciones",
+        "id": "b2-13-v-relacion",
         "type": "match",
-        "prompt": "Relaciona las expresiones útiles para describir transformaciones personales y sociales con su significado.",
+        "prompt": "Relaciona cada expresión con la situación de la oficina en la que encaja.",
         "pairs": [
           {
-            "left": "cambiar de rumbo",
-            "right": "modificar una trayectoria"
+            "left": "la jornada presencial",
+            "right": "Los martes, miércoles y jueves todo el equipo va a la sede."
           },
           {
-            "left": "ganar confianza",
-            "right": "sentirse más capaz"
+            "left": "el trayecto",
+            "right": "Diego tarda una hora y diez desde Puente Alto."
           },
           {
-            "left": "quedarse sin apoyo",
-            "right": "perder ayuda disponible"
+            "left": "plantear una inquietud",
+            "right": "Camila le escribe a la gerente para explicar qué le preocupa."
           },
           {
-            "left": "volverse desconfiado",
-            "right": "adquirir desconfianza"
+            "left": "entrar en vigor",
+            "right": "La nueva norma se aplica desde el primer lunes de marzo."
           },
           {
-            "left": "hacerse cargo",
-            "right": "asumir responsabilidad"
+            "left": "el puesto rotativo",
+            "right": "Cada mañana reservas un escritorio libre en una aplicación."
           },
           {
-            "left": "llegar a ser referente",
-            "right": "alcanzar reconocimiento"
-          },
-          {
-            "left": "transformar un entorno",
-            "right": "cambiar un espacio social"
-          },
-          {
-            "left": "mantener un vínculo",
-            "right": "conservar una relación"
+            "left": "llegar a un acuerdo",
+            "right": "Después de dos reuniones, aceptan dos días fijos y uno flexible."
           }
-        ]
+        ],
+        "why": "Cada expresión corresponde a una situación concreta del caso."
       }
     ]
   },
   "pronunciation": {
-    "focus": "Escucha cadenas con se puso y se volvió; para variantes regionales utiliza una muestra real en clase y describe lo oído sin generalizar a todo un país.",
+    "focus": "«De que» sin fuerza frente a «¿de qué?» con fuerza.",
     "explanation": [
-      "Escucha cadenas con se puso y se volvió; para variantes regionales utiliza una muestra real en clase y describe lo oído sin generalizar a todo un país.",
-      "Escucha primero la secuencia verbal. Después lee la misma frase con una intención distinta, grábate localmente y compara con tu docente. La voz sintética es apoyo de escucha: no certifica variedad regional, ironía ni evaluación automática de tu pronunciación."
+      "En «depende de que haya metro», las palabras «de» y «que» son átonas: no llevan fuerza y se unen a lo que sigue, «dequeaya». En cambio, en la pregunta «¿De qué depende?», «qué» es tónico: lleva tilde, fuerza y un tono que sube o cae con claridad. Si das fuerza al «que» átono, tu frase suena a pregunta.",
+      "Lo mismo pasa con «en que» y «¿en qué?», «con que» y «¿con qué?». Escucha, repite y grábate en tu dispositivo; la voz sintética es un apoyo y no evalúa tu pronunciación."
     ],
     "examples": [
       {
-        "es": "Tras la noticia se puso nerviosa."
+        "es": "¿De qué depende el traslado?",
+        "note": "de-QUÉ: fuerza en «qué»."
       },
       {
-        "es": "Con los años llegó a ser una referente del barrio."
+        "es": "Depende de que firmen el contrato.",
+        "note": "de-pen-de-de-que-FIR-men: fuerza en el verbo, no en «que»."
       },
       {
-        "es": "El almacén se convirtió en un centro cultural."
+        "es": "¿En qué insiste la gerente?",
+        "note": "en-QUÉ in-SIS-te: dos fuerzas claras."
       }
     ],
     "perceive": {
-      "id": "p-percepcion",
+      "id": "b2-13-p-oido",
       "type": "listen",
-      "prompt": "Escucha sin leer el ejemplo previo si quieres comprobar tu percepción; identifica el fragmento verbal y después marca su sílaba tónica.",
+      "prompt": "Escucha cada frase y decide si es una pregunta con «qué» tónico o una afirmación con «que» átono.",
       "items": [
         {
-          "q": "En la muestra 1 de cambiar sin volverse irreconocible, ¿qué fragmento se oye?",
+          "q": "¿Qué oyes en la frase sobre el horario?",
           "options": [
-            "hizo",
-            "volvió",
-            "puso"
-          ],
-          "answer": 2,
-          "why": "Cambio de estado transitorio.",
-          "audio": "Tras la noticia se puso nerviosa.",
-          "voice": "es-ES-f"
-        },
-        {
-          "q": "En la muestra 2 de cambiar sin volverse irreconocible, ¿qué fragmento se oye?",
-          "options": [
-            "tener",
-            "ser",
-            "estar"
+            "pregunta con «¿de qué?»",
+            "afirmación con «de que»"
           ],
           "answer": 1,
-          "why": "Resultado de un proceso.",
-          "audio": "Con los años llegó a ser una referente del barrio.",
-          "voice": "es-ES-f"
+          "audio": "Depende de que aprueben el horario nuevo.",
+          "voice": "es-CL-f",
+          "why": "«De que» sin fuerza: afirmación."
+        },
+        {
+          "q": "¿Qué oyes en la frase sobre la reunión?",
+          "options": [
+            "pregunta con «¿de qué?»",
+            "afirmación con «de que»"
+          ],
+          "answer": 0,
+          "audio": "¿De qué se quejaron en la reunión?",
+          "voice": "es-CL-m",
+          "why": "«Qué» tónico y entonación de pregunta."
+        },
+        {
+          "q": "¿Qué oyes en la frase sobre el equipo?",
+          "options": [
+            "afirmación con «en que»",
+            "pregunta con «¿en qué?»"
+          ],
+          "answer": 0,
+          "audio": "Confío en que el equipo lo entienda.",
+          "voice": "es-CL-f",
+          "why": "«En que» átono, unido al verbo siguiente."
+        },
+        {
+          "q": "¿Qué oyes en la frase sobre el proyecto?",
+          "options": [
+            "afirmación con «con que»",
+            "pregunta con «¿con qué?»"
+          ],
+          "answer": 1,
+          "audio": "¿Con qué contamos para el proyecto nuevo?",
+          "voice": "es-CL-m",
+          "why": "«Qué» con fuerza: pregunta."
         }
       ]
     },
     "produce": [
       {
-        "text": "Tras la noticia se puso nerviosa.",
-        "tip": "Escucha cadenas con se puso y se volvió; para variantes regionales utiliza una muestra real en clase y describe lo oído sin generalizar a todo un país.",
-        "voice": "es-ES-f"
+        "text": "Me di cuenta de que faltaba un dato.",
+        "tip": "«de que» sin fuerza; la fuerza va en «fal».",
+        "voice": "es-CL-f"
       },
       {
-        "text": "Con los años llegó a ser una referente del barrio.",
-        "tip": "Escucha cadenas con se puso y se volvió; para variantes regionales utiliza una muestra real en clase y describe lo oído sin generalizar a todo un país.",
-        "voice": "es-ES-f"
+        "text": "¿De qué depende tu respuesta?",
+        "tip": "Destaca «qué» y deja caer la voz al final.",
+        "voice": "es-CL-m"
       },
       {
-        "text": "El almacén se convirtió en un centro cultural.",
-        "tip": "Escucha cadenas con se puso y se volvió; para variantes regionales utiliza una muestra real en clase y describe lo oído sin generalizar a todo un país.",
-        "voice": "es-ES-f"
+        "text": "El hecho de que vengan los jefes ayuda.",
+        "tip": "Pausa breve después de «jefes», antes del comentario.",
+        "voice": "es-CL-f"
+      },
+      {
+        "text": "Corre el rumor de que cambian la sede.",
+        "tip": "«de que» unido a «cambian».",
+        "voice": "es-CL-m"
       }
     ]
   },
   "listening": {
-    "title": "Voces y decisiones: Cambiar sin volverse irreconocible",
-    "context": "Guion original de interacción. Primera escucha sin transcripción: identifica propósito y posiciones; segunda: datos y condiciones; tercera: inferencias. Reproducción sintética, sin verificación de acento regional.",
+    "title": "Viernes, después del correo",
+    "context": "Es viernes por la tarde en una empresa de software de Santiago. Al mediodía, la gerencia anunció por correo que desde marzo todos trabajarán en la oficina tres días por semana. Camila, jefa de un equipo, y Diego, programador, lo comentan en la cafetería del edificio. Escucha primero sin transcripción. Las voces son sintéticas y no representan una variedad regional verificada.",
     "speakers": [
       {
-        "id": "s1",
-        "name": "Entrevistadora",
-        "voice": "es-ES-f",
-        "role": "Interlocutor del guion original; voz sintética disponible"
+        "id": "ca",
+        "name": "Camila",
+        "voice": "es-CL-f",
+        "role": "Jefa del equipo de diseño"
       },
       {
-        "id": "s2",
-        "name": "Isabel",
-        "voice": "es-MX-m",
-        "role": "Interlocutor del guion original; voz sintética disponible"
-      },
-      {
-        "id": "s3",
-        "name": "Vecino",
-        "voice": "es-ES-f",
-        "role": "Interlocutor del guion original; voz sintética disponible"
+        "id": "di",
+        "name": "Diego",
+        "voice": "es-CL-m",
+        "role": "Programador que vive lejos de la oficina"
       }
     ],
     "script": [
       {
-        "speaker": "s1",
-        "text": "Isabel, el antiguo almacén se ha convertido en un lugar conocido, pero algunas personas dicen que el barrio ya no es el mismo. ¿Cómo ha cambiado tu forma de escuchar esas críticas desde que empezó la reforma y hasta ahora?"
+        "speaker": "di",
+        "text": "¿Leíste el correo? Yo me di cuenta de que era en serio cuando vi que lo firmaba la gerente general. Tres días a la semana desde marzo."
       },
       {
-        "speaker": "s2",
-        "text": "Antes me ponía a la defensiva. Había dejado un trabajo estable para hacerme restauradora y sentía que cualquier objeción cuestionaba esa decisión. Después comprendí que una persona podía valorar el centro y, al mismo tiempo, preocuparse por los alquileres. No tenía que elegir una sola emoción."
+        "speaker": "ca",
+        "text": "Lo leí dos veces. Mira, a mí la medida no me parece tan grave. Lo que me molesta es el hecho de que nos lo comunicaran así, un viernes al mediodía, sin preguntarle nada a nadie."
       },
       {
-        "speaker": "s3",
-        "text": "Yo participo en los talleres y me alegra que exista el centro. También digo que el barrio está caro porque comparo lo que pago ahora con mi contrato anterior. No estoy afirmando que la cooperativa sea responsable de todo, pero tampoco quiero que se ignore el cambio."
+        "speaker": "di",
+        "text": "Para ti es fácil, vives a quince minutos. Yo vengo desde Puente Alto: son más de dos horas entre ida y vuelta. Que me pidan tres días significa perder seis horas a la semana en el metro."
       },
       {
-        "speaker": "s1",
-        "text": "En algunos mensajes aparecen expresiones locales que lectores de otros países no conocen. ¿Cómo las explican cuando comparten testimonios? Este guion se reproduce con voz sintética, así que no estamos presentando una muestra verificada de pronunciación chilena."
+        "speaker": "ca",
+        "text": "Lo sé, y eso hay que plantearlo. ¿Y lo de que van a dar un bono de transporte? ¿Es cierto o es otro rumor del pasillo?"
       },
       {
-        "speaker": "s2",
-        "text": "Conservamos las palabras y añadimos una explicación breve cuando hace falta. Si alguien dice po como apoyo conversacional, no lo traducimos siempre por una palabra idéntica: miramos qué función cumple. Y para estudiar la pronunciación, buscamos una grabación real autorizada con la profesora."
+        "speaker": "di",
+        "text": "Por ahora es un rumor. Tengo la impresión de que lo inventó alguien para calmar los ánimos. Lo que sí está en el correo es la posibilidad de que cada equipo elija sus días."
       },
       {
-        "speaker": "s3",
-        "text": "Esa atención también cambia cómo nos sentimos representados. No queremos que nuestro modo de hablar se vuelva una caricatura. El barrio ha cambiado, sí, pero sigue teniendo personas con experiencias y voces distintas, no una única identidad que pueda resumirse en dos expresiones."
+        "speaker": "ca",
+        "text": "Eso es importante. Entonces todo depende de que nos pongamos de acuerdo dentro del equipo. Si elegimos martes, miércoles y jueves, tú evitas los lunes, que son los peores para el metro."
+      },
+      {
+        "speaker": "di",
+        "text": "Puede ser. Pero insisto en que alguien hable con la gerencia sobre los horarios. Si pudiera entrar a las diez, el trayecto se haría mucho más corto."
+      },
+      {
+        "speaker": "ca",
+        "text": "Cuenta conmigo. El lunes le escribo a la gerente. Y no te preocupes: no pienso en esto como una pelea, sino como una negociación. Confío en que sean razonables."
+      },
+      {
+        "speaker": "di",
+        "text": "Gracias. Y acuérdate de mencionar lo de los escritorios: el hecho de que haya solo cuarenta para sesenta personas va a ser un problema el primer martes."
+      },
+      {
+        "speaker": "ca",
+        "text": "Tienes razón, no había pensado en eso. Lo pongo en el correo con los números, para que no parezca una queja sin datos."
       }
     ],
     "stages": [
       {
         "stage": "gist",
-        "prompt": "Escucha la conversación completa; identifica el problema y la intención antes de buscar palabras aisladas.",
+        "prompt": "Escucha la conversación entera. ¿De qué hablan y qué deciden hacer?",
         "exercise": {
-          "id": "l-global",
+          "id": "b2-13-l-global",
           "type": "choice",
-          "prompt": "¿Qué organiza la conversación situada en Santiago?",
+          "prompt": "Elige la respuesta que resume la conversación.",
           "items": [
             {
-              "q": "¿Cuál es el propósito global de esta conversación: Cambiar sin volverse irreconocible?",
+              "q": "¿Qué comentan Camila y Diego?",
               "options": [
-                "Leer una lista de instrucciones sin responder a nadie.",
-                "Contar una única versión sin permitir preguntas.",
-                "Describir cambios y evitar estereotipos regionales"
+                "Un anuncio sobre la vuelta a la oficina tres días por semana.",
+                "El despido de varios compañeros.",
+                "Un cambio en los sueldos del equipo."
               ],
-              "answer": 2,
-              "why": "Las intervenciones se responden y matizan sus posiciones."
+              "answer": 0,
+              "why": "Hablan del correo de la gerencia sobre los tres días presenciales."
             },
             {
-              "q": "¿Qué relación predomina entre las voces en «Cambiar sin volverse irreconocible»?",
+              "q": "¿Qué decide hacer Camila?",
               "options": [
-                "Ninguna intervención tiene relación con la anterior.",
-                "Las personas aclaran interpretaciones y conservan algunos límites.",
-                "Todas repiten exactamente la misma opinión desde el inicio."
+                "Pedir el traslado a otra sede.",
+                "Ignorar el correo hasta marzo.",
+                "Escribir a la gerente para negociar los horarios."
               ],
-              "answer": 1,
-              "why": "Identifica un turno que responda al anterior."
+              "answer": 2,
+              "why": "«El lunes le escribo a la gerente»."
             }
           ]
         }
       },
       {
         "stage": "detail",
-        "prompt": "Escucha otra vez y anota quién sostiene cada afirmación.",
+        "prompt": "Escucha otra vez y localiza los datos concretos.",
         "exercise": {
-          "id": "l-detalle",
+          "id": "b2-13-l-detalle",
           "type": "choice",
-          "prompt": "Localiza una intervención concreta en «Cambiar sin volverse irreconocible».",
+          "prompt": "Responde con la información exacta del audio.",
           "items": [
             {
-              "q": "¿Qué cambió en Isabel?",
+              "q": "¿Qué le molesta a Camila?",
               "options": [
-                "Decidió que todas las críticas eran falsas.",
-                "Dejó de interpretar toda objeción como descalificación personal.",
-                "Dejó de interesarse por el centro."
+                "Tener que ir tres días.",
+                "La forma en que comunicaron la decisión.",
+                "Que Diego viva lejos."
               ],
               "answer": 1,
-              "why": "La respuesta conserva la condición o información expresada por esa persona."
+              "why": "«Lo que me molesta es el hecho de que nos lo comunicaran así»."
             },
             {
-              "q": "¿Qué frase aparece en la intervención inicial de «Cambiar sin volverse irreconocible»?",
+              "q": "¿Qué es solo un rumor?",
               "options": [
-                "Isabel, el antiguo almacén se ha convertido en un lugar conocido, pero algunas personas dicen que el barrio ya no es el mismo.",
-                "Ya está todo decidido y no necesitamos escuchar a ninguna parte.",
-                "No hay información que podamos discutir en esta reunión."
+                "El bono de transporte.",
+                "Los tres días presenciales.",
+                "Que cada equipo elija sus días."
               ],
               "answer": 0,
-              "why": "Vuelve al inicio y comprueba la formulación exacta."
+              "why": "Diego: «Por ahora es un rumor»."
+            },
+            {
+              "q": "¿Qué cambio ayudaría más a Diego?",
+              "options": [
+                "Trabajar los lunes.",
+                "Recibir un escritorio fijo.",
+                "Poder entrar a las diez."
+              ],
+              "answer": 2,
+              "why": "«Si pudiera entrar a las diez, el trayecto se haría mucho más corto»."
             }
           ]
         }
       },
       {
         "stage": "notice",
-        "prompt": "Distingue lo dicho de lo inferido; consulta la transcripción solo después de responder.",
+        "prompt": "Ahora fíjate en la forma. Puedes leer la transcripción después de responder.",
         "exercise": {
-          "id": "l-inferencia",
-          "type": "open",
-          "prompt": "Interpreta postura, reserva y efecto sobre la otra persona.",
+          "id": "b2-13-l-forma",
+          "type": "classify",
+          "prompt": "Clasifica cada fragmento según la estructura que muestra.",
+          "categories": [
+            "Verbo con preposición fija",
+            "Hecho o sustantivo + que"
+          ],
           "items": [
             {
-              "prompt": "En «Cambiar sin volverse irreconocible», cita una reserva o una reformulación del diálogo, explica qué interpretación evita y qué quedaría sin resolver si se omitiera.",
-              "model": "Esa atención también cambia cómo nos sentimos representados. No queremos que nuestro modo de hablar se vuelva una caricatura. El barrio ha cambiado, sí, pero sigue teniendo personas con experiencias y voces distintas, no una única identidad que pueda resumirse en dos expresiones.",
-              "checklist": [
-                "Atribuyo la intervención a su hablante.",
-                "Distingo palabras explícitas e inferencia.",
-                "Conservo una condición o un límite de la conversación."
-              ]
+              "text": "me di cuenta de que era en serio",
+              "cat": 0,
+              "why": "«Darse cuenta de» mantiene «de» delante de «que»."
+            },
+            {
+              "text": "el hecho de que nos lo comunicaran así",
+              "cat": 1,
+              "why": "Hecho comentado, en subjuntivo."
+            },
+            {
+              "text": "Tengo la impresión de que lo inventó alguien",
+              "cat": 1,
+              "why": "«Impresión» + indicativo."
+            },
+            {
+              "text": "todo depende de que nos pongamos de acuerdo",
+              "cat": 0,
+              "why": "«Depender de que» + subjuntivo."
+            },
+            {
+              "text": "la posibilidad de que cada equipo elija sus días",
+              "cat": 1,
+              "why": "«Posibilidad» + subjuntivo."
+            },
+            {
+              "text": "Cuenta conmigo",
+              "cat": 0,
+              "why": "«Contar con» + pronombre: «conmigo»."
             }
           ]
         }
@@ -452,198 +750,260 @@ export const b2w13: Module = {
     ]
   },
   "reading": {
-    "title": "Cambiar sin volverse irreconocible: texto para interpretar",
-    "genre": "Artículo, correspondencia o relato original",
-    "frame": "Material original de SpanishCue; las situaciones y los datos son didácticos, no noticias reales ni textos oficiales de examen.",
+    "title": "Tres días en la oficina: lo que no dice el correo",
+    "genre": "Columna de opinión en un diario",
+    "frame": "Texto original de SpanishCue escrito como columna del diario ficticio «La Hora de Santiago». La autora y las empresas citadas son inventadas.",
     "text": [
-      "Durante años, el antiguo almacén del barrio permaneció cerrado. Cuando una cooperativa lo convirtió en un centro cultural, algunas personas hablaron de recuperación y otras de pérdida. La diferencia no dependía únicamente del edificio. Para quienes recordaban a sus padres trabajando allí, el nuevo café parecía borrar una historia; para quienes habían crecido frente a una persiana bajada, la apertura ofrecía por primera vez un espacio de encuentro. Un mismo cambio podía significar cosas distintas según el punto de partida de cada observador.",
-      "Isabel, que se hizo restauradora después de trabajar en comercio, coordinó la obra. Al principio se ponía nerviosa cada vez que alguien cuestionaba una decisión. Con el tiempo se volvió más paciente, aunque rechaza que eso signifique haberse vuelto indiferente. Aprendió a distinguir una crítica al proyecto de una descalificación personal. También reconoce un límite: durante la reforma se quedó sin tiempo para otras actividades y terminó dependiendo demasiado de un grupo pequeño de colaboradores.",
-      "El centro llegó a ser conocido fuera del barrio. Esa visibilidad trajo recursos, pero elevó los precios de algunos locales cercanos. «La zona está carísima», comenta un vecino que compara los alquileres con los de hace cinco años. Otra residente responde que siempre fue una zona cara, aunque antes el deterioro lo disimulara. Sus frases no se contradicen necesariamente: una describe un cambio percibido; la otra clasifica el lugar respecto a otras zonas. Para discutir políticas de vivienda, sin embargo, harían falta datos además de impresiones.",
-      "La cooperativa ha reservado salas gratuitas para asociaciones y mantiene un archivo de testimonios del almacén. No puede controlar todo lo que ocurre alrededor, pero sí revisar a quién beneficia su programación. Convertirse en un símbolo de renovación no obliga a celebrar cualquier consecuencia del cambio. Quizá la madurez del proyecto consista en conservar la capacidad de escuchar incluso cuando las críticas afectan a la historia de éxito que sus propios impulsores quisieran contar."
+      "En las últimas semanas, varias empresas de Santiago han enviado el mismo correo con distintas firmas: desde marzo, tres días presenciales. La noticia de que la oficina vuelve a ser obligatoria ha llenado los grupos de mensajes, y no siempre de quejas. Muchos trabajadores jóvenes confiesan que echaban de menos aprender mirando a sus compañeros, algo que una pantalla no consigue del todo.",
+      "El problema no es la medida, sino cómo se toma. El hecho de que la mayoría de estas decisiones se comunique sin una sola consulta previa dice mucho de cómo se entiende la confianza en algunas empresas. Durante tres años, los equipos demostraron que podían cumplir sus plazos desde la casa; que ahora no se les pregunte ni siquiera qué días prefieren resulta, como mínimo, poco elegante.",
+      "Además, el éxito de la vuelta depende de factores que no aparecen en los correos. Depende del transporte: en una ciudad donde miles de personas pasan más de dos horas diarias en el metro o en la micro, no da lo mismo entrar a las ocho que a las diez. Depende de los espacios: hay oficinas que se achicaron durante la pandemia y donde ahora no hay escritorios para todos. Y depende, sobre todo, de que los jefes también vayan; nadie cree en una norma que solo cumplen los demás.",
+      "Existe además el riesgo de que las empresas pierdan a sus mejores profesionales, que hoy pueden trabajar en remoto para firmas de cualquier país. No es una amenaza vacía: en las encuestas del sector aparece una y otra vez la idea de que la flexibilidad vale tanto como un aumento de sueldo. Quien no se dé cuenta de eso a tiempo puede arrepentirse de haber ganado una discusión y perdido un equipo.",
+      "No defiendo que todo vuelva a ser remoto. Defiendo algo más modesto: que se hable antes de decidir. Las empresas que han consultado a sus equipos cuentan hoy con acuerdos que se cumplen sin vigilancia. Las que no lo han hecho se quejan de que nadie respeta los días presenciales. Quizá la diferencia no esté en el número de días, sino en la conversación que hubo antes."
     ],
     "glossary": [
       {
-        "es": "cambiar de rumbo",
-        "note": "modificar una trayectoria"
+        "es": "la micro",
+        "note": "en Chile, autobús urbano"
       },
       {
-        "es": "ganar confianza",
-        "note": "sentirse más capaz"
+        "es": "achicarse",
+        "note": "hacerse más pequeño"
       },
       {
-        "es": "quedarse sin apoyo",
-        "note": "perder ayuda disponible"
+        "es": "echar de menos",
+        "note": "sentir la falta de algo o de alguien"
       }
     ],
     "tasks": [
       {
-        "id": "r-comprender",
+        "id": "b2-13-r-comprension",
         "type": "choice",
-        "prompt": "Interpreta tesis y alcance; descarta respuestas que exageren la conclusión.",
+        "prompt": "Responde según la columna.",
         "items": [
           {
-            "q": "¿Por qué no se contradicen necesariamente es caro y está caro?",
+            "q": "Según la autora, ¿cuál es el verdadero problema?",
             "options": [
-              "Porque ambos verbos son siempre idénticos.",
-              "Porque uno describe exclusivamente una profesión.",
-              "Pueden comparar con referencias distintas."
-            ],
-            "answer": 2,
-            "why": "Comprueba esta interpretación con el texto completo y no solo con una palabra aislada."
-          },
-          {
-            "q": "¿Qué puede demostrar este audio sintético?",
-            "options": [
-              "La pronunciación real del vecino entrevistado.",
-              "Comprensión del guion, sin certificar rasgos fonéticos chilenos.",
-              "Todas las variedades regionales de Chile."
+              "Que se vuelva a la oficina.",
+              "Que la decisión se tome sin consultar.",
+              "Que los jóvenes prefieran la oficina."
             ],
             "answer": 1,
-            "why": "Comprueba esta interpretación con el texto completo y no solo con una palabra aislada."
+            "why": "«El problema no es la medida, sino cómo se toma»."
+          },
+          {
+            "q": "¿Qué factor menciona como decisivo «sobre todo»?",
+            "options": [
+              "Que los jefes también vayan a la oficina.",
+              "El precio del metro.",
+              "El tamaño de las pantallas."
+            ],
+            "answer": 0,
+            "why": "«Y depende, sobre todo, de que los jefes también vayan»."
+          },
+          {
+            "q": "¿Qué defiende la autora al final?",
+            "options": [
+              "Que todo el trabajo sea remoto.",
+              "Que se reduzca el número de días.",
+              "Que se hable con los equipos antes de decidir."
+            ],
+            "answer": 2,
+            "why": "«Defiendo algo más modesto: que se hable antes de decidir»."
           }
         ]
       },
       {
-        "id": "r-evidencia",
+        "id": "b2-13-r-interpretar",
         "type": "open",
-        "prompt": "Apoya tu lectura con evidencia y distingue la postura de la fuente de la tuya.",
+        "prompt": "Interpreta el texto con tus palabras y apóyate en citas.",
         "items": [
           {
-            "prompt": "En «Cambiar sin volverse irreconocible», resume dos posiciones en 60–80 palabras, cita una evidencia y explica un límite que el texto no permite resolver.",
-            "model": "Isabel se hizo restauradora después de una etapa en comercio. Al principio se ponía nerviosa ante las críticas, pero llegó a ser una interlocutora capaz de distinguir preocupaciones distintas. El almacén se convirtió en centro cultural y ganó visibilidad. Eso no demuestra que toda subida de alquileres proceda de la reforma. Para valorar el cambio habría que escuchar a quienes utilizan el espacio y a quienes sienten que se han quedado al margen de sus beneficios.",
+            "prompt": "En 60–80 palabras, explica qué presenta la autora como dato y qué como riesgo o posibilidad. Cita una frase con «el hecho de que» y otra con «el riesgo de que» y comenta el modo de cada una.",
+            "model": "Como dato, la autora presenta que las decisiones se comunican sin consultar: «El hecho de que la mayoría de estas decisiones se comunique sin una sola consulta previa dice mucho». Aunque es real, va en subjuntivo porque lo comenta. Como posibilidad presenta la fuga de talento: «existe el riesgo de que las empresas pierdan a sus mejores profesionales»; «riesgo» pide subjuntivo porque todavía no ha pasado.",
             "checklist": [
-              "Identifico las dos posiciones sin inventar consenso.",
-              "Utilizo una evidencia concreta.",
-              "Marco una inferencia como tal."
+              "Distingo hechos de posibilidades.",
+              "Cito dos frases literales.",
+              "Explico el modo de cada cita."
             ]
           }
         ]
       }
     ],
     "noticing": {
-      "prompt": "Observa cómo la forma lingüística limita o precisa el mensaje.",
+      "prompt": "Observa cómo la columna organiza sus argumentos alrededor de verbos y sustantivos con «de».",
       "items": [
         {
-          "quote": "Durante años, el antiguo almacén del barrio permaneció cerrado.",
-          "note": "Identifica qué establece el inicio y cómo prepara la interpretación posterior."
+          "quote": "Depende del transporte",
+          "note": "La autora repite «depende de» tres veces para ordenar los factores: un recurso de estilo."
         },
         {
-          "quote": "Quizá la madurez del proyecto consista en conservar la capacidad de escuchar incluso cuando las críticas afectan a la historia de éxito que sus propios impulsores quisieran contar.",
-          "note": "Relaciona el cierre con la tesis o con el giro narrativo; explica qué no afirma."
+          "quote": "la idea de que la flexibilidad vale tanto como un aumento de sueldo",
+          "note": "«La idea de que» con indicativo: la idea se presenta como algo que se afirma en las encuestas."
+        },
+        {
+          "quote": "puede arrepentirse de haber ganado una discusión",
+          "note": "«Arrepentirse de» + infinitivo compuesto: la acción es anterior al arrepentimiento."
         }
       ]
     }
   },
   "practice": {
-    "intro": "Relaciona expectativas familiares con el cambio de profesión de Isabel; recupera una valoración compuesta y una relativa que describa el centro.",
+    "intro": "Combina las dos clases: recupera cada preposición y decide el modo de cada oración con «que».",
     "exercises": [
       {
-        "id": "x-orden",
+        "id": "b2-13-x-orden",
         "type": "order",
-        "prompt": "Reconstruye los mensajes del caso de Santiago y conserva sus relaciones.",
+        "prompt": "Ordena las palabras para reconstruir frases de la oficina.",
         "items": [
           {
             "words": [
-              "En",
-              "«Cambiar sin volverse irreconocible»,",
-              "Tras",
-              "la",
-              "noticia",
-              "se",
-              "puso",
-              "nerviosa."
-            ],
-            "why": "Cambio de estado transitorio."
-          },
-          {
-            "words": [
-              "En",
-              "«Cambiar sin volverse irreconocible»,",
               "El",
-              "almacén",
-              "se",
-              "convirtió",
+              "hecho",
+              "de",
+              "que",
+              "nadie",
+              "nos",
+              "avisara",
+              "me",
+              "sorprendió."
+            ],
+            "why": "Hecho al principio, subjuntivo y verbo principal en singular."
+          },
+          {
+            "words": [
+              "¿De",
+              "quién",
+              "depende",
+              "la",
+              "decisión",
+              "final",
+              "sobre",
+              "los",
+              "horarios?"
+            ],
+            "why": "La preposición va delante de «quién»."
+          },
+          {
+            "words": [
+              "Quedamos",
               "en",
-              "un",
-              "centro",
-              "cultural."
+              "que",
+              "cada",
+              "uno",
+              "reserva",
+              "su",
+              "escritorio",
+              "el",
+              "lunes."
             ],
-            "why": "Convertirse exige en ante la nueva categoría."
+            "why": "«Quedar en que» = acordar."
           }
         ]
       },
       {
-        "id": "x-edicion",
+        "id": "b2-13-x-error",
         "type": "error",
-        "prompt": "Revisa tres borradores de cambiar sin volverse irreconocible; cada uno tiene un único error deliberado.",
+        "prompt": "Cada frase tiene un error. Escríbela corregida.",
         "items": [
           {
-            "sentence": "El almacén se convirtió a un centro cultural.",
+            "sentence": "Me acuerdo que el primer día no había sillas para todos.",
             "answers": [
-              "El almacén se convirtió en un centro cultural."
+              "Me acuerdo de que el primer día no había sillas para todos."
             ],
-            "why": "Convertirse en expresa transformación."
+            "why": "«Acordarse de eso»: hace falta «de que»."
           },
           {
-            "sentence": "Se hizo en restauradora tras estudiar.",
+            "sentence": "Opino de que la medida es razonable.",
             "answers": [
-              "Se hizo restauradora tras estudiar."
+              "Opino que la medida es razonable."
             ],
-            "why": "Hacerse con profesión no exige en."
+            "why": "«Opino eso»: aquí sobra «de»."
           },
           {
-            "sentence": "Llegó ser una referente cultural.",
+            "sentence": "Hay el riesgo de que los clientes no entienden el cambio.",
             "answers": [
-              "Llegó a ser una referente cultural."
+              "Hay el riesgo de que los clientes no entiendan el cambio.",
+              "Existe el riesgo de que los clientes no entiendan el cambio."
             ],
-            "why": "La perífrasis es llegar a ser."
+            "why": "«Riesgo» pide subjuntivo."
+          },
+          {
+            "sentence": "Que no haya estacionamiento para todos nos complican la vida.",
+            "answers": [
+              "Que no haya estacionamiento para todos nos complica la vida."
+            ],
+            "why": "El sujeto es la oración con «que»: singular."
           }
         ]
       },
       {
-        "id": "x-produccion",
-        "type": "open",
-        "prompt": "Prepara dos fragmentos antes de tu entrega independiente; el modelo es una posibilidad, no una respuesta única.",
+        "id": "b2-13-x-sustantivo",
+        "type": "classify",
+        "prompt": "¿Qué modo pide cada sustantivo en estas frases? Clasifícalas.",
+        "categories": [
+          "Indicativo: información o certeza",
+          "Subjuntivo: posibilidad, temor o necesidad"
+        ],
         "items": [
           {
-            "prompt": "Abre tu respuesta sobre describir transformaciones personales y sociales con una postura y una razón; adapta el destinatario.",
-            "model": "Isabel se hizo restauradora después de una etapa en comercio.",
-            "checklist": [
-              "Presento una postura concreta.",
-              "Ajusto el registro a quien recibirá el mensaje."
-            ]
+            "text": "la certeza de que el proyecto sigue adelante",
+            "cat": 0,
+            "why": "«Certeza»: información segura."
           },
           {
-            "prompt": "Reformula una objeción o una reserva de «Cambiar sin volverse irreconocible» sin debilitarla, y responde con una condición verificable.",
-            "model": "Isabel se hizo restauradora después de una etapa en comercio. Al principio se ponía nerviosa ante las críticas, pero llegó a ser una interlocutora capaz de distinguir preocupaciones distintas. El almacén se convirtió en centro cultural y ganó visibilidad. Eso no demuestra que toda subida de alquileres proceda de la reforma. Para valorar el cambio habría que escuchar a quienes utilizan el espacio y a quienes sienten que se han quedado al margen de sus beneficios.",
-            "checklist": [
-              "La objeción conserva su sentido.",
-              "Mi respuesta no promete lo que no controlo."
-            ]
+            "text": "la necesidad de que alguien coordine los turnos",
+            "cat": 1,
+            "why": "«Necesidad»: algo que todavía hay que lograr."
+          },
+          {
+            "text": "el miedo de que cierren la sede",
+            "cat": 1,
+            "why": "«Miedo»: algo temido."
+          },
+          {
+            "text": "la noticia de que contratan a diez personas",
+            "cat": 0,
+            "why": "«Noticia»: información."
+          },
+          {
+            "text": "la esperanza de que nos den más flexibilidad",
+            "cat": 1,
+            "why": "«Esperanza»: deseo."
+          },
+          {
+            "text": "la sospecha de que el correo lo escribió otra persona",
+            "cat": 0,
+            "why": "«Sospecha» presenta lo que el hablante cree: indicativo."
           }
         ]
       },
       {
-        "id": "x-recuperacion",
+        "id": "b2-13-x-guiada",
         "type": "open",
-        "prompt": "Recuperación espaciada: selecciona y produce los recursos señalados sin mirar sus explicaciones. En el checkpoint distribúyelos entre informe y ensayo oral.",
+        "prompt": "Escribe frases breves antes de la tarea de escritura. El modelo es una posibilidad, no la única.",
         "items": [
           {
-            "prompt": "Recupera la semana 10 sin abrir su explicación y aplica sus recursos a «Cambiar sin volverse irreconocible»: Estilo indirecto avanzado; Verbos para citar; Citar con ironía; Resumir declaraciones; Escuchar una rueda de prensa; Checkpoint 2: conceder, describir e informar; Informe breve. Integra los recursos en un párrafo o un turno de 60–90 segundos; señala las decisiones lingüísticas en tus notas.",
-            "model": "Guía de revisión, no texto para copiar: Puedo transmitir enunciados con todos los cambios temporales y verbos como asegurar, negar, admitir, sugerir y advertir. Puedo elegir entre afirmar, reconocer, insinuar, desmentir, reprochar y prometer. Puedo reconocer cuándo alguien cita con ironía o distancia. Puedo resumir lo que dijeron varias personas y marcar mi distancia. Puedo identificar promesas, negaciones y evasivas. Puedo conceder y objetar, describir con precisión, negociar condiciones e informar con distancia. Puedo escribir un informe breve que presenta datos, declaraciones y una recomendación.",
+            "prompt": "Escribe tres frases verdaderas: algo de lo que te diste cuenta este año, algo de lo que depende una decisión tuya y alguien con quien cuentas.",
+            "model": "Este año me di cuenta de que necesito más tiempo libre. Mudarme depende de que encuentre un departamento más barato. Para todo cuento con mi hermana.",
             "checklist": [
-              "Integro los recursos indicados en una respuesta al caso actual.",
-              "Conservo personas, tiempo, postura y límites de las fuentes.",
-              "Marco una elección que tuve que corregir después de comprobarla."
+              "Mantengo la preposición de cada verbo.",
+              "Uso subjuntivo después de «depende de que» con algo no realizado."
             ]
           },
           {
-            "prompt": "Recupera la semana 12 sin abrir su explicación y aplica sus recursos a «Cambiar sin volverse irreconocible»: Probabilidad en el pasado; Investigación y pruebas; Entonación de la conjetura; Especular sobre lo que pasó; Leer un caso. Integra los recursos en un párrafo o un turno de 60–90 segundos; señala las decisiones lingüísticas en tus notas.",
-            "model": "Guía de revisión, no texto para copiar: Puedo especular sobre el pasado con habrá salido, habría llegado y debió de pasar. Puedo hablar de indicios, pruebas, versiones y conclusiones. Puedo distinguir una afirmación de una conjetura por la prosodia. Puedo formular y descartar hipótesis sobre un hecho pasado. Puedo inferir lo que probablemente pasó a partir de varios documentos.",
+            "prompt": "Comenta un cambio reciente en tu trabajo o en tus estudios con «el hecho de que…» y con «que…» al principio.",
+            "model": "El hecho de que las clases empiecen a las ocho me obliga a madrugar. Que el profesor grabe las clases, en cambio, me ayuda mucho.",
             "checklist": [
-              "Integro los recursos indicados en una respuesta al caso actual.",
-              "Conservo personas, tiempo, postura y límites de las fuentes.",
-              "Marco una elección que tuve que corregir después de comprobarla."
+              "Uso subjuntivo en el hecho comentado.",
+              "El verbo principal va en singular."
+            ]
+          },
+          {
+            "prompt": "Retoma un rumor que circula en tu entorno con «lo de que» y di si tienes la impresión de que es cierto.",
+            "model": "Lo de que van a cerrar la biblioteca los domingos lo he oído tres veces. Tengo la impresión de que es cierto, porque ya no hay personal suficiente.",
+            "checklist": [
+              "Uso «lo de que» para retomar lo que se dijo.",
+              "Uso indicativo después de «la impresión de que»."
             ]
           }
         ]
@@ -651,196 +1011,235 @@ export const b2w13: Module = {
     ]
   },
   "writing": {
-    "task": "Escribe un perfil de transformación de una persona y su entorno. Contrasta estados, procesos y resultados con verbos de cambio; incorpora dos miradas y delimita las causas que no puedes demostrar.",
-    "context": "Destinatario, propósito y límites de la información forman parte de la evaluación. El modelo muestra una respuesta completa posible: analiza su organización y escribe después tu propio texto.",
+    "task": "Tu empresa, tu escuela o tu asociación anunció un cambio que te afecta (horarios, días presenciales, una mudanza de sede). Escribe un correo formal (220–300 palabras) a la persona responsable: comenta el hecho, explica de qué depende que el cambio funcione, plantea tus inquietudes y propón un acuerdo concreto.",
+    "context": "La persona que lee el correo tomó la decisión y tiene poco tiempo. Tu objetivo no es quejarte, sino que te escuche y acepte hablar de condiciones. Puedes usar la oficina de Camila y Diego o una situación real.",
     "steps": [
-      "Extrae dos datos y dos posiciones de las fuentes; marca lo que no está confirmado.",
-      "Planifica apertura, desarrollo, objeción o complicación y cierre antes de redactar.",
-      "Escribe sin copiar el modelo; integra recursos nuevos y los recuperados.",
-      "Revisa referentes, modo, tiempo, colocaciones y registro; reescribe un párrafo y explica el cambio."
+      "Anota el cambio, dos factores de los que depende su éxito y dos inquietudes concretas.",
+      "Organiza el correo: el hecho y tu valoración general, los factores, las inquietudes y la propuesta.",
+      "Escribe usando «el hecho de que», al menos tres verbos con preposición y dos sustantivos + «de que» con modos distintos.",
+      "Revisa cada «que»: comprueba con «eso» si falta o sobra una preposición, y corrige el modo después de cada sustantivo."
     ],
     "useLanguage": [
-      "Ponerse suele expresar un estado transitorio; volverse, un cambio de cualidad; hacerse puede destacar voluntad, profesión o proceso; convertirse en presenta una transformación de categoría; llegar a ser señala un resultado alcanzado; quedarse enfatiza el estado resultante. Las combinaciones léxicas importan tanto como la duración.",
-      "Ser caracteriza; estar puede presentar una percepción situada: es caro clasifica, está caro compara con una expectativa. En el habla chilena existen rasgos variables, como aspiración de s o realizaciones de ch y marcadores como po; no caracterizan a todos los hablantes. El audio sintético practica comprensión del guion, no acredita esos rasgos regionales: contrástalos con una muestra real elegida en clase.",
-      "Relaciona expectativas familiares con el cambio de profesión de Isabel; recupera una valoración compuesta y una relativa que describa el centro."
+      "el hecho de que + subjuntivo",
+      "depende de que / confío en que…",
+      "me he dado cuenta de que…",
+      "existe el riesgo / la posibilidad de que…",
+      "tengo la impresión de que…",
+      "estoy dispuesta a… siempre que…"
     ],
     "model": [
-      "Isabel se hizo restauradora después de una etapa en comercio. Cuando comenzó a recuperar el antiguo almacén, se ponía nerviosa ante cualquier objeción. Había asumido un riesgo profesional y escuchaba muchas críticas como si fueran valoraciones de su decisión personal. Con el tiempo aprendió a preguntar qué preocupaba a cada persona antes de defender el proyecto.",
-      "El almacén se convirtió en un centro cultural y llegó a ser conocido fuera del barrio. Para quienes habían crecido frente a una persiana cerrada, la apertura ofrecía una oportunidad de encuentro. Algunas familias vinculadas al antiguo trabajo ferroviario, en cambio, temían que el café y las actividades borraran esa memoria. Las dos miradas parten de experiencias distintas; reducir una de ellas a resistencia al cambio impediría comprender el conflicto.",
-      "La transformación también coincide con un aumento percibido de los alquileres. Un vecino dice que la zona está carísima porque compara su contrato actual con el anterior. Esa observación es relevante, pero no demuestra que el centro explique por sí solo la subida. Para valorar causas y alcance harían falta datos de otras calles, periodos y tipos de vivienda.",
-      "Isabel se ha vuelto más paciente sin dejar de defender la utilidad del espacio. La cooperativa conserva testimonios del almacén y reserva salas gratuitas para asociaciones. Recomendaría revisar quién participa y quién sigue quedándose al margen. Un proyecto puede ganar reconocimiento y perder capacidad de escucha si solo admite relatos favorables. Su madurez se medirá también por cómo responde a consecuencias que sus promotores no habían previsto."
+      "Estimada señora Pizarro: le escribo en nombre del equipo de diseño a propósito del correo del viernes sobre los tres días presenciales. Quiero decirle, en primer lugar, que entendemos la medida y que estamos dispuestos a cumplirla. El hecho de que volvamos a trabajar juntos puede ayudar mucho a los compañeros que entraron durante el último año.",
+      "Sin embargo, nos hemos dado cuenta de que el éxito del cambio depende de algunos detalles que el correo no menciona. Tres personas del equipo viven a más de una hora de la oficina, y existe el riesgo de que el trayecto les quite tiempo de trabajo y de descanso. Además, tenemos la impresión de que en el piso actual no hay escritorios suficientes para todos los equipos los mismos días.",
+      "Por eso, le propongo dos cosas: que cada equipo elija sus días presenciales y que quienes viven lejos puedan entrar a las diez. Confío en que podamos hablarlo en una reunión breve antes de que la norma entre en vigor; si le parece bien, cuente conmigo para organizarla.",
+      "Sabemos que la decisión no depende solo de usted y que hay otros equipos con necesidades distintas. Aun así, creo que una conversación a tiempo puede evitar que el cambio se viva como una imposición. Le agradezco de antemano su atención y quedo a la espera de su respuesta. Un saludo cordial, Camila Rojas."
     ],
     "checklist": [
-      "Respondo al propósito y al destinatario concreto.",
-      "Organizo párrafos con relaciones claras, no conectores decorativos.",
-      "Distingo datos, opiniones, hipótesis y compromisos.",
-      "Integro una perspectiva distinta sin deformarla.",
-      "Reviso concordancia, modo, tiempos y léxico.",
-      "Explico una mejora entre borrador y versión final."
+      "Mantengo la preposición de cada verbo también delante de «que».",
+      "Uso subjuntivo después de «el hecho de que» y de los sustantivos de posibilidad o temor.",
+      "Uso indicativo después de «noticia», «impresión» o «certeza».",
+      "Separo el hecho, las inquietudes y la propuesta en párrafos distintos.",
+      "El tono es formal, respetuoso y orientado a un acuerdo."
     ],
     "words": [
       220,
-      280
+      300
     ]
   },
   "speaking": {
-    "intro": "Prepara notas breves, no un texto para leer. Puedes grabarte localmente; la aplicación no califica automáticamente pronunciación ni calidad oral.",
+    "intro": "Prepara palabras clave, no un texto para leer. Si te grabas, la grabación queda en tu dispositivo; la aplicación no evalúa tu pronunciación.",
     "tasks": [
       {
-        "title": "Exposición con evidencia",
-        "prompt": "Presenta el caso de «Cambiar sin volverse irreconocible» a alguien que no conoce las fuentes. Defiende una interpretación, menciona una evidencia y una reserva, y termina con una pregunta que permita continuar.",
+        "title": "Una decisión que depende de muchas cosas",
+        "prompt": "Habla durante unos dos minutos y medio de una decisión importante que tienes pendiente (un cambio de trabajo, una mudanza, unos estudios). Explica de qué depende, con quién cuentas, de qué te has dado cuenta últimamente y qué riesgos o posibilidades ves.",
         "prep": [
-          "Anota tesis, evidencia y límite en cinco palabras clave.",
-          "Ensaya una transición y una reformulación."
+          "Escribe cinco verbos con su preposición: depender de, contar con, darse cuenta de, confiar en, pensar en.",
+          "Prepara una frase con «el riesgo de que» y otra con «la posibilidad de que»."
         ],
-        "seconds": 180,
-        "model": "Isabel se hizo restauradora después de una etapa en comercio. Al principio se ponía nerviosa ante las críticas, pero llegó a ser una interlocutora capaz de distinguir preocupaciones distintas. El almacén se convirtió en centro cultural y ganó visibilidad. Eso no demuestra que toda subida de alquileres proceda de la reforma. Para valorar el cambio habría que escuchar a quienes utilizan el espacio y a quienes sienten que se han quedado al margen de sus beneficios.",
+        "seconds": 150,
+        "model": "Estoy pensando en volver a estudiar. La decisión depende sobre todo de que pueda reducir mi jornada, porque el máster es por la tarde. Cuento con el apoyo de mi pareja, que insiste en que lo haga. Hace poco me di cuenta de que llevo cinco años haciendo lo mismo. Hay riesgo de que gane menos durante un tiempo, pero también existe la posibilidad de que consiga un puesto mejor.",
         "selfCheck": [
-          "Se entiende mi postura sin leer un guion.",
-          "No convierto una conjetura en hecho.",
-          "Uso pausas para organizar el mensaje."
+          "Uso al menos cuatro verbos con su preposición.",
+          "No pierdo la preposición delante de «que».",
+          "Pronuncio «de que» sin fuerza."
         ]
       },
       {
-        "title": "Interacción y mediación",
-        "prompt": "Tu docente representa a una persona que cuestiona tu interpretación de describir transformaciones personales y sociales. Resume su postura antes de responder. Pregunta qué condición cambiaría su opinión; negocia un acuerdo parcial o explica respetuosamente por qué no lo hay.",
+        "title": "Hablar con la gerente",
+        "prompt": "Tu interlocutor hace de gerente que anunció tres días presenciales. Tú representas a tu equipo. Plantea tus inquietudes, retoma un rumor para que lo confirme o lo desmienta, responde a sus argumentos y negocia al menos una condición concreta.",
         "prep": [
-          "Prepara una objeción probable y una pregunta de aclaración.",
-          "Incorpora una pregunta inesperada: ¿qué evidencia haría cambiar tu conclusión?",
-          "Al terminar, reformula en un minuto el resultado para una persona nueva."
+          "Prepara una frase con «me preocupa el hecho de que…».",
+          "Prepara una pregunta con «lo de que…, ¿es cierto?».",
+          "Prepara una propuesta y una concesión."
         ],
-        "seconds": 240,
+        "seconds": 180,
         "selfCheck": [
-          "Respondo a la objeción real.",
-          "Pido y cedo el turno.",
-          "Adapto una explicación sin inventar consenso."
+          "Hago preguntas reales y respondo a lo que dice mi interlocutor.",
+          "Distingo lo que sé de lo que es un rumor.",
+          "Cerramos con un acuerdo o con un siguiente paso claro."
         ]
       }
     ]
   },
   "useInClass": {
-    "intro": "La mascota te acompaña al siguiente paso: convierte tu trabajo independiente en una conversación con consecuencias claras.",
+    "intro": "Lleva a la próxima clase lo que preparaste esta semana y úsalo con tu profesor.",
     "cards": [
       {
-        "move": "Defiende",
-        "task": "Presenta tu entrega de «Cambiar sin volverse irreconocible» en tres minutos y responde a una objeción inesperada.",
+        "move": "Cuéntale",
+        "task": "Cuéntale a tu profesor de qué depende una decisión que tienes pendiente y con quién cuentas.",
         "phrases": [
-          "Mi interpretación se apoya en…",
-          "La reserva que mantengo es…"
+          "Depende de que…",
+          "Cuento con…"
         ]
       },
       {
-        "move": "Reformula",
-        "task": "Explica a otra persona lo que sostiene una voz del caso de Santiago; pídele a tu docente que compruebe si has conservado el matiz.",
+        "move": "Pregúntale",
+        "task": "Pregúntale qué piensa del trabajo híbrido y de qué se ha dado cuenta en los últimos años.",
         "phrases": [
-          "Si te he entendido bien…",
-          "No afirma que…; lo que plantea es…"
+          "¿Qué piensas de…?",
+          "¿De qué te has dado cuenta…?"
         ]
       },
       {
-        "move": "Negocia",
-        "task": "Acuerda un criterio para valorar tu propuesta sobre describir transformaciones personales y sociales; identifica una condición que todavía necesita confirmación.",
+        "move": "Comprueba",
+        "task": "Lee tres frases de tu correo con «que» y pídele que confirme si falta o sobra un «de».",
         "phrases": [
-          "Lo aceptaría siempre que…",
-          "Queda pendiente comprobar…"
+          "¿Aquí va «de que»?",
+          "¿Con «eso» funciona?"
         ]
       }
     ],
-    "bring": "Lleva borrador y versión revisada, cinco palabras clave para hablar y una duda de comprensión o prosodia."
+    "bring": "Trae tu correo con los verbos con preposición subrayados y los sustantivos + «de que» marcados según su modo."
   },
   "quiz": {
     "items": [
       {
-        "q": "En la evaluación final de «Cambiar sin volverse irreconocible», ¿qué resume mejor el propósito?",
-        "options": [
-          "Sustituir toda evidencia por una opinión rotunda.",
-          "Evitar cualquier intercambio entre personas.",
-          "Describir cambios y evitar estereotipos regionales"
+        "type": "gap",
+        "q": "No me había dado cuenta ___ que era festivo.",
+        "answers": [
+          [
+            "de"
+          ]
         ],
-        "answer": 2,
-        "why": "Relaciona comprensión y propósito.",
-        "type": "choice"
-      },
-      {
-        "type": "listen",
-        "audio": "Antes me ponía a la defensiva. Había dejado un trabajo estable para hacerme restauradora y sentía que cualquier objeción cuestionaba esa decisión. Después comprendí que una persona podía valorar el centro y, al mismo tiempo, preocuparse por los alquileres. No tenía que elegir una sola emoción.",
-        "voice": "es-MX-m",
-        "q": "Al escuchar de nuevo a Isabel en «Cambiar sin volverse irreconocible», ¿qué intervención reconoces?",
-        "options": [
-          "No hay ninguna condición pendiente y todas las partes aceptaron.",
-          "Me niego a explicar mi punto de vista sobre este asunto.",
-          "Antes me ponía a la defensiva"
-        ],
-        "answer": 2,
-        "why": "Atiende a la formulación y a la posición, no solo al tema."
+        "why": "«Darse cuenta de que»."
       },
       {
         "type": "gap",
-        "q": "Después de varios años de formación, se ___ ingeniera.",
+        "q": "El hecho de que el jefe ___ (llegar) siempre tarde da mal ejemplo.",
         "answers": [
           [
-            "hizo"
+            "llegue"
           ]
         ],
-        "why": "Cambio ligado a profesión y trayectoria."
+        "why": "Hecho comentado al principio: subjuntivo."
       },
       {
-        "type": "open",
-        "prompt": "Texto de partida: «La sala pasó a ser un archivo vecinal.» Usa convertirse en.",
-        "model": "La sala se convirtió en un archivo vecinal.",
-        "checklist": [
-          "Conservo participantes, referencia temporal y contenido pertinente.",
-          "Aplico la construcción o función solicitada; puedo elegir otro orden o una variante igualmente válida.",
-          "Comparo el significado y la forma con el modelo orientativo; no es una respuesta única ni se califica por coincidencia literal."
-        ]
+        "type": "gap",
+        "q": "Corre el rumor de que la empresa ___ (abrir) una sede en Valparaíso.",
+        "answers": [
+          [
+            "abre",
+            "abrirá",
+            "va a abrir"
+          ]
+        ],
+        "why": "«Rumor» presenta información: indicativo."
+      },
+      {
+        "type": "choice",
+        "q": "¿Qué frase sobre una llamada pendiente es correcta?",
+        "options": [
+          "Confío que me llamen pronto.",
+          "Confío de que me llamen pronto.",
+          "Confío en que me llamen pronto."
+        ],
+        "answer": 2,
+        "why": "«Confiar en» mantiene «en» delante de «que»."
+      },
+      {
+        "type": "choice",
+        "q": "¿En qué frase «que» es un relativo y no lleva «de»?",
+        "options": [
+          "La noticia que publicaron ayer era falsa.",
+          "Nos dieron la noticia de que cerraban.",
+          "Tengo la esperanza de que mejore."
+        ],
+        "answer": 0,
+        "why": "«Publicaron la noticia»: relativa, sin «de»."
+      },
+      {
+        "type": "listen",
+        "q": "Según el audio, ¿de qué depende el viaje?",
+        "audio": "El viaje a Concepción depende de que nos aprueben el presupuesto esta semana.",
+        "voice": "es-CL-m",
+        "options": [
+          "De que aprueben el presupuesto.",
+          "Del tiempo en Concepción.",
+          "De que haya pasajes baratos."
+        ],
+        "answer": 0,
+        "why": "«Depende de que nos aprueben el presupuesto»."
       },
       {
         "type": "error",
-        "sentence": "Con el susto, se puso de nerviosa.",
+        "sentence": "Me arrepiento no haber aceptado la oferta.",
         "answers": [
-          "Con el susto, se puso nerviosa."
+          "Me arrepiento de no haber aceptado la oferta."
         ],
-        "why": "Ponerse con adjetivo no exige de."
+        "why": "«Arrepentirse de» + infinitivo."
+      },
+      {
+        "type": "error",
+        "sentence": "El hecho de que suban los precios preocupan a los vecinos.",
+        "answers": [
+          "El hecho de que suban los precios preocupa a los vecinos."
+        ],
+        "why": "El sujeto es «el hecho»: singular."
+      },
+      {
+        "type": "order",
+        "words": [
+          "Existe",
+          "la",
+          "posibilidad",
+          "de",
+          "que",
+          "cambien",
+          "la",
+          "fecha."
+        ],
+        "why": "«Posibilidad de que» + subjuntivo."
       },
       {
         "type": "open",
-        "prompt": "Sintetiza en 50 palabras lo que sabes y lo que no puedes concluir sobre «Cambiar sin volverse irreconocible».",
-        "model": "Isabel se hizo restauradora después de una etapa en comercio. Al principio se ponía nerviosa ante las críticas, pero llegó a ser una interlocutora capaz de distinguir preocupaciones distintas. El almacén se convirtió en centro cultural y ganó visibilidad. Eso no demuestra que toda subida de alquileres proceda de la reforma. Para valorar el cambio habría que escuchar a quienes utilizan el espacio y a quienes sienten que se han quedado al margen de sus beneficios.",
+        "prompt": "Escribe dos frases sobre un cambio en tu ciudad: una con «el hecho de que» y otra con un verbo con preposición + «que».",
+        "model": "El hecho de que hayan cerrado el puente obliga a dar una vuelta enorme. Los vecinos insisten en que lo reabran antes del invierno.",
         "checklist": [
-          "Atribuyo una fuente.",
-          "Explicito una reserva."
-        ]
-      },
-      {
-        "type": "open",
-        "prompt": "Contesta a quien sostiene lo contrario de tu postura sobre describir transformaciones personales y sociales; concede una razón y conserva tu argumento.",
-        "model": "Isabel se hizo restauradora después de una etapa en comercio. Al principio se ponía nerviosa ante las críticas, pero llegó a ser una interlocutora capaz de distinguir preocupaciones distintas. El almacén se convirtió en centro cultural y ganó visibilidad. Eso no demuestra que toda subida de alquileres proceda de la reforma. Para valorar el cambio habría que escuchar a quienes utilizan el espacio y a quienes sienten que se han quedado al margen de sus beneficios.",
-        "checklist": [
-          "Conservo la postura contraria sin exagerarla.",
-          "Respondo con una razón o condición."
-        ]
-      },
-      {
-        "type": "open",
-        "prompt": "Explica dos cambios que harías para adaptar tu entrega de la semana 13 a un mensaje cercano y a un informe formal.",
-        "model": "Cambiaría el tratamiento y algunas fórmulas, pero conservaría las fuentes, los límites y las condiciones acordadas.",
-        "checklist": [
-          "Cambio recursos de registro.",
-          "No cambio el contenido del compromiso."
+          "Uso subjuntivo después de «el hecho de que».",
+          "Mantengo la preposición del verbo delante de «que»."
         ]
       }
     ]
   },
   "complete": {
     "canNow": [
-      "Puedo describir transformaciones personales y sociales.",
-      "Puedo sostener una interpretación con evidencia y una reserva.",
-      "Puedo revisar mi producción y continuarla mediante interacción."
+      "Puedo usar verbos con preposición fija con un nombre, un infinitivo o «que», también en preguntas, sin queísmo ni dequeísmo.",
+      "Puedo comentar un hecho poniéndolo al principio con «el hecho de que» o «que» + subjuntivo.",
+      "Puedo elegir el modo después de sustantivos + «de que» y distinguir esa construcción de una relativa."
     ],
     "review": [
-      "Relaciona expectativas familiares con el cambio de profesión de Isabel; recupera una valoración compuesta y una relativa que describa el centro.",
-      "Dentro de 48 horas, sin consultar el texto, reconstruye dos posiciones y un recurso lingüístico; comprueba después qué omitiste.",
-      "Una semana después, adapta tu respuesta a otro destinatario y recupera los objetivos marcados en la práctica."
+      "Mañana, escribe diez verbos con su preposición en tarjetas y repásalos con un ejemplo cada uno.",
+      "En tres días, busca en una noticia dos sustantivos + «de que» y explica su modo.",
+      "Antes de la semana 14, transforma tres frases de tu correo para que empiecen por «el hecho de que»."
     ]
-  }
+  },
+  "related": [
+    {
+      "path": "/verbos-que-piden-una-estructura",
+      "label": "Clase: Verbos que rigen preposición: confiar en, depender de"
+    },
+    {
+      "path": "/gramatica/oraciones-sustantivas-complejas-el-hecho-de",
+      "label": "Clase: Oraciones sustantivas complejas: el hecho de que"
+    }
+  ]
 };

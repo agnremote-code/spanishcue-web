@@ -1,859 +1,941 @@
 import type { Module } from "../../types";
 
+/**
+ * C1 · semana 14 · Autoestudio espejo de G192 (intensificación y énfasis) y
+ * G193 (polifonía y atribución). Repaso autónomo con la polémica ficticia entre
+ * un taller de tejedoras zapotecas de Oaxaca y una marca de moda que usó sus
+ * diseños. Personas, marca y taller son ficticios. Audio mediante síntesis;
+ * sin acreditación regional.
+ */
 export const c1w14: Module = {
-  "id": "c1-14",
-  "level": "c1",
-  "week": 14,
-  "kind": "core",
-  "title": "La memoria tiene varias voces",
-  "subtitle": "Jerarquía de notas y variedades en contacto",
-  "stop": {
-    "place": "Oaxaca",
-    "country": "México"
+  id: "c1-14",
+  level: "c1",
+  week: 14,
+  kind: "core",
+  title: "Ni siquiera nos preguntaron, según dicen ellas",
+  subtitle: "Repaso de cómo subir el tono con precisión y de cómo atribuir cada dato a su voz decidiendo cuánto te comprometes con él",
+  stop: {
+    place: "Oaxaca",
+    country: "México",
   },
-  "minutes": 120,
-  "newObjectives": [
-    "c1.lis.notas-jerarquia",
-    "c1.disc.marcadores-discurso-oral",
-    "c1.voc.cultura-identidad",
-    "c1.pron.variedades-hispanas",
-    "c1.spk.resumen-ponencia"
+  minutes: 135,
+  newObjectives: [
+    "c1.gram.g192",
+    "c1.gram.g193",
+    "c1.voc.w14-textil-autoria",
+    "c1.pron.w14-enfasis-escala",
+    "c1.lis.w14-taller-tejedoras",
+    "c1.read.w14-cronica-polemica",
+    "c1.wri.w14-cronica-equilibrada",
+    "c1.spk.w14-informar-polemica",
+    "c1.fun.w14-atribuir-y-enfatizar",
+    "c1.disc.w14-voces-en-el-texto",
   ],
-  "reviewObjectives": [
-    "c1.gram.regimen-preposicional",
-    "c1.voc.educacion-superior",
-    "c1.pron.enlaces-cultos",
-    "c1.wri.correo-academico",
-    "c1.read.convocatoria"
-  ],
-  "prerequisites": [
-    "c1-13"
-  ],
-  "goal": {
-    "canDo": "Puedo producir una síntesis jerarquizada de la ponencia y el ensayo para el equipo de obras; separa tesis, decisiones y asuntos pendientes, y añade una valoración propia claramente identificada.",
-    "steps": [
-      "Examina jerarquía de notas y variedades en contacto en un caso con intereses distintos.",
-      "Escucha antes de leer la transcripción y distingue tesis, reservas y compromisos.",
-      "Contrasta la lectura y el audio; prepara una producción independiente y revísala.",
-      "Lleva a clase una objeción y una reformulación justificadas."
-    ]
-  },
-  "theory": {
-    "intro": "Trabaja con material original. Las situaciones y los datos del dossier son ficticios y se utilizan para analizar decisiones comunicativas.",
-    "parts": [
-      {
-        "heading": "Jerarquía de notas y variedades en contacto",
-        "body": [
-          "Los marcadores de una ponencia anuncian secuencia, reserva, reformulación o retorno. Organiza notas mediante tesis, razones, ejemplos y límites; una lista de temas no conserva la argumentación. En contacto con variedades, distingue diferencias de tratamiento o léxico de diferencias de postura y pide aclaraciones sin atribuir identidades a partir de un solo rasgo.",
-          "En «La memoria tiene varias voces», observa la diferencia entre estas formulaciones: En primer término, distingamos edificio y prácticas. / Dicho esto, la diversidad no impide decidir. Explica qué relación cambia y qué decisión permite tomar al destinatario."
-        ],
-        "examples": [
-          {
-            "es": "En primer término, distingamos edificio y prácticas."
-          },
-          {
-            "es": "Dicho esto, la diversidad no impide decidir."
-          },
-          {
-            "es": "Conviene volver sobre el modelo de alquiler."
-          },
-          {
-            "es": "Para concluir, relacionemos las tres escalas."
-          }
-        ],
-        "mistakes": [
-          {
-            "wrong": "La ponente se refirió sobre las tres escalas.",
-            "right": "La ponente se refirió a las tres escalas.",
-            "why": "Referirse rige a."
-          }
-        ]
-      },
-      {
-        "heading": "Del análisis a la intervención",
-        "body": [
-          "Escuchar un discurso complejo exige reconocer cómo se anuncia, desarrolla y revisa una idea. Expresiones como dicho esto o conviene volver sobre señalan cambios que pueden alterar la interpretación de lo anterior. Resumirlo oralmente añade otra responsabilidad: distinguir la tesis de la ponente de la valoración propia y conservar las reservas que impiden simplificarla. La memoria del mercado, como la memoria de una conferencia, depende de qué relaciones conseguimos mantener cuando ya no podemos repetirlo todo.",
-          "La producción de esta semana exige una elección concreta: Produce una síntesis jerarquizada de la ponencia y el ensayo para el equipo de obras; separa tesis, decisiones y asuntos pendientes, y añade una valoración propia claramente identificada. Antes de escribir, separa la información atribuible a las fuentes de tu propuesta; después comprueba que la forma elegida conserva esa distinción."
-        ],
-        "examples": [
-          {
-            "es": "En primer término, distinguiré edificio y prácticas.",
-            "note": "Usa un marcador de ponencia formal."
-          },
-          {
-            "es": "Conviene volver sobre el problema del alquiler.",
-            "note": "Usa conviene volver sobre."
-          }
-        ]
-      }
-    ]
-  },
-  "grammar": {
-    "intro": "Los marcadores de una ponencia anuncian secuencia, reserva, reformulación o retorno. Organiza notas mediante tesis, razones, ejemplos y límites; una lista de temas no conserva la argumentación. En contacto con variedades, distingue diferencias de tratamiento o léxico de diferencias de postura y pide aclaraciones sin atribuir identidades a partir de un solo rasgo.",
-    "exercises": [
-      {
-        "id": "g-lagunas",
-        "type": "gap",
-        "prompt": "Completa formas decisivas en «La memoria tiene varias voces»; explica qué relación mantienen. Utiliza únicamente el banco; una forma puede reutilizarse.",
-        "items": [
-          {
-            "q": "En primer ___, distingamos edificio y prácticas.",
-            "answers": [
-              [
-                "término"
-              ]
-            ],
-            "why": "Los marcadores de una ponencia anuncian secuencia, reserva, reformulación o retorno. Organiza notas mediante tesis, razones, ejemplos y límites; una lista de temas no conserva la argumentación. En contacto con variedades, distingue diferencias de tratamiento o léxico de diferencias de postura y pide aclaraciones sin atribuir identidades a partir de un solo rasgo."
-          },
-          {
-            "q": "Dicho ___, la diversidad no impide decidir.",
-            "answers": [
-              [
-                "esto"
-              ]
-            ],
-            "why": "Los marcadores de una ponencia anuncian secuencia, reserva, reformulación o retorno. Organiza notas mediante tesis, razones, ejemplos y límites; una lista de temas no conserva la argumentación. En contacto con variedades, distingue diferencias de tratamiento o léxico de diferencias de postura y pide aclaraciones sin atribuir identidades a partir de un solo rasgo."
-          },
-          {
-            "q": "Conviene volver ___ el modelo de alquiler.",
-            "answers": [
-              [
-                "sobre"
-              ]
-            ],
-            "why": "Los marcadores de una ponencia anuncian secuencia, reserva, reformulación o retorno. Organiza notas mediante tesis, razones, ejemplos y límites; una lista de temas no conserva la argumentación. En contacto con variedades, distingue diferencias de tratamiento o léxico de diferencias de postura y pide aclaraciones sin atribuir identidades a partir de un solo rasgo."
-          }
-        ],
-        "bank": [
-          "término",
-          "esto",
-          "sobre"
-        ]
-      },
-      {
-        "id": "g-transformacion",
-        "type": "open",
-        "prompt": "Reformula sin perder alcance: Jerarquía de notas y variedades en contacto. Esta reformulación se revisa por sentido y forma, no por coincidencia literal con el modelo.",
-        "items": [
-          {
-            "prompt": "Usa un marcador de ponencia formal. Texto de partida: «Primero distinguiré edificio y prácticas.»",
-            "model": "En primer término, distinguiré edificio y prácticas.",
-            "checklist": [
-              "Cumplo la construcción o el movimiento comunicativo solicitado.",
-              "Conservo el alcance, las personas y la relación temporal pertinentes.",
-              "Comparo mi versión con el modelo: una variante natural no es un error por tener otras palabras."
-            ]
-          },
-          {
-            "prompt": "Introduce la reserva con dicho esto. Texto de partida: «Hay diversidad, pero debemos decidir.»",
-            "model": "Hay diversidad; dicho esto, debemos decidir.",
-            "checklist": [
-              "Cumplo la construcción o el movimiento comunicativo solicitado.",
-              "Conservo el alcance, las personas y la relación temporal pertinentes.",
-              "Comparo mi versión con el modelo: una variante natural no es un error por tener otras palabras."
-            ]
-          },
-          {
-            "prompt": "Usa conviene volver sobre. Texto de partida: «Regresemos al problema del alquiler.»",
-            "model": "Conviene volver sobre el problema del alquiler.",
-            "checklist": [
-              "Cumplo la construcción o el movimiento comunicativo solicitado.",
-              "Conservo el alcance, las personas y la relación temporal pertinentes.",
-              "Comparo mi versión con el modelo: una variante natural no es un error por tener otras palabras."
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  "vocabulary": {
-    "intro": "Aprende combinaciones y connotaciones; reutiliza al menos cuatro en tu producción sin forzarlas.",
-    "groups": [
-      {
-        "title": "Jerarquía de notas y variedades en contacto",
-        "items": [
-          {
-            "es": "patrimonio material",
-            "note": "objetos y estructuras conservables"
-          },
-          {
-            "es": "memoria en disputa",
-            "note": "recuerdo cuyo sentido no es unánime"
-          },
-          {
-            "es": "continuidad de usos",
-            "note": "permanencia de actividades"
-          },
-          {
-            "es": "relato colectivo",
-            "note": "versión compartida sobre un pasado"
-          },
-          {
-            "es": "jerarquía de notas",
-            "note": "orden que conserva tesis y apoyos"
-          },
-          {
-            "es": "mesa redonda",
-            "note": "conversación organizada de varias voces"
-          },
-          {
-            "es": "participación efectiva",
-            "note": "intervención capaz de afectar decisiones"
-          },
-          {
-            "es": "variedad lingüística",
-            "note": "forma legítima de usar una lengua"
-          },
-          {
-            "es": "reformulación aclaratoria",
-            "note": "explicación que resuelve ambigüedad"
-          },
-          {
-            "es": "ruptura social",
-            "note": "pérdida de vínculos o posibilidades de permanencia"
-          }
-        ]
-      }
+  reviewObjectives: [],
+  prerequisites: [],
+  goal: {
+    canDo: "Puedo intensificar con el recurso y el registro adecuados (incluso, ni siquiera, lo… que, vaya si, de lo más) y atribuir cada dato a su fuente mostrando si lo transmito, lo doy por cierto o me distancio de él.",
+    steps: [
+      "Repasa en la teoría la escala de incluso y ni siquiera, las estructuras que ponderan y los verbos y marcas que atribuyen o toman distancia.",
+      "Practica con frases sobre un taller de tejedoras de Oaxaca que acusa a una marca de copiar sus diseños.",
+      "Escucha la conversación de las tejedoras con una periodista y lee la crónica que publica después.",
+      "Escribe una crónica equilibrada, revísala con la lista de control y cuéntala en voz alta.",
     ],
-    "exercises": [
-      {
-        "id": "v-relaciones",
-        "type": "match",
-        "prompt": "Relaciona las expresiones de «La memoria tiene varias voces» con su sentido contextual.",
-        "pairs": [
-          {
-            "left": "patrimonio material",
-            "right": "objetos y estructuras conservables"
-          },
-          {
-            "left": "memoria en disputa",
-            "right": "recuerdo cuyo sentido no es unánime"
-          },
-          {
-            "left": "continuidad de usos",
-            "right": "permanencia de actividades"
-          },
-          {
-            "left": "relato colectivo",
-            "right": "versión compartida sobre un pasado"
-          },
-          {
-            "left": "jerarquía de notas",
-            "right": "orden que conserva tesis y apoyos"
-          },
-          {
-            "left": "mesa redonda",
-            "right": "conversación organizada de varias voces"
-          },
-          {
-            "left": "participación efectiva",
-            "right": "intervención capaz de afectar decisiones"
-          },
-          {
-            "left": "variedad lingüística",
-            "right": "forma legítima de usar una lengua"
-          },
-          {
-            "left": "reformulación aclaratoria",
-            "right": "explicación que resuelve ambigüedad"
-          },
-          {
-            "left": "ruptura social",
-            "right": "pérdida de vínculos o posibilidades de permanencia"
-          }
-        ]
-      }
-    ]
   },
-  "pronunciation": {
-    "focus": "Variedades y organización de una ponencia",
-    "explanation": [
-      "Reconoce cambios de tema y jerarquía aunque cambien léxico o tratamiento. Tú, vos y usted no identifican por sí solos una procedencia. Las etiquetas regionales de las voces son solicitudes de síntesis, no certificación acústica; la comparación de acentos requiere muestras verificadas o trabajo con el docente.",
-      "La reproducción disponible utiliza síntesis de voz. La percepción combina forma y contexto; compara tu grabación por inteligibilidad y efecto comunicativo, sin esperar una calificación automática del acento."
-    ],
-    "examples": [
+  theory: {
+    intro: "Esta semana repasas dos clases que aparecen juntas en cualquier polémica. La primera sirve para subir el tono sin gritar: marcar que algo es el extremo de una escala, ponderar un grado o afirmar con fuerza. La segunda sirve para que el lector sepa de quién es cada voz y cuánto te comprometes con lo que transmites. Quien informa de un conflicto necesita las dos: el énfasis de las partes y la distancia de quien cuenta. El escenario es un taller de tejedoras zapotecas cerca de Oaxaca.",
+    parts: [
       {
-        "es": "Dicho esto, conviene volver sobre los alquileres, porque deciden quién permanece."
-      }
-    ],
-    "perceive": {
-      "id": "f-percepcion",
-      "type": "listen",
-      "prompt": "Escucha la formulación exacta en variedades y organización de una ponencia; identifica qué relación conserva antes de ensayar otra lectura.",
-      "items": [
-        {
-          "audio": "En primer término, distingamos edificio y prácticas.",
-          "voice": "es-ES-f",
-          "q": "¿Qué formulación abre el contraste oral de «La memoria tiene varias voces»?",
-          "options": [
-            "En primer término, distingamos edificio y prácticas.",
-            "Dicho esto, la diversidad no impide decidir.",
-            "Conviene volver sobre el modelo de alquiler."
+        heading: "La escala: incluso, hasta, aun, ni siquiera",
+        body: [
+          "Estas partículas sitúan un hecho en el extremo de una escala que el oyente reconstruye. «Incluso», «hasta» y «aun» (sin tilde) suben al extremo más improbable: «hasta la abuela vino a la reunión» (si vino ella, vino todo el mundo). «Ni siquiera» baja al mínimo esperable: «ni siquiera nos llamaron» (lo más básico no ocurrió). Van justo delante de lo que destacan, de modo que su posición cambia el sentido. Detrás de «hasta» o «incluso» como foco va un sujeto, no una preposición: «hasta yo», «incluso tú».",
+          "«Ni siquiera» delante del verbo no necesita otra negación; detrás, sí: «ni siquiera contestaron» o «no contestaron ni siquiera». «Not even» nunca es «incluso no». Para el mínimo de una cantidad, «ni un» o «ni una»: «no pagaron ni un peso».",
+        ],
+        table: {
+          caption: "Arriba y abajo de la escala",
+          head: ["Partícula", "Dirección", "Ejemplo"],
+          rows: [
+            ["incluso / hasta", "al extremo improbable", "Hasta los turistas se dieron cuenta del parecido."],
+            ["aun", "al extremo, en concesivas", "Aun con el diseño a la vista, lo negaron."],
+            ["ni siquiera (delante)", "al mínimo, sin otra negación", "Ni siquiera citaron el pueblo."],
+            ["no… ni siquiera (detrás)", "al mínimo, con «no»", "No citaron ni siquiera el pueblo."],
+            ["ni un / ni una", "mínimo de cantidad", "No recibieron ni una disculpa."],
           ],
-          "answer": 0,
-          "why": "En primer término, distingamos edificio y prácticas."
         },
-        {
-          "audio": "Para concluir, relacionemos las tres escalas.",
-          "voice": "es-MX-m",
-          "q": "¿Qué formulación cierra el contraste oral de «La memoria tiene varias voces»?",
-          "options": [
-            "En primer término, distingamos edificio y prácticas.",
-            "Dicho esto, la diversidad no impide decidir.",
-            "Para concluir, relacionemos las tres escalas."
+        examples: [
+          { es: "Incluso la directora de la marca reconoció que el motivo se parecía.", note: "Quien menos se esperaba lo reconoce: extremo de la escala." },
+          { es: "No mencionaron a las tejedoras ni siquiera en la etiqueta.", note: "«Ni siquiera» detrás del verbo exige el «no» inicial." },
+        ],
+        mistakes: [
+          {
+            wrong: "Incluso no nos pidieron permiso.",
+            right: "Ni siquiera nos pidieron permiso.",
+            why: "Para «not even», «ni siquiera»; «incluso no» no existe.",
+          },
+          {
+            wrong: "Hasta mí me di cuenta del parecido.",
+            right: "Hasta yo me di cuenta del parecido.",
+            why: "Como foco de sujeto, «hasta» va con «yo».",
+          },
+        ],
+      },
+      {
+        heading: "Ponderar el grado y afirmar con fuerza",
+        body: [
+          "«Lo + adjetivo o adverbio + que» no nombra una cualidad, sino su grado, a menudo con sorpresa: «no te imaginas lo fina que es la lana» (cuán fina). Aunque «lo» es neutro, el adjetivo concuerda con su sustantivo, y el verbo va en indicativo porque es un hecho: «me impresiona lo bien que tiñen». Con verbos, «lo que» pondera la cantidad («¡lo que trabajan!») y «la de + nombre + que» pondera una cantidad de cosas («¡la de horas que lleva un tapete!»). No lo confundas con «lo bueno es que…», que destaca un aspecto, no un grado.",
+          "Para afirmar con fuerza, «sí que» delante del verbo refuerza («eso sí que es arte») y «vaya si» + indicativo responde con un sí rotundo y coloquial, repitiendo el verbo: «—¿Se parecía? —¡Vaya si se parecía!». En las exclamativas, «¡qué + nombre + tan / más + adjetivo!», sin artículo. El grado sube con «sumamente», «especialmente», «de lo más», «la mar de» (coloquial) o «-ísimo»; nunca «muy» + «-ísimo». Elige según el registro: en una crónica, «sumamente» o «especialmente»; en la conversación, «la mar de» o una repetición («bonito, bonito»).",
+        ],
+        table: {
+          caption: "Recursos de énfasis y su registro",
+          head: ["Recurso", "Ejemplo", "Registro"],
+          rows: [
+            ["lo + adjetivo + que", "No sabes lo complicada que es esta greca.", "todos"],
+            ["la de + nombre + que", "¡La de veces que lo hemos explicado!", "conversación"],
+            ["sí que + verbo", "Eso sí que es una copia.", "todos"],
+            ["vaya si + indicativo", "¡Vaya si se nota!", "coloquial"],
+            ["¡qué + nombre + tan / más + adjetivo!", "¡Qué colores tan vivos!", "todos"],
+            ["de lo más / sumamente", "Un proceso sumamente lento.", "neutro o formal"],
           ],
-          "answer": 2,
-          "why": "Para concluir, relacionemos las tres escalas."
-        }
-      ]
+        },
+        mistakes: [
+          {
+            wrong: "No te imaginas lo difícil que sea teñir con grana cochinilla.",
+            right: "No te imaginas lo difícil que es teñir con grana cochinilla.",
+            why: "La estructura ponderativa presenta un hecho: indicativo.",
+          },
+          {
+            wrong: "Es un tapete muy carísimo.",
+            right: "Es un tapete carísimo.",
+            why: "«-ísimo» ya es grado máximo: no admite «muy».",
+          },
+          {
+            wrong: "¡Qué un diseño tan antiguo!",
+            right: "¡Qué diseño tan antiguo!",
+            why: "En la exclamativa con «qué», el nombre va sin artículo.",
+          },
+        ],
+      },
+      {
+        heading: "Verbos que toman postura y el modo que piden",
+        body: [
+          "El verbo con que introduces una voz ajena ya dice algo. «Decir», «afirmar» y «declarar» transmiten; «sostener» y «defender» muestran insistencia; «reconocer» y «admitir» presentan algo que la fuente no quería decir; «matizar» corrige un poco; «negar» y «desmentir» rechazan. Con los que transmiten o reconocen, indicativo: «la marca reconoce que usó el motivo». Con «negar», subjuntivo: «la marca niega que haya copiado nada». El modo no depende de si tú te lo crees, sino de lo que hace la fuente. Lo repasaste desde otro ángulo en la semana 1 (G168).",
+          "Algunos verbos cambian de significado con el modo. «Advertir que» + indicativo avisa («advirtió que el diseño estaba registrado»); + subjuntivo ordena («advirtió que no se vendiera»). «Pretender que» + indicativo afirma algo sin fundamento («pretende que el motivo es suyo»); + subjuntivo expresa lo que alguien quiere conseguir («pretende que le paguemos»). Y «pretender» no es «to pretend»: para eso, «fingir».",
+        ],
+        table: {
+          caption: "Un mismo dato, tres posturas",
+          head: ["Verbo", "Postura de la fuente", "Ejemplo"],
+          rows: [
+            ["dice / afirma que + indicativo", "transmite", "La marca dice que se inspiró en varios pueblos."],
+            ["reconoce / admite que + indicativo", "concede a su pesar", "La marca reconoce que no consultó al taller."],
+            ["niega que + subjuntivo", "rechaza", "La marca niega que el diseño sea una copia."],
+            ["advierte que + indicativo", "avisa", "El abogado advierte que el plazo vence el viernes."],
+            ["advierte que + subjuntivo", "ordena", "El abogado advierte que no se firme nada."],
+            ["pretende que + indicativo", "afirma sin razón", "La marca pretende que el motivo es de dominio público."],
+          ],
+        },
+        examples: [
+          { es: "La portavoz matizó que la colección no se había vendido en México.", note: "«Matizar» corrige un poco la información anterior." },
+          { es: "El taller sostiene que el motivo lleva tres generaciones en la familia.", note: "«Sostener» muestra que la fuente insiste en su versión." },
+        ],
+      },
+      {
+        heading: "De quién es la voz y cuánto te comprometes",
+        body: [
+          "Para presentar la fuente de un dato, «según» + nombre o pronombre («según la marca», «según tú»), nunca «según mí» ni «según que». «En palabras de» introduce una cita casi literal. «Para» y «a juicio de» presentan opiniones, no datos: «para la tejedora, es un robo», pero «según el registro, el diseño es de 2019». Para tu propia opinión, «para mí» o «a mi juicio».",
+          "Para mostrar que una palabra o un dato no son tuyos, «supuestamente» y «presunto» añaden distancia (este último, en lenguaje jurídico y periodístico, protege a quien no ha sido juzgado); «el llamado» o las comillas señalan una denominación ajena, a menudo con ironía: «la llamada “colección homenaje”». «Al parecer» indica que el dato viene de otros; «aparentemente» significa que algo parece, pero quizá no es. En la conversación, el «que» de eco al principio repite o transmite palabras: «¿Que no sabían nada? ¡Si les mandamos fotos!»; no lo uses en un texto formal.",
+        ],
+        table: {
+          caption: "Marcas de fuente y de distancia",
+          head: ["Marca", "Qué indica", "Ejemplo"],
+          rows: [
+            ["según + fuente", "el dato es de otro", "Según la empresa, se vendieron trescientas prendas."],
+            ["para / a juicio de", "es una opinión de otro", "A juicio de la abogada, hay base para demandar."],
+            ["en palabras de", "cita casi literal", "En palabras de doña Rufina, «nos quitaron el nombre»."],
+            ["supuestamente", "no respondo de ello", "La colección supuestamente rinde homenaje a Oaxaca."],
+            ["el llamado / comillas", "la denominación es ajena", "El llamado «diseño original» tiene cien años."],
+            ["que de eco (oral)", "repite lo que se ha dicho", "¿Que fue casualidad? Pues vaya casualidad."],
+          ],
+        },
+        mistakes: [
+          {
+            wrong: "Según mí, la marca tendría que pagar.",
+            right: "Para mí, la marca tendría que pagar.",
+            why: "«Según» no va con «mí»; para la opinión propia, «para mí» o «a mi juicio».",
+          },
+          {
+            wrong: "La marca niega que ha usado el diseño.",
+            right: "La marca niega que haya usado el diseño.",
+            why: "«Negar que» pide subjuntivo.",
+          },
+          {
+            wrong: "Para el registro, el diseño es de 2019.",
+            right: "Según el registro, el diseño es de 2019.",
+            why: "Un dato se atribuye con «según»; «para» presenta opiniones.",
+          },
+        ],
+      },
+    ],
+  },
+  grammar: {
+    intro: "Primero decide si quieres subir el tono o atribuir una voz; después elige el recurso, el modo y el registro.",
+    exercises: [
+      {
+        id: "c1-14-gramatica-voz",
+        type: "context",
+        prompt: "Lee la situación y elige la frase que corresponde a la postura de la fuente o de quien escribe.",
+        items: [
+          {
+            context: "La marca, después de una semana negándolo, acepta en un comunicado que no consultó al taller.",
+            q: "¿Cómo lo cuenta la periodista?",
+            options: [
+              "La marca niega que no consultara al taller.",
+              "La marca reconoce que no consultó al taller.",
+              "La marca pretende que consulte al taller.",
+            ],
+            answer: 1,
+            why: "«Reconocer» presenta algo que la fuente no quería decir; va con indicativo.",
+          },
+          {
+            context: "La periodista quiere dejar claro que el nombre «colección homenaje» es de la marca y que no lo comparte.",
+            q: "¿Qué frase lo consigue?",
+            options: [
+              "La colección homenaje se presentó en marzo.",
+              "La colección, que es un homenaje, se presentó en marzo.",
+              "La llamada «colección homenaje» se presentó en marzo.",
+            ],
+            answer: 2,
+            why: "«El llamado» y las comillas marcan la denominación como ajena.",
+          },
+          {
+            context: "La abogada del taller avisa de un plazo, no da una orden.",
+            q: "¿Qué frase lo dice?",
+            options: [
+              "La abogada advirtió que el plazo para reclamar terminaba en junio.",
+              "La abogada advirtió que el plazo para reclamar terminara en junio.",
+              "La abogada pretendió que el plazo terminara en junio.",
+            ],
+            answer: 0,
+            why: "«Advertir que» + indicativo es un aviso.",
+          },
+          {
+            context: "Una tejedora quiere subrayar que la marca no hizo lo mínimo que se esperaba.",
+            q: "¿Qué dice?",
+            options: [
+              "Incluso no pusieron el nombre del pueblo.",
+              "Ni siquiera pusieron el nombre del pueblo.",
+              "Hasta pusieron el nombre del pueblo.",
+            ],
+            answer: 1,
+            why: "«Ni siquiera» señala el mínimo que no ocurrió.",
+          },
+        ],
+      },
+      {
+        id: "c1-14-gramatica-formas",
+        type: "gap",
+        prompt: "Completa con la forma adecuada. Fíjate en la concordancia y en el modo.",
+        items: [
+          { q: "No te imaginas lo ___ (lento) que es tejer un tapete de un metro.", answers: [["lento"]], why: "Concuerda con «tejer», que funciona como masculino singular." },
+          { q: "Me sorprendió lo ___ (resistente) que son estas lanas.", answers: [["resistentes"]], why: "El adjetivo concuerda con «lanas»: plural." },
+          { q: "El director negó que la empresa ___ (copiar) el motivo.", answers: [["hubiera copiado", "hubiese copiado", "copiara", "copiase"]], why: "«Negar que» pide subjuntivo; aquí, en pasado." },
+          { q: "La marca pretende que el taller ___ (retirar) la denuncia.", answers: [["retire"]], why: "«Pretender que» + subjuntivo: lo que quiere conseguir." },
+          { q: "—¿Era igual el diseño? —¡Vaya si ___ (ser) igual!", answers: [["era"]], why: "«Vaya si» + indicativo repite el verbo de la pregunta." },
+          { q: "___ la portavoz, la colección se retiró de las tiendas en abril.", answers: [["Según"]], why: "Un dato atribuido a una fuente: «según»." },
+        ],
+      },
+      {
+        id: "c1-14-gramatica-funcion",
+        type: "classify",
+        prompt: "Clasifica cada frase según lo que hace quien habla o escribe.",
+        categories: ["Intensifica", "Atribuye sin tomar partido", "Se distancia del dato"],
+        items: [
+          { text: "Hasta el alcalde se hizo una foto con el tapete.", cat: 0, why: "Extremo de la escala." },
+          { text: "¡La de horas que hay detrás de cada pieza!", cat: 0, why: "Pondera una cantidad." },
+          { text: "Según el comunicado, la empresa donará parte de los beneficios.", cat: 1, why: "Atribuye el dato sin comentarlo." },
+          { text: "La portavoz afirmó que la colección tenía doce prendas.", cat: 1, why: "«Afirmar» transmite." },
+          { text: "La colección supuestamente rinde homenaje a los pueblos de los Valles Centrales.", cat: 2, why: "«Supuestamente»: no responde del dato." },
+          { text: "El llamado «diseño propio» aparece en fotos de 1960.", cat: 2, why: "La denominación es ajena y se pone en duda." },
+          { text: "Eso sí que es trabajo bien hecho.", cat: 0, why: "«Sí que» refuerza la afirmación." },
+        ],
+      },
+      {
+        id: "c1-14-gramatica-errores",
+        type: "error",
+        prompt: "Cada frase tiene un error de énfasis o de atribución. Corrígela cambiando solo lo necesario.",
+        items: [
+          {
+            sentence: "Según que la abogada, la demanda puede tardar un año.",
+            answers: ["Según la abogada, la demanda puede tardar un año."],
+            why: "«Según» no lleva «que» detrás.",
+          },
+          {
+            sentence: "La empresa reconoció que no haya pedido permiso.",
+            answers: ["La empresa reconoció que no había pedido permiso.", "La empresa reconoció que no pidió permiso."],
+            why: "«Reconocer» transmite un hecho: indicativo.",
+          },
+          {
+            sentence: "Ni siquiera no respondieron al correo.",
+            answers: ["Ni siquiera respondieron al correo.", "No respondieron ni siquiera al correo."],
+            why: "Delante del verbo, «ni siquiera» no admite otra negación.",
+          },
+          {
+            sentence: "El diseñador pretendía no conocer el pueblo, pero había estado allí dos veces.",
+            answers: ["El diseñador fingía no conocer el pueblo, pero había estado allí dos veces."],
+            why: "«To pretend» se dice «fingir»; «pretender» es intentar conseguir o afirmar sin razón.",
+          },
+        ],
+      },
+      {
+        id: "c1-14-gramatica-reformular",
+        type: "open",
+        prompt: "Reescribe cada borrador según la instrucción. Hay varias respuestas posibles: compara con el modelo y con la lista.",
+        items: [
+          {
+            prompt: "Borrador de una nota de prensa: «La marca copió el diseño. La marca dice que no. El taller dice que el diseño es suyo desde hace tres generaciones». Reescríbelo como lo haría una periodista que no toma partido: atribuye cada dato con un verbo de postura distinto y usa el modo correcto.",
+            model: "El taller sostiene que el motivo pertenece a la familia desde hace tres generaciones, mientras que la marca niega que su diseño sea una copia y afirma que se inspiró en varios pueblos de la región.",
+            checklist: [
+              "Ningún dato aparece como afirmación de la periodista.",
+              "Uso al menos tres verbos de postura distintos.",
+              "«Negar que» va con subjuntivo.",
+            ],
+          },
+          {
+            prompt: "Borrador de una tejedora en una entrevista: «La marca no nos llamó. Vino mucha gente a vernos. El trabajo es muy difícil». Reescríbelo en registro oral con tres recursos de énfasis diferentes.",
+            model: "Ni siquiera nos llamaron, ¿eh? Y luego vino hasta gente de la capital a vernos tejer. No sabe usted lo difícil que es sacar esta greca: ¡la de noches que me he pasado en el telar!",
+            checklist: [
+              "Uso un recurso de escala, uno ponderativo y uno exclamativo.",
+              "La concordancia y el modo de «lo… que» son correctos.",
+              "El registro es oral y natural.",
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  vocabulary: {
+    intro: "Palabras para hablar del trabajo textil artesanal y de los conflictos de autoría.",
+    groups: [
+      {
+        title: "El taller textil",
+        items: [
+          { es: "el telar de pedal", note: "telar que se maneja con los pies y las manos" },
+          { es: "el tapete", note: "en México, alfombra tejida de lana" },
+          { es: "la greca", note: "motivo decorativo geométrico que se repite" },
+          { es: "teñir con tintes naturales", note: "dar color con plantas, insectos o minerales" },
+          { es: "la grana cochinilla", note: "insecto del que se obtiene un tinte rojo" },
+          { es: "la urdimbre", note: "hilos que se colocan a lo largo del telar" },
+          { es: "el oficio heredado", note: "trabajo que se aprende de la familia" },
+        ],
+      },
+      {
+        title: "Autoría y polémica",
+        items: [
+          { es: "la apropiación cultural", note: "uso de elementos de una cultura sin reconocimiento ni permiso" },
+          { es: "el patrimonio colectivo", note: "bien cultural que pertenece a una comunidad" },
+          { es: "dar crédito", note: "reconocer públicamente quién es el autor" },
+          { es: "el comunicado", note: "texto oficial que una organización envía a la prensa" },
+          { es: "desmentir", note: "decir públicamente que algo no es verdad" },
+          { es: "la portavoz", note: "persona que habla en nombre de una organización" },
+          { es: "llegar a un acuerdo extrajudicial", note: "resolver un conflicto sin ir a juicio" },
+          { es: "hacerse viral", note: "difundirse muy deprisa en internet" },
+        ],
+      },
+    ],
+    exercises: [
+      {
+        id: "c1-14-lexico-relacion",
+        type: "match",
+        prompt: "Relaciona cada expresión con su definición.",
+        pairs: [
+          { left: "la greca", right: "motivo decorativo geométrico que se repite" },
+          { left: "la apropiación cultural", right: "uso de elementos de una cultura sin reconocimiento ni permiso" },
+          { left: "dar crédito", right: "reconocer públicamente quién es el autor" },
+          { left: "desmentir", right: "decir públicamente que algo no es verdad" },
+          { left: "la urdimbre", right: "hilos que se colocan a lo largo del telar" },
+          { left: "el patrimonio colectivo", right: "bien cultural que pertenece a una comunidad" },
+          { left: "llegar a un acuerdo extrajudicial", right: "resolver un conflicto sin ir a juicio" },
+        ],
+      },
+      {
+        id: "c1-14-lexico-uso",
+        type: "gap",
+        prompt: "Completa con la expresión adecuada del banco.",
+        bank: ["se hizo viral", "grana cochinilla", "comunicado", "oficio heredado", "portavoz"],
+        items: [
+          { q: "El rojo de los tapetes de doña Rufina sale de la ___, que ella misma cultiva en nopales.", answers: [["grana cochinilla"]] },
+          { q: "El video de la nieta comparando las dos prendas ___ en menos de un día.", answers: [["se hizo viral"]] },
+          { q: "La empresa publicó un ___ de tres líneas sin mencionar el pueblo.", answers: [["comunicado"]] },
+          { q: "La ___ de la marca no quiso responder a las preguntas de la radio.", answers: [["portavoz"]] },
+          { q: "Para la familia Ruiz, tejer no es un negocio, sino un ___ que pasa de abuelas a nietas.", answers: [["oficio heredado"]] },
+        ],
+      },
+    ],
+  },
+  pronunciation: {
+    focus: "El acento de énfasis en la escala y en la exclamación",
+    explanation: [
+      "Los recursos de escala llevan el acento de la frase en la palabra que destacan, no en la partícula: «ni siquiera nos LLAMARON», «hasta la ABUELA vino». Si cambias el lugar del acento, cambias lo que destacas: «hasta la abuela VINO» suena a que lo raro es que viniera, no quién vino.",
+      "En «lo + adjetivo + que», el acento fuerte cae en el adjetivo y la voz sube en él: «no sabes lo DIFÍCIL que es». En «vaya si», la fuerza va en el verbo repetido: «¡vaya si se NOTA!». Y el «que» de eco empieza alto, con tono de sorpresa o de protesta: «¿Que fue casualidad?».",
+      "El audio utiliza la síntesis disponible en el navegador: no certifica un acento regional ni evalúa tu pronunciación. Úsalo para percibir el ritmo y compara tu grabación con la de una persona.",
+    ],
+    table: {
+      caption: "Dónde cae el golpe de voz",
+      head: ["Recurso", "Acento", "Ejemplo"],
+      rows: [
+        ["ni siquiera / hasta", "en lo destacado", "Ni siquiera dijeron GRACIAS."],
+        ["lo + adjetivo + que", "en el adjetivo", "No sabes lo FINA que es."],
+        ["vaya si", "en el verbo repetido", "¡Vaya si se PARECE!"],
+        ["que de eco", "tono alto al inicio", "¿QUE no sabían nada?"],
+      ],
     },
-    "produce": [
-      {
-        "text": "Dicho esto, conviene volver sobre los alquileres, porque deciden quién permanece.",
-        "tip": "Reconoce cambios de tema y jerarquía aunque cambien léxico o tratamiento. Tú, vos y usted no identifican por sí solos una procedencia. Las etiquetas regionales de las voces son solicitudes de síntesis, no certificación acústica; la comparación de acentos requiere muestras verificadas o trabajo con el docente."
-      },
-      {
-        "text": "En primer término, distingamos edificio y prácticas.",
-        "tip": "Graba dos versiones cambiando foco o pausas; explica qué interpretación favorece cada una."
-      },
-      {
-        "text": "Para concluir, relacionemos las tres escalas.",
-        "tip": "Integra esta formulación en una respuesta espontánea de treinta segundos, sin leer el resto."
-      }
-    ]
-  },
-  "listening": {
-    "title": "Voces y decisiones: La memoria tiene varias voces",
-    "context": "Escucha sin abrir la transcripción. La situación es una intervención o reunión original vinculada al dossier. Las etiquetas de voz orientan la síntesis y no acreditan muestras dialectales verificadas.",
-    "speakers": [
-      {
-        "id": "a",
-        "name": "Intervención 1",
-        "voice": "es-ES-f",
-        "role": "presentación del problema"
-      },
-      {
-        "id": "b",
-        "name": "Intervención 2",
-        "voice": "es-MX-m",
-        "role": "contraste o desarrollo"
-      }
-    ],
-    "script": [
-      {
-        "speaker": "a",
-        "text": "En primer término, quisiera distinguir el edificio de las prácticas que lo vuelven significativo. No propongo separarlos en la intervención, sino separarlos analíticamente para no olvidar ninguno. Podemos restaurar una cubierta y perder, al mismo tiempo, la posibilidad de que determinadas personas sigan trabajando debajo de ella. Si el alquiler posterior cambia de forma drástica, la continuidad material coexistirá con una ruptura social que una fotografía de la fachada no mostrará."
-      },
-      {
-        "speaker": "a",
-        "text": "A continuación, conviene revisar qué entendemos por memoria compartida. En las entrevistas encontramos recuerdos compatibles y otros en tensión. Para algunos, el mercado representaba solidaridad; para otros, jornadas agotadoras y falta de seguridad. No corresponde elegir el relato más atractivo y presentarlo como experiencia de todos. La mediación debe permitir que esas diferencias se expresen sin convertir cada testimonio en una prueba definitiva sobre la totalidad del lugar."
-      },
-      {
-        "speaker": "a",
-        "text": "Dicho esto, tampoco quisiera que la diversidad de voces se utilizara como excusa para no decidir. Podemos establecer acuerdos parciales. Por ejemplo, mantener actividades durante las obras, documentar usos de espacios comunes y reservar una discusión específica para los alquileres. Esta última no es una cuestión administrativa secundaria. Determinará quién puede continuar aquí. Si la dejamos para el final, cuando el diseño ya esté cerrado, habremos limitado de hecho la participación que decimos promover."
-      },
-      {
-        "speaker": "a",
-        "text": "Para concluir, retomaría las tres escalas: material, social y narrativa. Las notas deberían mostrar sus relaciones, no solo sus nombres. Mi propuesta consiste en evaluar cada decisión de obra preguntando qué conserva, qué transforma y a quién afecta. Después habrá que priorizar, porque no todo es compatible. Pero una prioridad argumentada es distinta de una exclusión que ocurre porque el formulario nunca permitió nombrar cierta experiencia. En las preguntas podemos discutir ejemplos concretos: qué hacemos con los vendedores temporales, cómo protegemos los recorridos y qué condiciones harían que la remodelación siguiera siendo reconocible para quienes usan hoy el mercado."
-      },
-      {
-        "speaker": "a",
-        "text": "Permítanme desarrollar un ejemplo antes de pasar a las preguntas. En una primera entrevista, una vendedora señaló una esquina como lugar de encuentro. El plano la describía simplemente como zona de circulación. Si hubiéramos seguido solo esa categoría, habríamos instalado un elemento que mejoraba el recorrido sobre el papel y eliminaba la posibilidad de detenerse. No se trata de que el testimonio anule el plano. Se trata de que ambos registran aspectos distintos y deben entrar en relación antes de decidir. La experiencia situada puede revelar una función que el instrumento técnico no pregunta."
-      },
-      {
-        "speaker": "a",
-        "text": "Ahora bien, tampoco todos los recuerdos ofrecen instrucciones de diseño. Una persona puede valorar una situación que otras vivieron como exclusión. Por eso propongo documentar quién habla, desde qué experiencia y con qué relación actual con el lugar. No para reducir su testimonio a una categoría social, sino para impedir que una voz se vuelva universal por el hecho de ser elocuente. La participación necesita tiempo para escuchar a quienes no acostumbran intervenir en reuniones. A veces requiere visitas, conversaciones breves o apoyos que no se parecen a una mesa pública."
-      },
-      {
-        "speaker": "a",
-        "text": "Quisiera retomar aquí la cuestión económica, que suele aparecer al final como si fuera exterior al patrimonio. Los alquileres y las condiciones de permanencia forman parte de la conservación de usos. Si un proyecto celebra la continuidad de la comunidad pero hace imposible que sus integrantes permanezcan, existe una contradicción que debe discutirse desde el principio. Esto no significa congelar cualquier precio ni prometer que nada cambiará. Significa hacer visible qué cambios se prevén, qué apoyos existen y qué decisiones requieren todavía negociación."
-      },
-      {
-        "speaker": "a",
-        "text": "En sus notas, separen este ejemplo de la tesis general. El ejemplo de la esquina muestra una función omitida; la tesis sostiene que los instrumentos de registro condicionan lo que podemos proteger. La propuesta metodológica consiste en contrastarlos y revisar sus categorías. Si después explican la ponencia a un equipo de obras, no necesitan repetir cada historia. Sí necesitan conservar esa relación, porque de ella se deriva una forma distinta de preparar el proyecto y de justificar sus prioridades."
-      }
-    ],
-    "stages": [
-      {
-        "stage": "gist",
-        "prompt": "Escucha una vez sin abrir la transcripción. Identifica el problema y el propósito general; no intentes copiar todas las palabras.",
-        "exercise": {
-          "id": "l-global",
-          "type": "choice",
-          "prompt": "Primera escucha: La memoria tiene varias voces.",
-          "items": [
-            {
-              "q": "¿Qué problema organiza la intervención de «La memoria tiene varias voces»?",
-              "options": [
-                "Que toda reparación destruya necesariamente el patrimonio.",
-                "Que las diferencias de vocabulario imposibiliten cualquier acuerdo.",
-                "Conservar el edificio mientras se excluye a quienes sostienen sus usos."
-              ],
-              "answer": 2,
-              "why": "Conservar el edificio mientras se excluye a quienes sostienen sus usos."
-            },
-            {
-              "q": "¿Qué lectura del cierre de «La memoria tiene varias voces» conservaría sus reservas?",
-              "options": [
-                "Que todas las memorias del mercado son equivalentes.",
-                "Una solución total e inmediata sin condiciones.",
-                "Cómo los instrumentos de registro condicionan lo que se protege."
-              ],
-              "answer": 2,
-              "why": "Cómo los instrumentos de registro condicionan lo que se protege."
-            }
-          ]
-        }
-      },
-      {
-        "stage": "detail",
-        "prompt": "Escucha de nuevo y toma notas de compromisos, límites y correcciones. Comprueba quién aporta cada dato.",
-        "exercise": {
-          "id": "l-detalle",
-          "type": "open",
-          "prompt": "Reconstruye lo que se dijo sobre patrimonio material.",
-          "items": [
-            {
-              "prompt": "¿Qué relación debe conservar quien toma notas de la ponencia?",
-              "model": "Cómo los instrumentos de registro condicionan lo que se protege.",
-              "checklist": [
-                "Conservo el alcance y la atribución de la información.",
-                "Justifico la decisión con un indicio concreto."
-              ]
-            },
-            {
-              "prompt": "En el audio de «La memoria tiene varias voces», identifica una corrección o una reserva y explica qué interpretación evita.",
-              "model": "En sus notas, separen este ejemplo de la tesis general. El ejemplo de la esquina muestra una función omitida; la tesis sostiene que los instrumentos de registro condicionan lo que podemos proteger. La propuesta metodológica consiste en contrastarlos y revisar sus categorías. Si después explican la ponencia a un equipo de obras, no necesitan repetir cada historia. Sí necesitan conservar esa relación, porque de ella se deriva una forma distinta de preparar el proyecto y de justificar sus prioridades.",
-              "checklist": [
-                "Conservo el alcance y la atribución de la información.",
-                "Justifico la decisión con un indicio concreto."
-              ]
-            }
-          ]
-        }
-      },
-      {
-        "stage": "notice",
-        "prompt": "Antes de consultar la transcripción, explica una intención y justifícala con un marcador o una oposición que hayas oído.",
-        "exercise": {
-          "id": "l-inferencia",
-          "type": "open",
-          "prompt": "Escucha la organización y la postura en La memoria tiene varias voces.",
-          "items": [
-            {
-              "prompt": "¿Qué diferencia perdería un resumen del audio de «La memoria tiene varias voces» que eliminara sus condiciones?",
-              "model": "Cómo los instrumentos de registro condicionan lo que se protege.",
-              "checklist": [
-                "Conservo el alcance y la atribución de la información.",
-                "Justifico la decisión con un indicio concreto."
-              ]
-            },
-            {
-              "prompt": "Reformula el cierre de «La memoria tiene varias voces» para una persona que no asistió; conserva una reserva y un compromiso.",
-              "model": "La ponencia propone relacionar patrimonio material, usos sociales y relatos, evitando que una sola memoria represente a toda la comunidad. El ejemplo de la esquina muestra cómo un plano puede omitir una función cotidiana; no autoriza a sustituir toda decisión técnica por testimonios. Para el equipo de obras, recomiendo contrastar instrumentos de registro e incorporar desde el inicio las condiciones de permanencia. Mi valoración es que aplazar el debate sobre alquileres reduciría la participación efectiva, aunque el diseño físico siguiera abierto.",
-              "checklist": [
-                "Conservo el alcance y la atribución de la información.",
-                "Justifico la decisión con un indicio concreto."
-              ]
-            }
-          ]
-        }
-      }
-    ]
-  },
-  "reading": {
-    "title": "Quién puede contar una plaza",
-    "genre": "Ensayo sobre patrimonio y escucha",
-    "frame": "Texto original situado en Oaxaca; léelo después de la primera escucha y contrasta sus decisiones discursivas.",
-    "text": [
-      "El proyecto de remodelación del mercado antiguo comenzó con una pregunta aparentemente técnica: qué elementos del edificio debían conservarse. El informe inicial enumeraba fachadas, vigas y pavimentos. Durante las entrevistas aparecieron otros objetos de memoria: el lugar donde se esperaba a los transportistas, una sombra utilizada para conversar y el recorrido de quienes vendían sin puesto fijo. Esas prácticas no cabían fácilmente en el inventario arquitectónico. La dificultad no demostraba que fueran menos importantes, sino que el instrumento de registro había sido diseñado para reconocer unas formas de patrimonio y no otras.",
-      "Una ponente invitada distinguió tres escalas. En primer término, la material, relativa a estructuras y objetos. A continuación, la social, que incluía usos, vínculos y formas de trabajo. Por último, la narrativa: las versiones mediante las cuales una comunidad explica su relación con el lugar. Las escalas no eran compartimentos independientes. Restaurar una fachada podía atraer visitantes y modificar los alquileres; proteger una actividad podía exigir adaptar instalaciones que algunos consideraban intocables. Tomar notas de la exposición requería conservar esas relaciones, no copiar una lista de tres palabras.",
-      "La ponente advirtió además contra una imagen demasiado armónica de la comunidad. Quienes tenían puestos permanentes no recordaban el mercado del mismo modo que quienes vendían ocasionalmente. Algunas mujeres describían redes de apoyo; otras, jornadas largas y espacios inseguros. Presentar una memoria colectiva única podía convertir la versión de los grupos con más presencia pública en relato general. El patrimonio no era solo lo que todos valoraban, sino también aquello cuya interpretación seguía en disputa. Reconocer esa tensión no obligaba a renunciar al proyecto; obligaba a diseñar formas más cuidadosas de participación.",
-      "En la mesa redonda posterior surgieron diferencias léxicas y de tratamiento entre participantes de procedencias diversas. Una persona hablaba de puestos; otra, de locales. Alguien utilizaba ustedes donde otro habría empleado vosotros, y una invitada recurría al voseo. Estas diferencias no impedían comprender los argumentos. Cuando un término resultaba ambiguo, se pedía una reformulación vinculada al objeto concreto. La flexibilidad receptiva consiste en ajustar expectativas y comprobar significados, no en identificar apresuradamente una nacionalidad por un rasgo aislado ni en corregir una variedad legítima como si fuera un error.",
-      "El acta final separó acuerdos y preguntas abiertas. Se conservarían elementos estructurales relevantes, se garantizaría continuidad de ciertas actividades durante las obras y se estudiaría cómo incluir a vendedores sin puesto fijo. Quedó pendiente el modelo de alquiler posterior. Esa última cuestión podía determinar quién seguiría utilizando el mercado, por lo que relegarla a un anexo habría distorsionado la jerarquía del debate. La síntesis debía reflejar no solo la frecuencia con que se había mencionado un tema, sino su importancia para las decisiones futuras.",
-      "Escuchar un discurso complejo exige reconocer cómo se anuncia, desarrolla y revisa una idea. Expresiones como dicho esto o conviene volver sobre señalan cambios que pueden alterar la interpretación de lo anterior. Resumirlo oralmente añade otra responsabilidad: distinguir la tesis de la ponente de la valoración propia y conservar las reservas que impiden simplificarla. La memoria del mercado, como la memoria de una conferencia, depende de qué relaciones conseguimos mantener cuando ya no podemos repetirlo todo."
-    ],
-    "tasks": [
-      {
-        "id": "r-inferencia",
-        "type": "choice",
-        "prompt": "Interpreta la postura de «Quién puede contar una plaza» sin atribuir intenciones que el texto no demuestra.",
-        "items": [
-          {
-            "q": "¿Qué riesgo identifica la autora en una restauración solo material?",
-            "options": [
-              "Conservar el edificio mientras se excluye a quienes sostienen sus usos.",
-              "Que toda reparación destruya necesariamente el patrimonio.",
-              "Que las diferencias de vocabulario imposibiliten cualquier acuerdo."
-            ],
-            "answer": 0,
-            "why": "Conservar el edificio mientras se excluye a quienes sostienen sus usos."
-          },
-          {
-            "q": "¿Qué conclusión excede lo que permite afirmar «Quién puede contar una plaza»?",
-            "options": [
-              "La decisión exige conservar límites y atribuir las voces.",
-              "Que toda reparación destruya necesariamente el patrimonio.",
-              "Conservar el edificio mientras se excluye a quienes sostienen sus usos."
-            ],
-            "answer": 1,
-            "why": "Que toda reparación destruya necesariamente el patrimonio."
-          }
-        ]
-      },
-      {
-        "id": "r-argumento",
-        "type": "open",
-        "prompt": "Reconstruye cómo avanza «Quién puede contar una plaza».",
-        "items": [
-          {
-            "prompt": "Localiza una transición decisiva en «Quién puede contar una plaza» y explica qué interpretación modifica.",
-            "model": "Escuchar un discurso complejo exige reconocer cómo se anuncia, desarrolla y revisa una idea. Expresiones como dicho esto o conviene volver sobre señalan cambios que pueden alterar la interpretación de lo anterior. Resumirlo oralmente añade otra responsabilidad: distinguir la tesis de la ponente de la valoración propia y conservar las reservas que impiden simplificarla. La memoria del mercado, como la memoria de una conferencia, depende de qué relaciones conseguimos mantener cuando ya no podemos repetirlo todo.",
-            "checklist": [
-              "Conservo el alcance y la atribución de la información.",
-              "Justifico la decisión con un indicio concreto."
-            ]
-          },
-          {
-            "prompt": "Compara el problema central de «Quién puede contar una plaza» con el audio: identifica una coincidencia y una aportación que no deba confundirse.",
-            "model": "La ponencia propone relacionar patrimonio material, usos sociales y relatos, evitando que una sola memoria represente a toda la comunidad. El ejemplo de la esquina muestra cómo un plano puede omitir una función cotidiana; no autoriza a sustituir toda decisión técnica por testimonios. Para el equipo de obras, recomiendo contrastar instrumentos de registro e incorporar desde el inicio las condiciones de permanencia. Mi valoración es que aplazar el debate sobre alquileres reduciría la participación efectiva, aunque el diseño físico siguiera abierto.",
-            "checklist": [
-              "Conservo el alcance y la atribución de la información.",
-              "Justifico la decisión con un indicio concreto."
-            ]
-          }
-        ]
-      }
-    ],
-    "noticing": {
-      "prompt": "Observa cómo las formas elegidas construyen el argumento; justifica qué cambiaría con otra redacción.",
-      "items": [
+    perceive: {
+      id: "c1-14-percepcion",
+      type: "listen",
+      prompt: "Escucha cada frase sin leer las opciones y decide qué destaca quien habla.",
+      items: [
         {
-          "quote": "En primer término, la material, relativa a estructuras y objetos.",
-          "note": "Los marcadores de una ponencia anuncian secuencia, reserva, reformulación o retorno. Organiza notas mediante tesis, razones, ejemplos y límites; una lista de temas no conserva la argumentación. En contacto con variedades, distingue diferencias de tratamiento o léxico de diferencias de postura y pide aclaraciones sin atribuir identidades a partir de un solo rasgo."
+          q: "¿Qué palabra recibe el énfasis?",
+          options: ["siquiera", "nombre", "pusieron"],
+          answer: 1,
+          why: "El acento cae en lo destacado por la escala: el nombre.",
+          audio: "Ni siquiera pusieron el nombre del pueblo en la etiqueta.",
+          voice: "es-MX-f",
         },
         {
-          "quote": "Por último, la narrativa: las versiones mediante las cuales una comunidad explica su relación con el lugar.",
-          "note": "Reconoce cambios de tema y jerarquía aunque cambien léxico o tratamiento. Tú, vos y usted no identifican por sí solos una procedencia. Las etiquetas regionales de las voces son solicitudes de síntesis, no certificación acústica; la comparación de acentos requiere muestras verificadas o trabajo con el docente."
-        }
-      ]
-    }
+          q: "¿Qué quiere decir quien habla?",
+          options: [
+            "Que el diseño no se parecía.",
+            "Que el diseño se parecía muchísimo.",
+            "Que no sabe si se parecía.",
+          ],
+          answer: 1,
+          why: "«Vaya si» es un sí rotundo.",
+          audio: "¿Que si se parecía? ¡Vaya si se parecía!",
+          voice: "es-MX-m",
+        },
+        {
+          q: "¿Qué hace la estructura de la frase?",
+          options: ["Pondera un grado.", "Destaca un aspecto.", "Atribuye un dato."],
+          answer: 0,
+          why: "«Lo cansadas que…» habla de cuánto, no de qué.",
+          audio: "No te imaginas lo cansadas que terminan las manos después de un día en el telar.",
+          voice: "es-MX-f",
+        },
+        {
+          q: "¿Con qué actitud empieza la pregunta?",
+          options: ["Neutra, para informarse.", "Sorpresa y protesta ante lo dicho.", "Cortesía."],
+          answer: 1,
+          why: "El «que» de eco con tono alto repite lo dicho para protestar.",
+          audio: "¿Que fue una casualidad? ¡Si les mandamos las fotos en enero!",
+          voice: "es-MX-m",
+        },
+      ],
+    },
+    produce: [
+      { text: "Hasta la abuela salió a la puerta a ver a los periodistas.", tip: "Acento en «abuela», no en «hasta».", voice: "es-MX-f" },
+      { text: "No sabes lo fina que queda la lana después de cardarla.", tip: "Sube la voz en «fina».", voice: "es-MX-m" },
+      { text: "¡Qué colores tan vivos!", tip: "Tono alto en «qué» y fuerza en «vivos».", voice: "es-MX-f" },
+      { text: "Según la marca, todo fue un malentendido.", tip: "Pausa breve tras «marca» y tono neutro, sin ironía.", voice: "es-ES-f" },
+    ],
+    spelling: "«Aun» sin tilde equivale a «incluso» («aun así»); «aún» con tilde equivale a «todavía». En las exclamativas, «qué» y «cuánto» llevan siempre tilde.",
   },
-  "practice": {
-    "exercises": [
+  listening: {
+    title: "La greca de doña Rufina",
+    context: "En un taller de Teotitlán del Valle, cerca de Oaxaca, una periodista española entrevista a doña Rufina, tejedora, y a su nieto Emiliano, que publicó el video que comparaba los tapetes de la familia con una prenda de una marca de moda. Escucha primero sin transcripción. Las voces son sintéticas y no se presentan como variedades regionales verificadas.",
+    speakers: [
+      { id: "p", name: "Clara", voice: "es-ES-f", role: "Periodista" },
+      { id: "r", name: "Rufina", voice: "es-MX-f", role: "Tejedora" },
+      { id: "e", name: "Emiliano", voice: "es-MX-m", role: "Nieto de Rufina" },
+    ],
+    script: [
+      { speaker: "p", text: "Doña Rufina, la marca dice en su comunicado que la colección se inspira en varios pueblos de los Valles Centrales. ¿Qué le parece?" },
+      { speaker: "r", text: "¿Que se inspira? Mire, esta greca la tejía mi abuela, y la abuela de mi abuela. No es de varios pueblos: es de esta casa. Y ni siquiera nos preguntaron. Ni una llamada, ni un correo, nada." },
+      { speaker: "e", text: "Yo puse las dos fotos juntas en internet, el tapete de mi abuela y el suéter de la marca, y en dos días lo había visto medio México. Hasta mi maestra de la secundaria me escribió." },
+      { speaker: "p", text: "La portavoz de la empresa afirma que el motivo es de dominio público y que no pertenece a nadie en concreto." },
+      { speaker: "e", text: "Pues según los registros del municipio, mi abuela presentó ese diseño en una feria en 1987, con su nombre. La marca pretende que es un dibujo cualquiera, pero no lo es." },
+      { speaker: "r", text: "Usted no se imagina lo difícil que es sacar esa greca bien derechita. Son tres semanas para un tapete de un metro. ¡La de noches que me he pasado aquí!" },
+      { speaker: "p", text: "Ayer la marca reconoció que no había consultado a ninguna comunidad, aunque niega que el suéter sea una copia. ¿Les basta con eso?" },
+      { speaker: "e", text: "No. Que reconozcan que no preguntaron sí que es un paso, pero no es suficiente. Nuestra abogada advierte que no firmemos nada hasta que nos ofrezcan un acuerdo por escrito." },
+      { speaker: "p", text: "¿Y qué esperan de ese acuerdo?" },
+      { speaker: "r", text: "Que pongan el nombre del pueblo en la etiqueta, que den crédito, y que una parte de lo que ganen vuelva aquí, a la escuela de tejido. Yo no quiero hacerme rica. Quiero que mis nietas sigan tejiendo." },
+      { speaker: "e", text: "Y que dejen de llamarla «colección homenaje». Un homenaje se hace con la gente, no a sus espaldas." },
+      { speaker: "p", text: "Última pregunta: ¿ha cambiado algo en el taller desde que se hizo viral el video?" },
+      { speaker: "r", text: "¡Vaya si ha cambiado! Ahora vienen turistas todos los días, incluso de Europa. Eso sí que no lo esperábamos. Algo bueno tenía que salir de todo esto." },
+    ],
+    stages: [
       {
-        "id": "p-orden",
-        "type": "order",
-        "prompt": "Reconstruye dos decisiones lingüísticas de «La memoria tiene varias voces»; léelas después con una pausa justificada. Recupera el orden de las formulaciones de los ejemplos; la paráfrasis libre se trabaja en las actividades abiertas.",
-        "items": [
+        stage: "gist",
+        prompt: "Escucha la entrevista completa sin abrir la transcripción. ¿Qué reclama la familia?",
+        exercise: {
+          id: "c1-14-escucha-gist",
+          type: "choice",
+          prompt: "Reconstruye la idea general.",
+          items: [
+            {
+              q: "¿Qué acusan a la marca de haber hecho?",
+              options: [
+                "Usar un diseño de la familia sin preguntar ni dar crédito.",
+                "Comprar tapetes a un precio injusto.",
+                "Contratar a tejedoras sin contrato.",
+              ],
+              answer: 0,
+              why: "Doña Rufina dice que la greca es de su casa y que nadie les preguntó.",
+            },
+            {
+              q: "¿Qué piden en el acuerdo?",
+              options: [
+                "Que la marca retire toda su colección del mercado.",
+                "Una indemnización para la familia.",
+                "Crédito, el nombre del pueblo y dinero para la escuela de tejido.",
+              ],
+              answer: 2,
+              why: "Doña Rufina lo enumera al final.",
+            },
+          ],
+        },
+      },
+      {
+        stage: "detail",
+        prompt: "Escucha otra vez y anota qué dice cada fuente y con qué verbo se presenta.",
+        exercise: {
+          id: "c1-14-escucha-detail",
+          type: "choice",
+          prompt: "Comprueba los detalles.",
+          items: [
+            {
+              q: "¿Qué prueba aporta Emiliano frente a la portavoz?",
+              options: [
+                "Una carta de la empresa de 1987.",
+                "Un registro municipal de una feria de 1987 con el nombre de su abuela.",
+                "El testimonio de su maestra.",
+              ],
+              answer: 1,
+              why: "«Según los registros del municipio, mi abuela presentó ese diseño en una feria en 1987.»",
+            },
+            {
+              q: "¿Qué reconoció la marca ayer?",
+              options: [
+                "Que el suéter es una copia.",
+                "Que pagará a la familia.",
+                "Que no consultó a ninguna comunidad.",
+              ],
+              answer: 2,
+              why: "Reconoció que no consultó, pero niega que sea una copia.",
+            },
+            {
+              q: "¿Qué advierte la abogada?",
+              options: [
+                "Que no firmen nada sin un acuerdo por escrito.",
+                "Que el plazo para demandar ha vencido.",
+                "Que no hablen con la prensa.",
+              ],
+              answer: 0,
+              why: "«Advierte que no firmemos nada»: subjuntivo, orden.",
+            },
+          ],
+        },
+      },
+      {
+        stage: "notice",
+        prompt: "Fíjate en qué recurso usa cada frase. Relaciona y consulta la transcripción solo después.",
+        exercise: {
+          id: "c1-14-escucha-notice",
+          type: "match",
+          prompt: "Relaciona cada frase de la entrevista con el recurso que usa.",
+          pairs: [
+            { left: "¿Que se inspira?", right: "que de eco que repite y protesta" },
+            { left: "ni siquiera nos preguntaron", right: "mínimo de la escala que no se cumplió" },
+            { left: "Hasta mi maestra de la secundaria me escribió", right: "extremo improbable de la escala" },
+            { left: "La marca pretende que es un dibujo cualquiera", right: "verbo que presenta una afirmación sin fundamento" },
+            { left: "niega que el suéter sea una copia", right: "verbo de rechazo con subjuntivo" },
+            { left: "lo difícil que es sacar esa greca", right: "ponderación del grado" },
+          ],
+          why: "La familia intensifica y la periodista atribuye: dos voces, dos herramientas.",
+        },
+      },
+    ],
+  },
+  reading: {
+    title: "Una greca, dos versiones",
+    genre: "Crónica periodística",
+    frame: "Crónica publicada en un diario digital. El taller, la familia, la marca y las cifras son ficticios.",
+    text: [
+      "En Teotitlán del Valle, a media hora de la ciudad de Oaxaca, casi todas las casas tienen un telar de pedal en el patio. En la de doña Rufina Ruiz hay tres. Allí, entre madejas teñidas con grana cochinilla y añil, se teje desde hace al menos cuatro generaciones una greca escalonada que la familia considera propia. Hace tres semanas, esa greca apareció en un suéter de una conocida marca de moda internacional, dentro de la llamada «colección homenaje». Desde entonces, el taller no ha dejado de recibir visitas, llamadas y, según la familia, ni una sola disculpa.",
+      "La polémica empezó con un video. Emiliano Ruiz, nieto de la tejedora, publicó en sus redes una imagen con el tapete de su abuela a un lado y el suéter de la marca al otro. El parecido, a juicio de los miles de usuarios que lo compartieron, era evidente. Incluso diseñadores de la capital opinaron que se trataba de una copia casi literal. En palabras de doña Rufina, «nos quitaron el dibujo y encima nos quitaron el nombre».",
+      "La empresa tardó cinco días en responder. En un primer comunicado, su portavoz afirmó que la colección «se inspira en la riqueza textil de varios pueblos de los Valles Centrales» y sostuvo que el motivo pertenece al dominio público. Ayer, en una segunda nota, la marca reconoció que no había consultado a ninguna comunidad antes de lanzar la colección, aunque negó que el diseño fuera una copia. También matizó que el suéter no se ha vendido en México, sino solo en tiendas de Europa y Estados Unidos.",
+      "La familia no comparte esa versión. Según los registros del municipio, que este diario ha podido consultar, Rufina Ruiz presentó un tapete con la misma greca en una feria artesanal de 1987, con su nombre y el de su taller. La marca pretende que se trata de un motivo geométrico cualquiera; los expertos consultados no lo ven tan claro. Para la antropóloga Marisol Cruz, especialista en textiles zapotecos, «la combinación de la greca con ese escalonado y esos colores es característica de muy pocas familias». No hay, sin embargo, ninguna ley que proteja de forma individual un diseño tradicional, de ahí que el caso sea sumamente difícil de llevar a los tribunales.",
+      "La abogada del taller advierte que la familia no firmará ningún acuerdo que no reconozca por escrito el origen del diseño. Lo que piden, explica, es más simbólico que económico: que la etiqueta del suéter mencione el pueblo, que la marca dé crédito al taller y que una parte de los beneficios se destine a la escuela de tejido que la comunidad mantiene desde hace diez años. La empresa, al parecer, estudia la propuesta, aunque no ha querido confirmar ningún plazo.",
+      "Mientras tanto, la vida del taller ha cambiado. Desde que el video se hizo viral, llegan cada día turistas que quieren ver tejer a doña Rufina, y hasta una galería de Ciudad de México le ha propuesto una exposición. Ella lo cuenta con una mezcla de cansancio y orgullo. «No sabe usted lo raro que es que te conozcan por algo que te robaron», dice mientras pasa la lanzadera. Después se ríe: «Pero, eso sí, nunca habíamos vendido tantos tapetes».",
+    ],
+    glossary: [
+      { es: "añil", note: "tinte azul de origen vegetal" },
+      { es: "lanzadera", note: "pieza del telar que lleva el hilo de un lado a otro" },
+      { es: "madeja", note: "hilo recogido en vueltas iguales" },
+    ],
+    tasks: [
+      {
+        id: "c1-14-lectura-comprension",
+        type: "choice",
+        prompt: "Comprueba que has entendido la crónica.",
+        items: [
           {
-            "words": [
-              "Conviene",
-              "volver",
-              "sobre",
-              "el",
-              "modelo",
-              "de",
-              "alquiler."
+            q: "¿Qué ha cambiado en la postura de la marca entre el primer y el segundo comunicado?",
+            options: [
+              "Ha admitido que no consultó a ninguna comunidad, pero sigue negando la copia.",
+              "Ha reconocido la copia y ha pedido perdón.",
+              "Ha retirado la colección de todas las tiendas.",
             ],
-            "why": "Los marcadores de una ponencia anuncian secuencia, reserva, reformulación o retorno. Organiza notas mediante tesis, razones, ejemplos y límites; una lista de temas no conserva la argumentación. En contacto con variedades, distingue diferencias de tratamiento o léxico de diferencias de postura y pide aclaraciones sin atribuir identidades a partir de un solo rasgo."
+            answer: 0,
+            why: "Lo dice el tercer párrafo.",
           },
           {
-            "words": [
-              "Para",
-              "concluir,",
-              "relacionemos",
-              "las",
-              "tres",
-              "escalas."
+            q: "¿Por qué el caso es difícil de llevar a los tribunales?",
+            options: [
+              "Porque la familia no tiene abogada.",
+              "Porque la ley no protege de forma individual un diseño tradicional.",
+              "Porque el suéter no se vendió en México.",
             ],
-            "why": "Los marcadores de una ponencia anuncian secuencia, reserva, reformulación o retorno. Organiza notas mediante tesis, razones, ejemplos y límites; una lista de temas no conserva la argumentación. En contacto con variedades, distingue diferencias de tratamiento o léxico de diferencias de postura y pide aclaraciones sin atribuir identidades a partir de un solo rasgo."
-          }
-        ]
-      },
-      {
-        "id": "p-contexto",
-        "type": "context",
-        "prompt": "Elige intervenciones fieles al caso de Oaxaca.",
-        "items": [
+            answer: 1,
+            why: "«No hay ninguna ley que proteja de forma individual un diseño tradicional.»",
+          },
           {
-            "context": "Debes explicar patrimonio material a alguien que no leyó el dossier.",
-            "q": "¿Qué definición de patrimonio material conserva el sentido del caso?",
-            "options": [
-              "permanencia de actividades",
-              "objetos y estructuras conservables",
-              "recuerdo cuyo sentido no es unánime"
+            q: "¿Qué tono tiene el final de la crónica?",
+            options: [
+              "Indignado y amenazante.",
+              "Neutro y técnico.",
+              "Humano, con una mezcla de cansancio, orgullo y humor.",
             ],
-            "answer": 1,
-            "why": "objetos y estructuras conservables"
+            answer: 2,
+            why: "Doña Rufina habla con cansancio y orgullo y termina riéndose.",
           },
+        ],
+      },
+      {
+        id: "c1-14-lectura-voces",
+        type: "classify",
+        prompt: "Clasifica cada fragmento según de quién es la voz que transmite.",
+        categories: ["La marca", "La familia o sus aliados", "La periodista con datos propios"],
+        items: [
+          { text: "se inspira en la riqueza textil de varios pueblos de los Valles Centrales", cat: 0 },
+          { text: "el suéter no se ha vendido en México", cat: 0 },
+          { text: "nos quitaron el dibujo y encima nos quitaron el nombre", cat: 1 },
+          { text: "es característica de muy pocas familias", cat: 1 },
+          { text: "los registros del municipio, que este diario ha podido consultar", cat: 2 },
+          { text: "casi todas las casas tienen un telar de pedal en el patio", cat: 2 },
+        ],
+      },
+      {
+        id: "c1-14-lectura-evaluacion",
+        type: "open",
+        prompt: "Analiza la crónica como texto periodístico.",
+        items: [
           {
-            "context": "Un interlocutor propone eliminar del resumen la principal reserva para hacerlo más convincente.",
-            "q": "¿Qué respuesta mantiene la fidelidad en «La memoria tiene varias voces»?",
-            "options": [
-              "Cómo los instrumentos de registro condicionan lo que se protege.",
-              "Que todas las memorias del mercado son equivalentes.",
-              "Que toda reparación destruya necesariamente el patrimonio."
+            prompt: "¿Es una crónica neutral? Explica en 80–100 palabras cómo atribuye la periodista la versión de la marca y la de la familia, y si alguna marca de distancia revela su postura.",
+            model: "La periodista atribuye cada dato: la marca «afirmó», «sostuvo», «reconoció» y «negó que… fuera una copia», y la familia habla con citas literales y con «según los registros». Sin embargo, hay señales de postura. «La llamada “colección homenaje”» toma distancia del nombre que eligió la empresa, y «la marca pretende que se trata de un motivo cualquiera» presenta su argumento como poco fundado. Además, la periodista ha verificado el registro de la familia, pero no los argumentos de la marca. Es una crónica rigurosa, pero no del todo neutral.",
+            checklist: [
+              "Cito al menos tres verbos o marcas de atribución.",
+              "Identifico al menos una marca de distancia.",
+              "Doy una valoración argumentada, no solo una lista.",
             ],
-            "answer": 0,
-            "why": "Cómo los instrumentos de registro condicionan lo que se protege."
-          }
-        ]
+          },
+        ],
       },
+    ],
+    noticing: {
+      prompt: "Observa cómo la crónica atribuye cada voz y dónde aparece el énfasis.",
+      items: [
+        { quote: "dentro de la llamada «colección homenaje»", note: "«La llamada» y las comillas: la denominación es de la marca, no de la periodista." },
+        { quote: "según la familia, ni una sola disculpa", note: "Atribución con «según» y mínimo de la escala con «ni una sola»." },
+        { quote: "Incluso diseñadores de la capital opinaron que se trataba de una copia casi literal.", note: "«Incluso» sitúa a los diseñadores en el extremo de la escala." },
+        { quote: "la marca reconoció que no había consultado a ninguna comunidad", note: "«Reconocer» + indicativo: la fuente admite algo a su pesar." },
+        { quote: "aunque negó que el diseño fuera una copia", note: "«Negar que» + subjuntivo." },
+        { quote: "La marca pretende que se trata de un motivo geométrico cualquiera", note: "«Pretender que» + indicativo: afirmación que la periodista considera poco fundada." },
+        { quote: "No sabe usted lo raro que es que te conozcan por algo que te robaron", note: "«Lo + adjetivo + que» en la cita de la tejedora." },
+      ],
+    },
+  },
+  practice: {
+    intro: "Combina orden, elección según la intención, relación de formas y escritura guiada sobre las dos clases de la semana.",
+    exercises: [
       {
-        "id": "p-redaccion",
-        "type": "open",
-        "prompt": "Ensaya dos movimientos antes de redactar tu texto sobre «La memoria tiene varias voces».",
-        "items": [
+        id: "c1-14-orden",
+        type: "order",
+        prompt: "Ordena las palabras para formar frases de la crónica y de la entrevista.",
+        items: [
           {
-            "prompt": "Escribe una apertura de 60–80 palabras para esta tarea: Produce una síntesis jerarquizada de la ponencia y el ensayo para el equipo de obras; separa tesis, decisiones y asuntos pendientes, y añade una valoración propia claramente identificada.",
-            "model": "La ponencia propone relacionar patrimonio material, usos sociales y relatos, evitando que una sola memoria represente a toda la comunidad. El ejemplo de la esquina muestra cómo un plano puede omitir una función cotidiana; no autoriza a sustituir toda decisión técnica por testimonios. Para el equipo de obras, recomiendo contrastar instrumentos de registro e incorporar desde el inicio las condiciones de permanencia. Mi valoración es que aplazar el debate sobre alquileres reduciría la participación efectiva, aunque el diseño físico siguiera abierto.",
-            "checklist": [
-              "Conservo el alcance y la atribución de la información.",
-              "Justifico la decisión con un indicio concreto."
-            ]
+            words: ["La", "empresa", "niega", "que", "el", "suéter", "sea", "una", "copia."],
+            why: "«Negar que» + subjuntivo.",
           },
           {
-            "prompt": "Formula una objeción razonable a la propuesta de «La memoria tiene varias voces» y respóndela sin atribuir intenciones no demostradas. Basa la objeción en una limitación expresada en la lectura o en el audio; no añadas cifras, hechos ni intenciones no documentados.",
-            "model": "Una reserva que debe conservarse: Cómo los instrumentos de registro condicionan lo que se protege. La respuesta debe delimitar el compromiso: Para concluir, relacionemos las tres escalas.",
-            "checklist": [
-              "Conservo el alcance y la atribución de la información.",
-              "Justifico la decisión con un indicio concreto."
-            ]
-          }
-        ]
-      },
-      {
-        "id": "p-recuperacion",
-        "type": "open",
-        "prompt": "Recupera sin consultar: compara los casos y comprueba después tus decisiones. En el balance final, reparte esta recuperación entre dos sesiones.",
-        "items": [
-          {
-            "prompt": "Recuperación de la semana 13 · Régimen preposicional avanzado. Recupera una construcción y explica su efecto antes de emplearla en dos frases. Contrasta el caso «Leer la letra de una convocatoria» con «La memoria tiene varias voces».",
-            "model": "Punto de contraste: Confío en que la carta sea suficiente. En el caso actual: En primer término, distingamos edificio y prácticas. La transferencia debe conservar el sentido pertinente y justificar cualquier cambio de registro.",
-            "checklist": [
-              "Recupero el recurso antes de consultar la semana anterior.",
-              "Distingo lo que puede transferirse de lo que cambia por el contexto."
-            ]
+            words: ["No", "sabes", "lo", "pesadas", "que", "son", "las", "madejas", "mojadas."],
+            why: "«Lo» + adjetivo concordado + «que» + indicativo.",
           },
           {
-            "prompt": "Recuperación de la semana 13 · Universidad e investigación. Recupera dos expresiones, explica su combinación habitual y utilízalas en una comparación. Contrasta el caso «Leer la letra de una convocatoria» con «La memoria tiene varias voces».",
-            "model": "Punto de contraste: Confío en que la carta sea suficiente. En el caso actual: En primer término, distingamos edificio y prácticas. La transferencia debe conservar el sentido pertinente y justificar cualquier cambio de registro.",
-            "checklist": [
-              "Recupero el recurso antes de consultar la semana anterior.",
-              "Distingo lo que puede transferirse de lo que cambia por el contexto."
-            ]
+            words: ["Según", "la", "abogada,", "el", "acuerdo", "llegará", "en", "mayo."],
+            why: "«Según» + fuente para un dato.",
+          },
+        ],
+      },
+      {
+        id: "c1-14-intencion",
+        type: "context",
+        prompt: "Elige la frase que corresponde a la intención descrita.",
+        items: [
+          {
+            context: "Tu amiga te pregunta si la exposición de textiles te gustó. Te encantó.",
+            q: "¿Qué respondes en un registro coloquial y enfático?",
+            options: ["¡Vaya si me gustó!", "Según yo, me gustó.", "Supuestamente me gustó."],
+            answer: 0,
+            why: "«Vaya si» + indicativo es un sí rotundo.",
           },
           {
-            "prompt": "Recuperación de la semana 13 · Enlaces en el registro formal. Recupera el patrón de pausas o foco, graba dos versiones y justifica la más clara. Contrasta el caso «Leer la letra de una convocatoria» con «La memoria tiene varias voces».",
-            "model": "Punto de contraste: Confío en que la carta sea suficiente. En el caso actual: En primer término, distingamos edificio y prácticas. La transferencia debe conservar el sentido pertinente y justificar cualquier cambio de registro.",
-            "checklist": [
-              "Recupero el recurso antes de consultar la semana anterior.",
-              "Distingo lo que puede transferirse de lo que cambia por el contexto."
-            ]
+            context: "Escribes un informe y quieres dar tu propia opinión sobre el caso.",
+            q: "¿Qué frase eliges?",
+            options: [
+              "Según mí, la marca debería dar crédito al taller.",
+              "A mi juicio, la marca debería dar crédito al taller.",
+              "Según que yo, la marca debería dar crédito al taller.",
+            ],
+            answer: 1,
+            why: "Para la opinión propia, «a mi juicio» o «para mí».",
           },
           {
-            "prompt": "Recuperación de la semana 13 · Correo académico. Recupera el criterio de revisión y aplícalo a un párrafo propio. Contrasta el caso «Leer la letra de una convocatoria» con «La memoria tiene varias voces».",
-            "model": "Punto de contraste: Confío en que la carta sea suficiente. En el caso actual: En primer término, distingamos edificio y prácticas. La transferencia debe conservar el sentido pertinente y justificar cualquier cambio de registro.",
-            "checklist": [
-              "Recupero el recurso antes de consultar la semana anterior.",
-              "Distingo lo que puede transferirse de lo que cambia por el contexto."
-            ]
+            context: "Te dicen que el dato viene de otras personas, pero no sabes si es cierto.",
+            q: "¿Qué frase lo transmite?",
+            options: [
+              "Aparentemente, la marca ha ofrecido un acuerdo.",
+              "La marca ha ofrecido un acuerdo, vaya si lo ha ofrecido.",
+              "Al parecer, la marca ha ofrecido un acuerdo.",
+            ],
+            answer: 2,
+            why: "«Al parecer» indica que el dato viene de otros.",
+          },
+        ],
+      },
+      {
+        id: "c1-14-verbos",
+        type: "match",
+        prompt: "Relaciona cada verbo introductor con lo que hace la fuente.",
+        pairs: [
+          { left: "sostener", right: "mantiene su versión con insistencia" },
+          { left: "reconocer", right: "admite algo que no quería decir" },
+          { left: "desmentir", right: "declara falso algo que se ha dicho" },
+          { left: "matizar", right: "corrige un poco la información anterior" },
+          { left: "advertir que + subjuntivo", right: "da una orden o una instrucción" },
+          { left: "pretender que + indicativo", right: "afirma algo sin fundamento" },
+        ],
+      },
+      {
+        id: "c1-14-microescritura",
+        type: "open",
+        prompt: "Escribe dos piezas breves antes de la tarea de escritura.",
+        items: [
+          {
+            prompt: "Recuerda una discusión pública reciente (en tu ciudad, tu trabajo, una red social). Escribe 60–80 palabras que atribuyan la versión de cada parte con tres verbos de postura distintos, un «según» y una marca de distancia.",
+            model: "El ayuntamiento sostiene que el nuevo carril bici reducirá el tráfico, mientras que los comerciantes niegan que haya habido un estudio previo. Según la asociación de vecinos, se perdieron cuarenta plazas de aparcamiento. La concejala reconoció ayer que la consulta fue breve, aunque defendió el llamado «plan de movilidad sostenible» como la única opción posible.",
+            checklist: [
+              "Uso tres verbos de postura distintos con el modo correcto.",
+              "Atribuyo un dato con «según».",
+              "Incluyo una marca de distancia.",
+            ],
           },
           {
-            "prompt": "Recuperación de la semana 13 · Leer una convocatoria. Recupera la estrategia de lectura y localiza una inferencia apoyada y otra excesiva. Contrasta el caso «Leer la letra de una convocatoria» con «La memoria tiene varias voces».",
-            "model": "Punto de contraste: Confío en que la carta sea suficiente. En el caso actual: En primer término, distingamos edificio y prácticas. La transferencia debe conservar el sentido pertinente y justificar cualquier cambio de registro.",
-            "checklist": [
-              "Recupero el recurso antes de consultar la semana anterior.",
-              "Distingo lo que puede transferirse de lo que cambia por el contexto."
-            ]
-          }
-        ]
-      }
-    ]
+            prompt: "Escribe la reacción de una de las partes en 50–70 palabras, en registro oral, con al menos tres recursos de énfasis: uno de escala, uno ponderativo y una exclamación.",
+            model: "¿Que hubo consulta? ¡Si ni siquiera nos avisaron! Llevo veinte años con la tienda y nunca había visto algo así. No te imaginas lo difícil que es ahora que lleguen los proveedores. Hasta mis clientes de siempre se quejan. ¡Qué manera tan rara de ayudar al comercio!",
+            checklist: [
+              "Uso un recurso de escala, uno ponderativo y una exclamativa.",
+              "La concordancia de «lo… que» es correcta.",
+              "El registro es oral y coherente.",
+            ],
+          },
+        ],
+      },
+    ],
   },
-  "writing": {
-    "task": "Produce una síntesis jerarquizada de la ponencia y el ensayo para el equipo de obras; separa tesis, decisiones y asuntos pendientes, y añade una valoración propia claramente identificada.",
-    "context": "Produce primero tu versión sin consultar el modelo. Después compara organización, atribución, registro y alcance; el modelo ofrece una realización posible, no la única respuesta válida.",
-    "steps": [
-      "Selecciona las afirmaciones que cada fuente permite sostener y anota sus límites.",
-      "Organiza por problemas y decisiones; redacta sin copiar frases extensas del dossier.",
-      "Revisa atribución, registro, cohesión y alcance de los compromisos; justifica dos cambios."
+  writing: {
+    task: "Redacta una crónica (230–320 palabras) sobre una polémica real o inventada entre dos partes: una empresa y un barrio, un club y sus socios, un artista y una institución. Presenta la versión de cada parte con verbos de postura precisos, distingue los datos que has comprobado de los que solo transmites e incluye al menos una cita con énfasis de alguno de los protagonistas.",
+    context: "La crónica se publicará en la sección local de un diario digital. Los lectores conocen el conflicto por las redes sociales y quieren saber qué dice cada parte, qué es seguro y qué no, sin que el texto parezca un panfleto de ninguno de los dos lados.",
+    steps: [
+      "Haz una tabla con tres columnas: lo que dice una parte, lo que dice la otra y lo que tú has comprobado.",
+      "Elige un verbo de postura para cada afirmación (afirma, sostiene, reconoce, niega, matiza) y decide el modo que pide.",
+      "Redacta al menos tres párrafos: el conflicto, las dos versiones y lo que queda pendiente. Guarda el énfasis para las citas de los protagonistas.",
+      "Revisa la crónica: corrige el modo tras «negar» y «reconocer», comprueba que «según» no lleva «que» y que no hay marcas de distancia que revelen una postura que no quieres mostrar.",
     ],
-    "useLanguage": [
-      "Jerarquía de notas y variedades en contacto",
-      "patrimonio material",
-      "memoria en disputa",
-      "continuidad de usos",
-      "relato colectivo"
+    useLanguage: [
+      "afirma, sostiene, reconoce que + indicativo",
+      "niega que + subjuntivo; advierte que + indicativo / subjuntivo",
+      "según, en palabras de, a juicio de",
+      "al parecer, supuestamente, el llamado",
+      "ni siquiera, incluso, hasta",
+      "lo + adjetivo + que, ¡qué… tan…!, sí que",
     ],
-    "model": [
-      "La ponencia propone relacionar patrimonio material, usos sociales y relatos, evitando que una sola memoria represente a toda la comunidad. El ejemplo de la esquina muestra cómo un plano puede omitir una función cotidiana; no autoriza a sustituir toda decisión técnica por testimonios. Para el equipo de obras, recomiendo contrastar instrumentos de registro e incorporar desde el inicio las condiciones de permanencia. Mi valoración es que aplazar el debate sobre alquileres reduciría la participación efectiva, aunque el diseño físico siguiera abierto.",
-      "La escala material incluye fachadas, estructuras y objetos. La social atiende a actividades, vínculos y posibilidades de permanecer en el lugar. La narrativa examina cómo se interpreta la relación con el mercado. No son tres listas independientes: restaurar puede alterar usos y alquileres, mientras conservar una actividad puede exigir adaptaciones físicas. El equipo debería revisar cada decisión preguntando qué protege, qué transforma y quién experimenta el cambio. Las notas de la ponencia deben mantener esas relaciones, porque de ellas se deriva el procedimiento recomendado y no de una simple enumeración de dimensiones.",
-      "Entre las decisiones recogidas figuran conservar elementos estructurales relevantes, asegurar continuidad de actividades durante las obras y estudiar la participación de vendedores sin puesto fijo. El modelo de alquiler permanece abierto y no debería relegarse a un anexo. La ponente también advierte que un testimonio elocuente no representa necesariamente a toda la comunidad. Propone contrastar recuerdos y ampliar las vías de escucha para quienes no suelen intervenir en reuniones. Mi valoración favorable de ese método no implica aceptar todos los recuerdos como instrucciones de diseño: defiende que las prioridades se justifiquen después de escuchar diferencias, en vez de excluirlas por las categorías iniciales del formulario."
+    model: [
+      "Desde hace dos semanas, el mercado de abastos del barrio de San Antonio vive pendiente de un cartel. La empresa que gestiona el edificio anunció en marzo que los puestos cerrarán una hora antes a partir de mayo para abrir un espacio gastronómico por la noche. Según el anuncio, el cambio «revitalizará el mercado y atraerá a un público joven». Los comerciantes, en cambio, aseguran que nadie les consultó la decisión.",
+      "La gerente de la empresa sostiene que el horario se discutió en una reunión de enero, a la que, afirma, se convocó a todos los puestos. La asociación de comerciantes niega que esa reunión tratara del horario y reconoce, eso sí, que asistieron solo seis de los cuarenta titulares. Este diario ha podido consultar el acta de aquella reunión, y en ella no aparece ninguna mención al cierre anticipado. Al parecer, la empresa prepara ya un segundo comunicado.",
+      "Para los comerciantes más veteranos, el problema no es solo económico. «No sabes lo duro que es levantarse a las cinco y que te digan que estorbas por la tarde», dice Amparo Gil, que vende fruta desde hace treinta años. «Ni siquiera nos preguntaron. Hasta mis clientas se han enterado antes que yo». La abogada de la asociación advierte que no se firme ningún cambio de contrato hasta que la empresa presente un estudio de viabilidad. La reunión decisiva será el próximo martes, y ninguna de las dos partes se atreve a predecir el resultado.",
     ],
-    "checklist": [
-      "Cumplo el género, la finalidad y el destinatario de la consigna.",
-      "Integro lectura y escucha con atribución clara, sin yuxtaponer resúmenes.",
-      "Conservo condiciones e incertidumbres y distingo mi propuesta de las fuentes.",
-      "Uso léxico preciso y estructuras complejas con control.",
-      "Reviso cohesión, puntuación y adecuación antes de la versión final."
+    checklist: [
+      "Cada afirmación de las partes lleva un verbo de postura adecuado y el modo correcto.",
+      "Distingo lo que he comprobado de lo que solo transmito.",
+      "Las marcas de distancia son coherentes con la postura que quiero mostrar.",
+      "El énfasis aparece en las citas de los protagonistas, no en mi voz de cronista.",
+      "La crónica tiene al menos tres párrafos y termina con lo que queda pendiente.",
     ],
-    "words": [
-      240,
-      320
-    ]
+    words: [230, 320],
   },
-  "speaking": {
-    "intro": "Planifica con palabras clave, graba una primera versión y escucha dónde pierdes precisión. La calidad oral se revisa mediante autoevaluación y trabajo con tu docente.",
-    "tasks": [
+  speaking: {
+    intro: "Prepárate con palabras clave, no con un texto leído. Si te grabas, la grabación queda en tu dispositivo; el navegador no evalúa tu pronunciación.",
+    tasks: [
       {
-        "title": "Exposición razonada",
-        "prompt": "Resume la ponencia sin leer un texto completo; responde a una pregunta sobre alquileres y solicita una aclaración léxica respetuosa a un interlocutor de otra variedad.",
-        "prep": [
-          "Formula una tesis, dos apoyos y una reserva.",
-          "Decide qué detalle del audio añadirás sin leer la transcripción.",
-          "Prepara una pregunta que permita comprobar comprensión."
+        title: "Informar de una polémica en un pódcast",
+        prompt: "Presenta durante cuatro minutos, como si grabaras un pódcast de actualidad, la polémica de la greca o la de tu crónica. Cuenta qué dice cada parte con verbos precisos, señala qué está comprobado, reproduce con énfasis una cita de un protagonista y termina con tu opinión, claramente separada de la información.",
+        prep: [
+          "Anota tres verbos de postura distintos y el modo que pide cada uno.",
+          "Prepara una cita de un protagonista con «ni siquiera», «lo… que» o «vaya si».",
+          "Marca el paso a tu opinión con «a mi juicio» o «para mí».",
         ],
-        "seconds": 240,
-        "model": "La ponencia propone relacionar patrimonio material, usos sociales y relatos, evitando que una sola memoria represente a toda la comunidad. El ejemplo de la esquina muestra cómo un plano puede omitir una función cotidiana; no autoriza a sustituir toda decisión técnica por testimonios. Para el equipo de obras, recomiendo contrastar instrumentos de registro e incorporar desde el inicio las condiciones de permanencia. Mi valoración es que aplazar el debate sobre alquileres reduciría la participación efectiva, aunque el diseño físico siguiera abierto.",
-        "selfCheck": [
-          "Mantengo un hilo claro sin leer un texto completo.",
-          "Diferencio voces y calibro certeza.",
-          "Las pausas y el foco ayudan a comprender."
-        ]
-      },
-      {
-        "title": "Interacción y reparación",
-        "prompt": "Tu interlocutor sostiene: «Que toda reparación destruya necesariamente el patrimonio.» Pídele que precise su razón, concede lo defendible y responde con evidencia del dossier. Después cambia de papel y plantea esta reserva: «Que todas las memorias del mercado son equivalentes.»; corrígela sin humillar y negocia una formulación común.",
-        "prep": [
-          "Prepara una reformulación fiel de la postura ajena.",
-          "Decide qué condición no puedes aceptar y qué alternativa ofrecerás."
+        seconds: 240,
+        model: "Hoy hablamos de una greca. Una marca de moda lanzó la llamada «colección homenaje», y una familia de tejedoras de Oaxaca sostiene que el diseño es suyo. La empresa afirmó primero que el motivo era de dominio público; ayer reconoció que no consultó a nadie, aunque niega que sea una copia. Según los registros del municipio, la tejedora presentó ese diseño en 1987. Ella lo resume así: «Ni siquiera nos preguntaron». A mi juicio, más allá de los tribunales, dar crédito no cuesta nada.",
+        selfCheck: [
+          "Atribuyo cada dato a su fuente con el verbo y el modo adecuados.",
+          "Separo con claridad la información de mi opinión.",
+          "Pongo el énfasis en las citas, con el acento en lo destacado.",
         ],
-        "seconds": 240,
-        "selfCheck": [
-          "Respondo a la objeción real y pido aclaración cuando hace falta.",
-          "Reformulo una interpretación excesiva.",
-          "Cierro con acuerdo o desacuerdo delimitado."
-        ]
-      }
-    ]
-  },
-  "useInClass": {
-    "intro": "Lleva tu texto y tu grabación sobre «La memoria tiene varias voces». Pide que se examine una decisión lingüística concreta, no solo errores aislados.",
-    "cards": [
-      {
-        "move": "Defiende",
-        "task": "Resume la ponencia sin leer un texto completo; responde a una pregunta sobre alquileres y solicita una aclaración léxica respetuosa a un interlocutor de otra variedad.",
-        "phrases": [
-          "En primer término, distingamos edificio y prácticas.",
-          "Para concluir, relacionemos las tres escalas."
-        ]
       },
       {
-        "move": "Contrasta",
-        "task": "Compara con tu docente estas dos interpretaciones: Conservar el edificio mientras se excluye a quienes sostienen sus usos. / Que toda reparación destruya necesariamente el patrimonio. Señala un indicio y una condición que podrían cambiar tu lectura."
+        title: "Reaccionar ante un rumor",
+        prompt: "Un compañero te dice: «Dicen que la empresa va a cerrar tu departamento». Reacciona con sorpresa usando el «que» de eco, pregúntale de dónde ha salido el rumor, distingue lo que se dice de lo que se sabe y cuenta lo que tú sabes con énfasis.",
+        prep: [
+          "Prepara una reacción con «¿Que…?».",
+          "Ten a mano «¿según quién?», «al parecer» y «ni siquiera».",
+        ],
+        seconds: 150,
+        model: "¿Que van a cerrar mi departamento? ¿Según quién? Al parecer lo dijo alguien en la cafetería, pero eso no es una fuente. Yo sé que ayer la directora reconoció que habrá cambios, pero ni siquiera ha hablado de cierres. ¡Si acaban de contratar a dos personas!",
+        selfCheck: [
+          "Uso el «que» de eco con la entonación adecuada.",
+          "Pregunto por la fuente.",
+          "Distingo lo que se dice de lo que sé.",
+        ],
       },
-      {
-        "move": "Reformula",
-        "task": "Tu docente cambia el destinatario de tu texto sobre patrimonio material. Reorganiza oralmente el mensaje y explica qué términos mantienes, cuáles aclaras y qué reservas no puedes omitir."
-      }
     ],
-    "bring": "Borrador y versión revisada, esquema oral y una pregunta sobre alcance o registro."
   },
-  "quiz": {
-    "items": [
+  useInClass: {
+    intro: "Lleva a la próxima clase una noticia polémica y una lista de los verbos con que el periodista introduce cada voz.",
+    cards: [
       {
-        "type": "choice",
-        "q": "En una explicación de «La memoria tiene varias voces», ¿qué significa jerarquía de notas?",
-        "options": [
-          "orden que conserva tesis y apoyos",
-          "conversación organizada de varias voces",
-          "intervención capaz de afectar decisiones"
-        ],
-        "answer": 0,
-        "why": "orden que conserva tesis y apoyos"
+        move: "Atribuye",
+        task: "Cuenta a tu profesor una noticia polémica atribuyendo cada dato a su fuente; tu profesor te interrumpe preguntando «¿según quién?».",
+        phrases: ["Según…", "Reconoció que…, pero niega que…"],
       },
       {
-        "type": "listen",
-        "audio": "En sus notas, separen este ejemplo de la tesis general. El ejemplo de la esquina muestra una función omitida; la tesis sostiene que los instrumentos de registro condicionan lo que podemos proteger. La propuesta metodológica consiste en contrastarlos y revisar sus categorías. Si después explican la ponencia a un equipo de obras, no necesitan repetir cada historia. Sí necesitan conservar esa relación, porque de ella se deriva una forma distinta de preparar el proyecto y de justificar sus prioridades.",
-        "voice": "es-ES-f",
-        "q": "Escucha el cierre otra vez: ¿qué límite debes conservar al transmitir «La memoria tiene varias voces»?",
-        "options": [
-          "Que todas las memorias del mercado son equivalentes.",
-          "Que las diferencias de vocabulario imposibiliten cualquier acuerdo.",
-          "Cómo los instrumentos de registro condicionan lo que se protege."
-        ],
-        "answer": 2,
-        "why": "Cómo los instrumentos de registro condicionan lo que se protege."
+        move: "Enfatiza",
+        task: "Describe algo que te haya impresionado esta semana con tres recursos de énfasis distintos y pide a tu profesor que valore el registro de cada uno.",
+        phrases: ["No sabes lo… que…", "Hasta… / ni siquiera…"],
       },
       {
-        "type": "gap",
-        "q": "La ponente se refirió ___ las tres escalas.",
-        "answers": [
-          [
-            "a"
-          ]
-        ],
-        "hint": "Escribe solo la preposición regida por referirse.",
-        "why": "Referirse rige a."
+        move: "Distánciate",
+        task: "Lee un titular y reescríbelo dos veces: una que transmita sin comentar y otra que tome distancia con «supuestamente» o «el llamado».",
+        phrases: ["El llamado…", "Supuestamente…"],
       },
       {
-        "type": "open",
-        "prompt": "Introduce la reserva con dicho esto. Escribe solo la reformulación. En una intervención sobre «La memoria tiene varias voces» lees: «Hay diversidad, pero debemos decidir.» Se evalúa el sentido y el recurso solicitado, no la coincidencia literal.",
-        "model": "Hay diversidad; dicho esto, debemos decidir.",
-        "checklist": [
-          "Cumplo el recurso solicitado y conservo el sentido relevante.",
-          "Acepto alternativas naturales que mantengan tiempo, referencia y alcance."
-        ]
+        move: "Pregunta",
+        task: "Pregúntale a tu profesor qué intensificadores coloquiales se usan en su variedad y cuáles le suenan de otro país.",
+        phrases: ["¿Aquí se dice «la mar de»?", "¿Qué usarías tú?"],
       },
-      {
-        "type": "error",
-        "sentence": "La ponente se refirió sobre las tres escalas.",
-        "answers": [
-          "La ponente se refirió a las tres escalas."
-        ],
-        "why": "Referirse rige a."
-      },
-      {
-        "type": "open",
-        "prompt": "Prueba de transferencia de «La memoria tiene varias voces»: explica en 80–100 palabras por qué esta conclusión requiere matices: Que toda reparación destruya necesariamente el patrimonio.",
-        "model": "La ponencia propone relacionar patrimonio material, usos sociales y relatos, evitando que una sola memoria represente a toda la comunidad. El ejemplo de la esquina muestra cómo un plano puede omitir una función cotidiana; no autoriza a sustituir toda decisión técnica por testimonios. Para el equipo de obras, recomiendo contrastar instrumentos de registro e incorporar desde el inicio las condiciones de permanencia. Mi valoración es que aplazar el debate sobre alquileres reduciría la participación efectiva, aunque el diseño físico siguiera abierto.",
-        "checklist": [
-          "Identifico el exceso de la afirmación.",
-          "Cito una evidencia y conservo una reserva."
-        ]
-      },
-      {
-        "type": "open",
-        "prompt": "Graba una respuesta de 90 segundos a esta demanda sobre «La memoria tiene varias voces»: «Dinos una solución definitiva y sin condiciones». Justifica por qué tu respuesta necesita límites.",
-        "model": "La conclusión debe conservar este límite: Cómo los instrumentos de registro condicionan lo que se protege.",
-        "checklist": [
-          "Respondo de manera directa.",
-          "Distingo decisión, condición e incertidumbre."
-        ]
-      },
-      {
-        "type": "open",
-        "prompt": "Audita tu producción de «La memoria tiene varias voces»: señala una elección de jerarquía de notas y variedades en contacto y reescribe un pasaje para otro destinatario.",
-        "model": "Decisión que puedes explicar: En primer término, distingamos edificio y prácticas. Reformulación para contrastar: Dicho esto, la diversidad no impide decidir.",
-        "checklist": [
-          "Explico un cambio de sentido o registro.",
-          "Conservo hechos y atribuciones."
-        ]
-      }
-    ]
-  },
-  "complete": {
-    "canNow": [
-      "Puedo usar jerarquía de notas y variedades en contacto para intervenir con precisión.",
-      "Puedo explicar el caso de Oaxaca integrando fuentes y reservas.",
-      "Puedo sostener una exposición y responder a objeciones sin perder el hilo."
     ],
-    "review": [
-      "Dentro de dos días, reconstruye de memoria la diferencia central: Cómo los instrumentos de registro condicionan lo que se protege.",
-      "Dentro de una semana, reutiliza patrimonio material y jerarquía de notas en otro caso; comprueba su colocación.",
-      "Reescucha tu grabación y revisa este recurso: Variedades y organización de una ponencia."
-    ]
-  }
+    bring: "Tu noticia con los verbos subrayados, la crónica revisada y, si quieres, la grabación del pódcast.",
+  },
+  quiz: {
+    items: [
+      {
+        type: "choice",
+        q: "«Not even» en «They didn't even call us» se dice…",
+        options: ["Incluso no nos llamaron.", "Hasta no nos llamaron.", "Ni siquiera nos llamaron."],
+        answer: 2,
+        why: "El mínimo de la escala se expresa con «ni siquiera».",
+      },
+      {
+        type: "choice",
+        q: "¿Qué frase atribuye un dato, no una opinión?",
+        options: [
+          "Según el catastro, el taller ocupa doscientos metros.",
+          "Para la tejedora, el diseño es parte de su familia.",
+          "A juicio de la abogada, el caso es fuerte.",
+        ],
+        answer: 0,
+        why: "«Según» presenta datos; «para» y «a juicio de», opiniones.",
+      },
+      {
+        type: "listen",
+        q: "Escucha. ¿Qué hace la portavoz, según la frase?",
+        options: [
+          "Admite algo a su pesar.",
+          "Rechaza una acusación.",
+          "Da una orden.",
+        ],
+        answer: 1,
+        why: "«Negó que…» + subjuntivo: rechazo.",
+        audio: "La portavoz negó que la empresa hubiera recibido ninguna queja antes de lanzar la colección.",
+        voice: "es-ES-f",
+      },
+      {
+        type: "gap",
+        q: "Me impresionó lo ___ (paciente) que es doña Rufina con sus nietas.",
+        answers: [["paciente"]],
+        hint: "El adjetivo concuerda con la persona de la que se habla; «paciente» no cambia en femenino.",
+        why: "«Lo + adjetivo + que» con el adjetivo concordado e indicativo.",
+      },
+      {
+        type: "gap",
+        q: "La abogada advirtió que nadie ___ (hablar) con la prensa hasta el lunes.",
+        answers: [["hablara", "hablase"]],
+        hint: "Aquí «advertir que» funciona como una orden, en pasado: piensa en el modo.",
+        why: "«Advertir que» + subjuntivo da una instrucción; marco pasado, imperfecto de subjuntivo.",
+      },
+      {
+        type: "error",
+        sentence: "Según mí, el acuerdo llegará pronto.",
+        answers: ["Para mí, el acuerdo llegará pronto.", "A mi juicio, el acuerdo llegará pronto."],
+        why: "«Según» no va con «mí»; la opinión propia se marca con «para mí» o «a mi juicio».",
+      },
+      {
+        type: "error",
+        sentence: "Es un trabajo muy finísimo.",
+        answers: ["Es un trabajo finísimo.", "Es un trabajo muy fino."],
+        why: "«-ísimo» no admite «muy».",
+      },
+      {
+        type: "order",
+        words: ["Hasta", "los", "turistas", "notaron", "lo", "parecidas", "que", "eran."],
+        why: "«Hasta» de escala y «lo + adjetivo + que» con concordancia.",
+      },
+      {
+        type: "open",
+        prompt: "Escribe en 60–80 palabras una noticia breve sobre un desacuerdo entre una escuela y las familias de sus alumnos. Usa «según», un verbo de rechazo con subjuntivo, un verbo de reconocimiento con indicativo y una cita con un recurso de énfasis.",
+        model: "Según la dirección del colegio, el comedor dejará de ofrecer menú vegetariano en septiembre. La asociación de familias niega que se haya consultado a nadie, y la directora reconoció ayer que la decisión se tomó en julio, sin reunión previa. «Ni siquiera nos mandaron un correo», lamenta Lucía Ortega, madre de dos alumnos. La asociación pedirá una reunión urgente.",
+        checklist: [
+          "Uso «según» con un dato.",
+          "«Negar que» va con subjuntivo y «reconocer que» con indicativo.",
+          "El énfasis aparece en una cita, no en mi voz.",
+        ],
+      },
+    ],
+  },
+  complete: {
+    canNow: [
+      "Sitúo un hecho en el extremo de una escala con incluso, hasta, aun, ni siquiera y ni un.",
+      "Pondero un grado con lo + adjetivo + que y la de… que, y afirmo con fuerza con sí que y vaya si, eligiendo el registro.",
+      "Elijo el verbo introductor que refleja la postura de la fuente y el modo que pide.",
+      "Atribuyo datos y opiniones con según, para, a juicio de, y me distancio con supuestamente, el llamado o al parecer.",
+    ],
+    review: [
+      "Dentro de dos días, tapa la tabla «Un mismo dato, tres posturas» y reescribe una noticia del día con tres verbos distintos.",
+      "Dentro de una semana, escucha una entrevista y apunta tres recursos de énfasis y el registro de cada uno.",
+      "En la próxima clase, lee tu crónica y pide a tu profesor que señale dónde se nota tu postura.",
+    ],
+  },
+  related: [
+    { path: "/gramatica/intensificacion-y-enfasis-ni-siquiera-incluso", label: "Clase: Intensificación y énfasis: ni siquiera, incluso, vaya si" },
+    { path: "/gramatica/polifonia-y-atribucion-segun-supuestamente-se", label: "Clase: Polifonía y atribución: según, supuestamente, se dice" },
+  ],
 };
