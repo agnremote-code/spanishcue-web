@@ -29,6 +29,7 @@ import GoogleAnalytics from "./marketing/GoogleAnalytics";
 import { FreeLessonConversionBar } from "./marketing/MarketingSections";
 import FreeVersionBar from "./marketing/FreeVersionBar";
 import FreeLessonRegistrationGate from "./marketing/FreeLessonRegistrationGate";
+import { demoGateLesson } from "./marketing/demo-gate";
 import { audienceFromAccess, primaryCtaFor } from "./marketing/cta-state";
 import CookieConsent from "./privacy/CookieConsent";
 import AskBauti from "./bauti/AskBauti";
@@ -121,6 +122,10 @@ export default async function RootLayout({
           <CookieConsent />
           {freeLesson && currentLesson && !signedIn && (
             <FreeLessonRegistrationGate lessonId={currentLesson.id} lessonTitle={currentLesson.title} />
+          )}
+          {/* The free 3D demos ask for a free account after the same 30 s sample, so ad visitors become contacts. */}
+          {!currentLesson && !signedIn && !fullAccess && demoGateLesson(pathname) && (
+            <FreeLessonRegistrationGate {...demoGateLesson(pathname)!} />
           )}
           {freeLesson && currentLesson && !fullAccess && (
             <FreeLessonConversionBar

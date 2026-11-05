@@ -1,6 +1,7 @@
 import "./landing-offer.test.mjs";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
+import { readFileSync } from "node:fs";
 import test from "node:test";
 import { build } from "esbuild";
 import {
@@ -183,4 +184,12 @@ test("public conversion routes keep every required client entry public", async (
     "app/privacy/GoogleConsentMode.tsx",
     "app/verbal-system/SystemHub.tsx",
   ]) assert.match(protection, new RegExp(`['\"]${entry.replaceAll("/", "\\/")}['\"]`));
+});
+
+test("free 3D demos ask for a free account after the sample, like free lessons", () => {
+  const layout = readFileSync("app/layout.tsx", "utf8");
+  const gate = readFileSync("app/marketing/demo-gate.ts", "utf8");
+  assert.match(layout, /!currentLesson && !signedIn && !fullAccess && demoGateLesson\(pathname\)/);
+  assert.match(gate, /"\/demo\/noche-abierta": \{ lessonId: 223/);
+  assert.match(gate, /"\/demo\/hospital-san-casi-vivo": \{ lessonId: 240/);
 });
