@@ -190,7 +190,7 @@
 .mw-where-to { position: absolute; left: 16px; top: 96px; z-index: 3; width: min(340px, calc(100% - 32px)); max-height: calc(100% - 130px); overflow: auto; padding: .8rem; border-radius: 12px; background: rgba(250,248,243,.96); color: var(--ink); box-shadow: 0 12px 34px rgba(0,0,0,.28); }
 .mw-where-to header { display: flex; justify-content: space-between; align-items: center; }
 .mw-where-to h2 { margin: 0; font-size: 1.15rem; color: var(--navy); }
-.mw-where-to header button { width: 30px; height: 30px; border: 0; border-radius: 50%; background: transparent; color: var(--muted); font-size: 1.3rem; cursor: pointer; }
+.mw-where-to header button { width: 40px; height: 40px; margin: -5px -5px -5px 0; border: 0; border-radius: 50%; background: transparent; color: var(--muted); font-size: 1.3rem; cursor: pointer; }
 .mw-where-to p { margin: .3rem 0 .6rem; color: var(--muted); font-size: .8rem; line-height: 1.35; }
 .mw-where-to ol { display: grid; gap: .4rem; margin: 0; padding: 0; list-style: none; }
 .mw-where-to li button { display: grid; gap: .15rem; width: 100%; padding: .55rem .7rem .55rem .85rem; border: 1px solid var(--line); border-left: 6px solid var(--tint); border-radius: 9px; background: #fff; color: var(--ink); text-align: left; cursor: pointer; }
