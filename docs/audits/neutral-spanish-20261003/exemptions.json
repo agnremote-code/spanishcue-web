@@ -13374,6 +13374,36 @@
       "text": "Puedo proponer, aceptar o declinar con cortesía el paso al tú o al vos y mantener después el trato elegido.",
       "reason": "Autoestudio espejo (2026-11-05): regional voseo shown and explained as variation in a dialogue, example or objective (or the name Tomás); instructions stay in tú.",
       "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/objective-topics.ts",
+      "text": "Variantes tú, vos, usted, ustedes y vosotros",
+      "reason": "Autoestudio espejo (2026-11-05): regional voseo shown and explained as variation in a dialogue, example or objective (or the name Tomás); instructions stay in tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/objective-topics.ts",
+      "text": "Entonación de las preguntas de sí o no y acento de vos",
+      "reason": "Autoestudio espejo (2026-11-05): regional voseo shown and explained as variation in a dialogue, example or objective (or the name Tomás); instructions stay in tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/objective-topics.ts",
+      "text": "Imperativo afirmativo: tú, vos, usted",
+      "reason": "Autoestudio espejo (2026-11-05): regional voseo shown and explained as variation in a dialogue, example or objective (or the name Tomás); instructions stay in tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/objective-topics.ts",
+      "text": "La fuerza en el imperativo de tú, vos y usted",
+      "reason": "Autoestudio espejo (2026-11-05): regional voseo shown and explained as variation in a dialogue, example or objective (or the name Tomás); instructions stay in tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/objective-topics.ts",
+      "text": "Acento de las formas de vos",
+      "reason": "Autoestudio espejo (2026-11-05): regional voseo shown and explained as variation in a dialogue, example or objective (or the name Tomás); instructions stay in tú.",
+      "category": "regional-pedagogy"
     }
   ]
 }

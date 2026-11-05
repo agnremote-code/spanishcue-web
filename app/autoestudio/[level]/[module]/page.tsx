@@ -7,7 +7,7 @@ import { isFreeAutoestudioModule, modulePath } from "../../access";
 import { moduleClips } from "../../curriculum/audio-clips";
 import { findModuleSummary, loadModule, neighbours } from "../../curriculum/course";
 import { levelMeta } from "../../curriculum/levels";
-import { objectiveById } from "../../curriculum/objectives";
+import { objectiveTopics } from "../../curriculum/objective-topics";
 import { shareSessionFromHeaders } from "../../session-display";
 import ModulePlayer from "../../ModulePlayer";
 import audioManifest from "../../audio-manifest.json";
@@ -49,8 +49,8 @@ export default async function Page({ params }: { params: Promise<{ level: string
 
   const { previous, next } = neighbours(mod);
   const objectives = [
-    ...mod.newObjectives.map((id) => ({ id, topic: objectiveById.get(id)?.topic ?? id, isNew: true })),
-    ...mod.reviewObjectives.map((id) => ({ id, topic: objectiveById.get(id)?.topic ?? id, isNew: false })),
+    ...mod.newObjectives.map((id) => ({ id, topic: objectiveTopics[id] ?? id, isNew: true })),
+    ...mod.reviewObjectives.map((id) => ({ id, topic: objectiveTopics[id] ?? id, isNew: false })),
   ];
   const related = mod.related ?? [];
   const recorded = (audioManifest as { clips: Record<string, string> }).clips;
