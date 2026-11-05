@@ -1,492 +1,902 @@
 import type { Module } from "../../types";
 
+/**
+ * B1 · semana 6 · Autoestudio espejo de G097 (perfecto de subjuntivo) y G098
+ * (temporales futuras con cuando, en cuanto, hasta que). Repaso autónomo con una
+ * compañía de teatro independiente de Buenos Aires la semana del estreno.
+ */
 export const b1w06: Module = {
   "id": "b1-06",
   "level": "b1",
   "week": 6,
   "kind": "core",
-  "title": "Antes de compartir la noticia",
-  "subtitle": "Opinar, expresar duda y distinguir una afirmación de una valoración.",
+  "title": "Noche de estreno: lo que ya pasó y lo que pasará",
+  "subtitle": "Repaso del perfecto de subjuntivo («haya + participio») para valorar lo ocurrido y de «cuando», «en cuanto» y «hasta que» con subjuntivo para hablar del futuro.",
   "stop": {
     "place": "Buenos Aires",
     "country": "Argentina"
   },
   "minutes": 95,
   "newObjectives": [
-    "b1.gram.opinion-subjuntivo",
-    "b1.gram.valoracion",
-    "b1.voc.medios-redes",
-    "b1.pron.duda-certeza",
-    "b1.fun.opinar-matizar",
-    "b1.read.articulo-opinion",
-    "b1.gram.demostrativos-discurso"
+    "b1.gram.g097",
+    "b1.gram.g098",
+    "b1.voc.w06-teatro-estreno",
+    "b1.pron.w06-h-muda-enlace",
+    "b1.lis.w06-ensayo-general",
+    "b1.read.w06-bitacora-compania",
+    "b1.wri.w06-mensaje-elenco",
+    "b1.spk.w06-arenga-preguntas",
+    "b1.fun.w06-valorar-coordinar",
+    "b1.disc.w06-secuencia-pasos"
   ],
-  "reviewObjectives": [
-    "b1.rev.checkpoint-1",
-    "b1.lis.podcast-consejos"
-  ],
-  "prerequisites": [
-    "b1-05"
-  ],
+  "reviewObjectives": [],
+  "prerequisites": [],
   "goal": {
-    "canDo": "Puedo opinar, expresar duda y distinguir una afirmación de una valoración.",
+    "canDo": "Al final de esta semana puedes reaccionar a lo que tu equipo ya ha hecho («me alegra que hayan…», «dudo que haya…») y organizar lo que pasará después con «cuando», «en cuanto», «hasta que» y «antes de que».",
     "steps": [
-      "Reconstruye la situación a partir del audio y la lectura.",
-      "Relaciona las formas con una intención y comprueba tus elecciones.",
-      "Prepara un texto revisado y una intervención con preguntas.",
-      "Lleva a clase una propuesta propia y una duda concreta."
+      "Repasa cómo se forma «haya + participio» y cuándo lo eliges en lugar de «ha + participio» o del presente de subjuntivo.",
+      "Repasa las oraciones temporales: subjuntivo si la acción todavía no ha ocurrido, indicativo para costumbres y para el pasado.",
+      "Escucha a una directora y a su equipo al terminar el ensayo general en un teatro de Buenos Aires.",
+      "Lee la bitácora de la compañía y fíjate en cómo valora la semana y anuncia los pasos siguientes.",
+      "Escribe un mensaje al elenco, revísalo y graba una arenga antes de la función."
     ]
   },
   "theory": {
-    "intro": "La misión de esta semana: Opinar, expresar duda y distinguir una afirmación de una valoración.",
+    "intro": "En clase viste estas dos estructuras con tu profesor. Aquí las repasas de otra manera, con una compañía de teatro de Buenos Aires que estrena una obra el sábado: primero miras hacia atrás (lo que ya han hecho) y después hacia delante (lo que harán cuando llegue el día).",
     "parts": [
       {
-        "heading": "Forma y significado",
+        "heading": "«Haya + participio»: la forma",
         "body": [
-          "Creo que y es verdad que presentan información como afirmada y suelen llevar indicativo. No creo que, es posible que y dudo que introducen aquí subjuntivo. La selección depende de cómo presentas el contenido, no de que una noticia sea verdadera en el mundo."
+          "El perfecto de subjuntivo se construye igual que el perfecto de indicativo, pero con el auxiliar «haber» en presente de subjuntivo: haya, hayas, haya, hayamos, hayáis, hayan. El participio va detrás y no cambia nunca, ni en género ni en número.",
+          "Los participios irregulares son los mismos de siempre: hecho, dicho, visto, puesto, escrito, vuelto, abierto, roto. Entre «haya» y el participio no se pone nada: «que ya haya terminado», «que no lo haya visto»."
         ],
+        "table": {
+          "caption": "Perfecto de subjuntivo de tres verbos",
+          "head": [
+            "Persona",
+            "ensayar",
+            "vender",
+            "poner"
+          ],
+          "rows": [
+            [
+              "yo",
+              "haya ensayado",
+              "haya vendido",
+              "haya puesto"
+            ],
+            [
+              "tú",
+              "hayas ensayado",
+              "hayas vendido",
+              "hayas puesto"
+            ],
+            [
+              "él / ella / usted",
+              "haya ensayado",
+              "haya vendido",
+              "haya puesto"
+            ],
+            [
+              "nosotros / nosotras",
+              "hayamos ensayado",
+              "hayamos vendido",
+              "hayamos puesto"
+            ],
+            [
+              "vosotros / vosotras",
+              "hayáis ensayado",
+              "hayáis vendido",
+              "hayáis puesto"
+            ],
+            [
+              "ellos / ellas / ustedes",
+              "hayan ensayado",
+              "hayan vendido",
+              "hayan puesto"
+            ]
+          ]
+        },
+        "mistakes": [
+          {
+            "wrong": "Me alegra que las actrices hayan llegadas temprano.",
+            "right": "Me alegra que las actrices hayan llegado temprano.",
+            "why": "Con «haber» el participio es invariable: no concuerda con «las actrices»."
+          },
+          {
+            "wrong": "No creo que el técnico haya ponido las luces.",
+            "right": "No creo que el técnico haya puesto las luces.",
+            "why": "El participio de «poner» es irregular: «puesto»."
+          }
+        ],
+        "tip": "Si sabes decir «han vendido», ya sabes decir «hayan vendido»: solo cambia el auxiliar."
+      },
+      {
+        "heading": "Mirar hacia atrás desde ahora: reacción, duda y posibilidad",
+        "body": [
+          "Usas «haya + participio» cuando el verbo principal pide subjuntivo (una emoción, una valoración, una duda o una posibilidad) y la acción de la que hablas ya ha ocurrido, o pudo ocurrir, antes de este momento. La reacción es de ahora; el hecho es anterior.",
+          "Compara tres frases. «Han vendido todas las entradas» afirma un hecho. «Qué bien que hayan vendido todas las entradas» reacciona a ese hecho ya ocurrido. «Ojalá vendan todas las entradas» mira hacia una acción futura: por eso usa el presente de subjuntivo."
+        ],
+        "table": {
+          "caption": "¿Qué forma eliges?",
+          "head": [
+            "Lo que haces",
+            "Forma",
+            "Ejemplo"
+          ],
+          "rows": [
+            [
+              "Afirmas un hecho anterior",
+              "ha + participio",
+              "Sé que el escenógrafo ha terminado el decorado."
+            ],
+            [
+              "Reaccionas a un hecho anterior",
+              "haya + participio",
+              "Me encanta que el escenógrafo haya terminado el decorado."
+            ],
+            [
+              "Dudas de un hecho anterior",
+              "haya + participio",
+              "No creo que el escenógrafo haya terminado el decorado."
+            ],
+            [
+              "Ves posible un hecho anterior",
+              "haya + participio",
+              "Puede que el escenógrafo haya terminado el decorado."
+            ],
+            [
+              "Hablas de algo aún futuro",
+              "presente de subjuntivo",
+              "Espero que el escenógrafo termine el decorado."
+            ]
+          ]
+        },
         "examples": [
           {
-            "es": "Creo que la noticia necesita una fecha."
+            "es": "Es una pena que el músico no haya podido venir al ensayo.",
+            "note": "Reacción a algo que ya no ocurrió."
           },
           {
-            "es": "No creo que esa imagen sea reciente."
+            "es": "Dudo que los críticos hayan visto la obra completa.",
+            "note": "Duda sobre un hecho pasado."
           },
           {
-            "es": "Es posible que falte una parte del mensaje."
+            "es": "Es posible que alguien se haya llevado la llave del camarín.",
+            "note": "Hipótesis sobre lo que pasó."
           }
         ],
         "mistakes": [
           {
-            "wrong": "No creo que es una prueba suficiente.",
-            "right": "No creo que sea una prueba suficiente.",
-            "why": "La opinión negada introduce subjuntivo en este uso."
+            "wrong": "Me alegra que has venido al estreno.",
+            "right": "Me alegra que hayas venido al estreno.",
+            "why": "Después de una reacción como «me alegra que», el verbo va en subjuntivo; «has venido» solo afirma."
+          },
+          {
+            "wrong": "Qué bien que vengas ayer.",
+            "right": "Qué bien que hayas venido ayer.",
+            "why": "Si la acción ya ocurrió, el presente de subjuntivo no sirve: necesitas «haya + participio»."
           }
         ]
       },
       {
-        "heading": "Organizar la comunicación",
+        "heading": "«Cuando» con futuro: subjuntivo; con costumbre o pasado: indicativo",
         "body": [
-          "Antes de compartir algo, identifica quién lo publicó, cuándo y con qué prueba. Puedes aceptar una parte y matizar otra: es verdad que facilita el contacto, pero no creo que sustituya una conversación. Una opinión razonada necesita un ejemplo y puede reconocer una limitación."
+          "Después de «cuando», el verbo va en subjuntivo si la acción todavía no ha pasado. La otra parte de la frase puede estar en futuro, en presente, con «ir a» o en imperativo, pero lo que va detrás de «cuando» nunca va en futuro.",
+          "Si hablas de una costumbre o de algo que ya pasó, usas indicativo: «cuando termina la función, cenamos todos juntos» (siempre), «cuando terminó la función, cenamos» (ayer). En las preguntas, «¿cuándo…?» sí admite el futuro: «¿cuándo estrenarán?»."
         ],
-        "examples": [
+        "table": {
+          "caption": "El mismo «cuando», tres tiempos",
+          "head": [
+            "Momento",
+            "Detrás de «cuando»",
+            "Ejemplo"
+          ],
+          "rows": [
+            [
+              "Futuro",
+              "presente de subjuntivo",
+              "Cuando suba el telón, apaga el móvil."
+            ],
+            [
+              "Costumbre",
+              "presente de indicativo",
+              "Cuando sube el telón, siempre me tiemblan las piernas."
+            ],
+            [
+              "Pasado",
+              "pretérito indefinido",
+              "Cuando subió el telón, el público se quedó en silencio."
+            ]
+          ]
+        },
+        "mistakes": [
           {
-            "es": "Es verdad que el vídeo circula mucho."
+            "wrong": "Cuando llegarás al teatro, busca la puerta de artistas.",
+            "right": "Cuando llegues al teatro, busca la puerta de artistas.",
+            "why": "Detrás de «cuando» no se usa el futuro, aunque la acción sea futura."
           },
           {
-            "es": "Desde mi punto de vista, conviene esperar."
-          },
-          {
-            "es": "Puede ser útil, aunque no demuestra todo."
+            "wrong": "Cuando llegas mañana, te doy la entrada.",
+            "right": "Cuando llegues mañana, te doy la entrada.",
+            "why": "«Mañana» indica una acción que aún no ha ocurrido: subjuntivo."
           }
-        ]
+        ],
+        "tip": "Pregúntate: ¿esto ya pasó o pasa siempre? Si la respuesta es «todavía no», pon subjuntivo detrás de «cuando»."
       },
       {
-        "heading": "Demostrativos y referencia en el discurso",
+        "heading": "En cuanto, hasta que, mientras, antes de que, después de que",
         "body": [
-          "Esto, eso y aquello pueden recuperar una situación o un enunciado completo, no solo señalar objetos. El lector debe saber a qué remiten: compartieron una foto sin fecha; eso causó confusión. Este aviso modifica un nombre; esto funciona sin nombre. Si hay dos antecedentes posibles, repite el nombre o reformula."
+          "Estos conectores funcionan como «cuando»: con una acción futura llevan subjuntivo y con una costumbre o un hecho pasado llevan indicativo. «En cuanto» marca que algo ocurre justo después; «hasta que», el final de una acción; «mientras», dos acciones al mismo tiempo.",
+          "«Antes de que» lleva siempre subjuntivo, incluso en pasado. Si las dos partes de la frase tienen el mismo sujeto, se usa el infinitivo: «antes de salir a escena, respiro hondo», no «antes de que yo salga»."
         ],
         "examples": [
           {
-            "es": "El vídeo no tiene fecha; eso limita su utilidad."
+            "es": "En cuanto se apaguen las luces de la sala, empieza la música."
           },
           {
-            "es": "Esto es lo que sabemos: el cartel menciona obras."
+            "es": "Nadie se mueve del escenario hasta que baje el telón."
           },
           {
-            "es": "Estos otros mensajes sí incluyen un enlace."
+            "es": "Mientras el público entre, los actores esperarán detrás del decorado."
+          },
+          {
+            "es": "Revisa el vestuario antes de que lleguen los actores."
+          },
+          {
+            "es": "Después de saludar, saldremos todos por la puerta lateral.",
+            "note": "Mismo sujeto («nosotros»): infinitivo."
+          }
+        ],
+        "mistakes": [
+          {
+            "wrong": "Antes de que el público entra, cierra el telón.",
+            "right": "Antes de que el público entre, cierra el telón.",
+            "why": "«Antes de que» pide siempre subjuntivo."
+          },
+          {
+            "wrong": "Voy a repasar la letra antes de que yo salga a escena.",
+            "right": "Voy a repasar la letra antes de salir a escena.",
+            "why": "El sujeto es el mismo en las dos partes: se usa «antes de» + infinitivo."
           }
         ]
       }
     ]
   },
   "grammar": {
+    "intro": "Primero practicas la forma y el valor de «haya + participio»; después, el modo detrás de los conectores temporales.",
     "exercises": [
       {
-        "id": "b1-06-forms",
+        "id": "b1-06-gramatica-forma-perfecto",
         "type": "gap",
-        "prompt": "Completa estas situaciones de «Antes de compartir la noticia» con la forma que expresa la relación indicada.",
+        "title": "Forma el perfecto de subjuntivo",
+        "prompt": "Completa con «haya + participio» del verbo entre paréntesis.",
         "items": [
           {
-            "q": "No creo que el autor ___ todos los datos.",
+            "q": "Qué bien que (tú) ___ el guion de memoria tan rápido. (aprender)",
             "answers": [
               [
-                "tenga"
+                "hayas aprendido"
               ]
             ],
-            "why": "Relaciona la forma con la intención y el contexto temporal de la oración."
+            "why": "«Tú» → «hayas» + participio regular en -ido."
           },
           {
-            "q": "Es posible que la foto ___ antigua.",
+            "q": "Me sorprende que los vecinos no ___ por el ruido del ensayo. (quejarse)",
             "answers": [
               [
-                "sea"
+                "se hayan quejado"
               ]
             ],
-            "why": "Relaciona la forma con la intención y el contexto temporal de la oración."
+            "why": "El pronombre va delante del auxiliar: «se hayan quejado»."
           },
           {
-            "q": "Creo que el aviso ___ incompleto.",
+            "q": "No creo que Julián ___ el decorado sin ayuda. (hacer)",
             "answers": [
               [
-                "está"
+                "haya hecho"
               ]
             ],
-            "why": "Relaciona la forma con la intención y el contexto temporal de la oración."
+            "why": "Participio irregular: «hecho»."
+          },
+          {
+            "q": "Puede que (nosotros) ___ la escalera de emergencia sin querer. (romper)",
+            "answers": [
+              [
+                "hayamos roto"
+              ]
+            ],
+            "why": "Participio irregular: «roto»."
+          },
+          {
+            "q": "Es una pena que la prensa no ___ al ensayo abierto. (volver)",
+            "answers": [
+              [
+                "haya vuelto"
+              ]
+            ],
+            "why": "Participio irregular: «vuelto»."
+          },
+          {
+            "q": "¿Les molesta que (yo) ___ sus nombres en el programa? (escribir)",
+            "answers": [
+              [
+                "haya escrito"
+              ]
+            ],
+            "why": "«Yo» → «haya» + «escrito», irregular."
           }
-        ],
-        "bank": [
-          "tenga",
-          "sea",
-          "está"
         ]
       },
       {
-        "id": "b1-06-repair",
+        "id": "b1-06-gramatica-valor-perfecto",
+        "type": "context",
+        "title": "¿Ya pasó, pasará o lo afirmas?",
+        "prompt": "Lee la situación y elige la forma adecuada.",
+        "items": [
+          {
+            "context": "La actriz principal acaba de entrar en el teatro después de dos días enferma.",
+            "q": "La directora le dice: «¡Qué alegría que ___!».",
+            "options": [
+              "vuelvas",
+              "hayas vuelto",
+              "has vuelto"
+            ],
+            "answer": 1,
+            "why": "Ella ya está aquí y la directora reacciona ahora: «hayas vuelto»."
+          },
+          {
+            "context": "Es miércoles. El estreno es el sábado y todavía quedan entradas.",
+            "q": "El productor dice: «Ojalá ___ todas antes del sábado».",
+            "options": [
+              "se vendan",
+              "se hayan vendido",
+              "se han vendido"
+            ],
+            "answer": 0,
+            "why": "La venta es futura: presente de subjuntivo."
+          },
+          {
+            "context": "El iluminador revisó la consola hace una hora y te lo confirma por mensaje.",
+            "q": "Tú le dices a la directora: «Ya está: Bruno ___ la consola».",
+            "options": [
+              "revise",
+              "haya revisado",
+              "ha revisado"
+            ],
+            "answer": 2,
+            "why": "Afirmas un hecho que sabes: perfecto de indicativo."
+          },
+          {
+            "context": "Falta el sombrero del segundo acto y nadie sabe dónde está.",
+            "q": "Alguien sugiere: «Es posible que lo ___ en el camarín».",
+            "options": [
+              "hayan dejado",
+              "han dejado",
+              "dejen"
+            ],
+            "answer": 0,
+            "why": "Posibilidad sobre algo que pudo pasar antes: «hayan dejado»."
+          }
+        ]
+      },
+      {
+        "id": "b1-06-gramatica-modo-temporal",
+        "type": "classify",
+        "title": "¿Futuro, costumbre o pasado?",
+        "prompt": "Clasifica cada frase según el tiempo del que habla la oración temporal.",
+        "categories": [
+          "Acción futura: subjuntivo",
+          "Costumbre o pasado: indicativo"
+        ],
+        "items": [
+          {
+            "text": "En cuanto termine el primer acto, cambiaremos la escenografía.",
+            "cat": 0
+          },
+          {
+            "text": "Cuando salgo a escena, nunca miro a la primera fila.",
+            "cat": 1
+          },
+          {
+            "text": "Esperaremos en la sala hasta que llegue el último actor.",
+            "cat": 0
+          },
+          {
+            "text": "Cuando terminó la función, el elenco salió a saludar tres veces.",
+            "cat": 1
+          },
+          {
+            "text": "Mientras el público aplaude, las luces suben despacio.",
+            "cat": 1
+          },
+          {
+            "text": "Después de que se vaya el público, recogeremos las sillas.",
+            "cat": 0
+          }
+        ]
+      },
+      {
+        "id": "b1-06-gramatica-errores-temporales",
         "type": "error",
-        "prompt": "Revisa la coherencia y la forma en estas frases del caso de la semana.",
+        "title": "Corrige el conector",
+        "prompt": "Cada frase tiene un error en la oración temporal. Escríbela bien.",
         "items": [
           {
-            "sentence": "No creo que es una prueba suficiente.",
+            "sentence": "En cuanto abrirán la taquilla, compraré dos entradas.",
             "answers": [
-              "No creo que sea una prueba suficiente."
+              "En cuanto abran la taquilla, compraré dos entradas."
             ],
-            "why": "La opinión negada introduce subjuntivo en este uso."
+            "why": "Detrás de «en cuanto» con valor futuro va el subjuntivo, no el futuro."
           },
           {
-            "sentence": "Es posible que falta contexto.",
+            "sentence": "No te vayas hasta que el director te da permiso.",
             "answers": [
-              "Es posible que falte contexto."
+              "No te vayas hasta que el director te dé permiso."
             ],
-            "why": "Posibilidad con es posible que lleva subjuntivo."
+            "why": "La acción de dar permiso aún no ha ocurrido: «te dé»."
           },
           {
-            "sentence": "Creo que sea un error de fecha.",
+            "sentence": "Llamé a mi madre antes de que empezó la obra.",
             "answers": [
-              "Creo que es un error de fecha."
+              "Llamé a mi madre antes de que empezara la obra.",
+              "Llamé a mi madre antes de que empezase la obra."
             ],
-            "why": "La afirmación con creo que lleva aquí indicativo."
-          }
-        ]
-      },
-      {
-        "id": "b1-06-demostrativos-discurso",
-        "type": "gap",
-        "prompt": "Aplica demostrativos y referencia en el discurso a la misión de esta semana.",
-        "bank": [
-          "eso",
-          "Esto",
-          "otros"
-        ],
-        "items": [
-          {
-            "q": "El vídeo no tiene fecha; ___ dificulta comprobarlo.",
-            "answers": [
-              [
-                "eso"
-              ]
-            ],
-            "why": "Esto, eso y aquello pueden recuperar una situación o un enunciado completo, no solo señalar objetos. El lector debe saber a qué remiten: compartieron una foto sin fecha; eso causó confusión. Este aviso modifica un nombre; esto funciona sin nombre. Si hay dos antecedentes posibles, repite el nombre o reformula."
+            "why": "«Antes de que» lleva siempre subjuntivo, también en pasado."
           },
           {
-            "q": "___ es lo que puedo confirmar: el parque está abierto.",
+            "sentence": "Cuando tengo tiempo la semana que viene, iré a ver tu obra.",
             "answers": [
-              [
-                "Esto"
-              ]
+              "Cuando tenga tiempo la semana que viene, iré a ver tu obra."
             ],
-            "why": "Esto, eso y aquello pueden recuperar una situación o un enunciado completo, no solo señalar objetos. El lector debe saber a qué remiten: compartieron una foto sin fecha; eso causó confusión. Este aviso modifica un nombre; esto funciona sin nombre. Si hay dos antecedentes posibles, repite el nombre o reformula."
-          },
-          {
-            "q": "Estos ___ avisos sí tienen fecha.",
-            "answers": [
-              [
-                "otros"
-              ]
-            ],
-            "why": "Esto, eso y aquello pueden recuperar una situación o un enunciado completo, no solo señalar objetos. El lector debe saber a qué remiten: compartieron una foto sin fecha; eso causó confusión. Este aviso modifica un nombre; esto funciona sin nombre. Si hay dos antecedentes posibles, repite el nombre o reformula."
+            "why": "«La semana que viene» es futuro: «cuando tenga»."
           }
         ]
       }
     ]
   },
   "vocabulary": {
-    "intro": "Aprende cada expresión junto a su situación de uso; reutiliza al menos cuatro en tu producción.",
+    "intro": "Palabras para hablar de una obra desde que se ensaya hasta que el público aplaude. Algunas cambian según el país: te lo indicamos.",
     "groups": [
       {
-        "title": "Antes de compartir la noticia · acciones y recursos",
+        "title": "Antes de la función",
         "items": [
           {
-            "es": "contrastar una noticia",
-            "note": "compararla con otras fuentes"
+            "es": "el ensayo general",
+            "note": "La última prueba completa, con vestuario y luces."
           },
           {
-            "es": "fuera de contexto",
-            "note": "sin la situación que permite entenderla"
+            "es": "el elenco"
           },
           {
-            "es": "una fuente fiable",
-            "note": "un origen que merece confianza por sus pruebas"
+            "es": "el vestuario"
           },
           {
-            "es": "proteger la privacidad",
-            "note": "limitar el acceso a datos personales"
+            "es": "la escenografía"
+          },
+          {
+            "es": "el camarín",
+            "note": "En España se dice «el camerino»."
+          },
+          {
+            "es": "repasar la letra"
           }
         ]
       },
       {
-        "title": "Matices para esta misión",
+        "title": "Durante la función",
         "items": [
           {
-            "es": "compartir sin comprobar",
-            "note": "difundir algo antes de verificarlo"
+            "es": "subir el telón"
           },
           {
-            "es": "un titular llamativo",
-            "note": "una frase inicial que atrae atención"
+            "es": "bajar el telón"
           },
           {
-            "es": "tener influencia",
-            "note": "afectar a decisiones ajenas"
+            "es": "salir a escena"
           },
           {
-            "es": "un algoritmo",
-            "note": "un procedimiento que ordena información"
+            "es": "entre bastidores"
+          },
+          {
+            "es": "quedarse en blanco",
+            "note": "Olvidar de golpe lo que tenías que decir."
+          },
+          {
+            "es": "el entreacto"
+          }
+        ]
+      },
+      {
+        "title": "El público y la taquilla",
+        "items": [
+          {
+            "es": "la taquilla"
+          },
+          {
+            "es": "las entradas agotadas"
+          },
+          {
+            "es": "la platea"
+          },
+          {
+            "es": "el estreno"
+          },
+          {
+            "es": "aplaudir de pie"
+          },
+          {
+            "es": "la crítica"
           }
         ]
       }
     ],
     "exercises": [
       {
-        "id": "b1-06-lexis",
+        "id": "b1-06-vocabulario-definiciones",
         "type": "match",
-        "prompt": "Relaciona expresiones de «Antes de compartir la noticia» con su significado en este contexto.",
+        "title": "Cada palabra con su definición",
+        "prompt": "Une cada expresión con lo que significa.",
         "pairs": [
           {
-            "left": "contrastar una noticia",
-            "right": "compararla con otras fuentes"
+            "left": "el ensayo general",
+            "right": "la última prueba completa antes del estreno"
           },
           {
-            "left": "fuera de contexto",
-            "right": "sin la situación que permite entenderla"
+            "left": "quedarse en blanco",
+            "right": "olvidar de golpe lo que había que decir"
           },
           {
-            "left": "una fuente fiable",
-            "right": "un origen que merece confianza por sus pruebas"
+            "left": "el entreacto",
+            "right": "la pausa entre dos partes de la obra"
           },
           {
-            "left": "proteger la privacidad",
-            "right": "limitar el acceso a datos personales"
+            "left": "la taquilla",
+            "right": "el lugar donde se venden las entradas"
           },
           {
-            "left": "compartir sin comprobar",
-            "right": "difundir algo antes de verificarlo"
+            "left": "entre bastidores",
+            "right": "detrás del escenario, donde el público no ve"
           },
           {
-            "left": "un titular llamativo",
-            "right": "una frase inicial que atrae atención"
+            "left": "el elenco",
+            "right": "el conjunto de actores y actrices de la obra"
+          }
+        ],
+        "why": "Si dudas, piensa en qué momento de la noche aparece cada palabra."
+      },
+      {
+        "id": "b1-06-vocabulario-huecos",
+        "type": "gap",
+        "title": "Una noche en el teatro",
+        "prompt": "Completa con una palabra del banco.",
+        "bank": [
+          "agotadas",
+          "telón",
+          "camarín",
+          "platea",
+          "escena"
+        ],
+        "items": [
+          {
+            "q": "No quedan sitios: las entradas están ___ desde el lunes.",
+            "answers": [
+              [
+                "agotadas"
+              ]
+            ],
+            "why": "Entradas agotadas: ya no se pueden comprar."
           },
           {
-            "left": "tener influencia",
-            "right": "afectar a decisiones ajenas"
+            "q": "Cuando baje el ___, el público podrá salir a tomar algo.",
+            "answers": [
+              [
+                "telón"
+              ]
+            ],
+            "why": "El telón sube al empezar y baja al terminar."
           },
           {
-            "left": "un algoritmo",
-            "right": "un procedimiento que ordena información"
+            "q": "La actriz se maquilla sola en su ___ antes de la función.",
+            "answers": [
+              [
+                "camarín",
+                "camerino"
+              ]
+            ],
+            "why": "En Argentina, «camarín»; en España, «camerino»."
+          },
+          {
+            "q": "Mis padres se sentaron en la ___, muy cerca del escenario.",
+            "answers": [
+              [
+                "platea"
+              ]
+            ],
+            "why": "La platea es la zona baja de butacas, frente al escenario."
+          },
+          {
+            "q": "Antes de salir a ___, el actor siempre respira hondo tres veces.",
+            "answers": [
+              [
+                "escena"
+              ]
+            ],
+            "why": "Salir a escena: aparecer ante el público."
           }
         ]
       }
     ]
   },
   "pronunciation": {
-    "focus": "Presentar dudas sin borrar las palabras clave",
+    "focus": "La h muda: «que ha» y «que haya» se enlazan, pero no suenan igual",
     "explanation": [
-      "Al expresar una duda, conserva un volumen suficiente y destaca quizá o no creo. No confíes solo en la melodía para distinguir certeza de posibilidad.",
-      "Escucha la síntesis como apoyo para percibir palabras y grupos. Compara después tu producción con la comprensión de otra persona; no hay evaluación automática ni demostración regional verificada."
+      "La «h» no suena en español. Por eso «que ha» y «que haya» se pronuncian enlazados, sin pausa entre palabras: [ke‿a], [ke‿á.ʝa]. Lo que te permite distinguirlos es la sílaba final: «haya» tiene dos sílabas y la segunda empieza con el sonido de la «y».",
+      "Lo mismo ocurre con «han» y «hayan»: «sé que han llegado» frente a «dudo que hayan llegado». Al hablar, no cortes la frase entre «que» y el auxiliar; dilo como una sola palabra larga y deja el acento en «ha» de «haya»."
     ],
     "examples": [
       {
-        "es": "Creo que la noticia necesita una fecha."
+        "es": "Sé que ha empezado. / No creo que haya empezado.",
+        "note": "Una sílaba de diferencia: ha / ha-ya."
       },
       {
-        "es": "No creo que esa imagen sea reciente."
-      },
-      {
-        "es": "Es posible que falte una parte del mensaje."
+        "es": "Dicen que han ensayado. / Me alegra que hayan ensayado.",
+        "note": "Han / ha-yan."
       }
     ],
     "perceive": {
-      "id": "b1-06-perception",
+      "id": "b1-06-pronunciacion-ha-haya",
       "type": "listen",
-      "prompt": "Escucha antes de elegir qué secuencia reconoces; después repítela agrupando el sentido.",
+      "title": "¿«Ha» o «haya»?",
+      "prompt": "Escucha cada frase y elige la forma que oyes.",
       "items": [
         {
-          "q": "Percepción 1: ¿qué reconoces al escuchar el fragmento de «Antes de compartir la noticia»?",
+          "q": "¿Qué oyes después de «que»?",
           "options": [
-            "Se oye quizá antes de la hipótesis",
-            "Se oye seguro antes de la hipótesis"
-          ],
-          "answer": 0,
-          "audio": "Quizá falte una parte.",
-          "voice": "es-ES-f",
-          "why": "Escucha la secuencia completa y compara el grupo indicado. La síntesis sirve como apoyo, no como evaluación de acento."
-        },
-        {
-          "q": "Percepción 2: ¿qué reconoces al escuchar el fragmento de «Antes de compartir la noticia»?",
-          "options": [
-            "Se oye no es verdad que",
-            "Se oye una afirmación explícita"
+            "ha salido",
+            "haya salido"
           ],
           "answer": 1,
-          "audio": "Es verdad que circula mucho.",
-          "voice": "es-ES-f",
-          "why": "Escucha la secuencia completa y compara el grupo indicado. La síntesis sirve como apoyo, no como evaluación de acento."
+          "why": "Dos sílabas, «ha-ya»: reacción con subjuntivo.",
+          "audio": "Me alegra que haya salido bien el ensayo.",
+          "voice": "es-AR-f"
+        },
+        {
+          "q": "¿Y en esta frase?",
+          "options": [
+            "haya salido",
+            "ha salido"
+          ],
+          "answer": 1,
+          "why": "Una sola sílaba: «ha». Es una afirmación.",
+          "audio": "Ya sé que ha salido bien el ensayo.",
+          "voice": "es-AR-m"
+        },
+        {
+          "q": "¿Qué oyes?",
+          "options": [
+            "hayan cerrado",
+            "han cerrado"
+          ],
+          "answer": 0,
+          "why": "«Ha-yan»: después de «dudo que» esperas subjuntivo.",
+          "audio": "Dudo que hayan cerrado la sala.",
+          "voice": "es-ES-f"
+        },
+        {
+          "q": "¿Y aquí?",
+          "options": [
+            "hayan cerrado",
+            "han cerrado"
+          ],
+          "answer": 1,
+          "why": "«Han», una sílaba: el hablante lo presenta como un hecho.",
+          "audio": "Parece que han cerrado la sala.",
+          "voice": "es-MX-m"
         }
       ]
     },
     "produce": [
       {
-        "text": "Creo que la noticia necesita una fecha.",
-        "tip": "Al expresar una duda, conserva un volumen suficiente y destaca quizá o no creo. No confíes solo en la melodía para distinguir certeza de posibilidad.",
+        "text": "Me alegra que hayas venido.",
+        "tip": "Enlaza «que_hayas» sin pausa y marca el acento en «ha».",
+        "voice": "es-AR-f"
+      },
+      {
+        "text": "No creo que haya terminado todavía.",
+        "tip": "Tres sílabas seguidas: que-ha-ya. No pronuncies la «h».",
+        "voice": "es-AR-m"
+      },
+      {
+        "text": "Sé que han vendido todo, pero dudo que hayan cobrado.",
+        "tip": "Compara «han» y «hayan» en la misma frase.",
         "voice": "es-ES-f"
       },
       {
-        "text": "No creo que esa imagen sea reciente.",
-        "tip": "Al expresar una duda, conserva un volumen suficiente y destaca quizá o no creo. No confíes solo en la melodía para distinguir certeza de posibilidad.",
-        "voice": "es-ES-f"
-      },
-      {
-        "text": "Es posible que falte una parte del mensaje.",
-        "tip": "Al expresar una duda, conserva un volumen suficiente y destaca quizá o no creo. No confíes solo en la melodía para distinguir certeza de posibilidad.",
-        "voice": "es-ES-f"
+        "text": "Es posible que hayamos olvidado algo.",
+        "tip": "«Hayamos» lleva el acento en «ya»: ha-YA-mos.",
+        "voice": "es-MX-f"
       }
-    ]
+    ],
+    "spelling": "Recuerda que «haya» (de «haber») se escribe con h y con y; no la confundas con «halla» (de «hallar», encontrar) ni con «allá» (lugar)."
   },
   "listening": {
-    "title": "Antes de compartir la noticia · voces en conversación",
-    "context": "Dos miembros de un grupo revisan un aviso que afecta a su paseo. Escucha primero sin transcripción. Las voces son sintéticas; no se presentan como modelos regionales verificados. Anota quién necesita qué y qué queda por confirmar.",
+    "title": "Después del ensayo general",
+    "context": "Son las once de la noche en una sala independiente del barrio de Almagro, en Buenos Aires. Termina el ensayo general de una obra que se estrena el sábado. La directora, Marcela, habla con Tomás, el técnico de luces, y con Inés, la productora.",
     "speakers": [
       {
-        "id": "a",
-        "name": "Claudia",
-        "voice": "es-ES-f"
+        "id": "mar",
+        "name": "Marcela",
+        "voice": "es-AR-f",
+        "role": "directora"
       },
       {
-        "id": "b",
-        "name": "Nico",
-        "voice": "es-ES-m"
+        "id": "tom",
+        "name": "Tomás",
+        "voice": "es-AR-m",
+        "role": "técnico de luces"
+      },
+      {
+        "id": "ine",
+        "name": "Inés",
+        "voice": "es-UY-f",
+        "role": "productora"
       }
     ],
     "script": [
       {
-        "speaker": "a",
-        "text": "Vi el vídeo que mandaste al grupo y me llamó la atención. Dice que van a cerrar todos los parques los domingos. ¿Sabes de dónde salió? No encuentro el nombre de la persona que lo grabó ni una fecha."
+        "speaker": "mar",
+        "text": "Bueno, equipo, me alegra mucho que hayamos llegado al final sin parar. Hace una semana no lo habría creído."
       },
       {
-        "speaker": "b",
-        "text": "Me lo envió un amigo. Creo que lo grabaron cerca de su casa, pero ahora que lo dices no estoy seguro. Lo compartí porque pensé que podía afectar al paseo que estamos preparando."
+        "speaker": "tom",
+        "text": "A mí me sorprende que nadie se haya quedado en blanco. En el segundo acto pensé que Ramiro se perdía."
       },
       {
-        "speaker": "a",
-        "text": "Es verdad que conviene avisar de los cambios. Lo que no creo es que este vídeo demuestre un cierre general. En el cartel del fondo solo se habla de una zona en obras y no se ve el mes."
+        "speaker": "mar",
+        "text": "Sí, aunque no creo que el público lo haya notado. Lo que me preocupa es la luz del final: entró tarde."
       },
       {
-        "speaker": "b",
-        "text": "Tienes razón en que falta información. Es posible que sea de otro año. Voy a preguntarle a mi amigo y, mientras tanto, escribiré que no está confirmado. No quiero que nadie cancele sus planes por mi mensaje."
+        "speaker": "tom",
+        "text": "Puede que yo haya tocado la consola antes de tiempo. El sábado, en cuanto Lucía diga la última frase, apago todo y cuento hasta tres."
       },
       {
-        "speaker": "a",
-        "text": "Me parece una buena solución. También podemos consultar el aviso del parque concreto al que queremos ir. Si está abierto, seguimos con el paseo; si hay una parte cerrada, buscamos otro recorrido."
+        "speaker": "ine",
+        "text": "Una buena noticia: esta tarde se han vendido las últimas entradas. Está todo agotado."
       },
       {
-        "speaker": "b",
-        "text": "Ya he corregido el mensaje. Me habría gustado comprobarlo antes, pero al menos ahora el grupo sabe que es una duda. La próxima vez abriré la información completa antes de quedarme solo con el titular o con unos segundos de vídeo. El cartel no muestra el mes. Eso no demuestra que sea falso, pero sí que necesitamos más contexto antes de usarlo para decidir el paseo."
+        "speaker": "mar",
+        "text": "¡Qué bien que se hayan vendido antes del sábado! Entonces, organicemos el día. ¿A qué hora abrimos la sala?"
+      },
+      {
+        "speaker": "ine",
+        "text": "Cuando lleguen los actores, a las siete, les doy los camarines. Nadie entra en la platea hasta que yo avise. Y antes de que abra la puerta, alguien tiene que revisar los micrófonos."
+      },
+      {
+        "speaker": "tom",
+        "text": "Eso lo hago yo mientras ustedes se maquillan. Después de probar los micrófonos, subo a la cabina y ya no bajo hasta el final."
+      },
+      {
+        "speaker": "mar",
+        "text": "Perfecto. Y cuando termine la función, nada de irse corriendo: salimos todos a saludar y después brindamos acá mismo."
       }
     ],
     "stages": [
       {
         "stage": "gist",
-        "prompt": "Escucha sin abrir el texto. Identifica la situación y la intención principal.",
+        "prompt": "Escucha una vez sin leer. ¿Cuál es la idea general?",
         "exercise": {
-          "id": "b1-06-audio-0",
+          "id": "b1-06-escucha-global",
           "type": "choice",
-          "prompt": "Antes de compartir la noticia: Escucha sin abrir el texto. Identifica la situación y la intención principal.",
+          "prompt": "Elige la mejor respuesta.",
           "items": [
             {
-              "q": "¿Qué están decidiendo?",
+              "q": "¿Cómo ha ido el ensayo general?",
               "options": [
-                "Cómo grabar un anuncio comercial",
-                "Cómo corregir una información dudosa"
+                "Mal: tuvieron que parar varias veces.",
+                "Bien, con un pequeño problema de luces al final.",
+                "No lo saben: el ensayo no ha terminado."
               ],
               "answer": 1,
-              "why": "La respuesta se apoya en la información y la intención del texto; vuelve a localizar la evidencia."
+              "why": "Llegaron al final sin parar; solo la luz final entró tarde."
             },
             {
-              "q": "¿Cómo reacciona quien compartió el vídeo?",
+              "q": "¿De qué hablan en la segunda parte?",
               "options": [
-                "Acepta corregir lo no confirmado",
-                "Insiste en que toda imagen es prueba"
+                "De cómo organizar el día del estreno.",
+                "De cambiar el final de la obra.",
+                "De devolver las entradas vendidas."
               ],
               "answer": 0,
-              "why": "Comprueba la información concreta del fragmento antes de elegir."
+              "why": "Inés y Tomás explican qué harán el sábado y en qué orden."
             }
           ]
         }
       },
       {
         "stage": "detail",
-        "prompt": "Vuelve a escuchar y anota el dato que cambia la decisión.",
+        "prompt": "Escucha otra vez y fíjate en los detalles.",
         "exercise": {
-          "id": "b1-06-audio-1",
+          "id": "b1-06-escucha-detalle",
           "type": "choice",
-          "prompt": "Antes de compartir la noticia: Vuelve a escuchar y anota el dato que cambia la decisión.",
+          "prompt": "Responde según lo que dicen.",
           "items": [
             {
-              "q": "¿Qué muestra realmente el cartel?",
+              "q": "¿Qué cree Tomás que pasó con la luz del final?",
               "options": [
-                "Una zona en obras",
-                "Todos los parques cerrados"
+                "Que la consola está rota.",
+                "Que Lucía dijo mal la última frase.",
+                "Que quizá tocó la consola antes de tiempo."
               ],
-              "answer": 0,
-              "why": "La respuesta se apoya en la información y la intención del texto; vuelve a localizar la evidencia."
+              "answer": 2,
+              "why": "«Puede que yo haya tocado la consola antes de tiempo.»"
             },
             {
-              "q": "¿Qué comprobarán para el paseo?",
+              "q": "¿Cuándo entra el público en la platea?",
               "options": [
-                "Todas las calles de la ciudad",
-                "El parque concreto que quieren visitar"
+                "A las siete, con los actores.",
+                "Cuando Inés avise.",
+                "Después del brindis."
               ],
               "answer": 1,
-              "why": "Comprueba la información concreta del fragmento antes de elegir."
+              "why": "«Nadie entra en la platea hasta que yo avise.»"
+            },
+            {
+              "q": "¿Qué hará Tomás después de probar los micrófonos?",
+              "options": [
+                "Subirá a la cabina y se quedará allí hasta el final.",
+                "Ayudará a maquillar a los actores.",
+                "Abrirá la puerta de la sala."
+              ],
+              "answer": 0,
+              "why": "«Subo a la cabina y ya no bajo hasta el final.»"
             }
           ]
         }
       },
       {
         "stage": "notice",
-        "prompt": "Escucha una tercera vez: relaciona la formulación con su función. Después puedes consultar la transcripción.",
+        "prompt": "Ahora fíjate en la gramática. Completa lo que dicen exactamente.",
         "exercise": {
-          "id": "b1-06-audio-2",
-          "type": "choice",
-          "prompt": "Antes de compartir la noticia: Escucha una tercera vez: relaciona la formulación con su función. Después puedes consultar la transcripción.",
+          "id": "b1-06-escucha-formas",
+          "type": "gap",
+          "prompt": "Escribe la forma que usa cada personaje.",
           "items": [
             {
-              "q": "¿Qué hace la segunda persona al final?",
-              "options": [
-                "Confirma el cierre general",
-                "Corrige su mensaje"
+              "q": "Me alegra mucho que ___ al final sin parar.",
+              "answers": [
+                [
+                  "hayamos llegado"
+                ]
               ],
-              "answer": 1,
-              "why": "La respuesta se apoya en la información y la intención del texto; vuelve a localizar la evidencia."
+              "why": "Reacción ahora a algo que ya ocurrió."
             },
             {
-              "q": "¿Qué indica «ahora que lo dices»?",
-              "options": [
-                "Reconsidera su certeza tras la observación",
-                "Rechaza escuchar a su interlocutor"
+              "q": "Me sorprende que nadie se ___ en blanco.",
+              "answers": [
+                [
+                  "haya quedado"
+                ]
               ],
-              "answer": 0,
-              "why": "Comprueba la información concreta del fragmento antes de elegir."
+              "why": "Sorpresa sobre un hecho anterior: «haya quedado»."
+            },
+            {
+              "q": "En cuanto Lucía ___ la última frase, apago todo.",
+              "answers": [
+                [
+                  "diga"
+                ]
+              ],
+              "why": "«En cuanto» + acción futura: subjuntivo."
+            },
+            {
+              "q": "Antes de que ___ la puerta, alguien tiene que revisar los micrófonos.",
+              "answers": [
+                [
+                  "abra"
+                ]
+              ],
+              "why": "«Antes de que» + subjuntivo siempre."
             }
           ]
         }
@@ -494,171 +904,294 @@ export const b1w06: Module = {
     ]
   },
   "reading": {
-    "title": "Antes de compartir la noticia · otra perspectiva",
-    "genre": "Artículo y experiencia de comunidad",
-    "frame": "Texto original de SpanishCue. Lee para comprender la experiencia y la decisión; después vuelve a los detalles.",
+    "title": "Bitácora de Telón Sur: la semana más larga",
+    "genre": "Entrada de blog de una compañía de teatro",
+    "frame": "La compañía Telón Sur publica cada semana una entrada en su blog para su público. Esta la escribe Inés, la productora, tres días antes del estreno.",
     "text": [
-      "En el grupo vecinal apareció un mensaje que anunciaba el cierre de la biblioteca durante todo el invierno. El titular era breve y preocupante, y varias personas lo compartieron antes de abrir el enlace. Al leer la noticia completa, Marta descubrió que se refería a una biblioteca de otra ciudad. El nombre del barrio coincidía, pero la dirección y la fecha eran diferentes.",
-      "Marta no cree que la solución sea prohibir todos los mensajes sobre noticias. En su opinión, los grupos sirven para avisar de problemas y organizar ayuda. Sin embargo, considera importante que cada aviso incluya su fuente. También es posible que una información correcta se quede antigua: una actividad cancelada puede recuperarse al día siguiente. Por eso recomienda comprobar tanto el lugar como el momento al que se refiere un texto.",
-      "El grupo había confundido el nombre del barrio con el de otra ciudad. Eso, y no una decisión de su biblioteca, explicaba el aviso equivocado. Marta repitió el referente para evitar una segunda confusión.",
-      "Algunos vecinos creen que pedir tantas comprobaciones hará que nadie comparta nada. Marta entiende esa preocupación, aunque distingue una conversación informal de un aviso que puede cambiar los planes de muchas personas. Propone una norma sencilla: cuando no haya confirmación, escribir claramente que se trata de una duda. El grupo ha empezado a usar esa fórmula. No garantiza que desaparezcan los errores, pero permite que los lectores sepan qué está comprobado y qué necesita todavía una llamada o una consulta."
+      "Queridos amigos de Telón Sur: faltan tres días para el estreno de «La casa de los relojes» y queremos contarles cómo llegamos hasta acá. Ha sido una semana larga, pero nos alegra muchísimo que la obra haya crecido tanto en tan poco tiempo. El lunes todavía no teníamos el decorado; hoy hay una escalera de madera de cuatro metros en el centro del escenario.",
+      "No todo salió perfecto, claro. Nos da pena que Clara, nuestra violinista, se haya lesionado la mano y no pueda tocar en vivo. Grabamos su música el martes y, aunque no creemos que suene igual, es posible que el público ni lo haya imaginado. También nos sorprende que tantas personas hayan escrito para preguntar por funciones extra: gracias por la paciencia.",
+      "¿Qué pasará ahora? Cuando terminemos de pintar la escalera, haremos el último ensayo con público invitado. En cuanto tengamos la fecha de la segunda temporada, la publicaremos aquí y en las redes. Y hasta que se abra la venta, no compren entradas en otras páginas: solo vendemos en la taquilla de la sala.",
+      "Un último pedido: el sábado, antes de que suba el telón, apaguen los teléfonos. Después de la función, quédense un rato; los actores saldrán a charlar con ustedes mientras desarmamos el escenario."
+    ],
+    "glossary": [
+      {
+        "es": "la bitácora",
+        "note": "Diario donde se anotan los avances de un proyecto."
+      },
+      {
+        "es": "lesionarse"
+      },
+      {
+        "es": "desarmar",
+        "note": "En España se diría más bien «desmontar»."
+      }
     ],
     "tasks": [
       {
-        "id": "b1-06-read-evidence",
+        "id": "b1-06-lectura-comprension",
         "type": "choice",
-        "prompt": "En la lectura «Antes de compartir la noticia», elige la respuesta respaldada por el texto.",
+        "title": "Comprensión",
+        "prompt": "Responde según la entrada del blog.",
         "items": [
           {
-            "q": "¿Qué dato reveló el error?",
+            "q": "¿Por qué la música no será en vivo?",
             "options": [
-              "La dirección pertenecía a otra ciudad",
-              "El tamaño de la biblioteca"
+              "Porque la violinista se ha lesionado la mano.",
+              "Porque la sala no tiene sitio para una orquesta.",
+              "Porque el público prefiere la música grabada."
             ],
             "answer": 0,
-            "why": "La respuesta se apoya en la información y la intención del texto; vuelve a localizar la evidencia."
+            "why": "«Nos da pena que Clara se haya lesionado la mano y no pueda tocar en vivo.»"
           },
           {
-            "q": "¿Qué norma propone Marta?",
+            "q": "¿Qué harán cuando terminen de pintar la escalera?",
             "options": [
-              "Prohibir las conversaciones vecinales",
-              "Marcar lo no confirmado como duda"
+              "Abrirán la venta de la segunda temporada.",
+              "Harán un ensayo con público invitado.",
+              "Grabarán de nuevo la música."
             ],
             "answer": 1,
-            "why": "La respuesta se apoya en la información y la intención del texto; vuelve a localizar la evidencia."
+            "why": "«Cuando terminemos de pintar la escalera, haremos el último ensayo con público invitado.»"
+          },
+          {
+            "q": "¿Qué piden a los lectores sobre las entradas?",
+            "options": [
+              "Que las compren cuanto antes por internet.",
+              "Que esperen a la segunda temporada.",
+              "Que solo las compren en la taquilla de la sala."
+            ],
+            "answer": 2,
+            "why": "Solo venden en la taquilla; hasta que se abra la venta, no hay que comprar en otras páginas."
           }
         ]
       },
       {
-        "id": "b1-06-read-mediation",
-        "type": "open",
-        "prompt": "Reformula para una persona que no ha leído «Antes de compartir la noticia».",
+        "id": "b1-06-lectura-orden",
+        "type": "classify",
+        "title": "¿Ya pasó o todavía no?",
+        "prompt": "Según la bitácora, ¿cada cosa ya ha ocurrido o va a ocurrir?",
+        "categories": [
+          "Ya ha ocurrido",
+          "Todavía no ha ocurrido"
+        ],
         "items": [
           {
-            "prompt": "Explica en 50–70 palabras qué problema aparece en «Antes de compartir la noticia», qué cambia y qué dato no debe perder quien recibe tu resumen. Cita un detalle del texto.",
-            "model": "En el grupo vecinal apareció un mensaje que anunciaba el cierre de la biblioteca durante todo el invierno.",
-            "checklist": [
-              "Distingo información e interpretación.",
-              "Adapto el resumen a alguien sin contexto."
-            ]
+            "text": "Construir la escalera de madera",
+            "cat": 0
+          },
+          {
+            "text": "Grabar la música del violín",
+            "cat": 0
+          },
+          {
+            "text": "Publicar la fecha de la segunda temporada",
+            "cat": 1
+          },
+          {
+            "text": "Recibir mensajes que piden funciones extra",
+            "cat": 0
+          },
+          {
+            "text": "Charlar con los actores después de la función",
+            "cat": 1
           }
         ]
       }
     ],
     "noticing": {
-      "prompt": "Busca dos expresiones del texto y explica cómo ayudan a seguir la información.",
+      "prompt": "Fíjate en cómo el texto mira hacia atrás y hacia delante.",
       "items": [
         {
-          "quote": "En el grupo vecinal apareció un mensaje que anunciaba el cierre de la biblioteca durante todo el invierno.",
-          "note": "Localiza quién actúa y qué perspectiva temporal o comunicativa establece esta apertura."
+          "quote": "nos alegra muchísimo que la obra haya crecido tanto",
+          "note": "Valoración actual de un cambio que ya ocurrió: «haya + participio»."
         },
         {
-          "quote": "No garantiza que desaparezcan los errores, pero permite que los lectores sepan qué está comprobado y qué necesita todavía una llamada o una consulta.",
-          "note": "Explica qué aporta el cierre al propósito del texto; compáralo con la apertura."
+          "quote": "es posible que el público ni lo haya imaginado",
+          "note": "Posibilidad sobre algo anterior, también con perfecto de subjuntivo."
+        },
+        {
+          "quote": "Cuando terminemos de pintar la escalera, haremos",
+          "note": "«Cuando» + presente de subjuntivo para un plan; el futuro va en la otra parte."
+        },
+        {
+          "quote": "hasta que se abra la venta, no compren",
+          "note": "«Hasta que» marca el límite de una instrucción futura."
         }
       ]
     }
   },
   "practice": {
+    "intro": "Ahora combinas las dos clases y recuperas lo de semanas anteriores.",
     "exercises": [
       {
-        "id": "b1-06-order",
+        "id": "b1-06-practica-orden",
         "type": "order",
-        "prompt": "Reconstruye dos mensajes útiles para «Antes de compartir la noticia» y léelos con grupos de sentido.",
+        "title": "Instrucciones para el sábado",
+        "prompt": "Ordena las palabras para formar instrucciones completas.",
         "items": [
           {
             "words": [
-              "Es",
-              "verdad",
+              "En",
+              "cuanto",
+              "se",
+              "apague",
+              "la",
+              "sala,",
+              "empieza",
+              "la",
+              "música."
+            ]
+          },
+          {
+            "words": [
+              "Nadie",
+              "sale",
+              "del",
+              "camarín",
+              "hasta",
               "que",
-              "el",
-              "vídeo",
-              "circula",
-              "mucho."
+              "yo",
+              "avise."
             ]
           },
           {
             "words": [
-              "Desde",
-              "mi",
-              "punto",
+              "Prueba",
+              "el",
+              "micrófono",
+              "antes",
               "de",
-              "vista,",
-              "conviene",
-              "esperar."
+              "que",
+              "entre",
+              "el",
+              "público."
+            ]
+          },
+          {
+            "words": [
+              "Cuando",
+              "termine",
+              "el",
+              "saludo,",
+              "bajaremos",
+              "el",
+              "telón."
             ]
           }
         ]
       },
       {
-        "id": "b1-06-classify",
-        "type": "classify",
-        "prompt": "Clasifica estas formulaciones según su función en «Antes de compartir la noticia».",
-        "categories": [
-          "Afirmación",
-          "Duda o posibilidad"
-        ],
+        "id": "b1-06-practica-retrieval",
+        "type": "context",
+        "title": "Recuperación: semanas 2 a 4",
+        "prompt": "Recuperación de semanas anteriores: deseos, valoraciones y opinión negada. Lee la situación del teatro y elige la forma correcta.",
         "items": [
           {
-            "text": "Creo que el cartel es antiguo.",
-            "cat": 0
+            "context": "Semana 2, deseos. Mañana es el estreno y la directora está nerviosa.",
+            "q": "«Ojalá mañana no ___ nadie.»",
+            "options": [
+              "se equivoque",
+              "se equivoca",
+              "se equivocará"
+            ],
+            "answer": 0,
+            "why": "Deseo hacia el futuro: «ojalá» + presente de subjuntivo."
           },
           {
-            "text": "Es verdad que el vídeo circula.",
-            "cat": 0
+            "context": "Semana 3, valoraciones. El productor habla de las normas de la sala.",
+            "q": "«Es importante que el público ___ el móvil.»",
+            "options": [
+              "apaga",
+              "apague",
+              "apagará"
+            ],
+            "answer": 1,
+            "why": "Valoración general («es importante que») + subjuntivo."
           },
           {
-            "text": "No creo que demuestre un cierre general.",
-            "cat": 1
+            "context": "Semana 4, opinión. Un actor comenta el decorado.",
+            "q": "«Creo que la escalera ___ demasiado alta.»",
+            "options": [
+              "sea",
+              "haya sido",
+              "es"
+            ],
+            "answer": 2,
+            "why": "Opinión afirmativa con «creo que»: indicativo."
           },
           {
-            "text": "Es posible que falte la fecha.",
-            "cat": 1
+            "context": "Semana 4, opinión negada. Otra actriz no está de acuerdo.",
+            "q": "«Pues yo no creo que ___ peligrosa.»",
+            "options": [
+              "es",
+              "sea",
+              "será"
+            ],
+            "answer": 1,
+            "why": "Opinión negada: «no creo que» + subjuntivo."
           }
         ]
       },
       {
-        "id": "b1-06-draft",
+        "id": "b1-06-practica-transformar",
+        "type": "transform",
+        "title": "De la noticia a la reacción",
+        "prompt": "Transforma la noticia en una reacción con la expresión indicada.",
+        "items": [
+          {
+            "source": "Los actores han aprendido la coreografía.",
+            "instruction": "Empieza con «Me alegra que…».",
+            "answers": [
+              "Me alegra que los actores hayan aprendido la coreografía."
+            ],
+            "why": "Reacción actual a un hecho anterior: «hayan aprendido»."
+          },
+          {
+            "source": "El director ha cambiado el final.",
+            "instruction": "Empieza con «No creo que…».",
+            "answers": [
+              "No creo que el director haya cambiado el final."
+            ],
+            "why": "Duda sobre algo pasado: «haya cambiado»."
+          },
+          {
+            "source": "Alguien ha abierto la puerta de emergencia.",
+            "instruction": "Empieza con «Puede que…».",
+            "answers": [
+              "Puede que alguien haya abierto la puerta de emergencia."
+            ],
+            "why": "Posibilidad sobre algo anterior: participio irregular «abierto»."
+          }
+        ]
+      },
+      {
+        "id": "b1-06-practica-escritura-guiada",
         "type": "open",
-        "prompt": "Ensaya partes de tu texto antes de producirlo completo.",
+        "title": "Mensajes cortos del equipo",
+        "prompt": "Escribe cada mensaje en dos o tres frases.",
         "items": [
           {
-            "prompt": "Antes de compartir la noticia: escribe una apertura de 35–45 palabras para la tarea «Escribe una intervención de 150–180 palabras para el grupo vecinal: presenta tu postura sobre compartir avisos, reconoce una ventaja, señala un riesgo y propone una norma.» sin copiar el modelo.",
-            "model": "Creo que nuestro grupo es útil para enterarnos de cambios en el barrio.",
+            "prompt": "Una compañera ha conseguido un patrocinador para la obra. Escríbele un mensaje para felicitarla y explica qué harán cuando llegue el dinero.",
+            "model": "¡Qué bien que hayas conseguido el patrocinio! Cuando llegue el dinero, pagaremos las luces nuevas y, en cuanto podamos, imprimiremos los programas.",
             "checklist": [
-              "Presento destinatario y propósito.",
-              "Incluyo un dato pertinente del caso."
+              "Usa «haya + participio» para reaccionar.",
+              "Usa «cuando» o «en cuanto» + subjuntivo para el plan."
             ]
           },
           {
-            "prompt": "Antes de compartir la noticia: redacta un cierre de 30–40 palabras que permita al destinatario responder o actuar.",
-            "model": "Cuando no tengamos confirmación, podemos decirlo claramente y preguntar si alguien dispone de más información. No me gustaría que esta norma impidiera conversar; solo quiero distinguir una opinión de un aviso que afecta a los planes de todos. ¿Os parece razonable probarla durante un mes y comentar después si funciona?",
+            "prompt": "El técnico no contesta al teléfono y el ensayo empieza en una hora. Escribe al grupo una hipótesis sobre lo que ha pasado y una instrucción.",
+            "model": "Es posible que Bruno se haya quedado sin batería. No empecemos hasta que llegue; mientras lo esperamos, repasemos la segunda escena.",
             "checklist": [
-              "El cierre corresponde a esta situación.",
-              "La acción siguiente se entiende sin adivinar."
-            ]
-          }
-        ]
-      },
-      {
-        "id": "b1-06-retrieval",
-        "type": "open",
-        "prompt": "Recupera los recursos lingüísticos sin consultar la explicación. Para los casos con fuentes, usa los datos suministrados y comprueba después los criterios.",
-        "items": [
-          {
-            "prompt": "En el contexto de «Antes de compartir la noticia», recupera la semana 5: Resuelve otro primer día complicado: reconstruye qué había pasado, pregunta por un dato que falta y responde con un deseo y un consejo que se pueda seguir.",
-            "model": "Cuando abrió la puerta, ya habían empezado. Mientras esperaba, escribió a la coordinadora.",
-            "checklist": [
-              "Puedo contar una experiencia con los cuatro pasados y responder con deseos y consejos.",
-              "Puedo identificar el problema y los consejos en un programa de radio."
+              "Hay una hipótesis con «es posible que» o «puede que» + «haya + participio».",
+              "Hay una instrucción con «hasta que» o «mientras»."
             ]
           },
           {
-            "prompt": "Tras recuperar el caso anterior en «Antes de compartir la noticia», escribe 40–60 palabras para explicar qué elección lingüística fue más difícil y ofrece dos versiones que cambien la intención o el tiempo. Comprueba tus ejemplos con la teoría de la semana recuperada.",
-            "model": "Antes presenté un hecho como seguro. Ahora lo reformulo como una duda: Creo que la noticia necesita una fecha.",
+            "prompt": "Después del estreno, un amigo te escribe que no pudo ir. Contéstale con una reacción y una propuesta para la próxima función.",
+            "model": "Es una pena que no hayas podido venir, pero no pasa nada. Cuando sepas qué día tienes libre, avísame y te guardo una entrada.",
             "checklist": [
-              "Comparo dos formulaciones concretas.",
-              "Explico el cambio de intención o referencia."
+              "La reacción usa «haya + participio».",
+              "La propuesta usa una oración temporal con subjuntivo."
             ]
           }
         ]
@@ -666,184 +1199,237 @@ export const b1w06: Module = {
     ]
   },
   "writing": {
-    "task": "Escribe una intervención de 150–180 palabras para el grupo vecinal: presenta tu postura sobre compartir avisos, reconoce una ventaja, señala un riesgo y propone una norma.",
-    "context": "Destinatario, propósito y datos deben mantenerse claros. El modelo muestra una posibilidad, no una respuesta que debas copiar.",
+    "task": "Escribe un mensaje al elenco y al equipo técnico la noche antes del estreno. Valora lo que el grupo ha conseguido durante los ensayos y explica, en orden, qué pasará mañana desde que lleguen al teatro hasta después de la función.",
+    "context": "Eres la persona que coordina una obra de teatro amateur. El grupo tiene un chat y todos leerán tu mensaje antes de dormir.",
     "steps": [
-      "Planifica destinatario, dos ideas centrales y un dato de apoyo de esta semana.",
-      "Escribe una primera versión sin consultar el modelo.",
-      "Compara después organización y lenguaje; cambia al menos una frase para mejorar claridad."
+      "Haz dos listas: lo que ya ha pasado (logros y problemas) y lo que pasará mañana, en orden.",
+      "En el primer párrafo, reacciona a lo que ha pasado con «me alegra que», «es una pena que», «no creo que» + «haya + participio».",
+      "En el segundo, organiza el día con al menos cuatro conectores temporales diferentes.",
+      "Revisa el texto: detrás de «cuando», «en cuanto» y «hasta que» no debe haber ningún futuro, y los participios no cambian."
     ],
     "useLanguage": [
-      "Creo que la noticia necesita una fecha.",
-      "No creo que esa imagen sea reciente.",
-      "Es posible que falte una parte del mensaje.",
-      "Es verdad que el vídeo circula mucho.",
-      "El vídeo no tiene fecha; eso limita su utilidad.",
-      "Esto es lo que sabemos: el cartel menciona obras."
+      "me alegra que + haya + participio",
+      "es una pena que / no creo que + haya + participio",
+      "cuando / en cuanto / hasta que + subjuntivo",
+      "antes de que / después de + infinitivo",
+      "mientras + subjuntivo"
     ],
     "model": [
-      "Creo que nuestro grupo es útil para enterarnos de cambios en el barrio. Gracias a un mensaje pude evitar ayer una calle cortada.",
-      "También me parece importante corregir los mensajes cuando descubrimos un error. Si la rectificación queda escondida entre otras conversaciones, alguien puede seguir utilizando la primera versión. Podríamos responder al aviso original con una aclaración breve, sin ridiculizar a quien lo compartió.",
-      "Sin embargo, no creo que compartir cualquier vídeo nos ayude. A veces falta la fecha o no sabemos quién explica los hechos. Es posible que una noticia correcta ya no describa la situación actual. Por eso propongo añadir siempre el enlace original y comprobar el lugar. Cuando no tengamos confirmación, podemos decirlo claramente y preguntar si alguien dispone de más información. No me gustaría que esta norma impidiera conversar; solo quiero distinguir una opinión de un aviso que afecta a los planes de todos. ¿Os parece razonable probarla durante un mes y comentar después si funciona?"
+      "Hola a todos: antes de dormir, quiero darles las gracias. Me alegra muchísimo que hayamos llegado al ensayo general con la obra entera y que nadie se haya quedado en blanco. Es una pena que el proyector se haya roto el jueves, pero no creo que el público eche de menos las imágenes: la escena funciona igual sin ellas.",
+      "Mañana, cuando lleguen al teatro a las seis, vayan directamente al camarín. En cuanto estén maquillados, haremos un calentamiento corto en el escenario. Nadie sale a la platea hasta que se abran las puertas, y antes de que entre el público, Bruno probará todos los micrófonos. Mientras dure la función, los teléfonos se quedan en las mochilas. Después de saludar, recogemos todo juntos y nos vamos a cenar a la pizzería de la esquina. Descansen bien esta noche y lleguen puntuales. ¡Nos vemos mañana!"
     ],
     "checklist": [
-      "Cumplo el propósito y el registro de la consigna.",
-      "Organizo el texto en partes conectadas y doy razones o detalles.",
-      "Reutilizo cuatro expresiones de vocabulario de la semana.",
-      "Compruebo tiempos, referencias, concordancia y lo que está confirmado.",
-      "Reviso una frase y puedo explicar por qué la cambié.",
-      "Integro y compruebo este recurso: demostrativos y referencia en el discurso."
+      "Hay al menos tres reacciones o dudas con «haya + participio».",
+      "Detrás de «cuando», «en cuanto», «hasta que» y «mientras» hay subjuntivo, nunca futuro.",
+      "Uso «antes de» o «después de» + infinitivo cuando el sujeto es el mismo.",
+      "El mensaje tiene dos párrafos: lo que ya pasó y lo que pasará."
     ],
     "words": [
-      150,
+      130,
       180
     ]
   },
   "speaking": {
-    "intro": "Prepara ideas, no un guion completo. Puedes grabarte localmente; el curso no puntúa tu pronunciación ni sube tu audio.",
+    "intro": "Graba tus respuestas. Escúchate después y comprueba si enlazas «que_haya» y si eliges bien el modo detrás de cada conector.",
     "tasks": [
       {
-        "title": "Intervención organizada",
-        "prompt": "Defiende durante dos minutos una norma para el grupo. Tu interlocutor dice que comprobar todo lleva demasiado tiempo: responde con un ejemplo, admite una dificultad y negocia una versión sencilla.",
+        "title": "La arenga antes de la función",
+        "prompt": "Faltan diez minutos para el estreno. Habla durante dos minutos al grupo: valora lo que han conseguido en estas semanas, reconoce algo que no salió bien y recuerda qué hará cada uno cuando suba el telón y cuando termine la obra.",
         "prep": [
-          "Anota una apertura, dos detalles y una conclusión.",
-          "Elige una expresión para pedir o dar aclaración.",
-          "Usa también: El vídeo no tiene fecha; eso limita su utilidad."
+          "Tres logros del grupo con «me alegra que» o «qué bien que».",
+          "Un problema con «es una pena que» y una duda con «no creo que».",
+          "Cuatro instrucciones con «cuando», «en cuanto», «hasta que» y «antes de que»."
         ],
         "seconds": 120,
+        "model": "Bueno, gente, escuchen un momento. Quiero decirles que me alegra muchísimo que hayamos llegado hasta acá. Qué bien que Ramiro haya aprendido el monólogo en una semana… Es una pena que no hayamos tenido más ensayos con luces, pero no creo que se note. Ahora, cuando suba el telón, respiren y miren al fondo de la sala. En cuanto termine la última escena, nos quedamos quietos hasta que baje el telón…",
         "selfCheck": [
-          "El oyente puede reconstruir mi idea.",
-          "Doy razones o ejemplos y marco pausas útiles."
+          "¿He hablado al menos dos minutos sin leer?",
+          "¿He usado «haya + participio» al menos tres veces?",
+          "¿He evitado el futuro detrás de «cuando» y «en cuanto»?"
         ]
       },
       {
-        "title": "Interacción y reformulación",
-        "prompt": "En la situación «Antes de compartir la noticia», tu interlocutor no comparte tu primera interpretación. Pregunta qué ha entendido, responde a su objeción y reformula tu idea con un ejemplo distinto; confirma qué acordáis y qué queda pendiente.",
+        "title": "Responde al voluntario nuevo",
+        "prompt": "Un voluntario nuevo va a ayudar en la sala y te hace preguntas: «¿Qué hago cuando llegue? ¿Hasta cuándo me quedo en la puerta? ¿Y si alguien llega tarde?». Responde a cada pregunta y aclara qué hará en cada momento. Si puedes, practica con un compañero que haga de interlocutor.",
         "prep": [
-          "Reserva una pregunta abierta.",
-          "Piensa una alternativa que puedas aceptar."
+          "Usa «cuando», «hasta que» y «en cuanto» con subjuntivo.",
+          "Termina preguntándole si tiene alguna duda más."
         ],
-        "seconds": 120,
+        "seconds": 90,
+        "model": "Cuando llegues, preséntate en la taquilla. Te quedas en la puerta hasta que empiece la función. Si alguien llega tarde, no lo dejes pasar hasta que termine la primera escena; en cuanto se encienda la luz azul, lo acompañas a su butaca. ¿Tienes alguna otra pregunta?",
         "selfCheck": [
-          "Escucho antes de responder.",
-          "Adapto mi respuesta a la información nueva."
+          "¿He contestado las tres preguntas?",
+          "¿He usado subjuntivo para cada acción futura?"
         ]
       }
     ]
   },
   "useInClass": {
-    "intro": "Lleva tu texto revisado y una intervención breve: tu profe continuará la situación con un cambio que no conoces.",
+    "intro": "Lleva a la próxima clase tu mensaje al elenco y estas tarjetas. Te ayudarán a usar lo que repasaste con tu profesor.",
     "cards": [
       {
-        "move": "Presenta",
-        "task": "Defiende durante dos minutos una norma para el grupo. Tu interlocutor dice que comprobar todo lleva demasiado tiempo: responde con un ejemplo, admite una dificultad y negocia una versión sencilla."
-      },
-      {
-        "move": "Pregunta",
-        "task": "Pide a tu profe un dato adicional sobre «Antes de compartir la noticia» que pueda cambiar tu propuesta; explica por qué lo necesitas.",
+        "move": "Cuéntale",
+        "task": "Cuéntale a tu profesor una buena noticia reciente de tu vida y pídele que reaccione con «qué bien que hayas…». Después reacciona tú a una noticia suya.",
         "phrases": [
-          "¿He entendido bien que…?",
-          "¿Qué cambiaría si…?"
+          "Me alegra mucho que hayas…",
+          "¡Qué bien que hayas…!"
         ]
       },
       {
-        "move": "Reformula",
-        "task": "Resume la postura de tu profe sobre «Antes de compartir la noticia» para una tercera persona y comprueba si tu versión conserva las condiciones."
+        "move": "Planifica",
+        "task": "Explícale tus planes para el próximo fin de semana usando tres conectores distintos: cuando, en cuanto y hasta que.",
+        "phrases": [
+          "En cuanto salga del trabajo…",
+          "No voy a descansar hasta que…"
+        ]
+      },
+      {
+        "move": "Pregunta",
+        "task": "Pregúntale si en su variedad del español se dice «camarín» o «camerino», y qué otras palabras del teatro cambian de un país a otro.",
+        "phrases": [
+          "¿Cómo se dice en tu país…?"
+        ]
+      },
+      {
+        "move": "Duda",
+        "task": "Imagina con tu profesor qué ha podido pasar en una situación misteriosa (una sala vacía, una carta sin firma) usando «puede que» y «no creo que» + «haya + participio».",
+        "phrases": [
+          "Puede que alguien haya…",
+          "No creo que haya…"
+        ]
       }
     ],
-    "bring": "Tu borrador y versión revisada, una grabación local si la hiciste y una pregunta sobre una elección lingüística."
+    "bring": "Tu mensaje al elenco revisado y la grabación de la arenga."
   },
   "quiz": {
     "items": [
       {
         "type": "choice",
-        "q": "Tras trabajar ambas fuentes: ¿Qué norma propone Marta? Relaciona tu respuesta con «Antes de compartir la noticia».",
+        "q": "Tu amigo te cuenta que ha aprobado el examen de conducir. Le dices:",
         "options": [
-          "Prohibir las conversaciones vecinales",
-          "Marcar lo no confirmado como duda"
+          "¡Qué bien que apruebes!",
+          "¡Qué bien que has aprobado!",
+          "¡Qué bien que hayas aprobado!"
+        ],
+        "answer": 2,
+        "why": "Reacción actual a un hecho ya ocurrido: «hayas aprobado»."
+      },
+      {
+        "type": "choice",
+        "q": "¿Qué frase habla de una costumbre?",
+        "options": [
+          "Cuando llego a casa, me quito los zapatos.",
+          "Cuando llegue a casa, me quitaré los zapatos.",
+          "Cuando llegues a casa, quítate los zapatos."
         ],
         "answer": 0,
-        "why": "La respuesta se apoya en la información y la intención del texto; vuelve a localizar la evidencia."
+        "why": "Costumbre: indicativo detrás de «cuando»."
       },
       {
         "type": "listen",
-        "q": "Escucha el fragmento final de evaluación de «Antes de compartir la noticia»: ¿qué formulación se oye?",
+        "q": "Escucha. ¿Qué expresa el hablante?",
         "options": [
-          "Es posible que falte una parte del mensaje.",
-          "Puede ser útil, aunque no demuestra todo."
+          "Que el decorado se terminará pronto.",
+          "Que no está seguro de que el decorado esté terminado.",
+          "Que sabe que el decorado está terminado."
         ],
         "answer": 1,
-        "why": "La respuesta se apoya en la información y la intención del texto; vuelve a localizar la evidencia.",
-        "audio": "Puede ser útil, aunque no demuestra todo.",
-        "voice": "es-ES-f"
+        "why": "«Dudo que hayan terminado»: duda sobre una acción anterior.",
+        "audio": "Dudo que hayan terminado el decorado a tiempo.",
+        "voice": "es-AR-m"
       },
       {
         "type": "gap",
-        "q": "Revisión breve de «Antes de compartir la noticia». No creo que el autor ___ todos los datos.",
+        "q": "Es una pena que tus primos no ___ venir a la boda. (poder)",
         "answers": [
           [
-            "tenga"
+            "hayan podido"
           ]
-        ]
-      },
-      {
-        "type": "open",
-        "prompt": "Reformulación de «Antes de compartir la noticia». Texto de partida: Creo que la foto es de este año. Consigna: Expresa la opinión negada con No creo que. Compara el sentido y la forma con el modelo; puede haber más de una respuesta válida.",
-        "model": "No creo que la foto sea de este año.",
-        "checklist": [
-          "Mantengo los datos y la intención del texto de partida.",
-          "Uso la estructura pedida con concordancia y referencias coherentes.",
-          "Acepto otro orden o una formulación equivalente si conserva el sentido; consulto la duda en clase."
-        ]
-      },
-      {
-        "type": "error",
-        "sentence": "Es posible que el aviso tiene otra fecha.",
-        "answers": [
-          "Es posible que el aviso tenga otra fecha."
         ],
-        "why": "La posibilidad se presenta con subjuntivo."
+        "why": "«Hayan» + participio invariable."
+      },
+      {
+        "type": "gap",
+        "q": "Te llamo en cuanto ___ del médico. (salir, yo)",
+        "answers": [
+          [
+            "salga"
+          ]
+        ],
+        "why": "Acción futura después de «en cuanto»: subjuntivo."
+      },
+      {
+        "type": "gap",
+        "q": "No cierres la tienda hasta que ___ el último cliente. (irse)",
+        "answers": [
+          [
+            "se vaya"
+          ]
+        ],
+        "why": "«Hasta que» + acción futura: «se vaya»."
       },
       {
         "type": "order",
         "words": [
           "Puede",
-          "ser",
-          "útil,",
-          "aunque",
-          "no",
-          "demuestra",
-          "todo."
-        ]
+          "que",
+          "los",
+          "niños",
+          "ya",
+          "hayan",
+          "cenado."
+        ],
+        "why": "«Ya» va antes de «haya»; entre el auxiliar y el participio no se pone nada."
+      },
+      {
+        "type": "error",
+        "sentence": "Antes de que te vas, dame tu número.",
+        "answers": [
+          "Antes de que te vayas, dame tu número."
+        ],
+        "why": "«Antes de que» lleva siempre subjuntivo."
+      },
+      {
+        "type": "error",
+        "sentence": "Me sorprende que Carla haya decido no venir.",
+        "answers": [
+          "Me sorprende que Carla haya decidido no venir."
+        ],
+        "why": "El participio de «decidir» es regular: «decidido»."
       },
       {
         "type": "open",
-        "prompt": "Evaluación escrita de «Antes de compartir la noticia»: responde en 50–70 palabras a una persona que ha entendido solo la mitad de tu propuesta. Conserva el dato decisivo y solicita confirmación.",
+        "prompt": "Reformulación: une las dos ideas en una sola frase con un conector temporal. «Primero vas a terminar el informe. Después me lo envías.»",
+        "model": "En cuanto termines el informe, envíamelo. / Cuando termines el informe, me lo envías.",
         "checklist": [
-          "Reformulo en lugar de copiar.",
-          "Mantengo la intención y los datos."
-        ]
-      },
-      {
-        "type": "open",
-        "prompt": "Evaluación oral de «Antes de compartir la noticia»: durante un minuto explica qué cambiarías tras recibir una objeción y por qué; añade una pregunta para continuar.",
-        "checklist": [
-          "Justifico el cambio.",
-          "Abro un turno real para el interlocutor."
+          "Usa «cuando» o «en cuanto».",
+          "El verbo detrás del conector está en subjuntivo: «termines».",
+          "La otra parte va en imperativo, presente o futuro."
         ]
       }
     ]
   },
   "complete": {
     "canNow": [
-      "Opinar, expresar duda y distinguir una afirmación de una valoración.",
-      "Puedo producir y revisar un texto conectado para esta situación.",
-      "Puedo explicar mi propuesta, pedir aclaración y responder a una objeción."
+      "Reaccionar a lo que ya ha pasado con «me alegra que», «es una pena que» o «qué bien que» + «haya + participio».",
+      "Dudar de un hecho anterior o imaginar qué ha podido pasar con «no creo que» y «puede que».",
+      "Organizar acciones futuras con «cuando», «en cuanto», «hasta que», «mientras» y «antes de que» + subjuntivo.",
+      "Usar indicativo con «cuando» para costumbres y hechos pasados."
     ],
     "review": [
-      "Mañana recupera tres expresiones sin mirar y úsalas en otro contexto.",
-      "Dentro de una semana vuelve a contar el caso con un dato cambiado y compara tu nueva respuesta.",
-      "Revisa con tu profe los criterios de recuperación; un cuestionario no evalúa por sí solo tu nivel oral."
+      "Los participios irregulares: hecho, dicho, puesto, vuelto, roto, abierto, escrito.",
+      "«Antes de que» siempre con subjuntivo; con el mismo sujeto, «antes de» + infinitivo.",
+      "El presente de subjuntivo de la semana 2, que necesitas detrás de los conectores temporales."
     ]
-  }
+  },
+  "related": [
+    {
+      "path": "/sistema-verbal/preterito-perfecto-subjuntivo",
+      "label": "Clase: Perfecto de subjuntivo: pasado valorado desde ahora"
+    },
+    {
+      "path": "/gramatica/temporales-futuras-cuando-en-cuanto-hasta",
+      "label": "Clase: Temporales futuras: cuando, en cuanto, hasta que"
+    }
+  ]
 };

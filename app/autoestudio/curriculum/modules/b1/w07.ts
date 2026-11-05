@@ -1,499 +1,818 @@
 import type { Module } from "../../types";
 
+/**
+ * B1 · semana 7 · Autoestudio espejo de G099 (finales: para que, a fin de que) y
+ * G100 (relativas: que y quien; antecedente conocido o buscado). Repaso autónomo
+ * con una familia que busca casa y escuela al mudarse a Montevideo.
+ */
 export const b1w07: Module = {
   "id": "b1-07",
   "level": "b1",
   "week": 7,
   "kind": "core",
-  "title": "Alegrarse sin invadir",
-  "subtitle": "Responder a noticias personales y explicar emociones sin culpar.",
+  "title": "Casa nueva en Montevideo: lo que busco y para qué",
+  "subtitle": "Repaso de «para» y «para que» para expresar finalidad, y de las relativas con «que» y «quien», con indicativo o subjuntivo según conozcas o busques lo que describes.",
   "stop": {
     "place": "Montevideo",
     "country": "Uruguay"
   },
   "minutes": 95,
   "newObjectives": [
-    "b1.gram.emociones-subjuntivo",
-    "b1.gram.mismo-sujeto",
-    "b1.voc.sentimientos",
-    "b1.pron.entonacion-emocion",
-    "b1.fun.expresar-sentimientos",
-    "b1.wri.correo-personal",
-    "b1.voc.relaciones",
-    "b1.fun.hablar-relaciones",
-    "b1.gram.posesivos-relacion"
+    "b1.gram.g099",
+    "b1.gram.g100",
+    "b1.voc.w07-vivienda-alquiler",
+    "b1.pron.w07-pausa-relativa",
+    "b1.lis.w07-llamada-inmobiliaria",
+    "b1.read.w07-foro-recien-llegados",
+    "b1.wri.w07-anuncio-busqueda",
+    "b1.spk.w07-describir-busqueda",
+    "b1.fun.w07-pedir-requisitos",
+    "b1.disc.w07-requisito-finalidad"
   ],
-  "reviewObjectives": [
-    "b1.gram.opinion-subjuntivo",
-    "b1.gram.valoracion",
-    "b1.voc.medios-redes",
-    "b1.pron.duda-certeza",
-    "b1.fun.opinar-matizar",
-    "b1.read.articulo-opinion",
-    "b1.gram.demostrativos-discurso"
-  ],
-  "prerequisites": [
-    "b1-06"
-  ],
+  "reviewObjectives": [],
+  "prerequisites": [],
   "goal": {
-    "canDo": "Puedo responder a noticias personales y explicar emociones sin culpar.",
+    "canDo": "Al final de esta semana puedes describir la casa, la persona o el servicio que buscas («busco un apartamento que tenga…») y explicar para qué lo necesitas («para que los chicos puedan…»).",
     "steps": [
-      "Reconstruye la situación a partir del audio y la lectura.",
-      "Relaciona las formas con una intención y comprueba tus elecciones.",
-      "Prepara un texto revisado y una intervención con preguntas.",
-      "Lleva a clase una propuesta propia y una duda concreta."
+      "Repasa cuándo usas «para» + infinitivo y cuándo «para que» + subjuntivo.",
+      "Repasa las relativas: «que» para identificar, «quien» entre comas para añadir un dato, y el modo según el antecedente.",
+      "Escucha la llamada de Valeria a una inmobiliaria de Montevideo.",
+      "Lee su consulta en un foro de recién llegados y las respuestas que recibe.",
+      "Escribe un anuncio para buscar a alguien, revísalo y graba cómo describes lo que buscas."
     ]
   },
   "theory": {
-    "intro": "La misión de esta semana: Responder a noticias personales y explicar emociones sin culpar.",
+    "intro": "Esta semana repasas dos clases que se usan juntas cada vez que pides algo: describes lo que buscas con una relativa y explicas para qué lo quieres. Las vemos con una familia mexicana que acaba de mudarse a Montevideo y busca apartamento, escuela y una persona que cuide a los niños.",
     "parts": [
       {
-        "heading": "Forma y significado",
+        "heading": "«Para» + infinitivo o «para que» + subjuntivo",
         "body": [
-          "Me alegra que, me molesta que y me preocupa que expresan una reacción y llevan subjuntivo: me alegra que vengas. El hecho puede ser real; subjuntivo no significa siempre incertidumbre. Con infinitivo puedes presentar una experiencia o actividad sin desarrollar otra oración: me alegra verte."
+          "La finalidad responde a la pregunta «¿para qué?». Si la persona que hace la acción principal es la misma que la que consigue el objetivo, usas «para» + infinitivo: «Ahorramos para comprar muebles» (nosotros ahorramos, nosotros compramos).",
+          "Si el objetivo lo realiza otra persona, necesitas «para que» + subjuntivo: «Ahorramos para que nuestros hijos tengan un cuarto cada uno». Con el verbo principal en presente, futuro o imperativo, el subjuntivo va en presente. La negación va delante del verbo: «para no perder», «para que no se pierdan»."
+        ],
+        "table": {
+          "caption": "¿Uno o dos sujetos?",
+          "head": [
+            "Sujetos",
+            "Estructura",
+            "Ejemplo"
+          ],
+          "rows": [
+            [
+              "El mismo",
+              "para + infinitivo",
+              "Llamo a la inmobiliaria para pedir una visita."
+            ],
+            [
+              "Distintos",
+              "para que + subjuntivo",
+              "Llamo a la inmobiliaria para que me enseñen el piso."
+            ],
+            [
+              "El mismo, negado",
+              "para no + infinitivo",
+              "Salimos temprano para no perder el ómnibus."
+            ],
+            [
+              "Distintos, negado",
+              "para que no + subjuntivo",
+              "Cierra la ventana para que no entre el viento."
+            ]
+          ]
+        },
+        "mistakes": [
+          {
+            "wrong": "Busco trabajo para que yo pueda pagar el alquiler.",
+            "right": "Busco trabajo para poder pagar el alquiler.",
+            "why": "El sujeto es el mismo («yo» busco, «yo» pago): infinitivo."
+          },
+          {
+            "wrong": "Te dejo la llave para que entras cuando quieras.",
+            "right": "Te dejo la llave para que entres cuando quieras.",
+            "why": "Detrás de «para que» va siempre subjuntivo."
+          }
+        ],
+        "tip": "Haz la prueba: ¿quién hace la segunda acción? Si es la misma persona, borra «que» y pon el infinitivo."
+      },
+      {
+        "heading": "Preguntar «¿para qué?», moverse «a» y hablar en registro formal",
+        "body": [
+          "La pregunta «¿para qué…?» lleva indicativo, también en preguntas indirectas: «¿Para qué necesitan la garantía?», «No entiendo para qué sirve este papel». La respuesta sí puede llevar «para que» + subjuntivo.",
+          "Con verbos de movimiento (ir, venir, salir, bajar, subir, entrar), la finalidad suele ir con «a» + infinitivo: «Vengo a firmar el contrato», «Bajo a abrir la puerta». En cartas, avisos y documentos oficiales aparecen «a fin de (que)», «con el fin de (que)» y «con el objetivo de», con las mismas reglas que «para (que)»."
         ],
         "examples": [
           {
-            "es": "Me alegra que hayas encontrado apoyo."
+            "es": "¿Para qué quieren ver el apartamento otra vez?",
+            "note": "Pregunta: indicativo."
           },
           {
-            "es": "Me preocupa que no tengas tiempo libre."
+            "es": "Mañana vamos a ver dos casas en el barrio Cordón.",
+            "note": "Movimiento + «a» + infinitivo."
           },
           {
-            "es": "Me molesta recibir mensajes de madrugada."
+            "es": "Le enviamos el contrato a fin de que lo revise con calma.",
+            "note": "Registro formal, otro sujeto: subjuntivo."
+          },
+          {
+            "es": "Con el fin de evitar retrasos, la mudanza empezará a las ocho.",
+            "note": "Registro formal, mismo sujeto: infinitivo."
           }
         ],
         "mistakes": [
           {
-            "wrong": "Me alegra que vienes a la cena.",
-            "right": "Me alegra que vengas a la cena.",
-            "why": "La reacción emocional se construye aquí con subjuntivo."
+            "wrong": "¿Para qué sirva este formulario?",
+            "right": "¿Para qué sirve este formulario?",
+            "why": "En la pregunta con «para qué» se usa indicativo."
           }
         ]
       },
       {
-        "heading": "Organizar la comunicación",
+        "heading": "«Que» identifica; «, quien…,» añade un dato",
         "body": [
-          "No reduzcas infinitivo a una regla mecánica de mismo sujeto con verbos como alegrar: en me alegra verte quien siente alegría y quien ve se interpretan por el contexto. Aprende los patrones completos. Describe el efecto de una conducta y pregunta por la intención antes de acusar a alguien."
+          "«Que» une un nombre (el antecedente) con la información que lo identifica: «la vecina que tiene perro», «el barrio que nos gustó», «la escuela que está junto al parque». Sin esa información, no sabríamos de cuál hablas, y no se ponen comas.",
+          "Si la persona ya está identificada, por ejemplo por su nombre, el dato solo se añade, como un paréntesis, entre comas. Ahí puedes usar «que» o «quien» (más formal): «Gonzalo, quien trabaja en la inmobiliaria, nos ayudó mucho». «Quien» nunca va sin comas detrás de un nombre de persona: no se dice «la señora quien vive arriba»."
         ],
         "examples": [
           {
-            "es": "Me hace ilusión volver a verte."
+            "es": "La inmobiliaria que nos recomendaste cierra los sábados.",
+            "note": "Identifica cuál de todas."
           },
           {
-            "es": "Confío en ti y pienso en nuestra amistad."
+            "es": "Mi cuñada, quien vive en Pocitos, nos prestó un colchón.",
+            "note": "Solo tengo una cuñada: el dato se añade."
           },
           {
-            "es": "Nos acordamos de hablar después de la reunión."
+            "es": "El apartamento que vimos ayer no tiene ascensor.",
+            "note": "«Que» es el objeto de «vimos»: no añadas «lo»."
+          }
+        ],
+        "mistakes": [
+          {
+            "wrong": "Busco a la señora quien alquila la casa.",
+            "right": "Busco a la señora que alquila la casa.",
+            "why": "Sin comas, para identificar, se usa «que»."
+          },
+          {
+            "wrong": "El sofá que lo compramos es enorme.",
+            "right": "El sofá que compramos es enorme.",
+            "why": "«Que» ya representa al sofá; no repitas el pronombre."
           }
         ]
       },
       {
-        "heading": "Posesivos y relaciones personales",
+        "heading": "Antecedente conocido o buscado: indicativo o subjuntivo",
         "body": [
-          "El posesivo ante el nombre no lleva artículo en el uso general: mi amigo. Después del nombre concuerda con lo poseído: una amiga mía, unos amigos nuestros. Un amigo mío presenta a uno entre varios; mi amigo puede recuperar uno conocido por el contexto. El mío evita repetir el nombre, pero necesita un referente claro."
+          "Cuando hablas de algo que existe y conoces, la relativa va en indicativo: «Conozco una escuela que tiene comedor». Cuando describes algo que buscas, necesitas o pides y todavía no sabes si existe o cuál es, la relativa va en subjuntivo: «Buscamos una escuela que tenga comedor».",
+          "Lo mismo pasa con la negación y las preguntas: «No hay ningún apartamento que acepte mascotas», «¿Conoces a alguien que arregle persianas?». Fíjate en el artículo: «el / la» suele señalar algo conocido; «un / una / alguien» suele acompañar lo que se busca."
         ],
-        "examples": [
+        "table": {
+          "caption": "El mismo dato, dos actitudes",
+          "head": [
+            "Antecedente",
+            "Modo",
+            "Ejemplo"
+          ],
+          "rows": [
+            [
+              "Conocido, existe",
+              "indicativo",
+              "Tenemos una niñera que habla inglés."
+            ],
+            [
+              "Buscado, no sé cuál",
+              "subjuntivo",
+              "Necesitamos una niñera que hable inglés."
+            ],
+            [
+              "Negado, no existe",
+              "subjuntivo",
+              "No encontramos ninguna niñera que hable inglés."
+            ],
+            [
+              "Pregunta abierta",
+              "subjuntivo",
+              "¿Hay alguien aquí que hable inglés?"
+            ]
+          ]
+        },
+        "mistakes": [
           {
-            "es": "Una amiga mía también tuvo ese malentendido."
-          },
-          {
-            "es": "Tu mensaje fue breve; el mío explicaba los cambios."
-          },
-          {
-            "es": "Las compañeras nuestras propusieron hablarlo."
+            "wrong": "Buscamos un piso que tiene balcón, pero no encontramos ninguno.",
+            "right": "Buscamos un piso que tenga balcón, pero no encontramos ninguno.",
+            "why": "El piso no es conocido: lo están buscando. Subjuntivo."
           }
-        ]
+        ],
+        "tip": "Pregúntate: ¿puedo señalarlo con el dedo? Si puedes, indicativo; si todavía lo estás buscando, subjuntivo."
       }
     ]
   },
   "grammar": {
+    "intro": "Primero decides entre «para» y «para que»; después, entre «que» y «quien», y entre indicativo y subjuntivo en la relativa.",
     "exercises": [
       {
-        "id": "b1-07-forms",
+        "id": "b1-07-gramatica-para-para-que",
         "type": "gap",
-        "prompt": "Completa estas situaciones de «Alegrarse sin invadir» con la forma que expresa la relación indicada.",
+        "title": "¿Uno o dos sujetos?",
+        "prompt": "Completa con «para» + infinitivo o «para que» + subjuntivo del verbo entre paréntesis.",
         "items": [
           {
-            "q": "Me preocupa que tú no ___ descansando bien.",
+            "q": "Pintamos el cuarto de azul ___ los niños ___ más tranquilos. (dormir)",
             "answers": [
               [
-                "estés"
+                "para que"
+              ],
+              [
+                "duerman"
               ]
             ],
-            "why": "Relaciona la forma con la intención y el contexto temporal de la oración."
+            "why": "Nosotros pintamos; los niños duermen: dos sujetos."
           },
           {
-            "q": "Me alegra ___ contigo otra vez.",
+            "q": "Valeria guardó todos los recibos ___ ___ la fianza. (recuperar)",
             "answers": [
               [
-                "hablar"
+                "para"
+              ],
+              [
+                "recuperar"
               ]
             ],
-            "why": "Relaciona la forma con la intención y el contexto temporal de la oración."
+            "why": "Valeria guarda y Valeria recupera: mismo sujeto."
           },
           {
-            "q": "Me molesta que no me ___ los cambios.",
+            "q": "Te mando la dirección ___ no te ___ . (perder)",
             "answers": [
               [
-                "avises"
+                "para que"
+              ],
+              [
+                "pierdas"
               ]
             ],
-            "why": "Relaciona la forma con la intención y el contexto temporal de la oración."
+            "why": "Yo mando, tú no te pierdes: «para que no te pierdas»."
+          },
+          {
+            "q": "Salimos media hora antes ___ no ___ el ómnibus. (perder)",
+            "answers": [
+              [
+                "para"
+              ],
+              [
+                "perder"
+              ]
+            ],
+            "why": "Mismo sujeto: «para no perder»."
+          },
+          {
+            "q": "El dueño dejó el gas abierto ___ los inquilinos ___ cocinar el primer día. (poder)",
+            "answers": [
+              [
+                "para que",
+                "a fin de que"
+              ],
+              [
+                "puedan"
+              ]
+            ],
+            "why": "El dueño deja; los inquilinos pueden: dos sujetos."
           }
-        ],
-        "bank": [
-          "estés",
-          "hablar",
-          "avises"
         ]
       },
       {
-        "id": "b1-07-repair",
+        "id": "b1-07-gramatica-que-quien",
+        "type": "choice",
+        "title": "¿Que o quien?",
+        "prompt": "Elige el relativo correcto.",
+        "items": [
+          {
+            "q": "El vecino ___ toca el piano practica todas las noches.",
+            "options": [
+              "quien",
+              "que"
+            ],
+            "answer": 1,
+            "why": "Identifica al vecino, sin comas: «que»."
+          },
+          {
+            "q": "Nuestra casera, ___ es muy amable, nos regaló una planta.",
+            "options": [
+              "cual",
+              "quien",
+              "quién"
+            ],
+            "answer": 1,
+            "why": "Dato añadido entre comas sobre una persona: «quien» (o «que»)."
+          },
+          {
+            "q": "La plaza ___ está frente a la escuela tiene juegos para niños.",
+            "options": [
+              "quien",
+              "que"
+            ],
+            "answer": 1,
+            "why": "«Quien» solo se refiere a personas."
+          },
+          {
+            "q": "¿Sabes ___ va a traer el camión de la mudanza?",
+            "options": [
+              "que",
+              "quién"
+            ],
+            "answer": 1,
+            "why": "Pregunta indirecta sobre una persona: «quién», con tilde."
+          }
+        ]
+      },
+      {
+        "id": "b1-07-gramatica-conocido-buscado",
+        "type": "classify",
+        "title": "¿Lo conoce o lo busca?",
+        "prompt": "Clasifica cada frase según el modo de la relativa.",
+        "categories": [
+          "Antecedente conocido: indicativo",
+          "Antecedente buscado o negado: subjuntivo"
+        ],
+        "items": [
+          {
+            "text": "Conozco a un electricista que trabaja los domingos.",
+            "cat": 0
+          },
+          {
+            "text": "¿Hay alguna farmacia que abra de noche por aquí?",
+            "cat": 1
+          },
+          {
+            "text": "Vivimos en una calle que da a la rambla.",
+            "cat": 0
+          },
+          {
+            "text": "Queremos una casa que no esté lejos del trabajo.",
+            "cat": 1
+          },
+          {
+            "text": "No hay nadie en la familia que sepa arreglar la caldera.",
+            "cat": 1
+          },
+          {
+            "text": "La escuela que elegimos tiene un patio enorme.",
+            "cat": 0
+          }
+        ]
+      },
+      {
+        "id": "b1-07-gramatica-errores",
         "type": "error",
-        "prompt": "Revisa la coherencia y la forma en estas frases del caso de la semana.",
+        "title": "Corrige el error",
+        "prompt": "Cada frase tiene un error de finalidad o de relativo. Escríbela bien.",
         "items": [
           {
-            "sentence": "Me alegra que vienes a la cena.",
+            "sentence": "Necesitamos un garaje que es grande para dos coches.",
             "answers": [
-              "Me alegra que vengas a la cena."
+              "Necesitamos un garaje que sea grande para dos coches."
             ],
-            "why": "La reacción emocional se construye aquí con subjuntivo."
+            "why": "Es algo que buscan, no uno concreto que conocen: subjuntivo."
           },
           {
-            "sentence": "Confío de mis amigos.",
+            "sentence": "Vine a Montevideo para que yo estudie arquitectura.",
             "answers": [
-              "Confío en mis amigos."
+              "Vine a Montevideo para estudiar arquitectura.",
+              "Vine a Montevideo a estudiar arquitectura."
             ],
-            "why": "Confiar selecciona en."
+            "why": "Mismo sujeto: «para» + infinitivo."
           },
           {
-            "sentence": "Me preocupa que no tienes apoyo.",
+            "sentence": "La profesora quien da clases a mi hijo es chilena.",
             "answers": [
-              "Me preocupa que no tengas apoyo."
+              "La profesora que da clases a mi hijo es chilena."
             ],
-            "why": "La emoción no cambia a indicativo porque el hecho sea real."
-          }
-        ]
-      },
-      {
-        "id": "b1-07-posesivos-relacion",
-        "type": "gap",
-        "prompt": "Aplica posesivos y relaciones personales a la misión de esta semana.",
-        "bank": [
-          "mía",
-          "tuyo",
-          "nuestros"
-        ],
-        "items": [
-          {
-            "q": "Una amiga ___ me ayudó a entenderlo.",
-            "answers": [
-              [
-                "mía"
-              ]
-            ],
-            "why": "El posesivo ante el nombre no lleva artículo en el uso general: mi amigo. Después del nombre concuerda con lo poseído: una amiga mía, unos amigos nuestros. Un amigo mío presenta a uno entre varios; mi amigo puede recuperar uno conocido por el contexto. El mío evita repetir el nombre, pero necesita un referente claro."
+            "why": "Sin comas, el relativo que identifica es «que»."
           },
           {
-            "q": "Mi mensaje es breve; el ___ es más detallado.",
+            "sentence": "Le escribo con el fin de que me envíe usted el contrato, que lo firmé ayer.",
             "answers": [
-              [
-                "tuyo"
-              ]
+              "Le escribo con el fin de que me envíe usted el contrato, que firmé ayer."
             ],
-            "why": "El posesivo ante el nombre no lleva artículo en el uso general: mi amigo. Después del nombre concuerda con lo poseído: una amiga mía, unos amigos nuestros. Un amigo mío presenta a uno entre varios; mi amigo puede recuperar uno conocido por el contexto. El mío evita repetir el nombre, pero necesita un referente claro."
-          },
-          {
-            "q": "Unos amigos ___ organizaron la despedida.",
-            "answers": [
-              [
-                "nuestros"
-              ]
-            ],
-            "why": "El posesivo ante el nombre no lleva artículo en el uso general: mi amigo. Después del nombre concuerda con lo poseído: una amiga mía, unos amigos nuestros. Un amigo mío presenta a uno entre varios; mi amigo puede recuperar uno conocido por el contexto. El mío evita repetir el nombre, pero necesita un referente claro."
+            "why": "«Que» ya es el objeto de «firmé»: sobra «lo»."
           }
         ]
       }
     ]
   },
   "vocabulary": {
-    "intro": "Aprende cada expresión junto a su situación de uso; reutiliza al menos cuatro en tu producción.",
+    "intro": "Palabras para buscar casa en Uruguay. Algunas cambian en otros países: te lo indicamos.",
     "groups": [
       {
-        "title": "Alegrarse sin invadir · acciones y recursos",
+        "title": "La vivienda",
         "items": [
           {
-            "es": "sentir alivio",
-            "note": "dejar de sentir preocupación"
+            "es": "el apartamento",
+            "note": "En España, «el piso»; en otros países, «el departamento»."
           },
           {
-            "es": "estar agobiado",
-            "note": "sentirse superado por las tareas"
+            "es": "el monoambiente"
           },
           {
-            "es": "llevarse una decepción",
-            "note": "recibir un resultado peor de lo esperado"
+            "es": "el dormitorio"
           },
           {
-            "es": "sentir orgullo",
-            "note": "valorar positivamente un logro"
+            "es": "luminoso"
+          },
+          {
+            "es": "amueblado"
+          },
+          {
+            "es": "con vista al mar"
+          },
+          {
+            "es": "el ascensor"
           }
         ]
       },
       {
-        "title": "Matices para esta misión",
+        "title": "El alquiler",
         "items": [
           {
-            "es": "guardar rencor",
-            "note": "mantener enfado durante tiempo"
+            "es": "la inmobiliaria"
           },
           {
-            "es": "hacer las paces",
-            "note": "recuperar una relación tras un conflicto"
+            "es": "el dueño, la dueña"
           },
           {
-            "es": "ponerse en el lugar de alguien",
-            "note": "intentar comprender su perspectiva"
+            "es": "la garantía de alquiler",
+            "note": "Documento o seguro que respalda al inquilino."
           },
           {
-            "es": "hablar con franqueza",
-            "note": "expresarse de forma sincera"
+            "es": "el depósito"
+          },
+          {
+            "es": "los gastos comunes",
+            "note": "En Uruguay, lo que se paga por los servicios del edificio. En España, «los gastos de comunidad»."
+          },
+          {
+            "es": "firmar el contrato"
+          }
+        ]
+      },
+      {
+        "title": "El barrio",
+        "items": [
+          {
+            "es": "la rambla"
+          },
+          {
+            "es": "la parada del ómnibus",
+            "note": "En otros países, «la parada del autobús» o «del camión»."
+          },
+          {
+            "es": "la feria vecinal"
+          },
+          {
+            "es": "quedar cerca de"
+          },
+          {
+            "es": "estar bien conectado"
           }
         ]
       }
     ],
     "exercises": [
       {
-        "id": "b1-07-lexis",
+        "id": "b1-07-vocabulario-definiciones",
         "type": "match",
-        "prompt": "Relaciona expresiones de «Alegrarse sin invadir» con su significado en este contexto.",
+        "title": "Cada palabra con su definición",
+        "prompt": "Une cada palabra con su explicación.",
         "pairs": [
           {
-            "left": "sentir alivio",
-            "right": "dejar de sentir preocupación"
+            "left": "el monoambiente",
+            "right": "una vivienda de una sola habitación más el baño"
           },
           {
-            "left": "estar agobiado",
-            "right": "sentirse superado por las tareas"
+            "left": "la inmobiliaria",
+            "right": "la empresa que alquila y vende viviendas"
           },
           {
-            "left": "llevarse una decepción",
-            "right": "recibir un resultado peor de lo esperado"
+            "left": "los gastos comunes",
+            "right": "lo que pagan los vecinos por el ascensor, la limpieza y la portería"
           },
           {
-            "left": "sentir orgullo",
-            "right": "valorar positivamente un logro"
+            "left": "el depósito",
+            "right": "el dinero que se devuelve al final si todo está bien"
           },
           {
-            "left": "guardar rencor",
-            "right": "mantener enfado durante tiempo"
+            "left": "la rambla",
+            "right": "el paseo largo junto al mar o al río"
+          }
+        ],
+        "why": "Fíjate en quién paga, quién cobra y dónde está cada cosa."
+      },
+      {
+        "id": "b1-07-vocabulario-anuncio",
+        "type": "gap",
+        "title": "Un anuncio de alquiler",
+        "prompt": "Completa el anuncio con una palabra del banco.",
+        "bank": [
+          "luminoso",
+          "amueblado",
+          "ascensor",
+          "garantía",
+          "dormitorios"
+        ],
+        "items": [
+          {
+            "q": "Alquilo apartamento de dos ___ en el barrio Cordón.",
+            "answers": [
+              [
+                "dormitorios"
+              ]
+            ],
+            "why": "Dos habitaciones para dormir."
           },
           {
-            "left": "hacer las paces",
-            "right": "recuperar una relación tras un conflicto"
+            "q": "Es muy ___: tiene ventanas grandes que dan al este.",
+            "answers": [
+              [
+                "luminoso"
+              ]
+            ],
+            "why": "Mucha luz natural."
           },
           {
-            "left": "ponerse en el lugar de alguien",
-            "right": "intentar comprender su perspectiva"
+            "q": "Se entrega ___, con camas, mesa y sofá.",
+            "answers": [
+              [
+                "amueblado"
+              ]
+            ],
+            "why": "Con muebles."
           },
           {
-            "left": "hablar con franqueza",
-            "right": "expresarse de forma sincera"
+            "q": "Está en un cuarto piso, pero el edificio tiene ___.",
+            "answers": [
+              [
+                "ascensor"
+              ]
+            ],
+            "why": "No hace falta subir por la escalera."
+          },
+          {
+            "q": "Se pide ___ de alquiler o seguro equivalente.",
+            "answers": [
+              [
+                "garantía"
+              ]
+            ],
+            "why": "Respaldo que pide el dueño."
           }
         ]
       }
     ]
   },
   "pronunciation": {
-    "focus": "La emoción se acompaña de contexto y ritmo",
+    "focus": "Pausas que cambian el sentido: «mi vecina que vive arriba» y «mi vecina, que vive arriba,»",
     "explanation": [
-      "Pronuncia la emoción y su causa en dos grupos. Prueba una reacción cálida y otra preocupada con un compañero; la voz sintética no certifica matices emocionales.",
-      "Escucha la síntesis como apoyo para percibir palabras y grupos. Compara después tu producción con la comprensión de otra persona; no hay evaluación automática ni demostración regional verificada."
+      "Las comas de una relativa que añade un dato se oyen: antes de «que» o «quien» hay una pausa breve, la voz baja un poco durante el dato y vuelve a subir al final, como en un paréntesis. La relativa que identifica va pegada al nombre, sin pausa, en un solo grupo de entonación.",
+      "La diferencia importa: «Mis hermanos que viven en Salto vendrán» habla solo de algunos hermanos; «Mis hermanos, que viven en Salto, vendrán» dice que todos viven allí. Al hablar, haz la pausa solo cuando el dato sea un añadido."
     ],
     "examples": [
       {
-        "es": "Me alegra que hayas encontrado apoyo."
+        "es": "Los inquilinos que tienen perro pagan más.",
+        "note": "Sin pausa: solo algunos inquilinos."
       },
       {
-        "es": "Me preocupa que no tengas tiempo libre."
-      },
-      {
-        "es": "Me molesta recibir mensajes de madrugada."
+        "es": "Los inquilinos, que tienen perro, pagan más.",
+        "note": "Con pausas: todos tienen perro."
       }
     ],
     "perceive": {
-      "id": "b1-07-perception",
-      "type": "listen",
-      "prompt": "Escucha antes de elegir qué secuencia reconoces; después repítela agrupando el sentido.",
+      "id": "b1-07-pronunciacion-pausas",
+      "type": "classify",
+      "title": "¿Identifica o añade?",
+      "prompt": "Escucha cada frase. ¿Oyes pausas alrededor de la relativa?",
+      "categories": [
+        "Sin pausas: identifica",
+        "Con pausas: añade un dato"
+      ],
       "items": [
         {
-          "q": "Percepción 1: ¿qué reconoces al escuchar el fragmento de «Alegrarse sin invadir»?",
-          "options": [
-            "Se oye molesta y después vengas",
-            "Se oye alegra y después vengas"
-          ],
-          "answer": 1,
-          "audio": "Me alegra que vengas.",
-          "voice": "es-ES-f",
-          "why": "Escucha la secuencia completa y compara el grupo indicado. La síntesis sirve como apoyo, no como evaluación de acento."
+          "text": "La vecina que vive arriba tiene un gato.",
+          "cat": 0,
+          "audio": "La vecina que vive arriba tiene un gato.",
+          "voice": "es-UY-f"
         },
         {
-          "q": "Percepción 2: ¿qué reconoces al escuchar el fragmento de «Alegrarse sin invadir»?",
-          "options": [
-            "El acento de estés recae al final",
-            "El acento recae al principio"
-          ],
-          "answer": 0,
-          "audio": "Me preocupa que estés sola.",
-          "voice": "es-ES-f",
-          "why": "Escucha la secuencia completa y compara el grupo indicado. La síntesis sirve como apoyo, no como evaluación de acento."
+          "text": "Mi abuela, que vive en Colonia, viene el domingo.",
+          "cat": 1,
+          "audio": "Mi abuela, que vive en Colonia, viene el domingo.",
+          "voice": "es-UY-m"
+        },
+        {
+          "text": "El apartamento que vimos ayer es caro.",
+          "cat": 0,
+          "audio": "El apartamento que vimos ayer es caro.",
+          "voice": "es-MX-f"
+        },
+        {
+          "text": "Gonzalo, quien nos enseñó la casa, es muy simpático.",
+          "cat": 1,
+          "audio": "Gonzalo, quien nos enseñó la casa, es muy simpático.",
+          "voice": "es-AR-f"
         }
       ]
     },
     "produce": [
       {
-        "text": "Me alegra que hayas encontrado apoyo.",
-        "tip": "Pronuncia la emoción y su causa en dos grupos. Prueba una reacción cálida y otra preocupada con un compañero; la voz sintética no certifica matices emocionales.",
-        "voice": "es-ES-f"
+        "text": "Mi hermano, que vive en Punta del Este, nos presta su coche.",
+        "tip": "Pausa breve antes de «que» y después de «Este».",
+        "voice": "es-UY-m"
       },
       {
-        "text": "Me preocupa que no tengas tiempo libre.",
-        "tip": "Pronuncia la emoción y su causa en dos grupos. Prueba una reacción cálida y otra preocupada con un compañero; la voz sintética no certifica matices emocionales.",
-        "voice": "es-ES-f"
+        "text": "El hermano que vive en Punta del Este nos presta su coche.",
+        "tip": "Todo seguido: «el hermano que vive en Punta del Este» es un solo bloque.",
+        "voice": "es-UY-m"
       },
       {
-        "text": "Me molesta recibir mensajes de madrugada.",
-        "tip": "Pronuncia la emoción y su causa en dos grupos. Prueba una reacción cálida y otra preocupada con un compañero; la voz sintética no certifica matices emocionales.",
-        "voice": "es-ES-f"
+        "text": "Buscamos una casa que tenga patio, para que los perros puedan correr.",
+        "tip": "Sin pausa en la relativa; pausa breve antes de «para que».",
+        "voice": "es-MX-f"
       }
-    ]
+    ],
+    "spelling": "La pausa se escribe con comas: si dices el dato como un paréntesis, pon una coma antes y otra después."
   },
   "listening": {
-    "title": "Alegrarse sin invadir · voces en conversación",
-    "context": "Un cambio de fecha ha provocado un malentendido entre compañeros. Escucha primero sin transcripción. Las voces son sintéticas; no se presentan como modelos regionales verificados. Anota quién necesita qué y qué queda por confirmar.",
+    "title": "Una llamada a la inmobiliaria",
+    "context": "Valeria, mexicana, acaba de llegar a Montevideo con su pareja y sus dos hijos. Llama a una inmobiliaria del barrio Cordón y habla con Gonzalo, un agente. Se tratan de usted.",
     "speakers": [
       {
-        "id": "a",
-        "name": "Álex",
-        "voice": "es-ES-f"
+        "id": "gon",
+        "name": "Gonzalo",
+        "voice": "es-UY-m",
+        "role": "agente inmobiliario"
       },
       {
-        "id": "b",
-        "name": "Dani",
-        "voice": "es-ES-m"
+        "id": "val",
+        "name": "Valeria",
+        "voice": "es-MX-f",
+        "role": "clienta"
       }
     ],
     "script": [
       {
-        "speaker": "a",
-        "text": "Quería hablar contigo sobre el cambio de la excursión. Me alegró que organizaras otra fecha, pero me molestó enterarme por una fotografía del grupo. Yo había reservado el sábado y pensé que me habíais dejado fuera."
+        "speaker": "gon",
+        "text": "Inmobiliaria del Sur, buenas tardes, habla Gonzalo."
       },
       {
-        "speaker": "b",
-        "text": "Siento que te llegara así. No quería excluirte. Cambiamos la fecha en una conversación después de clase y creí que estabas en el grupo donde lo avisamos. Ahora veo que no lo habíamos comprobado."
+        "speaker": "val",
+        "text": "Buenas tardes. Lo llamo para preguntar por apartamentos en alquiler. Somos cuatro y buscamos uno que tenga tres dormitorios y que esté cerca de una escuela pública."
       },
       {
-        "speaker": "a",
-        "text": "Gracias por explicarlo. Me preocupa que vuelva a pasar porque últimamente no puedo quedarme después de clase. No necesito participar en todas las decisiones, pero sí saber cuándo algo que ya habíamos acordado cambia."
+        "speaker": "gon",
+        "text": "Perfecto. ¿Y para qué necesitan el tercer dormitorio? Se lo pregunto porque con tres el precio sube bastante."
       },
       {
-        "speaker": "b",
-        "text": "Lo entiendo. Podemos mandar un resumen al correo de todos después de cada decisión. También me gustaría que me dijeras si falta alguien. Confío en ti para señalar esos problemas, aunque preferiría que lo habláramos antes de pensar que fue intencional."
+        "speaker": "val",
+        "text": "Es para que mi madre pueda quedarse con nosotros cuando venga de México. Pasa tres meses al año aquí."
       },
       {
-        "speaker": "a",
-        "text": "De acuerdo. Reconozco que interpreté la foto demasiado rápido. Me hace ilusión seguir en el grupo y no quiero guardar enfado por una confusión. La próxima vez preguntaré directamente qué ocurrió."
+        "speaker": "gon",
+        "text": "Entiendo. Tengo uno que le puede interesar: está en la calle Gaboto, a dos cuadras de una escuela, y tiene un patio pequeño. El problema es que no tiene ascensor."
       },
       {
-        "speaker": "b",
-        "text": "Y yo comprobaré los destinatarios. Entonces, ¿te viene bien el nuevo domingo o necesitas que busquemos otra opción? Si no puedes venir, podemos mantener también un paseo corto el sábado, sin obligar a todo el grupo a repetir la salida. Una amiga mía también se quedó fuera de un aviso parecido. Su grupo lo solucionó con un resumen común; el nuestro podría probar esa misma idea."
+        "speaker": "val",
+        "text": "¿En qué piso está? Mi madre camina bien, pero no queremos nada que esté más arriba de un segundo piso."
+      },
+      {
+        "speaker": "gon",
+        "text": "Es planta baja, justamente. Ahora, el dueño, quien vive en el mismo edificio, pide garantía de alquiler. ¿Ustedes ya tienen alguna?"
+      },
+      {
+        "speaker": "val",
+        "text": "Todavía no. ¿Hay algún seguro que acepte a extranjeros sin un sueldo uruguayo?"
+      },
+      {
+        "speaker": "gon",
+        "text": "Sí, hay una aseguradora que trabaja con nosotros y acepta contratos del exterior. Le mando la información por correo a fin de que la revise con su pareja, y si les interesa, vienen a ver el apartamento el jueves."
+      },
+      {
+        "speaker": "val",
+        "text": "Muy bien. Le dejo mi correo para que me escriba hoy mismo."
       }
     ],
     "stages": [
       {
         "stage": "gist",
-        "prompt": "Escucha sin abrir el texto. Identifica la situación y la intención principal.",
+        "prompt": "Escucha una vez sin leer. ¿De qué trata la llamada?",
         "exercise": {
-          "id": "b1-07-audio-0",
+          "id": "b1-07-escucha-global",
           "type": "choice",
-          "prompt": "Alegrarse sin invadir: Escucha sin abrir el texto. Identifica la situación y la intención principal.",
+          "prompt": "Elige la mejor respuesta.",
           "items": [
             {
-              "q": "¿Qué problema intentan resolver?",
+              "q": "¿Qué quiere Valeria?",
               "options": [
-                "Una sensación de exclusión por falta de información",
-                "Una discusión por el precio del viaje"
-              ],
-              "answer": 0,
-              "why": "La respuesta se apoya en la información y la intención del texto; vuelve a localizar la evidencia."
-            },
-            {
-              "q": "¿Qué quiere preservar la persona molesta?",
-              "options": [
-                "La prohibición de nuevas excursiones",
-                "Su participación en el grupo"
+                "Vender su apartamento en México.",
+                "Alquilar un apartamento para su familia.",
+                "Trabajar en la inmobiliaria."
               ],
               "answer": 1,
-              "why": "Comprueba la información concreta del fragmento antes de elegir."
+              "why": "Pregunta por apartamentos en alquiler para cuatro personas."
+            },
+            {
+              "q": "¿Cómo termina la llamada?",
+              "options": [
+                "Gonzalo le enviará información y quizá visiten el piso el jueves.",
+                "Valeria firma el contrato por teléfono.",
+                "Gonzalo dice que no tiene nada para ella."
+              ],
+              "answer": 0,
+              "why": "Él manda la información y propone una visita el jueves."
             }
           ]
         }
       },
       {
         "stage": "detail",
-        "prompt": "Vuelve a escuchar y anota el dato que cambia la decisión.",
+        "prompt": "Escucha otra vez y anota los detalles.",
         "exercise": {
-          "id": "b1-07-audio-1",
+          "id": "b1-07-escucha-detalle",
           "type": "choice",
-          "prompt": "Alegrarse sin invadir: Vuelve a escuchar y anota el dato que cambia la decisión.",
+          "prompt": "Responde según la llamada.",
           "items": [
             {
-              "q": "¿Qué medida acuerdan?",
+              "q": "¿Para qué quieren el tercer dormitorio?",
               "options": [
-                "Eliminar toda comunicación escrita",
-                "Enviar un resumen a todos"
+                "Para trabajar desde casa.",
+                "Para alquilarlo a un estudiante.",
+                "Para que la madre de Valeria se quede con ellos."
               ],
-              "answer": 1,
-              "why": "La respuesta se apoya en la información y la intención del texto; vuelve a localizar la evidencia."
+              "answer": 2,
+              "why": "«Es para que mi madre pueda quedarse con nosotros.»"
             },
             {
-              "q": "¿Dónde se acordó el cambio inicialmente?",
+              "q": "¿Qué inconveniente tiene el apartamento de la calle Gaboto?",
               "options": [
-                "En una conversación después de clase",
-                "En una carta enviada a todos"
+                "No tiene ascensor, aunque está en planta baja.",
+                "Está lejos de la escuela.",
+                "No tiene patio."
               ],
               "answer": 0,
-              "why": "Comprueba la información concreta del fragmento antes de elegir."
+              "why": "No tiene ascensor, pero al ser planta baja no es un problema."
+            },
+            {
+              "q": "¿Quién es la persona que vive en el mismo edificio?",
+              "options": [
+                "Gonzalo.",
+                "El dueño del apartamento.",
+                "La madre de Valeria."
+              ],
+              "answer": 1,
+              "why": "«El dueño, quien vive en el mismo edificio, pide garantía.»"
             }
           ]
         }
       },
       {
         "stage": "notice",
-        "prompt": "Escucha una tercera vez: relaciona la formulación con su función. Después puedes consultar la transcripción.",
+        "prompt": "Fíjate en la gramática. Completa lo que dicen exactamente.",
         "exercise": {
-          "id": "b1-07-audio-2",
-          "type": "choice",
-          "prompt": "Alegrarse sin invadir: Escucha una tercera vez: relaciona la formulación con su función. Después puedes consultar la transcripción.",
+          "id": "b1-07-escucha-formas",
+          "type": "gap",
+          "prompt": "Escribe la forma que usan.",
           "items": [
             {
-              "q": "¿Qué reconoce la primera persona?",
-              "options": [
-                "Que interpretó la foto precipitadamente",
-                "Que no quiere seguir en el grupo"
+              "q": "Buscamos uno que ___ tres dormitorios.",
+              "answers": [
+                [
+                  "tenga"
+                ]
               ],
-              "answer": 0,
-              "why": "La respuesta se apoya en la información y la intención del texto; vuelve a localizar la evidencia."
+              "why": "Antecedente buscado: subjuntivo."
             },
             {
-              "q": "¿Qué reconoce «interpreté la foto demasiado rápido»?",
-              "options": [
-                "Que la fotografía era falsa",
-                "Una conclusión precipitada sobre la intención"
+              "q": "Es para que mi madre ___ quedarse con nosotros.",
+              "answers": [
+                [
+                  "pueda"
+                ]
               ],
-              "answer": 1,
-              "why": "Comprueba la información concreta del fragmento antes de elegir."
+              "why": "Otro sujeto: «para que» + subjuntivo."
+            },
+            {
+              "q": "Hay una aseguradora que ___ con nosotros.",
+              "answers": [
+                [
+                  "trabaja"
+                ]
+              ],
+              "why": "Antecedente conocido: indicativo."
+            },
+            {
+              "q": "Le mando la información a fin de que la ___ con su pareja.",
+              "answers": [
+                [
+                  "revise"
+                ]
+              ],
+              "why": "Registro formal, otro sujeto: subjuntivo."
             }
           ]
         }
@@ -501,184 +820,286 @@ export const b1w07: Module = {
     ]
   },
   "reading": {
-    "title": "Alegrarse sin invadir · otra perspectiva",
-    "genre": "Artículo y experiencia de comunidad",
-    "frame": "Texto original de SpanishCue. Lee para comprender la experiencia y la decisión; después vuelve a los detalles.",
+    "title": "Recién llegados a Montevideo: ¿alguien conoce…?",
+    "genre": "Consulta y respuestas en un foro",
+    "frame": "Valeria publica una consulta en un foro de extranjeros que viven en Uruguay. Debajo aparecen dos respuestas.",
     "text": [
-      "Cuando a Nadia le ofrecieron un puesto en otra ciudad, su hermano respondió con una pregunta sobre el alquiler. Ella esperaba una felicitación y sintió una pequeña decepción. Él, en cambio, estaba preocupado porque conocía las dificultades de buscar vivienda allí. Ninguno explicó al principio lo que sentía: Nadia contestó con pocas palabras y su hermano pensó que no quería hablar del asunto.",
-      "Dos días después volvieron a conversar. Nadia dijo que le alegraba poder cambiar de trabajo, aunque estaba agobiada por todos los trámites. También explicó que le había molestado recibir solo advertencias. Su hermano reconoció que había empezado por sus preocupaciones sin celebrar la noticia. «Me hace ilusión que tengas esta oportunidad», aclaró. Después preguntó si ella quería consejos o simplemente contar cómo había ido la entrevista.",
-      "Una amiga suya le recordó que pedir apoyo no significa perder independencia. Nadia comparó ese mensaje con el de su hermano: el suyo empezaba por las precauciones y por eso le había resultado más frío.",
-      "La conversación no resolvió el alquiler, pero sí el malentendido. Acordaron separar dos momentos: primero compartir la noticia y después revisar las cuestiones prácticas. Nadia comprendió que una pregunta podía expresar interés aunque no fuera la reacción que esperaba. Su hermano entendió que ayudar no consiste siempre en anticipar problemas. Desde entonces, cuando uno cuenta algo importante, el otro suele preguntar qué necesita en ese momento. No es una fórmula perfecta, pero les permite evitar algunas discusiones y cuidar mejor una relación en la que ambos confían."
+      "Consulta de Valeria: Hola a todos. Llegamos hace dos semanas desde Guadalajara y seguimos en un hotel. Buscamos un apartamento que tenga tres dormitorios, que no sea muy caro y que quede cerca de una escuela, para que los chicos puedan ir caminando. También necesitamos una persona que cuide a los niños dos tardes por semana, porque mi pareja y yo trabajamos hasta las siete. ¿Alguien conoce a una niñera de confianza que hable un poco de inglés? Nuestro hijo menor todavía mezcla los dos idiomas.",
+      "Respuesta de Marta: ¡Bienvenidos! Yo vivo en Parque Rodó, un barrio que está al lado de la rambla y tiene varias escuelas públicas. Les recomiendo la inmobiliaria de la calle Jackson, que es pequeña pero seria. Con el fin de que no pierdan tiempo, pidan siempre fotos del baño y de la cocina antes de ir a una visita.",
+      "Respuesta de Andrés: Conozco a una chica que cuida a mis sobrinos desde hace dos años. Se llama Lucía, estudia magisterio y habla inglés bastante bien. Les paso su número por mensaje privado para que la llamen. Y un consejo: no firmen nada hasta que alguien de confianza lea el contrato; hay cláusulas sobre los gastos comunes que confunden a cualquiera."
+    ],
+    "glossary": [
+      {
+        "es": "de confianza"
+      },
+      {
+        "es": "magisterio"
+      },
+      {
+        "es": "la cláusula"
+      }
     ],
     "tasks": [
       {
-        "id": "b1-07-read-evidence",
+        "id": "b1-07-lectura-comprension",
         "type": "choice",
-        "prompt": "En la lectura «Alegrarse sin invadir», elige la respuesta respaldada por el texto.",
+        "title": "Comprensión",
+        "prompt": "Responde según el foro.",
         "items": [
           {
-            "q": "¿Por qué se decepcionó Nadia?",
+            "q": "¿Por qué Valeria quiere vivir cerca de una escuela?",
             "options": [
-              "No recibió ninguna oferta",
-              "Esperaba una felicitación antes de las advertencias"
+              "Porque trabaja en una escuela.",
+              "Para que sus hijos puedan ir caminando.",
+              "Porque el hotel está al lado de una escuela."
             ],
             "answer": 1,
-            "why": "La respuesta se apoya en la información y la intención del texto; vuelve a localizar la evidencia."
+            "why": "«Para que los chicos puedan ir caminando.»"
           },
           {
-            "q": "¿Qué cambió en su comunicación?",
+            "q": "¿Qué recomienda Marta antes de ir a una visita?",
             "options": [
-              "Evitan hablar de trabajo",
-              "Preguntan qué apoyo necesita el otro"
+              "Pedir fotos del baño y de la cocina.",
+              "Llevar a los niños.",
+              "Pagar el depósito."
             ],
             "answer": 0,
-            "why": "La respuesta se apoya en la información y la intención del texto; vuelve a localizar la evidencia."
+            "why": "«Pidan siempre fotos del baño y de la cocina.»"
+          },
+          {
+            "q": "¿Qué advierte Andrés?",
+            "options": [
+              "Que las niñeras cobran mucho.",
+              "Que Parque Rodó es caro.",
+              "Que no firmen el contrato sin que lo lea alguien de confianza."
+            ],
+            "answer": 2,
+            "why": "«No firmen nada hasta que alguien de confianza lea el contrato.»"
           }
         ]
       },
       {
-        "id": "b1-07-read-mediation",
-        "type": "open",
-        "prompt": "Reformula para una persona que no ha leído «Alegrarse sin invadir».",
+        "id": "b1-07-lectura-busca-conoce",
+        "type": "classify",
+        "title": "¿Lo buscan o lo conocen?",
+        "prompt": "Clasifica cada elemento según el foro.",
+        "categories": [
+          "Valeria lo busca",
+          "Alguien ya lo conoce"
+        ],
         "items": [
           {
-            "prompt": "Explica en 50–70 palabras qué problema aparece en «Alegrarse sin invadir», qué cambia y qué dato no debe perder quien recibe tu resumen. Cita un detalle del texto.",
-            "model": "Cuando a Nadia le ofrecieron un puesto en otra ciudad, su hermano respondió con una pregunta sobre el alquiler.",
-            "checklist": [
-              "Distingo información e interpretación.",
-              "Adapto el resumen a alguien sin contexto."
-            ]
+            "text": "un apartamento de tres dormitorios",
+            "cat": 0
+          },
+          {
+            "text": "una inmobiliaria pequeña pero seria",
+            "cat": 1
+          },
+          {
+            "text": "una niñera que hable inglés",
+            "cat": 0
+          },
+          {
+            "text": "una chica que estudia magisterio",
+            "cat": 1
+          },
+          {
+            "text": "un barrio junto a la rambla con escuelas públicas",
+            "cat": 1
           }
         ]
       }
     ],
     "noticing": {
-      "prompt": "Busca dos expresiones del texto y explica cómo ayudan a seguir la información.",
+      "prompt": "Compara cómo habla quien busca y quien conoce.",
       "items": [
         {
-          "quote": "Cuando a Nadia le ofrecieron un puesto en otra ciudad, su hermano respondió con una pregunta sobre el alquiler.",
-          "note": "Localiza quién actúa y qué perspectiva temporal o comunicativa establece esta apertura."
+          "quote": "Buscamos un apartamento que tenga tres dormitorios",
+          "note": "Valeria todavía no lo ha encontrado: relativa en subjuntivo."
         },
         {
-          "quote": "No es una fórmula perfecta, pero les permite evitar algunas discusiones y cuidar mejor una relación en la que ambos confían.",
-          "note": "Explica qué aporta el cierre al propósito del texto; compáralo con la apertura."
+          "quote": "Conozco a una chica que cuida a mis sobrinos",
+          "note": "Andrés habla de una persona real que conoce: indicativo."
+        },
+        {
+          "quote": "para que los chicos puedan ir caminando",
+          "note": "Ella busca; los chicos caminan: dos sujetos, «para que» + subjuntivo."
+        },
+        {
+          "quote": "Con el fin de que no pierdan tiempo",
+          "note": "Conector de finalidad algo más formal, con las mismas reglas que «para que»."
         }
       ]
     }
   },
   "practice": {
+    "intro": "Combinas las dos clases y recuperas lo de las semanas 5 y 6.",
     "exercises": [
       {
-        "id": "b1-07-order",
+        "id": "b1-07-practica-orden",
         "type": "order",
-        "prompt": "Reconstruye dos mensajes útiles para «Alegrarse sin invadir» y léelos con grupos de sentido.",
+        "title": "Peticiones completas",
+        "prompt": "Ordena las palabras para formar peticiones.",
         "items": [
           {
             "words": [
-              "Me",
-              "hace",
-              "ilusión",
-              "volver",
+              "Buscamos",
               "a",
-              "verte."
+              "alguien",
+              "que",
+              "pueda",
+              "ayudarnos",
+              "con",
+              "la",
+              "mudanza."
             ]
           },
           {
             "words": [
-              "Confío",
-              "en",
-              "ti",
-              "y",
-              "pienso",
-              "en",
-              "nuestra",
-              "amistad."
+              "Les",
+              "dejo",
+              "la",
+              "llave",
+              "para",
+              "que",
+              "rieguen",
+              "las",
+              "plantas."
+            ]
+          },
+          {
+            "words": [
+              "¿Conoces",
+              "algún",
+              "restaurante",
+              "que",
+              "abra",
+              "los",
+              "lunes?"
+            ]
+          },
+          {
+            "words": [
+              "Vengo",
+              "a",
+              "recoger",
+              "las",
+              "llaves",
+              "del",
+              "apartamento."
             ]
           }
         ]
       },
       {
-        "id": "b1-07-classify",
-        "type": "classify",
-        "prompt": "Clasifica estas formulaciones según su función en «Alegrarse sin invadir».",
-        "categories": [
-          "Reacción emocional",
-          "Petición de información"
-        ],
+        "id": "b1-07-practica-retrieval",
+        "type": "choice",
+        "title": "Recuperación: semanas 5 y 6",
+        "prompt": "Recuperación de semanas anteriores en el contexto de la mudanza. Elige la forma correcta.",
         "items": [
           {
-            "text": "Me alegra seguir en el grupo.",
-            "cat": 0
+            "q": "Semana 5 (infinitivo o «que»): «Quiero ___ el contrato antes del viernes.»",
+            "options": [
+              "que firme",
+              "firmar",
+              "que firmo"
+            ],
+            "answer": 1,
+            "why": "Mismo sujeto: «quiero firmar»."
           },
           {
-            "text": "Me preocupa perder los avisos.",
-            "cat": 0
+            "q": "Semana 5 (infinitivo o «que»): «El dueño quiere que nosotros ___ el depósito ya.»",
+            "options": [
+              "paguemos",
+              "pagar",
+              "pagamos"
+            ],
+            "answer": 0,
+            "why": "Dos sujetos: «quiere que paguemos»."
           },
           {
-            "text": "¿Cuándo decidisteis cambiar la fecha?",
-            "cat": 1
+            "q": "Semana 6 (temporales): «En cuanto ___ las llaves, te mando una foto.»",
+            "options": [
+              "tendré",
+              "tengo",
+              "tenga"
+            ],
+            "answer": 2,
+            "why": "Acción futura después de «en cuanto»: subjuntivo."
           },
           {
-            "text": "¿En qué grupo lo anunciasteis?",
-            "cat": 1
+            "q": "Semana 6 (perfecto de subjuntivo): «Qué bien que ya ___ un apartamento.»",
+            "options": [
+              "hayan encontrado",
+              "han encontrado",
+              "encuentren"
+            ],
+            "answer": 0,
+            "why": "Reacción a algo ya ocurrido: «hayan encontrado»."
           }
         ]
       },
       {
-        "id": "b1-07-draft",
+        "id": "b1-07-practica-transformar",
+        "type": "transform",
+        "title": "Del conocido al buscado",
+        "prompt": "Cambia la frase según la instrucción. Atención al modo de la relativa.",
+        "items": [
+          {
+            "source": "Tengo un vecino que habla portugués.",
+            "instruction": "Empieza con «Necesito un vecino…».",
+            "answers": [
+              "Necesito un vecino que hable portugués."
+            ],
+            "why": "Ya no es un vecino conocido: subjuntivo."
+          },
+          {
+            "source": "Hay una tienda que vende muebles usados.",
+            "instruction": "Empieza con «No hay ninguna tienda…».",
+            "answers": [
+              "No hay ninguna tienda que venda muebles usados."
+            ],
+            "why": "Antecedente negado: subjuntivo."
+          },
+          {
+            "source": "Conocemos una escuela que tiene clases de música.",
+            "instruction": "Empieza con «Buscamos una escuela…».",
+            "answers": [
+              "Buscamos una escuela que tenga clases de música."
+            ],
+            "why": "Antecedente buscado: subjuntivo."
+          }
+        ]
+      },
+      {
+        "id": "b1-07-practica-escritura-guiada",
         "type": "open",
-        "prompt": "Ensaya partes de tu texto antes de producirlo completo.",
+        "title": "Mensajes con requisito y finalidad",
+        "prompt": "Escribe cada mensaje en dos o tres frases.",
         "items": [
           {
-            "prompt": "Alegrarse sin invadir: escribe una apertura de 35–45 palabras para la tarea «Responde en 150–180 palabras a una noticia de un amigo: celebra el logro, explica una preocupación con tacto y pregunta si desea ayuda. Evita decidir por él.» sin copiar el modelo.",
-            "model": "Hola, Mario: me alegra mucho que hayas conseguido la plaza del taller.",
+            "prompt": "Escribe en el grupo de vecinos: buscas a alguien que te preste una escalera y explica para qué la necesitas.",
+            "model": "Hola, vecinos. ¿Hay alguien que tenga una escalera alta y me la pueda prestar el sábado? La necesito para colgar las cortinas del salón. Se la devuelvo el mismo día.",
             "checklist": [
-              "Presento destinatario y propósito.",
-              "Incluyo un dato pertinente del caso."
+              "La relativa sobre lo que buscas va en subjuntivo.",
+              "Explicas la finalidad con «para» + infinitivo."
             ]
           },
           {
-            "prompt": "Alegrarse sin invadir: redacta un cierre de 30–40 palabras que permita al destinatario responder o actuar.",
-            "model": "¿Prefieres que te escuche o que comparemos juntos las opciones de transporte? Confío en que encontrarás una organización que te funcione. Si esta semana no puedes contestar, no pasa nada; podemos hablar cuando hayas probado los primeros días. Me gustaría saber qué actividad del taller te interesa más y qué esperas aprender allí.",
+            "prompt": "Recomiéndale a un amigo recién llegado a tu ciudad un lugar que tú conoces y dile para qué le va a servir.",
+            "model": "Hay un mercado que abre todos los domingos junto al puerto. Ve temprano para que te toque la mejor fruta, y pregunta por Rosa, quien vende los mejores quesos.",
             "checklist": [
-              "El cierre corresponde a esta situación.",
-              "La acción siguiente se entiende sin adivinar."
-            ]
-          }
-        ]
-      },
-      {
-        "id": "b1-07-retrieval",
-        "type": "open",
-        "prompt": "Recupera los recursos lingüísticos sin consultar la explicación. Para los casos con fuentes, usa los datos suministrados y comprueba después los criterios.",
-        "items": [
-          {
-            "prompt": "En el contexto de «Alegrarse sin invadir», recupera la semana 6: Responde a una noticia sin fecha: separa hecho y opinión, expresa una duda y una valoración, y justifica qué comprobarías antes de compartirla. Haz audible el grado de certeza. Fuente suministrada: Aviso recibido: «El parque cierra todos los domingos». El vídeo no tiene fecha ni autor visible. Un cartel del fondo solo anuncia obras en una zona. Nadie ha confirmado el horario del parque al que quiere ir el grupo.",
-            "model": "Creo que la noticia necesita una fecha. No creo que esa imagen sea reciente.",
-            "checklist": [
-              "Puedo usar creo que + indicativo y no creo que + subjuntivo.",
-              "Puedo distinguir afirmar (es verdad que + indicativo) de valorar o dudar (es posible que + subjuntivo).",
-              "Puedo hablar de noticias falsas, algoritmos, influencia y privacidad.",
-              "Puedo sonar seguro o dudoso con la misma frase.",
-              "Puedo dar una opinión, matizarla y mostrar duda.",
-              "Puedo separar hechos de opiniones y detectar la postura del autor.",
-              "Conservo los hechos y señalo lo pendiente; no invento decisiones de la fuente."
+              "La relativa sobre el lugar conocido va en indicativo.",
+              "Hay una finalidad con «para que» o un dato añadido con «quien» entre comas."
             ]
           },
           {
-            "prompt": "Tras recuperar el caso anterior en «Alegrarse sin invadir», escribe 40–60 palabras para explicar qué elección lingüística fue más difícil y ofrece dos versiones que cambien la intención o el tiempo. Comprueba tus ejemplos con la teoría de la semana recuperada.",
-            "model": "Antes presenté un hecho como seguro. Ahora lo reformulo como una duda: Me alegra que hayas encontrado apoyo.",
+            "prompt": "Escribe un aviso formal para la puerta del edificio: piden que nadie deje bicicletas en la entrada y explica el motivo.",
+            "model": "Se ruega no dejar bicicletas en la entrada a fin de que los vecinos con carritos o sillas de ruedas puedan pasar sin problemas. Hay un espacio que está libre en el sótano.",
             "checklist": [
-              "Comparo dos formulaciones concretas.",
-              "Explico el cambio de intención o referencia."
-            ]
-          },
-          {
-            "prompt": "Aplicación diferida en «Alegrarse sin invadir»: Escribe una corrección de noticia con eso para recuperar una idea completa y estos otros para contrastar avisos. Después sustituye un demostrativo ambiguo por su referente explícito.",
-            "model": "El vídeo no tiene fecha; eso limita su utilidad. Esto es lo que sabemos: el cartel menciona obras.",
-            "checklist": [
-              "Puedo usar esto, eso y aquello para recuperar una idea y evitar referencias ambiguas.",
-              "Explico cómo cambia el sentido si sustituyo una forma."
+              "Usa «a fin de que» o «con el fin de que» + subjuntivo.",
+              "El tono es formal e impersonal."
             ]
           }
         ]
@@ -686,185 +1107,241 @@ export const b1w07: Module = {
     ]
   },
   "writing": {
-    "task": "Responde en 150–180 palabras a una noticia de un amigo: celebra el logro, explica una preocupación con tacto y pregunta si desea ayuda. Evita decidir por él.",
-    "context": "Destinatario, propósito y datos deben mantenerse claros. El modelo muestra una posibilidad, no una respuesta que debas copiar.",
+    "task": "Escribe un anuncio para el tablón de tu barrio o un grupo en línea: buscas a una persona (para cuidar niños, dar clases, pasear un perro o compartir piso). Describe cómo tiene que ser, explica para qué la necesitas y menciona algo que ya tienes o conoces.",
+    "context": "Acabas de mudarte a un barrio nuevo y todavía no conoces a nadie. Tu anuncio tiene que ser claro para que te contesten las personas adecuadas.",
     "steps": [
-      "Planifica destinatario, dos ideas centrales y un dato de apoyo de esta semana.",
-      "Escribe una primera versión sin consultar el modelo.",
-      "Compara después organización y lenguaje; cambia al menos una frase para mejorar claridad."
+      "Decide a quién buscas y anota tres requisitos imprescindibles.",
+      "Primer párrafo: preséntate y describe a la persona con relativas en subjuntivo («busco a alguien que…»).",
+      "Segundo párrafo: explica para qué la necesitas con «para», «para que» y «a fin de que», y añade un dato sobre lo que ya tienes con una relativa en indicativo.",
+      "Revisa el anuncio: comprueba el modo de cada relativa y que no uses «para que» con el mismo sujeto."
     ],
     "useLanguage": [
-      "Me alegra que hayas encontrado apoyo.",
-      "Me preocupa que no tengas tiempo libre.",
-      "Me molesta recibir mensajes de madrugada.",
-      "Me hace ilusión volver a verte.",
-      "Una amiga mía también tuvo ese malentendido.",
-      "Tu mensaje fue breve; el mío explicaba los cambios."
+      "busco / necesito a alguien que + subjuntivo",
+      "tengo / conozco… que + indicativo",
+      "para + infinitivo",
+      "para que / a fin de que + subjuntivo",
+      ", quien…,"
     ],
     "model": [
-      "Hola, Mario: me alegra mucho que hayas conseguido la plaza del taller. Sé que llevabas tiempo buscando un espacio para desarrollar tus ideas y me hace ilusión verte tan motivado.",
-      "A mí me pasó algo parecido cuando empecé una actividad nueva: quería aprovechar cada oportunidad y terminé aceptando más tareas de las que podía hacer. No sé si tu situación será igual, pero me ayudó hablar de mis límites antes de agotarme.",
-      "También entiendo que te sientas agobiado por el cambio de horario. Me preocupa que intentes mantener todas tus actividades anteriores sin dejar ningún descanso, aunque tú conoces mejor tu situación. No quiero llenarte de consejos que no has pedido. ¿Prefieres que te escuche o que comparemos juntos las opciones de transporte? Confío en que encontrarás una organización que te funcione. Si esta semana no puedes contestar, no pasa nada; podemos hablar cuando hayas probado los primeros días. Me gustaría saber qué actividad del taller te interesa más y qué esperas aprender allí."
+      "Hola a todos. Soy Valeria y acabo de mudarme a Parque Rodó con mi familia. Buscamos a una persona que pueda cuidar a nuestros dos hijos los martes y los jueves, de tres a siete. Necesitamos a alguien que tenga experiencia con niños pequeños, que sea paciente y que hable un poco de inglés, porque el menor todavía mezcla los idiomas.",
+      "La persona tendría que recogerlos en la escuela, que está a dos cuadras de casa, y acompañarlos a la plaza para que jueguen un rato antes de hacer los deberes. Pagamos por hora y, a fin de que todo quede claro, firmaremos un acuerdo sencillo. Mi pareja, quien trabaja desde casa los viernes, puede hacer una entrevista ese día. Si conoces a alguien que encaje, escríbenos por mensaje privado y cuéntanos un poco sobre esa persona. ¡Gracias!"
     ],
     "checklist": [
-      "Cumplo el propósito y el registro de la consigna.",
-      "Organizo el texto en partes conectadas y doy razones o detalles.",
-      "Reutilizo cuatro expresiones de vocabulario de la semana.",
-      "Compruebo tiempos, referencias, concordancia y lo que está confirmado.",
-      "Reviso una frase y puedo explicar por qué la cambié.",
-      "Integro y compruebo este recurso: posesivos y relaciones personales."
+      "Las relativas sobre lo que busco van en subjuntivo; las de lo que conozco, en indicativo.",
+      "Uso «para» + infinitivo con el mismo sujeto y «para que» + subjuntivo con otro.",
+      "Si uso «quien», va entre comas.",
+      "El anuncio tiene dos párrafos y termina con una forma de contacto."
     ],
     "words": [
-      150,
+      130,
       180
     ]
   },
   "speaking": {
-    "intro": "Prepara ideas, no un guion completo. Puedes grabarte localmente; el curso no puntúa tu pronunciación ni sube tu audio.",
+    "intro": "Graba tus respuestas y escúchate. Comprueba el modo de las relativas y marca con una pausa los datos añadidos.",
     "tasks": [
       {
-        "title": "Intervención organizada",
-        "prompt": "Explica a un amigo por qué te molestó un cambio de planes. Tu interlocutor ofrece una explicación inesperada: pregunta, reformula su intención y acuerda cómo avisarse durante dos minutos.",
+        "title": "Mi casa ideal en una ciudad nueva",
+        "prompt": "Imagina que te mudas a otra ciudad. Habla durante dos minutos: describe la casa y el barrio que buscas, explica para qué necesitas cada cosa y compáralo con un lugar que ya conoces.",
         "prep": [
-          "Anota una apertura, dos detalles y una conclusión.",
-          "Elige una expresión para pedir o dar aclaración.",
-          "Usa también: Una amiga mía también tuvo ese malentendido."
+          "Cuatro requisitos con «busco un… que…» o «quiero un barrio donde…».",
+          "Tres finalidades con «para» y «para que».",
+          "Un lugar real que conoces, con una relativa en indicativo."
         ],
         "seconds": 120,
+        "model": "Me voy a mudar a Montevideo y busco un apartamento que tenga balcón y que quede cerca de la rambla, para salir a correr por las mañanas. Necesito un dormitorio extra para que mis amigos puedan visitarme. Ahora vivo en un piso que es muy oscuro, así que quiero uno que sea luminoso…",
         "selfCheck": [
-          "El oyente puede reconstruir mi idea.",
-          "Doy razones o ejemplos y marco pausas útiles."
+          "¿He hablado al menos dos minutos?",
+          "¿He usado subjuntivo para lo que busco e indicativo para lo que conozco?",
+          "¿He explicado al menos tres finalidades?"
         ]
       },
       {
-        "title": "Interacción y reformulación",
-        "prompt": "En la situación «Alegrarse sin invadir», tu interlocutor no comparte tu primera interpretación. Pregunta qué ha entendido, responde a su objeción y reformula tu idea con un ejemplo distinto; confirma qué acordáis y qué queda pendiente.",
+        "title": "Negocia con la inmobiliaria",
+        "prompt": "Un agente te ofrece un apartamento que no tiene todo lo que pides. Negocia: responde a sus preguntas sobre lo que buscas, aclara qué es imprescindible y qué no, y pregunta si hay otro que cumpla tus requisitos. Practica con un compañero que haga de interlocutor o graba las dos voces.",
         "prep": [
-          "Reserva una pregunta abierta.",
-          "Piensa una alternativa que puedas aceptar."
+          "Prepara una pregunta con «¿Tiene alguno que…?».",
+          "Usa «lo necesito para…» y «es para que…»."
         ],
-        "seconds": 120,
+        "seconds": 90,
+        "model": "El balcón no es imprescindible, pero el ascensor sí, porque es para que mi padre pueda subir. ¿Tiene alguno que esté en planta baja o en un edificio con ascensor? Y otra pregunta: ¿para qué piden dos meses de depósito?",
         "selfCheck": [
-          "Escucho antes de responder.",
-          "Adapto mi respuesta a la información nueva."
+          "¿He respondido a las preguntas del agente y aclarado lo imprescindible?",
+          "¿He usado «¿para qué…?» con indicativo?"
         ]
       }
     ]
   },
   "useInClass": {
-    "intro": "Lleva tu texto revisado y una intervención breve: tu profe continuará la situación con un cambio que no conoces.",
+    "intro": "Lleva tu anuncio y estas tarjetas a la próxima clase con tu profesor.",
     "cards": [
       {
-        "move": "Presenta",
-        "task": "Explica a un amigo por qué te molestó un cambio de planes. Tu interlocutor ofrece una explicación inesperada: pregunta, reformula su intención y acuerda cómo avisarse durante dos minutos."
-      },
-      {
-        "move": "Pregunta",
-        "task": "Pide a tu profe un dato adicional sobre «Alegrarse sin invadir» que pueda cambiar tu propuesta; explica por qué lo necesitas.",
+        "move": "Pide",
+        "task": "Pídele a tu profesor una recomendación con requisitos: un libro, una serie o un lugar que cumpla tres condiciones.",
         "phrases": [
-          "¿He entendido bien que…?",
-          "¿Qué cambiaría si…?"
+          "Busco una serie que…",
+          "¿Conoces algún sitio que…?"
         ]
       },
       {
-        "move": "Reformula",
-        "task": "Resume la postura de tu profe sobre «Alegrarse sin invadir» para una tercera persona y comprueba si tu versión conserva las condiciones."
+        "move": "Explica",
+        "task": "Explica para qué estudias español con al menos dos «para» y dos «para que».",
+        "phrases": [
+          "Estudio español para…",
+          "También para que mis hijos…"
+        ]
+      },
+      {
+        "move": "Describe",
+        "task": "Describe a tres personas importantes de tu vida añadiendo un dato entre comas con «quien» o «que».",
+        "phrases": [
+          "Mi tía, quien vive en…, …"
+        ]
+      },
+      {
+        "move": "Compara",
+        "task": "Compara cómo se dice «apartamento», «piso» y «departamento» en distintos países y pregunta cuál usa tu profesor.",
+        "phrases": [
+          "En Uruguay dicen…, pero en España…"
+        ]
       }
     ],
-    "bring": "Tu borrador y versión revisada, una grabación local si la hiciste y una pregunta sobre una elección lingüística."
+    "bring": "Tu anuncio revisado y la grabación de tu casa ideal."
   },
   "quiz": {
     "items": [
       {
         "type": "choice",
-        "q": "Tras trabajar ambas fuentes: ¿Qué cambió en su comunicación? Relaciona tu respuesta con «Alegrarse sin invadir».",
+        "q": "«Llamo al fontanero ___ arregle la ducha.»",
         "options": [
-          "Evitan hablar de trabajo",
-          "Preguntan qué apoyo necesita el otro"
+          "para",
+          "para que",
+          "a"
         ],
         "answer": 1,
-        "why": "La respuesta se apoya en la información y la intención del texto; vuelve a localizar la evidencia."
+        "why": "Yo llamo; el fontanero arregla: dos sujetos."
+      },
+      {
+        "type": "choice",
+        "q": "¿Qué frase habla de algo que la persona busca?",
+        "options": [
+          "Tengo una bici que es muy rápida.",
+          "Vivo en un barrio que tiene mucho verde.",
+          "Quiero una bici que sea ligera."
+        ],
+        "answer": 2,
+        "why": "«Quiero una bici que sea…»: antecedente buscado, subjuntivo."
       },
       {
         "type": "listen",
-        "q": "Escucha el fragmento final de evaluación de «Alegrarse sin invadir»: ¿qué formulación se oye?",
+        "q": "Escucha. ¿Qué entiendes?",
         "options": [
-          "Nos acordamos de hablar después de la reunión.",
-          "Me molesta recibir mensajes de madrugada."
+          "Tiene una sola profesora y añade que es de Salto.",
+          "Tiene varias profesoras y habla de la que es de Salto.",
+          "Busca una profesora de Salto."
         ],
         "answer": 0,
-        "why": "La respuesta se apoya en la información y la intención del texto; vuelve a localizar la evidencia.",
-        "audio": "Nos acordamos de hablar después de la reunión.",
-        "voice": "es-ES-f"
+        "why": "Pausas y «quien»: el dato se añade sobre una persona ya identificada.",
+        "audio": "Mi profesora, quien es de Salto, nos invitó a su casa.",
+        "voice": "es-UY-f"
       },
       {
         "type": "gap",
-        "q": "Revisión breve de «Alegrarse sin invadir». Me preocupa que tú no ___ descansando bien.",
+        "q": "Busco un compañero de piso que no ___ . (fumar)",
         "answers": [
           [
-            "estés"
+            "fume"
           ]
-        ]
-      },
-      {
-        "type": "open",
-        "prompt": "Reformulación de «Alegrarse sin invadir». Texto de partida: Recibo apoyo y eso me produce alegría. Consigna: Reformula con Me alegra y un infinitivo. Compara el sentido y la forma con el modelo; puede haber más de una respuesta válida.",
-        "model": "Me alegra recibir apoyo.",
-        "checklist": [
-          "Mantengo los datos y la intención del texto de partida.",
-          "Uso la estructura pedida con concordancia y referencias coherentes.",
-          "Acepto otro orden o una formulación equivalente si conserva el sentido; consulto la duda en clase."
-        ]
-      },
-      {
-        "type": "error",
-        "sentence": "Me molesta que cambias el plan sin avisar.",
-        "answers": [
-          "Me molesta que cambies el plan sin avisar."
         ],
-        "why": "La reacción emocional introduce subjuntivo."
+        "why": "Antecedente buscado: subjuntivo."
+      },
+      {
+        "type": "gap",
+        "q": "Hablo despacio para que todos me ___ . (entender)",
+        "answers": [
+          [
+            "entiendan"
+          ]
+        ],
+        "why": "Dos sujetos: «para que» + subjuntivo."
+      },
+      {
+        "type": "gap",
+        "q": "Fui a la biblioteca ___ ___ un libro sobre Uruguay. (buscar)",
+        "answers": [
+          [
+            "a",
+            "para"
+          ],
+          [
+            "buscar"
+          ]
+        ],
+        "why": "Verbo de movimiento + «a» (o «para») + infinitivo."
       },
       {
         "type": "order",
         "words": [
-          "Nos",
-          "acordamos",
-          "de",
-          "hablar",
-          "después",
-          "de",
-          "la",
-          "reunión."
-        ]
+          "No",
+          "hay",
+          "nadie",
+          "que",
+          "conozca",
+          "este",
+          "barrio",
+          "mejor."
+        ],
+        "why": "Antecedente negado («nadie»): subjuntivo."
+      },
+      {
+        "type": "error",
+        "sentence": "Ahorro dinero para que pueda viajar en verano.",
+        "answers": [
+          "Ahorro dinero para poder viajar en verano."
+        ],
+        "why": "Mismo sujeto: «para» + infinitivo."
+      },
+      {
+        "type": "error",
+        "sentence": "El hombre quien vende fruta en la esquina es mi tío.",
+        "answers": [
+          "El hombre que vende fruta en la esquina es mi tío."
+        ],
+        "why": "Relativa que identifica, sin comas: «que»."
       },
       {
         "type": "open",
-        "prompt": "Evaluación escrita de «Alegrarse sin invadir»: responde en 50–70 palabras a una persona que ha entendido solo la mitad de tu propuesta. Conserva el dato decisivo y solicita confirmación.",
+        "prompt": "Reformulación: une las dos frases en una sola con una relativa y una finalidad. «Necesito un abogado. El abogado tiene que hablar inglés. Mis padres van a entender el contrato.»",
+        "model": "Necesito un abogado que hable inglés para que mis padres entiendan el contrato.",
         "checklist": [
-          "Reformulo en lugar de copiar.",
-          "Mantengo la intención y los datos."
-        ]
-      },
-      {
-        "type": "open",
-        "prompt": "Evaluación oral de «Alegrarse sin invadir»: durante un minuto explica qué cambiarías tras recibir una objeción y por qué; añade una pregunta para continuar.",
-        "checklist": [
-          "Justifico el cambio.",
-          "Abro un turno real para el interlocutor."
+          "La relativa va en subjuntivo porque el abogado es buscado.",
+          "La finalidad usa «para que» porque cambia el sujeto.",
+          "No repites «el abogado»."
         ]
       }
     ]
   },
   "complete": {
     "canNow": [
-      "Responder a noticias personales y explicar emociones sin culpar.",
-      "Puedo producir y revisar un texto conectado para esta situación.",
-      "Puedo explicar mi propuesta, pedir aclaración y responder a una objeción."
+      "Explicar para qué haces algo con «para» + infinitivo o «para que» + subjuntivo según los sujetos.",
+      "Preguntar «¿para qué…?» con indicativo y usar «a fin de que» en textos formales.",
+      "Identificar con «que» y añadir un dato entre comas con «quien».",
+      "Describir lo que buscas con subjuntivo y lo que conoces con indicativo."
     ],
     "review": [
-      "Mañana recupera tres expresiones sin mirar y úsalas en otro contexto.",
-      "Dentro de una semana vuelve a contar el caso con un dato cambiado y compara tu nueva respuesta.",
-      "Revisa con tu profe los criterios de recuperación; un cuestionario no evalúa por sí solo tu nivel oral."
+      "La regla del mismo sujeto de la semana 5: también vale para «para» y «para que».",
+      "El presente de subjuntivo irregular: tenga, pueda, sepa, sea, haya.",
+      "Las comas de las relativas que añaden un dato."
     ]
-  }
+  },
+  "related": [
+    {
+      "path": "/gramatica/finales-para-que-a-fin-de",
+      "label": "Clase: Finales: para que, a fin de que"
+    },
+    {
+      "path": "/la-persona-que-tengo-en-mente",
+      "label": "Clase: Relativas con antecedente conocido o buscado"
+    }
+  ]
 };
