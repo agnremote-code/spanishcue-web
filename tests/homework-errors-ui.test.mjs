@@ -60,12 +60,12 @@ const text = () => document.body.textContent;
 const settle = () => act(async () => { await new Promise(r => setTimeout(r, 0)); });
 
 test('a wrong SER/ESTAR answer gets feedback, the explanation and one discreet card to the real class; a correct one gets no card', async () => {
-  assert.equal(exercise.items[0].q, 'Hola, ___ Carlos.');
+  assert.equal(exercise.items[0].q, 'Hola, ___ Amara. Soy de Nigeria.');
   window.localStorage.clear();
   await mount(React.createElement(Learner));
   try {
     const options = [...document.querySelectorAll('.ae-options')][0].querySelectorAll('button');
-    assert.deepEqual([...options].map(b => b.textContent.replace(/^[ABC]/, '')), ['eres', 'es', 'soy']);
+    assert.deepEqual([...options].map(b => b.textContent.replace(/^[ABC]/, '')), ['estoy', 'está', 'soy']);
     await act(async () => options[0].click());
     assert.ok(document.querySelector('.ae-feedback.wrong'), 'wrong feedback shown');
     assert.match(text(), /soy/);
@@ -75,7 +75,7 @@ test('a wrong SER/ESTAR answer gets feedback, the explanation and one discreet c
     assert.match(document.querySelector('.ae-reco').textContent, /¿Ser o estar\?/);
     assert.equal(document.querySelectorAll('.ae-reco').length, 1, 'one card per topic per visit');
     const stored = JSON.parse(window.localStorage.getItem('spanishcue.autoestudio.errors.v1.local'));
-    assert.equal(stored.length, 1); assert.equal(stored[0].given, 'eres'); assert.equal(stored[0].correct, 'soy'); assert.equal(stored[0].category, 'ser-estar'); assert.equal(stored[0].correctedAt, null);
+    assert.equal(stored.length, 1); assert.equal(stored[0].given, 'estoy'); assert.equal(stored[0].correct, 'soy'); assert.equal(stored[0].category, 'ser-estar'); assert.equal(stored[0].correctedAt, null);
     const retry = [...document.querySelectorAll('.ae-choice .ae-link')].find(b => /Intentar otra vez/.test(b.textContent));
     assert.ok(retry, 'retry stays available next to the card');
     await act(async () => retry.click());
@@ -84,7 +84,7 @@ test('a wrong SER/ESTAR answer gets feedback, the explanation and one discreet c
     assert.equal(document.querySelector('.ae-reco'), null, 'no card on a correct answer');
     const after = JSON.parse(window.localStorage.getItem('spanishcue.autoestudio.errors.v1.local'));
     assert.equal(after.length, 1, 'the original error is kept, not overwritten');
-    assert.equal(after[0].given, 'eres'); assert.ok(after[0].correctedAt, 'later marked as corrected');
+    assert.equal(after[0].given, 'estoy'); assert.ok(after[0].correctedAt, 'later marked as corrected');
   } finally { await unmount(); }
 });
 

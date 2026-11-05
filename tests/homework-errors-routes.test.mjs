@@ -39,7 +39,7 @@ test('demo route refuses unknown classes and sends free classes to their real pa
 });
 
 test('error log accepts a real pass, rejects anonymous or forged writes, and keeps the teacher endpoint private',{skip:!enabled},async()=>{
- const body={passId,revision:1,moduleId:'a1-01',section:'grammar',exerciseId:'g1',itemIndex:0,given:'eres',verdict:'wrong',attempt:1};
+ const body={passId,revision:1,moduleId:'a1-01',section:'grammar',exerciseId:'g1',itemIndex:0,given:'estoy',verdict:'wrong',attempt:1};
  const anonymous=await fetch(`${origin}/api/autoestudio/errors`,{method:'POST',headers:{...json,origin},body:JSON.stringify(body)});
  assert.equal(anonymous.status,401);
  const headers={...json,origin,cookie:await access()};
