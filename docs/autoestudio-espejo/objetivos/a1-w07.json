@@ -1,0 +1,11 @@
+[
+  [7, "gram", "g014", "Tener y tener + edad / sensaciones", "Puedo decir lo que tengo, mi edad y la de otras personas con tener + años, y lo que siento con tener hambre, sed, sueño, frío o calor, sin confundirlo con ser, estar o hace.", ["a1.gram.g011", "a1.gram.g012"], { "related": ["/gramatica/tener-edad-y-sensaciones"] }],
+  [7, "gram", "g015", "Concordancia dentro del grupo nominal", "Puedo construir grupos nominales con determinante, nombre, adjetivo y un detalle con de, con o para, y hacer concordar todo con el nombre.", ["a1.gram.g006", "a1.gram.g007"], { "related": ["/grupos-de-palabras-con-sentido"] }],
+  [7, "voc", "w07-fiesta-materiales", "Fiesta de cumpleaños, materiales y expresiones con tener", "Puedo nombrar lo necesario para una fiesta, decir de qué material es un objeto y usar las expresiones de sensación con tener.", ["a1.gram.g014", "a1.gram.g015"]],
+  [7, "pron", "w07-g-y-j", "La g suave y el sonido fuerte de j y ge, gi", "Puedo distinguir y pronunciar la g de tengo y el sonido fuerte de hijo y gente, y relacionarlos con su escritura.", []],
+  [7, "lis", "w07-tienda-talavera", "Escuchar una compra de un regalo", "Puedo entender en una conversación de tienda la edad de una persona, la descripción de varios objetos, el precio y lo que sienten los clientes.", ["a1.gram.g014", "a1.gram.g015"]],
+  [7, "read", "w07-mensaje-cumpleanos", "Leer un mensaje para organizar un cumpleaños", "Puedo entender un mensaje familiar que organiza una fiesta, describe objetos y dice qué falta.", ["a1.gram.g014", "a1.gram.g015"]],
+  [7, "wri", "w07-describir-regalo", "Describir un regalo por escrito", "Puedo escribir un mensaje breve sobre el cumpleaños de un familiar y describir un regalo con grupos nominales que concuerdan.", ["a1.gram.g014", "a1.gram.g015", "a1.voc.w07-fiesta-materiales"]],
+  [7, "spk", "w07-edades-regalos", "Hablar de edades y describir objetos", "Puedo decir en voz alta la edad de varias personas de mi familia y describir un objeto durante unos 30 segundos.", ["a1.fun.w07-describir-objeto"]],
+  [7, "fun", "w07-describir-objeto", "Describir un objeto para comprarlo o regalarlo", "Puedo describir un objeto con su tamaño, color, material y uso, y preguntar si una tienda tiene algo.", ["a1.gram.g015"]]
+]
