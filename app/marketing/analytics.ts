@@ -37,8 +37,8 @@ export type MarketingEvent = (typeof marketingEvents)[number];
 
 const attributionKey = "spanishcue.marketing.attribution.v1";
 const eventQueueKey = "spanishcue.marketing.events.v1";
-const googleAdsConversionId = typeof process !== "undefined" ? (process.env.NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_ID?.trim() || "") : "";
-const googleAdsPurchaseLabel = typeof process !== "undefined" ? (process.env.NEXT_PUBLIC_GOOGLE_ADS_PURCHASE_LABEL?.trim() || "") : "";
+const googleAdsConversionId = (() => { try { return process.env.NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_ID?.trim() || ""; } catch { return ""; } })();
+const googleAdsPurchaseLabel = (() => { try { return process.env.NEXT_PUBLIC_GOOGLE_ADS_PURCHASE_LABEL?.trim() || ""; } catch { return ""; } })();
 const utmKeys = [
   "utm_source",
   "utm_medium",

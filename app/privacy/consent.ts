@@ -36,7 +36,11 @@ const deniedGoogleConsent: GoogleConsentValues = {
 
 function gtag(...args: unknown[]) {
   window.dataLayer = window.dataLayer || [];
-  window.gtag = window.gtag || ((...queued: unknown[]) => window.dataLayer?.push(queued));
+  // gtag.js only processes `arguments` objects queued in dataLayer; plain arrays
+  // are silently ignored, which kept every GA4 hit and Google Ads conversion
+  // from leaving the browser. This must stay a classic function using `arguments`.
+  // eslint-disable-next-line prefer-rest-params
+  window.gtag = window.gtag || function gtagQueue() { window.dataLayer?.push(arguments); };
   window.gtag(...args);
 }
 
